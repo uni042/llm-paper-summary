@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "validation-20260923T013700Z-51313b-02",
+  "kind": "research",
+  "attempt_id": "attempt-51313bfb190d4ac71af486c7",
+  "job_id": "job-research-2095724e259f584c",
+  "record_bank": "g",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2601.15370-composing-weight-data-sparsity.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:907dbc0502a7f590d2a392906bacef96ec197f4ec41b4cde702a274fc2b15597",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "cbf51261eef799c1364ab2520d50216912879806"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "e57907bec3899bdcc7151caa45298d4ec92be882"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "f170fc7cc3287fc9c9906795f3266155dcf2e4a5"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "6ae205d29db1f382af16f030f922316e5f17be83"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "50ff7983a63744bbdc8d7739f6010cbbd8fc93fc"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-23T01:35:40+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2601.15370-composing-weight-data-sparsity.md",
+    "status": "FAIL",
+    "file_bytes": 27898,
+    "prose_chars": 5430,
+    "paragraphs": 24,
+    "method_paragraphs": 12,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.9863595028796605,
+    "japanese_chars": 6508,
+    "latin_chars": 90,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}

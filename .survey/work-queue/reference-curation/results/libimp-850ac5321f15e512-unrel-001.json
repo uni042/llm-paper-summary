@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-850ac5321f15e512-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.03687",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.03687",
+    "identity_tokens": [
+      "arXiv:2609.03687"
+    ],
+    "reason": "Coreference/interpretability analysis, not inference efficiency.",
+    "first_checked_at": "2026-10-05T07:17:11+00:00",
+    "last_checked_at": "2026-10-05T07:17:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "A Circuit for Plural Reference: How LLMs Represent and Retrieve Singular and Plural Entities"
+  },
+  "processed_at": "2026-10-05T07:17:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-850ac5321f15",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FastEEP: Fast Intra-Instance Elastic Scaling for Expert-Parallel MoE Serving",
+      "source_url": "https://arxiv.org/abs/2610.18451",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale expert parallelism (EP) has become the standard deployment configuration for Mixture-of-Experts (MoE) models in production. Meanwhile, the highly dynamic nature of LLM workloads requires providers to continuously adjust serving capacity to match fluctuating demand. Scaling MoE serving cannot be efficiently achieved by simply adding or removing serving instances; instead, it often requires resizing the EP group within an existing instance, which we refer to as intra-instance scaling.Existing inference engines primarily rely on instance-level scaling, which destroys and reconstructs entire serving instances, incurring substantial scaling overhead. We present FastEEP (Fast Elastic Expert Parallel), a fast intra-instance scaling system for MoE serving based on the principle of Partial Reuse. FastEEP reuses existing runtime state across worker execution, GPU memory, and communication by separating reusable execution structures from the resources activated by the current EP configuration. This separation enables coordinated resource reclamation and reconfiguration while preserving costly-to-reconstruct state, allowing fast EP scaling without full instance teardown and reconstruction. Our evaluation shows that FastEEP achieves 4.5x--11.7x faster scaling than the existing vLLM-based approach across different models, enabling efficient, fine-grained scaling of MoE serving.",
+      "identifiers": [
+        "SemanticScholar:4ba91ba8cdc752c6471c8c9bc1987348456a88a2"
+      ],
+      "semantic_scholar_id": "4ba91ba8cdc752c6471c8c9bc1987348456a88a2",
+      "canonical_id": "arXiv:2610.18451",
+      "arxiv_id": "2610.18451",
+      "authors": [
+        "Yun-Fei Feng",
+        "Jing-Kai He",
+        "Shi-Qi Liu",
+        "Cheng Zhang",
+        "Dong Du",
+        "Er-Hu Feng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoEのexpert-parallelグループをインスタンス破棄なしに伸縮。GPUメモリ、実行構造、通信の再利用可能部分を保持するPartial Reuseにより、vLLM系方式比4.5～11.7倍高速な伸縮を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WAKMan: Workload Aware KVCache Manager",
+      "source_url": "https://arxiv.org/abs/2610.36355",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefix caching enables a Large Language Model (LLM) servers to reuse the Key-Value (KV) states and accelerate prefill computation stage for requests that share a prefix with earlier prompts, thus reducing latency and serving cost. With limited memory resource, the KV cache eviction policy becomes a decisive factor in determining the overall benefits of prefix caching. Production traffic may have single-turn, multi-turn, agentic, or a mixture of any combination of these request types. Our findings indicate that agentic steps return within seconds and favor recency, while popular prompts and long conversations return after many other requests and favor frequency. Across 20 mixes, no single policy is always best: vLLM's default strategy LRU provides 12% higher cache hits as compared to the frequency-oriented S3FIFO on agentic-heavy mixes but trails it by up to 22% elsewhere, and even a single workload parameter can flip the winner even for any particular mix. We present WAKMan, a workload-aware KV cache manager that picks its eviction policy from live traffic without knowing request types or reading prompts. It improves hit rate over LRU by 5 percentage points on average, with the lowest mean and worst-case optimality gap of all policies.",
+      "identifiers": [
+        "SemanticScholar:43b292660536c197a1fe0e1d42597eb3749825f9"
+      ],
+      "semantic_scholar_id": "43b292660536c197a1fe0e1d42597eb3749825f9",
+      "canonical_id": "arXiv:2610.36355",
+      "arxiv_id": "2610.36355",
+      "authors": [
+        "Suhas Kumar Morisetty",
+        "Vaibhavi Lokegaonkar",
+        "S. Varghese",
+        "Wesley Harris"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      },
+      "reason": "prefix KVキャッシュの追い出し方針を実トラフィックから動的に選択。エージェント系と長会話ではLRUと頻度重視の優劣が逆転し、20混合負荷でLRUより平均5ポイント高いキャッシュヒット率を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data",
+      "source_url": "https://arxiv.org/abs/2610.37386",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models are bottlenecked by loading routed-expert weights from memory during interactive decoding at small batch sizes. Because most intermediate channels in a routed expert contribute little to any single token, channel selectors predict which channels matter and read only their weights, typically keeping channels above a threshold calibrated on offline data. We show that channel selection needs no calibration data. First, a calibrated threshold does not fix how much a selector reads, because the number of channels passing it varies across inputs; Prox with thresholds calibrated for an 18% read budget actually reads only 12.9% on average across our benchmarks. Second, top-k keeps each token's k highest-scoring channels and needs no calibration data. At the calibrated budget, a selector's top-k version matches or beats its threshold version on the same score in 40 of 43 comparisons at 13% and 18% budgets, including all 23 on generation tasks. The top-k versions also avoid the repetition-loop collapse that calibrated thresholds cause on Gemma 4. Calibrating a threshold thus provides neither of the two things selectors use it for: a known read budget and a consistent accuracy gain at that budget. We furthermore introduce a reader built entirely from the model's weights, which screens channels with a ternary sketch and recovers the skipped ones with a low-rank map. Across three post-trained MoE models, our reader retains 98.1% of full-model accuracy at 17.8% of routed-expert reads, with Triton kernels running MoE blocks 1.60 to 1.90x faster than optimized vLLM at batch one and up to 2.69x at larger batches on the same three models.",
+      "identifiers": [
+        "SemanticScholar:54cd4d59a8cec79a5946b6ef3d28757c8de30ec1"
+      ],
+      "semantic_scholar_id": "54cd4d59a8cec79a5946b6ef3d28757c8de30ec1",
+      "canonical_id": "arXiv:2610.37386",
+      "arxiv_id": "2610.37386",
+      "authors": [
+        "Geun-Hyung Kim",
+        "SungJoon Hwang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE専門家のトークン別重要チャネルをtop-k選択し、校正済み閾値に頼らず読出予算を固定。三つのMoEで専門家読出17.8%時に元精度98.1%を維持し、Triton MoEカーネルはvLLM比1.60～1.90倍高速。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CASP: Compression of Large Multimodal Models Based on Attention Sparsity",
+      "source_url": "https://arxiv.org/abs/2503.05936",
+      "year": 2025,
+      "published": "2025-03-07",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we propose an extreme compression technique for Large Multimodal Models (LMMs). While previous studies have explored quantization as an efficient post-training compression method for Large Language Models (LLMs), low-bit compression for multimodal models remains under-explored. The redundant nature of inputs in multimodal models results in a highly sparse attention matrix. We theoretically and experimentally demonstrate that the attention matrix’s sparsity bounds the compression error of the Query and Key weight matrices. Based on this, we introduce CASP, a model compression technique for LMMs. Our approach performs a data-aware low-rank decomposition on the Query and Key weight matrix, followed by quantization across all layers based on an optimal bit allocation process. CASP is compatible with any quantization technique and enhances state-of-the-art 2-bit quantization methods (AQLM and QuIP#) by an average of 21% on image- and video-language benchmarks. The code is available here1.",
+      "identifiers": [
+        "SemanticScholar:0b6ede61117660bfdb8609da8e64bebd8ad159f5"
+      ],
+      "semantic_scholar_id": "0b6ede61117660bfdb8609da8e64bebd8ad159f5",
+      "canonical_id": "arXiv:2503.05936",
+      "arxiv_id": "2503.05936",
+      "doi": "10.1109/CVPR52734.2025.00875",
+      "authors": [
+        "Mohsen Gholami",
+        "Mohammad Akbari",
+        "K. Cannons",
+        "Yong Zhang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 610,
+        "matched_prestigious_venue": null
+      },
+      "reason": "マルチモーダル注意行列の疎性を利用しQ/K重みの圧縮誤差を理論的に制限。データ依存の低ランク分解と層別ビット割当を量子化と組み合わせ、AQLM/QuIP#の2-bit構成を画像・動画言語評価で平均21%改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8cb888962e38",
+    "round": "libimp-8cb888962e38f021-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8cb888962e38f021-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8cb888962e38f021-pre01.json",
+    "receipt": "sha256:2c2d8858505f607fb6f45e29a50ed6b75f65897ee1c19ba21ff746c273cac58c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8cb888962e38",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

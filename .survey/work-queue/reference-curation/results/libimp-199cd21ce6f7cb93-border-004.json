@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-199cd21ce6f7cb93-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.12396",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.12396",
+    "identity_tokens": [
+      "arXiv:2605.12396"
+    ],
+    "reason": "NCCL集合通信に量子化とエントロピー符号化を別層で統合し、装置側の符号化選択と通信・圧縮重畳を実現する。分散LLM推論の通信最適化に応用可能な汎用基盤技術だが、一次要旨の実験は科学計算・学習勾配・合成負荷が中心で、LLM推論サービングへの適用実測は確認できない。",
+    "first_checked_at": "2026-10-19T08:44:07+00:00",
+    "last_checked_at": "2026-10-19T08:44:07+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "NCCLZ: Compression-Enabled GPU Collectives with Decoupled Quantization and Entropy Coding"
+  },
+  "processed_at": "2026-10-19T08:44:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-199cd21ce6f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

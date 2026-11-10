@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.26425",
+      "arxiv_id": "2609.26425",
+      "title": "QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for World Models and Video Generation",
+      "source_url": "https://arxiv.org/abs/2609.26425",
+      "priority": 90,
+      "reason": "Recent 2-bit KV-cache quantization directly targets deployment memory bottlenecks."
+    },
+    {
+      "canonical_id": "arXiv:2609.24433",
+      "arxiv_id": "2609.24433",
+      "title": "FoldQuantVLA: Native Low-Bit Quantization of Vision-Language-Action Models via Consistent Folding",
+      "source_url": "https://arxiv.org/abs/2609.24433",
+      "priority": 88,
+      "reason": "Native low-bit integer execution for VLA models directly advances practical quantized inference."
+    },
+    {
+      "canonical_id": "arXiv:2609.25376",
+      "arxiv_id": "2609.25376",
+      "title": "VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models",
+      "source_url": "https://arxiv.org/abs/2609.25376",
+      "priority": 86,
+      "reason": "Large controlled PTQ evaluation clarifies precision and calibration choices for deployment."
+    },
+    {
+      "canonical_id": "arXiv:2609.25492",
+      "arxiv_id": "2609.25492",
+      "title": "RGSQ: Riemannian Geometry-Sensitive Quantization for Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.25492",
+      "priority": 88,
+      "reason": "Recent PTQ method for memory- and latency-constrained multimodal deployment."
+    },
+    {
+      "canonical_id": "arXiv:2609.19441",
+      "arxiv_id": "2609.19441",
+      "title": "Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models",
+      "source_url": "https://arxiv.org/abs/2609.19441",
+      "priority": 86,
+      "reason": "Offline prediction of PTQ degradation supports efficient deployment configuration selection."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "disc-take-scheduled-chat-00-20260925T070210-run1-r10",
+    "result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-20260925T070210-run1-r10.json",
+    "receipt": "sha256:67b2f9ac395591f34fac4db0d4e5176134a2bf01de2812802a05288b4b3e81f5"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T070210+0900-run1",
+    "round": "disc-take-scheduled-chat-00-20260925T070210-run1-r10",
+    "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+    "candidate_count": 20,
+    "accepted_canonical_ids": [
+      "arXiv:2609.26425",
+      "arXiv:2609.24433",
+      "arXiv:2609.25376",
+      "arXiv:2609.25492",
+      "arXiv:2609.19441"
+    ],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}

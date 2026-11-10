@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1904-scheduled-chat-00/r01",
+  "reference_main_sha": "6b0942fd32351ae5dfc03bf3acb6727c8e398cbd",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21835",
+      "identity_tokens": [
+        "arXiv:2505.21835",
+        "arxiv:2505.21835"
+      ],
+      "title": "TuneComp: Joint Fine-tuning and Compression for Large Foundation Models",
+      "reason": "本文§4.1の唯一の主要評価はViT-BaseをImageNet1KからCIFAR100へ転移させる画像分類で、圧縮はSVD低ランク分解、教師・生徒ブランチの段階的蒸留、要素単位pruningの同時fine-tuningである。LLMの復号、KV、推論サービング、トークン生成速度の評価がなく、対象リポジトリのLLM推論システム技術への実証的寄与がない。",
+      "source_url": "https://arxiv.org/html/2505.21835",
+      "body_check": "research_fulltext_relevance_review: arXiv本文§3の低ランク圧縮手法、§4.1のViT-Base/CIFAR100評価、§4.2の順序比較、Table 1/2を読解。モデル名のfoundation modelだけでLLM推論と判断しない。",
+      "first_checked_at": "2026-10-30T19:04:52+09:00",
+      "last_checked_at": "2026-10-30T19:04:52+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 46
+    }
+  ]
+}

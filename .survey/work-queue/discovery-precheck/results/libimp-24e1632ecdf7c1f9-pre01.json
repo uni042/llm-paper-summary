@@ -1,0 +1,1733 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-24e1632ecdf7c1f9-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-24e1632ecdf7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+    "arXiv:2307.07982",
+    "arXiv:2412.12706",
+    "arXiv:2412.18169",
+    "arXiv:2502.19732",
+    "arXiv:2505.13254",
+    "arXiv:2505.20316",
+    "arXiv:2506.09316",
+    "arXiv:2512.12928",
+    "arXiv:2602.02707",
+    "arXiv:2605.07234",
+    "arXiv:2605.07243",
+    "arXiv:2606.07116",
+    "arXiv:2607.07409",
+    "arXiv:2608.26140",
+    "arXiv:2609.32278",
+    "arXiv:2609.36173",
+    "arXiv:2609.36222",
+    "arXiv:2609.37029",
+    "arXiv:2610.00412"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 20,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a2494a1b2935d6a83a471bd22d23d02f7ebf2580",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 18,
+  "provider_progress": {
+    "requested_count": 20,
+    "status_counts": {
+      "allowed": 18,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-09T03:40:22.226353+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2307.07982",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.12706",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.18169",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3767295.3769348"
+    },
+    {
+      "requested_id": "arXiv:2502.19732",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2502.19732"
+    },
+    {
+      "requested_id": "arXiv:2505.13254",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.20316",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.09316",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.12928",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02707",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.07234",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.07243",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.07116",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.07409",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.26140",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32278",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.36173",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.36222",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.37029",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.00412",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "A Survey of Techniques for Optimizing Transformer Inference",
+      "source_url": "https://arxiv.org/abs/2307.07982",
+      "year": 2023,
+      "published": "2023-07-16",
+      "venue": "Journal of systems architecture",
+      "citation_count": 167,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent years have seen a phenomenal rise in performance and applications of transformer neural networks. The family of transformer networks, including Bidirectional Encoder Representations from Transformer (BERT), Generative Pretrained Transformer (GPT) and Vision Transformer (ViT), have shown their effectiveness across Natural Language Processing (NLP) and Computer Vision (CV) domains. Transformer-based networks such as ChatGPT have impacted the lives of common men. However, the quest for high predictive performance has led to an exponential increase in transformers' memory and compute footprint. Researchers have proposed techniques to optimize transformer inference at all levels of abstraction. This paper presents a comprehensive survey of techniques for optimizing the inference phase of transformer networks. We survey techniques such as knowledge distillation, pruning, quantization, neural architecture search and lightweight network design at the algorithmic level. We further review hardware-level optimization techniques and the design of novel hardware accelerators for transformers. We summarize the quantitative results on the number of parameters/FLOPs and accuracy of several models/techniques to showcase the tradeoff exercised by them. We also outline future directions in this rapidly evolving field of research. We believe that this survey will educate both novice and seasoned researchers and also spark a plethora of research efforts in this field.",
+      "identifiers": [
+        "SemanticScholar:5b0fe50dc6df8f4eba13f8177dcd4bbe5a2b0e23"
+      ],
+      "semantic_scholar_id": "5b0fe50dc6df8f4eba13f8177dcd4bbe5a2b0e23",
+      "canonical_id": "arXiv:2307.07982",
+      "arxiv_id": "2307.07982",
+      "doi": "10.48550/arXiv.2307.07982",
+      "authors": [
+        "Krishna Teja Chitty-Venkata",
+        "Sparsh Mittal",
+        "M. Emani",
+        "V. Vishwanath",
+        "Arun Somani"
+      ],
+      "priority": 167,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 167,
+        "citation_count": 167,
+        "total": 167,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1181,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting",
+      "source_url": "https://arxiv.org/abs/2605.07243",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference by drafting a tree of candidate continuations and verifying it in one target forward. Existing drafters fall into two camps with opposite weaknesses. Autoregressive drafters such as EAGLE-3 preserve dependence along each draft path but call the drafter once per tree depth, making drafting a non-trivial share of per-iteration latency. Parallel drafters cut drafter calls by predicting multiple future positions in one forward, but each position is predicted without seeing the others, producing paths the verifier rejects. In this paper, we propose SpecBlock, a block-iterative drafter that combines path dependence with cheap drafting. Each drafter forward produces K dependent positions and we call this a block. The draft tree grows through repeated block expansions. Two mechanisms explicitly carry path dependence to keep later draft positions accurate. Within each block, a layer-wise shift carries the previous position's hidden state into every decoder layer. Across blocks, each new block can start from any position of the previous block, inheriting its hidden state to extend the path. To spend verifier budget where acceptance is likely, a co-trained rank head replaces the fixed top-k tree by allocating per-position branching during drafting. To avoid training the drafter on prefixes it never produces at inference, a valid-prefix mask drops the loss at later positions once an earlier one is wrong. Beyond static drafting, a cost-aware bandit at deployment uses free verifier feedback to update the drafter selectively, only when the expected throughput gain exceeds the update cost. Experiments show that SpecBlock improves mean speedup by 8-13% over EAGLE-3 at 44-52% of its drafting cost, and cost-aware adaptation extends this lead to 11-19%.",
+      "identifiers": [
+        "SemanticScholar:1dcf07adad21710b4e394d185d40a7b030200f25"
+      ],
+      "semantic_scholar_id": "1dcf07adad21710b4e394d185d40a7b030200f25",
+      "canonical_id": "arXiv:2605.07243",
+      "arxiv_id": "2605.07243",
+      "doi": "10.48550/arXiv.2605.07243",
+      "authors": [
+        "Wei-Jie Shi",
+        "Qiang Xu",
+        "Fan Deng",
+        "Ya-Guang Wu",
+        "Jia-Run Liu",
+        "Yehong Xu",
+        "Hao Chen",
+        "Jia Zhu",
+        "Jiajie Xu",
+        "Xiang-Jun Huang",
+        "Jian Yang",
+        "Xiao-Fang Zhou"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting",
+      "source_url": "https://arxiv.org/abs/2607.07409",
+      "year": 2026,
+      "published": "2026-07-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference by drafting multiple tokens and verifying them in parallel. Block-parallel drafters such as DFlash further improve drafting efficiency by predicting an entire block in one pass, but their position-wise predictions lack explicit intra-block causal conditioning. Recent methods such as Domino and DSpark attempt to introduce such causality into block-parallel drafting, but they require training the draft model from scratch, which limits their flexibility and increases training cost. We propose DeLS-Spec, a decoupled long-short context speculative decoding method. DeLS-Spec treats the fixed DFlash model as a long-context expert and introduces a lightweight local head as a short-context expert. The local head can be trained independently with a standard next-token prediction objective, without joint training with the target model or the DFlash backbone, leading to extremely low training cost. At inference time, DeLS-Spec combines long-context and short-context logits, and the local head is not tied to a specific DFlash checkpoint, making the method more modular and flexible. Experiments on Qwen3 models show that DeLS-Spec consistently improves speedup and average acceptance length over DFlash across math, code, and dialogue benchmarks.",
+      "identifiers": [
+        "SemanticScholar:1960add05c3f95c0fdeb01c3938e6122e01a047a"
+      ],
+      "semantic_scholar_id": "1960add05c3f95c0fdeb01c3938e6122e01a047a",
+      "canonical_id": "arXiv:2607.07409",
+      "arxiv_id": "2607.07409",
+      "doi": "10.48550/arXiv.2607.07409",
+      "authors": [
+        "Hong-Kai Zheng",
+        "Pi-Ji Li"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 93,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Reformulating KV Cache Eviction Problem for Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.07234",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) support long-context inference but suffer from substantial memory and runtime overhead due to Key-Value (KV) Cache growth. Existing KV Cache eviction methods primarily rely on local attention weights, neglecting the influence of value representations, output projection, and inter-head interactions. In this work, we reformulate KV Cache eviction from a conventional head-wise, weight-averaging approach into an output-aware, layer-wise matrix multiplication approximation problem. We introduce LaProx, a novel eviction strategy that explicitly models the multiplicative interaction between attention maps and projected value states to accurately quantify token contributions while accounting for inter-head dependencies. Building on this metric, we propose the first unified eviction strategy that assigns globally comparable importance scores to tokens, enabling model-wide selection instead of local, head-wise decisions. Experimental results across 19 datasets on long-context benchmarks LongBench and Needle-In-A-Haystack demonstrate that our approach maintains model performance with only 5\\% of the KV cache and consistently outperforms prior works across all configurations. Notably, our method achieves up to 2$\\times$ accuracy loss reduction under extreme compression scenarios compared to existing state-of-the-art baselines with minimal overhead.",
+      "identifiers": [
+        "SemanticScholar:c0e8efe267d60ca99e874bd6a704537b2a2d9a14"
+      ],
+      "semantic_scholar_id": "c0e8efe267d60ca99e874bd6a704537b2a2d9a14",
+      "canonical_id": "arXiv:2605.07234",
+      "arxiv_id": "2605.07234",
+      "doi": "10.48550/arXiv.2605.07234",
+      "authors": [
+        "Tho Mai",
+        "Joo-Young Kim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention",
+      "source_url": "https://www.semanticscholar.org/paper/c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7"
+      ],
+      "semantic_scholar_id": "c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+      "canonical_id": "SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+      "authors": [
+        "Jintao Zhang",
+        "Rundong Su",
+        "Chunyu Liu",
+        "Jia Wei",
+        "Zi-Teng Wang",
+        "Hao-Xu Wang",
+        "Pengle Zhang",
+        "Huiqiang Jiang",
+        "Hao-Feng Huang",
+        "Chendong Xiang",
+        "Hao-Cheng Xi",
+        "Shuo Yang",
+        "Xing-Yang Li",
+        "Yi-Long Zhao",
+        "Yuezhou Hu",
+        "Tianyu Fu",
+        "Tiancheng Zhao",
+        "Yicheng Zhang",
+        "Bo-Shuo Cao",
+        "You-He Jiang",
+        "Changrui Chen",
+        "Kai Jiang",
+        "Huayu Chen",
+        "Min Zhao",
+        "Xiaoming Xu",
+        "Yi Wu",
+        "Fan Bao",
+        "Fellow Ieee Ion Stoica",
+        "Joseph E. Gonzalez",
+        "Jian-Fei Chen",
+        "Fellow Ieee Jun Zhu"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2412.12706",
+      "year": 2024,
+      "published": "2024-12-17",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) process increasing context windows, the memory usage of KV cache has become a critical bottleneck during inference. The mainstream KV compression methods, including KV pruning and KV quantization, primarily focus on either token or precision dimension separately. However, these works leaving the trade-off between these two orthogonal dimensions largely under-explored. In this paper, we comprehensively investigate the token-precision trade-off in KV cache compression.Experiments demonstrate that storing more tokens in the KV cache with lower precision,a strategy we term quantized pruning, can significantly enhance the long-context performance of LLMs. In-depth analysis of the token-precision trade-off across key aspects demonstrates that, quantized pruning achieves substantial improvements in retrieval-related tasks and consistently performs well across varying input lengths. Furthermore, quantized pruning demonstrates notable stability and effectiveness across different KV pruning methods, quantization strategies, and model scales. These findings offer valuable insights into optimizing KV cache compression through balanced token-precision trade-off strategies. Our code is available at https://github.com/zhzihao/QPruningKV.",
+      "identifiers": [
+        "SemanticScholar:fa37f801ae978dd961062cd639cf0d3fccc33794"
+      ],
+      "semantic_scholar_id": "fa37f801ae978dd961062cd639cf0d3fccc33794",
+      "canonical_id": "arXiv:2412.12706",
+      "arxiv_id": "2412.12706",
+      "doi": "10.48550/arXiv.2412.12706",
+      "authors": [
+        "Jiebin Zhang",
+        "Dawei Zhu",
+        "Yifan Song",
+        "Wenhao Wu",
+        "Chu-Qiao Kuang",
+        "Xiao-Guang Li",
+        "Lifeng Shang",
+        "Qun Liu",
+        "Sujian Li"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 661,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "HeteroSpec: Leveraging Contextual Heterogeneity for Efficient Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2505.13254",
+      "year": 2025,
+      "published": "2025-05-19",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding inherently limits the inference throughput of Large Language Model (LLM) due to its sequential dependency. Speculative decoding mitigates this by verifying multiple predicted tokens in parallel, but its efficiency remains constrained by what we identify as verification heterogeneity -- the uneven difficulty of verifying different speculative candidates. In practice, a small subset of high-confidence predictions accounts for most successful verifications, yet existing methods treat all candidates uniformly, leading to redundant computation. We present HeteroSpec, a heterogeneity-adaptive speculative decoding framework that allocates verification effort in proportion to candidate uncertainty. HeteroSpec estimates verification complexity using a lightweight entropy-based quantifier, partitions candidates via a data-driven stratification policy, and dynamically tunes speculative depth and pruning thresholds through coordinated optimization. Across five benchmarks and four LLMs, HeteroSpec delivers an average 4.24$\\times$ decoding speedup over state-of-the-art methods such as EAGLE-3, while preserving exact output distributions. Crucially, HeteroSpec requires no model retraining and remains compatible with other inference optimizations, making it a practical direction for improving speculative decoding efficiency.",
+      "identifiers": [
+        "SemanticScholar:a18c7c979bd328f5f88a3a70f3286c313140d470"
+      ],
+      "semantic_scholar_id": "a18c7c979bd328f5f88a3a70f3286c313140d470",
+      "canonical_id": "arXiv:2505.13254",
+      "arxiv_id": "2505.13254",
+      "doi": "10.48550/arXiv.2505.13254",
+      "authors": [
+        "Si-Ran Liu",
+        "Yangang Ye",
+        "Qianchao Zhu",
+        "Zheng Cao",
+        "Yong-Chao He"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "On-the-Fly Adaptive Distillation of Transformer to Dual-State Linear Attention",
+      "source_url": "https://arxiv.org/abs/2506.09316",
+      "year": 2025,
+      "published": "2025-06-11",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) excel at capturing global token dependencies via self-attention but face prohibitive compute and memory costs on lengthy inputs. While sub-quadratic methods (e.g., linear attention) can reduce these costs, they often degrade accuracy due to overemphasizing recent tokens. In this work, we first propose dual-state linear attention (DSLA), a novel design that maintains two specialized hidden states-one for preserving historical context and one for tracking recency-thereby mitigating the short-range bias typical of linear-attention architectures. To further balance efficiency and accuracy under dynamic workload conditions, we introduce DSLA-Serve, an online adaptive distillation framework that progressively replaces Transformer layers with DSLA layers at inference time, guided by a sensitivity-based layer ordering. DSLA-Serve uses a chained fine-tuning strategy to ensure that each newly converted DSLA layer remains consistent with previously replaced layers, preserving the overall quality. Extensive evaluations on commonsense reasoning, long-context QA, and text summarization demonstrate that DSLA-Serve yields 2.3x faster inference than Llama2-7B and 3.0x faster than the hybrid Zamba-7B, while retaining comparable performance across downstream tasks. Our ablation studies show that DSLA's dual states capture both global and local dependencies, addressing the historical-token underrepresentation seen in prior linear attentions. Codes are available at https://github.com/utnslab/DSLA-Serve.",
+      "identifiers": [
+        "SemanticScholar:9c407a5b56980380517e44ca14e0727941d3b221"
+      ],
+      "semantic_scholar_id": "9c407a5b56980380517e44ca14e0727941d3b221",
+      "canonical_id": "arXiv:2506.09316",
+      "arxiv_id": "2506.09316",
+      "doi": "10.48550/arXiv.2506.09316",
+      "authors": [
+        "Yeonju Ro",
+        "Zhenyu (Allen) Zhang",
+        "Souvik Kundu",
+        "Zhang-Yang Wang",
+        "Aditya Akella"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 485,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "PROSERVE: Unified Multi-Priority Request Scheduling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.12928",
+      "year": 2025,
+      "published": "2025-12-15",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The widespread deployment of large language models (LLMs) for interactive applications necessitates serving systems that can handle thousands of concurrent requests with diverse Service Level Objective (SLO) requirements. A critical yet often overlooked dimension in this context is the inherent priority difference among clients; for instance, business-critical functions demand higher performance guarantees, as fulfilling such requests yields significantly greater business value. However, existing LLM serving schedulers fail to jointly optimize for both SLO attainment and client-level priorities. To bridge this gap, we first formalize multi-priority request scheduling as a service gain maximization problem, where satisfying latency requirements for requests of different priorities contributes varying gain. We propose ProServe, a unified two-tier scheduling framework designed to maximize overall service gain. At the engine layer, SlideBatching dynamically adapts batch formation under varying loads, employing a sliding boundary mechanism to balance latency and priority differentiation. Considering potential preemption, efficient block management adopts asynchronous offloading, pipelined reloading, and adaptive copy-budget control to overlap computation with host-device block transfers. At the service layer, GoRouting performs gain-oriented and capability-aware dispatching across distributed instances, proactively reserving capacity for future high-priority or long requests. Extensive evaluation on four open-source and one industrial dataset shows that ProServe outperforms state-of-the-art baselines, improving system gain by up to 35% and SLO attainment by up to 52%.",
+      "identifiers": [
+        "SemanticScholar:76eaab7aa6206284b572bdcde20261fe3a9ab6ec"
+      ],
+      "semantic_scholar_id": "76eaab7aa6206284b572bdcde20261fe3a9ab6ec",
+      "canonical_id": "arXiv:2512.12928",
+      "arxiv_id": "2512.12928",
+      "doi": "10.48550/arXiv.2512.12928",
+      "authors": [
+        "Weizhe Huang",
+        "Tao Peng",
+        "Tong-Xuan Liu",
+        "Donghe Jin",
+        "Xianzhe Dong",
+        "Ke Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 298,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Every Bit Counts: A Theoretical Study of Precision-Expressivity Tradeoffs in Quantized Transformers",
+      "source_url": "https://arxiv.org/abs/2602.02707",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization reduces the numerical precision of Transformer computations and is widely used to accelerate inference, yet its effect on expressivity remains poorly characterized. We demonstrate a fine-grained theoretical tradeoff between expressivity and precision: For every p we exhibit a function {\\Gamma}, inspired by the equality function, and prove that a one-layer softmax Transformer can compute {\\Gamma}, with p bits of precision, but not with p-1 bits of precision. This result concretely explains the widely observed phenomenon of empirical loss of expressivity when quantization is used. Practically, it suggests that tasks requiring equality-like comparisons (exact match, membership, etc.) are especially sensitive to quantization. Dropping even one bit can cross a threshold where the model cannot represent the needed comparison reliably. Thus, it paves the way for developing heuristics that will help practitioners choose how much quantization is possible: the precision should be chosen as a function of the length of equality to be checked for the specific task. Our proofs combine explicit finite-precision Transformer constructions with communication-complexity lower bounds, yielding a tight\"one-bit\"threshold.",
+      "identifiers": [
+        "SemanticScholar:886512a1486b740fbfc9b7825aa11f39b59bf697"
+      ],
+      "semantic_scholar_id": "886512a1486b740fbfc9b7825aa11f39b59bf697",
+      "canonical_id": "arXiv:2602.02707",
+      "arxiv_id": "2602.02707",
+      "doi": "10.48550/arXiv.2602.02707",
+      "authors": [
+        "Sayak Chakrabarti",
+        "T. Pitassi",
+        "Josh Alman"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 249,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OffQ: Taming Structured Outliers in LLM Quantization by Offsetting",
+      "source_url": "https://arxiv.org/abs/2606.07116",
+      "year": 2026,
+      "published": "2026-06-05",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit quantization has been widely adopted to accelerate the inference of large language models (LLMs) by significantly reducing computational cost and memory usage. However, activation outliers pose a major challenge to effective quantization, often leading to notable performance degradation. In this paper, we introduce OffQ, a method designed to mitigate activation outliers in low-bit quantization through a novel offsetting mechanism. Specifically, OffQ first identifies a low-dimensional outlier subspace in the activations using a proposed top-1 PCA, and then concentrates high-magnitude activations into 1 channel via rotation. OffQ then absorbs this concentrated outlier channel by converting its magnitude into a shared offset, thereby reducing the standard deviation of the activations. This offsetting strategy enables effective W4A4KV4 quantization of LLMs using deployment-friendly uniform-grid and uniform-precision quantization. Extensive experiments across diverse LLM architectures and benchmarks demonstrate that OffQ outperforms state-of-the-art baselines, consistently improving model accuracy while preserving low-bit efficiency.",
+      "identifiers": [
+        "SemanticScholar:ef2f9bee844e0447a2e0ed738b3714e0c3e0c9dd"
+      ],
+      "semantic_scholar_id": "ef2f9bee844e0447a2e0ed738b3714e0c3e0c9dd",
+      "canonical_id": "arXiv:2606.07116",
+      "arxiv_id": "2606.07116",
+      "doi": "10.48550/arXiv.2606.07116",
+      "authors": [
+        "Hao-Qi Wang",
+        "Lorenz K. Mueller",
+        "Jiawei Zhuang",
+        "Mathieu Salzmann",
+        "Lukas Cavigelli"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 126,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Affix Cache for Diffusion Large Language Models",
+      "source_url": "https://arxiv.org/abs/2608.26140",
+      "year": 2026,
+      "published": "2026-06-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (DLLMs) enable non-autoregressive decoding, but efficient inference support remains immature: unlike autoregressive models, whose requests reuse a shared prefix key-value (KV) cache, DLLMs use bidirectional attention, so a shared context's KV states depend on the tokens still being decoded, leaving directly reused caches stale and full recomputation necessary. We present ACache, a cross-request cache reuse mechanism for shared spans, or affixes, at any position: prefix, infix, or suffix. ACache measures the influence of affix tokens on the masked generation region to identify a small request-specific subset as Anchor Tokens, and recomputes only their KV states while reusing the remaining affix cache. Built on state-of-the-art intra-request caching mechanisms, ACache recovers most of the accuracy lost to direct affix-cache reuse on average when recomputing around 20% of affix tokens, and at that budget preserves more accuracy than selection criteria adapted from prior cross-request cache-reuse systems. We co-design ACache with a modern inference engine, whose attention reads each request's recomputed Anchor KV states alongside one affix cache shared across concurrent requests. Against the same system with only intra-request caching, ACache cuts recompute latency by up to 56.7%, translating to as much as 1.71$\\times$ end-to-end throughput, while reducing peak KV cache memory by up to 45.8%.",
+      "identifiers": [
+        "SemanticScholar:b562dd20b0462795a82a819f23b2606c3312d988"
+      ],
+      "semantic_scholar_id": "b562dd20b0462795a82a819f23b2606c3312d988",
+      "canonical_id": "arXiv:2608.26140",
+      "arxiv_id": "2608.26140",
+      "authors": [
+        "Kai-Huan Liang",
+        "An Zhong",
+        "Xin Tan",
+        "Z. Qazi",
+        "Hong Xu",
+        "Jian Weng",
+        "Marco Canini"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 105,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.32278",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM-based agents execute long-horizon tasks through repeated model calls interleaved with tool execution and user interaction. As each call extends the history accumulated in previous turns, prefix caching avoids repeated prefill of the agent's entire context. However, the aggregate cache footprint grows with context length and concurrency, forcing serving systems to reclaim cached KV tensors. We identify recency synchronization: accesses to an agent's cached history refresh its cache nodes together, causing least recently used (LRU) eviction to concentrate on a few agents'private histories. When a fully evicted agent returns, it must recompute nearly its entire accumulated context, producing a large time-to-first-token (TTFT) outlier even if most other requests retain substantial cache reuse. We present RR-EVICT, a fine-grained prefix-cache eviction strategy that distributes reclamation across idle agent trajectories. RR-EVICT visits agents in round-robin order and evicts a tail chunk from each, preserving reusable prefixes for more agents when capacity remains for idle state. Returning agents can reuse these partial histories and recompute smaller missing suffixes. The policy requires no prediction of future arrivals or tool latency. We implement RR-EVICT in SGLang and evaluate conversational and coding-agent workloads under colocated and prefill-decode-disaggregated serving. Compared with LRU, RR-EVICT reduces P99 TTFT by up to 75.4% and P99 uncached prompt tokens by up to 65.7%.",
+      "identifiers": [
+        "SemanticScholar:8352f4032a901287b6757b81f807d9ca4f462a4a"
+      ],
+      "semantic_scholar_id": "8352f4032a901287b6757b81f807d9ca4f462a4a",
+      "canonical_id": "arXiv:2609.32278",
+      "arxiv_id": "2609.32278",
+      "authors": [
+        "Zai-Feng Pan",
+        "Chris Wu",
+        "Zheng-Ding Hu",
+        "Xin-Wei Qiang",
+        "Zhong-Kai Yu",
+        "Yu-Fei Ding"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Draft in Parallel, Condition Through Depth: Adjacent Causal Injection for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.36173",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parallel speculative drafting generates multiple candidates in one backbone pass, but independent token selection can produce inconsistent continuations that shorten the accepted prefix. Existing methods mostly leave conditional decoding to a lightweight module after the backbone, which limits the flow of predecessor information to successors. Our analysis of DFlash shows that early positions already form recoverable predictions in shallow layers, and that accurate adjacent predecessors help successors more when they enter earlier. We therefore propose DSpine, a drafter with causal conditioning injection throughout the backbone: at every layer, gated adjacent injection writes each predecessor's predicted feature into its successor, so the causal conditioning chain unfolds over network depth while all positions update in parallel. A unified transfer space built from the target model's output embeddings unifies layer-wise injection with predecessor-conditioned decoding, and layer-wise output-embedding supervision promotes the formation of predicted features in shallow layers. Fused kernels and a transition cache execute both efficiently in parallel within SGLang. Across seven math, code, and chat benchmarks, DSpine achieves the longest acceptance length at both temperatures on Qwen3-4B and Qwen3-8B. At temperature zero on Qwen3-8B, it raises the seven-benchmark mean from DFlash's 3.77 to 4.82 (+27.8%); in SGLang serving tests, it delivers 23.3% higher throughput than DFlash on average.",
+      "identifiers": [
+        "SemanticScholar:2081b1c89389974574ad6e3498b9cf634c0e84ac"
+      ],
+      "semantic_scholar_id": "2081b1c89389974574ad6e3498b9cf634c0e84ac",
+      "canonical_id": "arXiv:2609.36173",
+      "arxiv_id": "2609.36173",
+      "authors": [
+        "Hao-Hui Zhang",
+        "Ke-Yu Chen",
+        "Hao-Cheng Sun",
+        "Wei-Bo Gu",
+        "Rui-Zhi Qiao",
+        "Xing Sun",
+        "Bo Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding",
+      "source_url": "https://arxiv.org/abs/2609.36222",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are increasingly expensive to serve. In large-scale serving systems, autoregressive decoding is often bottlenecked by transferring model weights from accelerator high-bandwidth memory into on-chip SRAM. Mixture-of-experts (MoE) models reduce computation by activating only a small subset of experts per token, but this sparsity does not translate directly to batched decoding. Different requests select different experts; therefore, the combined active set across many concurrent requests can span a substantial fraction of the expert pool and require significantly more expert weights to be transferred. Most expert-reduction techniques make retention decisions independently for each token and therefore do not address this batch-level expansion. More recently, batch-aware methods have attempted to coordinate expert use across concurrent requests and reuse experts already fetched for the batch. Yet their selection criteria are based primarily on router rankings or expert statistics collected during calibration. Consequently, these criteria are not directly tied to the output error caused by dropping an expert, nor do they capture how an expert's contribution changes across tokens at inference time. We instead rank experts according to how much their removal would change the MoE-layer output. To apply this criterion during serving, we train a lightweight linear predictor during calibration that estimates the expert removal cost for each incoming token, and develop custom GPU kernels for cost prediction and expert selection. Across three MoE architectures, BASE improves the quality-efficiency tradeoff without retraining. On Qwen3-30B-A3B, it improves average accuracy by 29.5 points over the strongest baseline at comparable throughput under a tight expert budget. At a higher expert budget, it is 60% faster than dense inference while remaining within 0.4 accuracy points.",
+      "identifiers": [
+        "SemanticScholar:0a3dfed247c19598f43e890980495c0d37a11c2f"
+      ],
+      "semantic_scholar_id": "0a3dfed247c19598f43e890980495c0d37a11c2f",
+      "canonical_id": "arXiv:2609.36222",
+      "arxiv_id": "2609.36222",
+      "authors": [
+        "Ali Abbasi",
+        "Justin Shi",
+        "Soheil Kolouri"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LongSpark: Efficient speculative decoding with a fixed-cost parallel drafter",
+      "source_url": "https://arxiv.org/abs/2609.37029",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive inference by verifying multiple draft tokens in a single target forward pass. However, as the context grows, existing state-of-the-art drafters become increasingly expensive, eroding the very efficiency advantage they are designed to provide. We argue that this scaling is unnecessary. A standalone language model must grow with its prefix because it is solely responsible for every token it produces. A drafter, by contrast, only proposes candidates; the target catches and corrects every error before any token is committed. The drafter's decoding cost can therefore be made entirely independent of the prefix length. We introduce LongSpark, a block-diffusion drafter that achieves this by extracting fixed-size, multiscale views from the target's verification pass, thereby eliminating the need for a growing persistent state. Extensive evaluations demonstrate that LongSpark achieves state-of-the-art end-to-end efficiency across multiple model scales and realistic serving conditions. Notably, it delivers the lowest time-per-output-token on long-context tasks while reducing the drafter's context state by several orders of magnitude.",
+      "identifiers": [
+        "SemanticScholar:e0df98dd07d7a81a93a85a5fba2e4302ed14c1ca"
+      ],
+      "semantic_scholar_id": "e0df98dd07d7a81a93a85a5fba2e4302ed14c1ca",
+      "canonical_id": "arXiv:2609.37029",
+      "arxiv_id": "2609.37029",
+      "authors": [
+        "Hao-Yuan He",
+        "Peng-Fei Liu",
+        "Si-Shi Shen",
+        "Ming Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EchoPress: Query-Agnostic KV Cache Pruning via Virtual Context Reconstruction",
+      "source_url": "https://arxiv.org/abs/2610.00412",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache pruning reduces long-context inference memory usage by evicting less important key-value pairs. KVzip estimates importance through context reconstruction: prompting a model to repeat the context chunk by chunk. This achieves strong compression quality at the cost of additional forward passes. Learned approximations reduce this cost but require model-specific training. We analyze how KVzip identifies important cached information and show how to approximate its reconstruction scores using information already computed during prefill. These findings motivate EchoPress, a training-free method that approximates reconstruction attention using queries and keys from standard prefill. For each request, it reconstructs only the first chunk to calibrate importance scores for the remaining context. Experiments on LongBench and RULER with Qwen3-8B and Llama-3.1-8B-Instruct show that EchoPress matches KVzip in task accuracy across eviction ratios from 50% to 90%, while reducing compression overhead by a factor of 1.7-19.6 and total prefill time by a factor of up to 2.9. Code is available at https://github.com/ljwljwljwljw/kvpress/tree/echo-press.",
+      "identifiers": [
+        "SemanticScholar:913cc2a0875c5b2fdbfb79557b8e9b79bfaf144f"
+      ],
+      "semantic_scholar_id": "913cc2a0875c5b2fdbfb79557b8e9b79bfaf144f",
+      "canonical_id": "arXiv:2610.00412",
+      "arxiv_id": "2610.00412",
+      "authors": [
+        "Jia-Wei Lin",
+        "Sai-Bo Geng",
+        "Thomas Bourgeat"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Reinforcement Speculative Decoding for Fast Ranking",
+      "source_url": "https://arxiv.org/abs/2505.20316",
+      "year": 2025,
+      "published": "2025-05-23",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have been widely adopted in ranking systems such as information retrieval (IR) systems and recommender systems (RSs). To alleviate the latency of auto-regressive decoding, some studies explore the single (first) token decoding for ranking approximation, but they suffer from severe degradation in tail positions. Although speculative decoding (SD) methods can be a remedy with verification at different positions, they face challenges in ranking systems due to their left-to-right decoding paradigm. Firstly, ranking systems require strict latency constraints, but verification rounds in SD methods remain agnostic; Secondly, SD methods usually discard listwise ranking knowledge about unaccepted items in previous rounds, hindering future multi-token prediction, especially when candidate tokens are the unaccepted items. In this paper, we propose a Reinforcement Speculative Decoding method for fast ranking inference of LLMs. To meet the ranking systems' latency requirement, we propose an up-to-down decoding paradigm that employs an agent to iteratively modify the ranking sequence under a constrained budget. Specifically, we design a ranking-tailored policy optimization, actively exploring optimal multi-round ranking modification policy verified by LLMs via reinforcement learning (RL). To better approximate the target LLM under the constrained budget, we trigger the agent fully utilizing the listwise ranking knowledge about all items verified by LLMs across different rounds in RL, enhancing the modification policy of the agent. More importantly, we demonstrate the theoretical robustness and advantages of our paradigm and implementation. Experiments on both IR and RS tasks show the effectiveness of our proposed method.",
+      "identifiers": [
+        "SemanticScholar:bb14404a8d0f5b9db1a66726ffd7317447cdae9a"
+      ],
+      "semantic_scholar_id": "bb14404a8d0f5b9db1a66726ffd7317447cdae9a",
+      "canonical_id": "arXiv:2505.20316",
+      "arxiv_id": "2505.20316",
+      "doi": "10.1145/3770854.3780197",
+      "authors": [
+        "Yingpeng Du",
+        "Tian-Jun Wei",
+        "Zhu Sun",
+        "Jie M. Zhang",
+        "Xun Jiang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 504,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2307.07982",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2307.07982",
+        "id:SemanticScholar:5b0fe50dc6df8f4eba13f8177dcd4bbe5a2b0e23",
+        "id:arXiv:2307.07982",
+        "title:a survey of techniques for optimizing transformer inference",
+        "url:https://arxiv.org/abs/2307.07982"
+      ],
+      "record": {
+        "title": "A Survey of Techniques for Optimizing Transformer Inference",
+        "source_url": "https://arxiv.org/abs/2307.07982",
+        "year": 2023,
+        "published": "2023-07-16",
+        "venue": "Journal of systems architecture",
+        "citation_count": 167,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent years have seen a phenomenal rise in performance and applications of transformer neural networks. The family of transformer networks, including Bidirectional Encoder Representations from Transformer (BERT), Generative Pretrained Transformer (GPT) and Vision Transformer (ViT), have shown their effectiveness across Natural Language Processing (NLP) and Computer Vision (CV) domains. Transformer-based networks such as ChatGPT have impacted the lives of common men. However, the quest for high predictive performance has led to an exponential increase in transformers' memory and compute footprint. Researchers have proposed techniques to optimize transformer inference at all levels of abstraction. This paper presents a comprehensive survey of techniques for optimizing the inference phase of transformer networks. We survey techniques such as knowledge distillation, pruning, quantization, neural architecture search and lightweight network design at the algorithmic level. We further review hardware-level optimization techniques and the design of novel hardware accelerators for transformers. We summarize the quantitative results on the number of parameters/FLOPs and accuracy of several models/techniques to showcase the tradeoff exercised by them. We also outline future directions in this rapidly evolving field of research. We believe that this survey will educate both novice and seasoned researchers and also spark a plethora of research efforts in this field.",
+        "identifiers": [
+          "SemanticScholar:5b0fe50dc6df8f4eba13f8177dcd4bbe5a2b0e23"
+        ],
+        "semantic_scholar_id": "5b0fe50dc6df8f4eba13f8177dcd4bbe5a2b0e23",
+        "canonical_id": "arXiv:2307.07982",
+        "arxiv_id": "2307.07982",
+        "doi": "10.48550/arXiv.2307.07982",
+        "authors": [
+          "Krishna Teja Chitty-Venkata",
+          "Sparsh Mittal",
+          "M. Emani",
+          "V. Vishwanath",
+          "Arun Somani"
+        ],
+        "priority": 167,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 167,
+          "citation_count": 167,
+          "total": 167,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1181,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.07243",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.07243",
+        "id:SemanticScholar:1dcf07adad21710b4e394d185d40a7b030200f25",
+        "id:arXiv:2605.07243",
+        "title:specblock blockiterative speculative decoding with dynamic tree drafting",
+        "url:https://arxiv.org/abs/2605.07243"
+      ],
+      "record": {
+        "title": "SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting",
+        "source_url": "https://arxiv.org/abs/2605.07243",
+        "year": 2026,
+        "published": "2026-05-08",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates LLM inference by drafting a tree of candidate continuations and verifying it in one target forward. Existing drafters fall into two camps with opposite weaknesses. Autoregressive drafters such as EAGLE-3 preserve dependence along each draft path but call the drafter once per tree depth, making drafting a non-trivial share of per-iteration latency. Parallel drafters cut drafter calls by predicting multiple future positions in one forward, but each position is predicted without seeing the others, producing paths the verifier rejects. In this paper, we propose SpecBlock, a block-iterative drafter that combines path dependence with cheap drafting. Each drafter forward produces K dependent positions and we call this a block. The draft tree grows through repeated block expansions. Two mechanisms explicitly carry path dependence to keep later draft positions accurate. Within each block, a layer-wise shift carries the previous position's hidden state into every decoder layer. Across blocks, each new block can start from any position of the previous block, inheriting its hidden state to extend the path. To spend verifier budget where acceptance is likely, a co-trained rank head replaces the fixed top-k tree by allocating per-position branching during drafting. To avoid training the drafter on prefixes it never produces at inference, a valid-prefix mask drops the loss at later positions once an earlier one is wrong. Beyond static drafting, a cost-aware bandit at deployment uses free verifier feedback to update the drafter selectively, only when the expected throughput gain exceeds the update cost. Experiments show that SpecBlock improves mean speedup by 8-13% over EAGLE-3 at 44-52% of its drafting cost, and cost-aware adaptation extends this lead to 11-19%.",
+        "identifiers": [
+          "SemanticScholar:1dcf07adad21710b4e394d185d40a7b030200f25"
+        ],
+        "semantic_scholar_id": "1dcf07adad21710b4e394d185d40a7b030200f25",
+        "canonical_id": "arXiv:2605.07243",
+        "arxiv_id": "2605.07243",
+        "doi": "10.48550/arXiv.2605.07243",
+        "authors": [
+          "Wei-Jie Shi",
+          "Qiang Xu",
+          "Fan Deng",
+          "Ya-Guang Wu",
+          "Jia-Run Liu",
+          "Yehong Xu",
+          "Hao Chen",
+          "Jia Zhu",
+          "Jiajie Xu",
+          "Xiang-Jun Huang",
+          "Jian Yang",
+          "Xiao-Fang Zhou"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 154,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.07409",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.07409",
+        "id:SemanticScholar:1960add05c3f95c0fdeb01c3938e6122e01a047a",
+        "id:arXiv:2607.07409",
+        "title:delsspec decoupled longshort contexts for parallel speculative drafting",
+        "url:https://arxiv.org/abs/2607.07409"
+      ],
+      "record": {
+        "title": "DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting",
+        "source_url": "https://arxiv.org/abs/2607.07409",
+        "year": 2026,
+        "published": "2026-07-08",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates LLM inference by drafting multiple tokens and verifying them in parallel. Block-parallel drafters such as DFlash further improve drafting efficiency by predicting an entire block in one pass, but their position-wise predictions lack explicit intra-block causal conditioning. Recent methods such as Domino and DSpark attempt to introduce such causality into block-parallel drafting, but they require training the draft model from scratch, which limits their flexibility and increases training cost. We propose DeLS-Spec, a decoupled long-short context speculative decoding method. DeLS-Spec treats the fixed DFlash model as a long-context expert and introduces a lightweight local head as a short-context expert. The local head can be trained independently with a standard next-token prediction objective, without joint training with the target model or the DFlash backbone, leading to extremely low training cost. At inference time, DeLS-Spec combines long-context and short-context logits, and the local head is not tied to a specific DFlash checkpoint, making the method more modular and flexible. Experiments on Qwen3 models show that DeLS-Spec consistently improves speedup and average acceptance length over DFlash across math, code, and dialogue benchmarks.",
+        "identifiers": [
+          "SemanticScholar:1960add05c3f95c0fdeb01c3938e6122e01a047a"
+        ],
+        "semantic_scholar_id": "1960add05c3f95c0fdeb01c3938e6122e01a047a",
+        "canonical_id": "arXiv:2607.07409",
+        "arxiv_id": "2607.07409",
+        "doi": "10.48550/arXiv.2607.07409",
+        "authors": [
+          "Hong-Kai Zheng",
+          "Pi-Ji Li"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 93,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.07234",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.07234",
+        "id:SemanticScholar:c0e8efe267d60ca99e874bd6a704537b2a2d9a14",
+        "id:arXiv:2605.07234",
+        "title:reformulating kv cache eviction problem for longcontext llm inference",
+        "url:https://arxiv.org/abs/2605.07234"
+      ],
+      "record": {
+        "title": "Reformulating KV Cache Eviction Problem for Long-Context LLM Inference",
+        "source_url": "https://arxiv.org/abs/2605.07234",
+        "year": 2026,
+        "published": "2026-05-08",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) support long-context inference but suffer from substantial memory and runtime overhead due to Key-Value (KV) Cache growth. Existing KV Cache eviction methods primarily rely on local attention weights, neglecting the influence of value representations, output projection, and inter-head interactions. In this work, we reformulate KV Cache eviction from a conventional head-wise, weight-averaging approach into an output-aware, layer-wise matrix multiplication approximation problem. We introduce LaProx, a novel eviction strategy that explicitly models the multiplicative interaction between attention maps and projected value states to accurately quantify token contributions while accounting for inter-head dependencies. Building on this metric, we propose the first unified eviction strategy that assigns globally comparable importance scores to tokens, enabling model-wide selection instead of local, head-wise decisions. Experimental results across 19 datasets on long-context benchmarks LongBench and Needle-In-A-Haystack demonstrate that our approach maintains model performance with only 5\\% of the KV cache and consistently outperforms prior works across all configurations. Notably, our method achieves up to 2$\\times$ accuracy loss reduction under extreme compression scenarios compared to existing state-of-the-art baselines with minimal overhead.",
+        "identifiers": [
+          "SemanticScholar:c0e8efe267d60ca99e874bd6a704537b2a2d9a14"
+        ],
+        "semantic_scholar_id": "c0e8efe267d60ca99e874bd6a704537b2a2d9a14",
+        "canonical_id": "arXiv:2605.07234",
+        "arxiv_id": "2605.07234",
+        "doi": "10.48550/arXiv.2605.07234",
+        "authors": [
+          "Tho Mai",
+          "Joo-Young Kim"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 154,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+      "identity_tokens": [
+        "id:SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+        "title:efficient attention methods hardwareefficient sparse compact and linear attention",
+        "url:https://www.semanticscholar.org/paper/c562bfd521a14c3f1ed9708a3e871a0de2eecef7"
+      ],
+      "record": {
+        "title": "Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention",
+        "source_url": "https://www.semanticscholar.org/paper/c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 22,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7"
+        ],
+        "semantic_scholar_id": "c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+        "canonical_id": "SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+        "authors": [
+          "Jintao Zhang",
+          "Rundong Su",
+          "Chunyu Liu",
+          "Jia Wei",
+          "Zi-Teng Wang",
+          "Hao-Xu Wang",
+          "Pengle Zhang",
+          "Huiqiang Jiang",
+          "Hao-Feng Huang",
+          "Chendong Xiang",
+          "Hao-Cheng Xi",
+          "Shuo Yang",
+          "Xing-Yang Li",
+          "Yi-Long Zhao",
+          "Yuezhou Hu",
+          "Tianyu Fu",
+          "Tiancheng Zhao",
+          "Yicheng Zhang",
+          "Bo-Shuo Cao",
+          "You-He Jiang",
+          "Changrui Chen",
+          "Kai Jiang",
+          "Huayu Chen",
+          "Min Zhao",
+          "Xiaoming Xu",
+          "Yi Wu",
+          "Fan Bao",
+          "Fellow Ieee Ion Stoica",
+          "Joseph E. Gonzalez",
+          "Jian-Fei Chen",
+          "Fellow Ieee Jun Zhu"
+        ],
+        "priority": 22,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 22,
+          "citation_count": 22,
+          "total": 22,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.12706",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.12706",
+        "id:SemanticScholar:fa37f801ae978dd961062cd639cf0d3fccc33794",
+        "id:arXiv:2412.12706",
+        "title:more tokens lower precision towards the optimal tokenprecision tradeoff in kv cache compression",
+        "url:https://arxiv.org/abs/2412.12706"
+      ],
+      "record": {
+        "title": "More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2412.12706",
+        "year": 2024,
+        "published": "2024-12-17",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) process increasing context windows, the memory usage of KV cache has become a critical bottleneck during inference. The mainstream KV compression methods, including KV pruning and KV quantization, primarily focus on either token or precision dimension separately. However, these works leaving the trade-off between these two orthogonal dimensions largely under-explored. In this paper, we comprehensively investigate the token-precision trade-off in KV cache compression.Experiments demonstrate that storing more tokens in the KV cache with lower precision,a strategy we term quantized pruning, can significantly enhance the long-context performance of LLMs. In-depth analysis of the token-precision trade-off across key aspects demonstrates that, quantized pruning achieves substantial improvements in retrieval-related tasks and consistently performs well across varying input lengths. Furthermore, quantized pruning demonstrates notable stability and effectiveness across different KV pruning methods, quantization strategies, and model scales. These findings offer valuable insights into optimizing KV cache compression through balanced token-precision trade-off strategies. Our code is available at https://github.com/zhzihao/QPruningKV.",
+        "identifiers": [
+          "SemanticScholar:fa37f801ae978dd961062cd639cf0d3fccc33794"
+        ],
+        "semantic_scholar_id": "fa37f801ae978dd961062cd639cf0d3fccc33794",
+        "canonical_id": "arXiv:2412.12706",
+        "arxiv_id": "2412.12706",
+        "doi": "10.48550/arXiv.2412.12706",
+        "authors": [
+          "Jiebin Zhang",
+          "Dawei Zhu",
+          "Yifan Song",
+          "Wenhao Wu",
+          "Chu-Qiao Kuang",
+          "Xiao-Guang Li",
+          "Lifeng Shang",
+          "Qun Liu",
+          "Sujian Li"
+        ],
+        "priority": 21,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 21,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 661,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.13254",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.13254",
+        "id:SemanticScholar:a18c7c979bd328f5f88a3a70f3286c313140d470",
+        "id:arXiv:2505.13254",
+        "title:heterospec leveraging contextual heterogeneity for efficient speculative decoding",
+        "url:https://arxiv.org/abs/2505.13254"
+      ],
+      "record": {
+        "title": "HeteroSpec: Leveraging Contextual Heterogeneity for Efficient Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2505.13254",
+        "year": 2025,
+        "published": "2025-05-19",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive decoding inherently limits the inference throughput of Large Language Model (LLM) due to its sequential dependency. Speculative decoding mitigates this by verifying multiple predicted tokens in parallel, but its efficiency remains constrained by what we identify as verification heterogeneity -- the uneven difficulty of verifying different speculative candidates. In practice, a small subset of high-confidence predictions accounts for most successful verifications, yet existing methods treat all candidates uniformly, leading to redundant computation. We present HeteroSpec, a heterogeneity-adaptive speculative decoding framework that allocates verification effort in proportion to candidate uncertainty. HeteroSpec estimates verification complexity using a lightweight entropy-based quantifier, partitions candidates via a data-driven stratification policy, and dynamically tunes speculative depth and pruning thresholds through coordinated optimization. Across five benchmarks and four LLMs, HeteroSpec delivers an average 4.24$\\times$ decoding speedup over state-of-the-art methods such as EAGLE-3, while preserving exact output distributions. Crucially, HeteroSpec requires no model retraining and remains compatible with other inference optimizations, making it a practical direction for improving speculative decoding efficiency.",
+        "identifiers": [
+          "SemanticScholar:a18c7c979bd328f5f88a3a70f3286c313140d470"
+        ],
+        "semantic_scholar_id": "a18c7c979bd328f5f88a3a70f3286c313140d470",
+        "canonical_id": "arXiv:2505.13254",
+        "arxiv_id": "2505.13254",
+        "doi": "10.48550/arXiv.2505.13254",
+        "authors": [
+          "Si-Ran Liu",
+          "Yangang Ye",
+          "Qianchao Zhu",
+          "Zheng Cao",
+          "Yong-Chao He"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 508,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.09316",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.09316",
+        "id:SemanticScholar:9c407a5b56980380517e44ca14e0727941d3b221",
+        "id:arXiv:2506.09316",
+        "title:onthefly adaptive distillation of transformer to dualstate linear attention",
+        "url:https://arxiv.org/abs/2506.09316"
+      ],
+      "record": {
+        "title": "On-the-Fly Adaptive Distillation of Transformer to Dual-State Linear Attention",
+        "source_url": "https://arxiv.org/abs/2506.09316",
+        "year": 2025,
+        "published": "2025-06-11",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) excel at capturing global token dependencies via self-attention but face prohibitive compute and memory costs on lengthy inputs. While sub-quadratic methods (e.g., linear attention) can reduce these costs, they often degrade accuracy due to overemphasizing recent tokens. In this work, we first propose dual-state linear attention (DSLA), a novel design that maintains two specialized hidden states-one for preserving historical context and one for tracking recency-thereby mitigating the short-range bias typical of linear-attention architectures. To further balance efficiency and accuracy under dynamic workload conditions, we introduce DSLA-Serve, an online adaptive distillation framework that progressively replaces Transformer layers with DSLA layers at inference time, guided by a sensitivity-based layer ordering. DSLA-Serve uses a chained fine-tuning strategy to ensure that each newly converted DSLA layer remains consistent with previously replaced layers, preserving the overall quality. Extensive evaluations on commonsense reasoning, long-context QA, and text summarization demonstrate that DSLA-Serve yields 2.3x faster inference than Llama2-7B and 3.0x faster than the hybrid Zamba-7B, while retaining comparable performance across downstream tasks. Our ablation studies show that DSLA's dual states capture both global and local dependencies, addressing the historical-token underrepresentation seen in prior linear attentions. Codes are available at https://github.com/utnslab/DSLA-Serve.",
+        "identifiers": [
+          "SemanticScholar:9c407a5b56980380517e44ca14e0727941d3b221"
+        ],
+        "semantic_scholar_id": "9c407a5b56980380517e44ca14e0727941d3b221",
+        "canonical_id": "arXiv:2506.09316",
+        "arxiv_id": "2506.09316",
+        "doi": "10.48550/arXiv.2506.09316",
+        "authors": [
+          "Yeonju Ro",
+          "Zhenyu (Allen) Zhang",
+          "Souvik Kundu",
+          "Zhang-Yang Wang",
+          "Aditya Akella"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 485,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.12928",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.12928",
+        "id:SemanticScholar:76eaab7aa6206284b572bdcde20261fe3a9ab6ec",
+        "id:arXiv:2512.12928",
+        "title:proserve unified multipriority request scheduling for llm serving",
+        "url:https://arxiv.org/abs/2512.12928"
+      ],
+      "record": {
+        "title": "PROSERVE: Unified Multi-Priority Request Scheduling for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2512.12928",
+        "year": 2025,
+        "published": "2025-12-15",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The widespread deployment of large language models (LLMs) for interactive applications necessitates serving systems that can handle thousands of concurrent requests with diverse Service Level Objective (SLO) requirements. A critical yet often overlooked dimension in this context is the inherent priority difference among clients; for instance, business-critical functions demand higher performance guarantees, as fulfilling such requests yields significantly greater business value. However, existing LLM serving schedulers fail to jointly optimize for both SLO attainment and client-level priorities. To bridge this gap, we first formalize multi-priority request scheduling as a service gain maximization problem, where satisfying latency requirements for requests of different priorities contributes varying gain. We propose ProServe, a unified two-tier scheduling framework designed to maximize overall service gain. At the engine layer, SlideBatching dynamically adapts batch formation under varying loads, employing a sliding boundary mechanism to balance latency and priority differentiation. Considering potential preemption, efficient block management adopts asynchronous offloading, pipelined reloading, and adaptive copy-budget control to overlap computation with host-device block transfers. At the service layer, GoRouting performs gain-oriented and capability-aware dispatching across distributed instances, proactively reserving capacity for future high-priority or long requests. Extensive evaluation on four open-source and one industrial dataset shows that ProServe outperforms state-of-the-art baselines, improving system gain by up to 35% and SLO attainment by up to 52%.",
+        "identifiers": [
+          "SemanticScholar:76eaab7aa6206284b572bdcde20261fe3a9ab6ec"
+        ],
+        "semantic_scholar_id": "76eaab7aa6206284b572bdcde20261fe3a9ab6ec",
+        "canonical_id": "arXiv:2512.12928",
+        "arxiv_id": "2512.12928",
+        "doi": "10.48550/arXiv.2512.12928",
+        "authors": [
+          "Weizhe Huang",
+          "Tao Peng",
+          "Tong-Xuan Liu",
+          "Donghe Jin",
+          "Xianzhe Dong",
+          "Ke Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 298,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.02707",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02707",
+        "id:SemanticScholar:886512a1486b740fbfc9b7825aa11f39b59bf697",
+        "id:arXiv:2602.02707",
+        "title:every bit counts a theoretical study of precisionexpressivity tradeoffs in quantized transformers",
+        "url:https://arxiv.org/abs/2602.02707"
+      ],
+      "record": {
+        "title": "Every Bit Counts: A Theoretical Study of Precision-Expressivity Tradeoffs in Quantized Transformers",
+        "source_url": "https://arxiv.org/abs/2602.02707",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization reduces the numerical precision of Transformer computations and is widely used to accelerate inference, yet its effect on expressivity remains poorly characterized. We demonstrate a fine-grained theoretical tradeoff between expressivity and precision: For every p we exhibit a function {\\Gamma}, inspired by the equality function, and prove that a one-layer softmax Transformer can compute {\\Gamma}, with p bits of precision, but not with p-1 bits of precision. This result concretely explains the widely observed phenomenon of empirical loss of expressivity when quantization is used. Practically, it suggests that tasks requiring equality-like comparisons (exact match, membership, etc.) are especially sensitive to quantization. Dropping even one bit can cross a threshold where the model cannot represent the needed comparison reliably. Thus, it paves the way for developing heuristics that will help practitioners choose how much quantization is possible: the precision should be chosen as a function of the length of equality to be checked for the specific task. Our proofs combine explicit finite-precision Transformer constructions with communication-complexity lower bounds, yielding a tight\"one-bit\"threshold.",
+        "identifiers": [
+          "SemanticScholar:886512a1486b740fbfc9b7825aa11f39b59bf697"
+        ],
+        "semantic_scholar_id": "886512a1486b740fbfc9b7825aa11f39b59bf697",
+        "canonical_id": "arXiv:2602.02707",
+        "arxiv_id": "2602.02707",
+        "doi": "10.48550/arXiv.2602.02707",
+        "authors": [
+          "Sayak Chakrabarti",
+          "T. Pitassi",
+          "Josh Alman"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 249,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.07116",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.07116",
+        "id:SemanticScholar:ef2f9bee844e0447a2e0ed738b3714e0c3e0c9dd",
+        "id:arXiv:2606.07116",
+        "title:offq taming structured outliers in llm quantization by offsetting",
+        "url:https://arxiv.org/abs/2606.07116"
+      ],
+      "record": {
+        "title": "OffQ: Taming Structured Outliers in LLM Quantization by Offsetting",
+        "source_url": "https://arxiv.org/abs/2606.07116",
+        "year": 2026,
+        "published": "2026-06-05",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-bit quantization has been widely adopted to accelerate the inference of large language models (LLMs) by significantly reducing computational cost and memory usage. However, activation outliers pose a major challenge to effective quantization, often leading to notable performance degradation. In this paper, we introduce OffQ, a method designed to mitigate activation outliers in low-bit quantization through a novel offsetting mechanism. Specifically, OffQ first identifies a low-dimensional outlier subspace in the activations using a proposed top-1 PCA, and then concentrates high-magnitude activations into 1 channel via rotation. OffQ then absorbs this concentrated outlier channel by converting its magnitude into a shared offset, thereby reducing the standard deviation of the activations. This offsetting strategy enables effective W4A4KV4 quantization of LLMs using deployment-friendly uniform-grid and uniform-precision quantization. Extensive experiments across diverse LLM architectures and benchmarks demonstrate that OffQ outperforms state-of-the-art baselines, consistently improving model accuracy while preserving low-bit efficiency.",
+        "identifiers": [
+          "SemanticScholar:ef2f9bee844e0447a2e0ed738b3714e0c3e0c9dd"
+        ],
+        "semantic_scholar_id": "ef2f9bee844e0447a2e0ed738b3714e0c3e0c9dd",
+        "canonical_id": "arXiv:2606.07116",
+        "arxiv_id": "2606.07116",
+        "doi": "10.48550/arXiv.2606.07116",
+        "authors": [
+          "Hao-Qi Wang",
+          "Lorenz K. Mueller",
+          "Jiawei Zhuang",
+          "Mathieu Salzmann",
+          "Lukas Cavigelli"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 126,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.26140",
+      "identity_tokens": [
+        "id:SemanticScholar:b562dd20b0462795a82a819f23b2606c3312d988",
+        "id:arXiv:2608.26140",
+        "title:affix cache for diffusion large language models",
+        "url:https://arxiv.org/abs/2608.26140"
+      ],
+      "record": {
+        "title": "Affix Cache for Diffusion Large Language Models",
+        "source_url": "https://arxiv.org/abs/2608.26140",
+        "year": 2026,
+        "published": "2026-06-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Large Language Models (DLLMs) enable non-autoregressive decoding, but efficient inference support remains immature: unlike autoregressive models, whose requests reuse a shared prefix key-value (KV) cache, DLLMs use bidirectional attention, so a shared context's KV states depend on the tokens still being decoded, leaving directly reused caches stale and full recomputation necessary. We present ACache, a cross-request cache reuse mechanism for shared spans, or affixes, at any position: prefix, infix, or suffix. ACache measures the influence of affix tokens on the masked generation region to identify a small request-specific subset as Anchor Tokens, and recomputes only their KV states while reusing the remaining affix cache. Built on state-of-the-art intra-request caching mechanisms, ACache recovers most of the accuracy lost to direct affix-cache reuse on average when recomputing around 20% of affix tokens, and at that budget preserves more accuracy than selection criteria adapted from prior cross-request cache-reuse systems. We co-design ACache with a modern inference engine, whose attention reads each request's recomputed Anchor KV states alongside one affix cache shared across concurrent requests. Against the same system with only intra-request caching, ACache cuts recompute latency by up to 56.7%, translating to as much as 1.71$\\times$ end-to-end throughput, while reducing peak KV cache memory by up to 45.8%.",
+        "identifiers": [
+          "SemanticScholar:b562dd20b0462795a82a819f23b2606c3312d988"
+        ],
+        "semantic_scholar_id": "b562dd20b0462795a82a819f23b2606c3312d988",
+        "canonical_id": "arXiv:2608.26140",
+        "arxiv_id": "2608.26140",
+        "authors": [
+          "Kai-Huan Liang",
+          "An Zhong",
+          "Xin Tan",
+          "Z. Qazi",
+          "Hong Xu",
+          "Jian Weng",
+          "Marco Canini"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 105,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32278",
+      "identity_tokens": [
+        "id:SemanticScholar:8352f4032a901287b6757b81f807d9ca4f462a4a",
+        "id:arXiv:2609.32278",
+        "title:rrevict finegrained prefix cache eviction beyond lru for agentic llm serving",
+        "url:https://arxiv.org/abs/2609.32278"
+      ],
+      "record": {
+        "title": "RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.32278",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM-based agents execute long-horizon tasks through repeated model calls interleaved with tool execution and user interaction. As each call extends the history accumulated in previous turns, prefix caching avoids repeated prefill of the agent's entire context. However, the aggregate cache footprint grows with context length and concurrency, forcing serving systems to reclaim cached KV tensors. We identify recency synchronization: accesses to an agent's cached history refresh its cache nodes together, causing least recently used (LRU) eviction to concentrate on a few agents'private histories. When a fully evicted agent returns, it must recompute nearly its entire accumulated context, producing a large time-to-first-token (TTFT) outlier even if most other requests retain substantial cache reuse. We present RR-EVICT, a fine-grained prefix-cache eviction strategy that distributes reclamation across idle agent trajectories. RR-EVICT visits agents in round-robin order and evicts a tail chunk from each, preserving reusable prefixes for more agents when capacity remains for idle state. Returning agents can reuse these partial histories and recompute smaller missing suffixes. The policy requires no prediction of future arrivals or tool latency. We implement RR-EVICT in SGLang and evaluate conversational and coding-agent workloads under colocated and prefill-decode-disaggregated serving. Compared with LRU, RR-EVICT reduces P99 TTFT by up to 75.4% and P99 uncached prompt tokens by up to 65.7%.",
+        "identifiers": [
+          "SemanticScholar:8352f4032a901287b6757b81f807d9ca4f462a4a"
+        ],
+        "semantic_scholar_id": "8352f4032a901287b6757b81f807d9ca4f462a4a",
+        "canonical_id": "arXiv:2609.32278",
+        "arxiv_id": "2609.32278",
+        "authors": [
+          "Zai-Feng Pan",
+          "Chris Wu",
+          "Zheng-Ding Hu",
+          "Xin-Wei Qiang",
+          "Zhong-Kai Yu",
+          "Yu-Fei Ding"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 13,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36173",
+      "identity_tokens": [
+        "id:SemanticScholar:2081b1c89389974574ad6e3498b9cf634c0e84ac",
+        "id:arXiv:2609.36173",
+        "title:draft in parallel condition through depth adjacent causal injection for speculative decoding",
+        "url:https://arxiv.org/abs/2609.36173"
+      ],
+      "record": {
+        "title": "Draft in Parallel, Condition Through Depth: Adjacent Causal Injection for Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2609.36173",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Parallel speculative drafting generates multiple candidates in one backbone pass, but independent token selection can produce inconsistent continuations that shorten the accepted prefix. Existing methods mostly leave conditional decoding to a lightweight module after the backbone, which limits the flow of predecessor information to successors. Our analysis of DFlash shows that early positions already form recoverable predictions in shallow layers, and that accurate adjacent predecessors help successors more when they enter earlier. We therefore propose DSpine, a drafter with causal conditioning injection throughout the backbone: at every layer, gated adjacent injection writes each predecessor's predicted feature into its successor, so the causal conditioning chain unfolds over network depth while all positions update in parallel. A unified transfer space built from the target model's output embeddings unifies layer-wise injection with predecessor-conditioned decoding, and layer-wise output-embedding supervision promotes the formation of predicted features in shallow layers. Fused kernels and a transition cache execute both efficiently in parallel within SGLang. Across seven math, code, and chat benchmarks, DSpine achieves the longest acceptance length at both temperatures on Qwen3-4B and Qwen3-8B. At temperature zero on Qwen3-8B, it raises the seven-benchmark mean from DFlash's 3.77 to 4.82 (+27.8%); in SGLang serving tests, it delivers 23.3% higher throughput than DFlash on average.",
+        "identifiers": [
+          "SemanticScholar:2081b1c89389974574ad6e3498b9cf634c0e84ac"
+        ],
+        "semantic_scholar_id": "2081b1c89389974574ad6e3498b9cf634c0e84ac",
+        "canonical_id": "arXiv:2609.36173",
+        "arxiv_id": "2609.36173",
+        "authors": [
+          "Hao-Hui Zhang",
+          "Ke-Yu Chen",
+          "Hao-Cheng Sun",
+          "Wei-Bo Gu",
+          "Rui-Zhi Qiao",
+          "Xing Sun",
+          "Bo Jiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 11,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36222",
+      "identity_tokens": [
+        "id:SemanticScholar:0a3dfed247c19598f43e890980495c0d37a11c2f",
+        "id:arXiv:2609.36222",
+        "title:base batchaware selection of experts using predicted removal error for efficient moe decoding",
+        "url:https://arxiv.org/abs/2609.36222"
+      ],
+      "record": {
+        "title": "BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding",
+        "source_url": "https://arxiv.org/abs/2609.36222",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models are increasingly expensive to serve. In large-scale serving systems, autoregressive decoding is often bottlenecked by transferring model weights from accelerator high-bandwidth memory into on-chip SRAM. Mixture-of-experts (MoE) models reduce computation by activating only a small subset of experts per token, but this sparsity does not translate directly to batched decoding. Different requests select different experts; therefore, the combined active set across many concurrent requests can span a substantial fraction of the expert pool and require significantly more expert weights to be transferred. Most expert-reduction techniques make retention decisions independently for each token and therefore do not address this batch-level expansion. More recently, batch-aware methods have attempted to coordinate expert use across concurrent requests and reuse experts already fetched for the batch. Yet their selection criteria are based primarily on router rankings or expert statistics collected during calibration. Consequently, these criteria are not directly tied to the output error caused by dropping an expert, nor do they capture how an expert's contribution changes across tokens at inference time. We instead rank experts according to how much their removal would change the MoE-layer output. To apply this criterion during serving, we train a lightweight linear predictor during calibration that estimates the expert removal cost for each incoming token, and develop custom GPU kernels for cost prediction and expert selection. Across three MoE architectures, BASE improves the quality-efficiency tradeoff without retraining. On Qwen3-30B-A3B, it improves average accuracy by 29.5 points over the strongest baseline at comparable throughput under a tight expert budget. At a higher expert budget, it is 60% faster than dense inference while remaining within 0.4 accuracy points.",
+        "identifiers": [
+          "SemanticScholar:0a3dfed247c19598f43e890980495c0d37a11c2f"
+        ],
+        "semantic_scholar_id": "0a3dfed247c19598f43e890980495c0d37a11c2f",
+        "canonical_id": "arXiv:2609.36222",
+        "arxiv_id": "2609.36222",
+        "authors": [
+          "Ali Abbasi",
+          "Justin Shi",
+          "Soheil Kolouri"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 11,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37029",
+      "identity_tokens": [
+        "id:SemanticScholar:e0df98dd07d7a81a93a85a5fba2e4302ed14c1ca",
+        "id:arXiv:2609.37029",
+        "title:longspark efficient speculative decoding with a fixedcost parallel drafter",
+        "url:https://arxiv.org/abs/2609.37029"
+      ],
+      "record": {
+        "title": "LongSpark: Efficient speculative decoding with a fixed-cost parallel drafter",
+        "source_url": "https://arxiv.org/abs/2609.37029",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive inference by verifying multiple draft tokens in a single target forward pass. However, as the context grows, existing state-of-the-art drafters become increasingly expensive, eroding the very efficiency advantage they are designed to provide. We argue that this scaling is unnecessary. A standalone language model must grow with its prefix because it is solely responsible for every token it produces. A drafter, by contrast, only proposes candidates; the target catches and corrects every error before any token is committed. The drafter's decoding cost can therefore be made entirely independent of the prefix length. We introduce LongSpark, a block-diffusion drafter that achieves this by extracting fixed-size, multiscale views from the target's verification pass, thereby eliminating the need for a growing persistent state. Extensive evaluations demonstrate that LongSpark achieves state-of-the-art end-to-end efficiency across multiple model scales and realistic serving conditions. Notably, it delivers the lowest time-per-output-token on long-context tasks while reducing the drafter's context state by several orders of magnitude.",
+        "identifiers": [
+          "SemanticScholar:e0df98dd07d7a81a93a85a5fba2e4302ed14c1ca"
+        ],
+        "semantic_scholar_id": "e0df98dd07d7a81a93a85a5fba2e4302ed14c1ca",
+        "canonical_id": "arXiv:2609.37029",
+        "arxiv_id": "2609.37029",
+        "authors": [
+          "Hao-Yuan He",
+          "Peng-Fei Liu",
+          "Si-Shi Shen",
+          "Ming Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 10,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00412",
+      "identity_tokens": [
+        "id:SemanticScholar:913cc2a0875c5b2fdbfb79557b8e9b79bfaf144f",
+        "id:arXiv:2610.00412",
+        "title:echopress queryagnostic kv cache pruning via virtual context reconstruction",
+        "url:https://arxiv.org/abs/2610.00412"
+      ],
+      "record": {
+        "title": "EchoPress: Query-Agnostic KV Cache Pruning via Virtual Context Reconstruction",
+        "source_url": "https://arxiv.org/abs/2610.00412",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV cache pruning reduces long-context inference memory usage by evicting less important key-value pairs. KVzip estimates importance through context reconstruction: prompting a model to repeat the context chunk by chunk. This achieves strong compression quality at the cost of additional forward passes. Learned approximations reduce this cost but require model-specific training. We analyze how KVzip identifies important cached information and show how to approximate its reconstruction scores using information already computed during prefill. These findings motivate EchoPress, a training-free method that approximates reconstruction attention using queries and keys from standard prefill. For each request, it reconstructs only the first chunk to calibrate importance scores for the remaining context. Experiments on LongBench and RULER with Qwen3-8B and Llama-3.1-8B-Instruct show that EchoPress matches KVzip in task accuracy across eviction ratios from 50% to 90%, while reducing compression overhead by a factor of 1.7-19.6 and total prefill time by a factor of up to 2.9. Code is available at https://github.com/ljwljwljwljw/kvpress/tree/echo-press.",
+        "identifiers": [
+          "SemanticScholar:913cc2a0875c5b2fdbfb79557b8e9b79bfaf144f"
+        ],
+        "semantic_scholar_id": "913cc2a0875c5b2fdbfb79557b8e9b79bfaf144f",
+        "canonical_id": "arXiv:2610.00412",
+        "arxiv_id": "2610.00412",
+        "authors": [
+          "Jia-Wei Lin",
+          "Sai-Bo Geng",
+          "Thomas Bourgeat"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 9,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.20316",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770854.3780197",
+        "id:SemanticScholar:bb14404a8d0f5b9db1a66726ffd7317447cdae9a",
+        "id:arXiv:2505.20316",
+        "title:reinforcement speculative decoding for fast ranking",
+        "url:https://arxiv.org/abs/2505.20316"
+      ],
+      "record": {
+        "title": "Reinforcement Speculative Decoding for Fast Ranking",
+        "source_url": "https://arxiv.org/abs/2505.20316",
+        "year": 2025,
+        "published": "2025-05-23",
+        "venue": "Knowledge Discovery and Data Mining",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have been widely adopted in ranking systems such as information retrieval (IR) systems and recommender systems (RSs). To alleviate the latency of auto-regressive decoding, some studies explore the single (first) token decoding for ranking approximation, but they suffer from severe degradation in tail positions. Although speculative decoding (SD) methods can be a remedy with verification at different positions, they face challenges in ranking systems due to their left-to-right decoding paradigm. Firstly, ranking systems require strict latency constraints, but verification rounds in SD methods remain agnostic; Secondly, SD methods usually discard listwise ranking knowledge about unaccepted items in previous rounds, hindering future multi-token prediction, especially when candidate tokens are the unaccepted items. In this paper, we propose a Reinforcement Speculative Decoding method for fast ranking inference of LLMs. To meet the ranking systems' latency requirement, we propose an up-to-down decoding paradigm that employs an agent to iteratively modify the ranking sequence under a constrained budget. Specifically, we design a ranking-tailored policy optimization, actively exploring optimal multi-round ranking modification policy verified by LLMs via reinforcement learning (RL). To better approximate the target LLM under the constrained budget, we trigger the agent fully utilizing the listwise ranking knowledge about all items verified by LLMs across different rounds in RL, enhancing the modification policy of the agent. More importantly, we demonstrate the theoretical robustness and advantages of our paradigm and implementation. Experiments on both IR and RS tasks show the effectiveness of our proposed method.",
+        "identifiers": [
+          "SemanticScholar:bb14404a8d0f5b9db1a66726ffd7317447cdae9a"
+        ],
+        "semantic_scholar_id": "bb14404a8d0f5b9db1a66726ffd7317447cdae9a",
+        "canonical_id": "arXiv:2505.20316",
+        "arxiv_id": "2505.20316",
+        "doi": "10.1145/3770854.3780197",
+        "authors": [
+          "Yingpeng Du",
+          "Tian-Jun Wei",
+          "Zhu Sun",
+          "Jie M. Zhang",
+          "Xun Jiang"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 504,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:96ef85ddb9711489e8138154fa8fe899eb75dd3b7d8381f80ddbe85e5cfedd43",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

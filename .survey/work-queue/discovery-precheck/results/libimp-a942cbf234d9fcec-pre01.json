@@ -1,0 +1,323 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a942cbf234d9fcec-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a942cbf234d9",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tpds.2025.3590014",
+    "arXiv:2406.07056",
+    "arXiv:2407.07304",
+    "arXiv:2409.01366",
+    "arXiv:2410.05076",
+    "arXiv:2410.13846"
+  ],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0073acf8810142cee8d53d9b0240bc3cff162ec7",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-09-30T08:55:27.324481+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tpds.2025.3590014",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2406.07056",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2406.07056"
+    },
+    {
+      "requested_id": "arXiv:2407.07304",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2409.01366",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.05076",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.13846",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Cannikin: No Lagger of SLO in Concurrent Multiple LoRA LLM Serving",
+      "source_url": "https://doi.org/10.1109/TPDS.2025.3590014",
+      "year": 2025,
+      "published": "2025-09-01",
+      "abstract": null,
+      "doi": "10.1109/TPDS.2025.3590014",
+      "canonical_id": "DOI:10.1109/TPDS.2025.3590014",
+      "authors": [
+        "Ruidong Zhu",
+        "Ziyue Jiang",
+        "Zhi Zhang",
+        "Xin Liu",
+        "Xuanzhe Liu",
+        "Xin Jin"
+      ]
+    },
+    {
+      "title": "Inference Performance Optimization for Large Language Models on CPUs",
+      "source_url": "https://arxiv.org/abs/2407.07304",
+      "year": 2024,
+      "published": "2024-07-10",
+      "abstract": "Large language models (LLMs) have shown exceptional performance and vast potential across diverse tasks. However, the deployment of LLMs with high performance in low-resource environments has garnered significant attention in the industry. When GPU hardware resources are limited, we can explore alternative options on CPUs. To mitigate the financial burden and alleviate constraints imposed by hardware resources, optimizing inference performance is necessary. In this paper, we introduce an easily deployable inference performance optimization solution aimed at accelerating LLMs on CPUs. In this solution, we implement an effective way to reduce the KV cache size while ensuring precision. We propose a distributed inference optimization approach and implement it based on oneAPI Collective Communications Library. Furthermore, we propose optimization approaches for LLMs on CPU, and conduct tailored optimizations for the most commonly used models. The code is open-sourced at https://github.com/intel/xFasterTransformer.",
+      "canonical_id": "arXiv:2407.07304",
+      "arxiv_id": "2407.07304",
+      "doi": "10.48550/arXiv.2407.07304",
+      "authors": [
+        "Pujiang He",
+        "Shan Zhou",
+        "Wenhuan Huang",
+        "Changqing Li",
+        "Duyi Wang",
+        "Bin Guo",
+        "Chen Meng",
+        "Sheng Gui",
+        "Weifei Yu",
+        "Yi Xie"
+      ]
+    },
+    {
+      "title": "CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification",
+      "source_url": "https://arxiv.org/abs/2409.01366",
+      "year": 2024,
+      "published": "2024-09-02",
+      "abstract": "Deploying large language models (LLMs) on edge devices presents significant challenges due to the substantial computational overhead and memory requirements. Activation sparsification can mitigate these resource challenges by reducing the number of activated neurons during inference. Existing methods typically employ thresholding-based sparsification based on the statistics of activation tensors. However, they do not model the impact of activation sparsification on performance, resulting in suboptimal performance degradation. To address the limitations, this paper reformulates the activation sparsification problem to explicitly capture the relationship between activation sparsity and model performance. Then, this paper proposes CHESS, a general activation sparsification approach via CHannel-wise thrEsholding and Selective Sparsification. First, channel-wise thresholding assigns a unique threshold to each activation channel in the feed-forward network (FFN) layers. Then, selective sparsification involves applying thresholding-based activation sparsification to specific layers within the attention modules. Finally, we detail the implementation of sparse kernels to accelerate LLM inference. Experimental results demonstrate that the proposed CHESS achieves lower performance degradation over eight downstream tasks while activating fewer parameters than existing methods, thus speeding up the LLM inference by up to 1.27x.",
+      "canonical_id": "arXiv:2409.01366",
+      "arxiv_id": "2409.01366",
+      "doi": "10.48550/arXiv.2409.01366",
+      "authors": [
+        "Junhui He",
+        "Shang-Yu Wu",
+        "Weidong Wen",
+        "C. Xue",
+        "Qing'an Li"
+      ]
+    },
+    {
+      "title": "TidalDecode: Fast and Accurate LLM Decoding with Position Persistent Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2410.05076",
+      "year": 2024,
+      "published": "2024-10-07",
+      "abstract": "Large language models (LLMs) have driven significant advancements across diverse NLP tasks, with long-context models gaining prominence for handling extended inputs. However, the expanding key-value (KV) cache size required by Transformer architectures intensifies the memory constraints, particularly during the decoding phase, creating a significant bottleneck. Existing sparse attention mechanisms designed to address this bottleneck have two limitations: (1) they often fail to reliably identify the most relevant tokens for attention, and (2) they overlook the spatial coherence of token selection across consecutive Transformer layers, which can lead to performance degradation and substantial overhead in token selection. This paper introduces TidalDecode, a simple yet effective algorithm and system for fast and accurate LLM decoding through position persistent sparse attention. TidalDecode leverages the spatial coherence of tokens selected by existing sparse attention methods and introduces a few token selection layers that perform full attention to identify the tokens with the highest attention scores, while all other layers perform sparse attention with the pre-selected tokens. This design enables TidalDecode to substantially reduce the overhead of token selection for sparse attention without sacrificing the quality of the generated results. Evaluation on a diverse set of LLMs and tasks shows that TidalDecode closely matches the generative performance of full attention methods while reducing the LLM decoding latency by up to 2.1x.",
+      "canonical_id": "arXiv:2410.05076",
+      "arxiv_id": "2410.05076",
+      "doi": "10.48550/arXiv.2410.05076",
+      "authors": [
+        "Lijie Yang",
+        "Zhi-Hao Zhang",
+        "Zhuo-Fu Chen",
+        "Zikun Li",
+        "Zhihao Jia"
+      ]
+    },
+    {
+      "title": "LightTransfer: Your Long-Context LLM is Secretly a Hybrid Model with Effortless Adaptation",
+      "source_url": "https://arxiv.org/abs/2410.13846",
+      "year": 2024,
+      "published": "2024-10-17",
+      "abstract": "Scaling language models to handle longer contexts introduces substantial memory challenges due to the growing cost of key-value (KV) caches. Motivated by the efficiency gains of hybrid models and the broad availability of pretrained large transformer backbones, we explore transitioning transformer models into hybrid architectures for a more efficient generation. In this work, we propose LightTransfer, a lightweight method that transforms models such as LLaMA into hybrid variants. Our approach identifies lazy layers -- those focusing on recent or initial tokens -- and replaces their full attention with streaming attention. This transformation can be performed without any training for long-context understanding tasks or with minimal fine-tuning for o1-like long reasoning generation tasks that require stronger reasoning capabilities. Experiments across diverse benchmarks and models (e.g., LLaMA, Mistral, QwQ-STILL) demonstrate that, even when half of the layers are identified as lazy, LightTransfer achieves up to 2.17$\\times$ throughput improvement with minimal performance loss ($<1.5\\%$ on LongBench) and achieves 53.3\\% on math benchmark AIME24 of advanced o1-like long reasoning model QwQ-STILL.",
+      "canonical_id": "arXiv:2410.13846",
+      "arxiv_id": "2410.13846",
+      "authors": [
+        "Xuan Zhang",
+        "Feng-Zhuo Zhang",
+        "Cun-Xiao Du",
+        "Chao Du",
+        "Tianyu Pang",
+        "Wei Gao",
+        "Min Lin"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/tpds.2025.3590014",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpds.2025.3590014",
+        "title:cannikin no lagger of slo in concurrent multiple lora llm serving",
+        "url:https://doi.org/10.1109/TPDS.2025.3590014"
+      ],
+      "record": {
+        "title": "Cannikin: No Lagger of SLO in Concurrent Multiple LoRA LLM Serving",
+        "source_url": "https://doi.org/10.1109/TPDS.2025.3590014",
+        "year": 2025,
+        "published": "2025-09-01",
+        "abstract": null,
+        "doi": "10.1109/TPDS.2025.3590014",
+        "canonical_id": "DOI:10.1109/TPDS.2025.3590014",
+        "authors": [
+          "Ruidong Zhu",
+          "Ziyue Jiang",
+          "Zhi Zhang",
+          "Xin Liu",
+          "Xuanzhe Liu",
+          "Xin Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.07304",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.07304",
+        "id:arXiv:2407.07304",
+        "title:inference performance optimization for large language models on cpus",
+        "url:https://arxiv.org/abs/2407.07304"
+      ],
+      "record": {
+        "title": "Inference Performance Optimization for Large Language Models on CPUs",
+        "source_url": "https://arxiv.org/abs/2407.07304",
+        "year": 2024,
+        "published": "2024-07-10",
+        "abstract": "Large language models (LLMs) have shown exceptional performance and vast potential across diverse tasks. However, the deployment of LLMs with high performance in low-resource environments has garnered significant attention in the industry. When GPU hardware resources are limited, we can explore alternative options on CPUs. To mitigate the financial burden and alleviate constraints imposed by hardware resources, optimizing inference performance is necessary. In this paper, we introduce an easily deployable inference performance optimization solution aimed at accelerating LLMs on CPUs. In this solution, we implement an effective way to reduce the KV cache size while ensuring precision. We propose a distributed inference optimization approach and implement it based on oneAPI Collective Communications Library. Furthermore, we propose optimization approaches for LLMs on CPU, and conduct tailored optimizations for the most commonly used models. The code is open-sourced at https://github.com/intel/xFasterTransformer.",
+        "canonical_id": "arXiv:2407.07304",
+        "arxiv_id": "2407.07304",
+        "doi": "10.48550/arXiv.2407.07304",
+        "authors": [
+          "Pujiang He",
+          "Shan Zhou",
+          "Wenhuan Huang",
+          "Changqing Li",
+          "Duyi Wang",
+          "Bin Guo",
+          "Chen Meng",
+          "Sheng Gui",
+          "Weifei Yu",
+          "Yi Xie"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.01366",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2409.01366",
+        "id:arXiv:2409.01366",
+        "title:chess optimizing llm inference via channelwise thresholding and selective sparsification",
+        "url:https://arxiv.org/abs/2409.01366"
+      ],
+      "record": {
+        "title": "CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification",
+        "source_url": "https://arxiv.org/abs/2409.01366",
+        "year": 2024,
+        "published": "2024-09-02",
+        "abstract": "Deploying large language models (LLMs) on edge devices presents significant challenges due to the substantial computational overhead and memory requirements. Activation sparsification can mitigate these resource challenges by reducing the number of activated neurons during inference. Existing methods typically employ thresholding-based sparsification based on the statistics of activation tensors. However, they do not model the impact of activation sparsification on performance, resulting in suboptimal performance degradation. To address the limitations, this paper reformulates the activation sparsification problem to explicitly capture the relationship between activation sparsity and model performance. Then, this paper proposes CHESS, a general activation sparsification approach via CHannel-wise thrEsholding and Selective Sparsification. First, channel-wise thresholding assigns a unique threshold to each activation channel in the feed-forward network (FFN) layers. Then, selective sparsification involves applying thresholding-based activation sparsification to specific layers within the attention modules. Finally, we detail the implementation of sparse kernels to accelerate LLM inference. Experimental results demonstrate that the proposed CHESS achieves lower performance degradation over eight downstream tasks while activating fewer parameters than existing methods, thus speeding up the LLM inference by up to 1.27x.",
+        "canonical_id": "arXiv:2409.01366",
+        "arxiv_id": "2409.01366",
+        "doi": "10.48550/arXiv.2409.01366",
+        "authors": [
+          "Junhui He",
+          "Shang-Yu Wu",
+          "Weidong Wen",
+          "C. Xue",
+          "Qing'an Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.05076",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.05076",
+        "id:arXiv:2410.05076",
+        "title:tidaldecode fast and accurate llm decoding with position persistent sparse attention",
+        "url:https://arxiv.org/abs/2410.05076"
+      ],
+      "record": {
+        "title": "TidalDecode: Fast and Accurate LLM Decoding with Position Persistent Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2410.05076",
+        "year": 2024,
+        "published": "2024-10-07",
+        "abstract": "Large language models (LLMs) have driven significant advancements across diverse NLP tasks, with long-context models gaining prominence for handling extended inputs. However, the expanding key-value (KV) cache size required by Transformer architectures intensifies the memory constraints, particularly during the decoding phase, creating a significant bottleneck. Existing sparse attention mechanisms designed to address this bottleneck have two limitations: (1) they often fail to reliably identify the most relevant tokens for attention, and (2) they overlook the spatial coherence of token selection across consecutive Transformer layers, which can lead to performance degradation and substantial overhead in token selection. This paper introduces TidalDecode, a simple yet effective algorithm and system for fast and accurate LLM decoding through position persistent sparse attention. TidalDecode leverages the spatial coherence of tokens selected by existing sparse attention methods and introduces a few token selection layers that perform full attention to identify the tokens with the highest attention scores, while all other layers perform sparse attention with the pre-selected tokens. This design enables TidalDecode to substantially reduce the overhead of token selection for sparse attention without sacrificing the quality of the generated results. Evaluation on a diverse set of LLMs and tasks shows that TidalDecode closely matches the generative performance of full attention methods while reducing the LLM decoding latency by up to 2.1x.",
+        "canonical_id": "arXiv:2410.05076",
+        "arxiv_id": "2410.05076",
+        "doi": "10.48550/arXiv.2410.05076",
+        "authors": [
+          "Lijie Yang",
+          "Zhi-Hao Zhang",
+          "Zhuo-Fu Chen",
+          "Zikun Li",
+          "Zhihao Jia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.13846",
+      "identity_tokens": [
+        "id:arXiv:2410.13846",
+        "title:lighttransfer your longcontext llm is secretly a hybrid model with effortless adaptation",
+        "url:https://arxiv.org/abs/2410.13846"
+      ],
+      "record": {
+        "title": "LightTransfer: Your Long-Context LLM is Secretly a Hybrid Model with Effortless Adaptation",
+        "source_url": "https://arxiv.org/abs/2410.13846",
+        "year": 2024,
+        "published": "2024-10-17",
+        "abstract": "Scaling language models to handle longer contexts introduces substantial memory challenges due to the growing cost of key-value (KV) caches. Motivated by the efficiency gains of hybrid models and the broad availability of pretrained large transformer backbones, we explore transitioning transformer models into hybrid architectures for a more efficient generation. In this work, we propose LightTransfer, a lightweight method that transforms models such as LLaMA into hybrid variants. Our approach identifies lazy layers -- those focusing on recent or initial tokens -- and replaces their full attention with streaming attention. This transformation can be performed without any training for long-context understanding tasks or with minimal fine-tuning for o1-like long reasoning generation tasks that require stronger reasoning capabilities. Experiments across diverse benchmarks and models (e.g., LLaMA, Mistral, QwQ-STILL) demonstrate that, even when half of the layers are identified as lazy, LightTransfer achieves up to 2.17$\\times$ throughput improvement with minimal performance loss ($<1.5\\%$ on LongBench) and achieves 53.3\\% on math benchmark AIME24 of advanced o1-like long reasoning model QwQ-STILL.",
+        "canonical_id": "arXiv:2410.13846",
+        "arxiv_id": "2410.13846",
+        "authors": [
+          "Xuan Zhang",
+          "Feng-Zhuo Zhang",
+          "Cun-Xiao Du",
+          "Chao Du",
+          "Tianyu Pang",
+          "Wei Gao",
+          "Min Lin"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:8af488a65a8ce645d33725dfea82caa67935de851fb6060c333fa751835e30d0",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

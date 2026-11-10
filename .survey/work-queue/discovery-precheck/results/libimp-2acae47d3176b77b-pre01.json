@@ -1,0 +1,252 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2acae47d3176b77b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2acae47d3176",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3452296.3472904",
+    "arXiv:2507.05240"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "76956d8e241c2fc442da65e43858a37ac7dc8e7e",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-07T22:10:23.598071+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3452296.3472904",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.05240",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling",
+      "source_url": "https://arxiv.org/abs/2507.05240",
+      "year": 2025,
+      "published": "2025-07-07",
+      "venue": "IEEE International Conference on Robotics and Automation",
+      "citation_count": 156,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-and-Language Navigation (VLN) in real-world settings requires agents to process continuous visual streams and generate actions with low latency grounded in language instructions. While Video-based Large Language Models (Video-LLMs) have driven recent progress, current VLN methods based on Video-LLM often face trade-offs among fine-grained visual understanding, long-term context modeling and computational efficiency. We introduce StreamVLN, a streaming VLN framework that employs a hybrid slow-fast context modeling strategy to support multi-modal reasoning over interleaved vision, language and action inputs. The fast-streaming dialogue context facilitates responsive action generation through a sliding-window of multi-turn dialogues, while the slow-updating memory context compresses historical visual states using a 3D-aware token pruning strategy. With this slow-fast design, StreamVLN achieves real-time dialogues through KV cache reuse, supporting long video streams with bounded context size and inference cost. Experiments on VLN-CE benchmarks show state-of-the-art performance with low latency, ensuring robustness and efficiency in real-world deployment. The project page is: https://streamvln.github.io/.",
+      "identifiers": [
+        "SemanticScholar:0c409e36467d3828252fb958bd4497226d4ac968"
+      ],
+      "semantic_scholar_id": "0c409e36467d3828252fb958bd4497226d4ac968",
+      "canonical_id": "arXiv:2507.05240",
+      "arxiv_id": "2507.05240",
+      "doi": "10.1109/ICRA57385.2026.11696190",
+      "authors": [
+        "Meng Wei",
+        "Chen-Yang Wan",
+        "Xiqian Yu",
+        "Tai Wang",
+        "Yu-Qiang Yang",
+        "Xiaohan Mao",
+        "Chen-Ming Zhu",
+        "Wen-Zhe Cai",
+        "Han-Qing Wang",
+        "Yi-Lun Chen",
+        "Xi-Hui Liu",
+        "Jiang-Miao Pang"
+      ],
+      "priority": 156,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 156,
+        "citation_count": 156,
+        "total": 156,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 457,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient sparse collective communication and its application to accelerate distributed deep learning",
+      "source_url": "https://doi.org/10.1145/3452296.3472904",
+      "year": 2020,
+      "published": "2020-09-30",
+      "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "citation_count": 154,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient collective communication is crucial to parallel-computing applications such as distributed training of large-scale recommendation systems and natural language processing models. Existing collective communication libraries focus on optimizing operations for dense inputs, resulting in transmissions of many zeros when inputs are sparse. This counters current trends that see increasing data sparsity in large models. We propose OmniReduce, an efficient streaming aggregation system that exploits sparsity to maximize effective bandwidth use by sending only non-zero data blocks. We demonstrate that this idea is beneficial and accelerates distributed training by up to 8.2x. Even at 100 Gbps, OmniReduce delivers 1.4--2.9x better performance for network-bottlenecked DNNs.",
+      "identifiers": [
+        "SemanticScholar:68a439902fd7d8005222f75d354a41fba6d60741"
+      ],
+      "semantic_scholar_id": "68a439902fd7d8005222f75d354a41fba6d60741",
+      "doi": "10.1145/3452296.3472904",
+      "canonical_id": "DOI:10.1145/3452296.3472904",
+      "authors": [
+        "Jiawei Fei",
+        "Chen-Yu Ho",
+        "Atal Narayan Sahu",
+        "Marco Canini",
+        "A. Sapio"
+      ],
+      "priority": 154,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 154,
+        "citation_count": 154,
+        "total": 154,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2198,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2507.05240",
+      "identity_tokens": [
+        "id:DOI:10.1109/icra57385.2026.11696190",
+        "id:SemanticScholar:0c409e36467d3828252fb958bd4497226d4ac968",
+        "id:arXiv:2507.05240",
+        "title:streamvln streaming visionandlanguage navigation via slowfast context modeling",
+        "url:https://arxiv.org/abs/2507.05240"
+      ],
+      "record": {
+        "title": "StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling",
+        "source_url": "https://arxiv.org/abs/2507.05240",
+        "year": 2025,
+        "published": "2025-07-07",
+        "venue": "IEEE International Conference on Robotics and Automation",
+        "citation_count": 156,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-and-Language Navigation (VLN) in real-world settings requires agents to process continuous visual streams and generate actions with low latency grounded in language instructions. While Video-based Large Language Models (Video-LLMs) have driven recent progress, current VLN methods based on Video-LLM often face trade-offs among fine-grained visual understanding, long-term context modeling and computational efficiency. We introduce StreamVLN, a streaming VLN framework that employs a hybrid slow-fast context modeling strategy to support multi-modal reasoning over interleaved vision, language and action inputs. The fast-streaming dialogue context facilitates responsive action generation through a sliding-window of multi-turn dialogues, while the slow-updating memory context compresses historical visual states using a 3D-aware token pruning strategy. With this slow-fast design, StreamVLN achieves real-time dialogues through KV cache reuse, supporting long video streams with bounded context size and inference cost. Experiments on VLN-CE benchmarks show state-of-the-art performance with low latency, ensuring robustness and efficiency in real-world deployment. The project page is: https://streamvln.github.io/.",
+        "identifiers": [
+          "SemanticScholar:0c409e36467d3828252fb958bd4497226d4ac968"
+        ],
+        "semantic_scholar_id": "0c409e36467d3828252fb958bd4497226d4ac968",
+        "canonical_id": "arXiv:2507.05240",
+        "arxiv_id": "2507.05240",
+        "doi": "10.1109/ICRA57385.2026.11696190",
+        "authors": [
+          "Meng Wei",
+          "Chen-Yang Wan",
+          "Xiqian Yu",
+          "Tai Wang",
+          "Yu-Qiang Yang",
+          "Xiaohan Mao",
+          "Chen-Ming Zhu",
+          "Wen-Zhe Cai",
+          "Han-Qing Wang",
+          "Yi-Lun Chen",
+          "Xi-Hui Liu",
+          "Jiang-Miao Pang"
+        ],
+        "priority": 156,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 156,
+          "citation_count": 156,
+          "total": 156,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 457,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3452296.3472904",
+      "identity_tokens": [
+        "id:DOI:10.1145/3452296.3472904",
+        "id:SemanticScholar:68a439902fd7d8005222f75d354a41fba6d60741",
+        "title:efficient sparse collective communication and its application to accelerate distributed deep learning",
+        "url:https://doi.org/10.1145/3452296.3472904"
+      ],
+      "record": {
+        "title": "Efficient sparse collective communication and its application to accelerate distributed deep learning",
+        "source_url": "https://doi.org/10.1145/3452296.3472904",
+        "year": 2020,
+        "published": "2020-09-30",
+        "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+        "citation_count": 154,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient collective communication is crucial to parallel-computing applications such as distributed training of large-scale recommendation systems and natural language processing models. Existing collective communication libraries focus on optimizing operations for dense inputs, resulting in transmissions of many zeros when inputs are sparse. This counters current trends that see increasing data sparsity in large models. We propose OmniReduce, an efficient streaming aggregation system that exploits sparsity to maximize effective bandwidth use by sending only non-zero data blocks. We demonstrate that this idea is beneficial and accelerates distributed training by up to 8.2x. Even at 100 Gbps, OmniReduce delivers 1.4--2.9x better performance for network-bottlenecked DNNs.",
+        "identifiers": [
+          "SemanticScholar:68a439902fd7d8005222f75d354a41fba6d60741"
+        ],
+        "semantic_scholar_id": "68a439902fd7d8005222f75d354a41fba6d60741",
+        "doi": "10.1145/3452296.3472904",
+        "canonical_id": "DOI:10.1145/3452296.3472904",
+        "authors": [
+          "Jiawei Fei",
+          "Chen-Yu Ho",
+          "Atal Narayan Sahu",
+          "Marco Canini",
+          "A. Sapio"
+        ],
+        "priority": 154,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 154,
+          "citation_count": 154,
+          "total": 154,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2198,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:630a78029478063987db22541ba6cc7da424a46a101198c8265037f4a7afa723",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

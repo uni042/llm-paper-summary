@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca0f8466a280b5a0-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/291069.291026",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/291069.291026",
+    "identity_tokens": [
+      "DOI:10.1145/291069.291026"
+    ],
+    "reason": "ストレージ装置側へ計算を移してI/O量を削減するactive diskのプログラミングモデルとアルゴリズムを評価する階層メモリ／near-storage computingの基礎研究。LLMのCPU/SSD/NVMeオフロードと機構上の接点は強いが、LLM/Transformer推論を最終適用先としないため境界扱い。",
+    "first_checked_at": "2026-10-05T15:55:16+00:00",
+    "last_checked_at": "2026-10-05T16:43:46+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Active disks: programming model, algorithms and evaluation"
+  },
+  "processed_at": "2026-10-05T16:43:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca0f8466a280",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

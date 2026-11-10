@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e00ff58c3e351a2-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.19909",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.19909",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2609.19909",
+      "arXiv:2609.19909"
+    ],
+    "reason": "一次要旨は異種CPU端末での協調LLM微調整に特化する。テンソル並列の負荷分割で学習時間を既存テンソル並列比18%、パイプライン並列比56%短縮するが、測定対象は勾配を伴う微調整とCPU待機率であり、デコード時の推論遅延・サービング性能は評価されない。学習単独最適化のため現行収録対象外。",
+    "first_checked_at": "2026-10-05T06:23:11+00:00",
+    "last_checked_at": "2026-10-23T06:46:04+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+    ],
+    "title": "Xronos: Heterogeneity-Aware Tensor Parallelism for Collaborative LLM Fine-Tuning on Edge CPUs"
+  },
+  "processed_at": "2026-10-23T06:46:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e00ff58c3e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

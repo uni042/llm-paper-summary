@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "request_id": "run-state-scheduled-chat-00-20260925T060233JST-runtime-02",
+  "run_key": "scheduled-chat-00-20260925T060233+0900-a6f41c",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-25T06:02:33+09:00",
+  "runtime_condition": "platform_context_limit",
+  "runtime_condition_confirmed": true,
+  "runtime_condition_attempts": 2,
+  "runtime_condition_detail": "Platform safety checks rejected required GitHub record updates for chat-record-k problem_method/evaluation and twice rejected non-force main ref update to recovery commit 604f2da2350fb5ae302529c94fd9560139efd29c. GitHub reads, metadata write, blob/tree/commit creation succeeded.",
+  "runtime_condition_event": "platform_tool_call_rejected"
+}

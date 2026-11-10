@@ -1,0 +1,123 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5d3253e4edc834fa-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5d3253e4edc8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2401.08294",
+    "arXiv:2401.10480"
+  ],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "076e48215212df370a7dc7589914cfc9fa7db66f",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T06:05:43.768151+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2401.08294",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2401.08294"
+    },
+    {
+      "requested_id": "arXiv:2401.10480",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning",
+      "source_url": "https://arxiv.org/abs/2401.10480",
+      "year": 2024,
+      "published": "2024-01-19",
+      "abstract": "Self-consistency (SC) has been a widely used decoding strategy for chain-of-thought reasoning. Despite bringing significant performance improvements across a variety of multi-step reasoning tasks, it is a high-cost method that requires multiple sampling with the preset size. In this paper, we propose a simple and scalable sampling process, \\textbf{E}arly-Stopping \\textbf{S}elf-\\textbf{C}onsistency (ESC), to greatly reduce the cost of SC without sacrificing performance. On this basis, one control scheme for ESC is further derivated to dynamically choose the performance-cost balance for different tasks and models. To demonstrate ESC's effectiveness, we conducted extensive experiments on three popular categories of reasoning tasks: arithmetic, commonsense and symbolic reasoning over language models with varying scales. The empirical results show that ESC reduces the average number of sampling of chain-of-thought reasoning by a significant margin on six benchmarks, including MATH (-33.8%), GSM8K (-80.1%), StrategyQA (-76.8%), CommonsenseQA (-78.5%), Coin Flip (-84.2%) and Last Letters (-67.4%), while attaining comparable performances.",
+      "canonical_id": "arXiv:2401.10480",
+      "arxiv_id": "2401.10480",
+      "doi": "10.48550/arXiv.2401.10480",
+      "authors": [
+        "Yiwei Li",
+        "Peiwen Yuan",
+        "Shaoxiong Feng",
+        "Boyuan Pan",
+        "Xinglin Wang",
+        "Bin Sun",
+        "Heda Wang",
+        "Kan Li"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2401.10480",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2401.10480",
+        "id:arXiv:2401.10480",
+        "title:escape skyhigh cost earlystopping selfconsistency for multistep reasoning",
+        "url:https://arxiv.org/abs/2401.10480"
+      ],
+      "record": {
+        "title": "Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning",
+        "source_url": "https://arxiv.org/abs/2401.10480",
+        "year": 2024,
+        "published": "2024-01-19",
+        "abstract": "Self-consistency (SC) has been a widely used decoding strategy for chain-of-thought reasoning. Despite bringing significant performance improvements across a variety of multi-step reasoning tasks, it is a high-cost method that requires multiple sampling with the preset size. In this paper, we propose a simple and scalable sampling process, \\textbf{E}arly-Stopping \\textbf{S}elf-\\textbf{C}onsistency (ESC), to greatly reduce the cost of SC without sacrificing performance. On this basis, one control scheme for ESC is further derivated to dynamically choose the performance-cost balance for different tasks and models. To demonstrate ESC's effectiveness, we conducted extensive experiments on three popular categories of reasoning tasks: arithmetic, commonsense and symbolic reasoning over language models with varying scales. The empirical results show that ESC reduces the average number of sampling of chain-of-thought reasoning by a significant margin on six benchmarks, including MATH (-33.8%), GSM8K (-80.1%), StrategyQA (-76.8%), CommonsenseQA (-78.5%), Coin Flip (-84.2%) and Last Letters (-67.4%), while attaining comparable performances.",
+        "canonical_id": "arXiv:2401.10480",
+        "arxiv_id": "2401.10480",
+        "doi": "10.48550/arXiv.2401.10480",
+        "authors": [
+          "Yiwei Li",
+          "Peiwen Yuan",
+          "Shaoxiong Feng",
+          "Boyuan Pan",
+          "Xinglin Wang",
+          "Bin Sun",
+          "Heda Wang",
+          "Kan Li"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:d3391054b8f8f4f9f47f438b381eac378158d21cc9508a31a0baee2653990717",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

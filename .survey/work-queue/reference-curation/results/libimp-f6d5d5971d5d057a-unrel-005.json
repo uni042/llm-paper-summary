@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6d5d5971d5d057a-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3569951.3597559",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3569951.3597559",
+    "identity_tokens": [
+      "DOI:10.1145/3569951.3597559"
+    ],
+    "reason": "NSF ACCESSの研究cyberinfrastructure coordination services、governance、support ecosystemを説明するprogram/infrastructure overviewで、LLM/Transformer推論技術の設計・評価を扱わない。",
+    "first_checked_at": "2026-10-06T13:52:11+00:00",
+    "last_checked_at": "2026-10-06T13:52:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2602.11192-melinoe-fine-tuning-enables-memory-efficient-inference-for-mixture-of-ex.md"
+    ],
+    "title": "ACCESS: Advancing Innovation: NSF’s Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support"
+  },
+  "processed_at": "2026-10-06T13:52:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6d5d5971d5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7280962a4eab4c81-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.19856",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.19856",
+    "identity_tokens": [
+      "arXiv:2609.19856"
+    ],
+    "reason": "Voice activity detection (VAD) fronts most voice-agent pipelines, yet production detectors treat all human speech, background talkers included, as valid activity; in crowded settings this floods recognition, stalls turn-taking, and triggers false barge-in. We formalize Foreground VAD (FVAD): a frame-synchronous, enrollment-free task in which only the dominant speaker, defined by sustained presence rather than instantaneous loudness, is positive, and which reduces to conventional VAD when a single speaker is present. We show that foreground selectivity is largely governed by training supervision: the crucial ingredient is an augmentation recipe pairing foreground-only labels with competing-speaker mixing, generated fully automatically without human annotation. To quantify selectivity we introduce the Background False-Alarm Rate (BG-FAR), gated by foreground F1, and build a controlled benchmark, Mix-Interference, complemented by an adapted VOiCES for real-world far-field evaluation. Across equal-size backbones, Mamba and LSTM perform on par while a longer-context attention model is no better, suggesting that training supervision plays a substantially larger role than temporal modeling capacity in achieving foreground selectivity. The resulting lightweight streaming model, Mamba-FVAD, outperforms commercial VADs and enrollment-based speaker-aware systems in foreground selectivity while staying competitive on conventional VAD, at 1-2 ms per-frame CPU latency.",
+    "first_checked_at": "2026-10-05T06:23:11+00:00",
+    "last_checked_at": "2026-10-05T06:23:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Foreground Voice Activity Detection: Learning Speaker Selectivity from Supervision"
+  },
+  "processed_at": "2026-10-05T06:23:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7280962a4eab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

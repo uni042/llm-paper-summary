@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1e4333c46516b10b-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2607.26504",
+  "reason": "Many discrete reasoning tasks, such as code generation, are inherently non-causal: programmers move between high-level structure and local details, a process we call any-order inference. For autoregressive language models, which lack a native any-order interface, non-causal abilities such as infilling and next-edit prediction require hand-designed mechanisms. Can we instead design models that natively support any-order inference? Masked diffusion models have recently emerged as compelling candidates, as their any-order training objective naturally offers an any-order prediction interface. This interface, however, does not automatically yield any-order inference. We demonstrate that this interface-inference gap stems from positional uncertainty: fixed-canvas, token-level models may know what semantic component should appear without knowing where to place it. In light of this, we propose two complementary approaches: (1) Insertion-based masked diffusion, building on FlexMDM (Kim et al, 2025), relaxes fixed-position commitments via insertions, enabling generation across non-contiguous regions. (2) Latent-space masked diffusion shifts prediction to coarser semantic segments, enabling search over latent generation orders. Empirically, we train a 7B FlexMDM for Python coding and a 125M LatentMDM for GSM8K and show that both approaches induce distinct any-order inference behaviors and improve downstream performance. We release our codebase at https://github.com/SeunggeunKimkr/genuine-any-order.",
+  "title": "From Interface to Inference: Eliciting Any-Order Inference from Any-Order Models",
+  "identity_tokens": [
+    "arXiv:2607.26504"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+    "papers/inference/07-kv-cache-optimization-compression/2025-2511.08923-tidar-think-in-diffusion-talk-in-autoregression.md",
+    "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+    "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md",
+    "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e4333c46516",
+  "source_precheck_request_id": null
+}

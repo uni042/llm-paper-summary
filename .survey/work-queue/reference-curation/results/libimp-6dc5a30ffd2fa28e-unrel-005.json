@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6dc5a30ffd2fa28e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.26344",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.26344",
+    "identity_tokens": [
+      "arXiv:2606.26344"
+    ],
+    "reason": "Tensor-program superoptimizer without an LLM-specific inference target/evaluation.",
+    "first_checked_at": "2026-10-05T11:46:58+00:00",
+    "last_checked_at": "2026-10-05T11:46:58+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md"
+    ],
+    "title": "Axon: A Synthesizing Superoptimizer for Tensor Programs"
+  },
+  "processed_at": "2026-10-05T11:46:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6dc5a30ffd2f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

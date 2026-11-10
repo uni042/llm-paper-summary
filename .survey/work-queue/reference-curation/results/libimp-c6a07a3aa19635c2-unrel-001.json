@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c6a07a3aa19635c2-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.00801",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.00801",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.00801",
+      "arXiv:2403.00801"
+    ],
+    "reason": "LLMで索引・検索・再ランキングを統合する情報検索手法で、主目的は検索精度とRAG性能。推論サービング、KVキャッシュ、オフロード、推論カーネル等の高速化が最終適用先ではない。",
+    "first_checked_at": "2026-10-03T07:46:12+00:00",
+    "last_checked_at": "2026-10-03T07:46:12+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+    ],
+    "title": "Self-Retrieval: End-to-End Information Retrieval with One Large Language Model"
+  },
+  "processed_at": "2026-10-03T07:46:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6a07a3aa196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

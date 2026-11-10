@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-332ede5ddff79c8e-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.02716",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.02716",
+    "identity_tokens": [
+      "arXiv:2402.02716"
+    ],
+    "reason": "LLM agent planningをtask decomposition、plan selection、external module、reflection、memoryに分類して整理するsurveyで、推論systemの速度・memory・serving最適化方式を提案・評価しない。",
+    "first_checked_at": "2026-10-04T20:53:45+00:00",
+    "last_checked_at": "2026-10-04T20:53:45+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
+      "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+    ],
+    "title": "Understanding the planning of LLM agents: A survey"
+  },
+  "processed_at": "2026-10-04T20:53:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-332ede5ddff7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

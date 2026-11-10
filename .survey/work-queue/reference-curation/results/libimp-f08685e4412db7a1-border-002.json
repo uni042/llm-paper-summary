@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f08685e4412db7a1-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.18508",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.18508",
+    "identity_tokens": [
+      "arXiv:2602.18508"
+    ],
+    "reason": "本文はscan-based parallel executionのNeural Turing Machineを提案し、autoregressive decoding上のsynthetic algorithm tasksとcompute-efficiencyを評価する。LLM language modelingではなく汎用モデルのtransfer evidenceが未提示。",
+    "first_checked_at": "2026-10-06T21:07:33+00:00",
+    "last_checked_at": "2026-10-06T21:07:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Parallelizable Neural Turing Machines"
+  },
+  "processed_at": "2026-10-06T21:07:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f08685e4412d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

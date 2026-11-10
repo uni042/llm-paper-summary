@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2e9634ac13974977-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/359094.359101",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/359094.359101",
+    "identity_tokens": [
+      "DOI:10.1145/359094.359101"
+    ],
+    "reason": "グラフ頂点彩色のアルゴリズム研究で、MoE pruning等の後続研究に引用されてもLLM推論・モデル実行を直接対象としない。",
+    "first_checked_at": "2026-10-04T09:52:02+00:00",
+    "last_checked_at": "2026-10-04T13:03:15+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md"
+    ],
+    "title": "New methods to color the vertices of a graph"
+  },
+  "processed_at": "2026-10-04T13:03:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2e9634ac1397",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

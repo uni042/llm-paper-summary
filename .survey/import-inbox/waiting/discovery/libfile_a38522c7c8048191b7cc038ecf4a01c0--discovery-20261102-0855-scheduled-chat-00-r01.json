@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0855-scheduled-chat-00/r01",
+  "reference_main_sha": "2e6165d8492a62e3317901512a9adc0d8e0c4cac",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.29820",
+      "identity_tokens": [
+        "id:arXiv:2610.29820",
+        "id:DOI:10.48550/arXiv.2610.29820"
+      ],
+      "title": "UlaCache: Unified Logical Addressing for Sparse LLM Serving",
+      "reason": "GPU/CPUに分散するKVを安定した論理アドレスで参照し、物理配置からsparse attentionのKV選択を分離する。分散時はGPU側の選択済みKVを保持し、不足分のみ転送する。CPU格納を使う構成では並列化したPB-LRUがGPU共有プールを管理する。著者要旨はH200とB300のDP/TP構成で最大1.16～2.51倍のdecode throughputを報告しており、KV管理・疎注意・サービングの直接的なシステム貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.29820",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:00:13+09:00",
+      "last_checked_at": "2026-11-02T09:00:13+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.24875",
+      "identity_tokens": [
+        "id:arXiv:2609.24875",
+        "id:DOI:10.48550/arXiv.2609.24875"
+      ],
+      "title": "SPHQuant: Efficient extreme low bit weight quantization for Vision-Language Models",
+      "reason": "VLMの言語バックボーンを対象とする重みのみの超低ビット量子化。8次元重みを符号・半径・正方向へ分解し、外れ値の影響を半径の高精度表現で抑える。共有メモリ内で小型方向コードブックを参照するGEMVカーネルも設計し、著者要旨ではRTX A6000でQTIPよりdecode throughputが30.3%高い。画像認識のみではなく自回帰VLM推論の圧縮・カーネルに直接適用されるためaccept。",
+      "source_url": "https://arxiv.org/abs/2609.24875",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:00:13+09:00",
+      "last_checked_at": "2026-11-02T09:00:13+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.38355",
+      "identity_tokens": [
+        "id:arXiv:2610.38355",
+        "id:DOI:10.48550/arXiv.2610.38355"
+      ],
+      "title": "FlatCake: A Flat KVCache Storage Architecture for LLM Serving",
+      "reason": "従来のDRAMをSSDの中間キャッシュとする階層設計が、巨大なagentic sessionと一度きりのKVブロックの混在に適さない点を扱う。DRAM/NVMeを単一64-bit論理アドレス空間の対等な媒体とし、生成時にセッション連続・層優先配置して移動を避け、GDSでGPUへ集約読出しする。著者要旨は実運用トレースでMooncake比94%対64%のヒット率、ピーク時TTFTと総トークンスループット各1.6倍改善を報告。KV階層・SSD推論の直接的な方式としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.38355",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:00:13+09:00",
+      "last_checked_at": "2026-11-02T09:00:13+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31827",
+      "identity_tokens": [
+        "id:arXiv:2610.31827",
+        "id:DOI:10.48550/arXiv.2610.31827"
+      ],
+      "title": "KVStream: Adaptive Parallel Storage Management for KV Caching in Large-Scale LLM Serving",
+      "reason": "ノード内NVMe、並列ファイルシステム、クラウド保存層にまたがるKV接頭部の復元を、複数媒体の合計帯域を活用する動的分担問題として扱う。各層へチャンクを複製し、空いた媒体が未読チャンクを順次引き受けることで静的な帯域配分を不要にする。LMCache統合、最大128 GPU・4モデル・6データセットの著者評価では、集約帯域限界の5%以内、offline throughput最大1.49倍、バースト時の平均TTFT最大6.1倍短縮を報告。LLMサービング用KVストレージ管理としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.31827",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:00:13+09:00",
+      "last_checked_at": "2026-11-02T09:00:13+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.23006",
+      "identity_tokens": [
+        "id:arXiv:2610.23006",
+        "id:DOI:10.48550/arXiv.2610.23006"
+      ],
+      "title": "Efficient CPU-GPU collaborative MoE inference via Adaptive Expert Assignment",
+      "reason": "GPUに載らないMoE expertをすべて転送するかCPUで処理するかの二者択一ではなく、expert別のtoken負荷に応じて高負荷expertをGPUへ転送し、低負荷expertをCPUで実行する。CPU演算経路とPCIe転送＋GPU演算経路の終了時刻を均衡させる割当を適応調整する。著者のarXiv登録要旨は3種類のMoE LLMで最良比較方式に対しprefill最大51.9%、decode throughput最大39.5%改善を報告。CPU/GPU協調オフロードの直接的貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.23006",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:00:13+09:00",
+      "last_checked_at": "2026-11-02T09:00:13+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.09424",
+      "identity_tokens": [
+        "id:arXiv:2610.09424",
+        "id:DOI:10.48550/arXiv.2610.09424"
+      ],
+      "title": "Democratizing MoE inference on commodity GPUs with CoMoE",
+      "reason": "NVLinkやP2P転送を持たない民生GPU複数台のMoE expert parallelismを対象とする。ホストをルーティングハブとして共有tokenを一度だけホストへ書き込むmulticast dispatchと、ホストステージングを使ったtoken単位のcombineを提案し、転送重複と全体同期を抑える。著者のarXiv登録要旨ではRTX 5090上で推論スループット最大1.46倍、A800/NVLink相当の性能にハードウェア費用23.4%で接近したと報告。MoE推論通信の直接的なシステム研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.09424",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:00:13+09:00",
+      "last_checked_at": "2026-11-02T09:00:13+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.18444",
+      "identity_tokens": [
+        "id:arXiv:2610.18444",
+        "id:DOI:10.48550/arXiv.2610.18444"
+      ],
+      "title": "An Optical KV Cache Network for Disaggregated LLM Serving",
+      "reason": "prefill/decode分離でKVを移送する際、パケット網の過剰収容によるTTFT悪化を光回線交換で緩和する提案。機械式光スイッチの再構成時間をprefill中の予約確定で隠し、各GPUへWDM接続する。著者要旨の実トレースに基づくシミュレーションでは、50ms再構成遅延を許容しつつ400G適応ルーティング網と同等性能を2:1ファブリック費用の0.55～0.78倍で達成すると報告。ネットワーク設計を通じたKV転送高速化としてaccept。ただし実ネットワークでの運用実測ではない。",
+      "source_url": "https://arxiv.org/abs/2610.18444",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:00:13+09:00",
+      "last_checked_at": "2026-11-02T09:00:13+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39761",
+      "identity_tokens": [
+        "id:arXiv:2610.39761",
+        "id:DOI:10.48550/arXiv.2610.39761"
+      ],
+      "title": "GPU-Resident Speculative Decoding for In-Browser LLM Inference with WebGPU",
+      "reason": "ブラウザのGPUプロセス境界、dispatch、CPU readbackが投機復号を遅くする問題に対し、draft・検証・受理・KV更新をGPU内ループへ統合する。追加重みを要しない文脈混合drafterとデバイス別投機幅制御を使い、同一量子化runtimeのgreedy出力一致を維持する。著者要旨では0.5B～8Bの7モデル、3種類のクライアントGPUでWebLLM比3.5～8.6倍のdecode速度を報告。端末内推論runtimeの具体的実装貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.39761",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:00:13+09:00",
+      "last_checked_at": "2026-11-02T09:00:13+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.15417",
+      "identity_tokens": [
+        "id:arXiv:2610.15417",
+        "id:DOI:10.48550/arXiv.2610.15417"
+      ],
+      "title": "SpecFit: Not All Draft Tokens Cost the Same in Offloaded MoE Inference",
+      "reason": "MoE expertをホストへオフロードする環境では投機木を広げるほど検証で新しいexpert転送が増え、通常の受理長最大化が逆効果になり得る。draft経路確率による期待受理token数と、各層で必要なexpert集合の和集合から転送費用を予測し、祖先閉部分木の厳密探索で予測throughputが最大となる検証木とdraft終了時点を選ぶ。著者要旨ではQwen3-30B-A3Bで同一expert cacheのEAGLE-3比7.0～21.6%高速化を報告。MoE offloadと投機復号の共同最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.15417",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:00:13+09:00",
+      "last_checked_at": "2026-11-02T09:00:13+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.33475",
+      "identity_tokens": [
+        "id:arXiv:2610.33475",
+        "id:DOI:10.48550/arXiv.2610.33475"
+      ],
+      "title": "LLMs in Cloud: A Discussion on Architecture, Orchestration, and Inference",
+      "reason": "PRISMA 2020に沿うと著者が述べる横断的レビューで、GPU仮想化、クラスタスケジューリング、continuous batching、prefill/decode分離、階層KV offload、サーバレス、信頼性・TEEを共通のPareto観点で整理する。LLM推論インフラの全体像には関連する一方、新しい推論エンジン・カーネル・メモリ管理方式や実機性能改善の個別提案ではなく、概説的な文献統合が中心のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.33475",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:00:13+09:00",
+      "last_checked_at": "2026-11-02T09:00:13+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

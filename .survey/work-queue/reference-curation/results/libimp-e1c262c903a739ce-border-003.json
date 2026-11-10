@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e1c262c903a739ce-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.22228",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.22228",
+    "identity_tokens": [
+      "arXiv:2609.22228"
+    ],
+    "reason": "This is a robustness study of latent-reasoning models under adversarial perturbations, rather than a new inference optimization. It discusses how latent vectors can shorten explicit reasoning trajectories and reduce memory/latency, but its experiments assess attack robustness across a limited set of models; the primary text explicitly frames results as robustness-risk evidence, not a complete LRM characterization. Its latent-inference connection is plausible but indirect.",
+    "first_checked_at": "2026-10-06T09:20:42+00:00",
+    "last_checked_at": "2026-10-06T09:20:42+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Assessing Adversarial Robustness of Latent Reasoning Models"
+  },
+  "processed_at": "2026-10-06T09:20:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e1c262c903a7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

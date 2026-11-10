@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-146aeafe0fc664b4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.33226",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.33226",
+    "identity_tokens": [
+      "arXiv:2609.33226"
+    ],
+    "reason": "Threaderは長期間の対話履歴をLLMで繰り返し要約する構築費用と情報損失を避け、元の会話を軽量な話題セグメントへ分割して多視点索引で検索する。要旨は回答精度・証拠再現率とmemory construction overheadの改善を報告するが、GPU推論エンジン、KV管理、トークン生成スループットの最適化ではなくエージェントの外部記憶検索が主題のためborderline。",
+    "first_checked_at": "2026-10-30T20:07:23+00:00",
+    "last_checked_at": "2026-10-30T20:07:23+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Memory Construction: Rethinking Memory Access for LLM-based Conversational Agents"
+  },
+  "processed_at": "2026-10-30T20:07:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-146aeafe0fc6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

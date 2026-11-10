@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4903ccc4fc6b2ffb-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.13787",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.13787",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.13787",
+      "arXiv:2403.13787"
+    ],
+    "reason": "RLHF等で用いるreward modelをchallenge prompt上で比較するbenchmark研究で、推論サービング・LLM runtimeの効率化を扱わない。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17949-routebalance-fused-routing-load-balancing.md"
+    ],
+    "title": "RewardBench: Evaluating Reward Models for Language Modeling"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4903ccc4fc6b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

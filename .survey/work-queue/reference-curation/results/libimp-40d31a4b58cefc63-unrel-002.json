@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40d31a4b58cefc63-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.02497",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.02497",
+    "identity_tokens": [
+      "arXiv:2607.02497"
+    ],
+    "reason": "一次要旨はpanoramic referring segmentation/VLM active perceptionのtask accuracy研究で、LLM inference optimizationを示さない。",
+    "first_checked_at": "2026-10-05T10:43:41+00:00",
+    "last_checked_at": "2026-10-05T10:43:41+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Seek to Segment: Active Perception for Panoramic Referring Segmentation"
+  },
+  "processed_at": "2026-10-05T10:43:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40d31a4b58ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

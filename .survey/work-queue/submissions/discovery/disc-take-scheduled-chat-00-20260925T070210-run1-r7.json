@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.12435",
+      "arxiv_id": "2608.12435",
+      "title": "MARCH: Scaling Recurrent Memory with Content-Routed State Anchors",
+      "source_url": "https://arxiv.org/abs/2608.12435",
+      "priority": 90,
+      "reason": "Efficient recurrent memory for long-context decoding."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "disc-take-scheduled-chat-00-20260925T070210-run1-r7",
+    "result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-20260925T070210-run1-r7.json",
+    "receipt": "sha256:89506914fcab1d0d65ef2b5f8f8ce3fb0a09aab38c267f314934d44719c42355"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T070210+0900-run1",
+    "round": "disc-take-scheduled-chat-00-20260925T070210-run1-r7",
+    "axis": "forward citations of H2O KV cache eviction and efficient inference",
+    "candidate_count": 20,
+    "accepted_count": 1,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}

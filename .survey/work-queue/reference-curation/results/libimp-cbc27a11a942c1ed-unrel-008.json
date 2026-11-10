@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cbc27a11a942c1ed-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.01985",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.01985",
+    "identity_tokens": [
+      "PRIMARY:https://arxiv.org/abs/2505.01985",
+      "arXiv:2505.01985"
+    ],
+    "reason": "The paper prunes neural networks to make constraint-learning optimization models more tractable and explicitly notes that the pruned network may have worse inference; its objective is optimization-model solvability, not efficient inference.",
+    "first_checked_at": "2026-10-10T08:16:48+00:00",
+    "last_checked_at": "2026-10-10T08:16:48+00:00",
+    "linked_from": [],
+    "title": "Optimization over Trained (and Sparse) Neural Networks: A Surrogate within a Surrogate"
+  },
+  "processed_at": "2026-10-10T08:16:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cbc27a11a942",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

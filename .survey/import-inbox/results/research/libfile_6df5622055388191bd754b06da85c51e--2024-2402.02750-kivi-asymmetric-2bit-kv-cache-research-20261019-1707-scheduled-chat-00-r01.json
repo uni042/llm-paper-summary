@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "49d3ffb9fdc346a00765b8441d6110c7e2cabe66ae90b156a9c582481c515db5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_6df5622055388191bd754b06da85c51e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261019-1707-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.13140/RG.2.2.28167.37282",
+  "worker_completed_at": "2026-10-19T17:07:00+09:00",
+  "worker_run_key": "20261019-1707-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5862,
+    "body_paragraphs": 32,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 124,
+    "limitation_chars": 510,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 124 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 124 < 500"
+  ],
+  "processed_at": "2026-10-19T09:59:46+00:00"
+}

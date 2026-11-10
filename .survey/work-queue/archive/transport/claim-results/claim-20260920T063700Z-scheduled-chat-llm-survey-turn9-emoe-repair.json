@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T063700Z-scheduled-chat-llm-survey-turn9-emoe-repair",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-bb33e470bd8a5f8f",
+      "claim_id": "claim-01cbf1c46fe8f68f25b18de7",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-01cbf1c46fe8f68f25b18de7",
+      "claimed_at": "2026-09-20T06:36:42+00:00",
+      "expires_at": "2026-09-20T08:06:42+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-bb33e470bd8a5f8f"
+      ],
+      "job": {
+        "job_id": "job-research-bb33e470bd8a5f8f",
+        "type": "research",
+        "parent_job_id": "job-91b81e336fb8c7cc",
+        "priority": 95,
+        "canonical_id": "arXiv:2503.06823",
+        "arxiv_id": "2503.06823",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference",
+        "source_url": "https://arxiv.org/abs/2503.06823",
+        "paper_path": "papers/inference/06-moe-expert-offloading/2025-2503.06823-emoe.md",
+        "selection_reason": "Memory-efficient MoE serving system using expert prediction/loading and task-aware SLO scheduling, reporting major memory and throughput gains.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T03:59:47+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.novelty must explain the paper-specific idea | problem_method.method_overview must explain the end-to-end mechanism",
+        "validation_errors": [
+          "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+          "problem_method.novelty must explain the paper-specific idea",
+          "problem_method.method_overview must explain the end-to-end mechanism"
+        ],
+        "last_validation_failed_at": "2026-09-20T06:36:17+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-76fbde0c7b747f7dc5bad2a5"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-76fbde0c7b747f7dc5bad2a5.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T06:36:42+00:00",
+  "checkpoint_released": 0
+}

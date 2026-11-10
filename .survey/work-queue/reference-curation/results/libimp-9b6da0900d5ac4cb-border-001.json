@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b6da0900d5ac4cb-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.03067",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.03067",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.03067",
+      "arXiv:2602.03067"
+    ],
+    "reason": "主題はGPUのHBM転送とkernel起動を減らす最適輸送（Sinkhorn）実装で、評価もpoint-cloud OTやOTDD等に限られる。FlashAttention型のタイル処理とattentionのLogSumExp形式に共通点があり、基盤技術としての接点はあるが、LLM推論・配信の実装や性能は扱わないため周辺候補として微妙に分類する。",
+    "first_checked_at": "2026-10-22T16:52:12+00:00",
+    "last_checked_at": "2026-10-22T16:52:12+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-00.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FlashSinkhorn: IO-Aware Entropic Optimal Transport on GPU"
+  },
+  "processed_at": "2026-10-22T16:52:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b6da0900d5a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

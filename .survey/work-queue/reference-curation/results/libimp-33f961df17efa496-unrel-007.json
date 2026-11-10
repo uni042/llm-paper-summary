@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-33f961df17efa496-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2206.04046",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2206.04046",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2206.04046",
+      "arXiv:2206.04046"
+    ],
+    "reason": "視覚領域のドメイン汎化を目的とするMoEモデル設計で、LLM実行基盤への直接寄与がない。",
+    "first_checked_at": "2026-09-27T13:32:58+09:00",
+    "last_checked_at": "2026-09-30T09:50:06+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review tail-to-head"
+    ],
+    "title": "Sparse Mixture-of-Experts are Domain Generalizable Learners"
+  },
+  "processed_at": "2026-09-30T09:50:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-33f961df17ef",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

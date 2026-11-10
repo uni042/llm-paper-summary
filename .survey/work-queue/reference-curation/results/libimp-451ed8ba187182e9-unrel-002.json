@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-451ed8ba187182e9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.37001",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.37001",
+    "identity_tokens": [
+      "arXiv:2609.37001"
+    ],
+    "reason": "PSAはHunyuanVideo/WanのDiffusion Transformerによるvideo generation attentionを最適化する。対象は動画拡散推論で、LLM inference/servingではない。",
+    "first_checked_at": "2026-10-05T04:39:11+00:00",
+    "last_checked_at": "2026-10-05T04:39:11+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+      "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "Parameterized Stripe Attention for Efficient Video Generation"
+  },
+  "processed_at": "2026-10-05T04:39:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-451ed8ba1871",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

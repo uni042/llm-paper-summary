@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ac89a7e86173f450-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.06500",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.06500",
+    "identity_tokens": [
+      "arXiv:2310.06500"
+    ],
+    "reason": "一次要旨はLLM multi-agentによるteam decision makingを扱うが、推論効率・serving最適化が主題ではない。",
+    "first_checked_at": "2026-10-05T01:47:39+00:00",
+    "last_checked_at": "2026-10-05T01:47:39+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md"
+    ],
+    "title": "MetaAgents: Large Language Model Based Agents for Decision-Making on Teaming"
+  },
+  "processed_at": "2026-10-05T01:47:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ac89a7e86173",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

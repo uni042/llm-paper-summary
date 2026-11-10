@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1ed274bfa89de55c-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.02940",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.02940",
+    "identity_tokens": [
+      "arXiv:2608.02940"
+    ],
+    "reason": "Borderline because the topic is LLM pruning but this work primarily studies when compression scores support quality/risk decisions, without demonstrating deployed inference savings.",
+    "first_checked_at": "2026-10-05T09:13:49+00:00",
+    "last_checked_at": "2026-10-05T09:13:49+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md",
+      "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+    ],
+    "title": "When Compression Scores Cannot Decide: Information Boundaries for Group-Robust LLM Pruning"
+  },
+  "processed_at": "2026-10-05T09:13:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1ed274bfa89d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

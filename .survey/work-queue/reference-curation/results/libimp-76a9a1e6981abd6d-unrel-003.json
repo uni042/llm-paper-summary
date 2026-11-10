@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-76a9a1e6981abd6d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.28117",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.28117",
+    "identity_tokens": [
+      "arXiv:2609.28117"
+    ],
+    "reason": "In this paper, we introduce a gradient-based head attribution strategy where the Token-level Max-Margin loss is backpropagated to the attention maps. This framework enables a large-scale causal analysis of attention heads, making it suitable for LLMs. We evaluate our method on the task of disambiguation in Context-aware Machine Translation, where we analyze 50 phenomena across 4 models and 4 language directions. We empirically show the alignment of our method with the effects of increasing the a",
+    "first_checked_at": "2026-10-05T05:44:53+00:00",
+    "last_checked_at": "2026-10-05T05:44:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+    ],
+    "title": "Scaling Attention Head Analysis via Gradient-Based Attribution in Context-Aware Machine Translation"
+  },
+  "processed_at": "2026-10-05T05:44:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-76a9a1e6981a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

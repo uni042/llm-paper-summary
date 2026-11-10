@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3ad2517b57bcd306-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2003.04807",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2003.04807",
+    "identity_tokens": [
+      "arXiv:2003.04807"
+    ],
+    "reason": "arXiv要旨はfew-shot intent detection用dual sentence encoderを提案し、BERT等との意図分類性能とtraining timeを評価する。",
+    "first_checked_at": "2026-10-05T01:01:01+00:00",
+    "last_checked_at": "2026-10-05T01:01:01+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md"
+    ],
+    "title": "Efficient Intent Detection with Dual Sentence Encoders"
+  },
+  "processed_at": "2026-10-05T01:01:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3ad2517b57bc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

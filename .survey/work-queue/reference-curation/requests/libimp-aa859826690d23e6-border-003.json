@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-aa859826690d23e6-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2508.01506",
+  "reason": "FlashSVDは低rank SVDのactivation bufferをstreaming kernelで避けるinference memory method。本文の主評価はBERT/RoBERTa encoderで、decoder-side/causal-LM実験は将来protocolと明記される。 低rank LLM compressionとkernel機構は関連するが、本文の主実験はencoder-only。generative decoder/LLM servingへの実証が不足しscope fitが不確か。",
+  "title": "FlashSVD: Memory-Efficient Inference with Streaming for Low-Rank Models",
+  "identity_tokens": [
+    "arXiv:2508.01506"
+  ],
+  "linked_from": [
+    "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+    "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa859826690d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

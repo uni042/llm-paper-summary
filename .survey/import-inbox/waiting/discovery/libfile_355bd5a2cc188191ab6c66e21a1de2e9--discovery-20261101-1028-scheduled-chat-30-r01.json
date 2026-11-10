@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261101-1028-scheduled-chat-30/r01",
+  "reference_main_sha": "8c6d09529a23406b670fee050d226e01112e50f3",
+  "record_count": 3,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IPDPS65963.2026.00058",
+      "identity_tokens": [
+        "DOI:10.1109/IPDPS65963.2026.00058"
+      ],
+      "title": "Near-Zero Cost KV Cache Compression for Large Language Model Inference",
+      "reason": "IEEE IPDPS 2026の出版社一次abstractと導入本文を確認。VayneはKVキャッシュの量子化と可逆圧縮を統合したGPUカーネルを提案し、bit transpose、decoupled lookback prefix-sum、pre-RoPE等の最適化で圧縮処理のオーバーヘッドを抑える。LLaMA 3.1 8B Instruct／LongBenchで、次善の比較方式に対して平均8.4倍の高速化、1.4倍低いbit rate、同等bit rateでの精度改善を報告する。KVキャッシュの容量とGPU推論実行性能を直接扱うためaccept。8.4倍はモデル全体の生成速度と断定せず、論文abstractに記載された比較指標として扱う。",
+      "source_url": "https://ieeexplore.ieee.org/document/11575358/",
+      "body_check": "IEEE_publisher_primary_abstract_and_introduction_excerpt; full_text_beyond_intro_not_accessible",
+      "first_checked_at": "2026-11-01T10:33:17+09:00",
+      "last_checked_at": "2026-11-01T10:33:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 17,
+      "origin": "discovery_worklist",
+      "source_type": "publisher_primary"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00046",
+      "identity_tokens": [
+        "DOI:10.1109/2575-8411.2026.00046"
+      ],
+      "title": "Prism: Proactive Workload-Aware Optimization for Hybrid-Service in LMaaS Systems",
+      "reason": "IEEE ICDCS 2026の出版社一次abstractと導入本文を確認。Prismは周期的計画・オンラインスケジューリング・適応調整（POA）を組み合わせ、長期需要予測と実行時の細粒度修正でモデルインスタンス数を調整し、インスタンス間ルーティングとインスタンス内バッチ化を異種ワークロードに合わせて最適化する。著者は既存方式に対し末尾遅延最大63.9%減、SLO違反85.7%減、goodput52.8%増を報告する。LLM-as-a-ServiceのGPUリソース割当と推論スケジューリングを直接対象とするためaccept。改善率は著者報告の条件付き値であり、全環境での保証ではない。",
+      "source_url": "https://ieeexplore.ieee.org/document/11619014/",
+      "body_check": "IEEE_publisher_primary_abstract_and_introduction_excerpt; full_text_beyond_intro_not_accessible",
+      "first_checked_at": "2026-11-01T10:33:17+09:00",
+      "last_checked_at": "2026-11-01T10:33:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 20,
+      "origin": "discovery_worklist",
+      "source_type": "publisher_primary"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00038",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA66397.2026.00038"
+      ],
+      "title": "QiMeng-Tensify: Scaling Up Tensor Computation Optimization via Architecture-Aware LLM-Guided MCTS",
+      "reason": "IEEE ISCA 2026の出版社一次abstractと導入本文を確認。QiMeng-TensifyはLLM演算グラフの変換・スケジューリング探索をマルコフ決定過程として定式化し、ハードウェアを考慮したLLM誘導モンテカルロ木探索で有望な変換候補を優先する。オフラインで得たアーキテクチャ固有のヒューリスティクスを探索事前分布へ反映する。NVIDIA A100/H100上で代表的な演算部分グラフとLLMワークロードを評価したと一次abstractで確認。出版社HTMLで定量結果の末尾が省略表示されるため、外部書誌の倍率を一次確認済み数値としては扱わない。推論実行のテンソル計算最適化に直接関係するためaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11617783/",
+      "body_check": "IEEE_publisher_primary_abstract_and_introduction_excerpt; full_text_beyond_intro_not_accessible; abstract_metrics_truncated_in_scrape",
+      "first_checked_at": "2026-11-01T10:33:17+09:00",
+      "last_checked_at": "2026-11-01T10:33:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 39,
+      "origin": "discovery_worklist",
+      "source_type": "publisher_primary"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca076e9459f6db35-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.23664",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.23664",
+    "identity_tokens": [
+      "SemanticScholar:f37857072bf04fd405c7bd40ca6168e33842368d",
+      "arXiv:2608.23664"
+    ],
+    "reason": "The abstract reports lower diffusion-model reward-fine-tuning training cost, but not LLM inference or serving; the broader model-training efficiency link is adjacent and merits downstream judgment.",
+    "first_checked_at": "2026-10-13T04:24:23+00:00",
+    "last_checked_at": "2026-10-13T04:24:23+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Scaling Reinforcement Learning for Diffusion Models via Velocity Matching"
+  },
+  "processed_at": "2026-10-13T04:24:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca076e9459f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

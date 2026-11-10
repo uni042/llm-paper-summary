@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1a0c22a458d440aa-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.20548",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.20548",
+    "identity_tokens": [
+      "arXiv:2607.20548"
+    ],
+    "reason": "SOAP/Muon optimizer and distributed LLM pretraining efficiency; training-only efficiency is outside scope.",
+    "first_checked_at": "2026-10-05T03:38:33+00:00",
+    "last_checked_at": "2026-10-05T03:38:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "SOAP, Muon, and Beyond: Pushing LLM Pretraining Scales"
+  },
+  "processed_at": "2026-10-05T03:38:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1a0c22a458d4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-443b237f1d6b48e7-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.01885",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.01885",
+    "identity_tokens": [
+      "arXiv:2608.01885"
+    ],
+    "reason": "CARE is a model-agnostic cascade for time-series anomaly detection, not an LLM inference method.",
+    "first_checked_at": "2026-10-05T09:13:50+00:00",
+    "last_checked_at": "2026-10-05T09:13:50+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "CARE: A Cascaded Framework for Efficient and Reliable Time Series Anomaly Detection"
+  },
+  "processed_at": "2026-10-05T09:13:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-443b237f1d6b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

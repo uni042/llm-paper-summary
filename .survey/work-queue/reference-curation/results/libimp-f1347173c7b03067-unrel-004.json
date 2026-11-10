@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f1347173c7b03067-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3816440.3818582",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3816440.3818582",
+    "identity_tokens": [
+      "DOI:10.1145/3816440.3818582"
+    ],
+    "reason": "Distributed compute-in-memory (CIM) architectures are emerging as a path towards energy-efficient and highly parallel edge-class deep neural network (DNN) inference. However, the lack of a flexible, unified digital periphery limits the ability of distributed CIM systems to support integer-quantized DNN inference schemes, activation functions, and scalable tile-to-tile dataflow. We present CIM-FLEX, an integer-only periphery architecture that enables each CIM tile to autonomously perform partial-sum rescaling, asymmetric activation processing, and lightweight programmable activation functions. CIM-FLEX also supports mixed-precision integer multiply-and-accumulate (MAC) by decomposing higher-precision operations into uniform-precision partial MACs, without modifying existing CIM primitives. CIM-FLEX enables flexible tile-to-tile dataflow across distributed CIM tiles, exposing a tradeoff between parallel output generation and energy efficiency, where deeper accumulation chains reduce concurrent periphery utilization and improve overall efficiency. Numerical studies and TFLite-based LUT activation experiments validate a high signal-to-noise ratio (~30 dB) for programmable activation functions, and a 14 nm CMOS implementation shows a 0.012 mm2 area for the CIM-FLEX.",
+    "first_checked_at": "2026-10-05T09:05:36+00:00",
+    "last_checked_at": "2026-10-05T09:05:36+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "title": "CIM-FLEX: An Integer-Only Flexible Periphery for Distributed Compute-In-Memory Architectures"
+  },
+  "processed_at": "2026-10-05T09:05:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f1347173c7b0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

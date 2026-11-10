@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b6ff8d54de99615-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.25411",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.25411",
+    "identity_tokens": [
+      "arXiv:2609.25411"
+    ],
+    "reason": "Classifier-free Guidance (CFG) is widely adopted in text-to-speech (TTS) systems to enhance generation quality and conditioning fidelity by interpolating between conditioned and unconditioned predictions. A common unconditional technique is to use an empty representation, in the form of a fixed null vector. In this work, we propose replacing this representation with a learnable unconditional embedding, optimized to represent a meaningful unconditional state. Objective and subjective evaluations demonstrate that learnable null embeddings consistently outperform fixed null embeddings across speaker similarity, speech stability, and expressiveness, while exhibiting greater robustness to larger guidance scales. We further show that learning a distinct unconditional embedding for each of the TTS conditioning modalities allows fine-grained control over speaker and text guidance, showcasing the trade-off between similarity and quality, and stability and expressiveness in the generated speech.",
+    "first_checked_at": "2026-10-05T05:58:50+00:00",
+    "last_checked_at": "2026-10-05T05:58:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "Learnable Classifier-Free Guidance Null Embeddings for Enhanced Controllable Speech Synthesis"
+  },
+  "processed_at": "2026-10-05T05:58:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b6ff8d54de9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

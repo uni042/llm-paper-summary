@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fb5d81c9419673be-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.09019",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.09019",
+    "identity_tokens": [
+      "arXiv:2507.09019"
+    ],
+    "reason": "This paper directly studies how LLM inference serving systems should be evaluated: it identifies baseline fairness, workload selection, latency/SLO and metric-design pitfalls, then demonstrates the issues through speculative decoding. It contributes an evaluation checklist and empirical analysis rather than an inference-serving mechanism or an efficiency improvement itself. Retained as borderline because its object is LLM inference-system performance and reproducibility, while its contribution is methodological evaluation rather than system optimization.",
+    "first_checked_at": "2026-10-03T14:28:53+00:00",
+    "last_checked_at": "2026-10-03T14:28:53+00:00",
+    "linked_from": [
+      "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[0]"
+    ],
+    "title": "On Evaluating Performance of LLM Inference Systems"
+  },
+  "processed_at": "2026-10-03T14:28:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb5d81c94196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-961c3dcea362637e-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.18653/v1/2026.findings-acl.174",
+  "reason": "ModularMoE shares parameters for low-resource LLM customization; the reported speedups are for model training/customization (about 3× vs QLoRA and 5× vs LoRA), not inference serving.",
+  "title": "ModularMoE: Fast LLM Customization with Parameter-Sharing Mixture-of-Experts for Low-Resource Settings",
+  "identity_tokens": [
+    "DOI:10.18653/v1/2026.findings-acl.174"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+    "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+    "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-961c3dcea362",
+  "source_precheck_request_id": null
+}

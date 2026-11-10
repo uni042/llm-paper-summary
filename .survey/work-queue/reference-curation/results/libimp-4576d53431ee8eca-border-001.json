@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4576d53431ee8eca-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.15411",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.15411",
+    "identity_tokens": [
+      "arXiv:2412.15411"
+    ],
+    "reason": "大規模MoEの分散学習時に、専門家の人気の偏りを利用した疎なインメモリ・チェックポイントと障害回復を改善する。学習中の故障耐性・状態保存が主対象であり、LLM推論時の専門家配置、復号、KVキャッシュや推論サービングの高速化は要旨で示されないため、現在の推論中心・学習専用方式凍結スコープでは境界扱いとする。",
+    "first_checked_at": "2026-10-18T13:06:36+00:00",
+    "last_checked_at": "2026-10-18T13:06:36+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "MoEtion: Efficient and Reliable Checkpointing for Mixture-of-Experts Models at Scale"
+  },
+  "processed_at": "2026-10-18T13:06:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4576d53431ee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

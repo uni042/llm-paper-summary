@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-61e465dab0b6b028-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2607.09415",
+  "reason": "質問関連spanを選びTTTの訓練対象を絞る。LongBench-v2/Proで品質向上する一方、本文では選択/学習追加コストに対する実runtime/FLOPs削減を定量化できず、selector自身が全contextを読む。効率効果は未確立。",
+  "title": "Self-Guided Test-Time Training for Long-Context LLMs",
+  "identity_tokens": [
+    "arXiv:2607.09415"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+    "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+    "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-61e465dab0b6",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-be70f86ca4aa9143-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2503.12211",
+  "reason": "LLM/decoder workloadやLLM serving評価を確認できず、測定は非CUDA最適化PyTorch実装も含むcompute-bound条件に限られる。LLM向け演算最適化への転用可能性が残るためborderline。",
+  "title": "Changing Base Without Losing Pace: A GPU-Efficient Alternative to MatMul in DNNs",
+  "identity_tokens": [
+    "arXiv:2503.12211"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2406.14963-optimised-grouped-query-attention-mechanism-for-transformers.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be70f86ca4aa",
+  "source_precheck_request_id": null
+}

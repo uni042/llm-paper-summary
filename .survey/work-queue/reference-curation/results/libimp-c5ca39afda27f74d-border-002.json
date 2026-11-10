@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5ca39afda27f74d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.18797",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.18797",
+    "identity_tokens": [
+      "arXiv:2605.18797"
+    ],
+    "reason": "Fully Looped Transformer stabilizes training for recurrent LMs and permits varying loop count at test time. Results show language-model task gains, but loops deliberately add inference computation; the text does not demonstrate lower latency or serving cost at matched quality.",
+    "first_checked_at": "2026-10-06T06:09:49+00:00",
+    "last_checked_at": "2026-10-06T06:09:49+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Simply Stabilizing the Loop via Fully Looped Transformer"
+  },
+  "processed_at": "2026-10-06T06:09:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5ca39afda27",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

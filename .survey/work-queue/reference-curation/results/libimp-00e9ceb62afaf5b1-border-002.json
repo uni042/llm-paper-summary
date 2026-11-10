@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-00e9ceb62afaf5b1-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.20399",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.20399",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2410.20399",
+      "arXiv:2410.20399"
+    ],
+    "reason": "attention/GEMM/linear-attention等の高速GPU kernelはLLM推論へ直接利用できるが、主対象は汎用AI kernel programming frameworkで推論専用ではないためborderline。",
+    "first_checked_at": "2026-09-30T09:02:37+00:00",
+    "last_checked_at": "2026-09-30T09:02:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2609.00363-deterministic-llm-inference-gpu-kernels-int8.md"
+    ],
+    "title": "ThunderKittens: Simple, Fast, and Adorable AI Kernels"
+  },
+  "processed_at": "2026-09-30T09:02:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-00e9ceb62afa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

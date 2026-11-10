@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-190b413bbec4643a-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1911.02972",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1911.02972",
+    "identity_tokens": [
+      "arXiv:1911.02972"
+    ],
+    "reason": "BlockBERT replaces dense self-attention with blockwise sparse attention and reports 27.8% lower inference time than RoBERTa at batch 8 and sequence length 1,024, with comparable QA accuracy. The evidence is for encoder-only BERT-family models and long-document QA rather than decoder-only LLM generation or serving. The attention idea is adjacent and potentially transferable, but the evaluated workload is outside core LLM inference, so it is retained as borderline.",
+    "first_checked_at": "2026-10-03T14:28:52+00:00",
+    "last_checked_at": "2026-10-03T14:28:52+00:00",
+    "linked_from": [
+      "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[5]"
+    ],
+    "title": "Blockwise Self-Attention for Long Document Understanding"
+  },
+  "processed_at": "2026-10-03T14:28:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-190b413bbec4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

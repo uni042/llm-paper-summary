@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-51aa687817d6f162-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.08818",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.08818",
+    "identity_tokens": [
+      "arXiv:2609.08818"
+    ],
+    "reason": "要旨はmmWave point-cloud person identificationを扱うと記述する（Person identification from millimeter-wave (mmWave) point clouds has mainly relied on gait. Indoor walking, however, is often brief and interrupted, while other activities of daily living (ADLs) may provide complementary identity informatio）。LLM inference compute/memory/latency/throughput/cache/servingの具体的改善法・評価ではない。",
+    "first_checked_at": "2026-10-06T00:17:38+00:00",
+    "last_checked_at": "2026-10-06T00:17:38+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+    ],
+    "title": "Beyond Gait: Person Identification from Millimeter-Wave Point Clouds Across Activities of Daily Living"
+  },
+  "processed_at": "2026-10-06T00:17:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-51aa687817d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f0ce48b37ba756b1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.17733",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.17733",
+    "identity_tokens": [
+      "arXiv:2607.17733"
+    ],
+    "reason": "runtime性能は推定値で実測hardware serving結果が未確認のためborderlineにする。",
+    "first_checked_at": "2026-10-05T10:11:51+00:00",
+    "last_checked_at": "2026-10-05T10:11:51+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+      "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+      "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "MXSens: Sensitivity-Aware Mixed-Precision Quantization for Efficient LLM Inference"
+  },
+  "processed_at": "2026-10-05T10:11:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f0ce48b37ba7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

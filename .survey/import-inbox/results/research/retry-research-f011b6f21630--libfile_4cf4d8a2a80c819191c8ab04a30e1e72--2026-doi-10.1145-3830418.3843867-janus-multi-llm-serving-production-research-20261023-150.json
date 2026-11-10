@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "99248dbc96279da02a2f622f930801caa4669507a7033b81b21f9405d8e5f543",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f011b6f21630--libfile_4cf4d8a2a80c819191c8ab04a30e1e72--2026-doi-10.1145-3830418.3843867-janus-multi-llm-serving-production-research-20261023-1500-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.1145/3830418.3843867",
+  "worker_completed_at": "2026-10-23T15:09:06+09:00",
+  "worker_run_key": "20261023-1500-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8504,
+    "body_paragraphs": 49,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 2368,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-23T17:39:19+00:00"
+}

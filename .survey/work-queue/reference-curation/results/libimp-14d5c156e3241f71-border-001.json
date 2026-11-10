@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-14d5c156e3241f71-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/dac63849.2025.11132816",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/dac63849.2025.11132816",
+    "identity_tokens": [
+      "DOI:10.1109/dac63849.2025.11132816"
+    ],
+    "reason": "The title suggests FPGA quantization and LLM acceleration, but the publisher page was inaccessible and the primary abstract could not be verified in this retrieval session.",
+    "first_checked_at": "2026-10-14T02:15:13+00:00",
+    "last_checked_at": "2026-10-14T02:15:13+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+      "papers/inference/15-inference-simulation-emulation/2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md",
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+      "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+      "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md",
+      "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DuoQ: A DSP Utilization-aware and Outlier-free Quantization for FPGA-based LLMs Acceleration"
+  },
+  "processed_at": "2026-10-14T02:15:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-14d5c156e324",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

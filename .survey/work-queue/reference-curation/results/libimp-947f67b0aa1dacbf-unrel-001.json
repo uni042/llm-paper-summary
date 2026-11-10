@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-947f67b0aa1dacbf-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.15999",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.15999",
+    "identity_tokens": [
+      "arXiv:2410.15999"
+    ],
+    "reason": "SpARE intervenes at inference to control factual-source selection/answer quality, not reduce compute, latency or memory. Primary abstract: Large language models (LLMs) can store a significant amount of factual knowledge in their parameters. However, their parametric knowledge may conflict with the information provided in the context -- this phenomenon, known as \\emph{context-memory knowledge conflicts}, can lead to undesirable model behaviour, such as reliance on outdated or incorrect information. Analysing the internal activations of LLMs, we find that they can internally register the signals of knowledge confl",
+    "first_checked_at": "2026-10-05T12:28:02+00:00",
+    "last_checked_at": "2026-10-05T12:28:02+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md"
+    ],
+    "title": "Steering Knowledge Selection Behaviours in LLMs via SAE-Based Representation Engineering"
+  },
+  "processed_at": "2026-10-05T12:28:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-947f67b0aa1d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

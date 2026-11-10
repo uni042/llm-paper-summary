@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4300e45430cb6d6-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.14295",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.14295",
+    "identity_tokens": [
+      "arXiv:2401.14295"
+    ],
+    "reason": "Survey/taxonomy of structured prompting for reasoning quality; no inference cost, latency or memory result. Primary abstract: The field of natural language processing (NLP) has witnessed significant progress in recent years, with a notable focus on improving large language models’ (LLM) performance through innovative prompting techniques. Among these, prompt engineering coupled with structures has emerged as a promising paradigm, with designs such as Chain-of-Thought, Tree of Thoughts, or Graph of Thoughts, in which the overall LLM reasoning is guided by a structure such as a graph. As illustrated w",
+    "first_checked_at": "2026-10-05T12:28:03+00:00",
+    "last_checked_at": "2026-10-05T12:28:03+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+    ],
+    "title": "Demystifying Chains, Trees, and Graphs of Thoughts"
+  },
+  "processed_at": "2026-10-05T12:28:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4300e45430c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

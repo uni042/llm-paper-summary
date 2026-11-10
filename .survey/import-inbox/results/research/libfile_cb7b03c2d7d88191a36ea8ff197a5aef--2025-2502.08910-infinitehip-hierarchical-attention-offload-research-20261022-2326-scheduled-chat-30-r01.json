@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "93fab7644c302f6b788ade86b5939a1e1bec21de7974e5dd83e5f90ce1115b0d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_cb7b03c2d7d88191a36ea8ff197a5aef--2025-2502.08910-infinitehip-hierarchical-attention-offload-research-20261022-2326-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2502.08910",
+  "worker_completed_at": "2026-10-22T23:36:37+09:00",
+  "worker_run_key": "20261022-2326-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7348,
+    "body_paragraphs": 43,
+    "method_chars": 2457,
+    "method_paragraphs": 14,
+    "evaluation_chars": 2145,
+    "limitation_chars": 723,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2025-2502.08910-infinitehip-extending-language-model-context-up-to-3-million-tokens-on-a.md と 21 段落 / 4358文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T18:10:05+00:00"
+}

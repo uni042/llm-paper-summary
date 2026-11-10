@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cad18a9f303fa69-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.21308",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.21308",
+    "identity_tokens": [
+      "arXiv:2605.21308"
+    ],
+    "reason": "Deformba is a vision-only state-space architecture. Full text establishes linear input-length computation versus quadratic global attention and estimates FLOPs, but evaluations are 2D/3D visual perception only, with no LLM/VLM serving evidence; transferability remains weak.",
+    "first_checked_at": "2026-10-07T13:50:59+00:00",
+    "last_checked_at": "2026-10-07T13:50:59+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Deformba: Vision State Space Model with Adaptive State Fusion"
+  },
+  "processed_at": "2026-10-07T13:50:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cad18a9f303",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

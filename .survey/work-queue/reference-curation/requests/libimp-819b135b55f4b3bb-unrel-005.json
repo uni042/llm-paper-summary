@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-819b135b55f4b3bb-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1038/s41598-025-10641-7",
+  "reason": "Accurate wind speed forecasting plays a key role in supporting renewable energy systems, improving flight safety, and enhancing weather prediction. However, the variability and non-stationary nature of wind patterns make reliable forecasting a difficult task. To address these issues, this research proposes a hybrid approach that combines Wavelet Transform (WT) decomposition, an Encoder-Decoder Transformer, and XGBoost in an ensemble setup. To fine-tune model parameters efficiently, the method incorporates the Chaotic Billiards Optimizer (CBO) alongside the Adam optimizer. In this framework, WT helps break down wind speed signals into different frequency bands, capturing both short-term changes and long-term behavior. The Transformer model focuses on learning complex time-based dependencies, while XGBoost adds robustness to the final predictions by reducing overfitting and improving generalization. The model forecasts wind speed values on an hourly basis, up to 24 h ahead. The use of CBO ensures efficient convergence with minimal parameter tuning, making the model suitable for large-scale datasets compared to conventional optimizers, including Adam, Particle Swarm Optimization (PSO) and Genetic Algorithms (GA). When tested on real wind speed data collected from Egypt via the Open-Meteo platform, the proposed model showed strong performance. It achieved a Mean Absolute Error (MAE) of 0.0218, Mean Squared Error (MSE) of 0.0008, and Root Mean Squared Error (RMSE) of 0.0290, along with an R² score of 0.9625, MAPE of 11.97%, and an Explained Variance Score (EVS) of 0.9521. These results were better than those from models like Linear Regression, SVR, LSTM, and even standalone Transformer and XGBoost. Overall, this hybrid method provides a reliable and efficient solution for wind speed forecasting in the context of sustainable energy planning.",
+  "title": "Chaotic billiards optimized hybrid transformer and XGBoost model for robust and sustainable time series forecasting",
+  "identity_tokens": [
+    "DOI:10.1038/s41598-025-10641-7"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-819b135b55f4",
+  "source_precheck_request_id": null
+}

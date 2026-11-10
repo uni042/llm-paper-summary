@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1feedc0a803db43a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.31796",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.31796",
+    "identity_tokens": [
+      "arXiv:2606.31796"
+    ],
+    "reason": "64ページの論文は選択的教師トークンによる学習、再帰深度圧縮、専門家融合、韓国語モデルの構築と自己修正能力の評価が中心。48層を6個の共有ブロックにまとめる方式や、122Bモデルを120GBの単一加速器へ83GBピークで常駐させる報告は推論メモリと関連するが、推論基盤の新しい実装を比較する独立の処理量・遅延実験ではない。学習専用研究の凍結範囲との境界にあるためborderlineとし、Research完成には数えない。",
+    "first_checked_at": "2026-10-20T13:06:09+00:00",
+    "last_checked_at": "2026-10-20T13:06:09+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CHERRY: Compressed Hierarchical Experts with Recurrent Representational Yield"
+  },
+  "processed_at": "2026-10-20T13:06:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1feedc0a803d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

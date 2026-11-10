@@ -1,0 +1,516 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a20968ca1301527d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a20968ca1301",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.20706",
+    "arXiv:2606.01790",
+    "arXiv:2606.10932",
+    "arXiv:2606.12487",
+    "arXiv:2608.06630"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "88e742bd76c4c3980b9b708f7d3925a0c055e53f",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T10:58:32.067611+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.20706",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.01790",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.10932",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.12487",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.06630",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "NPU Design for Diffusion Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2601.20706",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based LLMs (dLLMs) fundamentally depart from traditional autoregressive (AR) LLM inference: they leverage bidirectional attention, block-wise KV cache refreshing, cross-step reuse, and a non-GEMM-centric sampling phase. These characteristics make current dLLMs incompatible with most existing NPUs, as their inference patterns, in particular the reduction-heavy, top-$k$-driven sampling stage, demand new ISA and memory hierarchy support beyond that of AR accelerators. In addition, the blocked diffusion KV cache breaks from the append-only paradigm assumed by AR NPUs, and conventional AR-derived KV quantization schemes were designed for static activation distributions and do not account for the step-wise distribution shifts introduced by iterative block-wise refinement in dLLMs. In this paper, we introduce the first NPU accelerator specifically designed for dLLMs. It delivers: a dLLM-oriented ISA and compiler; a hardware-optimized execution model for both the transformer inference and diffusion sampling used in dLLMs; a novel Block-Adaptive Online Smoothing (BAOS) for quantizing KV cache in dLLMs; and a complete RTL implementation synthesized in 7nm. To evaluate and validate our design, we introduce a tri-path simulation framework that comprises analytical, cycle-accurate, and accuracy simulators, together with cross-validations against physical hardware. The full NPU stack, including ISA, simulation tools, and quantization software, will be open-sourced upon acceptance.",
+      "identifiers": [
+        "SemanticScholar:6e3001d2aa0d51b77b977dcac725abddfe46f503"
+      ],
+      "semantic_scholar_id": "6e3001d2aa0d51b77b977dcac725abddfe46f503",
+      "canonical_id": "arXiv:2601.20706",
+      "arxiv_id": "2601.20706",
+      "authors": [
+        "Binglei Lou",
+        "Hao-Ran Wu",
+        "Kevin Lau",
+        "Gregor Macdonald",
+        "Jia-Yi Nie",
+        "Yao Lai",
+        "Can Xiao",
+        "Xuan Guo",
+        "Jian-Yi Cheng",
+        "R. Antonova",
+        "Robert Mullins",
+        "Aaron Zhao"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 275,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "STaR-KV: Spatio-Temporal Adaptive Re-weighting for KV Cache Compression in GUI Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2606.01790",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language-model-based graphical user interface (GUI) agents have shown broad automation capabilities, yet deployment is bottlenecked by a key-value (KV) cache that grows linearly with interaction steps. For instance, UI-TARS-1.5-7B consumes 76 GB of GPU memory on merely five screenshots, approaching the capacity of mainstream 80 GB accelerators. Existing KV compression methods share two structural assumptions: aggregating visual-token importance into a single shared saliency map, and applying a fixed top-B cutoff to the fused score distribution. Pilot measurements refute both: spatial specialization lives at the attention-subspace level and migrates across layers, while the score distribution drifts in shape along a trajectory. We propose STaR-KV (Spatio-Temporal Adaptive Re-weighting), a training-free KV cache compression framework that calibrates token importance along three axes: (i) subspace-aware scoring driven by online spatial mutual information; (ii) a temporal stability discount that suppresses redundant cache entries from persistently attended subspaces; and (iii) an entropy-derived temperature that adaptively reshapes the score distribution. Across four GUI benchmarks, STaR-KV achieves the strongest average accuracy among state-of-the-art KV compression methods (e.g., GUIKV, SnapKV) at matched budgets, with no compression-stage FLOPs overhead (-0.07%) and cutting peak GPU memory by nearly 40% at a 20% KV-cache budget. Code is available at https://github.com/kawhiiiileo/STaR-KV.",
+      "identifiers": [
+        "SemanticScholar:6a86296b7ef87e79d87f5f591864ac8b75b75d66"
+      ],
+      "semantic_scholar_id": "6a86296b7ef87e79d87f5f591864ac8b75b75d66",
+      "canonical_id": "arXiv:2606.01790",
+      "arxiv_id": "2606.01790",
+      "doi": "10.48550/arXiv.2606.01790",
+      "authors": [
+        "Yu-Hang Han",
+        "Wenzheng Yang",
+        "Yu-Jie Chen",
+        "Xiangqi Jin",
+        "Yao-Jie Zhang",
+        "Siteng Huang",
+        "Lin-Feng Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Density Field State Space Models: 1-Bit Distillation, Efficient Inference, and Knowledge Organization in Mamba-2",
+      "source_url": "https://arxiv.org/abs/2606.10932",
+      "year": 2026,
+      "published": "2026-04-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Density Field State Space Models (DF-SSM), a framework for compressing SSMs to a 1-bit scaffold with int8 low-rank correction. Applied to Mamba-2 1.3B, we achieve a 278 MB model (9.7x smaller than the 2.7 GB FP16 teacher) that runs at 21.4x faster inference on GPU (batch=1, relative to the mamba-ssm reference implementation) while maintaining downstream task performance within 2-4 percentage points of BitMamba-2, a 1.58-bit model trained from scratch on 150B tokens. The distillation itself requires only 32M tokens and 6 hours on a single A100 GPU, though it presupposes a pretrained FP16 teacher. We develop an optimized inference pipeline combining cuBLAS INT8 tensor cores for the scaffold matmul, custom CUDA kernels for stateful SSM and convolution operations, and an AVX-512 CPU backend for efficient deployment on both GPU and CPU. Beyond compression, we investigate the internal knowledge organization of the resulting model, discovering three distinct processing phases: intent classification (layers 0-3, operating in an abstract space with no vocabulary alignment), knowledge retrieval (layers 25-35, where factual associations localize to a 5-layer window), and output formatting (layers 36-47, where category structure dissolves). Through systematic analysis of 445 factual prompts across 19 categories, we find that early-layer classification is syntactic (driven by template structure) rather than semantic, and that the model exhibits well-organized knowledge representations despite weak factual recall--suggesting that representational structure may precede factual strength.",
+      "identifiers": [
+        "SemanticScholar:f4f8b2204c48864ad439d876166b26186dfc7d3c"
+      ],
+      "semantic_scholar_id": "f4f8b2204c48864ad439d876166b26186dfc7d3c",
+      "canonical_id": "arXiv:2606.10932",
+      "arxiv_id": "2606.10932",
+      "doi": "10.48550/arXiv.2606.10932",
+      "authors": [
+        "C.U. Shinde"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 185,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PhaseQuant: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics",
+      "source_url": "https://arxiv.org/abs/2606.12487",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is essential for efficient large language model (LLM) inference, but reliably quantizing activations remains challenging when weights, activations, and KV caches are all quantized to 4-bit precision. A key difficulty lies in massive activations, whose extreme values dominate the activation range and amplify quantization error. State-of-the-art methods mitigate massive activations through transformation-based smoothing, such as orthogonal rotations and affine scaling, but overlook the cross-layer dynamics of the residual stream. In this paper, we show that massive activations emerge and disappear in a phase-wise pattern across network depth, injecting abrupt updates into the residual stream. These updates cause the newly injected layer-wise signal to dominate the 4-bit quantization scale and weaken the accumulated residual information. To characterize this behavior, we introduce two metrics, the Update Dominance Ratio (UDR) and the Historical Retention Score (HRS), and show that static transformation-based smoothing cannot fully resolve the resulting dynamic quantization instability. Based on this analysis, we propose PhaseQuant, a phase-aware mixed-precision post-training quantization policy for activation quantization. PhaseQuant identifies quantization-sensitive layers from residual-stream dynamics and assigns 8-bit activation precision only to these layers, while keeping weights, KV caches, and all remaining activations at 4-bit precision. It can be directly integrated with strong PTQ baselines such as QuaRot, SpinQuant, and FlatQuant. Experiments on LLaMA-2 and LLaMA-3 show that PhaseQuant consistently improves perplexity and zero-shot QA performance under W4A4KV4 quantization, while achieving 1.05$\\times$--1.07$\\times$ throughput improvement with modest memory overhead. These results demonstrate a practical path toward robust low-bit LLM inference.",
+      "identifiers": [
+        "SemanticScholar:48e0051ae0ec82aca38f1faf069f18190ef9becc"
+      ],
+      "semantic_scholar_id": "48e0051ae0ec82aca38f1faf069f18190ef9becc",
+      "canonical_id": "arXiv:2606.12487",
+      "arxiv_id": "2606.12487",
+      "authors": [
+        "Zimo Zhao",
+        "Mao-Lin Wang",
+        "Bo-Wen Yu",
+        "Bo-Wen Liu",
+        "Xiao Han",
+        "Xiangyu Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Sparsity Whisperer",
+      "source_url": "https://arxiv.org/abs/2608.06630",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning reduces the inference cost of large language models, but existing criteria primarily preserve large activations or reconstruct layer outputs. We argue that this overlooks a key computation performed by particularly sparsity-sensitive neurons in the MLP up and gate projections: separating similar inputs into dissimilar outputs. This suggests that effective pruning should preserve not only activations, but also the differences between outputs more broadly. We introduce a family of difference-informed pruning methods built upon this principle. Wisp is a first-order, update-free method that scores weights using input-difference norms, and Wisp+ refines this score neuronwise using the input pairs each neuron separates most strongly. Finally, Whisper is a second-order method that uses a lightly regularized difference Hessian as its reconstruction objective. Across Llama 2 and 3.1 models from 7B to 405B parameters, our second-order variant consistently improves over strong reconstruction-based baselines, while our update-free variants improve over activation-aware baselines, especially in constrained settings. The improvements over Wanda and SparseGPT extend to structured sparsity, downstream evaluations, and other model families. Augmenting stronger techniques such as RIA and ALPS with our difference-informed criteria yields further improvements, shifting the overall accuracy-runtime frontier outward at negligible additional cost. These results suggest that preserving output differences is a broadly useful and composable signal for post-training LLM sparsification.",
+      "identifiers": [
+        "SemanticScholar:0dc5114ff4fbab93c587f6fa85d9946404ec83b5"
+      ],
+      "semantic_scholar_id": "0dc5114ff4fbab93c587f6fa85d9946404ec83b5",
+      "canonical_id": "arXiv:2608.06630",
+      "arxiv_id": "2608.06630",
+      "authors": [
+        "Linghao Kong",
+        "Inimai Subramanian",
+        "Micah Adler",
+        "Dan Alistarh",
+        "D. Gutfreund",
+        "N. Shavit"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.20706",
+      "identity_tokens": [
+        "id:SemanticScholar:6e3001d2aa0d51b77b977dcac725abddfe46f503",
+        "id:arXiv:2601.20706",
+        "title:npu design for diffusion language model inference",
+        "url:https://arxiv.org/abs/2601.20706"
+      ],
+      "record": {
+        "title": "NPU Design for Diffusion Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2601.20706",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion-based LLMs (dLLMs) fundamentally depart from traditional autoregressive (AR) LLM inference: they leverage bidirectional attention, block-wise KV cache refreshing, cross-step reuse, and a non-GEMM-centric sampling phase. These characteristics make current dLLMs incompatible with most existing NPUs, as their inference patterns, in particular the reduction-heavy, top-$k$-driven sampling stage, demand new ISA and memory hierarchy support beyond that of AR accelerators. In addition, the blocked diffusion KV cache breaks from the append-only paradigm assumed by AR NPUs, and conventional AR-derived KV quantization schemes were designed for static activation distributions and do not account for the step-wise distribution shifts introduced by iterative block-wise refinement in dLLMs. In this paper, we introduce the first NPU accelerator specifically designed for dLLMs. It delivers: a dLLM-oriented ISA and compiler; a hardware-optimized execution model for both the transformer inference and diffusion sampling used in dLLMs; a novel Block-Adaptive Online Smoothing (BAOS) for quantizing KV cache in dLLMs; and a complete RTL implementation synthesized in 7nm. To evaluate and validate our design, we introduce a tri-path simulation framework that comprises analytical, cycle-accurate, and accuracy simulators, together with cross-validations against physical hardware. The full NPU stack, including ISA, simulation tools, and quantization software, will be open-sourced upon acceptance.",
+        "identifiers": [
+          "SemanticScholar:6e3001d2aa0d51b77b977dcac725abddfe46f503"
+        ],
+        "semantic_scholar_id": "6e3001d2aa0d51b77b977dcac725abddfe46f503",
+        "canonical_id": "arXiv:2601.20706",
+        "arxiv_id": "2601.20706",
+        "authors": [
+          "Binglei Lou",
+          "Hao-Ran Wu",
+          "Kevin Lau",
+          "Gregor Macdonald",
+          "Jia-Yi Nie",
+          "Yao Lai",
+          "Can Xiao",
+          "Xuan Guo",
+          "Jian-Yi Cheng",
+          "R. Antonova",
+          "Robert Mullins",
+          "Aaron Zhao"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 275,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01790",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.01790",
+        "id:SemanticScholar:6a86296b7ef87e79d87f5f591864ac8b75b75d66",
+        "id:arXiv:2606.01790",
+        "title:starkv spatiotemporal adaptive reweighting for kv cache compression in gui visionlanguage models",
+        "url:https://arxiv.org/abs/2606.01790"
+      ],
+      "record": {
+        "title": "STaR-KV: Spatio-Temporal Adaptive Re-weighting for KV Cache Compression in GUI Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2606.01790",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language-model-based graphical user interface (GUI) agents have shown broad automation capabilities, yet deployment is bottlenecked by a key-value (KV) cache that grows linearly with interaction steps. For instance, UI-TARS-1.5-7B consumes 76 GB of GPU memory on merely five screenshots, approaching the capacity of mainstream 80 GB accelerators. Existing KV compression methods share two structural assumptions: aggregating visual-token importance into a single shared saliency map, and applying a fixed top-B cutoff to the fused score distribution. Pilot measurements refute both: spatial specialization lives at the attention-subspace level and migrates across layers, while the score distribution drifts in shape along a trajectory. We propose STaR-KV (Spatio-Temporal Adaptive Re-weighting), a training-free KV cache compression framework that calibrates token importance along three axes: (i) subspace-aware scoring driven by online spatial mutual information; (ii) a temporal stability discount that suppresses redundant cache entries from persistently attended subspaces; and (iii) an entropy-derived temperature that adaptively reshapes the score distribution. Across four GUI benchmarks, STaR-KV achieves the strongest average accuracy among state-of-the-art KV compression methods (e.g., GUIKV, SnapKV) at matched budgets, with no compression-stage FLOPs overhead (-0.07%) and cutting peak GPU memory by nearly 40% at a 20% KV-cache budget. Code is available at https://github.com/kawhiiiileo/STaR-KV.",
+        "identifiers": [
+          "SemanticScholar:6a86296b7ef87e79d87f5f591864ac8b75b75d66"
+        ],
+        "semantic_scholar_id": "6a86296b7ef87e79d87f5f591864ac8b75b75d66",
+        "canonical_id": "arXiv:2606.01790",
+        "arxiv_id": "2606.01790",
+        "doi": "10.48550/arXiv.2606.01790",
+        "authors": [
+          "Yu-Hang Han",
+          "Wenzheng Yang",
+          "Yu-Jie Chen",
+          "Xiangqi Jin",
+          "Yao-Jie Zhang",
+          "Siteng Huang",
+          "Lin-Feng Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 151,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.10932",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.10932",
+        "id:SemanticScholar:f4f8b2204c48864ad439d876166b26186dfc7d3c",
+        "id:arXiv:2606.10932",
+        "title:density field state space models 1bit distillation efficient inference and knowledge organization in mamba2",
+        "url:https://arxiv.org/abs/2606.10932"
+      ],
+      "record": {
+        "title": "Density Field State Space Models: 1-Bit Distillation, Efficient Inference, and Knowledge Organization in Mamba-2",
+        "source_url": "https://arxiv.org/abs/2606.10932",
+        "year": 2026,
+        "published": "2026-04-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present Density Field State Space Models (DF-SSM), a framework for compressing SSMs to a 1-bit scaffold with int8 low-rank correction. Applied to Mamba-2 1.3B, we achieve a 278 MB model (9.7x smaller than the 2.7 GB FP16 teacher) that runs at 21.4x faster inference on GPU (batch=1, relative to the mamba-ssm reference implementation) while maintaining downstream task performance within 2-4 percentage points of BitMamba-2, a 1.58-bit model trained from scratch on 150B tokens. The distillation itself requires only 32M tokens and 6 hours on a single A100 GPU, though it presupposes a pretrained FP16 teacher. We develop an optimized inference pipeline combining cuBLAS INT8 tensor cores for the scaffold matmul, custom CUDA kernels for stateful SSM and convolution operations, and an AVX-512 CPU backend for efficient deployment on both GPU and CPU. Beyond compression, we investigate the internal knowledge organization of the resulting model, discovering three distinct processing phases: intent classification (layers 0-3, operating in an abstract space with no vocabulary alignment), knowledge retrieval (layers 25-35, where factual associations localize to a 5-layer window), and output formatting (layers 36-47, where category structure dissolves). Through systematic analysis of 445 factual prompts across 19 categories, we find that early-layer classification is syntactic (driven by template structure) rather than semantic, and that the model exhibits well-organized knowledge representations despite weak factual recall--suggesting that representational structure may precede factual strength.",
+        "identifiers": [
+          "SemanticScholar:f4f8b2204c48864ad439d876166b26186dfc7d3c"
+        ],
+        "semantic_scholar_id": "f4f8b2204c48864ad439d876166b26186dfc7d3c",
+        "canonical_id": "arXiv:2606.10932",
+        "arxiv_id": "2606.10932",
+        "doi": "10.48550/arXiv.2606.10932",
+        "authors": [
+          "C.U. Shinde"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 185,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.12487",
+      "identity_tokens": [
+        "id:SemanticScholar:48e0051ae0ec82aca38f1faf069f18190ef9becc",
+        "id:arXiv:2606.12487",
+        "title:phasequant mitigating activation quantization collapse via residualstream dynamics",
+        "url:https://arxiv.org/abs/2606.12487"
+      ],
+      "record": {
+        "title": "PhaseQuant: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics",
+        "source_url": "https://arxiv.org/abs/2606.12487",
+        "year": 2026,
+        "published": "2026-06-10",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) is essential for efficient large language model (LLM) inference, but reliably quantizing activations remains challenging when weights, activations, and KV caches are all quantized to 4-bit precision. A key difficulty lies in massive activations, whose extreme values dominate the activation range and amplify quantization error. State-of-the-art methods mitigate massive activations through transformation-based smoothing, such as orthogonal rotations and affine scaling, but overlook the cross-layer dynamics of the residual stream. In this paper, we show that massive activations emerge and disappear in a phase-wise pattern across network depth, injecting abrupt updates into the residual stream. These updates cause the newly injected layer-wise signal to dominate the 4-bit quantization scale and weaken the accumulated residual information. To characterize this behavior, we introduce two metrics, the Update Dominance Ratio (UDR) and the Historical Retention Score (HRS), and show that static transformation-based smoothing cannot fully resolve the resulting dynamic quantization instability. Based on this analysis, we propose PhaseQuant, a phase-aware mixed-precision post-training quantization policy for activation quantization. PhaseQuant identifies quantization-sensitive layers from residual-stream dynamics and assigns 8-bit activation precision only to these layers, while keeping weights, KV caches, and all remaining activations at 4-bit precision. It can be directly integrated with strong PTQ baselines such as QuaRot, SpinQuant, and FlatQuant. Experiments on LLaMA-2 and LLaMA-3 show that PhaseQuant consistently improves perplexity and zero-shot QA performance under W4A4KV4 quantization, while achieving 1.05$\\times$--1.07$\\times$ throughput improvement with modest memory overhead. These results demonstrate a practical path toward robust low-bit LLM inference.",
+        "identifiers": [
+          "SemanticScholar:48e0051ae0ec82aca38f1faf069f18190ef9becc"
+        ],
+        "semantic_scholar_id": "48e0051ae0ec82aca38f1faf069f18190ef9becc",
+        "canonical_id": "arXiv:2606.12487",
+        "arxiv_id": "2606.12487",
+        "authors": [
+          "Zimo Zhao",
+          "Mao-Lin Wang",
+          "Bo-Wen Yu",
+          "Bo-Wen Liu",
+          "Xiao Han",
+          "Xiangyu Zhao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.06630",
+      "identity_tokens": [
+        "id:SemanticScholar:0dc5114ff4fbab93c587f6fa85d9946404ec83b5",
+        "id:arXiv:2608.06630",
+        "title:the sparsity whisperer",
+        "url:https://arxiv.org/abs/2608.06630"
+      ],
+      "record": {
+        "title": "The Sparsity Whisperer",
+        "source_url": "https://arxiv.org/abs/2608.06630",
+        "year": 2026,
+        "published": "2026-08-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pruning reduces the inference cost of large language models, but existing criteria primarily preserve large activations or reconstruct layer outputs. We argue that this overlooks a key computation performed by particularly sparsity-sensitive neurons in the MLP up and gate projections: separating similar inputs into dissimilar outputs. This suggests that effective pruning should preserve not only activations, but also the differences between outputs more broadly. We introduce a family of difference-informed pruning methods built upon this principle. Wisp is a first-order, update-free method that scores weights using input-difference norms, and Wisp+ refines this score neuronwise using the input pairs each neuron separates most strongly. Finally, Whisper is a second-order method that uses a lightly regularized difference Hessian as its reconstruction objective. Across Llama 2 and 3.1 models from 7B to 405B parameters, our second-order variant consistently improves over strong reconstruction-based baselines, while our update-free variants improve over activation-aware baselines, especially in constrained settings. The improvements over Wanda and SparseGPT extend to structured sparsity, downstream evaluations, and other model families. Augmenting stronger techniques such as RIA and ALPS with our difference-informed criteria yields further improvements, shifting the overall accuracy-runtime frontier outward at negligible additional cost. These results suggest that preserving output differences is a broadly useful and composable signal for post-training LLM sparsification.",
+        "identifiers": [
+          "SemanticScholar:0dc5114ff4fbab93c587f6fa85d9946404ec83b5"
+        ],
+        "semantic_scholar_id": "0dc5114ff4fbab93c587f6fa85d9946404ec83b5",
+        "canonical_id": "arXiv:2608.06630",
+        "arxiv_id": "2608.06630",
+        "authors": [
+          "Linghao Kong",
+          "Inimai Subramanian",
+          "Micah Adler",
+          "Dan Alistarh",
+          "D. Gutfreund",
+          "N. Shavit"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 85,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:731284800f90f604ae90c040c05d9862445d618686effc4c0000bbb937b58f57",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

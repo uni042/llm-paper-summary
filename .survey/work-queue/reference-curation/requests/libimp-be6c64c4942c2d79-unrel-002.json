@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-be6c64c4942c2d79-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1109/TIP.2026.3733352",
+  "reason": "Deep learning has markedly enhanced single image super-resolution (SISR) performance. However, the accompanying growth in model size severely limits the practical deployment of SISR models on edge devices with limited computational and storage resources. Existing methods typically adopt pruning or recurrent network architectures to reduce the model size. Yet, under higher compression ratios, these techniques suffer from severe performance degradation or even training collapse. To address this issue, we propose a novel Hybrid-Hash Parameter-Sharing (HH-PS) method for a limited memory budget, which achieves arbitrary compression ratios by mapping parameters into a pre-allocated shared memory space of any size. HH-PS is model-agnostic and memory-efficient. It incorporates two key components: a collision-aware hybrid hashing scheme and a collision-guided gradient reweighting scheme. The collision-aware hybrid hashing alleviates the reconstruction errors caused by hash collision, which is a critical issue intrinsic to random parameter sharing. Meanwhile, the gradient reweighting promotes diversity in the weight distribution and regularizes gradients to stabilize optimization. Extensive experiments on benchmarks show that HH-PS outperforms state-of-the-art methods, achieving significant gains at high compression ratios while maintaining competitive reconstruction quality. Code and model weights are available at https://github.com/huanghz22/HH-PS",
+  "title": "Memory-Efficient High-Ratio Model Compression for Image Super-Resolution via Hybrid Hashing",
+  "identity_tokens": [
+    "DOI:10.1109/TIP.2026.3733352"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be6c64c4942c",
+  "source_precheck_request_id": null
+}

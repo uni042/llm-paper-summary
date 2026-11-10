@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "a3594d21b04a445b6c92b4c266e257c79e7d7dce81645d32b5b2d7467f7442f2",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_afe0edd1cc50819197753dbb4ce3696f--2025-2506.04118-gsi-guided-speculative-inference-research-20261022-0332-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2506.04118",
+  "worker_completed_at": "2026-10-22T03:32:00+09:00",
+  "worker_run_key": "20261022-0332-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6359,
+    "body_paragraphs": 47,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1752,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-21T22:36:16+00:00"
+}

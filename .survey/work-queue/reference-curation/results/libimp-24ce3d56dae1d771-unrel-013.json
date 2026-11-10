@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-24ce3d56dae1d771-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.17790",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.17790",
+    "identity_tokens": [
+      "arXiv:2404.17790"
+    ],
+    "reason": "The title explicitly studies continual pre-training for language adaptation, a training objective rather than systems efficiency.",
+    "first_checked_at": "2026-10-10T13:56:25+00:00",
+    "last_checked_at": "2026-10-10T13:56:25+00:00",
+    "linked_from": [],
+    "title": "Continual Pre-Training for Cross-Lingual LLM Adaptation: Enhancing Japanese Language Capabilities"
+  },
+  "processed_at": "2026-10-10T13:56:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-24ce3d56dae1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

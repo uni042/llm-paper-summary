@@ -1,0 +1,837 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0518JST-worker00-openalex-spec-10",
+  "collector_id": "worker00-openalex-speculative",
+  "run_key": "2026-09-21T05:01:46+09:00",
+  "axis": "OpenAlex recent speculative decoding inference serving",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20speculative%20decoding%20inference%20serving&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzg4MjIwODAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjA2MjAyMjQzJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9eae3dbd6976df640e7d12a9dc326ed7a75b3adf",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 37,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 18,
+  "intra_batch_duplicate_filtered_count": 4,
+  "intra_batch_alias_duplicate_filtered_count": 4,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T20:18:41.671274+00:00",
+  "results": [
+    {
+      "title": "What is the Role of Small Models in the LLM Era: A Survey",
+      "source_url": "https://doi.org/10.1162/coli.a.652",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "arXiv:2409.06857",
+      "arxiv_id": "2409.06857",
+      "authors": [
+        "Lihu Chen",
+        "Gaël Varoquaux"
+      ]
+    },
+    {
+      "title": "SDSIE: Fixed K=5 Speculative Decoding",
+      "source_url": "https://doi.org/10.5281/zenodo.22210487",
+      "year": 2026,
+      "published": "2026-09-18",
+      "canonical_id": "DOI:10.5281/zenodo.22210487",
+      "doi": "10.5281/zenodo.22210487",
+      "authors": [
+        "zanno jacklin"
+      ]
+    },
+    {
+      "title": "Review of: \"Top Ten Challenges Towards Agentic Neural Graph Databases\"",
+      "source_url": "https://doi.org/10.32388/9886ew",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "DOI:10.32388/9886ew",
+      "doi": "10.32388/9886ew",
+      "authors": [
+        "Evgeny V. Arsentyev"
+      ]
+    },
+    {
+      "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+      "source_url": "https://arxiv.org/abs/2609.15636",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15636",
+      "arxiv_id": "2609.15636",
+      "authors": [
+        "Pengfei Xia",
+        "Tuo Hao",
+        "Shengwei Li",
+        "Jinjing Chen",
+        "Shiru Wei",
+        "Wenjun Zou",
+        "Rui Zhang",
+        "Hui Zang"
+      ]
+    },
+    {
+      "title": "Corpus Characterization and Inverse Constitutional Fine-Tuning for Style-Aware Radiology Reports",
+      "source_url": "https://arxiv.org/abs/2609.14226",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2609.14226",
+      "arxiv_id": "2609.14226",
+      "authors": [
+        "Sarah Y. Li",
+        "Elijah Renner",
+        "Rayan Ansari",
+        "Alaa Youssef"
+      ]
+    },
+    {
+      "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+      "source_url": "https://arxiv.org/abs/2609.12550",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12550",
+      "arxiv_id": "2609.12550",
+      "authors": [
+        "Zhenghong Huang",
+        "Hongfan Wu",
+        "Jiheng Zhang"
+      ]
+    },
+    {
+      "title": "СЕСІЙНА ПАМ’ЯТЬ ТА СТИСКАННЯ КОНТЕКСТУ ДЛЯ ГЕНЕРУВАННЯ ВІДПОВІДЕЙ У МЕСЕНДЖЕРАХ З НИЗЬКИМИ ЗАТРИМКАМИ",
+      "source_url": "https://doi.org/10.31891/2219-9365-2026-87-6",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "DOI:10.31891/2219-9365-2026-87-6",
+      "doi": "10.31891/2219-9365-2026-87-6",
+      "authors": [
+        "Юрій МОЧЕРНЮК",
+        "Андрій МОКРИЦЬКИЙ"
+      ]
+    },
+    {
+      "title": "LOCUS: Task-Aware Low-Rank Post-Training for Token-Efficient Language Generation",
+      "source_url": "https://arxiv.org/abs/2609.11739",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11739",
+      "arxiv_id": "2609.11739",
+      "authors": [
+        "Dongfang Zhao"
+      ]
+    },
+    {
+      "title": "Off-Target Effects of Response-Style Alignment in a Korean 27B Language Model",
+      "source_url": "https://arxiv.org/abs/2609.11291",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11291",
+      "arxiv_id": "2609.11291",
+      "authors": [
+        "HyoJung Han"
+      ]
+    },
+    {
+      "title": "SWRouter: Similarity-Contractive Window Routing for Multi-Turn Large Language Model Conversations",
+      "source_url": "https://arxiv.org/abs/2609.11414",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11414",
+      "arxiv_id": "2609.11414",
+      "authors": [
+        "Yu Wang",
+        "Yuchen Li",
+        "Rui Kong",
+        "Xinran Chen",
+        "Jiamin Chen",
+        "Hengyi Cai",
+        "Shuaiqiang Wang",
+        "Jiashu Zhao",
+        "Yulun Zhang",
+        "Zhonghao Lyu",
+        "Haoyi Xiong",
+        "Linghe Kong",
+        "Jimmy Xiangji Huang",
+        "Dawei Yin"
+      ]
+    },
+    {
+      "title": "Recommendation Retrievers Need Verifiers: Universal Generative Reranking for Sequential Recommendations",
+      "source_url": "https://arxiv.org/abs/2609.12270",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.12270",
+      "arxiv_id": "2609.12270",
+      "authors": [
+        "Benyu Zhang",
+        "Qiang Zhang",
+        "Rui Li",
+        "Qunshu Zhang",
+        "D. A. Tandon",
+        "Neeraj Bhatia"
+      ]
+    },
+    {
+      "title": "AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.09823",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.09823",
+      "arxiv_id": "2609.09823",
+      "authors": [
+        "Zuxiong Tan",
+        "Will Wei-Jen Wang",
+        "Wei Shao",
+        "Ali Karkehabadi",
+        "Houman Homayoun",
+        "Avesta Sasan"
+      ]
+    },
+    {
+      "title": "Strangers to Themselves: What Language Models Say About Themselves Is Generic",
+      "source_url": "https://arxiv.org/abs/2609.09899",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.09899",
+      "arxiv_id": "2609.09899",
+      "authors": [
+        "Phil Blandfort",
+        "Urja Pawar"
+      ]
+    },
+    {
+      "title": "$S^3$-Bench: Evaluating Speech Interaction Models as Scientific Voice Assistants",
+      "source_url": "https://arxiv.org/abs/2609.09852",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.09852",
+      "arxiv_id": "2609.09852",
+      "authors": [
+        "Heyang Liu",
+        "Jiayi Huang",
+        "Wenyang Xiao",
+        "Ziyang Cheng",
+        "Lixin Zhang",
+        "Zhen Liu",
+        "Miao He",
+        "Ronghua Wu",
+        "Qunshan Gu",
+        "Yanfeng Wang",
+        "Yu Wang"
+      ]
+    },
+    {
+      "title": "The Living Library: Transforming Archival Collections into Conversational Knowledge Systems -- Lessons from the Theodore Roosevelt Presidential Library",
+      "source_url": "https://arxiv.org/abs/2609.09368",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.09368",
+      "arxiv_id": "2609.09368",
+      "authors": [
+        "Pengce Wang",
+        "Lucia Ronchi Darre",
+        "Matt Briney",
+        "Michaell Bakalars",
+        "Dan Rutkowski",
+        "Ursula Hardy",
+        "David Wolf",
+        "Laura Hoffman",
+        "Allen Kim",
+        "Shawn Wright",
+        "Juan Lavista Ferres"
+      ]
+    },
+    {
+      "title": "Semantic Drift Across Qwen Generations: Reproducibility, Thinking Mode, Serving Stack, and What Cosine Similarity Misses in Iterated Paraphrase Chains",
+      "source_url": "https://doi.org/10.5281/zenodo.22646930",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "DOI:10.5281/zenodo.22646930",
+      "doi": "10.5281/zenodo.22646930",
+      "authors": [
+        "James H. Smith"
+      ]
+    },
+    {
+      "title": "Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07786",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07786",
+      "arxiv_id": "2609.07786",
+      "authors": [
+        "Zheyuan Wang",
+        "Siyu Li",
+        "Song Peiqiao",
+        "Sijia Chen",
+        "Qianqian Song",
+        "Qian Liu"
+      ]
+    },
+    {
+      "title": "MetaRSI / RSI2: A Meta-Recursive Self-Improving System for Recursive Self-Improving Systems Themselves",
+      "source_url": "https://arxiv.org/abs/2609.06396",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06396",
+      "arxiv_id": "2609.06396",
+      "authors": [
+        "Zihan Tan",
+        "Leixin Sun",
+        "Zitong Shi",
+        "Yitao Liu",
+        "Jiajun Wu",
+        "Nathaniel Brooks",
+        "Jiaru Qian",
+        "Xiaoran Shang",
+        "Suyuan Huang",
+        "Yi Ding",
+        "Yangxu Liao",
+        "Mukai Li",
+        "Qiushi Sun",
+        "Shudong Liu",
+        "Xuankun Rong",
+        "Xiaohang Yu",
+        "Zhuo Chen",
+        "Hejia Geng",
+        "Chenxin Li",
+        "Aozhou Wang",
+        "Zengji Tu",
+        "Robert Tang",
+        "Yuxin Zhan",
+        "Eric Jiang",
+        "Yuxin Wu",
+        "Jianqing Zhang",
+        "Xiao Liang",
+        "Fang Wu",
+        "Haochi Zhang",
+        "Alexander Marlow",
+        "Guancheng Wan"
+      ]
+    },
+    {
+      "title": "SDSIE: Software-Defined Stochastic Inference Engine",
+      "source_url": "https://doi.org/10.5281/zenodo.21499379",
+      "year": 2026,
+      "published": "2026-09-05",
+      "canonical_id": "DOI:10.5281/zenodo.21499379",
+      "doi": "10.5281/zenodo.21499379",
+      "authors": [
+        "Creepybits"
+      ]
+    },
+    {
+      "title": "Multimodal Resource-Exhaustion Attacks on Vision-Language Models via Joint Pixel-Prompt Optimization",
+      "source_url": "https://arxiv.org/abs/2609.05889",
+      "year": 2026,
+      "published": "2026-09-05",
+      "canonical_id": "arXiv:2609.05889",
+      "arxiv_id": "2609.05889",
+      "authors": [
+        "Zhaoxiong Ni",
+        "Yatie Xiao",
+        "Chi-Man Pun",
+        "Fei Peng",
+        "Qingxiao Guan",
+        "Keke Tang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2409.06857",
+      "identity_tokens": [
+        "id:DOI:10.1162/coli.a.652",
+        "id:arXiv:2409.06857",
+        "title:what is the role of small models in the llm era a survey",
+        "url:https://doi.org/10.1162/coli.a.652"
+      ],
+      "record": {
+        "title": "What is the Role of Small Models in the LLM Era: A Survey",
+        "source_url": "https://doi.org/10.1162/coli.a.652",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "arXiv:2409.06857",
+        "arxiv_id": "2409.06857",
+        "authors": [
+          "Lihu Chen",
+          "Gaël Varoquaux"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.5281/zenodo.22210487",
+      "identity_tokens": [
+        "id:DOI:10.5281/zenodo.22210487",
+        "title:sdsie fixed k5 speculative decoding",
+        "url:https://doi.org/10.5281/zenodo.22210487"
+      ],
+      "record": {
+        "title": "SDSIE: Fixed K=5 Speculative Decoding",
+        "source_url": "https://doi.org/10.5281/zenodo.22210487",
+        "year": 2026,
+        "published": "2026-09-18",
+        "canonical_id": "DOI:10.5281/zenodo.22210487",
+        "doi": "10.5281/zenodo.22210487",
+        "authors": [
+          "zanno jacklin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.32388/9886ew",
+      "identity_tokens": [
+        "id:DOI:10.32388/9886ew",
+        "title:review of top ten challenges towards agentic neural graph databases",
+        "url:https://doi.org/10.32388/9886ew"
+      ],
+      "record": {
+        "title": "Review of: \"Top Ten Challenges Towards Agentic Neural Graph Databases\"",
+        "source_url": "https://doi.org/10.32388/9886ew",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "DOI:10.32388/9886ew",
+        "doi": "10.32388/9886ew",
+        "authors": [
+          "Evgeny V. Arsentyev"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15636",
+      "identity_tokens": [
+        "id:arXiv:2609.15636",
+        "title:trillionparameter moe in a box decoupling memory provisioning with highbandwidth flash",
+        "url:https://arxiv.org/abs/2609.15636"
+      ],
+      "record": {
+        "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+        "source_url": "https://arxiv.org/abs/2609.15636",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15636",
+        "arxiv_id": "2609.15636",
+        "authors": [
+          "Pengfei Xia",
+          "Tuo Hao",
+          "Shengwei Li",
+          "Jinjing Chen",
+          "Shiru Wei",
+          "Wenjun Zou",
+          "Rui Zhang",
+          "Hui Zang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14226",
+      "identity_tokens": [
+        "id:arXiv:2609.14226",
+        "title:corpus characterization and inverse constitutional finetuning for styleaware radiology reports",
+        "url:https://arxiv.org/abs/2609.14226"
+      ],
+      "record": {
+        "title": "Corpus Characterization and Inverse Constitutional Fine-Tuning for Style-Aware Radiology Reports",
+        "source_url": "https://arxiv.org/abs/2609.14226",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2609.14226",
+        "arxiv_id": "2609.14226",
+        "authors": [
+          "Sarah Y. Li",
+          "Elijah Renner",
+          "Rayan Ansari",
+          "Alaa Youssef"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12550",
+      "identity_tokens": [
+        "id:arXiv:2609.12550",
+        "title:qualityconstrained routing over a fixed pool of quantized mixtureofexperts instances",
+        "url:https://arxiv.org/abs/2609.12550"
+      ],
+      "record": {
+        "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+        "source_url": "https://arxiv.org/abs/2609.12550",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12550",
+        "arxiv_id": "2609.12550",
+        "authors": [
+          "Zhenghong Huang",
+          "Hongfan Wu",
+          "Jiheng Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.31891/2219-9365-2026-87-6",
+      "identity_tokens": [
+        "id:DOI:10.31891/2219-9365-2026-87-6",
+        "title:сесійна память та стискання контексту для генерування відповідей у месенджерах з низькими затримками",
+        "url:https://doi.org/10.31891/2219-9365-2026-87-6"
+      ],
+      "record": {
+        "title": "СЕСІЙНА ПАМ’ЯТЬ ТА СТИСКАННЯ КОНТЕКСТУ ДЛЯ ГЕНЕРУВАННЯ ВІДПОВІДЕЙ У МЕСЕНДЖЕРАХ З НИЗЬКИМИ ЗАТРИМКАМИ",
+        "source_url": "https://doi.org/10.31891/2219-9365-2026-87-6",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "DOI:10.31891/2219-9365-2026-87-6",
+        "doi": "10.31891/2219-9365-2026-87-6",
+        "authors": [
+          "Юрій МОЧЕРНЮК",
+          "Андрій МОКРИЦЬКИЙ"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11739",
+      "identity_tokens": [
+        "id:arXiv:2609.11739",
+        "title:locus taskaware lowrank posttraining for tokenefficient language generation",
+        "url:https://arxiv.org/abs/2609.11739"
+      ],
+      "record": {
+        "title": "LOCUS: Task-Aware Low-Rank Post-Training for Token-Efficient Language Generation",
+        "source_url": "https://arxiv.org/abs/2609.11739",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11739",
+        "arxiv_id": "2609.11739",
+        "authors": [
+          "Dongfang Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11291",
+      "identity_tokens": [
+        "id:arXiv:2609.11291",
+        "title:offtarget effects of responsestyle alignment in a korean 27b language model",
+        "url:https://arxiv.org/abs/2609.11291"
+      ],
+      "record": {
+        "title": "Off-Target Effects of Response-Style Alignment in a Korean 27B Language Model",
+        "source_url": "https://arxiv.org/abs/2609.11291",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11291",
+        "arxiv_id": "2609.11291",
+        "authors": [
+          "HyoJung Han"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11414",
+      "identity_tokens": [
+        "id:arXiv:2609.11414",
+        "title:swrouter similaritycontractive window routing for multiturn large language model conversations",
+        "url:https://arxiv.org/abs/2609.11414"
+      ],
+      "record": {
+        "title": "SWRouter: Similarity-Contractive Window Routing for Multi-Turn Large Language Model Conversations",
+        "source_url": "https://arxiv.org/abs/2609.11414",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11414",
+        "arxiv_id": "2609.11414",
+        "authors": [
+          "Yu Wang",
+          "Yuchen Li",
+          "Rui Kong",
+          "Xinran Chen",
+          "Jiamin Chen",
+          "Hengyi Cai",
+          "Shuaiqiang Wang",
+          "Jiashu Zhao",
+          "Yulun Zhang",
+          "Zhonghao Lyu",
+          "Haoyi Xiong",
+          "Linghe Kong",
+          "Jimmy Xiangji Huang",
+          "Dawei Yin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12270",
+      "identity_tokens": [
+        "id:arXiv:2609.12270",
+        "title:recommendation retrievers need verifiers universal generative reranking for sequential recommendations",
+        "url:https://arxiv.org/abs/2609.12270"
+      ],
+      "record": {
+        "title": "Recommendation Retrievers Need Verifiers: Universal Generative Reranking for Sequential Recommendations",
+        "source_url": "https://arxiv.org/abs/2609.12270",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.12270",
+        "arxiv_id": "2609.12270",
+        "authors": [
+          "Benyu Zhang",
+          "Qiang Zhang",
+          "Rui Li",
+          "Qunshu Zhang",
+          "D. A. Tandon",
+          "Neeraj Bhatia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09823",
+      "identity_tokens": [
+        "id:arXiv:2609.09823",
+        "title:amend audited margins enable nonblocking drops in gpupim llm decoding",
+        "url:https://arxiv.org/abs/2609.09823"
+      ],
+      "record": {
+        "title": "AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2609.09823",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.09823",
+        "arxiv_id": "2609.09823",
+        "authors": [
+          "Zuxiong Tan",
+          "Will Wei-Jen Wang",
+          "Wei Shao",
+          "Ali Karkehabadi",
+          "Houman Homayoun",
+          "Avesta Sasan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09899",
+      "identity_tokens": [
+        "id:arXiv:2609.09899",
+        "title:strangers to themselves what language models say about themselves is generic",
+        "url:https://arxiv.org/abs/2609.09899"
+      ],
+      "record": {
+        "title": "Strangers to Themselves: What Language Models Say About Themselves Is Generic",
+        "source_url": "https://arxiv.org/abs/2609.09899",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.09899",
+        "arxiv_id": "2609.09899",
+        "authors": [
+          "Phil Blandfort",
+          "Urja Pawar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09852",
+      "identity_tokens": [
+        "id:arXiv:2609.09852",
+        "title:s3bench evaluating speech interaction models as scientific voice assistants",
+        "url:https://arxiv.org/abs/2609.09852"
+      ],
+      "record": {
+        "title": "$S^3$-Bench: Evaluating Speech Interaction Models as Scientific Voice Assistants",
+        "source_url": "https://arxiv.org/abs/2609.09852",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.09852",
+        "arxiv_id": "2609.09852",
+        "authors": [
+          "Heyang Liu",
+          "Jiayi Huang",
+          "Wenyang Xiao",
+          "Ziyang Cheng",
+          "Lixin Zhang",
+          "Zhen Liu",
+          "Miao He",
+          "Ronghua Wu",
+          "Qunshan Gu",
+          "Yanfeng Wang",
+          "Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09368",
+      "identity_tokens": [
+        "id:arXiv:2609.09368",
+        "title:the living library transforming archival collections into conversational knowledge systems lessons from the theodore roosevelt presidential library",
+        "url:https://arxiv.org/abs/2609.09368"
+      ],
+      "record": {
+        "title": "The Living Library: Transforming Archival Collections into Conversational Knowledge Systems -- Lessons from the Theodore Roosevelt Presidential Library",
+        "source_url": "https://arxiv.org/abs/2609.09368",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.09368",
+        "arxiv_id": "2609.09368",
+        "authors": [
+          "Pengce Wang",
+          "Lucia Ronchi Darre",
+          "Matt Briney",
+          "Michaell Bakalars",
+          "Dan Rutkowski",
+          "Ursula Hardy",
+          "David Wolf",
+          "Laura Hoffman",
+          "Allen Kim",
+          "Shawn Wright",
+          "Juan Lavista Ferres"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.5281/zenodo.22646930",
+      "identity_tokens": [
+        "id:DOI:10.5281/zenodo.22646930",
+        "title:semantic drift across qwen generations reproducibility thinking mode serving stack and what cosine similarity misses in iterated paraphrase chains",
+        "url:https://doi.org/10.5281/zenodo.22646930"
+      ],
+      "record": {
+        "title": "Semantic Drift Across Qwen Generations: Reproducibility, Thinking Mode, Serving Stack, and What Cosine Similarity Misses in Iterated Paraphrase Chains",
+        "source_url": "https://doi.org/10.5281/zenodo.22646930",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "DOI:10.5281/zenodo.22646930",
+        "doi": "10.5281/zenodo.22646930",
+        "authors": [
+          "James H. Smith"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07786",
+      "identity_tokens": [
+        "id:arXiv:2609.07786",
+        "title:signed rescue routing harmaware cascades for efficient llm inference",
+        "url:https://arxiv.org/abs/2609.07786"
+      ],
+      "record": {
+        "title": "Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.07786",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07786",
+        "arxiv_id": "2609.07786",
+        "authors": [
+          "Zheyuan Wang",
+          "Siyu Li",
+          "Song Peiqiao",
+          "Sijia Chen",
+          "Qianqian Song",
+          "Qian Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06396",
+      "identity_tokens": [
+        "id:arXiv:2609.06396",
+        "title:metarsi rsi2 a metarecursive selfimproving system for recursive selfimproving systems themselves",
+        "url:https://arxiv.org/abs/2609.06396"
+      ],
+      "record": {
+        "title": "MetaRSI / RSI2: A Meta-Recursive Self-Improving System for Recursive Self-Improving Systems Themselves",
+        "source_url": "https://arxiv.org/abs/2609.06396",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06396",
+        "arxiv_id": "2609.06396",
+        "authors": [
+          "Zihan Tan",
+          "Leixin Sun",
+          "Zitong Shi",
+          "Yitao Liu",
+          "Jiajun Wu",
+          "Nathaniel Brooks",
+          "Jiaru Qian",
+          "Xiaoran Shang",
+          "Suyuan Huang",
+          "Yi Ding",
+          "Yangxu Liao",
+          "Mukai Li",
+          "Qiushi Sun",
+          "Shudong Liu",
+          "Xuankun Rong",
+          "Xiaohang Yu",
+          "Zhuo Chen",
+          "Hejia Geng",
+          "Chenxin Li",
+          "Aozhou Wang",
+          "Zengji Tu",
+          "Robert Tang",
+          "Yuxin Zhan",
+          "Eric Jiang",
+          "Yuxin Wu",
+          "Jianqing Zhang",
+          "Xiao Liang",
+          "Fang Wu",
+          "Haochi Zhang",
+          "Alexander Marlow",
+          "Guancheng Wan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.5281/zenodo.21499379",
+      "identity_tokens": [
+        "id:DOI:10.5281/zenodo.21499379",
+        "title:sdsie softwaredefined stochastic inference engine",
+        "url:https://doi.org/10.5281/zenodo.21499379"
+      ],
+      "record": {
+        "title": "SDSIE: Software-Defined Stochastic Inference Engine",
+        "source_url": "https://doi.org/10.5281/zenodo.21499379",
+        "year": 2026,
+        "published": "2026-09-05",
+        "canonical_id": "DOI:10.5281/zenodo.21499379",
+        "doi": "10.5281/zenodo.21499379",
+        "authors": [
+          "Creepybits"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05889",
+      "identity_tokens": [
+        "id:arXiv:2609.05889",
+        "title:multimodal resourceexhaustion attacks on visionlanguage models via joint pixelprompt optimization",
+        "url:https://arxiv.org/abs/2609.05889"
+      ],
+      "record": {
+        "title": "Multimodal Resource-Exhaustion Attacks on Vision-Language Models via Joint Pixel-Prompt Optimization",
+        "source_url": "https://arxiv.org/abs/2609.05889",
+        "year": 2026,
+        "published": "2026-09-05",
+        "canonical_id": "arXiv:2609.05889",
+        "arxiv_id": "2609.05889",
+        "authors": [
+          "Zhaoxiong Ni",
+          "Yatie Xiao",
+          "Chi-Man Pun",
+          "Fei Peng",
+          "Qingxiao Guan",
+          "Keke Tang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:86ca0695289d01e40203d04d5df7573b7dc45680f1f027aa113b54c266a15e74",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "56d0eebcb4871a1fc5fd4d7c6fc0f0db4d47d84059125212e2ef95cac7773d13",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-73a40d5bc709--libfile_e6d1c99d39308191918ddcca3b34a5b0--2026-2602.14452-wisparse-weight-aware-activation-sparsity-research-20261022-1932-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2602.14452",
+  "worker_completed_at": "2026-10-22T19:32:00+09:00",
+  "worker_run_key": "20261022-1932-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5640,
+    "body_paragraphs": 40,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 276,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 276 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 276 < 500"
+  ],
+  "processed_at": "2026-10-22T17:31:13+00:00"
+}

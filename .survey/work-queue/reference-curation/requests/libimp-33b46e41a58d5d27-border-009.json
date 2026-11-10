@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-33b46e41a58d5d27-border-009",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1109/sc.2008.5214359",
+  "reason": "GPUのGEMM/LU/QR/Choleskyをblocking、CPU-GPU heterogeneity、memory-system測定で最適化し、vendor GEMM比最大60%高速化などを示す。LLM kernelの基礎演算最適化に直結するが、論文自体は汎用dense linear algebraでLLM/Transformer推論評価がないためborderline。",
+  "title": "Benchmarking GPUs to tune dense linear algebra",
+  "identity_tokens": [
+    "DOI:10.1109/sc.2008.5214359"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-33b46e41a58d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

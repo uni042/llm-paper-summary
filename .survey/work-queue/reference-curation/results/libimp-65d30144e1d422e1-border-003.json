@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-65d30144e1d422e1-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.15758",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.15758",
+    "identity_tokens": [
+      "arXiv:2507.15758"
+    ],
+    "reason": "LAPOは成功した推論長の分布を学び、二段階の強化学習で問題難易度に応じた思考長制御をモデル内部へ獲得させる。推論時トークンを最大40.9%削減するが、中心貢献は学習アルゴリズムでサービング/実行系の最適化ではないため境界候補。",
+    "first_checked_at": "2026-10-28T21:47:42+00:00",
+    "last_checked_at": "2026-10-28T21:47:42+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "LAPO: Internalizing Reasoning Efficiency via Length-Adaptive Policy Optimization"
+  },
+  "processed_at": "2026-10-28T21:47:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-65d30144e1d4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

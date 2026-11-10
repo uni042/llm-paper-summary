@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260924T023500Z-attempt-preload-9578aadc947ff8ab74585005",
+  "kind": "research",
+  "attempt_id": "attempt-preload-9578aadc947ff8ab74585005",
+  "job_id": "job-research-14b72fcf4a8168cf",
+  "record_bank": "q",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-zipnn-lossless-model-compression.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260924T023000Z-7e91c4",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T02:30:00+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:bfdedbc454a9b3cf389b6c615028a37616ffdae34e5a7bed9ec416754a0f43f8",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-q/metadata.json",
+      "blob_sha": "15046ac1bf7b7d98ae807c5312a4c19c053c3ea0"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-q/problem_method.json",
+      "blob_sha": "4ed670830bea77db68a59da2c44054c793be40db"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-q/evaluation.json",
+      "blob_sha": "7b86e75b17be3d9adc523395f5cf72f835b8b089"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-q/results.json",
+      "blob_sha": "a52d76caf4cd3be57204cb23786614bbe96500b7"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-q/positioning.json",
+      "blob_sha": "89993e14b965df2c861f3defc004ccec4c08510e"
+    }
+  ],
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short"
+  ],
+  "checked_at": "2026-09-24T02:33:37+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9de2c77957344c70-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.02098",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.02098",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2410.02098",
+      "arXiv:2410.02098"
+    ],
+    "reason": "expert-choice routingによるMoE効率化だが、対象はtext-to-image Diffusion Transformerの学習・生成品質でありLLM推論サーベイの対象外。",
+    "first_checked_at": "2026-09-30T02:28:00+00:00",
+    "last_checked_at": "2026-10-02T01:38:16+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      ".survey/work-queue/worker-worklist-30.json",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md"
+    ],
+    "title": "EC-DiT: Scaling Diffusion Transformers with Adaptive Expert-Choice Routing"
+  },
+  "processed_at": "2026-10-02T01:38:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9de2c7795734",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

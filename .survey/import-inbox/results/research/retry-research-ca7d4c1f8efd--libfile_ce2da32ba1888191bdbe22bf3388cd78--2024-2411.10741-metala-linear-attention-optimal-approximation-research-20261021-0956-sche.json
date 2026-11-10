@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "123c2dc96c1ce5bb58df2c9d3a26763a2607e67119731e4f6242668e2cb28673",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca7d4c1f8efd--libfile_ce2da32ba1888191bdbe22bf3388cd78--2024-2411.10741-metala-linear-attention-optimal-approximation-research-20261021-0956-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2411.10741",
+  "worker_completed_at": "2026-10-21T10:37:00+09:00",
+  "worker_run_key": "20261021-0956-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4454,
+    "body_paragraphs": 27,
+    "method_chars": 1058,
+    "method_paragraphs": 6,
+    "evaluation_chars": 990,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2411.10741-metala-unified-optimal-linear-approximation-to-softmax-attention-map.md と 12 段落 / 2868文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-22T17:50:10+00:00"
+}

@@ -1,0 +1,156 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-user-adaptive-max-20260920-buddymoe",
+  "collector_id": "manual-user-adaptive-max-buddymoe",
+  "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+  "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2511.10054 (expert redundancy / memory-constrained acceleration)",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2511.10054/citations",
+  "target_unseen": 50,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6b8c89cdd8d4c71d9facda9b599bf3bc145681ef",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T10:34:52.336327+00:00",
+  "results": [
+    {
+      "title": "Towards Efficient and Reliable On-Device Multi-Agent Systems: Challenges, Technologies and Explorations",
+      "source_url": "https://www.semanticscholar.org/paper/6b7fe9189df482320578bffea03b382d9220ecda",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "On-device multi-agent systems (MASs) have attracted increasing attention for their potential to minimize response latency, protect user privacy, and maintain service availability. However, stringent hardware resource constraints pose significant challenges to achieving efficient and reliable autonomous execution. This paper investigates the key challenges and technologies for efficient and reliable on-device MASs, and explores a joint optimization framework tailored for resourceconstrained devices. First, we present a systematic three-layer architecture for on-device MASs, consisting of the multi-agent layer, the model layer, and the device layer. Then, we provide a comprehensive analysis of challenges and representative techniques for enhancing the efficiency and reliability across the three layers. Finally, as a preliminary exploration toward cross-layer optimization, we propose a framework combining MoE-based parameter offloading with real-time validation, demonstrating the feasibility of simultaneously improving MASs' efficiency and reliability on resource-constrained devices. Experimental results show that the proposed framework significantly reduces the memory usage and improves task success rates of on-device MASs, paving the way for more efficient and reliable on-device MASs.",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00157",
+      "doi": "10.1109/ICWS72778.2026.00157",
+      "authors": [
+        "Yanjun Shu",
+        "Wei-Ye Yan",
+        "Zhuang-Yu Ma",
+        "Jian Yang",
+        "Yan-Ming Jiang",
+        "Min Li",
+        "Tian-Yu Luo",
+        "De-Cheng Zuo"
+      ]
+    },
+    {
+      "title": "Equifinality in Mixture of Experts: Routing Topology Does Not Determine Language Modeling Quality",
+      "source_url": "https://www.semanticscholar.org/paper/c248caa1cba90a1e9f73d28da9b6f282f136cf70",
+      "year": 2026,
+      "published": "2026-04-15",
+      "abstract": "Sparse Mixture-of-Experts (MoE) architectures employ increasingly sophisticated routing mechanisms -- learned routers, multi-hop trajectories, token-dependent gating. We ask: does routing topology actually determine language modeling quality? We build a geometric MoE (ST-MoE) using cosine-similarity routing against learned centroids in a low-dimensional space ($d_{space} = 64$), requiring 80% fewer routing parameters than standard linear routers. Through 62 controlled experiments on WikiText-103 at 76--84M parameters trained to convergence (50K steps, 1.64B tokens), we find that routing topology does not determine asymptotic perplexity (PPL): five cosine-routing variants are statistically equivalent within a 1-PPL margin (Two One-Sided Tests [TOST], $p<0.05$ for all 10 pairwise comparisons; 15 runs across 3 seeds, observed range 33.93--34.72). The finding extends to hash, random-fixed, and top-1 routing (single-seed; graceful 1.1--2.2 PPL degradation) and replicates on OpenWebText (0.03 PPL gap, 6 runs, 3 seeds each). A standard linear router with 5.3$\\times$ more routing parameters reaches PPL 32.76, but iso-parameter cosine routing closes 67% of this gap -- the true mechanism advantage is $\\sim$1.2%. The mechanistic explanation is convergent redundancy: multi-hop updates are collinear ($\\cos(\\Delta h_0, \\Delta h_1) = 0.805$), implementing magnitude amplification rather than compositional reasoning; a single learnable scalar replicates multi-hop performance. As a practical payoff, zero-shot relative-norm halting saves 25% of MoE FLOPs at +0.12% PPL. Expert-level specialization and causal controllability -- which coexist with topology-level equifinality -- are explored in a companion paper.",
+      "canonical_id": "arXiv:2604.14419",
+      "arxiv_id": "2604.14419",
+      "authors": [
+        "Ivan Ternovtsii",
+        "Y. Bilak"
+      ]
+    },
+    {
+      "title": "MELINOE: Fine-Tuning Enables Memory-Efficient Inference for Mixture-of-Experts Models",
+      "source_url": "https://www.semanticscholar.org/paper/8323d0010c183629825ea27f5154f212cd50dd78",
+      "year": 2026,
+      "published": "2026-01-30",
+      "abstract": "Mixture-of-Experts (MoE) model architectures can significantly reduce the number of activated parameters per token, enabling computationally efficient training and inference. However, their large overall parameter counts and model sizes have precluded their widespread usage in resource-constrained settings as all of the parameters must still be loaded into GPU memory. Prior works aim to address this memory bottleneck by offloading certain experts into CPU memory and porting them to GPU memory only when they are activated. In practice, these methods suffer from the significant I/O latency incurred by expert transfer. We present MELINOE, a method that fine-tunes an MoE model to more strongly prefer activating a smaller number of experts per sequence. Caching these preferred experts in GPU memory reduces expert churn and CPU-GPU transfer overhead. MELINOE increases throughput by $1.2-3\\times$ over efficient baselines and up to $14.7\\times$ over transfer-heavy baselines while retaining or even improving the performance of the model on a downstream task, making it a reliable method for improving MoE inference efficiency.",
+      "canonical_id": "arXiv:2602.11192",
+      "arxiv_id": "2602.11192",
+      "authors": [
+        "Arian Raje",
+        "Anupam Nayak",
+        "Gauri Joshi"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/icws72778.2026.00157",
+      "identity_tokens": [
+        "id:DOI:10.1109/icws72778.2026.00157",
+        "title:towards efficient and reliable ondevice multiagent systems challenges technologies and explorations",
+        "url:https://www.semanticscholar.org/paper/6b7fe9189df482320578bffea03b382d9220ecda"
+      ],
+      "record": {
+        "title": "Towards Efficient and Reliable On-Device Multi-Agent Systems: Challenges, Technologies and Explorations",
+        "source_url": "https://www.semanticscholar.org/paper/6b7fe9189df482320578bffea03b382d9220ecda",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "On-device multi-agent systems (MASs) have attracted increasing attention for their potential to minimize response latency, protect user privacy, and maintain service availability. However, stringent hardware resource constraints pose significant challenges to achieving efficient and reliable autonomous execution. This paper investigates the key challenges and technologies for efficient and reliable on-device MASs, and explores a joint optimization framework tailored for resourceconstrained devices. First, we present a systematic three-layer architecture for on-device MASs, consisting of the multi-agent layer, the model layer, and the device layer. Then, we provide a comprehensive analysis of challenges and representative techniques for enhancing the efficiency and reliability across the three layers. Finally, as a preliminary exploration toward cross-layer optimization, we propose a framework combining MoE-based parameter offloading with real-time validation, demonstrating the feasibility of simultaneously improving MASs' efficiency and reliability on resource-constrained devices. Experimental results show that the proposed framework significantly reduces the memory usage and improves task success rates of on-device MASs, paving the way for more efficient and reliable on-device MASs.",
+        "canonical_id": "DOI:10.1109/ICWS72778.2026.00157",
+        "doi": "10.1109/ICWS72778.2026.00157",
+        "authors": [
+          "Yanjun Shu",
+          "Wei-Ye Yan",
+          "Zhuang-Yu Ma",
+          "Jian Yang",
+          "Yan-Ming Jiang",
+          "Min Li",
+          "Tian-Yu Luo",
+          "De-Cheng Zuo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.14419",
+      "identity_tokens": [
+        "id:arXiv:2604.14419",
+        "title:equifinality in mixture of experts routing topology does not determine language modeling quality",
+        "url:https://www.semanticscholar.org/paper/c248caa1cba90a1e9f73d28da9b6f282f136cf70"
+      ],
+      "record": {
+        "title": "Equifinality in Mixture of Experts: Routing Topology Does Not Determine Language Modeling Quality",
+        "source_url": "https://www.semanticscholar.org/paper/c248caa1cba90a1e9f73d28da9b6f282f136cf70",
+        "year": 2026,
+        "published": "2026-04-15",
+        "abstract": "Sparse Mixture-of-Experts (MoE) architectures employ increasingly sophisticated routing mechanisms -- learned routers, multi-hop trajectories, token-dependent gating. We ask: does routing topology actually determine language modeling quality? We build a geometric MoE (ST-MoE) using cosine-similarity routing against learned centroids in a low-dimensional space ($d_{space} = 64$), requiring 80% fewer routing parameters than standard linear routers. Through 62 controlled experiments on WikiText-103 at 76--84M parameters trained to convergence (50K steps, 1.64B tokens), we find that routing topology does not determine asymptotic perplexity (PPL): five cosine-routing variants are statistically equivalent within a 1-PPL margin (Two One-Sided Tests [TOST], $p<0.05$ for all 10 pairwise comparisons; 15 runs across 3 seeds, observed range 33.93--34.72). The finding extends to hash, random-fixed, and top-1 routing (single-seed; graceful 1.1--2.2 PPL degradation) and replicates on OpenWebText (0.03 PPL gap, 6 runs, 3 seeds each). A standard linear router with 5.3$\\times$ more routing parameters reaches PPL 32.76, but iso-parameter cosine routing closes 67% of this gap -- the true mechanism advantage is $\\sim$1.2%. The mechanistic explanation is convergent redundancy: multi-hop updates are collinear ($\\cos(\\Delta h_0, \\Delta h_1) = 0.805$), implementing magnitude amplification rather than compositional reasoning; a single learnable scalar replicates multi-hop performance. As a practical payoff, zero-shot relative-norm halting saves 25% of MoE FLOPs at +0.12% PPL. Expert-level specialization and causal controllability -- which coexist with topology-level equifinality -- are explored in a companion paper.",
+        "canonical_id": "arXiv:2604.14419",
+        "arxiv_id": "2604.14419",
+        "authors": [
+          "Ivan Ternovtsii",
+          "Y. Bilak"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.11192",
+      "identity_tokens": [
+        "id:arXiv:2602.11192",
+        "title:melinoe finetuning enables memoryefficient inference for mixtureofexperts models",
+        "url:https://www.semanticscholar.org/paper/8323d0010c183629825ea27f5154f212cd50dd78"
+      ],
+      "record": {
+        "title": "MELINOE: Fine-Tuning Enables Memory-Efficient Inference for Mixture-of-Experts Models",
+        "source_url": "https://www.semanticscholar.org/paper/8323d0010c183629825ea27f5154f212cd50dd78",
+        "year": 2026,
+        "published": "2026-01-30",
+        "abstract": "Mixture-of-Experts (MoE) model architectures can significantly reduce the number of activated parameters per token, enabling computationally efficient training and inference. However, their large overall parameter counts and model sizes have precluded their widespread usage in resource-constrained settings as all of the parameters must still be loaded into GPU memory. Prior works aim to address this memory bottleneck by offloading certain experts into CPU memory and porting them to GPU memory only when they are activated. In practice, these methods suffer from the significant I/O latency incurred by expert transfer. We present MELINOE, a method that fine-tunes an MoE model to more strongly prefer activating a smaller number of experts per sequence. Caching these preferred experts in GPU memory reduces expert churn and CPU-GPU transfer overhead. MELINOE increases throughput by $1.2-3\\times$ over efficient baselines and up to $14.7\\times$ over transfer-heavy baselines while retaining or even improving the performance of the model on a downstream task, making it a reliable method for improving MoE inference efficiency.",
+        "canonical_id": "arXiv:2602.11192",
+        "arxiv_id": "2602.11192",
+        "authors": [
+          "Arian Raje",
+          "Anupam Nayak",
+          "Gauri Joshi"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:c81489ddd89cf39020caecc667893b36191df31168f4fce4d00d6de376dad168",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0032-scheduled-chat-30/r04",
+  "reference_main_sha": "41316ab7d0faa07b664b1d03afd404f7b8a996a8",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.06350",
+      "identity_tokens": [
+        "arXiv:2605.06350"
+      ],
+      "title": "Is Escalation Worth It? On the Depth of LLM Cascades",
+      "reason": "arXiv一次要旨。LLM cascadeで安価なモデルから高価なモデルへの委譲閾値と段数を、期待正解率増分と追加計算費用の比から最適化する。8モデルの候補から5ベンチマーク・9信頼度指標を検証し、2段以上の深いcascadeの追加利得が118/135比較で見られないと報告。推論時モデル選択・費用と品質のトレードオフを直接扱う。",
+      "source_url": "https://arxiv.org/abs/2605.06350",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 397,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.07821",
+      "identity_tokens": [
+        "arXiv:2609.07821"
+      ],
+      "title": "A*-Thought-V2: Efficient Latent Reasoning via Geometric Dynamics of LLM",
+      "reason": "arXiv一次要旨。CoTのhidden-state軌跡の方向性から明示textで残すstepとlatent tokenへ圧縮するstepを選択し、stepwise embedding forcingとlabel forcingで学習する。Qwen3.5-9B/3.6-27Bで応答長最大半減、Accuracy per Computation Unit最大2.29倍を報告し、生成時の推論token・計算量削減を直接目指す。",
+      "source_url": "https://arxiv.org/abs/2609.07821",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 404,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.15375",
+      "identity_tokens": [
+        "arXiv:2507.15375"
+      ],
+      "title": "STITCH: Simultaneous Thinking and Talking with Chunked Reasoning for Spoken Language Models",
+      "reason": "arXiv一次要旨。spoken language modelの内部CoT生成と音声応答をchunk単位で交互実行し、音声再生中の余裕時間に次の未発話推論chunkを生成する。非CoT音声baselineと同等の応答レイテンシを保ちつつ数学推論で約15%改善を報告する、音声LLMの推論スケジューリング・体感遅延最適化。",
+      "source_url": "https://arxiv.org/abs/2507.15375",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 405,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.12526",
+      "identity_tokens": [
+        "arXiv:2602.12526"
+      ],
+      "title": "Constraint-Rectified Training for Efficient Chain-of-Thought",
+      "reason": "arXiv一次要旨。長いCoTの冗長tokenを減らすため、基準正解率を下回ったときだけ精度を補正するreference-guarded constrained optimizationと、長さ制約を学習する2段学習を提案。学習技術を通じて推論時の生成token量を削減し正解率を保つことが目的であり、推論計算予算の効率化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2602.12526",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 409,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.06147",
+      "identity_tokens": [
+        "arXiv:2405.06147"
+      ],
+      "title": "State-Free Inference of State-Space Models: The Transfer Function Approach",
+      "reason": "arXiv一次要旨。transfer function表現とFFTによるconvolution kernelの周波数領域計算で、状態サイズ増大に対してメモリ・計算増分を抑えるstate-free並列系列推論を提案。WikiTextでの言語モデリングPPLを含むが、主な速度評価はLong Range Arenaでの学習35%改善であり、実用生成LLMの復号速度・サービング効果は要旨では未確認。",
+      "source_url": "https://arxiv.org/abs/2405.06147",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 410,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.15909",
+      "identity_tokens": [
+        "arXiv:2505.15909"
+      ],
+      "title": "Is (Selective) Round-To-Nearest Quantization All You Need?",
+      "reason": "arXiv一次要旨。Marlinカーネル上のRTN量子化を実装し、より複雑なPTQより安価に適用できるだけでなく、token生成throughputや精度で競争力を持つ条件を示す。選択した層・moduleのbit精度を上げることで品質を調整し、LLM推論用量子化の実行効率・品質トレードオフを直接扱う。",
+      "source_url": "https://arxiv.org/abs/2505.15909",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 412,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.17999",
+      "identity_tokens": [
+        "arXiv:2606.17999"
+      ],
+      "title": "VoidPadding: Let [VOID] Handle Padding in Masked Diffusion Language Models so that [EOS] Can Focus on Semantic Termination",
+      "reason": "arXiv一次要旨。masked diffusion LMのEOSにpaddingと終了の二重役割を負わせる問題を、VOID padding tokenの導入で分離し、推論時のearly stopと応答canvasの適応拡張を可能にする。Dream-7B-Instructで4タスク平均17.84ポイント改善とdecoding NFE平均55.7%削減を報告し、dLLMの直接的な復号効率化に該当する。",
+      "source_url": "https://arxiv.org/abs/2606.17999",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 413,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.02226",
+      "identity_tokens": [
+        "arXiv:2603.02226"
+      ],
+      "title": "Efficient Sparse Selective-Update RNNs for Long-Range Sequence Modeling",
+      "reason": "arXiv一次要旨。音声・動画など低情報量区間が長い系列に対し、neuronごとのbinary switchで必要な時だけrecurrent stateを更新するsuRNNを提案。WikiText等で性能と状態保持効率を評価するが、生成LLMの推論サービングやtoken生成時レイテンシの直接比較は要旨で確認できないため、将来の代替系列アーキテクチャとしてborderline。",
+      "source_url": "https://arxiv.org/abs/2603.02226",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 420,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.02178",
+      "identity_tokens": [
+        "arXiv:2508.02178"
+      ],
+      "title": "Reconsidering Overthinking: Penalizing Internal and External Redundancy in CoT Reasoning",
+      "reason": "arXiv一次要旨。CoTの最初の正答前の内部冗長性と正答後の外部冗長性を分離し、semantic similarityと終了後の冗長度に別々のRL penaltyを課す。1.5B/7Bで推論長平均41.3%/40.1%削減し精度を概ね保持すると報告する。生成時のtoken予算・overthinking削減を目的とする。",
+      "source_url": "https://arxiv.org/abs/2508.02178",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 427,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07822",
+      "identity_tokens": [
+        "arXiv:2610.07822"
+      ],
+      "title": "Nucleus Speculative Decoding: Plausibility-Aware Verification Beyond Exact Distribution",
+      "reason": "arXiv一次要旨。通常の投機的復号の受理規則に加え、target nucleus内のdraft tokenを許容するNSDを提案。target分布とのtotal variation誤差が追加受理確率と一致することを解析し、6 targetモデルで通常SD比最大3.15倍の高速化を報告する。ただし厳密分布保存ではなく忠実度と受理率を交換する方式であり、lossless speculative decodingとは明確に区別する。",
+      "source_url": "https://arxiv.org/abs/2610.07822",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 437,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e873459c7a7f4f92-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.14396",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.14396",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2404.14396",
+      "arXiv:2404.14396"
+    ],
+    "reason": "マルチモーダル基盤モデルの画像理解・画像生成能力と実世界適用性の向上が主目的で、LLM推論runtimeの速度・メモリ・サービング最適化を扱わない。",
+    "first_checked_at": "2026-10-03T13:23:14+00:00",
+    "last_checked_at": "2026-10-03T13:23:14+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "SEED-X: Multimodal Models with Unified Multi-granularity Comprehension and Generation"
+  },
+  "processed_at": "2026-10-03T13:23:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e873459c7a7f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

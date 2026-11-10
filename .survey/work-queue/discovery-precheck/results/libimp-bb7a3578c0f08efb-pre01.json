@@ -1,0 +1,236 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bb7a3578c0f08efb-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bb7a3578c0f0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2203.14680",
+    "arXiv:2212.14052"
+  ],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7efef1a2a5b5d969ed30fcb48731e76607076393",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T20:51:26.224228+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2203.14680",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2212.14052",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Hungry Hungry Hippos: Towards Language Modeling with State Space Models",
+      "source_url": "https://arxiv.org/abs/2212.14052",
+      "year": 2022,
+      "published": "2022-12-28",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 719,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State space models (SSMs) have demonstrated state-of-the-art sequence modeling performance in some modalities, but underperform attention in language modeling. Moreover, despite scaling nearly linearly in sequence length instead of quadratically, SSMs are still slower than Transformers due to poor hardware utilization. In this paper, we make progress on understanding the expressivity gap between SSMs and attention in language modeling, and on reducing the hardware barrier between SSMs and attention. First, we use synthetic language modeling tasks to understand the gap between SSMs and attention. We find that existing SSMs struggle with two capabilities: recalling earlier tokens in the sequence and comparing tokens across the sequence. To understand the impact on language modeling, we propose a new SSM layer, H3, that is explicitly designed for these abilities. H3 matches attention on the synthetic languages and comes within 0.4 PPL of Transformers on OpenWebText. Furthermore, a hybrid 125M-parameter H3-attention model that retains two attention layers surprisingly outperforms Transformers on OpenWebText by 1.0 PPL. Next, to improve the efficiency of training SSMs on modern hardware, we propose FlashConv. FlashConv uses a fused block FFT algorithm to improve efficiency on sequences up to 8K, and introduces a novel state passing algorithm that exploits the recurrent properties of SSMs to scale to longer sequences. FlashConv yields 2$\\times$ speedup on the long-range arena benchmark and allows hybrid language models to generate text 2.4$\\times$ faster than Transformers. Using FlashConv, we scale hybrid H3-attention language models up to 2.7B parameters on the Pile and find promising initial results, achieving lower perplexity than Transformers and outperforming Transformers in zero- and few-shot learning on a majority of tasks in the SuperGLUE benchmark.",
+      "identifiers": [
+        "SemanticScholar:5a77b508302771fc083bf24e0bcda8553c9b5421"
+      ],
+      "semantic_scholar_id": "5a77b508302771fc083bf24e0bcda8553c9b5421",
+      "canonical_id": "arXiv:2212.14052",
+      "arxiv_id": "2212.14052",
+      "doi": "10.48550/arXiv.2212.14052",
+      "authors": [
+        "Tri Dao",
+        "Daniel Y. Fu",
+        "Khaled Kamal Saab",
+        "A. Thomas",
+        "A. Rudra",
+        "Christopher Ré"
+      ],
+      "priority": 729,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 719,
+        "citation_count": 719,
+        "total": 729,
+        "is_fresh": false,
+        "freshness_age_days": 1376,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space",
+      "source_url": "https://arxiv.org/abs/2203.14680",
+      "year": 2022,
+      "published": "2022-03-28",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 659,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based language models (LMs) are at the core of modern NLP, but their internal prediction construction process is opaque and largely not understood. In this work, we make a substantial step towards unveiling this underlying prediction process, by reverse-engineering the operation of the feed-forward network (FFN) layers, one of the building blocks of transformer models. We view the token representation as a changing distribution over the vocabulary, and the output from each FFN layer as an additive update to that distribution. Then, we analyze the FFN updates in the vocabulary space, showing that each update can be decomposed to sub-updates corresponding to single FFN parameter vectors, each promoting concepts that are often human-interpretable. We then leverage these findings for controlling LM predictions, where we reduce the toxicity of GPT2 by almost 50%, and for improving computation efficiency with a simple early exit rule, saving 20% of computation on average.",
+      "identifiers": [
+        "SemanticScholar:cf36236015c9f93f15bfafbf282f69e08bdc9c16"
+      ],
+      "semantic_scholar_id": "cf36236015c9f93f15bfafbf282f69e08bdc9c16",
+      "canonical_id": "arXiv:2203.14680",
+      "arxiv_id": "2203.14680",
+      "doi": "10.48550/arXiv.2203.14680",
+      "authors": [
+        "Mor Geva",
+        "Avi Caciularu",
+        "Kevin Wang",
+        "Yoav Goldberg"
+      ],
+      "priority": 669,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 659,
+        "citation_count": 659,
+        "total": 669,
+        "is_fresh": false,
+        "freshness_age_days": 1651,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2212.14052",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2212.14052",
+        "id:SemanticScholar:5a77b508302771fc083bf24e0bcda8553c9b5421",
+        "id:arXiv:2212.14052",
+        "title:hungry hungry hippos towards language modeling with state space models",
+        "url:https://arxiv.org/abs/2212.14052"
+      ],
+      "record": {
+        "title": "Hungry Hungry Hippos: Towards Language Modeling with State Space Models",
+        "source_url": "https://arxiv.org/abs/2212.14052",
+        "year": 2022,
+        "published": "2022-12-28",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 719,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State space models (SSMs) have demonstrated state-of-the-art sequence modeling performance in some modalities, but underperform attention in language modeling. Moreover, despite scaling nearly linearly in sequence length instead of quadratically, SSMs are still slower than Transformers due to poor hardware utilization. In this paper, we make progress on understanding the expressivity gap between SSMs and attention in language modeling, and on reducing the hardware barrier between SSMs and attention. First, we use synthetic language modeling tasks to understand the gap between SSMs and attention. We find that existing SSMs struggle with two capabilities: recalling earlier tokens in the sequence and comparing tokens across the sequence. To understand the impact on language modeling, we propose a new SSM layer, H3, that is explicitly designed for these abilities. H3 matches attention on the synthetic languages and comes within 0.4 PPL of Transformers on OpenWebText. Furthermore, a hybrid 125M-parameter H3-attention model that retains two attention layers surprisingly outperforms Transformers on OpenWebText by 1.0 PPL. Next, to improve the efficiency of training SSMs on modern hardware, we propose FlashConv. FlashConv uses a fused block FFT algorithm to improve efficiency on sequences up to 8K, and introduces a novel state passing algorithm that exploits the recurrent properties of SSMs to scale to longer sequences. FlashConv yields 2$\\times$ speedup on the long-range arena benchmark and allows hybrid language models to generate text 2.4$\\times$ faster than Transformers. Using FlashConv, we scale hybrid H3-attention language models up to 2.7B parameters on the Pile and find promising initial results, achieving lower perplexity than Transformers and outperforming Transformers in zero- and few-shot learning on a majority of tasks in the SuperGLUE benchmark.",
+        "identifiers": [
+          "SemanticScholar:5a77b508302771fc083bf24e0bcda8553c9b5421"
+        ],
+        "semantic_scholar_id": "5a77b508302771fc083bf24e0bcda8553c9b5421",
+        "canonical_id": "arXiv:2212.14052",
+        "arxiv_id": "2212.14052",
+        "doi": "10.48550/arXiv.2212.14052",
+        "authors": [
+          "Tri Dao",
+          "Daniel Y. Fu",
+          "Khaled Kamal Saab",
+          "A. Thomas",
+          "A. Rudra",
+          "Christopher Ré"
+        ],
+        "priority": 729,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 719,
+          "citation_count": 719,
+          "total": 729,
+          "is_fresh": false,
+          "freshness_age_days": 1376,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2203.14680",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2203.14680",
+        "id:SemanticScholar:cf36236015c9f93f15bfafbf282f69e08bdc9c16",
+        "id:arXiv:2203.14680",
+        "title:transformer feedforward layers build predictions by promoting concepts in the vocabulary space",
+        "url:https://arxiv.org/abs/2203.14680"
+      ],
+      "record": {
+        "title": "Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space",
+        "source_url": "https://arxiv.org/abs/2203.14680",
+        "year": 2022,
+        "published": "2022-03-28",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 659,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based language models (LMs) are at the core of modern NLP, but their internal prediction construction process is opaque and largely not understood. In this work, we make a substantial step towards unveiling this underlying prediction process, by reverse-engineering the operation of the feed-forward network (FFN) layers, one of the building blocks of transformer models. We view the token representation as a changing distribution over the vocabulary, and the output from each FFN layer as an additive update to that distribution. Then, we analyze the FFN updates in the vocabulary space, showing that each update can be decomposed to sub-updates corresponding to single FFN parameter vectors, each promoting concepts that are often human-interpretable. We then leverage these findings for controlling LM predictions, where we reduce the toxicity of GPT2 by almost 50%, and for improving computation efficiency with a simple early exit rule, saving 20% of computation on average.",
+        "identifiers": [
+          "SemanticScholar:cf36236015c9f93f15bfafbf282f69e08bdc9c16"
+        ],
+        "semantic_scholar_id": "cf36236015c9f93f15bfafbf282f69e08bdc9c16",
+        "canonical_id": "arXiv:2203.14680",
+        "arxiv_id": "2203.14680",
+        "doi": "10.48550/arXiv.2203.14680",
+        "authors": [
+          "Mor Geva",
+          "Avi Caciularu",
+          "Kevin Wang",
+          "Yoav Goldberg"
+        ],
+        "priority": 669,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 659,
+          "citation_count": 659,
+          "total": 669,
+          "is_fresh": false,
+          "freshness_age_days": 1651,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1a04d2f18fbf8b56e3e9400c4f225921eaf07576ba2b8a76830d1113b6513c25",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-983a695109d78bf4-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.10480",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.10480",
+    "identity_tokens": [
+      "arXiv:2511.10480"
+    ],
+    "reason": "Adjacent systems-design evidence may inform serving optimization, but the work mainly supplies a workload simulator and does not propose or validate a deployable inference-efficiency technique.",
+    "first_checked_at": "2026-10-05T15:33:59+00:00",
+    "last_checked_at": "2026-10-05T15:33:59+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+      "papers/inference/15-inference-simulation-emulation/2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Scalable Synthesis of Distributed Llm Workloads Through Symbolic Tensor Graphs"
+  },
+  "processed_at": "2026-10-05T15:33:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-983a695109d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

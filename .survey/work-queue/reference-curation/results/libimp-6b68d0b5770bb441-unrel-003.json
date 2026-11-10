@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6b68d0b5770bb441-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.02616",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.02616",
+    "identity_tokens": [
+      "arXiv:2607.02616"
+    ],
+    "reason": "一次abstractはquantum circuit mapping/MLIRを扱い、LLM推論効率とは無関係。",
+    "first_checked_at": "2026-10-05T10:46:35+00:00",
+    "last_checked_at": "2026-10-05T10:46:35+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "MLIR for Quantum Beyond Gate Cancellation: Quantum Circuit Mapping Reimagined"
+  },
+  "processed_at": "2026-10-05T10:46:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6b68d0b5770b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

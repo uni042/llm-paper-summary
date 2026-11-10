@@ -1,0 +1,174 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r02",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:0227a06cf53bb54a11393ddd8d52dce1ee1cdce6",
+      "identity_tokens": [
+        "SemanticScholar:0227a06cf53bb54a11393ddd8d52dce1ee1cdce6",
+        "arXiv:2508.02520"
+      ],
+      "title": "Huawei Cloud Model-as-a-Service on the CloudMatrix384 SuperPod",
+      "reason": "384個のAscend 910Cを接続したCloudMatrix384上で、MoEモデルを含む複数LLMのMaaSを提供するxDeepServeを記述。Transformerlessの演算分離、XCCLの通信抽象化、分散prefill/decodeとMoE/attention分離、非集中型DPグループによる実装を報告。ピーク条件で1チップ当たり2400 token/s・TPOT 50msとし、実運用LLMサービングシステムの直接的な研究。worklistのxDeepServe題名とarXiv正式題名は同一システム。",
+      "source_url": "https://arxiv.org/abs/2508.02520",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:34:35+09:00",
+      "last_checked_at": "2026-10-30T19:34:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 16,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434",
+      "identity_tokens": [
+        "SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434",
+        "arXiv:2607.21692"
+      ],
+      "title": "Learning What Matters: Causal Evidence Sets for Global Context Pruning",
+      "reason": "長文脈の圧縮で教師モデルの注意スコアを重要度代理とする従来法に対し、文脈ブロックを介入的にマスクして答えが変わる因果的証拠集合を学習信号に使う。複数ホップ検索で注意蒸留は実行間36〜98%と不安定だが因果的証拠学習は99%以上と報告。推論前の文脈剪定とKV保持負荷を減らすための選択器改善。",
+      "source_url": "https://arxiv.org/abs/2607.21692",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:34:35+09:00",
+      "last_checked_at": "2026-10-30T19:34:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 17,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.07819",
+      "identity_tokens": [
+        "arXiv:2606.07819"
+      ],
+      "title": "Joint Structural Pruning and Mixed-Precision Quantization for LLM Compression",
+      "reason": "層別の量子化誤差最小化ではネットワーク全体への誤差伝播を捉えきれない問題に対し、構造化枝刈りと混合精度のビット割当を統一探索空間で同時最適化する。1〜3bitの極低精度でWikiText perplexityを既存W/A量子化ベースラインより最大21%低下と報告。推論メモリ削減・モデル圧縮の直接的な手法研究。",
+      "source_url": "https://arxiv.org/abs/2606.07819",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:34:35+09:00",
+      "last_checked_at": "2026-10-30T19:34:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 19,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.02043",
+      "identity_tokens": [
+        "arXiv:2511.02043"
+      ],
+      "title": "Flashlight: PyTorch Compiler Extensions to Accelerate Attention Variants",
+      "reason": "FlashAttention型の手書き・テンプレート依存カーネルではデータ依存の新しい注意演算に対応しづらい問題に対し、PyTorchコンパイル過程で融合・タイル化を自動生成するFlashlightを提案。FlexAttentionで表現できる形式に加え動的注意も扱い、競合する実行性能を示す。LLM推論の注意カーネル生成・ランタイム最適化に直接寄与。",
+      "source_url": "https://arxiv.org/abs/2511.02043",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:34:35+09:00",
+      "last_checked_at": "2026-10-30T19:34:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 20,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.16395",
+      "identity_tokens": [
+        "arXiv:2604.16395"
+      ],
+      "title": "Stream2LLM: Overlap Context Streaming and Prefill for Reduced Time-to-First-Token (TTFT)",
+      "reason": "検索文脈が断続的に到着するLLMサービスで、全取得待ちによるTTFT悪化と部分文脈での品質低下を緩和する。append/updateの二つの到着パターンに対応したプリエンプション・スケジューラと、変更時の共通prefix再利用を導入。実際のWeb検索・近傍探索由来ワークロードでTTFT最大11倍改善を報告する直接的な推論サービング研究。",
+      "source_url": "https://arxiv.org/abs/2604.16395",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:34:35+09:00",
+      "last_checked_at": "2026-10-30T19:34:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 21,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:dbf0cf38ddff26e2c78d410a3ba51431b8c51f0a",
+      "identity_tokens": [
+        "SemanticScholar:dbf0cf38ddff26e2c78d410a3ba51431b8c51f0a",
+        "arXiv:2609.21137"
+      ],
+      "title": "A Multi-Engine Dataflow for MoE Decoding on AWS Tranium",
+      "reason": "スクラッチパッド型アクセラレータでMoE専門家の重み移送がdecodeを律速する問題に対し、ベクトル量子化成分と共有基底の低ランク成分へ分解するCARDANを提案。共通計算と専門家固有計算を分離し、DMAと複数演算エンジンを重ねる。Trainium3でbatch1のdecodeが1.15〜1.31倍、batch16で最大1.7倍高速化したと報告。worklistの汎用アクセラレータ題名からarXiv最新版でAWS Traniumに変更。",
+      "source_url": "https://arxiv.org/abs/2609.21137",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:34:35+09:00",
+      "last_checked_at": "2026-10-30T19:34:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 26,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:63fef87d8b4d717736cfd4be45e57189e18f6472",
+      "identity_tokens": [
+        "SemanticScholar:63fef87d8b4d717736cfd4be45e57189e18f6472",
+        "arXiv:2411.02820"
+      ],
+      "title": "DroidSpeak: KV Cache Sharing for Cross-LLM Communication and Multi-LLM Serving",
+      "reason": "同一アーキテクチャを持つ異なるLLM間でprefix KVを再利用する際、品質を損ねる層だけ再計算し、残りのKVを共有するDroidSpeakを提案。再計算と転送を層単位でパイプライン化し、モデル間共有なしに比べ最大4倍のスループットと約3.1倍のprefill高速化を報告。複数LLM間のKV再利用と分散推論が主題。",
+      "source_url": "https://arxiv.org/abs/2411.02820",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:34:35+09:00",
+      "last_checked_at": "2026-10-30T19:34:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 27,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.23314",
+      "identity_tokens": [
+        "arXiv:2609.23314"
+      ],
+      "title": "ValueDiff: Value-Geometric KV Cache Eviction for Sink-Suppressed LLMs",
+      "reason": "QK正規化・ゲート付き注意などで従来のattention sinkが弱いLLMに対し、値ベクトルのキャッシュ平均との差を重要度とするKV追い出し方式ValueDiffを提案。RULERの2k保持予算で密な基準性能の88〜99%を保持し、LongBenchの4k予算では既存強力ベースライン83%に対して92%を報告。長文脈推論のKV選択に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2609.23314",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:34:35+09:00",
+      "last_checked_at": "2026-10-30T19:34:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 28,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.22911",
+      "identity_tokens": [
+        "arXiv:2603.22911"
+      ],
+      "title": "ForestPrune: High-ratio Visual Token Compression for Video Multimodal Large Language Models via Spatial-Temporal Forest Modeling",
+      "reason": "動画MLLMのフレーム間意味・空間・時間的な連続性からトークンの木構造を構成し、木と節の重要度に基づいて学習不要で高率の視覚トークン剪定を行う。LLaVA-OneVisionでは視覚トークン90%削減時に平均精度95.8%を保持したと報告。動画推論のprefill負荷・メモリ量削減に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2603.22911",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:34:35+09:00",
+      "last_checked_at": "2026-10-30T19:34:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 29,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.07362",
+      "identity_tokens": [
+        "arXiv:2606.07362"
+      ],
+      "title": "Breaking the Ice: Analyzing Cold Start Latency in vLLM",
+      "reason": "vLLM推論エンジンのコールドスタート遅延を六つの工程に分解し、CPU律速の寄与とモデル・システム設定に応じたスケーリングを測定。起動時間の解析的予測モデルを構築し、推論サービスの容量計画・オートスケーリングの初期化費用推定に資する。token/s改善そのものではないがサービング可用性・起動遅延の直接的な性能解析。",
+      "source_url": "https://arxiv.org/abs/2606.07362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:34:35+09:00",
+      "last_checked_at": "2026-10-30T19:34:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 32,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}

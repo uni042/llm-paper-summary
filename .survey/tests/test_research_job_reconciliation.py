@@ -1,0 +1,347 @@
+from __future__ import annotations
+
+import json
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[2]
+SCRIPTS = ROOT / ".survey/scripts"
+sys.path.insert(0, str(SCRIPTS))
+
+import build_worker_worklist  # noqa: E402
+import refresh_queue_snapshot  # noqa: E402
+import research_job_reconciliation  # noqa: E402
+import reference_relevance_ledger  # noqa: E402
+
+
+def _write_json(path: Path, payload: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+
+
+def _write_paper(repo: Path, canonical_id: str = "arXiv:2609.99991") -> str:
+    path = (
+        repo
+        / "papers/inference/99-other-inference-systems"
+        / "2026-2609.99991-represented-paper.md"
+    )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        """---
+canonical_id: "arXiv:2609.99991"
+arxiv_id: "2609.99991"
+title: "Represented Paper"
+lineage: "99-other-inference-systems"
+source: "https://arxiv.org/abs/2609.99991"
+---
+
+# Represented Paper
+
+本文。
+""",
+        encoding="utf-8",
+    )
+    return path.relative_to(repo).as_posix()
+
+
+class ResearchJobReconciliationTests(unittest.TestCase):
+    def test_ready_research_job_is_superseded_without_fake_completion(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            represented_path = _write_paper(repo)
+            job_path = repo / ".survey/work-queue/jobs/job-research-stale.json"
+            _write_json(
+                job_path,
+                {
+                    "job_id": "job-research-stale",
+                    "type": "research",
+                    "status": "ready",
+                    "canonical_id": "arXiv:2609.99991",
+                    "paper_path": represented_path,
+                    "title": "Represented Paper",
+                },
+            )
+            audit_path = repo / ".survey/work-queue/jobs/job-audit-still-needed.json"
+            _write_json(
+                audit_path,
+                {
+                    "job_id": "job-audit-still-needed",
+                    "type": "audit",
+                    "status": "ready",
+                    "canonical_id": "arXiv:2609.99991",
+                    "paper_path": represented_path,
+                },
+            )
+
+            result = research_job_reconciliation.reconcile(
+                repo,
+                timestamp="2026-09-26T00:00:00+00:00",
+            )
+
+            self.assertEqual(result["changed"], 1)
+            research = json.loads(job_path.read_text(encoding="utf-8"))
+            self.assertEqual(research["status"], "superseded")
+            self.assertEqual(
+                research["superseded_reason"], "paper_already_represented"
+            )
+            self.assertEqual(research["represented_paper_path"], represented_path)
+            self.assertNotIn("completed_at", research)
+            self.assertNotIn("result", research)
+
+            audit = json.loads(audit_path.read_text(encoding="utf-8"))
+            self.assertEqual(audit["status"], "ready")
+
+    def test_snapshot_and_worklist_defensively_hide_stale_ready_job(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            represented_path = _write_paper(repo)
+            _write_json(
+                repo / ".survey/work-queue/jobs/job-research-stale.json",
+                {
+                    "job_id": "job-research-stale",
+                    "type": "research",
+                    "status": "ready",
+                    "priority": 99,
+                    "canonical_id": "arXiv:2609.99991",
+                    "paper_path": represented_path,
+                    "title": "Represented Paper",
+                    "source_url": "https://arxiv.org/abs/2609.99991",
+                },
+            )
+            _write_json(
+                repo / ".survey/work-queue/jobs/job-research-fresh.json",
+                {
+                    "job_id": "job-research-fresh",
+                    "type": "research",
+                    "status": "ready",
+                    "priority": 98,
+                    "canonical_id": "arXiv:2609.99992",
+                    "paper_path": (
+                        "papers/inference/99-other-inference-systems/"
+                        "2026-2609.99992-fresh.md"
+                    ),
+                    "title": "Fresh Paper",
+                    "source_url": "https://arxiv.org/abs/2609.99992",
+                },
+            )
+
+            snapshot = refresh_queue_snapshot.build_snapshot(repo)
+            self.assertEqual(snapshot["counts"]["research"]["ready"], 1)
+            self.assertEqual(snapshot["counts"]["research"]["superseded"], 1)
+            self.assertEqual(
+                [row["job_id"] for row in snapshot["next_jobs"]],
+                ["job-research-fresh"],
+            )
+
+            payloads = build_worker_worklist.build(repo, limit=100)
+            rows = (
+                payloads["00"]["research_audit"]["rows"]
+                + payloads["30"]["research_audit"]["rows"]
+            )
+            self.assertEqual(
+                [row["job_id"] for row in rows],
+                ["job-research-fresh"],
+            )
+            self.assertEqual(payloads["00"]["research_audit"]["ready_total"], 1)
+            self.assertEqual(payloads["30"]["research_audit"]["ready_total"], 1)
+
+    def test_unique_same_year_title_alias_is_superseded(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            represented_path = _write_paper(repo)
+            paper_path = repo / represented_path
+            paper_text = paper_path.read_text(encoding="utf-8")
+            paper_text = paper_text.replace(
+                'title: "Represented Paper"\n',
+                'title: "Represented Paper"\npublished: "2026-09-01"\n',
+            )
+            paper_path.write_text(paper_text, encoding="utf-8")
+
+            job_path = repo / ".survey/work-queue/jobs/job-research-publisher-alias.json"
+            _write_json(
+                job_path,
+                {
+                    "job_id": "job-research-publisher-alias",
+                    "type": "research",
+                    "status": "ready",
+                    "canonical_id": "DOI:10.5555/represented-paper",
+                    "title": "Represented Paper",
+                    "year": 2026,
+                },
+            )
+
+            result = research_job_reconciliation.reconcile(
+                repo,
+                timestamp="2026-10-31T00:00:00+00:00",
+            )
+
+            self.assertEqual(result["changed"], 1)
+            job = json.loads(job_path.read_text(encoding="utf-8"))
+            self.assertEqual(job["status"], "superseded")
+            self.assertEqual(job["represented_paper_path"], represented_path)
+
+    def test_same_title_different_year_is_not_superseded(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            represented_path = _write_paper(repo)
+            paper_path = repo / represented_path
+            paper_text = paper_path.read_text(encoding="utf-8")
+            paper_text = paper_text.replace(
+                'title: "Represented Paper"\n',
+                'title: "Represented Paper"\npublished: "2026-09-01"\n',
+            )
+            paper_path.write_text(paper_text, encoding="utf-8")
+
+            job_path = repo / ".survey/work-queue/jobs/job-research-other-year.json"
+            _write_json(
+                job_path,
+                {
+                    "job_id": "job-research-other-year",
+                    "type": "research",
+                    "status": "ready",
+                    "canonical_id": "DOI:10.5555/other-paper",
+                    "title": "Represented Paper",
+                    "year": 2025,
+                },
+            )
+
+            result = research_job_reconciliation.reconcile(repo)
+
+            self.assertEqual(result["changed"], 0)
+            job = json.loads(job_path.read_text(encoding="utf-8"))
+            self.assertEqual(job["status"], "ready")
+
+    def test_reconcile_is_idempotent(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            represented_path = _write_paper(repo)
+            _write_json(
+                repo / ".survey/work-queue/jobs/job-research-stale.json",
+                {
+                    "job_id": "job-research-stale",
+                    "type": "research",
+                    "status": "ready",
+                    "canonical_id": "arXiv:2609.99991",
+                    "paper_path": represented_path,
+                },
+            )
+
+            first = research_job_reconciliation.reconcile(repo)
+            second = research_job_reconciliation.reconcile(repo)
+
+            self.assertEqual(first["changed"], 1)
+            self.assertEqual(second["changed"], 0)
+
+
+    def test_legacy_paper_without_frontmatter_still_reconciles(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            legacy = (
+                repo
+                / "papers/inference/02-adaptive-expert-computation-compression"
+                / "2026-2607.08780-sticky-routing-memory-efficient-inference.md"
+            )
+            legacy.parent.mkdir(parents=True, exist_ok=True)
+            legacy.write_text(
+                """# Sticky Routing: Training MoE Models for Memory-Efficient Inference
+
+identity: arXiv:2607.08780
+
+## 一次資料
+- https://arxiv.org/abs/2607.08780
+""",
+                encoding="utf-8",
+            )
+            job_path = repo / ".survey/work-queue/jobs/job-sticky.json"
+            _write_json(
+                job_path,
+                {
+                    "job_id": "job-sticky",
+                    "type": "research",
+                    "status": "ready",
+                    "canonical_id": "arXiv:2607.08780",
+                    "paper_path": legacy.relative_to(repo).as_posix(),
+                },
+            )
+
+            result = research_job_reconciliation.reconcile(repo)
+
+            self.assertEqual(result["changed"], 1)
+            job = json.loads(job_path.read_text(encoding="utf-8"))
+            self.assertEqual(job["status"], "superseded")
+            self.assertEqual(
+                job["represented_paper_path"],
+                legacy.relative_to(repo).as_posix(),
+            )
+
+
+
+    def test_relevance_ledgers_hide_ready_research_but_preserve_audits(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            jobs = repo / ".survey/work-queue/jobs"
+            for suffix, kind, canonical_id in (
+                ("borderline", "research", "arXiv:2609.99901"),
+                ("unrelated", "research", "arXiv:2609.99902"),
+                ("kept", "research", "arXiv:2609.99903"),
+                ("audit", "audit", "arXiv:2609.99901"),
+            ):
+                _write_json(
+                    jobs / f"job-{suffix}.json",
+                    {
+                        "job_id": f"job-{suffix}",
+                        "status": "ready",
+                        "type": kind,
+                        "canonical_id": canonical_id,
+                        "title": f"Test {suffix}",
+                        "source_url": (
+                            "https://arxiv.org/abs/" + canonical_id.split(":")[1]
+                        ),
+                        "priority": 10,
+                    },
+                )
+            ledger_dir = repo / ".survey/work-queue/reference-curation"
+            reference_relevance_ledger.mark_borderline(
+                ledger_dir / "borderline-papers.json",
+                canonical_id="DOI:10.48550/arxiv.2609.99901",
+                identity_tokens=["arXiv:2609.99901"],
+                reason="LLM runtime relevance is indirect",
+            )
+            reference_relevance_ledger.mark_unrelated(
+                ledger_dir / "unrelated-papers.json",
+                canonical_id="arXiv:2609.99902",
+                reason="not related to LLM inference systems",
+            )
+
+            def listed():
+                payloads = build_worker_worklist.build(repo, limit=100)
+                return [
+                    row["job_id"]
+                    for worker in ("00", "30", "45")
+                    for row in payloads[worker]["research_audit"]["rows"]
+                ], payloads
+
+            selected, payloads = listed()
+            self.assertCountEqual(selected, ["job-kept", "job-audit"])
+            self.assertEqual(payloads["00"]["research_audit"]["ready_total"], 2)
+            self.assertEqual(
+                json.loads((jobs / "job-borderline.json").read_text())["status"],
+                "ready",
+            )
+
+            # Borderline is reversible; clearing the ledger restores eligibility.
+            reference_relevance_ledger.clear_borderline(
+                ledger_dir / "borderline-papers.json",
+                canonical_id="arXiv:2609.99901",
+            )
+            selected, _ = listed()
+            self.assertCountEqual(
+                selected, ["job-kept", "job-audit", "job-borderline"]
+            )
+
+
+if __name__ == "__main__":
+    unittest.main()

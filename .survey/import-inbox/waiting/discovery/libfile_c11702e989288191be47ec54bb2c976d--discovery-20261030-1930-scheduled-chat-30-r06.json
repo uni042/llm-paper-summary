@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r06",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.10059",
+      "identity_tokens": [
+        "arXiv:2507.10059"
+      ],
+      "title": "GeLaCo: An Evolutionary Approach to Layer Compression",
+      "reason": "構造化枝刈りの局所ヒューリスティクスが見逃す圧縮構成を、パラメータ化した層統合と集団ベースの進化探索で発見するGeLaCo。残差更新の類似度とLM KL距離を適応度とし、品質・圧縮率のPareto候補を探索する。LLMの推論時モデル容量削減へ直結する圧縮方式で、推論速度の定量値はResearchで追加確認が必要。",
+      "source_url": "https://arxiv.org/abs/2507.10059",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:38:25+09:00",
+      "last_checked_at": "2026-10-30T19:38:25+09:00",
+      "linked_from": [],
+      "worklist_rank": 69,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.17302",
+      "identity_tokens": [
+        "arXiv:2603.17302"
+      ],
+      "title": "IEMAS: An Incentive-Efficiency Routing Framework for Open Agentic Web Ecosystems",
+      "reason": "自律エージェントが複数のLLMサービスを選択する環境で、品質・費用・KV再利用を考慮したmany-to-many要求割当を行うIEMAS。QoS予測とVCG型マッチングを組み合わせ、vLLM上のシミュレーションで平均サービス費用35%削減・end-to-end遅延最大2.9倍改善を報告。エージェント経済の側面を含むが、LLM推論要求のルーティング・KV affinityが直接の対象。",
+      "source_url": "https://arxiv.org/abs/2603.17302",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:38:25+09:00",
+      "last_checked_at": "2026-10-30T19:38:25+09:00",
+      "linked_from": [],
+      "worklist_rank": 70,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.10553",
+      "identity_tokens": [
+        "arXiv:2410.10553"
+      ],
+      "title": "SLaNC: Static LayerNorm Calibration",
+      "reason": "低精度アクセラレータでLayerNorm分散計算の広いダイナミックレンジが障害になる問題に対し、直前線形層の静的重みだけからLayerNorm入力スケールを事前計算するSLaNCを提案。推論時の追加演算やレイテンシを増やさず数値範囲を調整する。LLM低精度推論カーネル・ハードウェア実装の直接的な基礎技術。",
+      "source_url": "https://arxiv.org/abs/2410.10553",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:38:25+09:00",
+      "last_checked_at": "2026-10-30T19:38:25+09:00",
+      "linked_from": [],
+      "worklist_rank": 71,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.27875",
+      "identity_tokens": [
+        "arXiv:2608.27875"
+      ],
+      "title": "HyQuant: Hybrid-Precision Quantization for LLM Attention",
+      "reason": "LLM注意の量子化で重要な縦線トークンと近傍ウィンドウを高精度で保持し、それ以外の注意状態・KVを低ビット化するHyQuant。prefillでは混合精度注意演算子を使い、decodeではKV逆量子化と注意演算を融合する。精度維持とキャッシュ容量・帯域削減を両立する推論時量子化方式。",
+      "source_url": "https://arxiv.org/abs/2608.27875",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:38:25+09:00",
+      "last_checked_at": "2026-10-30T19:38:25+09:00",
+      "linked_from": [],
+      "worklist_rank": 72,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.29",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.29",
+        "arXiv:2406.17415"
+      ],
+      "title": "Variable Layerwise Quantization: A Simple and Effective Approach to Quantize LLMs",
+      "reason": "層重要度に応じて異なるビット幅を割り当てる量子化メタ手法。入力・出力埋め込みの差と突出重みの個数という二つの簡便な重要度尺度を使い、重要層は高精度・低重要層は低精度とする。ACL公式要旨では、順序付けなしなら5〜10%の層低ビット化で品質が崩れる条件でも、重要度順なら25〜50%まで品質を保つと報告。arXiv先行版の旧題名は同一著者・同一研究としてidentityに併記。",
+      "source_url": "https://aclanthology.org/2025.findings-acl.29/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:38:25+09:00",
+      "last_checked_at": "2026-10-30T19:38:25+09:00",
+      "linked_from": [],
+      "worklist_rank": 73,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34866",
+      "identity_tokens": [
+        "arXiv:2609.34866"
+      ],
+      "title": "From Attention Sensitivity to Layer Role: Revisiting Mixed-Precision Quantization of Transformers",
+      "reason": "Q/K/V射影の誤差がsoftmaxを通じて相互作用することを踏まえ、注意出力を基準に共同量子化・層重要度推定を行うJABを提案。注意だけの3bitでは改善する一方、MLPを含む全モデルでは層の役割に応じた簡便なオフセット規則が上回るという負の結果も報告。推論用混合精度配分の実証研究。",
+      "source_url": "https://arxiv.org/abs/2609.34866",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:38:25+09:00",
+      "last_checked_at": "2026-10-30T19:38:25+09:00",
+      "linked_from": [],
+      "worklist_rank": 74,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.03190",
+      "identity_tokens": [
+        "arXiv:2605.03190"
+      ],
+      "title": "VDCores: Resource Decoupled Programming and Execution for Asynchronous GPU",
+      "reason": "非同期GPUユニットを単一カーネルとして一括制御するとメモリ・計算の重なりが不足する問題に対し、資源分離された仮想コアと依存関係付きmicro-opによるVDCoresを提案。GH200・H100・RTX 6000 Pro上の4種LLM推論でdecode処理量平均24%、動的入力条件最大77%改善と報告。GPUランタイムとLLMカーネル実行の直接的な研究。",
+      "source_url": "https://arxiv.org/abs/2605.03190",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:38:25+09:00",
+      "last_checked_at": "2026-10-30T19:38:25+09:00",
+      "linked_from": [],
+      "worklist_rank": 75,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06532",
+      "identity_tokens": [
+        "arXiv:2606.06532"
+      ],
+      "title": "GOPAgen: Codec-Aware Agentic Long-Video Understanding with Structured Memory",
+      "reason": "動画のGOPと動きベクトルを使ってエージェントの検索対象時間区間を絞り、テキスト・動き証拠を階層メモリとして保存するGOPAgen。長時間動画QAの精度改善と不要な処理の回避を狙うが、要旨ではLLM推論エンジンのtoken/s・KV容量・サービングレイテンシの定量効果は不明で、主題は動画理解エージェントの検索品質であるため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2606.06532",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:38:25+09:00",
+      "last_checked_at": "2026-10-30T19:38:25+09:00",
+      "linked_from": [],
+      "worklist_rank": 76,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.09558",
+      "identity_tokens": [
+        "arXiv:2604.09558"
+      ],
+      "title": "VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination",
+      "reason": "LLMを含むDNNのデータ移動演算を物理転送でなく仮想テンソルの索引写像で表現し、不要なメモリ往復を削減するVTCコンパイラを提案。NVIDIA GPU上で既存MLコンパイラ比平均1.28倍の高速化と平均17.5%の推論メモリ削減を報告。汎用DNNコンパイラだがLLM推論の演算融合・データ移動最適化に直接適用可能。",
+      "source_url": "https://arxiv.org/abs/2604.09558",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:38:25+09:00",
+      "last_checked_at": "2026-10-30T19:38:25+09:00",
+      "linked_from": [],
+      "worklist_rank": 77,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.27514",
+      "identity_tokens": [
+        "arXiv:2608.27514"
+      ],
+      "title": "Trajectory-Level Speculative Decoding for Diffusion Language Models",
+      "reason": "拡散言語モデルでは候補が単純な左から右のトークン列でなく、位置とマスク解除順を伴うdenoising軌道になる点に着目。信頼度層別の木探索で草案軌道を作り、ブロック並列検証とブロック間lookaheadを組み合わせる。Fast-dLLM比約1.3倍、通常拡散decode比7〜14倍の高速化を報告する推論デコード研究。",
+      "source_url": "https://arxiv.org/abs/2608.27514",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:38:25+09:00",
+      "last_checked_at": "2026-10-30T19:38:25+09:00",
+      "linked_from": [],
+      "worklist_rank": 78,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}

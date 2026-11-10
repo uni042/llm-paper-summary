@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-91f02b3b57f4f247-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.sysarc.2026.103925",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.sysarc.2026.103925",
+    "identity_tokens": [
+      "DOI:10.1016/j.sysarc.2026.103925"
+    ],
+    "reason": "Mini-MDP concerns processor memory-dependence prediction and its accuracy/complexity trade-off, not language-model inference.",
+    "first_checked_at": "2026-10-05T10:56:00+00:00",
+    "last_checked_at": "2026-10-05T10:56:00+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+    ],
+    "title": "Mini-MDP: Revisiting the accuracy–complexity tradeoff in memory dependence prediction"
+  },
+  "processed_at": "2026-10-05T10:56:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-91f02b3b57f4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

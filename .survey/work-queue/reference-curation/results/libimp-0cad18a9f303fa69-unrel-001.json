@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cad18a9f303fa69-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.22389",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.22389",
+    "identity_tokens": [
+      "arXiv:2605.22389"
+    ],
+    "reason": "The primary arXiv paper proposes High-Entropy Sum data ranking to reduce reasoning-data selection/training overhead (including training on a 20% subset); the measured efficiency is training-time, not model inference or serving.",
+    "first_checked_at": "2026-10-07T13:50:59+00:00",
+    "last_checked_at": "2026-10-07T13:50:59+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+      "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+    ],
+    "title": "Unified Data Selection for LLM Reasoning"
+  },
+  "processed_at": "2026-10-07T13:51:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cad18a9f303",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

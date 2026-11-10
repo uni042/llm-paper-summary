@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ba5c2a1a06ac33a8-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.20084",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.20084",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.20084",
+      "arXiv:2605.20084"
+    ],
+    "reason": "LLM単独応答の不確実性が高い場合だけRAGへ切り替える二段ルーティングに対し、回答リスクを保証する閾値対を逐次グラフィカル検定で校正し、不要な検索呼出しを減らす手法である。推論経路の選択、検索回数、レイテンシ・メモリ・トークン負荷に関わるため接点はあるが、主貢献はQAの信頼度校正とRAGルーティングで、汎用サービング基盤、KV管理、GPUカーネルの最適化ではないため境界扱いとする。",
+    "first_checked_at": "2026-10-22T17:12:51+00:00",
+    "last_checked_at": "2026-10-22T17:12:51+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BalanceRAG: Joint Risk Calibration for Cascaded Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-10-22T17:12:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ba5c2a1a06ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

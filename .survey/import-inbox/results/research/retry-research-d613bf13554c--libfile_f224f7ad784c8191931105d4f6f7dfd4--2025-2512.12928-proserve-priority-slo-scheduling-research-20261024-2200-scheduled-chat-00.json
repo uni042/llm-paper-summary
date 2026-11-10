@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b42fae7039564a46ec7adf8521f12cabb17f665a52ced30ee331e1a2408ce458",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d613bf13554c--libfile_f224f7ad784c8191931105d4f6f7dfd4--2025-2512.12928-proserve-priority-slo-scheduling-research-20261024-2200-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2512.12928",
+  "worker_completed_at": "2026-10-24T22:03:44+09:00",
+  "worker_run_key": "20261024-2200-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7742,
+    "body_paragraphs": 36,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 150,
+    "limitation_chars": 811,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 150 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 150 < 500"
+  ],
+  "processed_at": "2026-10-24T22:26:21+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0683046fe13841e1-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2409.05395",
+  "reason": "本文はVLMでTransformerとMambaの品質を比較するモデル研究で、対象自体は隣接するsequence architectureだが、推論latency/throughput/memoryやefficient deploymentを検証していない。効率の根拠がないためborderlineに留める。",
+  "title": "Shaking Up VLMs: Comparing Transformers and Structured State Space Models for Vision & Language Modeling",
+  "identity_tokens": [
+    "arXiv:2409.05395"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0683046fe138",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

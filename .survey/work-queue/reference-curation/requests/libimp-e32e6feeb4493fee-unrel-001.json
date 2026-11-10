@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e32e6feeb4493fee-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2406.01733",
+  "reason": "layer cachingでdiffusion Transformerのdenoising計算を削減するが、最終workloadは画像生成用diffusion TransformerでありLLM/言語モデル推論ではない。",
+  "title": "Learning-to-Cache: Accelerating Diffusion Transformer via Layer Caching",
+  "identity_tokens": [
+    "arXiv:2406.01733"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e32e6feeb449",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

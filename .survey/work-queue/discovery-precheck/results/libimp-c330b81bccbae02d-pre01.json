@@ -1,0 +1,217 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c330b81bccbae02d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c330b81bccba",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3725843.3756078",
+    "DOI:10.1145/3769102.3770608",
+    "DOI:10.1145/3779212.3790246"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "aa5e9331023393d12ce53f5574bed7fbad04bec1",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-02T08:19:00.828389+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3725843.3756078",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3769102.3770608",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3779212.3790246",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LLM.265: Video Codecs are Secretly Tensor Codecs",
+      "source_url": "https://doi.org/10.1145/3725843.3756078",
+      "year": 2025,
+      "published": "2025-10-17",
+      "abstract": "As the parameter size of large language models (LLMs) continues to expand, the need for a large memory footprint and high communication bandwidth have become significant bottlenecks for the training and inference of LLMs. To mitigate these bottlenecks, various tensor compression techniques have been proposed to reduce the data size, thereby alleviating memory requirements and communication pressure. Our research found that video codecs, despite being originally designed for compressing videos, show excellent efficiency when compressing various types of tensors. We demonstrate that video codecs can be versatile and general-purpose tensor codecs while achieving the state-of-the-art compression efficiency in various tasks. We further make use of the hardware video encoding and decoding module available on GPUs to create a framework capable of both inference and training with video codecs repurposed as tensor codecs. Building on insights gained from video codecs, we further show that the hardware of the video codecs can be customized and enhanced to significantly improve tensor encoding/decoding throughput without incurring substantial costs, making it a highly effective solution for large-scale model deployment without requiring significant modifications to the existing GPU architecture.",
+      "doi": "10.1145/3725843.3756078",
+      "canonical_id": "DOI:10.1145/3725843.3756078",
+      "authors": [
+        "Ce-Yu Xu",
+        "Yongji Wu",
+        "Xinyu Yang",
+        "Beidi Chen",
+        "Matthew Lentz",
+        "Dan-Yang Zhuo",
+        "L. Wills"
+      ]
+    },
+    {
+      "title": "SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving",
+      "source_url": "https://arxiv.org/abs/2506.09397",
+      "year": 2025,
+      "published": "2025-06-11",
+      "abstract": "The growing gap between the increasing complexity of large language models (LLMs) and the limited computational budgets of edge devices poses a key challenge for efficient on-device inference, despite gradual improvements in hardware capabilities. Existing strategies, such as aggressive quantization, pruning, or remote inference, trade accuracy for efficiency or lead to substantial cost burdens. This position paper introduces a new framework that leverages speculative decoding, previously viewed primarily as a decoding acceleration technique for autoregressive generation of LLMs, as a promising approach specifically adapted for edge computing by orchestrating computation across heterogeneous devices. We propose SLED, a framework that allows lightweight edge devices to draft multiple candidate tokens locally using diverse draft models, while a single, shared edge server verifies the tokens utilizing a more precise target model. To further increase the efficiency of verification, the edge server batches the diverse verification requests from devices. This approach supports heterogeneous devices and reduces server-side memory footprint by sharing a single upstream target model across devices. Our initial experiments with Jetson Orin Nano, Raspberry Pi 4B/5, and an edge server equipped with 4 Nvidia A100 GPUs indicate substantial benefits: ×2.2 higher system throughput, ×2.8 higher system capacity, and better cost efficiency, all without sacrificing model accuracy.",
+      "canonical_id": "arXiv:2506.09397",
+      "arxiv_id": "2506.09397",
+      "doi": "10.1145/3769102.3770608",
+      "authors": [
+        "Xiangchen Li",
+        "Dimitrios Spatharakis",
+        "Saeid Ghafouri",
+        "Jiakun Fan",
+        "Hans Vandierendonck",
+        "Deepu John",
+        "Bo Ji",
+        "Dimitrios S. Nikolopoulos"
+      ]
+    },
+    {
+      "title": "SwiftSpec: Disaggregated Speculative Decoding and Fused Kernels for Low-Latency LLM Inference",
+      "source_url": "https://doi.org/10.1145/3779212.3790246",
+      "year": 2026,
+      "published": "2026-03-22",
+      "abstract": "Low-latency, single-request decoding of large language models is critical for interactive systems with tight SLA demands. Prior work reduces latency through speculative decoding (combining a small draft model with a larger target model), but the draft model remains on the critical path, and communication overhead limits scaling across GPUs due to the small batch size associated with single-request decoding. To address these limitations, this paper introduces SwiftSpec: a system architecture that disaggregates draft and target models across homogeneous GPUs within a single node and utilizes NCCL-low-latency primitives directly to improve the performance of core GEMM and attention kernels. Our implementation includes 3k lines of custom CUDA for fused kernels and an evolving tree cache for KV-cache consistency and maximized reuse between draft and target models. On a single 8×H800 GPU node, SwiftSpec achieves 347 tokens/s for Llama-3-70B---1.3× faster than NVIDIA's own benchmarks on a higher-performance 8×H200 setup---and averages 1.75× faster decoding than state-of-the-art speculative decoding across five model families and six datasets. Specifically, we find that for Llama-3-70B SwiftSpec is significantly faster across all 480 tested queries, showing 1.7× speedup over the best open-source baseline for 95th percentile requests. Code for SwiftSpec will be available at https://github.com/ByteDance-Seed/SwiftSpec",
+      "doi": "10.1145/3779212.3790246",
+      "canonical_id": "DOI:10.1145/3779212.3790246",
+      "authors": [
+        "Ziyi Zhang",
+        "Ziheng Jiang",
+        "Chengquan Jiang",
+        "Menghan Yu",
+        "Si-Ze Zheng",
+        "Haibin Lin",
+        "Xin Liu",
+        "Henry Hoffmann"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3725843.3756078",
+      "identity_tokens": [
+        "id:DOI:10.1145/3725843.3756078",
+        "title:llm265 video codecs are secretly tensor codecs",
+        "url:https://doi.org/10.1145/3725843.3756078"
+      ],
+      "record": {
+        "title": "LLM.265: Video Codecs are Secretly Tensor Codecs",
+        "source_url": "https://doi.org/10.1145/3725843.3756078",
+        "year": 2025,
+        "published": "2025-10-17",
+        "abstract": "As the parameter size of large language models (LLMs) continues to expand, the need for a large memory footprint and high communication bandwidth have become significant bottlenecks for the training and inference of LLMs. To mitigate these bottlenecks, various tensor compression techniques have been proposed to reduce the data size, thereby alleviating memory requirements and communication pressure. Our research found that video codecs, despite being originally designed for compressing videos, show excellent efficiency when compressing various types of tensors. We demonstrate that video codecs can be versatile and general-purpose tensor codecs while achieving the state-of-the-art compression efficiency in various tasks. We further make use of the hardware video encoding and decoding module available on GPUs to create a framework capable of both inference and training with video codecs repurposed as tensor codecs. Building on insights gained from video codecs, we further show that the hardware of the video codecs can be customized and enhanced to significantly improve tensor encoding/decoding throughput without incurring substantial costs, making it a highly effective solution for large-scale model deployment without requiring significant modifications to the existing GPU architecture.",
+        "doi": "10.1145/3725843.3756078",
+        "canonical_id": "DOI:10.1145/3725843.3756078",
+        "authors": [
+          "Ce-Yu Xu",
+          "Yongji Wu",
+          "Xinyu Yang",
+          "Beidi Chen",
+          "Matthew Lentz",
+          "Dan-Yang Zhuo",
+          "L. Wills"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.09397",
+      "identity_tokens": [
+        "id:DOI:10.1145/3769102.3770608",
+        "id:arXiv:2506.09397",
+        "title:sled a speculative llm decoding framework for efficient edge serving",
+        "url:https://arxiv.org/abs/2506.09397"
+      ],
+      "record": {
+        "title": "SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving",
+        "source_url": "https://arxiv.org/abs/2506.09397",
+        "year": 2025,
+        "published": "2025-06-11",
+        "abstract": "The growing gap between the increasing complexity of large language models (LLMs) and the limited computational budgets of edge devices poses a key challenge for efficient on-device inference, despite gradual improvements in hardware capabilities. Existing strategies, such as aggressive quantization, pruning, or remote inference, trade accuracy for efficiency or lead to substantial cost burdens. This position paper introduces a new framework that leverages speculative decoding, previously viewed primarily as a decoding acceleration technique for autoregressive generation of LLMs, as a promising approach specifically adapted for edge computing by orchestrating computation across heterogeneous devices. We propose SLED, a framework that allows lightweight edge devices to draft multiple candidate tokens locally using diverse draft models, while a single, shared edge server verifies the tokens utilizing a more precise target model. To further increase the efficiency of verification, the edge server batches the diverse verification requests from devices. This approach supports heterogeneous devices and reduces server-side memory footprint by sharing a single upstream target model across devices. Our initial experiments with Jetson Orin Nano, Raspberry Pi 4B/5, and an edge server equipped with 4 Nvidia A100 GPUs indicate substantial benefits: ×2.2 higher system throughput, ×2.8 higher system capacity, and better cost efficiency, all without sacrificing model accuracy.",
+        "canonical_id": "arXiv:2506.09397",
+        "arxiv_id": "2506.09397",
+        "doi": "10.1145/3769102.3770608",
+        "authors": [
+          "Xiangchen Li",
+          "Dimitrios Spatharakis",
+          "Saeid Ghafouri",
+          "Jiakun Fan",
+          "Hans Vandierendonck",
+          "Deepu John",
+          "Bo Ji",
+          "Dimitrios S. Nikolopoulos"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3779212.3790246",
+      "identity_tokens": [
+        "id:DOI:10.1145/3779212.3790246",
+        "title:swiftspec disaggregated speculative decoding and fused kernels for lowlatency llm inference",
+        "url:https://doi.org/10.1145/3779212.3790246"
+      ],
+      "record": {
+        "title": "SwiftSpec: Disaggregated Speculative Decoding and Fused Kernels for Low-Latency LLM Inference",
+        "source_url": "https://doi.org/10.1145/3779212.3790246",
+        "year": 2026,
+        "published": "2026-03-22",
+        "abstract": "Low-latency, single-request decoding of large language models is critical for interactive systems with tight SLA demands. Prior work reduces latency through speculative decoding (combining a small draft model with a larger target model), but the draft model remains on the critical path, and communication overhead limits scaling across GPUs due to the small batch size associated with single-request decoding. To address these limitations, this paper introduces SwiftSpec: a system architecture that disaggregates draft and target models across homogeneous GPUs within a single node and utilizes NCCL-low-latency primitives directly to improve the performance of core GEMM and attention kernels. Our implementation includes 3k lines of custom CUDA for fused kernels and an evolving tree cache for KV-cache consistency and maximized reuse between draft and target models. On a single 8×H800 GPU node, SwiftSpec achieves 347 tokens/s for Llama-3-70B---1.3× faster than NVIDIA's own benchmarks on a higher-performance 8×H200 setup---and averages 1.75× faster decoding than state-of-the-art speculative decoding across five model families and six datasets. Specifically, we find that for Llama-3-70B SwiftSpec is significantly faster across all 480 tested queries, showing 1.7× speedup over the best open-source baseline for 95th percentile requests. Code for SwiftSpec will be available at https://github.com/ByteDance-Seed/SwiftSpec",
+        "doi": "10.1145/3779212.3790246",
+        "canonical_id": "DOI:10.1145/3779212.3790246",
+        "authors": [
+          "Ziyi Zhang",
+          "Ziheng Jiang",
+          "Chengquan Jiang",
+          "Menghan Yu",
+          "Si-Ze Zheng",
+          "Haibin Lin",
+          "Xin Liu",
+          "Henry Hoffmann"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:a2d89b4825af363679007494b025aeb38f69535826b522d683be10056117be03",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

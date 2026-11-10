@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-893a36e01ccb1e00-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.01394",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.01394",
+    "identity_tokens": [
+      "arXiv:2607.01394"
+    ],
+    "reason": "architectureの効率性を主張するものの、今回確認した本文箇所は設計と理論complexity中心で、実推論効率の定量根拠が不足するためborderline。関連範囲の測定有無を追加確認する価値はあるが、現時点で効率手法として採択する証拠が足りない。",
+    "first_checked_at": "2026-10-05T10:46:36+00:00",
+    "last_checked_at": "2026-10-05T10:46:36+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+    ],
+    "title": "The Wiola Architecture for Efficient Small Language Models"
+  },
+  "processed_at": "2026-10-05T10:46:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-893a36e01ccb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

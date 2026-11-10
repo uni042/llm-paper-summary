@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b3b4415e4a85e8e7-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.10333",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.10333",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2511.10333",
+      "SemanticScholar:55d7cbb1d75daec777beb254e6c4bed76c30a208",
+      "arXiv:2511.10333"
+    ],
+    "reason": "EDGC compresses gradients to reduce communication during LLM training; it does not address inference execution.",
+    "first_checked_at": "2026-10-13T18:20:56+00:00",
+    "last_checked_at": "2026-10-13T18:20:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+    ],
+    "title": "EDGC: Entropy-driven Dynamic Gradient Compression for Efficient LLM Training"
+  },
+  "processed_at": "2026-10-13T18:20:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b3b4415e4a85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

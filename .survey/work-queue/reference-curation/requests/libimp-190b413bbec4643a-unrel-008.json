@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-190b413bbec4643a-unrel-008",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2109.01611",
+  "reason": "The paper presents a general multi-model machine-learning inference server and evaluates it on GoogLeNet, LeNet, ResNet-50, SSD-MobileNet and VGG-16, including image/game/traffic workloads. Its gpu-let spatial partitioning improves throughput for these classical ML models, but the primary paper does not target LLM inference, LLM serving, or LLM-specific memory/compute costs. It is outside this LLM-inference-focused scope.",
+  "title": "Multi-model Machine Learning Inference Serving with GPU Spatial Partitioning",
+  "identity_tokens": [
+    "arXiv:2109.01611"
+  ],
+  "linked_from": [
+    "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[7]"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-190b413bbec4",
+  "source_precheck_request_id": null
+}

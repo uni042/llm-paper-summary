@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-947f67b0aa1dacbf-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:1466559a2a97e00fa8e722530a0e3dec8e3088a7",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:1466559a2a97e00fa8e722530a0e3dec8e3088a7",
+    "identity_tokens": [
+      "SemanticScholar:1466559a2a97e00fa8e722530a0e3dec8e3088a7"
+    ],
+    "reason": "The primary USENIX paper presents FwdLLM as a BP-free federated fine-tuning system; perturbed forward inference replaces backpropagation within training.",
+    "first_checked_at": "2026-10-05T12:28:02+00:00",
+    "last_checked_at": "2026-10-05T12:28:02+00:00",
+    "linked_from": [
+      "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+    ],
+    "title": "FwdLLM: Efficient Federated Finetuning of Large Language Models with Perturbed Inferences"
+  },
+  "processed_at": "2026-10-05T12:28:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-947f67b0aa1d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

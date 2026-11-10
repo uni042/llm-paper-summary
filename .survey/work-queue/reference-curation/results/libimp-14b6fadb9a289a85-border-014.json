@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-14b6fadb9a289a85-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.19982",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.19982",
+    "identity_tokens": [
+      "arXiv:2508.19982"
+    ],
+    "reason": "拡散言語モデルの中間状態が最終回答を早期に含む性質を分析する研究で、直接の配信ランタイム・システム機構は主貢献ではない。",
+    "first_checked_at": "2026-09-27T04:28:31+09:00",
+    "last_checked_at": "2026-09-30T09:48:18+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 420"
+    ],
+    "title": "Diffusion Language Models Know the Answer Before Decoding"
+  },
+  "processed_at": "2026-09-30T09:48:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-14b6fadb9a28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

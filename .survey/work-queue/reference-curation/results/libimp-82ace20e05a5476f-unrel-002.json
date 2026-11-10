@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-82ace20e05a5476f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.09539",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.09539",
+    "identity_tokens": [
+      "arXiv:2511.09539"
+    ],
+    "reason": "The full text focuses on synthetic-data utility and claim-verification task performance; it does not present an inference-efficiency method for LLM serving.",
+    "first_checked_at": "2026-10-06T21:30:36+00:00",
+    "last_checked_at": "2026-10-06T21:30:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+    ],
+    "title": "SynClaimEval: A Framework for Evaluating the Utility of Synthetic Data in Long-Context Claim Verification"
+  },
+  "processed_at": "2026-10-06T21:30:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-82ace20e05a5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

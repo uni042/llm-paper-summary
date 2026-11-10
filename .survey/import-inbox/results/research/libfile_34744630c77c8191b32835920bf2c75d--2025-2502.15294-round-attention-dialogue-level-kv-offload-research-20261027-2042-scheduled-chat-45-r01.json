@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1abb083e317399cef50690e20cd1420bdfd60f97a9f4f96f4d513d533d04c433",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_34744630c77c8191b32835920bf2c75d--2025-2502.15294-round-attention-dialogue-level-kv-offload-research-20261027-2042-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2502.15294",
+  "worker_completed_at": "2026-10-27T20:59:00+09:00",
+  "worker_run_key": "20261027-2042-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6497,
+    "body_paragraphs": 39,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 104,
+    "limitation_chars": 830,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 104 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 104 < 500"
+  ],
+  "processed_at": "2026-10-27T13:20:27+00:00"
+}

@@ -1,0 +1,1676 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-9618ca28a6f6eb3f67a1",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-9618ca28a6f6eb3f67a1",
+  "axis": "forward citations of SmoothQuant efficient LLM inference quantization",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2211.10438/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3167a1365944a62d2d81c5ebbb12ba97108b6a8d",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-10-03T14:05:37.478712+00:00",
+  "preload_id": "preload-9618ca28a6f6eb3f67a1",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 2,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Bits Under ZK-LLM: Evaluating Zero-Knowledge-Friendly Quantization for Verifiable Private LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.36437",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Zero-knowledge proofs are emerging as a promising approach for enabling private, verifiable LLM governance and auditing, where regulators, users, and auditors need to verify claims about training-data usage or LLM inference-time behavior, while model providers must protect proprietary model parameters. However, despite the growing interest in ZK-LLMs, the understanding of ZK-friendly quantization remains limited. This gap matters because in the ZK setting, quantization directly shapes the arithmetic structure, constraint complexity, and proving cost of ZK inference. ZK protocols operate over finite fields and incur costs that depend heavily on the number and type of arithmetic operations, nonlinearities, and lookup constraints. Understanding ZK-friendly quantization is therefore essential for making ZK-LLMs practical. In this work, we present the first systematic study of ZK-friendly quantization for LLMs. We first formalize the definition of ZK-friendly quantization, capturing the properties required for ZK proof generation. We then evaluate nine language models, including Qwen2.5-14B and the mixture-of-experts model Qwen3-30B-A3B, across a broad design space of weight, activation, and nonlinear lookup table precision. Our results show that activation precision is substantially more sensitive than weight precision, while nonlinear lookup approximations can become the dominant source of utility degradation. Also, we identify RMSNorm inverse-square-root lookups as a recurring bottleneck in several large models and recover near-baseline utility by selectively increasing precision only at the bottleneck. Finally, we show that reducing bit-width or lookup-table size does not necessarily yield proportional end-to-end proving savings, showing that conventional low-bit quantization heuristics do not directly translate to ZK proving efficiency and motivating operator-aware precision selection.",
+      "identifiers": [
+        "SemanticScholar:b457ff626d9a663c170a030b3fbf8c7fa739e29d"
+      ],
+      "semantic_scholar_id": "b457ff626d9a663c170a030b3fbf8c7fa739e29d",
+      "canonical_id": "arXiv:2609.36437",
+      "arxiv_id": "2609.36437",
+      "authors": [
+        "Taeung Yoon",
+        "Yu-Peng Zhang",
+        "Xiao-Jing Liao"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2609.36654",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models make weight storage and memory traffic major inference costs, motivating low-precision formats that represent each weight with only a few bits. Such formats use a scale to map floating-point values into a small codebook; NVFP4 improves local range utilization by letting every 16 E2M1 weights share an E4M3 block scale. Choosing that scale is difficult in GPTQ because quantizing one column updates those that follow, so evaluating a block independently can misestimate its final reconstruction error. Large models pose a second challenge: full-precision weights, calibration activations, and second-order state cannot all remain on one accelerator, while assigning complete layers to devices leaves each time-consuming layer solve serial. We introduce \\emph{Schur Replay}, a scale-selection algorithm that reproduces the GPTQ updates caused by each block scale and scores the resulting block error after accounting for compensation from unquantized columns. Separately, our execution infrastructure keeps only the active layer resident, tiers activations across device, host, and disk, retires full-precision layers after export, and distributes independent output rows across tensor-parallel ranks. Together, the algorithm and infrastructure attain $99.35\\%$ and $100.84\\%$ question-weighted recovery from BF16 across seven benchmarks on Qwen3.5-397B-A17B and Llama-3.3-70B-Instruct. On the 397B model, the infrastructure reduces measured per-layer time by $15.17\\times$ over ModelOpt and $23.14\\times$ over LLM Compressor, with lower memory used per GPU.",
+      "identifiers": [
+        "SemanticScholar:2195733c327eae514838c14186194ea2ed4cc031"
+      ],
+      "semantic_scholar_id": "2195733c327eae514838c14186194ea2ed4cc031",
+      "canonical_id": "arXiv:2609.36654",
+      "arxiv_id": "2609.36654",
+      "authors": [
+        "Rui-Ying Ding",
+        "Jie Li",
+        "Kang He",
+        "Zi-Yan Liu",
+        "Cheng-Ru Song",
+        "Yue-Dong Xu",
+        "Yuan Cheng"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QuantMLA: Function-Aligned Dual-Path Quantization for Low-Bit MLA KV Caching",
+      "source_url": "https://arxiv.org/abs/2609.36760",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-Head Latent Attention (MLA) enables expressive multi-head attention with compact caches for its content and decoupled RoPE paths, yet cache memory still scales linearly with context length and batch size. In this work, we establish a systematic model of MLA's dual-path quantization errors, characterizing their distinct effects on attention-output distortion and explaining the pronounced amplification of RoPE-path errors. Guided by this analysis, we introduce QuantMLA, a function-aligned framework for low-bit dual-path quantization. We derive path-specific transformation spaces that preserve full-precision computation while remaining fully fusible into model parameters offline, eliminating online transformation overhead. Within these spaces, QuantMLA learns path-specific transformations with function-aligned objectives: attention-output reconstruction captures the content path's coupled matching and aggregation errors, while positional QK reconstruction preserves the RoPE-induced component of the attention logits and admits a theoretical bound on output distortion. Across four MLA model families, QuantMLA enables, to our knowledge, the first reported joint INT4 caching of the content and RoPE caches with minimal accuracy degradation. Further compressing the content cache to INT2 while retaining the RoPE key cache at INT4 maintains competitive performance on challenging reasoning and code benchmarks. We develop a native low-bit MLA attention kernel that integrates unpacking and dequantization directly into attention computation. The physical cache layout provides 3.59x compression at 128K context, while a cache-pressure serving workload achieves 5.168x higher whole-job output throughput than BF16. The code will be released upon acceptance.",
+      "identifiers": [
+        "SemanticScholar:020ad6a8f8ee8d4dd27c68fb7e01dfb01ffd243c"
+      ],
+      "semantic_scholar_id": "020ad6a8f8ee8d4dd27c68fb7e01dfb01ffd243c",
+      "canonical_id": "arXiv:2609.36760",
+      "arxiv_id": "2609.36760",
+      "authors": [
+        "Zun-Hai Su",
+        "Yuxuan Sun",
+        "Jian-Chao Tan",
+        "Tao Zhang",
+        "Rui-Han Hu",
+        "Yu-Chen Xie",
+        "Xun-Liang Cai",
+        "Ngai Wong"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Calibrate the Decisions That Change the Future: On-Policy Post-Training Quantization for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.36828",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) lowers deployment cost for multimodal large language models, but calibration typically reconstructs fixed sequences with local objectives. This overlooks autoregressive feedback: a quantization-induced token change redirects the prefix and changes future states. Yet on-policy coverage alone is insufficient because many decision mismatches barely affect future generation. We propose OnPTQ, an on-policy framework that calibrates on trajectories visited by the current quantized policy. On shared prefixes, OnPTQ identifies quantization-eroded boundaries, evaluates competing tokens through short counterfactual rollouts, and combines current discrepancy with branch consequence into a Decision--Consequence risk. The risk prioritizes critical states, while context anchoring and trajectory refresh preserve multimodal behavior and keep calibration aligned with the updated policy. We further derive a Decision--Consequence bound linking behavioral deviation to current policy discrepancy and action-conditioned future-value span. Across vision--language and omni-modal Qwen models under multiple low-bit settings, OnPTQ improves downstream performance and yields fewer correctness flips against the corresponding Dense/FP16 references, without changing the deployed inference graph.",
+      "identifiers": [
+        "SemanticScholar:2a96a4994ba693b94bc8ffef4efc7fa4156a7824"
+      ],
+      "semantic_scholar_id": "2a96a4994ba693b94bc8ffef4efc7fa4156a7824",
+      "canonical_id": "arXiv:2609.36828",
+      "arxiv_id": "2609.36828",
+      "authors": [
+        "Wen-Xiao Fan",
+        "Jing-Ling Fu",
+        "Li-Chen Ma",
+        "Yu He",
+        "Lu Liu",
+        "Jin-Bao Xue",
+        "Ke Zhang",
+        "Jun-Shi Huang",
+        "Kan Li"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Behavioral Capacity Certificates for Quantized Language Models",
+      "source_url": "https://arxiv.org/abs/2609.37887",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Activation and key-value cache precision change what a quantized language model computes without altering its stored weights. Direct weight-code bounds, however, assign identical complexity to deployments that behave differently and charge separately for weight codes that behave identically. Behavioral Capacity Certificates (BCC) charge for behavior using the aggregate prior mass of complete implementations---weights, scales, activation and cache rules---that induce the same bounded loss. When quantization merges implementations, this shared mass lowers the complexity penalty, and a break-even law determines when the saving survives the cost of validating it. BCC supports a three-step deployment workflow, and our experiments verify each step. First, a forward-only screen shortlists per-layer bit-widths by how often candidate perturbations preserve the reference predictions, with quality comparable to Hessian-guided selection at lower preprocessing cost. Second, margin-certified cells identify weights that can be pruned or sign-flipped without changing the deployed behavior: every permitted combination preserves all declared predictions, and on OLMoE-1B-7B and SmolLM2-1.7B, independent probes bound the probability that any permitted combination changes a prediction on new text. Third, BCC bounds the population loss of the deployed model, nonvacuously for complete decoders and more tightly than the compressed-code route. At equal cache memory, giving keys higher precision than values yields lower NLL and higher prediction agreement on GPT-2, Qwen2.5, and SmolLM2, together with a tighter complexity bound in the GPT-2 audit.",
+      "identifiers": [
+        "SemanticScholar:b0135df08748d4d42b00cf7d9c93664e95161da9"
+      ],
+      "semantic_scholar_id": "b0135df08748d4d42b00cf7d9c93664e95161da9",
+      "canonical_id": "arXiv:2609.37887",
+      "arxiv_id": "2609.37887",
+      "authors": [
+        "Arian Eamaz",
+        "Mojtaba Soltanalian"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pretraining Latent Information Feedback Transformers with Teacher Supervision",
+      "source_url": "https://arxiv.org/abs/2609.38149",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer language models (LMs) are feed-forward: deep-layer representations are never fed back to shallower layers, and the only pathway for information to flow downward across generation steps is the decoded token. This narrow channel forces models to recompute intermediate results and to discard alternative continuations. In this work, we remove this bottleneck during pretraining, introducing the LIFT (Latent Information Feedback Transformer) architecture and training method which enable LMs to propagate state across generation. We achieve this by turning recurrent-state learning into a teacher-forced prediction problem: each input token is paired with an information-dense state, derived from the next-token distribution of an off-the-shelf pretrained LM. The model, extended with a small number of additional parameters, is then trained to predict both the next token and the next state. As the input states are precomputed, pretraining remains fully parallel across positions. At inference, the model's own predicted states are fed back, with a minor computational overhead that decreases with model size. Experiments with pretrained models ranging from 135M to 1B parameters show that LIFT consistently outperforms standard Transformers and baselines on language modeling, downstream reasoning tasks, and procedural tasks under token-matched budget, while being on par with or ahead of compute-matched Transformers. Moreover, a controlled study on a state-tracking task shows that a tiny LIFT outperforms same-size Transformers trained on 8x more data, even when trained with the states of a Transformer that fails the task. Overall, we show that LMs can learn to exploit deep-to-shallow feedback during pretraining via scalable teacher supervision.",
+      "identifiers": [
+        "SemanticScholar:fceffa100ac53a4dfcc4e0a8b8b6ede554a89565"
+      ],
+      "semantic_scholar_id": "fceffa100ac53a4dfcc4e0a8b8b6ede554a89565",
+      "canonical_id": "arXiv:2609.38149",
+      "arxiv_id": "2609.38149",
+      "authors": [
+        "Dor Tirosh",
+        "Ido Amos",
+        "Mor Geva"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+      "source_url": "https://arxiv.org/abs/2609.38166",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent LLMs increasingly adopt hybrid designs that replace standard attention with linear attention, such as Gated DeltaNet (GDN) and Kimi Delta Attention (KDA). Although they compress the context into a fixed-size recurrent state and substantially reduce the cost of long-context processing, repeatedly reading and updating that state remains a major inference bottleneck. Quantization offers a natural way to reduce this cost, but can significantly degrade model quality, due to the accumulation of rounding errors and the presence of outlier rows and columns in the state. To address these challenges, we propose LeapQuant, a training-free method that achieves near-lossless performance under 8-bit recurrent-state quantization. First, to mitigate error accumulation, we propose per-window quantization, which leaps over a window of tokens and quantizes the state only once at its end. Within a window, outputs are computed from the fixed low-bit state together with high-precision buffered updates. Second, to reduce the error introduced by each quantization, LeapQuant retains the state's largest outliers as a few high-precision Compensator Tokens, which share the update path of real tokens. We then smooth the remaining residual before quantization to further reduce the error. Comprehensive experiments across the Qwen, Kimi, and GLM model families show that LeapQuant substantially reduces memory and compute costs during inference. With accuracy comparable to the FP32 baseline, it achieves average speedups of 2.05--3.70$\\times$ at the kernel level and 1.47$\\times$ for end-to-end inference on NVIDIA B200, RTX PRO 6000, and RTX 5090 GPUs.",
+      "identifiers": [
+        "SemanticScholar:3ecf62f53d3386586c160ec4c305708e9dc33d45"
+      ],
+      "semantic_scholar_id": "3ecf62f53d3386586c160ec4c305708e9dc33d45",
+      "canonical_id": "arXiv:2609.38166",
+      "arxiv_id": "2609.38166",
+      "authors": [
+        "Yi Pan",
+        "Hao-Cheng Xi",
+        "Kan Zhu",
+        "Xing-Yang Li",
+        "Yi-Bo Wu",
+        "Mayank Mishra",
+        "Hong-Tao Zhang",
+        "William X.Zheng",
+        "Baris Kasikci",
+        "Song Han",
+        "Kurt Keutzer",
+        "Rishabh K. Iyer",
+        "Ion Stoica"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
+      "source_url": "https://arxiv.org/abs/2609.38169",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a substantial memory bottleneck under concurrent serving. Directly quantizing recurrent states to low precision often leads to severe accuracy degradation, as quantization errors propagate through successive state updates. We discover that the impact of these errors depends on two complementary dimensions: temporally, errors in long-lived memory can persist across many decoding steps; spatially, errors in different key rows affect model outputs differently, while state magnitudes vary substantially along both rows and columns. Motivated by these observations, we propose STEPQuant, a spatial-temporal post-training quantization framework for Delta-rule recurrent states. STEPQuant allocates precision according to error magnitude and memory lifetime, and jointly fits key-row and value-column scales based on state distributions and key-row impact on output error. Experiments on Qwen3.8-27B and Kimi-Linear-48B-A3B-Instruct across both long- and short-generation benchmarks show that STEPQuant closely matches FP32-state accuracy under a nominal 6-bit budget and outperforms uniform INT8 in its 4-bit configuration. Integrated into SGLang with optimized GPU kernels, 6-bit STEPQuant achieves over 5x recurrent-state compression and reduces total serving memory by up to 68.7%. Our code is available at https://github.com/Dreamer-Toby/STEPQuant.",
+      "identifiers": [
+        "SemanticScholar:00a4b940d6e994c1e2301a61a673bd47729e76fe"
+      ],
+      "semantic_scholar_id": "00a4b940d6e994c1e2301a61a673bd47729e76fe",
+      "canonical_id": "arXiv:2609.38169",
+      "arxiv_id": "2609.38169",
+      "authors": [
+        "Bing-Chen Yao",
+        "Hao-Bo Xu",
+        "Hao-Kun Lin",
+        "Yi-Chen Wu",
+        "Ziyu Guo",
+        "Ren-Rui Zhang",
+        "Zhi-Chao Lu",
+        "Zhe-Nan Sun",
+        "Ying Wei"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SteerQuant: Steering Quantization Error with Action-Guided Scaling in World-Action Models",
+      "source_url": "https://arxiv.org/abs/2609.39056",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "World-action models (WAMs) jointly generate future world states and actions through iterative denoising, using shared weights to process heterogeneous semantic streams of video, proprioceptive, and action tokens. Quantization reduces inference cost, but comparable numerical errors in different streams can have markedly different effects on final actions, making numerical accuracy alone insufficient for reliable control. We introduce SteerQuant, a 4-bit quantization framework for WAMs that steers errors toward computations with less influence on final actions. It maps how each stream's quantization errors affect final actions and uses this map to guide shared channel scaling. Activation scaling is further calibrated for each stream and denoising step to accommodate changes in activation ranges and action impact. This adapts quantization to different stream requirements without duplicating weights or increasing bit-widths for selected streams. To reduce the extra kernel launches and memory traffic introduced by scaling, we develop Rudder, a 4-bit inference engine for WAMs that fuses scaling and output compensation into low-bit kernels. Under W4A8 and W4A4, SteerQuant maintains mean LIBERO success within 0.8 percentage points of full precision, while delivering up to $2.23\\times$ denoising speedup over BF16 across three WAMs with reduced peak GPU memory usage. On a real dual-arm robot, W4A8 deployment achieves a $1.35\\times$ end-to-end inference speedup while maintaining average task success relative to BF16.",
+      "identifiers": [
+        "SemanticScholar:cb229b94d40045ffe3bdce3a90b40015e0b30d39"
+      ],
+      "semantic_scholar_id": "cb229b94d40045ffe3bdce3a90b40015e0b30d39",
+      "canonical_id": "arXiv:2609.39056",
+      "arxiv_id": "2609.39056",
+      "authors": [
+        "Yun-Han Wang",
+        "Hao-Dong Wang",
+        "Zhi-Ming Liu",
+        "Zi-Cong Hong",
+        "Qian-Li Liu",
+        "Xiao-Yi Pang",
+        "Yang Hu",
+        "Quan-Xin Shou",
+        "Yi-Kun Miao",
+        "Song Guo"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QATFactory: A Versatile, Deployment-Aligned Framework for Quantization-aware Training and Distillation of LLMs",
+      "source_url": "https://arxiv.org/abs/2609.39223",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference is increasingly moving toward lower precision to realize the throughput of hardware accelerators, but aggressive post-training quantization (PTQ) can degrade model quality. We present QATFactory, an open-source framework for deployment-aligned quantization-aware distillation (QAD) and reinforcement learning (QARL). QATFactory simulates deployment-time quantization while performing matrix multiplications in BF16, allowing models to adapt to quantization noise without requiring training hardware that natively supports the target format; for example, it supports NVFP4 training on H100 GPUs, which lack FP4 Tensor Cores. The framework supports NVFP4, MXFP4, and $\\text{llama}.\\text{cpp}$'s Q4_K format; dense and mixture-of-experts models; and both full-parameter and LoRA-based training. It exports checkpoints directly to vLLM and $\\text{llama}.\\text{cpp}$ without an additional lossy conversion step or added inference overhead. With QATFactory, we conduct extensive experiments on models ranging from 8B to 230B parameters and evaluate exported checkpoints in production inference engines. Across models and formats, QAD consistently improves deployed-model quality over strong PTQ baselines. On Qwen3.5-9B, QAD achieves average benchmark accuracies of 68.9% under NVFP4 and 66.0% under MXFP4, outperforming the best PTQ results of 65.4% and 56.4%, respectively. Through our experiments, we found that although both FP4 formats quantize weights and activations at deployment, the best training strategy is format-dependent: NVFP4 generally performs better when only weights are quantized during training, whereas MXFP4 benefits from quantizing both weights and activations. At a fixed training token budget, training on fewer 32K sequences improves average accuracy by 1.9 points over training on more 4K sequences.",
+      "identifiers": [
+        "SemanticScholar:c8a06ceddc47be1cb3fa8ca2c80ad29af9f6a6e0"
+      ],
+      "semantic_scholar_id": "c8a06ceddc47be1cb3fa8ca2c80ad29af9f6a6e0",
+      "canonical_id": "arXiv:2609.39223",
+      "arxiv_id": "2609.39223",
+      "authors": [
+        "Wei-Li Xu",
+        "Ji-Sen Li",
+        "Yu-Qing Jian",
+        "Chen-Xi Li",
+        "Zhizhou Sha",
+        "Yi-Fan Yu",
+        "Qing-Yang Wu",
+        "Chen-Feng Xu",
+        "Zhong-Zhu Zhou",
+        "Tian-Yi Zhang",
+        "Ben Athiwaratkun"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LampAttention: Look-Ahead Mixed-Precision FlashAttention for Dedicated Accelerators",
+      "source_url": "https://arxiv.org/abs/2609.39361",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While most attention logits can be computed in low precision without degrading numerical stability, current attention kernels fail to exploit this phenomenon. We introduce a novel hardware-algorithm co-design in the form of mixed-precision FlashAttention. Our method accumulates key-query products and evaluates their exponentials in 8-bit formats, then adaptively identifies sensitive sub-blocks and recomputes them in 16-bit formats. We propose the specifications for a dedicated accelerator capable of executing this pipeline efficiently. Simulated experiments with Qwen3 and Gemma 3 show that rerouting a selective minority of sub-blocks to high precision is sufficient to recover the baseline model performance.",
+      "identifiers": [
+        "SemanticScholar:6fd4ff2c0cea86a82ee6164edffea5d5bdd39eca"
+      ],
+      "semantic_scholar_id": "6fd4ff2c0cea86a82ee6164edffea5d5bdd39eca",
+      "canonical_id": "arXiv:2609.39361",
+      "arxiv_id": "2609.39361",
+      "authors": [
+        "Stanislav S. Budzinskiy",
+        "Marian Gloser",
+        "T. Yilmaz",
+        "Ying Hong Tham",
+        "Yuan-Yi Lin",
+        "Wen-Yi Fang",
+        "Fan Wu",
+        "Philipp Petersen"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Navigating maritime emergencies with large models: A lifecycle-oriented review",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.115411",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": "Engineering applications of artificial intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:87bd19f3b479204f2d3f7a6da4cbed192ddd55ab"
+      ],
+      "semantic_scholar_id": "87bd19f3b479204f2d3f7a6da4cbed192ddd55ab",
+      "doi": "10.1016/j.engappai.2026.115411",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.115411",
+      "authors": [
+        "Jing Xu",
+        "Qingqing Yang",
+        "Zhiwei Yang",
+        "Yingying Gao",
+        "Kewei Yang",
+        "Jiang Jiang"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Forecast-Preserving low-bit quantization for transformer-based time-series forecasting",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.116054",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": "Engineering applications of artificial intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:6235547bd0265d1c893dec9744cb71bf6e91d73d"
+      ],
+      "semantic_scholar_id": "6235547bd0265d1c893dec9744cb71bf6e91d73d",
+      "doi": "10.1016/j.engappai.2026.116054",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.116054",
+      "authors": [
+        "Meng-Ke Wang",
+        "Min Gan",
+        "Fang Yuan",
+        "Jian-Nan Su"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": "Neurocomputing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:118a315fe00b4844b2cd81e948cdd819db7c1fab"
+      ],
+      "semantic_scholar_id": "118a315fe00b4844b2cd81e948cdd819db7c1fab",
+      "doi": "10.1016/j.neucom.2026.134332",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Uniform Approximation: Toward Efficient Computing in Logarithmic Number System for Large Language Models",
+      "source_url": "https://doi.org/10.1109/TCAD.2026.3663251",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Logarithmic number system (LNS) offers a more efficient quantization format than the integer system for data in large language models (LLMs), with inherently simple implementation for multiplication operations. However, the addition operation in LNS is relatively complex and difficult to balance between precision and hardware overhead. In this work, we observe that the input patterns of the computing units in the inference phase of LLMs exhibit highly skewed frequencies, resulting in nonuniform contributions to the final error. Based on this observation, we propose the beyond uniform approximation (BUA) to enhance the efficiency of LNS additions. From the perspective of lookup tables (LUTs), we propose LUT reshaping to efficiently reduce the approximation error, as well as LUT trimming, a heuristic method for simplifying LUTs within a given error budget. From the perspective of the entire LNS adder, we introduce auxiliary circuit approximation (ACA), which further reduces the hardware cost by simplifying computing data paths that are less frequently activated. Together, these techniques enable efficient approximate computing in LNS. Experimental results indicate that, compared to the multiply accumulate (MAC) unit using the naive LNS adder, BUA significantly reduces perplexity across various LLMs while reducing area-delay product (ADP) by 26.7% and power-delay product (PDP) by 30.8%. Compared to the traditional integer MAC unit, LNS with BUA achieves higher zero-shot accuracy while reducing ADP by 35.1% and PDP by 44.0%. Moreover, we also offer additional approximation options that provide greater hardware savings with only minor degradation in accuracy.",
+      "identifiers": [
+        "SemanticScholar:9e6f1e63faabf370f2ad66079ff34099807a6ebb"
+      ],
+      "semantic_scholar_id": "9e6f1e63faabf370f2ad66079ff34099807a6ebb",
+      "doi": "10.1109/TCAD.2026.3663251",
+      "canonical_id": "DOI:10.1109/TCAD.2026.3663251",
+      "authors": [
+        "Xin-Kuang Geng",
+        "Si-Ting Liu",
+        "Hui Wang",
+        "Lei-Bo Liu",
+        "Jie Han",
+        "Hong-Lan Jiang"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NeuFAS: Edge-Efficient Mamba-Based Channel Estimation for Fluid Antenna Systems",
+      "source_url": "https://doi.org/10.1109/lcn67947.2026.11660767",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": "IEEE Conference on Local Computer Networks",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a05caa0467a5f9267b0e534c4fc88e1d34f786f5"
+      ],
+      "semantic_scholar_id": "a05caa0467a5f9267b0e534c4fc88e1d34f786f5",
+      "doi": "10.1109/lcn67947.2026.11660767",
+      "canonical_id": "DOI:10.1109/lcn67947.2026.11660767",
+      "authors": [
+        "Shengzhe Lyu",
+        "Qian-Ren Li",
+        "Wei-Tao Xu",
+        "Chengwen Luo"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Devil Is in the Reconstruction Loss Scale: Rethinking Optimization in LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2610.00983",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) methods typically use sequential quantization that partitions a pre-trained LLM into a series of units (e.g., transformer blocks), with one unit quantized at each stage. State-of-the-art PTQ methods are predominantly learning-based, optimizing auxiliary quantization parameters (e.g., scaling factors, rotation matrices, clipping thresholds, and adapters) via gradient descent to minimize a reconstruction loss. A common practice is to use mean squared error (MSE) as the reconstruction loss function, yet its induced optimization behavior remains largely unexplored. In this work, we take a holistic view of sequential quantization and systematically investigate how optimization evolves from the first quantization stage to the last, aiming for a deep understanding of optimization in learning-based PTQ schemes. Through extensive empirical studies spanning representative learning-based PTQ methods, LLM families, model scales, architectures, quantization settings and various tasks, we consistently uncover Optimization Imbalance: reconstruction loss magnitudes vary dramatically across stages, accompanied by highly uneven gradient magnitudes and parameter updates under MSE. We term the cross-stage range of loss magnitudes the reconstruction loss scale, and reveal that MSE translates the unexpectedly large reconstruction loss scale into highly uneven gradient magnitudes, which in turn lead to uneven optimization strength across quantization stages. This finding suggests a general principle for improving learning-based PTQ: optimization strength across stages should be decoupled from the reconstruction loss scale. Theoretically, we show that root mean squared error (RMSE) variants defined at the sample, channel, token, and element levels naturally realize this principle through implicit gradient normalization, outperforming MSE significantly as a drop-in replacement.",
+      "identifiers": [
+        "SemanticScholar:7f38969db72ab1dfb0156aa3902e05e0ab074a59"
+      ],
+      "semantic_scholar_id": "7f38969db72ab1dfb0156aa3902e05e0ab074a59",
+      "canonical_id": "arXiv:2610.00983",
+      "arxiv_id": "2610.00983",
+      "authors": [
+        "Chao Li",
+        "Shi-Geng Wang",
+        "An-Bang Yao"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Stochastic Rounding in Low-Precision Transformer Inference: A Variable-Precision Emulation Study of a Small GPT-2",
+      "source_url": "https://arxiv.org/abs/2610.01889",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Should low-precision transformer inference use stochastic rounding (SR) or round-to-nearest (RN)? The answer depends on where in the network you look. We isolate this effect by holding the numerical format fixed and varying only the rounding rule at individual operation sites. To enable experiments at freely chosen precisions, we extend the PRISM vectorized rounding library to arbitrary virtual precision via a variable-precision stochastic rounding (VPSR) algorithm, proving that the rounding decision is evaluated exactly in hardware floating point. We develop two analyses providing complementary insight into this site-level trade-off. First, a probabilistic forward-error bound for linear projections shows that SR's error envelope grows as $O(\\sqrt{n} u)$ in reduction length $n$, versus $O(n u)$ for RN, a gap that widens rapidly at low precision and is most pronounced in the long multilayer perceptron (MLP) down-projection. Second, a second-order decomposition of expected cross-entropy loss change at the output softmax into signed drift, drift curvature, and a Fisher-weighted variance penalty reveals why the two sites behave oppositely: MLP noise is predominantly a uniform logit shift to which softmax is invariant, so SR's variance is largely discounted; head noise is non-uniform across the vocabulary and is not. On DistilGPT-2 at $t=6$ significand bits, observations match theory: SR in the MLP raises perplexity to 1.15x the full-precision reference, versus 2.21x for RN. At the language-model head, the ordering reverses because SR introduces non-uniform variance, whereas deterministic RN carries none. In a mixed-precision configuration (MLP output at $t=6$), assigning SR to the MLP and RN to the head brings perplexity within 1.10x of the full-precision reference, a 28% reduction over matched-bit RN.",
+      "identifiers": [
+        "SemanticScholar:0110396e7d85c64314ad096bfcdca36e02301b0a"
+      ],
+      "semantic_scholar_id": "0110396e7d85c64314ad096bfcdca36e02301b0a",
+      "canonical_id": "arXiv:2610.01889",
+      "arxiv_id": "2610.01889",
+      "authors": [
+        "Yohan Chatelain",
+        "Pablo de Oliveira Castro Krembil Centre for Neuroinformatics",
+        "Camh",
+        "Toronto",
+        "Canada",
+        "Universit'e Paris-Saclay",
+        "Uvsq",
+        "LI-Parad",
+        "Versailles",
+        "France"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PyPottery: an AI-powered end-to-end suite for pottery processing and publication",
+      "source_url": "https://arxiv.org/abs/2610.02072",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The study of ceramic materials constitutes a cornerstone of archaeological research, yet the post-production workflow for pottery documentation remains labor-intensive and creates significant publication bottlenecks. This paper presents PyPottery, an open-source, AI-powered suite designed to semi-automate the complete ceramic documentation pipeline. The suite comprises four integrated modules: PyPotteryScan for automated image extraction and handwriting recognition; PyPotteryInk for automatic inking of pencil drawings; PyPotteryTrace for semantically-aware vectorization; and PyPotteryLayout for automated layout generation. Evaluated on 50 hand-drawn sheets containing 240 pottery drawings from the Terramara di Montale (Italy), the framework achieved substantial time savings confirmed by usability study participants, who reported a median perceived speedup of 40$\\times$ over traditional workflows (range: 17.5$\\times$--120$\\times$). These results highlight the potential of AI-assisted tools in archaeological documentation, while the paper addresses the strategic redistribution of cognitive labor toward augmentation rather than automation.",
+      "identifiers": [
+        "SemanticScholar:aa3c53f4cf2633d4f024d3d949a306f8fd884cb4"
+      ],
+      "semantic_scholar_id": "aa3c53f4cf2633d4f024d3d949a306f8fd884cb4",
+      "canonical_id": "arXiv:2610.02072",
+      "arxiv_id": "2610.02072",
+      "authors": [
+        "L. Cardarelli"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Tiny Large Language Models for IoT networks: Potentials and challenges",
+      "source_url": "https://doi.org/10.1016/j.compeleceng.2026.111406",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": "Computers & electrical engineering",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e24e705643638cb7f71e61a9812f5eec50c57c50"
+      ],
+      "semantic_scholar_id": "e24e705643638cb7f71e61a9812f5eec50c57c50",
+      "doi": "10.1016/j.compeleceng.2026.111406",
+      "canonical_id": "DOI:10.1016/j.compeleceng.2026.111406",
+      "authors": [
+        "Muhammed Golec",
+        "S. Melhem",
+        "Yaser M. Khamayseh",
+        "Abdulmalik Alwarafy",
+        "N. Al-Dhahir"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "freshness_age_days": -29,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.36437",
+      "identity_tokens": [
+        "id:SemanticScholar:b457ff626d9a663c170a030b3fbf8c7fa739e29d",
+        "id:arXiv:2609.36437",
+        "title:bits under zkllm evaluating zeroknowledgefriendly quantization for verifiable private llm inference",
+        "url:https://arxiv.org/abs/2609.36437"
+      ],
+      "record": {
+        "title": "Bits Under ZK-LLM: Evaluating Zero-Knowledge-Friendly Quantization for Verifiable Private LLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.36437",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Zero-knowledge proofs are emerging as a promising approach for enabling private, verifiable LLM governance and auditing, where regulators, users, and auditors need to verify claims about training-data usage or LLM inference-time behavior, while model providers must protect proprietary model parameters. However, despite the growing interest in ZK-LLMs, the understanding of ZK-friendly quantization remains limited. This gap matters because in the ZK setting, quantization directly shapes the arithmetic structure, constraint complexity, and proving cost of ZK inference. ZK protocols operate over finite fields and incur costs that depend heavily on the number and type of arithmetic operations, nonlinearities, and lookup constraints. Understanding ZK-friendly quantization is therefore essential for making ZK-LLMs practical. In this work, we present the first systematic study of ZK-friendly quantization for LLMs. We first formalize the definition of ZK-friendly quantization, capturing the properties required for ZK proof generation. We then evaluate nine language models, including Qwen2.5-14B and the mixture-of-experts model Qwen3-30B-A3B, across a broad design space of weight, activation, and nonlinear lookup table precision. Our results show that activation precision is substantially more sensitive than weight precision, while nonlinear lookup approximations can become the dominant source of utility degradation. Also, we identify RMSNorm inverse-square-root lookups as a recurring bottleneck in several large models and recover near-baseline utility by selectively increasing precision only at the bottleneck. Finally, we show that reducing bit-width or lookup-table size does not necessarily yield proportional end-to-end proving savings, showing that conventional low-bit quantization heuristics do not directly translate to ZK proving efficiency and motivating operator-aware precision selection.",
+        "identifiers": [
+          "SemanticScholar:b457ff626d9a663c170a030b3fbf8c7fa739e29d"
+        ],
+        "semantic_scholar_id": "b457ff626d9a663c170a030b3fbf8c7fa739e29d",
+        "canonical_id": "arXiv:2609.36437",
+        "arxiv_id": "2609.36437",
+        "authors": [
+          "Taeung Yoon",
+          "Yu-Peng Zhang",
+          "Xiao-Jing Liao"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36654",
+      "identity_tokens": [
+        "id:SemanticScholar:2195733c327eae514838c14186194ea2ed4cc031",
+        "id:arXiv:2609.36654",
+        "title:replay the curvature accurate and scalable nvfp4 quantization for large language model inference",
+        "url:https://arxiv.org/abs/2609.36654"
+      ],
+      "record": {
+        "title": "Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2609.36654",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models make weight storage and memory traffic major inference costs, motivating low-precision formats that represent each weight with only a few bits. Such formats use a scale to map floating-point values into a small codebook; NVFP4 improves local range utilization by letting every 16 E2M1 weights share an E4M3 block scale. Choosing that scale is difficult in GPTQ because quantizing one column updates those that follow, so evaluating a block independently can misestimate its final reconstruction error. Large models pose a second challenge: full-precision weights, calibration activations, and second-order state cannot all remain on one accelerator, while assigning complete layers to devices leaves each time-consuming layer solve serial. We introduce \\emph{Schur Replay}, a scale-selection algorithm that reproduces the GPTQ updates caused by each block scale and scores the resulting block error after accounting for compensation from unquantized columns. Separately, our execution infrastructure keeps only the active layer resident, tiers activations across device, host, and disk, retires full-precision layers after export, and distributes independent output rows across tensor-parallel ranks. Together, the algorithm and infrastructure attain $99.35\\%$ and $100.84\\%$ question-weighted recovery from BF16 across seven benchmarks on Qwen3.5-397B-A17B and Llama-3.3-70B-Instruct. On the 397B model, the infrastructure reduces measured per-layer time by $15.17\\times$ over ModelOpt and $23.14\\times$ over LLM Compressor, with lower memory used per GPU.",
+        "identifiers": [
+          "SemanticScholar:2195733c327eae514838c14186194ea2ed4cc031"
+        ],
+        "semantic_scholar_id": "2195733c327eae514838c14186194ea2ed4cc031",
+        "canonical_id": "arXiv:2609.36654",
+        "arxiv_id": "2609.36654",
+        "authors": [
+          "Rui-Ying Ding",
+          "Jie Li",
+          "Kang He",
+          "Zi-Yan Liu",
+          "Cheng-Ru Song",
+          "Yue-Dong Xu",
+          "Yuan Cheng"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36760",
+      "identity_tokens": [
+        "id:SemanticScholar:020ad6a8f8ee8d4dd27c68fb7e01dfb01ffd243c",
+        "id:arXiv:2609.36760",
+        "title:quantmla functionaligned dualpath quantization for lowbit mla kv caching",
+        "url:https://arxiv.org/abs/2609.36760"
+      ],
+      "record": {
+        "title": "QuantMLA: Function-Aligned Dual-Path Quantization for Low-Bit MLA KV Caching",
+        "source_url": "https://arxiv.org/abs/2609.36760",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-Head Latent Attention (MLA) enables expressive multi-head attention with compact caches for its content and decoupled RoPE paths, yet cache memory still scales linearly with context length and batch size. In this work, we establish a systematic model of MLA's dual-path quantization errors, characterizing their distinct effects on attention-output distortion and explaining the pronounced amplification of RoPE-path errors. Guided by this analysis, we introduce QuantMLA, a function-aligned framework for low-bit dual-path quantization. We derive path-specific transformation spaces that preserve full-precision computation while remaining fully fusible into model parameters offline, eliminating online transformation overhead. Within these spaces, QuantMLA learns path-specific transformations with function-aligned objectives: attention-output reconstruction captures the content path's coupled matching and aggregation errors, while positional QK reconstruction preserves the RoPE-induced component of the attention logits and admits a theoretical bound on output distortion. Across four MLA model families, QuantMLA enables, to our knowledge, the first reported joint INT4 caching of the content and RoPE caches with minimal accuracy degradation. Further compressing the content cache to INT2 while retaining the RoPE key cache at INT4 maintains competitive performance on challenging reasoning and code benchmarks. We develop a native low-bit MLA attention kernel that integrates unpacking and dequantization directly into attention computation. The physical cache layout provides 3.59x compression at 128K context, while a cache-pressure serving workload achieves 5.168x higher whole-job output throughput than BF16. The code will be released upon acceptance.",
+        "identifiers": [
+          "SemanticScholar:020ad6a8f8ee8d4dd27c68fb7e01dfb01ffd243c"
+        ],
+        "semantic_scholar_id": "020ad6a8f8ee8d4dd27c68fb7e01dfb01ffd243c",
+        "canonical_id": "arXiv:2609.36760",
+        "arxiv_id": "2609.36760",
+        "authors": [
+          "Zun-Hai Su",
+          "Yuxuan Sun",
+          "Jian-Chao Tan",
+          "Tao Zhang",
+          "Rui-Han Hu",
+          "Yu-Chen Xie",
+          "Xun-Liang Cai",
+          "Ngai Wong"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36828",
+      "identity_tokens": [
+        "id:SemanticScholar:2a96a4994ba693b94bc8ffef4efc7fa4156a7824",
+        "id:arXiv:2609.36828",
+        "title:calibrate the decisions that change the future onpolicy posttraining quantization for multimodal large language models",
+        "url:https://arxiv.org/abs/2609.36828"
+      ],
+      "record": {
+        "title": "Calibrate the Decisions That Change the Future: On-Policy Post-Training Quantization for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.36828",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) lowers deployment cost for multimodal large language models, but calibration typically reconstructs fixed sequences with local objectives. This overlooks autoregressive feedback: a quantization-induced token change redirects the prefix and changes future states. Yet on-policy coverage alone is insufficient because many decision mismatches barely affect future generation. We propose OnPTQ, an on-policy framework that calibrates on trajectories visited by the current quantized policy. On shared prefixes, OnPTQ identifies quantization-eroded boundaries, evaluates competing tokens through short counterfactual rollouts, and combines current discrepancy with branch consequence into a Decision--Consequence risk. The risk prioritizes critical states, while context anchoring and trajectory refresh preserve multimodal behavior and keep calibration aligned with the updated policy. We further derive a Decision--Consequence bound linking behavioral deviation to current policy discrepancy and action-conditioned future-value span. Across vision--language and omni-modal Qwen models under multiple low-bit settings, OnPTQ improves downstream performance and yields fewer correctness flips against the corresponding Dense/FP16 references, without changing the deployed inference graph.",
+        "identifiers": [
+          "SemanticScholar:2a96a4994ba693b94bc8ffef4efc7fa4156a7824"
+        ],
+        "semantic_scholar_id": "2a96a4994ba693b94bc8ffef4efc7fa4156a7824",
+        "canonical_id": "arXiv:2609.36828",
+        "arxiv_id": "2609.36828",
+        "authors": [
+          "Wen-Xiao Fan",
+          "Jing-Ling Fu",
+          "Li-Chen Ma",
+          "Yu He",
+          "Lu Liu",
+          "Jin-Bao Xue",
+          "Ke Zhang",
+          "Jun-Shi Huang",
+          "Kan Li"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37887",
+      "identity_tokens": [
+        "id:SemanticScholar:b0135df08748d4d42b00cf7d9c93664e95161da9",
+        "id:arXiv:2609.37887",
+        "title:behavioral capacity certificates for quantized language models",
+        "url:https://arxiv.org/abs/2609.37887"
+      ],
+      "record": {
+        "title": "Behavioral Capacity Certificates for Quantized Language Models",
+        "source_url": "https://arxiv.org/abs/2609.37887",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Activation and key-value cache precision change what a quantized language model computes without altering its stored weights. Direct weight-code bounds, however, assign identical complexity to deployments that behave differently and charge separately for weight codes that behave identically. Behavioral Capacity Certificates (BCC) charge for behavior using the aggregate prior mass of complete implementations---weights, scales, activation and cache rules---that induce the same bounded loss. When quantization merges implementations, this shared mass lowers the complexity penalty, and a break-even law determines when the saving survives the cost of validating it. BCC supports a three-step deployment workflow, and our experiments verify each step. First, a forward-only screen shortlists per-layer bit-widths by how often candidate perturbations preserve the reference predictions, with quality comparable to Hessian-guided selection at lower preprocessing cost. Second, margin-certified cells identify weights that can be pruned or sign-flipped without changing the deployed behavior: every permitted combination preserves all declared predictions, and on OLMoE-1B-7B and SmolLM2-1.7B, independent probes bound the probability that any permitted combination changes a prediction on new text. Third, BCC bounds the population loss of the deployed model, nonvacuously for complete decoders and more tightly than the compressed-code route. At equal cache memory, giving keys higher precision than values yields lower NLL and higher prediction agreement on GPT-2, Qwen2.5, and SmolLM2, together with a tighter complexity bound in the GPT-2 audit.",
+        "identifiers": [
+          "SemanticScholar:b0135df08748d4d42b00cf7d9c93664e95161da9"
+        ],
+        "semantic_scholar_id": "b0135df08748d4d42b00cf7d9c93664e95161da9",
+        "canonical_id": "arXiv:2609.37887",
+        "arxiv_id": "2609.37887",
+        "authors": [
+          "Arian Eamaz",
+          "Mojtaba Soltanalian"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38149",
+      "identity_tokens": [
+        "id:SemanticScholar:fceffa100ac53a4dfcc4e0a8b8b6ede554a89565",
+        "id:arXiv:2609.38149",
+        "title:pretraining latent information feedback transformers with teacher supervision",
+        "url:https://arxiv.org/abs/2609.38149"
+      ],
+      "record": {
+        "title": "Pretraining Latent Information Feedback Transformers with Teacher Supervision",
+        "source_url": "https://arxiv.org/abs/2609.38149",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer language models (LMs) are feed-forward: deep-layer representations are never fed back to shallower layers, and the only pathway for information to flow downward across generation steps is the decoded token. This narrow channel forces models to recompute intermediate results and to discard alternative continuations. In this work, we remove this bottleneck during pretraining, introducing the LIFT (Latent Information Feedback Transformer) architecture and training method which enable LMs to propagate state across generation. We achieve this by turning recurrent-state learning into a teacher-forced prediction problem: each input token is paired with an information-dense state, derived from the next-token distribution of an off-the-shelf pretrained LM. The model, extended with a small number of additional parameters, is then trained to predict both the next token and the next state. As the input states are precomputed, pretraining remains fully parallel across positions. At inference, the model's own predicted states are fed back, with a minor computational overhead that decreases with model size. Experiments with pretrained models ranging from 135M to 1B parameters show that LIFT consistently outperforms standard Transformers and baselines on language modeling, downstream reasoning tasks, and procedural tasks under token-matched budget, while being on par with or ahead of compute-matched Transformers. Moreover, a controlled study on a state-tracking task shows that a tiny LIFT outperforms same-size Transformers trained on 8x more data, even when trained with the states of a Transformer that fails the task. Overall, we show that LMs can learn to exploit deep-to-shallow feedback during pretraining via scalable teacher supervision.",
+        "identifiers": [
+          "SemanticScholar:fceffa100ac53a4dfcc4e0a8b8b6ede554a89565"
+        ],
+        "semantic_scholar_id": "fceffa100ac53a4dfcc4e0a8b8b6ede554a89565",
+        "canonical_id": "arXiv:2609.38149",
+        "arxiv_id": "2609.38149",
+        "authors": [
+          "Dor Tirosh",
+          "Ido Amos",
+          "Mor Geva"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38166",
+      "identity_tokens": [
+        "id:SemanticScholar:3ecf62f53d3386586c160ec4c305708e9dc33d45",
+        "id:arXiv:2609.38166",
+        "title:leapquant efficient linear attention with accurate recurrent state quantization",
+        "url:https://arxiv.org/abs/2609.38166"
+      ],
+      "record": {
+        "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+        "source_url": "https://arxiv.org/abs/2609.38166",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent LLMs increasingly adopt hybrid designs that replace standard attention with linear attention, such as Gated DeltaNet (GDN) and Kimi Delta Attention (KDA). Although they compress the context into a fixed-size recurrent state and substantially reduce the cost of long-context processing, repeatedly reading and updating that state remains a major inference bottleneck. Quantization offers a natural way to reduce this cost, but can significantly degrade model quality, due to the accumulation of rounding errors and the presence of outlier rows and columns in the state. To address these challenges, we propose LeapQuant, a training-free method that achieves near-lossless performance under 8-bit recurrent-state quantization. First, to mitigate error accumulation, we propose per-window quantization, which leaps over a window of tokens and quantizes the state only once at its end. Within a window, outputs are computed from the fixed low-bit state together with high-precision buffered updates. Second, to reduce the error introduced by each quantization, LeapQuant retains the state's largest outliers as a few high-precision Compensator Tokens, which share the update path of real tokens. We then smooth the remaining residual before quantization to further reduce the error. Comprehensive experiments across the Qwen, Kimi, and GLM model families show that LeapQuant substantially reduces memory and compute costs during inference. With accuracy comparable to the FP32 baseline, it achieves average speedups of 2.05--3.70$\\times$ at the kernel level and 1.47$\\times$ for end-to-end inference on NVIDIA B200, RTX PRO 6000, and RTX 5090 GPUs.",
+        "identifiers": [
+          "SemanticScholar:3ecf62f53d3386586c160ec4c305708e9dc33d45"
+        ],
+        "semantic_scholar_id": "3ecf62f53d3386586c160ec4c305708e9dc33d45",
+        "canonical_id": "arXiv:2609.38166",
+        "arxiv_id": "2609.38166",
+        "authors": [
+          "Yi Pan",
+          "Hao-Cheng Xi",
+          "Kan Zhu",
+          "Xing-Yang Li",
+          "Yi-Bo Wu",
+          "Mayank Mishra",
+          "Hong-Tao Zhang",
+          "William X.Zheng",
+          "Baris Kasikci",
+          "Song Han",
+          "Kurt Keutzer",
+          "Rishabh K. Iyer",
+          "Ion Stoica"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38169",
+      "identity_tokens": [
+        "id:SemanticScholar:00a4b940d6e994c1e2301a61a673bd47729e76fe",
+        "id:arXiv:2609.38169",
+        "title:stepquant when and where errors matter in deltarule recurrent state quantization",
+        "url:https://arxiv.org/abs/2609.38169"
+      ],
+      "record": {
+        "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
+        "source_url": "https://arxiv.org/abs/2609.38169",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a substantial memory bottleneck under concurrent serving. Directly quantizing recurrent states to low precision often leads to severe accuracy degradation, as quantization errors propagate through successive state updates. We discover that the impact of these errors depends on two complementary dimensions: temporally, errors in long-lived memory can persist across many decoding steps; spatially, errors in different key rows affect model outputs differently, while state magnitudes vary substantially along both rows and columns. Motivated by these observations, we propose STEPQuant, a spatial-temporal post-training quantization framework for Delta-rule recurrent states. STEPQuant allocates precision according to error magnitude and memory lifetime, and jointly fits key-row and value-column scales based on state distributions and key-row impact on output error. Experiments on Qwen3.8-27B and Kimi-Linear-48B-A3B-Instruct across both long- and short-generation benchmarks show that STEPQuant closely matches FP32-state accuracy under a nominal 6-bit budget and outperforms uniform INT8 in its 4-bit configuration. Integrated into SGLang with optimized GPU kernels, 6-bit STEPQuant achieves over 5x recurrent-state compression and reduces total serving memory by up to 68.7%. Our code is available at https://github.com/Dreamer-Toby/STEPQuant.",
+        "identifiers": [
+          "SemanticScholar:00a4b940d6e994c1e2301a61a673bd47729e76fe"
+        ],
+        "semantic_scholar_id": "00a4b940d6e994c1e2301a61a673bd47729e76fe",
+        "canonical_id": "arXiv:2609.38169",
+        "arxiv_id": "2609.38169",
+        "authors": [
+          "Bing-Chen Yao",
+          "Hao-Bo Xu",
+          "Hao-Kun Lin",
+          "Yi-Chen Wu",
+          "Ziyu Guo",
+          "Ren-Rui Zhang",
+          "Zhi-Chao Lu",
+          "Zhe-Nan Sun",
+          "Ying Wei"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39056",
+      "identity_tokens": [
+        "id:SemanticScholar:cb229b94d40045ffe3bdce3a90b40015e0b30d39",
+        "id:arXiv:2609.39056",
+        "title:steerquant steering quantization error with actionguided scaling in worldaction models",
+        "url:https://arxiv.org/abs/2609.39056"
+      ],
+      "record": {
+        "title": "SteerQuant: Steering Quantization Error with Action-Guided Scaling in World-Action Models",
+        "source_url": "https://arxiv.org/abs/2609.39056",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "World-action models (WAMs) jointly generate future world states and actions through iterative denoising, using shared weights to process heterogeneous semantic streams of video, proprioceptive, and action tokens. Quantization reduces inference cost, but comparable numerical errors in different streams can have markedly different effects on final actions, making numerical accuracy alone insufficient for reliable control. We introduce SteerQuant, a 4-bit quantization framework for WAMs that steers errors toward computations with less influence on final actions. It maps how each stream's quantization errors affect final actions and uses this map to guide shared channel scaling. Activation scaling is further calibrated for each stream and denoising step to accommodate changes in activation ranges and action impact. This adapts quantization to different stream requirements without duplicating weights or increasing bit-widths for selected streams. To reduce the extra kernel launches and memory traffic introduced by scaling, we develop Rudder, a 4-bit inference engine for WAMs that fuses scaling and output compensation into low-bit kernels. Under W4A8 and W4A4, SteerQuant maintains mean LIBERO success within 0.8 percentage points of full precision, while delivering up to $2.23\\times$ denoising speedup over BF16 across three WAMs with reduced peak GPU memory usage. On a real dual-arm robot, W4A8 deployment achieves a $1.35\\times$ end-to-end inference speedup while maintaining average task success relative to BF16.",
+        "identifiers": [
+          "SemanticScholar:cb229b94d40045ffe3bdce3a90b40015e0b30d39"
+        ],
+        "semantic_scholar_id": "cb229b94d40045ffe3bdce3a90b40015e0b30d39",
+        "canonical_id": "arXiv:2609.39056",
+        "arxiv_id": "2609.39056",
+        "authors": [
+          "Yun-Han Wang",
+          "Hao-Dong Wang",
+          "Zhi-Ming Liu",
+          "Zi-Cong Hong",
+          "Qian-Li Liu",
+          "Xiao-Yi Pang",
+          "Yang Hu",
+          "Quan-Xin Shou",
+          "Yi-Kun Miao",
+          "Song Guo"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 3,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39223",
+      "identity_tokens": [
+        "id:SemanticScholar:c8a06ceddc47be1cb3fa8ca2c80ad29af9f6a6e0",
+        "id:arXiv:2609.39223",
+        "title:qatfactory a versatile deploymentaligned framework for quantizationaware training and distillation of llms",
+        "url:https://arxiv.org/abs/2609.39223"
+      ],
+      "record": {
+        "title": "QATFactory: A Versatile, Deployment-Aligned Framework for Quantization-aware Training and Distillation of LLMs",
+        "source_url": "https://arxiv.org/abs/2609.39223",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) inference is increasingly moving toward lower precision to realize the throughput of hardware accelerators, but aggressive post-training quantization (PTQ) can degrade model quality. We present QATFactory, an open-source framework for deployment-aligned quantization-aware distillation (QAD) and reinforcement learning (QARL). QATFactory simulates deployment-time quantization while performing matrix multiplications in BF16, allowing models to adapt to quantization noise without requiring training hardware that natively supports the target format; for example, it supports NVFP4 training on H100 GPUs, which lack FP4 Tensor Cores. The framework supports NVFP4, MXFP4, and $\\text{llama}.\\text{cpp}$'s Q4_K format; dense and mixture-of-experts models; and both full-parameter and LoRA-based training. It exports checkpoints directly to vLLM and $\\text{llama}.\\text{cpp}$ without an additional lossy conversion step or added inference overhead. With QATFactory, we conduct extensive experiments on models ranging from 8B to 230B parameters and evaluate exported checkpoints in production inference engines. Across models and formats, QAD consistently improves deployed-model quality over strong PTQ baselines. On Qwen3.5-9B, QAD achieves average benchmark accuracies of 68.9% under NVFP4 and 66.0% under MXFP4, outperforming the best PTQ results of 65.4% and 56.4%, respectively. Through our experiments, we found that although both FP4 formats quantize weights and activations at deployment, the best training strategy is format-dependent: NVFP4 generally performs better when only weights are quantized during training, whereas MXFP4 benefits from quantizing both weights and activations. At a fixed training token budget, training on fewer 32K sequences improves average accuracy by 1.9 points over training on more 4K sequences.",
+        "identifiers": [
+          "SemanticScholar:c8a06ceddc47be1cb3fa8ca2c80ad29af9f6a6e0"
+        ],
+        "semantic_scholar_id": "c8a06ceddc47be1cb3fa8ca2c80ad29af9f6a6e0",
+        "canonical_id": "arXiv:2609.39223",
+        "arxiv_id": "2609.39223",
+        "authors": [
+          "Wei-Li Xu",
+          "Ji-Sen Li",
+          "Yu-Qing Jian",
+          "Chen-Xi Li",
+          "Zhizhou Sha",
+          "Yi-Fan Yu",
+          "Qing-Yang Wu",
+          "Chen-Feng Xu",
+          "Zhong-Zhu Zhou",
+          "Tian-Yi Zhang",
+          "Ben Athiwaratkun"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 3,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39361",
+      "identity_tokens": [
+        "id:SemanticScholar:6fd4ff2c0cea86a82ee6164edffea5d5bdd39eca",
+        "id:arXiv:2609.39361",
+        "title:lampattention lookahead mixedprecision flashattention for dedicated accelerators",
+        "url:https://arxiv.org/abs/2609.39361"
+      ],
+      "record": {
+        "title": "LampAttention: Look-Ahead Mixed-Precision FlashAttention for Dedicated Accelerators",
+        "source_url": "https://arxiv.org/abs/2609.39361",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While most attention logits can be computed in low precision without degrading numerical stability, current attention kernels fail to exploit this phenomenon. We introduce a novel hardware-algorithm co-design in the form of mixed-precision FlashAttention. Our method accumulates key-query products and evaluates their exponentials in 8-bit formats, then adaptively identifies sensitive sub-blocks and recomputes them in 16-bit formats. We propose the specifications for a dedicated accelerator capable of executing this pipeline efficiently. Simulated experiments with Qwen3 and Gemma 3 show that rerouting a selective minority of sub-blocks to high precision is sufficient to recover the baseline model performance.",
+        "identifiers": [
+          "SemanticScholar:6fd4ff2c0cea86a82ee6164edffea5d5bdd39eca"
+        ],
+        "semantic_scholar_id": "6fd4ff2c0cea86a82ee6164edffea5d5bdd39eca",
+        "canonical_id": "arXiv:2609.39361",
+        "arxiv_id": "2609.39361",
+        "authors": [
+          "Stanislav S. Budzinskiy",
+          "Marian Gloser",
+          "T. Yilmaz",
+          "Ying Hong Tham",
+          "Yuan-Yi Lin",
+          "Wen-Yi Fang",
+          "Fan Wu",
+          "Philipp Petersen"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 3,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.115411",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.115411",
+        "id:SemanticScholar:87bd19f3b479204f2d3f7a6da4cbed192ddd55ab",
+        "title:navigating maritime emergencies with large models a lifecycleoriented review",
+        "url:https://doi.org/10.1016/j.engappai.2026.115411"
+      ],
+      "record": {
+        "title": "Navigating maritime emergencies with large models: A lifecycle-oriented review",
+        "source_url": "https://doi.org/10.1016/j.engappai.2026.115411",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": "Engineering applications of artificial intelligence",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:87bd19f3b479204f2d3f7a6da4cbed192ddd55ab"
+        ],
+        "semantic_scholar_id": "87bd19f3b479204f2d3f7a6da4cbed192ddd55ab",
+        "doi": "10.1016/j.engappai.2026.115411",
+        "canonical_id": "DOI:10.1016/j.engappai.2026.115411",
+        "authors": [
+          "Jing Xu",
+          "Qingqing Yang",
+          "Zhiwei Yang",
+          "Yingying Gao",
+          "Kewei Yang",
+          "Jiang Jiang"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.116054",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.116054",
+        "id:SemanticScholar:6235547bd0265d1c893dec9744cb71bf6e91d73d",
+        "title:forecastpreserving lowbit quantization for transformerbased timeseries forecasting",
+        "url:https://doi.org/10.1016/j.engappai.2026.116054"
+      ],
+      "record": {
+        "title": "Forecast-Preserving low-bit quantization for transformer-based time-series forecasting",
+        "source_url": "https://doi.org/10.1016/j.engappai.2026.116054",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": "Engineering applications of artificial intelligence",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:6235547bd0265d1c893dec9744cb71bf6e91d73d"
+        ],
+        "semantic_scholar_id": "6235547bd0265d1c893dec9744cb71bf6e91d73d",
+        "doi": "10.1016/j.engappai.2026.116054",
+        "canonical_id": "DOI:10.1016/j.engappai.2026.116054",
+        "authors": [
+          "Meng-Ke Wang",
+          "Min Gan",
+          "Fang Yuan",
+          "Jian-Nan Su"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "id:SemanticScholar:118a315fe00b4844b2cd81e948cdd819db7c1fab",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://doi.org/10.1016/j.neucom.2026.134332"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://doi.org/10.1016/j.neucom.2026.134332",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": "Neurocomputing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:118a315fe00b4844b2cd81e948cdd819db7c1fab"
+        ],
+        "semantic_scholar_id": "118a315fe00b4844b2cd81e948cdd819db7c1fab",
+        "doi": "10.1016/j.neucom.2026.134332",
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcad.2026.3663251",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2026.3663251",
+        "id:SemanticScholar:9e6f1e63faabf370f2ad66079ff34099807a6ebb",
+        "title:beyond uniform approximation toward efficient computing in logarithmic number system for large language models",
+        "url:https://doi.org/10.1109/TCAD.2026.3663251"
+      ],
+      "record": {
+        "title": "Beyond Uniform Approximation: Toward Efficient Computing in Logarithmic Number System for Large Language Models",
+        "source_url": "https://doi.org/10.1109/TCAD.2026.3663251",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Logarithmic number system (LNS) offers a more efficient quantization format than the integer system for data in large language models (LLMs), with inherently simple implementation for multiplication operations. However, the addition operation in LNS is relatively complex and difficult to balance between precision and hardware overhead. In this work, we observe that the input patterns of the computing units in the inference phase of LLMs exhibit highly skewed frequencies, resulting in nonuniform contributions to the final error. Based on this observation, we propose the beyond uniform approximation (BUA) to enhance the efficiency of LNS additions. From the perspective of lookup tables (LUTs), we propose LUT reshaping to efficiently reduce the approximation error, as well as LUT trimming, a heuristic method for simplifying LUTs within a given error budget. From the perspective of the entire LNS adder, we introduce auxiliary circuit approximation (ACA), which further reduces the hardware cost by simplifying computing data paths that are less frequently activated. Together, these techniques enable efficient approximate computing in LNS. Experimental results indicate that, compared to the multiply accumulate (MAC) unit using the naive LNS adder, BUA significantly reduces perplexity across various LLMs while reducing area-delay product (ADP) by 26.7% and power-delay product (PDP) by 30.8%. Compared to the traditional integer MAC unit, LNS with BUA achieves higher zero-shot accuracy while reducing ADP by 35.1% and PDP by 44.0%. Moreover, we also offer additional approximation options that provide greater hardware savings with only minor degradation in accuracy.",
+        "identifiers": [
+          "SemanticScholar:9e6f1e63faabf370f2ad66079ff34099807a6ebb"
+        ],
+        "semantic_scholar_id": "9e6f1e63faabf370f2ad66079ff34099807a6ebb",
+        "doi": "10.1109/TCAD.2026.3663251",
+        "canonical_id": "DOI:10.1109/TCAD.2026.3663251",
+        "authors": [
+          "Xin-Kuang Geng",
+          "Si-Ting Liu",
+          "Hui Wang",
+          "Lei-Bo Liu",
+          "Jie Han",
+          "Hong-Lan Jiang"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/lcn67947.2026.11660767",
+      "identity_tokens": [
+        "id:DOI:10.1109/lcn67947.2026.11660767",
+        "id:SemanticScholar:a05caa0467a5f9267b0e534c4fc88e1d34f786f5",
+        "title:neufas edgeefficient mambabased channel estimation for fluid antenna systems",
+        "url:https://doi.org/10.1109/lcn67947.2026.11660767"
+      ],
+      "record": {
+        "title": "NeuFAS: Edge-Efficient Mamba-Based Channel Estimation for Fluid Antenna Systems",
+        "source_url": "https://doi.org/10.1109/lcn67947.2026.11660767",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": "IEEE Conference on Local Computer Networks",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:a05caa0467a5f9267b0e534c4fc88e1d34f786f5"
+        ],
+        "semantic_scholar_id": "a05caa0467a5f9267b0e534c4fc88e1d34f786f5",
+        "doi": "10.1109/lcn67947.2026.11660767",
+        "canonical_id": "DOI:10.1109/lcn67947.2026.11660767",
+        "authors": [
+          "Shengzhe Lyu",
+          "Qian-Ren Li",
+          "Wei-Tao Xu",
+          "Chengwen Luo"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00983",
+      "identity_tokens": [
+        "id:SemanticScholar:7f38969db72ab1dfb0156aa3902e05e0ab074a59",
+        "id:arXiv:2610.00983",
+        "title:the devil is in the reconstruction loss scale rethinking optimization in llm quantization",
+        "url:https://arxiv.org/abs/2610.00983"
+      ],
+      "record": {
+        "title": "The Devil Is in the Reconstruction Loss Scale: Rethinking Optimization in LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2610.00983",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) methods typically use sequential quantization that partitions a pre-trained LLM into a series of units (e.g., transformer blocks), with one unit quantized at each stage. State-of-the-art PTQ methods are predominantly learning-based, optimizing auxiliary quantization parameters (e.g., scaling factors, rotation matrices, clipping thresholds, and adapters) via gradient descent to minimize a reconstruction loss. A common practice is to use mean squared error (MSE) as the reconstruction loss function, yet its induced optimization behavior remains largely unexplored. In this work, we take a holistic view of sequential quantization and systematically investigate how optimization evolves from the first quantization stage to the last, aiming for a deep understanding of optimization in learning-based PTQ schemes. Through extensive empirical studies spanning representative learning-based PTQ methods, LLM families, model scales, architectures, quantization settings and various tasks, we consistently uncover Optimization Imbalance: reconstruction loss magnitudes vary dramatically across stages, accompanied by highly uneven gradient magnitudes and parameter updates under MSE. We term the cross-stage range of loss magnitudes the reconstruction loss scale, and reveal that MSE translates the unexpectedly large reconstruction loss scale into highly uneven gradient magnitudes, which in turn lead to uneven optimization strength across quantization stages. This finding suggests a general principle for improving learning-based PTQ: optimization strength across stages should be decoupled from the reconstruction loss scale. Theoretically, we show that root mean squared error (RMSE) variants defined at the sample, channel, token, and element levels naturally realize this principle through implicit gradient normalization, outperforming MSE significantly as a drop-in replacement.",
+        "identifiers": [
+          "SemanticScholar:7f38969db72ab1dfb0156aa3902e05e0ab074a59"
+        ],
+        "semantic_scholar_id": "7f38969db72ab1dfb0156aa3902e05e0ab074a59",
+        "canonical_id": "arXiv:2610.00983",
+        "arxiv_id": "2610.00983",
+        "authors": [
+          "Chao Li",
+          "Shi-Geng Wang",
+          "An-Bang Yao"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.01889",
+      "identity_tokens": [
+        "id:SemanticScholar:0110396e7d85c64314ad096bfcdca36e02301b0a",
+        "id:arXiv:2610.01889",
+        "title:stochastic rounding in lowprecision transformer inference a variableprecision emulation study of a small gpt2",
+        "url:https://arxiv.org/abs/2610.01889"
+      ],
+      "record": {
+        "title": "Stochastic Rounding in Low-Precision Transformer Inference: A Variable-Precision Emulation Study of a Small GPT-2",
+        "source_url": "https://arxiv.org/abs/2610.01889",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Should low-precision transformer inference use stochastic rounding (SR) or round-to-nearest (RN)? The answer depends on where in the network you look. We isolate this effect by holding the numerical format fixed and varying only the rounding rule at individual operation sites. To enable experiments at freely chosen precisions, we extend the PRISM vectorized rounding library to arbitrary virtual precision via a variable-precision stochastic rounding (VPSR) algorithm, proving that the rounding decision is evaluated exactly in hardware floating point. We develop two analyses providing complementary insight into this site-level trade-off. First, a probabilistic forward-error bound for linear projections shows that SR's error envelope grows as $O(\\sqrt{n} u)$ in reduction length $n$, versus $O(n u)$ for RN, a gap that widens rapidly at low precision and is most pronounced in the long multilayer perceptron (MLP) down-projection. Second, a second-order decomposition of expected cross-entropy loss change at the output softmax into signed drift, drift curvature, and a Fisher-weighted variance penalty reveals why the two sites behave oppositely: MLP noise is predominantly a uniform logit shift to which softmax is invariant, so SR's variance is largely discounted; head noise is non-uniform across the vocabulary and is not. On DistilGPT-2 at $t=6$ significand bits, observations match theory: SR in the MLP raises perplexity to 1.15x the full-precision reference, versus 2.21x for RN. At the language-model head, the ordering reverses because SR introduces non-uniform variance, whereas deterministic RN carries none. In a mixed-precision configuration (MLP output at $t=6$), assigning SR to the MLP and RN to the head brings perplexity within 1.10x of the full-precision reference, a 28% reduction over matched-bit RN.",
+        "identifiers": [
+          "SemanticScholar:0110396e7d85c64314ad096bfcdca36e02301b0a"
+        ],
+        "semantic_scholar_id": "0110396e7d85c64314ad096bfcdca36e02301b0a",
+        "canonical_id": "arXiv:2610.01889",
+        "arxiv_id": "2610.01889",
+        "authors": [
+          "Yohan Chatelain",
+          "Pablo de Oliveira Castro Krembil Centre for Neuroinformatics",
+          "Camh",
+          "Toronto",
+          "Canada",
+          "Universit'e Paris-Saclay",
+          "Uvsq",
+          "LI-Parad",
+          "Versailles",
+          "France"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.02072",
+      "identity_tokens": [
+        "id:SemanticScholar:aa3c53f4cf2633d4f024d3d949a306f8fd884cb4",
+        "id:arXiv:2610.02072",
+        "title:pypottery an aipowered endtoend suite for pottery processing and publication",
+        "url:https://arxiv.org/abs/2610.02072"
+      ],
+      "record": {
+        "title": "PyPottery: an AI-powered end-to-end suite for pottery processing and publication",
+        "source_url": "https://arxiv.org/abs/2610.02072",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The study of ceramic materials constitutes a cornerstone of archaeological research, yet the post-production workflow for pottery documentation remains labor-intensive and creates significant publication bottlenecks. This paper presents PyPottery, an open-source, AI-powered suite designed to semi-automate the complete ceramic documentation pipeline. The suite comprises four integrated modules: PyPotteryScan for automated image extraction and handwriting recognition; PyPotteryInk for automatic inking of pencil drawings; PyPotteryTrace for semantically-aware vectorization; and PyPotteryLayout for automated layout generation. Evaluated on 50 hand-drawn sheets containing 240 pottery drawings from the Terramara di Montale (Italy), the framework achieved substantial time savings confirmed by usability study participants, who reported a median perceived speedup of 40$\\times$ over traditional workflows (range: 17.5$\\times$--120$\\times$). These results highlight the potential of AI-assisted tools in archaeological documentation, while the paper addresses the strategic redistribution of cognitive labor toward augmentation rather than automation.",
+        "identifiers": [
+          "SemanticScholar:aa3c53f4cf2633d4f024d3d949a306f8fd884cb4"
+        ],
+        "semantic_scholar_id": "aa3c53f4cf2633d4f024d3d949a306f8fd884cb4",
+        "canonical_id": "arXiv:2610.02072",
+        "arxiv_id": "2610.02072",
+        "authors": [
+          "L. Cardarelli"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.compeleceng.2026.111406",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.compeleceng.2026.111406",
+        "id:SemanticScholar:e24e705643638cb7f71e61a9812f5eec50c57c50",
+        "title:tiny large language models for iot networks potentials and challenges",
+        "url:https://doi.org/10.1016/j.compeleceng.2026.111406"
+      ],
+      "record": {
+        "title": "Tiny Large Language Models for IoT networks: Potentials and challenges",
+        "source_url": "https://doi.org/10.1016/j.compeleceng.2026.111406",
+        "year": 2026,
+        "published": "2026-11-01",
+        "venue": "Computers & electrical engineering",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:e24e705643638cb7f71e61a9812f5eec50c57c50"
+        ],
+        "semantic_scholar_id": "e24e705643638cb7f71e61a9812f5eec50c57c50",
+        "doi": "10.1016/j.compeleceng.2026.111406",
+        "canonical_id": "DOI:10.1016/j.compeleceng.2026.111406",
+        "authors": [
+          "Muhammed Golec",
+          "S. Melhem",
+          "Yaser M. Khamayseh",
+          "Abdulmalik Alwarafy",
+          "N. Al-Dhahir"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "freshness_age_days": -29,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0cf46ac720f4d93267f8ff9b78445e36998699adffb8004774afd12dff37d7c0",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

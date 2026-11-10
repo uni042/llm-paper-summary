@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6b4bd03c1c519d39-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.17436",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.17436",
+    "identity_tokens": [
+      "arXiv:2512.17436"
+    ],
+    "reason": "There is plausible on-device inference relevance, but efficiency is an intended use and artifact release rather than an evaluated inference-efficiency result; scope is also home-centric VLM.",
+    "first_checked_at": "2026-10-05T15:28:27+00:00",
+    "last_checked_at": "2026-10-05T15:28:27+00:00",
+    "linked_from": [
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Xiaomi MiMo-VL-Miloco Technical Report"
+  },
+  "processed_at": "2026-10-05T15:28:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6b4bd03c1c51",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

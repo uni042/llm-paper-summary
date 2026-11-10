@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "af97f8138463bf4fe2191182ba5cc86672ed35a33880629d2bfbbf191663e8f2",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_c575911f77e48191a3c2d8a11819534a--2026-2609.32579-dimpo-attention-projection-research-20261023-0400-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2609.32579",
+  "worker_completed_at": "2026-10-23T04:05:12+09:00",
+  "worker_run_key": "20261023-0400-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2626,
+    "body_paragraphs": 12,
+    "method_chars": 733,
+    "method_paragraphs": 4,
+    "evaluation_chars": 205,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 205 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 205 < 500"
+  ],
+  "processed_at": "2026-10-24T18:00:57+00:00"
+}

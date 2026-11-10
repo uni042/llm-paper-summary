@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0c94d4858f80de4d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.22840",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.22840",
+    "identity_tokens": [
+      "arXiv:2604.22840"
+    ],
+    "reason": "推論時のreflection負荷を避ける可能性はあるが、本文で解決策は学習時の審美性報酬であり、推論効率の具体的な改善量や追加コストは確認できない。",
+    "first_checked_at": "2026-10-07T10:40:03+00:00",
+    "last_checked_at": "2026-10-07T10:40:03+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AeSlides: Incentivizing Aesthetic Layout in LLM-Based Slide Generation via Verifiable Rewards"
+  },
+  "processed_at": "2026-10-07T10:40:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0c94d4858f80",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

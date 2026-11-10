@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Shared Low-rank Basis Factorization for Data-free Mixture-of-Experts Compression",
+      "source_url": "https://arxiv.org/abs/2610.09342",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) large language models decouple capacity from compute through sparse routing, but their large parameter count creates storage and serving challenges. We analyze three MoE compression families: expert pruning, expert merging, and weight reconstruction, and derive structural error bounds showing that pruning and merging can incur non-vanishing errors tied to routing and expert heterogeneity. In contrast, weight reconstruction avoids these structural costs by preserving expert structure and routing. Motivated by the analysis, we propose Shared Low-rank Basis Factorization (SLBF), a data-free weight reconstruction method that uses rank-$k$ bases shared among experts, enabling richer cross-expert sharing, faster convergence, and lower reconstruction error. A post-hoc gauge fixing removes redundant parameters at no representational cost. Across five MoE architectures spanning 16B to 122B parameters, SLBF consistently outperforms methods from all three compression families.",
+      "identifiers": [
+        "SemanticScholar:fdf13c46fc0d82cf16820b6d2a72e4ded71212e1"
+      ],
+      "semantic_scholar_id": "fdf13c46fc0d82cf16820b6d2a72e4ded71212e1",
+      "canonical_id": "arXiv:2610.09342",
+      "arxiv_id": "2610.09342",
+      "doi": "10.18653/2026.findings-emnlp.1853",
+      "authors": [
+        "Tian-Xiao Cao",
+        "Jia-He Shao",
+        "Yu-Ning Qiu",
+        "Kyohei Atarashi",
+        "Hisashi Kashima",
+        "Qianchuan Zhao"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "専門家枝刈り・統合の構造誤差を解析し、ルーティングと専門家構造を保つ共有rank-k基底の重み再構成SLBFを提案。データ不要で16B〜122Bの5種MoEを圧縮し、推論配備時の重みメモリ制約に直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CONCORD: Asynchronous Sparse Aggregation for Device-Cloud Rag Under Document Isolation",
+      "source_url": "https://arxiv.org/abs/2606.15179",
+      "year": 2026,
+      "published": "2026-06-13",
+      "venue": "2026 IEEE International Conference on Web Services (ICWS)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation (RAG) has emerged as a pivotal technique for improving language models by incorporating external knowledge at inference time. As devicecloud collaborative inference makes it feasible to deploy small language models on edge devices, a new setting arises in which private documents remain on the device and public knowledge resides in the cloud. Privacy and policy constraints often forbid raw document exchange, creating a document-isolated dual-end RAG setting. However, existing methods rely on frequent remote synchronization and dense evidence transfer, limiting throughput under realistic latency and bandwidth conditions. To address this issue, we propose CONCORD, an asynchronous sparse aggregation framework for dual-end RAG under document isolation. CONCORD treats the cloud as an asynchronously arriving evidence source rather than a continuously synchronized co-generator. Specifically, we introduce waiting debt control to decide whether each decoding step should continue waiting for remote participation based on the observed return of waiting. We also design a certificate-guided minimal supplementation mechanism that requests only the remote evidence needed to determine the current greedy decision. Steps that consult the cloud preserve the same greedy token as dense dual-end aggregation, while the remaining steps commit locally without remote evidence. Experiments on Natural Questions and WikiText-2 show that CONCORD improves end-to-end throughput over baselines by $1.66 \\times$ and $2.15 \\times$, respectively, while reducing pertoken communication by over two orders of magnitude and maintaining comparable answer quality and perplexity.",
+      "identifiers": [
+        "SemanticScholar:4848b6e5f1943e98aacd5ca4a5729b06e7587b74"
+      ],
+      "semantic_scholar_id": "4848b6e5f1943e98aacd5ca4a5729b06e7587b74",
+      "canonical_id": "arXiv:2606.15179",
+      "arxiv_id": "2606.15179",
+      "doi": "10.1109/ICWS72778.2026.00134",
+      "authors": [
+        "Xuedong Hu",
+        "Zhi-Qing Tang",
+        "Zhi-Di Yao",
+        "Tian Wang",
+        "Wei-Jia Jia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 147,
+        "matched_prestigious_venue": null
+      },
+      "reason": "端末内の非公開文書とクラウドの公開文書を交換せずに統合するdevice-cloud RAGで、待機負債制御と証明書に基づく最小追加証拠取得を提案。クラウド参加ステップのgreedy出力一致を保持しつつ通信量を大幅削減し、推論スループットを改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Dispatch Overhead, Not Kernel Quality: The Performance Bottleneck in Single-Stream WebGPU LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.08730",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models are increasingly deployed in resource-constrained, single-stream settings, from internet browsers to edge devices, where requests arrive one at a time at batch size 1 rather than in large batches. In this regime, where WebGPU serves as a modern cross-platform standard, per-operation dispatch overhead, rather than kernel compute, can dominate inference cost, yet it remains poorly characterized. In this work, we introduce a sequential-dispatch measurement method and show that naive single-operation measurements overestimate per-dispatch cost by conflating dispatch with synchronization. Using our method, we measure the per-dispatch cost and show that it is independent of data type used. Through a controlled fusion experiment, we show that the dispatch overhead, not kernel quality, is the bottleneck at batch size 1, and isolate the dispatch count as the cause. We conclude that at batch size 1, the effective approach to LLM inference optimization in WebGPU is reducing dispatch count. Our findings point to dispatch amortization, in the inference engines and in the WebGPU specification, as a path to practical browser-based inference.",
+      "identifiers": [
+        "SemanticScholar:bc5ffa38aa24d8bc8da7bfe155f9771884cdc49a"
+      ],
+      "semantic_scholar_id": "bc5ffa38aa24d8bc8da7bfe155f9771884cdc49a",
+      "canonical_id": "arXiv:2608.08730",
+      "arxiv_id": "2608.08730",
+      "authors": [
+        "Jędrzej Maczan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 90,
+        "matched_prestigious_venue": null
+      },
+      "reason": "WebGPUでバッチ1の逐次LLM推論を対象に、個別カーネル測定に同期コストが混入する問題を分離する逐次dispatch測定法を提案。融合実験から演算品質よりdispatch回数の削減が律速改善に効くと検証。ブラウザ推論ランタイム設計に直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling",
+      "source_url": "https://arxiv.org/abs/2609.19499",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling can improve large language model reasoning by generating and combining multiple candidate responses. In sampling-based methods, the inference budget is often described by the number of generated candidates, N. However, N tells us how many candidates are generated, not how they are executed. The same candidate budget can be produced in one batched generation call or split across several sequential calls with smaller batch sizes. We first study the effect of increasing N on reasoning accuracy using Phi-3-mini and Qwen2.5-1.5B on 500 GSM8K prompts. As expected, increasing N from 1 to 8 improves accuracy by 8.4 percentage points for Phi-3-mini and 18.4 points for Qwen2.5-1.5B. However, accuracy alone does not show the systems cost of using a larger candidate budget. We therefore fix N = 8 and compare four generation schedules: 1x8, 2x4, 4x2, and 8x1, where axb denotes a generation calls with b candidates per call. We measure latency, throughput, GPU-hours, and gross GPU-device energy while keeping the total candidate count fixed. On A100 GPUs, eight serial calls use 4.64-4.86x as much gross GPU-device energy and have 5.77-6.12x the P95 latency of one batched call with eight candidates. The same pattern appears across three independently scheduled A100 nodes per model and in short-output SciQ/V100 experiments. These results show that candidate count alone is not enough to describe the systems cost of multi-candidate test-time scaling. When candidates are independent and memory allows it, fewer generation calls with larger batch sizes are more efficient. Evaluations should therefore report not only candidate count and accuracy, but also generation schedule and GPU-level systems metrics.",
+      "identifiers": [
+        "SemanticScholar:a429cf6f1f9285849ceea67823d8824fe7661719"
+      ],
+      "semantic_scholar_id": "a429cf6f1f9285849ceea67823d8824fe7661719",
+      "canonical_id": "arXiv:2609.19499",
+      "arxiv_id": "2609.19499",
+      "authors": [
+        "Mobina Kashaniyan",
+        "Ali Jannesari"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 52,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GSM8Kで候補数N=8を固定して1×8から8×1まで生成呼出分割を比較。A100では8回逐次実行が1回バッチに対しGPUエネルギー4.64〜4.86倍、P95遅延5.77〜6.12倍と報告し、推論時スケジューリング・エネルギー評価に直接関係。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Can Agent Harnesses and Inference Engines Hear Each Other? The HEAR Protocol for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.06597",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents increasingly execute complex workflows involving multi-turn reasoning, tool use, and parallel agents. Efficient serving requires decisions that span two layers with complementary information: the agent harness understands workflow dependencies, context lifecycles, and execution objectives, whereas the inference engine observes request queues, KV-cache state, resource pressure, and execution capabilities. Existing interfaces do not systematically connect these views, limiting workflow-aware execution. HEAR, a bidirectional Harness--Engine Pairing protocol for agentic LLM serving. HEAR standardizes how the harness communicates workflow intent and execution requirements and how the engine returns runtime state, capabilities, and outcomes. By separating protocol semantics from optimization policies, HEAR supports diverse coordination strategies without changing workflow or model semantics. We instantiate HEAR for online cache-aware runtime coordination and workload-aware execution-mode selection for agent roles. Across four conversational and research-agent benchmarks under memory-constrained, concurrent serving, HEAR achieves a $1.61\\times$ batch speedup and reduces median time-to-first-token by $2.23\\times$ on SCBench. Mooncake shows that workflow intent and live engine state provide complementary benefits across load regimes. On BrowseComp-Plus and DeepResearchBench, workload-specific configurations yield $1.23\\times$ and $2.45\\times$ end-to-end speedups, respectively, without observed task-quality degradation. These results establish HEAR as a reusable coordination substrate for efficient agentic LLM serving.",
+      "identifiers": [
+        "SemanticScholar:8e4bf07328b359ba585862bcf49e3a80e8e653ef"
+      ],
+      "semantic_scholar_id": "8e4bf07328b359ba585862bcf49e3a80e8e653ef",
+      "canonical_id": "arXiv:2610.06597",
+      "arxiv_id": "2610.06597",
+      "authors": [
+        "Jia-Qi-Fu-Quan Zhao",
+        "Hao-Dong Chen",
+        "Jitai Hao",
+        "Wei Zhao",
+        "Jin-Hao Pang",
+        "Qiang Huang",
+        "Jun Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エージェント実行側の依存関係・コンテキスト寿命と推論エンジン側のキュー・KV状態を双方向交換するHEARプロトコルを提案。キャッシュ認識協調と役割別実行モード選択でエージェント推論サービングを高速化する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a9373e9d7957",
+    "round": "libimp-a9373e9d7957b8f7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a9373e9d7957b8f7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a9373e9d7957b8f7-pre01.json",
+    "receipt": "sha256:33e6b1e93469b26883b5bbc267a21e2755b2351268bb3c83823043f2d5c71b59"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a9373e9d7957",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

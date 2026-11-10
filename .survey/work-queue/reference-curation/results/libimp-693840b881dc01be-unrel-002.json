@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-693840b881dc01be-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.12780",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.12780",
+    "identity_tokens": [
+      "arXiv:2608.12780"
+    ],
+    "reason": "Diffusion Transformers (DiTs) incur quadratic self-attention cost over spatiotemporal tokens. Existing training-free sparse attention methods often construct sparse masks from block-level or cluster-level proxy scores, which can obscure fine-grained differences among keys and miss high contribution keys under aggressive sparsity. Moreover, such proxy scores may yield overly concentrated softmax distributions, causing Top-$p$ to retain too few keys for some query clusters. Although a fixed Top-$k$ minimum alleviates this failure mode, a shared value cannot adapt to variations across heads and inputs. To address both limitations, we propose SCOPE, a training-free sparse attention framework that combines 3D-RoPE-aligned key subspace clustering with online per-head Top-$k$ estimation for efficient video-DiT inference. SCOPE partitions post-RoPE keys into temporal, height, and width subspaces, clusters them independently, and aggregates the corresponding centroid scores through lookup tables to obtain per key proxy scores for each query cluster. Building on existing hybrid Top-$p$/fixed Top-$k$ selection, SCOPE derives a head-specific Top-$k$ value online by averaging the initial retained key counts within each head, weighted by query cluster size, and selects additional keys only for query clusters whose initial retained key counts fall below this value. Sparse attention is then computed over the selected original keys and values. Across six model--task configurations, SCOPE consistently outperforms existing training-free baselines in both fidelity and latency, achieving up to a $1.99\\times$ end-to-end speedup on 720p HunyuanVideo with $28.46$ dB PSNR relative to dense attention.",
+    "first_checked_at": "2026-10-05T08:35:28+00:00",
+    "last_checked_at": "2026-10-05T08:35:28+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+      "papers/inference/99-other-inference-systems/2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md"
+    ],
+    "title": "SCOPE: Subspace Clustering with Online Per-Head Top-K Estimation for Sparse Video Attention"
+  },
+  "processed_at": "2026-10-05T08:35:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-693840b881dc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

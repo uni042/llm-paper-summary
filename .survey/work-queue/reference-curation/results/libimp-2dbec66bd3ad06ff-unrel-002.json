@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2dbec66bd3ad06ff-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:7086030c40e1522b835ae879af7f3f5f7b376863",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:7086030c40e1522b835ae879af7f3f5f7b376863",
+    "identity_tokens": [
+      "SemanticScholar:7086030c40e1522b835ae879af7f3f5f7b376863"
+    ],
+    "reason": "USENIX FAST '25一次ページで題名・著者・会議年と要旨を確認。研究対象はSSD/NVM上のfile-system request-to-I/O変換、書込partition、I/O並列化であり、LLMまたはLLM推論効率への接続がないためunrelated。",
+    "first_checked_at": "2026-10-08T15:54:17+00:00",
+    "last_checked_at": "2026-10-08T15:54:17+00:00",
+    "linked_from": [],
+    "title": "Rethinking the Request-to-IO Transformation Process of File Systems for Full Utilization of High-Bandwidth SSDs"
+  },
+  "processed_at": "2026-10-08T15:54:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2dbec66bd3ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

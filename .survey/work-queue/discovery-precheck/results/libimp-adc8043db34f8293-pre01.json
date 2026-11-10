@@ -1,0 +1,907 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-adc8043db34f8293-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-adc8043db34f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2409.20361",
+    "arXiv:2410.13229",
+    "arXiv:2506.15724",
+    "arXiv:2510.09883",
+    "arXiv:2603.08026",
+    "arXiv:2603.21576",
+    "arXiv:2604.04750",
+    "arXiv:2605.10875",
+    "arXiv:2607.01065",
+    "arXiv:2609.26368"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "adc562db0d0ac2a642b6288851c26b6468446794",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T21:05:17.015968+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2409.20361",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.13229",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.15724",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.09883",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:delta dynamic layeraware token attention for efficient longcontext reasoning"
+    },
+    {
+      "requested_id": "arXiv:2603.08026",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.21576",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.04750",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.10875",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.01065",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.26368",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DyLLM: Efficient Diffusion LLM Inference via Saliency-based Token Selection and Partial Attention",
+      "source_url": "https://arxiv.org/abs/2603.08026",
+      "year": 2026,
+      "published": "2026-03-09",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked diffusion language models enable parallel token decoding, providing a promising alternative to the sequential nature of autoregressive generation. However, their iterative denoising process remains computationally expensive because it repeatedly processes the entire sequence at every step. We observe that across these diffusion steps, most token representations remain stable; only a small subset, which we term salient tokens, contributes meaningfully to the next update. Leveraging this temporal sparsity, we present DyLLM, a training-free inference framework that accelerates decoding by selectively computing only these salient tokens. DyLLM identifies saliency by measuring the cosine similarity of attention contexts between adjacent denoising steps. It recomputes feed-forward and attention operations only for salient tokens while reusing cached activations for the remainder. Across diverse reasoning and code-generation benchmarks, DyLLM achieves up to 9.6x higher throughput while largely preserving the baseline accuracy of representative open-source diffusion LLMs, LLaDA, and Dream.",
+      "identifiers": [
+        "SemanticScholar:34670f5b536811c2ce1afd3a340c3f6d82a70e03"
+      ],
+      "semantic_scholar_id": "34670f5b536811c2ce1afd3a340c3f6d82a70e03",
+      "canonical_id": "arXiv:2603.08026",
+      "arxiv_id": "2603.08026",
+      "doi": "10.48550/arXiv.2603.08026",
+      "authors": [
+        "Younjoo Lee",
+        "Jungho Lee",
+        "Seung-kyu Dan",
+        "Jaiyoung Park",
+        "Jung Ho Ahn"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 233,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing",
+      "source_url": "https://arxiv.org/abs/2609.26368",
+      "year": 2026,
+      "published": "2026-09-22",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon and multi-turn agents typically generate short actions and process long observations from tools and environments. This growing context demands efficient prefill, compact KV-cache storage, and accurate long-context retrieval. To meet these demands, we introduce HySparse2, a hybrid sparse attention architecture with two-level KV sharing. At the outer level, KV Bridging adopts a YOCO-style self-decoder and cross-decoder structure, but bridges only full-attention layers. The self-decoder uses hybrid sliding-window attention (SWA), while the cross-decoder uses hybrid sparse attention. The KV caches for full-attention layers in the cross-decoder are generated from the hidden states of full-attention layers in the self-decoder. At the inner level, HySparse2 retains HySparse's core KV Reuse design with two refinements. First, it replaces block-level sparsity with token-level sparsity for finer long-context retrieval. Second, it removes the separate SWA branch from sparse layers and instead forces a sliding window of recent tokens into the sparse selection. This two-level KV sharing allows all cross-decoder KV caches to be constructed from self-decoder hidden states. Prefill can therefore exit after the self-decoder, skipping all cross-decoder layers. On an 80B-A3B MoE model, HySparse2 outperforms HySparse and Hybrid SWA on long-context retrieval and multi-turn agentic tasks, while substantially reducing prefill computation and KV-cache storage.",
+      "identifiers": [
+        "SemanticScholar:4bf5d757d16d7dc5ce19032a4c401909bd1764e2"
+      ],
+      "semantic_scholar_id": "4bf5d757d16d7dc5ce19032a4c401909bd1764e2",
+      "canonical_id": "arXiv:2609.26368",
+      "arxiv_id": "2609.26368",
+      "authors": [
+        "Jian-Yu Wei",
+        "Yi-Zhao Gao",
+        "Qi-Hao Zhang",
+        "Shi-Mao Chen",
+        "Zheng-Ju Tang",
+        "Yu Cheng",
+        "Sheng-Jie Zhou",
+        "Zi-Ang Jiang",
+        "Yi-Hao Song",
+        "Hai-Lin Zhang",
+        "Liang Zhao",
+        "Bo Yang",
+        "Gang Wang",
+        "Shi-Jie Cao",
+        "Fu-Li Luo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Quamba: A Post-Training Quantization Recipe for Selective State Space Models",
+      "source_url": "https://arxiv.org/abs/2410.13229",
+      "year": 2024,
+      "published": "2024-10-17",
+      "venue": "arXiv.org",
+      "citation_count": 45,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State Space Models (SSMs) have emerged as an appealing alternative to Transformers for large language models, achieving state-of-the-art accuracy with constant memory complexity which allows for holding longer context lengths than attention-based networks. The superior computational efficiency of SSMs in long sequence modeling positions them favorably over Transformers in many scenarios. However, improving the efficiency of SSMs on request-intensive cloud-serving and resource-limited edge applications is still a formidable task. SSM quantization is a possible solution to this problem, making SSMs more suitable for wide deployment, while still maintaining their accuracy. Quantization is a common technique to reduce the model size and to utilize the low bit-width acceleration features on modern computing units, yet existing quantization techniques are poorly suited for SSMs. Most notably, SSMs have highly sensitive feature maps within the selective scan mechanism (i.e., linear recurrence) and massive outliers in the output activations which are not present in the output of token-mixing in the self-attention modules. To address this issue, we propose a static 8-bit per-tensor SSM quantization method which suppresses the maximum values of the input activations to the selective SSM for finer quantization precision and quantizes the output activations in an outlier-free space with Hadamard transform. Our 8-bit weight-activation quantized Mamba 2.8B SSM benefits from hardware acceleration and achieves a 1.72x lower generation latency on an Nvidia Orin Nano 8G, with only a 0.9% drop in average accuracy on zero-shot tasks. The experiments demonstrate the effectiveness and practical applicability of our approach for deploying SSM-based models of all sizes on both cloud and edge platforms.",
+      "identifiers": [
+        "SemanticScholar:8b5b37d3703fa0784b7a716e021a0618dd53832c"
+      ],
+      "semantic_scholar_id": "8b5b37d3703fa0784b7a716e021a0618dd53832c",
+      "canonical_id": "arXiv:2410.13229",
+      "arxiv_id": "2410.13229",
+      "doi": "10.48550/arXiv.2410.13229",
+      "authors": [
+        "Hung-Yueh Chiang",
+        "Chi-Chih Chang",
+        "Natalia Frumkin",
+        "Kai-Chiang Wu",
+        "Diana Marculescu"
+      ],
+      "priority": 45,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 45,
+        "citation_count": 45,
+        "total": 45,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 741,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MadaKV: Adaptive Modality-Perception KV Cache Eviction for Efficient Multimodal Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2506.15724",
+      "year": 2025,
+      "published": "2025-06-06",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 23,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces MadaKV, a modality-adaptive key-value (KV) cache eviction strategy designed to enhance the efficiency of multimodal large language models (MLLMs) in long-context inference. In multimodal scenarios, attention heads exhibit varying preferences for different modalities, resulting in significant disparities in modality importance across attention heads. Traditional KV cache eviction methods, which are tailored for unimodal settings, fail to capture modality-specific information, thereby yielding suboptimal performance. MadaKV addresses these challenges through two key components: modality preference adaptation and hierarchical compression compensation. By dynamically sensing modality information within attention heads and adaptively retaining critical tokens, MadaKV achieves substantial reductions in KV cache memory footprint and model inference decoding latency (1.3 to 1.5 times improvement) while maintaining high accuracy across various multimodal long-context tasks. Extensive experiments on representative MLLMs and the MileBench benchmark demonstrate the effectiveness of MadaKV compared to existing KV cache eviction methods.",
+      "identifiers": [
+        "SemanticScholar:9397ae3adf9970af9ff0bdcacb9f86aad417c264"
+      ],
+      "semantic_scholar_id": "9397ae3adf9970af9ff0bdcacb9f86aad417c264",
+      "canonical_id": "arXiv:2506.15724",
+      "arxiv_id": "2506.15724",
+      "doi": "10.48550/arXiv.2506.15724",
+      "authors": [
+        "Kun-Xi Li",
+        "Zhong-Hua Jiang",
+        "Zhouzhou Shen",
+        "Zhao-De Wang",
+        "Chengfei Lv",
+        "Shengyu Zhang",
+        "Fan Wu",
+        "Fei Wu"
+      ],
+      "priority": 33,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 23,
+        "citation_count": 23,
+        "total": 33,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 509,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Rotated Runtime Smooth: Training-Free Activation Smoother for accurate INT4 inference",
+      "source_url": "https://arxiv.org/abs/2409.20361",
+      "year": 2024,
+      "published": "2024-09-30",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models have demonstrated promising capabilities upon scaling up parameters. However, serving large language models incurs substantial computation and memory movement costs due to their large scale. Quantization methods have been employed to reduce service costs and latency. Nevertheless, outliers in activations hinder the development of INT4 weight-activation quantization. Existing approaches separate outliers and normal values into two matrices or migrate outliers from activations to weights, suffering from high latency or accuracy degradation. Based on observing activations from large language models, outliers can be classified into channel-wise and spike outliers. In this work, we propose Rotated Runtime Smooth (RRS), a plug-and-play activation smoother for quantization, consisting of Runtime Smooth and the Rotation operation. Runtime Smooth (RS) is introduced to eliminate channel-wise outliers by smoothing activations with channel-wise maximums during runtime. The rotation operation can narrow the gap between spike outliers and normal values, alleviating the effect of victims caused by channel-wise smoothing. The proposed method outperforms the state-of-the-art method in the LLaMA and Qwen families and improves WikiText-2 perplexity from 57.33 to 6.66 for INT4 inference.",
+      "identifiers": [
+        "SemanticScholar:79f31828ab43f42333e770b65e5eea63987bbc54"
+      ],
+      "semantic_scholar_id": "79f31828ab43f42333e770b65e5eea63987bbc54",
+      "canonical_id": "arXiv:2409.20361",
+      "arxiv_id": "2409.20361",
+      "doi": "10.48550/arXiv.2409.20361",
+      "authors": [
+        "Ke Yi",
+        "Zengke Liu",
+        "Jian-Wei Zhang",
+        "Cheng-Yuan Li",
+        "Tong Zhang",
+        "Junyang Lin",
+        "Jing-Ren Zhou"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 758,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "PRISM: Breaking the O(n) Memory Wall in Long-Context LLM Inference via O(1) Photonic Block Selection",
+      "source_url": "https://arxiv.org/abs/2603.21576",
+      "year": 2026,
+      "published": "2026-03-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM inference is bottlenecked not by compute but by the O(n) memory bandwidth cost of scanning the KV cache at every decode step -- a wall that no amount of arithmetic scaling can break. Recent photonic accelerators have demonstrated impressive throughput for dense attention computation; however, these approaches inherit the same O(n) memory scaling as electronic attention when applied to long contexts. We observe that the real leverage point is the coarse block-selection step: a memory-bound similarity search that determines which KV blocks to fetch. We identify, for the first time, that this task is structurally matched to the photonic broadcast-and-weight paradigm -- the query fans out to all candidates via passive splitting, signatures are quasi-static (matching electro-optic MRR programming), and only rank order matters (relaxing precision to 4-6 bits). Crucially, the photonic advantage grows with context length: as N increases, the electronic scan cost rises linearly while the photonic evaluation remains O(1). We instantiate this insight in PRISM (Photonic Ranking via Inner-product Similarity with Microring weights), a thin-film lithium niobate (TFLN) similarity engine. Hardware-impaired needle-in-a-haystack evaluation on Qwen2.5-7B confirms 100% accuracy from 4K through 64K tokens at k=32, with 16x traffic reduction at 64K context. PRISM achieves a four-order-of-magnitude energy advantage over GPU baselines at practical context lengths (n>= 4K).",
+      "identifiers": [
+        "SemanticScholar:ce09d2136f7c414e2bc013a907f42b8f67098275"
+      ],
+      "semantic_scholar_id": "ce09d2136f7c414e2bc013a907f42b8f67098275",
+      "canonical_id": "arXiv:2603.21576",
+      "arxiv_id": "2603.21576",
+      "doi": "10.48550/arXiv.2603.21576",
+      "authors": [
+        "Hyoseok Park",
+        "Yeonsang Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 219,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DeepStack: Facilitating Co-Design Exploration of 3D DRAM-Stacked Accelerators for Distributed LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.04750",
+      "year": 2026,
+      "published": "2026-04-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Advances in hybrid bonding and packaging have driven growing interest in 3D DRAM-stacked AI accelerators. As large language models (LLMs) scale to hundreds of billions or trillions of parameters, distributed inference across multiple 3D chips has become essential for AI serving. This trend makes cross-stack co-design critical because system-level parallelization and scheduling choices are tightly coupled with hardware characteristics such as memory organization, interconnects, and thermal constraints. We present DeepStack, an accurate performance model and efficient design space exploration (DSE) framework for distributed 3D-stacked LLM inference. At the hardware level, DeepStack captures transaction-aware memory bandwidth, bank activation constraints, buffering limitations, and thermal and power behavior. At the system level, it incorporates comprehensive parallelization strategies and execution scheduling. Through a dual-stage network abstraction and tile-level compute-communication overlap modeling, DeepStack achieves up to 100,000x faster evaluation than state-of-the-art simulators at comparable accuracy. We cross-validate DeepStack against our in-house 3D designs, an NS-3 backend with 2.12% error, and vLLM serving on eight B200 GPUs with 12.92% error. Combined with hierarchical search, DeepStack efficiently explores about 2.5 x 10^14 design points spanning the number of stacked DRAM layers, DRAM vertical connectivity, interconnects, compute-memory allocation, and distributed scheduling under thermal and area constraints. A search-space ablation shows that restricted DSE baselines can miss up to 9.5x modeled throughput. Beyond modeling and DSE, DeepStack derives design implications for distributed 3D AI systems and guides performance optimization across the stack. Source code and artifacts are available at https://github.com/tile-ai/DeepStack/tree/ae.",
+      "identifiers": [
+        "SemanticScholar:a7568e2acda50209faef694ad88d9224946f06a7"
+      ],
+      "semantic_scholar_id": "a7568e2acda50209faef694ad88d9224946f06a7",
+      "canonical_id": "arXiv:2604.04750",
+      "arxiv_id": "2604.04750",
+      "authors": [
+        "Zhiwen Mo",
+        "Guo-Yu Li",
+        "H. Chen",
+        "Yu Cheng",
+        "Zheng-Ju Tang",
+        "Qianzhou Wang",
+        "Lei Wang",
+        "Shuang Liang",
+        "Ling-Xiao Ma",
+        "Xianqi Zhou",
+        "Yu-Xiao Guo",
+        "W. Luk",
+        "Ji-Long Xue",
+        "Hong-Xiang Fan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Compute Where it Counts: Self Optimizing Language Models",
+      "source_url": "https://arxiv.org/abs/2605.10875",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient LLM inference research has largely focused on reducing the cost of each decoding step (e.g., using quantization, pruning, or sparse attention), typically applying a uniform computation budget to every generated token. In practice, token difficulty varies widely, so static compression can over-compute on easy steps and under-compute on hard ones. We study dynamic budget allocation for autoregressive decoding: learning how much computation to spend per token from within a single model. Self-Optimizing Language Models (SOL) pair a frozen LLM with a lightweight policy network that reads the LLM hidden state and selects a discrete efficiency action at each decode step. Actions can jointly control (i) token-level attention sparsity, (ii) structured activation pruning in the MLP, and (iii) activation quantization bit-width, while leaving the base model weights unchanged. We train the policy with group-relative policy optimization on teacher-forced episodes: the token sequence is fixed, while we sample multiple compute schedules (i.e.,\"counterfactual\"schedules that vary only the efficiency actions for the same token path) and compare their likelihoods under the same supervision. Our reward trades off language-model quality against soft penalties that encourage episode-average budget usage to match a requested target. Across model variants and compute regimes, SOL improves quality at matched budget over static allocation and strong random schedule search, offering a complementary axis for inference-efficiency optimization. SOL discovers a better quality-efficiency pareto-front across all our experiments and improves MMLU accuracy by up to 7.3% over uniform budget allocation strategies.",
+      "identifiers": [
+        "SemanticScholar:c2c232b4847677e7d0482a4f775e0b7dd1c28e01"
+      ],
+      "semantic_scholar_id": "c2c232b4847677e7d0482a4f775e0b7dd1c28e01",
+      "canonical_id": "arXiv:2605.10875",
+      "arxiv_id": "2605.10875",
+      "doi": "10.48550/arXiv.2605.10875",
+      "authors": [
+        "Yash Akhauri",
+        "Mohamed S. Abdelfattah"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GSRQ: Gain-Shape Residual Quantization for Sub-1-bit KV Cache",
+      "source_url": "https://arxiv.org/abs/2607.01065",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of Large Language Models (LLMs) with extended context windows is increasingly constrained by the linear growth of Key-Value (KV) cache memory. Vector Quantization (VQ), particularly Residual Quantization (RQ), is a promising approach for pushing KV cache storage toward the sub-1-bit regime by progressively encoding residuals with small codebooks. However, most VQ methods still rely on standard $\\ell_2$ $K$-means as the core codebook-learning primitive. We identify a subtle high-dimensional issue of this primitive: Euclidean centroid averaging can induce centroid shrinkage, which weakens the angular alignment term in the $\\ell_2$ distortion and makes directional preservation harder. To address this issue, we propose Gain-Shape $K$-means (GSKM), a drop-in replacement for $K$-means that improves directional fidelity while matching, and in some regimes improving, $\\ell_2$ distortion. We then build Gain-Shape Residual Quantization (GSRQ) by incorporating a weighted extension of GSKM into an RQ pipeline. On LLaMA-3-8B, GSRQ substantially improves over strong KV cache quantization baselines across bit rates. At 1-bit, it improves the average accuracy across LongBench tasks from 11.34 to 33.54, a gain of 22.20 percentage points over VQLLM.",
+      "identifiers": [
+        "SemanticScholar:b7e30216c0636ed47ff55d69c47b28b7a764662c"
+      ],
+      "semantic_scholar_id": "b7e30216c0636ed47ff55d69c47b28b7a764662c",
+      "canonical_id": "arXiv:2607.01065",
+      "arxiv_id": "2607.01065",
+      "doi": "10.48550/arXiv.2607.01065",
+      "authors": [
+        "Soosung Kim",
+        "Minjae Park",
+        "Eui-Young Chung",
+        "Jaeyong Chung"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 119,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.08026",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.08026",
+        "id:SemanticScholar:34670f5b536811c2ce1afd3a340c3f6d82a70e03",
+        "id:arXiv:2603.08026",
+        "title:dyllm efficient diffusion llm inference via saliencybased token selection and partial attention",
+        "url:https://arxiv.org/abs/2603.08026"
+      ],
+      "record": {
+        "title": "DyLLM: Efficient Diffusion LLM Inference via Saliency-based Token Selection and Partial Attention",
+        "source_url": "https://arxiv.org/abs/2603.08026",
+        "year": 2026,
+        "published": "2026-03-09",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Masked diffusion language models enable parallel token decoding, providing a promising alternative to the sequential nature of autoregressive generation. However, their iterative denoising process remains computationally expensive because it repeatedly processes the entire sequence at every step. We observe that across these diffusion steps, most token representations remain stable; only a small subset, which we term salient tokens, contributes meaningfully to the next update. Leveraging this temporal sparsity, we present DyLLM, a training-free inference framework that accelerates decoding by selectively computing only these salient tokens. DyLLM identifies saliency by measuring the cosine similarity of attention contexts between adjacent denoising steps. It recomputes feed-forward and attention operations only for salient tokens while reusing cached activations for the remainder. Across diverse reasoning and code-generation benchmarks, DyLLM achieves up to 9.6x higher throughput while largely preserving the baseline accuracy of representative open-source diffusion LLMs, LLaDA, and Dream.",
+        "identifiers": [
+          "SemanticScholar:34670f5b536811c2ce1afd3a340c3f6d82a70e03"
+        ],
+        "semantic_scholar_id": "34670f5b536811c2ce1afd3a340c3f6d82a70e03",
+        "canonical_id": "arXiv:2603.08026",
+        "arxiv_id": "2603.08026",
+        "doi": "10.48550/arXiv.2603.08026",
+        "authors": [
+          "Younjoo Lee",
+          "Jungho Lee",
+          "Seung-kyu Dan",
+          "Jaiyoung Park",
+          "Jung Ho Ahn"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 233,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26368",
+      "identity_tokens": [
+        "id:SemanticScholar:4bf5d757d16d7dc5ce19032a4c401909bd1764e2",
+        "id:arXiv:2609.26368",
+        "title:hysparse2 hybrid sparse attention with twolevel kv sharing",
+        "url:https://arxiv.org/abs/2609.26368"
+      ],
+      "record": {
+        "title": "HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing",
+        "source_url": "https://arxiv.org/abs/2609.26368",
+        "year": 2026,
+        "published": "2026-09-22",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-horizon and multi-turn agents typically generate short actions and process long observations from tools and environments. This growing context demands efficient prefill, compact KV-cache storage, and accurate long-context retrieval. To meet these demands, we introduce HySparse2, a hybrid sparse attention architecture with two-level KV sharing. At the outer level, KV Bridging adopts a YOCO-style self-decoder and cross-decoder structure, but bridges only full-attention layers. The self-decoder uses hybrid sliding-window attention (SWA), while the cross-decoder uses hybrid sparse attention. The KV caches for full-attention layers in the cross-decoder are generated from the hidden states of full-attention layers in the self-decoder. At the inner level, HySparse2 retains HySparse's core KV Reuse design with two refinements. First, it replaces block-level sparsity with token-level sparsity for finer long-context retrieval. Second, it removes the separate SWA branch from sparse layers and instead forces a sliding window of recent tokens into the sparse selection. This two-level KV sharing allows all cross-decoder KV caches to be constructed from self-decoder hidden states. Prefill can therefore exit after the self-decoder, skipping all cross-decoder layers. On an 80B-A3B MoE model, HySparse2 outperforms HySparse and Hybrid SWA on long-context retrieval and multi-turn agentic tasks, while substantially reducing prefill computation and KV-cache storage.",
+        "identifiers": [
+          "SemanticScholar:4bf5d757d16d7dc5ce19032a4c401909bd1764e2"
+        ],
+        "semantic_scholar_id": "4bf5d757d16d7dc5ce19032a4c401909bd1764e2",
+        "canonical_id": "arXiv:2609.26368",
+        "arxiv_id": "2609.26368",
+        "authors": [
+          "Jian-Yu Wei",
+          "Yi-Zhao Gao",
+          "Qi-Hao Zhang",
+          "Shi-Mao Chen",
+          "Zheng-Ju Tang",
+          "Yu Cheng",
+          "Sheng-Jie Zhou",
+          "Zi-Ang Jiang",
+          "Yi-Hao Song",
+          "Hai-Lin Zhang",
+          "Liang Zhao",
+          "Bo Yang",
+          "Gang Wang",
+          "Shi-Jie Cao",
+          "Fu-Li Luo"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.13229",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.13229",
+        "id:SemanticScholar:8b5b37d3703fa0784b7a716e021a0618dd53832c",
+        "id:arXiv:2410.13229",
+        "title:quamba a posttraining quantization recipe for selective state space models",
+        "url:https://arxiv.org/abs/2410.13229"
+      ],
+      "record": {
+        "title": "Quamba: A Post-Training Quantization Recipe for Selective State Space Models",
+        "source_url": "https://arxiv.org/abs/2410.13229",
+        "year": 2024,
+        "published": "2024-10-17",
+        "venue": "arXiv.org",
+        "citation_count": 45,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State Space Models (SSMs) have emerged as an appealing alternative to Transformers for large language models, achieving state-of-the-art accuracy with constant memory complexity which allows for holding longer context lengths than attention-based networks. The superior computational efficiency of SSMs in long sequence modeling positions them favorably over Transformers in many scenarios. However, improving the efficiency of SSMs on request-intensive cloud-serving and resource-limited edge applications is still a formidable task. SSM quantization is a possible solution to this problem, making SSMs more suitable for wide deployment, while still maintaining their accuracy. Quantization is a common technique to reduce the model size and to utilize the low bit-width acceleration features on modern computing units, yet existing quantization techniques are poorly suited for SSMs. Most notably, SSMs have highly sensitive feature maps within the selective scan mechanism (i.e., linear recurrence) and massive outliers in the output activations which are not present in the output of token-mixing in the self-attention modules. To address this issue, we propose a static 8-bit per-tensor SSM quantization method which suppresses the maximum values of the input activations to the selective SSM for finer quantization precision and quantizes the output activations in an outlier-free space with Hadamard transform. Our 8-bit weight-activation quantized Mamba 2.8B SSM benefits from hardware acceleration and achieves a 1.72x lower generation latency on an Nvidia Orin Nano 8G, with only a 0.9% drop in average accuracy on zero-shot tasks. The experiments demonstrate the effectiveness and practical applicability of our approach for deploying SSM-based models of all sizes on both cloud and edge platforms.",
+        "identifiers": [
+          "SemanticScholar:8b5b37d3703fa0784b7a716e021a0618dd53832c"
+        ],
+        "semantic_scholar_id": "8b5b37d3703fa0784b7a716e021a0618dd53832c",
+        "canonical_id": "arXiv:2410.13229",
+        "arxiv_id": "2410.13229",
+        "doi": "10.48550/arXiv.2410.13229",
+        "authors": [
+          "Hung-Yueh Chiang",
+          "Chi-Chih Chang",
+          "Natalia Frumkin",
+          "Kai-Chiang Wu",
+          "Diana Marculescu"
+        ],
+        "priority": 45,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 45,
+          "citation_count": 45,
+          "total": 45,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 741,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.15724",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.15724",
+        "id:SemanticScholar:9397ae3adf9970af9ff0bdcacb9f86aad417c264",
+        "id:arXiv:2506.15724",
+        "title:madakv adaptive modalityperception kv cache eviction for efficient multimodal longcontext inference",
+        "url:https://arxiv.org/abs/2506.15724"
+      ],
+      "record": {
+        "title": "MadaKV: Adaptive Modality-Perception KV Cache Eviction for Efficient Multimodal Long-Context Inference",
+        "source_url": "https://arxiv.org/abs/2506.15724",
+        "year": 2025,
+        "published": "2025-06-06",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 23,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper introduces MadaKV, a modality-adaptive key-value (KV) cache eviction strategy designed to enhance the efficiency of multimodal large language models (MLLMs) in long-context inference. In multimodal scenarios, attention heads exhibit varying preferences for different modalities, resulting in significant disparities in modality importance across attention heads. Traditional KV cache eviction methods, which are tailored for unimodal settings, fail to capture modality-specific information, thereby yielding suboptimal performance. MadaKV addresses these challenges through two key components: modality preference adaptation and hierarchical compression compensation. By dynamically sensing modality information within attention heads and adaptively retaining critical tokens, MadaKV achieves substantial reductions in KV cache memory footprint and model inference decoding latency (1.3 to 1.5 times improvement) while maintaining high accuracy across various multimodal long-context tasks. Extensive experiments on representative MLLMs and the MileBench benchmark demonstrate the effectiveness of MadaKV compared to existing KV cache eviction methods.",
+        "identifiers": [
+          "SemanticScholar:9397ae3adf9970af9ff0bdcacb9f86aad417c264"
+        ],
+        "semantic_scholar_id": "9397ae3adf9970af9ff0bdcacb9f86aad417c264",
+        "canonical_id": "arXiv:2506.15724",
+        "arxiv_id": "2506.15724",
+        "doi": "10.48550/arXiv.2506.15724",
+        "authors": [
+          "Kun-Xi Li",
+          "Zhong-Hua Jiang",
+          "Zhouzhou Shen",
+          "Zhao-De Wang",
+          "Chengfei Lv",
+          "Shengyu Zhang",
+          "Fan Wu",
+          "Fei Wu"
+        ],
+        "priority": 33,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 23,
+          "citation_count": 23,
+          "total": 33,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 509,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.20361",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2409.20361",
+        "id:SemanticScholar:79f31828ab43f42333e770b65e5eea63987bbc54",
+        "id:arXiv:2409.20361",
+        "title:rotated runtime smooth trainingfree activation smoother for accurate int4 inference",
+        "url:https://arxiv.org/abs/2409.20361"
+      ],
+      "record": {
+        "title": "Rotated Runtime Smooth: Training-Free Activation Smoother for accurate INT4 inference",
+        "source_url": "https://arxiv.org/abs/2409.20361",
+        "year": 2024,
+        "published": "2024-09-30",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models have demonstrated promising capabilities upon scaling up parameters. However, serving large language models incurs substantial computation and memory movement costs due to their large scale. Quantization methods have been employed to reduce service costs and latency. Nevertheless, outliers in activations hinder the development of INT4 weight-activation quantization. Existing approaches separate outliers and normal values into two matrices or migrate outliers from activations to weights, suffering from high latency or accuracy degradation. Based on observing activations from large language models, outliers can be classified into channel-wise and spike outliers. In this work, we propose Rotated Runtime Smooth (RRS), a plug-and-play activation smoother for quantization, consisting of Runtime Smooth and the Rotation operation. Runtime Smooth (RS) is introduced to eliminate channel-wise outliers by smoothing activations with channel-wise maximums during runtime. The rotation operation can narrow the gap between spike outliers and normal values, alleviating the effect of victims caused by channel-wise smoothing. The proposed method outperforms the state-of-the-art method in the LLaMA and Qwen families and improves WikiText-2 perplexity from 57.33 to 6.66 for INT4 inference.",
+        "identifiers": [
+          "SemanticScholar:79f31828ab43f42333e770b65e5eea63987bbc54"
+        ],
+        "semantic_scholar_id": "79f31828ab43f42333e770b65e5eea63987bbc54",
+        "canonical_id": "arXiv:2409.20361",
+        "arxiv_id": "2409.20361",
+        "doi": "10.48550/arXiv.2409.20361",
+        "authors": [
+          "Ke Yi",
+          "Zengke Liu",
+          "Jian-Wei Zhang",
+          "Cheng-Yuan Li",
+          "Tong Zhang",
+          "Junyang Lin",
+          "Jing-Ren Zhou"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 18,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 758,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.21576",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.21576",
+        "id:SemanticScholar:ce09d2136f7c414e2bc013a907f42b8f67098275",
+        "id:arXiv:2603.21576",
+        "title:prism breaking the on memory wall in longcontext llm inference via o1 photonic block selection",
+        "url:https://arxiv.org/abs/2603.21576"
+      ],
+      "record": {
+        "title": "PRISM: Breaking the O(n) Memory Wall in Long-Context LLM Inference via O(1) Photonic Block Selection",
+        "source_url": "https://arxiv.org/abs/2603.21576",
+        "year": 2026,
+        "published": "2026-03-23",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context LLM inference is bottlenecked not by compute but by the O(n) memory bandwidth cost of scanning the KV cache at every decode step -- a wall that no amount of arithmetic scaling can break. Recent photonic accelerators have demonstrated impressive throughput for dense attention computation; however, these approaches inherit the same O(n) memory scaling as electronic attention when applied to long contexts. We observe that the real leverage point is the coarse block-selection step: a memory-bound similarity search that determines which KV blocks to fetch. We identify, for the first time, that this task is structurally matched to the photonic broadcast-and-weight paradigm -- the query fans out to all candidates via passive splitting, signatures are quasi-static (matching electro-optic MRR programming), and only rank order matters (relaxing precision to 4-6 bits). Crucially, the photonic advantage grows with context length: as N increases, the electronic scan cost rises linearly while the photonic evaluation remains O(1). We instantiate this insight in PRISM (Photonic Ranking via Inner-product Similarity with Microring weights), a thin-film lithium niobate (TFLN) similarity engine. Hardware-impaired needle-in-a-haystack evaluation on Qwen2.5-7B confirms 100% accuracy from 4K through 64K tokens at k=32, with 16x traffic reduction at 64K context. PRISM achieves a four-order-of-magnitude energy advantage over GPU baselines at practical context lengths (n>= 4K).",
+        "identifiers": [
+          "SemanticScholar:ce09d2136f7c414e2bc013a907f42b8f67098275"
+        ],
+        "semantic_scholar_id": "ce09d2136f7c414e2bc013a907f42b8f67098275",
+        "canonical_id": "arXiv:2603.21576",
+        "arxiv_id": "2603.21576",
+        "doi": "10.48550/arXiv.2603.21576",
+        "authors": [
+          "Hyoseok Park",
+          "Yeonsang Park"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 219,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.04750",
+      "identity_tokens": [
+        "id:SemanticScholar:a7568e2acda50209faef694ad88d9224946f06a7",
+        "id:arXiv:2604.04750",
+        "title:deepstack facilitating codesign exploration of 3d dramstacked accelerators for distributed llm inference",
+        "url:https://arxiv.org/abs/2604.04750"
+      ],
+      "record": {
+        "title": "DeepStack: Facilitating Co-Design Exploration of 3D DRAM-Stacked Accelerators for Distributed LLM Inference",
+        "source_url": "https://arxiv.org/abs/2604.04750",
+        "year": 2026,
+        "published": "2026-04-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Advances in hybrid bonding and packaging have driven growing interest in 3D DRAM-stacked AI accelerators. As large language models (LLMs) scale to hundreds of billions or trillions of parameters, distributed inference across multiple 3D chips has become essential for AI serving. This trend makes cross-stack co-design critical because system-level parallelization and scheduling choices are tightly coupled with hardware characteristics such as memory organization, interconnects, and thermal constraints. We present DeepStack, an accurate performance model and efficient design space exploration (DSE) framework for distributed 3D-stacked LLM inference. At the hardware level, DeepStack captures transaction-aware memory bandwidth, bank activation constraints, buffering limitations, and thermal and power behavior. At the system level, it incorporates comprehensive parallelization strategies and execution scheduling. Through a dual-stage network abstraction and tile-level compute-communication overlap modeling, DeepStack achieves up to 100,000x faster evaluation than state-of-the-art simulators at comparable accuracy. We cross-validate DeepStack against our in-house 3D designs, an NS-3 backend with 2.12% error, and vLLM serving on eight B200 GPUs with 12.92% error. Combined with hierarchical search, DeepStack efficiently explores about 2.5 x 10^14 design points spanning the number of stacked DRAM layers, DRAM vertical connectivity, interconnects, compute-memory allocation, and distributed scheduling under thermal and area constraints. A search-space ablation shows that restricted DSE baselines can miss up to 9.5x modeled throughput. Beyond modeling and DSE, DeepStack derives design implications for distributed 3D AI systems and guides performance optimization across the stack. Source code and artifacts are available at https://github.com/tile-ai/DeepStack/tree/ae.",
+        "identifiers": [
+          "SemanticScholar:a7568e2acda50209faef694ad88d9224946f06a7"
+        ],
+        "semantic_scholar_id": "a7568e2acda50209faef694ad88d9224946f06a7",
+        "canonical_id": "arXiv:2604.04750",
+        "arxiv_id": "2604.04750",
+        "authors": [
+          "Zhiwen Mo",
+          "Guo-Yu Li",
+          "H. Chen",
+          "Yu Cheng",
+          "Zheng-Ju Tang",
+          "Qianzhou Wang",
+          "Lei Wang",
+          "Shuang Liang",
+          "Ling-Xiao Ma",
+          "Xianqi Zhou",
+          "Yu-Xiao Guo",
+          "W. Luk",
+          "Ji-Long Xue",
+          "Hong-Xiang Fan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 205,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.10875",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.10875",
+        "id:SemanticScholar:c2c232b4847677e7d0482a4f775e0b7dd1c28e01",
+        "id:arXiv:2605.10875",
+        "title:compute where it counts self optimizing language models",
+        "url:https://arxiv.org/abs/2605.10875"
+      ],
+      "record": {
+        "title": "Compute Where it Counts: Self Optimizing Language Models",
+        "source_url": "https://arxiv.org/abs/2605.10875",
+        "year": 2026,
+        "published": "2026-05-11",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient LLM inference research has largely focused on reducing the cost of each decoding step (e.g., using quantization, pruning, or sparse attention), typically applying a uniform computation budget to every generated token. In practice, token difficulty varies widely, so static compression can over-compute on easy steps and under-compute on hard ones. We study dynamic budget allocation for autoregressive decoding: learning how much computation to spend per token from within a single model. Self-Optimizing Language Models (SOL) pair a frozen LLM with a lightweight policy network that reads the LLM hidden state and selects a discrete efficiency action at each decode step. Actions can jointly control (i) token-level attention sparsity, (ii) structured activation pruning in the MLP, and (iii) activation quantization bit-width, while leaving the base model weights unchanged. We train the policy with group-relative policy optimization on teacher-forced episodes: the token sequence is fixed, while we sample multiple compute schedules (i.e.,\"counterfactual\"schedules that vary only the efficiency actions for the same token path) and compare their likelihoods under the same supervision. Our reward trades off language-model quality against soft penalties that encourage episode-average budget usage to match a requested target. Across model variants and compute regimes, SOL improves quality at matched budget over static allocation and strong random schedule search, offering a complementary axis for inference-efficiency optimization. SOL discovers a better quality-efficiency pareto-front across all our experiments and improves MMLU accuracy by up to 7.3% over uniform budget allocation strategies.",
+        "identifiers": [
+          "SemanticScholar:c2c232b4847677e7d0482a4f775e0b7dd1c28e01"
+        ],
+        "semantic_scholar_id": "c2c232b4847677e7d0482a4f775e0b7dd1c28e01",
+        "canonical_id": "arXiv:2605.10875",
+        "arxiv_id": "2605.10875",
+        "doi": "10.48550/arXiv.2605.10875",
+        "authors": [
+          "Yash Akhauri",
+          "Mohamed S. Abdelfattah"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.01065",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.01065",
+        "id:SemanticScholar:b7e30216c0636ed47ff55d69c47b28b7a764662c",
+        "id:arXiv:2607.01065",
+        "title:gsrq gainshape residual quantization for sub1bit kv cache",
+        "url:https://arxiv.org/abs/2607.01065"
+      ],
+      "record": {
+        "title": "GSRQ: Gain-Shape Residual Quantization for Sub-1-bit KV Cache",
+        "source_url": "https://arxiv.org/abs/2607.01065",
+        "year": 2026,
+        "published": "2026-07-01",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of Large Language Models (LLMs) with extended context windows is increasingly constrained by the linear growth of Key-Value (KV) cache memory. Vector Quantization (VQ), particularly Residual Quantization (RQ), is a promising approach for pushing KV cache storage toward the sub-1-bit regime by progressively encoding residuals with small codebooks. However, most VQ methods still rely on standard $\\ell_2$ $K$-means as the core codebook-learning primitive. We identify a subtle high-dimensional issue of this primitive: Euclidean centroid averaging can induce centroid shrinkage, which weakens the angular alignment term in the $\\ell_2$ distortion and makes directional preservation harder. To address this issue, we propose Gain-Shape $K$-means (GSKM), a drop-in replacement for $K$-means that improves directional fidelity while matching, and in some regimes improving, $\\ell_2$ distortion. We then build Gain-Shape Residual Quantization (GSRQ) by incorporating a weighted extension of GSKM into an RQ pipeline. On LLaMA-3-8B, GSRQ substantially improves over strong KV cache quantization baselines across bit rates. At 1-bit, it improves the average accuracy across LongBench tasks from 11.34 to 33.54, a gain of 22.20 percentage points over VQLLM.",
+        "identifiers": [
+          "SemanticScholar:b7e30216c0636ed47ff55d69c47b28b7a764662c"
+        ],
+        "semantic_scholar_id": "b7e30216c0636ed47ff55d69c47b28b7a764662c",
+        "canonical_id": "arXiv:2607.01065",
+        "arxiv_id": "2607.01065",
+        "doi": "10.48550/arXiv.2607.01065",
+        "authors": [
+          "Soosung Kim",
+          "Minjae Park",
+          "Eui-Young Chung",
+          "Jaeyong Chung"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 119,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e5705205c6455fe0526124cbb61c50924e9f44feb1bc3a7593ea5cfea10c44b1",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

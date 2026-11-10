@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3bf86da53f5ea2a1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.26955",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.26955",
+    "identity_tokens": [
+      "arXiv:2607.26955"
+    ],
+    "reason": "Minimax-optimal rates for multivariate distribution estimation are known to suffer from the curse of dimensionality. We propose a sparse Bayesian network approach in which each conditional probability is estimated using sparsity-aware conditional mean methods. The resulting estimator, \\textit{BAyesian Network Distribution regression} (BAND), handles mixed data types in high-dimensional time series and achieves polynomial total variation convergence rates while allowing the feature dimension to grow polynomially with the sample size. These rates are substantially faster than the classical optimal rates for multivariate histogram density estimators that lack sparsity. Empirical evaluations show that BAND performs competitively for data sampling and confidence region forecasting against a range of state-of-the-art benchmarks.",
+    "first_checked_at": "2026-10-05T09:50:19+00:00",
+    "last_checked_at": "2026-10-05T09:50:19+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "Breaking the Curse with BAND: Nonparametric Distribution Estimation in High Dimensions"
+  },
+  "processed_at": "2026-10-05T09:50:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3bf86da53f5e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r07",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.24788",
+      "identity_tokens": [
+        "arXiv:2607.24788"
+      ],
+      "title": "GLIDE: Guided Layerwise Hybrid Attention for Efficient LLM Inference",
+      "reason": "長文脈decodeでKVの読み書きが律速になる問題に対し、スライディングウィンドウsoftmax注意と線形再帰集約を層ごとに異なる比率で混合するGLIDEを提案。初期層はsoftmaxを保ち深層は線形代替を増やす層異質性を利用し、KV I/Oと長文脈レイテンシを削減する推論時注意アーキテクチャ。",
+      "source_url": "https://arxiv.org/abs/2607.24788",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:10+09:00",
+      "last_checked_at": "2026-10-30T19:39:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 80,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.03726",
+      "identity_tokens": [
+        "arXiv:2508.03726"
+      ],
+      "title": "Hierarchical Verification of Speculative Beams for Accelerating LLM Inference",
+      "reason": "投機的beamの候補を一律に検証すると低確率候補へ不要な計算を使う問題に対し、尤度の高い候補から階層的に検証し、劣る候補を早期剪定するHierarchical Verification Treeを提案。追加学習やモデル構造変更なしで推論時間・電力を削減すると報告する直接的な投機的復号方式。",
+      "source_url": "https://arxiv.org/abs/2508.03726",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:10+09:00",
+      "last_checked_at": "2026-10-30T19:39:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 81,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.27294",
+      "identity_tokens": [
+        "arXiv:2609.27294"
+      ],
+      "title": "KITE: KV-Invariant Transformer Expansion for Efficient Agentic LLM Scaling",
+      "reason": "大きいLLMへモデルを拡張する際に増加パラメータをKV生成へ影響しない領域へ配置し、prefillのKV計算を小さい塔へ限定するKITE。具体化のStep Scale TransformerはKV生成塔と読み取り塔を分離し、学習計算量と推論時費用を抑えつつMoEを拡大する。推論コスト削減を構造に組み込むモデル・サービング研究。",
+      "source_url": "https://arxiv.org/abs/2609.27294",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:10+09:00",
+      "last_checked_at": "2026-10-30T19:39:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 83,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1609/aaai.v40i27.39425",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v40i27.39425",
+        "arXiv:2505.18413"
+      ],
+      "title": "LatentLLM: Activation-Aware Transform to Multi-Head Latent Attention",
+      "reason": "既存MHAベースのLLM/MLLMを低次元の潜在注意構造へ変換するため、局所の活性認識テンソル分解を注意全体の共同テンソル分解へ拡張するLatentLLM。圧縮後のモデル品質とメモリ・計算負荷の交換条件を改善し、マルチモーダル推論でも評価する。AAAI 2026正式出版版と先行arXivの題名差をidentityに保持。",
+      "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/39425",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:10+09:00",
+      "last_checked_at": "2026-10-30T19:39:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 84,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.08345",
+      "identity_tokens": [
+        "arXiv:2609.08345"
+      ],
+      "title": "CoVeR: Coverage-Based Token Pruning for Multi-View 3D Reasoning in VLMs",
+      "reason": "多視点画像から3D推論するVLMで重複視覚トークンが膨らむ問題に対し、注意重みでなくトークン座標による空間被覆を使って予算を厳密に満たすCoVeRを提案。学習不要で4種類のVLMへ適用し、約8%の視覚トークンでフルトークン性能93.5%を維持したと報告する視覚入力圧縮方式。",
+      "source_url": "https://arxiv.org/abs/2609.08345",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:10+09:00",
+      "last_checked_at": "2026-10-30T19:39:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 86,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.12984",
+      "identity_tokens": [
+        "arXiv:2504.12984"
+      ],
+      "title": "Tilus: A Tile-Level GPGPU Programming Language for Low-Precision Computation",
+      "reason": "LLM低ビットカーネルのビット幅制約やレジスタ・メモリアクセス制御不足を解消するため、1〜8bitの任意ビット幅を扱うタイルレベルGPU DSL Tilusを提案。階層メモリと代数的レイアウト、ベクトル化・命令選択をコンパイラで行い、低精度LLM演算のカーネル性能改善を狙う。推論GPUプログラミング基盤に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2504.12984",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:10+09:00",
+      "last_checked_at": "2026-10-30T19:39:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 88,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.06727",
+      "identity_tokens": [
+        "arXiv:2512.06727"
+      ],
+      "title": "KV-CAR: KV Cache Compression using Autoencoders and KV Reuse in Large Language Models",
+      "reason": "KVキャッシュを軽量オートエンコーダで特徴次元方向に圧縮し、隣接層の注意ヘッド間で類似KVを再利用するKV-CARを提案。GPT-2とTinyLLaMAを用い、最大47.85%のKVメモリ削減と精度維持を報告する。キャッシュ表現の低次元化と層間再利用を組み合わせる推論メモリ最適化。",
+      "source_url": "https://arxiv.org/abs/2512.06727",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:10+09:00",
+      "last_checked_at": "2026-10-30T19:39:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 89,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.13223",
+      "identity_tokens": [
+        "arXiv:2511.13223"
+      ],
+      "title": "TokenSqueeze: Performance-Preserving Compression for Reasoning LLMs",
+      "reason": "長いCoTによる推論トークン費用を抑えるため、問題難度に応じた自己生成サンプル選択と論理構造を保つ言語的精緻化で短い思考経路を学習するTokenSqueeze。生成長と推論費用の削減に関係するが、主な手法は学習データ・推論過程の言語圧縮で、GPUサービングやKVカーネルの実装を直接改善するものではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2511.13223",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:10+09:00",
+      "last_checked_at": "2026-10-30T19:39:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 91,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.01881",
+      "identity_tokens": [
+        "arXiv:2604.01881"
+      ],
+      "title": "HieraVid: Hierarchical Token Pruning for Fast Video Large Language Models",
+      "reason": "動画LLMの視覚トークンをsegment・frame・LLM層の三段階で圧縮するHieraVid。時間的類似フレームをまとめ、層が深くなるほど冗長トークンを削減し、LLaVA-Video/OneVisionで30%のトークン保持時にも元の性能の98〜99%以上を保つと報告。動画MLLMのprefill計算・メモリ負荷の直接的な削減方式。",
+      "source_url": "https://arxiv.org/abs/2604.01881",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:10+09:00",
+      "last_checked_at": "2026-10-30T19:39:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 93,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.11959",
+      "identity_tokens": [
+        "arXiv:2507.11959"
+      ],
+      "title": "PoTPTQ: A Two-step Power-of-Two Post-training for LLMs",
+      "reason": "PoT量子化のGPU逆量子化で符号ビットと逐次ビット操作が遅延要因になる問題に対し、スケール初期化と少量校正による二段階PTQを提案。2〜3bitの品質改善に加え、V100で最大3.67倍、RTX 4090で1.63倍の逆量子化高速化を報告する低ビット推論実装研究。比較値は逆量子化段階でありend-to-end推論の倍率と混同しない。",
+      "source_url": "https://arxiv.org/abs/2507.11959",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:10+09:00",
+      "last_checked_at": "2026-10-30T19:39:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 94,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}

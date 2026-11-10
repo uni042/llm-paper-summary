@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-496f158676d576f1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.21649",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.21649",
+    "identity_tokens": [
+      "arXiv:2606.21649"
+    ],
+    "reason": "長文脈検索用embedding表現と訓練高速化を扱う。要旨の3.8倍高速化は訓練工程であり、LLM推論効率・serving研究ではない。",
+    "first_checked_at": "2026-10-05T03:47:24+00:00",
+    "last_checked_at": "2026-10-05T03:47:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+    ],
+    "title": "EvoEmbedding: Evolvable Representations for Long-Context Retrieval and Agentic Memory"
+  },
+  "processed_at": "2026-10-05T03:47:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-496f158676d5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

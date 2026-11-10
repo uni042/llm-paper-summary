@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "215d482ce599a7501062802b0077e5d4bf4c70f4ffef069632372b65915f33b9",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_c7c3015224888191817548ff66f62a2f--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2608.28444",
+  "worker_completed_at": "2026-10-12T11:32:16+09:00",
+  "worker_run_key": "20261012-1130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4766,
+    "body_paragraphs": 27,
+    "method_chars": 950,
+    "method_paragraphs": 5,
+    "evaluation_chars": 1844,
+    "limitation_chars": 354,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-dfc37413d217--libfile_3689a52175e881919fddf988c25bb40a--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.md と 14 段落 / 2969文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-12T02:57:59+00:00"
+}

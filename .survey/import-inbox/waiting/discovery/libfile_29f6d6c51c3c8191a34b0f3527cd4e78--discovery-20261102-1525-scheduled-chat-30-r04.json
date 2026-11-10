@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261102-1525-scheduled-chat-30/r04",
+  "reference_main_sha": "ee716ae60fd44ea0b1fb55565eef6e202c16126a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24993",
+      "identity_tokens": [
+        "id:arXiv:2610.24993",
+        "id:DOI:10.48550/arXiv.2610.24993"
+      ],
+      "title": "When Does Better Acceptance Pay? A Controlled Study of Speculative Decoding",
+      "reason": "投機的デコードのacceptance lengthが伸びてもdraft生成やverificationの追加遅延によってthroughputが悪化しうる問題を、共有target・訓練データ・評価環境で6種類のdrafter recipeを再訓練して比較する。公開チェックポイントの再測定では既報の大差が縮まり、DCoreのような軽量変更とtoken間conditioningの高コスト変更では得になる条件が異なると示す。LLM推論の実行時間とacceptanceの制御実験としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.24993",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:31:13+09:00",
+      "last_checked_at": "2026-11-02T15:31:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 206,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.27550",
+      "identity_tokens": [
+        "id:arXiv:2606.27550",
+        "id:DOI:10.48550/arXiv.2606.27550"
+      ],
+      "title": "EntMTP: Accelerating LLM Inference with Entropy Guided Multi Token Prediction",
+      "reason": "MTPによる自己投機的デコードで固定のdraft treeを常用すると、文脈によって変わる予測難度に対し過剰なverification負荷が発生する。EntMTPは局所token entropyの推定から事前に用意したPareto最適tree topologyを切り替え、低entropy領域で深いdraft、高entropy領域で保守的なdraftを使う。HumanEval・ShareGPT・GSM8K等でHydra比1.15倍、Medusa比最大1.36倍の速度を報告し、推論実行の直接スケジューリングとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2606.27550",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:31:13+09:00",
+      "last_checked_at": "2026-11-02T15:31:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 208,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.15188",
+      "identity_tokens": [
+        "id:arXiv:2604.15188",
+        "id:DOI:10.48550/arXiv.2604.15188"
+      ],
+      "title": "VisPCO: Visual Token Pruning Configuration Optimization via Budget-Aware Pareto-Frontier Learning for Vision-Language Models",
+      "reason": "VLMの視覚token pruningで層別の削減率や開始位置を固定設定する代わりに、計算予算と精度のPareto frontierを近似する最適化問題として扱う。連続緩和とstraight-through推定器、Augmented Lagrangianにより設定を探索し、8つの視覚benchmarkでgrid searchに近いPareto性能を示す。progressive pruningが単一層削減より優れると報告し、推論時token削減の配置最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2604.15188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:31:13+09:00",
+      "last_checked_at": "2026-11-02T15:31:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 210,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.02132",
+      "identity_tokens": [
+        "id:arXiv:2511.02132",
+        "id:DOI:10.48550/arXiv.2511.02132"
+      ],
+      "title": "Optimizing Attention on GPUs by Exploiting GPU Architectural NUMA Effects",
+      "reason": "複数chipletからなるGPUの非一様メモリアクセスで注意kernelのcache局所性が崩れる問題に対し、attention headをNUMA domainに対応させるSwizzled Head-first Mappingを提案する。AMD MI300Xで従来のhead schedulingを用いる注意kernel比最大50%の性能改善とL2 hit率80〜97%を報告し、LLM注意計算のGPU実装に直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2511.02132",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:31:13+09:00",
+      "last_checked_at": "2026-11-02T15:31:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 216,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.18846",
+      "identity_tokens": [
+        "id:arXiv:2602.18846",
+        "id:DOI:10.48550/arXiv.2602.18846"
+      ],
+      "title": "DUET-VLM: Dual stage Unified Efficient Token reduction for VLM Training and Inference",
+      "reason": "視覚encoder出力の冗長性を先に圧縮し、その後LLM内部でテキスト指示に基づき視覚tokenを層別に削除する二段方式を提案する。LLaVA-1.5-7Bでtokenを67%減らして基準精度99%超を維持し、89%減でも97%超を報告する。Video-LLaVAでも大幅なtoken削減と精度維持を示し、推論時VLMの計算削減を直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2602.18846",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:31:13+09:00",
+      "last_checked_at": "2026-11-02T15:31:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 219,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26531",
+      "identity_tokens": [
+        "id:arXiv:2610.26531",
+        "id:DOI:10.48550/arXiv.2610.26531"
+      ],
+      "title": "ReAnchor: Reusing Rejected Verifier States for Diffusion Drafting",
+      "reason": "ブロック拡散draftのtarget検証で最初の拒否以降に計算済みの隠れ状態を破棄せず、別位置から並列draftを再起動するReAnchorを提案する。ずらしたdraftの開始tokenを元のdraftと照合して接続し、targetにより全経路を検証することで分布を維持する。温度0で4 target・8 benchmark平均、acceptance長15.2%増、decode速度13.4%増を報告し、投機的推論の直接効率化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.26531",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:31:13+09:00",
+      "last_checked_at": "2026-11-02T15:31:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 224,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.06571",
+      "identity_tokens": [
+        "id:arXiv:2406.06571",
+        "id:DOI:10.48550/arXiv.2406.06571"
+      ],
+      "title": "SUBLLM: A Novel Efficient Architecture with Token Sequence Subsampling for LLM",
+      "reason": "decoder-only LLMへtoken列のsubsampling・upsampling・bypassを組み込み、中間層の処理token数を減らしながら出力長を復元するSUBLLMを提案する。LLaMA比較で訓練速度26%増、推論速度最大37%増を報告し、文脈8192では訓練34%、推論52%の改善を報告する。モデルアーキテクチャによる推論演算削減を直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2406.06571",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:31:13+09:00",
+      "last_checked_at": "2026-11-02T15:31:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 225,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.07802",
+      "identity_tokens": [
+        "id:arXiv:2408.07802",
+        "id:DOI:10.48550/arXiv.2408.07802"
+      ],
+      "title": "Kraken: Inherently Parallel Transformers For Efficient Multi-Device Inference",
+      "reason": "multi-device Transformer推論でtensor parallelismのcollective通信を計算と重ねるため、層内に固定度数の並列性を組み込むKraken architectureを提案する。OpenWebText学習とSuperGLUE評価で言語能力を保持し、TensorRT-LLMのmulti-GPU実装でモデル規模・文脈長・並列度を変えた平均TTFTを35.6%改善と報告する。推論の通信・計算overlapに直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2408.07802",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:31:13+09:00",
+      "last_checked_at": "2026-11-02T15:31:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 227,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.02847",
+      "identity_tokens": [
+        "id:arXiv:2506.02847",
+        "id:DOI:10.48550/arXiv.2506.02847"
+      ],
+      "title": "CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the Edge",
+      "reason": "edge端末の電力・遅延・容量制約に対応するため、モデル側の推論構成と28nmのscalable acceleratorを共同設計するCLONEを提案する。市販edge platform 2種類で測定し、推論を最大11.92倍高速化、energyを最大7.36倍節約と報告する。実機edge LLM推論のalgorithm-hardware最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2506.02847",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:31:13+09:00",
+      "last_checked_at": "2026-11-02T15:31:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 228,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03295",
+      "identity_tokens": [
+        "id:arXiv:2602.03295",
+        "id:DOI:10.48550/arXiv.2602.03295"
+      ],
+      "title": "POP: Prefill-Only Pruning for Efficient Large Model Inference",
+      "reason": "LLM/VLMで深い層はdecodeの次token予測に重要だがprefillの文脈encodeでは一部省略可能という非対称性を利用し、prefill時のみ深層をpruneしdecodeでは完全モデルを使う。独立KV projectionと最初の生成tokenの境界処理でcache整合性を維持する。Llama-3.1・Qwen3-VL・Gemma-3でprefill遅延最大1.37倍改善を報告し、推論フェーズ特化の直接最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2602.03295",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:31:13+09:00",
+      "last_checked_at": "2026-11-02T15:31:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 232,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

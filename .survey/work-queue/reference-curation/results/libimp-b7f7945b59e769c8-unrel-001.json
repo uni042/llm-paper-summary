@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7f7945b59e769c8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2022.acl-long.524",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2022.acl-long.524",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2022.acl-long.524"
+    ],
+    "reason": "一次要旨はvision-and-language navigationのタスク・方法・今後の方向をsurveyするもので、LLM推論効率を扱わない。",
+    "first_checked_at": "2026-10-05T01:50:05+00:00",
+    "last_checked_at": "2026-10-05T01:50:05+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md"
+    ],
+    "title": "Vision-and-Language Navigation: A Survey of Tasks, Methods, and Future Directions"
+  },
+  "processed_at": "2026-10-05T01:50:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7f7945b59e7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

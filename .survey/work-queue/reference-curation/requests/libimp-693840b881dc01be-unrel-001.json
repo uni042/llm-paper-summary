@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-693840b881dc01be-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.12715",
+  "reason": "Generative speech enhancement faces three gaps: spectral models capture harmonic structure but often disrupt phase, waveform models preserve phase but miss harmonics, and Schr\\\"odinger Bridges (SB) shorten transport from noise to clean speech but leave inference cost only loosely tied to training. We propose HybridSB-MoE, a dual-domain framework that fills these gaps through three contributions unified by a single asymmetric design principle. (i) Asymmetric uncertainty fusion: The spectral path captures epistemic uncertainty via expert disagreement, while the waveform bridge models aleatoric variance through stochastic dynamics. We fuse them asymmetrically, allowing the mixing weight to adapt to distinct error regimes rather than average predictions. (ii) Heterogeneous MoE with top-k=2 routing across five distinct architectural archetypes, where architectural diversity makes the epistemic signal indicate which inductive bias fails rather than small perturbations among similar experts. (iii) Discretization bound (Theorem 1): path-consistency and trajectory regularizers together bound the K-step bridge sampling error in 2-Wasserstein distance at rate K-alpha, making small-K inference an objective-level guarantee rather than an empirical claim. On VoiceBank+DEMAND, HybridSB-MoE outperforms diffusion- and SB-based baselines at their step budgets while remaining competitive with consistency-distilled few-step methods.",
+  "title": "HybridSB-MoE: Dual-Domain Schr\\\"odinger Bridges with Scene-Adaptive Expert Routing for Speech Enhancement",
+  "identity_tokens": [
+    "arXiv:2608.12715"
+  ],
+  "linked_from": [
+    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-693840b881dc",
+  "source_precheck_request_id": null
+}

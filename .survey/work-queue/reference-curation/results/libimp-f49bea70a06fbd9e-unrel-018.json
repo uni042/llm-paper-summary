@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f49bea70a06fbd9e-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.14146",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.14146",
+    "identity_tokens": [
+      "arXiv:2505.14146"
+    ],
+    "reason": "s3はRLによるsearch agentの学習データ効率を扱う。改善対象は学習であり推論基盤ではない。",
+    "first_checked_at": "2026-10-13T00:16:03+00:00",
+    "last_checked_at": "2026-10-13T00:16:03+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "s3: You Don't Need That Much Data to Train a Search Agent via RL"
+  },
+  "processed_at": "2026-10-13T00:16:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f49bea70a06f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

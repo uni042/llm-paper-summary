@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "23bbe40955843b64d3cd170556fabfce18919458dbbf3c70014ee9bd66aeb259",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cb71fedba06c--libfile_7b0d8122b8dc8191ad986541fb60bab7--2024-2410.10165-hsr-sparse-attention-theory-research-20261016-0530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2410.10165",
+  "worker_completed_at": "2026-10-16T05:30:00+09:00",
+  "worker_run_key": "20261016-0530-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5340,
+    "body_paragraphs": 37,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 644,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-16T16:13:23+00:00"
+}

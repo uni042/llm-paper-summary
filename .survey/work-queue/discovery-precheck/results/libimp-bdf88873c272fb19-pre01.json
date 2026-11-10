@@ -1,0 +1,158 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bdf88873c272fb19-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bdf88873c272",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2110.15343",
+    "arXiv:2504.05419"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "78faa849bdd02ff29cf2bc2585c44130fd3f7a61",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-07T05:25:02.669349+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2110.15343",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.05419",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2504.05419"
+    }
+  ],
+  "results": [
+    {
+      "title": "Scatterbrain: Unifying Sparse and Low-rank Attention Approximation",
+      "source_url": "https://arxiv.org/abs/2110.15343",
+      "year": 2021,
+      "published": "2021-10-28",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 183,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in efficient Transformers have exploited either the sparsity or low-rank properties of attention matrices to reduce the computational and memory bottlenecks of modeling long sequences. However, it is still challenging to balance the trade-off between model quality and efficiency to perform a one-size-fits-all approximation for different tasks. To better understand this trade-off, we observe that sparse and low-rank approximations excel in different regimes, determined by the softmax temperature in attention, and sparse + low-rank can outperform each individually. Inspired by the classical robust-PCA algorithm for sparse and low-rank decomposition, we propose Scatterbrain, a novel way to unify sparse (via locality sensitive hashing) and low-rank (via kernel feature map) attention for accurate and efficient approximation. The estimation is unbiased with provably low error. We empirically show that Scatterbrain can achieve 2.1x lower error than baselines when serving as a drop-in replacement in BigGAN image generation and pre-trained T2T-ViT. On a pre-trained T2T Vision transformer, even without fine-tuning, Scatterbrain can reduce 98% of attention memory at the cost of only 1% drop in accuracy. We demonstrate Scatterbrain for end-to-end training with up to 4 points better perplexity and 5 points better average accuracy than sparse or low-rank efficient transformers on language modeling and long-range-arena tasks.",
+      "identifiers": [
+        "SemanticScholar:5f895e84c1fea75de07b4f90da518273c2e57291"
+      ],
+      "semantic_scholar_id": "5f895e84c1fea75de07b4f90da518273c2e57291",
+      "canonical_id": "arXiv:2110.15343",
+      "arxiv_id": "2110.15343",
+      "authors": [
+        "Beidi Chen",
+        "Tri Dao",
+        "Eric Winsor",
+        "Zhao Song",
+        "A. Rudra",
+        "C. Ré"
+      ],
+      "priority": 193,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 183,
+        "citation_count": 183,
+        "total": 193,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1805,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2110.15343",
+      "identity_tokens": [
+        "id:SemanticScholar:5f895e84c1fea75de07b4f90da518273c2e57291",
+        "id:arXiv:2110.15343",
+        "title:scatterbrain unifying sparse and lowrank attention approximation",
+        "url:https://arxiv.org/abs/2110.15343"
+      ],
+      "record": {
+        "title": "Scatterbrain: Unifying Sparse and Low-rank Attention Approximation",
+        "source_url": "https://arxiv.org/abs/2110.15343",
+        "year": 2021,
+        "published": "2021-10-28",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 183,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in efficient Transformers have exploited either the sparsity or low-rank properties of attention matrices to reduce the computational and memory bottlenecks of modeling long sequences. However, it is still challenging to balance the trade-off between model quality and efficiency to perform a one-size-fits-all approximation for different tasks. To better understand this trade-off, we observe that sparse and low-rank approximations excel in different regimes, determined by the softmax temperature in attention, and sparse + low-rank can outperform each individually. Inspired by the classical robust-PCA algorithm for sparse and low-rank decomposition, we propose Scatterbrain, a novel way to unify sparse (via locality sensitive hashing) and low-rank (via kernel feature map) attention for accurate and efficient approximation. The estimation is unbiased with provably low error. We empirically show that Scatterbrain can achieve 2.1x lower error than baselines when serving as a drop-in replacement in BigGAN image generation and pre-trained T2T-ViT. On a pre-trained T2T Vision transformer, even without fine-tuning, Scatterbrain can reduce 98% of attention memory at the cost of only 1% drop in accuracy. We demonstrate Scatterbrain for end-to-end training with up to 4 points better perplexity and 5 points better average accuracy than sparse or low-rank efficient transformers on language modeling and long-range-arena tasks.",
+        "identifiers": [
+          "SemanticScholar:5f895e84c1fea75de07b4f90da518273c2e57291"
+        ],
+        "semantic_scholar_id": "5f895e84c1fea75de07b4f90da518273c2e57291",
+        "canonical_id": "arXiv:2110.15343",
+        "arxiv_id": "2110.15343",
+        "authors": [
+          "Beidi Chen",
+          "Tri Dao",
+          "Eric Winsor",
+          "Zhao Song",
+          "A. Rudra",
+          "C. Ré"
+        ],
+        "priority": 193,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 183,
+          "citation_count": 183,
+          "total": 193,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1805,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2e81060512bbe990af5dbf558a6aa852d2b181fb0baacfb82d39715a69d97565",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5bc464c5c0f683e3-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.16059",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.16059",
+    "identity_tokens": [
+      "arXiv:2606.16059"
+    ],
+    "reason": "Mojo language/tool survey for scalable financial-AI software development; it is not an LLM inference/serving study.",
+    "first_checked_at": "2026-10-05T12:08:37+00:00",
+    "last_checked_at": "2026-10-05T12:08:37+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "Mojo: A Promising Tool for Scalable Financial AI Efficiency"
+  },
+  "processed_at": "2026-10-05T12:08:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5bc464c5c0f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

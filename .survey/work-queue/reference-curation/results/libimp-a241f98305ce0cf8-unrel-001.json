@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a241f98305ce0cf8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3389/fpsyg.2026.1874556",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3389/fpsyg.2026.1874556",
+    "identity_tokens": [
+      "DOI:10.3389/fpsyg.2026.1874556"
+    ],
+    "reason": "The paper studies sociocultural representation effects in cognitive architectures using LLM and ConceptNet knowledge sources, not inference efficiency.",
+    "first_checked_at": "2026-10-05T08:47:10+00:00",
+    "last_checked_at": "2026-10-05T08:47:10+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "title": "New knowledge source pipelines for sociocultural representations in a cognitive architecture"
+  },
+  "processed_at": "2026-10-05T08:47:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a241f98305ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

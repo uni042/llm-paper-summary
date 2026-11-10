@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a55901f82795ceb4-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.02181",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.02181",
+    "identity_tokens": [
+      "arXiv:2610.02181"
+    ],
+    "reason": "OmniSeek uses selective temporal audio/video evidence retrieval with native tools rather than processing an entire sequence at once. The primary text evaluates long-video/audio-visual reasoning and documents a 32K-token context bottleneck for long raw audio (roughly 90K tokens for two hours). It is an agent/tool integration recipe with no demonstrated direct reduction in LLM inference cost; keep as a weak long-context adjacent item.",
+    "first_checked_at": "2026-10-06T08:50:30+00:00",
+    "last_checked_at": "2026-10-06T08:50:30+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OmniSeek: Native Tool Integration for Multi-turn Audio-Visual Reasoning"
+  },
+  "processed_at": "2026-10-06T08:50:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a55901f82795",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

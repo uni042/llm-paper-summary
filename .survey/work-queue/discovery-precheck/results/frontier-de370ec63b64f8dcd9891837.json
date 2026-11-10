@@ -1,0 +1,870 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "frontier-de370ec63b64f8dcd9891837",
+  "collector_id": "direct-frontier-de370ec63b64f8dcd9891837",
+  "run_key": "worker-45-20260925T074628",
+  "axis": "forward citations of LMCache enterprise-scale KV cache layer",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2510.09665/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "120",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "20d4d94fde88a1bf25c8042ee38b751a4a41331e",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-24T22:48:11.406921+00:00",
+  "preload_id": "preload-b7579dc93e27b3937764",
+  "preload_seed": false,
+  "preload_cache_used": true,
+  "preload_cached_pages_used": 1,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": "preload-b7579dc93e27b3937764",
+  "results": [
+    {
+      "title": "The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems",
+      "source_url": "https://www.semanticscholar.org/paper/722af1814c8958ddb9fbb8579feb7fb1fc9e0b63",
+      "year": 2026,
+      "published": "2026-09-23",
+      "abstract": "Prefix caching is critical for efficient large language model (LLM) serving, particularly for agentic workloads that repeatedly invoke the model with a growing conversation and tool-use history. By reusing the key-value (KV) states of previously processed prefixes, prefix caching avoids redundant prefill computation. Its effectiveness, however, depends on retaining a sufficiently large set of KV cache states. Provisioning enough cache to preserve all historical KV states is prohibitively expensive and often unnecessary, whereas insufficient capacity can substantially degrade the cache hit rate. Determining the KV cache working set, defined as the minimum cache capacity required to achieve a target hit rate, is therefore essential for efficient cache provisioning and system design. We present KVSET, an online analyzer that estimates the KV cache working set of LLM serving workloads. KVSET uses the Mattson stack algorithm to efficiently estimate cache hit rates across a wide range of cache capacities. For each KV cache page, KVSET computes its LRU stack distance and compares it with the page number of each candidate capacity. This comparison determines whether the page would be a hit at each capacity without independently simulating every capacity configuration. KVSET therefore substantially reduces the computational and memory overhead of conventional capacity-by-capacity simulation and makes online working-set analysis practical. KVSET further determines the minimum cache capacity based on the maximum LRU depth among the prefix pages required to achieve the target hit rate. We validate KVSET using traces collected from production LLM workloads and show that its estimates closely match measurements from real cache deployments. The open-source implementation supports both online request processing and offline trace replay.",
+      "canonical_id": "arXiv:2609.27746",
+      "arxiv_id": "2609.27746"
+    },
+    {
+      "title": "Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis",
+      "source_url": "https://www.semanticscholar.org/paper/19d6d38dcf6a45f6ea7b0d6339ce10f138766dd3",
+      "year": 2026,
+      "published": "2026-08-15",
+      "abstract": "Test-time compute can substantially improve Large Language Model (LLM) reasoning performance, yet how and when additional compute helps remains poorly understood. We study Divergent-Convergent Reasoning (DCR), a simple two-phase primitive consisting of an exploration phase that generates multiple candidate solutions followed by a convergent reconciliation phase. We present three core results. First, we show that even a single reconciliation step can reliably amplify correct minority reports: across datasets, DCR often recovers the correct answer when correct exploration outputs are in the minority, a regime where majority voting fails. Second, we introduce recursive DCR, an autoregressive reconciliation system that iteratively analyzes disagreements and allocates additional test-time compute. Recursive DCR achieves higher accuracy than fixed-compute baselines-reaching 93.3% on AIME 2024 and 92.0% on AIME 2025-while using roughly 27% less compute on average, demonstrating that attentive resource allocation is superior to uniform scaling. Third, we analyze disagreement among exploration outputs via a simple, training-free dispersion metric. Dispersion reveals a structured relationship between disagreement and test-time gains: in regimes where DCR is effective, higher disagreement among exploration outputs is associated with larger accuracy improvements from reconciliation. Together, these results show that disagreement, often viewed as noise, can be systematically exploited to improve test-time reasoning and reveal emerging scaling laws for agentic LLM systems.",
+      "canonical_id": "arXiv:2608.15303",
+      "arxiv_id": "2608.15303",
+      "authors": [
+        "Bo Wen",
+        "Yuhao Chen",
+        "E. Bilal",
+        "C. Rios",
+        "Chen Wang",
+        "Junchen Jiang"
+      ]
+    },
+    {
+      "title": "The Fleet Is the Model: Engineering Collective Intelligence with Fusion-MoA Pioneer R1",
+      "source_url": "https://www.semanticscholar.org/paper/e3ac3c14906f340518e4777b24201cba2a2c1da6",
+      "year": 2026,
+      "published": "2026-08-03",
+      "abstract": "The model exposed to an application need not be a single checkpoint; it can be a governed fleet. Existing serving systems manage checkpoints and replicas, while multi-agent frameworks compose model calls without defining a stable collective identity, effect authority, or member-level evolution. We present Fusion-MoA, a runtime that exposes independently served heterogeneous Cells as one OpenAI-compatible model. A versioned Profile controls membership and evidence admission; read-only Analysts contribute bounded evidence, while a sole Executor retains all final-answer and tool authority. Cells can be qualified, promoted, or rolled back without changing the public API. We evaluate an eight-Cell, three-lineage deployment through three operational witnesses. On a fixed HMMT P1-P10 slice, the collective solves 8/10 problems versus 6/10 for the strongest individual Cell, and a preserved trace shows minority knowledge transferred to three initially incorrect or empty Cells. On 20 Terminal-Bench 2.1 tasks, all tool actions remain attributable to one Executor, with zero Analyst actions and zero bypass effects. Six Cells are promoted and one incompatible candidate is locally rolled back while the service remains available. Fusion-MoA demonstrates that heterogeneous model capability can be operated as one observable, authority-bounded, and independently evolvable service.",
+      "canonical_id": "arXiv:2609.26080",
+      "arxiv_id": "2609.26080",
+      "authors": [
+        "Zong-You Yang",
+        "Ying-Han Hou"
+      ]
+    },
+    {
+      "title": "Agent-Assisted Side-Channel Attacks on Non-Prefix KV Cache in RAG",
+      "source_url": "https://www.semanticscholar.org/paper/e4d52d40265cd04bb83e7d0050dc86a128b22ecf",
+      "year": 2026,
+      "published": "2026-06-20",
+      "abstract": "Modern Large Language Model (LLM) serving engines increasingly rely on Retrieval-Augmented Generation (RAG) and non-prefix Key-Value (KV) cache fusion to accelerate long-context, multi-tenant inference. While existing KV cache side-channel attacks require strict linear prefix alignment--rendering them ineffective against real-world RAG queries that contain unique, user-specific private prefixes--we uncover a critical class of structural vulnerabilities inherent to chunk-aware memory scheduling. We demonstrate that the deterministic micro-architectural mechanisms used to align and fuse disjoint memory chunks inadvertently leak a continuous\"Step-Wave\"timing signature. Exploiting this physical observation, we introduce SpliceLeak, the first end-to-end side-channel attack targeting non-prefix KV cache fusion. SpliceLeak executes a systematic two-phase privacy breach: it first structurally fingerprints the exact length of hidden private prompts, and subsequently manipulates boundary collisions to extract exact semantic content token-by-token. Extensive evaluations on production-grade frameworks (vLLM integrated with LMCache) demonstrate that SpliceLeak achieves up to a 100% extraction success rate in bounded-entropy scenarios. Driven by a deterministic +104 ms hardware latency void, the attack requires as few as 63 requests per token, piercing through realistic continuous batching noise. To resolve the inherent conflict between memory deduplication and security, we propose SpliceDefense, a bipartite mitigation framework consisting of Quantized Chunk Padding (QCP) and Constant-Time Boundary Fusion (CTBF). Our evaluations confirm that SpliceDefense effectively flattens the side-channel signal (Delta TTFT ~ 0) with negligible throughput overhead, preserving the critical benefits of global cache sharing.",
+      "canonical_id": "arXiv:2606.21842",
+      "arxiv_id": "2606.21842",
+      "authors": [
+        "He Sun",
+        "Shi-Nan Liu",
+        "Siyuan Ma",
+        "Junhao Li",
+        "Ming-Jun Xiao",
+        "Wenhao Jiang"
+      ]
+    },
+    {
+      "title": "Beyond Per-Token Pricing: A Concurrency-Aware Methodology for LLM Infrastructure Cost Estimation",
+      "source_url": "https://www.semanticscholar.org/paper/8ca0c343e86cb77b539a58dffb019bb4bc40ab41",
+      "year": 2026,
+      "published": "2026-06-10",
+      "abstract": "Every public LLM cost calculator we surveyed treats GPU utilization as a fixed input -- entered by the user, baked in as a preset, or silently assumed at 100% -- never measured against the operator's actual load. We show that this assumption is the dominant source of error: on identical H100 hardware, effective cost spans \\$0.21 to \\$15.25 per million output tokens, an underutilization penalty of 2.5-24x across low-to-moderate enterprise loads (1-10 rps) and up to 36.3x near idle -- driven by one operator-controlled variable, offered request rate lambda, which sets in-flight concurrency via Little's Law and which no open-source calculator exposes. Because calculators take utilization as a user-supplied input, any utilization-naive estimate understates true cost by exactly 1/U, systematically mispricing self-hosting -- most severely over-selling it for low-traffic workloads. We propose a measurement methodology that parameterizes the relationship as C_eff = f(H, M, Q, lambda, L), validate it with 42 benchmarks across dense, ultra-sparse MoE, and sparse MoE models, and release vllm-cost-meter, an open-source cost meter that attaches to a live vLLM server and reports real \\$/M-tokens against the operator's own traffic. We further show that FP8 quantization benefits the MoE architectures we tested roughly 2.2-2.4x more than the dense model (+69 to +74% vs. +31% peak throughput; n=3, broader validation needed), and our data are consistent with active parameter count, not total model size, being a primary predictor of saturation economics. To rule out single-hardware confounding we repeat the core sweep on A100 80GB PCIe (56 runs): the load-driven spread reproduces at 7.0-11.4x, the active-parameters ordering survives at FP8, and the dense-FP8 advantage inverts on silicon without native FP8 tensor cores -- a hardware-conditional caveat the framework already accommodates.",
+      "canonical_id": "arXiv:2606.11690",
+      "arxiv_id": "2606.11690",
+      "authors": [
+        "Chitral Patil"
+      ]
+    },
+    {
+      "title": "HeraSys: Collaborative Serving of Multiple LLM Workflows via Fine-Grained End-to-End Optimization",
+      "source_url": "https://www.semanticscholar.org/paper/e298ddbd78bd698db43b2b4d300084adba6f70d7",
+      "year": 2026,
+      "published": "2026-06-07",
+      "abstract": "The proliferation of Large Language Models (LLMs) has shifted serving systems from processing isolated requests to orchestrating high-concurrency, multi-tenant agentic workflows. However, existing solutions typically prioritize intra-workflow optimization, largely neglecting the significant potential for inter-workflow optimization. In this paper, we propose HeraSys, an LLM serving system designed to optimize the end-to-end performance of concurrent workflows. Through fine-grained orchestration, HeraSys eliminates cross-workflow computational redundancy via structural node merging and reuse. Furthermore, HeraSys introduces a load-aware joint scheduling policy that dynamically manages execution order by evaluating both inter- and intra-query priorities. By integrating a resource skewing mechanism with adaptive batching and pipeline decomposition, HeraSys effectively mitigates tail latency while maintaining low average latency, thereby substantially improving system throughput. Extensive experiments demonstrate that HeraSys reduces P99 latency by up to 2.17$\\times$ and increases serving throughput by up to 1.85$\\times$ under strict latency guarantees.",
+      "canonical_id": "arXiv:2607.22578",
+      "arxiv_id": "2607.22578",
+      "authors": [
+        "Size Li",
+        "Zhiqing Tang",
+        "Hong-Rui Liang",
+        "Jian-Xiong Guo",
+        "Jiong Lou",
+        "Tian Wang",
+        "Wei-Jia Jia"
+      ]
+    },
+    {
+      "title": "QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving",
+      "source_url": "https://www.semanticscholar.org/paper/943b57ce1fc90793e96937ae33d65effd94eca60",
+      "year": 2026,
+      "published": "2026-06-04",
+      "abstract": "Retrieval-augmented generation (RAG) improves large language model (LLM) answer quality by grounding generation in external evidence, but processing retrieved contexts makes the prefill stage a dominant serving cost. RAG cache fusion reduces this cost by reusing precomputed key-value (KV) caches for retrieved chunks and selectively recomputing tokens under the current prompt. Existing selectors, however, face a dilemma between quality and efficiency: fast query-agnostic or final-layer query-to-context selectors can miss request-relevant evidence, whereas full-view query-aware selectors require broad context and layer visibility before recomputation and therefore stall the layer-wise cache-fusion pipeline. We present QCFuse, a compressed-view query-aware selector for RAG cache fusion. QCFuse uses chunk-anchor query probing to condition user-query states on compact per-chunk anchors and critical-layer profiling to identify recomputation tokens without all-layer inspection. We implement QCFuse in SGLang and evaluate it on four open-weight LLMs across six datasets. QCFuse reaches full-prefill-level quality. At matched quality, QCFuse achieves an average prefill-time speedup of 1.7x over full prefill and 1.5x over ProphetKV, the strongest quality-preserving baseline.",
+      "canonical_id": "arXiv:2606.05875",
+      "arxiv_id": "2606.05875",
+      "authors": [
+        "Jianxin Yan",
+        "Wangze Ni",
+        "Zhenxi Li",
+        "Jia-Bao Jin",
+        "Zhitao Shen",
+        "Haoyang Li",
+        "Jia Zhu",
+        "Peng Cheng",
+        "Xuemin Lin",
+        "Lei Chen",
+        "Kui Ren"
+      ]
+    },
+    {
+      "title": "Characterization of Multi-Model Agentic AI Systems on General Tasks via Trace-Driven Simulation",
+      "source_url": "https://www.semanticscholar.org/paper/5be80a23165a3f98e197d3cdce623210909a5dbc",
+      "year": 2026,
+      "published": "2026-06-01",
+      "abstract": "Agentic AI completes tasks through iterative planning, tool use, and reasoning based on observed outcomes. Despite its popularity, its system-level behavior remains poorly understood, particularly for complex datasets and agent architectures-owing to highly non-deterministic execution, prohibitive evaluation costs, and limited visibility into proprietary models. This paper presents GAIATrace, the first token-level trace dataset of two state-of-the-art agentic systems (MiroThinker and OWL) running GAIA, a benchmark composed of a heterogeneous mix of general-purpose tasks. Unlike prior trace datasets, GAIATrace captures full reasoning tokens, task-level structures, and activities of every major participating LLMs, enabling in-depth systems research. Complementing the dataset, we present Vidur-Agent, a trace-driven simulator that can replay GAIATrace to perform reproducible, low-cost system evaluation across diverse simulated environments. Using both artifacts, we characterize how modern agentic systems handle general tasks and how various system design choices shape their behavior, yielding several unique findings.",
+      "canonical_id": "arXiv:2606.01725",
+      "arxiv_id": "2606.01725",
+      "authors": [
+        "Donghwan Kim",
+        "Prakhar Singh",
+        "Younghoon Min",
+        "Jongryool Kim",
+        "Jongse Park",
+        "K. Maeng"
+      ]
+    },
+    {
+      "title": "PowerWeave: Unlocking Energy-Efficient ML on GPUs with OS-Level Spatial Power Management",
+      "source_url": "https://www.semanticscholar.org/paper/b663d862046f8bc190af17034b7f903e3bebf5a0",
+      "year": 2026,
+      "published": "2026-06-01",
+      "abstract": "GPU power consumption has become a central systems challenge as modern AI datacenters increasingly rely on accelerators whose power footprints reach unprecedented scales. A single NVIDIA B200 already draws around 1000 W, making large multi-GPU nodes among the most power-hungry computing platforms ever deployed. Despite this, GPUs still expose only a single, device-wide DVFS domain. This coarse control is increasingly mismatched to modern AI inference, where power demand is highly non-uniform across models, phases, and workloads. LLMs alternate between compute-bound prefill and memory-bound decode phases, models exhibit widely varying kernel behavior, and emerging agentic pipelines chain together models with sharply different computational profiles. As GPUs shift toward multi-die designs and multi-model stacking becomes essential for utilization, a single global frequency increasingly leads to unnecessary and wasteful high-power operation. We introduce PowerWeave, the first spatial DVFS mechanism for GPUs, built around an OS-level power-management control plane. PowerWeave dynamically learns per-stream frequencyscaling behavior from kernel latencies and uses a global governor to react to request-rate changes, tail-latency behavior, and SLO slack. This design enables adaptive, fine-grained, kernel-aware power management that preserves SLOs while improving energy efficiency across diverse ML workloads. We build PowerWeave in Rust as a fully transparent powergovernor layer atop the GPU driver and evaluate it across diverse LLM scenarios and agentic workloads on B200 GPUs. PowerWeave reduces energy consumption by 28% on average in both disaggregated-prefill and multitenant settings, achieving up to an $8 \\times$ improvement over device-wide DVFS in disaggregated prefill. For agentic workflows, PowerWeave reduces energy consumption by 19% on average without compromising throughput. PowerWeave eliminates thermal throttling across all evaluated workloads while maintaining zero SLO violations. Finally, our hardware analysis shows that spatial DVFS is practical: even perSM clock domains add less than 0.5% GPU die area overhead.",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00168",
+      "doi": "10.1109/ISCA66397.2026.00168",
+      "authors": [
+        "Vasilis Kypriotis",
+        "Eric Dubberstein",
+        "Patrick H. Coppock",
+        "Eliot H. Solomon",
+        "Rayyan Zamir",
+        "T. Srimani",
+        "Dimitrios Skarlatos"
+      ]
+    },
+    {
+      "title": "Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer?",
+      "source_url": "https://www.semanticscholar.org/paper/919628398eba1f2a91772d69253fa4db73342c91",
+      "year": 2026,
+      "published": "2026-05-26",
+      "abstract": "Modern retrieval-augmented generation(RAG) deployments increasingly rely on caching to reduce token cost and time-to-first-token(TTFT). Prefix-level KV reuse is now standard in serving stacks such as vLLM, and chunk-level and position-independent reuse have been pushed further by recent systems(RAGCache, TurboRAG, CacheBlend, EPIC, ContextPilot, PCR, LMCache). Output-level semantic answer caches, by contrast, remain fragile: similar prompts can map to different correct answers, retrieved evidence drifts as the corpus is updated, and adversarial collision attacks have been shown to hijack cached responses. We argue that the right framing for cached answer reuse is not how to reuse faster but when reuse is safe. We propose GroundedCache, an evidence-validated cache router that admits a cached answer only when 4 cheap gates simultaneously hold: query similarity, retrieved-evidence overlap, source-version validity, and lexical (or judge-based) support of the cached answer by the freshly retrieved evidence. We build a six-regime workload that stress-tests cache safety rather than only hit rate, and introduce an operator-facing metric, the unsafe-served rate (USR), fraction of all queries that received a wrong cached answer. Across 2 datasets and 12,000 real-LLM generations(Qwen2.5-7B-Instruct on vLLM with Automatic Prefix Caching), GroundedCache drives USR to 0.0% on every HotpotQA regime(vs. 15-35% under naive caching) and to 1.5% on mtRAG document drift(vs. 51.5%), a 34x reduction on the design-point adversarial regime and 3-10x reductions across the other mtRAG regimes, while end-to-end p50 latency stays within 1.04-1.07x of a no-cache RAG baseline. A per-gate ablation isolates the lexical support gate as the load-bearing safety mechanism on both datasets, with the remaining gates providing defense-in-depth at near-zero cost. We release the implementation, workload, and evaluation harness.",
+      "canonical_id": "arXiv:2605.27494",
+      "arxiv_id": "2605.27494",
+      "authors": [
+        "Syed Huma Shah"
+      ]
+    },
+    {
+      "title": "ROSE: Rollout On Serving GPUs via Cooperative Elasticity for Agentic RL",
+      "source_url": "https://www.semanticscholar.org/paper/3f0d49d319e032c9967326e8161736e82f39bce2",
+      "year": 2026,
+      "published": "2026-05-07",
+      "abstract": "Agentic reinforcement learning (RL) is reshaping LLM post-training, but end-to-end training time is dominated by compute-intensive, multi-turn rollouts whose resource demand varies significantly across training steps. Resource-fixed systems cannot adapt to this variation, while resource-elastic approaches that provision external GPUs on demand suffer from high allocation overhead and limited availability. We observe that serving clusters leave substantial GPU compute and memory idle, and propose cooperative elasticity: sharing already-deployed serving GPUs with rollout workloads to provide on-demand elastic capacity. Realizing this is non-trivial, as it must preserve serving SLOs under bursty traffic while minimizing cross-cluster communication overhead. We present ROSE, a system that realizes cooperative elasticity for agentic RL post-training, comprising three components: (1) an SLO-safe co-serving executor that co-locates heterogeneous serving and rollout models on the same GPUs, dynamically sharing memory and compute while preserving serving SLOs; (2) a cross-cluster weight transfer engine that leverages shard-aware routing and weight sparsity for fast synchronization; and (3) an elastic rollout scheduler that dynamically routes rollouts across dedicated and opportunistic serving GPUs. Experiments across multiple model sizes and cluster scales show that ROSE improves end-to-end throughput by 1.3 - 3.3 x over resource-fixed baselines and reduces rollout time by 1.2 - 1.5 x over resource-elastic baselines, with no serving SLO violations.",
+      "canonical_id": "arXiv:2605.06534",
+      "arxiv_id": "2605.06534",
+      "authors": [
+        "Wei Gao",
+        "Yuheng Zhao",
+        "Dilxat Muhtar",
+        "Dakai An",
+        "Xuchun Shang",
+        "Tianyuan Wu",
+        "Lunxi Cao",
+        "Shaopan Xiong",
+        "Wei-Xun Wang",
+        "Jun Huang",
+        "Teng Ma",
+        "Si-Ran Yang",
+        "Jiamang Wang",
+        "Lin Qu",
+        "Boyuan Zheng",
+        "Wei Wang"
+      ]
+    },
+    {
+      "title": "Grokers: Bottom-Up Inductive Comprehension and Write-Time Intelligence over Typed Knowledge Graphs",
+      "source_url": "https://www.semanticscholar.org/paper/336cbc66c0b99f4d5c26ffd18bfb55c08d68c943",
+      "year": 2026,
+      "published": "2026-05-07",
+      "abstract": "We present Grokers, an architecture for building persistent, structured comprehension of typed knowledge graphs through bottom-up inductive traversal of dependency subgraphs. Unlike retrieval-augmented generation (RAG), which pays full comprehension cost at every query, Grokers pushes intelligence to write time: autonomous Groker agents analyze nodes in a typed stream graph, extract structured attributes via governed language model (LM) calls, and inductively compose that understanding upward through dependency relations, writing enriched typed attributes that serve all future queries at zero additional LM cost. We prove three formal properties: (1) the Byte-Identity Theorem, establishing that context blocks assembled from a transactionally-maintained denormalization index are byte-identical across LM turns between semantic changes, enabling KV-cache hit rates approaching 100%; (2) the Accumulation Monotonicity Theorem, establishing that the fraction of interactions resolved without LM calls is non-decreasing in the number of completed interactions under a governed wisdom library growth protocol; and (3) the Dual-Traversal Ordering Theorem, establishing that top-down generation and bottom-up comprehension are the unique correct traversal orderings for their respective tasks over a dependency DAG, and that their composition closes into a complete generation-comprehension cycle. We further present a deterministic alternative to embedding-based semantic search, with a synonym caching protocol whose LM fallback rate converges to zero for finite-vocabulary domains. A reference implementation is provided in the open-source Qbix / Safebox / Safebots stack.",
+      "canonical_id": "arXiv:2606.00050",
+      "arxiv_id": "2606.00050",
+      "authors": [
+        "Gregory Magarshak"
+      ]
+    },
+    {
+      "title": "MGRAG: Semantic Subgraph Matching and Graph-Aware Caching for Multimodal Retrieval-Augmented Generation",
+      "source_url": "https://www.semanticscholar.org/paper/f5b6e50be3d364eb1bc2b231ffe26fbd6e4f6b0e",
+      "year": 2026,
+      "published": "2026-05-01",
+      "abstract": "Answering complex queries over large and heterogeneous multi-modal document corpora is a central challenge in data management, requiring fine-grained, entity-level evidence retrieval and efficient context serving. Graph-based Retrieval-Augmented Generation (RAG) systems achieve promising effectiveness by organizing multimodal documents as knowledge graphs (KGs); however, they still face three limitations: (1) query-agnostic KG construction, where corpus-wide graphs overwhelm query-relevant entities with irrelevant noise; (2) inflexible graph matching, which relies on rigid topological matching and misses path-level semantic equivalences; (3) event-agnostic KV re-computation, which scores tokens independently of graph topology, failing to preserve event-level semantic structure. To address these issues, we propose MGRAG. First, MGRAG incrementally builds query-specific KGs on demand via a lazy, top-down construction strategy. Second, we formulate graph retrieval as a path-based semantic subgraph matching problem, prove it NP-hard, and design an efficient greedy algorithm for flexible, semantics-aware retrieval. Third, MGRAG employs an event-aware KV caching mechanism to selectively recompute tokens critical to query-related events. Experiments on seven real-world multimodal QA datasets show that MGRAG achieves superior effectiveness and efficiency compared to state-of-the-art RAG, subgraph matching, and KV caching baselines.",
+      "canonical_id": "DOI:10.14778/3819518.3819565",
+      "doi": "10.14778/3819518.3819565",
+      "authors": [
+        "Yubo Wang",
+        "Haoyang Li",
+        "Lei Chen"
+      ]
+    },
+    {
+      "title": "KAIROS: Stateful, Context-Aware Power-Efficient Agentic Inference Serving",
+      "source_url": "https://www.semanticscholar.org/paper/67cc2a44cdca609856b686eea6f0f9bd9fb4f89d",
+      "year": 2026,
+      "published": "2026-04-17",
+      "abstract": "Power has become a central bottleneck for AI inference. This problem is becoming more urgent as agentic AI emerges as a major workload class, yet prior power-management techniques focus almost entirely on single-turn LLM serving. Our analysis shows that agentic serving behaves fundamentally differently: each request carries long-lived context that evolves across tool-interleaved turns, and lowering GPU frequency can push the system into a thrashing regime where memory pressure sharply worsens both performance and power efficiency. These observations show that power optimization for agentic serving requires rethinking. We present KAIROS, a context-aware power optimization system for agentic AI serving. KAIROS uses agent context as a first-class control signal to jointly manage GPU frequency, per-instance concurrency, and multi-instance request placement. This enables KAIROS to save power when memory headroom exists while avoiding thrashing and preserving performance targets. At a high level, KAIROS tracks requests at agent granularity, adapts local control to context growth and agent progress, and routes agents across instances to jointly improve power efficiency and memory stability. Evaluated across diverse software and data engineering agentic tasks, KAIROS achieves an average of 27% (up to 39.8%) power reduction while meeting the performance targets.",
+      "canonical_id": "arXiv:2604.16682",
+      "arxiv_id": "2604.16682",
+      "authors": [
+        "Yi-Chao Yuan",
+        "Mosharaf Chowdhury",
+        "N. Talati"
+      ]
+    },
+    {
+      "title": "Redefining AI Architecture with NAND Flash",
+      "source_url": "https://www.semanticscholar.org/paper/840938bed9c74d81f6ff21dc19db7486811f2bda",
+      "year": 2026,
+      "published": "2026-04-13",
+      "abstract": "As Agentic AI accelerates data demands, Phison aiDAPTIV utilizes high-endurance NAND Flash as a memory expansion layer to optimize training, inference, and RAG applications. To overcome PCIe bandwidth bottlenecks, we introduce Computational Storage Devices (CSD), which offload tasks like weight updates and vector searches directly to the storage level. These cases demonstrate that CSD is a pivotal evolution for scaling efficient, AI-centric infrastructure.",
+      "canonical_id": "DOI:10.1109/VLSITSA69131.2026.11528145",
+      "doi": "10.1109/VLSITSA69131.2026.11528145",
+      "authors": [
+        "Hao-Zhi Lee",
+        "Ming-Hui Wang",
+        "Yu-Hao Wang",
+        "Chia-Ming Hsu",
+        "Yi-Lun Du",
+        "An-Cin Li",
+        "Tso-Yuan Chen",
+        "Kai-Wei Tsou",
+        "Shiu-Ming Tsao",
+        "Jian-Ping Syu",
+        "Wei Lin"
+      ]
+    },
+    {
+      "title": "VineLM: Trie-Based Fine-Grained Control for Agentic Workflows",
+      "source_url": "https://www.semanticscholar.org/paper/ffc0bf7a0bcd955590873e302ff9825e86195dc8",
+      "year": 2026,
+      "published": "2026-04-09",
+      "abstract": "Agentic workflows interleave configurable LLM stages with tool stages and often include retries or refinement loops. Existing workflow managers profile full workflow configurations offline and assign each request a static workflow-level plan that binds each configurable LLM stage to a single model, reuses that model across repeated loop iterations, and does not revisit those choices at runtime. We present VineLM, a workflow manager that enables fine-grained control by choosing the model for each stage invocation as execution unfolds under request-level objectives such as maximizing accuracy under cost or latency budgets. VineLM represents feasible executions as an annotated trie of model-choice prefixes and uses checkpointing and cascade profiling to estimate path accuracy, cost, and latency without exhaustively profiling every request on every path. At runtime, VineLM re-roots the trie after each stage invocation and replans over the remaining subtrie using the realized execution prefix and remaining latency budget. On NL2SQL and math reasoning workflows, VineLM improves the cost-latency-accuracy frontier over coarse workflow-level baselines, achieving up to 18% higher accuracy at the same per-request budget with its sparse profiling reducing offline profiling cost by 98-99.8% when compared to exhaustive profiling.",
+      "canonical_id": "arXiv:2605.23914",
+      "arxiv_id": "2605.23914",
+      "authors": [
+        "Nikos Pagonas",
+        "M. Lou",
+        "Tianyi Peng",
+        "Dan Rubenstein",
+        "Kostis Kaffes"
+      ]
+    },
+    {
+      "title": "CodecSight: Leveraging Video Codec Signals for Efficient Streaming VLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/47a99f85b82d1d2b1f57a6d525df39007c25dfe6",
+      "year": 2026,
+      "published": "2026-04-07",
+      "abstract": "Continuous inference over concurrent video streams imposes substantial compute and memory demands on vision-language model (VLM) serving. Streaming inference uses sliding windows to maintain a bounded context of recent video, but processing each window independently repeats visual encoding and large language model (LLM) prefilling for similar and overlapping content. Existing optimizations provide limited coordination across these stages and often rely on model-specific training, profiling, or model-generated signals. We present CodecSight, a streaming VLM serving system that uses codec metadata as shared runtime guidance across visual encoding and LLM prefilling, without model-specific training or offline profiling. Codec-derived change signals guide patch pruning before visual encoding, reducing both visual computation and the number of downstream visual tokens. Codec-defined frame types guide selective key-value (KV) refresh across windows, while positional correction enables reuse of the remaining cached keys. Across three VLMs and four video workloads, our vLLM-based implementation supports up to $3.3\\times$ as many concurrent streams and achieves up to a $5.3\\times$ speedup in average time-to-first-token relative to the state-of-the-art baselines. It also reduces executed FLOPs by up to 93%, with a maximum task-quality decrease of 4.64 percentage points.",
+      "canonical_id": "arXiv:2604.06036",
+      "arxiv_id": "2604.06036",
+      "authors": [
+        "Yu-qin Zou",
+        "Wenyan Chen",
+        "Yan Chen",
+        "Anya Rajan",
+        "Jooyoung Park",
+        "Shivaraman Nitin",
+        "Luo Tao",
+        "Francisco Romero",
+        "D. Ustiugov"
+      ]
+    },
+    {
+      "title": "Residual-Mass Accounting for Partial-KV Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/8e422900be64e63cc561ff1cd77b889cae12b620",
+      "year": 2026,
+      "published": "2026-04-07",
+      "abstract": "We study a controlled partial-KV decoding setting in which exact unnormalized softmax contributions are computed for sink/tail anchors and a retrieved token set, while the remaining prefill tokens are represented by a residual estimate. We focus on the accounting rule after the query-dependent exact support has been selected, and use exhaustive Top-K only as an oracle selector, not as a deployable retrieval system. The proposed rule leaves the backbone language model and the exact-branch KV tensors unchanged. It builds fixed-size summary states $(S,u)$ from learned positive feature maps $\\phi$, subtracts retrieved-token feature contributions to keep the exact and residual sets non-overlapping, and merges the estimated residual numerator and denominator with the exact branch under one normalization. At a 1% exact-support budget, our residual-completion method improves over the selection-only Top-K baseline on RULER and BABILong across frozen 1B and 3B Llama-3.2-Instruct backbones at all reported context lengths. In the 0.5-4% exact-support budget sweeps, this trend largely persists. On LongBench, summarization results are mostly favorable, while multi-document QA is mixed. Attention-output diagnostics support retrieved-token subtraction as the partition-consistent accounting rule, while indicating that the main remaining error is imperfect learned-$\\phi$ approximation of the unretrieved residual mass.",
+      "canonical_id": "arXiv:2604.05438",
+      "arxiv_id": "2604.05438",
+      "authors": [
+        "Yasuto Hoshi",
+        "Daisuke Miyashita",
+        "Jun Deguchi"
+      ]
+    },
+    {
+      "title": "SLO-Aware Compute Resource Allocation for Prefill-Decode Disaggregated LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/f86bc34e1e748b9bed0da8513962a8d4e54a40ba",
+      "year": 2026,
+      "published": "2026-03-05",
+      "abstract": "Prefill-Decode (P/D) disaggregation has emerged as a widely adopted optimization strategy for Large Language Model (LLM) inference. However, there currently exists no well-established methodology for determining the optimal number of P/D hardware resources, subject to constraints on total throughput, service level objectives (SLOs), and request characteristics - specifically input and output lengths. To address this gap, we propose a hybrid approach that combines theoretical modeling with empirical benchmarking. First, we present a theoretical model for calculating P/D resource counts, which is based on total throughput requirements, request input and output lengths, as well as prefill and decode throughput. Then, to obtain the actual prefill and decode throughput under SLO constraints, we model the prefill process using M/M/1 queuing theory, deriving the achieved prefill throughput from the benchmarked maximum prefill throughput and Time-To-First-Token (TTFT). For the decode phase, we determine the decode batch sizes that meet Time-Per-Output-Token (TPOT) requirements and obtain the corresponding decode throughput through empirical measurements. Our experimental results demonstrate that the proposed method can accurately predict optimal P/D resource allocation in real-world LLM inference scenarios.",
+      "canonical_id": "arXiv:2603.04716",
+      "arxiv_id": "2603.04716",
+      "authors": [
+        "Luchang Li",
+        "Dongfang Li",
+        "Bo-Zhao Gong",
+        "Yu Zhang"
+      ]
+    },
+    {
+      "title": "Hardware Co-Design Scaling Laws via Roofline Modelling for On-Device LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/d914054b50f0b25cb3aece2454b9ce9dab031c68",
+      "year": 2026,
+      "published": "2026-02-10",
+      "abstract": "Vision-Language-Action Models (VLAs) have emerged as a key paradigm of Physical AI and are increasingly deployed in autonomous vehicles, robots, and smart spaces. In these resource-constrained on-device settings, selecting an appropriate large language model (LLM) backbone is a critical challenge: models must balance accuracy with strict inference latency and hardware efficiency constraints. This makes hardware-software co-design a game-changing requirement for on-device LLM deployment, where each hardware platform demands a tailored architectural solution. We propose a hardware co-design law that jointly captures model accuracy and inference performance. Specifically, we model training loss as an explicit function of architectural hyperparameters and characterise inference latency via roofline modelling. We empirically evaluate 1,942 candidate architectures on NVIDIA Jetson Orin, training 170 selected models for 10B tokens each to fit a scaling law relating architecture to training loss. By coupling this scaling law with latency modelling, we establish a direct accuracy-latency correspondence and identify the Pareto frontier for hardware co-designed LLMs. We further formulate architecture search as a joint optimisation over precision and performance, deriving feasible design regions under industrial hardware and application budgets. Our approach reduces architecture selection from months to days. At the same latency as Qwen2.5-0.5B on the target hardware, our co-designed architecture achieves 19.42% lower perplexity on WikiText-2. To our knowledge, this is the first principled and operational framework for hardware co-design scaling laws in on-device LLM deployment. We will make the code and related checkpoints publicly available.",
+      "canonical_id": "arXiv:2602.10377",
+      "arxiv_id": "2602.10377",
+      "authors": [
+        "Luo-Yang Sun",
+        "Jiwen Jiang",
+        "Yifeng Ding",
+        "Feng-Fa Li",
+        "Yanke Song",
+        "Hai-Feng Zhang",
+        "Jian Ying",
+        "Lei Ren",
+        "Kun Zhan",
+        "Wei Chen",
+        "Yan Xie",
+        "Cheng Deng"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.27746",
+      "identity_tokens": [
+        "id:arXiv:2609.27746",
+        "title:the kv cache working set online capacity planning for llm inference systems",
+        "url:https://www.semanticscholar.org/paper/722af1814c8958ddb9fbb8579feb7fb1fc9e0b63"
+      ],
+      "record": {
+        "title": "The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems",
+        "source_url": "https://www.semanticscholar.org/paper/722af1814c8958ddb9fbb8579feb7fb1fc9e0b63",
+        "year": 2026,
+        "published": "2026-09-23",
+        "abstract": "Prefix caching is critical for efficient large language model (LLM) serving, particularly for agentic workloads that repeatedly invoke the model with a growing conversation and tool-use history. By reusing the key-value (KV) states of previously processed prefixes, prefix caching avoids redundant prefill computation. Its effectiveness, however, depends on retaining a sufficiently large set of KV cache states. Provisioning enough cache to preserve all historical KV states is prohibitively expensive and often unnecessary, whereas insufficient capacity can substantially degrade the cache hit rate. Determining the KV cache working set, defined as the minimum cache capacity required to achieve a target hit rate, is therefore essential for efficient cache provisioning and system design. We present KVSET, an online analyzer that estimates the KV cache working set of LLM serving workloads. KVSET uses the Mattson stack algorithm to efficiently estimate cache hit rates across a wide range of cache capacities. For each KV cache page, KVSET computes its LRU stack distance and compares it with the page number of each candidate capacity. This comparison determines whether the page would be a hit at each capacity without independently simulating every capacity configuration. KVSET therefore substantially reduces the computational and memory overhead of conventional capacity-by-capacity simulation and makes online working-set analysis practical. KVSET further determines the minimum cache capacity based on the maximum LRU depth among the prefix pages required to achieve the target hit rate. We validate KVSET using traces collected from production LLM workloads and show that its estimates closely match measurements from real cache deployments. The open-source implementation supports both online request processing and offline trace replay.",
+        "canonical_id": "arXiv:2609.27746",
+        "arxiv_id": "2609.27746"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15303",
+      "identity_tokens": [
+        "id:arXiv:2608.15303",
+        "title:divergentconvergent reasoning scaling testtime compute through structured solution synthesis",
+        "url:https://www.semanticscholar.org/paper/19d6d38dcf6a45f6ea7b0d6339ce10f138766dd3"
+      ],
+      "record": {
+        "title": "Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis",
+        "source_url": "https://www.semanticscholar.org/paper/19d6d38dcf6a45f6ea7b0d6339ce10f138766dd3",
+        "year": 2026,
+        "published": "2026-08-15",
+        "abstract": "Test-time compute can substantially improve Large Language Model (LLM) reasoning performance, yet how and when additional compute helps remains poorly understood. We study Divergent-Convergent Reasoning (DCR), a simple two-phase primitive consisting of an exploration phase that generates multiple candidate solutions followed by a convergent reconciliation phase. We present three core results. First, we show that even a single reconciliation step can reliably amplify correct minority reports: across datasets, DCR often recovers the correct answer when correct exploration outputs are in the minority, a regime where majority voting fails. Second, we introduce recursive DCR, an autoregressive reconciliation system that iteratively analyzes disagreements and allocates additional test-time compute. Recursive DCR achieves higher accuracy than fixed-compute baselines-reaching 93.3% on AIME 2024 and 92.0% on AIME 2025-while using roughly 27% less compute on average, demonstrating that attentive resource allocation is superior to uniform scaling. Third, we analyze disagreement among exploration outputs via a simple, training-free dispersion metric. Dispersion reveals a structured relationship between disagreement and test-time gains: in regimes where DCR is effective, higher disagreement among exploration outputs is associated with larger accuracy improvements from reconciliation. Together, these results show that disagreement, often viewed as noise, can be systematically exploited to improve test-time reasoning and reveal emerging scaling laws for agentic LLM systems.",
+        "canonical_id": "arXiv:2608.15303",
+        "arxiv_id": "2608.15303",
+        "authors": [
+          "Bo Wen",
+          "Yuhao Chen",
+          "E. Bilal",
+          "C. Rios",
+          "Chen Wang",
+          "Junchen Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26080",
+      "identity_tokens": [
+        "id:arXiv:2609.26080",
+        "title:the fleet is the model engineering collective intelligence with fusionmoa pioneer r1",
+        "url:https://www.semanticscholar.org/paper/e3ac3c14906f340518e4777b24201cba2a2c1da6"
+      ],
+      "record": {
+        "title": "The Fleet Is the Model: Engineering Collective Intelligence with Fusion-MoA Pioneer R1",
+        "source_url": "https://www.semanticscholar.org/paper/e3ac3c14906f340518e4777b24201cba2a2c1da6",
+        "year": 2026,
+        "published": "2026-08-03",
+        "abstract": "The model exposed to an application need not be a single checkpoint; it can be a governed fleet. Existing serving systems manage checkpoints and replicas, while multi-agent frameworks compose model calls without defining a stable collective identity, effect authority, or member-level evolution. We present Fusion-MoA, a runtime that exposes independently served heterogeneous Cells as one OpenAI-compatible model. A versioned Profile controls membership and evidence admission; read-only Analysts contribute bounded evidence, while a sole Executor retains all final-answer and tool authority. Cells can be qualified, promoted, or rolled back without changing the public API. We evaluate an eight-Cell, three-lineage deployment through three operational witnesses. On a fixed HMMT P1-P10 slice, the collective solves 8/10 problems versus 6/10 for the strongest individual Cell, and a preserved trace shows minority knowledge transferred to three initially incorrect or empty Cells. On 20 Terminal-Bench 2.1 tasks, all tool actions remain attributable to one Executor, with zero Analyst actions and zero bypass effects. Six Cells are promoted and one incompatible candidate is locally rolled back while the service remains available. Fusion-MoA demonstrates that heterogeneous model capability can be operated as one observable, authority-bounded, and independently evolvable service.",
+        "canonical_id": "arXiv:2609.26080",
+        "arxiv_id": "2609.26080",
+        "authors": [
+          "Zong-You Yang",
+          "Ying-Han Hou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.21842",
+      "identity_tokens": [
+        "id:arXiv:2606.21842",
+        "title:agentassisted sidechannel attacks on nonprefix kv cache in rag",
+        "url:https://www.semanticscholar.org/paper/e4d52d40265cd04bb83e7d0050dc86a128b22ecf"
+      ],
+      "record": {
+        "title": "Agent-Assisted Side-Channel Attacks on Non-Prefix KV Cache in RAG",
+        "source_url": "https://www.semanticscholar.org/paper/e4d52d40265cd04bb83e7d0050dc86a128b22ecf",
+        "year": 2026,
+        "published": "2026-06-20",
+        "abstract": "Modern Large Language Model (LLM) serving engines increasingly rely on Retrieval-Augmented Generation (RAG) and non-prefix Key-Value (KV) cache fusion to accelerate long-context, multi-tenant inference. While existing KV cache side-channel attacks require strict linear prefix alignment--rendering them ineffective against real-world RAG queries that contain unique, user-specific private prefixes--we uncover a critical class of structural vulnerabilities inherent to chunk-aware memory scheduling. We demonstrate that the deterministic micro-architectural mechanisms used to align and fuse disjoint memory chunks inadvertently leak a continuous\"Step-Wave\"timing signature. Exploiting this physical observation, we introduce SpliceLeak, the first end-to-end side-channel attack targeting non-prefix KV cache fusion. SpliceLeak executes a systematic two-phase privacy breach: it first structurally fingerprints the exact length of hidden private prompts, and subsequently manipulates boundary collisions to extract exact semantic content token-by-token. Extensive evaluations on production-grade frameworks (vLLM integrated with LMCache) demonstrate that SpliceLeak achieves up to a 100% extraction success rate in bounded-entropy scenarios. Driven by a deterministic +104 ms hardware latency void, the attack requires as few as 63 requests per token, piercing through realistic continuous batching noise. To resolve the inherent conflict between memory deduplication and security, we propose SpliceDefense, a bipartite mitigation framework consisting of Quantized Chunk Padding (QCP) and Constant-Time Boundary Fusion (CTBF). Our evaluations confirm that SpliceDefense effectively flattens the side-channel signal (Delta TTFT ~ 0) with negligible throughput overhead, preserving the critical benefits of global cache sharing.",
+        "canonical_id": "arXiv:2606.21842",
+        "arxiv_id": "2606.21842",
+        "authors": [
+          "He Sun",
+          "Shi-Nan Liu",
+          "Siyuan Ma",
+          "Junhao Li",
+          "Ming-Jun Xiao",
+          "Wenhao Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.11690",
+      "identity_tokens": [
+        "id:arXiv:2606.11690",
+        "title:beyond pertoken pricing a concurrencyaware methodology for llm infrastructure cost estimation",
+        "url:https://www.semanticscholar.org/paper/8ca0c343e86cb77b539a58dffb019bb4bc40ab41"
+      ],
+      "record": {
+        "title": "Beyond Per-Token Pricing: A Concurrency-Aware Methodology for LLM Infrastructure Cost Estimation",
+        "source_url": "https://www.semanticscholar.org/paper/8ca0c343e86cb77b539a58dffb019bb4bc40ab41",
+        "year": 2026,
+        "published": "2026-06-10",
+        "abstract": "Every public LLM cost calculator we surveyed treats GPU utilization as a fixed input -- entered by the user, baked in as a preset, or silently assumed at 100% -- never measured against the operator's actual load. We show that this assumption is the dominant source of error: on identical H100 hardware, effective cost spans \\$0.21 to \\$15.25 per million output tokens, an underutilization penalty of 2.5-24x across low-to-moderate enterprise loads (1-10 rps) and up to 36.3x near idle -- driven by one operator-controlled variable, offered request rate lambda, which sets in-flight concurrency via Little's Law and which no open-source calculator exposes. Because calculators take utilization as a user-supplied input, any utilization-naive estimate understates true cost by exactly 1/U, systematically mispricing self-hosting -- most severely over-selling it for low-traffic workloads. We propose a measurement methodology that parameterizes the relationship as C_eff = f(H, M, Q, lambda, L), validate it with 42 benchmarks across dense, ultra-sparse MoE, and sparse MoE models, and release vllm-cost-meter, an open-source cost meter that attaches to a live vLLM server and reports real \\$/M-tokens against the operator's own traffic. We further show that FP8 quantization benefits the MoE architectures we tested roughly 2.2-2.4x more than the dense model (+69 to +74% vs. +31% peak throughput; n=3, broader validation needed), and our data are consistent with active parameter count, not total model size, being a primary predictor of saturation economics. To rule out single-hardware confounding we repeat the core sweep on A100 80GB PCIe (56 runs): the load-driven spread reproduces at 7.0-11.4x, the active-parameters ordering survives at FP8, and the dense-FP8 advantage inverts on silicon without native FP8 tensor cores -- a hardware-conditional caveat the framework already accommodates.",
+        "canonical_id": "arXiv:2606.11690",
+        "arxiv_id": "2606.11690",
+        "authors": [
+          "Chitral Patil"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22578",
+      "identity_tokens": [
+        "id:arXiv:2607.22578",
+        "title:herasys collaborative serving of multiple llm workflows via finegrained endtoend optimization",
+        "url:https://www.semanticscholar.org/paper/e298ddbd78bd698db43b2b4d300084adba6f70d7"
+      ],
+      "record": {
+        "title": "HeraSys: Collaborative Serving of Multiple LLM Workflows via Fine-Grained End-to-End Optimization",
+        "source_url": "https://www.semanticscholar.org/paper/e298ddbd78bd698db43b2b4d300084adba6f70d7",
+        "year": 2026,
+        "published": "2026-06-07",
+        "abstract": "The proliferation of Large Language Models (LLMs) has shifted serving systems from processing isolated requests to orchestrating high-concurrency, multi-tenant agentic workflows. However, existing solutions typically prioritize intra-workflow optimization, largely neglecting the significant potential for inter-workflow optimization. In this paper, we propose HeraSys, an LLM serving system designed to optimize the end-to-end performance of concurrent workflows. Through fine-grained orchestration, HeraSys eliminates cross-workflow computational redundancy via structural node merging and reuse. Furthermore, HeraSys introduces a load-aware joint scheduling policy that dynamically manages execution order by evaluating both inter- and intra-query priorities. By integrating a resource skewing mechanism with adaptive batching and pipeline decomposition, HeraSys effectively mitigates tail latency while maintaining low average latency, thereby substantially improving system throughput. Extensive experiments demonstrate that HeraSys reduces P99 latency by up to 2.17$\\times$ and increases serving throughput by up to 1.85$\\times$ under strict latency guarantees.",
+        "canonical_id": "arXiv:2607.22578",
+        "arxiv_id": "2607.22578",
+        "authors": [
+          "Size Li",
+          "Zhiqing Tang",
+          "Hong-Rui Liang",
+          "Jian-Xiong Guo",
+          "Jiong Lou",
+          "Tian Wang",
+          "Wei-Jia Jia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.05875",
+      "identity_tokens": [
+        "id:arXiv:2606.05875",
+        "title:qcfuse queryaware cache fusion via compressed view for efficient rag serving",
+        "url:https://www.semanticscholar.org/paper/943b57ce1fc90793e96937ae33d65effd94eca60"
+      ],
+      "record": {
+        "title": "QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving",
+        "source_url": "https://www.semanticscholar.org/paper/943b57ce1fc90793e96937ae33d65effd94eca60",
+        "year": 2026,
+        "published": "2026-06-04",
+        "abstract": "Retrieval-augmented generation (RAG) improves large language model (LLM) answer quality by grounding generation in external evidence, but processing retrieved contexts makes the prefill stage a dominant serving cost. RAG cache fusion reduces this cost by reusing precomputed key-value (KV) caches for retrieved chunks and selectively recomputing tokens under the current prompt. Existing selectors, however, face a dilemma between quality and efficiency: fast query-agnostic or final-layer query-to-context selectors can miss request-relevant evidence, whereas full-view query-aware selectors require broad context and layer visibility before recomputation and therefore stall the layer-wise cache-fusion pipeline. We present QCFuse, a compressed-view query-aware selector for RAG cache fusion. QCFuse uses chunk-anchor query probing to condition user-query states on compact per-chunk anchors and critical-layer profiling to identify recomputation tokens without all-layer inspection. We implement QCFuse in SGLang and evaluate it on four open-weight LLMs across six datasets. QCFuse reaches full-prefill-level quality. At matched quality, QCFuse achieves an average prefill-time speedup of 1.7x over full prefill and 1.5x over ProphetKV, the strongest quality-preserving baseline.",
+        "canonical_id": "arXiv:2606.05875",
+        "arxiv_id": "2606.05875",
+        "authors": [
+          "Jianxin Yan",
+          "Wangze Ni",
+          "Zhenxi Li",
+          "Jia-Bao Jin",
+          "Zhitao Shen",
+          "Haoyang Li",
+          "Jia Zhu",
+          "Peng Cheng",
+          "Xuemin Lin",
+          "Lei Chen",
+          "Kui Ren"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01725",
+      "identity_tokens": [
+        "id:arXiv:2606.01725",
+        "title:characterization of multimodel agentic ai systems on general tasks via tracedriven simulation",
+        "url:https://www.semanticscholar.org/paper/5be80a23165a3f98e197d3cdce623210909a5dbc"
+      ],
+      "record": {
+        "title": "Characterization of Multi-Model Agentic AI Systems on General Tasks via Trace-Driven Simulation",
+        "source_url": "https://www.semanticscholar.org/paper/5be80a23165a3f98e197d3cdce623210909a5dbc",
+        "year": 2026,
+        "published": "2026-06-01",
+        "abstract": "Agentic AI completes tasks through iterative planning, tool use, and reasoning based on observed outcomes. Despite its popularity, its system-level behavior remains poorly understood, particularly for complex datasets and agent architectures-owing to highly non-deterministic execution, prohibitive evaluation costs, and limited visibility into proprietary models. This paper presents GAIATrace, the first token-level trace dataset of two state-of-the-art agentic systems (MiroThinker and OWL) running GAIA, a benchmark composed of a heterogeneous mix of general-purpose tasks. Unlike prior trace datasets, GAIATrace captures full reasoning tokens, task-level structures, and activities of every major participating LLMs, enabling in-depth systems research. Complementing the dataset, we present Vidur-Agent, a trace-driven simulator that can replay GAIATrace to perform reproducible, low-cost system evaluation across diverse simulated environments. Using both artifacts, we characterize how modern agentic systems handle general tasks and how various system design choices shape their behavior, yielding several unique findings.",
+        "canonical_id": "arXiv:2606.01725",
+        "arxiv_id": "2606.01725",
+        "authors": [
+          "Donghwan Kim",
+          "Prakhar Singh",
+          "Younghoon Min",
+          "Jongryool Kim",
+          "Jongse Park",
+          "K. Maeng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00168",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00168",
+        "title:powerweave unlocking energyefficient ml on gpus with oslevel spatial power management",
+        "url:https://www.semanticscholar.org/paper/b663d862046f8bc190af17034b7f903e3bebf5a0"
+      ],
+      "record": {
+        "title": "PowerWeave: Unlocking Energy-Efficient ML on GPUs with OS-Level Spatial Power Management",
+        "source_url": "https://www.semanticscholar.org/paper/b663d862046f8bc190af17034b7f903e3bebf5a0",
+        "year": 2026,
+        "published": "2026-06-01",
+        "abstract": "GPU power consumption has become a central systems challenge as modern AI datacenters increasingly rely on accelerators whose power footprints reach unprecedented scales. A single NVIDIA B200 already draws around 1000 W, making large multi-GPU nodes among the most power-hungry computing platforms ever deployed. Despite this, GPUs still expose only a single, device-wide DVFS domain. This coarse control is increasingly mismatched to modern AI inference, where power demand is highly non-uniform across models, phases, and workloads. LLMs alternate between compute-bound prefill and memory-bound decode phases, models exhibit widely varying kernel behavior, and emerging agentic pipelines chain together models with sharply different computational profiles. As GPUs shift toward multi-die designs and multi-model stacking becomes essential for utilization, a single global frequency increasingly leads to unnecessary and wasteful high-power operation. We introduce PowerWeave, the first spatial DVFS mechanism for GPUs, built around an OS-level power-management control plane. PowerWeave dynamically learns per-stream frequencyscaling behavior from kernel latencies and uses a global governor to react to request-rate changes, tail-latency behavior, and SLO slack. This design enables adaptive, fine-grained, kernel-aware power management that preserves SLOs while improving energy efficiency across diverse ML workloads. We build PowerWeave in Rust as a fully transparent powergovernor layer atop the GPU driver and evaluate it across diverse LLM scenarios and agentic workloads on B200 GPUs. PowerWeave reduces energy consumption by 28% on average in both disaggregated-prefill and multitenant settings, achieving up to an $8 \\times$ improvement over device-wide DVFS in disaggregated prefill. For agentic workflows, PowerWeave reduces energy consumption by 19% on average without compromising throughput. PowerWeave eliminates thermal throttling across all evaluated workloads while maintaining zero SLO violations. Finally, our hardware analysis shows that spatial DVFS is practical: even perSM clock domains add less than 0.5% GPU die area overhead.",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00168",
+        "doi": "10.1109/ISCA66397.2026.00168",
+        "authors": [
+          "Vasilis Kypriotis",
+          "Eric Dubberstein",
+          "Patrick H. Coppock",
+          "Eliot H. Solomon",
+          "Rayyan Zamir",
+          "T. Srimani",
+          "Dimitrios Skarlatos"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.27494",
+      "identity_tokens": [
+        "id:arXiv:2605.27494",
+        "title:grounded cache routing for retrievalaugmented generation when is it safe to reuse an answer",
+        "url:https://www.semanticscholar.org/paper/919628398eba1f2a91772d69253fa4db73342c91"
+      ],
+      "record": {
+        "title": "Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer?",
+        "source_url": "https://www.semanticscholar.org/paper/919628398eba1f2a91772d69253fa4db73342c91",
+        "year": 2026,
+        "published": "2026-05-26",
+        "abstract": "Modern retrieval-augmented generation(RAG) deployments increasingly rely on caching to reduce token cost and time-to-first-token(TTFT). Prefix-level KV reuse is now standard in serving stacks such as vLLM, and chunk-level and position-independent reuse have been pushed further by recent systems(RAGCache, TurboRAG, CacheBlend, EPIC, ContextPilot, PCR, LMCache). Output-level semantic answer caches, by contrast, remain fragile: similar prompts can map to different correct answers, retrieved evidence drifts as the corpus is updated, and adversarial collision attacks have been shown to hijack cached responses. We argue that the right framing for cached answer reuse is not how to reuse faster but when reuse is safe. We propose GroundedCache, an evidence-validated cache router that admits a cached answer only when 4 cheap gates simultaneously hold: query similarity, retrieved-evidence overlap, source-version validity, and lexical (or judge-based) support of the cached answer by the freshly retrieved evidence. We build a six-regime workload that stress-tests cache safety rather than only hit rate, and introduce an operator-facing metric, the unsafe-served rate (USR), fraction of all queries that received a wrong cached answer. Across 2 datasets and 12,000 real-LLM generations(Qwen2.5-7B-Instruct on vLLM with Automatic Prefix Caching), GroundedCache drives USR to 0.0% on every HotpotQA regime(vs. 15-35% under naive caching) and to 1.5% on mtRAG document drift(vs. 51.5%), a 34x reduction on the design-point adversarial regime and 3-10x reductions across the other mtRAG regimes, while end-to-end p50 latency stays within 1.04-1.07x of a no-cache RAG baseline. A per-gate ablation isolates the lexical support gate as the load-bearing safety mechanism on both datasets, with the remaining gates providing defense-in-depth at near-zero cost. We release the implementation, workload, and evaluation harness.",
+        "canonical_id": "arXiv:2605.27494",
+        "arxiv_id": "2605.27494",
+        "authors": [
+          "Syed Huma Shah"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.06534",
+      "identity_tokens": [
+        "id:arXiv:2605.06534",
+        "title:rose rollout on serving gpus via cooperative elasticity for agentic rl",
+        "url:https://www.semanticscholar.org/paper/3f0d49d319e032c9967326e8161736e82f39bce2"
+      ],
+      "record": {
+        "title": "ROSE: Rollout On Serving GPUs via Cooperative Elasticity for Agentic RL",
+        "source_url": "https://www.semanticscholar.org/paper/3f0d49d319e032c9967326e8161736e82f39bce2",
+        "year": 2026,
+        "published": "2026-05-07",
+        "abstract": "Agentic reinforcement learning (RL) is reshaping LLM post-training, but end-to-end training time is dominated by compute-intensive, multi-turn rollouts whose resource demand varies significantly across training steps. Resource-fixed systems cannot adapt to this variation, while resource-elastic approaches that provision external GPUs on demand suffer from high allocation overhead and limited availability. We observe that serving clusters leave substantial GPU compute and memory idle, and propose cooperative elasticity: sharing already-deployed serving GPUs with rollout workloads to provide on-demand elastic capacity. Realizing this is non-trivial, as it must preserve serving SLOs under bursty traffic while minimizing cross-cluster communication overhead. We present ROSE, a system that realizes cooperative elasticity for agentic RL post-training, comprising three components: (1) an SLO-safe co-serving executor that co-locates heterogeneous serving and rollout models on the same GPUs, dynamically sharing memory and compute while preserving serving SLOs; (2) a cross-cluster weight transfer engine that leverages shard-aware routing and weight sparsity for fast synchronization; and (3) an elastic rollout scheduler that dynamically routes rollouts across dedicated and opportunistic serving GPUs. Experiments across multiple model sizes and cluster scales show that ROSE improves end-to-end throughput by 1.3 - 3.3 x over resource-fixed baselines and reduces rollout time by 1.2 - 1.5 x over resource-elastic baselines, with no serving SLO violations.",
+        "canonical_id": "arXiv:2605.06534",
+        "arxiv_id": "2605.06534",
+        "authors": [
+          "Wei Gao",
+          "Yuheng Zhao",
+          "Dilxat Muhtar",
+          "Dakai An",
+          "Xuchun Shang",
+          "Tianyuan Wu",
+          "Lunxi Cao",
+          "Shaopan Xiong",
+          "Wei-Xun Wang",
+          "Jun Huang",
+          "Teng Ma",
+          "Si-Ran Yang",
+          "Jiamang Wang",
+          "Lin Qu",
+          "Boyuan Zheng",
+          "Wei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.00050",
+      "identity_tokens": [
+        "id:arXiv:2606.00050",
+        "title:grokers bottomup inductive comprehension and writetime intelligence over typed knowledge graphs",
+        "url:https://www.semanticscholar.org/paper/336cbc66c0b99f4d5c26ffd18bfb55c08d68c943"
+      ],
+      "record": {
+        "title": "Grokers: Bottom-Up Inductive Comprehension and Write-Time Intelligence over Typed Knowledge Graphs",
+        "source_url": "https://www.semanticscholar.org/paper/336cbc66c0b99f4d5c26ffd18bfb55c08d68c943",
+        "year": 2026,
+        "published": "2026-05-07",
+        "abstract": "We present Grokers, an architecture for building persistent, structured comprehension of typed knowledge graphs through bottom-up inductive traversal of dependency subgraphs. Unlike retrieval-augmented generation (RAG), which pays full comprehension cost at every query, Grokers pushes intelligence to write time: autonomous Groker agents analyze nodes in a typed stream graph, extract structured attributes via governed language model (LM) calls, and inductively compose that understanding upward through dependency relations, writing enriched typed attributes that serve all future queries at zero additional LM cost. We prove three formal properties: (1) the Byte-Identity Theorem, establishing that context blocks assembled from a transactionally-maintained denormalization index are byte-identical across LM turns between semantic changes, enabling KV-cache hit rates approaching 100%; (2) the Accumulation Monotonicity Theorem, establishing that the fraction of interactions resolved without LM calls is non-decreasing in the number of completed interactions under a governed wisdom library growth protocol; and (3) the Dual-Traversal Ordering Theorem, establishing that top-down generation and bottom-up comprehension are the unique correct traversal orderings for their respective tasks over a dependency DAG, and that their composition closes into a complete generation-comprehension cycle. We further present a deterministic alternative to embedding-based semantic search, with a synonym caching protocol whose LM fallback rate converges to zero for finite-vocabulary domains. A reference implementation is provided in the open-source Qbix / Safebox / Safebots stack.",
+        "canonical_id": "arXiv:2606.00050",
+        "arxiv_id": "2606.00050",
+        "authors": [
+          "Gregory Magarshak"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.14778/3819518.3819565",
+      "identity_tokens": [
+        "id:DOI:10.14778/3819518.3819565",
+        "title:mgrag semantic subgraph matching and graphaware caching for multimodal retrievalaugmented generation",
+        "url:https://www.semanticscholar.org/paper/f5b6e50be3d364eb1bc2b231ffe26fbd6e4f6b0e"
+      ],
+      "record": {
+        "title": "MGRAG: Semantic Subgraph Matching and Graph-Aware Caching for Multimodal Retrieval-Augmented Generation",
+        "source_url": "https://www.semanticscholar.org/paper/f5b6e50be3d364eb1bc2b231ffe26fbd6e4f6b0e",
+        "year": 2026,
+        "published": "2026-05-01",
+        "abstract": "Answering complex queries over large and heterogeneous multi-modal document corpora is a central challenge in data management, requiring fine-grained, entity-level evidence retrieval and efficient context serving. Graph-based Retrieval-Augmented Generation (RAG) systems achieve promising effectiveness by organizing multimodal documents as knowledge graphs (KGs); however, they still face three limitations: (1) query-agnostic KG construction, where corpus-wide graphs overwhelm query-relevant entities with irrelevant noise; (2) inflexible graph matching, which relies on rigid topological matching and misses path-level semantic equivalences; (3) event-agnostic KV re-computation, which scores tokens independently of graph topology, failing to preserve event-level semantic structure. To address these issues, we propose MGRAG. First, MGRAG incrementally builds query-specific KGs on demand via a lazy, top-down construction strategy. Second, we formulate graph retrieval as a path-based semantic subgraph matching problem, prove it NP-hard, and design an efficient greedy algorithm for flexible, semantics-aware retrieval. Third, MGRAG employs an event-aware KV caching mechanism to selectively recompute tokens critical to query-related events. Experiments on seven real-world multimodal QA datasets show that MGRAG achieves superior effectiveness and efficiency compared to state-of-the-art RAG, subgraph matching, and KV caching baselines.",
+        "canonical_id": "DOI:10.14778/3819518.3819565",
+        "doi": "10.14778/3819518.3819565",
+        "authors": [
+          "Yubo Wang",
+          "Haoyang Li",
+          "Lei Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.16682",
+      "identity_tokens": [
+        "id:arXiv:2604.16682",
+        "title:kairos stateful contextaware powerefficient agentic inference serving",
+        "url:https://www.semanticscholar.org/paper/67cc2a44cdca609856b686eea6f0f9bd9fb4f89d"
+      ],
+      "record": {
+        "title": "KAIROS: Stateful, Context-Aware Power-Efficient Agentic Inference Serving",
+        "source_url": "https://www.semanticscholar.org/paper/67cc2a44cdca609856b686eea6f0f9bd9fb4f89d",
+        "year": 2026,
+        "published": "2026-04-17",
+        "abstract": "Power has become a central bottleneck for AI inference. This problem is becoming more urgent as agentic AI emerges as a major workload class, yet prior power-management techniques focus almost entirely on single-turn LLM serving. Our analysis shows that agentic serving behaves fundamentally differently: each request carries long-lived context that evolves across tool-interleaved turns, and lowering GPU frequency can push the system into a thrashing regime where memory pressure sharply worsens both performance and power efficiency. These observations show that power optimization for agentic serving requires rethinking. We present KAIROS, a context-aware power optimization system for agentic AI serving. KAIROS uses agent context as a first-class control signal to jointly manage GPU frequency, per-instance concurrency, and multi-instance request placement. This enables KAIROS to save power when memory headroom exists while avoiding thrashing and preserving performance targets. At a high level, KAIROS tracks requests at agent granularity, adapts local control to context growth and agent progress, and routes agents across instances to jointly improve power efficiency and memory stability. Evaluated across diverse software and data engineering agentic tasks, KAIROS achieves an average of 27% (up to 39.8%) power reduction while meeting the performance targets.",
+        "canonical_id": "arXiv:2604.16682",
+        "arxiv_id": "2604.16682",
+        "authors": [
+          "Yi-Chao Yuan",
+          "Mosharaf Chowdhury",
+          "N. Talati"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/vlsitsa69131.2026.11528145",
+      "identity_tokens": [
+        "id:DOI:10.1109/vlsitsa69131.2026.11528145",
+        "title:redefining ai architecture with nand flash",
+        "url:https://www.semanticscholar.org/paper/840938bed9c74d81f6ff21dc19db7486811f2bda"
+      ],
+      "record": {
+        "title": "Redefining AI Architecture with NAND Flash",
+        "source_url": "https://www.semanticscholar.org/paper/840938bed9c74d81f6ff21dc19db7486811f2bda",
+        "year": 2026,
+        "published": "2026-04-13",
+        "abstract": "As Agentic AI accelerates data demands, Phison aiDAPTIV utilizes high-endurance NAND Flash as a memory expansion layer to optimize training, inference, and RAG applications. To overcome PCIe bandwidth bottlenecks, we introduce Computational Storage Devices (CSD), which offload tasks like weight updates and vector searches directly to the storage level. These cases demonstrate that CSD is a pivotal evolution for scaling efficient, AI-centric infrastructure.",
+        "canonical_id": "DOI:10.1109/VLSITSA69131.2026.11528145",
+        "doi": "10.1109/VLSITSA69131.2026.11528145",
+        "authors": [
+          "Hao-Zhi Lee",
+          "Ming-Hui Wang",
+          "Yu-Hao Wang",
+          "Chia-Ming Hsu",
+          "Yi-Lun Du",
+          "An-Cin Li",
+          "Tso-Yuan Chen",
+          "Kai-Wei Tsou",
+          "Shiu-Ming Tsao",
+          "Jian-Ping Syu",
+          "Wei Lin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.23914",
+      "identity_tokens": [
+        "id:arXiv:2605.23914",
+        "title:vinelm triebased finegrained control for agentic workflows",
+        "url:https://www.semanticscholar.org/paper/ffc0bf7a0bcd955590873e302ff9825e86195dc8"
+      ],
+      "record": {
+        "title": "VineLM: Trie-Based Fine-Grained Control for Agentic Workflows",
+        "source_url": "https://www.semanticscholar.org/paper/ffc0bf7a0bcd955590873e302ff9825e86195dc8",
+        "year": 2026,
+        "published": "2026-04-09",
+        "abstract": "Agentic workflows interleave configurable LLM stages with tool stages and often include retries or refinement loops. Existing workflow managers profile full workflow configurations offline and assign each request a static workflow-level plan that binds each configurable LLM stage to a single model, reuses that model across repeated loop iterations, and does not revisit those choices at runtime. We present VineLM, a workflow manager that enables fine-grained control by choosing the model for each stage invocation as execution unfolds under request-level objectives such as maximizing accuracy under cost or latency budgets. VineLM represents feasible executions as an annotated trie of model-choice prefixes and uses checkpointing and cascade profiling to estimate path accuracy, cost, and latency without exhaustively profiling every request on every path. At runtime, VineLM re-roots the trie after each stage invocation and replans over the remaining subtrie using the realized execution prefix and remaining latency budget. On NL2SQL and math reasoning workflows, VineLM improves the cost-latency-accuracy frontier over coarse workflow-level baselines, achieving up to 18% higher accuracy at the same per-request budget with its sparse profiling reducing offline profiling cost by 98-99.8% when compared to exhaustive profiling.",
+        "canonical_id": "arXiv:2605.23914",
+        "arxiv_id": "2605.23914",
+        "authors": [
+          "Nikos Pagonas",
+          "M. Lou",
+          "Tianyi Peng",
+          "Dan Rubenstein",
+          "Kostis Kaffes"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.06036",
+      "identity_tokens": [
+        "id:arXiv:2604.06036",
+        "title:codecsight leveraging video codec signals for efficient streaming vlm inference",
+        "url:https://www.semanticscholar.org/paper/47a99f85b82d1d2b1f57a6d525df39007c25dfe6"
+      ],
+      "record": {
+        "title": "CodecSight: Leveraging Video Codec Signals for Efficient Streaming VLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/47a99f85b82d1d2b1f57a6d525df39007c25dfe6",
+        "year": 2026,
+        "published": "2026-04-07",
+        "abstract": "Continuous inference over concurrent video streams imposes substantial compute and memory demands on vision-language model (VLM) serving. Streaming inference uses sliding windows to maintain a bounded context of recent video, but processing each window independently repeats visual encoding and large language model (LLM) prefilling for similar and overlapping content. Existing optimizations provide limited coordination across these stages and often rely on model-specific training, profiling, or model-generated signals. We present CodecSight, a streaming VLM serving system that uses codec metadata as shared runtime guidance across visual encoding and LLM prefilling, without model-specific training or offline profiling. Codec-derived change signals guide patch pruning before visual encoding, reducing both visual computation and the number of downstream visual tokens. Codec-defined frame types guide selective key-value (KV) refresh across windows, while positional correction enables reuse of the remaining cached keys. Across three VLMs and four video workloads, our vLLM-based implementation supports up to $3.3\\times$ as many concurrent streams and achieves up to a $5.3\\times$ speedup in average time-to-first-token relative to the state-of-the-art baselines. It also reduces executed FLOPs by up to 93%, with a maximum task-quality decrease of 4.64 percentage points.",
+        "canonical_id": "arXiv:2604.06036",
+        "arxiv_id": "2604.06036",
+        "authors": [
+          "Yu-qin Zou",
+          "Wenyan Chen",
+          "Yan Chen",
+          "Anya Rajan",
+          "Jooyoung Park",
+          "Shivaraman Nitin",
+          "Luo Tao",
+          "Francisco Romero",
+          "D. Ustiugov"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.05438",
+      "identity_tokens": [
+        "id:arXiv:2604.05438",
+        "title:residualmass accounting for partialkv decoding",
+        "url:https://www.semanticscholar.org/paper/8e422900be64e63cc561ff1cd77b889cae12b620"
+      ],
+      "record": {
+        "title": "Residual-Mass Accounting for Partial-KV Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/8e422900be64e63cc561ff1cd77b889cae12b620",
+        "year": 2026,
+        "published": "2026-04-07",
+        "abstract": "We study a controlled partial-KV decoding setting in which exact unnormalized softmax contributions are computed for sink/tail anchors and a retrieved token set, while the remaining prefill tokens are represented by a residual estimate. We focus on the accounting rule after the query-dependent exact support has been selected, and use exhaustive Top-K only as an oracle selector, not as a deployable retrieval system. The proposed rule leaves the backbone language model and the exact-branch KV tensors unchanged. It builds fixed-size summary states $(S,u)$ from learned positive feature maps $\\phi$, subtracts retrieved-token feature contributions to keep the exact and residual sets non-overlapping, and merges the estimated residual numerator and denominator with the exact branch under one normalization. At a 1% exact-support budget, our residual-completion method improves over the selection-only Top-K baseline on RULER and BABILong across frozen 1B and 3B Llama-3.2-Instruct backbones at all reported context lengths. In the 0.5-4% exact-support budget sweeps, this trend largely persists. On LongBench, summarization results are mostly favorable, while multi-document QA is mixed. Attention-output diagnostics support retrieved-token subtraction as the partition-consistent accounting rule, while indicating that the main remaining error is imperfect learned-$\\phi$ approximation of the unretrieved residual mass.",
+        "canonical_id": "arXiv:2604.05438",
+        "arxiv_id": "2604.05438",
+        "authors": [
+          "Yasuto Hoshi",
+          "Daisuke Miyashita",
+          "Jun Deguchi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.04716",
+      "identity_tokens": [
+        "id:arXiv:2603.04716",
+        "title:sloaware compute resource allocation for prefilldecode disaggregated llm inference",
+        "url:https://www.semanticscholar.org/paper/f86bc34e1e748b9bed0da8513962a8d4e54a40ba"
+      ],
+      "record": {
+        "title": "SLO-Aware Compute Resource Allocation for Prefill-Decode Disaggregated LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/f86bc34e1e748b9bed0da8513962a8d4e54a40ba",
+        "year": 2026,
+        "published": "2026-03-05",
+        "abstract": "Prefill-Decode (P/D) disaggregation has emerged as a widely adopted optimization strategy for Large Language Model (LLM) inference. However, there currently exists no well-established methodology for determining the optimal number of P/D hardware resources, subject to constraints on total throughput, service level objectives (SLOs), and request characteristics - specifically input and output lengths. To address this gap, we propose a hybrid approach that combines theoretical modeling with empirical benchmarking. First, we present a theoretical model for calculating P/D resource counts, which is based on total throughput requirements, request input and output lengths, as well as prefill and decode throughput. Then, to obtain the actual prefill and decode throughput under SLO constraints, we model the prefill process using M/M/1 queuing theory, deriving the achieved prefill throughput from the benchmarked maximum prefill throughput and Time-To-First-Token (TTFT). For the decode phase, we determine the decode batch sizes that meet Time-Per-Output-Token (TPOT) requirements and obtain the corresponding decode throughput through empirical measurements. Our experimental results demonstrate that the proposed method can accurately predict optimal P/D resource allocation in real-world LLM inference scenarios.",
+        "canonical_id": "arXiv:2603.04716",
+        "arxiv_id": "2603.04716",
+        "authors": [
+          "Luchang Li",
+          "Dongfang Li",
+          "Bo-Zhao Gong",
+          "Yu Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.10377",
+      "identity_tokens": [
+        "id:arXiv:2602.10377",
+        "title:hardware codesign scaling laws via roofline modelling for ondevice llms",
+        "url:https://www.semanticscholar.org/paper/d914054b50f0b25cb3aece2454b9ce9dab031c68"
+      ],
+      "record": {
+        "title": "Hardware Co-Design Scaling Laws via Roofline Modelling for On-Device LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/d914054b50f0b25cb3aece2454b9ce9dab031c68",
+        "year": 2026,
+        "published": "2026-02-10",
+        "abstract": "Vision-Language-Action Models (VLAs) have emerged as a key paradigm of Physical AI and are increasingly deployed in autonomous vehicles, robots, and smart spaces. In these resource-constrained on-device settings, selecting an appropriate large language model (LLM) backbone is a critical challenge: models must balance accuracy with strict inference latency and hardware efficiency constraints. This makes hardware-software co-design a game-changing requirement for on-device LLM deployment, where each hardware platform demands a tailored architectural solution. We propose a hardware co-design law that jointly captures model accuracy and inference performance. Specifically, we model training loss as an explicit function of architectural hyperparameters and characterise inference latency via roofline modelling. We empirically evaluate 1,942 candidate architectures on NVIDIA Jetson Orin, training 170 selected models for 10B tokens each to fit a scaling law relating architecture to training loss. By coupling this scaling law with latency modelling, we establish a direct accuracy-latency correspondence and identify the Pareto frontier for hardware co-designed LLMs. We further formulate architecture search as a joint optimisation over precision and performance, deriving feasible design regions under industrial hardware and application budgets. Our approach reduces architecture selection from months to days. At the same latency as Qwen2.5-0.5B on the target hardware, our co-designed architecture achieves 19.42% lower perplexity on WikiText-2. To our knowledge, this is the first principled and operational framework for hardware co-design scaling laws in on-device LLM deployment. We will make the code and related checkpoints publicly available.",
+        "canonical_id": "arXiv:2602.10377",
+        "arxiv_id": "2602.10377",
+        "authors": [
+          "Luo-Yang Sun",
+          "Jiwen Jiang",
+          "Yifeng Ding",
+          "Feng-Fa Li",
+          "Yanke Song",
+          "Hai-Feng Zhang",
+          "Jian Ying",
+          "Lei Ren",
+          "Kun Zhan",
+          "Wei Chen",
+          "Yan Xie",
+          "Cheng Deng"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:d1d41c894732800c9a0b6d79b6ddb138af29d2b288f9f736fdf61f33244b9e8e",
+  "next_action": "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; the cached records were re-filtered against this run's current identity snapshot and any shortfall was topped up from the same fixed source. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

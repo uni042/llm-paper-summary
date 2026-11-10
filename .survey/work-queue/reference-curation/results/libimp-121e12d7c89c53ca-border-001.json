@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-121e12d7c89c53ca-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.10011",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.10011",
+    "identity_tokens": [
+      "arXiv:2601.10011"
+    ],
+    "reason": "一次要旨は自然言語からSQLを生成する際、質問の構造的分解と過去の誤り修正事例を検索して推論時に自己訂正する方式を提案する。BIRDで実行正解率68.5%を示し、従来の推論時スケーリング手法より10倍以上少ない資源を使うという効率面の接点はあるが、改善はSQL生成の推論戦略・タスク精度が中心で、汎用LLMランタイムやKVメモリの最適化ではない。",
+    "first_checked_at": "2026-10-18T01:47:11+00:00",
+    "last_checked_at": "2026-10-23T15:07:09+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"
+  },
+  "processed_at": "2026-10-23T15:07:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-121e12d7c89c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

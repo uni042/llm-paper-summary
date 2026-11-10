@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-89a29bfab403d85a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1811.06965",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1811.06965",
+    "identity_tokens": [
+      "SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
+      "arXiv:1811.06965"
+    ],
+    "reason": "microbatch pipelineで巨大networkを複数acceleratorへ分割するtraining library。評価はAmoebaNetと6B Transformerの学習で、推論system最適化が主目的ではない。",
+    "first_checked_at": "2026-09-27T12:58:27+09:00",
+    "last_checked_at": "2026-10-05T22:27:26+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism"
+  },
+  "processed_at": "2026-10-05T22:27:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-89a29bfab403",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

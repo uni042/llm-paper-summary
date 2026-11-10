@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b3a894cc5f1385ba-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.12399",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.12399",
+    "identity_tokens": [
+      "arXiv:2402.12399"
+    ],
+    "reason": "Although the mechanism could affect inference, the paper does not establish end-to-end serving performance or measured latency/throughput gains.",
+    "first_checked_at": "2026-10-05T15:07:44+00:00",
+    "last_checked_at": "2026-10-05T15:07:44+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Turn Waste into Worth: Rectifying Top-k Router of MoE"
+  },
+  "processed_at": "2026-10-05T15:07:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b3a894cc5f13",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

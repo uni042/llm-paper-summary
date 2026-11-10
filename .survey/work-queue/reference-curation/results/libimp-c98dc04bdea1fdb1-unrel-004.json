@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c98dc04bdea1fdb1-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.18666",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.18666",
+    "identity_tokens": [
+      "arXiv:2503.18666"
+    ],
+    "reason": "Agent safety/runtime enforcement, not efficiency optimization.",
+    "first_checked_at": "2026-10-05T02:09:30+00:00",
+    "last_checked_at": "2026-10-05T02:09:30+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md"
+    ],
+    "title": "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents"
+  },
+  "processed_at": "2026-10-05T02:09:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c98dc04bdea1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

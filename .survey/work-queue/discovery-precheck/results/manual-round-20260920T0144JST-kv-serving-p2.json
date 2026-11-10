@@ -1,0 +1,72 @@
+{
+  "schema_version": 2,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-round-20260920T0144JST-kv-serving-p2",
+  "collector_id": "manual-round-20260920T0144JST-kv-serving",
+  "previous_request_id": "manual-round-20260920T0144JST-kv-serving-p1",
+  "run_key": "2026-09-20T01:00:00+09:00",
+  "axis": "recent KV/long-context serving and inference memory management",
+  "target_unseen": 10,
+  "pages_processed": 2,
+  "provider_has_more": true,
+  "target_reached": false,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": null,
+  "evaluation_allowed": false,
+  "decision": "CONTINUE_FETCH",
+  "snapshot_source_commit": "230706269e82bdb9141344b27852025347fb2a37",
+  "current_raw_search_result_count": 8,
+  "raw_search_result_count": 13,
+  "current_unseen_result_count": 2,
+  "unseen_result_count": 2,
+  "retrieval_duplicate_filtered_count": 11,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "prior_revalidated_filtered_count": 0,
+  "results": [
+    {
+      "canonical_id": "arXiv:2605.04595",
+      "title": "A Queueing-Theoretic Framework for Stability Analysis of LLM Inference with KV Cache Memory Constraints",
+      "source_url": "https://arxiv.org/abs/2605.04595"
+    },
+    {
+      "canonical_id": "arXiv:2606.17104",
+      "title": "Prefill/Decode-Aware Evaluation of LLM Inference on Emerging AI Accelerators",
+      "source_url": "https://arxiv.org/abs/2606.17104"
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.04595",
+      "identity_tokens": [
+        "id:arXiv:2605.04595",
+        "title:a queueingtheoretic framework for stability analysis of llm inference with kv cache memory constraints",
+        "url:https://arxiv.org/abs/2605.04595"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2605.04595",
+        "title": "A Queueing-Theoretic Framework for Stability Analysis of LLM Inference with KV Cache Memory Constraints",
+        "source_url": "https://arxiv.org/abs/2605.04595"
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.17104",
+      "identity_tokens": [
+        "id:arXiv:2606.17104",
+        "title:prefilldecodeaware evaluation of llm inference on emerging ai accelerators",
+        "url:https://arxiv.org/abs/2606.17104"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2606.17104",
+        "title": "Prefill/Decode-Aware Evaluation of LLM Inference on Emerging AI Accelerators",
+        "source_url": "https://arxiv.org/abs/2606.17104"
+      }
+    }
+  ],
+  "receipt": "sha256:5cd821f4fdfd6b1c5b6548af2e0f7f9e54150d320f9e691c07063d08d6437d7d",
+  "next_action": "Do not evaluate candidates yet. Fetch the next page/cursor/offset or the next equivalent search window for the SAME collector. Create a NEW immutable precheck request with previous_request_id='manual-round-20260920T0144JST-kv-serving-p2', previous_receipt='sha256:5cd821f4fdfd6b1c5b6548af2e0f7f9e54150d320f9e691c07063d08d6437d7d', the same collector_id/run_key/axis/target_unseen, and the next raw records. Repeat until the result decision is READY_FOR_EVALUATION."
+}

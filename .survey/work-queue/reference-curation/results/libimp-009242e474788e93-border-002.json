@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-009242e474788e93-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.00985",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.00985",
+    "identity_tokens": [
+      "arXiv:2505.00985"
+    ],
+    "reason": "独立した推論時手法または再現可能なserving評価が中心ではなく、提案は幅広く概念的。inference surveyへの適合度は弱い。",
+    "first_checked_at": "2026-10-05T15:21:54+00:00",
+    "last_checked_at": "2026-10-05T15:21:54+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md",
+      "papers/inference/99-other-inference-systems/2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md",
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Position: Enough of Scaling LLMs! Lets Focus on Downscaling"
+  },
+  "processed_at": "2026-10-05T15:21:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-009242e47478",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

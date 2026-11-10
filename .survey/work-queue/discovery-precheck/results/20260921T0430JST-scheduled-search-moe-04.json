@@ -1,0 +1,1151 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0430JST-scheduled-search-moe-04",
+  "collector_id": "scheduled-20260921T0430JST-search-moe",
+  "run_key": "2026-09-21T04:30:00+09:00",
+  "axis": "recent MoE expert cache offload prefetch placement LLM inference systems",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=mixture%20of%20experts%20expert%20cache%20offload%20prefetch%20placement%20LLM%20inference&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 4,
+  "next_cursor": "IlsxNzI4MTcyODAwMDAwLCAnLUluZmluaXR5JywgNCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c0NDAzMzIyNzM5J10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8f46d0059cd84b27a95077c234268eb665c2ce72",
+  "raw_search_result_count": 80,
+  "retrieval_duplicate_filtered_count": 43,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 7,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T19:32:04.222680+00:00",
+  "results": [
+    {
+      "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+      "source_url": "https://arxiv.org/abs/2608.27046",
+      "year": 2026,
+      "published": "2026-08-27",
+      "canonical_id": "arXiv:2608.27046",
+      "arxiv_id": "2608.27046",
+      "authors": [
+        "Maciej Besta",
+        "Leonard Schmidt",
+        "Lara Nonino",
+        "Robert Gerstenberger",
+        "Pierre Pang",
+        "Patrik Okanovic",
+        "Ales Kubicek",
+        "Tiancheng Chen",
+        "B. Lipshitz",
+        "Torsten Hoefler"
+      ]
+    },
+    {
+      "title": "RoutePack: Expert Placement and Attention-Aware Data Packing for MoE Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2608.12146",
+      "year": 2026,
+      "published": "2026-08-12",
+      "canonical_id": "arXiv:2608.12146",
+      "arxiv_id": "2608.12146",
+      "authors": [
+        "Yibo Shen",
+        "Xudong Han",
+        "Xiaowei Zhu",
+        "Gen Li",
+        "Zhenxuan Pan"
+      ]
+    },
+    {
+      "title": "StrataCL: Fabric-Native Communication Library for Production Supernodes",
+      "source_url": "https://arxiv.org/abs/2607.26444",
+      "year": 2026,
+      "published": "2026-07-29",
+      "canonical_id": "arXiv:2607.26444",
+      "arxiv_id": "2607.26444",
+      "authors": [
+        "Tiancheng Hu",
+        "Jin Qin",
+        "Yuzheng Wang",
+        "Ke Liu",
+        "TangShengSheng Li",
+        "Sheng Wang",
+        "Zhongzhe Hu",
+        "Tianlun Hu",
+        "Wei Wang",
+        "Lijun Li",
+        "Jingbin Zhou",
+        "Xiaoming Bao",
+        "Hongwei Sun",
+        "Jieru Zhao",
+        "Huimin Cui",
+        "Tao Xie",
+        "Chenxi Wang"
+      ]
+    },
+    {
+      "title": "Kimi K3: Open Frontier Intelligence",
+      "source_url": "https://arxiv.org/abs/2607.24653",
+      "year": 2026,
+      "published": "2026-07-27",
+      "canonical_id": "arXiv:2607.24653",
+      "arxiv_id": "2607.24653",
+      "authors": [
+        "Kimi Team",
+        "Tongtong Bai",
+        "Yifan Bai",
+        "Yiping Bao",
+        "M. C.",
+        "Jianfeng Cai",
+        "Xinyuan Cai",
+        "Peizhou Cao",
+        "Yuxuan Cao",
+        "Ziwei Chai",
+        "Y. Charles",
+        "H. S. Che",
+        "Guanduo Chen",
+        "Guangyu Chen",
+        "Guanzheng Chen",
+        "Huarong Chen",
+        "Jia Chen",
+        "Jianlong Chen",
+        "Jun Chen",
+        "Kexin Chen",
+        "Peng Chen",
+        "Ruijue Chen",
+        "Wentao Chen",
+        "Xin Chen",
+        "Yang Chen",
+        "Yanru Chen",
+        "Yifei Chen",
+        "Yingjiang Chen",
+        "Yuankun Chen",
+        "Yujie Chen",
+        "Yutian Chen",
+        "Zhirong Chen",
+        "Dazhi Cheng",
+        "Yean Cheng",
+        "Jialei Cui",
+        "Jingbing Cui",
+        "Anqi Dai",
+        "Jiaqi Deng",
+        "Hao Ding",
+        "Rui Ding",
+        "Shaofeng Ding",
+        "Mengfan Dong",
+        "Mengnan Dong",
+        "Yuhao Dong",
+        "Yuxin Dong",
+        "Angang Du",
+        "Chenzhuang Du",
+        "Dikang Du",
+        "J. Du",
+        "Yulun Du",
+        "Yu Fan",
+        "Jing Feng",
+        "Qiulin Feng",
+        "Yichen Feng",
+        "Kelin Fu",
+        "Qiang Fu",
+        "高甫瑄",
+        "Hongcheng Gao",
+        "Jingyue Gao",
+        "Tong Gao",
+        "Weijia Gao",
+        "Shangyi Geng",
+        "Jie Gong",
+        "功 林戸",
+        "Shengao Gong",
+        "Xiaochen Gong",
+        "Qizheng Gu",
+        "Yicheng Gu",
+        "Shuhao Guan",
+        "Haiqing Guo",
+        "Shiqi Guo",
+        "Xiang Guo",
+        "Zhengyan Guo",
+        "Beixi Hao",
+        "Wenxin Hao",
+        "Xiaoru Hao",
+        "Dailan He",
+        "Haotian He",
+        "Lehan He",
+        "Qi He",
+        "Weiran He",
+        "Xinran He",
+        "Xinyi He",
+        "Yibo He",
+        "Yi He",
+        "Chao Hong",
+        "Tiange Hong",
+        "Hao Hu",
+        "Jiaxi Hu",
+        "Ruikun Hu",
+        "Weiming Hu",
+        "Yangyang Hu",
+        "Zhenxing Hu",
+        "Liang Hua",
+        "Jinbin Huang",
+        "Ke Huang",
+        "Ruiyuan Huang",
+        "Siying Huang",
+        "Weixiao Huang",
+        "Yan Huang"
+      ]
+    },
+    {
+      "title": "What to Keep, What to Forget: A Rate--Distortion View of Memory Compaction in LLMs and Agents",
+      "source_url": "https://arxiv.org/abs/2607.08032",
+      "year": 2026,
+      "published": "2026-07-09",
+      "canonical_id": "arXiv:2607.08032",
+      "arxiv_id": "2607.08032",
+      "authors": [
+        "Ashwin Gerard Colaco",
+        "Nada Lahjouji"
+      ]
+    },
+    {
+      "title": "BatchGen: An Architecture for Scalable and Efficient Batch Inference",
+      "source_url": "https://arxiv.org/abs/2606.21712",
+      "year": 2026,
+      "published": "2026-06-19",
+      "canonical_id": "arXiv:2606.21712",
+      "arxiv_id": "2606.21712",
+      "authors": [
+        "Tairan Xu",
+        "Leyang Xue",
+        "Zhan Lu",
+        "Jinfu Deng",
+        "Hongyang Xiao",
+        "Yu Jiang",
+        "C N He",
+        "Matej Šandor",
+        "Le Xu",
+        "Luo Mai"
+      ]
+    },
+    {
+      "title": "Harnessing Routing Foresight for Micro-step-level MoE load balancing in RL Post-training",
+      "source_url": "https://arxiv.org/abs/2606.11867",
+      "year": 2026,
+      "published": "2026-06-10",
+      "canonical_id": "arXiv:2606.11867",
+      "arxiv_id": "2606.11867",
+      "authors": [
+        "Yuming Zhou",
+        "Haoyang Li",
+        "Sheng Lin",
+        "Yanfeng Zhao",
+        "Tong Zhao",
+        "Xupeng Miao",
+        "J Jiang",
+        "Fangcheng Fu",
+        "Bin Cui"
+      ]
+    },
+    {
+      "title": "Schedule-Level Shared-Prefix Reuse for LLM RL Training",
+      "source_url": "https://arxiv.org/abs/2606.01143",
+      "year": 2026,
+      "published": "2026-05-31",
+      "canonical_id": "arXiv:2606.01143",
+      "arxiv_id": "2606.01143",
+      "authors": [
+        "Pengbo Li",
+        "Feiyuan Zhang",
+        "Guangming Sheng",
+        "G. He",
+        "Di Chai",
+        "Ziniu Li",
+        "Taiqiang Wu",
+        "Wenyu Mao",
+        "Binhang Yuan",
+        "Kai Chen"
+      ]
+    },
+    {
+      "title": "PlexRL: Cluster-Level Orchestration of Serviceized LLM Execution for RLVR",
+      "source_url": "https://arxiv.org/abs/2605.20863",
+      "year": 2026,
+      "published": "2026-05-20",
+      "canonical_id": "arXiv:2605.20863",
+      "arxiv_id": "2605.20863",
+      "authors": [
+        "Yiqi Zhang",
+        "Fangzheng Jiao",
+        "Tian Tang",
+        "Boyu Tian",
+        "Hangyu Wang",
+        "Qiaoling Chen",
+        "Guoteng Wang",
+        "Zhen Jiang",
+        "Peng Sun",
+        "Ping Zhang",
+        "Xiaohe Hu",
+        "Ziming Liu",
+        "Menghao Zhang",
+        "Yanmin Jia",
+        "Yang You",
+        "Siyuan Feng"
+      ]
+    },
+    {
+      "title": "Building Open Source Inference Serving Systems",
+      "source_url": "https://escholarship.org/uc/item/67d7q7df",
+      "year": 2026,
+      "published": "2026-05-01",
+      "canonical_id": "OpenAlex:W7213474877",
+      "authors": [
+        "Xiangxi Mo"
+      ]
+    },
+    {
+      "title": "Efficient, VRAM-Constrained xLM Inference on Clients",
+      "source_url": "https://arxiv.org/abs/2604.26334",
+      "year": 2026,
+      "published": "2026-04-29",
+      "canonical_id": "arXiv:2604.26334",
+      "arxiv_id": "2604.26334",
+      "authors": [
+        "Aditya Ukarande",
+        "Deep Shekhar",
+        "Marc Blackstein",
+        "Ram Rangan"
+      ]
+    },
+    {
+      "title": "AI Reasoning for Wireless Communications and Networking: A Survey and Perspectives",
+      "source_url": "https://doi.org/10.1145/3811822",
+      "year": 2026,
+      "published": "2026-04-23",
+      "canonical_id": "arXiv:2509.09193",
+      "arxiv_id": "2509.09193",
+      "authors": [
+        "Haoxiang Luo",
+        "Yu Yan",
+        "Yanhui Bian",
+        "Wenjiao Feng",
+        "Ruichen Zhang",
+        "Yinqiu Liu",
+        "Jiacheng Wang",
+        "Gang Sun",
+        "Dusit Niyato",
+        "Hongfang Yu",
+        "Abbas Jamalipour",
+        "Shiwen Mao"
+      ]
+    },
+    {
+      "title": "InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models",
+      "source_url": "http://arxiv.org/abs/2604.07173",
+      "year": 2026,
+      "published": "2026-04-08",
+      "canonical_id": "arXiv:2604.07173",
+      "arxiv_id": "2604.07173",
+      "authors": [
+        "Hongyu Chen",
+        "L. Ruan",
+        "Zilin Xu",
+        "Yuchen Li",
+        "Xinyu Chen",
+        "Jingwen Leng",
+        "Bingsheng He",
+        "Minyi Guo",
+        "Shixuan Sun"
+      ]
+    },
+    {
+      "title": "Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores",
+      "source_url": "https://doi.org/10.36227/techrxiv.177205041.14536362/v1",
+      "year": 2026,
+      "published": "2026-02-25",
+      "canonical_id": "DOI:10.36227/techrxiv.177205041.14536362/v1",
+      "doi": "10.36227/techrxiv.177205041.14536362/v1",
+      "authors": [
+        "Johnson Umeike",
+        "Bahar Asgari"
+      ]
+    },
+    {
+      "title": "L$^3$: Large Lookup Layers",
+      "source_url": "https://arxiv.org/abs/2601.21461",
+      "year": 2026,
+      "published": "2026-01-29",
+      "canonical_id": "arXiv:2601.21461",
+      "arxiv_id": "2601.21461",
+      "authors": [
+        "Albert Tseng",
+        "Chris De"
+      ]
+    },
+    {
+      "title": "STEM: Scaling Transformers with Embedding Modules",
+      "source_url": "http://arxiv.org/abs/2601.10639",
+      "year": 2026,
+      "published": "2026-01-15",
+      "canonical_id": "arXiv:2601.10639",
+      "arxiv_id": "2601.10639",
+      "authors": [
+        "Ranajoy Sadhukhan",
+        "Sheng Cao",
+        "Harry Dong",
+        "Changsheng Zhao",
+        "Attiano Purpura-Pontoniere",
+        "Yuandong Tian",
+        "Zechun Liu",
+        "Beidi Chen"
+      ]
+    },
+    {
+      "title": "Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2601.07372",
+      "year": 2026,
+      "published": "2026-01-12",
+      "canonical_id": "arXiv:2601.07372",
+      "arxiv_id": "2601.07372",
+      "authors": [
+        "Xin Cheng",
+        "Rui Tian",
+        "Wangding Zeng",
+        "Damai Dai",
+        "Qinyu Chen",
+        "Bingxuan Wang",
+        "Zhenda Xie",
+        "Kezhao Huang",
+        "Xingkai Yu",
+        "Chengqi Deng",
+        "Shangyan Zhou",
+        "Chenggang Zhao",
+        "Dongyan Zhao",
+        "Wenfeng Liang",
+        "Han Zhang",
+        "Zhengyan Zhang",
+        "Yixu Wei",
+        "M. Y Xu",
+        "Huishuai Zhang",
+        "Dongyan Zhao",
+        "Wenfeng Liang"
+      ]
+    },
+    {
+      "title": "A Survey on Accelerated Technologies for Mixture-of-Experts Model Training Systems",
+      "source_url": "https://doi.org/10.26599/tst.2025.9010169",
+      "year": 2025,
+      "published": "2025-12-19",
+      "canonical_id": "DOI:10.26599/tst.2025.9010169",
+      "doi": "10.26599/tst.2025.9010169",
+      "authors": [
+        "Qi Zhang",
+        "Jidong Zhai",
+        "Weimin Zheng"
+      ]
+    },
+    {
+      "title": "Survey of Intra-Node GPU Interconnection in Scale-Up Network: Challenges, Status, Insights, and Future Directions",
+      "source_url": "https://doi.org/10.3390/fi17120537",
+      "year": 2025,
+      "published": "2025-11-24",
+      "canonical_id": "DOI:10.3390/fi17120537",
+      "doi": "10.3390/fi17120537",
+      "authors": [
+        "Xiaoyong Song",
+        "Danyuan Zhou",
+        "Kai Li",
+        "Jiayuan Chen",
+        "Hao Zhang",
+        "Xiaoguang Zhang",
+        "Xuxia Zhong"
+      ]
+    },
+    {
+      "title": "LLM Inference Scheduling: A Survey of Techniques, Frameworks, and Trade-offs",
+      "source_url": "https://doi.org/10.36227/techrxiv.176238087.79673350/v1",
+      "year": 2025,
+      "published": "2025-11-05",
+      "canonical_id": "DOI:10.36227/techrxiv.176238087.79673350/v1",
+      "doi": "10.36227/techrxiv.176238087.79673350/v1",
+      "authors": [
+        "Morgan Heisler",
+        "Zahra Yousefijamarani",
+        "Xinglu Wang",
+        "Qian Wang",
+        "Ge Shi",
+        "Hanieh Sadri",
+        "Timothy Z. Yu",
+        "Yifei Li",
+        "Haley Li",
+        "Gursimran Singh",
+        "Linzi Xing",
+        "Daesik Jang",
+        "Hong Chang",
+        "Qintao Zhang",
+        "Kan Chen",
+        "Shuming Jing",
+        "Yizhou Shan",
+        "Yi Li",
+        "Xiaolong Bai",
+        "Yu Zhang",
+        "Yu Zhang",
+        "Jiannan Wang",
+        "Jiannan Wang",
+        "Ivan Beschastinikh",
+        "Ying Xiong",
+        "Yong Zhang",
+        "Zhang Yon",
+        "Zhenan Fan"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.27046",
+      "identity_tokens": [
+        "id:arXiv:2608.27046",
+        "title:performance foundations of parallel distributed reasoning language models",
+        "url:https://arxiv.org/abs/2608.27046"
+      ],
+      "record": {
+        "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+        "source_url": "https://arxiv.org/abs/2608.27046",
+        "year": 2026,
+        "published": "2026-08-27",
+        "canonical_id": "arXiv:2608.27046",
+        "arxiv_id": "2608.27046",
+        "authors": [
+          "Maciej Besta",
+          "Leonard Schmidt",
+          "Lara Nonino",
+          "Robert Gerstenberger",
+          "Pierre Pang",
+          "Patrik Okanovic",
+          "Ales Kubicek",
+          "Tiancheng Chen",
+          "B. Lipshitz",
+          "Torsten Hoefler"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.12146",
+      "identity_tokens": [
+        "id:arXiv:2608.12146",
+        "title:routepack expert placement and attentionaware data packing for moe reinforcement learning",
+        "url:https://arxiv.org/abs/2608.12146"
+      ],
+      "record": {
+        "title": "RoutePack: Expert Placement and Attention-Aware Data Packing for MoE Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2608.12146",
+        "year": 2026,
+        "published": "2026-08-12",
+        "canonical_id": "arXiv:2608.12146",
+        "arxiv_id": "2608.12146",
+        "authors": [
+          "Yibo Shen",
+          "Xudong Han",
+          "Xiaowei Zhu",
+          "Gen Li",
+          "Zhenxuan Pan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.26444",
+      "identity_tokens": [
+        "id:arXiv:2607.26444",
+        "title:stratacl fabricnative communication library for production supernodes",
+        "url:https://arxiv.org/abs/2607.26444"
+      ],
+      "record": {
+        "title": "StrataCL: Fabric-Native Communication Library for Production Supernodes",
+        "source_url": "https://arxiv.org/abs/2607.26444",
+        "year": 2026,
+        "published": "2026-07-29",
+        "canonical_id": "arXiv:2607.26444",
+        "arxiv_id": "2607.26444",
+        "authors": [
+          "Tiancheng Hu",
+          "Jin Qin",
+          "Yuzheng Wang",
+          "Ke Liu",
+          "TangShengSheng Li",
+          "Sheng Wang",
+          "Zhongzhe Hu",
+          "Tianlun Hu",
+          "Wei Wang",
+          "Lijun Li",
+          "Jingbin Zhou",
+          "Xiaoming Bao",
+          "Hongwei Sun",
+          "Jieru Zhao",
+          "Huimin Cui",
+          "Tao Xie",
+          "Chenxi Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.24653",
+      "identity_tokens": [
+        "id:arXiv:2607.24653",
+        "title:kimi k3 open frontier intelligence",
+        "url:https://arxiv.org/abs/2607.24653"
+      ],
+      "record": {
+        "title": "Kimi K3: Open Frontier Intelligence",
+        "source_url": "https://arxiv.org/abs/2607.24653",
+        "year": 2026,
+        "published": "2026-07-27",
+        "canonical_id": "arXiv:2607.24653",
+        "arxiv_id": "2607.24653",
+        "authors": [
+          "Kimi Team",
+          "Tongtong Bai",
+          "Yifan Bai",
+          "Yiping Bao",
+          "M. C.",
+          "Jianfeng Cai",
+          "Xinyuan Cai",
+          "Peizhou Cao",
+          "Yuxuan Cao",
+          "Ziwei Chai",
+          "Y. Charles",
+          "H. S. Che",
+          "Guanduo Chen",
+          "Guangyu Chen",
+          "Guanzheng Chen",
+          "Huarong Chen",
+          "Jia Chen",
+          "Jianlong Chen",
+          "Jun Chen",
+          "Kexin Chen",
+          "Peng Chen",
+          "Ruijue Chen",
+          "Wentao Chen",
+          "Xin Chen",
+          "Yang Chen",
+          "Yanru Chen",
+          "Yifei Chen",
+          "Yingjiang Chen",
+          "Yuankun Chen",
+          "Yujie Chen",
+          "Yutian Chen",
+          "Zhirong Chen",
+          "Dazhi Cheng",
+          "Yean Cheng",
+          "Jialei Cui",
+          "Jingbing Cui",
+          "Anqi Dai",
+          "Jiaqi Deng",
+          "Hao Ding",
+          "Rui Ding",
+          "Shaofeng Ding",
+          "Mengfan Dong",
+          "Mengnan Dong",
+          "Yuhao Dong",
+          "Yuxin Dong",
+          "Angang Du",
+          "Chenzhuang Du",
+          "Dikang Du",
+          "J. Du",
+          "Yulun Du",
+          "Yu Fan",
+          "Jing Feng",
+          "Qiulin Feng",
+          "Yichen Feng",
+          "Kelin Fu",
+          "Qiang Fu",
+          "高甫瑄",
+          "Hongcheng Gao",
+          "Jingyue Gao",
+          "Tong Gao",
+          "Weijia Gao",
+          "Shangyi Geng",
+          "Jie Gong",
+          "功 林戸",
+          "Shengao Gong",
+          "Xiaochen Gong",
+          "Qizheng Gu",
+          "Yicheng Gu",
+          "Shuhao Guan",
+          "Haiqing Guo",
+          "Shiqi Guo",
+          "Xiang Guo",
+          "Zhengyan Guo",
+          "Beixi Hao",
+          "Wenxin Hao",
+          "Xiaoru Hao",
+          "Dailan He",
+          "Haotian He",
+          "Lehan He",
+          "Qi He",
+          "Weiran He",
+          "Xinran He",
+          "Xinyi He",
+          "Yibo He",
+          "Yi He",
+          "Chao Hong",
+          "Tiange Hong",
+          "Hao Hu",
+          "Jiaxi Hu",
+          "Ruikun Hu",
+          "Weiming Hu",
+          "Yangyang Hu",
+          "Zhenxing Hu",
+          "Liang Hua",
+          "Jinbin Huang",
+          "Ke Huang",
+          "Ruiyuan Huang",
+          "Siying Huang",
+          "Weixiao Huang",
+          "Yan Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.08032",
+      "identity_tokens": [
+        "id:arXiv:2607.08032",
+        "title:what to keep what to forget a ratedistortion view of memory compaction in llms and agents",
+        "url:https://arxiv.org/abs/2607.08032"
+      ],
+      "record": {
+        "title": "What to Keep, What to Forget: A Rate--Distortion View of Memory Compaction in LLMs and Agents",
+        "source_url": "https://arxiv.org/abs/2607.08032",
+        "year": 2026,
+        "published": "2026-07-09",
+        "canonical_id": "arXiv:2607.08032",
+        "arxiv_id": "2607.08032",
+        "authors": [
+          "Ashwin Gerard Colaco",
+          "Nada Lahjouji"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.21712",
+      "identity_tokens": [
+        "id:arXiv:2606.21712",
+        "title:batchgen an architecture for scalable and efficient batch inference",
+        "url:https://arxiv.org/abs/2606.21712"
+      ],
+      "record": {
+        "title": "BatchGen: An Architecture for Scalable and Efficient Batch Inference",
+        "source_url": "https://arxiv.org/abs/2606.21712",
+        "year": 2026,
+        "published": "2026-06-19",
+        "canonical_id": "arXiv:2606.21712",
+        "arxiv_id": "2606.21712",
+        "authors": [
+          "Tairan Xu",
+          "Leyang Xue",
+          "Zhan Lu",
+          "Jinfu Deng",
+          "Hongyang Xiao",
+          "Yu Jiang",
+          "C N He",
+          "Matej Šandor",
+          "Le Xu",
+          "Luo Mai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.11867",
+      "identity_tokens": [
+        "id:arXiv:2606.11867",
+        "title:harnessing routing foresight for microsteplevel moe load balancing in rl posttraining",
+        "url:https://arxiv.org/abs/2606.11867"
+      ],
+      "record": {
+        "title": "Harnessing Routing Foresight for Micro-step-level MoE load balancing in RL Post-training",
+        "source_url": "https://arxiv.org/abs/2606.11867",
+        "year": 2026,
+        "published": "2026-06-10",
+        "canonical_id": "arXiv:2606.11867",
+        "arxiv_id": "2606.11867",
+        "authors": [
+          "Yuming Zhou",
+          "Haoyang Li",
+          "Sheng Lin",
+          "Yanfeng Zhao",
+          "Tong Zhao",
+          "Xupeng Miao",
+          "J Jiang",
+          "Fangcheng Fu",
+          "Bin Cui"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01143",
+      "identity_tokens": [
+        "id:arXiv:2606.01143",
+        "title:schedulelevel sharedprefix reuse for llm rl training",
+        "url:https://arxiv.org/abs/2606.01143"
+      ],
+      "record": {
+        "title": "Schedule-Level Shared-Prefix Reuse for LLM RL Training",
+        "source_url": "https://arxiv.org/abs/2606.01143",
+        "year": 2026,
+        "published": "2026-05-31",
+        "canonical_id": "arXiv:2606.01143",
+        "arxiv_id": "2606.01143",
+        "authors": [
+          "Pengbo Li",
+          "Feiyuan Zhang",
+          "Guangming Sheng",
+          "G. He",
+          "Di Chai",
+          "Ziniu Li",
+          "Taiqiang Wu",
+          "Wenyu Mao",
+          "Binhang Yuan",
+          "Kai Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.20863",
+      "identity_tokens": [
+        "id:arXiv:2605.20863",
+        "title:plexrl clusterlevel orchestration of serviceized llm execution for rlvr",
+        "url:https://arxiv.org/abs/2605.20863"
+      ],
+      "record": {
+        "title": "PlexRL: Cluster-Level Orchestration of Serviceized LLM Execution for RLVR",
+        "source_url": "https://arxiv.org/abs/2605.20863",
+        "year": 2026,
+        "published": "2026-05-20",
+        "canonical_id": "arXiv:2605.20863",
+        "arxiv_id": "2605.20863",
+        "authors": [
+          "Yiqi Zhang",
+          "Fangzheng Jiao",
+          "Tian Tang",
+          "Boyu Tian",
+          "Hangyu Wang",
+          "Qiaoling Chen",
+          "Guoteng Wang",
+          "Zhen Jiang",
+          "Peng Sun",
+          "Ping Zhang",
+          "Xiaohe Hu",
+          "Ziming Liu",
+          "Menghao Zhang",
+          "Yanmin Jia",
+          "Yang You",
+          "Siyuan Feng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7213474877",
+      "identity_tokens": [
+        "id:OpenAlex:W7213474877",
+        "title:building open source inference serving systems",
+        "url:https://escholarship.org/uc/item/67d7q7df"
+      ],
+      "record": {
+        "title": "Building Open Source Inference Serving Systems",
+        "source_url": "https://escholarship.org/uc/item/67d7q7df",
+        "year": 2026,
+        "published": "2026-05-01",
+        "canonical_id": "OpenAlex:W7213474877",
+        "authors": [
+          "Xiangxi Mo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.26334",
+      "identity_tokens": [
+        "id:arXiv:2604.26334",
+        "title:efficient vramconstrained xlm inference on clients",
+        "url:https://arxiv.org/abs/2604.26334"
+      ],
+      "record": {
+        "title": "Efficient, VRAM-Constrained xLM Inference on Clients",
+        "source_url": "https://arxiv.org/abs/2604.26334",
+        "year": 2026,
+        "published": "2026-04-29",
+        "canonical_id": "arXiv:2604.26334",
+        "arxiv_id": "2604.26334",
+        "authors": [
+          "Aditya Ukarande",
+          "Deep Shekhar",
+          "Marc Blackstein",
+          "Ram Rangan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.09193",
+      "identity_tokens": [
+        "id:DOI:10.1145/3811822",
+        "id:arXiv:2509.09193",
+        "title:ai reasoning for wireless communications and networking a survey and perspectives",
+        "url:https://doi.org/10.1145/3811822"
+      ],
+      "record": {
+        "title": "AI Reasoning for Wireless Communications and Networking: A Survey and Perspectives",
+        "source_url": "https://doi.org/10.1145/3811822",
+        "year": 2026,
+        "published": "2026-04-23",
+        "canonical_id": "arXiv:2509.09193",
+        "arxiv_id": "2509.09193",
+        "authors": [
+          "Haoxiang Luo",
+          "Yu Yan",
+          "Yanhui Bian",
+          "Wenjiao Feng",
+          "Ruichen Zhang",
+          "Yinqiu Liu",
+          "Jiacheng Wang",
+          "Gang Sun",
+          "Dusit Niyato",
+          "Hongfang Yu",
+          "Abbas Jamalipour",
+          "Shiwen Mao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.07173",
+      "identity_tokens": [
+        "id:arXiv:2604.07173",
+        "title:infinilora disaggregated multilora serving for large language models",
+        "url:http://arxiv.org/abs/2604.07173"
+      ],
+      "record": {
+        "title": "InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models",
+        "source_url": "http://arxiv.org/abs/2604.07173",
+        "year": 2026,
+        "published": "2026-04-08",
+        "canonical_id": "arXiv:2604.07173",
+        "arxiv_id": "2604.07173",
+        "authors": [
+          "Hongyu Chen",
+          "L. Ruan",
+          "Zilin Xu",
+          "Yuchen Li",
+          "Xinyu Chen",
+          "Jingwen Leng",
+          "Bingsheng He",
+          "Minyi Guo",
+          "Shixuan Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.36227/techrxiv.177205041.14536362/v1",
+      "identity_tokens": [
+        "id:DOI:10.36227/techrxiv.177205041.14536362/v1",
+        "title:xami expertaware adaptive compression for mixtureofexperts on sparse tensor cores",
+        "url:https://doi.org/10.36227/techrxiv.177205041.14536362/v1"
+      ],
+      "record": {
+        "title": "Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores",
+        "source_url": "https://doi.org/10.36227/techrxiv.177205041.14536362/v1",
+        "year": 2026,
+        "published": "2026-02-25",
+        "canonical_id": "DOI:10.36227/techrxiv.177205041.14536362/v1",
+        "doi": "10.36227/techrxiv.177205041.14536362/v1",
+        "authors": [
+          "Johnson Umeike",
+          "Bahar Asgari"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.21461",
+      "identity_tokens": [
+        "id:arXiv:2601.21461",
+        "title:l3 large lookup layers",
+        "url:https://arxiv.org/abs/2601.21461"
+      ],
+      "record": {
+        "title": "L$^3$: Large Lookup Layers",
+        "source_url": "https://arxiv.org/abs/2601.21461",
+        "year": 2026,
+        "published": "2026-01-29",
+        "canonical_id": "arXiv:2601.21461",
+        "arxiv_id": "2601.21461",
+        "authors": [
+          "Albert Tseng",
+          "Chris De"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.10639",
+      "identity_tokens": [
+        "id:arXiv:2601.10639",
+        "title:stem scaling transformers with embedding modules",
+        "url:http://arxiv.org/abs/2601.10639"
+      ],
+      "record": {
+        "title": "STEM: Scaling Transformers with Embedding Modules",
+        "source_url": "http://arxiv.org/abs/2601.10639",
+        "year": 2026,
+        "published": "2026-01-15",
+        "canonical_id": "arXiv:2601.10639",
+        "arxiv_id": "2601.10639",
+        "authors": [
+          "Ranajoy Sadhukhan",
+          "Sheng Cao",
+          "Harry Dong",
+          "Changsheng Zhao",
+          "Attiano Purpura-Pontoniere",
+          "Yuandong Tian",
+          "Zechun Liu",
+          "Beidi Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.07372",
+      "identity_tokens": [
+        "id:arXiv:2601.07372",
+        "title:conditional memory via scalable lookup a new axis of sparsity for large language models",
+        "url:https://arxiv.org/abs/2601.07372"
+      ],
+      "record": {
+        "title": "Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2601.07372",
+        "year": 2026,
+        "published": "2026-01-12",
+        "canonical_id": "arXiv:2601.07372",
+        "arxiv_id": "2601.07372",
+        "authors": [
+          "Xin Cheng",
+          "Rui Tian",
+          "Wangding Zeng",
+          "Damai Dai",
+          "Qinyu Chen",
+          "Bingxuan Wang",
+          "Zhenda Xie",
+          "Kezhao Huang",
+          "Xingkai Yu",
+          "Chengqi Deng",
+          "Shangyan Zhou",
+          "Chenggang Zhao",
+          "Dongyan Zhao",
+          "Wenfeng Liang",
+          "Han Zhang",
+          "Zhengyan Zhang",
+          "Yixu Wei",
+          "M. Y Xu",
+          "Huishuai Zhang",
+          "Dongyan Zhao",
+          "Wenfeng Liang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.26599/tst.2025.9010169",
+      "identity_tokens": [
+        "id:DOI:10.26599/tst.2025.9010169",
+        "title:a survey on accelerated technologies for mixtureofexperts model training systems",
+        "url:https://doi.org/10.26599/tst.2025.9010169"
+      ],
+      "record": {
+        "title": "A Survey on Accelerated Technologies for Mixture-of-Experts Model Training Systems",
+        "source_url": "https://doi.org/10.26599/tst.2025.9010169",
+        "year": 2025,
+        "published": "2025-12-19",
+        "canonical_id": "DOI:10.26599/tst.2025.9010169",
+        "doi": "10.26599/tst.2025.9010169",
+        "authors": [
+          "Qi Zhang",
+          "Jidong Zhai",
+          "Weimin Zheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/fi17120537",
+      "identity_tokens": [
+        "id:DOI:10.3390/fi17120537",
+        "title:survey of intranode gpu interconnection in scaleup network challenges status insights and future directions",
+        "url:https://doi.org/10.3390/fi17120537"
+      ],
+      "record": {
+        "title": "Survey of Intra-Node GPU Interconnection in Scale-Up Network: Challenges, Status, Insights, and Future Directions",
+        "source_url": "https://doi.org/10.3390/fi17120537",
+        "year": 2025,
+        "published": "2025-11-24",
+        "canonical_id": "DOI:10.3390/fi17120537",
+        "doi": "10.3390/fi17120537",
+        "authors": [
+          "Xiaoyong Song",
+          "Danyuan Zhou",
+          "Kai Li",
+          "Jiayuan Chen",
+          "Hao Zhang",
+          "Xiaoguang Zhang",
+          "Xuxia Zhong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.36227/techrxiv.176238087.79673350/v1",
+      "identity_tokens": [
+        "id:DOI:10.36227/techrxiv.176238087.79673350/v1",
+        "title:llm inference scheduling a survey of techniques frameworks and tradeoffs",
+        "url:https://doi.org/10.36227/techrxiv.176238087.79673350/v1"
+      ],
+      "record": {
+        "title": "LLM Inference Scheduling: A Survey of Techniques, Frameworks, and Trade-offs",
+        "source_url": "https://doi.org/10.36227/techrxiv.176238087.79673350/v1",
+        "year": 2025,
+        "published": "2025-11-05",
+        "canonical_id": "DOI:10.36227/techrxiv.176238087.79673350/v1",
+        "doi": "10.36227/techrxiv.176238087.79673350/v1",
+        "authors": [
+          "Morgan Heisler",
+          "Zahra Yousefijamarani",
+          "Xinglu Wang",
+          "Qian Wang",
+          "Ge Shi",
+          "Hanieh Sadri",
+          "Timothy Z. Yu",
+          "Yifei Li",
+          "Haley Li",
+          "Gursimran Singh",
+          "Linzi Xing",
+          "Daesik Jang",
+          "Hong Chang",
+          "Qintao Zhang",
+          "Kan Chen",
+          "Shuming Jing",
+          "Yizhou Shan",
+          "Yi Li",
+          "Xiaolong Bai",
+          "Yu Zhang",
+          "Yu Zhang",
+          "Jiannan Wang",
+          "Jiannan Wang",
+          "Ivan Beschastinikh",
+          "Ying Xiong",
+          "Yong Zhang",
+          "Zhang Yon",
+          "Zhenan Fan"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:9b455dbcfa5474db26d6848378e611c1760ee00f5732815ee801143bb4376ba5",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

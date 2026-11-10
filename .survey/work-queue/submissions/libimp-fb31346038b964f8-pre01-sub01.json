@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Masked Self-Distillation: Internalizing the Chain-of-Thought in Language Models",
+      "source_url": "https://arxiv.org/abs/2607.22629",
+      "year": 2026,
+      "published": "2026-06-18",
+      "venue": null,
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models produce long, explicit chains of intermediate steps before generating a final answer at inference time. These intermediate traces dominate latency, memory usage, and serving cost, even though final answer correctness is not causally related to the trace correctness and the trace length is not a reliable indicator of the problem complexity. This raises an obvious question: can the computation expressed in these intermediate tokens be internalized into the parameters of a language model, enabling it to produce answers with much shorter intermediate traces? We propose masked self-distillation, a knowledge-distillation based post-training framework in which copies of the same model are instantiated as teacher and student, and the student model is trained to internalize all or part of the intermediate trace, thus becoming more efficient at inference. We vary the fraction of intermediate trace the student is trained to internalize, interpolating between full internalization and no internalization. We conduct controlled experiments on two reasoning domains: math and graph coloring. We use the masked self-distillation framework to post-train Qwen3-4B&8B models. Our results demonstrate that this method can be used to improve task performance while increasing inference efficiency across various domains and model sizes. We systematically analyze whether improved efficiency gain in the post-trained models generalize to OOD problems. We find that masked self-distillation models generalize well for in-domain OOD problems, and the masked self-distillation training does not induce catastrophic forgetting in the student model on out-of-domain problems. Furthermore, our ablation study shows that supervised fine-tuning can train models to produce shorter traces, but at the cost of generalization, highlighting the importance of on-policy training in masked self-distillation.",
+      "identifiers": [
+        "SemanticScholar:0f26ea8fea45c0982c9a57266ca95a3362050fee"
+      ],
+      "semantic_scholar_id": "0f26ea8fea45c0982c9a57266ca95a3362050fee",
+      "canonical_id": "arXiv:2607.22629",
+      "arxiv_id": "2607.22629",
+      "authors": [
+        "Durgesh Kalwar",
+        "Vardhan Palod",
+        "Jaya Adithya Pavuluri",
+        "Subbarao Kambhampati"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 134,
+        "matched_prestigious_venue": null
+      },
+      "reason": "同一モデルをteacher/studentに用い、中間Chain-of-Thoughtの一部を隠して蒸留することで推論列をモデル内部へ取り込み、生成トークンと推論費用を減らす後学習方式。Qwen3-4B/8Bで数学・グラフ彩色を評価し、短い推論列と精度改善、OOD一般化を報告。生成トークン削減は推論計算量とレイテンシに直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "COEC: Calibrated Orthogonal-Equivalence Compensation for Structured Pruning of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2608.21142",
+      "year": 2026,
+      "published": "2026-08-21",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning reduces the size and inference cost of large language models (LLMs) by removing weight columns, but the resulting output error can degrade accuracy. Existing training-free compensation methods use an additive bias or a single orthogonal rotation on the output side of the retained weight. These corrections leave its input singular frame unchanged and therefore limit how the retained weight can adapt after column removal. We propose COEC (Calibrated Orthogonal-Equivalence Compensation), a training-free compensation framework that applies alternating left and right orthogonal rotations to the retained weight. The right rotation is optimized on a reduced Stiefel manifold, while singular values are rescaled using generalized cross-validation to select the regularization strength for each layer. COEC further tempers the calibration Gram matrix to reduce the dominance of high-energy activation directions and introduces an alignment penalty that preserves the geometric relation between adjacent attention projections.All components use second-order statistics from a small calibration set and require neither backpropagation through the LLM nor retraining of the model parameters. COEC is independent of the column pruning criterion and can be applied to multiple structured pruning methods. Experiments on the Llama-3, Llama-3.1, and Qwen2.5 model families across multiple structured sparsity levels show that COEC improves perplexity on every model and zero-shot accuracy in most settings over existing compensation methods, with larger gains at higher sparsity. These results show that post-pruning compensation can recover part of the performance lost to column removal.",
+      "identifiers": [
+        "SemanticScholar:8022ebe2ac0fe0f8687513c475d251914383a454"
+      ],
+      "semantic_scholar_id": "8022ebe2ac0fe0f8687513c475d251914383a454",
+      "canonical_id": "arXiv:2608.21142",
+      "arxiv_id": "2608.21142",
+      "authors": [
+        "Peiqi Yu",
+        "Nam Ling",
+        "Wei Wang",
+        "Wei Jiang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 70,
+        "matched_prestigious_venue": null
+      },
+      "reason": "構造化列枝刈り後のLLM重みを、左右の直交回転と特異値再スケーリング、校正Gram行列の調整によって補償する学習不要の方式。Llama-3/3.1とQwen2.5で複数の構造化疎性率を評価し、全モデルでperplexity改善、多くの設定でzero-shot精度改善を報告。枝刈り後の推論モデル品質を回復する圧縮技術として直接関連。",
+      "library_body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "E2S-Pruner: Progressive Two-Stage Evidence Fusion for Visual Token Pruning in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2608.23253",
+      "year": 2026,
+      "published": "2026-08-24",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models typically encode an image into hundreds of visual tokens, incurring substantial inference latency and GPU memory overhead. Existing pruning methods largely rely on attention scores and directly aggregate outputs across attention heads and network layers, making it difficult to characterize evidential uncertainty and conflict. We propose E2S-Pruner, a progressive two-stage evidence-fusion framework for visual token pruning that requires no auxiliary model, trainable parameters, or fine-tuning. In the first stage, E2S-Pruner treats each attention head as an independent evidence source, estimates its reliability from evidence clarity and inter-head consistency, and represents each visual token using three states: important, unimportant, and uncertain. In the second stage, Dempster--Shafer evidence theory is used to quantify inter-layer conflict and fuse complementary evidence from multiple network layers. We further introduce a spatial novelty constraint that promotes coverage of distinct image regions and prevents the retained tokens from concentrating in a few locally salient areas. On LLaVA-1.5-7B, E2S-Pruner retains 98.0%, 96.8%, and 90.6% of the aggregate performance when the average numbers of retained visual tokens are 192, 128, and 64, respectively, while improving throughput by 1.96x and 2.09x under the 128-token and 64-token settings. Experiments on Qwen2-VL-7B further demonstrate cross-model generalization. Code is available at https://github.com/taoyu-qian/E2S-Pruner.git.",
+      "identifiers": [
+        "SemanticScholar:9243b6edb8990a0962104d1dbd7247424e60a451"
+      ],
+      "semantic_scholar_id": "9243b6edb8990a0962104d1dbd7247424e60a451",
+      "canonical_id": "arXiv:2608.23253",
+      "arxiv_id": "2608.23253",
+      "authors": [
+        "Taoyu Qian",
+        "Qi Wang",
+        "D. Shi",
+        "Yuan Jiang",
+        "Shang Gao",
+        "Hua-Long Yu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 67,
+        "matched_prestigious_venue": null
+      },
+      "reason": "補助モデル・再学習なしでattention headごとの証拠の信頼度と層間衝突を統合し、空間的新規性制約を加えて視覚トークンを枝刈りする方式。LLaVA-1.5-7Bで平均128/64 visual tokens保持時にaggregate性能96.8%/90.6%、throughput 1.96/2.09倍を報告し、Qwen2-VL-7Bにも評価を拡張。視覚トークン削減によるMLLM推論高速化の直接関連研究。",
+      "library_body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Scalable Pretraining of Large Mixture of Experts Language Models on Aurora Super Computer",
+      "source_url": "https://arxiv.org/abs/2604.00785",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pretraining Large Language Models (LLMs) from scratch requires massive amount of compute. Aurora super computer is an ExaScale machine with 127,488 Intel PVC (Ponte Vechio) GPU tiles. In this work, we showcase LLM pretraining on Aurora at the scale of 1000s of GPU tiles. Towards this effort, we developed Optimus, an inhouse training library with support for standard large model training techniques. Using Optimus, we first pretrained Mula-1B, a 1 Billion dense model and Mula-7B-A1B, a 7 Billion Mixture of Experts (MoE) model from scratch on 3072 GPU tiles for the full 4 trillion tokens of the OLMoE-mix-0924 dataset. We then demonstrated model scaling by pretraining three large MoE models Mula-20B-A2B, Mula-100B-A7B, and Mula-220B-A10B till 100 Billion tokens on the same dataset. On our largest model Mula-220B-A10B, we pushed the compute scaling from 384 to 12288 GPU tiles and observed scaling efficiency of around 90% at 12288 GPU tiles. We significantly improved the runtime performance of MoE models using custom GPU kernels for expert computation, and a novel EP-Aware sharded optimizer resulting in training speedups up to 1.71x. As part of the Optimus library, we also developed a robust set of reliability and fault tolerant features to improve training stability and continuity at scale.",
+      "identifiers": [
+        "SemanticScholar:33e231d41973ae84ec1102235a8536feab6542d1"
+      ],
+      "semantic_scholar_id": "33e231d41973ae84ec1102235a8536feab6542d1",
+      "canonical_id": "arXiv:2604.00785",
+      "arxiv_id": "2604.00785",
+      "doi": "10.48550/arXiv.2604.00785",
+      "authors": [
+        "Dharma Teja Vooturi",
+        "Dhiraj D. Kalamkar",
+        "Dipankar Das",
+        "Bharat Kaul"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Aurora上で大規模MoE言語モデルの事前学習をスケールさせるシステム研究。Optimus実装、expert演算向けカーネル、EP-aware sharded optimizer、耐障害性を扱う。Mula-220B-A10Bで最大12,288 GPU tiles、約90%のスケーリング効率、学習高速化最大1.71倍を報告。LLM分散学習・MoE実装の直接的な対象。",
+      "library_body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Look Less, Think Faster: Joint Token-Compute Adaptation for Multimodal LLMs",
+      "source_url": "https://arxiv.org/abs/2607.20357",
+      "year": 2026,
+      "published": "2026-07-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have recently demonstrated strong performance across vision-language tasks. However, their high inference cost, arising from both the large number of input visual tokens and the heavy computation of the large language model (LLM), remains a key barrier to practical deployment. Recent work attempts to reduce the cost by adaptively optimizing individual dimensions, e.g., pruning redundant visual tokens or skipping LLM layers and heads. Nonetheless, prior approaches typically treat these dimensions independently and overlook a fundamental coupling: the available compute resources must be dynamically allocated across all dimensions based on the input content. To bridge the gap, we propose SmartVL, a unified adaptive inference framework that jointly controls vision token number and model compute capability in response to varying input contents and compute budgets. SmartVL introduces a vision-side token controller that dynamically selects informative visual tokens and an LLM-side compute controller that adaptively adjusts LLM computation. Importantly, these controllers are trained to coordinate with each other so that the overall inference cost satisfies a target budget. To allow this joint scheduling, we connect the controllers using a shared budget encoding and leverage a differentiable latency estimator for end-to-end training. This design enables SmartVL to learn cross-stage allocation strategies that adapt to both input complexity and runtime compute constraints. Experiments across multiple MLLM benchmarks demonstrate that, with joint scheduling, SmartVL consistently outperforms prior adaptive methods and achieves superior accuracy-efficiency Pareto frontiers. Project page: https://www.schaterji.io/publications/2026/jointtokencompute.",
+      "identifiers": [
+        "SemanticScholar:0200816dc463d534f3f2f60daed4051b4ead2822"
+      ],
+      "semantic_scholar_id": "0200816dc463d534f3f2f60daed4051b4ead2822",
+      "canonical_id": "arXiv:2607.20357",
+      "arxiv_id": "2607.20357",
+      "doi": "10.48550/arXiv.2607.20357",
+      "authors": [
+        "Peng-Cheng Wang",
+        "Zhiquan Wang",
+        "Jayoung Lee",
+        "Zhuoyan Xu",
+        "Ran Xu",
+        "Saurabh Bagchi",
+        "Yin Li",
+        "S. Chaterji"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SmartVLはマルチモーダルLLMの画像トークン保持量とLLMの実行深さ・幅を共通の計算予算の下で共同制御する適応推論方式。視覚側token controllerとLLM側compute controllerを連携学習し、複数のVQAベンチマークで精度とFLOPsのPareto改善を報告。入力依存のトークン削減・層/ヘッド実行量の調整はMLLM推論高速化に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fb31346038b9",
+    "round": "libimp-fb31346038b964f8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fb31346038b964f8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fb31346038b964f8-pre01.json",
+    "receipt": "sha256:7c058e8d7923cfe8221ed4d6357e00093508afac4db4f42793afe94bc8e5e084"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fb31346038b9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

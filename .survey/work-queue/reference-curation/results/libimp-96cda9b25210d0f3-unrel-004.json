@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96cda9b25210d0f3-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.07236",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.07236",
+    "identity_tokens": [
+      "arXiv:2609.07236"
+    ],
+    "reason": "一次要旨: Selecting a parallelism strategy - the configuration of data, tensor, and pipeline parallelism degrees together with micro- and global-batch sizes - largely determines the training efficiency of large language models. State-of-the-art methods search for a parallelism strategy offline and select the single strategy that minimizes per-iteration time. But we find that they neglect the target validation perplexity and time-to-perplexity (TTP). In particular, our analysis reveals that the best strategy yielding the fastest perplexity improvement changes multiple times during training. As a result, state-of-the-art methods are 1.8-11.4x slower in TTP than the strategy sequence that selects the best strategy at each iteration. This paper proposes CONA, a new training method that introduces online strategy chaining. Instead of a single strategy selected offline, CONA ranks candidate strategies during training using a surrogate metric built from compute throughput and gradient statistics, and switches the current strategy to a new strategy with a higher metric. In our evaluation with GPT-3 1.3B, BERT-Large, and Llama-3.2-1B, CONA reaches the target validation perplexity 1.4-9.6x faster than state-of-the-art methods. Moreover, CONA closely tracks the perplexity achieved by the sequence that selects the best strategy at each iteration, within 2.6%.",
+    "first_checked_at": "2026-10-05T07:03:38+00:00",
+    "last_checked_at": "2026-10-05T07:03:38+00:00",
+    "linked_from": [
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "Parallelism Strategy Chaining for Fast Training Convergence"
+  },
+  "processed_at": "2026-10-05T07:03:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96cda9b25210",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

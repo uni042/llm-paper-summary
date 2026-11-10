@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "20260922T222028Z-scheduled-chat-00-7c20a7-03",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-15688dbb0cd11f1c",
+      "claim_id": "claim-4a6861f35cc58610c3fb4b0c",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-4a6861f35cc58610c3fb4b0c",
+      "claimed_at": "2026-09-22T22:31:45+00:00",
+      "expires_at": "2026-09-23T00:06:18+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-15688dbb0cd11f1c"
+      ],
+      "job": {
+        "job_id": "job-research-15688dbb0cd11f1c",
+        "type": "research",
+        "parent_job_id": "job-b39ee37ce2956ebf",
+        "priority": 96,
+        "canonical_id": "DOI:10.1007/s10462-026-11651-1",
+        "arxiv_id": null,
+        "doi": "10.1007/s10462-026-11651-1",
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "I/o for LLM inference: a survey of storage and memory bottlenecks",
+        "source_url": "https://doi.org/10.1007/s10462-026-11651-1",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-5e022a2789e7-i-o-for-llm-inference-a-survey-of-storage-and-memory-bottlenecks.md",
+        "selection_reason": "Recent survey specifically covering storage and memory I/O bottlenecks in LLM inference; directly relevant to SSD/NVMe, offload and hierarchical-memory survey coverage.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T20:39:10+00:00"
+      },
+      "record_bank": "f",
+      "record_bank_root": ".survey/work-queue/records/chat-record-f",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-f/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-f/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T22:31:45+00:00",
+  "checkpoint_released": 0,
+  "heartbeat_at": "2026-09-22T22:36:18+00:00"
+}

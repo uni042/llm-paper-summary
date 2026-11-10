@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261103-0402-scheduled-chat-00/r02",
+  "reference_main_sha": "8b0702a18bbc4d353c368b78ee81c916ba45a714",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32695",
+      "identity_tokens": [
+        "arXiv:2610.32695"
+      ],
+      "title": "Tile-Based Decompression in Compiled GPU Engines",
+      "reason": "一次要旨で対象がGPUデータベースquery engine（Proteus/HeavyDB/Sirius）のcolumn decompressionと判明。HBM使用量最大4分の1、帯域最大6分の1という結果はSQL query処理向けであり、LLM/Transformer推論の評価はないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.32695",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:09:36+09:00",
+      "last_checked_at": "2026-11-03T04:09:36+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.32878",
+      "identity_tokens": [
+        "arXiv:2610.32878"
+      ],
+      "title": "Advancing SVD-based LLM Compression via Layer-Wise Error Model Search",
+      "reason": "LEMSはlayerごとの局所・大域重要度と誤差伝播biasを組み合わせたsurrogateをILPで最適化し、SVD rankを配分する。KFAC-SVDはtoken統計でFisher近似のrank collapseを緩和。Mistral/Qwen3/Llama3系でzero-shot精度最大4.7ポイント、PPL平均19%改善と報告。推論向け重み圧縮だが実測token/sは要旨にない。",
+      "source_url": "https://arxiv.org/abs/2610.32878",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:09:36+09:00",
+      "last_checked_at": "2026-11-03T04:09:36+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.36329",
+      "identity_tokens": [
+        "arXiv:2610.36329"
+      ],
+      "title": "Plenty of Room in the Middle: Revealing Opportunities on a GPU Cluster via Fine-Grained Monitoring",
+      "reason": "大学GPU clusterの89ノード319GPUでDCGMを使い100ms粒度の利用率を観測。対象7399 jobsの70%超がGPU memory20%未満、50%がSM平均5%未満と報告しGPU multitasking/配置改善の余地を示す。LLM推論専用のserving設計・実験ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.36329",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:09:36+09:00",
+      "last_checked_at": "2026-11-03T04:09:36+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.34467",
+      "identity_tokens": [
+        "arXiv:2610.34467"
+      ],
+      "title": "DynaFlow: Learning Free-Form Multi-Agent Orchestration",
+      "reason": "multi-agent workflowを動的に生成・学習し、数学推論・科学QA・multi-hop retrievalで正答率を改善する研究。要旨の主指標は正答率（Forced modeで88.08%）で、LLM推論システムの速度・計算・メモリ最適化は検証していないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.34467",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:09:36+09:00",
+      "last_checked_at": "2026-11-03T04:09:36+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.27815",
+      "identity_tokens": [
+        "arXiv:2610.27815"
+      ],
+      "title": "ProVe: Proposer-Verifier Decoding",
+      "reason": "ProVeは通常のsmall-draft/large-verifyを逆転し、large modelを単一forwardで複数tokenを提案するproposerへ微調整する。別のsmall AR verifierかproposer自身で検証でき、後者は元proposerのgreedy AR出力と一致するlossless版。32B proposerの6 benchmarkでlossless平均2.5倍throughput、3B verifier版2.7倍だが平均2.6精度ポイント低下と報告。",
+      "source_url": "https://arxiv.org/abs/2610.27815",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:09:36+09:00",
+      "last_checked_at": "2026-11-03T04:09:36+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31338",
+      "identity_tokens": [
+        "arXiv:2610.31338"
+      ],
+      "title": "ValuSpec: Plug-and-Play Candidate Valuation before Target Verification for Tree-Based Speculative Decoding",
+      "reason": "ValuSpecはretrievalベースtree speculative decodingの低品質branchをtarget verification前に選別する。targetのgreedy trajectoryから閾値を較正し、出力一致の検証規則を保持。HumanEval/GSM8K/Dolly/SpecBenchでretrieval tree設定最大2.38倍、EAGLE-3動的treeへ組込時最大2.78倍のend-to-end高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2610.31338",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:09:36+09:00",
+      "last_checked_at": "2026-11-03T04:09:36+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.13494",
+      "identity_tokens": [
+        "arXiv:2512.13494"
+      ],
+      "title": "SkipCat: Rank-Maximized Low-Rank Compression of Large Language Models via Shared Projection and Block Skipping",
+      "reason": "SkipCatは同じ入力を使う複数重み行列で低rank射影を共有し、分解内の一部sub-blockの演算とメモリ転送を省く。圧縮率を保ちつつ有効rankを高くできる構成で、追加fine-tuningなしに同圧縮率の既存低rank方式よりzero-shot精度7%改善と報告。実測推論速度は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2512.13494",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:09:36+09:00",
+      "last_checked_at": "2026-11-03T04:09:36+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.03062",
+      "identity_tokens": [
+        "arXiv:2512.03062"
+      ],
+      "title": "FermiGrad-SVD: An LLM Compression Pipeline with Global Rank Selection and Gauge Fixing",
+      "reason": "FermiGradは離散的rank切捨てを連続Fermi gateに置換して全layerのrank配分を微分最適化する。Targeted Compressorは対象タスクへ容量を配分し、PivGaは低rank因子のgauge自由度を使って追加のlossless圧縮を行う。Llama3.3-70Bを50% parameter densityへ圧縮と報告。推論実行速度は要旨で実測されていない。",
+      "source_url": "https://arxiv.org/abs/2512.03062",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:09:36+09:00",
+      "last_checked_at": "2026-11-03T04:09:36+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.01556",
+      "identity_tokens": [
+        "arXiv:2606.01556"
+      ],
+      "title": "TwinQuant: Learnable Subspace Decomposition for 4-Bit LLM Quantization",
+      "reason": "TwinQuantは低rank成分と残差成分の量子化後誤差を同時に最適化するためStiefel/一般線形多様体上の変換を学習。dual-componentのfused kernelがon-chipで低rank計算をpipeline化し、global memoryへの中間出力を避ける。LLaMA3/Qwen3でFP16に近い精度を保ちFP16 baseline比最大1.8倍end-to-end高速化と報告。",
+      "source_url": "https://arxiv.org/abs/2606.01556",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:09:36+09:00",
+      "last_checked_at": "2026-11-03T04:09:36+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.35188",
+      "identity_tokens": [
+        "arXiv:2609.35188"
+      ],
+      "title": "Beneath the Tokens: A Performance Engineering Study of Multi-Token Prediction in GPU-Accelerated LLM Inference",
+      "reason": "NVIDIA A10Gで2-token MTPをAR decodeと比較し360要求のtext/reasoning/tool workloadをprofiling。MTPはthroughput1.91〜2.19倍、time-to-first-outputを10.0〜14.2%短縮。主要GEMMがARのGEMVより速いのではなく、token当たり繰返すCUDA Graph実行を56.4〜78.1%減らす償却効果が原因と解析。",
+      "source_url": "https://arxiv.org/abs/2609.35188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:09:36+09:00",
+      "last_checked_at": "2026-11-03T04:09:36+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

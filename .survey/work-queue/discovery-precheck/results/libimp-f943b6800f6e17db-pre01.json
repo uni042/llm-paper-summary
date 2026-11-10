@@ -1,0 +1,334 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f943b6800f6e17db-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f943b6800f6e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2107.02192",
+    "arXiv:2510.18234",
+    "arXiv:2512.18746"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "78faa849bdd02ff29cf2bc2585c44130fd3f7a61",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-07T05:25:02.980899+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2107.02192",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.18234",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.18746",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DeepSeek-OCR: Contexts Optical Compression",
+      "source_url": "https://arxiv.org/abs/2510.18234",
+      "year": 2025,
+      "published": "2025-10-21",
+      "venue": "arXiv.org",
+      "citation_count": 195,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present DeepSeek-OCR as an initial investigation into the feasibility of compressing long contexts via optical 2D mapping. DeepSeek-OCR consists of two components: DeepEncoder and DeepSeek3B-MoE-A570M as the decoder. Specifically, DeepEncoder serves as the core engine, designed to maintain low activations under high-resolution input while achieving high compression ratios to ensure an optimal and manageable number of vision tokens. Experiments show that when the number of text tokens is within 10 times that of vision tokens (i.e., a compression ratio<10x), the model can achieve decoding (OCR) precision of 97%. Even at a compression ratio of 20x, the OCR accuracy still remains at about 60%. This shows considerable promise for research areas such as historical long-context compression and memory forgetting mechanisms in LLMs. Beyond this, DeepSeek-OCR also demonstrates high practical value. On OmniDocBench, it surpasses GOT-OCR2.0 (256 tokens/page) using only 100 vision tokens, and outperforms MinerU2.0 (6000+ tokens per page on average) while utilizing fewer than 800 vision tokens. In production, DeepSeek-OCR can generate training data for LLMs/VLMs at a scale of 200k+ pages per day (a single A100-40G). Codes and model weights are publicly accessible at http://github.com/deepseek-ai/DeepSeek-OCR.",
+      "identifiers": [
+        "SemanticScholar:5e8b50dd5ed9851a541d337a4d9cfa9b75c0a33c"
+      ],
+      "semantic_scholar_id": "5e8b50dd5ed9851a541d337a4d9cfa9b75c0a33c",
+      "canonical_id": "arXiv:2510.18234",
+      "arxiv_id": "2510.18234",
+      "doi": "10.48550/arXiv.2510.18234",
+      "authors": [
+        "Haoran Wei",
+        "Yao-Feng Sun",
+        "Yukun Li"
+      ],
+      "priority": 195,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 195,
+        "citation_count": 195,
+        "total": 195,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 351,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Long-Short Transformer: Efficient Transformers for Language and Vision",
+      "source_url": "https://arxiv.org/abs/2107.02192",
+      "year": 2021,
+      "published": "2021-07-05",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 180,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have achieved success in both language and vision domains. However, it is prohibitively expensive to scale them to long sequences such as long documents or high-resolution images, because self-attention mechanism has quadratic time and memory complexities with respect to the input sequence length. In this paper, we propose Long-Short Transformer (Transformer-LS), an efficient self-attention mechanism for modeling long sequences with linear complexity for both language and vision tasks. It aggregates a novel long-range attention with dynamic projection to model distant correlations and a short-term attention to capture fine-grained local correlations. We propose a dual normalization strategy to account for the scale mismatch between the two attention mechanisms. Transformer-LS can be applied to both autoregressive and bidirectional models without additional complexity. Our method outperforms the state-of-the-art models on multiple tasks in language and vision domains, including the Long Range Arena benchmark, autoregressive language modeling, and ImageNet classification. For instance, Transformer-LS achieves 0.97 test BPC on enwik8 using half the number of parameters than previous method, while being faster and is able to handle 3x as long sequences compared to its full-attention version on the same hardware. On ImageNet, it can obtain the state-of-the-art results (e.g., a moderate size of 55.8M model solely trained on 224x224 ImageNet-1K can obtain Top-1 accuracy 84.1%), while being more scalable on high-resolution images. The source code and models are released at https://github.com/NVIDIA/transformer-ls .",
+      "identifiers": [
+        "SemanticScholar:1a883522f3c0051d70be1f8cbdb8989a77395006"
+      ],
+      "semantic_scholar_id": "1a883522f3c0051d70be1f8cbdb8989a77395006",
+      "canonical_id": "arXiv:2107.02192",
+      "arxiv_id": "2107.02192",
+      "authors": [
+        "Chen Zhu",
+        "Wei Ping",
+        "Chaowei Xiao",
+        "M. Shoeybi",
+        "T. Goldstein",
+        "Anima Anandkumar",
+        "Bryan Catanzaro"
+      ],
+      "priority": 190,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 180,
+        "citation_count": 180,
+        "total": 190,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1920,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "MemEvolve: Meta-Evolution of Agent Memory Systems",
+      "source_url": "https://arxiv.org/abs/2512.18746",
+      "year": 2025,
+      "published": "2025-12-21",
+      "venue": "arXiv.org",
+      "citation_count": 85,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-evolving memory systems are unprecedentedly reshaping the evolutionary paradigm of large language model (LLM)-based agents. Prior work has predominantly relied on manually engineered memory architectures to store trajectories, distill experience, and synthesize reusable tools, enabling agents to evolve on the fly within environment interactions. However, this paradigm is fundamentally constrained by the staticity of the memory system itself: while memory facilitates agent-level evolving, the underlying memory architecture cannot be meta-adapted to diverse task contexts. To address this gap, we propose MemEvolve, a meta-evolutionary framework that jointly evolves agents'experiential knowledge and their memory architecture, allowing agent systems not only to accumulate experience but also to progressively refine how they learn from it. To ground MemEvolve in prior research and foster openness in future self-evolving systems, we introduce EvolveLab, a unified self-evolving memory codebase that distills twelve representative memory systems into a modular design space (encode, store, retrieve, manage), providing both a standardized implementation substrate and a fair experimental arena. Extensive evaluations on four challenging agentic benchmarks demonstrate that MemEvolve achieves (I) substantial performance gains, improving frameworks such as SmolAgent and Flash-Searcher by up to $17.06\\%$; and (II) strong cross-task and cross-LLM generalization, designing memory architectures that transfer effectively across diverse benchmarks and backbone models.",
+      "identifiers": [
+        "SemanticScholar:fc6e9b47819d2f5cdfd8f47829f7894d37e2059c"
+      ],
+      "semantic_scholar_id": "fc6e9b47819d2f5cdfd8f47829f7894d37e2059c",
+      "canonical_id": "arXiv:2512.18746",
+      "arxiv_id": "2512.18746",
+      "doi": "10.48550/arXiv.2512.18746",
+      "authors": [
+        "Gui-Bin Zhang",
+        "Haotian Ren",
+        "Chong Zhan",
+        "Zhen Zhou",
+        "Junhao Wang",
+        "He Zhu",
+        "Wangchunshu Zhou",
+        "Shui-Cheng Yan"
+      ],
+      "priority": 185,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 85,
+        "citation_count": 85,
+        "total": 185,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 290,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.18234",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.18234",
+        "id:SemanticScholar:5e8b50dd5ed9851a541d337a4d9cfa9b75c0a33c",
+        "id:arXiv:2510.18234",
+        "title:deepseekocr contexts optical compression",
+        "url:https://arxiv.org/abs/2510.18234"
+      ],
+      "record": {
+        "title": "DeepSeek-OCR: Contexts Optical Compression",
+        "source_url": "https://arxiv.org/abs/2510.18234",
+        "year": 2025,
+        "published": "2025-10-21",
+        "venue": "arXiv.org",
+        "citation_count": 195,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present DeepSeek-OCR as an initial investigation into the feasibility of compressing long contexts via optical 2D mapping. DeepSeek-OCR consists of two components: DeepEncoder and DeepSeek3B-MoE-A570M as the decoder. Specifically, DeepEncoder serves as the core engine, designed to maintain low activations under high-resolution input while achieving high compression ratios to ensure an optimal and manageable number of vision tokens. Experiments show that when the number of text tokens is within 10 times that of vision tokens (i.e., a compression ratio<10x), the model can achieve decoding (OCR) precision of 97%. Even at a compression ratio of 20x, the OCR accuracy still remains at about 60%. This shows considerable promise for research areas such as historical long-context compression and memory forgetting mechanisms in LLMs. Beyond this, DeepSeek-OCR also demonstrates high practical value. On OmniDocBench, it surpasses GOT-OCR2.0 (256 tokens/page) using only 100 vision tokens, and outperforms MinerU2.0 (6000+ tokens per page on average) while utilizing fewer than 800 vision tokens. In production, DeepSeek-OCR can generate training data for LLMs/VLMs at a scale of 200k+ pages per day (a single A100-40G). Codes and model weights are publicly accessible at http://github.com/deepseek-ai/DeepSeek-OCR.",
+        "identifiers": [
+          "SemanticScholar:5e8b50dd5ed9851a541d337a4d9cfa9b75c0a33c"
+        ],
+        "semantic_scholar_id": "5e8b50dd5ed9851a541d337a4d9cfa9b75c0a33c",
+        "canonical_id": "arXiv:2510.18234",
+        "arxiv_id": "2510.18234",
+        "doi": "10.48550/arXiv.2510.18234",
+        "authors": [
+          "Haoran Wei",
+          "Yao-Feng Sun",
+          "Yukun Li"
+        ],
+        "priority": 195,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 195,
+          "citation_count": 195,
+          "total": 195,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 351,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2107.02192",
+      "identity_tokens": [
+        "id:SemanticScholar:1a883522f3c0051d70be1f8cbdb8989a77395006",
+        "id:arXiv:2107.02192",
+        "title:longshort transformer efficient transformers for language and vision",
+        "url:https://arxiv.org/abs/2107.02192"
+      ],
+      "record": {
+        "title": "Long-Short Transformer: Efficient Transformers for Language and Vision",
+        "source_url": "https://arxiv.org/abs/2107.02192",
+        "year": 2021,
+        "published": "2021-07-05",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 180,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have achieved success in both language and vision domains. However, it is prohibitively expensive to scale them to long sequences such as long documents or high-resolution images, because self-attention mechanism has quadratic time and memory complexities with respect to the input sequence length. In this paper, we propose Long-Short Transformer (Transformer-LS), an efficient self-attention mechanism for modeling long sequences with linear complexity for both language and vision tasks. It aggregates a novel long-range attention with dynamic projection to model distant correlations and a short-term attention to capture fine-grained local correlations. We propose a dual normalization strategy to account for the scale mismatch between the two attention mechanisms. Transformer-LS can be applied to both autoregressive and bidirectional models without additional complexity. Our method outperforms the state-of-the-art models on multiple tasks in language and vision domains, including the Long Range Arena benchmark, autoregressive language modeling, and ImageNet classification. For instance, Transformer-LS achieves 0.97 test BPC on enwik8 using half the number of parameters than previous method, while being faster and is able to handle 3x as long sequences compared to its full-attention version on the same hardware. On ImageNet, it can obtain the state-of-the-art results (e.g., a moderate size of 55.8M model solely trained on 224x224 ImageNet-1K can obtain Top-1 accuracy 84.1%), while being more scalable on high-resolution images. The source code and models are released at https://github.com/NVIDIA/transformer-ls .",
+        "identifiers": [
+          "SemanticScholar:1a883522f3c0051d70be1f8cbdb8989a77395006"
+        ],
+        "semantic_scholar_id": "1a883522f3c0051d70be1f8cbdb8989a77395006",
+        "canonical_id": "arXiv:2107.02192",
+        "arxiv_id": "2107.02192",
+        "authors": [
+          "Chen Zhu",
+          "Wei Ping",
+          "Chaowei Xiao",
+          "M. Shoeybi",
+          "T. Goldstein",
+          "Anima Anandkumar",
+          "Bryan Catanzaro"
+        ],
+        "priority": 190,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 180,
+          "citation_count": 180,
+          "total": 190,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1920,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.18746",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.18746",
+        "id:SemanticScholar:fc6e9b47819d2f5cdfd8f47829f7894d37e2059c",
+        "id:arXiv:2512.18746",
+        "title:memevolve metaevolution of agent memory systems",
+        "url:https://arxiv.org/abs/2512.18746"
+      ],
+      "record": {
+        "title": "MemEvolve: Meta-Evolution of Agent Memory Systems",
+        "source_url": "https://arxiv.org/abs/2512.18746",
+        "year": 2025,
+        "published": "2025-12-21",
+        "venue": "arXiv.org",
+        "citation_count": 85,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Self-evolving memory systems are unprecedentedly reshaping the evolutionary paradigm of large language model (LLM)-based agents. Prior work has predominantly relied on manually engineered memory architectures to store trajectories, distill experience, and synthesize reusable tools, enabling agents to evolve on the fly within environment interactions. However, this paradigm is fundamentally constrained by the staticity of the memory system itself: while memory facilitates agent-level evolving, the underlying memory architecture cannot be meta-adapted to diverse task contexts. To address this gap, we propose MemEvolve, a meta-evolutionary framework that jointly evolves agents'experiential knowledge and their memory architecture, allowing agent systems not only to accumulate experience but also to progressively refine how they learn from it. To ground MemEvolve in prior research and foster openness in future self-evolving systems, we introduce EvolveLab, a unified self-evolving memory codebase that distills twelve representative memory systems into a modular design space (encode, store, retrieve, manage), providing both a standardized implementation substrate and a fair experimental arena. Extensive evaluations on four challenging agentic benchmarks demonstrate that MemEvolve achieves (I) substantial performance gains, improving frameworks such as SmolAgent and Flash-Searcher by up to $17.06\\%$; and (II) strong cross-task and cross-LLM generalization, designing memory architectures that transfer effectively across diverse benchmarks and backbone models.",
+        "identifiers": [
+          "SemanticScholar:fc6e9b47819d2f5cdfd8f47829f7894d37e2059c"
+        ],
+        "semantic_scholar_id": "fc6e9b47819d2f5cdfd8f47829f7894d37e2059c",
+        "canonical_id": "arXiv:2512.18746",
+        "arxiv_id": "2512.18746",
+        "doi": "10.48550/arXiv.2512.18746",
+        "authors": [
+          "Gui-Bin Zhang",
+          "Haotian Ren",
+          "Chong Zhan",
+          "Zhen Zhou",
+          "Junhao Wang",
+          "He Zhu",
+          "Wangchunshu Zhou",
+          "Shui-Cheng Yan"
+        ],
+        "priority": 185,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 85,
+          "citation_count": 85,
+          "total": 185,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 290,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a3f7a7acb108860a4f7e7af1c5069c6a1de31a121d29669bf3b5ba8c42ccf183",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

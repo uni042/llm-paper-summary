@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d121090dc4c1c647-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s44163-026-02108-z",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s44163-026-02108-z",
+    "identity_tokens": [
+      "DOI:10.1007/s44163-026-02108-z"
+    ],
+    "reason": "With the rapid development of deep learning technology, multimodal content generation has shown substantial application potential in fields such as medical imaging, industrial inspection, and creative design. However, existing methods face semantic gap problems in cross-modal feature fusion and struggle to simultaneously guarantee generation quality and semantic consistency. This work addresses the task of multimodal-conditioned image quality enhancement: given a reference image, a text description, and pixel-level semantic labels as joint conditions, the goal is to generate an output image that simultaneously achieves higher pixel-level fidelity, stronger text-image semantic alignment, and improved perceptual realism compared to existing single- or dual-modal approaches. This task is distinct from image fusion (no text or label input) and from pure text-to-image generation (no reference image), and requires the model to exploit complementary information across all three modalities. In response to these challenges, this work proposes a novel multimodal content generation and enhancement framework MCGE-Net, achieving high-quality intelligent imaging generation through three core innovations: hierarchical cross-modal attention mechanism (HCMA), dynamic feature alignment module (DFA), and multi-scale enhancement network (MSEN). The HCMA achieves deep fusion of different modal features at both fine-grained and coarse-grained levels, effectively capturing local correspondences and global semantic associations, with a learnable gating parameter that dynamically balances the two levels on a per-sample basis. The DFA narrows the cross-modal semantic gap through an instance-adaptive weight generation mechanism, significantly improving multimodal consistency. The MSEN adopts a pyramid structure to perform channel-attention-guided feature enhancement at multiple scales, balancing overall structure and local details. Comprehensive experiments on the MIID-50K dataset (50,000 image-text-label triplets covering medical imaging, natural scenes, and industrial inspection) and on the public MS-COCO 2017 benchmark demonstrate that MCGE-Net outperforms state-of-the-art methods including ControlNet across all evaluation metrics, achieving PSNR 32.1 dB, SSIM 0.903, FID 24.8, and Semantic Consistency 89.5% on MIID-50K, and FID 20.4 and CLIP-Score 33.8 on MS-COCO 2017. All improvements over the strongest baseline are statistically significant (p < 0.001, Bonferroni-corrected). MCGE-Net also maintains competitive inference efficiency (1.23 s per sample), substantially faster than diffusion-based methods such as Stable Diffusion (2.34 s) and Imagen (2.67 s). Ablation experiments validate the effectiveness of each module, cross-scenario generalization experiments confirm the robustness of the method, and a user study with 50 professional participants further validates the visual quality of generated content. Failure case analysis identifies three characteristic limitations (semantic drift on long-tail categories, scale-boundary artifacts, and label-boundary blur), providing concrete directions for future work. Preliminary results suggest potential applicability in medical imaging enhancement, industrial visual inspection, and content creation, though domain-specific validation remains necessary before deployment in safety-critical settings.",
+    "first_checked_at": "2026-10-05T06:23:12+00:00",
+    "last_checked_at": "2026-10-05T06:23:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Multimodal content generation and enhancement for smart imaging"
+  },
+  "processed_at": "2026-10-05T06:23:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d121090dc4c1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

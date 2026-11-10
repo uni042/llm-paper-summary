@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-023e67742e1ce4da-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.19828",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.19828",
+    "identity_tokens": [
+      "arXiv:2508.19828"
+    ],
+    "reason": "強化学習によるLLMエージェントの記憶利用・管理が主題であり、GPU推論やKVキャッシュなどの計算機メモリ管理を対象としない。推論システムサーベイの直接対象外。",
+    "first_checked_at": "2026-10-11T07:45:37+00:00",
+    "last_checked_at": "2026-10-11T07:45:37+00:00",
+    "linked_from": [],
+    "title": "Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning"
+  },
+  "processed_at": "2026-10-11T07:45:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-023e67742e1c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

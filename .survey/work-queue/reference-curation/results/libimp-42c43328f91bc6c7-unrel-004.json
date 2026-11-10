@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-42c43328f91bc6c7-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2107.06641",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2107.06641",
+    "identity_tokens": [
+      "arXiv:2107.06641"
+    ],
+    "reason": "安全性、公平性、説明可能性、プライバシー等を含む信頼できるAI全般の計算的サーベイで、LLM推論システムの性能・メモリ・実行基盤を主対象としていない。",
+    "first_checked_at": "2026-10-07T21:58:27+00:00",
+    "last_checked_at": "2026-10-07T21:58:27+00:00",
+    "linked_from": [],
+    "title": "Trustworthy AI: A Computational Perspective"
+  },
+  "processed_at": "2026-10-07T21:58:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-42c43328f91b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

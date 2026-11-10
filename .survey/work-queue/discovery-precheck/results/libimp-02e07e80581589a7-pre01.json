@@ -1,0 +1,1672 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-02e07e80581589a7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-02e07e805815",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2406.05981",
+    "arXiv:2407.01955",
+    "arXiv:2411.17426",
+    "arXiv:2508.08435",
+    "arXiv:2509.18344",
+    "arXiv:2510.02329",
+    "arXiv:2512.08829",
+    "arXiv:2512.14069",
+    "arXiv:2603.11273",
+    "arXiv:2603.27027",
+    "arXiv:2605.05899",
+    "arXiv:2605.13190",
+    "arXiv:2605.18165",
+    "arXiv:2606.30265",
+    "arXiv:2608.00902",
+    "arXiv:2608.03839",
+    "arXiv:2609.31551",
+    "arXiv:2609.35263"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 18,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9619704ee164c38433bd5a06b6bba1f6d91ddb21",
+  "raw_search_result_count": 18,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 18,
+  "provider_progress": {
+    "requested_count": 18,
+    "status_counts": {
+      "allowed": 18,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T05:28:44.596746+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2406.05981",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.01955",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.17426",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.08435",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.18344",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.02329",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.08829",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.14069",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.11273",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.27027",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.05899",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.13190",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.18165",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.30265",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.00902",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.03839",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.31551",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.35263",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "InfiniteVL: Synergizing Linear and Sparse Attention for Highly-Efficient, Unlimited-Input Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2512.08829",
+      "year": 2025,
+      "published": "2025-12-09",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) are increasingly tasked with ultra-long multimodal understanding. While linear architectures offer constant computation and memory footprints, they often struggle with high-frequency visual perception compared to standard Transformers. To bridge this gap, we introduce \\textbf{InfiniteVL}. We first develop a hybrid base model called \\textbf{InfiniteVL-Base} that interleaves a small fraction of Full Attention layers with Gated DeltaNet. Empowered by a tailored distillation and fine-tuning strategy, InfiniteVL-Base matches the fundamental multimodal performance of equivalent Transformers while achieving a \\textbf{1.7$\\times$} decoding speedup. However, the quadratic complexity of the retained Full Attention inevitably becomes an efficiency bottleneck when scaling to ultra long context. To break this barrier, we propose a novel Long-Sequence Architectural Fine-Tuning strategy that seamlessly transforms the dense attention into vision-specific sparse mechanisms. This yields two specialized variants: \\textbf{InfiniteVL-Offline} for offline retrieval and \\textbf{InfiniteVL-Online} for online streaming. By eliminating the computation explosion of global attention without sacrificing high-frequency visual recall, InfiniteVL-Offline achieves Transformer-level length generalization with a \\textbf{5x} prefill acceleration at 256K context. Concurrently, InfiniteVL-Online delivers robust streaming perception with a constant memory footprint and a real-time throughput of \\textbf{25} FPS. Code and models are available at https://github.com/hustvl/InfiniteVL.",
+      "identifiers": [
+        "SemanticScholar:19bd606d070cca75b11a455c3c3dc8e938ff8c7e"
+      ],
+      "semantic_scholar_id": "19bd606d070cca75b11a455c3c3dc8e938ff8c7e",
+      "canonical_id": "arXiv:2512.08829",
+      "arxiv_id": "2512.08829",
+      "doi": "10.48550/arXiv.2512.08829",
+      "authors": [
+        "Hong-Yuan Tao",
+        "Ben-Cheng Liao",
+        "Shao-Yu Chen",
+        "Haoran Yin",
+        "Qian Zhang",
+        "Wen-Yu Liu",
+        "Xing-Gang Wang"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 305,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+      "source_url": "https://arxiv.org/abs/2608.00902",
+      "year": 2026,
+      "published": "2026-08-02",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents accumulate long trajectories of reasoning steps, tool calls, and environment feedback, making the KV cache a major inference bottleneck. KV cache compaction can reduce this cost, but most prior methods assume a static context where future queries are known or can be approximated offline. Agents instead require online compaction: new information must be compressed before future relevance is known, using proxy queries cheap enough for the inference path. We study online compaction across token eviction (TE) and attention matching (AM), adapting both to compact agent turns and comparing cheap proxy sources such as boundary, repeat-prefill, and delayed future-generation queries. Experiments on BrowseComp-Plus and WideSearch show that immediate compaction often hurts performance, whereas delaying compaction to use the agent's future queries recovers much of the gap. Moreover, TE is often more robust than AM under imperfect proxies. Across models at different scales, TE preserves most of the accuracy while reducing KV cache by 80%, and can improve throughput over the no compaction baseline. These results position proxy-query selection as a core design choice for practical online KV compaction.",
+      "identifiers": [
+        "SemanticScholar:19aeb49c24b9850b5353bb2cfc41ea63c5ada3bb"
+      ],
+      "semantic_scholar_id": "19aeb49c24b9850b5353bb2cfc41ea63c5ada3bb",
+      "canonical_id": "arXiv:2608.00902",
+      "arxiv_id": "2608.00902",
+      "authors": [
+        "Yu-Jian Liu",
+        "Jiabao Ji",
+        "Li An",
+        "Rohit Jain",
+        "Gungor Polatkan",
+        "Si-Yu Zhu",
+        "Shi-Yu Chang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 69,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Duration Aware Scheduling for ASR Serving Under Workload Drift",
+      "source_url": "https://arxiv.org/abs/2603.11273",
+      "year": 2026,
+      "published": "2026-03-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scheduling policies in large-scale Automatic Speech Recognition (ASR) serving pipelines play a key role in determining end-to-end (E2E) latency. Yet, widely used serving engines rely on first-come-first-served (FCFS) scheduling, which ignores variability in request duration and leads to head-of-line blocking under workload drift. We show that audio duration is an accurate proxy for job processing time in ASR models such as Whisper, and use this insight to enable duration-aware scheduling. We integrate two classical algorithms, Shortest Job First (SJF) and Highest Response Ratio Next (HRRN), into vLLM and evaluate them under realistic and drifted workloads. On LibriSpeech test-clean, compared to baseline, SJF reduces median E2E latency by up to $73\\%$ at high load, but increases $90$th-percentile tail latency by up to $97\\%$ due to starvation of long requests. HRRN addresses this trade-off: it reduces median E2E latency by up to $28\\%$ while bounding tail-latency degradation to at most $24\\%$. These gains persist under workload drift, with no throughput penalty and $<0.1$\\,ms scheduling overhead per request.",
+      "identifiers": [
+        "SemanticScholar:e9feabb00a186e7b611b16e42c0d47e2e5402e3c"
+      ],
+      "semantic_scholar_id": "e9feabb00a186e7b611b16e42c0d47e2e5402e3c",
+      "canonical_id": "arXiv:2603.11273",
+      "arxiv_id": "2603.11273",
+      "doi": "10.48550/arXiv.2603.11273",
+      "authors": [
+        "Darshan Makwana",
+        "Yash Jogi",
+        "Harsh Kotta",
+        "Aayush Kubba"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 213,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs",
+      "source_url": "https://arxiv.org/abs/2605.18165",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Unlike autoregressive models, which generate one token at a time, dLLMs denoise a chunk of [MASK] tokens jointly and sample one or more tokens per step; despite enabling parallel decoding, this process incurs substantial computational cost due to the large chunk size of masked tokens. We observe that much of this cost is spent on repeatedly processing the preceding context and many [MASK] tokens with the same feature representations, indicating considerable computational redundancy. In this work, we revisit dLLM's redundancy from the perspective of [MASK] tokens. Through systematic analysis, we verify the redundancy of [MASK] tokens while revealing their critical role in providing structural information. Guided by these findings, we propose position-preserving [MASK] token compression and terminal-aware augmentation. By compressing redundant [MASK] computation, this approach accelerates decoding and further provides a natural extension toward context-folding-like long-context scaling under limited input-length constraints for full-sequence dLLMs such as LLaDA-8B-Instruct and LLaDA-1.5. Moreover, for block dLLMs such as LLaDA2.0-mini, it augments the context with a protected terminal [MASK] token to enhance generation quality with negligible overhead.",
+      "identifiers": [
+        "SemanticScholar:d49d42428f25d1a1b6e6bfe19a84cffcdda0b387"
+      ],
+      "semantic_scholar_id": "d49d42428f25d1a1b6e6bfe19a84cffcdda0b387",
+      "canonical_id": "arXiv:2605.18165",
+      "arxiv_id": "2605.18165",
+      "doi": "10.48550/arXiv.2605.18165",
+      "authors": [
+        "Jun-Yi Wu",
+        "Tianchen Zhao",
+        "Shao-Qiu Zhang",
+        "Lin-Feng Zhang",
+        "Guohao Dai",
+        "Yu Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "When Is a Draft Accepted? A Theory of Acceptance in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2606.30265",
+      "year": 2026,
+      "published": "2026-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates language model inference by using a fast drafter to propose candidate tokens that are then verified by a larger target model. Existing theory largely studies the stochastic, distribution-preserving setting, where the goal is to exactly sample from the target distribution. In contrast, many practical systems use greedy decoding, relaxed acceptance rules, or tree-based candidate sets, where success is governed by local ranking and threshold events rather than exact distributional equality. We develop a theory for these regimes. We identify that many common acceptance criteria have rejection regions that can be characterized as lower level sets of the target distribution. For these, we characterize the exact KL divergence required for rejection yielding exact certificates and sharp margin-based bounds for strict greedy decoding, additive and multiplicative relaxed acceptance, top-(m) relaxed criteria, and entropy-thresholded acceptance. We then extend the framework to greedy tree decoding, deriving exact and margin-only certificates for when the target greedy token remains covered by the drafter's top-(m) candidates. Finally, we evaluate the resulting certificates on Qwen3 models, showing that relaxed and tree-based criteria substantially enlarge the region of certified acceptance, especially on decoding steps with low target model distribution margin. These results complement existing distribution-preserving analyses of speculative decoding by characterizing the deterministic local acceptance events common in practical inference systems.",
+      "identifiers": [
+        "SemanticScholar:f5e8d9d5e7a74ca1ec6d082ec6cd5e00491450d5"
+      ],
+      "semantic_scholar_id": "f5e8d9d5e7a74ca1ec6d082ec6cd5e00491450d5",
+      "canonical_id": "arXiv:2606.30265",
+      "arxiv_id": "2606.30265",
+      "doi": "10.48550/arXiv.2606.30265",
+      "authors": [
+        "Aaryam Sharma"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 103,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization",
+      "source_url": "https://arxiv.org/abs/2406.05981",
+      "year": 2024,
+      "published": "2024-06-10",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 47,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown impressive performance on language tasks but face challenges when deployed on resource-constrained devices due to their extensive parameters and reliance on dense multiplications, resulting in high memory demands and latency bottlenecks. Shift-and-add reparameterization offers a promising solution by replacing costly multiplications with hardware-friendly primitives in both the attention and multi-layer perceptron (MLP) layers of an LLM. However, current reparameterization techniques require training from scratch or full parameter fine-tuning to restore accuracy, which is resource-intensive for LLMs. To address this, we propose accelerating pretrained LLMs through post-training shift-and-add reparameterization, creating efficient multiplication-free models, dubbed ShiftAddLLM. Specifically, we quantize each weight matrix into binary matrices paired with group-wise scaling factors. The associated multiplications are reparameterized into (1) shifts between activations and scaling factors and (2) queries and adds according to the binary matrices. To reduce accuracy loss, we present a multi-objective optimization method to minimize both weight and output activation reparameterization errors. Additionally, based on varying sensitivity across layers to reparameterization, we develop an automated bit allocation strategy to further reduce memory usage and latency. Experiments on five LLM families and eight tasks consistently validate the effectiveness of ShiftAddLLM, achieving average perplexity improvements of 5.6 and 22.7 points at comparable or lower latency compared to the most competitive quantized LLMs at 3 and 2 bits, respectively, and more than 80% memory and energy reductions over the original LLMs. Codes and models are available at https://github.com/GATECH-EIC/ShiftAddLLM.",
+      "identifiers": [
+        "SemanticScholar:63cf5220c962f8550cf7f08060fdd498c9925c73"
+      ],
+      "semantic_scholar_id": "63cf5220c962f8550cf7f08060fdd498c9925c73",
+      "canonical_id": "arXiv:2406.05981",
+      "arxiv_id": "2406.05981",
+      "doi": "10.48550/arXiv.2406.05981",
+      "authors": [
+        "Yichao Fu",
+        "Yi-Pin Guo",
+        "Souvik Kundu",
+        "Y. Lin",
+        "Huihong Shi",
+        "Amir Yazdanbakhsh",
+        "Hao-Ran You",
+        "Xiaofan Zhang",
+        "Wei Zhou"
+      ],
+      "priority": 57,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 47,
+        "citation_count": 47,
+        "total": 57,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 852,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Speculate Deep and Accurate: Lossless and Training-Free Acceleration for Offloaded LLMs via Substitute Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2509.18344",
+      "year": 2025,
+      "published": "2025-09-22",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The immense model sizes of large language models (LLMs) challenge deployment on memory-limited consumer GPUs. Although model compression and parameter offloading are common strategies to address memory limitations, compression can degrade quality, and offloading maintains quality but suffers from slow inference. Speculative decoding presents a promising avenue to accelerate parameter offloading, utilizing a fast draft model to propose multiple draft tokens, which are then verified by the target LLM in parallel with a single forward pass. This method reduces the time-consuming data transfers in forward passes that involve offloaded weight transfers. Existing methods often rely on pretrained weights of the same family, but require additional training to align with custom-trained models. Moreover, approaches that involve draft model training usually yield only modest speedups. This limitation arises from insufficient alignment with the target model, preventing higher token acceptance lengths. To address these challenges and achieve greater speedups, we propose SubSpec, a plug-and-play method to accelerate parameter offloading that is lossless and training-free. SubSpec constructs a highly aligned draft model by generating low-bit quantized substitute layers from offloaded target LLM portions. Additionally, our method shares the remaining GPU-resident layers and the KV-Cache, further reducing memory overhead and enhance alignment. SubSpec achieves a high average acceptance length, delivering 9.1x speedup for Qwen2.5 7B on MT-Bench (8GB VRAM limit) and an average of 12.5x speedup for Qwen2.5 32B on popular generation benchmarks (24GB VRAM limit).",
+      "identifiers": [
+        "SemanticScholar:bcc076d0a88e2cab752402091c3aa62944a63d73"
+      ],
+      "semantic_scholar_id": "bcc076d0a88e2cab752402091c3aa62944a63d73",
+      "canonical_id": "arXiv:2509.18344",
+      "arxiv_id": "2509.18344",
+      "doi": "10.48550/arXiv.2509.18344",
+      "authors": [
+        "Pei-Shuo Wang",
+        "Jian-Jia Chen",
+        "Chun-Che Yang",
+        "Chi-Chih Chang",
+        "N. Huang",
+        "Mohamed S. Abdelfattah",
+        "Kai-Chiang Wu"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 383,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "RADAR: Accelerate Large Language Model Inference With RL-Based Dynamic Draft Trees",
+      "source_url": "https://arxiv.org/abs/2512.14069",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference with modern Large Language Models (LLMs) is expensive and slow, and speculative sampling has emerged as an effective solution to this problem. However, the number of calls to the draft model for generating candidate tokens in speculative sampling is a preset hyperparameter, lacking flexibility. To generate and utilize the candidate tokens more effectively, we propose RADAR, a novel speculative sampling method with RL-based dynamic draft trees. RADAR formulates the draft tree generation process as a Markov Decision Process (MDP) and employs offline reinforcement learning to train a prediction model, which enables real-time decisions on calls to the draft model, reducing redundant computations and further accelerating inference. Evaluations across three LLMs and four tasks show that RADAR achieves a speedup of 3.17x-4.82x over the auto-regressive decoding baseline. The code is available at https://github.com/minaduki-sora/RADAR.",
+      "identifiers": [
+        "SemanticScholar:5204418313ba244eb2027b9694930d26639093ba"
+      ],
+      "semantic_scholar_id": "5204418313ba244eb2027b9694930d26639093ba",
+      "canonical_id": "arXiv:2512.14069",
+      "arxiv_id": "2512.14069",
+      "authors": [
+        "Jun-Jie Ma",
+        "Jinlong Li",
+        "Jiachen Luo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 298,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TAPS: Task Aware Proposal Distributions for Speculative Sampling",
+      "source_url": "https://arxiv.org/abs/2603.27027",
+      "year": 2026,
+      "published": "2026-03-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive generation by letting a lightweight draft model propose future tokens that a larger target model then verifies in parallel. In practice, however, draft models are usually trained on broad generic corpora, which leaves it unclear how much speculative decoding quality depends on the draft training distribution. We study this question with lightweight HASS and EAGLE-2 drafters trained on MathInstruct, ShareGPT, and mixed-data variants, evaluated on MT-Bench, GSM8K, MATH-500, and SVAMP. Measured by acceptance length, task-specific training yields clear specialization: MathInstruct-trained drafts are strongest on reasoning benchmarks, while ShareGPT-trained drafts are strongest on MT-Bench. Mixed-data training improves robustness, but larger mixtures do not dominate across decoding temperatures. We also study how to combine specialized drafters at inference time. Naive checkpoint averaging performs poorly, whereas confidence-based routing improves over single-domain drafts and merged-tree verification yields the highest acceptance length overall for both backbones. Finally, confidence is a more useful routing signal than entropy: rejected tokens tend to have higher entropy, but confidence produces much clearer benchmark-level routing decisions. These results show that speculative decoding quality depends not only on draft architecture, but also on the match between draft training data and downstream workload, and that specialized drafters are better combined at inference time than in weight space.",
+      "identifiers": [
+        "SemanticScholar:586a0ba114143f0c6228502de2dfc9f0ab54cb93"
+      ],
+      "semantic_scholar_id": "586a0ba114143f0c6228502de2dfc9f0ab54cb93",
+      "canonical_id": "arXiv:2603.27027",
+      "arxiv_id": "2603.27027",
+      "doi": "10.48550/arXiv.2603.27027",
+      "authors": [
+        "M. Zbib",
+        "Mohammad Bazzi",
+        "Ammar Mohanna",
+        "Hasan Abed Al Kader Hammoud",
+        "Bernard Ghanem"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+      "source_url": "https://arxiv.org/abs/2605.05899",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale vision-language mixture-of-experts (VL-MoE) models provide strong multimodal capability, but efficient deployment on memory-constrained platforms remains difficult. Existing MoE offloading systems are largely designed for text-centric workloads and become much less effective for visual-heavy inputs, where large numbers of visual tokens induce broader and less predictable expert accesses. We present VisMMoE, a VL-MoE offloading system built on a single systems insight: pruning redundant visual tokens can improve offloading not only by reducing computation, but also by reshaping expert demand. We refer to this effect as \\textit{visual-expert affinity}: token pruning makes expert accesses more concentrated within layers and more stable across layers, producing a smaller and more predictable expert working set. Guided by this insight, VisMMoE combines affinity-aware token compression, lookahead expert prediction, and cache/pipeline orchestration to improve expert locality and prefetch effectiveness under tight memory budgets. We implement VisMMoE on multiple frameworks and evaluate it on representative VL-MoE models and benchmarks. VisMMoE improves end-to-end inference performance by up to 2.68x and 1.61x, respectively, over strong baselines for today's VL-MoE deployments while maintaining competitive accuracy.",
+      "identifiers": [
+        "SemanticScholar:32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd"
+      ],
+      "semantic_scholar_id": "32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd",
+      "canonical_id": "arXiv:2605.05899",
+      "arxiv_id": "2605.05899",
+      "doi": "10.48550/arXiv.2605.05899",
+      "authors": [
+        "Cheng Xu",
+        "Xiaofeng Hou",
+        "Jiacheng Liu",
+        "Chao Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 156,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "N-vium: Mixture-of-Exits Transformer for Accelerated Exact Generation",
+      "source_url": "https://arxiv.org/abs/2605.13190",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Improving the inference efficiency of autoregressive transformers typically means reducing FLOPs per token, usually through approximations that degrade model quality. We introduce N-vium, a mixture-of-exits transformer that partially parallelizes computation across depth on standard hardware, increasing effective FLOPs per second rather than minimizing compute per token. N-vium attaches prediction heads at multiple depths and defines the next-token distribution as a learned mixture over these exits, with token-adaptive routing. This formulation strictly generalizes the standard transformer, which is recovered exactly when routing assigns zero mass to all intermediate heads. Sampling from the mixture is exact, and complete KV caches are recovered by deferring the upper-layer computation and batching it with later tokens. We pretrain N-vium at scales up to 1.5B parameters. Our largest model reaches 57.9% wall-clock speedup over a parameter- and data-matched standard transformer at no perplexity cost.",
+      "identifiers": [
+        "SemanticScholar:f4d36c2af03275aa806bbebb079497409475db3e"
+      ],
+      "semantic_scholar_id": "f4d36c2af03275aa806bbebb079497409475db3e",
+      "canonical_id": "arXiv:2605.13190",
+      "arxiv_id": "2605.13190",
+      "doi": "10.48550/arXiv.2605.13190",
+      "authors": [
+        "Aleksander Lorenc",
+        "Frédéric Berdoz",
+        "Joël Mathys",
+        "R. Wattenhofer"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 150,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Oilbird: Training-Free Speculative Decoding with Keys the Verifier Already Computes",
+      "source_url": "https://arxiv.org/abs/2608.03839",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training-free speculative decoding drafts by matching an exact suffix of the context against a pool of earlier context. That lookup misses correct drafts already in the pool, most visibly on tool-calling traffic, where a request repeats almost everything but the few values minted for it, and where one rejected token discards the correct continuation behind it. We diagnose the failure position by position across ten benchmarks and find it to be a problem of addressing rather than of coverage: on our densest tool-calling benchmark, about half of what the strongest exact-match drafter misses is present in the pool yet unreachable by exact matching. We therefore propose a second, semantic draft source: the same pool, re-keyed by the hidden state the verifier has already computed at each committed token, together with a merge that lets it ride inside an existing lexical drafter's tree. In three published drafters, at matched pool and budget, it lifts accepted length by 24-29%. Oilbird reaches 4.4x autoregressive decoding speed on API-Bank, against 3.9x for the strongest training-free baseline in our harness and 2.0x for EAGLE-3.",
+      "identifiers": [
+        "SemanticScholar:add52fd34527a37c8df3031cde67b0f107bd408a"
+      ],
+      "semantic_scholar_id": "add52fd34527a37c8df3031cde67b0f107bd408a",
+      "canonical_id": "arXiv:2608.03839",
+      "arxiv_id": "2608.03839",
+      "authors": [
+        "Tao Jin",
+        "P. Nguyen",
+        "Zhenzhu Yan",
+        "Teeradaj Racharak",
+        "Naoya Inoue"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 67,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EAServe: Encode-Aware Disaggregated Serving for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.31551",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Disaggregating the two stages, Prefill and Decode, onto separate GPU pools is now a standard optimization for (text-only) LLM serving. However, multimodal LLMs (MLLMs), which add a third phase, Encode, pose new challenges for resource allocation. Encode turns images, video, or audio into embeddings that the language model can consume, yielding a three-stage Encode-Prefill-Decode (EPD) pipeline. Existing frameworks offer only partial answers: text-only PD systems lack Encode, while EPD frameworks expose it as a separate service without regulating downstream request flow. The pipeline also carries a structural resource imbalance: every request enters through Encode before downstream work can begin, yet per-request execution leaves the encode GPU severely underutilized even at high loads, starving the downstream Prefill and Decode workers. Addressing this, we reposition Encode as the control point of the EPD pipeline, exposing three tightly coupled dimensions: when work enters downstream, where prefill executes, and how the GPU is shared. We instantiate this in EAServe across two co-designed layers. Its runtime manages load-adaptive micro-batching, rate-controlled partial offload to a co-resident prefill worker, and dynamic SM partitioning for predictable co-location. The configuration layer, Hybrid Auto Selection (HAS), navigates the joint space of GPU allocation, encode batch size, and offload ratio by pruning unbalanced allocations with per-stage capacity profiling and refining the remainder through TPE-based Bayesian optimization. Evaluated on three MLLM architectures spanning image, video, and audio, EAServe delivers up to 4.3x and 1.7x higher goodput than NVIDIA Dynamo and vLLM, respectively, under identical SLO constraints, sustains more balanced and higher GPU utilization across the EPD pipeline, and reaches near-optimal configurations faster than baseline search methods.",
+      "identifiers": [
+        "SemanticScholar:f0cf7f6a33c0ac0a5f9b02d193aff795d001c95d"
+      ],
+      "semantic_scholar_id": "f0cf7f6a33c0ac0a5f9b02d193aff795d001c95d",
+      "canonical_id": "arXiv:2609.31551",
+      "arxiv_id": "2609.31551",
+      "doi": "10.1145/3838684.3846886",
+      "authors": [
+        "Kun-Xiong Zhu",
+        "Zhi-Hao Shu",
+        "Hang-Yu Zheng",
+        "Ming-Hai Qin",
+        "Miao Yin",
+        "Gagan Agrawal",
+        "Wei Niu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 15,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse",
+      "source_url": "https://arxiv.org/abs/2609.35263",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pipeline parallelism can improve prefill throughput by processing multiple request chunks concurrently across different stages of the model. However, keeping the pipeline fully utilized requires efficient scheduling and request preparation. In systems where stages retain and evict cache state independently, a local cache hit does not guarantee that the same prefix can be reused across the pipeline. Here, coordination overhead can impede request admission cadence and thus reduce overall throughput. In this paper, we present WavePP, a prefill runtime built on top of TensorRT-LLM that addresses these challenges by overlapping request admission with pipeline execution. WavePP asynchronously finds a prefix that can be reused across all stages, protects the cached state, and reserves space for the remaining input while earlier requests continue to execute. It subsequently plans the chunk sizes of each request dynamically to maximize pipeline fill. Each stage then completes the local preparation before executing the request. In the same system and pipeline topology, WavePP improves TensorRT-LLM's prefill throughput in 37 of 40 tested settings on GLM 5.2 and MiniMax M2.7. At concurrency 128 with high cache reuse, these changes increase throughput by factors of 2.91 and 2.02, respectively. Across 28 Kimi K3 settings, WavePP also has the highest measured throughput in all 18 settings at concurrency eight or higher, compared with tensor/expert-parallel and pipeline-parallel baselines from TRT-LLM, SGLang, and vLLM.",
+      "identifiers": [
+        "SemanticScholar:bb83727dcd64b255ebf164ebd4a30600e3dea6ec"
+      ],
+      "semantic_scholar_id": "bb83727dcd64b255ebf164ebd4a30600e3dea6ec",
+      "canonical_id": "arXiv:2609.35263",
+      "arxiv_id": "2609.35263",
+      "authors": [
+        "Aaryam Sharma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast weight programming and linear transformers: from machine learning to neurobiology",
+      "source_url": "https://arxiv.org/abs/2508.08435",
+      "year": 2025,
+      "published": "2025-08-11",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in artificial neural networks for machine learning, and language modeling in particular, have established a family of recurrent neural network (RNN) architectures that, unlike conventional RNNs with vector-form hidden states, use two-dimensional (2D) matrix-form hidden states. Such 2D-state RNNs, known as Fast Weight Programmers (FWPs), can be interpreted as a neural network whose synaptic weights (called fast weights) dynamically change over time as a function of input observations, and serve as short-term memory storage; corresponding synaptic weight modifications are controlled or programmed by another network (the programmer) whose parameters are trained (e.g., by gradient descent). In this Primer, we review the technical foundations of FWPs, their computational characteristics, and their connections to transformers and state space models. We also discuss connections between FWPs and models of synaptic plasticity in the brain, suggesting a convergence of natural and artificial intelligence.",
+      "identifiers": [
+        "SemanticScholar:5a35a636758044463fc42bffb4e234d6774d569d"
+      ],
+      "semantic_scholar_id": "5a35a636758044463fc42bffb4e234d6774d569d",
+      "canonical_id": "arXiv:2508.08435",
+      "arxiv_id": "2508.08435",
+      "doi": "10.48550/arXiv.2508.08435",
+      "authors": [
+        "Kazuki Irie",
+        "Samuel J. Gershman"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 425,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CLOVER: Cross-Layer Orthogonal Vectors Pruning and Fine-Tuning",
+      "source_url": "https://arxiv.org/abs/2411.17426",
+      "year": 2024,
+      "published": "2024-11-26",
+      "venue": null,
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Decoder-only models generate tokens autoregressively by caching key/value vectors, but as the cache grows, inference becomes memory-bound. To address this issue, we introduce CLOVER (Cross-Layer Orthogonal Vectors), a novel approach that treats pairs of attention layers as a set of low-rank decompositions. CLOVER applies Singular Value Decomposition (SVD) to the \\( Q \\)-\\( K \\) and \\( V \\)-\\( O \\) pairs within each attention head. The resulting singular values can either guide pruning or serve as trainable parameters for efficient fine-tuning of all orthogonal vectors. After pruning or fine-tuning, these values are reintegrated into the model without increasing its parameter count. We apply CLOVER to various models, including GPT-2 XL, DeepSeek-V2-Lite, Whisper-Large-v3, Stable Diffusion XL, and LLaMA-3.2-11B-Vision. Our results demonstrate that CLOVER significantly improves pruning efficiency. For instance, the perplexity of pruning 70\\% of the \\( Q \\)-\\( K \\) pairs in GPT-2 XL is similar to that of pruning just 8\\% with vanilla methods. Fine-tuning the singular values further results in a full-rank update, outperforming state-of-the-art methods (LoRA, DoRA, HiRA, and PiSSA) by 7.6\\%, 5.5\\%, 3.8\\%, and 0.7\\%, respectively, on eight commonsense tasks for LLaMA-2 7B.",
+      "identifiers": [
+        "SemanticScholar:ed4ad28a41988d495a3963dce4f0ff426e79bffa"
+      ],
+      "semantic_scholar_id": "ed4ad28a41988d495a3963dce4f0ff426e79bffa",
+      "canonical_id": "arXiv:2411.17426",
+      "arxiv_id": "2411.17426",
+      "authors": [
+        "Fan-Xu Meng",
+        "Pingzhi Tang",
+        "Fan Jiang",
+        "Mu-Han Zhang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 683,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SelfJudge: Faster Speculative Decoding via Self-Supervised Judge Verification",
+      "source_url": "https://arxiv.org/abs/2510.02329",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference by verifying candidate tokens from a draft model against a larger target model. Recent judge decoding boosts this process by relaxing verification criteria by accepting draft tokens that may exhibit minor discrepancies from target model output, but existing methods are restricted by their reliance on human annotations or tasks with verifiable ground truths, limiting generalizability across diverse NLP tasks. We propose SelfJudge, which trains judge verifiers via self-supervision of the target model. Our method measures semantic preservation by assessing whether token-substituted responses preserve the meaning of original responses, enabling automatic verifier training across diverse NLP tasks. Our experiments show SelfJudge achieves superior inference-accuracy trade-offs than judge decoding baselines, offering a broadly applicable solution for faster LLM inference.",
+      "identifiers": [
+        "SemanticScholar:d9373a64b94237ce06e81ad4917d83d0bb7a5b8e"
+      ],
+      "semantic_scholar_id": "d9373a64b94237ce06e81ad4917d83d0bb7a5b8e",
+      "canonical_id": "arXiv:2510.02329",
+      "arxiv_id": "2510.02329",
+      "doi": "10.48550/arXiv.2510.02329",
+      "authors": [
+        "Kanghoon Yoon",
+        "Minsub Kim",
+        "Sungjae Lee",
+        "Joonhyung Lee",
+        "Sunghyeon Woo",
+        "Yeonjun In",
+        "S. Kwon",
+        "Chanyoung Park",
+        "Dongsoo Lee"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 379,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "S2D: Sorted Speculative Decoding For More Efficient Deployment of Nested Large Language Models",
+      "source_url": "https://arxiv.org/abs/2407.01955",
+      "year": 2024,
+      "published": "2024-07-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deployment of autoregressive large language models (LLMs) is costly, and as these models increase in size, the associated costs will become even more considerable. Consequently, different methods have been proposed to accelerate the token generation process and reduce costs. Speculative decoding (SD) is among the most promising approaches to speed up the LLM decoding process by verifying multiple tokens in parallel and using an auxiliary smaller draft model to generate the possible tokens. In SD, usually, one draft model is used to serve a specific target model; however, in practice, LLMs are diverse, and we might need to deal with many target models or more than one target model simultaneously. In this scenario, it is not clear which draft model should be used for which target model, and searching among different draft models or training customized draft models can further increase deployment costs. In this paper, we first introduce a novel multi-target scenario for the deployment of draft models for faster inference. Then, we present a novel, more efficient sorted speculative decoding mechanism that outperforms regular baselines in multi-target settings. We evaluated our method on Spec-Bench in different settings, including base models such as Vicuna 7B, 13B, and LLama Chat 70B. Our results suggest that our draft models perform better than baselines for multiple target models at the same time.",
+      "identifiers": [
+        "SemanticScholar:f2347083a18dbdc47f403d427cc66564668276ff"
+      ],
+      "semantic_scholar_id": "f2347083a18dbdc47f403d427cc66564668276ff",
+      "canonical_id": "arXiv:2407.01955",
+      "arxiv_id": "2407.01955",
+      "doi": "10.48550/arXiv.2407.01955",
+      "authors": [
+        "Parsa Kavehzadeh",
+        "Mohammadreza Pourreza",
+        "Mojtaba Valipour",
+        "Tinashu Zhu",
+        "H. Bai",
+        "Ali Ghodsi",
+        "Boxing Chen",
+        "Mehdi Rezagholizadeh"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 830,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.08829",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.08829",
+        "id:SemanticScholar:19bd606d070cca75b11a455c3c3dc8e938ff8c7e",
+        "id:arXiv:2512.08829",
+        "title:infinitevl synergizing linear and sparse attention for highlyefficient unlimitedinput visionlanguage models",
+        "url:https://arxiv.org/abs/2512.08829"
+      ],
+      "record": {
+        "title": "InfiniteVL: Synergizing Linear and Sparse Attention for Highly-Efficient, Unlimited-Input Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2512.08829",
+        "year": 2025,
+        "published": "2025-12-09",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) are increasingly tasked with ultra-long multimodal understanding. While linear architectures offer constant computation and memory footprints, they often struggle with high-frequency visual perception compared to standard Transformers. To bridge this gap, we introduce \\textbf{InfiniteVL}. We first develop a hybrid base model called \\textbf{InfiniteVL-Base} that interleaves a small fraction of Full Attention layers with Gated DeltaNet. Empowered by a tailored distillation and fine-tuning strategy, InfiniteVL-Base matches the fundamental multimodal performance of equivalent Transformers while achieving a \\textbf{1.7$\\times$} decoding speedup. However, the quadratic complexity of the retained Full Attention inevitably becomes an efficiency bottleneck when scaling to ultra long context. To break this barrier, we propose a novel Long-Sequence Architectural Fine-Tuning strategy that seamlessly transforms the dense attention into vision-specific sparse mechanisms. This yields two specialized variants: \\textbf{InfiniteVL-Offline} for offline retrieval and \\textbf{InfiniteVL-Online} for online streaming. By eliminating the computation explosion of global attention without sacrificing high-frequency visual recall, InfiniteVL-Offline achieves Transformer-level length generalization with a \\textbf{5x} prefill acceleration at 256K context. Concurrently, InfiniteVL-Online delivers robust streaming perception with a constant memory footprint and a real-time throughput of \\textbf{25} FPS. Code and models are available at https://github.com/hustvl/InfiniteVL.",
+        "identifiers": [
+          "SemanticScholar:19bd606d070cca75b11a455c3c3dc8e938ff8c7e"
+        ],
+        "semantic_scholar_id": "19bd606d070cca75b11a455c3c3dc8e938ff8c7e",
+        "canonical_id": "arXiv:2512.08829",
+        "arxiv_id": "2512.08829",
+        "doi": "10.48550/arXiv.2512.08829",
+        "authors": [
+          "Hong-Yuan Tao",
+          "Ben-Cheng Liao",
+          "Shao-Yu Chen",
+          "Haoran Yin",
+          "Qian Zhang",
+          "Wen-Yu Liu",
+          "Xing-Gang Wang"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 305,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00902",
+      "identity_tokens": [
+        "id:SemanticScholar:19aeb49c24b9850b5353bb2cfc41ea63c5ada3bb",
+        "id:arXiv:2608.00902",
+        "title:practical online kv cache compaction for llm agents an empirical study",
+        "url:https://arxiv.org/abs/2608.00902"
+      ],
+      "record": {
+        "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+        "source_url": "https://arxiv.org/abs/2608.00902",
+        "year": 2026,
+        "published": "2026-08-02",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM agents accumulate long trajectories of reasoning steps, tool calls, and environment feedback, making the KV cache a major inference bottleneck. KV cache compaction can reduce this cost, but most prior methods assume a static context where future queries are known or can be approximated offline. Agents instead require online compaction: new information must be compressed before future relevance is known, using proxy queries cheap enough for the inference path. We study online compaction across token eviction (TE) and attention matching (AM), adapting both to compact agent turns and comparing cheap proxy sources such as boundary, repeat-prefill, and delayed future-generation queries. Experiments on BrowseComp-Plus and WideSearch show that immediate compaction often hurts performance, whereas delaying compaction to use the agent's future queries recovers much of the gap. Moreover, TE is often more robust than AM under imperfect proxies. Across models at different scales, TE preserves most of the accuracy while reducing KV cache by 80%, and can improve throughput over the no compaction baseline. These results position proxy-query selection as a core design choice for practical online KV compaction.",
+        "identifiers": [
+          "SemanticScholar:19aeb49c24b9850b5353bb2cfc41ea63c5ada3bb"
+        ],
+        "semantic_scholar_id": "19aeb49c24b9850b5353bb2cfc41ea63c5ada3bb",
+        "canonical_id": "arXiv:2608.00902",
+        "arxiv_id": "2608.00902",
+        "authors": [
+          "Yu-Jian Liu",
+          "Jiabao Ji",
+          "Li An",
+          "Rohit Jain",
+          "Gungor Polatkan",
+          "Si-Yu Zhu",
+          "Shi-Yu Chang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 69,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.11273",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.11273",
+        "id:SemanticScholar:e9feabb00a186e7b611b16e42c0d47e2e5402e3c",
+        "id:arXiv:2603.11273",
+        "title:duration aware scheduling for asr serving under workload drift",
+        "url:https://arxiv.org/abs/2603.11273"
+      ],
+      "record": {
+        "title": "Duration Aware Scheduling for ASR Serving Under Workload Drift",
+        "source_url": "https://arxiv.org/abs/2603.11273",
+        "year": 2026,
+        "published": "2026-03-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scheduling policies in large-scale Automatic Speech Recognition (ASR) serving pipelines play a key role in determining end-to-end (E2E) latency. Yet, widely used serving engines rely on first-come-first-served (FCFS) scheduling, which ignores variability in request duration and leads to head-of-line blocking under workload drift. We show that audio duration is an accurate proxy for job processing time in ASR models such as Whisper, and use this insight to enable duration-aware scheduling. We integrate two classical algorithms, Shortest Job First (SJF) and Highest Response Ratio Next (HRRN), into vLLM and evaluate them under realistic and drifted workloads. On LibriSpeech test-clean, compared to baseline, SJF reduces median E2E latency by up to $73\\%$ at high load, but increases $90$th-percentile tail latency by up to $97\\%$ due to starvation of long requests. HRRN addresses this trade-off: it reduces median E2E latency by up to $28\\%$ while bounding tail-latency degradation to at most $24\\%$. These gains persist under workload drift, with no throughput penalty and $<0.1$\\,ms scheduling overhead per request.",
+        "identifiers": [
+          "SemanticScholar:e9feabb00a186e7b611b16e42c0d47e2e5402e3c"
+        ],
+        "semantic_scholar_id": "e9feabb00a186e7b611b16e42c0d47e2e5402e3c",
+        "canonical_id": "arXiv:2603.11273",
+        "arxiv_id": "2603.11273",
+        "doi": "10.48550/arXiv.2603.11273",
+        "authors": [
+          "Darshan Makwana",
+          "Yash Jogi",
+          "Harsh Kotta",
+          "Aayush Kubba"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 213,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.18165",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.18165",
+        "id:SemanticScholar:d49d42428f25d1a1b6e6bfe19a84cffcdda0b387",
+        "id:arXiv:2605.18165",
+        "title:elasticdllm position preserving context compression and augmentation of diffusion llms",
+        "url:https://arxiv.org/abs/2605.18165"
+      ],
+      "record": {
+        "title": "Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs",
+        "source_url": "https://arxiv.org/abs/2605.18165",
+        "year": 2026,
+        "published": "2026-05-18",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Unlike autoregressive models, which generate one token at a time, dLLMs denoise a chunk of [MASK] tokens jointly and sample one or more tokens per step; despite enabling parallel decoding, this process incurs substantial computational cost due to the large chunk size of masked tokens. We observe that much of this cost is spent on repeatedly processing the preceding context and many [MASK] tokens with the same feature representations, indicating considerable computational redundancy. In this work, we revisit dLLM's redundancy from the perspective of [MASK] tokens. Through systematic analysis, we verify the redundancy of [MASK] tokens while revealing their critical role in providing structural information. Guided by these findings, we propose position-preserving [MASK] token compression and terminal-aware augmentation. By compressing redundant [MASK] computation, this approach accelerates decoding and further provides a natural extension toward context-folding-like long-context scaling under limited input-length constraints for full-sequence dLLMs such as LLaDA-8B-Instruct and LLaDA-1.5. Moreover, for block dLLMs such as LLaDA2.0-mini, it augments the context with a protected terminal [MASK] token to enhance generation quality with negligible overhead.",
+        "identifiers": [
+          "SemanticScholar:d49d42428f25d1a1b6e6bfe19a84cffcdda0b387"
+        ],
+        "semantic_scholar_id": "d49d42428f25d1a1b6e6bfe19a84cffcdda0b387",
+        "canonical_id": "arXiv:2605.18165",
+        "arxiv_id": "2605.18165",
+        "doi": "10.48550/arXiv.2605.18165",
+        "authors": [
+          "Jun-Yi Wu",
+          "Tianchen Zhao",
+          "Shao-Qiu Zhang",
+          "Lin-Feng Zhang",
+          "Guohao Dai",
+          "Yu Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.30265",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.30265",
+        "id:SemanticScholar:f5e8d9d5e7a74ca1ec6d082ec6cd5e00491450d5",
+        "id:arXiv:2606.30265",
+        "title:when is a draft accepted a theory of acceptance in speculative decoding",
+        "url:https://arxiv.org/abs/2606.30265"
+      ],
+      "record": {
+        "title": "When Is a Draft Accepted? A Theory of Acceptance in Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2606.30265",
+        "year": 2026,
+        "published": "2026-06-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates language model inference by using a fast drafter to propose candidate tokens that are then verified by a larger target model. Existing theory largely studies the stochastic, distribution-preserving setting, where the goal is to exactly sample from the target distribution. In contrast, many practical systems use greedy decoding, relaxed acceptance rules, or tree-based candidate sets, where success is governed by local ranking and threshold events rather than exact distributional equality. We develop a theory for these regimes. We identify that many common acceptance criteria have rejection regions that can be characterized as lower level sets of the target distribution. For these, we characterize the exact KL divergence required for rejection yielding exact certificates and sharp margin-based bounds for strict greedy decoding, additive and multiplicative relaxed acceptance, top-(m) relaxed criteria, and entropy-thresholded acceptance. We then extend the framework to greedy tree decoding, deriving exact and margin-only certificates for when the target greedy token remains covered by the drafter's top-(m) candidates. Finally, we evaluate the resulting certificates on Qwen3 models, showing that relaxed and tree-based criteria substantially enlarge the region of certified acceptance, especially on decoding steps with low target model distribution margin. These results complement existing distribution-preserving analyses of speculative decoding by characterizing the deterministic local acceptance events common in practical inference systems.",
+        "identifiers": [
+          "SemanticScholar:f5e8d9d5e7a74ca1ec6d082ec6cd5e00491450d5"
+        ],
+        "semantic_scholar_id": "f5e8d9d5e7a74ca1ec6d082ec6cd5e00491450d5",
+        "canonical_id": "arXiv:2606.30265",
+        "arxiv_id": "2606.30265",
+        "doi": "10.48550/arXiv.2606.30265",
+        "authors": [
+          "Aaryam Sharma"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 103,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.05981",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2406.05981",
+        "id:SemanticScholar:63cf5220c962f8550cf7f08060fdd498c9925c73",
+        "id:arXiv:2406.05981",
+        "title:shiftaddllm accelerating pretrained llms via posttraining multiplicationless reparameterization",
+        "url:https://arxiv.org/abs/2406.05981"
+      ],
+      "record": {
+        "title": "ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization",
+        "source_url": "https://arxiv.org/abs/2406.05981",
+        "year": 2024,
+        "published": "2024-06-10",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 47,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have shown impressive performance on language tasks but face challenges when deployed on resource-constrained devices due to their extensive parameters and reliance on dense multiplications, resulting in high memory demands and latency bottlenecks. Shift-and-add reparameterization offers a promising solution by replacing costly multiplications with hardware-friendly primitives in both the attention and multi-layer perceptron (MLP) layers of an LLM. However, current reparameterization techniques require training from scratch or full parameter fine-tuning to restore accuracy, which is resource-intensive for LLMs. To address this, we propose accelerating pretrained LLMs through post-training shift-and-add reparameterization, creating efficient multiplication-free models, dubbed ShiftAddLLM. Specifically, we quantize each weight matrix into binary matrices paired with group-wise scaling factors. The associated multiplications are reparameterized into (1) shifts between activations and scaling factors and (2) queries and adds according to the binary matrices. To reduce accuracy loss, we present a multi-objective optimization method to minimize both weight and output activation reparameterization errors. Additionally, based on varying sensitivity across layers to reparameterization, we develop an automated bit allocation strategy to further reduce memory usage and latency. Experiments on five LLM families and eight tasks consistently validate the effectiveness of ShiftAddLLM, achieving average perplexity improvements of 5.6 and 22.7 points at comparable or lower latency compared to the most competitive quantized LLMs at 3 and 2 bits, respectively, and more than 80% memory and energy reductions over the original LLMs. Codes and models are available at https://github.com/GATECH-EIC/ShiftAddLLM.",
+        "identifiers": [
+          "SemanticScholar:63cf5220c962f8550cf7f08060fdd498c9925c73"
+        ],
+        "semantic_scholar_id": "63cf5220c962f8550cf7f08060fdd498c9925c73",
+        "canonical_id": "arXiv:2406.05981",
+        "arxiv_id": "2406.05981",
+        "doi": "10.48550/arXiv.2406.05981",
+        "authors": [
+          "Yichao Fu",
+          "Yi-Pin Guo",
+          "Souvik Kundu",
+          "Y. Lin",
+          "Huihong Shi",
+          "Amir Yazdanbakhsh",
+          "Hao-Ran You",
+          "Xiaofan Zhang",
+          "Wei Zhou"
+        ],
+        "priority": 57,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 47,
+          "citation_count": 47,
+          "total": 57,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 852,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.18344",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.18344",
+        "id:SemanticScholar:bcc076d0a88e2cab752402091c3aa62944a63d73",
+        "id:arXiv:2509.18344",
+        "title:speculate deep and accurate lossless and trainingfree acceleration for offloaded llms via substitute speculative decoding",
+        "url:https://arxiv.org/abs/2509.18344"
+      ],
+      "record": {
+        "title": "Speculate Deep and Accurate: Lossless and Training-Free Acceleration for Offloaded LLMs via Substitute Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2509.18344",
+        "year": 2025,
+        "published": "2025-09-22",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The immense model sizes of large language models (LLMs) challenge deployment on memory-limited consumer GPUs. Although model compression and parameter offloading are common strategies to address memory limitations, compression can degrade quality, and offloading maintains quality but suffers from slow inference. Speculative decoding presents a promising avenue to accelerate parameter offloading, utilizing a fast draft model to propose multiple draft tokens, which are then verified by the target LLM in parallel with a single forward pass. This method reduces the time-consuming data transfers in forward passes that involve offloaded weight transfers. Existing methods often rely on pretrained weights of the same family, but require additional training to align with custom-trained models. Moreover, approaches that involve draft model training usually yield only modest speedups. This limitation arises from insufficient alignment with the target model, preventing higher token acceptance lengths. To address these challenges and achieve greater speedups, we propose SubSpec, a plug-and-play method to accelerate parameter offloading that is lossless and training-free. SubSpec constructs a highly aligned draft model by generating low-bit quantized substitute layers from offloaded target LLM portions. Additionally, our method shares the remaining GPU-resident layers and the KV-Cache, further reducing memory overhead and enhance alignment. SubSpec achieves a high average acceptance length, delivering 9.1x speedup for Qwen2.5 7B on MT-Bench (8GB VRAM limit) and an average of 12.5x speedup for Qwen2.5 32B on popular generation benchmarks (24GB VRAM limit).",
+        "identifiers": [
+          "SemanticScholar:bcc076d0a88e2cab752402091c3aa62944a63d73"
+        ],
+        "semantic_scholar_id": "bcc076d0a88e2cab752402091c3aa62944a63d73",
+        "canonical_id": "arXiv:2509.18344",
+        "arxiv_id": "2509.18344",
+        "doi": "10.48550/arXiv.2509.18344",
+        "authors": [
+          "Pei-Shuo Wang",
+          "Jian-Jia Chen",
+          "Chun-Che Yang",
+          "Chi-Chih Chang",
+          "N. Huang",
+          "Mohamed S. Abdelfattah",
+          "Kai-Chiang Wu"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 383,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.14069",
+      "identity_tokens": [
+        "id:SemanticScholar:5204418313ba244eb2027b9694930d26639093ba",
+        "id:arXiv:2512.14069",
+        "title:radar accelerate large language model inference with rlbased dynamic draft trees",
+        "url:https://arxiv.org/abs/2512.14069"
+      ],
+      "record": {
+        "title": "RADAR: Accelerate Large Language Model Inference With RL-Based Dynamic Draft Trees",
+        "source_url": "https://arxiv.org/abs/2512.14069",
+        "year": 2025,
+        "published": "2025-12-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Inference with modern Large Language Models (LLMs) is expensive and slow, and speculative sampling has emerged as an effective solution to this problem. However, the number of calls to the draft model for generating candidate tokens in speculative sampling is a preset hyperparameter, lacking flexibility. To generate and utilize the candidate tokens more effectively, we propose RADAR, a novel speculative sampling method with RL-based dynamic draft trees. RADAR formulates the draft tree generation process as a Markov Decision Process (MDP) and employs offline reinforcement learning to train a prediction model, which enables real-time decisions on calls to the draft model, reducing redundant computations and further accelerating inference. Evaluations across three LLMs and four tasks show that RADAR achieves a speedup of 3.17x-4.82x over the auto-regressive decoding baseline. The code is available at https://github.com/minaduki-sora/RADAR.",
+        "identifiers": [
+          "SemanticScholar:5204418313ba244eb2027b9694930d26639093ba"
+        ],
+        "semantic_scholar_id": "5204418313ba244eb2027b9694930d26639093ba",
+        "canonical_id": "arXiv:2512.14069",
+        "arxiv_id": "2512.14069",
+        "authors": [
+          "Jun-Jie Ma",
+          "Jinlong Li",
+          "Jiachen Luo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 298,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.27027",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.27027",
+        "id:SemanticScholar:586a0ba114143f0c6228502de2dfc9f0ab54cb93",
+        "id:arXiv:2603.27027",
+        "title:taps task aware proposal distributions for speculative sampling",
+        "url:https://arxiv.org/abs/2603.27027"
+      ],
+      "record": {
+        "title": "TAPS: Task Aware Proposal Distributions for Speculative Sampling",
+        "source_url": "https://arxiv.org/abs/2603.27027",
+        "year": 2026,
+        "published": "2026-03-27",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive generation by letting a lightweight draft model propose future tokens that a larger target model then verifies in parallel. In practice, however, draft models are usually trained on broad generic corpora, which leaves it unclear how much speculative decoding quality depends on the draft training distribution. We study this question with lightweight HASS and EAGLE-2 drafters trained on MathInstruct, ShareGPT, and mixed-data variants, evaluated on MT-Bench, GSM8K, MATH-500, and SVAMP. Measured by acceptance length, task-specific training yields clear specialization: MathInstruct-trained drafts are strongest on reasoning benchmarks, while ShareGPT-trained drafts are strongest on MT-Bench. Mixed-data training improves robustness, but larger mixtures do not dominate across decoding temperatures. We also study how to combine specialized drafters at inference time. Naive checkpoint averaging performs poorly, whereas confidence-based routing improves over single-domain drafts and merged-tree verification yields the highest acceptance length overall for both backbones. Finally, confidence is a more useful routing signal than entropy: rejected tokens tend to have higher entropy, but confidence produces much clearer benchmark-level routing decisions. These results show that speculative decoding quality depends not only on draft architecture, but also on the match between draft training data and downstream workload, and that specialized drafters are better combined at inference time than in weight space.",
+        "identifiers": [
+          "SemanticScholar:586a0ba114143f0c6228502de2dfc9f0ab54cb93"
+        ],
+        "semantic_scholar_id": "586a0ba114143f0c6228502de2dfc9f0ab54cb93",
+        "canonical_id": "arXiv:2603.27027",
+        "arxiv_id": "2603.27027",
+        "doi": "10.48550/arXiv.2603.27027",
+        "authors": [
+          "M. Zbib",
+          "Mohammad Bazzi",
+          "Ammar Mohanna",
+          "Hasan Abed Al Kader Hammoud",
+          "Bernard Ghanem"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 197,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.05899",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.05899",
+        "id:SemanticScholar:32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd",
+        "id:arXiv:2605.05899",
+        "title:vismmoe exploiting visualexpert affinity for efficient visuallanguage moe offloading",
+        "url:https://arxiv.org/abs/2605.05899"
+      ],
+      "record": {
+        "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+        "source_url": "https://arxiv.org/abs/2605.05899",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large-scale vision-language mixture-of-experts (VL-MoE) models provide strong multimodal capability, but efficient deployment on memory-constrained platforms remains difficult. Existing MoE offloading systems are largely designed for text-centric workloads and become much less effective for visual-heavy inputs, where large numbers of visual tokens induce broader and less predictable expert accesses. We present VisMMoE, a VL-MoE offloading system built on a single systems insight: pruning redundant visual tokens can improve offloading not only by reducing computation, but also by reshaping expert demand. We refer to this effect as \\textit{visual-expert affinity}: token pruning makes expert accesses more concentrated within layers and more stable across layers, producing a smaller and more predictable expert working set. Guided by this insight, VisMMoE combines affinity-aware token compression, lookahead expert prediction, and cache/pipeline orchestration to improve expert locality and prefetch effectiveness under tight memory budgets. We implement VisMMoE on multiple frameworks and evaluate it on representative VL-MoE models and benchmarks. VisMMoE improves end-to-end inference performance by up to 2.68x and 1.61x, respectively, over strong baselines for today's VL-MoE deployments while maintaining competitive accuracy.",
+        "identifiers": [
+          "SemanticScholar:32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd"
+        ],
+        "semantic_scholar_id": "32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd",
+        "canonical_id": "arXiv:2605.05899",
+        "arxiv_id": "2605.05899",
+        "doi": "10.48550/arXiv.2605.05899",
+        "authors": [
+          "Cheng Xu",
+          "Xiaofeng Hou",
+          "Jiacheng Liu",
+          "Chao Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 156,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.13190",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.13190",
+        "id:SemanticScholar:f4d36c2af03275aa806bbebb079497409475db3e",
+        "id:arXiv:2605.13190",
+        "title:nvium mixtureofexits transformer for accelerated exact generation",
+        "url:https://arxiv.org/abs/2605.13190"
+      ],
+      "record": {
+        "title": "N-vium: Mixture-of-Exits Transformer for Accelerated Exact Generation",
+        "source_url": "https://arxiv.org/abs/2605.13190",
+        "year": 2026,
+        "published": "2026-05-13",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Improving the inference efficiency of autoregressive transformers typically means reducing FLOPs per token, usually through approximations that degrade model quality. We introduce N-vium, a mixture-of-exits transformer that partially parallelizes computation across depth on standard hardware, increasing effective FLOPs per second rather than minimizing compute per token. N-vium attaches prediction heads at multiple depths and defines the next-token distribution as a learned mixture over these exits, with token-adaptive routing. This formulation strictly generalizes the standard transformer, which is recovered exactly when routing assigns zero mass to all intermediate heads. Sampling from the mixture is exact, and complete KV caches are recovered by deferring the upper-layer computation and batching it with later tokens. We pretrain N-vium at scales up to 1.5B parameters. Our largest model reaches 57.9% wall-clock speedup over a parameter- and data-matched standard transformer at no perplexity cost.",
+        "identifiers": [
+          "SemanticScholar:f4d36c2af03275aa806bbebb079497409475db3e"
+        ],
+        "semantic_scholar_id": "f4d36c2af03275aa806bbebb079497409475db3e",
+        "canonical_id": "arXiv:2605.13190",
+        "arxiv_id": "2605.13190",
+        "doi": "10.48550/arXiv.2605.13190",
+        "authors": [
+          "Aleksander Lorenc",
+          "Frédéric Berdoz",
+          "Joël Mathys",
+          "R. Wattenhofer"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 150,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.03839",
+      "identity_tokens": [
+        "id:SemanticScholar:add52fd34527a37c8df3031cde67b0f107bd408a",
+        "id:arXiv:2608.03839",
+        "title:oilbird trainingfree speculative decoding with keys the verifier already computes",
+        "url:https://arxiv.org/abs/2608.03839"
+      ],
+      "record": {
+        "title": "Oilbird: Training-Free Speculative Decoding with Keys the Verifier Already Computes",
+        "source_url": "https://arxiv.org/abs/2608.03839",
+        "year": 2026,
+        "published": "2026-08-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Training-free speculative decoding drafts by matching an exact suffix of the context against a pool of earlier context. That lookup misses correct drafts already in the pool, most visibly on tool-calling traffic, where a request repeats almost everything but the few values minted for it, and where one rejected token discards the correct continuation behind it. We diagnose the failure position by position across ten benchmarks and find it to be a problem of addressing rather than of coverage: on our densest tool-calling benchmark, about half of what the strongest exact-match drafter misses is present in the pool yet unreachable by exact matching. We therefore propose a second, semantic draft source: the same pool, re-keyed by the hidden state the verifier has already computed at each committed token, together with a merge that lets it ride inside an existing lexical drafter's tree. In three published drafters, at matched pool and budget, it lifts accepted length by 24-29%. Oilbird reaches 4.4x autoregressive decoding speed on API-Bank, against 3.9x for the strongest training-free baseline in our harness and 2.0x for EAGLE-3.",
+        "identifiers": [
+          "SemanticScholar:add52fd34527a37c8df3031cde67b0f107bd408a"
+        ],
+        "semantic_scholar_id": "add52fd34527a37c8df3031cde67b0f107bd408a",
+        "canonical_id": "arXiv:2608.03839",
+        "arxiv_id": "2608.03839",
+        "authors": [
+          "Tao Jin",
+          "P. Nguyen",
+          "Zhenzhu Yan",
+          "Teeradaj Racharak",
+          "Naoya Inoue"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 67,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31551",
+      "identity_tokens": [
+        "id:DOI:10.1145/3838684.3846886",
+        "id:SemanticScholar:f0cf7f6a33c0ac0a5f9b02d193aff795d001c95d",
+        "id:arXiv:2609.31551",
+        "title:easerve encodeaware disaggregated serving for multimodal large language models",
+        "url:https://arxiv.org/abs/2609.31551"
+      ],
+      "record": {
+        "title": "EAServe: Encode-Aware Disaggregated Serving for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.31551",
+        "year": 2026,
+        "published": "2026-09-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Disaggregating the two stages, Prefill and Decode, onto separate GPU pools is now a standard optimization for (text-only) LLM serving. However, multimodal LLMs (MLLMs), which add a third phase, Encode, pose new challenges for resource allocation. Encode turns images, video, or audio into embeddings that the language model can consume, yielding a three-stage Encode-Prefill-Decode (EPD) pipeline. Existing frameworks offer only partial answers: text-only PD systems lack Encode, while EPD frameworks expose it as a separate service without regulating downstream request flow. The pipeline also carries a structural resource imbalance: every request enters through Encode before downstream work can begin, yet per-request execution leaves the encode GPU severely underutilized even at high loads, starving the downstream Prefill and Decode workers. Addressing this, we reposition Encode as the control point of the EPD pipeline, exposing three tightly coupled dimensions: when work enters downstream, where prefill executes, and how the GPU is shared. We instantiate this in EAServe across two co-designed layers. Its runtime manages load-adaptive micro-batching, rate-controlled partial offload to a co-resident prefill worker, and dynamic SM partitioning for predictable co-location. The configuration layer, Hybrid Auto Selection (HAS), navigates the joint space of GPU allocation, encode batch size, and offload ratio by pruning unbalanced allocations with per-stage capacity profiling and refining the remainder through TPE-based Bayesian optimization. Evaluated on three MLLM architectures spanning image, video, and audio, EAServe delivers up to 4.3x and 1.7x higher goodput than NVIDIA Dynamo and vLLM, respectively, under identical SLO constraints, sustains more balanced and higher GPU utilization across the EPD pipeline, and reaches near-optimal configurations faster than baseline search methods.",
+        "identifiers": [
+          "SemanticScholar:f0cf7f6a33c0ac0a5f9b02d193aff795d001c95d"
+        ],
+        "semantic_scholar_id": "f0cf7f6a33c0ac0a5f9b02d193aff795d001c95d",
+        "canonical_id": "arXiv:2609.31551",
+        "arxiv_id": "2609.31551",
+        "doi": "10.1145/3838684.3846886",
+        "authors": [
+          "Kun-Xiong Zhu",
+          "Zhi-Hao Shu",
+          "Hang-Yu Zheng",
+          "Ming-Hai Qin",
+          "Miao Yin",
+          "Gagan Agrawal",
+          "Wei Niu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 15,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35263",
+      "identity_tokens": [
+        "id:SemanticScholar:bb83727dcd64b255ebf164ebd4a30600e3dea6ec",
+        "id:arXiv:2609.35263",
+        "title:wavepp highthroughput pipeline parallel llm prefill under prefix reuse",
+        "url:https://arxiv.org/abs/2609.35263"
+      ],
+      "record": {
+        "title": "WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse",
+        "source_url": "https://arxiv.org/abs/2609.35263",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pipeline parallelism can improve prefill throughput by processing multiple request chunks concurrently across different stages of the model. However, keeping the pipeline fully utilized requires efficient scheduling and request preparation. In systems where stages retain and evict cache state independently, a local cache hit does not guarantee that the same prefix can be reused across the pipeline. Here, coordination overhead can impede request admission cadence and thus reduce overall throughput. In this paper, we present WavePP, a prefill runtime built on top of TensorRT-LLM that addresses these challenges by overlapping request admission with pipeline execution. WavePP asynchronously finds a prefix that can be reused across all stages, protects the cached state, and reserves space for the remaining input while earlier requests continue to execute. It subsequently plans the chunk sizes of each request dynamically to maximize pipeline fill. Each stage then completes the local preparation before executing the request. In the same system and pipeline topology, WavePP improves TensorRT-LLM's prefill throughput in 37 of 40 tested settings on GLM 5.2 and MiniMax M2.7. At concurrency 128 with high cache reuse, these changes increase throughput by factors of 2.91 and 2.02, respectively. Across 28 Kimi K3 settings, WavePP also has the highest measured throughput in all 18 settings at concurrency eight or higher, compared with tensor/expert-parallel and pipeline-parallel baselines from TRT-LLM, SGLang, and vLLM.",
+        "identifiers": [
+          "SemanticScholar:bb83727dcd64b255ebf164ebd4a30600e3dea6ec"
+        ],
+        "semantic_scholar_id": "bb83727dcd64b255ebf164ebd4a30600e3dea6ec",
+        "canonical_id": "arXiv:2609.35263",
+        "arxiv_id": "2609.35263",
+        "authors": [
+          "Aaryam Sharma"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 12,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.08435",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.08435",
+        "id:SemanticScholar:5a35a636758044463fc42bffb4e234d6774d569d",
+        "id:arXiv:2508.08435",
+        "title:fast weight programming and linear transformers from machine learning to neurobiology",
+        "url:https://arxiv.org/abs/2508.08435"
+      ],
+      "record": {
+        "title": "Fast weight programming and linear transformers: from machine learning to neurobiology",
+        "source_url": "https://arxiv.org/abs/2508.08435",
+        "year": 2025,
+        "published": "2025-08-11",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in artificial neural networks for machine learning, and language modeling in particular, have established a family of recurrent neural network (RNN) architectures that, unlike conventional RNNs with vector-form hidden states, use two-dimensional (2D) matrix-form hidden states. Such 2D-state RNNs, known as Fast Weight Programmers (FWPs), can be interpreted as a neural network whose synaptic weights (called fast weights) dynamically change over time as a function of input observations, and serve as short-term memory storage; corresponding synaptic weight modifications are controlled or programmed by another network (the programmer) whose parameters are trained (e.g., by gradient descent). In this Primer, we review the technical foundations of FWPs, their computational characteristics, and their connections to transformers and state space models. We also discuss connections between FWPs and models of synaptic plasticity in the brain, suggesting a convergence of natural and artificial intelligence.",
+        "identifiers": [
+          "SemanticScholar:5a35a636758044463fc42bffb4e234d6774d569d"
+        ],
+        "semantic_scholar_id": "5a35a636758044463fc42bffb4e234d6774d569d",
+        "canonical_id": "arXiv:2508.08435",
+        "arxiv_id": "2508.08435",
+        "doi": "10.48550/arXiv.2508.08435",
+        "authors": [
+          "Kazuki Irie",
+          "Samuel J. Gershman"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 425,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.17426",
+      "identity_tokens": [
+        "id:SemanticScholar:ed4ad28a41988d495a3963dce4f0ff426e79bffa",
+        "id:arXiv:2411.17426",
+        "title:clover crosslayer orthogonal vectors pruning and finetuning",
+        "url:https://arxiv.org/abs/2411.17426"
+      ],
+      "record": {
+        "title": "CLOVER: Cross-Layer Orthogonal Vectors Pruning and Fine-Tuning",
+        "source_url": "https://arxiv.org/abs/2411.17426",
+        "year": 2024,
+        "published": "2024-11-26",
+        "venue": null,
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Decoder-only models generate tokens autoregressively by caching key/value vectors, but as the cache grows, inference becomes memory-bound. To address this issue, we introduce CLOVER (Cross-Layer Orthogonal Vectors), a novel approach that treats pairs of attention layers as a set of low-rank decompositions. CLOVER applies Singular Value Decomposition (SVD) to the \\( Q \\)-\\( K \\) and \\( V \\)-\\( O \\) pairs within each attention head. The resulting singular values can either guide pruning or serve as trainable parameters for efficient fine-tuning of all orthogonal vectors. After pruning or fine-tuning, these values are reintegrated into the model without increasing its parameter count. We apply CLOVER to various models, including GPT-2 XL, DeepSeek-V2-Lite, Whisper-Large-v3, Stable Diffusion XL, and LLaMA-3.2-11B-Vision. Our results demonstrate that CLOVER significantly improves pruning efficiency. For instance, the perplexity of pruning 70\\% of the \\( Q \\)-\\( K \\) pairs in GPT-2 XL is similar to that of pruning just 8\\% with vanilla methods. Fine-tuning the singular values further results in a full-rank update, outperforming state-of-the-art methods (LoRA, DoRA, HiRA, and PiSSA) by 7.6\\%, 5.5\\%, 3.8\\%, and 0.7\\%, respectively, on eight commonsense tasks for LLaMA-2 7B.",
+        "identifiers": [
+          "SemanticScholar:ed4ad28a41988d495a3963dce4f0ff426e79bffa"
+        ],
+        "semantic_scholar_id": "ed4ad28a41988d495a3963dce4f0ff426e79bffa",
+        "canonical_id": "arXiv:2411.17426",
+        "arxiv_id": "2411.17426",
+        "authors": [
+          "Fan-Xu Meng",
+          "Pingzhi Tang",
+          "Fan Jiang",
+          "Mu-Han Zhang"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 683,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.02329",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.02329",
+        "id:SemanticScholar:d9373a64b94237ce06e81ad4917d83d0bb7a5b8e",
+        "id:arXiv:2510.02329",
+        "title:selfjudge faster speculative decoding via selfsupervised judge verification",
+        "url:https://arxiv.org/abs/2510.02329"
+      ],
+      "record": {
+        "title": "SelfJudge: Faster Speculative Decoding via Self-Supervised Judge Verification",
+        "source_url": "https://arxiv.org/abs/2510.02329",
+        "year": 2025,
+        "published": "2025-09-26",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates LLM inference by verifying candidate tokens from a draft model against a larger target model. Recent judge decoding boosts this process by relaxing verification criteria by accepting draft tokens that may exhibit minor discrepancies from target model output, but existing methods are restricted by their reliance on human annotations or tasks with verifiable ground truths, limiting generalizability across diverse NLP tasks. We propose SelfJudge, which trains judge verifiers via self-supervision of the target model. Our method measures semantic preservation by assessing whether token-substituted responses preserve the meaning of original responses, enabling automatic verifier training across diverse NLP tasks. Our experiments show SelfJudge achieves superior inference-accuracy trade-offs than judge decoding baselines, offering a broadly applicable solution for faster LLM inference.",
+        "identifiers": [
+          "SemanticScholar:d9373a64b94237ce06e81ad4917d83d0bb7a5b8e"
+        ],
+        "semantic_scholar_id": "d9373a64b94237ce06e81ad4917d83d0bb7a5b8e",
+        "canonical_id": "arXiv:2510.02329",
+        "arxiv_id": "2510.02329",
+        "doi": "10.48550/arXiv.2510.02329",
+        "authors": [
+          "Kanghoon Yoon",
+          "Minsub Kim",
+          "Sungjae Lee",
+          "Joonhyung Lee",
+          "Sunghyeon Woo",
+          "Yeonjun In",
+          "S. Kwon",
+          "Chanyoung Park",
+          "Dongsoo Lee"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 379,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.01955",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.01955",
+        "id:SemanticScholar:f2347083a18dbdc47f403d427cc66564668276ff",
+        "id:arXiv:2407.01955",
+        "title:s2d sorted speculative decoding for more efficient deployment of nested large language models",
+        "url:https://arxiv.org/abs/2407.01955"
+      ],
+      "record": {
+        "title": "S2D: Sorted Speculative Decoding For More Efficient Deployment of Nested Large Language Models",
+        "source_url": "https://arxiv.org/abs/2407.01955",
+        "year": 2024,
+        "published": "2024-07-02",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deployment of autoregressive large language models (LLMs) is costly, and as these models increase in size, the associated costs will become even more considerable. Consequently, different methods have been proposed to accelerate the token generation process and reduce costs. Speculative decoding (SD) is among the most promising approaches to speed up the LLM decoding process by verifying multiple tokens in parallel and using an auxiliary smaller draft model to generate the possible tokens. In SD, usually, one draft model is used to serve a specific target model; however, in practice, LLMs are diverse, and we might need to deal with many target models or more than one target model simultaneously. In this scenario, it is not clear which draft model should be used for which target model, and searching among different draft models or training customized draft models can further increase deployment costs. In this paper, we first introduce a novel multi-target scenario for the deployment of draft models for faster inference. Then, we present a novel, more efficient sorted speculative decoding mechanism that outperforms regular baselines in multi-target settings. We evaluated our method on Spec-Bench in different settings, including base models such as Vicuna 7B, 13B, and LLama Chat 70B. Our results suggest that our draft models perform better than baselines for multiple target models at the same time.",
+        "identifiers": [
+          "SemanticScholar:f2347083a18dbdc47f403d427cc66564668276ff"
+        ],
+        "semantic_scholar_id": "f2347083a18dbdc47f403d427cc66564668276ff",
+        "canonical_id": "arXiv:2407.01955",
+        "arxiv_id": "2407.01955",
+        "doi": "10.48550/arXiv.2407.01955",
+        "authors": [
+          "Parsa Kavehzadeh",
+          "Mohammadreza Pourreza",
+          "Mojtaba Valipour",
+          "Tinashu Zhu",
+          "H. Bai",
+          "Ali Ghodsi",
+          "Boxing Chen",
+          "Mehdi Rezagholizadeh"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 830,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a314f89d23ee6aa0465fbfe3fc33af6f074fd7f6804b4e973c5875aacd8c33ef",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

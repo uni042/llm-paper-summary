@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KernelBenchX: A Comprehensive Benchmark for Evaluating LLM-Generated GPU Kernels",
+      "source_url": "https://arxiv.org/abs/2605.04956",
+      "year": 2026,
+      "published": "2026-05-06",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM-based Triton kernel generation has attracted significant interest, yet a fundamental empirical question remains unanswered: where does this capability break down, and why? We present KernelBenchX, a benchmark designed to answer this question through category-aware evaluation of correctness and hardware efficiency across 176 tasks in 15 categories. Our systematic comparison of five representative methods yields three main findings. First, task structure determines correctness more than method design. Category explains nearly three times more variance in semantic correctness than method (9.4% vs 3.3% explained deviance), and 72% of Fusion tasks fail across all five methods while Math tasks are solved consistently. Second, iterative refinement improves correctness, but not performance. Across GEAK iterations, compile rate rises from 52.3% to 68.8% while average speedup declines from $1.58\\times$ to $1.44\\times$; newly rescued kernels consistently underperform persistently correct ones ($1.16\\times$ vs $1.58\\times$ speedup in round~0$\\to$1). Third, correctness does not imply efficiency. 46.6% of correct kernels are slower than the PyTorch eager baseline, and cross-hardware speedup variance reaches $21.4\\times$. Besides, quantization remains completely unsolved (0/30 successes) despite non-trivial compilation rates, revealing systematic misunderstanding of numerical computation contracts rather than surface-level syntax errors. These findings suggest that future progress depends on handling global coordination, explicitly modeling numerical precision, and incorporating hardware efficiency into generation. The code is available at https://github.com/BonnieW05/KernelBenchX",
+      "identifiers": [
+        "SemanticScholar:d01faf5e5fb3e38e236211c70596203318acf092"
+      ],
+      "semantic_scholar_id": "d01faf5e5fb3e38e236211c70596203318acf092",
+      "canonical_id": "arXiv:2605.04956",
+      "arxiv_id": "2605.04956",
+      "doi": "10.48550/arXiv.2605.04956",
+      "authors": [
+        "Han Wang",
+        "Jintao Zhang",
+        "Kai Jiang",
+        "Hao-Xu Wang",
+        "Jian-Fei Chen",
+        "Jun Zhu"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM生成Tritonカーネル176課題の正確性とハードウェア効率を体系的に評価し、正しいカーネルの46.6%がPyTorch eagerより遅く、量子化課題は0/30成功と報告する。推論カーネル生成の品質・性能ベンチマークとして直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "R2-dLLM: Accelerating Diffusion Large Language Models via Spatio-Temporal Redundancy Reduction",
+      "source_url": "https://arxiv.org/abs/2604.18995",
+      "year": 2026,
+      "published": "2026-04-21",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to autoregressive generation by enabling parallel token prediction. However, practical dLLM decoding still suffers from high inference latency, which limits deployment. In this work, we observe that a substantial part of this inefficiency comes from recurring redundancy in the decoding process, including spatial redundancy caused by confidence clusters and positional ambiguity, and temporal redundancy caused by repeatedly remasking predictions that have already stabilized. Motivated by these patterns, we propose $R^{2}$-dLLM, a unified framework for reducing decoding redundancy from both inference and training perspectives. At inference time, we introduce training-free decoding rules that aggregate local confidence and token predictions, and finalize temporally stable tokens to avoid redundant decoding steps. We further propose a redundancy-aware supervised fine-tuning pipeline that aligns the model with efficient decoding trajectories and reduces reliance on manually tuned thresholds. Experiments demonstrate that $R^{2}$-dLLM consistently reduces the number of decoding steps by up to 88\\% compared to existing decoding strategies, while maintaining competitive generation quality across different models and tasks. These results validate that decoding redundancy is a central bottleneck in dLLMs, and that explicitly reducing it yields substantial practical efficiency gains. Our code and models are available at https://github.com/GATECH-EIC/R2-dLLM.",
+      "identifiers": [
+        "SemanticScholar:63c54d315754dba7b61b798f7d456e378fe5dccc"
+      ],
+      "semantic_scholar_id": "63c54d315754dba7b61b798f7d456e378fe5dccc",
+      "canonical_id": "arXiv:2604.18995",
+      "arxiv_id": "2604.18995",
+      "doi": "10.48550/arXiv.2604.18995",
+      "authors": [
+        "Zhen-Bang Du",
+        "Kejing Xia",
+        "Xin-Rui Zhong",
+        "Yong-Gan Fu",
+        "Nicolai Oswald",
+        "Bin Ji",
+        "Brucek Khailany",
+        "Pavlo Molchanov",
+        "Ying-Jia Lin"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 192,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散LLMの空間的な信頼度クラスタと時間的に安定した予測の再マスクを削減するR²-dLLMを提案。訓練不要の復号規則と冗長性を意識したSFTを組み合わせ、品質を保ちながら復号ステップ数最大88%削減と報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "SPOT: Span-level Pause-of-Thought for Efficient and Interpretable Latent Reasoning in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2603.06222",
+      "year": 2026,
+      "published": "2026-03-06",
+      "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Explicit Chain-of-Thought (CoT) improves the reasoning performance of large language models (LLMs) but often incurs high inference cost due to verbose token-level traces. While recent approaches reduce this overhead via concise prompting or step pruning, they largely truncate what the model says rather than internalize what the model thinks. Latent reasoning offers a promising alternative by performing computation in the hidden space, yet prior methods face two critical challenges. Many existing approaches rely on rigid point-to-point alignment, forcing a latent token to approximate the final representation of a reasoning step, which can be insufficient to capture the dense, variable-length semantics of an entire reasoning segment. Furthermore, these methods often suffer from a lack of interpretability: latent states are commonly produced by unconstrained optimization or embedding mixing, yielding vectors that are difficult to decode or audit under the pretrained language head. We propose SPOT (Span-level Pause Of Thought), a flexible framework that compresses explicit CoT into compact latent  tokens without enforcing a fixed response template. At the core of SPOT is Span-level Semantic Alignment, a Sinkhorn optimal-transport objective that softly matches each  token to the semantics of an entire reasoning segment, overcoming the rigidity of step-end alignment. To further improve interpretability, SPOT introduces a Frozen-Head Decoding Constraint that keeps latent states directly decodable as token distributions under the frozen pretrained LM head, enabling readable keyword interpretations of latent thoughts. Moreover, with two-stage training and without direct token-level supervision on , SPOT enables controllable implicit reasoning intensity at inference. Experiments on main reasoning benchmarks demonstrate that SPOT improves accuracy by 2.3 points on average while reducing generated tokens by 37.5% and provides faithful semantic interpretations of the latent reasoning process.",
+      "identifiers": [
+        "SemanticScholar:05c973840b79f7b4d91f436b5cb6ee32c7ce5977"
+      ],
+      "semantic_scholar_id": "05c973840b79f7b4d91f436b5cb6ee32c7ce5977",
+      "canonical_id": "arXiv:2603.06222",
+      "arxiv_id": "2603.06222",
+      "doi": "10.1145/3770855.3818055",
+      "authors": [
+        "Yunlong Chu",
+        "Ming-Lai Shao",
+        "Yuhang Liu",
+        "Bing Hao",
+        "Yu-Meng Lin",
+        "Jia-Lu Wang",
+        "Rui-Jie Wang"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 238,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CoTの長い思考区間をSinkhorn最適輸送でlatent pause tokenへ圧縮し、凍結言語ヘッドで潜在状態の解釈可能性を維持する。推論トークンを37.5%削減し、平均精度2.3ポイント改善したと報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "From Long to Lean: Performance-aware and Adaptive Chain-of-Thought Compression via Multi-round Refinement",
+      "source_url": "https://arxiv.org/abs/2509.22144",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-Thought (CoT) reasoning improves performance on complex tasks but introduces significant inference latency due to verbosity. We propose Multiround Adaptive Chain-of-Thought Compression (MACC), a framework that leverages the token elasticity phenomenon--where overly small token budgets can paradoxically increase output length--to progressively compress CoTs via multiround refinement. This adaptive strategy allows MACC to determine the optimal compression depth for each input. Our method achieves an average accuracy improvement of 5.6 percent over state-of-the-art baselines, while also reducing CoT length by an average of 47 tokens and significantly lowering latency. Furthermore, we show that test-time performance--accuracy and token length--can be reliably predicted using interpretable features like perplexity and compression rate on the training set. Evaluated across different models, our method enables efficient model selection and forecasting without repeated fine-tuning, demonstrating that CoT compression is both effective and predictable. Our code will be released in https://github.com/Leon221220/MACC.",
+      "identifiers": [
+        "SemanticScholar:63df6cfb96c715b4e8eb28a1f3a6b4ec9e5d33bb"
+      ],
+      "semantic_scholar_id": "63df6cfb96c715b4e8eb28a1f3a6b4ec9e5d33bb",
+      "canonical_id": "arXiv:2509.22144",
+      "arxiv_id": "2509.22144",
+      "doi": "10.48550/arXiv.2509.22144",
+      "authors": [
+        "Jianzhi Yan",
+        "Le Liu",
+        "You-Cheng Pan",
+        "Shi-Wei Chen",
+        "Zi-Ke Yuan",
+        "Yang Xiang",
+        "Buzhou Tang"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 399,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "CoTを複数回の適応的な短縮で洗練し、短すぎる予算が逆に出力長を増やすtoken elasticityを考慮して停止深度を決めるMACCを提案。平均47トークン短縮と基準法比精度5.6%改善、遅延削減を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Bifocal Diffusion Language Models: Asymmetric Bidirectional Context for Parallel Generation",
+      "source_url": "https://arxiv.org/abs/2606.27732",
+      "year": 2026,
+      "published": "2026-06-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete diffusion language models (dLLMs) recover masked tokens in parallel, offering significant speedups over autoregressive (AR) generation. However, such promising frameworks face a fundamental architectural design dilemma: \\ding{182} Adopting bidirectional attention achieves strong generation quality by allowing each position to access the full context, but is inherently incompatible with KV caching, limiting inference throughput in batch-serving scenarios; \\ding{183} Conversely, causal attention enables efficient cached inference but loses all right-side context, substantially degrading generation quality. This paper introduces Bifocal dLLMs, a new paradigm that resolves this dilemma through \\emph{asymmetric bidirectional context}. Analogous to bifocal lenses, we instantiate the paradigm as \\textbf{R2LM} (Right-to-Left Mamba), which combines two complementary mechanisms: $a$) standard causal attention providing precise left-context with full KV cache compatibility, while $b$) a lightweight reverse Mamba SSM sidecar supplying compressed right-side context without breaking cacheability. Comprehensive experiments on continued pretraining of Qwen3-1.7B with 60B tokens demonstrate that R2LM achieves $2.4\\times$ to $12.9\\times$ higher throughput than bidirectional dLLMs and $1.9\\times$ to $2.9\\times$ speedup over AR baselines in batch serving through parallel decoding with KV caching, while exceeding the causal baseline on most benchmarks and surpassing the bidirectional dLLM on average.",
+      "identifiers": [
+        "SemanticScholar:73fa626030df6f9a9f8db3cfe23e8e7ef8ae3ecf"
+      ],
+      "semantic_scholar_id": "73fa626030df6f9a9f8db3cfe23e8e7ef8ae3ecf",
+      "canonical_id": "arXiv:2606.27732",
+      "arxiv_id": "2606.27732",
+      "doi": "10.48550/arXiv.2606.27732",
+      "authors": [
+        "Yuhang Chen",
+        "Xianfeng Wu",
+        "Jinhao Duan",
+        "Ming-Fu Liang",
+        "Xiaohan Wei",
+        "Yun-Chen Pu",
+        "Fei Tian",
+        "Chongling Sun",
+        "Parish Aggarwal",
+        "Frank Shyu",
+        "Luke Simon",
+        "Sandeep Pandey",
+        "Xi Liu",
+        "Tian-Long Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 126,
+        "matched_prestigious_venue": null
+      },
+      "reason": "左側文脈は因果注意とKVキャッシュで扱い、右側文脈は軽量な逆方向Mambaで圧縮して付加するR2LMを提案。Qwen3-1.7Bの継続事前学習後、batch servingで双方向dLLM比2.4～12.9倍、自己回帰基準比1.9～2.9倍のスループットを報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c9887afc5b2f",
+    "round": "libimp-c9887afc5b2fc161-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c9887afc5b2fc161-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c9887afc5b2fc161-pre01.json",
+    "receipt": "sha256:edd041a94cc594ad588e9917daffbd8e2b557c85702786fe4f7bdd8dd5243050"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c9887afc5b2f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

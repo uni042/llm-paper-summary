@@ -1,0 +1,1307 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-fc1b0814e525389e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-fc1b0814e525",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3788550.3794877",
+    "SemanticScholar:e95fad77fb092441c01f1bbb60f8f8ae7ab6735e",
+    "arXiv:2110.01786",
+    "arXiv:2405.07542",
+    "arXiv:2406.07017",
+    "arXiv:2410.06718",
+    "arXiv:2502.13542",
+    "arXiv:2512.01949",
+    "arXiv:2601.11546",
+    "arXiv:2602.04399",
+    "arXiv:2603.22333",
+    "arXiv:2604.03072",
+    "arXiv:2606.00021",
+    "arXiv:2607.16213",
+    "arXiv:2608.03580"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 15,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e65d0efccb8bc1cc83f91178cd1fe764d01b00c6",
+  "raw_search_result_count": 15,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 14,
+  "provider_progress": {
+    "requested_count": 15,
+    "status_counts": {
+      "allowed": 14,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-09T01:12:26.425764+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3788550.3794877",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:e95fad77fb092441c01f1bbb60f8f8ae7ab6735e",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2110.01786",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/v1/2022.findings-acl.71"
+    },
+    {
+      "requested_id": "arXiv:2405.07542",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2406.07017",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.06718",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.13542",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.01949",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.11546",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.04399",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.22333",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.03072",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.00021",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.16213",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.03580",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "MI-Pruner: Crossmodal Mutual Information-guided Token Pruner for Efficient MLLMs",
+      "source_url": "https://arxiv.org/abs/2604.03072",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "For multimodal large language models (MLLMs), visual information is relatively sparse compared with text. As a result, research on visual pruning emerges for efficient inference. Current approaches typically measure token importance based on the attention scores in the visual encoder or in the LLM decoder, then select visual tokens with high attention scores while pruning others. In this paper, we pursue a different and more surgical approach. Instead of relying on mechanism-specific signals, we directly compute Mutual Information (MI) between visual and textual features themselves, prior to their interaction. This allows us to explicitly measure crossmodal dependency at the feature levels. Our MI-Pruner is simple, efficient and non-intrusive, requiring no access to internal attention maps or architectural modifications. Experimental results demonstrate that our approach outperforms previous attention-based pruning methods with minimal latency.",
+      "identifiers": [
+        "SemanticScholar:306b3195ab528acb81003fbd8301a64f4d4a252f"
+      ],
+      "semantic_scholar_id": "306b3195ab528acb81003fbd8301a64f4d4a252f",
+      "canonical_id": "arXiv:2604.03072",
+      "arxiv_id": "2604.03072",
+      "doi": "10.48550/arXiv.2604.03072",
+      "authors": [
+        "Jia-Meng Li",
+        "A. Tiulpin",
+        "M. Blaschko"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 189,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Swordsman: Entropy-Driven Adaptive Block Partition for Efficient Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2602.04399",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block-wise decoding effectively improves the inference speed and quality in diffusion language models (DLMs) by combining inter-block sequential denoising and intra-block parallel unmasking. However, existing block-wise decoding methods typically partition blocks in a rigid and fixed manner, which inevitably fragments complete semantic or syntactic constituents, leading to suboptimal performance. Inspired by the entropy reduction hypothesis (ERH), we recognize that constituent boundaries offer greater opportunities for uncertainty reduction, which motivates us to employ entropy analysis for identifying constituent boundaries. Therefore, we propose Swordsman, an entropy-driven adaptive block-wise decoding framework for DLMs. Swordsman adaptively partitions blocks by identifying entropy shifts between adjacent tokens to better align with semantic or syntactic constituent boundaries. In addition, Swordsman dynamically adjusts unmasking thresholds conditioned on the real-time unmasking status within a block, further improving both efficiency and stability. As a training-free framework, supported by KV Cache, Swordsman demonstrates state-of-the-art performance across extensive evaluations.",
+      "identifiers": [
+        "SemanticScholar:75be89a2b2d4801957b1afdab1627308651cb301"
+      ],
+      "semantic_scholar_id": "75be89a2b2d4801957b1afdab1627308651cb301",
+      "canonical_id": "arXiv:2602.04399",
+      "arxiv_id": "2602.04399",
+      "doi": "10.48550/arXiv.2602.04399",
+      "authors": [
+        "Yu Zhang",
+        "Xinchen Li",
+        "Jialei Zhou",
+        "Hongnan Ma",
+        "Zhongwei Wan",
+        "Yiwei Shi",
+        "Duoqian Miao",
+        "Qi Zhang",
+        "Long-Bing Cao"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Script: Graph-Structured and Query-Conditioned Semantic Token Pruning for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2512.01949",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth of visual tokens in multimodal large language models (MLLMs) leads to excessive memory consumption and inference latency, especially when handling high-resolution images and videos. Token pruning is a technique used to mitigate this issue by removing redundancy, but existing methods often ignore relevance to the user query or suffer from the limitations of attention mechanisms, reducing their adaptability and effectiveness. To address these challenges, we propose Script, a plug-and-play pruning method that requires no retraining and generalizes across diverse MLLMs. Script comprises two modules: a graph-structured pruning module that removes visually redundant tokens, and a query-conditioned semantic pruning module that preserves query-relevant visual information. Together, they enhance performance on multimodal tasks. Experiments on fourteen benchmarks across image and video understanding tasks show that Script consistently achieves higher model efficiency and predictive accuracy compared to existing pruning methods. On LLaVA-NeXT-7B, it achieves up to 6.8x prefill speedup and 10x FLOP reduction, while retaining 96.88% of the original performance.",
+      "identifiers": [
+        "SemanticScholar:4f66a7bbd905468cd97ed04712bf4ccae1c4fb5e"
+      ],
+      "semantic_scholar_id": "4f66a7bbd905468cd97ed04712bf4ccae1c4fb5e",
+      "canonical_id": "arXiv:2512.01949",
+      "arxiv_id": "2512.01949",
+      "doi": "10.48550/arXiv.2512.01949",
+      "authors": [
+        "Zhongyu Yang",
+        "Dan-Nong Xu",
+        "Wei Pang",
+        "Ying-Fang Yuan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 312,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ASTL: An Adaptive Serving Stack for LLMs to Balance Utilization and Tail Latency",
+      "source_url": "https://doi.org/10.1145/3788550.3794877",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "SEAMS@ICSE",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present ASTL, a practical serving stack that adapts runtime parallelism to each request’s predicted output length, improving throughput and tail latency for LLM inference on CPU and GPU. The design rests on two ingredients: (i) an offline knee identification step that profiles sequence-level parallelism (NP) to find regime-specific operating points for short vs. long generations; and (ii) a lightweight XGBoost predictor that estimates output tokens at admission time using only proxy, admission-available cues (e.g., input length, presence of code fences/backticks, punctuation patterns, temperature/top-p)—without explicit domain labels. At runtime, ASTL routes requests to per-NP lanes with continuous batching and length-homogeneous micro-batches, running just below the knee for the inferred regime. Implemented atop llama.cpp and evaluated on a CPU m5.4xlarge (Llama-2-7B Q4) and a single-GPU A10 (Llama-2-13B Q4) under mixed/short workloads, ASTL reduces p95/p99 tails while preserving near-peak throughput.",
+      "identifiers": [
+        "SemanticScholar:c073d24e5a36afd0e37723cf63be76ee51347a08"
+      ],
+      "semantic_scholar_id": "c073d24e5a36afd0e37723cf63be76ee51347a08",
+      "doi": "10.1145/3788550.3794877",
+      "canonical_id": "DOI:10.1145/3788550.3794877",
+      "authors": [
+        "Farhoud Jafari Kaleibar",
+        "Marin Litoiu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 179,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SENSE: Semantic Embedding Navigation with Soft-gated Evaluation for Retrieval-based Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2606.00021",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) accelerates Large Language Model (LLM) inference by employing a lightweight draft model to propose candidate tokens, which are verified in parallel by the target model, without compromising generation quality. While Retrieval-based Speculative Decoding (RSD) is favored for its plug-and-play versatility, its potential is impeded by rigid lexical dependencies, rendering both retrieval and verification brittle to surface-level variations. To address this, we propose SENSE (Semantic Embedding Navigation with Soft-gated Evaluation). By anchoring retrieval on the hidden states of the target model, SENSE establishes robust semantic alignment, which empowers the Soft-gated Evaluation module to validate semantic equivalence rather than surface forms. To ensure rigorous benchmarking, we deconstruct existing methods into atomic primitives within a unified framework, facilitating granular, component-level comparison. Extensive experiments across diverse domains demonstrate that SENSE outperforms multiple baselines on the LLaMA and Qwen families, attaining up to 4.09 mean acceptance length and 3.26x speedup, while preserving generation quality. Our code will be released upon publication.",
+      "identifiers": [
+        "SemanticScholar:25a69145c46da12196ad562a0b30d7e3edd3af0e"
+      ],
+      "semantic_scholar_id": "25a69145c46da12196ad562a0b30d7e3edd3af0e",
+      "canonical_id": "arXiv:2606.00021",
+      "arxiv_id": "2606.00021",
+      "doi": "10.48550/arXiv.2606.00021",
+      "authors": [
+        "Shao-Wen Chen",
+        "Zhicheng Liao",
+        "Hongwei Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EMS-SD: Efficient Multi-sample Speculative Decoding for Accelerating Large Language Models",
+      "source_url": "https://arxiv.org/abs/2405.07542",
+      "year": 2024,
+      "published": "2024-05-13",
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding emerges as a pivotal technique for enhancing the inference speed of Large Language Models (LLMs). Despite recent research aiming to improve prediction efficiency, multi-sample speculative decoding has been overlooked due to varying numbers of accepted tokens within a batch in the verification phase. Vanilla method adds padding tokens in order to ensure that the number of new tokens remains consistent across samples. However, this increases the computational and memory access overhead, thereby reducing the speedup ratio. We propose a novel method that can resolve the issue of inconsistent tokens accepted by different samples without necessitating an increase in memory or computing overhead. Furthermore, our proposed method can handle the situation where the prediction tokens of different samples are inconsistent without the need to add padding tokens. Sufficient experiments demonstrate the efficacy of our method. Our code is available at https://github.com/niyunsheng/EMS-SD.",
+      "identifiers": [
+        "SemanticScholar:2a16a4bb634301c40821e0c1d1987bb7b9e4e9a8"
+      ],
+      "semantic_scholar_id": "2a16a4bb634301c40821e0c1d1987bb7b9e4e9a8",
+      "canonical_id": "arXiv:2405.07542",
+      "arxiv_id": "2405.07542",
+      "doi": "10.48550/arXiv.2405.07542",
+      "authors": [
+        "Yunsheng Ni",
+        "Chuanjian Liu",
+        "Ye-Hui Tang",
+        "Kai Han",
+        "Yun-He Wang"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 879,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "RelServe: Fast LLM Inference Serving on Relational Data",
+      "source_url": "https://arxiv.org/abs/2601.11546",
+      "year": 2025,
+      "published": "2025-12-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The use of Large Language Models (LLMs) for querying relational data has given rise to relQuery, a workload pattern that applies templated LLM calls to structured tables. As relQuery services become more widely adopted in applications such as AI-powered spreadsheets, fast response times under concurrent query loads are increasingly important. Unfortunately, current LLM engines face severe latency bottlenecks from Head-of-Line (HoL) blocking across three comparable inference phases: waiting, core running, and tail running. Existing static priority scheduling methods only address HoL blocking during the waiting phase, leaving two critical problems unsolved. First, the absence of a priority update mechanism causes inaccurate prioritization and continued HoL blocking during core execution. Second, suboptimal prefill-decode batching exacerbates HoL blocking in tail execution and worsens latency trade-offs between running and waiting relQueries. To address these problems, we propose RelServe, an optimized LLM engine for low-latency relQuery serving. RelServe features two core innovations: a Dynamic Priority Updater that continuously adjusts priorities while minimizing overhead via statistical approximations, and an Adaptive Batch Arranger that quantitatively evaluates candidate prefill and decode batches to minimize projected average latency. Extensive experiments on four real-world datasets using LLMs ranging from 13B to 70B parameters show that RelServe reduces average serving latency by up to 3.1x compared to vLLM.",
+      "identifiers": [
+        "SemanticScholar:6409f7519f7768b4623f69e302efef7f53697047"
+      ],
+      "semantic_scholar_id": "6409f7519f7768b4623f69e302efef7f53697047",
+      "canonical_id": "arXiv:2601.11546",
+      "arxiv_id": "2601.11546",
+      "doi": "10.48550/arXiv.2601.11546",
+      "authors": [
+        "Xin Zhang",
+        "Shihong Gao",
+        "Yan-Yan Shen",
+        "Hao-Yang Li",
+        "Lei Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 309,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Graph Signal Processing Meets Mamba2: Adaptive Filter Bank via Delta Modulation",
+      "source_url": "https://arxiv.org/abs/2603.22333",
+      "year": 2026,
+      "published": "2026-03-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State-space models (SSMs) offer efficient alternatives to attention with linear-time recurrence. Mamba2, a recent SSM-based language model, uses selective input gating and a multi-head structure, enabling parallel computation and strong benchmark performance. However, its multi-head recurrence operates independently without structured utilization or analysis. In this work, we propose a novel method called Hierarchical ADaptive filter bank for Efficient SSMs (HADES), a Graph Signal Processing (GSP)-inspired framework that reinterprets Mamba2 as an adaptive filter bank on a line graph. Our hierarchical architecture introduces two filter types: shared filters for global low-pass behavior and expert filters for local high-pass behavior, achieved through structured bias on the parameter {\\Delta}. HADES achieves comparable performance to baseline models including Mamba2 across various benchmarks in language modeling, commonsense reasoning, and long-context retrieval, while using only 58.9% of the original parameters. In this regard, HADES bridges GSP and neural sequence modeling, enabling efficient, hierarchical, and interpretable filtering within state-space models.",
+      "identifiers": [
+        "SemanticScholar:fbcb22032e36f83b07b1e30e4617cb7c1458e2fe"
+      ],
+      "semantic_scholar_id": "fbcb22032e36f83b07b1e30e4617cb7c1458e2fe",
+      "canonical_id": "arXiv:2603.22333",
+      "arxiv_id": "2603.22333",
+      "doi": "10.48550/arXiv.2603.22333",
+      "authors": [
+        "Yehjin Shin",
+        "Seojin Kim",
+        "Noseong Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SelKV: Selective KV Cache Merging with Per-Token Merge-or-Drop and Attention Compensation",
+      "source_url": "https://arxiv.org/abs/2607.16213",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) generate text autoregressively, relying on a key-value (KV) cache whose memory footprint grows linearly with context length, creating a major bottleneck. Recent compression methods mitigate this cost via token merging; however, these approaches often rely on indiscriminate aggregation, which degrades representations and introduces attention sag, a mismatch where merged tokens receive the same softmax mass as individual tokens despite encoding multiple inputs. We propose a training-free, dual-component framework for KV cache compression that addresses these limitations. First, a soft cosine gate adaptively modulates merging decisions based on value-vector similarity, suppressing or discarding dissimilar tokens to preserve semantic fidelity. Second, we introduce an attention-ratio compensation mechanism that applies a decoding-time logit bias derived from prefill attention statistics, correcting the softmax imbalance induced by merging. Evaluated on LongBench (16 English datasets) while retaining only 25% of the KV cache, our framework achieves strong compressed performance against representative one-shot baselines. It is especially robust on the evaluated grouped-query attention (GQA) models, maintaining nearlossless generation quality. Furthermore, the method outperforms the full-cache baseline on complex multi-document QA tasks and delivers a 3.3x decoding speedup at 100k tokens.",
+      "identifiers": [
+        "SemanticScholar:d55938b89e214a99e80299758be62ba45a180aa9"
+      ],
+      "semantic_scholar_id": "d55938b89e214a99e80299758be62ba45a180aa9",
+      "canonical_id": "arXiv:2607.16213",
+      "arxiv_id": "2607.16213",
+      "doi": "10.48550/arXiv.2607.16213",
+      "authors": [
+        "Soumia Bouyahiaoui",
+        "Manel Kara Laouar",
+        "Aicha Boutorh",
+        "M. Ameur"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SlimVLM: Sensitivity-aware Dynamic Structured Pruning with Adaptive Visual Token Selection for Efficient Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2608.03580",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Vision-Language Models (VLMs) have demonstrated remarkable performance in processing and understanding both text and images, their large parameter sizes lead to significant computational overhead, limiting their deployment on resource-constrained devices. While pruning has been effective for compressing Large Language Models (LLMs), directly applying it to VLMs leads to significant performance drops, largely due to redundant visual tokens interfering with importance estimation. To this end, we propose SlimVLM, a structured pruning framework designed to compress VLMs while preserving their task performance. We introduce an adaptive visual token selection strategy for VLMs that leverages average text-to-visual attention scores to assess the importance of visual tokens, removing redundant ones during pruning based on a set threshold, thereby optimizing the importance calculation. Recognizing the varying tolerance to sparsity across different modules, we also propose a Sensitivity-aware dynamic pruning mechanism that determines the appropriate pruning ratio for each module by calculating the linear reconstruction error between the outputs of the pruned and unpruned modules, ensuring overall performance stability. Experimental results show that SlimVLM outperforms existing methods across multiple multimodal benchmarks, achieving state-of-the-art performance.",
+      "identifiers": [
+        "SemanticScholar:5cdcb7dd54ec3553a3ba59a0bb685d80788ac87e"
+      ],
+      "semantic_scholar_id": "5cdcb7dd54ec3553a3ba59a0bb685d80788ac87e",
+      "canonical_id": "arXiv:2608.03580",
+      "arxiv_id": "2608.03580",
+      "authors": [
+        "Yaozhi Wen",
+        "Jialong Guo",
+        "Zhen-Liang Ni",
+        "Han Shu",
+        "Xinghao Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 66,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MatMamba: A Matryoshka State Space Model",
+      "source_url": "https://arxiv.org/abs/2410.06718",
+      "year": 2024,
+      "published": "2024-10-09",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State Space Models (SSMs) like Mamba2 are a promising alternative to Transformers, with faster theoretical training and inference times -- especially for long context lengths. Recent work on Matryoshka Representation Learning -- and its application to Transformer backbones in works like MatFormer -- showed how to introduce nested granularities of smaller submodels in one universal elastic model. In this work, we present MatMamba: a state space model which combines Matryoshka-style learning with Mamba2, by modifying the block to contain nested dimensions to enable joint training and adaptive inference. MatMamba allows for efficient and adaptive deployment across various model sizes. We train a single large MatMamba model and are able to get a number of smaller nested models for free -- while maintaining or improving upon the performance of a baseline smaller model trained from scratch. We train language and image models at a variety of parameter sizes from 35M to 1.4B. Our results on ImageNet and FineWeb show that MatMamba models scale comparably to Transformers, while having more efficient inference characteristics. This makes MatMamba a practically viable option for deploying large-scale models in an elastic way based on the available inference compute. Code and models are open sourced at \\url{https://github.com/ScaledFoundations/MatMamba}",
+      "identifiers": [
+        "SemanticScholar:0356e8dda3881561199dbc5067f406d615af102d"
+      ],
+      "semantic_scholar_id": "0356e8dda3881561199dbc5067f406d615af102d",
+      "canonical_id": "arXiv:2410.06718",
+      "arxiv_id": "2410.06718",
+      "doi": "10.48550/arXiv.2410.06718",
+      "authors": [
+        "A. Shukla",
+        "Sai H. Vemprala",
+        "Aditya Kusupati",
+        "Ashish Kapoor"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 730,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MoreauPruner: Robust Pruning of Large Language Models against Weight Perturbations",
+      "source_url": "https://arxiv.org/abs/2406.07017",
+      "year": 2024,
+      "published": "2024-06-11",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Few-shot gradient methods have been extensively utilized in existing model pruning methods, where the model weights are regarded as static values and the effects of potential weight perturbations are not considered. However, the widely used large language models (LLMs) have several billion model parameters, which could increase the fragility of few-shot gradient pruning. In this work, we experimentally show that one-shot gradient pruning algorithms could lead to unstable results under perturbations to model weights. And the minor error of switching between data formats bfloat16 and float16 could result in drastically different outcomes. To address such instabilities, we leverage optimization analysis and propose an LLM structural pruning method, called MoreauPruner, with provable robustness against weight perturbations. In MoreauPruner, the model weight importance is estimated based on the neural network's Moreau envelope, which can be flexibly combined with $\\ell_1$-norm regularization techniques to induce the sparsity required in the pruning task. We extensively evaluate the MoreauPruner algorithm on several well-known LLMs, including LLaMA-7B, LLaMA-13B, LLaMA3-8B, and Vicuna-7B. Our numerical results suggest the robustness of MoreauPruner against weight perturbations, and indicate the MoreauPruner's successful accuracy-based scores in comparison to several existing pruning methods. We have released the code in \\url{https://github.com/ShiningSord/MoreauPruner}.",
+      "identifiers": [
+        "SemanticScholar:7c54ff4d0119c6159d2b20844efd7996e2965017"
+      ],
+      "semantic_scholar_id": "7c54ff4d0119c6159d2b20844efd7996e2965017",
+      "canonical_id": "arXiv:2406.07017",
+      "arxiv_id": "2406.07017",
+      "doi": "10.48550/arXiv.2406.07017",
+      "authors": [
+        "Zi-Xiao Wang",
+        "Jingwei Zhang",
+        "Wenqian Zhao",
+        "F. Farnia",
+        "Bei Yu"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 850,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Activation-aware Probe-Query: Effective Key-Value Retrieval for Long-Context LLMs Inference",
+      "source_url": "https://arxiv.org/abs/2502.13542",
+      "year": 2025,
+      "published": "2025-02-19",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in large language models (LLMs) have showcased exceptional performance in long-context tasks, while facing significant inference efficiency challenges with limited GPU memory. Existing solutions first proposed the sliding-window approach to accumulate a set of historical \\textbf{key-value} (KV) pairs for reuse, then further improvements selectively retain its subsets at each step. However, due to the sparse attention distribution across a long context, it is hard to identify and recall relevant KV pairs, as the attention is distracted by massive candidate pairs. Additionally, we found it promising to select representative tokens as probe-Query in each sliding window to effectively represent the entire context, which is an approach overlooked by existing methods. Thus, we propose \\textbf{ActQKV}, a training-free, \\textbf{Act}ivation-aware approach that dynamically determines probe-\\textbf{Q}uery and leverages it to retrieve the relevant \\textbf{KV} pairs for inference. Specifically, ActQKV monitors a token-level indicator, Activation Bias, within each context window, enabling the proper construction of probe-Query for retrieval at pre-filling stage. To accurately recall the relevant KV pairs and minimize the irrelevant ones, we design a dynamic KV cut-off mechanism guided by information density across layers at the decoding stage. Experiments on the Long-Bench and $\\infty$ Benchmarks demonstrate its state-of-the-art performance with competitive inference quality and resource efficiency.",
+      "identifiers": [
+        "SemanticScholar:b345933a16c48404a38f8c1dc2c9ea03968dc0e7"
+      ],
+      "semantic_scholar_id": "b345933a16c48404a38f8c1dc2c9ea03968dc0e7",
+      "canonical_id": "arXiv:2502.13542",
+      "arxiv_id": "2502.13542",
+      "doi": "10.48550/arXiv.2502.13542",
+      "authors": [
+        "Q. Xiao",
+        "Jia-Chuan Wang",
+        "Hao-Yang Li",
+        "Cheng Deng",
+        "Jiaqi Tang",
+        "Shuang-Yin Li",
+        "Yong-Qi Zhang",
+        "Jun Wang",
+        "Lei Chen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 597,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TicketLLM: Next-Generation Sparse and Low-bit Transformers with Supermask-based Method",
+      "source_url": "https://www.semanticscholar.org/paper/e95fad77fb092441c01f1bbb60f8f8ae7ab6735e",
+      "year": 2025,
+      "published": null,
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e95fad77fb092441c01f1bbb60f8f8ae7ab6735e"
+      ],
+      "semantic_scholar_id": "e95fad77fb092441c01f1bbb60f8f8ae7ab6735e",
+      "canonical_id": "SemanticScholar:e95fad77fb092441c01f1bbb60f8f8ae7ab6735e",
+      "authors": [
+        "Yasuyuki Okoshi",
+        "Hikari Otsuka",
+        "Daichi Fujiki",
+        "Masato Motomura"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 465,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.03072",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.03072",
+        "id:SemanticScholar:306b3195ab528acb81003fbd8301a64f4d4a252f",
+        "id:arXiv:2604.03072",
+        "title:mipruner crossmodal mutual informationguided token pruner for efficient mllms",
+        "url:https://arxiv.org/abs/2604.03072"
+      ],
+      "record": {
+        "title": "MI-Pruner: Crossmodal Mutual Information-guided Token Pruner for Efficient MLLMs",
+        "source_url": "https://arxiv.org/abs/2604.03072",
+        "year": 2026,
+        "published": "2026-04-03",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "For multimodal large language models (MLLMs), visual information is relatively sparse compared with text. As a result, research on visual pruning emerges for efficient inference. Current approaches typically measure token importance based on the attention scores in the visual encoder or in the LLM decoder, then select visual tokens with high attention scores while pruning others. In this paper, we pursue a different and more surgical approach. Instead of relying on mechanism-specific signals, we directly compute Mutual Information (MI) between visual and textual features themselves, prior to their interaction. This allows us to explicitly measure crossmodal dependency at the feature levels. Our MI-Pruner is simple, efficient and non-intrusive, requiring no access to internal attention maps or architectural modifications. Experimental results demonstrate that our approach outperforms previous attention-based pruning methods with minimal latency.",
+        "identifiers": [
+          "SemanticScholar:306b3195ab528acb81003fbd8301a64f4d4a252f"
+        ],
+        "semantic_scholar_id": "306b3195ab528acb81003fbd8301a64f4d4a252f",
+        "canonical_id": "arXiv:2604.03072",
+        "arxiv_id": "2604.03072",
+        "doi": "10.48550/arXiv.2604.03072",
+        "authors": [
+          "Jia-Meng Li",
+          "A. Tiulpin",
+          "M. Blaschko"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 189,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.04399",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.04399",
+        "id:SemanticScholar:75be89a2b2d4801957b1afdab1627308651cb301",
+        "id:arXiv:2602.04399",
+        "title:swordsman entropydriven adaptive block partition for efficient diffusion language models",
+        "url:https://arxiv.org/abs/2602.04399"
+      ],
+      "record": {
+        "title": "Swordsman: Entropy-Driven Adaptive Block Partition for Efficient Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2602.04399",
+        "year": 2026,
+        "published": "2026-02-04",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block-wise decoding effectively improves the inference speed and quality in diffusion language models (DLMs) by combining inter-block sequential denoising and intra-block parallel unmasking. However, existing block-wise decoding methods typically partition blocks in a rigid and fixed manner, which inevitably fragments complete semantic or syntactic constituents, leading to suboptimal performance. Inspired by the entropy reduction hypothesis (ERH), we recognize that constituent boundaries offer greater opportunities for uncertainty reduction, which motivates us to employ entropy analysis for identifying constituent boundaries. Therefore, we propose Swordsman, an entropy-driven adaptive block-wise decoding framework for DLMs. Swordsman adaptively partitions blocks by identifying entropy shifts between adjacent tokens to better align with semantic or syntactic constituent boundaries. In addition, Swordsman dynamically adjusts unmasking thresholds conditioned on the real-time unmasking status within a block, further improving both efficiency and stability. As a training-free framework, supported by KV Cache, Swordsman demonstrates state-of-the-art performance across extensive evaluations.",
+        "identifiers": [
+          "SemanticScholar:75be89a2b2d4801957b1afdab1627308651cb301"
+        ],
+        "semantic_scholar_id": "75be89a2b2d4801957b1afdab1627308651cb301",
+        "canonical_id": "arXiv:2602.04399",
+        "arxiv_id": "2602.04399",
+        "doi": "10.48550/arXiv.2602.04399",
+        "authors": [
+          "Yu Zhang",
+          "Xinchen Li",
+          "Jialei Zhou",
+          "Hongnan Ma",
+          "Zhongwei Wan",
+          "Yiwei Shi",
+          "Duoqian Miao",
+          "Qi Zhang",
+          "Long-Bing Cao"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 247,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.01949",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.01949",
+        "id:SemanticScholar:4f66a7bbd905468cd97ed04712bf4ccae1c4fb5e",
+        "id:arXiv:2512.01949",
+        "title:script graphstructured and queryconditioned semantic token pruning for multimodal large language models",
+        "url:https://arxiv.org/abs/2512.01949"
+      ],
+      "record": {
+        "title": "Script: Graph-Structured and Query-Conditioned Semantic Token Pruning for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2512.01949",
+        "year": 2025,
+        "published": "2025-12-01",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid growth of visual tokens in multimodal large language models (MLLMs) leads to excessive memory consumption and inference latency, especially when handling high-resolution images and videos. Token pruning is a technique used to mitigate this issue by removing redundancy, but existing methods often ignore relevance to the user query or suffer from the limitations of attention mechanisms, reducing their adaptability and effectiveness. To address these challenges, we propose Script, a plug-and-play pruning method that requires no retraining and generalizes across diverse MLLMs. Script comprises two modules: a graph-structured pruning module that removes visually redundant tokens, and a query-conditioned semantic pruning module that preserves query-relevant visual information. Together, they enhance performance on multimodal tasks. Experiments on fourteen benchmarks across image and video understanding tasks show that Script consistently achieves higher model efficiency and predictive accuracy compared to existing pruning methods. On LLaVA-NeXT-7B, it achieves up to 6.8x prefill speedup and 10x FLOP reduction, while retaining 96.88% of the original performance.",
+        "identifiers": [
+          "SemanticScholar:4f66a7bbd905468cd97ed04712bf4ccae1c4fb5e"
+        ],
+        "semantic_scholar_id": "4f66a7bbd905468cd97ed04712bf4ccae1c4fb5e",
+        "canonical_id": "arXiv:2512.01949",
+        "arxiv_id": "2512.01949",
+        "doi": "10.48550/arXiv.2512.01949",
+        "authors": [
+          "Zhongyu Yang",
+          "Dan-Nong Xu",
+          "Wei Pang",
+          "Ying-Fang Yuan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 312,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3788550.3794877",
+      "identity_tokens": [
+        "id:DOI:10.1145/3788550.3794877",
+        "id:SemanticScholar:c073d24e5a36afd0e37723cf63be76ee51347a08",
+        "title:astl an adaptive serving stack for llms to balance utilization and tail latency",
+        "url:https://doi.org/10.1145/3788550.3794877"
+      ],
+      "record": {
+        "title": "ASTL: An Adaptive Serving Stack for LLMs to Balance Utilization and Tail Latency",
+        "source_url": "https://doi.org/10.1145/3788550.3794877",
+        "year": 2026,
+        "published": "2026-04-13",
+        "venue": "SEAMS@ICSE",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present ASTL, a practical serving stack that adapts runtime parallelism to each request’s predicted output length, improving throughput and tail latency for LLM inference on CPU and GPU. The design rests on two ingredients: (i) an offline knee identification step that profiles sequence-level parallelism (NP) to find regime-specific operating points for short vs. long generations; and (ii) a lightweight XGBoost predictor that estimates output tokens at admission time using only proxy, admission-available cues (e.g., input length, presence of code fences/backticks, punctuation patterns, temperature/top-p)—without explicit domain labels. At runtime, ASTL routes requests to per-NP lanes with continuous batching and length-homogeneous micro-batches, running just below the knee for the inferred regime. Implemented atop llama.cpp and evaluated on a CPU m5.4xlarge (Llama-2-7B Q4) and a single-GPU A10 (Llama-2-13B Q4) under mixed/short workloads, ASTL reduces p95/p99 tails while preserving near-peak throughput.",
+        "identifiers": [
+          "SemanticScholar:c073d24e5a36afd0e37723cf63be76ee51347a08"
+        ],
+        "semantic_scholar_id": "c073d24e5a36afd0e37723cf63be76ee51347a08",
+        "doi": "10.1145/3788550.3794877",
+        "canonical_id": "DOI:10.1145/3788550.3794877",
+        "authors": [
+          "Farhoud Jafari Kaleibar",
+          "Marin Litoiu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 179,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.00021",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.00021",
+        "id:SemanticScholar:25a69145c46da12196ad562a0b30d7e3edd3af0e",
+        "id:arXiv:2606.00021",
+        "title:sense semantic embedding navigation with softgated evaluation for retrievalbased speculative decoding",
+        "url:https://arxiv.org/abs/2606.00021"
+      ],
+      "record": {
+        "title": "SENSE: Semantic Embedding Navigation with Soft-gated Evaluation for Retrieval-based Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2606.00021",
+        "year": 2026,
+        "published": "2026-04-14",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative Decoding (SD) accelerates Large Language Model (LLM) inference by employing a lightweight draft model to propose candidate tokens, which are verified in parallel by the target model, without compromising generation quality. While Retrieval-based Speculative Decoding (RSD) is favored for its plug-and-play versatility, its potential is impeded by rigid lexical dependencies, rendering both retrieval and verification brittle to surface-level variations. To address this, we propose SENSE (Semantic Embedding Navigation with Soft-gated Evaluation). By anchoring retrieval on the hidden states of the target model, SENSE establishes robust semantic alignment, which empowers the Soft-gated Evaluation module to validate semantic equivalence rather than surface forms. To ensure rigorous benchmarking, we deconstruct existing methods into atomic primitives within a unified framework, facilitating granular, component-level comparison. Extensive experiments across diverse domains demonstrate that SENSE outperforms multiple baselines on the LLaMA and Qwen families, attaining up to 4.09 mean acceptance length and 3.26x speedup, while preserving generation quality. Our code will be released upon publication.",
+        "identifiers": [
+          "SemanticScholar:25a69145c46da12196ad562a0b30d7e3edd3af0e"
+        ],
+        "semantic_scholar_id": "25a69145c46da12196ad562a0b30d7e3edd3af0e",
+        "canonical_id": "arXiv:2606.00021",
+        "arxiv_id": "2606.00021",
+        "doi": "10.48550/arXiv.2606.00021",
+        "authors": [
+          "Shao-Wen Chen",
+          "Zhicheng Liao",
+          "Hongwei Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 178,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.07542",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.07542",
+        "id:SemanticScholar:2a16a4bb634301c40821e0c1d1987bb7b9e4e9a8",
+        "id:arXiv:2405.07542",
+        "title:emssd efficient multisample speculative decoding for accelerating large language models",
+        "url:https://arxiv.org/abs/2405.07542"
+      ],
+      "record": {
+        "title": "EMS-SD: Efficient Multi-sample Speculative Decoding for Accelerating Large Language Models",
+        "source_url": "https://arxiv.org/abs/2405.07542",
+        "year": 2024,
+        "published": "2024-05-13",
+        "venue": "North American Chapter of the Association for Computational Linguistics",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding emerges as a pivotal technique for enhancing the inference speed of Large Language Models (LLMs). Despite recent research aiming to improve prediction efficiency, multi-sample speculative decoding has been overlooked due to varying numbers of accepted tokens within a batch in the verification phase. Vanilla method adds padding tokens in order to ensure that the number of new tokens remains consistent across samples. However, this increases the computational and memory access overhead, thereby reducing the speedup ratio. We propose a novel method that can resolve the issue of inconsistent tokens accepted by different samples without necessitating an increase in memory or computing overhead. Furthermore, our proposed method can handle the situation where the prediction tokens of different samples are inconsistent without the need to add padding tokens. Sufficient experiments demonstrate the efficacy of our method. Our code is available at https://github.com/niyunsheng/EMS-SD.",
+        "identifiers": [
+          "SemanticScholar:2a16a4bb634301c40821e0c1d1987bb7b9e4e9a8"
+        ],
+        "semantic_scholar_id": "2a16a4bb634301c40821e0c1d1987bb7b9e4e9a8",
+        "canonical_id": "arXiv:2405.07542",
+        "arxiv_id": "2405.07542",
+        "doi": "10.48550/arXiv.2405.07542",
+        "authors": [
+          "Yunsheng Ni",
+          "Chuanjian Liu",
+          "Ye-Hui Tang",
+          "Kai Han",
+          "Yun-He Wang"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 879,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.11546",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.11546",
+        "id:SemanticScholar:6409f7519f7768b4623f69e302efef7f53697047",
+        "id:arXiv:2601.11546",
+        "title:relserve fast llm inference serving on relational data",
+        "url:https://arxiv.org/abs/2601.11546"
+      ],
+      "record": {
+        "title": "RelServe: Fast LLM Inference Serving on Relational Data",
+        "source_url": "https://arxiv.org/abs/2601.11546",
+        "year": 2025,
+        "published": "2025-12-04",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The use of Large Language Models (LLMs) for querying relational data has given rise to relQuery, a workload pattern that applies templated LLM calls to structured tables. As relQuery services become more widely adopted in applications such as AI-powered spreadsheets, fast response times under concurrent query loads are increasingly important. Unfortunately, current LLM engines face severe latency bottlenecks from Head-of-Line (HoL) blocking across three comparable inference phases: waiting, core running, and tail running. Existing static priority scheduling methods only address HoL blocking during the waiting phase, leaving two critical problems unsolved. First, the absence of a priority update mechanism causes inaccurate prioritization and continued HoL blocking during core execution. Second, suboptimal prefill-decode batching exacerbates HoL blocking in tail execution and worsens latency trade-offs between running and waiting relQueries. To address these problems, we propose RelServe, an optimized LLM engine for low-latency relQuery serving. RelServe features two core innovations: a Dynamic Priority Updater that continuously adjusts priorities while minimizing overhead via statistical approximations, and an Adaptive Batch Arranger that quantitatively evaluates candidate prefill and decode batches to minimize projected average latency. Extensive experiments on four real-world datasets using LLMs ranging from 13B to 70B parameters show that RelServe reduces average serving latency by up to 3.1x compared to vLLM.",
+        "identifiers": [
+          "SemanticScholar:6409f7519f7768b4623f69e302efef7f53697047"
+        ],
+        "semantic_scholar_id": "6409f7519f7768b4623f69e302efef7f53697047",
+        "canonical_id": "arXiv:2601.11546",
+        "arxiv_id": "2601.11546",
+        "doi": "10.48550/arXiv.2601.11546",
+        "authors": [
+          "Xin Zhang",
+          "Shihong Gao",
+          "Yan-Yan Shen",
+          "Hao-Yang Li",
+          "Lei Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 309,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.22333",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.22333",
+        "id:SemanticScholar:fbcb22032e36f83b07b1e30e4617cb7c1458e2fe",
+        "id:arXiv:2603.22333",
+        "title:graph signal processing meets mamba2 adaptive filter bank via delta modulation",
+        "url:https://arxiv.org/abs/2603.22333"
+      ],
+      "record": {
+        "title": "Graph Signal Processing Meets Mamba2: Adaptive Filter Bank via Delta Modulation",
+        "source_url": "https://arxiv.org/abs/2603.22333",
+        "year": 2026,
+        "published": "2026-03-20",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State-space models (SSMs) offer efficient alternatives to attention with linear-time recurrence. Mamba2, a recent SSM-based language model, uses selective input gating and a multi-head structure, enabling parallel computation and strong benchmark performance. However, its multi-head recurrence operates independently without structured utilization or analysis. In this work, we propose a novel method called Hierarchical ADaptive filter bank for Efficient SSMs (HADES), a Graph Signal Processing (GSP)-inspired framework that reinterprets Mamba2 as an adaptive filter bank on a line graph. Our hierarchical architecture introduces two filter types: shared filters for global low-pass behavior and expert filters for local high-pass behavior, achieved through structured bias on the parameter {\\Delta}. HADES achieves comparable performance to baseline models including Mamba2 across various benchmarks in language modeling, commonsense reasoning, and long-context retrieval, while using only 58.9% of the original parameters. In this regard, HADES bridges GSP and neural sequence modeling, enabling efficient, hierarchical, and interpretable filtering within state-space models.",
+        "identifiers": [
+          "SemanticScholar:fbcb22032e36f83b07b1e30e4617cb7c1458e2fe"
+        ],
+        "semantic_scholar_id": "fbcb22032e36f83b07b1e30e4617cb7c1458e2fe",
+        "canonical_id": "arXiv:2603.22333",
+        "arxiv_id": "2603.22333",
+        "doi": "10.48550/arXiv.2603.22333",
+        "authors": [
+          "Yehjin Shin",
+          "Seojin Kim",
+          "Noseong Park"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 203,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.16213",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.16213",
+        "id:SemanticScholar:d55938b89e214a99e80299758be62ba45a180aa9",
+        "id:arXiv:2607.16213",
+        "title:selkv selective kv cache merging with pertoken mergeordrop and attention compensation",
+        "url:https://arxiv.org/abs/2607.16213"
+      ],
+      "record": {
+        "title": "SelKV: Selective KV Cache Merging with Per-Token Merge-or-Drop and Attention Compensation",
+        "source_url": "https://arxiv.org/abs/2607.16213",
+        "year": 2026,
+        "published": "2026-05-19",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) generate text autoregressively, relying on a key-value (KV) cache whose memory footprint grows linearly with context length, creating a major bottleneck. Recent compression methods mitigate this cost via token merging; however, these approaches often rely on indiscriminate aggregation, which degrades representations and introduces attention sag, a mismatch where merged tokens receive the same softmax mass as individual tokens despite encoding multiple inputs. We propose a training-free, dual-component framework for KV cache compression that addresses these limitations. First, a soft cosine gate adaptively modulates merging decisions based on value-vector similarity, suppressing or discarding dissimilar tokens to preserve semantic fidelity. Second, we introduce an attention-ratio compensation mechanism that applies a decoding-time logit bias derived from prefill attention statistics, correcting the softmax imbalance induced by merging. Evaluated on LongBench (16 English datasets) while retaining only 25% of the KV cache, our framework achieves strong compressed performance against representative one-shot baselines. It is especially robust on the evaluated grouped-query attention (GQA) models, maintaining nearlossless generation quality. Furthermore, the method outperforms the full-cache baseline on complex multi-document QA tasks and delivers a 3.3x decoding speedup at 100k tokens.",
+        "identifiers": [
+          "SemanticScholar:d55938b89e214a99e80299758be62ba45a180aa9"
+        ],
+        "semantic_scholar_id": "d55938b89e214a99e80299758be62ba45a180aa9",
+        "canonical_id": "arXiv:2607.16213",
+        "arxiv_id": "2607.16213",
+        "doi": "10.48550/arXiv.2607.16213",
+        "authors": [
+          "Soumia Bouyahiaoui",
+          "Manel Kara Laouar",
+          "Aicha Boutorh",
+          "M. Ameur"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 143,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.03580",
+      "identity_tokens": [
+        "id:SemanticScholar:5cdcb7dd54ec3553a3ba59a0bb685d80788ac87e",
+        "id:arXiv:2608.03580",
+        "title:slimvlm sensitivityaware dynamic structured pruning with adaptive visual token selection for efficient visionlanguage models",
+        "url:https://arxiv.org/abs/2608.03580"
+      ],
+      "record": {
+        "title": "SlimVLM: Sensitivity-aware Dynamic Structured Pruning with Adaptive Visual Token Selection for Efficient Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2608.03580",
+        "year": 2026,
+        "published": "2026-08-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Vision-Language Models (VLMs) have demonstrated remarkable performance in processing and understanding both text and images, their large parameter sizes lead to significant computational overhead, limiting their deployment on resource-constrained devices. While pruning has been effective for compressing Large Language Models (LLMs), directly applying it to VLMs leads to significant performance drops, largely due to redundant visual tokens interfering with importance estimation. To this end, we propose SlimVLM, a structured pruning framework designed to compress VLMs while preserving their task performance. We introduce an adaptive visual token selection strategy for VLMs that leverages average text-to-visual attention scores to assess the importance of visual tokens, removing redundant ones during pruning based on a set threshold, thereby optimizing the importance calculation. Recognizing the varying tolerance to sparsity across different modules, we also propose a Sensitivity-aware dynamic pruning mechanism that determines the appropriate pruning ratio for each module by calculating the linear reconstruction error between the outputs of the pruned and unpruned modules, ensuring overall performance stability. Experimental results show that SlimVLM outperforms existing methods across multiple multimodal benchmarks, achieving state-of-the-art performance.",
+        "identifiers": [
+          "SemanticScholar:5cdcb7dd54ec3553a3ba59a0bb685d80788ac87e"
+        ],
+        "semantic_scholar_id": "5cdcb7dd54ec3553a3ba59a0bb685d80788ac87e",
+        "canonical_id": "arXiv:2608.03580",
+        "arxiv_id": "2608.03580",
+        "authors": [
+          "Yaozhi Wen",
+          "Jialong Guo",
+          "Zhen-Liang Ni",
+          "Han Shu",
+          "Xinghao Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 66,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.06718",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.06718",
+        "id:SemanticScholar:0356e8dda3881561199dbc5067f406d615af102d",
+        "id:arXiv:2410.06718",
+        "title:matmamba a matryoshka state space model",
+        "url:https://arxiv.org/abs/2410.06718"
+      ],
+      "record": {
+        "title": "MatMamba: A Matryoshka State Space Model",
+        "source_url": "https://arxiv.org/abs/2410.06718",
+        "year": 2024,
+        "published": "2024-10-09",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State Space Models (SSMs) like Mamba2 are a promising alternative to Transformers, with faster theoretical training and inference times -- especially for long context lengths. Recent work on Matryoshka Representation Learning -- and its application to Transformer backbones in works like MatFormer -- showed how to introduce nested granularities of smaller submodels in one universal elastic model. In this work, we present MatMamba: a state space model which combines Matryoshka-style learning with Mamba2, by modifying the block to contain nested dimensions to enable joint training and adaptive inference. MatMamba allows for efficient and adaptive deployment across various model sizes. We train a single large MatMamba model and are able to get a number of smaller nested models for free -- while maintaining or improving upon the performance of a baseline smaller model trained from scratch. We train language and image models at a variety of parameter sizes from 35M to 1.4B. Our results on ImageNet and FineWeb show that MatMamba models scale comparably to Transformers, while having more efficient inference characteristics. This makes MatMamba a practically viable option for deploying large-scale models in an elastic way based on the available inference compute. Code and models are open sourced at \\url{https://github.com/ScaledFoundations/MatMamba}",
+        "identifiers": [
+          "SemanticScholar:0356e8dda3881561199dbc5067f406d615af102d"
+        ],
+        "semantic_scholar_id": "0356e8dda3881561199dbc5067f406d615af102d",
+        "canonical_id": "arXiv:2410.06718",
+        "arxiv_id": "2410.06718",
+        "doi": "10.48550/arXiv.2410.06718",
+        "authors": [
+          "A. Shukla",
+          "Sai H. Vemprala",
+          "Aditya Kusupati",
+          "Ashish Kapoor"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 730,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.07017",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2406.07017",
+        "id:SemanticScholar:7c54ff4d0119c6159d2b20844efd7996e2965017",
+        "id:arXiv:2406.07017",
+        "title:moreaupruner robust pruning of large language models against weight perturbations",
+        "url:https://arxiv.org/abs/2406.07017"
+      ],
+      "record": {
+        "title": "MoreauPruner: Robust Pruning of Large Language Models against Weight Perturbations",
+        "source_url": "https://arxiv.org/abs/2406.07017",
+        "year": 2024,
+        "published": "2024-06-11",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Few-shot gradient methods have been extensively utilized in existing model pruning methods, where the model weights are regarded as static values and the effects of potential weight perturbations are not considered. However, the widely used large language models (LLMs) have several billion model parameters, which could increase the fragility of few-shot gradient pruning. In this work, we experimentally show that one-shot gradient pruning algorithms could lead to unstable results under perturbations to model weights. And the minor error of switching between data formats bfloat16 and float16 could result in drastically different outcomes. To address such instabilities, we leverage optimization analysis and propose an LLM structural pruning method, called MoreauPruner, with provable robustness against weight perturbations. In MoreauPruner, the model weight importance is estimated based on the neural network's Moreau envelope, which can be flexibly combined with $\\ell_1$-norm regularization techniques to induce the sparsity required in the pruning task. We extensively evaluate the MoreauPruner algorithm on several well-known LLMs, including LLaMA-7B, LLaMA-13B, LLaMA3-8B, and Vicuna-7B. Our numerical results suggest the robustness of MoreauPruner against weight perturbations, and indicate the MoreauPruner's successful accuracy-based scores in comparison to several existing pruning methods. We have released the code in \\url{https://github.com/ShiningSord/MoreauPruner}.",
+        "identifiers": [
+          "SemanticScholar:7c54ff4d0119c6159d2b20844efd7996e2965017"
+        ],
+        "semantic_scholar_id": "7c54ff4d0119c6159d2b20844efd7996e2965017",
+        "canonical_id": "arXiv:2406.07017",
+        "arxiv_id": "2406.07017",
+        "doi": "10.48550/arXiv.2406.07017",
+        "authors": [
+          "Zi-Xiao Wang",
+          "Jingwei Zhang",
+          "Wenqian Zhao",
+          "F. Farnia",
+          "Bei Yu"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 850,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.13542",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.13542",
+        "id:SemanticScholar:b345933a16c48404a38f8c1dc2c9ea03968dc0e7",
+        "id:arXiv:2502.13542",
+        "title:activationaware probequery effective keyvalue retrieval for longcontext llms inference",
+        "url:https://arxiv.org/abs/2502.13542"
+      ],
+      "record": {
+        "title": "Activation-aware Probe-Query: Effective Key-Value Retrieval for Long-Context LLMs Inference",
+        "source_url": "https://arxiv.org/abs/2502.13542",
+        "year": 2025,
+        "published": "2025-02-19",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in large language models (LLMs) have showcased exceptional performance in long-context tasks, while facing significant inference efficiency challenges with limited GPU memory. Existing solutions first proposed the sliding-window approach to accumulate a set of historical \\textbf{key-value} (KV) pairs for reuse, then further improvements selectively retain its subsets at each step. However, due to the sparse attention distribution across a long context, it is hard to identify and recall relevant KV pairs, as the attention is distracted by massive candidate pairs. Additionally, we found it promising to select representative tokens as probe-Query in each sliding window to effectively represent the entire context, which is an approach overlooked by existing methods. Thus, we propose \\textbf{ActQKV}, a training-free, \\textbf{Act}ivation-aware approach that dynamically determines probe-\\textbf{Q}uery and leverages it to retrieve the relevant \\textbf{KV} pairs for inference. Specifically, ActQKV monitors a token-level indicator, Activation Bias, within each context window, enabling the proper construction of probe-Query for retrieval at pre-filling stage. To accurately recall the relevant KV pairs and minimize the irrelevant ones, we design a dynamic KV cut-off mechanism guided by information density across layers at the decoding stage. Experiments on the Long-Bench and $\\infty$ Benchmarks demonstrate its state-of-the-art performance with competitive inference quality and resource efficiency.",
+        "identifiers": [
+          "SemanticScholar:b345933a16c48404a38f8c1dc2c9ea03968dc0e7"
+        ],
+        "semantic_scholar_id": "b345933a16c48404a38f8c1dc2c9ea03968dc0e7",
+        "canonical_id": "arXiv:2502.13542",
+        "arxiv_id": "2502.13542",
+        "doi": "10.48550/arXiv.2502.13542",
+        "authors": [
+          "Q. Xiao",
+          "Jia-Chuan Wang",
+          "Hao-Yang Li",
+          "Cheng Deng",
+          "Jiaqi Tang",
+          "Shuang-Yin Li",
+          "Yong-Qi Zhang",
+          "Jun Wang",
+          "Lei Chen"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 597,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:e95fad77fb092441c01f1bbb60f8f8ae7ab6735e",
+      "identity_tokens": [
+        "id:SemanticScholar:e95fad77fb092441c01f1bbb60f8f8ae7ab6735e",
+        "title:ticketllm nextgeneration sparse and lowbit transformers with supermaskbased method",
+        "url:https://www.semanticscholar.org/paper/e95fad77fb092441c01f1bbb60f8f8ae7ab6735e"
+      ],
+      "record": {
+        "title": "TicketLLM: Next-Generation Sparse and Low-bit Transformers with Supermask-based Method",
+        "source_url": "https://www.semanticscholar.org/paper/e95fad77fb092441c01f1bbb60f8f8ae7ab6735e",
+        "year": 2025,
+        "published": null,
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:e95fad77fb092441c01f1bbb60f8f8ae7ab6735e"
+        ],
+        "semantic_scholar_id": "e95fad77fb092441c01f1bbb60f8f8ae7ab6735e",
+        "canonical_id": "SemanticScholar:e95fad77fb092441c01f1bbb60f8f8ae7ab6735e",
+        "authors": [
+          "Yasuyuki Okoshi",
+          "Hikari Otsuka",
+          "Daichi Fujiki",
+          "Masato Motomura"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 465,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:bd8d023584f8274d1f0150f8feea0e3a363dac56f40faa6d2bc6399fbda51c95",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

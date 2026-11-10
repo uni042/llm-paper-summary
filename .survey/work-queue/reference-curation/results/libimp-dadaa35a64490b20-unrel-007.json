@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dadaa35a64490b20-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2304.05128",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2304.05128",
+    "identity_tokens": [
+      "arXiv:2304.05128"
+    ],
+    "reason": "生成コードを実行してfeedbackを得て説明・修正を反復するself-debugging手法でcode generation精度を改善する推論/学習戦略研究。LLM実行基盤の高速化・省memory化を最終目的としない。",
+    "first_checked_at": "2026-10-04T17:56:14+00:00",
+    "last_checked_at": "2026-10-04T17:56:14+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md",
+      "papers/inference/99-other-inference-systems/2026-2608.21836-llm4llm-bridging-kernel-benchmarks-and-real-deployment-via-closed-loop-agentic-optimization.md"
+    ],
+    "title": "Teaching Large Language Models to Self-Debug"
+  },
+  "processed_at": "2026-10-04T17:56:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dadaa35a6449",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

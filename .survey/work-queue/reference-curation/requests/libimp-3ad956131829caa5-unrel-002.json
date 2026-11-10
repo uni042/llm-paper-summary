@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3ad956131829caa5-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2610.41039",
+  "reason": "fine-tuningされたMoEのexpert経路に残る構造的記憶をrouting/logitから推定し、分散配置時の漏洩と攻撃可能性を分析するセキュリティ研究。MoEの推論時routingに触れるものの、スループット・レイテンシ・KV・オフロード・量子化など推論効率の最適化を提案・評価していないためunrelated。単なるタイトル除外ではなく著者一次要旨の手法と評価目的を確認して判断した。",
+  "title": "Characterizing Recoverable Expert-Utilization Signatures in Fine-Tuned Mixture-of-Experts LLMs",
+  "identity_tokens": [
+    "arXiv:2610.41039"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3ad956131829",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

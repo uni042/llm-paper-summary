@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f34f000e4110c658-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.13623",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.13623",
+    "identity_tokens": [
+      "arXiv:2407.13623"
+    ],
+    "reason": "Primary abstract read at https://arxiv.org/abs/2407.13623: Vocabulary scaling and training compute/data laws; training-only.",
+    "first_checked_at": "2026-10-05T01:45:00+00:00",
+    "last_checked_at": "2026-10-05T01:45:00+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md",
+      "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+    ],
+    "title": "Scaling Laws with Vocabulary: Larger Models Deserve Larger Vocabularies"
+  },
+  "processed_at": "2026-10-05T01:45:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f34f000e4110",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "883e8cbaedfa90e30d0c719479f2a336f952d170ea493863113770cacce0edd1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d142fdf53fd9--libfile_1ea4346c3698819196ebf8e29fe0e0e7--2020-2004.02178-fastbert-under16kb-reaudit-20261008-1800-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2004.02178",
+  "worker_completed_at": "2026-10-08T18:07:12+09:00",
+  "worker_run_key": "20261008-1800-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7381,
+    "body_paragraphs": 35,
+    "method_chars": 2245,
+    "method_paragraphs": 11,
+    "evaluation_chars": 430,
+    "limitation_chars": 866,
+    "insufficiency_flags": [
+      "評価説明量 430 < 500"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 430 < 500"
+  ],
+  "processed_at": "2026-10-08T14:13:01+00:00"
+}

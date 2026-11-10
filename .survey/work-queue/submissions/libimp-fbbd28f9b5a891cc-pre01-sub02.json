@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Experience-Driven Dynamic Exits for LLMs with Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2606.03113",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models suffer from slow autoregressive inference. While self-speculative decoding accelerates this process, its efficiency is hampered by static configurations like fixed exit layers and speculation lengths. We reframe this optimization as a \\textbf{Markov Decision Process} and propose \\textbf{LEDE}, a framework that uses offline reinforcement learning. LEDE learns a policy to dynamically select the optimal exit layer and speculation length based on the local context of the generated sequence at each step, balancing computational cost and draft quality. Comprehensive evaluations on Llama-2 and Llama-3 models show LEDE achieves up to a $2.0\\times$$\\sim$$2.7\\times$ speedup over autoregressive decoding and and provides an additional 17\\% speedup over the static speculative baselines.",
+      "identifiers": [
+        "SemanticScholar:27c4b7d1a323813cb516502c8a812e9ade7de9bd"
+      ],
+      "semantic_scholar_id": "27c4b7d1a323813cb516502c8a812e9ade7de9bd",
+      "canonical_id": "arXiv:2606.03113",
+      "arxiv_id": "2606.03113",
+      "doi": "10.1109/icassp55912.2026.11464968",
+      "authors": [
+        "Yan-Yu Zhu",
+        "Hoilam Pao",
+        "Niu Hu",
+        "Wei Guo",
+        "Shaoxiong Zhan",
+        "Bo-Yu Lai",
+        "Zi-Tai Wang",
+        "Yong-Qin Zeng",
+        "Hai-Tao Zheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はself-speculative decodingの早期退出層とドラフト長を文脈に応じてオフラインRLで選ぶLEDEを提案。Llama-2/3で自己回帰比2.0〜2.7倍、静的投機的復号比さらに17%高速化を報告。LLM推論デコードの適応的高速化に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "On-Policy Attention Linearization",
+      "source_url": "https://arxiv.org/abs/2609.31947",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid transformer architectures that replace most softmax attention layers with linear attention offer transformer-level quality at a fraction of the memory cost. Rather than pretraining such models, a growing body of work distills them from already trained full-attention transformers. However, these distilled models often collapse on long-context retrieval and reasoning tasks, particularly when operating in thinking mode, where the efficiency gains of hybrid architectures matter most. Since linear attention layers must compress context into a fixed-size state, their errors compound over long sequences. As off-policy distillation never teaches the student model to recover from this drift, tasks that necessitate longer sequence lengths become especially challenging. We introduce On-Policy Attention Linearization (OPAL) in which the hybrid attention student samples its own long-context trajectories and receives dense supervision from the frozen full-attention teacher. Applying OPAL to Qwen3-4B and MiMo-7B-RL-0530, we recover $87$--$94\\%$ of full-attention performance on commonsense reasoning, $100\\%$ on needle-in-a-haystack (NIAH) retrieval, and $83$--$93\\%$ on mathematical reasoning with only 3B training tokens. We achieve these results without supervised fine-tuning (SFT) or reinforcement learning with verifiable rewards (RLVR). Compared with the strongest prior linearization method, which recovers $68\\%$ of its teacher's retrieval performance and $21.6\\%$ absolute average mathematical reasoning accuracy, OPAL fully recovers retrieval and achieves $67.6$--$72.2\\%$ on math reasoning.",
+      "identifiers": [
+        "SemanticScholar:a4f421cfd489500a42850bf50ad71fbc040e1a4e"
+      ],
+      "semantic_scholar_id": "a4f421cfd489500a42850bf50ad71fbc040e1a4e",
+      "canonical_id": "arXiv:2609.31947",
+      "arxiv_id": "2609.31947",
+      "authors": [
+        "Arian Raje",
+        "Anupam Nayak",
+        "Anthony Fei",
+        "Akaash R. Parthasarathy",
+        "Mohamed S. Abdelfattah",
+        "Gauri Joshi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はsoftmax注意から線形注意への蒸留で長文脈推論時の状態誤差が累積する問題に対し、学生モデル自身の長文脈軌跡に教師から密な監督を与えるOPALを提案。Qwen3-4BとMiMo-7BでNIAH品質100%回復等を報告し、固定状態の線形注意による推論メモリ削減に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fbbd28f9b5a8",
+    "round": "libimp-fbbd28f9b5a891cc-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fbbd28f9b5a891cc-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fbbd28f9b5a891cc-pre01.json",
+    "receipt": "sha256:3d22a13556fe02e4798ef943f9ba7ebac060e483b319b90dc0274f84cb2f99a2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fbbd28f9b5a8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

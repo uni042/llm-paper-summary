@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b6a98b081131edc0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2205.12674",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2205.12674",
+    "identity_tokens": [
+      "arXiv:2205.12674"
+    ],
+    "reason": "TRIMEは訓練時にバッチ内例を記憶として使う学習目的関数を提案し、WikiText-103・翻訳のPPL/BLEU改善を評価する。推論サービングのメモリ階層・キャッシュ配置・実行効率を主題としない。",
+    "first_checked_at": "2026-10-07T21:48:46+00:00",
+    "last_checked_at": "2026-10-07T22:08:51+00:00",
+    "linked_from": [],
+    "title": "Training Language Models with Memory Augmentation"
+  },
+  "processed_at": "2026-10-07T22:08:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b6a98b081131",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

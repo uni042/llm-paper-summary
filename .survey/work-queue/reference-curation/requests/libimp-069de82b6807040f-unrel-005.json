@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-069de82b6807040f-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.07814",
+  "reason": "一次要旨: Physics-informed neural networks (PINNs) struggle on PDEs whose governing physics varies across the domain. We trace this to a structural property of standard coordinate networks: their neural tangent kernel (NTK) is translation-variant and lets training points of large coordinate magnitude disproportionately influence predictions elsewhere, producing long-range coupling and gradient conflict during training. We show analytically and empirically that mixture-of-experts (MoE) architectures with centered, compact-support routers yield a uniformly banded NTK whose kernel-regression weights decay exponentially with distance, localizing the learning. Building on this, we propose \\emph{Latent-MoE}, which interleaves domain-aware MoE blocks within a shared backbone. Unlike FB-PINNs or X-PINNs, which rigidly partition both the domain and the parameters so that the parameters on different subdomains are updated independently, Latent-MoE is designed to preserve the localization benefit of domain-aware routing while allowing capacity to flow across regions through the shared backbone. On standard homogeneous-physics benchmarks Latent-MoE is competitive with established baselines; on benchmarks with multi-stage time-variable physics, where global models and rigid domain decompositions both fall into spurious solutions, it improves over them by more than an order of magnitude, with markedly reduced gradient conflict during training.",
+  "title": "Latent-MoE: Domain-Aware Mixture-of-Experts for PDEs with Multi-Regime Physics",
+  "identity_tokens": [
+    "arXiv:2609.07814"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-069de82b6807",
+  "source_precheck_request_id": null
+}

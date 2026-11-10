@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc9b9265bf7c8b18-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1911.05289",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1911.05289",
+    "identity_tokens": [
+      "SemanticScholar:dbc4b7508068f77b1ad9c24d963b446def8eed2c",
+      "arXiv:1911.05289"
+    ],
+    "reason": "The paper discusses deep-learning implications for chip design and sparsely activated routed models, but presents no concrete inference runtime or measured efficiency method.",
+    "first_checked_at": "2026-10-16T06:17:48+00:00",
+    "last_checked_at": "2026-10-16T06:17:48+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Deep Learning Revolution and Its Implications for Computer Architecture and Chip Design"
+  },
+  "processed_at": "2026-10-16T06:17:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc9b9265bf7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

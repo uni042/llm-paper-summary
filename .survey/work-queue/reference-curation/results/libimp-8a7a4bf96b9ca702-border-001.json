@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8a7a4bf96b9ca702-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2202.08906",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2202.08906",
+    "identity_tokens": [
+      "arXiv:2202.08906"
+    ],
+    "reason": "一次要旨は疎な混合専門家モデルの学習不安定性と微調整時の汎化性能を主問題とし、2690億パラメータのST-MoE-32Bを構築して推論課題の正答率を比較する。ルータ設計と専門家数は推論時の実行構造にも関係するが、要旨で報告する主要貢献は学習の安定化・転移学習性能であり、推論サービング、KVメモリ、エキスパート配置、実測推論遅延の直接最適化ではない。学習単独最適化は現在凍結中のため、MoE推論との接点を持つ境界候補とする。",
+    "first_checked_at": "2026-10-11T13:06:21+00:00",
+    "last_checked_at": "2026-10-11T13:06:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ST-MoE: Designing Stable and Transferable Sparse Expert Models"
+  },
+  "processed_at": "2026-10-11T13:06:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8a7a4bf96b9c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ixi-sLM: On-Device sLM for AI Call Agent Service",
+      "source_url": "https://arxiv.org/abs/2610.19382",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Running an AI call agent on-device makes it private, network-independent, and free of per-query cloud cost, but shipping one as a real-world service imposes constraints a cloud deployment never faces: ~1GiB memory budget, in-call latency and thermal limits, static-integer NPU execution, Korean STT input far from sLM pretraining, and cloud-level quality expectations. We bring ixi-sLM, a 1.2B Korean sLM, to mobile NPUs through ON-DEVICE MODELING: domain-adaptive modeling trims the vocabulary by call frequency to shrink the embedding and LM head that take nearly half the model under INT4 transformer weights and refits the tokenizer to call speech (18% fewer tokens on call traffic), while task-aware quantization calibrates on real calls and assigns per-module mixed precision by activation sensitivity. A single domain-adapted model runs ixi-O's two production services, AI Call Summary and AI Call Answering, at 94% of a state-of-the-art cloud LLM's task-weighted quality; our on-device modeling carries that quality onto the NPU with only a marginal drop in overall score, in an 803MiB model (28% of FP16) at 23% of the CPU's per-call energy. The same recipe deploys across Qualcomm and Apple NPUs and serves several million ixi-O subscribers in production.",
+      "identifiers": [
+        "SemanticScholar:d92eaa38105d1f1eaaf370d4b3e569bfa05ffe17"
+      ],
+      "semantic_scholar_id": "d92eaa38105d1f1eaaf370d4b3e569bfa05ffe17",
+      "canonical_id": "arXiv:2610.19382",
+      "arxiv_id": "2610.19382",
+      "authors": [
+        "Hanhee Lee",
+        "K. Lee",
+        "Juneyoung Park",
+        "Seong-Won Lee",
+        "Jinyoung Park",
+        "Minjae Kim",
+        "Yuri Hong",
+        "Jin-woo Lee",
+        "Y. Kwon",
+        "Seongwan Kim",
+        "Seungheon Hyeon",
+        "Jaeho Lee",
+        "Ki-Nam Kwon"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "1GiB memoryと通話中latency/熱制約下で韓国語1.2B sLMをNPU推論へ移植する。通話頻度でvocabularyとembedding/LM headを縮小し、speech tokenizationを再適合、activation感度に基づくmodule別mixed precisionを用いる。一次要旨は803MiBモデル、CPU比通話energy23%、cloud LLMのtask-weighted品質94%を報告し、Qualcomm/Apple NPUでproduction展開したとする。実端末でのSLM圧縮・推論システムとしてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Seeing at the Edge: Energy Characterization of Vision-Language Model Inference on Edge Platforms",
+      "source_url": "https://arxiv.org/abs/2610.20136",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) are moving onto edge devices, but little is known about how much energy they draw on single-board computers with NPU or GPU accelerators, or where that energy goes. We measure total-system energy, latency, and thermal behavior of Qwen2-VL-2B-Instruct and its text-only sibling on a Raspberry Pi 5 with a Hailo-10H NPU and on a Jetson Orin Nano Super, on both CPU and accelerator, and separate the fixed energy of each request from the energy that grows with output length. Because the accelerators use different quantization and serving software, we compare deployment stacks rather than silicon. Three findings stand out. First, NPU offloading makes the Pi a much more efficient VLM platform: it cuts energy per generated token by about two-thirds, leaves the host CPU largely free, and avoids the thermal throttling that the CPU backend reaches in sustained use. Second, an image adds both fixed and per-token energy, but at typical response lengths generating the answer costs far more than processing the image. Third, the Jetson GPU favors short responses through its lower fixed cost per request, whereas the Pi NPU favors longer ones through its lower cost per output token; their energy curves cross near 40 output tokens.",
+      "identifiers": [
+        "SemanticScholar:64895dce4c3ce5829f06a99220b82e54e81de893"
+      ],
+      "semantic_scholar_id": "64895dce4c3ce5829f06a99220b82e54e81de893",
+      "canonical_id": "arXiv:2610.20136",
+      "arxiv_id": "2610.20136",
+      "authors": [
+        "Jun-Lin Liao",
+        "Harshit Kondle",
+        "Di Liu",
+        "Zong-Hua Gu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Qwen2-VL-2Bとtext-only siblingをRaspberry Pi5/Hailo-10H NPUおよびJetson Orin Nano Superで動かし、request固定energyと出力token数に比例するenergyを分離計測する。一次要旨はPiのNPU offloadで生成token当たりenergyを約3分の1に削減し、Jetson GPUとPi NPUの有利不利が出力約40 tokenで逆転すると報告。端末内VLM/LLM推論のenergy・thermal・latencyの実測比較としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0c7cc1a07453",
+    "round": "libimp-0c7cc1a074534f04-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0c7cc1a074534f04-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0c7cc1a074534f04-pre01.json",
+    "receipt": "sha256:c3944cbb1ac4e6be21497fd0784bc02a526b27acc0e4d9c9e90d5971f7b5748c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0c7cc1a07453",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

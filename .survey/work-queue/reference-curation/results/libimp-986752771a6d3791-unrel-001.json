@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-986752771a6d3791-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2301.09474",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2301.09474",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2301.09474",
+      "arXiv:2301.09474",
+      "id:arXiv:2301.09474",
+      "url:https://arxiv.org/abs/2301.09474"
+    ],
+    "reason": "一次要旨はエネルギー制約付き拡散によるグラフ表現エンコーダDIFFormerを提案し、ノード分類や画像・テキスト分類、時空間予測で評価する。線形計算量のTransformerという表現はあるものの、自己回帰LLMの実行・メモリ管理・配信性能の研究ではない。",
+    "first_checked_at": "2026-10-11T00:45:52+00:00",
+    "last_checked_at": "2026-10-22T15:36:18+00:00",
+    "linked_from": [],
+    "title": "DIFFormer: Scalable (Graph) Transformers Induced by Energy Constrained Diffusion"
+  },
+  "processed_at": "2026-10-22T15:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-986752771a6d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

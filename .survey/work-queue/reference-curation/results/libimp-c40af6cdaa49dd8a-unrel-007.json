@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c40af6cdaa49dd8a-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/p18-1082",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/p18-1082",
+    "identity_tokens": [
+      "DOI:10.18653/v1/p18-1082",
+      "arXiv:1805.04833"
+    ],
+    "reason": "30万件のprompt-story datasetとpremise→storyの階層生成、gated multi-scale self-attentionによるstory品質改善を扱う生成モデル研究で、推論速度・メモリ・serving最適化を主目的としない。",
+    "first_checked_at": "2026-10-04T14:30:19+00:00",
+    "last_checked_at": "2026-10-04T15:55:08+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+    ],
+    "title": "Hierarchical Neural Story Generation"
+  },
+  "processed_at": "2026-10-04T15:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c40af6cdaa49",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

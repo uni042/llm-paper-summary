@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261103-0456-scheduled-chat-00/r01",
+  "reference_main_sha": "9e99193ea17fa62e2c1025ac1636dab9813da643",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.25053",
+      "identity_tokens": [
+        "arXiv:2609.25053"
+      ],
+      "title": "LatentPort: Beyond KV Cache - Cross-Model Transfer of Recurrent Memory in Hybrid Language Models: A 4B-to-9B Hybrid-State Handoff Without Target Prefix Replay",
+      "reason": "Qwen3.5の4Bから9Bへ、KVだけでなくGated DeltaNetの再帰状態・畳み込み状態を移すことで、受け手の過去文脈prefillをゼロにするcross-model handoff。64 PG19文書でGDN状態追加によりteacher-forced NLLが0.747 nats/token改善。4K continuation・一方向・単一の同系統モデル組だけの検証で、自由生成の同等性は未実証。推論時の状態転送・再計算回避へ直接寄与。",
+      "source_url": "https://arxiv.org/abs/2609.25053",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:00:00+09:00",
+      "last_checked_at": "2026-11-03T05:00:00+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/2026-09"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.35188",
+      "identity_tokens": [
+        "arXiv:2609.35188"
+      ],
+      "title": "Beneath the Tokens: A Performance Engineering Study of Multi-Token Prediction in GPU-Accelerated LLM Inference",
+      "reason": "NVIDIA A10Gの単一要求360件を対象に、2-token MTPと通常autoregressive decodeをNsight等で計測。MTPの出力throughputは1.91〜2.19倍、最初の出力までの時間は10.0〜14.2%減。個々のGEMMがGEMVより速いのではなく、生成token当たりCUDA Graph繰返しが56.4〜78.1%減る償却効果を示す。推論実行のボトルネック実測であり直接関連。",
+      "source_url": "https://arxiv.org/abs/2609.35188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:00:00+09:00",
+      "last_checked_at": "2026-11-03T05:00:00+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/2026-09"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.23085",
+      "identity_tokens": [
+        "arXiv:2609.23085"
+      ],
+      "title": "Measured Joules, Learned Routes: Learning to Route for Energy-Efficient LLM Serving",
+      "reason": "異なるLLMを抱える推論poolで、各質問の正解・遅延・電力・GPUエネルギーをoffline tournamentで測り、SFTとGRPOで質問別のモデル選択routerを学習。7 benchmarkでaccuracyとenergyのトレードオフを評価し、高性能モデルを全要求へ使う無駄を削減する。要旨には普遍的な省エネ倍率がないため定量倍率は主張しない。推論時の実行先選択・エネルギー最適化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2609.23085",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:00:00+09:00",
+      "last_checked_at": "2026-11-03T05:00:00+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/2026-09"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.34817",
+      "identity_tokens": [
+        "arXiv:2610.34817"
+      ],
+      "title": "Silent and Costly: Characterizing and Detecting Prompt-Caching Mis-Integration in LLM Agents",
+      "reason": "10種類のOSS agentにおけるprompt-cache関連PR 120件を分析し、キャッシュ設定・利用量計数の静かな不整合を調査。CACHELINTはCodeQLとprovider別仕様照合を用い、既知事例でprecision 0.71・recall 0.78、571 projectで32件を検出。キャッシュ不適切利用の費用・遅延に関係するが、主貢献はアプリ統合の静的検査で、cache eviction・推論kernel・serving schedulerの新規最適化ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.34817",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:00:00+09:00",
+      "last_checked_at": "2026-11-03T05:00:00+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/2026-10"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.14688",
+      "identity_tokens": [
+        "arXiv:2610.14688"
+      ],
+      "title": "Accelerating Cross-Model LLM Inference via Attention Map Reuse",
+      "reason": "MapFlowは異なるLLM間でKVそのものではなくattention mapを共有し、layer/head間の線形変換と部分再計算で互換性を確保。長文脈向けblock sparse圧縮とfused retrieval kernelも導入し、異種モデル間でprefill latencyを減らす。要旨に正確な倍率がないため倍率は捏造しない。モデル間文脈再利用・推論servingの直接的な技術貢献。",
+      "source_url": "https://arxiv.org/abs/2610.14688",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:00:00+09:00",
+      "last_checked_at": "2026-11-03T05:00:00+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/2026-10"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.32891",
+      "identity_tokens": [
+        "arXiv:2610.32891"
+      ],
+      "title": "Green Code or Costly Code? Evaluating the Energy Costs of Iterative LLM-Based Code Optimizations",
+      "reason": "11 open-source LLM・4 decode設定・EffiBench 1000問で、コード最適化agentの生成時エネルギーと出力プログラム実行時エネルギーを計測。出力token上限で推論エネルギー最大69%減、42/44構成で生成コードの消費電力が人手referenceを上回る。推論コストの計測結果は参考になるが、主要目的はコード生成・最適化ワークフローの環境負荷であり、LLMサービング実装への直接改善ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.32891",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:00:00+09:00",
+      "last_checked_at": "2026-11-03T05:00:00+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/2026-10"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.03955",
+      "identity_tokens": [
+        "arXiv:2610.03955"
+      ],
+      "title": "Adaptive Co-Serving LLM Watermarking on Modern Inference Engines",
+      "reason": "SWIFTは生成とwatermark構築を同一LLM backendへ統合し、再計算とキャッシュ重複を減らすとともに非同期co-serving・adaptive schedulingを実装。vLLM最適化を使い、SafeSealに対して5.9倍低いlatencyを報告。watermark用途に限定されるが、serving backend上での追加推論処理の統合・スケジューリングによる遅延削減を直接評価するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.03955",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:00:00+09:00",
+      "last_checked_at": "2026-11-03T05:00:00+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/2026-10"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.18557",
+      "identity_tokens": [
+        "arXiv:2610.18557"
+      ],
+      "title": "Revisiting Cauchy-Schwarz Norm Bounds for SDC Detection in LLM Inference",
+      "reason": "LLM推論の行列積でsilent data corruptionを検出するCauchy-Schwarz norm boundをABFTと比較。dense LLMの評価対象線形層ではABFT比で検出能力99%を維持し、verification overheadを87%、threshold設定overheadを67%削減。一方MoE router gateでは検出能力55%に落ちる。推論runtimeの信頼性検査とその計算オーバーヘッドの直接改善としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.18557",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:00:00+09:00",
+      "last_checked_at": "2026-11-03T05:00:00+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/2026-10"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.10311",
+      "identity_tokens": [
+        "arXiv:2610.10311"
+      ],
+      "title": "Fault-tolerant foundation models",
+      "reason": "低信頼・省電力hardwareでの誤りを許容するLLM学習を研究し、40,000 GPU-hours相当の故障模擬学習からモデル規模と誤り耐性の関係を推定。将来的な低電力推論hardwareへの適用を仮説として述べるが、主貢献は学習法と理論的scale傾向で、実際の推論serving速度・電力削減を測定したわけではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.10311",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:00:00+09:00",
+      "last_checked_at": "2026-11-03T05:00:00+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/2026-10"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33965",
+      "identity_tokens": [
+        "arXiv:2609.33965"
+      ],
+      "title": "Greenpixie's AI Token Methodology: Assessing the Energy, Water and CO2-eq Impact of AI Tokens for Open and Closed Weight Models",
+      "reason": "open-weight LLMのprefill/decodeを分けてGPU消費電力を実測し、非GPUサーバー電力は推論実行時間から推定。Bayesian linear regressionとMonte Carloでclosed-weightモデルの不確実性を含むtoken当たりenergy・CO2・水消費を推定する方法論。推論エネルギー計測には有用だが、kernel・scheduler・cache等の実行効率を直接改善する新方式ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.33965",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:00:00+09:00",
+      "last_checked_at": "2026-11-03T05:00:00+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/2026-09"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    }
+  ]
+}

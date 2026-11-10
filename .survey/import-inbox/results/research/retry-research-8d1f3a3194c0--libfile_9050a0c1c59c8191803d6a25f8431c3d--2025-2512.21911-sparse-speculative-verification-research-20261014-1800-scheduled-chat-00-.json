@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "96287cbceca7c8133c80bf9b52c0c71b63f698c1e8f522c7c1052c8151428ff5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8d1f3a3194c0--libfile_9050a0c1c59c8191803d6a25f8431c3d--2025-2512.21911-sparse-speculative-verification-research-20261014-1800-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2512.21911",
+  "worker_completed_at": "2026-10-14T18:00:00+09:00",
+  "worker_run_key": "20261014-1800-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5457,
+    "body_paragraphs": 30,
+    "method_chars": 2148,
+    "method_paragraphs": 12,
+    "evaluation_chars": 1162,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-2512.21911-accelerate-speculative-decoding-with-sparse-computation-in-verification.md と 20 段落 / 4195文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T13:02:35+00:00"
+}

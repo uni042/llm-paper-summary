@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f6a593809c65dbe-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.27262",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.27262",
+    "identity_tokens": [
+      "arXiv:2609.27262"
+    ],
+    "reason": "Production customer-support systems often require LLMs to support multiple skills, such as intent classification, question answering, summarization, or tool-use decisions. A central deployment question is whether these skills should be handled by separate task-specialist models or by a single model trained through multi-task training, sequential updates, or model merging. We study this question using thirteen models spanning five families (Qwen3, Qwen3.5, Gemma-3, Llama-3.1, and Mistral) from 0.",
+    "first_checked_at": "2026-10-05T05:44:52+00:00",
+    "last_checked_at": "2026-10-05T05:44:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+      "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Can One Adapted Model Do It All? Fine-Tuning Strategy Selection for Customer Support LLMs"
+  },
+  "processed_at": "2026-10-05T05:44:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f6a593809c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

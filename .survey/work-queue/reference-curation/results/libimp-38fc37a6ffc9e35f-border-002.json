@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-38fc37a6ffc9e35f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.24273",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.24273",
+    "identity_tokens": [
+      "arXiv:2604.24273"
+    ],
+    "reason": "arXiv要旨はBitNet b1.58三値重みの1ビット言語モデルを用いて端末RLエージェントの学習・推論を行い、FP比較でメモリ10〜16倍削減とエネルギー効率3〜5倍改善を報告。オンデバイス推論効率に関係する一方、主目的はRLエージェント学習とタスク性能であり一般的なLLMサービング・推論カーネル比較は限定的。",
+    "first_checked_at": "2026-10-30T06:57:17+00:00",
+    "last_checked_at": "2026-10-30T06:57:17+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "BitRL: Reinforcement Learning with 1-bit Quantized Language Models for Resource-Constrained Edge Deployment"
+  },
+  "processed_at": "2026-10-30T06:57:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-38fc37a6ffc9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

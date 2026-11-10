@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8931fee06b67105a-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.03052",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.03052",
+    "identity_tokens": [
+      "arXiv:2507.03052"
+    ],
+    "reason": "The model-compression method is in scope conceptually, but the central 8:16 inference acceleration remains a projection and is not experimentally demonstrated on supported hardware.",
+    "first_checked_at": "2026-10-05T15:33:57+00:00",
+    "last_checked_at": "2026-10-05T15:33:57+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From 2:4 to 8:16 sparsity patterns in LLMs for Outliers and Weights with Variance Correction"
+  },
+  "processed_at": "2026-10-05T15:33:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8931fee06b67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

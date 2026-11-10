@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-05956e822ab696a1-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.compchemeng.2026.109657",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.compchemeng.2026.109657",
+    "identity_tokens": [
+      "DOI:10.1016/j.compchemeng.2026.109657"
+    ],
+    "reason": "Cell-culture model/training comparison is outside LLM inference.",
+    "first_checked_at": "2026-10-06T16:09:49+00:00",
+    "last_checked_at": "2026-10-06T16:09:49+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Hybrid machine learning models for predictions of mammalian cell culture: a comparison of model structures and training approaches"
+  },
+  "processed_at": "2026-10-06T16:09:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-05956e822ab6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

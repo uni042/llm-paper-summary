@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b4e978e1cd087a8f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.16421",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.16421",
+    "identity_tokens": [
+      "arXiv:2401.16421"
+    ],
+    "reason": "bilevel positional encodingによるlength extrapolation/qualityが主題であり、推論効率の測定や手法を提示しない。",
+    "first_checked_at": "2026-10-05T14:18:52+00:00",
+    "last_checked_at": "2026-10-05T14:18:52+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+    ],
+    "title": "Two Stones Hit One Bird: Bilevel Positional Encoding for Better Length Extrapolation"
+  },
+  "processed_at": "2026-10-05T14:18:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b4e978e1cd08",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

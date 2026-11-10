@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a6e10f3cc49cb27-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.16789",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.16789",
+    "identity_tokens": [
+      "arXiv:2404.16789"
+    ],
+    "reason": "LLMの継続事前学習・domain-adaptive pretraining・継続fine-tuningとcatastrophic forgettingを整理する学習・適応surveyで、推論runtime・memory・serving効率化を中心対象としない。",
+    "first_checked_at": "2026-10-07T05:41:35+00:00",
+    "last_checked_at": "2026-10-07T05:41:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "title": "Continual Learning of Large Language Models: A Comprehensive Survey"
+  },
+  "processed_at": "2026-10-07T05:41:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a6e10f3cc49",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

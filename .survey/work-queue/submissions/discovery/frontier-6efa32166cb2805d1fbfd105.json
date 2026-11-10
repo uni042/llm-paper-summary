@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.06675",
+      "arxiv_id": "2605.06675",
+      "title": "RateQuant: Optimal Mixed-Precision KV Cache Quantization via Rate-Distortion Theory",
+      "source_url": "https://arxiv.org/abs/2605.06675",
+      "priority": 90,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 90
+      },
+      "reason": "Direct KV-cache quantization system improvement with calibrated mixed-precision head allocation."
+    },
+    {
+      "canonical_id": "arXiv:2604.17701",
+      "arxiv_id": "2604.17701",
+      "title": "WISV: Wireless-Informed Semantic Verification for Distributed Speculative Decoding in Device-Edge LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.17701",
+      "priority": 90,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 90
+      },
+      "reason": "Device-edge distributed speculative decoding with communication-aware verification and hardware validation."
+    },
+    {
+      "canonical_id": "arXiv:2604.07815",
+      "arxiv_id": "2604.07815",
+      "title": "AsyncTLS: Efficient Generative LLM Inference with Asynchronous Two-level Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2604.07815",
+      "priority": 90,
+      "priority_breakdown": {
+        "base": 55,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 90
+      },
+      "reason": "Hierarchical sparse attention plus asynchronous offloading directly targets long-context KV memory and latency."
+    },
+    {
+      "canonical_id": "DOI:10.1145/3774904.3792382",
+      "doi": "10.1145/3774904.3792382",
+      "title": "LaTune: Lightweight and Adaptive Configuration Tuning for LLM Inference on Edge Devices",
+      "source_url": "https://doi.org/10.1145/3774904.3792382",
+      "priority": 89,
+      "priority_breakdown": {
+        "base": 54,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 89
+      },
+      "reason": "Adaptive runtime configuration tuning under fluctuating edge-device resource budgets."
+    },
+    {
+      "canonical_id": "DOI:10.1145/3800690",
+      "doi": "10.1145/3800690",
+      "title": "Enabling Low-Latency, GPU-Efficient Serverless Inference with Model Swapping",
+      "source_url": "https://doi.org/10.1145/3800690",
+      "priority": 89,
+      "priority_breakdown": {
+        "base": 54,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 89
+      },
+      "reason": "GPU serverless model swapping between host memory and GPU directly targets model residency and multi-tenant inference."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-6efa32166cb2805d1fbfd105",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-6efa32166cb2805d1fbfd105.json",
+    "receipt": "sha256:f710b123b5ea9e179c9ee1c024d5c20ab36eb9ba3319e77a77ec423fcf39b68c"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T070210+0900-run1",
+    "round": "frontier-6efa32166cb2805d1fbfd105",
+    "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": [
+      "arXiv:2605.06675",
+      "arXiv:2604.17701",
+      "arXiv:2604.07815",
+      "DOI:10.1145/3774904.3792382",
+      "DOI:10.1145/3800690"
+    ],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f554cd9d9e4b0f44-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/isscc.2014.6757323",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/isscc.2014.6757323",
+    "identity_tokens": [
+      "DOI:10.1109/isscc.2014.6757323"
+    ],
+    "reason": "電圧スケーリング終焉後の計算機全般の電力制約と専用計算エンジンの必要性を論じるISSCC基調論文で、LLM固有の推論システムや低ビット実行方式を提案・評価しない。",
+    "first_checked_at": "2026-10-03T17:51:24+00:00",
+    "last_checked_at": "2026-10-03T17:51:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference.md"
+    ],
+    "title": "1.1 Computing's energy problem (and what we can do about it)"
+  },
+  "processed_at": "2026-10-03T17:51:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f554cd9d9e4b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

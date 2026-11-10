@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1966d353890a5246-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.00894",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.00894",
+    "identity_tokens": [
+      "arXiv:2406.00894"
+    ],
+    "reason": "arXiv v2要旨はManticoreで既存GPT系TransformerとMambaの事前学習済みブロックを射影器で結合し、微分可能なアーキテクチャ探索でハイブリッドを構成する。長距離タスクの性能改善は報告するが、推論時メモリ・速度・カーネル最適化の定量的な寄与は要旨で示されず、主題はモデル設計・再学習回避のため境界的。",
+    "first_checked_at": "2026-10-30T07:22:26+00:00",
+    "last_checked_at": "2026-10-30T07:22:26+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Pretrained Hybrids with MAD Skills"
+  },
+  "processed_at": "2026-10-30T07:22:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1966d353890a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

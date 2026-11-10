@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43c76e25c595754f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.16420",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.16420",
+    "identity_tokens": [
+      "arXiv:2504.16420"
+    ],
+    "reason": "Full survey conclusion and taxonomy focus recommendation applications and research opportunities; it does not present a general LLM-serving optimization.",
+    "first_checked_at": "2026-10-06T17:25:02+00:00",
+    "last_checked_at": "2026-10-06T17:25:02+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+    ],
+    "title": "A Survey of Foundation Model-Powered Recommender Systems: From Feature-Based, Generative to Agentic Paradigms"
+  },
+  "processed_at": "2026-10-06T17:25:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43c76e25c595",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

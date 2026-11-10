@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-09169576cb479eca-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.18967",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.18967",
+    "identity_tokens": [
+      "arXiv:2606.18967"
+    ],
+    "reason": "推論技術を使うが最終目的はRL training rollout高速化で、現在凍結中の学習高速化範囲に該当する。",
+    "first_checked_at": "2026-09-30T09:20:54+00:00",
+    "last_checked_at": "2026-09-30T09:52:33+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md",
+      "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md"
+    ],
+    "title": "EfficientRollout: System-Aware Self-Speculative Decoding for RL Rollouts"
+  },
+  "processed_at": "2026-09-30T09:52:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-09169576cb47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

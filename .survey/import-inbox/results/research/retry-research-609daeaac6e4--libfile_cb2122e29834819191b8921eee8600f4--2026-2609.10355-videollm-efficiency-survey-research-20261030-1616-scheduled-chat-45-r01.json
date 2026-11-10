@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "8486e9b13ac2771c328870f2dfddd802e65c800ac0afc166e10611d4e83224e4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-609daeaac6e4--libfile_cb2122e29834819191b8921eee8600f4--2026-2609.10355-videollm-efficiency-survey-research-20261030-1616-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2609.10355",
+  "worker_completed_at": "2026-10-30T16:27:40+09:00",
+  "worker_run_key": "20261030-1616-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5542,
+    "body_paragraphs": 24,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 665,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-30T09:39:31+00:00"
+}

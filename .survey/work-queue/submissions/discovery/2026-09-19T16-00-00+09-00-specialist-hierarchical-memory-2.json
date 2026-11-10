@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T16:00:00+09:00",
+    "round": "specialist-hierarchical-memory-2",
+    "axis": "SSD/NVMe・GPUDirect Storage・階層メモリ・PIM/CXL",
+    "query_summary": "新着軸から離れ、SSD/NVMe direct I/O、GPUDirect Storage、階層メモリ、PIM/CXLを独立検索した。DUAL-BLADE、PIM-SHERPA、Cache-Resident LLM、SHIELD、SPIN、SeKV等の強い候補はすべて月別canonical identity snapshotで既知と確認され、新規候補は残らなかった。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 6,
+    "duplicate_canonical_ids": ["arXiv:2604.26557", "arXiv:2603.09216", "arXiv:2606.25353", "arXiv:2604.07396", "arXiv:2604.26837", "arXiv:2606.31145"],
+    "next_axis_hint": "次はMoE expert placement/cache/prefetchとdistributed serving network/collectiveへ移り、storage/hierarchical-memory検索を反復しない",
+    "empty_round_reason": "strong_results_already_represented",
+    "search_windows": [{"topic":"2026-hierarchical-memory-storage","source":"web-arxiv-search","date_range":"2026-01..2026-09","category":"storage-memory-systems","citation_direction":"none","query_family":"ssd-nvme-gpudirect-cxl-pim-hierarchical-memory","raw_result_count":16,"unseen_result_count":0,"duplicate_filtered_count":6,"rejection_filtered_count":0,"candidate_evaluation_count":6,"candidate_accepted_count":0,"position":"web-search-multi-query-2"}]
+  }
+}

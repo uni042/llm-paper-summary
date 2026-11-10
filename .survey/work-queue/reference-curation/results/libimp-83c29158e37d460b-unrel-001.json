@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-83c29158e37d460b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.21216",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.21216",
+    "identity_tokens": [
+      "arXiv:2609.21216"
+    ],
+    "reason": "一次要旨: Vision-language-action (VLA) policies based on flow matching generate action chunks through repeated evaluations of an action expert. Increasing the number of integration steps raises inference cost, but does not necessarily improve closed-loop success. We propose Coda, which reallocates part of this integration budget to a single learned endpoint correction",
+    "first_checked_at": "2026-10-05T06:17:39+00:00",
+    "last_checked_at": "2026-10-05T06:17:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+    ],
+    "title": "Fewer Steps, Better Actions: Rethinking Flow-Matching Inference for VLA Policies"
+  },
+  "processed_at": "2026-10-05T06:17:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-83c29158e37d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

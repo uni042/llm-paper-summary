@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4cdef94438973191-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.37443",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.37443",
+    "identity_tokens": [
+      "arXiv:2609.37443"
+    ],
+    "reason": "MERAはlong-term memory QAのretrieval plannerを学習し回答精度を評価する研究。本文でもonline token useは数万token/質問であり、推論効率を改善する寄与は示されていない。",
+    "first_checked_at": "2026-10-05T04:41:47+00:00",
+    "last_checked_at": "2026-10-05T04:41:47+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "Learning to Retrieve Missing Evidence for Long-Term Memory QA"
+  },
+  "processed_at": "2026-10-05T04:41:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4cdef9443897",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

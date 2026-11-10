@@ -1,0 +1,257 @@
+---
+canonical_id: arXiv:2509.07506
+arxiv_id: '2509.07506'
+doi: 10.48550/arxiv.2509.07506
+title: 'Astra: A Multi-Agent System for GPU Kernel Performance Optimization'
+summary: 既存SGLang CUDAカーネルを対象に、計画・実装・試験・プロファイルを分担する複数LLMエージェントが反復最適化し、正しさを保ちながら平均1.32倍高速化する。
+list_summary: 既存SGLang CUDAカーネルを対象に、計画・実装・試験・プロファイルを分担する複数LLMエージェントが反復最適化し、正しさを保ちながら平均1.32倍高速化する。
+publication: NeurIPS 2025 Fourth Workshop on Deep Learning for Code / arXiv
+publication_type: ワークショップ論文・プレプリント
+publication_status: published
+lineage: inference-systems
+topics:
+- LLM推論
+- システム効率
+source: https://arxiv.org/abs/2509.07506
+sources:
+- https://arxiv.org/abs/2509.07506
+last_checked: '2026-09-27'
+authors:
+- Wei, Anjiang
+- Sun, Tianran
+- Seenichamy, Yogesh
+- Song, Hang
+- Ouyang, Anne
+- Mirhoseini, Azalia
+- Wang, Ke
+- Aiken, Alex
+published: '2025-09-09'
+arxiv_categories:
+  primary: cs.DC
+  cross_list: []
+code: https://github.com/Anjiang-Wei/Astra
+implementation: 著者公開のAstra実装を参照。
+implementation_status: official-code-available
+
+
+references:
+- canonical_id: arXiv:2107.03374
+  arxiv_id: '2107.03374'
+- canonical_id: arXiv:2108.07732
+  arxiv_id: '2108.07732'
+- canonical_id: arXiv:2504.15659
+  arxiv_id: '2504.15659'
+- canonical_id: arXiv:2105.09938
+  arxiv_id: '2105.09938'
+- canonical_id: arXiv:2402.00157
+  arxiv_id: '2402.00157'
+- canonical_id: arXiv:2505.14615
+  arxiv_id: '2505.14615'
+- canonical_id: arXiv:2310.06770
+  arxiv_id: '2310.06770'
+- canonical_id: arXiv:2307.08691
+  arxiv_id: '2307.08691'
+- canonical_id: arXiv:2407.08608
+- canonical_id: arXiv:2312.00752
+  arxiv_id: '2312.00752'
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+  arxiv_id: '2405.04434'
+- canonical_id: arXiv:2406.03243
+- canonical_id: arXiv:1410.0759
+  arxiv_id: '1410.0759'
+- canonical_id: DOI:10.1145/3315508.3329973
+- canonical_id: arXiv:2405.05751
+  arxiv_id: '2405.05751'
+- canonical_id: arXiv:2410.20399
+  arxiv_id: '2410.20399'
+- canonical_id: arXiv:2502.10517
+  arxiv_id: '2502.10517'
+- canonical_id: arXiv:2506.09092
+  arxiv_id: '2506.09092'
+- canonical_id: arXiv:2506.20807
+  arxiv_id: '2506.20807'
+- canonical_id: arXiv:2507.11948
+  arxiv_id: '2507.11948'
+- canonical_id: arXiv:2507.14111
+  arxiv_id: '2507.14111'
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2308.00352
+  arxiv_id: '2308.00352'
+- canonical_id: arXiv:2312.13010
+  arxiv_id: '2312.13010'
+- canonical_id: arXiv:2307.07924
+  arxiv_id: '2307.07924'
+- canonical_id: OpenReview:3h80HyStMH
+  openreview_id: 3h80HyStMH
+- canonical_id: arXiv:2002.11054
+  arxiv_id: '2002.11054'
+- canonical_id: arXiv:1603.04467
+  arxiv_id: '1603.04467'
+- canonical_id: arXiv:1805.00907
+  arxiv_id: '1805.00907'
+- canonical_id: arXiv:1711.03016
+  arxiv_id: '1711.03016'
+- canonical_id: arXiv:2508.05020
+  arxiv_id: '2508.05020'
+- canonical_id: arXiv:2503.19449
+  arxiv_id: '2503.19449'
+- canonical_id: arXiv:2505.11480
+  arxiv_id: '2505.11480'
+- canonical_id: arXiv:2410.15625
+  arxiv_id: '2410.15625'
+- canonical_id: arXiv:2507.17087
+  arxiv_id: '2507.17087'
+- canonical_id: arXiv:2502.14752
+  arxiv_id: '2502.14752'
+- canonical_id: arXiv:2502.12466
+  arxiv_id: '2502.12466'
+- canonical_id: arXiv:2507.19457
+  arxiv_id: '2507.19457'
+- canonical_id: arXiv:2506.13131
+  arxiv_id: '2506.13131'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: OpenReview:SFN6Wm7YBI
+  openreview_id: SFN6Wm7YBI
+references_checked_at: '2026-10-03'
+references_source: arxiv-html-reference-section
+references_total: 66
+last_audited: '2026-10-08'
+audit_version: 2
+under16kb_reaudit_target_path: papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md
+under16kb_reaudit_source_git_blob_sha: '29fb0efc9ec51f1375f98d54ad99dd8b73259228'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+worker_run_key: 'interactive-20261008-bottom-up-reaudit-r2-2509.07506'
+worker_completed_at: '2026-10-07T22:52:20.425Z'
+
+---
+
+# Astra: A Multi-Agent System for GPU Kernel Performance Optimization
+
+> 高水準PyTorchからCUDAを一から生成するのではなく、SGLangに既に存在する正しいCUDAカーネルを出発点にし、試験・プロファイル・計画・実装を別々の大規模言語モデル（Large Language Model; LLM）エージェントへ分担する。o4-miniを追加学習せず5反復させ、H100上の3カーネルで全て正しさを保ちながら平均1.32倍、最大1.46倍高速化する。
+
+## 概要
+
+GPUカーネル最適化は、単に正しいCUDAを書けば終わりではない。同じ計算でも入力形状、メモリアクセス、ワープ配置、レジスタ圧力、命令選択で性能が大きく変わる。本番のLLMサービング基盤では既に手書きCUDAが存在しており、現実の課題は「PyTorchをCUDAへ翻訳すること」より、**動いている本番カーネルからさらに性能を絞り出すこと**にある。
+
+Astraはこの作業を単一エージェントへ全部任せず、Testing Agent、Profiling Agent、Planning Agent、Coding Agentへ分解する。Testing Agentは代表入力を構成して候補の正しさを確認し、Profiling Agentは実行時間を測る。Planning Agentはコード・試験結果・速度を見て次の最適化案を立て、Coding AgentがCUDAへ反映する。この閉ループを複数ラウンド繰り返す。
+
+対象はSGLangから抽出した `merge_attn_states_lse`、`fused_add_rmsnorm`、`silu_and_mul` の3カーネルである。実験はNVIDIA H100、OpenAI o4-miniのゼロショットプロンプト、5最適化ラウンドで行う。各入力形状では20回ウォームアップ後に100回測定し、LLaMA-7B/13B/70Bで現れる代表形状を使う。
+
+結果はそれぞれ1.26倍、1.25倍、1.46倍で、幾何平均は1.32倍。単一エージェント構成は平均1.08倍に留まり、最も複雑なmerge kernelでは0.73倍と逆に遅くなる。ケース分析では、ループ不変式の外出し、メモリアクセス再構成、CUDA intrinsic、fast mathなど、人間のCUDA最適化で使う変換をエージェントが自律的に組み合わせている。
+
+## 問題設定
+
+既存のKernelBench系研究は、PyTorchモジュールを仕様として新しいGPUカーネルを生成する課題を扱う。これはコード生成能力を測りやすい一方、本番ではSGLangのようなシステムに既にCUDA実装があり、互換性を壊さず性能だけ改善したい場合が多い。
+
+GPU最適化は多段階である。コードを書いた後に、(1)コンパイルできるか、(2)数値的に元実装と一致するか、(3)代表形状で速いか、(4)遅い理由は何か、を確認し、その結果から次の修正を考える必要がある。単一LLMがテスト生成と性能分析とコード編集を同時に担うと、一つの誤った前提が全ループへ伝播しやすい。
+
+Astraの仮説は、役割を分けて測定結果を明示的に受け渡せば、LLMのコード生成能力を**探索・検証付きの最適化器**へ変えられるというものになる。
+
+## 手法
+
+### 1. SGLangカーネルを単体で試せる形へ抽出する
+
+本番カーネルはテンプレート、ランタイム、内部データ構造へ依存するため、そのままLLMへ渡すとコンパイル・テストが難しい。評価ではSGLangの対象CUDAを手動前処理してスタンドアロン化し、元カーネルの入出力契約を保った状態で最適化対象にする。
+
+最終候補は後処理でSGLangへ戻せることを前提とする。したがって単なるマイクロベンチ専用の別演算を作るのではなく、既存実装のdrop-in replacementを狙う。
+
+### 2. Testing Agentが代表入力と正しさを管理する
+
+Testing Agentは候補カーネルを実行するテスト入力を作り、元SGLangカーネルの出力と比較する。浮動小数点では許容誤差を認めるが、性能だけ速くて値がずれる候補は失敗として扱う。
+
+論文の最終評価では、エージェント自身が作ったテストだけを信頼せず、著者が別に構成した代表テストでも元実装と比較する。これはLLMが「通りやすいテスト」を作って誤った候補を採用する循環を防ぐためである。
+
+### 3. Profiling Agentが実測速度を返す
+
+正しい候補について、Profiling AgentがH100で実行時間を測る。代表形状はLLaMA-7B/13B/70Bのテンソル寸法から取り、各形状を20回ウォームアップして100回反復する。
+
+速度向上は単一形状だけでなく複数形状の幾何平均で判断する。形状特化の特殊ケースだけを作るより、本番で現れる範囲に一般化するカーネルを狙う。
+
+### 4. Planning Agentがコード・試験・プロファイルを統合して次手を決める
+
+Planning Agentは現在のCUDA、正しさ、速度、過去ラウンドの履歴を読み、「何を変えるべきか」を自然言語の最適化案として出す。ここでは直接コードを書かず、性能原因を推論してCoding Agentへ具体的な方針を渡す。
+
+ケース分析では、内側ループで毎回計算していたスカラー値を外へ移すループ不変式移動、ベクトル化、メモリアクセス配置変更、ワープ命令、CUDA intrinsic、近似的なfast mathなどが提案される。
+
+### 5. Coding Agentが提案をCUDAへ実装する
+
+Coding AgentはPlanning Agentの案と現行コードを受け、次候補を作る。候補は再びTesting→Profilingへ送られ、正しくなければ採用されず、速くなければ次ラウンドの計画材料になる。
+
+実験ではこれを5ラウンドに固定する。LLM自体をファインチューニング（fine-tuning）や強化学習（Reinforcement Learning; RL）せず、o4-miniへのゼロショットプロンプトだけで反復探索する。
+
+### 6. 役割分離が単一エージェントの誤り伝播を抑える
+
+単一エージェント基準では同じモデルがテスト・性能測定・計画・実装を担う。最も複雑なmerge kernelでは、代表性の低いテスト入力が性能判断を偏らせ、結果として0.73倍のスローダウンになった。
+
+AstraではTesting/Profilingが独立した役割として結果を返すため、Planningがより明示的な観測に基づける。複雑なカーネルほどこの分解の差が現れる。
+
+## 評価
+
+### 評価条件
+
+|項目|条件|
+|---|---|
+|GPU|NVIDIA H100|
+|LLM|OpenAI o4-mini、ゼロショット|
+|最適化ラウンド|5|
+|対象|SGLangから抽出した3 CUDAカーネル|
+|カーネル|merge_attn_states_lse、fused_add_rmsnorm、silu_and_mul|
+|形状|LLaMA-7B/13B/70Bで現れる代表テンソル形状|
+|測定|各形状20 warm-up＋100 repetitions|
+|比較|元SGLangカーネル、単一エージェント、Astra|
+|正しさ|元SGLang出力との数値比較。最終評価は独立に構成したテストも使用|
+
+### 代表結果
+
+|カーネル|元時間|最適化後|高速化|正しさ|
+|---|---:|---:|---:|---|
+|merge_attn_states_lse|31.4 µs|24.9 µs|1.26×|維持|
+|fused_add_rmsnorm|41.3 µs|33.1 µs|1.25×|維持|
+|silu_and_mul|20.1 µs|13.8 µs|1.46×|維持|
+|3カーネル平均|30.9 µs|23.9 µs|1.32×|全て維持|
+
+### 単一エージェントとの比較
+
+|構成|merge|RMSNorm|SiLU×mul|平均|
+|---|---:|---:|---:|---:|
+|単一エージェント|0.73×|1.18×|1.48×|1.08×|
+|Astra|1.26×|1.25×|1.46×|1.32×|
+
+単純なsilu_and_mulでは単一エージェントも十分強い。一方、複雑なmerge kernelでは役割分離の有無で0.73×対1.26×まで差が開く。論文が主張するmulti-agentの利点は「エージェント数を増やせば常に速い」ことではなく、テストと性能判断が複雑な課題で誤ったフィードバックループを減らす点にある。
+
+また最適化後のコード行数は平均で約64%増える。人間可読な簡潔さを犠牲にして、事前計算、特殊命令、分岐・メモリ処理を明示した結果でもある。
+
+### 個別カーネルの性能比較から分かること
+
+三つのカーネルをH100で比較すると、注意状態の統合では31.4マイクロ秒から24.9マイクロ秒、正規化との融合では41.3から33.1、活性関数の融合では20.1から13.8へ短縮した。平均の高速化倍率は約1.32倍であるが、これは三つの小規模なカーネル集合の平均であり、生成システム全体の速度が同じ割合で伸びたという意味ではない。大きなモデルでは他の演算や通信も実行時間を占めるため、候補カーネルが全体のどれだけを支配しているかで実用上の利益は変化する。
+
+単一のエージェントがコード生成と性能判断を一手に担当する方式は、単純な活性関数カーネルでは複数役割方式に近い速さを実現した。一方、注意状態の統合では単一方式が元より遅くなる条件もあり、検証役・性能計測役・計画役・実装役を分けて協働する方が適切な改善方向を選べた。結果の解釈は「複数エージェントの人数が多いほど高速」というものではなく、比較の正しさを見ながら改良を反復する判断機構の利点である。
+
+元の演算との数値一致は、独立の検査を追加した有限の入力形状で検証している。これは任意の形状や別のGPU世代まで正しさを数学的に証明したことにはならない。また生成後のコードは平均で約六割長くなり、人間による保守の容易さと実行速度には交換条件がある。実環境へ採用する場合は、モデル全体へ組み込んだ性能と、他のバッチ数・型・入力形状での回帰を別々に確かめるべきである。
+
+## 既存研究との差
+
+KernelBenchは高水準PyTorchから新しいGPUカーネルを生成する能力を測る。Astraは**既存の本番CUDAを仕様兼ベースラインとして与え、同じ入出力を保ったまま速くする**ため、翻訳失敗と性能最適化を分離する。
+
+TVM、Triton、Mirageなどのコンパイラ/自動調整器は形式化された探索空間やIR変換で最適化する。Astraは自然言語とCUDAコードを直接扱い、人間が行うような異種変換をLLMに提案させるため探索空間が柔軟だが、最適性保証はない。
+
+## 限界・実装状況
+
+評価は3カーネルだけであり、SGLang全体のエンドツーエンドスループットを1.32倍にしたという結果ではない。対象カーネルが全要求時間のどれだけを占めるかによって、サービス全体の改善は小さくなる。
+
+SGLangから単体カーネルを抽出する前処理と、最終候補を本番へ戻す後処理は手動であり、完全自律な本番最適化パイプラインではない。また最終正しさも有限テストに基づくため、全入力での意味同値を形式証明しているわけではない。
+
+生成コードはH100と代表形状で測られており、別GPU世代では命令・メモリ階層が変わる。最適化候補をそのまま移植するより、新しい装置で再度プロファイルループを回す設計として使うのが自然である。
+
+## 一次資料
+
+- https://arxiv.org/abs/2509.07506
+- https://cs.stanford.edu/~anjiang/papers/Astra.pdf
+- https://github.com/Anjiang-Wei/Astra
+
+## 修正履歴
+
+- 2026-09-28: 現行品質ガイドに合わせて全面改稿。SGLang抽出、Testing/Profiling/Planning/Coding各エージェント、5ラウンドのフィードバック、独立正しさ検証を処理順に説明し、H100・o4-mini・3カーネルの実時間と単一エージェント比較を表へ追加。NeurIPS 2025 Deep Learning for Code workshopと公式実装を反映。

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c4c9ad0da302a87ea838284dfb1f060ea234afb02a503490a33e362cac75effc",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-51a16630e283--libfile_c25920423d2c81918919570f4f915ed6--2026-2609.21137-cardan-multi-engine-moe-trainium3-research-20261018-2130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.21137",
+  "worker_completed_at": "2026-10-18T21:38:00+09:00",
+  "worker_run_key": "20261018-2130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7679,
+    "body_paragraphs": 42,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1659,
+    "limitation_chars": 696,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-18T14:06:03+00:00"
+}

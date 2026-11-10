@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce0d2c2986c7a11e-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.09947",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.09947",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2409.09947",
+      "SemanticScholar:c2543ee1d2b7fe000228867b58066b0117ce9f9e",
+      "arXiv:2409.09947"
+    ],
+    "reason": "The work develops fine-grained evaluation and detection of hallucination/gaps in legal analysis; it addresses output assessment in a domain application rather than LLM serving.",
+    "first_checked_at": "2026-10-14T12:00:33+00:00",
+    "last_checked_at": "2026-10-14T15:09:18+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Gaps or Hallucinations? Gazing into Machine-Generated Legal Analysis for Fine-grained Text Evaluations"
+  },
+  "processed_at": "2026-10-14T15:09:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce0d2c2986c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

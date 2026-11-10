@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-05bcad2c45211e2b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.18900",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.18900",
+    "identity_tokens": [
+      "arXiv:2602.18900"
+    ],
+    "reason": "一次資料の要旨を確認。Privacy preserving machine learning deployments in sensitive deep learning applications; from medical imaging to autonomous systems; increasingly require combining multiple techniques. Yet, practitioners lack systematic guidance to assess the synergistic and non-additive interactions of these hybrid configurations, relying instead on isolated technique analy",
+    "first_checked_at": "2026-10-06T21:07:23+00:00",
+    "last_checked_at": "2026-10-06T21:07:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "PrivacyBench: Privacy Isn't Free in Hybrid Privacy-Preserving Vision Systems"
+  },
+  "processed_at": "2026-10-06T21:07:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-05bcad2c4521",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

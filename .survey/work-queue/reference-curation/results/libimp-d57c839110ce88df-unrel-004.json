@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d57c839110ce88df-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1502.05698",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1502.05698",
+    "identity_tokens": [
+      "arXiv:1502.05698"
+    ],
+    "reason": "質問応答システムに必要な基本的推論能力を分離して測る20種のtoy task（後のbAbI）を提案する能力評価・データセット研究で、LLM推論の計算効率や実行基盤を扱わない。",
+    "first_checked_at": "2026-10-04T18:55:17+00:00",
+    "last_checked_at": "2026-10-04T18:55:17+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md"
+    ],
+    "title": "Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks"
+  },
+  "processed_at": "2026-10-04T18:55:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d57c839110ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

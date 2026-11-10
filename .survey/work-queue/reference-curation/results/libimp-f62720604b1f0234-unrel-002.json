@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f62720604b1f0234-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s44287-026-00319-1",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s44287-026-00319-1",
+    "identity_tokens": [
+      "DOI:10.1038/s44287-026-00319-1"
+    ],
+    "reason": "The automobile is undergoing a dramatic transformation — from a conventional mode of transportation to an intelligent, interconnected terminal within the Internet of Everything. As driving functions progressively shift from human drivers to onboard AI systems, vehicles are becoming intelligent agents operating in complex, safety-critical environments. In this transition, autonomous driving chips are emerging as a key determinant of whether safe, scalable and commercially viable autonomy can be achieved. We argue that the future of autonomous driving will be shaped by a widening gap between rapidly growing computational demands and the physical limits of conventional chip technologies. Closing this gap requires a paradigm shift from isolated hardware or software innovation towards holistic hardware–software codesign. This Perspective examines how increasingly stringent requirements for safety, real-time intelligence and cost are reshaping the design of autonomous driving chips, and discusses the challenges of sustaining performance growth as conventional scaling approaches slow down. Particular attention is given to emerging opportunities in advanced materials, logic and memory technologies, heterogeneous monolithic three-dimensional integration and domain-specific architectures. By connecting developments across semiconductor technology and autonomous driving algorithms, we discuss the key technological bottlenecks, design trade-offs and cross-disciplinary innovations that are likely to shape the next generation of intelligent computing platforms for autonomous systems.",
+    "first_checked_at": "2026-10-05T08:35:29+00:00",
+    "last_checked_at": "2026-10-05T08:35:29+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "title": "Autonomous driving chips"
+  },
+  "processed_at": "2026-10-05T08:35:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f62720604b1f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

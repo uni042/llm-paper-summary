@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6fcfd887688cf644-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.24102",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.24102",
+    "identity_tokens": [
+      "arXiv:2606.24102"
+    ],
+    "reason": "language-grounded EHR foundation modelsのmedical event representationが対象。推論効率ではない。",
+    "first_checked_at": "2026-10-05T02:45:27+00:00",
+    "last_checked_at": "2026-10-05T02:45:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "PORTER: Language-Grounded Event Representations for Portable Structured EHR Foundation Models"
+  },
+  "processed_at": "2026-10-05T02:45:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6fcfd887688c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

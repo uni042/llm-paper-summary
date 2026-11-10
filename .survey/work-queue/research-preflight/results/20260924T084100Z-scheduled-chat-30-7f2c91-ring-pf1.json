@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260924T084100Z-scheduled-chat-30-7f2c91-ring-pf1",
+  "kind": "research",
+  "attempt_id": "attempt-preload-74bb4af6ce3df82b5f4f239a",
+  "job_id": "job-research-60b244663bfce823",
+  "record_bank": "j",
+  "paper_path": "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260924T081700Z-7f2c91",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T08:28:00+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:f8f823be905ef24fccc0ab5fbc28cdc4c4888990a62538f4e640d4074d924fce",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-j/metadata.json",
+      "blob_sha": "9559ca5e2882edb464c08e7e0d6f8aa62bf15e79"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-j/problem_method.json",
+      "blob_sha": "127394ccf147577f54ea63b7269b6312ee2698e2"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-j/evaluation.json",
+      "blob_sha": "e2ef0eb8fb9bb0fea3b3fc0bf6edb1b1fdb90316"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-j/results.json",
+      "blob_sha": "cffceac6ac5003768fcd7fece3f829eb7dde4301"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-j/positioning.json",
+      "blob_sha": "1a02588c0392803b2a996b62f7d39087507d3692"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short"
+  ],
+  "checked_at": "2026-09-24T08:41:04+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d08718d849b89926-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.09245",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.09245",
+    "identity_tokens": [
+      "arXiv:2409.09245"
+    ],
+    "reason": "タイトル先行除外：任意精度・疎性のニューラルネット学習が主題。一次本文・要旨は未読であり、再判定可能。",
+    "first_checked_at": "2026-10-30T19:08:26+00:00",
+    "last_checked_at": "2026-10-30T19:08:26+00:00",
+    "linked_from": [],
+    "title": "Robust Training of Neural Networks at Arbitrary Precision and Sparsity"
+  },
+  "processed_at": "2026-10-30T19:08:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d08718d849b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

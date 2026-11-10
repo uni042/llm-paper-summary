@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-183473323b4fba03-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.02939",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.02939",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2506.02939",
+      "arXiv:2506.02939"
+    ],
+    "reason": "QKV activation圧縮の対象はLLM training memoryであり、abstractはtraining効率のみを扱う。",
+    "first_checked_at": "2026-10-10T04:27:26+00:00",
+    "last_checked_at": "2026-10-10T04:27:26+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "QKV Projections Require a Fraction of Their Memory"
+  },
+  "processed_at": "2026-10-10T04:27:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-183473323b4f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

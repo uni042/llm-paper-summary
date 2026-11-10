@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-876fa7dea160803f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2602.22175",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2602.22175",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.22175",
+      "arXiv:2602.22175"
+    ],
+    "reason": "arXiv一次要旨は検索に強い注意ヘッドから関連トークンを特定し、デコード中に注意重みを増幅して長文脈の回答品質を改善するDYSCOを提案。生成推論アルゴリズムに関連するが、主眼は長文脈推論精度であり、推論計算・メモリ・速度削減の主張が中心ではないためborderline。",
+    "first_checked_at": "2026-10-30T07:20:32+00:00",
+    "last_checked_at": "2026-10-30T07:20:32+00:00",
+    "linked_from": [
+      "Long-context Inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DySCO: Dynamic Attention-Scaling Decoding for Long-Context LMs"
+  },
+  "processed_at": "2026-10-30T07:20:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-876fa7dea160",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

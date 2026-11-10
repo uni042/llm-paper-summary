@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-38d8bd1a1c1c1292-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.02782",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.02782",
+    "identity_tokens": [
+      "arXiv:2507.02782"
+    ],
+    "reason": "The recurrent-model paper improves long-context generalization using training interventions; its efficiency claim concerns training steps, not inference/serving.",
+    "first_checked_at": "2026-10-05T14:34:46+00:00",
+    "last_checked_at": "2026-10-05T14:34:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+      "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+    ],
+    "title": "Understanding and Improving Length Generalization in Recurrent Models"
+  },
+  "processed_at": "2026-10-05T14:34:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-38d8bd1a1c1c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

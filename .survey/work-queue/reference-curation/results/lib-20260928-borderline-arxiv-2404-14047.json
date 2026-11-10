@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "lib-20260928-borderline-arxiv-2404-14047",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.14047",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.14047",
+    "identity_tokens": [
+      "arXiv:2404.14047"
+    ],
+    "reason": "低bit比較知見は有用だが既存10手法の精度評価が主眼で新規runtime手法ではない。",
+    "first_checked_at": "2026-09-27T21:22:11+00:00",
+    "last_checked_at": "2026-09-27T21:22:11+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "An Empirical Study of LLaMA3 Quantization: From LLMs to MLLMs"
+  },
+  "processed_at": "2026-09-27T21:22:11+00:00",
+  "worker_id": "survey-github-import",
+  "run_key": "library-import-20260928",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "20260924T004050Z-scheduled-chat-30-c4a91f-handoff",
+  "run_key": "scheduled-chat-30-20260924T002731Z-c4a91f",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T00:27:31+00:00",
+  "runtime_condition": "platform_limit",
+  "research_audit_completed_this_invocation": 1,
+  "pending_attempt_ids": ["attempt-preload-a27038f725a3ac141db139f4", "attempt-preload-2f7b9ad4ec70e92c6b0818d3"],
+  "handoff": {
+    "current_foreground_attempt_id": "attempt-preload-00e2e00df7b39b6c900b06d1",
+    "current_foreground_job_id": "job-research-9f8cc788a5f9d38c",
+    "current_foreground_claim_id": "claim-preload-00e2e00df7b39b6c900b06d1",
+    "record_bank": "r",
+    "paper_title": "vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention",
+    "paper_source": "https://arxiv.org/html/2405.04437",
+    "state": "primary_source_opened_and_read_through_design_intro; no record slots written yet",
+    "next_operation": "resume the same active claim; reuse the official arXiv v3 source and complete full-text reading, then write the five record slots and run exact-blob preflight before any new claim"
+  }
+}

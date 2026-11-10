@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18454f98fcb476c5-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.02730",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.02730",
+    "identity_tokens": [
+      "arXiv:2609.02730"
+    ],
+    "reason": "Primary abstract optimizes recommender-system behavior and serving cost, not LLM serving.",
+    "first_checked_at": "2026-10-05T03:10:25+00:00",
+    "last_checked_at": "2026-10-05T03:10:25+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "CORAL: An LLM-Native Harness for Production Recommender Systems"
+  },
+  "processed_at": "2026-10-05T03:10:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18454f98fcb4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bb675770799510d2-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.38482",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.38482",
+    "identity_tokens": [
+      "arXiv:2609.38482"
+    ],
+    "reason": "The efficiency measure is at the multi-agent task/orchestration level rather than model inference latency, throughput, or compute per token; its fit to an LLM inference efficiency survey is indirect.",
+    "first_checked_at": "2026-10-05T04:49:14+00:00",
+    "last_checked_at": "2026-10-05T04:49:14+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.18248-lamps.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.13965-autellix-agent-program-serving.md"
+    ],
+    "title": "PANDA: A Decentralized Architecture with Flexible Orchestration for Scalable, Fault-Tolerant Multi-Agent Systems"
+  },
+  "processed_at": "2026-10-05T04:49:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb6757707995",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d56fd53a4440c121-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.11936",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.11936",
+    "identity_tokens": [
+      "arXiv:2609.11936"
+    ],
+    "reason": "Llama-8B inferenceの本文評価は32K prefillで最大1.6%改善に留まり、chunking overheadや効果分離の困難も記載。packet abstractと一次arXiv abstractのDGX Spark値も2%対20%で不一致し、強い再現性根拠にできない。",
+    "first_checked_at": "2026-10-05T10:43:43+00:00",
+    "last_checked_at": "2026-10-05T10:43:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "One Simple Trick for Improving the Performance of Energy-Limited Local Inference and Training"
+  },
+  "processed_at": "2026-10-05T10:43:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d56fd53a4440",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

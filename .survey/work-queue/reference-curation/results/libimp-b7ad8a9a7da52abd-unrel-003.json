@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7ad8a9a7da52abd-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.12476",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.12476",
+    "identity_tokens": [
+      "arXiv:2502.12476"
+    ],
+    "reason": "多言語LLMの言語遵守評価とfine-tuningによる改善が中心で、推論コスト最適化を扱わない。",
+    "first_checked_at": "2026-10-05T13:32:16+00:00",
+    "last_checked_at": "2026-10-05T13:32:16+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+    ],
+    "title": "CoCo-CoLa: Evaluating and Improving Language Adherence in Multilingual LLMs"
+  },
+  "processed_at": "2026-10-05T13:32:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7ad8a9a7da5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

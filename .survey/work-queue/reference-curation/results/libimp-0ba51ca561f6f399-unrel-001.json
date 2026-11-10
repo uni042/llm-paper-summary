@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0ba51ca561f6f399-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.11086",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.11086",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2203.11086",
+      "arXiv:2203.11086"
+    ],
+    "reason": "原著要旨の中心は量子化認識学習中の重みが隣接量子化格子間で振動する現象と、振動抑制・反復重み凍結という学習アルゴリズムである。評価はMobileNetV2/V3・EfficientNet-liteのImageNet画像分類で、3～4ビット量子化の精度改善を測る。LLM向け推論カーネル、サービング遅延、メモリ階層などの実行基盤は直接対象としておらず、学習アルゴリズム中心の凍結範囲に当たる。",
+    "first_checked_at": "2026-10-12T10:59:20+00:00",
+    "last_checked_at": "2026-10-12T10:59:20+00:00",
+    "linked_from": [],
+    "title": "Overcoming Oscillations in Quantization-Aware Training"
+  },
+  "processed_at": "2026-10-12T10:59:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0ba51ca561f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

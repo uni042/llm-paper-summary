@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4d5024cbda0dbd8-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2305.18952",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2305.18952",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2305.18952",
+      "arXiv:2305.18952"
+    ],
+    "reason": "一次要旨（arXiv v5、2024-10-05改訂）は、動的コーパスの生成検索に自己回帰言語モデルを用い、Dual Encoderと推論FLOPs・索引時間・保存容量を比較する。言語モデル推論と検索システムの計算・保存効率には接点がある一方、主題は動的コーパスでの検索適応性であり、LLM serving/runtimeやKV cacheの改善を扱わないため境界扱いとする。",
+    "first_checked_at": "2026-10-22T21:13:44+00:00",
+    "last_checked_at": "2026-10-22T21:13:44+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Exploring the Practicality of Generative Retrieval on Dynamic Corpora"
+  },
+  "processed_at": "2026-10-22T21:13:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4d5024cbda0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

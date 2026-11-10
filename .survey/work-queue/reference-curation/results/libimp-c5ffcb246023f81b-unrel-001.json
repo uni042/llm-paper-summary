@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5ffcb246023f81b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.03048",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.03048",
+    "identity_tokens": [
+      "arXiv:2602.03048"
+    ],
+    "reason": "rollout budgetはRL訓練時のresource allocationであり、対象のserving/inference optimizationから外れる。",
+    "first_checked_at": "2026-10-07T10:40:17+00:00",
+    "last_checked_at": "2026-10-07T10:40:17+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+    ],
+    "title": "CoBA-RL: Capability-Oriented Budget Allocation for Reinforcement Learning in LLMs"
+  },
+  "processed_at": "2026-10-07T10:40:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5ffcb246023",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

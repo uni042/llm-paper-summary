@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6bf025dc793924b9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.19281",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.19281",
+    "identity_tokens": [
+      "arXiv:2602.19281"
+    ],
+    "reason": "題名は大規模言語モデルの長期推論における思考空間の制約を分析する研究である。推論の能力・探索空間の問題であり、推論基盤の計算・通信・メモリ管理やサービングの実装最適化を示していないため対象外。",
+    "first_checked_at": "2026-10-21T08:53:32+00:00",
+    "last_checked_at": "2026-10-21T08:53:32+00:00",
+    "linked_from": [],
+    "title": "Limited Reasoning Space: The cage of long-horizon reasoning in LLMs"
+  },
+  "processed_at": "2026-10-21T08:53:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6bf025dc7939",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

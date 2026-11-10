@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "37665ff7e881280b89905b569f2ff58b00629ff1850d386c4ac4932fd5d2ae3f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1dd697b0b847--libfile_a33abd73646c8191b08724f77313f87d--2026-2603.01399-quasar-quantized-verification-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2603.01399",
+  "worker_completed_at": "2026-10-17T11:31:00+09:00",
+  "worker_run_key": "20261017-1130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5653,
+    "body_paragraphs": 34,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 599,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-17T08:38:41+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "338bf573c32e9af21adadbe03582feec9b6be0933b987c4e6c6e0a665240a8b3",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_e0c012ecdce48191946f6b3f18e1977f--2024-2410.16663-fastattention-npu-volta-research-20261025-2200-scheduled-chat-00-r01-v2.md",
+  "canonical_id": "arXiv:2410.16663",
+  "worker_completed_at": "2026-10-25T22:00:00+09:00",
+  "worker_run_key": "20261025-2200-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4718,
+    "body_paragraphs": 24,
+    "method_chars": 1862,
+    "method_paragraphs": 10,
+    "evaluation_chars": 459,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 459 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 459 < 500"
+  ],
+  "processed_at": "2026-10-25T14:29:20+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4c65a20404b83cb3-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.04208",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.04208",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2407.04208",
+      "arXiv:2407.04208"
+    ],
+    "reason": "画像分類用ViTの大規模教師から中間教師を自動選び、CIFAR/ImageNetで多段蒸留品質を改善する。生成LLMの推論システム・KV・サービング最適化の直接評価はない。",
+    "first_checked_at": "2026-10-30T11:54:44+00:00",
+    "last_checked_at": "2026-10-30T11:54:44+00:00",
+    "linked_from": [],
+    "title": "AMD: Automatic Multi-step Distillation of Large-scale Vision Models"
+  },
+  "processed_at": "2026-10-30T11:54:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c65a20404b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

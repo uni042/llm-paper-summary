@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "cd7f4f6fcef8f7cd8a156a150e90888c7afcd1b9c0c0fa426aa306f3b6f306e6",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e1a065f8327d--libfile_e98db928832481919ba3cbae9b119383--2026-2609.39223-qatfactory-deployment-aligned-quantization-research-20261018-1430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.39223",
+  "worker_completed_at": "2026-10-18T14:36:48+09:00",
+  "worker_run_key": "20261018-1430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5821,
+    "body_paragraphs": 32,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 367,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 367 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 367 < 500",
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2609.39223-qatfactory-a-versatile-deployment-aligned-framework-for-quantization-awa.md と 18 段落 / 3843文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-18T14:32:23+00:00"
+}

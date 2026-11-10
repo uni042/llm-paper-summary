@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "27d8e52c578c5403ea196575bf4a4763d39d9a74be6a0c22515da73aa5491bf8",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a005ac8b13e4--libfile_ecd424b861d48191836c373d5f76e416--2024-doi-10.1145.3620666.3651324-ianus-npu-pim-unified-memory-research-20261016-0030-scheduled-chat-30-r01.md",
+  "canonical_id": "DOI:10.1145/3620666.3651324",
+  "worker_completed_at": "2026-10-16T00:30:00+09:00",
+  "worker_run_key": "20261016-0030-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5853,
+    "body_paragraphs": 29,
+    "method_chars": 788,
+    "method_paragraphs": 4,
+    "evaluation_chars": 170,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 170 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 170 < 500"
+  ],
+  "processed_at": "2026-10-16T15:55:25+00:00"
+}

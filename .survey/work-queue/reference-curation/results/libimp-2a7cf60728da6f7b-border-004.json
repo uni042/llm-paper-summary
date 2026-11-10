@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2a7cf60728da6f7b-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icip61757.2026.11630368",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icip61757.2026.11630368",
+    "identity_tokens": [
+      "DOI:10.1109/icip61757.2026.11630368"
+    ],
+    "reason": "パケットに要旨なし。著者研究室のpublication listで書誌を確認したのみで、一次abstract/bodyを取得できず。",
+    "first_checked_at": "2026-10-05T07:41:21+00:00",
+    "last_checked_at": "2026-10-05T07:41:21+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "Coreview: Compact Yet Complete Video Representation"
+  },
+  "processed_at": "2026-10-05T07:41:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2a7cf60728da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

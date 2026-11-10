@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e63b5cccf63295bb-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.06674",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.06674",
+    "identity_tokens": [
+      "arXiv:2312.06674"
+    ],
+    "reason": "Llama2-7Bをinstruction tuningしてprompt/responseの安全リスク分類を行うcontent moderation研究。推論時に使うモデルではあるが、速度・メモリ・カーネル・サービング効率化が目的ではない。",
+    "first_checked_at": "2026-10-04T20:49:55+00:00",
+    "last_checked_at": "2026-10-04T20:49:55+00:00",
+    "linked_from": [],
+    "title": "Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations"
+  },
+  "processed_at": "2026-10-04T20:49:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e63b5cccf632",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

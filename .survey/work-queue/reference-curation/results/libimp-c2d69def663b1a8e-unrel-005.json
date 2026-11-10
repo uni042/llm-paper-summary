@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c2d69def663b1a8e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.26801",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.26801",
+    "identity_tokens": [
+      "arXiv:2606.26801"
+    ],
+    "reason": "VLA fine-tuningのstage/keyframe supervisionでrobot task性能を改善する手法。",
+    "first_checked_at": "2026-10-05T02:43:17+00:00",
+    "last_checked_at": "2026-10-05T02:43:17+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "Improving Vision-Language-Action Model Fine-Tuning with Structured Stage and Keyframe Supervision"
+  },
+  "processed_at": "2026-10-05T02:43:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c2d69def663b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-775dbff9ddd81431-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2608.10357",
+  "reason": "一次本文の最適化はlong-horizon RL training時のsink-aware attentionとpeak VRAMであり、著者自身もthroughput/latencyは未評価とする。attention実装の近接性はあるが、serving効率の証拠がない。",
+  "title": "Efficient Reinforcement Learning for Long-Horizon Tool-Use Agentic Tasks",
+  "identity_tokens": [
+    "arXiv:2608.10357"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+    "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+    "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-775dbff9ddd8",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

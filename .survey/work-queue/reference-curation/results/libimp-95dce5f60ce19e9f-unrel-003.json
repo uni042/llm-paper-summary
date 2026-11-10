@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95dce5f60ce19e9f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tcad.2020.3043731",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tcad.2020.3043731",
+    "identity_tokens": [
+      "DOI:10.1109/tcad.2020.3043731"
+    ],
+    "reason": "Compute-in-memory DNN on-chip training framework, not inference.",
+    "first_checked_at": "2026-10-05T02:09:30+00:00",
+    "last_checked_at": "2026-10-05T02:09:30+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md"
+    ],
+    "title": "DNN+NeuroSim V2.0: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators for On-Chip Training"
+  },
+  "processed_at": "2026-10-05T02:09:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95dce5f60ce1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

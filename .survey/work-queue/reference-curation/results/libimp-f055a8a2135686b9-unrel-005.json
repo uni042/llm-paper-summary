@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f055a8a2135686b9-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.24987",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.24987",
+    "identity_tokens": [
+      "arXiv:2608.24987"
+    ],
+    "reason": "Multi-teacher on-policy distillation (MOPD) distills several domain-expert teachers into a single student by minimizing per-domain reverse-KL divergence on the student's own rollouts. Existing approaches typically fix the per-domain data mixture before training, overlooking the fact that different domains converge at substantially different rates: some plateau early while others continue to improve throughout the training budget. A fixed mixture therefore wastes compute on fa",
+    "first_checked_at": "2026-10-05T06:03:37+00:00",
+    "last_checked_at": "2026-10-05T06:03:37+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "D$^3$-MOPD: Dynamic Domain ScheDuling for Efficient Multi-Teacher Distillation"
+  },
+  "processed_at": "2026-10-05T06:03:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f055a8a21356",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

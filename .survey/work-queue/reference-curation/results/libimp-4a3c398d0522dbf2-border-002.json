@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a3c398d0522dbf2-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.26954",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.26954",
+    "identity_tokens": [
+      "arXiv:2604.26954"
+    ],
+    "reason": "Study compares self-consistency and reasoning effort for high-school math conversational scoring. Estimated per-1,000-call API cost shows higher reasoning does not consistently improve accuracy but increases cost; lower-cost/no-reasoning models are near-frontier. This is a narrow application cost/configuration study, not a new inference technique; pricing/results are cross-sectional.",
+    "first_checked_at": "2026-10-06T10:45:43+00:00",
+    "last_checked_at": "2026-10-06T10:45:43+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Impact of LLM Self-Consistency and Reasoning Effort on Automated Scoring Accuracy and Cost"
+  },
+  "processed_at": "2026-10-06T10:45:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a3c398d0522",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

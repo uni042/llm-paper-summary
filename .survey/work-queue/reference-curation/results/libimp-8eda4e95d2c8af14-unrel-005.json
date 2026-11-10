@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8eda4e95d2c8af14-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34895",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34895",
+    "identity_tokens": [
+      "arXiv:2609.34895"
+    ],
+    "reason": "online video object segmentationの長期tracking手法で、LLM効率化対象外。",
+    "first_checked_at": "2026-10-05T04:58:58+00:00",
+    "last_checked_at": "2026-10-05T04:58:58+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "LVMT: Video Mask Transformer for Long-term Video Segmentation"
+  },
+  "processed_at": "2026-10-05T04:58:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8eda4e95d2c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

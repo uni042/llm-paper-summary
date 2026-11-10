@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "13bcf88a73c7e981350d6d6e9d6e32016e4891f03b4ffb558435192e3d111666",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d8a3cb835549--libfile_066eb620b2588191912a353976663165--2026-2601.04719-int8-kv-cache-repair-20261011-2230-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2601.04719",
+  "worker_completed_at": "2026-10-11T22:31:58+09:00",
+  "worker_run_key": "20261011-2230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6880,
+    "body_paragraphs": 34,
+    "method_chars": 1822,
+    "method_paragraphs": 9,
+    "evaluation_chars": 1765,
+    "limitation_chars": 852,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2601.04719-gpu-accelerated-int8-quantization-for-kv-cache-compression-in-large-lang.md と 27 段落 / 6082文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-11T15:07:44+00:00"
+}

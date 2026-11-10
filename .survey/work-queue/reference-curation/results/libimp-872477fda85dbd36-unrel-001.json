@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-872477fda85dbd36-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.10011",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.10011",
+    "identity_tokens": [
+      "arXiv:2601.10011"
+    ],
+    "reason": "自然言語からSQLを生成する応用タスクで、質問の構造的分解と成功例・エラー修正例の検索によってBIRDの実行正答率68.5%を達成する。計算資源削減の記述はあるが、LLMの重み配置、復号カーネル、メモリ階層、サービング実装を最適化する研究ではなく、SQL推論戦略と応用精度が中心。",
+    "first_checked_at": "2026-10-17T05:06:13+00:00",
+    "last_checked_at": "2026-10-17T05:06:13+00:00",
+    "linked_from": [],
+    "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"
+  },
+  "processed_at": "2026-10-17T05:06:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-872477fda85d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

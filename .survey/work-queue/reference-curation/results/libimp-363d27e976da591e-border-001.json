@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-363d27e976da591e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/iciestr60916.2024.10798212",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/iciestr60916.2024.10798212",
+    "identity_tokens": [
+      "DOI:10.1109/iciestr60916.2024.10798212"
+    ],
+    "reason": "IEEE DOI publisher URL returned “not accessible via this tool”; IEEE proceedings table of contents confirmed the title but did not provide a primary abstract.",
+    "first_checked_at": "2026-10-14T00:03:33+00:00",
+    "last_checked_at": "2026-10-14T00:03:33+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "MLBERT: Multi-Level Fully Binarized BERT"
+  },
+  "processed_at": "2026-10-14T00:03:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-363d27e976da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

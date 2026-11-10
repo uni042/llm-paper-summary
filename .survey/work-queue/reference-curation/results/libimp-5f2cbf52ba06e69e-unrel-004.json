@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f2cbf52ba06e69e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.25299",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.25299",
+    "identity_tokens": [
+      "arXiv:2608.25299"
+    ],
+    "reason": "PointRL trains point-level vision-language grounding from annotations; this is task learning, not inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T08:02:43+00:00",
+    "last_checked_at": "2026-10-05T08:02:43+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "PointRL: Learning Point-Level Vision-Language Grounding from Verifiable Annotation Evidence"
+  },
+  "processed_at": "2026-10-05T08:02:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f2cbf52ba06",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

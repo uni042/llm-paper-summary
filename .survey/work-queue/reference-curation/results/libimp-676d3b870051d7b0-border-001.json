@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-676d3b870051d7b0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.05278",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.05278",
+    "identity_tokens": [
+      "arXiv:2605.05278"
+    ],
+    "reason": "論文の有限専門家バンクと相互情報量I(X;T)に対する通信率正則化はMoEルーティングの理論として関連する。しかし本文の主実験はMNIST上の事前学習済みCNN 25個の有限バンクと離散ゲートであり、LLMの専門家並列実行、GPU間トークン通信、推論サーバの実測速度・メモリは評価していない。現行サーベイのMoE推論システムへの直接的寄与が薄いためborderline。",
+    "first_checked_at": "2026-10-19T01:45:57+00:00",
+    "last_checked_at": "2026-10-19T01:45:57+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Expert Routing for Communication-Efficient MoE via Finite Expert Banks"
+  },
+  "processed_at": "2026-10-19T01:45:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-676d3b870051",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

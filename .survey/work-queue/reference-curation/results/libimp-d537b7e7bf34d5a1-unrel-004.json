@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d537b7e7bf34d5a1-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.21157",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.21157",
+    "identity_tokens": [
+      "arXiv:2608.21157"
+    ],
+    "reason": "HIERA plans implementation spaces for LLM-based GPU-kernel generation and evaluates KernelBench/scientific GPU workloads. The LLM is the optimizer; the work does not optimize LLM inference/serving.",
+    "first_checked_at": "2026-10-05T08:16:12+00:00",
+    "last_checked_at": "2026-10-05T08:16:12+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md"
+    ],
+    "title": "HIERA: Workload-Aware Planning Across Implementation Spaces for GPU Kernel Optimization"
+  },
+  "processed_at": "2026-10-05T08:16:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d537b7e7bf34",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

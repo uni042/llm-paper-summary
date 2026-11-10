@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40767674b2da8e5e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/mc.2026.3695984",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/mc.2026.3695984",
+    "identity_tokens": [
+      "DOI:10.1109/mc.2026.3695984"
+    ],
+    "reason": "No abstract was present in the input packet. The official DOI/publisher URL https://doi.org/10.1109/mc.2026.3695984 could not be retrieved; exact-title searching found only a non-primary repost, so the inference-architecture scope cannot be established from primary evidence.",
+    "first_checked_at": "2026-10-05T09:37:54+00:00",
+    "last_checked_at": "2026-10-05T09:37:54+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md",
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "Optimizing AI: A Reference Architecture to Streamline AI Inference and Performance Acceleration"
+  },
+  "processed_at": "2026-10-05T09:37:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40767674b2da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

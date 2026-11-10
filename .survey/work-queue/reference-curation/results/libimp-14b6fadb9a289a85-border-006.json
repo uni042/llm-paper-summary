@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-14b6fadb9a289a85-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.22323",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.22323",
+    "identity_tokens": [
+      "arXiv:2505.22323"
+    ],
+    "reason": "専門家特化を改善する学習目的が中心で推論システムの直接機構ではない。",
+    "first_checked_at": "2026-09-27T06:31:09+09:00",
+    "last_checked_at": "2026-09-30T09:48:18+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 343",
+      "worker-worklist-30 discovery_review rank 363"
+    ],
+    "title": "Advancing Expert Specialization for Better MoE"
+  },
+  "processed_at": "2026-09-30T09:48:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-14b6fadb9a28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

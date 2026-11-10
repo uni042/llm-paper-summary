@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d144d8473cc00700-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.13249",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.13249",
+    "identity_tokens": [
+      "arXiv:2603.13249"
+    ],
+    "reason": "The paper localizes persona steering to three attention heads and preserves generation coherence, but its claimed computational advantage is relative to fine-tuning and it does not measure inference throughput, memory, or latency; the connection to inference-efficiency remains indirect.",
+    "first_checked_at": "2026-10-07T13:59:23+00:00",
+    "last_checked_at": "2026-10-07T13:59:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Steering at the Source: Style Modulation Heads for Robust Persona Control"
+  },
+  "processed_at": "2026-10-07T13:59:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d144d8473cc0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3aaf9d81b723f6f7-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.06922",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.06922",
+    "identity_tokens": [
+      "arXiv:2609.06922"
+    ],
+    "reason": "VLM quantization shifts scores before answer flips, but per-question precision selectors did not beat shuffled controls. VQA-specific; no reliable adaptive precision policy or system-cost results.",
+    "first_checked_at": "2026-10-05T03:08:04+00:00",
+    "last_checked_at": "2026-10-05T03:08:04+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+      "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+    ],
+    "title": "BEFORE THE FLIP: Measuring Hidden Score Shifts In Quantized Vision Language Models Before The Answer Changes for Visual Question Answering"
+  },
+  "processed_at": "2026-10-05T03:08:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3aaf9d81b723",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

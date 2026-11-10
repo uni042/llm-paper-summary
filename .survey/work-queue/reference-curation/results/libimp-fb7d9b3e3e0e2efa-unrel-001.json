@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fb7d9b3e3e0e2efa-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2308.05374",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2308.05374",
+    "identity_tokens": [
+      "arXiv:2308.05374"
+    ],
+    "reason": "Abstract surveys alignment evaluation for trustworthy LLMs; it does not focus on inference-time efficiency or serving.",
+    "first_checked_at": "2026-10-05T00:55:43+00:00",
+    "last_checked_at": "2026-10-05T00:55:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+    ],
+    "title": "Trustworthy LLMs: a Survey and Guideline for Evaluating Large Language Models' Alignment"
+  },
+  "processed_at": "2026-10-05T00:55:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb7d9b3e3e0e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

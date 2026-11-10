@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-840a4f55f1588f52-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.10714",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.10714",
+    "identity_tokens": [
+      "arXiv:2609.10714"
+    ],
+    "reason": "arXiv abstract studies semantic communication and token transport for 6G systems; distributed inference is context, not an inference-efficiency method.",
+    "first_checked_at": "2026-10-05T06:58:58+00:00",
+    "last_checked_at": "2026-10-05T06:58:58+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2025-2509.04576-communication-efficient-distributed-speculative-decoding.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+    ],
+    "title": "From Semantic to Token Communication: The Next Paradigm for Large-Model-Driven 6G Intelligent Connectivity"
+  },
+  "processed_at": "2026-10-05T06:58:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-840a4f55f158",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

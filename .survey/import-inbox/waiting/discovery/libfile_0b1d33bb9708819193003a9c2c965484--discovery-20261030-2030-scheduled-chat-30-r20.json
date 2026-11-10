@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r20",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.11534",
+      "identity_tokens": [
+        "arXiv:2512.11534",
+        "DOI:10.48550/arXiv.2512.11534"
+      ],
+      "title": "HFS: Holistic Query-Aware Frame Selection for Efficient Video Understanding",
+      "reason": "動画VLMのquery-awareフレーム選択を集合レベルの関連度・網羅性・冗長性で最適化し、Gumbel-TopKとSLM/MLLM相互学習を用いる。不要フレームを除いて入力計算を削減する直接的なVideo-LLM推論前処理。",
+      "source_url": "https://arxiv.org/abs/2512.11534",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:45:24+09:00",
+      "last_checked_at": "2026-10-30T20:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 434,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.04084",
+      "identity_tokens": [
+        "arXiv:2509.04084",
+        "DOI:10.48550/arXiv.2509.04084"
+      ],
+      "title": "Optimizing Frequent Checkpointing via Low-Cost Differential for Distributed Training Systems",
+      "reason": "勾配差分を再利用して分散学習の頻繁なcheckpoint保存費用を削減する研究。最大89.2%の訓練時間削減は学習処理であり、LLM推論サービングを対象としない。",
+      "source_url": "https://arxiv.org/abs/2509.04084",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:45:24+09:00",
+      "last_checked_at": "2026-10-30T20:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 454,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.02917",
+      "identity_tokens": [
+        "arXiv:2507.02917",
+        "DOI:10.48550/arXiv.2507.02917"
+      ],
+      "title": "Echo State Transformer: Attention Over Finite Memories",
+      "reason": "Reservoir Computingの固定数の状態に対して注意を行い、系列長に対して線形計算量のEcho State Transformerを提案。評価は時系列分類・異常検知・予測であり、生成LLMの実測推論速度・品質は未確認。",
+      "source_url": "https://arxiv.org/abs/2507.02917",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:45:24+09:00",
+      "last_checked_at": "2026-10-30T20:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 465,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.17331",
+      "identity_tokens": [
+        "arXiv:2505.17331",
+        "DOI:10.48550/arXiv.2505.17331"
+      ],
+      "title": "ECHO-LLaMA: Efficient Caching for High-Performance LLaMA Training",
+      "reason": "LLaMAの複数層でKVキャッシュを共有し、層間KV計算の重複を削減する。主な改善は訓練側77%のTPS向上だが、1.1Bモデルでtest-timeスループット約7%向上も報告するため推論向けキャッシュ共有として採用。",
+      "source_url": "https://arxiv.org/abs/2505.17331",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:45:24+09:00",
+      "last_checked_at": "2026-10-30T20:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 471,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06765",
+      "identity_tokens": [
+        "arXiv:2605.06765",
+        "DOI:10.48550/arXiv.2605.06765"
+      ],
+      "title": "VITA-QinYu: Expressive Spoken Language Model for Role-Playing and Singing",
+      "reason": "音声テキスト混合のmulti-codebookモデルでロールプレイと歌唱表現を改善し、ストリーミング・全二重デモを提供する。主評価は音声表現品質であり、推論時の遅延・メモリ削減やサービング効率の定量改善はない。",
+      "source_url": "https://arxiv.org/abs/2605.06765",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:45:24+09:00",
+      "last_checked_at": "2026-10-30T20:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 474,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.12249",
+      "identity_tokens": [
+        "arXiv:2604.12249",
+        "DOI:10.48550/arXiv.2604.12249"
+      ],
+      "title": "Orbital-selective correlations and angular momentum coupling in heavy actinides Am, Cm, Bk, and Cf under pressure: A many-body perspective",
+      "reason": "worklistの「Language Model Inference Optimization」系タイトルは誤対応。一次arXiv:2604.12249はAm/Cm/Bk/Cfの強相関電子構造の凝縮系物理研究であり、LLMとは無関係。誤題名をaliasにせずidentity書誌不整合として記録する。",
+      "source_url": "https://arxiv.org/abs/2604.12249",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:45:24+09:00",
+      "last_checked_at": "2026-10-30T20:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 475,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.10947",
+      "identity_tokens": [
+        "arXiv:2305.10947",
+        "DOI:10.48550/arXiv.2305.10947"
+      ],
+      "title": "Revisiting 16-bit Neural Network Training: A Practical Approach for Resource-Limited Learning",
+      "reason": "汎用ニューラルネットワークの16bit学習とFP32との精度・計算速度比較を行う。低精度計算の背景としては有用だが、主対象は訓練であり生成LLMの推論高速化・KV・サービングへの直接評価はない。",
+      "source_url": "https://arxiv.org/abs/2305.10947",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:45:24+09:00",
+      "last_checked_at": "2026-10-30T20:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 476,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22138",
+      "identity_tokens": [
+        "arXiv:2605.22138",
+        "DOI:10.48550/arXiv.2605.22138"
+      ],
+      "title": "Efficient Agentic Reasoning Through Self-Regulated Simulative Planning",
+      "reason": "SR2AMは将来状態予測に基づく計画、計画の要否と深さを決める自己制御、反応的実行を分離する。30B版が比較エージェントLLMより25.8～95.3%少ない思考トークンで同等のPass@1を達成すると報告する。",
+      "source_url": "https://arxiv.org/abs/2605.22138",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:45:24+09:00",
+      "last_checked_at": "2026-10-30T20:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.25115",
+      "identity_tokens": [
+        "arXiv:2608.25115",
+        "DOI:10.48550/arXiv.2608.25115"
+      ],
+      "title": "Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting",
+      "reason": "RAGで再ランキングとLLM生成のボトルネックが負荷で移る点を測り、証拠網羅率を優先する候補並べ替えと動的再ランキング予算PACEを提案。高負荷でp95遅延を削減し、証拠recallを改善する。",
+      "source_url": "https://arxiv.org/abs/2608.25115",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:45:24+09:00",
+      "last_checked_at": "2026-10-30T20:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 498,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.04208",
+      "identity_tokens": [
+        "arXiv:2407.04208",
+        "DOI:10.48550/arXiv.2407.04208"
+      ],
+      "title": "AMD: Automatic Multi-step Distillation of Large-scale Vision Models",
+      "reason": "画像分類用ViTの大規模教師から中間教師を自動選び、CIFAR/ImageNetで多段蒸留品質を改善する。生成LLMの推論システム・KV・サービング最適化の直接評価はない。",
+      "source_url": "https://arxiv.org/abs/2407.04208",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:45:24+09:00",
+      "last_checked_at": "2026-10-30T20:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261108-0500-scheduled-chat-00/r01",
+  "reference_main_sha": "f131ee6385d9ca08994e0e2308d8cad62a7ad9f4",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.13990",
+      "identity_tokens": [
+        "arxiv:2610.13990"
+      ],
+      "title": "DoSA: Dots Sparse Attention",
+      "reason": "索引ヘッドによる全候補スコア計算を避け、勝者閾値の下界と各候補の上界による証明で不要な計算を省く。Top-K選択の厳密性を保持し、GPU IndexerはSGLang比最大2.74倍、GLM-5.2のTTFTは最大1.94倍高速化。",
+      "source_url": "https://arxiv.org/abs/2610.13990",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T05:00:00+09:00",
+      "last_checked_at": "2026-11-08T05:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 26"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.13328",
+      "identity_tokens": [
+        "arxiv:2610.13328"
+      ],
+      "title": "DuoRate: Two-Rate Per-Expert Precision Allocation for Mixture-of-Experts Serving",
+      "reason": "MoE専門家重みの保存ビット幅と実際のdecode読出ビット幅の乖離を扱う。prefix-readable重み列を保存し、prefillの負荷統計で専門家別読出率を最適化。Qwen3-30B-A3Bで2.3bpw読出時に2-bit級基準比平均正解率6.3～47.0ポイント改善。",
+      "source_url": "https://arxiv.org/abs/2610.13328",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T05:00:00+09:00",
+      "last_checked_at": "2026-11-08T05:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 30"
+      ],
+      "worklist_rank": 30
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36355",
+      "identity_tokens": [
+        "arxiv:2610.36355"
+      ],
+      "title": "WAKMan: Workload Aware KVCache Manager",
+      "reason": "prefix KVキャッシュの追い出し方針を実トラフィックから動的に選択。エージェント系と長会話ではLRUと頻度重視の優劣が逆転し、20混合負荷でLRUより平均5ポイント高いキャッシュヒット率を報告。",
+      "source_url": "https://arxiv.org/abs/2610.36355",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T05:00:00+09:00",
+      "last_checked_at": "2026-11-08T05:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 32"
+      ],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.18451",
+      "identity_tokens": [
+        "arxiv:2610.18451"
+      ],
+      "title": "FastEEP: Fast Intra-Instance Elastic Scaling for Expert-Parallel MoE Serving",
+      "reason": "MoEのexpert-parallelグループをインスタンス破棄なしに伸縮。GPUメモリ、実行構造、通信の再利用可能部分を保持するPartial Reuseにより、vLLM系方式比4.5～11.7倍高速な伸縮を報告。",
+      "source_url": "https://arxiv.org/abs/2610.18451",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T05:00:00+09:00",
+      "last_checked_at": "2026-11-08T05:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 33"
+      ],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.21848",
+      "identity_tokens": [
+        "arxiv:2606.21848"
+      ],
+      "title": "Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers",
+      "reason": "従来のkey射影をvalue空間での専用ルーティング射影へ置換し、key表現をキャッシュしない。KVキャッシュ容量を50%削減し、言語モデルの困惑度と下流性能を概ね維持。推論時メモリ・帯域削減に直接寄与。",
+      "source_url": "https://arxiv.org/abs/2606.21848",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T05:00:00+09:00",
+      "last_checked_at": "2026-11-08T05:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 34"
+      ],
+      "worklist_rank": 34
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.05936",
+      "identity_tokens": [
+        "arxiv:2503.05936"
+      ],
+      "title": "CASP: Compression of Large Multimodal Models Based on Attention Sparsity",
+      "reason": "マルチモーダル注意行列の疎性を利用しQ/K重みの圧縮誤差を理論的に制限。データ依存の低ランク分解と層別ビット割当を量子化と組み合わせ、AQLM/QuIP#の2-bit構成を画像・動画言語評価で平均21%改善。",
+      "source_url": "https://arxiv.org/abs/2503.05936",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T05:00:00+09:00",
+      "last_checked_at": "2026-11-08T05:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 36"
+      ],
+      "worklist_rank": 36
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37386",
+      "identity_tokens": [
+        "arxiv:2610.37386"
+      ],
+      "title": "Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data",
+      "reason": "MoE専門家のトークン別重要チャネルをtop-k選択し、校正済み閾値に頼らず読出予算を固定。三つのMoEで専門家読出17.8%時に元精度98.1%を維持し、Triton MoEカーネルはvLLM比1.60～1.90倍高速。",
+      "source_url": "https://arxiv.org/abs/2610.37386",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T05:00:00+09:00",
+      "last_checked_at": "2026-11-08T05:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 37"
+      ],
+      "worklist_rank": 37
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.09941",
+      "identity_tokens": [
+        "arxiv:2407.09941"
+      ],
+      "title": "Hydra: Bidirectional State Space Models Through Generalized Matrix Mixers",
+      "reason": "構造化行列ミキサと双方向SSMの理論・非因果タスクを主対象とする。準分離行列のサブ二次計算は関連するが、要旨での実証はGLUE・ImageNetであり、自己回帰LLM推論サービングへの直接改善は未確認。",
+      "source_url": "https://arxiv.org/abs/2407.09941",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T05:00:00+09:00",
+      "last_checked_at": "2026-11-08T05:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 38"
+      ],
+      "worklist_rank": 38
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.16054",
+      "identity_tokens": [
+        "arxiv:2603.16054"
+      ],
+      "title": "inference-fleet-sim: A Queueing-Theory-Grounded Fleet Capacity Planner for LLM Inference",
+      "reason": "M/G/c待ち行列と離散事象シミュレーションを組み合わせ、P99 TTFT SLOを満たす最小費用GPUフリートを探索。A10G/A100/H100と一体型・分離型配置、公開トレースを評価するLLM推論基盤計画手法。",
+      "source_url": "https://arxiv.org/abs/2603.16054",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T05:00:00+09:00",
+      "last_checked_at": "2026-11-08T05:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 40"
+      ],
+      "worklist_rank": 40
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.24044",
+      "identity_tokens": [
+        "arxiv:2602.24044"
+      ],
+      "title": "Data Driven Optimization of GPU efficiency for Distributed LLM-Adapter Serving",
+      "reason": "分散LLMアダプタサービングのGPU台数を削減するため、デジタルツイン、学習済み性能予測、貪欲配置を統合。評価負荷でGPU必要数を平均60%削減、デジタルツインのスループット推定誤差は5%未満。",
+      "source_url": "https://arxiv.org/abs/2602.24044",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T05:00:00+09:00",
+      "last_checked_at": "2026-11-08T05:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 42"
+      ],
+      "worklist_rank": 42
+    }
+  ]
+}

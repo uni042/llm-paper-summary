@@ -1,0 +1,316 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f61ff1831f27ec6a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f61ff1831f27",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2606.25091",
+    "arXiv:2606.26762",
+    "arXiv:2606.27791"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9353f600652e70106fdbaed85394f1f4cb4b4398",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T05:50:02.311554+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2606.25091",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.26762",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.27791",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Speculation at a Distance: Where Edge-Cloud Speculative Decoding Actually Pays Off",
+      "source_url": "https://arxiv.org/abs/2606.25091",
+      "year": 2026,
+      "published": "2026-06-23",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) accelerates LLM inference by $1.5$-$3$ times when the draft and target models are co-located. This has motivated a distributed variant (DSD) that places the draft model on an edge device while the target stays in the cloud. We show with closed-form inequalities that DSD's per-request latency benefit is limited under WAN edge-cloud communication. If the server can host both models, co-located SD has lower latency and communication than synchronous DSD, with the same per-output FLOPs and model-weight memory. Pipelining can make DSD competitive with co-located SD only in low-RTT regimes where the round trip is shorter than the edge drafting time window; at WAN RTTs, the cloud round trip remains too large for pipelined DSD to beat co-located SD. Against cloud autoregressive decoding, DSD can reduce latency only inside a bounded window given the target-model speed, acceptance rate, and RTT. DSD is also infeasible against closed-source APIs without a verifier-only interface. The main case for DSD appears in multi-tenant capacity. Under cross-client overlap, offloading draft compute lets a saturated cloud server sustain $(1 + \\gamma\\,t_d/t_v)$ times more concurrent clients at the same per-client rate, where $\\gamma$ is the speculation length and $t_d, t_v$ are the per-step draft and verification times. DSD should therefore be evaluated primarily by multi-tenant capacity and server throughput, not only by single-request latency.",
+      "identifiers": [
+        "SemanticScholar:46caef6533311af3a7ca2849bfe8a0b92b0f78ee"
+      ],
+      "semantic_scholar_id": "46caef6533311af3a7ca2849bfe8a0b92b0f78ee",
+      "canonical_id": "arXiv:2606.25091",
+      "arxiv_id": "2606.25091",
+      "doi": "10.48550/arXiv.2606.25091",
+      "authors": [
+        "Y. Lyu",
+        "Bharath Irukulapati",
+        "J. Champati"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 103,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ProtoKV: Streaming Video Understanding under Delayed Query with Summary-State Memory",
+      "source_url": "https://arxiv.org/abs/2606.26762",
+      "year": 2026,
+      "published": "2026-06-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming video understanding (SVU) must answer queries that arrive asynchronously while visual tokens stream continuously under strict GPU-memory and query-time latency budgets. A key challenge is delayed query: decisive cues may appear briefly, yet many subsequent updates occur before the query arrives, increasing the risk that those cues are evicted or diluted under bounded memory. We propose ProtoKV, a constant-footprint SVU memory that represents far history as a fixed-capacity summary state rather than retaining token instances. ProtoKV keeps an exact near-window KV cache and aggregates older content into a semantic-spatial prototype bank with residual statistics. At query time, each prototype is exposed through a bounded pseudo-token interface that is drop-in compatible with standard attention. Under matched budgets and comparable query-time cost, ProtoKV improves accuracy by up to 12.5 points over token-retention baselines on SVU benchmarks in the long-delay regime, with gains that grow as query delay increases.",
+      "identifiers": [
+        "SemanticScholar:67c8156fb4b98f6c1669ff34224be1c9ecf8b9a2"
+      ],
+      "semantic_scholar_id": "67c8156fb4b98f6c1669ff34224be1c9ecf8b9a2",
+      "canonical_id": "arXiv:2606.26762",
+      "arxiv_id": "2606.26762",
+      "doi": "10.48550/arXiv.2606.26762",
+      "authors": [
+        "Lê Ngọc Minh",
+        "Jinyeong Lim",
+        "Dongsu Han"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 101,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation",
+      "source_url": "https://arxiv.org/abs/2606.27791",
+      "year": 2026,
+      "published": "2026-06-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid attention models that mix full and sliding-window attention across layers offer a promising approach to efficient long-context inference, but the critical question of \\emph{which layers} should retain full attention remains unsolved. Existing methods use either fixed periodic patterns or attention-based heuristics that may not capture what matters for downstream accuracy. We propose NLL-guided layer selection, a training-free method that directly measures each layer's importance by computing the negative log-likelihood degradation on answer tokens when that layer uses sliding-window instead of full attention. On LongMemEval with Qwen3-4B, our method achieves 64.6\\% accuracy using only 1/4 full-attention layers, matching the 1/2-FA periodic baseline (65.0\\%) while halving the computational budget. NLL-guided selection outperforms the SWAA-reported periodic 1/4-FA baseline by 10.4 percentage points and a matched LightTransfer-style baseline by 26.4 percentage points. De-confounding analysis shows the signal is consistent with long-range attention needs rather than generic layer sensitivity. The method requires only $\\sim$15 minutes of one-time calibration, advancing the efficiency-accuracy Pareto frontier for long-context LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:742fa563cfbaeb3b55d924b1dc7be981f5ae3fff"
+      ],
+      "semantic_scholar_id": "742fa563cfbaeb3b55d924b1dc7be981f5ae3fff",
+      "canonical_id": "arXiv:2606.27791",
+      "arxiv_id": "2606.27791",
+      "doi": "10.48550/arXiv.2606.27791",
+      "authors": [
+        "Qiong Tang",
+        "Xiangkun Hu",
+        "Xiangyang Liu",
+        "Yiran Chen",
+        "Yunfan Shao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.25091",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.25091",
+        "id:SemanticScholar:46caef6533311af3a7ca2849bfe8a0b92b0f78ee",
+        "id:arXiv:2606.25091",
+        "title:speculation at a distance where edgecloud speculative decoding actually pays off",
+        "url:https://arxiv.org/abs/2606.25091"
+      ],
+      "record": {
+        "title": "Speculation at a Distance: Where Edge-Cloud Speculative Decoding Actually Pays Off",
+        "source_url": "https://arxiv.org/abs/2606.25091",
+        "year": 2026,
+        "published": "2026-06-23",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD) accelerates LLM inference by $1.5$-$3$ times when the draft and target models are co-located. This has motivated a distributed variant (DSD) that places the draft model on an edge device while the target stays in the cloud. We show with closed-form inequalities that DSD's per-request latency benefit is limited under WAN edge-cloud communication. If the server can host both models, co-located SD has lower latency and communication than synchronous DSD, with the same per-output FLOPs and model-weight memory. Pipelining can make DSD competitive with co-located SD only in low-RTT regimes where the round trip is shorter than the edge drafting time window; at WAN RTTs, the cloud round trip remains too large for pipelined DSD to beat co-located SD. Against cloud autoregressive decoding, DSD can reduce latency only inside a bounded window given the target-model speed, acceptance rate, and RTT. DSD is also infeasible against closed-source APIs without a verifier-only interface. The main case for DSD appears in multi-tenant capacity. Under cross-client overlap, offloading draft compute lets a saturated cloud server sustain $(1 + \\gamma\\,t_d/t_v)$ times more concurrent clients at the same per-client rate, where $\\gamma$ is the speculation length and $t_d, t_v$ are the per-step draft and verification times. DSD should therefore be evaluated primarily by multi-tenant capacity and server throughput, not only by single-request latency.",
+        "identifiers": [
+          "SemanticScholar:46caef6533311af3a7ca2849bfe8a0b92b0f78ee"
+        ],
+        "semantic_scholar_id": "46caef6533311af3a7ca2849bfe8a0b92b0f78ee",
+        "canonical_id": "arXiv:2606.25091",
+        "arxiv_id": "2606.25091",
+        "doi": "10.48550/arXiv.2606.25091",
+        "authors": [
+          "Y. Lyu",
+          "Bharath Irukulapati",
+          "J. Champati"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "freshness_age_days": 103,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.26762",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.26762",
+        "id:SemanticScholar:67c8156fb4b98f6c1669ff34224be1c9ecf8b9a2",
+        "id:arXiv:2606.26762",
+        "title:protokv streaming video understanding under delayed query with summarystate memory",
+        "url:https://arxiv.org/abs/2606.26762"
+      ],
+      "record": {
+        "title": "ProtoKV: Streaming Video Understanding under Delayed Query with Summary-State Memory",
+        "source_url": "https://arxiv.org/abs/2606.26762",
+        "year": 2026,
+        "published": "2026-06-25",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Streaming video understanding (SVU) must answer queries that arrive asynchronously while visual tokens stream continuously under strict GPU-memory and query-time latency budgets. A key challenge is delayed query: decisive cues may appear briefly, yet many subsequent updates occur before the query arrives, increasing the risk that those cues are evicted or diluted under bounded memory. We propose ProtoKV, a constant-footprint SVU memory that represents far history as a fixed-capacity summary state rather than retaining token instances. ProtoKV keeps an exact near-window KV cache and aggregates older content into a semantic-spatial prototype bank with residual statistics. At query time, each prototype is exposed through a bounded pseudo-token interface that is drop-in compatible with standard attention. Under matched budgets and comparable query-time cost, ProtoKV improves accuracy by up to 12.5 points over token-retention baselines on SVU benchmarks in the long-delay regime, with gains that grow as query delay increases.",
+        "identifiers": [
+          "SemanticScholar:67c8156fb4b98f6c1669ff34224be1c9ecf8b9a2"
+        ],
+        "semantic_scholar_id": "67c8156fb4b98f6c1669ff34224be1c9ecf8b9a2",
+        "canonical_id": "arXiv:2606.26762",
+        "arxiv_id": "2606.26762",
+        "doi": "10.48550/arXiv.2606.26762",
+        "authors": [
+          "Lê Ngọc Minh",
+          "Jinyeong Lim",
+          "Dongsu Han"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "freshness_age_days": 101,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.27791",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.27791",
+        "id:SemanticScholar:742fa563cfbaeb3b55d924b1dc7be981f5ae3fff",
+        "id:arXiv:2606.27791",
+        "title:nllguided fullattention layer selection for trainingfree slidingwindow adaptation",
+        "url:https://arxiv.org/abs/2606.27791"
+      ],
+      "record": {
+        "title": "NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation",
+        "source_url": "https://arxiv.org/abs/2606.27791",
+        "year": 2026,
+        "published": "2026-06-26",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hybrid attention models that mix full and sliding-window attention across layers offer a promising approach to efficient long-context inference, but the critical question of \\emph{which layers} should retain full attention remains unsolved. Existing methods use either fixed periodic patterns or attention-based heuristics that may not capture what matters for downstream accuracy. We propose NLL-guided layer selection, a training-free method that directly measures each layer's importance by computing the negative log-likelihood degradation on answer tokens when that layer uses sliding-window instead of full attention. On LongMemEval with Qwen3-4B, our method achieves 64.6\\% accuracy using only 1/4 full-attention layers, matching the 1/2-FA periodic baseline (65.0\\%) while halving the computational budget. NLL-guided selection outperforms the SWAA-reported periodic 1/4-FA baseline by 10.4 percentage points and a matched LightTransfer-style baseline by 26.4 percentage points. De-confounding analysis shows the signal is consistent with long-range attention needs rather than generic layer sensitivity. The method requires only $\\sim$15 minutes of one-time calibration, advancing the efficiency-accuracy Pareto frontier for long-context LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:742fa563cfbaeb3b55d924b1dc7be981f5ae3fff"
+        ],
+        "semantic_scholar_id": "742fa563cfbaeb3b55d924b1dc7be981f5ae3fff",
+        "canonical_id": "arXiv:2606.27791",
+        "arxiv_id": "2606.27791",
+        "doi": "10.48550/arXiv.2606.27791",
+        "authors": [
+          "Qiong Tang",
+          "Xiangkun Hu",
+          "Xiangyang Liu",
+          "Yiran Chen",
+          "Yunfan Shao"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "freshness_age_days": 100,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f179e9c231b361487f9f401873065b511bd963878fb71460f3b584ad55971286",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

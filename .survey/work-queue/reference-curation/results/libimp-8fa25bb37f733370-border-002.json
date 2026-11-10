@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8fa25bb37f733370-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.02120",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.02120",
+    "identity_tokens": [
+      "arXiv:2508.02120"
+    ],
+    "reason": "対象テーマには直接合致するが、独自手法を提示しないsurveyである点がDiscovery収録として弱い。",
+    "first_checked_at": "2026-10-05T14:29:13+00:00",
+    "last_checked_at": "2026-10-05T14:29:13+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2408.11850-pearl-parallel-speculative-decoding-with-adaptive-draft-length.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md",
+      "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Don't Overthink It: A Survey of Efficient R1-style Large Reasoning Models"
+  },
+  "processed_at": "2026-10-05T14:29:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8fa25bb37f73",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

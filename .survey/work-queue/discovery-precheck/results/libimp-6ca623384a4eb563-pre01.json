@@ -1,0 +1,581 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6ca623384a4eb563-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6ca623384a4e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.18701",
+    "arXiv:2501.07139",
+    "arXiv:2608.20359",
+    "arXiv:2609.30820",
+    "arXiv:2609.32831",
+    "arXiv:2609.34538"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:23.381471+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.18701",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.07139",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.20359",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.30820",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32831",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34538",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Shallow Queries, Mature Values: Depth-Asynchronous Self-Speculation for Looped Transformers",
+      "source_url": "https://arxiv.org/abs/2609.34538",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Transformers reuse a shared block across recurrent depths, making autoregressive decoding expensive because every generated token requires many sequential recurrent passes. Self-speculative decoders reduce this cost by drafting at an early depth and verifying at full depth, but typically bind draft computation to prefix representations from the same recurrent depth. We find that queries and keys approach their final-depth representations earlier than values, and controlled prefix-channel interventions show that mature values substantially improve shallow draft predictions. Motivated by this asymmetry, we introduce Depth-Asynchronous Self-Speculation (DAS), which decouples the depth of draft computation from the depth of verified-prefix representations it reads. Its Mature-V primitive lets shallow queries retrieve full-depth prefix values without additional recurrent computation. We further develop DAS-Wave, which combines depth-asynchronous prefix reads with carried parallel refinement, progressive block growth, and an independent full-depth verifier. Across four recurrent-model checkpoints and mathematics and code workloads, DAS-Wave achieves 4.00--6.96$\\times$ mean throughput speedup over paired full-depth autoregressive decoding in the same inference stack. These results identify prefix-information depth as an effective design axis for recurrent self-speculation.",
+      "identifiers": [
+        "SemanticScholar:62a2c2ce7f6c23178718ebabe4576fd4b6860dde"
+      ],
+      "semantic_scholar_id": "62a2c2ce7f6c23178718ebabe4576fd4b6860dde",
+      "canonical_id": "arXiv:2609.34538",
+      "arxiv_id": "2609.34538",
+      "authors": [
+        "Guang-Hao Li",
+        "Zi-Han Su",
+        "Hao Yu",
+        "Jinyang Jiang",
+        "Tao Ren",
+        "Ze-Hao Li",
+        "Feng Lu",
+        "Ming Tang",
+        "Chun Yuan"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness",
+      "source_url": "https://arxiv.org/abs/2609.30820",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped transformers reuse weights across recurrence steps, making low-bit quantization especially attractive. We identify two distinct failure modes of standard post-training quantization. On Huginn-3.5B, per-channel INT4 fails primarily at the non-residual loop-entry adapter, while quantizing the residual core is much less damaging. We call this feedback exposure: a quantized layer perturbs the recurrent state without an identity path, and the resulting error is fed back at later steps. Controlled experiments on linear filters and Mamba state-space models show that feedback exposure also occurs outside transformers. Grouped INT4 reveals a separate failure, calibration blindness: our one-step GPTQ baseline builds its Hessian from step-0 activations, leaving input directions used later in the recurrence nearly unweighted. Across nine checkpoints from seven looped architectures, one-step GPTQ is worse than round-to-nearest (RTN) on the primary task metric for five checkpoints. Accumulating the GPTQ Hessian across recurrence steps outperforms both one-step GPTQ and RTN on all nine checkpoints and recovers bf16-level accuracy on Huginn. These results separate two questions for PTQ on looped models: where quantization error enters the recurrence, and which states calibration sees.",
+      "identifiers": [
+        "SemanticScholar:b8f9e46da59d38485931c18154fab4f79137ec01"
+      ],
+      "semantic_scholar_id": "b8f9e46da59d38485931c18154fab4f79137ec01",
+      "canonical_id": "arXiv:2609.30820",
+      "arxiv_id": "2609.30820",
+      "authors": [
+        "Nux Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "UniCache: Task- and Type-Aware KV Cache Compression for Unified Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2609.32831",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Unified multimodal models combine understanding, generation, and editing within a single network, offering a promising foundation for versatile multimodal applications. However, growing multimodal contexts make KV cache storage and access increasingly costly. Existing KV cache compression methods are typically tailored to specific tasks and single-modality caches, while overlooking changes in cache importance across tasks and timesteps. However, in unified multimodal models, each task involves multiple KV cache types, and both their composition and dynamics differ across tasks. As a result, a single compression policy overlooks task- and type-specific requirements, leading to the loss of critical information and degraded quality across tasks. Based on these findings, we propose UniCache, a training-free framework for task- and type-aware KV cache compression. UniCache identifies the cache segments activated by each task and assigns suitable compression policies through offline calibration. It coordinates their parallel execution under a shared storage budget through attention-guided allocation and task-aware temporal scheduling. Experiments show that UniCache achieves $5\\times$ KV cache compression for understanding and editing and $2.5\\times$ for generation with negligible quality loss, while increasing throughput by up to $1.78\\times$ in long-context settings, significantly improving the practicality of scaling unified multimodal models to longer context.",
+      "identifiers": [
+        "SemanticScholar:89a37060cbaa21704fb4f0cdc5d5263b3e14b517"
+      ],
+      "semantic_scholar_id": "89a37060cbaa21704fb4f0cdc5d5263b3e14b517",
+      "canonical_id": "arXiv:2609.32831",
+      "arxiv_id": "2609.32831",
+      "authors": [
+        "Wan-Qi Yang",
+        "Yue-Xiao Ma",
+        "Mei Xie",
+        "Xia-Wu Zheng",
+        "Shi-Wei Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Self-Speculation for Faster Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2608.20359",
+      "year": 2026,
+      "published": "2026-06-17",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are deployed for increasingly complex tasks involving planning and multi-step decision making, but high-quality performance on these tasks often requires generating long reasoning traces. This is a poor fit for latency-sensitive and interactive applications like voice assistants or coding agents, where generation latency can strongly affect user experience. Existing acceleration methods typically focus on token-level generation, without utilizing the structure of reasoning workflows. We introduce SSR: Self-Speculation for Reasoning Models, a training-free self-speculative decoding method that leverages the chain-of-thought (CoT) as a source of speculation. SSR uses the partial-CoT answer distribution as the drafter and the full-CoT distribution as the verifier, deriving both from the same model at different reasoning budgets. This builds on the observation that later partial-CoT responses often exhibit greater semantic and lexical overlap with the full-budget response. Due to this overlap, SSR can accept long draft prefixes at once, leading to large speedups on structured and long-form generation tasks. To further exploit draft-response overlap beyond the contiguous prefix accepted by standard speculative decoding, SSR also incorporates suffix decoding, using the draft to seed a suffix cache and recover useful spans beyond the accepted prefix, further reducing latency on tasks with high lexical overlap between the draft and the final response. We evaluate SSR on multiple structured and long-form generation tasks where it is most useful, and demonstrate a relative improvement of up to 24.1% on total generation latency for popular open-source models such as Qwen3.5 and Gemma-4.",
+      "identifiers": [
+        "SemanticScholar:70e5f7128bb0f6057af7b490ee796cd42e808c66"
+      ],
+      "semantic_scholar_id": "70e5f7128bb0f6057af7b490ee796cd42e808c66",
+      "canonical_id": "arXiv:2608.20359",
+      "arxiv_id": "2608.20359",
+      "authors": [
+        "Ravisri Valluri",
+        "Tung Nguyen",
+        "Aditya Grover"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BATON: Enhancing Batch-wise Inference Efficiency for Large Language Models via Dynamic Re-batching",
+      "source_url": "https://arxiv.org/abs/2410.18701",
+      "year": 2024,
+      "published": "2024-10-24",
+      "venue": "The Web Conference",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The advanced capabilities of Large Language Models (LLMs) have inspired the development of various interactive web services or applications, such as ChatGPT, which offer query inference services for users. Unlike traditional DNN model, the inference of LLM entails different iterations of forward computation for different queries, which result in efficiency challenges for existing run-to-completion batch-wise inference. Hence, some methods refine batch-wise inference to iteration-level by duplicating all nonlinear layers of LLM. However, this approach not only increases resource usage but also introduces idle computations to the batch due to the prefilling of newly added queries. Therefore, we propose BATON, an efficient batch-wise LLM inference scheme by dynamically adjusting processing batch, which can achieve near-zero idle computations without incurring additional resource consumption. To do so, BATON 1) shapes the vectors involved in the inference of the newly inserted query and processing batch to align dimensions and generates a new attention mask based on vector shaping to ensure inference correctness, which enables query inserting without consuming additional resource; 2) embeds prefilled Keys and Values of the new query into the KV_Cache of the processing batch by leveraging the prefilling and decoding separation mechanism, eliminating idle computations to the batch introduced by the prefilling process of the new query. Experimental results show that compared to the state-of-the-art solution Orca, BATON outperforms improves query processing by up to 1.75x.",
+      "identifiers": [
+        "SemanticScholar:ff53557b55dc8d2aa746b1298590835929f21432"
+      ],
+      "semantic_scholar_id": "ff53557b55dc8d2aa746b1298590835929f21432",
+      "canonical_id": "arXiv:2410.18701",
+      "arxiv_id": "2410.18701",
+      "doi": "10.1145/3696410.3714950",
+      "authors": [
+        "Pei-Zhuang Cong",
+        "Qizhi Chen",
+        "Haochen Zhao",
+        "Tong Yang"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 736,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlexQuant: Elastic Quantization Framework for Locally Hosted LLM on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2501.07139",
+      "year": 2025,
+      "published": "2025-01-13",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying LLMs on edge devices presents serious technical challenges. Memory elasticity is crucial for edge devices with unified memory, where memory is shared and fluctuates dynamically. Existing solutions suffer from either poor transition granularity or high storage costs. We propose FlexQuant, a novel elasticity framework that generates an ensemble of quantized models, providing an elastic hosting solution with 31x more deployment options, 15x granularity improvement, and 10x storage reduction compared to SoTA methods. FlexQuant works with most quantization methods and creates a family of trade-off options under various storage limits through our pruning method. It brings great performance and flexibility to the edge deployment of LLMs.",
+      "identifiers": [
+        "SemanticScholar:d3cf9ac3005b0e40a940aa3de218140cba864f2d"
+      ],
+      "semantic_scholar_id": "d3cf9ac3005b0e40a940aa3de218140cba864f2d",
+      "canonical_id": "arXiv:2501.07139",
+      "arxiv_id": "2501.07139",
+      "doi": "10.48550/arXiv.2501.07139",
+      "authors": [
+        "Yuji Chai",
+        "Mujin Kwen",
+        "David Brooks",
+        "Gu-Yeon Wei"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 655,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.34538",
+      "identity_tokens": [
+        "id:SemanticScholar:62a2c2ce7f6c23178718ebabe4576fd4b6860dde",
+        "id:arXiv:2609.34538",
+        "title:shallow queries mature values depthasynchronous selfspeculation for looped transformers",
+        "url:https://arxiv.org/abs/2609.34538"
+      ],
+      "record": {
+        "title": "Shallow Queries, Mature Values: Depth-Asynchronous Self-Speculation for Looped Transformers",
+        "source_url": "https://arxiv.org/abs/2609.34538",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped Transformers reuse a shared block across recurrent depths, making autoregressive decoding expensive because every generated token requires many sequential recurrent passes. Self-speculative decoders reduce this cost by drafting at an early depth and verifying at full depth, but typically bind draft computation to prefix representations from the same recurrent depth. We find that queries and keys approach their final-depth representations earlier than values, and controlled prefix-channel interventions show that mature values substantially improve shallow draft predictions. Motivated by this asymmetry, we introduce Depth-Asynchronous Self-Speculation (DAS), which decouples the depth of draft computation from the depth of verified-prefix representations it reads. Its Mature-V primitive lets shallow queries retrieve full-depth prefix values without additional recurrent computation. We further develop DAS-Wave, which combines depth-asynchronous prefix reads with carried parallel refinement, progressive block growth, and an independent full-depth verifier. Across four recurrent-model checkpoints and mathematics and code workloads, DAS-Wave achieves 4.00--6.96$\\times$ mean throughput speedup over paired full-depth autoregressive decoding in the same inference stack. These results identify prefix-information depth as an effective design axis for recurrent self-speculation.",
+        "identifiers": [
+          "SemanticScholar:62a2c2ce7f6c23178718ebabe4576fd4b6860dde"
+        ],
+        "semantic_scholar_id": "62a2c2ce7f6c23178718ebabe4576fd4b6860dde",
+        "canonical_id": "arXiv:2609.34538",
+        "arxiv_id": "2609.34538",
+        "authors": [
+          "Guang-Hao Li",
+          "Zi-Han Su",
+          "Hao Yu",
+          "Jinyang Jiang",
+          "Tao Ren",
+          "Ze-Hao Li",
+          "Feng Lu",
+          "Ming Tang",
+          "Chun Yuan"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30820",
+      "identity_tokens": [
+        "id:SemanticScholar:b8f9e46da59d38485931c18154fab4f79137ec01",
+        "id:arXiv:2609.30820",
+        "title:quantizing looped transformers feedback exposure and calibration blindness",
+        "url:https://arxiv.org/abs/2609.30820"
+      ],
+      "record": {
+        "title": "Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness",
+        "source_url": "https://arxiv.org/abs/2609.30820",
+        "year": 2026,
+        "published": "2026-09-25",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped transformers reuse weights across recurrence steps, making low-bit quantization especially attractive. We identify two distinct failure modes of standard post-training quantization. On Huginn-3.5B, per-channel INT4 fails primarily at the non-residual loop-entry adapter, while quantizing the residual core is much less damaging. We call this feedback exposure: a quantized layer perturbs the recurrent state without an identity path, and the resulting error is fed back at later steps. Controlled experiments on linear filters and Mamba state-space models show that feedback exposure also occurs outside transformers. Grouped INT4 reveals a separate failure, calibration blindness: our one-step GPTQ baseline builds its Hessian from step-0 activations, leaving input directions used later in the recurrence nearly unweighted. Across nine checkpoints from seven looped architectures, one-step GPTQ is worse than round-to-nearest (RTN) on the primary task metric for five checkpoints. Accumulating the GPTQ Hessian across recurrence steps outperforms both one-step GPTQ and RTN on all nine checkpoints and recovers bf16-level accuracy on Huginn. These results separate two questions for PTQ on looped models: where quantization error enters the recurrence, and which states calibration sees.",
+        "identifiers": [
+          "SemanticScholar:b8f9e46da59d38485931c18154fab4f79137ec01"
+        ],
+        "semantic_scholar_id": "b8f9e46da59d38485931c18154fab4f79137ec01",
+        "canonical_id": "arXiv:2609.30820",
+        "arxiv_id": "2609.30820",
+        "authors": [
+          "Nux Li"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 35,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32831",
+      "identity_tokens": [
+        "id:SemanticScholar:89a37060cbaa21704fb4f0cdc5d5263b3e14b517",
+        "id:arXiv:2609.32831",
+        "title:unicache task and typeaware kv cache compression for unified multimodal models",
+        "url:https://arxiv.org/abs/2609.32831"
+      ],
+      "record": {
+        "title": "UniCache: Task- and Type-Aware KV Cache Compression for Unified Multimodal Models",
+        "source_url": "https://arxiv.org/abs/2609.32831",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Unified multimodal models combine understanding, generation, and editing within a single network, offering a promising foundation for versatile multimodal applications. However, growing multimodal contexts make KV cache storage and access increasingly costly. Existing KV cache compression methods are typically tailored to specific tasks and single-modality caches, while overlooking changes in cache importance across tasks and timesteps. However, in unified multimodal models, each task involves multiple KV cache types, and both their composition and dynamics differ across tasks. As a result, a single compression policy overlooks task- and type-specific requirements, leading to the loss of critical information and degraded quality across tasks. Based on these findings, we propose UniCache, a training-free framework for task- and type-aware KV cache compression. UniCache identifies the cache segments activated by each task and assigns suitable compression policies through offline calibration. It coordinates their parallel execution under a shared storage budget through attention-guided allocation and task-aware temporal scheduling. Experiments show that UniCache achieves $5\\times$ KV cache compression for understanding and editing and $2.5\\times$ for generation with negligible quality loss, while increasing throughput by up to $1.78\\times$ in long-context settings, significantly improving the practicality of scaling unified multimodal models to longer context.",
+        "identifiers": [
+          "SemanticScholar:89a37060cbaa21704fb4f0cdc5d5263b3e14b517"
+        ],
+        "semantic_scholar_id": "89a37060cbaa21704fb4f0cdc5d5263b3e14b517",
+        "canonical_id": "arXiv:2609.32831",
+        "arxiv_id": "2609.32831",
+        "authors": [
+          "Wan-Qi Yang",
+          "Yue-Xiao Ma",
+          "Mei Xie",
+          "Xia-Wu Zheng",
+          "Shi-Wei Liu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.20359",
+      "identity_tokens": [
+        "id:SemanticScholar:70e5f7128bb0f6057af7b490ee796cd42e808c66",
+        "id:arXiv:2608.20359",
+        "title:selfspeculation for faster reasoning models",
+        "url:https://arxiv.org/abs/2608.20359"
+      ],
+      "record": {
+        "title": "Self-Speculation for Faster Reasoning Models",
+        "source_url": "https://arxiv.org/abs/2608.20359",
+        "year": 2026,
+        "published": "2026-06-17",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are deployed for increasingly complex tasks involving planning and multi-step decision making, but high-quality performance on these tasks often requires generating long reasoning traces. This is a poor fit for latency-sensitive and interactive applications like voice assistants or coding agents, where generation latency can strongly affect user experience. Existing acceleration methods typically focus on token-level generation, without utilizing the structure of reasoning workflows. We introduce SSR: Self-Speculation for Reasoning Models, a training-free self-speculative decoding method that leverages the chain-of-thought (CoT) as a source of speculation. SSR uses the partial-CoT answer distribution as the drafter and the full-CoT distribution as the verifier, deriving both from the same model at different reasoning budgets. This builds on the observation that later partial-CoT responses often exhibit greater semantic and lexical overlap with the full-budget response. Due to this overlap, SSR can accept long draft prefixes at once, leading to large speedups on structured and long-form generation tasks. To further exploit draft-response overlap beyond the contiguous prefix accepted by standard speculative decoding, SSR also incorporates suffix decoding, using the draft to seed a suffix cache and recover useful spans beyond the accepted prefix, further reducing latency on tasks with high lexical overlap between the draft and the final response. We evaluate SSR on multiple structured and long-form generation tasks where it is most useful, and demonstrate a relative improvement of up to 24.1% on total generation latency for popular open-source models such as Qwen3.5 and Gemma-4.",
+        "identifiers": [
+          "SemanticScholar:70e5f7128bb0f6057af7b490ee796cd42e808c66"
+        ],
+        "semantic_scholar_id": "70e5f7128bb0f6057af7b490ee796cd42e808c66",
+        "canonical_id": "arXiv:2608.20359",
+        "arxiv_id": "2608.20359",
+        "authors": [
+          "Ravisri Valluri",
+          "Tung Nguyen",
+          "Aditya Grover"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 135,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.18701",
+      "identity_tokens": [
+        "id:DOI:10.1145/3696410.3714950",
+        "id:SemanticScholar:ff53557b55dc8d2aa746b1298590835929f21432",
+        "id:arXiv:2410.18701",
+        "title:baton enhancing batchwise inference efficiency for large language models via dynamic rebatching",
+        "url:https://arxiv.org/abs/2410.18701"
+      ],
+      "record": {
+        "title": "BATON: Enhancing Batch-wise Inference Efficiency for Large Language Models via Dynamic Re-batching",
+        "source_url": "https://arxiv.org/abs/2410.18701",
+        "year": 2024,
+        "published": "2024-10-24",
+        "venue": "The Web Conference",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The advanced capabilities of Large Language Models (LLMs) have inspired the development of various interactive web services or applications, such as ChatGPT, which offer query inference services for users. Unlike traditional DNN model, the inference of LLM entails different iterations of forward computation for different queries, which result in efficiency challenges for existing run-to-completion batch-wise inference. Hence, some methods refine batch-wise inference to iteration-level by duplicating all nonlinear layers of LLM. However, this approach not only increases resource usage but also introduces idle computations to the batch due to the prefilling of newly added queries. Therefore, we propose BATON, an efficient batch-wise LLM inference scheme by dynamically adjusting processing batch, which can achieve near-zero idle computations without incurring additional resource consumption. To do so, BATON 1) shapes the vectors involved in the inference of the newly inserted query and processing batch to align dimensions and generates a new attention mask based on vector shaping to ensure inference correctness, which enables query inserting without consuming additional resource; 2) embeds prefilled Keys and Values of the new query into the KV_Cache of the processing batch by leveraging the prefilling and decoding separation mechanism, eliminating idle computations to the batch introduced by the prefilling process of the new query. Experimental results show that compared to the state-of-the-art solution Orca, BATON outperforms improves query processing by up to 1.75x.",
+        "identifiers": [
+          "SemanticScholar:ff53557b55dc8d2aa746b1298590835929f21432"
+        ],
+        "semantic_scholar_id": "ff53557b55dc8d2aa746b1298590835929f21432",
+        "canonical_id": "arXiv:2410.18701",
+        "arxiv_id": "2410.18701",
+        "doi": "10.1145/3696410.3714950",
+        "authors": [
+          "Pei-Zhuang Cong",
+          "Qizhi Chen",
+          "Haochen Zhao",
+          "Tong Yang"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 736,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.07139",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.07139",
+        "id:SemanticScholar:d3cf9ac3005b0e40a940aa3de218140cba864f2d",
+        "id:arXiv:2501.07139",
+        "title:flexquant elastic quantization framework for locally hosted llm on edge devices",
+        "url:https://arxiv.org/abs/2501.07139"
+      ],
+      "record": {
+        "title": "FlexQuant: Elastic Quantization Framework for Locally Hosted LLM on Edge Devices",
+        "source_url": "https://arxiv.org/abs/2501.07139",
+        "year": 2025,
+        "published": "2025-01-13",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying LLMs on edge devices presents serious technical challenges. Memory elasticity is crucial for edge devices with unified memory, where memory is shared and fluctuates dynamically. Existing solutions suffer from either poor transition granularity or high storage costs. We propose FlexQuant, a novel elasticity framework that generates an ensemble of quantized models, providing an elastic hosting solution with 31x more deployment options, 15x granularity improvement, and 10x storage reduction compared to SoTA methods. FlexQuant works with most quantization methods and creates a family of trade-off options under various storage limits through our pruning method. It brings great performance and flexibility to the edge deployment of LLMs.",
+        "identifiers": [
+          "SemanticScholar:d3cf9ac3005b0e40a940aa3de218140cba864f2d"
+        ],
+        "semantic_scholar_id": "d3cf9ac3005b0e40a940aa3de218140cba864f2d",
+        "canonical_id": "arXiv:2501.07139",
+        "arxiv_id": "2501.07139",
+        "doi": "10.48550/arXiv.2501.07139",
+        "authors": [
+          "Yuji Chai",
+          "Mujin Kwen",
+          "David Brooks",
+          "Gu-Yeon Wei"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 655,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d35b7f0fd9f744c2b184925843877aa736c5183667355d34baba55ebda59dc56",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

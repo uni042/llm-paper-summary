@@ -1,0 +1,909 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-52c94f0f005ad6df-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-52c94f0f005a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2025.emnlp-industry.175",
+    "arXiv:2512.12284",
+    "arXiv:2602.11958",
+    "arXiv:2602.18931",
+    "arXiv:2605.08568",
+    "arXiv:2606.01927",
+    "arXiv:2609.01962",
+    "arXiv:2609.33410",
+    "arXiv:2609.38477",
+    "arXiv:2610.19405"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "feb71318b7639f0149b8c57c4e7e63e03a39b2cd",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T22:57:21.486275+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2025.emnlp-industry.175",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.12284",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.11958",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.18931",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.08568",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.01927",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.01962",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33410",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.38477",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.19405",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "V-Rex: Real-Time Streaming Video LLM Acceleration via Dynamic KV Cache Retrieval",
+      "source_url": "https://arxiv.org/abs/2512.12284",
+      "year": 2025,
+      "published": "2025-12-13",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming video large language models (LLMs) are increasingly used for real-time multimodal tasks such as video captioning, question answering, conversational agents, and augmented reality. However, these models face fundamental memory and computational challenges because their key-value (KV) caches grow substantially with continuous streaming video input. This process requires an iterative prefill stage, which is a unique feature of streaming video LLMs. Prior works reduce excessive cache overhead by utilizing the KV cache retrieval algorithm, which offloads the full KV cache to CPU memory or storage, then selectively fetches the most relevant entries. Nevertheless, due to its iterative prefill stage, they suffer from significant limitations, including extensive computation, substantial data transfer, and degradation in accuracy. Crucially, this issue is exacerbated for edge deployment, which is the primary target for these models. The memory footprint exceeds the memory capacity within minutes of video streams, making low-latency, energy-efficient inference infeasible. In this work, we propose V-Rex, the first software-hardware co-designed accelerator that comprehensively addresses both algorithmic and hardware bottlenecks in streaming video LLM inference. At its core, V-Rex introduces ReSV, a training-free dynamic KV cache retrieval algorithm. ReSV exploits temporal and spatial similarity-based token clustering to reduce excessive KV cache memory across video frames, and dynamically adjusts token selection per transformer layer and attention head to minimize the number of selected tokens. To fully realize these algorithmic benefits, V-Rex offers a compact, low-latency hardware accelerator with a dynamic KV cache retrieval engine (DRE), featuring bit-level and early-exit based computing units, as well as hierarchical KV cache memory management. Evaluated on COIN benchmarks, V-Rex achieves unprecedented real-time of 3.9-8.3 FPS and energy-efficient streaming video LLM inference on edge deployment with negligible accuracy loss. While DRE only accounts for 2.2% power and 2.0% area, the system delivers 1.9-19.7× speedup and 3.1-18.5× energy efficiency improvements over AGX Orin GPU. This work is the first to comprehensively tackle KV cache retrieval across algorithm and hardware, enabling real-time streaming video LLM inference on resource-constrained edge devices, with clear potential for scalable deployment in large-scale server environments.",
+      "identifiers": [
+        "SemanticScholar:a31c4351d6bf8f3344ac63130d5d3d82b708466d"
+      ],
+      "semantic_scholar_id": "a31c4351d6bf8f3344ac63130d5d3d82b708466d",
+      "canonical_id": "arXiv:2512.12284",
+      "arxiv_id": "2512.12284",
+      "doi": "10.1109/HPCA68181.2026.11408603",
+      "authors": [
+        "Donghyuk Kim",
+        "Sejeong Yang",
+        "Wonjin Shin",
+        "Joo-Young Kim"
+      ],
+      "priority": 118,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 118,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 319,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      }
+    },
+    {
+      "title": "RAM-Net: Linear-Time Sequence Modeling with Sparsely Addressable State",
+      "source_url": "https://arxiv.org/abs/2602.11958",
+      "year": 2026,
+      "published": "2026-02-12",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention offers an efficient alternative to full attention with a fixed-size recurrent state. However, this state is shared by all tokens, so information from distinct tokens becomes superposed within it and produces inter-token interference that degrades long-range fine-grained recall. To address this issue, we propose RAM-Net, which replaces dense access to a shared state with sparse address-based access. RAM-Net organizes the recurrent state as a fixed-size array of independent slots and uses an Address Decoder that maps each key or query into a sparse address, selecting a small subset of slots to write to or read from at each step. This design directs tokens with non-overlapping addresses to disjoint slots, suppressing inter-token interference, while keeping per-step state access dependent only on the number of selected slots rather than the total state size. Empirically, RAM-Net outperforms strong recurrent baselines on fine-grained long-range retrieval and achieves the lowest perplexity with competitive commonsense reasoning. It does so while accessing fewer state elements per step than all baselines, e.g., $8\\times$ fewer than Mamba2.",
+      "identifiers": [
+        "SemanticScholar:1544bfe5dc5100699640b1090d56f473388fbb5e"
+      ],
+      "semantic_scholar_id": "1544bfe5dc5100699640b1090d56f473388fbb5e",
+      "canonical_id": "arXiv:2602.11958",
+      "arxiv_id": "2602.11958",
+      "authors": [
+        "Kai-Cheng Xiao",
+        "Hao-Tian Li",
+        "Li-Ran Dong",
+        "Guo-Liang Xing"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 258,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WANSpec: Leveraging Global Compute Capacity for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2602.18931",
+      "year": 2026,
+      "published": "2026-02-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Data centers capable of running large language models (LLMs) are spread across the globe. Some have high end GPUs for running the most advanced models (100B+ parameters), and others are only suitable for smaller models (1B parameters). The most capable GPUs are under high demand thanks to the rapidly expanding applications of LLMs. Choosing the right location to run an LLM inference workload can have consequences on the latency of requests due to these high demands. In this work, we explore options to shift some aspects of inference to the under-utilized data centers. We first observe the varying delays affecting inference in AWS services from different regions, demonstrating that load is not spread evenly. We then introduce WANSpec, which offloads part of LLM generation to the under-utilized data centers. In doing so, WANSpec can mitigate capacity issues as well as effectively use on-site compute (ie at universities) to augment cloud providers. This is done with speculative decoding, a widely used technique to speed up auto-regressive decoding, by moving the draft model to the under-utilized compute resources. Our experiments in simulation and cloud deployments show that WANSpec can judiciously employ redundancy to avoid increases in latency while still reducing the forward passes of speculative decoding's draft model in high demand data centers by over 50%.",
+      "identifiers": [
+        "SemanticScholar:dd3ae05a014241f9d7fa808436545c560d50cbd7"
+      ],
+      "semantic_scholar_id": "dd3ae05a014241f9d7fa808436545c560d50cbd7",
+      "canonical_id": "arXiv:2602.18931",
+      "arxiv_id": "2602.18931",
+      "doi": "10.48550/arXiv.2602.18931",
+      "authors": [
+        "Noah Martin",
+        "Fahad R. Dogar"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 249,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Different Prompts, Different Ranks: Prompt-aware Dynamic Rank Selection for SVD-based LLM Compression",
+      "source_url": "https://arxiv.org/abs/2605.08568",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have rapidly grown in scale, creating substantial memory and computational costs that hinder efficient deployment. Singular value decomposition (SVD) has emerged as an effective post-training compression technique, but existing SVD-based methods rely on static rank truncation, applying a fixed prefix of singular components to all inputs regardless of their diversity. We identify two limitations of this static design: the optimal rank varies across individual prompts, and the selected rank is sensitive to the choice of calibration set, leading to suboptimal performance across diverse inputs. To address these challenges, we propose $\\textbf{PARSE}$, a post-training framework for $\\textbf{P}$rompt-$\\textbf{A}$ware $\\textbf{R}$ank $\\textbf{S}$election as $\\textbf{E}$xperts in SVD-compressed LLMs. PARSE trains a linear router offline to perform prompt-aware rank selection, decoupling it from calibration information by supervising the router against dense-model outputs on a large-scale corpus. We further observe that rank-selection patterns are shared across semantically similar prompts and remain stable across decoding steps, allowing appropriate rank subsets to be served directly from a pattern cache at inference. Complemented by expert memory aggregation and kernel fusion for system-level efficiency, PARSE is orthogonal to existing SVD-based pipelines and consistently improves both model quality and inference efficiency. Integrated with four representative SVD-based methods, PARSE improves average task accuracy by up to 10% at a compression ratio of 0.6 on LLaMA-7B, and achieves up to 2.5 $\\times$ prefill and 2.4 $\\times$ decode speedup over native SVD execution.",
+      "identifiers": [
+        "SemanticScholar:6ffeaa3862ab905f3f28cd9e53fb6eb6ab317f78"
+      ],
+      "semantic_scholar_id": "6ffeaa3862ab905f3f28cd9e53fb6eb6ab317f78",
+      "canonical_id": "arXiv:2605.08568",
+      "arxiv_id": "2605.08568",
+      "doi": "10.48550/arXiv.2605.08568",
+      "authors": [
+        "He Zhu",
+        "Zhen-Dong Mi",
+        "G. Zhang",
+        "Shao-Syuan Huang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Dynamic Quantization: An Efficient Static Hierarchical Mix-precision Framework for Near-Lossless LLM Compression",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-industry.175",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:73d026da1faff43234ce7997769fe57b10e9f3bf"
+      ],
+      "semantic_scholar_id": "73d026da1faff43234ce7997769fe57b10e9f3bf",
+      "doi": "10.18653/v1/2025.emnlp-industry.175",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-industry.175",
+      "authors": [
+        "Yi Zhang",
+        "Kai Zhang",
+        "Zheyang Li",
+        "Wenming Tan",
+        "Ye Ren",
+        "Ji-Lin Hu"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 484,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Scaling LLM Inference Beyond Amdahl's Limits via Eliminating Non-Scalable Overheads",
+      "source_url": "https://arxiv.org/abs/2606.01927",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deployers of online LLM services usually seek to maximize cluster-wide performance given a fixed number of GPUs. Tensor parallelism (TP) is necessary to fit modern models but scales sub-linearly as the TP degree t grows, due to cross-GPU communication and non-scalable runtime work, as predicted by Amdahl's Law. Conversely, increasing t improves memory efficiency and alleviates KV-cache contention and swapping. We identify and validate an empirical optimal TP degree t_e that balances these effects. We present Albireo, a parallel inference system that raises the attainable t_e by shrinking the non-scalable portion via overlap of scheduling and I/O with compute and sequence-parallel sampling, without changing model architectures. Across models and benchmarks, Albireo achieves up to 1.9x higher throughput, 48% lower latency, 28% higher GPU utilization, and 54% lower energy than vLLM; in production it yields up to 2x higher throughput.",
+      "identifiers": [
+        "SemanticScholar:aa6111e3becf7ecb51ba4319be0254918a085018"
+      ],
+      "semantic_scholar_id": "aa6111e3becf7ecb51ba4319be0254918a085018",
+      "canonical_id": "arXiv:2606.01927",
+      "arxiv_id": "2606.01927",
+      "doi": "10.48550/arXiv.2606.01927",
+      "authors": [
+        "Alan Zhao",
+        "Cyril Y. He",
+        "Wei Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Post-Training Ternarization of Qwen3-4B Capability, Effective Bit Budget, Storage Compression, and Deployment",
+      "source_url": "https://arxiv.org/abs/2609.01962",
+      "year": 2026,
+      "published": "2026-09-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Ultra-low-bit language models can reduce storage and memory bandwidth, but a nominal\"1.58-bit\"label does not fully describe the stored representation, retained capability, or runtime behavior. We study an end-to-end post-training conversion of Qwen, an instruction-tuned 4B-parameter model, using KOTMS rotation, E2M-ATQ ternarization, and GPTQ-style error compensation from TWLA. The experiment is weight-only: activations remain at 16-bit precision, so ILA-AMP is omitted. We evaluate effective bit accounting, task capability retention, perplexity, calibration sensitivity, checkpoint composition, and deployment behavior. The final conversion uses 1.641 effective bits per weight for quantized linear weights, with 81.62% of model parameters targeted. Across ten scored capability comparisons, accuracy falls from 64.5% to 54.7%. Degradation is uneven: BoolQ retains 84.6% chance-corrected teacher performance, while ARC-Challenge retains 43.8%. Perplexity rises from 13.639 to 18.748 on WikiText-2, 24.700 to 31.992 on PTB, and 19.831 to 28.966 on C4. A subsequent packing run preserves the ternary planes and scales, reducing reported model size from 8.29 GiB to 3.96 GiB with essentially unchanged perplexity. A separate third-party packing attempt was lossy and is excluded from the primary artifact claim. The packed artifact has not been benchmarked end-to-end for task accuracy or generation throughput. A preliminary Triton GEMV microbenchmark is 4.6x slower than FP16 cuBLAS on one tested shape. We therefore do not claim that compression alone yields faster inference.",
+      "identifiers": [
+        "SemanticScholar:d01da12fc90b7bbc9875f1e04a072456d1d77e7d"
+      ],
+      "semantic_scholar_id": "d01da12fc90b7bbc9875f1e04a072456d1d77e7d",
+      "canonical_id": "arXiv:2609.01962",
+      "arxiv_id": "2609.01962",
+      "authors": [
+        "A. Malik",
+        "M. Mehra",
+        "P. Devan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 56,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FoldAttention: Declared-Reference Softmax for Fast Decode and Deterministic Backward",
+      "source_url": "https://arxiv.org/abs/2609.33410",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decode repeatedly streams a growing KV cache, making attention a major cost at long context. Existing high-performance kernels use online softmax, which discovers a row's normalization reference as it scans keys. Earlier contributions therefore remain provisional and may require rescaling. We argue that the reference need not be discovered: softmax is invariant to a common shift, so the reference only has to keep the weights in range. We present FoldAttention, an additive formulation of softmax attention that fixes a finite reference $Z_i$ before scanning the KV cache. Each weight $2^{s_{ij}-Z_i}$ is then final when computed, so contributions add across disjoint key ranges and their quotient equals softmax attention in real arithmetic. We use this property to develop two techniques for Hopper decode: (1) final weights gate key and value reads before the bytes are fetched, and a per-call depth $T$ cuts keys below $2^{-T}$ while keeping their mass, and (2) additive partials compose split KV and shared-prefix cascades without rescaling. On H100 at $T=16$, FoldAttention decodes seven real-model generations 1.36-2.30$\\times$ faster than the fastest BF16 baseline, and up to 3.09$\\times$ faster across MHA and GQA shapes, at an error within 1.5% of the lowest BF16 error on six of the seven; reading every key, it is 1.14-1.30$\\times$ faster at matched error. We validate on Qwen3-8B that a whole decode step is up to 1.46$\\times$ faster while likelihood and long-context accuracy match those under BF16 kernels. The same principle makes the backward deterministic: CTAs round bounded partial gradients onto an integer grid declared before the reduction and add them in any order. FoldAttention thereby removes the determinism tax: its deterministic backward is up to 1.84$\\times$ faster than deterministic FlashAttention-3/4 and 1.05$\\times$ faster than the fastest nondeterministic kernel.",
+      "identifiers": [
+        "SemanticScholar:384a5464b7828e242d98c9b55a6bf48b0921d0c8"
+      ],
+      "semantic_scholar_id": "384a5464b7828e242d98c9b55a6bf48b0921d0c8",
+      "canonical_id": "arXiv:2609.33410",
+      "arxiv_id": "2609.33410",
+      "authors": [
+        "Sriman Achanta"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Security-Enhanced Seed-Based Weight Quantization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.38477",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) incur substantial storage, memory-bandwidth and energy costs, motivating compact weight representations. Existing seed-based compression methods reconstruct weights from compact pseudo-random representations but do not explicitly account for the non-uniform sensitivity of model weights. We introduce Seed-Q, a security-enhanced sensitivity-aware seed-based weight compression framework that uses lightweight Linear Feedback Shift Register (LFSR)-based weight generation with non-uniform bit allocation. Our approach assigns larger representation budgets to sensitive weights while aggressively compressing less sensitive regions. Importantly, this non-uniform allocation requires no side-information: the decoder deterministically reconstructs the bit-allocation schedule, with no rung depending on the decoded weights, eliminating the need to store per-block metadata or use calibration data while preserving the baseline coding rate. Experiments across diverse LLMs show that Seed-Q matches 4-bit perplexity of SeedLM with fewer bits, while at the same 4 bits/weight it reduces both perplexity degradation and zero-shot accuracy loss relative to SeedLM. We also show that Seed-Q simultaneously achieves high security against bit-flip attacks on model parameters, as bit corruption affects multiple reconstructed weights, greatly amplifying its impact and making it easier to detect. We further implement Seed-Q in an ASIC-based accelerator and demonstrate modest hardware overhead compared to prior seed-based approaches.",
+      "identifiers": [
+        "SemanticScholar:698c86041f0cdfeb5f28003967840bff05749c9d"
+      ],
+      "semantic_scholar_id": "698c86041f0cdfeb5f28003967840bff05749c9d",
+      "canonical_id": "arXiv:2609.38477",
+      "arxiv_id": "2609.38477",
+      "authors": [
+        "Qiu-Yu Ren",
+        "Sudipta Paria",
+        "Aritra Dasgupta",
+        "S. Bhunia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scaling LLM Inference via Parallelism: Throughput-Latency Trade-off",
+      "source_url": "https://arxiv.org/abs/2610.19405",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) serving systems must balance latency and throughput while efficiently utilizing distributed GPU resources. This challenge arises because inference consists of two fundamentally different phases: prefill, which determines time-to-first-token (TTFT), and decode, which determines inter-token latency (ITL). The use of tensor parallelism (TP), pipeline parallelism (PP), and hybrid configurations exposes different trade-offs between these latency dimensions, making the optimal parallelism configuration highly dependent on workload characteristics, latency requirements, and context length. Moreover, despite the widespread adoption of distributed inference, there is still limited understanding of how parallelism configurations should be selected under varying workload conditions and service-level objectives (SLO). In this paper, we develop a systematic framework for characterizing LLM inference parallelism via throughput-latency trade-offs, SLO-aware serving, and long-context scalability. We introduce the notion of parallelism operating regions by constructing TTFT-ITL feasible sets and Pareto frontiers across different workload compositions, thereby revealing a systematic transition from TP-dominant to PP-dominant configurations as workloads become increasingly prefill-heavy. We further formulate SLO-aware parallelism selection using goodput, showing that stringent TTFT requirements favor PP-dominated configurations, whereas relaxed latency constraints progressively shift the optimality toward TP-dominated configurations with higher serving capacity. Finally, we demonstrate that increasing context length fundamentally changes the relative advantages of parallelism configurations, with PP-dominant configurations exhibiting more favorable scalability and SLO attainment in the long-context regime.",
+      "identifiers": [
+        "SemanticScholar:8ba034b63ad60fab3788fd44115025e65702dbf6"
+      ],
+      "semantic_scholar_id": "8ba034b63ad60fab3788fd44115025e65702dbf6",
+      "canonical_id": "arXiv:2610.19405",
+      "arxiv_id": "2610.19405",
+      "authors": [
+        "Javad Mirzaei",
+        "Jeebak Mitra"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 14,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.12284",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpca68181.2026.11408603",
+        "id:SemanticScholar:a31c4351d6bf8f3344ac63130d5d3d82b708466d",
+        "id:arXiv:2512.12284",
+        "title:vrex realtime streaming video llm acceleration via dynamic kv cache retrieval",
+        "url:https://arxiv.org/abs/2512.12284"
+      ],
+      "record": {
+        "title": "V-Rex: Real-Time Streaming Video LLM Acceleration via Dynamic KV Cache Retrieval",
+        "source_url": "https://arxiv.org/abs/2512.12284",
+        "year": 2025,
+        "published": "2025-12-13",
+        "venue": "International Symposium on High-Performance Computer Architecture",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Streaming video large language models (LLMs) are increasingly used for real-time multimodal tasks such as video captioning, question answering, conversational agents, and augmented reality. However, these models face fundamental memory and computational challenges because their key-value (KV) caches grow substantially with continuous streaming video input. This process requires an iterative prefill stage, which is a unique feature of streaming video LLMs. Prior works reduce excessive cache overhead by utilizing the KV cache retrieval algorithm, which offloads the full KV cache to CPU memory or storage, then selectively fetches the most relevant entries. Nevertheless, due to its iterative prefill stage, they suffer from significant limitations, including extensive computation, substantial data transfer, and degradation in accuracy. Crucially, this issue is exacerbated for edge deployment, which is the primary target for these models. The memory footprint exceeds the memory capacity within minutes of video streams, making low-latency, energy-efficient inference infeasible. In this work, we propose V-Rex, the first software-hardware co-designed accelerator that comprehensively addresses both algorithmic and hardware bottlenecks in streaming video LLM inference. At its core, V-Rex introduces ReSV, a training-free dynamic KV cache retrieval algorithm. ReSV exploits temporal and spatial similarity-based token clustering to reduce excessive KV cache memory across video frames, and dynamically adjusts token selection per transformer layer and attention head to minimize the number of selected tokens. To fully realize these algorithmic benefits, V-Rex offers a compact, low-latency hardware accelerator with a dynamic KV cache retrieval engine (DRE), featuring bit-level and early-exit based computing units, as well as hierarchical KV cache memory management. Evaluated on COIN benchmarks, V-Rex achieves unprecedented real-time of 3.9-8.3 FPS and energy-efficient streaming video LLM inference on edge deployment with negligible accuracy loss. While DRE only accounts for 2.2% power and 2.0% area, the system delivers 1.9-19.7× speedup and 3.1-18.5× energy efficiency improvements over AGX Orin GPU. This work is the first to comprehensively tackle KV cache retrieval across algorithm and hardware, enabling real-time streaming video LLM inference on resource-constrained edge devices, with clear potential for scalable deployment in large-scale server environments.",
+        "identifiers": [
+          "SemanticScholar:a31c4351d6bf8f3344ac63130d5d3d82b708466d"
+        ],
+        "semantic_scholar_id": "a31c4351d6bf8f3344ac63130d5d3d82b708466d",
+        "canonical_id": "arXiv:2512.12284",
+        "arxiv_id": "2512.12284",
+        "doi": "10.1109/HPCA68181.2026.11408603",
+        "authors": [
+          "Donghyuk Kim",
+          "Sejeong Yang",
+          "Wonjin Shin",
+          "Joo-Young Kim"
+        ],
+        "priority": 118,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 118,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 319,
+          "matched_prestigious_venue": "High-Performance Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.11958",
+      "identity_tokens": [
+        "id:SemanticScholar:1544bfe5dc5100699640b1090d56f473388fbb5e",
+        "id:arXiv:2602.11958",
+        "title:ramnet lineartime sequence modeling with sparsely addressable state",
+        "url:https://arxiv.org/abs/2602.11958"
+      ],
+      "record": {
+        "title": "RAM-Net: Linear-Time Sequence Modeling with Sparsely Addressable State",
+        "source_url": "https://arxiv.org/abs/2602.11958",
+        "year": 2026,
+        "published": "2026-02-12",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention offers an efficient alternative to full attention with a fixed-size recurrent state. However, this state is shared by all tokens, so information from distinct tokens becomes superposed within it and produces inter-token interference that degrades long-range fine-grained recall. To address this issue, we propose RAM-Net, which replaces dense access to a shared state with sparse address-based access. RAM-Net organizes the recurrent state as a fixed-size array of independent slots and uses an Address Decoder that maps each key or query into a sparse address, selecting a small subset of slots to write to or read from at each step. This design directs tokens with non-overlapping addresses to disjoint slots, suppressing inter-token interference, while keeping per-step state access dependent only on the number of selected slots rather than the total state size. Empirically, RAM-Net outperforms strong recurrent baselines on fine-grained long-range retrieval and achieves the lowest perplexity with competitive commonsense reasoning. It does so while accessing fewer state elements per step than all baselines, e.g., $8\\times$ fewer than Mamba2.",
+        "identifiers": [
+          "SemanticScholar:1544bfe5dc5100699640b1090d56f473388fbb5e"
+        ],
+        "semantic_scholar_id": "1544bfe5dc5100699640b1090d56f473388fbb5e",
+        "canonical_id": "arXiv:2602.11958",
+        "arxiv_id": "2602.11958",
+        "authors": [
+          "Kai-Cheng Xiao",
+          "Hao-Tian Li",
+          "Li-Ran Dong",
+          "Guo-Liang Xing"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 258,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.18931",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.18931",
+        "id:SemanticScholar:dd3ae05a014241f9d7fa808436545c560d50cbd7",
+        "id:arXiv:2602.18931",
+        "title:wanspec leveraging global compute capacity for llm inference",
+        "url:https://arxiv.org/abs/2602.18931"
+      ],
+      "record": {
+        "title": "WANSpec: Leveraging Global Compute Capacity for LLM Inference",
+        "source_url": "https://arxiv.org/abs/2602.18931",
+        "year": 2026,
+        "published": "2026-02-21",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Data centers capable of running large language models (LLMs) are spread across the globe. Some have high end GPUs for running the most advanced models (100B+ parameters), and others are only suitable for smaller models (1B parameters). The most capable GPUs are under high demand thanks to the rapidly expanding applications of LLMs. Choosing the right location to run an LLM inference workload can have consequences on the latency of requests due to these high demands. In this work, we explore options to shift some aspects of inference to the under-utilized data centers. We first observe the varying delays affecting inference in AWS services from different regions, demonstrating that load is not spread evenly. We then introduce WANSpec, which offloads part of LLM generation to the under-utilized data centers. In doing so, WANSpec can mitigate capacity issues as well as effectively use on-site compute (ie at universities) to augment cloud providers. This is done with speculative decoding, a widely used technique to speed up auto-regressive decoding, by moving the draft model to the under-utilized compute resources. Our experiments in simulation and cloud deployments show that WANSpec can judiciously employ redundancy to avoid increases in latency while still reducing the forward passes of speculative decoding's draft model in high demand data centers by over 50%.",
+        "identifiers": [
+          "SemanticScholar:dd3ae05a014241f9d7fa808436545c560d50cbd7"
+        ],
+        "semantic_scholar_id": "dd3ae05a014241f9d7fa808436545c560d50cbd7",
+        "canonical_id": "arXiv:2602.18931",
+        "arxiv_id": "2602.18931",
+        "doi": "10.48550/arXiv.2602.18931",
+        "authors": [
+          "Noah Martin",
+          "Fahad R. Dogar"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 249,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.08568",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.08568",
+        "id:SemanticScholar:6ffeaa3862ab905f3f28cd9e53fb6eb6ab317f78",
+        "id:arXiv:2605.08568",
+        "title:different prompts different ranks promptaware dynamic rank selection for svdbased llm compression",
+        "url:https://arxiv.org/abs/2605.08568"
+      ],
+      "record": {
+        "title": "Different Prompts, Different Ranks: Prompt-aware Dynamic Rank Selection for SVD-based LLM Compression",
+        "source_url": "https://arxiv.org/abs/2605.08568",
+        "year": 2026,
+        "published": "2026-05-09",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have rapidly grown in scale, creating substantial memory and computational costs that hinder efficient deployment. Singular value decomposition (SVD) has emerged as an effective post-training compression technique, but existing SVD-based methods rely on static rank truncation, applying a fixed prefix of singular components to all inputs regardless of their diversity. We identify two limitations of this static design: the optimal rank varies across individual prompts, and the selected rank is sensitive to the choice of calibration set, leading to suboptimal performance across diverse inputs. To address these challenges, we propose $\\textbf{PARSE}$, a post-training framework for $\\textbf{P}$rompt-$\\textbf{A}$ware $\\textbf{R}$ank $\\textbf{S}$election as $\\textbf{E}$xperts in SVD-compressed LLMs. PARSE trains a linear router offline to perform prompt-aware rank selection, decoupling it from calibration information by supervising the router against dense-model outputs on a large-scale corpus. We further observe that rank-selection patterns are shared across semantically similar prompts and remain stable across decoding steps, allowing appropriate rank subsets to be served directly from a pattern cache at inference. Complemented by expert memory aggregation and kernel fusion for system-level efficiency, PARSE is orthogonal to existing SVD-based pipelines and consistently improves both model quality and inference efficiency. Integrated with four representative SVD-based methods, PARSE improves average task accuracy by up to 10% at a compression ratio of 0.6 on LLaMA-7B, and achieves up to 2.5 $\\times$ prefill and 2.4 $\\times$ decode speedup over native SVD execution.",
+        "identifiers": [
+          "SemanticScholar:6ffeaa3862ab905f3f28cd9e53fb6eb6ab317f78"
+        ],
+        "semantic_scholar_id": "6ffeaa3862ab905f3f28cd9e53fb6eb6ab317f78",
+        "canonical_id": "arXiv:2605.08568",
+        "arxiv_id": "2605.08568",
+        "doi": "10.48550/arXiv.2605.08568",
+        "authors": [
+          "He Zhu",
+          "Zhen-Dong Mi",
+          "G. Zhang",
+          "Shao-Syuan Huang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 172,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.emnlp-industry.175",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.emnlp-industry.175",
+        "id:SemanticScholar:73d026da1faff43234ce7997769fe57b10e9f3bf",
+        "title:beyond dynamic quantization an efficient static hierarchical mixprecision framework for nearlossless llm compression",
+        "url:https://doi.org/10.18653/v1/2025.emnlp-industry.175"
+      ],
+      "record": {
+        "title": "Beyond Dynamic Quantization: An Efficient Static Hierarchical Mix-precision Framework for Near-Lossless LLM Compression",
+        "source_url": "https://doi.org/10.18653/v1/2025.emnlp-industry.175",
+        "year": 2025,
+        "published": null,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:73d026da1faff43234ce7997769fe57b10e9f3bf"
+        ],
+        "semantic_scholar_id": "73d026da1faff43234ce7997769fe57b10e9f3bf",
+        "doi": "10.18653/v1/2025.emnlp-industry.175",
+        "canonical_id": "DOI:10.18653/v1/2025.emnlp-industry.175",
+        "authors": [
+          "Yi Zhang",
+          "Kai Zhang",
+          "Zheyang Li",
+          "Wenming Tan",
+          "Ye Ren",
+          "Ji-Lin Hu"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 484,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01927",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.01927",
+        "id:SemanticScholar:aa6111e3becf7ecb51ba4319be0254918a085018",
+        "id:arXiv:2606.01927",
+        "title:scaling llm inference beyond amdahls limits via eliminating nonscalable overheads",
+        "url:https://arxiv.org/abs/2606.01927"
+      ],
+      "record": {
+        "title": "Scaling LLM Inference Beyond Amdahl's Limits via Eliminating Non-Scalable Overheads",
+        "source_url": "https://arxiv.org/abs/2606.01927",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deployers of online LLM services usually seek to maximize cluster-wide performance given a fixed number of GPUs. Tensor parallelism (TP) is necessary to fit modern models but scales sub-linearly as the TP degree t grows, due to cross-GPU communication and non-scalable runtime work, as predicted by Amdahl's Law. Conversely, increasing t improves memory efficiency and alleviates KV-cache contention and swapping. We identify and validate an empirical optimal TP degree t_e that balances these effects. We present Albireo, a parallel inference system that raises the attainable t_e by shrinking the non-scalable portion via overlap of scheduling and I/O with compute and sequence-parallel sampling, without changing model architectures. Across models and benchmarks, Albireo achieves up to 1.9x higher throughput, 48% lower latency, 28% higher GPU utilization, and 54% lower energy than vLLM; in production it yields up to 2x higher throughput.",
+        "identifiers": [
+          "SemanticScholar:aa6111e3becf7ecb51ba4319be0254918a085018"
+        ],
+        "semantic_scholar_id": "aa6111e3becf7ecb51ba4319be0254918a085018",
+        "canonical_id": "arXiv:2606.01927",
+        "arxiv_id": "2606.01927",
+        "doi": "10.48550/arXiv.2606.01927",
+        "authors": [
+          "Alan Zhao",
+          "Cyril Y. He",
+          "Wei Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 149,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.01962",
+      "identity_tokens": [
+        "id:SemanticScholar:d01da12fc90b7bbc9875f1e04a072456d1d77e7d",
+        "id:arXiv:2609.01962",
+        "title:posttraining ternarization of qwen34b capability effective bit budget storage compression and deployment",
+        "url:https://arxiv.org/abs/2609.01962"
+      ],
+      "record": {
+        "title": "Post-Training Ternarization of Qwen3-4B Capability, Effective Bit Budget, Storage Compression, and Deployment",
+        "source_url": "https://arxiv.org/abs/2609.01962",
+        "year": 2026,
+        "published": "2026-09-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Ultra-low-bit language models can reduce storage and memory bandwidth, but a nominal\"1.58-bit\"label does not fully describe the stored representation, retained capability, or runtime behavior. We study an end-to-end post-training conversion of Qwen, an instruction-tuned 4B-parameter model, using KOTMS rotation, E2M-ATQ ternarization, and GPTQ-style error compensation from TWLA. The experiment is weight-only: activations remain at 16-bit precision, so ILA-AMP is omitted. We evaluate effective bit accounting, task capability retention, perplexity, calibration sensitivity, checkpoint composition, and deployment behavior. The final conversion uses 1.641 effective bits per weight for quantized linear weights, with 81.62% of model parameters targeted. Across ten scored capability comparisons, accuracy falls from 64.5% to 54.7%. Degradation is uneven: BoolQ retains 84.6% chance-corrected teacher performance, while ARC-Challenge retains 43.8%. Perplexity rises from 13.639 to 18.748 on WikiText-2, 24.700 to 31.992 on PTB, and 19.831 to 28.966 on C4. A subsequent packing run preserves the ternary planes and scales, reducing reported model size from 8.29 GiB to 3.96 GiB with essentially unchanged perplexity. A separate third-party packing attempt was lossy and is excluded from the primary artifact claim. The packed artifact has not been benchmarked end-to-end for task accuracy or generation throughput. A preliminary Triton GEMV microbenchmark is 4.6x slower than FP16 cuBLAS on one tested shape. We therefore do not claim that compression alone yields faster inference.",
+        "identifiers": [
+          "SemanticScholar:d01da12fc90b7bbc9875f1e04a072456d1d77e7d"
+        ],
+        "semantic_scholar_id": "d01da12fc90b7bbc9875f1e04a072456d1d77e7d",
+        "canonical_id": "arXiv:2609.01962",
+        "arxiv_id": "2609.01962",
+        "authors": [
+          "A. Malik",
+          "M. Mehra",
+          "P. Devan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 56,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33410",
+      "identity_tokens": [
+        "id:SemanticScholar:384a5464b7828e242d98c9b55a6bf48b0921d0c8",
+        "id:arXiv:2609.33410",
+        "title:foldattention declaredreference softmax for fast decode and deterministic backward",
+        "url:https://arxiv.org/abs/2609.33410"
+      ],
+      "record": {
+        "title": "FoldAttention: Declared-Reference Softmax for Fast Decode and Deterministic Backward",
+        "source_url": "https://arxiv.org/abs/2609.33410",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive decode repeatedly streams a growing KV cache, making attention a major cost at long context. Existing high-performance kernels use online softmax, which discovers a row's normalization reference as it scans keys. Earlier contributions therefore remain provisional and may require rescaling. We argue that the reference need not be discovered: softmax is invariant to a common shift, so the reference only has to keep the weights in range. We present FoldAttention, an additive formulation of softmax attention that fixes a finite reference $Z_i$ before scanning the KV cache. Each weight $2^{s_{ij}-Z_i}$ is then final when computed, so contributions add across disjoint key ranges and their quotient equals softmax attention in real arithmetic. We use this property to develop two techniques for Hopper decode: (1) final weights gate key and value reads before the bytes are fetched, and a per-call depth $T$ cuts keys below $2^{-T}$ while keeping their mass, and (2) additive partials compose split KV and shared-prefix cascades without rescaling. On H100 at $T=16$, FoldAttention decodes seven real-model generations 1.36-2.30$\\times$ faster than the fastest BF16 baseline, and up to 3.09$\\times$ faster across MHA and GQA shapes, at an error within 1.5% of the lowest BF16 error on six of the seven; reading every key, it is 1.14-1.30$\\times$ faster at matched error. We validate on Qwen3-8B that a whole decode step is up to 1.46$\\times$ faster while likelihood and long-context accuracy match those under BF16 kernels. The same principle makes the backward deterministic: CTAs round bounded partial gradients onto an integer grid declared before the reduction and add them in any order. FoldAttention thereby removes the determinism tax: its deterministic backward is up to 1.84$\\times$ faster than deterministic FlashAttention-3/4 and 1.05$\\times$ faster than the fastest nondeterministic kernel.",
+        "identifiers": [
+          "SemanticScholar:384a5464b7828e242d98c9b55a6bf48b0921d0c8"
+        ],
+        "semantic_scholar_id": "384a5464b7828e242d98c9b55a6bf48b0921d0c8",
+        "canonical_id": "arXiv:2609.33410",
+        "arxiv_id": "2609.33410",
+        "authors": [
+          "Sriman Achanta"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38477",
+      "identity_tokens": [
+        "id:SemanticScholar:698c86041f0cdfeb5f28003967840bff05749c9d",
+        "id:arXiv:2609.38477",
+        "title:securityenhanced seedbased weight quantization for large language models",
+        "url:https://arxiv.org/abs/2609.38477"
+      ],
+      "record": {
+        "title": "Security-Enhanced Seed-Based Weight Quantization for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.38477",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) incur substantial storage, memory-bandwidth and energy costs, motivating compact weight representations. Existing seed-based compression methods reconstruct weights from compact pseudo-random representations but do not explicitly account for the non-uniform sensitivity of model weights. We introduce Seed-Q, a security-enhanced sensitivity-aware seed-based weight compression framework that uses lightweight Linear Feedback Shift Register (LFSR)-based weight generation with non-uniform bit allocation. Our approach assigns larger representation budgets to sensitive weights while aggressively compressing less sensitive regions. Importantly, this non-uniform allocation requires no side-information: the decoder deterministically reconstructs the bit-allocation schedule, with no rung depending on the decoded weights, eliminating the need to store per-block metadata or use calibration data while preserving the baseline coding rate. Experiments across diverse LLMs show that Seed-Q matches 4-bit perplexity of SeedLM with fewer bits, while at the same 4 bits/weight it reduces both perplexity degradation and zero-shot accuracy loss relative to SeedLM. We also show that Seed-Q simultaneously achieves high security against bit-flip attacks on model parameters, as bit corruption affects multiple reconstructed weights, greatly amplifying its impact and making it easier to detect. We further implement Seed-Q in an ASIC-based accelerator and demonstrate modest hardware overhead compared to prior seed-based approaches.",
+        "identifiers": [
+          "SemanticScholar:698c86041f0cdfeb5f28003967840bff05749c9d"
+        ],
+        "semantic_scholar_id": "698c86041f0cdfeb5f28003967840bff05749c9d",
+        "canonical_id": "arXiv:2609.38477",
+        "arxiv_id": "2609.38477",
+        "authors": [
+          "Qiu-Yu Ren",
+          "Sudipta Paria",
+          "Aritra Dasgupta",
+          "S. Bhunia"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 29,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.19405",
+      "identity_tokens": [
+        "id:SemanticScholar:8ba034b63ad60fab3788fd44115025e65702dbf6",
+        "id:arXiv:2610.19405",
+        "title:scaling llm inference via parallelism throughputlatency tradeoff",
+        "url:https://arxiv.org/abs/2610.19405"
+      ],
+      "record": {
+        "title": "Scaling LLM Inference via Parallelism: Throughput-Latency Trade-off",
+        "source_url": "https://arxiv.org/abs/2610.19405",
+        "year": 2026,
+        "published": "2026-10-14",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM) serving systems must balance latency and throughput while efficiently utilizing distributed GPU resources. This challenge arises because inference consists of two fundamentally different phases: prefill, which determines time-to-first-token (TTFT), and decode, which determines inter-token latency (ITL). The use of tensor parallelism (TP), pipeline parallelism (PP), and hybrid configurations exposes different trade-offs between these latency dimensions, making the optimal parallelism configuration highly dependent on workload characteristics, latency requirements, and context length. Moreover, despite the widespread adoption of distributed inference, there is still limited understanding of how parallelism configurations should be selected under varying workload conditions and service-level objectives (SLO). In this paper, we develop a systematic framework for characterizing LLM inference parallelism via throughput-latency trade-offs, SLO-aware serving, and long-context scalability. We introduce the notion of parallelism operating regions by constructing TTFT-ITL feasible sets and Pareto frontiers across different workload compositions, thereby revealing a systematic transition from TP-dominant to PP-dominant configurations as workloads become increasingly prefill-heavy. We further formulate SLO-aware parallelism selection using goodput, showing that stringent TTFT requirements favor PP-dominated configurations, whereas relaxed latency constraints progressively shift the optimality toward TP-dominated configurations with higher serving capacity. Finally, we demonstrate that increasing context length fundamentally changes the relative advantages of parallelism configurations, with PP-dominant configurations exhibiting more favorable scalability and SLO attainment in the long-context regime.",
+        "identifiers": [
+          "SemanticScholar:8ba034b63ad60fab3788fd44115025e65702dbf6"
+        ],
+        "semantic_scholar_id": "8ba034b63ad60fab3788fd44115025e65702dbf6",
+        "canonical_id": "arXiv:2610.19405",
+        "arxiv_id": "2610.19405",
+        "authors": [
+          "Javad Mirzaei",
+          "Jeebak Mitra"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 14,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e553bcef2da56c3bdaddfc7ccefb0e570b033c8e3fcae88456b031ed10dcd478",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

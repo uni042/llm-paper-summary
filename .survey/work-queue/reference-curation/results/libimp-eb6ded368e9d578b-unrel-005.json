@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb6ded368e9d578b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1912.08777",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1912.08777",
+    "identity_tokens": [
+      "arXiv:1912.08777"
+    ],
+    "reason": "gap-sentence generation事前学習でabstractive summarization品質を改善し12要約datasetで評価する学習・NLP task研究。推論runtime効率化を扱わない。",
+    "first_checked_at": "2026-10-04T21:42:14+00:00",
+    "last_checked_at": "2026-10-04T22:53:07+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization"
+  },
+  "processed_at": "2026-10-04T22:53:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb6ded368e9d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

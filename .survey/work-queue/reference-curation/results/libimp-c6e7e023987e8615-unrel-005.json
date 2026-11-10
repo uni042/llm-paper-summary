@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c6e7e023987e8615-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.03787",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.03787",
+    "identity_tokens": [
+      "SemanticScholar:ed0fbdfacd5e431b31944f04194a28e9615d94ee",
+      "arXiv:2606.03787"
+    ],
+    "reason": "Surprise-gated episodic memory improves robot scene-graph question answering and event segmentation; it is a robotics memory application, not LLM inference-system efficiency.",
+    "first_checked_at": "2026-10-14T14:34:46+00:00",
+    "last_checked_at": "2026-10-14T14:34:46+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+    ],
+    "title": "Worth Remembering: Surprise-Gated Robot Episodic Memory"
+  },
+  "processed_at": "2026-10-14T14:34:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6e7e023987e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d389cf460e570711-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:ad3359c5259b6a5cb0fd58a9e2a79c273630c2dc",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:ad3359c5259b6a5cb0fd58a9e2a79c273630c2dc",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2410.05911",
+      "SemanticScholar:ad3359c5259b6a5cb0fd58a9e2a79c273630c2dc",
+      "arXiv:2410.05911"
+    ],
+    "reason": "The official arXiv abstract confirms this is a transformer decoder for error-correction codes in communication systems, not LLM inference; its quantization/energy results belong to a separate application.",
+    "first_checked_at": "2026-10-06T18:35:23+00:00",
+    "last_checked_at": "2026-10-08T23:27:25+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+    ],
+    "title": "Accelerating Error Correction Code Transformers"
+  },
+  "processed_at": "2026-10-08T23:27:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d389cf460e57",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

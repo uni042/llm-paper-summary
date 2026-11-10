@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f9a18e0ab057037f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/isscc42614.2022.9731562",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/isscc42614.2022.9731562",
+    "identity_tokens": [
+      "DOI:10.1109/isscc42614.2022.9731562"
+    ],
+    "reason": "HBM3 DRAM回路・実装技術の論文で、LLM推論システムの新規最適化機構ではない。",
+    "first_checked_at": "2026-10-02T06:58:22+00:00",
+    "last_checked_at": "2026-10-02T06:58:22+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "A 192-Gb 12-High 896-GB/s HBM3 DRAM with a TSV Auto-Calibration Scheme and Machine-Learning-Based Layout Optimization"
+  },
+  "processed_at": "2026-10-02T06:58:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f9a18e0ab057",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-81cde91d9b06081c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34344",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34344",
+    "identity_tokens": [
+      "arXiv:2609.34344"
+    ],
+    "reason": "The paper studies RLVR training dynamics and uses trainable activation-space vectors to analyze/recover low-dimensional steering directions. Its procedures compare RL-training updates, frozen-base activations, and gradient interventions; it does not propose or evaluate LLM serving, inference compute reduction, latency, throughput, or memory savings. The lineage link does not match this training-analysis contribution.",
+    "first_checked_at": "2026-10-05T22:17:55+00:00",
+    "last_checked_at": "2026-10-05T22:17:55+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+    ],
+    "title": "Learning to Steer, Steering to See: Unveiling the Geometry of RLVR in Large Language Models via Trainable Vectors"
+  },
+  "processed_at": "2026-10-05T22:17:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-81cde91d9b06",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

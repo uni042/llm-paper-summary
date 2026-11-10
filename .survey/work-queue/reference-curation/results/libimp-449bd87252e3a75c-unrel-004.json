@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-449bd87252e3a75c-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3770855.3818083",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3770855.3818083",
+    "identity_tokens": [
+      "DOI:10.1145/3770855.3818083"
+    ],
+    "reason": "Training Large Foundation Models (LFMs), including Large Language Models and Vision-Language Models, on massive distributed GPU clusters is increasingly bottlenecked by communication overhead. While frameworks like ZeRO++ employ static quantization to reduce communication volume, they suffer from a rigid trade-off: aggressive low-bit quantization maximizes throughput but introduces a persistent noise floor that impedes late-stage convergence, whereas high-precision quantization preserves accuracy at the cost of diminished training efficiency. In this paper, we propose the Noise Equivalent Hypothesis (Neophyte): the noise inherent to the weight quantization process plays a role functionally analogous to the stochastic gradient variance present in standard SGD optimization. We theoretically prove that just as a decaying learning rate is essential for convergence, an ascending quantization schedule is necessary to maintain optimization stability while maximizing throughput. Building on this hypothesis, we present Aquavit, an adaptive distributed training framework that implements an ascending precision schedule for model weights. To overcome the hardware limitations of discrete bit-widths (e.g., jumping from 4-bit to 6-bit), Aquavit introduces fractional precision via granularity modulation. By dynamically adjusting quantization block sizes, we achieve quasi-continuous transitions in effective bits-per-weight (bpw), preventing ''numerical shocks'' and ensuring a smooth error-reduction curve. We evaluate Aquavit on a 256-GPU cluster across diverse LFMs, including LLaMA-3.3-70B and Qwen-Image. Our results demonstrate that Aquavit achieves up to a 2.15× speedup in time-to-accuracy while maintaining full numerical parity with FP16 baselines, even in sensitive multimodal tasks where static quantization typically fails.",
+    "first_checked_at": "2026-10-05T08:55:08+00:00",
+    "last_checked_at": "2026-10-05T08:55:08+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Aquavit: Ascending Quantization for Communication-Efficient Vast-Scale Distributed Training"
+  },
+  "processed_at": "2026-10-05T08:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-449bd87252e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c1baecb1002c7419-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.15889",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.15889",
+    "identity_tokens": [
+      "arXiv:2602.15889"
+    ],
+    "reason": "The paper measures temporal variation in LLM performance under fixed conditions, not a method to reduce inference cost.",
+    "first_checked_at": "2026-10-05T13:54:47+00:00",
+    "last_checked_at": "2026-10-05T13:54:47+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+    ],
+    "title": "Daily and Weekly Periodicity in Large Language Model Performance and Its Implications for Research"
+  },
+  "processed_at": "2026-10-05T13:54:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c1baecb1002c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

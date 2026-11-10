@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-mlora-f9afab96-01",
+  "kind": "research",
+  "attempt_id": "attempt-f9afab963f7542abadb69271",
+  "job_id": "job-research-784815ee56689f0c",
+  "record_bank": "c",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:aae10d0924c035bf09acd26f78d23493558f947da110798f1b097a61201cd811",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-c/metadata.json",
+      "blob_sha": "bd404d9201f8ea856d7775cd8136e6e3f50c4da1"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-c/problem_method.json",
+      "blob_sha": "5353d4afdc1d5d12e4d4bfb051e06c675863eccb"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-c/evaluation.json",
+      "blob_sha": "7d4a2fcb58615823d53a243f8b060605bd069b8a"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-c/results.json",
+      "blob_sha": "71ca877e8b9d94c76f5d79205f6a35664242694a"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-c/positioning.json",
+      "blob_sha": "d2ecba10bfc384e999a055b11720403c2759088a"
+    }
+  ],
+  "validation_errors": [
+    "evaluation requires hardware/software/methodology evidence",
+    "evaluation.scope is required to distinguish real-hardware/simulation and generalization limits",
+    "results.key_results[0] must be an object",
+    "results.key_results[1] must be an object",
+    "results.key_results[2] must be an object",
+    "results.key_results[3] must be an object",
+    "results.key_results[4] must be an object",
+    "results.key_results[5] must be an object",
+    "results.negative_results is required; record degradation and boundary conditions",
+    "results.quality_impact is required; distinguish lossless from approximate methods",
+    "positioning.research_positioning is required"
+  ],
+  "checked_at": "2026-09-22T07:15:58+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

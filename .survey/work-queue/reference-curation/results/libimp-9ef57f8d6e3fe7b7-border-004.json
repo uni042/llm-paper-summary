@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9ef57f8d6e3fe7b7-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.20977",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.20977",
+    "identity_tokens": [
+      "arXiv:2605.20977"
+    ],
+    "reason": "The full text develops parallel context modeling to reduce decoding latency in a neural video-coding entropy model. It is not an LLM, but it has an autoregressive attention/parallel-decoding mechanism that may merit limited comparison with the linked sliding-window attention lineage; transfer to LLM decoding is not established.",
+    "first_checked_at": "2026-10-06T20:36:04+00:00",
+    "last_checked_at": "2026-10-06T20:36:04+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Parallel Context Modeling for Sliding Window Attention in Neural Video Coding"
+  },
+  "processed_at": "2026-10-06T20:36:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ef57f8d6e3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

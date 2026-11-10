@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5017a95f0eaa355a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.39839",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.39839",
+    "identity_tokens": [
+      "arXiv:2609.39839"
+    ],
+    "reason": "LoRA experts for class-incremental learning; evaluated classification accuracy, not LLM inference efficiency.",
+    "first_checked_at": "2026-10-05T11:59:52+00:00",
+    "last_checked_at": "2026-10-05T11:59:52+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+    ],
+    "title": "Dynamic LoRA-Experts and Prototype-Ensemble Matching for Class-Incremental Learning"
+  },
+  "processed_at": "2026-10-05T11:59:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5017a95f0eaa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

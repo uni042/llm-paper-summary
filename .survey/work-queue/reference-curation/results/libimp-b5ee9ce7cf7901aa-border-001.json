@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b5ee9ce7cf7901aa-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.10323",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.10323",
+    "identity_tokens": [
+      "arXiv:2601.10323",
+      "id:arXiv:2601.10323",
+      "url:https://arxiv.org/abs/2601.10323"
+    ],
+    "reason": "一次要旨では、連続する音声と動画フレームを同期した単位として扱い、軽量な発話開始ヘッドを生成部から分離することで、能動的な警告・実況と受動的な質問応答を統合する。リアルタイム処理の制御機構は推論時の応答開始に関係するが、12ベンチマークの主評価はマルチモーダル理解・応答能力であり、GPUカーネル・KVキャッシュ・サービングの速度やメモリ改善を主眼としないため境界的とする。",
+    "first_checked_at": "2026-10-11T21:44:19+00:00",
+    "last_checked_at": "2026-10-13T10:41:40+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ROMA: Real-time Omni-Multimodal Assistant with Interactive Streaming Understanding"
+  },
+  "processed_at": "2026-10-13T10:41:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b5ee9ce7cf79",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

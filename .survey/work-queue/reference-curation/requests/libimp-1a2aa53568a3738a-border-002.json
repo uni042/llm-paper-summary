@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1a2aa53568a3738a-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2305.06983",
+  "reason": "FLAREは生成中に次文を予測し、低confidence tokenがある場合だけ検索して再生成するinference-time active RAG。不要retrievalを避ける実行制御を含むが、主評価はknowledge-intensive generation品質でruntime/latency最適化が中心ではないためborderline。",
+  "title": "Active Retrieval Augmented Generation",
+  "identity_tokens": [
+    "arXiv:2305.06983"
+  ],
+  "linked_from": [
+    "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1a2aa53568a3",
+  "source_precheck_request_id": null
+}

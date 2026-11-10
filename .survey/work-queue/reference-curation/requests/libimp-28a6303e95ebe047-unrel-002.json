@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-28a6303e95ebe047-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.06852",
+  "reason": "一次要旨: Although highly effective in vision and language domains, applying in-context learning to robotics remains challenging. Existing autoregressive in-context imitation methods discretize continuous actions and exacerbate the accumulation of early prediction errors through next-token prediction, limiting their generalization on unseen task configurations. Meanwhile, flow-matching policies have been explored for continuous robot control and can help mitigate compounding errors; however, in-context imitation learning within a flow-matching framework remains underexplored. To address these limitations, we introduce ContextFlow, a conditional flow-matching model that learns continuous action distributions for in-context imitation learning. ContextFlow conditions flow-based action prediction on demonstrations and observations, enabling robust generation from noisy action distributions. To better encode multimodal in-context demonstrations, we adapt perceiver-style multimodal context compressors that distill visual, proprioceptive, and action sequences into compact, task-relevant latent representations. On LIBERO, ContextFlow outperforms ICRT by 35 percentage points in average success rate on unseen task configurations, while matching the performance of the task-specific fine-tuned VLA model $\\pi_0$ without any fine-tuning on unseen tasks. On real robots, it generalizes to unseen configurations of both single-arm and bimanual tasks, achieving 40% success on a new pen-uncapping configuration. Project Page: https://dingjiansw101.github.io/contextflow-page/.",
+  "title": "ContextFlow: In-Context Flow Matching for Robot Manipulation",
+  "identity_tokens": [
+    "arXiv:2609.06852"
+  ],
+  "linked_from": [
+    "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-28a6303e95eb",
+  "source_precheck_request_id": null
+}

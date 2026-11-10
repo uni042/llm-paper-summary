@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6392b031a15e8b7-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.16040",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.16040",
+    "identity_tokens": [
+      "arXiv:2409.16040"
+    ],
+    "reason": "sparse MoEでtime-series forecasting foundation modelのactivated computeを抑え、2.4Bまでscaleする研究。inference cost削減は扱うが最終適用先は時系列予測で、言語モデル/LLM推論systemではない。",
+    "first_checked_at": "2026-10-05T16:43:48+00:00",
+    "last_checked_at": "2026-10-05T16:43:48+00:00",
+    "linked_from": [],
+    "title": "Time-MoE: Billion-Scale Time Series Foundation Models with Mixture of Experts"
+  },
+  "processed_at": "2026-10-05T16:43:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6392b031a15",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

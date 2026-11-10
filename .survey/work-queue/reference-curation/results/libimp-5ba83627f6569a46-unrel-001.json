@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5ba83627f6569a46-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.12372",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.12372",
+    "identity_tokens": [
+      "arXiv:2411.12372"
+    ],
+    "reason": "Open LLM pretraining dataset curation/analysis, not inference efficiency.",
+    "first_checked_at": "2026-10-05T02:07:09+00:00",
+    "last_checked_at": "2026-10-05T02:07:09+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2026-2609.06161-all-for-1-bit.md",
+      "papers/inference/99-other-inference-systems/2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md"
+    ],
+    "title": "RedPajama: an Open Dataset for Training Large Language Models"
+  },
+  "processed_at": "2026-10-05T02:07:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5ba83627f656",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

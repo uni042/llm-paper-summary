@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2340f219915d7d6b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.17514",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.17514",
+    "identity_tokens": [
+      "arXiv:2509.17514",
+      "id:arXiv:2509.17514",
+      "url:https://arxiv.org/abs/2509.17514"
+    ],
+    "reason": "The abstract characterizes Mamba limitations on synthetic reasoning tasks and proposes no efficiency mechanism or measurement; the architectural comparison alone does not establish a systems-efficiency contribution.",
+    "first_checked_at": "2026-10-13T21:12:07+00:00",
+    "last_checked_at": "2026-10-13T21:12:07+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+    ],
+    "title": "Achilles' Heel of Mamba: Essential difficulties of the Mamba architecture demonstrated by synthetic data"
+  },
+  "processed_at": "2026-10-13T21:12:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2340f219915d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

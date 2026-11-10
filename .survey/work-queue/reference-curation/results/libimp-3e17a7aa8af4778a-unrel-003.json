@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3e17a7aa8af4778a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2208.00406",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2208.00406",
+    "identity_tokens": [
+      "arXiv:2208.00406"
+    ],
+    "reason": "機械学習実験の二酸化炭素排出量を追跡する汎用測定ツールの研究であり、LLM推論基盤の実行時間・スループット・メモリ階層・カーネル最適化を提案するものではない。省エネの周辺主題ではあるが、対象が一般の機械学習排出量追跡と明示されているため対象外とする。",
+    "first_checked_at": "2026-10-20T13:06:25+00:00",
+    "last_checked_at": "2026-10-20T18:43:33+00:00",
+    "linked_from": [],
+    "title": "eco2AI: Carbon Emissions Tracking of Machine Learning Models as the First Step Towards Sustainable AI"
+  },
+  "processed_at": "2026-10-20T18:43:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3e17a7aa8af4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

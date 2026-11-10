@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b5c40194f40295a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2111.11326",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2111.11326",
+    "identity_tokens": [
+      "SemanticScholar:b10c6201fec56772fa97bbcaf37b4ead61b6270a",
+      "arXiv:2111.11326"
+    ],
+    "reason": "DyTox expands transformer tokens/parameters to mitigate continual-learning forgetting; it evaluates a learning method, not inference latency, serving, cache, or deployment resource efficiency.",
+    "first_checked_at": "2026-10-13T09:35:40+00:00",
+    "last_checked_at": "2026-10-13T09:35:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2107.00910-learned-token-pruning-for-transformers.md"
+    ],
+    "title": "DyTox: Transformers for Continual Learning with DYnamic TOken eXpansion"
+  },
+  "processed_at": "2026-10-13T09:35:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b5c40194f40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3c39a751bcddfdd9-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.07185",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.07185",
+    "identity_tokens": [
+      "arXiv:2508.07185"
+    ],
+    "reason": "標準RAGよりtoken latencyは遅い。主利点は知識updateとgraph reasoning比較で、汎用serving最適化への関連は弱い。",
+    "first_checked_at": "2026-10-05T14:04:52+00:00",
+    "last_checked_at": "2026-10-05T14:04:52+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+    ],
+    "title": "DySK-Attn: A Framework for Efficient, Real-Time Knowledge Updating in Large Language Models via Dynamic Sparse Knowledge Attention"
+  },
+  "processed_at": "2026-10-05T14:04:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3c39a751bcdd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

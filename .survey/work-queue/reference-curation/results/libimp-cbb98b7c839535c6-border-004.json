@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cbb98b7c839535c6-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.03051",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.03051",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2410.03051",
+      "arXiv:2410.03051"
+    ],
+    "reason": "AuroraCapは長い動画系列の入力負荷に対してvisual token mergingを使い、性能低下を抑えながら入力visual token数を減らすため、マルチモーダル推論の入力効率に接点がある。一方、主貢献は動画詳細キャプション生成と評価benchmarkで、serving・runtimeやシステム性能の検証ではないため微妙とする。",
+    "first_checked_at": "2026-10-21T15:27:51+00:00",
+    "last_checked_at": "2026-10-22T17:25:22+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
+  },
+  "processed_at": "2026-10-22T17:25:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cbb98b7c8395",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

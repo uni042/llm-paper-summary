@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2bf009143b840652-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1609/aaai.v34i04.6144",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1609/aaai.v34i04.6144",
+    "identity_tokens": [
+      "DOI:10.1609/aaai.v34i04.6144",
+      "arXiv:1912.09729"
+    ],
+    "reason": "MOBA 1v1のcomplex action controlを大規模deep RL systemとdual-clip PPO等で学習しhuman-level game playを目指す研究。scalable systemは扱うが最終適用先はgame RL trainingで、LLM推論systemではない。",
+    "first_checked_at": "2026-10-05T02:57:03+00:00",
+    "last_checked_at": "2026-10-05T15:38:24+00:00",
+    "linked_from": [],
+    "title": "Mastering Complex Control in MOBA Games with Deep Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T15:38:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2bf009143b84",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

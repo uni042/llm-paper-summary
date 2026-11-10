@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2f963d77e4e94c11-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.35110",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.35110",
+    "identity_tokens": [
+      "arXiv:2609.35110"
+    ],
+    "reason": "一次本文はMiniMax-H3をvideo diffusion generation pipelineとして扱い、resolution stages間のlatent mappingとkernel/system optimizationで動画生成を高速化する。LLM inference/servingの候補ではない。",
+    "first_checked_at": "2026-10-05T04:58:57+00:00",
+    "last_checked_at": "2026-10-05T04:58:57+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Sol-H3: Recursive Self-Improvement for MiniMax-H3 Inference Acceleration on Sol-Engine across Cloud and Edge"
+  },
+  "processed_at": "2026-10-05T04:58:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f963d77e4e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-275ac12a64f645de-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:8eede56dc8139a266cc87b9bb132bc5c75e338db",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:8eede56dc8139a266cc87b9bb132bc5c75e338db",
+    "identity_tokens": [
+      "SemanticScholar:8eede56dc8139a266cc87b9bb132bc5c75e338db",
+      "arXiv:2110.08633"
+    ],
+    "reason": "Its experiments and execution design target multi-model training/model selection. The primary abstract establishes no inference or serving contribution.",
+    "first_checked_at": "2026-10-14T06:36:18+00:00",
+    "last_checked_at": "2026-10-14T06:36:18+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+      "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md",
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+    ],
+    "title": "Hydra: A System for Large Multi-Model Deep Learning"
+  },
+  "processed_at": "2026-10-14T06:36:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-275ac12a64f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

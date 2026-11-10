@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2793dbcac51605b5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.15118",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.15118",
+    "identity_tokens": [
+      "arXiv:2608.15118"
+    ],
+    "reason": "一次本文はLLM training/servingのcollective communicationに関するtutorial-style taxonomy / surveyで、inference pipelineとcommunication visibilityを含む直接関連の体系整理である。ただし独自の新規runtime/system評価を行うResearch paperではなく、対象は有用なsurveyとしての背景・索引価値に留まるためborderline。",
+    "first_checked_at": "2026-10-03T16:01:58+00:00",
+    "last_checked_at": "2026-10-03T16:01:58+00:00",
+    "linked_from": [
+      "workers/discovery-01/ready/20260927-u-wave3-17-25-b1a672/manifest.json#candidate[5]"
+    ],
+    "title": "Collective Communication for Distributed LLM Systems: Planning, Runtime Adaptation, and Computation Coordination"
+  },
+  "processed_at": "2026-10-03T16:01:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2793dbcac516",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

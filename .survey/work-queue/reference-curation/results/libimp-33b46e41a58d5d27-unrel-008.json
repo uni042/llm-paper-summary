@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-33b46e41a58d5d27-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/p18-1008",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/p18-1008",
+    "identity_tokens": [
+      "DOI:10.18653/v1/p18-1008",
+      "arXiv:1804.09849"
+    ],
+    "reason": "RNN・CNN・Transformer由来のmodeling/training技法を組み合わせ、WMT翻訳品質を改善するNMT architecture/training研究。推論latency・memory・serving最適化を最終評価としない。",
+    "first_checked_at": "2026-10-05T16:29:34+00:00",
+    "last_checked_at": "2026-10-05T16:29:34+00:00",
+    "linked_from": [],
+    "title": "The Best of Both Worlds: Combining Recent Advances in Neural Machine Translation"
+  },
+  "processed_at": "2026-10-05T16:29:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-33b46e41a58d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

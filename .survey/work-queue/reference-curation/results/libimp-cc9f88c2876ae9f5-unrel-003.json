@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cc9f88c2876ae9f5-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.24062",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.24062",
+    "identity_tokens": [
+      "arXiv:2607.24062"
+    ],
+    "reason": "要旨はLLM RL trainingとtraining-inference discrepancyの制御であり、効率化対象はtraining stabilityで推論実行効率ではない。",
+    "first_checked_at": "2026-10-05T09:53:08+00:00",
+    "last_checked_at": "2026-10-05T09:53:08+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "ACRL: Adaptive Control of Training-Inference Discrepancy for Stable Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T09:53:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cc9f88c2876a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

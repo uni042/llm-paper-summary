@@ -1,0 +1,198 @@
+{
+  "run_key": "20261101-0003-scheduled-chat-00/r01",
+  "worker_id": "scheduled-chat-00",
+  "round": 1,
+  "mode": "Discovery",
+  "status": "complete",
+  "record_count": 10,
+  "records": [
+    {
+      "canonical_id": "DOI:10.1109/ICAIIC68212.2026.11454275",
+      "identity_tokens": [
+        "DOI:10.1109/ICAIIC68212.2026.11454275"
+      ],
+      "title": "One-Shot Training for Reduction of Performance Variance in LLM Rotation Quantization",
+      "classification": "accept",
+      "reason": "OneRot。1校正サンプルの活性化へランダム摂動を加え、Cayley SGDで回転行列を学習。QuaRotの乱数依存とSpinQuantの多数サンプル校正の間を埋める。著者公開カメラレディ全文のWikiText-2評価でLlama-2 7B/Llama-3.2 3B/1Bの4bit W-A-KV量子化を検証し、QuaRot比perplexityをそれぞれ0.25/2.88/21.48改善、10 seedの標準偏差を0.01/0.24/1.41低減。SpinQuant比校正サンプル数800分の1。推論速度の改善率を報告したものではなく、主眼は量子化の品質と校正効率。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11454275/",
+      "body_check": "IEEE出版社正式要旨と著者公開カメラレディ全文（Methods、Experiments）を確認。全文URL: http://esoc.hanyang.ac.kr/publications/2026/icaiic_onerot_camera_ready.pdf",
+      "linked_from": [
+        "WORKLIST-00.md rank 464; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 464,
+      "first_checked_at": "2026-11-01T00:10:41+09:00",
+      "last_checked_at": "2026-11-01T00:10:41+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ICEIC64972.2025.10879771",
+      "identity_tokens": [
+        "DOI:10.1109/ICEIC64972.2025.10879771"
+      ],
+      "title": "AG-BiLLM: Activation-Guided Fully Binarized Large Language Models",
+      "classification": "accept",
+      "reason": "1bit LLM重み量子化で従来のHessianベース重要度に代えて活性化の大きさから重み列のsaliencyを判定する。IEEE出版社要旨では比較対象の従来手法よりperplexityを最大87%低減したと報告。特定評価設定での相対的品質改善であり、モデル全体の推論速度・メモリ削減率の直接実測値とは区別する。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/10879771/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 484; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 484,
+      "first_checked_at": "2026-11-01T00:10:41+09:00",
+      "last_checked_at": "2026-11-01T00:10:41+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/IWCMC69287.2026.11579993",
+      "identity_tokens": [
+        "DOI:10.1109/IWCMC69287.2026.11579993"
+      ],
+      "title": "Semantics-Aware Scheduling for Low-Latency LLM Serving in Heterogeneous Computing Networks",
+      "classification": "accept",
+      "reason": "LiPERがプロンプト意味表現から出力長を離散ビンとして低オーバーヘッド予測し、LiPER-Schedがその推定を状態に組み込んだ離散DRLで異種計算ノードへの要求配置を最適化する。IEEE会議版正式要旨ではルールベース手法比P99 tail latencyを45%削減。これは評価した実データと模擬クラスタにおける比較であり、全環境の保証ではない。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11579993/",
+      "body_check": "IEEE出版社の会議版正式要旨を確認。同名の別document/11686205も存在するため、版・DOIの最終同一性判断はimport inboxへ委譲。",
+      "linked_from": [
+        "WORKLIST-00.md rank 100; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 100,
+      "first_checked_at": "2026-11-01T00:10:41+09:00",
+      "last_checked_at": "2026-11-01T00:10:41+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ICIC68258.2025.11413215",
+      "identity_tokens": [
+        "DOI:10.1109/ICIC68258.2025.11413215"
+      ],
+      "title": "Low-Rank SVD Compression for Memory-Efficient Transformer Attention",
+      "classification": "accept",
+      "reason": "KVキャッシュ増大に対し、注意ヘッドごとに特異値分解(SVD)のランクを動的選択し、入力のスペクトルエネルギー約90%を保持するKV圧縮を提案。IEEE正式要旨はGPT-2各サイズとDistilGPT-2でメモリ最大95%減、評価設定の大半で品質スコア85%超と報告。ただし評価指標の厳密な定義は本文未確認であり、一般的なLLMでの品質保証・無損失性を意味しない。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11413215/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文・詳細な表は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 140; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 140,
+      "first_checked_at": "2026-11-01T00:10:41+09:00",
+      "last_checked_at": "2026-11-01T00:10:41+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11322900",
+      "identity_tokens": [
+        "DOI:10.1109/ICPADS67057.2025.11322900"
+      ],
+      "title": "PQC-LLM: Post-Quantization Delta Compression for LLMs",
+      "classification": "accept",
+      "reason": "量子化後のLLM重みに残るLSB冗長性に着目。tileごとに下位N bitを一様な値へ置換し、NASで置換bit数と値を決定した後、tile先頭重みとの差分を符号化して保存量を削減する。IEEE正式要旨は追加のストレージ削減とタスク精度への影響が小さいことを報告するが、要旨には普遍的な圧縮率や実行レイテンシ値は示されていない。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11322900/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 43; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 43,
+      "first_checked_at": "2026-11-01T00:10:41+09:00",
+      "last_checked_at": "2026-11-01T00:10:41+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/AIBDF67964.2025.11440682",
+      "identity_tokens": [
+        "DOI:10.1109/AIBDF67964.2025.11440682"
+      ],
+      "title": "ASDT: Adaptive Speculative Decoding Tree Based on Token Acceptance Feedback",
+      "classification": "accept",
+      "reason": "投機的デコードの受理率フィードバックからdraft treeの深さ・幅を動的調整し、入力難易度が変わってもstepごとの投機コストをおおむね一定に保つ。再学習不要で、IEEE正式要旨では会話・数学・コード課題で固定tree比2.0〜4.3%の相対高速化改善、最大4.3%は3Bモデル。検証によって標準自己回帰サンプリングの出力分布を保持すると記載。2〜4倍の速度改善ではない。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11440682/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 206; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 206,
+      "first_checked_at": "2026-11-01T00:10:41+09:00",
+      "last_checked_at": "2026-11-01T00:10:41+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323105",
+      "identity_tokens": [
+        "DOI:10.1109/ICPADS67057.2025.11323105"
+      ],
+      "title": "LISLLM: Long Context Inference of Large Language Models with Short KV Cache",
+      "classification": "accept",
+      "reason": "長文脈LLM推論で初頭・直近tokenだけを保持する手法の情報欠落に対し、中間tokenの重要度と現在tokenとの距離を考慮するKV cache圧縮を提案。IEEE正式要旨では比較した従来最良手法比最大1.91倍の圧縮率と1.20倍の高速化を精度改善とともに報告。比較対象・負荷条件は原著本文で再確認が必要。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11323105/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 261; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 261,
+      "first_checked_at": "2026-11-01T00:10:41+09:00",
+      "last_checked_at": "2026-11-01T00:10:41+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ASAP65064.2025.00031",
+      "identity_tokens": [
+        "DOI:10.1109/ASAP65064.2025.00031"
+      ],
+      "title": "ELLIE: Energy-Efficient LLM Inference at the Edge Via Prefill-Decode Splitting",
+      "classification": "accept",
+      "reason": "CPU/GPU/NPU混載のIntel AI PC上で、prefillとdecodeの計算特性に合わせて実行先を選ぶエッジLLM推論フレームワーク。オフラインprofilingからレイテンシ・消費電力を回帰し、軽量な出力長予測と組み合わせて候補配置を比較。IEEE正式要旨ではEDP最適化時、GPU単独推論と同程度のレイテンシで平均エネルギー1.8倍削減、EDP1.5倍改善を報告。データセンタでのPD分離速度改善を示すものではない。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11113611/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 252; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 252,
+      "first_checked_at": "2026-11-01T00:10:41+09:00",
+      "last_checked_at": "2026-11-01T00:10:41+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/Trustcom66490.2025.00238",
+      "identity_tokens": [
+        "DOI:10.1109/Trustcom66490.2025.00238"
+      ],
+      "title": "Zephyr: Secure and Non-interactive Two-Party Inference for Transformers",
+      "classification": "borderline",
+      "reason": "準正直な攻撃者を想定する暗号化2者間Transformer推論で、SIMD暗号文展開とbootstrapping配置を最適化し通信負荷を削減する。IEEE正式要旨ではBERT-base、100Mbps/80ms環境でIron比24.3倍、BOLT比2.1倍、NEXUS比11%高速、通信量BOLT比95%減を報告。ただし対象はBERTの秘匿推論であり、生成LLMのautoregressive serving高速化との直接性は低いためborderline。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11354732/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 414; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 414,
+      "first_checked_at": "2026-11-01T00:10:41+09:00",
+      "last_checked_at": "2026-11-01T00:10:41+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/HPCC67675.2025.00060",
+      "identity_tokens": [
+        "DOI:10.1109/HPCC67675.2025.00060"
+      ],
+      "title": "VIFMM: Custom RISC-V Vector Instructions with INT-FP Mixed-Precision Computing for Accelerating LLM Inference",
+      "classification": "accept",
+      "reason": "重みINT・活性化FPの混合精度演算に対するソフトウェアでの型変換負担を減らすRISC-V Vector拡張命令。Ara RVVコアへ実装し、整数MAC再利用とハードウェア精度補償を行う。IEEE Computer Society公式要旨では従来vector命令比推論速度4%改善、ハードウェア資源1.13%増、消費電力0.67%増を報告。4倍高速化ではない。",
+      "source_url": "https://www.computer.org/csdl/proceedings-article/hpcc/2025/687400a314/2bggviQakKs",
+      "body_check": "IEEE Computer Society出版社公式のAbstractを確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 89; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 89,
+      "first_checked_at": "2026-11-01T00:10:41+09:00",
+      "last_checked_at": "2026-11-01T00:10:41+09:00"
+    }
+  ],
+  "github_main_sha": "127cdfb2d2d7f657937a244cf26a2ebc7ae076c1",
+  "notes": [
+    "新規canonical identityを10件。GitHub code searchで正規DOIと題名/手法名を照合し、同名既処理候補の再分類を避けた。",
+    "IEEE/IEEE Computer Societyの正式要旨、OneRotは著者公開全文を確認。タイトル先行除外はノルマに含めない。",
+    "identity衝突・別版同一性の最終判断はGitHub import inboxへ委譲。"
+  ],
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "reference_main_sha": "127cdfb2d2d7f657937a244cf26a2ebc7ae076c1",
+  "original_run_key": "20261101-0003-scheduled-chat-00",
+  "normalization": {
+    "by": "scheduled-chat-45",
+    "at": "2026-11-01T00:49:32+09:00",
+    "method": "add_missing_top_level_schema_and_unique_round_run_key_only",
+    "source_filename": "discovery-20261101-0003-scheduled-chat-00-r01.json",
+    "source_sha256": "b1900ecb6531faf1de0d8c70d195fb2ab53db68fee853a30020c155b49fb8152",
+    "source_record_count": 10
+  }
+}

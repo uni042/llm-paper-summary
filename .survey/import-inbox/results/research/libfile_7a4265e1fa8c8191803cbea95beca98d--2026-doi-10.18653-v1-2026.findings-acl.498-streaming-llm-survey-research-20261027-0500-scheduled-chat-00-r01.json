@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "6279ed396ad0c796eabc05c0ec3a2cd4a395140b80f5d9e3cf571eab2eb4cc3c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_7a4265e1fa8c8191803cbea95beca98d--2026-doi-10.18653-v1-2026.findings-acl.498-streaming-llm-survey-research-20261027-0500-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.18653/v1/2026.findings-acl.498",
+  "worker_completed_at": "2026-10-27T05:07:30+09:00",
+  "worker_run_key": "20261027-0500-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4931,
+    "body_paragraphs": 25,
+    "method_chars": 2320,
+    "method_paragraphs": 12,
+    "evaluation_chars": 391,
+    "limitation_chars": 577,
+    "insufficiency_flags": [
+      "評価説明量 391 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 391 < 500"
+  ],
+  "processed_at": "2026-10-26T21:16:19+00:00"
+}

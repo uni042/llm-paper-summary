@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fef53cbe96637ac9-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.06490",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.06490",
+    "identity_tokens": [
+      "DOI:10.1007/978-3-032-06697-8_33",
+      "arXiv:2512.06490"
+    ],
+    "reason": "Llama-3.2-3BをBitsAndBytesの4ビット事後量子化で68.66%縮小し、GGUF変換とAndroid上のTermux/Ollamaで動作確認する実践的な導入報告。端末LLM推論の実証は関連するが、新しい量子化アルゴリズム・推論カーネル・定量的な実行速度改善の提案は要旨から確認できず、システム研究としては境界的。",
+    "first_checked_at": "2026-10-30T19:08:31+00:00",
+    "last_checked_at": "2026-10-30T19:08:31+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Optimizing LLMs Using Quantization for Mobile Execution"
+  },
+  "processed_at": "2026-10-30T19:08:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fef53cbe9663",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

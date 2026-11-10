@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2386535f9ca4150-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.13721",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.13721",
+    "identity_tokens": [
+      "arXiv:2307.13721"
+    ],
+    "reason": "computer visionのfoundation modelをmultimodal architecture、training objective、dataset、prompting、applicationで整理するsurvey。最終対象はvisionでLLM推論systemsではない。",
+    "first_checked_at": "2026-10-07T06:59:06+00:00",
+    "last_checked_at": "2026-10-07T09:59:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "title": "Foundational Models Defining a New Era in Vision: A Survey and Outlook"
+  },
+  "processed_at": "2026-10-07T09:59:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2386535f9ca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

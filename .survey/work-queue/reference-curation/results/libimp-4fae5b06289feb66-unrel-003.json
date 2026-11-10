@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4fae5b06289feb66-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.22368",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.22368",
+    "identity_tokens": [
+      "arXiv:2608.22368"
+    ],
+    "reason": "一次要旨は物体検出用ViT backboneのattention変換であり、LLM/VLM serving workloadではない。",
+    "first_checked_at": "2026-10-05T03:14:25+00:00",
+    "last_checked_at": "2026-10-05T03:14:25+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "DiD It in 87 Minutes: A Label-Free Softmax-to-Linear Adaptation of Vision Transformers for Object Detection"
+  },
+  "processed_at": "2026-10-05T03:14:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4fae5b06289f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

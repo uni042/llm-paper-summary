@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a56dfb47a2ea7e09-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.22262",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.22262",
+    "identity_tokens": [
+      "arXiv:2609.22262"
+    ],
+    "reason": "一次要旨: Medical time series (MedTS), including electrocardiograms (ECG), electroencephalograms (EEG), photoplethysmography (PPG), and vital-sign recordings, are central to clinical diagnosis and health monitoring. As large language models (LLMs) have advanced, a growing body of work has examined how their reasoning, generation, and knowledge-integration capabilities can support MedTS analysis. Yet existing studies remain scattered, and the field still lacks a clear view of how these models should be designed, integrated into clinical workflows, and evaluated. This review synthesizes recent work on large language models for medical time series analysis (MedTSLLMs), covering both methodological progress and issues related to real-world deployment. We review model architectures, data resources, and processing pipelines, and prompt design strategies adapted for diverse clinical scenarios. We further organize existing MedTS applications, ranging from diagnostic interpretation and report generation to longitudinal health monitoring and physiological signal synthesis, highlighting task-specific design choices, common evaluation protocols, and empirical findings reported across studies. By bringing together current practices and open challenges, this review aims to provide a clearer foundation for developing, evaluating, and deploying MedTSLLMs responsibly in healthcare. We also maintain a regularly updated list of MedTSLLM studies and resources at: https://github.com/hy727/MedTSLLM-Review.",
+    "first_checked_at": "2026-10-05T07:06:26+00:00",
+    "last_checked_at": "2026-10-05T07:06:26+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+    ],
+    "title": "Large language models in medical time series analysis"
+  },
+  "processed_at": "2026-10-05T07:06:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a56dfb47a2ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b834427b2afd02478c381d040f3a67f06665269f249d9f11f32816802fa3bf85",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_7789f669e2348191994dc00f90771fcc--2025-2505.00019-empirical-prompt-compression-evaluation-research-20261023-1733-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2505.00019",
+  "worker_completed_at": "2026-10-23T17:33:47+09:00",
+  "worker_run_key": "20261023-1733-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5324,
+    "body_paragraphs": 27,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 358,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-23T16:40:16+00:00"
+}

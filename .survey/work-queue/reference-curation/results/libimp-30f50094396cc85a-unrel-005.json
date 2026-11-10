@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30f50094396cc85a-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1506.03099",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1506.03099",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1506.03099",
+      "arXiv:1506.03099"
+    ],
+    "reason": "訓練時のteacher forcingと推論時自己生成入力の不一致をcurriculum learningで緩和する学習手法で、推論高速化ではない。",
+    "first_checked_at": "2026-10-03T15:20:46+00:00",
+    "last_checked_at": "2026-10-03T15:20:46+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md"
+    ],
+    "title": "Scheduled Sampling for Sequence Prediction with Recurrent Neural Networks"
+  },
+  "processed_at": "2026-10-03T15:20:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30f50094396c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18e766a84c0918ff-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.12289",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.12289",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.12289",
+      "arXiv:2402.12289",
+      "semanticscholar:758c2dc290c037a6f211ec503beee70abe2d1197"
+    ],
+    "reason": "タイトルが自動運転への視覚言語モデルの応用・融合を主題としており、LLM推論システムの性能・資源管理の最適化を示さない。",
+    "first_checked_at": "2026-10-05T02:49:32+00:00",
+    "last_checked_at": "2026-10-13T13:47:00+00:00",
+    "linked_from": [],
+    "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
+  },
+  "processed_at": "2026-10-13T13:47:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18e766a84c09",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

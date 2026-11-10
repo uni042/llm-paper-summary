@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a62954e596f51e5-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.17980",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.17980",
+    "identity_tokens": [
+      "arXiv:2501.17980"
+    ],
+    "reason": "This is a review of AI scaling’s technical/economic/ecological/social effects, not an inference method or measured serving optimization.",
+    "first_checked_at": "2026-10-06T18:35:17+00:00",
+    "last_checked_at": "2026-10-06T18:35:17+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+    ],
+    "title": "Limits to AI Growth: The Ecological and Social Consequences of Scaling"
+  },
+  "processed_at": "2026-10-06T18:35:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a62954e596f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

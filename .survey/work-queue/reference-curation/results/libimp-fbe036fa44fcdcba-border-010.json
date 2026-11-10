@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fbe036fa44fcdcba-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.02556",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.02556",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.02556",
+      "SemanticScholar:4ea636caf1426792d1fdbdcdd651c5c2f627ee33",
+      "arXiv:2602.02556"
+    ],
+    "reason": "The abstract for Beyond Experience Retrieval: Learning to Generate Utility-Optimized Structured Experience for Frozen LLMs has an adjacent or weak systems-efficiency connection, but does not establish a clear contribution to LLM inference or serving efficiency.",
+    "first_checked_at": "2026-10-13T05:18:17+00:00",
+    "last_checked_at": "2026-10-13T05:18:17+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Experience Retrieval: Learning to Generate Utility-Optimized Structured Experience for Frozen LLMs"
+  },
+  "processed_at": "2026-10-13T05:18:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbe036fa44fc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

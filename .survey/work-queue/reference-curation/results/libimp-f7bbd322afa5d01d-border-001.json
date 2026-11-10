@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7bbd322afa5d01d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.00897",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.00897",
+    "identity_tokens": [
+      "arXiv:2608.00897"
+    ],
+    "reason": "本文で確認した内容は隣接領域または限定的な効率評価にとどまり、LLM推論/serving効率への適合が弱いためborderlineとする。 This is accelerator-interconnect infrastructure with synthetic modeling, not a demonstrated LLM inference/serving optimization.",
+    "first_checked_at": "2026-10-05T09:18:00+00:00",
+    "last_checked_at": "2026-10-05T09:18:00+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md"
+    ],
+    "title": "Shiftfly: Scaling the Accelerator Interconnect Past the Pod with a Shift-Routed Optical Tier"
+  },
+  "processed_at": "2026-10-05T09:18:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7bbd322afa5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

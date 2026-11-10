@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-334492e551092420-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.03384",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.03384",
+    "identity_tokens": [
+      "arXiv:2409.03384"
+    ],
+    "reason": "The review is broader than LLM inference/serving and does not provide a clearly bounded LLM-specific contribution; value for the target survey is uncertain.",
+    "first_checked_at": "2026-10-05T14:55:37+00:00",
+    "last_checked_at": "2026-10-05T14:55:37+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
+      "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+      "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hardware Acceleration of LLMs: A comprehensive survey and comparison"
+  },
+  "processed_at": "2026-10-05T14:55:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-334492e55109",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

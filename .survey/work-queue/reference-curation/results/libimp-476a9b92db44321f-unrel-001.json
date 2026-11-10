@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-476a9b92db44321f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.09852",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.09852",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2609.09852",
+      "arXiv:2609.09852"
+    ],
+    "reason": "タイトルに明示される研究対象は科学音声アシスタントの能力評価ベンチマークであり、LLM推論システムの高速化・省メモリ化・サービングではない。タイトル先行除外として記録し、通常Discovery 10件ノルマには算入しない。",
+    "first_checked_at": "2026-10-31T11:43:35+00:00",
+    "last_checked_at": "2026-10-31T11:43:35+00:00",
+    "linked_from": [
+      "WORKLIST-00.md rank 205"
+    ],
+    "title": "S³-Bench: Evaluating Speech Interaction Models as Scientific Voice Assistants"
+  },
+  "processed_at": "2026-10-31T11:43:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-476a9b92db44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

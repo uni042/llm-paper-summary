@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cf182611a73af9f3-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.21680",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.21680",
+    "identity_tokens": [
+      "arXiv:2607.21680"
+    ],
+    "reason": "The work applies QLoRA fine-tuning for bridge-diagnostic agents; its contribution is domain adaptation/training, not LLM inference efficiency.",
+    "first_checked_at": "2026-10-05T10:03:30+00:00",
+    "last_checked_at": "2026-10-05T10:03:30+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "Encoding Invisible Causation for Bridge Diagnostic Agents: Triple-Guided Retrieval-Augmented Fine-Tuning with QLoRA"
+  },
+  "processed_at": "2026-10-05T10:03:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cf182611a73a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

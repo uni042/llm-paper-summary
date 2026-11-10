@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96235d8d8e12311d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.molp.2026.08.011",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.molp.2026.08.011",
+    "identity_tokens": [
+      "DOI:10.1016/j.molp.2026.08.011"
+    ],
+    "reason": "一次要旨: Artificial intelligence (AI) has achieved human-level capabilities across multiple domains; however, concerns regarding data security, privacy, and domain-specific capability enhancement remain. Here, we present human + AI + ant (HAIant), a human-centered framework for secure and personalized intelligence augmentation based on locally deployed AI. HAIant integrates locally deployed large language models with personal data, individual reasoning processes, and domain-specific tools, enabling user-controlled AI systems while preserving data privacy. Within this framework, HAIant establishes a unified AI-assisted biological research workflow through personal biological knowledge base construction, multi-user communication, and bioinformatics tool invocation. To support domain-specific applications, a bioinformatics skill-execution module named BioSkills, consisting of 84 analytical tools and two domain knowledge bases, is integrated into HAIant. As a proof of concept, we show that the Biological HAIant can support experimental record management, bioinformatics analysis, and automated manuscript generation from experimental data. Collectively, out work demonstrates that HAIant and BioSkills provide a scalable architecture for secure, human-oriented AI systems that advance intelligent scientific workflows.",
+    "first_checked_at": "2026-10-05T07:36:48+00:00",
+    "last_checked_at": "2026-10-05T07:36:48+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+    ],
+    "title": "HAIant (): A human-centered AI framework for secure, personalized intelligence augmentation in biological research."
+  },
+  "processed_at": "2026-10-05T07:36:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96235d8d8e12",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

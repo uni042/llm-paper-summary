@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1d505c8b3d8265c6-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1145/3770855.3818937",
+  "reason": "Spatiotemporal modeling of electromagnetic fields governed by time-domain Maxwell's equations is essential for simulating and understanding wave propagation and scattering phenomena. However, accurate long-term predictions remains challenging due to the stringent numerical stability requirements and high computational costs inherent in traditional numerical algorithms. In this work, we present GT-MSMW, a novel specialized framework built upon the finite-difference time-domain (FDTD) paradigm. To overcome the optimization difficulties of direct long-term mapping while mitigating the cumulative errors of step-by-step unrolling, GT-MSMW employs a robust blockwise forecasting scheme, advancing the simulation in stable multi-step intervals. A key innovation of our framework is the deep integration of physical laws: we design specialized edge features that encode discrete gradient and curl operators, guiding the graph neural networks (GNN) to learn the precise local coupled evolution. This local encoding is complemented by a Transformer module, which employs physics-informed distance gating to regulate the magnitude of spatial interactions based on spatial proximity, alongside self- and cross-attention mechanisms to explicitly capture the global couplings among electromagnetic fields. Validated on complex unstructured meshes, GT-MSMW demonstrates SOTA performance in 2D scenarios, significantly reducing rollout errors compared to baseline methods. Furthermore, the framework is successfully extended to 3D geometries, proving its capability to capture intricate wave scattering behaviors. Codes and data are available at https://github.com/0lin0-c/GT--MSMW.",
+  "title": "Physics-Augmented Graph Transformer for Multi-step Time-Domain Maxwell's Equations in Electromagnetic Scattering",
+  "identity_tokens": [
+    "DOI:10.1145/3770855.3818937"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d505c8b3d82",
+  "source_precheck_request_id": null
+}

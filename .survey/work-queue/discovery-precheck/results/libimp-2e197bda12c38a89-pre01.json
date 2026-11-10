@@ -1,0 +1,817 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2e197bda12c38a89-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2e197bda12c3",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2604.08077",
+    "arXiv:2606.03113",
+    "arXiv:2606.31580",
+    "arXiv:2607.04302",
+    "arXiv:2608.03812",
+    "arXiv:2608.17336",
+    "arXiv:2609.26177",
+    "arXiv:2609.32395"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "88e742bd76c4c3980b9b708f7d3925a0c055e53f",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T10:58:32.092525+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2604.08077",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.03113",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.31580",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.04302",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.03812",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.17336",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.26177",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32395",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2608.03812",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Omni-modal large language models (Omni-LLMs) have achieved remarkable performance on audio-visual understanding tasks, but processing long and highly redundant visual and audio token sequences incurs substantial computational overhead, demanding aggressive token compression for efficient deployment. Existing methods often degrade at low token budgets: pre-LLM compression may discard structurally important and globally distributed evidence, whereas inner-LLM compression often underexploits query-conditioned audio-visual collaboration. To address these limitations, we propose OmniPack, a training-free framework that coordinates structural compression before the LLM with task-relevant semantic refinement within the LLM. Before the LLM, OmniPack removes structural redundancy through modality-specific importance, global coverage, and similarity-aware merging. After sufficient multimodal interaction, it further consolidates diverse, task-relevant representations through textual guidance and audio-visual collaboration. Extensive experiments on five benchmarks with three Omni-LLM backbones demonstrate that OmniPack consistently achieves the best performance-efficiency trade-off across diverse retention ratios, outperforming all existing methods. Notably, on Qwen2.5-Omni-7B, OmniPack preserves 98.0% of the original performance while reducing FLOPs to 16.7%, and still retains 92.9% of the original performance with only 6.8% of the original FLOPs.",
+      "identifiers": [
+        "SemanticScholar:45b56098933fe0c82b7a6489559ec073d3fb9ebe"
+      ],
+      "semantic_scholar_id": "45b56098933fe0c82b7a6489559ec073d3fb9ebe",
+      "canonical_id": "arXiv:2608.03812",
+      "arxiv_id": "2608.03812",
+      "authors": [
+        "Wan-Shun Su",
+        "Yang Shi",
+        "Fei Liu",
+        "Ziwen Yu",
+        "Yan Min",
+        "Zhuo-Ran Zhang",
+        "Qi-Xun Wang",
+        "Hao-Tian Wang",
+        "Shi-Xuan Liu",
+        "Yuan-Xing Zhang",
+        "Peng Wu",
+        "Cheng-Fu Huo",
+        "Liang Ding"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.04302",
+      "year": 2026,
+      "published": "2026-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present HiFA4, a post-training operator-level design that executes both QK^T and PV in FlashAttention as 4-bit HIF4 Cube GEMMs for LLM inference on Ascend NPUs, while maintaining the online softmax state in FP16. To our knowledge, HiFA4 is the first Ascend-HIF4-targeted design of this kind evaluated on standard NLP benchmarks. HiFA4 combines two mechanisms. Smooth-QK applies a calibration-static per-channel equivalent rescaling to Q and K after RoPE, transferring quantization difficulty from K to Q without per-tile online reduction at inference. P-Reordering accumulates the softmax normalizer from the same quantized attention weights P_hat used in the PV GEMM, rather than from a higher-precision reconstruction. We show that this inconsistent formulation introduces a coherent output-scaling error, and validate the effect on a Qwen3-8B Layer-0 MMLU trace, where all 3.6M measured attention tiles exhibit net probability-mass loss with median epsilon_bar = -0.064. P-Reordering also allows the normalizer to be fused into the PV Cube GEMM. Across five LLMs, HiFA4 reduces quantization-induced decision drift. On Qwen3-8B, it recovers 37.5% of the accuracy gap introduced by direct HIF4 quantization, narrows the sample-weighted accuracy loss from 1.12 pp to 0.70 pp, reduces BF16-inconsistent MMLU predictions from 16.3% to 8.2%, and cuts MMLU accuracy regressions by 57% (1071 to 465). On Gemma2-9B, mild smoothing keeps HiFA4 within 0.7 pp of BF16 while reducing MMLU regressions by 27%. On LLaMA3.1-8B, Mistral-7B, and Phi-4B, where Smooth-QK is disabled, P-Reordering with the adopted Q-Mean auxiliary still reduces full-set MMLU regressions by 41-52%. A preliminary instruction-scheduling analysis projects a 35.4% critical-path latency reduction relative to BF16 by fusing the softmax normalizer into the PV Cube GEMM; on-hardware validation is left to future work.",
+      "identifiers": [
+        "SemanticScholar:e9a272bb85fd92d86971dbf338ff93daf47168a6"
+      ],
+      "semantic_scholar_id": "e9a272bb85fd92d86971dbf338ff93daf47168a6",
+      "canonical_id": "arXiv:2607.04302",
+      "arxiv_id": "2607.04302",
+      "doi": "10.48550/arXiv.2607.04302",
+      "authors": [
+        "Huilin Dong",
+        "Yanzhao Li",
+        "Jie Gao",
+        "Chunlu Li",
+        "Zhiyuan Zhang",
+        "Yupeng Sun",
+        "Zhenyuan Chen",
+        "Zhiqiang Zou"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 117,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TileMix: Tile-Centric Mixed-Precision Attention for LLM Inference Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.17336",
+      "year": 2026,
+      "published": "2026-08-18",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context prefill in large language models (LLMs) incurs substantial computation and memory traffic because dense self-attention computes quadratic query-key scores. Existing methods either use a uniform low-precision path or select token interactions, leaving spatial precision routing over hardware-aligned score tiles outside fused dense attention. We introduce TileMix, a tile-centric precision-routing kernel that makes numerical precision an executable spatial decision over score-tile groups within fused dense attention. TileMix partitions the attention matrix into hardware-aligned score tiles, packs routing decisions into compact bitmasks, and dispatches each tile group through FP16 or INT8 score computation while both paths update a shared online-softmax state. Scalable precision grouping lets each routing bit govern multiple adjacent key tiles, preserving hardware-aligned compute tiles and compact metadata at long contexts. By routing all legal tile groups, TileMix preserves dense token connectivity, requires no training, and supports grouped-query attention, variable-length batches, and INT8 key/value caches. Across LongEval, LV-Eval, and A100 prefill benchmarks on LLaMA, Qwen, and Vicuna, TileMix recovers long-context quality lost under uniform INT8 and improves prefill throughput over FP16, yielding a controllable accuracy-efficiency frontier across model families. The implementation is available at https://github.com/HanzhiZhang-Ulrica/TileMix.",
+      "identifiers": [
+        "SemanticScholar:07f1586b25da74042beb7add74047468240c1065"
+      ],
+      "semantic_scholar_id": "07f1586b25da74042beb7add74047468240c1065",
+      "canonical_id": "arXiv:2608.17336",
+      "arxiv_id": "2608.17336",
+      "authors": [
+        "Han-Zhi Zhang",
+        "Qiao Zhang",
+        "Qing-Lei Cao",
+        "Heng Fan",
+        "Yan Huang",
+        "Ke-Wei Sha",
+        "Yun-He Feng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 73,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+      "source_url": "https://arxiv.org/abs/2604.08077",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long-form videos with Video Large Language Models (Video-LLMs) is computationally prohibitive. Current efficiency methods often compromise fine-grained perception through irreversible information disposal or inhibit long-range temporal modeling via rigid, predefined sparse patterns. This paper introduces AdaSpark, an adaptive sparsity framework designed to address these limitations. AdaSpark first partitions video inputs into 3D spatio-temporal cubes. It then employs two co-designed, context-aware components: (1) Adaptive Cube-Selective Attention (AdaS-Attn), which adaptively selects a subset of relevant video cubes to attend for each query token, and (2) Adaptive Token-Selective FFN (AdaS-FFN), which selectively processes only the most salient tokens within each cube. An entropy-based (Top-p) selection mechanism adaptively allocates computational resources based on input complexity. Experiments demonstrate that AdaSpark significantly reduces computational load by up to 57% FLOPs while maintaining comparable performance to dense models and preserving fine-grained, long-range dependencies, as validated on challenging hour-scale video benchmarks.",
+      "identifiers": [
+        "SemanticScholar:26de9913033c9237a713e5aef5961f6c5c2d26fa"
+      ],
+      "semantic_scholar_id": "26de9913033c9237a713e5aef5961f6c5c2d26fa",
+      "canonical_id": "arXiv:2604.08077",
+      "arxiv_id": "2604.08077",
+      "doi": "10.48550/arXiv.2604.08077",
+      "authors": [
+        "Handong Li",
+        "Zi-Kang Liu",
+        "Long-Teng Guo",
+        "Tong-Tian Yue",
+        "Yepeng Tang",
+        "Xin-Xin Zhu",
+        "Chuanyang Zheng",
+        "Zi-Ming Wang",
+        "Zhi-Bin Wang",
+        "Jun Song",
+        "Chenglin Yu",
+        "Bo Zheng",
+        "Jing Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Experience-Driven Dynamic Exits for LLMs with Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2606.03113",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models suffer from slow autoregressive inference. While self-speculative decoding accelerates this process, its efficiency is hampered by static configurations like fixed exit layers and speculation lengths. We reframe this optimization as a \\textbf{Markov Decision Process} and propose \\textbf{LEDE}, a framework that uses offline reinforcement learning. LEDE learns a policy to dynamically select the optimal exit layer and speculation length based on the local context of the generated sequence at each step, balancing computational cost and draft quality. Comprehensive evaluations on Llama-2 and Llama-3 models show LEDE achieves up to a $2.0\\times$$\\sim$$2.7\\times$ speedup over autoregressive decoding and and provides an additional 17\\% speedup over the static speculative baselines.",
+      "identifiers": [
+        "SemanticScholar:27c4b7d1a323813cb516502c8a812e9ade7de9bd"
+      ],
+      "semantic_scholar_id": "27c4b7d1a323813cb516502c8a812e9ade7de9bd",
+      "canonical_id": "arXiv:2606.03113",
+      "arxiv_id": "2606.03113",
+      "doi": "10.1109/icassp55912.2026.11464968",
+      "authors": [
+        "Yan-Yu Zhu",
+        "Hoilam Pao",
+        "Niu Hu",
+        "Wei Guo",
+        "Shaoxiong Zhan",
+        "Bo-Yu Lai",
+        "Zi-Tai Wang",
+        "Yong-Qin Zeng",
+        "Hai-Tao Zheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LASER: Load-Aware Serving with Early-Exit for Reasoning LLMs at the Edge",
+      "source_url": "https://arxiv.org/abs/2606.31580",
+      "year": 2026,
+      "published": "2026-06-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) such as DeepSeek-R1 have achieved strong performance through extended chain-of-thought (CoT) generation. However, deploying them on edge devices raises a conflict between long CoT sequences and constrained resources. Recent confidence-based early exit methods reduce CoT length for individual requests, yet they apply fixed thresholds from a single-request perspective, ignoring multi-request concurrency and load fluctuation in edge serving. To bridge this gap, we propose \\underline{L}oad-\\underline{A}ware \\underline{S}erving with \\underline{E}arly-exit for \\underline{R}easoning (LASER). LASER couples two complementary designs: (1) a load-aware adaptive exit threshold that adjusts the confidence bar based on real-time system load within an empirically validated robust range, and (2) a difficulty- and load-aware reasoning budget pre-allocation that assigns compute resources by request difficulty and system capacity. We formulate the problem as a joint optimization of reasoning quality and service latency. Experiments on two reasoning models, four benchmarks, and diverse load conditions show that LASER reduces average latency by 17--38\\% and improves service-level objective (SLO) satisfaction by 3--6\\% over fixed-threshold baselines, at an average accuracy cost of only 1\\%.",
+      "identifiers": [
+        "SemanticScholar:2f8dc745bb77102d2a26e39371f304a1f4d55ae9"
+      ],
+      "semantic_scholar_id": "2f8dc745bb77102d2a26e39371f304a1f4d55ae9",
+      "canonical_id": "arXiv:2606.31580",
+      "arxiv_id": "2606.31580",
+      "doi": "10.48550/arXiv.2606.31580",
+      "authors": [
+        "Zhi-Qing Tang",
+        "Size Li",
+        "Han-Shuai Cui",
+        "Zi-Lang Huang",
+        "Jian-Xiong Guo",
+        "Tian Wang",
+        "Yuan Wu",
+        "Wei-Jia Jia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Magnitude Profile Pruning: Calibration-Free Structured Attention Head Removal for Transformer Compression",
+      "source_url": "https://arxiv.org/abs/2609.26177",
+      "year": 2026,
+      "published": "2026-08-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning of attention heads provides a hardware-friendly way to compress Transformer language models. However, existing methods for measuring head-level importance require calibration data, gradient computation, or Hessian estimation. These requirements add extra overhead and make the methods depend on the data. Our work presents Magnitude Profile (MP) scoring, a training-free criterion for head importance that identifies dispensable heads through statistical outlier detection on weight row norms. Heads whose projection weights fall within the population bulk are pruned, while heads exhibiting outlier norms, which carry disproportionate representational capacity, are preserved. Our work further gives MP-G, a variant that handles Grouped Query Attention (GQA) by distributing shared key-value group scores across associated query heads. Across five models evaluated on WikiText-2 perplexity at 12.5%-50% head sparsity, MP-G achieves the best perplexity on OPT-6.7B at all sparsity levels (18.46 at 12.5%, 27.87 at 25%, 152.0 at 50%). MP-G also gives the best results on RoBERTa-large at 12.5% and 25% sparsity, with perplexity values of 7.27 and 10.28, outperforming calibration-dependent baselines including Wanda-Head, SparseGPT-Head, and Gradient-Head. It requires zero forward passes, calibration samples, or gradient computation. At 50% sparsity, head pruning yields up to 16% parameter reduction with 50% attention FLOP savings. Our results show that weight-only statistical scoring can match or outperform data-dependent methods for structured head pruning, providing a practical, zero-cost criterion for Transformer compression.",
+      "identifiers": [
+        "SemanticScholar:5104e3f36db8e8d252033df614fe01275fbbcfc1"
+      ],
+      "semantic_scholar_id": "5104e3f36db8e8d252033df614fe01275fbbcfc1",
+      "canonical_id": "arXiv:2609.26177",
+      "arxiv_id": "2609.26177",
+      "authors": [
+        "Kasun Dewage",
+        "Marianna Pensky",
+        "Heranga K. Rathnasekara",
+        "Suranadi De Silva"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 80,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Memory as a cache: Exact context reuse and deletion by construction",
+      "source_url": "https://arxiv.org/abs/2609.32395",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The KV cache of a transformer entangles every token's representation with its entire prefix: a passage encoded once cannot be reused under a different prefix or removed without recomputing everything after it, so exact cache reuse is limited to shared prefixes. We present SMem, an architecture whose context representation is a cache by construction. A block-local encoder maps each block to memory rows independently of other blocks, and a reader conditions generation on their union through cross-attention. For every parameter setting, memory composes exactly at fixed block indices, deleting a block is an exact $O(b)$ update for $b$-token blocks, and the memory state is independent of the edit path. At $4\\times$ the training context, under the shared recipe, SMem retrieves planted needles beyond any trained-length window (exact match 0.14-0.28 at distances of 31 and 63 blocks), where learned-position, RoPE, and Block-Attention-style transformers all score at most 0.02. A fully cached context is served by computing one block alone at a near-constant 3.1-6.2 ms, whereas cold prefill grows with context; batched decode stores 34-38% fewer KV rows and runs 1.4-1.7$\\times$ faster when bandwidth-bound; and deletion beats suffix recomputation by 8.5$\\times$ at 512 blocks and 452$\\times$ at 4096 blocks (32-256$\\times$ the trained length, probing the cost model rather than a served regime). The cost is a perplexity gap of -4.7% to +2.8% (negative favors SMem) against a parameter-matched transformer with the same positional scheme, at 160M-1.5B on FineWeb-Edu across two recipes and a learning-rate search. SMem also composes with RoPE: at 160M and 410M the composite matches or leads the matched transformer and closes 29-59% of SMem's gap to a RoPE transformer. Dropping prefix entanglement thus keeps perplexity comparable while making the cache exactly composable and editable.",
+      "identifiers": [
+        "SemanticScholar:f9e4be791a9114741de53d11b83228345ffef634"
+      ],
+      "semantic_scholar_id": "f9e4be791a9114741de53d11b83228345ffef634",
+      "canonical_id": "arXiv:2609.32395",
+      "arxiv_id": "2609.32395",
+      "authors": [
+        "Sheng-Yao Wang",
+        "Jiang Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.03812",
+      "identity_tokens": [
+        "id:SemanticScholar:45b56098933fe0c82b7a6489559ec073d3fb9ebe",
+        "id:arXiv:2608.03812",
+        "title:omnipack unified token compression for efficient omnimodal large language models",
+        "url:https://arxiv.org/abs/2608.03812"
+      ],
+      "record": {
+        "title": "OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2608.03812",
+        "year": 2026,
+        "published": "2026-08-04",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Omni-modal large language models (Omni-LLMs) have achieved remarkable performance on audio-visual understanding tasks, but processing long and highly redundant visual and audio token sequences incurs substantial computational overhead, demanding aggressive token compression for efficient deployment. Existing methods often degrade at low token budgets: pre-LLM compression may discard structurally important and globally distributed evidence, whereas inner-LLM compression often underexploits query-conditioned audio-visual collaboration. To address these limitations, we propose OmniPack, a training-free framework that coordinates structural compression before the LLM with task-relevant semantic refinement within the LLM. Before the LLM, OmniPack removes structural redundancy through modality-specific importance, global coverage, and similarity-aware merging. After sufficient multimodal interaction, it further consolidates diverse, task-relevant representations through textual guidance and audio-visual collaboration. Extensive experiments on five benchmarks with three Omni-LLM backbones demonstrate that OmniPack consistently achieves the best performance-efficiency trade-off across diverse retention ratios, outperforming all existing methods. Notably, on Qwen2.5-Omni-7B, OmniPack preserves 98.0% of the original performance while reducing FLOPs to 16.7%, and still retains 92.9% of the original performance with only 6.8% of the original FLOPs.",
+        "identifiers": [
+          "SemanticScholar:45b56098933fe0c82b7a6489559ec073d3fb9ebe"
+        ],
+        "semantic_scholar_id": "45b56098933fe0c82b7a6489559ec073d3fb9ebe",
+        "canonical_id": "arXiv:2608.03812",
+        "arxiv_id": "2608.03812",
+        "authors": [
+          "Wan-Shun Su",
+          "Yang Shi",
+          "Fei Liu",
+          "Ziwen Yu",
+          "Yan Min",
+          "Zhuo-Ran Zhang",
+          "Qi-Xun Wang",
+          "Hao-Tian Wang",
+          "Shi-Xuan Liu",
+          "Yuan-Xing Zhang",
+          "Peng Wu",
+          "Cheng-Fu Huo",
+          "Liang Ding"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 87,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.04302",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.04302",
+        "id:SemanticScholar:e9a272bb85fd92d86971dbf338ff93daf47168a6",
+        "id:arXiv:2607.04302",
+        "title:hifa4 trainingfree 4bit flashattention on ascend hif4 npus for llm inference",
+        "url:https://arxiv.org/abs/2607.04302"
+      ],
+      "record": {
+        "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference",
+        "source_url": "https://arxiv.org/abs/2607.04302",
+        "year": 2026,
+        "published": "2026-07-05",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present HiFA4, a post-training operator-level design that executes both QK^T and PV in FlashAttention as 4-bit HIF4 Cube GEMMs for LLM inference on Ascend NPUs, while maintaining the online softmax state in FP16. To our knowledge, HiFA4 is the first Ascend-HIF4-targeted design of this kind evaluated on standard NLP benchmarks. HiFA4 combines two mechanisms. Smooth-QK applies a calibration-static per-channel equivalent rescaling to Q and K after RoPE, transferring quantization difficulty from K to Q without per-tile online reduction at inference. P-Reordering accumulates the softmax normalizer from the same quantized attention weights P_hat used in the PV GEMM, rather than from a higher-precision reconstruction. We show that this inconsistent formulation introduces a coherent output-scaling error, and validate the effect on a Qwen3-8B Layer-0 MMLU trace, where all 3.6M measured attention tiles exhibit net probability-mass loss with median epsilon_bar = -0.064. P-Reordering also allows the normalizer to be fused into the PV Cube GEMM. Across five LLMs, HiFA4 reduces quantization-induced decision drift. On Qwen3-8B, it recovers 37.5% of the accuracy gap introduced by direct HIF4 quantization, narrows the sample-weighted accuracy loss from 1.12 pp to 0.70 pp, reduces BF16-inconsistent MMLU predictions from 16.3% to 8.2%, and cuts MMLU accuracy regressions by 57% (1071 to 465). On Gemma2-9B, mild smoothing keeps HiFA4 within 0.7 pp of BF16 while reducing MMLU regressions by 27%. On LLaMA3.1-8B, Mistral-7B, and Phi-4B, where Smooth-QK is disabled, P-Reordering with the adopted Q-Mean auxiliary still reduces full-set MMLU regressions by 41-52%. A preliminary instruction-scheduling analysis projects a 35.4% critical-path latency reduction relative to BF16 by fusing the softmax normalizer into the PV Cube GEMM; on-hardware validation is left to future work.",
+        "identifiers": [
+          "SemanticScholar:e9a272bb85fd92d86971dbf338ff93daf47168a6"
+        ],
+        "semantic_scholar_id": "e9a272bb85fd92d86971dbf338ff93daf47168a6",
+        "canonical_id": "arXiv:2607.04302",
+        "arxiv_id": "2607.04302",
+        "doi": "10.48550/arXiv.2607.04302",
+        "authors": [
+          "Huilin Dong",
+          "Yanzhao Li",
+          "Jie Gao",
+          "Chunlu Li",
+          "Zhiyuan Zhang",
+          "Yupeng Sun",
+          "Zhenyuan Chen",
+          "Zhiqiang Zou"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 117,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.17336",
+      "identity_tokens": [
+        "id:SemanticScholar:07f1586b25da74042beb7add74047468240c1065",
+        "id:arXiv:2608.17336",
+        "title:tilemix tilecentric mixedprecision attention for llm inference acceleration",
+        "url:https://arxiv.org/abs/2608.17336"
+      ],
+      "record": {
+        "title": "TileMix: Tile-Centric Mixed-Precision Attention for LLM Inference Acceleration",
+        "source_url": "https://arxiv.org/abs/2608.17336",
+        "year": 2026,
+        "published": "2026-08-18",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context prefill in large language models (LLMs) incurs substantial computation and memory traffic because dense self-attention computes quadratic query-key scores. Existing methods either use a uniform low-precision path or select token interactions, leaving spatial precision routing over hardware-aligned score tiles outside fused dense attention. We introduce TileMix, a tile-centric precision-routing kernel that makes numerical precision an executable spatial decision over score-tile groups within fused dense attention. TileMix partitions the attention matrix into hardware-aligned score tiles, packs routing decisions into compact bitmasks, and dispatches each tile group through FP16 or INT8 score computation while both paths update a shared online-softmax state. Scalable precision grouping lets each routing bit govern multiple adjacent key tiles, preserving hardware-aligned compute tiles and compact metadata at long contexts. By routing all legal tile groups, TileMix preserves dense token connectivity, requires no training, and supports grouped-query attention, variable-length batches, and INT8 key/value caches. Across LongEval, LV-Eval, and A100 prefill benchmarks on LLaMA, Qwen, and Vicuna, TileMix recovers long-context quality lost under uniform INT8 and improves prefill throughput over FP16, yielding a controllable accuracy-efficiency frontier across model families. The implementation is available at https://github.com/HanzhiZhang-Ulrica/TileMix.",
+        "identifiers": [
+          "SemanticScholar:07f1586b25da74042beb7add74047468240c1065"
+        ],
+        "semantic_scholar_id": "07f1586b25da74042beb7add74047468240c1065",
+        "canonical_id": "arXiv:2608.17336",
+        "arxiv_id": "2608.17336",
+        "authors": [
+          "Han-Zhi Zhang",
+          "Qiao Zhang",
+          "Qing-Lei Cao",
+          "Heng Fan",
+          "Yan Huang",
+          "Ke-Wei Sha",
+          "Yun-He Feng"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 73,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.08077",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.08077",
+        "id:SemanticScholar:26de9913033c9237a713e5aef5961f6c5c2d26fa",
+        "id:arXiv:2604.08077",
+        "title:adaspark adaptive sparsity for efficient longvideo understanding",
+        "url:https://arxiv.org/abs/2604.08077"
+      ],
+      "record": {
+        "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+        "source_url": "https://arxiv.org/abs/2604.08077",
+        "year": 2026,
+        "published": "2026-04-09",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Processing long-form videos with Video Large Language Models (Video-LLMs) is computationally prohibitive. Current efficiency methods often compromise fine-grained perception through irreversible information disposal or inhibit long-range temporal modeling via rigid, predefined sparse patterns. This paper introduces AdaSpark, an adaptive sparsity framework designed to address these limitations. AdaSpark first partitions video inputs into 3D spatio-temporal cubes. It then employs two co-designed, context-aware components: (1) Adaptive Cube-Selective Attention (AdaS-Attn), which adaptively selects a subset of relevant video cubes to attend for each query token, and (2) Adaptive Token-Selective FFN (AdaS-FFN), which selectively processes only the most salient tokens within each cube. An entropy-based (Top-p) selection mechanism adaptively allocates computational resources based on input complexity. Experiments demonstrate that AdaSpark significantly reduces computational load by up to 57% FLOPs while maintaining comparable performance to dense models and preserving fine-grained, long-range dependencies, as validated on challenging hour-scale video benchmarks.",
+        "identifiers": [
+          "SemanticScholar:26de9913033c9237a713e5aef5961f6c5c2d26fa"
+        ],
+        "semantic_scholar_id": "26de9913033c9237a713e5aef5961f6c5c2d26fa",
+        "canonical_id": "arXiv:2604.08077",
+        "arxiv_id": "2604.08077",
+        "doi": "10.48550/arXiv.2604.08077",
+        "authors": [
+          "Handong Li",
+          "Zi-Kang Liu",
+          "Long-Teng Guo",
+          "Tong-Tian Yue",
+          "Yepeng Tang",
+          "Xin-Xin Zhu",
+          "Chuanyang Zheng",
+          "Zi-Ming Wang",
+          "Zhi-Bin Wang",
+          "Jun Song",
+          "Chenglin Yu",
+          "Bo Zheng",
+          "Jing Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 204,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.03113",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11464968",
+        "id:SemanticScholar:27c4b7d1a323813cb516502c8a812e9ade7de9bd",
+        "id:arXiv:2606.03113",
+        "title:experiencedriven dynamic exits for llms with reinforcement learning",
+        "url:https://arxiv.org/abs/2606.03113"
+      ],
+      "record": {
+        "title": "Experience-Driven Dynamic Exits for LLMs with Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2606.03113",
+        "year": 2026,
+        "published": "2026-05-03",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models suffer from slow autoregressive inference. While self-speculative decoding accelerates this process, its efficiency is hampered by static configurations like fixed exit layers and speculation lengths. We reframe this optimization as a \\textbf{Markov Decision Process} and propose \\textbf{LEDE}, a framework that uses offline reinforcement learning. LEDE learns a policy to dynamically select the optimal exit layer and speculation length based on the local context of the generated sequence at each step, balancing computational cost and draft quality. Comprehensive evaluations on Llama-2 and Llama-3 models show LEDE achieves up to a $2.0\\times$$\\sim$$2.7\\times$ speedup over autoregressive decoding and and provides an additional 17\\% speedup over the static speculative baselines.",
+        "identifiers": [
+          "SemanticScholar:27c4b7d1a323813cb516502c8a812e9ade7de9bd"
+        ],
+        "semantic_scholar_id": "27c4b7d1a323813cb516502c8a812e9ade7de9bd",
+        "canonical_id": "arXiv:2606.03113",
+        "arxiv_id": "2606.03113",
+        "doi": "10.1109/icassp55912.2026.11464968",
+        "authors": [
+          "Yan-Yu Zhu",
+          "Hoilam Pao",
+          "Niu Hu",
+          "Wei Guo",
+          "Shaoxiong Zhan",
+          "Bo-Yu Lai",
+          "Zi-Tai Wang",
+          "Yong-Qin Zeng",
+          "Hai-Tao Zheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 180,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.31580",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.31580",
+        "id:SemanticScholar:2f8dc745bb77102d2a26e39371f304a1f4d55ae9",
+        "id:arXiv:2606.31580",
+        "title:laser loadaware serving with earlyexit for reasoning llms at the edge",
+        "url:https://arxiv.org/abs/2606.31580"
+      ],
+      "record": {
+        "title": "LASER: Load-Aware Serving with Early-Exit for Reasoning LLMs at the Edge",
+        "source_url": "https://arxiv.org/abs/2606.31580",
+        "year": 2026,
+        "published": "2026-06-30",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs) such as DeepSeek-R1 have achieved strong performance through extended chain-of-thought (CoT) generation. However, deploying them on edge devices raises a conflict between long CoT sequences and constrained resources. Recent confidence-based early exit methods reduce CoT length for individual requests, yet they apply fixed thresholds from a single-request perspective, ignoring multi-request concurrency and load fluctuation in edge serving. To bridge this gap, we propose \\underline{L}oad-\\underline{A}ware \\underline{S}erving with \\underline{E}arly-exit for \\underline{R}easoning (LASER). LASER couples two complementary designs: (1) a load-aware adaptive exit threshold that adjusts the confidence bar based on real-time system load within an empirically validated robust range, and (2) a difficulty- and load-aware reasoning budget pre-allocation that assigns compute resources by request difficulty and system capacity. We formulate the problem as a joint optimization of reasoning quality and service latency. Experiments on two reasoning models, four benchmarks, and diverse load conditions show that LASER reduces average latency by 17--38\\% and improves service-level objective (SLO) satisfaction by 3--6\\% over fixed-threshold baselines, at an average accuracy cost of only 1\\%.",
+        "identifiers": [
+          "SemanticScholar:2f8dc745bb77102d2a26e39371f304a1f4d55ae9"
+        ],
+        "semantic_scholar_id": "2f8dc745bb77102d2a26e39371f304a1f4d55ae9",
+        "canonical_id": "arXiv:2606.31580",
+        "arxiv_id": "2606.31580",
+        "doi": "10.48550/arXiv.2606.31580",
+        "authors": [
+          "Zhi-Qing Tang",
+          "Size Li",
+          "Han-Shuai Cui",
+          "Zi-Lang Huang",
+          "Jian-Xiong Guo",
+          "Tian Wang",
+          "Yuan Wu",
+          "Wei-Jia Jia"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 122,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26177",
+      "identity_tokens": [
+        "id:SemanticScholar:5104e3f36db8e8d252033df614fe01275fbbcfc1",
+        "id:arXiv:2609.26177",
+        "title:magnitude profile pruning calibrationfree structured attention head removal for transformer compression",
+        "url:https://arxiv.org/abs/2609.26177"
+      ],
+      "record": {
+        "title": "Magnitude Profile Pruning: Calibration-Free Structured Attention Head Removal for Transformer Compression",
+        "source_url": "https://arxiv.org/abs/2609.26177",
+        "year": 2026,
+        "published": "2026-08-11",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Structured pruning of attention heads provides a hardware-friendly way to compress Transformer language models. However, existing methods for measuring head-level importance require calibration data, gradient computation, or Hessian estimation. These requirements add extra overhead and make the methods depend on the data. Our work presents Magnitude Profile (MP) scoring, a training-free criterion for head importance that identifies dispensable heads through statistical outlier detection on weight row norms. Heads whose projection weights fall within the population bulk are pruned, while heads exhibiting outlier norms, which carry disproportionate representational capacity, are preserved. Our work further gives MP-G, a variant that handles Grouped Query Attention (GQA) by distributing shared key-value group scores across associated query heads. Across five models evaluated on WikiText-2 perplexity at 12.5%-50% head sparsity, MP-G achieves the best perplexity on OPT-6.7B at all sparsity levels (18.46 at 12.5%, 27.87 at 25%, 152.0 at 50%). MP-G also gives the best results on RoBERTa-large at 12.5% and 25% sparsity, with perplexity values of 7.27 and 10.28, outperforming calibration-dependent baselines including Wanda-Head, SparseGPT-Head, and Gradient-Head. It requires zero forward passes, calibration samples, or gradient computation. At 50% sparsity, head pruning yields up to 16% parameter reduction with 50% attention FLOP savings. Our results show that weight-only statistical scoring can match or outperform data-dependent methods for structured head pruning, providing a practical, zero-cost criterion for Transformer compression.",
+        "identifiers": [
+          "SemanticScholar:5104e3f36db8e8d252033df614fe01275fbbcfc1"
+        ],
+        "semantic_scholar_id": "5104e3f36db8e8d252033df614fe01275fbbcfc1",
+        "canonical_id": "arXiv:2609.26177",
+        "arxiv_id": "2609.26177",
+        "authors": [
+          "Kasun Dewage",
+          "Marianna Pensky",
+          "Heranga K. Rathnasekara",
+          "Suranadi De Silva"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 80,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32395",
+      "identity_tokens": [
+        "id:SemanticScholar:f9e4be791a9114741de53d11b83228345ffef634",
+        "id:arXiv:2609.32395",
+        "title:memory as a cache exact context reuse and deletion by construction",
+        "url:https://arxiv.org/abs/2609.32395"
+      ],
+      "record": {
+        "title": "Memory as a cache: Exact context reuse and deletion by construction",
+        "source_url": "https://arxiv.org/abs/2609.32395",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The KV cache of a transformer entangles every token's representation with its entire prefix: a passage encoded once cannot be reused under a different prefix or removed without recomputing everything after it, so exact cache reuse is limited to shared prefixes. We present SMem, an architecture whose context representation is a cache by construction. A block-local encoder maps each block to memory rows independently of other blocks, and a reader conditions generation on their union through cross-attention. For every parameter setting, memory composes exactly at fixed block indices, deleting a block is an exact $O(b)$ update for $b$-token blocks, and the memory state is independent of the edit path. At $4\\times$ the training context, under the shared recipe, SMem retrieves planted needles beyond any trained-length window (exact match 0.14-0.28 at distances of 31 and 63 blocks), where learned-position, RoPE, and Block-Attention-style transformers all score at most 0.02. A fully cached context is served by computing one block alone at a near-constant 3.1-6.2 ms, whereas cold prefill grows with context; batched decode stores 34-38% fewer KV rows and runs 1.4-1.7$\\times$ faster when bandwidth-bound; and deletion beats suffix recomputation by 8.5$\\times$ at 512 blocks and 452$\\times$ at 4096 blocks (32-256$\\times$ the trained length, probing the cost model rather than a served regime). The cost is a perplexity gap of -4.7% to +2.8% (negative favors SMem) against a parameter-matched transformer with the same positional scheme, at 160M-1.5B on FineWeb-Edu across two recipes and a learning-rate search. SMem also composes with RoPE: at 160M and 410M the composite matches or leads the matched transformer and closes 29-59% of SMem's gap to a RoPE transformer. Dropping prefix entanglement thus keeps perplexity comparable while making the cache exactly composable and editable.",
+        "identifiers": [
+          "SemanticScholar:f9e4be791a9114741de53d11b83228345ffef634"
+        ],
+        "semantic_scholar_id": "f9e4be791a9114741de53d11b83228345ffef634",
+        "canonical_id": "arXiv:2609.32395",
+        "arxiv_id": "2609.32395",
+        "authors": [
+          "Sheng-Yao Wang",
+          "Jiang Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:246527da7d9df6ea7d5ad0b8b3de2e7febf5d29fda4094606723ac4d38fd53c7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,426 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-292e10a07dc965b7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-292e10a07dc9",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2605.06320",
+    "arXiv:2605.15077",
+    "arXiv:2605.20084",
+    "arXiv:2605.22411"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6cc462a6d7bb8d2b2b73f2c668fbf5e9378e0797",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-11T21:31:49.040382+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2605.06320",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.15077",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.20084",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.22411",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Improving the Efficiency of Language Agent Teams with Adaptive Task Graphs",
+      "source_url": "https://arxiv.org/abs/2605.06320",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly deployed in teams, yet existing coordination approaches often occupy two extremes. Highly structured methods rely on fixed roles, pipelines, or task decompositions assigned a priori. In contrast, fully unstructured teams enable adaptability and exploration but suffer from inefficiencies such as error propagation, inter-agent conflicts, and wasted resources (measured in time, tokens, or file operations). We introduce Language Agent Teams for Task Evolution (LATTE), a framework for coordinating LLM teams inspired by distributed systems, where processors must operate under partial observability and communication constraints. In LATTE, a team of agents collaboratively construct and maintain a shared, evolving coordination graph which encodes sub-task dependencies, individual agent assignment, and the current state of sub-task progress. This protocol maintains consistency while empowering agents to dynamically allocate work, adapt coordination, and discover new tasks. Across multiple collaborative tasks and a variety of base models, we demonstrate how LATTE reduces token usage, wall-clock time, communication, and coordination failures (e.g. file conflicts and redundant outputs) while matching or exceeding the accuracy of standard designs including MetaGPT, decentralized teams, top-down Leader-Worker hierarchies, and static decompositions.",
+      "identifiers": [
+        "SemanticScholar:3e09844a8e2cc52c260f404071efe7367c831572"
+      ],
+      "semantic_scholar_id": "3e09844a8e2cc52c260f404071efe7367c831572",
+      "canonical_id": "arXiv:2605.06320",
+      "arxiv_id": "2605.06320",
+      "doi": "10.48550/arXiv.2605.06320",
+      "authors": [
+        "Elizabeth Mieczkowski",
+        "Alexander Ku",
+        "Tiwalayo Eisape",
+        "Dilip Arumugam",
+        "John Matters",
+        "Katherine M. Collins",
+        "Ilia Sucholutsky",
+        "Thomas L. Griffiths"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 157,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Concurrency without Model Changes: Future-based Asynchronous Function Calling for LLMs",
+      "source_url": "https://arxiv.org/abs/2605.15077",
+      "year": 2026,
+      "published": "2026-05-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Function calling, also known as tool use, is a core capability of modern LLM agents but is typically constrained by synchronous execution semantics. Under these semantics, LLM decoding is blocked until each function call completes, resulting in increasing end-to-end latency. In this work, we introduce AsyncFC, a pure execution-layer framework that decouples LLM decoding from function execution, enabling overlap between model decoding and function execution as well as inter-function parallelism when dependencies permit. AsyncFC layers over existing models and unmodified function implementations, requiring no fine-tuning or changes to the standard synchronous function-calling protocol. Across standard function-calling benchmarks and adapted software engineering benchmarks, AsyncFC significantly reduces end-to-end task completion time while preserving task accuracy. Furthermore, these results reveal that LLMs possess a native capability to reason over symbolic futures that represent unresolved execution results, enabling an asynchronous paradigm for model-tool interaction.",
+      "identifiers": [
+        "SemanticScholar:199ef50b5e41f6528618919181b00be65a5fe989"
+      ],
+      "semantic_scholar_id": "199ef50b5e41f6528618919181b00be65a5fe989",
+      "canonical_id": "arXiv:2605.15077",
+      "arxiv_id": "2605.15077",
+      "doi": "10.48550/arXiv.2605.15077",
+      "authors": [
+        "Guang-Yu Feng",
+        "Huan-Zhi Mao",
+        "Prabal Dutta",
+        "Joseph Gonzalez"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 150,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BalanceRAG: Joint Risk Calibration for Cascaded Retrieval-Augmented Generation",
+      "source_url": "https://arxiv.org/abs/2605.20084",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) can enhance factuality via retrieval-augmented generation (RAG), but applying RAG to every query is unnecessary when the model-only answer is reliable. This motivates cascaded RAG: each query is first handled by an LLM-only branch, escalated to a RAG fallback only if the primary branch is uncertain, and abstained from when neither branch is sufficiently trustworthy. However, calibrating such cascades stage by stage may be conservative, since the final utility depends on joint uncertainty thresholding of LLM-only and RAG. In this work, we develop BalanceRAG to certify threshold pairs at a target risk level. Given uncertainty scores from the two branches, BalanceRAG frames each threshold pair as an operating point on a two-dimensional lattice and identifies safe operating points using sequential graphical testing. This enables risk-adaptive threshold calibration, controlling the system-level error rate among accepted points, while retaining more examples. Furthermore, BalanceRAG extends to multi-risk calibration, allowing retrieval usage to be bounded together with the selection-conditioned risk. Experiments on three open-domain question answering (QA) benchmarks across multiple LLM backbones demonstrate that BalanceRAG meets prescribed risk levels, preserves higher coverage and more accepted correct examples, and reduces unnecessary retrieval calls compared with always-on RAG.",
+      "identifiers": [
+        "SemanticScholar:1b4771a0316468d91585ce99d7a43b1b96bdbd14"
+      ],
+      "semantic_scholar_id": "1b4771a0316468d91585ce99d7a43b1b96bdbd14",
+      "canonical_id": "arXiv:2605.20084",
+      "arxiv_id": "2605.20084",
+      "doi": "10.48550/arXiv.2605.20084",
+      "authors": [
+        "Zi-Jun Jia",
+        "Yuan-Chang Ye",
+        "Senli Jia",
+        "Yiyao Qian",
+        "Hao-Ning Wang",
+        "Bao-Jie Chen",
+        "Di-Yin Tang",
+        "Jin-Song Yu",
+        "Zhi-Yuan Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DeferMem: Query-Time Evidence Distillation via Reinforcement Learning for Long-Term Agent Memory",
+      "source_url": "https://arxiv.org/abs/2605.22411",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) agents still struggle to effectively use long-term memory, with answer-supporting evidence often scattered across long conversational histories and buried in substantial irrelevant content. Existing memory systems commonly process memory into dedicated units before future queries are known and retrieve these preconstructed units at query time. Because the contents and granularity of these units are determined before the current query is known, the retrieved units can remain coarse and noisy for that query, leaving downstream answerers to further denoise them and uncover query-specific evidence. We present DeferMem, a long-term memory framework that decouples this problem into high-recall candidate retrieval and query-conditioned evidence distillation. DeferMem uses a lightweight segment-link structure to organize raw history and retrieve broad candidates at query time. A memory distiller then distills these high-recall but highly noisy candidates into a set of faithful, self-contained, and query-conditioned evidence. To train this distiller, we introduce DistillPO, a reinforcement learning algorithm that formulates post-retrieval evidence distillation as a structured action comprising message selection and evidence rewriting. It optimizes this action with a decomposed-and-gated reward pipeline and structure-aligned advantage assignment, gating reward components from validity to quality checks while exposing answerability-related feedback early and assigning each reward to its responsible output span. On LoCoMo and LongMemEval-S, DeferMem surpasses strong baselines in QA accuracy and memory-system efficiency, achieving the highest QA accuracy and fastest runtime while consuming no commercial-API tokens for memory operations.",
+      "identifiers": [
+        "SemanticScholar:60996ccde0247ab9ee6ca9996b654b84764184b2"
+      ],
+      "semantic_scholar_id": "60996ccde0247ab9ee6ca9996b654b84764184b2",
+      "canonical_id": "arXiv:2605.22411",
+      "arxiv_id": "2605.22411",
+      "authors": [
+        "Jia-Ning Yin",
+        "Tan Tang",
+        "Ying-Cai Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.06320",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.06320",
+        "id:SemanticScholar:3e09844a8e2cc52c260f404071efe7367c831572",
+        "id:arXiv:2605.06320",
+        "title:improving the efficiency of language agent teams with adaptive task graphs",
+        "url:https://arxiv.org/abs/2605.06320"
+      ],
+      "record": {
+        "title": "Improving the Efficiency of Language Agent Teams with Adaptive Task Graphs",
+        "source_url": "https://arxiv.org/abs/2605.06320",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are increasingly deployed in teams, yet existing coordination approaches often occupy two extremes. Highly structured methods rely on fixed roles, pipelines, or task decompositions assigned a priori. In contrast, fully unstructured teams enable adaptability and exploration but suffer from inefficiencies such as error propagation, inter-agent conflicts, and wasted resources (measured in time, tokens, or file operations). We introduce Language Agent Teams for Task Evolution (LATTE), a framework for coordinating LLM teams inspired by distributed systems, where processors must operate under partial observability and communication constraints. In LATTE, a team of agents collaboratively construct and maintain a shared, evolving coordination graph which encodes sub-task dependencies, individual agent assignment, and the current state of sub-task progress. This protocol maintains consistency while empowering agents to dynamically allocate work, adapt coordination, and discover new tasks. Across multiple collaborative tasks and a variety of base models, we demonstrate how LATTE reduces token usage, wall-clock time, communication, and coordination failures (e.g. file conflicts and redundant outputs) while matching or exceeding the accuracy of standard designs including MetaGPT, decentralized teams, top-down Leader-Worker hierarchies, and static decompositions.",
+        "identifiers": [
+          "SemanticScholar:3e09844a8e2cc52c260f404071efe7367c831572"
+        ],
+        "semantic_scholar_id": "3e09844a8e2cc52c260f404071efe7367c831572",
+        "canonical_id": "arXiv:2605.06320",
+        "arxiv_id": "2605.06320",
+        "doi": "10.48550/arXiv.2605.06320",
+        "authors": [
+          "Elizabeth Mieczkowski",
+          "Alexander Ku",
+          "Tiwalayo Eisape",
+          "Dilip Arumugam",
+          "John Matters",
+          "Katherine M. Collins",
+          "Ilia Sucholutsky",
+          "Thomas L. Griffiths"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 157,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.15077",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.15077",
+        "id:SemanticScholar:199ef50b5e41f6528618919181b00be65a5fe989",
+        "id:arXiv:2605.15077",
+        "title:concurrency without model changes futurebased asynchronous function calling for llms",
+        "url:https://arxiv.org/abs/2605.15077"
+      ],
+      "record": {
+        "title": "Concurrency without Model Changes: Future-based Asynchronous Function Calling for LLMs",
+        "source_url": "https://arxiv.org/abs/2605.15077",
+        "year": 2026,
+        "published": "2026-05-14",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Function calling, also known as tool use, is a core capability of modern LLM agents but is typically constrained by synchronous execution semantics. Under these semantics, LLM decoding is blocked until each function call completes, resulting in increasing end-to-end latency. In this work, we introduce AsyncFC, a pure execution-layer framework that decouples LLM decoding from function execution, enabling overlap between model decoding and function execution as well as inter-function parallelism when dependencies permit. AsyncFC layers over existing models and unmodified function implementations, requiring no fine-tuning or changes to the standard synchronous function-calling protocol. Across standard function-calling benchmarks and adapted software engineering benchmarks, AsyncFC significantly reduces end-to-end task completion time while preserving task accuracy. Furthermore, these results reveal that LLMs possess a native capability to reason over symbolic futures that represent unresolved execution results, enabling an asynchronous paradigm for model-tool interaction.",
+        "identifiers": [
+          "SemanticScholar:199ef50b5e41f6528618919181b00be65a5fe989"
+        ],
+        "semantic_scholar_id": "199ef50b5e41f6528618919181b00be65a5fe989",
+        "canonical_id": "arXiv:2605.15077",
+        "arxiv_id": "2605.15077",
+        "doi": "10.48550/arXiv.2605.15077",
+        "authors": [
+          "Guang-Yu Feng",
+          "Huan-Zhi Mao",
+          "Prabal Dutta",
+          "Joseph Gonzalez"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 150,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.20084",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.20084",
+        "id:SemanticScholar:1b4771a0316468d91585ce99d7a43b1b96bdbd14",
+        "id:arXiv:2605.20084",
+        "title:balancerag joint risk calibration for cascaded retrievalaugmented generation",
+        "url:https://arxiv.org/abs/2605.20084"
+      ],
+      "record": {
+        "title": "BalanceRAG: Joint Risk Calibration for Cascaded Retrieval-Augmented Generation",
+        "source_url": "https://arxiv.org/abs/2605.20084",
+        "year": 2026,
+        "published": "2026-05-19",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) can enhance factuality via retrieval-augmented generation (RAG), but applying RAG to every query is unnecessary when the model-only answer is reliable. This motivates cascaded RAG: each query is first handled by an LLM-only branch, escalated to a RAG fallback only if the primary branch is uncertain, and abstained from when neither branch is sufficiently trustworthy. However, calibrating such cascades stage by stage may be conservative, since the final utility depends on joint uncertainty thresholding of LLM-only and RAG. In this work, we develop BalanceRAG to certify threshold pairs at a target risk level. Given uncertainty scores from the two branches, BalanceRAG frames each threshold pair as an operating point on a two-dimensional lattice and identifies safe operating points using sequential graphical testing. This enables risk-adaptive threshold calibration, controlling the system-level error rate among accepted points, while retaining more examples. Furthermore, BalanceRAG extends to multi-risk calibration, allowing retrieval usage to be bounded together with the selection-conditioned risk. Experiments on three open-domain question answering (QA) benchmarks across multiple LLM backbones demonstrate that BalanceRAG meets prescribed risk levels, preserves higher coverage and more accepted correct examples, and reduces unnecessary retrieval calls compared with always-on RAG.",
+        "identifiers": [
+          "SemanticScholar:1b4771a0316468d91585ce99d7a43b1b96bdbd14"
+        ],
+        "semantic_scholar_id": "1b4771a0316468d91585ce99d7a43b1b96bdbd14",
+        "canonical_id": "arXiv:2605.20084",
+        "arxiv_id": "2605.20084",
+        "doi": "10.48550/arXiv.2605.20084",
+        "authors": [
+          "Zi-Jun Jia",
+          "Yuan-Chang Ye",
+          "Senli Jia",
+          "Yiyao Qian",
+          "Hao-Ning Wang",
+          "Bao-Jie Chen",
+          "Di-Yin Tang",
+          "Jin-Song Yu",
+          "Zhi-Yuan Wang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.22411",
+      "identity_tokens": [
+        "id:SemanticScholar:60996ccde0247ab9ee6ca9996b654b84764184b2",
+        "id:arXiv:2605.22411",
+        "title:defermem querytime evidence distillation via reinforcement learning for longterm agent memory",
+        "url:https://arxiv.org/abs/2605.22411"
+      ],
+      "record": {
+        "title": "DeferMem: Query-Time Evidence Distillation via Reinforcement Learning for Long-Term Agent Memory",
+        "source_url": "https://arxiv.org/abs/2605.22411",
+        "year": 2026,
+        "published": "2026-05-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) agents still struggle to effectively use long-term memory, with answer-supporting evidence often scattered across long conversational histories and buried in substantial irrelevant content. Existing memory systems commonly process memory into dedicated units before future queries are known and retrieve these preconstructed units at query time. Because the contents and granularity of these units are determined before the current query is known, the retrieved units can remain coarse and noisy for that query, leaving downstream answerers to further denoise them and uncover query-specific evidence. We present DeferMem, a long-term memory framework that decouples this problem into high-recall candidate retrieval and query-conditioned evidence distillation. DeferMem uses a lightweight segment-link structure to organize raw history and retrieve broad candidates at query time. A memory distiller then distills these high-recall but highly noisy candidates into a set of faithful, self-contained, and query-conditioned evidence. To train this distiller, we introduce DistillPO, a reinforcement learning algorithm that formulates post-retrieval evidence distillation as a structured action comprising message selection and evidence rewriting. It optimizes this action with a decomposed-and-gated reward pipeline and structure-aligned advantage assignment, gating reward components from validity to quality checks while exposing answerability-related feedback early and assigning each reward to its responsible output span. On LoCoMo and LongMemEval-S, DeferMem surpasses strong baselines in QA accuracy and memory-system efficiency, achieving the highest QA accuracy and fastest runtime while consuming no commercial-API tokens for memory operations.",
+        "identifiers": [
+          "SemanticScholar:60996ccde0247ab9ee6ca9996b654b84764184b2"
+        ],
+        "semantic_scholar_id": "60996ccde0247ab9ee6ca9996b654b84764184b2",
+        "canonical_id": "arXiv:2605.22411",
+        "arxiv_id": "2605.22411",
+        "authors": [
+          "Jia-Ning Yin",
+          "Tan Tang",
+          "Ying-Cai Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 143,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:fad1eba2fdeaacc72a88ef4d0969e2f3b1efc4d2ed771a1d66da87f197e10590",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

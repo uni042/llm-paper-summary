@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "f0c498ec220c3a6e66ec7e496b2e63eeb4dfad5ff1212fd926d212c09aa12195",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_a95e9a667c8c8191a9350c1f0bc4b691--2026-2606.02823-qift-shift-friendly-w2-quantization-research-20261023-0200-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2606.02823",
+  "worker_completed_at": "2026-10-23T02:04:00+09:00",
+  "worker_run_key": "20261023-0200-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5582,
+    "body_paragraphs": 32,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 149,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 149 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 149 < 500"
+  ],
+  "processed_at": "2026-10-24T17:49:20+00:00"
+}

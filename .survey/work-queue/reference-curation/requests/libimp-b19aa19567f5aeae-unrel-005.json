@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b19aa19567f5aeae-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1145/3770855.3818467",
+  "reason": "Deep Learning Recommendation Models (DLRMs) play a key role to power real-world recommendation and ranking, yet their growing complexity has made production deployment increasingly challenging. While PyTorch 2 (PT2) offers promising performance and productivity gains through automated model compilation, its initial release lacked critical features needed for DLRM adoption. In this work, we present RecCompl, a comprehensive model compilation system that enables efficient model compilation of industrial scale DLRMs with PT2. RecCompl addresses key compatibility issues by extending operator coverage, minimizing graph breaks, avoiding unnecessary recompilation, and generalizing graph transformation. Besides, to meet the high requirement on model exploration, we introduce a configuration-based user interface that decouples compilation settings from model code, allowing fine-grained control without intrusive changes. Despite these improvements, efficiency gaps remain in achieving a production-ready compilation system. To close them, we introduce systematic designs and engineering optimizations that enhance compilation time, memory management, and online deployment reliability. RecCompl is widely adopted, and delivers up to 60% higher training throughput while achieving substantially lower compilation latency, consistent performance across varying memory budgets, and stable online deployment.",
+  "title": "RecCompl: Efficient Model Compilation for Industrial Scale Recommendation Models with PyTorch 2",
+  "identity_tokens": [
+    "DOI:10.1145/3770855.3818467"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+    "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b19aa19567f5",
+  "source_precheck_request_id": null
+}

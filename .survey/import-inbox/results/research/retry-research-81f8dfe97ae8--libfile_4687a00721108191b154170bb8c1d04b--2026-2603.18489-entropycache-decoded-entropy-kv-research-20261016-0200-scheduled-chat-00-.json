@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c4f304cdc772b595d1a972401408caff875df677638bad7d3659e4d3ba235307",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-81f8dfe97ae8--libfile_4687a00721108191b154170bb8c1d04b--2026-2603.18489-entropycache-decoded-entropy-kv-research-20261016-0200-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2603.18489",
+  "worker_completed_at": "2026-10-16T02:07:00+09:00",
+  "worker_run_key": "20261016-0200-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5213,
+    "body_paragraphs": 28,
+    "method_chars": 1359,
+    "method_paragraphs": 8,
+    "evaluation_chars": 178,
+    "limitation_chars": 682,
+    "insufficiency_flags": [
+      "評価説明量 178 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 178 < 500"
+  ],
+  "processed_at": "2026-10-16T15:41:52+00:00"
+}

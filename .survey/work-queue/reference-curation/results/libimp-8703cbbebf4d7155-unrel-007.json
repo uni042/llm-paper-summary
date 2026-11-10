@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8703cbbebf4d7155-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.14373",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.14373",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2509.14373",
+      "SemanticScholar:d2f0d3a934fb54b145a59b8a5228e9d2ea60929f",
+      "arXiv:2509.14373"
+    ],
+    "reason": "Low-rank optimization lowers pretraining/fine-tuning costs for domain-specific code generation; the reported efficiency is training-side, not inference or serving.",
+    "first_checked_at": "2026-10-13T01:58:25+00:00",
+    "last_checked_at": "2026-10-13T01:58:25+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+    ],
+    "title": "CodeLSI: Leveraging Foundation Models for Automated Code Generation with Low-Rank Optimization and Domain-Specific Instruction Tuning"
+  },
+  "processed_at": "2026-10-13T01:58:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8703cbbebf4d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

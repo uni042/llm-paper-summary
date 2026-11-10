@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-268c724f74b66013-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.22424",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.22424",
+    "identity_tokens": [
+      "arXiv:2507.22424"
+    ],
+    "reason": "推論加速の具体性はあるが、VLA行動生成に適用領域が強く限定され、LLM servingへの移行可能性を一次本文から確定できないためborderline。",
+    "first_checked_at": "2026-10-05T12:58:30+00:00",
+    "last_checked_at": "2026-10-05T12:58:30+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md"
+    ],
+    "title": "Spec-VLA: Speculative Decoding for Vision-Language-Action Models with Relaxed Acceptance"
+  },
+  "processed_at": "2026-10-05T12:58:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-268c724f74b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

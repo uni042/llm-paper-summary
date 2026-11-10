@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "precheck_result_path": ".survey/work-queue/discovery-precheck/results/20260921T0148JST-worker30-openalex-kv-management-10b.json",
+  "precheck_receipt": "sha256:46ccfc222995431c695646b8bd91edf4cc811ac5820785fd4914d56588cca1c1",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-21T01:31:26+09:00-worker30",
+    "round": "openalex-kv-management-10",
+    "axis": "dynamic KV cache management sparse attention long-context inference",
+    "query_summary": "Semantic Scholar 429後の正規recoveryとしてOpenAlex固定検索を実行。未評価20件を品質評価し、動画・agent等の周辺研究が多いためこのroundでは新規投入を行わなかった。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "CPU-GPU offload検索へ進む",
+    "empty_round_reason": "no_candidate_selected_after_quality_screen"
+  }
+}

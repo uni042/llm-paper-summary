@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-376ba2f5bfd39057-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.7717/peerj-cs.3921",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.7717/peerj-cs.3921",
+    "identity_tokens": [
+      "DOI:10.7717/peerj-cs.3921"
+    ],
+    "reason": "Literature-review rhetorical-role classification and benchmark evaluation; no inference optimization.",
+    "first_checked_at": "2026-10-05T11:34:42+00:00",
+    "last_checked_at": "2026-10-05T11:34:42+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Modelling and classifying the components of literature reviews: a novel annotation schema and evaluation of transformer models"
+  },
+  "processed_at": "2026-10-05T11:34:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-376ba2f5bfd3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

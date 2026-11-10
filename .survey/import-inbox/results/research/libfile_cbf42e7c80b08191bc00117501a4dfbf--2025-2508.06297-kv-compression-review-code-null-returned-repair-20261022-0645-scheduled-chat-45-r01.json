@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "af1be82f502ddc9e59dfa99421aea6171cf1f85974f47d29141f4ea556d6a7fe",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_cbf42e7c80b08191bc00117501a4dfbf--2025-2508.06297-kv-compression-review-code-null-returned-repair-20261022-0645-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2508.06297",
+  "worker_completed_at": "2026-10-22T06:58:00+09:00",
+  "worker_run_key": "20261022-0645-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6366,
+    "body_paragraphs": 33,
+    "method_chars": 2231,
+    "method_paragraphs": 11,
+    "evaluation_chars": 1056,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2025-2508.06297-kv-cache-compression-for-inference-efficiency-in-llms-a-review.md と 22 段落 / 4895文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-22T16:40:10+00:00"
+}

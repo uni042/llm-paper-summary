@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52c46ae4f2a906fe-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2203.05740",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2203.05740",
+    "identity_tokens": [
+      "arXiv:2203.05740"
+    ],
+    "reason": "PTQ reconstruction中にactivation quantizationを確率的にdropして低bit modelのflatnessと精度を改善し、2-bit activationまで拡張する。推論向け量子化に直接関係するが、評価は主にCVとBERT系NLP taskのaccuracyでLLM生成推論のlatency/memory実測がないためborderline。",
+    "first_checked_at": "2026-10-05T16:34:16+00:00",
+    "last_checked_at": "2026-10-05T16:34:16+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "QDrop: Randomly Dropping Quantization for Extremely Low-bit Post-Training Quantization"
+  },
+  "processed_at": "2026-10-05T16:34:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52c46ae4f2a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

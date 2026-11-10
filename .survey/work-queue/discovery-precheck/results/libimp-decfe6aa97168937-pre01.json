@@ -1,0 +1,632 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-decfe6aa97168937-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-decfe6aa9716",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2403.12983",
+    "arXiv:2405.05957",
+    "arXiv:2505.14604",
+    "arXiv:2603.07135",
+    "arXiv:2607.02303",
+    "arXiv:2608.15303"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e3e1e4af71e2e90f60af20377ac1f7fa8bb05527",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T12:54:50.440821+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2403.12983",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.05957",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.14604",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.07135",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.02303",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.15303",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "The Model Knows Which Tokens Matter: Automatic Token Selection via Noise Gating",
+      "source_url": "https://arxiv.org/abs/2603.07135",
+      "year": 2026,
+      "published": "2026-03-07",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual tokens dominate inference cost in vision-language models (VLMs), yet many carry redundant information. Existing pruning methods alleviate this but typically rely on attention magnitude or similarity scores. We reformulate visual token pruning as capacity constrained communication: given a fixed budget K, the model must allocate limited bandwidth to maximally preserve visual information. We propose AutoSelect, which attaches a lightweight Scorer and Denoiser to a frozen VLM and trains with only the standard next token prediction loss, without auxiliary objectives or extra annotations. During training, a variance preserving noise gate modulates each token's information flow according to its predicted importance so that gradients propagate through all tokens; a diagonal attention Denoiser then recovers the perturbed representations. At inference, only the Scorer and a hard top-K selection remain, adding negligible latency. On ten VLM benchmarks, AutoSelect retains 96.5% of full model accuracy while accelerating LLM prefill by 2.85x with only 0.69 ms overhead, and transfers to different VLM backbones without architecture-specific tuning. Code is available at https://github.com/MedHK23/AutoSelect.",
+      "identifiers": [
+        "SemanticScholar:cad7509eb8a3cb2b074c33e7f57c242853e2b149"
+      ],
+      "semantic_scholar_id": "cad7509eb8a3cb2b074c33e7f57c242853e2b149",
+      "canonical_id": "arXiv:2603.07135",
+      "arxiv_id": "2603.07135",
+      "doi": "10.48550/arXiv.2603.07135",
+      "authors": [
+        "Landi He",
+        "Xiao-Yu Yang",
+        "Lijian Xu"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 221,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets",
+      "source_url": "https://arxiv.org/abs/2607.02303",
+      "year": 2026,
+      "published": "2026-07-02",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear-attention and state-space language models compress the prefix into a fixed-size recurrent state, yielding O(1) memory at the cost of a lossy exact memory: when many key--value associations compete, earlier facts are overwritten and needle recall degrades. Inspired by Complementary Learning Systems, we give linear attention a hippocampal complement. HOLA (Hippocampal Linear Attention) keeps the usual delta-rule state as a compressive memory and adds a bounded exact KV cache, forming a semiparametric test-time memory: the state models linearly compressible structure, while the cache stores associations that should not be forced through that state. The cache writes without a learned eviction module, keeping tokens with large beta * ||e||, the prediction residual actually committed to the state; a decoupled RMSNorm-gamma cache read then turns these exact KV pairs into sharp retrieval rather than soft averaging. At 340M parameters trained on 15B SlimPajama tokens, HOLA lowers Wikitext perplexity from 27.32 to 22.92 (-16.1%), below a full-attention Transformer++ (26.88), and improves LAMBADA perplexity from 30.95 to 30.26. It also achieves the best linear in-context retrieval and remains much more robust than GDN or a matched HOLA+recency cache on RULER needle-in-a-haystack recall out to 32k tokens (16x its training length).",
+      "identifiers": [
+        "SemanticScholar:ad9abf824a73a941d1357ff4f9481cfa52141edf"
+      ],
+      "semantic_scholar_id": "ad9abf824a73a941d1357ff4f9481cfa52141edf",
+      "canonical_id": "arXiv:2607.02303",
+      "arxiv_id": "2607.02303",
+      "doi": "10.48550/arXiv.2607.02303",
+      "authors": [
+        "Wan-Yun Cui"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Let LRMs Break Free from Overthinking via Self-Braking Tuning",
+      "source_url": "https://arxiv.org/abs/2505.14604",
+      "year": 2025,
+      "published": "2025-05-20",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 31,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs), such as OpenAI o1 and DeepSeek-R1, have significantly enhanced their reasoning capabilities by generating longer chains of thought, demonstrating outstanding performance across a variety of tasks. However, this performance gain comes at the cost of a substantial increase in redundant reasoning during the generation process, leading to high computational overhead and exacerbating the issue of overthinking. Although numerous existing approaches aim to address the problem of overthinking, they often rely on external interventions. In this paper, we propose a novel framework, Self-Braking Tuning (SBT), which tackles overthinking from the perspective of allowing the model to regulate its own reasoning process, thus eliminating the reliance on external control mechanisms. We construct a set of overthinking identification metrics based on standard answers and design a systematic method to detect redundant reasoning. This method accurately identifies unnecessary steps within the reasoning trajectory and generates training signals for learning self-regulation behaviors. Building on this foundation, we develop a complete strategy for constructing data with adaptive reasoning lengths and introduce an innovative braking prompt mechanism that enables the model to naturally learn when to terminate reasoning at an appropriate point. Experiments across mathematical benchmarks (AIME, AMC, MATH500, GSM8K) demonstrate that our method reduces token consumption by up to 60% while maintaining comparable accuracy to unconstrained models.",
+      "identifiers": [
+        "SemanticScholar:0014b34f566b087f6de555c3614da4aef94073df"
+      ],
+      "semantic_scholar_id": "0014b34f566b087f6de555c3614da4aef94073df",
+      "canonical_id": "arXiv:2505.14604",
+      "arxiv_id": "2505.14604",
+      "doi": "10.52202/085713-0069",
+      "authors": [
+        "Haoran Zhao",
+        "Yuchen Yan",
+        "Yong-Liang Shen",
+        "Haolei Xu",
+        "Wenqi Zhang",
+        "Kaitao Song",
+        "Jian Shao",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yue-Ting Zhuang"
+      ],
+      "priority": 41,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 31,
+        "citation_count": 31,
+        "total": 41,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 512,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "OSSCAR: One-Shot Structured Pruning in Vision and Language Models with Combinatorial Optimization",
+      "source_url": "https://arxiv.org/abs/2403.12983",
+      "year": 2024,
+      "published": "2024-03-02",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 21,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning is a promising approach for reducing the inference costs of large vision and language models. By removing carefully chosen structures, e.g., neurons or attention heads, the improvements from this approach can be realized on standard deep learning hardware. In this work, we focus on structured pruning in the one-shot (post-training) setting, which does not require model retraining after pruning. We propose a novel combinatorial optimization framework for this problem, based on a layer-wise reconstruction objective and a careful reformulation that allows for scalable optimization. Moreover, we design a new local combinatorial optimization algorithm, which exploits low-rank updates for efficient local search. Our framework is time and memory-efficient and considerably improves upon state-of-the-art one-shot methods on vision models (e.g., ResNet50, MobileNet) and language models (e.g., OPT-1.3B -- OPT-30B). For language models, e.g., OPT-2.7B, OSSCAR can lead to $125\\times$ lower test perplexity on WikiText with $2\\times$ inference time speedup in comparison to the state-of-the-art ZipLM approach. Our framework is also $6\\times$ -- $8\\times$ faster. Notably, our work considers models with tens of billions of parameters, which is up to $100\\times$ larger than what has been previously considered in the structured pruning literature.",
+      "identifiers": [
+        "SemanticScholar:6d71cdbe349c8e0c4d7c7fabe7191ceccdebd848"
+      ],
+      "semantic_scholar_id": "6d71cdbe349c8e0c4d7c7fabe7191ceccdebd848",
+      "canonical_id": "arXiv:2403.12983",
+      "arxiv_id": "2403.12983",
+      "doi": "10.48550/arXiv.2403.12983",
+      "authors": [
+        "Xiang Meng",
+        "Shibal Ibrahim",
+        "Kayhan Behdin",
+        "Hussein Hazimeh",
+        "N. Ponomareva",
+        "R. Mazumder"
+      ],
+      "priority": 31,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 21,
+        "citation_count": 21,
+        "total": 31,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 956,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis",
+      "source_url": "https://arxiv.org/abs/2608.15303",
+      "year": 2026,
+      "published": "2026-08-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time compute can substantially improve Large Language Model (LLM) reasoning performance, yet how and when additional compute helps remains poorly understood. We study Divergent-Convergent Reasoning (DCR), a simple two-phase primitive consisting of an exploration phase that generates multiple candidate solutions followed by a convergent reconciliation phase. We present three core results. First, we show that even a single reconciliation step can reliably amplify correct minority reports: across datasets, DCR often recovers the correct answer when correct exploration outputs are in the minority, a regime where majority voting fails. Second, we introduce recursive DCR, an autoregressive reconciliation system that iteratively analyzes disagreements and allocates additional test-time compute. Recursive DCR achieves higher accuracy than fixed-compute baselines-reaching 93.3% on AIME 2024 and 92.0% on AIME 2025-while using roughly 27% less compute on average, demonstrating that attentive resource allocation is superior to uniform scaling. Third, we analyze disagreement among exploration outputs via a simple, training-free dispersion metric. Dispersion reveals a structured relationship between disagreement and test-time gains: in regimes where DCR is effective, higher disagreement among exploration outputs is associated with larger accuracy improvements from reconciliation. Together, these results show that disagreement, often viewed as noise, can be systematically exploited to improve test-time reasoning and reveal emerging scaling laws for agentic LLM systems.",
+      "identifiers": [
+        "SemanticScholar:19d6d38dcf6a45f6ea7b0d6339ce10f138766dd3"
+      ],
+      "semantic_scholar_id": "19d6d38dcf6a45f6ea7b0d6339ce10f138766dd3",
+      "canonical_id": "arXiv:2608.15303",
+      "arxiv_id": "2608.15303",
+      "authors": [
+        "Bo Wen",
+        "Yu-Hao Chen",
+        "Erhan Bilal",
+        "C. Rios",
+        "Chen Wang",
+        "Junchen Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 60,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OpenBA-V2: Reaching 77.3% High Compression Ratio with Fast Multi-Stage Pruning",
+      "source_url": "https://arxiv.org/abs/2405.05957",
+      "year": 2024,
+      "published": "2024-05-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have played an important role in many fields due to their powerful capabilities.However, their massive number of parameters leads to high deployment requirements and incurs significant inference costs, which impedes their practical applications. Training smaller models is an effective way to address this problem. Therefore, we introduce OpenBA-V2, a 3.4B model derived from multi-stage compression and continual pre-training from the original 15B OpenBA model. OpenBA-V2 utilizes more data, more flexible training objectives, and techniques such as layer pruning, neural pruning, and vocabulary pruning to achieve a compression rate of 77.3\\% with minimal performance loss. OpenBA-V2 demonstrates competitive performance compared to other open-source models of similar size, achieving results close to or on par with the 15B OpenBA model in downstream tasks such as common sense reasoning and Named Entity Recognition (NER). OpenBA-V2 illustrates that LLMs can be compressed into smaller ones with minimal performance loss by employing advanced training objectives and data strategies, which may help deploy LLMs in resource-limited scenarios.",
+      "identifiers": [
+        "SemanticScholar:59768c67974ee3d75b427ee5d1af2095e49fc1ea"
+      ],
+      "semantic_scholar_id": "59768c67974ee3d75b427ee5d1af2095e49fc1ea",
+      "canonical_id": "arXiv:2405.05957",
+      "arxiv_id": "2405.05957",
+      "doi": "10.48550/arXiv.2405.05957",
+      "authors": [
+        "Dan Qiao",
+        "Yi Su",
+        "Pinzheng Wang",
+        "Jing Ye",
+        "Wen Xie",
+        "Yue-Chi Zhou",
+        "Yuyang Ding",
+        "Zecheng Tang",
+        "Jikai Wang",
+        "Yixin Ji",
+        "Yue Wang",
+        "Pei Guo",
+        "Zechen Sun",
+        "Zikang Zhang",
+        "Jun-Tao Li",
+        "Pingfu Chao",
+        "Wen-Liang Chen",
+        "Guohong Fu",
+        "Guo-Dong Zhou",
+        "Qiaoming Zhu",
+        "Min Zhang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 888,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.07135",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.07135",
+        "id:SemanticScholar:cad7509eb8a3cb2b074c33e7f57c242853e2b149",
+        "id:arXiv:2603.07135",
+        "title:the model knows which tokens matter automatic token selection via noise gating",
+        "url:https://arxiv.org/abs/2603.07135"
+      ],
+      "record": {
+        "title": "The Model Knows Which Tokens Matter: Automatic Token Selection via Noise Gating",
+        "source_url": "https://arxiv.org/abs/2603.07135",
+        "year": 2026,
+        "published": "2026-03-07",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual tokens dominate inference cost in vision-language models (VLMs), yet many carry redundant information. Existing pruning methods alleviate this but typically rely on attention magnitude or similarity scores. We reformulate visual token pruning as capacity constrained communication: given a fixed budget K, the model must allocate limited bandwidth to maximally preserve visual information. We propose AutoSelect, which attaches a lightweight Scorer and Denoiser to a frozen VLM and trains with only the standard next token prediction loss, without auxiliary objectives or extra annotations. During training, a variance preserving noise gate modulates each token's information flow according to its predicted importance so that gradients propagate through all tokens; a diagonal attention Denoiser then recovers the perturbed representations. At inference, only the Scorer and a hard top-K selection remain, adding negligible latency. On ten VLM benchmarks, AutoSelect retains 96.5% of full model accuracy while accelerating LLM prefill by 2.85x with only 0.69 ms overhead, and transfers to different VLM backbones without architecture-specific tuning. Code is available at https://github.com/MedHK23/AutoSelect.",
+        "identifiers": [
+          "SemanticScholar:cad7509eb8a3cb2b074c33e7f57c242853e2b149"
+        ],
+        "semantic_scholar_id": "cad7509eb8a3cb2b074c33e7f57c242853e2b149",
+        "canonical_id": "arXiv:2603.07135",
+        "arxiv_id": "2603.07135",
+        "doi": "10.48550/arXiv.2603.07135",
+        "authors": [
+          "Landi He",
+          "Xiao-Yu Yang",
+          "Lijian Xu"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 221,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02303",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.02303",
+        "id:SemanticScholar:ad9abf824a73a941d1357ff4f9481cfa52141edf",
+        "id:arXiv:2607.02303",
+        "title:a hippocampus for linear attention an exact memory for what the recurrent state forgets",
+        "url:https://arxiv.org/abs/2607.02303"
+      ],
+      "record": {
+        "title": "A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets",
+        "source_url": "https://arxiv.org/abs/2607.02303",
+        "year": 2026,
+        "published": "2026-07-02",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear-attention and state-space language models compress the prefix into a fixed-size recurrent state, yielding O(1) memory at the cost of a lossy exact memory: when many key--value associations compete, earlier facts are overwritten and needle recall degrades. Inspired by Complementary Learning Systems, we give linear attention a hippocampal complement. HOLA (Hippocampal Linear Attention) keeps the usual delta-rule state as a compressive memory and adds a bounded exact KV cache, forming a semiparametric test-time memory: the state models linearly compressible structure, while the cache stores associations that should not be forced through that state. The cache writes without a learned eviction module, keeping tokens with large beta * ||e||, the prediction residual actually committed to the state; a decoupled RMSNorm-gamma cache read then turns these exact KV pairs into sharp retrieval rather than soft averaging. At 340M parameters trained on 15B SlimPajama tokens, HOLA lowers Wikitext perplexity from 27.32 to 22.92 (-16.1%), below a full-attention Transformer++ (26.88), and improves LAMBADA perplexity from 30.95 to 30.26. It also achieves the best linear in-context retrieval and remains much more robust than GDN or a matched HOLA+recency cache on RULER needle-in-a-haystack recall out to 32k tokens (16x its training length).",
+        "identifiers": [
+          "SemanticScholar:ad9abf824a73a941d1357ff4f9481cfa52141edf"
+        ],
+        "semantic_scholar_id": "ad9abf824a73a941d1357ff4f9481cfa52141edf",
+        "canonical_id": "arXiv:2607.02303",
+        "arxiv_id": "2607.02303",
+        "doi": "10.48550/arXiv.2607.02303",
+        "authors": [
+          "Wan-Yun Cui"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 104,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.14604",
+      "identity_tokens": [
+        "id:DOI:10.52202/085713-0069",
+        "id:SemanticScholar:0014b34f566b087f6de555c3614da4aef94073df",
+        "id:arXiv:2505.14604",
+        "title:let lrms break free from overthinking via selfbraking tuning",
+        "url:https://arxiv.org/abs/2505.14604"
+      ],
+      "record": {
+        "title": "Let LRMs Break Free from Overthinking via Self-Braking Tuning",
+        "source_url": "https://arxiv.org/abs/2505.14604",
+        "year": 2025,
+        "published": "2025-05-20",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 31,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs), such as OpenAI o1 and DeepSeek-R1, have significantly enhanced their reasoning capabilities by generating longer chains of thought, demonstrating outstanding performance across a variety of tasks. However, this performance gain comes at the cost of a substantial increase in redundant reasoning during the generation process, leading to high computational overhead and exacerbating the issue of overthinking. Although numerous existing approaches aim to address the problem of overthinking, they often rely on external interventions. In this paper, we propose a novel framework, Self-Braking Tuning (SBT), which tackles overthinking from the perspective of allowing the model to regulate its own reasoning process, thus eliminating the reliance on external control mechanisms. We construct a set of overthinking identification metrics based on standard answers and design a systematic method to detect redundant reasoning. This method accurately identifies unnecessary steps within the reasoning trajectory and generates training signals for learning self-regulation behaviors. Building on this foundation, we develop a complete strategy for constructing data with adaptive reasoning lengths and introduce an innovative braking prompt mechanism that enables the model to naturally learn when to terminate reasoning at an appropriate point. Experiments across mathematical benchmarks (AIME, AMC, MATH500, GSM8K) demonstrate that our method reduces token consumption by up to 60% while maintaining comparable accuracy to unconstrained models.",
+        "identifiers": [
+          "SemanticScholar:0014b34f566b087f6de555c3614da4aef94073df"
+        ],
+        "semantic_scholar_id": "0014b34f566b087f6de555c3614da4aef94073df",
+        "canonical_id": "arXiv:2505.14604",
+        "arxiv_id": "2505.14604",
+        "doi": "10.52202/085713-0069",
+        "authors": [
+          "Haoran Zhao",
+          "Yuchen Yan",
+          "Yong-Liang Shen",
+          "Haolei Xu",
+          "Wenqi Zhang",
+          "Kaitao Song",
+          "Jian Shao",
+          "Weiming Lu",
+          "Jun Xiao",
+          "Yue-Ting Zhuang"
+        ],
+        "priority": 41,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 31,
+          "citation_count": 31,
+          "total": 41,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 512,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.12983",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2403.12983",
+        "id:SemanticScholar:6d71cdbe349c8e0c4d7c7fabe7191ceccdebd848",
+        "id:arXiv:2403.12983",
+        "title:osscar oneshot structured pruning in vision and language models with combinatorial optimization",
+        "url:https://arxiv.org/abs/2403.12983"
+      ],
+      "record": {
+        "title": "OSSCAR: One-Shot Structured Pruning in Vision and Language Models with Combinatorial Optimization",
+        "source_url": "https://arxiv.org/abs/2403.12983",
+        "year": 2024,
+        "published": "2024-03-02",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 21,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Structured pruning is a promising approach for reducing the inference costs of large vision and language models. By removing carefully chosen structures, e.g., neurons or attention heads, the improvements from this approach can be realized on standard deep learning hardware. In this work, we focus on structured pruning in the one-shot (post-training) setting, which does not require model retraining after pruning. We propose a novel combinatorial optimization framework for this problem, based on a layer-wise reconstruction objective and a careful reformulation that allows for scalable optimization. Moreover, we design a new local combinatorial optimization algorithm, which exploits low-rank updates for efficient local search. Our framework is time and memory-efficient and considerably improves upon state-of-the-art one-shot methods on vision models (e.g., ResNet50, MobileNet) and language models (e.g., OPT-1.3B -- OPT-30B). For language models, e.g., OPT-2.7B, OSSCAR can lead to $125\\times$ lower test perplexity on WikiText with $2\\times$ inference time speedup in comparison to the state-of-the-art ZipLM approach. Our framework is also $6\\times$ -- $8\\times$ faster. Notably, our work considers models with tens of billions of parameters, which is up to $100\\times$ larger than what has been previously considered in the structured pruning literature.",
+        "identifiers": [
+          "SemanticScholar:6d71cdbe349c8e0c4d7c7fabe7191ceccdebd848"
+        ],
+        "semantic_scholar_id": "6d71cdbe349c8e0c4d7c7fabe7191ceccdebd848",
+        "canonical_id": "arXiv:2403.12983",
+        "arxiv_id": "2403.12983",
+        "doi": "10.48550/arXiv.2403.12983",
+        "authors": [
+          "Xiang Meng",
+          "Shibal Ibrahim",
+          "Kayhan Behdin",
+          "Hussein Hazimeh",
+          "N. Ponomareva",
+          "R. Mazumder"
+        ],
+        "priority": 31,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 21,
+          "citation_count": 21,
+          "total": 31,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 956,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15303",
+      "identity_tokens": [
+        "id:SemanticScholar:19d6d38dcf6a45f6ea7b0d6339ce10f138766dd3",
+        "id:arXiv:2608.15303",
+        "title:divergentconvergent reasoning scaling testtime compute through structured solution synthesis",
+        "url:https://arxiv.org/abs/2608.15303"
+      ],
+      "record": {
+        "title": "Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis",
+        "source_url": "https://arxiv.org/abs/2608.15303",
+        "year": 2026,
+        "published": "2026-08-15",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Test-time compute can substantially improve Large Language Model (LLM) reasoning performance, yet how and when additional compute helps remains poorly understood. We study Divergent-Convergent Reasoning (DCR), a simple two-phase primitive consisting of an exploration phase that generates multiple candidate solutions followed by a convergent reconciliation phase. We present three core results. First, we show that even a single reconciliation step can reliably amplify correct minority reports: across datasets, DCR often recovers the correct answer when correct exploration outputs are in the minority, a regime where majority voting fails. Second, we introduce recursive DCR, an autoregressive reconciliation system that iteratively analyzes disagreements and allocates additional test-time compute. Recursive DCR achieves higher accuracy than fixed-compute baselines-reaching 93.3% on AIME 2024 and 92.0% on AIME 2025-while using roughly 27% less compute on average, demonstrating that attentive resource allocation is superior to uniform scaling. Third, we analyze disagreement among exploration outputs via a simple, training-free dispersion metric. Dispersion reveals a structured relationship between disagreement and test-time gains: in regimes where DCR is effective, higher disagreement among exploration outputs is associated with larger accuracy improvements from reconciliation. Together, these results show that disagreement, often viewed as noise, can be systematically exploited to improve test-time reasoning and reveal emerging scaling laws for agentic LLM systems.",
+        "identifiers": [
+          "SemanticScholar:19d6d38dcf6a45f6ea7b0d6339ce10f138766dd3"
+        ],
+        "semantic_scholar_id": "19d6d38dcf6a45f6ea7b0d6339ce10f138766dd3",
+        "canonical_id": "arXiv:2608.15303",
+        "arxiv_id": "2608.15303",
+        "authors": [
+          "Bo Wen",
+          "Yu-Hao Chen",
+          "Erhan Bilal",
+          "C. Rios",
+          "Chen Wang",
+          "Junchen Jiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 60,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.05957",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.05957",
+        "id:SemanticScholar:59768c67974ee3d75b427ee5d1af2095e49fc1ea",
+        "id:arXiv:2405.05957",
+        "title:openbav2 reaching 773 high compression ratio with fast multistage pruning",
+        "url:https://arxiv.org/abs/2405.05957"
+      ],
+      "record": {
+        "title": "OpenBA-V2: Reaching 77.3% High Compression Ratio with Fast Multi-Stage Pruning",
+        "source_url": "https://arxiv.org/abs/2405.05957",
+        "year": 2024,
+        "published": "2024-05-09",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have played an important role in many fields due to their powerful capabilities.However, their massive number of parameters leads to high deployment requirements and incurs significant inference costs, which impedes their practical applications. Training smaller models is an effective way to address this problem. Therefore, we introduce OpenBA-V2, a 3.4B model derived from multi-stage compression and continual pre-training from the original 15B OpenBA model. OpenBA-V2 utilizes more data, more flexible training objectives, and techniques such as layer pruning, neural pruning, and vocabulary pruning to achieve a compression rate of 77.3\\% with minimal performance loss. OpenBA-V2 demonstrates competitive performance compared to other open-source models of similar size, achieving results close to or on par with the 15B OpenBA model in downstream tasks such as common sense reasoning and Named Entity Recognition (NER). OpenBA-V2 illustrates that LLMs can be compressed into smaller ones with minimal performance loss by employing advanced training objectives and data strategies, which may help deploy LLMs in resource-limited scenarios.",
+        "identifiers": [
+          "SemanticScholar:59768c67974ee3d75b427ee5d1af2095e49fc1ea"
+        ],
+        "semantic_scholar_id": "59768c67974ee3d75b427ee5d1af2095e49fc1ea",
+        "canonical_id": "arXiv:2405.05957",
+        "arxiv_id": "2405.05957",
+        "doi": "10.48550/arXiv.2405.05957",
+        "authors": [
+          "Dan Qiao",
+          "Yi Su",
+          "Pinzheng Wang",
+          "Jing Ye",
+          "Wen Xie",
+          "Yue-Chi Zhou",
+          "Yuyang Ding",
+          "Zecheng Tang",
+          "Jikai Wang",
+          "Yixin Ji",
+          "Yue Wang",
+          "Pei Guo",
+          "Zechen Sun",
+          "Zikang Zhang",
+          "Jun-Tao Li",
+          "Pingfu Chao",
+          "Wen-Liang Chen",
+          "Guohong Fu",
+          "Guo-Dong Zhou",
+          "Qiaoming Zhu",
+          "Min Zhang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 888,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6fe4de6b065752374443dc3c47dff8e1c1d0a2fedb8ca31ce4176cf85ace24e5",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

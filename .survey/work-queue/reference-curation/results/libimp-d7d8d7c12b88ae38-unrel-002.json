@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7d8d7c12b88ae38-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1712.01312",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1712.01312",
+    "identity_tokens": [
+      "arXiv:1712.01312"
+    ],
+    "reason": "L0 regularization for learning sparse neural networks is a training/sparsity method, not an LLM inference runtime system.",
+    "first_checked_at": "2026-10-04T17:54:51+00:00",
+    "last_checked_at": "2026-10-04T17:54:51+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+    ],
+    "title": "Learning Sparse Neural Networks through L0 Regularization"
+  },
+  "processed_at": "2026-10-04T17:54:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7d8d7c12b88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

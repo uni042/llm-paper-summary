@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0002-scheduled-chat-00/r04",
+  "reference_main_sha": "67e9465d6a63dbfa3a71a8b8c1eb1142de42713c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.18773",
+      "identity_tokens": [
+        "arXiv:2508.18773"
+      ],
+      "title": "ThinkDial: An Open Recipe for Controlling Reasoning Effort in Large Language Models",
+      "reason": "arXiv一次要旨。推論予算をHigh/Medium/Lowの離散モードで制御できるようSFTと予算認識RLを組み合わせる。Mediumはtoken数50%減で性能低下10%未満、Lowは75%減で15%未満と報告し、長いCoTによる推論tokenコストの制御に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2508.18773",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:18:56+09:00",
+      "last_checked_at": "2026-10-31T00:18:56+09:00",
+      "linked_from": [],
+      "worklist_rank": 407,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.05865",
+      "identity_tokens": [
+        "arXiv:2512.05865"
+      ],
+      "title": "Intrinsically Interpretable Attention via Sparse Post-Training",
+      "reason": "arXiv一次要旨。制約付き損失でattention接続を約0.4%に疎化し、7BまでのTransformerで事前学習損失を維持しながら解釈可能な回路を抽出する。著者自身が計算効率目的の疎attentionとは異なる構造的事前分布を主目的と明記しており、推論実機の高速化・メモリ削減は要旨で未検証のためborderline。",
+      "source_url": "https://arxiv.org/abs/2512.05865",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:18:56+09:00",
+      "last_checked_at": "2026-10-31T00:18:56+09:00",
+      "linked_from": [],
+      "worklist_rank": 408,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.13486",
+      "identity_tokens": [
+        "arXiv:2605.13486"
+      ],
+      "title": "R^2-Mem: Reflective Experience for Memory Search",
+      "reason": "arXiv一次要旨。過去のエージェント検索軌跡をrubricで評価し、抽象化した成功・失敗経験をオンライン検索の行動選択に再利用するR^2-Mem。F1最大22.6%向上、token消費12.9%削減、検索反復20.2%削減と報告し、長期記憶検索を伴うLLMエージェントの推論コストに直接関連する。",
+      "source_url": "https://arxiv.org/abs/2605.13486",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:18:56+09:00",
+      "last_checked_at": "2026-10-31T00:18:56+09:00",
+      "linked_from": [],
+      "worklist_rank": 409,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.01507",
+      "identity_tokens": [
+        "arXiv:2609.01507"
+      ],
+      "title": "LatentPress: Context Compression Beyond Text and Vision",
+      "reason": "arXiv一次要旨。会話履歴や長文書を、再構成テキストを経ずに凍結LLMの埋め込み入力で読める連続memory tokenへ変換。4〜16倍圧縮、LongMemEvalで7.70倍圧縮時accuracy0.504、読み込み5〜9倍高速化を報告。長文脈LLMの入力token削減・推論効率に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2609.01507",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:18:56+09:00",
+      "last_checked_at": "2026-10-31T00:18:56+09:00",
+      "linked_from": [],
+      "worklist_rank": 410,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39259",
+      "identity_tokens": [
+        "arXiv:2609.39259"
+      ],
+      "title": "Effective Does Not Mean Useful: Conditional Functional Substitutability for Redundancy and Scaling in Transformers",
+      "reason": "arXiv一次要旨。Transformer中間状態が同一入力に対して同等の下流応答を誘導するかをConditional Functional Substitutabilityで評価し、動的計算の性能・計算量トレードオフ改善を示唆する。主目的は表現冗長性とスケーリング則の解析で、生成LLMの実機サービング・定量高速化は要旨で未確認のためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.39259",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:18:56+09:00",
+      "last_checked_at": "2026-10-31T00:18:56+09:00",
+      "linked_from": [],
+      "worklist_rank": 414,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.05663",
+      "identity_tokens": [
+        "arXiv:2603.05663"
+      ],
+      "title": "Keeping the Evidence Chain: Semantic Evidence Allocation for Training-Free Token Pruning in Video Temporal Grounding",
+      "reason": "arXiv一次要旨。動画の時間区間位置特定で重要な境界証拠とフレーム間の接続を残すSemVIDの学習不要token pruning。物体・動作・文脈tokenを補完的に選び、視覚token12.5%保持でmIoU最大95.4%維持、prefill最大5.8倍高速化を報告。動画言語モデルの入力圧縮とprefill効率に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2603.05663",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:18:56+09:00",
+      "last_checked_at": "2026-10-31T00:18:56+09:00",
+      "linked_from": [],
+      "worklist_rank": 415,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.01299",
+      "identity_tokens": [
+        "arXiv:2601.01299"
+      ],
+      "title": "T3C: Test-Time Tensor Compression with Consistency Guarantees",
+      "reason": "arXiv一次要旨を確認。rank/precisionを配備時予算に応じて制御するtensor圧縮だが、実験対象はImageNet-1kのResNet-50とViT-B/16で、生成LLM・言語モデル推論・KVキャッシュの実測はない。一般画像分類器の圧縮が主題で、対象のLLM推論研究からは外れる。",
+      "source_url": "https://arxiv.org/abs/2601.01299",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:18:56+09:00",
+      "last_checked_at": "2026-10-31T00:18:56+09:00",
+      "linked_from": [],
+      "worklist_rank": 416,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.04930",
+      "identity_tokens": [
+        "arXiv:2604.04930"
+      ],
+      "title": "Early Stopping for Large Reasoning Models via Confidence Dynamics",
+      "reason": "arXiv一次要旨。推論途中の回答信頼度の時間変化からCoTを早期終了する学習不要のCoDE-Stopを提案。複数の推論・科学ベンチマークで精度と計算量のトレードオフを改善し、通常のフル長推論よりtoken消費25〜50%削減と報告。推論時のreasoning token費用削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2604.04930",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:18:56+09:00",
+      "last_checked_at": "2026-10-31T00:18:56+09:00",
+      "linked_from": [],
+      "worklist_rank": 419,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.24650",
+      "identity_tokens": [
+        "arXiv:2606.24650"
+      ],
+      "title": "Harmonic: Hierarchical State Space Models for Efficient Long-Context Language Modeling",
+      "reason": "arXiv一次要旨。三階層の再帰状態が下層の予測誤差を受け取る長文脈SSMを構築し、enwiki8とWikiText-103でTransformer・Mambaを上回るbits-per-tokenと線形計算量を報告。1B級TinyLlama置換実験もあるが、実際の自己回帰復号レイテンシ・スループットは要旨で未検証のためborderline。",
+      "source_url": "https://arxiv.org/abs/2606.24650",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:18:56+09:00",
+      "last_checked_at": "2026-10-31T00:18:56+09:00",
+      "linked_from": [],
+      "worklist_rank": 431,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36314",
+      "identity_tokens": [
+        "arXiv:2609.36314"
+      ],
+      "title": "Fractional State Space Transition for Long Sequence Modeling",
+      "reason": "arXiv一次要旨。SSMの指数忘却を分数階ダイナミクス由来のべき乗保持へ置換し、対数間隔の指数和近似で有限状態・並列prefill・有界状態自己回帰復号を実現。1.3Bパラメータの言語モデリングを含む長文脈評価で既存SSMを改善し、線形時間のLLM代替推論アーキテクチャに直接関係する。",
+      "source_url": "https://arxiv.org/abs/2609.36314",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:18:56+09:00",
+      "last_checked_at": "2026-10-31T00:18:56+09:00",
+      "linked_from": [],
+      "worklist_rank": 432,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

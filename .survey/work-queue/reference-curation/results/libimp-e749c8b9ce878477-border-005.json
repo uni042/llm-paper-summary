@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e749c8b9ce878477-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.06738",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.06738",
+    "identity_tokens": [
+      "arXiv:2603.06738"
+    ],
+    "reason": "超解像Transformerの相対位置バイアスを低ランク暗黙表現とチャネル連結に置換し、注意スコアの加算を内積化してFlashAttentionカーネルを利用可能にする。超解像で推論時間2.9倍改善と報告するが、LLM推論では未評価。一般的な注意カーネル互換化の設計は参考になるため境界候補。",
+    "first_checked_at": "2026-10-30T16:56:38+00:00",
+    "last_checked_at": "2026-10-30T16:56:38+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Rank-Factorized Implicit Neural Bias: Scaling Super-Resolution Transformer with FlashAttention"
+  },
+  "processed_at": "2026-10-30T16:56:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e749c8b9ce87",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

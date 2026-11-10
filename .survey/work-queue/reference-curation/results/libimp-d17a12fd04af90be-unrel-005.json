@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d17a12fd04af90be-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.16503",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.16503",
+    "identity_tokens": [
+      "arXiv:2305.16503"
+    ],
+    "reason": "IMBERT addresses insertion-based backdoor defenses for BERT; its contribution is model security, not inference efficiency.",
+    "first_checked_at": "2026-10-05T14:55:41+00:00",
+    "last_checked_at": "2026-10-05T14:55:41+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
+    ],
+    "title": "IMBERT: Making BERT Immune to Insertion-based Backdoor Attacks"
+  },
+  "processed_at": "2026-10-05T14:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d17a12fd04af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

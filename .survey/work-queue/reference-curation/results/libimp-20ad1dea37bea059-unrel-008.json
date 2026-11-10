@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20ad1dea37bea059-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/564376.564421",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/564376.564421",
+    "identity_tokens": [
+      "DOI:10.1145/564376.564421"
+    ],
+    "reason": "content情報とcollaborative dataを統合したcold-start推薦方式・評価指標の研究で、LLMのモデルroutingや推論サービング効率化を対象としない。",
+    "first_checked_at": "2026-10-04T12:52:28+00:00",
+    "last_checked_at": "2026-10-04T12:52:28+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+    ],
+    "title": "Methods and metrics for cold-start recommendations"
+  },
+  "processed_at": "2026-10-04T12:52:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20ad1dea37be",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

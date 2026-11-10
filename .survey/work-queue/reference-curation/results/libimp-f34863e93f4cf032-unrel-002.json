@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f34863e93f4cf032-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s11042-026-21856-9",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s11042-026-21856-9",
+    "identity_tokens": [
+      "DOI:10.1007/s11042-026-21856-9"
+    ],
+    "reason": "Indoor scene understanding enables machines to comprehend 3D indoor environments by capturing object relationships and supporting spatial reasoning. Scene graphs are commonly used to represent objects and their relationships in a node–edge structure describing how neighboring objects are connected within a scene. The current scene graph generation methods often suffer from ambiguous object-edge labeling caused by imbalanced training samples and unknown multi-objects identification. Hence, a panoptic segmentation derived from an unified transformer segmentation framework is proposed to retrieve objects and their attributes. This information is then used to generate the nodes and edges of the scene graph. Subsequently, semantic labels for predicted instances are obtained using a majority label voting mechanism, while an edge completion network predicts relationships among neighboring object instances. The proposed network is evaluated using the ScanNet and ScanNet++ datasets. The results show that using a unified transformer network to generate object label predictions prior to scene graph generation yields an improvement in Panoptic Quality of +29.74% on the ScanNet dataset and +22.87% on the ScanNet++ dataset.",
+    "first_checked_at": "2026-10-05T09:20:50+00:00",
+    "last_checked_at": "2026-10-05T09:20:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "Scene graph generation from point cloud panoptic segmentation for indoor scene understanding"
+  },
+  "processed_at": "2026-10-05T09:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f34863e93f4c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

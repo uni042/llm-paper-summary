@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cdc0c5f95521917c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.05532",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.05532",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.05532",
+      "arXiv:2605.05532"
+    ],
+    "reason": "一次要旨では、法務契約書の構造化抽出で法律特化小型MoEと汎用LLM5種のF1・誤抽出・推論費用を比較し、特化モデルのマクロF1 0.812と費用削減を報告する。法務アプリのモデル選択・タスク品質比較であり、MoEルーティングやモデル配置、KVキャッシュ、推論カーネル、汎用サービングの設計を新規提案しないため対象外。",
+    "first_checked_at": "2026-10-12T19:45:24+00:00",
+    "last_checked_at": "2026-10-23T04:50:04+00:00",
+    "linked_from": [],
+    "title": "A Few Good Clauses: Comparing LLMs vs Domain-Trained Small Language Models on Structured Contract Extraction"
+  },
+  "processed_at": "2026-10-23T04:50:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cdc0c5f95521",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

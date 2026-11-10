@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-12cad3f90db683a5-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.20207",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.20207",
+    "identity_tokens": [
+      "arXiv:2607.20207"
+    ],
+    "reason": "SeededGrasp is a language-guided robotics system whose claimed savings concern end-to-end training/data requirements, not inference efficiency.",
+    "first_checked_at": "2026-10-05T10:07:14+00:00",
+    "last_checked_at": "2026-10-05T10:07:14+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments"
+  },
+  "processed_at": "2026-10-05T10:07:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-12cad3f90db6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

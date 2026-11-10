@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad691380482eea0c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.05351",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.05351",
+    "identity_tokens": [
+      "arXiv:2609.05351"
+    ],
+    "reason": "要旨はEarth observation MoEを扱うと記述する（Recent advances in Earth Observation representation learning accommodate heterogeneous sensors and missing observations, often through larger architectures. We present MEOX (Multimodal Earth Observation with eXperts), a multimodal masked au）。LLM inference compute/memory/latency/throughput/cache/servingの具体的改善法・評価ではない。",
+    "first_checked_at": "2026-10-06T00:17:40+00:00",
+    "last_checked_at": "2026-10-06T00:17:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+    ],
+    "title": "MEOX: Compact Multimodal Mixture-of-Experts for Earth Observation"
+  },
+  "processed_at": "2026-10-06T00:17:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad691380482e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c392a6f12f36e6a7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.27221",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.27221",
+    "identity_tokens": [
+      "arXiv:2605.27221"
+    ],
+    "reason": "宇宙論の暗黒エネルギー制約を複数観測から推定する天文学研究で、LLM推論・サービングとは無関係。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+    "first_checked_at": "2026-10-29T20:46:29+00:00",
+    "last_checked_at": "2026-10-29T20:46:29+00:00",
+    "linked_from": [],
+    "title": "Constraints on Dynamical Dark Energy from Multiple Probes in the Full Dark Energy Survey"
+  },
+  "processed_at": "2026-10-29T20:46:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c392a6f12f36",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

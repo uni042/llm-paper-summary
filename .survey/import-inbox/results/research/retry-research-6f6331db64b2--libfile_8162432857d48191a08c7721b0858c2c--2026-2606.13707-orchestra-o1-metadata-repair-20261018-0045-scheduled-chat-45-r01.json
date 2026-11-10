@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7e4e4dee4f595e5dc8e2a125a9dfd92fda0a8ab41be7a7d46fb35a06ae604709",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6f6331db64b2--libfile_8162432857d48191a08c7721b0858c2c--2026-2606.13707-orchestra-o1-metadata-repair-20261018-0045-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2606.13707",
+  "worker_completed_at": "2026-10-18T00:51:20+09:00",
+  "worker_run_key": "20261018-0045-scheduled-chat-45/r01/metadata-repair",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5666,
+    "body_paragraphs": 39,
+    "method_chars": 2220,
+    "method_paragraphs": 14,
+    "evaluation_chars": 147,
+    "limitation_chars": 637,
+    "insufficiency_flags": [
+      "評価説明量 147 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 147 < 500",
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2606.13707-orchestra-o1-omnimodal-agent-orchestration.md と 14 段落 / 3440文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T16:54:57+00:00"
+}

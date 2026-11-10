@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9305309bde281938-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.24456",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.24456",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2609.24456",
+      "arXiv:2609.24456"
+    ],
+    "reason": "一次要旨で、経験バッファの取り込み・配置・配送を独立データ面にし、RLlibの分散強化学習を1,024 GPUまで拡張、学習反復時間を最大38%削減する。CPU/GPU階層メモリを使うが、最終用途は強化学習の経験処理と学習反復であり、LLM推論・生成・サービングへの適用は実証されていない。現行の学習単独最適化凍結対象。",
+    "first_checked_at": "2026-10-18T10:51:29+00:00",
+    "last_checked_at": "2026-10-23T15:07:12+00:00",
+    "linked_from": [],
+    "title": "Conduit: An Experience Data Plane for Distributed Reinforcement Learning"
+  },
+  "processed_at": "2026-10-23T15:07:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9305309bde28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

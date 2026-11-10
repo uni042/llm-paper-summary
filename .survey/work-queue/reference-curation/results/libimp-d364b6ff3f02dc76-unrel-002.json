@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d364b6ff3f02dc76-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/docs70981.2026.11698563",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/docs70981.2026.11698563",
+    "identity_tokens": [
+      "DOI:10.1109/docs70981.2026.11698563"
+    ],
+    "reason": "一次abstractはdiffusion LLMを用いたjailbreak-template生成/攻撃成功率の研究で、モデル推論効率を改善しない。",
+    "first_checked_at": "2026-10-05T11:01:42+00:00",
+    "last_checked_at": "2026-10-05T11:01:42+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+    ],
+    "title": "Evolving Jailbreak Templates via LLaDA-Based Mutation"
+  },
+  "processed_at": "2026-10-05T11:01:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d364b6ff3f02",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

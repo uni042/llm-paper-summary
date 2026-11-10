@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e7427264a45951b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.04239",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.04239",
+    "identity_tokens": [
+      "arXiv:2507.04239"
+    ],
+    "reason": "Primary abstract: We argue that neither transformers nor sub-quadratic architectures are well suited to training at long sequence lengths: the cost of processing the context is too expensive in the former, too inexpensive in the latter.",
+    "first_checked_at": "2026-10-05T13:44:07+00:00",
+    "last_checked_at": "2026-10-05T13:44:07+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+    ],
+    "title": "Scaling Context Requires Rethinking Attention"
+  },
+  "processed_at": "2026-10-05T13:44:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e7427264a45",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

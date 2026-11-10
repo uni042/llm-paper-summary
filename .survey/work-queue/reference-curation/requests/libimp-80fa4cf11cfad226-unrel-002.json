@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-80fa4cf11cfad226-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2606.31023",
+  "reason": "本文の中心課題は、有限期間のエネルギー管理・電力ユニットコミットメント制御で、未信頼のポリシーまたはLLMが提案する行動列を検証し、安全な区間だけを採用して、残りをLP/MILPベースの信頼済み制御オラクルへ委譲すること。計測する呼び出し削減と壁時計高速化は主に制御オラクルの再求解を省く効果であり、LLMのトークン生成・推論・serving自体を高速化する手法ではない。著者らも§4で speculative decoding との共通点を draft–verify–accept の形に限定し、検証対象はトークン分布ではなく状態遷移の安全性と制御コストだと区別している。したがって本リポジトリのLLM推論、serving、推論時圧縮・効率化の対象外。",
+  "title": "Certified Speculative Execution for Untrusted AI Agents",
+  "identity_tokens": [
+    "arXiv:2606.31023"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80fa4cf11cfa",
+  "source_precheck_request_id": null
+}

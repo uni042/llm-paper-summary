@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-598bca90a9f970e6-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.15913",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.15913",
+    "identity_tokens": [
+      "arXiv:2608.15913"
+    ],
+    "reason": "AI supply-chain構成要素へのconjunctive poisoningを扱うsecurity研究で、推論効率は主題でない。",
+    "first_checked_at": "2026-10-05T08:30:19+00:00",
+    "last_checked_at": "2026-10-05T08:30:19+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md"
+    ],
+    "title": "Conjunctive Poisoning in AI Supply-Chain Applications"
+  },
+  "processed_at": "2026-10-05T08:30:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-598bca90a9f9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

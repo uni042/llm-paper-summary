@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cbc27a11a942c1ed-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.03738",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.03738",
+    "identity_tokens": [
+      "PRIMARY:https://arxiv.org/abs/2504.03738",
+      "arXiv:2504.03738"
+    ],
+    "reason": "The arXiv abstract surveys attention operations and modifications in diffusion models but reports no new evaluated inference-efficiency mechanism; possible transfer from attention methods remains indirect.",
+    "first_checked_at": "2026-10-10T08:16:47+00:00",
+    "last_checked_at": "2026-10-10T08:16:47+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Attention in Diffusion Model: A Survey"
+  },
+  "processed_at": "2026-10-10T08:16:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cbc27a11a942",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

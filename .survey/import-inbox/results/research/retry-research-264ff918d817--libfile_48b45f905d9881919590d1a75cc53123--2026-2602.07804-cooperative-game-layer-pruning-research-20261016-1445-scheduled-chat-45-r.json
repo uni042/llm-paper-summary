@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "dc1545108370c2c093197964dd5eb3173bba932c33e0e284cc122ce54a35cad0",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-264ff918d817--libfile_48b45f905d9881919590d1a75cc53123--2026-2602.07804-cooperative-game-layer-pruning-research-20261016-1445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2602.07804",
+  "worker_completed_at": "2026-10-16T14:53:43+09:00",
+  "worker_run_key": "20261016-1445-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8698,
+    "body_paragraphs": 50,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 424,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 424 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 424 < 500"
+  ],
+  "processed_at": "2026-10-16T15:00:52+00:00"
+}

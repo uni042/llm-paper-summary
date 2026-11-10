@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-00b504a29c9a59b9-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.17991",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.17991",
+    "identity_tokens": [
+      "arXiv:2605.17991"
+    ],
+    "reason": "Stable Audio 3 uses adversarial post-training and a multi-step ping-pong sampler for audio generation. Its method concerns generation quality/robustness; it does not provide an LLM inference-efficiency result.",
+    "first_checked_at": "2026-10-06T13:41:03+00:00",
+    "last_checked_at": "2026-10-06T13:41:03+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Stable Audio 3"
+  },
+  "processed_at": "2026-10-06T13:41:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-00b504a29c9a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

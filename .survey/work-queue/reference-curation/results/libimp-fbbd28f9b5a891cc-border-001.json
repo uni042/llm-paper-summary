@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fbbd28f9b5a891cc-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2408.08567",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2408.08567",
+    "identity_tokens": [
+      "arXiv:2408.08567"
+    ],
+    "reason": "arXiv v3一次要旨は平滑化と行列スケッチで長系列注意を線形複雑度化するS3Attentionを提案。評価は主にLong Range Arenaと時系列予測で、現代LLMのdecodeカーネル・KVメモリ・E2E速度の直接評価は要旨にないため境界的。",
+    "first_checked_at": "2026-10-30T07:16:21+00:00",
+    "last_checked_at": "2026-10-30T07:16:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "S$^3$Attention: Improving Long Sequence Attention with Smoothed Skeleton Sketching"
+  },
+  "processed_at": "2026-10-30T07:16:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbbd28f9b5a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

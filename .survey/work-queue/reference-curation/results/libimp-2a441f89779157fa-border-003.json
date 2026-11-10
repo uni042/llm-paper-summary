@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2a441f89779157fa-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.01035",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.01035",
+    "identity_tokens": [
+      "arXiv:2507.01035"
+    ],
+    "reason": "The work is application-specific and its abstract mixes inference and training claims; without full text scope/evidence cannot be resolved.",
+    "first_checked_at": "2026-10-05T13:46:38+00:00",
+    "last_checked_at": "2026-10-05T13:46:38+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+    ],
+    "title": "Research on Low-Latency Inference and Training Efficiency Optimization for Graph Neural Network and Large Language Model-Based Recommendation Systems"
+  },
+  "processed_at": "2026-10-05T13:46:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2a441f897791",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

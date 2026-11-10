@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d08519e367f20f5-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3838177.3841720",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3838177.3841720",
+    "identity_tokens": [
+      "DOI:10.1145/3838177.3841720"
+    ],
+    "reason": "一次要旨: In serverless computing, optimizing performance and cost is challenging due to the large configuration space in the presence of time-varying workloads and rapidly scaling infrastructure. Human-driven optimization is fundamentally limited in this setting: it is too slow for the short control timescales of serverless platforms, prohibitively expensive at scale, and unable to continuously explore high-dimensional configuration sp",
+    "first_checked_at": "2026-10-05T06:29:31+00:00",
+    "last_checked_at": "2026-10-05T06:29:31+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14417-deepflow-serverless-llm-serving-at-scale.md"
+    ],
+    "title": "FunPilot: Runtime Performance Diagnosis and Remediation for Serverless Applications with LLMs"
+  },
+  "processed_at": "2026-10-05T06:29:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d08519e367f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

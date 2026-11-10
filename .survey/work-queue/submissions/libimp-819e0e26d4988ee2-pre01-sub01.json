@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Confidence-Guided Stepwise Model Routing for Cost-Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2511.06190",
+      "year": 2025,
+      "published": "2025-11-09",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Large Language Models (LLMs) - particularly model scaling and test-time techniques - have greatly enhanced the reasoning capabilities of language models at the expense of higher inference costs. To lower inference costs, prior works train router models or deferral mechanisms that allocate easy queries to a small, efficient model, while forwarding harder queries to larger, more expensive models. However, these trained router models often lack robustness under domain shifts and require expensive data synthesis techniques such as Monte Carlo rollouts to obtain sufficient ground-truth routing labels for training. \nIn this work, we propose Confidence-Guided Stepwise Model Routing for Cost-Efficient Reasoning (STEER), a domain-agnostic, framework that performs fine-grained, step-level routing between smaller and larger LLMs without utilizing external models. STEER leverages confidence scores from the smaller model’s logits prior to generating a reasoning step, so that the large model is invoked only when necessary. \nExtensive evaluations using different LLMs on a diverse set of challenging benchmarks across multiple domains such as Mathematical Reasoning, Multi-Hop QA, and Planning tasks indicate that STEER achieves competitive or enhanced accuracy while reducing inference costs (up to +20% accuracy with 48% less FLOPs compared to solely using the larger model on AIME), outperforming baselines that rely on trained external modules.\nOur results establish model-internal confidence as a robust, domain-agnostic signal for model routing, offering a scalable pathway for efficient LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:a9fa2105799d18c8bf6f7e3ff49d431c0a7e8b77"
+      ],
+      "semantic_scholar_id": "a9fa2105799d18c8bf6f7e3ff49d431c0a7e8b77",
+      "canonical_id": "arXiv:2511.06190",
+      "arxiv_id": "2511.06190",
+      "doi": "10.48550/arXiv.2511.06190",
+      "authors": [
+        "Sangmook Lee",
+        "Dohyung Kim",
+        "Hyukhun Koh",
+        "Nakyeong Yang",
+        "Kyomin Jung"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 355,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は小型モデルのlogit信頼度で推論ステップごとに大規模モデルへの委譲を判断するSTEERを提案。外部routerの学習を必要とせず、AIMEで大規模モデル単独比48%少ないFLOPsで精度最大20%向上と報告。推論計算量とルーティングに直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning",
+      "source_url": "https://arxiv.org/abs/2602.03060",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) achieve impressive performance across multiple tasks. A significant challenge, however, is their prohibitive inference cost when processing high-resolution visual inputs. While visual token pruning has emerged as a promising solution, existing methods that primarily focus on semantic relevance often discard tokens that are crucial for spatial reasoning. We address this gap through a novel insight into \\emph{how LVLMs process spatial reasoning}. Specifically, we reveal that LVLMs implicitly establish visual coordinate systems through Rotary Position Embeddings (RoPE), where specific token positions serve as \\textbf{implicit visual coordinates} (IVC tokens) that are essential for spatial reasoning. Based on this insight, we propose \\textbf{IVC-Prune}, a training-free, prompt-aware pruning strategy that retains both IVC tokens and semantically relevant foreground tokens. IVC tokens are identified by theoretically analyzing the mathematical properties of RoPE, targeting positions at which its rotation matrices approximate identity matrix or the $90^\\circ$ rotation matrix. Foreground tokens are identified through a robust two-stage process: semantic seed discovery followed by contextual refinement via value-vector similarity. Extensive evaluations across four representative LVLMs and twenty diverse benchmarks show that IVC-Prune reduces visual tokens by approximately 50\\% while maintaining $\\geq$ 99\\% of the original performance and even achieving improvements on several benchmarks. Source codes are available at https://github.com/FireRedTeam/IVC-Prune.",
+      "identifiers": [
+        "SemanticScholar:96fa519ec0cde7cbe1c4a4548698402db36c70b7"
+      ],
+      "semantic_scholar_id": "96fa519ec0cde7cbe1c4a4548698402db36c70b7",
+      "canonical_id": "arXiv:2602.03060",
+      "arxiv_id": "2602.03060",
+      "doi": "10.48550/arXiv.2602.03060",
+      "authors": [
+        "Zhichao Sun",
+        "Yi-Dong Ma",
+        "Gang Liu",
+        "Yi-Bo Chen",
+        "Xu Tang",
+        "Yao Hu",
+        "Yongchao Xu"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 269,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ICLR 2026のarXiv一次要旨はRoPEの回転行列が恒等または90度回転に近い位置を暗黙の視覚座標トークンとして特定し、前景意味トークンと併せて保持する学習不要のIVC-Pruneを提案。4つのLVLM・20ベンチマークで視覚トークン約50%削減し元精度99%以上を維持。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fast Byte Latent Transformer",
+      "source_url": "https://arxiv.org/abs/2605.08044",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent byte-level language models (LMs) match the performance of token-level models without relying on subword vocabularies, yet their utility is limited by slow, byte-by-byte autoregressive generation. We address this bottleneck in the Byte Latent Transformer (BLT) through new training and generation techniques. First, we introduce BLT Diffusion (BLT-D), a new model and our fastest BLT variant, trained with an auxiliary block-wise diffusion objective alongside the standard next-byte prediction loss. This enables an inference procedure that generates multiple bytes in parallel per decoding step, substantially reducing the number of forward passes required to generate a sequence. Second, we propose two extensions inspired by speculative decoding that trade some of this speed for higher generation quality: BLT Self-speculation (BLT-S), in which BLT's local decoder continues generating past its normal patch boundaries to draft bytes, which are then verified with a single full-model forward pass; and BLT Diffusion+Verification (BLT-DV), which augments BLT-D with an autoregressive verification step after diffusion-based generation. All methods may achieve an estimated memory-bandwidth cost over 50% lower than BLT on generation tasks. Each approach offers its own unique advantages, together removing key barriers to the practical use of byte-level LMs.",
+      "identifiers": [
+        "SemanticScholar:a662b8d7e294424e97f1732d254bd971221621f3"
+      ],
+      "semantic_scholar_id": "a662b8d7e294424e97f1732d254bd971221621f3",
+      "canonical_id": "arXiv:2605.08044",
+      "arxiv_id": "2605.08044",
+      "doi": "10.48550/arXiv.2605.08044",
+      "authors": [
+        "Julie Kallini",
+        "Artidoro Pagnoni",
+        "Tomasz Limisiewicz",
+        "Gargi Ghosh",
+        "L. Zettlemoyer",
+        "Christopher Potts",
+        "Xiao-Chuang Han",
+        "Srinivasan Iyer"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はByte Latent Transformerの1バイト逐次生成を改善するBLT-D（ブロック単位拡散）、BLT-S（局所デコーダによる自己投機）、BLT-DV（拡散後の自己回帰検証）を提案。複数バイトの並列生成でforward回数を減らし、生成メモリ帯域費用をBLT比50%以上削減し得ると見積もる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference",
+      "source_url": "https://arxiv.org/abs/2604.03950",
+      "year": 2026,
+      "published": "2026-04-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) have demonstrated remarkable performance across a wide range of real-world tasks, but their inference cost remains prohibitively high due to the quadratic complexity of attention and the memory bandwidth limitations of high-precision operations. In this work, we present a low-bit mixed-precision attention kernel using the microscaling floating-point (MXFP) data format, utilizing the computing capability on next-generation GPU architectures. Our Diagonal-Tiled Mixed-Precision Attention (DMA) incorporates two kinds of low-bit computation at the tiling-level, and is a delicate fused kernel implemented using Triton, exploiting hardware-level parallelism and memory efficiency to enable fast and efficient inference without compromising model performance. Extensive empirical evaluations on NVIDIA B200 GPUs show that our kernel maintains generation quality with negligible degradation, and meanwhile achieves significant speedup by kernel fusion. We release our code at https://github.com/yifu-ding/MP-Sparse-Attn.",
+      "identifiers": [
+        "SemanticScholar:5fea8f9556464892a551abe25cc0b96a12c3482b"
+      ],
+      "semantic_scholar_id": "5fea8f9556464892a551abe25cc0b96a12c3482b",
+      "canonical_id": "arXiv:2604.03950",
+      "arxiv_id": "2604.03950",
+      "doi": "10.48550/arXiv.2604.03950",
+      "authors": [
+        "Yifu Ding",
+        "XinHao Zhang",
+        "Jin-Yang Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 208,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はMXFP形式の低ビット混合精度をタイル単位で切り替えるDiagonal-Tiled Mixed-Precision Attentionを提案。Tritonで融合カーネルを実装し、NVIDIA B200で生成品質をほぼ維持しながら速度改善と報告。LLM推論の注意カーネルに直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
+      "source_url": "https://arxiv.org/abs/2608.02560",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation (RAG) imposes a prefill cost proportional to retrieved context length, and -- with Transformer backbones -- a KV-cache that grows with each generated token. State-Space Models (SSMs) avoid the second cost by construction; we eliminate the first, collapsing prefill from $O(L_{context})$ to $O(1)$ per query. We introduce PRECOG (Pre-Computed Context Injection), a retrieval mechanism that exploits a property unique to SSMs: the fixed-size, position-agnostic recurrent hidden state is a complete summary of everything the model has read. PRECOG pre-encodes document corpora offline as SSM hidden states and injects the best-matching state directly at query time, bypassing in-context re-ingestion entirely. The same state-injection mechanism enables SMC (Structured Memory Consolidation): a hierarchical persistent memory with cognitive-domain clustering, an adjustable fidelity-vs-storage dial, and $O(1)$ session initialization, which consolidates short-term episodic states into long-term semantic memory and fuses both with retrieved corpus states at query time. We demonstrate the system on TENNs-LLM, a 1.2B-parameter gated-SSM language model with a 192 KB hidden state. PRECOG matches in-context RAG answer quality, reducing prefill latency from $\\sim$27 s to $<$6 ms on edge hardware -- a $\\sim$4500$\\times$ speedup that crosses the threshold from unusable to interactive. The mechanism is architecturally impossible for Transformer KV-caches, which are position-entangled and grow linearly with context length.",
+      "identifiers": [
+        "SemanticScholar:bade37db80da222397e32494ba983509eb2179d5"
+      ],
+      "semantic_scholar_id": "bade37db80da222397e32494ba983509eb2179d5",
+      "canonical_id": "arXiv:2608.02560",
+      "arxiv_id": "2608.02560",
+      "authors": [
+        "Anusha Madan Gopal",
+        "Aras Pirbadian",
+        "Kristofor D. Carlson",
+        "M. A. Lewis",
+        "Jon Tapson"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はSSMの固定長隠れ状態をコーパスから事前生成し、検索時に直接注入して文書の再prefillを省くPRECOGを提案。1.2Bモデルでエッジのprefillを約27秒から6ms未満へ短縮と報告。TransformerのKVでは同一の位置非依存状態注入ができないという条件も明記。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-819e0e26d498",
+    "round": "libimp-819e0e26d4988ee2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-819e0e26d4988ee2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-819e0e26d4988ee2-pre01.json",
+    "receipt": "sha256:2e49355b83d93823ab42888c7fa9d37ed432b167cedb5975eac8477f4c904a8e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-819e0e26d498",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

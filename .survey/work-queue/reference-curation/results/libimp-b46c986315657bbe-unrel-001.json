@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b46c986315657bbe-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.09844",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.09844",
+    "identity_tokens": [
+      "arXiv:2504.09844"
+    ],
+    "reason": "The primary abstract explicitly focuses on data loading, workload balance and training throughput/memory; its gains are training-pipeline efficiencies, not model inference.",
+    "first_checked_at": "2026-10-14T00:22:58+00:00",
+    "last_checked_at": "2026-10-14T00:22:58+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md",
+      "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md",
+      "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md",
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+      "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-075d73797107-gemini-fast-failure-recovery-in-distributed-training-with-in-memory-chec.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+    ],
+    "title": "MegaScale-Data: Scaling DataLoader for Multisource Large Foundation Model Training"
+  },
+  "processed_at": "2026-10-14T00:22:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b46c98631565",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

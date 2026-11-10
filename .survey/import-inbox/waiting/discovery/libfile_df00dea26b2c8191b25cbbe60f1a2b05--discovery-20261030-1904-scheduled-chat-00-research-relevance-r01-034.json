@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1904-scheduled-chat-00/r01",
+  "reference_main_sha": "6b0942fd32351ae5dfc03bf3acb6727c8e398cbd",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2304.11520",
+      "identity_tokens": [
+        "arXiv:2304.11520",
+        "arxiv:2304.11520"
+      ],
+      "title": "Processing Natural Language on Embedded Devices: How Well Do Transformer Models Perform?",
+      "reason": "Raspberry Pi 4、Jetson Nano、UP2、UDOO Boltの2/4GB構成でBERT/RoBERTa/DistilBERT/TinyBERTの推論時間・メモリ・消費電力を実測し、attention head pruningの限界を分析する。推論実装・ハードウェア評価という共通部分はあるが、実験はHuRIC/GoEmotion/CoNLL/WNUT17の分類・NERであり、自己回帰LLMの生成、KVメモリ、prefill/decode最適化には直接踏み込まない。",
+      "source_url": "https://arxiv.org/html/2304.11520",
+      "body_check": "research_fulltext_relevance_review: arXiv本文§3の4種類8構成ハードウェア、§4のBERT系列の分類・NER評価、Table 8-13と消費電力の観察を読解。生成LLM推論への直接的外挿はしない。",
+      "first_checked_at": "2026-10-30T19:04:52+09:00",
+      "last_checked_at": "2026-10-30T19:04:52+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 34
+    }
+  ]
+}

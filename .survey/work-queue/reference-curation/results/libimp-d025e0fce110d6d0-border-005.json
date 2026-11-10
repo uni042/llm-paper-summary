@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d025e0fce110d6d0-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.06078",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.06078",
+    "identity_tokens": [
+      "arXiv:2606.06078"
+    ],
+    "reason": "一次arXiv書誌・要旨では画像自己回帰生成の知識蒸留で長い生成系列と視覚トークン曖昧性が教師信号を劣化させる問題を分析し、学生生成サンプル上で選択的に教師を適用するVarKDを提案。モデル圧縮は隣接分野だが主対象は画像生成モデルの蒸留学習で、LLM推論システムの直接最適化ではない。",
+    "first_checked_at": "2026-10-30T21:08:03+00:00",
+    "last_checked_at": "2026-10-30T21:08:03+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Knowledge Distillation for Visual Autoregressive Models"
+  },
+  "processed_at": "2026-10-30T21:08:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d025e0fce110",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

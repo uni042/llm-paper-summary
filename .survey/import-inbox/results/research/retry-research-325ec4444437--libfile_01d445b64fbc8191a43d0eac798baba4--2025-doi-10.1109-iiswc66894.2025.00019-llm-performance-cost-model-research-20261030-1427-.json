@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "536ebcbe23f539b46b09894ada6d7fb198fd1c861cc530f6e70c2fcbde7dcdad",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-325ec4444437--libfile_01d445b64fbc8191a43d0eac798baba4--2025-doi-10.1109-iiswc66894.2025.00019-llm-performance-cost-model-research-20261030-1427-scheduled-chat-45-r01.md",
+  "canonical_id": "DOI:10.1109/IISWC66894.2025.00019",
+  "worker_completed_at": "2026-10-30T14:25:00+09:00",
+  "worker_run_key": "20261030-1408-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3072,
+    "body_paragraphs": 14,
+    "method_chars": 1476,
+    "method_paragraphs": 6,
+    "evaluation_chars": 80,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 80 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 80 < 500"
+  ],
+  "processed_at": "2026-10-30T09:15:05+00:00"
+}

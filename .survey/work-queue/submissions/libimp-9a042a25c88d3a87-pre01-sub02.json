@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Tempo: Compiled Dynamic Deep Learning with Symbolic Dependence Graphs",
+      "source_url": "https://arxiv.org/abs/2501.05408",
+      "year": 2025,
+      "published": "2025-01-09",
+      "venue": "Symposium on Operating Systems Principles",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep learning (DL) algorithms are often defined in terms of temporal relationships: a tensor at one timestep may depend on tensors from earlier or later timesteps. Such dynamic dependencies (and corresponding dynamic tensor shapes) are difficult to express and optimize: while eager DL systems support such dynamism, they cannot apply compiler-based optimizations; graph-based systems require static tensor shapes, which forces users to pad tensors or break-up programs into multiple static graphs. We describe Tempo, a new DL system that combines the dynamism of eager execution with the whole-program optimizations of graph-based compilation. Tempo achieves this through a declarative programming model with recurrent tensors, which include explicit temporal dimensions. Temporal dimensions can be indexed using symbolic expressions to express dynamic dependencies on past and future tensors. Based on this, Tempo constructs a symbolic dependence graph, which concisely encodes dynamic dependencies between operators, and applies whole-program optimizations, such as algebraic simplifications, vectorization, tiling, and fusion. By tiling dynamic dependencies into static-size blocks, Tempo can also reuse existing static code-generators. It then uses a polyhedral model to find a feasible execution schedule, which includes memory management operations. We show that Tempo achieves a 7× speedup over JAX for Llama-3.2-3B decoding; for reinforcement learning algorithms, Tempo achieves a 54× speedup, with 16× lower peak memory usage.",
+      "identifiers": [
+        "SemanticScholar:322b3d01a10bc4d649d4f415415328b9612ca6ce"
+      ],
+      "semantic_scholar_id": "322b3d01a10bc4d649d4f415415328b9612ca6ce",
+      "canonical_id": "arXiv:2501.05408",
+      "arxiv_id": "2501.05408",
+      "doi": "10.1145/3731569.3764840",
+      "authors": [
+        "Pedro F. Silvestre",
+        "Peter R. Pietzuch"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 659,
+        "matched_prestigious_venue": "Symposium on Operating Systems Principles"
+      },
+      "reason": "SOSP 2025のarXiv v3一次要旨は時間依存と可変形状を記号依存グラフに記述し、fusion・tiling・vectorizationを適用するTempoコンパイラを提案。Llama-3.2-3B decodeでJAX比7倍高速化を報告。LLM推論の動的計算コンパイルに直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LinMU: Multimodal Understanding Made Linear",
+      "source_url": "https://arxiv.org/abs/2601.01322",
+      "year": 2026,
+      "published": "2026-01-04",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern Vision-Language Models (VLMs) achieve impressive performance but are limited by the quadratic complexity of self-attention, which prevents their deployment on edge devices and makes their understanding of high-resolution images and long-context videos prohibitively expensive. To address this challenge, we introduce LinMU (Linear-complexity Multimodal Understanding), a VLM design that achieves linear complexity for the language model decoder without using any quadratic-complexity modules while maintaining the performance of global-attention-based VLMs. LinMU replaces every self-attention layer in the language model decoder with an M-MATE block: a dual-branch module that combines a bidirectional state-space model for global context (Flex-MA branch) with localized Swin-style window attention (Local-Swin branch) for adjacent correlations. To transform a pre-trained VLM into the LinMU architecture, we propose a three-stage distillation framework that (i) initializes both branches with self-attention weights and trains the Flex-MA branch alone, (ii) unfreezes the Local-Swin branch and fine-tunes it jointly with the Flex-MA branch, and (iii) unfreezes the remaining blocks and fine-tunes them using LoRA adapters, while regressing on hidden states and token-level logits of the frozen VLM teacher. On MMMU, TextVQA, LongVideoBench, Video-MME, and other benchmarks, LinMU matches the performance of teacher models, yet reduces Time-To-First-Token (TTFT) by up to 2.7$\\times$ and improves token throughput by up to 9.0$\\times$ on minute-length videos. Ablations confirm the importance of each distillation stage and the necessity of the two branches of the M-MATE block. The proposed framework demonstrates that state-of-the-art multimodal reasoning can be achieved without quadratic attention, thus opening up avenues for long-context VLMs that can deal with high-resolution images and long videos.",
+      "identifiers": [
+        "SemanticScholar:9ca056fff88e94606cd613be98704079b852c6d7"
+      ],
+      "semantic_scholar_id": "9ca056fff88e94606cd613be98704079b852c6d7",
+      "canonical_id": "arXiv:2601.01322",
+      "arxiv_id": "2601.01322",
+      "doi": "10.48550/arXiv.2601.01322",
+      "authors": [
+        "Hongjie Wang",
+        "N. Jha"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 299,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TMLR掲載のarXiv v2一次要旨はVLMデコーダの全自己注意を双方向SSMと局所Swin注意を組み合わせるM-MATEへ置換し、3段階蒸留で性能を維持。長時間動画でTTFT最大2.7倍、トークンスループット最大9.0倍改善と報告。VLM推論の計算量を直接削減。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator",
+      "source_url": "https://arxiv.org/abs/2507.00797",
+      "year": 2025,
+      "published": "2025-06-22",
+      "venue": "Design Automation Conference",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) excel in natural language processing tasks but pose significant computational and memory challenges for edge deployment due to their intensive resource demands. This work addresses the efficiency of LLM inference by algorithm-hardwaredataflow tri-optimizations. We propose a novel voting-based KV cache eviction algorithm, balancing hardware efficiency and algorithm accuracy by adaptively identifying unimportant kv vectors. From a dataflow perspective, we introduce a flexible-product dataflow and a runtime reconfigurable PE array for matrix-vector multiplication. The proposed approach effectively handles the diverse dimensional requirements and solves the challenges of incrementally varying sequence lengths. Additionally, an element-serial scheduling scheme is proposed for nonlinear operations, such as softmax and layer normalization (layernorm). Results demonstrate a substantial reduction in latency, accompanied by a significant decrease in hardware complexity, from $O(N)$ to $O(1)$. The proposed solution is realized in a custom-designed accelerator, VEDA, which outperforms existing hardware platforms. This research represents a significant advancement in LLM inference on resource-constrained edge devices, facilitating real-time processing, enhancing data privacy, and enabling model customization.",
+      "identifiers": [
+        "SemanticScholar:db1626ebc3be3839b33a174392ce4bdd044edfe3"
+      ],
+      "semantic_scholar_id": "db1626ebc3be3839b33a174392ce4bdd044edfe3",
+      "canonical_id": "arXiv:2507.00797",
+      "arxiv_id": "2507.00797",
+      "doi": "10.1109/DAC63849.2025.11132861",
+      "authors": [
+        "Zhi-Can Wang",
+        "Hong-Xiang Fan",
+        "Haroon Waris",
+        "Gang Wang",
+        "Zhenyu Li",
+        "Jian-Fei Jiang",
+        "Ya-Nan Sun",
+        "Guang-Hui He"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 495,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DAC 2025のarXiv一次要旨は投票型KV追い出しと、行列ベクトル演算用の再構成可能PE配列、非線形演算の要素直列スケジューリングを組み合わせるVEDAアクセラレータを提案。エッジLLM推論のメモリ・遅延・ハードウェア複雑度を共同最適化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+      "source_url": "https://arxiv.org/abs/2506.23431",
+      "year": 2025,
+      "published": "2025-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the basis of generative AI, an autoregressive model requires the generation of a new token depending on all the previously generated tokens, which brings high quality but also restricts the model to generate tokens one by one, forming a bottleneck limiting the generation speed. In this paper, we propose a new decoder architecture that efficiently generates text in parallel for context-aware generation tasks. Our proposed pipelined decoder initiates the generation of multiple subsequences simultaneously, and, at each time-step, it generates a new token for each subsequence to realize parallelism. Experiments on multiple text generation tasks, including question answering, text summarization, and keyphrase generation, show that our pipelined decoder significantly improves the generation speed without a significant loss of generation quality or additional memory consumption.",
+      "identifiers": [
+        "SemanticScholar:219aa76732cfc06409522c8610cb60b1d5a81c81"
+      ],
+      "semantic_scholar_id": "219aa76732cfc06409522c8610cb60b1d5a81c81",
+      "canonical_id": "arXiv:2506.23431",
+      "arxiv_id": "2506.23431",
+      "doi": "10.48550/arXiv.2506.23431",
+      "authors": [
+        "Zixian Huang",
+        "Chenxu Niu",
+        "Yu Gu",
+        "Gengyang Xiao",
+        "Xin-Wei Huang",
+        "Gong Cheng"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 488,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は複数の部分系列を同時に生成し、各ステップで部分系列ごとに1トークンを追加する並列パイプラインデコーダを提案。QA・要約・キーフレーズ生成で品質とメモリを大きく損なわず生成速度を改善。逐次デコードの律速を直接扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9a042a25c88d",
+    "round": "libimp-9a042a25c88d3a87-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9a042a25c88d3a87-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9a042a25c88d3a87-pre01.json",
+    "receipt": "sha256:f2671f7b1d6558e49716a5972b97014d48362af5440fb2897f7392f2853fe018"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9a042a25c88d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

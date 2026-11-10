@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1683f61fa7e798bc-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.01031",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.01031",
+    "identity_tokens": [
+      "arXiv:2512.01031"
+    ],
+    "reason": "A relevant real-time VLA inference/control result, but task-specific reaction latency does not establish general LLM serving efficiency.",
+    "first_checked_at": "2026-10-05T12:32:42+00:00",
+    "last_checked_at": "2026-10-05T12:32:42+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+    ],
+    "title": "VLASH: Real-Time VLAs via Future-State-Aware Asynchronous Inference"
+  },
+  "processed_at": "2026-10-05T12:32:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1683f61fa7e7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

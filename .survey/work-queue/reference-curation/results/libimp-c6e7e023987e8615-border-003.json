@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c6e7e023987e8615-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.21981",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.21981",
+    "identity_tokens": [
+      "SemanticScholar:af96e461e702d1d5161c16561dd4680c2eb7e948",
+      "arXiv:2607.21981"
+    ],
+    "reason": "J-CoT uses a compact vocabulary-indexed latent interface for recurrent reasoning, but the abstract reports benchmark quality under matched settings without demonstrating reduced inference compute or latency.",
+    "first_checked_at": "2026-10-14T14:34:44+00:00",
+    "last_checked_at": "2026-10-14T14:34:44+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "J-CoT: Chain-of-Thought in J-Space"
+  },
+  "processed_at": "2026-10-14T14:34:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6e7e023987e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

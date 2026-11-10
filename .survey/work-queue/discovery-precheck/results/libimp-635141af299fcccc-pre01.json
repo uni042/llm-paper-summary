@@ -1,0 +1,263 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-635141af299fcccc-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-635141af299f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2310.00034",
+    "arXiv:2310.04564",
+    "arXiv:2310.05869",
+    "arXiv:2310.06201",
+    "arXiv:2310.06839",
+    "arXiv:2310.07188",
+    "arXiv:2310.09832",
+    "arXiv:2310.12072",
+    "arXiv:2310.16836",
+    "arXiv:2311.01282",
+    "arXiv:2311.03285",
+    "arXiv:2311.11514",
+    "arXiv:2312.05516",
+    "arXiv:2312.06635",
+    "arXiv:2312.11462",
+    "arXiv:2312.15234",
+    "arXiv:2401.04658",
+    "arXiv:2401.06118",
+    "arXiv:2401.06706",
+    "arXiv:2401.11181"
+  ],
+  "target_unseen": 20,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "43a98008cefecd2d7065a00e0297f938fe35ddac",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 19,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 20,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 19,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-09-30T09:22:32.511493+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2310.00034",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2310.00034"
+    },
+    {
+      "requested_id": "arXiv:2310.04564",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2310.04564"
+    },
+    {
+      "requested_id": "arXiv:2310.05869",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2310.05869"
+    },
+    {
+      "requested_id": "arXiv:2310.06201",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2310.06201"
+    },
+    {
+      "requested_id": "arXiv:2310.06839",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2310.06839"
+    },
+    {
+      "requested_id": "arXiv:2310.07188",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2310.07188"
+    },
+    {
+      "requested_id": "arXiv:2310.09832",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2310.09832"
+    },
+    {
+      "requested_id": "arXiv:2310.12072",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2310.12072"
+    },
+    {
+      "requested_id": "arXiv:2310.16836",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2310.16836"
+    },
+    {
+      "requested_id": "arXiv:2311.01282",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2311.01282"
+    },
+    {
+      "requested_id": "arXiv:2311.03285",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2311.03285"
+    },
+    {
+      "requested_id": "arXiv:2311.11514",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2311.11514"
+    },
+    {
+      "requested_id": "arXiv:2312.05516",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3689031.3696086"
+    },
+    {
+      "requested_id": "arXiv:2312.06635",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2312.06635"
+    },
+    {
+      "requested_id": "arXiv:2312.11462",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2312.11462"
+    },
+    {
+      "requested_id": "arXiv:2312.15234",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2312.15234"
+    },
+    {
+      "requested_id": "arXiv:2401.04658",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2401.04658"
+    },
+    {
+      "requested_id": "arXiv:2401.06118",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2401.06706",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2401.06706"
+    },
+    {
+      "requested_id": "arXiv:2401.11181",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2401.11181"
+    }
+  ],
+  "results": [
+    {
+      "title": "Extreme Compression of Large Language Models via Additive Quantization",
+      "source_url": "https://arxiv.org/abs/2401.06118",
+      "year": 2024,
+      "published": "2024-01-11",
+      "abstract": "The emergence of accurate open large language models (LLMs) has led to a race towards performant quantization techniques which can enable their execution on end-user devices. In this paper, we revisit the problem of\"extreme\"LLM compression-defined as targeting extremely low bit counts, such as 2 to 3 bits per parameter-from the point of view of classic methods in Multi-Codebook Quantization (MCQ). Our algorithm, called AQLM, generalizes the classic Additive Quantization (AQ) approach for information retrieval to advance the state-of-the-art in LLM compression, via two innovations: 1) learned additive quantization of weight matrices in input-adaptive fashion, and 2) joint optimization of codebook parameters across each transformer blocks. Broadly, AQLM is the first scheme that is Pareto optimal in terms of accuracy-vs-model-size when compressing to less than 3 bits per parameter, and significantly improves upon all known schemes in the extreme compression (2bit) regime. In addition, AQLM is practical: we provide fast GPU and CPU implementations of AQLM for token generation, which enable us to match or outperform optimized FP16 implementations for speed, while executing in a much smaller memory footprint.",
+      "canonical_id": "arXiv:2401.06118",
+      "arxiv_id": "2401.06118",
+      "doi": "10.48550/arXiv.2401.06118",
+      "authors": [
+        "Vage Egiazarian",
+        "Andrei Panferov",
+        "Denis Kuznedelev",
+        "Elias Frantar",
+        "Artem Babenko",
+        "Dan Alistarh"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2401.06118",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2401.06118",
+        "id:arXiv:2401.06118",
+        "title:extreme compression of large language models via additive quantization",
+        "url:https://arxiv.org/abs/2401.06118"
+      ],
+      "record": {
+        "title": "Extreme Compression of Large Language Models via Additive Quantization",
+        "source_url": "https://arxiv.org/abs/2401.06118",
+        "year": 2024,
+        "published": "2024-01-11",
+        "abstract": "The emergence of accurate open large language models (LLMs) has led to a race towards performant quantization techniques which can enable their execution on end-user devices. In this paper, we revisit the problem of\"extreme\"LLM compression-defined as targeting extremely low bit counts, such as 2 to 3 bits per parameter-from the point of view of classic methods in Multi-Codebook Quantization (MCQ). Our algorithm, called AQLM, generalizes the classic Additive Quantization (AQ) approach for information retrieval to advance the state-of-the-art in LLM compression, via two innovations: 1) learned additive quantization of weight matrices in input-adaptive fashion, and 2) joint optimization of codebook parameters across each transformer blocks. Broadly, AQLM is the first scheme that is Pareto optimal in terms of accuracy-vs-model-size when compressing to less than 3 bits per parameter, and significantly improves upon all known schemes in the extreme compression (2bit) regime. In addition, AQLM is practical: we provide fast GPU and CPU implementations of AQLM for token generation, which enable us to match or outperform optimized FP16 implementations for speed, while executing in a much smaller memory footprint.",
+        "canonical_id": "arXiv:2401.06118",
+        "arxiv_id": "2401.06118",
+        "doi": "10.48550/arXiv.2401.06118",
+        "authors": [
+          "Vage Egiazarian",
+          "Andrei Panferov",
+          "Denis Kuznedelev",
+          "Elias Frantar",
+          "Artem Babenko",
+          "Dan Alistarh"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:07890745af95986fc9b9cae9280b05a878aafd9e46f1f23f39717da8130d8304",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ebdbb8448a9fbd2d-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.09592",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.09592",
+    "identity_tokens": [
+      "arXiv:2405.09592"
+    ],
+    "reason": "This survey organizes generative approaches for spatial-temporal data mining; it is an application-domain taxonomy, not an LLM inference optimization.",
+    "first_checked_at": "2026-10-05T15:01:25+00:00",
+    "last_checked_at": "2026-10-05T15:01:25+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2404.11912-triforce-lossless-acceleration-of-long-sequence-generation-with-hierarch.md"
+    ],
+    "title": "A Survey of Generative Techniques for Spatial-Temporal Data Mining"
+  },
+  "processed_at": "2026-10-05T15:01:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ebdbb8448a9f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

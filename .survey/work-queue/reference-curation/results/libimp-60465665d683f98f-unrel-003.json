@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-60465665d683f98f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.15664",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.15664",
+    "identity_tokens": [
+      "arXiv:2411.15664"
+    ],
+    "reason": "全文がreview reportであることを確認。一次研究の効率化論文ではないためunrelatedとし、引用される原著は必要なら個別に追跡する。",
+    "first_checked_at": "2026-10-05T13:35:17+00:00",
+    "last_checked_at": "2026-10-05T13:35:17+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md"
+    ],
+    "title": "Enabling Efficient Serverless Inference Serving for LLM (Large Language Model) in the Cloud"
+  },
+  "processed_at": "2026-10-05T13:35:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-60465665d683",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

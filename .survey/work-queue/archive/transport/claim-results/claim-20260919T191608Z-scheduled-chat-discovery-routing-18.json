@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T191608Z-scheduled-chat-discovery-routing-18",
+  "worker_id": "scheduled-chat-discovery-routing",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-25491a773c352e2c",
+      "claim_id": "claim-210ab028fb8916623648a61a",
+      "worker_id": "scheduled-chat-discovery-routing",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-210ab028fb8916623648a61a",
+      "claimed_at": "2026-09-19T19:16:29+00:00",
+      "expires_at": "2026-09-19T20:46:29+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-25491a773c352e2c"
+      ],
+      "job": {
+        "job_id": "job-research-25491a773c352e2c",
+        "type": "research",
+        "parent_job_id": "job-cc2fa16a459336d4",
+        "priority": 96,
+        "canonical_id": "arXiv:2205.14135",
+        "arxiv_id": "2205.14135",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+        "source_url": "https://arxiv.org/abs/2205.14135",
+        "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2022-2205.14135-flashattention.md",
+        "selection_reason": "Seminal IO-aware exact attention algorithm reducing HBM/SRAM traffic; foundational to modern attention-kernel systems.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T18:18:25+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+        "validation_errors": [
+          "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-19T19:15:58+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-f805b2a422f2a20e26aa493c"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-f805b2a422f2a20e26aa493c.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T19:16:29+00:00",
+  "checkpoint_released": 0
+}

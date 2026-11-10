@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c685e0e6bae6483-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.10466",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.10466",
+    "identity_tokens": [
+      "arXiv:2306.10466"
+    ],
+    "reason": "Graphs are omnipresent and GNNs are a powerful family of neural networks for learning over graphs. Despite their popularity, scaling GNNs either by deepening or widening suffers from prevalent issues of unhealthy gradients, over-smoothening, information squashing, which often lead to sub-standard pe…",
+    "first_checked_at": "2026-10-05T15:15:49+00:00",
+    "last_checked_at": "2026-10-05T15:15:49+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+    ],
+    "title": "Graph Ladling: Shockingly Simple Parallel GNN Training without Intermediate Communication"
+  },
+  "processed_at": "2026-10-05T15:15:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c685e0e6bae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-63800ef64a761832-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1909.13144",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1909.13144",
+    "identity_tokens": [
+      "arXiv:1909.13144"
+    ],
+    "reason": "APoT非一様量子化で一般DNNを効率化するが、主要実証はResNet-50/ImageNet等のvision modelで、LLM/言語モデル推論への最終適用がない。",
+    "first_checked_at": "2026-10-07T01:53:59+00:00",
+    "last_checked_at": "2026-10-07T01:53:59+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md"
+    ],
+    "title": "Additive Powers-of-Two Quantization: An Efficient Non-uniform Discretization for Neural Networks"
+  },
+  "processed_at": "2026-10-07T01:53:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-63800ef64a76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

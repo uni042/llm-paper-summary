@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9578506da4c5734-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1909.03368",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1909.03368",
+    "identity_tokens": [
+      "arXiv:1909.03368"
+    ],
+    "reason": "ELMo等の表現に言語情報が符号化されているかをcontrol taskとselectivityで診断するinterpretability/probing研究。推論runtime・memory・serving効率化を扱わない。",
+    "first_checked_at": "2026-10-05T00:50:54+00:00",
+    "last_checked_at": "2026-10-05T16:19:12+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.01035-embedding-based-scheduling.md"
+    ],
+    "title": "Designing and Interpreting Probes with Control Tasks"
+  },
+  "processed_at": "2026-10-05T16:19:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9578506da4c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

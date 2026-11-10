@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0930-scheduled-chat-30/title-screen-b01",
+  "reference_main_sha": "22918cdbecc12d38a31c719d5100b3c54dacc140",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:c3e342aa82f5d64da62bba9282fe3d603b5a253b",
+      "identity_tokens": [
+        "SemanticScholar:c3e342aa82f5d64da62bba9282fe3d603b5a253b"
+      ],
+      "title": "Persia: A Hybrid System Scaling Deep Learning-based Recommenders up to 100 Trillion Parameters",
+      "reason": "タイトルが明示する対象は100兆パラメータ級の推薦システムであり、LLMの生成推論・KVキャッシュ・サービングではない。対象外分野のタイトル先行除外。",
+      "source_url": "https://www.semanticscholar.org/paper/c3e342aa82f5d64da62bba9282fe3d603b5a253b",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T09:34:09+09:00",
+      "last_checked_at": "2026-10-31T09:34:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 498,
+      "origin": "discovery_worklist_title_sweep"
+    }
+  ]
+}

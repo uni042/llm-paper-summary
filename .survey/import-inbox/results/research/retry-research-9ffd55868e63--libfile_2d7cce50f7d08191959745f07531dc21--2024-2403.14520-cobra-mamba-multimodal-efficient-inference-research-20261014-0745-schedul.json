@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "a04be03bd7f09952c904c1bce0258df08439127d171748e773fe70c00a957aa2",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9ffd55868e63--libfile_2d7cce50f7d08191959745f07531dc21--2024-2403.14520-cobra-mamba-multimodal-efficient-inference-research-20261014-0745-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2403.14520",
+  "worker_completed_at": "2026-10-14T07:51:38+09:00",
+  "worker_run_key": "20261014-0745-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6691,
+    "body_paragraphs": 38,
+    "method_chars": 1925,
+    "method_paragraphs": 11,
+    "evaluation_chars": 1967,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2403.14520-cobra-extending-mamba-to-multi-modal-large-language-model-for-efficient-.md と 20 段落 / 4170文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T13:08:17+00:00"
+}

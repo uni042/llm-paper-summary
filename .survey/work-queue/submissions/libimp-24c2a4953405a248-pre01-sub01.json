@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Leveraging Visual Tokens for Extended Text Contexts in Multi-Modal Learning",
+      "source_url": "https://arxiv.org/abs/2406.02547",
+      "year": 2024,
+      "published": "2024-06-04",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training models with longer in-context lengths is a significant challenge for multimodal model due to substantial GPU memory and computational costs. This exploratory study does not present state-of-the-art models; rather, it introduces an innovative method designed to increase in-context text length in multi-modality large language models (MLLMs) efficiently. We present Visualized In-Context Text Processing (VisInContext), which processes long in-context text using visual tokens. This technique significantly reduces GPU memory usage and floating point operations (FLOPs) for both training and inferenceing stage. For instance, our method expands the pre-training in-context text length from 256 to 2048 tokens with nearly same FLOPs for a 56 billion parameter MOE model. Experimental results demonstrate that model trained with VisInContext delivers superior performance on common downstream benchmarks for in-context few-shot evaluation. Additionally, VisInContext is complementary to existing methods for increasing in-context text length and enhances document understanding capabilities, showing great potential in document QA tasks and sequential document retrieval.",
+      "identifiers": [
+        "SemanticScholar:a2ac9eb4df5216aa8be3a0d008c7a7cbd2838199"
+      ],
+      "semantic_scholar_id": "a2ac9eb4df5216aa8be3a0d008c7a7cbd2838199",
+      "canonical_id": "arXiv:2406.02547",
+      "arxiv_id": "2406.02547",
+      "doi": "10.48550/arXiv.2406.02547",
+      "authors": [
+        "A. Wang",
+        "Linjie Li",
+        "Yi-Qi Lin",
+        "Yiqi Lin",
+        "Min Li",
+        "Lijuan Wang",
+        "M. Shou"
+      ],
+      "priority": 32,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 32,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 879,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "arXiv一次要旨を確認。VisInContextは長いテキスト文脈を視覚トークン表現で処理し、マルチモーダルLLMの学習・推論両段階でGPUメモリとFLOPsを削減する。56B MoEでpretrainingのテキスト文脈長を256から2048へ拡張してもほぼ同等のFLOPsを報告。推論計算・メモリ節約に直接関連するためaccept。ただし要旨にない実測TTFT倍率は断定しない。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-24c2a4953405",
+    "round": "libimp-24c2a4953405a248-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-24c2a4953405a248-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-24c2a4953405a248-pre01.json",
+    "receipt": "sha256:166c342cc4920e0b74517791570f6fe292bb29f1dfaec586b6dba7f7b2562a6b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-24c2a4953405",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

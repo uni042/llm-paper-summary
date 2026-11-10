@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-394f8ca2b5dfd303-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.00515",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.00515",
+    "identity_tokens": [
+      "DOI:10.1145/3747588",
+      "arXiv:2406.00515"
+    ],
+    "reason": "コード生成LLMのdata curation、学習、評価、倫理・応用を体系化するサーベイで、推論システムの速度・メモリ・サービング最適化を主題としない。",
+    "first_checked_at": "2026-10-04T05:28:31+00:00",
+    "last_checked_at": "2026-10-04T05:28:31+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2603.24595-model2kernel-safe-cuda-kernels.md",
+      "papers/inference/09-kernel-runtime-compilation/2026-2606.15789-shannon-bound-lossless-weight-compression.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md"
+    ],
+    "title": "A Survey on Large Language Models for Code Generation"
+  },
+  "processed_at": "2026-10-04T05:28:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-394f8ca2b5df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

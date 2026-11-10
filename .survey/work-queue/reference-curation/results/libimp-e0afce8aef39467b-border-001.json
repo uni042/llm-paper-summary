@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0afce8aef39467b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.12624",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.12624",
+    "identity_tokens": [
+      "arXiv:2605.12624"
+    ],
+    "reason": "一次要旨の主対象は自動運転の視覚・言語・行動モデルであり、汎用LLM推論基盤ではない。一方で、フレーム単位の逐次処理、時間メモリ、密・疎Mixture-of-Transformersのfast/slow経路と16FPSの実測を含むため、マルチモーダル推論効率の周辺技術として境界的。",
+    "first_checked_at": "2026-10-15T14:52:21+00:00",
+    "last_checked_at": "2026-10-15T14:52:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "MindVLA-U1: VLA Beats VA with Unified Streaming Architecture for Autonomous Driving"
+  },
+  "processed_at": "2026-10-15T14:52:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0afce8aef39",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

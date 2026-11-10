@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-722375768a7b3880-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2201.03533",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2201.03533",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2201.03533",
+      "arXiv:2201.03533"
+    ],
+    "reason": "一次要旨はlong language sequence向けモデルを標準比較するSCROLLS benchmarkで、推論効率最適化ではない。",
+    "first_checked_at": "2026-10-05T01:52:17+00:00",
+    "last_checked_at": "2026-10-05T01:52:17+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "SCROLLS: Standardized CompaRison Over Long Language Sequences"
+  },
+  "processed_at": "2026-10-05T01:52:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-722375768a7b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

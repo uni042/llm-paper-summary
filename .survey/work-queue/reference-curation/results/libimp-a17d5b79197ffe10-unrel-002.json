@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a17d5b79197ffe10-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tip.2026.3725720",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tip.2026.3725720",
+    "identity_tokens": [
+      "DOI:10.1109/tip.2026.3725720"
+    ],
+    "reason": "The abstract concerns point-cloud 3D semantic segmentation with a broadcast-and-mixing Transformer, not language-model inference.",
+    "first_checked_at": "2026-10-05T08:00:36+00:00",
+    "last_checked_at": "2026-10-05T08:00:36+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+      "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "Broadcast-and-Mixing Transformer for 3D Semantic Segmentation"
+  },
+  "processed_at": "2026-10-05T08:00:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a17d5b79197f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

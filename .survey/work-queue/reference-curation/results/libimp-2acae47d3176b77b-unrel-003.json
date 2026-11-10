@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2acae47d3176b77b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3211332.3211336",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3211332.3211336",
+    "identity_tokens": [
+      "DOI:10.1145/3211332.3211336"
+    ],
+    "reason": "入力と推論制約に応じて複数の事前学習済みDNN画像分類器を選ぶ予測モデルを提案し、Jetson TX2上のImageNet分類で精度7.52%改善・推論時間1.8倍短縮を報告する。画像分類の端末DNN選択でありLLM生成モデルのルーティング・サービングを対象としない。",
+    "first_checked_at": "2026-10-07T22:08:43+00:00",
+    "last_checked_at": "2026-10-07T22:08:43+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md"
+    ],
+    "title": "Adaptive Deep Learning Model Selection on Embedded Systems"
+  },
+  "processed_at": "2026-10-07T22:08:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2acae47d3176",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

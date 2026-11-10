@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "preflight-00-20260923T010520Z-r10-02",
+  "kind": "research",
+  "attempt_id": "attempt-01b29ed73471ef21eb33ce79",
+  "job_id": "job-research-f719eedd6807af4c",
+  "record_bank": "g",
+  "paper_path": "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:2276c9d0299fc5078d8c1bcbcfd3b74bf2858f9ddaa22511a2ca36e02ba8e556",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "a25ba4971bcbc8e6b508ca2e2f49fac1c4d0a921"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "dedc3cf6f3155c013d70122faac9a4853c1fb9cb"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "954524c5f34084fa783dd91f3ec109c15b00d012"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "9cc77b8198027a26bc3f18b3197303558f3492f7"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "436f9aec3ef0c45acfb852d82382e89e8c4d7966"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[4].description is too short",
+    "Japanese-first prose ratio is too low: 64.1% < 70% (Japanese=3989, Latin=2234)"
+  ],
+  "checked_at": "2026-09-23T01:05:38+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

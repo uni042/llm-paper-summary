@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da414e2618c0bfc1-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/access.2024.3451660",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/access.2024.3451660",
+    "identity_tokens": [
+      "DOI:10.1109/access.2024.3451660"
+    ],
+    "reason": "The paper classifies heart-sound recordings for cardiovascular diagnosis with conventional/transformer classifiers; it does not concern language-model inference.",
+    "first_checked_at": "2026-10-05T14:45:34+00:00",
+    "last_checked_at": "2026-10-05T14:45:34+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+    ],
+    "title": "A Hybrid Framework of Transformer Encoder and Residential Conventional for Cardiovascular Disease Recognition Using Heart Sounds"
+  },
+  "processed_at": "2026-10-05T14:45:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da414e2618c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

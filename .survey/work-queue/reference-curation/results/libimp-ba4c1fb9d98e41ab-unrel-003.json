@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ba4c1fb9d98e41ab-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s11554-025-01764-1",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s11554-025-01764-1",
+    "identity_tokens": [
+      "DOI:10.1007/s11554-025-01764-1"
+    ],
+    "reason": "Mamba-based miner unsafe-behavior recognition is a domain-specific perception task; no LLM inference/efficiency contribution is indicated.",
+    "first_checked_at": "2026-10-06T12:07:33+00:00",
+    "last_checked_at": "2026-10-06T12:07:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+    ],
+    "title": "Real-time recognition of miner unsafe behaviors via skeleton-based spatiotemporal modeling with Mamba"
+  },
+  "processed_at": "2026-10-06T12:07:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ba4c1fb9d98e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

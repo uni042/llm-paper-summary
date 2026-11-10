@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f8135a1ac2714e26-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1117/12.3122642",
+  "reason": "Accurate brain tumor segmentation from 3D multimodal MRI remains challenging due to structural heterogeneity and discontinuous tumor regions. We propose ZigGate3D, a 3D encoder–decoder network with a gated tri-branch spatial mixing (GTSM) module. GTSM captures long-range dependencies via forward and reverse zigzag scanning within slices and inter-slice modeling along the z-direction, followed by adaptive gated fusion. An ET-aware auxiliary loss is further introduced to improve small and imbalanced enhancing tumor segmentation. Experimental results on the BraTS dataset show that ZigGate3D achieves Dice scores of 87.44%, 93.91%, and 94.97% for ET (enhancing tumor), TC (tumor core), and WT (whole tumor), respectively, with corresponding HD95 values of 2.58 mm, 3.68 mm, and 4.62 mm. The results demonstrate the effectiveness of the proposed method for multimodal 3D brain tumor segmentation.",
+  "title": "ZigGate3D: gated tri-branch spatial mixing for brain tumor segmentation",
+  "identity_tokens": [
+    "DOI:10.1117/12.3122642"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f8135a1ac271",
+  "source_precheck_request_id": null
+}

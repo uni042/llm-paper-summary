@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fdd9c82db4413299-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.19242",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.19242",
+    "identity_tokens": [
+      "arXiv:2609.19242"
+    ],
+    "reason": "一次要旨: Block diffusion language models (BDLMs) combine autoregressive dependencies across blocks with parallel denoising within blocks, but long-context training is constrained by distributed attention communication and activation memory. Conventional context parallelism (CP) shards the combined clean-plus-corrupted sequence by position, communicating shared clean K/V together with block-specific corrupted K/V and their gradients. We",
+    "first_checked_at": "2026-10-05T06:36:04+00:00",
+    "last_checked_at": "2026-10-05T06:36:04+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+      "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+      "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+    ],
+    "title": "Block Parallelism For Efficient Distributed Long-Context Diffusion Language Model Training"
+  },
+  "processed_at": "2026-10-05T06:36:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fdd9c82db441",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

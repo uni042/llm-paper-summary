@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-54626c44530496be-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.21605",
+  "reason": "The paper studies recurrent Transformers that feed the preceding token's hidden state into the next token while retaining KV states, trading recurrence depth against sequence time. Experiments compare block executions/accuracy, but the authors explicitly say block counts omit attention overhead and are neither latency nor throughput measurements; the compute budget is approximate. Relevant to LLM compute allocation, yet no serving-efficiency gain is established.",
+  "title": "Trading Depth for Time in Recurrent Transformers",
+  "identity_tokens": [
+    "arXiv:2609.21605"
+  ],
+  "linked_from": [
+    "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54626c445304",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

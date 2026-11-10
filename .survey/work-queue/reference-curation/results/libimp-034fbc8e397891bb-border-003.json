@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-034fbc8e397891bb-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.17209",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.17209",
+    "identity_tokens": [
+      "arXiv:2508.17209"
+    ],
+    "reason": "Layer pruning is applied to reduce memory for federated LLM fine-tuning, and experiments evaluate training memory/communication and task quality. The paper studies backpropagation/federated adaptation, not inference-time serving or generation latency. Its pruning mechanism could intersect model compression, but current evidence is training-only.",
+    "first_checked_at": "2026-10-06T08:40:51+00:00",
+    "last_checked_at": "2026-10-06T08:40:51+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Memory-Efficient Federated Fine-Tuning of Large Language Models via Layer Pruning"
+  },
+  "processed_at": "2026-10-06T08:40:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-034fbc8e3978",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

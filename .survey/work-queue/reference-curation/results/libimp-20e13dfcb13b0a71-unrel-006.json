@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20e13dfcb13b0a71-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2023.acl-long.546",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2023.acl-long.546",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2023.acl-long.546",
+      "arXiv:2212.10511"
+    ],
+    "reason": "parametric memoryとretrieval augmentationの事実知識QA品質をPopQAで分析し、entity popularityとknowledge recallの関係を研究する能力分析で、推論runtime/serving効率化が主題ではない。",
+    "first_checked_at": "2026-10-04T18:55:17+00:00",
+    "last_checked_at": "2026-10-06T16:24:43+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2502.16002-kvlink.md",
+      "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+    ],
+    "title": "When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories"
+  },
+  "processed_at": "2026-10-06T16:24:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20e13dfcb13b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

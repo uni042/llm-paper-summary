@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f8e0e52b58ae34d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s43588-025-00811-y",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s43588-025-00811-y",
+    "identity_tokens": [
+      "DOI:10.1038/s43588-025-00811-y"
+    ],
+    "reason": "一次論文の公開copyのabstractは化学研究におけるLLM活用・評価・倫理課題を論じるPerspective。推論/serving効率の方法・評価ではない。",
+    "first_checked_at": "2026-10-05T15:12:58+00:00",
+    "last_checked_at": "2026-10-05T15:12:58+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+    ],
+    "title": "Rethinking chemical research in the age of large language models"
+  },
+  "processed_at": "2026-10-05T15:12:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f8e0e52b58a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

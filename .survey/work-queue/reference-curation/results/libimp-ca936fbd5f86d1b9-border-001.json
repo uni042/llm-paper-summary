@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca936fbd5f86d1b9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.05938",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.05938",
+    "identity_tokens": [
+      "arXiv:2410.05938"
+    ],
+    "reason": "Latency comparison assumes VL-Mamba latency matches Cobra because VL-Mamba is not open-sourced; evidence is secondary and affected by backbone/training differences.",
+    "first_checked_at": "2026-10-05T15:28:32+00:00",
+    "last_checked_at": "2026-10-05T15:28:32+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EMMA: Empowering Multi-modal Mamba with Structural and Hierarchical Alignment"
+  },
+  "processed_at": "2026-10-05T15:28:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca936fbd5f86",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

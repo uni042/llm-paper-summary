@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261109-0030-scheduled-chat-30/r01",
+  "reference_main_sha": "fb9536c85f2d768a4cf158fc928e394fed41ab0d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.02574",
+      "identity_tokens": [
+        "arxiv:2607.02574",
+        "doi:10.48550/arxiv.2607.02574"
+      ],
+      "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+      "reason": "KVキャッシュ管理システム30件以上を局所性・寿命・所有権・基盤の4軸で分類し、分散サービングのメモリ階層と所有権の設計差、評価指標の欠落7項目を整理する。新規実装ではなくシステム設計サーベイとして関連する。",
+      "source_url": "https://arxiv.org/abs/2607.02574",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-09T00:32:16+09:00",
+      "last_checked_at": "2026-11-09T00:32:16+09:00",
+      "linked_from": "worker-worklist-30 discovery rank 1",
+      "worklist_rank": 1
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.16162",
+      "identity_tokens": [
+        "arxiv:2505.16162",
+        "doi:10.48550/arxiv.2505.16162"
+      ],
+      "title": "KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization",
+      "reason": "層スキップ型自己投機復号が入力ドメイン変化に弱い問題に対し、K近傍検索でドメインに適合するスキップ層集合を選択する。追加学習・別draftモデルなしで著者報告1.3～1.6倍の推論高速化を狙う。",
+      "source_url": "https://arxiv.org/abs/2505.16162",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-09T00:32:16+09:00",
+      "last_checked_at": "2026-11-09T00:32:16+09:00",
+      "linked_from": "worker-worklist-30 discovery rank 5",
+      "worklist_rank": 5
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.04313",
+      "identity_tokens": [
+        "arxiv:2611.04313",
+        "doi:10.48550/arxiv.2611.04313"
+      ],
+      "title": "Coarse Semantic Blocks for Efficient Training-Free Sparse Attention",
+      "reason": "非連続キーを意味的ブロックへクラスタ化し、重心により問い合わせごとの参照ブロックを選択する学習不要の疎注意。H200上のQwen3.5系列で512K時のprefill 2.3～2.4倍、decode 1.7～2.0倍という著者報告があり推論機構へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2611.04313",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-09T00:32:16+09:00",
+      "last_checked_at": "2026-11-09T00:32:16+09:00",
+      "linked_from": "worker-worklist-30 discovery rank 10",
+      "worklist_rank": 10
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.03351",
+      "identity_tokens": [
+        "arxiv:2508.03351",
+        "doi:10.48550/arxiv.2508.03351"
+      ],
+      "title": "SalQ-VLM: Fine-Grained Saliency-Guided Quantization for Vision-Language Models",
+      "reason": "視覚トークン冗長性とテキスト・視覚の表現差を考慮し、勾配由来の重要度を校正時の層別再構成へ導入するVLMの学習後量子化。推論時の追加演算なしに低ビット化精度を改善する圧縮技術である。",
+      "source_url": "https://arxiv.org/abs/2508.03351",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-09T00:32:16+09:00",
+      "last_checked_at": "2026-11-09T00:32:16+09:00",
+      "linked_from": "worker-worklist-30 discovery rank 16",
+      "worklist_rank": 16
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.12193",
+      "identity_tokens": [
+        "arxiv:2605.12193",
+        "doi:10.48550/arxiv.2605.12193"
+      ],
+      "title": "BFLA: Block-Filtered Long-Context Attention Mechanism",
+      "reason": "Lightning系の決定的ブロック索引、query tile共有、長さ適応Ratio-K選択を組み合わせた学習不要の疎prefill。元のQ/K/Vで計算しvLLMへ統合、著者は密prefill比TTFT最大約4倍を報告する。",
+      "source_url": "https://arxiv.org/abs/2605.12193",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-09T00:32:16+09:00",
+      "last_checked_at": "2026-11-09T00:32:16+09:00",
+      "linked_from": "worker-worklist-30 discovery rank 17",
+      "worklist_rank": 17
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.07173",
+      "identity_tokens": [
+        "arxiv:2604.07173",
+        "doi:10.48550/arxiv.2604.07173"
+      ],
+      "title": "InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models",
+      "reason": "MoEなどで増えるLoRAアダプタのメモリ費用を抑えるため、基盤モデル推論からLoRA実行を分離し共有LoRA Serverへ集約する。SLO基準の資源配置、GPU起点通信、専用カーネルで厳格な遅延SLO下の処理可能要求率を平均3.05倍と報告する。",
+      "source_url": "https://arxiv.org/abs/2604.07173",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-09T00:32:16+09:00",
+      "last_checked_at": "2026-11-09T00:32:16+09:00",
+      "linked_from": "worker-worklist-30 discovery rank 18",
+      "worklist_rank": 18
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.03717",
+      "identity_tokens": [
+        "arxiv:2504.03717",
+        "doi:10.48550/arxiv.2504.03717"
+      ],
+      "title": "RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm",
+      "reason": "RaBitQ由来の高速ベクトル量子化RaBitQ-Hと、層ごとの感度に基づくAllocateBitsのビット幅配分を統合する。少量校正データで可変ビット幅のLLM学習後量子化を行い、推論メモリと精度の両立を狙う。",
+      "source_url": "https://arxiv.org/abs/2504.03717",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-09T00:32:16+09:00",
+      "last_checked_at": "2026-11-09T00:32:16+09:00",
+      "linked_from": "worker-worklist-30 discovery rank 25",
+      "worklist_rank": 25
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.16395",
+      "identity_tokens": [
+        "arxiv:2604.16395",
+        "doi:10.48550/arxiv.2604.16395"
+      ],
+      "title": "Stream2LLM: Overlap Context Streaming and Prefill for Reduced Time-to-First-Token (TTFT)",
+      "reason": "検索コンテキストの到着とprefillを重ねる分離型LLMサービングで、追記型と更新型の入力に対し適応スケジューリングとプリエンプションを使う。共通接頭辞照合で再計算を削減し、実トラフィック由来2種の負荷でTTFT最大11倍改善を報告する。",
+      "source_url": "https://arxiv.org/abs/2604.16395",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-09T00:32:16+09:00",
+      "last_checked_at": "2026-11-09T00:32:16+09:00",
+      "linked_from": "worker-worklist-30 discovery rank 26",
+      "worklist_rank": 26
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.13328",
+      "identity_tokens": [
+        "arxiv:2610.13328",
+        "doi:10.48550/arxiv.2610.13328"
+      ],
+      "title": "DuoRate: Two-Rate Per-Expert Precision Allocation for Mixture-of-Experts Serving",
+      "reason": "MoEの保存ビット率と実際に選択されたexpertの復号読み出しビット率を分け、単一のprefix-readable重みから負荷に合わせて精度を配分する。Qwen3-30B-A3Bで2.3bpw読み出し時の精度改善を報告する推論向け量子化・帯域最適化である。",
+      "source_url": "https://arxiv.org/abs/2610.13328",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-09T00:32:16+09:00",
+      "last_checked_at": "2026-11-09T00:32:16+09:00",
+      "linked_from": "worker-worklist-30 discovery rank 30",
+      "worklist_rank": 30
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36355",
+      "identity_tokens": [
+        "arxiv:2610.36355",
+        "doi:10.48550/arxiv.2610.36355"
+      ],
+      "title": "WAKMan: Workload Aware KVCache Manager",
+      "reason": "LLM接頭辞KVキャッシュの追い出しを、エージェント系の再利用間隔と人気プロンプトの頻度特性に合わせ実トラフィックから適応選択する。20種類の混合負荷でLRU比平均5ポイントのヒット率向上を報告し、推論サービングのメモリ管理へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2610.36355",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-09T00:32:16+09:00",
+      "last_checked_at": "2026-11-09T00:32:16+09:00",
+      "linked_from": "worker-worklist-30 discovery rank 32",
+      "worklist_rank": 32
+    }
+  ]
+}

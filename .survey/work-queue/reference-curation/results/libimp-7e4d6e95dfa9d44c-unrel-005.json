@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7e4d6e95dfa9d44c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.06067",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.06067",
+    "identity_tokens": [
+      "arXiv:2409.06067"
+    ],
+    "reason": "MLLMを補助に使うfederated learningの学習手法で、LLM自身の推論効率化ではない。",
+    "first_checked_at": "2026-10-05T13:16:07+00:00",
+    "last_checked_at": "2026-10-05T13:16:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+    ],
+    "title": "MLLM-LLaVA-FL: Multimodal Large Language Model Assisted Federated Learning"
+  },
+  "processed_at": "2026-10-05T13:16:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7e4d6e95dfa9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

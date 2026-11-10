@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-236e6e0ee6de3882-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.21079",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.21079",
+    "identity_tokens": [
+      "arXiv:2502.21079"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.21079. Abstract summary: Generating high-quality long videos with Diffusion Transformers (DiTs) faces significant latency due to computationally intensive attention mechanisms. For instance, generating an 8s 720p video (110K tokens) with HunyuanVideo requires around 600 PFLOPs, with attention computations consuming about 500 PFLOPs. To tackle this, we p Out of scope: Sparse attention for video Diffusion Transformers, not language-model inference.",
+    "first_checked_at": "2026-10-05T12:32:43+00:00",
+    "last_checked_at": "2026-10-05T12:32:43+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
+      "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+      "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+      "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+    ],
+    "title": "Training-Free and Adaptive Sparse Attention for Efficient Long Video Generation"
+  },
+  "processed_at": "2026-10-05T12:32:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-236e6e0ee6de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

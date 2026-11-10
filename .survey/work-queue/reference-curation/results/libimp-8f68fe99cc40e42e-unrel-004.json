@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f68fe99cc40e42e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.25008",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.25008",
+    "identity_tokens": [
+      "arXiv:2606.25008"
+    ],
+    "reason": "Studies scaling-law coefficients, not inference-time optimization.",
+    "first_checked_at": "2026-10-06T06:40:10+00:00",
+    "last_checked_at": "2026-10-06T06:40:10+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+    ],
+    "title": "Neural Scaling Universality: If Exponents Are Fixed, Time to Understand Coefficients"
+  },
+  "processed_at": "2026-10-06T06:40:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f68fe99cc40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

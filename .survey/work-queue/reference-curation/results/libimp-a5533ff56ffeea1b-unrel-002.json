@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5533ff56ffeea1b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3115/1075812.1075835",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3115/1075812.1075835",
+    "identity_tokens": [
+      "DOI:10.3115/1075812.1075835",
+      "id:DOI:10.3115/1075812.1075835",
+      "url:https://doi.org/10.3115/1075812.1075835"
+    ],
+    "reason": "The primary ACL proceedings record and paper abstract describe a syntactic/predicate-argument annotation scheme for the Penn Treebank corpus, including coindexed null elements and semantic-role tags to support parsing evaluation and training. This is a corpus and annotation contribution, not an LLM inference/serving system or an inference-time compression/efficiency technique. Abstract-level exclusion is sufficient for this clear scope mismatch.",
+    "first_checked_at": "2026-10-04T22:27:12+00:00",
+    "last_checked_at": "2026-10-04T22:27:12+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md",
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+      "papers/inference/99-other-inference-systems/2026-2608.24945-fampwq-fisher-information-based-adaptive-mixed-precision-weight-quantization-for-effective-llm-inference.md"
+    ],
+    "title": "The Penn Treebank: Annotating Predicate Argument Structure"
+  },
+  "processed_at": "2026-10-04T22:27:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5533ff56ffe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

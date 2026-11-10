@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e709a434ae88674b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.04199",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.04199",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2024.findings-emnlp.48",
+      "DOI:10.48550/arxiv.2410.04199",
+      "arXiv:2410.04199"
+    ],
+    "reason": "長文入力の検索能力ではなく、複数問題を単一の長い応答として生成する際の品質劣化を測る評価ベンチマーク。長文脈推論と関連はあるが、推論ランタイムの計算量・メモリ・サービングを改善する新規方式ではないため対象外。",
+    "first_checked_at": "2026-09-30T01:46:01+00:00",
+    "last_checked_at": "2026-09-30T09:12:11+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
+      "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+    ],
+    "title": "LongGenBench: Long-context Generation Benchmark"
+  },
+  "processed_at": "2026-09-30T09:12:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e709a434ae88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "640a95699c071a792a61807a65def542c1611441a25cbff4229ffa84d1c72eeb",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-29d34a3ea9bf--libfile_ccf264777be88191ad86707ba6db1da3--2026-2609.15636-trillion-parameter-moe-hbf-under16kb-reaudit-20261009-2130-scheduled-chat-30-r01-corrected.md",
+  "canonical_id": "arXiv:2609.15636",
+  "worker_completed_at": "2026-10-09T21:34:00+09:00",
+  "worker_run_key": "20261009-2130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7684,
+    "body_paragraphs": 37,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 887,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 手法説明量 0 < 700",
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-09T16:49:28+00:00"
+}

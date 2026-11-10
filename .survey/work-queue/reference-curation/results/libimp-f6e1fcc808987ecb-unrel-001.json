@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6e1fcc808987ecb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.03503",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.03503",
+    "identity_tokens": [
+      "arXiv:2606.03503"
+    ],
+    "reason": "一次要旨によれば、正答推論軌跡内の冗長な探索を抽出し、マスク付き選好最適化の学習目標によって推論系列を短縮する手法である。出力トークン数約56%削減という推論効率への影響はあるが、主たる新規性はモデルの選好学習・強化学習後処理であり、推論サービング基盤、スケジューラ、KVキャッシュ、推論カーネルやメモリ階層の実装最適化を対象としていないため、現行の推論・学習システム基盤サーベイでは対象外とする。",
+    "first_checked_at": "2026-10-21T15:27:55+00:00",
+    "last_checked_at": "2026-10-21T15:27:55+00:00",
+    "linked_from": [],
+    "title": "ThoughtFold: Folding Reasoning Chains via Introspective Preference Learning"
+  },
+  "processed_at": "2026-10-21T15:27:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6e1fcc80898",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

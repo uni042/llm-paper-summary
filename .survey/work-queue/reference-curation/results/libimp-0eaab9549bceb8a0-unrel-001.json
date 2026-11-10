@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0eaab9549bceb8a0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3650212.3680384",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3650212.3680384",
+    "identity_tokens": [
+      "DOI:10.1145/3650212.3680384",
+      "arXiv:2404.05427"
+    ],
+    "reason": "LLM agentがrepositoryから関連codeを探索しissueを解析してpatchを生成するautomated program repair研究。coding-agent能力・repair successが主目的で、agentic inference servingやKV-cache/runtime効率化ではない。",
+    "first_checked_at": "2026-10-05T16:34:19+00:00",
+    "last_checked_at": "2026-10-05T16:39:35+00:00",
+    "linked_from": [],
+    "title": "AutoCodeRover: Autonomous Program Improvement"
+  },
+  "processed_at": "2026-10-05T16:39:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0eaab9549bce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-97e126d0f1d780c8-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1902.07816",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1902.07816",
+    "identity_tokens": [
+      "arXiv:1902.07816"
+    ],
+    "reason": "The paper studies sparse mixture models for machine translation, an older encoder/decoder NMT setting. Similarity to MoE routing is conceptual; it provides no LLM inference/serving measurements.",
+    "first_checked_at": "2026-10-06T05:19:22+00:00",
+    "last_checked_at": "2026-10-06T05:19:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mixture Models for Diverse Machine Translation: Tricks of the Trade"
+  },
+  "processed_at": "2026-10-06T05:19:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-97e126d0f1d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fbe036fa44fcdcba-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.17319",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.17319",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.17319",
+      "SemanticScholar:623f709c32502faead8d63a969c7180177fbe18b",
+      "arXiv:2512.17319"
+    ],
+    "reason": "The abstract introduces a remote-sensing MLLM benchmark and evaluates perception and reasoning; no serving or compute-efficiency contribution is described.",
+    "first_checked_at": "2026-10-13T05:18:17+00:00",
+    "last_checked_at": "2026-10-13T05:18:17+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+      "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Benchmark for Ultra-High-Resolution Remote Sensing MLLMs"
+  },
+  "processed_at": "2026-10-13T05:18:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbe036fa44fc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

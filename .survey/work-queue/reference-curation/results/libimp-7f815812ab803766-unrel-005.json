@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f815812ab803766-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2108.03298",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2108.03298",
+    "identity_tokens": [
+      "arXiv:2108.03298"
+    ],
+    "reason": "robot manipulationで6種のoffline learning algorithmをsim/real task上で比較し、demonstration品質や学習設計の影響を分析するrobotics/training研究。LLM推論対象外。",
+    "first_checked_at": "2026-10-04T17:54:50+00:00",
+    "last_checked_at": "2026-10-04T17:54:50+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2026-2609.19441-prede-quantization-task-degradation-prediction.md"
+    ],
+    "title": "What Matters in Learning from Offline Human Demonstrations for Robot Manipulation"
+  },
+  "processed_at": "2026-10-04T17:54:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f815812ab80",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-722433d2476b0a9a-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "OpenReview:r8H7xhYPwz",
+  "reason": "線形注意の状態更新にgatingとdelta ruleを統合し長文脈を線形時間で扱えるため推論効率との関連は強いが、主貢献は新しいsequence-model architectureと学習アルゴリズムであり、既存LLM推論基盤の最適化そのものではないためborderline。",
+  "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule",
+  "identity_tokens": [
+    "OpenReview:r8H7xhYPwz"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-722433d2476b",
+  "source_precheck_request_id": null
+}

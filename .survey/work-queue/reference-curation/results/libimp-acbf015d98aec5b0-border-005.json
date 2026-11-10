@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-acbf015d98aec5b0-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.11582",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.11582",
+    "identity_tokens": [
+      "arXiv:2405.11582"
+    ],
+    "reason": "Measured efficiency exists but LLM validation is limited to 350M scale and does not establish larger decoder-serving relevance.",
+    "first_checked_at": "2026-10-05T12:45:11+00:00",
+    "last_checked_at": "2026-10-05T12:45:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+    ],
+    "title": "SLAB: Efficient Transformers with Simplified Linear Attention and Progressive Re-parameterized Batch Normalization"
+  },
+  "processed_at": "2026-10-05T12:45:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-acbf015d98ae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

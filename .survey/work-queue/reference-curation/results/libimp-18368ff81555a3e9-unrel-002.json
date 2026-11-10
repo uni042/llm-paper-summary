@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18368ff81555a3e9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.29151",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.29151",
+    "identity_tokens": [
+      "arXiv:2608.29151"
+    ],
+    "reason": "MoE modelのblack-box watermark/provenance研究で、効率は対象外。",
+    "first_checked_at": "2026-10-05T07:53:35+00:00",
+    "last_checked_at": "2026-10-05T07:53:35+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "WoE Wrote It? Watermarking Mixture-of-Experts LLMs for Black-Box Text Provenance"
+  },
+  "processed_at": "2026-10-05T07:53:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18368ff81555",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

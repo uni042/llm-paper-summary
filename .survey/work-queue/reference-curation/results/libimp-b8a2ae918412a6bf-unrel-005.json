@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b8a2ae918412a6bf-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.27925",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.27925",
+    "identity_tokens": [
+      "arXiv:2609.27925"
+    ],
+    "reason": "This is selective anti-interference pretraining, a training-time method excluded by the project scope.",
+    "first_checked_at": "2026-10-05T08:16:12+00:00",
+    "last_checked_at": "2026-10-05T08:16:12+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "Learning When Not to Listen: Selective Anti-Interference Pretraining for Language Models"
+  },
+  "processed_at": "2026-10-05T08:16:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b8a2ae918412",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

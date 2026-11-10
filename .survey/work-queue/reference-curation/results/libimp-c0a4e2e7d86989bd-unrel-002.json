@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0a4e2e7d86989bd-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.09356",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.09356",
+    "identity_tokens": [
+      "arXiv:2404.09356"
+    ],
+    "reason": "LLMの制御・利用格差とアクセスを分析する研究で、serving効率を改善する手法や評価ではない。",
+    "first_checked_at": "2026-10-06T18:49:02+00:00",
+    "last_checked_at": "2026-10-06T18:49:02+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+    ],
+    "title": "LLeMpower: Understanding Disparities in the Control and Access of Large Language Models"
+  },
+  "processed_at": "2026-10-06T18:49:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0a4e2e7d869",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

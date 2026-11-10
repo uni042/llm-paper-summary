@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Just Let Linear States Forget the Distant Past: Prefix Caching via Suffix Replay for Hybrid LLMs",
+      "source_url": "https://arxiv.org/abs/2609.33477",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid LLMs interleave full-attention layers with linear-attention layers to reduce long-context inference cost, but this structure complicates prefix caching. Full-attention KV caches are token-addressable, whereas linear-attention layers maintain recurrent states that cannot be rolled back to arbitrary prefix boundaries. Existing systems materialize recurrent-state checkpoints, restricting prefix reuse to checkpoint-aligned positions. We present SuffixReplay, the first prefix caching system that lets hybrid LLMs reuse cached prefixes at every cache-supported page boundary without materializing recurrent-state checkpoints. Our key insight is to just let linear states forget the distant past. Modern linear-attention mechanisms use recurrent decay and gating to attenuate the influence of old inputs. Therefore, instead of checkpointing every prefix boundary, SuffixReplay approximates the state at a matched boundary by replaying only a recent suffix of the layer's input hidden states, which we retain as anchors. At the algorithmic level, SuffixReplay combines layer-wise and token-wise anchor sparsity with a bounded replay budget to control storage, computation, and quality. At the system level, it uses an independently managed anchor sidecar and a pipelined replay path to overlap anchor movement and state reconstruction with the native serving pipeline. We evaluate SuffixReplay on three hybrid LLMs: OLMo-Hybrid-7B, Qwen3.5-4B, and Qwen3.6-27B-FP8. Across these models, SuffixReplay retains 91.4-100% of full-prefill quality on average across LongBench and RULER, while using only 0.36-0.51x the amortized per-token storage of SGLang's default 8192-token checkpoint cache. Integrated into SGLang, SuffixReplay reduces median TTFT by 15-70% on branching workloads, sustains 2.3-4.3x SGLang's throughput when the working set exceeds HBM, and matches SGLang on high-hit continuation traffic.",
+      "identifiers": [
+        "SemanticScholar:f6fbfd531227293a9febf58313526d8d1f6380b7"
+      ],
+      "semantic_scholar_id": "f6fbfd531227293a9febf58313526d8d1f6380b7",
+      "canonical_id": "arXiv:2609.33477",
+      "arxiv_id": "2609.33477",
+      "authors": [
+        "Yi-Rui Liu",
+        "Ruo-Ling Qi",
+        "Xuan'er Wu",
+        "Yu-Xin Jin",
+        "Jian Chen",
+        "Peng-Hang Liu",
+        "Ya-Fei Huang",
+        "Jia-Wei Shao",
+        "Xue-Long Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      },
+      "reason": "full-attentionと線形注意を混在させたLLMでは再帰状態を任意のprefix境界へ戻せないため、従来のcheckpoint方式ではprefix再利用位置が制限される。SuffixReplayは最近のhidden state suffixをanchorとして保持・再実行し、線形状態を近似再構築してページ境界でprefix cachingを可能にする。OLMo-Hybrid-7B、Qwen3.5-4B、Qwen3.6-27B-FP8で、SGLangの8192トークンcheckpoint cache比保存量0.36〜0.51倍、分岐負荷のmedian TTFTを15〜70%削減、HBM超過時throughput 2.3〜4.3倍を報告。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_screen; body_not_exhaustively_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "DEALS: Decentralized Expertise-Aware Load Serving for Multi-Agent LLM Systems",
+      "source_url": "https://arxiv.org/abs/2609.33768",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent systems (MAS) have recently emerged as an effective approach for coordinating large language model (LLM)-based agents to solve complex tasks through structured interactions. In practice, MASs often handle a stream of heterogeneous and complex tasks, requiring agents to decompose each task and then self-organize and self-evolve to adapt to incoming tasks while sharing execution resources. However, most early approaches to MASs rely on centralized controllers or fixed coordination patterns, which can limit scalability or adaptability. In contrast, existing decentralized and dynamic MASs often require training dedicated routers or invoking LLMs for agent selection, resulting in substantial computational costs and coordination overhead. To address these challenges and enable efficient task-level self-organization and self-evolution for task- and workload-level collaboration, we propose Decentralized Expertise-Aware Load Serving (DEALS), a decentralized and low-complexity framework that enables agents to self-organize and dynamically route concurrent tasks for processing. Specifically, each agent maintains local queues of incoming tasks, and its router decides whether to process a task locally or forward it to a neighbor based on differences in backlog and success rate. Meanwhile, executors process independent tasks concurrently within and across agents, and partially solved tasks can be resumed by other agents. Experiments show that DEALS not only improves performance along multiple dimensions (e.g., answer accuracy and task throughput) in both homogeneous and heterogeneous agent pools, but also balances agent expertise and workload in a self-organized manner, enabling effective decentralized coordination.",
+      "identifiers": [
+        "SemanticScholar:c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b"
+      ],
+      "semantic_scholar_id": "c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b",
+      "canonical_id": "arXiv:2609.33768",
+      "arxiv_id": "2609.33768",
+      "authors": [
+        "Jing-Hang Huang",
+        "Wen-Bin Wang",
+        "Yan-Chuan Yin",
+        "Alvaro Velasquez",
+        "Jia Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数LLMエージェントが並行タスクを処理する際、中央コントローラや追加LLM呼出しによるルーティングを避け、各エージェントのローカル待ち行列長と隣接エージェントのタスク成功率差から転送・自処理を選ぶDEALSを提案。エージェント内外の並列実行と部分タスク再開を組み合わせ、異種・同種エージェント群で正答率とタスクスループットの改善を報告。単体モデルのカーネルではなくエージェントサービングのスケジューリングに関連する。",
+      "library_body_check": "primary_arxiv_abstract_screen; body_not_exhaustively_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "vSkipper: Translating Dynamic Layer Skipping into LLM Serving Gains",
+      "source_url": "https://arxiv.org/abs/2609.37062",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dynamic layer skipping reduces LLM computation by allowing each token to execute only a subset of the model's layers. However, existing skippers rely on specialized generation loops and do not integrate with modern serving engines. As a result, fewer executed layers do not necessarily translate into lower serving latency: FlexiDepth skips 8 of Llama-3-8B's 32 layers on average, yet its standard generation loop decodes 14.6--21.0% more slowly than the base model. We present vSkipper, a virtualization layer that makes dynamic layer skippers pluggable in serving engines while preserving continuous batching, fixed-shape batches, paged KV caching, and captured decode graphs. At each routed layer, vSkipper groups tokens by the skipper's decision and uses routed execution only when predicted to be profitable. We implement vSkipper in SGLang and evaluate the released FlexiDepth checkpoint against upstream SGLang under identical prompts, arrivals, output lengths, and launch settings. At the knee of upstream's load curve, vSkipper reduces mean end-to-end latency by 36.8% on GSM8K and 13.6% on BBH. Under saturation, it increases request throughput by 11.3% and 7.4%. Serving adds no statistically resolved quality loss beyond the checkpoint's own. Across synthetic skip policies, two Qwen3 skippers, and three GPUs, we demonstrate reuse without workload-specific tuning. To our knowledge, vSkipper is the first system to realize serving-efficiency gains from per-token interior layer skipping within a modern LLM serving engine. The code is open-sourced as an SGLang fork at https://github.com/AKafakA/sglang-vskipper/tree/vskipper-ref",
+      "identifiers": [
+        "SemanticScholar:639ef2217fa2ef14d2d9bc77749392d27d60b927"
+      ],
+      "semantic_scholar_id": "639ef2217fa2ef14d2d9bc77749392d27d60b927",
+      "canonical_id": "arXiv:2609.37062",
+      "arxiv_id": "2609.37062",
+      "authors": [
+        "Dao-Min Wei",
+        "Yavuz Ferhatosmanoglu",
+        "E. Kalyvianaki"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "トークン単位の動的層スキップをSGLangへ統合する仮想化層vSkipperを提案。ルーティング層ごとにskip判断でトークンをまとめ、連続バッチング、固定形状、paged KV cache、captured decode graphを維持しつつ有益な場合だけ分岐実行する。従来FlexiDepth単独ループはLlama-3-8Bで平均8層を飛ばしても14.6〜21.0%遅かったが、vSkipperはSGLang同一負荷比でGSM8Kの平均E2E遅延36.8%、BBHで13.6%短縮、飽和時throughput 11.3%/7.4%向上と一次要旨が報告。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_screen; body_not_exhaustively_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Persistent Context Graphs for Efficient Memory Compaction in LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.40118",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As LLM capabilities advance, agents are tackling increasingly complex tasks over longer horizons. Their growing interaction histories make memory compaction essential for staying within context windows and reducing prefill cost. Existing methods summarize the history or compress its KV cache, often adding model computation to preserve information for future requests. A new user request can change which history matters, but reassessing that history with the model requires re-encoding it if the KV cache has expired. Past attention provides signals of historical importance and dependencies between messages, while relevance to the current task must be assessed using the new user request. We introduce ReCAP, a memory compaction method that stores attention-derived importance scores and dependency links in a lightweight, persistent context graph. For each new request, ReCAP combines stored importance with relevance cues from the request and follows dependency links to select messages and their supporting context, without additional model calls for selection. Compared with Codex's default summarization-based compaction, ReCAP reduces estimated latency for compaction and cold restoration by approximately 95% on both Qwen3-Coder and gpt-oss. It also roughly halves the historical context per call on SWE-Together at comparable task quality and improves accuracy on the code tasks of Lost-in-Conversation over full history by 19.8 and 41.2 points.",
+      "identifiers": [
+        "SemanticScholar:dd403e44b44e9c56d1fbb9f580634fd7797d51e2"
+      ],
+      "semantic_scholar_id": "dd403e44b44e9c56d1fbb9f580634fd7797d51e2",
+      "canonical_id": "arXiv:2609.40118",
+      "arxiv_id": "2609.40118",
+      "authors": [
+        "Jing-Bo Yang",
+        "Kwei-Herng Lai",
+        "Xiao-Wen Wang",
+        "Zhao-Xuan Tan",
+        "Pei Zhou",
+        "Meng-Ting Wan",
+        "Y. Harari",
+        "E. Gabrilovich",
+        "Shi-Yu Chang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長期エージェント履歴を再エンコードする代わりに、過去の注意から抽出した重要度とメッセージ依存関係を永続コンテキストグラフへ保存し、新規要求の関連性に応じて必要な履歴と根拠を再選択するReCAPを提案。Codexの要約ベース圧縮に比べQwen3-Coderとgpt-ossで圧縮・cold restorationの推定遅延を約95%削減、SWE-Togetherで品質を保ちながら履歴文脈量を約半減したと一次要旨が報告。推論時のprefill費用削減とエージェント記憶管理に直接関連する。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_screen; body_not_exhaustively_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b6774e96ece4",
+    "round": "libimp-b6774e96ece4554d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b6774e96ece4554d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b6774e96ece4554d-pre01.json",
+    "receipt": "sha256:b7dd1d7500bbaa5cfce843c87072ab49a16fef2d46a4b17bf759165232924be6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b6774e96ece4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

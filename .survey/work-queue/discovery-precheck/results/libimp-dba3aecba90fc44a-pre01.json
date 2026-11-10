@@ -1,0 +1,1213 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-dba3aecba90fc44a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-dba3aecba90f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.08791",
+    "arXiv:2411.15446",
+    "arXiv:2412.05896",
+    "arXiv:2510.02676",
+    "arXiv:2511.06605",
+    "arXiv:2601.07878",
+    "arXiv:2602.01027",
+    "arXiv:2603.15202",
+    "arXiv:2603.22910",
+    "arXiv:2605.29843",
+    "arXiv:2605.31485",
+    "arXiv:2606.04032",
+    "arXiv:2606.08048"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5db25fefcd98abfafc3fd91bf2591c795b1ff5ab",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 13,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T02:50:28.939872+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.08791",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.15446",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.05896",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.02676",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.06605",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.07878",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.01027",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.15202",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.22910",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.29843",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.31485",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.04032",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.08048",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Simple is Better: Multiplication May Be All You Need for LLM Request Scheduling",
+      "source_url": "https://arxiv.org/abs/2603.15202",
+      "year": 2026,
+      "published": "2026-03-16",
+      "venue": null,
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "High-quality LLM request scheduling requires meeting two key objectives: ensuring the routed instance has KVCache to accelerate request execution, and ensuring that the workload is balanced across instances. Achieving both objectives is challenging because pursuing one may compromise the other. Current approaches use various combinators (e.g., linear combinations) to compute a scheduling score that combines indicators for the two objectives. These approaches are complex: they either require significant workload-specific hyperparameter tuning or model-hardware-aware simulator development, yet could still lead to suboptimal performance. In this paper, we show that using a simple multiplication of two carefully chosen indicators: one KVCache-aware (new prefill tokens if routed to an instance) and one load-balancing-aware (current batch size of the instance), as the scheduling score (LMETRIC) can achieve both objectives simultaneously without any hyperparameter tuning. The key idea is that the simply multiplied score considers both objectives in a manner similar to a linear combination, but the original hyperparameters cancel out during comparison, so no tuning is needed to find the best parameters. The two indicators are chosen based on our analysis of LLM characteristics. Our extensive experiments show that this simple approach can reduce TTFT by 92% and 39%, and TPOT by 24% and 51%, compared to vLLM-v1 and an in-production scheduler on real-world workloads covering chatbots and coding agents. We also derive the mathematical conditions under which multiplication may fail, and find that such conditions are extremely rare in practice and can be detected (and mitigated) beforehand. LMETRIC has been deployed in production and canary release confirms its effectiveness",
+      "identifiers": [
+        "SemanticScholar:6593052baf3d32f6f071ba5cd4c22e0b06b58d8d"
+      ],
+      "semantic_scholar_id": "6593052baf3d32f6f071ba5cd4c22e0b06b58d8d",
+      "canonical_id": "arXiv:2603.15202",
+      "arxiv_id": "2603.15202",
+      "authors": [
+        "Dingyan Zhang",
+        "Jinbo Han",
+        "Kaixin Zhang",
+        "Xing-Da Wei",
+        "Si-Jie Shen",
+        "Chenguang Fang",
+        "Wen-Yuan Yu",
+        "Jing-Ren Zhou",
+        "Rong Chen"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Do Transformers Need Three Projections? Systematic Study of QKV Variants",
+      "source_url": "https://arxiv.org/abs/2606.04032",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have become the standard solution for various AI tasks, with the query, key, and value (QKV) attention formulation playing a central role. However, the individual contribution of these three projections and the impact of omitting some remain poorly understood. We systematically evaluate three projection sharing constraints: a) Q-K=V (shared key-value), b) Q=K-V (shared query-key), and c) Q=K=V (single projection). The last two variants produce symmetric attention maps; to address this, we also explore asymmetric attention via 2D positional encodings. Through experiments spanning synthetic tasks, vision (MNIST, CIFAR, TinyImageNet, anomaly), and language modeling (300M and 1.2B parameter models on 10B tokens), we discovered that our transformers perform on par or occasionally better than the QKV transformer. In language modeling, Q-K=V projection sharing achieves 50% KV cache reduction with only 3.1% perplexity degradation. Crucially, projection sharing is complementary to head sharing (GQA/MQA): combining Q-K=V with GQA-4 yields 87.5% cache reduction, while Q-K=V + MQA achieves 96.9%, enabling practical on-device inference. We show that Q-K=V preserves quality because keys and values can occupy similar representational spaces and attention operates in a low-rank regime, whereas Q=K-V breaks attention directionality. Our results systematically characterize projection sharing as an underexplored instance of weight tying in attention, with direct, quantifiable inference memory benefits, particularly valuable for edge deployment. The code is publicly available at https://github.com/Brainchip-Inc/Do-Transformers-Need-3-Projections",
+      "identifiers": [
+        "SemanticScholar:dab74b0df580c364bb1cf3e7075b1b10e0ee1b7c"
+      ],
+      "semantic_scholar_id": "dab74b0df580c364bb1cf3e7075b1b10e0ee1b7c",
+      "canonical_id": "arXiv:2606.04032",
+      "arxiv_id": "2606.04032",
+      "doi": "10.48550/arXiv.2606.04032",
+      "authors": [
+        "Ali Kayyam",
+        "Anusha Madan Gopal",
+        "M. Lewis"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HARP: Hadamard-Preconditioned Adaptive Rotation Processor for Extreme LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2605.29843",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is essential for deploying LLMs under memory and bandwidth constraints. However, extreme low-bit quantization remains highly sensitive to activation outliers and anisotropic weight curvature. Existing incoherence-based PTQ methods mitigate this issue with fixed randomized Hadamard transforms (RHTs), which improve quantization robustness but cannot adapt the rotated basis to the layer, calibration distribution, or quantizer. We introduce HARP (Hadamard-preconditioned Adaptive Rotation Processor), a learnable structured two-sided orthogonal processor that replaces fixed Hadamard mixing while preserving exact full-precision equivalence. HARP represents each rotation as a product of sparse butterfly-like block-orthogonal stages, supports non-power-of-two dimensions through Mixed-Radix schedules, and initializes to the RHT processor up to a fixed permutation. Fitted only on calibration data, HARP adapts the quantization basis to each layer and backend. Across 2--4-bit settings on Llama models from 1B to 70B, HARP consistently improves perplexity and yields its clearest zero-shot gains at 2 bits; a 2-bit Qwen3-8B experiment shows the same transfer beyond the Llama family. HARP also preserves deployment efficiency: on Llama 2 7B at 2 bits, it reaches 128 tok/s, retaining 90% of RHT throughput (142 tok/s) and running approximately $2.1\\times$ faster than FP16 (61 tok/s).",
+      "identifiers": [
+        "SemanticScholar:28cb61693cbf2ddc35f146ee0b2c09541039270e"
+      ],
+      "semantic_scholar_id": "28cb61693cbf2ddc35f146ee0b2c09541039270e",
+      "canonical_id": "arXiv:2605.29843",
+      "arxiv_id": "2605.29843",
+      "doi": "10.48550/arXiv.2605.29843",
+      "authors": [
+        "A. Zagitov",
+        "G. Molodtsov",
+        "A. Beznosikov"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 139,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EchoKV: Efficient KV Cache Compression via Similarity-Based Reconstruction",
+      "source_url": "https://arxiv.org/abs/2603.22910",
+      "year": 2026,
+      "published": "2026-03-24",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The increasing memory demand of the Key-Value (KV) cache poses a significant bottleneck for Large Language Models (LLMs) in long-context applications. Existing low-rank KV compression methods reduce this footprint by modifying model projections, limiting the flexibility to switch back to standard full-cache inference when sufficient memory is available. In this paper, we propose EchoKV, a flexible KV cache compression framework that supports on-demand transitions from full KV caching to compressed caching. Unlike traditional compression-decompression paradigms, EchoKV utilizes a lightweight network to reconstruct the discarded KV components from a partial subset, exploiting intrinsic inter-layer and intra-layer similarities among attention heads. We further introduce a lightweight two-stage fine-tuning strategy, requiring only a few minutes on a single A100 GPU for a 7B model. Experimental results on LongBench and RULER demonstrate that EchoKV consistently outperforms existing methods across multiple compression ratios and backbone models while preserving the throughput of full-cache inference in short-context scenarios.",
+      "identifiers": [
+        "SemanticScholar:aa927cfa87ddd7ccfbc97910f77163ac9df5a32c"
+      ],
+      "semantic_scholar_id": "aa927cfa87ddd7ccfbc97910f77163ac9df5a32c",
+      "canonical_id": "arXiv:2603.22910",
+      "arxiv_id": "2603.22910",
+      "doi": "10.48550/arXiv.2603.22910",
+      "authors": [
+        "Yixuan Wang",
+        "Shi-Yu Ji",
+        "Yijun Liu",
+        "Qing-Fu Zhu",
+        "Wanxiang Che"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DMA-Latte: Expanding the Reach of DMA Offloads to Latency-bound ML Communication",
+      "source_url": "https://arxiv.org/abs/2511.06605",
+      "year": 2025,
+      "published": "2025-11-10",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Offloading communication to existing direct memory access (DMA) engines, available on most state-of-the-art commercial GPUs, has emerged as a practical and low-cost solution to efficiently overlap computation and communication in machine learning (ML). However, the reach of DMA offloads has so far been limited to bandwidth-bound scenarios only (10s of MB to GB transfer sizes). In this work, we break this barrier and extend DMA communication offloads to latency-bound regions (KB to low MB). Specifically, we leverage hitherto untapped features available in the state-of-the-art AMD Instinct$^{\\mathrm{TM}}$ GPUs that render DMA communication offloads competitive even in latency-bound regions. We demonstrate the efficacy of these features both at the operator level (ML communication collectives such as all-gather and all-to-all), and at the end-to-end workload level (LLM inference). At the operator level, our optimizations provide up to 4.5$\\times$ speedups (3.2$\\times$ geomean in the latency-bound region) over baseline DMA offload, narrowing the performance gap while delivering additional power savings (3-10%) for ML collectives compared to state-of-the-art GPU core-based communication library, RCCL. At the workload level, we demonstrate acceleration for LLM inference: up to 1.65$\\times$ lower latency and up to 1.9$\\times$ higher throughput over the state-of-the-art vLLM inference framework. We conclude with a discussion of AMD Instinct GPU runtime innovations that stand to expose these features.",
+      "identifiers": [
+        "SemanticScholar:9da2c9aaf9c9a09cbf981d5fc59b2bb6f7b7c5db"
+      ],
+      "semantic_scholar_id": "9da2c9aaf9c9a09cbf981d5fc59b2bb6f7b7c5db",
+      "canonical_id": "arXiv:2511.06605",
+      "arxiv_id": "2511.06605",
+      "authors": [
+        "Suchita Pati",
+        "Shaizeen Aga",
+        "Mahzabeen Islam",
+        "Ryan Quach",
+        "Saleel Kudchadker",
+        "M. Ibrahim"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 338,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SFMP: Fine-Grained, Hardware-Friendly and Search-Free Mixed-Precision Quantization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.01027",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixed-precision quantization is a promising approach for compressing large language models under tight memory budgets. However, existing mixed-precision methods typically suffer from one of two limitations: they either rely on expensive discrete optimization to determine precision allocation, or introduce hardware inefficiencies due to irregular memory layouts. We propose SFMP, a search-free and hardware-friendly mixed-precision quantization framework for large language models. The framework is built upon four novel ideas: Fractional bit-width, which extends integer bit-width for weight matrix to fractional value and transforms discrete precision allocation as a continuous problem; 2)Block-wise mixed-precision, enabling fine-grained precision within weight matrices while remaining hardware-friendly; 3)Row-column weight reordering, which aggregates salient weights via row and column reordering, incurring only a small activation reordering overhead during inference; 4)Unified GEMM kernel, which supports mixed-precision GEMM at arbitrary average bit-width. Extensive experiments demonstrate that SFMP outperforms state-of-the-art layer-wise mixed-precision methods under the same memory constraints, while significantly reducing quantization cost and improving inference efficiency. Code is available at https://github.com/Nkniexin/SFMP",
+      "identifiers": [
+        "SemanticScholar:4851dd38fdb4491852d6bdf7f04060791dacbcfa"
+      ],
+      "semantic_scholar_id": "4851dd38fdb4491852d6bdf7f04060791dacbcfa",
+      "canonical_id": "arXiv:2602.01027",
+      "arxiv_id": "2602.01027",
+      "doi": "10.48550/arXiv.2602.01027",
+      "authors": [
+        "Xin Nie",
+        "Haicheng Zhang",
+        "Liang Dong",
+        "Beining Feng",
+        "J. Weng",
+        "Gui-Ling Sun"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 255,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2601.07878",
+      "year": 2026,
+      "published": "2026-01-11",
+      "venue": "International Conference on Agents and Artificial Intelligence",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The benefits of most large language models come with steep and often hidden economic and environmental costs due to their resource usage inefficiency during deployment. Model quantization improves energy and memory efficiency through representing model parameters by lower-precision values. However, compression below 4-bits often distorts activation distributions and degrades performance. We address this challenge by introducing a sliced Wasserstein loss function for distribution-aware calibration in ultra-low-bit post-training quantization. The proposed loss aligns the output distributions of full-precision and quantized models under random linear projections, complementing standard mean-squared error loss without adding any computational overhead during inference. Our proposed loss function can be incorporated with any post-training quantization framework that has a retraining component. We demonstrate the performance gains of our proposed model by incorporating it with two frontier methods known as OmniQuant and TesseraQ. Compared to these two baselines, the proposed loss consistently improves both perplexity and downstream task accuracy across multiple ultra-low-bit settings. Our proposed loss function recovers 4.12-20.37% of the OmniQuant's lost accuracy on the language model LLaMA-2-7B, 0.93-7.65% on OPT-6.7B, and 2.26-6.20% on LLaMA-2-13B. TesseraQ's accuracy degradation is recovered by 3.63-7.63% in relative terms when augmented by our proposed loss function. Taken together, these results demonstrate that distributional alignment provides a simple yet effective performance boost that can push the limits of frontier quantization methods. Our method is available on GitHub to facilitate future progress in ultra-low-bit quantization.",
+      "identifiers": [
+        "SemanticScholar:34241035a2ce735dfbe146826e9511dbd57a7fc4"
+      ],
+      "semantic_scholar_id": "34241035a2ce735dfbe146826e9511dbd57a7fc4",
+      "canonical_id": "arXiv:2601.07878",
+      "arxiv_id": "2601.07878",
+      "doi": "10.48550/arXiv.2601.07878",
+      "authors": [
+        "Deyu Cao",
+        "Yixin Yin",
+        "Samin Aref"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 276,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Graphical einops: bridging tensor networks and computation graphs",
+      "source_url": "https://arxiv.org/abs/2605.31485",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Architecture diagrams are ubiquitous in deep learning, but they are usually only representational: the tensor-program identities they suggest are still proved by prose and tensor-axis manipulation. We introduce a formal graphical calculus for the structural fragment of tensor programming underlying einops, making such diagrams proof-enabling. Our calculus represents tensor axes as nested graded tubes around a base type. The tube boundary recovers the undirected tensor-network view of axes, while the directed interior retains the operational reading of computation graphs. The key rewrite is grade-naturality: sliding spectacles over tubes. Standard equivariance proofs become short diagrammatic derivations. We additionally demonstrate how our rewrite system may be applied to convert attention masks into pre-processing operations, recovering efficient implementations of sparse attention blocks.",
+      "identifiers": [
+        "SemanticScholar:00ed4afaf8fe863c861ac3dba77097ff3f9d0202"
+      ],
+      "semantic_scholar_id": "00ed4afaf8fe863c861ac3dba77097ff3f9d0202",
+      "canonical_id": "arXiv:2605.31485",
+      "arxiv_id": "2605.31485",
+      "doi": "10.48550/arXiv.2605.31485",
+      "authors": [
+        "Vincent Wang-Mascianica",
+        "Nikhil Khatri"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Diffusion Language Model Parallel Decoding via Product-of-Experts Bridge",
+      "source_url": "https://arxiv.org/abs/2606.08048",
+      "year": 2026,
+      "published": "2026-06-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) offer substantial speed advantages through parallel decoding, but the lack of token dependencies limits generation quality compared to autoregressive (AR) models. Recent progress attempts to bridge the gap via importance sampling, with DLM being the proposal and AR being the target. However, due to the huge gap between their distributions, the sampling requires a large number of particles and is thus expensive to compute. In this paper, we introduce PoE-Bridge, a novel decoding framework that drastically improves generation speed and accuracy by introducing an intermediate distribution to bridge the gap. The distribution is constructed as a Product-of-Experts (PoE) of the DLM proposal and the AR target. With the intermediate distribution, we first use the DLM to draft multiple continuations in parallel, then apply rejection sampling to verify the drafted tokens and move the resulting candidates toward the PoE. We then use importance sampling to further correct the PoE-aligned candidates toward the AR target. We further propose several improved techniques, including mixed-temperature sampling for enhanced diversity and elastic rejection windows for reducing wasted verification. Empirically, PoE-Bridge achieves significantly improved accuracy with $5\\times$ speedup over the standard DLM decoding approach, and recovers at least 95% of the target AR model's performance, efficiently advancing most of the quality gap on challenging mathematical reasoning and coding tasks. Our code is available at https://github.com/juntongshi48/poe-bridge.",
+      "identifiers": [
+        "SemanticScholar:d0335213e6c554cb3c18898e899f7d3ccc504fbd"
+      ],
+      "semantic_scholar_id": "d0335213e6c554cb3c18898e899f7d3ccc504fbd",
+      "canonical_id": "arXiv:2606.08048",
+      "arxiv_id": "2606.08048",
+      "doi": "10.48550/arXiv.2606.08048",
+      "authors": [
+        "Juntong Shi",
+        "Brian L. Trippe",
+        "J. Leskovec",
+        "S. Ermon",
+        "Minkai Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 130,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "freePruner: A Training-free Approach for Large Multimodal Model Acceleration",
+      "source_url": "https://arxiv.org/abs/2411.15446",
+      "year": 2024,
+      "published": "2024-11-23",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Multimodal Models (LMMs) have demonstrated impressive capabilities in visual-language tasks but face significant deployment challenges due to their high computational demands. While recent token reduction methods show promise for accelerating LMMs, they typically require extensive retraining or fine-tuning, making them impractical for many state-of-the-art models, especially those with proprietary training data. We propose freePruner, a training-free token reduction approach that can be directly applied to any open-source LMM without additional training. Unlike existing methods that rely heavily on token merging operations, freePruner employs a two-stage token selection strategy: (1) identifying pivotal tokens that capture high-level semantic information using our designed contribution degree metric, and (2) selecting complementary tokens that preserve essential low-level visual details through attention pattern analysis. Extensive experiments demonstrate that freePruner achieves 2x acceleration while maintaining comparable performance across mainstream visual question-answering benchmarks in the training-free setting. Moreover, freePruner is orthogonal to and can be combined with other post-training acceleration techniques, such as post-training quantization, providing a practical solution for efficient LMM deployment.",
+      "identifiers": [
+        "SemanticScholar:666f9f90c297ea7acb471e43b8f754b9d46b6f79"
+      ],
+      "semantic_scholar_id": "666f9f90c297ea7acb471e43b8f754b9d46b6f79",
+      "canonical_id": "arXiv:2411.15446",
+      "arxiv_id": "2411.15446",
+      "doi": "10.48550/arXiv.2411.15446",
+      "authors": [
+        "Bing-Xin Xu",
+        "Yuzhang Shang",
+        "Yunhao Ge",
+        "Qian Lou",
+        "Yan Yan"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 690,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "To Compress or Not? Pushing the Frontier of Lossless GenAI Model Weights Compression with Exponent Concentration",
+      "source_url": "https://arxiv.org/abs/2510.02676",
+      "year": 2025,
+      "published": "2025-10-03",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The scaling of Generative AI (GenAI) models into the hundreds of billions of parameters makes low-precision computation indispensable for efficient deployment. We argue that the fundamental solution lies in developing low-precision floating-point formats, which inherently provide numerical stability, memory savings, and hardware efficiency without dequantization overhead. In this paper, we present a theoretical and empirical study of an exponent concentration phenomenon in GenAI weights: exponents consistently exhibit low entropy across architectures and modalities. We show that this arises naturally from $\\alpha$-stable distributions induced by stochastic gradient descent, and we prove tight bounds on the entropy of exponents. Our analysis establishes a theoretical compression limit near FP4.67, which motivates the design of a practical FP8 format. Building on these insights, we propose Exponent-Concentrated FP8 (ECF8), a lossless compression framework with entropy-aware encoding and GPU-optimized decoding. Experiments on LLMs and DiTs up to 671B parameters demonstrate up to 26.9% memory savings and 177.1% throughput acceleration, with perfectly lossless computations, i.e., no deviation in model outputs. Our results establish exponent concentration as a statistical law of trained models and open a principled path for lossless low-precision floating-point design in the FP8 era.",
+      "identifiers": [
+        "SemanticScholar:0ded752c950044111c5185f530b6c69725d3d828"
+      ],
+      "semantic_scholar_id": "0ded752c950044111c5185f530b6c69725d3d828",
+      "canonical_id": "arXiv:2510.02676",
+      "arxiv_id": "2510.02676",
+      "doi": "10.48550/arXiv.2510.02676",
+      "authors": [
+        "Zeyu Yang",
+        "Tian-Yi Zhang",
+        "Jian-Wen Xie",
+        "Chuan Li",
+        "Zhaozhuo Xu",
+        "Anshumali Shrivastava"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 376,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "XKV: Personalized KV Cache Memory Reduction for Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2412.05896",
+      "year": 2024,
+      "published": "2024-12-08",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently the generative Large Language Model (LLM) has achieved remarkable success in numerous applications. Notably its inference generates output tokens one-by-one, leading to many redundant computations. The widely-used KV-Cache framework makes a compromise between time and space complexities. However, caching data generates the increasingly growing memory demand, that can quickly exhaust the limited memory capacity of the modern accelerator like GPUs, particularly in long-context inference tasks. Existing studies reduce memory consumption by evicting some of cached data that have less important impact on inference accuracy. But the benefit in practice is far from ideal due to the static cache allocation across different LLM network layers. This paper observes that the layer-specific cached data have very different impacts on accuracy. We quantify this difference, and give experimental and theoretical validation. We accordingly make a formal analysis and shows that customizing the cache size for each layer in a personalized manner can yield a significant memory reduction, while still providing comparable accuracy. We simulate the cache allocation as a combinatorial optimization problem and give a global optimal solution. In particular, we devise a mini- and sampling-based inference over a lightweight variant of the LLM model, so as to quickly capture the difference and then feed it into the personalized algorithms. Extensive experiments on real-world datasets demonstrate that our proposals can reduce KV cache memory consumption by 61.6% on average, improve computational efficiency by 2.1x and then increase the throughput by up to 5.5x.",
+      "identifiers": [
+        "SemanticScholar:025d028a254ebf0cb282517535cb8a023bb828de"
+      ],
+      "semantic_scholar_id": "025d028a254ebf0cb282517535cb8a023bb828de",
+      "canonical_id": "arXiv:2412.05896",
+      "arxiv_id": "2412.05896",
+      "doi": "10.48550/arXiv.2412.05896",
+      "authors": [
+        "Weizhuo Li",
+        "Zhigang Wang",
+        "Yu Gu",
+        "Ge Yu"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 675,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Superpipeline: A Universal Approach for Reducing GPU Memory Usage in Large Models",
+      "source_url": "https://arxiv.org/abs/2410.08791",
+      "year": 2024,
+      "published": "2024-10-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth in machine learning models, especially in natural language processing and computer vision, has led to challenges when running these models on hardware with limited resources. This paper introduces Superpipeline, a new framework designed to optimize the execution of large AI models on constrained hardware during both training and inference. Our approach involves dynamically managing model execution by dividing models into individual layers and efficiently transferring these layers between GPU and CPU memory. Superpipeline reduces GPU memory usage by up to 60% in our experiments while maintaining model accuracy and acceptable processing speeds. This allows models that would otherwise exceed available GPU memory to run effectively. Unlike existing solutions that focus mainly on inference or specific model types, Superpipeline can be applied to large language models (LLMs), vision-language models (VLMs), and vision-based models. We tested Superpipeline's performance across various models and hardware setups. The method includes two key parameters that allow fine-tuning the balance between GPU memory use and processing speed. Importantly, Superpipeline does not require retraining or changing model parameters, ensuring that the original model's output remains unchanged. Superpipeline's simplicity and flexibility make it useful for researchers and professionals working with advanced AI models on limited hardware. It enables the use of larger models or bigger batch sizes on existing hardware, potentially speeding up innovation across many machine learning applications. This work marks an important step toward making advanced AI models more accessible and optimizing their deployment in resource-limited environments. The code for Superpipeline is available at https://github.com/abbasiReza/super-pipeline.",
+      "identifiers": [
+        "SemanticScholar:73c7949935c5126b35b559ac5ecad80dc7b16b22"
+      ],
+      "semantic_scholar_id": "73c7949935c5126b35b559ac5ecad80dc7b16b22",
+      "canonical_id": "arXiv:2410.08791",
+      "arxiv_id": "2410.08791",
+      "doi": "10.48550/arXiv.2410.08791",
+      "authors": [
+        "Reza Abbasi",
+        "Sernam Lim"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 733,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.15202",
+      "identity_tokens": [
+        "id:SemanticScholar:6593052baf3d32f6f071ba5cd4c22e0b06b58d8d",
+        "id:arXiv:2603.15202",
+        "title:simple is better multiplication may be all you need for llm request scheduling",
+        "url:https://arxiv.org/abs/2603.15202"
+      ],
+      "record": {
+        "title": "Simple is Better: Multiplication May Be All You Need for LLM Request Scheduling",
+        "source_url": "https://arxiv.org/abs/2603.15202",
+        "year": 2026,
+        "published": "2026-03-16",
+        "venue": null,
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "High-quality LLM request scheduling requires meeting two key objectives: ensuring the routed instance has KVCache to accelerate request execution, and ensuring that the workload is balanced across instances. Achieving both objectives is challenging because pursuing one may compromise the other. Current approaches use various combinators (e.g., linear combinations) to compute a scheduling score that combines indicators for the two objectives. These approaches are complex: they either require significant workload-specific hyperparameter tuning or model-hardware-aware simulator development, yet could still lead to suboptimal performance. In this paper, we show that using a simple multiplication of two carefully chosen indicators: one KVCache-aware (new prefill tokens if routed to an instance) and one load-balancing-aware (current batch size of the instance), as the scheduling score (LMETRIC) can achieve both objectives simultaneously without any hyperparameter tuning. The key idea is that the simply multiplied score considers both objectives in a manner similar to a linear combination, but the original hyperparameters cancel out during comparison, so no tuning is needed to find the best parameters. The two indicators are chosen based on our analysis of LLM characteristics. Our extensive experiments show that this simple approach can reduce TTFT by 92% and 39%, and TPOT by 24% and 51%, compared to vLLM-v1 and an in-production scheduler on real-world workloads covering chatbots and coding agents. We also derive the mathematical conditions under which multiplication may fail, and find that such conditions are extremely rare in practice and can be detected (and mitigated) beforehand. LMETRIC has been deployed in production and canary release confirms its effectiveness",
+        "identifiers": [
+          "SemanticScholar:6593052baf3d32f6f071ba5cd4c22e0b06b58d8d"
+        ],
+        "semantic_scholar_id": "6593052baf3d32f6f071ba5cd4c22e0b06b58d8d",
+        "canonical_id": "arXiv:2603.15202",
+        "arxiv_id": "2603.15202",
+        "authors": [
+          "Dingyan Zhang",
+          "Jinbo Han",
+          "Kaixin Zhang",
+          "Xing-Da Wei",
+          "Si-Jie Shen",
+          "Chenguang Fang",
+          "Wen-Yuan Yu",
+          "Jing-Ren Zhou",
+          "Rong Chen"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 212,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04032",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.04032",
+        "id:SemanticScholar:dab74b0df580c364bb1cf3e7075b1b10e0ee1b7c",
+        "id:arXiv:2606.04032",
+        "title:do transformers need three projections systematic study of qkv variants",
+        "url:https://arxiv.org/abs/2606.04032"
+      ],
+      "record": {
+        "title": "Do Transformers Need Three Projections? Systematic Study of QKV Variants",
+        "source_url": "https://arxiv.org/abs/2606.04032",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have become the standard solution for various AI tasks, with the query, key, and value (QKV) attention formulation playing a central role. However, the individual contribution of these three projections and the impact of omitting some remain poorly understood. We systematically evaluate three projection sharing constraints: a) Q-K=V (shared key-value), b) Q=K-V (shared query-key), and c) Q=K=V (single projection). The last two variants produce symmetric attention maps; to address this, we also explore asymmetric attention via 2D positional encodings. Through experiments spanning synthetic tasks, vision (MNIST, CIFAR, TinyImageNet, anomaly), and language modeling (300M and 1.2B parameter models on 10B tokens), we discovered that our transformers perform on par or occasionally better than the QKV transformer. In language modeling, Q-K=V projection sharing achieves 50% KV cache reduction with only 3.1% perplexity degradation. Crucially, projection sharing is complementary to head sharing (GQA/MQA): combining Q-K=V with GQA-4 yields 87.5% cache reduction, while Q-K=V + MQA achieves 96.9%, enabling practical on-device inference. We show that Q-K=V preserves quality because keys and values can occupy similar representational spaces and attention operates in a low-rank regime, whereas Q=K-V breaks attention directionality. Our results systematically characterize projection sharing as an underexplored instance of weight tying in attention, with direct, quantifiable inference memory benefits, particularly valuable for edge deployment. The code is publicly available at https://github.com/Brainchip-Inc/Do-Transformers-Need-3-Projections",
+        "identifiers": [
+          "SemanticScholar:dab74b0df580c364bb1cf3e7075b1b10e0ee1b7c"
+        ],
+        "semantic_scholar_id": "dab74b0df580c364bb1cf3e7075b1b10e0ee1b7c",
+        "canonical_id": "arXiv:2606.04032",
+        "arxiv_id": "2606.04032",
+        "doi": "10.48550/arXiv.2606.04032",
+        "authors": [
+          "Ali Kayyam",
+          "Anusha Madan Gopal",
+          "M. Lewis"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 135,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.29843",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.29843",
+        "id:SemanticScholar:28cb61693cbf2ddc35f146ee0b2c09541039270e",
+        "id:arXiv:2605.29843",
+        "title:harp hadamardpreconditioned adaptive rotation processor for extreme llm quantization",
+        "url:https://arxiv.org/abs/2605.29843"
+      ],
+      "record": {
+        "title": "HARP: Hadamard-Preconditioned Adaptive Rotation Processor for Extreme LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2605.29843",
+        "year": 2026,
+        "published": "2026-05-28",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) is essential for deploying LLMs under memory and bandwidth constraints. However, extreme low-bit quantization remains highly sensitive to activation outliers and anisotropic weight curvature. Existing incoherence-based PTQ methods mitigate this issue with fixed randomized Hadamard transforms (RHTs), which improve quantization robustness but cannot adapt the rotated basis to the layer, calibration distribution, or quantizer. We introduce HARP (Hadamard-preconditioned Adaptive Rotation Processor), a learnable structured two-sided orthogonal processor that replaces fixed Hadamard mixing while preserving exact full-precision equivalence. HARP represents each rotation as a product of sparse butterfly-like block-orthogonal stages, supports non-power-of-two dimensions through Mixed-Radix schedules, and initializes to the RHT processor up to a fixed permutation. Fitted only on calibration data, HARP adapts the quantization basis to each layer and backend. Across 2--4-bit settings on Llama models from 1B to 70B, HARP consistently improves perplexity and yields its clearest zero-shot gains at 2 bits; a 2-bit Qwen3-8B experiment shows the same transfer beyond the Llama family. HARP also preserves deployment efficiency: on Llama 2 7B at 2 bits, it reaches 128 tok/s, retaining 90% of RHT throughput (142 tok/s) and running approximately $2.1\\times$ faster than FP16 (61 tok/s).",
+        "identifiers": [
+          "SemanticScholar:28cb61693cbf2ddc35f146ee0b2c09541039270e"
+        ],
+        "semantic_scholar_id": "28cb61693cbf2ddc35f146ee0b2c09541039270e",
+        "canonical_id": "arXiv:2605.29843",
+        "arxiv_id": "2605.29843",
+        "doi": "10.48550/arXiv.2605.29843",
+        "authors": [
+          "A. Zagitov",
+          "G. Molodtsov",
+          "A. Beznosikov"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 139,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.22910",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.22910",
+        "id:SemanticScholar:aa927cfa87ddd7ccfbc97910f77163ac9df5a32c",
+        "id:arXiv:2603.22910",
+        "title:echokv efficient kv cache compression via similaritybased reconstruction",
+        "url:https://arxiv.org/abs/2603.22910"
+      ],
+      "record": {
+        "title": "EchoKV: Efficient KV Cache Compression via Similarity-Based Reconstruction",
+        "source_url": "https://arxiv.org/abs/2603.22910",
+        "year": 2026,
+        "published": "2026-03-24",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The increasing memory demand of the Key-Value (KV) cache poses a significant bottleneck for Large Language Models (LLMs) in long-context applications. Existing low-rank KV compression methods reduce this footprint by modifying model projections, limiting the flexibility to switch back to standard full-cache inference when sufficient memory is available. In this paper, we propose EchoKV, a flexible KV cache compression framework that supports on-demand transitions from full KV caching to compressed caching. Unlike traditional compression-decompression paradigms, EchoKV utilizes a lightweight network to reconstruct the discarded KV components from a partial subset, exploiting intrinsic inter-layer and intra-layer similarities among attention heads. We further introduce a lightweight two-stage fine-tuning strategy, requiring only a few minutes on a single A100 GPU for a 7B model. Experimental results on LongBench and RULER demonstrate that EchoKV consistently outperforms existing methods across multiple compression ratios and backbone models while preserving the throughput of full-cache inference in short-context scenarios.",
+        "identifiers": [
+          "SemanticScholar:aa927cfa87ddd7ccfbc97910f77163ac9df5a32c"
+        ],
+        "semantic_scholar_id": "aa927cfa87ddd7ccfbc97910f77163ac9df5a32c",
+        "canonical_id": "arXiv:2603.22910",
+        "arxiv_id": "2603.22910",
+        "doi": "10.48550/arXiv.2603.22910",
+        "authors": [
+          "Yixuan Wang",
+          "Shi-Yu Ji",
+          "Yijun Liu",
+          "Qing-Fu Zhu",
+          "Wanxiang Che"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 204,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.06605",
+      "identity_tokens": [
+        "id:SemanticScholar:9da2c9aaf9c9a09cbf981d5fc59b2bb6f7b7c5db",
+        "id:arXiv:2511.06605",
+        "title:dmalatte expanding the reach of dma offloads to latencybound ml communication",
+        "url:https://arxiv.org/abs/2511.06605"
+      ],
+      "record": {
+        "title": "DMA-Latte: Expanding the Reach of DMA Offloads to Latency-bound ML Communication",
+        "source_url": "https://arxiv.org/abs/2511.06605",
+        "year": 2025,
+        "published": "2025-11-10",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Offloading communication to existing direct memory access (DMA) engines, available on most state-of-the-art commercial GPUs, has emerged as a practical and low-cost solution to efficiently overlap computation and communication in machine learning (ML). However, the reach of DMA offloads has so far been limited to bandwidth-bound scenarios only (10s of MB to GB transfer sizes). In this work, we break this barrier and extend DMA communication offloads to latency-bound regions (KB to low MB). Specifically, we leverage hitherto untapped features available in the state-of-the-art AMD Instinct$^{\\mathrm{TM}}$ GPUs that render DMA communication offloads competitive even in latency-bound regions. We demonstrate the efficacy of these features both at the operator level (ML communication collectives such as all-gather and all-to-all), and at the end-to-end workload level (LLM inference). At the operator level, our optimizations provide up to 4.5$\\times$ speedups (3.2$\\times$ geomean in the latency-bound region) over baseline DMA offload, narrowing the performance gap while delivering additional power savings (3-10%) for ML collectives compared to state-of-the-art GPU core-based communication library, RCCL. At the workload level, we demonstrate acceleration for LLM inference: up to 1.65$\\times$ lower latency and up to 1.9$\\times$ higher throughput over the state-of-the-art vLLM inference framework. We conclude with a discussion of AMD Instinct GPU runtime innovations that stand to expose these features.",
+        "identifiers": [
+          "SemanticScholar:9da2c9aaf9c9a09cbf981d5fc59b2bb6f7b7c5db"
+        ],
+        "semantic_scholar_id": "9da2c9aaf9c9a09cbf981d5fc59b2bb6f7b7c5db",
+        "canonical_id": "arXiv:2511.06605",
+        "arxiv_id": "2511.06605",
+        "authors": [
+          "Suchita Pati",
+          "Shaizeen Aga",
+          "Mahzabeen Islam",
+          "Ryan Quach",
+          "Saleel Kudchadker",
+          "M. Ibrahim"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 338,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.01027",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.01027",
+        "id:SemanticScholar:4851dd38fdb4491852d6bdf7f04060791dacbcfa",
+        "id:arXiv:2602.01027",
+        "title:sfmp finegrained hardwarefriendly and searchfree mixedprecision quantization for large language models",
+        "url:https://arxiv.org/abs/2602.01027"
+      ],
+      "record": {
+        "title": "SFMP: Fine-Grained, Hardware-Friendly and Search-Free Mixed-Precision Quantization for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2602.01027",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixed-precision quantization is a promising approach for compressing large language models under tight memory budgets. However, existing mixed-precision methods typically suffer from one of two limitations: they either rely on expensive discrete optimization to determine precision allocation, or introduce hardware inefficiencies due to irregular memory layouts. We propose SFMP, a search-free and hardware-friendly mixed-precision quantization framework for large language models. The framework is built upon four novel ideas: Fractional bit-width, which extends integer bit-width for weight matrix to fractional value and transforms discrete precision allocation as a continuous problem; 2)Block-wise mixed-precision, enabling fine-grained precision within weight matrices while remaining hardware-friendly; 3)Row-column weight reordering, which aggregates salient weights via row and column reordering, incurring only a small activation reordering overhead during inference; 4)Unified GEMM kernel, which supports mixed-precision GEMM at arbitrary average bit-width. Extensive experiments demonstrate that SFMP outperforms state-of-the-art layer-wise mixed-precision methods under the same memory constraints, while significantly reducing quantization cost and improving inference efficiency. Code is available at https://github.com/Nkniexin/SFMP",
+        "identifiers": [
+          "SemanticScholar:4851dd38fdb4491852d6bdf7f04060791dacbcfa"
+        ],
+        "semantic_scholar_id": "4851dd38fdb4491852d6bdf7f04060791dacbcfa",
+        "canonical_id": "arXiv:2602.01027",
+        "arxiv_id": "2602.01027",
+        "doi": "10.48550/arXiv.2602.01027",
+        "authors": [
+          "Xin Nie",
+          "Haicheng Zhang",
+          "Liang Dong",
+          "Beining Feng",
+          "J. Weng",
+          "Gui-Ling Sun"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 255,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.07878",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.07878",
+        "id:SemanticScholar:34241035a2ce735dfbe146826e9511dbd57a7fc4",
+        "id:arXiv:2601.07878",
+        "title:slicedwasserstein distribution alignment loss improves the ultralowbit quantization of large language models",
+        "url:https://arxiv.org/abs/2601.07878"
+      ],
+      "record": {
+        "title": "Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2601.07878",
+        "year": 2026,
+        "published": "2026-01-11",
+        "venue": "International Conference on Agents and Artificial Intelligence",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The benefits of most large language models come with steep and often hidden economic and environmental costs due to their resource usage inefficiency during deployment. Model quantization improves energy and memory efficiency through representing model parameters by lower-precision values. However, compression below 4-bits often distorts activation distributions and degrades performance. We address this challenge by introducing a sliced Wasserstein loss function for distribution-aware calibration in ultra-low-bit post-training quantization. The proposed loss aligns the output distributions of full-precision and quantized models under random linear projections, complementing standard mean-squared error loss without adding any computational overhead during inference. Our proposed loss function can be incorporated with any post-training quantization framework that has a retraining component. We demonstrate the performance gains of our proposed model by incorporating it with two frontier methods known as OmniQuant and TesseraQ. Compared to these two baselines, the proposed loss consistently improves both perplexity and downstream task accuracy across multiple ultra-low-bit settings. Our proposed loss function recovers 4.12-20.37% of the OmniQuant's lost accuracy on the language model LLaMA-2-7B, 0.93-7.65% on OPT-6.7B, and 2.26-6.20% on LLaMA-2-13B. TesseraQ's accuracy degradation is recovered by 3.63-7.63% in relative terms when augmented by our proposed loss function. Taken together, these results demonstrate that distributional alignment provides a simple yet effective performance boost that can push the limits of frontier quantization methods. Our method is available on GitHub to facilitate future progress in ultra-low-bit quantization.",
+        "identifiers": [
+          "SemanticScholar:34241035a2ce735dfbe146826e9511dbd57a7fc4"
+        ],
+        "semantic_scholar_id": "34241035a2ce735dfbe146826e9511dbd57a7fc4",
+        "canonical_id": "arXiv:2601.07878",
+        "arxiv_id": "2601.07878",
+        "doi": "10.48550/arXiv.2601.07878",
+        "authors": [
+          "Deyu Cao",
+          "Yixin Yin",
+          "Samin Aref"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 276,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.31485",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.31485",
+        "id:SemanticScholar:00ed4afaf8fe863c861ac3dba77097ff3f9d0202",
+        "id:arXiv:2605.31485",
+        "title:graphical einops bridging tensor networks and computation graphs",
+        "url:https://arxiv.org/abs/2605.31485"
+      ],
+      "record": {
+        "title": "Graphical einops: bridging tensor networks and computation graphs",
+        "source_url": "https://arxiv.org/abs/2605.31485",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Architecture diagrams are ubiquitous in deep learning, but they are usually only representational: the tensor-program identities they suggest are still proved by prose and tensor-axis manipulation. We introduce a formal graphical calculus for the structural fragment of tensor programming underlying einops, making such diagrams proof-enabling. Our calculus represents tensor axes as nested graded tubes around a base type. The tube boundary recovers the undirected tensor-network view of axes, while the directed interior retains the operational reading of computation graphs. The key rewrite is grade-naturality: sliding spectacles over tubes. Standard equivariance proofs become short diagrammatic derivations. We additionally demonstrate how our rewrite system may be applied to convert attention masks into pre-processing operations, recovering efficient implementations of sparse attention blocks.",
+        "identifiers": [
+          "SemanticScholar:00ed4afaf8fe863c861ac3dba77097ff3f9d0202"
+        ],
+        "semantic_scholar_id": "00ed4afaf8fe863c861ac3dba77097ff3f9d0202",
+        "canonical_id": "arXiv:2605.31485",
+        "arxiv_id": "2605.31485",
+        "doi": "10.48550/arXiv.2605.31485",
+        "authors": [
+          "Vincent Wang-Mascianica",
+          "Nikhil Khatri"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 138,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.08048",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.08048",
+        "id:SemanticScholar:d0335213e6c554cb3c18898e899f7d3ccc504fbd",
+        "id:arXiv:2606.08048",
+        "title:diffusion language model parallel decoding via productofexperts bridge",
+        "url:https://arxiv.org/abs/2606.08048"
+      ],
+      "record": {
+        "title": "Diffusion Language Model Parallel Decoding via Product-of-Experts Bridge",
+        "source_url": "https://arxiv.org/abs/2606.08048",
+        "year": 2026,
+        "published": "2026-06-06",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models (DLMs) offer substantial speed advantages through parallel decoding, but the lack of token dependencies limits generation quality compared to autoregressive (AR) models. Recent progress attempts to bridge the gap via importance sampling, with DLM being the proposal and AR being the target. However, due to the huge gap between their distributions, the sampling requires a large number of particles and is thus expensive to compute. In this paper, we introduce PoE-Bridge, a novel decoding framework that drastically improves generation speed and accuracy by introducing an intermediate distribution to bridge the gap. The distribution is constructed as a Product-of-Experts (PoE) of the DLM proposal and the AR target. With the intermediate distribution, we first use the DLM to draft multiple continuations in parallel, then apply rejection sampling to verify the drafted tokens and move the resulting candidates toward the PoE. We then use importance sampling to further correct the PoE-aligned candidates toward the AR target. We further propose several improved techniques, including mixed-temperature sampling for enhanced diversity and elastic rejection windows for reducing wasted verification. Empirically, PoE-Bridge achieves significantly improved accuracy with $5\\times$ speedup over the standard DLM decoding approach, and recovers at least 95% of the target AR model's performance, efficiently advancing most of the quality gap on challenging mathematical reasoning and coding tasks. Our code is available at https://github.com/juntongshi48/poe-bridge.",
+        "identifiers": [
+          "SemanticScholar:d0335213e6c554cb3c18898e899f7d3ccc504fbd"
+        ],
+        "semantic_scholar_id": "d0335213e6c554cb3c18898e899f7d3ccc504fbd",
+        "canonical_id": "arXiv:2606.08048",
+        "arxiv_id": "2606.08048",
+        "doi": "10.48550/arXiv.2606.08048",
+        "authors": [
+          "Juntong Shi",
+          "Brian L. Trippe",
+          "J. Leskovec",
+          "S. Ermon",
+          "Minkai Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 130,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.15446",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2411.15446",
+        "id:SemanticScholar:666f9f90c297ea7acb471e43b8f754b9d46b6f79",
+        "id:arXiv:2411.15446",
+        "title:freepruner a trainingfree approach for large multimodal model acceleration",
+        "url:https://arxiv.org/abs/2411.15446"
+      ],
+      "record": {
+        "title": "freePruner: A Training-free Approach for Large Multimodal Model Acceleration",
+        "source_url": "https://arxiv.org/abs/2411.15446",
+        "year": 2024,
+        "published": "2024-11-23",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Multimodal Models (LMMs) have demonstrated impressive capabilities in visual-language tasks but face significant deployment challenges due to their high computational demands. While recent token reduction methods show promise for accelerating LMMs, they typically require extensive retraining or fine-tuning, making them impractical for many state-of-the-art models, especially those with proprietary training data. We propose freePruner, a training-free token reduction approach that can be directly applied to any open-source LMM without additional training. Unlike existing methods that rely heavily on token merging operations, freePruner employs a two-stage token selection strategy: (1) identifying pivotal tokens that capture high-level semantic information using our designed contribution degree metric, and (2) selecting complementary tokens that preserve essential low-level visual details through attention pattern analysis. Extensive experiments demonstrate that freePruner achieves 2x acceleration while maintaining comparable performance across mainstream visual question-answering benchmarks in the training-free setting. Moreover, freePruner is orthogonal to and can be combined with other post-training acceleration techniques, such as post-training quantization, providing a practical solution for efficient LMM deployment.",
+        "identifiers": [
+          "SemanticScholar:666f9f90c297ea7acb471e43b8f754b9d46b6f79"
+        ],
+        "semantic_scholar_id": "666f9f90c297ea7acb471e43b8f754b9d46b6f79",
+        "canonical_id": "arXiv:2411.15446",
+        "arxiv_id": "2411.15446",
+        "doi": "10.48550/arXiv.2411.15446",
+        "authors": [
+          "Bing-Xin Xu",
+          "Yuzhang Shang",
+          "Yunhao Ge",
+          "Qian Lou",
+          "Yan Yan"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 690,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.02676",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.02676",
+        "id:SemanticScholar:0ded752c950044111c5185f530b6c69725d3d828",
+        "id:arXiv:2510.02676",
+        "title:to compress or not pushing the frontier of lossless genai model weights compression with exponent concentration",
+        "url:https://arxiv.org/abs/2510.02676"
+      ],
+      "record": {
+        "title": "To Compress or Not? Pushing the Frontier of Lossless GenAI Model Weights Compression with Exponent Concentration",
+        "source_url": "https://arxiv.org/abs/2510.02676",
+        "year": 2025,
+        "published": "2025-10-03",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The scaling of Generative AI (GenAI) models into the hundreds of billions of parameters makes low-precision computation indispensable for efficient deployment. We argue that the fundamental solution lies in developing low-precision floating-point formats, which inherently provide numerical stability, memory savings, and hardware efficiency without dequantization overhead. In this paper, we present a theoretical and empirical study of an exponent concentration phenomenon in GenAI weights: exponents consistently exhibit low entropy across architectures and modalities. We show that this arises naturally from $\\alpha$-stable distributions induced by stochastic gradient descent, and we prove tight bounds on the entropy of exponents. Our analysis establishes a theoretical compression limit near FP4.67, which motivates the design of a practical FP8 format. Building on these insights, we propose Exponent-Concentrated FP8 (ECF8), a lossless compression framework with entropy-aware encoding and GPU-optimized decoding. Experiments on LLMs and DiTs up to 671B parameters demonstrate up to 26.9% memory savings and 177.1% throughput acceleration, with perfectly lossless computations, i.e., no deviation in model outputs. Our results establish exponent concentration as a statistical law of trained models and open a principled path for lossless low-precision floating-point design in the FP8 era.",
+        "identifiers": [
+          "SemanticScholar:0ded752c950044111c5185f530b6c69725d3d828"
+        ],
+        "semantic_scholar_id": "0ded752c950044111c5185f530b6c69725d3d828",
+        "canonical_id": "arXiv:2510.02676",
+        "arxiv_id": "2510.02676",
+        "doi": "10.48550/arXiv.2510.02676",
+        "authors": [
+          "Zeyu Yang",
+          "Tian-Yi Zhang",
+          "Jian-Wen Xie",
+          "Chuan Li",
+          "Zhaozhuo Xu",
+          "Anshumali Shrivastava"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 376,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.05896",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.05896",
+        "id:SemanticScholar:025d028a254ebf0cb282517535cb8a023bb828de",
+        "id:arXiv:2412.05896",
+        "title:xkv personalized kv cache memory reduction for longcontext llm inference",
+        "url:https://arxiv.org/abs/2412.05896"
+      ],
+      "record": {
+        "title": "XKV: Personalized KV Cache Memory Reduction for Long-Context LLM Inference",
+        "source_url": "https://arxiv.org/abs/2412.05896",
+        "year": 2024,
+        "published": "2024-12-08",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently the generative Large Language Model (LLM) has achieved remarkable success in numerous applications. Notably its inference generates output tokens one-by-one, leading to many redundant computations. The widely-used KV-Cache framework makes a compromise between time and space complexities. However, caching data generates the increasingly growing memory demand, that can quickly exhaust the limited memory capacity of the modern accelerator like GPUs, particularly in long-context inference tasks. Existing studies reduce memory consumption by evicting some of cached data that have less important impact on inference accuracy. But the benefit in practice is far from ideal due to the static cache allocation across different LLM network layers. This paper observes that the layer-specific cached data have very different impacts on accuracy. We quantify this difference, and give experimental and theoretical validation. We accordingly make a formal analysis and shows that customizing the cache size for each layer in a personalized manner can yield a significant memory reduction, while still providing comparable accuracy. We simulate the cache allocation as a combinatorial optimization problem and give a global optimal solution. In particular, we devise a mini- and sampling-based inference over a lightweight variant of the LLM model, so as to quickly capture the difference and then feed it into the personalized algorithms. Extensive experiments on real-world datasets demonstrate that our proposals can reduce KV cache memory consumption by 61.6% on average, improve computational efficiency by 2.1x and then increase the throughput by up to 5.5x.",
+        "identifiers": [
+          "SemanticScholar:025d028a254ebf0cb282517535cb8a023bb828de"
+        ],
+        "semantic_scholar_id": "025d028a254ebf0cb282517535cb8a023bb828de",
+        "canonical_id": "arXiv:2412.05896",
+        "arxiv_id": "2412.05896",
+        "doi": "10.48550/arXiv.2412.05896",
+        "authors": [
+          "Weizhuo Li",
+          "Zhigang Wang",
+          "Yu Gu",
+          "Ge Yu"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 675,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.08791",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.08791",
+        "id:SemanticScholar:73c7949935c5126b35b559ac5ecad80dc7b16b22",
+        "id:arXiv:2410.08791",
+        "title:superpipeline a universal approach for reducing gpu memory usage in large models",
+        "url:https://arxiv.org/abs/2410.08791"
+      ],
+      "record": {
+        "title": "Superpipeline: A Universal Approach for Reducing GPU Memory Usage in Large Models",
+        "source_url": "https://arxiv.org/abs/2410.08791",
+        "year": 2024,
+        "published": "2024-10-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid growth in machine learning models, especially in natural language processing and computer vision, has led to challenges when running these models on hardware with limited resources. This paper introduces Superpipeline, a new framework designed to optimize the execution of large AI models on constrained hardware during both training and inference. Our approach involves dynamically managing model execution by dividing models into individual layers and efficiently transferring these layers between GPU and CPU memory. Superpipeline reduces GPU memory usage by up to 60% in our experiments while maintaining model accuracy and acceptable processing speeds. This allows models that would otherwise exceed available GPU memory to run effectively. Unlike existing solutions that focus mainly on inference or specific model types, Superpipeline can be applied to large language models (LLMs), vision-language models (VLMs), and vision-based models. We tested Superpipeline's performance across various models and hardware setups. The method includes two key parameters that allow fine-tuning the balance between GPU memory use and processing speed. Importantly, Superpipeline does not require retraining or changing model parameters, ensuring that the original model's output remains unchanged. Superpipeline's simplicity and flexibility make it useful for researchers and professionals working with advanced AI models on limited hardware. It enables the use of larger models or bigger batch sizes on existing hardware, potentially speeding up innovation across many machine learning applications. This work marks an important step toward making advanced AI models more accessible and optimizing their deployment in resource-limited environments. The code for Superpipeline is available at https://github.com/abbasiReza/super-pipeline.",
+        "identifiers": [
+          "SemanticScholar:73c7949935c5126b35b559ac5ecad80dc7b16b22"
+        ],
+        "semantic_scholar_id": "73c7949935c5126b35b559ac5ecad80dc7b16b22",
+        "canonical_id": "arXiv:2410.08791",
+        "arxiv_id": "2410.08791",
+        "doi": "10.48550/arXiv.2410.08791",
+        "authors": [
+          "Reza Abbasi",
+          "Sernam Lim"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 733,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:39d8bd4c0fbd2088877c2b700e061b34757fa04cb0a2b81b8b33ffc5c57628ab",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "9e5ae738ebf43f7e7665d0c92fa3f795f52c3aa908ebd2119e6420c079386d11",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6cc626877aff--libfile_3b330252d7908191a75952cce0c01535--2025-2511.06605-dma-latte-small-ml-communication-research-20261014-1800-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2511.06605",
+  "worker_completed_at": "2026-10-14T18:00:00+09:00",
+  "worker_run_key": "20261014-1800-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6068,
+    "body_paragraphs": 30,
+    "method_chars": 1856,
+    "method_paragraphs": 10,
+    "evaluation_chars": 1060,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/12-moe-parallelism-communication/2025-2511.06605-dma-latte-expanding-the-reach-of-dma-offloads-to-latency-bound-ml-commun.md と 20 段落 / 4611文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:56:19+00:00"
+}

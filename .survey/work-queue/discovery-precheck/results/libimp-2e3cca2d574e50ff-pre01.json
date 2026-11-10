@@ -1,0 +1,254 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2e3cca2d574e50ff-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2e3cca2d574e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/hpca68181.2026.11408556",
+    "arXiv:2601.09260"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ac9e953295d7ef82442094820c1c7d7f7f414287",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-11T15:43:47.585884+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/hpca68181.2026.11408556",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.09260",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Efficient Paths and Dense Rewards: Probabilistic Flow Reasoning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2601.09260",
+      "year": 2026,
+      "published": "2026-01-14",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "High-quality chain-of-thought has demonstrated strong potential for unlocking the reasoning capabilities of large language models. However, current paradigms typically treat the reasoning process as an indivisible sequence, lacking an intrinsic mechanism to quantify step-wise information gain. This granularity gap manifests in two limitations: inference inefficiency from redundant exploration without explicit guidance, and optimization difficulty due to sparse outcome supervision or costly external verifiers. In this work, we propose CoT-Flow, a framework that reconceptualizes discrete reasoning steps as a continuous probabilistic flow, quantifying the contribution of each step toward the ground-truth answer. Built on this formulation, CoT-Flow enables two complementary methodologies: flow-guided decoding, which employs a greedy flow-based decoding strategy to extract information-efficient reasoning paths, and flow-based reinforcement learning, which constructs a verifier-free dense reward function. Experiments on challenging benchmarks demonstrate that CoT-Flow achieves a superior balance between inference efficiency and reasoning performance.",
+      "identifiers": [
+        "SemanticScholar:e9c102df3f0d3d66de041693cea79658257c7b2b"
+      ],
+      "semantic_scholar_id": "e9c102df3f0d3d66de041693cea79658257c7b2b",
+      "canonical_id": "arXiv:2601.09260",
+      "arxiv_id": "2601.09260",
+      "doi": "10.48550/arXiv.2601.09260",
+      "authors": [
+        "Yan Liu",
+        "Feng Zhang",
+        "Zhanyu Ma",
+        "Jun Xu",
+        "Jiuchong Gao",
+        "Jinghua Hao",
+        "Ren-Qing He",
+        "Han Liu",
+        "Yangdong Deng"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "eGPU: Production-Scale Elastic Sharing Over 10,000 GPUs",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408556",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the cost of GPUs continues to rise, GPU-sharing solutions have become increasingly important for improving efficiency and maximizing resource utilization. At the same time, large-scale operational deployments of such solutions remain relatively less explored, especially in heterogeneous production environments where workload dynamics and orchestration complexity introduce new practical considerations. In this paper, we introduce eGPU, an elastic, efficient, and scalable GPU-sharing framework tailored for production-scale concurrent machine learning (ML) training and inference. eGPU enables fine-grained, runtime-adjustable sharing of GPUs across multiple jobs, while preserving high resource utilization and fault isolation. To address communication bottlenecks, eGPU supports native NVLink/NCCL-based communication between shared GPU instances, capabilities that are limited or unavailable in many existing designs. Built with production deployment in mind, eGPU integrates with Kubernetes (K8s) to support large-scale orchestration. It has been deployed and running stably in production clusters with over $\\text{1 0, 0 0 0 ~ G P U s}$ for five years. Our evaluation results show that eGPU achieves elastic and precise control over instance sizes, improves job efficiency by 21 % to 31% than SOTA sharing solutions, saves the number of GPUs required by up to $8 \\times$, and improves cluster GPU utilization by more than $\\mathrm{3} \\times$.",
+      "identifiers": [
+        "SemanticScholar:6b0acfc8842473e6d3961a5bd3c06b582b937fd5"
+      ],
+      "semantic_scholar_id": "6b0acfc8842473e6d3961a5bd3c06b582b937fd5",
+      "doi": "10.1109/HPCA68181.2026.11408556",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408556",
+      "authors": [
+        "Xiaochuan Tang",
+        "Hao Qi",
+        "Jianbo Dong",
+        "Ying-Hao Yu",
+        "Zhennan Xue",
+        "Zheng-Yu Zhang",
+        "Dao-Cheng Ying",
+        "Zheng Cao",
+        "Xiao-Yi Lu"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.09260",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.09260",
+        "id:SemanticScholar:e9c102df3f0d3d66de041693cea79658257c7b2b",
+        "id:arXiv:2601.09260",
+        "title:efficient paths and dense rewards probabilistic flow reasoning for large language models",
+        "url:https://arxiv.org/abs/2601.09260"
+      ],
+      "record": {
+        "title": "Efficient Paths and Dense Rewards: Probabilistic Flow Reasoning for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2601.09260",
+        "year": 2026,
+        "published": "2026-01-14",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "High-quality chain-of-thought has demonstrated strong potential for unlocking the reasoning capabilities of large language models. However, current paradigms typically treat the reasoning process as an indivisible sequence, lacking an intrinsic mechanism to quantify step-wise information gain. This granularity gap manifests in two limitations: inference inefficiency from redundant exploration without explicit guidance, and optimization difficulty due to sparse outcome supervision or costly external verifiers. In this work, we propose CoT-Flow, a framework that reconceptualizes discrete reasoning steps as a continuous probabilistic flow, quantifying the contribution of each step toward the ground-truth answer. Built on this formulation, CoT-Flow enables two complementary methodologies: flow-guided decoding, which employs a greedy flow-based decoding strategy to extract information-efficient reasoning paths, and flow-based reinforcement learning, which constructs a verifier-free dense reward function. Experiments on challenging benchmarks demonstrate that CoT-Flow achieves a superior balance between inference efficiency and reasoning performance.",
+        "identifiers": [
+          "SemanticScholar:e9c102df3f0d3d66de041693cea79658257c7b2b"
+        ],
+        "semantic_scholar_id": "e9c102df3f0d3d66de041693cea79658257c7b2b",
+        "canonical_id": "arXiv:2601.09260",
+        "arxiv_id": "2601.09260",
+        "doi": "10.48550/arXiv.2601.09260",
+        "authors": [
+          "Yan Liu",
+          "Feng Zhang",
+          "Zhanyu Ma",
+          "Jun Xu",
+          "Jiuchong Gao",
+          "Jinghua Hao",
+          "Ren-Qing He",
+          "Han Liu",
+          "Yangdong Deng"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 270,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/hpca68181.2026.11408556",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpca68181.2026.11408556",
+        "id:SemanticScholar:6b0acfc8842473e6d3961a5bd3c06b582b937fd5",
+        "title:egpu productionscale elastic sharing over 10000 gpus",
+        "url:https://doi.org/10.1109/HPCA68181.2026.11408556"
+      ],
+      "record": {
+        "title": "eGPU: Production-Scale Elastic Sharing Over 10,000 GPUs",
+        "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408556",
+        "year": 2026,
+        "published": "2026-01-31",
+        "venue": "International Symposium on High-Performance Computer Architecture",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As the cost of GPUs continues to rise, GPU-sharing solutions have become increasingly important for improving efficiency and maximizing resource utilization. At the same time, large-scale operational deployments of such solutions remain relatively less explored, especially in heterogeneous production environments where workload dynamics and orchestration complexity introduce new practical considerations. In this paper, we introduce eGPU, an elastic, efficient, and scalable GPU-sharing framework tailored for production-scale concurrent machine learning (ML) training and inference. eGPU enables fine-grained, runtime-adjustable sharing of GPUs across multiple jobs, while preserving high resource utilization and fault isolation. To address communication bottlenecks, eGPU supports native NVLink/NCCL-based communication between shared GPU instances, capabilities that are limited or unavailable in many existing designs. Built with production deployment in mind, eGPU integrates with Kubernetes (K8s) to support large-scale orchestration. It has been deployed and running stably in production clusters with over $\\text{1 0, 0 0 0 ~ G P U s}$ for five years. Our evaluation results show that eGPU achieves elastic and precise control over instance sizes, improves job efficiency by 21 % to 31% than SOTA sharing solutions, saves the number of GPUs required by up to $8 \\times$, and improves cluster GPU utilization by more than $\\mathrm{3} \\times$.",
+        "identifiers": [
+          "SemanticScholar:6b0acfc8842473e6d3961a5bd3c06b582b937fd5"
+        ],
+        "semantic_scholar_id": "6b0acfc8842473e6d3961a5bd3c06b582b937fd5",
+        "doi": "10.1109/HPCA68181.2026.11408556",
+        "canonical_id": "DOI:10.1109/HPCA68181.2026.11408556",
+        "authors": [
+          "Xiaochuan Tang",
+          "Hao Qi",
+          "Jianbo Dong",
+          "Ying-Hao Yu",
+          "Zhennan Xue",
+          "Zheng-Yu Zhang",
+          "Dao-Cheng Ying",
+          "Zheng Cao",
+          "Xiao-Yi Lu"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 253,
+          "matched_prestigious_venue": "High-Performance Computer Architecture"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6a7c3f18c4114186a8dc948a240601b97e409b71a79a132e2804896c118d1487",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

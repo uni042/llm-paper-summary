@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99e9adf7972b4efa-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1911.02727",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1911.02727",
+    "identity_tokens": [
+      "arXiv:1911.02727"
+    ],
+    "reason": "非自己回帰機械翻訳（non-autoregressive machine translation; NAT）におけるsequence-level knowledge distillationの効果を分析し、training targetの複雑性と性能の関係を調べる学習研究。NAT自体は高速復号に関係するが本論文の主貢献はdistillation/training分析で、推論system最適化ではない。",
+    "first_checked_at": "2026-10-05T16:29:37+00:00",
+    "last_checked_at": "2026-10-05T16:29:37+00:00",
+    "linked_from": [],
+    "title": "Understanding Knowledge Distillation in Non-autoregressive Machine Translation"
+  },
+  "processed_at": "2026-10-05T16:29:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99e9adf7972b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

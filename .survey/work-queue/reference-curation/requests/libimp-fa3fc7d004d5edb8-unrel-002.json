@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-fa3fc7d004d5edb8-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "OpenReview:EvDeiLv7qc",
+  "reason": "低ランク適応（LoRA）型エキスパートを用いて命令微調整のパラメータ効率を高める研究で、最終適用先は微調整・能力適応。MoEを使うが推論時のエキスパート配置、オフロード、キャッシュ、通信やサービング高速化を主目的にしないため対象外。",
+  "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning",
+  "identity_tokens": [
+    "OpenReview:EvDeiLv7qc",
+    "arXiv:2309.05444"
+  ],
+  "linked_from": [
+    "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
+    "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa3fc7d004d5",
+  "source_precheck_request_id": null
+}

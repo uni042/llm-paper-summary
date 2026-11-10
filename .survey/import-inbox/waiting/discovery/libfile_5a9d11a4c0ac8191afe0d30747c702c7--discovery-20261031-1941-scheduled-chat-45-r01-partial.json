@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-1941-scheduled-chat-45/r01",
+  "reference_main_sha": "584569fc5c3ca0fc624547e82f97a80f2b1edd16",
+  "record_count": 1,
+  "round_status": "partial",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.01485",
+      "identity_tokens": [
+        "arXiv:2602.01485",
+        "DOI:10.48550/arXiv.2602.01485"
+      ],
+      "title": "Predicting and improving test-time scaling laws via reward tail-guided search",
+      "reason": "LLMのBest-of-N型test-time scalingに対して、報酬分布の上側tailを推定してスケーリング則を予測し、Scaling-Law Guided (SLG) Searchで中間状態へ推論時のサンプリング予算を動的配分する。arXiv原著要旨は同一計算予算でBoNより高い報酬を報告し、理論的にはより大きなBoN計算予算に相当する期待報酬を示す。ただし主眼は推論時探索・推論品質対計算予算の最適化で、GPUサービング、KVキャッシュ、実測TTFT/TPOT/throughputの直接改善を要旨からは確認できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2602.01485",
+      "body_check": "arXiv原著の公開書誌・一次abstractを確認。本文・評価表は未読。abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T19:45:37+09:00",
+      "last_checked_at": "2026-10-31T19:45:37+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 500; test-time scaling / inference compute allocation"
+      ],
+      "worklist_rank": 500
+    }
+  ],
+  "notes": "Worklistタイトル500件を走査。既処理候補をskipし、arXiv一次abstractとGitHub/Library identityの重複が確認されない1件のみ通常判定。UPServeは出版社一次abstract未取得のため保留。"
+}

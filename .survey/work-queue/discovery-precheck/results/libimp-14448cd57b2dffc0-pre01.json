@@ -1,0 +1,1566 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-14448cd57b2dffc0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-14448cd57b2d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tce.2025.3644688",
+    "arXiv:2511.01695",
+    "arXiv:2511.19676",
+    "arXiv:2512.21857",
+    "arXiv:2512.21911",
+    "arXiv:2601.01712",
+    "arXiv:2601.09258",
+    "arXiv:2602.01198",
+    "arXiv:2602.08019",
+    "arXiv:2602.15843",
+    "arXiv:2603.02376",
+    "arXiv:2603.11220",
+    "arXiv:2603.14549",
+    "arXiv:2603.22216",
+    "arXiv:2603.22325",
+    "arXiv:2606.08302"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 16,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "462ff25f399e502a56b366fb56b8707f9e5039f8",
+  "raw_search_result_count": 16,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 16,
+  "provider_progress": {
+    "requested_count": 16,
+    "status_counts": {
+      "allowed": 16,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T20:45:35.928988+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tce.2025.3644688",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.01695",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.19676",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.21857",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.21911",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.01712",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.09258",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.01198",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.08019",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.15843",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.02376",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.11220",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.14549",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.22216",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.22325",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.08302",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Collaborative Large Language Model Inference via Resource-Aware Parallel Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2511.01695",
+      "year": 2025,
+      "published": "2025-11-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing demand for on-device large language model (LLM) inference highlights the need for efficient mobile edge computing (MEC) solutions, especially in resource-constrained settings. Speculative decoding offers a promising solution by partitioning token generation between a lightweight draft model on mobile devices and a powerful target model on edge servers, but suffers from communication overhead and asynchronous delays. This paper is the first to propose a unified framework that jointly optimizes user association and resource allocation (UARA) to support efficient parallel speculative decoding. We solve the UARA problem using a multi-agent deep reinforcement learning algorithm. To evaluate our approach under realistic conditions, we conduct experiments using the Sionna simulator. Results show that our method achieves up to 28.0% and an average of 23.7% reduction in end-to-end latency without compromising inference accuracy, enabling scalable and low-latency LLM services in MEC systems.",
+      "identifiers": [
+        "SemanticScholar:4fa8d697961d80c07fe4806a09e919fb25b3f471"
+      ],
+      "semantic_scholar_id": "4fa8d697961d80c07fe4806a09e919fb25b3f471",
+      "canonical_id": "arXiv:2511.01695",
+      "arxiv_id": "2511.01695",
+      "doi": "10.48550/arXiv.2511.01695",
+      "authors": [
+        "Jungyeon Koh",
+        "Hyun Jong Yang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 344,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "INTERLACE: Interleaved Layer Pruning and Efficient Adaptation in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2511.19676",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce INTERLACE, a novel framework that prunes redundant layers in VLMs while maintaining performance through sample-efficient finetuning. Existing layer pruning methods lead to significant performance drop when applied to VLMs. Instead, we analyze triplets of consecutive layers to identify local redundancy, removing the most redundant of the first two layers, finetune the remaining layer to compensate for the lost capacity, and freeze the third layer to serve as a stable anchor during finetuning. We found that this interleaved finetune-freeze design enables rapid convergence with minimal data after pruning. By finetuning only a subset of layers on just 1% of the FineVision dataset for one epoch, Interlace achieves 88.9% average performance retention after dropping 25% of the network, achieving SOTA performance. Our code is available at: https://github.com/pmadinei/Interlace.git",
+      "identifiers": [
+        "SemanticScholar:7519442225d88b6cee7d98858f72ab66ea879625"
+      ],
+      "semantic_scholar_id": "7519442225d88b6cee7d98858f72ab66ea879625",
+      "canonical_id": "arXiv:2511.19676",
+      "arxiv_id": "2511.19676",
+      "doi": "10.48550/arXiv.2511.19676",
+      "authors": [
+        "Parsa Madinei",
+        "Ryan Solgi",
+        "Zi-Qi Wen",
+        "Jonathan Skaza",
+        "Miguel P. Eckstein",
+        "Ramtin Pedarsani"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 323,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Rise of Sparse Mixture-of-Experts: A Survey from Algorithmic Foundations to Decentralized Architectures and Vertical Domain Applications",
+      "source_url": "https://arxiv.org/abs/2602.08019",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": "Journal of Computer Science and Artificial Intelligence",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The sparse Mixture of Experts (MoE) architecture has evolved as a powerful approach for scaling deep learning models to more parameters with comparable computation cost. As an important branch of large language model (LLM), MoE model only activate a subset of experts based on a routing network. This sparse conditional computation mechanism significantly improves computational efficiency, paving a promising path for greater scalability and cost-efficiency. It not only enhance downstream applications such as natural language processing, computer vision, and multimodal in various horizontal domains, but also exhibit broad applicability across vertical domains including medical diagnosis, autonomous driving, financial analysis, and business intelligence. Despite the growing popularity and application of MoE models across various domains, there lacks a systematic exploration of recent advancements of MoE in many important fields. Existing surveys on MoE suffer from limitations such as lack coverage or not extensively exploration of key areas. This survey seeks to fill these gaps. In this paper, Firstly, we examine the foundational principles of MoE, with an in-depth exploration of its core components—the routing network and expert network. Subsequently, we extend beyond the centralized paradigm to the decentralized paradigm, which unlocks the immense untapped potential of decentralized infrastructure, enables democratization of MoE development for broader communities, and delivers greater scalability and cost-efficiency. Furthermore we focus on exploring its vertical domain applications. Finally, we also identify key challenges and promising future research directions. To the best of our knowledge, this survey is currently the most comprehensive review in the field of MoE. We aim for this article to serve as a valuable resource for both researchers and practitioners, enabling them to navigate and stay up-to-date with the latest advancements.",
+      "identifiers": [
+        "SemanticScholar:92b37aca150d10d6ee766a69d4bf20f29120a038"
+      ],
+      "semantic_scholar_id": "92b37aca150d10d6ee766a69d4bf20f29120a038",
+      "canonical_id": "arXiv:2602.08019",
+      "arxiv_id": "2602.08019",
+      "doi": "10.54097/bvpfjj49",
+      "authors": [
+        "Dong Pan",
+        "Bingtao Li",
+        "Yongsheng Zheng",
+        "Jiren Ma",
+        "Victor Fei"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 301,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast Inference of Visual Autoregressive Model with Adjacency-Adaptive Dynamical Draft Trees",
+      "source_url": "https://arxiv.org/abs/2512.21857",
+      "year": 2025,
+      "published": "2025-12-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive (AR) image models achieve diffusion-level quality but suffer from sequential inference, requiring approximately 2,000 steps for a 576x576 image. Speculative decoding with draft trees accelerates LLMs yet underperforms on visual AR models due to spatially varying token prediction difficulty. We identify a key obstacle in applying speculative decoding to visual AR models: inconsistent acceptance rates across draft trees due to varying prediction difficulties in different image regions. We propose Adjacency-Adaptive Dynamical Draft Trees (ADT-Tree), an adjacency-adaptive dynamic draft tree that dynamically adjusts draft tree depth and width by leveraging adjacent token states and prior acceptance rates. ADT-Tree initializes via horizontal adjacency, then refines depth/width via bisectional adaptation, yielding deeper trees in simple regions and wider trees in complex ones. The empirical evaluations on MS-COCO 2017 and PartiPrompts demonstrate that ADT-Tree achieves speedups of 3.13xand 3.05x, respectively. Moreover, it integrates seamlessly with relaxed sampling methods such as LANTERN, enabling further acceleration. Code is available at https://github.com/Haodong-Lei-Ray/ADT-Tree.",
+      "identifiers": [
+        "SemanticScholar:fa40f244a3e54850f36110d6174211fa3f7e052f"
+      ],
+      "semantic_scholar_id": "fa40f244a3e54850f36110d6174211fa3f7e052f",
+      "canonical_id": "arXiv:2512.21857",
+      "arxiv_id": "2512.21857",
+      "doi": "10.48550/arXiv.2512.21857",
+      "authors": [
+        "Haodong Lei",
+        "Hong-Song Wang",
+        "Xin Geng",
+        "Liang Wang",
+        "Pan Zhou"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 291,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Accelerate Speculative Decoding with Sparse Computation in Verification",
+      "source_url": "https://arxiv.org/abs/2512.21911",
+      "year": 2025,
+      "published": "2025-12-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive language model inference by verifying multiple draft tokens in parallel. However, the verification stage often becomes the dominant computational bottleneck, especially for long-context inputs and mixture-of-experts (MoE) models. Existing sparsification methods are designed primarily for standard token-by-token autoregressive decoding to remove substantial computational redundancy in LLMs. This work systematically adopts different sparse methods on the verification stage of the speculative decoding and identifies structured redundancy across multiple dimensions. Based on these observations, we propose a sparse verification framework that jointly sparsifies attention, FFN, and MoE components during the verification stage to reduce the dominant computation cost. The framework further incorporates an inter-draft token and inter-layer retrieval reuse strategy to further reduce redundant computation without introducing additional training. Extensive experiments across summarization, question answering, and mathematical reasoning datasets demonstrate that the proposed methods achieve favorable efficiency-accuracy trade-offs, while maintaining stable acceptance length.",
+      "identifiers": [
+        "SemanticScholar:f72acc122e2b2abb83ee6cc6eebdbb604be5477e"
+      ],
+      "semantic_scholar_id": "f72acc122e2b2abb83ee6cc6eebdbb604be5477e",
+      "canonical_id": "arXiv:2512.21911",
+      "arxiv_id": "2512.21911",
+      "doi": "10.48550/arXiv.2512.21911",
+      "authors": [
+        "Jikai Wang",
+        "Jian-Chao Tan",
+        "Yuxuan Hu",
+        "Jiayu Qin",
+        "Yerui Sun",
+        "Yu-Chen Xie",
+        "Xun-Liang Cai",
+        "Jun-Tao Li",
+        "Min Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 291,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RelayGR: Scaling Long-Sequence Generative Recommendation via Cross-Stage Relay-Race Inference",
+      "source_url": "https://arxiv.org/abs/2601.01712",
+      "year": 2026,
+      "published": "2026-01-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Real-time recommender systems execute multi-stage cascades (retrieval, pre-processing, fine-grained ranking) under strict tail-latency SLOs, leaving only tens of milliseconds for ranking. Generative recommendation (GR) models can improve quality by consuming long user-behavior sequences, but in production their online sequence length is tightly capped by the ranking-stage P99 budget. We observe that the majority of GR tokens encode user behaviors that are independent of the item candidates, suggesting an opportunity to pre-infer a user-behavior prefix once and reuse it during ranking rather than recomputing it on the critical path. Realizing this idea at industrial scale is non-trivial: the prefix cache must survive across multiple pipeline stages before the final ranking instance is determined, the user population implies cache footprints far beyond a single device, and indiscriminate pre-inference would overload shared resources under high QPS. We present RelayGR, a production system that enables in-HBM relay-race inference for GR. RelayGR selectively pre-infers long-term user prefixes, keeps their KV caches resident in HBM over the request lifecycle, and ensures the subsequent ranking can consume them without remote fetches. RelayGR combines three techniques: 1) a sequence-aware trigger that admits only at-risk requests under a bounded cache footprint and pre-inference load, 2) an affinity-aware router that co-locates cache production and consumption by routing both the auxiliary pre-infer signal and the ranking request to the same instance, and 3) a memory-aware expander that uses server-local DRAM to capture short-term cross-request reuse while avoiding redundant reloads. We implement RelayGR on Huawei Ascend NPUs and evaluate it with real queries. Under a fixed P99 SLO, RelayGR supports up to 1.5$\\times$ longer sequences and improves SLO-compliant throughput by up to 3.6$\\times$.",
+      "identifiers": [
+        "SemanticScholar:7c77212626e34d539c8c012ac6858c44b07f29fe"
+      ],
+      "semantic_scholar_id": "7c77212626e34d539c8c012ac6858c44b07f29fe",
+      "canonical_id": "arXiv:2601.01712",
+      "arxiv_id": "2601.01712",
+      "doi": "10.48550/arXiv.2601.01712",
+      "authors": [
+        "Jia-Rui Wang",
+        "Hui-Chao Chai",
+        "Yuanhang Zhang",
+        "Zong-Guo Zhou",
+        "Wei Guo",
+        "Xingkun Yang",
+        "Qiang Tang",
+        "Bo Pan",
+        "Jia-Wei Zhu",
+        "Ke Cheng",
+        "Yuting Yan",
+        "Shulan Wang",
+        "Yingjie Zhu",
+        "Zhengfan Yuan",
+        "Jiaqi Huang",
+        "Yuhang Zhang",
+        "Xiao-Xuan Sun",
+        "Zhinan Zhang",
+        "Hong Zhu",
+        "Yong-Sheng Zhang",
+        "Tian Dong",
+        "Zhongyu Xiao",
+        "Delian Liu",
+        "Cheng Lu",
+        "Yuan-Qiang Sun",
+        "Zhiyuan Chen",
+        "Xin-Min Han",
+        "Zaizhu Liu",
+        "Yao Wang",
+        "Ziyang Zhang",
+        "Yong Liu",
+        "Jinxin Xu",
+        "Yajing Sun",
+        "Zhoujun Yu",
+        "Wenting Zhou",
+        "Qi-Dong Zhang",
+        "Zheng-Yong Zhang",
+        "Z. Gu",
+        "Yibo Jin",
+        "Yong Feng",
+        "Pengfei Zuo"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 281,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LatencyPrism: Online Non-intrusive Latency Sculpting for SLO-Guaranteed LLM Inference",
+      "source_url": "https://arxiv.org/abs/2601.09258",
+      "year": 2026,
+      "published": "2026-01-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference latency critically determines user experience and operational costs, directly impacting throughput under SLO constraints. Even brief latency spikes degrade service quality despite acceptable average performance. However, distributed inference environments featuring diverse software frameworks and XPU architectures combined with dynamic workloads make latency analysis challenging. Constrained by intrusive designs that necessitate service restarts or even suspension, and by hardware-bound implementations that fail to adapt to heterogeneous inference environments, existing AI profiling methods are often inadequate for real-time production analysis. We present LatencyPrism, the first zero-intrusion multi-platform latency sculpting system. It aims to break down the inference latency across pipeline, proactively alert on inference latency anomalies, and guarantee adherence to SLOs, all without requiring code modifications or service restarts. LatencyPrism has been deployed across thousands of XPUs for over six months. It enables low-overhead real-time monitoring at batch level with alerts triggered in milliseconds. This approach distinguishes between workload-driven latency variations and anomalies indicating underlying issues with an F1-score of 0.98. We also conduct extensive experiments and investigations into root cause analysis to demonstrate LatencyPrism's capability. Furthermore, we introduce the first LLM anomaly simulation toolkit to facilitate future research in robust and predictable inference systems.",
+      "identifiers": [
+        "SemanticScholar:10657915a801f321e317dbd169a5724ddc11f80f"
+      ],
+      "semantic_scholar_id": "10657915a801f321e317dbd169a5724ddc11f80f",
+      "canonical_id": "arXiv:2601.09258",
+      "arxiv_id": "2601.09258",
+      "doi": "10.48550/arXiv.2601.09258",
+      "authors": [
+        "Yin Du",
+        "Jiayi Ren",
+        "Xiayu Sun",
+        "Tianyao Zhou",
+        "Haizhu Zhou",
+        "Ruiyang Ma",
+        "Danyang Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 272,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Perplexity Paradox: Why Code Compresses Better Than Math in LLM Prompts",
+      "source_url": "https://arxiv.org/abs/2602.15843",
+      "year": 2026,
+      "published": "2026-01-21",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In\"Compress or Route?\"(Johnson, 2026), we found that code generation tolerates aggressive prompt compression (r>= 0.6) while chain-of-thought reasoning degrades gradually. That study was limited to HumanEval (164 problems), left the\"perplexity paradox\"mechanism unvalidated, and provided no adaptive algorithm. This paper addresses all three gaps. First, we validate across six code benchmarks (HumanEval, MBPP, HumanEval+, MultiPL-E) and four reasoning benchmarks (GSM8K, MATH, ARC-Challenge, MMLU-STEM), confirming the compression threshold generalizes across languages and difficulties. Second, we conduct the first per-token perplexity analysis (n=723 tokens), revealing a\"perplexity paradox\": code syntax tokens are preserved (high perplexity) while numerical values in math problems are pruned despite being task-critical (low perplexity). Signature injection recovers +34 percentage points in pass rate (5.3% to 39.3%; Cohen's h=0.890). Third, we propose TAAC (Task-Aware Adaptive Compression), achieving 22% cost reduction with 96% quality preservation, outperforming fixed-ratio compression by 7%. MBPP validation (n=1,800 trials) confirms systematic variation: 3.6% at r=0.3 to 54.6% at r=1.0.",
+      "identifiers": [
+        "SemanticScholar:a16265c84356dd0f39ae3d1f1fa62464f06b8119"
+      ],
+      "semantic_scholar_id": "a16265c84356dd0f39ae3d1f1fa62464f06b8119",
+      "canonical_id": "arXiv:2602.15843",
+      "arxiv_id": "2602.15843",
+      "doi": "10.48550/arXiv.2602.15843",
+      "authors": [
+        "W. Johnson"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 265,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Personalized LLM Service Updating in Collaborative Edge-Enabled Vehicle Autonomous System",
+      "source_url": "https://doi.org/10.1109/TCE.2025.3644688",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "IEEE transactions on consumer electronics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Personalized services are increasingly critical for autonomous systems such as smart vehicles, where Large Language Models (LLMs) enhance the driving experience. However, efficiently deploying and continuously updating these models is challenging due to resource constraints and dynamic environments. Existing approaches often neglect personalization and effective cross-edge collaboration, leading to inconsistent service quality and inefficient resource utilization. To address these gaps, we propose a vehicle-edge-cloud collaborative framework centered on our Intent-Driven Multi-Agent Communication (IDMAC) algorithm. IDMAC intelligently coordinates the LLM update lifecycle. It utilizes an intent encoder to model the short-term goals of each edge server from its trajectory. This explicit intent then guides attention mechanisms to facilitate efficient, goal-aligned communication, reducing network overhead and focusing on relevant information. This allows for the dynamic scheduling and routing of parameter-efficient model patches. In our architecture, lightweight models are deployed on vehicles, edge servers handle specialized fine-tuning, and the cloud periodically aggregates global knowledge to create unified updates. Experimental results show that the proposed framework significantly improves service quality and adaptability. IDMAC also strengthens inter-edge collaboration while reducing latency and energy consumption.",
+      "identifiers": [
+        "SemanticScholar:dfb4112df2f74e2968d88428a9325d141ffcbff4"
+      ],
+      "semantic_scholar_id": "dfb4112df2f74e2968d88428a9325d141ffcbff4",
+      "doi": "10.1109/TCE.2025.3644688",
+      "canonical_id": "DOI:10.1109/TCE.2025.3644688",
+      "authors": [
+        "Dong-Kun Huo",
+        "Jia-Jie Yin",
+        "Hongbo Liu",
+        "Yixue Hao",
+        "Rui Wang",
+        "Long Hu",
+        "Yi-Jun Mo"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A State-Transition Framework for Efficient LLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2602.01198",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Long Chain-of-Thought (CoT) reasoning significantly improves Large Language Models (LLMs) performance on complex reasoning tasks, the substantial computational and memory costs of generating long CoT sequences limit their efficiency and practicality. Existing studies usually enhance the reasoning efficiency of LLMs by compressing CoT sequences. However, this approach conflicts with test-time scaling, limiting the reasoning capacity of LLMs. In this paper, we propose an efficient reasoning framework that models the reasoning process of LLMs as a state-transition process. Specifically, we first apply a linear attention mechanism to estimate the LLM's reasoning state, which records the historical reasoning information from previous reasoning steps. Then, based on the query prompt and the reasoning state, the LLM can efficiently perform the current reasoning step and update the state. With the linear attention, each token in the current reasoning step can directly retrieve relevant historical reasoning information from the reasoning state, without explicitly attending to tokens in previous reasoning steps. In this way, the computational complexity of attention is reduced from quadratic to linear, significantly improving the reasoning efficiency of LLMs. In addition, we propose a state-based reasoning strategy to mitigate the over-thinking issue caused by noisy reasoning steps. Extensive experiments across multiple datasets and model sizes demonstrate that our framework not only improves the reasoning efficiency of LLMs but also enhances their reasoning performance.",
+      "identifiers": [
+        "SemanticScholar:d9c0951bb20fa33f30b8208f7eff1e01bbff2414"
+      ],
+      "semantic_scholar_id": "d9c0951bb20fa33f30b8208f7eff1e01bbff2414",
+      "canonical_id": "arXiv:2602.01198",
+      "arxiv_id": "2602.01198",
+      "doi": "10.48550/arXiv.2602.01198",
+      "authors": [
+        "Liang Zhang",
+        "Yu Zhao",
+        "Long-Yue Wang",
+        "Tianqi Shi",
+        "Wei-Hua Luo",
+        "Kai-Fu Zhang",
+        "Jinsong Su"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CUCo: An Agentic Framework for Compute and Communication Co-design",
+      "source_url": "https://arxiv.org/abs/2603.02376",
+      "year": 2026,
+      "published": "2026-03-02",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Computation and communication in distributed LLM training and inference are traditionally optimized in isolation; expert-crafted systems such as DeepEP, FLUX, and TokenWeave show the potential of co-design but require deep systems expertise and hardware-specific tuning; CUCo is an agentic framework that automates compute-communication co-design of CUDA kernels by combining a structured design-space formalization with a correctness-first fast-path agent for reliable baselines and an evolution-driven slow-path agent for high-performance strategies, achieving up to 1.57x speedup across four multi-GPU workloads and discovering a two-stream overlap strategy on a DeepSeek-V3 MoE layer that hides dispatch behind local compute at an LLM inference cost under $10 per workload.",
+      "identifiers": [
+        "SemanticScholar:1e56566fbd92ff5999dff15a41b9414e133d0162"
+      ],
+      "semantic_scholar_id": "1e56566fbd92ff5999dff15a41b9414e133d0162",
+      "canonical_id": "arXiv:2603.02376",
+      "arxiv_id": "2603.02376",
+      "doi": "10.48550/arXiv.2603.02376",
+      "authors": [
+        "Yoga Sri Varshan Varadharajan",
+        "Bo-Dun Hu",
+        "Saurabh Agarwal",
+        "Aditya Akella"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 225,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Frequency-Modulated Visual Restoration for Matryoshka Large Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2603.11220",
+      "year": 2026,
+      "published": "2026-03-11",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Multimodal Models (LMMs) struggle to adapt varying computational budgets due to numerous visual tokens. Previous methods attempted to reduce the number of visual tokens before or within LLMs. However, these strategies inevitably result in the loss of visual semantic. To address these issues, we introduce FMVR, a plug-and-play and extremely simple Frequency-Modulated Visual Restoration strategy to boost the reasoning ability of LMMs under visual token reduction. Specifically, FMVR disentangles the visual representation of fewer visual tokens into low- and high-frequency components through AvgPool and MaxPool. The derived frequencies are subsequently modulated using lightweight learnable parameters. The high-frequency from AvgPool acts as a saliency filter to enhance saliency visual semantics, while the low-frequency from MaxPool acts as an anti-saliency filter to strengthen weak visual semantics. It enables the preservation of visual semantics dominated by few visual tokens and the restoration of diluted visual semantics. Additionally, we inject FMVR into Matryoshka Representation Learning to learn coarse-to-fine visual token sets, thus enabling to elastically adjust the number of visual tokens during inference while maintaining comparable performance. Experiments across 10 image-based and 4 video-based bench marks demonstrate that FMVR-LLaVA reduce the FLOPs of LLaVA-1.5-7B by 89%, while maintaining almost 100% of the original accuracy. Code: https://github.com/QingtaoPan/FMVR.",
+      "identifiers": [
+        "SemanticScholar:2ed7e8b84b7df190701e23d83c4ce8c95f931956"
+      ],
+      "semantic_scholar_id": "2ed7e8b84b7df190701e23d83c4ce8c95f931956",
+      "canonical_id": "arXiv:2603.11220",
+      "arxiv_id": "2603.11220",
+      "doi": "10.1109/CVPRF71909.2026.00931",
+      "authors": [
+        "Qing-Tao Pan",
+        "Zhi-Hao Dou",
+        "Shuo Li"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 216,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ASAP: Attention-Shift-Aware Pruning for Efficient LVLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.14549",
+      "year": 2026,
+      "published": "2026-03-15",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Large Vision-Language Models (LVLMs) demonstrate exceptional multi-modal capabilities, the quadratic computational cost of processing high-resolution visual tokens remains a critical bottleneck. Though recent token reduction strategies attempt to accelerate inference, such methods inadequately exploit attention values and fail to address token redundancy. More critically, they overlook the ``attention shift''phenomenon inherent in LVLMs, which skews token attention scores. In this work, we propose ASAP, a novel training-free, KV-Cache-compatible pruning recipe that comprehensively addresses these limitations. First, we mitigate the attention shift by utilizing a dynamic bidirectional soft attention mask, ensuring the selection of genuinely informative tokens rather than naive attention-based selection. Second, we posit that high semantic redundancy within the token set degrades performance. We therefore introduce a weighted soft merging component that merges semantically similar tokens, preserving only the most feature-dense visual patches for subsequent layers. ASAP achieves virtually lossless compression of visual context, retaining 99.02% of the original LLaVA-NeXT-7B performance while aggressively slashing computational FLOPs by ~80%.",
+      "identifiers": [
+        "SemanticScholar:0e273fc7a51e893d72102d6ecefdca5ee868af55"
+      ],
+      "semantic_scholar_id": "0e273fc7a51e893d72102d6ecefdca5ee868af55",
+      "canonical_id": "arXiv:2603.14549",
+      "arxiv_id": "2603.14549",
+      "doi": "10.48550/arXiv.2603.14549",
+      "authors": [
+        "Surendra Pathak",
+        "Bo Han"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hybrid Associative Memories",
+      "source_url": "https://arxiv.org/abs/2603.22325",
+      "year": 2026,
+      "published": "2026-03-20",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recurrent neural networks (RNNs) and self-attention are both widely used sequence-mixing layers that maintain an internal memory. However, this memory is constructed using two orthogonal mechanisms: RNNs compress the entire past into a fixed-size state, whereas self-attention's state stores every past time step growing its state (the KV cache) linearly with the sequence length. This results in orthogonal strengths and weaknesses. Self-attention layers excel at retrieving information in the context but have large memory and computational costs, while RNNs are more efficient but degrade over longer contexts and underperform for precise recall tasks. Prior work combining these mechanisms has focused primarily on naively interleaving them to reduce computational cost without regard to their complementary mechanisms. We propose the Hybrid Associative Memory (HAM) layer, which combines self-attention and RNNs while leveraging their individual strengths: the RNN compresses the entire sequence, while attention supplements it *only* with information that is difficult for the RNN to predict, which is hence the most valuable information to explicitly store. HAM layers enable data-dependent growth of the KV cache, which can be precisely controlled by the user with a single, continuous threshold. We find that this fine-grained control of the KV cache growth rate has a smooth trade-off with loss and performance. Empirically, we show that our hybrid architecture offers strong, competitive performance relative to RNNs and Transformers even at substantially lower KV-cache usage.",
+      "identifiers": [
+        "SemanticScholar:578535084fc0686ad21653fff60385c0bb74c441"
+      ],
+      "semantic_scholar_id": "578535084fc0686ad21653fff60385c0bb74c441",
+      "canonical_id": "arXiv:2603.22325",
+      "arxiv_id": "2603.22325",
+      "doi": "10.48550/arXiv.2603.22325",
+      "authors": [
+        "Leon Lufkin",
+        "Tomas Figliolia",
+        "Beren Millidge",
+        "Kamesh Krishnamurthy"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 207,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Gumbel Distillation for Parallel Text Generation",
+      "source_url": "https://arxiv.org/abs/2603.22216",
+      "year": 2026,
+      "published": "2026-03-23",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The slow, sequential nature of autoregressive (AR) language models has driven the adoption of parallel decoding methods. However, these non-AR models often sacrifice generation quality as they struggle to model the complex joint distribution of token sequences. To narrow this performance gap, we introduce Gumbel Distillation, a novel distillation technique that enables parallel decoders to learn this distribution effectively. Our method leverages the Gumbel-Max trick to create a deterministic mapping from a latent Gumbel noise space to the output tokens of a high-performing AR teacher. As a model-agnostic technique, Gumbel Distillation seamlessly integrates with diverse parallel decoding architectures, including MDLM and BD3-LM. Experiments on LM1B and OpenWebText show that Gumbel Distillation substantially improves the generation quality of parallel language models, achieving a 30.0% improvement in MAUVE score and 10.5% in generative perplexity over MDLM trained on OpenWebText dataset. Code available at https://github.com/hxixixh/gumbel-distill.",
+      "identifiers": [
+        "SemanticScholar:758acebadd9b96d9838414abfa8d349df4814c88"
+      ],
+      "semantic_scholar_id": "758acebadd9b96d9838414abfa8d349df4814c88",
+      "canonical_id": "arXiv:2603.22216",
+      "arxiv_id": "2603.22216",
+      "doi": "10.48550/arXiv.2603.22216",
+      "authors": [
+        "Chi Zhang",
+        "Xixi Hu",
+        "Bo Liu",
+        "Qiang Liu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HACK++: Towards More Effective Head-Aware Key-Value Compression for Efficient Visual Autoregressive Modeling",
+      "source_url": "https://arxiv.org/abs/2606.08302",
+      "year": 2026,
+      "published": "2026-06-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual Autoregressive (VAR) models adopt a next-scale prediction paradigm, offering high-quality generation with substantially fewer decoding steps. However, existing VAR models suffer from significant attention complexity and severe memory overhead due to the accumulation of key-value (KV) caches across scales. In this paper, we tackle this challenge by introducing KV cache compression into the next-scale paradigm. We begin with an in-depth analysis of VAR attention and observe that attention heads can be stably divided into two functionally distinct categories: Contextual Heads focus on maintaining semantic consistency, while Structural Heads preserve spatial coherence. Their functional divergence makes existing one-size-fits-all compression methods perform poorly on VAR models. We further find that the two head types differ markedly in their reliance on historical scales, and that this reliance shifts across layers and generation steps, arguing for an adaptive cache budget allocation. To address these challenges, we propose HACK++, a training-free Head-Aware key-value Compression frameworK for VAR models. From a one-time offline calibration, HACK++ classifies head types and derives head-specific priors. At inference, it decouples attention from cache compression under independent budgets, bounding the current-scale attention cost while compressing the accumulated cache far more aggressively, via pattern-specific strategies and a reliance-aware budget allocation. Extensive experiments on multiple VAR models across text-to-image, class-conditional, and unified understanding-and-generation tasks validate the effectiveness and generalizability of HACK++. For example, on Infinity-2B/8B, HACK++ maintains near-lossless generation with only a 30% attention budget and a 10% cache budget, and remains robust even under a 1% cache budget.",
+      "identifiers": [
+        "SemanticScholar:ef700496beeebf3e7630931798843c97f730f0f5"
+      ],
+      "semantic_scholar_id": "ef700496beeebf3e7630931798843c97f730f0f5",
+      "canonical_id": "arXiv:2606.08302",
+      "arxiv_id": "2606.08302",
+      "doi": "10.48550/arXiv.2606.08302",
+      "authors": [
+        "Ziran Qin",
+        "Yu-Chen Jiang",
+        "Mingbao Lin",
+        "Youru Lv",
+        "Hang Guo",
+        "Wen Fei",
+        "Weiyao Lin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 129,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.01695",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.01695",
+        "id:SemanticScholar:4fa8d697961d80c07fe4806a09e919fb25b3f471",
+        "id:arXiv:2511.01695",
+        "title:collaborative large language model inference via resourceaware parallel speculative decoding",
+        "url:https://arxiv.org/abs/2511.01695"
+      ],
+      "record": {
+        "title": "Collaborative Large Language Model Inference via Resource-Aware Parallel Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2511.01695",
+        "year": 2025,
+        "published": "2025-11-03",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The growing demand for on-device large language model (LLM) inference highlights the need for efficient mobile edge computing (MEC) solutions, especially in resource-constrained settings. Speculative decoding offers a promising solution by partitioning token generation between a lightweight draft model on mobile devices and a powerful target model on edge servers, but suffers from communication overhead and asynchronous delays. This paper is the first to propose a unified framework that jointly optimizes user association and resource allocation (UARA) to support efficient parallel speculative decoding. We solve the UARA problem using a multi-agent deep reinforcement learning algorithm. To evaluate our approach under realistic conditions, we conduct experiments using the Sionna simulator. Results show that our method achieves up to 28.0% and an average of 23.7% reduction in end-to-end latency without compromising inference accuracy, enabling scalable and low-latency LLM services in MEC systems.",
+        "identifiers": [
+          "SemanticScholar:4fa8d697961d80c07fe4806a09e919fb25b3f471"
+        ],
+        "semantic_scholar_id": "4fa8d697961d80c07fe4806a09e919fb25b3f471",
+        "canonical_id": "arXiv:2511.01695",
+        "arxiv_id": "2511.01695",
+        "doi": "10.48550/arXiv.2511.01695",
+        "authors": [
+          "Jungyeon Koh",
+          "Hyun Jong Yang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 344,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.19676",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.19676",
+        "id:SemanticScholar:7519442225d88b6cee7d98858f72ab66ea879625",
+        "id:arXiv:2511.19676",
+        "title:interlace interleaved layer pruning and efficient adaptation in large visionlanguage models",
+        "url:https://arxiv.org/abs/2511.19676"
+      ],
+      "record": {
+        "title": "INTERLACE: Interleaved Layer Pruning and Efficient Adaptation in Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2511.19676",
+        "year": 2025,
+        "published": "2025-11-24",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce INTERLACE, a novel framework that prunes redundant layers in VLMs while maintaining performance through sample-efficient finetuning. Existing layer pruning methods lead to significant performance drop when applied to VLMs. Instead, we analyze triplets of consecutive layers to identify local redundancy, removing the most redundant of the first two layers, finetune the remaining layer to compensate for the lost capacity, and freeze the third layer to serve as a stable anchor during finetuning. We found that this interleaved finetune-freeze design enables rapid convergence with minimal data after pruning. By finetuning only a subset of layers on just 1% of the FineVision dataset for one epoch, Interlace achieves 88.9% average performance retention after dropping 25% of the network, achieving SOTA performance. Our code is available at: https://github.com/pmadinei/Interlace.git",
+        "identifiers": [
+          "SemanticScholar:7519442225d88b6cee7d98858f72ab66ea879625"
+        ],
+        "semantic_scholar_id": "7519442225d88b6cee7d98858f72ab66ea879625",
+        "canonical_id": "arXiv:2511.19676",
+        "arxiv_id": "2511.19676",
+        "doi": "10.48550/arXiv.2511.19676",
+        "authors": [
+          "Parsa Madinei",
+          "Ryan Solgi",
+          "Zi-Qi Wen",
+          "Jonathan Skaza",
+          "Miguel P. Eckstein",
+          "Ramtin Pedarsani"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 323,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.08019",
+      "identity_tokens": [
+        "id:DOI:10.54097/bvpfjj49",
+        "id:SemanticScholar:92b37aca150d10d6ee766a69d4bf20f29120a038",
+        "id:arXiv:2602.08019",
+        "title:the rise of sparse mixtureofexperts a survey from algorithmic foundations to decentralized architectures and vertical domain applications",
+        "url:https://arxiv.org/abs/2602.08019"
+      ],
+      "record": {
+        "title": "The Rise of Sparse Mixture-of-Experts: A Survey from Algorithmic Foundations to Decentralized Architectures and Vertical Domain Applications",
+        "source_url": "https://arxiv.org/abs/2602.08019",
+        "year": 2025,
+        "published": "2025-12-16",
+        "venue": "Journal of Computer Science and Artificial Intelligence",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The sparse Mixture of Experts (MoE) architecture has evolved as a powerful approach for scaling deep learning models to more parameters with comparable computation cost. As an important branch of large language model (LLM), MoE model only activate a subset of experts based on a routing network. This sparse conditional computation mechanism significantly improves computational efficiency, paving a promising path for greater scalability and cost-efficiency. It not only enhance downstream applications such as natural language processing, computer vision, and multimodal in various horizontal domains, but also exhibit broad applicability across vertical domains including medical diagnosis, autonomous driving, financial analysis, and business intelligence. Despite the growing popularity and application of MoE models across various domains, there lacks a systematic exploration of recent advancements of MoE in many important fields. Existing surveys on MoE suffer from limitations such as lack coverage or not extensively exploration of key areas. This survey seeks to fill these gaps. In this paper, Firstly, we examine the foundational principles of MoE, with an in-depth exploration of its core components—the routing network and expert network. Subsequently, we extend beyond the centralized paradigm to the decentralized paradigm, which unlocks the immense untapped potential of decentralized infrastructure, enables democratization of MoE development for broader communities, and delivers greater scalability and cost-efficiency. Furthermore we focus on exploring its vertical domain applications. Finally, we also identify key challenges and promising future research directions. To the best of our knowledge, this survey is currently the most comprehensive review in the field of MoE. We aim for this article to serve as a valuable resource for both researchers and practitioners, enabling them to navigate and stay up-to-date with the latest advancements.",
+        "identifiers": [
+          "SemanticScholar:92b37aca150d10d6ee766a69d4bf20f29120a038"
+        ],
+        "semantic_scholar_id": "92b37aca150d10d6ee766a69d4bf20f29120a038",
+        "canonical_id": "arXiv:2602.08019",
+        "arxiv_id": "2602.08019",
+        "doi": "10.54097/bvpfjj49",
+        "authors": [
+          "Dong Pan",
+          "Bingtao Li",
+          "Yongsheng Zheng",
+          "Jiren Ma",
+          "Victor Fei"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 301,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.21857",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.21857",
+        "id:SemanticScholar:fa40f244a3e54850f36110d6174211fa3f7e052f",
+        "id:arXiv:2512.21857",
+        "title:fast inference of visual autoregressive model with adjacencyadaptive dynamical draft trees",
+        "url:https://arxiv.org/abs/2512.21857"
+      ],
+      "record": {
+        "title": "Fast Inference of Visual Autoregressive Model with Adjacency-Adaptive Dynamical Draft Trees",
+        "source_url": "https://arxiv.org/abs/2512.21857",
+        "year": 2025,
+        "published": "2025-12-26",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive (AR) image models achieve diffusion-level quality but suffer from sequential inference, requiring approximately 2,000 steps for a 576x576 image. Speculative decoding with draft trees accelerates LLMs yet underperforms on visual AR models due to spatially varying token prediction difficulty. We identify a key obstacle in applying speculative decoding to visual AR models: inconsistent acceptance rates across draft trees due to varying prediction difficulties in different image regions. We propose Adjacency-Adaptive Dynamical Draft Trees (ADT-Tree), an adjacency-adaptive dynamic draft tree that dynamically adjusts draft tree depth and width by leveraging adjacent token states and prior acceptance rates. ADT-Tree initializes via horizontal adjacency, then refines depth/width via bisectional adaptation, yielding deeper trees in simple regions and wider trees in complex ones. The empirical evaluations on MS-COCO 2017 and PartiPrompts demonstrate that ADT-Tree achieves speedups of 3.13xand 3.05x, respectively. Moreover, it integrates seamlessly with relaxed sampling methods such as LANTERN, enabling further acceleration. Code is available at https://github.com/Haodong-Lei-Ray/ADT-Tree.",
+        "identifiers": [
+          "SemanticScholar:fa40f244a3e54850f36110d6174211fa3f7e052f"
+        ],
+        "semantic_scholar_id": "fa40f244a3e54850f36110d6174211fa3f7e052f",
+        "canonical_id": "arXiv:2512.21857",
+        "arxiv_id": "2512.21857",
+        "doi": "10.48550/arXiv.2512.21857",
+        "authors": [
+          "Haodong Lei",
+          "Hong-Song Wang",
+          "Xin Geng",
+          "Liang Wang",
+          "Pan Zhou"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 291,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.21911",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.21911",
+        "id:SemanticScholar:f72acc122e2b2abb83ee6cc6eebdbb604be5477e",
+        "id:arXiv:2512.21911",
+        "title:accelerate speculative decoding with sparse computation in verification",
+        "url:https://arxiv.org/abs/2512.21911"
+      ],
+      "record": {
+        "title": "Accelerate Speculative Decoding with Sparse Computation in Verification",
+        "source_url": "https://arxiv.org/abs/2512.21911",
+        "year": 2025,
+        "published": "2025-12-26",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive language model inference by verifying multiple draft tokens in parallel. However, the verification stage often becomes the dominant computational bottleneck, especially for long-context inputs and mixture-of-experts (MoE) models. Existing sparsification methods are designed primarily for standard token-by-token autoregressive decoding to remove substantial computational redundancy in LLMs. This work systematically adopts different sparse methods on the verification stage of the speculative decoding and identifies structured redundancy across multiple dimensions. Based on these observations, we propose a sparse verification framework that jointly sparsifies attention, FFN, and MoE components during the verification stage to reduce the dominant computation cost. The framework further incorporates an inter-draft token and inter-layer retrieval reuse strategy to further reduce redundant computation without introducing additional training. Extensive experiments across summarization, question answering, and mathematical reasoning datasets demonstrate that the proposed methods achieve favorable efficiency-accuracy trade-offs, while maintaining stable acceptance length.",
+        "identifiers": [
+          "SemanticScholar:f72acc122e2b2abb83ee6cc6eebdbb604be5477e"
+        ],
+        "semantic_scholar_id": "f72acc122e2b2abb83ee6cc6eebdbb604be5477e",
+        "canonical_id": "arXiv:2512.21911",
+        "arxiv_id": "2512.21911",
+        "doi": "10.48550/arXiv.2512.21911",
+        "authors": [
+          "Jikai Wang",
+          "Jian-Chao Tan",
+          "Yuxuan Hu",
+          "Jiayu Qin",
+          "Yerui Sun",
+          "Yu-Chen Xie",
+          "Xun-Liang Cai",
+          "Jun-Tao Li",
+          "Min Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 291,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.01712",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.01712",
+        "id:SemanticScholar:7c77212626e34d539c8c012ac6858c44b07f29fe",
+        "id:arXiv:2601.01712",
+        "title:relaygr scaling longsequence generative recommendation via crossstage relayrace inference",
+        "url:https://arxiv.org/abs/2601.01712"
+      ],
+      "record": {
+        "title": "RelayGR: Scaling Long-Sequence Generative Recommendation via Cross-Stage Relay-Race Inference",
+        "source_url": "https://arxiv.org/abs/2601.01712",
+        "year": 2026,
+        "published": "2026-01-05",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Real-time recommender systems execute multi-stage cascades (retrieval, pre-processing, fine-grained ranking) under strict tail-latency SLOs, leaving only tens of milliseconds for ranking. Generative recommendation (GR) models can improve quality by consuming long user-behavior sequences, but in production their online sequence length is tightly capped by the ranking-stage P99 budget. We observe that the majority of GR tokens encode user behaviors that are independent of the item candidates, suggesting an opportunity to pre-infer a user-behavior prefix once and reuse it during ranking rather than recomputing it on the critical path. Realizing this idea at industrial scale is non-trivial: the prefix cache must survive across multiple pipeline stages before the final ranking instance is determined, the user population implies cache footprints far beyond a single device, and indiscriminate pre-inference would overload shared resources under high QPS. We present RelayGR, a production system that enables in-HBM relay-race inference for GR. RelayGR selectively pre-infers long-term user prefixes, keeps their KV caches resident in HBM over the request lifecycle, and ensures the subsequent ranking can consume them without remote fetches. RelayGR combines three techniques: 1) a sequence-aware trigger that admits only at-risk requests under a bounded cache footprint and pre-inference load, 2) an affinity-aware router that co-locates cache production and consumption by routing both the auxiliary pre-infer signal and the ranking request to the same instance, and 3) a memory-aware expander that uses server-local DRAM to capture short-term cross-request reuse while avoiding redundant reloads. We implement RelayGR on Huawei Ascend NPUs and evaluate it with real queries. Under a fixed P99 SLO, RelayGR supports up to 1.5$\\times$ longer sequences and improves SLO-compliant throughput by up to 3.6$\\times$.",
+        "identifiers": [
+          "SemanticScholar:7c77212626e34d539c8c012ac6858c44b07f29fe"
+        ],
+        "semantic_scholar_id": "7c77212626e34d539c8c012ac6858c44b07f29fe",
+        "canonical_id": "arXiv:2601.01712",
+        "arxiv_id": "2601.01712",
+        "doi": "10.48550/arXiv.2601.01712",
+        "authors": [
+          "Jia-Rui Wang",
+          "Hui-Chao Chai",
+          "Yuanhang Zhang",
+          "Zong-Guo Zhou",
+          "Wei Guo",
+          "Xingkun Yang",
+          "Qiang Tang",
+          "Bo Pan",
+          "Jia-Wei Zhu",
+          "Ke Cheng",
+          "Yuting Yan",
+          "Shulan Wang",
+          "Yingjie Zhu",
+          "Zhengfan Yuan",
+          "Jiaqi Huang",
+          "Yuhang Zhang",
+          "Xiao-Xuan Sun",
+          "Zhinan Zhang",
+          "Hong Zhu",
+          "Yong-Sheng Zhang",
+          "Tian Dong",
+          "Zhongyu Xiao",
+          "Delian Liu",
+          "Cheng Lu",
+          "Yuan-Qiang Sun",
+          "Zhiyuan Chen",
+          "Xin-Min Han",
+          "Zaizhu Liu",
+          "Yao Wang",
+          "Ziyang Zhang",
+          "Yong Liu",
+          "Jinxin Xu",
+          "Yajing Sun",
+          "Zhoujun Yu",
+          "Wenting Zhou",
+          "Qi-Dong Zhang",
+          "Zheng-Yong Zhang",
+          "Z. Gu",
+          "Yibo Jin",
+          "Yong Feng",
+          "Pengfei Zuo"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 281,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.09258",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.09258",
+        "id:SemanticScholar:10657915a801f321e317dbd169a5724ddc11f80f",
+        "id:arXiv:2601.09258",
+        "title:latencyprism online nonintrusive latency sculpting for sloguaranteed llm inference",
+        "url:https://arxiv.org/abs/2601.09258"
+      ],
+      "record": {
+        "title": "LatencyPrism: Online Non-intrusive Latency Sculpting for SLO-Guaranteed LLM Inference",
+        "source_url": "https://arxiv.org/abs/2601.09258",
+        "year": 2026,
+        "published": "2026-01-14",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM inference latency critically determines user experience and operational costs, directly impacting throughput under SLO constraints. Even brief latency spikes degrade service quality despite acceptable average performance. However, distributed inference environments featuring diverse software frameworks and XPU architectures combined with dynamic workloads make latency analysis challenging. Constrained by intrusive designs that necessitate service restarts or even suspension, and by hardware-bound implementations that fail to adapt to heterogeneous inference environments, existing AI profiling methods are often inadequate for real-time production analysis. We present LatencyPrism, the first zero-intrusion multi-platform latency sculpting system. It aims to break down the inference latency across pipeline, proactively alert on inference latency anomalies, and guarantee adherence to SLOs, all without requiring code modifications or service restarts. LatencyPrism has been deployed across thousands of XPUs for over six months. It enables low-overhead real-time monitoring at batch level with alerts triggered in milliseconds. This approach distinguishes between workload-driven latency variations and anomalies indicating underlying issues with an F1-score of 0.98. We also conduct extensive experiments and investigations into root cause analysis to demonstrate LatencyPrism's capability. Furthermore, we introduce the first LLM anomaly simulation toolkit to facilitate future research in robust and predictable inference systems.",
+        "identifiers": [
+          "SemanticScholar:10657915a801f321e317dbd169a5724ddc11f80f"
+        ],
+        "semantic_scholar_id": "10657915a801f321e317dbd169a5724ddc11f80f",
+        "canonical_id": "arXiv:2601.09258",
+        "arxiv_id": "2601.09258",
+        "doi": "10.48550/arXiv.2601.09258",
+        "authors": [
+          "Yin Du",
+          "Jiayi Ren",
+          "Xiayu Sun",
+          "Tianyao Zhou",
+          "Haizhu Zhou",
+          "Ruiyang Ma",
+          "Danyang Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 272,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.15843",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.15843",
+        "id:SemanticScholar:a16265c84356dd0f39ae3d1f1fa62464f06b8119",
+        "id:arXiv:2602.15843",
+        "title:the perplexity paradox why code compresses better than math in llm prompts",
+        "url:https://arxiv.org/abs/2602.15843"
+      ],
+      "record": {
+        "title": "The Perplexity Paradox: Why Code Compresses Better Than Math in LLM Prompts",
+        "source_url": "https://arxiv.org/abs/2602.15843",
+        "year": 2026,
+        "published": "2026-01-21",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In\"Compress or Route?\"(Johnson, 2026), we found that code generation tolerates aggressive prompt compression (r>= 0.6) while chain-of-thought reasoning degrades gradually. That study was limited to HumanEval (164 problems), left the\"perplexity paradox\"mechanism unvalidated, and provided no adaptive algorithm. This paper addresses all three gaps. First, we validate across six code benchmarks (HumanEval, MBPP, HumanEval+, MultiPL-E) and four reasoning benchmarks (GSM8K, MATH, ARC-Challenge, MMLU-STEM), confirming the compression threshold generalizes across languages and difficulties. Second, we conduct the first per-token perplexity analysis (n=723 tokens), revealing a\"perplexity paradox\": code syntax tokens are preserved (high perplexity) while numerical values in math problems are pruned despite being task-critical (low perplexity). Signature injection recovers +34 percentage points in pass rate (5.3% to 39.3%; Cohen's h=0.890). Third, we propose TAAC (Task-Aware Adaptive Compression), achieving 22% cost reduction with 96% quality preservation, outperforming fixed-ratio compression by 7%. MBPP validation (n=1,800 trials) confirms systematic variation: 3.6% at r=0.3 to 54.6% at r=1.0.",
+        "identifiers": [
+          "SemanticScholar:a16265c84356dd0f39ae3d1f1fa62464f06b8119"
+        ],
+        "semantic_scholar_id": "a16265c84356dd0f39ae3d1f1fa62464f06b8119",
+        "canonical_id": "arXiv:2602.15843",
+        "arxiv_id": "2602.15843",
+        "doi": "10.48550/arXiv.2602.15843",
+        "authors": [
+          "W. Johnson"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 265,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tce.2025.3644688",
+      "identity_tokens": [
+        "id:DOI:10.1109/tce.2025.3644688",
+        "id:SemanticScholar:dfb4112df2f74e2968d88428a9325d141ffcbff4",
+        "title:personalized llm service updating in collaborative edgeenabled vehicle autonomous system",
+        "url:https://doi.org/10.1109/TCE.2025.3644688"
+      ],
+      "record": {
+        "title": "Personalized LLM Service Updating in Collaborative Edge-Enabled Vehicle Autonomous System",
+        "source_url": "https://doi.org/10.1109/TCE.2025.3644688",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "IEEE transactions on consumer electronics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Personalized services are increasingly critical for autonomous systems such as smart vehicles, where Large Language Models (LLMs) enhance the driving experience. However, efficiently deploying and continuously updating these models is challenging due to resource constraints and dynamic environments. Existing approaches often neglect personalization and effective cross-edge collaboration, leading to inconsistent service quality and inefficient resource utilization. To address these gaps, we propose a vehicle-edge-cloud collaborative framework centered on our Intent-Driven Multi-Agent Communication (IDMAC) algorithm. IDMAC intelligently coordinates the LLM update lifecycle. It utilizes an intent encoder to model the short-term goals of each edge server from its trajectory. This explicit intent then guides attention mechanisms to facilitate efficient, goal-aligned communication, reducing network overhead and focusing on relevant information. This allows for the dynamic scheduling and routing of parameter-efficient model patches. In our architecture, lightweight models are deployed on vehicles, edge servers handle specialized fine-tuning, and the cloud periodically aggregates global knowledge to create unified updates. Experimental results show that the proposed framework significantly improves service quality and adaptability. IDMAC also strengthens inter-edge collaboration while reducing latency and energy consumption.",
+        "identifiers": [
+          "SemanticScholar:dfb4112df2f74e2968d88428a9325d141ffcbff4"
+        ],
+        "semantic_scholar_id": "dfb4112df2f74e2968d88428a9325d141ffcbff4",
+        "doi": "10.1109/TCE.2025.3644688",
+        "canonical_id": "DOI:10.1109/TCE.2025.3644688",
+        "authors": [
+          "Dong-Kun Huo",
+          "Jia-Jie Yin",
+          "Hongbo Liu",
+          "Yixue Hao",
+          "Rui Wang",
+          "Long Hu",
+          "Yi-Jun Mo"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 254,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.01198",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.01198",
+        "id:SemanticScholar:d9c0951bb20fa33f30b8208f7eff1e01bbff2414",
+        "id:arXiv:2602.01198",
+        "title:a statetransition framework for efficient llm reasoning",
+        "url:https://arxiv.org/abs/2602.01198"
+      ],
+      "record": {
+        "title": "A State-Transition Framework for Efficient LLM Reasoning",
+        "source_url": "https://arxiv.org/abs/2602.01198",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Long Chain-of-Thought (CoT) reasoning significantly improves Large Language Models (LLMs) performance on complex reasoning tasks, the substantial computational and memory costs of generating long CoT sequences limit their efficiency and practicality. Existing studies usually enhance the reasoning efficiency of LLMs by compressing CoT sequences. However, this approach conflicts with test-time scaling, limiting the reasoning capacity of LLMs. In this paper, we propose an efficient reasoning framework that models the reasoning process of LLMs as a state-transition process. Specifically, we first apply a linear attention mechanism to estimate the LLM's reasoning state, which records the historical reasoning information from previous reasoning steps. Then, based on the query prompt and the reasoning state, the LLM can efficiently perform the current reasoning step and update the state. With the linear attention, each token in the current reasoning step can directly retrieve relevant historical reasoning information from the reasoning state, without explicitly attending to tokens in previous reasoning steps. In this way, the computational complexity of attention is reduced from quadratic to linear, significantly improving the reasoning efficiency of LLMs. In addition, we propose a state-based reasoning strategy to mitigate the over-thinking issue caused by noisy reasoning steps. Extensive experiments across multiple datasets and model sizes demonstrate that our framework not only improves the reasoning efficiency of LLMs but also enhances their reasoning performance.",
+        "identifiers": [
+          "SemanticScholar:d9c0951bb20fa33f30b8208f7eff1e01bbff2414"
+        ],
+        "semantic_scholar_id": "d9c0951bb20fa33f30b8208f7eff1e01bbff2414",
+        "canonical_id": "arXiv:2602.01198",
+        "arxiv_id": "2602.01198",
+        "doi": "10.48550/arXiv.2602.01198",
+        "authors": [
+          "Liang Zhang",
+          "Yu Zhao",
+          "Long-Yue Wang",
+          "Tianqi Shi",
+          "Wei-Hua Luo",
+          "Kai-Fu Zhang",
+          "Jinsong Su"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 254,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.02376",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.02376",
+        "id:SemanticScholar:1e56566fbd92ff5999dff15a41b9414e133d0162",
+        "id:arXiv:2603.02376",
+        "title:cuco an agentic framework for compute and communication codesign",
+        "url:https://arxiv.org/abs/2603.02376"
+      ],
+      "record": {
+        "title": "CUCo: An Agentic Framework for Compute and Communication Co-design",
+        "source_url": "https://arxiv.org/abs/2603.02376",
+        "year": 2026,
+        "published": "2026-03-02",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Computation and communication in distributed LLM training and inference are traditionally optimized in isolation; expert-crafted systems such as DeepEP, FLUX, and TokenWeave show the potential of co-design but require deep systems expertise and hardware-specific tuning; CUCo is an agentic framework that automates compute-communication co-design of CUDA kernels by combining a structured design-space formalization with a correctness-first fast-path agent for reliable baselines and an evolution-driven slow-path agent for high-performance strategies, achieving up to 1.57x speedup across four multi-GPU workloads and discovering a two-stream overlap strategy on a DeepSeek-V3 MoE layer that hides dispatch behind local compute at an LLM inference cost under $10 per workload.",
+        "identifiers": [
+          "SemanticScholar:1e56566fbd92ff5999dff15a41b9414e133d0162"
+        ],
+        "semantic_scholar_id": "1e56566fbd92ff5999dff15a41b9414e133d0162",
+        "canonical_id": "arXiv:2603.02376",
+        "arxiv_id": "2603.02376",
+        "doi": "10.48550/arXiv.2603.02376",
+        "authors": [
+          "Yoga Sri Varshan Varadharajan",
+          "Bo-Dun Hu",
+          "Saurabh Agarwal",
+          "Aditya Akella"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 225,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.11220",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprf71909.2026.00931",
+        "id:SemanticScholar:2ed7e8b84b7df190701e23d83c4ce8c95f931956",
+        "id:arXiv:2603.11220",
+        "title:frequencymodulated visual restoration for matryoshka large multimodal models",
+        "url:https://arxiv.org/abs/2603.11220"
+      ],
+      "record": {
+        "title": "Frequency-Modulated Visual Restoration for Matryoshka Large Multimodal Models",
+        "source_url": "https://arxiv.org/abs/2603.11220",
+        "year": 2026,
+        "published": "2026-03-11",
+        "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Multimodal Models (LMMs) struggle to adapt varying computational budgets due to numerous visual tokens. Previous methods attempted to reduce the number of visual tokens before or within LLMs. However, these strategies inevitably result in the loss of visual semantic. To address these issues, we introduce FMVR, a plug-and-play and extremely simple Frequency-Modulated Visual Restoration strategy to boost the reasoning ability of LMMs under visual token reduction. Specifically, FMVR disentangles the visual representation of fewer visual tokens into low- and high-frequency components through AvgPool and MaxPool. The derived frequencies are subsequently modulated using lightweight learnable parameters. The high-frequency from AvgPool acts as a saliency filter to enhance saliency visual semantics, while the low-frequency from MaxPool acts as an anti-saliency filter to strengthen weak visual semantics. It enables the preservation of visual semantics dominated by few visual tokens and the restoration of diluted visual semantics. Additionally, we inject FMVR into Matryoshka Representation Learning to learn coarse-to-fine visual token sets, thus enabling to elastically adjust the number of visual tokens during inference while maintaining comparable performance. Experiments across 10 image-based and 4 video-based bench marks demonstrate that FMVR-LLaVA reduce the FLOPs of LLaVA-1.5-7B by 89%, while maintaining almost 100% of the original accuracy. Code: https://github.com/QingtaoPan/FMVR.",
+        "identifiers": [
+          "SemanticScholar:2ed7e8b84b7df190701e23d83c4ce8c95f931956"
+        ],
+        "semantic_scholar_id": "2ed7e8b84b7df190701e23d83c4ce8c95f931956",
+        "canonical_id": "arXiv:2603.11220",
+        "arxiv_id": "2603.11220",
+        "doi": "10.1109/CVPRF71909.2026.00931",
+        "authors": [
+          "Qing-Tao Pan",
+          "Zhi-Hao Dou",
+          "Shuo Li"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 216,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.14549",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.14549",
+        "id:SemanticScholar:0e273fc7a51e893d72102d6ecefdca5ee868af55",
+        "id:arXiv:2603.14549",
+        "title:asap attentionshiftaware pruning for efficient lvlm inference",
+        "url:https://arxiv.org/abs/2603.14549"
+      ],
+      "record": {
+        "title": "ASAP: Attention-Shift-Aware Pruning for Efficient LVLM Inference",
+        "source_url": "https://arxiv.org/abs/2603.14549",
+        "year": 2026,
+        "published": "2026-03-15",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Large Vision-Language Models (LVLMs) demonstrate exceptional multi-modal capabilities, the quadratic computational cost of processing high-resolution visual tokens remains a critical bottleneck. Though recent token reduction strategies attempt to accelerate inference, such methods inadequately exploit attention values and fail to address token redundancy. More critically, they overlook the ``attention shift''phenomenon inherent in LVLMs, which skews token attention scores. In this work, we propose ASAP, a novel training-free, KV-Cache-compatible pruning recipe that comprehensively addresses these limitations. First, we mitigate the attention shift by utilizing a dynamic bidirectional soft attention mask, ensuring the selection of genuinely informative tokens rather than naive attention-based selection. Second, we posit that high semantic redundancy within the token set degrades performance. We therefore introduce a weighted soft merging component that merges semantically similar tokens, preserving only the most feature-dense visual patches for subsequent layers. ASAP achieves virtually lossless compression of visual context, retaining 99.02% of the original LLaVA-NeXT-7B performance while aggressively slashing computational FLOPs by ~80%.",
+        "identifiers": [
+          "SemanticScholar:0e273fc7a51e893d72102d6ecefdca5ee868af55"
+        ],
+        "semantic_scholar_id": "0e273fc7a51e893d72102d6ecefdca5ee868af55",
+        "canonical_id": "arXiv:2603.14549",
+        "arxiv_id": "2603.14549",
+        "doi": "10.48550/arXiv.2603.14549",
+        "authors": [
+          "Surendra Pathak",
+          "Bo Han"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 212,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.22325",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.22325",
+        "id:SemanticScholar:578535084fc0686ad21653fff60385c0bb74c441",
+        "id:arXiv:2603.22325",
+        "title:hybrid associative memories",
+        "url:https://arxiv.org/abs/2603.22325"
+      ],
+      "record": {
+        "title": "Hybrid Associative Memories",
+        "source_url": "https://arxiv.org/abs/2603.22325",
+        "year": 2026,
+        "published": "2026-03-20",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recurrent neural networks (RNNs) and self-attention are both widely used sequence-mixing layers that maintain an internal memory. However, this memory is constructed using two orthogonal mechanisms: RNNs compress the entire past into a fixed-size state, whereas self-attention's state stores every past time step growing its state (the KV cache) linearly with the sequence length. This results in orthogonal strengths and weaknesses. Self-attention layers excel at retrieving information in the context but have large memory and computational costs, while RNNs are more efficient but degrade over longer contexts and underperform for precise recall tasks. Prior work combining these mechanisms has focused primarily on naively interleaving them to reduce computational cost without regard to their complementary mechanisms. We propose the Hybrid Associative Memory (HAM) layer, which combines self-attention and RNNs while leveraging their individual strengths: the RNN compresses the entire sequence, while attention supplements it *only* with information that is difficult for the RNN to predict, which is hence the most valuable information to explicitly store. HAM layers enable data-dependent growth of the KV cache, which can be precisely controlled by the user with a single, continuous threshold. We find that this fine-grained control of the KV cache growth rate has a smooth trade-off with loss and performance. Empirically, we show that our hybrid architecture offers strong, competitive performance relative to RNNs and Transformers even at substantially lower KV-cache usage.",
+        "identifiers": [
+          "SemanticScholar:578535084fc0686ad21653fff60385c0bb74c441"
+        ],
+        "semantic_scholar_id": "578535084fc0686ad21653fff60385c0bb74c441",
+        "canonical_id": "arXiv:2603.22325",
+        "arxiv_id": "2603.22325",
+        "doi": "10.48550/arXiv.2603.22325",
+        "authors": [
+          "Leon Lufkin",
+          "Tomas Figliolia",
+          "Beren Millidge",
+          "Kamesh Krishnamurthy"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 207,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.22216",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.22216",
+        "id:SemanticScholar:758acebadd9b96d9838414abfa8d349df4814c88",
+        "id:arXiv:2603.22216",
+        "title:gumbel distillation for parallel text generation",
+        "url:https://arxiv.org/abs/2603.22216"
+      ],
+      "record": {
+        "title": "Gumbel Distillation for Parallel Text Generation",
+        "source_url": "https://arxiv.org/abs/2603.22216",
+        "year": 2026,
+        "published": "2026-03-23",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The slow, sequential nature of autoregressive (AR) language models has driven the adoption of parallel decoding methods. However, these non-AR models often sacrifice generation quality as they struggle to model the complex joint distribution of token sequences. To narrow this performance gap, we introduce Gumbel Distillation, a novel distillation technique that enables parallel decoders to learn this distribution effectively. Our method leverages the Gumbel-Max trick to create a deterministic mapping from a latent Gumbel noise space to the output tokens of a high-performing AR teacher. As a model-agnostic technique, Gumbel Distillation seamlessly integrates with diverse parallel decoding architectures, including MDLM and BD3-LM. Experiments on LM1B and OpenWebText show that Gumbel Distillation substantially improves the generation quality of parallel language models, achieving a 30.0% improvement in MAUVE score and 10.5% in generative perplexity over MDLM trained on OpenWebText dataset. Code available at https://github.com/hxixixh/gumbel-distill.",
+        "identifiers": [
+          "SemanticScholar:758acebadd9b96d9838414abfa8d349df4814c88"
+        ],
+        "semantic_scholar_id": "758acebadd9b96d9838414abfa8d349df4814c88",
+        "canonical_id": "arXiv:2603.22216",
+        "arxiv_id": "2603.22216",
+        "doi": "10.48550/arXiv.2603.22216",
+        "authors": [
+          "Chi Zhang",
+          "Xixi Hu",
+          "Bo Liu",
+          "Qiang Liu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 204,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.08302",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.08302",
+        "id:SemanticScholar:ef700496beeebf3e7630931798843c97f730f0f5",
+        "id:arXiv:2606.08302",
+        "title:hack towards more effective headaware keyvalue compression for efficient visual autoregressive modeling",
+        "url:https://arxiv.org/abs/2606.08302"
+      ],
+      "record": {
+        "title": "HACK++: Towards More Effective Head-Aware Key-Value Compression for Efficient Visual Autoregressive Modeling",
+        "source_url": "https://arxiv.org/abs/2606.08302",
+        "year": 2026,
+        "published": "2026-06-06",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual Autoregressive (VAR) models adopt a next-scale prediction paradigm, offering high-quality generation with substantially fewer decoding steps. However, existing VAR models suffer from significant attention complexity and severe memory overhead due to the accumulation of key-value (KV) caches across scales. In this paper, we tackle this challenge by introducing KV cache compression into the next-scale paradigm. We begin with an in-depth analysis of VAR attention and observe that attention heads can be stably divided into two functionally distinct categories: Contextual Heads focus on maintaining semantic consistency, while Structural Heads preserve spatial coherence. Their functional divergence makes existing one-size-fits-all compression methods perform poorly on VAR models. We further find that the two head types differ markedly in their reliance on historical scales, and that this reliance shifts across layers and generation steps, arguing for an adaptive cache budget allocation. To address these challenges, we propose HACK++, a training-free Head-Aware key-value Compression frameworK for VAR models. From a one-time offline calibration, HACK++ classifies head types and derives head-specific priors. At inference, it decouples attention from cache compression under independent budgets, bounding the current-scale attention cost while compressing the accumulated cache far more aggressively, via pattern-specific strategies and a reliance-aware budget allocation. Extensive experiments on multiple VAR models across text-to-image, class-conditional, and unified understanding-and-generation tasks validate the effectiveness and generalizability of HACK++. For example, on Infinity-2B/8B, HACK++ maintains near-lossless generation with only a 30% attention budget and a 10% cache budget, and remains robust even under a 1% cache budget.",
+        "identifiers": [
+          "SemanticScholar:ef700496beeebf3e7630931798843c97f730f0f5"
+        ],
+        "semantic_scholar_id": "ef700496beeebf3e7630931798843c97f730f0f5",
+        "canonical_id": "arXiv:2606.08302",
+        "arxiv_id": "2606.08302",
+        "doi": "10.48550/arXiv.2606.08302",
+        "authors": [
+          "Ziran Qin",
+          "Yu-Chen Jiang",
+          "Mingbao Lin",
+          "Youru Lv",
+          "Hang Guo",
+          "Wen Fei",
+          "Weiyao Lin"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 129,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:cc7b5cc7029b6c57eae0c6b57a73cf56785893ddf126d735edb7d46a7b4c0c6c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

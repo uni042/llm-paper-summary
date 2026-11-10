@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a91d8f5ac759cd2e-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2012.15701",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2012.15701",
+    "identity_tokens": [
+      "arXiv:2012.15701"
+    ],
+    "reason": "BERTの重み二値化と学習手法が主題で、現代LLMの推論基盤・サービングを対象にしない。",
+    "first_checked_at": "2026-10-07T21:58:30+00:00",
+    "last_checked_at": "2026-10-07T21:58:30+00:00",
+    "linked_from": [],
+    "title": "BinaryBERT: Pushing the Limit of BERT Quantization"
+  },
+  "processed_at": "2026-10-07T21:58:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a91d8f5ac759",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

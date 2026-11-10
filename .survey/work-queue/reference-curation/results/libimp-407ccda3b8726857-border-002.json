@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-407ccda3b8726857-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.23919/icn.2026.0008",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.23919/icn.2026.0008",
+    "identity_tokens": [
+      "DOI:10.23919/icn.2026.0008"
+    ],
+    "reason": "abstractフィールド空を確認。 https://doi.org/10.23919/icn.2026.0008 はWeb取得tool上 inaccessible。題名だけから詳細内容を補わない。",
+    "first_checked_at": "2026-10-05T07:43:41+00:00",
+    "last_checked_at": "2026-10-05T07:43:41+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+    ],
+    "title": "PolicyFRZ: Adaptive Layer Freezing via Policy Networks for Accelerating DNN Training in Edge Environments"
+  },
+  "processed_at": "2026-10-05T07:43:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-407ccda3b872",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

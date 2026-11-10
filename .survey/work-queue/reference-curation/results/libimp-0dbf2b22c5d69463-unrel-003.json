@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0dbf2b22c5d69463-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2302.04761",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2302.04761",
+    "identity_tokens": [
+      "OpenReview:Yacmpz84TH",
+      "arXiv:2302.04761"
+    ],
+    "reason": "言語モデルがAPI呼出しの位置・引数・結果利用を自己教師ありで学習するtool-use学習手法。推論時に外部APIを使うが、ランタイム、サービング、KVキャッシュ、推論計算効率の最適化は主題ではない。",
+    "first_checked_at": "2026-09-30T21:20:43+00:00",
+    "last_checked_at": "2026-10-04T23:24:23+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2605.26297-agentic-ai-workload-characteristics.md"
+    ],
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+  },
+  "processed_at": "2026-10-04T23:24:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0dbf2b22c5d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

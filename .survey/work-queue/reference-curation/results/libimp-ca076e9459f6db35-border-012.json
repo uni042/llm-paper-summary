@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca076e9459f6db35-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.24368",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.24368",
+    "identity_tokens": [
+      "SemanticScholar:93a43aad22653ec0a93b73f8cb3e8dda3a360515",
+      "arXiv:2608.24368"
+    ],
+    "reason": "The abstract describes an agent execution framework and improved task success but does not report computational cost, latency, or serving gains.",
+    "first_checked_at": "2026-10-13T04:24:22+00:00",
+    "last_checked_at": "2026-10-13T04:24:22+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "From State to Action: OODA-Tool for Reliable Multi-Turn Tool Use"
+  },
+  "processed_at": "2026-10-13T04:24:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca076e9459f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

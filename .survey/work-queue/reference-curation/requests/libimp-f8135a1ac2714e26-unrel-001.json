@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f8135a1ac2714e26-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.14712",
+  "reason": "Each row of a transformer's attention matrix is a probability distribution over tokens, and in trained models most of that probability lands on a single \\emph{sink} token, usually the first. Standard tools for comparing attention rows (cosine similarity, Jensen--Shannon divergence, Shannon entropy) therefore hinge on a choice papers rarely report: keep the sink, or drop it and renormalize. This choice can reverse conclusions. On ten pretrained models from five families, 17--47% of verdicts about which of two heads is more similar flip with the convention, and the most prominent structure in a standard BERT head-clustering pipeline is an artifact of it. The reason is that one-number summaries mix two questions: how much attention the sink takes, and how the rest is divided among the content tokens. Treating rows as compositional data separates them exactly: the Aitchison distance splits orthogonally into a sink term and a content term, entropy splits by an exact identity, and the content distance is characterized by invariances the transformer itself possesses. The separation matters in practice: most measured entropy collapse during training is the sink growing, not attention sharpening (30% of the drop at 70M parameters, 95% at 1B, 79% at 1.4B), and pruning heads with the wrong channel can inflate perplexity more than a hundredfold. We map where each convention is safe, test a frozen out-of-sample predictor (one confirmation, one abstention, one failure), and release code regenerating every number.",
+  "title": "Which Question Is Your Attention Metric Answering? Attention Rows as Compositional Data",
+  "identity_tokens": [
+    "arXiv:2608.14712"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f8135a1ac271",
+  "source_precheck_request_id": null
+}

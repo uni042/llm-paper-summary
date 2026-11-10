@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7ad6216bcec4757a20937511b09d4930484360f5bb2e8cec93b41e9706e5151e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_e4f401cf10fc8191b856322a8aacc2d0--2026-2606.01412-gptq-intrinsic-lora-quantization-research-20261019-1130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2606.01412",
+  "worker_completed_at": "2026-10-19T11:30:00+09:00",
+  "worker_run_key": "20261019-1130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7009,
+    "body_paragraphs": 46,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 532,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-19T02:50:23+00:00"
+}

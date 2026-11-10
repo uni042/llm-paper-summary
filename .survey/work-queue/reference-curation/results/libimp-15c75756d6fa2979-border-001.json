@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15c75756d6fa2979-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.03276",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.03276",
+    "identity_tokens": [
+      "arXiv:2511.03276"
+    ],
+    "reason": "Diffusion-LM scaling paper finds data-constrained training benefits and discusses multi-token parallel generation, but explicitly reports higher train/test FLOPs, latency and memory pressure than AR+KV cache; no serving gain is evaluated.",
+    "first_checked_at": "2026-10-06T13:16:30+00:00",
+    "last_checked_at": "2026-10-06T13:16:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md",
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Diffusion Language Models are Super Data Learners"
+  },
+  "processed_at": "2026-10-06T13:16:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15c75756d6fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-417f08c492c641c4-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.02240",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.02240",
+    "identity_tokens": [
+      "arXiv:2603.02240"
+    ],
+    "reason": "SQLite/FTS5 and trust controls target agent-memory security/retrieval; reported 10.6 ms median search and no LLM inference calls for adaptive ranking. No measured model decode/KV/serving-cost reduction; linked memory relation is real but efficiency benefit is weak, so compare against existing methods.",
+    "first_checked_at": "2026-10-07T11:00:01+00:00",
+    "last_checked_at": "2026-10-07T11:00:01+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SuperLocalMemory: Privacy-Preserving Multi-Agent Memory with Bayesian Trust Defense Against Memory Poisoning"
+  },
+  "processed_at": "2026-10-07T11:00:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-417f08c492c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

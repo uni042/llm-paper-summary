@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Ticket from Marginals to Joints: Coupled-Noise Distillation for One-Step Block Generation in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.06324",
+      "year": 2026,
+      "published": "2026-09-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Can a diffusion language model generate a coherent token block in one forward pass? Masked models already predict every position at once, but each prediction is the marginal distribution given the visible context, so the tokens can be mutually inconsistent and later steps revise those already committed. We introduce CONDOR (Coupled-Noise Distillation for One-Step Readout), trained from scratch to map different noise samples to different coherent blocks. Initially, random noise is not naturally paired with a target. Winner-take-all supervision lets different samples specialize, and self-distillation trains the one-pass output to match the refined coherent block. TinyStories experiments show diverse, coherent continuations over successive blocks, one forward pass each. Qualitative MNIST experiments show that the same approach can extend to multimodal generation, such as text-to-image and unconditional text-and-image generation.",
+      "identifiers": [
+        "SemanticScholar:d8ab20d5a3af6523e5ce6ffa9c0ce40e5cf1c183"
+      ],
+      "semantic_scholar_id": "d8ab20d5a3af6523e5ce6ffa9c0ce40e5cf1c183",
+      "canonical_id": "arXiv:2609.06324",
+      "arxiv_id": "2609.06324",
+      "authors": [
+        "Lin Yao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデルで位置ごとの周辺分布を一括サンプルすると整合しないトークン列になり再修正が必要な問題に対し、ノイズ別に整合するブロックへ写像するCONDORを提案。winner-take-all教師信号と自己蒸留で1回のforwardによるブロック生成を目指す。小規模TinyStoriesの実証が中心で大規模推論速度は要検証だが、生成ステップ削減の直接的な方式。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "UniCAIM: A Unified CAM/CIM Architecture with Static-Dynamic KV Cache Pruning for Efficient Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2504.07479",
+      "year": 2025,
+      "published": "2025-04-10",
+      "venue": "Design Automation Conference",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) have achieved impressive performance in various natural language processing (NLP) applications. However, the high memory and computation cost induced by the KV cache limits the inference efficiency, especially for long input sequences. Compute-in-memory (CIM)-based accelerators have been proposed for LLM acceleration with KV cache pruning. However, as existing accelerators only support static pruning with a fixed pattern or dynamic pruning with primitive implementations, they suffer from either high accuracy degradation or low efficiency. In this paper, we propose a ferroelectric FET (FeFET)-based unified content addressable memory (CAM) and CIM architecture, dubbed as UniCAIM. UniCAIM features simultaneous support for static and dynamic pruning with 3 computation modes: 1) in the CAM mode, UniCAIM enables approximate similarity measurement in $\\mathcal{O}(1)$ time for dynamic KV cache pruning with high energy efficiency; 2) in the charge-domain CIM mode, static pruning can be supported based on accumulative similarity score, which is much more flexible compared to fixed patterns; 3) in the current-domain mode, exact attention computation can be conducted with a subset of selected KV cache. We further propose a novel CAM/CIM cell design that leverages the multi-level characteristics of FeFETs for signed multibit storage of the KV cache and in-place attention computation. With extensive experimental results, we demonstrate UniCAIM can reduce the area-energy-delay product (AEDP) by $8.2 \\sim 831 \\times$ over the state-of-the-art CIM-based LLM accelerators at the circuit level, along with high accuracy comparable with dense attention at the application level, showing its great potential for efficient long-context LLM inference.",
+      "identifiers": [
+        "SemanticScholar:65b2c9808da0549290f0cad02648a68c0e6621de"
+      ],
+      "semantic_scholar_id": "65b2c9808da0549290f0cad02648a68c0e6621de",
+      "canonical_id": "arXiv:2504.07479",
+      "arxiv_id": "2504.07479",
+      "doi": "10.1109/DAC63849.2025.11133273",
+      "authors": [
+        "Wei-Kai Xu",
+        "Wen-Xuan Zeng",
+        "Qian-Qian Huang",
+        "Meng Li",
+        "Ruei-Hao Huang"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 568,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FeFETを用いたCAM/CIM融合アクセラレータで、類似度近似による動的KV選択、累積類似度による静的KV剪定、選択KV上の正確な注意計算を同一ハードウェアで実行するUniCAIMを提案。長文脈LLMのKVメモリ・帯域・エネルギー削減を狙う直接的なPIM推論アーキテクチャ。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5f1189f54f42",
+    "round": "libimp-5f1189f54f423610-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5f1189f54f423610-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5f1189f54f423610-pre01.json",
+    "receipt": "sha256:a60a0ff830890628f3b2255ae0a4415bc25c7855eeb5639fba8aad5d88b99c16"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5f1189f54f42",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8d19d7733e763786-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.19048",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.19048",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.19048",
+      "SemanticScholar:216ff398103b70efe9cf066fafc02445500ec642",
+      "arXiv:2604.19048"
+    ],
+    "reason": "Title identifies task-adaptive MoE/LoRA learning, a model adaptation/training contribution rather than inference or serving efficiency; title-only exclusion.",
+    "first_checked_at": "2026-10-13T06:32:30+00:00",
+    "last_checked_at": "2026-10-13T06:32:30+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "SAMoRA: Semantic-Aware Mixture of LoRA Experts for Task-Adaptive Learning"
+  },
+  "processed_at": "2026-10-13T06:32:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8d19d7733e76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

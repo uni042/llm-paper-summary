@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261101-1652-scheduled-chat-45/r01",
+  "reference_main_sha": "f3c38ce7a15fd241d38852e51e7322d3b6998d45",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.patcog.2025.112182",
+      "identity_tokens": [
+        "DOI:10.1016/j.patcog.2025.112182"
+      ],
+      "title": "Domain aware post training quantization for vision transformers in deployment",
+      "reason": "著者らの公式実装リポジトリに掲載された原著abstractを確認。DAQuantは画像認識用Vision Transformer（DeiTなど）の低ビット量子化と、導入先ドメインへの分布変化に伴う精度低下を扱う。活性化分布に応じた平滑化、学習可能な活性化クリッピング（LAC）、ソース・ターゲット間のドメイン整合を組み合わせ、画像モデルの量子化精度とドメイン適応を改善する。LLMの自己回帰生成、KVキャッシュ、LLM推論サービング、MoEや言語モデル向け実行系を対象とした貢献・評価は一次abstractと公式実装の対象から確認できないため、本サーベイの現行スコープではunrelated。論文本文は未読。",
+      "source_url": "https://doi.org/10.1016/j.patcog.2025.112182",
+      "primary_abstract_url": "https://github.com/iLearn-Lab/PR26-DAQuant",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T16:52:38+09:00",
+      "last_checked_at": "2026-11-01T16:52:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 214,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

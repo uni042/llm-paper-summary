@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "UltraSketchLLM: Sub-1-Bit LLM Compression via Sketch and Hardware-Friendly Operators",
+      "source_url": "https://arxiv.org/abs/2506.17255",
+      "year": 2025,
+      "published": "2025-06-08",
+      "venue": "Proceedings of the 63rd ACM/IEEE Design Automation Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) require larger GPU memory size these days, necessitating efficient and extreme weight compression methods. Existing compression methods are either theoretically limited by 1 bit per weight or face severe performance degradation and inefficiency. To deploy LLMs in resource-constrained scenarios, we introduce UltraSketchLLM, compressing LLMs with data sketch. It reduces peak GPU memory footprint with a high compression rate down to 0.5 bit per weight. Combined with hardware-friendly implementation, UltraSketchLLM keeps tolerable performance degradation and extremely low latency overhead with 14.9× speedup compared to naive sketch solution.",
+      "identifiers": [
+        "SemanticScholar:3d3f808fac6efd310e9552ab4c064be7f3199262"
+      ],
+      "semantic_scholar_id": "3d3f808fac6efd310e9552ab4c064be7f3199262",
+      "canonical_id": "arXiv:2506.17255",
+      "arxiv_id": "2506.17255",
+      "doi": "10.1145/3770743.3804314",
+      "authors": [
+        "Su-Nan Zou",
+        "Xu Sun",
+        "Zi-Yun Zhang",
+        "Guo-Jie Luo"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 509,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨はスケッチとハードウェア親和演算によりLLM重みを0.5ビット/重みまで圧縮するUltraSketchLLMを提案。ナイーブなスケッチ実装比14.9倍の速度を報告。現行arXiv題名「UltraSketchLLM: Sub-1-Bit LLM Compression via Sketch and Hardware-Friendly Operators」とworklist旧題は同一identity。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-eefd7cd45810",
+    "round": "libimp-eefd7cd458107e8d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-eefd7cd458107e8d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-eefd7cd458107e8d-pre01.json",
+    "receipt": "sha256:331414cb1104799a21f2b0e32b8e6ec517df9994c81fc1de437c49fc43fadbd9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-eefd7cd45810",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

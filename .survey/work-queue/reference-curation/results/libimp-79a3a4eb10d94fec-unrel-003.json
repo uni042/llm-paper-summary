@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79a3a4eb10d94fec-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.16737",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.16737",
+    "identity_tokens": [
+      "arXiv:2408.16737"
+    ],
+    "reason": "Optimizes synthetic data generation and LLM fine-tuning under training budget; not inference serving. Primary abstract: Training on high-quality synthetic data from strong language models (LMs) is a common strategy to improve the reasoning performance of LMs. In this work, we revisit whether this strategy is compute-optimal under a fixed inference budget (e.g., FLOPs). To do so, we investigate the trade-offs between generating synthetic data using a stronger but more expensive (SE) model versus a weaker but cheaper (WC) model. We evaluate the generated data across three key metrics: coverage,",
+    "first_checked_at": "2026-10-05T12:28:01+00:00",
+    "last_checked_at": "2026-10-05T12:28:01+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+    ],
+    "title": "Smaller, Weaker, Yet Better: Training LLM Reasoners via Compute-Optimal Sampling"
+  },
+  "processed_at": "2026-10-05T12:28:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79a3a4eb10d9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

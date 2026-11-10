@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "32ac1569a1b52f4e307f295c151c997445371b91fda4d79a0970198a080b28a0",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_418ce13049508191bf62ab2cc87dfe58--2025-2511.08923-tidar-repair-20261008-0945.md",
+  "canonical_id": "arXiv:2511.08923",
+  "worker_completed_at": "2026-10-08T09:54:00+09:00",
+  "worker_run_key": "20261008-0945-scheduled-chat-45/returned-research-r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6134,
+    "body_paragraphs": 32,
+    "method_chars": 2028,
+    "method_paragraphs": 11,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-08T10:27:37+00:00"
+}

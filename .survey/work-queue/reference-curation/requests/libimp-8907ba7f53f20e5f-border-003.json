@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-8907ba7f53f20e5f-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2603.06495",
+  "reason": "本文はtraining-freeなinference-time activation steeringで、少数exampleによる制御を2 forward passで近似する。サンプル要求量を大きく下げるが、対象workflowはsteering/alignmentで、LLM runtime compute/memory/latencyの改善は示さない。",
+  "title": "COLD-Steer: Steering Large Language Models via In-Context One-step Learning Dynamics",
+  "identity_tokens": [
+    "arXiv:2603.06495"
+  ],
+  "linked_from": [
+    "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8907ba7f53f2",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

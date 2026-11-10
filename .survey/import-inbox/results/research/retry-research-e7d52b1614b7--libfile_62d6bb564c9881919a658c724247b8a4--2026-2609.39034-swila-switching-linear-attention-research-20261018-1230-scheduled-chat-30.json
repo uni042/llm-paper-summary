@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "3736910cb0501c7a7573d4be75804d78130c526a4284d572cac4e5e2833d91a4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e7d52b1614b7--libfile_62d6bb564c9881919a658c724247b8a4--2026-2609.39034-swila-switching-linear-attention-research-20261018-1230-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.39034",
+  "worker_completed_at": "2026-10-18T12:39:46+09:00",
+  "worker_run_key": "20261018-1230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5728,
+    "body_paragraphs": 33,
+    "method_chars": 1528,
+    "method_paragraphs": 8,
+    "evaluation_chars": 169,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 169 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 169 < 500"
+  ],
+  "processed_at": "2026-10-18T14:32:24+00:00"
+}

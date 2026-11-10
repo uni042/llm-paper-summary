@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-519d3405853c8a62-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.217",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.217",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2020.findings-emnlp.217"
+    ],
+    "reason": "future n-gram predictionとn-stream self-attentionで次の複数tokenを同時予測するが、目的はsequence-to-sequence事前学習を改善しsummarization/question generation品質を上げること。標準推論互換で、推論latency・throughput・memory削減を評価しないため対象外。",
+    "first_checked_at": "2026-10-05T15:55:19+00:00",
+    "last_checked_at": "2026-10-05T15:55:19+00:00",
+    "linked_from": [],
+    "title": "ProphetNet: Predicting Future N-gram for Sequence-to-Sequence Pre-training"
+  },
+  "processed_at": "2026-10-05T15:55:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-519d3405853c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

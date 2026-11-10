@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f3cf1356b4347a2f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/iccsc71566.2026.11650204",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/iccsc71566.2026.11650204",
+    "identity_tokens": [
+      "DOI:10.1109/iccsc71566.2026.11650204"
+    ],
+    "reason": "一次abstractはQwen2.5-7BのQLoRAによるsuicide-ideation detectionのtask adaptationを扱う。効率の中心はfine-tuningで、推論効率改善ではない。",
+    "first_checked_at": "2026-10-05T11:19:38+00:00",
+    "last_checked_at": "2026-10-05T11:19:38+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "Large Language Model for Suicide Ideation Detection in Social Media: A QloRA-Based Optimization of Qwen2.5-7B"
+  },
+  "processed_at": "2026-10-05T11:19:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f3cf1356b434",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

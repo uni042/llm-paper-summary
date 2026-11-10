@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95f4ad1fa550127c-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.08992",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.08992",
+    "identity_tokens": [
+      "arXiv:2505.08992"
+    ],
+    "reason": "Useful background for the linked FPGA/LLM accelerator line, but a survey without a concrete new result is weak as a standalone addition.",
+    "first_checked_at": "2026-10-06T11:31:27+00:00",
+    "last_checked_at": "2026-10-06T11:31:27+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Dataflow & Tiling Strategies in Edge-AI FPGA Accelerators: A Comprehensive Literature Review"
+  },
+  "processed_at": "2026-10-06T11:31:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95f4ad1fa550",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Post-Training Sparse Attention with Double Sparsity",
+      "source_url": "https://arxiv.org/abs/2408.07092",
+      "year": 2024,
+      "published": "2024-08-11",
+      "abstract": "The inference process for large language models is slow and memory-intensive, with one of the most critical bottlenecks being excessive Key-Value (KV) cache accesses. This paper introduces\"Double Sparsity,\"a novel post-training sparse attention technique designed to alleviate this bottleneck by reducing KV cache access. Double Sparsity combines token sparsity, which focuses on utilizing only the important tokens for computing self-attention, with channel sparsity, an approach that uses important feature channels for identifying important tokens. Our key insight is that the pattern of channel sparsity is relatively static, allowing us to use offline calibration to make it efficient at runtime, thereby enabling accurate and efficient identification of important tokens. Moreover, this method can be combined with offloading to achieve significant memory usage reduction. Experimental results demonstrate that Double Sparsity can achieve $\\frac{1}{16}$ token and channel sparsity with minimal impact on accuracy across various tasks, including wiki-2 perplexity, key-value retrieval, and long context benchmarks with models including Llama-2-7B, Llama-2-70B, and Mixtral-8x7B. It brings up to a 14.1$\\times$ acceleration in attention operations and a 1.9$\\times$ improvement in end-to-end inference on GPUs. With offloading, it achieves a decoding speed acceleration of 16.3$\\times$ compared to state-of-the-art solutions at a sequence length of 256K. Our code is publicly available at https://github.com/andy-yang-1/DoubleSparse.",
+      "canonical_id": "arXiv:2408.07092",
+      "arxiv_id": "2408.07092",
+      "doi": "10.48550/arXiv.2408.07092",
+      "authors": [
+        "Shuo Yang",
+        "Ying Sheng",
+        "Joseph E. Gonzalez",
+        "Ion Stoica",
+        "Lian-Min Zheng"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "Cache-to-Cache: Direct Semantic Communication Between Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.03215",
+      "year": 2025,
+      "published": "2025-10-03",
+      "abstract": "Multi-LLM systems harness the complementary strengths of diverse Large Language Models, achieving performance and efficiency gains that are not attainable by a single model. In existing designs, LLMs communicate through text, forcing internal representations to be transformed into output token sequences. This process both loses rich semantic information and incurs token-by-token generation latency. Motivated by these limitations, we ask: Can LLMs communicate beyond text? Oracle experiments show that enriching the KV-Cache semantics can improve response quality without increasing cache size, supporting KV-Cache as an effective medium for inter-model communication. Thus, we propose Cache-to-Cache (C2C), a new paradigm for direct semantic communication between LLMs. C2C uses a neural network to project and fuse the source model's KV-cache with that of the target model to enable direct semantic transfer. A learnable gating mechanism selects the target layers that benefit from cache communication. Compared with text communication, C2C utilizes the deep, specialized semantics from both models, while avoiding explicit intermediate text generation. Experiments show that C2C achieves 6.4-14.2% higher average accuracy than individual models. It further outperforms the text communication paradigm by approximately 3.1-5.4%, while delivering an average 2.5x speedup in latency. Our code is available at https://github.com/thu-nics/C2C.",
+      "canonical_id": "arXiv:2510.03215",
+      "arxiv_id": "2510.03215",
+      "doi": "10.48550/arXiv.2510.03215",
+      "authors": [
+        "Tianyu Fu",
+        "Zihan Min",
+        "Hanling Zhang",
+        "Jichao Yan",
+        "Guohao Dai",
+        "Wan-Li Ouyang",
+        "Yu Wang"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "Not All Heads Matter: A Head-Level KV Cache Compression Method with Integrated Retrieval and Reasoning",
+      "source_url": "https://arxiv.org/abs/2410.19258",
+      "year": 2024,
+      "published": "2024-10-25",
+      "abstract": "Key-Value (KV) caching is a common technique to enhance the computational efficiency of Large Language Models (LLMs), but its memory overhead grows rapidly with input length. Prior work has shown that not all tokens are equally important for text generation, proposing layer-level KV cache compression to selectively retain key information. Recognizing the distinct roles of attention heads in generation, we propose HeadKV, a head-level KV cache compression method, and HeadKV-R2, which leverages a novel contextual reasoning ability estimation for compression. Our approach operates at the level of individual heads, estimating their importance for contextual QA tasks that require both retrieval and reasoning capabilities. Extensive experiments across diverse benchmarks (LongBench, LooGLE), model architectures (e.g., Llama-3-8B-Instruct, Mistral-7B-Instruct), and long-context abilities tests demonstrate that our head-level KV cache compression significantly outperforms strong baselines, particularly in low-resource settings (KV size = 64&128). Notably, our method retains just 1.5% of the KV cache while achieving 97% of the performance of the full KV cache on the contextual question answering benchmark. Codes are available at https://github.com/FYYFU/HeadKV",
+      "canonical_id": "arXiv:2410.19258",
+      "arxiv_id": "2410.19258",
+      "doi": "10.48550/arXiv.2410.19258",
+      "authors": [
+        "Yu Fu",
+        "Ze-Fan Cai",
+        "Abedelkadir Asi",
+        "Wayne Xiong",
+        "Yue Dong",
+        "Wen Xiao"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "GEAR: An Efficient KV Cache Compression Recipe for Near-Lossless Generative Inference of LLM",
+      "source_url": "https://arxiv.org/abs/2403.05527",
+      "year": 2024,
+      "published": "2024-03-08",
+      "abstract": "Key-value (KV) caching has become the de-facto to accelerate generation speed for large language models (LLMs) inference. However, the growing cache demand with increasing sequence length has transformed LLM inference to be a memory bound problem, significantly constraining the system throughput. Existing methods rely on dropping unimportant tokens or quantizing all entries uniformly. Such methods, however, often incur high approximation errors to represent the compressed matrices. The autoregressive decoding process further compounds the error of each step, resulting in critical deviation in model generation and deterioration of performance. To tackle this challenge, we propose GEAR, an efficient KV cache compression framework that achieves near-lossless high-ratio compression. GEAR first applies quantization to majority of entries of similar magnitudes to ultra-low precision. It then employs a low rank matrix to approximate the quantization error, and a sparse matrix to remedy individual errors from outlier entries. By adeptly integrating three techniques, GEAR is able to fully exploit their synergistic potentials. Our experiments demonstrate that compared to alternatives, GEAR achieves near-lossless 4-bit KV cache compression with up to 2.38x throughput improvement, while reducing peak-memory size up to 2.29x. Our code is publicly available at https://github.com/HaoKang-Timmy/GEAR.",
+      "canonical_id": "arXiv:2403.05527",
+      "arxiv_id": "2403.05527",
+      "doi": "10.48550/arXiv.2403.05527",
+      "authors": [
+        "Hao Kang",
+        "Qingru Zhang",
+        "Souvik Kundu",
+        "Geonhwa Jeong",
+        "Zaoxing Liu",
+        "Tushar Krishna",
+        "Tuo Zhao"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
+      "source_url": "https://arxiv.org/abs/2407.08608",
+      "year": 2024,
+      "published": "2024-07-11",
+      "abstract": "Attention, as a core layer of the ubiquitous Transformer architecture, is the bottleneck for large language models and long-context applications. FlashAttention elaborated an approach to speed up attention on GPUs through minimizing memory reads/writes. However, it has yet to take advantage of new capabilities present in recent hardware, with FlashAttention-2 achieving only 35% utilization on the H100 GPU. We develop three main techniques to speed up attention on Hopper GPUs: exploiting asynchrony of the Tensor Cores and TMA to (1) overlap overall computation and data movement via warp-specialization and (2) interleave block-wise matmul and softmax operations, and (3) block quantization and incoherent processing that leverages hardware support for FP8 low-precision. We demonstrate that our method, FlashAttention-3, achieves speedup on H100 GPUs by 1.5-2.0$\\times$ with FP16 reaching up to 740 TFLOPs/s (75% utilization), and with FP8 reaching close to 1.2 PFLOPs/s. We validate that FP8 FlashAttention-3 achieves 2.6$\\times$ lower numerical error than a baseline FP8 attention.",
+      "canonical_id": "arXiv:2407.08608",
+      "arxiv_id": "2407.08608",
+      "doi": "10.48550/arXiv.2407.08608",
+      "authors": [
+        "Jay Shah",
+        "Ganesh Bikshandi",
+        "Ying Zhang",
+        "Vijay Thakkar",
+        "P. Ramani",
+        "Tri Dao"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928-legacy-md",
+    "round": "library-import-legacy-md-accept-20260928-003",
+    "axis": "explicit-library-legacy-md-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "旧Library Discovery MDから現行スコープで有効なaccept成果を正規Research候補へ取り込む。",
+    "candidate_count": 33,
+    "round_submission_index": 4,
+    "round_submission_count": 7
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-legacy-md-accept-20260928-003",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-legacy-md-accept-20260928-003.json",
+    "receipt": "sha256:9b017d7a2639a46cf84be70b8e680a69d91ce55685a778e209d14bc3093b2dd8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928-legacy-md",
+    "summary": "Library上の旧Discovery成果を現行スコープへ再仕分けし、有効なaccept成果をGitHubへ反映する。"
+  }
+}

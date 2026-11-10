@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1a2aa53568a3738a-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.13501",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.13501",
+    "identity_tokens": [
+      "arXiv:2404.13501"
+    ],
+    "reason": "LLM agentのmemory source/form/operationと応用を整理するsurvey。長contextの計算costにも触れるが、個別の推論system最適化方式を提案・評価する論文ではない。",
+    "first_checked_at": "2026-10-04T21:54:26+00:00",
+    "last_checked_at": "2026-10-04T21:54:26+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "A Survey on the Memory Mechanism of Large Language Model-based Agents"
+  },
+  "processed_at": "2026-10-04T21:54:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1a2aa53568a3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

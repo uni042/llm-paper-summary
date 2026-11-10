@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2230-scheduled-chat-30/r01",
+  "reference_main_sha": "79c501f86a182e0ede9111ad52f8ea0b6d133398",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.12187",
+      "identity_tokens": [
+        "arXiv:2410.12187"
+      ],
+      "title": "DAQ: Density-Aware Post-Training Weight-Only Quantization For LLMs",
+      "reason": "LLaMA/LLaMA-2の重みのみの学習後量子化を対象に、重みの高密度領域へ量子化表現を整列させるdensity-centric alignmentと、出力影響に応じてscale/zero-pointを学習調整する方式を提案。一次要旨はLLaMAで平均22.8%、LLaMA-2で19.6%の困惑度損失低減を報告し、LLM推論向け圧縮への直接的貢献がある。",
+      "source_url": "https://arxiv.org/abs/2410.12187",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:30:44+09:00",
+      "last_checked_at": "2026-10-30T22:30:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 453,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.09010",
+      "identity_tokens": [
+        "arXiv:2512.09010"
+      ],
+      "title": "Towards Lossless Ultimate Vision Token Compression for VLMs",
+      "reason": "LUVCは視覚エンコーダの空間軸に直交する反復的トークン統合と、LLM内の低域フィルタ型スペクトル枝刈りを組み合わせる。FlashAttention互換の学習不要VLM視覚トークン削減で、一次要旨は言語モデル推論約2倍高速化と軽微な精度低下を報告する。",
+      "source_url": "https://arxiv.org/abs/2512.09010",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:30:44+09:00",
+      "last_checked_at": "2026-10-30T22:30:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 458,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.26796",
+      "identity_tokens": [
+        "arXiv:2603.26796"
+      ],
+      "title": "Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints",
+      "reason": "GPU資源・同時実行・費用の制約を守るバッチ単位LLMモデル割当を最適化し、性能予測の不確実性に頑健なroutingとオフラインのモデルインスタンス配分を導入する。一次要旨は敵対的バッチ条件でper-query routing比最大24%改善を報告し、LLMサービングの直接的な配置・スケジューリング研究。",
+      "source_url": "https://arxiv.org/abs/2603.26796",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:30:44+09:00",
+      "last_checked_at": "2026-10-30T22:30:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 461,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12586",
+      "identity_tokens": [
+        "arXiv:2602.12586"
+      ],
+      "title": "Can I Have Your Order? Monte-Carlo Tree Search for Slot Filling Ordering in Diffusion Language Models",
+      "reason": "McDiffuSEはmasked diffusion language modelの空欄補完順序をMCTSの先読み探索で選択し、数学・コード生成の品質を改善する。一次要旨の主指標は正答率（plan-and-infill比平均8.0%改善）で、生成順序の制御は関連するが推論時間・メモリ・スループット削減を実証したシステム研究ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2602.12586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:30:44+09:00",
+      "last_checked_at": "2026-10-30T22:30:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 462,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.13768",
+      "identity_tokens": [
+        "arXiv:2605.13768"
+      ],
+      "title": "High-Rate Quantized Matrix Multiplication II",
+      "reason": "重みのみのLLM学習後量子化を、入力列共分散Σ_Xを使う重み付き二乗誤差の情報理論問題として解析。waterfillingによるビット配分とWaterSIC/GPTQの高レート性能を比較し、Llama-3-8Bの共分散で回転付きGPTQがWaterSICに0.1bit以内と報告する。推論向け量子化アルゴリズムの理論的貢献が直接ある。",
+      "source_url": "https://arxiv.org/abs/2605.13768",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:30:44+09:00",
+      "last_checked_at": "2026-10-30T22:30:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 466,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.04742",
+      "identity_tokens": [
+        "arXiv:2507.04742"
+      ],
+      "title": "Activation Steering for Chain-of-Thought Compression",
+      "reason": "Activation-Steered Compressionは冗長な英語中心CoTと簡潔な数式中心CoTの残差ストリーム差からsteering vectorを作り、推論時に隠れ状態へ加えて出力を短縮する。一次要旨はMATH500/GSM8Kで最大67.43%トークン削減、8BのMATH500で壁時計時間平均2.73倍高速化を報告し、推論費用削減を直接実測する。",
+      "source_url": "https://arxiv.org/abs/2507.04742",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:30:44+09:00",
+      "last_checked_at": "2026-10-30T22:30:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 467,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00578",
+      "identity_tokens": [
+        "arXiv:2603.00578"
+      ],
+      "title": "Draft-Thinking: Learning Efficient Reasoning in Long Chain-of-Thought LLMs",
+      "reason": "Progressive Draft Adaptationは小型モデルに合う短い推論軌跡をSFTと二段階RLで学習させ、推論時のdraft/adaptive/step-by-step指示を使い分ける。一次要旨はMATH500で5668→986トークン、精度93.0%→90.6%と報告。生成費用削減は関連するが主要新規性はモデルの訓練・推論様式で、サービング/カーネル機構への寄与が薄いため境界。",
+      "source_url": "https://arxiv.org/abs/2603.00578",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:30:44+09:00",
+      "last_checked_at": "2026-10-30T22:30:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 473,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.11164",
+      "identity_tokens": [
+        "arXiv:2601.11164"
+      ],
+      "title": "SoLA-Vision: Fine-grained Layer-wise Linear Softmax Hybrid Attention",
+      "reason": "SoLA-VisionはImageNet-1Kと密な画像予測タスクを主対象とする純粋な視覚バックボーンで、線形注意とsoftmax注意の層別混合を研究する。一次要旨に生成LLM推論、KVキャッシュ、LLMサービングへの適用はなく、本サーベイのLLM推論システムの直接対象外。",
+      "source_url": "https://arxiv.org/abs/2601.11164",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:30:44+09:00",
+      "last_checked_at": "2026-10-30T22:30:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 478,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.04901",
+      "identity_tokens": [
+        "arXiv:2604.04901"
+      ],
+      "title": "FileGram: Grounding Agent Personalization in File-System Behavioral Traces",
+      "reason": "FileGramEngineの行動トレース合成、FileGramBenchの個人化記憶評価、FileGramOSの手続き・意味・エピソード記憶構築を中心とするエージェント個人化研究。一次要旨はファイルシステム行動に基づく記憶品質・評価が主題で、LLM推論速度・メモリ階層・サービングの最適化を示していない。",
+      "source_url": "https://arxiv.org/abs/2604.04901",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:30:44+09:00",
+      "last_checked_at": "2026-10-30T22:30:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 482,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.10414",
+      "identity_tokens": [
+        "arXiv:2605.10414"
+      ],
+      "title": "Remember to Forget: Gated Adaptive Positional Encoding",
+      "reason": "GAPEはRoPEを保ったまま、query依存ゲートで無関係な遠距離文脈を抑制しkey依存ゲートで重要なランドマークを保護する注意ロジット補正を提案。一次要旨は7B既学習モデルへの後付けと訓練長の最大8倍への外挿を報告し、長文脈推論時の注意機構の直接改善に該当する。",
+      "source_url": "https://arxiv.org/abs/2605.10414",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:30:44+09:00",
+      "last_checked_at": "2026-10-30T22:30:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 484,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

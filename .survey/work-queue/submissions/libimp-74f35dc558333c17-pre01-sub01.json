@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Neural Garbage Collection: Learning to Forget while Learning to Reason",
+      "source_url": "https://arxiv.org/abs/2604.18002",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-thought reasoning has driven striking advances in language model capability, yet every reasoning step grows the KV cache, creating a bottleneck to scaling this paradigm further. Current approaches manage these constraints on the model's behalf using hand-designed criteria. A more scalable approach would let end-to-end learning subsume this design choice entirely, following a broader pattern in deep learning. After all, if a model can learn to reason, why can't it learn to forget? We introduce Neural Garbage Collection (NGC), in which a language model learns to forget while learning to reason, trained end-to-end from outcome-based task reward alone. As the model reasons, it periodically pauses, decides which KV cache entries to evict, and continues to reason conditioned on the remaining cache. By treating tokens in a chain-of-thought and cache-eviction decisions as discrete actions sampled from the language model, we can use reinforcement learning to jointly optimize how the model reasons and how it manages its own memory: what the model evicts shapes what it remembers, what it remembers shapes its reasoning, and the correctness of that reasoning determines its reward. Crucially, the model learns this behavior entirely from a single learning signal - the outcome-based task reward - without supervised fine-tuning or proxy objectives. On Countdown, AMC, and AIME tasks, NGC maintains strong accuracy relative to the full-cache upper bound at 2-3x peak KV cache size compression and substantially outperforms eviction baselines. Our results are a first step towards a broader vision where end-to-end optimization drives both capability and efficiency in language models.",
+      "identifiers": [
+        "SemanticScholar:2a0a80a2bac24fb306865f0251dcb93f929498a9"
+      ],
+      "semantic_scholar_id": "2a0a80a2bac24fb306865f0251dcb93f929498a9",
+      "canonical_id": "arXiv:2604.18002",
+      "arxiv_id": "2604.18002",
+      "doi": "10.48550/arXiv.2604.18002",
+      "authors": [
+        "Michael Y. Li",
+        "Jubayer Ibn Hamid",
+        "Emily Fox",
+        "Noah D. Goodman"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は推論トークンとKVキャッシュ削除判断を離散行動として共同学習し、モデル自身がCoT中に不要KVを破棄するNeural Garbage Collectionを提案。手作業の退避基準を使わず成果報酬だけで学習し、推論中のKVメモリ使用を制御。KVキャッシュ削減と推論計算に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "T-LoopFormer: Token-Level Elastic-Depth Looped Transformers with Dynamic Routing",
+      "source_url": "https://arxiv.org/abs/2609.15160",
+      "year": 2026,
+      "published": "2026-09-14",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Transformers have recently demonstrated strong performance in both reasoning and language tasks by reusing a shared set of parameters across multiple iterations, achieving parameter efficiency without sacrificing representational power. Besides, looped Transformers perform inference directly in the latent space (latent reasoning) to reduce the number of tokens consumed during inference, thereby achieving improved sample efficiency. However, these models typically apply a fixed recursion depth uniformly to every token, leading to suboptimal compute allocation and leaving significant efficiency gains on the table. In this work, we propose \\textbf{t}oken-level elastic-depth \\textbf{looped transformers}: T-LoopFormer. T-LoopFormer uses \\textbf{dynamic token-choice routing}, which enables each token to adaptively determine its own number of loop iterations based on its hidden state, which could improve the token generation accuracy. Moreover, we further introduce recursion-wise KV cache, which maintains an independent key-value cache for each recursion loop of active tokens; this design ensures that tokens at different depths only attend to their corresponding cached states, effectively enabling faster autoregressive decoding. Extensive experiments show that T-LoopFormer achieves robust performance on a wide range of language modeling and zero-shot reasoning tasks, and our model could reach the lowest decoding latency, which validates the effectiveness of token-choice router and recursion-wise KV cache. Code is available at https://github.com/YuMingQian1234/T-LoopFormer",
+      "identifiers": [
+        "SemanticScholar:f5e23c0eeaf327756679900da113871ca70ef0ca"
+      ],
+      "semantic_scholar_id": "f5e23c0eeaf327756679900da113871ca70ef0ca",
+      "canonical_id": "arXiv:2609.15160",
+      "arxiv_id": "2609.15160",
+      "authors": [
+        "Ming-Qian Yu",
+        "Wen-Peng Zhang",
+        "Shao-Bo Cui",
+        "Pei-Lin Zhao"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv最新版ではworklistの「for Latent Reasoning」等の副題が変更されているが同一identity。各トークンが隠れ状態に基づき再帰深さを選択するtoken-choice routingと、ループ段階ごとに独立KVを保持するrecursion-wise cacheを提案。言語モデリングとゼロショット推論でdecode遅延の改善を報告し、動的計算配分に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Decomposing Runtime, Kernel, and Quantization Speedups via a Matched FP16 Intermediate: A Hardware-Conditioned Case Study on Four NVIDIA RTX A5000 GPUs",
+      "source_url": "https://arxiv.org/abs/2607.11368",
+      "year": 2026,
+      "published": "2026-07-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reported serving speedups from quantized kernels typically bundle the weight format, the kernel, and the inference runtime into one number. We present an attribution study on four NVIDIA RTX A5000 GPUs, 24 GiB each, on a single host with NVLink-bridged pairs. A matched intermediate stack that keeps the faster runtime without the quantized kernel splits the full speedup into a runtime part and a kernel and quantization part. Under matched greedy decoding the full stack reaches $2.58\\times$ end to end, with the runtime change accounting for about two thirds of that gain on a logarithmic scale; across three similar model families the kernel and quantization part moves by at most 1.5%. Sharding one instance across all four cards falls well below doubling: a profiler trace attributes about 80% of the per token shortfall to coordination, and an NVLink versus PCIe control on the same hardware shows similar realized bandwidth on both links, pointing away from link bandwidth as the cause. Whether to run one sharded instance or several independent ones depends on the workload and the model, with the ranking reversing on the larger model: the smaller model splits between sharding and multiple instances by workload, while the larger model favors two paired instances on every workload. Quantization extends sustainable concurrent users roughly four times past a reproducible half precision memory cliff. Differences in sampling mode and prompt pool between the two stacks are documented as threats to validity.",
+      "identifiers": [
+        "SemanticScholar:af8fe4d0c19d59d954ba3f0cb0caf019ae260293"
+      ],
+      "semantic_scholar_id": "af8fe4d0c19d59d954ba3f0cb0caf019ae260293",
+      "canonical_id": "arXiv:2607.11368",
+      "arxiv_id": "2607.11368",
+      "doi": "10.48550/arXiv.2607.11368",
+      "authors": [
+        "Wei-Jia Han",
+        "Li-Sha Qu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 109,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は同一4×RTX A5000上で量子化カーネル、ランタイム変更、GPU分割を統制したFP16中間構成を設け、E2E最大2.58倍のうちランタイム寄与が対数尺度で約2/3と分解。4GPU分割が2倍に届かない主因を同期調整と特定し、推論性能比較の測定設計に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "StateComp: Learning When to Compress History in Long Horizon Agents",
+      "source_url": "https://arxiv.org/abs/2609.27298",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon agents continuously accumulate interaction history during task execution, yet the importance of past interactions changes as the agent state evolves. Existing context management methods largely compress history based on fixed windows, periodic schedules, or current relevance, overlooking a more fundamental question: when has a past interaction become safe to replace? Premature compression may remove information still needed for future actions, while overly conservative retention leads to substantial context overhead. To address this, we propose State Conditioned Compression (StateComp), a framework that determines when historical interactions can be safely compressed according to the current agent state. StateComp constructs KEEP and READY supervision through a two-stage annotation procedure and trains an imbalance-aware router on hidden representations from a frozen language model. A bounded state representation further reduces the cost of evaluating long histories, while adjacent READY interactions are grouped into continuous spans and replaced with compact summaries during execution. Experiments on WorkBuddyBench show that StateComp reduces total agent and summarization tokens by 52.27% while maintaining task performance, and achieves a 12.67-fold speedup in representation extraction.",
+      "identifiers": [
+        "SemanticScholar:fa59cb5fd32931e6100dd3106f1704896d9d8cca"
+      ],
+      "semantic_scholar_id": "fa59cb5fd32931e6100dd3106f1704896d9d8cca",
+      "canonical_id": "arXiv:2609.27298",
+      "arxiv_id": "2609.27298",
+      "authors": [
+        "Ming-Xuan Wang",
+        "Hong-Yue Chen",
+        "Ying-Long Guo",
+        "Fei Luo",
+        "Chao Ning",
+        "Bo Wang",
+        "Guo-Run Yao",
+        "Yan-Biao Ma",
+        "Jun-Gong Han"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は長期エージェント履歴について、現在状態に応じて安全に要約可能な過去イベントをKEEP/READYとして予測し、連続区間を圧縮するStateCompを提案。WorkBuddyBenchでエージェント・要約トークンを52.27%削減しタスク性能を維持。エージェント推論の文脈管理とコスト削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Týr-the-Pruner: Unlocking Accurate 50% Structural Pruning for LLMs via Global Sparsity Distribution Optimization",
+      "source_url": "https://arxiv.org/abs/2503.09657",
+      "year": 2025,
+      "published": "2025-03-12",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structural pruning enhances hardware-agnostic inference efficiency for large language models (LLMs) yet often fails to maintain comparable performance. Local pruning performs efficient layer-by-layer compression but ignores global topology. Although global pruning aims to identify an optimal sparse model, intuitive methods typically adopt a two-stage paradigm that first evaluates substructure saliency and then applies global pruning, which ignores inter-structure dependencies and fails to achieve end-to-end optimization. To address these limitations, we propose T\\'yr-the-Pruner, an efficient end-to-end search-based global structural pruning framework. This framework constructs a supernet by repeatedly applying local pruning across a range of sparsity ratios to each layer in an LLM, with the core goal of determining the optimal sparsity distribution under a target overall sparsity ratio. Concretely, we introduce an effective local pruning and an expectation error accumulation approach to improve supernet construction. Furthermore, we employ an iterative prune-and-search strategy with coarse-to-fine sparsity granularity to ensure efficient search convergence. Experimental results show that T\\'yr-the-Pruner achieves state-of-the-art structural pruning, retaining 97% of the dense model's performance while removing a challenging 50% of Llama-3.1-70B's parameters. Code will be available at https://github.com/AMD-AGI/Tyr-the-Pruner.",
+      "identifiers": [
+        "SemanticScholar:4990d126876c4b14b51963622630788f752c6d94"
+      ],
+      "semantic_scholar_id": "4990d126876c4b14b51963622630788f752c6d94",
+      "canonical_id": "arXiv:2503.09657",
+      "arxiv_id": "2503.09657",
+      "doi": "10.48550/arXiv.2503.09657",
+      "authors": [
+        "Guan-Chen Li",
+        "Yi-Xing Xu",
+        "Ze-Ping Li",
+        "Ji Liu",
+        "Xuan-Wu Yin",
+        "Dong Li",
+        "E. Barsoum"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 597,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "arXiv最新版の題名は「Structural Pruning LLMs via Global Sparsity Distribution Optimization」でworklistの旧題と表記が異なるが同一arXiv identity。層間依存を考慮したsupernet構築と漸進的探索でLLM全体の枝刈り率を配分し、Llama-3.1-70Bのパラメータ50%削除時に密モデル性能97%維持を報告。推論用モデル圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-74f35dc55833",
+    "round": "libimp-74f35dc558333c17-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-74f35dc558333c17-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-74f35dc558333c17-pre01.json",
+    "receipt": "sha256:bc9466628fab8ff7c1425919198172cc3bae32ae5ccf2eda90979d583e252339"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-74f35dc55833",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

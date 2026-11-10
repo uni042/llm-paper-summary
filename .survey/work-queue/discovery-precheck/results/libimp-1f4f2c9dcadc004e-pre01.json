@@ -1,0 +1,1620 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1f4f2c9dcadc004e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1f4f2c9dcadc",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3767295.3803570",
+    "DOI:10.1145/3774904.3792794",
+    "arXiv:2409.13199",
+    "arXiv:2505.00850",
+    "arXiv:2506.19677",
+    "arXiv:2507.03220",
+    "arXiv:2507.04416",
+    "arXiv:2512.09963",
+    "arXiv:2604.10496",
+    "arXiv:2604.12056",
+    "arXiv:2604.15672",
+    "arXiv:2605.23081",
+    "arXiv:2607.23193",
+    "arXiv:2608.14290",
+    "arXiv:2609.21827",
+    "arXiv:2609.35065"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 16,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9d6de35d4fb6de17fb904769506e6075353bb25d",
+  "raw_search_result_count": 16,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 16,
+  "provider_progress": {
+    "requested_count": 16,
+    "status_counts": {
+      "allowed": 16,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-08T18:31:45.340593+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3767295.3803570",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3774904.3792794",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2409.13199",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.00850",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.19677",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.03220",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.04416",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.09963",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.10496",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.12056",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.15672",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.23081",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.23193",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.14290",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.21827",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.35065",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Probe-and-Fetch: Dynamic KV Cache Pruning for Accelerated Long-Context Inference in Web-Scale AI Search",
+      "source_url": "https://doi.org/10.1145/3774904.3792794",
+      "year": 2026,
+      "published": "2026-04-12",
+      "venue": "The Web Conference",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Generative inference with Large Language Models (LLMs) is the cornerstone of web-scale AI search, where queries are answered using vast, heterogeneous documents retrieved via Retrieval-Augmented Generation (RAG). This paradigm is critically bottlenecked by the cost of self-attention mechanism on long context. The sheer diversity of retrieved web content (multi-sourced, multi-lingual, multi-faceted) makes simple Key-Value (KV) cache optimizations with pre-fixed subsets ineffective, demanding a dynamic, content-aware approach. This challenge, however, introduces a classic chicken-and-egg problem: the model cannot foresee the necessary KV entries for attention without first inferring on the content, yet doing so on the full context is prohibitively expensive. This paper introduces P&F, a unified framework that resolves this dilemma through a core ''probe-and-fetch'' mechanism, which ingeniously integrates with speculative decoding -- an acceleration approach already adopted in web-scale AI search. The probe step repurposes the speculative draft model: while generating candidate tokens, it simultaneously probes the context to predict the most salient KV entries the large model will need for attention. The fetch step immediately acts on this prediction, asynchronously fetching these sparse entries from memory. This synergistic design piggybacks the probing step onto the drafting process, allowing the expensive gathering of a sparse KV cache to be fully masked. Crucially, this co-design breaks the sequential dependency bottleneck that cripples naive integrations of speculative decoding and prefetching due to synchronization issues. Extensive experiments show P&F significantly outperforms state-of-the-art methods in throughput and scalability, offering a practical, drop-in solution. Extensive offline evaluations across various settings and datasets demonstrate that P&F yields superior throughput and scalability compared to advanced baselines, while maintaining model quality across diverse models and scales. In online settings, P&F delivers substantial gains in throughput improvements while preserving response quality, making it well-suited for large-scale industrial deployment in real-time AI Search services.",
+      "identifiers": [
+        "SemanticScholar:ac6b23c5e9c3a7e0b71df759d7b2b2a30de82880"
+      ],
+      "semantic_scholar_id": "ac6b23c5e9c3a7e0b71df759d7b2b2a30de82880",
+      "doi": "10.1145/3774904.3792794",
+      "canonical_id": "DOI:10.1145/3774904.3792794",
+      "authors": [
+        "Yuchen Li",
+        "Rui Kong",
+        "Xin-Ran Chen",
+        "Cheng-Zhe Zhang",
+        "Jiamin Chen",
+        "Cheng Deng",
+        "Xin-Yu Ma",
+        "Haojie Zhang",
+        "Tianhao Peng",
+        "Hengyi Cai",
+        "Shuai-Qiang Wang",
+        "Jia-Shu Zhao",
+        "Yong-Qi Zhang",
+        "Haoyi Xiong",
+        "J. Huang",
+        "Lei Chen",
+        "Jun Wang",
+        "Dawei Yin"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 179,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention",
+      "source_url": "https://arxiv.org/abs/2605.23081",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient attention algorithms are critical to mitigate the quadratic cost of attention in long-context workloads. Prior work utilises block-scaled quantisation techniques on Blackwell GPUs to move attention computation to 4-bit precision to accelerate inference. However, these techniques result in significant quality degradation in long-context settings. We show that the output impact of quantisation error is highly non-uniform and increases with the importance of each query-key interaction, concentrating functionally relevant error in a small number of attention blocks that contain the most important tokens. We propose ThriftAttention, a low-bit attention variant that delivers near-FP16 long-context quality at FP4 inference efficiency. This approach proceeds in two stages. First, a heuristic rapidly selects a small number of important query-key block pairs for FP16 precision. Second, the selected blocks are computed in FP16 and the remaining blocks in FP4, with both paths merged via online softmax into a single output. We demonstrate across long-context benchmarks and model families that by computing only 5% of query-key blocks in FP16, ThriftAttention recovers on average 89.1% of the FP4-to-FP16 performance gap. We show ThriftAttention's advantage grows with sequence length, mitigating the systematic FP4 quality degradation observed at longer contexts. The code is available at https://github.com/joesharratt1229/ThriftAttention.",
+      "identifiers": [
+        "SemanticScholar:c12304e8592dc35d2239a4bde2c15f0985e14e54"
+      ],
+      "semantic_scholar_id": "c12304e8592dc35d2239a4bde2c15f0985e14e54",
+      "canonical_id": "arXiv:2605.23081",
+      "arxiv_id": "2605.23081",
+      "doi": "10.48550/arXiv.2605.23081",
+      "authors": [
+        "Joe Sharratt"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LoSA: Locality Aware Sparse Attention for Block-Wise Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2604.12056",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block-wise diffusion language models (DLMs) generate multiple tokens in any order, offering a promising alternative to the autoregressive decoding pipeline. However, they still remain bottlenecked by memory-bound attention in long-context scenarios. Naive sparse attention fails on DLMs due to a KV Inflation problem, where different queries select different prefix positions, making the union of accessed KV pages large. To address this, we observe that between consecutive denoising steps, only a small fraction of active tokens exhibit significant hidden-state changes, while the majority of stable tokens remain nearly constant. Based on this insight, we propose LOSA (Locality-aware Sparse Attention), which reuses cached prefix-attention results for stable tokens and applies sparse attention only to active tokens. This substantially shrinks the number of KV indices that must be loaded, yielding both higher speedup and higher accuracy. Across multiple block-wise DLMs and benchmarks, LOSA preserves near-dense accuracy while significantly improving efficiency, achieving up to +9 points in average accuracy at aggressive sparsity levels while maintaining 1.54x lower attention density. It also achieves up to 4.14x attention speedup on RTX A6000 GPUs, demonstrating the effectiveness of the proposed method.",
+      "identifiers": [
+        "SemanticScholar:4ae666c6601d80470259eb03a7babe201af5228c"
+      ],
+      "semantic_scholar_id": "4ae666c6601d80470259eb03a7babe201af5228c",
+      "canonical_id": "arXiv:2604.12056",
+      "arxiv_id": "2604.12056",
+      "doi": "10.48550/arXiv.2604.12056",
+      "authors": [
+        "Hao-Cheng Xi",
+        "Harman Singh",
+        "Yuezhou Hu",
+        "C. Hooper",
+        "Rishabh Tiwari",
+        "Aditya Tomar",
+        "Minjae Lee",
+        "Wonjun Kang",
+        "Michael W. Mahoney",
+        "Chen-Feng Xu",
+        "Kurt Keutzer",
+        "Amir Gholami"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "High Throughput and Low Latency LLM Serving via Adaptive KV Caching",
+      "source_url": "https://doi.org/10.1145/3767295.3803570",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The substantial memory demands of model weights and key-value (KV) caches often lead to severe memory bottlenecks in LLM serving. Existing systems address this by offloading KV caches to host memory and rapidly restoring them on demand before decoding. However, these approaches are too coarse-grained and fail to fully exploit the combined computational and storage capabilities of GPUs. In this paper, we introduce eLLM, a novel LLM serving system designed to achieve high throughput and low latency through fine-grained KV caching. The core innovation lies in adaptively storing partial tokens with KV caches while dynamically recomputing non-cached tokens in parallel with decoding, thereby balancing memory usage and computational efficiency. This new mechanism enables dual-level optimizations: At the request level, eLLM employs token-wise caching to adaptively adjust batch sizes and uncached token ratios in real time. At the layer level, eLLM leverages communication-computation overlap and kernel fusion for resource-complementary operations to further enhance throughput and reduce latency. Experiments demonstrate that eLLM achieves 3.03x higher throughput while satisfying strict per-output-token latency SLOs. It also reduces first-token latency by 2.63x compared to state-of-the-art systems.",
+      "identifiers": [
+        "SemanticScholar:0829e2ae094de9deb40f4037f64295afdb43d94e"
+      ],
+      "semantic_scholar_id": "0829e2ae094de9deb40f4037f64295afdb43d94e",
+      "doi": "10.1145/3767295.3803570",
+      "canonical_id": "DOI:10.1145/3767295.3803570",
+      "authors": [
+        "Wenyan Chen",
+        "Cheng-Zhi Lu",
+        "Huan-Le Xu",
+        "Ke-Jiang Ye",
+        "Cheng-Zhong Xu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GoodSpeed: Optimizing Fair Goodput with Adaptive Speculative Decoding in Distributed Edge Inference",
+      "source_url": "https://arxiv.org/abs/2512.09963",
+      "year": 2025,
+      "published": "2025-12-10",
+      "venue": "IEEE Conference on Computer Communications",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have revolutionized natural language processing, yet their high computational demands pose significant challenges for real-time inference, especially in multi-user and resource-constrained environments. Speculative decoding has emerged as a promising technique to accelerate LLM inference by using lightweight draft models to generate candidate tokens, which are subsequently verified by a larger, more accurate model. However, ensuring both high goodput—the effective rate of accepted tokens—and fairness across multiple draft servers cooperating with a central verification server remains an open challenge. This paper introduces GoodSpeed, a novel distributed inference framework that optimizes goodput through adaptive speculative decoding. GoodSpeed employs a central verification server that coordinates a set of heterogeneous draft servers, each running a small language model to generate speculative tokens. To manage resource allocation effectively, GoodSpeed incorporates a gradient scheduling algorithm that dynamically assigns token verification tasks, maximizing a logarithmic utility function to ensure proportional fairness across servers. By processing speculative outputs from all draft servers in parallel, the framework enables efficient collaboration between the verification server and distributed draft generators, streamlining both latency and throughput. Through rigorous fluid sample path analysis, we show that GoodSpeed converges to the optimal goodput allocation in steady-state conditions and maintains nearoptimal performance with provably bounded error under dynamic workloads. These results demonstrate that GoodSpeed provides a scalable, fair, and efficient solution for multi-server speculative decoding in distributed LLM inference systems.",
+      "identifiers": [
+        "SemanticScholar:3af15d52f3b08aa30b9e387aaf69eee4cf252546"
+      ],
+      "semantic_scholar_id": "3af15d52f3b08aa30b9e387aaf69eee4cf252546",
+      "canonical_id": "arXiv:2512.09963",
+      "arxiv_id": "2512.09963",
+      "doi": "10.1109/INFOCOM59046.2026.11571335",
+      "authors": [
+        "Phuong-Nam Tran",
+        "Tzu-Hao Liu",
+        "Long-Tan Le",
+        "Tung-Anh Nguyen",
+        "Van Quan La",
+        "Eason Yu",
+        "Han Shu",
+        "Choong Seon Hong",
+        "Nguyen H. Tran"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 302,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OmniScope: Modality-Decoupled Token Compression for Omnimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.23193",
+      "year": 2026,
+      "published": "2026-07-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing token compression methods for omnimodal large language models typically rely on one modality to determine what to retain in the other. We show that this assumption often breaks down: for the same query, audio and video relevance often peaks at different moments. This cross-modal salience mismatch makes unidirectional guidance prone to discarding answer-critical cues under aggressive compression. We propose OmniScope, a training-free token compression framework that uses the query as a shared semantic anchor while estimating relevance separately for audio and video. OmniScope allocates modality-specific token budgets, prunes visual tokens with an anchor-delta strategy that preserves both global context and temporal changes, and merges audio tokens within each second to reduce redundancy while maintaining temporal continuity. Across four audio-video benchmarks and two Qwen2.5-Omni model scales, OmniScope achieves the best average accuracy across all compression settings. At 25% overall token retention, it delivers up to 3.53x prefill speedup and more than 15% GPU memory reduction, with only a 0.35-point drop in average accuracy. These results suggest a simple design principle for OmniLLM inference: share the query across modalities, but not the salience estimates. The code is available at https://github.com/MAC-AutoML/OmniScope.",
+      "identifiers": [
+        "SemanticScholar:d3dde4669e74e43e4d89d939404e2e483f983271"
+      ],
+      "semantic_scholar_id": "d3dde4669e74e43e4d89d939404e2e483f983271",
+      "canonical_id": "arXiv:2607.23193",
+      "arxiv_id": "2607.23193",
+      "doi": "10.48550/arXiv.2607.23193",
+      "authors": [
+        "Jin-Sen Su",
+        "Yong-Dong Luo",
+        "Yue-Xiao Ma",
+        "Yi-Bo Hu",
+        "Mei-Guang Jin",
+        "Xiao-Wu Zheng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 75,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RheoSampling: Resolving the One-Hot Dilemma in Stochastic Dynamic-Tree Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.21827",
+      "year": 2026,
+      "published": "2026-09-18",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference by drafting multiple tokens in parallel, with tree-based methods further improving efficiency through hierarchical structures. Dynamic-tree methods such as EAGLE-3 perform well under greedy decoding via deterministic top-K expansion and global pruning. However, in stochastic decoding (T>0), this mechanism collapses the draft distribution into one-hot probabilities, causing a severe drop in acceptance rate. This creates a dilemma: dynamic-tree methods sacrifice stochastic sampling to preserve context-aware topology, while static-tree methods preserve stochastic sampling with context-agnostic structures. The issue arises because the same probability distribution is used for two conflicting tasks: constructing the tree and verifying tokens. This coupling makes direct injection of randomness challenging due to the resulting stochastic process. We resolve this by decoupling these roles: RheoSampling assigns a token sampled from the draft distribution a proxy probability for tree expansion and pruning alongside its true sampling probability for verification. Specifically, we inject a sampled token among the deterministic top-K slots and treat it with different probabilities during construction and verification, making RheoSampling the first dynamic-tree method with both context-aware top-K construction and stochastic sampling while maintaining losslessness. We establish the lossless guarantee through an equivalence-class analysis that compresses the stochastic tree space into tractable classes. An OT-based verification strategy and a sparse draft mechanism ensure that theoretical gains translate into practical efficiency. Experiments across LLMs and benchmarks demonstrate improvements in acceptance rate and speedup over state-of-the-art dynamic tree methods. This framework may provide a template for analyzing stochastic tree structures.",
+      "identifiers": [
+        "SemanticScholar:2e4e464ffe50644d2787694b1f304d111bf83c01"
+      ],
+      "semantic_scholar_id": "2e4e464ffe50644d2787694b1f304d111bf83c01",
+      "canonical_id": "arXiv:2609.21827",
+      "arxiv_id": "2609.21827",
+      "authors": [
+        "Qiao Hu",
+        "Yepeng Weng",
+        "Bo Zhang",
+        "T. Yairi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CFSP: An Efficient Structured Pruning Framework for LLMs with Coarse-to-Fine Activation Information",
+      "source_url": "https://arxiv.org/abs/2409.13199",
+      "year": 2024,
+      "published": "2024-09-20",
+      "venue": "International Conference on Computational Linguistics",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The colossal parameters and computational overhead of Large Language Models (LLMs) challenge their real-world applications. Network pruning, which targets unstructured or structured sparsity by removing redundant parameters, has recently been explored for LLM acceleration. Existing LLM pruning works focus on unstructured pruning, which typically requires special hardware support for a practical speed-up. In contrast, structured pruning can reduce latency on general devices. However, it remains a challenge to perform structured pruning efficiently and maintain performance, especially at high sparsity ratios. To this end, we introduce an efficient structured pruning framework named CFSP, which leverages both Coarse (interblock) and Fine-grained (intrablock) activation information as an importance criterion to guide pruning. The pruning is highly efficient, as it only requires one forward pass to compute feature activations. Specifically, we first allocate the sparsity budget across blocks based on their importance and then retain important weights within each block. In addition, we introduce a recovery fine-tuning strategy that adaptively allocates training overhead based on coarse-grained importance to further improve performance. Experimental results demonstrate that CFSP outperforms existing methods on diverse models across various sparsity budgets. Our code will be available at https://github.com/wyxscir/CFSP.",
+      "identifiers": [
+        "SemanticScholar:1e6a1ea16441f2084a9c2c3b9c3535084307470b"
+      ],
+      "semantic_scholar_id": "1e6a1ea16441f2084a9c2c3b9c3535084307470b",
+      "canonical_id": "arXiv:2409.13199",
+      "arxiv_id": "2409.13199",
+      "doi": "10.48550/arXiv.2409.13199",
+      "authors": [
+        "Yuxin Wang",
+        "Ming Ma",
+        "Zekun Wang",
+        "Jing-Chang Chen",
+        "Huiming Fan",
+        "Liping Shan",
+        "Qing Yang",
+        "Dongliang Xu",
+        "Ming Liu",
+        "Bing Qin"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 748,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RAT: Bridging RNN Efficiency and Attention Accuracy via Chunk-based Sequence Modeling",
+      "source_url": "https://arxiv.org/abs/2507.04416",
+      "year": 2025,
+      "published": "2025-07-06",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have become the cornerstone of modern large-scale language models, but their reliance on softmax attention poses a computational bottleneck at both training and inference. Recurrent models offer high efficiency, but compressing the full sequence into a fixed-size and holistic representation can suffer from memory degradation in long contexts and limit fine-grained retrieval. To address this, we propose RAT, an intermediate design that bridges the efficiency of RNNs and capacity of attention. RAT partitions the input into chunks, applies recurrence within each chunk for local dependencies, and softmax-based attention across chunks for long-range interactions. This design mitigates memory degradation and enables direct access to distant tokens, while retaining computational efficiency. Empirically, with a chunk size of 16, the RAT block achieves a 7$\\times$ improvement in training speed for 100K sequence length and 9$times$ in generation at the 4K position, while maintaining similar performance compared to standard attention. We demonstrate this by training 1.3B parameter models from scratch and performing large-scale evaluations, including short- and long-context benchmarks, as well as supervised fine-tuning~(SFT). We further propose a hybrid architecture that interleaves RAT with local attention. By combining efficient long-range modeling with strong local interactions, this hybrid design not only improves inference speed and reduces cache memory usage, but also consistently enhances performance and shows the overall best results. Code is available at https://github.com/CLAIRE-Labo/RAT.",
+      "identifiers": [
+        "SemanticScholar:d6b4f9d82d7cb59ed39ba20bc7f711e0e6e93dc5"
+      ],
+      "semantic_scholar_id": "d6b4f9d82d7cb59ed39ba20bc7f711e0e6e93dc5",
+      "canonical_id": "arXiv:2507.04416",
+      "arxiv_id": "2507.04416",
+      "doi": "10.52202/085713-1165",
+      "authors": [
+        "Xiuying Wei",
+        "Anunay Yadav",
+        "Razvan Pascanu",
+        "Caglar Gulcehre"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 459,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "ICQuant: Index Coding enables Low-bit LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2505.00850",
+      "year": 2025,
+      "published": "2025-05-01",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid deployment of Large Language Models (LLMs) highlights the need for efficient low-bit post-training quantization (PTQ), due to their high memory costs. A key challenge in weight quantization is the presence of outliers, which inflate quantization ranges and lead to large errors. While a number of outlier suppression techniques have been proposed, they either: fail to effectively shrink the quantization range, or incur (relatively) high bit overhead. In this paper, we present ICQuant, a novel framework that leverages outlier statistics to design an efficient index coding scheme for outlier-aware weight-only quantization. Compared to existing outlier suppression techniques requiring $\\approx 1$ bit overhead to halve the quantization range, ICQuant requires only $\\approx 0.3$ bits; a significant saving in extreme compression regimes (e.g., 2-3 bits per weight). ICQuant can be used on top of any existing quantizers to eliminate outliers, improving the quantization quality. Using just 2.3 bits per weight and simple scalar quantizers, ICQuant improves the zero-shot accuracy of the 2-bit Llama3-70B model by up to 130% and 150% relative to QTIP and QuIP#; and it achieves comparable performance to the best-known fine-tuned quantizer (PV-tuning) without fine-tuning.",
+      "identifiers": [
+        "SemanticScholar:83b71910fb1dc07af6988b4ce6ef2215d20cc0be"
+      ],
+      "semantic_scholar_id": "83b71910fb1dc07af6988b4ce6ef2215d20cc0be",
+      "canonical_id": "arXiv:2505.00850",
+      "arxiv_id": "2505.00850",
+      "doi": "10.48550/arXiv.2505.00850",
+      "authors": [
+        "Xinlin Li",
+        "Osama A. Hanna",
+        "Christina Fragouli",
+        "S. Diggavi"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 525,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CodeQuant: Unified Clustering and Quantization for Enhanced Outlier Smoothing in Low-Precision Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2604.10496",
+      "year": 2026,
+      "published": "2026-04-12",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Outliers have emerged as a fundamental bottleneck in preserving accuracy for low-precision large models, particularly within Mixture-of-Experts (MoE) architectures that are increasingly central to large-scale language modeling. Under post-training quantization (PTQ), these outliers induce substantial quantization errors, leading to severe accuracy degradation. While recent rotation-based smoothing techniques alleviate the problem by redistributing outlier magnitudes, residual errors remain and continue to impede reliable low-precision deployment. In this work, we tackle this challenge by introducing CodeQuant, a unified quantization-and-clustering scheme that contains smoothing activation outliers via learnable rotation and absorbing weight outliers into fine-tuned cluster centroids for MoE. This design reduces the influence of extreme values by fitting them within cluster centroids, thereby lowering quantization error while maintaining expressive capacity. Coupled with a dedicated kernel design for GPU and CPU, CodeQuant achieves up to $4.15\\times$ speedup while delivering significantly higher accuracy than state-of-the-art quantization approaches across diverse MoE models. Our results highlight CodeQuant as a promising direction for efficient and accurate deployment of MoE-based large language models under low-precision constraints. Our code is available at https://github.com/SAI-Lab-NYU/CodeQuant.",
+      "identifiers": [
+        "SemanticScholar:cdcf472429ca58d40956a1471d8ecaaf71b973e0"
+      ],
+      "semantic_scholar_id": "cdcf472429ca58d40956a1471d8ecaaf71b973e0",
+      "canonical_id": "arXiv:2604.10496",
+      "arxiv_id": "2604.10496",
+      "doi": "10.48550/arXiv.2604.10496",
+      "authors": [
+        "Xiang-Yang Yin",
+        "Xingyu Liu",
+        "Tian-Hua Xia",
+        "Bo Bao",
+        "Vithursan Thangarasa",
+        "Valavan Manohararajah",
+        "E. Sather",
+        "Sai-Qian Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 179,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Faster LLM Inference via Sequential Monte Carlo",
+      "source_url": "https://arxiv.org/abs/2604.15672",
+      "year": 2026,
+      "published": "2026-04-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) accelerates language model inference by drafting tokens from a cheap proposal model and verifying them against an expensive target model via rejection sampling. Because rejection truncates the draft block at the first error, throughput degrades when draft and target diverge. Rather than rejecting draft tokens outright, we propose to reweight them. To this end, we introduce sequential Monte Carlo speculative decoding (SMC-SD), which replaces token-level rejection with importance-weighted resampling over a population of draft particles. SMC-SD is a principled approximate inference scheme that trades exactness for additional speed, while preserving theoretical bounds on its per-step approximation error. Because LLM inference is memory bandwidth-bound, the arithmetic needed to draft particles and to score them in parallel comes nearly for free -- SMC-SD uses idle compute to turn verification into a vectorized, fixed-size operation with no rollback. Empirically, SMC-SD achieves 2.36x speed-up over speculative decoding and a 5.2x speed-up over autoregressive decoding, while remaining within 3% of the target model's accuracy on reasoning, instruction-following, and coding benchmarks.",
+      "identifiers": [
+        "SemanticScholar:363bf7c86aa5da77018f8fa03ebef1067e467157"
+      ],
+      "semantic_scholar_id": "363bf7c86aa5da77018f8fa03ebef1067e467157",
+      "canonical_id": "arXiv:2604.15672",
+      "arxiv_id": "2604.15672",
+      "doi": "10.48550/arXiv.2604.15672",
+      "authors": [
+        "Yahya Emara",
+        "Mauricio Barba da Costa",
+        "Chi-Chih Chang",
+        "Cameron Freer",
+        "Tim Vieira",
+        "Ryan Cotterell",
+        "Mohamed S. Abdelfattah"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning",
+      "source_url": "https://arxiv.org/abs/2608.14290",
+      "year": 2026,
+      "published": "2026-08-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce Mobius-v0, an architecture that comprises a globally shared Memory (FFN) that stores knowledge vectors and multiple Reasoners (Self-Attn) that iteratively achieve compositional reasoning. Using hidden states as cache and carrier, reasoners repeatedly query memory for required knowledge-vectors, while the knowledge is transmitted back to reasoning operators. Through this knowledge-reasoning-separation architecture, Mobius achieves better knowledge compression and reasoning efficiency. Built upon Mobius-v0 architecture: 1) Our 7B model trained-from-scratch achieves similar downstream score as a 7B Transformer baseline with 62.6% of baseline's training data. 2) Our Intern-S2-Mobius, continually-pretrained from Qwen3.5-35B, achieves similar downstream score while delivering nearly 4x end-to-end inference speedup.",
+      "identifiers": [
+        "SemanticScholar:70bbabcab5f8f6cd7d8d9ea3c2bfe5f1d2d85da0"
+      ],
+      "semantic_scholar_id": "70bbabcab5f8f6cd7d8d9ea3c2bfe5f1d2d85da0",
+      "canonical_id": "arXiv:2608.14290",
+      "arxiv_id": "2608.14290",
+      "authors": [
+        "Kai Chen",
+        "Ji-Feng Ding",
+        "Ning Ding",
+        "Jia-Ye Ge",
+        "Lixin Gu",
+        "Yi-Cheng Gu",
+        "Qipeng Guo",
+        "Ermo Hua",
+        "Haian Huang",
+        "Haozheng Hou",
+        "Jie Hou",
+        "Xiangyu Hong",
+        "Che Jiang",
+        "Minxi Jin",
+        "Cheng Liang",
+        "Da-Hua Lin",
+        "Da-Wei Liu",
+        "Kui-Kun Liu",
+        "Chen Lv",
+        "Hai-Jun Lv",
+        "Han Lv",
+        "Ning-Sheng Ma",
+        "Biqing Qi",
+        "Jian Qian",
+        "Shiya Su",
+        "You-Bang Sun",
+        "Huan-Ze Tang",
+        "Zhongbo Tian",
+        "Han Wang",
+        "Rui Wang",
+        "Ting Wang",
+        "Yi Wang",
+        "Baiting Wu",
+        "Jun Xu",
+        "Bowen Yang",
+        "Hui Wang",
+        "Weida Wang",
+        "Haochen Ye",
+        "Jiashuo Yu",
+        "Shan Yu",
+        "Xiao-Yi Yu",
+        "Qi Zeng",
+        "Qi Zhang",
+        "Ming Zhang",
+        "Wen-Wei Zhang",
+        "Bowen Zhou",
+        "Xin-Yu Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 55,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TempoKV: Timely Staging of LLM KV Caches for Memory-Semantic Flash",
+      "source_url": "https://arxiv.org/abs/2609.35065",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reusable prefix key-value (KV) caches can outgrow GPU memory in large language model (LLM) serving. A memory-semantic flash hierarchy offers SSD-backed capacity with a limited fast tier, but a logical KV hit is not necessarily ready for GPU retrieval. Demand staging exposes SSD latency, whereas immediate staging can reserve fast-tier capacity long before retrieval begins. We present TempoKV, a timing-aware resource-commitment layer that separates early knowledge of reuse from the acquisition of staging resources. It records reusable-KV hits as metadata-only claims and requests commitment when the runtime-estimated time until retrieval falls to the storage-estimated time needed to make KV resident and protected against eviction. These estimates adapt to runtime progress and staging state, while commitment remains subject to available protected capacity. We implement TempoKV in vLLM and LMCache on an SSD-backed CXL memory device without changing request scheduling. Across two models and three prefix cache ratios, TempoKV reduces protected fast-tier byte-time per request by 63-91% versus immediate staging while retaining much of the serving benefit of advance staging. In a fast-tier capacity sweep, output throughput and p95 time to first token (TTFT) remain nearly unchanged as capacity decreases from 100 to 25 GiB. Compared with unmodified LMCache's Device-DAX L1 configuration, TempoKV reduces p95 TTFT by up to 48.0% and increases output throughput by up to 27.8%.",
+      "identifiers": [
+        "SemanticScholar:054231bfe2eea3176c364c3fdb1c6ea2341667a3"
+      ],
+      "semantic_scholar_id": "054231bfe2eea3176c364c3fdb1c6ea2341667a3",
+      "canonical_id": "arXiv:2609.35065",
+      "arxiv_id": "2609.35065",
+      "authors": [
+        "Jay H. Park",
+        "H. Kim",
+        "D. Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adaptive Request Scheduling for CodeLLM Serving with SLA Guarantees",
+      "source_url": "https://arxiv.org/abs/2506.19677",
+      "year": 2025,
+      "published": "2025-06-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Code Large Language Models (CodeLLMs) are increasingly integrated into modern software development workflows, yet efficiently serving them in resource-constrained, self-hosted environments remains a significant challenge. Existing LLM serving systems employs Continuous Batching for throughput improvement. However, they rely on static batch size configurations that cannot adapt to fluctuating request rates or heterogeneous workloads, leading to frequent SLA (Service Level Agreement) violations and unstable performance. In this study, We propose SABER, a dynamic batching strategy that predicts per-request SLA feasibility and adjusts decisions in real time. SABER improves goodput by up to 26% over the best static configurations and reduces latency variability by up to 45%, all without manual tuning or service restarts. Our results demonstrate that SLA-aware, adaptive scheduling is key to robust, high-performance CodeLLM serving.",
+      "identifiers": [
+        "SemanticScholar:1e49c3d41bf98fd37ad314510cdb90e6ef4e2db8"
+      ],
+      "semantic_scholar_id": "1e49c3d41bf98fd37ad314510cdb90e6ef4e2db8",
+      "canonical_id": "arXiv:2506.19677",
+      "arxiv_id": "2506.19677",
+      "doi": "10.48550/arXiv.2506.19677",
+      "authors": [
+        "Shi Chang",
+        "Bo-Yuan Chen",
+        "Kishanthan Thangarajah",
+        "Hanan Lutfiyya",
+        "Ahmed E. Hassan"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 471,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Symbiosis: Multi-Adapter Inference and Fine-Tuning",
+      "source_url": "https://arxiv.org/abs/2507.03220",
+      "year": 2025,
+      "published": "2025-07-03",
+      "venue": "ACM Symposium on Cloud Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parameter-efficient fine-tuning (PEFT) allows model builders to capture the task-specific parameters into adapters, which are a fraction of the size of the original base model. Popularity of PEFT technique for fine-tuning has led to the creation of a large number of adapters for popular Large Language Models (LLMs). However, existing frameworks fall short in supporting inference or fine-tuning with multiple adapters in the following ways. 1) For fine-tuning, each job needs to deploy its dedicated base model instance, which results in excessive GPU memory consumption and poor GPU utilization. 2) While popular inference platforms can serve multiple PEFT adapters, they do not allow independent resource management or mixing of different PEFT methods. 3) They cannot make effective use of heterogeneous accelerators. 4) They do not provide privacy to users who may not wish to expose their fine-tuned parameters to service providers. In Symbiosis, we address the above problems by enabling the as-a-service deployment of the base model. The base model layers can be shared across multiple inference or fine-tuning processes. Our split-execution technique decouples the execution of client-specific adapters and layers from the frozen base model layers offering them flexibility to manage their resources, to select their fine-tuning method, to achieve their performance goals. Our approach is transparent to models and works out-of-the-box for most models in the transformers library. We demonstrate the use of Symbiosis to simultaneously fine-tune 20 Gemma2-27B LoRA adapters on 8 GPUs.",
+      "identifiers": [
+        "SemanticScholar:51c017a3979985eb087f983dcb0f6f3f43a58419"
+      ],
+      "semantic_scholar_id": "51c017a3979985eb087f983dcb0f6f3f43a58419",
+      "canonical_id": "arXiv:2507.03220",
+      "arxiv_id": "2507.03220",
+      "doi": "10.1145/3772052.3772230",
+      "authors": [
+        "Saransh Gupta",
+        "Umesh Deshpande",
+        "Travis Janssen",
+        "S. Sundararaman"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 462,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3774904.3792794",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774904.3792794",
+        "id:SemanticScholar:ac6b23c5e9c3a7e0b71df759d7b2b2a30de82880",
+        "title:probeandfetch dynamic kv cache pruning for accelerated longcontext inference in webscale ai search",
+        "url:https://doi.org/10.1145/3774904.3792794"
+      ],
+      "record": {
+        "title": "Probe-and-Fetch: Dynamic KV Cache Pruning for Accelerated Long-Context Inference in Web-Scale AI Search",
+        "source_url": "https://doi.org/10.1145/3774904.3792794",
+        "year": 2026,
+        "published": "2026-04-12",
+        "venue": "The Web Conference",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Generative inference with Large Language Models (LLMs) is the cornerstone of web-scale AI search, where queries are answered using vast, heterogeneous documents retrieved via Retrieval-Augmented Generation (RAG). This paradigm is critically bottlenecked by the cost of self-attention mechanism on long context. The sheer diversity of retrieved web content (multi-sourced, multi-lingual, multi-faceted) makes simple Key-Value (KV) cache optimizations with pre-fixed subsets ineffective, demanding a dynamic, content-aware approach. This challenge, however, introduces a classic chicken-and-egg problem: the model cannot foresee the necessary KV entries for attention without first inferring on the content, yet doing so on the full context is prohibitively expensive. This paper introduces P&F, a unified framework that resolves this dilemma through a core ''probe-and-fetch'' mechanism, which ingeniously integrates with speculative decoding -- an acceleration approach already adopted in web-scale AI search. The probe step repurposes the speculative draft model: while generating candidate tokens, it simultaneously probes the context to predict the most salient KV entries the large model will need for attention. The fetch step immediately acts on this prediction, asynchronously fetching these sparse entries from memory. This synergistic design piggybacks the probing step onto the drafting process, allowing the expensive gathering of a sparse KV cache to be fully masked. Crucially, this co-design breaks the sequential dependency bottleneck that cripples naive integrations of speculative decoding and prefetching due to synchronization issues. Extensive experiments show P&F significantly outperforms state-of-the-art methods in throughput and scalability, offering a practical, drop-in solution. Extensive offline evaluations across various settings and datasets demonstrate that P&F yields superior throughput and scalability compared to advanced baselines, while maintaining model quality across diverse models and scales. In online settings, P&F delivers substantial gains in throughput improvements while preserving response quality, making it well-suited for large-scale industrial deployment in real-time AI Search services.",
+        "identifiers": [
+          "SemanticScholar:ac6b23c5e9c3a7e0b71df759d7b2b2a30de82880"
+        ],
+        "semantic_scholar_id": "ac6b23c5e9c3a7e0b71df759d7b2b2a30de82880",
+        "doi": "10.1145/3774904.3792794",
+        "canonical_id": "DOI:10.1145/3774904.3792794",
+        "authors": [
+          "Yuchen Li",
+          "Rui Kong",
+          "Xin-Ran Chen",
+          "Cheng-Zhe Zhang",
+          "Jiamin Chen",
+          "Cheng Deng",
+          "Xin-Yu Ma",
+          "Haojie Zhang",
+          "Tianhao Peng",
+          "Hengyi Cai",
+          "Shuai-Qiang Wang",
+          "Jia-Shu Zhao",
+          "Yong-Qi Zhang",
+          "Haoyi Xiong",
+          "J. Huang",
+          "Lei Chen",
+          "Jun Wang",
+          "Dawei Yin"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 179,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.23081",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.23081",
+        "id:SemanticScholar:c12304e8592dc35d2239a4bde2c15f0985e14e54",
+        "id:arXiv:2605.23081",
+        "title:thriftattention selective mixed precision for longcontext fp4 attention",
+        "url:https://arxiv.org/abs/2605.23081"
+      ],
+      "record": {
+        "title": "ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention",
+        "source_url": "https://arxiv.org/abs/2605.23081",
+        "year": 2026,
+        "published": "2026-05-21",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient attention algorithms are critical to mitigate the quadratic cost of attention in long-context workloads. Prior work utilises block-scaled quantisation techniques on Blackwell GPUs to move attention computation to 4-bit precision to accelerate inference. However, these techniques result in significant quality degradation in long-context settings. We show that the output impact of quantisation error is highly non-uniform and increases with the importance of each query-key interaction, concentrating functionally relevant error in a small number of attention blocks that contain the most important tokens. We propose ThriftAttention, a low-bit attention variant that delivers near-FP16 long-context quality at FP4 inference efficiency. This approach proceeds in two stages. First, a heuristic rapidly selects a small number of important query-key block pairs for FP16 precision. Second, the selected blocks are computed in FP16 and the remaining blocks in FP4, with both paths merged via online softmax into a single output. We demonstrate across long-context benchmarks and model families that by computing only 5% of query-key blocks in FP16, ThriftAttention recovers on average 89.1% of the FP4-to-FP16 performance gap. We show ThriftAttention's advantage grows with sequence length, mitigating the systematic FP4 quality degradation observed at longer contexts. The code is available at https://github.com/joesharratt1229/ThriftAttention.",
+        "identifiers": [
+          "SemanticScholar:c12304e8592dc35d2239a4bde2c15f0985e14e54"
+        ],
+        "semantic_scholar_id": "c12304e8592dc35d2239a4bde2c15f0985e14e54",
+        "canonical_id": "arXiv:2605.23081",
+        "arxiv_id": "2605.23081",
+        "doi": "10.48550/arXiv.2605.23081",
+        "authors": [
+          "Joe Sharratt"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.12056",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.12056",
+        "id:SemanticScholar:4ae666c6601d80470259eb03a7babe201af5228c",
+        "id:arXiv:2604.12056",
+        "title:losa locality aware sparse attention for blockwise diffusion language models",
+        "url:https://arxiv.org/abs/2604.12056"
+      ],
+      "record": {
+        "title": "LoSA: Locality Aware Sparse Attention for Block-Wise Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2604.12056",
+        "year": 2026,
+        "published": "2026-04-13",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block-wise diffusion language models (DLMs) generate multiple tokens in any order, offering a promising alternative to the autoregressive decoding pipeline. However, they still remain bottlenecked by memory-bound attention in long-context scenarios. Naive sparse attention fails on DLMs due to a KV Inflation problem, where different queries select different prefix positions, making the union of accessed KV pages large. To address this, we observe that between consecutive denoising steps, only a small fraction of active tokens exhibit significant hidden-state changes, while the majority of stable tokens remain nearly constant. Based on this insight, we propose LOSA (Locality-aware Sparse Attention), which reuses cached prefix-attention results for stable tokens and applies sparse attention only to active tokens. This substantially shrinks the number of KV indices that must be loaded, yielding both higher speedup and higher accuracy. Across multiple block-wise DLMs and benchmarks, LOSA preserves near-dense accuracy while significantly improving efficiency, achieving up to +9 points in average accuracy at aggressive sparsity levels while maintaining 1.54x lower attention density. It also achieves up to 4.14x attention speedup on RTX A6000 GPUs, demonstrating the effectiveness of the proposed method.",
+        "identifiers": [
+          "SemanticScholar:4ae666c6601d80470259eb03a7babe201af5228c"
+        ],
+        "semantic_scholar_id": "4ae666c6601d80470259eb03a7babe201af5228c",
+        "canonical_id": "arXiv:2604.12056",
+        "arxiv_id": "2604.12056",
+        "doi": "10.48550/arXiv.2604.12056",
+        "authors": [
+          "Hao-Cheng Xi",
+          "Harman Singh",
+          "Yuezhou Hu",
+          "C. Hooper",
+          "Rishabh Tiwari",
+          "Aditya Tomar",
+          "Minjae Lee",
+          "Wonjun Kang",
+          "Michael W. Mahoney",
+          "Chen-Feng Xu",
+          "Kurt Keutzer",
+          "Amir Gholami"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 178,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3767295.3803570",
+      "identity_tokens": [
+        "id:DOI:10.1145/3767295.3803570",
+        "id:SemanticScholar:0829e2ae094de9deb40f4037f64295afdb43d94e",
+        "title:high throughput and low latency llm serving via adaptive kv caching",
+        "url:https://doi.org/10.1145/3767295.3803570"
+      ],
+      "record": {
+        "title": "High Throughput and Low Latency LLM Serving via Adaptive KV Caching",
+        "source_url": "https://doi.org/10.1145/3767295.3803570",
+        "year": 2026,
+        "published": "2026-04-26",
+        "venue": "European Conference on Computer Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The substantial memory demands of model weights and key-value (KV) caches often lead to severe memory bottlenecks in LLM serving. Existing systems address this by offloading KV caches to host memory and rapidly restoring them on demand before decoding. However, these approaches are too coarse-grained and fail to fully exploit the combined computational and storage capabilities of GPUs. In this paper, we introduce eLLM, a novel LLM serving system designed to achieve high throughput and low latency through fine-grained KV caching. The core innovation lies in adaptively storing partial tokens with KV caches while dynamically recomputing non-cached tokens in parallel with decoding, thereby balancing memory usage and computational efficiency. This new mechanism enables dual-level optimizations: At the request level, eLLM employs token-wise caching to adaptively adjust batch sizes and uncached token ratios in real time. At the layer level, eLLM leverages communication-computation overlap and kernel fusion for resource-complementary operations to further enhance throughput and reduce latency. Experiments demonstrate that eLLM achieves 3.03x higher throughput while satisfying strict per-output-token latency SLOs. It also reduces first-token latency by 2.63x compared to state-of-the-art systems.",
+        "identifiers": [
+          "SemanticScholar:0829e2ae094de9deb40f4037f64295afdb43d94e"
+        ],
+        "semantic_scholar_id": "0829e2ae094de9deb40f4037f64295afdb43d94e",
+        "doi": "10.1145/3767295.3803570",
+        "canonical_id": "DOI:10.1145/3767295.3803570",
+        "authors": [
+          "Wenyan Chen",
+          "Cheng-Zhi Lu",
+          "Huan-Le Xu",
+          "Ke-Jiang Ye",
+          "Cheng-Zhong Xu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 165,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.09963",
+      "identity_tokens": [
+        "id:DOI:10.1109/infocom59046.2026.11571335",
+        "id:SemanticScholar:3af15d52f3b08aa30b9e387aaf69eee4cf252546",
+        "id:arXiv:2512.09963",
+        "title:goodspeed optimizing fair goodput with adaptive speculative decoding in distributed edge inference",
+        "url:https://arxiv.org/abs/2512.09963"
+      ],
+      "record": {
+        "title": "GoodSpeed: Optimizing Fair Goodput with Adaptive Speculative Decoding in Distributed Edge Inference",
+        "source_url": "https://arxiv.org/abs/2512.09963",
+        "year": 2025,
+        "published": "2025-12-10",
+        "venue": "IEEE Conference on Computer Communications",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have revolutionized natural language processing, yet their high computational demands pose significant challenges for real-time inference, especially in multi-user and resource-constrained environments. Speculative decoding has emerged as a promising technique to accelerate LLM inference by using lightweight draft models to generate candidate tokens, which are subsequently verified by a larger, more accurate model. However, ensuring both high goodput—the effective rate of accepted tokens—and fairness across multiple draft servers cooperating with a central verification server remains an open challenge. This paper introduces GoodSpeed, a novel distributed inference framework that optimizes goodput through adaptive speculative decoding. GoodSpeed employs a central verification server that coordinates a set of heterogeneous draft servers, each running a small language model to generate speculative tokens. To manage resource allocation effectively, GoodSpeed incorporates a gradient scheduling algorithm that dynamically assigns token verification tasks, maximizing a logarithmic utility function to ensure proportional fairness across servers. By processing speculative outputs from all draft servers in parallel, the framework enables efficient collaboration between the verification server and distributed draft generators, streamlining both latency and throughput. Through rigorous fluid sample path analysis, we show that GoodSpeed converges to the optimal goodput allocation in steady-state conditions and maintains nearoptimal performance with provably bounded error under dynamic workloads. These results demonstrate that GoodSpeed provides a scalable, fair, and efficient solution for multi-server speculative decoding in distributed LLM inference systems.",
+        "identifiers": [
+          "SemanticScholar:3af15d52f3b08aa30b9e387aaf69eee4cf252546"
+        ],
+        "semantic_scholar_id": "3af15d52f3b08aa30b9e387aaf69eee4cf252546",
+        "canonical_id": "arXiv:2512.09963",
+        "arxiv_id": "2512.09963",
+        "doi": "10.1109/INFOCOM59046.2026.11571335",
+        "authors": [
+          "Phuong-Nam Tran",
+          "Tzu-Hao Liu",
+          "Long-Tan Le",
+          "Tung-Anh Nguyen",
+          "Van Quan La",
+          "Eason Yu",
+          "Han Shu",
+          "Choong Seon Hong",
+          "Nguyen H. Tran"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 302,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.23193",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.23193",
+        "id:SemanticScholar:d3dde4669e74e43e4d89d939404e2e483f983271",
+        "id:arXiv:2607.23193",
+        "title:omniscope modalitydecoupled token compression for omnimodal large language models",
+        "url:https://arxiv.org/abs/2607.23193"
+      ],
+      "record": {
+        "title": "OmniScope: Modality-Decoupled Token Compression for Omnimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2607.23193",
+        "year": 2026,
+        "published": "2026-07-25",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing token compression methods for omnimodal large language models typically rely on one modality to determine what to retain in the other. We show that this assumption often breaks down: for the same query, audio and video relevance often peaks at different moments. This cross-modal salience mismatch makes unidirectional guidance prone to discarding answer-critical cues under aggressive compression. We propose OmniScope, a training-free token compression framework that uses the query as a shared semantic anchor while estimating relevance separately for audio and video. OmniScope allocates modality-specific token budgets, prunes visual tokens with an anchor-delta strategy that preserves both global context and temporal changes, and merges audio tokens within each second to reduce redundancy while maintaining temporal continuity. Across four audio-video benchmarks and two Qwen2.5-Omni model scales, OmniScope achieves the best average accuracy across all compression settings. At 25% overall token retention, it delivers up to 3.53x prefill speedup and more than 15% GPU memory reduction, with only a 0.35-point drop in average accuracy. These results suggest a simple design principle for OmniLLM inference: share the query across modalities, but not the salience estimates. The code is available at https://github.com/MAC-AutoML/OmniScope.",
+        "identifiers": [
+          "SemanticScholar:d3dde4669e74e43e4d89d939404e2e483f983271"
+        ],
+        "semantic_scholar_id": "d3dde4669e74e43e4d89d939404e2e483f983271",
+        "canonical_id": "arXiv:2607.23193",
+        "arxiv_id": "2607.23193",
+        "doi": "10.48550/arXiv.2607.23193",
+        "authors": [
+          "Jin-Sen Su",
+          "Yong-Dong Luo",
+          "Yue-Xiao Ma",
+          "Yi-Bo Hu",
+          "Mei-Guang Jin",
+          "Xiao-Wu Zheng"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 75,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21827",
+      "identity_tokens": [
+        "id:SemanticScholar:2e4e464ffe50644d2787694b1f304d111bf83c01",
+        "id:arXiv:2609.21827",
+        "title:rheosampling resolving the onehot dilemma in stochastic dynamictree speculative decoding",
+        "url:https://arxiv.org/abs/2609.21827"
+      ],
+      "record": {
+        "title": "RheoSampling: Resolving the One-Hot Dilemma in Stochastic Dynamic-Tree Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2609.21827",
+        "year": 2026,
+        "published": "2026-09-18",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates LLM inference by drafting multiple tokens in parallel, with tree-based methods further improving efficiency through hierarchical structures. Dynamic-tree methods such as EAGLE-3 perform well under greedy decoding via deterministic top-K expansion and global pruning. However, in stochastic decoding (T>0), this mechanism collapses the draft distribution into one-hot probabilities, causing a severe drop in acceptance rate. This creates a dilemma: dynamic-tree methods sacrifice stochastic sampling to preserve context-aware topology, while static-tree methods preserve stochastic sampling with context-agnostic structures. The issue arises because the same probability distribution is used for two conflicting tasks: constructing the tree and verifying tokens. This coupling makes direct injection of randomness challenging due to the resulting stochastic process. We resolve this by decoupling these roles: RheoSampling assigns a token sampled from the draft distribution a proxy probability for tree expansion and pruning alongside its true sampling probability for verification. Specifically, we inject a sampled token among the deterministic top-K slots and treat it with different probabilities during construction and verification, making RheoSampling the first dynamic-tree method with both context-aware top-K construction and stochastic sampling while maintaining losslessness. We establish the lossless guarantee through an equivalence-class analysis that compresses the stochastic tree space into tractable classes. An OT-based verification strategy and a sparse draft mechanism ensure that theoretical gains translate into practical efficiency. Experiments across LLMs and benchmarks demonstrate improvements in acceptance rate and speedup over state-of-the-art dynamic tree methods. This framework may provide a template for analyzing stochastic tree structures.",
+        "identifiers": [
+          "SemanticScholar:2e4e464ffe50644d2787694b1f304d111bf83c01"
+        ],
+        "semantic_scholar_id": "2e4e464ffe50644d2787694b1f304d111bf83c01",
+        "canonical_id": "arXiv:2609.21827",
+        "arxiv_id": "2609.21827",
+        "authors": [
+          "Qiao Hu",
+          "Yepeng Weng",
+          "Bo Zhang",
+          "T. Yairi"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.13199",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2409.13199",
+        "id:SemanticScholar:1e6a1ea16441f2084a9c2c3b9c3535084307470b",
+        "id:arXiv:2409.13199",
+        "title:cfsp an efficient structured pruning framework for llms with coarsetofine activation information",
+        "url:https://arxiv.org/abs/2409.13199"
+      ],
+      "record": {
+        "title": "CFSP: An Efficient Structured Pruning Framework for LLMs with Coarse-to-Fine Activation Information",
+        "source_url": "https://arxiv.org/abs/2409.13199",
+        "year": 2024,
+        "published": "2024-09-20",
+        "venue": "International Conference on Computational Linguistics",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The colossal parameters and computational overhead of Large Language Models (LLMs) challenge their real-world applications. Network pruning, which targets unstructured or structured sparsity by removing redundant parameters, has recently been explored for LLM acceleration. Existing LLM pruning works focus on unstructured pruning, which typically requires special hardware support for a practical speed-up. In contrast, structured pruning can reduce latency on general devices. However, it remains a challenge to perform structured pruning efficiently and maintain performance, especially at high sparsity ratios. To this end, we introduce an efficient structured pruning framework named CFSP, which leverages both Coarse (interblock) and Fine-grained (intrablock) activation information as an importance criterion to guide pruning. The pruning is highly efficient, as it only requires one forward pass to compute feature activations. Specifically, we first allocate the sparsity budget across blocks based on their importance and then retain important weights within each block. In addition, we introduce a recovery fine-tuning strategy that adaptively allocates training overhead based on coarse-grained importance to further improve performance. Experimental results demonstrate that CFSP outperforms existing methods on diverse models across various sparsity budgets. Our code will be available at https://github.com/wyxscir/CFSP.",
+        "identifiers": [
+          "SemanticScholar:1e6a1ea16441f2084a9c2c3b9c3535084307470b"
+        ],
+        "semantic_scholar_id": "1e6a1ea16441f2084a9c2c3b9c3535084307470b",
+        "canonical_id": "arXiv:2409.13199",
+        "arxiv_id": "2409.13199",
+        "doi": "10.48550/arXiv.2409.13199",
+        "authors": [
+          "Yuxin Wang",
+          "Ming Ma",
+          "Zekun Wang",
+          "Jing-Chang Chen",
+          "Huiming Fan",
+          "Liping Shan",
+          "Qing Yang",
+          "Dongliang Xu",
+          "Ming Liu",
+          "Bing Qin"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 748,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.04416",
+      "identity_tokens": [
+        "id:DOI:10.52202/085713-1165",
+        "id:SemanticScholar:d6b4f9d82d7cb59ed39ba20bc7f711e0e6e93dc5",
+        "id:arXiv:2507.04416",
+        "title:rat bridging rnn efficiency and attention accuracy via chunkbased sequence modeling",
+        "url:https://arxiv.org/abs/2507.04416"
+      ],
+      "record": {
+        "title": "RAT: Bridging RNN Efficiency and Attention Accuracy via Chunk-based Sequence Modeling",
+        "source_url": "https://arxiv.org/abs/2507.04416",
+        "year": 2025,
+        "published": "2025-07-06",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have become the cornerstone of modern large-scale language models, but their reliance on softmax attention poses a computational bottleneck at both training and inference. Recurrent models offer high efficiency, but compressing the full sequence into a fixed-size and holistic representation can suffer from memory degradation in long contexts and limit fine-grained retrieval. To address this, we propose RAT, an intermediate design that bridges the efficiency of RNNs and capacity of attention. RAT partitions the input into chunks, applies recurrence within each chunk for local dependencies, and softmax-based attention across chunks for long-range interactions. This design mitigates memory degradation and enables direct access to distant tokens, while retaining computational efficiency. Empirically, with a chunk size of 16, the RAT block achieves a 7$\\times$ improvement in training speed for 100K sequence length and 9$times$ in generation at the 4K position, while maintaining similar performance compared to standard attention. We demonstrate this by training 1.3B parameter models from scratch and performing large-scale evaluations, including short- and long-context benchmarks, as well as supervised fine-tuning~(SFT). We further propose a hybrid architecture that interleaves RAT with local attention. By combining efficient long-range modeling with strong local interactions, this hybrid design not only improves inference speed and reduces cache memory usage, but also consistently enhances performance and shows the overall best results. Code is available at https://github.com/CLAIRE-Labo/RAT.",
+        "identifiers": [
+          "SemanticScholar:d6b4f9d82d7cb59ed39ba20bc7f711e0e6e93dc5"
+        ],
+        "semantic_scholar_id": "d6b4f9d82d7cb59ed39ba20bc7f711e0e6e93dc5",
+        "canonical_id": "arXiv:2507.04416",
+        "arxiv_id": "2507.04416",
+        "doi": "10.52202/085713-1165",
+        "authors": [
+          "Xiuying Wei",
+          "Anunay Yadav",
+          "Razvan Pascanu",
+          "Caglar Gulcehre"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 459,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.00850",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.00850",
+        "id:SemanticScholar:83b71910fb1dc07af6988b4ce6ef2215d20cc0be",
+        "id:arXiv:2505.00850",
+        "title:icquant index coding enables lowbit llm quantization",
+        "url:https://arxiv.org/abs/2505.00850"
+      ],
+      "record": {
+        "title": "ICQuant: Index Coding enables Low-bit LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2505.00850",
+        "year": 2025,
+        "published": "2025-05-01",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid deployment of Large Language Models (LLMs) highlights the need for efficient low-bit post-training quantization (PTQ), due to their high memory costs. A key challenge in weight quantization is the presence of outliers, which inflate quantization ranges and lead to large errors. While a number of outlier suppression techniques have been proposed, they either: fail to effectively shrink the quantization range, or incur (relatively) high bit overhead. In this paper, we present ICQuant, a novel framework that leverages outlier statistics to design an efficient index coding scheme for outlier-aware weight-only quantization. Compared to existing outlier suppression techniques requiring $\\approx 1$ bit overhead to halve the quantization range, ICQuant requires only $\\approx 0.3$ bits; a significant saving in extreme compression regimes (e.g., 2-3 bits per weight). ICQuant can be used on top of any existing quantizers to eliminate outliers, improving the quantization quality. Using just 2.3 bits per weight and simple scalar quantizers, ICQuant improves the zero-shot accuracy of the 2-bit Llama3-70B model by up to 130% and 150% relative to QTIP and QuIP#; and it achieves comparable performance to the best-known fine-tuned quantizer (PV-tuning) without fine-tuning.",
+        "identifiers": [
+          "SemanticScholar:83b71910fb1dc07af6988b4ce6ef2215d20cc0be"
+        ],
+        "semantic_scholar_id": "83b71910fb1dc07af6988b4ce6ef2215d20cc0be",
+        "canonical_id": "arXiv:2505.00850",
+        "arxiv_id": "2505.00850",
+        "doi": "10.48550/arXiv.2505.00850",
+        "authors": [
+          "Xinlin Li",
+          "Osama A. Hanna",
+          "Christina Fragouli",
+          "S. Diggavi"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 525,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.10496",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.10496",
+        "id:SemanticScholar:cdcf472429ca58d40956a1471d8ecaaf71b973e0",
+        "id:arXiv:2604.10496",
+        "title:codequant unified clustering and quantization for enhanced outlier smoothing in lowprecision mixtureofexperts",
+        "url:https://arxiv.org/abs/2604.10496"
+      ],
+      "record": {
+        "title": "CodeQuant: Unified Clustering and Quantization for Enhanced Outlier Smoothing in Low-Precision Mixture-of-Experts",
+        "source_url": "https://arxiv.org/abs/2604.10496",
+        "year": 2026,
+        "published": "2026-04-12",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Outliers have emerged as a fundamental bottleneck in preserving accuracy for low-precision large models, particularly within Mixture-of-Experts (MoE) architectures that are increasingly central to large-scale language modeling. Under post-training quantization (PTQ), these outliers induce substantial quantization errors, leading to severe accuracy degradation. While recent rotation-based smoothing techniques alleviate the problem by redistributing outlier magnitudes, residual errors remain and continue to impede reliable low-precision deployment. In this work, we tackle this challenge by introducing CodeQuant, a unified quantization-and-clustering scheme that contains smoothing activation outliers via learnable rotation and absorbing weight outliers into fine-tuned cluster centroids for MoE. This design reduces the influence of extreme values by fitting them within cluster centroids, thereby lowering quantization error while maintaining expressive capacity. Coupled with a dedicated kernel design for GPU and CPU, CodeQuant achieves up to $4.15\\times$ speedup while delivering significantly higher accuracy than state-of-the-art quantization approaches across diverse MoE models. Our results highlight CodeQuant as a promising direction for efficient and accurate deployment of MoE-based large language models under low-precision constraints. Our code is available at https://github.com/SAI-Lab-NYU/CodeQuant.",
+        "identifiers": [
+          "SemanticScholar:cdcf472429ca58d40956a1471d8ecaaf71b973e0"
+        ],
+        "semantic_scholar_id": "cdcf472429ca58d40956a1471d8ecaaf71b973e0",
+        "canonical_id": "arXiv:2604.10496",
+        "arxiv_id": "2604.10496",
+        "doi": "10.48550/arXiv.2604.10496",
+        "authors": [
+          "Xiang-Yang Yin",
+          "Xingyu Liu",
+          "Tian-Hua Xia",
+          "Bo Bao",
+          "Vithursan Thangarasa",
+          "Valavan Manohararajah",
+          "E. Sather",
+          "Sai-Qian Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 179,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.15672",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.15672",
+        "id:SemanticScholar:363bf7c86aa5da77018f8fa03ebef1067e467157",
+        "id:arXiv:2604.15672",
+        "title:faster llm inference via sequential monte carlo",
+        "url:https://arxiv.org/abs/2604.15672"
+      ],
+      "record": {
+        "title": "Faster LLM Inference via Sequential Monte Carlo",
+        "source_url": "https://arxiv.org/abs/2604.15672",
+        "year": 2026,
+        "published": "2026-04-17",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD) accelerates language model inference by drafting tokens from a cheap proposal model and verifying them against an expensive target model via rejection sampling. Because rejection truncates the draft block at the first error, throughput degrades when draft and target diverge. Rather than rejecting draft tokens outright, we propose to reweight them. To this end, we introduce sequential Monte Carlo speculative decoding (SMC-SD), which replaces token-level rejection with importance-weighted resampling over a population of draft particles. SMC-SD is a principled approximate inference scheme that trades exactness for additional speed, while preserving theoretical bounds on its per-step approximation error. Because LLM inference is memory bandwidth-bound, the arithmetic needed to draft particles and to score them in parallel comes nearly for free -- SMC-SD uses idle compute to turn verification into a vectorized, fixed-size operation with no rollback. Empirically, SMC-SD achieves 2.36x speed-up over speculative decoding and a 5.2x speed-up over autoregressive decoding, while remaining within 3% of the target model's accuracy on reasoning, instruction-following, and coding benchmarks.",
+        "identifiers": [
+          "SemanticScholar:363bf7c86aa5da77018f8fa03ebef1067e467157"
+        ],
+        "semantic_scholar_id": "363bf7c86aa5da77018f8fa03ebef1067e467157",
+        "canonical_id": "arXiv:2604.15672",
+        "arxiv_id": "2604.15672",
+        "doi": "10.48550/arXiv.2604.15672",
+        "authors": [
+          "Yahya Emara",
+          "Mauricio Barba da Costa",
+          "Chi-Chih Chang",
+          "Cameron Freer",
+          "Tim Vieira",
+          "Ryan Cotterell",
+          "Mohamed S. Abdelfattah"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 174,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.14290",
+      "identity_tokens": [
+        "id:SemanticScholar:70bbabcab5f8f6cd7d8d9ea3c2bfe5f1d2d85da0",
+        "id:arXiv:2608.14290",
+        "title:interns2mobius foundation model with decoupled knowledge and reasoning",
+        "url:https://arxiv.org/abs/2608.14290"
+      ],
+      "record": {
+        "title": "Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning",
+        "source_url": "https://arxiv.org/abs/2608.14290",
+        "year": 2026,
+        "published": "2026-08-14",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce Mobius-v0, an architecture that comprises a globally shared Memory (FFN) that stores knowledge vectors and multiple Reasoners (Self-Attn) that iteratively achieve compositional reasoning. Using hidden states as cache and carrier, reasoners repeatedly query memory for required knowledge-vectors, while the knowledge is transmitted back to reasoning operators. Through this knowledge-reasoning-separation architecture, Mobius achieves better knowledge compression and reasoning efficiency. Built upon Mobius-v0 architecture: 1) Our 7B model trained-from-scratch achieves similar downstream score as a 7B Transformer baseline with 62.6% of baseline's training data. 2) Our Intern-S2-Mobius, continually-pretrained from Qwen3.5-35B, achieves similar downstream score while delivering nearly 4x end-to-end inference speedup.",
+        "identifiers": [
+          "SemanticScholar:70bbabcab5f8f6cd7d8d9ea3c2bfe5f1d2d85da0"
+        ],
+        "semantic_scholar_id": "70bbabcab5f8f6cd7d8d9ea3c2bfe5f1d2d85da0",
+        "canonical_id": "arXiv:2608.14290",
+        "arxiv_id": "2608.14290",
+        "authors": [
+          "Kai Chen",
+          "Ji-Feng Ding",
+          "Ning Ding",
+          "Jia-Ye Ge",
+          "Lixin Gu",
+          "Yi-Cheng Gu",
+          "Qipeng Guo",
+          "Ermo Hua",
+          "Haian Huang",
+          "Haozheng Hou",
+          "Jie Hou",
+          "Xiangyu Hong",
+          "Che Jiang",
+          "Minxi Jin",
+          "Cheng Liang",
+          "Da-Hua Lin",
+          "Da-Wei Liu",
+          "Kui-Kun Liu",
+          "Chen Lv",
+          "Hai-Jun Lv",
+          "Han Lv",
+          "Ning-Sheng Ma",
+          "Biqing Qi",
+          "Jian Qian",
+          "Shiya Su",
+          "You-Bang Sun",
+          "Huan-Ze Tang",
+          "Zhongbo Tian",
+          "Han Wang",
+          "Rui Wang",
+          "Ting Wang",
+          "Yi Wang",
+          "Baiting Wu",
+          "Jun Xu",
+          "Bowen Yang",
+          "Hui Wang",
+          "Weida Wang",
+          "Haochen Ye",
+          "Jiashuo Yu",
+          "Shan Yu",
+          "Xiao-Yi Yu",
+          "Qi Zeng",
+          "Qi Zhang",
+          "Ming Zhang",
+          "Wen-Wei Zhang",
+          "Bowen Zhou",
+          "Xin-Yu Zhou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 55,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35065",
+      "identity_tokens": [
+        "id:SemanticScholar:054231bfe2eea3176c364c3fdb1c6ea2341667a3",
+        "id:arXiv:2609.35065",
+        "title:tempokv timely staging of llm kv caches for memorysemantic flash",
+        "url:https://arxiv.org/abs/2609.35065"
+      ],
+      "record": {
+        "title": "TempoKV: Timely Staging of LLM KV Caches for Memory-Semantic Flash",
+        "source_url": "https://arxiv.org/abs/2609.35065",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reusable prefix key-value (KV) caches can outgrow GPU memory in large language model (LLM) serving. A memory-semantic flash hierarchy offers SSD-backed capacity with a limited fast tier, but a logical KV hit is not necessarily ready for GPU retrieval. Demand staging exposes SSD latency, whereas immediate staging can reserve fast-tier capacity long before retrieval begins. We present TempoKV, a timing-aware resource-commitment layer that separates early knowledge of reuse from the acquisition of staging resources. It records reusable-KV hits as metadata-only claims and requests commitment when the runtime-estimated time until retrieval falls to the storage-estimated time needed to make KV resident and protected against eviction. These estimates adapt to runtime progress and staging state, while commitment remains subject to available protected capacity. We implement TempoKV in vLLM and LMCache on an SSD-backed CXL memory device without changing request scheduling. Across two models and three prefix cache ratios, TempoKV reduces protected fast-tier byte-time per request by 63-91% versus immediate staging while retaining much of the serving benefit of advance staging. In a fast-tier capacity sweep, output throughput and p95 time to first token (TTFT) remain nearly unchanged as capacity decreases from 100 to 25 GiB. Compared with unmodified LMCache's Device-DAX L1 configuration, TempoKV reduces p95 TTFT by up to 48.0% and increases output throughput by up to 27.8%.",
+        "identifiers": [
+          "SemanticScholar:054231bfe2eea3176c364c3fdb1c6ea2341667a3"
+        ],
+        "semantic_scholar_id": "054231bfe2eea3176c364c3fdb1c6ea2341667a3",
+        "canonical_id": "arXiv:2609.35065",
+        "arxiv_id": "2609.35065",
+        "authors": [
+          "Jay H. Park",
+          "H. Kim",
+          "D. Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 10,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.19677",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.19677",
+        "id:SemanticScholar:1e49c3d41bf98fd37ad314510cdb90e6ef4e2db8",
+        "id:arXiv:2506.19677",
+        "title:adaptive request scheduling for codellm serving with sla guarantees",
+        "url:https://arxiv.org/abs/2506.19677"
+      ],
+      "record": {
+        "title": "Adaptive Request Scheduling for CodeLLM Serving with SLA Guarantees",
+        "source_url": "https://arxiv.org/abs/2506.19677",
+        "year": 2025,
+        "published": "2025-06-24",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Code Large Language Models (CodeLLMs) are increasingly integrated into modern software development workflows, yet efficiently serving them in resource-constrained, self-hosted environments remains a significant challenge. Existing LLM serving systems employs Continuous Batching for throughput improvement. However, they rely on static batch size configurations that cannot adapt to fluctuating request rates or heterogeneous workloads, leading to frequent SLA (Service Level Agreement) violations and unstable performance. In this study, We propose SABER, a dynamic batching strategy that predicts per-request SLA feasibility and adjusts decisions in real time. SABER improves goodput by up to 26% over the best static configurations and reduces latency variability by up to 45%, all without manual tuning or service restarts. Our results demonstrate that SLA-aware, adaptive scheduling is key to robust, high-performance CodeLLM serving.",
+        "identifiers": [
+          "SemanticScholar:1e49c3d41bf98fd37ad314510cdb90e6ef4e2db8"
+        ],
+        "semantic_scholar_id": "1e49c3d41bf98fd37ad314510cdb90e6ef4e2db8",
+        "canonical_id": "arXiv:2506.19677",
+        "arxiv_id": "2506.19677",
+        "doi": "10.48550/arXiv.2506.19677",
+        "authors": [
+          "Shi Chang",
+          "Bo-Yuan Chen",
+          "Kishanthan Thangarajah",
+          "Hanan Lutfiyya",
+          "Ahmed E. Hassan"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 471,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.03220",
+      "identity_tokens": [
+        "id:DOI:10.1145/3772052.3772230",
+        "id:SemanticScholar:51c017a3979985eb087f983dcb0f6f3f43a58419",
+        "id:arXiv:2507.03220",
+        "title:symbiosis multiadapter inference and finetuning",
+        "url:https://arxiv.org/abs/2507.03220"
+      ],
+      "record": {
+        "title": "Symbiosis: Multi-Adapter Inference and Fine-Tuning",
+        "source_url": "https://arxiv.org/abs/2507.03220",
+        "year": 2025,
+        "published": "2025-07-03",
+        "venue": "ACM Symposium on Cloud Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Parameter-efficient fine-tuning (PEFT) allows model builders to capture the task-specific parameters into adapters, which are a fraction of the size of the original base model. Popularity of PEFT technique for fine-tuning has led to the creation of a large number of adapters for popular Large Language Models (LLMs). However, existing frameworks fall short in supporting inference or fine-tuning with multiple adapters in the following ways. 1) For fine-tuning, each job needs to deploy its dedicated base model instance, which results in excessive GPU memory consumption and poor GPU utilization. 2) While popular inference platforms can serve multiple PEFT adapters, they do not allow independent resource management or mixing of different PEFT methods. 3) They cannot make effective use of heterogeneous accelerators. 4) They do not provide privacy to users who may not wish to expose their fine-tuned parameters to service providers. In Symbiosis, we address the above problems by enabling the as-a-service deployment of the base model. The base model layers can be shared across multiple inference or fine-tuning processes. Our split-execution technique decouples the execution of client-specific adapters and layers from the frozen base model layers offering them flexibility to manage their resources, to select their fine-tuning method, to achieve their performance goals. Our approach is transparent to models and works out-of-the-box for most models in the transformers library. We demonstrate the use of Symbiosis to simultaneously fine-tune 20 Gemma2-27B LoRA adapters on 8 GPUs.",
+        "identifiers": [
+          "SemanticScholar:51c017a3979985eb087f983dcb0f6f3f43a58419"
+        ],
+        "semantic_scholar_id": "51c017a3979985eb087f983dcb0f6f3f43a58419",
+        "canonical_id": "arXiv:2507.03220",
+        "arxiv_id": "2507.03220",
+        "doi": "10.1145/3772052.3772230",
+        "authors": [
+          "Saransh Gupta",
+          "Umesh Deshpande",
+          "Travis Janssen",
+          "S. Sundararaman"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 462,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:350767fc29aaec62d5d6d10f1b1822e2cfc83fd3c8086736c4c65d2e7d870ccb",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "0aeda086ebb046d3b8c0d17239da9600ff73a80ccc21291f3b1c4aeaca95b1bd",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b95c5a4569a3--file_000000008e1c81f7954c5aa55070170f--2025-2504.04514-sdtp-saliency-dynamic-token-pruning-research-20261026-0230-scheduled-chat-30-r01-v2.md",
+  "canonical_id": "arXiv:2504.04514",
+  "worker_completed_at": "2026-10-26T02:34:50+09:00",
+  "worker_run_key": "20261026-0230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6546,
+    "body_paragraphs": 39,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 363,
+    "limitation_chars": 711,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 363 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 363 < 500"
+  ],
+  "processed_at": "2026-10-25T18:05:31+00:00"
+}

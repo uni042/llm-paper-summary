@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0755-scheduled-chat-00/r04",
+  "reference_main_sha": "35406e7029f97dbd56bcc7020f7c259cdd86148b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:6e2c864ee9d1359c320e88592a0f608bce21030e",
+      "identity_tokens": [
+        "SemanticScholar:6e2c864ee9d1359c320e88592a0f608bce21030e",
+        "HAL:hal-04652584"
+      ],
+      "title": "Handling Very Long Contexts in Neural Machine Translation: a Survey",
+      "reason": "研究プロジェクトMaTOSの著者公開書誌・概要で、長文書の機械翻訳における文間依存、エンコーダ・デコーダ方式、LLM利用、Transformerの効率的実装を整理する50ページのサーベイと確認。長文脈LLM推論に隣接するが、新しいKV管理・デコード・サービング最適化手法を提案する研究ではないため境界候補。",
+      "source_url": "https://anr-matos.github.io/en/pages/publications.html",
+      "body_check": "official_project_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 237
+    }
+  ]
+}

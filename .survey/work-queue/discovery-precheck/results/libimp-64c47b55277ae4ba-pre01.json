@@ -1,0 +1,272 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-64c47b55277ae4ba-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-64c47b55277a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.11580",
+    "arXiv:2604.25777",
+    "arXiv:2605.03375",
+    "arXiv:2606.16135",
+    "arXiv:2606.21633",
+    "arXiv:2607.16892",
+    "arXiv:2609.17943",
+    "arXiv:2609.24197",
+    "arXiv:2609.33184",
+    "arXiv:2609.33385"
+  ],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3e491ea32a931a5f25385943867e458f504346ad",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 7,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-02T10:59:39.181833+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.11580",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.11580"
+    },
+    {
+      "requested_id": "arXiv:2604.25777",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2604.25777"
+    },
+    {
+      "requested_id": "arXiv:2605.03375",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2605.03375"
+    },
+    {
+      "requested_id": "arXiv:2606.16135",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2606.16135"
+    },
+    {
+      "requested_id": "arXiv:2606.21633",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.21633"
+    },
+    {
+      "requested_id": "arXiv:2607.16892",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2607.16892"
+    },
+    {
+      "requested_id": "arXiv:2609.17943",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2609.17943"
+    },
+    {
+      "requested_id": "arXiv:2609.24197",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33184",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33385",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "H-Spec: Parallel Speculative Decoding Without a Drafter-Side KV Cache",
+      "source_url": "https://arxiv.org/abs/2609.24197",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Speculative decoding losslessly accelerates large language model inference by having a lightweight draft model predict future tokens for verification by the target model. Recent block diffusion drafters further reduce drafting latency by predicting multiple tokens in parallel. However, existing block drafters project target hidden states at every input position into a separate drafter-side KV cache, incurring per-request memory and KV-write overhead that grow with concurrency; directly reusing target KVs in place removes this cache but fails to sustain draft quality throughout the block. We propose a hybrid target-context injection method that complements direct target KV reuse with target hidden states only at the last input position, requiring no separate drafter-side KV cache. Building on this design, we propose H-Spec, a hybrid Mamba-attention parallel drafter that consumes the two target-context sources through complementary modules. Mamba modules are initialized with projected last-token target hidden states, while attention modules reuse target KVs in place. Despite its recurrent formulation, Mamba's parallel scan allows H-Spec to preserve block-parallel drafting. Across three target models and diverse tasks, H-Spec improves over the best baseline by 5.0--13.3% in mean accepted length and 5.3--12.6% in batch-size-1 inter-token latency speedup. Under concurrent serving, H-Spec consistently achieves higher throughput while maintaining lower KV cache utilization than baselines across evaluated concurrency levels.",
+      "canonical_id": "arXiv:2609.24197",
+      "arxiv_id": "2609.24197",
+      "authors": [
+        "Wei-Fan Jiang",
+        "Krishna Teja Chitty-Venkata",
+        "Megan Flynn",
+        "Reed Meyerson",
+        "Zhen-Ting Qi",
+        "Tian-Yu Wu",
+        "Eldar Kurtic",
+        "Min-Lan Yu",
+        "A. Marques"
+      ]
+    },
+    {
+      "title": "Resource-Efficient Speculative Decoding for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.33184",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Speculative decoding reduces sequential Target model calls by verifying multiple tokens from the Draft model in parallel. Yet KV Cache growth limits long-context serving under constrained GPU memory. Offloading KV to CPU memory relieves this pressure. However, existing offloading schemes restore the full KV history before attention and fail to fully exploit the benefits of KV sharing across queries within a verification round. Existing parallel speculative decoding methods also overlook idle GPU compute capacity while memory-bandwidth-bound Target verification waits for historical KV. We present SpecStream, a speculative decoding system that begins verification without waiting for the full KV history to be restored and exploits compute bubbles during KV transfers for concurrent drafting on the same GPUs. It offloads only Target-committed history, keeping candidate rollback local to the GPUs. Each streamed KV chunk serves all queries in the round, with online softmax preserving full attention. Target-priority scheduling controls Draft concurrent execution under resource limits to constrain interference with Target verification. Experiments show that SpecStream maintains task quality close to SGLang speculative decoding while supporting more concurrent requests under limited GPU memory. Across different datasets, it achieves average throughput speedups of 1.41$\\times$ and 1.32$\\times$ over the offloading baseline for Qwen3 and InternLM2.5, respectively. Compared with parallel speculative decoding on separate Target and Draft GPUs, SpecStream improves output throughput per GPU by an average of 55.4%.",
+      "canonical_id": "arXiv:2609.33184",
+      "arxiv_id": "2609.33184",
+      "authors": [
+        "Fei Li",
+        "Song Liu",
+        "Shi-Qiang Nie",
+        "Jin-Yu Wang",
+        "Wei-Guo Wu"
+      ]
+    },
+    {
+      "title": "OLED-MoE: Accelerating MoE-Based dLLM Inference via Inter-Iteration Locality-Aware Expert Offloading",
+      "source_url": "https://arxiv.org/abs/2609.33385",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Semi-autoregressive diffusion large language models (dLLMs) improve decoding parallelism through iterative block-wise denoising, but scaling them with mixture-of-experts (MoE) layers introduces a large expert parameter footprint that exceeds memory-constrained GPU capacity. Expert offloading is a natural remedy, yet existing MoE serving systems target autoregressive decoding and rely on intra-iteration layer-wise prefetching: while computing one layer, they predict and load experts for subsequent layers. Under dLLM inference, block-wise routing expands the active expert working set within each iteration, making such prefetches difficult to complete in time and costly when mispredicted. Consequently, existing prefetch-based solutions often degenerate into on-demand expert loading with high decoding latency. We propose OLED-MoE, an expert offloading system that shifts the optimization target from intra-iteration prefetching to inter-iteration expert retention. Its key insight is that adjacent denoising iterations exhibit strong expert routing overlap, and token confidence indicates which experts are likely to be reused. OLED-MoE uses confidence-guided inter-iteration prediction to retain high-value experts in GPU memory without introducing extra prefetch traffic. It further compensates unavoidable cache misses through CPU-GPU cooperative execution, jointly considering dynamic expert computation load and predicted future reuse. Across diverse dLLM workloads, OLED-MoE reduces time per output token (TPOT) by 1.23x-7.93x and improves expert cache utilization by 1.44x-4.23x over state-of-the-art offloading systems. Notably, OLED-MoE approaches full-residency performance while using only 40% of the expert GPU memory, incurring merely 23% higher TPOT despite a 60% reduction in expert memory footprint. OLED-MoE's source code is publicly available at https://github.com/flashserve/OLED-MoE.",
+      "canonical_id": "arXiv:2609.33385",
+      "arxiv_id": "2609.33385",
+      "authors": [
+        "Jing Xiao",
+        "Jia-Yue Wang",
+        "Yi-Tao Hu",
+        "Xin-Ning Wang",
+        "Shi Chen",
+        "Zi-Qi Gong",
+        "Zheng-Chao Wang",
+        "Guo-Tao Yang",
+        "Sheng Chen",
+        "Ke-Qiu Li"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.24197",
+      "identity_tokens": [
+        "id:arXiv:2609.24197",
+        "title:hspec parallel speculative decoding without a drafterside kv cache",
+        "url:https://arxiv.org/abs/2609.24197"
+      ],
+      "record": {
+        "title": "H-Spec: Parallel Speculative Decoding Without a Drafter-Side KV Cache",
+        "source_url": "https://arxiv.org/abs/2609.24197",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Speculative decoding losslessly accelerates large language model inference by having a lightweight draft model predict future tokens for verification by the target model. Recent block diffusion drafters further reduce drafting latency by predicting multiple tokens in parallel. However, existing block drafters project target hidden states at every input position into a separate drafter-side KV cache, incurring per-request memory and KV-write overhead that grow with concurrency; directly reusing target KVs in place removes this cache but fails to sustain draft quality throughout the block. We propose a hybrid target-context injection method that complements direct target KV reuse with target hidden states only at the last input position, requiring no separate drafter-side KV cache. Building on this design, we propose H-Spec, a hybrid Mamba-attention parallel drafter that consumes the two target-context sources through complementary modules. Mamba modules are initialized with projected last-token target hidden states, while attention modules reuse target KVs in place. Despite its recurrent formulation, Mamba's parallel scan allows H-Spec to preserve block-parallel drafting. Across three target models and diverse tasks, H-Spec improves over the best baseline by 5.0--13.3% in mean accepted length and 5.3--12.6% in batch-size-1 inter-token latency speedup. Under concurrent serving, H-Spec consistently achieves higher throughput while maintaining lower KV cache utilization than baselines across evaluated concurrency levels.",
+        "canonical_id": "arXiv:2609.24197",
+        "arxiv_id": "2609.24197",
+        "authors": [
+          "Wei-Fan Jiang",
+          "Krishna Teja Chitty-Venkata",
+          "Megan Flynn",
+          "Reed Meyerson",
+          "Zhen-Ting Qi",
+          "Tian-Yu Wu",
+          "Eldar Kurtic",
+          "Min-Lan Yu",
+          "A. Marques"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33184",
+      "identity_tokens": [
+        "id:arXiv:2609.33184",
+        "title:resourceefficient speculative decoding for longcontext llm serving",
+        "url:https://arxiv.org/abs/2609.33184"
+      ],
+      "record": {
+        "title": "Resource-Efficient Speculative Decoding for Long-Context LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.33184",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Speculative decoding reduces sequential Target model calls by verifying multiple tokens from the Draft model in parallel. Yet KV Cache growth limits long-context serving under constrained GPU memory. Offloading KV to CPU memory relieves this pressure. However, existing offloading schemes restore the full KV history before attention and fail to fully exploit the benefits of KV sharing across queries within a verification round. Existing parallel speculative decoding methods also overlook idle GPU compute capacity while memory-bandwidth-bound Target verification waits for historical KV. We present SpecStream, a speculative decoding system that begins verification without waiting for the full KV history to be restored and exploits compute bubbles during KV transfers for concurrent drafting on the same GPUs. It offloads only Target-committed history, keeping candidate rollback local to the GPUs. Each streamed KV chunk serves all queries in the round, with online softmax preserving full attention. Target-priority scheduling controls Draft concurrent execution under resource limits to constrain interference with Target verification. Experiments show that SpecStream maintains task quality close to SGLang speculative decoding while supporting more concurrent requests under limited GPU memory. Across different datasets, it achieves average throughput speedups of 1.41$\\times$ and 1.32$\\times$ over the offloading baseline for Qwen3 and InternLM2.5, respectively. Compared with parallel speculative decoding on separate Target and Draft GPUs, SpecStream improves output throughput per GPU by an average of 55.4%.",
+        "canonical_id": "arXiv:2609.33184",
+        "arxiv_id": "2609.33184",
+        "authors": [
+          "Fei Li",
+          "Song Liu",
+          "Shi-Qiang Nie",
+          "Jin-Yu Wang",
+          "Wei-Guo Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33385",
+      "identity_tokens": [
+        "id:arXiv:2609.33385",
+        "title:oledmoe accelerating moebased dllm inference via interiteration localityaware expert offloading",
+        "url:https://arxiv.org/abs/2609.33385"
+      ],
+      "record": {
+        "title": "OLED-MoE: Accelerating MoE-Based dLLM Inference via Inter-Iteration Locality-Aware Expert Offloading",
+        "source_url": "https://arxiv.org/abs/2609.33385",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Semi-autoregressive diffusion large language models (dLLMs) improve decoding parallelism through iterative block-wise denoising, but scaling them with mixture-of-experts (MoE) layers introduces a large expert parameter footprint that exceeds memory-constrained GPU capacity. Expert offloading is a natural remedy, yet existing MoE serving systems target autoregressive decoding and rely on intra-iteration layer-wise prefetching: while computing one layer, they predict and load experts for subsequent layers. Under dLLM inference, block-wise routing expands the active expert working set within each iteration, making such prefetches difficult to complete in time and costly when mispredicted. Consequently, existing prefetch-based solutions often degenerate into on-demand expert loading with high decoding latency. We propose OLED-MoE, an expert offloading system that shifts the optimization target from intra-iteration prefetching to inter-iteration expert retention. Its key insight is that adjacent denoising iterations exhibit strong expert routing overlap, and token confidence indicates which experts are likely to be reused. OLED-MoE uses confidence-guided inter-iteration prediction to retain high-value experts in GPU memory without introducing extra prefetch traffic. It further compensates unavoidable cache misses through CPU-GPU cooperative execution, jointly considering dynamic expert computation load and predicted future reuse. Across diverse dLLM workloads, OLED-MoE reduces time per output token (TPOT) by 1.23x-7.93x and improves expert cache utilization by 1.44x-4.23x over state-of-the-art offloading systems. Notably, OLED-MoE approaches full-residency performance while using only 40% of the expert GPU memory, incurring merely 23% higher TPOT despite a 60% reduction in expert memory footprint. OLED-MoE's source code is publicly available at https://github.com/flashserve/OLED-MoE.",
+        "canonical_id": "arXiv:2609.33385",
+        "arxiv_id": "2609.33385",
+        "authors": [
+          "Jing Xiao",
+          "Jia-Yue Wang",
+          "Yi-Tao Hu",
+          "Xin-Ning Wang",
+          "Shi Chen",
+          "Zi-Qi Gong",
+          "Zheng-Chao Wang",
+          "Guo-Tao Yang",
+          "Sheng Chen",
+          "Ke-Qiu Li"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:4016aeaeec939399ee6124c1af1db4c2f056c949c4966c66933d649ee271f0f6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

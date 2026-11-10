@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-647da12ec23f8ff0-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.16160",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.16160",
+    "identity_tokens": [
+      "arXiv:2401.16160"
+    ],
+    "reason": "LLaVA-MoLEはinstruction fine-tuningのdata conflict解決が主題。sparse LoRA expert costをroughly constantと述べるが推論効率改善ではない。",
+    "first_checked_at": "2026-10-05T01:17:36+00:00",
+    "last_checked_at": "2026-10-05T01:17:36+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md"
+    ],
+    "title": "LLaVA-MoLE: Sparse Mixture of LoRA Experts for Mitigating Data Conflicts in Instruction Finetuning MLLMs"
+  },
+  "processed_at": "2026-10-05T01:17:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-647da12ec23f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

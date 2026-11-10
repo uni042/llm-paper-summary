@@ -1,0 +1,155 @@
+# Ollama
+
+Ollamaの主要な機能・性能更新を継続的に記録する集約ページ。Apple Silicon向け投機的デコード（speculative decoding）、MoE kernel、低bit model、model metadata cache、prefill cacheなど、ローカルLLM実行時の速度・memory・再試行costへ影響する変更を扱う。
+
+## 現在できること
+
+- **local modelの取得・管理・実行**: modelをdownloadしてlocalに保持し、CLIまたはHTTP APIからchat / generationを実行できる。model file・parameter・template等を利用者が毎回手作業で組み立てず、local runtimeとして一括管理できる。
+- **常駐serverとして利用**: background serviceとしてmodelをloadし、local application、desktop tool、agent等からAPI経由で呼び出せる。OpenAI互換APIも使えるため、既存applicationのbackendをlocal modelへ差し替えやすい。
+- **model lifecycle管理**: modelをload / unloadし、複数modelを切り替えて使える。memory容量に応じて常駐model数を調整し、不要なmodelを解放して別modelへresourceを回せる。
+- **CPU / GPU混在推論**: consumer hardware上で、modelの一部または全部をGPUへ置き、残りをCPU RAMで処理する構成を取れる。VRAMより大きいmodelを動かせる一方、CPU memory bandwidthとPCIe転送がdecode速度へ効く。
+- **量子化model利用**: GGUF等の低bit modelを扱い、FP16等よりweight memoryと読出し量を減らせる。小さいGPU / RAMへmodelを収める用途だけでなく、memory bandwidth律速のdecode高速化にも効く場合がある。
+- **Modelfileによる再現可能なmodel package**: base model、system prompt、template、generation parameter、adapter等を1つの定義へまとめられる。同じlocal model設定を別machineへ再現したり、用途別variantを管理したりできる。
+- **tool calling**: modelが返したtool callをapplication側で実行し、その結果をconversationへ戻すagent loopを構成できる。単純なtext completionではなく外部functionを使うapplicationへ接続できる。
+- **structured output**: JSON schema等に合わせた構造化出力を要求し、後段programがparseしやすいresponseを生成できる。自由文からJSONへ変換する追加parserを減らせる。
+- **embedding generation**: textをvector表現へ変換し、local RAG、semantic search、clustering等へ使える。generation modelとembedding modelを同じruntime管理下で運用できる。
+- **multimodal input**: 対応modelでは画像等をtext promptと一緒に入力し、VLMをlocal APIとして利用できる。OCR、image QA、document理解等へつなげられる。
+- **投機的デコード / MTP**: model自身がMTP headを持つ場合や対応engineでは、複数token候補を先に生成してtarget側でまとめて検証できる。draft token数を自動調整し、候補を作りすぎる無駄とtarget forward回数のbalanceを取れる。
+- **prefill再利用**: 同じ長いpromptを再送した場合に、以前のprefill結果やrestore pointを利用して最初からKVを作り直す量を減らせる。coding agentやtool loopのようにcontextの大部分が同じrequestを繰り返す用途で特に効く。
+- **request開始overheadのcache**: model path、template、parameter等のresolved metadataをrequest間で再利用し、GPU計算前の準備時間を短縮できる。小さいpromptではこのhost-side latencyがTTFTへ効きやすい。
+- **Apple Silicon / NVIDIA等のbackend最適化**: hardwareごとにMLX系pathやCUDA系pathを使い、MTP、MoE、NVFP4等の専用kernelを利用できる。Ollamaは単一の低level engineというより、model管理・APIと複数backendをまとめるlocal inference製品層として位置づけられる。
+
+以下の更新履歴は、model追加そのものではなく、**同じmodelをlocalで動かす際にdecode回数、weight / KV memory、request開始待ち、prefill再計算を実質的に減らす主要機能**だけを記録する。
+
+## 初期収録期間
+
+2026-06-03〜2026-09-03
+
+### 2026-10-27 — Ollama v0.40.12（正式版）
+
+v0.40.11からの正式更新。LFM3 text/VL/audio/omniとd1:2b、d1-omniをOllama libraryに追加。**このreleaseでのLFM3とd1 2B対応はApple hardware向けで、公式案内ではLinux/Windows対応は今後**としている。各multimodal variantのOS対応も個別に確認する。
+
+Apple SiliconのGemma 4、Flint、Laguna prompt processingを最適化し、MLXのDFlash2 draft speculative decodingをサポート。Apple向けの変更からWindows CUDAの性能を推定しない。公式releaseに一般的なE2E速度倍率は示されていない。
+
+[公式release](https://github.com/ollama/ollama/releases/tag/v0.40.12) · [v0.40.11からの差分](https://github.com/ollama/ollama/compare/v0.40.11...v0.40.12)
+
+## 主要更新
+
+### 2026-10-24 — Ollama v0.40.11（正式版）\n- macOSでPhonon音声生成を`ollama run phonon`およびOpenAI互換`/v1/audio/speech`から利用可能にし、d3判定model（2B/4B/9B/27B）を追加。d3はtext・構造化状態・画像の分類や選択肢スコアを返す。音声機能はmacOS向けであり、Windows CUDA対応や一般的な生成速度倍率を示さない。\n- [公式リリース](https://github.com/ollama/ollama/releases/tag/v0.40.11)\n\n### 2026-10-23 — Ollama v0.40.10（正式版）\n- Nemotron 3.5 Bolt E4Bの配布とDFlash草稿による投機的復号を追加。Ollama release本文は128K context・vision-languageとする一方、NVIDIA Q4_K_M model cardは64K・text/text。variant差が解決するまで仕様を混同しない。\n- [公式リリース](https://github.com/ollama/ollama/releases/tag/v0.40.10)\n\n### 2026-10-22 — Ollama v0.40.9（正式版）\n- Flintの実行対象をLinux・Windowsへ拡張し、streaming生成失敗を部分出力後に黙って終えず報告する修正を含む。Phonon音声生成とd3判定modelの正式告知はv0.40.11へ帰属させる。\n- [公式リリース](https://github.com/ollama/ollama/releases/tag/v0.40.9)\n\n### 2026-10-22 — Ollama v0.40.9-rc2（公開候補版）
+- Release一覧はv0.40.9を表示するが、本文の版表記は**v0.40.9-rc2 / Pre-release**。正式版と区別し、正式版の最新確認はv0.40.8とする。
+- 公開本文が明示する変更は内蔵llama.cppの更新のみ。取り込まれた個別修正、Windows/NVIDIA GPUのFlint対応、モデル別速度向上はこのrelease情報だけでは確定しない。
+- [公式RC2](https://github.com/ollama/ollama/releases/tag/v0.40.9-rc2)
+
+### 2026-10-21 — Ollama v0.40.8（正式版）
+- Recursive Flint対応を追加。公式release案内ではFlintの実行はmacOS限定で、Windowsや一般NVIDIA GPUでの対応を示さない。
+- 本releaseのFlint対応から12GB VRAMでの実用性や生成速度は推定しない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.8)
+
+### 2026-10-18 — Ollama v0.40.7（正式版）
+- Responses APIでthinking有無が異なるmodelへ切り替えた際の継続処理、streaming tool-call eventの順序・重複、切断時のremote実行中止を修正。draft種別の自動判定対象を拡大し、`ollama show` / APIへ`renderer`、`parser`、`template_source`を追加。
+- 正式版として公開候補版と区別する。release noteは端から端の速度改善値を示していない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.7)
+
+### 2026-10-18 — Ollama v0.40.7-rc0（公開候補版）
+
+- Responses APIで、非thinking modelでもrequestの `effort` parameterを受け付ける変更、内蔵llama-serverによるdraft speculative decoding方式の自動判定、MLX backendのPPLX Decider v1.2対応を追加。
+- RCのため安定版と区別する。draft方式の自動判定は一律の高速化を示さず、PPLX対応はApple Silicon向けでWindows CUDAの改善ではない。
+- 出典: [v0.40.7-rc0 release](https://github.com/ollama/ollama/releases/tag/v0.40.7-rc0), [PR #19064](https://github.com/ollama/ollama/pull/19064), [PR #19072](https://github.com/ollama/ollama/pull/19072)
+
+### 2026-10-16 — Ollama v0.40.6（正式版）
+- 前日に記録した`v0.40.6-rc0`が正式版へ進んだ。Windowsでorphan runnerを残す問題の修正、GGUF `q2_0` tensor / file type、Clef cloud提供、`--ask`の質問key識別子化を含む。
+- `q2_0`はmodel全般を自動で量子化・高速化せず、Clef cloudはlocal推論の高速化ではない。正式版として記録し、候補版rc0と段階を区別する。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.6)。
+
+### 2026-10-16 — Ollama v0.40.6-rc0（公開候補版）
+- GGUFの`q2_0` tensor / file type、Windowsでrunnerがorphan processとして残る問題の修正、Clef cloud提供と`--ask` modeのquestion key識別子化を含む。
+- **RC0であり安定版ではない**。q2_0追加は既存modelの自動量子化や高速化を意味せず、Clef cloudはlocal inference速度の改善ではない。Windows runner修正はWindows 11で関連する。[公式候補版](https://github.com/ollama/ollama/releases/tag/v0.40.6-rc0)
+
+### 2026-10-14 — Ollama v0.40.5（正式版）
+- Nemotron 3.5 Super VL / Bolt、内蔵llama.cppとMLXの更新を追加。判定modelを`clef:cloud` / `clef-flash:cloud`で利用可能にし、OpenAI互換Responses APIの独自tool継続時の不具合やcloud error表示を修正。
+- cloud判定はlocal inferenceの高速化ではない。Nemotron Superの配布サイズは約80〜90GBとされ、12GB VRAM単体には収まらない。前に記録したv0.40.4は正式版、RC2は候補版として区別する。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.5)。
+
+### 2026-10-12 — Ollama v0.40.4（正式版）
+- `v0.40.4`は正式版（Latest）として公開された。主な変更は判定モデルの直接利用、既検証manifestと読込済みmodelの再利用、`llama-server`経由のマルチモーダル埋め込み、短いcontext長での埋め込みmodel読込修正、Apple Silicon MLXの投機的復号後の状態管理修正、内蔵llama.cppの判定model対応。
+- 前項の`v0.40.4-rc2`は公開候補版、ここでは正式版として区別する。model準備やmanifest再利用はrequest開始費用の改善であり、全GPUのdecode速度向上を意味しない。MLX変更はWindows CUDAへ直接適用されない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.4)
+
+### 2026-10-14 — Ollama v0.40.4-rc2（公開候補版）
+- 内蔵llama.cppのb11521への更新、判定モデル（decision model）およびEmbeddingGemma 2の対応、検証済みmanifestと読み込みモデルの再利用、Apple MLXでの投機的復号巻戻し後の再帰状態整理などを含む。
+- **公開候補版であり安定版ではない**。リリースの作成日時と公開日時に不整合があるため日付は要確認。Apple MLXの改良をWindows CUDAの性能向上とみなさず、速度倍率の実測は未確認。[公式候補版](https://github.com/ollama/ollama/releases/tag/v0.40.4-rc2)。
+
+### 2026-10-13 — Ollama v0.40.4-rc0（公開候補版）
+- 内蔵llama.cppをb11521へ更新し、判定モデルとEmbeddingGemma 2の対応を追加。モデル情報・読み込み済みモデルの再利用、Apple SiliconのMLXで投機的復号の巻き戻し後の再帰状態を圧縮する処理、Codex上のローカルモデル表示なども含む。
+- **安定版ではない**。内蔵b11521はllama.cpp単独版b11577とは異なる。MLX更新による性能をWindows CUDAへ外挿しない。全モデル共通の実測速度倍率は未報告。[公式候補版](https://github.com/ollama/ollama/releases/tag/v0.40.4-rc0)
+
+### 2026-10-11 — Ollama v0.40.3：モデル自動移行を一時停止
+- v0.40.2で導入した既存モデルのバックグラウンド互換性移行は、埋め込みモデルなどでのAPI要求・GC負荷を避けるため一時停止。生成速度やVRAMの普遍的改善値は未報告。[公式版](https://github.com/ollama/ollama/releases/tag/v0.40.3)、[PR #18908](https://github.com/ollama/ollama/pull/18908)。
+
+### 2026-10-09 — Ollama v0.40.2：ローカルモデル形式移行
+- 形式移行とバックアップにより一時的にディスク容量を消費し得る。**v0.40.3では自動移行が一時停止中**のため現行動作と区別する。[公式版](https://github.com/ollama/ollama/releases/tag/v0.40.2)。
+
+### 2026-10-08 — Ollama v0.40.1：WindowsのClef Flash読込み互換性修正
+
+- Windows環境の古いlibc++で2GiB超のファイルオフセットが32ビットへ切り詰められ、`clef-flash` の判定ヘッドを誤読して `/v1/systemone` が `Clef: non-finite logit` で失敗する問題を、64ビットのファイルシークへ修正。Windows 11のCPU経路で失敗から正常なHTTP 200への復帰が確認された。
+- **特定モデルの読込み不具合修正であり、一般のQwen系モデル、レシートOCR、CUDA推論速度の改善を意味しない**。同PRにGPU経路全体の再試験はない。
+- 公式資料: [正式版 v0.40.1](https://github.com/ollama/ollama/releases/tag/v0.40.1)、[PR #18777](https://github.com/ollama/ollama/pull/18777)。
+
+### 2026-09-25 — Ollama v0.40.0（正式公開、過去確認漏れの補完）
+
+- **Apple Siliconの既定推論経路を変更**: MLXに対応するモデル構造は自動的にMLXで動くようになった。対象例はQwen3.8、Gemma4、Qwen3.6、Qwen3.5、判定モデルClef系、埋め込みモデルembeddinggemma-2。利用者が別途MLXエンジンを選ばなくても対応モデルでMLXを使う。**Apple Silicon向け変更であり、Windows/NVIDIAのCUDA経路がMLXへ切り替わるわけではない**。
+- 既存ページは同機能をv0.40.0-rc0の公開候補版としてのみ掲載していたため、正式版への昇格を明記する。
+- 一次資料: https://github.com/ollama/ollama/releases/tag/v0.40.0
+
+### 2026-06-30 — v0.31.1（released）
+
+- **Apple SiliconでMTP draft token数を自動調整**: MTP（Multi-Token Prediction; 複数token予測）headが一度に何token候補を先読みするかを固定せず、実行状況に応じて調整する。
+
+  draft tokenを増やせば本体modelを呼ぶ回数を減らせる可能性がある一方、外れ候補が多ければ無駄な検証が増える。そのため「多いほどよい」のではなく、受理されやすさとdraft costのbalanceを取る。
+
+  coding-agent benchmark平均で約 **90%高速化**を報告。[release](https://github.com/ollama/ollama/releases/tag/v0.31.1)
+
+### 2026-07-25 — v0.32.4（released）
+
+- **MoE gate/up projection高速化**: MoE expert内で並行して計算するgate projectionとup projectionのweight配置・matrix処理をpacked化し、memory accessとkernel overheadを削減。M5 Maxで **4〜9%改善**。[release](https://github.com/ollama/ollama/releases/tag/v0.32.4)
+
+### 2026-08-04 — v0.32.6（released）
+
+- **MLX engineがMTP headを自動利用**: modelにMTP headが含まれている場合、Apple GPU上で投機的デコードを自動有効化する。利用者がdraft modelを別途指定しなくても、model自身の複数token予測headをdraftとして使える。公式速度値なし。[release](https://github.com/ollama/ollama/releases/tag/v0.32.6)
+
+### 2026-08-12 — v0.32.10（released）
+
+- **NVFP4 modelのprefill高速化**: NVIDIAの4-bit浮動小数点形式NVFP4で、weight全体に共通するglobal scaleを持つmodelのprefill pathを最適化。prompt処理を **7〜8%改善**。[release](https://github.com/ollama/ollama/releases/tag/v0.32.10)
+
+### 2026-08-19 — v0.32.15（released）
+
+- **resolved model metadataのrequest間cache**: model fileやtemplate、parameter設定など、requestごとに同じmodelについて繰り返し解決していたmetadataをcacheする。
+
+  GPU推論そのものを速くする変更ではないが、request開始前の準備時間を減らし、TTFT（Time To First Token; 最初のtokenが返るまでの時間）を約 **995 → 524 ms**へ短縮。[release](https://github.com/ollama/ollama/releases/tag/v0.32.15)
+
+### 2026-08-21 — v0.33.0（released）
+
+- **cancel後のprefill restore point保持**: 長いpromptをprefill中にrequestがcancelされても、すでに計算済みの地点をcacheとして残す。
+
+  同じpromptでretryした場合、最初のtokenからKVを作り直さず、保存済み地点から再開できる。coding agentやtool loopのように同じ長いcontextを再送しやすいworkloadで再計算を減らす。[release](https://github.com/ollama/ollama/releases/tag/v0.33.0)
+
+### 2026-09-23 — v0.34.4（released）
+
+- **Qwen 3.8のApple Silicon prompt processing高速化など**: Qwen 3.8のprompt processing改善、thinking modelのstructured outputのsingle-pass化、Gemma 4の画像ごとの解像度選択、llama.cpp / MLX / XGrammar更新を含む。[release](https://github.com/ollama/ollama/releases/tag/v0.34.4)
+
+### 2026-09-29 — v0.35.1（released）
+
+- **decision model / multimodal判定APIを拡張**: CloudflareのClef 27B / Clef Flash 9Bを`/v1/systemone`から扱えるようにし、画像を含むmultimodal stateに対してchoice / probability / score型の判定を返せるようになった。web searchは1応答あたり3回から10回へ拡張。
+- **Modelfileの`CAPABILITY`宣言**: model能力をmetadataとして明示でき、GGUF / safetensorsからの作成やmodel継承でも保持される。
+
+[release](https://github.com/ollama/ollama/releases/tag/v0.35.1)
+
+### 2026-09-28 — v0.35.0（released）
+
+- **decision model API**: `/v1/systemone` でchoice / noul / score形式のdecision modelを扱えるようになり、classificationやmodel routing等をOllama API内で実行できる。Settingsのmodel discovery待ちによるblockやMLX model download stallの修正も含む。[release](https://github.com/ollama/ollama/releases/tag/v0.35.0)
+
+### 2026-09-25 — v0.40.0-rc0（pre-release）
+
+- **Apple SiliconのMLX既定backend変更を試験**: MLX runtime対応architectureを自動的にMLXで実行する方針へ変更するRC。公式release noteではQwen 3.8を例示。stable機能ではなくpre-releaseとして扱う。[release](https://github.com/ollama/ollama/releases/tag/v0.40.0-rc0)
+
+### 用語メモ
+
+- **MTP（Multi-Token Prediction; 複数token予測）**: 現在位置から次の1 tokenだけでなく複数token先まで候補を予測するhead / 学習方式。
+- **prefill**: prompt全体を一括処理してKV cacheを作る段階。長いpromptではdecode開始前の大きなcostになる。
+- **restore point**: 途中まで計算済みのcache状態を保存し、次回その地点から再開するためのcheckpoint。
+- **metadata cache**: model weightそのものではなく、modelをどう読み込むか・どのtemplateや設定を使うかといった付随情報を再利用するcache。

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2ee95ba37da8b80-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:7eHn64wOVy",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:7eHn64wOVy",
+    "identity_tokens": [
+      "OpenReview:7eHn64wOVy",
+      "arXiv:2405.13216"
+    ],
+    "reason": "Transformerの文脈内ランダムアクセス能力の限界を分析する能力・理論研究で、推論実行の速度・メモリ・サービングを改善するシステム方式ではないため対象外。",
+    "first_checked_at": "2026-09-30T02:28:00+00:00",
+    "last_checked_at": "2026-09-30T02:28:00+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md",
+      "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md"
+    ],
+    "title": "Your Context Is Not an Array: Unveiling Random Access Limitations in Transformers"
+  },
+  "processed_at": "2026-09-30T02:28:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2ee95ba37da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

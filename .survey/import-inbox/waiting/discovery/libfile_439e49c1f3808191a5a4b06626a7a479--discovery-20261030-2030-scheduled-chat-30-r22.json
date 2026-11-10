@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r22",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.63317/3k5cxvg7k92d",
+      "identity_tokens": [
+        "DOI:10.63317/3k5cxvg7k92d"
+      ],
+      "title": "How Speculative Can Speculative Decoding Be?",
+      "reason": "ACL Anthology一次要旨は投機的復号のドラフトモデル規模とドラフト長の最適点を理論・実験で調べる。ドラフトモデルはターゲット比10～20倍小型、ドラフト長は3～5トークン程度が望ましい条件を報告し、単純に小さく長くすれば速くなるわけではないことを示す。",
+      "source_url": "https://aclanthology.org/2024.lrec-main.725/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:47:33+09:00",
+      "last_checked_at": "2026-10-30T20:47:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 268,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3767295.3769355",
+      "identity_tokens": [
+        "DOI:10.1145/3767295.3769355"
+      ],
+      "title": "MFS: An Efficient Model Family Serving System for LLMs",
+      "reason": "著者所属HKUSTの一次要旨によると、同系列の異なるサイズのLLMを一つの階層モデルへ埋め込み、中間特徴・KVを共有しながらtier単位でバッチ処理する。end-to-end生成遅延56.1%減、GPUメモリ47.8%減を報告する。",
+      "source_url": "https://researchportal.hkust.edu.hk/en/publications/mfs-an-efficient-model-family-serving-system-for-llms/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:47:33+09:00",
+      "last_checked_at": "2026-10-30T20:47:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 285,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/SoutheastCon63549.2026.11476566",
+      "identity_tokens": [
+        "DOI:10.1109/SoutheastCon63549.2026.11476566"
+      ],
+      "title": "DeepServe: Hierarchical Model Placement and Dynamic Batching for Cost-Efficient Multi-Tenant LLM Inference at Scale",
+      "reason": "論文要旨によると、A100/V100/L4/T4など5 GPU階層と7B～175Bのモデルを組み合わせ、メモリを考慮した配置とSLA対応連続バッチでコストを最小化する。50,000要求の模擬負荷でA100固定配置比コスト47%減、P95 2.31秒を報告する。出版社一次要旨の全文は未取得であるため定量値は要再照合。",
+      "source_url": "https://doi.org/10.1109/SoutheastCon63549.2026.11476566",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:47:33+09:00",
+      "last_checked_at": "2026-10-30T20:47:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 311,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TC.2024.3389507",
+      "identity_tokens": [
+        "DOI:10.1109/TC.2024.3389507"
+      ],
+      "title": "Raptor-T: A Fused and Memory-Efficient Sparse Transformer for Long and Variable-Length Sequences",
+      "reason": "著者公開のartifactはLongformer/BigBirdなどのencoder向け疎注意をtile融合してA100で評価する。Transformerカーネルのメモリ・速度最適化に関連するが、生成LLMの自己回帰decode/KV管理を直接評価していないため境界扱い。",
+      "source_url": "https://github.com/WongHuLin/Raptor-T",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:47:33+09:00",
+      "last_checked_at": "2026-10-30T20:47:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 312,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/SOCC62300.2024.10737844",
+      "identity_tokens": [
+        "DOI:10.1109/SOCC62300.2024.10737844"
+      ],
+      "title": "Energy Cost Modelling for Optimizing Large Language Model Inference on Hardware Accelerators",
+      "reason": "LLM推論をZigZag設計空間探索へ写像し、GPU/専用アクセラレータの計算・メモリのエネルギーを高速に推定する。Llama2-7Bでdecodeの重み読出し支配と、重み量子化によるエネルギー最大4.6倍削減をモデル化した推論評価基盤。",
+      "source_url": "https://doi.org/10.1109/SOCC62300.2024.10737844",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:47:33+09:00",
+      "last_checked_at": "2026-10-30T20:47:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 316,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571651",
+      "identity_tokens": [
+        "DOI:10.1109/INFOCOM59046.2026.11571651"
+      ],
+      "title": "GenSched: Phase-Aware Generative Scheduling for LLM Inference in Heterogeneous Edge Networks",
+      "reason": "IEEE出版社一次要旨によると、prefillとdecodeの資源親和性を分け、Mamba時系列エンコーダと拡散方策でサーバ・資源割当を生成する。KV上限制約を満たす投影を組み込み、模擬エッジ群でdeadlineとSLA達成率を改善する。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11571651",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:47:33+09:00",
+      "last_checked_at": "2026-10-30T20:47:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 317,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1054",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.1054"
+      ],
+      "title": "Beyond Fixed-Length Calibration for Post-Training Compression of LLMs",
+      "reason": "ACL Anthology一次要旨は、PTQ/枝刈りの校正系列長と正規化後の先頭トークン活性の特異性を分析し、sequence axis maskによるstate-aware length calibrationを提案。再学習なしのLLM圧縮品質を改善する。",
+      "source_url": "https://aclanthology.org/2025.findings-emnlp.1054/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:47:33+09:00",
+      "last_checked_at": "2026-10-30T20:47:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 319,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.467",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.naacl-long.467"
+      ],
+      "title": "DenseSSM: State Space Models with Dense Hidden Connection for Efficient Large Language Models",
+      "reason": "ACL Anthology一次要旨によると、浅いSSM層の隠れ状態を選択的に深層へ加算し、RetNet/Mambaの線形計算効率を保ちながら品質を改善する。効率的な言語モデルアーキテクチャの直接的な技術貢献。",
+      "source_url": "https://aclanthology.org/2025.naacl-long.467/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:47:33+09:00",
+      "last_checked_at": "2026-10-30T20:47:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 320,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.05840",
+      "identity_tokens": [
+        "arXiv:2503.05840",
+        "DOI:10.48550/arXiv.2503.05840"
+      ],
+      "title": "Slim attention: cut your context memory in half without loss of accuracy -- K-cache is all you need for MHA",
+      "reason": "MHAのK射影からVを事前変換で再構成し、V-cache保存を不要にする数学的等価な注意実装。KVメモリを2倍削減し、長文脈decodeで最大2倍、Whisper等のencoder-decoderでさらに大きなキャッシュ削減を報告する。GQA/MQAへの一般化は別途検討が必要。",
+      "source_url": "https://arxiv.org/abs/2503.05840",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:47:33+09:00",
+      "last_checked_at": "2026-10-30T20:47:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 329,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICME59968.2025.11209145",
+      "identity_tokens": [
+        "DOI:10.1109/ICME59968.2025.11209145"
+      ],
+      "title": "InterLayer: Efficient Inference with Interleaved Scheduling and Layer-Specific Optimization",
+      "reason": "論文要旨は複数LLMの切替時に生じるGPU計算停止を分析し、層別の重み転送・計算を依存関係を守りながらinterleaveする。vLLM比2.4～4.9倍の高速化、最大3.6倍のスループット改善を報告する。",
+      "source_url": "https://doi.org/10.1109/ICME59968.2025.11209145",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:47:33+09:00",
+      "last_checked_at": "2026-10-30T20:47:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 330,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

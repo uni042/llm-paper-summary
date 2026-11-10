@@ -1,0 +1,800 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ee174313811148fa-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ee1743138111",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/access.2025.3568702",
+    "arXiv:2202.07105",
+    "arXiv:2203.14380",
+    "arXiv:2411.10741",
+    "arXiv:2504.16795",
+    "arXiv:2509.24328",
+    "arXiv:2607.18253",
+    "arXiv:2608.26112",
+    "arXiv:2609.32712"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "57cc693ead58a6e3e84effe2a605fc97c053df94",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-09T04:26:20.679517+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/access.2025.3568702",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2202.07105",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1609/aaai.v37i9.26255"
+    },
+    {
+      "requested_id": "arXiv:2203.14380",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.10741",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.16795",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.24328",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.18253",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.26112",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32712",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Beyond Accuracy and Cost: Latency-Aware LLM Query Routing for Dynamic Workloads",
+      "source_url": "https://arxiv.org/abs/2607.18253",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern language query routers improve inference efficiency by assigning each query to a model that balances response quality and monetary cost. However, current query routers are largely latency-agnostic and do not consider the generation latency experienced by queries at model instances. In practice, latency is often controlled by load-balancing policies such as round-robin or join-the-shortest-queue, which do not account for model accuracy or inference cost. Incorporating query latency into routing is challenging as it depends not only on the query's prompt length, but also on the current prefill and decode workload at the model instance and the scheduling and batching policy of the serving framework. We design a lightweight latency estimator that simulates autoregressive token batch processing in the serving framework and estimates the time-to-first-token (TTFT) of queries. We incorporate this latency estimator into a latency-aware router that jointly optimizes latency, accuracy, and cost when assigning queries to model instances. Our experimental results indicate that this joint optimization yields up to 40% improvement in accuracy--cost utility while maintaining the same latencies as standard load-balancing approaches.",
+      "identifiers": [
+        "SemanticScholar:8af17f196c63dcb9a92c04b358887a4b090016e4"
+      ],
+      "semantic_scholar_id": "8af17f196c63dcb9a92c04b358887a4b090016e4",
+      "canonical_id": "arXiv:2607.18253",
+      "arxiv_id": "2607.18253",
+      "doi": "10.48550/arXiv.2607.18253",
+      "authors": [
+        "Shivam Patel",
+        "Akaash R. Parthasarathy",
+        "Ankur Mallick",
+        "Gauri Joshi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection",
+      "source_url": "https://arxiv.org/abs/2203.14380",
+      "year": 2022,
+      "published": "2022-03-27",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based language models such as BERT (CITATION) have achieved the state-of-the-art performance on various NLP tasks, but are computationally prohibitive. A recent line of works use various heuristics to successively shorten sequence length while transforming tokens through encoders, in tasks such as classification and ranking that require a single token embedding for prediction.We present a novel solution to this problem, called Pyramid-BERT where we replace previously used heuristics with a core-set based token selection method justified by theoretical results. The core-set based token selection technique allows us to avoid expensive pre-training, gives a space-efficient fine tuning, and thus makes it suitable to handle longer sequence lengths. We provide extensive experiments establishing advantages of pyramid BERT over several baselines and existing works on the GLUE benchmarks and Long Range Arena (CITATION) datasets.",
+      "identifiers": [
+        "SemanticScholar:79bee63bc21a99dc12dd2725a0c0dcfffa4611ef"
+      ],
+      "semantic_scholar_id": "79bee63bc21a99dc12dd2725a0c0dcfffa4611ef",
+      "canonical_id": "arXiv:2203.14380",
+      "arxiv_id": "2203.14380",
+      "doi": "10.48550/arXiv.2203.14380",
+      "authors": [
+        "Xin Huang",
+        "A. Khetan",
+        "Rene Bidart",
+        "Zohar S. Karnin"
+      ],
+      "priority": 32,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 32,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1657,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map",
+      "source_url": "https://arxiv.org/abs/2411.10741",
+      "year": 2024,
+      "published": "2024-11-16",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Various linear complexity models, such as Linear Transformer (LinFormer), State Space Model (SSM), and Linear RNN (LinRNN), have been proposed to replace the conventional softmax attention in Transformer structures. However, the optimal design of these linear models is still an open question. In this work, we attempt to answer this question by finding the best linear approximation to softmax attention from a theoretical perspective. We start by unifying existing linear complexity models as the linear attention form and then identify three conditions for the optimal linear attention design: 1) Dynamic memory ability; 2) Static approximation ability; 3) Least parameter approximation. We find that none of the current linear models meet all three conditions, resulting in suboptimal performance. Instead, we propose Meta Linear Attention (MetaLA) as a solution that satisfies these conditions. Our experiments on Multi-Query Associative Recall (MQAR) task, language modeling, image classification, and Long-Range Arena (LRA) benchmark demonstrate that MetaLA is more effective than the existing linear models.",
+      "identifiers": [
+        "SemanticScholar:7d630630a1ba3269fc1fcefb49f8150390a8dc5d"
+      ],
+      "semantic_scholar_id": "7d630630a1ba3269fc1fcefb49f8150390a8dc5d",
+      "canonical_id": "arXiv:2411.10741",
+      "arxiv_id": "2411.10741",
+      "doi": "10.48550/arXiv.2411.10741",
+      "authors": [
+        "Yuhong Chou",
+        "Man Yao",
+        "Kexin Wang",
+        "Yu-Qi Pan",
+        "Ruijie Zhu",
+        "Yiran Zhong",
+        "Yu Qiao",
+        "Ji-Bin Wu",
+        "Bo-Xing Xu",
+        "Guo-Qi Li"
+      ],
+      "priority": 32,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 32,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 692,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Hardware-aligned Hierarchical Sparse Attention for Efficient Long-term Memory Access",
+      "source_url": "https://arxiv.org/abs/2504.16795",
+      "year": 2025,
+      "published": "2025-04-23",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A key advantage of Recurrent Neural Networks (RNNs) over Transformers is their linear computational and space complexity enables faster training and inference for long sequences. However, RNNs are fundamentally unable to randomly access historical context, and simply integrating attention mechanisms may undermine their efficiency advantages. To overcome this limitation, we propose Hierarchical Sparse Attention (HSA), a novel attention mechanism that enhances RNNs with long-range random access flexibility while preserving their merits in efficiency and length generalization. HSA divides inputs into chunks, selects the top-$k$ chunks and hierarchically aggregates information. The core innovation lies in learning token-to-chunk relevance based on fine-grained token-level information inside each chunk. This approach enhances the precision of chunk selection across both in-domain and out-of-domain context lengths. To make HSA efficient, we further introduce a hardware-aligned kernel design. By combining HSA with Mamba, we introduce RAMba, which achieves perfect accuracy in passkey retrieval across 64 million contexts despite pre-training on only 4K-length contexts, and significant improvements on various downstream tasks, with nearly constant memory footprint. These results show RAMba's huge potential in long-context modeling.",
+      "identifiers": [
+        "SemanticScholar:d25cd021507c1a1bfbec89cf980d4920df1073c2"
+      ],
+      "semantic_scholar_id": "d25cd021507c1a1bfbec89cf980d4920df1073c2",
+      "canonical_id": "arXiv:2504.16795",
+      "arxiv_id": "2504.16795",
+      "doi": "10.52202/085713-2974",
+      "authors": [
+        "Xiang Hu",
+        "Jiaqi Leng",
+        "Jun-Qi Zhao",
+        "Kewei Tu",
+        "Wei Wu"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 534,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Addressing Activation Outliers in LLMs: A Systematic Review of Post-Training Quantization Techniques",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3568702",
+      "year": 2025,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have transformed natural language processing, yet their deployment remains challenging due to substantial computational, memory, and energy demands. Post-training quantization has emerged as a key strategy for enabling efficient inference, particularly in resource-constrained settings. This systematic review focuses on weight-activation quantization, with a unique emphasis on the emergent outlier phenomenon in LLM activations. This work evaluates recent techniques that mitigate activation outliers and improve quantization efficiency, distinguishing itself from prior reviews. Using the PRISMA methodology, we examine 52 recent studies to uncover key trends and evaluate the effectiveness of different approaches. By synthesizing insights from these works, this review presents a diverse set of techniques and their implications for activation quantization, laying the groundwork for future research and practical advancements in LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:e60b5445dcfcfeb6fa7df1e0bfbfbfb388cff637"
+      ],
+      "semantic_scholar_id": "e60b5445dcfcfeb6fa7df1e0bfbfbfb388cff637",
+      "doi": "10.1109/ACCESS.2025.3568702",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3568702",
+      "authors": [
+        "Patrik Czakó",
+        "Gábor Kertész",
+        "S. Szénási"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 465,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TreeGraft: Adaptive Multi-Drafter Grafting for Tree-Based Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.26112",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference through a draft-then-verify paradigm. Building on this, tree-structured methods improve inference by organizing proposals into multiple candidate paths, increasing the accepted length. However, existing tree-structured methods use a single drafter for all drafting steps, creating a dilemma: a smaller drafter is fast but yields lower-quality trees, whereas a larger drafter improves tree quality but suffers from high latency. To address this, we propose TreeGraft, a multi-drafter framework in which drafters of different costs jointly construct a shared draft tree. TreeGraft uses the stronger drafter to rescore candidates by updating scores assigned by the weaker drafter, reselect grafting positions, and recover promising paths left unexplored. It also integrates stronger drafter expansions non-destructively, preserving existing branches that may still be accepted by the target model. Together, these designs improve the quality of the shared draft tree. To control the drafting cost, TreeGraft introduces a lightweight scheduler distilled from an offline value system to decide when to call the stronger drafter. Across 10 model pairs and 6 benchmarks, TreeGraft outperforms the better of the two fixed single-drafter endpoint strategies by 15.1% on average, reaching a maximum gain of 26.6%. Our code is available at https://github.com/fjm9933/TreeGraft.",
+      "identifiers": [
+        "SemanticScholar:ca39b9c49ba617863c9aae1c569cbc927d1b1b43"
+      ],
+      "semantic_scholar_id": "ca39b9c49ba617863c9aae1c569cbc927d1b1b43",
+      "canonical_id": "arXiv:2608.26112",
+      "arxiv_id": "2608.26112",
+      "authors": [
+        "Jiaming Fan",
+        "D. Cao",
+        "Can-Chen Huang",
+        "Jiale Fu",
+        "Jin Zhang",
+        "Junjie Gao",
+        "Kai Yang",
+        "Xiangzhong Luo",
+        "Xu Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 134,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MassAlloc Attention: Let Attention Allocate Its Own Compute",
+      "source_url": "https://arxiv.org/abs/2609.32712",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "FullAttn often assigns negligible normalized mass to much of the causal score space, yet dense kernels execute the complete post-score path after forming each QK tile. We introduce MALA, a fused attention primitive that preserves score access to every legal causal interaction and uses normalized contribution to allocate post-score computation. Forward uses its evolving online-softmax normalizer, while backward reuses the finalized normalizer to derive nested retained support using only standard attention state. A common tolerance governs training and inference, allowing for adaptive retention of the work. MALA reduces low-contribution post-score computation. A matched-work study at 8K isolates the benefit of distribution-adaptive allocation: under exactly matched total post-score work, MALA approaches a per-instance reference-mass oracle, with mean omitted mass of 0.0188% versus 0.0182%. Across context lengths from 1K to 32K tokens, the same tolerance maintains low output and gradient errors relative to the reference. Across a broader controlled associative-recall comparison, MALA closely tracks FullAttn as context grows, reaching 89.67% accuracy at 8K compared with 89.97% for FullAttn. In an attention-operator benchmark at 128K tokens with tensor parallelism, MALA reduces forward and backward latency during training by 2.2x and 3.0x and decoding latency during inference by 1.6x relative to FullAttn. Across scaling-law training from 0.6B to 14B parameters, MALA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results indicate that allocating post-score computation according to normalized attention contributions can retain the evaluated capabilities of FullAttn while reducing attention computation.",
+      "identifiers": [
+        "SemanticScholar:789bd424c13654d9cd1a1604b3ed80a4fda41e0f"
+      ],
+      "semantic_scholar_id": "789bd424c13654d9cd1a1604b3ed80a4fda41e0f",
+      "canonical_id": "arXiv:2609.32712",
+      "arxiv_id": "2609.32712",
+      "authors": [
+        "Jing-Ze Shi",
+        "Zhang-Yang Peng",
+        "Xian-Duo Li",
+        "Yan-Lin Qi",
+        "Xiao-Tian Lin",
+        "Hao-Xian Chen",
+        "Liang-Dong Wang",
+        "Guang Liu",
+        "Yu-Yu Luo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Speculative Verification: Exploiting Information Gain to Refine Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2509.24328",
+      "year": 2025,
+      "published": "2025-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLMs have low GPU efficiency and high latency due to autoregressive decoding. Speculative decoding (SD) mitigates this using a small draft model to speculatively generate multiple tokens, which are then verified in parallel by a target model. However, when speculation accuracy is low, the overhead from rejected tokens can offset the benefits, limiting SD's effectiveness, especially at large batch sizes. To address this, we propose Speculative Verification (SV), an efficient augmentation to SD that dynamically predicts speculation accuracy and adapts the verification length to maximize throughput. SV introduces a companion model - a small auxiliary model similar in size to the draft model - to estimate the alignment between draft and target model distributions. By maximizing the information gain from quantifying this alignment, SV refines verification decisions, reducing wasted computation on rejected tokens and improving decoding efficiency. Moreover, SV requires no modifications to the draft or target models and is compatible with existing SD variants. We extensively evaluated SV on publicly available LLMs across three NLP tasks using nine combinations of draft, companion, and target models, including 13B-72B target models and three types of variations: base (no finetuning), instruction-tuned, and task fine-tuned. Across all experiments and batch sizes (4-80), SV consistently outperforms both SD and standard decoding with the target model. It improves SD performance by up to 2$\\times$, with an average speedup of 1.4 $\\times$ in large-batch settings (batch sizes 32-80). These results demonstrate SV's robustness, scalability, and practical utility for efficient LLM inference.",
+      "identifiers": [
+        "SemanticScholar:5913b974de7b4c604eec46778acabebed343e8df"
+      ],
+      "semantic_scholar_id": "5913b974de7b4c604eec46778acabebed343e8df",
+      "canonical_id": "arXiv:2509.24328",
+      "arxiv_id": "2509.24328",
+      "doi": "10.48550/arXiv.2509.24328",
+      "authors": [
+        "Sungkyun Kim",
+        "Jaemin Kim",
+        "Dogyung Yoon",
+        "Jiho Shin",
+        "Junyeol Lee",
+        "Jiwon Seo"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 375,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.18253",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.18253",
+        "id:SemanticScholar:8af17f196c63dcb9a92c04b358887a4b090016e4",
+        "id:arXiv:2607.18253",
+        "title:beyond accuracy and cost latencyaware llm query routing for dynamic workloads",
+        "url:https://arxiv.org/abs/2607.18253"
+      ],
+      "record": {
+        "title": "Beyond Accuracy and Cost: Latency-Aware LLM Query Routing for Dynamic Workloads",
+        "source_url": "https://arxiv.org/abs/2607.18253",
+        "year": 2026,
+        "published": "2026-05-13",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern language query routers improve inference efficiency by assigning each query to a model that balances response quality and monetary cost. However, current query routers are largely latency-agnostic and do not consider the generation latency experienced by queries at model instances. In practice, latency is often controlled by load-balancing policies such as round-robin or join-the-shortest-queue, which do not account for model accuracy or inference cost. Incorporating query latency into routing is challenging as it depends not only on the query's prompt length, but also on the current prefill and decode workload at the model instance and the scheduling and batching policy of the serving framework. We design a lightweight latency estimator that simulates autoregressive token batch processing in the serving framework and estimates the time-to-first-token (TTFT) of queries. We incorporate this latency estimator into a latency-aware router that jointly optimizes latency, accuracy, and cost when assigning queries to model instances. Our experimental results indicate that this joint optimization yields up to 40% improvement in accuracy--cost utility while maintaining the same latencies as standard load-balancing approaches.",
+        "identifiers": [
+          "SemanticScholar:8af17f196c63dcb9a92c04b358887a4b090016e4"
+        ],
+        "semantic_scholar_id": "8af17f196c63dcb9a92c04b358887a4b090016e4",
+        "canonical_id": "arXiv:2607.18253",
+        "arxiv_id": "2607.18253",
+        "doi": "10.48550/arXiv.2607.18253",
+        "authors": [
+          "Shivam Patel",
+          "Akaash R. Parthasarathy",
+          "Ankur Mallick",
+          "Gauri Joshi"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 149,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2203.14380",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2203.14380",
+        "id:SemanticScholar:79bee63bc21a99dc12dd2725a0c0dcfffa4611ef",
+        "id:arXiv:2203.14380",
+        "title:pyramidbert reducing complexity via successive coreset based token selection",
+        "url:https://arxiv.org/abs/2203.14380"
+      ],
+      "record": {
+        "title": "Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection",
+        "source_url": "https://arxiv.org/abs/2203.14380",
+        "year": 2022,
+        "published": "2022-03-27",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 22,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based language models such as BERT (CITATION) have achieved the state-of-the-art performance on various NLP tasks, but are computationally prohibitive. A recent line of works use various heuristics to successively shorten sequence length while transforming tokens through encoders, in tasks such as classification and ranking that require a single token embedding for prediction.We present a novel solution to this problem, called Pyramid-BERT where we replace previously used heuristics with a core-set based token selection method justified by theoretical results. The core-set based token selection technique allows us to avoid expensive pre-training, gives a space-efficient fine tuning, and thus makes it suitable to handle longer sequence lengths. We provide extensive experiments establishing advantages of pyramid BERT over several baselines and existing works on the GLUE benchmarks and Long Range Arena (CITATION) datasets.",
+        "identifiers": [
+          "SemanticScholar:79bee63bc21a99dc12dd2725a0c0dcfffa4611ef"
+        ],
+        "semantic_scholar_id": "79bee63bc21a99dc12dd2725a0c0dcfffa4611ef",
+        "canonical_id": "arXiv:2203.14380",
+        "arxiv_id": "2203.14380",
+        "doi": "10.48550/arXiv.2203.14380",
+        "authors": [
+          "Xin Huang",
+          "A. Khetan",
+          "Rene Bidart",
+          "Zohar S. Karnin"
+        ],
+        "priority": 32,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 22,
+          "citation_count": 22,
+          "total": 32,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1657,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.10741",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2411.10741",
+        "id:SemanticScholar:7d630630a1ba3269fc1fcefb49f8150390a8dc5d",
+        "id:arXiv:2411.10741",
+        "title:metala unified optimal linear approximation to softmax attention map",
+        "url:https://arxiv.org/abs/2411.10741"
+      ],
+      "record": {
+        "title": "MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map",
+        "source_url": "https://arxiv.org/abs/2411.10741",
+        "year": 2024,
+        "published": "2024-11-16",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 22,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Various linear complexity models, such as Linear Transformer (LinFormer), State Space Model (SSM), and Linear RNN (LinRNN), have been proposed to replace the conventional softmax attention in Transformer structures. However, the optimal design of these linear models is still an open question. In this work, we attempt to answer this question by finding the best linear approximation to softmax attention from a theoretical perspective. We start by unifying existing linear complexity models as the linear attention form and then identify three conditions for the optimal linear attention design: 1) Dynamic memory ability; 2) Static approximation ability; 3) Least parameter approximation. We find that none of the current linear models meet all three conditions, resulting in suboptimal performance. Instead, we propose Meta Linear Attention (MetaLA) as a solution that satisfies these conditions. Our experiments on Multi-Query Associative Recall (MQAR) task, language modeling, image classification, and Long-Range Arena (LRA) benchmark demonstrate that MetaLA is more effective than the existing linear models.",
+        "identifiers": [
+          "SemanticScholar:7d630630a1ba3269fc1fcefb49f8150390a8dc5d"
+        ],
+        "semantic_scholar_id": "7d630630a1ba3269fc1fcefb49f8150390a8dc5d",
+        "canonical_id": "arXiv:2411.10741",
+        "arxiv_id": "2411.10741",
+        "doi": "10.48550/arXiv.2411.10741",
+        "authors": [
+          "Yuhong Chou",
+          "Man Yao",
+          "Kexin Wang",
+          "Yu-Qi Pan",
+          "Ruijie Zhu",
+          "Yiran Zhong",
+          "Yu Qiao",
+          "Ji-Bin Wu",
+          "Bo-Xing Xu",
+          "Guo-Qi Li"
+        ],
+        "priority": 32,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 22,
+          "citation_count": 22,
+          "total": 32,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 692,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.16795",
+      "identity_tokens": [
+        "id:DOI:10.52202/085713-2974",
+        "id:SemanticScholar:d25cd021507c1a1bfbec89cf980d4920df1073c2",
+        "id:arXiv:2504.16795",
+        "title:hardwarealigned hierarchical sparse attention for efficient longterm memory access",
+        "url:https://arxiv.org/abs/2504.16795"
+      ],
+      "record": {
+        "title": "Hardware-aligned Hierarchical Sparse Attention for Efficient Long-term Memory Access",
+        "source_url": "https://arxiv.org/abs/2504.16795",
+        "year": 2025,
+        "published": "2025-04-23",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A key advantage of Recurrent Neural Networks (RNNs) over Transformers is their linear computational and space complexity enables faster training and inference for long sequences. However, RNNs are fundamentally unable to randomly access historical context, and simply integrating attention mechanisms may undermine their efficiency advantages. To overcome this limitation, we propose Hierarchical Sparse Attention (HSA), a novel attention mechanism that enhances RNNs with long-range random access flexibility while preserving their merits in efficiency and length generalization. HSA divides inputs into chunks, selects the top-$k$ chunks and hierarchically aggregates information. The core innovation lies in learning token-to-chunk relevance based on fine-grained token-level information inside each chunk. This approach enhances the precision of chunk selection across both in-domain and out-of-domain context lengths. To make HSA efficient, we further introduce a hardware-aligned kernel design. By combining HSA with Mamba, we introduce RAMba, which achieves perfect accuracy in passkey retrieval across 64 million contexts despite pre-training on only 4K-length contexts, and significant improvements on various downstream tasks, with nearly constant memory footprint. These results show RAMba's huge potential in long-context modeling.",
+        "identifiers": [
+          "SemanticScholar:d25cd021507c1a1bfbec89cf980d4920df1073c2"
+        ],
+        "semantic_scholar_id": "d25cd021507c1a1bfbec89cf980d4920df1073c2",
+        "canonical_id": "arXiv:2504.16795",
+        "arxiv_id": "2504.16795",
+        "doi": "10.52202/085713-2974",
+        "authors": [
+          "Xiang Hu",
+          "Jiaqi Leng",
+          "Jun-Qi Zhao",
+          "Kewei Tu",
+          "Wei Wu"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 534,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/access.2025.3568702",
+      "identity_tokens": [
+        "id:DOI:10.1109/access.2025.3568702",
+        "id:SemanticScholar:e60b5445dcfcfeb6fa7df1e0bfbfbfb388cff637",
+        "title:addressing activation outliers in llms a systematic review of posttraining quantization techniques",
+        "url:https://doi.org/10.1109/ACCESS.2025.3568702"
+      ],
+      "record": {
+        "title": "Addressing Activation Outliers in LLMs: A Systematic Review of Post-Training Quantization Techniques",
+        "source_url": "https://doi.org/10.1109/ACCESS.2025.3568702",
+        "year": 2025,
+        "published": null,
+        "venue": "IEEE Access",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have transformed natural language processing, yet their deployment remains challenging due to substantial computational, memory, and energy demands. Post-training quantization has emerged as a key strategy for enabling efficient inference, particularly in resource-constrained settings. This systematic review focuses on weight-activation quantization, with a unique emphasis on the emergent outlier phenomenon in LLM activations. This work evaluates recent techniques that mitigate activation outliers and improve quantization efficiency, distinguishing itself from prior reviews. Using the PRISMA methodology, we examine 52 recent studies to uncover key trends and evaluate the effectiveness of different approaches. By synthesizing insights from these works, this review presents a diverse set of techniques and their implications for activation quantization, laying the groundwork for future research and practical advancements in LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:e60b5445dcfcfeb6fa7df1e0bfbfbfb388cff637"
+        ],
+        "semantic_scholar_id": "e60b5445dcfcfeb6fa7df1e0bfbfbfb388cff637",
+        "doi": "10.1109/ACCESS.2025.3568702",
+        "canonical_id": "DOI:10.1109/ACCESS.2025.3568702",
+        "authors": [
+          "Patrik Czakó",
+          "Gábor Kertész",
+          "S. Szénási"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 465,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.26112",
+      "identity_tokens": [
+        "id:SemanticScholar:ca39b9c49ba617863c9aae1c569cbc927d1b1b43",
+        "id:arXiv:2608.26112",
+        "title:treegraft adaptive multidrafter grafting for treebased speculative decoding",
+        "url:https://arxiv.org/abs/2608.26112"
+      ],
+      "record": {
+        "title": "TreeGraft: Adaptive Multi-Drafter Grafting for Tree-Based Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2608.26112",
+        "year": 2026,
+        "published": "2026-05-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model inference through a draft-then-verify paradigm. Building on this, tree-structured methods improve inference by organizing proposals into multiple candidate paths, increasing the accepted length. However, existing tree-structured methods use a single drafter for all drafting steps, creating a dilemma: a smaller drafter is fast but yields lower-quality trees, whereas a larger drafter improves tree quality but suffers from high latency. To address this, we propose TreeGraft, a multi-drafter framework in which drafters of different costs jointly construct a shared draft tree. TreeGraft uses the stronger drafter to rescore candidates by updating scores assigned by the weaker drafter, reselect grafting positions, and recover promising paths left unexplored. It also integrates stronger drafter expansions non-destructively, preserving existing branches that may still be accepted by the target model. Together, these designs improve the quality of the shared draft tree. To control the drafting cost, TreeGraft introduces a lightweight scheduler distilled from an offline value system to decide when to call the stronger drafter. Across 10 model pairs and 6 benchmarks, TreeGraft outperforms the better of the two fixed single-drafter endpoint strategies by 15.1% on average, reaching a maximum gain of 26.6%. Our code is available at https://github.com/fjm9933/TreeGraft.",
+        "identifiers": [
+          "SemanticScholar:ca39b9c49ba617863c9aae1c569cbc927d1b1b43"
+        ],
+        "semantic_scholar_id": "ca39b9c49ba617863c9aae1c569cbc927d1b1b43",
+        "canonical_id": "arXiv:2608.26112",
+        "arxiv_id": "2608.26112",
+        "authors": [
+          "Jiaming Fan",
+          "D. Cao",
+          "Can-Chen Huang",
+          "Jiale Fu",
+          "Jin Zhang",
+          "Junjie Gao",
+          "Kai Yang",
+          "Xiangzhong Luo",
+          "Xu Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 134,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32712",
+      "identity_tokens": [
+        "id:SemanticScholar:789bd424c13654d9cd1a1604b3ed80a4fda41e0f",
+        "id:arXiv:2609.32712",
+        "title:massalloc attention let attention allocate its own compute",
+        "url:https://arxiv.org/abs/2609.32712"
+      ],
+      "record": {
+        "title": "MassAlloc Attention: Let Attention Allocate Its Own Compute",
+        "source_url": "https://arxiv.org/abs/2609.32712",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "FullAttn often assigns negligible normalized mass to much of the causal score space, yet dense kernels execute the complete post-score path after forming each QK tile. We introduce MALA, a fused attention primitive that preserves score access to every legal causal interaction and uses normalized contribution to allocate post-score computation. Forward uses its evolving online-softmax normalizer, while backward reuses the finalized normalizer to derive nested retained support using only standard attention state. A common tolerance governs training and inference, allowing for adaptive retention of the work. MALA reduces low-contribution post-score computation. A matched-work study at 8K isolates the benefit of distribution-adaptive allocation: under exactly matched total post-score work, MALA approaches a per-instance reference-mass oracle, with mean omitted mass of 0.0188% versus 0.0182%. Across context lengths from 1K to 32K tokens, the same tolerance maintains low output and gradient errors relative to the reference. Across a broader controlled associative-recall comparison, MALA closely tracks FullAttn as context grows, reaching 89.67% accuracy at 8K compared with 89.97% for FullAttn. In an attention-operator benchmark at 128K tokens with tensor parallelism, MALA reduces forward and backward latency during training by 2.2x and 3.0x and decoding latency during inference by 1.6x relative to FullAttn. Across scaling-law training from 0.6B to 14B parameters, MALA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results indicate that allocating post-score computation according to normalized attention contributions can retain the evaluated capabilities of FullAttn while reducing attention computation.",
+        "identifiers": [
+          "SemanticScholar:789bd424c13654d9cd1a1604b3ed80a4fda41e0f"
+        ],
+        "semantic_scholar_id": "789bd424c13654d9cd1a1604b3ed80a4fda41e0f",
+        "canonical_id": "arXiv:2609.32712",
+        "arxiv_id": "2609.32712",
+        "authors": [
+          "Jing-Ze Shi",
+          "Zhang-Yang Peng",
+          "Xian-Duo Li",
+          "Yan-Lin Qi",
+          "Xiao-Tian Lin",
+          "Hao-Xian Chen",
+          "Liang-Dong Wang",
+          "Guang Liu",
+          "Yu-Yu Luo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 13,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.24328",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.24328",
+        "id:SemanticScholar:5913b974de7b4c604eec46778acabebed343e8df",
+        "id:arXiv:2509.24328",
+        "title:speculative verification exploiting information gain to refine speculative decoding",
+        "url:https://arxiv.org/abs/2509.24328"
+      ],
+      "record": {
+        "title": "Speculative Verification: Exploiting Information Gain to Refine Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2509.24328",
+        "year": 2025,
+        "published": "2025-09-29",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLMs have low GPU efficiency and high latency due to autoregressive decoding. Speculative decoding (SD) mitigates this using a small draft model to speculatively generate multiple tokens, which are then verified in parallel by a target model. However, when speculation accuracy is low, the overhead from rejected tokens can offset the benefits, limiting SD's effectiveness, especially at large batch sizes. To address this, we propose Speculative Verification (SV), an efficient augmentation to SD that dynamically predicts speculation accuracy and adapts the verification length to maximize throughput. SV introduces a companion model - a small auxiliary model similar in size to the draft model - to estimate the alignment between draft and target model distributions. By maximizing the information gain from quantifying this alignment, SV refines verification decisions, reducing wasted computation on rejected tokens and improving decoding efficiency. Moreover, SV requires no modifications to the draft or target models and is compatible with existing SD variants. We extensively evaluated SV on publicly available LLMs across three NLP tasks using nine combinations of draft, companion, and target models, including 13B-72B target models and three types of variations: base (no finetuning), instruction-tuned, and task fine-tuned. Across all experiments and batch sizes (4-80), SV consistently outperforms both SD and standard decoding with the target model. It improves SD performance by up to 2$\\times$, with an average speedup of 1.4 $\\times$ in large-batch settings (batch sizes 32-80). These results demonstrate SV's robustness, scalability, and practical utility for efficient LLM inference.",
+        "identifiers": [
+          "SemanticScholar:5913b974de7b4c604eec46778acabebed343e8df"
+        ],
+        "semantic_scholar_id": "5913b974de7b4c604eec46778acabebed343e8df",
+        "canonical_id": "arXiv:2509.24328",
+        "arxiv_id": "2509.24328",
+        "doi": "10.48550/arXiv.2509.24328",
+        "authors": [
+          "Sungkyun Kim",
+          "Jaemin Kim",
+          "Dogyung Yoon",
+          "Jiho Shin",
+          "Junyeol Lee",
+          "Jiwon Seo"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 375,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7b93ed229e140250291e382e938f4640703621bc429e0e333f35359551ceb624",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

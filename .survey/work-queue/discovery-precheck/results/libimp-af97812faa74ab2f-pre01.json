@@ -1,0 +1,1167 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-af97812faa74ab2f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-af97812faa74",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/ipdpsw63119.2024.00187",
+    "DOI:10.1145/3673038.3673046",
+    "DOI:10.3390/electronics15112475",
+    "DOI:10.5220/0014452400004084",
+    "arXiv:2009.06823",
+    "arXiv:2009.07460",
+    "arXiv:2312.12472",
+    "arXiv:2505.22582",
+    "arXiv:2509.04993",
+    "arXiv:2510.08464",
+    "arXiv:2603.25766",
+    "arXiv:2605.13869"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1811f4244d1e99be62ac454d231a219caeb32bd9",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 12,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 12,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T01:24:46.947403+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/ipdpsw63119.2024.00187",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3673038.3673046",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.3390/electronics15112475",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.5220/0014452400004084",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2009.06823",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2009.07460",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2312.12472",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.22582",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.04993",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.08464",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.25766",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.13869",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Less, but Better: Efficient Multilingual Expansion for LLMs via Layer-wise Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2505.22582",
+      "year": 2025,
+      "published": "2025-05-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Continually expanding new languages for existing large language models (LLMs) is a promising yet challenging approach to building powerful multilingual LLMs. The biggest challenge is to make the model continuously learn new languages while preserving the proficient ability of old languages. To achieve this, recent work utilizes the Mixture-of-Experts (MoE) architecture to expand new languages by adding new experts and avoid catastrophic forgetting of old languages by routing corresponding tokens to the original model backbone (old experts). Although intuitive, this kind of method is parameter-costly when expanding new languages and still inevitably impacts the performance of old languages. To address these limitations, we analyze the language characteristics of different layers in LLMs and propose a layer-wise expert allocation algorithm (LayerMoE) to determine the appropriate number of new experts for each layer. Specifically, we find different layers in LLMs exhibit different representation similarities between languages and then utilize the similarity as the indicator to allocate experts for each layer, i.e., the higher similarity, the fewer experts. Additionally, to further mitigate the forgetting of old languages, we add a classifier in front of the router network on the layers with higher similarity to guide the routing of old language tokens. Experimental results show that our method outperforms the previous state-of-the-art baseline with 60% fewer experts in the single-expansion setting and with 33.3% fewer experts in the lifelong-expansion setting, demonstrating the effectiveness of our method.",
+      "identifiers": [
+        "SemanticScholar:adad9043d8f7714f428637d3530dd32e03729a27"
+      ],
+      "semantic_scholar_id": "adad9043d8f7714f428637d3530dd32e03729a27",
+      "canonical_id": "arXiv:2505.22582",
+      "arxiv_id": "2505.22582",
+      "doi": "10.48550/arXiv.2505.22582",
+      "authors": [
+        "Xue Zhang",
+        "Yun-Long Liang",
+        "Fan-Dong Meng",
+        "Songming Zhang",
+        "Yu-Feng Chen",
+        "Jin-An Xu",
+        "Jie Zhou"
+      ],
+      "priority": 28,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 28,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 503,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "ETA-VLA: Efficient Token Adaptation via Temporal Fusion and Intra-LLM Sparsification for Vision-Language-Action Models",
+      "source_url": "https://arxiv.org/abs/2603.25766",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of Vision-Language-Action (VLA) models into autonomous driving systems offers a unified framework for interpreting complex scenes and executing control commands. However, the necessity to incorporate historical multi-view frames for accurate temporal reasoning imposes a severe computational burden, primarily driven by the quadratic complexity of self-attention mechanisms in Large Language Models (LLMs). To alleviate this bottleneck, we propose ETA-VLA, an Efficient Token Adaptation framework for VLA models. ETA-VLA processes the past $n$ frames of multi-view images and introduces a novel Intra-LLM Sparse Aggregator (ILSA). Drawing inspiration from human driver attention allocation, ILSA dynamically identifies and prunes redundant visual tokens guided by textual queries and temporal consistency. Specifically, we utilize a text-guided scoring mechanism alongside a diversity-preserving sparsification strategy to select a sparse subset of critical tokens, ensuring comprehensive awareness of the driving scene. Extensive experiments on the NAVSIM v2 demonstrate that ETA-VLA achieves driving performance comparable to state-of-the-art baselines while reducing computational FLOPs by approximately 32\\%. Notably, our method prunes 85% of visual tokens and reduces inference FLOPs by 61\\%, but still retaining 94% of the original accuracy on the NAVSIM v2 benchmark.",
+      "identifiers": [
+        "SemanticScholar:137b25f0643de63e8ce9d8da5f8bb31c93fc228f"
+      ],
+      "semantic_scholar_id": "137b25f0643de63e8ce9d8da5f8bb31c93fc228f",
+      "canonical_id": "arXiv:2603.25766",
+      "arxiv_id": "2603.25766",
+      "doi": "10.48550/arXiv.2603.25766",
+      "authors": [
+        "Yi-Ru Wang",
+        "An-Qing Jiang",
+        "Shuo Wang",
+        "Yuwen Heng",
+        "Zichong Gu",
+        "Hao Sun"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 201,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Elastic Spiking Transformers for Efficient Gesture Understanding",
+      "source_url": "https://arxiv.org/abs/2605.13869",
+      "year": 2026,
+      "published": "2026-05-04",
+      "venue": "IEEE International Conference on Automatic Face & Gesture Recognition",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Spiking Neural Networks (SNNs), and particularly Spiking Transformers, have recently emerged as a promising solution for energy-efficient processing of event-based sensor data in healthcare applications. However, existing architectures are inherently rigid, being trained and deployed as static networks with fixed parameter counts and computational graphs. This rigidity presents a critical bottleneck for deployment on neuromorphic hardware (e.g., Loihi, Spinnaker), where on-chip hardware limitations often force the use of smaller, lower-accuracy models that sacrifice representational capacity and accuracy. To bridge this gap, we introduce the Elastic Spiking Transformer, a novel architecture that embeds runtime adaptability directly into the spiking paradigm. Drawing inspiration from Matryoshka-style representation learning, our framework introduces nested elasticity within the Feature Extractor, Spiking Self-Attention, and Feed-Forward blocks. By training a single “universal” model with granularity-aware weight sharing, we enable dynamic slicing of network width and attention heads during inference without retraining. This elasticity offers a unique dual advantage in the SNN domain. First, it solves the memory-constrained problem by allowing the model to instantly scale its parameter footprint to fit diverse hardware specifications without retraining. Second, and crucially, we show that elasticity in SNNs not only lowers synaptic weight counts but also directly lowers the total spike firing rate. By dynamically reducing the number of active neurons, our approach achieves a proportional reduction in synaptic operations, unavailable to standard artificial neural networks. We validate our approach on standard benchmarks (CIFAR10/100, CIFAR10-DVS) and the novel EHWGesture clinical gesture understanding dataset. Our results demonstrate that a single Elastic Spiking Transformer spans a wide range of complexity trade-offs, matching or surpassing the accuracy of independently trained baselines while enabling adaptive, realtime gesture recognition on resource-constrained edge devices.",
+      "identifiers": [
+        "SemanticScholar:37337a95372c3aa3aa6159f85d297c251a42ca91"
+      ],
+      "semantic_scholar_id": "37337a95372c3aa3aa6159f85d297c251a42ca91",
+      "canonical_id": "arXiv:2605.13869",
+      "arxiv_id": "2605.13869",
+      "doi": "10.1109/FG67764.2026.11556944",
+      "authors": [
+        "A. Ancilotto",
+        "G. Amprimo",
+        "S. Di Carlo",
+        "Elisabetta Farella"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Toward Scalable LLM-Based Multi-Agent Collaboration: A Dynamic Task Graph Approach with Asynchronous Parallel Execution",
+      "source_url": "https://doi.org/10.3390/electronics15112475",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "Electronics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) in collaborative multi-agent settings represents a promising frontier for complex AI problem-solving, yet the field lacks systematic mechanisms to manage the inherent coordination overhead and resource contention that arise at scale. Existing LLM-based Multi-Agent System (MAS) frameworks predominantly adopt sequential or loosely coupled execution models, which fail to exploit the parallelism potential of modern computing environments and limit overall system throughput. To bridge this gap, this paper presents DynTaskMAS, a framework that redefines task orchestration in LLM-based MASs through a dynamic task graph abstraction. Rather than treating tasks as static pipelines, DynTaskMAS continuously models task interdependencies at runtime, enabling opportunistic parallel execution while preserving logical correctness. The architecture integrates four synergistic components: a runtime task decomposition module that captures evolving dependencies among subtasks; a scheduling engine that dispatches ready tasks to available agents without centralized bottlenecks; a context propagation layer that maintains shared semantic state across concurrently executing agents; and a self-tuning workflow controller that adapts execution priorities based on observed system load. Together, these components address a core tension in LLM-based MAS design, balancing agent autonomy with coordinated efficiency. Evaluations across tasks of varying complexity confirm that DynTaskMAS delivers substantial gains in execution efficiency (21.3–33.0% reduction), resource utilization (from 65% to 88%), and agent scalability (3.47× throughput with 16 concurrent agents) compared to sequential baselines. This work offers a generalizable architectural blueprint for next-generation LLM-based Multi-Agent Systems operating under real-world dynamic and resource-constrained conditions.",
+      "identifiers": [
+        "SemanticScholar:7ec6060e98d13b0f99c6c43270843b60bcf17e70"
+      ],
+      "semantic_scholar_id": "7ec6060e98d13b0f99c6c43270843b60bcf17e70",
+      "doi": "10.3390/electronics15112475",
+      "canonical_id": "DOI:10.3390/electronics15112475",
+      "authors": [
+        "Jun-Wei Yu",
+        "Yepeng Ding",
+        "Jiani Dai",
+        "Junjun Zheng",
+        "Jing-Chi Wu",
+        "Hiroyuki Sato"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 131,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Don't Run with Scissors: Pruning Breaks VLA Models but They Can Be Recovered",
+      "source_url": "https://arxiv.org/abs/2510.08464",
+      "year": 2025,
+      "published": "2025-10-09",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) models have advanced robotic capabilities but remain challenging to deploy on resource-limited hardware. Pruning has enabled efficient compression of large language models (LLMs), yet it is largely understudied in robotics. Surprisingly, we observe that pruning VLA models leads to drastic degradation and increased safety violations. We introduce GLUESTICK, a post-pruning recovery method that restores much of the original model's functionality while retaining sparsity benefits. Our method performs a one-time interpolation between the dense and pruned models in weight-space to compute a corrective term. This correction is used during inference by each pruned layer to recover lost capabilities with minimal overhead. GLUESTICK requires no additional training, is agnostic to the pruning algorithm, and introduces a single hyperparameter that controls the tradeoff between efficiency and accuracy. Across diverse VLA architectures and tasks in manipulation and navigation, GLUESTICK achieves competitive memory efficiency while substantially recovering success rates and reducing safety violations. Additional material can be found at: https://gluestick-vla.github.io/.",
+      "identifiers": [
+        "SemanticScholar:26af14e8b743c4ed534cf72b3e60ade1cd4d9562"
+      ],
+      "semantic_scholar_id": "26af14e8b743c4ed534cf72b3e60ade1cd4d9562",
+      "canonical_id": "arXiv:2510.08464",
+      "arxiv_id": "2510.08464",
+      "doi": "10.48550/arXiv.2510.08464",
+      "authors": [
+        "Jason Jabbour",
+        "Dong-Ki Kim",
+        "M. Smith",
+        "Jay Patrikar",
+        "Radhika Ghosal",
+        "You-Hui Wang",
+        "Ali Agha",
+        "V. Reddi",
+        "Shayegan Omidshafiei"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 369,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MSP: An FPGA-Specific Mixed-Scheme, Multi-Precision Deep Neural Network Quantization Framework",
+      "source_url": "https://arxiv.org/abs/2009.07460",
+      "year": 2020,
+      "published": "2020-09-16",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the tremendous success of deep learning, there exists imminent need to deploy deep learning models onto edge devices. To tackle the limited computing and storage resources in edge devices, model compression techniques have been widely used to trim deep neural network (DNN) models for on-device inference execution. This paper targets the commonly used FPGA (field programmable gate array) devices as the hardware platforms for DNN edge computing. We focus on the DNN quantization as the main model compression technique, since DNN quantization has been of great importance for the implementations of DNN models on the hardware platforms. The novelty of this work comes in twofold: (i) We propose a mixed-scheme DNN quantization method that incorporates both the linear and non-linear number systems for quantization, with the aim to boost the utilization of the heterogeneous computing resources, i.e., LUTs (look up tables) and DSPs (digital signal processors) on an FPGA. Note that all the existing (single-scheme) quantization methods can only utilize one type of resources (either LUTs or DSPs for the MAC (multiply-accumulate) operations in deep learning computations. (ii) We use a quantization method that supports multiple precisions along the intra-layer dimension, while the existing quantization methods apply multi-precision quantization along the inter-layer dimension. The intra-layer multi-precision method can uniform the hardware configurations for different layers to reduce computation overhead and at the same time preserve the model accuracy as the inter-layer approach.",
+      "identifiers": [
+        "SemanticScholar:1ee22a48dd027b721a768da053c61ac115859080"
+      ],
+      "semantic_scholar_id": "1ee22a48dd027b721a768da053c61ac115859080",
+      "canonical_id": "arXiv:2009.07460",
+      "arxiv_id": "2009.07460",
+      "authors": [
+        "Sung-En Chang",
+        "Yan-Yu Li",
+        "Meng-Shu Sun",
+        "Weiwen Jiang",
+        "Runbin Shi",
+        "Xue Lin",
+        "Yan-Zhi Wang"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2218,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Achieving Real-Time Execution of Transformer-based Large-scale Models on Mobile with Compiler-aware Neural Architecture Optimization",
+      "source_url": "https://arxiv.org/abs/2009.06823",
+      "year": 2020,
+      "published": "2020-09-15",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained large-scale language models have increasingly demonstrated high accuracy on many natural language processing (NLP) tasks. However, the limited weight storage and computational speed on hardware platforms have impeded the popularity of pre-trained models, especially in the era of edge computing. In this paper, we seek to find the best model structure of BERT for a given computation size to match specific devices. We propose the first compiler-aware neural architecture optimization framework (called CANAO). CANAO can guarantee the identified model to meet both resource and real-time specifications of mobile devices, thus achieving real-time execution of large transformer-based models like BERT variants. We evaluate our model on several NLP tasks, achieving competitive results on well-known benchmarks with lower latency on mobile devices. Specifically, our model is 5.2x faster on CPU and 4.1x faster on GPU with 0.5-2% accuracy loss compared with BERT-base. Our overall framework achieves up to 7.8x speedup compared with TensorFlow-Lite with only minor accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:87de9e70d518560977188a8a3369374426ecebbc"
+      ],
+      "semantic_scholar_id": "87de9e70d518560977188a8a3369374426ecebbc",
+      "canonical_id": "arXiv:2009.06823",
+      "arxiv_id": "2009.06823",
+      "authors": [
+        "Wei Niu",
+        "Zhenglun Kong",
+        "Geng Yuan",
+        "Weiwen Jiang",
+        "Jiexiong Guan",
+        "Caiwen Ding",
+        "Pu Zhao",
+        "Si-Jia Liu",
+        "Bin Ren",
+        "Yan-Zhi Wang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2219,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LLM Enabled Multi-Agent System for 6G Networks: Framework and Method of Dual-Loop Edge-Terminal Collaboration",
+      "source_url": "https://arxiv.org/abs/2509.04993",
+      "year": 2025,
+      "published": "2025-09-05",
+      "venue": "IEEE Communications Magazine",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The ubiquitous computing resources in 6G networks provide ideal environments for the fusion of large language models (LLMs) and intelligent services through the agent framework. With auxiliary modules and planning cores, LLM-enabled agents can autonomously plan and take actions to deal with diverse environment semantics and user intentions. However, the limited resources of individual network devices significantly hinder the efficient operation of LLM-enabled agents with complex tool calls, highlighting the urgent need for efficient multi-level device collaborations. To this end, the framework and method of the LLM-enabled multi-agent system with dual-loop terminal-edge collaborations are proposed in 6G networks. Firstly, the outer loop consists of the iterative collaborations between the global agent and multiple sub-agents deployed on edge servers and terminals, where the planning capability is enhanced through task decomposition and parallel sub-task distribution. Secondly, the inner loop utilizes sub-agents with dedicated roles to circularly reason, execute, and replan the sub-task, and the parallel tool calling generation with offloading strategies is incorporated to improve efficiency. The improved task planning capability and task execution efficiency are validated through the conducted case study in 6G-supported urban safety governance. Finally, the open challenges and future directions are thoroughly analyzed in 6G networks, accelerating the advent of the 6G era.",
+      "identifiers": [
+        "SemanticScholar:f0bebf7114dd4c39b69e8f35c3e391ebc2ab57b9"
+      ],
+      "semantic_scholar_id": "f0bebf7114dd4c39b69e8f35c3e391ebc2ab57b9",
+      "canonical_id": "arXiv:2509.04993",
+      "arxiv_id": "2509.04993",
+      "doi": "10.1109/MCOM.001.2500148",
+      "authors": [
+        "Zheyan Qu",
+        "Wenbo Wang",
+        "Zitong Yu",
+        "Boquan Sun",
+        "Yang Li",
+        "Xing Zhang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 403,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Performance Evaluation of a Quantized Large Language Model on Various Smartphones",
+      "source_url": "https://arxiv.org/abs/2312.12472",
+      "year": 2023,
+      "published": "2023-12-19",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper explores the feasibility and performance of on-device large language model (LLM) inference on various Apple iPhone models. Amidst the rapid evolution of generative AI, on-device LLMs offer solutions to privacy, security, and connectivity challenges inherent in cloud-based models. Leveraging existing literature on running multi-billion parameter LLMs on resource-limited devices, our study examines the thermal effects and interaction speeds of a high-performing LLM across different smartphone generations. We present real-world performance results, providing insights into on-device inference capabilities.",
+      "identifiers": [
+        "SemanticScholar:01944be9dc13f74befe55e39a971e6191d677afa"
+      ],
+      "semantic_scholar_id": "01944be9dc13f74befe55e39a971e6191d677afa",
+      "canonical_id": "arXiv:2312.12472",
+      "arxiv_id": "2312.12472",
+      "doi": "10.48550/arXiv.2312.12472",
+      "authors": [
+        "Tolga Çöplü",
+        "Marc Loedi",
+        "Arto Bendiken",
+        "Mykhailo Makohin",
+        "Joshua J. Bouw",
+        "Stephen Cobb"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1029,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Deep Dive into Task-Based Parallelism in Python",
+      "source_url": "https://doi.org/10.1109/IPDPSW63119.2024.00187",
+      "year": 2024,
+      "published": "2024-05-27",
+      "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern Python programs in high-performance computing call into compiled libraries and kernels for performance-critical tasks. However, effectively parallelizing these finer-grained, and often dynamic, kernels across modern heterogeneous platforms remains a challenge. First, we perform an experimental study to examine the impact of Python's Global Interpreter Lock (GIL), and potential speedups under a GIL-less PEP703 future, to guide runtime design. Using our optimized runtime, we explore scheduling tasks with constraints that require resources across multiple, potentially diverse, devices through the introduction of new programming abstractions and runtime mechanisms. We extend an existing Python tasking library, Parla, to augment its performance and add support for such multi-device tasks. Our experimental analysis, using tasks graphs from synthetic and real applications, shows at least a 3 ×(and up to 6 ×) performance improvement over its predecessor in scenarios with high GIL contention. When scheduling multi-GPU tasks, we observe an 8x reduction in per-task launching overhead compared to a multi-process system.",
+      "identifiers": [
+        "SemanticScholar:56e1b5dce8c1d52da0e1c35d5f9f379d5729d92d"
+      ],
+      "semantic_scholar_id": "56e1b5dce8c1d52da0e1c35d5f9f379d5729d92d",
+      "doi": "10.1109/IPDPSW63119.2024.00187",
+      "canonical_id": "DOI:10.1109/IPDPSW63119.2024.00187",
+      "authors": [
+        "William Ruys",
+        "Hochan Lee",
+        "Bozhi You",
+        "Shreya Talati",
+        "Jaeyoung Park",
+        "James Almgren-Bell",
+        "Yineng Yan",
+        "Milinda Fernando",
+        "G. Biros",
+        "M. Erez",
+        "Martin Burtscher",
+        "Christopher J. Rossbach",
+        "K. Pingali",
+        "Milos Gligoric"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 869,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BrickDL: Graph-Level Optimizations for DNNs with Fine-Grained Data Blocking on GPUs",
+      "source_url": "https://doi.org/10.1145/3673038.3673046",
+      "year": 2024,
+      "published": "2024-08-12",
+      "venue": "International Conference on Parallel Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The end-to-end performance of deep learning model inference is often limited by excess data movement on GPUs. To reduce data movement, existing deep learning frameworks apply graph-level optimizations such as operator fusion to exploit data reuse across operators in deep learning graphs. Such optimizations are limited and cannot optimize arbitrary chains of compute- and time-intensive operations, including convolutions. To address these limitations, this paper presents BrickDL, a deep learning inference library that implements merged execution of a sequence of layers as an orthogonal approach to existing graph-level optimizations. BrickDL additionally employs fine-grain blocking using a brick data layout that further optimizes data locality on GPUs. We implement merged execution with the abstraction of bricks using two approaches – padded bricks and memoized bricks, and develop a performance model to choose between them using static analysis. Merged execution with bricks demonstrates performance gains on well-known deep learning models as compared to PyTorch JIT, TensorFlow XLA, and cuDNN baselines on NVIDIA A100 GPU. We also characterize the performance of the proposed optimizations with microbenchmarks and gain insights into their applicability and tradeoffs.",
+      "identifiers": [
+        "SemanticScholar:125611379bc7fd03ebdeea69e97ef95cde5ecead"
+      ],
+      "semantic_scholar_id": "125611379bc7fd03ebdeea69e97ef95cde5ecead",
+      "doi": "10.1145/3673038.3673046",
+      "canonical_id": "DOI:10.1145/3673038.3673046",
+      "authors": [
+        "Mahesh Lakshminarasimhan",
+        "Mary Hall",
+        "Samuel Williams",
+        "O. Antepara"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 792,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ShareDAB-DETR: Memory-Efficient Object Detection through CentralBank Parameter Sharing",
+      "source_url": "https://doi.org/10.5220/0014452400004084",
+      "year": 2026,
+      "published": null,
+      "venue": "International Conference on Computer Vision Theory and Applications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ": Transformer-based object detectors achieve state-of-the-art accuracy but require substantial memory, making deployment on edge devices impractical. We introduce CentralBank, a novel parameter sharing mechanism that consolidates all transformer projection weights into a single memory-efficient table accessed through deterministic offset mapping. Applied to DAB-DETR, our approach achieves up to 84% reduction in trans-former parameters (19.67M to 3.21M) and 67% reduction in training memory while retaining 99% of baseline accuracy (41.8 vs 42.2 AP on COCO). Unlike traditional compression methods, CentralBank is integrated at the architectural level, requiring no post-training optimization. Our best configuration achieves 41.8 AP with only 8.65M transformer parameters and 2.5 GB training memory, enabling practical deployment on edge devices. Extensive evaluation across five configurations reveals that larger hidden dimensions (512 vs 256) provide superior parameter efficiency, achieving an 11.2:1 parameter-to-FLOP reduction ratio. ShareDAB-DETR demonstrates that architectural parameter sharing can effectively bridge the gap between transformer performance and edge deployment constraints.",
+      "identifiers": [
+        "SemanticScholar:effd18a88fd4b4a64671ebf4ba8595955225ee0f"
+      ],
+      "semantic_scholar_id": "effd18a88fd4b4a64671ebf4ba8595955225ee0f",
+      "doi": "10.5220/0014452400004084",
+      "canonical_id": "DOI:10.5220/0014452400004084",
+      "authors": [
+        "Khaled Chikh",
+        "Roberto Cavicchioli",
+        "Alessandro Capotondi"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2505.22582",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.22582",
+        "id:SemanticScholar:adad9043d8f7714f428637d3530dd32e03729a27",
+        "id:arXiv:2505.22582",
+        "title:less but better efficient multilingual expansion for llms via layerwise mixtureofexperts",
+        "url:https://arxiv.org/abs/2505.22582"
+      ],
+      "record": {
+        "title": "Less, but Better: Efficient Multilingual Expansion for LLMs via Layer-wise Mixture-of-Experts",
+        "source_url": "https://arxiv.org/abs/2505.22582",
+        "year": 2025,
+        "published": "2025-05-28",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 18,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Continually expanding new languages for existing large language models (LLMs) is a promising yet challenging approach to building powerful multilingual LLMs. The biggest challenge is to make the model continuously learn new languages while preserving the proficient ability of old languages. To achieve this, recent work utilizes the Mixture-of-Experts (MoE) architecture to expand new languages by adding new experts and avoid catastrophic forgetting of old languages by routing corresponding tokens to the original model backbone (old experts). Although intuitive, this kind of method is parameter-costly when expanding new languages and still inevitably impacts the performance of old languages. To address these limitations, we analyze the language characteristics of different layers in LLMs and propose a layer-wise expert allocation algorithm (LayerMoE) to determine the appropriate number of new experts for each layer. Specifically, we find different layers in LLMs exhibit different representation similarities between languages and then utilize the similarity as the indicator to allocate experts for each layer, i.e., the higher similarity, the fewer experts. Additionally, to further mitigate the forgetting of old languages, we add a classifier in front of the router network on the layers with higher similarity to guide the routing of old language tokens. Experimental results show that our method outperforms the previous state-of-the-art baseline with 60% fewer experts in the single-expansion setting and with 33.3% fewer experts in the lifelong-expansion setting, demonstrating the effectiveness of our method.",
+        "identifiers": [
+          "SemanticScholar:adad9043d8f7714f428637d3530dd32e03729a27"
+        ],
+        "semantic_scholar_id": "adad9043d8f7714f428637d3530dd32e03729a27",
+        "canonical_id": "arXiv:2505.22582",
+        "arxiv_id": "2505.22582",
+        "doi": "10.48550/arXiv.2505.22582",
+        "authors": [
+          "Xue Zhang",
+          "Yun-Long Liang",
+          "Fan-Dong Meng",
+          "Songming Zhang",
+          "Yu-Feng Chen",
+          "Jin-An Xu",
+          "Jie Zhou"
+        ],
+        "priority": 28,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 18,
+          "citation_count": 18,
+          "total": 28,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 503,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.25766",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.25766",
+        "id:SemanticScholar:137b25f0643de63e8ce9d8da5f8bb31c93fc228f",
+        "id:arXiv:2603.25766",
+        "title:etavla efficient token adaptation via temporal fusion and intrallm sparsification for visionlanguageaction models",
+        "url:https://arxiv.org/abs/2603.25766"
+      ],
+      "record": {
+        "title": "ETA-VLA: Efficient Token Adaptation via Temporal Fusion and Intra-LLM Sparsification for Vision-Language-Action Models",
+        "source_url": "https://arxiv.org/abs/2603.25766",
+        "year": 2026,
+        "published": "2026-03-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The integration of Vision-Language-Action (VLA) models into autonomous driving systems offers a unified framework for interpreting complex scenes and executing control commands. However, the necessity to incorporate historical multi-view frames for accurate temporal reasoning imposes a severe computational burden, primarily driven by the quadratic complexity of self-attention mechanisms in Large Language Models (LLMs). To alleviate this bottleneck, we propose ETA-VLA, an Efficient Token Adaptation framework for VLA models. ETA-VLA processes the past $n$ frames of multi-view images and introduces a novel Intra-LLM Sparse Aggregator (ILSA). Drawing inspiration from human driver attention allocation, ILSA dynamically identifies and prunes redundant visual tokens guided by textual queries and temporal consistency. Specifically, we utilize a text-guided scoring mechanism alongside a diversity-preserving sparsification strategy to select a sparse subset of critical tokens, ensuring comprehensive awareness of the driving scene. Extensive experiments on the NAVSIM v2 demonstrate that ETA-VLA achieves driving performance comparable to state-of-the-art baselines while reducing computational FLOPs by approximately 32\\%. Notably, our method prunes 85% of visual tokens and reduces inference FLOPs by 61\\%, but still retaining 94% of the original accuracy on the NAVSIM v2 benchmark.",
+        "identifiers": [
+          "SemanticScholar:137b25f0643de63e8ce9d8da5f8bb31c93fc228f"
+        ],
+        "semantic_scholar_id": "137b25f0643de63e8ce9d8da5f8bb31c93fc228f",
+        "canonical_id": "arXiv:2603.25766",
+        "arxiv_id": "2603.25766",
+        "doi": "10.48550/arXiv.2603.25766",
+        "authors": [
+          "Yi-Ru Wang",
+          "An-Qing Jiang",
+          "Shuo Wang",
+          "Yuwen Heng",
+          "Zichong Gu",
+          "Hao Sun"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 201,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.13869",
+      "identity_tokens": [
+        "id:DOI:10.1109/fg67764.2026.11556944",
+        "id:SemanticScholar:37337a95372c3aa3aa6159f85d297c251a42ca91",
+        "id:arXiv:2605.13869",
+        "title:elastic spiking transformers for efficient gesture understanding",
+        "url:https://arxiv.org/abs/2605.13869"
+      ],
+      "record": {
+        "title": "Elastic Spiking Transformers for Efficient Gesture Understanding",
+        "source_url": "https://arxiv.org/abs/2605.13869",
+        "year": 2026,
+        "published": "2026-05-04",
+        "venue": "IEEE International Conference on Automatic Face & Gesture Recognition",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Spiking Neural Networks (SNNs), and particularly Spiking Transformers, have recently emerged as a promising solution for energy-efficient processing of event-based sensor data in healthcare applications. However, existing architectures are inherently rigid, being trained and deployed as static networks with fixed parameter counts and computational graphs. This rigidity presents a critical bottleneck for deployment on neuromorphic hardware (e.g., Loihi, Spinnaker), where on-chip hardware limitations often force the use of smaller, lower-accuracy models that sacrifice representational capacity and accuracy. To bridge this gap, we introduce the Elastic Spiking Transformer, a novel architecture that embeds runtime adaptability directly into the spiking paradigm. Drawing inspiration from Matryoshka-style representation learning, our framework introduces nested elasticity within the Feature Extractor, Spiking Self-Attention, and Feed-Forward blocks. By training a single “universal” model with granularity-aware weight sharing, we enable dynamic slicing of network width and attention heads during inference without retraining. This elasticity offers a unique dual advantage in the SNN domain. First, it solves the memory-constrained problem by allowing the model to instantly scale its parameter footprint to fit diverse hardware specifications without retraining. Second, and crucially, we show that elasticity in SNNs not only lowers synaptic weight counts but also directly lowers the total spike firing rate. By dynamically reducing the number of active neurons, our approach achieves a proportional reduction in synaptic operations, unavailable to standard artificial neural networks. We validate our approach on standard benchmarks (CIFAR10/100, CIFAR10-DVS) and the novel EHWGesture clinical gesture understanding dataset. Our results demonstrate that a single Elastic Spiking Transformer spans a wide range of complexity trade-offs, matching or surpassing the accuracy of independently trained baselines while enabling adaptive, realtime gesture recognition on resource-constrained edge devices.",
+        "identifiers": [
+          "SemanticScholar:37337a95372c3aa3aa6159f85d297c251a42ca91"
+        ],
+        "semantic_scholar_id": "37337a95372c3aa3aa6159f85d297c251a42ca91",
+        "canonical_id": "arXiv:2605.13869",
+        "arxiv_id": "2605.13869",
+        "doi": "10.1109/FG67764.2026.11556944",
+        "authors": [
+          "A. Ancilotto",
+          "G. Amprimo",
+          "S. Di Carlo",
+          "Elisabetta Farella"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 162,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/electronics15112475",
+      "identity_tokens": [
+        "id:DOI:10.3390/electronics15112475",
+        "id:SemanticScholar:7ec6060e98d13b0f99c6c43270843b60bcf17e70",
+        "title:toward scalable llmbased multiagent collaboration a dynamic task graph approach with asynchronous parallel execution",
+        "url:https://doi.org/10.3390/electronics15112475"
+      ],
+      "record": {
+        "title": "Toward Scalable LLM-Based Multi-Agent Collaboration: A Dynamic Task Graph Approach with Asynchronous Parallel Execution",
+        "source_url": "https://doi.org/10.3390/electronics15112475",
+        "year": 2026,
+        "published": "2026-06-04",
+        "venue": "Electronics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying Large Language Models (LLMs) in collaborative multi-agent settings represents a promising frontier for complex AI problem-solving, yet the field lacks systematic mechanisms to manage the inherent coordination overhead and resource contention that arise at scale. Existing LLM-based Multi-Agent System (MAS) frameworks predominantly adopt sequential or loosely coupled execution models, which fail to exploit the parallelism potential of modern computing environments and limit overall system throughput. To bridge this gap, this paper presents DynTaskMAS, a framework that redefines task orchestration in LLM-based MASs through a dynamic task graph abstraction. Rather than treating tasks as static pipelines, DynTaskMAS continuously models task interdependencies at runtime, enabling opportunistic parallel execution while preserving logical correctness. The architecture integrates four synergistic components: a runtime task decomposition module that captures evolving dependencies among subtasks; a scheduling engine that dispatches ready tasks to available agents without centralized bottlenecks; a context propagation layer that maintains shared semantic state across concurrently executing agents; and a self-tuning workflow controller that adapts execution priorities based on observed system load. Together, these components address a core tension in LLM-based MAS design, balancing agent autonomy with coordinated efficiency. Evaluations across tasks of varying complexity confirm that DynTaskMAS delivers substantial gains in execution efficiency (21.3–33.0% reduction), resource utilization (from 65% to 88%), and agent scalability (3.47× throughput with 16 concurrent agents) compared to sequential baselines. This work offers a generalizable architectural blueprint for next-generation LLM-based Multi-Agent Systems operating under real-world dynamic and resource-constrained conditions.",
+        "identifiers": [
+          "SemanticScholar:7ec6060e98d13b0f99c6c43270843b60bcf17e70"
+        ],
+        "semantic_scholar_id": "7ec6060e98d13b0f99c6c43270843b60bcf17e70",
+        "doi": "10.3390/electronics15112475",
+        "canonical_id": "DOI:10.3390/electronics15112475",
+        "authors": [
+          "Jun-Wei Yu",
+          "Yepeng Ding",
+          "Jiani Dai",
+          "Junjun Zheng",
+          "Jing-Chi Wu",
+          "Hiroyuki Sato"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 131,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.08464",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.08464",
+        "id:SemanticScholar:26af14e8b743c4ed534cf72b3e60ade1cd4d9562",
+        "id:arXiv:2510.08464",
+        "title:dont run with scissors pruning breaks vla models but they can be recovered",
+        "url:https://arxiv.org/abs/2510.08464"
+      ],
+      "record": {
+        "title": "Don't Run with Scissors: Pruning Breaks VLA Models but They Can Be Recovered",
+        "source_url": "https://arxiv.org/abs/2510.08464",
+        "year": 2025,
+        "published": "2025-10-09",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language-Action (VLA) models have advanced robotic capabilities but remain challenging to deploy on resource-limited hardware. Pruning has enabled efficient compression of large language models (LLMs), yet it is largely understudied in robotics. Surprisingly, we observe that pruning VLA models leads to drastic degradation and increased safety violations. We introduce GLUESTICK, a post-pruning recovery method that restores much of the original model's functionality while retaining sparsity benefits. Our method performs a one-time interpolation between the dense and pruned models in weight-space to compute a corrective term. This correction is used during inference by each pruned layer to recover lost capabilities with minimal overhead. GLUESTICK requires no additional training, is agnostic to the pruning algorithm, and introduces a single hyperparameter that controls the tradeoff between efficiency and accuracy. Across diverse VLA architectures and tasks in manipulation and navigation, GLUESTICK achieves competitive memory efficiency while substantially recovering success rates and reducing safety violations. Additional material can be found at: https://gluestick-vla.github.io/.",
+        "identifiers": [
+          "SemanticScholar:26af14e8b743c4ed534cf72b3e60ade1cd4d9562"
+        ],
+        "semantic_scholar_id": "26af14e8b743c4ed534cf72b3e60ade1cd4d9562",
+        "canonical_id": "arXiv:2510.08464",
+        "arxiv_id": "2510.08464",
+        "doi": "10.48550/arXiv.2510.08464",
+        "authors": [
+          "Jason Jabbour",
+          "Dong-Ki Kim",
+          "M. Smith",
+          "Jay Patrikar",
+          "Radhika Ghosal",
+          "You-Hui Wang",
+          "Ali Agha",
+          "V. Reddi",
+          "Shayegan Omidshafiei"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 369,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2009.07460",
+      "identity_tokens": [
+        "id:SemanticScholar:1ee22a48dd027b721a768da053c61ac115859080",
+        "id:arXiv:2009.07460",
+        "title:msp an fpgaspecific mixedscheme multiprecision deep neural network quantization framework",
+        "url:https://arxiv.org/abs/2009.07460"
+      ],
+      "record": {
+        "title": "MSP: An FPGA-Specific Mixed-Scheme, Multi-Precision Deep Neural Network Quantization Framework",
+        "source_url": "https://arxiv.org/abs/2009.07460",
+        "year": 2020,
+        "published": "2020-09-16",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the tremendous success of deep learning, there exists imminent need to deploy deep learning models onto edge devices. To tackle the limited computing and storage resources in edge devices, model compression techniques have been widely used to trim deep neural network (DNN) models for on-device inference execution. This paper targets the commonly used FPGA (field programmable gate array) devices as the hardware platforms for DNN edge computing. We focus on the DNN quantization as the main model compression technique, since DNN quantization has been of great importance for the implementations of DNN models on the hardware platforms. The novelty of this work comes in twofold: (i) We propose a mixed-scheme DNN quantization method that incorporates both the linear and non-linear number systems for quantization, with the aim to boost the utilization of the heterogeneous computing resources, i.e., LUTs (look up tables) and DSPs (digital signal processors) on an FPGA. Note that all the existing (single-scheme) quantization methods can only utilize one type of resources (either LUTs or DSPs for the MAC (multiply-accumulate) operations in deep learning computations. (ii) We use a quantization method that supports multiple precisions along the intra-layer dimension, while the existing quantization methods apply multi-precision quantization along the inter-layer dimension. The intra-layer multi-precision method can uniform the hardware configurations for different layers to reduce computation overhead and at the same time preserve the model accuracy as the inter-layer approach.",
+        "identifiers": [
+          "SemanticScholar:1ee22a48dd027b721a768da053c61ac115859080"
+        ],
+        "semantic_scholar_id": "1ee22a48dd027b721a768da053c61ac115859080",
+        "canonical_id": "arXiv:2009.07460",
+        "arxiv_id": "2009.07460",
+        "authors": [
+          "Sung-En Chang",
+          "Yan-Yu Li",
+          "Meng-Shu Sun",
+          "Weiwen Jiang",
+          "Runbin Shi",
+          "Xue Lin",
+          "Yan-Zhi Wang"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2218,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2009.06823",
+      "identity_tokens": [
+        "id:SemanticScholar:87de9e70d518560977188a8a3369374426ecebbc",
+        "id:arXiv:2009.06823",
+        "title:achieving realtime execution of transformerbased largescale models on mobile with compileraware neural architecture optimization",
+        "url:https://arxiv.org/abs/2009.06823"
+      ],
+      "record": {
+        "title": "Achieving Real-Time Execution of Transformer-based Large-scale Models on Mobile with Compiler-aware Neural Architecture Optimization",
+        "source_url": "https://arxiv.org/abs/2009.06823",
+        "year": 2020,
+        "published": "2020-09-15",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pre-trained large-scale language models have increasingly demonstrated high accuracy on many natural language processing (NLP) tasks. However, the limited weight storage and computational speed on hardware platforms have impeded the popularity of pre-trained models, especially in the era of edge computing. In this paper, we seek to find the best model structure of BERT for a given computation size to match specific devices. We propose the first compiler-aware neural architecture optimization framework (called CANAO). CANAO can guarantee the identified model to meet both resource and real-time specifications of mobile devices, thus achieving real-time execution of large transformer-based models like BERT variants. We evaluate our model on several NLP tasks, achieving competitive results on well-known benchmarks with lower latency on mobile devices. Specifically, our model is 5.2x faster on CPU and 4.1x faster on GPU with 0.5-2% accuracy loss compared with BERT-base. Our overall framework achieves up to 7.8x speedup compared with TensorFlow-Lite with only minor accuracy loss.",
+        "identifiers": [
+          "SemanticScholar:87de9e70d518560977188a8a3369374426ecebbc"
+        ],
+        "semantic_scholar_id": "87de9e70d518560977188a8a3369374426ecebbc",
+        "canonical_id": "arXiv:2009.06823",
+        "arxiv_id": "2009.06823",
+        "authors": [
+          "Wei Niu",
+          "Zhenglun Kong",
+          "Geng Yuan",
+          "Weiwen Jiang",
+          "Jiexiong Guan",
+          "Caiwen Ding",
+          "Pu Zhao",
+          "Si-Jia Liu",
+          "Bin Ren",
+          "Yan-Zhi Wang"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2219,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.04993",
+      "identity_tokens": [
+        "id:DOI:10.1109/mcom.001.2500148",
+        "id:SemanticScholar:f0bebf7114dd4c39b69e8f35c3e391ebc2ab57b9",
+        "id:arXiv:2509.04993",
+        "title:llm enabled multiagent system for 6g networks framework and method of dualloop edgeterminal collaboration",
+        "url:https://arxiv.org/abs/2509.04993"
+      ],
+      "record": {
+        "title": "LLM Enabled Multi-Agent System for 6G Networks: Framework and Method of Dual-Loop Edge-Terminal Collaboration",
+        "source_url": "https://arxiv.org/abs/2509.04993",
+        "year": 2025,
+        "published": "2025-09-05",
+        "venue": "IEEE Communications Magazine",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The ubiquitous computing resources in 6G networks provide ideal environments for the fusion of large language models (LLMs) and intelligent services through the agent framework. With auxiliary modules and planning cores, LLM-enabled agents can autonomously plan and take actions to deal with diverse environment semantics and user intentions. However, the limited resources of individual network devices significantly hinder the efficient operation of LLM-enabled agents with complex tool calls, highlighting the urgent need for efficient multi-level device collaborations. To this end, the framework and method of the LLM-enabled multi-agent system with dual-loop terminal-edge collaborations are proposed in 6G networks. Firstly, the outer loop consists of the iterative collaborations between the global agent and multiple sub-agents deployed on edge servers and terminals, where the planning capability is enhanced through task decomposition and parallel sub-task distribution. Secondly, the inner loop utilizes sub-agents with dedicated roles to circularly reason, execute, and replan the sub-task, and the parallel tool calling generation with offloading strategies is incorporated to improve efficiency. The improved task planning capability and task execution efficiency are validated through the conducted case study in 6G-supported urban safety governance. Finally, the open challenges and future directions are thoroughly analyzed in 6G networks, accelerating the advent of the 6G era.",
+        "identifiers": [
+          "SemanticScholar:f0bebf7114dd4c39b69e8f35c3e391ebc2ab57b9"
+        ],
+        "semantic_scholar_id": "f0bebf7114dd4c39b69e8f35c3e391ebc2ab57b9",
+        "canonical_id": "arXiv:2509.04993",
+        "arxiv_id": "2509.04993",
+        "doi": "10.1109/MCOM.001.2500148",
+        "authors": [
+          "Zheyan Qu",
+          "Wenbo Wang",
+          "Zitong Yu",
+          "Boquan Sun",
+          "Yang Li",
+          "Xing Zhang"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 403,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2312.12472",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2312.12472",
+        "id:SemanticScholar:01944be9dc13f74befe55e39a971e6191d677afa",
+        "id:arXiv:2312.12472",
+        "title:a performance evaluation of a quantized large language model on various smartphones",
+        "url:https://arxiv.org/abs/2312.12472"
+      ],
+      "record": {
+        "title": "A Performance Evaluation of a Quantized Large Language Model on Various Smartphones",
+        "source_url": "https://arxiv.org/abs/2312.12472",
+        "year": 2023,
+        "published": "2023-12-19",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper explores the feasibility and performance of on-device large language model (LLM) inference on various Apple iPhone models. Amidst the rapid evolution of generative AI, on-device LLMs offer solutions to privacy, security, and connectivity challenges inherent in cloud-based models. Leveraging existing literature on running multi-billion parameter LLMs on resource-limited devices, our study examines the thermal effects and interaction speeds of a high-performing LLM across different smartphone generations. We present real-world performance results, providing insights into on-device inference capabilities.",
+        "identifiers": [
+          "SemanticScholar:01944be9dc13f74befe55e39a971e6191d677afa"
+        ],
+        "semantic_scholar_id": "01944be9dc13f74befe55e39a971e6191d677afa",
+        "canonical_id": "arXiv:2312.12472",
+        "arxiv_id": "2312.12472",
+        "doi": "10.48550/arXiv.2312.12472",
+        "authors": [
+          "Tolga Çöplü",
+          "Marc Loedi",
+          "Arto Bendiken",
+          "Mykhailo Makohin",
+          "Joshua J. Bouw",
+          "Stephen Cobb"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1029,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ipdpsw63119.2024.00187",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdpsw63119.2024.00187",
+        "id:SemanticScholar:56e1b5dce8c1d52da0e1c35d5f9f379d5729d92d",
+        "title:a deep dive into taskbased parallelism in python",
+        "url:https://doi.org/10.1109/IPDPSW63119.2024.00187"
+      ],
+      "record": {
+        "title": "A Deep Dive into Task-Based Parallelism in Python",
+        "source_url": "https://doi.org/10.1109/IPDPSW63119.2024.00187",
+        "year": 2024,
+        "published": "2024-05-27",
+        "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern Python programs in high-performance computing call into compiled libraries and kernels for performance-critical tasks. However, effectively parallelizing these finer-grained, and often dynamic, kernels across modern heterogeneous platforms remains a challenge. First, we perform an experimental study to examine the impact of Python's Global Interpreter Lock (GIL), and potential speedups under a GIL-less PEP703 future, to guide runtime design. Using our optimized runtime, we explore scheduling tasks with constraints that require resources across multiple, potentially diverse, devices through the introduction of new programming abstractions and runtime mechanisms. We extend an existing Python tasking library, Parla, to augment its performance and add support for such multi-device tasks. Our experimental analysis, using tasks graphs from synthetic and real applications, shows at least a 3 ×(and up to 6 ×) performance improvement over its predecessor in scenarios with high GIL contention. When scheduling multi-GPU tasks, we observe an 8x reduction in per-task launching overhead compared to a multi-process system.",
+        "identifiers": [
+          "SemanticScholar:56e1b5dce8c1d52da0e1c35d5f9f379d5729d92d"
+        ],
+        "semantic_scholar_id": "56e1b5dce8c1d52da0e1c35d5f9f379d5729d92d",
+        "doi": "10.1109/IPDPSW63119.2024.00187",
+        "canonical_id": "DOI:10.1109/IPDPSW63119.2024.00187",
+        "authors": [
+          "William Ruys",
+          "Hochan Lee",
+          "Bozhi You",
+          "Shreya Talati",
+          "Jaeyoung Park",
+          "James Almgren-Bell",
+          "Yineng Yan",
+          "Milinda Fernando",
+          "G. Biros",
+          "M. Erez",
+          "Martin Burtscher",
+          "Christopher J. Rossbach",
+          "K. Pingali",
+          "Milos Gligoric"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 869,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3673038.3673046",
+      "identity_tokens": [
+        "id:DOI:10.1145/3673038.3673046",
+        "id:SemanticScholar:125611379bc7fd03ebdeea69e97ef95cde5ecead",
+        "title:brickdl graphlevel optimizations for dnns with finegrained data blocking on gpus",
+        "url:https://doi.org/10.1145/3673038.3673046"
+      ],
+      "record": {
+        "title": "BrickDL: Graph-Level Optimizations for DNNs with Fine-Grained Data Blocking on GPUs",
+        "source_url": "https://doi.org/10.1145/3673038.3673046",
+        "year": 2024,
+        "published": "2024-08-12",
+        "venue": "International Conference on Parallel Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The end-to-end performance of deep learning model inference is often limited by excess data movement on GPUs. To reduce data movement, existing deep learning frameworks apply graph-level optimizations such as operator fusion to exploit data reuse across operators in deep learning graphs. Such optimizations are limited and cannot optimize arbitrary chains of compute- and time-intensive operations, including convolutions. To address these limitations, this paper presents BrickDL, a deep learning inference library that implements merged execution of a sequence of layers as an orthogonal approach to existing graph-level optimizations. BrickDL additionally employs fine-grain blocking using a brick data layout that further optimizes data locality on GPUs. We implement merged execution with the abstraction of bricks using two approaches – padded bricks and memoized bricks, and develop a performance model to choose between them using static analysis. Merged execution with bricks demonstrates performance gains on well-known deep learning models as compared to PyTorch JIT, TensorFlow XLA, and cuDNN baselines on NVIDIA A100 GPU. We also characterize the performance of the proposed optimizations with microbenchmarks and gain insights into their applicability and tradeoffs.",
+        "identifiers": [
+          "SemanticScholar:125611379bc7fd03ebdeea69e97ef95cde5ecead"
+        ],
+        "semantic_scholar_id": "125611379bc7fd03ebdeea69e97ef95cde5ecead",
+        "doi": "10.1145/3673038.3673046",
+        "canonical_id": "DOI:10.1145/3673038.3673046",
+        "authors": [
+          "Mahesh Lakshminarasimhan",
+          "Mary Hall",
+          "Samuel Williams",
+          "O. Antepara"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 792,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.5220/0014452400004084",
+      "identity_tokens": [
+        "id:DOI:10.5220/0014452400004084",
+        "id:SemanticScholar:effd18a88fd4b4a64671ebf4ba8595955225ee0f",
+        "title:sharedabdetr memoryefficient object detection through centralbank parameter sharing",
+        "url:https://doi.org/10.5220/0014452400004084"
+      ],
+      "record": {
+        "title": "ShareDAB-DETR: Memory-Efficient Object Detection through CentralBank Parameter Sharing",
+        "source_url": "https://doi.org/10.5220/0014452400004084",
+        "year": 2026,
+        "published": null,
+        "venue": "International Conference on Computer Vision Theory and Applications",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ": Transformer-based object detectors achieve state-of-the-art accuracy but require substantial memory, making deployment on edge devices impractical. We introduce CentralBank, a novel parameter sharing mechanism that consolidates all transformer projection weights into a single memory-efficient table accessed through deterministic offset mapping. Applied to DAB-DETR, our approach achieves up to 84% reduction in trans-former parameters (19.67M to 3.21M) and 67% reduction in training memory while retaining 99% of baseline accuracy (41.8 vs 42.2 AP on COCO). Unlike traditional compression methods, CentralBank is integrated at the architectural level, requiring no post-training optimization. Our best configuration achieves 41.8 AP with only 8.65M transformer parameters and 2.5 GB training memory, enabling practical deployment on edge devices. Extensive evaluation across five configurations reveals that larger hidden dimensions (512 vs 256) provide superior parameter efficiency, achieving an 11.2:1 parameter-to-FLOP reduction ratio. ShareDAB-DETR demonstrates that architectural parameter sharing can effectively bridge the gap between transformer performance and edge deployment constraints.",
+        "identifiers": [
+          "SemanticScholar:effd18a88fd4b4a64671ebf4ba8595955225ee0f"
+        ],
+        "semantic_scholar_id": "effd18a88fd4b4a64671ebf4ba8595955225ee0f",
+        "doi": "10.5220/0014452400004084",
+        "canonical_id": "DOI:10.5220/0014452400004084",
+        "authors": [
+          "Khaled Chikh",
+          "Roberto Cavicchioli",
+          "Alessandro Capotondi"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 104,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6fba9534a4214b8e5480ef6bb9a50c78df3f6eb33e3238db8890396ded15a941",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

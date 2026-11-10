@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c88eae2d9596677c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.04109",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.04109",
+    "identity_tokens": [
+      "arXiv:2409.04109"
+    ],
+    "reason": "研究アイデア生成の大規模human studyであり、LLM inference/serving efficiencyを扱わない。",
+    "first_checked_at": "2026-10-05T02:14:50+00:00",
+    "last_checked_at": "2026-10-05T02:14:50+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+    ],
+    "title": "Can LLMs Generate Novel Research Ideas? A Large-Scale Human Study with 100+ NLP Researchers"
+  },
+  "processed_at": "2026-10-05T02:14:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c88eae2d9596",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

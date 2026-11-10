@@ -1,0 +1,234 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-cb8e62caed2f3f04-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-cb8e62caed2f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:1910.04732",
+    "arXiv:2004.02178"
+  ],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "446fb5714d766a4c7a242ce726a2a06c92dc5cfe",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T12:59:51.340418+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:1910.04732",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2004.02178",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "FastBERT: a Self-distilling BERT with Adaptive Inference Time",
+      "source_url": "https://arxiv.org/abs/2004.02178",
+      "year": 2020,
+      "published": "2020-04-05",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 459,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained language models like BERT have proven to be highly performant. However, they are often computationally expensive in many practical scenarios, for such heavy models can hardly be readily implemented with limited resources. To improve their efficiency with an assured model performance, we propose a novel speed-tunable FastBERT with adaptive inference time. The speed at inference can be flexibly adjusted under varying demands, while redundant calculation of samples is avoided. Moreover, this model adopts a unique self-distillation mechanism at fine-tuning, further enabling a greater computational efficacy with minimal loss in performance. Our model achieves promising results in twelve English and Chinese datasets. It is able to speed up by a wide range from 1 to 12 times than BERT if given different speedup thresholds to make a speed-performance tradeoff.",
+      "identifiers": [
+        "SemanticScholar:5d34881ff68bd203ff790187e7e5c9e034389cfa"
+      ],
+      "semantic_scholar_id": "5d34881ff68bd203ff790187e7e5c9e034389cfa",
+      "canonical_id": "arXiv:2004.02178",
+      "arxiv_id": "2004.02178",
+      "doi": "10.18653/v1/2020.acl-main.537",
+      "authors": [
+        "Weijie Liu",
+        "Peng Zhou",
+        "Zhi-Ruo Wang",
+        "Zhe Zhao",
+        "Haotang Deng",
+        "Qi Ju"
+      ],
+      "priority": 469,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 459,
+        "citation_count": 459,
+        "total": 469,
+        "is_fresh": false,
+        "freshness_age_days": 2373,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Structured Pruning of Large Language Models",
+      "source_url": "https://arxiv.org/abs/1910.04732",
+      "year": 2019,
+      "published": "2019-10-10",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 357,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models have recently achieved state of the art performance across a wide variety of natural language tasks. Meanwhile, the size of these models and their latency have significantly increased, which makes their usage costly, and raises an interesting question: do language models need to be large? We study this question through the lens of model compression. We present a novel, structured pruning approach based on low rank factorization and augmented Lagrangian L0 norm regularization. Our structured approach achieves significant inference speedups while matching or outperforming our unstructured pruning baseline at various sparsity levels. We apply our method to state of the art models on the enwiki8 dataset and obtain a 1.19 perplexity score with just 5M parameters, vastly outperforming a model of the same size trained from scratch. We also demonstrate that our method can be applied to language model fine-tuning by pruning the BERT model on several downstream classification benchmarks.",
+      "identifiers": [
+        "SemanticScholar:83b8108014e3db4f46354a28ae68193f143c4e7e"
+      ],
+      "semantic_scholar_id": "83b8108014e3db4f46354a28ae68193f143c4e7e",
+      "canonical_id": "arXiv:1910.04732",
+      "arxiv_id": "1910.04732",
+      "doi": "10.18653/v1/2020.emnlp-main.496",
+      "authors": [
+        "Ziheng Wang",
+        "Jeremy Wohlwend",
+        "Tao Lei"
+      ],
+      "priority": 367,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 357,
+        "citation_count": 357,
+        "total": 367,
+        "is_fresh": false,
+        "freshness_age_days": 2551,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2004.02178",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2020.acl-main.537",
+        "id:SemanticScholar:5d34881ff68bd203ff790187e7e5c9e034389cfa",
+        "id:arXiv:2004.02178",
+        "title:fastbert a selfdistilling bert with adaptive inference time",
+        "url:https://arxiv.org/abs/2004.02178"
+      ],
+      "record": {
+        "title": "FastBERT: a Self-distilling BERT with Adaptive Inference Time",
+        "source_url": "https://arxiv.org/abs/2004.02178",
+        "year": 2020,
+        "published": "2020-04-05",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 459,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pre-trained language models like BERT have proven to be highly performant. However, they are often computationally expensive in many practical scenarios, for such heavy models can hardly be readily implemented with limited resources. To improve their efficiency with an assured model performance, we propose a novel speed-tunable FastBERT with adaptive inference time. The speed at inference can be flexibly adjusted under varying demands, while redundant calculation of samples is avoided. Moreover, this model adopts a unique self-distillation mechanism at fine-tuning, further enabling a greater computational efficacy with minimal loss in performance. Our model achieves promising results in twelve English and Chinese datasets. It is able to speed up by a wide range from 1 to 12 times than BERT if given different speedup thresholds to make a speed-performance tradeoff.",
+        "identifiers": [
+          "SemanticScholar:5d34881ff68bd203ff790187e7e5c9e034389cfa"
+        ],
+        "semantic_scholar_id": "5d34881ff68bd203ff790187e7e5c9e034389cfa",
+        "canonical_id": "arXiv:2004.02178",
+        "arxiv_id": "2004.02178",
+        "doi": "10.18653/v1/2020.acl-main.537",
+        "authors": [
+          "Weijie Liu",
+          "Peng Zhou",
+          "Zhi-Ruo Wang",
+          "Zhe Zhao",
+          "Haotang Deng",
+          "Qi Ju"
+        ],
+        "priority": 469,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 459,
+          "citation_count": 459,
+          "total": 469,
+          "is_fresh": false,
+          "freshness_age_days": 2373,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1910.04732",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2020.emnlp-main.496",
+        "id:SemanticScholar:83b8108014e3db4f46354a28ae68193f143c4e7e",
+        "id:arXiv:1910.04732",
+        "title:structured pruning of large language models",
+        "url:https://arxiv.org/abs/1910.04732"
+      ],
+      "record": {
+        "title": "Structured Pruning of Large Language Models",
+        "source_url": "https://arxiv.org/abs/1910.04732",
+        "year": 2019,
+        "published": "2019-10-10",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 357,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models have recently achieved state of the art performance across a wide variety of natural language tasks. Meanwhile, the size of these models and their latency have significantly increased, which makes their usage costly, and raises an interesting question: do language models need to be large? We study this question through the lens of model compression. We present a novel, structured pruning approach based on low rank factorization and augmented Lagrangian L0 norm regularization. Our structured approach achieves significant inference speedups while matching or outperforming our unstructured pruning baseline at various sparsity levels. We apply our method to state of the art models on the enwiki8 dataset and obtain a 1.19 perplexity score with just 5M parameters, vastly outperforming a model of the same size trained from scratch. We also demonstrate that our method can be applied to language model fine-tuning by pruning the BERT model on several downstream classification benchmarks.",
+        "identifiers": [
+          "SemanticScholar:83b8108014e3db4f46354a28ae68193f143c4e7e"
+        ],
+        "semantic_scholar_id": "83b8108014e3db4f46354a28ae68193f143c4e7e",
+        "canonical_id": "arXiv:1910.04732",
+        "arxiv_id": "1910.04732",
+        "doi": "10.18653/v1/2020.emnlp-main.496",
+        "authors": [
+          "Ziheng Wang",
+          "Jeremy Wohlwend",
+          "Tao Lei"
+        ],
+        "priority": 367,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 357,
+          "citation_count": 357,
+          "total": 367,
+          "is_fresh": false,
+          "freshness_age_days": 2551,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6b5d8d8a7fa2daaf974e188041187bd449e4232a50ac761d37643418f1455ef1",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

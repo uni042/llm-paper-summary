@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-41c18d3f192c9cb3-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.05554",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.05554",
+    "identity_tokens": [
+      "arXiv:2510.05554"
+    ],
+    "reason": "The paper derives a theoretical transition in attention behavior with context length; it analyzes scaling but does not provide a serving optimization or resource reduction. Keep as weak long-context lineage research.",
+    "first_checked_at": "2026-10-06T17:30:26+00:00",
+    "last_checked_at": "2026-10-06T17:30:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Critical attention scaling in long-context transformers"
+  },
+  "processed_at": "2026-10-06T17:30:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-41c18d3f192c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

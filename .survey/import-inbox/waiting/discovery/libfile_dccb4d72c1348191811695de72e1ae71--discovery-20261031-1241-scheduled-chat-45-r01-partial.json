@@ -1,0 +1,69 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-1241-scheduled-chat-45/r01",
+  "reference_main_sha": "5b4d7cb2fe282cb17e3bd092e8f1f0f525c7af0d",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.00862",
+      "identity_tokens": [
+        "arXiv:2607.00862",
+        "DOI:10.48550/arXiv.2607.00862"
+      ],
+      "title": "CAT: Confidence-Adaptive Thinking for Efficient Reasoning of Large Reasoning Models",
+      "reason": "著者のarXiv一次要旨を確認。CATはモデル自身のself-certaintyを選好最適化に取り込み、容易な問題ではCoT生成長を短縮し、難問では長い推論を維持する。推論時の出力トークン負荷低減には接続するが、主要な新規性はオフライン選好学習であり、サービング実装・実測TTFT/throughputの直接評価は要旨から確認できないため、学習高速化凍結範囲との境界としてborderline。",
+      "source_url": "https://arxiv.org/abs/2607.00862",
+      "body_check": "primary_arxiv_abstract_screen; body_not_read",
+      "first_checked_at": "2026-10-31T12:44:51+09:00",
+      "last_checked_at": "2026-10-31T12:44:51+09:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md#rank-499"
+      ],
+      "worklist_rank": 499,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12992",
+      "identity_tokens": [
+        "arXiv:2605.12992",
+        "DOI:10.48550/arXiv.2605.12992"
+      ],
+      "title": "SpikeProphecy: A Large-Scale Benchmark for Autoregressive Neural Population Forecasting",
+      "reason": "arXiv一次要旨で、Neuropixels 105セッション・約89,800ニューロンのスパイク数予測を対象に、時系列忠実度・空間パターン・大きさ不変整合性へ分解する評価ベンチマークと確認。比較モデルにSSMやTransformerが含まれても、最終適用先は神経科学の発火予測評価でありLLM推論・サービングの効率化ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2605.12992",
+      "body_check": "primary_arxiv_abstract_screen; body_not_read",
+      "first_checked_at": "2026-10-31T12:44:51+09:00",
+      "last_checked_at": "2026-10-31T12:44:51+09:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md#rank-500"
+      ],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e5dcf34235f384371dc498bf3879e531322da252",
+      "identity_tokens": [
+        "SemanticScholar:e5dcf34235f384371dc498bf3879e531322da252",
+        "IACR:ePrint:2024/1018"
+      ],
+      "title": "Sparsity-Aware Protocol for ZK-friendly ML Models: Shedding Lights on Practical ZKML",
+      "reason": "著者一次論文IACR ePrint 2024/1018のAbstractを確認。SpaGKRは疎な線形層のゼロ知識証明のprover時間を非ゼロ重み数に比例させ、三値ネットワークの低bit性も利用する。大規模モデルの推論結果の検証には関連するが、主要評価は一般MLの証明生成効率でありLLM本体のトークン生成遅延・メモリ・スループットの直接改善を示さないためborderline。",
+      "source_url": "https://eprint.iacr.org/2024/1018.pdf",
+      "body_check": "primary_iacr_eprint_abstract_screen; body_not_exhaustively_reviewed",
+      "first_checked_at": "2026-10-31T12:44:51+09:00",
+      "last_checked_at": "2026-10-31T12:44:51+09:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md#rank-498"
+      ],
+      "worklist_rank": 498,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "round_status": "partial",
+  "round_target": 10
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc4e61cc7d3b89a3-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icdsis65355.2025.11070875",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icdsis65355.2025.11070875",
+    "identity_tokens": [
+      "DOI:10.1109/icdsis65355.2025.11070875"
+    ],
+    "reason": "Abstract identifies a resume/CV extraction RAG system evaluated on 100 resumes; its target is recruitment information extraction, not model inference efficiency or a plausible transformer-efficiency lineage.",
+    "first_checked_at": "2026-10-06T12:48:10+00:00",
+    "last_checked_at": "2026-10-06T12:48:10+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+    ],
+    "title": "Contextual Compression of Unstructured Resumes using VectorStore-Based Retrieval Augmented Generation"
+  },
+  "processed_at": "2026-10-06T12:48:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc4e61cc7d3b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

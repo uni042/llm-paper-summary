@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f055a8a2135686b9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.27960",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.27960",
+    "identity_tokens": [
+      "arXiv:2608.27960"
+    ],
+    "reason": "On-policy distillation (OPD) has recently emerged as a popular post-training paradigm for large language models (LLMs), providing an efficient way to transfer the knowledge and capabilities of teacher models into student models. However, teacher guidance on student-generated prefixes is not always reliable. Training should optimize the model to generate responses that are more likely to be correct, or equivalently, to get higher outcome rewards. But during OPD, the teacher mo",
+    "first_checked_at": "2026-10-05T06:03:37+00:00",
+    "last_checked_at": "2026-10-05T06:03:37+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "When Teacher Guidance Misleads: Reward-Aligned On-Policy Distillation"
+  },
+  "processed_at": "2026-10-05T06:03:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f055a8a21356",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

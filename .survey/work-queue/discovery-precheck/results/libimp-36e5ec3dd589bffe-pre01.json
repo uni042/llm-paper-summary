@@ -1,0 +1,1246 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-36e5ec3dd589bffe-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-36e5ec3dd589",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2405.04513",
+    "arXiv:2408.15518",
+    "arXiv:2409.11057",
+    "arXiv:2410.12513",
+    "arXiv:2410.16663",
+    "arXiv:2412.14847",
+    "arXiv:2502.12962",
+    "arXiv:2502.18394",
+    "arXiv:2503.11816",
+    "arXiv:2504.00970",
+    "arXiv:2507.17307",
+    "arXiv:2509.22944",
+    "arXiv:2607.27704"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "76164f40c1669927e2239432f91c2af882c738c5",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 13,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T23:46:43.794268+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2405.04513",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.15518",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2409.11057",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.12513",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.16663",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.14847",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.12962",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.18394",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.11816",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.00970",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.17307",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.22944",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.27704",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SPECTRE: An FFT-Based Efficient Drop-In Replacement to Self-Attention for Long Contexts",
+      "source_url": "https://arxiv.org/abs/2502.18394",
+      "year": 2025,
+      "published": "2025-02-25",
+      "venue": null,
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context transformers face significant efficiency challenges due to the quadratic cost of self-attention. However, many modern applications-from multi-turn dialogue to high-resolution vision-require contexts spanning tens of thousands of tokens. We introduce SPECTRE, a method that replaces each attention head with a fast real FFT, a content-adaptive spectral gate, and an inverse FFT, reducing per-layer complexity from $\\mathcal{O}(L^{2})$ to $O(L\\log L)$ while preserving the surrounding architecture. We extend this efficiency to autoregressive generation through our Prefix-FFT cache and enhance local feature representation with an optional wavelet module that adds negligible computational overhead. Our experiments demonstrate that SPECTRE operates up to 7$\\times$ faster than FlashAttention-2 on 128k-token contexts while matching or exceeding baseline performance on PG-19 language modeling and ImageNet-1k classification tasks. SPECTRE achieves these improvements by adding fewer than 6\\% parameters to the base model, making hundred-kilotoken context processing feasible on commodity GPUs without specialized hardware.",
+      "identifiers": [
+        "SemanticScholar:fb89da519718ff64ac75a1f70671a2325133d7b9"
+      ],
+      "semantic_scholar_id": "fb89da519718ff64ac75a1f70671a2325133d7b9",
+      "canonical_id": "arXiv:2502.18394",
+      "arxiv_id": "2502.18394",
+      "authors": [
+        "Jacob Fein-Ashley",
+        "Neelesh Gupta",
+        "Rajgopal Kannan",
+        "Viktor K. Prasanna"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 595,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Switchable Decision: Dynamic Neural Generation Networks",
+      "source_url": "https://arxiv.org/abs/2405.04513",
+      "year": 2024,
+      "published": "2024-05-07",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Auto-regressive generation models achieve competitive performance across many different NLP tasks such as summarization, question answering, and classifications. However, they are also known for being slow in inference, which makes them challenging to deploy in real-time applications. We propose a switchable decision to accelerate inference by dynamically assigning computation resources for each data instance. Automatically making decisions on where to skip and how to balance quality and computation cost with constrained optimization, our dynamic neural generation networks enforce the efficient inference path and determine the optimized trade-off. Experiments across question answering, summarization, and classification benchmarks show that our method benefits from less computation cost during inference while keeping the same accuracy. Extensive experiments and ablation studies demonstrate that our method can be general, effective, and beneficial for many NLP tasks.",
+      "identifiers": [
+        "SemanticScholar:ecb6161293c19019545af97962d9bcd34d4ccc90"
+      ],
+      "semantic_scholar_id": "ecb6161293c19019545af97962d9bcd34d4ccc90",
+      "canonical_id": "arXiv:2405.04513",
+      "arxiv_id": "2405.04513",
+      "doi": "10.48550/arXiv.2405.04513",
+      "authors": [
+        "Shujian Zhang",
+        "Korawat Tanwisuth",
+        "Chengyue Gong",
+        "Pengcheng He",
+        "Mi Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 889,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "FiRST: Finetuning Router-Selective Transformers for Input-Adaptive Latency Reduction",
+      "source_url": "https://arxiv.org/abs/2410.12513",
+      "year": 2024,
+      "published": "2024-10-16",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Auto-regressive Large Language Models (LLMs) demonstrate remarkable performance across different domains such as vision and language processing. However, due to sequential processing through a stack of transformer layers, autoregressive decoding faces significant computation/latency challenges, particularly in resource-constrained environments like mobile and edge devices. Existing approaches in literature that aim to improve latency via skipping layers have two distinct flavors - 1) Early exit, and 2) Input-agnostic heuristics where tokens exit at pre-determined layers irrespective of input sequence. Both the above strategies have limitations - the former cannot be applied to handle KV Caching necessary for speed-ups in modern framework and the latter does not capture the variation in layer importance across tasks or more generally, across input sequences. To address both limitations, we propose FiRST, an algorithm that reduces inference latency by using layer-specific routers to select a subset of transformer layers adaptively for each input sequence - the prompt (during the prefill stage) decides which layers will be skipped during decoding. FiRST preserves compatibility with KV caching enabling faster inference while being quality-aware. FiRST is model-agnostic and can be easily enabled on any pre-trained LLM. Our approach reveals that input adaptivity is critical - indeed, different task-specific middle layers play a crucial role in evolving hidden representations depending on tasks. Extensive experiments show that FiRST significantly reduces latency while outperforming other layer selection strategies in quality metics. It retains competitive performance to base model (without layer skipping) and in some cases, even improves upon it. FiRST is thus a promising and efficient solution for LLM deployment in low-resource environments.",
+      "identifiers": [
+        "SemanticScholar:d41f1b7f7eff0794f18896dbc6fe09c86ef0a120"
+      ],
+      "semantic_scholar_id": "d41f1b7f7eff0794f18896dbc6fe09c86ef0a120",
+      "canonical_id": "arXiv:2410.12513",
+      "arxiv_id": "2410.12513",
+      "doi": "10.48550/arXiv.2410.12513",
+      "authors": [
+        "Akriti Jain",
+        "Saransh Sharma",
+        "Koyel Mukherjee",
+        "Soumyabrata Pal"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 727,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "A Survey of RWKV",
+      "source_url": "https://arxiv.org/abs/2412.14847",
+      "year": 2024,
+      "published": "2024-12-19",
+      "venue": "Neurocomputing",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Receptance Weighted Key Value (RWKV) model offers a novel alternative to the Transformer architecture, merging the benefits of recurrent and attention-based systems. Unlike conventional Transformers, which depend heavily on self-attention, RWKV adeptly captures long-range dependencies with minimal computational demands. By utilizing a recurrent framework, RWKV addresses some computational inefficiencies found in Transformers, particularly in tasks with long sequences. RWKV has recently drawn considerable attention for its robust performance across multiple domains. Despite its growing popularity, no systematic review of the RWKV model exists. This paper seeks to fill this gap as the first comprehensive review of the RWKV architecture, its core principles, and its varied applications, such as natural language generation, natural language understanding, and computer vision. We assess how RWKV compares to traditional Transformer models, highlighting its capability to manage long sequences efficiently and lower computational costs. Furthermore, we explore the challenges RWKV encounters and propose potential directions for future research and advancement. We consistently maintain the related open-source materials at: https://github.com/MLGroupJLU/RWKV-Survey.",
+      "identifiers": [
+        "SemanticScholar:6aedfd296a62aa6c10e0dcc9d69304f50c2947c8"
+      ],
+      "semantic_scholar_id": "6aedfd296a62aa6c10e0dcc9d69304f50c2947c8",
+      "canonical_id": "arXiv:2412.14847",
+      "arxiv_id": "2412.14847",
+      "doi": "10.48550/arXiv.2412.14847",
+      "authors": [
+        "Zhiyuan Li",
+        "Tingyu Xia",
+        "Yi Chang",
+        "Yuan Wu"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 663,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Infinite Retrieval: Attention Enhanced LLMs in Long-Context Processing",
+      "source_url": "https://arxiv.org/abs/2502.12962",
+      "year": 2025,
+      "published": "2025-02-18",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Limited by the context window size of Large Language Models(LLMs), handling various tasks with input tokens exceeding the upper limit has been challenging, whether it is a simple direct retrieval task or a complex multi-hop reasoning task. Although various methods have been proposed to enhance the long-context processing capabilities of LLMs, they either incur substantial post-training costs, or require additional tool modules(e.g.,RAG), or have not shown significant improvement in realistic tasks. Our work observes the correlation between the attention distribution and generated answers across each layer, and establishes the attention allocation aligns with retrieval-augmented capabilities through experiments. Drawing on the above insights, we propose a novel method InfiniRetri that leverages the LLMs's own attention information to enable accurate retrieval across inputs of infinitely length. Our evaluations indicate that InfiniRetri achieves 100% accuracy in the Needle-In-a-Haystack(NIH) test over 1M tokens using a 0.5B parameter model, surpassing other method or larger models and setting a new state-of-the-art(SOTA). Moreover, our method achieves significant performance improvements on real-world benchmarks, with a maximum 288% improvement. In addition, InfiniRetri can be applied to any Transformer-based LLMs without additional training and substantially reduces inference latency and compute overhead in long texts. In summary, our comprehensive studies show InfiniRetri's potential for practical applications and creates a paradigm for retrievaling information using LLMs own capabilities under infinite-length tokens. Code will be released in link.",
+      "identifiers": [
+        "SemanticScholar:4fc19621a17c17b871352ff00a8660dc76cf4e50"
+      ],
+      "semantic_scholar_id": "4fc19621a17c17b871352ff00a8660dc76cf4e50",
+      "canonical_id": "arXiv:2502.12962",
+      "arxiv_id": "2502.12962",
+      "doi": "10.48550/arXiv.2502.12962",
+      "authors": [
+        "Xiaoju Ye",
+        "Zhichun Wang",
+        "Jingyuan Wang"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 602,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Key, Value, Compress: A Systematic Exploration of KV Cache Compression Techniques",
+      "source_url": "https://arxiv.org/abs/2503.11816",
+      "year": 2025,
+      "published": "2025-03-14",
+      "venue": "IEEE Custom Integrated Circuits Conference",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated exceptional ca-pabilities in generating text, images, and video content. However, as context length grows, the computational cost of attention increases quadratically with the number of tokens, presenting significant effi-ciency challenges. This paper presents an analysis of various Key-Value (KV) cache compression strategies, offering a comprehensive taxonomy that categorizes these methods by their underlying princi-ples and implementation techniques. Furthermore, we evaluate their impact on performance and inference latency, providing critical in-sights into their effectiveness. Our findings highlight the trade-offs involved in KV cache compression and its influence on handling long-context scenarios, paving the way for more efficient LLM implemen-tations.",
+      "identifiers": [
+        "SemanticScholar:8f0a1d894f68af2004db414c293b21f6801ef5e5"
+      ],
+      "semantic_scholar_id": "8f0a1d894f68af2004db414c293b21f6801ef5e5",
+      "canonical_id": "arXiv:2503.11816",
+      "arxiv_id": "2503.11816",
+      "doi": "10.1109/CICC63670.2025.10983416",
+      "authors": [
+        "Neusha Javidnia",
+        "B. Rouhani",
+        "F. Koushanfar"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 578,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SentenceKV: Efficient LLM Inference via Sentence-Level Semantic KV Caching",
+      "source_url": "https://arxiv.org/abs/2504.00970",
+      "year": 2025,
+      "published": "2025-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models face significant computational and memory challenges when processing long contexts. During inference, efficient management of the key-value (KV) cache, which stores intermediate activations for autoregressive generation, is critical to reducing memory overhead and improving computational efficiency. Traditional token-level efficient KV caching methods overlook semantic information, treating tokens independently without considering their semantic relationships. Meanwhile, existing semantic-preserving KV cache management approaches often suffer from substantial memory usage and high time-to-first-token. To address these limitations, we propose SentenceKV, a novel sentence-level semantic KV caching approach designed to enhance inference efficiency while preserving semantic coherence. During prefilling, SentenceKV groups tokens based on sentence-level semantic similarity, compressing sentence representations into concise semantic vectors stored directly on the GPU, while individual KV pairs are offloaded to CPU. During decoding, SentenceKV generates tokens by selectively retrieving semantically relevant sentence-level KV entries, leveraging the semantic similarity between the prefilling-stage semantic vectors and decoding-stage queries. This ensures efficient and contextually accurate predictions, minimizing the loading of redundant or irrelevant data into GPU memory and significantly reducing memory overhead while maintaining stable inference latency, even for extremely long contexts. Extensive evaluations on benchmarks including PG-19, LongBench, and Needle-In-A-Haystack demonstrate that SentenceKV significantly outperforms state-of-the-art methods in both efficiency and memory usage, without compromising model accuracy.",
+      "identifiers": [
+        "SemanticScholar:e2ea3627decdfb839d7a01081478c1c734a9518b"
+      ],
+      "semantic_scholar_id": "e2ea3627decdfb839d7a01081478c1c734a9518b",
+      "canonical_id": "arXiv:2504.00970",
+      "arxiv_id": "2504.00970",
+      "doi": "10.48550/arXiv.2504.00970",
+      "authors": [
+        "Yuxuan Zhu",
+        "Ali Falahati",
+        "David Yang",
+        "Mohammad Mohammadi Amiri"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 560,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights",
+      "source_url": "https://arxiv.org/abs/2509.22944",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization has emerged as the most widely used strategy for deploying large language models at low precision. Still, current methods show perplexity degradation at bit-widths less than or equal to 4, partly because representing outliers causes precision issues in parameters that share the same scales as these outliers. This problem is especially pronounced for calibration-free, uniform quantization methods. We introduce SINQ to augment existing post-training quantizers with an additional second-axis scale factor and a fast Sinkhorn-Knopp-style algorithm that finds scales to normalize per-row and per-column variances. We show that this approximates activation-aware quantization by recovering column scales from the weight matrix structure that are predictive of the typical activation magnitudes the matrix received during training. Our method has no interactions between layers and can be trivially applied to new architectures to quantize any linear layer. We evaluate our method on the Qwen3 model family, among others. SINQ reduces the perplexity gap on WikiText2 and C4 by over 50% against uncalibrated uniform quantization baselines, incurs zero to negligible compute overhead, and can be further enhanced by combining it with calibration and non-uniform quantization levels. Code is available at https://github.com/huawei-csl/SINQ.",
+      "identifiers": [
+        "SemanticScholar:fb2c0256a2afaacb8649d732e93b758c18bae40e"
+      ],
+      "semantic_scholar_id": "fb2c0256a2afaacb8649d732e93b758c18bae40e",
+      "canonical_id": "arXiv:2509.22944",
+      "arxiv_id": "2509.22944",
+      "doi": "10.48550/arXiv.2509.22944",
+      "authors": [
+        "Lorenz K. Muller",
+        "Philippe Bich",
+        "Jiawei Zhuang",
+        "Ahmet Çelik",
+        "Luca Benfenati",
+        "Lukas Cavigelli"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 382,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dolphin: Long Context as a New Modality for Energy-Efficient On-Device Language Models",
+      "source_url": "https://arxiv.org/abs/2408.15518",
+      "year": 2024,
+      "published": "2024-08-28",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents Dolphin, a novel decoder-decoder architecture for energy-efficient processing of long contexts in language models. Our approach addresses the significant energy consumption and latency challenges inherent in on-device models. Dolphin employs a compact 0.5B parameter decoder to distill extensive contextual information into a memory embedding, substantially reducing the input length for the primary 7B parameter decoder model. Inspired by vision-language models, we repurpose the image embedding projector to encode long textual contexts, effectively treating extended context as a distinct modality. This innovative method enables processing of substantially longer contexts without the typical computational overhead associated with extended input sequences. Empirical evaluations demonstrate a 10-fold improvement in energy efficiency and a 5-fold reduction in latency compared to conventional full-length context processing methods without losing quality of the response. Our work contributes to the development of more sustainable and scalable language models for on-device applications, addressing the critical need for energy-efficient and responsive AI technologies in resource-constrained environments while maintaining the accuracy to understand long contexts. This research has implications for the broader field of natural language processing, particularly in the domain of efficient model design for resource-limited settings. By enabling more sophisticated AI capabilities on edge devices, Dolphin paves the way for advanced language processing in a wide range of applications where computational resources are at a premium. The Dolphin model is publicly available at https://huggingface.co/NexaAIDev/Dolphin.",
+      "identifiers": [
+        "SemanticScholar:4f12c2f039375512ee69cb2ed4faef550a98827c"
+      ],
+      "semantic_scholar_id": "4f12c2f039375512ee69cb2ed4faef550a98827c",
+      "canonical_id": "arXiv:2408.15518",
+      "arxiv_id": "2408.15518",
+      "doi": "10.48550/arXiv.2408.15518",
+      "authors": [
+        "Wei Chen",
+        "Zhiyuan Li",
+        "Shuo Xin",
+        "Yi-Hao Wang"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 776,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KVPruner: Structural Pruning for Faster and Memory-Efficient Large Language Models",
+      "source_url": "https://arxiv.org/abs/2409.11057",
+      "year": 2024,
+      "published": "2024-09-17",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The bottleneck associated with the key-value(KV) cache presents a significant challenge during the inference processes of large language models. While depth pruning accelerates inference, it requires extensive recovery training, which can take up to two weeks. On the other hand, width pruning retains much of the performance but offers slight speed gains. To tackle these challenges, we propose KVPruner to improve model efficiency while maintaining performance. Our method uses global perplexity-based analysis to determine the importance ratio for each block and provides multiple strategies to prune non-essential KV channels within blocks. Compared to the original model, KVPruner reduces runtime memory usage by 50% and boosts throughput by over 35%. Additionally, our method requires only two hours of LoRA fine-tuning techniques on small datasets to recover most of the performance.",
+      "identifiers": [
+        "SemanticScholar:9d4c8a5673fd772e4af1ab3baafe826bfd6d7447"
+      ],
+      "semantic_scholar_id": "9d4c8a5673fd772e4af1ab3baafe826bfd6d7447",
+      "canonical_id": "arXiv:2409.11057",
+      "arxiv_id": "2409.11057",
+      "doi": "10.1109/ICASSP49660.2025.10889000",
+      "authors": [
+        "Bo Lv",
+        "Quan Zhou",
+        "Xuanang Ding",
+        "Yan Wang",
+        "Zeming Ma"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 756,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FastAttention: Extend FlashAttention2 to NPUs and Low-resource GPUs",
+      "source_url": "https://arxiv.org/abs/2410.16663",
+      "year": 2024,
+      "published": "2024-10-22",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "FlashAttention series has been widely applied in the inference of large language models (LLMs). However, FlashAttention series only supports the high-level GPU architectures, e.g., Ampere and Hopper. At present, FlashAttention series is not easily transferrable to NPUs and low-resource GPUs. Moreover, FlashAttention series is inefficient for multi- NPUs or GPUs inference scenarios. In this work, we propose FastAttention which pioneers the adaptation of FlashAttention series for NPUs and low-resource GPUs to boost LLM inference efficiency. Specifically, we take Ascend NPUs and Volta-based GPUs as representatives for designing our FastAttention. We migrate FlashAttention series to Ascend NPUs by proposing a novel two-level tiling strategy for runtime speedup, tiling-mask strategy for memory saving and the tiling-AllReduce strategy for reducing communication overhead, respectively. Besides, we adapt FlashAttention for Volta-based GPUs by redesigning the operands layout in shared memory and introducing a simple yet effective CPU-GPU cooperative strategy for efficient memory utilization. On Ascend NPUs, our FastAttention can achieve a 10.7$\\times$ speedup compared to the standard attention implementation. Llama-7B within FastAttention reaches up to 5.16$\\times$ higher throughput than within the standard attention. On Volta architecture GPUs, FastAttention yields 1.43$\\times$ speedup compared to its equivalents in \\texttt{xformers}. Pangu-38B within FastAttention brings 1.46$\\times$ end-to-end speedup using FasterTransformer. Coupled with the propose CPU-GPU cooperative strategy, FastAttention supports a maximal input length of 256K on 8 V100 GPUs. All the codes will be made available soon.",
+      "identifiers": [
+        "SemanticScholar:865b4afddfc81b481e3dfab240154044deff7876"
+      ],
+      "semantic_scholar_id": "865b4afddfc81b481e3dfab240154044deff7876",
+      "canonical_id": "arXiv:2410.16663",
+      "arxiv_id": "2410.16663",
+      "doi": "10.48550/arXiv.2410.16663",
+      "authors": [
+        "Hao-Ran Lin",
+        "Xianzhi Yu",
+        "Kang Zhao",
+        "Lu Hou",
+        "Zongyuan Zhan",
+        "S. Kamenev",
+        "Han Bao",
+        "Ting Hu",
+        "Mingkai Wang",
+        "Qi-Xin Chang",
+        "Siyue Sui",
+        "Wei-Hao Sun",
+        "Jia-Xin Hu",
+        "Jun Yao",
+        "Ze-Kun Yin",
+        "Cheng Qian",
+        "Ying Zhang",
+        "Yinfei Pan",
+        "Yu Yang",
+        "Wei-Guo Liu"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 721,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LightRot: A Light-Weighted Rotation Scheme and Architecture for Accurate Low-Bit Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2607.27704",
+      "year": 2025,
+      "published": "2025-06-01",
+      "venue": "IEEE Journal on Emerging and Selected Topics in Circuits and Systems",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) continue to demonstrate exceptional capabilities across various domains, the challenge of achieving energy-efficient and accurate inference becomes increasingly critical. This work presents LightRot, a lightweight rotation scheme and dedicated hardware accelerator designed for low-bit LLM inference. The proposed architecture integrates Grouped Local Rotation (GLR) and Outlier Direction Aligning (ODA) algorithms with a hierarchical Fast Hadamard Transform (FHT)-based rotation unit to address key challenges in low-bit quantization, including the energy overhead of rotation operations. The proposed accelerator, implemented in a 28nm CMOS process, achieves a peak energy efficiency of 27.4TOPS/W for 4-bit inference, surpassing prior state-of-the-art designs. Unlike conventional approaches that rely on higher-precision inference or evaluate on basic language modeling tasks like GPT-2, LightRot is optimized for advanced models such as LLaMA2-13B and LLaMA3-8B. Its performance is further validated on MT-Bench, demonstrating robust applicability to real-world conversational scenarios and redefining benchmarks for chat-based AI systems. By synergizing algorithmic innovations and hardware efficiency, this work sets a new paradigm for scalable, low-bit LLM inference, paving the way for sustainable AI advancements.",
+      "identifiers": [
+        "SemanticScholar:fdeb9c9b279b5ec68b70094f8531605ba1d9247f"
+      ],
+      "semantic_scholar_id": "fdeb9c9b279b5ec68b70094f8531605ba1d9247f",
+      "canonical_id": "arXiv:2607.27704",
+      "arxiv_id": "2607.27704",
+      "doi": "10.1109/JETCAS.2025.3558300",
+      "authors": [
+        "Sangjin Kim",
+        "Yuseon Choi",
+        "Jungjun Oh",
+        "Byeongcheol Kim",
+        "Hoi-Jun Yoo"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 499,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "R-Stitch: Dynamic Trajectory Stitching for Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2507.17307",
+      "year": 2025,
+      "published": "2025-07-23",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-thought (CoT) enhances the problem-solving ability of large language models (LLMs) but incurs substantial inference cost due to long autoregressive trajectories. Existing acceleration strategies either shorten traces via early stopping or compression, or adopt speculative decoding with a smaller model. However, speculative decoding provides limited gains when model agreement is low and rigidly enforces token-level consistency, overlooking the observation that some smaller models, when correct, produce significantly more concise reasoning traces that could reduce inference length. We introduce R-Stitch, a training-free hybrid decoding framework that leverages token-level entropy as an uncertainty proxy to delegate computation between a small language model (SLM) and an LLM. Our analysis shows that high-entropy tokens are more likely to induce errors, motivating an entropy-guided routing strategy that lets the SLM efficiently handle low-entropy tokens while delegating uncertain ones to the LLM, thereby avoiding full rollbacks and preserving answer quality. We further extend this design with R-Stitch$^{+}$, which learns an adaptive routing policy to adjust the token budget dynamically beyond fixed thresholds. By jointly reducing per-token decoding complexity and the number of generated tokens, our method achieves substantial acceleration with negligible accuracy loss. Concretely, it attains peak speedups of 3.00$\\times$ on DeepSeek-R1-Distill-Qwen-7B, 3.85$\\times$ on 14B, and 4.10$\\times$ on QWQ-32B while maintaining accuracy comparable to full LLM decoding. Moreover, it naturally enables adaptive efficiency--accuracy trade-offs that can be tailored to diverse computational budgets without retraining.",
+      "identifiers": [
+        "SemanticScholar:7590f4ccd65aef8822cf1cbbcfbac90bd895e27b"
+      ],
+      "semantic_scholar_id": "7590f4ccd65aef8822cf1cbbcfbac90bd895e27b",
+      "canonical_id": "arXiv:2507.17307",
+      "arxiv_id": "2507.17307",
+      "doi": "10.48550/arXiv.2507.17307",
+      "authors": [
+        "Zhuo-Kun Chen",
+        "Zeren Chen",
+        "Jia-Hao He",
+        "Lu Sheng",
+        "Mingkui Tan",
+        "Jian-Fei Cai",
+        "Bo-Han Zhuang"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 447,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2502.18394",
+      "identity_tokens": [
+        "id:SemanticScholar:fb89da519718ff64ac75a1f70671a2325133d7b9",
+        "id:arXiv:2502.18394",
+        "title:spectre an fftbased efficient dropin replacement to selfattention for long contexts",
+        "url:https://arxiv.org/abs/2502.18394"
+      ],
+      "record": {
+        "title": "SPECTRE: An FFT-Based Efficient Drop-In Replacement to Self-Attention for Long Contexts",
+        "source_url": "https://arxiv.org/abs/2502.18394",
+        "year": 2025,
+        "published": "2025-02-25",
+        "venue": null,
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context transformers face significant efficiency challenges due to the quadratic cost of self-attention. However, many modern applications-from multi-turn dialogue to high-resolution vision-require contexts spanning tens of thousands of tokens. We introduce SPECTRE, a method that replaces each attention head with a fast real FFT, a content-adaptive spectral gate, and an inverse FFT, reducing per-layer complexity from $\\mathcal{O}(L^{2})$ to $O(L\\log L)$ while preserving the surrounding architecture. We extend this efficiency to autoregressive generation through our Prefix-FFT cache and enhance local feature representation with an optional wavelet module that adds negligible computational overhead. Our experiments demonstrate that SPECTRE operates up to 7$\\times$ faster than FlashAttention-2 on 128k-token contexts while matching or exceeding baseline performance on PG-19 language modeling and ImageNet-1k classification tasks. SPECTRE achieves these improvements by adding fewer than 6\\% parameters to the base model, making hundred-kilotoken context processing feasible on commodity GPUs without specialized hardware.",
+        "identifiers": [
+          "SemanticScholar:fb89da519718ff64ac75a1f70671a2325133d7b9"
+        ],
+        "semantic_scholar_id": "fb89da519718ff64ac75a1f70671a2325133d7b9",
+        "canonical_id": "arXiv:2502.18394",
+        "arxiv_id": "2502.18394",
+        "authors": [
+          "Jacob Fein-Ashley",
+          "Neelesh Gupta",
+          "Rajgopal Kannan",
+          "Viktor K. Prasanna"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 595,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.04513",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.04513",
+        "id:SemanticScholar:ecb6161293c19019545af97962d9bcd34d4ccc90",
+        "id:arXiv:2405.04513",
+        "title:switchable decision dynamic neural generation networks",
+        "url:https://arxiv.org/abs/2405.04513"
+      ],
+      "record": {
+        "title": "Switchable Decision: Dynamic Neural Generation Networks",
+        "source_url": "https://arxiv.org/abs/2405.04513",
+        "year": 2024,
+        "published": "2024-05-07",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Auto-regressive generation models achieve competitive performance across many different NLP tasks such as summarization, question answering, and classifications. However, they are also known for being slow in inference, which makes them challenging to deploy in real-time applications. We propose a switchable decision to accelerate inference by dynamically assigning computation resources for each data instance. Automatically making decisions on where to skip and how to balance quality and computation cost with constrained optimization, our dynamic neural generation networks enforce the efficient inference path and determine the optimized trade-off. Experiments across question answering, summarization, and classification benchmarks show that our method benefits from less computation cost during inference while keeping the same accuracy. Extensive experiments and ablation studies demonstrate that our method can be general, effective, and beneficial for many NLP tasks.",
+        "identifiers": [
+          "SemanticScholar:ecb6161293c19019545af97962d9bcd34d4ccc90"
+        ],
+        "semantic_scholar_id": "ecb6161293c19019545af97962d9bcd34d4ccc90",
+        "canonical_id": "arXiv:2405.04513",
+        "arxiv_id": "2405.04513",
+        "doi": "10.48550/arXiv.2405.04513",
+        "authors": [
+          "Shujian Zhang",
+          "Korawat Tanwisuth",
+          "Chengyue Gong",
+          "Pengcheng He",
+          "Mi Zhou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 889,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.12513",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.12513",
+        "id:SemanticScholar:d41f1b7f7eff0794f18896dbc6fe09c86ef0a120",
+        "id:arXiv:2410.12513",
+        "title:first finetuning routerselective transformers for inputadaptive latency reduction",
+        "url:https://arxiv.org/abs/2410.12513"
+      ],
+      "record": {
+        "title": "FiRST: Finetuning Router-Selective Transformers for Input-Adaptive Latency Reduction",
+        "source_url": "https://arxiv.org/abs/2410.12513",
+        "year": 2024,
+        "published": "2024-10-16",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Auto-regressive Large Language Models (LLMs) demonstrate remarkable performance across different domains such as vision and language processing. However, due to sequential processing through a stack of transformer layers, autoregressive decoding faces significant computation/latency challenges, particularly in resource-constrained environments like mobile and edge devices. Existing approaches in literature that aim to improve latency via skipping layers have two distinct flavors - 1) Early exit, and 2) Input-agnostic heuristics where tokens exit at pre-determined layers irrespective of input sequence. Both the above strategies have limitations - the former cannot be applied to handle KV Caching necessary for speed-ups in modern framework and the latter does not capture the variation in layer importance across tasks or more generally, across input sequences. To address both limitations, we propose FiRST, an algorithm that reduces inference latency by using layer-specific routers to select a subset of transformer layers adaptively for each input sequence - the prompt (during the prefill stage) decides which layers will be skipped during decoding. FiRST preserves compatibility with KV caching enabling faster inference while being quality-aware. FiRST is model-agnostic and can be easily enabled on any pre-trained LLM. Our approach reveals that input adaptivity is critical - indeed, different task-specific middle layers play a crucial role in evolving hidden representations depending on tasks. Extensive experiments show that FiRST significantly reduces latency while outperforming other layer selection strategies in quality metics. It retains competitive performance to base model (without layer skipping) and in some cases, even improves upon it. FiRST is thus a promising and efficient solution for LLM deployment in low-resource environments.",
+        "identifiers": [
+          "SemanticScholar:d41f1b7f7eff0794f18896dbc6fe09c86ef0a120"
+        ],
+        "semantic_scholar_id": "d41f1b7f7eff0794f18896dbc6fe09c86ef0a120",
+        "canonical_id": "arXiv:2410.12513",
+        "arxiv_id": "2410.12513",
+        "doi": "10.48550/arXiv.2410.12513",
+        "authors": [
+          "Akriti Jain",
+          "Saransh Sharma",
+          "Koyel Mukherjee",
+          "Soumyabrata Pal"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 727,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.14847",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.14847",
+        "id:SemanticScholar:6aedfd296a62aa6c10e0dcc9d69304f50c2947c8",
+        "id:arXiv:2412.14847",
+        "title:a survey of rwkv",
+        "url:https://arxiv.org/abs/2412.14847"
+      ],
+      "record": {
+        "title": "A Survey of RWKV",
+        "source_url": "https://arxiv.org/abs/2412.14847",
+        "year": 2024,
+        "published": "2024-12-19",
+        "venue": "Neurocomputing",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Receptance Weighted Key Value (RWKV) model offers a novel alternative to the Transformer architecture, merging the benefits of recurrent and attention-based systems. Unlike conventional Transformers, which depend heavily on self-attention, RWKV adeptly captures long-range dependencies with minimal computational demands. By utilizing a recurrent framework, RWKV addresses some computational inefficiencies found in Transformers, particularly in tasks with long sequences. RWKV has recently drawn considerable attention for its robust performance across multiple domains. Despite its growing popularity, no systematic review of the RWKV model exists. This paper seeks to fill this gap as the first comprehensive review of the RWKV architecture, its core principles, and its varied applications, such as natural language generation, natural language understanding, and computer vision. We assess how RWKV compares to traditional Transformer models, highlighting its capability to manage long sequences efficiently and lower computational costs. Furthermore, we explore the challenges RWKV encounters and propose potential directions for future research and advancement. We consistently maintain the related open-source materials at: https://github.com/MLGroupJLU/RWKV-Survey.",
+        "identifiers": [
+          "SemanticScholar:6aedfd296a62aa6c10e0dcc9d69304f50c2947c8"
+        ],
+        "semantic_scholar_id": "6aedfd296a62aa6c10e0dcc9d69304f50c2947c8",
+        "canonical_id": "arXiv:2412.14847",
+        "arxiv_id": "2412.14847",
+        "doi": "10.48550/arXiv.2412.14847",
+        "authors": [
+          "Zhiyuan Li",
+          "Tingyu Xia",
+          "Yi Chang",
+          "Yuan Wu"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 663,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.12962",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.12962",
+        "id:SemanticScholar:4fc19621a17c17b871352ff00a8660dc76cf4e50",
+        "id:arXiv:2502.12962",
+        "title:infinite retrieval attention enhanced llms in longcontext processing",
+        "url:https://arxiv.org/abs/2502.12962"
+      ],
+      "record": {
+        "title": "Infinite Retrieval: Attention Enhanced LLMs in Long-Context Processing",
+        "source_url": "https://arxiv.org/abs/2502.12962",
+        "year": 2025,
+        "published": "2025-02-18",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Limited by the context window size of Large Language Models(LLMs), handling various tasks with input tokens exceeding the upper limit has been challenging, whether it is a simple direct retrieval task or a complex multi-hop reasoning task. Although various methods have been proposed to enhance the long-context processing capabilities of LLMs, they either incur substantial post-training costs, or require additional tool modules(e.g.,RAG), or have not shown significant improvement in realistic tasks. Our work observes the correlation between the attention distribution and generated answers across each layer, and establishes the attention allocation aligns with retrieval-augmented capabilities through experiments. Drawing on the above insights, we propose a novel method InfiniRetri that leverages the LLMs's own attention information to enable accurate retrieval across inputs of infinitely length. Our evaluations indicate that InfiniRetri achieves 100% accuracy in the Needle-In-a-Haystack(NIH) test over 1M tokens using a 0.5B parameter model, surpassing other method or larger models and setting a new state-of-the-art(SOTA). Moreover, our method achieves significant performance improvements on real-world benchmarks, with a maximum 288% improvement. In addition, InfiniRetri can be applied to any Transformer-based LLMs without additional training and substantially reduces inference latency and compute overhead in long texts. In summary, our comprehensive studies show InfiniRetri's potential for practical applications and creates a paradigm for retrievaling information using LLMs own capabilities under infinite-length tokens. Code will be released in link.",
+        "identifiers": [
+          "SemanticScholar:4fc19621a17c17b871352ff00a8660dc76cf4e50"
+        ],
+        "semantic_scholar_id": "4fc19621a17c17b871352ff00a8660dc76cf4e50",
+        "canonical_id": "arXiv:2502.12962",
+        "arxiv_id": "2502.12962",
+        "doi": "10.48550/arXiv.2502.12962",
+        "authors": [
+          "Xiaoju Ye",
+          "Zhichun Wang",
+          "Jingyuan Wang"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 602,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.11816",
+      "identity_tokens": [
+        "id:DOI:10.1109/cicc63670.2025.10983416",
+        "id:SemanticScholar:8f0a1d894f68af2004db414c293b21f6801ef5e5",
+        "id:arXiv:2503.11816",
+        "title:key value compress a systematic exploration of kv cache compression techniques",
+        "url:https://arxiv.org/abs/2503.11816"
+      ],
+      "record": {
+        "title": "Key, Value, Compress: A Systematic Exploration of KV Cache Compression Techniques",
+        "source_url": "https://arxiv.org/abs/2503.11816",
+        "year": 2025,
+        "published": "2025-03-14",
+        "venue": "IEEE Custom Integrated Circuits Conference",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have demonstrated exceptional ca-pabilities in generating text, images, and video content. However, as context length grows, the computational cost of attention increases quadratically with the number of tokens, presenting significant effi-ciency challenges. This paper presents an analysis of various Key-Value (KV) cache compression strategies, offering a comprehensive taxonomy that categorizes these methods by their underlying princi-ples and implementation techniques. Furthermore, we evaluate their impact on performance and inference latency, providing critical in-sights into their effectiveness. Our findings highlight the trade-offs involved in KV cache compression and its influence on handling long-context scenarios, paving the way for more efficient LLM implemen-tations.",
+        "identifiers": [
+          "SemanticScholar:8f0a1d894f68af2004db414c293b21f6801ef5e5"
+        ],
+        "semantic_scholar_id": "8f0a1d894f68af2004db414c293b21f6801ef5e5",
+        "canonical_id": "arXiv:2503.11816",
+        "arxiv_id": "2503.11816",
+        "doi": "10.1109/CICC63670.2025.10983416",
+        "authors": [
+          "Neusha Javidnia",
+          "B. Rouhani",
+          "F. Koushanfar"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 578,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.00970",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.00970",
+        "id:SemanticScholar:e2ea3627decdfb839d7a01081478c1c734a9518b",
+        "id:arXiv:2504.00970",
+        "title:sentencekv efficient llm inference via sentencelevel semantic kv caching",
+        "url:https://arxiv.org/abs/2504.00970"
+      ],
+      "record": {
+        "title": "SentenceKV: Efficient LLM Inference via Sentence-Level Semantic KV Caching",
+        "source_url": "https://arxiv.org/abs/2504.00970",
+        "year": 2025,
+        "published": "2025-04-01",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models face significant computational and memory challenges when processing long contexts. During inference, efficient management of the key-value (KV) cache, which stores intermediate activations for autoregressive generation, is critical to reducing memory overhead and improving computational efficiency. Traditional token-level efficient KV caching methods overlook semantic information, treating tokens independently without considering their semantic relationships. Meanwhile, existing semantic-preserving KV cache management approaches often suffer from substantial memory usage and high time-to-first-token. To address these limitations, we propose SentenceKV, a novel sentence-level semantic KV caching approach designed to enhance inference efficiency while preserving semantic coherence. During prefilling, SentenceKV groups tokens based on sentence-level semantic similarity, compressing sentence representations into concise semantic vectors stored directly on the GPU, while individual KV pairs are offloaded to CPU. During decoding, SentenceKV generates tokens by selectively retrieving semantically relevant sentence-level KV entries, leveraging the semantic similarity between the prefilling-stage semantic vectors and decoding-stage queries. This ensures efficient and contextually accurate predictions, minimizing the loading of redundant or irrelevant data into GPU memory and significantly reducing memory overhead while maintaining stable inference latency, even for extremely long contexts. Extensive evaluations on benchmarks including PG-19, LongBench, and Needle-In-A-Haystack demonstrate that SentenceKV significantly outperforms state-of-the-art methods in both efficiency and memory usage, without compromising model accuracy.",
+        "identifiers": [
+          "SemanticScholar:e2ea3627decdfb839d7a01081478c1c734a9518b"
+        ],
+        "semantic_scholar_id": "e2ea3627decdfb839d7a01081478c1c734a9518b",
+        "canonical_id": "arXiv:2504.00970",
+        "arxiv_id": "2504.00970",
+        "doi": "10.48550/arXiv.2504.00970",
+        "authors": [
+          "Yuxuan Zhu",
+          "Ali Falahati",
+          "David Yang",
+          "Mohammad Mohammadi Amiri"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 560,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.22944",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.22944",
+        "id:SemanticScholar:fb2c0256a2afaacb8649d732e93b758c18bae40e",
+        "id:arXiv:2509.22944",
+        "title:sinq sinkhornnormalized quantization for calibrationfree lowprecision llm weights",
+        "url:https://arxiv.org/abs/2509.22944"
+      ],
+      "record": {
+        "title": "SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights",
+        "source_url": "https://arxiv.org/abs/2509.22944",
+        "year": 2025,
+        "published": "2025-09-26",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization has emerged as the most widely used strategy for deploying large language models at low precision. Still, current methods show perplexity degradation at bit-widths less than or equal to 4, partly because representing outliers causes precision issues in parameters that share the same scales as these outliers. This problem is especially pronounced for calibration-free, uniform quantization methods. We introduce SINQ to augment existing post-training quantizers with an additional second-axis scale factor and a fast Sinkhorn-Knopp-style algorithm that finds scales to normalize per-row and per-column variances. We show that this approximates activation-aware quantization by recovering column scales from the weight matrix structure that are predictive of the typical activation magnitudes the matrix received during training. Our method has no interactions between layers and can be trivially applied to new architectures to quantize any linear layer. We evaluate our method on the Qwen3 model family, among others. SINQ reduces the perplexity gap on WikiText2 and C4 by over 50% against uncalibrated uniform quantization baselines, incurs zero to negligible compute overhead, and can be further enhanced by combining it with calibration and non-uniform quantization levels. Code is available at https://github.com/huawei-csl/SINQ.",
+        "identifiers": [
+          "SemanticScholar:fb2c0256a2afaacb8649d732e93b758c18bae40e"
+        ],
+        "semantic_scholar_id": "fb2c0256a2afaacb8649d732e93b758c18bae40e",
+        "canonical_id": "arXiv:2509.22944",
+        "arxiv_id": "2509.22944",
+        "doi": "10.48550/arXiv.2509.22944",
+        "authors": [
+          "Lorenz K. Muller",
+          "Philippe Bich",
+          "Jiawei Zhuang",
+          "Ahmet Çelik",
+          "Luca Benfenati",
+          "Lukas Cavigelli"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 382,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.15518",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.15518",
+        "id:SemanticScholar:4f12c2f039375512ee69cb2ed4faef550a98827c",
+        "id:arXiv:2408.15518",
+        "title:dolphin long context as a new modality for energyefficient ondevice language models",
+        "url:https://arxiv.org/abs/2408.15518"
+      ],
+      "record": {
+        "title": "Dolphin: Long Context as a New Modality for Energy-Efficient On-Device Language Models",
+        "source_url": "https://arxiv.org/abs/2408.15518",
+        "year": 2024,
+        "published": "2024-08-28",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper presents Dolphin, a novel decoder-decoder architecture for energy-efficient processing of long contexts in language models. Our approach addresses the significant energy consumption and latency challenges inherent in on-device models. Dolphin employs a compact 0.5B parameter decoder to distill extensive contextual information into a memory embedding, substantially reducing the input length for the primary 7B parameter decoder model. Inspired by vision-language models, we repurpose the image embedding projector to encode long textual contexts, effectively treating extended context as a distinct modality. This innovative method enables processing of substantially longer contexts without the typical computational overhead associated with extended input sequences. Empirical evaluations demonstrate a 10-fold improvement in energy efficiency and a 5-fold reduction in latency compared to conventional full-length context processing methods without losing quality of the response. Our work contributes to the development of more sustainable and scalable language models for on-device applications, addressing the critical need for energy-efficient and responsive AI technologies in resource-constrained environments while maintaining the accuracy to understand long contexts. This research has implications for the broader field of natural language processing, particularly in the domain of efficient model design for resource-limited settings. By enabling more sophisticated AI capabilities on edge devices, Dolphin paves the way for advanced language processing in a wide range of applications where computational resources are at a premium. The Dolphin model is publicly available at https://huggingface.co/NexaAIDev/Dolphin.",
+        "identifiers": [
+          "SemanticScholar:4f12c2f039375512ee69cb2ed4faef550a98827c"
+        ],
+        "semantic_scholar_id": "4f12c2f039375512ee69cb2ed4faef550a98827c",
+        "canonical_id": "arXiv:2408.15518",
+        "arxiv_id": "2408.15518",
+        "doi": "10.48550/arXiv.2408.15518",
+        "authors": [
+          "Wei Chen",
+          "Zhiyuan Li",
+          "Shuo Xin",
+          "Yi-Hao Wang"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 776,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.11057",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp49660.2025.10889000",
+        "id:SemanticScholar:9d4c8a5673fd772e4af1ab3baafe826bfd6d7447",
+        "id:arXiv:2409.11057",
+        "title:kvpruner structural pruning for faster and memoryefficient large language models",
+        "url:https://arxiv.org/abs/2409.11057"
+      ],
+      "record": {
+        "title": "KVPruner: Structural Pruning for Faster and Memory-Efficient Large Language Models",
+        "source_url": "https://arxiv.org/abs/2409.11057",
+        "year": 2024,
+        "published": "2024-09-17",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The bottleneck associated with the key-value(KV) cache presents a significant challenge during the inference processes of large language models. While depth pruning accelerates inference, it requires extensive recovery training, which can take up to two weeks. On the other hand, width pruning retains much of the performance but offers slight speed gains. To tackle these challenges, we propose KVPruner to improve model efficiency while maintaining performance. Our method uses global perplexity-based analysis to determine the importance ratio for each block and provides multiple strategies to prune non-essential KV channels within blocks. Compared to the original model, KVPruner reduces runtime memory usage by 50% and boosts throughput by over 35%. Additionally, our method requires only two hours of LoRA fine-tuning techniques on small datasets to recover most of the performance.",
+        "identifiers": [
+          "SemanticScholar:9d4c8a5673fd772e4af1ab3baafe826bfd6d7447"
+        ],
+        "semantic_scholar_id": "9d4c8a5673fd772e4af1ab3baafe826bfd6d7447",
+        "canonical_id": "arXiv:2409.11057",
+        "arxiv_id": "2409.11057",
+        "doi": "10.1109/ICASSP49660.2025.10889000",
+        "authors": [
+          "Bo Lv",
+          "Quan Zhou",
+          "Xuanang Ding",
+          "Yan Wang",
+          "Zeming Ma"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 756,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.16663",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.16663",
+        "id:SemanticScholar:865b4afddfc81b481e3dfab240154044deff7876",
+        "id:arXiv:2410.16663",
+        "title:fastattention extend flashattention2 to npus and lowresource gpus",
+        "url:https://arxiv.org/abs/2410.16663"
+      ],
+      "record": {
+        "title": "FastAttention: Extend FlashAttention2 to NPUs and Low-resource GPUs",
+        "source_url": "https://arxiv.org/abs/2410.16663",
+        "year": 2024,
+        "published": "2024-10-22",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "FlashAttention series has been widely applied in the inference of large language models (LLMs). However, FlashAttention series only supports the high-level GPU architectures, e.g., Ampere and Hopper. At present, FlashAttention series is not easily transferrable to NPUs and low-resource GPUs. Moreover, FlashAttention series is inefficient for multi- NPUs or GPUs inference scenarios. In this work, we propose FastAttention which pioneers the adaptation of FlashAttention series for NPUs and low-resource GPUs to boost LLM inference efficiency. Specifically, we take Ascend NPUs and Volta-based GPUs as representatives for designing our FastAttention. We migrate FlashAttention series to Ascend NPUs by proposing a novel two-level tiling strategy for runtime speedup, tiling-mask strategy for memory saving and the tiling-AllReduce strategy for reducing communication overhead, respectively. Besides, we adapt FlashAttention for Volta-based GPUs by redesigning the operands layout in shared memory and introducing a simple yet effective CPU-GPU cooperative strategy for efficient memory utilization. On Ascend NPUs, our FastAttention can achieve a 10.7$\\times$ speedup compared to the standard attention implementation. Llama-7B within FastAttention reaches up to 5.16$\\times$ higher throughput than within the standard attention. On Volta architecture GPUs, FastAttention yields 1.43$\\times$ speedup compared to its equivalents in \\texttt{xformers}. Pangu-38B within FastAttention brings 1.46$\\times$ end-to-end speedup using FasterTransformer. Coupled with the propose CPU-GPU cooperative strategy, FastAttention supports a maximal input length of 256K on 8 V100 GPUs. All the codes will be made available soon.",
+        "identifiers": [
+          "SemanticScholar:865b4afddfc81b481e3dfab240154044deff7876"
+        ],
+        "semantic_scholar_id": "865b4afddfc81b481e3dfab240154044deff7876",
+        "canonical_id": "arXiv:2410.16663",
+        "arxiv_id": "2410.16663",
+        "doi": "10.48550/arXiv.2410.16663",
+        "authors": [
+          "Hao-Ran Lin",
+          "Xianzhi Yu",
+          "Kang Zhao",
+          "Lu Hou",
+          "Zongyuan Zhan",
+          "S. Kamenev",
+          "Han Bao",
+          "Ting Hu",
+          "Mingkai Wang",
+          "Qi-Xin Chang",
+          "Siyue Sui",
+          "Wei-Hao Sun",
+          "Jia-Xin Hu",
+          "Jun Yao",
+          "Ze-Kun Yin",
+          "Cheng Qian",
+          "Ying Zhang",
+          "Yinfei Pan",
+          "Yu Yang",
+          "Wei-Guo Liu"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 721,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.27704",
+      "identity_tokens": [
+        "id:DOI:10.1109/jetcas.2025.3558300",
+        "id:SemanticScholar:fdeb9c9b279b5ec68b70094f8531605ba1d9247f",
+        "id:arXiv:2607.27704",
+        "title:lightrot a lightweighted rotation scheme and architecture for accurate lowbit large language model inference",
+        "url:https://arxiv.org/abs/2607.27704"
+      ],
+      "record": {
+        "title": "LightRot: A Light-Weighted Rotation Scheme and Architecture for Accurate Low-Bit Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2607.27704",
+        "year": 2025,
+        "published": "2025-06-01",
+        "venue": "IEEE Journal on Emerging and Selected Topics in Circuits and Systems",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) continue to demonstrate exceptional capabilities across various domains, the challenge of achieving energy-efficient and accurate inference becomes increasingly critical. This work presents LightRot, a lightweight rotation scheme and dedicated hardware accelerator designed for low-bit LLM inference. The proposed architecture integrates Grouped Local Rotation (GLR) and Outlier Direction Aligning (ODA) algorithms with a hierarchical Fast Hadamard Transform (FHT)-based rotation unit to address key challenges in low-bit quantization, including the energy overhead of rotation operations. The proposed accelerator, implemented in a 28nm CMOS process, achieves a peak energy efficiency of 27.4TOPS/W for 4-bit inference, surpassing prior state-of-the-art designs. Unlike conventional approaches that rely on higher-precision inference or evaluate on basic language modeling tasks like GPT-2, LightRot is optimized for advanced models such as LLaMA2-13B and LLaMA3-8B. Its performance is further validated on MT-Bench, demonstrating robust applicability to real-world conversational scenarios and redefining benchmarks for chat-based AI systems. By synergizing algorithmic innovations and hardware efficiency, this work sets a new paradigm for scalable, low-bit LLM inference, paving the way for sustainable AI advancements.",
+        "identifiers": [
+          "SemanticScholar:fdeb9c9b279b5ec68b70094f8531605ba1d9247f"
+        ],
+        "semantic_scholar_id": "fdeb9c9b279b5ec68b70094f8531605ba1d9247f",
+        "canonical_id": "arXiv:2607.27704",
+        "arxiv_id": "2607.27704",
+        "doi": "10.1109/JETCAS.2025.3558300",
+        "authors": [
+          "Sangjin Kim",
+          "Yuseon Choi",
+          "Jungjun Oh",
+          "Byeongcheol Kim",
+          "Hoi-Jun Yoo"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 499,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.17307",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.17307",
+        "id:SemanticScholar:7590f4ccd65aef8822cf1cbbcfbac90bd895e27b",
+        "id:arXiv:2507.17307",
+        "title:rstitch dynamic trajectory stitching for efficient reasoning",
+        "url:https://arxiv.org/abs/2507.17307"
+      ],
+      "record": {
+        "title": "R-Stitch: Dynamic Trajectory Stitching for Efficient Reasoning",
+        "source_url": "https://arxiv.org/abs/2507.17307",
+        "year": 2025,
+        "published": "2025-07-23",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chain-of-thought (CoT) enhances the problem-solving ability of large language models (LLMs) but incurs substantial inference cost due to long autoregressive trajectories. Existing acceleration strategies either shorten traces via early stopping or compression, or adopt speculative decoding with a smaller model. However, speculative decoding provides limited gains when model agreement is low and rigidly enforces token-level consistency, overlooking the observation that some smaller models, when correct, produce significantly more concise reasoning traces that could reduce inference length. We introduce R-Stitch, a training-free hybrid decoding framework that leverages token-level entropy as an uncertainty proxy to delegate computation between a small language model (SLM) and an LLM. Our analysis shows that high-entropy tokens are more likely to induce errors, motivating an entropy-guided routing strategy that lets the SLM efficiently handle low-entropy tokens while delegating uncertain ones to the LLM, thereby avoiding full rollbacks and preserving answer quality. We further extend this design with R-Stitch$^{+}$, which learns an adaptive routing policy to adjust the token budget dynamically beyond fixed thresholds. By jointly reducing per-token decoding complexity and the number of generated tokens, our method achieves substantial acceleration with negligible accuracy loss. Concretely, it attains peak speedups of 3.00$\\times$ on DeepSeek-R1-Distill-Qwen-7B, 3.85$\\times$ on 14B, and 4.10$\\times$ on QWQ-32B while maintaining accuracy comparable to full LLM decoding. Moreover, it naturally enables adaptive efficiency--accuracy trade-offs that can be tailored to diverse computational budgets without retraining.",
+        "identifiers": [
+          "SemanticScholar:7590f4ccd65aef8822cf1cbbcfbac90bd895e27b"
+        ],
+        "semantic_scholar_id": "7590f4ccd65aef8822cf1cbbcfbac90bd895e27b",
+        "canonical_id": "arXiv:2507.17307",
+        "arxiv_id": "2507.17307",
+        "doi": "10.48550/arXiv.2507.17307",
+        "authors": [
+          "Zhuo-Kun Chen",
+          "Zeren Chen",
+          "Jia-Hao He",
+          "Lu Sheng",
+          "Mingkui Tan",
+          "Jian-Fei Cai",
+          "Bo-Han Zhuang"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 447,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8fa394fbf608cfde67da9df7f20f42f7ccb1824376e49c54233061908919e57d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

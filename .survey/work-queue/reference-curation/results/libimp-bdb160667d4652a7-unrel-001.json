@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bdb160667d4652a7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.20091",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.20091",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.20091",
+      "SemanticScholar:289267e934ac7aabc5d463a8787d8ae7a0e02ae4",
+      "arXiv:2602.20091"
+    ],
+    "reason": "Studies RAG representations and answer behavior, without a serving or inference-efficiency mechanism.",
+    "first_checked_at": "2026-10-13T06:31:15+00:00",
+    "last_checked_at": "2026-10-13T06:31:15+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+    ],
+    "title": "How Retrieved Context Shapes Internal Representations in RAG"
+  },
+  "processed_at": "2026-10-13T06:31:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bdb160667d46",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

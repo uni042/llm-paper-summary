@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ebcba1e1a6b4e7f9-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.03148",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.03148",
+    "identity_tokens": [
+      "arXiv:2608.03148"
+    ],
+    "reason": "RAG文脈選択には関連するが、本文の主要指標はevidence rank-1精度で、推論token/latency/resource savingsおよびselector overheadを測定していない。",
+    "first_checked_at": "2026-10-05T09:08:32+00:00",
+    "last_checked_at": "2026-10-05T09:08:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+    ],
+    "title": "Lightweight Chunk Selection for Mobile Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-10-05T09:08:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ebcba1e1a6b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

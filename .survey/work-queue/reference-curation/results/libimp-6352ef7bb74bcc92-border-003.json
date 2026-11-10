@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6352ef7bb74bcc92-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.18496",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.18496",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.18496",
+      "arXiv:2601.18496"
+    ],
+    "reason": "一次要旨は医療調査エージェントの多段検索と臨床推論を改善し、難度に応じたツール呼出し抑制と推論中の監視器で不要な探索を抑える。呼出し回数の制御は推論費用に関連するが、主評価は医療問題7ベンチマークの正答性能であり、汎用LLMサービングのスケジューリングやGPU処理量を直接測っていないため境界的とする。",
+    "first_checked_at": "2026-10-16T09:27:34+00:00",
+    "last_checked_at": "2026-10-16T09:27:34+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference"
+  },
+  "processed_at": "2026-10-16T09:27:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6352ef7bb74b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

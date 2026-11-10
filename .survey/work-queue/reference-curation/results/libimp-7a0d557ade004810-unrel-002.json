@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a0d557ade004810-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/su18031677",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/su18031677",
+    "identity_tokens": [
+      "DOI:10.3390/su18031677"
+    ],
+    "reason": "一次資料の要旨を確認。Short-Term Residential Load Forecasting (STRLF) is a core task in smart grid dispatching and energy management, and its accuracy directly affects the economy and stability of power systems. Current mainstream methods still have limitations in addressing issues such as complex temporal patterns, strong stochasticity of load data, and insufficient model interpretability. To this end, this paper prop",
+    "first_checked_at": "2026-10-06T21:12:51+00:00",
+    "last_checked_at": "2026-10-06T21:12:51+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "title": "KAN+Transformer: An Explainable and Efficient Approach for Electric Load Forecasting"
+  },
+  "processed_at": "2026-10-06T21:12:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a0d557ade00",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

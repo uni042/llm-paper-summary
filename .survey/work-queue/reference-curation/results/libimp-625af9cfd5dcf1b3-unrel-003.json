@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-625af9cfd5dcf1b3-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.10189",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.10189",
+    "identity_tokens": [
+      "DOI:10.1021/acs.jpcb.5c01030",
+      "SemanticScholar:0b11a833a29c16dfb21cd7cec04061bd3adfecbc",
+      "arXiv:2502.10189"
+    ],
+    "reason": "The work studies sample-based quantum diagonalization with implicit-solvent modeling, outside LLM inference systems.",
+    "first_checked_at": "2026-10-16T06:19:24+00:00",
+    "last_checked_at": "2026-10-16T06:19:24+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+    ],
+    "title": "Implicit Solvent Sample-Based Quantum Diagonalization"
+  },
+  "processed_at": "2026-10-16T06:19:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-625af9cfd5dc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260924T0144JST-scheduled-chat-00-forward-r4-retry2",
+  "collector_id": "scheduled-chat-00-forward-lmcache-openalex-r4-retry2",
+  "run_key": "scheduled-chat-00-20260924T010023JST-7d2b91",
+  "axis": "forward citations of LMCache enterprise-scale KV cache layer",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?filter=cites:W4417150458&sort=publication_date:desc",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "663c9ef646cd6697bd722864a320be7f2faea8bd",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T16:36:24.165610+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 1,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference",
+      "source_url": "https://doi.org/10.1145/3789240.3828750",
+      "year": 2026,
+      "published": "2026-08-11",
+      "canonical_id": "DOI:10.1145/3789240.3828750",
+      "doi": "10.1145/3789240.3828750",
+      "authors": [
+        "Hung-Chun Lin",
+        "Ting-Wei Hsu",
+        "Chung-En Ho",
+        "Ahmed Saeed"
+      ]
+    },
+    {
+      "title": "Cloud-Based Large Language Model Deployment: A Comparative Analysis of Serverless and Bring-Your-Own-Container Architectures",
+      "source_url": "https://doi.org/10.18267/j.aip.313",
+      "year": 2026,
+      "published": "2026-04-26",
+      "canonical_id": "DOI:10.18267/j.aip.313",
+      "doi": "10.18267/j.aip.313",
+      "authors": [
+        "Mateusz Ploskonka"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3828750",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3828750",
+        "title:ark avoiding routing collisions for kv cache transfer in disaggregated llm inference",
+        "url:https://doi.org/10.1145/3789240.3828750"
+      ],
+      "record": {
+        "title": "ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference",
+        "source_url": "https://doi.org/10.1145/3789240.3828750",
+        "year": 2026,
+        "published": "2026-08-11",
+        "canonical_id": "DOI:10.1145/3789240.3828750",
+        "doi": "10.1145/3789240.3828750",
+        "authors": [
+          "Hung-Chun Lin",
+          "Ting-Wei Hsu",
+          "Chung-En Ho",
+          "Ahmed Saeed"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18267/j.aip.313",
+      "identity_tokens": [
+        "id:DOI:10.18267/j.aip.313",
+        "title:cloudbased large language model deployment a comparative analysis of serverless and bringyourowncontainer architectures",
+        "url:https://doi.org/10.18267/j.aip.313"
+      ],
+      "record": {
+        "title": "Cloud-Based Large Language Model Deployment: A Comparative Analysis of Serverless and Bring-Your-Own-Container Architectures",
+        "source_url": "https://doi.org/10.18267/j.aip.313",
+        "year": 2026,
+        "published": "2026-04-26",
+        "canonical_id": "DOI:10.18267/j.aip.313",
+        "doi": "10.18267/j.aip.313",
+        "authors": [
+          "Mateusz Ploskonka"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:77c451071da14d15665f0c5858a7cb3798f02385468d8e650055fd2e418c7885",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

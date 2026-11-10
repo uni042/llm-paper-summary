@@ -1,0 +1,870 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-dd7e1c71cf8f141d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-dd7e1c71cf8f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2505.18231",
+    "arXiv:2505.20776",
+    "arXiv:2512.03870",
+    "arXiv:2601.21686",
+    "arXiv:2603.15042",
+    "arXiv:2604.17695",
+    "arXiv:2608.09595",
+    "arXiv:2608.28276",
+    "arXiv:2609.33923",
+    "arXiv:2610.19792"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "adc562db0d0ac2a642b6288851c26b6468446794",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T21:05:15.142077+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2505.18231",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.20776",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:specextend a dropin enhancement for speculative decoding of long sequences"
+    },
+    {
+      "requested_id": "arXiv:2512.03870",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.21686",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.15042",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.17695",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.09595",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.28276",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33923",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.19792",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Reconstructing KV Caches with Cross-layer Fusion For Enhanced Transformers",
+      "source_url": "https://arxiv.org/abs/2512.03870",
+      "year": 2025,
+      "published": "2025-12-03",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer decoders have achieved strong results across tasks, but the memory required for the KV cache becomes prohibitive at long sequence lengths. Although Cross-layer KV Cache sharing (e.g., YOCO, CLA) offers a path to mitigate KV Cache bottleneck, it typically underperforms within-layer methods like GQA. To understand the root cause, we investigate the information flow of keys and values of the top-layers. Our preliminary reveals a clear distribution: values are predominantly derived from the bottom layer, while keys draw more information from both bottom and middle layers. Building upon this, we propose FusedKV, whose top-layer KV caches are a learnable fusion of the most informative ones from the bottom and middle layers. This fusion operates directly on post-RoPE keys, preserving relative positional information without the computational cost of re-applying rotary embeddings. To further improve efficiency, we propose FusedKV-Lite, an cross-layer sharing approach, where top-layer KV caches are directly derived from the bottom-layer values and the middle-layer keys. Compared to FusedKV, FusedKV-Lite reduces I/O overhead at the cost of a slight increase in perplexity. In experiments on LLMs ranging from 332M to 4B parameters, our proposed method reduce 50\\% cache memory while achieving lower validation perplexity than the standard Transformer decoder, establishing it as a memory-efficient, high-performance architectural alternative.",
+      "identifiers": [
+        "SemanticScholar:73d41f0f4db4506225fb0c7c3fe879e4fe6ff295"
+      ],
+      "semantic_scholar_id": "73d41f0f4db4506225fb0c7c3fe879e4fe6ff295",
+      "canonical_id": "arXiv:2512.03870",
+      "arxiv_id": "2512.03870",
+      "doi": "10.48550/arXiv.2512.03870",
+      "authors": [
+        "Hong-Zhan Lin",
+        "Zhi-Qi Bai",
+        "Xinmiao Zhang",
+        "Sen Yang",
+        "Xiang Li",
+        "Si-Ran Yang",
+        "Yun-Long Xu",
+        "Jiaheng Liu",
+        "Yong-Chi Zhao",
+        "Jia-Mang Wang",
+        "Yu-Chi Xu",
+        "Wen-Bo Su",
+        "Bo Zheng"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 329,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Don't be so Stief! Learning KV Cache low-rank approximation over the Stiefel manifold",
+      "source_url": "https://arxiv.org/abs/2601.21686",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-value (KV) caching enables fast autoregressive decoding but at long contexts becomes a dominant bottleneck in High Bandwidth Memory (HBM) capacity and bandwidth. A common mitigation is to compress cached keys and values by projecting per-head matrices to a lower rank, storing only the projections in the HBM. However, existing post-training approaches typically fit these projections using SVD-style proxy objectives, which may poorly reflect end-to-end reconstruction after softmax, value mixing, and subsequent decoder-layer transformations. For these reasons, we introduce StiefAttention, a post-training KV-cache compression method that learns orthonormal projection bases by directly minimizing decoder-layer output reconstruction error. StiefAttention additionally constructs layer-wise error-rank profiles over candidate ranks, enabling sequential rank allocation under a user-specified KV cache budget. Notably, on Llama3-8B under the same conditions, StiefAttention outperforms EigenAttention by $4.2$ points on C4 perplexity and $8.9$ points on 0-shot MMLU accuracy at iso-compression, yielding lower relative error and higher cosine similarity with respect to the original decoder-layer outputs.",
+      "identifiers": [
+        "SemanticScholar:f121226b72d14030c339e0112d66e80dc7afeccb"
+      ],
+      "semantic_scholar_id": "f121226b72d14030c339e0112d66e80dc7afeccb",
+      "canonical_id": "arXiv:2601.21686",
+      "arxiv_id": "2601.21686",
+      "doi": "10.48550/arXiv.2601.21686",
+      "authors": [
+        "Luca Benfenati",
+        "M. Risso",
+        "A. Vannozzi",
+        "Ahmet Caner Yüzügüler",
+        "Lukas Cavigelli",
+        "Enrico Macii",
+        "D. J. Pagliari",
+        "A. Burrello"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 272,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MoE-nD: Per-Layer Mixture-of-Experts Routing for Multi-Axis KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2604.17695",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache memory is the dominant bottleneck for long-context LLM inference. Existing compression methods each act on a single axis of the four-dimensional KV tensor -- token eviction (sequence), quantization (precision), low-rank projection (head dimension), or cross-layer sharing -- but apply the same recipe to every layer. We show that this homogeneity leaves accuracy on the table: different layers respond very differently to each compression operation, and the optimal per-layer mix of eviction and quantization is far from uniform. We propose MoE-nD, a mixture-of-experts framework that routes each layer to its own (eviction-ratio, K-bits, V-bits) tuple under a global memory budget. An offline-calibrated greedy solver chooses the routing that minimizes predicted quality loss; at inference time, per-layer heterogeneous eviction and quantization are applied jointly through a single attention patch. On a 4-task subset of LongBench-v1 (16k inputs, n=50 per task, adapted reasoning-model protocol; see section Experiments), MoE-nD's hetero variant matches our uncompressed 1.9~GB baseline at 14x compression (136~MB) while every other compressed baseline we tested (1d, 2d_uniform, 2d) at comparable or smaller memory stays under 8/100. The gains hold on AIME reasoning benchmarks (+6 to +27 pts over the strongest per-layer-quantization baseline across eight configurations). Two null results -- MATH-500 and LongBench's TREC -- share a principled cause (short inputs, solver picks keep=1.0 on most layers), cleanly characterizing when per-layer eviction routing has headroom to help.",
+      "identifiers": [
+        "SemanticScholar:8cd89d9c2ae618bcc889810e503fe52d4fd99d24"
+      ],
+      "semantic_scholar_id": "8cd89d9c2ae618bcc889810e503fe52d4fd99d24",
+      "canonical_id": "arXiv:2604.17695",
+      "arxiv_id": "2604.17695",
+      "doi": "10.48550/arXiv.2604.17695",
+      "authors": [
+        "Libo Sun",
+        "Pei-Xiong He",
+        "P. Harn",
+        "Xiaolin Qin"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 191,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NSNQuant: A Double Normalization Approach for Calibration-Free Low-Bit Vector Quantization of KV Cache",
+      "source_url": "https://arxiv.org/abs/2505.18231",
+      "year": 2025,
+      "published": "2025-05-23",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) inference is typically memory-intensive, especially when processing large batch sizes and long sequences, due to the large size of key-value (KV) cache. Vector Quantization (VQ) is recently adopted to alleviate this issue, but we find that the existing approach is susceptible to distribution shift due to its reliance on calibration datasets. To address this limitation, we introduce NSNQuant, a calibration-free Vector Quantization (VQ) technique designed for low-bit compression of the KV cache. By applying a three-step transformation-1) a token-wise normalization (Normalize), 2) a channel-wise centering (Shift), and 3) a second token-wise normalization (Normalize)-with Hadamard transform, NSNQuant effectively aligns the token distribution with the standard normal distribution. This alignment enables robust, calibration-free vector quantization using a single reusable codebook. Extensive experiments show that NSNQuant consistently outperforms prior methods in both 1-bit and 2-bit settings, offering strong generalization and up to 3$\\times$ throughput gain over full-precision baselines. Code is available at https://github.com/DHdroid/NSNQuant.",
+      "identifiers": [
+        "SemanticScholar:73a24e44b5d96c7b4f569773dff267f146bb54b7"
+      ],
+      "semantic_scholar_id": "73a24e44b5d96c7b4f569773dff267f146bb54b7",
+      "canonical_id": "arXiv:2505.18231",
+      "arxiv_id": "2505.18231",
+      "doi": "10.48550/arXiv.2505.18231",
+      "authors": [
+        "Donghyun Son",
+        "Euntae Choi",
+        "Sungjoo Yoo"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 523,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Determinism-Preserving GPU Spatial Sharing with Vitamin-E",
+      "source_url": "https://arxiv.org/abs/2603.15042",
+      "year": 2026,
+      "published": "2026-03-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "GPU sharing faces a determinism--utilization tradeoff: fixed bindings can strand capacity as demand fluctuates, while resource-driven kernel reshaping improves utilization by altering a launch's parallel structure, potentially changing output bits. We rethink modern GPU scheduling and observe that it decouples logical structure from physical width: one unmodified launch spans a family of widths through changes in block placement and wave count. From this observation, we derive the parallel-structure invariant: for fixed-structure deterministic workloads, keeping each launch immutable makes its output bits independent of physical width. Guided by this invariant, Vitamin-E late-binds immutable launches to pooled physical contexts, preserving bitwise equality across allocations, whereas resource-driven reshaping can alter the selected token under temperature-zero greedy decoding. Across all workload--baseline comparisons, Vitamin-E achieves up to 3.50$\\times$ the aggregate normalized LLM training throughput, 62.5\\% lower inference p99 latency, and 1.43$\\times$ the background-training throughput. With the same mechanism, \\textsc{TPOT-First} reduces TPOT SLO violations by up to 46.1\\% over \\textsc{Throughput-Oriented} on three serving workloads, demonstrating mechanism effectiveness and policy flexibility.",
+      "identifiers": [
+        "SemanticScholar:c287a8620724302be949102d6e5743c29af83fb9"
+      ],
+      "semantic_scholar_id": "c287a8620724302be949102d6e5743c29af83fb9",
+      "canonical_id": "arXiv:2603.15042",
+      "arxiv_id": "2603.15042",
+      "authors": [
+        "Zhenyu Yang",
+        "Wenxin Zheng",
+        "Ming-Yu Li",
+        "Hai-Bo Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 226,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Sweep to Seam: Interleaved Cross-Block Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2608.09595",
+      "year": 2026,
+      "published": "2026-08-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Compressing large language models to two bits or fewer is increasingly feasible through block-wise post-training quantization; cross-block variants reconstruct neighboring Transformer blocks within a moving window. In the fixed two-block setting studied here, the matched sequential baseline moves this window through the network once, so errors introduced early in the sweep are not revisited. We propose Interleaved Cross-Block Quantization (ICBQ), a scheduling modification that revisits the boundary pair between consecutive chunks. Each seam pair is refined twice: first at the end of one chunk and again at the start of the next. The method retains the local two-block objective and reuses the calibration inputs of existing block-wise PTQ pipelines. Under stated local contraction and smoothness assumptions, we derive a depth-wise upper-bound comparison in which seam revisits multiply the propagated term while the residual remains bounded independently of depth. In the reported experiments, ICBQ reduces ternary-quantization perplexity relative to the matched Sequential CBQ baseline, yields finite perplexity in configurations where the baseline has severe degradation, and can also be used with 3-bit and 2-bit GPTQ.",
+      "identifiers": [
+        "SemanticScholar:43f11470f784c36df8c680c4eaf2cb534e14ea73"
+      ],
+      "semantic_scholar_id": "43f11470f784c36df8c680c4eaf2cb534e14ea73",
+      "canonical_id": "arXiv:2608.09595",
+      "arxiv_id": "2608.09595",
+      "authors": [
+        "Achille Jacquemond",
+        "Yuma Ichikawa",
+        "Akira Sakai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 79,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Parser Transitions Already Reveal Structural Responsibility: KV Persistence for Structured Generation",
+      "source_url": "https://arxiv.org/abs/2608.28276",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents use structured generation for JSON, SQL, and function calls. Constrained decoding ensures valid formats, but KV compression can discard history needed for correct function and argument selection. Structural responsibility can diverge from model saliency: importance scores can overlook generated tokens'structural roles. Parser transitions already computed for legality encode these roles, including required arguments and structural boundaries, providing a free retention signal. We introduce PASK (Parser-Aware Structural KV Persistence), which reuses this signal for KV persistence by layer group without online importance estimation. Task-error sensitivity sets protection floors, while attention-output distortion ranks upgrades under the remaining budget. Offline calibration produces a frozen table for structural lookup and budget accounting. PASK outperforms budget-controlled baselines on function calling and text-to-SQL, improving BFCL accuracy by up to 8.67 pp over the strongest comparator. Against Full KV, it cuts peak GPU memory by 47.5 percent and achieves up to 3.3 times TPOT speedup.",
+      "identifiers": [
+        "SemanticScholar:f4ef9bd7ff37ded45f261afcdc5705e2687b8238"
+      ],
+      "semantic_scholar_id": "f4ef9bd7ff37ded45f261afcdc5705e2687b8238",
+      "canonical_id": "arXiv:2608.28276",
+      "arxiv_id": "2608.28276",
+      "authors": [
+        "Lin Wu",
+        "Xin-Rong Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 61,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Quantization Error Is Spectrally Flat: A Single Random Probe Is a Calibrated, Data-Free Sensitivity Estimator, with Application to Budget-Targeted Mixed-Precision Quantization",
+      "source_url": "https://arxiv.org/abs/2609.33923",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A single random Gaussian probe gives an unbiased estimate of the squared Frobenius norm of a layer's quantization error. The estimator is well-behaved because round-to-nearest error is spectrally flat. Across 1,683 tensors from a 35B MoE and a 9B dense model, effective dimensionality is 0.93 to 0.96 times the i.i.d. noise value of the same shape, and on the MoE the median is unchanged from 2-bit to 8-bit. The probe coefficient of variation is predictable from tensor shape. One probe measures per-tensor sensitivity to within 4 to 7%; twenty probes reach 1.3 to 1.4%.RAM applies the propagated form of this estimator to budget-targeted mixed-precision quantization with no calibration data. Gaussian probes carrying the network's own input statistics score every tensor at six bit-widths. A knapsack solver allocates bits under an exact byte budget, with guardrails against catastrophic 2-bit assignments. One probe pass serves any budget. Isolated and propagated scores rank tensors independently on Qwen3.5-35B-A3B (Spearman -0.01), yet the propagated probe rank-correlates 0.81 to 0.83 with the GPTQ layer objective from real activations, while the isolated estimator is uncorrelated with it. That objective is the wrong allocation target: at matched bytes on Qwen3.8-27B, a block-output probe beats a vendor IQ3_M mix and an oracle that allocates from the real-activation objective. On Qwen3-8B the propagated probe ties HAWQ-V2 at matched bytes. Across seven architectures from 8B to 122B, with probe timing up to a 400B model in nine minutes on one workstation, RAM reaches 3.5 to 13.6% lower median WikiText-2 perplexity than size-comparable uniform 4-bit builds on the tested MoE models. (Black Sheep Ai baa.ai)",
+      "identifiers": [
+        "SemanticScholar:8b56fb453ac818c1d56b719984a8d6d04e33b240"
+      ],
+      "semantic_scholar_id": "8b56fb453ac818c1d56b719984a8d6d04e33b240",
+      "canonical_id": "arXiv:2609.33923",
+      "arxiv_id": "2609.33923",
+      "authors": [
+        "I. Kennedy",
+        "T. Kennedy"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "JetSpec++: Foresight Parallel Drafting with Self Refinements",
+      "source_url": "https://arxiv.org/abs/2610.19792",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding's effectiveness is governed by two quantities: the acceptance rate of drafted tokens and the cost of producing them. We show the two objectives can be co-optimized with algorithm-system co-design, and present JetSpec++, which retains a strong learned draft model while hiding its cost almost entirely. JetSpec++ combines three components: intra-block self refinement, which trains the draft model to iteratively correct its own parallel predictions within a block of tokens; inter-block foresight drafting, which begins the next block before the current one is verified; and pipelined drafting and verification, which overlaps the two stages so drafting's marginal wall-clock cost approaches zero. In comparison with state-of-the-art speculative decoding methods, JetSpec++ attains a wall-clock speedup of up to $7.45\\times$ over autoregressive (AR) decoding and $1.54\\times$ over DSpark, with up to 1,361 tokens per second for a single request on GB200, and an average acceptance length of 8.94 across seven benchmarks, while preserving the target model's output distribution. Our code and models are available at https://github.com/hao-ai-lab/JetSpec.",
+      "identifiers": [
+        "SemanticScholar:273b172a11ec66eb496b8a079f9ae0578780fd3d"
+      ],
+      "semantic_scholar_id": "273b172a11ec66eb496b8a079f9ae0578780fd3d",
+      "canonical_id": "arXiv:2610.19792",
+      "arxiv_id": "2610.19792",
+      "authors": [
+        "Zhao-Xiang Feng",
+        "Lan-Xiang Hu",
+        "Hao-Ran Yuan",
+        "Yuan-Pan Qian",
+        "Ji-Hui Yang",
+        "Peng-Fei Zhao",
+        "Yi-Bo Zhu",
+        "T. Rosing",
+        "Hao Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 14,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.03870",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.03870",
+        "id:SemanticScholar:73d41f0f4db4506225fb0c7c3fe879e4fe6ff295",
+        "id:arXiv:2512.03870",
+        "title:reconstructing kv caches with crosslayer fusion for enhanced transformers",
+        "url:https://arxiv.org/abs/2512.03870"
+      ],
+      "record": {
+        "title": "Reconstructing KV Caches with Cross-layer Fusion For Enhanced Transformers",
+        "source_url": "https://arxiv.org/abs/2512.03870",
+        "year": 2025,
+        "published": "2025-12-03",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer decoders have achieved strong results across tasks, but the memory required for the KV cache becomes prohibitive at long sequence lengths. Although Cross-layer KV Cache sharing (e.g., YOCO, CLA) offers a path to mitigate KV Cache bottleneck, it typically underperforms within-layer methods like GQA. To understand the root cause, we investigate the information flow of keys and values of the top-layers. Our preliminary reveals a clear distribution: values are predominantly derived from the bottom layer, while keys draw more information from both bottom and middle layers. Building upon this, we propose FusedKV, whose top-layer KV caches are a learnable fusion of the most informative ones from the bottom and middle layers. This fusion operates directly on post-RoPE keys, preserving relative positional information without the computational cost of re-applying rotary embeddings. To further improve efficiency, we propose FusedKV-Lite, an cross-layer sharing approach, where top-layer KV caches are directly derived from the bottom-layer values and the middle-layer keys. Compared to FusedKV, FusedKV-Lite reduces I/O overhead at the cost of a slight increase in perplexity. In experiments on LLMs ranging from 332M to 4B parameters, our proposed method reduce 50\\% cache memory while achieving lower validation perplexity than the standard Transformer decoder, establishing it as a memory-efficient, high-performance architectural alternative.",
+        "identifiers": [
+          "SemanticScholar:73d41f0f4db4506225fb0c7c3fe879e4fe6ff295"
+        ],
+        "semantic_scholar_id": "73d41f0f4db4506225fb0c7c3fe879e4fe6ff295",
+        "canonical_id": "arXiv:2512.03870",
+        "arxiv_id": "2512.03870",
+        "doi": "10.48550/arXiv.2512.03870",
+        "authors": [
+          "Hong-Zhan Lin",
+          "Zhi-Qi Bai",
+          "Xinmiao Zhang",
+          "Sen Yang",
+          "Xiang Li",
+          "Si-Ran Yang",
+          "Yun-Long Xu",
+          "Jiaheng Liu",
+          "Yong-Chi Zhao",
+          "Jia-Mang Wang",
+          "Yu-Chi Xu",
+          "Wen-Bo Su",
+          "Bo Zheng"
+        ],
+        "priority": 110,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 110,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 329,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.21686",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.21686",
+        "id:SemanticScholar:f121226b72d14030c339e0112d66e80dc7afeccb",
+        "id:arXiv:2601.21686",
+        "title:dont be so stief learning kv cache lowrank approximation over the stiefel manifold",
+        "url:https://arxiv.org/abs/2601.21686"
+      ],
+      "record": {
+        "title": "Don't be so Stief! Learning KV Cache low-rank approximation over the Stiefel manifold",
+        "source_url": "https://arxiv.org/abs/2601.21686",
+        "year": 2026,
+        "published": "2026-01-29",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Key-value (KV) caching enables fast autoregressive decoding but at long contexts becomes a dominant bottleneck in High Bandwidth Memory (HBM) capacity and bandwidth. A common mitigation is to compress cached keys and values by projecting per-head matrices to a lower rank, storing only the projections in the HBM. However, existing post-training approaches typically fit these projections using SVD-style proxy objectives, which may poorly reflect end-to-end reconstruction after softmax, value mixing, and subsequent decoder-layer transformations. For these reasons, we introduce StiefAttention, a post-training KV-cache compression method that learns orthonormal projection bases by directly minimizing decoder-layer output reconstruction error. StiefAttention additionally constructs layer-wise error-rank profiles over candidate ranks, enabling sequential rank allocation under a user-specified KV cache budget. Notably, on Llama3-8B under the same conditions, StiefAttention outperforms EigenAttention by $4.2$ points on C4 perplexity and $8.9$ points on 0-shot MMLU accuracy at iso-compression, yielding lower relative error and higher cosine similarity with respect to the original decoder-layer outputs.",
+        "identifiers": [
+          "SemanticScholar:f121226b72d14030c339e0112d66e80dc7afeccb"
+        ],
+        "semantic_scholar_id": "f121226b72d14030c339e0112d66e80dc7afeccb",
+        "canonical_id": "arXiv:2601.21686",
+        "arxiv_id": "2601.21686",
+        "doi": "10.48550/arXiv.2601.21686",
+        "authors": [
+          "Luca Benfenati",
+          "M. Risso",
+          "A. Vannozzi",
+          "Ahmet Caner Yüzügüler",
+          "Lukas Cavigelli",
+          "Enrico Macii",
+          "D. J. Pagliari",
+          "A. Burrello"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 272,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.17695",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.17695",
+        "id:SemanticScholar:8cd89d9c2ae618bcc889810e503fe52d4fd99d24",
+        "id:arXiv:2604.17695",
+        "title:moend perlayer mixtureofexperts routing for multiaxis kv cache compression",
+        "url:https://arxiv.org/abs/2604.17695"
+      ],
+      "record": {
+        "title": "MoE-nD: Per-Layer Mixture-of-Experts Routing for Multi-Axis KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2604.17695",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV cache memory is the dominant bottleneck for long-context LLM inference. Existing compression methods each act on a single axis of the four-dimensional KV tensor -- token eviction (sequence), quantization (precision), low-rank projection (head dimension), or cross-layer sharing -- but apply the same recipe to every layer. We show that this homogeneity leaves accuracy on the table: different layers respond very differently to each compression operation, and the optimal per-layer mix of eviction and quantization is far from uniform. We propose MoE-nD, a mixture-of-experts framework that routes each layer to its own (eviction-ratio, K-bits, V-bits) tuple under a global memory budget. An offline-calibrated greedy solver chooses the routing that minimizes predicted quality loss; at inference time, per-layer heterogeneous eviction and quantization are applied jointly through a single attention patch. On a 4-task subset of LongBench-v1 (16k inputs, n=50 per task, adapted reasoning-model protocol; see section Experiments), MoE-nD's hetero variant matches our uncompressed 1.9~GB baseline at 14x compression (136~MB) while every other compressed baseline we tested (1d, 2d_uniform, 2d) at comparable or smaller memory stays under 8/100. The gains hold on AIME reasoning benchmarks (+6 to +27 pts over the strongest per-layer-quantization baseline across eight configurations). Two null results -- MATH-500 and LongBench's TREC -- share a principled cause (short inputs, solver picks keep=1.0 on most layers), cleanly characterizing when per-layer eviction routing has headroom to help.",
+        "identifiers": [
+          "SemanticScholar:8cd89d9c2ae618bcc889810e503fe52d4fd99d24"
+        ],
+        "semantic_scholar_id": "8cd89d9c2ae618bcc889810e503fe52d4fd99d24",
+        "canonical_id": "arXiv:2604.17695",
+        "arxiv_id": "2604.17695",
+        "doi": "10.48550/arXiv.2604.17695",
+        "authors": [
+          "Libo Sun",
+          "Pei-Xiong He",
+          "P. Harn",
+          "Xiaolin Qin"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 191,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.18231",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.18231",
+        "id:SemanticScholar:73a24e44b5d96c7b4f569773dff267f146bb54b7",
+        "id:arXiv:2505.18231",
+        "title:nsnquant a double normalization approach for calibrationfree lowbit vector quantization of kv cache",
+        "url:https://arxiv.org/abs/2505.18231"
+      ],
+      "record": {
+        "title": "NSNQuant: A Double Normalization Approach for Calibration-Free Low-Bit Vector Quantization of KV Cache",
+        "source_url": "https://arxiv.org/abs/2505.18231",
+        "year": 2025,
+        "published": "2025-05-23",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM) inference is typically memory-intensive, especially when processing large batch sizes and long sequences, due to the large size of key-value (KV) cache. Vector Quantization (VQ) is recently adopted to alleviate this issue, but we find that the existing approach is susceptible to distribution shift due to its reliance on calibration datasets. To address this limitation, we introduce NSNQuant, a calibration-free Vector Quantization (VQ) technique designed for low-bit compression of the KV cache. By applying a three-step transformation-1) a token-wise normalization (Normalize), 2) a channel-wise centering (Shift), and 3) a second token-wise normalization (Normalize)-with Hadamard transform, NSNQuant effectively aligns the token distribution with the standard normal distribution. This alignment enables robust, calibration-free vector quantization using a single reusable codebook. Extensive experiments show that NSNQuant consistently outperforms prior methods in both 1-bit and 2-bit settings, offering strong generalization and up to 3$\\times$ throughput gain over full-precision baselines. Code is available at https://github.com/DHdroid/NSNQuant.",
+        "identifiers": [
+          "SemanticScholar:73a24e44b5d96c7b4f569773dff267f146bb54b7"
+        ],
+        "semantic_scholar_id": "73a24e44b5d96c7b4f569773dff267f146bb54b7",
+        "canonical_id": "arXiv:2505.18231",
+        "arxiv_id": "2505.18231",
+        "doi": "10.48550/arXiv.2505.18231",
+        "authors": [
+          "Donghyun Son",
+          "Euntae Choi",
+          "Sungjoo Yoo"
+        ],
+        "priority": 19,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 19,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 523,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.15042",
+      "identity_tokens": [
+        "id:SemanticScholar:c287a8620724302be949102d6e5743c29af83fb9",
+        "id:arXiv:2603.15042",
+        "title:determinismpreserving gpu spatial sharing with vitamine",
+        "url:https://arxiv.org/abs/2603.15042"
+      ],
+      "record": {
+        "title": "Determinism-Preserving GPU Spatial Sharing with Vitamin-E",
+        "source_url": "https://arxiv.org/abs/2603.15042",
+        "year": 2026,
+        "published": "2026-03-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "GPU sharing faces a determinism--utilization tradeoff: fixed bindings can strand capacity as demand fluctuates, while resource-driven kernel reshaping improves utilization by altering a launch's parallel structure, potentially changing output bits. We rethink modern GPU scheduling and observe that it decouples logical structure from physical width: one unmodified launch spans a family of widths through changes in block placement and wave count. From this observation, we derive the parallel-structure invariant: for fixed-structure deterministic workloads, keeping each launch immutable makes its output bits independent of physical width. Guided by this invariant, Vitamin-E late-binds immutable launches to pooled physical contexts, preserving bitwise equality across allocations, whereas resource-driven reshaping can alter the selected token under temperature-zero greedy decoding. Across all workload--baseline comparisons, Vitamin-E achieves up to 3.50$\\times$ the aggregate normalized LLM training throughput, 62.5\\% lower inference p99 latency, and 1.43$\\times$ the background-training throughput. With the same mechanism, \\textsc{TPOT-First} reduces TPOT SLO violations by up to 46.1\\% over \\textsc{Throughput-Oriented} on three serving workloads, demonstrating mechanism effectiveness and policy flexibility.",
+        "identifiers": [
+          "SemanticScholar:c287a8620724302be949102d6e5743c29af83fb9"
+        ],
+        "semantic_scholar_id": "c287a8620724302be949102d6e5743c29af83fb9",
+        "canonical_id": "arXiv:2603.15042",
+        "arxiv_id": "2603.15042",
+        "authors": [
+          "Zhenyu Yang",
+          "Wenxin Zheng",
+          "Ming-Yu Li",
+          "Hai-Bo Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 226,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09595",
+      "identity_tokens": [
+        "id:SemanticScholar:43f11470f784c36df8c680c4eaf2cb534e14ea73",
+        "id:arXiv:2608.09595",
+        "title:from sweep to seam interleaved crossblock posttraining quantization",
+        "url:https://arxiv.org/abs/2608.09595"
+      ],
+      "record": {
+        "title": "From Sweep to Seam: Interleaved Cross-Block Post-Training Quantization",
+        "source_url": "https://arxiv.org/abs/2608.09595",
+        "year": 2026,
+        "published": "2026-08-10",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Compressing large language models to two bits or fewer is increasingly feasible through block-wise post-training quantization; cross-block variants reconstruct neighboring Transformer blocks within a moving window. In the fixed two-block setting studied here, the matched sequential baseline moves this window through the network once, so errors introduced early in the sweep are not revisited. We propose Interleaved Cross-Block Quantization (ICBQ), a scheduling modification that revisits the boundary pair between consecutive chunks. Each seam pair is refined twice: first at the end of one chunk and again at the start of the next. The method retains the local two-block objective and reuses the calibration inputs of existing block-wise PTQ pipelines. Under stated local contraction and smoothness assumptions, we derive a depth-wise upper-bound comparison in which seam revisits multiply the propagated term while the residual remains bounded independently of depth. In the reported experiments, ICBQ reduces ternary-quantization perplexity relative to the matched Sequential CBQ baseline, yields finite perplexity in configurations where the baseline has severe degradation, and can also be used with 3-bit and 2-bit GPTQ.",
+        "identifiers": [
+          "SemanticScholar:43f11470f784c36df8c680c4eaf2cb534e14ea73"
+        ],
+        "semantic_scholar_id": "43f11470f784c36df8c680c4eaf2cb534e14ea73",
+        "canonical_id": "arXiv:2608.09595",
+        "arxiv_id": "2608.09595",
+        "authors": [
+          "Achille Jacquemond",
+          "Yuma Ichikawa",
+          "Akira Sakai"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 79,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28276",
+      "identity_tokens": [
+        "id:SemanticScholar:f4ef9bd7ff37ded45f261afcdc5705e2687b8238",
+        "id:arXiv:2608.28276",
+        "title:parser transitions already reveal structural responsibility kv persistence for structured generation",
+        "url:https://arxiv.org/abs/2608.28276"
+      ],
+      "record": {
+        "title": "Parser Transitions Already Reveal Structural Responsibility: KV Persistence for Structured Generation",
+        "source_url": "https://arxiv.org/abs/2608.28276",
+        "year": 2026,
+        "published": "2026-08-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM agents use structured generation for JSON, SQL, and function calls. Constrained decoding ensures valid formats, but KV compression can discard history needed for correct function and argument selection. Structural responsibility can diverge from model saliency: importance scores can overlook generated tokens'structural roles. Parser transitions already computed for legality encode these roles, including required arguments and structural boundaries, providing a free retention signal. We introduce PASK (Parser-Aware Structural KV Persistence), which reuses this signal for KV persistence by layer group without online importance estimation. Task-error sensitivity sets protection floors, while attention-output distortion ranks upgrades under the remaining budget. Offline calibration produces a frozen table for structural lookup and budget accounting. PASK outperforms budget-controlled baselines on function calling and text-to-SQL, improving BFCL accuracy by up to 8.67 pp over the strongest comparator. Against Full KV, it cuts peak GPU memory by 47.5 percent and achieves up to 3.3 times TPOT speedup.",
+        "identifiers": [
+          "SemanticScholar:f4ef9bd7ff37ded45f261afcdc5705e2687b8238"
+        ],
+        "semantic_scholar_id": "f4ef9bd7ff37ded45f261afcdc5705e2687b8238",
+        "canonical_id": "arXiv:2608.28276",
+        "arxiv_id": "2608.28276",
+        "authors": [
+          "Lin Wu",
+          "Xin-Rong Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 61,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33923",
+      "identity_tokens": [
+        "id:SemanticScholar:8b56fb453ac818c1d56b719984a8d6d04e33b240",
+        "id:arXiv:2609.33923",
+        "title:quantization error is spectrally flat a single random probe is a calibrated datafree sensitivity estimator with application to budgettargeted mixedprecision quantization",
+        "url:https://arxiv.org/abs/2609.33923"
+      ],
+      "record": {
+        "title": "Quantization Error Is Spectrally Flat: A Single Random Probe Is a Calibrated, Data-Free Sensitivity Estimator, with Application to Budget-Targeted Mixed-Precision Quantization",
+        "source_url": "https://arxiv.org/abs/2609.33923",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A single random Gaussian probe gives an unbiased estimate of the squared Frobenius norm of a layer's quantization error. The estimator is well-behaved because round-to-nearest error is spectrally flat. Across 1,683 tensors from a 35B MoE and a 9B dense model, effective dimensionality is 0.93 to 0.96 times the i.i.d. noise value of the same shape, and on the MoE the median is unchanged from 2-bit to 8-bit. The probe coefficient of variation is predictable from tensor shape. One probe measures per-tensor sensitivity to within 4 to 7%; twenty probes reach 1.3 to 1.4%.RAM applies the propagated form of this estimator to budget-targeted mixed-precision quantization with no calibration data. Gaussian probes carrying the network's own input statistics score every tensor at six bit-widths. A knapsack solver allocates bits under an exact byte budget, with guardrails against catastrophic 2-bit assignments. One probe pass serves any budget. Isolated and propagated scores rank tensors independently on Qwen3.5-35B-A3B (Spearman -0.01), yet the propagated probe rank-correlates 0.81 to 0.83 with the GPTQ layer objective from real activations, while the isolated estimator is uncorrelated with it. That objective is the wrong allocation target: at matched bytes on Qwen3.8-27B, a block-output probe beats a vendor IQ3_M mix and an oracle that allocates from the real-activation objective. On Qwen3-8B the propagated probe ties HAWQ-V2 at matched bytes. Across seven architectures from 8B to 122B, with probe timing up to a 400B model in nine minutes on one workstation, RAM reaches 3.5 to 13.6% lower median WikiText-2 perplexity than size-comparable uniform 4-bit builds on the tested MoE models. (Black Sheep Ai baa.ai)",
+        "identifiers": [
+          "SemanticScholar:8b56fb453ac818c1d56b719984a8d6d04e33b240"
+        ],
+        "semantic_scholar_id": "8b56fb453ac818c1d56b719984a8d6d04e33b240",
+        "canonical_id": "arXiv:2609.33923",
+        "arxiv_id": "2609.33923",
+        "authors": [
+          "I. Kennedy",
+          "T. Kennedy"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.19792",
+      "identity_tokens": [
+        "id:SemanticScholar:273b172a11ec66eb496b8a079f9ae0578780fd3d",
+        "id:arXiv:2610.19792",
+        "title:jetspec foresight parallel drafting with self refinements",
+        "url:https://arxiv.org/abs/2610.19792"
+      ],
+      "record": {
+        "title": "JetSpec++: Foresight Parallel Drafting with Self Refinements",
+        "source_url": "https://arxiv.org/abs/2610.19792",
+        "year": 2026,
+        "published": "2026-10-14",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding's effectiveness is governed by two quantities: the acceptance rate of drafted tokens and the cost of producing them. We show the two objectives can be co-optimized with algorithm-system co-design, and present JetSpec++, which retains a strong learned draft model while hiding its cost almost entirely. JetSpec++ combines three components: intra-block self refinement, which trains the draft model to iteratively correct its own parallel predictions within a block of tokens; inter-block foresight drafting, which begins the next block before the current one is verified; and pipelined drafting and verification, which overlaps the two stages so drafting's marginal wall-clock cost approaches zero. In comparison with state-of-the-art speculative decoding methods, JetSpec++ attains a wall-clock speedup of up to $7.45\\times$ over autoregressive (AR) decoding and $1.54\\times$ over DSpark, with up to 1,361 tokens per second for a single request on GB200, and an average acceptance length of 8.94 across seven benchmarks, while preserving the target model's output distribution. Our code and models are available at https://github.com/hao-ai-lab/JetSpec.",
+        "identifiers": [
+          "SemanticScholar:273b172a11ec66eb496b8a079f9ae0578780fd3d"
+        ],
+        "semantic_scholar_id": "273b172a11ec66eb496b8a079f9ae0578780fd3d",
+        "canonical_id": "arXiv:2610.19792",
+        "arxiv_id": "2610.19792",
+        "authors": [
+          "Zhao-Xiang Feng",
+          "Lan-Xiang Hu",
+          "Hao-Ran Yuan",
+          "Yuan-Pan Qian",
+          "Ji-Hui Yang",
+          "Peng-Fei Zhao",
+          "Yi-Bo Zhu",
+          "T. Rosing",
+          "Hao Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 14,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:752f1de3fd771cfcff8365f5373f6a0c9c304ae6e4fb6b5130ad4b3171c2a747",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b57ec8df16d77ee5-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.06621",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.06621",
+    "identity_tokens": [
+      "arXiv:2607.06621"
+    ],
+    "reason": "一次要旨/タイトルはLLM inference、serving、推論時の効率化を扱わない（別分野、LLM以外のmodel、または学習専用の効率化）。",
+    "first_checked_at": "2026-10-05T10:36:34+00:00",
+    "last_checked_at": "2026-10-05T10:36:34+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "Fingerprint, Not Blueprint: How Positional Schemes Set the Default Spectral Algebra of Attention"
+  },
+  "processed_at": "2026-10-05T10:36:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b57ec8df16d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

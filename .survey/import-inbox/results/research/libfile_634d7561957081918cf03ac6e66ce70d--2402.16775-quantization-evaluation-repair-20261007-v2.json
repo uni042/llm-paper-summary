@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "8526d318090ef9eb6a17f9562b082184dffa44d1a2f8e56308f5d90f173cc2e1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_634d7561957081918cf03ac6e66ce70d--2402.16775-quantization-evaluation-repair-20261007-v2.md",
+  "canonical_id": "arXiv:2402.16775",
+  "worker_completed_at": "2026-10-07T21:33:04+09:00",
+  "worker_run_key": "20261007-2133-scheduled-chat-30/repair-r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2793,
+    "body_paragraphs": 22,
+    "method_chars": 752,
+    "method_paragraphs": 5,
+    "evaluation_chars": 365,
+    "limitation_chars": 218,
+    "insufficiency_flags": [
+      "評価説明量 365 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 365 < 500"
+  ],
+  "processed_at": "2026-10-07T13:54:43+00:00"
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff492df7bcf97b46-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.15760",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.15760",
+    "identity_tokens": [
+      "arXiv:2609.15760"
+    ],
+    "reason": "Latest advances in neural directional filtering show exceptional results in adapting the direction and shape of directivity patterns during the inference phase. However, in the existing methods for adapting directivity patterns during inference, important real-world constraints have been disregarded. Particularly for hearing devices, scenarios are often much more dynamic, microphone positions vary with head diameter and hearing aid placement, head-shadow effects occur, and strict latency constraints apply. In this work, we propose a novel low-latency (10 ms) deep neural network (DNN) taking the above requirements of hearing devices into account. As in recent work, we use feature-wise linear modulation (FiLM) to steer the directivity patterns during testing. To preserve the desired directivity pattern, a loss function is proposed that maintains the spectral cross-channel relationships. Interestingly, we are able to achieve similar results to methods with relaxed latency constraints.",
+    "first_checked_at": "2026-10-05T06:44:59+00:00",
+    "last_checked_at": "2026-10-05T06:44:59+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Directivity-Conditioned Low-Latency Neural Filtering for Speech Enhancement in Hearing Aids"
+  },
+  "processed_at": "2026-10-05T06:44:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff492df7bcf9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

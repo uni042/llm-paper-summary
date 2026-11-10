@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e814bd2b064994d42ff28268beb4e235e5d34a56e36b85304f28259b49138d89",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_4a6c13b485788191a11fd18001724e5d--2022-2203.14380-pyramid-bert-coreset-token-selection-research-20261018-1700-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2203.14380",
+  "worker_completed_at": "2026-10-18T17:11:16+09:00",
+  "worker_run_key": "20261018-1700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5845,
+    "body_paragraphs": 34,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "quality_self_review_version が空",
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-18T10:49:39+00:00"
+}

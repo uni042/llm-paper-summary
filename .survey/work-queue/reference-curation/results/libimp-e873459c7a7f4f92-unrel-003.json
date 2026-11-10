@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e873459c7a7f4f92-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.10719",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.10719",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2404.10719",
+      "arXiv:2404.10719"
+    ],
+    "reason": "DPOとPPOの理論・実証比較によるRLHF/alignment training研究で、最終適用先が学習工程のため凍結範囲。",
+    "first_checked_at": "2026-10-03T13:23:14+00:00",
+    "last_checked_at": "2026-10-03T13:23:14+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Is DPO Superior to PPO for LLM Alignment? A Comprehensive Study"
+  },
+  "processed_at": "2026-10-03T13:23:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e873459c7a7f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T104300Z-scheduled-chat-30-8c4e21-rpb-pf3",
+  "kind": "research",
+  "attempt_id": "attempt-aa2e141ac0afee3ab981b64b",
+  "job_id": "job-research-8f022c12e250de76",
+  "record_bank": "g",
+  "paper_path": "papers/training/02-distributed-heterogeneous-moe-training/2026-2609.08115-router-prior-bias-soft-router-anchoring.md",
+  "expected_blob_sha": null,
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:83182a03b2cacdc5b82780a8448cfff617270027b50e1ef0ba2cebd8cfae8c09",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "bdc1bfc726c4ca7177b08840ccf7dbabd618a903"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "c46687913d87391f250b7cce63bc8f1430db3163"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "352e5d892b3bf2f01573c8c272cca1d19e282f80"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "29462c2a8407ed3c30cff44842ffec87d017941c"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "1d7205fcd71cf9d553f454fc327e2cc7c1724945"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-23T10:37:08+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/training/02-distributed-heterogeneous-moe-training/2026-2609.08115-router-prior-bias-soft-router-anchoring.md",
+    "status": "FAIL",
+    "file_bytes": 18971,
+    "prose_chars": 5237,
+    "paragraphs": 25,
+    "method_paragraphs": 11,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7634669906844876,
+    "japanese_chars": 3770,
+    "latin_chars": 1168,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 76.3% < 警告基準 80.0%"
+    ]
+  }
+}

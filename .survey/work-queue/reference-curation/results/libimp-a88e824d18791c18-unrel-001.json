@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a88e824d18791c18-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.12537",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.12537",
+    "identity_tokens": [
+      "arXiv:2506.12537"
+    ],
+    "reason": "題名の主題は音声生成向けトークナイザの比較・評価であり、LLM推論基盤のメモリ・計算・サービング効率を改善する方式ではない。",
+    "first_checked_at": "2026-10-25T21:49:12+00:00",
+    "last_checked_at": "2026-10-25T21:49:12+00:00",
+    "linked_from": [],
+    "title": "What Makes a Good Speech Tokenizer for LLM-Centric Speech Generation? A Systematic Study"
+  },
+  "processed_at": "2026-10-25T21:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a88e824d1879",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

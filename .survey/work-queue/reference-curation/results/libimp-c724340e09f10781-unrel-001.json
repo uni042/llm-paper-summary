@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c724340e09f10781-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.20908",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.20908",
+    "identity_tokens": [
+      "arXiv:2607.20908"
+    ],
+    "reason": "CudaPerf trains code-generation agents to emit faster CUDA kernels. Its outcome is kernel speedup, not LLM inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T10:03:30+00:00",
+    "last_checked_at": "2026-10-05T10:03:30+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+    ],
+    "title": "Multi-turn RL with Structural and Performance Aware Rewards for CUDA Kernel Generation"
+  },
+  "processed_at": "2026-10-05T10:03:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c724340e09f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

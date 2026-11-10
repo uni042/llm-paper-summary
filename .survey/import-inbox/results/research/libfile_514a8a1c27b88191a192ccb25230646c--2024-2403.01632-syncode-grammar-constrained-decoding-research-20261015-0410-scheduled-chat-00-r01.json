@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "506251a2c790640d0b870d4073be0b62c8ba8ab24699676330ffc574419f555a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_514a8a1c27b88191a192ccb25230646c--2024-2403.01632-syncode-grammar-constrained-decoding-research-20261015-0410-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2403.01632",
+  "worker_completed_at": "2026-10-15T04:18:00+09:00",
+  "worker_run_key": "20261015-0410-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4646,
+    "body_paragraphs": 22,
+    "method_chars": 1376,
+    "method_paragraphs": 7,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-14T20:50:57+00:00"
+}

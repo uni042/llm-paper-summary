@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-7fc8ce433bb0f994-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2607.26017",
+  "reason": "一次本文Abstract・§3 framework/§4 evaluation・Limitationsを確認。LLM-agent task streamsでepisodic memoryからparametric memoryへconsolidationする方式を提案し、3 backboneで平均+4.0 EM。abstractはepisodic retrievalにinference-time overheadがあるとするが、本文の確認範囲にretrieval latency/throughput/memory-efficiencyの定量比較は見当たらず、limitationsもparameter-efficiency trade-offをfuture workとしている。推論効率の主題・証拠が弱い。",
+  "title": "UniMem: Complementary Episodic-to-Parametric Memory for Boundary-Agnostic Task Streams",
+  "identity_tokens": [
+    "arXiv:2607.26017"
+  ],
+  "linked_from": [
+    "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7fc8ce433bb0",
+  "source_precheck_request_id": null
+}

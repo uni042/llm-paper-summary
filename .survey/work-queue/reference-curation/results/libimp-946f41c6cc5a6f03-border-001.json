@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-946f41c6cc5a6f03-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.28272",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.28272",
+    "identity_tokens": [
+      "arXiv:2609.28272"
+    ],
+    "reason": "diffusion LLMの学習法であり、entropyが早く収束する指標と平均精度+1.92を報告するが、実generation step数・wall-clock速度・計算量削減の実測がない。",
+    "first_checked_at": "2026-10-05T05:48:42+00:00",
+    "last_checked_at": "2026-10-05T05:48:42+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "Towards Efficient Reasoning: Learning Causal Shortcuts for Diffusion Language Models"
+  },
+  "processed_at": "2026-10-05T05:48:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-946f41c6cc5a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

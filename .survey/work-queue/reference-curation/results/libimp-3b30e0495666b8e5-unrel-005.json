@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b30e0495666b8e5-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.09985",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.09985",
+    "identity_tokens": [
+      "arXiv:2506.09985"
+    ],
+    "reason": "100万時間超の動画で自己教師ありworld modelを学習し、video understanding、LLM連携VQA、robot planningを評価する能力・学習研究。LLM推論runtimeやserving効率化は主題ではない。",
+    "first_checked_at": "2026-10-05T15:43:15+00:00",
+    "last_checked_at": "2026-10-05T22:23:00+00:00",
+    "linked_from": [],
+    "title": "V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning"
+  },
+  "processed_at": "2026-10-05T22:23:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b30e0495666",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

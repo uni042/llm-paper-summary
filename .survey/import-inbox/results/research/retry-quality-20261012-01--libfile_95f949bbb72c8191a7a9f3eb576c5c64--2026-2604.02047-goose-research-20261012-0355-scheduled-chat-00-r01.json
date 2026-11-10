@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "f827597c20ab78cf48bd299975d5e8a97d9a6f9b624f3e3a88fe99b8b91644ad",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-quality-20261012-01--libfile_95f949bbb72c8191a7a9f3eb576c5c64--2026-2604.02047-goose-research-20261012-0355-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2604.02047",
+  "worker_completed_at": "2026-10-12T03:55:56+09:00",
+  "worker_run_key": "20261012-0355-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6542,
+    "body_paragraphs": 34,
+    "method_chars": 2451,
+    "method_paragraphs": 12,
+    "evaluation_chars": 1724,
+    "limitation_chars": 514,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-9f574c682681--libfile_95f949bbb72c8191a7a9f3eb576c5c64--2026-2604.02047-goose-research-20261012-0355-scheduled-chat-00-r01.md と 20 段落 / 4554文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-12T03:13:24+00:00"
+}

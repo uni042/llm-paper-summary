@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4fcb86673c74ef5-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/2740070.2626299",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/2740070.2626299",
+    "identity_tokens": [
+      "DOI:10.1145/2740070.2626299"
+    ],
+    "reason": "RDMAネットワーク上の汎用key-valueサービスHERDの低遅延・高throughput設計が主題で、LLM推論またはモデル状態/KV cacheの最適化を扱わない。",
+    "first_checked_at": "2026-10-04T05:27:33+00:00",
+    "last_checked_at": "2026-10-04T05:27:33+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2601.01310-tarragon-resilient-moe-inference.md"
+    ],
+    "title": "Using RDMA efficiently for key-value services"
+  },
+  "processed_at": "2026-10-04T05:27:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4fcb86673c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a54ddeda4452c810-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.12110",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.12110",
+    "identity_tokens": [
+      "arXiv:2502.12110"
+    ],
+    "reason": "エージェントの過去経験をツェッテルカステン方式でノート化し、意味類似性でリンクを作り、既存ノートの文脈属性を進化させる外部知識管理手法。要旨が扱うmemoryはエージェントの意味記憶であり、LLM推論時のGPU/CPU階層メモリ、KVキャッシュ、重み配置ではない。評価もエージェント課題の性能改善が中心で、推論基盤の直接的な技術貢献を確認できない。",
+    "first_checked_at": "2026-10-05T22:27:25+00:00",
+    "last_checked_at": "2026-10-10T13:56:27+00:00",
+    "linked_from": [],
+    "title": "A-MEM: Agentic Memory for LLM Agents"
+  },
+  "processed_at": "2026-10-10T13:56:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a54ddeda4452",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

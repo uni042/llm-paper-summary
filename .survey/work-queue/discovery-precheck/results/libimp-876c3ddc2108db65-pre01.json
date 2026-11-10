@@ -1,0 +1,796 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-876c3ddc2108db65-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-876c3ddc2108",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2504.03717",
+    "arXiv:2505.16162",
+    "arXiv:2508.03351",
+    "arXiv:2604.07173",
+    "arXiv:2604.16395",
+    "arXiv:2605.12193",
+    "arXiv:2607.02574",
+    "arXiv:2610.13328",
+    "arXiv:2610.36355",
+    "arXiv:2611.04313"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "b3d36d35c70533bba7ce5fce1bf3d95ca0a763cb",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-08T15:53:27.727120+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2504.03717",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.16162",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:knnssd enabling dynamic selfspeculative decoding via nearest neighbor layer set optimization"
+    },
+    {
+      "requested_id": "arXiv:2508.03351",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.07173",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.16395",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.12193",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.02574",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "rejection_ledger",
+      "matched_token": "id:arXiv:2607.02574"
+    },
+    {
+      "requested_id": "arXiv:2610.13328",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.36355",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.04313",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Stream2LLM: Overlap Context Streaming and Prefill for Reduced Time-to-First-Token (TTFT)",
+      "source_url": "https://arxiv.org/abs/2604.16395",
+      "year": 2026,
+      "published": "2026-03-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Context retrieval systems for LLM inference face a critical challenge: high retrieval latency creates a fundamental tension between waiting for complete context (poor time-to-first-token) and proceeding without it (reduced quality). Streaming context incrementally--overlapping retrieval with inference--can mitigate this latency, but doing so with concurrent requests introduces new challenges: requests contend for GPU compute and memory, and scheduling must adapt to dynamic context arrivals. We present Stream2LLM, a streaming-aware LLM serving system for concurrent prefill-decode disaggregated deployments. Stream2LLM introduces adaptive scheduling and preemption for two distinct retrieval patterns: append-mode (progressive context accumulation) and update-mode (iterative refinement with cache invalidation). It decouples scheduling decisions from resource acquisition, enabling flexible preemption strategies guided by hardware-specific cost models, and uses longest common prefix matching to minimize redundant computation when input changes dynamically. To evaluate Stream2LLM, we collect two large-scale, real-world streaming workloads based on web crawling and approximate nearest neighbor search. Our evaluation demonstrates that streaming architecture delivers up to 11x TTFT improvements, with cost-aware scheduling providing critical benefits under memory pressure, all while maintaining throughput parity with non-streaming baselines. Code: https://github.com/rajveerb/stream2llm/tree/mlsys_artifact",
+      "identifiers": [
+        "SemanticScholar:3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88"
+      ],
+      "semantic_scholar_id": "3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88",
+      "canonical_id": "arXiv:2604.16395",
+      "arxiv_id": "2604.16395",
+      "doi": "10.48550/arXiv.2604.16395",
+      "authors": [
+        "Rajveer Bachkaniwala",
+        "Cheng Luo",
+        "R. So",
+        "Divya Mahajan",
+        "Ke-Xin Rong"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 224,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.07173",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "Workshop Proceedings of the 55th International Conference on Parallel Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LoRA enables efficient customization of LLMs and is widely used in multi-tenant and multi-task serving. However, emerging model architectures such as MoE significantly increase LoRA memory cost, making existing coupled LoRA serving designs poorly scalable and prone to tail-latency inflation. We present InfiniLoRA, a disaggregated LoRA serving system that decouples LoRA execution from base-model inference. InfiniLoRA introduces a shared LoRA Server with parallelism-aware execution, SLO-driven provisioning, and critical-path optimizations, including GPU-initiated communication and hardware-specialized LoRA kernels. Experiments show that InfiniLoRA can achieve an average 3.05 × increase in serviceable request rate under strict latency SLOs, and improves the percentage of LoRA adapters satisfying the SLO requirement by 53.1%.",
+      "identifiers": [
+        "SemanticScholar:644f54cd1f7600e7188c055c855cc615dec9d75c"
+      ],
+      "semantic_scholar_id": "644f54cd1f7600e7188c055c855cc615dec9d75c",
+      "canonical_id": "arXiv:2604.07173",
+      "arxiv_id": "2604.07173",
+      "doi": "10.48550/arXiv.2604.07173",
+      "authors": [
+        "Hong-Yu Chen",
+        "Le-Tian Ruan",
+        "Zi-Ang Xu",
+        "Yu-Chen Li",
+        "Xin-Yu Chen",
+        "Bing-Sheng He",
+        "Jingwen Leng",
+        "Jie-Ru Zhao",
+        "Shi-Xuan Sun",
+        "Min-Yi Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 214,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BFLA: Block-Filtered Long-Context Attention Mechanism",
+      "source_url": "https://arxiv.org/abs/2605.12193",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose Block-Filtered Long-Context Attention (BFLA), a training-free sparse prefill method that combines deterministic Lightning-style block indexing, query-tile sharing, and length-adaptive Ratio-$K$ selection with block-sparse execution. BFLA evaluates attention using the original Q/K/V, requires no retraining or per-model parameter retuning, and integrates with vLLM while preserving native decoding. For fixed Q/K/V, we bound local attention-output error in terms of the omitted attention mass, indexer-score distortion, retention budget, and query-tile sharing. Evaluations on Gemma4-E4B-IT, Qwen3.6-27B, Qwen3.8-27B, and Qwen3.8-Flash-Next across LongBench-v2, RULER, InfiniteBench, and Terminal Bench 2.1 show BFLA matches or even outperforms dense baselines. BFLA shows up to approximately $4\\times$ time-to-first-token and $3.72\\times$ end-to-end request speedups over the corresponding dense-prefill baselines. Comparisons with state-of-the-art FlashPrefill V2 and Qwen Sparse Attention also demonstrate that BFLA has better performance and efficiency trade-offs. These findings highlight the value of BFLA for the acceleration of long-context serving. Project website: https://github.com/Alicewithrabbit/BFLA.",
+      "identifiers": [
+        "SemanticScholar:7ad8414655ee444560a62378390cd60eafe97c80"
+      ],
+      "semantic_scholar_id": "7ad8414655ee444560a62378390cd60eafe97c80",
+      "canonical_id": "arXiv:2605.12193",
+      "arxiv_id": "2605.12193",
+      "authors": [
+        "Chong Wu",
+        "Brian K. Chen",
+        "Chu-Xu Song",
+        "She-Zheng Song",
+        "Zhenan Feng",
+        "Ren-Jie Xu",
+        "Hou-Wang Zhang",
+        "Jiawang Cao",
+        "Mao-Lin Che",
+        "Wen-Bo Zhu",
+        "Hong Yan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DuoRate: Two-Rate Per-Expert Precision Allocation for Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2610.13328",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving a Mixture-of-Experts (MoE) model pays for expert precision twice: the resident footprint pays for every expert the router can reach, while each batch-one decode step pays only for the experts it selects. These are two different rate functionals over the same per-expert widths, yet published per-expert MoE allocators constrain only the first. We call the difference the store-read gap; in the released BitsMoE checkpoint, 2.54 bits per weight (bpw) of storage become 7.50 bpw of decode traffic. We propose DuoRate, which stores once and reads per workload. Offline, it stores one uniform tier of a prefix-readable weight stream and bakes a distortion tensor. Online, it profiles a workload's own prefill without labels and solves a Lagrangian rate-distortion allocation under the decode functional; routing frequency provably cancels from every per-expert decision, and the solve costs one dot product per expert and a bisection. A deployment therefore keeps a single artifact that prefill reads at the stored rate and decode reads at the workload's own rate. On Qwen3-30B-A3B, DuoRate reading 2.3 bpw exceeds every 2-bit-class baseline by 6.3 to 47.0 points of average accuracy, and at 2.9 bpw it matches 4-bit formats that read 1.4-1.6 bpw more. The advantage is largest under long decoding: on GSM8K, DuoRate at 2.9 bpw matches or exceeds every 4-bit format and trails BF16 by only 0.25 points, and at 2.6 bpw it still matches or exceeds the 4.5-bit NF4 and FP4. Against controls in its own format, the allocation alone is worth 0.07-0.11 bpw of read rate. Code will be released upon publication.",
+      "identifiers": [
+        "SemanticScholar:f802554d8ffe5d9a0121f0e7b7ecfa9e84cf2294"
+      ],
+      "semantic_scholar_id": "f802554d8ffe5d9a0121f0e7b7ecfa9e84cf2294",
+      "canonical_id": "arXiv:2610.13328",
+      "arxiv_id": "2610.13328",
+      "authors": [
+        "Meng-Qi Guo",
+        "Zhe Wei",
+        "Yuan Yuan",
+        "Jiunn Bin Lim",
+        "Bo Pan",
+        "Michael Bi Mi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WAKMan: Workload Aware KVCache Manager",
+      "source_url": "https://arxiv.org/abs/2610.36355",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefix caching enables a Large Language Model (LLM) servers to reuse the Key-Value (KV) states and accelerate prefill computation stage for requests that share a prefix with earlier prompts, thus reducing latency and serving cost. With limited memory resource, the KV cache eviction policy becomes a decisive factor in determining the overall benefits of prefix caching. Production traffic may have single-turn, multi-turn, agentic, or a mixture of any combination of these request types. Our findings indicate that agentic steps return within seconds and favor recency, while popular prompts and long conversations return after many other requests and favor frequency. Across 20 mixes, no single policy is always best: vLLM's default strategy LRU provides 12% higher cache hits as compared to the frequency-oriented S3FIFO on agentic-heavy mixes but trails it by up to 22% elsewhere, and even a single workload parameter can flip the winner even for any particular mix. We present WAKMan, a workload-aware KV cache manager that picks its eviction policy from live traffic without knowing request types or reading prompts. It improves hit rate over LRU by 5 percentage points on average, with the lowest mean and worst-case optimality gap of all policies.",
+      "identifiers": [
+        "SemanticScholar:43b292660536c197a1fe0e1d42597eb3749825f9"
+      ],
+      "semantic_scholar_id": "43b292660536c197a1fe0e1d42597eb3749825f9",
+      "canonical_id": "arXiv:2610.36355",
+      "arxiv_id": "2610.36355",
+      "authors": [
+        "Suhas Kumar Morisetty",
+        "Vaibhavi Lokegaonkar",
+        "S. Varghese",
+        "Wesley Harris"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Coarse Semantic Blocks for Efficient Training-Free Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2611.04313",
+      "year": 2026,
+      "published": "2026-11-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce a training-free sparse attention method that builds a prompt-specific key index to accelerate both prefill and decoding. The method clusters the keys into large semantic blocks that group tokens from noncontiguous positions. Each query position selects blocks by scoring their centroids and attends to the original keys and values within them. Queries that select the same block are processed together, so prefill stays fast even though each query chooses its own blocks. Large blocks make centroid scoring and this grouped processing cheap, so each query can attend to more tokens in the same time. Larger blocks with a larger token budget can thus be both faster and more accurate on long-context tasks than smaller blocks with a smaller budget. We evaluate two hybrid LLMs, Qwen3.5-4B and 35B-A3B, on one NVIDIA H200. Including the cost of building and using the index, whole-model wall-clock speedups over dense attention are 2.3-2.4x for prefill and 1.7-2.0x for decoding at 512K tokens, and 2.9-3.0x for prefill at 1M. The 35B-A3B model stays close to dense attention on five RULER tasks through 1M, on LongBench-v2 overall, and on MRCR through 256K. The 4B model loses accuracy mainly on multi-key retrieval, yet outperforms dense Qwen3.5-2B, whose latency is similar at 512K, on all three benchmarks.",
+      "identifiers": [
+        "SemanticScholar:4b9af297887004320d214444dcd90522d507e068"
+      ],
+      "semantic_scholar_id": "4b9af297887004320d214444dcd90522d507e068",
+      "canonical_id": "arXiv:2611.04313",
+      "arxiv_id": "2611.04313",
+      "authors": [
+        "Sosuke Kobayashi",
+        "Shoichiro Yamaguchi",
+        "Seiya Tokui"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm",
+      "source_url": "https://arxiv.org/abs/2504.03717",
+      "year": 2025,
+      "published": "2025-03-29",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training Quantization (PTQ) has become a widely used technique for improving inference efficiency of large language models (LLMs). However, existing PTQ methods generally suffer from crucial limitations such as heavy calibration data requirements and inflexible choice of target number of bits. In this paper, we propose RaanA, a unified PTQ framework that overcomes these challenges by introducing two novel components: 1) RaBitQ-H, a variant of a randomized vector quantization method RaBitQ, designed for fast, accurate, and highly efficient quantization; and 2) AllocateBits, an algorithm that optimally allocates bit-widths across layers based on their quantization sensitivity. RaanA achieves competitive performance with state-of-the-art quantization methods while being extremely fast, requiring minimal calibration data, and enabling flexible bit allocation. Extensive experiments demonstrate RaanA's efficacy in balancing efficiency and accuracy. The code is publicly available at https://github.com/FFTYYY/RaanA .",
+      "identifiers": [
+        "SemanticScholar:89b9a9af122c7400e3fc9c9807c5576f10b9906c"
+      ],
+      "semantic_scholar_id": "89b9a9af122c7400e3fc9c9807c5576f10b9906c",
+      "canonical_id": "arXiv:2504.03717",
+      "arxiv_id": "2504.03717",
+      "doi": "10.48550/arXiv.2504.03717",
+      "authors": [
+        "Yong-Yi Yang",
+        "Jian-Yang Gao",
+        "Wei Hu"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 589,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SalQ-VLM: Fine-Grained Saliency-Guided Quantization for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2508.03351",
+      "year": 2025,
+      "published": "2025-08-05",
+      "venue": null,
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities across diverse language tasks, motivating their extension to vision-language models (VLMs) for multimodal understanding. However, billion-parameter VLMs incur substantial memory and computational costs that hinder deployment in resource-constrained settings. Post-training quantization (PTQ) compresses models and accelerates inference without retraining, yet remains underexplored for VLMs. We identify two intrinsic VLM activation properties in PTQ: (1) visual over-representation, where vision tokens are excessive and often redundant, and (2) the modality gap separating text and vision tokens in the latent feature space. Prior methods largely overlook these properties, leading to quantization performance degradation. To address this mismatch, we propose SalQ-VLM, an importance-aware PTQ framework that prioritizes salient tokens and suppresses redundant vision tokens during calibration. We derive a gradient-driven importance factor that captures token-level importance variance and is theoretically grounded in the relationship among loss perturbation, activation errors, and output gradients. SalQ-VLM obtains this factor through a single lightweight block-wise gradient-caching pass and incorporates it into the layer-wise reconstruction objective. Because SalQ-VLM modifies only calibration, it adds no inference-time operations and remains compatible with existing high-performance kernels. Extensive evaluations across benchmarks and backbones show that SalQ-VLM consistently outperforms strong PTQ baselines, especially under ultra-low-bit quantization. Notably, it improves MME-RealWorld accuracy by 16.45% under INT2g128 quantization.",
+      "identifiers": [
+        "SemanticScholar:c456823b66367c9219c20c603fcf434bb6ca5f99"
+      ],
+      "semantic_scholar_id": "c456823b66367c9219c20c603fcf434bb6ca5f99",
+      "canonical_id": "arXiv:2508.03351",
+      "arxiv_id": "2508.03351",
+      "authors": [
+        "Yu-Fei Xue",
+        "Yu-Shi Huang",
+        "Lu Zhu",
+        "Jia-Wei Shao",
+        "Jun Zhang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 460,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.16395",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.16395",
+        "id:SemanticScholar:3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88",
+        "id:arXiv:2604.16395",
+        "title:stream2llm overlap context streaming and prefill for reduced timetofirsttoken ttft",
+        "url:https://arxiv.org/abs/2604.16395"
+      ],
+      "record": {
+        "title": "Stream2LLM: Overlap Context Streaming and Prefill for Reduced Time-to-First-Token (TTFT)",
+        "source_url": "https://arxiv.org/abs/2604.16395",
+        "year": 2026,
+        "published": "2026-03-29",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Context retrieval systems for LLM inference face a critical challenge: high retrieval latency creates a fundamental tension between waiting for complete context (poor time-to-first-token) and proceeding without it (reduced quality). Streaming context incrementally--overlapping retrieval with inference--can mitigate this latency, but doing so with concurrent requests introduces new challenges: requests contend for GPU compute and memory, and scheduling must adapt to dynamic context arrivals. We present Stream2LLM, a streaming-aware LLM serving system for concurrent prefill-decode disaggregated deployments. Stream2LLM introduces adaptive scheduling and preemption for two distinct retrieval patterns: append-mode (progressive context accumulation) and update-mode (iterative refinement with cache invalidation). It decouples scheduling decisions from resource acquisition, enabling flexible preemption strategies guided by hardware-specific cost models, and uses longest common prefix matching to minimize redundant computation when input changes dynamically. To evaluate Stream2LLM, we collect two large-scale, real-world streaming workloads based on web crawling and approximate nearest neighbor search. Our evaluation demonstrates that streaming architecture delivers up to 11x TTFT improvements, with cost-aware scheduling providing critical benefits under memory pressure, all while maintaining throughput parity with non-streaming baselines. Code: https://github.com/rajveerb/stream2llm/tree/mlsys_artifact",
+        "identifiers": [
+          "SemanticScholar:3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88"
+        ],
+        "semantic_scholar_id": "3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88",
+        "canonical_id": "arXiv:2604.16395",
+        "arxiv_id": "2604.16395",
+        "doi": "10.48550/arXiv.2604.16395",
+        "authors": [
+          "Rajveer Bachkaniwala",
+          "Cheng Luo",
+          "R. So",
+          "Divya Mahajan",
+          "Ke-Xin Rong"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 224,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.07173",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.07173",
+        "id:SemanticScholar:644f54cd1f7600e7188c055c855cc615dec9d75c",
+        "id:arXiv:2604.07173",
+        "title:infinilora disaggregated multilora serving for large language models",
+        "url:https://arxiv.org/abs/2604.07173"
+      ],
+      "record": {
+        "title": "InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2604.07173",
+        "year": 2026,
+        "published": "2026-04-08",
+        "venue": "Workshop Proceedings of the 55th International Conference on Parallel Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LoRA enables efficient customization of LLMs and is widely used in multi-tenant and multi-task serving. However, emerging model architectures such as MoE significantly increase LoRA memory cost, making existing coupled LoRA serving designs poorly scalable and prone to tail-latency inflation. We present InfiniLoRA, a disaggregated LoRA serving system that decouples LoRA execution from base-model inference. InfiniLoRA introduces a shared LoRA Server with parallelism-aware execution, SLO-driven provisioning, and critical-path optimizations, including GPU-initiated communication and hardware-specialized LoRA kernels. Experiments show that InfiniLoRA can achieve an average 3.05 × increase in serviceable request rate under strict latency SLOs, and improves the percentage of LoRA adapters satisfying the SLO requirement by 53.1%.",
+        "identifiers": [
+          "SemanticScholar:644f54cd1f7600e7188c055c855cc615dec9d75c"
+        ],
+        "semantic_scholar_id": "644f54cd1f7600e7188c055c855cc615dec9d75c",
+        "canonical_id": "arXiv:2604.07173",
+        "arxiv_id": "2604.07173",
+        "doi": "10.48550/arXiv.2604.07173",
+        "authors": [
+          "Hong-Yu Chen",
+          "Le-Tian Ruan",
+          "Zi-Ang Xu",
+          "Yu-Chen Li",
+          "Xin-Yu Chen",
+          "Bing-Sheng He",
+          "Jingwen Leng",
+          "Jie-Ru Zhao",
+          "Shi-Xuan Sun",
+          "Min-Yi Guo"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 214,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.12193",
+      "identity_tokens": [
+        "id:SemanticScholar:7ad8414655ee444560a62378390cd60eafe97c80",
+        "id:arXiv:2605.12193",
+        "title:bfla blockfiltered longcontext attention mechanism",
+        "url:https://arxiv.org/abs/2605.12193"
+      ],
+      "record": {
+        "title": "BFLA: Block-Filtered Long-Context Attention Mechanism",
+        "source_url": "https://arxiv.org/abs/2605.12193",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose Block-Filtered Long-Context Attention (BFLA), a training-free sparse prefill method that combines deterministic Lightning-style block indexing, query-tile sharing, and length-adaptive Ratio-$K$ selection with block-sparse execution. BFLA evaluates attention using the original Q/K/V, requires no retraining or per-model parameter retuning, and integrates with vLLM while preserving native decoding. For fixed Q/K/V, we bound local attention-output error in terms of the omitted attention mass, indexer-score distortion, retention budget, and query-tile sharing. Evaluations on Gemma4-E4B-IT, Qwen3.6-27B, Qwen3.8-27B, and Qwen3.8-Flash-Next across LongBench-v2, RULER, InfiniteBench, and Terminal Bench 2.1 show BFLA matches or even outperforms dense baselines. BFLA shows up to approximately $4\\times$ time-to-first-token and $3.72\\times$ end-to-end request speedups over the corresponding dense-prefill baselines. Comparisons with state-of-the-art FlashPrefill V2 and Qwen Sparse Attention also demonstrate that BFLA has better performance and efficiency trade-offs. These findings highlight the value of BFLA for the acceleration of long-context serving. Project website: https://github.com/Alicewithrabbit/BFLA.",
+        "identifiers": [
+          "SemanticScholar:7ad8414655ee444560a62378390cd60eafe97c80"
+        ],
+        "semantic_scholar_id": "7ad8414655ee444560a62378390cd60eafe97c80",
+        "canonical_id": "arXiv:2605.12193",
+        "arxiv_id": "2605.12193",
+        "authors": [
+          "Chong Wu",
+          "Brian K. Chen",
+          "Chu-Xu Song",
+          "She-Zheng Song",
+          "Zhenan Feng",
+          "Ren-Jie Xu",
+          "Hou-Wang Zhang",
+          "Jiawang Cao",
+          "Mao-Lin Che",
+          "Wen-Bo Zhu",
+          "Hong Yan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 180,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.13328",
+      "identity_tokens": [
+        "id:SemanticScholar:f802554d8ffe5d9a0121f0e7b7ecfa9e84cf2294",
+        "id:arXiv:2610.13328",
+        "title:duorate tworate perexpert precision allocation for mixtureofexperts serving",
+        "url:https://arxiv.org/abs/2610.13328"
+      ],
+      "record": {
+        "title": "DuoRate: Two-Rate Per-Expert Precision Allocation for Mixture-of-Experts Serving",
+        "source_url": "https://arxiv.org/abs/2610.13328",
+        "year": 2026,
+        "published": "2026-10-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serving a Mixture-of-Experts (MoE) model pays for expert precision twice: the resident footprint pays for every expert the router can reach, while each batch-one decode step pays only for the experts it selects. These are two different rate functionals over the same per-expert widths, yet published per-expert MoE allocators constrain only the first. We call the difference the store-read gap; in the released BitsMoE checkpoint, 2.54 bits per weight (bpw) of storage become 7.50 bpw of decode traffic. We propose DuoRate, which stores once and reads per workload. Offline, it stores one uniform tier of a prefix-readable weight stream and bakes a distortion tensor. Online, it profiles a workload's own prefill without labels and solves a Lagrangian rate-distortion allocation under the decode functional; routing frequency provably cancels from every per-expert decision, and the solve costs one dot product per expert and a bisection. A deployment therefore keeps a single artifact that prefill reads at the stored rate and decode reads at the workload's own rate. On Qwen3-30B-A3B, DuoRate reading 2.3 bpw exceeds every 2-bit-class baseline by 6.3 to 47.0 points of average accuracy, and at 2.9 bpw it matches 4-bit formats that read 1.4-1.6 bpw more. The advantage is largest under long decoding: on GSM8K, DuoRate at 2.9 bpw matches or exceeds every 4-bit format and trails BF16 by only 0.25 points, and at 2.6 bpw it still matches or exceeds the 4.5-bit NF4 and FP4. Against controls in its own format, the allocation alone is worth 0.07-0.11 bpw of read rate. Code will be released upon publication.",
+        "identifiers": [
+          "SemanticScholar:f802554d8ffe5d9a0121f0e7b7ecfa9e84cf2294"
+        ],
+        "semantic_scholar_id": "f802554d8ffe5d9a0121f0e7b7ecfa9e84cf2294",
+        "canonical_id": "arXiv:2610.13328",
+        "arxiv_id": "2610.13328",
+        "authors": [
+          "Meng-Qi Guo",
+          "Zhe Wei",
+          "Yuan Yuan",
+          "Jiunn Bin Lim",
+          "Bo Pan",
+          "Michael Bi Mi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.36355",
+      "identity_tokens": [
+        "id:SemanticScholar:43b292660536c197a1fe0e1d42597eb3749825f9",
+        "id:arXiv:2610.36355",
+        "title:wakman workload aware kvcache manager",
+        "url:https://arxiv.org/abs/2610.36355"
+      ],
+      "record": {
+        "title": "WAKMan: Workload Aware KVCache Manager",
+        "source_url": "https://arxiv.org/abs/2610.36355",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prefix caching enables a Large Language Model (LLM) servers to reuse the Key-Value (KV) states and accelerate prefill computation stage for requests that share a prefix with earlier prompts, thus reducing latency and serving cost. With limited memory resource, the KV cache eviction policy becomes a decisive factor in determining the overall benefits of prefix caching. Production traffic may have single-turn, multi-turn, agentic, or a mixture of any combination of these request types. Our findings indicate that agentic steps return within seconds and favor recency, while popular prompts and long conversations return after many other requests and favor frequency. Across 20 mixes, no single policy is always best: vLLM's default strategy LRU provides 12% higher cache hits as compared to the frequency-oriented S3FIFO on agentic-heavy mixes but trails it by up to 22% elsewhere, and even a single workload parameter can flip the winner even for any particular mix. We present WAKMan, a workload-aware KV cache manager that picks its eviction policy from live traffic without knowing request types or reading prompts. It improves hit rate over LRU by 5 percentage points on average, with the lowest mean and worst-case optimality gap of all policies.",
+        "identifiers": [
+          "SemanticScholar:43b292660536c197a1fe0e1d42597eb3749825f9"
+        ],
+        "semantic_scholar_id": "43b292660536c197a1fe0e1d42597eb3749825f9",
+        "canonical_id": "arXiv:2610.36355",
+        "arxiv_id": "2610.36355",
+        "authors": [
+          "Suhas Kumar Morisetty",
+          "Vaibhavi Lokegaonkar",
+          "S. Varghese",
+          "Wesley Harris"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 13,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.04313",
+      "identity_tokens": [
+        "id:SemanticScholar:4b9af297887004320d214444dcd90522d507e068",
+        "id:arXiv:2611.04313",
+        "title:coarse semantic blocks for efficient trainingfree sparse attention",
+        "url:https://arxiv.org/abs/2611.04313"
+      ],
+      "record": {
+        "title": "Coarse Semantic Blocks for Efficient Training-Free Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2611.04313",
+        "year": 2026,
+        "published": "2026-11-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce a training-free sparse attention method that builds a prompt-specific key index to accelerate both prefill and decoding. The method clusters the keys into large semantic blocks that group tokens from noncontiguous positions. Each query position selects blocks by scoring their centroids and attends to the original keys and values within them. Queries that select the same block are processed together, so prefill stays fast even though each query chooses its own blocks. Large blocks make centroid scoring and this grouped processing cheap, so each query can attend to more tokens in the same time. Larger blocks with a larger token budget can thus be both faster and more accurate on long-context tasks than smaller blocks with a smaller budget. We evaluate two hybrid LLMs, Qwen3.5-4B and 35B-A3B, on one NVIDIA H200. Including the cost of building and using the index, whole-model wall-clock speedups over dense attention are 2.3-2.4x for prefill and 1.7-2.0x for decoding at 512K tokens, and 2.9-3.0x for prefill at 1M. The 35B-A3B model stays close to dense attention on five RULER tasks through 1M, on LongBench-v2 overall, and on MRCR through 256K. The 4B model loses accuracy mainly on multi-key retrieval, yet outperforms dense Qwen3.5-2B, whose latency is similar at 512K, on all three benchmarks.",
+        "identifiers": [
+          "SemanticScholar:4b9af297887004320d214444dcd90522d507e068"
+        ],
+        "semantic_scholar_id": "4b9af297887004320d214444dcd90522d507e068",
+        "canonical_id": "arXiv:2611.04313",
+        "arxiv_id": "2611.04313",
+        "authors": [
+          "Sosuke Kobayashi",
+          "Shoichiro Yamaguchi",
+          "Seiya Tokui"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 5,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.03717",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.03717",
+        "id:SemanticScholar:89b9a9af122c7400e3fc9c9807c5576f10b9906c",
+        "id:arXiv:2504.03717",
+        "title:raana a fast flexible and dataefficient posttraining quantization algorithm",
+        "url:https://arxiv.org/abs/2504.03717"
+      ],
+      "record": {
+        "title": "RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm",
+        "source_url": "https://arxiv.org/abs/2504.03717",
+        "year": 2025,
+        "published": "2025-03-29",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training Quantization (PTQ) has become a widely used technique for improving inference efficiency of large language models (LLMs). However, existing PTQ methods generally suffer from crucial limitations such as heavy calibration data requirements and inflexible choice of target number of bits. In this paper, we propose RaanA, a unified PTQ framework that overcomes these challenges by introducing two novel components: 1) RaBitQ-H, a variant of a randomized vector quantization method RaBitQ, designed for fast, accurate, and highly efficient quantization; and 2) AllocateBits, an algorithm that optimally allocates bit-widths across layers based on their quantization sensitivity. RaanA achieves competitive performance with state-of-the-art quantization methods while being extremely fast, requiring minimal calibration data, and enabling flexible bit allocation. Extensive experiments demonstrate RaanA's efficacy in balancing efficiency and accuracy. The code is publicly available at https://github.com/FFTYYY/RaanA .",
+        "identifiers": [
+          "SemanticScholar:89b9a9af122c7400e3fc9c9807c5576f10b9906c"
+        ],
+        "semantic_scholar_id": "89b9a9af122c7400e3fc9c9807c5576f10b9906c",
+        "canonical_id": "arXiv:2504.03717",
+        "arxiv_id": "2504.03717",
+        "doi": "10.48550/arXiv.2504.03717",
+        "authors": [
+          "Yong-Yi Yang",
+          "Jian-Yang Gao",
+          "Wei Hu"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 589,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.03351",
+      "identity_tokens": [
+        "id:SemanticScholar:c456823b66367c9219c20c603fcf434bb6ca5f99",
+        "id:arXiv:2508.03351",
+        "title:salqvlm finegrained saliencyguided quantization for visionlanguage models",
+        "url:https://arxiv.org/abs/2508.03351"
+      ],
+      "record": {
+        "title": "SalQ-VLM: Fine-Grained Saliency-Guided Quantization for Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2508.03351",
+        "year": 2025,
+        "published": "2025-08-05",
+        "venue": null,
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities across diverse language tasks, motivating their extension to vision-language models (VLMs) for multimodal understanding. However, billion-parameter VLMs incur substantial memory and computational costs that hinder deployment in resource-constrained settings. Post-training quantization (PTQ) compresses models and accelerates inference without retraining, yet remains underexplored for VLMs. We identify two intrinsic VLM activation properties in PTQ: (1) visual over-representation, where vision tokens are excessive and often redundant, and (2) the modality gap separating text and vision tokens in the latent feature space. Prior methods largely overlook these properties, leading to quantization performance degradation. To address this mismatch, we propose SalQ-VLM, an importance-aware PTQ framework that prioritizes salient tokens and suppresses redundant vision tokens during calibration. We derive a gradient-driven importance factor that captures token-level importance variance and is theoretically grounded in the relationship among loss perturbation, activation errors, and output gradients. SalQ-VLM obtains this factor through a single lightweight block-wise gradient-caching pass and incorporates it into the layer-wise reconstruction objective. Because SalQ-VLM modifies only calibration, it adds no inference-time operations and remains compatible with existing high-performance kernels. Extensive evaluations across benchmarks and backbones show that SalQ-VLM consistently outperforms strong PTQ baselines, especially under ultra-low-bit quantization. Notably, it improves MME-RealWorld accuracy by 16.45% under INT2g128 quantization.",
+        "identifiers": [
+          "SemanticScholar:c456823b66367c9219c20c603fcf434bb6ca5f99"
+        ],
+        "semantic_scholar_id": "c456823b66367c9219c20c603fcf434bb6ca5f99",
+        "canonical_id": "arXiv:2508.03351",
+        "arxiv_id": "2508.03351",
+        "authors": [
+          "Yu-Fei Xue",
+          "Yu-Shi Huang",
+          "Lu Zhu",
+          "Jia-Wei Shao",
+          "Jun Zhang"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 460,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f48283e94916f82fc245d13e4ed8a1b31ef3490e4967b8931357cc315e1250a2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

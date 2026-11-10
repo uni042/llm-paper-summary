@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20260927-b-doi-10-48550-arxiv-2503-21460",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2503.21460",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2503.21460",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2503.21460",
+      "arXiv:2503.21460"
+    ],
+    "reason": "LLM agentの方法・応用・課題を広く整理するsurveyで、agent servingの背景価値はあるが新規推論システム手法ではない。",
+    "first_checked_at": "2026-09-27T11:00:23+09:00",
+    "last_checked_at": "2026-09-27T05:26:26+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Large Language Model Agent: A Survey on Methodology, Applications and Challenges"
+  },
+  "processed_at": "2026-09-27T05:26:26+00:00",
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

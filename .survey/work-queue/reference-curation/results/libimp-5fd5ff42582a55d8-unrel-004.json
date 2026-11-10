@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5fd5ff42582a55d8-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.39549",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.39549",
+    "identity_tokens": [
+      "arXiv:2609.39549"
+    ],
+    "reason": "LLM-agent attack defense/security detection。speculative wordingは推論高速化目的でない。",
+    "first_checked_at": "2026-10-05T03:02:29+00:00",
+    "last_checked_at": "2026-10-05T03:02:29+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+    ],
+    "title": "Speculative Safety Honeypot: Toward Proactive Defense Against Multi-turn Agent Attacks"
+  },
+  "processed_at": "2026-10-05T03:02:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5fd5ff42582a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

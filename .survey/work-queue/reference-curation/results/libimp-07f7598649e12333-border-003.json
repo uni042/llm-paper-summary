@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-07f7598649e12333-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1906.09777",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1906.09777",
+    "identity_tokens": [
+      "arXiv:1906.09777"
+    ],
+    "reason": "Tensorized Transformer compresses self-attention parameters and evaluates language modeling and translation, making it relevant to model-size/memory reduction. It does not establish modern decoder-only serving latency, KV-cache behavior, or throughput.",
+    "first_checked_at": "2026-10-06T03:59:05+00:00",
+    "last_checked_at": "2026-10-06T03:59:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Tensorized Transformer for Language Modeling"
+  },
+  "processed_at": "2026-10-06T03:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-07f7598649e1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

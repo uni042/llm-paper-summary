@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8b3fe07596a9a6d1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.15717",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.15717",
+    "identity_tokens": [
+      "arXiv:2508.15717"
+    ],
+    "reason": "Relevant to streaming video-LLM memory, but runtime improvement is not demonstrated and the setting is specialized.",
+    "first_checked_at": "2026-10-05T12:45:09+00:00",
+    "last_checked_at": "2026-10-05T12:45:09+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2410.01518-infinipot-infinite-context-processing-on-memory-constrained-llms.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md",
+      "papers/inference/99-other-inference-systems/2025-2504.15364-keydiff-key-similarity-based-kv-cache-eviction-for-long-context-llm-inference-in-resource-constrained-environments.md"
+    ],
+    "title": "StreamMem: Query-Agnostic KV Cache Memory for Streaming Video Understanding"
+  },
+  "processed_at": "2026-10-05T12:45:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8b3fe07596a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

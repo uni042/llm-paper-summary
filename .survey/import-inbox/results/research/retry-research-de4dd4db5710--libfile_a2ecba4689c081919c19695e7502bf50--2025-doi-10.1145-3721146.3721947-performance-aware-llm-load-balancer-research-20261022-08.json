@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4d9238dae43208ab2f51e5a1c8b5eb49741f17ad4fbe6a074f814ad73d7c78a3",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-de4dd4db5710--libfile_a2ecba4689c081919c19695e7502bf50--2025-doi-10.1145-3721146.3721947-performance-aware-llm-load-balancer-research-20261022-0845-scheduled-chat-45-r01.md",
+  "canonical_id": "DOI:10.1145/3721146.3721947",
+  "worker_completed_at": "2026-10-22T08:57:03+09:00",
+  "worker_run_key": "20261022-0845-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8636,
+    "body_paragraphs": 42,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 399,
+    "limitation_chars": 895,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 399 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 399 < 500"
+  ],
+  "processed_at": "2026-10-22T18:00:11+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fcdf0e71f0c2a6f7-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.10915",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.10915",
+    "identity_tokens": [
+      "arXiv:2506.10915"
+    ],
+    "reason": "一次要旨はMambaを使うtext-to-video生成の高速化研究で、対象はvideo synthesisの状態空間モデルでありLLM inferenceではない。",
+    "first_checked_at": "2026-10-06T18:11:27+00:00",
+    "last_checked_at": "2026-10-06T18:11:27+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+    ],
+    "title": "M4V: Multimodal Mamba for Efficient Text-to-Video Generation"
+  },
+  "processed_at": "2026-10-06T18:11:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fcdf0e71f0c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

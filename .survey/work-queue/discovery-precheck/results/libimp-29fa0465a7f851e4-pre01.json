@@ -1,0 +1,1042 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-29fa0465a7f851e4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-29fa0465a7f8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2302.04045",
+    "arXiv:2305.18952",
+    "arXiv:2307.02690",
+    "arXiv:2307.03738",
+    "arXiv:2310.07109",
+    "arXiv:2310.07664",
+    "arXiv:2401.11504",
+    "arXiv:2407.09577",
+    "arXiv:2504.06704",
+    "arXiv:2505.14256",
+    "arXiv:2509.05489"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "19fbd3e5b940b062cf738177ce6df11f703e34de",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T09:23:22.086462+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2302.04045",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2305.18952",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2307.02690",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2307.03738",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.07109",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.07664",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2401.11504",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.09577",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.06704",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.14256",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.05489",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "With Greater Text Comes Greater Necessity: Inference-Time Training Helps Long Text Generation",
+      "source_url": "https://arxiv.org/abs/2401.11504",
+      "year": 2024,
+      "published": "2024-01-21",
+      "venue": "arXiv.org",
+      "citation_count": 41,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long text generation, such as novel writing and discourse-level translation with extremely long contexts, presents significant challenges to current language models. Existing methods mainly focus on extending the model's context window through strategies like length extrapolation. However, these approaches demand substantial hardware resources during the training and/or inference phases. Our proposed method, Temp-Lora, introduces an alternative concept. Instead of relying on the KV cache to store all context information, we embeds this information directly into a temporary Lora module. In the process of long text generation, this module is progressively trained with text generated previously. This approach not only efficiently preserves contextual knowledge but also prevents any permanent alteration to the model's parameters given that the module is discarded post-generation. Extensive experiments on the PG19 language modeling benchmark and the GuoFeng discourse-level translation benchmark validate the effectiveness of Temp-Lora. Our results show that: 1) Temp-Lora substantially enhances generation quality for long text, as indicated by a 13.2% decrease in perplexity (PPL) on a subset of PG19, and a 29.3% decrease in PPL along with a 113.2% increase in BLEU score on a subset of GuoFeng, 2) Temp-Lora is compatible with and enhances most existing long text generation methods, and 3) Temp-Lora can greatly reduce computational costs by shortening the context window. For example, we can ensure a moderate improvement in generation quality (a decrease of 3.8% in PPL) while enabling a 51.5% memory usage reduction and a 60.0% decrease in latency for inference.",
+      "identifiers": [
+        "SemanticScholar:5215a3cfd67fdc6eb0201822dd0004bd4b830f91"
+      ],
+      "semantic_scholar_id": "5215a3cfd67fdc6eb0201822dd0004bd4b830f91",
+      "canonical_id": "arXiv:2401.11504",
+      "arxiv_id": "2401.11504",
+      "doi": "10.48550/arXiv.2401.11504",
+      "authors": [
+        "Yan Wang",
+        "D. Ma",
+        "Deng Cai"
+      ],
+      "priority": 41,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 41,
+        "citation_count": 41,
+        "total": 41,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 993,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Exploring the Practicality of Generative Retrieval on Dynamic Corpora",
+      "source_url": "https://arxiv.org/abs/2305.18952",
+      "year": 2023,
+      "published": "2023-05-27",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Benchmarking the performance of information retrieval (IR) is mostly conducted with a fixed set of documents (static corpora). However, in realistic scenarios, this is rarely the case and the documents to be retrieved are constantly updated and added. In this paper, we focus on Generative Retrievals (GR), which apply autoregressive language models to IR problems, and explore their adaptability and robustness in dynamic scenarios. We also conduct an extensive evaluation of computational and memory efficiency, crucial factors for real-world deployment of IR systems handling vast and ever-changing document collections. Our results on the StreamingQA benchmark demonstrate that GR is more adaptable to evolving knowledge (4–11%), robust in learning knowledge with temporal information, and efficient in terms of inference FLOPs (x2), indexing time (x6), and storage footprint (x4) compared to Dual Encoders (DE), which are commonly used in retrieval systems. Our paper highlights the potential of GR for future use in practical IR systems within dynamic environments.",
+      "identifiers": [
+        "SemanticScholar:5e52c1c4fc90870df11efd1348f54bc56407d773"
+      ],
+      "semantic_scholar_id": "5e52c1c4fc90870df11efd1348f54bc56407d773",
+      "canonical_id": "arXiv:2305.18952",
+      "arxiv_id": "2305.18952",
+      "doi": "10.18653/v1/2024.emnlp-main.755",
+      "authors": [
+        "Chaeeun Kim",
+        "Soyoung Yoon",
+        "Hyunji Lee",
+        "Joel Jang",
+        "Sohee Yang",
+        "Minjoon Seo"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1232,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "SparseCoder: Advancing source code analysis with sparse attention and learned token pruning",
+      "source_url": "https://arxiv.org/abs/2310.07109",
+      "year": 2023,
+      "published": "2023-10-11",
+      "venue": "Empirical Software Engineering",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As software projects rapidly evolve, software artifacts become more complex and defects behind them get harder to identify. The emerging Transformer-based approaches, though achieving remarkable performance, struggle with long code sequences due to their self-attention mechanism, which scales quadratically with the sequence length. This paper introduces SparseCoder, an innovative approach incorporating sparse attention and learned token pruning (LTP) method (adapted from natural language processing) to address this limitation. Compared to previous state-of-the-art models (CodeBERT, RoBERTa and CodeT5), our experiments demonstrate that SparseCoder can handle significantly longer input sequences – at least twice as long, within the limits of our hardware resources and data statistics. Additionally, SparseCoder is four times faster than other methods measured in runtime, achieving a 50% reduction in floating point operations per second (FLOPs) with a negligible performance drop of less than 1% compared to Transformers using sparse attention (Sparse Atten). Plotting FLOPs of model inference against token lengths reveals that SparseCoder scales linearly, whereas other methods, including the current state-of-the-art model CodeT5, scale quadratically. Moreover, SparseCoder enhances interpretability by visualizing non-trivial tokens layer-wise.",
+      "identifiers": [
+        "SemanticScholar:c3e9318b38662c942752b922b0df47fdd9f4de48"
+      ],
+      "semantic_scholar_id": "c3e9318b38662c942752b922b0df47fdd9f4de48",
+      "canonical_id": "arXiv:2310.07109",
+      "arxiv_id": "2310.07109",
+      "doi": "10.1007/s10664-024-10558-1",
+      "authors": [
+        "Xueqi Yang",
+        "Mariusz H. Jakubowski",
+        "Li Kang",
+        "Hao-Ran Yu",
+        "Tim Menzies"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1095,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CAT: Circular-Convolutional Attention for Sub-Quadratic Transformers",
+      "source_url": "https://arxiv.org/abs/2504.06704",
+      "year": 2025,
+      "published": "2025-04-09",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have driven remarkable breakthroughs in natural language processing and computer vision, yet their standard attention mechanism still imposes O(N^2) complexity, hindering scalability to longer sequences. We introduce Circular-convolutional ATtention (CAT), a Fourier-based approach that efficiently applies circular convolutions to reduce complexity without sacrificing representational power. CAT achieves O(NlogN) computations, requires fewer learnable parameters by streamlining fully connected layers, and introduces no additional heavy operations, resulting in consistent accuracy improvements and about a 10% speedup in naive PyTorch implementations. Based on the Engineering-Isomorphic Transformers (EITs) framework, CAT's design not only offers practical efficiency and ease of implementation, but also provides insights to guide the development of future high-performance Transformer architectures. Finally, our ablation studies highlight the key conditions underlying CAT's success, shedding light on broader principles for scalable attention mechanisms.",
+      "identifiers": [
+        "SemanticScholar:b501df63ce56e1f62ed7c99ca1301a28de83bc4f"
+      ],
+      "semantic_scholar_id": "b501df63ce56e1f62ed7c99ca1301a28de83bc4f",
+      "canonical_id": "arXiv:2504.06704",
+      "arxiv_id": "2504.06704",
+      "doi": "10.48550/arXiv.2504.06704",
+      "authors": [
+        "Yoshihiro Yamada"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 549,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Scaling In-Context Demonstrations with Structured Attention",
+      "source_url": "https://arxiv.org/abs/2307.02690",
+      "year": 2023,
+      "published": "2023-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The recent surge of large language models (LLMs) highlights their ability to perform in-context learning, i.e.,\"learning\"to perform a task from a few demonstrations in the context without any parameter updates. However, their capabilities of in-context learning are limited by the model architecture: 1) the use of demonstrations is constrained by a maximum sentence length due to positional embeddings; 2) the quadratic complexity of attention hinders users from using more demonstrations efficiently; 3) LLMs are shown to be sensitive to the order of the demonstrations. In this work, we tackle these challenges by proposing a better architectural design for in-context learning. We propose SAICL (Structured Attention for In-Context Learning), which replaces the full-attention by a structured attention mechanism designed for in-context learning, and removes unnecessary dependencies between individual demonstrations, while making the model invariant to the permutation of demonstrations. We evaluate SAICL in a meta-training framework and show that SAICL achieves comparable or better performance than full attention while obtaining up to 3.4x inference speed-up. SAICL also consistently outperforms a strong Fusion-in-Decoder (FiD) baseline which processes each demonstration independently. Finally, thanks to its linear nature, we demonstrate that SAICL can easily scale to hundreds of demonstrations with continuous performance gains with scaling.",
+      "identifiers": [
+        "SemanticScholar:e89b4ef0f0282327085078058557c04812aa4d35"
+      ],
+      "semantic_scholar_id": "e89b4ef0f0282327085078058557c04812aa4d35",
+      "canonical_id": "arXiv:2307.02690",
+      "arxiv_id": "2307.02690",
+      "doi": "10.48550/arXiv.2307.02690",
+      "authors": [
+        "Tianle Cai",
+        "Kaixuan Huang",
+        "Jason Lee",
+        "Mengdi Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1193,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Self-Aligned Reward: Towards Effective and Efficient Reasoners",
+      "source_url": "https://arxiv.org/abs/2509.05489",
+      "year": 2025,
+      "published": "2025-09-05",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reinforcement learning with verifiable rewards has significantly advanced reasoning in large language models (LLMs), but such signals remain coarse, offering only binary correctness feedback. This limitation often results in inefficiencies, including overly verbose reasoning and high computational cost, while existing solutions often compromise accuracy. To address this, we introduce self-aligned reward (SAR), a self-guided signal that complements verifiable rewards to encourage both reasoning accuracy and efficiency. SAR is defined as the relative perplexity difference between an answer conditioned on the query and the standalone answer, thereby favoring responses that are concise and query-specific. Quantitative analysis reveals that SAR reliably distinguishes answer quality: concise, correct answers score higher than redundant ones, and partially correct answers score higher than entirely incorrect ones. Evaluation on 4 models across 7 benchmarks shows that integrating SAR with prevalent RL algorithms like PPO and GRPO improves accuracy by 4%, while reducing inference cost by 30%. Further analysis demonstrates that SAR achieves a Pareto-optimal trade-off between correctness and efficiency compared to reward signals based on length or self-confidence. We also show that SAR shortens responses while preserving advanced reasoning behaviors, demonstrating its ability to suppress unnecessary elaboration without losing critical reasoning. These results highlight the promise of self-aligned reward as a fine-grained complement to verifiable rewards, paving the way for more efficient and effective LLM training.",
+      "identifiers": [
+        "SemanticScholar:92c39c226cb07a768ee11d2ac01aab33534b214b"
+      ],
+      "semantic_scholar_id": "92c39c226cb07a768ee11d2ac01aab33534b214b",
+      "canonical_id": "arXiv:2509.05489",
+      "arxiv_id": "2509.05489",
+      "doi": "10.48550/arXiv.2509.05489",
+      "authors": [
+        "Pei-Xuan Han",
+        "Adit Krishnan",
+        "Gerald Friedland",
+        "Jia-Xuan You",
+        "Chris Kong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 400,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models",
+      "source_url": "https://arxiv.org/abs/2307.03738",
+      "year": 2023,
+      "published": "2023-07-07",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present ongoing work on a new automatic code generation approach for supporting quantized generative inference on LLMs such as LLaMA or OPT on off-the-shelf CPUs. Our approach is informed by the target architecture and a performance model, including both hardware characteristics and method-specific accuracy constraints. Results on CPU-based inference for LLaMA models show that our approach can lead to high performance and high accuracy, comparing favorably to the best existing open-source solution. A preliminary implementation is available at https://github.com/IST-DASLab/QIGen.",
+      "identifiers": [
+        "SemanticScholar:59ae3f32233781acd5e418a647a46ff9a87c75fa"
+      ],
+      "semantic_scholar_id": "59ae3f32233781acd5e418a647a46ff9a87c75fa",
+      "canonical_id": "arXiv:2307.03738",
+      "arxiv_id": "2307.03738",
+      "doi": "10.48550/arXiv.2307.03738",
+      "authors": [
+        "Tommaso Pegolotti",
+        "Elias Frantar",
+        "Dan Alistarh",
+        "Markus Püschel"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1191,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Accelerating Vision Transformers Based on Heterogeneous Attention Patterns",
+      "source_url": "https://arxiv.org/abs/2310.07664",
+      "year": 2023,
+      "published": "2023-10-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, Vision Transformers (ViTs) have attracted a lot of attention in the field of computer vision. Generally, the powerful representative capacity of ViTs mainly benefits from the self-attention mechanism, which has a high computation complexity. To accelerate ViTs, we propose an integrated compression pipeline based on observed heterogeneous attention patterns across layers. On one hand, different images share more similar attention patterns in early layers than later layers, indicating that the dynamic query-by-key self-attention matrix may be replaced with a static self-attention matrix in early layers. Then, we propose a dynamic-guided static self-attention (DGSSA) method where the matrix inherits self-attention information from the replaced dynamic self-attention to effectively improve the feature representation ability of ViTs. On the other hand, the attention maps have more low-rank patterns, which reflect token redundancy, in later layers than early layers. In a view of linear dimension reduction, we further propose a method of global aggregation pyramid (GLAD) to reduce the number of tokens in later layers of ViTs, such as Deit. Experimentally, the integrated compression pipeline of DGSSA and GLAD can accelerate up to 121% run-time throughput compared with DeiT, which surpasses all SOTA approaches.",
+      "identifiers": [
+        "SemanticScholar:3453038294dc516d0737f59dcbfa92f0a8de169d"
+      ],
+      "semantic_scholar_id": "3453038294dc516d0737f59dcbfa92f0a8de169d",
+      "canonical_id": "arXiv:2310.07664",
+      "arxiv_id": "2310.07664",
+      "doi": "10.48550/arXiv.2310.07664",
+      "authors": [
+        "Deli Yu",
+        "Teng Xi",
+        "Jianwei Li",
+        "Baopu Li",
+        "Gang Zhang",
+        "Haocheng Feng",
+        "Junyu Han",
+        "Jing-Tuo Liu",
+        "Er-Rui Ding",
+        "Jing-Dong Wang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1094,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Revisiting Offline Compression: Going Beyond Factorization-based Methods for Transformer Language Models",
+      "source_url": "https://arxiv.org/abs/2302.04045",
+      "year": 2023,
+      "published": "2023-02-08",
+      "venue": "Findings",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent transformer language models achieve outstanding results in many natural language processing (NLP) tasks. However, their enormous size often makes them impractical on memory-constrained devices, requiring practitioners to compress them to smaller networks. In this paper, we explore offline compression methods, meaning computationally-cheap approaches that do not require further fine-tuning of the compressed model. We challenge the classical matrix factorization methods by proposing a novel, better-performing autoencoder-based framework. We perform a comprehensive ablation study of our approach, examining its different aspects over a diverse set of evaluation settings. Moreover, we show that enabling collaboration between modules across layers by compressing certain modules together positively impacts the final model performance. Experiments on various NLP tasks demonstrate that our approach significantly outperforms commonly used factorization-based offline compression methods.",
+      "identifiers": [
+        "SemanticScholar:feea0452e03b78f7c85f40e5daa1bd08b61bb44b"
+      ],
+      "semantic_scholar_id": "feea0452e03b78f7c85f40e5daa1bd08b61bb44b",
+      "canonical_id": "arXiv:2302.04045",
+      "arxiv_id": "2302.04045",
+      "doi": "10.48550/arXiv.2302.04045",
+      "authors": [
+        "Mohammadreza Banaei",
+        "Klaudia Balazy",
+        "A. Kasymov",
+        "R. Lebret",
+        "J. Tabor",
+        "K. Aberer"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1340,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FuxiMT: Sparsifying Large Language Models for Chinese-Centric Multilingual Machine Translation",
+      "source_url": "https://arxiv.org/abs/2505.14256",
+      "year": 2025,
+      "published": "2025-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we present FuxiMT, a novel Chinese-centric multilingual machine translation model powered by a sparsified large language model (LLM). We adopt a two-stage strategy to train FuxiMT. We first pre-train the model on a massive Chinese corpus and then conduct multilingual fine-tuning on a large parallel dataset encompassing 65 languages. FuxiMT incorporates Mixture-of-Experts (MoEs) and employs a curriculum learning strategy for robust performance across various resource levels. Experimental results demonstrate that FuxiMT significantly outperforms strong baselines, including state-of-the-art LLMs and machine translation models, particularly under low-resource scenarios. Furthermore, FuxiMT exhibits remarkable zero-shot translation capabilities for unseen language pairs, indicating its potential to bridge communication gaps where parallel data are scarce or unavailable.",
+      "identifiers": [
+        "SemanticScholar:fd4d923ca4a6052fec3ad7ade2cdc210c180caf0"
+      ],
+      "semantic_scholar_id": "fd4d923ca4a6052fec3ad7ade2cdc210c180caf0",
+      "canonical_id": "arXiv:2505.14256",
+      "arxiv_id": "2505.14256",
+      "doi": "10.48550/arXiv.2505.14256",
+      "authors": [
+        "Shao-Lin Zhu",
+        "Tianyu Dong",
+        "Bo Li",
+        "De-Yi Xiong"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlashNorm: Fast Normalization for Transformers",
+      "source_url": "https://arxiv.org/abs/2407.09577",
+      "year": 2024,
+      "published": "2024-07-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Normalization layers are ubiquitous in large language models (LLMs) yet represent a compute bottleneck: on hardware with distinct vector and matrix execution units, the RMS calculation blocks the subsequent matrix multiplication, preventing parallel execution. We present FlashNorm, an exact reformulation of RMSNorm followed by a linear layer that (i) eliminates the normalization weights by folding them into the subsequent linear layer, and (ii) defers the scalar RMS normalization to the output of the matrix multiplication, enabling the two operations to execute in parallel. Additionally, by the scale invariance of RMS, an RMSNorm followed by a linear layer followed by another RMSNorm allows the first RMSNorm to be eliminated entirely -- a mathematically identical simplification that removes the pre-attention RMSNorm in models using QKV-normalization (e.g., Gemma~4) and in MLA-models with latent normalization (e.g., DeepSeek-V2, Mistral Small 4, and OpenMythos). The same techniques extend to LayerNorm, Dynamic Tanh (DyT), feed-forward networks with GLU variants, and RoPE-based attention. On an NVIDIA T4 GPU, FlashNorm achieves 33 - 35% lower latency on the norm-then-project operation in the compute-bound (prefill) regime at SmolLM2-135M scale, and 12 - 14% at Llama-7B scale. We verify zero-loss weight folding on three models. Beyond inference speed, FlashNorm simplifies model implementations by reducing parameter tensor count. Watch our explainer video https://youtu.be/GEuJv34_XgU?si and see https://github.com/OpenMachine-ai/transformer-tricks for code.",
+      "identifiers": [
+        "SemanticScholar:4e1e9afef123398f8c2e9f3606782d6d20339299"
+      ],
+      "semantic_scholar_id": "4e1e9afef123398f8c2e9f3606782d6d20339299",
+      "canonical_id": "arXiv:2407.09577",
+      "arxiv_id": "2407.09577",
+      "authors": [
+        "Nils Graef",
+        "Filip Makraduli",
+        "Andrew Wasielewski",
+        "M. Clapp"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 820,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2401.11504",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2401.11504",
+        "id:SemanticScholar:5215a3cfd67fdc6eb0201822dd0004bd4b830f91",
+        "id:arXiv:2401.11504",
+        "title:with greater text comes greater necessity inferencetime training helps long text generation",
+        "url:https://arxiv.org/abs/2401.11504"
+      ],
+      "record": {
+        "title": "With Greater Text Comes Greater Necessity: Inference-Time Training Helps Long Text Generation",
+        "source_url": "https://arxiv.org/abs/2401.11504",
+        "year": 2024,
+        "published": "2024-01-21",
+        "venue": "arXiv.org",
+        "citation_count": 41,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long text generation, such as novel writing and discourse-level translation with extremely long contexts, presents significant challenges to current language models. Existing methods mainly focus on extending the model's context window through strategies like length extrapolation. However, these approaches demand substantial hardware resources during the training and/or inference phases. Our proposed method, Temp-Lora, introduces an alternative concept. Instead of relying on the KV cache to store all context information, we embeds this information directly into a temporary Lora module. In the process of long text generation, this module is progressively trained with text generated previously. This approach not only efficiently preserves contextual knowledge but also prevents any permanent alteration to the model's parameters given that the module is discarded post-generation. Extensive experiments on the PG19 language modeling benchmark and the GuoFeng discourse-level translation benchmark validate the effectiveness of Temp-Lora. Our results show that: 1) Temp-Lora substantially enhances generation quality for long text, as indicated by a 13.2% decrease in perplexity (PPL) on a subset of PG19, and a 29.3% decrease in PPL along with a 113.2% increase in BLEU score on a subset of GuoFeng, 2) Temp-Lora is compatible with and enhances most existing long text generation methods, and 3) Temp-Lora can greatly reduce computational costs by shortening the context window. For example, we can ensure a moderate improvement in generation quality (a decrease of 3.8% in PPL) while enabling a 51.5% memory usage reduction and a 60.0% decrease in latency for inference.",
+        "identifiers": [
+          "SemanticScholar:5215a3cfd67fdc6eb0201822dd0004bd4b830f91"
+        ],
+        "semantic_scholar_id": "5215a3cfd67fdc6eb0201822dd0004bd4b830f91",
+        "canonical_id": "arXiv:2401.11504",
+        "arxiv_id": "2401.11504",
+        "doi": "10.48550/arXiv.2401.11504",
+        "authors": [
+          "Yan Wang",
+          "D. Ma",
+          "Deng Cai"
+        ],
+        "priority": 41,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 41,
+          "citation_count": 41,
+          "total": 41,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 993,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2305.18952",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2024.emnlp-main.755",
+        "id:SemanticScholar:5e52c1c4fc90870df11efd1348f54bc56407d773",
+        "id:arXiv:2305.18952",
+        "title:exploring the practicality of generative retrieval on dynamic corpora",
+        "url:https://arxiv.org/abs/2305.18952"
+      ],
+      "record": {
+        "title": "Exploring the Practicality of Generative Retrieval on Dynamic Corpora",
+        "source_url": "https://arxiv.org/abs/2305.18952",
+        "year": 2023,
+        "published": "2023-05-27",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Benchmarking the performance of information retrieval (IR) is mostly conducted with a fixed set of documents (static corpora). However, in realistic scenarios, this is rarely the case and the documents to be retrieved are constantly updated and added. In this paper, we focus on Generative Retrievals (GR), which apply autoregressive language models to IR problems, and explore their adaptability and robustness in dynamic scenarios. We also conduct an extensive evaluation of computational and memory efficiency, crucial factors for real-world deployment of IR systems handling vast and ever-changing document collections. Our results on the StreamingQA benchmark demonstrate that GR is more adaptable to evolving knowledge (4–11%), robust in learning knowledge with temporal information, and efficient in terms of inference FLOPs (x2), indexing time (x6), and storage footprint (x4) compared to Dual Encoders (DE), which are commonly used in retrieval systems. Our paper highlights the potential of GR for future use in practical IR systems within dynamic environments.",
+        "identifiers": [
+          "SemanticScholar:5e52c1c4fc90870df11efd1348f54bc56407d773"
+        ],
+        "semantic_scholar_id": "5e52c1c4fc90870df11efd1348f54bc56407d773",
+        "canonical_id": "arXiv:2305.18952",
+        "arxiv_id": "2305.18952",
+        "doi": "10.18653/v1/2024.emnlp-main.755",
+        "authors": [
+          "Chaeeun Kim",
+          "Soyoung Yoon",
+          "Hyunji Lee",
+          "Joel Jang",
+          "Sohee Yang",
+          "Minjoon Seo"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 20,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1232,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.07109",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10664-024-10558-1",
+        "id:SemanticScholar:c3e9318b38662c942752b922b0df47fdd9f4de48",
+        "id:arXiv:2310.07109",
+        "title:sparsecoder advancing source code analysis with sparse attention and learned token pruning",
+        "url:https://arxiv.org/abs/2310.07109"
+      ],
+      "record": {
+        "title": "SparseCoder: Advancing source code analysis with sparse attention and learned token pruning",
+        "source_url": "https://arxiv.org/abs/2310.07109",
+        "year": 2023,
+        "published": "2023-10-11",
+        "venue": "Empirical Software Engineering",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As software projects rapidly evolve, software artifacts become more complex and defects behind them get harder to identify. The emerging Transformer-based approaches, though achieving remarkable performance, struggle with long code sequences due to their self-attention mechanism, which scales quadratically with the sequence length. This paper introduces SparseCoder, an innovative approach incorporating sparse attention and learned token pruning (LTP) method (adapted from natural language processing) to address this limitation. Compared to previous state-of-the-art models (CodeBERT, RoBERTa and CodeT5), our experiments demonstrate that SparseCoder can handle significantly longer input sequences – at least twice as long, within the limits of our hardware resources and data statistics. Additionally, SparseCoder is four times faster than other methods measured in runtime, achieving a 50% reduction in floating point operations per second (FLOPs) with a negligible performance drop of less than 1% compared to Transformers using sparse attention (Sparse Atten). Plotting FLOPs of model inference against token lengths reveals that SparseCoder scales linearly, whereas other methods, including the current state-of-the-art model CodeT5, scale quadratically. Moreover, SparseCoder enhances interpretability by visualizing non-trivial tokens layer-wise.",
+        "identifiers": [
+          "SemanticScholar:c3e9318b38662c942752b922b0df47fdd9f4de48"
+        ],
+        "semantic_scholar_id": "c3e9318b38662c942752b922b0df47fdd9f4de48",
+        "canonical_id": "arXiv:2310.07109",
+        "arxiv_id": "2310.07109",
+        "doi": "10.1007/s10664-024-10558-1",
+        "authors": [
+          "Xueqi Yang",
+          "Mariusz H. Jakubowski",
+          "Li Kang",
+          "Hao-Ran Yu",
+          "Tim Menzies"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1095,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.06704",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.06704",
+        "id:SemanticScholar:b501df63ce56e1f62ed7c99ca1301a28de83bc4f",
+        "id:arXiv:2504.06704",
+        "title:cat circularconvolutional attention for subquadratic transformers",
+        "url:https://arxiv.org/abs/2504.06704"
+      ],
+      "record": {
+        "title": "CAT: Circular-Convolutional Attention for Sub-Quadratic Transformers",
+        "source_url": "https://arxiv.org/abs/2504.06704",
+        "year": 2025,
+        "published": "2025-04-09",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have driven remarkable breakthroughs in natural language processing and computer vision, yet their standard attention mechanism still imposes O(N^2) complexity, hindering scalability to longer sequences. We introduce Circular-convolutional ATtention (CAT), a Fourier-based approach that efficiently applies circular convolutions to reduce complexity without sacrificing representational power. CAT achieves O(NlogN) computations, requires fewer learnable parameters by streamlining fully connected layers, and introduces no additional heavy operations, resulting in consistent accuracy improvements and about a 10% speedup in naive PyTorch implementations. Based on the Engineering-Isomorphic Transformers (EITs) framework, CAT's design not only offers practical efficiency and ease of implementation, but also provides insights to guide the development of future high-performance Transformer architectures. Finally, our ablation studies highlight the key conditions underlying CAT's success, shedding light on broader principles for scalable attention mechanisms.",
+        "identifiers": [
+          "SemanticScholar:b501df63ce56e1f62ed7c99ca1301a28de83bc4f"
+        ],
+        "semantic_scholar_id": "b501df63ce56e1f62ed7c99ca1301a28de83bc4f",
+        "canonical_id": "arXiv:2504.06704",
+        "arxiv_id": "2504.06704",
+        "doi": "10.48550/arXiv.2504.06704",
+        "authors": [
+          "Yoshihiro Yamada"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 549,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2307.02690",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2307.02690",
+        "id:SemanticScholar:e89b4ef0f0282327085078058557c04812aa4d35",
+        "id:arXiv:2307.02690",
+        "title:scaling incontext demonstrations with structured attention",
+        "url:https://arxiv.org/abs/2307.02690"
+      ],
+      "record": {
+        "title": "Scaling In-Context Demonstrations with Structured Attention",
+        "source_url": "https://arxiv.org/abs/2307.02690",
+        "year": 2023,
+        "published": "2023-07-05",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The recent surge of large language models (LLMs) highlights their ability to perform in-context learning, i.e.,\"learning\"to perform a task from a few demonstrations in the context without any parameter updates. However, their capabilities of in-context learning are limited by the model architecture: 1) the use of demonstrations is constrained by a maximum sentence length due to positional embeddings; 2) the quadratic complexity of attention hinders users from using more demonstrations efficiently; 3) LLMs are shown to be sensitive to the order of the demonstrations. In this work, we tackle these challenges by proposing a better architectural design for in-context learning. We propose SAICL (Structured Attention for In-Context Learning), which replaces the full-attention by a structured attention mechanism designed for in-context learning, and removes unnecessary dependencies between individual demonstrations, while making the model invariant to the permutation of demonstrations. We evaluate SAICL in a meta-training framework and show that SAICL achieves comparable or better performance than full attention while obtaining up to 3.4x inference speed-up. SAICL also consistently outperforms a strong Fusion-in-Decoder (FiD) baseline which processes each demonstration independently. Finally, thanks to its linear nature, we demonstrate that SAICL can easily scale to hundreds of demonstrations with continuous performance gains with scaling.",
+        "identifiers": [
+          "SemanticScholar:e89b4ef0f0282327085078058557c04812aa4d35"
+        ],
+        "semantic_scholar_id": "e89b4ef0f0282327085078058557c04812aa4d35",
+        "canonical_id": "arXiv:2307.02690",
+        "arxiv_id": "2307.02690",
+        "doi": "10.48550/arXiv.2307.02690",
+        "authors": [
+          "Tianle Cai",
+          "Kaixuan Huang",
+          "Jason Lee",
+          "Mengdi Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1193,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.05489",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.05489",
+        "id:SemanticScholar:92c39c226cb07a768ee11d2ac01aab33534b214b",
+        "id:arXiv:2509.05489",
+        "title:selfaligned reward towards effective and efficient reasoners",
+        "url:https://arxiv.org/abs/2509.05489"
+      ],
+      "record": {
+        "title": "Self-Aligned Reward: Towards Effective and Efficient Reasoners",
+        "source_url": "https://arxiv.org/abs/2509.05489",
+        "year": 2025,
+        "published": "2025-09-05",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reinforcement learning with verifiable rewards has significantly advanced reasoning in large language models (LLMs), but such signals remain coarse, offering only binary correctness feedback. This limitation often results in inefficiencies, including overly verbose reasoning and high computational cost, while existing solutions often compromise accuracy. To address this, we introduce self-aligned reward (SAR), a self-guided signal that complements verifiable rewards to encourage both reasoning accuracy and efficiency. SAR is defined as the relative perplexity difference between an answer conditioned on the query and the standalone answer, thereby favoring responses that are concise and query-specific. Quantitative analysis reveals that SAR reliably distinguishes answer quality: concise, correct answers score higher than redundant ones, and partially correct answers score higher than entirely incorrect ones. Evaluation on 4 models across 7 benchmarks shows that integrating SAR with prevalent RL algorithms like PPO and GRPO improves accuracy by 4%, while reducing inference cost by 30%. Further analysis demonstrates that SAR achieves a Pareto-optimal trade-off between correctness and efficiency compared to reward signals based on length or self-confidence. We also show that SAR shortens responses while preserving advanced reasoning behaviors, demonstrating its ability to suppress unnecessary elaboration without losing critical reasoning. These results highlight the promise of self-aligned reward as a fine-grained complement to verifiable rewards, paving the way for more efficient and effective LLM training.",
+        "identifiers": [
+          "SemanticScholar:92c39c226cb07a768ee11d2ac01aab33534b214b"
+        ],
+        "semantic_scholar_id": "92c39c226cb07a768ee11d2ac01aab33534b214b",
+        "canonical_id": "arXiv:2509.05489",
+        "arxiv_id": "2509.05489",
+        "doi": "10.48550/arXiv.2509.05489",
+        "authors": [
+          "Pei-Xuan Han",
+          "Adit Krishnan",
+          "Gerald Friedland",
+          "Jia-Xuan You",
+          "Chris Kong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 400,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2307.03738",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2307.03738",
+        "id:SemanticScholar:59ae3f32233781acd5e418a647a46ff9a87c75fa",
+        "id:arXiv:2307.03738",
+        "title:qigen generating efficient kernels for quantized inference on large language models",
+        "url:https://arxiv.org/abs/2307.03738"
+      ],
+      "record": {
+        "title": "QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models",
+        "source_url": "https://arxiv.org/abs/2307.03738",
+        "year": 2023,
+        "published": "2023-07-07",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present ongoing work on a new automatic code generation approach for supporting quantized generative inference on LLMs such as LLaMA or OPT on off-the-shelf CPUs. Our approach is informed by the target architecture and a performance model, including both hardware characteristics and method-specific accuracy constraints. Results on CPU-based inference for LLaMA models show that our approach can lead to high performance and high accuracy, comparing favorably to the best existing open-source solution. A preliminary implementation is available at https://github.com/IST-DASLab/QIGen.",
+        "identifiers": [
+          "SemanticScholar:59ae3f32233781acd5e418a647a46ff9a87c75fa"
+        ],
+        "semantic_scholar_id": "59ae3f32233781acd5e418a647a46ff9a87c75fa",
+        "canonical_id": "arXiv:2307.03738",
+        "arxiv_id": "2307.03738",
+        "doi": "10.48550/arXiv.2307.03738",
+        "authors": [
+          "Tommaso Pegolotti",
+          "Elias Frantar",
+          "Dan Alistarh",
+          "Markus Püschel"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1191,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.07664",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.07664",
+        "id:SemanticScholar:3453038294dc516d0737f59dcbfa92f0a8de169d",
+        "id:arXiv:2310.07664",
+        "title:accelerating vision transformers based on heterogeneous attention patterns",
+        "url:https://arxiv.org/abs/2310.07664"
+      ],
+      "record": {
+        "title": "Accelerating Vision Transformers Based on Heterogeneous Attention Patterns",
+        "source_url": "https://arxiv.org/abs/2310.07664",
+        "year": 2023,
+        "published": "2023-10-12",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently, Vision Transformers (ViTs) have attracted a lot of attention in the field of computer vision. Generally, the powerful representative capacity of ViTs mainly benefits from the self-attention mechanism, which has a high computation complexity. To accelerate ViTs, we propose an integrated compression pipeline based on observed heterogeneous attention patterns across layers. On one hand, different images share more similar attention patterns in early layers than later layers, indicating that the dynamic query-by-key self-attention matrix may be replaced with a static self-attention matrix in early layers. Then, we propose a dynamic-guided static self-attention (DGSSA) method where the matrix inherits self-attention information from the replaced dynamic self-attention to effectively improve the feature representation ability of ViTs. On the other hand, the attention maps have more low-rank patterns, which reflect token redundancy, in later layers than early layers. In a view of linear dimension reduction, we further propose a method of global aggregation pyramid (GLAD) to reduce the number of tokens in later layers of ViTs, such as Deit. Experimentally, the integrated compression pipeline of DGSSA and GLAD can accelerate up to 121% run-time throughput compared with DeiT, which surpasses all SOTA approaches.",
+        "identifiers": [
+          "SemanticScholar:3453038294dc516d0737f59dcbfa92f0a8de169d"
+        ],
+        "semantic_scholar_id": "3453038294dc516d0737f59dcbfa92f0a8de169d",
+        "canonical_id": "arXiv:2310.07664",
+        "arxiv_id": "2310.07664",
+        "doi": "10.48550/arXiv.2310.07664",
+        "authors": [
+          "Deli Yu",
+          "Teng Xi",
+          "Jianwei Li",
+          "Baopu Li",
+          "Gang Zhang",
+          "Haocheng Feng",
+          "Junyu Han",
+          "Jing-Tuo Liu",
+          "Er-Rui Ding",
+          "Jing-Dong Wang"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1094,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2302.04045",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2302.04045",
+        "id:SemanticScholar:feea0452e03b78f7c85f40e5daa1bd08b61bb44b",
+        "id:arXiv:2302.04045",
+        "title:revisiting offline compression going beyond factorizationbased methods for transformer language models",
+        "url:https://arxiv.org/abs/2302.04045"
+      ],
+      "record": {
+        "title": "Revisiting Offline Compression: Going Beyond Factorization-based Methods for Transformer Language Models",
+        "source_url": "https://arxiv.org/abs/2302.04045",
+        "year": 2023,
+        "published": "2023-02-08",
+        "venue": "Findings",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent transformer language models achieve outstanding results in many natural language processing (NLP) tasks. However, their enormous size often makes them impractical on memory-constrained devices, requiring practitioners to compress them to smaller networks. In this paper, we explore offline compression methods, meaning computationally-cheap approaches that do not require further fine-tuning of the compressed model. We challenge the classical matrix factorization methods by proposing a novel, better-performing autoencoder-based framework. We perform a comprehensive ablation study of our approach, examining its different aspects over a diverse set of evaluation settings. Moreover, we show that enabling collaboration between modules across layers by compressing certain modules together positively impacts the final model performance. Experiments on various NLP tasks demonstrate that our approach significantly outperforms commonly used factorization-based offline compression methods.",
+        "identifiers": [
+          "SemanticScholar:feea0452e03b78f7c85f40e5daa1bd08b61bb44b"
+        ],
+        "semantic_scholar_id": "feea0452e03b78f7c85f40e5daa1bd08b61bb44b",
+        "canonical_id": "arXiv:2302.04045",
+        "arxiv_id": "2302.04045",
+        "doi": "10.48550/arXiv.2302.04045",
+        "authors": [
+          "Mohammadreza Banaei",
+          "Klaudia Balazy",
+          "A. Kasymov",
+          "R. Lebret",
+          "J. Tabor",
+          "K. Aberer"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1340,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.14256",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.14256",
+        "id:SemanticScholar:fd4d923ca4a6052fec3ad7ade2cdc210c180caf0",
+        "id:arXiv:2505.14256",
+        "title:fuximt sparsifying large language models for chinesecentric multilingual machine translation",
+        "url:https://arxiv.org/abs/2505.14256"
+      ],
+      "record": {
+        "title": "FuxiMT: Sparsifying Large Language Models for Chinese-Centric Multilingual Machine Translation",
+        "source_url": "https://arxiv.org/abs/2505.14256",
+        "year": 2025,
+        "published": "2025-05-20",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this paper, we present FuxiMT, a novel Chinese-centric multilingual machine translation model powered by a sparsified large language model (LLM). We adopt a two-stage strategy to train FuxiMT. We first pre-train the model on a massive Chinese corpus and then conduct multilingual fine-tuning on a large parallel dataset encompassing 65 languages. FuxiMT incorporates Mixture-of-Experts (MoEs) and employs a curriculum learning strategy for robust performance across various resource levels. Experimental results demonstrate that FuxiMT significantly outperforms strong baselines, including state-of-the-art LLMs and machine translation models, particularly under low-resource scenarios. Furthermore, FuxiMT exhibits remarkable zero-shot translation capabilities for unseen language pairs, indicating its potential to bridge communication gaps where parallel data are scarce or unavailable.",
+        "identifiers": [
+          "SemanticScholar:fd4d923ca4a6052fec3ad7ade2cdc210c180caf0"
+        ],
+        "semantic_scholar_id": "fd4d923ca4a6052fec3ad7ade2cdc210c180caf0",
+        "canonical_id": "arXiv:2505.14256",
+        "arxiv_id": "2505.14256",
+        "doi": "10.48550/arXiv.2505.14256",
+        "authors": [
+          "Shao-Lin Zhu",
+          "Tianyu Dong",
+          "Bo Li",
+          "De-Yi Xiong"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 508,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.09577",
+      "identity_tokens": [
+        "id:SemanticScholar:4e1e9afef123398f8c2e9f3606782d6d20339299",
+        "id:arXiv:2407.09577",
+        "title:flashnorm fast normalization for transformers",
+        "url:https://arxiv.org/abs/2407.09577"
+      ],
+      "record": {
+        "title": "FlashNorm: Fast Normalization for Transformers",
+        "source_url": "https://arxiv.org/abs/2407.09577",
+        "year": 2024,
+        "published": "2024-07-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Normalization layers are ubiquitous in large language models (LLMs) yet represent a compute bottleneck: on hardware with distinct vector and matrix execution units, the RMS calculation blocks the subsequent matrix multiplication, preventing parallel execution. We present FlashNorm, an exact reformulation of RMSNorm followed by a linear layer that (i) eliminates the normalization weights by folding them into the subsequent linear layer, and (ii) defers the scalar RMS normalization to the output of the matrix multiplication, enabling the two operations to execute in parallel. Additionally, by the scale invariance of RMS, an RMSNorm followed by a linear layer followed by another RMSNorm allows the first RMSNorm to be eliminated entirely -- a mathematically identical simplification that removes the pre-attention RMSNorm in models using QKV-normalization (e.g., Gemma~4) and in MLA-models with latent normalization (e.g., DeepSeek-V2, Mistral Small 4, and OpenMythos). The same techniques extend to LayerNorm, Dynamic Tanh (DyT), feed-forward networks with GLU variants, and RoPE-based attention. On an NVIDIA T4 GPU, FlashNorm achieves 33 - 35% lower latency on the norm-then-project operation in the compute-bound (prefill) regime at SmolLM2-135M scale, and 12 - 14% at Llama-7B scale. We verify zero-loss weight folding on three models. Beyond inference speed, FlashNorm simplifies model implementations by reducing parameter tensor count. Watch our explainer video https://youtu.be/GEuJv34_XgU?si and see https://github.com/OpenMachine-ai/transformer-tricks for code.",
+        "identifiers": [
+          "SemanticScholar:4e1e9afef123398f8c2e9f3606782d6d20339299"
+        ],
+        "semantic_scholar_id": "4e1e9afef123398f8c2e9f3606782d6d20339299",
+        "canonical_id": "arXiv:2407.09577",
+        "arxiv_id": "2407.09577",
+        "authors": [
+          "Nils Graef",
+          "Filip Makraduli",
+          "Andrew Wasielewski",
+          "M. Clapp"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 820,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:922b9ff513b18429cc80d3dfb7153d08d87904ad1f36696c4ab2f0e4255caf96",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

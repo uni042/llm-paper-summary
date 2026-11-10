@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3b6fa32d06253a6c-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2510.27257",
+  "reason": "一次要旨が対象をLLM/MLLMの分散学習と明記し、forward/backward passを細分化してテンソル並列の集合通信待ちとパイプライン並列のbubbleを同時削減する学習スケジューラを提案する。評価も学習throughputの最大12%（LLM）/16%（MLLM）改善であり、推論時のデコード・KVキャッシュ・サービング・オフロードなどへの適用は一次要旨に示されない。現在凍結中の学習単独高速化であるため、Research収録対象外とする。",
+  "title": "Synergistic Tensor and Pipeline Parallelism",
+  "identity_tokens": [
+    "arxiv:2510.27257",
+    "doi:10.48550/arxiv.2510.27257"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b6fa32d0625",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

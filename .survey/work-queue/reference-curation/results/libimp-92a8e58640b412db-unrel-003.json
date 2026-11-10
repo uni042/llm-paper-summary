@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-92a8e58640b412db-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s00138-026-01901-1",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s00138-026-01901-1",
+    "identity_tokens": [
+      "DOI:10.1007/s00138-026-01901-1"
+    ],
+    "reason": "Springer primary abstract confirms sparse-view CT reconstruction, not LLM inference.",
+    "first_checked_at": "2026-10-05T07:58:36+00:00",
+    "last_checked_at": "2026-10-05T07:58:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+    ],
+    "title": "Long-sequence modeling for sparse-view computed tomography reconstruction"
+  },
+  "processed_at": "2026-10-05T07:58:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-92a8e58640b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

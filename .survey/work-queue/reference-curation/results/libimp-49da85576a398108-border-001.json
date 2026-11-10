@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-49da85576a398108-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3793230.3837771",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3793230.3837771",
+    "identity_tokens": [
+      "DOI:10.1145/3793230.3837771"
+    ],
+    "reason": "Weak scope fit: abstract covers six workloads and LLM traces as one workload family; article details are needed to verify whether inference-specific serving effects are central.",
+    "first_checked_at": "2026-10-05T07:19:37+00:00",
+    "last_checked_at": "2026-10-05T07:19:37+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+    ],
+    "title": "BASIC-Prefetcher: Bin-based Address and Size-Informed Caching for AI-Driven SSD Workloads"
+  },
+  "processed_at": "2026-10-05T07:19:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-49da85576a39",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

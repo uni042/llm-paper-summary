@@ -1,0 +1,13 @@
+{
+  "schema_version":1,
+  "request_id":"20260924T181845Z-scheduled-chat-30-7c41a2c-rs2",
+  "run_key":"scheduled-chat-30-20260924T085541Z-7c41a2c",
+  "worker_id":"scheduled-chat-30",
+  "worker_kind":"scheduled_chat",
+  "scheduled_slot":"30",
+  "actual_invocation_start":"2026-09-24T17:55:41+09:00",
+  "runtime_condition":"platform_context_limit",
+  "runtime_condition_attempts":1,
+  "runtime_condition_event":"platform_tool_call_rejected",
+  "runtime_condition_detail":"web.run rejected the next primary-source retrieval with: 'Too many tokens' and 'You have called web.run too many times. Do not call this tool again.' Current Oneiros five-slot record and its repair preflight request are durably saved; no new independent paper work is being started after this observed platform limit."
+}

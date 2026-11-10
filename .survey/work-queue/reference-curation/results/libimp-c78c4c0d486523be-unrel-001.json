@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c78c4c0d486523be-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.00343",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.00343",
+    "identity_tokens": [
+      "arXiv:2511.00343"
+    ],
+    "reason": "本文は低資源言語の形態論的推論能力を測るbenchmark。量子化/kernelsとの関係はタイトル・本文から見つからず、推論効率を改善しない。",
+    "first_checked_at": "2026-10-07T09:30:25+00:00",
+    "last_checked_at": "2026-10-07T09:30:25+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "title": "LingGym: How Far Are LLMs from Thinking Like Field Linguists?"
+  },
+  "processed_at": "2026-10-07T09:30:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c78c4c0d4865",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

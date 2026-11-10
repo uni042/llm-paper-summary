@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bec8c6d741969df3-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.38385",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.38385",
+    "identity_tokens": [
+      "arXiv:2609.38385"
+    ],
+    "reason": "GoldiMask changes diffusion-LM supervised fine-tuning and improves training/task outcomes; the method is training-only.",
+    "first_checked_at": "2026-10-05T04:46:58+00:00",
+    "last_checked_at": "2026-10-05T04:46:58+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+      "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+    ],
+    "title": "Fine-Tuning Diffusion Language Models with Context Selection and Target Weighting"
+  },
+  "processed_at": "2026-10-05T04:46:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bec8c6d74196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

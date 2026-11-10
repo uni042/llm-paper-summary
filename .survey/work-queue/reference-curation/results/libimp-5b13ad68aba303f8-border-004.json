@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5b13ad68aba303f8-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3832810.3832811",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3832810.3832811",
+    "identity_tokens": [
+      "DOI:10.1145/3832810.3832811"
+    ],
+    "reason": "要旨はLLM推論/servingまたは関連kernel/cache効率化を示すが、一次本文を確認できないため採否・評価条件が未検証。 将来の再試行で解決する見込みを確認できないためborderlineへ確定。",
+    "first_checked_at": "2026-10-05T05:17:12+00:00",
+    "last_checked_at": "2026-10-05T05:17:12+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md",
+      "papers/inference/01-offload-hierarchical-memory/2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md",
+      "papers/inference/01-offload-hierarchical-memory/2025-2506.12417-harmoeny-efficient-multi-gpu-moe-inference.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+      "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
+      "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md",
+      "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+      "papers/inference/12-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md",
+      "papers/inference/12-moe-parallelism-communication/2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md",
+      "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md",
+      "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+    ],
+    "title": "MigMoE: Task-Aware Expert Migration for Faster and More Balanced Expert-Parallel MoE Inference"
+  },
+  "processed_at": "2026-10-05T05:17:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b13ad68aba3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

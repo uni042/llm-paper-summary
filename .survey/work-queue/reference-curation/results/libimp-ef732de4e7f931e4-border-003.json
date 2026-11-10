@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ef732de4e7f931e4-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.00791",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.00791",
+    "identity_tokens": [
+      "arXiv:2502.00791"
+    ],
+    "reason": "Vist uses a vision encoder for distant text and is evaluated on its particular long-context/ICL design; text-only serving generalization needs validation.",
+    "first_checked_at": "2026-10-05T14:07:41+00:00",
+    "last_checked_at": "2026-10-05T14:07:41+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+    ],
+    "title": "Vision-centric Token Compression in Large Language Model"
+  },
+  "processed_at": "2026-10-05T14:07:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef732de4e7f9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

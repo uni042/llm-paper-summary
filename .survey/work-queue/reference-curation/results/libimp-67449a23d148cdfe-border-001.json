@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67449a23d148cdfe-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.09898",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.09898",
+    "identity_tokens": [
+      "arXiv:2608.09898"
+    ],
+    "reason": "Consilience selects verifier-free reasoning rollouts by penalizing high initial confidence and requiring high final confidence; math/code tasks show quality gains over confidence-only baselines. The method performs test-time branching/selection and does not claim lower total inference compute.",
+    "first_checked_at": "2026-10-06T09:45:27+00:00",
+    "last_checked_at": "2026-10-06T09:45:27+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Consilience for Verifier-Free Test-Time Scaling"
+  },
+  "processed_at": "2026-10-06T09:45:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67449a23d148",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

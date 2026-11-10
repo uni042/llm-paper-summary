@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc5e32baa0d7941b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2107.00652",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2107.00652",
+    "identity_tokens": [
+      "arXiv:2107.00652"
+    ],
+    "reason": "cross-shaped window self-attentionと局所位置符号化でVision Transformerの画像分類・物体検出・segmentation性能を改善するvision backbone研究。計算量削減は画像向けでLLM推論systemを最終適用先としない。",
+    "first_checked_at": "2026-10-04T21:42:14+00:00",
+    "last_checked_at": "2026-10-04T22:50:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+    ],
+    "title": "CSWin Transformer: A General Vision Transformer Backbone with Cross-Shaped Windows"
+  },
+  "processed_at": "2026-10-04T22:50:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc5e32baa0d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

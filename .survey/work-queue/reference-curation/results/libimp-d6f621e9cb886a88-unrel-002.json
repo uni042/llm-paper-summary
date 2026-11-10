@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d6f621e9cb886a88-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.09685",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.09685",
+    "identity_tokens": [
+      "arXiv:2608.09685"
+    ],
+    "reason": "InforID optimizes semantic-ID capacity allocation for generative recommendation; it reports accuracy and one-step generation, but is a task-specific recommendation representation rather than LLM inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T08:44:31+00:00",
+    "last_checked_at": "2026-10-05T08:44:31+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "Adaptive Semantic Capacity Allocation for Parallel Generative Recommendation"
+  },
+  "processed_at": "2026-10-05T08:44:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d6f621e9cb88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

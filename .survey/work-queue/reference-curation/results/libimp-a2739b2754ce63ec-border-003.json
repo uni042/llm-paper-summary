@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2739b2754ce63ec-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.02397",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.02397",
+    "identity_tokens": [
+      "arXiv:2506.02397",
+      "id:arXiv:2506.02397",
+      "url:https://arxiv.org/abs/2506.02397"
+    ],
+    "reason": "OThink-R1は補助判定LLMで冗長な推論軌跡を選別し、短いfast思考と完全なslow思考の混合データで推論モデルを微調整して問題別に自動切替させる。出力トークン削減は推論費用に関係するが主貢献は推論方略の学習・応答品質でありサービング機構や実行時資源管理の直接改善は薄いためborderline。",
+    "first_checked_at": "2026-10-28T20:55:30+00:00",
+    "last_checked_at": "2026-10-28T20:55:30+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "OThink-R1: Intrinsic Fast/Slow Thinking Mode Switching for Over-Reasoning Mitigation"
+  },
+  "processed_at": "2026-10-28T20:55:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2739b2754ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

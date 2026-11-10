@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99e9adf7972b4efa-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2308.08469",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2308.08469",
+    "identity_tokens": [
+      "arXiv:2308.08469"
+    ],
+    "reason": "pretrained LLMをtime-series forecastingへalignment/fine-tuningし、少量dataで予測性能を高める応用・training研究。最終適用先は時系列予測でLLM推論system効率化ではない。",
+    "first_checked_at": "2026-10-05T16:29:37+00:00",
+    "last_checked_at": "2026-10-05T16:29:37+00:00",
+    "linked_from": [],
+    "title": "LLM4TS: Aligning Pre-Trained LLMs as Data-Efficient Time-Series Forecasters"
+  },
+  "processed_at": "2026-10-05T16:29:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99e9adf7972b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

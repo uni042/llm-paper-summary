@@ -1,0 +1,188 @@
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).parents[2]
+
+
+class WorkflowCleanupSemanticsTests(unittest.TestCase):
+    def test_citation_schema_is_persistent_not_runtime_patched(self):
+        workflow = (ROOT / ".github/workflows/citation-graph-backfill.yml").read_text(encoding="utf-8")
+        self.assertNotIn("Install citation schema hooks", workflow)
+        self.assertNotIn("Commit schema and graph hooks", workflow)
+        self.assertNotIn("could not replace legacy _citation_counts()", workflow)
+
+        survey = (ROOT / ".survey/scripts/survey.py").read_text(encoding="utf-8")
+        template = (ROOT / ".survey/templates/paper.md").read_text(encoding="utf-8")
+        self.assertIn("for family in PAPER_FAMILIES", survey)
+        self.assertIn("citation_counts_from_view_records", survey)
+        for key in ("references:", "references_checked_at:", "references_source:", "references_total:"):
+            self.assertIn(key, template)
+
+    def test_citation_backfill_configures_commit_identity(self):
+        workflow = (ROOT / ".github/workflows/citation-graph-backfill.yml").read_text(encoding="utf-8")
+        self.assertIn("git config user.name 'citation-graph[bot]'", workflow)
+        self.assertIn("git config user.email 'citation-graph[bot]@users.noreply.github.com'", workflow)
+
+    def test_update_helper_has_dedicated_concurrency_queue(self):
+        workflow = (ROOT / ".github/workflows/update-helper.yml").read_text(encoding="utf-8")
+        self.assertIn("group: framework-llm-update-main", workflow)
+        self.assertNotIn("group: survey-background-main", workflow)
+
+    def test_survey_helper_has_no_retired_transport_paths(self):
+        workflow = (ROOT / ".github/workflows/survey-helper.yml").read_text(encoding="utf-8")
+        self.assertNotIn("chat-inbox.json", workflow)
+        self.assertNotIn("reusable_transport_baseline.py", workflow)
+        self.assertNotIn("preflight_chat_record.py", workflow)
+        self.assertNotIn("assemble_research_record.py --repo-root", workflow)
+        self.assertNotIn("normalize_v10_jobs.py", workflow)
+        self.assertNotIn("apply_offline_job_seed.py", workflow)
+        self.assertNotIn("ensure_dashboard_history.py", workflow)
+        self.assertNotIn("normalize_required_metadata.py", workflow)
+        self.assertNotIn("workflow_version': 9", workflow)
+
+        validator = (ROOT / ".survey/scripts/assemble_research_record.py").read_text(encoding="utf-8")
+        self.assertIn("def validate_record(", validator)
+        self.assertIn("MAX_SLOT_BYTES", validator)
+        self.assertNotIn("chat-inbox.json", validator)
+        self.assertNotIn("chat-payload.md", validator)
+        self.assertNotIn("def assemble(", validator)
+
+        reference_pool = (ROOT / ".survey/scripts/reference_pool.py").read_text(encoding="utf-8")
+        self.assertNotIn("DEFAULT_LEDGER =", reference_pool)
+        self.assertNotIn('--ledger", help="deprecated alias', reference_pool)
+
+        worker = (ROOT / ".survey/scripts/queue_worker.py").read_text(encoding="utf-8")
+        self.assertIn("workflow v10", worker)
+        self.assertNotIn("Queue-oriented survey state worker (workflow v9)", worker)
+        self.assertNotIn("reconcile_legacy_identity_deltas", worker)
+
+    def test_human_guides_are_absent_from_main(self):
+        self.assertFalse((ROOT / ".survey/docs/survey-workflow").exists())
+        self.assertFalse((ROOT / "docs/superpowers").exists())
+        # Historical implementations and developer/worker prose are archived, not live.
+        self.assertFalse((ROOT / ".survey/legacy").exists())
+        for rel in (
+            "PAPER-ADDITION-WORKFLOW.md",
+            ".survey/import-inbox/README.md",
+            ".survey/repair-queue/README.md",
+            ".survey/survey-state/identity-deltas/README.md",
+        ):
+            with self.subTest(retired=rel):
+                self.assertFalse((ROOT / rel).exists(), rel)
+
+        active_router_refs = [
+            path.relative_to(ROOT).as_posix()
+            for path in sorted((ROOT / ".survey/scripts").glob("*.py"))
+            if "worker-router" in path.read_text(encoding="utf-8")
+        ]
+        self.assertEqual([], active_router_refs)
+        self.assertNotIn("](.survey/docs/survey-workflow/", (ROOT / "README.md").read_text(encoding="utf-8"))
+
+    def test_retired_compatibility_and_one_shot_repair_files_are_absent(self):
+        retired = [
+            ".survey/scripts/normalize_v10_jobs.py",
+            ".survey/scripts/reusable_transport_baseline.py",
+            ".survey/scripts/preflight_chat_record.py",
+            ".survey/scripts/append_research_throughput_status.py",
+            ".survey/scripts/refine_status_observability.py",
+            ".survey/scripts/apply_offline_job_seed.py",
+            ".survey/scripts/ensure_dashboard_history.py",
+            ".survey/scripts/normalize_required_metadata.py",
+            ".survey/tests/test_normalize_required_metadata.py",
+            ".survey/work-queue/transport/offline-job-seed.json",
+            ".survey/tests/test_reusable_transport_baseline.py",
+            ".survey/tests/test_legacy_scheduled_chat_lease_cap.py",
+            ".github/workflows/repair-corrupted-lineages.yml",
+            ".survey/scripts/repair_corrupted_lineages.py",
+            ".survey/tests/test_repair_corrupted_lineages.py",
+            ".survey/work-queue/submissions/chat-inbox.json",
+            ".survey/work-queue/results/chat-inbox.json",
+            ".survey/docs/survey-workflow/handoff-2026-09-11-metadata-backfill.md",
+        ]
+        for rel in retired:
+            with self.subTest(path=rel):
+                self.assertFalse((ROOT / rel).exists(), rel)
+
+    def test_blocked_retry_has_no_retired_attempt_alias(self):
+        blocked_retry = (ROOT / ".survey/scripts/blocked_retry.py").read_text(encoding="utf-8")
+        self.assertIn("DORMANT_AFTER_ATTEMPTS", blocked_retry)
+        self.assertNotIn("MAX_BLOCKED_ATTEMPTS", blocked_retry)
+        self.assertNotIn("blocked_permanent", blocked_retry)
+        self.assertNotIn("legacy_permanent", blocked_retry)
+        claim_worker = (ROOT / ".survey/scripts/claim_worker.py").read_text(encoding="utf-8")
+        self.assertNotIn("_normalize_legacy_scheduled_chat_leases", claim_worker)
+        self.assertNotIn("scheduled-chat-llm-survey", claim_worker)
+        full_gc = (ROOT / ".survey/scripts/full_gc.py").read_text(encoding="utf-8")
+        self.assertNotIn("chat-inbox.json", full_gc)
+        self.assertNotIn("chat-payload.md", full_gc)
+        self.assertNotIn("blocked_permanent", full_gc)
+
+    def test_survey_build_has_no_training_list_migration(self):
+        survey = (ROOT / ".survey/scripts/survey.py").read_text(encoding="utf-8")
+        self.assertNotIn("_migrate_legacy_training_list", survey)
+        self.assertNotIn("_legacy_title", survey)
+        self.assertNotIn("_legacy_summary", survey)
+        self.assertNotIn("old hand-written training paper list", survey)
+
+    def test_repository_checker_requires_only_current_worker_docs(self):
+        checker = (ROOT / ".survey/scripts/check_repository.py").read_text(encoding="utf-8")
+        self.assertIn("REQUIRED_RUNTIME_PATHS", checker)
+        self.assertNotIn('".survey/docs/survey-workflow/worker-router.md"', checker)
+        self.assertIn("retired_human_guide_on_main", checker)
+        self.assertIn('"PAPER-ADDITION-WORKFLOW.md"', checker)
+        self.assertIn("RETIRED_HUMAN_GUIDE_PATHS", checker)
+        self.assertNotIn(".survey/docs/survey-workflow/fallback-routing.md", checker)
+        self.assertNotIn(".survey/docs/survey-workflow/backlog-resilience.md", checker)
+
+    def test_repository_checker_uses_current_daily_maintenance_contract(self):
+        checker = (ROOT / ".survey/scripts/check_repository.py").read_text(encoding="utf-8")
+        self.assertNotIn("cadence_runs", checker)
+        self.assertNotIn("runs_since_maintenance", checker)
+        self.assertIn("maintenance_pending", checker)
+        self.assertIn("github_actions_schedule", checker)
+        self.assertIn("daily_0830_jst", checker)
+
+        workflow = (ROOT / ".github/workflows/maintenance.yml").read_text(encoding="utf-8")
+        self.assertIn("cron: '30 23 * * *'", workflow)
+        self.assertIn("GITHUB_EVENT_NAME", workflow)
+        self.assertIn("event_name in {'schedule', 'workflow_dispatch'}", workflow)
+        self.assertIn("steps.pending.outputs.run == 'true'", workflow)
+
+    def test_maintenance_refreshes_metadata_coverage_before_health(self):
+        workflow = (ROOT / ".github/workflows/maintenance.yml").read_text(encoding="utf-8")
+        metadata_command = (
+            "python .survey/scripts/audit_metadata_coverage.py --repo-root . "
+            "--json-out .survey/reports/metadata-coverage-latest.json --strict"
+        )
+        self.assertIn(metadata_command, workflow)
+        self.assertLess(workflow.index(metadata_command), workflow.index("python .survey/scripts/maintenance_health.py"))
+
+    def test_status_dashboard_rebases_generated_snapshot_before_regeneration(self):
+        workflow = (ROOT / ".github/workflows/status-dashboard.yml").read_text(encoding="utf-8")
+        first_push = workflow.index("if git push origin HEAD:main; then")
+        rebase = workflow.index("git rebase origin/main", first_push)
+        second_push = workflow.index("if git push origin HEAD:main; then", first_push + 1)
+        regenerate = workflow.index("regenerating from latest main", second_push)
+        self.assertLess(first_push, rebase)
+        self.assertLess(rebase, second_push)
+        self.assertLess(second_push, regenerate)
+        self.assertIn("git rebase --abort || true", workflow)
+        self.assertIn("Published rebased dashboard snapshot", workflow)
+
+    def test_repository_regression_runs_live_structural_checks(self):
+        workflow = (ROOT / ".github/workflows/repository-tests.yml").read_text(encoding="utf-8")
+        metadata_command = (
+            "python .survey/scripts/audit_metadata_coverage.py --repo-root . "
+            "--json-out /tmp/metadata-coverage.json --strict"
+        )
+        inventory_command = "python .survey/scripts/build_repository_inventory.py"
+        consistency_command = "python .survey/scripts/check_repository.py"
+        self.assertIn(metadata_command, workflow)
+        self.assertIn(inventory_command, workflow)
+        self.assertIn(consistency_command, workflow)
+        self.assertLess(workflow.index(metadata_command), workflow.index(consistency_command))
+        self.assertLess(workflow.index(inventory_command), workflow.index(consistency_command))
+
+
+if __name__ == "__main__":
+    unittest.main()

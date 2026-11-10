@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-af0a733d1abb8c75-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.17049",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.17049",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2311.17049",
+      "arXiv:2311.17049",
+      "id:arXiv:2311.17049",
+      "url:https://arxiv.org/abs/2311.17049"
+    ],
+    "reason": "一次要旨で対象はCLIP系の画像・テキスト対照符号器であり、ゼロショット画像分類と画像検索の遅延・精度、強化データセットによる学習効率を評価する。自己回帰LLMの復号・KV管理・MoE・言語モデルの推論サービングではないため本サーベイ対象外。",
+    "first_checked_at": "2026-10-12T10:58:05+00:00",
+    "last_checked_at": "2026-10-16T01:51:53+00:00",
+    "linked_from": [],
+    "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
+  },
+  "processed_at": "2026-10-16T01:51:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-af0a733d1abb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

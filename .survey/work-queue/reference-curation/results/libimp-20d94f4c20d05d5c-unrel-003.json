@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20d94f4c20d05d5c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.13727",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.13727",
+    "identity_tokens": [
+      "arXiv:2506.13727"
+    ],
+    "reason": "Primary abstract: Large Language Models (LLMs) are widely deployed in real-world applications, yet their internal mechanisms remain difficult to interpret and control, limiting our ability to diagnose and correct undesirable behaviors.",
+    "first_checked_at": "2026-10-05T13:46:38+00:00",
+    "last_checked_at": "2026-10-05T13:46:38+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+    ],
+    "title": "Attribution-Guided Pruning for Insight and Control: Circuit Discovery and Targeted Correction in Small-scale LLMs"
+  },
+  "processed_at": "2026-10-05T13:46:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20d94f4c20d0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

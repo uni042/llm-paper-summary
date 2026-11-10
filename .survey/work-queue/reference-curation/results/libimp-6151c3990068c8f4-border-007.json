@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6151c3990068c8f4-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tmi.2024.3475587",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tmi.2024.3475587",
+    "identity_tokens": [
+      "DOI:10.1109/tmi.2024.3475587",
+      "PRIMARY:https://doi.org/10.1109/TMI.2024.3475587"
+    ],
+    "reason": "The supplied DOI/title identify a whole-slide pathology state-space-model paper, but the primary DOI landing URL returned `URL https://doi.org/10.1109/TMI.2024.3475587 is not accessible via this tool` (repeat open: `Internal Error ()`); the publisher abstract could not be retrieved.",
+    "first_checked_at": "2026-10-10T07:45:48+00:00",
+    "last_checked_at": "2026-10-10T07:45:48+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Unleash the Power of State Space Model for Whole Slide Image With Local Aware Scanning and Importance Resampling"
+  },
+  "processed_at": "2026-10-10T07:45:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6151c3990068",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

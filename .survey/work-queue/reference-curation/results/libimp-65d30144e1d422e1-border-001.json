@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-65d30144e1d422e1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2408.16730",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2408.16730",
+    "identity_tokens": [
+      "arXiv:2408.16730"
+    ],
+    "reason": "VideoLLM-MoDは長時間動画VLMで視覚トークンを捨てず、層ごとに大半の視覚トークンの計算をスキップする深さ方向の適応計算を導入する。主な定量値は学習時間約42%・メモリ約30%削減で、推論サービングの実測が要旨にないため境界候補。",
+    "first_checked_at": "2026-10-28T21:47:41+00:00",
+    "last_checked_at": "2026-10-28T21:47:41+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "VideoLLM-MoD: Efficient Video-Language Streaming with Mixture-of-Depths Vision Computation"
+  },
+  "processed_at": "2026-10-28T21:47:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-65d30144e1d4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

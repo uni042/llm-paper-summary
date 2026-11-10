@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e5fa95941d699867-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "OpenReview:TJ2nxciYCk-",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "OpenReview:TJ2nxciYCk-",
+    "identity_tokens": [
+      "OpenReview:TJ2nxciYCk-",
+      "arXiv:2210.06313"
+    ],
+    "reason": "Transformerで自然に生じる活性化疎性を大規模実験で分析し推論時の条件付き計算へつながる重要な基礎知見だが、疎性を実際のLLM推論ランタイム高速化へ変換する新規システムやカーネル自体は提案しないため境界扱い。",
+    "first_checked_at": "2026-09-30T01:46:01+00:00",
+    "last_checked_at": "2026-10-03T18:46:43+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2602.05711-omnimoe-atomic-experts.md"
+    ],
+    "title": "The Lazy Neuron Phenomenon: On Emergence of Activation Sparsity in Transformers"
+  },
+  "processed_at": "2026-10-03T18:46:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e5fa95941d69",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2b77f359bb7edf7944e3e17f1df8cb84e304da6d9c0760ffaffe91846ed2c436",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_530170eb4b8c8191994ad575028c911c--2026-2606.25091-edge-cloud-speculative-decoding-research-20261018-0358-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2606.25091",
+  "worker_completed_at": "2026-10-18T03:58:00+09:00",
+  "worker_run_key": "20261018-0358-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7485,
+    "body_paragraphs": 55,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-17T19:43:48+00:00"
+}

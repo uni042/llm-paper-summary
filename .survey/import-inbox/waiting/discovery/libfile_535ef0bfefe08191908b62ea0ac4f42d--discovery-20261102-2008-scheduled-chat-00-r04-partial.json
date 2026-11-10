@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-2008-scheduled-chat-00/r04",
+  "reference_main_sha": "662d56906772abf7e37cb04f76c6eefe0ad7bb23",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41511",
+      "identity_tokens": [
+        "arXiv:2610.41511"
+      ],
+      "title": "Specification-Guided Generation for Large Language Models",
+      "reason": "形式仕様に適合する構造化出力を得るため、LLM生成の各stepで将来仕様を満たせない値を文法から除外するneuro-symbolic constrained decodingを提案。forward-onlyは仕様充足を構成的に保証し、backtracking版はモデル自身が不適切と判断した過去選択を再検討する。設定・制約充足benchmarkでrejection samplingより反復LLM inferenceを削減し、symbolic overheadは小さいと報告。推論時のdecoding効率化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2610.41511",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:13:41+09:00",
+      "last_checked_at": "2026-11-02T20:13:41+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41378",
+      "identity_tokens": [
+        "arXiv:2610.41378"
+      ],
+      "title": "Ask on Demand: Targeted Peer Communication for Parallel Agentic Systems",
+      "reason": "並列LLM agentが互いの履歴から必要な証拠だけを要求するAODを提案し、team継続結果と推論コストで学習した軽量gateが問い合わせ価値を判断。AppWorld/WebShopで独立実行より成功率を改善し、既存情報共有方式より推論コストを低減。agent間communicationと呼出し予算に関係するが、LLM単体のKV/カーネル/serving runtime最適化ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41378",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:13:41+09:00",
+      "last_checked_at": "2026-11-02T20:13:41+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

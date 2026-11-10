@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d144375aa42dfe5-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.patcog.2024.110893",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.patcog.2024.110893",
+    "identity_tokens": [
+      "DOI:10.1016/j.patcog.2024.110893"
+    ],
+    "reason": "The paper distills a lightweight vision Transformer for a small image dataset; no language-model inference result is described.",
+    "first_checked_at": "2026-10-06T11:42:55+00:00",
+    "last_checked_at": "2026-10-06T11:42:55+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+    ],
+    "title": "Patient teacher can impart locality to improve lightweight vision transformer on small dataset"
+  },
+  "processed_at": "2026-10-06T11:42:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d144375aa42",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

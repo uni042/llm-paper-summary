@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a240509a175e708-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.15869",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.15869",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.15869",
+      "arXiv:2606.15869"
+    ],
+    "reason": "動画生成用と行動予測用のTransformerを分け、推論時の動画生成を省略して自動運転・都市歩行の計画を高速化する世界行動モデル。要旨の速度改善は車両・ロボットの行動予測パイプライン内であり、自己回帰LLMの言語生成、MoEサービング、KVキャッシュや推論カーネルの最適化を目的としない。",
+    "first_checked_at": "2026-10-23T15:07:11+00:00",
+    "last_checked_at": "2026-10-23T15:07:11+00:00",
+    "linked_from": [],
+    "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation"
+  },
+  "processed_at": "2026-10-23T15:07:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a240509a175",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

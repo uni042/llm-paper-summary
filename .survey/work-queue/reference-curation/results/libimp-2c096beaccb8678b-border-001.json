@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2c096beaccb8678b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.52202/085713-1607",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.52202/085713-1607",
+    "identity_tokens": [
+      "DOI:10.52202/085713-1607"
+    ],
+    "reason": "一次出版社ページ https://doi.org/10.52202/085713-1607 を開いたが、読める要旨/本文を取得できず、入力要旨だけで対象外とは判定しない。一次証拠を照合できないためborderline。",
+    "first_checked_at": "2026-10-06T18:44:30+00:00",
+    "last_checked_at": "2026-10-06T18:44:30+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SpikingVTG: A Spiking Detection Transformer for Video Temporal Grounding"
+  },
+  "processed_at": "2026-10-06T18:44:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2c096beaccb8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

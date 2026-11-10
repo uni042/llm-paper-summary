@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1530-scheduled-chat-30/r12",
+  "reference_main_sha": "0ff1d41771eec8ce05901d1254d9bb38fd49b7a7",
+  "record_count": 4,
+  "partial_round": true,
+  "quota_target": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.22483",
+      "identity_tokens": [
+        "arXiv:2511.22483"
+      ],
+      "title": "Enhancing Trustworthiness with Mixed Precision: Benchmarks, Opportunities, and Challenges",
+      "reason": "arXiv一次要旨はLLM重み・活性・KVの混合精度量子化が公平性、敵対的頑健性、倫理、分布外頑健性に与える影響を検証。推論量子化の品質リスクに関連するが、主眼は信頼性評価であり新しい高速化カーネルやサービング機構の提案ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2511.22483",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:43:20+09:00",
+      "last_checked_at": "2026-10-30T15:43:20+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 162
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.06834",
+      "identity_tokens": [
+        "arXiv:2510.06834"
+      ],
+      "title": "Vectorized FlashAttention with low-cost exponential computation in RISC-V vector processors",
+      "reason": "arXiv一次要旨はRISC-Vベクトル命令でFlashAttentionのスカラー処理を減らし、softmax指数関数を低コスト近似しつつタイル化とメモリ局所性を最適化する。注意カーネルのハードウェア高速化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2510.06834",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:43:20+09:00",
+      "last_checked_at": "2026-10-30T15:43:20+09:00",
+      "linked_from": [
+        "Hardware Accelerators",
+        "Sparse Attention"
+      ],
+      "worklist_rank": 163
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.03812",
+      "identity_tokens": [
+        "arXiv:2608.03812"
+      ],
+      "title": "OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models",
+      "reason": "arXiv一次要旨は音声・動画トークンの冗長性に対し、LLM投入前の構造圧縮と内部のタスク依存意味補正を連携する学習不要のOmniPackを提案。長い音声・動画文脈のOmni-LLM推論計算削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2608.03812",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:43:20+09:00",
+      "last_checked_at": "2026-10-30T15:43:20+09:00",
+      "linked_from": [
+        "Multimodal LLM Inference",
+        "Token Pruning"
+      ],
+      "worklist_rank": 164
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.26177",
+      "identity_tokens": [
+        "arXiv:2609.26177"
+      ],
+      "title": "Magnitude Profile Pruning: Calibration-Free Structured Attention Head Removal for Transformer Compression",
+      "reason": "arXiv一次要旨は注意ヘッドの投影重み行ノルムから外れ値ヘッドを識別し、校正データや勾配なしで不要ヘッドを構造削除するMP/MP-Gを提案。GQAの共有KV群にも対応し、LLM推論のパラメータ・演算削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.26177",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:43:20+09:00",
+      "last_checked_at": "2026-10-30T15:43:20+09:00",
+      "linked_from": [
+        "Structured Pruning",
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 165
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a384f2eae73321f9-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.30798",
+  "reason": "TritonのCPU側MLIR/LLVMコンパイル処理にRowhammer bit flipを起こし、正しい出力を保つが非最適なGPU kernelを生成・disk cacheさせてLLMサービングを持続的に遅くするLLVMhammer攻撃を研究する。著者要旨はRTX4090/RX7900XTXと複数LLMで推論遅延4～16%増を報告。推論kernelの脆弱性と性能劣化に関係するが、新規推論高速化手法でなく攻撃・セキュリティ研究なのでborderline。",
+  "title": "Amplifying Latency and Cost of LLM Inference via Rowhammer Attack",
+  "identity_tokens": [
+    "id:arXiv:2610.30798",
+    "id:DOI:10.48550/arXiv.2610.30798"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a384f2eae733",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

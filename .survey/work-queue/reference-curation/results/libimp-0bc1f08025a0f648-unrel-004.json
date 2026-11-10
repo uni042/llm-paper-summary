@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0bc1f08025a0f648-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.17311",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.17311",
+    "identity_tokens": [
+      "arXiv:2311.17311"
+    ],
+    "reason": "一次要旨は複数CoT生成を集約するLLM self-consistency手法で、推論効率削減を目的とせずサンプル複数化を扱う。",
+    "first_checked_at": "2026-10-05T01:59:05+00:00",
+    "last_checked_at": "2026-10-05T01:59:05+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06914-taper-regulating-branch-parallelism.md",
+      "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+    ],
+    "title": "Universal Self-Consistency for Large Language Model Generation"
+  },
+  "processed_at": "2026-10-05T01:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0bc1f08025a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

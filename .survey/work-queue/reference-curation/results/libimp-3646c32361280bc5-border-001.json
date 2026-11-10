@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3646c32361280bc5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.06982",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.06982",
+    "identity_tokens": [
+      "arXiv:2502.06982"
+    ],
+    "reason": "Google TPUを使う大規模MLフリート全体の生産性指標ML Productivity Goodputを定義し、モデル・データ・コンパイラ・スケジューラ等を跨いだ効率計測を扱う。計算基盤・スケジューリングには関係するが、要旨で特定のLLM推論・生成・KV管理を対象とする寄与は確認できない。一般MLフリートの測定研究として境界扱い。",
+    "first_checked_at": "2026-10-25T16:53:58+00:00",
+    "last_checked_at": "2026-10-25T16:53:58+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Machine Learning Fleet Efficiency: Analyzing and Optimizing Large-Scale Google TPU Systems with ML Productivity Goodput"
+  },
+  "processed_at": "2026-10-25T16:53:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3646c3236128",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

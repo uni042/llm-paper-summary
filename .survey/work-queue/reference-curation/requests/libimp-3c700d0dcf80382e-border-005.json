@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3c700d0dcf80382e-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2310.12126",
+  "reason": "early-exit/conditional-computeは隣接するが、確認した実験はBERT等encoderのclassificationで、decoder-only LLM generation/servingではない。対象との距離を解消する証拠がないためborderline。",
+  "title": "SHARCS: Efficient Transformers through Routing with Dynamic Width Sub-networks",
+  "identity_tokens": [
+    "arXiv:2310.12126"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3c700d0dcf80",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

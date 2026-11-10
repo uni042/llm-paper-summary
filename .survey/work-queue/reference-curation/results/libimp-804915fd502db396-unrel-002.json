@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-804915fd502db396-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1140/epjb/s10051-026-01263-7",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1140/epjb/s10051-026-01263-7",
+    "identity_tokens": [
+      "DOI:10.1140/epjb/s10051-026-01263-7"
+    ],
+    "reason": "要旨は非線形AN(N)V方程式の厳密波解を構成する数理物理で、LLM推論や計算効率化ではない。",
+    "first_checked_at": "2026-10-06T19:07:50+00:00",
+    "last_checked_at": "2026-10-06T19:07:50+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+    ],
+    "title": "Effective-time bilinear neural construction of lump-stripe and lump solutions for a variable-coefficient ANNV equation"
+  },
+  "processed_at": "2026-10-06T19:07:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-804915fd502d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1b9809cdb50719a0-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.20588",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.20588",
+    "identity_tokens": [
+      "arXiv:2610.20588",
+      "id:DOI:10.48550/arXiv.2610.20588",
+      "id:arXiv:2610.20588"
+    ],
+    "reason": "MLP neuronとattention headを共通のimportance scaleでrankし、既存Transformerを再学習なしで計算予算に応じてelasticに削減する。一次要旨は27のvision/text encoderで最大60% sparsity、ViT-B/16のGPU throughput最大1.80倍を報告。モデル圧縮・推論速度への適用はあるが主評価はencoderとvisionで自回帰LLM生成の実測がないためborderline。",
+    "first_checked_at": "2026-11-02T05:57:22+00:00",
+    "last_checked_at": "2026-11-02T05:57:22+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Your Transformer Is Secretly Elastic"
+  },
+  "processed_at": "2026-11-02T05:57:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b9809cdb507",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f52dbd21974262cc-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.23682",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.23682",
+    "identity_tokens": [
+      "arXiv:2606.23682"
+    ],
+    "reason": "Primary abstract reviewed: Reference-based diffusion models enable highly controllable image generation by leveraging elements from input images to guide prompt-driven synthesis. However, these models are computationally expensive in runtime, and their cost scales severely with the number of input references. While the efficiency of diffusion models has been extensively studied in the context of prompt-d… This is a application/model-method paper for forecasting, image generation, robotics, telemetry, or image compression rather than LLM inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T11:49:11+00:00",
+    "last_checked_at": "2026-10-05T11:49:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md"
+    ],
+    "title": "Keep The Essentials: Efficient Reference Conditioned Generation via Token Dropping"
+  },
+  "processed_at": "2026-10-05T11:49:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f52dbd219742",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

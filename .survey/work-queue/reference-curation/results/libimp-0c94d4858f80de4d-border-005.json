@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0c94d4858f80de4d-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.18718",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.18718",
+    "identity_tokens": [
+      "arXiv:2603.18718"
+    ],
+    "reason": "bounded memoryへの関心は対象と近いが、本文の中心はmemory品質・回答精度であり、追加multi-agent推論を含むため効率改善の根拠が不足する。",
+    "first_checked_at": "2026-10-07T10:40:04+00:00",
+    "last_checked_at": "2026-10-07T10:40:04+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MemMA: Coordinating the Memory Cycle through Multi-Agent Reasoning and In-Situ Self-Evolution"
+  },
+  "processed_at": "2026-10-07T10:40:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0c94d4858f80",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

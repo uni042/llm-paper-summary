@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dcf6531a72437b1b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.14803",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.14803",
+    "identity_tokens": [
+      "arXiv:2609.14803"
+    ],
+    "reason": "This paper reports experiments across six frontier model types from OpenAI, Anthropic, xAI, and Google DeepMind. Ten independent sessions per model type used the same three stage prompt sequence, progressing from architectural preference to a full ASCII backbone. Under the school audience framing, responses repeatedly converged on a shared architectural pattern built around persistent latent state, adaptive computation, memory, specialist routing, verification, stopping control, and delayed decoding. Most runs remained close to this common structure, while a small number developed markedly greater engineering specificity. The audience framing appears to be an important condition of this effect. In additional control runs that removed the school framing while retaining the architectural request, responses became substantially more heterogeneous and failed to reproduce the same stable motif convergence. One observation is particularly striking. GPT-5.6 Sol produced an unusually elaborate successor architecture whose organization closely overlaps with the architecture independently sketched by GPT-6 Astra. Because the prompts explicitly ask each model to imagine an architectural future, this resemblance raises a testable question: whether the overlap reflects exposure to related architectural concepts, a shared learned design prior, or independent convergence toward similar computational principles. The paper uses the term epistemic jailbreak for the accompanying loss of discipline in technical provenance as requested specificity increases. The experiments establish a repeatable behavioral pattern and do not authenticate proprietary implementation claims. What we leave to the community is a harder question: are these models independently imagining the same architectural future, or do such motifs somehow propagate between model families?",
+    "first_checked_at": "2026-10-05T06:47:43+00:00",
+    "last_checked_at": "2026-10-05T06:47:43+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+    ],
+    "title": "Another Blueprint In The Wall: How to Ask Frontier AI Like a Kid?"
+  },
+  "processed_at": "2026-10-05T06:47:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dcf6531a7243",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

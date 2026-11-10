@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6e054ef3e05f3a0-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.05665",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.05665",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.05665",
+      "arXiv:2512.05665"
+    ],
+    "reason": "一次要旨ではマルチモーダル推論における高密度画像の繰り返し再符号化の計算費用を問題にし、画像の潜在表現をテキスト生成に交互に挿入して、運動量教師による選択的特徴蒸留で視覚状態を更新する。再符号化回避は推論効率と接点がある一方、主評価は視覚推論課題の品質であり、汎用推論サーバーのスループット、GPUメモリ、KVキャッシュの改善量は一次要旨から確定できないため境界的。",
+    "first_checked_at": "2026-10-11T11:49:06+00:00",
+    "last_checked_at": "2026-10-17T17:44:44+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Interleaved Latent Visual Reasoning with Selective Perceptual Modeling"
+  },
+  "processed_at": "2026-10-17T17:44:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6e054ef3e05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

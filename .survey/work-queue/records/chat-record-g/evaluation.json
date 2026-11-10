@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-preload-696e42f89d3df66e6eb783f8",
+  "job_id": "job-research-e3b684ca3ee98a5c",
+  "data": {
+    "hardware": [
+      "資源ベンチマークはNvidia A100を使用し、30GiBを超える測定点は打ち切り、各点を3回平均。",
+      "長距離依存評価は各実行で最大2台のNvidia A100。",
+      "T5-baseの微調整は単一Nvidia V100。"
+    ],
+    "software": [
+      "資源測定はPyTorch 1.8.1。",
+      "UNIFIEDQAとT5の評価はHugging Face Transformers。",
+      "WikiText-103はfairseqの言語モデル基盤。",
+      "A100測定ではTF32への内部変換を明示的に無効化。"
+    ],
+    "model": [
+      "BERT-base相当の単層多頭注意: d_model=768、12頭、各頭64次元、中間次元3072。",
+      "BERT-base相当の12層Transformer decoder: バッチ1、自己注意は上位64件・チャンク1024。",
+      "WikiText-103: 6層、156Mパラメータ、系列長1024、上位64件。",
+      "UNIFIEDQA 11B: T5系、フィードフォワード中間次元65,536。",
+      "SQuAD v1で微調整済みBERT-large。",
+      "T5-base: 中間次元3072、上位256件で微調整。"
+    ],
+    "datasets": [
+      "長距離依存評価（Long Range Arena; LRA）: ListOps、IMDb、ACL Anthology Network。",
+      "WikiText-103。",
+      "UNIFIEDQAの12質問応答データ集合。",
+      "BERTではSQuAD v1。",
+      "T5微調整ではBoolQ、CommonsenseQA、MCTest、OpenBookQA、ROPES。"
+    ],
+    "baselines": [
+      "標準注意。",
+      "上位k選択なしのクエリ分割。",
+      "線形注意法（Performer）、256個のランダム特徴。",
+      "標準フィードフォワード層。",
+      "各課題のT5-baseおよびUNIFIEDQA-base。"
+    ],
+    "settings": [
+      {
+        "name": "資源測定",
+        "description": "ランダムな32ビット入力で順伝播と逆伝播を実行する。時間測定区間の前後でCUDA同期を行い、予約メモリの最大値を取得する。各測定点は3回平均し、30GiBを超える条件は除外する。"
+      },
+      {
+        "name": "単層多頭注意",
+        "description": "BERT-base相当構成でk=128、チャンクC=1024。系列長を増やし、標準注意、線形注意法、通常のクエリ分割、上位k付きクエリ分割の時間とメモリを比較する。"
+      },
+      {
+        "name": "フィードフォワード資源測定",
+        "description": "バッチ512、系列長512で合計2^18クエリを処理する。上位kは512件、チャンクは2^14行とし、中間次元を増やしてメモリと時間を測る。"
+      },
+      {
+        "name": "長距離依存評価",
+        "description": "公開コードと既定モデル設定を使い、各課題で標準注意と上位128件注意を同一ハイパーパラメータで最初から学習する。系列長はListOps 2K、IMDb 1K、AAN 4K。"
+      },
+      {
+        "name": "WikiText-103",
+        "description": "6層156Mモデル、系列長1024、50K更新。標準注意と上位64件注意のテストperplexityを比較する。"
+      },
+      {
+        "name": "UNIFIEDQAゼロショット",
+        "description": "11Bモデルのフィードフォワード層だけを上位kへ置換し、追加学習なしで12課題の完全一致率を評価する。k=64〜4096を標準の65,536件と比較する。"
+      },
+      {
+        "name": "BERTゼロショット",
+        "description": "SQuAD v1で微調整済みBERT-largeの自己注意を上位kへ置換し、追加学習なしで完全一致率を測る。線形注意法も同条件で比較する。"
+      },
+      {
+        "name": "T5微調整",
+        "description": "T5-baseのフィードフォワードを上位256件へ置換し、5つの質問応答課題で3K更新だけ微調整して標準層と比較する。"
+      }
+    ],
+    "correctness": "上位k注意は選択外のキーを捨てる近似であり、標準注意と出力が完全一致する手法ではない。品質は課題精度やperplexityで検証し、事前学習済み重みを変更せず差し替えられることをゼロショット推論と微調整の両方で確かめる。",
+    "methodology": "効率評価ではメモリと処理時間を分離し、単層注意、巨大フィードフォワード、12層モデルの三条件で比較する。品質評価では最初からの学習、学習なしの差し替え、微調整の三条件を用い、高い疎化率でも標準注意に近い性能が残るかを検証する。",
+    "scope": "主張は活性メモリ削減と差し替え容易性が中心である。論文実装は2021年時点のGPU・PyTorchで、疎行列積を高速化できていない。分散推論、KVキャッシュ管理、プリフィルとデコードの分離、サービングスケジューラは直接評価していない。"
+  },
+  "reservation": {
+    "claim_id": "claim-preload-696e42f89d3df66e6eb783f8",
+    "worker_id": "worker-45",
+    "worker_kind": "scheduled_chat"
+  }
+}

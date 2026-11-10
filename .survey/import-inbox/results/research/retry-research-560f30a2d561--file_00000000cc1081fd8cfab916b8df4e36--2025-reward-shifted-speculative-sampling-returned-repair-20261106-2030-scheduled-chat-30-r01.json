@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "39aab07c40bd39df1783173c233d67fb04d53cfd27462dd766351905f0f1b886",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-560f30a2d561--file_00000000cc1081fd8cfab916b8df4e36--2025-reward-shifted-speculative-sampling-returned-repair-20261106-2030-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2508.15044",
+  "worker_completed_at": "2026-11-06T20:32:34+09:00",
+  "worker_run_key": "20261106-2030-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3360,
+    "body_paragraphs": 17,
+    "method_chars": 1121,
+    "method_paragraphs": 6,
+    "evaluation_chars": 366,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 366 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 366 < 500"
+  ],
+  "processed_at": "2026-11-06T20:55:26+00:00"
+}

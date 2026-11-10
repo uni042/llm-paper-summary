@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T0905JST-scheduled-chat-00-r09-01",
+  "kind": "research",
+  "attempt_id": "attempt-c67963f1064ecc2790db5b2d",
+  "job_id": "job-research-51f4efd90b7a5e12",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.09240-scaling-post-training-ternarisation-to-qwen3-8b-capability-retention-reproduction-lossless-packing-and-packed-execution.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:e30a73c3d675e287191a7382553d6f87ce147bcf5f6d0d014a4023d931fd65e6",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "e137993c129ce9a7b27a0be61e994be76dfa1f50"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "8a6f5aef4f24d3c14b4927af90e081d5021eac83"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "85b52124f78c9eb20ce01a7951d2b6633bba4938"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "bbbc8371c2cd174101684af7a5a5eb8a8349de82"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "0732d2f86df3936956dca8fd543d3fd4f39d3640"
+    }
+  ],
+  "validation_errors": [
+    "Japanese-first prose ratio is too low: 56.9% < 70% (Japanese=3198, Latin=2425)"
+  ],
+  "checked_at": "2026-09-23T00:02:12+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

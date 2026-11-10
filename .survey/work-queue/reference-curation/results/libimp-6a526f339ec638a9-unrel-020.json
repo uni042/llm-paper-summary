@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6a526f339ec638a9-unrel-020",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1909.08053",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1909.08053",
+    "identity_tokens": [
+      "arXiv:1909.08053"
+    ],
+    "reason": "大規模Transformerの学習用モデル並列化が主題。最終適用先が学習高速化であり、現在凍結中の学習系統には追加しない。",
+    "first_checked_at": "2026-09-27T00:01:48+09:00",
+    "last_checked_at": "2026-09-30T09:49:12+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism"
+  },
+  "processed_at": "2026-09-30T09:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6a526f339ec6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

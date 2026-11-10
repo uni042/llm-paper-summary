@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79f9591832c7e04d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2008.05000",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2008.05000",
+    "identity_tokens": [
+      "arXiv:2008.05000"
+    ],
+    "reason": "グラフニューラルネットワークの量子化学習が主題で、LLM・Transformer・LLM推論システムを対象としていない。タイトルによる明白な無関係候補。",
+    "first_checked_at": "2026-10-11T07:45:44+00:00",
+    "last_checked_at": "2026-10-11T07:45:44+00:00",
+    "linked_from": [],
+    "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks"
+  },
+  "processed_at": "2026-10-11T07:45:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79f9591832c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

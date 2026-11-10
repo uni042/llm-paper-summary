@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-c56cf795c8a4512c3edad786",
+  "job_id": "job-research-43a2b5f54de86439",
+  "claim_id": "claim-c56cf795c8a4512c3edad786",
+  "worker_id": "scheduled-chat-30",
+  "status": "blocked",
+  "reason": "Primary full text could not be safely retrieved on this retry. DOI 10.1145/3806645.3807820 and the HPDC 2026 publication record are identifiable, but the available retrieval routes expose bibliographic/abstract material rather than the primary paper body. No five-slot record was inferred from abstracts or third-party indexes.",
+  "blocked_at": "2026-09-22T00:35:30Z",
+  "retrieval_evidence": [
+    "Fresh DOI/title search located the HPDC 2026 citation and DOI-linked metadata.",
+    "No retrievable ACM/author primary full-text body was returned in the available web environment.",
+    "Secondary indexes were not used as substitutes for the required primary full text."
+  ]
+}

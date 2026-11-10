@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f86922c15b17e36b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.23463",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.23463",
+    "identity_tokens": [
+      "arXiv:2410.23463"
+    ],
+    "reason": "MDCure proposes multi-document instruction-following data/modeling for LLM task performance; no inference-cost or serving optimization is the contribution.",
+    "first_checked_at": "2026-10-05T14:45:37+00:00",
+    "last_checked_at": "2026-10-05T14:45:37+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+    ],
+    "title": "MDCure: A Scalable Pipeline for Multi-Document Instruction-Following"
+  },
+  "processed_at": "2026-10-05T14:45:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f86922c15b17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

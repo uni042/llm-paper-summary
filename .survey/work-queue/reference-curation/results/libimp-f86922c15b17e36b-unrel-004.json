@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f86922c15b17e36b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.12246",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.12246",
+    "identity_tokens": [
+      "arXiv:2406.12246"
+    ],
+    "reason": "TroL traverses/iterates model layers to improve output quality; primary experiments show extra inference computation/latency rather than an inference-efficiency improvement.",
+    "first_checked_at": "2026-10-05T14:45:37+00:00",
+    "last_checked_at": "2026-10-05T14:45:37+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+      "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+    ],
+    "title": "TroL: Traversal of Layers for Large Language and Vision Models"
+  },
+  "processed_at": "2026-10-05T14:45:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f86922c15b17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

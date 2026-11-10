@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5cd0c1640571820f-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.28062",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.28062",
+    "identity_tokens": [
+      "arXiv:2608.28062"
+    ],
+    "reason": "マルチモーダルsearch agentの研究で、本文が扱うefficiencyは長いtraining rolloutのthroughput/計算浪費であり、主要貢献がLLM inference runtime改善かは弱い。agent inferenceのtool timeout/予算管理との接点を残す。",
+    "first_checked_at": "2026-10-06T19:45:01+00:00",
+    "last_checked_at": "2026-10-06T19:45:01+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "WeAgent-MMSearch: Native Text-Vision Interaction for Multimodal Search Agents"
+  },
+  "processed_at": "2026-10-06T19:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5cd0c1640571",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

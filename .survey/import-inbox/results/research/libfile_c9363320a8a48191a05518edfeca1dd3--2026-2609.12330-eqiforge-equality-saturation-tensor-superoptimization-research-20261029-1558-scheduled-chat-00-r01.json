@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5108318abe478bd906280396f23ef102e3e9b4f80c5a18ef63d84023822797c6",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_c9363320a8a48191a05518edfeca1dd3--2026-2609.12330-eqiforge-equality-saturation-tensor-superoptimization-research-20261029-1558-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2609.12330",
+  "worker_completed_at": "2026-10-29T16:03:40+09:00",
+  "worker_run_key": "20261029-1558-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7727,
+    "body_paragraphs": 44,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 160,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 160 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 160 < 500"
+  ],
+  "processed_at": "2026-10-29T08:11:32+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-45359bb8ae210dbd-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2308.01285",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2308.01285",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2308.01285",
+      "arXiv:2308.01285"
+    ],
+    "reason": "AI・人間・ツールの複雑な相互作用を構成するエージェントフレームワークで、LLM推論ランタイムの効率化が主貢献ではない。",
+    "first_checked_at": "2026-10-02T10:54:02+00:00",
+    "last_checked_at": "2026-10-02T10:54:02+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22566-graphflow-agent-workflow-serving.md"
+    ],
+    "title": "Flows: Building Blocks of Reasoning and Collaborating AI"
+  },
+  "processed_at": "2026-10-02T10:54:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-45359bb8ae21",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

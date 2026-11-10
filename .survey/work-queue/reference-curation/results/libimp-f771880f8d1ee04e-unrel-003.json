@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f771880f8d1ee04e-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.20469",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.20469",
+    "identity_tokens": [
+      "arXiv:2607.20469"
+    ],
+    "reason": "The abstract studies causal representation/steering behavior and reports no performance, latency, memory, or system-efficiency improvement.",
+    "first_checked_at": "2026-10-13T20:00:16+00:00",
+    "last_checked_at": "2026-10-13T20:00:16+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2408.05646-eigen-attention-attention-in-low-rank-space-for-kv-cache-compression.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md"
+    ],
+    "title": "DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions"
+  },
+  "processed_at": "2026-10-13T20:00:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f771880f8d1e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,1451 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5cf99a3fc7f1eabb-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5cf99a3fc7f1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icassp49357.2023.10096107",
+    "SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625",
+    "SemanticScholar:a7357f16453d8c3e07aca694efa00df6f2e4352c",
+    "SemanticScholar:e20975524ace61c39bffc35db48c5a592eb9d769",
+    "arXiv:2105.14636",
+    "arXiv:2204.05424",
+    "arXiv:2211.08842",
+    "arXiv:2306.01768",
+    "arXiv:2306.02379",
+    "arXiv:2402.01093",
+    "arXiv:2407.17678",
+    "arXiv:2408.00386",
+    "arXiv:2501.13428",
+    "arXiv:2504.00492",
+    "arXiv:2507.20096",
+    "arXiv:2509.25606"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 16,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2c5035844e95b01e2cbf8272516d75d4c6de050f",
+  "raw_search_result_count": 16,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 16,
+  "provider_progress": {
+    "requested_count": 16,
+    "status_counts": {
+      "allowed": 16,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T01:26:14.923101+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icassp49357.2023.10096107",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:a7357f16453d8c3e07aca694efa00df6f2e4352c",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:e20975524ace61c39bffc35db48c5a592eb9d769",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2105.14636",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2204.05424",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2211.08842",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2306.01768",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2306.02379",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.01093",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.17678",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.00386",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.13428",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.00492",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.20096",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.25606",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Modular Transformers: Compressing Transformers into Modularized Layers for Flexible Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2306.02379",
+      "year": 2023,
+      "published": "2023-06-04",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained Transformer models like T5 and BART have advanced the state of the art on a wide range of text generation tasks. Compressing these models into smaller ones has become critically important for practical use. Common neural network compression techniques such as knowledge distillation or quantization are limited to static compression where the compression ratio is fixed. In this paper, we introduce Modular Transformers, a modularized encoder-decoder framework for flexible sequence-to-sequence model compression. Modular Transformers train modularized layers that have the same function of two or more consecutive layers in the original model via module replacing and knowledge distillation. After training, the modularized layers can be flexibly assembled into sequence-to-sequence models that meet different performance-efficiency trade-offs. Experimental results show that after a single training phase, by simply varying the assembling strategy, Modular Transformers can achieve flexible compression ratios from 1.1x to 6x with little to moderate relative performance drop.",
+      "identifiers": [
+        "SemanticScholar:1a7763f30c97b5b052af36bcfe478f64dcb97986"
+      ],
+      "semantic_scholar_id": "1a7763f30c97b5b052af36bcfe478f64dcb97986",
+      "canonical_id": "arXiv:2306.02379",
+      "arxiv_id": "2306.02379",
+      "doi": "10.48550/arXiv.2306.02379",
+      "authors": [
+        "Wangchunshu Zhou",
+        "Ronan Le Bras",
+        "Yejin Choi"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1224,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "A Call for Clarity in Beam Search: How It Works and When It Stops",
+      "source_url": "https://arxiv.org/abs/2204.05424",
+      "year": 2022,
+      "published": "2022-04-11",
+      "venue": "International Conference on Language Resources and Evaluation",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Text generation with beam search has proven successful in a wide range of applications. We point out that, though largely overlooked in the literature, the commonly-used implementation of beam decoding (e.g., Hugging Face Transformers and fairseq) uses a first come, first served heuristic: it keeps a set of already completed sequences over time steps and stops when the size of this set reaches the beam size. Based on this finding, we introduce a patience factor, a simple modification to this beam decoding implementation, that generalizes the stopping criterion and provides flexibility to the depth of search. Empirical results demonstrate that adjusting this patience factor improves decoding performance of strong pretrained models on news text summarization and machine translation over diverse language pairs, with a negligible inference slowdown. Our approach only modifies one line of code and can be thus readily incorporated in any implementation. Further, we find that different versions of beam decoding result in large performance differences in summarization, demonstrating the need for clarity in specifying the beam search implementation in research work. Our code will be available upon publication.",
+      "identifiers": [
+        "SemanticScholar:f290bc1c70688b7985b7cca863e4670398875595"
+      ],
+      "semantic_scholar_id": "f290bc1c70688b7985b7cca863e4670398875595",
+      "canonical_id": "arXiv:2204.05424",
+      "arxiv_id": "2204.05424",
+      "doi": "10.63317/2c235hpjhnk8",
+      "authors": [
+        "Jungo Kasai",
+        "Keisuke Sakaguchi",
+        "Ronan Le Bras",
+        "Dragomir R. Radev",
+        "Yejin Choi",
+        "Noah A. Smith"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1643,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LEAP: Learnable Pruning for Transformer-based Models",
+      "source_url": "https://arxiv.org/abs/2105.14636",
+      "year": 2021,
+      "published": "2021-05-30",
+      "venue": null,
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning is an effective method to reduce the memory footprint and computational cost associated with large natural language processing models. However, current pruning algorithms either only focus on one pruning category, e.g., structured pruning and unstructured, or need extensive hyperparameter tuning in order to get reasonable accuracy performance. To address these challenges, we propose LEArnable Pruning (LEAP), an effective method to gradually prune the model based on thresholds learned by gradient descent. Different than previous learnable pruning methods, which utilize L 0 or L 1 penalty to indirectly affect the ﬁnal pruning ratio, LEAP introduces a novel regularization function, that directly interacts with the preset target pruning ratio. Moreover, in order to reduce hyperparameter tuning, a novel adaptive regularization coefﬁcient is deployed to control the regularization penalty adaptively. With the new regularization term and its associated adaptive regularization coefﬁcient, LEAP is able to be applied for different pruning granularity, including unstructured pruning, structured pruning, and hybrid pruning, with minimal hyperparameter tuning. We apply LEAP for BERT models on QQP/MNLI/SQuAD for different pruning settings. Our result shows that for all datasets, pruning granularity, and pruning ratios, LEAP achieves on-par or better results as compared to previous heavily hand-tuned methods.",
+      "identifiers": [
+        "SemanticScholar:5e8a892cc33a9fb9e701d5e10333e7b8545bf4a5"
+      ],
+      "semantic_scholar_id": "5e8a892cc33a9fb9e701d5e10333e7b8545bf4a5",
+      "canonical_id": "arXiv:2105.14636",
+      "arxiv_id": "2105.14636",
+      "authors": [
+        "Z. Yao",
+        "Xiaoxia Wu",
+        "Linjian Ma",
+        "Sheng Shen",
+        "K. Keutzer",
+        "Michael W. Mahoney",
+        "Yuxiong He"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1959,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Probabilistic Framework for Pruning Transformers Via a Finite Admixture of Keys",
+      "source_url": "https://doi.org/10.1109/ICASSP49357.2023.10096107",
+      "year": 2023,
+      "published": "2023-06-04",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pairwise dot product-based self-attention is key to the success of transformers which achieve state-of-the-art performance across a variety of applications in language and vision, but are costly to compute. It has been shown that most attention scores and keys in transformers are redundant and can be removed without loss of accuracy. In this paper, we develop a novel probabilistic framework for pruning attention scores and keys in transformers. We first formulate an admixture model of attention keys whose input data to be clustered are attention queries. We show that attention scores in self-attention correspond to the posterior distribution of this model when attention keys admit a uniform prior distribution. We then relax this uniform prior constraint and let the model learn these priors from data, resulting in a new Finite Admixture of Keys (FiAK). The learned priors are used for pruning away redundant attention scores and keys in the baseline transformers, improving the diversity of attention patterns that the models capture. We corroborate the efficiency of transformers pruned with FiAK on the ImageNet object classification and WikiText-103 language modeling tasks. Our experiments demonstrate that transformers pruned with FiAK yield similar or better accuracy than the baseline dense transformers while being much more efficient in terms of memory and computational cost.",
+      "identifiers": [
+        "SemanticScholar:a298d956dc3472541adc3d4bf2908755e5ff54d4"
+      ],
+      "semantic_scholar_id": "a298d956dc3472541adc3d4bf2908755e5ff54d4",
+      "doi": "10.1109/ICASSP49357.2023.10096107",
+      "canonical_id": "DOI:10.1109/ICASSP49357.2023.10096107",
+      "authors": [
+        "T. Nguyen",
+        "T. Nguyen",
+        "L. Bui",
+        "Hai Do",
+        "Duy Khuong Nguyen",
+        "Dung D. Le",
+        "Hung The Tran",
+        "Nhat Ho",
+        "S. Osher",
+        "Richard Baraniuk"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1224,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Need a Small Specialized Language Model? Plan Early!",
+      "source_url": "https://arxiv.org/abs/2402.01093",
+      "year": 2024,
+      "published": "2024-02-02",
+      "venue": null,
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are versatile tools but are not suitable for small inference budgets. Small models have more efficient inference, but their lower capacity means that their performance can be good only if one limits their scope to a specialized domain. This paper explores how to get good specialized small language models using a large, generic, pretraining set and a limited amount of specialized data. We consider two scenarios, depending on whether (i) one can afford pretraining a model for each specialization task, or (ii) one wants to cheaply adapt a single pretrained model for each task. In the first scenario, we propose an effective solution based on importance sampling: we resample the pretraining set to imitate the specialization data and train a small model on it. In the second scenario, we propose a novel architecture, projected networks (PN). PN is a large network whose parameters can be linearly projected into a small network for specialization. For both scenarios, we demonstrate the empirical effectiveness of our solutions across various domains, training set sizes, and training budgets.",
+      "identifiers": [
+        "SemanticScholar:1a7103d169cede62cc7d579c7addf12d18c11668"
+      ],
+      "semantic_scholar_id": "1a7103d169cede62cc7d579c7addf12d18c11668",
+      "canonical_id": "arXiv:2402.01093",
+      "arxiv_id": "2402.01093",
+      "authors": [
+        "D. Grangier",
+        "Angelos Katharopoulos",
+        "Pierre Ablin",
+        "Awni Y. Hannun"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 981,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ParallelFlow: Parallelizing Linear Transformers via Flow Discretization",
+      "source_url": "https://arxiv.org/abs/2504.00492",
+      "year": 2025,
+      "published": "2025-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a theoretical framework for analyzing linear attention models through matrix-valued state space models (SSMs). Our approach, Parallel Flows, provides a perspective that systematically decouples temporal dynamics from implementation constraints, enabling independent analysis of critical algorithmic components: chunking, parallelization, and information aggregation. Central to this framework is the reinterpretation of chunking procedures as computations of the flows governing system dynamics. This connection establishes a bridge to mathematical tools from rough path theory, opening the door to new insights into sequence modeling architectures. As a concrete application, we analyze DeltaNet in a generalized low-rank setting motivated by recent theoretical advances. Our methods allow us to design simple, streamlined generalizations of hardware-efficient algorithms present in the literature, and to provide completely different ones, inspired by rough paths techniques, with provably lower complexity. This dual contribution demonstrates how principled theoretical analysis can both explain existing practical methods and inspire fundamentally new computational approaches.",
+      "identifiers": [
+        "SemanticScholar:32eef52b5c895b59373e45746c5318b1640230bf"
+      ],
+      "semantic_scholar_id": "32eef52b5c895b59373e45746c5318b1640230bf",
+      "canonical_id": "arXiv:2504.00492",
+      "arxiv_id": "2504.00492",
+      "doi": "10.48550/arXiv.2504.00492",
+      "authors": [
+        "Nicola Muca Cirone",
+        "Cristopher Salvi"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 557,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Optimizing Transformers with Approximate Computing for Faster, Smaller and more Accurate NLP Models",
+      "source_url": "https://www.semanticscholar.org/paper/a7357f16453d8c3e07aca694efa00df6f2e4352c",
+      "year": 2020,
+      "published": "2020-10-07",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a7357f16453d8c3e07aca694efa00df6f2e4352c"
+      ],
+      "semantic_scholar_id": "a7357f16453d8c3e07aca694efa00df6f2e4352c",
+      "canonical_id": "SemanticScholar:a7357f16453d8c3e07aca694efa00df6f2e4352c",
+      "authors": [
+        "Amrit Nagarajan",
+        "Sanchari Sen",
+        "Jacob R. Stevens",
+        "A. Raghunathan"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2194,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "What comes after transformers? - A selective survey connecting ideas in deep learning",
+      "source_url": "https://arxiv.org/abs/2408.00386",
+      "year": 2024,
+      "published": "2024-08-01",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have become the de-facto standard model in artificial intelligence since 2017 despite numerous shortcomings ranging from energy inefficiency to hallucinations. Research has made a lot of progress in improving elements of transformers, and, more generally, deep learning manifesting in many proposals for architectures, layers, optimization objectives, and optimization techniques. For researchers it is difficult to keep track of such developments on a broader level. We provide a comprehensive overview of the many important, recent works in these areas to those who already have a basic understanding of deep learning. Our focus differs from other works, as we target specifically novel, alternative potentially disruptive approaches to transformers as well as successful ideas of recent deep learning. We hope that such a holistic and unified treatment of influential, recent works and novel ideas helps researchers to form new connections between diverse areas of deep learning. We identify and discuss multiple patterns that summarize the key strategies for successful innovations over the last decade as well as works that can be seen as rising stars. Especially, we discuss attempts on how to improve on transformers covering (partially) proven methods such as state space models but also including far-out ideas in deep learning that seem promising despite not achieving state-of-the-art results. We also cover a discussion on recent state-of-the-art models such as OpenAI's GPT series and Meta's LLama models and, Google's Gemini model family.",
+      "identifiers": [
+        "SemanticScholar:5d1bfee024f90a8aa9d5d01c1ed1708dfed693f3"
+      ],
+      "semantic_scholar_id": "5d1bfee024f90a8aa9d5d01c1ed1708dfed693f3",
+      "canonical_id": "arXiv:2408.00386",
+      "arxiv_id": "2408.00386",
+      "doi": "10.48550/arXiv.2408.00386",
+      "authors": [
+        "Johannes Schneider"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 800,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast and Accurate FSA System Using ELBERT: An Efficient and Lightweight BERT",
+      "source_url": "https://arxiv.org/abs/2211.08842",
+      "year": 2022,
+      "published": "2022-11-16",
+      "venue": "IEEE Transactions on Signal Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The accuracy of many natural language processing (NLP) tasks has been significantly improved with the development of deep learning and Transformer-based pre-trained models like BERT. However, their large number of parameters and computations pose deployment challenges. For instance, while using BERT can improve predictions in financial sentiment analysis (FSA) tasks, it can also slow down processing, where throughput and accuracy are equally important for profitability. To address these issues, we first propose an efficient and lightweight BERT model called ELBERT, which incorporates a novel confidence-window-based (CWB) early exit mechanism. In addition, an innovative approach is proposed to accelerate text processing on the GPU platform, which addresses the challenge of effectively deploying the early exit mechanism with large input batch sizes. Using these advancements, we develop a fast and high-accuracy FSA system. Experimental results demonstrate that the proposed CWB early exit mechanism outperforms existing early exit methods on BERT in terms of accuracy, at the same computation cost. By leveraging this acceleration method, our FSA system can boost the processing throughput by nearly 40 times, enabling it to process over 1000 texts per second with sufficient accuracy. This processing rate is nearly twice as fast as FastBERT, providing modern trading systems with a more powerful text processing capability.",
+      "identifiers": [
+        "SemanticScholar:ba9aacf29cdfca1f593293e502dc7d2f0c351105"
+      ],
+      "semantic_scholar_id": "ba9aacf29cdfca1f593293e502dc7d2f0c351105",
+      "canonical_id": "arXiv:2211.08842",
+      "arxiv_id": "2211.08842",
+      "doi": "10.1109/TSP.2023.3322825",
+      "authors": [
+        "Si-Yuan Lu",
+        "Chen-Chen Zhou",
+        "Keli Xie",
+        "Jun Lin",
+        "Zhong-Feng Wang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1424,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EcoTransformer: Attention without Multiplication",
+      "source_url": "https://arxiv.org/abs/2507.20096",
+      "year": 2025,
+      "published": "2025-07-27",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer, with its scaled dot-product attention mechanism, has become a foundational architecture in modern AI. However, this mechanism is computationally intensive and incurs substantial energy costs. We propose a new Transformer architecture EcoTransformer, in which the output context vector is constructed as the convolution of the values using a Laplacian kernel, where the distances are measured by the L1 metric between the queries and keys. Compared to dot-product based attention, the new attention score calculation is free of matrix multiplication. It performs on par with, or even surpasses, scaled dot-product attention in NLP, bioinformatics, and vision tasks, while consuming significantly less energy. (This version (v2) supersedes v1 and reflects the intended release and licensing.)",
+      "identifiers": [
+        "SemanticScholar:df142cbfabfc1a514c3f91e721be7cd5d3ebea1a"
+      ],
+      "semantic_scholar_id": "df142cbfabfc1a514c3f91e721be7cd5d3ebea1a",
+      "canonical_id": "arXiv:2507.20096",
+      "arxiv_id": "2507.20096",
+      "doi": "10.48550/arXiv.2507.20096",
+      "authors": [
+        "Xin Gao",
+        "Xing Xu",
+        "Shirin Amiraslani",
+        "Hong Xu"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 440,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hardware Software Co-design and Architectural Optimization of Deep Learning Models for Natural Language Processing",
+      "source_url": "https://www.semanticscholar.org/paper/e20975524ace61c39bffc35db48c5a592eb9d769",
+      "year": 2023,
+      "published": null,
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e20975524ace61c39bffc35db48c5a592eb9d769"
+      ],
+      "semantic_scholar_id": "e20975524ace61c39bffc35db48c5a592eb9d769",
+      "canonical_id": "SemanticScholar:e20975524ace61c39bffc35db48c5a592eb9d769",
+      "authors": [
+        "Thanakul Wattanawong",
+        "K. Keutzer"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1197,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "S2-Attention: Hardware-Aware Context Sharding Among Attention Heads",
+      "source_url": "https://arxiv.org/abs/2407.17678",
+      "year": 2024,
+      "published": "2024-07-25",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention, which selectively attends to a subset of tokens in the context was supposed to be efficient. However, its theoretical reduction in FLOPs has rarely translated into wall-clock speed-up over its dense attention counterparts due to the lack of hardware-aware optimizations like FlashAttention. Meanwhile, it remains unclear whether sparse attention can maintain the model's quality at a scale of today's large language models (LLMs) and how. This paper presents Sparsely-Sharded(S2) Attention, a Triton library that provides kernel optimization for sparse attention customizable at both per-head and per-context-range levels. S2-Attention enables the exploration of novel and high-performance sparse attention techniques, which we demonstrate through extensive ablations across a wide range of sparse attention designs at various model scales. From these insights, we present several basic guidelines to design sparse attention that can achieve not only practical efficiency improvements, but also strong downstream performance. To achieve high parallelization and optimized memory IO, sparse attention should shard the context heterogeneously across attention heads, where each head attends to a different subset of tokens while collectively covering the full context. Meanwhile, we find hybrid architectures combining sparse and dense attention particularly beneficial in practice. S2-Attention achieves wall-clock speedup of 8.79X, 15.87X, 25.3X compared to the strong FlashAttention-2 baseline with strong downstream performance on-par with full attention and perfect retrieval performance at a 128k context length. At inference, for 7B models, our model, with the help of our S2-Attention kernel, achieves 4.5x speed-up compared to dense counterparts. S2-Attention is released with easy-to-customize APIs for direct usage in Megatron and vLLM.",
+      "identifiers": [
+        "SemanticScholar:077f0037392d0405e24f7c27bbed77ead9baec76"
+      ],
+      "semantic_scholar_id": "077f0037392d0405e24f7c27bbed77ead9baec76",
+      "canonical_id": "arXiv:2407.17678",
+      "arxiv_id": "2407.17678",
+      "authors": [
+        "Xi-Hui Lin",
+        "Yunan Zhang",
+        "Suyu Ge",
+        "Li-Liang Ren",
+        "Barun Patra",
+        "Vishrav Chaudhary",
+        "Hao Peng",
+        "Xia Song"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 807,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Softplus Attention with Re-weighting Boosts Length Extrapolation in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2501.13428",
+      "year": 2025,
+      "published": "2025-01-23",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models have achieved remarkable success in recent years, primarily due to self-attention. However, traditional Softmax attention suffers from numerical instability and reduced performance as the number of inference tokens increases. This work addresses these issues by proposing a new design principle for attention, viewing it as a two-stage process. The first stage (normalisation) refines standard attention by replacing Softmax with the more numerically stable Softplus followed by $l_{1}$-normalisation. Furthermore, we introduce a dynamic scale factor based on invariance entropy. We show that this novel attention mechanism outperforms conventional Softmax attention, and state-of-the-art Softmax-free alternatives. Our second proposal is to introduce a second processing stage (sharpening) which consists of a re-weighting mechanism that amplifies significant attentional weights while diminishing weaker ones. This enables the model to concentrate more effectively on relevant tokens, mitigating the attention sink phenomenon, and fundamentally improving length extrapolation. This novel, two-stage, replacement for self-attention is shown to ensure numerical stability and dramatically improve length extrapolation, maintaining a nearly constant validation loss at 16$\\times$ the training length while achieving superior results on challenging long-context retrieval tasks and downstream benchmarks. Furthermore, symbolic regression experiments demonstrate that our method enables models to recover Newton's gravitational law from orbital trajectory sequences, providing evidence that appropriate attention mechanisms are crucial for foundation models to develop genuine physical world models. Our code is available at https://github.com/iminfine/freeattn.",
+      "identifiers": [
+        "SemanticScholar:1ec7efb908abed1ec300ec26c5b46b0f394edf8f"
+      ],
+      "semantic_scholar_id": "1ec7efb908abed1ec300ec26c5b46b0f394edf8f",
+      "canonical_id": "arXiv:2501.13428",
+      "arxiv_id": "2501.13428",
+      "doi": "10.48550/arXiv.2501.13428",
+      "authors": [
+        "Bo Gao",
+        "M. Spratling",
+        "Letizia Gionfrida"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 625,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Effective Model Pruning",
+      "source_url": "https://arxiv.org/abs/2509.25606",
+      "year": 2025,
+      "published": "2025-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This article initiates the study of a basic question about model pruning. Given a vector $s$ of importance scores assigned to model components, how many of the scored components could be discarded without sacrificing performance? We propose Effective Model Pruning (EMP), which derives the desired sparsity directly from the score distribution using the notion of effective sample size from particle filtering, also known as the inverse Simpson index. Rather than prescribe a pruning criterion, EMP supplies a universal adaptive threshold derived from the distribution of the score $s$ over the model components: EMP maps $s$ to a number $N_{eff}=N_{eff}(s)$, called the effective sample size. The $N-N_{eff}$ lowest scoring components are discarded. A tight lower bound on the effective mass $s_{eff}$ (the sum of retained normalized scores) in terms of $N_{eff}$ is derived. This process yields models with a provable upper bound on the loss change relative to the original dense model. Numerical experiments are performed demonstrating this phenomenon across a variety of network architectures including MLPs, CNNs, Transformers, LLMs, and KAN. It is also shown that EMP addresses a rich set of pruning criteria such as weight magnitude, attention score, KAN importance score, and even feature-level signals such as image pixels.",
+      "identifiers": [
+        "SemanticScholar:0be70500c8b79a4ad841f546f65eb06a99412f46"
+      ],
+      "semantic_scholar_id": "0be70500c8b79a4ad841f546f65eb06a99412f46",
+      "canonical_id": "arXiv:2509.25606",
+      "arxiv_id": "2509.25606",
+      "doi": "10.48550/arXiv.2509.25606",
+      "authors": [
+        "Yixuan Wang",
+        "Dan P. Guralnik",
+        "Saiedeh Akbari",
+        "Warren E. Dixon"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 375,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moe fication and LoRA",
+      "source_url": "https://www.semanticscholar.org/paper/6c54aa7b3fca89d20de14aa8c1e4fc6760080625",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625"
+      ],
+      "semantic_scholar_id": "6c54aa7b3fca89d20de14aa8c1e4fc6760080625",
+      "canonical_id": "SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625",
+      "authors": [
+        "Stanford CS224N",
+        "T. Wang",
+        "Chi Tsai",
+        "JayMartin"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Quantitative Review on Language Model Efficiency Research",
+      "source_url": "https://arxiv.org/abs/2306.01768",
+      "year": 2023,
+      "published": "2023-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language models (LMs) are being scaled and becoming powerful. Improving their efficiency is one of the core research topics in neural information processing systems. Tay et al. (2022) provided a comprehensive overview of efficient Transformers that have become an indispensable staple in the field of NLP. However, in the section of\"On Evaluation\", they left an open question\"which fundamental efficient Transformer one should consider,\"answered by\"still a mystery\"because\"many research papers select their own benchmarks.\"Unfortunately, there was not quantitative analysis about the performances of Transformers on any benchmarks. Moreover, state space models (SSMs) have demonstrated their abilities of modeling long-range sequences with non-attention mechanisms, which were not discussed in the prior review. This article makes a meta analysis on the results from a set of papers on efficient Transformers as well as those on SSMs. It provides a quantitative review on LM efficiency research and gives suggestions for future research.",
+      "identifiers": [
+        "SemanticScholar:06e6f125b0f15affd38382135acf03efa28cf439"
+      ],
+      "semantic_scholar_id": "06e6f125b0f15affd38382135acf03efa28cf439",
+      "canonical_id": "arXiv:2306.01768",
+      "arxiv_id": "2306.01768",
+      "doi": "10.48550/arXiv.2306.01768",
+      "authors": [
+        "Meng Jiang",
+        "Hy Dang",
+        "Lingbo Tong"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1231,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2306.02379",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2306.02379",
+        "id:SemanticScholar:1a7763f30c97b5b052af36bcfe478f64dcb97986",
+        "id:arXiv:2306.02379",
+        "title:modular transformers compressing transformers into modularized layers for flexible efficient inference",
+        "url:https://arxiv.org/abs/2306.02379"
+      ],
+      "record": {
+        "title": "Modular Transformers: Compressing Transformers into Modularized Layers for Flexible Efficient Inference",
+        "source_url": "https://arxiv.org/abs/2306.02379",
+        "year": 2023,
+        "published": "2023-06-04",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pre-trained Transformer models like T5 and BART have advanced the state of the art on a wide range of text generation tasks. Compressing these models into smaller ones has become critically important for practical use. Common neural network compression techniques such as knowledge distillation or quantization are limited to static compression where the compression ratio is fixed. In this paper, we introduce Modular Transformers, a modularized encoder-decoder framework for flexible sequence-to-sequence model compression. Modular Transformers train modularized layers that have the same function of two or more consecutive layers in the original model via module replacing and knowledge distillation. After training, the modularized layers can be flexibly assembled into sequence-to-sequence models that meet different performance-efficiency trade-offs. Experimental results show that after a single training phase, by simply varying the assembling strategy, Modular Transformers can achieve flexible compression ratios from 1.1x to 6x with little to moderate relative performance drop.",
+        "identifiers": [
+          "SemanticScholar:1a7763f30c97b5b052af36bcfe478f64dcb97986"
+        ],
+        "semantic_scholar_id": "1a7763f30c97b5b052af36bcfe478f64dcb97986",
+        "canonical_id": "arXiv:2306.02379",
+        "arxiv_id": "2306.02379",
+        "doi": "10.48550/arXiv.2306.02379",
+        "authors": [
+          "Wangchunshu Zhou",
+          "Ronan Le Bras",
+          "Yejin Choi"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1224,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2204.05424",
+      "identity_tokens": [
+        "id:DOI:10.63317/2c235hpjhnk8",
+        "id:SemanticScholar:f290bc1c70688b7985b7cca863e4670398875595",
+        "id:arXiv:2204.05424",
+        "title:a call for clarity in beam search how it works and when it stops",
+        "url:https://arxiv.org/abs/2204.05424"
+      ],
+      "record": {
+        "title": "A Call for Clarity in Beam Search: How It Works and When It Stops",
+        "source_url": "https://arxiv.org/abs/2204.05424",
+        "year": 2022,
+        "published": "2022-04-11",
+        "venue": "International Conference on Language Resources and Evaluation",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Text generation with beam search has proven successful in a wide range of applications. We point out that, though largely overlooked in the literature, the commonly-used implementation of beam decoding (e.g., Hugging Face Transformers and fairseq) uses a first come, first served heuristic: it keeps a set of already completed sequences over time steps and stops when the size of this set reaches the beam size. Based on this finding, we introduce a patience factor, a simple modification to this beam decoding implementation, that generalizes the stopping criterion and provides flexibility to the depth of search. Empirical results demonstrate that adjusting this patience factor improves decoding performance of strong pretrained models on news text summarization and machine translation over diverse language pairs, with a negligible inference slowdown. Our approach only modifies one line of code and can be thus readily incorporated in any implementation. Further, we find that different versions of beam decoding result in large performance differences in summarization, demonstrating the need for clarity in specifying the beam search implementation in research work. Our code will be available upon publication.",
+        "identifiers": [
+          "SemanticScholar:f290bc1c70688b7985b7cca863e4670398875595"
+        ],
+        "semantic_scholar_id": "f290bc1c70688b7985b7cca863e4670398875595",
+        "canonical_id": "arXiv:2204.05424",
+        "arxiv_id": "2204.05424",
+        "doi": "10.63317/2c235hpjhnk8",
+        "authors": [
+          "Jungo Kasai",
+          "Keisuke Sakaguchi",
+          "Ronan Le Bras",
+          "Dragomir R. Radev",
+          "Yejin Choi",
+          "Noah A. Smith"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1643,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2105.14636",
+      "identity_tokens": [
+        "id:SemanticScholar:5e8a892cc33a9fb9e701d5e10333e7b8545bf4a5",
+        "id:arXiv:2105.14636",
+        "title:leap learnable pruning for transformerbased models",
+        "url:https://arxiv.org/abs/2105.14636"
+      ],
+      "record": {
+        "title": "LEAP: Learnable Pruning for Transformer-based Models",
+        "source_url": "https://arxiv.org/abs/2105.14636",
+        "year": 2021,
+        "published": "2021-05-30",
+        "venue": null,
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pruning is an effective method to reduce the memory footprint and computational cost associated with large natural language processing models. However, current pruning algorithms either only focus on one pruning category, e.g., structured pruning and unstructured, or need extensive hyperparameter tuning in order to get reasonable accuracy performance. To address these challenges, we propose LEArnable Pruning (LEAP), an effective method to gradually prune the model based on thresholds learned by gradient descent. Different than previous learnable pruning methods, which utilize L 0 or L 1 penalty to indirectly affect the ﬁnal pruning ratio, LEAP introduces a novel regularization function, that directly interacts with the preset target pruning ratio. Moreover, in order to reduce hyperparameter tuning, a novel adaptive regularization coefﬁcient is deployed to control the regularization penalty adaptively. With the new regularization term and its associated adaptive regularization coefﬁcient, LEAP is able to be applied for different pruning granularity, including unstructured pruning, structured pruning, and hybrid pruning, with minimal hyperparameter tuning. We apply LEAP for BERT models on QQP/MNLI/SQuAD for different pruning settings. Our result shows that for all datasets, pruning granularity, and pruning ratios, LEAP achieves on-par or better results as compared to previous heavily hand-tuned methods.",
+        "identifiers": [
+          "SemanticScholar:5e8a892cc33a9fb9e701d5e10333e7b8545bf4a5"
+        ],
+        "semantic_scholar_id": "5e8a892cc33a9fb9e701d5e10333e7b8545bf4a5",
+        "canonical_id": "arXiv:2105.14636",
+        "arxiv_id": "2105.14636",
+        "authors": [
+          "Z. Yao",
+          "Xiaoxia Wu",
+          "Linjian Ma",
+          "Sheng Shen",
+          "K. Keutzer",
+          "Michael W. Mahoney",
+          "Yuxiong He"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1959,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp49357.2023.10096107",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp49357.2023.10096107",
+        "id:SemanticScholar:a298d956dc3472541adc3d4bf2908755e5ff54d4",
+        "title:a probabilistic framework for pruning transformers via a finite admixture of keys",
+        "url:https://doi.org/10.1109/ICASSP49357.2023.10096107"
+      ],
+      "record": {
+        "title": "A Probabilistic Framework for Pruning Transformers Via a Finite Admixture of Keys",
+        "source_url": "https://doi.org/10.1109/ICASSP49357.2023.10096107",
+        "year": 2023,
+        "published": "2023-06-04",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pairwise dot product-based self-attention is key to the success of transformers which achieve state-of-the-art performance across a variety of applications in language and vision, but are costly to compute. It has been shown that most attention scores and keys in transformers are redundant and can be removed without loss of accuracy. In this paper, we develop a novel probabilistic framework for pruning attention scores and keys in transformers. We first formulate an admixture model of attention keys whose input data to be clustered are attention queries. We show that attention scores in self-attention correspond to the posterior distribution of this model when attention keys admit a uniform prior distribution. We then relax this uniform prior constraint and let the model learn these priors from data, resulting in a new Finite Admixture of Keys (FiAK). The learned priors are used for pruning away redundant attention scores and keys in the baseline transformers, improving the diversity of attention patterns that the models capture. We corroborate the efficiency of transformers pruned with FiAK on the ImageNet object classification and WikiText-103 language modeling tasks. Our experiments demonstrate that transformers pruned with FiAK yield similar or better accuracy than the baseline dense transformers while being much more efficient in terms of memory and computational cost.",
+        "identifiers": [
+          "SemanticScholar:a298d956dc3472541adc3d4bf2908755e5ff54d4"
+        ],
+        "semantic_scholar_id": "a298d956dc3472541adc3d4bf2908755e5ff54d4",
+        "doi": "10.1109/ICASSP49357.2023.10096107",
+        "canonical_id": "DOI:10.1109/ICASSP49357.2023.10096107",
+        "authors": [
+          "T. Nguyen",
+          "T. Nguyen",
+          "L. Bui",
+          "Hai Do",
+          "Duy Khuong Nguyen",
+          "Dung D. Le",
+          "Hung The Tran",
+          "Nhat Ho",
+          "S. Osher",
+          "Richard Baraniuk"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1224,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.01093",
+      "identity_tokens": [
+        "id:SemanticScholar:1a7103d169cede62cc7d579c7addf12d18c11668",
+        "id:arXiv:2402.01093",
+        "title:need a small specialized language model plan early",
+        "url:https://arxiv.org/abs/2402.01093"
+      ],
+      "record": {
+        "title": "Need a Small Specialized Language Model? Plan Early!",
+        "source_url": "https://arxiv.org/abs/2402.01093",
+        "year": 2024,
+        "published": "2024-02-02",
+        "venue": null,
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models are versatile tools but are not suitable for small inference budgets. Small models have more efficient inference, but their lower capacity means that their performance can be good only if one limits their scope to a specialized domain. This paper explores how to get good specialized small language models using a large, generic, pretraining set and a limited amount of specialized data. We consider two scenarios, depending on whether (i) one can afford pretraining a model for each specialization task, or (ii) one wants to cheaply adapt a single pretrained model for each task. In the first scenario, we propose an effective solution based on importance sampling: we resample the pretraining set to imitate the specialization data and train a small model on it. In the second scenario, we propose a novel architecture, projected networks (PN). PN is a large network whose parameters can be linearly projected into a small network for specialization. For both scenarios, we demonstrate the empirical effectiveness of our solutions across various domains, training set sizes, and training budgets.",
+        "identifiers": [
+          "SemanticScholar:1a7103d169cede62cc7d579c7addf12d18c11668"
+        ],
+        "semantic_scholar_id": "1a7103d169cede62cc7d579c7addf12d18c11668",
+        "canonical_id": "arXiv:2402.01093",
+        "arxiv_id": "2402.01093",
+        "authors": [
+          "D. Grangier",
+          "Angelos Katharopoulos",
+          "Pierre Ablin",
+          "Awni Y. Hannun"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 981,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.00492",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.00492",
+        "id:SemanticScholar:32eef52b5c895b59373e45746c5318b1640230bf",
+        "id:arXiv:2504.00492",
+        "title:parallelflow parallelizing linear transformers via flow discretization",
+        "url:https://arxiv.org/abs/2504.00492"
+      ],
+      "record": {
+        "title": "ParallelFlow: Parallelizing Linear Transformers via Flow Discretization",
+        "source_url": "https://arxiv.org/abs/2504.00492",
+        "year": 2025,
+        "published": "2025-04-01",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present a theoretical framework for analyzing linear attention models through matrix-valued state space models (SSMs). Our approach, Parallel Flows, provides a perspective that systematically decouples temporal dynamics from implementation constraints, enabling independent analysis of critical algorithmic components: chunking, parallelization, and information aggregation. Central to this framework is the reinterpretation of chunking procedures as computations of the flows governing system dynamics. This connection establishes a bridge to mathematical tools from rough path theory, opening the door to new insights into sequence modeling architectures. As a concrete application, we analyze DeltaNet in a generalized low-rank setting motivated by recent theoretical advances. Our methods allow us to design simple, streamlined generalizations of hardware-efficient algorithms present in the literature, and to provide completely different ones, inspired by rough paths techniques, with provably lower complexity. This dual contribution demonstrates how principled theoretical analysis can both explain existing practical methods and inspire fundamentally new computational approaches.",
+        "identifiers": [
+          "SemanticScholar:32eef52b5c895b59373e45746c5318b1640230bf"
+        ],
+        "semantic_scholar_id": "32eef52b5c895b59373e45746c5318b1640230bf",
+        "canonical_id": "arXiv:2504.00492",
+        "arxiv_id": "2504.00492",
+        "doi": "10.48550/arXiv.2504.00492",
+        "authors": [
+          "Nicola Muca Cirone",
+          "Cristopher Salvi"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 557,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:a7357f16453d8c3e07aca694efa00df6f2e4352c",
+      "identity_tokens": [
+        "id:SemanticScholar:a7357f16453d8c3e07aca694efa00df6f2e4352c",
+        "title:optimizing transformers with approximate computing for faster smaller and more accurate nlp models",
+        "url:https://www.semanticscholar.org/paper/a7357f16453d8c3e07aca694efa00df6f2e4352c"
+      ],
+      "record": {
+        "title": "Optimizing Transformers with Approximate Computing for Faster, Smaller and more Accurate NLP Models",
+        "source_url": "https://www.semanticscholar.org/paper/a7357f16453d8c3e07aca694efa00df6f2e4352c",
+        "year": 2020,
+        "published": "2020-10-07",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:a7357f16453d8c3e07aca694efa00df6f2e4352c"
+        ],
+        "semantic_scholar_id": "a7357f16453d8c3e07aca694efa00df6f2e4352c",
+        "canonical_id": "SemanticScholar:a7357f16453d8c3e07aca694efa00df6f2e4352c",
+        "authors": [
+          "Amrit Nagarajan",
+          "Sanchari Sen",
+          "Jacob R. Stevens",
+          "A. Raghunathan"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2194,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.00386",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.00386",
+        "id:SemanticScholar:5d1bfee024f90a8aa9d5d01c1ed1708dfed693f3",
+        "id:arXiv:2408.00386",
+        "title:what comes after transformers a selective survey connecting ideas in deep learning",
+        "url:https://arxiv.org/abs/2408.00386"
+      ],
+      "record": {
+        "title": "What comes after transformers? - A selective survey connecting ideas in deep learning",
+        "source_url": "https://arxiv.org/abs/2408.00386",
+        "year": 2024,
+        "published": "2024-08-01",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have become the de-facto standard model in artificial intelligence since 2017 despite numerous shortcomings ranging from energy inefficiency to hallucinations. Research has made a lot of progress in improving elements of transformers, and, more generally, deep learning manifesting in many proposals for architectures, layers, optimization objectives, and optimization techniques. For researchers it is difficult to keep track of such developments on a broader level. We provide a comprehensive overview of the many important, recent works in these areas to those who already have a basic understanding of deep learning. Our focus differs from other works, as we target specifically novel, alternative potentially disruptive approaches to transformers as well as successful ideas of recent deep learning. We hope that such a holistic and unified treatment of influential, recent works and novel ideas helps researchers to form new connections between diverse areas of deep learning. We identify and discuss multiple patterns that summarize the key strategies for successful innovations over the last decade as well as works that can be seen as rising stars. Especially, we discuss attempts on how to improve on transformers covering (partially) proven methods such as state space models but also including far-out ideas in deep learning that seem promising despite not achieving state-of-the-art results. We also cover a discussion on recent state-of-the-art models such as OpenAI's GPT series and Meta's LLama models and, Google's Gemini model family.",
+        "identifiers": [
+          "SemanticScholar:5d1bfee024f90a8aa9d5d01c1ed1708dfed693f3"
+        ],
+        "semantic_scholar_id": "5d1bfee024f90a8aa9d5d01c1ed1708dfed693f3",
+        "canonical_id": "arXiv:2408.00386",
+        "arxiv_id": "2408.00386",
+        "doi": "10.48550/arXiv.2408.00386",
+        "authors": [
+          "Johannes Schneider"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 800,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2211.08842",
+      "identity_tokens": [
+        "id:DOI:10.1109/tsp.2023.3322825",
+        "id:SemanticScholar:ba9aacf29cdfca1f593293e502dc7d2f0c351105",
+        "id:arXiv:2211.08842",
+        "title:fast and accurate fsa system using elbert an efficient and lightweight bert",
+        "url:https://arxiv.org/abs/2211.08842"
+      ],
+      "record": {
+        "title": "Fast and Accurate FSA System Using ELBERT: An Efficient and Lightweight BERT",
+        "source_url": "https://arxiv.org/abs/2211.08842",
+        "year": 2022,
+        "published": "2022-11-16",
+        "venue": "IEEE Transactions on Signal Processing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The accuracy of many natural language processing (NLP) tasks has been significantly improved with the development of deep learning and Transformer-based pre-trained models like BERT. However, their large number of parameters and computations pose deployment challenges. For instance, while using BERT can improve predictions in financial sentiment analysis (FSA) tasks, it can also slow down processing, where throughput and accuracy are equally important for profitability. To address these issues, we first propose an efficient and lightweight BERT model called ELBERT, which incorporates a novel confidence-window-based (CWB) early exit mechanism. In addition, an innovative approach is proposed to accelerate text processing on the GPU platform, which addresses the challenge of effectively deploying the early exit mechanism with large input batch sizes. Using these advancements, we develop a fast and high-accuracy FSA system. Experimental results demonstrate that the proposed CWB early exit mechanism outperforms existing early exit methods on BERT in terms of accuracy, at the same computation cost. By leveraging this acceleration method, our FSA system can boost the processing throughput by nearly 40 times, enabling it to process over 1000 texts per second with sufficient accuracy. This processing rate is nearly twice as fast as FastBERT, providing modern trading systems with a more powerful text processing capability.",
+        "identifiers": [
+          "SemanticScholar:ba9aacf29cdfca1f593293e502dc7d2f0c351105"
+        ],
+        "semantic_scholar_id": "ba9aacf29cdfca1f593293e502dc7d2f0c351105",
+        "canonical_id": "arXiv:2211.08842",
+        "arxiv_id": "2211.08842",
+        "doi": "10.1109/TSP.2023.3322825",
+        "authors": [
+          "Si-Yuan Lu",
+          "Chen-Chen Zhou",
+          "Keli Xie",
+          "Jun Lin",
+          "Zhong-Feng Wang"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1424,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.20096",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.20096",
+        "id:SemanticScholar:df142cbfabfc1a514c3f91e721be7cd5d3ebea1a",
+        "id:arXiv:2507.20096",
+        "title:ecotransformer attention without multiplication",
+        "url:https://arxiv.org/abs/2507.20096"
+      ],
+      "record": {
+        "title": "EcoTransformer: Attention without Multiplication",
+        "source_url": "https://arxiv.org/abs/2507.20096",
+        "year": 2025,
+        "published": "2025-07-27",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Transformer, with its scaled dot-product attention mechanism, has become a foundational architecture in modern AI. However, this mechanism is computationally intensive and incurs substantial energy costs. We propose a new Transformer architecture EcoTransformer, in which the output context vector is constructed as the convolution of the values using a Laplacian kernel, where the distances are measured by the L1 metric between the queries and keys. Compared to dot-product based attention, the new attention score calculation is free of matrix multiplication. It performs on par with, or even surpasses, scaled dot-product attention in NLP, bioinformatics, and vision tasks, while consuming significantly less energy. (This version (v2) supersedes v1 and reflects the intended release and licensing.)",
+        "identifiers": [
+          "SemanticScholar:df142cbfabfc1a514c3f91e721be7cd5d3ebea1a"
+        ],
+        "semantic_scholar_id": "df142cbfabfc1a514c3f91e721be7cd5d3ebea1a",
+        "canonical_id": "arXiv:2507.20096",
+        "arxiv_id": "2507.20096",
+        "doi": "10.48550/arXiv.2507.20096",
+        "authors": [
+          "Xin Gao",
+          "Xing Xu",
+          "Shirin Amiraslani",
+          "Hong Xu"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 440,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:e20975524ace61c39bffc35db48c5a592eb9d769",
+      "identity_tokens": [
+        "id:SemanticScholar:e20975524ace61c39bffc35db48c5a592eb9d769",
+        "title:hardware software codesign and architectural optimization of deep learning models for natural language processing",
+        "url:https://www.semanticscholar.org/paper/e20975524ace61c39bffc35db48c5a592eb9d769"
+      ],
+      "record": {
+        "title": "Hardware Software Co-design and Architectural Optimization of Deep Learning Models for Natural Language Processing",
+        "source_url": "https://www.semanticscholar.org/paper/e20975524ace61c39bffc35db48c5a592eb9d769",
+        "year": 2023,
+        "published": null,
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:e20975524ace61c39bffc35db48c5a592eb9d769"
+        ],
+        "semantic_scholar_id": "e20975524ace61c39bffc35db48c5a592eb9d769",
+        "canonical_id": "SemanticScholar:e20975524ace61c39bffc35db48c5a592eb9d769",
+        "authors": [
+          "Thanakul Wattanawong",
+          "K. Keutzer"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1197,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.17678",
+      "identity_tokens": [
+        "id:SemanticScholar:077f0037392d0405e24f7c27bbed77ead9baec76",
+        "id:arXiv:2407.17678",
+        "title:s2attention hardwareaware context sharding among attention heads",
+        "url:https://arxiv.org/abs/2407.17678"
+      ],
+      "record": {
+        "title": "S2-Attention: Hardware-Aware Context Sharding Among Attention Heads",
+        "source_url": "https://arxiv.org/abs/2407.17678",
+        "year": 2024,
+        "published": "2024-07-25",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse attention, which selectively attends to a subset of tokens in the context was supposed to be efficient. However, its theoretical reduction in FLOPs has rarely translated into wall-clock speed-up over its dense attention counterparts due to the lack of hardware-aware optimizations like FlashAttention. Meanwhile, it remains unclear whether sparse attention can maintain the model's quality at a scale of today's large language models (LLMs) and how. This paper presents Sparsely-Sharded(S2) Attention, a Triton library that provides kernel optimization for sparse attention customizable at both per-head and per-context-range levels. S2-Attention enables the exploration of novel and high-performance sparse attention techniques, which we demonstrate through extensive ablations across a wide range of sparse attention designs at various model scales. From these insights, we present several basic guidelines to design sparse attention that can achieve not only practical efficiency improvements, but also strong downstream performance. To achieve high parallelization and optimized memory IO, sparse attention should shard the context heterogeneously across attention heads, where each head attends to a different subset of tokens while collectively covering the full context. Meanwhile, we find hybrid architectures combining sparse and dense attention particularly beneficial in practice. S2-Attention achieves wall-clock speedup of 8.79X, 15.87X, 25.3X compared to the strong FlashAttention-2 baseline with strong downstream performance on-par with full attention and perfect retrieval performance at a 128k context length. At inference, for 7B models, our model, with the help of our S2-Attention kernel, achieves 4.5x speed-up compared to dense counterparts. S2-Attention is released with easy-to-customize APIs for direct usage in Megatron and vLLM.",
+        "identifiers": [
+          "SemanticScholar:077f0037392d0405e24f7c27bbed77ead9baec76"
+        ],
+        "semantic_scholar_id": "077f0037392d0405e24f7c27bbed77ead9baec76",
+        "canonical_id": "arXiv:2407.17678",
+        "arxiv_id": "2407.17678",
+        "authors": [
+          "Xi-Hui Lin",
+          "Yunan Zhang",
+          "Suyu Ge",
+          "Li-Liang Ren",
+          "Barun Patra",
+          "Vishrav Chaudhary",
+          "Hao Peng",
+          "Xia Song"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 807,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.13428",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.13428",
+        "id:SemanticScholar:1ec7efb908abed1ec300ec26c5b46b0f394edf8f",
+        "id:arXiv:2501.13428",
+        "title:softplus attention with reweighting boosts length extrapolation in large language models",
+        "url:https://arxiv.org/abs/2501.13428"
+      ],
+      "record": {
+        "title": "Softplus Attention with Re-weighting Boosts Length Extrapolation in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2501.13428",
+        "year": 2025,
+        "published": "2025-01-23",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models have achieved remarkable success in recent years, primarily due to self-attention. However, traditional Softmax attention suffers from numerical instability and reduced performance as the number of inference tokens increases. This work addresses these issues by proposing a new design principle for attention, viewing it as a two-stage process. The first stage (normalisation) refines standard attention by replacing Softmax with the more numerically stable Softplus followed by $l_{1}$-normalisation. Furthermore, we introduce a dynamic scale factor based on invariance entropy. We show that this novel attention mechanism outperforms conventional Softmax attention, and state-of-the-art Softmax-free alternatives. Our second proposal is to introduce a second processing stage (sharpening) which consists of a re-weighting mechanism that amplifies significant attentional weights while diminishing weaker ones. This enables the model to concentrate more effectively on relevant tokens, mitigating the attention sink phenomenon, and fundamentally improving length extrapolation. This novel, two-stage, replacement for self-attention is shown to ensure numerical stability and dramatically improve length extrapolation, maintaining a nearly constant validation loss at 16$\\times$ the training length while achieving superior results on challenging long-context retrieval tasks and downstream benchmarks. Furthermore, symbolic regression experiments demonstrate that our method enables models to recover Newton's gravitational law from orbital trajectory sequences, providing evidence that appropriate attention mechanisms are crucial for foundation models to develop genuine physical world models. Our code is available at https://github.com/iminfine/freeattn.",
+        "identifiers": [
+          "SemanticScholar:1ec7efb908abed1ec300ec26c5b46b0f394edf8f"
+        ],
+        "semantic_scholar_id": "1ec7efb908abed1ec300ec26c5b46b0f394edf8f",
+        "canonical_id": "arXiv:2501.13428",
+        "arxiv_id": "2501.13428",
+        "doi": "10.48550/arXiv.2501.13428",
+        "authors": [
+          "Bo Gao",
+          "M. Spratling",
+          "Letizia Gionfrida"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 625,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.25606",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.25606",
+        "id:SemanticScholar:0be70500c8b79a4ad841f546f65eb06a99412f46",
+        "id:arXiv:2509.25606",
+        "title:effective model pruning",
+        "url:https://arxiv.org/abs/2509.25606"
+      ],
+      "record": {
+        "title": "Effective Model Pruning",
+        "source_url": "https://arxiv.org/abs/2509.25606",
+        "year": 2025,
+        "published": "2025-09-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This article initiates the study of a basic question about model pruning. Given a vector $s$ of importance scores assigned to model components, how many of the scored components could be discarded without sacrificing performance? We propose Effective Model Pruning (EMP), which derives the desired sparsity directly from the score distribution using the notion of effective sample size from particle filtering, also known as the inverse Simpson index. Rather than prescribe a pruning criterion, EMP supplies a universal adaptive threshold derived from the distribution of the score $s$ over the model components: EMP maps $s$ to a number $N_{eff}=N_{eff}(s)$, called the effective sample size. The $N-N_{eff}$ lowest scoring components are discarded. A tight lower bound on the effective mass $s_{eff}$ (the sum of retained normalized scores) in terms of $N_{eff}$ is derived. This process yields models with a provable upper bound on the loss change relative to the original dense model. Numerical experiments are performed demonstrating this phenomenon across a variety of network architectures including MLPs, CNNs, Transformers, LLMs, and KAN. It is also shown that EMP addresses a rich set of pruning criteria such as weight magnitude, attention score, KAN importance score, and even feature-level signals such as image pixels.",
+        "identifiers": [
+          "SemanticScholar:0be70500c8b79a4ad841f546f65eb06a99412f46"
+        ],
+        "semantic_scholar_id": "0be70500c8b79a4ad841f546f65eb06a99412f46",
+        "canonical_id": "arXiv:2509.25606",
+        "arxiv_id": "2509.25606",
+        "doi": "10.48550/arXiv.2509.25606",
+        "authors": [
+          "Yixuan Wang",
+          "Dan P. Guralnik",
+          "Saiedeh Akbari",
+          "Warren E. Dixon"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 375,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625",
+      "identity_tokens": [
+        "id:SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625",
+        "title:outrageously fast llms faster inference and finetuning with moe fication and lora",
+        "url:https://www.semanticscholar.org/paper/6c54aa7b3fca89d20de14aa8c1e4fc6760080625"
+      ],
+      "record": {
+        "title": "Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moe fication and LoRA",
+        "source_url": "https://www.semanticscholar.org/paper/6c54aa7b3fca89d20de14aa8c1e4fc6760080625",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625"
+        ],
+        "semantic_scholar_id": "6c54aa7b3fca89d20de14aa8c1e4fc6760080625",
+        "canonical_id": "SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625",
+        "authors": [
+          "Stanford CS224N",
+          "T. Wang",
+          "Chi Tsai",
+          "JayMartin"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2306.01768",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2306.01768",
+        "id:SemanticScholar:06e6f125b0f15affd38382135acf03efa28cf439",
+        "id:arXiv:2306.01768",
+        "title:a quantitative review on language model efficiency research",
+        "url:https://arxiv.org/abs/2306.01768"
+      ],
+      "record": {
+        "title": "A Quantitative Review on Language Model Efficiency Research",
+        "source_url": "https://arxiv.org/abs/2306.01768",
+        "year": 2023,
+        "published": "2023-05-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Language models (LMs) are being scaled and becoming powerful. Improving their efficiency is one of the core research topics in neural information processing systems. Tay et al. (2022) provided a comprehensive overview of efficient Transformers that have become an indispensable staple in the field of NLP. However, in the section of\"On Evaluation\", they left an open question\"which fundamental efficient Transformer one should consider,\"answered by\"still a mystery\"because\"many research papers select their own benchmarks.\"Unfortunately, there was not quantitative analysis about the performances of Transformers on any benchmarks. Moreover, state space models (SSMs) have demonstrated their abilities of modeling long-range sequences with non-attention mechanisms, which were not discussed in the prior review. This article makes a meta analysis on the results from a set of papers on efficient Transformers as well as those on SSMs. It provides a quantitative review on LM efficiency research and gives suggestions for future research.",
+        "identifiers": [
+          "SemanticScholar:06e6f125b0f15affd38382135acf03efa28cf439"
+        ],
+        "semantic_scholar_id": "06e6f125b0f15affd38382135acf03efa28cf439",
+        "canonical_id": "arXiv:2306.01768",
+        "arxiv_id": "2306.01768",
+        "doi": "10.48550/arXiv.2306.01768",
+        "authors": [
+          "Meng Jiang",
+          "Hy Dang",
+          "Lingbo Tong"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1231,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a3aae22855035d9f86e487caa6903050e488b5ad5baac9ddcde4bfe2146c16bf",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

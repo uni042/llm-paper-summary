@@ -1,0 +1,163 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0755-scheduled-chat-00/r03",
+  "reference_main_sha": "35406e7029f97dbd56bcc7020f7c259cdd86148b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.97",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.97"
+      ],
+      "title": "Root Defense Strategies: Ensuring Safety of LLM at the Decoding Level",
+      "reason": "ACL Anthology一次要旨で、過去トークンの危険性をLLM自身に判定させ、危険な応答を拒絶する代わりにデコード途中で修正する段階的防御を確認。投機的復号を併用し安全なデコード速度を維持するが、主目的は安全性であり純粋な推論高速化の評価が中心ではないため境界候補。",
+      "source_url": "https://aclanthology.org/2025.acl-long.97/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 171
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.01160",
+      "identity_tokens": [
+        "arXiv:2610.01160"
+      ],
+      "title": "Serving a Revisable World: Versioned Execution for Interruptible Agents",
+      "reason": "arXiv一次要旨で、エージェントの指示変更時に旧実行の出力公開権限を撤回し、完成済みKV状態の有効接頭辞を後継要求へ引き継ぐversioned executionを確認。vLLMに実装し、旧出力の無効化とKV引継ぎを統合、再開後TTFT中央値を17.1%短縮と報告。LLMサービング制御面とキャッシュ再利用に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2610.01160",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 201
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.20072",
+      "identity_tokens": [
+        "arXiv:2509.20072"
+      ],
+      "title": "From Text to Talk: Audio-Language Model Needs Non-Autoregressive Joint Training",
+      "reason": "arXiv一次要旨でText-to-Talkがテキストの自己回帰生成と音声の非自己回帰拡散を一つのTransformerへ統合し、音声区間の双方向注意とテキストの因果注意を使い分けることを確認。推論時はブロック単位の並列音声合成を実行するため、音声MLLMの生成レイテンシ改善へ直接つながる。",
+      "source_url": "https://arxiv.org/abs/2509.20072",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 214
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34370",
+      "identity_tokens": [
+        "arXiv:2609.34370"
+      ],
+      "title": "Spexis: Speculative Lookahead Scheduling for LLM Inference",
+      "reason": "EMNLP 2026公式一次要旨で、vLLM上で通常実行と投機を並走させる新しい並列軸を提案し、KVキャッシュ追加使用を抑えながら将来のメモリ圧力と投機品質を予測する先読みスケジューリングを確認。PP/TPの最適組合せを基準に最大34%高速化を報告し、分散LLM推論の実行系へ直接寄与する。",
+      "source_url": "https://aclanthology.org/2026.emnlp-main.29/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 253
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2506.21864",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2506.21864",
+        "arXiv:2506.21864"
+      ],
+      "title": "DeepOmni: Towards Seamless and Smart Speech Interaction with Adaptive Modality-Specific MoE",
+      "reason": "arXiv一次要旨では現行題名はDeepOmniで、worklistのDeepTalkは本文中の方式名である。音声・テキスト用MoE expertを分けて学習し、直接音声応答により対話レイテンシ0.5秒以内と報告。実行時遅延は関連するが主たる工夫はモダリティ別学習・性能維持であり、推論エンジン自体の最適化ではないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2506.21864",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 304
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/MASCOTS67699.2025.11283352",
+      "identity_tokens": [
+        "DOI:10.1109/MASCOTS67699.2025.11283352"
+      ],
+      "title": "FlexLLM: Flexible and Cost-Efficient LLM Serving with Heterogeneous GPUs",
+      "reason": "著者所属機関公開の原著PDF要旨で、異種GPU間の実行時間をLinear Correction Functionで補正予測し、token当たり遅延SLOを満たす並列化・配置方式を費用最小で選ぶFlexLLMを確認。SLO制約下の構成選択で最大2.28倍の費用効率差を示す、LLMサービング配置最適化の直接研究。",
+      "source_url": "https://discos.sogang.ac.kr/file/2025/intl_conf/MASCOTS_2025_K_Kim.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 316
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2602.05243",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2602.05243",
+        "arXiv:2602.05243"
+      ],
+      "title": "CORP: Closed-Form One-shot Representation-Preserving Structured Pruning for Transformers",
+      "reason": "arXiv一次要旨で、ラベルなし校正データからMLP次元と注意構造を一度で枝刈りし、残存成分の線形結合による出力補償をridge回帰の閉形式解で重みに畳み込むCORPを確認。推論コスト削減は明確だが実験はDeiT/ImageNetの視覚Transformer中心で、LLM生成推論への直接検証がないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2602.05243",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 362
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.07832",
+      "identity_tokens": [
+        "arXiv:2602.07832"
+      ],
+      "title": "rePIRL: Learn PRM with Inverse RL for LLM Reasoning",
+      "reason": "arXiv一次要旨で、専門家方策の報酬関数を仮定せず逆強化学習でプロセス報酬モデルを学習し、方策とPRMを交互更新するrePIRLを確認。テスト時スケーリングにも応用するが、主要貢献は報酬学習と推論品質であり、計算量・遅延を削減する実行時手法が中心ではないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2602.07832",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 386
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20345",
+      "identity_tokens": [
+        "arXiv:2512.20345"
+      ],
+      "title": "A Comprehensive Study of Bugs in Modern Distributed Deep Learning Systems",
+      "reason": "arXiv一次要旨でDeepSpeed、Megatron-LM、Colossal-AIの849件のissueを分析し、分散学習のバグ症状・原因・修正法を分類するソフトウェア工学調査と確認。対象は主に学習時の通信設定・障害であり、LLM推論サービングの最適化機構を提案していないため対象外。",
+      "source_url": "https://arxiv.org/abs/2512.20345",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 413
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.14778/3778092.3778100",
+      "identity_tokens": [
+        "DOI:10.14778/3778092.3778100",
+        "arXiv:2505.04081"
+      ],
+      "title": "QStore: Quantization-Aware Compressed Model Storage",
+      "reason": "PVLDB一次要旨で、INT8等の低精度重みと高精度重みの差分情報を一体保存し、高精度モデルを軽量復号で再構成するQStoreを確認。多精度モデルを別々に置く場合と比べ最大2.2倍の保存効率、最大1.8倍のモデル読込高速化を報告。モデル配備・ロードのメモリ階層とストレージ効率へ直接寄与する。",
+      "source_url": "https://doi.org/10.14778/3778092.3778100",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 445
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-37c2c631992186ac-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.18653/v1/2025.acl-srw.61",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.18653/v1/2025.acl-srw.61",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.acl-srw.61"
+    ],
+    "reason": "No downstream serving scheduler or inference-cost reduction is implemented/evaluated; dataset is small and extreme output lengths are unreliable. It is a possible scheduler input, not demonstrated serving optimization.",
+    "first_checked_at": "2026-10-05T15:07:40+00:00",
+    "last_checked_at": "2026-10-05T15:07:40+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.08509-ssjf.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.01035-embedding-based-scheduling.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "When Will the Tokens End? Graph-Based Forecasting for LLMs Output Length"
+  },
+  "processed_at": "2026-10-05T15:07:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-37c2c6319921",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

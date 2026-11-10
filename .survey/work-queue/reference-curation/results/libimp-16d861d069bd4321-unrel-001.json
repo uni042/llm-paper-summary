@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-16d861d069bd4321-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.05517",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.05517",
+    "identity_tokens": [
+      "arXiv:2408.05517"
+    ],
+    "reason": "300+ LLM/50+ MLLMのfine-tuningを中心に統合するtraining infrastructureで、inference/evaluation/quantizationも付随機能として統合するが、論文の主貢献・評価は学習手法とagent fine-tuning品質であり推論systems最適化ではない。",
+    "first_checked_at": "2026-10-06T16:56:01+00:00",
+    "last_checked_at": "2026-10-06T16:56:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+    ],
+    "title": "SWIFT:A Scalable lightWeight Infrastructure for Fine-Tuning"
+  },
+  "processed_at": "2026-10-06T16:56:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-16d861d069bd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

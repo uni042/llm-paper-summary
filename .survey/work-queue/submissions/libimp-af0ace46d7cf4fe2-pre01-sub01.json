@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Operon-S1: a fast decision controller for long-horizon biomedical agents",
+      "source_url": "https://arxiv.org/abs/2610.41350",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language-model agents now carry out long scientific work in biology, but their judgements about conventions, skills, errors, evidence and stopping are made inside the reasoning that does the work, where they cannot be measured, replaced or improved on their own. Here we present Operon-S1, a fast decision system, a System 1 for the agent, that separates judging from doing. A decision harness poses the agent's recurring judgements as closed questions at 13 decision points and acts only through fixed messages that never contain an answer, so any model that answers the questions can serve as the judge. Across seven life-science benchmarks, a local decision model took over these judgements in 0.6 s at the median for an in-loop request on CPU at no request cost, with no measurable change in the agent's score on five of six benchmarks, whereas the general language model that drives the agent, asked the same questions, accounted for 8.0% to 35.2% of task cost. Every decision is recorded with its consequence. Retraining on labels from task construction, verifiers or execution raised decision accuracy on every question in each of three trained versions, and a new version enters service only through a promotion gate. Task-level results in this study use the public checkpoint. The same closed decisions serve wet-laboratory protocol troubleshooting and the design of a germline target enrichment panel. Like the regulator of an operon, which switches genes on and off without making their products, Operon-S1 steers the agent without doing its work, and makes the agent's judgements a layer that can be measured, replaced and trained.",
+      "identifiers": [
+        "SemanticScholar:a0dac219b30d06086741ab87aabc773d191a5342"
+      ],
+      "semantic_scholar_id": "a0dac219b30d06086741ab87aabc773d191a5342",
+      "canonical_id": "arXiv:2610.41350",
+      "arxiv_id": "2610.41350",
+      "authors": [
+        "Genoria AI Team Yuejie Hou",
+        "Yueyuxiao Yang",
+        "Wei-Ting Tang",
+        "Meng Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長期の生命科学LLM agentで13種類の反復的な判断を閉じた質問へ分離し、汎用生成モデルではなく小型decision modelへ委譲する。CPUローカルでin-loop request中央値0.6秒、元の生成モデルが担う場合はtask costの8.0〜35.2%を占めると報告。5/6 benchmarkでagent scoreの有意な変化なし。用途はbiomedicalだが推論呼出しを安価なdecision modelへ置換する実行コスト最適化を示すためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "LEAP: Efficient LLM Inference Scheduling with Generalizable Length Prediction",
+      "source_url": "https://arxiv.org/abs/2610.41359",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Length-aware scheduling reduces request latency in LLM serving by prioritizing shorter requests. However, despite their large model sizes, length predictors can suffer degraded ranking performance under domain and task shifts, and adapting them can require costly retraining. Their prediction overhead can further offset the benefits of scheduling. To improve the generalization and efficiency of length-aware scheduling, we propose \\textbf{LEAP}, a length prediction system with fast online adaptation and asynchronous CPU execution. LEAP reuses the serving model's prefill hidden states, which contain information about the output length, and extracts this signal through a linear readout. To adapt to substantial domain and task shifts, it updates the readout at test time through recursive least squares, using completed requests as supervision without gradient computation or historical-data replay. Prediction and updates run asynchronously on CPU, while prediction and initial batch ordering overlap the remaining GPU prefill. Across the evaluated cross-domain transfers, LEAP retains strong ranking performance, and online adaptation improves Spearman correlation by 64.7\\% under a larger domain shift. Serving experiments show that LEAP reduces average per-token latency by 15.9--40.8\\% compared with the evaluated length predictors, while achieving 1.9\\% higher throughput with $30{,}569\\times$ fewer predictor parameters than the strongest evaluated baseline.",
+      "identifiers": [
+        "SemanticScholar:052813f41c61994de5b041dee792a9f746cf6934"
+      ],
+      "semantic_scholar_id": "052813f41c61994de5b041dee792a9f746cf6934",
+      "canonical_id": "arXiv:2610.41359",
+      "arxiv_id": "2610.41359",
+      "authors": [
+        "Kwan Yan",
+        "Jia-Lun Zhong",
+        "Yan-Zeng Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM servingの出力長予測にprefill隠れ状態の線形readoutを使い、完了requestを教師としたrecursive least squaresでonline更新。CPU非同期実行によりGPU prefillと予測・batch順序決定を重ねる。ドメインシフトでSpearman相関64.7%改善、他の長さ予測器に対し平均per-token latency15.9〜40.8%削減、throughput1.9%改善と報告。推論スケジューリングの直接改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "What We Keep of What We Forget: Replacement Operators and Routing Semantics in Training-Free MoE Expert Pruning",
+      "source_url": "https://arxiv.org/abs/2610.41366",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training-free expert pruning makes two decisions: which experts to remove, and what the layer computes when its router still selects a removed expert. Published methods change both at once. Holding the mask fixed, we compare replacement operators from three families on OLMoE, DeepSeek-V2-Lite and Moonlight, with Granite as a fourth router, using paired, multiplicity-corrected tests. The largest effect is a choice usually left implicit: the survivors'gate scale. On routers trained without top-k renormalization, renormalizing the survivors'gates, a common implementation choice, costs 0.8-8.5 points and reverses whether rerouting beats MoNE's mean-output replacement; on two routers trained with renormalization, the trained scale wins at 50% pruning. We introduce the tilted novice, a closed-form low-rank map of the pruned expert's input whose rank-0 case is MoNE's constant. At 50% pruning it adds 1.2-1.8% parameters and gains 3.45 and 1.37 points over the constant on OLMoE and Moonlight, stable across calibration draws and largely unchanged by 4- and 3-bit quantization. No operator dominates: trained-scale rerouting is best on DeepSeek-V2-Lite, and a partial copy of each pruned expert is statistically indistinguishable from the tilted novice on two models. Evaluation can change conclusions: at 25% pruning MoNE's constant keeps 92-97% of dense multiple-choice accuracy but only 5-65% of GSM8K and 0-17% of code scores, and the calibration domain moves the mask 4-9 times more than resampling. We propose a five-item reporting checklist.",
+      "identifiers": [
+        "SemanticScholar:6cc23834a916b6cd3fc4077e6aa56e4c63e1149b"
+      ],
+      "semantic_scholar_id": "6cc23834a916b6cd3fc4077e6aa56e4c63e1149b",
+      "canonical_id": "arXiv:2610.41366",
+      "arxiv_id": "2610.41366",
+      "authors": [
+        "Ezza Ali",
+        "Sehrish Bibi",
+        "Momina Moetesum",
+        "Faisal Shafait"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE expert pruning後に削除expertへルーティングされたtokenをどう代替するかを固定maskで比較し、残存expertのgate scaleとrenormalizationの影響を検証。OLMoE、DeepSeek-V2-Lite、Moonlightで50% pruning時の低rank代替写像を評価し、renormalizationにより0.8〜8.5ポイントの精度差が生じる例を示す。推論向けMoE圧縮の設計・品質保持へ直接関連するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "Understanding the Energy Cost of Quantized Agents on Shared GPUs",
+      "source_url": "https://arxiv.org/abs/2610.41672",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization can lower the energy of language-model calls and free memory for serving more agents, but its benefit per completed task remains unclear when agents share a GPU. Measurements of fixed requests or isolated agents leave open how the agents'generated work interact with competition for compute and cache. We present a systematic study of precision and admission limits for two agent models on A100 deployments with 40 or 80 GB of memory, using coding and data-analysis tasks with independently verified outcomes. We replay recorded calls across precisions to isolate execution energy and cap the cache to test the value of freed memory. For both models with four admitted agents where requests fit in the cache, 4-bit weights with 16-bit activations execute the same calls with 10-25% less energy than 8-bit weights and activations. Despite this saving, extra work and fewer completions in live runs raise their energy per verified completion by 49%. Where requests compete for cache on the 40 GB deployment, 4-bit weights cost less, and capping their cache raises energy per verified completion by 34% with 16 agents. These results show how generated work and cache demand change the energy benefit of quantization, providing a practical basis for choosing precision and admission limits together.",
+      "identifiers": [
+        "SemanticScholar:21f08c9cdaff12f61254c856c206fadfc5f36789"
+      ],
+      "semantic_scholar_id": "21f08c9cdaff12f61254c856c206fadfc5f36789",
+      "canonical_id": "arXiv:2610.41672",
+      "arxiv_id": "2610.41672",
+      "authors": [
+        "Stephen Abkin",
+        "Alex Flesher",
+        "Aldric Yang",
+        "Nitheesh Kodarapu",
+        "Deepak Panigrahy",
+        "D. K. Houngninou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "A100 40/80GBの共有GPU上で量子化agentを4〜16同時実行し、単一callのエネルギーと検証済みタスク完了当たりのエネルギーを比較。4bit weight/16bit activationは8bit比で同じcallのエネルギー10〜25%減だが、実agentの追加作業・失敗で完了当たり49%増となる条件を報告。精度選択とadmission/cache容量の同時最適化に直接有用な推論運用評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "Trainable Vector Quantization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.41822",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": "ECML PKDD",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vector Quantization (VQ) is a rapidly evolving technique for compressing Large Language Model (LLM) weights, reducing memory usage, and speeding up inference. However, extreme compression deteriorates model performance, which is challenging to recover due to the discrete nature of VQ parameters. Existing methods employ training-free approaches that are limited to layer-wise reconstruction loss minimization. To address this limitation, we propose TVQ, a novel method that leverages straight-through estimation to enable gradient descent-based optimization of vector-quantized LLMs. By reformulating VQ LLM optimization with trainable latent weights, TVQ enables arbitrary objective minimization. We constitute our approach by applying TVQ in a block-wise knowledge distillation paradigm, which balances quality and training efficiency, and propose several practical solutions to accelerate training. In experiments on modern LLMs, we demonstrate that TVQ is compatible with modern VQ schemes. As a result, TVQ achieves state-of-the-art quality in low-bit post-training quantization settings with a modest training budget and straightforward PyTorch implementation. For instance, TVQ achieves near-lossless 2-bit quantization for LLaMA2-70B with only 1% accuracy drop on popular Question-Answering benchmarks.",
+      "identifiers": [
+        "SemanticScholar:c27198eef2e97c98f1f1f62f33777c5d020c5a9c"
+      ],
+      "semantic_scholar_id": "c27198eef2e97c98f1f1f62f33777c5d020c5a9c",
+      "canonical_id": "arXiv:2610.41822",
+      "arxiv_id": "2610.41822",
+      "doi": "10.1007/978-3-032-37667-1_15",
+      "authors": [
+        "Anastasiia Prutianova",
+        "Алина Александровна Богданова",
+        "M. Shutov",
+        "Dmitrii Poimanov",
+        "А. Г. Горьков",
+        "Ilia Zharikov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "低bit VQの離散コードによる精度低下を、straight-through estimatorと潜在重みの勾配最適化で改善するTVQ。block単位の知識蒸留と組み合わせ、LLaMA2-70Bで2bit量子化後のQA精度低下を約1%に抑えたと報告。後処理学習を要するが最終成果は推論向けweight compressionでありaccept。実測トークン速度の改善値はabstractにない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-af0ace46d7cf",
+    "round": "libimp-af0ace46d7cf4fe2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-af0ace46d7cf4fe2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-af0ace46d7cf4fe2-pre01.json",
+    "receipt": "sha256:45671320cfaa056c60a128ee290fe146dfd37989b1f2e1ad3263b213de4c3a06"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-af0ace46d7cf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

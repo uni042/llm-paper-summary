@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-888a08f400b1bf5c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.10910",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.10910",
+    "identity_tokens": [
+      "arXiv:2401.10910"
+    ],
+    "reason": "一次要旨の貢献は生成エージェントに内省的な戦略変更モジュールを加えて行動成功を上げること。CPU/GPU offload、活性化疎性、階層メモリの配置・性能機構は扱わず、リンク先のシステム系統とは主題が異なる。",
+    "first_checked_at": "2026-10-06T17:55:06+00:00",
+    "last_checked_at": "2026-10-06T17:55:06+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md"
+    ],
+    "title": "Metacognition is all you need? Using Introspection in Generative Agents to Improve Goal-directed Behavior"
+  },
+  "processed_at": "2026-10-06T17:55:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-888a08f400b1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

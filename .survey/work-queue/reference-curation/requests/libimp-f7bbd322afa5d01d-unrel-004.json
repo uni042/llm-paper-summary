@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f7bbd322afa5d01d-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1002/psp4.70305",
+  "reason": "ABSTRACT Apparent permeability (Papp) of a drug molecule serves as a principal indicator of drug absorption for pharmacokinetic modeling, and accurate prediction of Papp values using machine learning would avoid time‐consuming and expensive In Vitro experiments. In this study, four different feature representations were compared for predicting logPapp values, with each representation serving as input to three subsequent regression models. The best predictive model achieved an R2 value of 0.68 and RMSE of 0.42 on the test data. Furthermore, the SHAP values corresponding to individual molecular descriptors were analyzed to interpret the influence of these descriptors on the model prediction. Some key properties like octanol–water partition coefficient and number of basic atoms were found to have a strong influence on the Papp value. Additionally, some specific molecular substructures were identified that contribute either positively or negatively to the model output, thereby inferring effects on drug permeability. Finally, the uncertainty in the predictions was quantified through a distribution‐free and model‐agnostic method, jackknife+, used for the estimation of confidence intervals. At the optimal experimental setting, the confidence intervals derived using the overall best performing model covered 96.12% and 86.73% of the original logPapp values with more than 95% confidence for test and independent data, respectively. With the same confidence, the confidence intervals contained 99.87% and 100% of the predicted logPapp values for the test and independent data, respectively, underscoring the reliability of the model. Overall, the presented ML provides the most robust informed Papp prediction among compared models presented to date.",
+  "title": "Reliable Apparent Permeability Prediction Through Benchmarking, Stability, Uncertainty Quantification, and Explainable Machine Learning",
+  "identity_tokens": [
+    "DOI:10.1002/psp4.70305"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7bbd322afa5",
+  "source_precheck_request_id": null
+}

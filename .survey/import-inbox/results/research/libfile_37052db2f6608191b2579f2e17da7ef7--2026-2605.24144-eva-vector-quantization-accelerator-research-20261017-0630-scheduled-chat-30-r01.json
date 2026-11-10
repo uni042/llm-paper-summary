@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "d2b77069f048b5b285fdf772d99ffa4fe44e0a9666d25afe2e7df555e1e03b8f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_37052db2f6608191b2579f2e17da7ef7--2026-2605.24144-eva-vector-quantization-accelerator-research-20261017-0630-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.24144",
+  "worker_completed_at": "2026-10-17T06:27:39+09:00",
+  "worker_run_key": "20261017-0630-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7291,
+    "body_paragraphs": 35,
+    "method_chars": 2116,
+    "method_paragraphs": 11,
+    "evaluation_chars": 731,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/15-inference-simulation-emulation/2026-2605.24144-eva-accelerating-llm-decoding-via-an-efficient-vector-quantization-archi.md と 26 段落 / 6029文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-16T22:02:21+00:00"
+}

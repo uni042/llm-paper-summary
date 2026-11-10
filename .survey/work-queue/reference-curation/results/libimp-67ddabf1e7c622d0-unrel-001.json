@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67ddabf1e7c622d0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.10314",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.10314",
+    "identity_tokens": [
+      "arXiv:2203.10314"
+    ],
+    "reason": "タイトルで明示された研究対象は点群からの三次元物体検出であり、LLMの推論・サービング・効率的学習基盤や汎用注意カーネルの最適化ではない。Transformerという名称だけでは本サーベイのシステム対象とは認められないためタイトル段階で除外した。",
+    "first_checked_at": "2026-10-11T14:41:43+00:00",
+    "last_checked_at": "2026-10-12T14:56:00+00:00",
+    "linked_from": [],
+    "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
+  },
+  "processed_at": "2026-10-12T14:56:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67ddabf1e7c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

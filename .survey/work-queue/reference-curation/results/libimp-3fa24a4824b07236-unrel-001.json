@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3fa24a4824b07236-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.15330",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.15330",
+    "identity_tokens": [
+      "SemanticScholar:9868da0bcb0a9615a9f39f6c98ed26e137eee305",
+      "arXiv:2603.15330"
+    ],
+    "reason": "MeMix maintains O(1) recurrent state for streaming 3D reconstruction, but the abstract is specific to reconstruction models and provides no connection to LLM/VLM serving or language-model memory.",
+    "first_checked_at": "2026-10-13T09:37:04+00:00",
+    "last_checked_at": "2026-10-13T09:37:04+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+      "papers/inference/99-other-inference-systems/2025-2501.00663-titans-learning-to-memorize-at-test-time.md"
+    ],
+    "title": "MeMix: Writing Less, Remembering More for Streaming 3D Reconstruction"
+  },
+  "processed_at": "2026-10-13T09:37:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3fa24a4824b0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

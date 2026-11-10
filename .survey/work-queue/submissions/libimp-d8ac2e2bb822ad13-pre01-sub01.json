@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TRACE: Trajectory-robust Admission with Evidence Ordering for Efficient GUI Agents",
+      "source_url": "https://arxiv.org/abs/2609.10297",
+      "year": 2026,
+      "published": "2026-09-09",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "GUI agents accumulate high-resolution screenshots as the trajectory unfolds, increasing inference latency and memory usage. Training-free visual token pruning can reduce this cost, but cache reuse introduces a fundamental constraint. Once tokens are discarded, the corresponding visual evidence cannot be recovered without re-encoding. Pruning therefore becomes an \\textit{irreversible admission decision} that must remain useful for unknown future targets while preserving coverage of operable regions under tight budgets. To address these challenges, we propose \\textbf{\\method{}}, a training-free framework for \\emph{\\textbf{T}rajectory-\\textbf{r}obust \\textbf{A}dmission and \\textbf{C}overage-aware \\textbf{E}vidence ordering}. Specifically, we combine a query-independent layout-derived interaction prior with instruction relevance and feature novelty to rank visual evidence according to both potential future utility and diversity. Then, we reserve part of the budget for native visual tokens distributed across the screen, repairing missing spatial coverage without breaking the ordering. Together, these mechanisms produce a nested token order, allowing retained visual evidence to shrink monotonically across budgets while remaining reusable throughout the trajectory. Finally, our monotone KV contraction incrementally contracts retired frames into compact session state, avoiding repeated visual encoding or pruning. Extensive experiments across six GUI benchmarks and diverse models verify the effectiveness of our proposed \\method{} under tight budgets. The source code will be released.",
+      "identifiers": [
+        "SemanticScholar:2a8d0326c065034809de115743ce83492ec4daae"
+      ],
+      "semantic_scholar_id": "2a8d0326c065034809de115743ce83492ec4daae",
+      "canonical_id": "arXiv:2609.10297",
+      "arxiv_id": "2609.10297",
+      "authors": [
+        "Yu-Hao Wang",
+        "Mu Qiao",
+        "Xin-Dong Zhang",
+        "Yun-Zhi Zhuge",
+        "Lei Zhang",
+        "Hu-Chuan Lu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はGUIエージェントのスクリーンショットKVを削除後に復元できない問題に対し、レイアウト・指示関連性・新規性に基づく視覚証拠の順位付けと空間カバレッジを組み合わせるTRACEを提案。単調なKV縮小で再エンコードを避け、GUI長期推論のメモリ・計算削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Do LLMs Really Need 10+ Thoughts for \"Find the Time 1000 Days Later\"? Towards Structural Understanding of LLM Overthinking",
+      "source_url": "https://arxiv.org/abs/2510.07880",
+      "year": 2025,
+      "published": "2025-10-09",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 17,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Models employing long chain-of-thought (CoT) reasoning have shown superior performance on complex reasoning tasks. Yet, this capability introduces a critical and often overlooked inefficiency -- overthinking -- models often engage in unnecessarily extensive reasoning even for simple queries, incurring significant computations without accuracy improvements. While prior work has explored solutions to mitigate overthinking, a fundamental gap remains in our understanding of its underlying causes. Most existing analyses are limited to superficial, profiling-based observations, failing to delve into LLMs'inner workings. This study introduces a systematic, fine-grained analyzer of LLMs'thought process to bridge the gap, TRACE. We first benchmark the overthinking issue, confirming that long-thinking models are five to twenty times slower on simple tasks with no substantial gains. We then use TRACE to first decompose the thought process into minimally complete sub-thoughts. Next, by inferring discourse relationships among sub-thoughts, we construct granular thought progression graphs and subsequently identify common thinking patterns for topically similar queries. Our analysis reveals two major patterns for open-weight thinking models -- Explorer and Late Landing. This finding provides evidence that over-verification and over-exploration are the primary drivers of overthinking in LLMs. Grounded in thought structures, we propose a utility-based definition of overthinking, which moves beyond length-based metrics. This revised definition offers a more insightful understanding of LLMs'thought progression, as well as practical guidelines for principled overthinking management.",
+      "identifiers": [
+        "SemanticScholar:e13b6230efe460e25b0a202a484d0fe06c6bfba3"
+      ],
+      "semantic_scholar_id": "e13b6230efe460e25b0a202a484d0fe06c6bfba3",
+      "canonical_id": "arXiv:2510.07880",
+      "arxiv_id": "2510.07880",
+      "doi": "10.48550/arXiv.2510.07880",
+      "authors": [
+        "Xinliang Frederick Zhang",
+        "An-had Mohananey",
+        "A. Chronopoulou",
+        "Pinelopi Papalampidi",
+        "Somit Gupta",
+        "T. Munkhdalai",
+        "Lu Wang",
+        "Shyam Upadhyay"
+      ],
+      "priority": 27,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 17,
+        "citation_count": 17,
+        "total": 27,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 386,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv一次要旨は簡単な問題で長思考モデルが5〜20倍遅くなる過剰思考を、TRACEによる思考単位と談話関係のグラフ化で解析。過剰検証・過剰探索を主因として示し、不要な推論計算を特定するための指標を提案。CoTトークン効率に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Scene-Aware Vectorized Memory Multi-Agent Framework with Cross-Modal Differentiated Quantization VLMs for Visually Impaired Assistance",
+      "source_url": "https://arxiv.org/abs/2508.18177",
+      "year": 2025,
+      "published": "2025-08-25",
+      "venue": "Expert systems with applications",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visually impaired individuals face significant challenges in environmental perception. Traditional assistive technologies often lack adaptive intelligence, focusing on individual components rather than integrated systems. While Vision-Language Models (VLMs) offer a promising path to richer, integrated understanding, their deployment is severely limited by substantial computational requirements, demanding dozens of gigabytes of memory. To address these gaps in computational efficiency and integrated design, this study proposes a dual technological innovation framework: a cross-modal differentiated quantization framework for VLMs and a scene-aware vectorized memory multi-agent system. The quantization framework implements differentiated strategies, reducing memory from 38GB to 11.3GB. The multi-agent system uses vectorized memory and perception-memory-reasoning workflows to provide environmental information beyond the current view, achieving 2.83-3.52s latency to initial speech output. Experiments show the quantized 19B-parameter model only experiences a 2.05% performance drop on MMBench and maintains 63.7 accuracy on OCR-VQA (original: 64.9), outperforming smaller models with equivalent memory. This research advances computational efficiency and assistive technology, offering comprehensive assistance in scene perception, text recognition, and navigation.",
+      "identifiers": [
+        "SemanticScholar:0e7ae6b42102a13ded7d080c71c319af7a1eca22"
+      ],
+      "semantic_scholar_id": "0e7ae6b42102a13ded7d080c71c319af7a1eca22",
+      "canonical_id": "arXiv:2508.18177",
+      "arxiv_id": "2508.18177",
+      "doi": "10.48550/arXiv.2508.18177",
+      "authors": [
+        "Xiang-Xiang Wang",
+        "Xuan-Yu Wang",
+        "YiJia Luo",
+        "Yong-Bin Yu",
+        "Man-Ping Fan",
+        "Jing-Tao Zhang",
+        "Li-Yong Ren"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 431,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は視覚障害者支援向け19B VLMのモダリティ別量子化とベクトル記憶エージェントを提案。メモリを38GBから11.3GBへ削減し初回音声応答2.83〜3.52秒、MMBench低下2.05%を報告。応用特化だがVLMの低ビット推論と記憶管理に直接的な数値を持つ。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d8ac2e2bb822",
+    "round": "libimp-d8ac2e2bb822ad13-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d8ac2e2bb822ad13-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d8ac2e2bb822ad13-pre01.json",
+    "receipt": "sha256:f7e019af1ea1b843efd346bb0d1e8e706fcfd38c21af3a5cd601e3698c8875c9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d8ac2e2bb822",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

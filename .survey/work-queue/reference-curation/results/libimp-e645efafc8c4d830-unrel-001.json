@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e645efafc8c4d830-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.16178",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.16178",
+    "identity_tokens": [
+      "arXiv:2412.16178"
+    ],
+    "reason": "一次資料abstractはFoundation Models (FMs) trained on Electronic Health Records (EHRs) have achieved state-of-the-art results on numerous clinical prediction tasks. However, most existing EHR FMs have context windows of<1k tokens. This preを対象とする。LLM推論の計算量、メモリ、latency、throughput、KV cache、quantization、offload、servingへの具体的な技術接続がないためunrelated。",
+    "first_checked_at": "2026-10-06T16:39:14+00:00",
+    "last_checked_at": "2026-10-06T16:39:14+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+    ],
+    "title": "Context Clues: Evaluating Long Context Models for Clinical Prediction Tasks on EHRs"
+  },
+  "processed_at": "2026-10-06T16:39:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e645efafc8c4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9705999287f208a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/p19-1612",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/p19-1612",
+    "identity_tokens": [
+      "DOI:10.18653/v1/p19-1612",
+      "arXiv:1906.00300",
+      "id:arXiv:1906.00300",
+      "url:https://arxiv.org/abs/1906.00300"
+    ],
+    "reason": "arXiv要旨はopen-domain QAのretriever/reader共同学習とデータセット評価を扱い、LLM inference/serving効率を扱わない。",
+    "first_checked_at": "2026-10-04T22:16:24+00:00",
+    "last_checked_at": "2026-10-05T00:58:26+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2026-2609.09662-pelm-speculative-decoding-dvfs.md"
+    ],
+    "title": "Latent Retrieval for Weakly Supervised Open Domain Question Answering"
+  },
+  "processed_at": "2026-10-05T00:58:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9705999287f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

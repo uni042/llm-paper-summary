@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6a85cb283520f82c-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.10645",
+  "reason": "The rapid growth of large language model (LLM) services is expanding AI data centers (AIDCs), increasing electricity demand and associated carbon emissions. Renewable energy integration can mitigate these impacts but also strengthens the coupling between AIDC loads and inverter-interfaced generation, creating cross-domain cyber-physical vulnerabilities. Specifically, adversarial AI requests alter AIDC power demand, whereas inverter control tampering modifies source-side dynamics, and their combined impact on system stability varies with generation forecast and demand response uncertainties. To this end, we propose an uncertainty-aware AIDC microgrid vulnerability assessment framework under computing-power coordinated attacks. First, the framework maps adversarial AI requests to AIDC power variations and represents uncertainties in attack-induced demand responses and photovoltaic (PV) forecasts through confidence-weighted realizations. Then, impedance based stability analysis combines these realizations with bounded inverter parameter tampering to construct attack reachable domains and identify critical attack time windows. Furthermore, a separate criterion identifies fixed coordinated attack vectors that retain destabilizing capability throughout each selected window. Case studies demonstrate that, unlike either attack component applied alone, coordinated attacks within identified critical windows induce sustained inverter frequency oscillations with peak absolute deviations exceeding 20% of nominal frequency, whereas the evaluated out-of-window response remains bounded. The proposed method further identifies critical attack windows and the associated coordinated attack vectors.",
+  "title": "AIDC Microgrid Vulnerability Assessment Under Computing-Power Coordinated Attacks",
+  "identity_tokens": [
+    "arXiv:2608.10645"
+  ],
+  "linked_from": [
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+    "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6a85cb283520",
+  "source_precheck_request_id": null
+}

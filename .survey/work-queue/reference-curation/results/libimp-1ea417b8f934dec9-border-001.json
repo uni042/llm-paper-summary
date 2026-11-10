@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1ea417b8f934dec9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1002/psp4.70201",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1002/psp4.70201",
+    "identity_tokens": [
+      "DOI:10.1002/psp4.70201"
+    ],
+    "reason": "Primary DOI/publisher record could not be retrieved at https://doi.org/10.1002/psp4.70201 (server returned Internal Error); only the packet's cached abstract was available. Since it describes LLM/RAG regulatory-compliance evaluation, efficiency relevance remains unresolved.",
+    "first_checked_at": "2026-10-07T11:40:39+00:00",
+    "last_checked_at": "2026-10-07T11:40:39+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Retrieval Augmented Generation (RAG) for Evaluating Regulatory Compliance of Drug Information and Clinical Trial Protocols"
+  },
+  "processed_at": "2026-10-07T11:40:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1ea417b8f934",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

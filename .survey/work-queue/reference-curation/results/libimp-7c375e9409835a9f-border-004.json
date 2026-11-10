@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c375e9409835a9f-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1078",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1078",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2026.findings-acl.1078"
+    ],
+    "reason": "The primary contribution is privacy isolation and collaboration; the checked evidence does not establish a survey-relevant efficiency gain or quantify its trade-off against enclave and communication overhead.",
+    "first_checked_at": "2026-10-05T13:00:22+00:00",
+    "last_checked_at": "2026-10-05T13:00:22+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md"
+    ],
+    "title": "CoTrust: Privacy-Preserving Collaboration Between Large and Small Language Models in Trusted Execution Environments"
+  },
+  "processed_at": "2026-10-05T13:00:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c375e940983",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

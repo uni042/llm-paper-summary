@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5b3ef2bb71b6b61-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:bd6f57cfd1d597fc107995df36601ec969d329a2",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:bd6f57cfd1d597fc107995df36601ec969d329a2",
+    "identity_tokens": [
+      "SemanticScholar:bd6f57cfd1d597fc107995df36601ec969d329a2"
+    ],
+    "reason": "The official abstract is highly relevant, but I could not retrieve the primary body to check the evaluation conditions, comparison tables, or limitations; therefore final classification remains borderline.",
+    "first_checked_at": "2026-10-05T12:52:55+00:00",
+    "last_checked_at": "2026-10-05T12:52:55+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+    ],
+    "title": "OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs"
+  },
+  "processed_at": "2026-10-05T12:52:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5b3ef2bb71b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

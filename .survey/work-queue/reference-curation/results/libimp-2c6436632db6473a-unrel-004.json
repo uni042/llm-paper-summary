@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2c6436632db6473a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.03044",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.03044",
+    "identity_tokens": [
+      "arXiv:2512.03044"
+    ],
+    "reason": "robotic video diffusion policyの非同期dual-system action generation。LLM inference serving改善ではない。",
+    "first_checked_at": "2026-10-07T09:30:20+00:00",
+    "last_checked_at": "2026-10-07T09:30:20+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "Video2Act: A Dual-System Video Diffusion Policy with Robotic Spatio-Motional Modeling"
+  },
+  "processed_at": "2026-10-07T09:30:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2c6436632db6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

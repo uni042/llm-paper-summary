@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ef6999de180fcd1f-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.08020",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.08020",
+    "identity_tokens": [
+      "arXiv:2502.08020"
+    ],
+    "reason": "CoSDはdraft modelをautoregressiveに走らせassistant modelでdraft sequenceを並列検証する。本文の§4実験は主に複数benchmarkのaccuracyを比較し、latency/throughputの実測を確認できなかった。 speculative decodingの構造は推論効率に関係するが、本文で効率主張を定量的な実行時間・token throughputとして確かめられず、実効性が未解決。",
+    "first_checked_at": "2026-10-05T14:58:31+00:00",
+    "last_checked_at": "2026-10-05T14:58:31+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md",
+      "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
+      "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Speculate, then Collaborate: Fusing Knowledge of Language Models during Decoding"
+  },
+  "processed_at": "2026-10-05T14:58:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef6999de180f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

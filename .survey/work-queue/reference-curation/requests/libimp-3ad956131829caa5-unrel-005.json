@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3ad956131829caa5-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2610.38620",
+  "reason": "JevActはagentのツール実行前にドメインポリシーと状態を照合し、prefill-only decision modelで不適切な操作を検知して修正を促す。11種類のagentで信頼性向上を評価するが、主眼はagent安全性・タスク完遂でありLLM推論サービングの性能最適化を示していないためunrelated。prefill-onlyという実装上の工夫だけでは推論効率研究とは扱わない。",
+  "title": "Think Before You Act: Decision Gate for LLM Agents",
+  "identity_tokens": [
+    "arXiv:2610.38620"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3ad956131829",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

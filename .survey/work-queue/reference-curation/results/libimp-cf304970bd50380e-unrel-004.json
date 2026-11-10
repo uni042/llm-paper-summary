@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cf304970bd50380e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.11098",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.11098",
+    "identity_tokens": [
+      "arXiv:2605.11098"
+    ],
+    "reason": "AffectCodecの本文はemotion-semantic guidanceを加えたneural speech codecが音声表現の感情品質を守ることを中心にする。既存codec/RVQを前提とするが、新しい低bitrate/frame-rateまたは下流TTS推論速度・resource削減の比較は示されていない。",
+    "first_checked_at": "2026-10-08T07:46:58+00:00",
+    "last_checked_at": "2026-10-08T07:46:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+    ],
+    "title": "AffectCodec: Emotion-Preserving Neural Speech Codec for Expressive Speech Modeling"
+  },
+  "processed_at": "2026-10-08T07:46:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cf304970bd50",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

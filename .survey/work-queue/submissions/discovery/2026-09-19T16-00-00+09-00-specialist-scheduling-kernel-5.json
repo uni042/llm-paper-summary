@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T16:00:00+09:00",
+    "round": "specialist-scheduling-kernel-5",
+    "axis": "memory-aware scheduling・heterogeneous CPU/GPU・GPU kernel/runtime compiler",
+    "query_summary": "memory-aware scheduling、CPU/GPU hybrid、GPU kernel/runtime compilerを横断。Large-Scale heterogeneous scheduling、MAPS、HybridGen、SuperInfer、Event Tensor、ATSInfer、Geometry-Aware scheduling等の強い結果はすべてcanonical identity snapshotで既知だった。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 7,
+    "duplicate_canonical_ids": ["arXiv:2602.02987", "arXiv:2609.15359", "arXiv:2604.18529", "arXiv:2601.20309", "arXiv:2604.13327", "arXiv:2607.10183", "arXiv:2606.22327"],
+    "next_axis_hint": "次はmultimodal/agent servingとstate managementへ移る",
+    "empty_round_reason": "strong_results_already_represented",
+    "search_windows": [{"topic":"scheduling-kernel-runtime","source":"web-arxiv-search","date_range":"2026-01..2026-09","category":"scheduling-runtime","citation_direction":"none","query_family":"memory-aware-heterogeneous-cpu-gpu-kernel-runtime","raw_result_count":20,"unseen_result_count":0,"duplicate_filtered_count":7,"rejection_filtered_count":0,"candidate_evaluation_count":7,"candidate_accepted_count":0,"position":"web-search-multi-query-5"}]
+  }
+}

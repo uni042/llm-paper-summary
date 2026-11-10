@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40f6a5bb67dfbfaf-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.16108",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.16108",
+    "identity_tokens": [
+      "arXiv:2511.16108"
+    ],
+    "reason": "The primary system improves asynchronous multi-turn agent RL training/rollout throughput and has an adjacent agent-serving-runtime lineage, but the measured speedup is for a training pipeline rather than online inference serving.",
+    "first_checked_at": "2026-10-06T03:18:33+00:00",
+    "last_checked_at": "2026-10-06T03:18:33+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SkyRL-Agent: Efficient RL Training for Multi-turn LLM Agent"
+  },
+  "processed_at": "2026-10-06T03:18:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40f6a5bb67df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

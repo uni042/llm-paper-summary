@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc76b4b408fb449c-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.16001",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.16001",
+    "identity_tokens": [
+      "arXiv:2409.16001"
+    ],
+    "reason": "It proposes no concrete system-efficiency mechanism or evaluation.",
+    "first_checked_at": "2026-10-14T06:34:23+00:00",
+    "last_checked_at": "2026-10-14T06:34:23+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+    ],
+    "title": "Artificial Human Intelligence: The role of Humans in the Development of Next Generation AI"
+  },
+  "processed_at": "2026-10-14T06:34:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc76b4b408fb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

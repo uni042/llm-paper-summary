@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9db2d9a8b920d60b-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.03589",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.03589",
+    "identity_tokens": [
+      "arXiv:2603.03589"
+    ],
+    "reason": "本文はLLMエージェントが多数のdata-science pipelineを探索するstratum基盤で、pipeline実行を最大16.6倍高速化する。ただしLLM token inference自体のcompute/latencyを改善するものではなく、agent workload infrastructureとして隣接する。",
+    "first_checked_at": "2026-10-06T21:07:28+00:00",
+    "last_checked_at": "2026-10-06T21:07:28+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "stratum: A System Infrastructure for Massive Agent-Centric ML Workloads"
+  },
+  "processed_at": "2026-10-06T21:07:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9db2d9a8b920",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

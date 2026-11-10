@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2796f80acfcffa85f8c7e6d3f7046ce97d7e0eee42d32f80bfc549f9fb6b8a72",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b505f1cd25bc--libfile_4070b63abf708191a67354b8f7817e9e--2024-2411.10741-metala-linear-attention-optimal-conditions-research-20261016-0630-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2411.10741",
+  "worker_completed_at": "2026-10-16T06:55:00+09:00",
+  "worker_run_key": "20261016-0630-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7531,
+    "body_paragraphs": 48,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 159,
+    "limitation_chars": 708,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 159 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 159 < 500"
+  ],
+  "processed_at": "2026-10-16T16:01:07+00:00"
+}

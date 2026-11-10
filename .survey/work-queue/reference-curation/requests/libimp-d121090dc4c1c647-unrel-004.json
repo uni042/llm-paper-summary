@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d121090dc4c1c647-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.47852/bonviewjdsis620210441",
+  "reason": "Causal discovery in nonstationary multivariate financial time series is a fundamental challenge. Classical algorithms, such as Peter–Clark (PC) algorithm and Peter–Clark momentary conditional independence (PCMCI+), assume stationarity and fail in realworld environments characterized by market regime shifts and structural breaks,yielding spurious edges and structurally inconsistent causal graphs. To address this, we propose the Regime-Enhanced Intelligent Granger Network (REIGN), a novel causal discovery framework specifically engineered for nonstationary time series. REIGN integrates three synergistic capabilities: (i) data-driven regime segmentation via Pruned Exact Linear Time changepoint detection, partitioning the series into locally stationary windows; (ii) zero-shot large language model prior injection to constrain the neural search space using domain knowledge; and (iii) a coarse-to-fine MessagePassing Graph Neural Network that optimizes a continuous directed acyclic graph-constrained adjacency matrix via an augmented Lagrangian objective. Regime-specific models are then aggregated through a confidence-weighted ensemble to yield a consistent global summary graph. Empirical evaluation on a nonstationary Vector Autoregressive benchmark demonstrates REIGN’s superiority. REIGN achieves an Optimal F1 score of 0.529, substantially outperforming PCMCI+ (F1 = 0 .415) and PC (F1 = 0 .214) in structural edge recovery. Furthermore, REIGN dominates across the area under the receiver operating characteristic curve (AUROC; 0.513 vs 0.406) and the area under the precision–recall curve (AUPR; 0.400 vs 0.338) metrics, establishing a robust new benchmark for neural time-series causal discovery in nonstationary environments.\n \nReceived: 18 May 2026 | Revised: 29 June 2026 | Accepted: 20 July 2026\n \nConflicts of Interest\nThe authors declare that they have no conflicts of interest to this work.\n \nData Availability Statement\nThe data that support the findings of this study are openly available on GitHub at https://github.com/vinhqdang/ REIGN_Regime-Enhanced-Intelligent-Granger-Network.\n \nAuthor Contribution Statement\nQuang-Vinh Dang: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Writing – original draft, Supervision, Project administration. Minh Ngoc Dinh: Validation, Formal analysis, Writing – review & editing, Supervision, Project administration. Dat Le: Validation, Investigation, Resources, Writing – review & editing. Dinh-Minh Nguyen: Conceptualization, Software, Data curation, Visualization.",
+  "title": "REIGN: Regime-Enhanced Intelligent Granger Network for Nonstationary Causal Discovery",
+  "identity_tokens": [
+    "DOI:10.47852/bonviewjdsis620210441"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d121090dc4c1",
+  "source_precheck_request_id": null
+}

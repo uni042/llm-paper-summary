@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e5dff6d550e6702b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.16449",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.16449",
+    "identity_tokens": [
+      "DOI:10.1109/cvpr52733.2024.01725",
+      "arXiv:2307.16449"
+    ],
+    "reason": "長動画理解MLLMの視覚token memory機構が主題で、最終適用先はlong-video understanding。汎用LLM推論サービング、KV cache、scheduler等の推論基盤ではない。",
+    "first_checked_at": "2026-10-07T21:58:33+00:00",
+    "last_checked_at": "2026-10-07T21:58:33+00:00",
+    "linked_from": [],
+    "title": "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding"
+  },
+  "processed_at": "2026-10-07T21:58:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e5dff6d550e6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

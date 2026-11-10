@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0e40bbe1a6a5aa6d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.01011",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.01011",
+    "identity_tokens": [
+      "arXiv:2602.01011"
+    ],
+    "reason": "一次要旨は自己組織化LLMチームの協調と性能を調べる研究で、推論実行の効率化手法ではない。",
+    "first_checked_at": "2026-10-05T15:21:56+00:00",
+    "last_checked_at": "2026-10-05T15:21:56+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+    ],
+    "title": "Multi-Agent Teams Hold Experts Back"
+  },
+  "processed_at": "2026-10-05T15:21:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0e40bbe1a6a5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

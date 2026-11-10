@@ -1,0 +1,796 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f85ce4eff3d23780-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f85ce4eff3d2",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:d5530faf7a685f38549d51d82610999dedc3ae38",
+    "arXiv:2602.17693",
+    "arXiv:2605.24793",
+    "arXiv:2605.27390",
+    "arXiv:2607.13205",
+    "arXiv:2607.27694",
+    "arXiv:2609.00450",
+    "arXiv:2610.05685",
+    "arXiv:2610.18735"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ef8aa6822e25563fbf7e22ae15a4c32dc319367c",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T21:57:57.564732+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:d5530faf7a685f38549d51d82610999dedc3ae38",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:symphony enabling computememory disaggregation in llm serving systems"
+    },
+    {
+      "requested_id": "arXiv:2602.17693",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.24793",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.27390",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.13205",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.27694",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.00450",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.05685",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.18735",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "GyRot: Leveraging Hidden Synergy Between Rotation and Fine-Grained Group Quantization for Low-Bit LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.27694",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit quantization is essential for efficient LLM inference, and both rotation and fine-grained group quantization have shown individual promise. However, their combination often leads to accuracy degradation or hardware overhead due to a mismatch between the global nature of rotation and the localized behavior of group scaling. We propose GyRot, a quantization framework and hardware accelerator that bridges this gap through algorithm-hardware co-design. GyRot introduces Coarse Rotation, Fine Grouping (CoRFiG) and Harmonic-Aligned Permutation (HAP) to enable cooperative integration of rotation and group quantization, enhancing quantizability while relaxing scaling factor precision. To further reduce hardware cost, we reformulate asymmetric quantization and introduce a zero-point rounding strategy that enables fully integer dequantization. Implemented on an INT4-based tensor PE architecture, GyRot achieves state-of-the-art 4-bit accuracy across LLaMA-family models, while delivering up to 3.4× speedup and 3.6× energy efficiency over baseline LLM accelerators. These results validate GyRot's practical effectiveness for scalable and energy-efficient LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:6e8c9dec6c50948373f2830fd34388b466d7a5d4"
+      ],
+      "semantic_scholar_id": "6e8c9dec6c50948373f2830fd34388b466d7a5d4",
+      "canonical_id": "arXiv:2607.27694",
+      "arxiv_id": "2607.27694",
+      "doi": "10.1109/HPCA68181.2026.11408453",
+      "authors": [
+        "Sangjin Kim",
+        "Yuseon Chou",
+        "Byeongcheol Kim",
+        "Jungjun Oh",
+        "Hoi-Jun Yoo"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      }
+    },
+    {
+      "title": "A Case Study of Selected PTQ Baselines for Reasoning LLMs on Ascend NPU",
+      "source_url": "https://arxiv.org/abs/2602.17693",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-Training Quantization (PTQ) is crucial for efficient model deployment, yet its effectiveness on Ascend NPU remains under-explored compared to GPU architectures. This paper presents a case study of representative PTQ baselines applied to reasoning-oriented models such as DeepSeek-R1-Distill-Qwen series (1.5B/7B/14B) and QwQ-32B. We evaluate four distinct algorithms, including AWQ, GPTQ, SmoothQuant, and FlatQuant, to cover the spectrum from weight-only compression to advanced rotation-based methods. Our empirical results reveal significant platform sensitivity. While 4-bit weight-only quantization proves viable for larger models, aggressive 4-bit weight-activation schemes suffer from layer-wise calibration instability on the NPU, leading to logic collapse in long-context reasoning tasks. Conversely, standard 8-bit quantization remains numerically stable. Furthermore, a real-world INT8 deployment demonstrates that although optimized kernels reduce latency, dynamic quantization overheads currently limit end-to-end acceleration. These findings offer a practical reference for the feasibility and limitations of deploying quantized reasoning models on Ascend NPU.",
+      "identifiers": [
+        "SemanticScholar:5220f5c30d0eb3ef21b31b344369856246009365"
+      ],
+      "semantic_scholar_id": "5220f5c30d0eb3ef21b31b344369856246009365",
+      "canonical_id": "arXiv:2602.17693",
+      "arxiv_id": "2602.17693",
+      "doi": "10.48550/arXiv.2602.17693",
+      "authors": [
+        "Yucheng Luo",
+        "Fangyu Zhu",
+        "Rui Zhou",
+        "Ming-Zhang Huang",
+        "Jian Zhu",
+        "Fan Fan",
+        "Wei Shao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 264,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond the Target: From Imitation to Collaboration in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2605.24793",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SPD) accelerates large language model (LLM) inference by letting a smaller draft model propose multiple future tokens that are verified in parallel by a larger target model. The dominant SPD paradigm treats the target model as the sole reliable teacher, accepting a draft token only when it exactly matches the target prediction. This design implicitly assumes that the target is always the better choice at every position. In practice, this assumption does not hold. Although the draft is the weaker model overall, it is not uniformly inferior at the token level. In a meaningful fraction of cases where draft and target disagree, the draft's choice is the one that leads to the correct final answer. Inspired by this, we introduce \\textbf{Collaborative Speculative Decoding (CoSpec)}, a generalization of SPD that no longer treats the target model as the sole token-level authority. CoSpec trains an arbitration policy via reinforcement learning to decide whether to accept tokens from the draft or target model, selectively accepting draft tokens at mismatches when doing so is likely to yield a correct final answer. Experimental results show that CoSpec maintains substantial speedups while surpassing target-only performance. By shifting the emphasis from imitation to collaboration, CoSpec suggests a new perspective on speculative decoding.",
+      "identifiers": [
+        "SemanticScholar:577f61505193b19d9b3c2b747cd64f2d8d6af30a"
+      ],
+      "semantic_scholar_id": "577f61505193b19d9b3c2b747cd64f2d8d6af30a",
+      "canonical_id": "arXiv:2605.24793",
+      "arxiv_id": "2605.24793",
+      "doi": "10.48550/arXiv.2605.24793",
+      "authors": [
+        "Jin-Ze Li",
+        "Yi-Xing Xu",
+        "Guan-Chen Li",
+        "Jin-Feng Xu",
+        "Shuo Yang",
+        "Yang Zhang",
+        "Xuan-Wu Yin",
+        "Dong Li",
+        "Edith C. H. Ngai",
+        "E. Barsoum"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 157,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.13205",
+      "year": 2026,
+      "published": "2026-07-14",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention-based KV cache eviction (H2O and its descendants) compresses the memory-constrained state of a long-context model by ranking tokens on accumulated attention mass, treated here as signal energy, and keeping the heaviest. On schema-dense input streams such as nested JSON, this score acts as a non-stationary filter that disproportionately retains noise: a non-content sink role (delimiters or whitespace) carries an order of magnitude more energy than any content role, and structural KEY tokens are over-retained at roughly 1.8x the rate of the answer-carrying VALUE tokens, collapsing exact-match accuracy from 88% to 0% at a 5% budget as the signal-to-noise ratio of the retained state degrades. A counterfactual experiment establishes that suppressing KEY tokens is the best deployable filter. Our retraining-free, role-conditional allocation over SnapKV's windowed score, governed by a single tuned hyperparameter, closes 63-98% of the H2O gap at sub-20% budgets and, at higher budgets, modestly matches or exceeds full-cache accuracy -- a small, seed-sensitive denoising effect (borderline significant at B=0.50; not distinguishable from zero at B=0.30 over four seeds). A 15 MB linear role probe supplies these labels at negligible inference cost, though matching parser-level downstream accuracy remains open.",
+      "identifiers": [
+        "SemanticScholar:497804cff1bbaec1736d53cc9314a6dc40cc30fb"
+      ],
+      "semantic_scholar_id": "497804cff1bbaec1736d53cc9314a6dc40cc30fb",
+      "canonical_id": "arXiv:2607.13205",
+      "arxiv_id": "2607.13205",
+      "doi": "10.48550/arXiv.2607.13205",
+      "authors": [
+        "Soumil Mandal"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 106,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EvoSpec: Evolving Speculative Decoding via Real-Time Vocabulary and Parameter Adaptation",
+      "source_url": "https://arxiv.org/abs/2605.27390",
+      "year": 2026,
+      "published": "2026-04-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates Large Language Model inference through draft-then-verify generation, yet lightweight draft models face coupled efficiency and quality limitations: large-vocabulary output projection is costly, while limited draft capacity and static parameters reduce acceptance under specialized or shifting inputs. Vocabulary pruning lowers projection cost, but static variants miss locally important long-tail tokens, while dynamic variants remain sensitive to preset selection policies and budgets. Moreover, limited draft capacity can leave the draft distribution misaligned even when the target token is covered. Online alignment improves draft quality, but full-parameter updates introduce substantial memory and latency overhead. We introduce EvoSpec, which jointly adapts the active vocabulary and lightweight draft parameters from verification feedback. EvoSpec asynchronously retrieves semantic and statistical token neighbors and performs curriculum-weighted online LoRA alignment while preserving exact target-model verification. On Qwen3-8B/EAGLE-2, EvoSpec reaches a $2.18\\times$ speedup over vanilla decoding and a $1.20\\times$ gain over EAGLE-2, while improving specialized-domain coverage and using $27\\%$ less auxiliary GPU adaptation memory than full-parameter online adaptation.",
+      "identifiers": [
+        "SemanticScholar:9d228b5829af7486ec695b9ca229b9b30254eaa8"
+      ],
+      "semantic_scholar_id": "9d228b5829af7486ec695b9ca229b9b30254eaa8",
+      "canonical_id": "arXiv:2605.27390",
+      "arxiv_id": "2605.27390",
+      "doi": "10.48550/arXiv.2605.27390",
+      "authors": [
+        "Shuyu Zhang",
+        "Lingfeng Pan",
+        "Qi-Cheng Wang",
+        "Yaqi Shi",
+        "Yue Tan",
+        "Ruyu Yan",
+        "Jiaqi Chen",
+        "L. Du",
+        "Lu Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 194,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.00450",
+      "year": 2026,
+      "published": "2026-08-31",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block Quantization (BQ) enables efficient LLM inference by quantizing both weights and activations, but its design space remains underexplored. Through hardware-accuracy design space exploration, we identify block size as a key trade-off: larger blocks improve hardware efficiency by amortizing dequantization and accumulation costs, but degrade accuracy. Motivated by this insight, we propose Hierarchical Block Quantization (HBQ), which combines large blocks with low-overhead significand (SIG) scaling for second-level quantization. SIG scaling effectively compensates for large-block quantization errors while accounting for distinct weight and activation distributions. HBQ-A achieves W4A16-level accuracy with W4A5 and lower area than NVFP4, while HBQ-E further reduces hardware cost by 17% while outperforming existing BQ methods in accuracy. We implement HBQ for weights, activations, and KV cache in a 28nm ASIC accelerator and introduce partial-sum BQ to reduce EMA energy. At comparable accuracy, HBQ achieves 2.3x/4.6x higher area/energy efficiency than state-of-the-art weight-only quantization and 1.6-3.3x lower system energy with 1.5-3x speedup over prior BQ methods. Our implementation is publicly available at: https://github.com/SeoLabCornell/HBQ.git.",
+      "identifiers": [
+        "SemanticScholar:3cc19cdbd364ea9a2c7d7e85e3a1d3f3128c5282"
+      ],
+      "semantic_scholar_id": "3cc19cdbd364ea9a2c7d7e85e3a1d3f3128c5282",
+      "canonical_id": "arXiv:2609.00450",
+      "arxiv_id": "2609.00450",
+      "authors": [
+        "Chun-Ting Chen",
+        "Dongguang Han",
+        "Han-Gyeol Mun",
+        "Jake Hyun",
+        "Arnab Raha",
+        "A. Agarwal",
+        "M. Anders",
+        "Mohamed S. Abdelfattah",
+        "Jae-sun Seo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 58,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Spend Bytes on Breadth: Precision-Count Trade-offs for Decode-Time KV Compression in Long Chain-of-Thought Reasoning",
+      "source_url": "https://arxiv.org/abs/2610.05685",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models write most of their KV cache while decoding long chains of thought (CoT), so the cache has to be compressed online under a fixed memory budget. Decode-time methods mostly decide which tokens to evict. We ask how a fixed byte budget should be split between the number of cached tokens and their precision. BreadthKV spends the bytes on more tokens at low precision, combining quantization with eviction, and picks the bit-width for each model and budget with a 60-problem end-to-end calibration, since offline attention error does not predict it reliably. On three reasoning models and four math and science benchmarks, it scores above eviction alone in 17 of 18 settings and produces shorter outputs. Much of what eviction loses comes from derailed runs, which keep reasoning until the length cap without reaching an answer. On Qwen3-8B at our tightest budget, eviction sends 91% of AIME samples to the cap and BreadthKV 40%. Under the same protocol, BreadthKV is statistically indistinguishable from a joint rate-distortion allocator (RDKV) that uses 27% more KV memory-time, and it outperforms our re-implementation of ThinKV.",
+      "identifiers": [
+        "SemanticScholar:ce847fddfdb6e6fda7a28e943657bea15daef770"
+      ],
+      "semantic_scholar_id": "ce847fddfdb6e6fda7a28e943657bea15daef770",
+      "canonical_id": "arXiv:2610.05685",
+      "arxiv_id": "2610.05685",
+      "authors": [
+        "Run-Guo Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SP$^2$ec: Adaptive Self-Speculative Decoding for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2610.18735",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) has demonstrated its efficacy in accelerating large language model inference, but for Vision-Language Models (VLMs), the diverse input modalities make it difficult for a small trained drafter to achieve consistently high throughput. Self-speculative decoding reuses parts of the target model as a drafter which retains the multi-modal capability of the VLMs, yet its efficiency depends on choosing a suitable draft configuration for each prompt. We propose Single-Peak SPeculative decoding (SP$^2$ec), a training-free bandit algorithm that adapts the draft configuration during generation. SP$^2$ec exploits the single-peak throughput pattern observed in existing self-speculative methods, including SWIFT, KnapSpec, SpecVLM, and our simple cosSim. Our algorithmic design explicitly minimizes a novel notion of wall-time regret for each given query, corresponding to the empirical wall-time latency. Theoretical guarantees on the wall-time regret show that SP$^2$ec can exploit the optimal draft configuration, with negligible exploration cost. Extensive experiments on Qwen2.5-VL-7B-Instruct and LLaVA-NeXT-Mistral-7B across visual and textual tasks show consistent improvements of up to 11% over the original self-speculative methods, demonstrating the wide applicability of the proposed SP$^2$ec algorithm.",
+      "identifiers": [
+        "SemanticScholar:2740a10f4a0ee3ddf07285be6ab15b11b30b88d4"
+      ],
+      "semantic_scholar_id": "2740a10f4a0ee3ddf07285be6ab15b11b30b88d4",
+      "canonical_id": "arXiv:2610.18735",
+      "arxiv_id": "2610.18735",
+      "authors": [
+        "Yu-Qi Huang",
+        "Xing-Yao Li",
+        "Yun-Long Hou",
+        "Feng-Zhuo Zhang",
+        "Jia-Chun Pan",
+        "Vincent Y. F. Tan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 15,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.27694",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpca68181.2026.11408453",
+        "id:SemanticScholar:6e8c9dec6c50948373f2830fd34388b466d7a5d4",
+        "id:arXiv:2607.27694",
+        "title:gyrot leveraging hidden synergy between rotation and finegrained group quantization for lowbit llm inference",
+        "url:https://arxiv.org/abs/2607.27694"
+      ],
+      "record": {
+        "title": "GyRot: Leveraging Hidden Synergy Between Rotation and Fine-Grained Group Quantization for Low-Bit LLM Inference",
+        "source_url": "https://arxiv.org/abs/2607.27694",
+        "year": 2026,
+        "published": "2026-01-31",
+        "venue": "International Symposium on High-Performance Computer Architecture",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-bit quantization is essential for efficient LLM inference, and both rotation and fine-grained group quantization have shown individual promise. However, their combination often leads to accuracy degradation or hardware overhead due to a mismatch between the global nature of rotation and the localized behavior of group scaling. We propose GyRot, a quantization framework and hardware accelerator that bridges this gap through algorithm-hardware co-design. GyRot introduces Coarse Rotation, Fine Grouping (CoRFiG) and Harmonic-Aligned Permutation (HAP) to enable cooperative integration of rotation and group quantization, enhancing quantizability while relaxing scaling factor precision. To further reduce hardware cost, we reformulate asymmetric quantization and introduce a zero-point rounding strategy that enables fully integer dequantization. Implemented on an INT4-based tensor PE architecture, GyRot achieves state-of-the-art 4-bit accuracy across LLaMA-family models, while delivering up to 3.4× speedup and 3.6× energy efficiency over baseline LLM accelerators. These results validate GyRot's practical effectiveness for scalable and energy-efficient LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:6e8c9dec6c50948373f2830fd34388b466d7a5d4"
+        ],
+        "semantic_scholar_id": "6e8c9dec6c50948373f2830fd34388b466d7a5d4",
+        "canonical_id": "arXiv:2607.27694",
+        "arxiv_id": "2607.27694",
+        "doi": "10.1109/HPCA68181.2026.11408453",
+        "authors": [
+          "Sangjin Kim",
+          "Yuseon Chou",
+          "Byeongcheol Kim",
+          "Jungjun Oh",
+          "Hoi-Jun Yoo"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 270,
+          "matched_prestigious_venue": "High-Performance Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.17693",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.17693",
+        "id:SemanticScholar:5220f5c30d0eb3ef21b31b344369856246009365",
+        "id:arXiv:2602.17693",
+        "title:a case study of selected ptq baselines for reasoning llms on ascend npu",
+        "url:https://arxiv.org/abs/2602.17693"
+      ],
+      "record": {
+        "title": "A Case Study of Selected PTQ Baselines for Reasoning LLMs on Ascend NPU",
+        "source_url": "https://arxiv.org/abs/2602.17693",
+        "year": 2026,
+        "published": "2026-02-06",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-Training Quantization (PTQ) is crucial for efficient model deployment, yet its effectiveness on Ascend NPU remains under-explored compared to GPU architectures. This paper presents a case study of representative PTQ baselines applied to reasoning-oriented models such as DeepSeek-R1-Distill-Qwen series (1.5B/7B/14B) and QwQ-32B. We evaluate four distinct algorithms, including AWQ, GPTQ, SmoothQuant, and FlatQuant, to cover the spectrum from weight-only compression to advanced rotation-based methods. Our empirical results reveal significant platform sensitivity. While 4-bit weight-only quantization proves viable for larger models, aggressive 4-bit weight-activation schemes suffer from layer-wise calibration instability on the NPU, leading to logic collapse in long-context reasoning tasks. Conversely, standard 8-bit quantization remains numerically stable. Furthermore, a real-world INT8 deployment demonstrates that although optimized kernels reduce latency, dynamic quantization overheads currently limit end-to-end acceleration. These findings offer a practical reference for the feasibility and limitations of deploying quantized reasoning models on Ascend NPU.",
+        "identifiers": [
+          "SemanticScholar:5220f5c30d0eb3ef21b31b344369856246009365"
+        ],
+        "semantic_scholar_id": "5220f5c30d0eb3ef21b31b344369856246009365",
+        "canonical_id": "arXiv:2602.17693",
+        "arxiv_id": "2602.17693",
+        "doi": "10.48550/arXiv.2602.17693",
+        "authors": [
+          "Yucheng Luo",
+          "Fangyu Zhu",
+          "Rui Zhou",
+          "Ming-Zhang Huang",
+          "Jian Zhu",
+          "Fan Fan",
+          "Wei Shao"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 264,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.24793",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.24793",
+        "id:SemanticScholar:577f61505193b19d9b3c2b747cd64f2d8d6af30a",
+        "id:arXiv:2605.24793",
+        "title:beyond the target from imitation to collaboration in speculative decoding",
+        "url:https://arxiv.org/abs/2605.24793"
+      ],
+      "record": {
+        "title": "Beyond the Target: From Imitation to Collaboration in Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2605.24793",
+        "year": 2026,
+        "published": "2026-05-24",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SPD) accelerates large language model (LLM) inference by letting a smaller draft model propose multiple future tokens that are verified in parallel by a larger target model. The dominant SPD paradigm treats the target model as the sole reliable teacher, accepting a draft token only when it exactly matches the target prediction. This design implicitly assumes that the target is always the better choice at every position. In practice, this assumption does not hold. Although the draft is the weaker model overall, it is not uniformly inferior at the token level. In a meaningful fraction of cases where draft and target disagree, the draft's choice is the one that leads to the correct final answer. Inspired by this, we introduce \\textbf{Collaborative Speculative Decoding (CoSpec)}, a generalization of SPD that no longer treats the target model as the sole token-level authority. CoSpec trains an arbitration policy via reinforcement learning to decide whether to accept tokens from the draft or target model, selectively accepting draft tokens at mismatches when doing so is likely to yield a correct final answer. Experimental results show that CoSpec maintains substantial speedups while surpassing target-only performance. By shifting the emphasis from imitation to collaboration, CoSpec suggests a new perspective on speculative decoding.",
+        "identifiers": [
+          "SemanticScholar:577f61505193b19d9b3c2b747cd64f2d8d6af30a"
+        ],
+        "semantic_scholar_id": "577f61505193b19d9b3c2b747cd64f2d8d6af30a",
+        "canonical_id": "arXiv:2605.24793",
+        "arxiv_id": "2605.24793",
+        "doi": "10.48550/arXiv.2605.24793",
+        "authors": [
+          "Jin-Ze Li",
+          "Yi-Xing Xu",
+          "Guan-Chen Li",
+          "Jin-Feng Xu",
+          "Shuo Yang",
+          "Yang Zhang",
+          "Xuan-Wu Yin",
+          "Dong Li",
+          "Edith C. H. Ngai",
+          "E. Barsoum"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 157,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.13205",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.13205",
+        "id:SemanticScholar:497804cff1bbaec1736d53cc9314a6dc40cc30fb",
+        "id:arXiv:2607.13205",
+        "title:adaptive filtering of the kv cache diagnosing and correcting structuralrole bias in llm inference",
+        "url:https://arxiv.org/abs/2607.13205"
+      ],
+      "record": {
+        "title": "Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference",
+        "source_url": "https://arxiv.org/abs/2607.13205",
+        "year": 2026,
+        "published": "2026-07-14",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Attention-based KV cache eviction (H2O and its descendants) compresses the memory-constrained state of a long-context model by ranking tokens on accumulated attention mass, treated here as signal energy, and keeping the heaviest. On schema-dense input streams such as nested JSON, this score acts as a non-stationary filter that disproportionately retains noise: a non-content sink role (delimiters or whitespace) carries an order of magnitude more energy than any content role, and structural KEY tokens are over-retained at roughly 1.8x the rate of the answer-carrying VALUE tokens, collapsing exact-match accuracy from 88% to 0% at a 5% budget as the signal-to-noise ratio of the retained state degrades. A counterfactual experiment establishes that suppressing KEY tokens is the best deployable filter. Our retraining-free, role-conditional allocation over SnapKV's windowed score, governed by a single tuned hyperparameter, closes 63-98% of the H2O gap at sub-20% budgets and, at higher budgets, modestly matches or exceeds full-cache accuracy -- a small, seed-sensitive denoising effect (borderline significant at B=0.50; not distinguishable from zero at B=0.30 over four seeds). A 15 MB linear role probe supplies these labels at negligible inference cost, though matching parser-level downstream accuracy remains open.",
+        "identifiers": [
+          "SemanticScholar:497804cff1bbaec1736d53cc9314a6dc40cc30fb"
+        ],
+        "semantic_scholar_id": "497804cff1bbaec1736d53cc9314a6dc40cc30fb",
+        "canonical_id": "arXiv:2607.13205",
+        "arxiv_id": "2607.13205",
+        "doi": "10.48550/arXiv.2607.13205",
+        "authors": [
+          "Soumil Mandal"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 106,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.27390",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.27390",
+        "id:SemanticScholar:9d228b5829af7486ec695b9ca229b9b30254eaa8",
+        "id:arXiv:2605.27390",
+        "title:evospec evolving speculative decoding via realtime vocabulary and parameter adaptation",
+        "url:https://arxiv.org/abs/2605.27390"
+      ],
+      "record": {
+        "title": "EvoSpec: Evolving Speculative Decoding via Real-Time Vocabulary and Parameter Adaptation",
+        "source_url": "https://arxiv.org/abs/2605.27390",
+        "year": 2026,
+        "published": "2026-04-17",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates Large Language Model inference through draft-then-verify generation, yet lightweight draft models face coupled efficiency and quality limitations: large-vocabulary output projection is costly, while limited draft capacity and static parameters reduce acceptance under specialized or shifting inputs. Vocabulary pruning lowers projection cost, but static variants miss locally important long-tail tokens, while dynamic variants remain sensitive to preset selection policies and budgets. Moreover, limited draft capacity can leave the draft distribution misaligned even when the target token is covered. Online alignment improves draft quality, but full-parameter updates introduce substantial memory and latency overhead. We introduce EvoSpec, which jointly adapts the active vocabulary and lightweight draft parameters from verification feedback. EvoSpec asynchronously retrieves semantic and statistical token neighbors and performs curriculum-weighted online LoRA alignment while preserving exact target-model verification. On Qwen3-8B/EAGLE-2, EvoSpec reaches a $2.18\\times$ speedup over vanilla decoding and a $1.20\\times$ gain over EAGLE-2, while improving specialized-domain coverage and using $27\\%$ less auxiliary GPU adaptation memory than full-parameter online adaptation.",
+        "identifiers": [
+          "SemanticScholar:9d228b5829af7486ec695b9ca229b9b30254eaa8"
+        ],
+        "semantic_scholar_id": "9d228b5829af7486ec695b9ca229b9b30254eaa8",
+        "canonical_id": "arXiv:2605.27390",
+        "arxiv_id": "2605.27390",
+        "doi": "10.48550/arXiv.2605.27390",
+        "authors": [
+          "Shuyu Zhang",
+          "Lingfeng Pan",
+          "Qi-Cheng Wang",
+          "Yaqi Shi",
+          "Yue Tan",
+          "Ruyu Yan",
+          "Jiaqi Chen",
+          "L. Du",
+          "Lu Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 194,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.00450",
+      "identity_tokens": [
+        "id:SemanticScholar:3cc19cdbd364ea9a2c7d7e85e3a1d3f3128c5282",
+        "id:arXiv:2609.00450",
+        "title:hbq hierarchical scaling block quantization with hardwareefficiencyaware design for accurate llm inference",
+        "url:https://arxiv.org/abs/2609.00450"
+      ],
+      "record": {
+        "title": "HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.00450",
+        "year": 2026,
+        "published": "2026-08-31",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block Quantization (BQ) enables efficient LLM inference by quantizing both weights and activations, but its design space remains underexplored. Through hardware-accuracy design space exploration, we identify block size as a key trade-off: larger blocks improve hardware efficiency by amortizing dequantization and accumulation costs, but degrade accuracy. Motivated by this insight, we propose Hierarchical Block Quantization (HBQ), which combines large blocks with low-overhead significand (SIG) scaling for second-level quantization. SIG scaling effectively compensates for large-block quantization errors while accounting for distinct weight and activation distributions. HBQ-A achieves W4A16-level accuracy with W4A5 and lower area than NVFP4, while HBQ-E further reduces hardware cost by 17% while outperforming existing BQ methods in accuracy. We implement HBQ for weights, activations, and KV cache in a 28nm ASIC accelerator and introduce partial-sum BQ to reduce EMA energy. At comparable accuracy, HBQ achieves 2.3x/4.6x higher area/energy efficiency than state-of-the-art weight-only quantization and 1.6-3.3x lower system energy with 1.5-3x speedup over prior BQ methods. Our implementation is publicly available at: https://github.com/SeoLabCornell/HBQ.git.",
+        "identifiers": [
+          "SemanticScholar:3cc19cdbd364ea9a2c7d7e85e3a1d3f3128c5282"
+        ],
+        "semantic_scholar_id": "3cc19cdbd364ea9a2c7d7e85e3a1d3f3128c5282",
+        "canonical_id": "arXiv:2609.00450",
+        "arxiv_id": "2609.00450",
+        "authors": [
+          "Chun-Ting Chen",
+          "Dongguang Han",
+          "Han-Gyeol Mun",
+          "Jake Hyun",
+          "Arnab Raha",
+          "A. Agarwal",
+          "M. Anders",
+          "Mohamed S. Abdelfattah",
+          "Jae-sun Seo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 58,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.05685",
+      "identity_tokens": [
+        "id:SemanticScholar:ce847fddfdb6e6fda7a28e943657bea15daef770",
+        "id:arXiv:2610.05685",
+        "title:spend bytes on breadth precisioncount tradeoffs for decodetime kv compression in long chainofthought reasoning",
+        "url:https://arxiv.org/abs/2610.05685"
+      ],
+      "record": {
+        "title": "Spend Bytes on Breadth: Precision-Count Trade-offs for Decode-Time KV Compression in Long Chain-of-Thought Reasoning",
+        "source_url": "https://arxiv.org/abs/2610.05685",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning models write most of their KV cache while decoding long chains of thought (CoT), so the cache has to be compressed online under a fixed memory budget. Decode-time methods mostly decide which tokens to evict. We ask how a fixed byte budget should be split between the number of cached tokens and their precision. BreadthKV spends the bytes on more tokens at low precision, combining quantization with eviction, and picks the bit-width for each model and budget with a 60-problem end-to-end calibration, since offline attention error does not predict it reliably. On three reasoning models and four math and science benchmarks, it scores above eviction alone in 17 of 18 settings and produces shorter outputs. Much of what eviction loses comes from derailed runs, which keep reasoning until the length cap without reaching an answer. On Qwen3-8B at our tightest budget, eviction sends 91% of AIME samples to the cap and BreadthKV 40%. Under the same protocol, BreadthKV is statistically indistinguishable from a joint rate-distortion allocator (RDKV) that uses 27% more KV memory-time, and it outperforms our re-implementation of ThinKV.",
+        "identifiers": [
+          "SemanticScholar:ce847fddfdb6e6fda7a28e943657bea15daef770"
+        ],
+        "semantic_scholar_id": "ce847fddfdb6e6fda7a28e943657bea15daef770",
+        "canonical_id": "arXiv:2610.05685",
+        "arxiv_id": "2610.05685",
+        "authors": [
+          "Run-Guo Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.18735",
+      "identity_tokens": [
+        "id:SemanticScholar:2740a10f4a0ee3ddf07285be6ab15b11b30b88d4",
+        "id:arXiv:2610.18735",
+        "title:sp2ec adaptive selfspeculative decoding for visionlanguage models",
+        "url:https://arxiv.org/abs/2610.18735"
+      ],
+      "record": {
+        "title": "SP$^2$ec: Adaptive Self-Speculative Decoding for Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2610.18735",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative Decoding (SD) has demonstrated its efficacy in accelerating large language model inference, but for Vision-Language Models (VLMs), the diverse input modalities make it difficult for a small trained drafter to achieve consistently high throughput. Self-speculative decoding reuses parts of the target model as a drafter which retains the multi-modal capability of the VLMs, yet its efficiency depends on choosing a suitable draft configuration for each prompt. We propose Single-Peak SPeculative decoding (SP$^2$ec), a training-free bandit algorithm that adapts the draft configuration during generation. SP$^2$ec exploits the single-peak throughput pattern observed in existing self-speculative methods, including SWIFT, KnapSpec, SpecVLM, and our simple cosSim. Our algorithmic design explicitly minimizes a novel notion of wall-time regret for each given query, corresponding to the empirical wall-time latency. Theoretical guarantees on the wall-time regret show that SP$^2$ec can exploit the optimal draft configuration, with negligible exploration cost. Extensive experiments on Qwen2.5-VL-7B-Instruct and LLaVA-NeXT-Mistral-7B across visual and textual tasks show consistent improvements of up to 11% over the original self-speculative methods, demonstrating the wide applicability of the proposed SP$^2$ec algorithm.",
+        "identifiers": [
+          "SemanticScholar:2740a10f4a0ee3ddf07285be6ab15b11b30b88d4"
+        ],
+        "semantic_scholar_id": "2740a10f4a0ee3ddf07285be6ab15b11b30b88d4",
+        "canonical_id": "arXiv:2610.18735",
+        "arxiv_id": "2610.18735",
+        "authors": [
+          "Yu-Qi Huang",
+          "Xing-Yao Li",
+          "Yun-Long Hou",
+          "Feng-Zhuo Zhang",
+          "Jia-Chun Pan",
+          "Vincent Y. F. Tan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 15,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d4f4f9c1bf6de1e5420507aa0b06b3384c28f4bdf019e0ff0a032a2b021fe6c8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

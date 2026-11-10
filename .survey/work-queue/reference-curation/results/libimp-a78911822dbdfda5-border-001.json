@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a78911822dbdfda5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.27205",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.27205",
+    "identity_tokens": [
+      "arXiv:2607.27205"
+    ],
+    "reason": "TurboVLA removes the LLM-centered V-to-L-to-A path for robot control and replaces it with a compact V+L-to-A policy. It reports 31.2ms policy latency and 0.9GiB VRAM for 0.2B parameters on RTX 4090, but studies robotic VLA inference rather than improving LLM inference/serving; retain as an adjacent boundary case.",
+    "first_checked_at": "2026-10-05T01:14:58+00:00",
+    "last_checked_at": "2026-10-05T01:14:58+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM"
+  },
+  "processed_at": "2026-10-05T01:14:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a78911822dbd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

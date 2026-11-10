@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0aa272ea9a64f75d-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.24462",
+  "reason": "要旨は「In this paper, we propose \\textbf{Mahalanobis-Based Multi-Head Attention} (MHA-CSP), a novel attention mechanism that replaces the standard dot-product with a \\textbf{Mahalanobis distance-based RBF kernel}, which effectively computes attention in an infinite-dimensional feature space without increasing the parameter count.」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+  "title": "Mahalanobis-Based Multi-Head Attention for Complex State Propagation",
+  "identity_tokens": [
+    "arXiv:2608.24462"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+    "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+    "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+    "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0aa272ea9a64",
+  "source_precheck_request_id": null
+}

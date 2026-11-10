@@ -1,0 +1,1061 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f89362798dc8c398-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f89362798dc8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/dac63849.2025.11132542",
+    "DOI:10.12142/ztetj.202402003",
+    "arXiv:2407.15508",
+    "arXiv:2411.09580",
+    "arXiv:2502.02040",
+    "arXiv:2502.13176",
+    "arXiv:2503.02495",
+    "arXiv:2504.05586",
+    "arXiv:2505.22811",
+    "arXiv:2505.24544",
+    "arXiv:2508.09072",
+    "arXiv:2509.15206",
+    "arXiv:2510.22909"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "24297583ca2cfe201b3770d420afb60fbd602426",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 1,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T01:24:32.787510+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/dac63849.2025.11132542",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.12142/ztetj.202402003",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_single",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "arXiv:2407.15508",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.09580",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.02040",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.13176",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.02495",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.05586",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2504.05586"
+    },
+    {
+      "requested_id": "arXiv:2505.22811",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.24544",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.09072",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.15206",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.22909",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Highly Efficient and Effective LLMs with Multi-Boolean Architectures",
+      "source_url": "https://arxiv.org/abs/2505.22811",
+      "year": 2025,
+      "published": "2025-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight binarization has emerged as a promising strategy to reduce the complexity of large language models (LLMs). Existing approaches fall into post-training binarization, which is simple but causes severe performance loss, and training-aware methods, which depend on full-precision latent weights, adding complexity and limiting efficiency. We propose a novel framework that represents LLMs with multi-kernel Boolean parameters and, for the first time, enables direct finetuning LMMs in the Boolean domain, eliminating the need for latent weights. This enhances representational capacity and dramatically reduces complexity during both finetuning and inference. Extensive experiments across diverse LLMs show our method outperforms recent ultra low-bit quantization and binarization techniques.",
+      "identifiers": [
+        "SemanticScholar:8ca2097fe67c67a848173b809f491c783e7fe08d"
+      ],
+      "semantic_scholar_id": "8ca2097fe67c67a848173b809f491c783e7fe08d",
+      "canonical_id": "arXiv:2505.22811",
+      "arxiv_id": "2505.22811",
+      "doi": "10.48550/arXiv.2505.22811",
+      "authors": [
+        "Ba-Hien Tran",
+        "V. Nguyen"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 504,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Software Performance Engineering for Foundation Model-Powered Software",
+      "source_url": "https://arxiv.org/abs/2411.09580",
+      "year": 2024,
+      "published": "2024-11-14",
+      "venue": "ACM Transactions on Software Engineering and Methodology",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rise of Foundation Models (FMs) like Large Language Models (LLMs) is revolutionizing software development. Despite the impressive prototypes, transforming FMware into production-ready products demands complex engineering across various domains. A critical but overlooked aspect is performance engineering, which aims at ensuring FMware meets performance goals such as throughput and latency to avoid user dissatisfaction and financial loss. Often, performance considerations are an afterthought, leading to costly optimization efforts post-deployment. FMware’s high computational resource demands highlight the need for efficient hardware use. Continuous performance engineering is essential to prevent degradation. This paper highlights the significance of Software Performance Engineering (SPE) in FMware, identifying four key challenges: cognitive architecture design (i.e., the structural design that defines how AI components interact, reason, and interface with classical software components), communication protocols, tuning and optimization, and deployment. These challenges are based on literature surveys and experiences from developing an in-house FMware system. We discuss problems, current practices, and innovative paths for the software engineering community.",
+      "identifiers": [
+        "SemanticScholar:b0d17cb116576239a868718af1c6a59c4f1e9ebd"
+      ],
+      "semantic_scholar_id": "b0d17cb116576239a868718af1c6a59c4f1e9ebd",
+      "canonical_id": "arXiv:2411.09580",
+      "arxiv_id": "2411.09580",
+      "doi": "10.1145/3794844",
+      "authors": [
+        "Hao-Xiang Zhang",
+        "Shi Chang",
+        "Arthur Leung",
+        "Kishanthan Thangarajah",
+        "Bo-Yuan Chen",
+        "Hanan Lutfiyya",
+        "Ahmed E. Hassan"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 699,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "M2R2: Mixture of Multi-Rate Residuals for Efficient Transformer Inference",
+      "source_url": "https://arxiv.org/abs/2502.02040",
+      "year": 2025,
+      "published": "2025-02-04",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Residual transformations enhance the representational depth and expressive power of large language models (LLMs). However, applying static residual transformations across all tokens in auto-regressive generation leads to a suboptimal trade-off between inference efficiency and generation fidelity. Existing methods, including Early Exiting, Skip Decoding, and Mixture-of-Depth address this by modulating the residual transformation based on token-level complexity. Nevertheless, these approaches predominantly consider the distance traversed by tokens through the model layers, neglecting the underlying velocity of residual evolution. We introduce Mixture of Multi-rate Residuals (M2R2), a framework that dynamically modulates residual velocity to improve early alignment, enhancing inference efficiency. Evaluations on reasoning oriented tasks such as Koala, Self-Instruct, WizardLM, and MT-Bench show M2R2 surpasses state-of-the-art distance-based strategies, balancing generation quality and speedup. In self-speculative decoding setup, M2R2 achieves up to 2.8x speedups on MT-Bench, outperforming methods like 2-model speculative decoding, Medusa, LookAhead Decoding, and DEED. In Mixture-of-Experts (MoE) architectures, integrating early residual alignment with ahead-of-time expert loading into high-bandwidth memory (HBM) accelerates decoding, reduces expert-switching bottlenecks, and achieves a 2.9x speedup, making it highly effective in resource-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:e3b033f839d0db90e98884c89347194ad109fbc9"
+      ],
+      "semantic_scholar_id": "e3b033f839d0db90e98884c89347194ad109fbc9",
+      "canonical_id": "arXiv:2502.02040",
+      "arxiv_id": "2502.02040",
+      "doi": "10.48550/arXiv.2502.02040",
+      "authors": [
+        "Nikhil Bhendawade",
+        "Mahyar Najibi",
+        "Devang Naik",
+        "I. Belousova"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 617,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cross-Attention Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2505.24544",
+      "year": 2025,
+      "published": "2025-05-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) is a widely adopted approach for accelerating inference in large language models (LLMs), particularly when the draft and target models are well aligned. However, state-of-the-art SD methods typically rely on tightly coupled, self-attention-based Transformer decoders, often augmented with auxiliary pooling or fusion layers. This coupling makes them increasingly complex and harder to generalize across different models. We present Budget EAGLE (Beagle), the first, to our knowledge, cross-attention-based Transformer decoder SD model that achieves performance on par with leading self-attention SD models (EAGLE-v2) while eliminating the need for pooling or auxiliary components, simplifying the architecture, improving training efficiency, and maintaining stable memory usage during training-time simulation. To enable effective training of this novel architecture, we propose Two-Stage Block-Attention Training, a new method that achieves training stability and convergence efficiency in block-level attention scenarios. Extensive experiments across multiple LLMs and datasets show that Beagle achieves competitive inference speedups and higher training efficiency than EAGLE-v2, offering a strong alternative for architectures in speculative decoding.",
+      "identifiers": [
+        "SemanticScholar:dd255ad3e569c9a8c28f8fb510f9f91323cb3b66"
+      ],
+      "semantic_scholar_id": "dd255ad3e569c9a8c28f8fb510f9f91323cb3b66",
+      "canonical_id": "arXiv:2505.24544",
+      "arxiv_id": "2505.24544",
+      "doi": "10.48550/arXiv.2505.24544",
+      "authors": [
+        "Wei Zhong",
+        "Manasa Bharadwaj",
+        "Yixiao Wang",
+        "Nikhil Verma",
+        "Yi-Peng Ji",
+        "Chul Lee"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 502,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Union of Experts: Adapting Hierarchical Routing to Equivalently Decomposed Transformer",
+      "source_url": "https://arxiv.org/abs/2503.02495",
+      "year": 2025,
+      "published": "2025-03-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) enhances model performance while maintaining computational efficiency, making it well-suited for large-scale applications. Conventional mixture-of-experts (MoE) architectures suffer from suboptimal coordination dynamics, where isolated expert operations expose the model to overfitting risks. Moreover, they have not been effectively extended to attention blocks, which limits further efficiency improvements. To tackle these issues, we propose Union-of-Experts (UoE), which decomposes the transformer model into an equivalent group of experts and applies a hierarchical routing mechanism to allocate input subspaces to specialized experts. Our approach advances MoE design with four key innovations: (1) Constructing expert groups by partitioning non-MoE models into functionally equivalent specialists (2) Developing a hierarchical routing paradigm that integrates patch-wise data selection and expert selection strategies. (3) Extending the MoE design to attention blocks. (4) Proposing a hardware-optimized parallelization scheme that exploits batched matrix multiplications for efficient expert computation. The experiments demonstrate that our UoE model surpasses Full Attention, state-of-the-art MoEs and efficient transformers in several tasks across image and natural language domains. In language modeling tasks, UoE achieves an average reduction of 2.38 in perplexity compared to the best-performing MoE method with only 76% of its FLOPs. In the Long Range Arena benchmark, it demonstrates an average score at least 0.68% higher than all comparison models, with only 50% of the FLOPs of the best MoE method. In image classification, it yields an average accuracy improvement of 1.75% over the best model while maintaining comparable FLOPs. The source codes are available at https://github.com/YujiaoYang-work/UoE.",
+      "identifiers": [
+        "SemanticScholar:688ed44459dfe9732b304441918c0a133cf73e46"
+      ],
+      "semantic_scholar_id": "688ed44459dfe9732b304441918c0a133cf73e46",
+      "canonical_id": "arXiv:2503.02495",
+      "arxiv_id": "2503.02495",
+      "doi": "10.48550/arXiv.2503.02495",
+      "authors": [
+        "Yujia Yang",
+        "Jing Lian",
+        "Lin-Hui Li"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 589,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KVO-LLM: Boosting Long-Context Generation Throughput for Batched LLM Inference",
+      "source_url": "https://doi.org/10.1109/DAC63849.2025.11132542",
+      "year": 2025,
+      "published": "2025-06-22",
+      "venue": "Design Automation Conference",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the widespread deployment of long-context large language models (LLMs), efficient and high-quality generation is becoming increasingly important. Modern LLMs employ batching and key-value (KV) cache to improve generation throughput and quality. However, as the context length and batch size rise drastically, the KV cache incurs extreme external memory access (EMA) issues. Recent LLM accelerators face substantial processing element (PE) under-utilization due to the low arithmetic intensity of attention with KV cache, while existing KV cache compression algorithms struggle with hardware inefficiency or significant accuracy degradation. To address these issues, an algorithm-architecture co-optimization, KVO-LLM, is proposed for long-context batched LLM generation. At the algorithm level, we propose a KV cache quantization-aware pruning method that first adopts salient-token-aware quantization and then prunes KV channels and tokens by attention guided pruning based on salient tokens identified during quantization. Achieving substantial savings on hardware overhead, our algorithm reduces the EMA of KV cache over 91% with significant accuracy advantages compared to previous KV cache compression algorithms. At the architecture level, we propose a multi-core jointly optimized accelerator that adopts operator fusion and cross-batch interleaving strategy, maximizing PE and DRAM bandwidth utilization. Compared to the state-of-the-art LLM accelerators, KVO-LLM improves generation throughput by up to $7.32 \\times$, and attains $5.52 \\sim 8.38 \\times$ better energy efficiency.",
+      "identifiers": [
+        "SemanticScholar:3e23a9f4900240fbc67a3ce95b4491f9c7d9c7d0"
+      ],
+      "semantic_scholar_id": "3e23a9f4900240fbc67a3ce95b4491f9c7d9c7d0",
+      "doi": "10.1109/DAC63849.2025.11132542",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11132542",
+      "authors": [
+        "Zhenyu Li",
+        "Dongxu Lyu",
+        "Gang Wang",
+        "Yu-Zhou Chen",
+        "Liyan Chen",
+        "Wenji Li",
+        "Jianfei Jiang",
+        "Yanan Sun",
+        "Guang-Hui He"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 479,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fair-GPTQ: Bias-Aware Quantization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2509.15206",
+      "year": 2025,
+      "published": "2025-09-18",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The high memory demands of generative language models have drawn attention to quantization, which reduces memory usage by mapping model weights to lower-precision integers. However, recent empirical studies show that, while efficient, quantization can increase the likelihood of generating biased outputs and degrade performance on fairness benchmarks. In this work, we draw new links between quantization and model fairness by adding explicit group-fairness constraints to the quantization objective and introduce Fair-GPTQ, the first quantization method explicitly designed to reduce unfairness in large language models. The added constraints guide the learning of the rounding operation toward less-biased text generation for protected groups. Specifically, we focus on stereotype generation involving occupational bias and discriminatory language spanning gender, race, and religion. Fair-GPTQ has minimal impact on performance, preserving at least 90% of baseline accuracy on zero-shot benchmarks, reduces unfairness relative to a half-precision model, and retains the memory and speed benefits of 4-bit quantization.",
+      "identifiers": [
+        "SemanticScholar:b3f73c6ca639cc2d41ca1e7229854478804a9eb7"
+      ],
+      "semantic_scholar_id": "b3f73c6ca639cc2d41ca1e7229854478804a9eb7",
+      "canonical_id": "arXiv:2509.15206",
+      "arxiv_id": "2509.15206",
+      "doi": "10.48550/arXiv.2509.15206",
+      "authors": [
+        "Irina Proskurina",
+        "Guillaume Metzler",
+        "Julien Velcin"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 391,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rethinking Inference Placement for Deep Learning across Edge and Cloud Platforms: A Multi-Objective Optimization Perspective and Future Directions",
+      "source_url": "https://arxiv.org/abs/2510.22909",
+      "year": 2025,
+      "published": "2025-10-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Edge intelligent applications like VR/AR and language model based chatbots have become widespread with the rapid expansion of IoT and mobile devices. However, constrained edge devices often cannot serve the increasingly large and complex deep learning (DL) models. To mitigate these challenges, researchers have proposed optimizing and offloading partitions of DL models among user devices, edge servers, and the cloud. In this setting, users can take advantage of different services to support their intelligent applications. For example, edge resources offer low response latency. In contrast, cloud platforms provide low monetary cost computation resources for computation-intensive workloads. However, communication between DL model partitions can introduce transmission bottlenecks and pose risks of data leakage. Recent research aims to balance accuracy, computation delay, transmission delay, and privacy concerns. They address these issues with model compression, model distillation, transmission compression, and model architecture adaptations, including internal classifiers. This survey contextualizes the state-of-the-art model offloading methods and model adaptation techniques by studying their implication to a multi-objective optimization comprising inference latency, data privacy, and resource monetary cost.",
+      "identifiers": [
+        "SemanticScholar:1a11f2eeb00d31a64840c3701bf00820d1aa2791"
+      ],
+      "semantic_scholar_id": "1a11f2eeb00d31a64840c3701bf00820d1aa2791",
+      "canonical_id": "arXiv:2510.22909",
+      "arxiv_id": "2510.22909",
+      "doi": "10.48550/arXiv.2510.22909",
+      "authors": [
+        "Zong-Shun Zhang",
+        "Ibrahim Matta"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 352,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners",
+      "source_url": "https://arxiv.org/abs/2407.15508",
+      "year": 2024,
+      "published": "2024-07-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quantization of large language models (LLMs) has been a prominent research area aimed at enabling their lightweight deployment in practice. Existing research about LLM's quantization has mainly explored the interplay between weights and activations, or employing auxiliary components while neglecting the necessity of adjusting weights during quantization. Consequently, original weight distributions frequently fail to yield desired results after round-to-nearest (RTN) quantization. Even though incorporating techniques such as mixed precision and low-rank error approximation in LLM's quantization can yield improved results, they inevitably introduce additional computational overhead. On the other hand, traditional techniques for weight quantization, such as Generative Post-Training Quantization, rely on manually tweaking weight distributions to minimize local errors, but they fall short of achieving globally optimal outcomes. Although the recently proposed Learnable Singular-value Increment improves global weight quantization by modifying weight distributions, it disrupts the original distribution considerably. This introduces pronounced bias toward the training data and can degrade downstream task performance. In this paper, we introduce Singular-value Diagonal Expansion, a more nuanced approach to refining weight distributions to achieve better quantization alignment. Furthermore, we introduce Cross-layer Learning that improves overall quantization outcomes by distributing errors more evenly across layers. Our plug-and-play weight-quantization methods demonstrate substantial performance improvements over state-of-the-art approaches, including OmniQuant, DuQuant, and PrefixQuant.",
+      "identifiers": [
+        "SemanticScholar:10f9dbffdaa1153d0a43034ca7a517314f9c1624"
+      ],
+      "semantic_scholar_id": "10f9dbffdaa1153d0a43034ca7a517314f9c1624",
+      "canonical_id": "arXiv:2407.15508",
+      "arxiv_id": "2407.15508",
+      "authors": [
+        "Yifei Gao",
+        "Jie Ou",
+        "Lei Wang",
+        "Junguo Cheng",
+        "Mengchu Zhou"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 814,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BaKlaVa - Budgeted Allocation of KV cache for Long-context Inference",
+      "source_url": "https://arxiv.org/abs/2502.13176",
+      "year": 2025,
+      "published": "2025-02-18",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In Large Language Model (LLM) inference, Key-Value (KV) caches (KV-caches) are essential for reducing time complexity. However, they result in a linear increase in GPU memory as the context length grows. While recent work explores KV-cache eviction and compression policies to reduce memory usage, they often consider uniform KV-caches across all attention heads, leading to suboptimal performance. We introduce BaKlaVa, a method to allocate optimal memory for individual KV-caches across the model by estimating the importance of each KV-cache. Our empirical analysis demonstrates that not all KV-caches are equally critical for LLM performance. Using a one-time profiling approach, BaKlaVa assigns optimal memory budgets to each KV-cache. We evaluated our method on LLaMA-3-8B, and Qwen2.5-7B models, achieving up to a 70\\% compression ratio while keeping baseline performance and delivering up to an order-of-magnitude accuracy improvement at higher compression levels.",
+      "identifiers": [
+        "SemanticScholar:a434d8912f290ae7b8bca6c56d429aa6aad5a83b"
+      ],
+      "semantic_scholar_id": "a434d8912f290ae7b8bca6c56d429aa6aad5a83b",
+      "canonical_id": "arXiv:2502.13176",
+      "arxiv_id": "2502.13176",
+      "doi": "10.48550/arXiv.2502.13176",
+      "authors": [
+        "A. B. Gulhan",
+        "Krishna Teja Chitty-Venkata",
+        "M. Emani",
+        "Mahmut Kandemir",
+        "Venkat Vishwanath"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 603,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "READER: Retrieval-Assisted Drafter for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2508.09072",
+      "year": 2025,
+      "published": "2025-08-12",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive Language Models instantiate a factorized likelihood over token sequences, yet their strictly sequential decoding process imposes an intrinsic lower bound on inference latency. This bottleneck has emerged as a central obstacle to the scalable deployment of large-scale generative models. Existing acceleration techniques partially mitigate token-level latency by relying on auxiliary draft models or introducing an additional training phase, but fail to address the dominant memory and communication costs. We present READER, a provably lossless speculative decoding framework that bypasses the training of the auxiliary draft model. READER formalizes speculative decoding as a stochastic tree construction problem and exploits the empirical redundancy structure of natural language to generate high-probability candidate continuations. Our method revisits the problem of constructing draft trees, establishing substantial statistical improvements over stochastic draft-tree methods and providing a complexity-theoretic analysis that characterizes the optimality frontier of speculative decoding under bounded computation and memory resources. Beyond the single-sequence regime traditionally considered in prior work, we introduce a memory-optimal key-value cache-serving strategy that guarantees amortized sublinear overhead in the batch dimension, allowing READER to scale to realistic inference workloads. Comprehensive experiments demonstrate up to 6.13x wall-clock speedup on single-prompt inference and up to 5.92x on batched inference, consistently surpassing prior speculative decoding baselines, while preserving exact output equivalence, with even more pronounced gains in retrieval-augmented generation pipelines. Our results close a key gap between theoretical parallelism limits and practical LLM inference, suggesting a new standard for efficient deployment.",
+      "identifiers": [
+        "SemanticScholar:2ee3c482c2d6498e0dae914d4597c0baf1adc239"
+      ],
+      "semantic_scholar_id": "2ee3c482c2d6498e0dae914d4597c0baf1adc239",
+      "canonical_id": "arXiv:2508.09072",
+      "arxiv_id": "2508.09072",
+      "doi": "10.48550/arXiv.2508.09072",
+      "authors": [
+        "Maxim Divilkovskiy",
+        "V. Malygin",
+        "Sergey Zlobin",
+        "Sultan Isali",
+        "Vasily Kalugin",
+        "Stanislav Ilyushin",
+        "Nuriza Aitassova",
+        "Yi Fei",
+        "Wei-Di Zeng"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 428,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2505.22811",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.22811",
+        "id:SemanticScholar:8ca2097fe67c67a848173b809f491c783e7fe08d",
+        "id:arXiv:2505.22811",
+        "title:highly efficient and effective llms with multiboolean architectures",
+        "url:https://arxiv.org/abs/2505.22811"
+      ],
+      "record": {
+        "title": "Highly Efficient and Effective LLMs with Multi-Boolean Architectures",
+        "source_url": "https://arxiv.org/abs/2505.22811",
+        "year": 2025,
+        "published": "2025-05-28",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Weight binarization has emerged as a promising strategy to reduce the complexity of large language models (LLMs). Existing approaches fall into post-training binarization, which is simple but causes severe performance loss, and training-aware methods, which depend on full-precision latent weights, adding complexity and limiting efficiency. We propose a novel framework that represents LLMs with multi-kernel Boolean parameters and, for the first time, enables direct finetuning LMMs in the Boolean domain, eliminating the need for latent weights. This enhances representational capacity and dramatically reduces complexity during both finetuning and inference. Extensive experiments across diverse LLMs show our method outperforms recent ultra low-bit quantization and binarization techniques.",
+        "identifiers": [
+          "SemanticScholar:8ca2097fe67c67a848173b809f491c783e7fe08d"
+        ],
+        "semantic_scholar_id": "8ca2097fe67c67a848173b809f491c783e7fe08d",
+        "canonical_id": "arXiv:2505.22811",
+        "arxiv_id": "2505.22811",
+        "doi": "10.48550/arXiv.2505.22811",
+        "authors": [
+          "Ba-Hien Tran",
+          "V. Nguyen"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 504,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.09580",
+      "identity_tokens": [
+        "id:DOI:10.1145/3794844",
+        "id:SemanticScholar:b0d17cb116576239a868718af1c6a59c4f1e9ebd",
+        "id:arXiv:2411.09580",
+        "title:software performance engineering for foundation modelpowered software",
+        "url:https://arxiv.org/abs/2411.09580"
+      ],
+      "record": {
+        "title": "Software Performance Engineering for Foundation Model-Powered Software",
+        "source_url": "https://arxiv.org/abs/2411.09580",
+        "year": 2024,
+        "published": "2024-11-14",
+        "venue": "ACM Transactions on Software Engineering and Methodology",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rise of Foundation Models (FMs) like Large Language Models (LLMs) is revolutionizing software development. Despite the impressive prototypes, transforming FMware into production-ready products demands complex engineering across various domains. A critical but overlooked aspect is performance engineering, which aims at ensuring FMware meets performance goals such as throughput and latency to avoid user dissatisfaction and financial loss. Often, performance considerations are an afterthought, leading to costly optimization efforts post-deployment. FMware’s high computational resource demands highlight the need for efficient hardware use. Continuous performance engineering is essential to prevent degradation. This paper highlights the significance of Software Performance Engineering (SPE) in FMware, identifying four key challenges: cognitive architecture design (i.e., the structural design that defines how AI components interact, reason, and interface with classical software components), communication protocols, tuning and optimization, and deployment. These challenges are based on literature surveys and experiences from developing an in-house FMware system. We discuss problems, current practices, and innovative paths for the software engineering community.",
+        "identifiers": [
+          "SemanticScholar:b0d17cb116576239a868718af1c6a59c4f1e9ebd"
+        ],
+        "semantic_scholar_id": "b0d17cb116576239a868718af1c6a59c4f1e9ebd",
+        "canonical_id": "arXiv:2411.09580",
+        "arxiv_id": "2411.09580",
+        "doi": "10.1145/3794844",
+        "authors": [
+          "Hao-Xiang Zhang",
+          "Shi Chang",
+          "Arthur Leung",
+          "Kishanthan Thangarajah",
+          "Bo-Yuan Chen",
+          "Hanan Lutfiyya",
+          "Ahmed E. Hassan"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 699,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.02040",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.02040",
+        "id:SemanticScholar:e3b033f839d0db90e98884c89347194ad109fbc9",
+        "id:arXiv:2502.02040",
+        "title:m2r2 mixture of multirate residuals for efficient transformer inference",
+        "url:https://arxiv.org/abs/2502.02040"
+      ],
+      "record": {
+        "title": "M2R2: Mixture of Multi-Rate Residuals for Efficient Transformer Inference",
+        "source_url": "https://arxiv.org/abs/2502.02040",
+        "year": 2025,
+        "published": "2025-02-04",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Residual transformations enhance the representational depth and expressive power of large language models (LLMs). However, applying static residual transformations across all tokens in auto-regressive generation leads to a suboptimal trade-off between inference efficiency and generation fidelity. Existing methods, including Early Exiting, Skip Decoding, and Mixture-of-Depth address this by modulating the residual transformation based on token-level complexity. Nevertheless, these approaches predominantly consider the distance traversed by tokens through the model layers, neglecting the underlying velocity of residual evolution. We introduce Mixture of Multi-rate Residuals (M2R2), a framework that dynamically modulates residual velocity to improve early alignment, enhancing inference efficiency. Evaluations on reasoning oriented tasks such as Koala, Self-Instruct, WizardLM, and MT-Bench show M2R2 surpasses state-of-the-art distance-based strategies, balancing generation quality and speedup. In self-speculative decoding setup, M2R2 achieves up to 2.8x speedups on MT-Bench, outperforming methods like 2-model speculative decoding, Medusa, LookAhead Decoding, and DEED. In Mixture-of-Experts (MoE) architectures, integrating early residual alignment with ahead-of-time expert loading into high-bandwidth memory (HBM) accelerates decoding, reduces expert-switching bottlenecks, and achieves a 2.9x speedup, making it highly effective in resource-constrained environments.",
+        "identifiers": [
+          "SemanticScholar:e3b033f839d0db90e98884c89347194ad109fbc9"
+        ],
+        "semantic_scholar_id": "e3b033f839d0db90e98884c89347194ad109fbc9",
+        "canonical_id": "arXiv:2502.02040",
+        "arxiv_id": "2502.02040",
+        "doi": "10.48550/arXiv.2502.02040",
+        "authors": [
+          "Nikhil Bhendawade",
+          "Mahyar Najibi",
+          "Devang Naik",
+          "I. Belousova"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 617,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.24544",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.24544",
+        "id:SemanticScholar:dd255ad3e569c9a8c28f8fb510f9f91323cb3b66",
+        "id:arXiv:2505.24544",
+        "title:crossattention speculative decoding",
+        "url:https://arxiv.org/abs/2505.24544"
+      ],
+      "record": {
+        "title": "Cross-Attention Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2505.24544",
+        "year": 2025,
+        "published": "2025-05-30",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD) is a widely adopted approach for accelerating inference in large language models (LLMs), particularly when the draft and target models are well aligned. However, state-of-the-art SD methods typically rely on tightly coupled, self-attention-based Transformer decoders, often augmented with auxiliary pooling or fusion layers. This coupling makes them increasingly complex and harder to generalize across different models. We present Budget EAGLE (Beagle), the first, to our knowledge, cross-attention-based Transformer decoder SD model that achieves performance on par with leading self-attention SD models (EAGLE-v2) while eliminating the need for pooling or auxiliary components, simplifying the architecture, improving training efficiency, and maintaining stable memory usage during training-time simulation. To enable effective training of this novel architecture, we propose Two-Stage Block-Attention Training, a new method that achieves training stability and convergence efficiency in block-level attention scenarios. Extensive experiments across multiple LLMs and datasets show that Beagle achieves competitive inference speedups and higher training efficiency than EAGLE-v2, offering a strong alternative for architectures in speculative decoding.",
+        "identifiers": [
+          "SemanticScholar:dd255ad3e569c9a8c28f8fb510f9f91323cb3b66"
+        ],
+        "semantic_scholar_id": "dd255ad3e569c9a8c28f8fb510f9f91323cb3b66",
+        "canonical_id": "arXiv:2505.24544",
+        "arxiv_id": "2505.24544",
+        "doi": "10.48550/arXiv.2505.24544",
+        "authors": [
+          "Wei Zhong",
+          "Manasa Bharadwaj",
+          "Yixiao Wang",
+          "Nikhil Verma",
+          "Yi-Peng Ji",
+          "Chul Lee"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 502,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.02495",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.02495",
+        "id:SemanticScholar:688ed44459dfe9732b304441918c0a133cf73e46",
+        "id:arXiv:2503.02495",
+        "title:union of experts adapting hierarchical routing to equivalently decomposed transformer",
+        "url:https://arxiv.org/abs/2503.02495"
+      ],
+      "record": {
+        "title": "Union of Experts: Adapting Hierarchical Routing to Equivalently Decomposed Transformer",
+        "source_url": "https://arxiv.org/abs/2503.02495",
+        "year": 2025,
+        "published": "2025-03-04",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) enhances model performance while maintaining computational efficiency, making it well-suited for large-scale applications. Conventional mixture-of-experts (MoE) architectures suffer from suboptimal coordination dynamics, where isolated expert operations expose the model to overfitting risks. Moreover, they have not been effectively extended to attention blocks, which limits further efficiency improvements. To tackle these issues, we propose Union-of-Experts (UoE), which decomposes the transformer model into an equivalent group of experts and applies a hierarchical routing mechanism to allocate input subspaces to specialized experts. Our approach advances MoE design with four key innovations: (1) Constructing expert groups by partitioning non-MoE models into functionally equivalent specialists (2) Developing a hierarchical routing paradigm that integrates patch-wise data selection and expert selection strategies. (3) Extending the MoE design to attention blocks. (4) Proposing a hardware-optimized parallelization scheme that exploits batched matrix multiplications for efficient expert computation. The experiments demonstrate that our UoE model surpasses Full Attention, state-of-the-art MoEs and efficient transformers in several tasks across image and natural language domains. In language modeling tasks, UoE achieves an average reduction of 2.38 in perplexity compared to the best-performing MoE method with only 76% of its FLOPs. In the Long Range Arena benchmark, it demonstrates an average score at least 0.68% higher than all comparison models, with only 50% of the FLOPs of the best MoE method. In image classification, it yields an average accuracy improvement of 1.75% over the best model while maintaining comparable FLOPs. The source codes are available at https://github.com/YujiaoYang-work/UoE.",
+        "identifiers": [
+          "SemanticScholar:688ed44459dfe9732b304441918c0a133cf73e46"
+        ],
+        "semantic_scholar_id": "688ed44459dfe9732b304441918c0a133cf73e46",
+        "canonical_id": "arXiv:2503.02495",
+        "arxiv_id": "2503.02495",
+        "doi": "10.48550/arXiv.2503.02495",
+        "authors": [
+          "Yujia Yang",
+          "Jing Lian",
+          "Lin-Hui Li"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 589,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/dac63849.2025.11132542",
+      "identity_tokens": [
+        "id:DOI:10.1109/dac63849.2025.11132542",
+        "id:SemanticScholar:3e23a9f4900240fbc67a3ce95b4491f9c7d9c7d0",
+        "title:kvollm boosting longcontext generation throughput for batched llm inference",
+        "url:https://doi.org/10.1109/DAC63849.2025.11132542"
+      ],
+      "record": {
+        "title": "KVO-LLM: Boosting Long-Context Generation Throughput for Batched LLM Inference",
+        "source_url": "https://doi.org/10.1109/DAC63849.2025.11132542",
+        "year": 2025,
+        "published": "2025-06-22",
+        "venue": "Design Automation Conference",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the widespread deployment of long-context large language models (LLMs), efficient and high-quality generation is becoming increasingly important. Modern LLMs employ batching and key-value (KV) cache to improve generation throughput and quality. However, as the context length and batch size rise drastically, the KV cache incurs extreme external memory access (EMA) issues. Recent LLM accelerators face substantial processing element (PE) under-utilization due to the low arithmetic intensity of attention with KV cache, while existing KV cache compression algorithms struggle with hardware inefficiency or significant accuracy degradation. To address these issues, an algorithm-architecture co-optimization, KVO-LLM, is proposed for long-context batched LLM generation. At the algorithm level, we propose a KV cache quantization-aware pruning method that first adopts salient-token-aware quantization and then prunes KV channels and tokens by attention guided pruning based on salient tokens identified during quantization. Achieving substantial savings on hardware overhead, our algorithm reduces the EMA of KV cache over 91% with significant accuracy advantages compared to previous KV cache compression algorithms. At the architecture level, we propose a multi-core jointly optimized accelerator that adopts operator fusion and cross-batch interleaving strategy, maximizing PE and DRAM bandwidth utilization. Compared to the state-of-the-art LLM accelerators, KVO-LLM improves generation throughput by up to $7.32 \\times$, and attains $5.52 \\sim 8.38 \\times$ better energy efficiency.",
+        "identifiers": [
+          "SemanticScholar:3e23a9f4900240fbc67a3ce95b4491f9c7d9c7d0"
+        ],
+        "semantic_scholar_id": "3e23a9f4900240fbc67a3ce95b4491f9c7d9c7d0",
+        "doi": "10.1109/DAC63849.2025.11132542",
+        "canonical_id": "DOI:10.1109/DAC63849.2025.11132542",
+        "authors": [
+          "Zhenyu Li",
+          "Dongxu Lyu",
+          "Gang Wang",
+          "Yu-Zhou Chen",
+          "Liyan Chen",
+          "Wenji Li",
+          "Jianfei Jiang",
+          "Yanan Sun",
+          "Guang-Hui He"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 479,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.15206",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.15206",
+        "id:SemanticScholar:b3f73c6ca639cc2d41ca1e7229854478804a9eb7",
+        "id:arXiv:2509.15206",
+        "title:fairgptq biasaware quantization for large language models",
+        "url:https://arxiv.org/abs/2509.15206"
+      ],
+      "record": {
+        "title": "Fair-GPTQ: Bias-Aware Quantization for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2509.15206",
+        "year": 2025,
+        "published": "2025-09-18",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The high memory demands of generative language models have drawn attention to quantization, which reduces memory usage by mapping model weights to lower-precision integers. However, recent empirical studies show that, while efficient, quantization can increase the likelihood of generating biased outputs and degrade performance on fairness benchmarks. In this work, we draw new links between quantization and model fairness by adding explicit group-fairness constraints to the quantization objective and introduce Fair-GPTQ, the first quantization method explicitly designed to reduce unfairness in large language models. The added constraints guide the learning of the rounding operation toward less-biased text generation for protected groups. Specifically, we focus on stereotype generation involving occupational bias and discriminatory language spanning gender, race, and religion. Fair-GPTQ has minimal impact on performance, preserving at least 90% of baseline accuracy on zero-shot benchmarks, reduces unfairness relative to a half-precision model, and retains the memory and speed benefits of 4-bit quantization.",
+        "identifiers": [
+          "SemanticScholar:b3f73c6ca639cc2d41ca1e7229854478804a9eb7"
+        ],
+        "semantic_scholar_id": "b3f73c6ca639cc2d41ca1e7229854478804a9eb7",
+        "canonical_id": "arXiv:2509.15206",
+        "arxiv_id": "2509.15206",
+        "doi": "10.48550/arXiv.2509.15206",
+        "authors": [
+          "Irina Proskurina",
+          "Guillaume Metzler",
+          "Julien Velcin"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 391,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.22909",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.22909",
+        "id:SemanticScholar:1a11f2eeb00d31a64840c3701bf00820d1aa2791",
+        "id:arXiv:2510.22909",
+        "title:rethinking inference placement for deep learning across edge and cloud platforms a multiobjective optimization perspective and future directions",
+        "url:https://arxiv.org/abs/2510.22909"
+      ],
+      "record": {
+        "title": "Rethinking Inference Placement for Deep Learning across Edge and Cloud Platforms: A Multi-Objective Optimization Perspective and Future Directions",
+        "source_url": "https://arxiv.org/abs/2510.22909",
+        "year": 2025,
+        "published": "2025-10-27",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Edge intelligent applications like VR/AR and language model based chatbots have become widespread with the rapid expansion of IoT and mobile devices. However, constrained edge devices often cannot serve the increasingly large and complex deep learning (DL) models. To mitigate these challenges, researchers have proposed optimizing and offloading partitions of DL models among user devices, edge servers, and the cloud. In this setting, users can take advantage of different services to support their intelligent applications. For example, edge resources offer low response latency. In contrast, cloud platforms provide low monetary cost computation resources for computation-intensive workloads. However, communication between DL model partitions can introduce transmission bottlenecks and pose risks of data leakage. Recent research aims to balance accuracy, computation delay, transmission delay, and privacy concerns. They address these issues with model compression, model distillation, transmission compression, and model architecture adaptations, including internal classifiers. This survey contextualizes the state-of-the-art model offloading methods and model adaptation techniques by studying their implication to a multi-objective optimization comprising inference latency, data privacy, and resource monetary cost.",
+        "identifiers": [
+          "SemanticScholar:1a11f2eeb00d31a64840c3701bf00820d1aa2791"
+        ],
+        "semantic_scholar_id": "1a11f2eeb00d31a64840c3701bf00820d1aa2791",
+        "canonical_id": "arXiv:2510.22909",
+        "arxiv_id": "2510.22909",
+        "doi": "10.48550/arXiv.2510.22909",
+        "authors": [
+          "Zong-Shun Zhang",
+          "Ibrahim Matta"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 352,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.15508",
+      "identity_tokens": [
+        "id:SemanticScholar:10f9dbffdaa1153d0a43034ca7a517314f9c1624",
+        "id:arXiv:2407.15508",
+        "title:compensate quantization errors quantized models are inquisitive learners",
+        "url:https://arxiv.org/abs/2407.15508"
+      ],
+      "record": {
+        "title": "Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners",
+        "source_url": "https://arxiv.org/abs/2407.15508",
+        "year": 2024,
+        "published": "2024-07-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quantization of large language models (LLMs) has been a prominent research area aimed at enabling their lightweight deployment in practice. Existing research about LLM's quantization has mainly explored the interplay between weights and activations, or employing auxiliary components while neglecting the necessity of adjusting weights during quantization. Consequently, original weight distributions frequently fail to yield desired results after round-to-nearest (RTN) quantization. Even though incorporating techniques such as mixed precision and low-rank error approximation in LLM's quantization can yield improved results, they inevitably introduce additional computational overhead. On the other hand, traditional techniques for weight quantization, such as Generative Post-Training Quantization, rely on manually tweaking weight distributions to minimize local errors, but they fall short of achieving globally optimal outcomes. Although the recently proposed Learnable Singular-value Increment improves global weight quantization by modifying weight distributions, it disrupts the original distribution considerably. This introduces pronounced bias toward the training data and can degrade downstream task performance. In this paper, we introduce Singular-value Diagonal Expansion, a more nuanced approach to refining weight distributions to achieve better quantization alignment. Furthermore, we introduce Cross-layer Learning that improves overall quantization outcomes by distributing errors more evenly across layers. Our plug-and-play weight-quantization methods demonstrate substantial performance improvements over state-of-the-art approaches, including OmniQuant, DuQuant, and PrefixQuant.",
+        "identifiers": [
+          "SemanticScholar:10f9dbffdaa1153d0a43034ca7a517314f9c1624"
+        ],
+        "semantic_scholar_id": "10f9dbffdaa1153d0a43034ca7a517314f9c1624",
+        "canonical_id": "arXiv:2407.15508",
+        "arxiv_id": "2407.15508",
+        "authors": [
+          "Yifei Gao",
+          "Jie Ou",
+          "Lei Wang",
+          "Junguo Cheng",
+          "Mengchu Zhou"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 814,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.13176",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.13176",
+        "id:SemanticScholar:a434d8912f290ae7b8bca6c56d429aa6aad5a83b",
+        "id:arXiv:2502.13176",
+        "title:baklava budgeted allocation of kv cache for longcontext inference",
+        "url:https://arxiv.org/abs/2502.13176"
+      ],
+      "record": {
+        "title": "BaKlaVa - Budgeted Allocation of KV cache for Long-context Inference",
+        "source_url": "https://arxiv.org/abs/2502.13176",
+        "year": 2025,
+        "published": "2025-02-18",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In Large Language Model (LLM) inference, Key-Value (KV) caches (KV-caches) are essential for reducing time complexity. However, they result in a linear increase in GPU memory as the context length grows. While recent work explores KV-cache eviction and compression policies to reduce memory usage, they often consider uniform KV-caches across all attention heads, leading to suboptimal performance. We introduce BaKlaVa, a method to allocate optimal memory for individual KV-caches across the model by estimating the importance of each KV-cache. Our empirical analysis demonstrates that not all KV-caches are equally critical for LLM performance. Using a one-time profiling approach, BaKlaVa assigns optimal memory budgets to each KV-cache. We evaluated our method on LLaMA-3-8B, and Qwen2.5-7B models, achieving up to a 70\\% compression ratio while keeping baseline performance and delivering up to an order-of-magnitude accuracy improvement at higher compression levels.",
+        "identifiers": [
+          "SemanticScholar:a434d8912f290ae7b8bca6c56d429aa6aad5a83b"
+        ],
+        "semantic_scholar_id": "a434d8912f290ae7b8bca6c56d429aa6aad5a83b",
+        "canonical_id": "arXiv:2502.13176",
+        "arxiv_id": "2502.13176",
+        "doi": "10.48550/arXiv.2502.13176",
+        "authors": [
+          "A. B. Gulhan",
+          "Krishna Teja Chitty-Venkata",
+          "M. Emani",
+          "Mahmut Kandemir",
+          "Venkat Vishwanath"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 603,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.09072",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.09072",
+        "id:SemanticScholar:2ee3c482c2d6498e0dae914d4597c0baf1adc239",
+        "id:arXiv:2508.09072",
+        "title:reader retrievalassisted drafter for efficient llm inference",
+        "url:https://arxiv.org/abs/2508.09072"
+      ],
+      "record": {
+        "title": "READER: Retrieval-Assisted Drafter for Efficient LLM Inference",
+        "source_url": "https://arxiv.org/abs/2508.09072",
+        "year": 2025,
+        "published": "2025-08-12",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive Language Models instantiate a factorized likelihood over token sequences, yet their strictly sequential decoding process imposes an intrinsic lower bound on inference latency. This bottleneck has emerged as a central obstacle to the scalable deployment of large-scale generative models. Existing acceleration techniques partially mitigate token-level latency by relying on auxiliary draft models or introducing an additional training phase, but fail to address the dominant memory and communication costs. We present READER, a provably lossless speculative decoding framework that bypasses the training of the auxiliary draft model. READER formalizes speculative decoding as a stochastic tree construction problem and exploits the empirical redundancy structure of natural language to generate high-probability candidate continuations. Our method revisits the problem of constructing draft trees, establishing substantial statistical improvements over stochastic draft-tree methods and providing a complexity-theoretic analysis that characterizes the optimality frontier of speculative decoding under bounded computation and memory resources. Beyond the single-sequence regime traditionally considered in prior work, we introduce a memory-optimal key-value cache-serving strategy that guarantees amortized sublinear overhead in the batch dimension, allowing READER to scale to realistic inference workloads. Comprehensive experiments demonstrate up to 6.13x wall-clock speedup on single-prompt inference and up to 5.92x on batched inference, consistently surpassing prior speculative decoding baselines, while preserving exact output equivalence, with even more pronounced gains in retrieval-augmented generation pipelines. Our results close a key gap between theoretical parallelism limits and practical LLM inference, suggesting a new standard for efficient deployment.",
+        "identifiers": [
+          "SemanticScholar:2ee3c482c2d6498e0dae914d4597c0baf1adc239"
+        ],
+        "semantic_scholar_id": "2ee3c482c2d6498e0dae914d4597c0baf1adc239",
+        "canonical_id": "arXiv:2508.09072",
+        "arxiv_id": "2508.09072",
+        "doi": "10.48550/arXiv.2508.09072",
+        "authors": [
+          "Maxim Divilkovskiy",
+          "V. Malygin",
+          "Sergey Zlobin",
+          "Sultan Isali",
+          "Vasily Kalugin",
+          "Stanislav Ilyushin",
+          "Nuriza Aitassova",
+          "Yi Fei",
+          "Wei-Di Zeng"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 428,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8a4f4363c5eeb36eadc0fd6d9b94ba66e5c1b700dec0a422ad7c2232b2597e63",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

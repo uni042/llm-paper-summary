@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models",
+      "source_url": "https://arxiv.org/abs/2602.06822",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large foundation models (LFMs) achieve strong performance through scaling, yet current structural pruning methods derive fixed pruning decisions during inference, overlooking sparsity patterns that emerge in the autoregressive token generation. In this paper, we propose POP (Partition-guided Online Pruning), an efficient online structural pruning framework that enables context-conditioned dynamic pruning with minimal computational overhead. POP partitions model channels into retained, candidate, and pruned regions, where prefilling defines a coarse pruning partition, and the decoding stage generates a fine-grained mask within the candidate region, avoiding full-channel re-evaluation. The coarse pruning partition preserves consistently important weights, while the fine-grained masking provides context-conditioned variation during decoding. Moreover, POP is a lightweight, plug-and-play method that requires no preprocessing, including offline calibration, retraining, or learning predictors. Extensive evaluations across diverse LFMs, including large language models (LLMs), mixture-of-experts models (MoEs), and vision-language models (VLMs), demonstrate that POP consistently delivers higher accuracy than existing pruning approaches while incurring smaller computational overhead and minimizing inference latency.",
+      "identifiers": [
+        "SemanticScholar:6adc07c64a98a11174b72e77714f6d4427a1e3a8"
+      ],
+      "semantic_scholar_id": "6adc07c64a98a11174b72e77714f6d4427a1e3a8",
+      "canonical_id": "arXiv:2602.06822",
+      "arxiv_id": "2602.06822",
+      "doi": "10.48550/arXiv.2602.06822",
+      "authors": [
+        "Yi Chen",
+        "Wonjin Shin",
+        "Shuhong Liu",
+        "Tho Mai",
+        "Jeongmo Lee",
+        "Chuan-Bo Hua",
+        "Kunlun Wang",
+        "Jun Liu",
+        "Jooyul Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 266,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はprefillでチャネルを保持・候補・削除に分割し、decodeで候補チャネルだけを文脈依存に再判定するオンライン構造的枝刈りPOPを提案。オフライン較正・追加学習なしでLLM、MoE、VLMを評価し、推論レイテンシーを抑えつつ精度を維持。推論実行時の動的計算削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Swimba: Switch Mamba Model Scales State Space Models",
+      "source_url": "https://arxiv.org/abs/2603.06938",
+      "year": 2026,
+      "published": "2026-03-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-experts (MoE) is a common approach for increasing parameter capacity, but applying MoE to state space model (SSM) token mixers can multiply the cost of the recurrent state update. We study how to introduce expert specialization into selective SSMs while preserving computational efficiency. We show that MoE--SSM can refer to two designs: (1) MoE over separated SSMs, which maintains multiple state trajectories and thus scales compute with the number of experts; and (2) MoE-parameterized SSM, which mixes experts in parameter space, maintains a single state trajectory, and evaluates the recurrence once. Our method, Switch Mamba (Swimba), follows the second design by routing over expert-produced SSM streams. Theoretically, we establish well-definedness and stability for MoE-parameterized SSMs and characterize the relationship between the two designs. Empirically, we evaluate Swimba on standard benchmark tasks and measure real-time throughput and latency. Under matched FLOPs, Swimba achieves slightly better average performance than the baseline, with a small slowdown in real-time latency and throughput. Overall, these results suggest that parameter-space MoE can increase SSM capacity while keeping the dominant recurrence cost fixed.",
+      "identifiers": [
+        "SemanticScholar:c27cb845ea3b3b2093563bd4d1ef315da7a874f5"
+      ],
+      "semantic_scholar_id": "c27cb845ea3b3b2093563bd4d1ef315da7a874f5",
+      "canonical_id": "arXiv:2603.06938",
+      "arxiv_id": "2603.06938",
+      "doi": "10.48550/arXiv.2603.06938",
+      "authors": [
+        "Zhi-Xu Du",
+        "Krishna Teja Chitty-Venkata",
+        "M. Emani",
+        "Venkat Vishwanath",
+        "Hai Li",
+        "Yi-Ran Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 238,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はMoEをSSMに導入する際、専門家ごとの状態軌跡を増やさずパラメータ空間で混合して再帰状態更新を1回に保つSwimbaを提案。リアルタイム推論のスループット・遅延を測定し、同FLOPs条件で品質はやや改善するが実時間遅延とスループットは小幅悪化する負の結果も報告。再帰型推論計算の構造効率に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning",
+      "source_url": "https://arxiv.org/abs/2607.19358",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought (CoT) reasoning models such as DeepSeek-R1 keep lengthening their inference chains under test-time scaling, yet standard self-attention incurs quadratic cost in context length, making long-CoT deployment costly in production. We therefore introduce LISA (Linear-Indexed Sparse Attention), a plug-and-play replacement for self-attention that requires no full pretraining. LISA combines a linear-attention branch for long-range memory with a Lightning Indexer that dynamically selects the most relevant tokens for a sparse self-attention branch. The two branches are fused through a learned gate, so the model retains broad context while focusing computation on informative tokens. We train LISA in two stages. In Stage 1, a linear-attention branch is integrated with sliding-window attention and distilled from a frozen teacher's full-attention distribution. In Stage 2, the Lightning Indexer replaces the static window and is trained with a per-head KL-divergence objective to mimic teacher attention patterns. The resulting model reduces eager-mode self-attention computation from quadratic in sequence length to linear in the number of generated tokens and the selected context budget. Experiments on DeepSeek-distilled Qwen models show that LISA cuts measured eager-mode mean sample latency by 23.9% at 16K context without degrading long-context reasoning quality. Across nine mathematical and code reasoning benchmarks, the gated LISA-1.5B model improves the equal-weight benchmark average by 4.2 percentage points relative to the full-attention baseline.",
+      "identifiers": [
+        "SemanticScholar:c61efb0bf86ba56f6f9ebf8ec851436ea118611f"
+      ],
+      "semantic_scholar_id": "c61efb0bf86ba56f6f9ebf8ec851436ea118611f",
+      "canonical_id": "arXiv:2607.19358",
+      "arxiv_id": "2607.19358",
+      "authors": [
+        "Yu Zhao",
+        "Ze-Kun Zhang",
+        "Fan Jiang",
+        "Bo Zeng",
+        "Xin-Tong Wang",
+        "Chong-Han Liu",
+        "Shimin Shan",
+        "Yi-Chao Du",
+        "Yu Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2要旨は線形注意の長距離記憶とLightning Indexerによる動的疎注意を学習済みゲートで融合し、長いCoTの二乗注意コストを抑制。DeepSeek蒸留Qwenで16K文脈のeager-mode平均サンプル遅延を23.9%削減し長文脈推論品質を維持と報告。推論時の長文脈注意高速化に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Dispatch Overhead, Not Kernel Quality: The Performance Bottleneck in Single-Stream WebGPU LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.08730",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models are increasingly deployed in resource-constrained, single-stream settings, from internet browsers to edge devices, where requests arrive one at a time at batch size 1 rather than in large batches. In this regime, where WebGPU serves as a modern cross-platform standard, per-operation dispatch overhead, rather than kernel compute, can dominate inference cost, yet it remains poorly characterized. In this work, we introduce a sequential-dispatch measurement method and show that naive single-operation measurements overestimate per-dispatch cost by conflating dispatch with synchronization. Using our method, we measure the per-dispatch cost and show that it is independent of data type used. Through a controlled fusion experiment, we show that the dispatch overhead, not kernel quality, is the bottleneck at batch size 1, and isolate the dispatch count as the cause. We conclude that at batch size 1, the effective approach to LLM inference optimization in WebGPU is reducing dispatch count. Our findings point to dispatch amortization, in the inference engines and in the WebGPU specification, as a path to practical browser-based inference.",
+      "identifiers": [
+        "SemanticScholar:bc5ffa38aa24d8bc8da7bfe155f9771884cdc49a"
+      ],
+      "semantic_scholar_id": "bc5ffa38aa24d8bc8da7bfe155f9771884cdc49a",
+      "canonical_id": "arXiv:2608.08730",
+      "arxiv_id": "2608.08730",
+      "authors": [
+        "Jędrzej Maczan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 82,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v3要旨はバッチ1・単一ストリームのWebGPU推論で、同期を混同しない逐次ディスパッチ計測と融合実験により演算器性能よりディスパッチ回数がボトルネックと示す。ブラウザ・エッジのLLM推論エンジンでディスパッチ削減を優先すべきとの直接的な実測知見。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LAM: Efficient Lossy Agent Memory Framework With A Retrieval-Score Error Bound",
+      "source_url": "https://arxiv.org/abs/2609.32256",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agent memory grows as agents read inputs, reason, and call tools. Longer histories increase inference cost and eventually exceed the context window. LLM-based summarization reduces this history but adds latency and provides no explicit bound on information loss. We propose LAM, a Lossy Agent Memory system with three components: a deterministic deduplication rule with a substitution bound on retrieval scores - a bound on score perturbation, not a certificate of unchanged ranking; a memory manager that preserves the cached prefix and overlaps compaction with inference; and a performance model that estimates compaction costs before deployment. On 600 agent trajectories, LAM removes 22.47% of observation tokens while retaining 99.984% of the measured gold-patch evidence. At a fixed deletion set, the performance model predicts a 71.4x-91.6x end-to-end speedup from removing records before prefill instead of deleting them from a prefilled context. That benefit comes from the schedule rather than the rule and applies to any prefix-preserving test.",
+      "identifiers": [
+        "SemanticScholar:f56c1c2c735de6d7285d7bd7500540bd61e25b5c"
+      ],
+      "semantic_scholar_id": "f56c1c2c735de6d7285d7bd7500540bd61e25b5c",
+      "canonical_id": "arXiv:2609.32256",
+      "arxiv_id": "2609.32256",
+      "authors": [
+        "Bai-Xi Sun",
+        "Le Chen",
+        "Anjir Ahmed Chowdhury",
+        "Xiao-Long Ma",
+        "Chih-Hsuan Yang",
+        "Ming-Ze Xia",
+        "Syed Zawad",
+        "Sheng Di",
+        "R. Kettimuthu",
+        "Hui-Huo Zheng",
+        "Rajeev Thakur",
+        "Venkat Vishwanath",
+        "Feng Yan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はエージェント履歴の重複除去に検索スコア摂動の上限を付け、KV接頭辞を保持したまま推論と圧縮を重畳するLAMを提案。600軌跡で観測トークン22.47%削減、gold-patch証拠99.984%保持を報告。推論前圧縮の速度予測71.4〜91.6倍は固定削除集合でのスケジューリング比較であり、規則自体の高速化とは区別する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-74f35dc55833",
+    "round": "libimp-74f35dc558333c17-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-74f35dc558333c17-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-74f35dc558333c17-pre01.json",
+    "receipt": "sha256:bc9466628fab8ff7c1425919198172cc3bae32ae5ccf2eda90979d583e252339"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-74f35dc55833",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

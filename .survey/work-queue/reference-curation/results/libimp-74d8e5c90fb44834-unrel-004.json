@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-74d8e5c90fb44834-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.13812",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.13812",
+    "identity_tokens": [
+      "arXiv:2507.13812"
+    ],
+    "reason": "Remote-sensing foundation model training/parameter utilization, not LLM serving.",
+    "first_checked_at": "2026-10-05T12:56:03+00:00",
+    "last_checked_at": "2026-10-05T12:56:03+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+    ],
+    "title": "SkySense V2: A Unified Foundation Model for Multi-Modal Remote Sensing"
+  },
+  "processed_at": "2026-10-05T12:56:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-74d8e5c90fb4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

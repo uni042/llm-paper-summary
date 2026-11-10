@@ -1,0 +1,200 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-2300-scheduled-chat-00/r02",
+  "reference_main_sha": "ff6ee3508f82c9dc0df28ab30cb461f0366a3e9b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.42066",
+      "identity_tokens": [
+        "arXiv:2610.42066"
+      ],
+      "title": "The Knowledge Layer Model (KLM): Evidence-Visible AI Output, Routing Diagnostics, and Negative Results",
+      "reason": "推論記録へversioned evidence relationとunknownを明示する仕様KLMを提案し、実装例SEDIMでrouting分類137/150件、legacy packingでgoldを含むtextが118/221件失われたのに対し修正版では221/221件保持したと報告。ただし後者は正解率でなく文字列保持の計測で、推論エンジンの性能改善は実証していない。出力検証とrouting診断は隣接領域としてborderline。",
+      "source_url": "https://arxiv.org/abs/2610.42066",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:13:29+09:00",
+      "last_checked_at": "2026-11-02T23:13:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41072",
+      "identity_tokens": [
+        "arXiv:2610.41072"
+      ],
+      "title": "LanG 2.0: Energy-Efficient Agentic AI for Semi-Automated Security Operations at Scale",
+      "reason": "セキュリティ運用のalert分類・rule作成を小型ローカルモデルへ移し、entity相関・人手承認・改竄耐性台帳を併用するagenticシステム。Claude Opus 5.5との比較で特定検出条件で少なくとも650倍の省エネルギー、alert分類とrule作成で5.6〜59倍の省エネルギーを報告。小型モデルへの処理委譲は推論費用に関連するがSOC用途固有で汎用LLM serving最適化ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41072",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:13:29+09:00",
+      "last_checked_at": "2026-11-02T23:13:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41453",
+      "identity_tokens": [
+        "arXiv:2610.41453"
+      ],
+      "title": "Evidence-Guided Recovery for AI Agents with Ambiguous Tool Outcomes and Partial Execution",
+      "reason": "tool timeout時に未確定の実行結果を公開証拠・権限・依存関係から絞り込む回復plannerとeffect-history adjudicatorを提案。19 task familyの58ペア比較で完了認証30件対9件、提案数272対399と報告。agent workflowの再試行回数と安全な実行継続には関連するがLLMモデル推論のGPU時間・KV・サービング資源の最適化は対象外でborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41453",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:13:29+09:00",
+      "last_checked_at": "2026-11-02T23:13:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41009",
+      "identity_tokens": [
+        "arXiv:2610.41009"
+      ],
+      "title": "STAR: Steering Action Representations during Inference",
+      "reason": "VLAモデルの後段residual updateに指数移動平均を適用し、過去のproprioceptive stateで混合強度を調節する学習不要の推論時action表現修正。ロボット操作benchmarkで平均成功率4.0ポイント向上と報告。推論時処理の変更だが目的は視覚接地と行動品質でありレイテンシ・FLOPs・メモリ改善の記載がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41009",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:13:29+09:00",
+      "last_checked_at": "2026-11-02T23:13:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41172",
+      "identity_tokens": [
+        "arXiv:2610.41172"
+      ],
+      "title": "Context as Infrastructure: Knowledge Compilation for Retrieval in Agentic Systems with Harnesses",
+      "reason": "RAG agentが繰り返す検索・再読込でcontext tokenを浪費する問題に対し、文書をclaim-evidence leaf付きnavigation treeへ事前コンパイルし、十分な根拠がある場合にcontextへ注入する。必要な場合のquery tokenを91%削減し、十分でない場合は1.9%増、平均38%削減と報告。decision gateでlatencyを140秒から30秒へ短縮したが追加retrieval roundの費用もある。LLM agent推論時のtoken・latency最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.41172",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:13:29+09:00",
+      "last_checked_at": "2026-11-02T23:13:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41564",
+      "identity_tokens": [
+        "arXiv:2610.41564"
+      ],
+      "title": "Verify--Backtrack Loop: Structured Precondition Recovery for Long-Horizon Language Agents",
+      "reason": "ReAct型agentへgoal stackと二段階の前提検証を追加し、goal activationや実行失敗時にPush/Pop/retry/BacktrackToで計画状態を修正する。Qwen3.5-9B、GPT-4o、DeepSeek-V3.2でAppWorldなどを評価し、AppWorldでReAct比最大22.07ポイントの成功率改善。制御フローの効率に隣接するがtoken費用・GPU latency・serving throughputの改善は要旨にないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41564",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:13:29+09:00",
+      "last_checked_at": "2026-11-02T23:13:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41432",
+      "identity_tokens": [
+        "arXiv:2610.41432"
+      ],
+      "title": "Hybrid Computer Use: A Unified Programmatic, Semantic, and Visual Interface for General Agents",
+      "reason": "コンピュータ操作agentへprogrammatic・アクセシビリティ(AX)・GUIの3チャネルを統合し、AX観測を小型化、操作をbatch化、差分のみ返すことでモデルへの往復を減らす。チャネル切替時のstale stateも保護し、OSWorld 2.0で比較対象よりtask successと効率が高いと報告。推論モデルを変えずagent実行のtool roundtrip・観測context費用を減らす実行基盤の直接改善としてaccept。ただし要旨に定量token削減率はない。",
+      "source_url": "https://arxiv.org/abs/2610.41432",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:13:29+09:00",
+      "last_checked_at": "2026-11-02T23:13:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41025",
+      "identity_tokens": [
+        "arXiv:2610.41025"
+      ],
+      "title": "ReplayRCA: Measuring Post-hoc Diagnosis and Live Oversight of Agent Failures by Counterfactual Replay",
+      "reason": "失敗したagent trajectoryを途中状態へ戻して診断者の単一修正行動を再実行し、placeboと比較するcounterfactual replay benchmark。62件の系統的失敗で最良診断モデルのcausal repairは+51.3ポイント、live oversightでは小型モデルが上位に入ると報告。agent実行監視・失敗回復の選択に有用だが推論資源削減を目的とした方式でなくbenchmarkが主貢献なのでborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:13:29+09:00",
+      "last_checked_at": "2026-11-02T23:13:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41129",
+      "identity_tokens": [
+        "arXiv:2610.41129"
+      ],
+      "title": "When Should AI Agents Ask? Clarification Requests Under Limited Human Attention",
+      "reason": "複数agentが共有する人間の確認待ちを、search・質問・独立作業継続の選択を含む動的計画として定式化。2 task問題からpairwise coordination policyを組み、864 synthetic caseで最適費用との差0.07%、標準3方策比18〜31%の費用削減を報告。agent workflowの外部待ち時間と調整費用を削減するがLLM推論計算・メモリ・サービングの最適化は直接扱わずborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41129",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:13:29+09:00",
+      "last_checked_at": "2026-11-02T23:13:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41604",
+      "identity_tokens": [
+        "arXiv:2610.41604"
+      ],
+      "title": "Real Computation or Merely Naming? A Pre-Registered Mechanism Audit of 25 Cognitive-Architecture Modules in an LLM-Based Agent System",
+      "reason": "LLM agentの25認知機構モジュールが実際にproduction outputへ寄与するかを静的call-chain監査と介入実験で検証し、18/25モジュールが出力へ未接続と報告。修復でplanner成功率が0.028から1.000へ上昇するが、主貢献は機構名と実装の整合性監査でありLLM推論速度・メモリ階層・量子化・servingスケジューリングの技術を扱わないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41604",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:13:29+09:00",
+      "last_checked_at": "2026-11-02T23:13:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

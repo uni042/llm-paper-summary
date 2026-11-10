@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-719f2b08c3350705-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/978-3-319-49487-6_4",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/978-3-319-49487-6_4",
+    "identity_tokens": [
+      "DOI:10.1007/978-3-319-49487-6_4",
+      "arXiv:1311.3144"
+    ],
+    "reason": "グラフ分割アルゴリズム、マルチレベル法、局所探索等を整理するアルゴリズム研究で、LLM分散推論やモデル分割を直接対象としない。",
+    "first_checked_at": "2026-10-03T17:47:42+00:00",
+    "last_checked_at": "2026-10-03T17:47:42+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+    ],
+    "title": "Recent Advances in Graph Partitioning"
+  },
+  "processed_at": "2026-10-03T17:47:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-719f2b08c335",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

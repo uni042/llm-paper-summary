@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "ca00a6b17a7b4c10baaeed179a4b91826cc194707e6f49e208a9036826c44b7d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-16817b88a616--libfile_4a36be9345a08191a9134c037f084c14--2024-2408.15518-squid-formerly-dolphin-long-context-research-20261023-1430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2408.15518",
+  "worker_completed_at": "2026-10-23T14:37:29+09:00",
+  "worker_run_key": "20261023-1430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5607,
+    "body_paragraphs": 36,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 161,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 161 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 161 < 500"
+  ],
+  "processed_at": "2026-10-23T17:21:12+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ed402d6a701bbe9-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1906.00300",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1906.00300",
+    "identity_tokens": [
+      "DOI:10.18653/v1/p19-1612",
+      "arXiv:1906.00300",
+      "id:arXiv:1906.00300",
+      "url:https://arxiv.org/abs/1906.00300"
+    ],
+    "reason": "retrieverとreaderを弱教師付きで共同学習するopen-domain QA研究で、RAG/LLM推論servingのruntime効率化ではない。",
+    "first_checked_at": "2026-10-04T22:16:24+00:00",
+    "last_checked_at": "2026-10-04T22:53:06+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Latent Retrieval for Weakly Supervised Open Domain Question Answering"
+  },
+  "processed_at": "2026-10-04T22:53:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ed402d6a701",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

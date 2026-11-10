@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-09a69aca8f35bdfc-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.14735",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.14735",
+    "identity_tokens": [
+      "arXiv:2310.14735"
+    ],
+    "reason": "chain-of-thought、self-consistency、generated knowledge、VLM prompt等のprompt engineeringを整理するreview。モデル能力・security・prompt評価が主題で、推論runtime・serving最適化ではない。",
+    "first_checked_at": "2026-10-05T02:57:03+00:00",
+    "last_checked_at": "2026-10-05T02:57:03+00:00",
+    "linked_from": [],
+    "title": "Unleashing the potential of prompt engineering in Large Language Models: a comprehensive review"
+  },
+  "processed_at": "2026-10-05T02:57:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-09a69aca8f35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

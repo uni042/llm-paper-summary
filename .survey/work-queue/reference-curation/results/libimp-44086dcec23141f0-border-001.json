@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-44086dcec23141f0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.18706",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.18706",
+    "identity_tokens": [
+      "arXiv:2512.18706"
+    ],
+    "reason": "X-Talkは音声区間検出・音声強調・音声認識・感情/環境音分析とLLMの検索拡張生成やツール使用を疎結合に組み合わせ、カスケード式音声対話で1秒未満の遅延を目指すオープンソース枠組みである。低遅延の実行パイプライン設計は推論システムに接するが、一次要旨の主眼は音声対話機能のモジュール統合とエンドツーエンド音声モデルとの比較であり、LLMのGPUスケジューリングやKVメモリの効率化を直接主張しない。システム境界の研究として保留する。",
+    "first_checked_at": "2026-10-12T17:45:21+00:00",
+    "last_checked_at": "2026-10-12T17:45:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System"
+  },
+  "processed_at": "2026-10-12T17:45:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-44086dcec231",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

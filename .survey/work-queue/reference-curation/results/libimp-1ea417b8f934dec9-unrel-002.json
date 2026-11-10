@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1ea417b8f934dec9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.16936",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.16936",
+    "identity_tokens": [
+      "arXiv:2602.16936"
+    ],
+    "reason": "The full text proposes heterogeneous federated fine-tuning via parallel low-rank adaptation; its results concern training efficiency and convergence, not inference-time resource use.",
+    "first_checked_at": "2026-10-07T11:40:39+00:00",
+    "last_checked_at": "2026-10-07T11:40:39+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "Heterogeneous Federated Fine-Tuning with Parallel One-Rank Adaptation"
+  },
+  "processed_at": "2026-10-07T11:40:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1ea417b8f934",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

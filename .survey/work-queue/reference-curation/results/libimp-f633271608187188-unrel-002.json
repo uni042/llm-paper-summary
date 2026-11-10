@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f633271608187188-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/cisat71030.2026.11682059",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/cisat71030.2026.11682059",
+    "identity_tokens": [
+      "DOI:10.1109/cisat71030.2026.11682059"
+    ],
+    "reason": "The paper quantizes AlexNet for image classification; it does not concern language-model inference or serving.",
+    "first_checked_at": "2026-10-05T10:58:56+00:00",
+    "last_checked_at": "2026-10-05T10:58:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md",
+      "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+    ],
+    "title": "Lightweight AlexNet Image Classification Based on KL Divergence INT8 Quantization"
+  },
+  "processed_at": "2026-10-05T10:58:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f63327160818",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

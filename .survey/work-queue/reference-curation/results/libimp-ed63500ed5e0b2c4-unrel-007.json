@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed63500ed5e0b2c4-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.14624",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.14624",
+    "identity_tokens": [
+      "arXiv:2403.14624"
+    ],
+    "reason": "MathVerseは2,612問を6種の情報条件へ変換した15K sampleのvisual math benchmarkとCoT評価法でMLLMの図理解・推論品質を測る評価研究。推論runtime・serving効率化を扱わない。",
+    "first_checked_at": "2026-10-05T00:48:09+00:00",
+    "last_checked_at": "2026-10-05T16:43:48+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+    ],
+    "title": "MathVerse: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems?"
+  },
+  "processed_at": "2026-10-05T16:43:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed63500ed5e0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

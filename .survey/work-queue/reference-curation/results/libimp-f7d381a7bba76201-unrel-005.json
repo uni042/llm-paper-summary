@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7d381a7bba76201-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.21082",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.21082",
+    "identity_tokens": [
+      "arXiv:2606.21082"
+    ],
+    "reason": "Primary abstract reviewed: Multi-turn jailbreaks can evade turn-level moderation by spreading unsafe intent across a dialogue through gradual escalation, reframing, and role manipulation. We address multi-turn jailbreak detection as a conversation-level classification problem and introduce an efficient hierarchical detector that avoids expensive long-context concatenation while retaining cross-turn reaso… This is a multi-turn jailbreak detection/classification, not inference efficiency.",
+    "first_checked_at": "2026-10-05T11:54:30+00:00",
+    "last_checked_at": "2026-10-05T11:54:30+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "Scalable Hierarchical Attention Transformers for Multi-Turn Jailbreak Detection in Long Conversations"
+  },
+  "processed_at": "2026-10-05T11:54:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7d381a7bba7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

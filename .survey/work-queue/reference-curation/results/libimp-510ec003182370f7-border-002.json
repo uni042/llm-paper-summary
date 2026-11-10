@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-510ec003182370f7-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.23014",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.23014",
+    "identity_tokens": [
+      "arXiv:2601.23014"
+    ],
+    "reason": "Read the primary reward-densification method and evaluation. Mem-T is a training/reward method for long-horizon memory agents; its paper plots performance against inference cost, but its proposed change is reward shaping rather than an inference-cost mechanism, leaving only a weak indirect link to the agent-memory efficiency lineage.",
+    "first_checked_at": "2026-10-07T09:49:42+00:00",
+    "last_checked_at": "2026-10-07T09:49:42+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mem-T: Densifying Rewards for Long-Horizon Memory Agents"
+  },
+  "processed_at": "2026-10-07T09:49:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-510ec0031823",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

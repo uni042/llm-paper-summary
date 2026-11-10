@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-fc01396d67554c16-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2506.10911",
+  "reason": "Training large language models is generally done on clusters containing thousands of accelerators, communicating over a high-bandwidth interconnect. Scaling up these clusters is expensive and can become impractical, imposing limits on the size of models that can be trained. Several recent studies have proposed training methods that are less communication intensive, avoiding the need for compute clusters with extremely high interconnect speeds. These low communication training methods still employ a global synchronization step for model parameters, which can be too costly with a high number of participants, as the communication cost scales quadratically with group size. In this work, we propose a novel optimization method, NoLoCo, that does not explicitly synchronize all model parameters during training and does not require any collective communication. NoLoCo implicitly synchronizes model weights via a novel variant of the Nesterov momentum optimizer by partially averaging model weights within randomly selected subgroups. We provide both a theoretical convergence analysis of our optimizer and empirical results from language model training. Our method requires significantly less communication than fully sharded data parallel training and DiLoCo, a widely used low-communication baseline. Moreover, our method avoids global blocking communication, thereby reducing accelerator idle time. Our experiments show that NoLoCo is more communication-efficient than DiLoCo, improving final perplexity by up to $4\\%$ and converging up to $4\\times$ faster in wall-clock time across a range of worker counts, model sizes, and communication bandwidths.",
+  "title": "NoLoCo: No-all-reduce Low Communication Training Method for Large Models",
+  "identity_tokens": [
+    "arXiv:2506.10911"
+  ],
+  "linked_from": [
+    "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc01396d6755",
+  "source_precheck_request_id": null
+}

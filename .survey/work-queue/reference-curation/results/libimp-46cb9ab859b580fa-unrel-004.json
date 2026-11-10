@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-46cb9ab859b580fa-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.06080",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.06080",
+    "identity_tokens": [
+      "arXiv:2606.06080"
+    ],
+    "reason": "arXiv abstract: MaxPO studies policy-gradient advantage estimators for pass@K/max@K post-training objectives; its quadratic-time estimator is for training optimization, not model inference.",
+    "first_checked_at": "2026-10-07T11:40:44+00:00",
+    "last_checked_at": "2026-10-07T11:40:44+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "On Advantage Estimates for Max@K Policy Gradients"
+  },
+  "processed_at": "2026-10-07T11:40:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-46cb9ab859b5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

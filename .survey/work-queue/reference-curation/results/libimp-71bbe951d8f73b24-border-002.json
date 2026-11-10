@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-71bbe951d8f73b24-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.06594",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.06594",
+    "identity_tokens": [
+      "arXiv:2503.06594"
+    ],
+    "reason": "一次要旨ではLLMを機械翻訳のエンコーダに転用し従来の翻訳デコーダを維持する。翻訳品質を保ちながら推論2.4～6.5倍高速化とKVキャッシュ75%削減を報告し、推論効率に直接的な接点がある。一方、汎用LLMサービングのスケジューリングやKVオフロードではなく翻訳特化のモデル構成・適応が主題であるため、本文読解前の暫定分類としてborderlineとする。",
+    "first_checked_at": "2026-10-23T08:42:56+00:00",
+    "last_checked_at": "2026-10-23T08:42:56+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Decoder-only: Large Language Models Can be Good Encoders for Machine Translation"
+  },
+  "processed_at": "2026-10-23T08:42:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-71bbe951d8f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

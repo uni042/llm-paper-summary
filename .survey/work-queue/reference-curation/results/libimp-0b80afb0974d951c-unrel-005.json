@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b80afb0974d951c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.26620",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.26620",
+    "identity_tokens": [
+      "arXiv:2606.26620"
+    ],
+    "reason": "Primary abstract reviewed: Sparse autoencoders (SAEs) have emerged as a powerful tool for decomposing superposed language model representations into sparse and interpretable features. However, training SAEs is computationally expensive, and available open-source SAE models remain limited. In this work, we introduce \\textbf{Qwen3-Instruct SAE}, a comprehensive suite of SAEs trained on the Qwen3 instruction-tuned model family, covering Qwen3-1.7… Out of scope: Sparse-autoencoder training and interpretability study.",
+    "first_checked_at": "2026-10-05T11:41:59+00:00",
+    "last_checked_at": "2026-10-05T11:41:59+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+    ],
+    "title": "Discovering Millions of Interpretable Features with Sparse Autoencoders"
+  },
+  "processed_at": "2026-10-05T11:42:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b80afb0974d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

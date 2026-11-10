@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b2899245ffe170a1-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1088/2631-8695/aeaacb",
+  "reason": "The rapid growth of electric-vehicle (EV) charging infrastructure increases the need for accurate short-term occupancy forecasting. Existing methods mainly rely on historical numerical signals and often represent weather as raw physical variables, which may fail to capture the behavioral implications of adverse conditions such as heavy rain or strong wind. This paper proposes WeMamba, a weather-semantic spatiotemporal forecasting framework for EV charging occupancy prediction. WeMamba converts historical meteorological observations into natural-language prompts and encodes them with a frozen GPT-2 backbone to obtain semantic weather representations. The weather semantics are adaptively aligned with occupancy and price features, propagated over the charging graph, and modeled by a dual-path Mamba encoder that captures both short-window spectral fluctuations and temporal dynamics. Experiments on the Shenzhen EV charging dataset show that WeMamba achieves the best average RMSE and MAE among 18 baselines, with a 19.18% average MAE reduction over the strongest competing method. Ablation studies further confirm the effectiveness of weather-semantic encoding, graph propagation, and dual-path temporal modeling.",
+  "title": "Multimodal semantic weather-aware Mamba: a dual-path framework for EV charging occupancy forecasting",
+  "identity_tokens": [
+    "DOI:10.1088/2631-8695/aeaacb"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b2899245ffe1",
+  "source_precheck_request_id": null
+}

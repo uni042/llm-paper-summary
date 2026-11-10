@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Multi-Objective Scheduling for Large Language Model Inference with Prompt-Level Cost Prediction and SLO Awareness",
+      "source_url": "https://doi.org/10.1109/CISCE69494.2026.11504731",
+      "year": 2026,
+      "published": "2026-03-27",
+      "venue": "2026 IEEE 8th International Conference on Communications, Information System and Computer Engineering (CISCE)",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference in multitenant clouds is becoming an increasingly important contributor to data-center carbon emissions, yet existing carbon-aware scheduling techniques target long-running training jobs and are illsuited for the short, bursty, SLO-sensitive nature of online serving. We propose CAPS (Carbon-Aware Prompt Scheduling), an online bi-objective scheduler that jointly optimizes goodput and perrequest carbon cost for multi-tenant LLM inference. CAPS first employs a lightweight prompt complexity predictor to estimate token generation cost and latency risk for each incoming request. It then combines real-time grid carbon intensity, GPU energy profiles, and per-tenant SLO tiers to route each request to one of three execution pools: a low-latency pool, a low-carbon pool, or a delay-tolerant batch pool. A composite reward function balances goodput, carbon emissions, and SLO violation rate. In trace-driven simulations using public conversation traces and regional carbon intensity data, CAPS reduces average carbon emissions per $\\mathbf{1 K}$ generated tokens by 26.8 % compared to round-robin scheduling while achieving an SLO attainment rate that matches or exceeds a dedicated SLO-aware baseline.",
+      "identifiers": [
+        "SemanticScholar:58e9ca37d0677b43f4558d5c3fbc62e0d89c73f8"
+      ],
+      "semantic_scholar_id": "58e9ca37d0677b43f4558d5c3fbc62e0d89c73f8",
+      "doi": "10.1109/CISCE69494.2026.11504731",
+      "canonical_id": "DOI:10.1109/CISCE69494.2026.11504731",
+      "authors": [
+        "Jiajing Liao",
+        "Feng Chang",
+        "Yihan Xue",
+        "Tian Xia",
+        "Zeyu Huang",
+        "Yuxiao Wang"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 217,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE出版社一次要旨でCAPSのprompt複雑度予測、グリッド炭素強度、GPUエネルギー、SLOに応じた3実行プールへのルーティングを確認。公開トレースに基づくシミュレーションで1,000生成token当たり平均炭素排出26.8%減、SLO達成率は比較法以上。実運用計測ではない。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Bielik-Q2-Sharp: A Comparative Study of Extreme 2-bit Quantization Methods for a Polish 11B Language Model",
+      "source_url": "https://arxiv.org/abs/2603.04162",
+      "year": 2026,
+      "published": "2026-03-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Bielik-Q2-Sharp, the first systematic academic evaluation of extreme 2-bit quantization applied to a Polish large language model. Using Bielik-11B-v2.3-Instruct (11B parameters, Mistral architecture) as our base model, we compare six state-of-the-art post-training quantization methods -- QuIP#, SpinQuant+GPTQ, ButterflyQuant, QTIP, VPTQ, and AQLM -- all calibrated on a Polish-language corpus (CulturaX-PL) with shared Hessian matrices. Our best variant (QuIP# E8P12) achieves 71.92% across 22 Polish benchmarks versus 72.07% for the IQ2_XXS baseline -- within statistical noise, at a modest size premium (3.26 GB vs. ~2.6 GB). On eq_bench, our method scores 47.14 versus 43.53 (+3.6pp), suggesting superior preservation of higher-order reasoning. QTIP achieves the best per-bit efficiency (79.4% MC acc_norm at ~2.4 bpw, 3.27 GB), matching VPTQ's quality at 35% smaller size. We additionally document a MC-generation dissociation phenomenon where rotation-based methods preserve log-likelihood quality but fail catastrophically at autoregressive generation. The entire project was conducted by a single independent researcher on cloud GPUs (vast.ai) within a $285 budget. All models, Hessians, and evaluation logs are publicly available.",
+      "identifiers": [
+        "SemanticScholar:e346cc4f590fde9366629370de9f772ea11c1239"
+      ],
+      "semantic_scholar_id": "e346cc4f590fde9366629370de9f772ea11c1239",
+      "canonical_id": "arXiv:2603.04162",
+      "arxiv_id": "2603.04162",
+      "doi": "10.48550/arXiv.2603.04162",
+      "authors": [
+        "Jakub Prejzner"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 240,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Bielik-11Bを対象にQuIP#、SpinQuant+GPTQ、ButterflyQuant、QTIP、VPTQ、AQLMの極低ビット量子化を比較。QuIP# E8P12の22課題平均71.92%とIQ2_XXSの72.07%、モデル容量3.26GBと約2.6GB、自己回帰生成の崩壊例を一次要旨で確認。推論品質と容量の直接的な比較であり、推論時間の改善は未確認。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Hierarchical Document Refinement for Long-context Retrieval-augmented Generation",
+      "source_url": "https://arxiv.org/abs/2505.10413",
+      "year": 2025,
+      "published": "2025-05-15",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 33,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Real-world RAG applications often encounter long-context input scenarios, where redundant information and noise results in higher inference costs and reduced performance. To address these challenges, we propose LongRefiner, an efficient plug-and-play refiner that leverages the inherent structural characteristics of long documents. LongRefiner employs dual-level query analysis, hierarchical document structuring, and adaptive refinement through multi-task learning on a single foundation model. Experiments on seven QA datasets demonstrate that LongRefiner achieves competitive performance in various scenarios while using 10x fewer computational costs and latency compared to the best baseline. Further analysis validates that LongRefiner is scalable, efficient, and effective, providing practical insights for real-world long-text RAG applications. Our code is available at https://github.com/ignorejjj/LongRefiner.",
+      "identifiers": [
+        "SemanticScholar:a71c99d3836007721e8e6194f9c52f17ca77187d"
+      ],
+      "semantic_scholar_id": "a71c99d3836007721e8e6194f9c52f17ca77187d",
+      "canonical_id": "arXiv:2505.10413",
+      "arxiv_id": "2505.10413",
+      "doi": "10.48550/arXiv.2505.10413",
+      "authors": [
+        "Jiajie Jin",
+        "Xiaoxi Li",
+        "Guan-Ting Dong",
+        "Yu-Yao Zhang",
+        "Yutao Zhu",
+        "Yongkang Wu",
+        "Zhonghua Li",
+        "Qi Ye",
+        "Zhi-Cheng Dou"
+      ],
+      "priority": 43,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 33,
+        "citation_count": 33,
+        "total": 43,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 533,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "LongRefinerは二段階クエリ分析、文書の階層化、適応的な文書精製を組み合わせ、RAGの長い入力を圧縮。7つのQAデータセットで最良比較法に対して約10分の1の計算コスト・遅延を報告。モデル内部KV削減ではなく、生成前の文脈・入力トークン削減に分類。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Binary and Ternary Natural Language Generation",
+      "source_url": "https://arxiv.org/abs/2306.01841",
+      "year": 2023,
+      "published": "2023-06-02",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Ternary and binary neural networks enable multiplication-free computation and promise multiple orders of magnitude efficiency gains over full-precision networks if implemented on specialized hardware. However, since both the parameter and the output space are highly discretized, such networks have proven very difficult to optimize. The difficulties are compounded for the class of transformer text generation models due to the sensitivity of the attention operation to quantization and the noise-compounding effects of autoregressive decoding in the high-cardinality output space. We approach the problem with a mix of statistics-based quantization for the weights and elastic quantization of the activations and demonstrate the first ternary and binary transformer models on the downstream tasks of summarization and machine translation. Our ternary BART base achieves an R1 score of 41 on the CNN/DailyMail benchmark, which is merely 3.9 points behind the full model while being 16x more efficient. Our binary model, while less accurate, achieves a highly non-trivial score of 35.6. For machine translation, we achieved BLEU scores of 21.7 and 17.6 on the WMT16 En-Ro benchmark, compared with a full precision mBART model score of 26.8. We also compare our approach in the 8-bit activation setting, where our ternary and even binary weight models can match or outperform the best existing 8-bit weight models in the literature. Our code and models are available at: https://github.com/facebookresearch/Ternary_Binary_Transformer.",
+      "identifiers": [
+        "SemanticScholar:1cea4b269fb2d6a79c5a28af3ecf11a839663aa6"
+      ],
+      "semantic_scholar_id": "1cea4b269fb2d6a79c5a28af3ecf11a839663aa6",
+      "canonical_id": "arXiv:2306.01841",
+      "arxiv_id": "2306.01841",
+      "doi": "10.48550/arXiv.2306.01841",
+      "authors": [
+        "Ze-Chun Liu",
+        "Barlas Oğuz",
+        "Aasish Pappu",
+        "Yangyang Shi",
+        "Raghuraman Krishnamoorthi"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1246,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "重みの統計的量子化と活性のelastic quantizationで二値・三値Transformerのテキスト生成を実現。三値BART-baseのCNN/DailyMail R1は41で全精度との差3.9、理論的効率は16倍と報告。専用ハードウェアを前提とする効率見積りであり、一般GPU上の実測TPSとは区別する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Empirical Analysis of Small Language Model Quantization for CPU-Only Cloud Infrastructure",
+      "source_url": "https://doi.org/10.1109/COLCOM71387.2026.11703501",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "2026 IEEE Colombian Conference on Communications and Computing (COLCOM)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) grow in complexity, the hardware required to serve them often exceeds the capabilities of standard cloud instances and edge devices. This article investigates the efficacy of Small Language Models (SLMs) specifically Llama 3.2 (1B) and Qwen 2.5 (1.5B) as cost-effective alternatives when paired with modern quantization techniques. By conducting empirical benchmarks on Google Colab’s CPU-only infrastructure, we evaluate the trade-offs between 4-bit (Q4_K_M) and 8-bit (Q8_0) integer quantization against a high-precision baseline. Our results demonstrate that 4-bit quantization on a standard CPU provides up to a 120% increase in inference throughput for 1.5B parameter models compared to 8-bit variants, while maintaining a negligible system RAM footprint (under 1GB). This study identifies the “sweet spot” for local and restricted-resource AI deployment, proving that aggressive quantization of SLMs enables real-time, scalable AI performance on general-purpose hardware without the necessity for dedicated GPU acceleration.",
+      "identifiers": [
+        "SemanticScholar:636902bae0f83a4963f73167ce23d8543e07d525"
+      ],
+      "semantic_scholar_id": "636902bae0f83a4963f73167ce23d8543e07d525",
+      "doi": "10.1109/COLCOM71387.2026.11703501",
+      "canonical_id": "DOI:10.1109/COLCOM71387.2026.11703501",
+      "authors": [
+        "J. Sciammarelli"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者公開TechRxiv一次プレプリントでLlama 3.2 1BとQwen 2.5 1.5BのCPU-only推論をQ4_K_M/Q8_0と高精度で比較。1.5Bの4bitが8bit比で最大120%のthroughput増と報告。小規模モデル・限定環境での結果であり、GPUや大規模LLMへ一般化しない。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f8a6c34e39bb",
+    "round": "libimp-f8a6c34e39bb4b2a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f8a6c34e39bb4b2a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f8a6c34e39bb4b2a-pre01.json",
+    "receipt": "sha256:03dfcdee591889c75ed94dcea55e087570a41320622a751684eb41d897a2cc7b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f8a6c34e39bb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

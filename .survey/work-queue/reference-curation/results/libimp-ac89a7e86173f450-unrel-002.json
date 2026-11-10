@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ac89a7e86173f450-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2004.14769",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2004.14769",
+    "identity_tokens": [
+      "arXiv:2004.14769"
+    ],
+    "reason": "一次要旨はaspect term extractionのためのconditional augmentationとmasked seq2seq generationを提案するタスク特化NLP研究。LLM推論効率の評価ではない。",
+    "first_checked_at": "2026-10-05T01:47:39+00:00",
+    "last_checked_at": "2026-10-05T01:47:39+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2512.18425-moe-pathfinder-trajectory-pruning.md"
+    ],
+    "title": "Conditional Augmentation for Aspect Term Extraction via Masked Sequence-to-Sequence Generation"
+  },
+  "processed_at": "2026-10-05T01:47:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ac89a7e86173",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

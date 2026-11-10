@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c3b742b4a55fec8b-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.12360",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.12360",
+    "identity_tokens": [
+      "arXiv:2512.12360"
+    ],
+    "reason": "VideoARM uses hierarchical memory and clears tool context to reduce context overflow, but evaluates video reasoning quality without KV/serving latency results.",
+    "first_checked_at": "2026-10-06T04:49:43+00:00",
+    "last_checked_at": "2026-10-06T04:49:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding"
+  },
+  "processed_at": "2026-10-06T04:49:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c3b742b4a55f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

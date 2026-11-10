@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27476e3d184bc0ec-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tmi.2019.2934577",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tmi.2019.2934577",
+    "identity_tokens": [
+      "DOI:10.1109/tmi.2019.2934577"
+    ],
+    "reason": "一次IEEE DOI URLが取得経路上accessibleでなく、primary abstract/full textを確認できない。タイトルだけから分類しない。",
+    "first_checked_at": "2026-10-05T01:31:05+00:00",
+    "last_checked_at": "2026-10-05T01:31:05+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.03243-ranking-before-serving-low-latency-llm-serving-via-pairwise-ranking.md"
+    ],
+    "title": "Multi-Task Deep Model With Margin Ranking Loss for Lung Nodule Analysis"
+  },
+  "processed_at": "2026-10-05T01:31:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27476e3d184b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

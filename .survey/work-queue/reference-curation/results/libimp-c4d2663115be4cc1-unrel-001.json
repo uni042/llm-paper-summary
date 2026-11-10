@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4d2663115be4cc1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.neunet.2026.109469",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.neunet.2026.109469",
+    "identity_tokens": [
+      "DOI:10.1016/j.neunet.2026.109469"
+    ],
+    "reason": "一次書誌・要旨（Neural Networks誌のPubMed登録）を確認。提案は対象ドメインの代表的な専門家を選択してロードし、量子化モデルによる準備段階と専門家切替を伴う微調整を省メモリ化する学習時の専門家選択・更新手順。約50%のメモリ節減は微調整時の指標であり、LLM生成推論時の専門家オフロード、KVキャッシュ、GPUサービング、デコード高速化を直接評価する論文ではないため本推論Researchの対象外。学習サーベイに別途収録するかは専用キューで判断。",
+    "first_checked_at": "2026-10-05T09:23:50+00:00",
+    "last_checked_at": "2026-10-19T00:44:42+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "DR-EFT: Exploring and reloading domain-representative experts for the memory-constrained fine-tuning of MoE large models"
+  },
+  "processed_at": "2026-10-19T00:44:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4d2663115be",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

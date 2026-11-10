@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1d8fdaf61ea566cc-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2508.03320",
+  "reason": "本文のSkywork UniPicは1.5B unified autoregressive vision modelで、1024px画像を15GB未満GPU memoryで生成するとするcompact deployment候補。一方、比較は視覚生成/理解のtask quality中心で、既存LLM inference memory系統への再現可能なefficient inference baselineが弱いためborderline。",
+  "title": "Skywork UniPic: Unified Autoregressive Modeling for Visual Understanding and Generation",
+  "identity_tokens": [
+    "arXiv:2508.03320"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d8fdaf61ea5",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

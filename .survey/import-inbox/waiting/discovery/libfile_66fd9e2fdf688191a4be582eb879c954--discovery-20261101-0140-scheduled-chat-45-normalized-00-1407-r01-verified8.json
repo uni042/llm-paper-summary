@@ -1,0 +1,157 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1407-scheduled-chat-00/r01",
+  "reference_main_sha": "d1468f311feee5a7e88064b608db19014d4c1367",
+  "record_count": 8,
+  "records": [
+    {
+      "canonical_id": "DOI:10.1145/3788149.3788206",
+      "identity_tokens": [
+        "DOI:10.1145/3788149.3788206",
+        "arXiv:2501.08631"
+      ],
+      "title": "SWSC: Compressing Large Language Models via Sharing Weights for Similar Channels",
+      "classification": "accept",
+      "reason": "LLM重みをチャネルごとにK-meansでクラスタ化して代表ベクトルを共有し、復元誤差を低ランクSVDで補償する圧縮。著者公開arXiv前刷りではLlama-2-7Bの注意Q/K射影のみをWikiText-2で評価し、平均2 bitのQ射影でperplexity 7.297、K射影で7.148、Q&Kで10.886と報告。モデル全層の速度改善や生成品質の実運用保証ではなく、主として保存量削減の研究。会議版の著者追加・題名変更があり、同一性はimport inboxで最終照合。",
+      "source_url": "https://arxiv.org/abs/2501.08631",
+      "body_check": "著者arXiv一次全文（Methods、Experiments、Table I）を確認。CSAI 2025掲載版DOIはdblp書誌で確認、掲載版全文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 92; 2026-10-31 main fixed d1468f311feee5a7e88064b608db19014d4c1367"
+      ],
+      "worklist_rank": 92,
+      "first_checked_at": "2026-10-31T14:07:57+09:00",
+      "last_checked_at": "2026-10-31T14:07:57+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.21437/Interspeech.2024-2022",
+      "identity_tokens": [
+        "DOI:10.21437/Interspeech.2024-2022"
+      ],
+      "title": "Sign Value Constraint Decomposition for Efficient 1-Bit Quantization of Speech Translation Tasks",
+      "classification": "borderline",
+      "reason": "音声翻訳のencoder-decoderモデルを符号行列と2つの学習ベクトルで1-bit量子化し知識蒸留で品質を補う。推論時モデル縮小に関連するが、主対象はspeech translationで、一般的な生成LLMのサービング・デコード高速化を直接検証していない。Interspeech公式原著ではデコーダ注意の量子化が特に性能に敏感と述べる。",
+      "source_url": "https://www.isca-archive.org/interspeech_2024/chen24v_interspeech.html",
+      "body_check": "Interspeech公式要旨と公式PDFの要旨・結果記述を確認。",
+      "linked_from": [
+        "WORKLIST-00.md rank 107; 2026-10-31 main fixed d1468f311feee5a7e88064b608db19014d4c1367"
+      ],
+      "worklist_rank": 107,
+      "first_checked_at": "2026-10-31T14:07:57+09:00",
+      "last_checked_at": "2026-10-31T14:07:57+09:00"
+    },
+    {
+      "canonical_id": "SemanticScholar:dad1164d87e0cbea2b1bf8932a15b8499bba68b2",
+      "identity_tokens": [
+        "SemanticScholar:dad1164d87e0cbea2b1bf8932a15b8499bba68b2",
+        "URL:https://www.usenix.org/conference/atc24/presentation/qiu"
+      ],
+      "title": "Power-aware Deep Learning Model Serving with μ-Serve",
+      "classification": "borderline",
+      "reason": "GPU動作周波数制御とモデル配置・バッチ化・スケジューリングを共同最適化し、SLOを満たしつつ電力を1.2～2.6倍節約するというUSENIX ATC 2024論文。サービング資源効率の直接研究だが、評価は複数の一般DNNモデルの混載であり生成LLM固有のprefill/decode・KV cache問題を主対象にしていないためborderline。",
+      "source_url": "https://www.usenix.org/conference/atc24/presentation/qiu",
+      "body_check": "USENIX ATC 2024公式要旨・書誌と著者公開資料を確認。",
+      "linked_from": [
+        "WORKLIST-00.md rank 129; 2026-10-31 main fixed d1468f311feee5a7e88064b608db19014d4c1367"
+      ],
+      "worklist_rank": 129,
+      "first_checked_at": "2026-10-31T14:07:57+09:00",
+      "last_checked_at": "2026-10-31T14:07:57+09:00"
+    },
+    {
+      "canonical_id": "arXiv:2606.28876",
+      "identity_tokens": [
+        "arXiv:2606.28876",
+        "DOI:10.48550/arXiv.2606.28876"
+      ],
+      "title": "Memory-Managed Long-Context Attention: A Preliminary Study of Editable Request-Local Memory",
+      "classification": "borderline",
+      "reason": "高速なrecurrent/sparse backboneに明示的な編集可能メモリスロットとクエリ時の疎検索を併設する長文脈推論の概念検証。2097152トークンの制御実験で50/50、2.74Mパラメータの小規模モデルで595/600などを報告する一方、原著は学習済み汎用生成モデルのシステム性能優位性を主張していない。実装・速度改善の直接証拠が不足するためborderline。",
+      "source_url": "https://arxiv.org/abs/2606.28876",
+      "body_check": "arXiv一次要旨を確認（WebのarXiv一次索引）。全文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 132; 2026-10-31 main fixed d1468f311feee5a7e88064b608db19014d4c1367"
+      ],
+      "worklist_rank": 132,
+      "first_checked_at": "2026-10-31T14:07:57+09:00",
+      "last_checked_at": "2026-10-31T14:07:57+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.554",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.554"
+      ],
+      "title": "RQT: Hierarchical Residual Quantization for Multi-Model Compression",
+      "classification": "accept",
+      "reason": "共通基盤から個別微調整された複数LLMの重みを、ボトムアップのモデル類似性統合とトップダウンの残差量子化を行うResidual Quantization Treeで共有する。ACL Findings 2025公式一次要旨では数学・コード・チャット・中国語LLMの複数モデルに対し、実効約2bitで平均精度低下約3%と報告。複数モデルの保存・配備効率に直接関係するが、実サービスでのトークン毎遅延改善は別途確認が必要。",
+      "source_url": "https://aclanthology.org/2025.findings-acl.554/",
+      "body_check": "ACL Anthology公式要旨・書誌、公式PDFの要旨と図を確認。",
+      "linked_from": [
+        "WORKLIST-00.md rank 149; 2026-10-31 main fixed d1468f311feee5a7e88064b608db19014d4c1367"
+      ],
+      "worklist_rank": 149,
+      "first_checked_at": "2026-10-31T14:07:57+09:00",
+      "last_checked_at": "2026-10-31T14:07:57+09:00"
+    },
+    {
+      "canonical_id": "arXiv:2209.05948",
+      "identity_tokens": [
+        "arXiv:2209.05948",
+        "DOI:10.48550/arXiv.2209.05948"
+      ],
+      "title": "Don't Complete It! Preventing Unhelpful Code Completion for Productive and Sustainable Neural Code Completion Systems",
+      "classification": "borderline",
+      "reason": "大規模コード補完モデルへの低価値リクエストを事前に軽量推定器で拒否するFrugalCoder系研究。arXiv一次要旨では、補完要求の20%をprecision 97.4%で事前拒否できたと報告。不要なLLM呼び出しを削減するサービス効率には関連するが、モデル内部の推論演算・トークン復号の高速化ではなく、コード補完という限定タスクの品質・省エネ最適化であるためborderline。worklist旧題と現在のarXiv題名が異なる。",
+      "source_url": "https://arxiv.org/abs/2209.05948",
+      "body_check": "arXiv公式一次要旨（題名改訂を含む）を確認。全文未読。",
+      "linked_from": [
+        "WORKLIST-00.md rank 226; 2026-10-31 main fixed d1468f311feee5a7e88064b608db19014d4c1367"
+      ],
+      "worklist_rank": 226,
+      "first_checked_at": "2026-10-31T14:09:35+09:00",
+      "last_checked_at": "2026-10-31T14:09:35+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3779212.3790174",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790174"
+      ],
+      "title": "I/O Analysis is All You Need: An I/O Analysis for Long-Sequence Attention",
+      "classification": "accept",
+      "reason": "長系列の厳密self-attentionについてI/O解析を用いてタイル化・スケジューリング・3階層の通信計算オーバーラップ・softmax並列化を導くAttenIO。ASPLOS 2026公式一次要旨で既存方式比1.6～8.8倍高速化を報告。Transformerの長文脈注意カーネル効率に直接関連。ただしLLM全体のdecode throughputを同倍率で改善するという意味ではない。",
+      "source_url": "https://doi.org/10.1145/3779212.3790174",
+      "body_check": "ACM ASPLOS 2026公式一次要旨と著者研究機関の書誌を確認。全文は未読。",
+      "linked_from": [
+        "WORKLIST-00.md rank 228; 2026-10-31 main fixed d1468f311feee5a7e88064b608db19014d4c1367"
+      ],
+      "worklist_rank": 228,
+      "first_checked_at": "2026-10-31T14:09:35+09:00",
+      "last_checked_at": "2026-10-31T14:09:35+09:00"
+    },
+    {
+      "canonical_id": "SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+      "identity_tokens": [
+        "SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+        "URL:https://openaccess.thecvf.com/content/CVPR2026W/MAI/html/Moon_Accelerating_On-Device_LLM_Inference_via_Activation-guided_FFN_Distillation_on_Raspberry_CVPRW_2026_paper.html"
+      ],
+      "title": "Accelerating On-Device LLM Inference via Activation-guided FFN Distillation on Raspberry Pi",
+      "classification": "accept",
+      "reason": "Raspberry Pi 4上のLLaMA-3.2-1Bでautoregressive decodeの主要ボトルネックがFFNにあるとプロファイリングし、活性値に基づくFFN中間次元の蒸留縮小（AFD）を提案。CVPR 2026 Workshop公式一次要旨によればPyTorch/LiteRT、INT8/INT4で推論スループット改善とQA品質の小幅劣化を報告。ただし要旨には具体的な倍率がないため数値は未確認とする。",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2026W/MAI/html/Moon_Accelerating_On-Device_LLM_Inference_via_Activation-guided_FFN_Distillation_on_Raspberry_CVPRW_2026_paper.html",
+      "body_check": "CVPR 2026 Workshops公式一次要旨・書誌を確認。本文は未読。",
+      "linked_from": [
+        "WORKLIST-00.md rank 255; 2026-10-31 main fixed d1468f311feee5a7e88064b608db19014d4c1367"
+      ],
+      "worklist_rank": 255,
+      "first_checked_at": "2026-10-31T14:09:35+09:00",
+      "last_checked_at": "2026-10-31T14:09:35+09:00"
+    }
+  ],
+  "source_legacy_sha256": "e9b4f89a4b0324dd5571a8158d23c949dd5f38bd3820662f260d8e263b88c2f8",
+  "normalization_note": "8 records retain original classification and evidence; two secondary-abstract-only records held pending publisher/author primary abstract; original immutable source retained in review-holds.",
+  "held_canonical_ids": [
+    "DOI:10.1109/ICASSP49660.2025.10888646",
+    "DOI:10.1145/3785473"
+  ]
+}

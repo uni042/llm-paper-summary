@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86e2692c3053e2a7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1909.08053",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1909.08053",
+    "identity_tokens": [
+      "arXiv:1909.08053"
+    ],
+    "reason": "主貢献はtensor model parallelismによる大規模Transformerの学習で、512 GPU・8.3Bモデルのtraining scalingを評価する。推論runtime/servingを最終適用先としない。",
+    "first_checked_at": "2026-09-27T00:01:48+09:00",
+    "last_checked_at": "2026-10-05T22:23:04+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[3]"
+    ],
+    "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism"
+  },
+  "processed_at": "2026-10-05T22:23:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86e2692c3053",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

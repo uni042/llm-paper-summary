@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2f1076f979ce3f69-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.14479",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.14479",
+    "identity_tokens": [
+      "arXiv:2311.14479"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2311.14479. Abstract summary: As Large Language Models (LLMs) are deployed more widely, customization with respect to vocabulary, style, and character becomes more important. In this work, we introduce model arithmetic, a novel inference framework for composing and biasing LLMs without the need for model (re)training or highly specific datasets. In addition, Out of scope: Controlled text generation method, not a runtime optimization.",
+    "first_checked_at": "2026-10-05T12:32:44+00:00",
+    "last_checked_at": "2026-10-05T12:32:44+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md"
+    ],
+    "title": "Controlled Text Generation via Language Model Arithmetic"
+  },
+  "processed_at": "2026-10-05T12:32:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f1076f979ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

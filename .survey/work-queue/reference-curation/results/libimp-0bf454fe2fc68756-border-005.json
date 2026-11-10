@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0bf454fe2fc68756-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.21427",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.21427",
+    "identity_tokens": [
+      "arXiv:2607.21427"
+    ],
+    "reason": "The reported contribution improves sample quality at roughly unchanged per-sample compute rather than reducing inference cost/latency, and is tested at 170M scale. Its relevance to inference efficiency is therefore weak absent evidence that equal-quality generation can use fewer sampling steps or lower serving resources.",
+    "first_checked_at": "2026-10-05T10:03:28+00:00",
+    "last_checked_at": "2026-10-05T10:03:28+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md",
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+    ],
+    "title": "Context-weighted Discrete Flow Matching"
+  },
+  "processed_at": "2026-10-05T10:03:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0bf454fe2fc6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

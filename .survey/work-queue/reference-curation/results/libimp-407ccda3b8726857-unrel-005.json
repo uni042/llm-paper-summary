@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-407ccda3b8726857-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.24963/ijcai.2026/290",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.24963/ijcai.2026/290",
+    "identity_tokens": [
+      "DOI:10.24963/ijcai.2026/290"
+    ],
+    "reason": "一次要旨は通信トラフィック分析用のTask-Aware MoEをJetsonで評価するが、LLMを対象とせず、network classificationが主題。",
+    "first_checked_at": "2026-10-05T07:43:41+00:00",
+    "last_checked_at": "2026-10-05T07:43:41+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+    ],
+    "title": "Keep Experts Diverse: A Task-Aware MoE for Multi-Task Traffic Analysis"
+  },
+  "processed_at": "2026-10-05T07:43:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-407ccda3b872",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

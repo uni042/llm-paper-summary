@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Quantize What Counts: More for Keys, Less for Values",
+      "source_url": "https://arxiv.org/abs/2502.15075",
+      "year": 2025,
+      "published": "2025-02-20",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) suffer inference-time memory bottlenecks dominated by the attention Key-Value (KV) cache, which scales with model size and context length. While KV-cache quantization alleviates this cost, bit allocation between keys and values is often tuned heuristically, lacking theoretical grounding and generalizability. This paper proposes two theorems that anchor mixed-precision KV quantization in the intrinsic geometry of Transformer models. First, key projections systematically have larger spectral and Frobenius norms than value matrices, implying higher information density along the key path. Second, for any given memory budget, prioritizing precision for keys over values strictly reduces quantization error and better preserves accuracy. Empirical evaluations across various prominent LLMs and benchmarks show that key-favored allocations (e.g., 4-bit keys, 2-bit values) retain up to 98.3\\% accuracy compared to uniform allocations (e.g., 4-bit for both), while conserving memory. These results transform bit allocation from ad hoc tuning into a theoretically grounded, geometry-driven design principle for efficient LLM inference. Source code is available at https://github.com/mohsenhariri/spectral-kv.",
+      "identifiers": [
+        "SemanticScholar:d99ec0428aee7b8500a380918dc074968eac4e87"
+      ],
+      "semantic_scholar_id": "d99ec0428aee7b8500a380918dc074968eac4e87",
+      "canonical_id": "arXiv:2502.15075",
+      "arxiv_id": "2502.15075",
+      "doi": "10.18653/v1/2026.findings-acl.1314",
+      "authors": [
+        "Mohsen Hariri",
+        "Alan Luo",
+        "Wei-Cong Chen",
+        "Shao-Chen Zhong",
+        "Tianyi Zhang",
+        "Qi-Fan Wang",
+        "Xia Ben Hu",
+        "Xiao-Tian Han",
+        "Vipin Chaudhary"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 617,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "KVキャッシュのKとVへ同一ビット幅を割り当てる慣習に対し、射影重みのスペクトル・フロベニウスノルムの非対称性からK側の精度を優先する理論的根拠を示す。例としてK4bit/V2bitの非対称量子化を評価し、メモリ制約下の精度保持を検証する。worklistの旧題名「Bit Allocation Insights...」と現行arXiv題名は同一IDの版差。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "FlashServe: Adaptive Kernel Provision for Quantized LLM Serving",
+      "source_url": "https://doi.org/10.1109/2575-8411.2026.00078",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE International Conference on Distributed Computing Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is widely adopted to reduce the memory footprint and computational overhead of large language models (LLMs). Existing LLM serving systems typically rely on a static quantized inference kernel, overlooking the fact that real-world workloads exhibit highly dynamic request rates and batch sizes. Our empirical analysis reveals two important findings in quantized LLM serving. First, the performance of different quantized inference kernels exhibits distinct sensitivity to batch size. Second, motivated by the potential of adaptive quantized inference kernel switching to exploit this performance diversity, switching between quantized inference kernels incurs a non-negligible overhead. These findings give rise to two key challenges: optimal kernel selection under dynamic workloads is difficult, and quantized inference kernel switching is expensive. To address these challenges, we propose FlashServe, a serving system for adaptive quantized inference kernel provisioning. First, FlashServe leverages a latency cost model of both inference and switching latency to guide the optimal quantized inference kernel selection. Second, FlashServe supports finegrained asynchronous kernel switching, which overlaps kernel execution with kernel switching. Finally, FlashServe proactively prepares kernel switching, allowing each kernel switching to be triggered immediately once its corresponding kernel execution completes. We implement a prototype of FlashServe and evaluate it on representative LLM workloads. Experimental results show that FlashServe reduces inference latency by $\\mathbf{9. 0 \\% - 1 3. 6 \\%}$ compared to static quantized baselines.",
+      "identifiers": [
+        "SemanticScholar:c3e5ad28603079cf720f928dea644dbb3bfeca0f"
+      ],
+      "semantic_scholar_id": "c3e5ad28603079cf720f928dea644dbb3bfeca0f",
+      "doi": "10.1109/2575-8411.2026.00078",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00078",
+      "authors": [
+        "Yuyan Chen",
+        "Hao-Dong Wang",
+        "Junyuan Liang",
+        "Wu-Hui Chen",
+        "Zi-Cong Hong",
+        "Song Guo",
+        "Ruiyan Zhuang",
+        "Yi Quan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      },
+      "reason": "動的なリクエスト量・バッチサイズに対して量子化推論カーネルを固定すると非最適になり、切替自体にも遅延がある問題を扱う。推論遅延と切替費用のコストモデルでカーネルを選択し、非同期切替と事前準備で実行を重ねるFlashServeを提案。静的量子化ベースライン比で推論遅延9.0〜13.6%減を報告する直接的なサービング最適化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "Snakes and Ladders: Accelerating State Space Model Inference with Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/78ef7ffcaf721ce31653636dc320f7ead131539d",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d"
+      ],
+      "semantic_scholar_id": "78ef7ffcaf721ce31653636dc320f7ead131539d",
+      "canonical_id": "SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d",
+      "authors": [
+        "Yangchao Wu",
+        "Yonatan Dukler",
+        "Matthew Trager",
+        "A. Achille",
+        "Wei Xia",
+        "Stefan 0 Soatto",
+        "Ucla"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "状態空間モデルは推論時にマルコフ状態を保持するため、通常のTransformer投機的復号の巻き戻しが直接適用できない。Joint Attainment and AdvancementとActivation Replayで状態の整合を保って投機・検証し、3ベンチマーク平均1.82倍の実時間高速化を報告。SSM推論の状態管理と投機実行に直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e1ec68d90bfa",
+    "round": "libimp-e1ec68d90bfa57c4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e1ec68d90bfa57c4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e1ec68d90bfa57c4-pre01.json",
+    "receipt": "sha256:f54daaf3682d8b7e6cd8b36c12910941bf1ec64f8181aa64600cd98f816e3d60"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e1ec68d90bfa",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

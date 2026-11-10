@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce5bb84573d917a5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.08186",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.08186",
+    "identity_tokens": [
+      "arXiv:2512.08186",
+      "title:ground slow move fast a dual system foundation model for generalizable vision and language navigation"
+    ],
+    "reason": "視覚言語モデルQwen2.5-VL-7Bを約2Hzの高次経路計画へ限定し、軽量拡散変換器の局所制御を約30Hzで非同期実行する二重系によりロボットの実時間性を改善する点は推論頻度削減・非同期実行の設計に関連する。ただし主な貢献と評価はVLN-CE/VLN-PEのロボット経路成功率・衝突回避・汎化で、LLMサービング基盤、KV管理、GPUカーネル、生成速度の一般化可能な最適化を直接測定していない。推論システムの応用事例として境界扱い。",
+    "first_checked_at": "2026-10-16T09:21:28+00:00",
+    "last_checked_at": "2026-10-16T09:21:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
+  },
+  "processed_at": "2026-10-16T09:21:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce5bb84573d9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

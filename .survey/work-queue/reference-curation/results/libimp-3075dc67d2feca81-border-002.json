@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3075dc67d2feca81-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.20202",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.20202",
+    "identity_tokens": [
+      "SemanticScholar:736d61825a5afed4c85b227951a9880d01e2299f",
+      "arXiv:2608.20202"
+    ],
+    "reason": "This is inference-time memory-use control, but the abstract reports performance rather than compute/latency effects; possible relation to memory-serving work is uncertain.",
+    "first_checked_at": "2026-10-13T04:24:16+00:00",
+    "last_checked_at": "2026-10-13T04:24:16+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "MemTrapBench: Benchmarking Cognitive Traps in LLM Memory Use"
+  },
+  "processed_at": "2026-10-13T04:24:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3075dc67d2fe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

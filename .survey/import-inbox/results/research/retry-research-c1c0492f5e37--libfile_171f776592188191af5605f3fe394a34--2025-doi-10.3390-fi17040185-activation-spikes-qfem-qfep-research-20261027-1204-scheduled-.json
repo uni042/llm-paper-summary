@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "3628a313312972e7a5ec8666ece6da9464518d49424322768f4831ae4a61213f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c1c0492f5e37--libfile_171f776592188191af5605f3fe394a34--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261027-1204-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.3390/fi17040185",
+  "worker_completed_at": "2026-10-27T12:27:53+09:00",
+  "worker_run_key": "20261027-1204-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4998,
+    "body_paragraphs": 29,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 179,
+    "limitation_chars": 786,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 179 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 179 < 500"
+  ],
+  "processed_at": "2026-10-27T05:20:11+00:00"
+}

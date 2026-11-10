@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5eef3a6eac77229a-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2004.12832",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2004.12832",
+    "identity_tokens": [
+      "arXiv:2004.12832"
+    ],
+    "reason": "The full text (§§2–3 and experiments) evaluates query-document passage ranking, offline document representations, and retrieval FLOPs/latency. Its gains concern search/ranking, not autoregressive generation or model-serving cost; retain as borderline for possible RAG retrieval-pipeline relevance.",
+    "first_checked_at": "2026-10-06T23:37:14+00:00",
+    "last_checked_at": "2026-10-06T23:37:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT"
+  },
+  "processed_at": "2026-10-06T23:37:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5eef3a6eac77",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

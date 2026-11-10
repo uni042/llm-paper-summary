@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b617be100b579fad-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.30067",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.30067",
+    "identity_tokens": [
+      "arXiv:2608.30067"
+    ],
+    "reason": "LLM-agent world-model/policyの構成・学習が主題で、inference efficiencyではない。",
+    "first_checked_at": "2026-10-05T07:53:36+00:00",
+    "last_checked_at": "2026-10-05T07:53:36+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+    ],
+    "title": "How do World Models and Policies Compose in LLM Agents? A Joint Spectral and Behavioral Account"
+  },
+  "processed_at": "2026-10-05T07:53:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b617be100b57",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

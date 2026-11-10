@@ -1,0 +1,263 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0e081717e02263a5-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0e081717e022",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2511.14102",
+    "arXiv:2511.15076",
+    "arXiv:2511.17560",
+    "arXiv:2512.03927",
+    "arXiv:2512.09277",
+    "arXiv:2512.14080",
+    "arXiv:2512.14098",
+    "arXiv:2512.15176",
+    "arXiv:2512.15834",
+    "arXiv:2512.16391",
+    "arXiv:2512.19179",
+    "arXiv:2601.05109",
+    "arXiv:2601.05524",
+    "arXiv:2601.07353",
+    "arXiv:2601.07891",
+    "arXiv:2601.12967",
+    "arXiv:2601.17111",
+    "arXiv:2601.17668",
+    "arXiv:2601.21473",
+    "arXiv:2601.22438"
+  ],
+  "target_unseen": 20,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "eb9ae634a56e8d6d3604b19ca355935042850f5d",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 19,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 20,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 19,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-09-30T09:28:38.783277+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2511.14102",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2511.14102"
+    },
+    {
+      "requested_id": "arXiv:2511.15076",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2511.15076"
+    },
+    {
+      "requested_id": "arXiv:2511.17560",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2511.17560"
+    },
+    {
+      "requested_id": "arXiv:2512.03927",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2512.03927"
+    },
+    {
+      "requested_id": "arXiv:2512.09277",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2512.09277"
+    },
+    {
+      "requested_id": "arXiv:2512.14080",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2512.14080"
+    },
+    {
+      "requested_id": "arXiv:2512.14098",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2512.14098"
+    },
+    {
+      "requested_id": "arXiv:2512.15176",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.15834",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2512.15834"
+    },
+    {
+      "requested_id": "arXiv:2512.16391",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2512.16391"
+    },
+    {
+      "requested_id": "arXiv:2512.19179",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2512.19179"
+    },
+    {
+      "requested_id": "arXiv:2601.05109",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.05109"
+    },
+    {
+      "requested_id": "arXiv:2601.05524",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2601.05524"
+    },
+    {
+      "requested_id": "arXiv:2601.07353",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.07353"
+    },
+    {
+      "requested_id": "arXiv:2601.07891",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.07891"
+    },
+    {
+      "requested_id": "arXiv:2601.12967",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2601.12967"
+    },
+    {
+      "requested_id": "arXiv:2601.17111",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.17111"
+    },
+    {
+      "requested_id": "arXiv:2601.17668",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2601.17668"
+    },
+    {
+      "requested_id": "arXiv:2601.21473",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.21473"
+    },
+    {
+      "requested_id": "arXiv:2601.22438",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.22438"
+    }
+  ],
+  "results": [
+    {
+      "title": "DEER: Draft with Diffusion, Verify with Autoregressive Models",
+      "source_url": "https://arxiv.org/abs/2512.15176",
+      "year": 2025,
+      "published": "2025-12-17",
+      "abstract": "Efficiency, as a critical practical challenge for LLM-driven agentic and reasoning systems, is increasingly constrained by the inherent latency of autoregressive (AR) decoding. Speculative decoding mitigates this cost through a draft-verify scheme, yet existing approaches rely on AR draft models (a.k.a., drafters), which introduce two fundamental issues: (1) step-wise uncertainty accumulation leads to a progressive collapse of trust between the target model and the drafter, and (2) inherently sequential decoding of AR drafters. Together, these factors cause limited speedups. In this paper, we show that a diffusion large language model (dLLM) drafters can naturally overcome these issues through its fundamentally different probabilistic modeling and efficient parallel decoding strategy. Building on this insight, we introduce DEER, an efficient speculative decoding framework that drafts with diffusion and verifies with AR models. To enable high-quality drafting, DEER employs a two-stage training pipeline to align the dLLM-based drafters with the target AR model, and further adopts single-step decoding to generate long draft segments. Experiments show DEER reaches draft acceptance lengths of up to 32 tokens, far surpassing the 10 tokens achieved by EAGLE-3. Moreover, on HumanEval with Qwen3-30B-A3B, DEER attains a 5.54x speedup, while EAGLE-3 achieves only 2.41x. Code, model, demo, etc, will be available at https://czc726.github.io/DEER/",
+      "canonical_id": "arXiv:2512.15176",
+      "arxiv_id": "2512.15176",
+      "doi": "10.48550/arXiv.2512.15176",
+      "authors": [
+        "Zicong Cheng",
+        "Guo-Wei Yang",
+        "Jia Li",
+        "Zhijie Deng",
+        "Meng-Hao Guo",
+        "Shi-Min Hu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.15176",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.15176",
+        "id:arXiv:2512.15176",
+        "title:deer draft with diffusion verify with autoregressive models",
+        "url:https://arxiv.org/abs/2512.15176"
+      ],
+      "record": {
+        "title": "DEER: Draft with Diffusion, Verify with Autoregressive Models",
+        "source_url": "https://arxiv.org/abs/2512.15176",
+        "year": 2025,
+        "published": "2025-12-17",
+        "abstract": "Efficiency, as a critical practical challenge for LLM-driven agentic and reasoning systems, is increasingly constrained by the inherent latency of autoregressive (AR) decoding. Speculative decoding mitigates this cost through a draft-verify scheme, yet existing approaches rely on AR draft models (a.k.a., drafters), which introduce two fundamental issues: (1) step-wise uncertainty accumulation leads to a progressive collapse of trust between the target model and the drafter, and (2) inherently sequential decoding of AR drafters. Together, these factors cause limited speedups. In this paper, we show that a diffusion large language model (dLLM) drafters can naturally overcome these issues through its fundamentally different probabilistic modeling and efficient parallel decoding strategy. Building on this insight, we introduce DEER, an efficient speculative decoding framework that drafts with diffusion and verifies with AR models. To enable high-quality drafting, DEER employs a two-stage training pipeline to align the dLLM-based drafters with the target AR model, and further adopts single-step decoding to generate long draft segments. Experiments show DEER reaches draft acceptance lengths of up to 32 tokens, far surpassing the 10 tokens achieved by EAGLE-3. Moreover, on HumanEval with Qwen3-30B-A3B, DEER attains a 5.54x speedup, while EAGLE-3 achieves only 2.41x. Code, model, demo, etc, will be available at https://czc726.github.io/DEER/",
+        "canonical_id": "arXiv:2512.15176",
+        "arxiv_id": "2512.15176",
+        "doi": "10.48550/arXiv.2512.15176",
+        "authors": [
+          "Zicong Cheng",
+          "Guo-Wei Yang",
+          "Jia Li",
+          "Zhijie Deng",
+          "Meng-Hao Guo",
+          "Shi-Min Hu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:250f05d144af16c829b287425d82f871722078e63582e31029abc7e8d7f65620",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

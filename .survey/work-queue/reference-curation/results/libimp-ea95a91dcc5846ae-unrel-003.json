@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea95a91dcc5846ae-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.33915",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.33915",
+    "identity_tokens": [
+      "arXiv:2609.33915"
+    ],
+    "reason": "Certifies model training/data/evaluation with fingerprints; training provenance, not inference efficiency.",
+    "first_checked_at": "2026-10-05T05:14:50+00:00",
+    "last_checked_at": "2026-10-05T05:14:50+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md",
+      "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
+    ],
+    "title": "Training Witnesses: Trusting the Training without Trusting the Trainer"
+  },
+  "processed_at": "2026-10-05T05:14:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea95a91dcc58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

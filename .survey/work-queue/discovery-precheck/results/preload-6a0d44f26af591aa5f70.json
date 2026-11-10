@@ -1,0 +1,895 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-6a0d44f26af591aa5f70",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-6a0d44f26af591aa5f70",
+  "axis": "forward citations of LMCache enterprise-scale KV cache layer",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2510.09665/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 4,
+  "next_cursor": "80",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3167a1365944a62d2d81c5ebbb12ba97108b6a8d",
+  "raw_search_result_count": 80,
+  "retrieval_duplicate_filtered_count": 58,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-10-03T13:19:10.700938+00:00",
+  "preload_id": "preload-6a0d44f26af591aa5f70",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 4,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "Capture the lifecycle: KV Cache management in ReAct Agents with KVTether",
+      "source_url": "https://arxiv.org/abs/2609.39819",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Efficient serving of long-context reasoning-and-acting (ReAct) agents relies on KV cache reuse to reduce large language model (LLM) prefill latency and monetary cost. However, a semantic gap exists between agent harnesses and the underlying serving stack. Through context mutation, tool execution, and subagent coordination, context messages may become actively engaged, permanently discarded, and temporarily unused, while the serving stack only observes accesses to the corresponding KV cache. This lifecycle blindness prevents recency-only policies such as LRU from reclaiming dead KV promptly and from preserving older KV that will be reused sooner than newer entries. We present KVTether, a lifecycle-aware KV cache management framework for ReAct agents. By tracing semantic primitives embedded in agent harnesses, KVTether captures runtime lifecycle semantics during highly dynamic execution. KVTether then translates message-level semantics into KV-level lifecycle states and uses these states to drive state-prioritized cache management without exposing physical complexities to agent harnesses. After reclaiming dead KV, KVTether preferentially preserves live-but-idle KV that is waiting for reuse, reducing premature eviction before reuse. Across agent benchmarks and production workloads, KVTether reduces end-to-end request latency by up to 26.3% and 17.4% relative to LMCache and MORI, respectively, and lowers estimated task cost by 40.0% and 33.2% on average.",
+      "canonical_id": "arXiv:2609.39819",
+      "arxiv_id": "2609.39819",
+      "authors": [
+        "Kai-Hua Fu",
+        "Yu-Kun Zhou",
+        "Chaokun Chang",
+        "Ying-Hao Yu",
+        "Lu-Ping Wang",
+        "Guo-Dong Yang",
+        "Jiu-Chen Shi",
+        "Quan Chen",
+        "Wei Wang"
+      ]
+    },
+    {
+      "title": "Preserving Provenance in Shared KV Caches for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.38706",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Production LLM serving stacks combine an inference engine's local prefix cache with a shared KV-cache tier for fleet-wide reuse. The local cache distinguishes requests by adapter, weight configuration and sharing domain, but the shared tier may key entries only by token content and coarse model metadata. This boundary erases provenance and lets identical tokens under incompatible computational or sharing contexts collide. We call this composition gap provenance-blind reuse and present its first systematic study. A source audit of three vLLM connectors confirms the structural omission, while runtime experiments reproduce it across vLLM and two SGLang releases, 12 models from 7 families (0.5 B-32 B), and over 160 configurations. Cross-adapter collisions reduce accuracy from 0.94 to 0.64, incompatible KV representations reduce reasoning accuracy to zero, and salt omission enables 93% prompt identification from timing. We formalize the missing guarantee as the KV provenance contract: for a declared dimension registry, shared keys must be injective over computational and sharing provenance, with identities stable across workers. Any dimension with a stable identity can therefore be added without connector-specific key logic. A canonical descriptor binds per-request and per-worker provenance into lookup and store keys, while a differential checker detects dimensions that change KV state without changing the key. Implemented in vLLM and SGLang 0.5.20 across three cache paths, provenance binding eliminates unsafe reuse while preserving legitimate sharing. Hit-path latency changes remain within 0.34 ms and below run-to-run variation; retention grows with provenance diversity.",
+      "canonical_id": "arXiv:2609.38706",
+      "arxiv_id": "2609.38706",
+      "authors": [
+        "Wei Song",
+        "Yu-Xin Cao",
+        "Xi Zheng",
+        "Leo Zhang",
+        "Xiao-Hun Cheng"
+      ]
+    },
+    {
+      "title": "Characterizing High Bandwidth Flash for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.39131",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Large language model (LLM) serving requires substantial memory to store model weights and KV caches. As models grow larger and contexts become longer, memory capacity and bandwidth increasingly become bottlenecks for serving performance. Agentic workloads compound this pressure through repeated interactions over growing contexts, making it increasingly important to retain KV state for reuse. High-bandwidth flash (HBF) offers a way to expand accelerator memory capacity for large language model (LLM) serving, but its access costs and limited write endurance complicate its use. We evaluate HBF for high-throughput agentic serving across system design and scheduling choices to understand when additional capacity improves serving performance and energy efficiency. We introduce an HBM-HBF-host hierarchical storage system and buffered cache-aware scheduling, and use trace-driven simulations to analyze their effects on performance, energy consumption, and HBF write lifetime. Across the evaluated workloads, the fastest HBF-augmented systems reduce completion time by 36.1-87.0% relative to HBM-only systems. Modeled energy savings reach 55.8%, although HBF increases energy consumption on some light workloads. Buffered cache-aware scheduling extends estimated HBF write lifetime from 4.77 to 14.82 years in the evaluated configuration. These results demonstrate the importance of coordinating data placement and scheduling to improve serving efficiency while sustaining a practical HBF write lifetime.",
+      "canonical_id": "arXiv:2609.39131",
+      "arxiv_id": "2609.39131",
+      "authors": [
+        "Zack Yu",
+        "Chloe Wong",
+        "C. Hooper",
+        "Minjae Lee",
+        "Wonjun Kang",
+        "Youngjin Cho",
+        "Michael W. Mahoney",
+        "Yakun Sophia Shao",
+        "Kurt Keutzer",
+        "Amir Gholami"
+      ]
+    },
+    {
+      "title": "Herschel: Continuous Optimization of Production LLM Inference through On-Demand Profiling",
+      "source_url": "https://arxiv.org/abs/2609.40247",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Model-as-a-service platforms call for continuous optimization as complex serving conditions expose inefficiencies missed before deployment. Detailed always-on profiling can incur substantial overhead, while lightweight collection omits information needed for diagnosis. We present Herschel, a continuous optimization system for production large language model (LLM) inference. Our key insight is that adaptive, on-demand profiling can provide rich full-stack evidence without continuous collection. Herschel safely attaches to and detaches from selected running processes without engine changes or restarts, and adapts coverage as investigations reveal missing evidence. Herschel reconstructs operator executions and cross-process dependencies to identify inefficiency mechanisms and suggest solutions using applicable reference fixes. AI agents implement and test engine and kernel changes under controlled conditions that preserve the triggering workload and dependencies, with expert review before deployment. Controlled tests show active-collection overhead below 0.5% for time to first token and 7% for time per output token. Bounded windows, typically 30 s, avoid the continuous cost of always-on tracing. Over six months, Herschel collected approximately 17,000 traces across over 120 model variants and more than 10 accelerator types, identifying inefficiency patterns in 23% of the traces. Representative findings guide widely deployed optimizations, including restructured synchronization, removal of unused computation, and improved operator implementations.",
+      "canonical_id": "arXiv:2609.40247",
+      "arxiv_id": "2609.40247",
+      "authors": [
+        "Lu-Ping Wang",
+        "Wei-Gao Chen",
+        "Yi-Fei Wu",
+        "Yong-He Zhang",
+        "Rui Zhang",
+        "Wen-Chao Wu",
+        "Ji-Yu Luo",
+        "Hao-Ran Geng",
+        "Xin Yang",
+        "Cheng Cao",
+        "Yue-Min Wu",
+        "Cheng-Ling Huang",
+        "Guo-Dong Yang",
+        "Li-Ping Zhang"
+      ]
+    },
+    {
+      "title": "Working Around the Compute Ceiling: Byte-Exact Memory in Galahad Makes LLM Reading a One-Time Cost LLM Reading a One-Time Cost",
+      "source_url": "https://arxiv.org/abs/2609.39358",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "A transformer language model performs a bounded amount of computation per token, and recent work by Vishal Sikka, former CEO of Infosys, argues that this bound limits which tasks a model can carry out or verify (arXiv:2507.07505). We ask how much of the budget beneath that ceiling is spent on work the model has already done. Serving is stateless across requests: a model that answers a second question about a document recomputes the document's attention state from the first token. On seven real-world datasets, 98.7% of prompt tokens were text the model had already read. We present Galahad, a memory layer for vLLM, SGLang and llama.cpp that makes this reading a one-time cost. Taliesin saves the model's key-value (KV) state for a block of text and loads it on the next request that contains the same bytes, instead of recomputing it. Blaise keeps the documents themselves and passes the model only the section a question needs. On a recall test with 100 facts hidden in a 97,000-token corpus (Gemma 4 31B), Taliesin alone let the model attend to the whole corpus and answered 98 of 100 on llama.cpp at 3.0 s and 572 J per question, against 10 of 100, 9.3 s and 2,754 J for the same model without Galahad, which could hold only the last 12,000 tokens. With Blaise added, the model read about 668 tokens per question and answered 100 of 100 on all three runtimes at 0.59-0.64 s and 200-213 J; a tuned RAGFlow pipeline answered 77. Storing the corpus is a one-time cost of about 100 s and 28 kJ, whose energy is recovered after 13 questions. Restored state is bit-identical: all 262,144 output logits matched after restart, rehydration and hot-load. Galahad worked with all 30 models we tested under vLLM, and it fails closed: any load that does not pass its checks is recomputed. Together these results move LLM serving from stateless to stateful inference.",
+      "canonical_id": "arXiv:2609.39358",
+      "arxiv_id": "2609.39358",
+      "authors": [
+        "Sietse Schelpe"
+      ]
+    },
+    {
+      "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
+      "source_url": "https://arxiv.org/abs/2609.36938",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Agentic sessions driven by Large language models (LLMs) often alternate between model inference and tool use, accumulating long histories across successive rounds. Serving these sessions efficiently requires reducing attention computation and retaining history key-value (KV) caches to avoid recomputation. Recently, frontier open-source LLMs adopt sparse attention to reduce computation by selecting only part of the history, while SSDs provide a cheaper alternative to CPU DRAM for storing KV caches. However, sparse KV selection depends on the ad hoc intermediate values during model inference, so it forces SSD reads to lie on the inference critical path. These reads are further slowed by fragmented accesses and read-write interference in SSDs. To address these challenges, we present Janus, an agentic serving framework for sparse attention LLMs with SSD-centric KV storage. Janus focuses on append prefill, which processes each round's newly added inputs and accounts for most history KV loading. To move SSD reads out of the critical path, Janus runs the model's own KV selection module on earlier intermediate values, predicting KV demand without additional training. The predicted reads overlap with model computation, and any prediction misses are fetched before attention executes to preserve model outputs. To improve SSD efficiency, Janus coalesces adjacent reads, packs scattered KV pages into sequential writes on the CPU, and limits background writes while reads are active. Across three models and three agentic traces, Janus outperforms existing works by up to 1.57-3.69 times (1.22-1.85 times on average) in terms of the time to first token latency, while maintaining decode efficiency.",
+      "canonical_id": "arXiv:2609.36938",
+      "arxiv_id": "2609.36938",
+      "authors": [
+        "Wen-Hao He",
+        "Ping Zhang",
+        "Xiao-He Hu",
+        "Chu-Tian Wang",
+        "Jin-Long Hou",
+        "Yuan Cheng",
+        "Peng Sun",
+        "Fang-Cheng Fu"
+      ]
+    },
+    {
+      "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.37538",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Dynamic sparse attention reduces long-context attention computation by selecting only a subset of tokens, but still requires access to the full KV cache, leaving serving memory-bound. Offloading the KV cache to host memory reduces device memory pressure but places H2D transfers on the decoding critical path. In DSA, substantial overlap in selected KV entries across decoding steps creates an opportunity for device-resident reuse. Exploiting this reuse efficiently, however, presents three critical challenges: costly matching of selected tokens against entries retained in the HBM buffer, uneven distribution of the remaining H2D transfers across accelerator cores, and retaining frequently accessed KV entries within limited HBM capacity. We present AVSG, an operator that addresses these challenges for DSA while preserving its exact token selections. AVSG uses vectorized hash matching to identify reusable HBM-buffer slots and reserve slots for entries requiring transfer, then evenly partitions these H2D transfers across accelerator cores. Lifetime-based buffer management retains frequently accessed KV entries in the device buffer across decoding steps, and shared slot reservations extend reuse across tokens within a multi-token prediction iteration. On a single NPU, vectorized hash matching is 2.80x faster than scalar dual-pointer matching, miss-only transfer raises effective H2D bandwidth by up to 34.44x over request-level assignment, and an 8K-entry buffer reaches a 94.83% hit rate on real requests. These gains translate into end-to-end improvement: on a serving stack processing a real-world production dataset, AVSG reduces time per output token by 39% and increases output throughput by 1.27x relative to the same KV offload layout without HBM-buffer reuse, demonstrating the benefit of efficient matching, balanced transfer, and effective HBM residency in production-scale serving.",
+      "canonical_id": "arXiv:2609.37538",
+      "arxiv_id": "2609.37538",
+      "authors": [
+        "Wen-Wei Kuang",
+        "Xiang-Yu Wang",
+        "Chong Wu",
+        "Jun Wang",
+        "Wei-Jie Zhang",
+        "Brian K. Chen",
+        "Long Lan",
+        "Ke-Pan Zhang"
+      ]
+    },
+    {
+      "title": "TempoKV: Timely Staging of LLM KV Caches for Memory-Semantic Flash",
+      "source_url": "https://arxiv.org/abs/2609.35065",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Reusable prefix key-value (KV) caches can outgrow GPU memory in large language model (LLM) serving. A memory-semantic flash hierarchy offers SSD-backed capacity with a limited fast tier, but a logical KV hit is not necessarily ready for GPU retrieval. Demand staging exposes SSD latency, whereas immediate staging can reserve fast-tier capacity long before retrieval begins. We present TempoKV, a timing-aware resource-commitment layer that separates early knowledge of reuse from the acquisition of staging resources. It records reusable-KV hits as metadata-only claims and requests commitment when the runtime-estimated time until retrieval falls to the storage-estimated time needed to make KV resident and protected against eviction. These estimates adapt to runtime progress and staging state, while commitment remains subject to available protected capacity. We implement TempoKV in vLLM and LMCache on an SSD-backed CXL memory device without changing request scheduling. Across two models and three prefix cache ratios, TempoKV reduces protected fast-tier byte-time per request by 63-91% versus immediate staging while retaining much of the serving benefit of advance staging. In a fast-tier capacity sweep, output throughput and p95 time to first token (TTFT) remain nearly unchanged as capacity decreases from 100 to 25 GiB. Compared with unmodified LMCache's Device-DAX L1 configuration, TempoKV reduces p95 TTFT by up to 48.0% and increases output throughput by up to 27.8%.",
+      "canonical_id": "arXiv:2609.35065",
+      "arxiv_id": "2609.35065",
+      "authors": [
+        "Jay H. Park",
+        "H. Kim",
+        "D. Kim"
+      ]
+    },
+    {
+      "title": "WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse",
+      "source_url": "https://arxiv.org/abs/2609.35263",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Pipeline parallelism can improve prefill throughput by processing multiple request chunks concurrently across different stages of the model. However, keeping the pipeline fully utilized requires efficient scheduling and request preparation. In systems where stages retain and evict cache state independently, a local cache hit does not guarantee that the same prefix can be reused across the pipeline. Here, coordination overhead can impede request admission cadence and thus reduce overall throughput. In this paper, we present WavePP, a prefill runtime built on top of TensorRT-LLM that addresses these challenges by overlapping request admission with pipeline execution. WavePP asynchronously finds a prefix that can be reused across all stages, protects the cached state, and reserves space for the remaining input while earlier requests continue to execute. It subsequently plans the chunk sizes of each request dynamically to maximize pipeline fill. Each stage then completes the local preparation before executing the request. In the same system and pipeline topology, WavePP improves TensorRT-LLM's prefill throughput in 37 of 40 tested settings on GLM 5.2 and MiniMax M2.7. At concurrency 128 with high cache reuse, these changes increase throughput by factors of 2.91 and 2.02, respectively. Across 28 Kimi K3 settings, WavePP also has the highest measured throughput in all 18 settings at concurrency eight or higher, compared with tensor/expert-parallel and pipeline-parallel baselines from TRT-LLM, SGLang, and vLLM.",
+      "canonical_id": "arXiv:2609.35263",
+      "arxiv_id": "2609.35263",
+      "authors": [
+        "Aaryam Sharma"
+      ]
+    },
+    {
+      "title": "EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?",
+      "source_url": "https://arxiv.org/abs/2609.33762",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "LLM agents resend their whole conversation on every turn, and most of it was already processed on the previous turn. Serving systems avoid recomputing it by caching its key-value (KV) state and, when GPU memory runs out, by offloading that state to host memory. For agents, offloading gives inconsistent results: on the same coding-agent workload it speeds up one deployment, slows down another, and changes nothing on a third, even where loading a token back is several times cheaper than recomputing it. The reason is that cached state must survive until it is used again. While one agent waits for its tool, the server processes the contexts of all other agents, so an agent's prefix is reused only if the host tier holds the reusable context of the whole agent pool, which we call the reuse working set. A smaller tier keeps writing state that is evicted before anyone reads it. We present EfficientAgent, which sizes and manages the host tier by this working set. A stack-distance model estimates the working set from agent histories to size the host tier; its predictions, made before the experiments, located the capacity at which offloading starts to pay. When the tier is too small, a runtime policy stops writing large refills of evicted context and keeps extending prefixes that are still cached; when the tier is large enough, it writes everything. On SWE-bench Verified coding agents, a host tier sized to the estimated working set cuts recomputed prompt tokens by 93% and end-to-end time by 39%. With a small fixed tier, the policy cuts recomputation by 35%; with a large tier, it avoids the 4.3-fold increase caused by always filtering writes. Across three GPU types and two models, offloading pays off when the GPU has little compute per byte of host bandwidth and the host tier holds the working set. Code is available at https://github.com/KunmingSHAO/efficientagent_release.",
+      "canonical_id": "arXiv:2609.33762",
+      "arxiv_id": "2609.33762",
+      "authors": [
+        "Kun-Ming Shao",
+        "Jie-Run Chen",
+        "Jiang-Nan Yu",
+        "Xiao-Hui Li",
+        "Chao-Fan Tao",
+        "Yan-Li Wang",
+        "Huan-Xin Lin",
+        "Kwang-Ting Cheng",
+        "Chi-Ying Tsui",
+        "H. Bai"
+      ]
+    },
+    {
+      "title": "PackServe: SLO-Aware Request Scheduling for Agentic LLM Serving at Scale",
+      "source_url": "https://arxiv.org/abs/2609.33224",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Request scheduling is a key challenge in large-scale clusters serving agentic large language model (LLM) workloads. An effective scheduler must preserve key-value cache (KVC) reuse across long, shared prefixes, meet token-level latency service-level objectives (SLOs), and minimize GPU resource footprint. Existing schedulers struggle to reconcile these requirements: request consolidation can sacrifice cache locality and increase prefill/decode interference, compromising both SLO attainment and resource efficiency. We present PackServe, a scheduler designed to reduce resource costs while meeting latency SLOs for agentic LLM serving. PackServe uses compact white-box models to predict latency under prefill/decode interference. Guided by these predictions, it packs requests onto fewer serving instances while preserving KVC reuse and SLO constraints, trading available latency headroom for improved per-instance throughput. Evaluation on 64 NVIDIA H20 GPUs shows that PackServe uses up to 16.8% and 24.6% fewer GPU-hours than state-of-the-art schedulers under 30-ms and 50-ms TPOT targets, respectively, while meeting the target TPOT objectives. PackServe has also been deployed in our production cluster comprising over 1000 GPUs, where it reduces the resource footprint by 34.7% compared with the original production scheduler.",
+      "canonical_id": "arXiv:2609.33224",
+      "arxiv_id": "2609.33224",
+      "authors": [
+        "Zhi-Yuan Tan",
+        "De-Jiang Zhu",
+        "Jing-Zhe Jiang",
+        "Yi-Hao Zheng",
+        "Yang Tian",
+        "Tao Wang",
+        "Min-Chen Yu"
+      ]
+    },
+    {
+      "title": "Does Execution Require Target KV Fidelity? A Mixed-Fidelity KV Runtime for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.33536",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Large language model (LLM) serving is increasingly constrained by the GPU memory consumed by key-value (KV) caches. Existing compression, eviction, and offloading techniques alleviate this pressure, but serving runtimes typically treat only the configured target KV representation as execution-ready. Under memory pressure, this target-only contract can turn KV shortage into request stalls and preemptions. We present ElasticKV, a mixed-fidelity KV runtime built on the observation that target fidelity need not gate execution. ElasticKV introduces a compact intermediate KV state, making fidelity a runtime-managed execution property. To realize this state in a paged serving runtime, ElasticKV combines (i) a pair-structured layout that turns fidelity reduction into reusable GPU capacity, (ii) a dual-mode attention backend that directly consumes the compact state while preserving the native target-only path, and (iii) pressure-aware fidelity management that adapts KV fidelity to memory pressure. Our extensive evaluation across diverse workloads, model families and scales, and GPU platforms demonstrates the effectiveness and generality of ElasticKV. Under high concurrency, ElasticKV achieves 3.8-4.0$\\times$ lower time-to-first-token (TTFT) and 9.1$\\times$ lower P90 TTFT than vLLM while preserving generation quality.",
+      "canonical_id": "arXiv:2609.33536",
+      "arxiv_id": "2609.33536",
+      "authors": [
+        "Jiantong Jiang",
+        "Yue Yang",
+        "Pei-Yu Yang",
+        "Feng Liu"
+      ]
+    },
+    {
+      "title": "Tessera: Demand-Driven KV Cache Management for Retrieval-Augmented LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.32999",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "RAG and retrieval-based agent memory both inject retrieved content into LLM prompts, as document chunks and recalled memory records, respectively. The same content can recur across requests at different prompt positions or after different preceding contexts, preventing reuse through conventional prefix caching. Our characterization finds that records recurring outside the matching prefix account for over 70% of injected memory tokens in agent-memory workloads. Composable KV-reuse methods enable reuse in such cases, but online serving introduces a management problem: a recurring unit's KV states may not yet exist, may have been evicted, or may reside on another node. We present Tessera, a disaggregated serving system that makes retrieval the control plane for KV reuse. By exposing the context units needed before model execution, retrieval allows Tessera to combine current demand with retrieval history, KV residency, and generation load to coordinate cache management and request routing. Generation nodes concurrently prepare locally cached, remotely cached, and missing states, while retaining newly computed states off the request's critical path. Across RAG and agent-memory workloads, Tessera lowers mean TTFT by up to 3.6x over SGLang and LMCache with EPIC at matched request rates, and sustains low TTFT at rates where the baselines saturate, while matching the answer quality of the underlying composition policy.",
+      "canonical_id": "arXiv:2609.32999",
+      "arxiv_id": "2609.32999",
+      "authors": [
+        "Fei Fang",
+        "Chung-Hsiang Lo",
+        "Yi Liu",
+        "Yi-Fan Hua",
+        "Chen Qian"
+      ]
+    },
+    {
+      "title": "AgentReplay: Token-Wise Trace Replay Is Essential for Fair Serving System Performance Benchmarking",
+      "source_url": "https://arxiv.org/abs/2609.32283",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "LLM-based agents execute multi-turn workflows with interleaved model inference and tool calls, making efficient serving increasingly important. However, evaluating serving optimizations is challenging because identical tasks can produce different execution trajectories. Changes in generated tokens can alter subsequent prompts, tool calls, and reasoning turns, making it difficult to distinguish system improvements from workload variation. Greedy decoding does not guarantee identical outputs, while replaying only sequence lengths loses token information that affects prefix caching and mixture-of-experts (MoE) routing. To address these problems, we propose AgentReplay, a configurable trace record-and-replay framework for agent serving. AgentReplay records input/output tokens, expert selections, request dependencies, and tool durations. During replay, it forces the recorded output tokens while performing normal autoregressive computation, with optional controls for MoE expert selection and tool delays. This allows different systems to execute the same recorded workload while retaining their own batching, scheduling, and parallelization decisions. We further separate trajectory generation from performance evaluation, enabling compatible smaller models to replay long-horizon traces collected with more capable models. Our experiments show that token-wise replay in AgentReplay effectively eliminates workload variation that greedy decoding and length-wise replay cannot avoid, enabling fairer performance comparisons across serving configurations.",
+      "canonical_id": "arXiv:2609.32283",
+      "arxiv_id": "2609.32283",
+      "authors": [
+        "Zai-Feng Pan",
+        "Michael Wang",
+        "Chris Wu",
+        "Zheng-Ding Hu",
+        "Xin-Wei Qiang",
+        "Zhong-Kai Yu",
+        "Yu-Fei Ding"
+      ]
+    },
+    {
+      "title": "RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.32278",
+      "year": 2026,
+      "published": "2026-09-26",
+      "abstract": "LLM-based agents execute long-horizon tasks through repeated model calls interleaved with tool execution and user interaction. As each call extends the history accumulated in previous turns, prefix caching avoids repeated prefill of the agent's entire context. However, the aggregate cache footprint grows with context length and concurrency, forcing serving systems to reclaim cached KV tensors. We identify recency synchronization: accesses to an agent's cached history refresh its cache nodes together, causing least recently used (LRU) eviction to concentrate on a few agents'private histories. When a fully evicted agent returns, it must recompute nearly its entire accumulated context, producing a large time-to-first-token (TTFT) outlier even if most other requests retain substantial cache reuse. We present RR-EVICT, a fine-grained prefix-cache eviction strategy that distributes reclamation across idle agent trajectories. RR-EVICT visits agents in round-robin order and evicts a tail chunk from each, preserving reusable prefixes for more agents when capacity remains for idle state. Returning agents can reuse these partial histories and recompute smaller missing suffixes. The policy requires no prediction of future arrivals or tool latency. We implement RR-EVICT in SGLang and evaluate conversational and coding-agent workloads under colocated and prefill-decode-disaggregated serving. Compared with LRU, RR-EVICT reduces P99 TTFT by up to 75.4% and P99 uncached prompt tokens by up to 65.7%.",
+      "canonical_id": "arXiv:2609.32278",
+      "arxiv_id": "2609.32278",
+      "authors": [
+        "Zai-Feng Pan",
+        "Chris Wu",
+        "Zheng-Ding Hu",
+        "Xin-Wei Qiang",
+        "Zhong-Kai Yu",
+        "Yu-Fei Ding"
+      ]
+    },
+    {
+      "title": "When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse",
+      "source_url": "https://arxiv.org/abs/2609.28870",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Long-running LLM applications repeatedly send growing context, making prefix caching critical for reducing prefill cost. Yet prefix-cache behavior under agentic workloads remains poorly understood. We study production traces from two companies and evaluate 14 eviction algorithms across HBM-constrained and large memory-pool settings. Despite a large gap to Belady, sophisticated policies designed for traditional caches provide little benefit over LRU. The reason is structural: prefix reuse is dominated by the regular pacing of active sessions, making recency unusually predictive. Prefix caching nevertheless introduces new challenges, including heavy-tailed session footprints and highly variable miss costs as attention computation grows with sequence length. We introduce the compute-savings ratio and two offline oracles to quantify these effects. Our results show that effective prefix-cache management should retain recency as its foundation while selectively adding quick demotion for one-hit prefixes, compute-aware partial eviction for expensive misses, and capacity-dependent eviction granularity. We will release the traces and simulator to support future research.",
+      "canonical_id": "arXiv:2609.28870",
+      "arxiv_id": "2609.28870",
+      "authors": [
+        "Yi-Yu Liu",
+        "Min-Lan Yu",
+        "Jun-Cheng Yang"
+      ]
+    },
+    {
+      "title": "Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis",
+      "source_url": "https://arxiv.org/abs/2608.15303",
+      "year": 2026,
+      "published": "2026-08-15",
+      "abstract": "Test-time compute can substantially improve Large Language Model (LLM) reasoning performance, yet how and when additional compute helps remains poorly understood. We study Divergent-Convergent Reasoning (DCR), a simple two-phase primitive consisting of an exploration phase that generates multiple candidate solutions followed by a convergent reconciliation phase. We present three core results. First, we show that even a single reconciliation step can reliably amplify correct minority reports: across datasets, DCR often recovers the correct answer when correct exploration outputs are in the minority, a regime where majority voting fails. Second, we introduce recursive DCR, an autoregressive reconciliation system that iteratively analyzes disagreements and allocates additional test-time compute. Recursive DCR achieves higher accuracy than fixed-compute baselines-reaching 93.3% on AIME 2024 and 92.0% on AIME 2025-while using roughly 27% less compute on average, demonstrating that attentive resource allocation is superior to uniform scaling. Third, we analyze disagreement among exploration outputs via a simple, training-free dispersion metric. Dispersion reveals a structured relationship between disagreement and test-time gains: in regimes where DCR is effective, higher disagreement among exploration outputs is associated with larger accuracy improvements from reconciliation. Together, these results show that disagreement, often viewed as noise, can be systematically exploited to improve test-time reasoning and reveal emerging scaling laws for agentic LLM systems.",
+      "canonical_id": "arXiv:2608.15303",
+      "arxiv_id": "2608.15303",
+      "authors": [
+        "Bo Wen",
+        "Yu-Hao Chen",
+        "Erhan Bilal",
+        "C. Rios",
+        "Chen Wang",
+        "Junchen Jiang"
+      ]
+    },
+    {
+      "title": "DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O",
+      "source_url": "https://doi.org/10.1145/3789240.3829159",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "The performance of multi-turn, agentic LLM inference is increasingly dominated by KV-Cache storage I/O rather than computation. In prevalent disaggregated architectures, loading the massive KV-Cache from external storage creates a fundamental imbalance: storage NICs on prefill engines become bandwidth-saturated, while those on decoding engines remain idle. This asymmetry severely constrains overall system throughput. We present DualPath, an inference system that breaks this bottleneck by introducing dual-path KV-Cache loading. Beyond the traditional storage-to-prefill path, DualPath enables a novel storage-to-decode path, in which the KV-Cache is loaded into decoding engines and then efficiently transferred to prefill engines via RDMA over the compute network. DualPath combines this optimized data path — which inherently avoids network congestion and avoids interference with latency-critical model execution communications — with a global scheduler that dynamically balances load across prefill and decode engines. Our evaluation on three models with production agentic workloads demonstrates that DualPath improves offline inference throughput by up to 1.87x on our in-house inference system. It can also improve online serving throughput by an average factor of 1.96x without violating SLO.",
+      "doi": "10.1145/3789240.3829159",
+      "canonical_id": "DOI:10.1145/3789240.3829159",
+      "authors": [
+        "Yong-Tong Wu",
+        "Shao-Yuan Chen",
+        "Rilin Huang",
+        "Yi-Xuan Tan",
+        "Yinmin Zhong",
+        "Ming-Xing Zhang",
+        "Xin Jin",
+        "Pan-Pan Huang"
+      ]
+    },
+    {
+      "title": "The Fleet Is the Model: Engineering Collective Intelligence with Fusion-MoA Pioneer R1",
+      "source_url": "https://arxiv.org/abs/2609.26080",
+      "year": 2026,
+      "published": "2026-08-03",
+      "abstract": "The model exposed to an application need not be a single checkpoint; it can be a governed fleet. Existing serving systems manage checkpoints and replicas, while multi-agent frameworks compose model calls without defining a stable collective identity, effect authority, or member-level evolution. We present Fusion-MoA, a runtime that exposes independently served heterogeneous Cells as one OpenAI-compatible model. A versioned Profile controls membership and evidence admission; read-only Analysts contribute bounded evidence, while a sole Executor retains all final-answer and tool authority. Cells can be qualified, promoted, or rolled back without changing the public API. We evaluate an eight-Cell, three-lineage deployment through three operational witnesses. On a fixed HMMT P1-P10 slice, the collective solves 8/10 problems versus 6/10 for the strongest individual Cell, and a preserved trace shows minority knowledge transferred to three initially incorrect or empty Cells. On 20 Terminal-Bench 2.1 tasks, all tool actions remain attributable to one Executor, with zero Analyst actions and zero bypass effects. Six Cells are promoted and one incompatible candidate is locally rolled back while the service remains available. Fusion-MoA demonstrates that heterogeneous model capability can be operated as one observable, authority-bounded, and independently evolvable service.",
+      "canonical_id": "arXiv:2609.26080",
+      "arxiv_id": "2609.26080",
+      "authors": [
+        "Zong-You Yang",
+        "Ying-Han Hou"
+      ]
+    },
+    {
+      "title": "Agent-Assisted Side-Channel Attacks on Non-Prefix KV Cache in RAG",
+      "source_url": "https://arxiv.org/abs/2606.21842",
+      "year": 2026,
+      "published": "2026-06-20",
+      "abstract": "Modern Large Language Model (LLM) serving engines increasingly rely on Retrieval-Augmented Generation (RAG) and non-prefix Key-Value (KV) cache fusion to accelerate long-context, multi-tenant inference. While existing KV cache side-channel attacks require strict linear prefix alignment--rendering them ineffective against real-world RAG queries that contain unique, user-specific private prefixes--we uncover a critical class of structural vulnerabilities inherent to chunk-aware memory scheduling. We demonstrate that the deterministic micro-architectural mechanisms used to align and fuse disjoint memory chunks inadvertently leak a continuous\"Step-Wave\"timing signature. Exploiting this physical observation, we introduce SpliceLeak, the first end-to-end side-channel attack targeting non-prefix KV cache fusion. SpliceLeak executes a systematic two-phase privacy breach: it first structurally fingerprints the exact length of hidden private prompts, and subsequently manipulates boundary collisions to extract exact semantic content token-by-token. Extensive evaluations on production-grade frameworks (vLLM integrated with LMCache) demonstrate that SpliceLeak achieves up to a 100% extraction success rate in bounded-entropy scenarios. Driven by a deterministic +104 ms hardware latency void, the attack requires as few as 63 requests per token, piercing through realistic continuous batching noise. To resolve the inherent conflict between memory deduplication and security, we propose SpliceDefense, a bipartite mitigation framework consisting of Quantized Chunk Padding (QCP) and Constant-Time Boundary Fusion (CTBF). Our evaluations confirm that SpliceDefense effectively flattens the side-channel signal (Delta TTFT ~ 0) with negligible throughput overhead, preserving the critical benefits of global cache sharing.",
+      "canonical_id": "arXiv:2606.21842",
+      "arxiv_id": "2606.21842",
+      "doi": "10.48550/arXiv.2606.21842",
+      "authors": [
+        "He Sun",
+        "Shi-Nan Liu",
+        "Siyuan Ma",
+        "Junhao Li",
+        "Ming-Jun Xiao",
+        "Wenhao Jiang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.39819",
+      "identity_tokens": [
+        "id:arXiv:2609.39819",
+        "title:capture the lifecycle kv cache management in react agents with kvtether",
+        "url:https://arxiv.org/abs/2609.39819"
+      ],
+      "record": {
+        "title": "Capture the lifecycle: KV Cache management in ReAct Agents with KVTether",
+        "source_url": "https://arxiv.org/abs/2609.39819",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Efficient serving of long-context reasoning-and-acting (ReAct) agents relies on KV cache reuse to reduce large language model (LLM) prefill latency and monetary cost. However, a semantic gap exists between agent harnesses and the underlying serving stack. Through context mutation, tool execution, and subagent coordination, context messages may become actively engaged, permanently discarded, and temporarily unused, while the serving stack only observes accesses to the corresponding KV cache. This lifecycle blindness prevents recency-only policies such as LRU from reclaiming dead KV promptly and from preserving older KV that will be reused sooner than newer entries. We present KVTether, a lifecycle-aware KV cache management framework for ReAct agents. By tracing semantic primitives embedded in agent harnesses, KVTether captures runtime lifecycle semantics during highly dynamic execution. KVTether then translates message-level semantics into KV-level lifecycle states and uses these states to drive state-prioritized cache management without exposing physical complexities to agent harnesses. After reclaiming dead KV, KVTether preferentially preserves live-but-idle KV that is waiting for reuse, reducing premature eviction before reuse. Across agent benchmarks and production workloads, KVTether reduces end-to-end request latency by up to 26.3% and 17.4% relative to LMCache and MORI, respectively, and lowers estimated task cost by 40.0% and 33.2% on average.",
+        "canonical_id": "arXiv:2609.39819",
+        "arxiv_id": "2609.39819",
+        "authors": [
+          "Kai-Hua Fu",
+          "Yu-Kun Zhou",
+          "Chaokun Chang",
+          "Ying-Hao Yu",
+          "Lu-Ping Wang",
+          "Guo-Dong Yang",
+          "Jiu-Chen Shi",
+          "Quan Chen",
+          "Wei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38706",
+      "identity_tokens": [
+        "id:arXiv:2609.38706",
+        "title:preserving provenance in shared kv caches for llm serving",
+        "url:https://arxiv.org/abs/2609.38706"
+      ],
+      "record": {
+        "title": "Preserving Provenance in Shared KV Caches for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.38706",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Production LLM serving stacks combine an inference engine's local prefix cache with a shared KV-cache tier for fleet-wide reuse. The local cache distinguishes requests by adapter, weight configuration and sharing domain, but the shared tier may key entries only by token content and coarse model metadata. This boundary erases provenance and lets identical tokens under incompatible computational or sharing contexts collide. We call this composition gap provenance-blind reuse and present its first systematic study. A source audit of three vLLM connectors confirms the structural omission, while runtime experiments reproduce it across vLLM and two SGLang releases, 12 models from 7 families (0.5 B-32 B), and over 160 configurations. Cross-adapter collisions reduce accuracy from 0.94 to 0.64, incompatible KV representations reduce reasoning accuracy to zero, and salt omission enables 93% prompt identification from timing. We formalize the missing guarantee as the KV provenance contract: for a declared dimension registry, shared keys must be injective over computational and sharing provenance, with identities stable across workers. Any dimension with a stable identity can therefore be added without connector-specific key logic. A canonical descriptor binds per-request and per-worker provenance into lookup and store keys, while a differential checker detects dimensions that change KV state without changing the key. Implemented in vLLM and SGLang 0.5.20 across three cache paths, provenance binding eliminates unsafe reuse while preserving legitimate sharing. Hit-path latency changes remain within 0.34 ms and below run-to-run variation; retention grows with provenance diversity.",
+        "canonical_id": "arXiv:2609.38706",
+        "arxiv_id": "2609.38706",
+        "authors": [
+          "Wei Song",
+          "Yu-Xin Cao",
+          "Xi Zheng",
+          "Leo Zhang",
+          "Xiao-Hun Cheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39131",
+      "identity_tokens": [
+        "id:arXiv:2609.39131",
+        "title:characterizing high bandwidth flash for llm serving",
+        "url:https://arxiv.org/abs/2609.39131"
+      ],
+      "record": {
+        "title": "Characterizing High Bandwidth Flash for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.39131",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Large language model (LLM) serving requires substantial memory to store model weights and KV caches. As models grow larger and contexts become longer, memory capacity and bandwidth increasingly become bottlenecks for serving performance. Agentic workloads compound this pressure through repeated interactions over growing contexts, making it increasingly important to retain KV state for reuse. High-bandwidth flash (HBF) offers a way to expand accelerator memory capacity for large language model (LLM) serving, but its access costs and limited write endurance complicate its use. We evaluate HBF for high-throughput agentic serving across system design and scheduling choices to understand when additional capacity improves serving performance and energy efficiency. We introduce an HBM-HBF-host hierarchical storage system and buffered cache-aware scheduling, and use trace-driven simulations to analyze their effects on performance, energy consumption, and HBF write lifetime. Across the evaluated workloads, the fastest HBF-augmented systems reduce completion time by 36.1-87.0% relative to HBM-only systems. Modeled energy savings reach 55.8%, although HBF increases energy consumption on some light workloads. Buffered cache-aware scheduling extends estimated HBF write lifetime from 4.77 to 14.82 years in the evaluated configuration. These results demonstrate the importance of coordinating data placement and scheduling to improve serving efficiency while sustaining a practical HBF write lifetime.",
+        "canonical_id": "arXiv:2609.39131",
+        "arxiv_id": "2609.39131",
+        "authors": [
+          "Zack Yu",
+          "Chloe Wong",
+          "C. Hooper",
+          "Minjae Lee",
+          "Wonjun Kang",
+          "Youngjin Cho",
+          "Michael W. Mahoney",
+          "Yakun Sophia Shao",
+          "Kurt Keutzer",
+          "Amir Gholami"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.40247",
+      "identity_tokens": [
+        "id:arXiv:2609.40247",
+        "title:herschel continuous optimization of production llm inference through ondemand profiling",
+        "url:https://arxiv.org/abs/2609.40247"
+      ],
+      "record": {
+        "title": "Herschel: Continuous Optimization of Production LLM Inference through On-Demand Profiling",
+        "source_url": "https://arxiv.org/abs/2609.40247",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Model-as-a-service platforms call for continuous optimization as complex serving conditions expose inefficiencies missed before deployment. Detailed always-on profiling can incur substantial overhead, while lightweight collection omits information needed for diagnosis. We present Herschel, a continuous optimization system for production large language model (LLM) inference. Our key insight is that adaptive, on-demand profiling can provide rich full-stack evidence without continuous collection. Herschel safely attaches to and detaches from selected running processes without engine changes or restarts, and adapts coverage as investigations reveal missing evidence. Herschel reconstructs operator executions and cross-process dependencies to identify inefficiency mechanisms and suggest solutions using applicable reference fixes. AI agents implement and test engine and kernel changes under controlled conditions that preserve the triggering workload and dependencies, with expert review before deployment. Controlled tests show active-collection overhead below 0.5% for time to first token and 7% for time per output token. Bounded windows, typically 30 s, avoid the continuous cost of always-on tracing. Over six months, Herschel collected approximately 17,000 traces across over 120 model variants and more than 10 accelerator types, identifying inefficiency patterns in 23% of the traces. Representative findings guide widely deployed optimizations, including restructured synchronization, removal of unused computation, and improved operator implementations.",
+        "canonical_id": "arXiv:2609.40247",
+        "arxiv_id": "2609.40247",
+        "authors": [
+          "Lu-Ping Wang",
+          "Wei-Gao Chen",
+          "Yi-Fei Wu",
+          "Yong-He Zhang",
+          "Rui Zhang",
+          "Wen-Chao Wu",
+          "Ji-Yu Luo",
+          "Hao-Ran Geng",
+          "Xin Yang",
+          "Cheng Cao",
+          "Yue-Min Wu",
+          "Cheng-Ling Huang",
+          "Guo-Dong Yang",
+          "Li-Ping Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39358",
+      "identity_tokens": [
+        "id:arXiv:2609.39358",
+        "title:working around the compute ceiling byteexact memory in galahad makes llm reading a onetime cost llm reading a onetime cost",
+        "url:https://arxiv.org/abs/2609.39358"
+      ],
+      "record": {
+        "title": "Working Around the Compute Ceiling: Byte-Exact Memory in Galahad Makes LLM Reading a One-Time Cost LLM Reading a One-Time Cost",
+        "source_url": "https://arxiv.org/abs/2609.39358",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "A transformer language model performs a bounded amount of computation per token, and recent work by Vishal Sikka, former CEO of Infosys, argues that this bound limits which tasks a model can carry out or verify (arXiv:2507.07505). We ask how much of the budget beneath that ceiling is spent on work the model has already done. Serving is stateless across requests: a model that answers a second question about a document recomputes the document's attention state from the first token. On seven real-world datasets, 98.7% of prompt tokens were text the model had already read. We present Galahad, a memory layer for vLLM, SGLang and llama.cpp that makes this reading a one-time cost. Taliesin saves the model's key-value (KV) state for a block of text and loads it on the next request that contains the same bytes, instead of recomputing it. Blaise keeps the documents themselves and passes the model only the section a question needs. On a recall test with 100 facts hidden in a 97,000-token corpus (Gemma 4 31B), Taliesin alone let the model attend to the whole corpus and answered 98 of 100 on llama.cpp at 3.0 s and 572 J per question, against 10 of 100, 9.3 s and 2,754 J for the same model without Galahad, which could hold only the last 12,000 tokens. With Blaise added, the model read about 668 tokens per question and answered 100 of 100 on all three runtimes at 0.59-0.64 s and 200-213 J; a tuned RAGFlow pipeline answered 77. Storing the corpus is a one-time cost of about 100 s and 28 kJ, whose energy is recovered after 13 questions. Restored state is bit-identical: all 262,144 output logits matched after restart, rehydration and hot-load. Galahad worked with all 30 models we tested under vLLM, and it fails closed: any load that does not pass its checks is recomputed. Together these results move LLM serving from stateless to stateful inference.",
+        "canonical_id": "arXiv:2609.39358",
+        "arxiv_id": "2609.39358",
+        "authors": [
+          "Sietse Schelpe"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36938",
+      "identity_tokens": [
+        "id:arXiv:2609.36938",
+        "title:efficient agentic llm serving over ssdbased sparse kv storage",
+        "url:https://arxiv.org/abs/2609.36938"
+      ],
+      "record": {
+        "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
+        "source_url": "https://arxiv.org/abs/2609.36938",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Agentic sessions driven by Large language models (LLMs) often alternate between model inference and tool use, accumulating long histories across successive rounds. Serving these sessions efficiently requires reducing attention computation and retaining history key-value (KV) caches to avoid recomputation. Recently, frontier open-source LLMs adopt sparse attention to reduce computation by selecting only part of the history, while SSDs provide a cheaper alternative to CPU DRAM for storing KV caches. However, sparse KV selection depends on the ad hoc intermediate values during model inference, so it forces SSD reads to lie on the inference critical path. These reads are further slowed by fragmented accesses and read-write interference in SSDs. To address these challenges, we present Janus, an agentic serving framework for sparse attention LLMs with SSD-centric KV storage. Janus focuses on append prefill, which processes each round's newly added inputs and accounts for most history KV loading. To move SSD reads out of the critical path, Janus runs the model's own KV selection module on earlier intermediate values, predicting KV demand without additional training. The predicted reads overlap with model computation, and any prediction misses are fetched before attention executes to preserve model outputs. To improve SSD efficiency, Janus coalesces adjacent reads, packs scattered KV pages into sequential writes on the CPU, and limits background writes while reads are active. Across three models and three agentic traces, Janus outperforms existing works by up to 1.57-3.69 times (1.22-1.85 times on average) in terms of the time to first token latency, while maintaining decode efficiency.",
+        "canonical_id": "arXiv:2609.36938",
+        "arxiv_id": "2609.36938",
+        "authors": [
+          "Wen-Hao He",
+          "Ping Zhang",
+          "Xiao-He Hu",
+          "Chu-Tian Wang",
+          "Jin-Long Hou",
+          "Yuan Cheng",
+          "Peng Sun",
+          "Fang-Cheng Fu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37538",
+      "identity_tokens": [
+        "id:arXiv:2609.37538",
+        "title:avsg accelerated vectorized sparse gather for efficient kv cache offload in sparseattention llm serving",
+        "url:https://arxiv.org/abs/2609.37538"
+      ],
+      "record": {
+        "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.37538",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Dynamic sparse attention reduces long-context attention computation by selecting only a subset of tokens, but still requires access to the full KV cache, leaving serving memory-bound. Offloading the KV cache to host memory reduces device memory pressure but places H2D transfers on the decoding critical path. In DSA, substantial overlap in selected KV entries across decoding steps creates an opportunity for device-resident reuse. Exploiting this reuse efficiently, however, presents three critical challenges: costly matching of selected tokens against entries retained in the HBM buffer, uneven distribution of the remaining H2D transfers across accelerator cores, and retaining frequently accessed KV entries within limited HBM capacity. We present AVSG, an operator that addresses these challenges for DSA while preserving its exact token selections. AVSG uses vectorized hash matching to identify reusable HBM-buffer slots and reserve slots for entries requiring transfer, then evenly partitions these H2D transfers across accelerator cores. Lifetime-based buffer management retains frequently accessed KV entries in the device buffer across decoding steps, and shared slot reservations extend reuse across tokens within a multi-token prediction iteration. On a single NPU, vectorized hash matching is 2.80x faster than scalar dual-pointer matching, miss-only transfer raises effective H2D bandwidth by up to 34.44x over request-level assignment, and an 8K-entry buffer reaches a 94.83% hit rate on real requests. These gains translate into end-to-end improvement: on a serving stack processing a real-world production dataset, AVSG reduces time per output token by 39% and increases output throughput by 1.27x relative to the same KV offload layout without HBM-buffer reuse, demonstrating the benefit of efficient matching, balanced transfer, and effective HBM residency in production-scale serving.",
+        "canonical_id": "arXiv:2609.37538",
+        "arxiv_id": "2609.37538",
+        "authors": [
+          "Wen-Wei Kuang",
+          "Xiang-Yu Wang",
+          "Chong Wu",
+          "Jun Wang",
+          "Wei-Jie Zhang",
+          "Brian K. Chen",
+          "Long Lan",
+          "Ke-Pan Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35065",
+      "identity_tokens": [
+        "id:arXiv:2609.35065",
+        "title:tempokv timely staging of llm kv caches for memorysemantic flash",
+        "url:https://arxiv.org/abs/2609.35065"
+      ],
+      "record": {
+        "title": "TempoKV: Timely Staging of LLM KV Caches for Memory-Semantic Flash",
+        "source_url": "https://arxiv.org/abs/2609.35065",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Reusable prefix key-value (KV) caches can outgrow GPU memory in large language model (LLM) serving. A memory-semantic flash hierarchy offers SSD-backed capacity with a limited fast tier, but a logical KV hit is not necessarily ready for GPU retrieval. Demand staging exposes SSD latency, whereas immediate staging can reserve fast-tier capacity long before retrieval begins. We present TempoKV, a timing-aware resource-commitment layer that separates early knowledge of reuse from the acquisition of staging resources. It records reusable-KV hits as metadata-only claims and requests commitment when the runtime-estimated time until retrieval falls to the storage-estimated time needed to make KV resident and protected against eviction. These estimates adapt to runtime progress and staging state, while commitment remains subject to available protected capacity. We implement TempoKV in vLLM and LMCache on an SSD-backed CXL memory device without changing request scheduling. Across two models and three prefix cache ratios, TempoKV reduces protected fast-tier byte-time per request by 63-91% versus immediate staging while retaining much of the serving benefit of advance staging. In a fast-tier capacity sweep, output throughput and p95 time to first token (TTFT) remain nearly unchanged as capacity decreases from 100 to 25 GiB. Compared with unmodified LMCache's Device-DAX L1 configuration, TempoKV reduces p95 TTFT by up to 48.0% and increases output throughput by up to 27.8%.",
+        "canonical_id": "arXiv:2609.35065",
+        "arxiv_id": "2609.35065",
+        "authors": [
+          "Jay H. Park",
+          "H. Kim",
+          "D. Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35263",
+      "identity_tokens": [
+        "id:arXiv:2609.35263",
+        "title:wavepp highthroughput pipeline parallel llm prefill under prefix reuse",
+        "url:https://arxiv.org/abs/2609.35263"
+      ],
+      "record": {
+        "title": "WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse",
+        "source_url": "https://arxiv.org/abs/2609.35263",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Pipeline parallelism can improve prefill throughput by processing multiple request chunks concurrently across different stages of the model. However, keeping the pipeline fully utilized requires efficient scheduling and request preparation. In systems where stages retain and evict cache state independently, a local cache hit does not guarantee that the same prefix can be reused across the pipeline. Here, coordination overhead can impede request admission cadence and thus reduce overall throughput. In this paper, we present WavePP, a prefill runtime built on top of TensorRT-LLM that addresses these challenges by overlapping request admission with pipeline execution. WavePP asynchronously finds a prefix that can be reused across all stages, protects the cached state, and reserves space for the remaining input while earlier requests continue to execute. It subsequently plans the chunk sizes of each request dynamically to maximize pipeline fill. Each stage then completes the local preparation before executing the request. In the same system and pipeline topology, WavePP improves TensorRT-LLM's prefill throughput in 37 of 40 tested settings on GLM 5.2 and MiniMax M2.7. At concurrency 128 with high cache reuse, these changes increase throughput by factors of 2.91 and 2.02, respectively. Across 28 Kimi K3 settings, WavePP also has the highest measured throughput in all 18 settings at concurrency eight or higher, compared with tensor/expert-parallel and pipeline-parallel baselines from TRT-LLM, SGLang, and vLLM.",
+        "canonical_id": "arXiv:2609.35263",
+        "arxiv_id": "2609.35263",
+        "authors": [
+          "Aaryam Sharma"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33762",
+      "identity_tokens": [
+        "id:arXiv:2609.33762",
+        "title:efficientagent what makes kv cache offloading work for concurrent agents",
+        "url:https://arxiv.org/abs/2609.33762"
+      ],
+      "record": {
+        "title": "EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?",
+        "source_url": "https://arxiv.org/abs/2609.33762",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "LLM agents resend their whole conversation on every turn, and most of it was already processed on the previous turn. Serving systems avoid recomputing it by caching its key-value (KV) state and, when GPU memory runs out, by offloading that state to host memory. For agents, offloading gives inconsistent results: on the same coding-agent workload it speeds up one deployment, slows down another, and changes nothing on a third, even where loading a token back is several times cheaper than recomputing it. The reason is that cached state must survive until it is used again. While one agent waits for its tool, the server processes the contexts of all other agents, so an agent's prefix is reused only if the host tier holds the reusable context of the whole agent pool, which we call the reuse working set. A smaller tier keeps writing state that is evicted before anyone reads it. We present EfficientAgent, which sizes and manages the host tier by this working set. A stack-distance model estimates the working set from agent histories to size the host tier; its predictions, made before the experiments, located the capacity at which offloading starts to pay. When the tier is too small, a runtime policy stops writing large refills of evicted context and keeps extending prefixes that are still cached; when the tier is large enough, it writes everything. On SWE-bench Verified coding agents, a host tier sized to the estimated working set cuts recomputed prompt tokens by 93% and end-to-end time by 39%. With a small fixed tier, the policy cuts recomputation by 35%; with a large tier, it avoids the 4.3-fold increase caused by always filtering writes. Across three GPU types and two models, offloading pays off when the GPU has little compute per byte of host bandwidth and the host tier holds the working set. Code is available at https://github.com/KunmingSHAO/efficientagent_release.",
+        "canonical_id": "arXiv:2609.33762",
+        "arxiv_id": "2609.33762",
+        "authors": [
+          "Kun-Ming Shao",
+          "Jie-Run Chen",
+          "Jiang-Nan Yu",
+          "Xiao-Hui Li",
+          "Chao-Fan Tao",
+          "Yan-Li Wang",
+          "Huan-Xin Lin",
+          "Kwang-Ting Cheng",
+          "Chi-Ying Tsui",
+          "H. Bai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33224",
+      "identity_tokens": [
+        "id:arXiv:2609.33224",
+        "title:packserve sloaware request scheduling for agentic llm serving at scale",
+        "url:https://arxiv.org/abs/2609.33224"
+      ],
+      "record": {
+        "title": "PackServe: SLO-Aware Request Scheduling for Agentic LLM Serving at Scale",
+        "source_url": "https://arxiv.org/abs/2609.33224",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Request scheduling is a key challenge in large-scale clusters serving agentic large language model (LLM) workloads. An effective scheduler must preserve key-value cache (KVC) reuse across long, shared prefixes, meet token-level latency service-level objectives (SLOs), and minimize GPU resource footprint. Existing schedulers struggle to reconcile these requirements: request consolidation can sacrifice cache locality and increase prefill/decode interference, compromising both SLO attainment and resource efficiency. We present PackServe, a scheduler designed to reduce resource costs while meeting latency SLOs for agentic LLM serving. PackServe uses compact white-box models to predict latency under prefill/decode interference. Guided by these predictions, it packs requests onto fewer serving instances while preserving KVC reuse and SLO constraints, trading available latency headroom for improved per-instance throughput. Evaluation on 64 NVIDIA H20 GPUs shows that PackServe uses up to 16.8% and 24.6% fewer GPU-hours than state-of-the-art schedulers under 30-ms and 50-ms TPOT targets, respectively, while meeting the target TPOT objectives. PackServe has also been deployed in our production cluster comprising over 1000 GPUs, where it reduces the resource footprint by 34.7% compared with the original production scheduler.",
+        "canonical_id": "arXiv:2609.33224",
+        "arxiv_id": "2609.33224",
+        "authors": [
+          "Zhi-Yuan Tan",
+          "De-Jiang Zhu",
+          "Jing-Zhe Jiang",
+          "Yi-Hao Zheng",
+          "Yang Tian",
+          "Tao Wang",
+          "Min-Chen Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33536",
+      "identity_tokens": [
+        "id:arXiv:2609.33536",
+        "title:does execution require target kv fidelity a mixedfidelity kv runtime for llm serving",
+        "url:https://arxiv.org/abs/2609.33536"
+      ],
+      "record": {
+        "title": "Does Execution Require Target KV Fidelity? A Mixed-Fidelity KV Runtime for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.33536",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Large language model (LLM) serving is increasingly constrained by the GPU memory consumed by key-value (KV) caches. Existing compression, eviction, and offloading techniques alleviate this pressure, but serving runtimes typically treat only the configured target KV representation as execution-ready. Under memory pressure, this target-only contract can turn KV shortage into request stalls and preemptions. We present ElasticKV, a mixed-fidelity KV runtime built on the observation that target fidelity need not gate execution. ElasticKV introduces a compact intermediate KV state, making fidelity a runtime-managed execution property. To realize this state in a paged serving runtime, ElasticKV combines (i) a pair-structured layout that turns fidelity reduction into reusable GPU capacity, (ii) a dual-mode attention backend that directly consumes the compact state while preserving the native target-only path, and (iii) pressure-aware fidelity management that adapts KV fidelity to memory pressure. Our extensive evaluation across diverse workloads, model families and scales, and GPU platforms demonstrates the effectiveness and generality of ElasticKV. Under high concurrency, ElasticKV achieves 3.8-4.0$\\times$ lower time-to-first-token (TTFT) and 9.1$\\times$ lower P90 TTFT than vLLM while preserving generation quality.",
+        "canonical_id": "arXiv:2609.33536",
+        "arxiv_id": "2609.33536",
+        "authors": [
+          "Jiantong Jiang",
+          "Yue Yang",
+          "Pei-Yu Yang",
+          "Feng Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32999",
+      "identity_tokens": [
+        "id:arXiv:2609.32999",
+        "title:tessera demanddriven kv cache management for retrievalaugmented llm serving",
+        "url:https://arxiv.org/abs/2609.32999"
+      ],
+      "record": {
+        "title": "Tessera: Demand-Driven KV Cache Management for Retrieval-Augmented LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.32999",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "RAG and retrieval-based agent memory both inject retrieved content into LLM prompts, as document chunks and recalled memory records, respectively. The same content can recur across requests at different prompt positions or after different preceding contexts, preventing reuse through conventional prefix caching. Our characterization finds that records recurring outside the matching prefix account for over 70% of injected memory tokens in agent-memory workloads. Composable KV-reuse methods enable reuse in such cases, but online serving introduces a management problem: a recurring unit's KV states may not yet exist, may have been evicted, or may reside on another node. We present Tessera, a disaggregated serving system that makes retrieval the control plane for KV reuse. By exposing the context units needed before model execution, retrieval allows Tessera to combine current demand with retrieval history, KV residency, and generation load to coordinate cache management and request routing. Generation nodes concurrently prepare locally cached, remotely cached, and missing states, while retaining newly computed states off the request's critical path. Across RAG and agent-memory workloads, Tessera lowers mean TTFT by up to 3.6x over SGLang and LMCache with EPIC at matched request rates, and sustains low TTFT at rates where the baselines saturate, while matching the answer quality of the underlying composition policy.",
+        "canonical_id": "arXiv:2609.32999",
+        "arxiv_id": "2609.32999",
+        "authors": [
+          "Fei Fang",
+          "Chung-Hsiang Lo",
+          "Yi Liu",
+          "Yi-Fan Hua",
+          "Chen Qian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32283",
+      "identity_tokens": [
+        "id:arXiv:2609.32283",
+        "title:agentreplay tokenwise trace replay is essential for fair serving system performance benchmarking",
+        "url:https://arxiv.org/abs/2609.32283"
+      ],
+      "record": {
+        "title": "AgentReplay: Token-Wise Trace Replay Is Essential for Fair Serving System Performance Benchmarking",
+        "source_url": "https://arxiv.org/abs/2609.32283",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "LLM-based agents execute multi-turn workflows with interleaved model inference and tool calls, making efficient serving increasingly important. However, evaluating serving optimizations is challenging because identical tasks can produce different execution trajectories. Changes in generated tokens can alter subsequent prompts, tool calls, and reasoning turns, making it difficult to distinguish system improvements from workload variation. Greedy decoding does not guarantee identical outputs, while replaying only sequence lengths loses token information that affects prefix caching and mixture-of-experts (MoE) routing. To address these problems, we propose AgentReplay, a configurable trace record-and-replay framework for agent serving. AgentReplay records input/output tokens, expert selections, request dependencies, and tool durations. During replay, it forces the recorded output tokens while performing normal autoregressive computation, with optional controls for MoE expert selection and tool delays. This allows different systems to execute the same recorded workload while retaining their own batching, scheduling, and parallelization decisions. We further separate trajectory generation from performance evaluation, enabling compatible smaller models to replay long-horizon traces collected with more capable models. Our experiments show that token-wise replay in AgentReplay effectively eliminates workload variation that greedy decoding and length-wise replay cannot avoid, enabling fairer performance comparisons across serving configurations.",
+        "canonical_id": "arXiv:2609.32283",
+        "arxiv_id": "2609.32283",
+        "authors": [
+          "Zai-Feng Pan",
+          "Michael Wang",
+          "Chris Wu",
+          "Zheng-Ding Hu",
+          "Xin-Wei Qiang",
+          "Zhong-Kai Yu",
+          "Yu-Fei Ding"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32278",
+      "identity_tokens": [
+        "id:arXiv:2609.32278",
+        "title:rrevict finegrained prefix cache eviction beyond lru for agentic llm serving",
+        "url:https://arxiv.org/abs/2609.32278"
+      ],
+      "record": {
+        "title": "RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.32278",
+        "year": 2026,
+        "published": "2026-09-26",
+        "abstract": "LLM-based agents execute long-horizon tasks through repeated model calls interleaved with tool execution and user interaction. As each call extends the history accumulated in previous turns, prefix caching avoids repeated prefill of the agent's entire context. However, the aggregate cache footprint grows with context length and concurrency, forcing serving systems to reclaim cached KV tensors. We identify recency synchronization: accesses to an agent's cached history refresh its cache nodes together, causing least recently used (LRU) eviction to concentrate on a few agents'private histories. When a fully evicted agent returns, it must recompute nearly its entire accumulated context, producing a large time-to-first-token (TTFT) outlier even if most other requests retain substantial cache reuse. We present RR-EVICT, a fine-grained prefix-cache eviction strategy that distributes reclamation across idle agent trajectories. RR-EVICT visits agents in round-robin order and evicts a tail chunk from each, preserving reusable prefixes for more agents when capacity remains for idle state. Returning agents can reuse these partial histories and recompute smaller missing suffixes. The policy requires no prediction of future arrivals or tool latency. We implement RR-EVICT in SGLang and evaluate conversational and coding-agent workloads under colocated and prefill-decode-disaggregated serving. Compared with LRU, RR-EVICT reduces P99 TTFT by up to 75.4% and P99 uncached prompt tokens by up to 65.7%.",
+        "canonical_id": "arXiv:2609.32278",
+        "arxiv_id": "2609.32278",
+        "authors": [
+          "Zai-Feng Pan",
+          "Chris Wu",
+          "Zheng-Ding Hu",
+          "Xin-Wei Qiang",
+          "Zhong-Kai Yu",
+          "Yu-Fei Ding"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28870",
+      "identity_tokens": [
+        "id:arXiv:2609.28870",
+        "title:when fancy eviction fails rethinking cache replacement for llm prefix reuse",
+        "url:https://arxiv.org/abs/2609.28870"
+      ],
+      "record": {
+        "title": "When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse",
+        "source_url": "https://arxiv.org/abs/2609.28870",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Long-running LLM applications repeatedly send growing context, making prefix caching critical for reducing prefill cost. Yet prefix-cache behavior under agentic workloads remains poorly understood. We study production traces from two companies and evaluate 14 eviction algorithms across HBM-constrained and large memory-pool settings. Despite a large gap to Belady, sophisticated policies designed for traditional caches provide little benefit over LRU. The reason is structural: prefix reuse is dominated by the regular pacing of active sessions, making recency unusually predictive. Prefix caching nevertheless introduces new challenges, including heavy-tailed session footprints and highly variable miss costs as attention computation grows with sequence length. We introduce the compute-savings ratio and two offline oracles to quantify these effects. Our results show that effective prefix-cache management should retain recency as its foundation while selectively adding quick demotion for one-hit prefixes, compute-aware partial eviction for expensive misses, and capacity-dependent eviction granularity. We will release the traces and simulator to support future research.",
+        "canonical_id": "arXiv:2609.28870",
+        "arxiv_id": "2609.28870",
+        "authors": [
+          "Yi-Yu Liu",
+          "Min-Lan Yu",
+          "Jun-Cheng Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15303",
+      "identity_tokens": [
+        "id:arXiv:2608.15303",
+        "title:divergentconvergent reasoning scaling testtime compute through structured solution synthesis",
+        "url:https://arxiv.org/abs/2608.15303"
+      ],
+      "record": {
+        "title": "Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis",
+        "source_url": "https://arxiv.org/abs/2608.15303",
+        "year": 2026,
+        "published": "2026-08-15",
+        "abstract": "Test-time compute can substantially improve Large Language Model (LLM) reasoning performance, yet how and when additional compute helps remains poorly understood. We study Divergent-Convergent Reasoning (DCR), a simple two-phase primitive consisting of an exploration phase that generates multiple candidate solutions followed by a convergent reconciliation phase. We present three core results. First, we show that even a single reconciliation step can reliably amplify correct minority reports: across datasets, DCR often recovers the correct answer when correct exploration outputs are in the minority, a regime where majority voting fails. Second, we introduce recursive DCR, an autoregressive reconciliation system that iteratively analyzes disagreements and allocates additional test-time compute. Recursive DCR achieves higher accuracy than fixed-compute baselines-reaching 93.3% on AIME 2024 and 92.0% on AIME 2025-while using roughly 27% less compute on average, demonstrating that attentive resource allocation is superior to uniform scaling. Third, we analyze disagreement among exploration outputs via a simple, training-free dispersion metric. Dispersion reveals a structured relationship between disagreement and test-time gains: in regimes where DCR is effective, higher disagreement among exploration outputs is associated with larger accuracy improvements from reconciliation. Together, these results show that disagreement, often viewed as noise, can be systematically exploited to improve test-time reasoning and reveal emerging scaling laws for agentic LLM systems.",
+        "canonical_id": "arXiv:2608.15303",
+        "arxiv_id": "2608.15303",
+        "authors": [
+          "Bo Wen",
+          "Yu-Hao Chen",
+          "Erhan Bilal",
+          "C. Rios",
+          "Chen Wang",
+          "Junchen Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3829159",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3829159",
+        "title:dualpath accelerating agentic llm inference by harvesting disaggregated kvcache storage io",
+        "url:https://doi.org/10.1145/3789240.3829159"
+      ],
+      "record": {
+        "title": "DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O",
+        "source_url": "https://doi.org/10.1145/3789240.3829159",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "The performance of multi-turn, agentic LLM inference is increasingly dominated by KV-Cache storage I/O rather than computation. In prevalent disaggregated architectures, loading the massive KV-Cache from external storage creates a fundamental imbalance: storage NICs on prefill engines become bandwidth-saturated, while those on decoding engines remain idle. This asymmetry severely constrains overall system throughput. We present DualPath, an inference system that breaks this bottleneck by introducing dual-path KV-Cache loading. Beyond the traditional storage-to-prefill path, DualPath enables a novel storage-to-decode path, in which the KV-Cache is loaded into decoding engines and then efficiently transferred to prefill engines via RDMA over the compute network. DualPath combines this optimized data path — which inherently avoids network congestion and avoids interference with latency-critical model execution communications — with a global scheduler that dynamically balances load across prefill and decode engines. Our evaluation on three models with production agentic workloads demonstrates that DualPath improves offline inference throughput by up to 1.87x on our in-house inference system. It can also improve online serving throughput by an average factor of 1.96x without violating SLO.",
+        "doi": "10.1145/3789240.3829159",
+        "canonical_id": "DOI:10.1145/3789240.3829159",
+        "authors": [
+          "Yong-Tong Wu",
+          "Shao-Yuan Chen",
+          "Rilin Huang",
+          "Yi-Xuan Tan",
+          "Yinmin Zhong",
+          "Ming-Xing Zhang",
+          "Xin Jin",
+          "Pan-Pan Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26080",
+      "identity_tokens": [
+        "id:arXiv:2609.26080",
+        "title:the fleet is the model engineering collective intelligence with fusionmoa pioneer r1",
+        "url:https://arxiv.org/abs/2609.26080"
+      ],
+      "record": {
+        "title": "The Fleet Is the Model: Engineering Collective Intelligence with Fusion-MoA Pioneer R1",
+        "source_url": "https://arxiv.org/abs/2609.26080",
+        "year": 2026,
+        "published": "2026-08-03",
+        "abstract": "The model exposed to an application need not be a single checkpoint; it can be a governed fleet. Existing serving systems manage checkpoints and replicas, while multi-agent frameworks compose model calls without defining a stable collective identity, effect authority, or member-level evolution. We present Fusion-MoA, a runtime that exposes independently served heterogeneous Cells as one OpenAI-compatible model. A versioned Profile controls membership and evidence admission; read-only Analysts contribute bounded evidence, while a sole Executor retains all final-answer and tool authority. Cells can be qualified, promoted, or rolled back without changing the public API. We evaluate an eight-Cell, three-lineage deployment through three operational witnesses. On a fixed HMMT P1-P10 slice, the collective solves 8/10 problems versus 6/10 for the strongest individual Cell, and a preserved trace shows minority knowledge transferred to three initially incorrect or empty Cells. On 20 Terminal-Bench 2.1 tasks, all tool actions remain attributable to one Executor, with zero Analyst actions and zero bypass effects. Six Cells are promoted and one incompatible candidate is locally rolled back while the service remains available. Fusion-MoA demonstrates that heterogeneous model capability can be operated as one observable, authority-bounded, and independently evolvable service.",
+        "canonical_id": "arXiv:2609.26080",
+        "arxiv_id": "2609.26080",
+        "authors": [
+          "Zong-You Yang",
+          "Ying-Han Hou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.21842",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.21842",
+        "id:arXiv:2606.21842",
+        "title:agentassisted sidechannel attacks on nonprefix kv cache in rag",
+        "url:https://arxiv.org/abs/2606.21842"
+      ],
+      "record": {
+        "title": "Agent-Assisted Side-Channel Attacks on Non-Prefix KV Cache in RAG",
+        "source_url": "https://arxiv.org/abs/2606.21842",
+        "year": 2026,
+        "published": "2026-06-20",
+        "abstract": "Modern Large Language Model (LLM) serving engines increasingly rely on Retrieval-Augmented Generation (RAG) and non-prefix Key-Value (KV) cache fusion to accelerate long-context, multi-tenant inference. While existing KV cache side-channel attacks require strict linear prefix alignment--rendering them ineffective against real-world RAG queries that contain unique, user-specific private prefixes--we uncover a critical class of structural vulnerabilities inherent to chunk-aware memory scheduling. We demonstrate that the deterministic micro-architectural mechanisms used to align and fuse disjoint memory chunks inadvertently leak a continuous\"Step-Wave\"timing signature. Exploiting this physical observation, we introduce SpliceLeak, the first end-to-end side-channel attack targeting non-prefix KV cache fusion. SpliceLeak executes a systematic two-phase privacy breach: it first structurally fingerprints the exact length of hidden private prompts, and subsequently manipulates boundary collisions to extract exact semantic content token-by-token. Extensive evaluations on production-grade frameworks (vLLM integrated with LMCache) demonstrate that SpliceLeak achieves up to a 100% extraction success rate in bounded-entropy scenarios. Driven by a deterministic +104 ms hardware latency void, the attack requires as few as 63 requests per token, piercing through realistic continuous batching noise. To resolve the inherent conflict between memory deduplication and security, we propose SpliceDefense, a bipartite mitigation framework consisting of Quantized Chunk Padding (QCP) and Constant-Time Boundary Fusion (CTBF). Our evaluations confirm that SpliceDefense effectively flattens the side-channel signal (Delta TTFT ~ 0) with negligible throughput overhead, preserving the critical benefits of global cache sharing.",
+        "canonical_id": "arXiv:2606.21842",
+        "arxiv_id": "2606.21842",
+        "doi": "10.48550/arXiv.2606.21842",
+        "authors": [
+          "He Sun",
+          "Shi-Nan Liu",
+          "Siyuan Ma",
+          "Junhao Li",
+          "Ming-Jun Xiao",
+          "Wenhao Jiang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:56ec113e9119abc7f375ef487bc19a152013a697d02ae70a5fcb8a4d1566f9a0",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d307c88acc414922-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.06039",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.06039",
+    "identity_tokens": [
+      "arXiv:2602.06039"
+    ],
+    "reason": "DyTopo routes inter-agent messages over dynamically rebuilt sparse communication graphs and improves reasoning accuracy, but its abstract does not quantify communication-cost or runtime savings.",
+    "first_checked_at": "2026-10-13T08:53:58+00:00",
+    "last_checked_at": "2026-10-13T08:53:58+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DyTopo: Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching"
+  },
+  "processed_at": "2026-10-13T08:53:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d307c88acc41",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

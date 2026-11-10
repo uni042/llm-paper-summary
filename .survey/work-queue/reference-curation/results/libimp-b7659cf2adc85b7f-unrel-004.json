@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7659cf2adc85b7f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.02244",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.02244",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.02244",
+      "SemanticScholar:20311c419dd7263bf43c39e4623f6bdf7625e0b4",
+      "arXiv:2602.02244"
+    ],
+    "reason": "The current arXiv title and abstract describe CurioSFT for preserving exploration during SFT; this is a post-training objective and reports reasoning quality, not inference efficiency.",
+    "first_checked_at": "2026-10-10T14:41:53+00:00",
+    "last_checked_at": "2026-10-10T14:41:53+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "Entropy-Preserving Supervised Fine-Tuning via Adaptive Self-Distillation for Large Reasoning Models"
+  },
+  "processed_at": "2026-10-10T14:41:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7659cf2adc8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

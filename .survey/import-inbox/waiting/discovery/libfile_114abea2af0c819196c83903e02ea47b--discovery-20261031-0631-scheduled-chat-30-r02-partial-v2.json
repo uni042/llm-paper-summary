@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0631-scheduled-chat-30/r02",
+  "reference_main_sha": "80410f5d9f12581feeefc830ec4dce10a6506047",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3770748",
+      "identity_tokens": [
+        "DOI:10.1145/3770748"
+      ],
+      "title": "Enhancing Domain-Specific Code Completion via Collaborative Inference with Large and Small Language Models",
+      "reason": "ACM Transactions on Software Engineering and Methodology 2026の原著PDF要旨を確認。ドメイン特化の小型コードモデルと大型コードモデルを分類器・投機的復号で協調させ、FT2Ra比で推論速度1.40倍、メモリ要件25.98GBから13.69GB、intra-project/intra-domainのExact Matchをそれぞれ7.42/4.67ポイント改善と報告。コード補完に特化するがLLM協調推論の効率を直接評価する。",
+      "source_url": "https://dl.acm.org/doi/pdf/10.1145/3770748",
+      "body_check": "primary_publisher_pdf_abstract_checked_via_original_pdf_preview; full_experiments_not_reviewed",
+      "first_checked_at": "2026-10-31T06:41:25+09:00",
+      "last_checked_at": "2026-10-31T06:41:25+09:00",
+      "linked_from": [],
+      "worklist_rank": 169,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134183",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134183",
+        "arXiv:2508.02381"
+      ],
+      "title": "PPF: A framework for real-time adaptive pruning of large language models via performance prediction",
+      "reason": "同一著者の一次arXiv前稿とNeurocomputing誌面書誌を照合。構造化枝刈り比率に応じたポリシー探索を性能予測器とエージェントで自動化し、Llama2-7B/3-8Bの評価で候補ポリシーの検証時間を98.02秒から1.52秒へ短縮（約64倍）と報告。これは枝刈りポリシー評価の高速化でありLLM本体の推論速度ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2508.02381",
+      "body_check": "primary_author_arxiv_abstract_plus_journal_bibliographic_identity; body_not_read",
+      "first_checked_at": "2026-10-31T06:40:18+09:00",
+      "last_checked_at": "2026-10-31T06:40:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 428,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3737611.3776613",
+      "identity_tokens": [
+        "DOI:10.1145/3737611.3776613"
+      ],
+      "title": "Transformer-Based Resource and Stage-Aware Scheduling for Model-Parallel LLM Inference",
+      "reason": "大阪大学著者が公開したICDCN Companion 2026論文本文を確認。prefill/decodeの段階別計算特性とGPUメモリ・帯域・通信費用を考慮し、模倣学習TransformerスケジューラをvLLM-style continuous batchingと比較。低帯域・異種GPU条件で最大50%の遅延削減、ヒューリスティック比3〜17%改善、可行性100%と報告。一方高帯域ではcontinuous batchingが優位。分散LLM推論スケジューリングの直接研究。",
+      "source_url": "https://www.researchgate.net/publication/399428781_Transformer-Based_Resource_and_Stage-Aware_Scheduling_for_Model-Parallel_LLM_Inference",
+      "body_check": "primary_author_uploaded_conference_pdf_abstract_and_intro_checked; full_experimental_tables_not_reviewed",
+      "first_checked_at": "2026-10-31T06:40:18+09:00",
+      "last_checked_at": "2026-10-31T06:40:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 477,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.09334",
+      "identity_tokens": [
+        "arXiv:2507.09334",
+        "DOI:10.48550/arXiv.2507.09334"
+      ],
+      "title": "Fast3D: Accelerating 3D Multi-modal Large Language Models for Efficient 3D Scene Understanding",
+      "reason": "arXiv著者要旨を確認。3D MLLMのobject-centric視覚トークン冗長性に対し、Global Attention PredictionとSample-Adaptive Pruningで入力ごとの削減率を選択する。推論時トークン削減の直接手法だが、評価対象は3Dシーン理解に特化し、一般のLLMサービングへの適用やend-to-end遅延倍率は要旨から未確認のためborderline。",
+      "source_url": "https://arxiv.org/abs/2507.09334",
+      "body_check": "primary_arxiv_abstract_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:40:18+09:00",
+      "last_checked_at": "2026-10-31T06:40:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 482,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.1001",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.findings-emnlp.1001",
+        "ACL:2024.findings-emnlp.1001"
+      ],
+      "title": "ATQ: Activation Transformation for Weight-Activation Quantization of Large Language Models",
+      "reason": "ACL Findings EMNLP 2024の正式PDF要旨を確認。INT8のweight-activation量子化において、等価変換により重みと活性の量子化誤差を分離して抑え、重みのin-feature次元量子化と補償、活性の正規範囲化を組み合わせる。LLMの推論時メモリと演算効率に直接関連し、著者はほぼ損失のない精度を主張。具体的な推論速度倍率は要旨から未確認。",
+      "source_url": "https://aclanthology.org/2024.findings-emnlp.1001.pdf",
+      "body_check": "primary_publisher_pdf_abstract_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:40:18+09:00",
+      "last_checked_at": "2026-10-31T06:40:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 484,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

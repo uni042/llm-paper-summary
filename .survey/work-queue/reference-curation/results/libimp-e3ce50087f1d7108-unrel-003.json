@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3ce50087f1d7108-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.17138",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.17138",
+    "identity_tokens": [
+      "SemanticScholar:c78ca30527ee5462c2921a6ebed87d54ded80839",
+      "arXiv:2601.17138"
+    ],
+    "reason": "The paper surveys AI methods for T/B-cell receptor modeling and therapeutic design; its subject is biomedical application rather than inference/serving efficiency.",
+    "first_checked_at": "2026-10-14T14:34:51+00:00",
+    "last_checked_at": "2026-10-14T14:34:51+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+    ],
+    "title": "AI Developments for T and B Cell Receptor Modeling and Therapeutic Design"
+  },
+  "processed_at": "2026-10-14T14:34:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3ce50087f1d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

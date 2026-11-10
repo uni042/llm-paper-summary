@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9498b2a0bf9a3563-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.06326",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.06326",
+    "identity_tokens": [
+      "arXiv:2506.06326"
+    ],
+    "reason": "The primary text presents a hierarchical external-memory system for conversational agents, adjacent to long-context/KV-memory lineages. Its evaluations measure response coherence and personalization, not KV-cache footprint or inference-resource savings.",
+    "first_checked_at": "2026-10-06T03:18:36+00:00",
+    "last_checked_at": "2026-10-06T03:18:36+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.31395-actkv-efficient-llm-agents-through-action-guided-kv-cache-management.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2609.04852-kvmem-virtualizing-million-token-agent-workspaces.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Memory OS of AI Agent"
+  },
+  "processed_at": "2026-10-06T03:18:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9498b2a0bf9a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

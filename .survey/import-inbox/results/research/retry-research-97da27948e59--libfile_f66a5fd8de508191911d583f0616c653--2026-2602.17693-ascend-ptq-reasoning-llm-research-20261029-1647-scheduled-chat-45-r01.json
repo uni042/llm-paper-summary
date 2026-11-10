@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b06113eef3c6d457149d46771191222996ba22129ef301c46bde8b594818f1a9",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-97da27948e59--libfile_f66a5fd8de508191911d583f0616c653--2026-2602.17693-ascend-ptq-reasoning-llm-research-20261029-1647-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2602.17693",
+  "worker_completed_at": "2026-10-29T16:57:00+09:00",
+  "worker_run_key": "20261029-1647-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5228,
+    "body_paragraphs": 26,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 471,
+    "limitation_chars": 673,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 471 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 471 < 500"
+  ],
+  "processed_at": "2026-10-29T09:23:15+00:00"
+}

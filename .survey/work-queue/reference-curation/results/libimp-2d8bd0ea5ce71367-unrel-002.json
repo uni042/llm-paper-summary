@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2d8bd0ea5ce71367-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3389/fbinf.2026.1849059",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3389/fbinf.2026.1849059",
+    "identity_tokens": [
+      "DOI:10.3389/fbinf.2026.1849059"
+    ],
+    "reason": "Medical image segmentation is a fundamental task in computer vision and plays an important role in clinical diagnosis and treatment planning. Existing methods are mainly built on either convolutional neural networks (CNNs) or Transformer-based encoder-decoder architectures. CNNs are effective at capturing local patterns, whereas Transformers are better suited to modeling long-range dependencies. However, current hybrid designs still face three persistent challenges: insufficient exploitation of multi-scale CNN features for global modeling, rapidly increasing attention cost after token expansion, and ineffective fusion between CNN and Transformer representations. To address these issues, we propose TransCat, a hybrid CNN-Transformer architecture for medical image segmentation. First, we introduce Patch Concat, which converts multi-scale CNN features into patch tokens and feeds them jointly into the Transformer, enabling global reasoning across multiple scales. Second, to control the computational burden caused by the enlarged token set, we develop an extended deformable attention mechanism with attentive value identification. Third, we design a Kolmogorov–Arnold Network (KAN) attention module for adaptive cross-branch fusion. The module projects high-level CNN and Transformer features into a shared space and uses a KAN layer to estimate data-dependent pixel-wise weights. These weights selectively modulate the globally modeled Transformer features, allowing complementary local structural evidence from the CNN branch to be incorporated according to the image content rather than through fixed addition or concatenation. Experiments on multiple medical image segmentation benchmarks show that TransCat is competitive under the reported protocols, with its clearest advantage observed on unseen polyp test data.",
+    "first_checked_at": "2026-10-05T08:19:05+00:00",
+    "last_checked_at": "2026-10-05T08:19:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "TransCat: a hybrid CNN-transformer network with KAN for medical image segmentation"
+  },
+  "processed_at": "2026-10-05T08:19:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d8bd0ea5ce7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

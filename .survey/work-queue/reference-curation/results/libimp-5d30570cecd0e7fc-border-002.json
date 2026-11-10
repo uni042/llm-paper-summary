@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5d30570cecd0e7fc-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/iwqos70441.2026.11661225",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/iwqos70441.2026.11661225",
+    "identity_tokens": [
+      "DOI:10.1109/iwqos70441.2026.11661225"
+    ],
+    "reason": "Publisher abstract retrieval failed for this DOI: the official publisher URL could not be accessed (IEEE Xplore unavailable/robot check or ACM HTTP 403), so the available cached abstract was not used to make a substantive relevance claim.",
+    "first_checked_at": "2026-10-14T12:23:34+00:00",
+    "last_checked_at": "2026-10-14T12:23:34+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+      "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2402.12374-sequoia-scalable-robust-and-hardware-aware-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2406.17276-opt-tree-speculative-decoding-with-adaptive-draft-tree-structure.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2509.04576-communication-efficient-distributed-speculative-decoding.md",
+      "papers/inference/08-edge-on-device-llm-systems/2025-2507.12000-dssd-efficient-edge-device-llm-deployment-and-collaborative-inference.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Ygg: Tree-Based Collaborative Speculative Decoding with Token-Only Transmission"
+  },
+  "processed_at": "2026-10-14T12:23:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5d30570cecd0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

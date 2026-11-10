@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7a0ed4778eeb2d42db9f2cfbea3aeae4b45c9b828efbb6baa59969847c970a03",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_e4019a8bbfe88191a9db183534e2de96--2026-2609.07664-quantization-fidelity-tvd-jsd-llamacpp-research-20261016-2030-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.07664",
+  "worker_completed_at": "2026-10-16T20:39:00+09:00",
+  "worker_run_key": "20261016-2030-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6447,
+    "body_paragraphs": 43,
+    "method_chars": 1310,
+    "method_paragraphs": 9,
+    "evaluation_chars": 133,
+    "limitation_chars": 798,
+    "insufficiency_flags": [
+      "評価説明量 133 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 133 < 500"
+  ],
+  "processed_at": "2026-10-16T14:08:33+00:00"
+}

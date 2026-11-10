@@ -1,0 +1,686 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-146aeafe0fc664b4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-146aeafe0fc6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.22959",
+    "arXiv:2604.02945",
+    "arXiv:2606.04945",
+    "arXiv:2606.11853",
+    "arXiv:2608.01655",
+    "arXiv:2608.18486",
+    "arXiv:2609.09721"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2634cc92a47692e6775c86b679253b534c3d2529",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T20:15:07.717965+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.22959",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.02945",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.04945",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.11853",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.01655",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.18486",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.09721",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "STaR-Quant: State-Time Consistent Post-Training Quantization for Diffusion Large Language Models",
+      "source_url": "https://arxiv.org/abs/2606.04945",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (DLLMs) have recently emerged as a promising alternative to autoregressive LLMs by generating text through iterative masked denoising with bidirectional context. However, their large model sizes and iterative denoising process introduce substantial memory and computational overhead, motivating post-training quantization for efficient deployment. In this paper, we identify two key challenges for low-bit DLLM quantization: state-dependent activation disparity and temporal error accumulation. Masked and unmasked tokens exhibit different activation distributions within each denoising step, while quantization errors can accumulate across steps during iterative decoding. To address these challenges, we propose STaR-Quant, a state-time consistent PTQ framework for DLLMs. STaR-Quant introduces State-Guided Activation Transformation (SGAT) to assign masked and unmasked tokens to different activation transformation spaces with a unified static weight-side transformation. It further introduces Temporal Attention Compensation (TAC) to correct the quantized attention representation via a lightweight block-diagonal affine mapping. Experiments on representative DLLMs demonstrate that STaR-Quant consistently improves low-bit weight-activation quantization over strong PTQ baselines, while delivering up to 1.69x speedup and 3.14x memory saving over FP16 deployment.",
+      "identifiers": [
+        "SemanticScholar:9b58d7b53c168f7a8eb6dd572feed4a04bc90a95"
+      ],
+      "semantic_scholar_id": "9b58d7b53c168f7a8eb6dd572feed4a04bc90a95",
+      "canonical_id": "arXiv:2606.04945",
+      "arxiv_id": "2606.04945",
+      "doi": "10.48550/arXiv.2606.04945",
+      "authors": [
+        "Xinya Yan",
+        "Aqiang Wang",
+        "Zhenglin Wan",
+        "Xing-Rui Yu",
+        "I. Tsang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Triage: Hierarchical Visual Budgeting for Efficient Video Reasoning in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2601.22959",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) face significant computational challenges in video processing due to massive data redundancy, which creates prohibitively long token sequences. To address this, we introduce Triage, a training-free, plug-and-play framework that reframes video reasoning as a resource allocation problem via hierarchical visual budgeting. Its first stage, Frame-Level Budgeting, identifies keyframes by evaluating their visual dynamics and relevance, generating a strategic prior based on their importance scores. Guided by this prior, the second stage, Token-Level Budgeting, allocates tokens in two phases: it first secures high-relevance Core Tokens, followed by diverse Context Tokens selected with an efficient batched Maximal Marginal Relevance (MMR) algorithm. Extensive experiments demonstrate that Triage improves inference speed and reduces memory footprint, while maintaining or surpassing the performance of baselines and other methods on various video reasoning benchmarks.",
+      "identifiers": [
+        "SemanticScholar:68a94e57954e34f9a57abdb1af93a7b8a041b53c"
+      ],
+      "semantic_scholar_id": "68a94e57954e34f9a57abdb1af93a7b8a041b53c",
+      "canonical_id": "arXiv:2601.22959",
+      "arxiv_id": "2601.22959",
+      "doi": "10.48550/arXiv.2601.22959",
+      "authors": [
+        "Anmin Wang",
+        "Nan Zhang",
+        "Wei Tao",
+        "Xiaoyang Qu",
+        "Guo-Kuan Li",
+        "Jiguang Wan",
+        "Jian-Zong Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 273,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MSAO: Adaptive Modality Sparsity-Aware Offloading with Edge-Cloud Collaboration for Efficient Multimodal LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.02945",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) enable powerful cross-modal reasoning capabilities but impose substantial computational and latency burdens, posing critical challenges for deployment on resource-constrained edge devices. In this paper, we propose MSAO, an adaptive modality sparsity-aware offloading framework with edge-cloud collaboration for efficient MLLM Inference. First, a lightweight heterogeneous modality-aware via fine-grained sparsity module performs spatial-temporal-modal joint analysis to compute the Modality Activation Sparsity (MAS) metric, which quantifies the necessity of each modality with minimal computational overhead. Second, an adaptive speculative edge-cloud collaborative offloading mechanism dynamically schedules workloads between edge and cloud based on the derived MAS scores and real-time system states, leveraging confidence-guided speculative execution to hide communication latency. Extensive experiments on VQAv2 and MMBench benchmarks demonstrate that MSAO achieves a 30% reduction in end-to-end latency and 30%-65% decrease in resource overhead, while delivering a throughput improvement of 1.5x to 2.3x compared to traditional approaches, all without compromising competitive accuracy.",
+      "identifiers": [
+        "SemanticScholar:0fb5c5272ad6b56046b1d48c7cc1abfac620e11a"
+      ],
+      "semantic_scholar_id": "0fb5c5272ad6b56046b1d48c7cc1abfac620e11a",
+      "canonical_id": "arXiv:2604.02945",
+      "arxiv_id": "2604.02945",
+      "doi": "10.48550/arXiv.2604.02945",
+      "authors": [
+        "Zhe-Ming Yang",
+        "Qi Guo",
+        "Jun Wan",
+        "Jia-Rui Ruan",
+        "Yun-Qing Hu",
+        "Changjie Zhao",
+        "Xiangyang Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 210,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Task-Aware Structured Memory for Dynamic Multi-modal In-Context Learning",
+      "source_url": "https://arxiv.org/abs/2606.11853",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-modal large language models (MLLMs) depend on in-context learning (ICL) for rapid task adaptation, but their scalability is severely limited by finite context windows and the growing cost of key-value (KV) caches in long multi-modal sequences. Existing memory compression approaches typically rely on rigid token removal or sample-dependent importance estimation, which introduces bias, disrupts semantic structure, particularly for visual representations, and yields static memories that cannot adapt to new queries. We introduce TASM (Task-Aware Structured Memory), a training-free framework that addresses these limitations through task-aware, structure-preserving, and dynamically accessible memory construction. TASM employs task-vector guided compression to replace sample-specific signals with a task-level direction that captures shared relevance across demonstrations. To preserve the underlying manifold, it applies semantics-aware token merging via bipartite graph matching, aggregating tokens without destructive pruning. Finally, TASM structures memory into a hierarchy comprising a compact Core Memory and a Latent Bank, facilitating query-adaptive dynamic retrieval. Evaluations confirm TASM maintains high performance under heavy compression, effectively balancing efficiency with adaptability.",
+      "identifiers": [
+        "SemanticScholar:2f4e25574406f0991551f095373ef76badc50c51"
+      ],
+      "semantic_scholar_id": "2f4e25574406f0991551f095373ef76badc50c51",
+      "canonical_id": "arXiv:2606.11853",
+      "arxiv_id": "2606.11853",
+      "doi": "10.48550/arXiv.2606.11853",
+      "authors": [
+        "Zhi-Rui Chen",
+        "Zi-Wei Chen",
+        "Ling Shao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PrefixPlace: Provable Prefix Key-Value Placement for Large Language Model Serving under Heterogeneous Compute and Transfer Costs",
+      "source_url": "https://arxiv.org/abs/2608.01655",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefix Key-Value (KV) reuse avoids repeated prefill in Large Language Model (LLM) inference, but local misses require recomputation or replica fetches. Their relative cost varies with hardware, prefix depth, KV goodput, and replica location, making hit-rate-based placement suboptimal. To address this issue, we propose an epoch-level planner, PrefixPlace, which assigns prefix-complete targets under memory budgets and profiled demand, compute, and transfer costs. The objective decomposes into local-copy value plus first-replica coverage, and source-dependent costs yield a monotone facility-location objective; each worker update is an additive rooted-tree problem solved exactly in O(nk) time for n chunks and capacity k, giving a fixed-order 1/2-approximation that coordinate refinement and order-diverse starts improve without weakening. T4, L4, and A100 measurements reveal distinct regimes. Across 432 instances with exact optima, PrefixPlace averages 99.84% of optimum and never falls below 98.02%. In Retrieval-Augmented Generation (RAG) replays, it improves materialization-cost saving by 40.3% over vLLM Automatic Prefix Caching (vLLM-APC) and 6.3% over the best offline baseline. On WikiQA, gains are 40.4% and 5.3%. Finally, PrefixPlace solves a 50,000-node, 16-worker placement in 12.3 s on one processor, enabling timely replanning.",
+      "identifiers": [
+        "SemanticScholar:d462125803c28c3e87d2afa0dc6798c38773935f"
+      ],
+      "semantic_scholar_id": "d462125803c28c3e87d2afa0dc6798c38773935f",
+      "canonical_id": "arXiv:2608.01655",
+      "arxiv_id": "2608.01655",
+      "authors": [
+        "Zhi-Yu Wang",
+        "Rajkummar Buyya"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WhiteMatter: All-to-All Cross-Layer Connections via KV Source Mixing",
+      "source_url": "https://arxiv.org/abs/2608.18486",
+      "year": 2026,
+      "published": "2026-08-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "When generating text, a Transformer produces representations of past tokens at every layer, but each layer can normally use only representations from the same depth. This restriction prevents the model from fully reusing information it has already computed. We introduce WhiteMatter, which allows every layer to draw on past-token representations from any depth. A learned mixer selects the most useful depths for the current context and combines their representations into shared key-value (KV) cache channels. Sharing these channels across layers can reduce the cache size. Given the same number of training tokens, WhiteMatter with a full-size cache performs comparably to a standard Transformer with 50% more layers. With half the KV cache, WhiteMatter outperforms matched standard Transformers at two model scales, up to 1.3B parameters. Cross-layer connections, however, introduce dependencies that slow training and prompt processing. We address this problem with cyclic iteration, which updates interleaved groups of tokens in turn while processing the tokens within each group in parallel. On a reference model trained with exact autoregressive execution, cyclic iteration converges 12.5x faster than standard Jacobi iteration.",
+      "identifiers": [
+        "SemanticScholar:75c41579732ae953d61016dfc79231363f9ff23b"
+      ],
+      "semantic_scholar_id": "75c41579732ae953d61016dfc79231363f9ff23b",
+      "canonical_id": "arXiv:2608.18486",
+      "arxiv_id": "2608.18486",
+      "authors": [
+        "Wen-Bo Zhang",
+        "Xiang Ren"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 72,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EFQ-Softmax: Exp-Free Quantization for Softmax",
+      "source_url": "https://arxiv.org/abs/2609.09721",
+      "year": 2026,
+      "published": "2026-09-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit attention accelerates Transformer inference by moving the $QK^\\top$ and $PV$ matrix multiplications to FP8 or FP4 matrix engines. However, the softmax path often evaluates shifted-score exponentials in higher precision, forms a temporary probability block, and quantizes it before low-bit $PV$ multiplication. This exp-then-quantize path creates a mismatch between a high-precision probability producer and a low-bit matrix consumer. We propose EFQ-Softmax (Exp-Free Quantization for Softmax), a low-bit probability-generation method that directly maps shifted attention scores to block-scaled E2M1 operands. For each microscaling block, EFQ-Softmax selects an exponent-only scale from the local maximum, maps the shifted scores to a normalized residual domain, and generates nonnegative E2M1 probability codes using a single affine rule. The resulting operand is used consistently in both the $\\widetilde{P}V$ numerator update and the $\\widetilde{P}\\mathbf{1}$ denominator update. The FlashAttention-style row-maximum update, historical rescaling, high-precision accumulation, and final normalization remain unchanged. We evaluate end-to-end quality on Qwen3-8B, Qwen3-VL-8B-Instruct, and WAN2.2-TI2V-5B, and separately measure kernel-level performance on the A5 vector unit. EFQ-Softmax improves the Qwen3-8B seven-task mean from 0.6749 with MXFP4 to 0.6773 and the Qwen3-VL nine-task mean from 0.7826 to 0.8000. On WAN2.2, it maintains temporal consistency and visual quality comparable to the FP16 and MXFP4 baselines under VBench. On the A5 vector unit, EFQ-Softmax reduces the vector-stage latency of the fused probability-generation kernel by 40.33% on average across sequence lengths from 16K to 128K. These results show that direct low-bit probability generation can replace the conventional exp-then-quantize path while preserving end-to-end model quality.",
+      "identifiers": [
+        "SemanticScholar:4e09a92da580c19dfd0518905f0d5549a52bfc66"
+      ],
+      "semantic_scholar_id": "4e09a92da580c19dfd0518905f0d5549a52bfc66",
+      "canonical_id": "arXiv:2609.09721",
+      "arxiv_id": "2609.09721",
+      "authors": [
+        "Hao-Hui Han",
+        "Yu-Ming Wan",
+        "Hong-Ning Wang",
+        "Peng-Cheng Xie",
+        "Xiao Yan",
+        "R. You",
+        "Wencong Zhang Xi'an Jiaotong University",
+        "Huawei Technologies Co.",
+        "Ltd",
+        "Shandong University of Finance",
+        "Economics"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.04945",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.04945",
+        "id:SemanticScholar:9b58d7b53c168f7a8eb6dd572feed4a04bc90a95",
+        "id:arXiv:2606.04945",
+        "title:starquant statetime consistent posttraining quantization for diffusion large language models",
+        "url:https://arxiv.org/abs/2606.04945"
+      ],
+      "record": {
+        "title": "STaR-Quant: State-Time Consistent Post-Training Quantization for Diffusion Large Language Models",
+        "source_url": "https://arxiv.org/abs/2606.04945",
+        "year": 2026,
+        "published": "2026-06-03",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models (DLLMs) have recently emerged as a promising alternative to autoregressive LLMs by generating text through iterative masked denoising with bidirectional context. However, their large model sizes and iterative denoising process introduce substantial memory and computational overhead, motivating post-training quantization for efficient deployment. In this paper, we identify two key challenges for low-bit DLLM quantization: state-dependent activation disparity and temporal error accumulation. Masked and unmasked tokens exhibit different activation distributions within each denoising step, while quantization errors can accumulate across steps during iterative decoding. To address these challenges, we propose STaR-Quant, a state-time consistent PTQ framework for DLLMs. STaR-Quant introduces State-Guided Activation Transformation (SGAT) to assign masked and unmasked tokens to different activation transformation spaces with a unified static weight-side transformation. It further introduces Temporal Attention Compensation (TAC) to correct the quantized attention representation via a lightweight block-diagonal affine mapping. Experiments on representative DLLMs demonstrate that STaR-Quant consistently improves low-bit weight-activation quantization over strong PTQ baselines, while delivering up to 1.69x speedup and 3.14x memory saving over FP16 deployment.",
+        "identifiers": [
+          "SemanticScholar:9b58d7b53c168f7a8eb6dd572feed4a04bc90a95"
+        ],
+        "semantic_scholar_id": "9b58d7b53c168f7a8eb6dd572feed4a04bc90a95",
+        "canonical_id": "arXiv:2606.04945",
+        "arxiv_id": "2606.04945",
+        "doi": "10.48550/arXiv.2606.04945",
+        "authors": [
+          "Xinya Yan",
+          "Aqiang Wang",
+          "Zhenglin Wan",
+          "Xing-Rui Yu",
+          "I. Tsang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 149,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.22959",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.22959",
+        "id:SemanticScholar:68a94e57954e34f9a57abdb1af93a7b8a041b53c",
+        "id:arXiv:2601.22959",
+        "title:triage hierarchical visual budgeting for efficient video reasoning in visionlanguage models",
+        "url:https://arxiv.org/abs/2601.22959"
+      ],
+      "record": {
+        "title": "Triage: Hierarchical Visual Budgeting for Efficient Video Reasoning in Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2601.22959",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) face significant computational challenges in video processing due to massive data redundancy, which creates prohibitively long token sequences. To address this, we introduce Triage, a training-free, plug-and-play framework that reframes video reasoning as a resource allocation problem via hierarchical visual budgeting. Its first stage, Frame-Level Budgeting, identifies keyframes by evaluating their visual dynamics and relevance, generating a strategic prior based on their importance scores. Guided by this prior, the second stage, Token-Level Budgeting, allocates tokens in two phases: it first secures high-relevance Core Tokens, followed by diverse Context Tokens selected with an efficient batched Maximal Marginal Relevance (MMR) algorithm. Extensive experiments demonstrate that Triage improves inference speed and reduces memory footprint, while maintaining or surpassing the performance of baselines and other methods on various video reasoning benchmarks.",
+        "identifiers": [
+          "SemanticScholar:68a94e57954e34f9a57abdb1af93a7b8a041b53c"
+        ],
+        "semantic_scholar_id": "68a94e57954e34f9a57abdb1af93a7b8a041b53c",
+        "canonical_id": "arXiv:2601.22959",
+        "arxiv_id": "2601.22959",
+        "doi": "10.48550/arXiv.2601.22959",
+        "authors": [
+          "Anmin Wang",
+          "Nan Zhang",
+          "Wei Tao",
+          "Xiaoyang Qu",
+          "Guo-Kuan Li",
+          "Jiguang Wan",
+          "Jian-Zong Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 273,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.02945",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.02945",
+        "id:SemanticScholar:0fb5c5272ad6b56046b1d48c7cc1abfac620e11a",
+        "id:arXiv:2604.02945",
+        "title:msao adaptive modality sparsityaware offloading with edgecloud collaboration for efficient multimodal llm inference",
+        "url:https://arxiv.org/abs/2604.02945"
+      ],
+      "record": {
+        "title": "MSAO: Adaptive Modality Sparsity-Aware Offloading with Edge-Cloud Collaboration for Efficient Multimodal LLM Inference",
+        "source_url": "https://arxiv.org/abs/2604.02945",
+        "year": 2026,
+        "published": "2026-04-03",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) enable powerful cross-modal reasoning capabilities but impose substantial computational and latency burdens, posing critical challenges for deployment on resource-constrained edge devices. In this paper, we propose MSAO, an adaptive modality sparsity-aware offloading framework with edge-cloud collaboration for efficient MLLM Inference. First, a lightweight heterogeneous modality-aware via fine-grained sparsity module performs spatial-temporal-modal joint analysis to compute the Modality Activation Sparsity (MAS) metric, which quantifies the necessity of each modality with minimal computational overhead. Second, an adaptive speculative edge-cloud collaborative offloading mechanism dynamically schedules workloads between edge and cloud based on the derived MAS scores and real-time system states, leveraging confidence-guided speculative execution to hide communication latency. Extensive experiments on VQAv2 and MMBench benchmarks demonstrate that MSAO achieves a 30% reduction in end-to-end latency and 30%-65% decrease in resource overhead, while delivering a throughput improvement of 1.5x to 2.3x compared to traditional approaches, all without compromising competitive accuracy.",
+        "identifiers": [
+          "SemanticScholar:0fb5c5272ad6b56046b1d48c7cc1abfac620e11a"
+        ],
+        "semantic_scholar_id": "0fb5c5272ad6b56046b1d48c7cc1abfac620e11a",
+        "canonical_id": "arXiv:2604.02945",
+        "arxiv_id": "2604.02945",
+        "doi": "10.48550/arXiv.2604.02945",
+        "authors": [
+          "Zhe-Ming Yang",
+          "Qi Guo",
+          "Jun Wan",
+          "Jia-Rui Ruan",
+          "Yun-Qing Hu",
+          "Changjie Zhao",
+          "Xiangyang Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 210,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.11853",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.11853",
+        "id:SemanticScholar:2f4e25574406f0991551f095373ef76badc50c51",
+        "id:arXiv:2606.11853",
+        "title:taskaware structured memory for dynamic multimodal incontext learning",
+        "url:https://arxiv.org/abs/2606.11853"
+      ],
+      "record": {
+        "title": "Task-Aware Structured Memory for Dynamic Multi-modal In-Context Learning",
+        "source_url": "https://arxiv.org/abs/2606.11853",
+        "year": 2026,
+        "published": "2026-06-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-modal large language models (MLLMs) depend on in-context learning (ICL) for rapid task adaptation, but their scalability is severely limited by finite context windows and the growing cost of key-value (KV) caches in long multi-modal sequences. Existing memory compression approaches typically rely on rigid token removal or sample-dependent importance estimation, which introduces bias, disrupts semantic structure, particularly for visual representations, and yields static memories that cannot adapt to new queries. We introduce TASM (Task-Aware Structured Memory), a training-free framework that addresses these limitations through task-aware, structure-preserving, and dynamically accessible memory construction. TASM employs task-vector guided compression to replace sample-specific signals with a task-level direction that captures shared relevance across demonstrations. To preserve the underlying manifold, it applies semantics-aware token merging via bipartite graph matching, aggregating tokens without destructive pruning. Finally, TASM structures memory into a hierarchy comprising a compact Core Memory and a Latent Bank, facilitating query-adaptive dynamic retrieval. Evaluations confirm TASM maintains high performance under heavy compression, effectively balancing efficiency with adaptability.",
+        "identifiers": [
+          "SemanticScholar:2f4e25574406f0991551f095373ef76badc50c51"
+        ],
+        "semantic_scholar_id": "2f4e25574406f0991551f095373ef76badc50c51",
+        "canonical_id": "arXiv:2606.11853",
+        "arxiv_id": "2606.11853",
+        "doi": "10.48550/arXiv.2606.11853",
+        "authors": [
+          "Zhi-Rui Chen",
+          "Zi-Wei Chen",
+          "Ling Shao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01655",
+      "identity_tokens": [
+        "id:SemanticScholar:d462125803c28c3e87d2afa0dc6798c38773935f",
+        "id:arXiv:2608.01655",
+        "title:prefixplace provable prefix keyvalue placement for large language model serving under heterogeneous compute and transfer costs",
+        "url:https://arxiv.org/abs/2608.01655"
+      ],
+      "record": {
+        "title": "PrefixPlace: Provable Prefix Key-Value Placement for Large Language Model Serving under Heterogeneous Compute and Transfer Costs",
+        "source_url": "https://arxiv.org/abs/2608.01655",
+        "year": 2026,
+        "published": "2026-08-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prefix Key-Value (KV) reuse avoids repeated prefill in Large Language Model (LLM) inference, but local misses require recomputation or replica fetches. Their relative cost varies with hardware, prefix depth, KV goodput, and replica location, making hit-rate-based placement suboptimal. To address this issue, we propose an epoch-level planner, PrefixPlace, which assigns prefix-complete targets under memory budgets and profiled demand, compute, and transfer costs. The objective decomposes into local-copy value plus first-replica coverage, and source-dependent costs yield a monotone facility-location objective; each worker update is an additive rooted-tree problem solved exactly in O(nk) time for n chunks and capacity k, giving a fixed-order 1/2-approximation that coordinate refinement and order-diverse starts improve without weakening. T4, L4, and A100 measurements reveal distinct regimes. Across 432 instances with exact optima, PrefixPlace averages 99.84% of optimum and never falls below 98.02%. In Retrieval-Augmented Generation (RAG) replays, it improves materialization-cost saving by 40.3% over vLLM Automatic Prefix Caching (vLLM-APC) and 6.3% over the best offline baseline. On WikiQA, gains are 40.4% and 5.3%. Finally, PrefixPlace solves a 50,000-node, 16-worker placement in 12.3 s on one processor, enabling timely replanning.",
+        "identifiers": [
+          "SemanticScholar:d462125803c28c3e87d2afa0dc6798c38773935f"
+        ],
+        "semantic_scholar_id": "d462125803c28c3e87d2afa0dc6798c38773935f",
+        "canonical_id": "arXiv:2608.01655",
+        "arxiv_id": "2608.01655",
+        "authors": [
+          "Zhi-Yu Wang",
+          "Rajkummar Buyya"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 88,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.18486",
+      "identity_tokens": [
+        "id:SemanticScholar:75c41579732ae953d61016dfc79231363f9ff23b",
+        "id:arXiv:2608.18486",
+        "title:whitematter alltoall crosslayer connections via kv source mixing",
+        "url:https://arxiv.org/abs/2608.18486"
+      ],
+      "record": {
+        "title": "WhiteMatter: All-to-All Cross-Layer Connections via KV Source Mixing",
+        "source_url": "https://arxiv.org/abs/2608.18486",
+        "year": 2026,
+        "published": "2026-08-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "When generating text, a Transformer produces representations of past tokens at every layer, but each layer can normally use only representations from the same depth. This restriction prevents the model from fully reusing information it has already computed. We introduce WhiteMatter, which allows every layer to draw on past-token representations from any depth. A learned mixer selects the most useful depths for the current context and combines their representations into shared key-value (KV) cache channels. Sharing these channels across layers can reduce the cache size. Given the same number of training tokens, WhiteMatter with a full-size cache performs comparably to a standard Transformer with 50% more layers. With half the KV cache, WhiteMatter outperforms matched standard Transformers at two model scales, up to 1.3B parameters. Cross-layer connections, however, introduce dependencies that slow training and prompt processing. We address this problem with cyclic iteration, which updates interleaved groups of tokens in turn while processing the tokens within each group in parallel. On a reference model trained with exact autoregressive execution, cyclic iteration converges 12.5x faster than standard Jacobi iteration.",
+        "identifiers": [
+          "SemanticScholar:75c41579732ae953d61016dfc79231363f9ff23b"
+        ],
+        "semantic_scholar_id": "75c41579732ae953d61016dfc79231363f9ff23b",
+        "canonical_id": "arXiv:2608.18486",
+        "arxiv_id": "2608.18486",
+        "authors": [
+          "Wen-Bo Zhang",
+          "Xiang Ren"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 72,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09721",
+      "identity_tokens": [
+        "id:SemanticScholar:4e09a92da580c19dfd0518905f0d5549a52bfc66",
+        "id:arXiv:2609.09721",
+        "title:efqsoftmax expfree quantization for softmax",
+        "url:https://arxiv.org/abs/2609.09721"
+      ],
+      "record": {
+        "title": "EFQ-Softmax: Exp-Free Quantization for Softmax",
+        "source_url": "https://arxiv.org/abs/2609.09721",
+        "year": 2026,
+        "published": "2026-09-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-bit attention accelerates Transformer inference by moving the $QK^\\top$ and $PV$ matrix multiplications to FP8 or FP4 matrix engines. However, the softmax path often evaluates shifted-score exponentials in higher precision, forms a temporary probability block, and quantizes it before low-bit $PV$ multiplication. This exp-then-quantize path creates a mismatch between a high-precision probability producer and a low-bit matrix consumer. We propose EFQ-Softmax (Exp-Free Quantization for Softmax), a low-bit probability-generation method that directly maps shifted attention scores to block-scaled E2M1 operands. For each microscaling block, EFQ-Softmax selects an exponent-only scale from the local maximum, maps the shifted scores to a normalized residual domain, and generates nonnegative E2M1 probability codes using a single affine rule. The resulting operand is used consistently in both the $\\widetilde{P}V$ numerator update and the $\\widetilde{P}\\mathbf{1}$ denominator update. The FlashAttention-style row-maximum update, historical rescaling, high-precision accumulation, and final normalization remain unchanged. We evaluate end-to-end quality on Qwen3-8B, Qwen3-VL-8B-Instruct, and WAN2.2-TI2V-5B, and separately measure kernel-level performance on the A5 vector unit. EFQ-Softmax improves the Qwen3-8B seven-task mean from 0.6749 with MXFP4 to 0.6773 and the Qwen3-VL nine-task mean from 0.7826 to 0.8000. On WAN2.2, it maintains temporal consistency and visual quality comparable to the FP16 and MXFP4 baselines under VBench. On the A5 vector unit, EFQ-Softmax reduces the vector-stage latency of the fused probability-generation kernel by 40.33% on average across sequence lengths from 16K to 128K. These results show that direct low-bit probability generation can replace the conventional exp-then-quantize path while preserving end-to-end model quality.",
+        "identifiers": [
+          "SemanticScholar:4e09a92da580c19dfd0518905f0d5549a52bfc66"
+        ],
+        "semantic_scholar_id": "4e09a92da580c19dfd0518905f0d5549a52bfc66",
+        "canonical_id": "arXiv:2609.09721",
+        "arxiv_id": "2609.09721",
+        "authors": [
+          "Hao-Hui Han",
+          "Yu-Ming Wan",
+          "Hong-Ning Wang",
+          "Peng-Cheng Xie",
+          "Xiao Yan",
+          "R. You",
+          "Wencong Zhang Xi'an Jiaotong University",
+          "Huawei Technologies Co.",
+          "Ltd",
+          "Shandong University of Finance",
+          "Economics"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 51,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1596c5f9e8a40bfa1c70b0685b4a4ebbdbb71b05ca0f9095ce6eb39cd749c8cc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

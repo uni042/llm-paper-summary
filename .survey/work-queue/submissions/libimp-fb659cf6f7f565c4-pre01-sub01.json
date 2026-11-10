@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AgentSlimming: Towards Efficient and Cost-Aware Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2605.08813",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model-based Multi-Agent Systems (MAS) have demonstrated remarkable capabilities in complex tasks. However, manually designing optimal communication topologies is labor-intensive, while automated expansion methods often result in bloated structures with redundant agents, leading to excessive token consumption. To address this problem, we introduce \\textbf{AgentSlimming}, a plug-and-play compression framework for graph-structured multi-agent workflows. Motivated by pruning and quantization in neural networks, AgentSlimming compresses workflows by first estimating the importance score of each agent with a hybrid mechanism, and then removes redundant agents or replaces them with low-cost ones, where each operation is validated using a baseline-anchored acceptance rule to prevent performance collapse. Experiments show that AgentSlimming reduces average token cost by up to 78.9\\% with negligible performance degradation, and sometimes even improves accuracy, achieving a strong Pareto-optimal trade-off between cost and quality. \\textit{Our code is publicly available at https://github.com/CitrusYL/AgentSlimming",
+      "identifiers": [
+        "SemanticScholar:1d6916eb235e0a3e4b797a4a8bdac4fe74c54962"
+      ],
+      "semantic_scholar_id": "1d6916eb235e0a3e4b797a4a8bdac4fe74c54962",
+      "canonical_id": "arXiv:2605.08813",
+      "arxiv_id": "2605.08813",
+      "doi": "10.18653/v1/2026.acl-long.1387",
+      "authors": [
+        "Yulan Chen",
+        "Hao Peng",
+        "Jin-Yang Liu",
+        "Zichen Wen",
+        "Dong-Rui Liu",
+        "Lin-Feng Zhang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "AgentSlimmingは複数LLMエージェントの通信グラフで重要度を推定し、冗長なエージェントを削除するか低コストモデルへ置換する。性能崩壊を防ぐ基準アンカー付き受理規則を使い、一次要旨では平均トークン費用を最大78.9%削減して品質を概ね維持。マルチエージェント推論ワークフローの実行費用圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding",
+      "source_url": "https://arxiv.org/abs/2608.22516",
+      "year": 2026,
+      "published": "2026-08-23",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A long-video answer is evidence-supported only when the frames decoded from the video cover every event the answer depends on. Existing evaluations score final-answer correctness or predicted evidence intervals, but the frames a method decodes before answering are rarely audited, so correct answers can still rest on incomplete observation. We introduce VES-Bench, a 600-question benchmark of Temporal Ordering and Event Counting items over 348 public long videos. Each item carries a jointly necessary set of evidence intervals, letting us audit at three strictness levels whether a method's decoded frames cover every one of them. We also propose TRACE, a training-free agent that grounds answers in raw visual clips, builds an evidence bundle round by round, and stops only when the answer stabilises as the bundle grows and a final pass over the same clips returns the same answer. Under a same-backbone audit, TRACE answers 50.7% of questions correctly with at least two decoded frames inside every evidence interval, at 98.7 frames per question: over 10 points above uniform decoding at 128 frames (40.2%), and within 2.6 points of uniform decoding at 256 frames at 0.39x its frame cost, while reaching the highest answer accuracy in the audit (63.5%). TRACE also stays competitive on Video-MME (86.1), LVBench (75.6), and LongVideoBench (75.1).",
+      "identifiers": [
+        "SemanticScholar:a9b0c1bea96f3b97838a22fbe43888566903350b"
+      ],
+      "semantic_scholar_id": "a9b0c1bea96f3b97838a22fbe43888566903350b",
+      "canonical_id": "arXiv:2608.22516",
+      "arxiv_id": "2608.22516",
+      "authors": [
+        "Peng Liu",
+        "Jun-Bo Niu",
+        "Xiaoyan Hu",
+        "Zhong-Yu Shi",
+        "Zi-Tian Wang",
+        "Lin-Jiang Huang",
+        "Si Liu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 68,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TRACEは長動画質問に対して必要な証拠区間を満たすまで動画クリップを段階的に復号し、回答の安定と再確認で停止する訓練不要の検索エージェント。一次要旨のVES-Benchでは98.7フレーム/問で根拠被覆付き正解率50.7%、均一128フレームの40.2%を上回り、均一256フレームの0.39倍のフレーム費用。動画VLMの入力復号・推論予算制御に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs?",
+      "source_url": "https://arxiv.org/abs/2605.08985",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual encoding constitutes a major computational bottleneck in Multimodal Large Language Models (MLLMs), especially for high-resolution image inputs. The prevailing practice typically adopts global encoding followed by post-ViT compression. Global encoding produces massive token sequences, while post-ViT compression incurs the full quadratic attention cost of the ViT before any token reduction takes place. In this work, we revisit this convention along two dimensions: the encoding strategy and visual token compression. First, controlled experiments show that slice-based encoding outperforms global encoding across benchmarks, suggesting that preserving local details through sliced views can be more beneficial than applying global attention for fine-grained perception. Second, we introduce intra-ViT early compression, which reduces tokens in shallow ViT layers and substantially lowers visual-encoding FLOPs while preserving downstream performance. By integrating intra-ViT compression into the slice-based encoding framework, we present LLaVA-UHD v4, an efficient and compute-controllable visual encoding scheme tailored for high-resolution inputs. Across a diverse set of benchmarks covering document understanding, OCR, and general VQA, LLaVA-UHD v4 reduces visual-encoding FLOPs by 55.8% while matching or even surpassing baseline performance. These results suggest that visual-encoding efficiency can be substantially improved without sacrificing downstream performance, providing a practical design direction for efficient high-resolution MLLMs. All model weights and code will be publicly released to support further research.",
+      "identifiers": [
+        "SemanticScholar:8ee8fa51c96c8b6cee07dd61f938e0ca873b64ea"
+      ],
+      "semantic_scholar_id": "8ee8fa51c96c8b6cee07dd61f938e0ca873b64ea",
+      "canonical_id": "arXiv:2605.08985",
+      "arxiv_id": "2605.08985",
+      "doi": "10.48550/arXiv.2605.08985",
+      "authors": [
+        "Kechen Fang",
+        "Yihua Qin",
+        "Chongyi Wang",
+        "Wenshuo Ma",
+        "Tianyu Yu",
+        "Yuan Yao"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLaVA-UHD v4は高解像度画像をスライスして局所情報を保ち、ViTの浅い層で視覚トークンを早期圧縮して二次注意演算の費用を削減する。一次要旨では文書理解・OCR・VQAで品質を維持または改善しつつ視覚エンコードFLOPs55.8%削減。VLMのprefill前段にある視覚エンコーダの直接的な効率化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Efficient Agentic Reasoning Through Self-Regulated Simulative Planning",
+      "source_url": "https://arxiv.org/abs/2605.22138",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "How should an agent decide when and how to plan? A dominant approach builds agents as reactive policies with adaptive computation (e.g., chain-of-thought), trained end-to-end expecting planning to emerge implicitly. Without control over the presence, structure, or horizon of planning, these systems dramatically increase reasoning length, yielding inefficient token use without reliable accuracy gains. We argue efficient agentic reasoning benefits from decomposing decision-making into three systems: simulative reasoning (System II) grounding deliberation in future-state prediction via a world model; self-regulation (System III) deciding when and how deeply to plan via a learned configurator; and reactive execution (System I) handling fine-grained action. Simulative reasoning provides unified planning across diverse tasks without per-domain engineering, while self-regulation ensures the planner is invoked only when needed. To test this, we develop SR$^2$AM (Self-Regulated Simulative Reasoning Agentic LLM), realizing both as distinct stages within an LLM's chain-of-thought, with the LLM as world model. We explore two instantiations: recording decisions from a prompted multi-module system (v0.1) and reconstructing structured plans from traces of pretrained reasoning LLMs (v1.0), trained via supervised then reinforcement learning (RL). Across math, science, tabular analysis, and web information seeking, v0.1-8B and v1.0-30B achieve Pass@1 competitive with 120-355B and 685B-1T parameter systems respectively, while v1.0-30B uses 25.8-95.3% fewer reasoning tokens than comparable agentic LLMs. RL increases average planning horizon by 22.8% while planning frequency grows only 2.0%, showing it learns to plan further ahead rather than more often. More broadly, learned self-regulation instantiates a principle we expect to extend beyond planning to how agents govern their own learning and adaptation.",
+      "identifiers": [
+        "SemanticScholar:8a495d6c227c2b1fa40658a54a754beea4dd3694"
+      ],
+      "semantic_scholar_id": "8a495d6c227c2b1fa40658a54a754beea4dd3694",
+      "canonical_id": "arXiv:2605.22138",
+      "arxiv_id": "2605.22138",
+      "doi": "10.48550/arXiv.2605.22138",
+      "authors": [
+        "Ming-Kai Deng",
+        "Jinyu Hou",
+        "Lara S'a Neves",
+        "Varad Pimpalkhute",
+        "Taylor W. Killian",
+        "Zheng-Zhong Liu",
+        "E. Xing"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SR²AMは世界モデルによる将来状態の模擬、必要時だけ計画を起動する自己調節、反応的な実行を分離し、計画頻度と深さを制御する。一次要旨ではv1.0-30Bが同種のエージェントLLMより推論トークン25.8～95.3%削減し、RL後も計画頻度増加2.0%に抑えつつ計画深さ22.8%増。推論時の計算配分に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting",
+      "source_url": "https://arxiv.org/abs/2608.25115",
+      "year": 2026,
+      "published": "2026-08-25",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing methods for improving Retrieval-Augmented Generation (RAG) efficiency mainly optimize downstream LLM generation, such as context compression or serving optimization. However, RAG is an end-to-end system, and its bottleneck can shift between upstream reranking and downstream generation under different serving loads and reranking budgets.In this paper, we first empirically characterize this shifting-bottleneck behavior and show that upstream reranking can become the dominant bottleneck under high query rates or large reranking budgets. Reducing the reranking budget can relieve this bottleneck, but it may also drop supporting evidence and degrade recall. To address this problem, we propose \\textbf{\\textsf{PACE}} (\\textbf{P}rioritized \\textbf{A}daptive \\textbf{C}overage of \\textbf{E}vidence), a training-free framework that combines \\textit{evidence frontloading} with \\textit{pressure-adaptive budgeting}. \\textsf{PACE} first reorders candidates by marginal evidence coverage, prioritizing documents that are query-relevant, complementary, and useful for forming multi-hop evidence chains. We show that this objective is monotone submodular, giving greedy selection a $(1-1/e)$ approximation guarantee. \\textsf{PACE} then dynamically adjusts the reranking budget according to the relative pressure of the reranker and the LLM. Experiments on three multi-hop QA datasets and online serving simulations show that \\textsf{PACE} improves evidence recall, reduces p95 latency under ranking-heavy workloads. More importantly, the two components together reveal that \\textit{less can be more}: an evidence-dense top-ranked candidates enable higher final recall with fewer reranked documents.",
+      "identifiers": [
+        "SemanticScholar:32d6f5766d70595e661eb15b2354d84d923e8d48"
+      ],
+      "semantic_scholar_id": "32d6f5766d70595e661eb15b2354d84d923e8d48",
+      "canonical_id": "arXiv:2608.25115",
+      "arxiv_id": "2608.25115",
+      "authors": [
+        "Wei-Bin Cai",
+        "Reza Zafarani"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 66,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PACEはRAGでrerankerとLLMのどちらが律速かを観測し、証拠の限界被覆量で文書を前方配置してから、両段の圧力比に応じてrerank件数を変える。一次要旨は多段QAとオンラインサービング模擬で証拠recall改善とrerank負荷が高い条件のP95遅延削減を報告。RAGの推論パイプライン全体の負荷分散に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fb659cf6f7f5",
+    "round": "libimp-fb659cf6f7f565c4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fb659cf6f7f565c4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fb659cf6f7f565c4-pre01.json",
+    "receipt": "sha256:5d150bb54e45d9fe6e13ab772455f24ef02c7b765473a1bc1ceae4318f462175"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fb659cf6f7f5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

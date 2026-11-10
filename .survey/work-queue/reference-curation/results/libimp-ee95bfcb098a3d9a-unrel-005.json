@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ee95bfcb098a3d9a-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3694715.3695960",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3694715.3695960",
+    "identity_tokens": [
+      "DOI:10.1145/3694715.3695960",
+      "arXiv:2405.14009"
+    ],
+    "reason": "障害時の分散DNN学習throughput維持が最終適用先であり、学習高速化系は凍結対象なので対象外。",
+    "first_checked_at": "2026-09-30T01:35:07+00:00",
+    "last_checked_at": "2026-10-02T19:21:29+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.14116-failsafe-resilient-tensor-parallel-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22438-kevlarflow-resilient-llm-serving.md"
+    ],
+    "title": "ReCycle: Resilient Training of Large DNNs using Pipeline Adaptation"
+  },
+  "processed_at": "2026-10-02T19:21:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ee95bfcb098a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

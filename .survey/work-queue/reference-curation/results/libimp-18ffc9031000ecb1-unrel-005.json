@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18ffc9031000ecb1-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.05482",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.05482",
+    "identity_tokens": [
+      "arXiv:2203.05482"
+    ],
+    "reason": "複数のfine-tunedモデル重みを平均して単一モデルへ統合し、ensembleの追加推論コストなしに画像分類等の精度を改善するモデル選択・重み平均研究。推論コスト非増加は性質として述べるが、LLM推論基盤の高速化・省メモリ化を提案しない。",
+    "first_checked_at": "2026-10-04T21:42:14+00:00",
+    "last_checked_at": "2026-10-04T21:49:40+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
+    ],
+    "title": "Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time"
+  },
+  "processed_at": "2026-10-04T21:49:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18ffc9031000",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

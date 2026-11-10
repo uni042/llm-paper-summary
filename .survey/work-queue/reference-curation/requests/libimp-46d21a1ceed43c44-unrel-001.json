@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-46d21a1ceed43c44-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.11134",
+  "reason": "We propose a comprehensive framework for solving overlapping-generations (OLG) models in continuous time with both idiosyncratic and aggregate risk. Our general characterization of equilibrium through the master equation operates on the joint distribution over the continuous idiosyncratic states, age and wealth. Our computational strategy is to take a finite-dimensional representation of this distribution as an input of a neural net which in turn outputs a finite-difference representation of the (conditional) value function. This idea can be applied generally to heterogeneous agent models with aggregate risk, and we call it finite-difference neural operator. Our method combines advantages from modern neural nets and traditional finite-difference methods: It is grid-free in the high-dimensional distribution, and retains control on boundary conditions in low-dimensional state variables. Moreover, our method is able to enforce shape constraints. We showcase its flexibility by solving a continuous-time OLG model with aggregate risk alone where we characterize the distribution by its supporting function; and to an OLG model with both types of risk.",
+  "title": "Mastering Stochastic OLG Models in Continuous Time",
+  "identity_tokens": [
+    "arXiv:2608.11134"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-46d21a1ceed4",
+  "source_precheck_request_id": null
+}

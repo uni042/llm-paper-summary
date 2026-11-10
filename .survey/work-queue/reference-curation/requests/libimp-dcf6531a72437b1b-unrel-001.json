@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-dcf6531a72437b1b-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.14399",
+  "reason": "Natural language prompts and skills serve as the strategic backbone of LLM-based agents. Recent advances in prompt and skill optimization have achieved notable gains, yet all existing methods optimize a \\emph{single} text template---missing the synergy among multiple complementary strategies. We propose MOSCOPT, a text-native, parameter-free algorithm that jointly optimizes a pool of $N$ skills and a gating skill $G$ that dynamically selects $K$ skills per step. To effectively optimize the skills, we build the EditAdam with internally maintained dual states. Through the three-phase interleaved updates with EditAdam, the system monotonically improves without gradient or parameter tuning. Extensive experiments and detailed ablations across 5 benchmarks and 3 target LLMs demonstrate that MOSCOPT consistently outperforms all baselines, and confirm that both the mixture-of-skills architecture with selective activation and the collective evolution with three-phase interleaving are essential to its superior performance. Code is released https://github.com/zhangzhenyu13/SummerClaw/tree/master/summerclaw/agent_trainer/algorithms/moscopt.",
+  "title": "MOSCOPT: Mixture-of-Skills Collective Optimization for LLM Agents",
+  "identity_tokens": [
+    "arXiv:2609.14399"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dcf6531a7243",
+  "source_precheck_request_id": null
+}

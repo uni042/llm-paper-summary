@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b180754aa406f0ed-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.11696",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.11696",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2311.11696",
+      "arXiv:2311.11696"
+    ],
+    "reason": "SoRAはLoRAのrankを学習中に動的最適化するparameter-efficient fine-tuning手法が主題で、推論時にはzero rank blockを除去するものの最終目的・主要評価は微調整効率と品質のため凍結範囲。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md"
+    ],
+    "title": "Sparse Low-rank Adaptation of Pre-trained Language Models"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b180754aa406",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

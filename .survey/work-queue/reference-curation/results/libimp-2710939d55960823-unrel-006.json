@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2710939d55960823-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/ipdps.2014.45",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/ipdps.2014.45",
+    "identity_tokens": [
+      "DOI:10.1109/ipdps.2014.45"
+    ],
+    "reason": "GPU上のsingle-source shortest pathをWorkfront Sweep、Near-Far、Bucketingで高速化するgraph algorithm研究で、LLM/Transformer推論を最終workloadとしない。",
+    "first_checked_at": "2026-10-07T05:57:33+00:00",
+    "last_checked_at": "2026-10-07T06:59:08+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md"
+    ],
+    "title": "Work-Efficient Parallel GPU Methods for Single-Source Shortest Paths"
+  },
+  "processed_at": "2026-10-07T06:59:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2710939d5596",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

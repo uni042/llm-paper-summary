@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3e2600dd64eef66c-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2205.08084",
+  "reason": "主要貢献はM6事前学習モデルを推薦システムの検索・順位付け・説明生成・対話推薦へ統合する産業応用であり、一般のLLM生成サービングやKV/MoE最適化を直接対象としない。一方で§3.3のセグメント別遅延相互作用では24層中21層を事前計算・キャッシュし、表6でCTR推論の57msを16msへ短縮する独自の推論構成がある。§3.5では端末向け蒸留・枝刈り・8ビット量子化・早期終了も扱うため、明白な無関係ではなく、推論システム技術の収録境界として保留する。なお同じ表6でAUCは0.7995から0.7731へ悪化する。",
+  "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems",
+  "identity_tokens": [
+    "arxiv:2205.08084",
+    "2205.08084",
+    "doi:10.48550/arxiv.2205.08084"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3e2600dd64ee",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

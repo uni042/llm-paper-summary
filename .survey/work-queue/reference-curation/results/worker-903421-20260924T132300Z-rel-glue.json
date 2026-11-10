@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "worker-903421-20260924T132300Z-rel-glue",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1804.07461",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1804.07461",
+    "identity_tokens": [
+      "arXiv:1804.07461"
+    ],
+    "reason": "General natural-language-understanding benchmark rather than an LLM inference, training-system, memory, serving, or MoE systems contribution.",
+    "first_checked_at": "2026-09-24T13:22:42+00:00",
+    "last_checked_at": "2026-09-24T13:22:42+00:00",
+    "linked_from": [],
+    "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding"
+  },
+  "processed_at": "2026-09-24T13:22:42+00:00",
+  "worker_id": "worker-903421",
+  "run_key": "worker-903421-20260924T220300+0900-lazyprobe",
+  "scheduled_slot": "adhoc",
+  "actual_invocation_start": "2026-09-24T22:03:00+09:00",
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

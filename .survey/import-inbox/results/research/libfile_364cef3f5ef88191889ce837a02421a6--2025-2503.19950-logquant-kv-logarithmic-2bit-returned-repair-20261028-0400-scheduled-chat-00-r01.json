@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "dc3c357b727dd26e172b6fb2394236ad2eccd78a88321f311d4d5d1bf26090a8",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_364cef3f5ef88191889ce837a02421a6--2025-2503.19950-logquant-kv-logarithmic-2bit-returned-repair-20261028-0400-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2503.19950",
+  "worker_completed_at": "2026-10-28T04:02:21+09:00",
+  "worker_run_key": "20261028-0400-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4954,
+    "body_paragraphs": 25,
+    "method_chars": 1489,
+    "method_paragraphs": 7,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-27T20:04:52+00:00"
+}

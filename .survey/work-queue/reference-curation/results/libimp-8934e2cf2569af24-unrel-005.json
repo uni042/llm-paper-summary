@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8934e2cf2569af24-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.14815",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.14815",
+    "identity_tokens": [
+      "arXiv:2410.14815"
+    ],
+    "reason": "Continued pretraining and synthetic corpora adapt multilingual LLMs; this is training, not inference-time optimization.",
+    "first_checked_at": "2026-10-05T14:25:01+00:00",
+    "last_checked_at": "2026-10-05T14:25:01+00:00",
+    "linked_from": [
+      "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+    ],
+    "title": "Adapting Multilingual LLMs to Low-Resource Languages using Continued Pre-training and Synthetic Corpus"
+  },
+  "processed_at": "2026-10-05T14:25:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8934e2cf2569",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

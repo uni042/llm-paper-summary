@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "a2dd223aa851b792f936138eb453b5a41ede7b21235bb28669e077949efefb66",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_31dc6804ca588191a91247bc67cd2fce--2026-2602.15843-perplexity-paradox-taac-research-20261016-1400-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2602.15843",
+  "worker_completed_at": "2026-10-16T14:05:12+09:00",
+  "worker_run_key": "20261016-1400-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5767,
+    "body_paragraphs": 28,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1301,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-16T11:00:53+00:00"
+}

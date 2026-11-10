@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bf22ff68a441e6ec-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.11484",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.11484",
+    "identity_tokens": [
+      "arXiv:2505.11484"
+    ],
+    "reason": "Soft-CoTで推論時追加計算を割り当ててreasoning能力を上げる研究で効率化ではない。",
+    "first_checked_at": "2026-10-05T14:32:01+00:00",
+    "last_checked_at": "2026-10-05T14:32:01+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2408.11850-pearl-parallel-speculative-decoding-with-adaptive-draft-length.md"
+    ],
+    "title": "SoftCoT++: Test-Time Scaling with Soft Chain-of-Thought Reasoning"
+  },
+  "processed_at": "2026-10-05T14:32:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bf22ff68a441",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

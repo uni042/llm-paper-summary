@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b23f082e09687343-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.23158",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.23158",
+    "identity_tokens": [
+      "arXiv:2507.23158"
+    ],
+    "reason": "原著の研究対象は人間とLLMの対話に現れる暗黙の利用者フィードバックの検出と、それを用いた回答改善・教師あり微調整の評価である。GPT-4o-miniによるフィードバック分類、Mistral/VicunaのMT-Bench/WildBench品質評価が中心で、推論サービング、KV管理、GPU計算効率、量子化・復号の高速化に対する技術的貢献はない。worklist記載の「Fast and Memory-Efficient Context Compression with Lightweight Token Scoring」とarXiv一次書誌が一致しないため、誤った題名でResearchを作らず一次identityの実題名で対象外判定する。",
+    "first_checked_at": "2026-10-29T20:46:28+00:00",
+    "last_checked_at": "2026-10-29T20:46:28+00:00",
+    "linked_from": [],
+    "title": "User Feedback in Human-LLM Dialogues: A Lens to Understand Users But Noisy as a Learning Signal"
+  },
+  "processed_at": "2026-10-29T20:46:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b23f082e0968",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

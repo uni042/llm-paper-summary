@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r24",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34972",
+      "identity_tokens": [
+        "arXiv:2609.34972",
+        "DOI:10.48550/arXiv.2609.34972"
+      ],
+      "title": "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
+      "reason": "著者投稿のarXiv要旨の複数ミラーで確認。δ-Visionは視覚トークンを削除せず、層ごとの視覚状態の再計算を低ランクMLPで代替してMLLMの計算量を削減する。一次arXiv本体は取得制限のため未読で、具体的な性能差は要本文確認。",
+      "source_url": "https://arxiv.org/abs/2609.34972",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:50:26+09:00",
+      "last_checked_at": "2026-10-30T20:50:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 203,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-eacl.320",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-eacl.320"
+      ],
+      "title": "Task-aware Block Pruning with Output Distribution Signals for Large Language Models",
+      "reason": "ACL Anthologyの一次要旨によると、各blockでearly-exitした出力分布の不確実性からタスク別のblock重要度を推定し、計算費用の高い感度解析を省くTaBPを提案。LLMの層削減と推論遅延削減を直接実証する。",
+      "source_url": "https://aclanthology.org/2026.findings-eacl.320/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:50:26+09:00",
+      "last_checked_at": "2026-10-30T20:50:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 355,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.10434",
+      "identity_tokens": [
+        "arXiv:2007.10434",
+        "DOI:10.48550/arXiv.2007.10434"
+      ],
+      "title": "Conformer-Kernel with Query Term Independence for Document Retrieval",
+      "reason": "Conformer-kernelは長文書検索のrankerで、クエリ単語の独立性と畳み込み特徴を組み合わせる。生成LLMの逐次decode・KV・推論サービングを対象とせず、検索ランキング特化の研究。",
+      "source_url": "https://arxiv.org/abs/2007.10434",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:50:26+09:00",
+      "last_checked_at": "2026-10-30T20:50:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 414,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.105",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.105"
+      ],
+      "title": "PibE-MPP: A Play-it-by-Ear Masking Performance Plug-in for LLMs",
+      "reason": "ACL一次要旨は最終層の注意ヘッドを確率的にmaskすることで追加学習なしに品質を改善するPibE-MPPを提案する。maskは演算自体をskipする構造的枝刈りではなく、実測推論速度やメモリ削減の主張は要旨にない。",
+      "source_url": "https://aclanthology.org/2026.findings-acl.105/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:50:26+09:00",
+      "last_checked_at": "2026-10-30T20:50:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 428,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.24963/ijcai.2026/653",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/653"
+      ],
+      "title": "Sprint or Delve: A Distribution-Aware Approach to Efficient Reasoning",
+      "reason": "IJCAI公式一次要旨によると、CoT長の対数正規分布を考慮し、短い冗長推論を強く罰し長い難問推論を保護するPowered Length Penaltyを提案。GSM8K/MATH500の生成費用を削減し、AIME2024の精度を改善する推論トークン効率化手法。",
+      "source_url": "https://ijcai.org/proceedings/2026/653",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:50:26+09:00",
+      "last_checked_at": "2026-10-30T20:50:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 445,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/s44443-026-00724-4",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-00724-4"
+      ],
+      "title": "Layer-wise heterogeneity-guided heterogeneous pruning: An LLM compression method",
+      "reason": "Springer出版社一次全文によると、各層の枝刈り感度に応じて構造的・非構造的枝刈り方式と疎性率を同時に割り当てるHHPを提案。LLaMA-2-7Bの40%疎性で品質と推論遅延の交換関係を調整する。",
+      "source_url": "https://link.springer.com/article/10.1007/s44443-026-00724-4",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:50:26+09:00",
+      "last_checked_at": "2026-10-30T20:50:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 460,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-srw.63",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-srw.63"
+      ],
+      "title": "PE-QAT: Parameter-Efficient Quantization-Aware Training for Large Language Models",
+      "reason": "ACL SRW公式PDFによると、凍結LLMとLoRAだけを更新し、merged weightをfake W4A4量子化して誤差を補償する。低bitモデルの品質維持に直接関係するが、native INT4 Tensor Coreの実機推論速度は別のCOLM workshop論文であり本論文の実測値と混同しない。",
+      "source_url": "https://aclanthology.org/2026.acl-srw.63.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:50:26+09:00",
+      "last_checked_at": "2026-10-30T20:50:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 461,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3777911.3800633",
+      "identity_tokens": [
+        "DOI:10.1145/3777911.3800633"
+      ],
+      "title": "OASIS: Optimal Allocation Strategy for Inference Services in Cloud Environments",
+      "reason": "著者公開一次PDFによると、A100/H100の事前プロファイルと要求種別別の動的ルーティング・MIG資源調整を組み合わせる。GPUクロック1320→855MHzで電力39%減・スループット7%減、実キャンパス負荷でSLOとスループットを維持して電力12.4%削減を報告。",
+      "source_url": "https://frachtenberg.org/eitan/pubs/papers/mittal26%3AOASIS.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:50:26+09:00",
+      "last_checked_at": "2026-10-30T20:50:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 371,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3832810.3832825",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832825"
+      ],
+      "title": "Online Scheduling of Battery-Aware Speculative Decoding for Energy-Efficient Cloud-Edge Collaborative LLM Inference",
+      "reason": "著者公開ICPP一次PDFによると、エッジドラフト長をbanditで調整し、クラウド検証とバッテリー充放電・電力価格をオンライン最適化する。実トレースに基づく模擬クラウド・エッジ条件で総費用20～50%削減と報告し、実データセンターの電力実測ではない。",
+      "source_url": "https://ljiao.github.io/papers/icpp26.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:50:26+09:00",
+      "last_checked_at": "2026-10-30T20:50:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 451,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CVPR52734.2025.01172",
+      "identity_tokens": [
+        "DOI:10.1109/CVPR52734.2025.01172"
+      ],
+      "title": "Event-based Video Super-Resolution via State Space Models",
+      "reason": "CVPR公式一次要旨によると、イベントカメラと通常動画をMambaブロックで融合し、動画超解像を改善するMamEVSR。生成LLMの推論システム・KV管理・テキスト復号は対象外。",
+      "source_url": "https://www.openaccess.thecvf.com/content/CVPR2025/html/Xiao_Event-based_Video_Super-Resolution_via_State_Space_Models_CVPR_2025_paper.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:50:26+09:00",
+      "last_checked_at": "2026-10-30T20:50:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 499,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

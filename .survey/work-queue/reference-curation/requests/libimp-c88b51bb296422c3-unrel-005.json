@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c88b51bb296422c3-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.06940",
+  "reason": "LLM judge panels are a standard evaluation tool, but prior work reports highly correlated panel errors: nine judges provide roughly the effective information of two independent ones, and aggregation closes only a small fraction of the gap. A natural remedy--a signal from a different evidence source, e.g., executing a test suite--produced no distinguishable change in the panel's effective-vote count at scale (-0.04, 95\\% CI [-0.10, +0.02]). Aggregate dependence and conditional decision utility are different questions. Elementary majority arithmetic fixes the affected set for single-ballot substitution: only decisions with a one-vote margin can change. The empirical question is whether panel error rates rise and useful substitutions concentrate there. They do: the entire accuracy gain concentrates on these pivotal queries, where it is large (+10.4 to +23.3 percentage points across three headline configurations), and is exactly zero elsewhere. We confirm the pattern across three code benchmarks and four panel sizes (a 9-judge extension and 56 dependent subsampling checks, gain +6.5 to +16.1 percentage points). On HumanEval+/MBPP+, a majority-side replacement rule raises overall accuracy from 82.44\\% to 85.62\\% while invoking the signal on 16.2\\% of queries; signal-only remains stronger at 87.60\\%. Thus population-level dependence diagnostics and margin-stratified utility are complementary, and the affected-set characterization yields a call-reduction rule for any specified single-ballot substitution policy.",
+  "title": "Blind to the Pivotal Vote: Aggregate Independence Metrics Miss Where Verification Actually Helps",
+  "identity_tokens": [
+    "arXiv:2608.06940"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c88b51bb2964",
+  "source_precheck_request_id": null
+}

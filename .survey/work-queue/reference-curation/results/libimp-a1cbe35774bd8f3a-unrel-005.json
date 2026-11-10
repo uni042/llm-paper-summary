@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a1cbe35774bd8f3a-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.38642",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.38642",
+    "identity_tokens": [
+      "arXiv:2609.38642"
+    ],
+    "reason": "Chart-editing dataset and evaluation protocol; not LLM inference efficiency.",
+    "first_checked_at": "2026-10-05T04:49:14+00:00",
+    "last_checked_at": "2026-10-05T04:49:14+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "ChartRevise: A Dataset and Evaluation Protocol for Exact Chart Editing via Code"
+  },
+  "processed_at": "2026-10-05T04:49:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a1cbe35774bd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

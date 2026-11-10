@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1bb0b4ce3e81a3bc-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1802.06901",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1802.06901",
+    "identity_tokens": [
+      "arXiv:1802.06901"
+    ],
+    "reason": "The paper directly measures faster non-autoregressive decoding, but only for machine translation and image captioning; it does not evaluate LLM generation or transfer to autoregressive LLMs.",
+    "first_checked_at": "2026-10-05T00:55:42+00:00",
+    "last_checked_at": "2026-10-05T00:55:42+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+      "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+    ],
+    "title": "Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative Refinement"
+  },
+  "processed_at": "2026-10-05T00:55:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1bb0b4ce3e81",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

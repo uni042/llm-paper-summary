@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6a20ab3537dc26d0-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.14258",
+  "reason": "Vision-language models (VLMs) remain vulnerable to jailbreaks that distribute harmful intent across text and images, making unimodal safety mechanisms insufficient. We investigate whether this vulnerability can be mitigated directly in the multimodal key-value (KV) memory formed during prefill, without modifying model parameters at inference time. We introduce SPARK, a two-stage framework for targeted KV-memory repair. Stage 1 uses a disposable diagnostic adapter to identify harm-associated directions in multimodal key and value representations. Stage 2 projects out these directions, learns a lightweight residual repair, and anchors repaired keys with an image-structural prior to preserve visual grounding. Rather than applying the intervention uniformly, SPARK mixes repaired and original memory using a head-wise coefficient g_h* determined by intervention-relevant subspace energy E_h, requiring no explicit harm classifier at inference. Across LLaVA-OneVision-7B, Chameleon-7B, Qwen2-VL-7B, and InternVL2-4B, SPARK reduces multimodal attack success while preserving general capability. On LLaVA-OneVision-7B, image-only jailbreak attack success falls to 4.7%, while MMMU remains within 0.6 points of the undefended model (47.8 vs. 48.4) with near-baseline language quality. On MM-SafetyBench, attack success decreases from 39.2% to 12.4%. Even under white-box adaptive joint prompt-image attacks, attack success is limited to 20.3%, compared with 54.6% for the undefended model. These results suggest that multimodal jailbreak behavior can be substantially mitigated by selectively repairing intervention-relevant KV subspaces at prefill, particularly when harmful evidence is carried by the visual modality.",
+  "title": "SPARK: Representation-Level KV Memory Alignment for Safer Vision-Language Models",
+  "identity_tokens": [
+    "arXiv:2609.14258"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+    "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6a20ab3537dc",
+  "source_precheck_request_id": null
+}

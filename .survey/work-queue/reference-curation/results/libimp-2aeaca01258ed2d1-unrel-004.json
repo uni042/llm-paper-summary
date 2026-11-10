@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2aeaca01258ed2d1-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s41598-026-58622-8",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s41598-026-58622-8",
+    "identity_tokens": [
+      "DOI:10.1038/s41598-026-58622-8"
+    ],
+    "reason": "The paper structures Japanese clinical SOAP notes with a locally deployed QLoRA LLM and reports extraction quality; no inference optimization is stated.",
+    "first_checked_at": "2026-10-05T07:19:36+00:00",
+    "last_checked_at": "2026-10-05T07:19:36+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "Hierarchical multi-label structuring of Japanese SOAP clinical notes with large language models"
+  },
+  "processed_at": "2026-10-05T07:19:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2aeaca01258e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

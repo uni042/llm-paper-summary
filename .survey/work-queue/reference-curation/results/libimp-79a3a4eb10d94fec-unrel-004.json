@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79a3a4eb10d94fec-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.11528",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.11528",
+    "identity_tokens": [
+      "arXiv:2502.11528"
+    ],
+    "reason": "Survey concerns model personalization by prompts, adapters and alignment, not inference efficiency. Primary abstract: Large Language Models (LLMs) excel in handling general knowledge tasks, yet they struggle with user-specific personalization, such as understanding individual emotions, writing styles, and preferences. Personalized Large Language Models (PLLMs) tackle these challenges by leveraging individual user data, such as user profiles, historical dialogues, content, and interactions, to deliver responses that are contextually relevant and tailored to each user's specific needs. This is",
+    "first_checked_at": "2026-10-05T12:28:02+00:00",
+    "last_checked_at": "2026-10-05T12:28:02+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+    ],
+    "title": "A Survey of Personalized Large Language Models: Progress and Future Directions"
+  },
+  "processed_at": "2026-10-05T12:28:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79a3a4eb10d9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

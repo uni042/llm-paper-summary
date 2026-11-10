@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c95c18b11cc7e3a1-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.09616",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.09616",
+    "identity_tokens": [
+      "arXiv:2512.09616"
+    ],
+    "reason": "動画を対象とする思考連鎖の推論能力・表現方式の研究であり、推論ランタイムやモデル圧縮・KVキャッシュの実装最適化を題名が示していない。",
+    "first_checked_at": "2026-10-16T19:48:14+00:00",
+    "last_checked_at": "2026-10-16T19:48:14+00:00",
+    "linked_from": [],
+    "title": "Rethinking Chain-of-Thought Reasoning for Videos"
+  },
+  "processed_at": "2026-10-16T19:48:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c95c18b11cc7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

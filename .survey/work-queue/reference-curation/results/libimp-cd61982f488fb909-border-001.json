@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd61982f488fb909-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.06688",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.06688",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.06688",
+      "arXiv:2512.06688",
+      "id:arXiv:2512.06688",
+      "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d",
+      "url:https://arxiv.org/abs/2512.06688"
+    ],
+    "reason": "長期のユーザー嗜好を扱う対話データと強化微調整、可読メモリを学習するエージェント記憶を提案。32k履歴に対する2kメモリで入力トークンを16分の1にする点は推論資源に関係するが、主目的は個人化の正解率で、メモリ階層・サービング処理量のシステム最適化は中心ではない。",
+    "first_checked_at": "2026-10-11T10:43:47+00:00",
+    "last_checked_at": "2026-10-13T16:45:35+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
+  },
+  "processed_at": "2026-10-13T16:45:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd61982f488f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

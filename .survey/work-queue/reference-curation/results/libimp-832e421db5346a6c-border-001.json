@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-832e421db5346a6c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:67b578b4838d884172dd3afcdcd0f5291a3e3546",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:67b578b4838d884172dd3afcdcd0f5291a3e3546",
+    "identity_tokens": [
+      "SemanticScholar:67b578b4838d884172dd3afcdcd0f5291a3e3546"
+    ],
+    "reason": "Packet abstract is empty and its title field is only a generic proceedings sentence. The exact primary work/identity could not be established from the supplied source URL, so its scope is unverified.",
+    "first_checked_at": "2026-10-05T14:37:30+00:00",
+    "last_checked_at": "2026-10-05T14:37:30+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "This paper is included in the Proceedings of the 2022 USENIX Annual Technical Conference."
+  },
+  "processed_at": "2026-10-05T14:37:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-832e421db534",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

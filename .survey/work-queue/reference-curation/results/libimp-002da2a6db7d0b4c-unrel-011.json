@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-002da2a6db7d0b4c-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2304.04812",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2304.04812",
+    "identity_tokens": [
+      "arXiv:2304.04812"
+    ],
+    "reason": "The title concerns a neurosymbolic programming language, with no indicated LLM systems-efficiency connection.",
+    "first_checked_at": "2026-10-10T18:46:41+00:00",
+    "last_checked_at": "2026-10-10T18:46:41+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+    ],
+    "title": "Scallop: A Language for Neurosymbolic Programming"
+  },
+  "processed_at": "2026-10-10T18:46:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-002da2a6db7d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

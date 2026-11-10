@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a0260679bc257d27-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/2.268884",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/2.268884",
+    "identity_tokens": [
+      "DOI:10.1109/2.268884"
+    ],
+    "reason": "disk I/Oの機械遅延をcacheで隠蔽し、RR/LRU/SLRU replacementや階層内のcache配置を比較するstorage基礎研究。SSD/NVMe offloadや階層memory設計の基礎には関係するが、LLM/Transformer推論を最終適用先としないためborderline。",
+    "first_checked_at": "2026-10-05T15:43:18+00:00",
+    "last_checked_at": "2026-10-05T15:43:20+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Caching strategies to improve disk system performance"
+  },
+  "processed_at": "2026-10-05T15:43:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0260679bc25",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

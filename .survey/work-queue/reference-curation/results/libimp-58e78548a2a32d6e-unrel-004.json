@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58e78548a2a32d6e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/bigdia71496.2026.11684708",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/bigdia71496.2026.11684708",
+    "identity_tokens": [
+      "DOI:10.1109/bigdia71496.2026.11684708"
+    ],
+    "reason": "As language agents persist and collaborate over long horizons, a stored fact is no longer disposable context: once recalled, it steers tool calls, planning, and cross-agent agreement. We argue that memory reliability breaks down into two distinct failure modes: staleness (the world changed after a fact was stored) and false consensus (agents copied a wrong value until it looked agreed). Better retrieval fixes neither. VAIL is a governed-memory architecture with one rule: retrieval authorizes inspection, not use. Two independent gates enforce it. An executable time-to-live gate re-runs a stored check against the live environment instead of trusting an age threshold; a private append-only ledger keeps conflicting observations visible and settles trust from outcomes rather than from how often a value was repeated. On a controlled multi-agent benchmark with thirty paired seeds and real model calls, each gate clears its own failure metric while leaving the other untouched, and only the combination collapses task failure, by about 84 percent, with every comparison surviving Bonferroni correction. VAIL outperforms faithful A-MEM and Mem0 ports under a uniform memory-injection budget, stays neutral on trap-free public benchmarks, degrades gracefully as trap pressure rises, and replicates under a second controller model. Two studies built from real GitHub release histories validate each gate in the wild: re-running stored checks repairs real environment migrations, and outcome settlement overturns wrong majorities produced by real version skew.",
+    "first_checked_at": "2026-10-05T09:35:35+00:00",
+    "last_checked_at": "2026-10-05T09:35:35+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "VAIL: Retrieval Authorizes Inspection, Not Use — Governed Memory for Long-Horizon Multi-Agent LLM Systems"
+  },
+  "processed_at": "2026-10-05T09:35:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58e78548a2a3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab4a1cc684058d05-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.01903",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.01903",
+    "identity_tokens": [
+      "arXiv:2509.01903"
+    ],
+    "reason": "We propose VISP: Volatility Informed Stochastic Projection, an adaptive regularization method that leverages gradient volatility to guide stochastic noise injection in deep neural networks. Unlike conventional techniques that apply uniform noise or fixed dropout rates, VISP dynamically computes volatility from gradient statistics and uses it to scale a stochastic projection matrix. This mechanism selectively regularizes inputs and hidden nodes that exhibit higher gradient volatility while preserving stable representations, thereby mitigating overfitting. Extensive experiments on MNIST, CIFAR-1",
+    "first_checked_at": "2026-10-06T13:09:22+00:00",
+    "last_checked_at": "2026-10-06T13:09:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+    ],
+    "title": "VISP: Volatility Informed Stochastic Projection for Adaptive Regularization"
+  },
+  "processed_at": "2026-10-06T13:09:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab4a1cc68405",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

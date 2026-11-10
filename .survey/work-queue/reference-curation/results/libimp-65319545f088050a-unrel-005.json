@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-65319545f088050a-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1504.00325",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1504.00325",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1504.00325",
+      "arXiv:1504.00325"
+    ],
+    "reason": "画像キャプションの大規模データセットと評価サーバ構築が主題で、LLM推論効率化ではない。",
+    "first_checked_at": "2026-10-03T15:16:51+00:00",
+    "last_checked_at": "2026-10-03T15:16:51+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "title": "Microsoft COCO Captions: Data Collection and Evaluation Server"
+  },
+  "processed_at": "2026-10-03T15:16:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-65319545f088",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

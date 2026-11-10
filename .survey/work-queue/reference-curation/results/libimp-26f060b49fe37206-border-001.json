@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-26f060b49fe37206-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3132747.3132780",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3132747.3132780",
+    "identity_tokens": [
+      "DOI:10.1145/3132747.3132780"
+    ],
+    "reason": "μs級network task向けにwork-conserving scheduler、shared-memory queue、multi-queue NIC、IPIでcore間負荷を再配分しtail latencyを抑えるOS/dataplane研究。LLM serving schedulingの基礎として強く関連するが、評価はSilo/TPC-C等でLLM専用ではないためborderline。",
+    "first_checked_at": "2026-10-05T15:48:47+00:00",
+    "last_checked_at": "2026-10-05T16:29:32+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ZygOS: Achieving Low Tail Latency for Microsecond-scale Networked Tasks"
+  },
+  "processed_at": "2026-10-05T16:29:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-26f060b49fe3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

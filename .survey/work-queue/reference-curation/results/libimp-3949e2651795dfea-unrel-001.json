@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3949e2651795dfea-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s10664-026-10905-4",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s10664-026-10905-4",
+    "identity_tokens": [
+      "DOI:10.1007/s10664-026-10905-4"
+    ],
+    "reason": "Primary abstract reviewed: Primary Springer abstract: framework for project-level C-to-Rust migration using LLMs, dependency scheduling, context-aware transpilation, and compilation feedback; measured compilation/correctness/safety outcomes.… This is a different application/model-quality or general computing topic, not LLM inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T11:51:45+00:00",
+    "last_checked_at": "2026-10-05T11:51:45+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "MinsC2Rust: LLM-driven project-level code migration from C to safe Rust"
+  },
+  "processed_at": "2026-10-05T11:51:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3949e2651795",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

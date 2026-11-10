@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-819b135b55f4b3bb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/access.2025.3591750",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/access.2025.3591750",
+    "identity_tokens": [
+      "DOI:10.1109/access.2025.3591750"
+    ],
+    "reason": "Artificial Intelligence (AI)’s capacity to analyze dermoscopic images promises a groundbreaking leap in skin cancer diagnostics, offering exceptional accuracy and an effortlessly non-invasive image acquisition process. However, this immense potential, which has ignited widespread research enthusiasm, is critically undermined due to the lack of transparency and interpretability. The automated generation of articulate and comprehensive diagnostic reports will bridge this critical gap by not only illuminate the AI’s diagnostic rational but also substantially reduce the demanding workload of the medical professionals. This study presents a multimodal vision-language model (VLM) trained using a two-stage knowledge distillation (KD) framework to generate structured medical reports from dermoscopic images, with descriptive features based on the 7-point melanoma checklist. The reports are organized into clinically relevant sections—Findings, Impression, and Differential Diagnosis—aligned with dermatological standards. Experimental evaluation demonstrates the system’s ability to produce accurate and interpretable reports. Human feedback from a medical professional, assessing clinical relevance, completeness, and interpretability, supports the utility of the generated reports, while computational metrics validate their accuracy and alignment with reference pseudo-reports, achieving a SacreBLEU score of 55.59, a ROUGE-1 score of 0.5438, a ROUGE-L score of 0.3828, and a BERTScore F1 of 0.9025. These findings underscore the model’s ability to generalize effectively to unseen data, enabled by its multimodal design, clinical alignment, and explainability.",
+    "first_checked_at": "2026-10-05T13:22:02+00:00",
+    "last_checked_at": "2026-10-05T13:22:02+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+    ],
+    "title": "Automated Skin Cancer Report Generation via a Knowledge-Distilled Vision-Language Model"
+  },
+  "processed_at": "2026-10-05T13:22:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-819b135b55f4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

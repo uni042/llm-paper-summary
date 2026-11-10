@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b30e0495666b8e5-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.18071",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.18071",
+    "identity_tokens": [
+      "arXiv:2507.18071"
+    ],
+    "reason": "GSPOはsequence-level importance ratio/clippingでLLMの強化学習を安定化し、特にMoE RL trainingの効率・安定性を改善する学習アルゴリズム。推論時のMoE routingやservingを最終適用先としない。",
+    "first_checked_at": "2026-10-05T15:43:15+00:00",
+    "last_checked_at": "2026-10-05T22:23:00+00:00",
+    "linked_from": [],
+    "title": "Group Sequence Policy Optimization"
+  },
+  "processed_at": "2026-10-05T22:23:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b30e0495666",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-10T00:41:47+00:00",
+  "status": "issues_found",
+  "error_count": 1,
+  "warning_count": 0,
+  "paper_count": 3826,
+  "latest_paper_commit": "2026-11-08T19:57:05+00:00",
+  "queue": {
+    "job_count": 620,
+    "snapshot_drift": true,
+    "snapshot_repaired": true,
+    "snapshot_repair_safe": true,
+    "counts": {
+      "discovery": {
+        "processing": 7,
+        "completed": 1,
+        "ready": 1
+      },
+      "audit": {
+        "ready": 2
+      },
+      "research": {
+        "ready": 571,
+        "superseded": 7,
+        "deferred": 8,
+        "completed": 22,
+        "rejected": 1
+      }
+    }
+  },
+  "derived_indexes": {
+    "repaired_files": [],
+    "repair_count": 0
+  },
+  "quality": {
+    "baseline_initialized": false,
+    "failures": {
+      "paper": [],
+      "list_summary": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2506.01967-turning-llm-activations-quantization-friendly.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2510.17505-insum-sparse-gpu-kernels-simplified-and-optimized-with-indirect-einsums.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2506.19677-adaptive-request-scheduling-for-codellm-serving-with-sla-guarantees.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.04087-best-of-mini-n-in-loop-sampling-a-contextual-quality-reward-model-for-re.md",
+        "papers/inference/99-other-inference-systems/2023-400218b723db-efficient-latent-space-compression-for-lightning-fast-fine-tuning-and-in.md",
+        "papers/inference/99-other-inference-systems/2025-2508.02520-huawei-cloud-model-as-a-service-on-the-cloudmatrix384-superpod.md",
+        "papers/inference/99-other-inference-systems/2025-2508.17807-attention-debiasing-for-token-pruning-in-vision-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2609.12330-unleashing-the-power-of-equality-saturation-for-tensor-program-superopti.md"
+      ],
+      "overview": []
+    },
+    "new_failures": {
+      "paper": [],
+      "list_summary": [],
+      "overview": []
+    },
+    "resolved_failures": {
+      "paper": [],
+      "list_summary": [],
+      "overview": []
+    }
+  },
+  "coverage": {
+    "citation": {
+      "kind": "citation",
+      "checked_at": "2026-11-10T00:40:50+00:00",
+      "total": 3826,
+      "incomplete": 29,
+      "findings": [
+        {
+          "severity": "error",
+          "code": "citation_coverage_incomplete",
+          "detail": "citation coverage has 29 incomplete paper(s)",
+          "incomplete": 29
+        }
+      ]
+    },
+    "metadata": {
+      "kind": "metadata",
+      "checked_at": "2026-11-10T00:40:50+00:00",
+      "total": 3826,
+      "incomplete": 0,
+      "findings": []
+    }
+  },
+  "findings": [
+    {
+      "severity": "error",
+      "code": "citation_coverage_incomplete",
+      "detail": "citation coverage has 29 incomplete paper(s)",
+      "incomplete": 29
+    }
+  ]
+}

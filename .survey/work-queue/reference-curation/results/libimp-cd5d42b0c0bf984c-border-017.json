@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd5d42b0c0bf984c-border-017",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2311.16867",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2311.16867",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2311.16867",
+      "arXiv:2311.16867"
+    ],
+    "reason": "分散学習・Triton kernel・選択的再計算など有用なシステム詳細を含むが、主貢献はFalconモデル系列全体の技術報告。",
+    "first_checked_at": "2026-09-27T10:28:09+09:00",
+    "last_checked_at": "2026-09-30T09:47:28+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 159"
+    ],
+    "title": "The Falcon Series of Open Language Models"
+  },
+  "processed_at": "2026-09-30T09:47:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd5d42b0c0bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

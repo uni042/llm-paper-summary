@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "44cd61023894718381fa9559318bd5a2dcc807a5e3af98ff53f779013e24f3c0",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c1ad332a7b30--libfile_ee0af9312d288191b4260a6c3d0a1570--2021-2112.06749-sundae-step-unrolled-denoising-nonautoregressive-research-20261021-1900-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2112.06749",
+  "worker_completed_at": "2026-10-21T19:10:00+09:00",
+  "worker_run_key": "20261021-1900-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6351,
+    "body_paragraphs": 36,
+    "method_chars": 2481,
+    "method_paragraphs": 14,
+    "evaluation_chars": 183,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 183 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 183 < 500"
+  ],
+  "processed_at": "2026-10-22T02:28:45+00:00"
+}

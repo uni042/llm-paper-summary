@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ddd5c70c58638c38-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tcad.2004.839485",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tcad.2004.839485",
+    "identity_tokens": [
+      "DOI:10.1109/tcad.2004.839485"
+    ],
+    "reason": "off-chip access時間とon-chip computation時間の比に基づいて細粒度DVFSを制御しenergy/performance trade-offを最適化するarchitecture研究。推論energy最適化へ応用可能だがLLM/Transformer推論を対象としないためborderline。",
+    "first_checked_at": "2026-10-05T15:43:20+00:00",
+    "last_checked_at": "2026-10-05T16:07:16+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Fine-grained dynamic voltage and frequency scaling for precise energy and performance trade-off based on the ratio of off-chip access to on-chip computation times"
+  },
+  "processed_at": "2026-10-05T16:07:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ddd5c70c5863",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

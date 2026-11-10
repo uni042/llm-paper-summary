@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a6bdb1f671f5fccf-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.18723",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.18723",
+    "identity_tokens": [
+      "arXiv:2609.18723"
+    ],
+    "reason": "decoding候補選択法として関連するが、評価ではend-to-end inference latencyが低下せず増加し、効率改善の根拠が弱い。",
+    "first_checked_at": "2026-10-05T06:33:18+00:00",
+    "last_checked_at": "2026-10-05T06:33:18+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "Beyond Truncation: Rethinking LLM Decoding as Ensemble Pruning"
+  },
+  "processed_at": "2026-10-05T06:33:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a6bdb1f671f5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

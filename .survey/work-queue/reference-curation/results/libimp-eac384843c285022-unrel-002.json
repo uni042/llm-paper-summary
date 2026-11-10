@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eac384843c285022-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.12913",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.12913",
+    "identity_tokens": [
+      "arXiv:2502.12913"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.12913. GSQ-Tuning targets quantized on-device fine-tuning/training, not inference serving.",
+    "first_checked_at": "2026-10-05T14:10:42+00:00",
+    "last_checked_at": "2026-10-05T14:10:42+00:00",
+    "linked_from": [
+      "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md",
+      "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md"
+    ],
+    "title": "GSQ-Tuning: Group-Shared Exponents Integer in Fully Quantized Training for LLMs On-Device Fine-tuning"
+  },
+  "processed_at": "2026-10-05T14:10:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eac384843c28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

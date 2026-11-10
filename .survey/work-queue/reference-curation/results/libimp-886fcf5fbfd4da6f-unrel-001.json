@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-886fcf5fbfd4da6f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:d64b13ce85d02f006f11b0c7ca724740198d38c5",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:d64b13ce85d02f006f11b0c7ca724740198d38c5",
+    "identity_tokens": [
+      "SemanticScholar:d64b13ce85d02f006f11b0c7ca724740198d38c5",
+      "https://www.semanticscholar.org/paper/d64b13ce85d02f006f11b0c7ca724740198d38c5"
+    ],
+    "reason": "タイトルに明示されている研究対象は商用ハイパースケールデータセンターのハードウェアライフサイクルを考慮した電力計画であり、LLM推論、モデル実行、KVキャッシュ、推論時のメモリ階層、LLMサービングの最適化を主題としていない。タイトルだけでの暫定的な対象外判定であり、一般データセンターの運用研究としての価値や本文中にLLMの例があるかは未確認。",
+    "first_checked_at": "2026-10-27T20:47:49+00:00",
+    "last_checked_at": "2026-10-27T20:47:49+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-30.md",
+      "scheduled-chat-30 Research prescreen"
+    ],
+    "title": "Hardware Lifecycle-Aware Power Planning in Commercial Hyperscale Datacenters (Operational Systems)"
+  },
+  "processed_at": "2026-10-27T20:47:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-886fcf5fbfd4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6c42147d0854419b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.01150",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.01150",
+    "identity_tokens": [
+      "arXiv:2608.01150"
+    ],
+    "reason": "High-quality video generation requires training Diffusion Transformers (DiTs) jointly on image and video data, posing a mixed-length sequence training problem across GPUs. Existing systems rely on data parallelism (DP), context parallelism (CP), or their combination; we model these designs as disjoint-group placement and prove that they face a fundamental tradeoff between inter-group load imbalance and intra-group communication redundancy. We present Zellige, a moldable sequence placement system that jointly selects each sequence's parallelism configuration and participating ranks. Zellige consists of three components: a hardware profiler that estimates the execution time and memory consumption of candidate placements, a two-stage planner that balances compute-heavy anchor sequences and packs lighter filler sequences into the remaining capacity, and a coalesced attention engine that efficiently executes whole sequences alongside distributed-attention shards. Across 21 plans, the hardware profile predicts step makespan and peak allocated memory with mean absolute percentage errors of $3.4%$ and $1.5%$, respectively. The two-stage planner solves each batch in 33--119 ms, significantly faster than a joint-placement reference that optimizes all sequences together, while their modeled makespans differ by at most $0.32%$. In end-to-end evaluations, Zellige outperforms KnapFormer by $1.12$--$1.48\\times$ on 16 A800 GPUs and $1.27$--$1.54\\times$ on 32 A6000 GPUs.",
+    "first_checked_at": "2026-10-05T09:15:37+00:00",
+    "last_checked_at": "2026-10-05T09:15:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+    ],
+    "title": "Zellige: Moldable Sequence Placement for Mixed Image-Video DiT Training"
+  },
+  "processed_at": "2026-10-05T09:15:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6c42147d0854",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

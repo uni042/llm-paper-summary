@@ -1,0 +1,161 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e32e6feeb4493fee-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e32e6feeb449",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2401.03868",
+    "arXiv:2603.05451"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ee46a489e7b45da164c52d08ffbaed07c66a6419",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-07T04:53:27.247267+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2401.03868",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3626202.3637562"
+    },
+    {
+      "requested_id": "arXiv:2603.05451",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
+      "source_url": "https://arxiv.org/abs/2603.05451",
+      "year": 2026,
+      "published": "2026-03-05",
+      "venue": "arXiv.org",
+      "citation_count": 76,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention, as a core layer of the ubiquitous Transformer architecture, is the bottleneck for large language models and long-context applications. While FlashAttention-3 optimized attention for Hopper GPUs through asynchronous execution and warp specialization, it primarily targets the H100 architecture. The AI industry has rapidly transitioned to deploying Blackwell-based systems such as the B200 and GB200, which exhibit fundamentally different performance characteristics due to asymmetric hardware scaling: tensor core throughput doubles while other functional units (shared memory bandwidth, exponential units) scale more slowly or remain unchanged. We develop several techniques to address these shifting bottlenecks on Blackwell GPUs: (1) redesigned pipelines that exploit fully asynchronous MMA operations and larger tile sizes, (2) software-emulated exponential and conditional softmax rescaling that reduces non-matmul operations, and (3) leveraging tensor memory and the 2-CTA MMA mode to reduce shared memory traffic and atomic adds in the backward pass. We demonstrate that our method, FlashAttention-4, achieves up to 1.3$\\times$ speedup over cuDNN 9.13 and 2.7$\\times$ over Triton on B200 GPUs with BF16, reaching up to 1613 TFLOPs/s (71% utilization). Beyond algorithmic innovations, we implement FlashAttention-4 entirely in CuTe-DSL embedded in Python, achieving 20-30$\\times$ faster compile times compared to traditional C++ template-based approaches while maintaining full expressivity.",
+      "identifiers": [
+        "SemanticScholar:aeb3bfed03fccc84103ade3f7dcdda8353819ebb"
+      ],
+      "semantic_scholar_id": "aeb3bfed03fccc84103ade3f7dcdda8353819ebb",
+      "canonical_id": "arXiv:2603.05451",
+      "arxiv_id": "2603.05451",
+      "doi": "10.48550/arXiv.2603.05451",
+      "authors": [
+        "Ted Zadouri",
+        "Markus Höhnerbach",
+        "J. Shah",
+        "Timothy Liu",
+        "Vijay Thakkar",
+        "Tri Dao"
+      ],
+      "priority": 176,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 76,
+        "citation_count": 76,
+        "total": 176,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 216,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.05451",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.05451",
+        "id:SemanticScholar:aeb3bfed03fccc84103ade3f7dcdda8353819ebb",
+        "id:arXiv:2603.05451",
+        "title:flashattention4 algorithm and kernel pipelining codesign for asymmetric hardware scaling",
+        "url:https://arxiv.org/abs/2603.05451"
+      ],
+      "record": {
+        "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
+        "source_url": "https://arxiv.org/abs/2603.05451",
+        "year": 2026,
+        "published": "2026-03-05",
+        "venue": "arXiv.org",
+        "citation_count": 76,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Attention, as a core layer of the ubiquitous Transformer architecture, is the bottleneck for large language models and long-context applications. While FlashAttention-3 optimized attention for Hopper GPUs through asynchronous execution and warp specialization, it primarily targets the H100 architecture. The AI industry has rapidly transitioned to deploying Blackwell-based systems such as the B200 and GB200, which exhibit fundamentally different performance characteristics due to asymmetric hardware scaling: tensor core throughput doubles while other functional units (shared memory bandwidth, exponential units) scale more slowly or remain unchanged. We develop several techniques to address these shifting bottlenecks on Blackwell GPUs: (1) redesigned pipelines that exploit fully asynchronous MMA operations and larger tile sizes, (2) software-emulated exponential and conditional softmax rescaling that reduces non-matmul operations, and (3) leveraging tensor memory and the 2-CTA MMA mode to reduce shared memory traffic and atomic adds in the backward pass. We demonstrate that our method, FlashAttention-4, achieves up to 1.3$\\times$ speedup over cuDNN 9.13 and 2.7$\\times$ over Triton on B200 GPUs with BF16, reaching up to 1613 TFLOPs/s (71% utilization). Beyond algorithmic innovations, we implement FlashAttention-4 entirely in CuTe-DSL embedded in Python, achieving 20-30$\\times$ faster compile times compared to traditional C++ template-based approaches while maintaining full expressivity.",
+        "identifiers": [
+          "SemanticScholar:aeb3bfed03fccc84103ade3f7dcdda8353819ebb"
+        ],
+        "semantic_scholar_id": "aeb3bfed03fccc84103ade3f7dcdda8353819ebb",
+        "canonical_id": "arXiv:2603.05451",
+        "arxiv_id": "2603.05451",
+        "doi": "10.48550/arXiv.2603.05451",
+        "authors": [
+          "Ted Zadouri",
+          "Markus Höhnerbach",
+          "J. Shah",
+          "Timothy Liu",
+          "Vijay Thakkar",
+          "Tri Dao"
+        ],
+        "priority": 176,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 76,
+          "citation_count": 76,
+          "total": 176,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 216,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a65b7328be38448eb6cb4d8a21bc7714d0652006a45b84a0c2ff4d2804f8970d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

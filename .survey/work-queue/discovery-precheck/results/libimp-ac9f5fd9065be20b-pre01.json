@@ -1,0 +1,378 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ac9f5fd9065be20b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ac9f5fd9065b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2402.05628",
+    "arXiv:2507.20749",
+    "arXiv:2510.14211",
+    "arXiv:2603.00198",
+    "arXiv:2604.17320",
+    "arXiv:2604.19167",
+    "arXiv:2605.30852",
+    "arXiv:2609.32704"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ef8aa6822e25563fbf7e22ae15a4c32dc319367c",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 5,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 5,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T21:58:11.598709+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2402.05628",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/tetc.2026.3704498"
+    },
+    {
+      "requested_id": "arXiv:2507.20749",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.14211",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2510.14211"
+    },
+    {
+      "requested_id": "arXiv:2603.00198",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2603.00198"
+    },
+    {
+      "requested_id": "arXiv:2604.17320",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.19167",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.19167"
+    },
+    {
+      "requested_id": "arXiv:2605.30852",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:c33d57e1227d17c044508065b9bd56ae53049f52"
+    },
+    {
+      "requested_id": "arXiv:2609.32704",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Towards Joint Quantization and Token Pruning of Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2604.17320",
+      "year": 2026,
+      "published": "2026-04-19",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Vision-Language Models (VLMs) under aggressive low-bit inference remains challenging because inference cost is dominated by the long visual-token prefix during prefill and the growing KV cache during autoregressive decoding. Token pruning and low-bit quantization are complementary for reducing these costs, yet naive stage-wise combinations are often brittle due to a mismatch between quantization calibration and pruning execution. We present a collaborative quantization-and-pruning framework that unifies low-bit inference and deterministic visual-token pruning in a single deployable pipeline. The framework introduces the \\textbf{Q}uantization \\textbf{U}nified \\textbf{O}ffline \\textbf{T}oken \\textbf{A}llocator (\\textbf{QUOTA}), which converts low-bit calibration signals into a layer-wise token allocation schedule and materializes it as a pruning recipe. Token importance is evaluated under deployed W4A4 operators with a quantized KV cache by combining activation magnitude, attention cues, and an explicit low-bit risk signal, enabling consistent budgeted top-$k$ selection. Experiments on standard VLM benchmarks show improved robustness over stage-wise baselines under the same low-bit regime, achieving 95.65\\% average retention while retaining only 30\\% of visual tokens, compared with about 94.3\\% retention for representative stage-wise combinations. The code will be released.",
+      "identifiers": [
+        "SemanticScholar:25bba4656f33dcdd6ebd6cc3e98413f1a3d7c226"
+      ],
+      "semantic_scholar_id": "25bba4656f33dcdd6ebd6cc3e98413f1a3d7c226",
+      "canonical_id": "arXiv:2604.17320",
+      "arxiv_id": "2604.17320",
+      "doi": "10.48550/arXiv.2604.17320",
+      "authors": [
+        "Xin-Qing Li",
+        "Xin He",
+        "Xindong Zhang",
+        "Ming-Ming Cheng",
+        "Lei Zhang",
+        "Yun Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 192,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CoWindow Attention: Full Causal Coverage Is a Collective Property",
+      "source_url": "https://arxiv.org/abs/2609.32704",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "FullAttn repeatedly exposes the complete causal history to every attention head, creating substantial redundant computation and memory traffic even with IO-efficient dense kernels. We introduce CoWA, a structured attention architecture that distributes access to the causal history across KV heads. All heads share near-diagonal and prefix-sink windows, while complementary long-range windows partition the remaining history. Their union provides full causal coverage although each head attends sparsely to distant tokens. This position-defined attention pattern requires no learned router or indexer, is used consistently during training and inference, and aligns with KV-head tensor parallelism. A window-matched ablation at 8K isolates the effect of complementary long-range allocation: CoWA with 100% collective coverage reaches 89.73% accuracy, compared with 89.97% for FullAttn, while duplicated long-range windows perform substantially worse. Across a broader controlled associative-recall comparison with matched token budgets, CoWA closely tracks FullAttn as the context grows, whereas other sparse patterns lose a substantial fraction of the associations. In an attention-operator benchmark at 128K tokens with tensor parallelism, CoWA reduces forward and backward latency during training by 7.4x and 8.6x and decoding latency during inference by 3.0x over FullAttn. Its per-rank peak operator memory matches FullAttn during training and is 7.6x lower during decoding. Across scaling-law training from 0.6B to 14B parameters, CoWA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results show that full causal coverage can be a collective property of the head ensemble rather than a duplicated property of every head.",
+      "identifiers": [
+        "SemanticScholar:842391b56fec2e4b0af97544090e5214f421fd3b"
+      ],
+      "semantic_scholar_id": "842391b56fec2e4b0af97544090e5214f421fd3b",
+      "canonical_id": "arXiv:2609.32704",
+      "arxiv_id": "2609.32704",
+      "authors": [
+        "Jing-Ze Shi",
+        "Zhang-Yang Peng",
+        "Xian-Duo Li",
+        "Yan-Lin Qi",
+        "Xiao-Tian Lin",
+        "Hao-Xian Chen",
+        "Liang-Dong Wang",
+        "Guang Liu",
+        "Yu-Yu Luo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Investigating Structural Pruning and Recovery Techniques for Compressing Multimodal Large Language Models: An Empirical Study",
+      "source_url": "https://arxiv.org/abs/2507.20749",
+      "year": 2025,
+      "published": "2025-07-28",
+      "venue": "DAGM GCPR",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Multimodal Large Language Models (MLLMs) demonstrate impressive capabilities, their substantial computational and memory requirements pose significant barriers to practical deployment. Current parameter reduction techniques primarily involve training MLLMs from Small Language Models (SLMs), but these methods offer limited flexibility and remain computationally intensive. To address this gap, we propose to directly compress existing MLLMs through structural pruning combined with efficient recovery training. Specifically, we investigate two structural pruning paradigms--layerwise and widthwise pruning--applied to the language model backbone of MLLMs, alongside supervised finetuning and knowledge distillation. Additionally, we assess the feasibility of conducting recovery training with only a small fraction of the available data. Our results show that widthwise pruning generally maintains better performance in low-resource scenarios with limited computational resources or insufficient finetuning data. As for the recovery training, finetuning only the multimodal projector is sufficient at small compression levels (<20%). Furthermore, a combination of supervised finetuning and hidden-state distillation yields optimal recovery across various pruning levels. Notably, effective recovery can be achieved with as little as 5% of the original training data, while retaining over 95% of the original performance. Through empirical study on two representative MLLMs, i.e., LLaVA-v1.5-7B and Bunny-v1.0-3B, this study offers actionable insights for practitioners aiming to compress MLLMs effectively without extensive computation resources or sufficient data.",
+      "identifiers": [
+        "SemanticScholar:e36cb608d4e986a6b9796e3459ffcf32d99d99f7"
+      ],
+      "semantic_scholar_id": "e36cb608d4e986a6b9796e3459ffcf32d99d99f7",
+      "canonical_id": "arXiv:2507.20749",
+      "arxiv_id": "2507.20749",
+      "doi": "10.48550/arXiv.2507.20749",
+      "authors": [
+        "Yi-Ran Huang",
+        "Lukas Thede",
+        "Massimiliano Mancini",
+        "Wenjia Xu",
+        "Zeynep Akata"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 457,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.17320",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.17320",
+        "id:SemanticScholar:25bba4656f33dcdd6ebd6cc3e98413f1a3d7c226",
+        "id:arXiv:2604.17320",
+        "title:towards joint quantization and token pruning of visionlanguage models",
+        "url:https://arxiv.org/abs/2604.17320"
+      ],
+      "record": {
+        "title": "Towards Joint Quantization and Token Pruning of Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2604.17320",
+        "year": 2026,
+        "published": "2026-04-19",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying Vision-Language Models (VLMs) under aggressive low-bit inference remains challenging because inference cost is dominated by the long visual-token prefix during prefill and the growing KV cache during autoregressive decoding. Token pruning and low-bit quantization are complementary for reducing these costs, yet naive stage-wise combinations are often brittle due to a mismatch between quantization calibration and pruning execution. We present a collaborative quantization-and-pruning framework that unifies low-bit inference and deterministic visual-token pruning in a single deployable pipeline. The framework introduces the \\textbf{Q}uantization \\textbf{U}nified \\textbf{O}ffline \\textbf{T}oken \\textbf{A}llocator (\\textbf{QUOTA}), which converts low-bit calibration signals into a layer-wise token allocation schedule and materializes it as a pruning recipe. Token importance is evaluated under deployed W4A4 operators with a quantized KV cache by combining activation magnitude, attention cues, and an explicit low-bit risk signal, enabling consistent budgeted top-$k$ selection. Experiments on standard VLM benchmarks show improved robustness over stage-wise baselines under the same low-bit regime, achieving 95.65\\% average retention while retaining only 30\\% of visual tokens, compared with about 94.3\\% retention for representative stage-wise combinations. The code will be released.",
+        "identifiers": [
+          "SemanticScholar:25bba4656f33dcdd6ebd6cc3e98413f1a3d7c226"
+        ],
+        "semantic_scholar_id": "25bba4656f33dcdd6ebd6cc3e98413f1a3d7c226",
+        "canonical_id": "arXiv:2604.17320",
+        "arxiv_id": "2604.17320",
+        "doi": "10.48550/arXiv.2604.17320",
+        "authors": [
+          "Xin-Qing Li",
+          "Xin He",
+          "Xindong Zhang",
+          "Ming-Ming Cheng",
+          "Lei Zhang",
+          "Yun Liu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 192,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32704",
+      "identity_tokens": [
+        "id:SemanticScholar:842391b56fec2e4b0af97544090e5214f421fd3b",
+        "id:arXiv:2609.32704",
+        "title:cowindow attention full causal coverage is a collective property",
+        "url:https://arxiv.org/abs/2609.32704"
+      ],
+      "record": {
+        "title": "CoWindow Attention: Full Causal Coverage Is a Collective Property",
+        "source_url": "https://arxiv.org/abs/2609.32704",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "FullAttn repeatedly exposes the complete causal history to every attention head, creating substantial redundant computation and memory traffic even with IO-efficient dense kernels. We introduce CoWA, a structured attention architecture that distributes access to the causal history across KV heads. All heads share near-diagonal and prefix-sink windows, while complementary long-range windows partition the remaining history. Their union provides full causal coverage although each head attends sparsely to distant tokens. This position-defined attention pattern requires no learned router or indexer, is used consistently during training and inference, and aligns with KV-head tensor parallelism. A window-matched ablation at 8K isolates the effect of complementary long-range allocation: CoWA with 100% collective coverage reaches 89.73% accuracy, compared with 89.97% for FullAttn, while duplicated long-range windows perform substantially worse. Across a broader controlled associative-recall comparison with matched token budgets, CoWA closely tracks FullAttn as the context grows, whereas other sparse patterns lose a substantial fraction of the associations. In an attention-operator benchmark at 128K tokens with tensor parallelism, CoWA reduces forward and backward latency during training by 7.4x and 8.6x and decoding latency during inference by 3.0x over FullAttn. Its per-rank peak operator memory matches FullAttn during training and is 7.6x lower during decoding. Across scaling-law training from 0.6B to 14B parameters, CoWA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results show that full causal coverage can be a collective property of the head ensemble rather than a duplicated property of every head.",
+        "identifiers": [
+          "SemanticScholar:842391b56fec2e4b0af97544090e5214f421fd3b"
+        ],
+        "semantic_scholar_id": "842391b56fec2e4b0af97544090e5214f421fd3b",
+        "canonical_id": "arXiv:2609.32704",
+        "arxiv_id": "2609.32704",
+        "authors": [
+          "Jing-Ze Shi",
+          "Zhang-Yang Peng",
+          "Xian-Duo Li",
+          "Yan-Lin Qi",
+          "Xiao-Tian Lin",
+          "Hao-Xian Chen",
+          "Liang-Dong Wang",
+          "Guang Liu",
+          "Yu-Yu Luo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.20749",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.20749",
+        "id:SemanticScholar:e36cb608d4e986a6b9796e3459ffcf32d99d99f7",
+        "id:arXiv:2507.20749",
+        "title:investigating structural pruning and recovery techniques for compressing multimodal large language models an empirical study",
+        "url:https://arxiv.org/abs/2507.20749"
+      ],
+      "record": {
+        "title": "Investigating Structural Pruning and Recovery Techniques for Compressing Multimodal Large Language Models: An Empirical Study",
+        "source_url": "https://arxiv.org/abs/2507.20749",
+        "year": 2025,
+        "published": "2025-07-28",
+        "venue": "DAGM GCPR",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Multimodal Large Language Models (MLLMs) demonstrate impressive capabilities, their substantial computational and memory requirements pose significant barriers to practical deployment. Current parameter reduction techniques primarily involve training MLLMs from Small Language Models (SLMs), but these methods offer limited flexibility and remain computationally intensive. To address this gap, we propose to directly compress existing MLLMs through structural pruning combined with efficient recovery training. Specifically, we investigate two structural pruning paradigms--layerwise and widthwise pruning--applied to the language model backbone of MLLMs, alongside supervised finetuning and knowledge distillation. Additionally, we assess the feasibility of conducting recovery training with only a small fraction of the available data. Our results show that widthwise pruning generally maintains better performance in low-resource scenarios with limited computational resources or insufficient finetuning data. As for the recovery training, finetuning only the multimodal projector is sufficient at small compression levels (<20%). Furthermore, a combination of supervised finetuning and hidden-state distillation yields optimal recovery across various pruning levels. Notably, effective recovery can be achieved with as little as 5% of the original training data, while retaining over 95% of the original performance. Through empirical study on two representative MLLMs, i.e., LLaVA-v1.5-7B and Bunny-v1.0-3B, this study offers actionable insights for practitioners aiming to compress MLLMs effectively without extensive computation resources or sufficient data.",
+        "identifiers": [
+          "SemanticScholar:e36cb608d4e986a6b9796e3459ffcf32d99d99f7"
+        ],
+        "semantic_scholar_id": "e36cb608d4e986a6b9796e3459ffcf32d99d99f7",
+        "canonical_id": "arXiv:2507.20749",
+        "arxiv_id": "2507.20749",
+        "doi": "10.48550/arXiv.2507.20749",
+        "authors": [
+          "Yi-Ran Huang",
+          "Lukas Thede",
+          "Massimiliano Mancini",
+          "Wenjia Xu",
+          "Zeynep Akata"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 457,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a5da3d934fc1a13c45c5d9a5b059cffa21372377e50fcc4773853837eb1e24a7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

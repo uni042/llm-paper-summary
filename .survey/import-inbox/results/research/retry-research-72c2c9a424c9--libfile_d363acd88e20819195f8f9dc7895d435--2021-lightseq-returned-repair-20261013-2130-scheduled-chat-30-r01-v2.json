@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "0a7c226602b7cac59bf739514dc037556698922d09a0023a1a3e69576ddee870",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-72c2c9a424c9--libfile_d363acd88e20819195f8f9dc7895d435--2021-lightseq-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.md",
+  "canonical_id": "DOI:10.18653/v1/2021.naacl-industry.15",
+  "worker_completed_at": "2026-10-13T21:30:00+09:00",
+  "worker_run_key": "20261013-2130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5901,
+    "body_paragraphs": 30,
+    "method_chars": 1305,
+    "method_paragraphs": 8,
+    "evaluation_chars": 2074,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2021-439132b7c6e4-lightseq-a-high-performance-inference-library-for-transformers.md と 18 段落 / 4162文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:56:21+00:00"
+}

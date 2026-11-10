@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4bed0108f1a63c3-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.09280",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.09280",
+    "identity_tokens": [
+      "arXiv:2506.09280"
+    ],
+    "reason": "Primary abstract: Distributed training is essential for scaling the training of large neural network models, such as large language models (LLMs), across thousands of GPUs.",
+    "first_checked_at": "2026-10-05T13:46:40+00:00",
+    "last_checked_at": "2026-10-05T13:46:40+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md"
+    ],
+    "title": "TTrace: Lightweight Error Checking and Diagnosis for Distributed Training"
+  },
+  "processed_at": "2026-10-05T13:46:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4bed0108f1a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

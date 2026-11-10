@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1b0e19f6c9ea1333-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s00414-026-03970-3",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s00414-026-03970-3",
+    "identity_tokens": [
+      "DOI:10.1007/s00414-026-03970-3"
+    ],
+    "reason": "The publisher abstract evaluates ML/ANN methods for forensic sex estimation from mandibular measurements in panoramic radiographs; it is not an LLM paper.",
+    "first_checked_at": "2026-10-05T08:16:10+00:00",
+    "last_checked_at": "2026-10-05T08:16:10+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Evaluating machine learning and neural network architectures for forensic sex estimation using mandibular ramus and notch features on panoramic radiographs."
+  },
+  "processed_at": "2026-10-05T08:16:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b0e19f6c9ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

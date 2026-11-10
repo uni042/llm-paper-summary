@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-539d2f7dc8ad90b4-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.14097",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.14097",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.14097",
+      "arXiv:2403.14097"
+    ],
+    "reason": "preemptible instance上の分散DNN学習を、将来の資源変動予測と並列構成切替で高速化する学習システムであり、最終適用先が学習高速化の凍結範囲。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+    ],
+    "title": "Parcae: Proactive, Liveput-Optimized DNN Training on Preemptible Instances"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-539d2f7dc8ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

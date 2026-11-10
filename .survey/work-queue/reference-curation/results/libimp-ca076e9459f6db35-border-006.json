@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca076e9459f6db35-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.22214",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.22214",
+    "identity_tokens": [
+      "DOI:10.21437/mlcslm.2026-8",
+      "SemanticScholar:7880240fc139fa7ac9bbd88788a12e6c9fcdac3c",
+      "arXiv:2609.22214"
+    ],
+    "reason": "Question-aware evidence routing for speech QA may reduce unnecessary modality processing, but the abstract reports accuracy only and no measured compute or latency effect.",
+    "first_checked_at": "2026-10-13T04:24:20+00:00",
+    "last_checked_at": "2026-10-13T04:24:20+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "The Bairong System for MLC-SLM 2026: Dynamic Question-Aware Evidence Routing for Multilingual Conversational Speech Understanding"
+  },
+  "processed_at": "2026-10-13T04:24:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca076e9459f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-34e5b21bb2aab63d-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.05332",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.05332",
+    "identity_tokens": [
+      "arXiv:2506.05332"
+    ],
+    "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 Hour-LLaVA uses a question-conditioned memory augmentation module to integrate semantics from cached full-video context and enable hour-scale video training/inference at 1-FPS sampling. It reports video understanding benchmark gains but no measured inference memory/latency/throughput advantage in the reviewed results; its relevance to distributed attention is plausible but indirect.",
+    "first_checked_at": "2026-10-06T16:56:04+00:00",
+    "last_checked_at": "2026-10-06T16:56:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Unleashing Hour-Scale Video Training for Long Video-Language Understanding"
+  },
+  "processed_at": "2026-10-06T16:56:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-34e5b21bb2aa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

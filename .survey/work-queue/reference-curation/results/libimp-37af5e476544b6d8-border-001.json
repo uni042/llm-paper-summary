@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-37af5e476544b6d8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.07596",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.07596",
+    "identity_tokens": [
+      "arXiv:2505.07596"
+    ],
+    "reason": "原著要旨では検索拡張生成のエージェントIKEAが内部知識の境界を学習し、必要な場合だけ外部検索するよう報酬関数と学習データを設計する。検索回数減少による推論遅延への寄与はあるが、中心は知識判断能力と強化学習による検索方策であり、推論エンジンのスケジューラ、キャッシュ、並列実行などのシステム機構は要旨で示されない。RAGサービングとの接点があるため無関係ではなく境界とする。",
+    "first_checked_at": "2026-10-15T22:46:31+00:00",
+    "last_checked_at": "2026-10-15T22:46:31+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Reinforced Internal-External Knowledge Synergistic Reasoning for Efficient Adaptive Search Agent"
+  },
+  "processed_at": "2026-10-15T22:46:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-37af5e476544",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

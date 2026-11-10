@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-92cae29eb2e8990b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.03065",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.03065",
+    "identity_tokens": [
+      "arXiv:2506.03065"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.03065. Primary abstract accelerates video diffusion transformers; the target is video generation rather than LLM inference.",
+    "first_checked_at": "2026-10-05T14:31:59+00:00",
+    "last_checked_at": "2026-10-05T14:31:59+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md"
+    ],
+    "title": "Sparse-vDiT: Unleashing the Power of Sparse Attention to Accelerate Video Diffusion Transformers"
+  },
+  "processed_at": "2026-10-05T14:31:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-92cae29eb2e8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

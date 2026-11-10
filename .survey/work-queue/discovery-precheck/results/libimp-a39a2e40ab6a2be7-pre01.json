@@ -1,0 +1,202 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a39a2e40ab6a2be7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a39a2e40ab6a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3552326.3587438",
+    "DOI:10.1145/3642970.3655844",
+    "DOI:10.1145/3662006.3662067"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6f98c93e6b88a28fb2be409bae5339632693cc88",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-02T06:59:46.368214+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3552326.3587438",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3642970.3655844",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3662006.3662067",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Tabi: An Efficient Multi-Level Inference System for Large Language Models",
+      "source_url": "https://doi.org/10.1145/3552326.3587438",
+      "year": 2023,
+      "published": "2023-05-08",
+      "abstract": "Today's trend of building ever larger language models (LLMs), while pushing the performance of natural language processing, adds significant latency to the inference stage. We observe that due to the diminishing returns of adding parameters to LLMs, a smaller model could make the same prediction as a costly LLM for a majority of queries. Based on this observation, we design Tabi, an inference system with a multi-level inference engine that serves queries using small models and optional LLMs for demanding applications. Tabi is optimized for discriminative models (i.e., not generative LLMs) in a serving framework. Tabi uses the calibrated confidence score to decide whether to return the accurate results of small models extremely fast or re-route them to LLMs. For re-routed queries, it uses attention-based word pruning and weighted ensemble techniques to offset the system overhead and accuracy loss. We implement and evaluate Tabi with multiple tasks and models. Our result shows that Tabi achieves 21%-40% average latency reduction (with comparable tail latency) over the state-of-the-art while meeting LLM-grade high accuracy targets.",
+      "doi": "10.1145/3552326.3587438",
+      "canonical_id": "DOI:10.1145/3552326.3587438",
+      "authors": [
+        "Yiding Wang",
+        "Kai Chen",
+        "Haisheng Tan",
+        "Kun Guo"
+      ]
+    },
+    {
+      "title": "ALTO: An Efficient Network Orchestrator for Compound AI Systems",
+      "source_url": "https://doi.org/10.1145/3642970.3655844",
+      "year": 2024,
+      "published": "2024-04-22",
+      "abstract": "We present ALTO, a network orchestrator for efficiently serving compound AI systems such as pipelines of language models. ALTO leverages an optimization opportunity specific to generative language models, which is streaming intermediate outputs from the language model to downstream stages. We highlight two challenges that emerge while serving these applications at scale: handling how some stages can be stateful across partial outputs, and handling how language models can produce variable amounts of text. To address these challenges, we motivate the need for an aggregation-aware routing interface and distributed prompt-aware scheduling. ALTO's partial output streaming increases throughput by up to 3× for a fixed latency target of 4 seconds / request and reduces tail latency by 1.8× compared to a baseline serving approach, on a complex chat bot verification pipeline.",
+      "doi": "10.1145/3642970.3655844",
+      "canonical_id": "DOI:10.1145/3642970.3655844",
+      "authors": [
+        "Keshav Santhanam",
+        "Deepti Raghavan",
+        "Muhammad Shahir Rahman",
+        "Thejas Venkatesh",
+        "Neha Kunjal",
+        "Pratiksha Thaker",
+        "P. Levis",
+        "Matei Zaharia"
+      ]
+    },
+    {
+      "title": "Hybrid SLM and LLM for Edge-Cloud Collaborative Inference",
+      "source_url": "https://doi.org/10.1145/3662006.3662067",
+      "year": 2024,
+      "published": "2024-06-03",
+      "abstract": "Edge-Cloud collaboration for deep learning inference has been actively studied, to enhance the inference performance by leveraging both Edge and Cloud resources. However, traditional Edge-Cloud collaboration based on model partitioning or confidence score are not suitable in the LLM (large language models) era, because of its autoregressive generation and the generality across diverse tasks. This paper proposes a dynamic token-level Edge-Cloud collaboration for LLMs. A SLM (small language model) such as TinyLlama resides on the Edge devices, through token-level interaction with the Cloud-side LLMs during inference, approaching LLM quality with a controllable cost similar to SLM. Evaluation results show that our method can only use 25.8% LLM cost to achieve LLM-comparable quality on GSM8K task.",
+      "doi": "10.1145/3662006.3662067",
+      "canonical_id": "DOI:10.1145/3662006.3662067",
+      "authors": [
+        "Zixu Hao",
+        "Huiqiang Jiang",
+        "Shiqi Jiang",
+        "Ju Ren",
+        "Ting Cao"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3552326.3587438",
+      "identity_tokens": [
+        "id:DOI:10.1145/3552326.3587438",
+        "title:tabi an efficient multilevel inference system for large language models",
+        "url:https://doi.org/10.1145/3552326.3587438"
+      ],
+      "record": {
+        "title": "Tabi: An Efficient Multi-Level Inference System for Large Language Models",
+        "source_url": "https://doi.org/10.1145/3552326.3587438",
+        "year": 2023,
+        "published": "2023-05-08",
+        "abstract": "Today's trend of building ever larger language models (LLMs), while pushing the performance of natural language processing, adds significant latency to the inference stage. We observe that due to the diminishing returns of adding parameters to LLMs, a smaller model could make the same prediction as a costly LLM for a majority of queries. Based on this observation, we design Tabi, an inference system with a multi-level inference engine that serves queries using small models and optional LLMs for demanding applications. Tabi is optimized for discriminative models (i.e., not generative LLMs) in a serving framework. Tabi uses the calibrated confidence score to decide whether to return the accurate results of small models extremely fast or re-route them to LLMs. For re-routed queries, it uses attention-based word pruning and weighted ensemble techniques to offset the system overhead and accuracy loss. We implement and evaluate Tabi with multiple tasks and models. Our result shows that Tabi achieves 21%-40% average latency reduction (with comparable tail latency) over the state-of-the-art while meeting LLM-grade high accuracy targets.",
+        "doi": "10.1145/3552326.3587438",
+        "canonical_id": "DOI:10.1145/3552326.3587438",
+        "authors": [
+          "Yiding Wang",
+          "Kai Chen",
+          "Haisheng Tan",
+          "Kun Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3642970.3655844",
+      "identity_tokens": [
+        "id:DOI:10.1145/3642970.3655844",
+        "title:alto an efficient network orchestrator for compound ai systems",
+        "url:https://doi.org/10.1145/3642970.3655844"
+      ],
+      "record": {
+        "title": "ALTO: An Efficient Network Orchestrator for Compound AI Systems",
+        "source_url": "https://doi.org/10.1145/3642970.3655844",
+        "year": 2024,
+        "published": "2024-04-22",
+        "abstract": "We present ALTO, a network orchestrator for efficiently serving compound AI systems such as pipelines of language models. ALTO leverages an optimization opportunity specific to generative language models, which is streaming intermediate outputs from the language model to downstream stages. We highlight two challenges that emerge while serving these applications at scale: handling how some stages can be stateful across partial outputs, and handling how language models can produce variable amounts of text. To address these challenges, we motivate the need for an aggregation-aware routing interface and distributed prompt-aware scheduling. ALTO's partial output streaming increases throughput by up to 3× for a fixed latency target of 4 seconds / request and reduces tail latency by 1.8× compared to a baseline serving approach, on a complex chat bot verification pipeline.",
+        "doi": "10.1145/3642970.3655844",
+        "canonical_id": "DOI:10.1145/3642970.3655844",
+        "authors": [
+          "Keshav Santhanam",
+          "Deepti Raghavan",
+          "Muhammad Shahir Rahman",
+          "Thejas Venkatesh",
+          "Neha Kunjal",
+          "Pratiksha Thaker",
+          "P. Levis",
+          "Matei Zaharia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3662006.3662067",
+      "identity_tokens": [
+        "id:DOI:10.1145/3662006.3662067",
+        "title:hybrid slm and llm for edgecloud collaborative inference",
+        "url:https://doi.org/10.1145/3662006.3662067"
+      ],
+      "record": {
+        "title": "Hybrid SLM and LLM for Edge-Cloud Collaborative Inference",
+        "source_url": "https://doi.org/10.1145/3662006.3662067",
+        "year": 2024,
+        "published": "2024-06-03",
+        "abstract": "Edge-Cloud collaboration for deep learning inference has been actively studied, to enhance the inference performance by leveraging both Edge and Cloud resources. However, traditional Edge-Cloud collaboration based on model partitioning or confidence score are not suitable in the LLM (large language models) era, because of its autoregressive generation and the generality across diverse tasks. This paper proposes a dynamic token-level Edge-Cloud collaboration for LLMs. A SLM (small language model) such as TinyLlama resides on the Edge devices, through token-level interaction with the Cloud-side LLMs during inference, approaching LLM quality with a controllable cost similar to SLM. Evaluation results show that our method can only use 25.8% LLM cost to achieve LLM-comparable quality on GSM8K task.",
+        "doi": "10.1145/3662006.3662067",
+        "canonical_id": "DOI:10.1145/3662006.3662067",
+        "authors": [
+          "Zixu Hao",
+          "Huiqiang Jiang",
+          "Shiqi Jiang",
+          "Ju Ren",
+          "Ting Cao"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:b50b7cf16b152ef97989658fe7708b248136ccc6bab11fe52fe5f23499c5d094",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5aa4ec0de09d82942f5d69715b63e19c8f8e45b4ad7648979b69c92521bec1ef",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bb4c290dd314--libfile_f0af4687b3508191811f475c4efbb36c--2025-doi-10.18653-v1-2025.emnlp-main.1676-llm-response-length-extreme-value-research-20261020-1400-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1676",
+  "worker_completed_at": "2026-10-20T14:09:16+09:00",
+  "worker_run_key": "20261020-1400-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5044,
+    "body_paragraphs": 27,
+    "method_chars": 1570,
+    "method_paragraphs": 8,
+    "evaluation_chars": 0,
+    "limitation_chars": 357,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-20T18:12:39+00:00"
+}

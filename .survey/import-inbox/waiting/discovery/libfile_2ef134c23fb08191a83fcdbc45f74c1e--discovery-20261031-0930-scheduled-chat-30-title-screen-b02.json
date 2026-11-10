@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0930-scheduled-chat-30/title-screen-b02",
+  "reference_main_sha": "22918cdbecc12d38a31c719d5100b3c54dacc140",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.16991",
+      "identity_tokens": [
+        "arXiv:2411.16991"
+      ],
+      "title": "Dynamic Self-Distillation via Previous Mini-batches for Fine-tuning Small Language Models",
+      "reason": "タイトルでsmall language modelのfine-tuningと過去mini-batchを使うself-distillation学習が中心と判明。LLM生成推論システムの最適化ではないためタイトル先行除外。",
+      "source_url": "https://arxiv.org/abs/2411.16991",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T09:35:54+09:00",
+      "last_checked_at": "2026-10-31T09:35:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 375,
+      "origin": "discovery_worklist_title_sweep"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:9b3ef7912c35fb4e92318993a1d208e723e3e5b8",
+      "identity_tokens": [
+        "SemanticScholar:9b3ef7912c35fb4e92318993a1d208e723e3e5b8"
+      ],
+      "title": "InsNeXt: Training Scalable Insertion-Based Language Models From Scratch",
+      "reason": "タイトルでinsertion-based language modelをゼロから学習する研究と判明。推論サービング・実行時メモリ・デコードカーネルの最適化ではないためタイトル先行除外。",
+      "source_url": "https://www.semanticscholar.org/paper/9b3ef7912c35fb4e92318993a1d208e723e3e5b8",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T09:35:54+09:00",
+      "last_checked_at": "2026-10-31T09:35:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 377,
+      "origin": "discovery_worklist_title_sweep"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/HPCA56546.2023.10071077",
+      "identity_tokens": [
+        "DOI:10.1109/HPCA56546.2023.10071077"
+      ],
+      "title": "MPress: Democratizing Billion-Scale Model Training on Multi-GPU Servers via Memory-Saving Inter-Operator Parallelism",
+      "reason": "タイトルで対象がmulti-GPUの大規模モデルtrainingとinter-operator parallelismによる学習メモリ削減と判明。推論専用の最終適用が明示されずタイトル先行除外。",
+      "source_url": "https://doi.org/10.1109/HPCA56546.2023.10071077",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T09:35:54+09:00",
+      "last_checked_at": "2026-10-31T09:35:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 381,
+      "origin": "discovery_worklist_title_sweep"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IJCNN64981.2025.11228370",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN64981.2025.11228370"
+      ],
+      "title": "Accelerated Dropout: A Bitmask Approach to Speed Up Model Training",
+      "reason": "タイトルでdropoutのbitmask化によるtraining高速化が主題と判明。生成LLMの推論・サービング最適化ではないためタイトル先行除外。",
+      "source_url": "https://doi.org/10.1109/IJCNN64981.2025.11228370",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T09:35:54+09:00",
+      "last_checked_at": "2026-10-31T09:35:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 392,
+      "origin": "discovery_worklist_title_sweep"
+    }
+  ]
+}

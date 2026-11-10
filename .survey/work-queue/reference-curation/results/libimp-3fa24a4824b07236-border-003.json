@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3fa24a4824b07236-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.07892",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.07892",
+    "identity_tokens": [
+      "SemanticScholar:cc98561fddf03e2713332a39c83894cc7d2cd7e5",
+      "arXiv:2603.07892"
+    ],
+    "reason": "RoboRouter chooses among robot policies from task similarity and prior outcomes without trial-and-error; while it says execution efficiency is preserved, the abstract gives no compute, latency, or resource reduction.",
+    "first_checked_at": "2026-10-13T09:37:04+00:00",
+    "last_checked_at": "2026-10-13T09:37:04+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "RoboRouter: Training-Free Policy Routing for Robotic Manipulation"
+  },
+  "processed_at": "2026-10-13T09:37:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3fa24a4824b0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

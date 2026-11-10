@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b76d48c3c175a579-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.20641",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.20641",
+    "identity_tokens": [
+      "arXiv:2605.20641"
+    ],
+    "reason": "Studies optimization-triggered backdoor/security risk in LLMs; compiler optimization is the attack trigger, not an inference-efficiency improvement.",
+    "first_checked_at": "2026-10-06T16:04:42+00:00",
+    "last_checked_at": "2026-10-06T16:04:42+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Trusted Weights, Treacherous Optimizations? Optimization-Triggered Backdoor Attacks on LLMs"
+  },
+  "processed_at": "2026-10-06T16:04:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b76d48c3c175",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-19b4fb5021c2bc47-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.15149",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.15149",
+    "identity_tokens": [
+      "arXiv:2404.15149"
+    ],
+    "reason": "一次資料abstractはObjectives To investigate the extent to which Large Language Models (LLMs) exhibit social bias based on protected patient attributes and to determine how design choices, such as architecture and prompting strategies, infを対象とする。LLM推論の計算量、メモリ、latency、throughput、KV cache、quantization、offload、servingへの具体的な技術接続がないためunrelated。",
+    "first_checked_at": "2026-10-06T16:31:50+00:00",
+    "last_checked_at": "2026-10-06T16:31:50+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+    ],
+    "title": "Bias Patterns in the Application of LLMs for Clinical Decision Support"
+  },
+  "processed_at": "2026-10-06T16:31:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-19b4fb5021c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

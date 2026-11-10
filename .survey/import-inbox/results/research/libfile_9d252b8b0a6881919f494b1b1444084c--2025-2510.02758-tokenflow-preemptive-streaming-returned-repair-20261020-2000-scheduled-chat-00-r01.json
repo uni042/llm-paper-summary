@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e974fb6cad58e047f6ccb65e06614484f9c8fb011cfe74942bd86d9d03c887c8",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9d252b8b0a6881919f494b1b1444084c--2025-2510.02758-tokenflow-preemptive-streaming-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2510.02758",
+  "worker_completed_at": "2026-10-20T20:00:00+09:00",
+  "worker_run_key": "20261020-2000-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5114,
+    "body_paragraphs": 26,
+    "method_chars": 2471,
+    "method_paragraphs": 13,
+    "evaluation_chars": 438,
+    "limitation_chars": 548,
+    "insufficiency_flags": [
+      "評価説明量 438 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 438 < 500"
+  ],
+  "processed_at": "2026-10-20T11:57:06+00:00"
+}

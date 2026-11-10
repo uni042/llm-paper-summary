@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c454b5720595a5f668672df36b9d2f4782118e92b208787ee6724d9fbaa1aaa1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_38e97e3940608191a8d05c6f4b7ab405--2024-2410.12513-first-input-adaptive-layer-skipping-research-20261025-1830-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2410.12513",
+  "worker_completed_at": "2026-10-25T18:30:00+09:00",
+  "worker_run_key": "20261025-1830-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5847,
+    "body_paragraphs": 32,
+    "method_chars": 1680,
+    "method_paragraphs": 10,
+    "evaluation_chars": 153,
+    "limitation_chars": 605,
+    "insufficiency_flags": [
+      "評価説明量 153 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 153 < 500"
+  ],
+  "processed_at": "2026-10-25T10:01:51+00:00"
+}

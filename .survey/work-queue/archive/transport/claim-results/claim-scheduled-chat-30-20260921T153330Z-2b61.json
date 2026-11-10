@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-scheduled-chat-30-20260921T153330Z-2b61",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-3eb9c6f535e789d0",
+      "claim_id": "claim-91d5c21e800be1607a811b10",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-91d5c21e800be1607a811b10",
+      "claimed_at": "2026-09-21T15:33:50+00:00",
+      "expires_at": "2026-09-21T17:03:50+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-3eb9c6f535e789d0"
+      ],
+      "job": {
+        "job_id": "job-research-3eb9c6f535e789d0",
+        "type": "research",
+        "parent_job_id": "job-e4f0f1b8147e14bd",
+        "priority": 99,
+        "canonical_id": "arXiv:2609.16215",
+        "arxiv_id": "2609.16215",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
+        "source_url": "https://www.semanticscholar.org/paper/7230bca60434024cc679e0d1e71a80bde5a9f3c5",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2609.16215-where-should-the-kv-cache-live-placement-policies-across-gpu-cpu-and-ssd-for-long-lived-sessions.md",
+        "selection_reason": "Direct hierarchical-memory KV-cache placement study across GPU/CPU/SSD for long-lived sessions, including workload-specific policy and prefetch evaluation; highly relevant to SSD-tiered LLM serving.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T20:55:03+00:00",
+        "blocker": "The arXiv primary full text could not be retrieved through the available official routes in this invocation. The arXiv HTML and export-PDF endpoints were attempted but were inaccessible to the retriever; search results exposed only abstract/metadata mirrors. Because the workflow requires full-paper reading, no five-slot record was synthesized from the abstract or third-party summaries.",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-96ea2c4f6e200b3d663be261.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-21T03:38:36+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-21T03:38:36+00:00",
+            "reason": "The arXiv primary full text could not be retrieved through the available official routes in this invocation. The arXiv HTML and export-PDF endpoints were attempted but were inaccessible to the retriever; search results exposed only abstract/metadata mirrors. Because the workflow requires full-paper reading, no five-slot record was synthesized from the abstract or third-party summaries."
+          }
+        ],
+        "last_blocked_at": "2026-09-21T03:38:36+00:00",
+        "retry_queued_at": "2026-09-21T14:09:55+00:00",
+        "repair_required": true,
+        "validation_error": "ValueError: metadata.list_summary is required: the research worker must write a 45-180 character Japanese one-line explanation that says what the paper actually does; do not derive it mechanically from the overview",
+        "last_validation_failed_at": "2026-09-21T15:33:39+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-b4eaebc08a88f0f9620f6006"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-b4eaebc08a88f0f9620f6006.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T15:33:50+00:00",
+  "checkpoint_released": 0
+}

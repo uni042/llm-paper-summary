@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a62954e596f51e5-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.ijmedinf.2024.105764",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.ijmedinf.2024.105764",
+    "identity_tokens": [
+      "DOI:10.1016/j.ijmedinf.2024.105764"
+    ],
+    "reason": "The primary abstract describes clinical BERT models using distillation, pruning, and 8-bit quantization with up to 28.7x inference speedup. The publisher full-text request failed, preventing inspection of methods, baseline, and evaluation details.",
+    "first_checked_at": "2026-10-06T18:35:17+00:00",
+    "last_checked_at": "2026-10-06T18:35:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OptimCLM: Optimizing clinical language models for predicting patient outcomes via knowledge distillation, pruning and quantization"
+  },
+  "processed_at": "2026-10-06T18:35:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a62954e596f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

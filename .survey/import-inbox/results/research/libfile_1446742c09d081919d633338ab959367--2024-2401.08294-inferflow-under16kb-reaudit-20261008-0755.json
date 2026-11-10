@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "adef68b838c502da223a1a1311643c06b27718175478ba2492365cb34b6e45a9",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_1446742c09d081919d633338ab959367--2024-2401.08294-inferflow-under16kb-reaudit-20261008-0755.md",
+  "canonical_id": "arXiv:2401.08294",
+  "worker_completed_at": "2026-10-08T07:55:58+09:00",
+  "worker_run_key": "20261008-0745-scheduled-chat-45/reaudit-r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5291,
+    "body_paragraphs": 28,
+    "method_chars": 2293,
+    "method_paragraphs": 12,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-08T09:02:29+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-886b258237c282da-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.07985",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.07985",
+    "identity_tokens": [
+      "arXiv:2410.07985"
+    ],
+    "reason": "4428問のOlympiad-level数学問題を33超のsub-domain・10超のdifficultyへ分類してLLM数学推論能力を測るbenchmark研究。推論runtime/serving効率の評価ではない。",
+    "first_checked_at": "2026-10-06T13:57:54+00:00",
+    "last_checked_at": "2026-10-06T13:57:54+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12151-oserve-spatial-temporal-workload-orchestration.md"
+    ],
+    "title": "Omni-MATH: A Universal Olympiad Level Mathematic Benchmark For Large Language Models"
+  },
+  "processed_at": "2026-10-06T13:57:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-886b258237c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

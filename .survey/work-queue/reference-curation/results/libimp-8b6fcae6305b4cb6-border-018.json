@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8b6fcae6305b4cb6-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.05139",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.05139",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2503.05139",
+      "arXiv:2503.05139"
+    ],
+    "reason": "大規模MoEの学習効率・スケーリングと実装上の工夫を含むが、主貢献はモデル開発・学習レシピで独立したシステム機構ではない。",
+    "first_checked_at": "2026-09-27T10:28:09+09:00",
+    "last_checked_at": "2026-09-30T09:48:18+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 217"
+    ],
+    "title": "Every FLOP Counts: Scaling a 300B Mixture-of-Experts LING LLM without premium GPUs"
+  },
+  "processed_at": "2026-09-30T09:48:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8b6fcae6305b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

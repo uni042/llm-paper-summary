@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21b2cc9483b22686-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.13384",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.13384",
+    "identity_tokens": [
+      "arXiv:2601.13384"
+    ],
+    "reason": "一次要旨で、コード補完を検索・置換型の編集タスクへ変換し、SRI-200KデータでQwen3-Coder系列を追加学習する手法が主題と確認。単一推論パスで編集できる点は述べるが、推論カーネル、KVキャッシュ、モデル配置、サービングスケジューラ等のシステム最適化を提案・評価していない。コード生成タスクの能力・学習方式の研究として対象外。",
+    "first_checked_at": "2026-10-17T03:54:25+00:00",
+    "last_checked_at": "2026-10-17T03:54:25+00:00",
+    "linked_from": [],
+    "title": "From Completion to Editing: Unlocking Context-Aware Code Infilling via Search-and-Replace Instruction Tuning"
+  },
+  "processed_at": "2026-10-17T03:54:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21b2cc9483b2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

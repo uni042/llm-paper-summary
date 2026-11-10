@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b560edb6e0434c59122d52a97ede87eea26b9d13233061f67dc97075bd44dc61",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-50370187ffb2--libfile_b484270154f88191b0c37c415e654d02--2025-2511.06010-moska-shared-kv-attention-research-20261026-1530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2511.06010",
+  "worker_completed_at": "2026-10-26T15:33:31+09:00",
+  "worker_run_key": "20261026-1530-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6300,
+    "body_paragraphs": 33,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 990,
+    "limitation_chars": 766,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-26T07:08:43+00:00"
+}

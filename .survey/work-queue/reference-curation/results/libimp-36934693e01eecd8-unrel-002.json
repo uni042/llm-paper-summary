@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36934693e01eecd8-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.17456",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.17456",
+    "identity_tokens": [
+      "arXiv:2604.17456"
+    ],
+    "reason": "一次資料の主対象は「TrafficClaw: A Generalizable LLM Agent in the Unified Physical Environment for Urban Traffic Control」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+    "first_checked_at": "2026-10-08T07:08:02+00:00",
+    "last_checked_at": "2026-10-08T07:08:02+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "TrafficClaw: A Generalizable LLM Agent in the Unified Physical Environment for Urban Traffic Control"
+  },
+  "processed_at": "2026-10-08T07:08:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36934693e01e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

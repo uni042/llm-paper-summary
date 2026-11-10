@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-71d7fcfe1f969810-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.26488",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.26488",
+    "identity_tokens": [
+      "arXiv:2606.26488"
+    ],
+    "reason": "再帰reasoning modelをedgeへ展開するためINT8/INT4、flash-streamed embedding等を評価し、4MB microcontrollerまで縮小する。推論deployment圧縮に直結するが対象modelが一般的LLMより小規模recursive reasoner寄りのためborderline。",
+    "first_checked_at": "2026-10-04T18:55:16+00:00",
+    "last_checked_at": "2026-10-04T18:55:16+00:00",
+    "linked_from": [],
+    "title": "What Survives When You Compress a Recursive Reasoner for the Edge?"
+  },
+  "processed_at": "2026-10-04T18:55:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-71d7fcfe1f96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

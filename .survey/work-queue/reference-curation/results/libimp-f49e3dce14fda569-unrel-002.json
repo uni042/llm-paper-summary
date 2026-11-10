@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f49e3dce14fda569-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.02591",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.02591",
+    "identity_tokens": [
+      "arXiv:2605.02591"
+    ],
+    "reason": "arXiv要旨の対象はBernstein多項式による活性化関数の近似・滑らかさ。対象LLM推論での計算・メモリ・レイテンシ改善を示す内容ではなく、既存推論系統との具体的接点も見当たらない。",
+    "first_checked_at": "2026-10-06T20:45:26+00:00",
+    "last_checked_at": "2026-10-06T20:45:26+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "Universal Smoothness via Bernstein Polynomials: A Constructive Approximation Approach for Activation Functions"
+  },
+  "processed_at": "2026-10-06T20:45:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f49e3dce14fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

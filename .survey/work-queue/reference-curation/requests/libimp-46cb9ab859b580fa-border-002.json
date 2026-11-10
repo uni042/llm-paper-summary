@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-46cb9ab859b580fa-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2606.13035",
+  "reason": "The full text manages a fixed KV cache for autoregressive video diffusion, using sink/recent/memory regions and retrieval/alignment to improve long-rollout video quality. It is a real cache-management technique but operates on diffusion video latent frames, not LLM/VLM token KV caches, and its results emphasize quality rather than LLM serving efficiency; the lineage tie is weak and transferability unresolved.",
+  "title": "TetherCache: Stabilizing Autoregressive Long-Form Video Generation with Gated Recall and Trusted Alignment",
+  "identity_tokens": [
+    "arXiv:2606.13035"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-46cb9ab859b5",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

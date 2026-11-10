@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1a0c22a458d440aa-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.11136",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.11136",
+    "identity_tokens": [
+      "arXiv:2607.11136"
+    ],
+    "reason": "Xema optimizes image/video diffusion serving; the target is diffusion pipelines rather than LLM inference/serving.",
+    "first_checked_at": "2026-10-05T03:38:33+00:00",
+    "last_checked_at": "2026-10-05T03:38:33+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Xema: Efficient Diffusion Serving through Fine-Grained Memory Management and Auto-Configuration"
+  },
+  "processed_at": "2026-10-05T03:38:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1a0c22a458d4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

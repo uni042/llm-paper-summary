@@ -1,0 +1,789 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5334a5e2c8df8c21-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5334a5e2c8df",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1609/aaai.v40i27.39425",
+    "arXiv:2602.02151",
+    "arXiv:2605.31062",
+    "arXiv:2609.08345",
+    "arXiv:2609.14144",
+    "arXiv:2610.07822",
+    "arXiv:2610.14686",
+    "arXiv:2610.16484",
+    "arXiv:2610.37810"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e4f165afc1020e60e75bd69fa4964c9e0afeacf3",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-08T01:11:38.669027+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1609/aaai.v40i27.39425",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02151",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.31062",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.08345",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.14144",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "rejection_ledger",
+      "matched_token": "id:arXiv:2609.14144"
+    },
+    {
+      "requested_id": "arXiv:2610.07822",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.14686",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.16484",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.37810",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LatentLLM: Activation-Aware Transform to Multi-Head Latent Attention",
+      "source_url": "https://doi.org/10.1609/aaai.v40i27.39425",
+      "year": 2026,
+      "published": "2026-03-14",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern foundation models such as large language models (LLMs) require a massive amount of computational and memory resources. We propose a new framework to convert such LLMs into a reduced-dimension latent structure. Our method extends a local activation-aware tensor decomposition to a global attention-aware joint tensor decomposition. Our framework can significantly improve the model accuracy over the existing model compression methods when reducing the latent dimension to realize computationally/memory-efficient LLMs. We show the benefit on several benchmark including multi-modal reasoning tasks.",
+      "identifiers": [
+        "SemanticScholar:4796adda0ddc0dc7c8ceeccf8240a777bd9b0677"
+      ],
+      "semantic_scholar_id": "4796adda0ddc0dc7c8ceeccf8240a777bd9b0677",
+      "doi": "10.1609/aaai.v40i27.39425",
+      "canonical_id": "DOI:10.1609/aaai.v40i27.39425",
+      "authors": [
+        "T. Koike-Akino",
+        "Xiang-Yu Chen",
+        "Jing Liu",
+        "Ye Wang",
+        "P. Wang",
+        "Matthew Brand"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 239,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AdaptR1: Reinforcement Learning Based Adaptive Interleaved Thinking in Multi-hop Question Answering",
+      "source_url": "https://arxiv.org/abs/2605.31062",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable performance in complex reasoning tasks through Chain-of-Thought (CoT) prompting. However, this approach often leads to ``over-thinking,''where models generate unnecessarily long reasoning traces for simple queries and incur avoidable inference cost. While recent work has explored adaptive reasoning, existing methods typically make a single query-level decision about whether to reason. This overlooks the dynamic nature of multi-step tasks, where the need for explicit reasoning varies across intermediate stages. To address this limitation, we introduce AdaptR1, a Reinforcement Learning (RL) based framework for adaptive interleaved thinking in multi-hop Question Answering (QA). Unlike previous approaches that require Supervised Fine-Tuning (SFT) for cold-start initialization, AdaptR1 uses a fully RL-based strategy with a quality-gated efficiency reward to dynamically allocate reasoning budgets at each step. Under the Graph-R1 setting, AdaptR1 reduces average think tokens by 69.71\\%, with a 90.35\\% reduction on HotpotQA, while maintaining performance comparable to or better than standard baselines. Furthermore, our analysis reveals that overthinking in multi-hop reasoning is not uniformly distributed but occurs predominantly during the initial planning stages, highlighting the effectiveness of step-wise adaptive budget allocation.",
+      "identifiers": [
+        "SemanticScholar:61988edfa1728f01dc59e9645eba7d318b3a9ed7"
+      ],
+      "semantic_scholar_id": "61988edfa1728f01dc59e9645eba7d318b3a9ed7",
+      "canonical_id": "arXiv:2605.31062",
+      "arxiv_id": "2605.31062",
+      "doi": "10.48550/arXiv.2605.31062",
+      "authors": [
+        "Yu-Xin Wang",
+        "Jia-Hao Lu",
+        "Qi-Feng Wu",
+        "Shi-Cheng Fang",
+        "Chuan-Yuan Tan",
+        "Yi-Ning Zheng",
+        "Xuan-Jing Huang",
+        "Xi-Peng Qiu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 163,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Revisiting Adaptive Rounding with Vectorized Reparameterization for LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2602.02151",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Adaptive Rounding has emerged as an alternative to round-to-nearest (RTN) for post-training quantization by enabling cross-element error cancellation. Yet, dense and element-wise rounding matrices are prohibitively expensive for billion-parameter large language models (LLMs). We revisit adaptive rounding from an efficiency perspective and propose VQRound, a parameter-efficient optimization framework that reparameterizes the rounding matrix into a compact codebook. Unlike low-rank alternatives, VQRound minimizes the element-wise worst-case error under $L_\\infty$ norm, which is critical for handling heavy-tailed weight distributions in LLMs. Beyond reparameterization, we identify rounding initialization as a decisive factor and develop a lightweight end-to-end finetuning pipeline that optimizes codebooks across all layers using only 128 samples. Extensive experiments on OPT, LLaMA, LLaMA2, and Qwen3 models demonstrate that VQRound achieves better convergence than traditional adaptive rounding at the same number of steps while using as little as 0.2% of the trainable parameters. Our results show that adaptive rounding can be made both scalable and fast-fitting. The code is available at https://github.com/zhoustan/VQRound.",
+      "identifiers": [
+        "SemanticScholar:28f3d916a10062b3a7dd4628708c5adfca77c505"
+      ],
+      "semantic_scholar_id": "28f3d916a10062b3a7dd4628708c5adfca77c505",
+      "canonical_id": "arXiv:2602.02151",
+      "arxiv_id": "2602.02151",
+      "doi": "10.48550/arXiv.2602.02151",
+      "authors": [
+        "Yuli Zhou",
+        "Qingxuan Chen",
+        "Luca Benini",
+        "Guo-Lei Sun",
+        "Yawei Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 279,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CoVeR: Coverage-Based Token Pruning for Multi-View 3D Reasoning in VLMs",
+      "source_url": "https://arxiv.org/abs/2609.08345",
+      "year": 2026,
+      "published": "2026-09-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Representing a 3D scene as multi-view images allows 2D VLMs to reason in 3D by reusing priors from pre-training, sidestepping the scarcity of annotated 3D data. However, it produces thousands of redundant visual tokens whose cost grows with every view. Existing visual token pruners fall into two families, each limited in the 3D multi-view setting. Learned importance methods rank tokens by attention or encoder features; because redundancy here is fundamentally spatial, they keep near-duplicate tokens from a few prominent regions and leave most of the scene unrepresented. Voxelization methods improve spatial coverage but cannot enforce an exact token budget and saturate as multi-view observations overlap in 3D, capping retention well below the target. We show that spatial coverage is associated with 3D reasoning performance and introduce CoVeR, a deterministic, training-free selector that uses only token coordinates, with no learned signals. CoVeR selects tokens that collectively cover every region of the scene, and solves the limitations of both families: it enforces an exact per-scene budget, breaks the voxelization saturation plateau, and avoids the near-duplicate selections of learned importance. Extensive experiments show CoVeR outperforms prior SOTAs on all three 3D reasoning benchmarks and generalizes as a plug-and-play module tested across four VLMs. Notably, with only $\\approx$8% of visual tokens, it preserves 93.5% of full-token performance, surpassing SOTA by 3.9 percentage points on average across benchmarks.",
+      "identifiers": [
+        "SemanticScholar:998c049d56b14758126b699c347b7cc1bf55e151"
+      ],
+      "semantic_scholar_id": "998c049d56b14758126b699c347b7cc1bf55e151",
+      "canonical_id": "arXiv:2609.08345",
+      "arxiv_id": "2609.08345",
+      "authors": [
+        "Nhat-Tan Bui",
+        "Varshini Elangovan",
+        "Arun Reddy Anugu",
+        "Sreyas Mohan",
+        "Wei Ye",
+        "Di-Lin Wang",
+        "J.-Q. Huang",
+        "Rakesh Ranjan",
+        "Aviral Chharia",
+        "Fernando de la Torre"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 61,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Nucleus Speculative Decoding: Plausibility-Aware Verification Beyond Exact Distribution",
+      "source_url": "https://arxiv.org/abs/2610.07822",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) accelerates autoregressive generation by letting a lightweight draft model propose tokens that a target model verifies in parallel. However, its standard acceptance rule, designed for exact distribution correction, rejects tokens to which the draft assigns excess probability, even when the target finds them highly plausible: over half of the rejected tokens lie inside the target's own nucleus. Since verification dominates the cost of SD, these rejections waste its most expensive operation. We introduce Nucleus Speculative Decoding (NSD), a plausibility-aware verification rule that accepts a draft token if it passes the standard test or belongs to the target nucleus, while keeping SD's residual correction and bonus sampling unchanged. NSD requires no training or extra forward passes and is compatible with any drafting mechanism. Because it preserves SD's recovery rule, its deviation from the target distribution can be characterized exactly: we prove that the single-step total variation error equals the draft's excess probability inside the target nucleus, which is precisely NSD's gain in acceptance probability. NSD thus trades fidelity for acceptance at an exact one-to-one rate, and we further derive sequence-level fidelity bounds. Across six target models and five mathematical reasoning and code generation benchmarks, NSD achieves the highest throughput among all compared methods, with speedups of up to $5.16\\times$ over autoregressive decoding and $3.15\\times$ over standard SD, while improving accuracy over SD on five of the six models and nearly halving verification time per output token. Our code is available at https://github.com/EIT-NLP/Nucleus-Speculative-Decoding.",
+      "identifiers": [
+        "SemanticScholar:80d792af6aecdbc491398cfa12fafbaf3f03b889"
+      ],
+      "semantic_scholar_id": "80d792af6aecdbc491398cfa12fafbaf3f03b889",
+      "canonical_id": "arXiv:2610.07822",
+      "arxiv_id": "2610.07822",
+      "authors": [
+        "Shu-Hao Li",
+        "Fang-Hua Ye",
+        "Wan-Yu Lin",
+        "Tian-Yu Yuan",
+        "Xiao-Yu Shen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Vesta: Queueing-Aware LLM Scheduling for Real-World Workloads",
+      "source_url": "https://arxiv.org/abs/2610.14686",
+      "year": 2026,
+      "published": "2026-10-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic applications generate multi-turn sequences of LLM requests, with each new turn extending the context accumulated from prior interactions and tool calls. Prefix caching reuses the KV cache of earlier turns and avoids redundant prefill, but routing every turn to its cache-affine instance can create severe local queues while capacity remains idle elsewhere. Remote KV cache access relaxes this tension, yet migrating execution adds transfer work and is harmful when the cluster is already congested. Thus, deciding where to execute a request requires reasoning jointly about cache locality, queueing, and the current operating point of the cluster. We present Vesta, a queueing-aware scheduler for distributed agentic LLM serving. Vesta assigns each session a stable holder for its authoritative KV cache while independently selecting an executor for every request. Grounded in classical queueing theory, its objective accounts for backlog, reusable prefixes, KV cache transfer, and the queueing externality of additional service demand; it migrates execution to recover idle capacity when beneficial and favors placements that add the least prefill and transfer work as congestion rises. Vesta also migrates reusable prefixes across length buckets to avoid cold starts. On real-world agentic workloads, Vesta improves throughput by 14.0\\% and reduces mean TTFT by 57.8\\% over the state-of-the-art scheduler in a PD-colocated deployment. In PD-disaggregated deployments, it reduces mean TTFT by up to 18.1\\% and P99 TTFT by up to 29.0\\% at matched throughput.",
+      "identifiers": [
+        "SemanticScholar:813bb84aa254e8f8c44475faef8fce2f28ead93a"
+      ],
+      "semantic_scholar_id": "813bb84aa254e8f8c44475faef8fce2f28ead93a",
+      "canonical_id": "arXiv:2610.14686",
+      "arxiv_id": "2610.14686",
+      "authors": [
+        "Lan-Cheng Zou",
+        "Bo-Wen Li",
+        "Wei Mao",
+        "Wen-Bin Ye",
+        "Lecheng Li",
+        "Kai Liu",
+        "Chao Deng",
+        "Jian-Chen Zhu",
+        "Bei Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SLEM: Spectrum-Aware Latent Expert Merging",
+      "source_url": "https://arxiv.org/abs/2610.16484",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models scale model capacity efficiently by activating only a small subset of experts for each input, while still requiring all parameters to be stored in memory, resulting in substantial memory overhead. Expert merging techniques have recently emerged as a promising compression paradigm that reduces this overhead by consolidating multiple experts into a smaller set. However, existing approaches have two key limitations: (i) direct convex interpolation in parameter space is not generally guaranteed to yield meaningful interpolation of expert functions; and (ii) estimating expert similarity or merging coefficients often relies on calibration data, introducing dependence on the calibration distribution. To address these limitations, we propose Spectrum-Aware Latent Expert Merging (SLEM), a calibration-free expert merging framework that occurs in a structured latent representation of expert weights using a VAE. SLEM groups experts within and across layers based on latent similarities and derives merging coefficients from expert weight spectra. It then performs geometry-aware latent interpolation and decodes the resulting representations into merged expert weights. Compared with existing expert merging methods, SLEM achieves comparable or better performance on general knowledge benchmarks and higher average performance on generation benchmarks involving mathematical reasoning and code generation.",
+      "identifiers": [
+        "SemanticScholar:41473440614c580ab73a9ffb079fe088537cb4cc"
+      ],
+      "semantic_scholar_id": "41473440614c580ab73a9ffb079fe088537cb4cc",
+      "canonical_id": "arXiv:2610.16484",
+      "arxiv_id": "2610.16484",
+      "authors": [
+        "Dohyeon Kim",
+        "Bedionita Soro",
+        "Bruno Andreis",
+        "Sung Ju Hwang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ConfluxServe: Reconciling Resource Utilization and Parallelism Efficiency across Prefill and Decode in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.37810",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefill and decode are complementary in resource usage, but often divergent in parallelism preferences. Executing the two phases separately preserves their preferred parallelism but leaves complementary resources underutilized, while co-batching improves utilization but often requires a uniform parallel configuration that hurts execution efficiency. To resolve this utilization-efficiency dilemma, we propose Conflux Parallelism (XP), a parallel execution abstraction that co-executes prefill and decode with different parallelism within the same batch. Conflux Parallelism exploits operator-level Transformer structure to construct a heterogeneous execution path with different batching and parallelism strategies across operators, combining the best of co-batching and phase-specific execution. Building on Conflux Parallelism, we design ConfluxServe, an SLO-aware serving system that maximizes cluster goodput under TTFT and TBT constraints. Evaluation on production workloads shows that ConfluxServe improves serving goodput by 1.26-1.62x over the strongest baselines.",
+      "identifiers": [
+        "SemanticScholar:bdb3d841f9531475eac4f56b4109df300cccf69e"
+      ],
+      "semantic_scholar_id": "bdb3d841f9531475eac4f56b4109df300cccf69e",
+      "canonical_id": "arXiv:2610.37810",
+      "arxiv_id": "2610.37810",
+      "authors": [
+        "Wen-Hao Chen",
+        "Hong Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1609/aaai.v40i27.39425",
+      "identity_tokens": [
+        "id:DOI:10.1609/aaai.v40i27.39425",
+        "id:SemanticScholar:4796adda0ddc0dc7c8ceeccf8240a777bd9b0677",
+        "title:latentllm activationaware transform to multihead latent attention",
+        "url:https://doi.org/10.1609/aaai.v40i27.39425"
+      ],
+      "record": {
+        "title": "LatentLLM: Activation-Aware Transform to Multi-Head Latent Attention",
+        "source_url": "https://doi.org/10.1609/aaai.v40i27.39425",
+        "year": 2026,
+        "published": "2026-03-14",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern foundation models such as large language models (LLMs) require a massive amount of computational and memory resources. We propose a new framework to convert such LLMs into a reduced-dimension latent structure. Our method extends a local activation-aware tensor decomposition to a global attention-aware joint tensor decomposition. Our framework can significantly improve the model accuracy over the existing model compression methods when reducing the latent dimension to realize computationally/memory-efficient LLMs. We show the benefit on several benchmark including multi-modal reasoning tasks.",
+        "identifiers": [
+          "SemanticScholar:4796adda0ddc0dc7c8ceeccf8240a777bd9b0677"
+        ],
+        "semantic_scholar_id": "4796adda0ddc0dc7c8ceeccf8240a777bd9b0677",
+        "doi": "10.1609/aaai.v40i27.39425",
+        "canonical_id": "DOI:10.1609/aaai.v40i27.39425",
+        "authors": [
+          "T. Koike-Akino",
+          "Xiang-Yu Chen",
+          "Jing Liu",
+          "Ye Wang",
+          "P. Wang",
+          "Matthew Brand"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 239,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.31062",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.31062",
+        "id:SemanticScholar:61988edfa1728f01dc59e9645eba7d318b3a9ed7",
+        "id:arXiv:2605.31062",
+        "title:adaptr1 reinforcement learning based adaptive interleaved thinking in multihop question answering",
+        "url:https://arxiv.org/abs/2605.31062"
+      ],
+      "record": {
+        "title": "AdaptR1: Reinforcement Learning Based Adaptive Interleaved Thinking in Multi-hop Question Answering",
+        "source_url": "https://arxiv.org/abs/2605.31062",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have achieved remarkable performance in complex reasoning tasks through Chain-of-Thought (CoT) prompting. However, this approach often leads to ``over-thinking,''where models generate unnecessarily long reasoning traces for simple queries and incur avoidable inference cost. While recent work has explored adaptive reasoning, existing methods typically make a single query-level decision about whether to reason. This overlooks the dynamic nature of multi-step tasks, where the need for explicit reasoning varies across intermediate stages. To address this limitation, we introduce AdaptR1, a Reinforcement Learning (RL) based framework for adaptive interleaved thinking in multi-hop Question Answering (QA). Unlike previous approaches that require Supervised Fine-Tuning (SFT) for cold-start initialization, AdaptR1 uses a fully RL-based strategy with a quality-gated efficiency reward to dynamically allocate reasoning budgets at each step. Under the Graph-R1 setting, AdaptR1 reduces average think tokens by 69.71\\%, with a 90.35\\% reduction on HotpotQA, while maintaining performance comparable to or better than standard baselines. Furthermore, our analysis reveals that overthinking in multi-hop reasoning is not uniformly distributed but occurs predominantly during the initial planning stages, highlighting the effectiveness of step-wise adaptive budget allocation.",
+        "identifiers": [
+          "SemanticScholar:61988edfa1728f01dc59e9645eba7d318b3a9ed7"
+        ],
+        "semantic_scholar_id": "61988edfa1728f01dc59e9645eba7d318b3a9ed7",
+        "canonical_id": "arXiv:2605.31062",
+        "arxiv_id": "2605.31062",
+        "doi": "10.48550/arXiv.2605.31062",
+        "authors": [
+          "Yu-Xin Wang",
+          "Jia-Hao Lu",
+          "Qi-Feng Wu",
+          "Shi-Cheng Fang",
+          "Chuan-Yuan Tan",
+          "Yi-Ning Zheng",
+          "Xuan-Jing Huang",
+          "Xi-Peng Qiu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 163,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.02151",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02151",
+        "id:SemanticScholar:28f3d916a10062b3a7dd4628708c5adfca77c505",
+        "id:arXiv:2602.02151",
+        "title:revisiting adaptive rounding with vectorized reparameterization for llm quantization",
+        "url:https://arxiv.org/abs/2602.02151"
+      ],
+      "record": {
+        "title": "Revisiting Adaptive Rounding with Vectorized Reparameterization for LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2602.02151",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Adaptive Rounding has emerged as an alternative to round-to-nearest (RTN) for post-training quantization by enabling cross-element error cancellation. Yet, dense and element-wise rounding matrices are prohibitively expensive for billion-parameter large language models (LLMs). We revisit adaptive rounding from an efficiency perspective and propose VQRound, a parameter-efficient optimization framework that reparameterizes the rounding matrix into a compact codebook. Unlike low-rank alternatives, VQRound minimizes the element-wise worst-case error under $L_\\infty$ norm, which is critical for handling heavy-tailed weight distributions in LLMs. Beyond reparameterization, we identify rounding initialization as a decisive factor and develop a lightweight end-to-end finetuning pipeline that optimizes codebooks across all layers using only 128 samples. Extensive experiments on OPT, LLaMA, LLaMA2, and Qwen3 models demonstrate that VQRound achieves better convergence than traditional adaptive rounding at the same number of steps while using as little as 0.2% of the trainable parameters. Our results show that adaptive rounding can be made both scalable and fast-fitting. The code is available at https://github.com/zhoustan/VQRound.",
+        "identifiers": [
+          "SemanticScholar:28f3d916a10062b3a7dd4628708c5adfca77c505"
+        ],
+        "semantic_scholar_id": "28f3d916a10062b3a7dd4628708c5adfca77c505",
+        "canonical_id": "arXiv:2602.02151",
+        "arxiv_id": "2602.02151",
+        "doi": "10.48550/arXiv.2602.02151",
+        "authors": [
+          "Yuli Zhou",
+          "Qingxuan Chen",
+          "Luca Benini",
+          "Guo-Lei Sun",
+          "Yawei Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 279,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08345",
+      "identity_tokens": [
+        "id:SemanticScholar:998c049d56b14758126b699c347b7cc1bf55e151",
+        "id:arXiv:2609.08345",
+        "title:cover coveragebased token pruning for multiview 3d reasoning in vlms",
+        "url:https://arxiv.org/abs/2609.08345"
+      ],
+      "record": {
+        "title": "CoVeR: Coverage-Based Token Pruning for Multi-View 3D Reasoning in VLMs",
+        "source_url": "https://arxiv.org/abs/2609.08345",
+        "year": 2026,
+        "published": "2026-09-08",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Representing a 3D scene as multi-view images allows 2D VLMs to reason in 3D by reusing priors from pre-training, sidestepping the scarcity of annotated 3D data. However, it produces thousands of redundant visual tokens whose cost grows with every view. Existing visual token pruners fall into two families, each limited in the 3D multi-view setting. Learned importance methods rank tokens by attention or encoder features; because redundancy here is fundamentally spatial, they keep near-duplicate tokens from a few prominent regions and leave most of the scene unrepresented. Voxelization methods improve spatial coverage but cannot enforce an exact token budget and saturate as multi-view observations overlap in 3D, capping retention well below the target. We show that spatial coverage is associated with 3D reasoning performance and introduce CoVeR, a deterministic, training-free selector that uses only token coordinates, with no learned signals. CoVeR selects tokens that collectively cover every region of the scene, and solves the limitations of both families: it enforces an exact per-scene budget, breaks the voxelization saturation plateau, and avoids the near-duplicate selections of learned importance. Extensive experiments show CoVeR outperforms prior SOTAs on all three 3D reasoning benchmarks and generalizes as a plug-and-play module tested across four VLMs. Notably, with only $\\approx$8% of visual tokens, it preserves 93.5% of full-token performance, surpassing SOTA by 3.9 percentage points on average across benchmarks.",
+        "identifiers": [
+          "SemanticScholar:998c049d56b14758126b699c347b7cc1bf55e151"
+        ],
+        "semantic_scholar_id": "998c049d56b14758126b699c347b7cc1bf55e151",
+        "canonical_id": "arXiv:2609.08345",
+        "arxiv_id": "2609.08345",
+        "authors": [
+          "Nhat-Tan Bui",
+          "Varshini Elangovan",
+          "Arun Reddy Anugu",
+          "Sreyas Mohan",
+          "Wei Ye",
+          "Di-Lin Wang",
+          "J.-Q. Huang",
+          "Rakesh Ranjan",
+          "Aviral Chharia",
+          "Fernando de la Torre"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 61,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.07822",
+      "identity_tokens": [
+        "id:SemanticScholar:80d792af6aecdbc491398cfa12fafbaf3f03b889",
+        "id:arXiv:2610.07822",
+        "title:nucleus speculative decoding plausibilityaware verification beyond exact distribution",
+        "url:https://arxiv.org/abs/2610.07822"
+      ],
+      "record": {
+        "title": "Nucleus Speculative Decoding: Plausibility-Aware Verification Beyond Exact Distribution",
+        "source_url": "https://arxiv.org/abs/2610.07822",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD) accelerates autoregressive generation by letting a lightweight draft model propose tokens that a target model verifies in parallel. However, its standard acceptance rule, designed for exact distribution correction, rejects tokens to which the draft assigns excess probability, even when the target finds them highly plausible: over half of the rejected tokens lie inside the target's own nucleus. Since verification dominates the cost of SD, these rejections waste its most expensive operation. We introduce Nucleus Speculative Decoding (NSD), a plausibility-aware verification rule that accepts a draft token if it passes the standard test or belongs to the target nucleus, while keeping SD's residual correction and bonus sampling unchanged. NSD requires no training or extra forward passes and is compatible with any drafting mechanism. Because it preserves SD's recovery rule, its deviation from the target distribution can be characterized exactly: we prove that the single-step total variation error equals the draft's excess probability inside the target nucleus, which is precisely NSD's gain in acceptance probability. NSD thus trades fidelity for acceptance at an exact one-to-one rate, and we further derive sequence-level fidelity bounds. Across six target models and five mathematical reasoning and code generation benchmarks, NSD achieves the highest throughput among all compared methods, with speedups of up to $5.16\\times$ over autoregressive decoding and $3.15\\times$ over standard SD, while improving accuracy over SD on five of the six models and nearly halving verification time per output token. Our code is available at https://github.com/EIT-NLP/Nucleus-Speculative-Decoding.",
+        "identifiers": [
+          "SemanticScholar:80d792af6aecdbc491398cfa12fafbaf3f03b889"
+        ],
+        "semantic_scholar_id": "80d792af6aecdbc491398cfa12fafbaf3f03b889",
+        "canonical_id": "arXiv:2610.07822",
+        "arxiv_id": "2610.07822",
+        "authors": [
+          "Shu-Hao Li",
+          "Fang-Hua Ye",
+          "Wan-Yu Lin",
+          "Tian-Yu Yuan",
+          "Xiao-Yu Shen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 33,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.14686",
+      "identity_tokens": [
+        "id:SemanticScholar:813bb84aa254e8f8c44475faef8fce2f28ead93a",
+        "id:arXiv:2610.14686",
+        "title:vesta queueingaware llm scheduling for realworld workloads",
+        "url:https://arxiv.org/abs/2610.14686"
+      ],
+      "record": {
+        "title": "Vesta: Queueing-Aware LLM Scheduling for Real-World Workloads",
+        "source_url": "https://arxiv.org/abs/2610.14686",
+        "year": 2026,
+        "published": "2026-10-10",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agentic applications generate multi-turn sequences of LLM requests, with each new turn extending the context accumulated from prior interactions and tool calls. Prefix caching reuses the KV cache of earlier turns and avoids redundant prefill, but routing every turn to its cache-affine instance can create severe local queues while capacity remains idle elsewhere. Remote KV cache access relaxes this tension, yet migrating execution adds transfer work and is harmful when the cluster is already congested. Thus, deciding where to execute a request requires reasoning jointly about cache locality, queueing, and the current operating point of the cluster. We present Vesta, a queueing-aware scheduler for distributed agentic LLM serving. Vesta assigns each session a stable holder for its authoritative KV cache while independently selecting an executor for every request. Grounded in classical queueing theory, its objective accounts for backlog, reusable prefixes, KV cache transfer, and the queueing externality of additional service demand; it migrates execution to recover idle capacity when beneficial and favors placements that add the least prefill and transfer work as congestion rises. Vesta also migrates reusable prefixes across length buckets to avoid cold starts. On real-world agentic workloads, Vesta improves throughput by 14.0\\% and reduces mean TTFT by 57.8\\% over the state-of-the-art scheduler in a PD-colocated deployment. In PD-disaggregated deployments, it reduces mean TTFT by up to 18.1\\% and P99 TTFT by up to 29.0\\% at matched throughput.",
+        "identifiers": [
+          "SemanticScholar:813bb84aa254e8f8c44475faef8fce2f28ead93a"
+        ],
+        "semantic_scholar_id": "813bb84aa254e8f8c44475faef8fce2f28ead93a",
+        "canonical_id": "arXiv:2610.14686",
+        "arxiv_id": "2610.14686",
+        "authors": [
+          "Lan-Cheng Zou",
+          "Bo-Wen Li",
+          "Wei Mao",
+          "Wen-Bin Ye",
+          "Lecheng Li",
+          "Kai Liu",
+          "Chao Deng",
+          "Jian-Chen Zhu",
+          "Bei Yu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 29,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.16484",
+      "identity_tokens": [
+        "id:SemanticScholar:41473440614c580ab73a9ffb079fe088537cb4cc",
+        "id:arXiv:2610.16484",
+        "title:slem spectrumaware latent expert merging",
+        "url:https://arxiv.org/abs/2610.16484"
+      ],
+      "record": {
+        "title": "SLEM: Spectrum-Aware Latent Expert Merging",
+        "source_url": "https://arxiv.org/abs/2610.16484",
+        "year": 2026,
+        "published": "2026-10-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) models scale model capacity efficiently by activating only a small subset of experts for each input, while still requiring all parameters to be stored in memory, resulting in substantial memory overhead. Expert merging techniques have recently emerged as a promising compression paradigm that reduces this overhead by consolidating multiple experts into a smaller set. However, existing approaches have two key limitations: (i) direct convex interpolation in parameter space is not generally guaranteed to yield meaningful interpolation of expert functions; and (ii) estimating expert similarity or merging coefficients often relies on calibration data, introducing dependence on the calibration distribution. To address these limitations, we propose Spectrum-Aware Latent Expert Merging (SLEM), a calibration-free expert merging framework that occurs in a structured latent representation of expert weights using a VAE. SLEM groups experts within and across layers based on latent similarities and derives merging coefficients from expert weight spectra. It then performs geometry-aware latent interpolation and decodes the resulting representations into merged expert weights. Compared with existing expert merging methods, SLEM achieves comparable or better performance on general knowledge benchmarks and higher average performance on generation benchmarks involving mathematical reasoning and code generation.",
+        "identifiers": [
+          "SemanticScholar:41473440614c580ab73a9ffb079fe088537cb4cc"
+        ],
+        "semantic_scholar_id": "41473440614c580ab73a9ffb079fe088537cb4cc",
+        "canonical_id": "arXiv:2610.16484",
+        "arxiv_id": "2610.16484",
+        "authors": [
+          "Dohyeon Kim",
+          "Bedionita Soro",
+          "Bruno Andreis",
+          "Sung Ju Hwang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.37810",
+      "identity_tokens": [
+        "id:SemanticScholar:bdb3d841f9531475eac4f56b4109df300cccf69e",
+        "id:arXiv:2610.37810",
+        "title:confluxserve reconciling resource utilization and parallelism efficiency across prefill and decode in llm serving",
+        "url:https://arxiv.org/abs/2610.37810"
+      ],
+      "record": {
+        "title": "ConfluxServe: Reconciling Resource Utilization and Parallelism Efficiency across Prefill and Decode in LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.37810",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prefill and decode are complementary in resource usage, but often divergent in parallelism preferences. Executing the two phases separately preserves their preferred parallelism but leaves complementary resources underutilized, while co-batching improves utilization but often requires a uniform parallel configuration that hurts execution efficiency. To resolve this utilization-efficiency dilemma, we propose Conflux Parallelism (XP), a parallel execution abstraction that co-executes prefill and decode with different parallelism within the same batch. Conflux Parallelism exploits operator-level Transformer structure to construct a heterogeneous execution path with different batching and parallelism strategies across operators, combining the best of co-batching and phase-specific execution. Building on Conflux Parallelism, we design ConfluxServe, an SLO-aware serving system that maximizes cluster goodput under TTFT and TBT constraints. Evaluation on production workloads shows that ConfluxServe improves serving goodput by 1.26-1.62x over the strongest baselines.",
+        "identifiers": [
+          "SemanticScholar:bdb3d841f9531475eac4f56b4109df300cccf69e"
+        ],
+        "semantic_scholar_id": "bdb3d841f9531475eac4f56b4109df300cccf69e",
+        "canonical_id": "arXiv:2610.37810",
+        "arxiv_id": "2610.37810",
+        "authors": [
+          "Wen-Hao Chen",
+          "Hong Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 12,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ec6bebb847f38a9ffe4c0e648fb92aad76272a734e1429df8f3fb2590ddf1a8e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

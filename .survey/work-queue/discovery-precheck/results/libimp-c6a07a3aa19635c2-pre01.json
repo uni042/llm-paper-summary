@@ -1,0 +1,327 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c6a07a3aa19635c2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c6a07a3aa196",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2402.10076",
+    "arXiv:2402.11960",
+    "arXiv:2402.14160",
+    "arXiv:2402.17463",
+    "arXiv:2402.17985"
+  ],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1c6e74bcd74614f2d8e7ea3cc5f57c65abf933b0",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T07:48:12.295378+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2402.10076",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.11960",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.14160",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.17463",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.17985",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "QUICK: Quantization-aware Interleaving and Conflict-free Kernel for efficient LLM inference",
+      "source_url": "https://arxiv.org/abs/2402.10076",
+      "year": 2024,
+      "published": "2024-02-15",
+      "abstract": "We introduce QUICK, a group of novel optimized CUDA kernels for the efficient inference of quantized Large Language Models (LLMs). QUICK addresses the shared memory bank-conflict problem of state-of-the-art mixed precision matrix multiplication kernels. Our method interleaves the quantized weight matrices of LLMs offline to skip the shared memory write-back after the dequantization. We demonstrate up to 1.91x speedup over existing kernels of AutoAWQ on larger batches and up to 1.94x throughput gain on representative LLM models on various NVIDIA GPU devices.",
+      "canonical_id": "arXiv:2402.10076",
+      "arxiv_id": "2402.10076",
+      "doi": "10.48550/arXiv.2402.10076",
+      "authors": [
+        "Taesu Kim",
+        "Jongho Lee",
+        "Daehyun Ahn",
+        "Sarang Kim",
+        "Jiwoong Choi",
+        "Minkyu Kim",
+        "Hyungjun Kim"
+      ]
+    },
+    {
+      "title": "DB-LLM: Accurate Dual-Binarization for Efficient LLMs",
+      "source_url": "https://arxiv.org/abs/2402.11960",
+      "year": 2024,
+      "published": "2024-02-19",
+      "abstract": "Large language models (LLMs) have significantly advanced the field of natural language processing, while the expensive memory and computation consumption impede their practical deployment. Quantization emerges as one of the most effective methods for improving the computational efficiency of LLMs. However, existing ultra-low-bit quantization always causes severe accuracy drops. In this paper, we empirically relieve the micro and macro characteristics of ultra-low bit quantization and present a novel Dual-Binarization method for LLMs, namely DB-LLM. For the micro-level, we take both the accuracy advantage of 2-bit-width and the efficiency advantage of binarization into account, introducing Flexible Dual Binarization (FDB). By splitting 2-bit quantized weights into two independent sets of binaries, FDB ensures the accuracy of representations and introduces flexibility, utilizing the efficient bitwise operations of binarization while retaining the inherent high sparsity of ultra-low bit quantization. For the macro-level, we find the distortion that exists in the prediction of LLM after quantization, which is specified as the deviations related to the ambiguity of samples. We propose the Deviation-Aware Distillation (DAD) method, enabling the model to focus differently on various samples. Comprehensive experiments show that our DB-LLM not only significantly surpasses the current State-of-The-Art (SoTA) in ultra-low bit quantization (eg, perplexity decreased from 9.64 to 7.23), but also achieves an additional 20\\% reduction in computational consumption compared to the SOTA method under the same bit-width. Our code will be released soon.",
+      "canonical_id": "arXiv:2402.11960",
+      "arxiv_id": "2402.11960",
+      "doi": "10.48550/arXiv.2402.11960",
+      "authors": [
+        "Hong Chen",
+        "Cheng-Tao Lv",
+        "Liang Ding",
+        "Haotong Qin",
+        "Xiabin Zhou",
+        "Yifu Ding",
+        "Xue-Bo Liu",
+        "Min Zhang",
+        "Jinyang Guo",
+        "Xianglong Liu",
+        "D. Tao"
+      ]
+    },
+    {
+      "title": "Recursive Speculative Decoding: Accelerating LLM Inference via Sampling Without Replacement",
+      "source_url": "https://arxiv.org/abs/2402.14160",
+      "year": 2024,
+      "published": "2024-02-21",
+      "abstract": "Speculative decoding is an inference-acceleration method for large language models (LLMs) where a small language model generates a draft-token sequence which is further verified by the target LLM in parallel. Recent works have advanced this method by establishing a draft-token tree, achieving superior performance over a single-sequence speculative decoding. However, those works independently generate tokens at each level of the tree, not leveraging the tree's entire diversifiability. Besides, their empirical superiority has been shown for fixed length of sequences, implicitly granting more computational resource to LLM for the tree-based methods. None of the existing works has conducted empirical studies with fixed target computational budgets despite its importance to resource-bounded devices. We present Recursive Speculative Decoding (RSD), a novel tree-based method that samples draft tokens without replacement and maximizes the diversity of the tree. During RSD's drafting, the tree is built by either Gumbel-Top-$k$ trick that draws tokens without replacement in parallel or Stochastic Beam Search that samples sequences without replacement while early-truncating unlikely draft sequences and reducing the computational cost of LLM. We empirically evaluate RSD with Llama 2 and OPT models, showing that RSD outperforms the baseline methods, consistently for fixed draft sequence length and in most cases for fixed computational budgets at LLM.",
+      "canonical_id": "arXiv:2402.14160",
+      "arxiv_id": "2402.14160",
+      "doi": "10.48550/arXiv.2402.14160",
+      "authors": [
+        "Wonseok Jeon",
+        "Mukul Gagrani",
+        "Raghavv Goel",
+        "Junyoung Park",
+        "Mingu Lee",
+        "Christopher Lott"
+      ]
+    },
+    {
+      "title": "Training-Free Long-Context Scaling of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2402.17463",
+      "year": 2024,
+      "published": "2024-02-27",
+      "abstract": "The ability of Large Language Models (LLMs) to process and generate coherent text is markedly weakened when the number of input tokens exceeds their pretraining length. Given the expensive overhead of finetuning large-scale models with longer sequences, we propose Dual Chunk Attention (DCA), which enables Llama2 70B to support context windows of more than 100k tokens without continual training. By decomposing the attention computation for long sequences into chunk-based modules, DCA manages to effectively capture the relative positional information of tokens within the same chunk (Intra-Chunk) and across distinct chunks (Inter-Chunk), as well as integrates seamlessly with Flash Attention. In addition to its impressive extrapolation capability, DCA achieves performance on practical long-context tasks that is comparable to or even better than that of finetuned models. When compared with proprietary models, our training-free 70B model attains 94% of the performance of gpt-3.5-16k, indicating it is a viable open-source alternative. All code and data used in this work are released at \\url{https://github.com/HKUNLP/ChunkLlama}.",
+      "canonical_id": "arXiv:2402.17463",
+      "arxiv_id": "2402.17463",
+      "doi": "10.48550/arXiv.2402.17463",
+      "authors": [
+        "Chen An",
+        "Fei Huang",
+        "Jun Zhang",
+        "Shansan Gong",
+        "Xipeng Qiu",
+        "Chang Zhou",
+        "Ling-Peng Kong"
+      ]
+    },
+    {
+      "title": "FlattenQuant: Breaking through the Inference Compute-bound for Large Language Models with Per-tensor Quantization",
+      "source_url": "https://arxiv.org/abs/2402.17985",
+      "year": 2024,
+      "published": "2024-02-28",
+      "abstract": "Large language models (LLMs) have demonstrated state-of-the-art accuracies across various tasks. However, the latency of inference and the large GPU memory consumption of LLMs restrict their deployment performance. Recently, there have been some efficient attempts to quantize LLMs, yet inference with large batch size or long sequence still has the issue of being compute-bound. Fine-grained quantization methods have showcased their proficiency in achieving low-bit quantization for LLMs, while requiring FP16 data type for linear layer computations, which is time-consuming when dealing with large batch size or long sequence. In this paper, we introduce a method called FlattenQuant, which significantly reduces the maximum value of the tensor by flattening the larger channels in the tensor, to achieve low bit per-tensor quantization with minimal accuracy loss. Our experiments show that FlattenQuant can directly use 4 bits to achieve 48.29% of the linear layer calculation in LLMs, with the remaining layer using 8 bits. The 4-bit matrix multiplication introduced in the FlattenQuant method can effectively address the compute-bound caused by large matrix calculation. Our work achieves up to 2× speedup and 2.3× memory reduction for LLMs with negligible loss in accuracy.",
+      "canonical_id": "arXiv:2402.17985",
+      "arxiv_id": "2402.17985",
+      "doi": "10.48550/arXiv.2402.17985",
+      "authors": [
+        "Yi Zhang",
+        "Fei Yang",
+        "Shuang Peng",
+        "Fangyu Wang",
+        "Ai-Min Pan"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2402.10076",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.10076",
+        "id:arXiv:2402.10076",
+        "title:quick quantizationaware interleaving and conflictfree kernel for efficient llm inference",
+        "url:https://arxiv.org/abs/2402.10076"
+      ],
+      "record": {
+        "title": "QUICK: Quantization-aware Interleaving and Conflict-free Kernel for efficient LLM inference",
+        "source_url": "https://arxiv.org/abs/2402.10076",
+        "year": 2024,
+        "published": "2024-02-15",
+        "abstract": "We introduce QUICK, a group of novel optimized CUDA kernels for the efficient inference of quantized Large Language Models (LLMs). QUICK addresses the shared memory bank-conflict problem of state-of-the-art mixed precision matrix multiplication kernels. Our method interleaves the quantized weight matrices of LLMs offline to skip the shared memory write-back after the dequantization. We demonstrate up to 1.91x speedup over existing kernels of AutoAWQ on larger batches and up to 1.94x throughput gain on representative LLM models on various NVIDIA GPU devices.",
+        "canonical_id": "arXiv:2402.10076",
+        "arxiv_id": "2402.10076",
+        "doi": "10.48550/arXiv.2402.10076",
+        "authors": [
+          "Taesu Kim",
+          "Jongho Lee",
+          "Daehyun Ahn",
+          "Sarang Kim",
+          "Jiwoong Choi",
+          "Minkyu Kim",
+          "Hyungjun Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.11960",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.11960",
+        "id:arXiv:2402.11960",
+        "title:dbllm accurate dualbinarization for efficient llms",
+        "url:https://arxiv.org/abs/2402.11960"
+      ],
+      "record": {
+        "title": "DB-LLM: Accurate Dual-Binarization for Efficient LLMs",
+        "source_url": "https://arxiv.org/abs/2402.11960",
+        "year": 2024,
+        "published": "2024-02-19",
+        "abstract": "Large language models (LLMs) have significantly advanced the field of natural language processing, while the expensive memory and computation consumption impede their practical deployment. Quantization emerges as one of the most effective methods for improving the computational efficiency of LLMs. However, existing ultra-low-bit quantization always causes severe accuracy drops. In this paper, we empirically relieve the micro and macro characteristics of ultra-low bit quantization and present a novel Dual-Binarization method for LLMs, namely DB-LLM. For the micro-level, we take both the accuracy advantage of 2-bit-width and the efficiency advantage of binarization into account, introducing Flexible Dual Binarization (FDB). By splitting 2-bit quantized weights into two independent sets of binaries, FDB ensures the accuracy of representations and introduces flexibility, utilizing the efficient bitwise operations of binarization while retaining the inherent high sparsity of ultra-low bit quantization. For the macro-level, we find the distortion that exists in the prediction of LLM after quantization, which is specified as the deviations related to the ambiguity of samples. We propose the Deviation-Aware Distillation (DAD) method, enabling the model to focus differently on various samples. Comprehensive experiments show that our DB-LLM not only significantly surpasses the current State-of-The-Art (SoTA) in ultra-low bit quantization (eg, perplexity decreased from 9.64 to 7.23), but also achieves an additional 20\\% reduction in computational consumption compared to the SOTA method under the same bit-width. Our code will be released soon.",
+        "canonical_id": "arXiv:2402.11960",
+        "arxiv_id": "2402.11960",
+        "doi": "10.48550/arXiv.2402.11960",
+        "authors": [
+          "Hong Chen",
+          "Cheng-Tao Lv",
+          "Liang Ding",
+          "Haotong Qin",
+          "Xiabin Zhou",
+          "Yifu Ding",
+          "Xue-Bo Liu",
+          "Min Zhang",
+          "Jinyang Guo",
+          "Xianglong Liu",
+          "D. Tao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.14160",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.14160",
+        "id:arXiv:2402.14160",
+        "title:recursive speculative decoding accelerating llm inference via sampling without replacement",
+        "url:https://arxiv.org/abs/2402.14160"
+      ],
+      "record": {
+        "title": "Recursive Speculative Decoding: Accelerating LLM Inference via Sampling Without Replacement",
+        "source_url": "https://arxiv.org/abs/2402.14160",
+        "year": 2024,
+        "published": "2024-02-21",
+        "abstract": "Speculative decoding is an inference-acceleration method for large language models (LLMs) where a small language model generates a draft-token sequence which is further verified by the target LLM in parallel. Recent works have advanced this method by establishing a draft-token tree, achieving superior performance over a single-sequence speculative decoding. However, those works independently generate tokens at each level of the tree, not leveraging the tree's entire diversifiability. Besides, their empirical superiority has been shown for fixed length of sequences, implicitly granting more computational resource to LLM for the tree-based methods. None of the existing works has conducted empirical studies with fixed target computational budgets despite its importance to resource-bounded devices. We present Recursive Speculative Decoding (RSD), a novel tree-based method that samples draft tokens without replacement and maximizes the diversity of the tree. During RSD's drafting, the tree is built by either Gumbel-Top-$k$ trick that draws tokens without replacement in parallel or Stochastic Beam Search that samples sequences without replacement while early-truncating unlikely draft sequences and reducing the computational cost of LLM. We empirically evaluate RSD with Llama 2 and OPT models, showing that RSD outperforms the baseline methods, consistently for fixed draft sequence length and in most cases for fixed computational budgets at LLM.",
+        "canonical_id": "arXiv:2402.14160",
+        "arxiv_id": "2402.14160",
+        "doi": "10.48550/arXiv.2402.14160",
+        "authors": [
+          "Wonseok Jeon",
+          "Mukul Gagrani",
+          "Raghavv Goel",
+          "Junyoung Park",
+          "Mingu Lee",
+          "Christopher Lott"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.17463",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.17463",
+        "id:arXiv:2402.17463",
+        "title:trainingfree longcontext scaling of large language models",
+        "url:https://arxiv.org/abs/2402.17463"
+      ],
+      "record": {
+        "title": "Training-Free Long-Context Scaling of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2402.17463",
+        "year": 2024,
+        "published": "2024-02-27",
+        "abstract": "The ability of Large Language Models (LLMs) to process and generate coherent text is markedly weakened when the number of input tokens exceeds their pretraining length. Given the expensive overhead of finetuning large-scale models with longer sequences, we propose Dual Chunk Attention (DCA), which enables Llama2 70B to support context windows of more than 100k tokens without continual training. By decomposing the attention computation for long sequences into chunk-based modules, DCA manages to effectively capture the relative positional information of tokens within the same chunk (Intra-Chunk) and across distinct chunks (Inter-Chunk), as well as integrates seamlessly with Flash Attention. In addition to its impressive extrapolation capability, DCA achieves performance on practical long-context tasks that is comparable to or even better than that of finetuned models. When compared with proprietary models, our training-free 70B model attains 94% of the performance of gpt-3.5-16k, indicating it is a viable open-source alternative. All code and data used in this work are released at \\url{https://github.com/HKUNLP/ChunkLlama}.",
+        "canonical_id": "arXiv:2402.17463",
+        "arxiv_id": "2402.17463",
+        "doi": "10.48550/arXiv.2402.17463",
+        "authors": [
+          "Chen An",
+          "Fei Huang",
+          "Jun Zhang",
+          "Shansan Gong",
+          "Xipeng Qiu",
+          "Chang Zhou",
+          "Ling-Peng Kong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.17985",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.17985",
+        "id:arXiv:2402.17985",
+        "title:flattenquant breaking through the inference computebound for large language models with pertensor quantization",
+        "url:https://arxiv.org/abs/2402.17985"
+      ],
+      "record": {
+        "title": "FlattenQuant: Breaking through the Inference Compute-bound for Large Language Models with Per-tensor Quantization",
+        "source_url": "https://arxiv.org/abs/2402.17985",
+        "year": 2024,
+        "published": "2024-02-28",
+        "abstract": "Large language models (LLMs) have demonstrated state-of-the-art accuracies across various tasks. However, the latency of inference and the large GPU memory consumption of LLMs restrict their deployment performance. Recently, there have been some efficient attempts to quantize LLMs, yet inference with large batch size or long sequence still has the issue of being compute-bound. Fine-grained quantization methods have showcased their proficiency in achieving low-bit quantization for LLMs, while requiring FP16 data type for linear layer computations, which is time-consuming when dealing with large batch size or long sequence. In this paper, we introduce a method called FlattenQuant, which significantly reduces the maximum value of the tensor by flattening the larger channels in the tensor, to achieve low bit per-tensor quantization with minimal accuracy loss. Our experiments show that FlattenQuant can directly use 4 bits to achieve 48.29% of the linear layer calculation in LLMs, with the remaining layer using 8 bits. The 4-bit matrix multiplication introduced in the FlattenQuant method can effectively address the compute-bound caused by large matrix calculation. Our work achieves up to 2× speedup and 2.3× memory reduction for LLMs with negligible loss in accuracy.",
+        "canonical_id": "arXiv:2402.17985",
+        "arxiv_id": "2402.17985",
+        "doi": "10.48550/arXiv.2402.17985",
+        "authors": [
+          "Yi Zhang",
+          "Fei Yang",
+          "Shuang Peng",
+          "Fangyu Wang",
+          "Ai-Min Pan"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:f808f646e5396ca1f4ebe6a6c9596b408f83bb055a23643e32134217aab6a417",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d213195d13b22c02-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.20723",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.20723",
+    "identity_tokens": [
+      "arXiv:2607.20723"
+    ],
+    "reason": "LeakyLMs infers architecture and deployment optimizations via timing side channels; this is an attack/security paper rather than an efficiency method.",
+    "first_checked_at": "2026-10-05T10:07:16+00:00",
+    "last_checked_at": "2026-10-05T10:07:16+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+    ],
+    "title": "Leaky Language Models: Stealing Architecture and Inference Optimizations via Per-Token Timing"
+  },
+  "processed_at": "2026-10-05T10:07:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d213195d13b2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,930 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c3086e29277ea05d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c3086e29277e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.03440",
+    "arXiv:2503.12167",
+    "arXiv:2504.08719",
+    "arXiv:2505.02380",
+    "arXiv:2505.11820",
+    "arXiv:2506.23431",
+    "arXiv:2602.03295",
+    "arXiv:2603.25340",
+    "arXiv:2610.00465"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e0467d1c8e9b0a95a23d70d32f2216cf00b5219c",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T11:59:38.943049+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.03440",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.12167",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.08719",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.02380",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.11820",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.23431",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.03295",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.25340",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.00465",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "POP: Prefill-Only Pruning for Efficient Large Model Inference",
+      "source_url": "https://arxiv.org/abs/2602.03295",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) and Vision-Language Models (VLMs) have demonstrated remarkable capabilities. However, their deployment is hindered by significant computational costs. Existing structured pruning methods, while hardware-efficient, often suffer from significant accuracy degradation. In this paper, we argue that this failure stems from a stage-agnostic pruning approach that overlooks the asymmetric roles between the prefill and decode stages. By introducing a virtual gate mechanism, our importance analysis reveals that deep layers are critical for next-token prediction (decode) but largely redundant for context encoding (prefill). Leveraging this insight, we propose Prefill-Only Pruning (POP), a stage-aware inference strategy that safely omits deep layers during the computationally intensive prefill stage while retaining the full model for the sensitive decode stage. To enable the transition between stages, we introduce independent Key-Value (KV) projections to maintain cache integrity, and a boundary handling strategy to ensure the accuracy of the first generated token. Extensive experiments on Llama-3.1, Qwen3-VL, and Gemma-3 across diverse modalities demonstrate that POP achieves up to 1.37$\\times$ speedup in prefill latency with minimal performance loss, effectively overcoming the accuracy-efficiency trade-off limitations of existing structured pruning methods.",
+      "identifiers": [
+        "SemanticScholar:698f327fd4d4deac1942416f3ce6efa2d5d1d287"
+      ],
+      "semantic_scholar_id": "698f327fd4d4deac1942416f3ce6efa2d5d1d287",
+      "canonical_id": "arXiv:2602.03295",
+      "arxiv_id": "2602.03295",
+      "doi": "10.48550/arXiv.2602.03295",
+      "authors": [
+        "Junhui He",
+        "Zhi-Hui Fu",
+        "Jun Wang",
+        "Qing'an Li"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 269,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Large Language Model as Token Compressor and Decompressor",
+      "source_url": "https://arxiv.org/abs/2603.25340",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we study whether an off-the-shelf LLM can be adapted into a discrete, variable-length token compressor and decompressor for long-context processing. To this end, we design a self-expressive autoencoding framework that fine-tunes a pretrained LLM with lightweight LoRA adapters to map long texts into compact sequences of learned latent codes, termed Z-tokens, and to decode them back into natural language or task outputs. The resulting representation is content-adaptive: less predictable or information-dense segments can receive more Z-tokens, while redundant regions can be represented more compactly through a budget-aware length regularizer. Our method is evaluated on long-context datasets such as Wikipedia, CNN/DailyMail, HotpotQA, and QuALITY, showing that it preserves reconstruction quality and downstream performance while reducing effective context length, generation-stage memory usage, and end-to-end latency. This simple design supports both direct decoding from compressed contexts and autoregressive generation in the Z-token space, providing a practical interface for efficient long-context inference.",
+      "identifiers": [
+        "SemanticScholar:38a49095776064e6b8f8efa7f88594f65926bfdd"
+      ],
+      "semantic_scholar_id": "38a49095776064e6b8f8efa7f88594f65926bfdd",
+      "canonical_id": "arXiv:2603.25340",
+      "arxiv_id": "2603.25340",
+      "doi": "10.48550/arXiv.2603.25340",
+      "authors": [
+        "Wen-Bing Li",
+        "Zi-Kai Song",
+        "Jie-Lei Zhang",
+        "Tian Zhao",
+        "Jun-Kai Lin",
+        "Yiran Wang",
+        "Wei Yang"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SWAN-GPT: An Efficient and Scalable Approach for Long-Context Language Modeling",
+      "source_url": "https://arxiv.org/abs/2504.08719",
+      "year": 2025,
+      "published": "2025-04-11",
+      "venue": "arXiv.org",
+      "citation_count": 17,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a decoder-only Transformer architecture that robustly generalizes to sequence lengths substantially longer than those seen during training. Our model, SWAN-GPT, interleaves layers without positional encodings (NoPE) and sliding-window attention layers equipped with rotary positional encodings (SWA-RoPE). Experiments demonstrate strong performance on sequence lengths significantly longer than the training length without the need for additional long-context training. This robust length extrapolation is achieved through our novel architecture, enhanced by a straightforward dynamic scaling of attention scores during inference. In addition, SWAN-GPT is more computationally efficient than standard GPT architectures, resulting in cheaper training and higher throughput. Further, we demonstrate that existing pre-trained decoder-only models can be efficiently converted to the SWAN architecture with minimal continued training, enabling longer contexts. Overall, our work presents an effective approach for scaling language models to longer contexts in a robust and efficient manner.",
+      "identifiers": [
+        "SemanticScholar:628ae4d9274dc1848cb32dd14267abeeee5ef1ae"
+      ],
+      "semantic_scholar_id": "628ae4d9274dc1848cb32dd14267abeeee5ef1ae",
+      "canonical_id": "arXiv:2504.08719",
+      "arxiv_id": "2504.08719",
+      "doi": "10.48550/arXiv.2504.08719",
+      "authors": [
+        "Krishna C. Puvvada",
+        "Faisal Ladhak",
+        "Santiago Akle Serrano",
+        "Cheng-Ping Hsieh",
+        "Shantanu Acharya",
+        "Somshubra Majumdar",
+        "Fei Jia",
+        "Samuel Kriman",
+        "Simeng Sun",
+        "Dima Rekesh",
+        "Boris Ginsburg"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 17,
+        "citation_count": 17,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 567,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Exploring the Benefit of Activation Sparsity in Pre-training",
+      "source_url": "https://arxiv.org/abs/2410.03440",
+      "year": 2024,
+      "published": "2024-10-04",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained Transformers inherently possess the characteristic of sparse activation, where only a small fraction of the neurons are activated for each token. While sparse activation has been explored through post-training methods, its potential in pre-training remains untapped. In this work, we first study how activation properties change during pre-training. Our examination reveals that Transformers exhibit sparse activation throughout the majority of the pre-training process while the activation correlation keeps evolving as training progresses. Leveraging this observation, we propose Switchable Sparse-Dense Learning (SSD). SSD adaptively switches between the Mixtures-of-Experts (MoE) based sparse training and the conventional dense training during the pre-training process, leveraging the efficiency of sparse training and avoiding the static activation correlation of sparse training. Compared to dense training, SSD achieves comparable performance with identical model size and reduces pre-training costs. Moreover, the models trained with SSD can be directly used as MoE models for sparse inference and achieve the same performance as dense models with up to $2\\times$ faster inference speed. Codes are available at https://github.com/thunlp/moefication.",
+      "identifiers": [
+        "SemanticScholar:b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570"
+      ],
+      "semantic_scholar_id": "b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570",
+      "canonical_id": "arXiv:2410.03440",
+      "arxiv_id": "2410.03440",
+      "doi": "10.48550/arXiv.2410.03440",
+      "authors": [
+        "Zhengyan Zhang",
+        "Chao-Jun Xiao",
+        "Qiujieli Qin",
+        "Yankai Lin",
+        "Zhiyuan Zeng",
+        "Xu Han",
+        "Zhi-Yuan Liu",
+        "Ruo-Bing Xie",
+        "Mao-Song Sun",
+        "Jie Zhou"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 756,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Chain-of-Model Learning for Language Model",
+      "source_url": "https://arxiv.org/abs/2505.11820",
+      "year": 2025,
+      "published": "2025-05-17",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose a novel learning paradigm, termed Chain-of-Model (CoM), which incorporates the causal relationship into the hidden states of each layer as a chain style, thereby introducing great scaling efficiency in model training and inference flexibility in deployment. We introduce the concept of Chain-of-Representation (CoR), which formulates the hidden states at each layer as a combination of multiple sub-representations (i.e., chains) at the hidden dimension level. In each layer, each chain from the output representations can only view all of its preceding chains in the input representations. Consequently, the model built upon CoM framework can progressively scale up the model size by increasing the chains based on the previous models (i.e., chains), and offer multiple sub-models at varying sizes for elastic inference by using different chain numbers. Based on this principle, we devise Chain-of-Language-Model (CoLM), which incorporates the idea of CoM into each layer of Transformer architecture. Based on CoLM, we further introduce CoLM-Air by introducing a KV sharing mechanism, that computes all keys and values within the first chain and then shares across all chains. This design demonstrates additional extensibility, such as enabling seamless LM switching, prefilling acceleration and so on. Experimental results demonstrate our CoLM family can achieve comparable performance to the standard Transformer, while simultaneously enabling greater flexiblity, such as progressive scaling to improve training efficiency and offer multiple varying model sizes for elastic inference, paving a a new way toward building language models. Our code will be released in the future at: https://github.com/microsoft/CoLM.",
+      "identifiers": [
+        "SemanticScholar:fd312c7a18b26c114644b5245938cfaa1a5c308c"
+      ],
+      "semantic_scholar_id": "fd312c7a18b26c114644b5245938cfaa1a5c308c",
+      "canonical_id": "arXiv:2505.11820",
+      "arxiv_id": "2505.11820",
+      "doi": "10.48550/arXiv.2505.11820",
+      "authors": [
+        "Xiao-Hua Wang",
+        "Kai-Tao Song",
+        "Xu Tan",
+        "Huiqiang Jiang",
+        "Chengruidong Zhang",
+        "Yong-Liang Shen",
+        "Cen Lu",
+        "Zihao Li",
+        "Zi-Fan Song",
+        "Caihua Shan",
+        "Yansen Wang",
+        "Kan Ren",
+        "Xiao-Qing Zheng",
+        "Tao Qin",
+        "Yu-Qing Yang",
+        "Dongsheng Li",
+        "Lili Qiu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 531,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "AIR-LLM: Broadcasting AI Weights over Radio for Memory-Free Edge LLM Inference via RF Computing",
+      "source_url": "https://arxiv.org/abs/2610.00465",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Next-generation large language models (LLMs) are expanding from the cloud to ubiquitous edge devices. However, edge devices typically either lack the memory to store increasingly large LLM weights or, even with enough memory, spend unaffordable energy on loading the weights. This raises our question: can an edge device run an LLM without storing or loading its weights, but receive them over the air and consume them on the fly? Inspired by wireless broadcasting, we present AIR-LLM, an LLM inference architecture for edge devices, which is composed of: (i) a central radio (e.g., 5G base stations) that broadcasts the LLM weights into the air, and (ii) the edge user that receives the weights and completes the general matrix-vector multiplication (GEMV) of LLM inference directly in the radio frequency (RF) domain using RF mixers. To further shorten the airtime, AIR-LLM exploits MIMO spatial multiplexing and proposes an energy-efficient precoder-postcoder pair on the edge to calibrate its own wireless channel. Since the central radio stays user-unaware, AIR-LLM is user-scalable so that one broadcast serves unlimited users within its coverage. We implement AIR-LLM on the NVIDIA Sionna ray-traced channels of two real-world urban scenes and the profiling of a real RF mixer. With a WikiText-2 perplexity degradation of 4.0% on LLaMA-3.1-8B, AIR-LLM saves the energy by 157.7x/40.4x against the FP16 and weight-only quantization baselines; with 20 users, its airtime is 104.1x/26.0x shorter, respectively.",
+      "identifiers": [
+        "SemanticScholar:18f820cededbe9c51406d158961567d3385be8bc"
+      ],
+      "semantic_scholar_id": "18f820cededbe9c51406d158961567d3385be8bc",
+      "canonical_id": "arXiv:2610.00465",
+      "arxiv_id": "2610.00465",
+      "authors": [
+        "Zhi-Hui Gao",
+        "Ting-Jun Chen",
+        "Dirk R. Englund"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing",
+      "source_url": "https://arxiv.org/abs/2503.12167",
+      "year": 2025,
+      "published": "2025-03-15",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While scaling laws have been continuously validated in large language models (LLMs) with increasing model parameters, the inherent tension between the inference demands of LLMs and the limited resources of edge devices poses a critical challenge to the development of edge intelligence. Recently, numerous small language models have emerged, aiming to distill the capabilities of LLMs into smaller footprints. However, these models often retain the fundamental architectural principles of their larger counterparts, still imposing considerable strain on the storage and bandwidth capacities of edge devices. In this paper, we introduce the PLM, a Peripheral Language Model, developed through a co-design process that jointly optimizes model architecture and edge system constraints. The PLM utilizes a Multi-head Latent Attention mechanism and employs the squared ReLU activation function to encourage sparsity, thereby reducing peak memory footprint during inference. During training, we collect and reorganize open-source datasets, implement a multi-phase training strategy, and empirically investigate the Warmup-Stable-Decay-Constant (WSDC) learning rate scheduler. Additionally, we incorporate Reinforcement Learning from Human Feedback (RLHF) by adopting the ARIES preference learning approach. Following a two-phase SFT process, this method yields performance gains of 2% in general tasks, 9% in the GSM8K task, and 11% in coding tasks. In addition to its novel architecture, evaluation results demonstrate that PLM outperforms existing small language models trained on publicly available data while maintaining the lowest number of activated parameters. Furthermore, deployment across various edge devices, including consumer-grade GPUs, mobile phones, and Raspberry Pis, validates PLM's suitability for peripheral applications. The PLM series models are publicly available at https://github.com/plm-team/PLM.",
+      "identifiers": [
+        "SemanticScholar:b23bcfec5cd63bdb4047bd70bb439798b0562553"
+      ],
+      "semantic_scholar_id": "b23bcfec5cd63bdb4047bd70bb439798b0562553",
+      "canonical_id": "arXiv:2503.12167",
+      "arxiv_id": "2503.12167",
+      "doi": "10.48550/arXiv.2503.12167",
+      "authors": [
+        "Cheng Deng",
+        "Luo-Yang Sun",
+        "Jiwen Jiang",
+        "Yong-Cheng Zeng",
+        "Xin-Jian Wu",
+        "Wen-Xin Zhao",
+        "Q. Xiao",
+        "Jia-Chuan Wang",
+        "Hao-Yang Li",
+        "Lei Chen",
+        "Lionel M. Ni",
+        "Hai-Feng Zhang",
+        "Jun Wang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 594,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2505.02380",
+      "year": 2025,
+      "published": "2025-05-05",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) achieve strong performance across tasks, but face storage and compute challenges on edge devices. We propose EntroLLM, a compression framework combining mixed quantization and entropy coding to reduce storage while preserving accuracy. We use a combination of unsigned and asymmetric quantization. Tensor-level quantization produces an entropy-reducing effect, increasing weight compressibility, and improving downstream Huffman encoding by $7\\times$ (8-bit) and $11.3\\times$ (4-bit) over state-of-the-art methods. Huffman coding further reduces memory bandwidth demands, while a parallel decoding strategy enables efficient weight retrieval with minimal latency. Experiments on edge-scale LLMs (smolLM-1.7B, phi3-mini-4k, mistral-7B) show up to $30\\%$ storage savings over uint8 and $65\\%$ over uint4 models, with $31.9-146.6\\%$ faster inference on memory-limited devices like the NVIDIA JETSON P3450. EntroLLM requires no retraining and is compatible with existing post-training quantization pipelines, making it practical for edge LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15"
+      ],
+      "semantic_scholar_id": "4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15",
+      "canonical_id": "arXiv:2505.02380",
+      "arxiv_id": "2505.02380",
+      "doi": "10.1109/ICASSP55912.2026.11464777",
+      "authors": [
+        "Arnab Sanyal",
+        "G. Datta",
+        "Prithwish Mukherjee",
+        "Sandeep P. Chinchali",
+        "M. Orshansky"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 543,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+      "source_url": "https://arxiv.org/abs/2506.23431",
+      "year": 2025,
+      "published": "2025-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the basis of generative AI, an autoregressive model requires the generation of a new token depending on all the previously generated tokens, which brings high quality but also restricts the model to generate tokens one by one, forming a bottleneck limiting the generation speed. In this paper, we propose a new decoder architecture that efficiently generates text in parallel for context-aware generation tasks. Our proposed pipelined decoder initiates the generation of multiple subsequences simultaneously, and, at each time-step, it generates a new token for each subsequence to realize parallelism. Experiments on multiple text generation tasks, including question answering, text summarization, and keyphrase generation, show that our pipelined decoder significantly improves the generation speed without a significant loss of generation quality or additional memory consumption.",
+      "identifiers": [
+        "SemanticScholar:219aa76732cfc06409522c8610cb60b1d5a81c81"
+      ],
+      "semantic_scholar_id": "219aa76732cfc06409522c8610cb60b1d5a81c81",
+      "canonical_id": "arXiv:2506.23431",
+      "arxiv_id": "2506.23431",
+      "doi": "10.48550/arXiv.2506.23431",
+      "authors": [
+        "Zixian Huang",
+        "Chenxu Niu",
+        "Yu Gu",
+        "Gengyang Xiao",
+        "Xin-Wei Huang",
+        "Gong Cheng"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 488,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.03295",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.03295",
+        "id:SemanticScholar:698f327fd4d4deac1942416f3ce6efa2d5d1d287",
+        "id:arXiv:2602.03295",
+        "title:pop prefillonly pruning for efficient large model inference",
+        "url:https://arxiv.org/abs/2602.03295"
+      ],
+      "record": {
+        "title": "POP: Prefill-Only Pruning for Efficient Large Model Inference",
+        "source_url": "https://arxiv.org/abs/2602.03295",
+        "year": 2026,
+        "published": "2026-02-03",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) and Vision-Language Models (VLMs) have demonstrated remarkable capabilities. However, their deployment is hindered by significant computational costs. Existing structured pruning methods, while hardware-efficient, often suffer from significant accuracy degradation. In this paper, we argue that this failure stems from a stage-agnostic pruning approach that overlooks the asymmetric roles between the prefill and decode stages. By introducing a virtual gate mechanism, our importance analysis reveals that deep layers are critical for next-token prediction (decode) but largely redundant for context encoding (prefill). Leveraging this insight, we propose Prefill-Only Pruning (POP), a stage-aware inference strategy that safely omits deep layers during the computationally intensive prefill stage while retaining the full model for the sensitive decode stage. To enable the transition between stages, we introduce independent Key-Value (KV) projections to maintain cache integrity, and a boundary handling strategy to ensure the accuracy of the first generated token. Extensive experiments on Llama-3.1, Qwen3-VL, and Gemma-3 across diverse modalities demonstrate that POP achieves up to 1.37$\\times$ speedup in prefill latency with minimal performance loss, effectively overcoming the accuracy-efficiency trade-off limitations of existing structured pruning methods.",
+        "identifiers": [
+          "SemanticScholar:698f327fd4d4deac1942416f3ce6efa2d5d1d287"
+        ],
+        "semantic_scholar_id": "698f327fd4d4deac1942416f3ce6efa2d5d1d287",
+        "canonical_id": "arXiv:2602.03295",
+        "arxiv_id": "2602.03295",
+        "doi": "10.48550/arXiv.2602.03295",
+        "authors": [
+          "Junhui He",
+          "Zhi-Hui Fu",
+          "Jun Wang",
+          "Qing'an Li"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 269,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.25340",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.25340",
+        "id:SemanticScholar:38a49095776064e6b8f8efa7f88594f65926bfdd",
+        "id:arXiv:2603.25340",
+        "title:large language model as token compressor and decompressor",
+        "url:https://arxiv.org/abs/2603.25340"
+      ],
+      "record": {
+        "title": "Large Language Model as Token Compressor and Decompressor",
+        "source_url": "https://arxiv.org/abs/2603.25340",
+        "year": 2026,
+        "published": "2026-03-26",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this paper, we study whether an off-the-shelf LLM can be adapted into a discrete, variable-length token compressor and decompressor for long-context processing. To this end, we design a self-expressive autoencoding framework that fine-tunes a pretrained LLM with lightweight LoRA adapters to map long texts into compact sequences of learned latent codes, termed Z-tokens, and to decode them back into natural language or task outputs. The resulting representation is content-adaptive: less predictable or information-dense segments can receive more Z-tokens, while redundant regions can be represented more compactly through a budget-aware length regularizer. Our method is evaluated on long-context datasets such as Wikipedia, CNN/DailyMail, HotpotQA, and QuALITY, showing that it preserves reconstruction quality and downstream performance while reducing effective context length, generation-stage memory usage, and end-to-end latency. This simple design supports both direct decoding from compressed contexts and autoregressive generation in the Z-token space, providing a practical interface for efficient long-context inference.",
+        "identifiers": [
+          "SemanticScholar:38a49095776064e6b8f8efa7f88594f65926bfdd"
+        ],
+        "semantic_scholar_id": "38a49095776064e6b8f8efa7f88594f65926bfdd",
+        "canonical_id": "arXiv:2603.25340",
+        "arxiv_id": "2603.25340",
+        "doi": "10.48550/arXiv.2603.25340",
+        "authors": [
+          "Wen-Bing Li",
+          "Zi-Kai Song",
+          "Jie-Lei Zhang",
+          "Tian Zhao",
+          "Jun-Kai Lin",
+          "Yiran Wang",
+          "Wei Yang"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 218,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.08719",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.08719",
+        "id:SemanticScholar:628ae4d9274dc1848cb32dd14267abeeee5ef1ae",
+        "id:arXiv:2504.08719",
+        "title:swangpt an efficient and scalable approach for longcontext language modeling",
+        "url:https://arxiv.org/abs/2504.08719"
+      ],
+      "record": {
+        "title": "SWAN-GPT: An Efficient and Scalable Approach for Long-Context Language Modeling",
+        "source_url": "https://arxiv.org/abs/2504.08719",
+        "year": 2025,
+        "published": "2025-04-11",
+        "venue": "arXiv.org",
+        "citation_count": 17,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present a decoder-only Transformer architecture that robustly generalizes to sequence lengths substantially longer than those seen during training. Our model, SWAN-GPT, interleaves layers without positional encodings (NoPE) and sliding-window attention layers equipped with rotary positional encodings (SWA-RoPE). Experiments demonstrate strong performance on sequence lengths significantly longer than the training length without the need for additional long-context training. This robust length extrapolation is achieved through our novel architecture, enhanced by a straightforward dynamic scaling of attention scores during inference. In addition, SWAN-GPT is more computationally efficient than standard GPT architectures, resulting in cheaper training and higher throughput. Further, we demonstrate that existing pre-trained decoder-only models can be efficiently converted to the SWAN architecture with minimal continued training, enabling longer contexts. Overall, our work presents an effective approach for scaling language models to longer contexts in a robust and efficient manner.",
+        "identifiers": [
+          "SemanticScholar:628ae4d9274dc1848cb32dd14267abeeee5ef1ae"
+        ],
+        "semantic_scholar_id": "628ae4d9274dc1848cb32dd14267abeeee5ef1ae",
+        "canonical_id": "arXiv:2504.08719",
+        "arxiv_id": "2504.08719",
+        "doi": "10.48550/arXiv.2504.08719",
+        "authors": [
+          "Krishna C. Puvvada",
+          "Faisal Ladhak",
+          "Santiago Akle Serrano",
+          "Cheng-Ping Hsieh",
+          "Shantanu Acharya",
+          "Somshubra Majumdar",
+          "Fei Jia",
+          "Samuel Kriman",
+          "Simeng Sun",
+          "Dima Rekesh",
+          "Boris Ginsburg"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 17,
+          "citation_count": 17,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 567,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.03440",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.03440",
+        "id:SemanticScholar:b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570",
+        "id:arXiv:2410.03440",
+        "title:exploring the benefit of activation sparsity in pretraining",
+        "url:https://arxiv.org/abs/2410.03440"
+      ],
+      "record": {
+        "title": "Exploring the Benefit of Activation Sparsity in Pre-training",
+        "source_url": "https://arxiv.org/abs/2410.03440",
+        "year": 2024,
+        "published": "2024-10-04",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pre-trained Transformers inherently possess the characteristic of sparse activation, where only a small fraction of the neurons are activated for each token. While sparse activation has been explored through post-training methods, its potential in pre-training remains untapped. In this work, we first study how activation properties change during pre-training. Our examination reveals that Transformers exhibit sparse activation throughout the majority of the pre-training process while the activation correlation keeps evolving as training progresses. Leveraging this observation, we propose Switchable Sparse-Dense Learning (SSD). SSD adaptively switches between the Mixtures-of-Experts (MoE) based sparse training and the conventional dense training during the pre-training process, leveraging the efficiency of sparse training and avoiding the static activation correlation of sparse training. Compared to dense training, SSD achieves comparable performance with identical model size and reduces pre-training costs. Moreover, the models trained with SSD can be directly used as MoE models for sparse inference and achieve the same performance as dense models with up to $2\\times$ faster inference speed. Codes are available at https://github.com/thunlp/moefication.",
+        "identifiers": [
+          "SemanticScholar:b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570"
+        ],
+        "semantic_scholar_id": "b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570",
+        "canonical_id": "arXiv:2410.03440",
+        "arxiv_id": "2410.03440",
+        "doi": "10.48550/arXiv.2410.03440",
+        "authors": [
+          "Zhengyan Zhang",
+          "Chao-Jun Xiao",
+          "Qiujieli Qin",
+          "Yankai Lin",
+          "Zhiyuan Zeng",
+          "Xu Han",
+          "Zhi-Yuan Liu",
+          "Ruo-Bing Xie",
+          "Mao-Song Sun",
+          "Jie Zhou"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 756,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.11820",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.11820",
+        "id:SemanticScholar:fd312c7a18b26c114644b5245938cfaa1a5c308c",
+        "id:arXiv:2505.11820",
+        "title:chainofmodel learning for language model",
+        "url:https://arxiv.org/abs/2505.11820"
+      ],
+      "record": {
+        "title": "Chain-of-Model Learning for Language Model",
+        "source_url": "https://arxiv.org/abs/2505.11820",
+        "year": 2025,
+        "published": "2025-05-17",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this paper, we propose a novel learning paradigm, termed Chain-of-Model (CoM), which incorporates the causal relationship into the hidden states of each layer as a chain style, thereby introducing great scaling efficiency in model training and inference flexibility in deployment. We introduce the concept of Chain-of-Representation (CoR), which formulates the hidden states at each layer as a combination of multiple sub-representations (i.e., chains) at the hidden dimension level. In each layer, each chain from the output representations can only view all of its preceding chains in the input representations. Consequently, the model built upon CoM framework can progressively scale up the model size by increasing the chains based on the previous models (i.e., chains), and offer multiple sub-models at varying sizes for elastic inference by using different chain numbers. Based on this principle, we devise Chain-of-Language-Model (CoLM), which incorporates the idea of CoM into each layer of Transformer architecture. Based on CoLM, we further introduce CoLM-Air by introducing a KV sharing mechanism, that computes all keys and values within the first chain and then shares across all chains. This design demonstrates additional extensibility, such as enabling seamless LM switching, prefilling acceleration and so on. Experimental results demonstrate our CoLM family can achieve comparable performance to the standard Transformer, while simultaneously enabling greater flexiblity, such as progressive scaling to improve training efficiency and offer multiple varying model sizes for elastic inference, paving a a new way toward building language models. Our code will be released in the future at: https://github.com/microsoft/CoLM.",
+        "identifiers": [
+          "SemanticScholar:fd312c7a18b26c114644b5245938cfaa1a5c308c"
+        ],
+        "semantic_scholar_id": "fd312c7a18b26c114644b5245938cfaa1a5c308c",
+        "canonical_id": "arXiv:2505.11820",
+        "arxiv_id": "2505.11820",
+        "doi": "10.48550/arXiv.2505.11820",
+        "authors": [
+          "Xiao-Hua Wang",
+          "Kai-Tao Song",
+          "Xu Tan",
+          "Huiqiang Jiang",
+          "Chengruidong Zhang",
+          "Yong-Liang Shen",
+          "Cen Lu",
+          "Zihao Li",
+          "Zi-Fan Song",
+          "Caihua Shan",
+          "Yansen Wang",
+          "Kan Ren",
+          "Xiao-Qing Zheng",
+          "Tao Qin",
+          "Yu-Qing Yang",
+          "Dongsheng Li",
+          "Lili Qiu"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 531,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00465",
+      "identity_tokens": [
+        "id:SemanticScholar:18f820cededbe9c51406d158961567d3385be8bc",
+        "id:arXiv:2610.00465",
+        "title:airllm broadcasting ai weights over radio for memoryfree edge llm inference via rf computing",
+        "url:https://arxiv.org/abs/2610.00465"
+      ],
+      "record": {
+        "title": "AIR-LLM: Broadcasting AI Weights over Radio for Memory-Free Edge LLM Inference via RF Computing",
+        "source_url": "https://arxiv.org/abs/2610.00465",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Next-generation large language models (LLMs) are expanding from the cloud to ubiquitous edge devices. However, edge devices typically either lack the memory to store increasingly large LLM weights or, even with enough memory, spend unaffordable energy on loading the weights. This raises our question: can an edge device run an LLM without storing or loading its weights, but receive them over the air and consume them on the fly? Inspired by wireless broadcasting, we present AIR-LLM, an LLM inference architecture for edge devices, which is composed of: (i) a central radio (e.g., 5G base stations) that broadcasts the LLM weights into the air, and (ii) the edge user that receives the weights and completes the general matrix-vector multiplication (GEMV) of LLM inference directly in the radio frequency (RF) domain using RF mixers. To further shorten the airtime, AIR-LLM exploits MIMO spatial multiplexing and proposes an energy-efficient precoder-postcoder pair on the edge to calibrate its own wireless channel. Since the central radio stays user-unaware, AIR-LLM is user-scalable so that one broadcast serves unlimited users within its coverage. We implement AIR-LLM on the NVIDIA Sionna ray-traced channels of two real-world urban scenes and the profiling of a real RF mixer. With a WikiText-2 perplexity degradation of 4.0% on LLaMA-3.1-8B, AIR-LLM saves the energy by 157.7x/40.4x against the FP16 and weight-only quantization baselines; with 20 users, its airtime is 104.1x/26.0x shorter, respectively.",
+        "identifiers": [
+          "SemanticScholar:18f820cededbe9c51406d158961567d3385be8bc"
+        ],
+        "semantic_scholar_id": "18f820cededbe9c51406d158961567d3385be8bc",
+        "canonical_id": "arXiv:2610.00465",
+        "arxiv_id": "2610.00465",
+        "authors": [
+          "Zhi-Hui Gao",
+          "Ting-Jun Chen",
+          "Dirk R. Englund"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.12167",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.12167",
+        "id:SemanticScholar:b23bcfec5cd63bdb4047bd70bb439798b0562553",
+        "id:arXiv:2503.12167",
+        "title:plm efficient peripheral language models hardwarecodesigned for ubiquitous computing",
+        "url:https://arxiv.org/abs/2503.12167"
+      ],
+      "record": {
+        "title": "PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing",
+        "source_url": "https://arxiv.org/abs/2503.12167",
+        "year": 2025,
+        "published": "2025-03-15",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While scaling laws have been continuously validated in large language models (LLMs) with increasing model parameters, the inherent tension between the inference demands of LLMs and the limited resources of edge devices poses a critical challenge to the development of edge intelligence. Recently, numerous small language models have emerged, aiming to distill the capabilities of LLMs into smaller footprints. However, these models often retain the fundamental architectural principles of their larger counterparts, still imposing considerable strain on the storage and bandwidth capacities of edge devices. In this paper, we introduce the PLM, a Peripheral Language Model, developed through a co-design process that jointly optimizes model architecture and edge system constraints. The PLM utilizes a Multi-head Latent Attention mechanism and employs the squared ReLU activation function to encourage sparsity, thereby reducing peak memory footprint during inference. During training, we collect and reorganize open-source datasets, implement a multi-phase training strategy, and empirically investigate the Warmup-Stable-Decay-Constant (WSDC) learning rate scheduler. Additionally, we incorporate Reinforcement Learning from Human Feedback (RLHF) by adopting the ARIES preference learning approach. Following a two-phase SFT process, this method yields performance gains of 2% in general tasks, 9% in the GSM8K task, and 11% in coding tasks. In addition to its novel architecture, evaluation results demonstrate that PLM outperforms existing small language models trained on publicly available data while maintaining the lowest number of activated parameters. Furthermore, deployment across various edge devices, including consumer-grade GPUs, mobile phones, and Raspberry Pis, validates PLM's suitability for peripheral applications. The PLM series models are publicly available at https://github.com/plm-team/PLM.",
+        "identifiers": [
+          "SemanticScholar:b23bcfec5cd63bdb4047bd70bb439798b0562553"
+        ],
+        "semantic_scholar_id": "b23bcfec5cd63bdb4047bd70bb439798b0562553",
+        "canonical_id": "arXiv:2503.12167",
+        "arxiv_id": "2503.12167",
+        "doi": "10.48550/arXiv.2503.12167",
+        "authors": [
+          "Cheng Deng",
+          "Luo-Yang Sun",
+          "Jiwen Jiang",
+          "Yong-Cheng Zeng",
+          "Xin-Jian Wu",
+          "Wen-Xin Zhao",
+          "Q. Xiao",
+          "Jia-Chuan Wang",
+          "Hao-Yang Li",
+          "Lei Chen",
+          "Lionel M. Ni",
+          "Hai-Feng Zhang",
+          "Jun Wang"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 594,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.02380",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11464777",
+        "id:SemanticScholar:4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15",
+        "id:arXiv:2505.02380",
+        "title:entrollm entropy encoded weight compression for efficient large language model inference on edge devices",
+        "url:https://arxiv.org/abs/2505.02380"
+      ],
+      "record": {
+        "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
+        "source_url": "https://arxiv.org/abs/2505.02380",
+        "year": 2025,
+        "published": "2025-05-05",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) achieve strong performance across tasks, but face storage and compute challenges on edge devices. We propose EntroLLM, a compression framework combining mixed quantization and entropy coding to reduce storage while preserving accuracy. We use a combination of unsigned and asymmetric quantization. Tensor-level quantization produces an entropy-reducing effect, increasing weight compressibility, and improving downstream Huffman encoding by $7\\times$ (8-bit) and $11.3\\times$ (4-bit) over state-of-the-art methods. Huffman coding further reduces memory bandwidth demands, while a parallel decoding strategy enables efficient weight retrieval with minimal latency. Experiments on edge-scale LLMs (smolLM-1.7B, phi3-mini-4k, mistral-7B) show up to $30\\%$ storage savings over uint8 and $65\\%$ over uint4 models, with $31.9-146.6\\%$ faster inference on memory-limited devices like the NVIDIA JETSON P3450. EntroLLM requires no retraining and is compatible with existing post-training quantization pipelines, making it practical for edge LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15"
+        ],
+        "semantic_scholar_id": "4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15",
+        "canonical_id": "arXiv:2505.02380",
+        "arxiv_id": "2505.02380",
+        "doi": "10.1109/ICASSP55912.2026.11464777",
+        "authors": [
+          "Arnab Sanyal",
+          "G. Datta",
+          "Prithwish Mukherjee",
+          "Sandeep P. Chinchali",
+          "M. Orshansky"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 543,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.23431",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.23431",
+        "id:SemanticScholar:219aa76732cfc06409522c8610cb60b1d5a81c81",
+        "id:arXiv:2506.23431",
+        "title:pipelined decoder for efficient contextaware text generation",
+        "url:https://arxiv.org/abs/2506.23431"
+      ],
+      "record": {
+        "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+        "source_url": "https://arxiv.org/abs/2506.23431",
+        "year": 2025,
+        "published": "2025-06-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As the basis of generative AI, an autoregressive model requires the generation of a new token depending on all the previously generated tokens, which brings high quality but also restricts the model to generate tokens one by one, forming a bottleneck limiting the generation speed. In this paper, we propose a new decoder architecture that efficiently generates text in parallel for context-aware generation tasks. Our proposed pipelined decoder initiates the generation of multiple subsequences simultaneously, and, at each time-step, it generates a new token for each subsequence to realize parallelism. Experiments on multiple text generation tasks, including question answering, text summarization, and keyphrase generation, show that our pipelined decoder significantly improves the generation speed without a significant loss of generation quality or additional memory consumption.",
+        "identifiers": [
+          "SemanticScholar:219aa76732cfc06409522c8610cb60b1d5a81c81"
+        ],
+        "semantic_scholar_id": "219aa76732cfc06409522c8610cb60b1d5a81c81",
+        "canonical_id": "arXiv:2506.23431",
+        "arxiv_id": "2506.23431",
+        "doi": "10.48550/arXiv.2506.23431",
+        "authors": [
+          "Zixian Huang",
+          "Chenxu Niu",
+          "Yu Gu",
+          "Gengyang Xiao",
+          "Xin-Wei Huang",
+          "Gong Cheng"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 488,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c0c24d319efbc2060f423ae7290a80ee3dc3fe48c48c0f2f2e012f52c84ffbc8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

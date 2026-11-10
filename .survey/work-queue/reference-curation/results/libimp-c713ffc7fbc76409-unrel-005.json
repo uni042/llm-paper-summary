@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c713ffc7fbc76409-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.17445",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.17445",
+    "identity_tokens": [
+      "arXiv:2608.17445"
+    ],
+    "reason": "一次要旨はLLM decomposition attackに対するservice defense/securityを扱い、推論効率化ではない。",
+    "first_checked_at": "2026-10-05T03:17:02+00:00",
+    "last_checked_at": "2026-10-05T03:17:02+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+    ],
+    "title": "Decomposition Attacks Across Unlinkable Identities: Limits of Stateful Defenses for LLM Services"
+  },
+  "processed_at": "2026-10-05T03:17:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c713ffc7fbc7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

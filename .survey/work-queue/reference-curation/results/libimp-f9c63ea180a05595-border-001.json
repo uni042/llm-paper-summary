@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f9c63ea180a05595-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.2196/68291",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.2196/68291",
+    "identity_tokens": [
+      "DOI:10.2196/68291"
+    ],
+    "reason": "候補packet内の要旨はフェデレーテッドLLMによる薬物有害反応レビューで、効率化研究とは示されない。一次出版社ページを本screenで取得・確認できず、内容を要旨キャッシュ以上には確定できないため、関係を断定せずborderlineとする。",
+    "first_checked_at": "2026-10-06T18:49:05+00:00",
+    "last_checked_at": "2026-10-06T18:49:05+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Applications of Federated Large Language Model for Adverse Drug Reactions Prediction: Scoping Review"
+  },
+  "processed_at": "2026-10-06T18:49:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f9c63ea180a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

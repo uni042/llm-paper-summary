@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aec9e9365c066f3a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.00663",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.00663",
+    "identity_tokens": [
+      "arXiv:2501.00663"
+    ],
+    "reason": "test-time memory moduleを持つarchitectureで長文脈推論に関係するが、主目的は記憶能力とモデルarchitectureで、推論system効率の最適化ではない。",
+    "first_checked_at": "2026-10-05T22:23:06+00:00",
+    "last_checked_at": "2026-10-05T22:23:06+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Titans: Learning to Memorize at Test Time"
+  },
+  "processed_at": "2026-10-05T22:23:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aec9e9365c06",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

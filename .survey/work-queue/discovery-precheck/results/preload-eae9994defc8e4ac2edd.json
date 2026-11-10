@@ -1,0 +1,889 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "preload-eae9994defc8e4ac2edd",
+  "collector_id": "discovery-preload-forward",
+  "run_key": "preload:preload-eae9994defc8e4ac2edd",
+  "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2402.14800",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2402.14800/citations",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 4,
+  "next_cursor": "80",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "420eb126d82767d9d6f5788dfe32a544af201d3d",
+  "raw_search_result_count": 80,
+  "retrieval_duplicate_filtered_count": 57,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-10-02T23:16:48.249984+00:00",
+  "preload_id": "preload-eae9994defc8e4ac2edd",
+  "preload_seed": true,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 4,
+  "preload_source_request_id": null,
+  "results": [
+    {
+      "title": "DecoMoE: Decoupling Visual Propagation and Expert Computation for Efficient Multimodal MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.38823",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Multimodal mixture-of-experts (MoE) models combine sparse expert activation with visual-language capabilities, yet their inference remains costly because long visual-token sequences repeatedly incur attention, routing, dispatch, and expert-MLP computation. Existing methods typically compress either the token or expert dimension, leaving redundancy along the other. Our analysis reveals two complementary regularities: the depth required for visual propagation varies across inputs, while text-token routing exhibits concentrated and recurrent expert-importance patterns. Based on these observations, we propose DecoMoE, a two-dimensional structured compression framework that decouples visual propagation from expert computation. The Sample-Adaptive Visual Boundary (SAVB) predicts an input-dependent visual-exit layer at which the visual-token block is removed. The Routing-Calibrated Expert Prefix (RCEP) reorders experts offline using text-token routed mass and, from this predicted exit layer onward, retains at each MoE layer the shortest contiguous prefix covering a target routed-mass fraction. We evaluate DecoMoE on Qwen3-VL-MoE and InternVL3.5-30B-A3B across six benchmarks. On Qwen3-VL-MoE, DecoMoE retains 97.91% of dense-baseline performance while reducing computation from 27.06 to 16.73 TFLOPs and latency from 0.44 to 0.26 seconds, yielding a 1.69x speedup. Code will be available at https://github.com/ShawnTan86/DecoMoE.",
+      "canonical_id": "arXiv:2609.38823",
+      "arxiv_id": "2609.38823",
+      "authors": [
+        "Xu-Dong Tan",
+        "Peng Ye",
+        "Ming Xie",
+        "Chen-Yu Huang",
+        "Yao-Xin Yang",
+        "Jia-Yuan Fan",
+        "Tao Chen"
+      ]
+    },
+    {
+      "title": "MoRA: MoE Pruning via Router Bias Learning and Expert Approximation",
+      "source_url": "https://arxiv.org/abs/2610.00367",
+      "year": 2026,
+      "published": "2026-09-30",
+      "abstract": "Mixture-of-Experts (MoE) models enable parameter scaling with limited per-token computation by activating only a small subset of experts for each token, but deploying them still requires loading the complete expert pool into memory. Structured expert pruning can effectively reduce the memory usage by removing experts. However, existing pruning methods either use expert ranking criteria that are not well aligned with model performance or rely on effective expert subset searching that is computationally expensive. Moreover, these methods typically overlook the routing-behavior redundancy among the retained experts. In this paper, we propose MoE Pruning via Router Bias Learning and Expert Approximation (MoRA), a framework for structured MoE expert pruning. We introduce a learnable router bias for each expert and optimize these biases by minimizing the language-modeling loss and a routing-diversity regularizer. The learned router biases sharpen the routing probability distributions to identify experts critical to model performance while encouraging the selection of experts with diverse routing preferences. In addition, we introduce an expert approximation mechanism as a post-pruning enhancement. It leverages the remaining experts to approximate the outputs of pruned experts by affine transformation, further improving the performance of the pruned model. We evaluate MoRA on Qwen3-30B-A3B, DeepSeek-V2-Lite, and Moonlight-16B-A3B, removing 25\\% and 50\\% of the routed experts in each MoE layer. Extensive experiments on nine zero-shot benchmarks show that MoRA outperforms state-of-the-art pruning algorithms. Our code will be released.",
+      "canonical_id": "arXiv:2610.00367",
+      "arxiv_id": "2610.00367",
+      "authors": [
+        "Yu-Shuai Sun",
+        "Zi-Kun Zhou",
+        "Lin Gao",
+        "Jun Yu",
+        "Wen-Jie Pei"
+      ]
+    },
+    {
+      "title": "DIET: Deletion-response Expert Trimming for Video Diffusion Transformers",
+      "source_url": "https://arxiv.org/abs/2609.37829",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Video diffusion transformers (DiTs) increasingly adopt mixture-of-experts (MoE) architectures to reduce active computation, but their full expert storage remains costly. Existing one-shot pruning criteria mainly rely on static activation or routing statistics and cannot capture layer-level re-routing after expert deletion. We introduce DIET, a training-free expert pruning framework based on deletion responses. A single all-expert calibration pass records expert outputs and router states for matched conditional and unconditional tokens. Candidate deletions are then replayed from cached tensors, requiring no additional model forward passes. The resulting deletion-response signatures characterize each expert by the changes induced when it is removed. DIET selects retained experts by minimizing Overall Diversity Loss (ODL), which preserves directional coverage in signature space, and combines intra-layer local search with an inter-layer regression-guided budget search to allocate experts across layers. On LingBot-Video 30B-A3B, pruning 50% of experts (6,144 to 3,072) reduces the checkpoint from 57 GB to 30 GB and enables single-card deployment on a 48 GB GPU without fine-tuning. Under a fixed 284-case VBench protocol, the VBench Total increases from 0.7941 to 0.8115. Across tested retention budgets, DIET consistently outperforms competitive pruning baselines adapted from large language models.",
+      "canonical_id": "arXiv:2609.37829",
+      "arxiv_id": "2609.37829",
+      "authors": [
+        "Jia-Chang Zhang",
+        "Teng Hu",
+        "Bo-Hao Feng",
+        "Song-Hang Shen",
+        "Wen-Qiang Wang",
+        "Hong-Qian Deng",
+        "Ran Yi"
+      ]
+    },
+    {
+      "title": "SCORAS-MoE: Joint Compression and Resource-Adaptive Deployment of MoE-VLMs in LEO Satellite Networks",
+      "source_url": "https://arxiv.org/abs/2609.36763",
+      "year": 2026,
+      "published": "2026-09-29",
+      "abstract": "Deploying large vision-language models (VLMs) onboard satellites enables onboard data processing and reduces raw data downlink. However, onboard inference faces two resource challenges. Limited onboard memory and energy require model compression and distributed deployment. Dynamic resource availability requires fast deployment decisions as illumination, battery levels, and communication conditions change. We present SCORAS-MoE, a joint compression and deployment framework for mixture-of-experts (MoE) VLMs in low Earth orbit (LEO) satellite networks. To address limited resources, SCORAS-MoE measures the perturbation of the routed MoE output caused by low-rank approximation, assigns higher ranks to more sensitive experts, and distributes compressed model shards across satellites for cooperative inference. The compressed models yield profiles of measured accuracy and inference energy. To adapt to dynamic resources, the online scheduler selects profile compositions and shard placements in each slot. For each candidate composition, it reduces placement to a minimum-cost assignment problem solved by the Hungarian algorithm, while enumerating the compositions yields the optimal deployment for the current-slot objective. Experiments on Qwen3-VL-30B-A3B-Instruct show that allocating ranks based on output perturbation is particularly effective under aggressive compression, with an absolute gain of $3.7\\%$ in mean accuracy over uniform rank allocation when expert projections retain $30\\%$ of their original parameters. The fixed-profile scheduler achieves higher throughput with fewer service switches and lower battery impact than the evaluated proximal policy optimization (PPO) and evolutionary baselines, with respective speedups of $8.7\\times$ and $183.5\\times$. Adaptive profile selection further improves the balance between service quality and energy use.",
+      "canonical_id": "arXiv:2609.36763",
+      "arxiv_id": "2609.36763",
+      "authors": [
+        "Tong Quan",
+        "Yuan-Long Wan",
+        "Hua-Sen He",
+        "Yun-Peng Hou",
+        "Shuang-Wu Chen",
+        "Xiao-Feng Jiang",
+        "Jian Yang"
+      ]
+    },
+    {
+      "title": "MaskCoFT: Masked Co-Adaptive Fine-Tuning for Memory-Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.34077",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Mixture-of-experts (MoE) language models often exceed the memory of a single GPU. Expert offloading keeps most experts in host memory and loads them on demand, so decoding speed depends on how many experts each token must fetch. Caching and prefetching reduce this cost only as far as the routing allows. Router-only fine-tuning can reshape the routing to reuse experts, but it keeps the experts frozen, so they cannot adapt to the tokens the new routing sends them. We propose MaskCoFT, a masked co-adaptive fine-tuning method that trains routers and experts together with the cross-entropy loss alone. During fine-tuning, a learnable binary mask restricts the Top-K routing of each layer to a subset of experts, and the experts adapt to the tokens redirected to them. At inference, the learned mask becomes a soft prior that re-ranks experts, so every expert remains selectable. We simulate a GPU cache of 4 experts per layer for Mixtral-8x7B and 12 for DeepSeek-V2-Lite. MaskCoFT cuts expert fetches per token by 23.7% and 10.1% relative to the base model. In real offloading system serving, it lowers the time per output token by up to 16.4% and 5.5%, respectively. Its average accuracy over nine benchmarks stays above the base model by 0.92 and 0.53 points.",
+      "canonical_id": "arXiv:2609.34077",
+      "arxiv_id": "2609.34077",
+      "authors": [
+        "Junfeng Wu",
+        "Ze-Hao Fan",
+        "Hadjer Benmeziane",
+        "K. El Maghraoui",
+        "Liu Liu",
+        "Yi-Nan Wang"
+      ]
+    },
+    {
+      "title": "BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding",
+      "source_url": "https://arxiv.org/abs/2609.36222",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Large language models are increasingly expensive to serve. In large-scale serving systems, autoregressive decoding is often bottlenecked by transferring model weights from accelerator high-bandwidth memory into on-chip SRAM. Mixture-of-experts (MoE) models reduce computation by activating only a small subset of experts per token, but this sparsity does not translate directly to batched decoding. Different requests select different experts; therefore, the combined active set across many concurrent requests can span a substantial fraction of the expert pool and require significantly more expert weights to be transferred. Most expert-reduction techniques make retention decisions independently for each token and therefore do not address this batch-level expansion. More recently, batch-aware methods have attempted to coordinate expert use across concurrent requests and reuse experts already fetched for the batch. Yet their selection criteria are based primarily on router rankings or expert statistics collected during calibration. Consequently, these criteria are not directly tied to the output error caused by dropping an expert, nor do they capture how an expert's contribution changes across tokens at inference time. We instead rank experts according to how much their removal would change the MoE-layer output. To apply this criterion during serving, we train a lightweight linear predictor during calibration that estimates the expert removal cost for each incoming token, and develop custom GPU kernels for cost prediction and expert selection. Across three MoE architectures, BASE improves the quality-efficiency tradeoff without retraining. On Qwen3-30B-A3B, it improves average accuracy by 29.5 points over the strongest baseline at comparable throughput under a tight expert budget. At a higher expert budget, it is 60% faster than dense inference while remaining within 0.4 accuracy points.",
+      "canonical_id": "arXiv:2609.36222",
+      "arxiv_id": "2609.36222",
+      "authors": [
+        "Ali Abbasi",
+        "Justin Shi",
+        "Soheil Kolouri"
+      ]
+    },
+    {
+      "title": "RAZOR: Pruning Replaceable Experts in LLMs",
+      "source_url": "https://arxiv.org/abs/2609.30465",
+      "year": 2026,
+      "published": "2026-09-24",
+      "abstract": "Mixture-of-experts (MoE) models activate only a few experts per token but store the entire expert pool. Pruning this pool requires identifying experts whose removal preserves model behavior. Routing frequency and output magnitude do not fully describe deletion damage, which also depends on how the surviving and replacement experts compensate for the removed output. We introduce RAZOR, a training-free pruning method based on consensus residuals, the deviations of expert outputs from their original weighted mixture. At a fixed layer input, these residuals give the exact output change for a single deletion under survivor renormalization and router refill. RAZOR aggregates this damage by conditional root mean square and selects experts under a layerwise budget using forward computation alone, without gradients, subset search, or recovery training. Against frequency, activation-norm, and REAP baselines on GLM-4.7-Flash and Qwen3.6-35B-A3B at 25% and 50% expert removal, it attains the highest macro average over nine reasoning-intensive tasks in all four model-budget settings, gaining 2.12-5.59 points over REAP and lowering reverse KL in all four. On DeepSeek-V4-Flash-0731 and Hy3, it also achieves the highest macro average among the three residual criteria. Local exactness does not guarantee better joint pruning. Generation analyses show changes in diversity, formatting, and termination despite higher task scores.",
+      "canonical_id": "arXiv:2609.30465",
+      "arxiv_id": "2609.30465",
+      "authors": [
+        "Ming-Yang Song",
+        "Mao Zheng"
+      ]
+    },
+    {
+      "title": "You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs",
+      "source_url": "https://arxiv.org/abs/2609.25809",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Fine-grained mixture-of-experts (MoE) architectures have become a mainstream design for open-weight LLMs, with hundreds of experts and increasingly many selected per token. This shift makes dynamic expert pruning an attractive route to cheaper inference. Yet existing evidence comes largely from coarser architectures and likelihood-scored multiple-choice benchmarks, leaving three central questions open in the fine-grained regime: how redundant per-token expert selection is, how effectively existing pruning methods exploit that redundancy, and what governs a model's sensitivity to pruning. We fill this gap with a systematic empirical study of twelve fine-grained MoE checkpoints spanning nine architecture families, with a core suite of eleven benchmarks covering knowledge QA, mathematics, code generation, and general reasoning. We find that expert selection is far more redundant than the field's operating points assume: uniformly retaining about two thirds of the selected experts preserves 98.8% of unpruned performance on average, requiring only a one-integer change and delivering 1.2-1.7x measured speedup across two serving backends. This simple baseline leaves little room for dynamic allocation at conservative budgets: even the best published rules differ from it by under 1% at matched expert budgets. Their value emerges under aggressive pruning, where the best rules recover up to 3.0% over uniform truncation, with gains concentrated in the generative tasks that suffer the sharpest degradation. Sensitivity to aggressive pruning also depends on the model: larger and thinking models are more resilient, whereas multimodal models are more vulnerable. Together, these findings reveal how much expert computation fine-grained MoEs can dispense with, and establish when dynamic allocation earns its complexity, informing both practical deployment and future pruning methods.",
+      "canonical_id": "arXiv:2609.25809",
+      "arxiv_id": "2609.25809",
+      "authors": [
+        "Yuan-Teng Chen",
+        "Qi-Wei Lai",
+        "Tian-Qi Chen",
+        "Peisong Wang",
+        "Yuan-Tian Shao",
+        "Nan-Xin Zeng",
+        "Zhi-Lei Liu",
+        "Chuang-Yi Li",
+        "Jing Liu",
+        "Jian Cheng"
+      ]
+    },
+    {
+      "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
+      "source_url": "https://arxiv.org/abs/2609.18842",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "Scaling laws hold that language models grow more capable with more parameters and more training data. Mixture-of-Experts (MoE) architectures are a remarkable demonstration of these laws, activating only a fraction of an enormous parameter bank for each token. But this success is built on static pretraining data --- the facts and corrections supplied by users during live interactions are a significant untapped source of potential improvement for a deployed model, but cannot be exploited by conventional architectures whose weights are frozen after training. Instead, this newfound knowledge must be placed in the context (by instruction or retrieval) and re-read on every request, only to be discarded afterwards. We seek instead to learn from live interactions by dynamically updating model weights. Inspired by MoEs, we propose the \\textbf{Infinite-Parameter LLM}. A compact hypernetwork turns the online data into low-rank modulations of a shared base network, so feed-forward weights are generated from live data, not read from static memory. Whereas existing weight generators are held fixed after reading the context once, we form a Bayesian belief over the generator's latent state and update it online, such that the effective weights are re-derived as our belief evolves during the session. Although the model's memory footprint is constant, the feasible space of generated weights is thus effectively infinite. Representing live data in the weights rather than the prompt amortises compute, frees the context window, persists updates across turns, and can generalise better than in-context use. Our evaluation protocol applies this methodology to in-context learning and retrieval.",
+      "canonical_id": "arXiv:2609.18842",
+      "arxiv_id": "2609.18842",
+      "authors": [
+        "Jin-Lin Hu",
+        "Ross M. Clarke",
+        "Yi-Chuan Zhang",
+        "José Miguel Hernández-Lobato"
+      ]
+    },
+    {
+      "title": "OMP-MoE: Efficient Expert Pruning for Mixture-of-Experts LLMs via Orthogonal Matching Pursuit",
+      "source_url": "https://arxiv.org/abs/2609.31631",
+      "year": 2026,
+      "published": "2026-09-09",
+      "abstract": "Mixture-of-Experts (MoE) models enable efficient scaling of large language models but face critical deployment challenges due to massive memory requirements. Existing pruning methods either incur prohibitive search costs or neglect the dynamic interdependencies between experts. To address these challenges, we present OMP-MoE, a novel training-free compression framework for reducing expert redundancy in MoE-based LLMs. Based on observations of expert contribution patterns, we reformulate the pruning problem as a sparse signal reconstruction task solved through Orthogonal Matching Pursuit. Specifically, our method first treats individual expert contributions as dictionary atoms and selects experts that greedily minimize reconstruction error with linear computational complexity. Then, we optimize cross-layer expert allocation through a water-filling strategy that accounts for both reconstruction quality and routing stability. Finally, we introduce OMP-MoE{\\dag}, an adaptive inference mechanism that dynamically adjusts expert activation based on energy prediction. Comprehensive experiments on Qwen, DeepSeek-V2, GPT-OSS, and Mixtral MoE demonstrate consistent improvements over existing methods at 25-50% pruning ratios. For Qwen3-30B-A3B at 50% compression, we retain 93.3% of original performance, achieving 33$\\times$ faster search and 1.55$\\times$ inference speedup. Codes will be available after acceptance.",
+      "canonical_id": "arXiv:2609.31631",
+      "arxiv_id": "2609.31631",
+      "authors": [
+        "De-Zhi Li",
+        "Lu-Jun Li",
+        "Qi-Yuan Zhu",
+        "Hao Gu",
+        "Bei-Song Liu",
+        "Si-Rui Han",
+        "Yi-Ke Guo"
+      ]
+    },
+    {
+      "title": "When Compression Scores Cannot Decide: Information Boundaries for Group-Robust LLM Pruning",
+      "source_url": "https://arxiv.org/abs/2608.02940",
+      "year": 2026,
+      "published": "2026-08-03",
+      "abstract": "A stable compression score can still select the worse model. In our dense study, a split-half reliable path-quadratic score predicted a 16.1\\% gain, while the selected endpoints were 6.0--7.7% worse than two controls. We ask what a compression statistic can justify when deployment cares about the worst supplied group. We treat each statistic as an information interface. Its observation leaves a fiber of compatible endpoint-risk tables, and only orders fixed across that fiber are identified. Cone and fiber identities quantify the remaining uncertainty, while matched observations reverse endpoint order for pooled moments, group-local moments, and reference-path curvature. Sequential composition adds one state variable: the slack from each group risk to the current maximum. This vector determines every unrestricted one-step response, and a margin condition keeps the active group fixed along paths with bounded relative drift. The experiments follow the same ladder. Across three dense LLMs, an early-preserving allocation reduces worst-group perplexity inflation by 12.6--20.9%; target-matched complete-menu selection improves over its references by 2.7--8.0%. Across all 16 routed layers of OLMoE, pooled endpoint refresh lowers held-out worst-group teacher KL by 15.8% over the best static score. A compute-matched hard-max trajectory ends 32.7% worse than pooled, and neither adaptive trajectory improves excess NLL. Local evidence can narrow a menu. Complete endpoints rank that menu, while multistep claims also require control of the evolving active face and future candidates.",
+      "canonical_id": "arXiv:2608.02940",
+      "arxiv_id": "2608.02940",
+      "authors": [
+        "An Zhang"
+      ]
+    },
+    {
+      "title": "Beyond Geometric Complementarity: Coherent Overlap in Sparse Mixture-of-Experts Routing",
+      "source_url": "https://arxiv.org/abs/2607.28308",
+      "year": 2026,
+      "published": "2026-07-30",
+      "abstract": "Sparse mixture-of-experts (MoE) language models route each token to multiple experts, suggesting a geometric account of their benefit: co-selected experts should contribute distinct representation directions. Existing evidence often conflates route coherence, candidate quality, and candidate-by-context interaction. We distinguish these quantities using an Expert Subspace Separation Index (ESSI), matched-route residuals, and a prefix-controlled $2\\times2$ factorial; frozen-route interventions and a controlled Top-$k$ study assess functional value. Three paired contrasts organize the findings. First, across six MoE architectures, expert subspaces overlap substantially, yet actual routes explain token representations better than matched alternatives. Second, across the 39 factorial cells in OLMoE, Mixtral, and DeepSeek, the selected candidate explains more of the residual representation than the strongest unselected rival in every cell, yet the actual prefix narrows this advantage throughout: all interactions are negative, and every 95% confidence interval lies below zero. Third, this geometric narrowing does not imply functional redundancy: adding later experts improves next-token prediction in 24 of 39 frozen-route comparisons, while the other 15 estimates are inconclusive; a controlled training study also favors Top-2 over Top-1 in all three seeds. We call this joint pattern coherent overlap: routing selects token-relevant experts from a shared geometric neighborhood, while useful multi-expert computation persists without disjoint linear coverage. Separating these quantities clarifies why geometric similarity alone cannot determine redundancy or pruning value.",
+      "canonical_id": "arXiv:2607.28308",
+      "arxiv_id": "2607.28308",
+      "doi": "10.48550/arXiv.2607.28308",
+      "authors": [
+        "Huiyuan Tian",
+        "Bonan Xu",
+        "Shi-Jian Li"
+      ]
+    },
+    {
+      "title": "Agentic Mobile AI Systems: From Post-Hoc Optimization to Runtime-Elastic Realization",
+      "source_url": "https://doi.org/10.1016/j.inffus.2026.104630",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "doi": "10.1016/j.inffus.2026.104630",
+      "canonical_id": "DOI:10.1016/j.inffus.2026.104630",
+      "authors": [
+        "Sicong Liu",
+        "Wei-Ye Wu",
+        "Xiangrui Xu",
+        "Teng Li",
+        "Bowen Pang",
+        "Wen-Tao Zhou",
+        "Bin Guo",
+        "Zhi-Wen Yu"
+      ]
+    },
+    {
+      "title": "SARA: Unlocking Multilingual Knowledge in Mixture-of-Experts via Semantically Anchored Routing Alignment",
+      "source_url": "https://arxiv.org/abs/2606.25821",
+      "year": 2026,
+      "published": "2026-06-24",
+      "abstract": "Sparse Mixture-of-Experts (MoE) architectures have emerged as an increasingly influential paradigm as they offer a strategic balance between parameter scalability and computational efficiency. However, low-resource languages, which suffer from a scarcity of high-quality training data, often have their tokens routed to different experts than those predominantly activated by high-resource inputs, which limits cross-lingual expert sharing. This cross-lingual routing divergence consequently hinders their efficacy in multilingual contexts. To address this issue, we propose SARA (Semantically Anchored Routing Alignment), a framework designed to transfer specialized capabilities from high-resource languages as anchors to low-resource languages. SARA explicitly aligns the routing distribution of multilingual inputs with high-resource semantic anchors using a symmetric Jensen-Shannon (JS) divergence constraint. Unlike traditional distillation methods that operate on output logits, SARA directly aligns the internal routing distributions of MoE layers, encouraging mechanistic consistency in expert selection across languages. We conduct experiments on 2 LLMs across 5 low-resource languages and 3 benchmarks. Experiment results demonstrate that SARA outperforms standard instruction tuning, e.g., +0.8% on Qwen3-30B-A3B and +1.2% on Phi-3.5-MoE-instruct on Global-MMLU. Further analyses show that SARA effectively addresses performance bottlenecks in low-resource languages, providing a scalable pathway to enhance multilingual capabilities in sparse architectures.",
+      "canonical_id": "arXiv:2606.25821",
+      "arxiv_id": "2606.25821",
+      "doi": "10.18653/v1/2026.findings-acl.136",
+      "authors": [
+        "Tianyu Dong",
+        "Yang-Yang Liu",
+        "Jiang Zhou",
+        "Xin-Wei Wu",
+        "Xiaohu Zhao",
+        "Hao Wang",
+        "Heng Liu",
+        "Lin-Long Xu",
+        "Long-Yue Wang",
+        "Wei-Hua Luo",
+        "Shao-Lin Zhu",
+        "Deyi Xiong"
+      ]
+    },
+    {
+      "title": "BIG-TM: Bridging Individual Guidance with Trifusion MoPoE for Chinese memes understanding",
+      "source_url": "https://doi.org/10.1016/j.knosys.2026.116137",
+      "year": 2026,
+      "published": "2026-06-01",
+      "abstract": null,
+      "doi": "10.1016/j.knosys.2026.116137",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116137",
+      "authors": [
+        "Tongguan Wang",
+        "Jun-Kai Li",
+        "Feiyue Xue",
+        "Dongyu Su",
+        "Guixin Su",
+        "Xiaopeng Wen",
+        "Ying Sha"
+      ]
+    },
+    {
+      "title": "Tackling Multimodal Learning Challenges with Mixture-of-Expert: A Survey",
+      "source_url": "https://arxiv.org/abs/2605.27431",
+      "year": 2026,
+      "published": "2026-05-22",
+      "abstract": "Mixture-of-Experts (MoE) presents a naturally compatible and scalable framework for multimodal learning, demonstrating strong adaptability across diverse modalities and tasks. Despite its growing success, a comprehensive and systematic evaluation of multimodal MoE remains lacking. Existing surveys tend to address either multimodal learning or MoE independently, overlooking the unique interplay between them. This survey fills that gap by addressing a central question: How does MoE effectively resolve multimodal challenges? We approach this from three key perspectives: (1) MoE as an Efficient Multimodal Framework: enabling scalable multimodal modeling by decoupling computational cost from parameter growth and mitigating modality redundancy through selective expert activation; (2) MoE as a Multimodal Representation Learner: integrating complementary multi-opinion expert knowledge to enrich alignment and interaction representations; and (3)MoE as a Multimodal Adapter: providing a modular and flexible mechanism to model imperfect modality data such as modality imbalance and missing modality. Through an extensive literature review, we identify critical research gaps, including interpretable routing, expert communication, modality integration, and lifelong multimodal learning. We position this survey as a foundation for future research toward interpretable, adaptive, and sustainable multimodal Mixture-of-Experts systems.",
+      "canonical_id": "arXiv:2605.27431",
+      "arxiv_id": "2605.27431",
+      "doi": "10.48550/arXiv.2605.27431",
+      "authors": [
+        "L. Zheng",
+        "Wei Zhang",
+        "Olaf Maennel",
+        "Lin Yue",
+        "Wei-Tong Chen"
+      ]
+    },
+    {
+      "title": "INSTANT: Inference-Aware Fast Feedforward Networks",
+      "source_url": "https://doi.org/10.1145/3815117",
+      "year": 2026,
+      "published": "2026-05-04",
+      "abstract": "Many embedded applications have strict energy, memory, and time constraints, making neural network (NN) inference particularly challenging. Recently, a novel NN architecture, called Fast Feedforward Networks (FFFs), has been proposed to achieve inference with extremely lightweight computational demands and minimal latency. Yet, compared to feedforward networks with similar sizes, FFFs still lag behind in terms of performance, indicating that they do not utilize all of their parameters effectively. In this article, we explore a possible reason for this performance gap: the uncertainty in how samples are assigned to the network’s leaves. We attempt to overcome this challenge by making FFFs’ training inference-aware, hence introducing Inference-Aware Fast Feedforward Networks (IAFFFs). We imitate FFFs’ inference during training by using a step activation function alongside the traditional sigmoid activation function. We test different aware scheduling methods, which we dub “awareness scheduler”, to adjust the balance between the two activation functions during training, and examine how different schedules impact the model’s performance. Additionally, we employ leaf-weight virtualization with inference-aware retraining to compress our models so they can fit onto edge devices. We further employ an iterative compression approach to find an optimal awareness scheduler for compression to minimize performance drop due to compression. We experiment with different model sizes on various microcontrollers (MCUs) with different memory constraints to observe the latency and energy consumption introduced by the compression algorithm.",
+      "doi": "10.1145/3815117",
+      "canonical_id": "DOI:10.1145/3815117",
+      "authors": [
+        "Renan Beran Kilic",
+        "K. S. Yıldırım",
+        "Giovanni Iacca"
+      ]
+    },
+    {
+      "title": "Model Compression with Exact Budget Constraints via Riemannian Manifolds",
+      "source_url": "https://arxiv.org/abs/2605.00649",
+      "year": 2026,
+      "published": "2026-05-01",
+      "abstract": "Assigning one of K options to each of N groups under a total cost budget is a recurring problem in efficient AI, arising in mixed-precision quantization, non-uniform pruning, and expert selection. The objective (model loss) depends on all assignments jointly and does not decompose across groups, so combinatorial solvers can only optimize proxy objectives. Evolutionary search evaluates the actual loss but lacks gradients, while penalty-based methods enforce the budget only approximately and often require heavy hyperparameter tuning. We show that under softmax relaxation, the budget constraint defines a smooth Riemannian manifold in logit space with unusually clean geometry: the normal vector is available in closed form, shifting logits along the cost vector changes expected cost monotonically, and vector transport reduces to a single inner product. Building on this, we propose Riemannian Constrained Optimization (RCO), which wraps tangent projection, binary-search retraction, and momentum transport around a standard Adam step. Combined with Gumbel straight-through estimation and budget-constrained dynamic programming for discrete feasibility, RCO optimizes the actual loss with first-order methods, enforces the expected budget exactly at every iterate, and introduces no constraint-related hyperparameters. The same construction handles multiple simultaneous budgets with no additional coefficients. RCO matches or exceeds state-of-the-art methods on synthetic problems and realistic LLM compression settings, often at considerably lower wall-clock cost. Source code is available at https://github.com/IST-DASLab/RCO.",
+      "canonical_id": "arXiv:2605.00649",
+      "arxiv_id": "2605.00649",
+      "doi": "10.48550/arXiv.2605.00649",
+      "authors": [
+        "Michael A. Helcig",
+        "Dan Alistarh"
+      ]
+    },
+    {
+      "title": "Preserving Long-Tailed Expert Information in Mixture-of-Experts Tuning",
+      "source_url": "https://arxiv.org/abs/2604.23036",
+      "year": 2026,
+      "published": "2026-04-24",
+      "abstract": "Despite MoE models leading many benchmarks, supervised fine-tuning (SFT) for the MoE architectures remains difficult because its router layers are fragile. Methods such as DenseMixer and ESFT mitigate router collapse with dense mixing or auxiliary load-balancing losses, but these introduce noisy gradients that often degrade performance. In preliminary experiments, we systematically pruned experts and observed that while certain super experts are activated far more frequently, discarding less used experts still leads to notable performance degradation. This suggests that even rarely activated experts encode non-trivial knowledge useful for downstream tasks. Motivated by this, we propose an auxiliary-loss-free MoE SFT framework that combines bias-driven sparsification with always-active gated condenser experts. Rather than enforcing balanced activation across all experts, our method encourages task-relevant experts to remain active while pushing long-tailed experts toward inactivity. The condenser experts provide a persistent, learnable pathway that alleviates gradient starvation and facilitates consolidation of information that would otherwise remain fragmented across sparsely activated experts. Analysis further suggest that this design better preserves long-tailed expert information under sparse routing. Experiments on large-scale MoE models demonstrate that our approach outperforms state-of-the-art SFT baselines such as DenseMixer and ESFT, achieving average gain of 2.5%+ on both mathematical reasoning and commonsenseQA benchmarks.",
+      "canonical_id": "arXiv:2604.23036",
+      "arxiv_id": "2604.23036",
+      "doi": "10.48550/arXiv.2604.23036",
+      "authors": [
+        "Haoze He",
+        "Xingyuan Ding",
+        "Xuan Jiang",
+        "Xinkai Zou",
+        "A. Cheng",
+        "Yibo Zhao",
+        "Juncheng B. Li",
+        "Heather Miller"
+      ]
+    },
+    {
+      "title": "MePe: Rethinking Multimodal Chinese Idiom Reading Comprehension from a Metaphorical Perspective",
+      "source_url": "https://doi.org/10.1145/3774904.3792291",
+      "year": 2026,
+      "published": "2026-04-12",
+      "abstract": "The multimodal Chinese idiom reading comprehension task aims to select the most appropriate idiom from a candidate list via the given text and image. This poses a significant challenge for the model to comprehend each Chinese idiom accurately. Existing multimodal Chinese idiom reading comprehension methods primarily focus on aligning contextual text and images, while overlooking two key attributes of Chinese idioms.(1) There is a discrepancy between the literal and metaphorical meanings of Chinese idioms. (2) The same Chinese idiom has different meanings in different scenarios, which requires targeted understanding by experts who specialize in different fields. To address the above challenges, we rethink the solution to the multimodal idiom reading comprehension task from a metaphorical perspective and propose a framework named MePe. Firstly, we propose a literal metaphorical semantic graph that systematically transforms the implicit discrepancy between the literal and metaphorical meanings of Chinese idioms into structured explicit relationships, thereby making metaphorical meanings more understandable. Then, we propose a mixture of idiom experts consisting of a literal idiom expert and a metaphorical idiom expert. Through division of labor and collaboration among these experts, we achieve an understanding of the dual meanings of Chinese idioms across different scenarios. Finally, we employ the maximum mean discrepancy to adjust the variance between the literal and metaphorical semantic features of Chinese idioms. By mapping these features onto a shared reproducing kernel Hilbert space, the model can better distinguish between the two based on contextual clues. Extensive experiments demonstrate that MePe achieves state-of-the-art performance on the MChIRC dataset.",
+      "doi": "10.1145/3774904.3792291",
+      "canonical_id": "DOI:10.1145/3774904.3792291",
+      "authors": [
+        "Tongguan Wang",
+        "Jun-Kai Li",
+        "Feiyue Xue",
+        "Hui Liu",
+        "Dongyu Su",
+        "Wang-Jun Huang",
+        "Ying Sha"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.38823",
+      "identity_tokens": [
+        "id:arXiv:2609.38823",
+        "title:decomoe decoupling visual propagation and expert computation for efficient multimodal moe inference",
+        "url:https://arxiv.org/abs/2609.38823"
+      ],
+      "record": {
+        "title": "DecoMoE: Decoupling Visual Propagation and Expert Computation for Efficient Multimodal MoE Inference",
+        "source_url": "https://arxiv.org/abs/2609.38823",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Multimodal mixture-of-experts (MoE) models combine sparse expert activation with visual-language capabilities, yet their inference remains costly because long visual-token sequences repeatedly incur attention, routing, dispatch, and expert-MLP computation. Existing methods typically compress either the token or expert dimension, leaving redundancy along the other. Our analysis reveals two complementary regularities: the depth required for visual propagation varies across inputs, while text-token routing exhibits concentrated and recurrent expert-importance patterns. Based on these observations, we propose DecoMoE, a two-dimensional structured compression framework that decouples visual propagation from expert computation. The Sample-Adaptive Visual Boundary (SAVB) predicts an input-dependent visual-exit layer at which the visual-token block is removed. The Routing-Calibrated Expert Prefix (RCEP) reorders experts offline using text-token routed mass and, from this predicted exit layer onward, retains at each MoE layer the shortest contiguous prefix covering a target routed-mass fraction. We evaluate DecoMoE on Qwen3-VL-MoE and InternVL3.5-30B-A3B across six benchmarks. On Qwen3-VL-MoE, DecoMoE retains 97.91% of dense-baseline performance while reducing computation from 27.06 to 16.73 TFLOPs and latency from 0.44 to 0.26 seconds, yielding a 1.69x speedup. Code will be available at https://github.com/ShawnTan86/DecoMoE.",
+        "canonical_id": "arXiv:2609.38823",
+        "arxiv_id": "2609.38823",
+        "authors": [
+          "Xu-Dong Tan",
+          "Peng Ye",
+          "Ming Xie",
+          "Chen-Yu Huang",
+          "Yao-Xin Yang",
+          "Jia-Yuan Fan",
+          "Tao Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00367",
+      "identity_tokens": [
+        "id:arXiv:2610.00367",
+        "title:mora moe pruning via router bias learning and expert approximation",
+        "url:https://arxiv.org/abs/2610.00367"
+      ],
+      "record": {
+        "title": "MoRA: MoE Pruning via Router Bias Learning and Expert Approximation",
+        "source_url": "https://arxiv.org/abs/2610.00367",
+        "year": 2026,
+        "published": "2026-09-30",
+        "abstract": "Mixture-of-Experts (MoE) models enable parameter scaling with limited per-token computation by activating only a small subset of experts for each token, but deploying them still requires loading the complete expert pool into memory. Structured expert pruning can effectively reduce the memory usage by removing experts. However, existing pruning methods either use expert ranking criteria that are not well aligned with model performance or rely on effective expert subset searching that is computationally expensive. Moreover, these methods typically overlook the routing-behavior redundancy among the retained experts. In this paper, we propose MoE Pruning via Router Bias Learning and Expert Approximation (MoRA), a framework for structured MoE expert pruning. We introduce a learnable router bias for each expert and optimize these biases by minimizing the language-modeling loss and a routing-diversity regularizer. The learned router biases sharpen the routing probability distributions to identify experts critical to model performance while encouraging the selection of experts with diverse routing preferences. In addition, we introduce an expert approximation mechanism as a post-pruning enhancement. It leverages the remaining experts to approximate the outputs of pruned experts by affine transformation, further improving the performance of the pruned model. We evaluate MoRA on Qwen3-30B-A3B, DeepSeek-V2-Lite, and Moonlight-16B-A3B, removing 25\\% and 50\\% of the routed experts in each MoE layer. Extensive experiments on nine zero-shot benchmarks show that MoRA outperforms state-of-the-art pruning algorithms. Our code will be released.",
+        "canonical_id": "arXiv:2610.00367",
+        "arxiv_id": "2610.00367",
+        "authors": [
+          "Yu-Shuai Sun",
+          "Zi-Kun Zhou",
+          "Lin Gao",
+          "Jun Yu",
+          "Wen-Jie Pei"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37829",
+      "identity_tokens": [
+        "id:arXiv:2609.37829",
+        "title:diet deletionresponse expert trimming for video diffusion transformers",
+        "url:https://arxiv.org/abs/2609.37829"
+      ],
+      "record": {
+        "title": "DIET: Deletion-response Expert Trimming for Video Diffusion Transformers",
+        "source_url": "https://arxiv.org/abs/2609.37829",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Video diffusion transformers (DiTs) increasingly adopt mixture-of-experts (MoE) architectures to reduce active computation, but their full expert storage remains costly. Existing one-shot pruning criteria mainly rely on static activation or routing statistics and cannot capture layer-level re-routing after expert deletion. We introduce DIET, a training-free expert pruning framework based on deletion responses. A single all-expert calibration pass records expert outputs and router states for matched conditional and unconditional tokens. Candidate deletions are then replayed from cached tensors, requiring no additional model forward passes. The resulting deletion-response signatures characterize each expert by the changes induced when it is removed. DIET selects retained experts by minimizing Overall Diversity Loss (ODL), which preserves directional coverage in signature space, and combines intra-layer local search with an inter-layer regression-guided budget search to allocate experts across layers. On LingBot-Video 30B-A3B, pruning 50% of experts (6,144 to 3,072) reduces the checkpoint from 57 GB to 30 GB and enables single-card deployment on a 48 GB GPU without fine-tuning. Under a fixed 284-case VBench protocol, the VBench Total increases from 0.7941 to 0.8115. Across tested retention budgets, DIET consistently outperforms competitive pruning baselines adapted from large language models.",
+        "canonical_id": "arXiv:2609.37829",
+        "arxiv_id": "2609.37829",
+        "authors": [
+          "Jia-Chang Zhang",
+          "Teng Hu",
+          "Bo-Hao Feng",
+          "Song-Hang Shen",
+          "Wen-Qiang Wang",
+          "Hong-Qian Deng",
+          "Ran Yi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36763",
+      "identity_tokens": [
+        "id:arXiv:2609.36763",
+        "title:scorasmoe joint compression and resourceadaptive deployment of moevlms in leo satellite networks",
+        "url:https://arxiv.org/abs/2609.36763"
+      ],
+      "record": {
+        "title": "SCORAS-MoE: Joint Compression and Resource-Adaptive Deployment of MoE-VLMs in LEO Satellite Networks",
+        "source_url": "https://arxiv.org/abs/2609.36763",
+        "year": 2026,
+        "published": "2026-09-29",
+        "abstract": "Deploying large vision-language models (VLMs) onboard satellites enables onboard data processing and reduces raw data downlink. However, onboard inference faces two resource challenges. Limited onboard memory and energy require model compression and distributed deployment. Dynamic resource availability requires fast deployment decisions as illumination, battery levels, and communication conditions change. We present SCORAS-MoE, a joint compression and deployment framework for mixture-of-experts (MoE) VLMs in low Earth orbit (LEO) satellite networks. To address limited resources, SCORAS-MoE measures the perturbation of the routed MoE output caused by low-rank approximation, assigns higher ranks to more sensitive experts, and distributes compressed model shards across satellites for cooperative inference. The compressed models yield profiles of measured accuracy and inference energy. To adapt to dynamic resources, the online scheduler selects profile compositions and shard placements in each slot. For each candidate composition, it reduces placement to a minimum-cost assignment problem solved by the Hungarian algorithm, while enumerating the compositions yields the optimal deployment for the current-slot objective. Experiments on Qwen3-VL-30B-A3B-Instruct show that allocating ranks based on output perturbation is particularly effective under aggressive compression, with an absolute gain of $3.7\\%$ in mean accuracy over uniform rank allocation when expert projections retain $30\\%$ of their original parameters. The fixed-profile scheduler achieves higher throughput with fewer service switches and lower battery impact than the evaluated proximal policy optimization (PPO) and evolutionary baselines, with respective speedups of $8.7\\times$ and $183.5\\times$. Adaptive profile selection further improves the balance between service quality and energy use.",
+        "canonical_id": "arXiv:2609.36763",
+        "arxiv_id": "2609.36763",
+        "authors": [
+          "Tong Quan",
+          "Yuan-Long Wan",
+          "Hua-Sen He",
+          "Yun-Peng Hou",
+          "Shuang-Wu Chen",
+          "Xiao-Feng Jiang",
+          "Jian Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34077",
+      "identity_tokens": [
+        "id:arXiv:2609.34077",
+        "title:maskcoft masked coadaptive finetuning for memoryefficient moe inference",
+        "url:https://arxiv.org/abs/2609.34077"
+      ],
+      "record": {
+        "title": "MaskCoFT: Masked Co-Adaptive Fine-Tuning for Memory-Efficient MoE Inference",
+        "source_url": "https://arxiv.org/abs/2609.34077",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Mixture-of-experts (MoE) language models often exceed the memory of a single GPU. Expert offloading keeps most experts in host memory and loads them on demand, so decoding speed depends on how many experts each token must fetch. Caching and prefetching reduce this cost only as far as the routing allows. Router-only fine-tuning can reshape the routing to reuse experts, but it keeps the experts frozen, so they cannot adapt to the tokens the new routing sends them. We propose MaskCoFT, a masked co-adaptive fine-tuning method that trains routers and experts together with the cross-entropy loss alone. During fine-tuning, a learnable binary mask restricts the Top-K routing of each layer to a subset of experts, and the experts adapt to the tokens redirected to them. At inference, the learned mask becomes a soft prior that re-ranks experts, so every expert remains selectable. We simulate a GPU cache of 4 experts per layer for Mixtral-8x7B and 12 for DeepSeek-V2-Lite. MaskCoFT cuts expert fetches per token by 23.7% and 10.1% relative to the base model. In real offloading system serving, it lowers the time per output token by up to 16.4% and 5.5%, respectively. Its average accuracy over nine benchmarks stays above the base model by 0.92 and 0.53 points.",
+        "canonical_id": "arXiv:2609.34077",
+        "arxiv_id": "2609.34077",
+        "authors": [
+          "Junfeng Wu",
+          "Ze-Hao Fan",
+          "Hadjer Benmeziane",
+          "K. El Maghraoui",
+          "Liu Liu",
+          "Yi-Nan Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36222",
+      "identity_tokens": [
+        "id:arXiv:2609.36222",
+        "title:base batchaware selection of experts using predicted removal error for efficient moe decoding",
+        "url:https://arxiv.org/abs/2609.36222"
+      ],
+      "record": {
+        "title": "BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding",
+        "source_url": "https://arxiv.org/abs/2609.36222",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Large language models are increasingly expensive to serve. In large-scale serving systems, autoregressive decoding is often bottlenecked by transferring model weights from accelerator high-bandwidth memory into on-chip SRAM. Mixture-of-experts (MoE) models reduce computation by activating only a small subset of experts per token, but this sparsity does not translate directly to batched decoding. Different requests select different experts; therefore, the combined active set across many concurrent requests can span a substantial fraction of the expert pool and require significantly more expert weights to be transferred. Most expert-reduction techniques make retention decisions independently for each token and therefore do not address this batch-level expansion. More recently, batch-aware methods have attempted to coordinate expert use across concurrent requests and reuse experts already fetched for the batch. Yet their selection criteria are based primarily on router rankings or expert statistics collected during calibration. Consequently, these criteria are not directly tied to the output error caused by dropping an expert, nor do they capture how an expert's contribution changes across tokens at inference time. We instead rank experts according to how much their removal would change the MoE-layer output. To apply this criterion during serving, we train a lightweight linear predictor during calibration that estimates the expert removal cost for each incoming token, and develop custom GPU kernels for cost prediction and expert selection. Across three MoE architectures, BASE improves the quality-efficiency tradeoff without retraining. On Qwen3-30B-A3B, it improves average accuracy by 29.5 points over the strongest baseline at comparable throughput under a tight expert budget. At a higher expert budget, it is 60% faster than dense inference while remaining within 0.4 accuracy points.",
+        "canonical_id": "arXiv:2609.36222",
+        "arxiv_id": "2609.36222",
+        "authors": [
+          "Ali Abbasi",
+          "Justin Shi",
+          "Soheil Kolouri"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30465",
+      "identity_tokens": [
+        "id:arXiv:2609.30465",
+        "title:razor pruning replaceable experts in llms",
+        "url:https://arxiv.org/abs/2609.30465"
+      ],
+      "record": {
+        "title": "RAZOR: Pruning Replaceable Experts in LLMs",
+        "source_url": "https://arxiv.org/abs/2609.30465",
+        "year": 2026,
+        "published": "2026-09-24",
+        "abstract": "Mixture-of-experts (MoE) models activate only a few experts per token but store the entire expert pool. Pruning this pool requires identifying experts whose removal preserves model behavior. Routing frequency and output magnitude do not fully describe deletion damage, which also depends on how the surviving and replacement experts compensate for the removed output. We introduce RAZOR, a training-free pruning method based on consensus residuals, the deviations of expert outputs from their original weighted mixture. At a fixed layer input, these residuals give the exact output change for a single deletion under survivor renormalization and router refill. RAZOR aggregates this damage by conditional root mean square and selects experts under a layerwise budget using forward computation alone, without gradients, subset search, or recovery training. Against frequency, activation-norm, and REAP baselines on GLM-4.7-Flash and Qwen3.6-35B-A3B at 25% and 50% expert removal, it attains the highest macro average over nine reasoning-intensive tasks in all four model-budget settings, gaining 2.12-5.59 points over REAP and lowering reverse KL in all four. On DeepSeek-V4-Flash-0731 and Hy3, it also achieves the highest macro average among the three residual criteria. Local exactness does not guarantee better joint pruning. Generation analyses show changes in diversity, formatting, and termination despite higher task scores.",
+        "canonical_id": "arXiv:2609.30465",
+        "arxiv_id": "2609.30465",
+        "authors": [
+          "Ming-Yang Song",
+          "Mao Zheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25809",
+      "identity_tokens": [
+        "id:arXiv:2609.25809",
+        "title:you only need 23 of the chosen experts an empirical study of dynamic expert pruning in finegrained moe llms",
+        "url:https://arxiv.org/abs/2609.25809"
+      ],
+      "record": {
+        "title": "You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs",
+        "source_url": "https://arxiv.org/abs/2609.25809",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Fine-grained mixture-of-experts (MoE) architectures have become a mainstream design for open-weight LLMs, with hundreds of experts and increasingly many selected per token. This shift makes dynamic expert pruning an attractive route to cheaper inference. Yet existing evidence comes largely from coarser architectures and likelihood-scored multiple-choice benchmarks, leaving three central questions open in the fine-grained regime: how redundant per-token expert selection is, how effectively existing pruning methods exploit that redundancy, and what governs a model's sensitivity to pruning. We fill this gap with a systematic empirical study of twelve fine-grained MoE checkpoints spanning nine architecture families, with a core suite of eleven benchmarks covering knowledge QA, mathematics, code generation, and general reasoning. We find that expert selection is far more redundant than the field's operating points assume: uniformly retaining about two thirds of the selected experts preserves 98.8% of unpruned performance on average, requiring only a one-integer change and delivering 1.2-1.7x measured speedup across two serving backends. This simple baseline leaves little room for dynamic allocation at conservative budgets: even the best published rules differ from it by under 1% at matched expert budgets. Their value emerges under aggressive pruning, where the best rules recover up to 3.0% over uniform truncation, with gains concentrated in the generative tasks that suffer the sharpest degradation. Sensitivity to aggressive pruning also depends on the model: larger and thinking models are more resilient, whereas multimodal models are more vulnerable. Together, these findings reveal how much expert computation fine-grained MoEs can dispense with, and establish when dynamic allocation earns its complexity, informing both practical deployment and future pruning methods.",
+        "canonical_id": "arXiv:2609.25809",
+        "arxiv_id": "2609.25809",
+        "authors": [
+          "Yuan-Teng Chen",
+          "Qi-Wei Lai",
+          "Tian-Qi Chen",
+          "Peisong Wang",
+          "Yuan-Tian Shao",
+          "Nan-Xin Zeng",
+          "Zhi-Lei Liu",
+          "Chuang-Yi Li",
+          "Jing Liu",
+          "Jian Cheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18842",
+      "identity_tokens": [
+        "id:arXiv:2609.18842",
+        "title:infiniteparameter llms generating and adapting weights from live data",
+        "url:https://arxiv.org/abs/2609.18842"
+      ],
+      "record": {
+        "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
+        "source_url": "https://arxiv.org/abs/2609.18842",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "Scaling laws hold that language models grow more capable with more parameters and more training data. Mixture-of-Experts (MoE) architectures are a remarkable demonstration of these laws, activating only a fraction of an enormous parameter bank for each token. But this success is built on static pretraining data --- the facts and corrections supplied by users during live interactions are a significant untapped source of potential improvement for a deployed model, but cannot be exploited by conventional architectures whose weights are frozen after training. Instead, this newfound knowledge must be placed in the context (by instruction or retrieval) and re-read on every request, only to be discarded afterwards. We seek instead to learn from live interactions by dynamically updating model weights. Inspired by MoEs, we propose the \\textbf{Infinite-Parameter LLM}. A compact hypernetwork turns the online data into low-rank modulations of a shared base network, so feed-forward weights are generated from live data, not read from static memory. Whereas existing weight generators are held fixed after reading the context once, we form a Bayesian belief over the generator's latent state and update it online, such that the effective weights are re-derived as our belief evolves during the session. Although the model's memory footprint is constant, the feasible space of generated weights is thus effectively infinite. Representing live data in the weights rather than the prompt amortises compute, frees the context window, persists updates across turns, and can generalise better than in-context use. Our evaluation protocol applies this methodology to in-context learning and retrieval.",
+        "canonical_id": "arXiv:2609.18842",
+        "arxiv_id": "2609.18842",
+        "authors": [
+          "Jin-Lin Hu",
+          "Ross M. Clarke",
+          "Yi-Chuan Zhang",
+          "José Miguel Hernández-Lobato"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31631",
+      "identity_tokens": [
+        "id:arXiv:2609.31631",
+        "title:ompmoe efficient expert pruning for mixtureofexperts llms via orthogonal matching pursuit",
+        "url:https://arxiv.org/abs/2609.31631"
+      ],
+      "record": {
+        "title": "OMP-MoE: Efficient Expert Pruning for Mixture-of-Experts LLMs via Orthogonal Matching Pursuit",
+        "source_url": "https://arxiv.org/abs/2609.31631",
+        "year": 2026,
+        "published": "2026-09-09",
+        "abstract": "Mixture-of-Experts (MoE) models enable efficient scaling of large language models but face critical deployment challenges due to massive memory requirements. Existing pruning methods either incur prohibitive search costs or neglect the dynamic interdependencies between experts. To address these challenges, we present OMP-MoE, a novel training-free compression framework for reducing expert redundancy in MoE-based LLMs. Based on observations of expert contribution patterns, we reformulate the pruning problem as a sparse signal reconstruction task solved through Orthogonal Matching Pursuit. Specifically, our method first treats individual expert contributions as dictionary atoms and selects experts that greedily minimize reconstruction error with linear computational complexity. Then, we optimize cross-layer expert allocation through a water-filling strategy that accounts for both reconstruction quality and routing stability. Finally, we introduce OMP-MoE{\\dag}, an adaptive inference mechanism that dynamically adjusts expert activation based on energy prediction. Comprehensive experiments on Qwen, DeepSeek-V2, GPT-OSS, and Mixtral MoE demonstrate consistent improvements over existing methods at 25-50% pruning ratios. For Qwen3-30B-A3B at 50% compression, we retain 93.3% of original performance, achieving 33$\\times$ faster search and 1.55$\\times$ inference speedup. Codes will be available after acceptance.",
+        "canonical_id": "arXiv:2609.31631",
+        "arxiv_id": "2609.31631",
+        "authors": [
+          "De-Zhi Li",
+          "Lu-Jun Li",
+          "Qi-Yuan Zhu",
+          "Hao Gu",
+          "Bei-Song Liu",
+          "Si-Rui Han",
+          "Yi-Ke Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02940",
+      "identity_tokens": [
+        "id:arXiv:2608.02940",
+        "title:when compression scores cannot decide information boundaries for grouprobust llm pruning",
+        "url:https://arxiv.org/abs/2608.02940"
+      ],
+      "record": {
+        "title": "When Compression Scores Cannot Decide: Information Boundaries for Group-Robust LLM Pruning",
+        "source_url": "https://arxiv.org/abs/2608.02940",
+        "year": 2026,
+        "published": "2026-08-03",
+        "abstract": "A stable compression score can still select the worse model. In our dense study, a split-half reliable path-quadratic score predicted a 16.1\\% gain, while the selected endpoints were 6.0--7.7% worse than two controls. We ask what a compression statistic can justify when deployment cares about the worst supplied group. We treat each statistic as an information interface. Its observation leaves a fiber of compatible endpoint-risk tables, and only orders fixed across that fiber are identified. Cone and fiber identities quantify the remaining uncertainty, while matched observations reverse endpoint order for pooled moments, group-local moments, and reference-path curvature. Sequential composition adds one state variable: the slack from each group risk to the current maximum. This vector determines every unrestricted one-step response, and a margin condition keeps the active group fixed along paths with bounded relative drift. The experiments follow the same ladder. Across three dense LLMs, an early-preserving allocation reduces worst-group perplexity inflation by 12.6--20.9%; target-matched complete-menu selection improves over its references by 2.7--8.0%. Across all 16 routed layers of OLMoE, pooled endpoint refresh lowers held-out worst-group teacher KL by 15.8% over the best static score. A compute-matched hard-max trajectory ends 32.7% worse than pooled, and neither adaptive trajectory improves excess NLL. Local evidence can narrow a menu. Complete endpoints rank that menu, while multistep claims also require control of the evolving active face and future candidates.",
+        "canonical_id": "arXiv:2608.02940",
+        "arxiv_id": "2608.02940",
+        "authors": [
+          "An Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.28308",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.28308",
+        "id:arXiv:2607.28308",
+        "title:beyond geometric complementarity coherent overlap in sparse mixtureofexperts routing",
+        "url:https://arxiv.org/abs/2607.28308"
+      ],
+      "record": {
+        "title": "Beyond Geometric Complementarity: Coherent Overlap in Sparse Mixture-of-Experts Routing",
+        "source_url": "https://arxiv.org/abs/2607.28308",
+        "year": 2026,
+        "published": "2026-07-30",
+        "abstract": "Sparse mixture-of-experts (MoE) language models route each token to multiple experts, suggesting a geometric account of their benefit: co-selected experts should contribute distinct representation directions. Existing evidence often conflates route coherence, candidate quality, and candidate-by-context interaction. We distinguish these quantities using an Expert Subspace Separation Index (ESSI), matched-route residuals, and a prefix-controlled $2\\times2$ factorial; frozen-route interventions and a controlled Top-$k$ study assess functional value. Three paired contrasts organize the findings. First, across six MoE architectures, expert subspaces overlap substantially, yet actual routes explain token representations better than matched alternatives. Second, across the 39 factorial cells in OLMoE, Mixtral, and DeepSeek, the selected candidate explains more of the residual representation than the strongest unselected rival in every cell, yet the actual prefix narrows this advantage throughout: all interactions are negative, and every 95% confidence interval lies below zero. Third, this geometric narrowing does not imply functional redundancy: adding later experts improves next-token prediction in 24 of 39 frozen-route comparisons, while the other 15 estimates are inconclusive; a controlled training study also favors Top-2 over Top-1 in all three seeds. We call this joint pattern coherent overlap: routing selects token-relevant experts from a shared geometric neighborhood, while useful multi-expert computation persists without disjoint linear coverage. Separating these quantities clarifies why geometric similarity alone cannot determine redundancy or pruning value.",
+        "canonical_id": "arXiv:2607.28308",
+        "arxiv_id": "2607.28308",
+        "doi": "10.48550/arXiv.2607.28308",
+        "authors": [
+          "Huiyuan Tian",
+          "Bonan Xu",
+          "Shi-Jian Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.inffus.2026.104630",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.inffus.2026.104630",
+        "title:agentic mobile ai systems from posthoc optimization to runtimeelastic realization",
+        "url:https://doi.org/10.1016/j.inffus.2026.104630"
+      ],
+      "record": {
+        "title": "Agentic Mobile AI Systems: From Post-Hoc Optimization to Runtime-Elastic Realization",
+        "source_url": "https://doi.org/10.1016/j.inffus.2026.104630",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "doi": "10.1016/j.inffus.2026.104630",
+        "canonical_id": "DOI:10.1016/j.inffus.2026.104630",
+        "authors": [
+          "Sicong Liu",
+          "Wei-Ye Wu",
+          "Xiangrui Xu",
+          "Teng Li",
+          "Bowen Pang",
+          "Wen-Tao Zhou",
+          "Bin Guo",
+          "Zhi-Wen Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.25821",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.136",
+        "id:arXiv:2606.25821",
+        "title:sara unlocking multilingual knowledge in mixtureofexperts via semantically anchored routing alignment",
+        "url:https://arxiv.org/abs/2606.25821"
+      ],
+      "record": {
+        "title": "SARA: Unlocking Multilingual Knowledge in Mixture-of-Experts via Semantically Anchored Routing Alignment",
+        "source_url": "https://arxiv.org/abs/2606.25821",
+        "year": 2026,
+        "published": "2026-06-24",
+        "abstract": "Sparse Mixture-of-Experts (MoE) architectures have emerged as an increasingly influential paradigm as they offer a strategic balance between parameter scalability and computational efficiency. However, low-resource languages, which suffer from a scarcity of high-quality training data, often have their tokens routed to different experts than those predominantly activated by high-resource inputs, which limits cross-lingual expert sharing. This cross-lingual routing divergence consequently hinders their efficacy in multilingual contexts. To address this issue, we propose SARA (Semantically Anchored Routing Alignment), a framework designed to transfer specialized capabilities from high-resource languages as anchors to low-resource languages. SARA explicitly aligns the routing distribution of multilingual inputs with high-resource semantic anchors using a symmetric Jensen-Shannon (JS) divergence constraint. Unlike traditional distillation methods that operate on output logits, SARA directly aligns the internal routing distributions of MoE layers, encouraging mechanistic consistency in expert selection across languages. We conduct experiments on 2 LLMs across 5 low-resource languages and 3 benchmarks. Experiment results demonstrate that SARA outperforms standard instruction tuning, e.g., +0.8% on Qwen3-30B-A3B and +1.2% on Phi-3.5-MoE-instruct on Global-MMLU. Further analyses show that SARA effectively addresses performance bottlenecks in low-resource languages, providing a scalable pathway to enhance multilingual capabilities in sparse architectures.",
+        "canonical_id": "arXiv:2606.25821",
+        "arxiv_id": "2606.25821",
+        "doi": "10.18653/v1/2026.findings-acl.136",
+        "authors": [
+          "Tianyu Dong",
+          "Yang-Yang Liu",
+          "Jiang Zhou",
+          "Xin-Wei Wu",
+          "Xiaohu Zhao",
+          "Hao Wang",
+          "Heng Liu",
+          "Lin-Long Xu",
+          "Long-Yue Wang",
+          "Wei-Hua Luo",
+          "Shao-Lin Zhu",
+          "Deyi Xiong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.knosys.2026.116137",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.knosys.2026.116137",
+        "title:bigtm bridging individual guidance with trifusion mopoe for chinese memes understanding",
+        "url:https://doi.org/10.1016/j.knosys.2026.116137"
+      ],
+      "record": {
+        "title": "BIG-TM: Bridging Individual Guidance with Trifusion MoPoE for Chinese memes understanding",
+        "source_url": "https://doi.org/10.1016/j.knosys.2026.116137",
+        "year": 2026,
+        "published": "2026-06-01",
+        "abstract": null,
+        "doi": "10.1016/j.knosys.2026.116137",
+        "canonical_id": "DOI:10.1016/j.knosys.2026.116137",
+        "authors": [
+          "Tongguan Wang",
+          "Jun-Kai Li",
+          "Feiyue Xue",
+          "Dongyu Su",
+          "Guixin Su",
+          "Xiaopeng Wen",
+          "Ying Sha"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.27431",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.27431",
+        "id:arXiv:2605.27431",
+        "title:tackling multimodal learning challenges with mixtureofexpert a survey",
+        "url:https://arxiv.org/abs/2605.27431"
+      ],
+      "record": {
+        "title": "Tackling Multimodal Learning Challenges with Mixture-of-Expert: A Survey",
+        "source_url": "https://arxiv.org/abs/2605.27431",
+        "year": 2026,
+        "published": "2026-05-22",
+        "abstract": "Mixture-of-Experts (MoE) presents a naturally compatible and scalable framework for multimodal learning, demonstrating strong adaptability across diverse modalities and tasks. Despite its growing success, a comprehensive and systematic evaluation of multimodal MoE remains lacking. Existing surveys tend to address either multimodal learning or MoE independently, overlooking the unique interplay between them. This survey fills that gap by addressing a central question: How does MoE effectively resolve multimodal challenges? We approach this from three key perspectives: (1) MoE as an Efficient Multimodal Framework: enabling scalable multimodal modeling by decoupling computational cost from parameter growth and mitigating modality redundancy through selective expert activation; (2) MoE as a Multimodal Representation Learner: integrating complementary multi-opinion expert knowledge to enrich alignment and interaction representations; and (3)MoE as a Multimodal Adapter: providing a modular and flexible mechanism to model imperfect modality data such as modality imbalance and missing modality. Through an extensive literature review, we identify critical research gaps, including interpretable routing, expert communication, modality integration, and lifelong multimodal learning. We position this survey as a foundation for future research toward interpretable, adaptive, and sustainable multimodal Mixture-of-Experts systems.",
+        "canonical_id": "arXiv:2605.27431",
+        "arxiv_id": "2605.27431",
+        "doi": "10.48550/arXiv.2605.27431",
+        "authors": [
+          "L. Zheng",
+          "Wei Zhang",
+          "Olaf Maennel",
+          "Lin Yue",
+          "Wei-Tong Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3815117",
+      "identity_tokens": [
+        "id:DOI:10.1145/3815117",
+        "title:instant inferenceaware fast feedforward networks",
+        "url:https://doi.org/10.1145/3815117"
+      ],
+      "record": {
+        "title": "INSTANT: Inference-Aware Fast Feedforward Networks",
+        "source_url": "https://doi.org/10.1145/3815117",
+        "year": 2026,
+        "published": "2026-05-04",
+        "abstract": "Many embedded applications have strict energy, memory, and time constraints, making neural network (NN) inference particularly challenging. Recently, a novel NN architecture, called Fast Feedforward Networks (FFFs), has been proposed to achieve inference with extremely lightweight computational demands and minimal latency. Yet, compared to feedforward networks with similar sizes, FFFs still lag behind in terms of performance, indicating that they do not utilize all of their parameters effectively. In this article, we explore a possible reason for this performance gap: the uncertainty in how samples are assigned to the network’s leaves. We attempt to overcome this challenge by making FFFs’ training inference-aware, hence introducing Inference-Aware Fast Feedforward Networks (IAFFFs). We imitate FFFs’ inference during training by using a step activation function alongside the traditional sigmoid activation function. We test different aware scheduling methods, which we dub “awareness scheduler”, to adjust the balance between the two activation functions during training, and examine how different schedules impact the model’s performance. Additionally, we employ leaf-weight virtualization with inference-aware retraining to compress our models so they can fit onto edge devices. We further employ an iterative compression approach to find an optimal awareness scheduler for compression to minimize performance drop due to compression. We experiment with different model sizes on various microcontrollers (MCUs) with different memory constraints to observe the latency and energy consumption introduced by the compression algorithm.",
+        "doi": "10.1145/3815117",
+        "canonical_id": "DOI:10.1145/3815117",
+        "authors": [
+          "Renan Beran Kilic",
+          "K. S. Yıldırım",
+          "Giovanni Iacca"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.00649",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.00649",
+        "id:arXiv:2605.00649",
+        "title:model compression with exact budget constraints via riemannian manifolds",
+        "url:https://arxiv.org/abs/2605.00649"
+      ],
+      "record": {
+        "title": "Model Compression with Exact Budget Constraints via Riemannian Manifolds",
+        "source_url": "https://arxiv.org/abs/2605.00649",
+        "year": 2026,
+        "published": "2026-05-01",
+        "abstract": "Assigning one of K options to each of N groups under a total cost budget is a recurring problem in efficient AI, arising in mixed-precision quantization, non-uniform pruning, and expert selection. The objective (model loss) depends on all assignments jointly and does not decompose across groups, so combinatorial solvers can only optimize proxy objectives. Evolutionary search evaluates the actual loss but lacks gradients, while penalty-based methods enforce the budget only approximately and often require heavy hyperparameter tuning. We show that under softmax relaxation, the budget constraint defines a smooth Riemannian manifold in logit space with unusually clean geometry: the normal vector is available in closed form, shifting logits along the cost vector changes expected cost monotonically, and vector transport reduces to a single inner product. Building on this, we propose Riemannian Constrained Optimization (RCO), which wraps tangent projection, binary-search retraction, and momentum transport around a standard Adam step. Combined with Gumbel straight-through estimation and budget-constrained dynamic programming for discrete feasibility, RCO optimizes the actual loss with first-order methods, enforces the expected budget exactly at every iterate, and introduces no constraint-related hyperparameters. The same construction handles multiple simultaneous budgets with no additional coefficients. RCO matches or exceeds state-of-the-art methods on synthetic problems and realistic LLM compression settings, often at considerably lower wall-clock cost. Source code is available at https://github.com/IST-DASLab/RCO.",
+        "canonical_id": "arXiv:2605.00649",
+        "arxiv_id": "2605.00649",
+        "doi": "10.48550/arXiv.2605.00649",
+        "authors": [
+          "Michael A. Helcig",
+          "Dan Alistarh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.23036",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.23036",
+        "id:arXiv:2604.23036",
+        "title:preserving longtailed expert information in mixtureofexperts tuning",
+        "url:https://arxiv.org/abs/2604.23036"
+      ],
+      "record": {
+        "title": "Preserving Long-Tailed Expert Information in Mixture-of-Experts Tuning",
+        "source_url": "https://arxiv.org/abs/2604.23036",
+        "year": 2026,
+        "published": "2026-04-24",
+        "abstract": "Despite MoE models leading many benchmarks, supervised fine-tuning (SFT) for the MoE architectures remains difficult because its router layers are fragile. Methods such as DenseMixer and ESFT mitigate router collapse with dense mixing or auxiliary load-balancing losses, but these introduce noisy gradients that often degrade performance. In preliminary experiments, we systematically pruned experts and observed that while certain super experts are activated far more frequently, discarding less used experts still leads to notable performance degradation. This suggests that even rarely activated experts encode non-trivial knowledge useful for downstream tasks. Motivated by this, we propose an auxiliary-loss-free MoE SFT framework that combines bias-driven sparsification with always-active gated condenser experts. Rather than enforcing balanced activation across all experts, our method encourages task-relevant experts to remain active while pushing long-tailed experts toward inactivity. The condenser experts provide a persistent, learnable pathway that alleviates gradient starvation and facilitates consolidation of information that would otherwise remain fragmented across sparsely activated experts. Analysis further suggest that this design better preserves long-tailed expert information under sparse routing. Experiments on large-scale MoE models demonstrate that our approach outperforms state-of-the-art SFT baselines such as DenseMixer and ESFT, achieving average gain of 2.5%+ on both mathematical reasoning and commonsenseQA benchmarks.",
+        "canonical_id": "arXiv:2604.23036",
+        "arxiv_id": "2604.23036",
+        "doi": "10.48550/arXiv.2604.23036",
+        "authors": [
+          "Haoze He",
+          "Xingyuan Ding",
+          "Xuan Jiang",
+          "Xinkai Zou",
+          "A. Cheng",
+          "Yibo Zhao",
+          "Juncheng B. Li",
+          "Heather Miller"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3774904.3792291",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774904.3792291",
+        "title:mepe rethinking multimodal chinese idiom reading comprehension from a metaphorical perspective",
+        "url:https://doi.org/10.1145/3774904.3792291"
+      ],
+      "record": {
+        "title": "MePe: Rethinking Multimodal Chinese Idiom Reading Comprehension from a Metaphorical Perspective",
+        "source_url": "https://doi.org/10.1145/3774904.3792291",
+        "year": 2026,
+        "published": "2026-04-12",
+        "abstract": "The multimodal Chinese idiom reading comprehension task aims to select the most appropriate idiom from a candidate list via the given text and image. This poses a significant challenge for the model to comprehend each Chinese idiom accurately. Existing multimodal Chinese idiom reading comprehension methods primarily focus on aligning contextual text and images, while overlooking two key attributes of Chinese idioms.(1) There is a discrepancy between the literal and metaphorical meanings of Chinese idioms. (2) The same Chinese idiom has different meanings in different scenarios, which requires targeted understanding by experts who specialize in different fields. To address the above challenges, we rethink the solution to the multimodal idiom reading comprehension task from a metaphorical perspective and propose a framework named MePe. Firstly, we propose a literal metaphorical semantic graph that systematically transforms the implicit discrepancy between the literal and metaphorical meanings of Chinese idioms into structured explicit relationships, thereby making metaphorical meanings more understandable. Then, we propose a mixture of idiom experts consisting of a literal idiom expert and a metaphorical idiom expert. Through division of labor and collaboration among these experts, we achieve an understanding of the dual meanings of Chinese idioms across different scenarios. Finally, we employ the maximum mean discrepancy to adjust the variance between the literal and metaphorical semantic features of Chinese idioms. By mapping these features onto a shared reproducing kernel Hilbert space, the model can better distinguish between the two based on contextual clues. Extensive experiments demonstrate that MePe achieves state-of-the-art performance on the MChIRC dataset.",
+        "doi": "10.1145/3774904.3792291",
+        "canonical_id": "DOI:10.1145/3774904.3792291",
+        "authors": [
+          "Tongguan Wang",
+          "Jun-Kai Li",
+          "Feiyue Xue",
+          "Hui Liu",
+          "Dongyu Su",
+          "Wang-Jun Huang",
+          "Ying Sha"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:3e73423f93e4cba2a6d0f311b784bf633fb74720722387d10e073bd2e50ff8cc",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

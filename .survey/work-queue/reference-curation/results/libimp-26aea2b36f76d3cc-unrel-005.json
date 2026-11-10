@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-26aea2b36f76d3cc-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2202.10447",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2202.10447",
+    "identity_tokens": [
+      "arXiv:2202.10447"
+    ],
+    "reason": "Gated Attention Unitとlinear attention approximationで長系列Transformerを効率化するが、一次要旨で報告する主要高速化はWiki-40B/PG-19/C4上のtraining speedupであり、現行凍結範囲の学習効率が中心。LLM生成推論runtimeの直接評価を主貢献としない。",
+    "first_checked_at": "2026-10-05T15:55:17+00:00",
+    "last_checked_at": "2026-10-05T15:55:17+00:00",
+    "linked_from": [],
+    "title": "Transformer Quality in Linear Time"
+  },
+  "processed_at": "2026-10-05T15:55:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-26aea2b36f76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

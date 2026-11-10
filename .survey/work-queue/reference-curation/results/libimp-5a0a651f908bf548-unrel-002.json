@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5a0a651f908bf548-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.02853",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.02853",
+    "identity_tokens": [
+      "arXiv:2610.02853"
+    ],
+    "reason": "The paper proves robustness certificates for contraction-constrained SSM safety heads and evaluates toxic-comment/jailbreak detection; a contraction penalty improves certified fraction and transfers across safety datasets. Its contribution is provable safety classification, not inference efficiency or sequence-model compression, so the shared SSM lineage is not enough for inclusion.",
+    "first_checked_at": "2026-10-06T08:40:57+00:00",
+    "last_checked_at": "2026-10-06T08:40:57+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+    ],
+    "title": "Bounded Reachability&Jailbreak Detection via Contraction-Constrained State Space Models"
+  },
+  "processed_at": "2026-10-06T08:40:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5a0a651f908b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40877da491257248-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.13869",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.13869",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.13869",
+      "arXiv:2605.13869"
+    ],
+    "reason": "Elastic Spiking Transformerは幅やattention headを推論時に切り替えて、ニューロモルフィック機器のメモリ制約と演算エネルギーを抑える設計であり、可変規模のTransformer推論という接点がある。一方、対象はSNNによるジェスチャー認識で、LLM推論やservingの実証ではないため微妙とする。",
+    "first_checked_at": "2026-10-22T17:50:43+00:00",
+    "last_checked_at": "2026-10-22T17:50:43+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Elastic Spiking Transformers for Efficient Gesture Understanding"
+  },
+  "processed_at": "2026-10-22T17:50:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40877da49125",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

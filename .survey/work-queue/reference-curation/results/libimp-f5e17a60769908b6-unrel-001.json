@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f5e17a60769908b6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.07814",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.07814",
+    "identity_tokens": [
+      "DOI:10.1126/science.abq1158",
+      "arXiv:2203.07814"
+    ],
+    "reason": "競技プログラミング問題を解くコード生成の品質を主目的とし、大規模な候補プログラム生成と実行テストによる選別を使う。要旨で示される主要評価はCodeforcesの順位であり、LLM推論基盤のGPUメモリ、サービング、カーネル、遅延の改善を技術的主題としていない。生成サンプル数の増加は推論計算の節約ではなく品質向上のための探索である。",
+    "first_checked_at": "2026-10-06T12:12:54+00:00",
+    "last_checked_at": "2026-10-10T13:56:27+00:00",
+    "linked_from": [],
+    "title": "Competition-Level Code Generation with AlphaCode"
+  },
+  "processed_at": "2026-10-10T13:56:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5e17a607699",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

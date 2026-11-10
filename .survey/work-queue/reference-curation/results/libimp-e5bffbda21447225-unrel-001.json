@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e5bffbda21447225-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2011.13456",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2011.13456",
+    "identity_tokens": [
+      "arXiv:2011.13456"
+    ],
+    "reason": "確率微分方程式によるscore-based/diffusion生成モデルと画像生成・inverse problemが主題で、LLM推論runtime・serving効率化ではない。",
+    "first_checked_at": "2026-10-04T16:44:26+00:00",
+    "last_checked_at": "2026-10-04T16:44:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+    ],
+    "title": "Score-Based Generative Modeling through Stochastic Differential Equations"
+  },
+  "processed_at": "2026-10-04T16:44:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e5bffbda2144",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

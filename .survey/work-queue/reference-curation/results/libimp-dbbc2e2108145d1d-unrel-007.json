@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dbbc2e2108145d1d-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3531146.3533229",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3531146.3533229",
+    "identity_tokens": [
+      "DOI:10.1145/3531146.3533229",
+      "arXiv:2202.07785"
+    ],
+    "reason": "large generative modelのlossの予測可能性と個別capability/outputの予測不能性、その社会的害・政策含意を分析するAI safety/policy研究。推論runtime・serving効率化を扱わない。",
+    "first_checked_at": "2026-10-05T16:34:23+00:00",
+    "last_checked_at": "2026-10-05T16:34:23+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md"
+    ],
+    "title": "Predictability and Surprise in Large Generative Models"
+  },
+  "processed_at": "2026-10-05T16:34:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dbbc2e210814",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

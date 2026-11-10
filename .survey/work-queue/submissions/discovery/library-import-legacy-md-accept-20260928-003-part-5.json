@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SEER-MoE: Sparse Expert Efficiency through Regularization for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2404.05089",
+      "year": 2024,
+      "published": "2024-04-07",
+      "abstract": "The advancement of deep learning has led to the emergence of Mixture-of-Experts (MoEs) models, known for their dynamic allocation of computational resources based on input. Despite their promise, MoEs face challenges, particularly in terms of memory requirements. To address this, our work introduces SEER-MoE, a novel two-stage framework for reducing both the memory footprint and compute requirements of pre-trained MoE models. The first stage involves pruning the total number of experts using a heavy-hitters counting guidance, while the second stage employs a regularization-based fine-tuning strategy to recover accuracy loss and reduce the number of activated experts during inference. Our empirical studies demonstrate the effectiveness of our method, resulting in a sparse MoEs model optimized for inference efficiency with minimal accuracy trade-offs.",
+      "canonical_id": "arXiv:2404.05089",
+      "arxiv_id": "2404.05089",
+      "doi": "10.48550/arXiv.2404.05089",
+      "authors": [
+        "Alex Muzio",
+        "A. Sun",
+        "Churan He"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2308.16137",
+      "year": 2023,
+      "published": "2023-08-30",
+      "abstract": "Today’s large language models (LLMs) typically train on short text segments (e.g., <4K tokens) due to the quadratic complexity of their Transformer architectures. As a result, their performance suffers drastically on inputs longer than those encountered during training, substantially limiting their applications in real-world tasks involving long contexts such as encod- ing scientific articles, code repositories, or long dialogues. Through both theoretical analysis and empirical investigation, this work identifies three major factors contributing to this length generalization failure. Our theoretical analysis reveals that commonly used techniques like using a sliding-window attention pattern or relative positional encodings are inadequate to address them. Answering these challenges, we propose LM-Infinite, a simple and effective method for enhancing LLMs’ capabilities of handling long contexts. LM-Infinite is highly flexible and can be used with most modern LLMs off-the-shelf. Without any parameter updates, it allows LLMs pre-trained with 2K or 4K-long segments to generalize to up to 200M length inputs while retaining perplexity. It also improves performance on downstream tasks such as Passkey Retrieval and Qasper in the zero-shot setting. LM-Infinite brings substantial efficiency improvements: it achieves 2.7× decoding speed up and 7.5× memory saving over the original model. Our code will be publicly available upon publication.",
+      "canonical_id": "arXiv:2308.16137",
+      "arxiv_id": "2308.16137",
+      "doi": "10.18653/v1/2024.naacl-long.222",
+      "authors": [
+        "Chi Han",
+        "Qifan Wang",
+        "Hao Peng",
+        "Wen-Han Xiong",
+        "Yu Chen",
+        "Heng Ji",
+        "Sinong Wang"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "Multi-Candidate Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2401.06706",
+      "year": 2024,
+      "published": "2024-01-12",
+      "abstract": "Large language models have shown impressive capabilities across a variety of NLP tasks, yet their generating text autoregressively is time-consuming. One way to speed them up is speculative decoding, which generates candidate segments (a sequence of tokens) from a fast draft model that is then verified in parallel by the target model. However, the acceptance rate of candidate tokens receives limitations from several factors, such as the model, the dataset, and the decoding setup. This paper proposes sampling multiple candidates from a draft model and then organising them in batches for verification. We design algorithms for efficient multi-candidate verification while maintaining the distribution of the target model. Our approach shows significant improvements in acceptance rates on multiple datasets and models, consistently outperforming standard speculative decoding.",
+      "canonical_id": "arXiv:2401.06706",
+      "arxiv_id": "2401.06706",
+      "doi": "10.48550/arXiv.2401.06706",
+      "authors": [
+        "Sen Yang",
+        "Shujian Huang",
+        "Xin-Yu Dai",
+        "Jia-Jun Chen"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "Attention Score is not All You Need for Token Importance Indicator in KV Cache Reduction: Value Also Matters",
+      "source_url": "https://arxiv.org/abs/2406.12335",
+      "year": 2024,
+      "published": "2024-06-18",
+      "abstract": "Scaling the context size of large language models (LLMs) enables them to perform various new tasks, e.g., book summarization. However, the memory cost of the Key and Value (KV) cache in attention significantly limits the practical applications of LLMs. Recent works have explored token pruning for KV cache reduction in LLMs, relying solely on attention scores as a token importance indicator. However, our investigation into value vector norms revealed a notably non-uniform pattern questioning their reliance only on attention scores. Inspired by this, we propose a new method: Value-Aware Token Pruning (VATP) which uses both attention scores and the $ \\ell_{1} $ norm of value vectors to evaluate token importance. Extensive experiments on LLaMA2-7B-chat and Vicuna-v1.5-7B across 16 LongBench tasks demonstrate that VATP outperforms attention-score-only baselines in over 12 tasks, confirming the effectiveness of incorporating value vector norms into token importance evaluation of LLMs.",
+      "canonical_id": "arXiv:2406.12335",
+      "arxiv_id": "2406.12335",
+      "doi": "10.48550/arXiv.2406.12335",
+      "authors": [
+        "Zhiyu Guo",
+        "Hidetaka Kamigaito",
+        "Taro Watanabe"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "Accelerating LLM Inference with Staged Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2308.04623",
+      "year": 2023,
+      "published": "2023-08-08",
+      "abstract": "Recent advances with large language models (LLM) illustrate their diverse capabilities. We propose a novel algorithm, staged speculative decoding, to accelerate LLM inference in small-batch, on-device scenarios. We address the low arithmetic intensity of small-batch inference by improving upon previous work in speculative decoding. First, we restructure the speculative batch as a tree, which reduces generation costs and increases the expected tokens per batch. Second, we add a second stage of speculative decoding. Taken together, we reduce single-batch decoding latency by 3.16x with a 762M parameter GPT-2-L model while perfectly preserving output quality.",
+      "canonical_id": "arXiv:2308.04623",
+      "arxiv_id": "2308.04623",
+      "doi": "10.48550/arXiv.2308.04623",
+      "authors": [
+        "B. Spector",
+        "Christopher Ré"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928-legacy-md",
+    "round": "library-import-legacy-md-accept-20260928-003",
+    "axis": "explicit-library-legacy-md-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "旧Library Discovery MDから現行スコープで有効なaccept成果を正規Research候補へ取り込む。",
+    "candidate_count": 33,
+    "round_submission_index": 5,
+    "round_submission_count": 7
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-legacy-md-accept-20260928-003",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-legacy-md-accept-20260928-003.json",
+    "receipt": "sha256:9b017d7a2639a46cf84be70b8e680a69d91ce55685a778e209d14bc3093b2dd8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928-legacy-md",
+    "summary": "Library上の旧Discovery成果を現行スコープへ再仕分けし、有効なaccept成果をGitHubへ反映する。"
+  }
+}

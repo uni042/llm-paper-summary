@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6352ef7bb74bcc92-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.09708",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.09708",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.09708",
+      "arXiv:2601.09708"
+    ],
+    "reason": "一次要旨はロボット操作向けの視覚・言語・行動モデルにおいて、長い明示的思考列を潜在推論へ蒸留して推論遅延を最大89.3%削減する。ただし対象は身体化行動の計画・制御で、汎用自己回帰LLMのサービング基盤、KV管理、MoE実行の性能評価ではない。潜在思考による生成遅延削減の転用可能性があるため境界的とする。",
+    "first_checked_at": "2026-10-16T09:27:33+00:00",
+    "last_checked_at": "2026-10-16T09:27:33+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning"
+  },
+  "processed_at": "2026-10-16T09:27:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6352ef7bb74b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

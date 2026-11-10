@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9ce4007bad3104fd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.00471",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.00471",
+    "identity_tokens": [
+      "arXiv:2602.00471"
+    ],
+    "reason": "視覚マルチエージェント間で知覚と推論の二種類の潜在メモリを共有し、エントロピー駆動の選択的呼出で通信トークンを21.3～44.8%削減する。エージェント推論費用の低減には関係するが、主な評価は視覚協調タスクの精度・トークン数で、汎用LLMサービング基盤の設計ではない。",
+    "first_checked_at": "2026-10-19T17:53:01+00:00",
+    "last_checked_at": "2026-10-19T17:54:38+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Dual Latent Memory for Visual Multi-agent System"
+  },
+  "processed_at": "2026-10-19T17:54:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ce4007bad31",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

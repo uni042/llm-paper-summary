@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ccfdce7bd0817f67-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2022.acl-long.297",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2022.acl-long.297",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2022.acl-long.297",
+      "arXiv:2110.00976"
+    ],
+    "reason": "Legal NLU benchmark paper; it contributes datasets and model evaluation for legal-language understanding, not LLM inference systems, serving, memory hierarchy, kernels, quantization, or MoE inference.",
+    "first_checked_at": "2026-09-30T01:46:01+00:00",
+    "last_checked_at": "2026-10-01T22:26:28+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md"
+    ],
+    "title": "LexGLUE: A Benchmark Dataset for Legal Language Understanding in English"
+  },
+  "processed_at": "2026-10-01T22:26:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ccfdce7bd081",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

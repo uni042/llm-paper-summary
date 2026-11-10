@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d537b7e7bf34d5a1-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.20988",
+  "reason": "Quantization of Large Language Models (LLMs) is often hindered by the sensitivity of the self-attention mechanism to discretization errors. We identify the softmax operator as a bottleneck for quantization stability due to its sensitivity to outliers and state-dependent Jacobian. We theoretically establish that suppressing the norm of this Jacobian helps in bounding quantization-induced performance degradation. Based on this, we propose Jacobian-Guided Noise Injection, a training strategy that injects zero-mean Gaussian noise into pre-attention logits, with variance derived directly from the Jacobian Frobenius norm. Unlike prior approaches that rely on heuristic or penalise jacobian directly, our method provides a way to identify the optimal noise variance based on the local attention sensitivity. We evaluate the method on SOTA LLM architectures, where it demonstrates improved robustness over popular PTQ methods. Empirical analysis reveals that the proposed method gives up to +37% relative gains on Top-1 accuracy on ImageNet-1K for SigLIP and improves relative perplexity by upto 40% on WikiText for language models in low bit quantisation settings, proving the efficacy of the approach.",
+  "title": "Jacobian-guided Noise Injection for Quantization Robustness in Large Language Models",
+  "identity_tokens": [
+    "arXiv:2608.20988"
+  ],
+  "linked_from": [
+    "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+    "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+    "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d537b7e7bf34",
+  "source_precheck_request_id": null
+}

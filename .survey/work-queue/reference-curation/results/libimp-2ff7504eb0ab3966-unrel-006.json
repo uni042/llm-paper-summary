@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2ff7504eb0ab3966-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.15123",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.15123",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2310.15123",
+      "arXiv:2310.15123"
+    ],
+    "reason": "複雑タスクをbranch/solve/mergeへ分解してLLM品質を改善するprogramming/prompting手法で、複数LLM呼出しを伴い推論資源削減を主目的としない。",
+    "first_checked_at": "2026-10-03T11:02:04+00:00",
+    "last_checked_at": "2026-10-03T11:02:04+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+    ],
+    "title": "Branch-Solve-Merge Improves Large Language Model Evaluation and Generation"
+  },
+  "processed_at": "2026-10-03T11:02:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2ff7504eb0ab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

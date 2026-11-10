@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ba4c1fb9d98e41ab-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.07718",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.07718",
+    "identity_tokens": [
+      "arXiv:2510.07718"
+    ],
+    "reason": "Sub-question-driven graph RAG framework; retrieval/reasoning architecture rather than a concrete inference compute, memory, latency, quantization, or serving optimization.",
+    "first_checked_at": "2026-10-06T12:07:32+00:00",
+    "last_checked_at": "2026-10-06T12:07:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+    ],
+    "title": "SUBQRAG: Sub-Question Driven Dynamic Graph RAG"
+  },
+  "processed_at": "2026-10-06T12:07:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ba4c1fb9d98e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

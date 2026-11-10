@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f3d512e4571af2d-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.14228",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.14228",
+    "identity_tokens": [
+      "SemanticScholar:6a34fbd59a656b2b3bb2a35cfa9b4bb235046ce1",
+      "arXiv:2603.14228"
+    ],
+    "reason": "StructLoRA improves adaptation quality with training-only modules and explicitly reports zero additional inference cost; it is a training/adaptation method rather than an inference-efficiency contribution.",
+    "first_checked_at": "2026-10-14T14:34:36+00:00",
+    "last_checked_at": "2026-10-14T14:34:36+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2604.02967-foe-forest-of-errors-makes-the-first-solution-the-best-in-large-reasonin.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Not All Directions Matter: Towards Structured and Task-Aware Low-Rank Model Adaptation"
+  },
+  "processed_at": "2026-10-14T14:34:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f3d512e4571",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

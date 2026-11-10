@@ -1,0 +1,870 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-69954eee8cfec368-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-69954eee8cfe",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.52202/075280-3538",
+    "SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0",
+    "arXiv:2110.01786",
+    "arXiv:2201.12854",
+    "arXiv:2211.16368",
+    "arXiv:2301.13310",
+    "arXiv:2305.09781",
+    "arXiv:2312.11135",
+    "arXiv:2404.11163",
+    "arXiv:2502.14644",
+    "arXiv:2505.18757",
+    "arXiv:2512.20650"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f4129494a588efe57d3b8f29def584f43b0c355e",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 1,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T03:58:29.725305+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.52202/075280-3538",
+      "status": "provider_unresolved",
+      "lookup_route": "semantic_scholar_single"
+    },
+    {
+      "requested_id": "SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2110.01786",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/v1/2022.findings-acl.71"
+    },
+    {
+      "requested_id": "arXiv:2201.12854",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2211.16368",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2301.13310",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2305.09781",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3620666.3651335"
+    },
+    {
+      "requested_id": "arXiv:2312.11135",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2404.11163",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.14644",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.18757",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.20650",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Alternating Updates for Efficient Transformers",
+      "source_url": "https://arxiv.org/abs/2301.13310",
+      "year": 2023,
+      "published": "2023-01-30",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "It has been well established that increasing scale in deep transformer networks leads to improved quality and performance. However, this increase in scale often comes with prohibitive increases in compute cost and inference latency. We introduce Alternating Updates (AltUp), a simple-to-implement method to increase a model's capacity without the computational burden. AltUp enables the widening of the learned representation, i.e., the token embedding, while only incurring a negligible increase in latency. AltUp achieves this by working on a subblock of the widened representation at each layer and using a predict-and-correct mechanism to update the inactivated blocks. We present extensions of AltUp, such as its applicability to the sequence dimension, and demonstrate how AltUp can be synergistically combined with existing approaches, such as Sparse Mixture-of-Experts models, to obtain efficient models with even higher capacity. Our experiments on benchmark transformer models and language tasks demonstrate the consistent effectiveness of AltUp on a diverse set of scenarios. Notably, on SuperGLUE and SQuAD benchmarks, AltUp enables up to $87\\%$ speedup relative to the dense baselines at the same accuracy.",
+      "identifiers": [
+        "SemanticScholar:c9d46cfcf0211d11356c295ecd9584c84c19c8f8"
+      ],
+      "semantic_scholar_id": "c9d46cfcf0211d11356c295ecd9584c84c19c8f8",
+      "canonical_id": "arXiv:2301.13310",
+      "arxiv_id": "2301.13310",
+      "doi": "10.48550/arXiv.2301.13310",
+      "authors": [
+        "Cenk Baykal",
+        "D. Cutler",
+        "Nishanth Dikkala",
+        "Nikhil Ghosh",
+        "Rina Panigrahy",
+        "Xin Wang"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1349,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Fast Monte-Carlo Approximation of the Attention Mechanism",
+      "source_url": "https://arxiv.org/abs/2201.12854",
+      "year": 2022,
+      "published": "2022-01-30",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce Monte-Carlo Attention (MCA), a randomized approximation method for reducing the computational cost of self-attention mechanisms in Transformer architectures. MCA exploits the fact that the importance of each token in an input sequence vary with respect to their attention scores; thus, some degree of error can be tolerable when encoding tokens with low attention. Using approximate matrix multiplication, MCA applies different error bounds to encode input tokens such that those with low attention scores are computed with relaxed precision, whereas errors of salient elements are minimized. MCA can operate in parallel with other attention optimization schemes and does not require model modification. We study the theoretical error bounds and demonstrate that MCA reduces attention complexity (in FLOPS) for various Transformer models by up to 11 in GLUE benchmarks without compromising model accuracy. Source code and appendix: https://github.com/eis-lab/monte-carlo-attention",
+      "identifiers": [
+        "SemanticScholar:ac668af2e58c008636f653a186268afb1167b038"
+      ],
+      "semantic_scholar_id": "ac668af2e58c008636f653a186268afb1167b038",
+      "canonical_id": "arXiv:2201.12854",
+      "arxiv_id": "2201.12854",
+      "doi": "10.1609/aaai.v36i7.20679",
+      "authors": [
+        "Hyunjun Kim",
+        "Jeonggil Ko"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1714,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mixture of Attention Schemes (MoAS): Learning to Route Between MHA, GQA, and MQA",
+      "source_url": "https://arxiv.org/abs/2512.20650",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The choice of attention mechanism in Transformer models involves a critical trade-off between modeling quality and inference efficiency. Multi-Head Attention (MHA) offers the best quality but suffers from large Key-Value (KV) cache memory requirements during inference. Multi-Query Attention (MQA) and Grouped-Query Attention (GQA) reduce memory usage but often at the cost of model performance. In this work, we propose Mixture of Attention Schemes (MoAS), a novel architecture that dynamically selects the optimal attention scheme (MHA, GQA, or MQA) for each token via a learned router. We demonstrate that dynamic routing performs better than static averaging of schemes and achieves performance competitive with the MHA baseline while offering potential for conditional compute efficiency. Experimental results on WikiText-2 show that dynamic routing (val loss 2.3074) outperforms a static mixture (2.3093), validating the effectiveness of the proposed method. Our code is available at https://github.com/Esmail-ibraheem/Mixture-of-Attention-Schemes-MoAS.",
+      "identifiers": [
+        "SemanticScholar:eeda013475a182a2bcfb18ee9cfd434f42f98878"
+      ],
+      "semantic_scholar_id": "eeda013475a182a2bcfb18ee9cfd434f42f98878",
+      "canonical_id": "arXiv:2512.20650",
+      "arxiv_id": "2512.20650",
+      "doi": "10.48550/arXiv.2512.20650",
+      "authors": [
+        "Esmail Atta Gumaan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 298,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input Fine-Tuning",
+      "source_url": "https://arxiv.org/abs/2502.14644",
+      "year": 2025,
+      "published": "2025-02-20",
+      "venue": null,
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context understanding remains challenging for LLMs due to limited context windows. This paper introduces Long Input Fine-Tuning (LIFT), a framework that improves the long-context performance of arbitrary short-context LLMs by dynamically adapting their parameters to each long input. Instead of endlessly extending context windows to fit longer inputs in context, LIFT stores and absorbs the input in parameters. By fine-tuning long inputs into parameters, LIFT enables short-context LLMs to answer questions even when required information is absent from the inference context, avoiding the quadratic input-length complexity of standard long-context models. Rather than simple continued pretraining on new long contexts, LIFT uses carefully designed LLM-generated synthetic tasks to enhance comprehension beyond memorization. To offset fine-tuning overhead, we design a highly optimized pipeline that reduces Time to First Token (TTFT) to under 10 seconds for 8k context. We further analyze LIFT's strengths and limitations, discuss large-scale deployment feasibility, and highlight future research directions. Implementation is open-sourced at https://github.com/MuLabPKU/LIFT.",
+      "identifiers": [
+        "SemanticScholar:7c314da3c91f4160ac426584ff0ae6c922c1bd9c"
+      ],
+      "semantic_scholar_id": "7c314da3c91f4160ac426584ff0ae6c922c1bd9c",
+      "canonical_id": "arXiv:2502.14644",
+      "arxiv_id": "2502.14644",
+      "authors": [
+        "Yan-Sheng Mao",
+        "Yufei Xu",
+        "Jiaqi Li",
+        "Fan-Xu Meng",
+        "Haotong Yang",
+        "Zi-Long Zheng",
+        "Xiyuan Wang",
+        "Mu-Han Zhang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 597,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DBA: Efficient Transformer With Dynamic Bilinear Low-Rank Attention",
+      "source_url": "https://arxiv.org/abs/2211.16368",
+      "year": 2022,
+      "published": "2022-11-24",
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Many studies have aimed to improve Transformer model efficiency using low-rank-based methods that compress sequence length with predetermined or learned compression matrices. However, these methods fix compression coefficients for tokens in the same position during inference, ignoring sequence-specific variations. They also overlook the impact of hidden state dimensions on efficiency gains. To address these limitations, we propose dynamic bilinear low-rank attention (DBA), an efficient and effective attention mechanism that compresses sequence length using input-sensitive dynamic compression matrices. DBA achieves linear time and space complexity by jointly optimizing sequence length and hidden state dimension while maintaining state-of-the-art performance. Specifically, we demonstrate through experiments and the properties of low-rank matrices that sequence length can be compressed with compression coefficients dynamically determined by the input sequence. In addition, we illustrate that the hidden state dimension can be approximated by extending the Johnson-Lindenstrauss lemma, thereby introducing only a small amount of error. DBA optimizes the attention mechanism through bilinear forms that consider both the sequence length and hidden state dimension. Moreover, the theoretical analysis substantiates that DBA excels at capturing high-order relationships in cross-attention problems. Experimental results across different tasks with varied sequence length conditions demonstrate that DBA achieves state-of-the-art performance compared to several robust baselines. DBA also maintains higher processing speed and lower memory usage, highlighting its efficiency and effectiveness across diverse applications.",
+      "identifiers": [
+        "SemanticScholar:4d5cf66cc91ba4bbb8197d7e5711e11043002ad2"
+      ],
+      "semantic_scholar_id": "4d5cf66cc91ba4bbb8197d7e5711e11043002ad2",
+      "canonical_id": "arXiv:2211.16368",
+      "arxiv_id": "2211.16368",
+      "doi": "10.1109/TNNLS.2025.3527046",
+      "authors": [
+        "Bo-Sheng Qin",
+        "Jun-Cheng Li",
+        "Siliang Tang",
+        "Yueting Zhuang"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1416,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LongVQ: Long Sequence Modeling with Vector Quantization on Structured Memory",
+      "source_url": "https://arxiv.org/abs/2404.11163",
+      "year": 2024,
+      "published": "2024-04-17",
+      "venue": "International Joint Conference on Artificial Intelligence",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models have been successful in various sequence processing tasks, but the self-attention mechanism's computational cost limits its practicality for long sequences. Although there are existing attention variants that improve computational efficiency, they have a limited ability to abstract global information effectively based on their hand-crafted mixing strategies. On the other hand, state-space models (SSMs) are tailored for long sequences but cannot capture complicated local information. Therefore, the combination of them as a unified token mixer is a trend in recent long-sequence models. However, the linearized attention degrades performance significantly even when equipped with SSMs. To address the issue, we propose a new method called LongVQ. LongVQ uses the vector quantization (VQ) technique to compress the global abstraction as a length-fixed codebook, enabling the linear-time computation of the attention matrix. This technique effectively maintains dynamic global and local patterns, which helps to complement the lack of long-range dependency issues. Our experiments on the Long Range Arena benchmark, autoregressive language modeling, and image and speech classification demonstrate the effectiveness of LongVQ. Our model achieves significant improvements over other sequence models, including variants of Transformers, Convolutions, and recent State Space Models.",
+      "identifiers": [
+        "SemanticScholar:38b55849585083df18e24e87859313395be8a1c6"
+      ],
+      "semantic_scholar_id": "38b55849585083df18e24e87859313395be8a1c6",
+      "canonical_id": "arXiv:2404.11163",
+      "arxiv_id": "2404.11163",
+      "doi": "10.48550/arXiv.2404.11163",
+      "authors": [
+        "Zi-Cheng Liu",
+        "Li Wang",
+        "Si-Yuan Li",
+        "Zedong Wang",
+        "Hai-Tao Lin",
+        "S. Li"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 906,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ToDRE: Effective Visual Token Pruning via Token Diversity and Task Relevance",
+      "source_url": "https://arxiv.org/abs/2505.18757",
+      "year": 2025,
+      "published": "2025-05-24",
+      "venue": null,
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning, which aims to compress and prune redundant visual tokens, plays a critical role in efficient inference with large vision-language models (LVLMs). However, existing methods fail to disentangle intra-modal visual redundancy from cross-modal redundancy between vision and language. We show that visual token diversity and task-specific token relevance are two crucial yet orthogonal factors that complement each other in conveying useful information and should therefore be treated separately for more effective visual token pruning. Building upon this insight, we design TODRE, a two-stage and training-free framework that incorporates Token Diversity and task RElevance for effective token compression and efficient LVLM inference. Instead of pruning redundant tokens, we introduce a greedy max-sum diversification algorithm that selects and retains a subset of diverse and representative visual tokens after the vision encoder. On top of that, ToDRE leverages an ``information migration''mechanism to eliminate task-irrelevant visual tokens within certain decoder layers of the large language model (LLM), further improving token pruning and LVLM inference. Extensive experiments show that ToDRE prunes 90% of visual tokens after the vision encoder as well as all visual tokens in certain LLM decoder layers, leading to a 2.6x speed-up in total inference time while maintaining 95.0% model performance plus excellent model compatibility. The code is available at: \\href{https://github.com/Yrdal3910/ToDRE}{this https URL}.",
+      "identifiers": [
+        "SemanticScholar:c06154440c4acee2c86d2a2a762b6a9c73bb8ae2"
+      ],
+      "semantic_scholar_id": "c06154440c4acee2c86d2a2a762b6a9c73bb8ae2",
+      "canonical_id": "arXiv:2505.18757",
+      "arxiv_id": "2505.18757",
+      "authors": [
+        "Duo Li",
+        "Zuhao Yang",
+        "Xiao-Qin Zhang",
+        "Ling Shao",
+        "Shi-Jian Lu"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 504,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Linear Attention via Orthogonal Memory",
+      "source_url": "https://arxiv.org/abs/2312.11135",
+      "year": 2023,
+      "published": "2023-12-18",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient attentions have greatly improved the computational efficiency of Transformers. However, most existing linear attention mechanisms suffer from an \\emph{efficiency degradation} problem, leading to inefficiencies in causal language modeling and hindering their application in long-range language models. This problem is more pronounced under language modeling with unbounded contexts. In this paper, we propose \\textbf{L}inear \\textbf{A}ttention \\textbf{V}ia \\textbf{O}rthogonal memory~(\\shortname) to address these limitations, achieving strong performance while maintaining linear complexity. \\shortname employs orthogonal decomposition to compress a context into a fixed-size orthogonal memory while effectively minimizing redundancy within the context. Given that orthogonal memory compresses global information, we further dissect the context to amplify fine-grained local information. Additionally, we embed the relative position encoding into \\shortname to improve the extrapolation ability. Experimental results show that \\shortname greatly improves the efficiency of the causal language model with the best extrapolation performance and outperforms other efficient baselines. Further, we endeavor to employ \\shortname for unbounded language modeling and successfully scale the context length to 128K.",
+      "identifiers": [
+        "SemanticScholar:f051d49dc844347cec7d0816cfd804a0adc85768"
+      ],
+      "semantic_scholar_id": "f051d49dc844347cec7d0816cfd804a0adc85768",
+      "canonical_id": "arXiv:2312.11135",
+      "arxiv_id": "2312.11135",
+      "doi": "10.48550/arXiv.2312.11135",
+      "authors": [
+        "Jun Zhang",
+        "Shu-Yang Jiang",
+        "Jiangtao Feng",
+        "Lin Zheng",
+        "Lingpeng Kong"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1027,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Amdahl's Law for LLMs: A Throughput-Centric Analysis of Extreme LLM Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/999a39c8dafb1c4b1a917e4b53491b2074f187c0",
+      "year": 2025,
+      "published": null,
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0"
+      ],
+      "semantic_scholar_id": "999a39c8dafb1c4b1a917e4b53491b2074f187c0",
+      "canonical_id": "SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0",
+      "authors": [
+        "Jinendra Malekar",
+        "Ramtin Zand"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 466,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2301.13310",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2301.13310",
+        "id:SemanticScholar:c9d46cfcf0211d11356c295ecd9584c84c19c8f8",
+        "id:arXiv:2301.13310",
+        "title:alternating updates for efficient transformers",
+        "url:https://arxiv.org/abs/2301.13310"
+      ],
+      "record": {
+        "title": "Alternating Updates for Efficient Transformers",
+        "source_url": "https://arxiv.org/abs/2301.13310",
+        "year": 2023,
+        "published": "2023-01-30",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "It has been well established that increasing scale in deep transformer networks leads to improved quality and performance. However, this increase in scale often comes with prohibitive increases in compute cost and inference latency. We introduce Alternating Updates (AltUp), a simple-to-implement method to increase a model's capacity without the computational burden. AltUp enables the widening of the learned representation, i.e., the token embedding, while only incurring a negligible increase in latency. AltUp achieves this by working on a subblock of the widened representation at each layer and using a predict-and-correct mechanism to update the inactivated blocks. We present extensions of AltUp, such as its applicability to the sequence dimension, and demonstrate how AltUp can be synergistically combined with existing approaches, such as Sparse Mixture-of-Experts models, to obtain efficient models with even higher capacity. Our experiments on benchmark transformer models and language tasks demonstrate the consistent effectiveness of AltUp on a diverse set of scenarios. Notably, on SuperGLUE and SQuAD benchmarks, AltUp enables up to $87\\%$ speedup relative to the dense baselines at the same accuracy.",
+        "identifiers": [
+          "SemanticScholar:c9d46cfcf0211d11356c295ecd9584c84c19c8f8"
+        ],
+        "semantic_scholar_id": "c9d46cfcf0211d11356c295ecd9584c84c19c8f8",
+        "canonical_id": "arXiv:2301.13310",
+        "arxiv_id": "2301.13310",
+        "doi": "10.48550/arXiv.2301.13310",
+        "authors": [
+          "Cenk Baykal",
+          "D. Cutler",
+          "Nishanth Dikkala",
+          "Nikhil Ghosh",
+          "Rina Panigrahy",
+          "Xin Wang"
+        ],
+        "priority": 23,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 23,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1349,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2201.12854",
+      "identity_tokens": [
+        "id:DOI:10.1609/aaai.v36i7.20679",
+        "id:SemanticScholar:ac668af2e58c008636f653a186268afb1167b038",
+        "id:arXiv:2201.12854",
+        "title:fast montecarlo approximation of the attention mechanism",
+        "url:https://arxiv.org/abs/2201.12854"
+      ],
+      "record": {
+        "title": "Fast Monte-Carlo Approximation of the Attention Mechanism",
+        "source_url": "https://arxiv.org/abs/2201.12854",
+        "year": 2022,
+        "published": "2022-01-30",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce Monte-Carlo Attention (MCA), a randomized approximation method for reducing the computational cost of self-attention mechanisms in Transformer architectures. MCA exploits the fact that the importance of each token in an input sequence vary with respect to their attention scores; thus, some degree of error can be tolerable when encoding tokens with low attention. Using approximate matrix multiplication, MCA applies different error bounds to encode input tokens such that those with low attention scores are computed with relaxed precision, whereas errors of salient elements are minimized. MCA can operate in parallel with other attention optimization schemes and does not require model modification. We study the theoretical error bounds and demonstrate that MCA reduces attention complexity (in FLOPS) for various Transformer models by up to 11 in GLUE benchmarks without compromising model accuracy. Source code and appendix: https://github.com/eis-lab/monte-carlo-attention",
+        "identifiers": [
+          "SemanticScholar:ac668af2e58c008636f653a186268afb1167b038"
+        ],
+        "semantic_scholar_id": "ac668af2e58c008636f653a186268afb1167b038",
+        "canonical_id": "arXiv:2201.12854",
+        "arxiv_id": "2201.12854",
+        "doi": "10.1609/aaai.v36i7.20679",
+        "authors": [
+          "Hyunjun Kim",
+          "Jeonggil Ko"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1714,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.20650",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.20650",
+        "id:SemanticScholar:eeda013475a182a2bcfb18ee9cfd434f42f98878",
+        "id:arXiv:2512.20650",
+        "title:mixture of attention schemes moas learning to route between mha gqa and mqa",
+        "url:https://arxiv.org/abs/2512.20650"
+      ],
+      "record": {
+        "title": "Mixture of Attention Schemes (MoAS): Learning to Route Between MHA, GQA, and MQA",
+        "source_url": "https://arxiv.org/abs/2512.20650",
+        "year": 2025,
+        "published": "2025-12-16",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The choice of attention mechanism in Transformer models involves a critical trade-off between modeling quality and inference efficiency. Multi-Head Attention (MHA) offers the best quality but suffers from large Key-Value (KV) cache memory requirements during inference. Multi-Query Attention (MQA) and Grouped-Query Attention (GQA) reduce memory usage but often at the cost of model performance. In this work, we propose Mixture of Attention Schemes (MoAS), a novel architecture that dynamically selects the optimal attention scheme (MHA, GQA, or MQA) for each token via a learned router. We demonstrate that dynamic routing performs better than static averaging of schemes and achieves performance competitive with the MHA baseline while offering potential for conditional compute efficiency. Experimental results on WikiText-2 show that dynamic routing (val loss 2.3074) outperforms a static mixture (2.3093), validating the effectiveness of the proposed method. Our code is available at https://github.com/Esmail-ibraheem/Mixture-of-Attention-Schemes-MoAS.",
+        "identifiers": [
+          "SemanticScholar:eeda013475a182a2bcfb18ee9cfd434f42f98878"
+        ],
+        "semantic_scholar_id": "eeda013475a182a2bcfb18ee9cfd434f42f98878",
+        "canonical_id": "arXiv:2512.20650",
+        "arxiv_id": "2512.20650",
+        "doi": "10.48550/arXiv.2512.20650",
+        "authors": [
+          "Esmail Atta Gumaan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 298,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.14644",
+      "identity_tokens": [
+        "id:SemanticScholar:7c314da3c91f4160ac426584ff0ae6c922c1bd9c",
+        "id:arXiv:2502.14644",
+        "title:lift a novel framework for enhancing longcontext understanding of llms via long input finetuning",
+        "url:https://arxiv.org/abs/2502.14644"
+      ],
+      "record": {
+        "title": "LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input Fine-Tuning",
+        "source_url": "https://arxiv.org/abs/2502.14644",
+        "year": 2025,
+        "published": "2025-02-20",
+        "venue": null,
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context understanding remains challenging for LLMs due to limited context windows. This paper introduces Long Input Fine-Tuning (LIFT), a framework that improves the long-context performance of arbitrary short-context LLMs by dynamically adapting their parameters to each long input. Instead of endlessly extending context windows to fit longer inputs in context, LIFT stores and absorbs the input in parameters. By fine-tuning long inputs into parameters, LIFT enables short-context LLMs to answer questions even when required information is absent from the inference context, avoiding the quadratic input-length complexity of standard long-context models. Rather than simple continued pretraining on new long contexts, LIFT uses carefully designed LLM-generated synthetic tasks to enhance comprehension beyond memorization. To offset fine-tuning overhead, we design a highly optimized pipeline that reduces Time to First Token (TTFT) to under 10 seconds for 8k context. We further analyze LIFT's strengths and limitations, discuss large-scale deployment feasibility, and highlight future research directions. Implementation is open-sourced at https://github.com/MuLabPKU/LIFT.",
+        "identifiers": [
+          "SemanticScholar:7c314da3c91f4160ac426584ff0ae6c922c1bd9c"
+        ],
+        "semantic_scholar_id": "7c314da3c91f4160ac426584ff0ae6c922c1bd9c",
+        "canonical_id": "arXiv:2502.14644",
+        "arxiv_id": "2502.14644",
+        "authors": [
+          "Yan-Sheng Mao",
+          "Yufei Xu",
+          "Jiaqi Li",
+          "Fan-Xu Meng",
+          "Haotong Yang",
+          "Zi-Long Zheng",
+          "Xiyuan Wang",
+          "Mu-Han Zhang"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 597,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2211.16368",
+      "identity_tokens": [
+        "id:DOI:10.1109/tnnls.2025.3527046",
+        "id:SemanticScholar:4d5cf66cc91ba4bbb8197d7e5711e11043002ad2",
+        "id:arXiv:2211.16368",
+        "title:dba efficient transformer with dynamic bilinear lowrank attention",
+        "url:https://arxiv.org/abs/2211.16368"
+      ],
+      "record": {
+        "title": "DBA: Efficient Transformer With Dynamic Bilinear Low-Rank Attention",
+        "source_url": "https://arxiv.org/abs/2211.16368",
+        "year": 2022,
+        "published": "2022-11-24",
+        "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Many studies have aimed to improve Transformer model efficiency using low-rank-based methods that compress sequence length with predetermined or learned compression matrices. However, these methods fix compression coefficients for tokens in the same position during inference, ignoring sequence-specific variations. They also overlook the impact of hidden state dimensions on efficiency gains. To address these limitations, we propose dynamic bilinear low-rank attention (DBA), an efficient and effective attention mechanism that compresses sequence length using input-sensitive dynamic compression matrices. DBA achieves linear time and space complexity by jointly optimizing sequence length and hidden state dimension while maintaining state-of-the-art performance. Specifically, we demonstrate through experiments and the properties of low-rank matrices that sequence length can be compressed with compression coefficients dynamically determined by the input sequence. In addition, we illustrate that the hidden state dimension can be approximated by extending the Johnson-Lindenstrauss lemma, thereby introducing only a small amount of error. DBA optimizes the attention mechanism through bilinear forms that consider both the sequence length and hidden state dimension. Moreover, the theoretical analysis substantiates that DBA excels at capturing high-order relationships in cross-attention problems. Experimental results across different tasks with varied sequence length conditions demonstrate that DBA achieves state-of-the-art performance compared to several robust baselines. DBA also maintains higher processing speed and lower memory usage, highlighting its efficiency and effectiveness across diverse applications.",
+        "identifiers": [
+          "SemanticScholar:4d5cf66cc91ba4bbb8197d7e5711e11043002ad2"
+        ],
+        "semantic_scholar_id": "4d5cf66cc91ba4bbb8197d7e5711e11043002ad2",
+        "canonical_id": "arXiv:2211.16368",
+        "arxiv_id": "2211.16368",
+        "doi": "10.1109/TNNLS.2025.3527046",
+        "authors": [
+          "Bo-Sheng Qin",
+          "Jun-Cheng Li",
+          "Siliang Tang",
+          "Yueting Zhuang"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1416,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.11163",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.11163",
+        "id:SemanticScholar:38b55849585083df18e24e87859313395be8a1c6",
+        "id:arXiv:2404.11163",
+        "title:longvq long sequence modeling with vector quantization on structured memory",
+        "url:https://arxiv.org/abs/2404.11163"
+      ],
+      "record": {
+        "title": "LongVQ: Long Sequence Modeling with Vector Quantization on Structured Memory",
+        "source_url": "https://arxiv.org/abs/2404.11163",
+        "year": 2024,
+        "published": "2024-04-17",
+        "venue": "International Joint Conference on Artificial Intelligence",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer models have been successful in various sequence processing tasks, but the self-attention mechanism's computational cost limits its practicality for long sequences. Although there are existing attention variants that improve computational efficiency, they have a limited ability to abstract global information effectively based on their hand-crafted mixing strategies. On the other hand, state-space models (SSMs) are tailored for long sequences but cannot capture complicated local information. Therefore, the combination of them as a unified token mixer is a trend in recent long-sequence models. However, the linearized attention degrades performance significantly even when equipped with SSMs. To address the issue, we propose a new method called LongVQ. LongVQ uses the vector quantization (VQ) technique to compress the global abstraction as a length-fixed codebook, enabling the linear-time computation of the attention matrix. This technique effectively maintains dynamic global and local patterns, which helps to complement the lack of long-range dependency issues. Our experiments on the Long Range Arena benchmark, autoregressive language modeling, and image and speech classification demonstrate the effectiveness of LongVQ. Our model achieves significant improvements over other sequence models, including variants of Transformers, Convolutions, and recent State Space Models.",
+        "identifiers": [
+          "SemanticScholar:38b55849585083df18e24e87859313395be8a1c6"
+        ],
+        "semantic_scholar_id": "38b55849585083df18e24e87859313395be8a1c6",
+        "canonical_id": "arXiv:2404.11163",
+        "arxiv_id": "2404.11163",
+        "doi": "10.48550/arXiv.2404.11163",
+        "authors": [
+          "Zi-Cheng Liu",
+          "Li Wang",
+          "Si-Yuan Li",
+          "Zedong Wang",
+          "Hai-Tao Lin",
+          "S. Li"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 906,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.18757",
+      "identity_tokens": [
+        "id:SemanticScholar:c06154440c4acee2c86d2a2a762b6a9c73bb8ae2",
+        "id:arXiv:2505.18757",
+        "title:todre effective visual token pruning via token diversity and task relevance",
+        "url:https://arxiv.org/abs/2505.18757"
+      ],
+      "record": {
+        "title": "ToDRE: Effective Visual Token Pruning via Token Diversity and Task Relevance",
+        "source_url": "https://arxiv.org/abs/2505.18757",
+        "year": 2025,
+        "published": "2025-05-24",
+        "venue": null,
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual token pruning, which aims to compress and prune redundant visual tokens, plays a critical role in efficient inference with large vision-language models (LVLMs). However, existing methods fail to disentangle intra-modal visual redundancy from cross-modal redundancy between vision and language. We show that visual token diversity and task-specific token relevance are two crucial yet orthogonal factors that complement each other in conveying useful information and should therefore be treated separately for more effective visual token pruning. Building upon this insight, we design TODRE, a two-stage and training-free framework that incorporates Token Diversity and task RElevance for effective token compression and efficient LVLM inference. Instead of pruning redundant tokens, we introduce a greedy max-sum diversification algorithm that selects and retains a subset of diverse and representative visual tokens after the vision encoder. On top of that, ToDRE leverages an ``information migration''mechanism to eliminate task-irrelevant visual tokens within certain decoder layers of the large language model (LLM), further improving token pruning and LVLM inference. Extensive experiments show that ToDRE prunes 90% of visual tokens after the vision encoder as well as all visual tokens in certain LLM decoder layers, leading to a 2.6x speed-up in total inference time while maintaining 95.0% model performance plus excellent model compatibility. The code is available at: \\href{https://github.com/Yrdal3910/ToDRE}{this https URL}.",
+        "identifiers": [
+          "SemanticScholar:c06154440c4acee2c86d2a2a762b6a9c73bb8ae2"
+        ],
+        "semantic_scholar_id": "c06154440c4acee2c86d2a2a762b6a9c73bb8ae2",
+        "canonical_id": "arXiv:2505.18757",
+        "arxiv_id": "2505.18757",
+        "authors": [
+          "Duo Li",
+          "Zuhao Yang",
+          "Xiao-Qin Zhang",
+          "Ling Shao",
+          "Shi-Jian Lu"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 504,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2312.11135",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2312.11135",
+        "id:SemanticScholar:f051d49dc844347cec7d0816cfd804a0adc85768",
+        "id:arXiv:2312.11135",
+        "title:linear attention via orthogonal memory",
+        "url:https://arxiv.org/abs/2312.11135"
+      ],
+      "record": {
+        "title": "Linear Attention via Orthogonal Memory",
+        "source_url": "https://arxiv.org/abs/2312.11135",
+        "year": 2023,
+        "published": "2023-12-18",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient attentions have greatly improved the computational efficiency of Transformers. However, most existing linear attention mechanisms suffer from an \\emph{efficiency degradation} problem, leading to inefficiencies in causal language modeling and hindering their application in long-range language models. This problem is more pronounced under language modeling with unbounded contexts. In this paper, we propose \\textbf{L}inear \\textbf{A}ttention \\textbf{V}ia \\textbf{O}rthogonal memory~(\\shortname) to address these limitations, achieving strong performance while maintaining linear complexity. \\shortname employs orthogonal decomposition to compress a context into a fixed-size orthogonal memory while effectively minimizing redundancy within the context. Given that orthogonal memory compresses global information, we further dissect the context to amplify fine-grained local information. Additionally, we embed the relative position encoding into \\shortname to improve the extrapolation ability. Experimental results show that \\shortname greatly improves the efficiency of the causal language model with the best extrapolation performance and outperforms other efficient baselines. Further, we endeavor to employ \\shortname for unbounded language modeling and successfully scale the context length to 128K.",
+        "identifiers": [
+          "SemanticScholar:f051d49dc844347cec7d0816cfd804a0adc85768"
+        ],
+        "semantic_scholar_id": "f051d49dc844347cec7d0816cfd804a0adc85768",
+        "canonical_id": "arXiv:2312.11135",
+        "arxiv_id": "2312.11135",
+        "doi": "10.48550/arXiv.2312.11135",
+        "authors": [
+          "Jun Zhang",
+          "Shu-Yang Jiang",
+          "Jiangtao Feng",
+          "Lin Zheng",
+          "Lingpeng Kong"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1027,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0",
+      "identity_tokens": [
+        "id:SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0",
+        "title:amdahls law for llms a throughputcentric analysis of extreme llm quantization",
+        "url:https://www.semanticscholar.org/paper/999a39c8dafb1c4b1a917e4b53491b2074f187c0"
+      ],
+      "record": {
+        "title": "Amdahl's Law for LLMs: A Throughput-Centric Analysis of Extreme LLM Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/999a39c8dafb1c4b1a917e4b53491b2074f187c0",
+        "year": 2025,
+        "published": null,
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0"
+        ],
+        "semantic_scholar_id": "999a39c8dafb1c4b1a917e4b53491b2074f187c0",
+        "canonical_id": "SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0",
+        "authors": [
+          "Jinendra Malekar",
+          "Ramtin Zand"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 466,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6788dff7b5d8248947a93374e2768273bf9e964e4b90d75145a214a6aa1d0dda",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

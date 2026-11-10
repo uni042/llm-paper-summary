@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-594cf4d0adc4c930-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.04670",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.04670",
+    "identity_tokens": [
+      "arXiv:2511.04670"
+    ],
+    "reason": "VSI-SUPER/VSI-590Kと予測的センシングにより動画の空間認知・世界モデル能力を高めるマルチモーダルモデル研究で、LLM推論基盤の速度・メモリ・サービング効率化を主要目的としない。",
+    "first_checked_at": "2026-10-07T05:49:20+00:00",
+    "last_checked_at": "2026-10-07T22:08:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+    ],
+    "title": "Cambrian-S: Towards Spatial Supersensing in Video"
+  },
+  "processed_at": "2026-10-07T22:08:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-594cf4d0adc4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

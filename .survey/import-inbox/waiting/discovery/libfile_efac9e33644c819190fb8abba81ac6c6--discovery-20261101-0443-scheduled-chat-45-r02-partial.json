@@ -1,0 +1,154 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261101-0443-scheduled-chat-45/r02",
+  "reference_main_sha": "62939ca2418e5cd94bb9d90a09f850dde21a88dc",
+  "record_count": 8,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/JSTQE.2026.3715241",
+      "identity_tokens": [
+        "DOI:10.1109/JSTQE.2026.3715241"
+      ],
+      "title": "Intra-Matrix Flexible Optical-Electronic Configuration Algorithms for Energy-Efficient Large Language Model Inference",
+      "reason": "IEEE公式abstractに基づく。FOPA、FWCA、JOWAの3種類の柔軟な光電混載資源配分方式で、対角ヘッセ近似を用い光パワーと弱列への計算割当をエネルギー制約下で最適化する。Llama2-7BとDeepSeek-LLM-7B-BaseでH100 FP16推論比40.11～60.85%の推定エネルギー削減、均一光電構成比5.34～38.12%削減を報告。ただし数値はシミュレーション推定で実機GPUサービングの実測ではない。LLM推論ハードウェアの直接的な省エネ技術なのでaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11614746/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:55:59+09:00",
+      "last_checked_at": "2026-11-01T04:55:59+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 316"
+      ],
+      "worklist_rank": 316,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TMM.2025.3639997",
+      "identity_tokens": [
+        "DOI:10.1109/TMM.2025.3639997"
+      ],
+      "title": "EEformer: Early Exiting for Transformer With Global-Local Exits and Progressive Fine-Tuning",
+      "reason": "IEEE公式abstractに基づく。EEformerは中間層にglobal-local headを導入した動的early exitと3段階のprogressive fine-tuningでTransformerの推論を高速化する。CIFAR-100で性能99.0%を維持し1.87倍、SST-2で98.5%を維持し3.05倍の高速化を報告。ただし評価は画像分類とNLP分類で、生成LLMのデコード、KVキャッシュ、サービングへの直接適用は示されない。技術的関連はあるがLLM推論システムとしての直接性が弱いためborderline。",
+      "source_url": "https://ieeexplore.ieee.org/document/11281527/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:55:59+09:00",
+      "last_checked_at": "2026-11-01T04:55:59+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 369"
+      ],
+      "worklist_rank": 369,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IBAAIDS66771.2026.11567438",
+      "identity_tokens": [
+        "DOI:10.1109/IBAAIDS66771.2026.11567438"
+      ],
+      "title": "Green Speculative Decoding for Energy-Efficient Small Langauge Models",
+      "reason": "IEEE公式abstractに基づく。小型言語モデルのエネルギー効率を狙い、軽量draftモデルが生成した候補トークンをより高精度なtargetモデルで選択的に検証する同期型投機的デコードパイプラインを提案。シミュレーション評価で出力品質を保ちながらスループット改善と省エネルギーを報告するが、要旨には具体的な倍率や実機測定条件はない。生成推論の直接的なデコード最適化なのでaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11567438/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:55:59+09:00",
+      "last_checked_at": "2026-11-01T04:55:59+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 404"
+      ],
+      "worklist_rank": 404,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/COOLCHIPS65488.2025.11018598",
+      "identity_tokens": [
+        "DOI:10.1109/COOLCHIPS65488.2025.11018598"
+      ],
+      "title": "Hybrid ReRAM-NMC & SRAM-CiM Matrix Multiplication for Large Language Model",
+      "reason": "IEEE公式abstractに基づく。ReRAMのコンダクタンス変動による演算誤差に対処するため、少数の活性化をSRAM-CiM、残りをReRAM近傍メモリ演算へ割り当てるハイブリッド行列積アーキテクチャを提案。MAC回路と混載コアのパイプライン構成を示し、Llama2-7Bの重み・活性化6bit量子化でSRAM容量比1%未満でもガウス誤差・シフト誤差下のperplexity増加を2未満に抑えたと報告。LLM推論のCiM演算・量子化耐性を直接扱うためaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11018598/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:55:59+09:00",
+      "last_checked_at": "2026-11-01T04:55:59+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 427"
+      ],
+      "worklist_rank": 427,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3603269.3610856",
+      "identity_tokens": [
+        "DOI:10.1145/3603269.3610856"
+      ],
+      "title": "Poster: PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing",
+      "reason": "ACM Digital Libraryの著者abstractに基づく。PipeLLMは計算能力が異なる複数デバイスへLLM層を分配し、入力系列をトークン次元で分割して層処理を並列化する、ローカル小規模設備向けの異種デバイスパイプライン推論方式。要旨はLLM推論高速化の可能性を示すが、定量的な速度・通信オーバーヘッドは記載していない。LLM分散推論の実行方式に直接貢献するためaccept。",
+      "source_url": "https://dl.acm.org/doi/10.1145/3603269.3610856",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:55:59+09:00",
+      "last_checked_at": "2026-11-01T04:55:59+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 462"
+      ],
+      "worklist_rank": 462,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/Trustcom66490.2025.00028",
+      "identity_tokens": [
+        "DOI:10.1109/Trustcom66490.2025.00028"
+      ],
+      "title": "Hamster: Private Transformer Inference via Fully Homomorphic Encryption",
+      "reason": "IEEE公式abstractに基づく。Hamsterは完全準同型暗号下でTransformerの非線形GELU/Softmax等を効率的に近似し、クライアント入力とサーバーモデルを秘匿したままend-to-end推論するシステム。トークンあたり平均約12分と依然高コストながら、BumbleBee比2.2倍、NEXUS比1.2倍の推論高速化を報告。プライバシー制約下のTransformer推論実行時間削減という直接的システム技術なのでaccept。ただし一般的なLLMサービング性能への外挿はしない。",
+      "source_url": "https://ieeexplore.ieee.org/document/11354949/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:55:59+09:00",
+      "last_checked_at": "2026-11-01T04:55:59+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 468"
+      ],
+      "worklist_rank": 468,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/AICAS59952.2024.10595950",
+      "identity_tokens": [
+        "DOI:10.1109/AICAS59952.2024.10595950"
+      ],
+      "title": "Accelerate Large Language Model Inference on Edge TPU with OpenVX framework",
+      "reason": "IEEE公式abstractに基づく。Edge TPUの整数演算をOpenVX APIで再利用し、LLMの各構成要素を手動でネットワーク化して量子化精度を確保しつつエッジ推論を加速する方法を提案。ONNXの自動パースだけではLLMのネットワーク構築を扱えない制約と実装上の精度課題を論じる。要旨に具体的な速度倍率はないが、LLM推論を専用エッジ演算器へ実装する直接的な実行技術なのでaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/10595950/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:55:59+09:00",
+      "last_checked_at": "2026-11-01T04:55:59+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 471"
+      ],
+      "worklist_rank": 471,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134696",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134696"
+      ],
+      "title": "Privacy-preserving and efficient two-party inference for transformer",
+      "reason": "Elsevier ScienceDirect公式abstractに基づく。モデルを保持するサーバーとデータを保持するクライアント間の秘匿Transformer推論で、GELUとSoftmaxの暗号化評価をルックアップ表・区分線形多項式で近似し、動的精度調整で演算・通信コストを削減する。BERT-baseでGELUプロトコル1.22～3.08倍、Softmax1.39～3.93倍の実行高速化を報告。ただし生成LLMやLLMサービングへの直接評価はなく、BERT-baseの二者間秘匿推論に限定されるためborderline。",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0925231226020941",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:55:59+09:00",
+      "last_checked_at": "2026-11-01T04:55:59+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 473"
+      ],
+      "worklist_rank": 473,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    }
+  ]
+}

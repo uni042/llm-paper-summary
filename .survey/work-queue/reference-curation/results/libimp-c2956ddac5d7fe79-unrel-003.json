@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c2956ddac5d7fe79-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.04925",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.04925",
+    "identity_tokens": [
+      "arXiv:2404.04925"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2404.04925. Abstract summary: Multilingual Large Language Models are capable of using powerful Large Language Models to handle and respond to queries in multiple languages, which achieves remarkable success in multilingual natural language processing tasks. Despite these breakthroughs, there still remains a lack of a comprehensive survey to summarize existin Out of scope: Multilingual LLM resource/taxonomy survey, not inference optimization.",
+    "first_checked_at": "2026-10-05T12:35:29+00:00",
+    "last_checked_at": "2026-10-05T12:35:29+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+    ],
+    "title": "Multilingual Large Language Model: A Survey of Resources, Taxonomy and Frontiers"
+  },
+  "processed_at": "2026-10-05T12:35:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c2956ddac5d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

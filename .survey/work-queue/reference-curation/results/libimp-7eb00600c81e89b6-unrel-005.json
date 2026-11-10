@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7eb00600c81e89b6-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.00159",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.00159",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.00159",
+      "arXiv:2402.00159"
+    ],
+    "reason": "3兆トークン規模の英語事前学習コーパス構築・データキュレーション研究で、最終適用先は学習データ整備のため凍結範囲。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+    ],
+    "title": "Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7eb00600c81e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9497b025a2e6bfb8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.07109",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.07109",
+    "identity_tokens": [
+      "DOI:10.1007/s10664-024-10558-1",
+      "SemanticScholar:c3e9318b38662c942752b922b0df47fdd9f4de48",
+      "arXiv:2310.07109"
+    ],
+    "reason": "一次論文の要旨とICSE 2025の正式な論文紹介を確認。SparseCoderはCodeBERT、RoBERTa、CodeT5を基礎とするソースコード脆弱性検出・解析モデルに疎注意と学習型トークン削除を適用し、従来比較で最大4倍の処理時間改善と約50%の演算量削減を報告する。しかし最終用途はコード系列の分類・解析であり、自己回帰型LLMのトークン生成、KVキャッシュ、デコード遅延、生成品質を評価していない。注意の疎化機構はLLM推論へ転用可能なため完全な無関係とはせず、現行サーベイの境界的候補とする。",
+    "first_checked_at": "2026-10-18T10:00:28+00:00",
+    "last_checked_at": "2026-10-18T10:00:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "SparseCoder: Advancing Source Code Analysis with Sparse Attention and Learned Token Pruning"
+  },
+  "processed_at": "2026-10-18T10:00:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9497b025a2e6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

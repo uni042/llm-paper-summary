@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-829812b066779004-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/wacv48630.2021.00357",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/wacv48630.2021.00357",
+    "identity_tokens": [
+      "DOI:10.1109/wacv48630.2021.00357"
+    ],
+    "reason": "The method reduces attention memory and computation, but the full text evaluates only vision tasks and does not test language models, causal attention, or LLM inference.",
+    "first_checked_at": "2026-10-05T00:53:14+00:00",
+    "last_checked_at": "2026-10-05T00:53:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+    ],
+    "title": "Efficient Attention: Attention with Linear Complexities"
+  },
+  "processed_at": "2026-10-05T00:53:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-829812b06677",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

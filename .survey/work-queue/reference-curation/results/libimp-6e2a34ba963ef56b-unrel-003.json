@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6e2a34ba963ef56b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.30901",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.30901",
+    "identity_tokens": [
+      "arXiv:2608.30901"
+    ],
+    "reason": "要旨は電力系統安定化のためのAIデータセンターtraining workload制御。",
+    "first_checked_at": "2026-10-05T07:48:22+00:00",
+    "last_checked_at": "2026-10-05T07:48:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+    ],
+    "title": "Flexible Training Workloads in Large-Scale AI Data Centers for Transient-Stability Support in Transmission-Constrained Power Systems"
+  },
+  "processed_at": "2026-10-05T07:48:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6e2a34ba963e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

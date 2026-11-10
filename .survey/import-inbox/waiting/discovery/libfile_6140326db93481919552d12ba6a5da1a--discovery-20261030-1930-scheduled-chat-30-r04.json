@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r04",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:3ce4934467503e25801e8bc7ab94425fb2d65380",
+      "identity_tokens": [
+        "SemanticScholar:3ce4934467503e25801e8bc7ab94425fb2d65380",
+        "arXiv:2502.20576"
+      ],
+      "title": "OmniRouter: Budget and Performance Controllable Multi-LLM Routing",
+      "reason": "複数LLMから要求ごとにモデルを選ぶ際、局所的な品質予測だけでは全体の予算・費用を最適化できない問題を扱う。モデル能力と処理費用の予測器を用い、ラグランジュ双対に基づく制約付き最適化で要求割当を決定する。worklistの旧題名「Smart Routing ... AIOS」と現行arXivのOmniRouterは同じarXiv IDに属する版差であり、別identityにしない。",
+      "source_url": "https://arxiv.org/abs/2502.20576",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:36:57+09:00",
+      "last_checked_at": "2026-10-30T19:36:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 44,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.403",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.403"
+      ],
+      "title": "SCVQ: Sparse-Compensated Vector Quantization for Large Language Models",
+      "reason": "低ビットのベクトル量子化でコードブック保存・索引検索の費用と精度劣化が大きい問題に対し、顕著性重み付きK-meansと、外れ値・重要重み・残差を一つの疎補償行列に統合するSCVQを提案。2bitのLLaMA-2-7BでWikiText-2 PPL 5.78、既存方式比end-to-end推論1.4倍を報告。ACL 2026公式要旨で確認。",
+      "source_url": "https://aclanthology.org/2026.acl-long.403/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:36:57+09:00",
+      "last_checked_at": "2026-10-30T19:36:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 46,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34330",
+      "identity_tokens": [
+        "arXiv:2609.34330"
+      ],
+      "title": "MiCo: Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference",
+      "reason": "視覚トークンを経験的スコアだけで剪定すると必要な意味情報が消える問題に対し、意味消去モデルから相互情報量カバレッジ目的を導出する。言語モデル投入前の代表候補抽出とタスク依存部分集合選択の二段階で、劣モジュラ目的を予算内で貪欲最適化する学習不要のMLLM推論圧縮手法。",
+      "source_url": "https://arxiv.org/abs/2609.34330",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:36:57+09:00",
+      "last_checked_at": "2026-10-30T19:36:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 47,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.03960",
+      "identity_tokens": [
+        "arXiv:2410.03960"
+      ],
+      "title": "SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation",
+      "reason": "長い入力プロンプトに対するprefillが高コストになるLLMサービスで、後段層のKVを前段層出力から生成し一部層のprefill計算をスキップするSwiftKVを提案。品質保持の軽量蒸留を併用し、prefill FLOPsを25〜50%削減、end-to-end servingで集約スループット最大2倍を報告する直接的な推論高速化研究。",
+      "source_url": "https://arxiv.org/abs/2410.03960",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:36:57+09:00",
+      "last_checked_at": "2026-10-30T19:36:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 48,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.06822",
+      "identity_tokens": [
+        "arXiv:2602.06822"
+      ],
+      "title": "POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models",
+      "reason": "固定の構造枝刈りではトークン生成中に変わる活性パターンへ追従できない問題を扱う。prefillで保持・候補・削除の粗いチャネル領域を決め、decodeでは候補領域だけ文脈依存の細粒度マスクを更新するPOPを提案。追加校正・再学習なしでLLM/MoE/VLMの推論演算削減と遅延改善を狙う直接的なオンライン剪定方式。",
+      "source_url": "https://arxiv.org/abs/2602.06822",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:36:57+09:00",
+      "last_checked_at": "2026-10-30T19:36:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 49,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.27298",
+      "identity_tokens": [
+        "arXiv:2609.27298"
+      ],
+      "title": "StateComp: Learning When to Compress History in Long Horizon Agents",
+      "reason": "長時間エージェントの履歴をいつ安全に要約できるかをKEEP/READY教師信号で学習し、文脈トークンと表現抽出費用を削減するStateComp。WorkBuddyBenchでagentと要約の総トークンを52.27%削減したと報告する。推論コンテキスト費用には関係するが、主題はエージェント状態・履歴管理であり汎用LLMサービング基盤の機構ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2609.27298",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:36:57+09:00",
+      "last_checked_at": "2026-10-30T19:36:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 50,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17286",
+      "identity_tokens": [
+        "arXiv:2604.17286"
+      ],
+      "title": "Depth Adaptive Efficient Visual Autoregressive Modeling",
+      "reason": "DepthVARは高解像度画像を生成する視覚自己回帰モデルに対し、トークン別に計算深度を割り当てる。要旨の実験対象は画像生成のVARであり、テキストLLM・VLMによる言語推論、KVキャッシュ、LLMサービングの実証はない。Transformer計算削減という共通性だけでは対象系統へ採用できない。",
+      "source_url": "https://arxiv.org/abs/2604.17286",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:36:57+09:00",
+      "last_checked_at": "2026-10-30T19:36:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 51,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.06938",
+      "identity_tokens": [
+        "arXiv:2603.06938"
+      ],
+      "title": "Swimba: Switch Mamba Model Scales State Space Models",
+      "reason": "SSMのトークンミキサへMoEを適用すると専門家ごとに再帰状態が増える問題に対し、専門家をパラメータ空間で混合し一つの状態軌道だけ更新するSwimbaを提案。推論計算の構造には関連するが、要旨ではベースラインより実時間遅延・処理量がわずかに悪化するため、明確な推論高速化成果としては扱わず境界分類。",
+      "source_url": "https://arxiv.org/abs/2603.06938",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:36:57+09:00",
+      "last_checked_at": "2026-10-30T19:36:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 52,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.12193",
+      "identity_tokens": [
+        "arXiv:2605.12193"
+      ],
+      "title": "BFLA: Block-Filtered Long-Context Attention Mechanism",
+      "reason": "再学習なしで長文脈prefillを疎化するBFLA。決定的なブロック索引、クエリタイル共有、長さ適応のRatio-K選択とblock-sparse実行を組み合わせ、vLLMへ統合しdecodeは通常経路を保持する。Gemma/Qwen系列の長文脈評価でTTFT最大約4倍、要求全体最大3.72倍の高速化を報告する直接的なサービング最適化。",
+      "source_url": "https://arxiv.org/abs/2605.12193",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:36:57+09:00",
+      "last_checked_at": "2026-10-30T19:36:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 54,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.28044",
+      "identity_tokens": [
+        "arXiv:2608.28044"
+      ],
+      "title": "Characterization of Request and Token Energy Costs for LLM Inference Workloads on GPU Platforms",
+      "reason": "LLM推論のtoken当たりエネルギーが下がっても要求全体の電力量が増える計測上の落とし穴を、prefill固定費とdecode各ステップの限界費用へ分解して分析。H100/H200でモデル、バッチ、文脈長、出力長を変え、token正規化と要求単位の両指標を比較する。新規カーネルではないが推論サービングの省電力・容量設計に直接有用な実測研究。",
+      "source_url": "https://arxiv.org/abs/2608.28044",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:36:57+09:00",
+      "last_checked_at": "2026-10-30T19:36:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 55,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}

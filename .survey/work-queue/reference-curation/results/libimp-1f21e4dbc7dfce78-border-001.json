@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f21e4dbc7dfce78-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.19203",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.19203",
+    "identity_tokens": [
+      "arXiv:2609.19203"
+    ],
+    "reason": "関連概念はあるがposition paperに留まり、具体的inference-efficiency evidenceがない。",
+    "first_checked_at": "2026-10-05T06:36:02+00:00",
+    "last_checked_at": "2026-10-05T06:36:02+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+    ],
+    "title": "Position: It is Time to Virtualize Foundation Models with a Self-evolving Operating System Layer"
+  },
+  "processed_at": "2026-10-05T06:36:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f21e4dbc7df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

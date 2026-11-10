@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T073300Z-scheduled-chat-llm-survey-run09-02r",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-9c3fc1bfa46c87d0",
+      "claim_id": "claim-58fed7e57ba9f56b62bd697a",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-58fed7e57ba9f56b62bd697a",
+      "claimed_at": "2026-09-20T07:33:10+00:00",
+      "expires_at": "2026-09-20T09:03:10+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-9c3fc1bfa46c87d0"
+      ],
+      "job": {
+        "job_id": "job-research-9c3fc1bfa46c87d0",
+        "type": "research",
+        "parent_job_id": "job-d3d361a16715ebb0",
+        "priority": 94,
+        "canonical_id": "arXiv:2311.04934",
+        "arxiv_id": "2311.04934",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Prompt Cache: Modular Attention Reuse for Low-Latency Inference",
+        "source_url": "https://arxiv.org/abs/2311.04934",
+        "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "selection_reason": "Serving-oriented prompt/KV state reuse system that precomputes reusable attention states for shared prompt modules and substantially reduces TTFT.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T18:48:21+00:00",
+        "blocker": "一次資料の全文を安全に取得できなかったため、このattemptでは全文精読・5-slot生成を行わない。arXiv HTML full renderingは取得経路でDisabledError、arXiv PDF直接取得も失敗。MLSys 2024公式posterページとGoogle Research公式publicationページは取得できたが、いずれも本文全文ではなく抄録・書誌情報までだった。二次資料から科学的内容を補完せず再試行対象としてblocked保存する。",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-5ea6e0dabdb5053729aff0d5.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-20T02:36:00+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-20T02:36:00+00:00",
+            "reason": "一次資料の全文を安全に取得できなかったため、このattemptでは全文精読・5-slot生成を行わない。arXiv HTML full renderingは取得経路でDisabledError、arXiv PDF直接取得も失敗。MLSys 2024公式posterページとGoogle Research公式publicationページは取得できたが、いずれも本文全文ではなく抄録・書誌情報までだった。二次資料から科学的内容を補完せず再試行対象としてblocked保存する。"
+          }
+        ],
+        "last_blocked_at": "2026-09-20T02:36:00+00:00",
+        "retry_queued_at": "2026-09-20T07:06:00+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: metadata.arxiv_categories.primary is required for arXiv papers | metadata.references[2] duplicates an earlier reference identity | problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+        "validation_errors": [
+          "metadata.arxiv_categories.primary is required for arXiv papers",
+          "metadata.references[2] duplicates an earlier reference identity",
+          "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-20T07:32:41+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-61774f4ac669457f0e035bd8"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-61774f4ac669457f0e035bd8.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T07:33:10+00:00",
+  "checkpoint_released": 0
+}

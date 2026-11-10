@@ -1,0 +1,865 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8ddb5e97e8a1a4a6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8ddb5e97e8a1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1038/s44387-026-00072-8",
+    "DOI:10.1109/icpads67057.2025.11323033",
+    "DOI:10.1109/tcad.2025.3585023",
+    "DOI:10.1109/tmc.2025.3628498",
+    "DOI:10.18653/v1/2026.acl-long.285",
+    "DOI:10.24963/ijcai.2025/920",
+    "DOI:10.26599/bdma.2024.9020074",
+    "arXiv:2603.19296",
+    "arXiv:2609.05821"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "fba71cd998a03c8e42e30fa045e8f69c76827721",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:05:45.358583+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1038/s44387-026-00072-8",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/icpads67057.2025.11323033",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tcad.2025.3585023",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tmc.2025.3628498",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.acl-long.285",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.24963/ijcai.2025/920",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.26599/bdma.2024.9020074",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.19296",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.05821",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Phase transitions in large language model compression",
+      "source_url": "https://doi.org/10.1038/s44387-026-00072-8",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "npj Artificial Intelligence",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This perspective argues that Large Language Models exhibit Model Phase Transitions: performance collapses beyond critical compression thresholds. We analyze structural, numerical, and algebraic redundancy across pruning, quantization, and low-rank decomposition techniques. These sources are orthogonal, enabling a criticality-aware compression framework that achieves near-lossless compression to 10% of the original size. This shift proves that compressing a giant is more effective than training a dwarf for efficient, sustainable AI deployment.",
+      "identifiers": [
+        "SemanticScholar:7ed3dd27a60af2079e25590965840685973e70a3"
+      ],
+      "semantic_scholar_id": "7ed3dd27a60af2079e25590965840685973e70a3",
+      "doi": "10.1038/s44387-026-00072-8",
+      "canonical_id": "DOI:10.1038/s44387-026-00072-8",
+      "authors": [
+        "Ziyang Ma",
+        "Zu-Chao Li",
+        "Le-Fei Zhang",
+        "Gui-Song Xia",
+        "Bo Du",
+        "Liang-Pei Zhang",
+        "Da-Cheng Tao"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 266,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "H2O: Heterogeneity-Aware Hierarchical Orchestration for Memory-Efficient On-Device LLM Inference",
+      "source_url": "https://doi.org/10.1109/TMC.2025.3628498",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "IEEE Transactions on Mobile Computing",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "On-device Large Language Model (LLM) inference enables private, personalized AI but faces memory constraints. Despite memory optimization efforts, scaling laws continue to increase model sizes and memory pressure. In this paper, we revisit the core memory bottlenecks in on-device LLM inference and conduct a comprehensive analysis of mainstream optimization techniques. We uncover several overlooked inefficiencies: (1) model weights, not KV caches, dominate memory usage; (2) weight sparsity remains underutilized; (3) OS-level memory behaviors cause redundancy; and (4) naive weight loading leads to excessive memory residency. To address these challenges, we propose H2O, a heterogeneity-aware hierarchical orchestration framework for memory-efficient on-device LLM inference. H2O introduces three key techniques, including hierarchical weight orchestration to reduce redundant memory retention, zero-copy I/O–compute parallelism for safe and efficient memory reuse, and heterogeneity-aware inference planning to adapt to diverse mobile hardware constraints. Extensive experimental results show that H2O reduces peak memory usage by up to 60%, eliminates out-of-memory (OOM) failures for 7 B–13 B models, and improves inference latency by 34%–94% under tight memory budgets.",
+      "identifiers": [
+        "SemanticScholar:5ebb4baf53207d405be08d0be839bb874f668de1"
+      ],
+      "semantic_scholar_id": "5ebb4baf53207d405be08d0be839bb874f668de1",
+      "doi": "10.1109/TMC.2025.3628498",
+      "canonical_id": "DOI:10.1109/TMC.2025.3628498",
+      "authors": [
+        "Fei Zeng",
+        "Feng Lyu",
+        "Hao Wu",
+        "Zhan-Xin Li",
+        "Shucheng Li",
+        "Feng-Yuan Xu"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TTQ: Activation-Aware Test-Time Quantization to Accelerate LLM Inference On The Fly",
+      "source_url": "https://arxiv.org/abs/2603.19296",
+      "year": 2026,
+      "published": "2026-03-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To tackle the huge computational demand of large foundation models, activation-aware compression techniques without retraining have been introduced. However, since these methods highly rely on calibration data, domain shift issues may arise for unseen downstream tasks. We propose a test-time quantization (TTQ) framework which compresses large models on the fly at inference time to resolve this issue. With an efficient online calibration, instant activation-aware quantization can adapt every prompt regardless of the downstream tasks, yet achieving inference speedup. Several experiments demonstrate that TTQ can improve the quantization performance over state-of-the-art baselines.",
+      "identifiers": [
+        "SemanticScholar:6416144455cf320c9420a0c61a7cd2669b927585"
+      ],
+      "semantic_scholar_id": "6416144455cf320c9420a0c61a7cd2669b927585",
+      "canonical_id": "arXiv:2603.19296",
+      "arxiv_id": "2603.19296",
+      "doi": "10.48550/arXiv.2603.19296",
+      "authors": [
+        "T. Koike-Akino",
+        "Jing Liu",
+        "Ye Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 233,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "UniSpec: Training-Free Speculative Decoding for Robust LLM Acceleration Across Languages and Hardware",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.285",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference through a draft-and-verify paradigm, yet existing methods face three key limitations: reliance on fixed draft templates that ignore device-specific verification costs, lack of mechanisms to assess draft token quality, and suboptimal tree expansion strategies. We introduce U NI S PEC , a training-free, lossless speculative decoding framework that enables robust, plug-and-play LLM acceleration across diverse hardware configurations and languages. U NI S PEC incorporates three novel components: (1) a device-aware calibration mechanism that determines the optimal draft size by measuring the acceptance-time trade-off on each target device; (2) a confidence score estimation module that assigns quality scores to n-grams based on the verifier’s token probabilities, enabling selective retention of high-quality draft candidates; and (3) an improved tree expansion strategy that broadens first-level exploration and applies threshold-based filtering to prune low-confidence nodes. To comprehensively evaluate multilingual performance, we create a comprehensive benchmark, covering seven languages across seven generation tasks. Experiments with various LLM architectures, hardware environments, and languages demonstrate that U NI S PEC consistently outperforms existing training-free methods, achieving speedups of up to 2.6 × while maintaining output quality identical to standard autoregressive decoding. Our code and benchmark are publicly available.",
+      "identifiers": [
+        "SemanticScholar:fe7d01982b5c6e448ac55fbf0600560e6f49a1af"
+      ],
+      "semantic_scholar_id": "fe7d01982b5c6e448ac55fbf0600560e6f49a1af",
+      "doi": "10.18653/v1/2026.acl-long.285",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.285",
+      "authors": [
+        "T. Do",
+        "Nguyen-Khang Le",
+        "Le-Minh Nguyen"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Dispenser: Hierarchical KV Cache Management for Efficient LLM Generative Inference",
+      "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323033",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": "International Conference on Parallel and Distributed Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As context windows expands, Large Language Models (LLMs) are being more capable of handling long-context tasks. However, long-context inference is hindered by high latency and memory usage due to the linearly growing Key-Value (KV) cache. Prior work has shown that a dynamic subset of the KV cache dominates attention outcomes and selectively loads these subsets instead of the full cache. These methods partition the KV cache into segments (block-wise and token-wise) and identify critical ones for recall. However, for block-wise ones, their recall accuracy is often compromised by semantic inconsistencies among consecutive tokens, and for token-wise ones, they suffer from inefficiency in memory management and offloading. To these ends, we propose Dispenser, a hierarchical KV cache management algorithm inspired by multi-level page tables. Dispenser organizes the KV cache based on token semantic similarity and partitions it into pages and blocks, which enables straightforward integration into modern serving engines such as vLLM. It employs a two-level lookup mechanism to identify and load the most relevant blocks for the current query. Experimental results demonstrate that Dispenser achieves up to a $5.75 \\times$ speedup in self-attention, reducing inference latency by $2.1 \\times$ on tasks with long dependencies with negligible accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:7c88c86da16807953e38c694adbf3f17ebbaacde"
+      ],
+      "semantic_scholar_id": "7c88c86da16807953e38c694adbf3f17ebbaacde",
+      "doi": "10.1109/ICPADS67057.2025.11323033",
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323033",
+      "authors": [
+        "Beiquan Cao",
+        "Kai-Gui Bian",
+        "Guo-Jie Luo",
+        "Joongheon Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 320,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Oiso: Outlier-Isolated Data Format for Low-Bit Large Language Model Quantization",
+      "source_url": "https://doi.org/10.1109/TCAD.2025.3585023",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The scale of large language models (LLMs) has steadily increased over time, leading to enhanced performance in multimodal understanding and complex reasoning, but with significant execution overhead on hardware. Quantization is a promising approach to reduce computation and memory overhead for LLM deployment. However, maintaining accuracy and efficiency simultaneously is challenging due to the presence of outliers. Moreover, low-bit quantization tends to deteriorate accuracy due to its limited precision. Existing outlier-aware quantization/hardware co-design methods split the sparse outliers from the normal values with dedicated encoding schemes. However, such separation produces a nonuniform data format for normal values and outliers, leading to additional hardware design and inefficient memory access. This article presents an outlier-isolated data format (Oiso) for low-bit LLM quantization called Oiso. Oiso is a unified representation for both outliers and normal values. It isolates the normal values from the outliers, which can reduce the impact of outliers on the normal values during the quantization process. Taking advantage of the uniform format, Oiso arithmetic can be performed using a homogeneous computational unit, and Oiso values can be stored in a standardized format. Hierarchical block encoding with a subblock alignment scheme is introduced to reduce the encoding cost and the hardware overhead. We introduce the Oiso architecture, equipped with Oiso processing elements and encoders tailored for Oiso arithmetic, realizing efficient low-bit LLM inference. Oiso quantization can push the limits of low-bit LLM quantization, and the Oiso accelerator outperforms the state-of-the-art outlieraware accelerator design with $1.26\\times $ performance improvement and 25% energy reduction.",
+      "identifiers": [
+        "SemanticScholar:5d33dbac67a065aa4eb4ad0c039093708610aff0"
+      ],
+      "semantic_scholar_id": "5d33dbac67a065aa4eb4ad0c039093708610aff0",
+      "doi": "10.1109/TCAD.2025.3585023",
+      "canonical_id": "DOI:10.1109/TCAD.2025.3585023",
+      "authors": [
+        "Lan-Cheng Zou",
+        "Shuo Yin",
+        "Mingjun Li",
+        "Ming-Zi Wang",
+        "Chen Bai",
+        "Wenqian Zhao",
+        "Bei Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 271,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.05821",
+      "year": 2026,
+      "published": "2026-09-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) often answer new questions about recurring visual content, where reusing the key-value (KV) cache can avoid re-encoding expensive visual prefixes. Exact-prefix reuse, however, fails when the same visual content appears under a changed prefix. Selective recomputation can recover quality under a small visual-token budget, but only when the right stale tokens are refreshed. Raw-attention selection can waste budget on high-attention tokens with small value-norm proxy scores and on query-irrelevant images. To address these failure modes, we propose CONDUIT, a training-free refresh policy that unifies single- and multi-image reuse as residual-stream restoration. Building on norm-weighted attention, CONDUIT ranks cached visual tokens using cached-key query attention and an accessible pre-output cached-value-norm proxy, then applies empirical image-level relevance amplification before one global selection. With one image, the coefficient is one and the rule reduces to intra-image token selection. The method preserves model architecture and weights, adding only a single query-conditioned scoring pass at inference. At a 10% refresh budget, CONDUIT achieves 97.0-99.5% of the corresponding full-prefill five-dataset average across three VLM backbones and leads budgeted methods on average; on the MMLongBench-Doc latency subset, it uses 13.5% of full-prefill FLOPs and achieves a 2.99x time-to-first-token speedup.",
+      "identifiers": [
+        "SemanticScholar:3324f33ad4a0328cbce11308a3a21e7ded09e7b3"
+      ],
+      "semantic_scholar_id": "3324f33ad4a0328cbce11308a3a21e7ded09e7b3",
+      "canonical_id": "arXiv:2609.05821",
+      "arxiv_id": "2609.05821",
+      "authors": [
+        "Peng-An Chen",
+        "Kai-Sheng Zheng",
+        "Liang Hong",
+        "Liang Yi",
+        "Ji-Yue Jiang",
+        "Jia-Yan Chen",
+        "Yi-Xuan Wang",
+        "Yi-Min Fan",
+        "Xin-Yuan Liu",
+        "Jia-Yi Li",
+        "Zhan-Qiu Zhang",
+        "Yi-Wen Guo",
+        "Yu Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 55,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads",
+      "source_url": "https://doi.org/10.26599/bdma.2024.9020074",
+      "year": 2025,
+      "published": "2025-08-01",
+      "venue": "Big Data Mining and Analytics",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:90967211ccf00a56488bfcd97c49e8b68bed5b0d"
+      ],
+      "semantic_scholar_id": "90967211ccf00a56488bfcd97c49e8b68bed5b0d",
+      "doi": "10.26599/bdma.2024.9020074",
+      "canonical_id": "DOI:10.26599/bdma.2024.9020074",
+      "authors": [
+        "Zi-Qian Zeng",
+        "Jiahong Yu",
+        "Qianshi Pang",
+        "Zihao Wang",
+        "Huiping Zhuang",
+        "Fan Yu",
+        "Hon-Gen Shao",
+        "Xiao-Feng Zou"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 455,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MPPQ: Enhancing Post-Training Quantization for LLMs via Mixed Supervision, Proxy Rounding, and Pre-Searching",
+      "source_url": "https://doi.org/10.24963/ijcai.2025/920",
+      "year": 2025,
+      "published": "2025-09-01",
+      "venue": "International Joint Conference on Artificial Intelligence",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, post-training quantization (PTQ) methods for large language models (LLMs) primarily focus on tackling the challenges caused by outliers. Scaling transformation has proven to be effective while how to enhance the performance of extremely low-bitwidth (e.g., 2-bit) PTQ under it remains largely unexplored. In this work, a new PTQ framework, namely MPPQ, is established. Specifically, MPPQ first proposes an enhanced reconstruction loss based on Mixed metric supervision to mitigate the distribution inconsistency caused by quantization while providing strong regularization for learnable parameters.\n\nSecondly, we introduce a Proxy-based adaptive rounding scheme in weight quantization, which replaces the round-to-nearest (RTN) function to minimize the overall quantization errors through element-wise scaling. Furthermore, a factor coarse Pre-searching mechanism is presented to ensure proper coordination between quantization and clipping patterns, while achieving optimal initialization of clipping factors before training.\n\nExtensive experiments show that MPPQ consistently outperforms state-of-the-art methods in low-bit quantization settings. For instance, the perplexity of WikiText2 can be dramatically reduced to 8.85 (3.9 ↓ vs 12.75 of the latest method, LRQuant) for the LLaMA-2-7B model, which is quantized with W4A4.",
+      "identifiers": [
+        "SemanticScholar:bbf4ae391cdc3a640fdd3acfc2af0c5a94e2ccfb"
+      ],
+      "semantic_scholar_id": "bbf4ae391cdc3a640fdd3acfc2af0c5a94e2ccfb",
+      "doi": "10.24963/ijcai.2025/920",
+      "canonical_id": "DOI:10.24963/ijcai.2025/920",
+      "authors": [
+        "Ming-Run Wei",
+        "Ye-Yu Yan",
+        "Dong Wang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 424,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1038/s44387-026-00072-8",
+      "identity_tokens": [
+        "id:DOI:10.1038/s44387-026-00072-8",
+        "id:SemanticScholar:7ed3dd27a60af2079e25590965840685973e70a3",
+        "title:phase transitions in large language model compression",
+        "url:https://doi.org/10.1038/s44387-026-00072-8"
+      ],
+      "record": {
+        "title": "Phase transitions in large language model compression",
+        "source_url": "https://doi.org/10.1038/s44387-026-00072-8",
+        "year": 2026,
+        "published": "2026-02-06",
+        "venue": "npj Artificial Intelligence",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This perspective argues that Large Language Models exhibit Model Phase Transitions: performance collapses beyond critical compression thresholds. We analyze structural, numerical, and algebraic redundancy across pruning, quantization, and low-rank decomposition techniques. These sources are orthogonal, enabling a criticality-aware compression framework that achieves near-lossless compression to 10% of the original size. This shift proves that compressing a giant is more effective than training a dwarf for efficient, sustainable AI deployment.",
+        "identifiers": [
+          "SemanticScholar:7ed3dd27a60af2079e25590965840685973e70a3"
+        ],
+        "semantic_scholar_id": "7ed3dd27a60af2079e25590965840685973e70a3",
+        "doi": "10.1038/s44387-026-00072-8",
+        "canonical_id": "DOI:10.1038/s44387-026-00072-8",
+        "authors": [
+          "Ziyang Ma",
+          "Zu-Chao Li",
+          "Le-Fei Zhang",
+          "Gui-Song Xia",
+          "Bo Du",
+          "Liang-Pei Zhang",
+          "Da-Cheng Tao"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 266,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tmc.2025.3628498",
+      "identity_tokens": [
+        "id:DOI:10.1109/tmc.2025.3628498",
+        "id:SemanticScholar:5ebb4baf53207d405be08d0be839bb874f668de1",
+        "title:h2o heterogeneityaware hierarchical orchestration for memoryefficient ondevice llm inference",
+        "url:https://doi.org/10.1109/TMC.2025.3628498"
+      ],
+      "record": {
+        "title": "H2O: Heterogeneity-Aware Hierarchical Orchestration for Memory-Efficient On-Device LLM Inference",
+        "source_url": "https://doi.org/10.1109/TMC.2025.3628498",
+        "year": 2026,
+        "published": "2026-04-01",
+        "venue": "IEEE Transactions on Mobile Computing",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "On-device Large Language Model (LLM) inference enables private, personalized AI but faces memory constraints. Despite memory optimization efforts, scaling laws continue to increase model sizes and memory pressure. In this paper, we revisit the core memory bottlenecks in on-device LLM inference and conduct a comprehensive analysis of mainstream optimization techniques. We uncover several overlooked inefficiencies: (1) model weights, not KV caches, dominate memory usage; (2) weight sparsity remains underutilized; (3) OS-level memory behaviors cause redundancy; and (4) naive weight loading leads to excessive memory residency. To address these challenges, we propose H2O, a heterogeneity-aware hierarchical orchestration framework for memory-efficient on-device LLM inference. H2O introduces three key techniques, including hierarchical weight orchestration to reduce redundant memory retention, zero-copy I/O–compute parallelism for safe and efficient memory reuse, and heterogeneity-aware inference planning to adapt to diverse mobile hardware constraints. Extensive experimental results show that H2O reduces peak memory usage by up to 60%, eliminates out-of-memory (OOM) failures for 7 B–13 B models, and improves inference latency by 34%–94% under tight memory budgets.",
+        "identifiers": [
+          "SemanticScholar:5ebb4baf53207d405be08d0be839bb874f668de1"
+        ],
+        "semantic_scholar_id": "5ebb4baf53207d405be08d0be839bb874f668de1",
+        "doi": "10.1109/TMC.2025.3628498",
+        "canonical_id": "DOI:10.1109/TMC.2025.3628498",
+        "authors": [
+          "Fei Zeng",
+          "Feng Lyu",
+          "Hao Wu",
+          "Zhan-Xin Li",
+          "Shucheng Li",
+          "Feng-Yuan Xu"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 212,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.19296",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.19296",
+        "id:SemanticScholar:6416144455cf320c9420a0c61a7cd2669b927585",
+        "id:arXiv:2603.19296",
+        "title:ttq activationaware testtime quantization to accelerate llm inference on the fly",
+        "url:https://arxiv.org/abs/2603.19296"
+      ],
+      "record": {
+        "title": "TTQ: Activation-Aware Test-Time Quantization to Accelerate LLM Inference On The Fly",
+        "source_url": "https://arxiv.org/abs/2603.19296",
+        "year": 2026,
+        "published": "2026-03-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "To tackle the huge computational demand of large foundation models, activation-aware compression techniques without retraining have been introduced. However, since these methods highly rely on calibration data, domain shift issues may arise for unseen downstream tasks. We propose a test-time quantization (TTQ) framework which compresses large models on the fly at inference time to resolve this issue. With an efficient online calibration, instant activation-aware quantization can adapt every prompt regardless of the downstream tasks, yet achieving inference speedup. Several experiments demonstrate that TTQ can improve the quantization performance over state-of-the-art baselines.",
+        "identifiers": [
+          "SemanticScholar:6416144455cf320c9420a0c61a7cd2669b927585"
+        ],
+        "semantic_scholar_id": "6416144455cf320c9420a0c61a7cd2669b927585",
+        "canonical_id": "arXiv:2603.19296",
+        "arxiv_id": "2603.19296",
+        "doi": "10.48550/arXiv.2603.19296",
+        "authors": [
+          "T. Koike-Akino",
+          "Jing Liu",
+          "Ye Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 233,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.acl-long.285",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.285",
+        "id:SemanticScholar:fe7d01982b5c6e448ac55fbf0600560e6f49a1af",
+        "title:unispec trainingfree speculative decoding for robust llm acceleration across languages and hardware",
+        "url:https://doi.org/10.18653/v1/2026.acl-long.285"
+      ],
+      "record": {
+        "title": "UniSpec: Training-Free Speculative Decoding for Robust LLM Acceleration Across Languages and Hardware",
+        "source_url": "https://doi.org/10.18653/v1/2026.acl-long.285",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model (LLM) inference through a draft-and-verify paradigm, yet existing methods face three key limitations: reliance on fixed draft templates that ignore device-specific verification costs, lack of mechanisms to assess draft token quality, and suboptimal tree expansion strategies. We introduce U NI S PEC , a training-free, lossless speculative decoding framework that enables robust, plug-and-play LLM acceleration across diverse hardware configurations and languages. U NI S PEC incorporates three novel components: (1) a device-aware calibration mechanism that determines the optimal draft size by measuring the acceptance-time trade-off on each target device; (2) a confidence score estimation module that assigns quality scores to n-grams based on the verifier’s token probabilities, enabling selective retention of high-quality draft candidates; and (3) an improved tree expansion strategy that broadens first-level exploration and applies threshold-based filtering to prune low-confidence nodes. To comprehensively evaluate multilingual performance, we create a comprehensive benchmark, covering seven languages across seven generation tasks. Experiments with various LLM architectures, hardware environments, and languages demonstrate that U NI S PEC consistently outperforms existing training-free methods, achieving speedups of up to 2.6 × while maintaining output quality identical to standard autoregressive decoding. Our code and benchmark are publicly available.",
+        "identifiers": [
+          "SemanticScholar:fe7d01982b5c6e448ac55fbf0600560e6f49a1af"
+        ],
+        "semantic_scholar_id": "fe7d01982b5c6e448ac55fbf0600560e6f49a1af",
+        "doi": "10.18653/v1/2026.acl-long.285",
+        "canonical_id": "DOI:10.18653/v1/2026.acl-long.285",
+        "authors": [
+          "T. Do",
+          "Nguyen-Khang Le",
+          "Le-Minh Nguyen"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 121,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icpads67057.2025.11323033",
+      "identity_tokens": [
+        "id:DOI:10.1109/icpads67057.2025.11323033",
+        "id:SemanticScholar:7c88c86da16807953e38c694adbf3f17ebbaacde",
+        "title:dispenser hierarchical kv cache management for efficient llm generative inference",
+        "url:https://doi.org/10.1109/ICPADS67057.2025.11323033"
+      ],
+      "record": {
+        "title": "Dispenser: Hierarchical KV Cache Management for Efficient LLM Generative Inference",
+        "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323033",
+        "year": 2025,
+        "published": "2025-12-14",
+        "venue": "International Conference on Parallel and Distributed Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As context windows expands, Large Language Models (LLMs) are being more capable of handling long-context tasks. However, long-context inference is hindered by high latency and memory usage due to the linearly growing Key-Value (KV) cache. Prior work has shown that a dynamic subset of the KV cache dominates attention outcomes and selectively loads these subsets instead of the full cache. These methods partition the KV cache into segments (block-wise and token-wise) and identify critical ones for recall. However, for block-wise ones, their recall accuracy is often compromised by semantic inconsistencies among consecutive tokens, and for token-wise ones, they suffer from inefficiency in memory management and offloading. To these ends, we propose Dispenser, a hierarchical KV cache management algorithm inspired by multi-level page tables. Dispenser organizes the KV cache based on token semantic similarity and partitions it into pages and blocks, which enables straightforward integration into modern serving engines such as vLLM. It employs a two-level lookup mechanism to identify and load the most relevant blocks for the current query. Experimental results demonstrate that Dispenser achieves up to a $5.75 \\times$ speedup in self-attention, reducing inference latency by $2.1 \\times$ on tasks with long dependencies with negligible accuracy loss.",
+        "identifiers": [
+          "SemanticScholar:7c88c86da16807953e38c694adbf3f17ebbaacde"
+        ],
+        "semantic_scholar_id": "7c88c86da16807953e38c694adbf3f17ebbaacde",
+        "doi": "10.1109/ICPADS67057.2025.11323033",
+        "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323033",
+        "authors": [
+          "Beiquan Cao",
+          "Kai-Gui Bian",
+          "Guo-Jie Luo",
+          "Joongheon Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 320,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcad.2025.3585023",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2025.3585023",
+        "id:SemanticScholar:5d33dbac67a065aa4eb4ad0c039093708610aff0",
+        "title:oiso outlierisolated data format for lowbit large language model quantization",
+        "url:https://doi.org/10.1109/TCAD.2025.3585023"
+      ],
+      "record": {
+        "title": "Oiso: Outlier-Isolated Data Format for Low-Bit Large Language Model Quantization",
+        "source_url": "https://doi.org/10.1109/TCAD.2025.3585023",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The scale of large language models (LLMs) has steadily increased over time, leading to enhanced performance in multimodal understanding and complex reasoning, but with significant execution overhead on hardware. Quantization is a promising approach to reduce computation and memory overhead for LLM deployment. However, maintaining accuracy and efficiency simultaneously is challenging due to the presence of outliers. Moreover, low-bit quantization tends to deteriorate accuracy due to its limited precision. Existing outlier-aware quantization/hardware co-design methods split the sparse outliers from the normal values with dedicated encoding schemes. However, such separation produces a nonuniform data format for normal values and outliers, leading to additional hardware design and inefficient memory access. This article presents an outlier-isolated data format (Oiso) for low-bit LLM quantization called Oiso. Oiso is a unified representation for both outliers and normal values. It isolates the normal values from the outliers, which can reduce the impact of outliers on the normal values during the quantization process. Taking advantage of the uniform format, Oiso arithmetic can be performed using a homogeneous computational unit, and Oiso values can be stored in a standardized format. Hierarchical block encoding with a subblock alignment scheme is introduced to reduce the encoding cost and the hardware overhead. We introduce the Oiso architecture, equipped with Oiso processing elements and encoders tailored for Oiso arithmetic, realizing efficient low-bit LLM inference. Oiso quantization can push the limits of low-bit LLM quantization, and the Oiso accelerator outperforms the state-of-the-art outlieraware accelerator design with $1.26\\times $ performance improvement and 25% energy reduction.",
+        "identifiers": [
+          "SemanticScholar:5d33dbac67a065aa4eb4ad0c039093708610aff0"
+        ],
+        "semantic_scholar_id": "5d33dbac67a065aa4eb4ad0c039093708610aff0",
+        "doi": "10.1109/TCAD.2025.3585023",
+        "canonical_id": "DOI:10.1109/TCAD.2025.3585023",
+        "authors": [
+          "Lan-Cheng Zou",
+          "Shuo Yin",
+          "Mingjun Li",
+          "Ming-Zi Wang",
+          "Chen Bai",
+          "Wenqian Zhao",
+          "Bei Yu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 271,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05821",
+      "identity_tokens": [
+        "id:SemanticScholar:3324f33ad4a0328cbce11308a3a21e7ded09e7b3",
+        "id:arXiv:2609.05821",
+        "title:conduit a unified residualstream restoration framework for kv cache reuse in visionlanguage models",
+        "url:https://arxiv.org/abs/2609.05821"
+      ],
+      "record": {
+        "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2609.05821",
+        "year": 2026,
+        "published": "2026-09-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language models (VLMs) often answer new questions about recurring visual content, where reusing the key-value (KV) cache can avoid re-encoding expensive visual prefixes. Exact-prefix reuse, however, fails when the same visual content appears under a changed prefix. Selective recomputation can recover quality under a small visual-token budget, but only when the right stale tokens are refreshed. Raw-attention selection can waste budget on high-attention tokens with small value-norm proxy scores and on query-irrelevant images. To address these failure modes, we propose CONDUIT, a training-free refresh policy that unifies single- and multi-image reuse as residual-stream restoration. Building on norm-weighted attention, CONDUIT ranks cached visual tokens using cached-key query attention and an accessible pre-output cached-value-norm proxy, then applies empirical image-level relevance amplification before one global selection. With one image, the coefficient is one and the rule reduces to intra-image token selection. The method preserves model architecture and weights, adding only a single query-conditioned scoring pass at inference. At a 10% refresh budget, CONDUIT achieves 97.0-99.5% of the corresponding full-prefill five-dataset average across three VLM backbones and leads budgeted methods on average; on the MMLongBench-Doc latency subset, it uses 13.5% of full-prefill FLOPs and achieves a 2.99x time-to-first-token speedup.",
+        "identifiers": [
+          "SemanticScholar:3324f33ad4a0328cbce11308a3a21e7ded09e7b3"
+        ],
+        "semantic_scholar_id": "3324f33ad4a0328cbce11308a3a21e7ded09e7b3",
+        "canonical_id": "arXiv:2609.05821",
+        "arxiv_id": "2609.05821",
+        "authors": [
+          "Peng-An Chen",
+          "Kai-Sheng Zheng",
+          "Liang Hong",
+          "Liang Yi",
+          "Ji-Yue Jiang",
+          "Jia-Yan Chen",
+          "Yi-Xuan Wang",
+          "Yi-Min Fan",
+          "Xin-Yuan Liu",
+          "Jia-Yi Li",
+          "Zhan-Qiu Zhang",
+          "Yi-Wen Guo",
+          "Yu Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 55,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.26599/bdma.2024.9020074",
+      "identity_tokens": [
+        "id:DOI:10.26599/bdma.2024.9020074",
+        "id:SemanticScholar:90967211ccf00a56488bfcd97c49e8b68bed5b0d",
+        "title:resdecode accelerating large language models inference via residual decoding heads",
+        "url:https://doi.org/10.26599/bdma.2024.9020074"
+      ],
+      "record": {
+        "title": "ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads",
+        "source_url": "https://doi.org/10.26599/bdma.2024.9020074",
+        "year": 2025,
+        "published": "2025-08-01",
+        "venue": "Big Data Mining and Analytics",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:90967211ccf00a56488bfcd97c49e8b68bed5b0d"
+        ],
+        "semantic_scholar_id": "90967211ccf00a56488bfcd97c49e8b68bed5b0d",
+        "doi": "10.26599/bdma.2024.9020074",
+        "canonical_id": "DOI:10.26599/bdma.2024.9020074",
+        "authors": [
+          "Zi-Qian Zeng",
+          "Jiahong Yu",
+          "Qianshi Pang",
+          "Zihao Wang",
+          "Huiping Zhuang",
+          "Fan Yu",
+          "Hon-Gen Shao",
+          "Xiao-Feng Zou"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 455,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.24963/ijcai.2025/920",
+      "identity_tokens": [
+        "id:DOI:10.24963/ijcai.2025/920",
+        "id:SemanticScholar:bbf4ae391cdc3a640fdd3acfc2af0c5a94e2ccfb",
+        "title:mppq enhancing posttraining quantization for llms via mixed supervision proxy rounding and presearching",
+        "url:https://doi.org/10.24963/ijcai.2025/920"
+      ],
+      "record": {
+        "title": "MPPQ: Enhancing Post-Training Quantization for LLMs via Mixed Supervision, Proxy Rounding, and Pre-Searching",
+        "source_url": "https://doi.org/10.24963/ijcai.2025/920",
+        "year": 2025,
+        "published": "2025-09-01",
+        "venue": "International Joint Conference on Artificial Intelligence",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently, post-training quantization (PTQ) methods for large language models (LLMs) primarily focus on tackling the challenges caused by outliers. Scaling transformation has proven to be effective while how to enhance the performance of extremely low-bitwidth (e.g., 2-bit) PTQ under it remains largely unexplored. In this work, a new PTQ framework, namely MPPQ, is established. Specifically, MPPQ first proposes an enhanced reconstruction loss based on Mixed metric supervision to mitigate the distribution inconsistency caused by quantization while providing strong regularization for learnable parameters.\n\nSecondly, we introduce a Proxy-based adaptive rounding scheme in weight quantization, which replaces the round-to-nearest (RTN) function to minimize the overall quantization errors through element-wise scaling. Furthermore, a factor coarse Pre-searching mechanism is presented to ensure proper coordination between quantization and clipping patterns, while achieving optimal initialization of clipping factors before training.\n\nExtensive experiments show that MPPQ consistently outperforms state-of-the-art methods in low-bit quantization settings. For instance, the perplexity of WikiText2 can be dramatically reduced to 8.85 (3.9 ↓ vs 12.75 of the latest method, LRQuant) for the LLaMA-2-7B model, which is quantized with W4A4.",
+        "identifiers": [
+          "SemanticScholar:bbf4ae391cdc3a640fdd3acfc2af0c5a94e2ccfb"
+        ],
+        "semantic_scholar_id": "bbf4ae391cdc3a640fdd3acfc2af0c5a94e2ccfb",
+        "doi": "10.24963/ijcai.2025/920",
+        "canonical_id": "DOI:10.24963/ijcai.2025/920",
+        "authors": [
+          "Ming-Run Wei",
+          "Ye-Yu Yan",
+          "Dong Wang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 424,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4f81c26b9c5f9573d6fe3f9bc93a414b4df72f0b4b6a5466ebbcf61855d728b2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

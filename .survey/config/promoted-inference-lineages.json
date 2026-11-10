@@ -1,0 +1,443 @@
+{
+  "schema_version": 1,
+  "lineages": [
+    {
+      "slug": "09-kernel-runtime-compilation",
+      "title": "Kernel / Runtime Compilation",
+      "description": "GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・実行時コンパイルなど、LLM推論の演算実装そのものを生成・統合・配置して起動やメモリ往復のオーバーヘッドを減らす研究をまとめる。",
+      "distinctness_reason": "LLM Serving系統が要求・バッチ・prefill/decode・GPU配置をサービス全体で制御するのに対し、本系統は演算グラフやGPUカーネルの生成・融合・スケジューリングという実行基盤内部を主要最適化対象とするため、分類境界が明確に異なる。",
+      "boundary_rule": "主要貢献がGPUカーネル、コンパイラ、JIT、メガカーネル、演算融合またはそれらの実行時生成・配置である論文を含め、単なるserving policyや量子化手法だけを主貢献とする論文は含めない。",
+      "scope_includes": [
+        "GPUカーネル生成・融合・メガカーネル化",
+        "JIT・CUDA Graph・実行時コンパイル",
+        "LLM演算向けコンパイラ／カーネル自動最適化"
+      ],
+      "scope_excludes": [
+        "要求スケジューリングだけを主題とするserving研究",
+        "量子化形式そのものが主貢献でカーネル最適化が従属的な研究"
+      ],
+      "neighbor_lineages": [
+        "11-llm-serving-scheduling-disaggregation",
+        "06-moe-quantization-compression"
+      ],
+      "supporting_papers": [
+        "arXiv:2504.19442",
+        "arXiv:2512.22219",
+        "2025-pod-attention.md",
+        "arXiv:2601.00227",
+        "arXiv:2602.06072",
+        "arXiv:2602.11808",
+        "arXiv:2603.07169",
+        "arXiv:2603.24595"
+      ],
+      "created_at": "2026-09-24T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "12-moe-parallelism-communication",
+      "title": "MoE Parallelism / Communication",
+      "description": "MoEの専門家並列、テンソル並列との混成、all-to-all通信、専門家配置、負荷分散、ネットワークトポロジーを共同最適化し、複数GPU・複数ノード間の通信待ちと偏りを減らす研究をまとめる。",
+      "distinctness_reason": "Offload系統は容量不足を補う階層メモリ転送、Adaptive Expert系統は実行するexpert自体の削減・統合、Serving系統は要求単位の全体スケジューリングが中心である。本クラスタはexpert parallelismと通信経路・配置・負荷分散の共同最適化が主目的で独立している。",
+      "boundary_rule": "主要貢献がMoEのexpert parallelism、all-to-all通信、分散expert配置、通信と計算の重畳、ネットワークトポロジーまたは分散負荷分散である論文を含め、単一GPU内のexpert offloadやexpert数削減だけの研究は含めない。",
+      "scope_includes": [
+        "expert parallelismとall-to-all通信最適化",
+        "複数GPU／複数ノードのexpert配置と負荷分散",
+        "MoE通信と計算の重畳・ネットワーク最適化"
+      ],
+      "scope_excludes": [
+        "単一GPU向けexpert offload",
+        "expert pruning・mergingだけを主題とする研究"
+      ],
+      "neighbor_lineages": [
+        "11-llm-serving-scheduling-disaggregation",
+        "01-offload-hierarchical-memory",
+        "02-adaptive-expert-computation-compression"
+      ],
+      "supporting_papers": [
+        "arXiv:2502.06643",
+        "arXiv:2503.04398",
+        "arXiv:2505.13345",
+        "arXiv:2508.12851",
+        "arXiv:2509.17863",
+        "arXiv:2601.03992",
+        "arXiv:2601.08800",
+        "arXiv:2603.27624"
+      ],
+      "created_at": "2026-09-24T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "13-sparse-attention",
+      "title": "Sparse Attention",
+      "description": "長文脈LLMで全KVへ密に注意を計算せず、重要token・block・page・routeだけを選択してattention演算量とメモリ帯域を減らす疎注意方式をまとめる。",
+      "distinctness_reason": "KV Cache Optimization系統がKVの保存量・圧縮・選別・割当を主に扱うのに対し、本系統はattention計算時に参照するquery-key接続そのものを疎にすることが主要機構であり、KVを保持したまま計算だけを削減する研究も含むため境界が異なる。",
+      "boundary_rule": "主要貢献がattention対象token/block/pageの選択、疎なquery-key接続、top-k/route型attention計算削減である論文を含め、KVの圧縮・退避・量子化だけでattention接続を疎化しない研究は含めない。",
+      "scope_includes": [
+        "token/block/page選択型の疎attention",
+        "top-k・threshold・route型attention",
+        "長文脈向けattention計算削減"
+      ],
+      "scope_excludes": [
+        "KV cache圧縮だけを主題とする研究",
+        "KV offloadだけでattention自体は密な研究"
+      ],
+      "neighbor_lineages": [
+        "07-kv-cache-optimization-compression",
+        "11-llm-serving-scheduling-disaggregation"
+      ],
+      "supporting_papers": [
+        "arXiv:2406.10774",
+        "arXiv:2407.02490",
+        "arXiv:2410.13276",
+        "arXiv:2502.13189",
+        "arXiv:2609.07306",
+        "2026-delta.md"
+      ],
+      "created_at": "2026-09-24T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "14-agentic-inference-serving-runtime",
+      "title": "Agentic Inference / Serving Runtime",
+      "description": "ツール呼出し、長寿命セッション、複数LLM・複数エージェントのワークフロー、長い待機時間と再入場を前提に、エージェント推論の資源・状態・GPU配置・KV再利用を最適化するシステム研究をまとめる。",
+      "distinctness_reason": "通常のLLM Serving系統が独立したrequest、batch、prefill/decodeを主要単位にするのに対し、本系統はLLM呼出しとツール実行が交互に続く長寿命ワークフロー、セッション状態、再入場、サンドボックス資源を主要単位にするため、要求単位servingとは運用特性と最適化対象が異なる。",
+      "boundary_rule": "主要貢献がtool-usingまたはmulti-agent workflowの実行特性を利用した資源管理、状態管理、スケジューリング、配置、KV再利用、OS/runtime制御である研究を含め、単にagentを評価対象に使うだけの一般serving・一般KV手法は含めない。",
+      "scope_includes": [
+        "ツール待機・再入場を含む長寿命agent session管理",
+        "multi-agent／multi-LLM workflowのGPU配置・スケジューリング",
+        "agent workflow固有のKV・OS・sandbox資源管理"
+      ],
+      "scope_excludes": [
+        "独立requestだけを扱う一般LLM serving",
+        "agentを単なるワークロードとして使うだけでagent固有機構を持たない研究"
+      ],
+      "neighbor_lineages": [
+        "11-llm-serving-scheduling-disaggregation",
+        "07-kv-cache-optimization-compression",
+        "10-kv-cache-offload-recomputation"
+      ],
+      "supporting_papers": [
+        "arXiv:2608.00101",
+        "arXiv:2606.16824",
+        "arXiv:2606.00866",
+        "arXiv:2605.26297",
+        "arXiv:2602.09345",
+        "arXiv:2608.30830",
+        "arXiv:2607.29069",
+        "arXiv:2609.03236",
+        "arXiv:2609.16491",
+        "arXiv:2609.14138",
+        "arXiv:2609.17193",
+        "arXiv:2609.08566",
+        "arXiv:2608.26004",
+        "arXiv:2606.14672",
+        "arXiv:2605.22566",
+        "arXiv:2604.15186",
+        "arXiv:2507.07400"
+      ],
+      "created_at": "2026-09-24T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "15-inference-simulation-emulation",
+      "title": "Inference Simulation / Emulation",
+      "description": "LLM推論・サービング基盤を実GPU実行の代わりに離散事象、仮想時間、プロファイル標本化、カーネル性能モデルなどで再現し、構成探索や性能評価を高速化する研究をまとめる。",
+      "distinctness_reason": "Serving系統が実運用時の要求処理を高速化するのに対し、本系統の主要成果はサービングシステムそのものを高速化することではなく、別のハードウェア・構成・制御方式を安価かつ高精度に評価するための性能予測・シミュレーション・エミュレーション基盤である。",
+      "boundary_rule": "主要貢献がLLM推論の性能・資源挙動を実機の代替として予測・模擬するsimulator、emulator、time-warp、profile-driven modelである研究を含め、実測benchmarkだけの研究や実serving policyそのものは含めない。",
+      "scope_includes": [
+        "LLM serving離散事象シミュレータ",
+        "実runtimeを残したGPUエミュレーション",
+        "カーネルからservingまでの性能モデル"
+      ],
+      "scope_excludes": [
+        "実測値を列挙するだけのbenchmark",
+        "本番serving schedulerそのもの"
+      ],
+      "neighbor_lineages": [
+        "11-llm-serving-scheduling-disaggregation",
+        "09-kernel-runtime-compilation"
+      ],
+      "supporting_papers": [
+        "arXiv:2601.00397",
+        "arXiv:2605.21312",
+        "arXiv:2602.23036",
+        "arXiv:2606.28565",
+        "arXiv:2605.00616"
+      ],
+      "created_at": "2026-09-24T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "16-weight-quantization-compression",
+      "title": "Weight Quantization / Compression",
+      "description": "一般LLMの重み表現を低ビット量子化、ベクトル量子化、疎量子化、無損失符号化などで小さくし、モデル品質を保ちながら重み容量・帯域・演算費用を削減する研究をまとめる。",
+      "distinctness_reason": "MoE Quantization / Compression系統はexpert重みとMoE固有のrouting・expert容量を対象とするのに対し、本系統はdense LLMやモデル全体に適用できるweight-only／general weight representationが主対象で、KV圧縮やexpert固有圧縮とは独立した方法論を持つ。",
+      "boundary_rule": "主要貢献が一般LLMのweight quantization、weight compression、mixed/sparse quantized representation、lossless weight codingである研究を含め、KV cache圧縮、MoE expert固有圧縮、単なる量子化カーネル実装だけが主貢献の研究は含めない。",
+      "scope_includes": [
+        "post-training weight quantization",
+        "低ビット／ベクトル／疎量子化表現",
+        "重みの無損失圧縮と復元"
+      ],
+      "scope_excludes": [
+        "KV cache量子化・圧縮",
+        "MoE expert固有の量子化・pruning",
+        "量子化方式を変えないカーネル最適化"
+      ],
+      "neighbor_lineages": [
+        "06-moe-quantization-compression",
+        "09-kernel-runtime-compilation",
+        "08-edge-on-device-llm-systems"
+      ],
+      "supporting_papers": [
+        "arXiv:2210.17323",
+        "arXiv:2306.00978",
+        "arXiv:2306.03078",
+        "arXiv:2603.17435",
+        "arXiv:2608.15602",
+        "arXiv:2606.11244",
+        "arXiv:2609.12208"
+      ],
+      "created_at": "2026-09-24T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "17-pim-near-data-acceleration",
+      "title": "PIM / Near-Data Acceleration",
+      "description": "メモリ内処理（PIM）、メモリ近傍処理、ストレージ内処理（in-storage）、計算機能を持つHBM/NAND/DIMMなどへLLM演算を寄せ、データ移動そのものを減らす推論アクセラレーション研究をまとめる。",
+      "distinctness_reason": "Offload / Hierarchical Memory系統はCPU・GPU・SSD等の階層間でデータを移して容量不足を補うのが中心である。本系統はデータを置く先そのものに演算・選択・逆量子化等を持ち込み、memory/storage側で処理するnear-data executionを主要機構とするため境界が明確に異なる。",
+      "boundary_rule": "主要貢献がPIM/CIM、near-memory、in-storage、memory-side computeによってLLM演算・検索・逆量子化・attention等をデータ近傍で実行する研究を含め、受動的なSSD/CPUへの保存・転送だけのoffloadは含めない。",
+      "scope_includes": [
+        "HBM/DIMM/NAND上のPIM・CIM",
+        "near-memory weight dequantization",
+        "in-storage retrieval／memory-side attention"
+      ],
+      "scope_excludes": [
+        "受動的なSSD/NVMe offload",
+        "計算機能を持たない単なる階層メモリ配置"
+      ],
+      "neighbor_lineages": [
+        "01-offload-hierarchical-memory",
+        "10-kv-cache-offload-recomputation",
+        "08-edge-on-device-llm-systems"
+      ],
+      "supporting_papers": [
+        "arXiv:2609.09823",
+        "arXiv:2608.06989",
+        "arXiv:2607.08993",
+        "arXiv:2607.17538",
+        "arXiv:2605.23294",
+        "arXiv:2603.09216",
+        "arXiv:2504.17584"
+      ],
+      "created_at": "2026-09-24T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "18-pipeline-native-cpu-inference",
+      "title": "Pipeline-Native CPU Inference",
+      "description": "CPU向け単一トークン推論で、モデルの層間依存構造、重み配置、実行スケジュールを共同設計し、主記憶帯域とI/O待ちを削減する研究をまとめる。",
+      "distinctness_reason": "Kernel / Runtime Compilation系統が既存モデルの演算実装やコンパイルを最適化するのに対し、本系統はCPU帯域律速を緩和するためモデルの層間依存グラフ自体を変更し、その構造に合わせて重みストリーミングと実行順を共同設計する点で境界が異なる。",
+      "boundary_rule": "主要貢献がCPU推論向けにモデル構造と実行ランタイムを共同設計し、層間依存、stage-major実行、重みストリーミング、非同期expert I/Oなどを変える研究を含め、既存モデルの量子化やカーネル最適化だけを主題とする研究は含めない。",
+      "scope_includes": [
+        "CPU帯域律速を対象とするモデル・ランタイム協調設計",
+        "層間依存変更によるstage-major／pipeline-native実行",
+        "CPU向け重みストリーミングとexpert I/O重ね合わせ"
+      ],
+      "scope_excludes": [
+        "既存モデルのweight quantizationだけを主題とする研究",
+        "モデル依存グラフを変えない一般的なCPUカーネル最適化"
+      ],
+      "neighbor_lineages": [
+        "09-kernel-runtime-compilation",
+        "08-edge-on-device-llm-systems",
+        "01-offload-hierarchical-memory"
+      ],
+      "supporting_papers": [
+        "arXiv:2608.23841"
+      ],
+      "created_at": "2026-09-26T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "19-inference-evaluation-benchmarking",
+      "title": "Inference Benchmarking / Workload Diagnosis",
+      "description": "LLM推論・サービングの性能評価に用いるワークロード、トレース縮約・再生、ボトルネック診断、測定プロトコルを設計し、少ない再実行で信頼できる評価証拠を得る研究をまとめる。",
+      "distinctness_reason": "Serving系統は本番要求処理を最適化し、Simulation系統は実機の代替モデルで結果を予測する。本系統は実測による評価用データと診断方法を主成果とし、サービングポリシー自体もシミュレータ自体も変更しない。",
+      "boundary_rule": "主貢献がLLM推論ワークロード・ベンチマーク・トレース選定再生・性能診断・実測評価プロトコルである研究を含む。実トラフィックのserving最適化、実機代替のsimulation/emulation、学習工程の高速化は含めない。",
+      "scope_includes": [
+        "LLM serving向けbenchmarkおよびワークロード生成",
+        "トレース縮約・選定・再生と代表性評価",
+        "構成要素別のボトルネック診断および測定信頼性"
+      ],
+      "scope_excludes": [
+        "本番servingの要求スケジューリング最適化",
+        "simulation / emulationによる性能予測",
+        "学習・訓練工程の高速化"
+      ],
+      "neighbor_lineages": [
+        "11-llm-serving-scheduling-disaggregation",
+        "15-inference-simulation-emulation",
+        "09-kernel-runtime-compilation"
+      ],
+      "supporting_papers": [
+        "arXiv:2608.00423",
+        "arXiv:2609.18123",
+        "arXiv:2604.09557",
+        "arXiv:2608.13573"
+      ],
+      "created_at": "2026-09-26T00:00:00+00:00",
+      "created_from_proposal": "current-corpus-curation"
+    },
+    {
+      "slug": "20-linear-recurrent-language-models",
+      "title": "Linear-Recurrent Language Model Architectures",
+      "description": "生成時に文脈長へ比例しない再帰状態で履歴を表す言語モデルのSSM、retention、linear attention、動的状態更新則と有界局所attentionとの混成を扱う。モデルの状態表現・更新則自体の設計を中心に、推論メモリ、速度、想起精度の関係を比較する。",
+      "distinctness_reason": "Kernel/runtime families optimize how an operator is compiled or executed; serving families schedule requests and hardware resources; KV-cache families manage stored attention state. This lineage focuses on changing the language model's recurrent sequence operator or state transition itself to improve the inference efficiency and quality frontier.",
+      "boundary_rule": "主要貢献が、生成時に文脈長へ比例しない再帰状態へ履歴を集約するSSM・retention・linear attention・data-dependent recurrenceのモデル構造または状態更新則である言語モデルを含む。有界局所attentionとの混成も含む。通常TransformerのKV保持/圧縮/offload、純kernel/runtime、固定再帰decodeを主要機構としないFFT長畳み込み、test-time gradient updateによるneural memory、recurrenceを部品として使うだけの研究は除く。",
+      "scope_includes": [
+        "Selective state-space and linear-time sequence-model architectures",
+        "Recurrent or matrix-state linear-attention update rules",
+        "Retention and dynamic recurrence language-model architectures",
+        "Recurrent plus local-attention hybrids with recurrent sequence modeling as the core"
+      ],
+      "scope_excludes": [
+        "Kernel, compiler, or runtime optimization without a model-operator contribution",
+        "KV cache, checkpoint, or recurrent-state storage/compression policy",
+        "Request-level serving, scheduling, or disaggregation",
+        "Speculative decoding and verification methods",
+        "General-purpose RNN theory with no language-model architecture contribution",
+        "Fixed-state decodingを主要機構としないFFT長畳み込み",
+        "Test-time gradient updateを主機構とするneural memory"
+      ],
+      "neighbor_lineages": [
+        "07-kv-cache-optimization-compression",
+        "09-kernel-runtime-compilation",
+        "13-sparse-attention"
+      ],
+      "supporting_papers": [
+        "arXiv:2206.13947",
+        "arXiv:2212.14052",
+        "arXiv:2305.13048",
+        "arXiv:2307.08621",
+        "arXiv:2312.00752",
+        "arXiv:2402.01771",
+        "arXiv:2402.19427",
+        "arXiv:2404.07904",
+        "arXiv:2406.07522",
+        "arXiv:2412.06464",
+        "arXiv:2312.06635",
+        "arXiv:2404.05892",
+        "arXiv:2311.01927",
+        "arXiv:2402.18668"
+      ],
+      "created_at": "2026-10-23T06:15:56+00:00",
+      "created_from_proposal": "lineage-proposal-7521d9ca6f998ebc57c8"
+    },
+    {
+      "slug": "21-static-structured-pruning",
+      "title": "Static Structured Model Pruning",
+      "description": "事前学習済みdense Transformerから入力に依存しない固定のchannel/neuron、attention head、layerなどの構造単位を削除し、推論時のparameter・演算量を小さくする研究をまとめる。importance推定、mask学習、calibration、LoRA/fine-tuning/continued-pretraining/distillationによる削除後の回復工程を許容する。",
+      "distinctness_reason": "04 Conditional Computationはrequest/token依存のlayer数・処理token・終了位置の動的選択、16 Weight Quantization / Compressionは同じparameter topologyに対するbit幅・量子化・符号化表現を中心とする。本案は入力をまたいで不変な小型dense checkpointを作るため、実行制御および重み表現圧縮と対象機構が異なる。",
+      "boundary_rule": "推論時の主要ボトルネック削減を目的に、事前学習済みdense Transformerから固定のchannel/neuron、attention head、layerなどを物理削除し、requestごとに変わらない小型dense architectureを作る研究を含める。入力token依存のpruning/skip/early exit、unstructured/N:M/block weight sparsity、quantization/encodingだけ、MoE expertだけのpruning、model topologyを変えないkernel/compiler最適化は除く。",
+      "scope_includes": [
+        "固定channel/neuron/hidden-dimension pruning",
+        "固定attention-head pruning",
+        "固定layer/depth pruning",
+        "削除後modelを作るためのcalibration、mask learning、軽量な回復学習"
+      ],
+      "scope_excludes": [
+        "input/token依存のtoken pruning、layer skipping、early exit（04）",
+        "unstructured/N:M/block weight sparsity、weight quantization、encoding（16または別該当family）",
+        "MoE expert固有のpruning（02/06）",
+        "parameter topologyを変えないkernel/compiler最適化"
+      ],
+      "neighbor_lineages": [
+        "04-conditional-computation",
+        "16-weight-quantization-compression"
+      ],
+      "supporting_papers": [
+        "arXiv:2305.11627",
+        "arXiv:2310.06694",
+        "arXiv:2310.05015",
+        "arXiv:2312.11983",
+        "arXiv:2403.03853"
+      ],
+      "created_at": "2026-10-23T14:20:57+00:00",
+      "created_from_proposal": "lineage-proposal-23ce3e27e97b9e4155a7"
+    },
+    {
+      "slug": "22-diffusion-decoding-efficiency",
+      "title": "Diffusion Language Model Decoding Efficiency",
+      "description": "離散・masked diffusion言語モデルの生成token commit順序・並列幅、denoising回数、単一request内のrefinement/advancement依存、候補軌道の分岐・剪定・計算配分を制御し、NFEやlatency/throughputと品質の関係を改善する研究をまとめる。",
+      "distinctness_reason": "The common optimization unit is the diffusion generation trajectory: choosing masked-token updates, denoising rounds, per-request generation/refinement lanes, or candidate trajectories and budgets. The reviewed papers report denoising/NFE, throughput, or quality-efficiency outcomes. This differs from ordinary autoregressive layer/token pruning, target-model-verified speculative decoding, KV storage/update, kernel generation, and cross-request serving.",
+      "boundary_rule": "Include inference-time methods whose primary mechanism schedules, selects, branches, prunes, or verifies denoising states or token commitments within a discrete/masked diffusion-LM request, with direct evidence on denoising rounds/NFE, latency/throughput, or quality-efficiency. Include per-request lane scheduling only when it changes diffusion refinement/advancement dependency. Exclude new model/backbone architecture or training-only gains; general conditional layer/token skipping independent of the diffusion denoising process; external target-model draft verification (05); primary KV/cache management (07); primary kernel/runtime work (09); cross-request admission/batching/resource scheduling (11); sparse query-key computation (13); and methods whose primary evidence shows quality gains without inference-efficiency evidence.",
+      "scope_includes": [
+        "masked位置のunmask/commit順序と同時更新幅の制御",
+        "denoising round/NFE予算の適応的配分",
+        "diffusion refinement/advancementを分離する単一request内の依存制御",
+        "denoising軌道の探索・remask・剪定による品質対計算量改善"
+      ],
+      "scope_excludes": [
+        "一般model/backbone設計、training-only、効率評価のない品質改善",
+        "通常の入力token/layer skipping04、外部target-modelによるdraft verification05",
+        "主貢献がKV/cache07またはkernel/runtime09の研究",
+        "cross-request admission/batching/resource scheduling11、sparse query-key13"
+      ],
+      "neighbor_lineages": [
+        "04-conditional-computation",
+        "05-speculative-decoding-moe",
+        "11-llm-serving-scheduling-disaggregation"
+      ],
+      "supporting_papers": [
+        "arXiv:2609.16450",
+        "arXiv:2603.12996",
+        "arXiv:2606.08411",
+        "arXiv:2602.01842",
+        "arXiv:2512.16229",
+        "arXiv:2512.09106",
+        "arXiv:2512.02044",
+        "arXiv:2511.21103"
+      ],
+      "created_at": "2026-10-23T19:36:48+00:00",
+      "created_from_proposal": "lineage-proposal-ab5fefbbb545bbe591e7"
+    },
+    {
+      "slug": "23-model-routing-cascades",
+      "title": "Cost-Aware Model Routing and Cascaded Inference",
+      "description": "推論時に独立して実行できる複数の言語モデルの計算を、要求、生成途中の不確実性、品質、費用、利用者の選好に応じて選択または段階化し、品質と推論費用の関係を制御するルーティング／カスケード研究をまとめる。",
+      "distinctness_reason": "本系統の最適化単位は、ひとつの推論要求または生成軌道に対して、独立実行可能なモデルのどれへ計算を割り当てるかである。11は複数要求・GPU・インスタンスの配分、04は単一モデル内部の層やtokenの条件付き計算、05はtarget modelによるdraft token検証、14はtool/agent workflowの実行管理、MoE系統は単一モデル内部のexpert選択を主に扱う。これらと違い、ここでは独立モデル間の推論費用と応答品質の選択規則を扱う。",
+      "boundary_rule": "入力ごとの品質・費用・難度・不確実性・選好に基づいて、独立して実行できる言語モデルから一つを選ぶ、または小型モデルの結果に応じて強いモデルへ段階的に引き継ぐ方式を含める。生成中のtoken/trajectory単位のモデル切替と、分類入力に対する独立encoder model間の完全モデルcascadeも、同じ要求内でモデル選択を行い品質対計算量を変える場合に含める。単一モデル内のlayer/token early exitやpruning、draft/target検証、複数要求間のreplica・queue・GPU配置、tool/agent workflow、MoE内部expert選択、全候補モデルを毎回実行して回答を集約する品質only ensemble、費用または計算量の選択を評価しない同費用モデルの品質順位付けは除く。",
+      "scope_includes": [
+        "要求単位で独立した言語モデルを選ぶquality/cost-aware router",
+        "小型モデルの応答品質や不確実性を使い完全モデル間を段階的に委譲するcascade",
+        "生成tokenまたはtrajectoryの途中で独立モデル間の生成主体を切り替える方式",
+        "完全encoder model間の入力単位cascadeでquality-efficiencyを変える方式",
+        "routerのcalibration、学習、model-skill推定、cost-quality frontierの評価"
+      ],
+      "scope_excludes": [
+        "同じmodel内の層・token・early-exit条件付き計算（04）",
+        "draft tokenをtarget modelで検証するspeculative decoding（05）",
+        "複数request、replica、GPU、queue、KV cache間の配信・配置（11）",
+        "tool呼出しやagent workflowを主対象とする実行制御（14）",
+        "単一MoE model内のexpert routing",
+        "全modelを実行して回答をaggregate/rerankする品質only ensemble",
+        "同費用候補の品質順位だけを最適化し、model計算の選択費用を扱わない方式"
+      ],
+      "neighbor_lineages": [
+        "04-conditional-computation",
+        "05-speculative-decoding-moe",
+        "11-llm-serving-scheduling-disaggregation"
+      ],
+      "supporting_papers": [
+        "arXiv:2404.14618",
+        "arXiv:2404.10136",
+        "arXiv:2508.12491",
+        "arXiv:2310.03094",
+        "arXiv:2012.14682",
+        "arXiv:2507.17307"
+      ],
+      "created_at": "2026-10-24T05:57:21+00:00",
+      "created_from_proposal": "lineage-proposal-96cc1c6757517e97e894"
+    }
+  ]
+}

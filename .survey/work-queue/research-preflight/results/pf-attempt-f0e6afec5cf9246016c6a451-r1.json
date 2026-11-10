@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-f0e6afec5cf9246016c6a451-r1",
+  "kind": "research",
+  "attempt_id": "attempt-f0e6afec5cf9246016c6a451",
+  "job_id": "job-research-e7435b966cd8c5e7",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2f1f58b49e98-disaggregated-llm-serving-with-cxl-shared-memory-kv-cache-at-rack-scale.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:09dcb59178bec9ffcec77783c62391c28303e636bb0b4d9b11abffd4b99bf010",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "be1d9dcaa1c0e56524f3be582958c6ccabc2e7d4"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "584c8d54b0b0ce110c44185f775a63b5ee8355fd"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "5868f7acb2e5d7aef8c904d6f43ab6618c9af3bc"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "ef7c524b632945c0256d4ace6ba9e83f1be6b353"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "6a3f69ff859c5f9c6b0d228aa73e92e4da0d66b0"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short"
+  ],
+  "checked_at": "2026-09-22T16:34:08+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

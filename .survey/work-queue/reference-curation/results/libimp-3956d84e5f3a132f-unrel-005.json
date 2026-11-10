@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3956d84e5f3a132f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.25949",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.25949",
+    "identity_tokens": [
+      "arXiv:2609.25949"
+    ],
+    "reason": "Flux optimizes optical circuit switch scheduling for LLM training; the stated scope is training infrastructure, not inference serving.",
+    "first_checked_at": "2026-10-05T05:51:32+00:00",
+    "last_checked_at": "2026-10-05T05:51:32+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Flux: Optimal Scheduling of Optical Circuit Switches for LLM Training"
+  },
+  "processed_at": "2026-10-05T05:51:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3956d84e5f3a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

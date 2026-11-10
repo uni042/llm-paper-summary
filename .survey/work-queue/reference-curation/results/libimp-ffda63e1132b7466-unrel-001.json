@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ffda63e1132b7466-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34334",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34334",
+    "identity_tokens": [
+      "arXiv:2609.34334"
+    ],
+    "reason": "Offloads collective communication for distributed model training; training-only systems contribution.",
+    "first_checked_at": "2026-10-05T04:53:52+00:00",
+    "last_checked_at": "2026-10-05T04:53:52+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md",
+      "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "HOCCL: Offloading Collective Communication from GPU Cores to Accelerate Distributed Training"
+  },
+  "processed_at": "2026-10-05T04:53:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ffda63e1132b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-046448d22daba50f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.28900",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.28900",
+    "identity_tokens": [
+      "arXiv:2609.28900"
+    ],
+    "reason": "要旨: Multi-agent systems built on large language models (LLMs) are increasingly deployed in high-stakes settings such as finance, healthcare, and software engineering, where agents coordinate through natural-language messages. The same channels, however, let colluding agents exfiltrate confidential information or。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+    "first_checked_at": "2026-10-05T03:05:20+00:00",
+    "last_checked_at": "2026-10-05T03:05:20+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+    ],
+    "title": "Codetta: High-Capacity, Keyless, and Undetectable Multi-Agent Collusion"
+  },
+  "processed_at": "2026-10-05T03:05:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-046448d22dab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

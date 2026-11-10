@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c6f086b5d8428986-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1063/5.0325547",
+  "reason": "A reconstructive channel-UNet-assisted Fourier neural operator (ReCUFNO) is proposed for joint three-dimensional (3D) reconstruction and temporal prediction of wind-turbine wakes from limited two-dimensional (2D) observations. The model reconstructs and forecasts the three-dimensional scalar field of streamwise velocity, u, on a 3D grid from two orthogonal planar u-velocity slices conditioned on yaw angle. The approach combines a reconstructive channel-assisted layer with Fourier neural-operator forecasting and UNet-based spatial refinement to improve multi-scale wake representation and autoregressive stability. To address the mismatch between 2D inputs and 3D outputs, a reconstruction-consistent rollout maps each predicted volume back into planar inputs through slice extraction and roll-and-update feedback. Evaluated on yawed large-eddy simulation (LES) datasets, ReCUFNO achieves a single-step wind turbine error of approximately 5% and a single-step structural similarity index of 0.66, while maintaining bounded error growth over 30-step rollouts. Additional wake-focused diagnostics, including wake deflection, wake angle, centerline correlation, and rotor-disk power-deficit estimates, show improved agreement with LES relative to a UNet baseline. These results indicate that ReCUFNO provides a stable surrogate for observation-limited reconstruction and short-horizon prediction of yawed wind-turbine wake velocity fields.",
+  "title": "Joint reconstruction and temporal prediction of three-dimensional wind turbine wakes using Fourier neural operators",
+  "identity_tokens": [
+    "DOI:10.1063/5.0325547"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6f086b5d842",
+  "source_precheck_request_id": null
+}

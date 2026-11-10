@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8bc4d426de79eef6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.00081",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.00081",
+    "identity_tokens": [
+      "arXiv:2412.00081",
+      "id:arXiv:2412.00081",
+      "url:https://arxiv.org/abs/2412.00081"
+    ],
+    "reason": "一次要旨で確認した主題は、複数タスクの学習済み重み差分を特異値分解し、低階数圧縮と干渉抑制によってモデル統合精度を改善する手法である。圧縮対象はタスク差分表現であり、LLM推論時のKV管理、推論カーネル、スケジューリング、オフロードや実測生成速度の改善を扱わない。推論基盤技術の収録範囲から除外する。",
+    "first_checked_at": "2026-10-13T10:44:17+00:00",
+    "last_checked_at": "2026-10-14T14:57:24+00:00",
+    "linked_from": [],
+    "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
+  },
+  "processed_at": "2026-10-14T14:57:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8bc4d426de79",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

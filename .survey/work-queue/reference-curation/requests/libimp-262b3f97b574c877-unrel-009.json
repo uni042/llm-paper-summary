@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-262b3f97b574c877-unrel-009",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.18653/v1/2021.emnlp-main.779",
+  "reason": "text-to-SQL生成時にincremental parserで不正tokenをrejectしてdecoding correctness/accuracyを改善するconstrained decoding研究。推論時処理だが、主要目的はSQL生成品質でありlatency・throughput・memory効率化ではない。",
+  "title": "PICARD: Parsing Incrementally for Constrained Auto-Regressive Decoding from Language Models",
+  "identity_tokens": [
+    "DOI:10.18653/v1/2021.emnlp-main.779",
+    "arXiv:2109.05093"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-262b3f97b574",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

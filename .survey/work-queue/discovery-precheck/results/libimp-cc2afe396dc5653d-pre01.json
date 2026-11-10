@@ -1,0 +1,150 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-cc2afe396dc5653d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-cc2afe396dc5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.52202/068431-1143"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d92f3971badded76792a0d042a723c392132a1b5",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-06T21:43:48.685171+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.52202/068431-1143",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Iron: Private Inference on Transformers",
+      "source_url": "https://doi.org/10.52202/068431-1143",
+      "year": 2022,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 209,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We initiate the study of private inference on Transformer-based models in the client-server setting, where clients have private inputs and servers hold proprietary models. Our main contribution is to provide several new secure protocols for matrix multiplication and complex non-linear functions like Softmax, GELU activations, and LayerNorm, which are critical components of Transformers. Specifically, we first propose a customized homomorphic encryption-based protocol for matrix multiplication that crucially relies on a novel compact packing technique. This design achieves √ m × less communication ( m is the number of rows of the output matrix) over the most efficient work. Second, we design efficient protocols for three non-linear functions via integrating advanced underlying protocols and specialized optimizations. Compared to the state-of-the-art protocols, our recipes reduce about half of the communication and computation overhead. Furthermore, all protocols are numerically precise, which preserve the model accuracy of plaintext. These techniques together allow us to implement Iron , an efficient Transformer-based private inference framework. Experiments conducted on several real-world datasets and models demonstrate that Iron achieves 3 ∼ 14 × less communication and 3 ∼ 11 × less runtime compared to the prior art.",
+      "identifiers": [
+        "SemanticScholar:37a860cbc0a3334d446d72cab166a9c63e489442"
+      ],
+      "semantic_scholar_id": "37a860cbc0a3334d446d72cab166a9c63e489442",
+      "doi": "10.52202/068431-1143",
+      "canonical_id": "DOI:10.52202/068431-1143",
+      "authors": [
+        "Meng Hao",
+        "Hong-Wei Li",
+        "Hanxiao Chen",
+        "Pengzhi Xing",
+        "Guowen Xu",
+        "Tian-Wei Zhang"
+      ],
+      "priority": 219,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 209,
+        "citation_count": 209,
+        "total": 219,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1558,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.52202/068431-1143",
+      "identity_tokens": [
+        "id:DOI:10.52202/068431-1143",
+        "id:SemanticScholar:37a860cbc0a3334d446d72cab166a9c63e489442",
+        "title:iron private inference on transformers",
+        "url:https://doi.org/10.52202/068431-1143"
+      ],
+      "record": {
+        "title": "Iron: Private Inference on Transformers",
+        "source_url": "https://doi.org/10.52202/068431-1143",
+        "year": 2022,
+        "published": null,
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 209,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We initiate the study of private inference on Transformer-based models in the client-server setting, where clients have private inputs and servers hold proprietary models. Our main contribution is to provide several new secure protocols for matrix multiplication and complex non-linear functions like Softmax, GELU activations, and LayerNorm, which are critical components of Transformers. Specifically, we first propose a customized homomorphic encryption-based protocol for matrix multiplication that crucially relies on a novel compact packing technique. This design achieves √ m × less communication ( m is the number of rows of the output matrix) over the most efficient work. Second, we design efficient protocols for three non-linear functions via integrating advanced underlying protocols and specialized optimizations. Compared to the state-of-the-art protocols, our recipes reduce about half of the communication and computation overhead. Furthermore, all protocols are numerically precise, which preserve the model accuracy of plaintext. These techniques together allow us to implement Iron , an efficient Transformer-based private inference framework. Experiments conducted on several real-world datasets and models demonstrate that Iron achieves 3 ∼ 14 × less communication and 3 ∼ 11 × less runtime compared to the prior art.",
+        "identifiers": [
+          "SemanticScholar:37a860cbc0a3334d446d72cab166a9c63e489442"
+        ],
+        "semantic_scholar_id": "37a860cbc0a3334d446d72cab166a9c63e489442",
+        "doi": "10.52202/068431-1143",
+        "canonical_id": "DOI:10.52202/068431-1143",
+        "authors": [
+          "Meng Hao",
+          "Hong-Wei Li",
+          "Hanxiao Chen",
+          "Pengzhi Xing",
+          "Guowen Xu",
+          "Tian-Wei Zhang"
+        ],
+        "priority": 219,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 209,
+          "citation_count": 209,
+          "total": 219,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1558,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:886eb2385a8a224b463240447a1f832a5fe3c93cb9a699663095e046ebde3f69",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

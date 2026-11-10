@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-89bc3cc25133486a-01",
+  "kind": "research",
+  "attempt_id": "attempt-89bc3cc25133486a66c2d95b",
+  "job_id": "job-research-435dfcefc35588f8",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-a08c1f9c632d-faultsense-fault-localization-in-large-scale-mixture-of-experts-model-serving-infrastructure.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:be13d28305e97acfc3cca477d6d5f01d853a56247af2a40cdcd2f7f1948c9d22",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "6200e7942eb944ff7da69948487f26875da661cc"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "a418c7c67ad5126fcc638400d19f52147e5d95a0"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "5a9ec140934c85b8df9d72ec61043bcfcc69717f"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "331a50281f5c45411165e6d78d4819bde2b8c945"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "14cbf13b1c6fbb6937c685fb2ea1adc2c5a71df6"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short"
+  ],
+  "checked_at": "2026-09-22T17:26:02+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

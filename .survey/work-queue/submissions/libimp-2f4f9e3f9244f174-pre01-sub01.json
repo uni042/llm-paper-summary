@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Focus-dLLM: Accelerating Long-Context Diffusion LLM Inference via Confidence-Guided Context Focusing",
+      "source_url": "https://arxiv.org/abs/2602.02159",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (dLLMs) deliver strong long-context processing capability in a non-autoregressive decoding paradigm. However, the considerable computational cost of bidirectional full attention limits the inference efficiency. Although sparse attention is promising, existing methods remain ineffective. This stems from the need to estimate attention importance for tokens yet to be decoded, while the unmasked token positions are unknown during diffusion. In this paper, we present Focus-dLLM, a novel training-free attention sparsification framework tailored for accurate and efficient long-context dLLM inference. Based on the finding that token confidence strongly correlates across adjacent steps, we first design a past confidence-guided indicator to predict unmasked regions. Built upon this, we propose a sink-aware pruning strategy to accurately estimate and remove redundant attention computation, while preserving highly influential attention sinks. To further reduce overhead, this strategy reuses identified sink locations across layers, leveraging the observed cross-layer consistency. Experimental results show that our method offers more than $29\\times$ lossless speedup under $32K$ context length. The code is publicly available at: https://github.com/Longxmas/Focus-dLLM",
+      "identifiers": [
+        "SemanticScholar:00792499cb94c54a514b07d19cc6e1e64f3ea3ba"
+      ],
+      "semantic_scholar_id": "00792499cb94c54a514b07d19cc6e1e64f3ea3ba",
+      "canonical_id": "arXiv:2602.02159",
+      "arxiv_id": "2602.02159",
+      "doi": "10.48550/arXiv.2602.02159",
+      "authors": [
+        "Lingkun Long",
+        "Yu-Shi Huang",
+        "Shi-Hao Bai",
+        "Rui-Hao Gong",
+        "Jun Zhang",
+        "Ao Zhou",
+        "Jian-Lei Yang"
+      ],
+      "priority": 118,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 118,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "拡散型LLMの双方向注意で未復号位置が不明な問題に対し、前ステップのトークン信頼度から可視領域を予測し、attention sinkを保護しながら疎注意化する学習不要方式。32K文脈で29倍超の損失なし高速化を報告し、拡散推論カーネルに直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Detecting a Route Flip Is Easier Than Knowing Whether to Fix It: Causal Route-Mediated Damage in Quantized Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2608.11212",
+      "year": 2026,
+      "published": "2026-07-14",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Top-k Mixture-of-Experts (MoE) routing is discontinuous, so a deployment-motivated numerical disturbance -- simulated 4-bit KV-cache quantization read by a protected BF16 gate -- pushes tokens across decision boundaries and flips which experts fire. This paper proposes no new mitigation; it supplies a causal apparatus, empirical findings, and a detection-limit result. A four-run apparatus prices the route-mediated fraction (RMF) of quantization damage, a token-level attribution decomposes it by mechanism, and pre-registered probes carry the findings across three architectures. On OLMoE-1B-7B at 4-bit KV (pilot), about a third of the damage is routing-mediated: RMF ~ 0.31 (discovery 0.31 [0.20, 0.41]; process-replicated mean 0.313 +/- 0.020; pre-registered re-execution 0.231). The deployable router margin detects that a flip occurred (AUC 0.772) but cannot tell a harmful flip from a helpful one (at chance): among the tested local, inference-observable router statistics we find no predictor of a flip's loss sign above chance -- an empirical benefit-detection barrier bounding selective repair restricted to this feature family. The signed-flip tax and sign-inseparability carry cross-model; the clean-reference remedy's payout is architecture-modulated; a controlled same-checkpoint flag-swap re-scopes the gate's normalization convention to a damage-magnitude moderator, not a route-recoverability mechanism. A real int4 KV kernel yields a fraction compatible with the fake-quant dose curve but underpowered (95% CI [-0.111, 0.394] includes zero) -- ruling out gross disagreement, not an independent replication. Hypotheses, thresholds, and evaluations were pre-registered before measurement, with misses reported; a pre-registered held-out read replicates the partition and the near-cancelling tax out of sample, while the strict impossibility exclusion narrowly misses.",
+      "identifiers": [
+        "SemanticScholar:bb744f53889a748dce34c406b51d1f3089a11d97"
+      ],
+      "semantic_scholar_id": "bb744f53889a748dce34c406b51d1f3089a11d97",
+      "canonical_id": "arXiv:2608.11212",
+      "arxiv_id": "2608.11212",
+      "authors": [
+        "Parvel Gu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 108,
+        "matched_prestigious_venue": null
+      },
+      "reason": "4ビットKVキャッシュ量子化の誤差がMoEのTop-kルーティングを変える影響を、反実仮想の4条件で分解する評価研究。OLMoEで経路変化由来の損失割合を約0.31と推定し、ルータ余裕度は経路変化の検出には有用だが有害な変化かどうかの判定には弱いと報告。量子化MoE推論の評価限界に直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Latency Prediction for LLM Inference on NPU Systems",
+      "source_url": "https://arxiv.org/abs/2606.18042",
+      "year": 2026,
+      "published": "2026-06-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) requires exploring a large configuration space spanning parallelization strategies, batching techniques, and scheduling policies. Exhaustive measurement across this space is impractical, making latency prediction essential for system optimization. While NPUs have emerged as accelerators designed for LLM inference, no prediction methodology has been established for them. Specifically, applying prior work to LLM inference latency prediction on NPUs faces three challenges: undisclosed microarchitecture of commercial NPUs, unpredictable compiler optimizations, and latency non-linearity induced by bucketing. We present LENS, a latency estimator that predicts NPU inference latency without information on the microarchitecture or compiler, and captures the non-linear latency induced by bucketing. LENS profiles each bucket with two end-to-end (E2E) measurements and composes the results to predict latency for arbitrary input-output length combinations. We validate LENS across NPUs from multiple vendors, several LLMs, and diverse workloads, achieving a mean prediction error of 2.15\\%. We further compare LENS against two methodologically related baselines, confirming the validity of its approach.",
+      "identifiers": [
+        "SemanticScholar:799164d9ad9a909cee23a3ea495d42464ca2d845"
+      ],
+      "semantic_scholar_id": "799164d9ad9a909cee23a3ea495d42464ca2d845",
+      "canonical_id": "arXiv:2606.18042",
+      "arxiv_id": "2606.18042",
+      "doi": "10.48550/arXiv.2606.18042",
+      "authors": [
+        "Juhyun Park",
+        "Seung-Woo Jeong",
+        "Jing-Yu Lee",
+        "Kyungyong Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 136,
+        "matched_prestigious_venue": null
+      },
+      "reason": "非公開NPUの内部構造やコンパイラ最適化を知らなくても、バケットごとに二つのエンドツーエンド測定を行い入出力長別遅延を合成するLENSを提案。複数NPUベンダーとLLMで平均予測誤差2.15%を報告し、推論配置・バッチ・スケジューリング設計に直結する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "StreamingTOM: Streaming Token Compression for Efficient Video Understanding",
+      "source_url": "https://arxiv.org/abs/2510.18269",
+      "year": 2025,
+      "published": "2025-10-21",
+      "venue": "arXiv.org",
+      "citation_count": 49,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Unlike offline processing, streaming video vision-language models face two fundamental constraints: causality and accumulation. Causality prevents access to future frames that offline methods exploit, while accumulation causes tokens to grow unbounded, creating efficiency bottlenecks. However, existing approaches only regulate post-LLM kv-cache, leaving costly pre-LLM prefill unchanged. We introduce StreamingTOM, a training-free, plug-and-play two-stage framework that addresses both pre-LLM and post-LLM bottlenecks. Causal Temporal Reduction imposes a fixed per-frame budget and selects tokens based on adjacent-frame changes and token saliency, drastically reducing per-frame prefill cost by processing only a compact subset of visual tokens, ensuring predictable latency. Online Quantized Memory stores tokens in 4-bit format, retrieves relevant groups on demand, and dequantizes them, keeping the active kv-cache bounded regardless of stream length. Experiments demonstrate our method achieves $15.7\\times$ kv-cache compression ratio; compared to prior SOTA (LiveVLM), it delivers $1.2\\times$ lower peak memory and $2\\times$ faster TTFT. StreamingTOM achieves state-of-the-art accuracy among training-free methods with an average of $63.8\\%$ on offline benchmarks and $55.8\\%$ accuracy and $3.7$ score on RVS. These results demonstrate that real-time streaming video understanding with bounded active memory is achievable without model retraining.",
+      "identifiers": [
+        "SemanticScholar:d3094c64d4111f945fd721671f594d02a9651845"
+      ],
+      "semantic_scholar_id": "d3094c64d4111f945fd721671f594d02a9651845",
+      "canonical_id": "arXiv:2510.18269",
+      "arxiv_id": "2510.18269",
+      "doi": "10.48550/arXiv.2510.18269",
+      "authors": [
+        "Xueyi Chen",
+        "Keda Tao",
+        "Kele Shao",
+        "Huan Wang"
+      ],
+      "priority": 49,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 49,
+        "citation_count": 49,
+        "total": 49,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 374,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ストリーミングVLMの視覚トークン増大に対し、隣接フレーム差と顕著性でプリフィル入力を減らす因果的トークン選択と、4ビットのオンライン記憶・関連グループ復元を組み合わせる。KVキャッシュ15.7倍圧縮、LiveVLM比TTFT2倍高速化を報告し、動画推論の継続メモリ管理が主題。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SwiReasoning: Switch-Thinking in Latent and Explicit for Pareto-Superior Reasoning LLMs",
+      "source_url": "https://arxiv.org/abs/2510.05069",
+      "year": 2025,
+      "published": "2025-10-06",
+      "venue": "arXiv.org",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work shows that, beyond discrete reasoning through explicit chain-of-thought steps, which are limited by the boundaries of natural languages, large language models (LLMs) can also reason continuously in latent space, allowing richer information per step and thereby improving token efficiency. Despite this promise, latent reasoning still faces two challenges, especially in training-free settings: 1) purely latent reasoning broadens the search distribution by maintaining multiple implicit paths, which diffuses probability mass, introduces noise, and impedes convergence to a single high-confidence solution, thereby hurting accuracy; and 2) overthinking persists even without explicit text, wasting tokens and degrading efficiency. To address these issues, we introduce SwiReasoning, a training-free framework for LLM reasoning which features two key innovations: 1) SwiReasoning dynamically switches between explicit and latent reasoning, guided by block-wise confidence estimated from entropy trends in next-token distributions, to balance exploration and exploitation and promote timely convergence. 2) By limiting the maximum number of thinking-block switches, SwiReasoning curbs overthinking and improves token efficiency across varying problem difficulties. On widely used mathematics, STEM, coding, and general benchmarks, SwiReasoning consistently improves average accuracy by 1.8%-3.1% across reasoning LLMs of different model families and scales. Furthermore, under constrained budgets, SwiReasoning improves average token efficiency by 57%-79%, with larger gains as budgets tighten.",
+      "identifiers": [
+        "SemanticScholar:13e4df024956363fe8dd2b21ccd2291eab8527f9"
+      ],
+      "semantic_scholar_id": "13e4df024956363fe8dd2b21ccd2291eab8527f9",
+      "canonical_id": "arXiv:2510.05069",
+      "arxiv_id": "2510.05069",
+      "doi": "10.48550/arXiv.2510.05069",
+      "authors": [
+        "Dachuan Shi",
+        "Abedelkadir Asi",
+        "Keying Li",
+        "Xiang-Chi Yuan",
+        "Le-Yan Pan",
+        "Wen-Ke Lee",
+        "W. Xiao"
+      ],
+      "priority": 26,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 26,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 389,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論時に明示的CoTと潜在思考を、トークン分布のエントロピー傾向から推定するブロック単位の信頼度で切り替える学習不要方式。切替回数上限で過剰推論を抑え、制約予算下でトークン効率57～79%改善を報告。テスト時計算量の動的制御が中心。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2f4f9e3f9244",
+    "round": "libimp-2f4f9e3f9244f174-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2f4f9e3f9244f174-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2f4f9e3f9244f174-pre01.json",
+    "receipt": "sha256:4211ce0e20005b44e88cb144b8e99effc32daeb60191e746956adcc2a32e72e8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2f4f9e3f9244",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

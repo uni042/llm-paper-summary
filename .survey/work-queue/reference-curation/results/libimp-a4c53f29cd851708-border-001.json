@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a4c53f29cd851708-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2312.04455",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2312.04455",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2312.04455",
+      "arXiv:2312.04455"
+    ],
+    "reason": "Attention Bucketsは推論時に複数のRoPE基準角で並列処理し文脈位置の見落としを補うため推論方式には該当するが、主目的はtool-use/RAGの品質改善であり、速度・メモリ・throughput削減を狙う効率化方式ではないため境界扱い。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T18:18:27+00:00",
+    "linked_from": [
+      "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+    ],
+    "title": "Fortify the Shortest Stave in Attention: Enhancing Context Awareness of Large Language Models for Effective Tool Use"
+  },
+  "processed_at": "2026-10-03T18:18:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a4c53f29cd85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

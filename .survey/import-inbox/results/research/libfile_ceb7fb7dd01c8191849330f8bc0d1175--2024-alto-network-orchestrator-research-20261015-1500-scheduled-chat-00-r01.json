@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "bb0bee8ef7afaebb932fa76cbf6f00df39ea364dd81455dfb1400610df15e287",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ceb7fb7dd01c8191849330f8bc0d1175--2024-alto-network-orchestrator-research-20261015-1500-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.1145/3642970.3655844",
+  "worker_completed_at": "2026-10-15T15:00:00+09:00",
+  "worker_run_key": "20261015-1500-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4663,
+    "body_paragraphs": 27,
+    "method_chars": 1616,
+    "method_paragraphs": 9,
+    "evaluation_chars": 268,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 268 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 268 < 500"
+  ],
+  "processed_at": "2026-10-16T13:41:26+00:00"
+}

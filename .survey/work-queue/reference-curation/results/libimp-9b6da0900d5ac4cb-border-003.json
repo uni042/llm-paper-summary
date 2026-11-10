@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b6da0900d5ac4cb-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.00874",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.00874",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.00874",
+      "arXiv:2602.00874"
+    ],
+    "reason": "Transformerのattention行を量子データ構造で劣線形時間近似する理論研究で、OLMo2の統計量による仮定確認はあるが、量子RAMを前提とし実用的な推論サーバーや古典GPU上の性能を評価していない。attention計算との接点は明確だが実システムへの適用が遠いため微妙に分類する。",
+    "first_checked_at": "2026-10-22T16:52:13+00:00",
+    "last_checked_at": "2026-10-22T16:52:13+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-00.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Sublinear Time Quantum Algorithm for Attention Approximation"
+  },
+  "processed_at": "2026-10-22T16:52:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b6da0900d5a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

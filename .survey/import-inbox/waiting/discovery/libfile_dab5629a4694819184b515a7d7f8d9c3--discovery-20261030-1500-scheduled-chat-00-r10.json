@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1500-scheduled-chat-00/r10",
+  "reference_main_sha": "2961ce802c7c010bf18836afa636780b500c3e8b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.31947",
+      "identity_tokens": [
+        "arXiv:2609.31947"
+      ],
+      "title": "On-Policy Attention Linearization",
+      "reason": "arXiv一次要旨はsoftmax注意から線形注意への蒸留で長文脈推論時の状態誤差が累積する問題に対し、学生モデル自身の長文脈軌跡に教師から密な監督を与えるOPALを提案。Qwen3-4BとMiMo-7BでNIAH品質100%回復等を報告し、固定状態の線形注意による推論メモリ削減に直接関連。",
+      "source_url": "https://arxiv.org/abs/2609.31947",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:15:19+09:00",
+      "last_checked_at": "2026-10-30T15:15:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 146
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.18851",
+      "identity_tokens": [
+        "arXiv:2606.18851"
+      ],
+      "title": "From Tokens to Energy Flexibility: Quantization-Enabled Demand Response for Data Centers with LLM Inference Workloads",
+      "reason": "arXiv一次要旨はLLMサービングの量子化レベルをデータセンターの需要応答資源として扱い、電力・炭素信号とインスタンス切替・ルーティングを共同最適化。提供トークン数を削減せず運用コスト34.3%削減を報告。推論精度選択とエネルギー運用に直接該当。",
+      "source_url": "https://arxiv.org/abs/2606.18851",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:15:19+09:00",
+      "last_checked_at": "2026-10-30T15:15:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 147
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.08567",
+      "identity_tokens": [
+        "arXiv:2408.08567"
+      ],
+      "title": "S$^3$Attention: Improving Long Sequence Attention with Smoothed Skeleton Sketching",
+      "reason": "arXiv v3一次要旨は平滑化と行列スケッチで長系列注意を線形複雑度化するS3Attentionを提案。評価は主にLong Range Arenaと時系列予測で、現代LLMのdecodeカーネル・KVメモリ・E2E速度の直接評価は要旨にないため境界的。",
+      "source_url": "https://arxiv.org/abs/2408.08567",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:15:19+09:00",
+      "last_checked_at": "2026-10-30T15:15:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 148
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.08553",
+      "identity_tokens": [
+        "arXiv:2405.08553"
+      ],
+      "title": "Improving Transformers with Dynamically Composable Multi-Head Attention",
+      "reason": "arXiv v2一次要旨は注意ヘッド間を入力依存で動的合成するDCMHAを提案し、同程度の品質を約1.7〜2.0倍計算規模のTransformerに匹敵するモデルで実現。ただし中心は学習済みモデルの表現力と品質であり、実推論カーネル・サービングのレイテンシー評価は要旨にないため境界的。",
+      "source_url": "https://arxiv.org/abs/2405.08553",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:15:19+09:00",
+      "last_checked_at": "2026-10-30T15:15:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 149
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.20408",
+      "identity_tokens": [
+        "arXiv:2601.20408"
+      ],
+      "title": "Meeting SLOs, Slashing Hours: Automated Enterprise LLM Optimization with OptiKIT",
+      "reason": "arXiv v2一次要旨は企業向けLLMの圧縮・調整を自動化し、動的GPU資源割当とパイプライン実行・清掃を統合するOptiKITを提案。実運用でGPUスループット2倍超改善を報告。LLM配備時の資源効率と実行基盤に直接該当。",
+      "source_url": "https://arxiv.org/abs/2601.20408",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:15:19+09:00",
+      "last_checked_at": "2026-10-30T15:15:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 150
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.14910",
+      "identity_tokens": [
+        "arXiv:2601.14910"
+      ],
+      "title": "PipeWeave: Synergizing Analytical and Learning Models for Unified GPU Performance Prediction",
+      "reason": "arXiv v2一次要旨はGPU命令パイプラインの解析特徴と機械学習を組み合わせ、LLMサービングのカーネル・E2E性能を予測するPipeWeaveを提案。11GPU種類でカーネル平均誤差6.1%、E2E推論8.5%を報告。推論性能予測とハードウェア構成最適化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2601.14910",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:15:19+09:00",
+      "last_checked_at": "2026-10-30T15:15:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 151
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.17336",
+      "identity_tokens": [
+        "arXiv:2608.17336"
+      ],
+      "title": "TileMix: Tile-Centric Mixed-Precision Attention for LLM Inference Acceleration",
+      "reason": "arXiv一次要旨は注意スコアをタイル単位でFP16/INT8へ振り分け、共有online-softmaxを維持するTileMixを提案。GQA・可変長・INT8 KVに対応し、LLaMA/Qwen/Vicunaの長文脈A100 prefillで均一INT8の品質低下を回復しFP16より高スループットを報告。推論注意カーネルの混合精度化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2608.17336",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:15:19+09:00",
+      "last_checked_at": "2026-10-30T15:15:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 153
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.03113",
+      "identity_tokens": [
+        "arXiv:2606.03113"
+      ],
+      "title": "Experience-Driven Dynamic Exits for LLMs with Reinforcement Learning",
+      "reason": "arXiv一次要旨はself-speculative decodingの早期退出層とドラフト長を文脈に応じてオフラインRLで選ぶLEDEを提案。Llama-2/3で自己回帰比2.0〜2.7倍、静的投機的復号比さらに17%高速化を報告。LLM推論デコードの適応的高速化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2606.03113",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:15:19+09:00",
+      "last_checked_at": "2026-10-30T15:15:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 155
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.07433",
+      "identity_tokens": [
+        "arXiv:2606.07433"
+      ],
+      "title": "Watch, Remember, Reason: Human-View Video Understanding with MLLMs",
+      "reason": "arXiv一次要旨は動画MLLMの視覚処理・記憶・推論を体系化し、長動画の効率・ストリーミングメモリも整理する総説。関連領域を含むが、中心は動画理解全般の体系化であり、推論システム固有の新規実装・性能実測は要旨にないため境界的。",
+      "source_url": "https://arxiv.org/abs/2606.07433",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:15:19+09:00",
+      "last_checked_at": "2026-10-30T15:15:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 156
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.04302",
+      "identity_tokens": [
+        "arXiv:2607.04302"
+      ],
+      "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference",
+      "reason": "arXiv一次要旨はAscend NPUのHIF4 4bit Cube GEMMでQK/PVを実行し、FP16 softmax状態とSmooth-QK・P-Reorderingで量子化誤差を抑えるHiFA4を提案。Qwen3-8Bで直接HIF4化による精度低下を37.5%回復し、FlashAttentionの低ビット推論実装に直接該当。",
+      "source_url": "https://arxiv.org/abs/2607.04302",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:15:19+09:00",
+      "last_checked_at": "2026-10-30T15:15:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 157
+    }
+  ]
+}

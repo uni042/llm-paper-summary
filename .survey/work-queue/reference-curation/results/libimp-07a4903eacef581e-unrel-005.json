@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-07a4903eacef581e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.16974",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.16974",
+    "identity_tokens": [
+      "arXiv:2603.16974"
+    ],
+    "reason": "一次資料の要旨を確認。Multi-Modal Knowledge Graphs (MMKGs) benefit from visual information, yet large-scale image collection is hard to curate and often excludes ambiguous but relevant visuals (e.g., logos, symbols, abstract scenes). We present Beyond Images, an automatic data-centric enrichment pipeline with optional human auditing. This pipeline operates in three stages: (1) large-scale retrieval of additional entity-related images, (2)",
+    "first_checked_at": "2026-10-06T21:00:50+00:00",
+    "last_checked_at": "2026-10-06T21:00:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+    ],
+    "title": "Are a Thousand Words Better Than a Single Picture? Beyond Images - A Framework for Multi-modal Knowledge Graph Dataset Enrichment"
+  },
+  "processed_at": "2026-10-06T21:00:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-07a4903eacef",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

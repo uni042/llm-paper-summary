@@ -1,0 +1,192 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261101-0143-scheduled-chat-30/r01",
+  "reference_main_sha": "49a728d7fc5b8c515d3253e76fa9a12e96965de2",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1038/s41598-025-92586-5",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-92586-5"
+      ],
+      "title": "Efficient self-attention with smart pruning for sustainable large language models",
+      "reason": "出版社Scientific Reportsの一次本文で、埋め込み・FFNにForward Propagation Pruning、注意のQ/KにIdentical Row Compression、VにDiagonal Weight Compressionを組み合わせる手法を確認。LLaMA2-7B、OPT-175B、TinyLLaMA-1Bなどで圧縮率・推論高速化を比較しており、LLMの重み・注意計算を直接軽量化する研究。数値は論文記載条件に限り、他のLLMへの一般化は未検証。",
+      "source_url": "https://www.nature.com/articles/s41598-025-92586-5",
+      "body_check": "出版社の一次全文（方法・評価・制約）を確認。",
+      "first_checked_at": "2026-11-01T01:43:38+09:00",
+      "last_checked_at": "2026-11-01T01:43:38+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 142; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "worklist_rank": 142,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10890445",
+      "identity_tokens": [
+        "DOI:10.1109/ICASSP49660.2025.10890445"
+      ],
+      "title": "LoRATEE: A Secure and Efficient Inference Framework for Multi-Tenant LoRA LLMs Based on TEE",
+      "reason": "IEEE Xplore一次要旨は、マルチテナントLoRA推論でアダプタをTEEに配置し、ワンタイムパッドによる伝送保護、動的アダプタ事前読み込み、等価モジュール共有によるI/O削減を提案。推論サービスのセキュリティとアダプタ切替効率の両立が主題で、単なる学習時LoRAではない。要旨に具体的な速度倍率はなく未確認。",
+      "source_url": "https://ieeexplore.ieee.org/document/10890445/",
+      "body_check": "IEEE Xploreの正式出版一次要旨を確認。本文未読。",
+      "first_checked_at": "2026-11-01T01:43:38+09:00",
+      "last_checked_at": "2026-11-01T01:43:38+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 154; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "worklist_rank": 154,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.00662",
+      "identity_tokens": [
+        "arXiv:2312.00662"
+      ],
+      "title": "Nonparametric Variational Regularisation of Pretrained Transformers",
+      "reason": "arXiv一次本文は、既存Transformerの注意を非パラメトリック変分ベイズモデルとして再解釈し、学習なしの正則化で分布外汎化を改善する研究。推論時の速度・メモリ・エネルギー削減、量子化・枝刈り、サービング実装を主眼とせず、研究ライブラリの推論効率化系統には直接該当しない。",
+      "source_url": "https://arxiv.org/abs/2312.00662",
+      "body_check": "arXiv一次要旨・導入・貢献節を確認。",
+      "first_checked_at": "2026-11-01T01:43:38+09:00",
+      "last_checked_at": "2026-11-01T01:43:38+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 197; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "worklist_rank": 197,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1335",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.1335"
+      ],
+      "title": "CLARO: Controlled Attribute-Driven Reasoning Optimization for Efficient Chain-of-Thought",
+      "reason": "ACL Anthology一次要旨は、推論過程の構造的属性（可読性・数学表現密度・冗長性等）を報酬学習に組み込み、指定トークン予算内でChain-of-Thoughtを簡潔化するCLAROを提案。短縮のみを強制する手法と異なり、複数ベンチマークで推論精度と計算費用の改善を報告。推論トークン数削減を直接対象とする。",
+      "source_url": "https://aclanthology.org/2026.findings-acl.1335/",
+      "body_check": "ACL Anthology正式一次要旨・書誌を確認。本文未読。",
+      "first_checked_at": "2026-11-01T01:43:38+09:00",
+      "last_checked_at": "2026-11-01T01:43:38+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 204; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "worklist_rank": 204,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "identity_tokens": [
+        "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+        "URL:https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-108.html"
+      ],
+      "title": "Efficient Distributed LLM Inference with Dynamic Partitioning",
+      "reason": "UC Berkeley公式技術報告一次要旨は、入力長とGPU特性に応じて分散LLM推論の分割方式を実行時に切り替える方式を提案。L4/A100とLlama 2でPareto最適な分割戦略を探索し、初回トークンまでの時間最大40%削減、遅延最大18%削減を報告。GPU間通信・計算・メモリの調整が直接の推論最適化である。",
+      "source_url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-108.html",
+      "body_check": "UC Berkeley公式技術報告の一次要旨・書誌を確認。査読会議論文ではなく学位技術報告。",
+      "first_checked_at": "2026-11-01T01:43:38+09:00",
+      "last_checked_at": "2026-11-01T01:43:38+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 253; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "worklist_rank": 253,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1282",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.1282"
+      ],
+      "title": "Exploration-Driven Reinforcement Learning for Expert Routing Improvement in Mixture-of-Experts Language Models",
+      "reason": "ACL Anthology一次要旨はMoEルータの選択品質を強化学習で改善し、経路摂動に基づく優位性信号と専門家の過度な特化を防ぐ重なり制約を提案。要約・QA・言語モデル性能と経路品質を評価するが、実際の推論スループット・GPU利用率・サービングスケジューリングの改善は主張していない。MoE推論の隣接技術として微妙判定。",
+      "source_url": "https://aclanthology.org/2025.findings-emnlp.1282/",
+      "body_check": "ACL Anthology正式一次要旨を確認。本文未読。",
+      "first_checked_at": "2026-11-01T01:43:38+09:00",
+      "last_checked_at": "2026-11-01T01:43:38+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 312; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "worklist_rank": 312,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.00046",
+      "identity_tokens": [
+        "arXiv:2502.00046"
+      ],
+      "title": "Optimization Strategies for Enhancing Resource Efficiency in Transformers & Large Language Models",
+      "reason": "arXiv一次本文は量子化、知識蒸留、注意ヘッド・構造化枝刈りとその組合せをGPT-2/OPT系モデルで実験し、perplexity、エネルギー、計算速度のトレードオフを評価する。4-bit量子化と複合圧縮の効率比較および選択用の評価式が主題で、LLM推論時の資源削減を直接扱う。新しい単一カーネルやサービング方式ではなく比較実験研究である。",
+      "source_url": "https://arxiv.org/abs/2502.00046",
+      "body_check": "arXiv一次要旨・導入・貢献節を確認。",
+      "first_checked_at": "2026-11-01T01:43:38+09:00",
+      "last_checked_at": "2026-11-01T01:43:38+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 333; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "worklist_rank": 333,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.01892",
+      "identity_tokens": [
+        "arXiv:2610.01892"
+      ],
+      "title": "Selection-Based Structured Reasoning: Toward Efficient Multimodal Search Agents",
+      "reason": "arXiv一次本文は、毎ターンの自由形式の逐次推論文生成を、事前定義した理由候補の並列尤度評価へ置き換えるSSRを提案。teacher forcingと共有KVキャッシュで候補を評価し、2B/4Bのマルチモーダル検索エージェントでターン当たり推論遅延90%超、質問当たりモデル推論遅延28～54%削減を報告。生成時レイテンシ最適化に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2610.01892",
+      "body_check": "arXiv一次本文の要旨・導入・評価概要を確認。",
+      "first_checked_at": "2026-11-01T01:43:38+09:00",
+      "last_checked_at": "2026-11-01T01:43:38+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 348; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "worklist_rank": 348,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/JIOT.2026.3654102",
+      "identity_tokens": [
+        "DOI:10.1109/JIOT.2026.3654102",
+        "arXiv:2412.15127"
+      ],
+      "title": "Adaptive Pruning for Large Language Models With Structural Importance Awareness",
+      "reason": "著者公開arXiv一次要旨は、構造的重要度の適応融合とグループ単位の微調整を組み合わせ、LLaMA/Vicuna系の枝刈り後の品質を保ちつつ推論計算・メモリを削減するSAAPを提案。IEEE IoT Journal掲載版の同題名・著者を確認したが、arXiv v1と掲載版では評価数値・方法の説明に版差があるため、掲載版固有の改善率はこの分類では断定しない。",
+      "source_url": "https://arxiv.org/abs/2412.15127",
+      "body_check": "arXiv著者一次要旨を確認。正式版DOIとの書誌同一性は確認、正式版全文未取得・版差あり。",
+      "first_checked_at": "2026-11-01T01:43:38+09:00",
+      "last_checked_at": "2026-11-01T01:43:38+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 356; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "worklist_rank": 356,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.819",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.819"
+      ],
+      "title": "Towards Efficient and Effective Diffusion Language Model Inference via Semantic-Aware Adaptive Denoising",
+      "reason": "ACL Anthology一次要旨は、拡散言語モデルの反復denoisingで意味的に収束したトークンを識別し、信頼度履歴の特徴量と適応的クラスタリングで不要な計算を省くAda-DLMを提案。システム最適化を併用し、比較方式に対して最大2倍の高速化と品質改善を報告。DLMの推論実行時間を直接短縮する。",
+      "source_url": "https://aclanthology.org/2026.acl-long.819/",
+      "body_check": "ACL Anthology正式一次要旨を確認。本文未読。",
+      "first_checked_at": "2026-11-01T01:43:38+09:00",
+      "last_checked_at": "2026-11-01T01:43:38+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 371; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "worklist_rank": 371,
+      "origin": "discovery_worklist_primary_source_screen"
+    }
+  ]
+}

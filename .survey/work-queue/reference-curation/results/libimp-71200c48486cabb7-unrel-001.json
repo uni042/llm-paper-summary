@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-71200c48486cabb7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.10383",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.10383",
+    "identity_tokens": [
+      "arXiv:2607.10383"
+    ],
+    "reason": "対象は視覚言語ナビゲーション基盤モデルの構築・移動タスクであり、LLM推論システムの高速化・圧縮・メモリ管理を主題としない。タイトル段階で対象外と判断。",
+    "first_checked_at": "2026-10-13T07:51:16+00:00",
+    "last_checked_at": "2026-10-13T07:51:16+00:00",
+    "linked_from": [],
+    "title": "ABot-N1: Toward a General Visual Language Navigation Foundation Model"
+  },
+  "processed_at": "2026-10-13T07:51:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-71200c48486c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-62ffe033df7d0b1b-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.28006",
+  "reason": "KV cache設計に関連するが、小規模126M/2K条件でのlikelihood差が中心。GQAやlayer-sharingよりcacheが大きく長いrequestのlatencyも高く、実serving効率が弱い。",
+  "title": "Shared Global KV with Layer-Specific Local History",
+  "identity_tokens": [
+    "arXiv:2609.28006"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md",
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md",
+    "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+    "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-62ffe033df7d",
+  "source_precheck_request_id": null
+}

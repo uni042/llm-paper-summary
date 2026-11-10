@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bb79764222c1717f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.14943",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.14943",
+    "identity_tokens": [
+      "arXiv:2606.14943"
+    ],
+    "reason": "Natural-language conditional modeling method without a serving/inference-efficiency contribution.",
+    "first_checked_at": "2026-10-05T12:11:27+00:00",
+    "last_checked_at": "2026-10-05T12:11:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+    ],
+    "title": "Simplifying the Modeling of Arbitrary Conditionals in Natural Language"
+  },
+  "processed_at": "2026-10-05T12:11:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb79764222c1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

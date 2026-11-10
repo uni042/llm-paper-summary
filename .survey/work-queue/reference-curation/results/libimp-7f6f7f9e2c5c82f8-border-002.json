@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f6f7f9e2c5c82f8-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.26173",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.26173",
+    "identity_tokens": [
+      "arXiv:2609.26173"
+    ],
+    "reason": "The topic is LLM deployment quantization, but measured contribution is diagnostic quality analysis without an efficiency result; fit to serving-efficiency scope is weak.",
+    "first_checked_at": "2026-10-05T08:49:35+00:00",
+    "last_checked_at": "2026-10-05T08:49:35+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.04643-qaq-quality-adaptive-quantization-for-llm-kv-cache.md",
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+      "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+    ],
+    "title": "Component Type, Not Reconstruction Error, Predicts Attention Quantization Sensitivity"
+  },
+  "processed_at": "2026-10-05T08:49:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f6f7f9e2c5c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9f5ae05968097d0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2108.06098",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2108.06098",
+    "identity_tokens": [
+      "arXiv:2108.06098"
+    ],
+    "reason": "一次要旨はfederated learning向け低ランク圧縮による通信効率を扱う。LLM推論・servingの効率化ではない。",
+    "first_checked_at": "2026-10-05T01:36:00+00:00",
+    "last_checked_at": "2026-10-05T01:36:00+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md"
+    ],
+    "title": "FedPara: Low-rank Hadamard Product for Communication-Efficient Federated Learning"
+  },
+  "processed_at": "2026-10-05T01:36:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9f5ae059680",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

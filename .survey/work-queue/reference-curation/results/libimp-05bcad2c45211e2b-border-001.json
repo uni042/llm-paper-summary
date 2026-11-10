@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-05bcad2c45211e2b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.20204",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.20204",
+    "identity_tokens": [
+      "arXiv:2602.20204"
+    ],
+    "reason": "本文はedge向けMLIR AI kernel compilerにおけるvectorization, multithreading, double bufferingによるlatency hiding/parallelismを測定する。compiler lineageには近いが、特定LLM inference workloadの実証はなく転用可能性が未確定。",
+    "first_checked_at": "2026-10-06T21:07:22+00:00",
+    "last_checked_at": "2026-10-06T21:07:22+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Analyzing Latency Hiding and Parallelism in an MLIR-based AI Kernel Compiler"
+  },
+  "processed_at": "2026-10-06T21:07:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-05bcad2c4521",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

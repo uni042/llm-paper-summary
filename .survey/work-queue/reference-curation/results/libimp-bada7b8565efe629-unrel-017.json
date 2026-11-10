@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bada7b8565efe629-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s41524-026-02087-w",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s41524-026-02087-w",
+    "identity_tokens": [
+      "DOI:10.1038/s41524-026-02087-w",
+      "PRIMARY:https://www.nature.com/articles/s41524-026-02087-w"
+    ],
+    "reason": "PhaseDifformerは単一X-ray diffraction観測からmulti-phase material patternを分解する生成モデルで、材料分析向けscientific application。推論基盤効率への接続なし。",
+    "first_checked_at": "2026-10-11T19:35:03+00:00",
+    "last_checked_at": "2026-10-11T19:35:03+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+    ],
+    "title": "Enabling single-observation decomposition of multi-phase X-ray diffraction patterns via generative deep learning"
+  },
+  "processed_at": "2026-10-11T19:35:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bada7b8565ef",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

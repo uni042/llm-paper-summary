@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3f8637f72add0c33-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2605.29517",
+  "reason": "arXiv一次要旨はColBERT/ColPaliのMaxSim計算で巨大なquery×document類似度テンソルを作らず、融合GPUカーネルで正確なrerankingを行う。A100で推論ピークメモリをchunked実装比1.4〜2.6倍削減。ただし対象は検索器のスコア計算でありLLM本体の推論最適化ではないため境界的。",
+  "title": "FLASH-MAXSIM: IO-Aware Fused Kernels for Late-Interaction Retrieval",
+  "identity_tokens": [
+    "arXiv:2605.29517"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f8637f72add",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,187 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1530-scheduled-chat-30/r08",
+  "reference_main_sha": "0ff1d41771eec8ce05901d1254d9bb38fd49b7a7",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.24788",
+      "identity_tokens": [
+        "arXiv:2607.24788"
+      ],
+      "title": "GLIDE: Guided Layerwise Hybrid Attention for Efficient LLM Inference",
+      "reason": "arXiv一次要旨は深い層ほど全域softmax注意を線形再帰で代替しやすいという層別異質性を利用し、可変窓softmaxと線形再帰を混合するGLIDEを提案。長文脈decode時のKV I/Oと計算量削減が直接の目的。",
+      "source_url": "https://arxiv.org/abs/2607.24788",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:40:22+09:00",
+      "last_checked_at": "2026-10-30T15:40:22+09:00",
+      "linked_from": [
+        "Sparse Attention",
+        "KV Cache Optimization / Compression"
+      ],
+      "worklist_rank": 100
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.03726",
+      "identity_tokens": [
+        "arXiv:2508.03726"
+      ],
+      "title": "Hierarchical Verification of Speculative Beams for Accelerating LLM Inference",
+      "reason": "arXiv一次要旨は投機的beam生成で高確率ドラフトを優先して検証し、低優先候補を早期枝刈りするHierarchical Verification Treeを提案。LLM生成の検証計算削減と投機的復号高速化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2508.03726",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:40:22+09:00",
+      "last_checked_at": "2026-10-30T15:40:22+09:00",
+      "linked_from": [
+        "Speculative Decoding"
+      ],
+      "worklist_rank": 101
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.23161",
+      "identity_tokens": [
+        "arXiv:2601.23161"
+      ],
+      "title": "DIFFA-2: A Practical Diffusion Large Language Model for General Audio Understanding",
+      "reason": "arXiv一次要旨は自己回帰型音声言語モデルの逐次復号制約を背景に、拡散型バックボーンへ置換した実用音声理解モデルDIFFA-2を提案。並列復号の可能性に関連するが、主な貢献は音声理解能力・学習方式であり、一般的LLM推論サービングの高速化を主眼とする論文ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2601.23161",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:40:22+09:00",
+      "last_checked_at": "2026-10-30T15:40:22+09:00",
+      "linked_from": [
+        "Diffusion LLM Inference",
+        "Multimodal LLM Inference"
+      ],
+      "worklist_rank": 103
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.09306",
+      "identity_tokens": [
+        "arXiv:2601.09306"
+      ],
+      "title": "On-Device Large Language Models for Sequential Recommendation",
+      "reason": "arXiv一次要旨は端末内の逐次推薦へLLMを配備するため、タスク適応型のモデル圧縮OD-LLMを提案。メモリ・計算制約下の端末LLM推論に関連する一方、評価は推薦タスクに特化しており、汎用LLMサービング効率への外挿は限定的なためborderline。",
+      "source_url": "https://arxiv.org/abs/2601.09306",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:40:22+09:00",
+      "last_checked_at": "2026-10-30T15:40:22+09:00",
+      "linked_from": [
+        "Edge LLM Inference",
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 104
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.14495",
+      "identity_tokens": [
+        "arXiv:2311.14495"
+      ],
+      "title": "StableSSM: Alleviating the Curse of Memory in State-space Models through Stable Reparameterization",
+      "reason": "arXiv一次要旨はSSMが安定に近似できる長期記憶の理論的制約を示し、再パラメータ化によって記憶能力を改善するStableSSMを提案。長文脈モデルの設計には関係するが、推論カーネル・サービング速度・KV削減の実測が主題ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2311.14495",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:40:22+09:00",
+      "last_checked_at": "2026-10-30T15:40:22+09:00",
+      "linked_from": [
+        "Alternative Language Model Architectures"
+      ],
+      "worklist_rank": 105
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.08345",
+      "identity_tokens": [
+        "arXiv:2609.08345"
+      ],
+      "title": "CoVeR: Coverage-Based Token Pruning for Multi-View 3D Reasoning in VLMs",
+      "reason": "arXiv一次要旨は複数視点画像から大量発生する視覚トークンを、空間被覆を維持しながら正確なトークン予算に収めるCoVeRを提案。VLMへ投入する視覚トークン数と推論計算を減らす直接的なマルチモーダル効率研究。",
+      "source_url": "https://arxiv.org/abs/2609.08345",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:40:22+09:00",
+      "last_checked_at": "2026-10-30T15:40:22+09:00",
+      "linked_from": [
+        "Multimodal LLM Inference",
+        "Token Pruning"
+      ],
+      "worklist_rank": 107
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.12984",
+      "identity_tokens": [
+        "arXiv:2504.12984"
+      ],
+      "title": "Tilus: A Tile-Level GPGPU Programming Language for Low-Precision Computation",
+      "reason": "arXiv一次要旨はLLM低精度演算で既存高水準GPU言語の制約を回避し、レジスタ管理とメモリアクセスをタイル単位で指定できるTilusを提案。任意ビット幅の低精度カーネルを効率よく実装するLLM推論アクセラレーションに直接関連。",
+      "source_url": "https://arxiv.org/abs/2504.12984",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:40:22+09:00",
+      "last_checked_at": "2026-10-30T15:40:22+09:00",
+      "linked_from": [
+        "Hardware Accelerators",
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 109
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.06727",
+      "identity_tokens": [
+        "arXiv:2512.06727"
+      ],
+      "title": "KV-CAR: KV Cache Compression using Autoencoders and KV Reuse in Large Language Models",
+      "reason": "arXiv一次要旨はKVテンソルの埋込み次元を軽量オートエンコーダで圧縮し、KV再利用と組み合わせるKV-CARを提案。長文脈LLMのKV格納量を減らし、バッチ数と文脈長の制約を緩和することを狙う。",
+      "source_url": "https://arxiv.org/abs/2512.06727",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:40:22+09:00",
+      "last_checked_at": "2026-10-30T15:40:22+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression"
+      ],
+      "worklist_rank": 110
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07350",
+      "identity_tokens": [
+        "arXiv:2610.07350"
+      ],
+      "title": "Trajectory-Retrieval Speculative Decoding: When Does a Model's Own History Help?",
+      "reason": "arXiv一次要旨は長いCoT生成中に同じ軌跡の過去継続を検索し、最近の検証成績で検索の使用と候補幅を調整するTLARを提案。モデル生成ドラフトと履歴検索ドラフトを共通木で検証し、ターゲット分布を保持する投機的復号高速化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2610.07350",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:40:22+09:00",
+      "last_checked_at": "2026-10-30T15:40:22+09:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "Reasoning LLM Inference"
+      ],
+      "worklist_rank": 111
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.13349",
+      "identity_tokens": [
+        "arXiv:2604.13349"
+      ],
+      "title": "When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration",
+      "reason": "arXiv一次要旨は複数LLMエージェント間でKV状態を引き継ぐ際、削除するKVの低ランク残差を保持側へ戻すOrthogonal BackFillを提案。プロンプトKVの9.9〜20.2%保持で通信量4.7倍削減、GPUメモリ8%減、実時間オーバーヘッド5%未満と報告し、複合LLM推論の通信・メモリ効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2604.13349",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:40:22+09:00",
+      "last_checked_at": "2026-10-30T15:40:22+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "Agentic LLM Serving"
+      ],
+      "worklist_rank": 113
+    }
+  ]
+}

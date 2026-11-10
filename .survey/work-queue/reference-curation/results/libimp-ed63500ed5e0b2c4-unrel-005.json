@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed63500ed5e0b2c4-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2211.10435",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2211.10435",
+    "identity_tokens": [
+      "arXiv:2211.10435"
+    ],
+    "reason": "PALはLLMに自然言語問題を実行可能programへ分解させ、計算自体をPython interpreterへ委譲してreasoning accuracyを改善する推論時手法。外部runtimeを使うが目的はGSM8K等の正解率向上で、LLM serving/runtimeの効率化ではない。",
+    "first_checked_at": "2026-10-05T00:48:09+00:00",
+    "last_checked_at": "2026-10-05T16:43:48+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2606.01751-sparsex-segment-level-kv-sharing.md"
+    ],
+    "title": "PAL: Program-aided Language Models"
+  },
+  "processed_at": "2026-10-05T16:43:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed63500ed5e0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a96d50445cffbefc-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.30998",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.30998",
+    "identity_tokens": [
+      "arXiv:2609.30998"
+    ],
+    "reason": "generic PUD DRAM hardware/software architectureを一般compute向けに評価する。LLM/Transformer inference workloadの測定・特化設計がない。",
+    "first_checked_at": "2026-10-05T05:33:18+00:00",
+    "last_checked_at": "2026-10-05T05:33:18+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+      "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+      "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+    ],
+    "title": "PipeDRAM: A Data-Transposition-Free Processing-Using-DRAM Architecture with Hardware/Software Pipelining"
+  },
+  "processed_at": "2026-10-05T05:33:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a96d50445cff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

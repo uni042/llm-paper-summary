@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3490b529e98758d3-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3586183.3606763",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3586183.3606763",
+    "identity_tokens": [
+      "DOI:10.1145/3586183.3606763",
+      "arXiv:2304.03442"
+    ],
+    "reason": "LLMに記憶・内省・計画を組み合わせて人間らしい社会行動を生成する対話エージェント/HCI研究で、agentic inferenceのサービング効率やruntime最適化を扱わない。",
+    "first_checked_at": "2026-10-04T14:30:19+00:00",
+    "last_checked_at": "2026-10-04T14:30:19+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+    ],
+    "title": "Generative Agents: Interactive Simulacra of Human Behavior"
+  },
+  "processed_at": "2026-10-04T14:30:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3490b529e987",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

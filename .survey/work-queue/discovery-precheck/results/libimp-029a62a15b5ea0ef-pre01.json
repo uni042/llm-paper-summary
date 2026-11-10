@@ -1,0 +1,1089 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-029a62a15b5ea0ef-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-029a62a15b5e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tccn.2026.3729251",
+    "SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14",
+    "arXiv:2405.02842",
+    "arXiv:2407.17029",
+    "arXiv:2502.15294",
+    "arXiv:2502.19335",
+    "arXiv:2505.19472",
+    "arXiv:2507.05043",
+    "arXiv:2509.22166",
+    "arXiv:2510.05363",
+    "arXiv:2510.22641",
+    "arXiv:2510.25979"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "24297583ca2cfe201b3770d420afb60fbd602426",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T01:24:01.805589+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tccn.2026.3729251",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.02842",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2405.02842"
+    },
+    {
+      "requested_id": "arXiv:2407.17029",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.15294",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.19335",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.19472",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.05043",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.22166",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.05363",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.22641",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.25979",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Gatekeeper: Improving Model Cascades Through Confidence Tuning",
+      "source_url": "https://arxiv.org/abs/2502.19335",
+      "year": 2025,
+      "published": "2025-02-26",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale machine learning models deliver strong performance across a wide range of tasks but come with significant computational and resource constraints. To mitigate these challenges, local smaller models are often deployed alongside larger models, relying on routing and deferral mechanisms to offload complex tasks. However, existing approaches inadequately balance the capabilities of these models, often resulting in unnecessary deferrals or sub-optimal resource usage. In this work we introduce a novel loss function called Gatekeeper for calibrating smaller models in cascade setups. Our approach fine-tunes the smaller model to confidently handle tasks it can perform correctly while deferring complex tasks to the larger model. Moreover, it incorporates a mechanism for managing the trade-off between model performance and deferral accuracy, and is broadly applicable across various tasks and domains without any architectural changes. We evaluate our method on encoder-only, decoder-only, and encoder-decoder architectures. Experiments across image classification, language modeling, and vision-language tasks show that our approach substantially improves deferral performance.",
+      "identifiers": [
+        "SemanticScholar:dfee733dbe1a4a0607d07187aad7c9ed5d41fee8"
+      ],
+      "semantic_scholar_id": "dfee733dbe1a4a0607d07187aad7c9ed5d41fee8",
+      "canonical_id": "arXiv:2502.19335",
+      "arxiv_id": "2502.19335",
+      "doi": "10.52202/085713-0656",
+      "authors": [
+        "Stephan Rabanser",
+        "N. Rauschmayr",
+        "Achin Kulshrestha",
+        "Petra Poklukar",
+        "Wittawat Jitkrittum",
+        "Sean Augenstein",
+        "Congchao Wang",
+        "Federico Tombari"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 595,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Motivating Next-Gen Accelerators with Flexible N: M Activation Sparsity via Benchmarking Lightweight Post-Training Sparsification Approaches",
+      "source_url": "https://arxiv.org/abs/2509.22166",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The demand for efficient large language model (LLM) inference has intensified the focus on sparsification techniques. While semi-structured (N:M) pruning is well-established for weights, its application to activation pruning remains underexplored despite its potential for dynamic, input-adaptive compression and reductions in I/O overhead. This work presents a comprehensive analysis of methods for post-training N:M activation pruning in LLMs. Across multiple LLMs, we demonstrate that pruning activations enables superior preservation of generative capabilities compared to weight pruning at equivalent sparsity levels. We evaluate lightweight, plug-and-play error mitigation techniques and pruning criteria, establishing strong hardware-friendly baselines that require minimal calibration. Furthermore, we explore sparsity patterns beyond NVIDIA's standard 2:4, showing that the 16:32 pattern achieves performance nearly on par with unstructured sparsity. However, considering the trade-off between flexibility and hardware implementation complexity, we focus on the 8:16 pattern as a superior candidate. Our findings provide both effective practical methods for activation pruning and a motivation for future hardware to support more flexible sparsity patterns. Our code is available https://anonymous.4open.science/r/Structured-Sparse-Activations-Inference-EC3C/README.md .",
+      "identifiers": [
+        "SemanticScholar:93173f67275386679e4c42ee6086127efa3dba4b"
+      ],
+      "semantic_scholar_id": "93173f67275386679e4c42ee6086127efa3dba4b",
+      "canonical_id": "arXiv:2509.22166",
+      "arxiv_id": "2509.22166",
+      "doi": "10.18653/v1/2026.acl-industry.17",
+      "authors": [
+        "Shirin Alanova",
+        "K. Kazistova",
+        "E. Galaeva",
+        "A. Kostromina",
+        "Vladimir Smirnov",
+        "D. Redko",
+        "Alexey Dontsov",
+        "Maxim Zhelnin",
+        "E. Burnaev",
+        "Egor Shvetsov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 383,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Accurate and Efficient Fine-Tuning of Quantized Large Language Models Through Optimal Balance",
+      "source_url": "https://arxiv.org/abs/2407.17029",
+      "year": 2024,
+      "published": "2024-07-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated impressive performance across various domains. However, the enormous number of model parameters makes fine-tuning challenging, significantly limiting their application and deployment. Existing solutions combine parameter quantization with Low-Rank Adaptation (LoRA), reducing memory usage but causing performance degradation. Additionally, converting fine-tuned models to low-precision representations further degrades performance. In this paper, we identify an imbalance in fine-tuning quantized LLMs with LoRA: overly complex adapter inputs and outputs versus low effective trainability of the adapter, leading to underfitting during fine-tuning. Thus, we propose Quantized LLMs fine-tuning with Balanced Low-Rank Adaptation (Q-BLoRA), which simplifies the adapter's inputs and outputs while increasing the adapter's rank to alleviate underfitting during fine-tuning. For low-precision deployment, we propose Quantization-Aware fine-tuning with Balanced Low-Rank Adaptation (QA-BLoRA), which aligns with the block-wise quantization and facilitates quantization-aware fine-tuning of low-rank adaptation based on the parameter merging of Q-BLoRA. Both Q-BLoRA and QA-BLoRA are easily implemented and offer the following optimizations: (i) Q-BLoRA consistently achieves state-of-the-art accuracy compared to baselines and other variants; (ii) QA-BLoRA enables the direct generation of low-precision inference models, which exhibit significant performance improvements over other low-precision models. We validate the effectiveness of Q-BLoRA and QA-BLoRA across various models and scenarios. Code will be made available at \\href{https://github.com/xiaocaigou/qbaraqahira}{https://github.com/xiaocaigou/qbaraqahira}",
+      "identifiers": [
+        "SemanticScholar:b117d8c6baa6d7e8fc3fa1ceaae8466af371a1cf"
+      ],
+      "semantic_scholar_id": "b117d8c6baa6d7e8fc3fa1ceaae8466af371a1cf",
+      "canonical_id": "arXiv:2407.17029",
+      "arxiv_id": "2407.17029",
+      "doi": "10.48550/arXiv.2407.17029",
+      "authors": [
+        "Ao Shen",
+        "Qiang Wang",
+        "Zhi-Quan Lai",
+        "Xiong-Lve Li",
+        "Dongsheng Li"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 812,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AttnCache: Accelerating Self-Attention Inference for LLM Prefill via Attention Cache",
+      "source_url": "https://arxiv.org/abs/2510.25979",
+      "year": 2025,
+      "published": "2025-10-29",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are widely used in generative applications such as chatting, code generation, and reasoning. However, many realworld workloads such as classification, question answering, recommendation, and text embedding rely solely on the prefill stage of inference, where the model encodes input sequences without performing autoregressive decoding. In these prefill only scenarios, the self-attention computation becomes the primary performance bottleneck due to its quadratic complexity with respect to sequence length. In this paper, we observe that semantically different sentences often produce similar attention maps across layers and heads. Building on this insight, we propose AttnCache, a framework that accelerates the prefill stage of LLM inference by retrieving and reusing similar attention maps. Based on an attention map memorization database, AttnCache employs efficient caching and similarity search techniques to identify and reuse pre-cached attention maps during inference, thereby reducing the computational overhead of self-attention. Experimental results show that AttnCache achieves an average of 1.2x end-to-end and 2x attention speedup on CPU, and 1.6x end-to-end and 3x attention speedup on GPU, with negligible accuracy degradation.",
+      "identifiers": [
+        "SemanticScholar:20973fbb9ff24a6a4c752108aff73a6376d4d5d8"
+      ],
+      "semantic_scholar_id": "20973fbb9ff24a6a4c752108aff73a6376d4d5d8",
+      "canonical_id": "arXiv:2510.25979",
+      "arxiv_id": "2510.25979",
+      "doi": "10.48550/arXiv.2510.25979",
+      "authors": [
+        "Dinghong Song",
+        "Yuan Feng",
+        "Yiwei Wang",
+        "Shangye Chen",
+        "Cyril Guyot",
+        "Filip Blagojevic",
+        "Hyeran Jeon",
+        "Peng-Fei Su",
+        "Dong Li"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 350,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FastVLM: Self-Speculative Decoding for Fast Vision-Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2510.22641",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": "IJCNLP-AACL",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language Models (VLMs) have made significant strides in visual understanding and query response generation, but often face challenges of high computational cost and inference latency due to autoregressive decoding. In this work, we introduce an imitation-learning-based Self-Speculative Decoding (SSD) framework, named FastVLM, to address these limitations. Our approach employs a lightweight draft model for token generation in an autoregressive manner, while a full model verifies these tokens non-autoregressively. Accepted tokens proceed seamlessly, while rejected tokens are corrected by the full model and used to guide the draft model's refinement. Through an imitation network, FastVLM enhances the draft model by integrating deeper level insights from the full model's architecture. Also, it maintains the performance integrity of the full model while training the draft model, achieving a balance between efficiency and accuracy. Our method speeds up the inference process by 1.55-1.85x as compared to the final layer with minimal loss in performance.",
+      "identifiers": [
+        "SemanticScholar:fb98d8f8477d433eba22a5246bfba59e9c345e6a"
+      ],
+      "semantic_scholar_id": "fb98d8f8477d433eba22a5246bfba59e9c345e6a",
+      "canonical_id": "arXiv:2510.22641",
+      "arxiv_id": "2510.22641",
+      "doi": "10.48550/arXiv.2510.22641",
+      "authors": [
+        "D. J. Bajpai",
+        "M. Hanawal"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 353,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Orchestrating Generative AI Services in Ultra-Dense 6G Networks: A Mean Field Game Framework",
+      "source_url": "https://doi.org/10.1109/TCCN.2026.3729251",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Transactions on Cognitive Communications and Networking",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Future 6G networks will enable pervasive Generative Artificial Intelligence (GenAI) services. Migrating Large Language Model (LLM) inference to the network edge is essential to meet the low-latency and privacy demands of these services. However, LLM inference offloading faces a mismatch between resource-limited edge infrastructure and volatile computational demands. Conventional offloading schemes for static bit-level tasks cannot sufficiently handle the prefill/decoding phase difference and the uncertain output length of LLM requests. To bridge this gap, we derive a stochastic workload model based on decoder-only Transformer mechanics and profiled input/output token statistics, characterizing expected workload and task-dependent fluctuations. We embed these statistics into edge-cloud queue dynamics and formulate the massive-scale collaborative inference problem as a Mean Field Game (MFG). We approximate the high-concurrency queue dynamics using Stochastic Differential Equations (SDEs) and develop a Mean Field State Deep Q-Network (MFSDQN) algorithm. MFSDQN enables edge agents to learn decentralized offloading-ratio decisions under Quality of Service (QoS) constraints using local observations and neighbor-assisted mean-field states, avoiding global edge-state exchange. Extensive simulations with up to 500 edge agents demonstrate stable convergence and scalability. MFSDQN reduces the average system cost and unfinished workload by 8.0% and 6.3%, respectively, relative to the best-performing baseline.",
+      "identifiers": [
+        "SemanticScholar:97df4a4dc269d61dc7c1a6e33e9aed3880e69dc9"
+      ],
+      "semantic_scholar_id": "97df4a4dc269d61dc7c1a6e33e9aed3880e69dc9",
+      "doi": "10.1109/TCCN.2026.3729251",
+      "canonical_id": "DOI:10.1109/TCCN.2026.3729251",
+      "authors": [
+        "Yuhao Chai",
+        "Zideng Feng",
+        "Zhen-Yu Zhang",
+        "Ying-Lei Teng",
+        "Guo-Han Zhang",
+        "Yong Zhang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 105,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "F AA S CALE : U NLOCKING F AST LLM S CALING FOR S ERVERLESS I NFERENCE",
+      "source_url": "https://www.semanticscholar.org/paper/183d712c62ae566cd9150f3b360c7de9ead96d14",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14"
+      ],
+      "semantic_scholar_id": "183d712c62ae566cd9150f3b360c7de9ead96d14",
+      "canonical_id": "SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14",
+      "authors": [
+        "Minchen Yu",
+        "Rui Yang",
+        "Chao Jia",
+        "Zhao-Yuan Su",
+        "Sheng Yao",
+        "Ting-Feng Lan",
+        "Yu-Chen Yang",
+        "Yue Cheng",
+        "Wei Wang",
+        "Ao Wang",
+        "Ruichuan Chen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Round Attention: A Novel Round-Level Attention Mechanism to Accelerate LLM Inference",
+      "source_url": "https://arxiv.org/abs/2502.15294",
+      "year": 2025,
+      "published": "2025-02-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The increasing context window size in large language models (LLMs) has improved their ability to handle complex, long-text tasks. However, as the conversation rounds continue, it is required to store a large amount of KV cache in GPU memory, which significantly affects the efficiency and even availability of the model serving systems. This paper analyzes dialogue data from real users on the granularity of round and discovers that the LLM inference manifests a watershed layer, after which the distribution of round-level attention shows notable similarity. Based on this, we propose Round Attention - a novel round-level attention mechanism that selectively processes the KV cache of top-k relevant rounds, where k is dynamically determined through the attention matrix in the watershed layer. Theoretical analysis demonstrates that our method reduces memory usage by 54\\% to 82\\%, while experimental results confirm that loading sparse critical-round KV cache maintains answer accuracy without performance degradation.",
+      "identifiers": [
+        "SemanticScholar:b20971ea9e97d60378e3c99cb89acca457fe6b24"
+      ],
+      "semantic_scholar_id": "b20971ea9e97d60378e3c99cb89acca457fe6b24",
+      "canonical_id": "arXiv:2502.15294",
+      "arxiv_id": "2502.15294",
+      "doi": "10.48550/arXiv.2502.15294",
+      "authors": [
+        "Yao-Hua Tang",
+        "Zhi-Cheng Hu",
+        "Kun Cheng",
+        "Fan Mo",
+        "Qi Lv",
+        "Hua Wang",
+        "Zhi Chen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 600,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Balancing Computation Load and Representation Expressivity in Parallel Hybrid Neural Networks",
+      "source_url": "https://arxiv.org/abs/2505.19472",
+      "year": 2025,
+      "published": "2025-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention and State-Space Models (SSMs) when combined in a hybrid network in sequence or in parallel provide complementary strengths. In a hybrid sequential pipeline they alternate between applying a transformer to the input and then feeding its output into a SSM. This results in idle periods in the individual components increasing end-to-end latency and lowering throughput caps. In the parallel hybrid architecture, the transformer operates independently in parallel with the SSM, and these pairs are cascaded, with output from one pair forming the input to the next. Two issues are (i) creating an expressive knowledge representation with the inherently divergent outputs from these separate branches, and (ii) load balancing the computation between these parallel branches, while maintaining representation fidelity. In this work we present FlowHN, a novel parallel hybrid network architecture that accommodates various strategies for load balancing, achieved through appropriate distribution of input tokens between the two branches. Two innovative differentiating factors in FlowHN include a FLOP aware dynamic token split between the attention and SSM branches yielding efficient balance in compute load, and secondly, a method to fuse the highly divergent outputs from individual branches for enhancing representation expressivity. Together they enable much better token processing speeds, avoid bottlenecks, and at the same time yield significantly improved accuracy as compared to other competing works. We conduct comprehensive experiments on autoregressive language modeling for models with 135M, 350M, and 1B parameters. FlowHN outperforms sequential hybrid models and its parallel counterpart, achieving up to 4* higher Tokens per Second (TPS) and 2* better Model FLOPs Utilization (MFU).",
+      "identifiers": [
+        "SemanticScholar:ec51c429bbe9b9c4da0db20bdd27ec02ea390ae7"
+      ],
+      "semantic_scholar_id": "ec51c429bbe9b9c4da0db20bdd27ec02ea390ae7",
+      "canonical_id": "arXiv:2505.19472",
+      "arxiv_id": "2505.19472",
+      "doi": "10.48550/arXiv.2505.19472",
+      "authors": [
+        "Mohammad M. Moradi",
+        "Walid Ahmed",
+        "Shuangyue Wen",
+        "Sudhir Mudur",
+        "Weiwei Zhang",
+        "Yang Liu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MoLink: Distributed and Efficient Serving Framework for Large Models",
+      "source_url": "https://arxiv.org/abs/2507.05043",
+      "year": 2025,
+      "published": "2025-07-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models represent a groundbreaking shift in generative AI. Yet, these advances come with a significant challenge: the high cost of model serving. To mitigate these costs, consumer-grade GPUs emerge as a more affordable alternative. This presents an opportunity for more cost-efficient LLM serving by leveraging these GPUs. However, it is non-trivial to achieve high-efficiency LLM serving on consumer-grade GPUs, mainly due to two challenges: 1) these GPUs are often deployed in limited network conditions; 2) these GPUs often exhibit heterogeneity in host systems. To address these challenges, we present MoLink, a distributed LLM serving system for large models. It incorporates several key techniques, enabling efficient LLM serving on heterogeneous and weakly connected consumer-grade GPUs. Our experiments demonstrate that it achieves throughput improvements of up to 458\\% and cost-profit margin improvements of up to 151\\%, compared to state-of-the-art systems. MoLink allows users on Windows, Linux, and containerized VMs to seamlessly integrate GPUs with just a few lines of code over Ethernet or public networks. Currently, it supports 18 mainstream architectures of open-source large language models. The source code is publicly available https://github.com/oldcpple/MoLink.",
+      "identifiers": [
+        "SemanticScholar:9d562f86a69ff07657929711e4bd6a2dfa42ea51"
+      ],
+      "semantic_scholar_id": "9d562f86a69ff07657929711e4bd6a2dfa42ea51",
+      "canonical_id": "arXiv:2507.05043",
+      "arxiv_id": "2507.05043",
+      "doi": "10.48550/arXiv.2507.05043",
+      "authors": [
+        "Le-Wei Jin",
+        "Yongqi Chen",
+        "Kui Zhang",
+        "Yifan Zhuo",
+        "Yi Gao",
+        "Bo-Wei Yang",
+        "Zhen-Gong Cai",
+        "Wei Dong"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 464,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MHA-RAG: Improving Efficiency, Accuracy, and Consistency by Encoding Exemplars as Soft Prompts",
+      "source_url": "https://arxiv.org/abs/2510.05363",
+      "year": 2025,
+      "published": "2025-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Adapting Foundation Models to new domains with limited training data is challenging and computationally expensive. While prior work has demonstrated the effectiveness of using domain-specific exemplars as in-context demonstrations, we investigate whether representing exemplars purely as text is the most efficient, effective, and stable approach. We explore an alternative: representing exemplars as soft prompts with an exemplar order invariant model architecture. To this end, we introduce Multi-Head Attention Retrieval-Augmented Generation (MHA-RAG), a framework with the number of attention heads serving as a simple hyperparameter to control soft prompt-generation across different tasks. Across multiple question-answering benchmarks and model scales, MHA-RAG achieves a 20-point performance gain over standard RAG, while cutting inference costs by a factor of 10X GFLOPs-delivering both higher accuracy and greater efficiency, invariant to exemplar order.",
+      "identifiers": [
+        "SemanticScholar:5d56e9fa928371eb33921478894cbca313a5565d"
+      ],
+      "semantic_scholar_id": "5d56e9fa928371eb33921478894cbca313a5565d",
+      "canonical_id": "arXiv:2510.05363",
+      "arxiv_id": "2510.05363",
+      "authors": [
+        "Abhinav Jain",
+        "Xinyu Yao",
+        "Thomas W. Reps",
+        "Christopher Jermaine"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 373,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2502.19335",
+      "identity_tokens": [
+        "id:DOI:10.52202/085713-0656",
+        "id:SemanticScholar:dfee733dbe1a4a0607d07187aad7c9ed5d41fee8",
+        "id:arXiv:2502.19335",
+        "title:gatekeeper improving model cascades through confidence tuning",
+        "url:https://arxiv.org/abs/2502.19335"
+      ],
+      "record": {
+        "title": "Gatekeeper: Improving Model Cascades Through Confidence Tuning",
+        "source_url": "https://arxiv.org/abs/2502.19335",
+        "year": 2025,
+        "published": "2025-02-26",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large-scale machine learning models deliver strong performance across a wide range of tasks but come with significant computational and resource constraints. To mitigate these challenges, local smaller models are often deployed alongside larger models, relying on routing and deferral mechanisms to offload complex tasks. However, existing approaches inadequately balance the capabilities of these models, often resulting in unnecessary deferrals or sub-optimal resource usage. In this work we introduce a novel loss function called Gatekeeper for calibrating smaller models in cascade setups. Our approach fine-tunes the smaller model to confidently handle tasks it can perform correctly while deferring complex tasks to the larger model. Moreover, it incorporates a mechanism for managing the trade-off between model performance and deferral accuracy, and is broadly applicable across various tasks and domains without any architectural changes. We evaluate our method on encoder-only, decoder-only, and encoder-decoder architectures. Experiments across image classification, language modeling, and vision-language tasks show that our approach substantially improves deferral performance.",
+        "identifiers": [
+          "SemanticScholar:dfee733dbe1a4a0607d07187aad7c9ed5d41fee8"
+        ],
+        "semantic_scholar_id": "dfee733dbe1a4a0607d07187aad7c9ed5d41fee8",
+        "canonical_id": "arXiv:2502.19335",
+        "arxiv_id": "2502.19335",
+        "doi": "10.52202/085713-0656",
+        "authors": [
+          "Stephan Rabanser",
+          "N. Rauschmayr",
+          "Achin Kulshrestha",
+          "Petra Poklukar",
+          "Wittawat Jitkrittum",
+          "Sean Augenstein",
+          "Congchao Wang",
+          "Federico Tombari"
+        ],
+        "priority": 22,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 22,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 595,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.22166",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-industry.17",
+        "id:SemanticScholar:93173f67275386679e4c42ee6086127efa3dba4b",
+        "id:arXiv:2509.22166",
+        "title:motivating nextgen accelerators with flexible n m activation sparsity via benchmarking lightweight posttraining sparsification approaches",
+        "url:https://arxiv.org/abs/2509.22166"
+      ],
+      "record": {
+        "title": "Motivating Next-Gen Accelerators with Flexible N: M Activation Sparsity via Benchmarking Lightweight Post-Training Sparsification Approaches",
+        "source_url": "https://arxiv.org/abs/2509.22166",
+        "year": 2025,
+        "published": "2025-09-26",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The demand for efficient large language model (LLM) inference has intensified the focus on sparsification techniques. While semi-structured (N:M) pruning is well-established for weights, its application to activation pruning remains underexplored despite its potential for dynamic, input-adaptive compression and reductions in I/O overhead. This work presents a comprehensive analysis of methods for post-training N:M activation pruning in LLMs. Across multiple LLMs, we demonstrate that pruning activations enables superior preservation of generative capabilities compared to weight pruning at equivalent sparsity levels. We evaluate lightweight, plug-and-play error mitigation techniques and pruning criteria, establishing strong hardware-friendly baselines that require minimal calibration. Furthermore, we explore sparsity patterns beyond NVIDIA's standard 2:4, showing that the 16:32 pattern achieves performance nearly on par with unstructured sparsity. However, considering the trade-off between flexibility and hardware implementation complexity, we focus on the 8:16 pattern as a superior candidate. Our findings provide both effective practical methods for activation pruning and a motivation for future hardware to support more flexible sparsity patterns. Our code is available https://anonymous.4open.science/r/Structured-Sparse-Activations-Inference-EC3C/README.md .",
+        "identifiers": [
+          "SemanticScholar:93173f67275386679e4c42ee6086127efa3dba4b"
+        ],
+        "semantic_scholar_id": "93173f67275386679e4c42ee6086127efa3dba4b",
+        "canonical_id": "arXiv:2509.22166",
+        "arxiv_id": "2509.22166",
+        "doi": "10.18653/v1/2026.acl-industry.17",
+        "authors": [
+          "Shirin Alanova",
+          "K. Kazistova",
+          "E. Galaeva",
+          "A. Kostromina",
+          "Vladimir Smirnov",
+          "D. Redko",
+          "Alexey Dontsov",
+          "Maxim Zhelnin",
+          "E. Burnaev",
+          "Egor Shvetsov"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 383,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.17029",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.17029",
+        "id:SemanticScholar:b117d8c6baa6d7e8fc3fa1ceaae8466af371a1cf",
+        "id:arXiv:2407.17029",
+        "title:accurate and efficient finetuning of quantized large language models through optimal balance",
+        "url:https://arxiv.org/abs/2407.17029"
+      ],
+      "record": {
+        "title": "Accurate and Efficient Fine-Tuning of Quantized Large Language Models Through Optimal Balance",
+        "source_url": "https://arxiv.org/abs/2407.17029",
+        "year": 2024,
+        "published": "2024-07-24",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated impressive performance across various domains. However, the enormous number of model parameters makes fine-tuning challenging, significantly limiting their application and deployment. Existing solutions combine parameter quantization with Low-Rank Adaptation (LoRA), reducing memory usage but causing performance degradation. Additionally, converting fine-tuned models to low-precision representations further degrades performance. In this paper, we identify an imbalance in fine-tuning quantized LLMs with LoRA: overly complex adapter inputs and outputs versus low effective trainability of the adapter, leading to underfitting during fine-tuning. Thus, we propose Quantized LLMs fine-tuning with Balanced Low-Rank Adaptation (Q-BLoRA), which simplifies the adapter's inputs and outputs while increasing the adapter's rank to alleviate underfitting during fine-tuning. For low-precision deployment, we propose Quantization-Aware fine-tuning with Balanced Low-Rank Adaptation (QA-BLoRA), which aligns with the block-wise quantization and facilitates quantization-aware fine-tuning of low-rank adaptation based on the parameter merging of Q-BLoRA. Both Q-BLoRA and QA-BLoRA are easily implemented and offer the following optimizations: (i) Q-BLoRA consistently achieves state-of-the-art accuracy compared to baselines and other variants; (ii) QA-BLoRA enables the direct generation of low-precision inference models, which exhibit significant performance improvements over other low-precision models. We validate the effectiveness of Q-BLoRA and QA-BLoRA across various models and scenarios. Code will be made available at \\href{https://github.com/xiaocaigou/qbaraqahira}{https://github.com/xiaocaigou/qbaraqahira}",
+        "identifiers": [
+          "SemanticScholar:b117d8c6baa6d7e8fc3fa1ceaae8466af371a1cf"
+        ],
+        "semantic_scholar_id": "b117d8c6baa6d7e8fc3fa1ceaae8466af371a1cf",
+        "canonical_id": "arXiv:2407.17029",
+        "arxiv_id": "2407.17029",
+        "doi": "10.48550/arXiv.2407.17029",
+        "authors": [
+          "Ao Shen",
+          "Qiang Wang",
+          "Zhi-Quan Lai",
+          "Xiong-Lve Li",
+          "Dongsheng Li"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 812,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.25979",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.25979",
+        "id:SemanticScholar:20973fbb9ff24a6a4c752108aff73a6376d4d5d8",
+        "id:arXiv:2510.25979",
+        "title:attncache accelerating selfattention inference for llm prefill via attention cache",
+        "url:https://arxiv.org/abs/2510.25979"
+      ],
+      "record": {
+        "title": "AttnCache: Accelerating Self-Attention Inference for LLM Prefill via Attention Cache",
+        "source_url": "https://arxiv.org/abs/2510.25979",
+        "year": 2025,
+        "published": "2025-10-29",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) are widely used in generative applications such as chatting, code generation, and reasoning. However, many realworld workloads such as classification, question answering, recommendation, and text embedding rely solely on the prefill stage of inference, where the model encodes input sequences without performing autoregressive decoding. In these prefill only scenarios, the self-attention computation becomes the primary performance bottleneck due to its quadratic complexity with respect to sequence length. In this paper, we observe that semantically different sentences often produce similar attention maps across layers and heads. Building on this insight, we propose AttnCache, a framework that accelerates the prefill stage of LLM inference by retrieving and reusing similar attention maps. Based on an attention map memorization database, AttnCache employs efficient caching and similarity search techniques to identify and reuse pre-cached attention maps during inference, thereby reducing the computational overhead of self-attention. Experimental results show that AttnCache achieves an average of 1.2x end-to-end and 2x attention speedup on CPU, and 1.6x end-to-end and 3x attention speedup on GPU, with negligible accuracy degradation.",
+        "identifiers": [
+          "SemanticScholar:20973fbb9ff24a6a4c752108aff73a6376d4d5d8"
+        ],
+        "semantic_scholar_id": "20973fbb9ff24a6a4c752108aff73a6376d4d5d8",
+        "canonical_id": "arXiv:2510.25979",
+        "arxiv_id": "2510.25979",
+        "doi": "10.48550/arXiv.2510.25979",
+        "authors": [
+          "Dinghong Song",
+          "Yuan Feng",
+          "Yiwei Wang",
+          "Shangye Chen",
+          "Cyril Guyot",
+          "Filip Blagojevic",
+          "Hyeran Jeon",
+          "Peng-Fei Su",
+          "Dong Li"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 350,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.22641",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.22641",
+        "id:SemanticScholar:fb98d8f8477d433eba22a5246bfba59e9c345e6a",
+        "id:arXiv:2510.22641",
+        "title:fastvlm selfspeculative decoding for fast visionlanguage model inference",
+        "url:https://arxiv.org/abs/2510.22641"
+      ],
+      "record": {
+        "title": "FastVLM: Self-Speculative Decoding for Fast Vision-Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2510.22641",
+        "year": 2025,
+        "published": "2025-10-26",
+        "venue": "IJCNLP-AACL",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language Models (VLMs) have made significant strides in visual understanding and query response generation, but often face challenges of high computational cost and inference latency due to autoregressive decoding. In this work, we introduce an imitation-learning-based Self-Speculative Decoding (SSD) framework, named FastVLM, to address these limitations. Our approach employs a lightweight draft model for token generation in an autoregressive manner, while a full model verifies these tokens non-autoregressively. Accepted tokens proceed seamlessly, while rejected tokens are corrected by the full model and used to guide the draft model's refinement. Through an imitation network, FastVLM enhances the draft model by integrating deeper level insights from the full model's architecture. Also, it maintains the performance integrity of the full model while training the draft model, achieving a balance between efficiency and accuracy. Our method speeds up the inference process by 1.55-1.85x as compared to the final layer with minimal loss in performance.",
+        "identifiers": [
+          "SemanticScholar:fb98d8f8477d433eba22a5246bfba59e9c345e6a"
+        ],
+        "semantic_scholar_id": "fb98d8f8477d433eba22a5246bfba59e9c345e6a",
+        "canonical_id": "arXiv:2510.22641",
+        "arxiv_id": "2510.22641",
+        "doi": "10.48550/arXiv.2510.22641",
+        "authors": [
+          "D. J. Bajpai",
+          "M. Hanawal"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 353,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tccn.2026.3729251",
+      "identity_tokens": [
+        "id:DOI:10.1109/tccn.2026.3729251",
+        "id:SemanticScholar:97df4a4dc269d61dc7c1a6e33e9aed3880e69dc9",
+        "title:orchestrating generative ai services in ultradense 6g networks a mean field game framework",
+        "url:https://doi.org/10.1109/TCCN.2026.3729251"
+      ],
+      "record": {
+        "title": "Orchestrating Generative AI Services in Ultra-Dense 6G Networks: A Mean Field Game Framework",
+        "source_url": "https://doi.org/10.1109/TCCN.2026.3729251",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Transactions on Cognitive Communications and Networking",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Future 6G networks will enable pervasive Generative Artificial Intelligence (GenAI) services. Migrating Large Language Model (LLM) inference to the network edge is essential to meet the low-latency and privacy demands of these services. However, LLM inference offloading faces a mismatch between resource-limited edge infrastructure and volatile computational demands. Conventional offloading schemes for static bit-level tasks cannot sufficiently handle the prefill/decoding phase difference and the uncertain output length of LLM requests. To bridge this gap, we derive a stochastic workload model based on decoder-only Transformer mechanics and profiled input/output token statistics, characterizing expected workload and task-dependent fluctuations. We embed these statistics into edge-cloud queue dynamics and formulate the massive-scale collaborative inference problem as a Mean Field Game (MFG). We approximate the high-concurrency queue dynamics using Stochastic Differential Equations (SDEs) and develop a Mean Field State Deep Q-Network (MFSDQN) algorithm. MFSDQN enables edge agents to learn decentralized offloading-ratio decisions under Quality of Service (QoS) constraints using local observations and neighbor-assisted mean-field states, avoiding global edge-state exchange. Extensive simulations with up to 500 edge agents demonstrate stable convergence and scalability. MFSDQN reduces the average system cost and unfinished workload by 8.0% and 6.3%, respectively, relative to the best-performing baseline.",
+        "identifiers": [
+          "SemanticScholar:97df4a4dc269d61dc7c1a6e33e9aed3880e69dc9"
+        ],
+        "semantic_scholar_id": "97df4a4dc269d61dc7c1a6e33e9aed3880e69dc9",
+        "doi": "10.1109/TCCN.2026.3729251",
+        "canonical_id": "DOI:10.1109/TCCN.2026.3729251",
+        "authors": [
+          "Yuhao Chai",
+          "Zideng Feng",
+          "Zhen-Yu Zhang",
+          "Ying-Lei Teng",
+          "Guo-Han Zhang",
+          "Yong Zhang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 105,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14",
+      "identity_tokens": [
+        "id:SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14",
+        "title:f aa s cale u nlocking f ast llm s caling for s erverless i nference",
+        "url:https://www.semanticscholar.org/paper/183d712c62ae566cd9150f3b360c7de9ead96d14"
+      ],
+      "record": {
+        "title": "F AA S CALE : U NLOCKING F AST LLM S CALING FOR S ERVERLESS I NFERENCE",
+        "source_url": "https://www.semanticscholar.org/paper/183d712c62ae566cd9150f3b360c7de9ead96d14",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14"
+        ],
+        "semantic_scholar_id": "183d712c62ae566cd9150f3b360c7de9ead96d14",
+        "canonical_id": "SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14",
+        "authors": [
+          "Minchen Yu",
+          "Rui Yang",
+          "Chao Jia",
+          "Zhao-Yuan Su",
+          "Sheng Yao",
+          "Ting-Feng Lan",
+          "Yu-Chen Yang",
+          "Yue Cheng",
+          "Wei Wang",
+          "Ao Wang",
+          "Ruichuan Chen"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.15294",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.15294",
+        "id:SemanticScholar:b20971ea9e97d60378e3c99cb89acca457fe6b24",
+        "id:arXiv:2502.15294",
+        "title:round attention a novel roundlevel attention mechanism to accelerate llm inference",
+        "url:https://arxiv.org/abs/2502.15294"
+      ],
+      "record": {
+        "title": "Round Attention: A Novel Round-Level Attention Mechanism to Accelerate LLM Inference",
+        "source_url": "https://arxiv.org/abs/2502.15294",
+        "year": 2025,
+        "published": "2025-02-21",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The increasing context window size in large language models (LLMs) has improved their ability to handle complex, long-text tasks. However, as the conversation rounds continue, it is required to store a large amount of KV cache in GPU memory, which significantly affects the efficiency and even availability of the model serving systems. This paper analyzes dialogue data from real users on the granularity of round and discovers that the LLM inference manifests a watershed layer, after which the distribution of round-level attention shows notable similarity. Based on this, we propose Round Attention - a novel round-level attention mechanism that selectively processes the KV cache of top-k relevant rounds, where k is dynamically determined through the attention matrix in the watershed layer. Theoretical analysis demonstrates that our method reduces memory usage by 54\\% to 82\\%, while experimental results confirm that loading sparse critical-round KV cache maintains answer accuracy without performance degradation.",
+        "identifiers": [
+          "SemanticScholar:b20971ea9e97d60378e3c99cb89acca457fe6b24"
+        ],
+        "semantic_scholar_id": "b20971ea9e97d60378e3c99cb89acca457fe6b24",
+        "canonical_id": "arXiv:2502.15294",
+        "arxiv_id": "2502.15294",
+        "doi": "10.48550/arXiv.2502.15294",
+        "authors": [
+          "Yao-Hua Tang",
+          "Zhi-Cheng Hu",
+          "Kun Cheng",
+          "Fan Mo",
+          "Qi Lv",
+          "Hua Wang",
+          "Zhi Chen"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 600,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.19472",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.19472",
+        "id:SemanticScholar:ec51c429bbe9b9c4da0db20bdd27ec02ea390ae7",
+        "id:arXiv:2505.19472",
+        "title:balancing computation load and representation expressivity in parallel hybrid neural networks",
+        "url:https://arxiv.org/abs/2505.19472"
+      ],
+      "record": {
+        "title": "Balancing Computation Load and Representation Expressivity in Parallel Hybrid Neural Networks",
+        "source_url": "https://arxiv.org/abs/2505.19472",
+        "year": 2025,
+        "published": "2025-05-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Attention and State-Space Models (SSMs) when combined in a hybrid network in sequence or in parallel provide complementary strengths. In a hybrid sequential pipeline they alternate between applying a transformer to the input and then feeding its output into a SSM. This results in idle periods in the individual components increasing end-to-end latency and lowering throughput caps. In the parallel hybrid architecture, the transformer operates independently in parallel with the SSM, and these pairs are cascaded, with output from one pair forming the input to the next. Two issues are (i) creating an expressive knowledge representation with the inherently divergent outputs from these separate branches, and (ii) load balancing the computation between these parallel branches, while maintaining representation fidelity. In this work we present FlowHN, a novel parallel hybrid network architecture that accommodates various strategies for load balancing, achieved through appropriate distribution of input tokens between the two branches. Two innovative differentiating factors in FlowHN include a FLOP aware dynamic token split between the attention and SSM branches yielding efficient balance in compute load, and secondly, a method to fuse the highly divergent outputs from individual branches for enhancing representation expressivity. Together they enable much better token processing speeds, avoid bottlenecks, and at the same time yield significantly improved accuracy as compared to other competing works. We conduct comprehensive experiments on autoregressive language modeling for models with 135M, 350M, and 1B parameters. FlowHN outperforms sequential hybrid models and its parallel counterpart, achieving up to 4* higher Tokens per Second (TPS) and 2* better Model FLOPs Utilization (MFU).",
+        "identifiers": [
+          "SemanticScholar:ec51c429bbe9b9c4da0db20bdd27ec02ea390ae7"
+        ],
+        "semantic_scholar_id": "ec51c429bbe9b9c4da0db20bdd27ec02ea390ae7",
+        "canonical_id": "arXiv:2505.19472",
+        "arxiv_id": "2505.19472",
+        "doi": "10.48550/arXiv.2505.19472",
+        "authors": [
+          "Mohammad M. Moradi",
+          "Walid Ahmed",
+          "Shuangyue Wen",
+          "Sudhir Mudur",
+          "Weiwei Zhang",
+          "Yang Liu"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 506,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.05043",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.05043",
+        "id:SemanticScholar:9d562f86a69ff07657929711e4bd6a2dfa42ea51",
+        "id:arXiv:2507.05043",
+        "title:molink distributed and efficient serving framework for large models",
+        "url:https://arxiv.org/abs/2507.05043"
+      ],
+      "record": {
+        "title": "MoLink: Distributed and Efficient Serving Framework for Large Models",
+        "source_url": "https://arxiv.org/abs/2507.05043",
+        "year": 2025,
+        "published": "2025-07-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models represent a groundbreaking shift in generative AI. Yet, these advances come with a significant challenge: the high cost of model serving. To mitigate these costs, consumer-grade GPUs emerge as a more affordable alternative. This presents an opportunity for more cost-efficient LLM serving by leveraging these GPUs. However, it is non-trivial to achieve high-efficiency LLM serving on consumer-grade GPUs, mainly due to two challenges: 1) these GPUs are often deployed in limited network conditions; 2) these GPUs often exhibit heterogeneity in host systems. To address these challenges, we present MoLink, a distributed LLM serving system for large models. It incorporates several key techniques, enabling efficient LLM serving on heterogeneous and weakly connected consumer-grade GPUs. Our experiments demonstrate that it achieves throughput improvements of up to 458\\% and cost-profit margin improvements of up to 151\\%, compared to state-of-the-art systems. MoLink allows users on Windows, Linux, and containerized VMs to seamlessly integrate GPUs with just a few lines of code over Ethernet or public networks. Currently, it supports 18 mainstream architectures of open-source large language models. The source code is publicly available https://github.com/oldcpple/MoLink.",
+        "identifiers": [
+          "SemanticScholar:9d562f86a69ff07657929711e4bd6a2dfa42ea51"
+        ],
+        "semantic_scholar_id": "9d562f86a69ff07657929711e4bd6a2dfa42ea51",
+        "canonical_id": "arXiv:2507.05043",
+        "arxiv_id": "2507.05043",
+        "doi": "10.48550/arXiv.2507.05043",
+        "authors": [
+          "Le-Wei Jin",
+          "Yongqi Chen",
+          "Kui Zhang",
+          "Yifan Zhuo",
+          "Yi Gao",
+          "Bo-Wei Yang",
+          "Zhen-Gong Cai",
+          "Wei Dong"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 464,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.05363",
+      "identity_tokens": [
+        "id:SemanticScholar:5d56e9fa928371eb33921478894cbca313a5565d",
+        "id:arXiv:2510.05363",
+        "title:mharag improving efficiency accuracy and consistency by encoding exemplars as soft prompts",
+        "url:https://arxiv.org/abs/2510.05363"
+      ],
+      "record": {
+        "title": "MHA-RAG: Improving Efficiency, Accuracy, and Consistency by Encoding Exemplars as Soft Prompts",
+        "source_url": "https://arxiv.org/abs/2510.05363",
+        "year": 2025,
+        "published": "2025-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Adapting Foundation Models to new domains with limited training data is challenging and computationally expensive. While prior work has demonstrated the effectiveness of using domain-specific exemplars as in-context demonstrations, we investigate whether representing exemplars purely as text is the most efficient, effective, and stable approach. We explore an alternative: representing exemplars as soft prompts with an exemplar order invariant model architecture. To this end, we introduce Multi-Head Attention Retrieval-Augmented Generation (MHA-RAG), a framework with the number of attention heads serving as a simple hyperparameter to control soft prompt-generation across different tasks. Across multiple question-answering benchmarks and model scales, MHA-RAG achieves a 20-point performance gain over standard RAG, while cutting inference costs by a factor of 10X GFLOPs-delivering both higher accuracy and greater efficiency, invariant to exemplar order.",
+        "identifiers": [
+          "SemanticScholar:5d56e9fa928371eb33921478894cbca313a5565d"
+        ],
+        "semantic_scholar_id": "5d56e9fa928371eb33921478894cbca313a5565d",
+        "canonical_id": "arXiv:2510.05363",
+        "arxiv_id": "2510.05363",
+        "authors": [
+          "Abhinav Jain",
+          "Xinyu Yao",
+          "Thomas W. Reps",
+          "Christopher Jermaine"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 373,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0f8f479aabef6b7f7d30226b6a04b46c67eb1d522b436c9d8830d4e1418c8086",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

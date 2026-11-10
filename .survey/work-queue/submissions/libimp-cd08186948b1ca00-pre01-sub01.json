@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ARION: Attention-Optimized Transformer Inference on Encrypted Data",
+      "source_url": "https://doi.org/10.1016/j.eswa.2026.134756",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": "IACR Cryptology ePrint Archive",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "—Privacy-preserving Transformer inference (PPTI) is essential for deploying large language models (LLMs) such as BERT and LLaMA in sensitive domains. In these models, the attention mechanism is both the main source of expressiveness and the dominant performance bottleneck under fully homomorphic encryption (FHE), due to large ciphertext matrix multiplications and the softmax nonlinearity. This paper presents ARION, a non-interactive FHE-based PPTI protocol that specifically optimizes the computation of encrypted attention. First, for the three consecutive ciphertext matrix multiplications in multi-head attention, we introduce the double Baby-Step Giant-Step algorithm, which significantly reduces the number of ciphertext rotations. On BERT-Base, ARION achieves an 82.5% reduction in rotations over the state-of-the-art PPTI protocol MOAI (2025), corresponding to a 5.7x reduction in rotation cost. Second, we propose a linear–nonlinear fusion technique tailored to the softmax evaluation in attention. By decomposing softmax into shift-by-maximum, exponentiation, and reciprocal sub-steps and fusing them with the surrounding encrypted matrix operations, ARION enables efficient attention evaluation while remaining compatible with diverse ciphertext packing formats. We implement ARION using Lattigo and first evaluate attention kernels on popular LLMs including BERT-Tiny, BERT-Base, and LLaMA, confirming the practicality and scalability of the proposed optimizations for encrypted attention computation. For end-to-end applications, on classification tasks for several benchmark datasets, ARION attains accuracy comparable to plaintext inference and yields up to 2.5x end-to-end speedups over MOAI for BERT-Base. 1",
+      "identifiers": [
+        "SemanticScholar:7c8bd3966d807033fea9648f03db7070492b8069"
+      ],
+      "semantic_scholar_id": "7c8bd3966d807033fea9648f03db7070492b8069",
+      "doi": "10.1016/j.eswa.2026.134756",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.134756",
+      "authors": [
+        "Lin-Han Yang",
+        "Jing-Wei Chen",
+        "Wang-Chen Dai",
+        "Shuai Wang",
+        "Wen-Yuan Wu",
+        "Yong Feng"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者のIACR ePrint 2025/2271（2026年10月20日改訂）に基づく。ARIONはFHE暗号文上のattentionにdouble-BSGSと線形・非線形演算融合を適用し、BERT-BaseでMOAI比82.5%の暗号文rotation削減と最大2.5倍のend-to-end高速化を報告。暗号化Transformer推論の実行効率に直接寄与。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "DrDiff: Dynamic Routing Diffusion with Hierarchical Attention for Breaking the Efficiency-Quality Trade-off",
+      "source_url": "https://arxiv.org/abs/2509.02785",
+      "year": 2025,
+      "published": "2025-09-02",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 41,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces DrDiff, a novel framework for long-text generation that overcomes the efficiency-quality trade-off through three core technologies. First, we design a dynamic expert scheduling mechanism that intelligently allocates computational resources during the diffusion process based on text complexity, enabling more efficient handling of text generation tasks of varying difficulty. Second, we introduce a Hierarchical Sparse Attention (HSA) mechanism that adaptively adjusts attention patterns according to a variety of input lengths, reducing computational complexity from O($n^2$) to O($n$) while maintaining model performance. Finally, we propose a soft absorption guidance optimization strategy that combines with DPM-solver++ to reduce diffusion steps, significantly improving generation speed. Comprehensive experiments on various long-text generation benchmarks demonstrate the superiority of our DrDiff over the existing SOTA methods.",
+      "identifiers": [
+        "SemanticScholar:0135919988d65d434557ec60ca9f6d5bb6a1c325"
+      ],
+      "semantic_scholar_id": "0135919988d65d434557ec60ca9f6d5bb6a1c325",
+      "canonical_id": "arXiv:2509.02785",
+      "arxiv_id": "2509.02785",
+      "doi": "10.48550/arXiv.2509.02785",
+      "authors": [
+        "Jusheng Zhang",
+        "Yi-Jia Fan",
+        "Kaitong Cai",
+        "Zi-Meng Huang",
+        "Xiaofei Sun",
+        "Jian Wang",
+        "Chengpei Tang",
+        "Ke-Ze Wang"
+      ],
+      "priority": 51,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 41,
+        "citation_count": 41,
+        "total": 51,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 423,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "DrDiffは拡散テキスト生成の計算をテキスト難度に応じて専門家へ配分し、Hierarchical Sparse Attentionで注意計算量を系列長に対しO(n)へ抑え、DPM-solver++とsoft absorption guidanceで拡散ステップを減らす。生成の計算量と速度を直接対象とする。ただし要旨に速度倍率はない。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Dynamic Resolution Routing for Efficient Egocentric Grounding",
+      "source_url": "https://arxiv.org/abs/2608.01638",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Egocentric visual grounding requires high-resolution inputs to localize small objects. However, scaling Multimodal Large Language Models to this domain is constrained by the excessive cost of visual token processing. We identify that current efficient strategies based on token reduction are unreliable for selecting object-centric spatial evidence. To overcome this, we propose SmartRes, a framework that performs efficiency optimization in the pixel space via dynamic resolution routing. SmartRes first encodes a low-resolution view for global context and uses a lightweight router to activate high-resolution patches in object-centric regions and constructs an order-preserving visual sequence. To further enable robust routing under severe foreground-background imbalance, we introduce a margin-regularized routing objective that increases foreground-background logit separation and improves foreground recall. Experiments on Ego4D and EgoIntention show that SmartRes reduces visual tokens by up to 67% while retaining 86.4% of full-resolution performance, and achieves up to 1.66X faster inference than state-of-the-art token reduction methods with higher accuracy. Furthermore, strong performance on small object grounding indicates the effectiveness of SmartRes towards egocentric applications. Code will be publicly available.",
+      "identifiers": [
+        "SemanticScholar:fc3e3a50fb4d6b70a8d044cdbcdcab47fe162810"
+      ],
+      "semantic_scholar_id": "fc3e3a50fb4d6b70a8d044cdbcdcab47fe162810",
+      "canonical_id": "arXiv:2608.01638",
+      "arxiv_id": "2608.01638",
+      "authors": [
+        "H. Sun",
+        "Wang-Bo Zhao",
+        "Fan-Yue Wei",
+        "Qiu-Xia Lin",
+        "Peng-Zhan Sun",
+        "Angela Yao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SmartResはMLLMの一人称画像入力を低解像度の全体画像と対象物領域の高解像度パッチに分け、軽量routerで画素空間の計算を適応配分する。Ego4D/EgoIntentionで視覚トークン最大67%削減、full-resolution性能86.4%保持、既存トークン削減法より最大1.66倍推論高速化を報告。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "PAR: Prompt-Aware Token Reduction Method For Efficient Large Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2410.07278",
+      "year": 2024,
+      "published": "2024-10-09",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) demonstrate strong performance across visual tasks, but their efficiency is hindered by significant computational and memory demands from processing long contexts in multimodal inputs. To address this, we introduce PAR (Prompt-Aware Token Reduction), a novel and plug-and-play approach that reduces visual tokens efficiently without compromising model performance. Unlike previous methods that rely heavily on attention mechanisms and overlooking cross-modal interactions , we uses a prompt-aware strategy to adpative identify and cluster essential visual tokens. PAR categorizes visual context redundancy into two types: external and internal. External redundancy is minimized through semantic retrieval, while internal redundancy is addressed using a token routing mechanism. This method substantially reduces computational load without requiring additional training or complex architectural modifications. \\textbf{Experimental results demonstrate that across various visual question answering tasks, PAR reduces FLOPs by 83\\% with a compression ratio of 89\\%, while retaining 97\\% of baseline accuracy.} The adaptive design of PAR achieves a 2x token reduction ratio compared to prior approaches, enabling a better balance between performance and efficiency.",
+      "identifiers": [
+        "SemanticScholar:aa4645eaf2e81efa7cd72d4c7508638918a7a55a"
+      ],
+      "semantic_scholar_id": "aa4645eaf2e81efa7cd72d4c7508638918a7a55a",
+      "canonical_id": "arXiv:2410.07278",
+      "arxiv_id": "2410.07278",
+      "doi": "10.1109/icassp55912.2026.11463003",
+      "authors": [
+        "Yingen Liu",
+        "Fan Wu",
+        "Rui-Hui Li",
+        "Zhuo Tang",
+        "Ken-Li Li"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 751,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PARはpromptと画像の意味的関係を使って外部冗長性を検索で除き、内部冗長性をトークンroutingで圧縮する学習不要の視覚トークン削減法。VQA実験でトークン89%圧縮、FLOPs83%削減、基準精度97%維持を報告し、MLLM推論の実行資源を直接削減。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "RoRecomp: Enhancing Reasoning Efficiency via Rollout Response Recomposition in Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2509.25958",
+      "year": 2025,
+      "published": "2025-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has proven effective in eliciting complex reasoning in large language models (LLMs). However, standard RLVR training often leads to excessively verbose processes (in reasoning tasks) and inefficient exploration trajectories (in agentic settings), as outcome-only rewards provide no incentive for efficiency and the high variance in response length within relatively small rollout groups results in noisy optimization signals. To address this, we propose Rollout Response Recomposition (RoRecomp), a plug-and-play method that guides models toward concise reasoning by strategically recomposing the training data. RoRecomp separates responses into two distinct batch types: 1) priority batches, which combine short-correct and long-incorrect responses selected from online batches to provide a clear gradient signal for brevity, and 2) compensation batches, which utilize remaining responses from a replay buffer to maintain stability and prevent model collapse. To comprehensively evaluate effectiveness, we test RoRecomp across three settings where results demonstrate substantial efficiency gains: reducing reasoning length by 27.7% in zero RL training, reducing unnecessary tool calls by 46.8% while improving accuracy in agentic RL, and achieving up to 52.5% length reduction in thinking compression, all with minimal performance impact.",
+      "identifiers": [
+        "SemanticScholar:12c799339cc26da96892e4541b598ce3e2f35bcc"
+      ],
+      "semantic_scholar_id": "12c799339cc26da96892e4541b598ce3e2f35bcc",
+      "canonical_id": "arXiv:2509.25958",
+      "arxiv_id": "2509.25958",
+      "doi": "10.48550/arXiv.2509.25958",
+      "authors": [
+        "Gang Li",
+        "Yu-Lei Qin",
+        "Xiaoyu Tan",
+        "Dingkang Yang",
+        "Yu-Cheng Shi",
+        "Zi-Han Xu",
+        "X. Li",
+        "Xing Sun",
+        "Ke Li"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 395,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RoRecompはRLVRのonline rolloutから短い正答と長い誤答を優先batchへ再構成し、残りをreplay compensation batchへ配分して冗長な推論を抑える。著者は思考長最大52.5%減、agentの不要tool call46.8%減を報告。学習段階の改善だが推論時トークン費の実測削減を示す。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-cd08186948b1",
+    "round": "libimp-cd08186948b1ca00-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-cd08186948b1ca00-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-cd08186948b1ca00-pre01.json",
+    "receipt": "sha256:a832b03b22e2d2fee491e626c7c9775983f8eef8a5224ea2a3e9cc2da6b0bb82"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-cd08186948b1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

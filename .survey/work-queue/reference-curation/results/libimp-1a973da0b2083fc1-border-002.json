@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1a973da0b2083fc1-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.07019",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.07019",
+    "identity_tokens": [
+      "arXiv:2608.07019"
+    ],
+    "reason": "対象分野との接点は確認したが、測定対象が通信転送効率/タスク特化VLA/重み品質改善であり、LLM一般の推論・servingコスト改善への適合または利得が限定的。",
+    "first_checked_at": "2026-10-05T08:57:56+00:00",
+    "last_checked_at": "2026-10-05T08:57:56+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
+      "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+    ],
+    "title": "ReQuant: Fixed-Grid Discrete Refinement for Post-Training Quantization"
+  },
+  "processed_at": "2026-10-05T08:57:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1a973da0b208",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

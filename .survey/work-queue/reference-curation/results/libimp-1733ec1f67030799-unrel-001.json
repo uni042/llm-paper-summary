@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1733ec1f67030799-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.09136",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.09136",
+    "identity_tokens": [
+      "arXiv:2309.09136"
+    ],
+    "reason": "一次論文要旨が対象とするのは音声認識専用のWhisper/Conformerエンコーダ・デコーダであり、4-bit NF4量子化に話者適応LoRAを重ねてLibriSpeech/TED-LIUM 3の語誤り率（WER）を改善するPQMである。推論速度・KV・LLMサービング・MoE・一般的な生成LLMのモデル圧縮を研究対象とせず、主な改善指標は話者個別のASR認識誤り率であるため、現行LLM推論効率化サーベイの中心対象から外れる。要旨に記載の7倍サイズ削減と15.1%/23.3%相対WER低下は音声認識タスク固有であり、LLM推論の速度改善として扱わない。",
+    "first_checked_at": "2026-10-28T17:55:08+00:00",
+    "last_checked_at": "2026-10-28T17:55:08+00:00",
+    "linked_from": [
+      ".survey/work-queue/jobs/job-research-9428b8d1d77f0372.json"
+    ],
+    "title": "Enhancing Quantised End-to-End ASR Models via Personalisation"
+  },
+  "processed_at": "2026-10-28T17:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1733ec1f6703",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

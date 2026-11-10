@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-1032-scheduled-chat-30/title-screen-b01",
+  "reference_main_sha": "974840e4020901396f92aef493a17dd6d78efec8",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27756",
+      "identity_tokens": [
+        "arXiv:2607.27756",
+        "DOI:10.48550/arXiv.2607.27756"
+      ],
+      "title": "Cocktail-Talker: Multi-Speaker Dialog Modeling in Noisy Social Environments with Turn Action GRPO",
+      "reason": "タイトルが多人数・雑音環境での音声対話モデルのターン行動学習を研究対象として明示している。LLM推論サービング、計算・メモリ削減、推論実行基盤の最適化を主題としないためタイトル先行走査で対象外とした。",
+      "source_url": "https://arxiv.org/abs/2607.27756",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T10:39:02+09:00",
+      "last_checked_at": "2026-10-31T10:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 204,
+      "origin": "discovery_worklist_title_sweep"
+    }
+  ]
+}

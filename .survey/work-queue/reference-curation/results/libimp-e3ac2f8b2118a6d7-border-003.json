@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3ac2f8b2118a6d7-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2308.10515",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2308.10515",
+    "identity_tokens": [
+      "arXiv:2308.10515"
+    ],
+    "reason": "一次本文は量子化aware distillationをBEV画像系へ専用設計し、LLM量子化ではない。Weight Quantization系統に手法上の近さはあり比較対象として残すが、view/BEV特徴を使う設計が自然言語decoderにそのまま適用できる根拠はない。",
+    "first_checked_at": "2026-10-06T17:55:10+00:00",
+    "last_checked_at": "2026-10-06T17:55:10+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "QD-BEV : Quantization-aware View-guided Distillation for Multi-view 3D Object Detection"
+  },
+  "processed_at": "2026-10-06T17:55:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3ac2f8b2118",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

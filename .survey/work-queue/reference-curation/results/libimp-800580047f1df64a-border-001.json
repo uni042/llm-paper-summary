@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-800580047f1df64a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.05665",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.05665",
+    "identity_tokens": [
+      "arXiv:2602.05665"
+    ],
+    "reason": "Adjacent to agent memory/retrieval, but no direct inference/serving efficiency evaluation.",
+    "first_checked_at": "2026-10-05T14:53:04+00:00",
+    "last_checked_at": "2026-10-05T14:53:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Graph-based Agent Memory: Taxonomy, Techniques, and Applications"
+  },
+  "processed_at": "2026-10-05T14:53:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-800580047f1d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

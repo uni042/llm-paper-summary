@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1be90d8776278ff-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.3390/app15052418",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.3390/app15052418",
+    "identity_tokens": [
+      "DOI:10.3390/app15052418"
+    ],
+    "reason": "論文の主要機構はGCNとgraph transformerでノード構造を符号化してSmolLMのグラフ分類・リンク予測を改善するタスク固有の表現学習であり、LLMの汎用推論サービング、KVキャッシュ、量子化、オフロード、投機的復号、推論ランタイム最適化ではない。RTX 4090上の分類正解率のみを評価し、端末推論遅延・電力・メモリ節約を実測しないため、LLM推論・学習システムサーベイへの直接適合性は微妙。エッジSLMの利用動機があり完全無関係とは断定しない。",
+    "first_checked_at": "2026-10-28T13:46:40+00:00",
+    "last_checked_at": "2026-10-28T13:46:40+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Enhancing Small Language Models for Graph Tasks Through Graph Encoder Integration"
+  },
+  "processed_at": "2026-10-28T13:46:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1be90d87762",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

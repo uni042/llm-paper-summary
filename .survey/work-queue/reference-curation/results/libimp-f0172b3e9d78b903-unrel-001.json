@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f0172b3e9d78b903-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:8tKjqqMM5z",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:8tKjqqMM5z",
+    "identity_tokens": [
+      "OpenReview:8tKjqqMM5z"
+    ],
+    "reason": "KVキャッシュ最適化そのものは対象分野だが、本候補は新規推論システム／手法を提案する一次研究ではなくレビュー論文。新規Research候補としては対象外。",
+    "first_checked_at": "2026-09-30T21:20:43+00:00",
+    "last_checked_at": "2026-09-30T21:20:43+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+      "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+    ],
+    "title": "Keep the Cost Down: A Review on Methods to Optimize LLM’s KV-Cache Consumption"
+  },
+  "processed_at": "2026-09-30T21:20:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f0172b3e9d78",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

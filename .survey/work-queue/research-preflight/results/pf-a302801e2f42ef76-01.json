@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-a302801e2f42ef76-01",
+  "kind": "research",
+  "attempt_id": "attempt-a302801e2f42ef7601d7976c",
+  "job_id": "job-research-aa3e3c19262a245a",
+  "record_bank": "g",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.14213-partition-aware-scheduling-for-mobile-heterogeneous-inference-co-execution.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:28c5a29f7f9d3c02c047e4ae713175dd8edb5d6593b5f9ee6d1e3c4c9cc4ef95",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "9b5dc87405ad91967ccc229d696f09fdbb6438c2"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "f07d2f65e0bb59afdce32374e33fddd562702261"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "6b5c91730905ab49de9352c01fa8e7e688e4f053"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "59994a47421efe4855f75ef2f108523233aee080"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "edee9a3c28f3952e38ea72f4f9b7b8216a3833a6"
+    }
+  ],
+  "validation_errors": [
+    "metadata.references[0] requires a normalized identity",
+    "problem_method.method_overview must explain the end-to-end mechanism"
+  ],
+  "checked_at": "2026-09-22T22:32:06+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

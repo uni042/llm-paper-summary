@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "de9dd89d17d4411783219fc72476554432c21b1d75932b58596a9844f9b74d59",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c9658091e50a--libfile_53008ec96ba88191b6d8588297c6751b--2025-2511.02017-tapout-bandit-dynamic-speculative-decoding-research-20261015-0410-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2511.02017",
+  "worker_completed_at": "2026-10-15T04:13:00+09:00",
+  "worker_run_key": "20261015-0410-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4524,
+    "body_paragraphs": 22,
+    "method_chars": 1378,
+    "method_paragraphs": 7,
+    "evaluation_chars": 159,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 159 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 159 < 500"
+  ],
+  "processed_at": "2026-10-14T20:57:12+00:00"
+}

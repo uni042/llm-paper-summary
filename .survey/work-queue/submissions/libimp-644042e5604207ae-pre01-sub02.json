@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MoE-Pipe: A Pipelined MoE Model Loading Framework for Reducing the Cold Start Delays in Serverless Inference",
+      "source_url": "https://doi.org/10.5220/0014920500004039",
+      "year": 2026,
+      "published": null,
+      "venue": "International Conference on Cloud Computing and Services Science",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ": The Mixture-of-Experts (MoE) architecture enables the scaling of Large Language Models (LLMs) with high computational efficiency by sparsely activating a fraction of the model’s weights during inference. However, the substantial memory footprint of MoE models presents a critical challenge in serverless environments, leading to prohibitive cold-start latencies due to the extensive time required for model loading. To mitigate this bottleneck, we propose MoE-Pipe, a framework that significantly reduces cold-start latency by leveraging the inherent sparse activation property of MoE models. MoE-Pipe introduces a methodology to overlap the loading of expert weights with the ongoing model computation. Instead of a sequential load-then-compute process, our approach initiates inference and weight transfer simultaneously, orchestrated through a multi-level strategy of CPU-GPU, inter-GPU, and intra-GPU overlapping. Our experiments demonstrate that MoE-Pipe successfully hides approximately 65% of the loading time within the computation phase, achieving up to 1 . 85 × improvement in end-to-end latency and 2 × improvement in the time to first token latency. To facilitate further research and reproducibility, the source code of MoE-Pipe is publicly available at https://github.com/johnson684/MoE-Pipe.",
+      "identifiers": [
+        "SemanticScholar:2d015e48d97f365da10d4db3be645f4ceae314fd"
+      ],
+      "semantic_scholar_id": "2d015e48d97f365da10d4db3be645f4ceae314fd",
+      "doi": "10.5220/0014920500004039",
+      "canonical_id": "DOI:10.5220/0014920500004039",
+      "authors": [
+        "Zhan-Wei Wu",
+        "Chih-Ta Tsai",
+        "Sao-Hsuan Lin",
+        "Yi-Syuan Ke",
+        "Jerry Chou"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CLOSER 2026出版社の原著要旨とPDFを確認。MoEの疎なexpert活性を利用し、CPU-GPU、GPU間、GPU内の各段でexpert重みのロードと推論演算を重畳するMoE-Pipeを提案。ロード時間約65%を隠蔽し、エンドツーエンド遅延最大1.85倍、TTFT最大約2倍の改善を報告。serverless MoE推論のコールドスタート最適化として直接適合する。",
+      "library_body_check": "primary_publisher_abstract_and_pdf_checked",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "title": "Late Breaking Results: AFS: Improving Accuracy of Quantized Mamba via Aggressive Forgetting Strategy",
+      "source_url": "https://doi.org/10.23919/DATE64628.2025.10993001",
+      "year": 2025,
+      "published": "2025-03-31",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mamba overcomes the quadratic complexity problem inherent in Transformer models while maintaining comparable contextual modeling capabilities. However, Mamba-based foundation models encounter challenges in achieving efficient inference on resource-constrained devices, primarily due to their considerable size. Model compression techniques, such as linear quantization, offer a viable solution to this problem. Nevertheless, the introduction of significant outliers during Mamba's past-state forgetting process can lead to a notable decrease in accuracy when employing linear quantization. To overcome these challenges, this paper introduces the Aggressive Forgetting Strategy (AFS), an innovative and efficient algorithm designed to mitigate the quantization issues caused by outliers in the state forgetting mechanism. AFS incorporates a computation-free approach for handling outliers, facilitating both efficient and accurate linear quantization for Mamba, which is essential for applications in resource-constrained scenarios. By leveraging the AFS strategy, Mamba can perform more efficient inference, while significantly improving the accuracy by up to 21.5× compared to conventional methods.",
+      "identifiers": [
+        "SemanticScholar:d1db7f78a5b3af10621047b103a1adc280311550"
+      ],
+      "semantic_scholar_id": "d1db7f78a5b3af10621047b103a1adc280311550",
+      "doi": "10.23919/DATE64628.2025.10993001",
+      "canonical_id": "DOI:10.23919/DATE64628.2025.10993001",
+      "authors": [
+        "Zhouquan Liu",
+        "Li-Bo Huang",
+        "Ling Yang",
+        "Gang Chen",
+        "Wei Liu",
+        "Ming-Che Lai",
+        "Yong-Wen Wang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 579,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DATE 2025公式セッション要旨を確認。Mambaの状態忘却過程で生じる外れ値が線形量子化精度を低下させる問題に対し、追加計算を要しないAggressive Forgetting Strategy (AFS)を提案し、量子化Mambaの推論精度を従来法比最大21.5倍改善と報告。SSMの低精度推論効率に直接関連する。",
+      "library_body_check": "primary_conference_abstract_read; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_individual_abstract"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-644042e56042",
+    "round": "libimp-644042e5604207ae-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-644042e5604207ae-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-644042e5604207ae-pre01.json",
+    "receipt": "sha256:d216eaaa3914c50e024613a5b7f075a068d6016dd0484a5156d29864b91a5982"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-644042e56042",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

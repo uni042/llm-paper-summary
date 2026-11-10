@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "runstate-quarantine-disagfusion-20260925T1120JST-2f71c9",
+  "run_key": "scheduled-chat-00-20260925T105809JST-2f71c9",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-25T10:58:09+09:00",
+  "runtime_condition": "none",
+  "write_blocked_job": {
+    "job_id": "job-research-08564236a7f9f91a",
+    "claim_id": "claim-preload-d209a07db3b25781989ed8d9",
+    "attempt_id": "attempt-preload-d209a07db3b25781989ed8d9",
+    "reason": "platform_content_write_rejected_after_bundle_fallback",
+    "observed_error": "Canonical status-only blocked descriptor was rejected twice after official arXiv full-text routes were inaccessible in this runtime."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f6a593809c65dbe-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.27248",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.27248",
+    "identity_tokens": [
+      "arXiv:2609.27248"
+    ],
+    "reason": "Next-token prediction has enabled highly fluent autoregressive language models, but it represents global structure only indirectly through sequential factorization. In contrast, high-fidelity autoencoders have become a standard primitive in image generation, enabling generative models to operate over continuous latent spaces; text lacks a comparably faithful continuous representation. We propose LLMAE, a method for repurposing a pretrained decoder-only language model as a continuous text autoenc",
+    "first_checked_at": "2026-10-05T05:44:52+00:00",
+    "last_checked_at": "2026-10-05T05:44:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+      "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+    ],
+    "title": "Repurposing Pre-trained LLMs as High Fidelity Continuous Text Autoencoders"
+  },
+  "processed_at": "2026-10-05T05:44:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f6a593809c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "98d431077591e56ba553db23eef1283ef38925b0d34c71fca1e1ab65310331ba",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_2ff1ea5dff5c819193abf618b8130116--2021-2103.14636-practical-survey-faster-lighter-transformers-research-20261016-1330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2103.14636",
+  "worker_completed_at": "2026-10-16T13:30:00+09:00",
+  "worker_run_key": "20261016-1330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7225,
+    "body_paragraphs": 35,
+    "method_chars": 406,
+    "method_paragraphs": 2,
+    "evaluation_chars": 926,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 406 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 406 < 700"
+  ],
+  "processed_at": "2026-10-16T11:00:52+00:00"
+}

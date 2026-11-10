@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2402bfdfc8d2abe0-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2308.07107",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2308.07107",
+    "identity_tokens": [
+      "arXiv:2308.07107"
+    ],
+    "reason": "LLMをquery rewriter、retriever、reranker、reader、search agentとして情報検索へ利用する研究群を整理するIR survey。LLM推論runtime・KV cache・serving・kernel等の性能最適化方式を提案・評価する論文ではない。",
+    "first_checked_at": "2026-10-05T00:53:14+00:00",
+    "last_checked_at": "2026-10-05T16:24:14+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md",
+      "papers/inference/99-other-inference-systems/2026-2608.30295-catekv-on-sequential-consistency-for-long-context-llm-inference-acceleration.md"
+    ],
+    "title": "Large Language Models for Information Retrieval: A Survey"
+  },
+  "processed_at": "2026-10-05T16:24:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2402bfdfc8d2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

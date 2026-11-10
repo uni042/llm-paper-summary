@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "07f46c38b772294d5f08b15b5964197237f1d76ab25e59047a4e076a65d7c760",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_245f92f7df308191bfad588b7efee6dc--2018-1805.02867-online-softmax-under16kb-reaudit-20261008-1200.md",
+  "canonical_id": "arXiv:1805.02867",
+  "worker_completed_at": "2026-10-08T12:08:15+09:00",
+  "worker_run_key": "20261008-1203-scheduled-chat-00/under16kb-r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3171,
+    "body_paragraphs": 20,
+    "method_chars": 992,
+    "method_paragraphs": 6,
+    "evaluation_chars": 390,
+    "limitation_chars": 528,
+    "insufficiency_flags": [
+      "評価説明量 390 < 500"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 390 < 500"
+  ],
+  "processed_at": "2026-10-08T07:29:01+00:00"
+}

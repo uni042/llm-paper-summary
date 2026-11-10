@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.28979",
+      "arxiv_id": "2607.28979",
+      "title": "Mixture-of-Translators: Translating KV Caches Across Heterogeneous Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.28979",
+      "priority": 90,
+      "reason": "Cross-model KV-cache translation directly extends heterogeneous cache reuse."
+    },
+    {
+      "canonical_id": "arXiv:2607.23693",
+      "arxiv_id": "2607.23693",
+      "title": "Compute Globally, Materialize Locally: The Memory Contract of Sparse Event-KV",
+      "source_url": "https://arxiv.org/abs/2607.23693",
+      "priority": 88,
+      "reason": "Sparse event-KV retention directly studies cache-as-memory contracts for long-horizon agents."
+    },
+    {
+      "canonical_id": "arXiv:2606.23581",
+      "arxiv_id": "2606.23581",
+      "title": "Kamera: Unified Position-Invariant Multimodal KV Cache for Training-Free Reuse",
+      "source_url": "https://arxiv.org/abs/2606.23581",
+      "priority": 90,
+      "reason": "Position-invariant multimodal KV reuse directly targets repeated multimodal context processing."
+    },
+    {
+      "canonical_id": "arXiv:2603.05353",
+      "arxiv_id": "2603.05353",
+      "title": "InfoFlow KV: Information-Flow-Aware KV Recomputation for Long Context",
+      "source_url": "https://arxiv.org/abs/2603.05353",
+      "priority": 88,
+      "reason": "Selective KV recomputation directly targets long-context RAG prefill cost."
+    },
+    {
+      "canonical_id": "arXiv:2603.13289",
+      "arxiv_id": "2603.13289",
+      "title": "RelayCaching: Accelerating LLM Collaboration via Decoding KV Cache Reuse",
+      "source_url": "https://arxiv.org/abs/2603.13289",
+      "priority": 88,
+      "reason": "Decoding KV-cache reuse directly reduces redundant prefill in collaborative LLM systems."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-c3699d89b917278da4536e65",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-c3699d89b917278da4536e65.json",
+    "receipt": "sha256:d73552e480aa197aa44eadf22271203ec9d9f9abdf0b06ee5f26cf3195cb29a3"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T070210+0900-run1",
+    "round": "frontier-c3699d89b917278da4536e65",
+    "axis": "forward citations of KVLink efficient KV cache reuse",
+    "candidate_count": 20,
+    "accepted_canonical_ids": [
+      "arXiv:2607.28979",
+      "arXiv:2607.23693",
+      "arXiv:2606.23581",
+      "arXiv:2603.05353",
+      "arXiv:2603.13289"
+    ],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}

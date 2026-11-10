@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0fee19150e0594a0-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.37035",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.37035",
+    "identity_tokens": [
+      "arXiv:2609.37035"
+    ],
+    "reason": "WTI trains a streaming video model to answer when evidence is sufficient, continue watching, or selectively recall prior intervals using compact timestamped memory. It evaluates streaming QA benchmarks, but its central contribution is response timing and reasoning behavior rather than a measured reduction in inference resources; retain as a weak long-context video-LLM connection.",
+    "first_checked_at": "2026-10-06T08:50:27+00:00",
+    "last_checked_at": "2026-10-06T08:50:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Watch-Think-Interact: Bootstrapping Long-Horizon Multi-Turn Streaming Video Reasoning with Reinforcement Learning"
+  },
+  "processed_at": "2026-10-06T08:50:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0fee19150e05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

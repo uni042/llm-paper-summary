@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d455c041821a2f6-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.32447",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.32447",
+    "identity_tokens": [
+      "arXiv:2609.32447"
+    ],
+    "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+    "first_checked_at": "2026-10-05T05:22:51+00:00",
+    "last_checked_at": "2026-10-05T05:22:51+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Length-Independent State Tracking Under a Parallel Scan"
+  },
+  "processed_at": "2026-10-05T05:22:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d455c041821",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

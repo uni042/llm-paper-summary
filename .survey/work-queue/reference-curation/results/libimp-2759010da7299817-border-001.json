@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2759010da7299817-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.21285",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.21285",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2511.21285",
+      "arXiv:2511.21285"
+    ],
+    "reason": "自己回帰LLM向けのパラメータ効率的微調整法6種を27 NLPデータセットで比較するベンチマーク。一次要旨には学習時メモリ・学習可能パラメータに加え推論速度も含む複合スコアがあるため、実行時コストの比較には間接的な関連がある。しかし主対象は学習・微調整方式の評価で、推論エンジン、バッチ処理、KV管理などの推論基盤自体の提案ではないため境界扱い。",
+    "first_checked_at": "2026-10-23T00:45:16+00:00",
+    "last_checked_at": "2026-10-23T00:45:16+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark"
+  },
+  "processed_at": "2026-10-23T00:45:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2759010da729",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

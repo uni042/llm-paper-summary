@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-05267977f97ac856-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.05343",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.05343",
+    "identity_tokens": [
+      "arXiv:2604.05343"
+    ],
+    "reason": "一次本文はhierarchical anchor generationで長系列のsymbolic musicを生成し、系列誤差と計算量を抑えると報告するが、実装・評価対象は音楽tokenとピアノ表現で、LLMや自然言語推論は対象外。Sparse Transformer/long-contextとの構造上の接点はあるためborderlineに残す。",
+    "first_checked_at": "2026-10-06T17:45:25+00:00",
+    "last_checked_at": "2026-10-06T17:45:25+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Anchored Cyclic Generation: A Novel Paradigm for Long-Sequence Symbolic Music Generation"
+  },
+  "processed_at": "2026-10-06T17:45:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-05267977f97a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4f75d21d7042949c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.22102",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.22102",
+    "identity_tokens": [
+      "arXiv:2510.22102"
+    ],
+    "reason": "This paper mitigates positional-encoding coordinate prediction bias in spatial prediction, not LLM inference resources or serving.",
+    "first_checked_at": "2026-10-06T18:44:33+00:00",
+    "last_checked_at": "2026-10-06T18:44:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+    ],
+    "title": "Mitigating Coordinate Prediction Bias from Positional Encoding Failures"
+  },
+  "processed_at": "2026-10-06T18:44:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4f75d21d7042",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

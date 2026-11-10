@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-720e1181ed982e50-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.05853",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.05853",
+    "identity_tokens": [
+      "DOI:10.1109/cvprf71909.2026.00902",
+      "SemanticScholar:bb908720110c5d7065a3ab08a1709b033e242dc9",
+      "arXiv:2512.05853"
+    ],
+    "reason": "VRSA proposes a visual jailbreak attack against multimodal LLMs and evaluates attack success; it does not address inference efficiency.",
+    "first_checked_at": "2026-10-13T16:56:09+00:00",
+    "last_checked_at": "2026-10-13T16:56:09+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+    ],
+    "title": "VRSA: Jailbreaking Multimodal Large Language Models Through Visual Reasoning Sequential Attack"
+  },
+  "processed_at": "2026-10-13T16:56:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-720e1181ed98",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

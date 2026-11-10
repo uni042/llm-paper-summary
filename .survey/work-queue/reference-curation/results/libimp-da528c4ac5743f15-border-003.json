@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da528c4ac5743f15-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/hpca61900.2025.00076",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/hpca61900.2025.00076",
+    "identity_tokens": [
+      "DOI:10.1109/hpca61900.2025.00076"
+    ],
+    "reason": "タイトル/系統情報上の関連可能性を否定できない一方、指定primary publisher sourceが取得不能で根拠を確認できないため、未検証のabstractキャッシュで除外しない。",
+    "first_checked_at": "2026-10-06T18:11:23+00:00",
+    "last_checked_at": "2026-10-06T18:11:23+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CROSS: Compiler-Driven Optimization of Sparse DNNs Using Sparse/Dense Computation Kernels"
+  },
+  "processed_at": "2026-10-06T18:11:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da528c4ac574",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

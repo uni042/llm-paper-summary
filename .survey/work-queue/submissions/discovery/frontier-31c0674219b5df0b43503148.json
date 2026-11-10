@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.08581",
+      "arxiv_id": "2605.08581",
+      "title": "PRISM: Fast Online LLM Serving via Scheduling-Memory Co-design",
+      "source_url": "https://arxiv.org/abs/2605.08581",
+      "priority": 97,
+      "reason": "Recent online LLM serving system co-designing scheduling with memory reuse for segmented prompts and hotspot-skewed RAG/agent workloads."
+    },
+    {
+      "canonical_id": "arXiv:2605.05819",
+      "arxiv_id": "2605.05819",
+      "title": "HCInfer: An Efficient Inference System via Error Compensation for Resource-Constrained Devices",
+      "source_url": "https://arxiv.org/abs/2605.05819",
+      "priority": 95,
+      "reason": "Recent resource-constrained LLM inference system combining deployment efficiency with error compensation, directly relevant to consumer-device inference."
+    },
+    {
+      "canonical_id": "DOI:10.1109/SCECS69812.2026.11565927",
+      "title": "Heterogeneous Collaborative Inference Architecture for Large Language Models",
+      "source_url": "https://doi.org/10.1109/SCECS69812.2026.11565927",
+      "priority": 94,
+      "reason": "Recent heterogeneous GPU-CPU LLM inference architecture addressing memory-bound decode and KV-cache capacity via collaborative execution."
+    },
+    {
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11461364",
+      "title": "CORM: Coarse-To-Fine-Grained Offloading for Smoe LLM Inference on Consumer-Grade GPU",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11461364",
+      "priority": 94,
+      "reason": "Recent sparse-MoE offloading system for consumer GPUs, closely aligned with expert placement, hierarchical memory, and local inference."
+    },
+    {
+      "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582397",
+      "title": "SemanticKV: A Semantics-Driven KV Cache Eviction Framework for Efficient Long Prompt LLM Inference",
+      "source_url": "https://doi.org/10.1109/CSCWD68734.2026.11582397",
+      "priority": 91,
+      "reason": "Recent KV-cache eviction framework targeting long-prompt memory and latency pressure with a semantics-driven policy."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-31c0674219b5df0b43503148",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-31c0674219b5df0b43503148.json",
+    "receipt": "sha256:2e0d1067a64092d55c76a2d2a8dca362e158d7fa75f32b3e0d11d34a6698da28"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T130004JST-4f9a21",
+    "round": "frontier-31c0674219b5df0b43503148",
+    "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+    "candidate_count": 20,
+    "accepted_count": 5,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}

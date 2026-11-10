@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3a16084941fd4128-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.03293",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.03293",
+    "identity_tokens": [
+      "arXiv:2511.03293"
+    ],
+    "reason": "The abstract directly claims NPU-PIM data-layout/mapping gains for LLM decode, but both the arXiv PDF and HTML primary full text retrieval failed, preventing verification of the reported TTFT/TTLT results.",
+    "first_checked_at": "2026-10-06T11:21:46+00:00",
+    "last_checked_at": "2026-10-06T11:21:46+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "UMDAM: A Unified Data Layout and DRAM Address Mapping for Heterogeneous NPU-PIM"
+  },
+  "processed_at": "2026-10-06T11:21:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3a16084941fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

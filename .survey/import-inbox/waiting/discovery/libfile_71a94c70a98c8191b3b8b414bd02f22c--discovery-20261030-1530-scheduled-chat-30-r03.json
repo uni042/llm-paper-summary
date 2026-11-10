@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1530-scheduled-chat-30/r03",
+  "reference_main_sha": "0ff1d41771eec8ce05901d1254d9bb38fd49b7a7",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:f0ef64f2f51cc5274f9a3b1c3b01cd2ca1874444",
+      "identity_tokens": [
+        "SemanticScholar:f0ef64f2f51cc5274f9a3b1c3b01cd2ca1874444",
+        "arXiv:2310.16795"
+      ],
+      "title": "QMoE: Sub-1-Bit Compression of Trillion Parameter Models",
+      "reason": "arXiv一次要旨は、1.6兆パラメータのSwitchTransformerを含む巨大MoEを平均1ビット未満で圧縮し、専用GPU復号カーネルと一体化するQMoEを提案。巨大MoEのメモリ占有と推論実行の改善が中心であり、LLM推論圧縮に直接該当。現行arXiv題名は「QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models」。",
+      "source_url": "https://arxiv.org/abs/2310.16795",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:04+09:00",
+      "last_checked_at": "2026-10-30T15:37:04+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "MoE Inference"
+      ],
+      "worklist_rank": 31
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.05800",
+      "identity_tokens": [
+        "arXiv:2603.05800"
+      ],
+      "title": "StreamWise: Serving Multi-Modal Generation in Real-Time at Scale",
+      "reason": "arXiv一次要旨はLLM、音声合成、動画・音声生成など複数モデルを低遅延SLO下で協調実行する適応型サービング基盤StreamWiseを提案。実時間ポッドキャスト動画生成を対象としたモデル横断の資源管理・品質調整であり、マルチモーダル推論システムに直接関連する。",
+      "source_url": "https://arxiv.org/abs/2603.05800",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:04+09:00",
+      "last_checked_at": "2026-10-30T15:37:04+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Multimodal LLM Inference"
+      ],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:63fef87d8b4d717736cfd4be45e57189e18f6472",
+      "identity_tokens": [
+        "SemanticScholar:63fef87d8b4d717736cfd4be45e57189e18f6472",
+        "arXiv:2411.02820"
+      ],
+      "title": "DroidSpeak: KV Cache Sharing for Efficient Multi-LLM Serving",
+      "reason": "arXiv一次要旨は、同じアーキテクチャの異なるLLM間で共通prefixのKVキャッシュを再利用し、複合AIシステムのprefill重複を削減するDroidSpeakを提案。モデルをまたぐKV再利用と分散推論が直接の貢献。現行arXiv題名「DroidSpeak: KV Cache Sharing for Cross-LLM Communication and Multi-LLM Serving」と同一論文。",
+      "source_url": "https://arxiv.org/abs/2411.02820",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:04+09:00",
+      "last_checked_at": "2026-10-30T15:37:04+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 34
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.16844",
+      "identity_tokens": [
+        "arXiv:2608.16844"
+      ],
+      "title": "Proteus: Incremental Memory Activation for Long-Context Sequence Modeling",
+      "reason": "arXiv一次要旨は、長文脈のメモリ状態を固定容量で始めるのではなく、入力の進行に合わせ段階的に有効容量を拡張するProteusを提案。注意の二次コスト回避と長距離記憶の効率化に関連するが、主な実証は新規系列モデルの学習・長文脈品質で、LLMサービング実機の性能が中心とは限らないためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.16844",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:04+09:00",
+      "last_checked_at": "2026-10-30T15:37:04+09:00",
+      "linked_from": [
+        "Long-context Inference",
+        "Alternative Language Model Architectures"
+      ],
+      "worklist_rank": 35
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.23314",
+      "identity_tokens": [
+        "arXiv:2609.23314"
+      ],
+      "title": "ValueDiff: Value-Geometric KV Cache Eviction for Sink-Suppressed LLMs",
+      "reason": "arXiv一次要旨はQK正規化やgated attention等でattention sinkが弱いLLMに対し、valueベクトルのキャッシュ平均からのL2距離でKV削除優先度を決めるValueDiffを提案。prefillとdecodeで固定予算のKV削除を評価し、現代的LLMのメモリ削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.23314",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:04+09:00",
+      "last_checked_at": "2026-10-30T15:37:04+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression"
+      ],
+      "worklist_rank": 36
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.29812",
+      "identity_tokens": [
+        "arXiv:2609.29812"
+      ],
+      "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+      "reason": "arXiv一次要旨は共有Transformerブロックを反復するlooped Transformerで、反復ごとの全トークン更新とKV複製が重複することを分析し、変化の小さい状態を遅延更新しKV残差を低ビット化するFlashLoopを提案。反復深度に伴う推論FLOPsとKVメモリ増加を抑える直接的な推論効率研究。",
+      "source_url": "https://arxiv.org/abs/2609.29812",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:04+09:00",
+      "last_checked_at": "2026-10-30T15:37:04+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "Alternative Language Model Architectures"
+      ],
+      "worklist_rank": 37
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.05936",
+      "identity_tokens": [
+        "arXiv:2503.05936"
+      ],
+      "title": "CASP: Compression of Large Multimodal Models Based on Attention Sparsity",
+      "reason": "arXiv一次要旨はマルチモーダル入力の注意行列が疎である性質を利用し、Q/K重みのデータ依存低ランク分解と層別ビット配分を組み合わせるCASPを提案。2ビットAQLM/QuIP#に対して画像・動画言語ベンチマーク平均21%改善を報告し、マルチモーダルLLM圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2503.05936",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:04+09:00",
+      "last_checked_at": "2026-10-30T15:37:04+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "Multimodal LLM Inference"
+      ],
+      "worklist_rank": 38
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.22465",
+      "identity_tokens": [
+        "arXiv:2607.22465"
+      ],
+      "title": "ORACLE: Agentic AI Orchestrator Routing Via Adaptive Verifier Calibration Feedback",
+      "reason": "arXiv一次要旨は、異なる能力・費用のLLM群にエージェント要求を振り分ける際、タスク種別と検証器を適応的に選び、並列要求下の検証器コストを調整するORACLEを提案。モデル選択・ルーティングと品質費用の制御を扱うLLMサービス効率研究。",
+      "source_url": "https://arxiv.org/abs/2607.22465",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:04+09:00",
+      "last_checked_at": "2026-10-30T15:37:04+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Agentic LLM Serving"
+      ],
+      "worklist_rank": 40
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.07698",
+      "identity_tokens": [
+        "arXiv:2605.07698"
+      ],
+      "title": "Future Validity is the Missing Statistic: From Impossibility to Φ-Estimation for Grammar-Faithful Speculative Decoding",
+      "reason": "arXiv一次要旨は文法制約付き投機的復号で局所マスクだけでは目標の文法条件付き分布を再現できないことを示し、将来の妥当な補完確率ΦによるDoob変換と推定誤差境界を導出。投機的復号の正しさに直接関連するが、主眼は厳密サンプリングの理論保証であり、GPU推論高速化の定量実証が中心ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2605.07698",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:04+09:00",
+      "last_checked_at": "2026-10-30T15:37:04+09:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "Constrained Decoding"
+      ],
+      "worklist_rank": 41
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.35465",
+      "identity_tokens": [
+        "arXiv:2609.35465"
+      ],
+      "title": "Tetra: Serving Leech-Lattice Quantized LLMs at 2.7 Bits per Parameter",
+      "reason": "arXiv一次要旨はLeech格子コードを64状態トレリスと小さなテーブルで復号するTetraカーネルを提案。Qwen3-4B/8B/14Bを全体平均2.70〜2.73ビット/パラメータで配備し、L40S単体で生成速度113.8/95.0/57.2 token/sを報告。推論時の低ビットメモリ削減と実行カーネルの直接的研究。",
+      "source_url": "https://arxiv.org/abs/2609.35465",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:04+09:00",
+      "last_checked_at": "2026-10-30T15:37:04+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 43
+    }
+  ]
+}

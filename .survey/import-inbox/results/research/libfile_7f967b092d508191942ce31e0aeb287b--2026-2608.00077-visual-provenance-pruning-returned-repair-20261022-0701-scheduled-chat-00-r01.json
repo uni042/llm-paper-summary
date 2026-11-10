@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "daeb012fe5a14883ee4dd64bd346f9a8415106bd46cf0009ec12b8f2d2e988bf",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_7f967b092d508191942ce31e0aeb287b--2026-2608.00077-visual-provenance-pruning-returned-repair-20261022-0701-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2608.00077",
+  "worker_completed_at": "2026-10-22T07:16:29+09:00",
+  "worker_run_key": "20261022-0701-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6789,
+    "body_paragraphs": 40,
+    "method_chars": 1829,
+    "method_paragraphs": 9,
+    "evaluation_chars": 201,
+    "limitation_chars": 755,
+    "insufficiency_flags": [
+      "評価説明量 201 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 201 < 500"
+  ],
+  "processed_at": "2026-10-22T15:47:28+00:00"
+}

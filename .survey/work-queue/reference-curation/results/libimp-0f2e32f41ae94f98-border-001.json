@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f2e32f41ae94f98-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.04618",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.04618",
+    "identity_tokens": [
+      "arXiv:2510.04618"
+    ],
+    "reason": "ACEはagent memory/contextをincrementalに蓄積・整理してcontext collapseを避け、adaptation latencyとrollout costも削減する。agentic inference効率に関連するが、主要貢献はcontext adaptation手法と能力改善でserving runtimeそのものではないためborderline。",
+    "first_checked_at": "2026-10-05T16:03:28+00:00",
+    "last_checked_at": "2026-10-05T16:03:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models"
+  },
+  "processed_at": "2026-10-05T16:03:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f2e32f41ae9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

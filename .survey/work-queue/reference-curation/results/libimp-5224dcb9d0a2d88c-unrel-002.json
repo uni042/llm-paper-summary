@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5224dcb9d0a2d88c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3816440.3818516",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3816440.3818516",
+    "identity_tokens": [
+      "DOI:10.1145/3816440.3818516"
+    ],
+    "reason": "The demand for efficient training of Transformer language models is rapidly increasing, yet the resource-intensive attention mechanism severely bottlenecks the process. Previous attempts to fuse attention operations managed to reduce off-chip memory access, thereby improving memory bandwidth. Unfortunately, these techniques are impractical in restricted environments, as they exhibit resource utilization that scales with model dimensions and do not consider the entire training dataflow. To address this, we propose operation fusion for the attention training dataflow using local safe softmax and model-independent tiling. By taking both the forward and the backward passes into account, local safe softmax reduces I/O access under small-cache conditions. Furthermore, model-independent tiling ensures that the required on-chip memory footprint remains independent of model dimensions, enabling scalability across diverse models. Software simulations and hardware evaluation show that our method reduces off-chip access, on-chip memory usage, FLOPs, training runtime, and energy cost compared to conventional approaches, confirming its suitability for efficiently training attention in resource-restricted hardware.",
+    "first_checked_at": "2026-10-05T09:05:34+00:00",
+    "last_checked_at": "2026-10-05T09:05:34+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+    ],
+    "title": "Fusing the Attention Training Dataflow with Local Safe Softmax and Model-Independent Tiling"
+  },
+  "processed_at": "2026-10-05T09:05:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5224dcb9d0a2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

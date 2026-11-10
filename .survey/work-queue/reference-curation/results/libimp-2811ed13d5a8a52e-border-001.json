@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2811ed13d5a8a52e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2410.23320",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2410.23320",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2410.23320",
+      "arXiv:2410.23320"
+    ],
+    "reason": "対象はtext-to-speech専用encoder-decoderではなく汎用chat LLM servingとは異なり、評価も音声 synthesis taskの範囲。隣接技術としてborderline。",
+    "first_checked_at": "2026-10-05T13:16:03+00:00",
+    "last_checked_at": "2026-10-05T13:16:03+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+    ],
+    "title": "Lina-Speech: Gated Linear Attention is a Fast and Parameter-Efficient Learner for text-to-speech synthesis"
+  },
+  "processed_at": "2026-10-05T13:16:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2811ed13d5a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

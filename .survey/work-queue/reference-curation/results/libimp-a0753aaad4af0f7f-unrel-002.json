@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a0753aaad4af0f7f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.17989",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.17989",
+    "identity_tokens": [
+      "arXiv:2406.17989"
+    ],
+    "reason": "This is learning-theory analysis of sparse activations/PAC learnability; it does not present an LLM inference or serving optimization.",
+    "first_checked_at": "2026-10-13T23:41:30+00:00",
+    "last_checked_at": "2026-10-13T23:41:30+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+      "papers/inference/99-other-inference-systems/2019-1907.05242-large-memory-layers-with-product-keys.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+    ],
+    "title": "Learning Neural Networks with Sparse Activations"
+  },
+  "processed_at": "2026-10-13T23:41:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0753aaad4af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-659219dc59ccce91-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.21203/rs.3.rs-8770196/v1",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.21203/rs.3.rs-8770196/v1",
+    "identity_tokens": [
+      "DOI:10.21203/rs.3.rs-8770196/v1"
+    ],
+    "reason": "The primary paper is a meteorological/temporal fusion model for traffic-flow forecasting; its evaluation concerns traffic prediction accuracy and contains no LLM inference or KV-cache method.",
+    "first_checked_at": "2026-10-06T04:59:44+00:00",
+    "last_checked_at": "2026-10-06T04:59:44+00:00",
+    "linked_from": [
+      "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+    ],
+    "title": "MFTFormer: Meteorological-Frequency-Temporal Transformer with Block-Aligned Fusion for Traffic Flow Prediction"
+  },
+  "processed_at": "2026-10-06T04:59:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-659219dc59cc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

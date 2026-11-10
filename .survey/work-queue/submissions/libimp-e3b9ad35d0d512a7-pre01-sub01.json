@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering",
+      "source_url": "https://arxiv.org/abs/2605.22269",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long streaming video QA remains challenging due to growing visual tokens and limited reasoning length of large language models (LLMs). KV-caching stores the Key-Value (KV) of the historical tokens via LLM prefill and enables more efficient streaming QA. However, existing methods cache every one or two frames, causing redundant memory usage and losing fine-grained spatial details within frame or temporal contexts across frames. This paper proposes MuKV, a method that features a multi-grained KV cache compression module and a semi-hierarchical retrieval approach to improve both efficiency and accuracy for long streaming VideoQA. For the offline KV cache, MuKV extracts visual representations at patch-, frame-, and segment-levels. The multiple levels of granularity preserve both local cues and global temporal context, while maintaining efficiency with a dual signal token compression mechanism guided by self-attention and frequency. For online QA, MuKV designs a semi-hierarchical retrieval method to retrieve relevant KV caches for answer generation. Experiments on long-streaming VideoQA benchmarks show that MuKV significantly improves answer accuracy, without sacrificing memory and online QA efficiency. Moreover, our compression mechanism alone brings consistent benefits across answer accuracy, memory, and QA efficiency over baselines, showcasing highly effective contribution.",
+      "identifiers": [
+        "SemanticScholar:cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2"
+      ],
+      "semantic_scholar_id": "cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2",
+      "canonical_id": "arXiv:2605.22269",
+      "arxiv_id": "2605.22269",
+      "doi": "10.48550/arXiv.2605.22269",
+      "authors": [
+        "Jun Xiao",
+        "Jiajun Chen",
+        "Tianxiang Sun",
+        "Xun Yang",
+        "Angela Yao"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は長時間動画QAでパッチ・フレーム・セグメント単位の多粒度KV圧縮と半階層検索を組み合わせ、記憶容量を抑えつつオンライン質問応答を改善。LLMの映像入力KVキャッシュ圧縮・検索と推論効率に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Free(): Learning to Forget in Malloc-Only Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2602.08030",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models enhance problem-solving by scaling test-time compute, yet they face a critical paradox: excessive thinking tokens often degrade performance rather than improve it. We attribute this to a fundamental architectural flaw: standard LLMs operate as\"malloc-only\"engines, continuously accumulating valid and redundant steps alike without a mechanism to prune obsolete information. To break this cycle, we propose Free()LM, a model that introduces an intrinsic self-forgetting capability via the Free-Module, a plug-and-play LoRA adapter. By iteratively switching between reasoning and cleaning modes, Free()LM dynamically identifies and prunes useless context chunks, maintaining a compact and noise-free state. Extensive experiments show that Free()LM provides consistent improvements across all model scales (8B to 685B). It achieves a 3.3% average improvement over top-tier reasoning baselines, even establishing a new SOTA on IMOanswerBench using DeepSeek V3.2-Speciale. Most notably, in long-horizon tasks where the standard Qwen3-235B-A22B model suffers a total collapse (0% accuracy), Free()LM restores performance to 50%. Our findings suggest that sustainable intelligence requires the freedom to forget as much as the power to think.",
+      "identifiers": [
+        "SemanticScholar:4bc97dba841ff291ef59c77dc8b2b053366d79ff"
+      ],
+      "semantic_scholar_id": "4bc97dba841ff291ef59c77dc8b2b053366d79ff",
+      "canonical_id": "arXiv:2602.08030",
+      "arxiv_id": "2602.08030",
+      "doi": "10.48550/arXiv.2602.08030",
+      "authors": [
+        "Yi Zheng",
+        "Dongyang Ma",
+        "Tian Liang",
+        "Jia-Hao Xu",
+        "Xin-Ting Huang",
+        "Li-Hui Chen",
+        "Hai-Tao Mi",
+        "Yan Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 264,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨はFree-Module LoRAを用いて推論と履歴清掃を交互に実行し、不要なCoT区間を削除して文脈を圧縮するFree()LMを提案。8B〜685Bで評価し、長期推論時の文脈肥大化を抑えつつ品質を改善。実行時の推論状態削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LaCache: Robust Semantic Caching for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.01718",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Semantic caching, reusing responses to answer semantically similar queries, has seen growing adoption in LLM serving, offering faster responses and reduced costs. Yet existing schemes are fundamentally vulnerable to cache-collision attacks, wherein an adversary pollutes the cache by injecting adversarial queries, corrupting responses to subsequent legitimate requests. We present LaCache, a simple yet principled redesign of semantic caching that provides provable defense against such attacks. The key insight is that while the adversary has full control over the adversarial query, it has far less control over the corresponding LLM-generated response, which must simultaneously satisfy multiple competing constraints. Thus, LaCache shifts the integrity check from the query to the response: rather than checking only the cache hit of a query, LaCache additionally checks the cache hit of its first $k$ speculatively decoded tokens. Analytically, we prove that LaCache detects any cache-collision attack that produces a semantically distinct response with provably high probability. Empirically, evaluation across diverse LLMs and benchmarks confirms that LaCache reduces attack hit rate to near zero while preserving over 90% of benign cache utility. To our best knowledge, this work is the first to exploit the inherent constraints on adversarial responses in cache-collision attacks to provide provable security, pointing to a promising direction for building robust semantic caching.",
+      "identifiers": [
+        "SemanticScholar:b29f18af17aef62e3d6603700f9cfc0ea49a9ada"
+      ],
+      "semantic_scholar_id": "b29f18af17aef62e3d6603700f9cfc0ea49a9ada",
+      "canonical_id": "arXiv:2608.01718",
+      "arxiv_id": "2608.01718",
+      "authors": [
+        "Jiacheng Liang",
+        "Yuhui Wang",
+        "Tan-Qiu Jiang",
+        "Ting Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は意味キャッシュの衝突攻撃に対し、問い合わせ類似性だけでなく投機的に生成した先頭kトークンも検査するLaCacheを提案。攻撃成功率をほぼ0にしつつ正常キャッシュ効用の90%超を維持と報告。LLMサービングにおけるキャッシュ再利用の信頼性・効率の直接的な研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Softmax Reparameterization for Output-Head Quantization",
+      "source_url": "https://arxiv.org/abs/2609.31291",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vocabularies make output heads a substantial inference cost in small language models. We introduce softmax reparameterization, a post-training method that searches over functionally equivalent output heads before quantization. The method subtracts a scalar multiple of the vocabulary-row mean from every output row and selects the coefficient by validation KL. For linear-softmax heads, these shifts preserve full-precision predictions exactly and require no decoder retraining; a rank-one correction extends the construction to nonlinear logit paths. Across seven output heads and three quantizers, W4 gains are largest where baseline quantization substantially distorts predictions: test KL falls by 93% on XGLM under RTN and by 73--77% on Phi, BLOOM, and BLOOMZ under activation-weighted MSE. Heads with low baseline error change little; at W2, used as a compression stress test, benefits extend more broadly. On Phi, the gains persist under stronger GPTQ calibration; a separate untouched holdout reproduces the improvements on Phi and BLOOM. Frozen WikiText-selected coefficients also transfer without retuning to C4 and OpenWebMath. Residual analysis on Phi shows how fidelity can improve despite greater total logit error: the selected representative reduces error on likely outputs and lowers its Fisher-weighted cost. For shift-compatible heads, the shift adds no inference operation. With the decoder held in BF16, a packed W4 Phi output head reduces batch-one generation latency by 10.8%, and reparameterization preserves this speedup.",
+      "identifiers": [
+        "SemanticScholar:dca1cc9a1d67cb0d9eae5eeb2923e858e53baa68"
+      ],
+      "semantic_scholar_id": "dca1cc9a1d67cb0d9eae5eeb2923e858e53baa68",
+      "canonical_id": "arXiv:2609.31291",
+      "arxiv_id": "2609.31291",
+      "authors": [
+        "Asim Kadav",
+        "Christian Flores",
+        "C. Arora",
+        "Varun Kotte",
+        "Hong-Bo Zheng",
+        "Lan Yan",
+        "Priya Shanmugasundaram",
+        "T. King"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は出力ヘッドの機能同値な行平均シフトを量子化前に探索し、KL損失を低減。W4でXGLMのテストKLをRTN比93%削減、Phiのパック済みW4ヘッドではバッチ1生成遅延10.8%削減を報告。LLM推論時の出力層量子化に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CONCORD: Asynchronous Sparse Aggregation for Device-Cloud Rag Under Document Isolation",
+      "source_url": "https://arxiv.org/abs/2606.15179",
+      "year": 2026,
+      "published": "2026-06-13",
+      "venue": "2026 IEEE International Conference on Web Services (ICWS)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation (RAG) has emerged as a pivotal technique for improving language models by incorporating external knowledge at inference time. As devicecloud collaborative inference makes it feasible to deploy small language models on edge devices, a new setting arises in which private documents remain on the device and public knowledge resides in the cloud. Privacy and policy constraints often forbid raw document exchange, creating a document-isolated dual-end RAG setting. However, existing methods rely on frequent remote synchronization and dense evidence transfer, limiting throughput under realistic latency and bandwidth conditions. To address this issue, we propose CONCORD, an asynchronous sparse aggregation framework for dual-end RAG under document isolation. CONCORD treats the cloud as an asynchronously arriving evidence source rather than a continuously synchronized co-generator. Specifically, we introduce waiting debt control to decide whether each decoding step should continue waiting for remote participation based on the observed return of waiting. We also design a certificate-guided minimal supplementation mechanism that requests only the remote evidence needed to determine the current greedy decision. Steps that consult the cloud preserve the same greedy token as dense dual-end aggregation, while the remaining steps commit locally without remote evidence. Experiments on Natural Questions and WikiText-2 show that CONCORD improves end-to-end throughput over baselines by $1.66 \\times$ and $2.15 \\times$, respectively, while reducing pertoken communication by over two orders of magnitude and maintaining comparable answer quality and perplexity.",
+      "identifiers": [
+        "SemanticScholar:4848b6e5f1943e98aacd5ca4a5729b06e7587b74"
+      ],
+      "semantic_scholar_id": "4848b6e5f1943e98aacd5ca4a5729b06e7587b74",
+      "canonical_id": "arXiv:2606.15179",
+      "arxiv_id": "2606.15179",
+      "doi": "10.1109/ICWS72778.2026.00134",
+      "authors": [
+        "Xuedong Hu",
+        "Zhi-Qing Tang",
+        "Zhi-Di Yao",
+        "Tian Wang",
+        "Wei-Jia Jia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 139,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は端末とクラウドで文書を共有できないRAG推論に対し、遠隔証拠の非同期到着と必要最小限の補充を使うCONCORDを提案。クラウドに照会するステップでは密な統合と同一のgreedyトークンを維持し、Natural QuestionsとWikiText-2でE2Eスループット1.66倍・2.15倍を報告。端末・クラウド協調推論の直接的な高速化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e3b9ad35d0d5",
+    "round": "libimp-e3b9ad35d0d512a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e3b9ad35d0d512a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e3b9ad35d0d512a7-pre01.json",
+    "receipt": "sha256:ef96e1648d5e1ba766b947adcc3a965db3667564a183528ee6952d94a781aa7d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e3b9ad35d0d5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CoMem: Context Management with A Decoupled Long-Context Model",
+      "source_url": "https://arxiv.org/abs/2605.30842",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Context management enables agentic models to solve long-horizon tasks through iterative summarization of previous interaction histories. However, this process typically incurs substantial decoding overhead for the extra summarization tokens, which significantly affect the end-to-end response latency at deployment. In this paper, we introduce CoMem, a novel framework that decouples memory management from the primary agent workflow, enabling these processes to execute in parallel. We propose a $k$-step-off asynchronous pipeline that overlaps the memory model's summarization with the agent's inference, effectively masking the latency of context processing. To ensure robustness under this asynchronous setting, we introduce a reward-driven training strategy that aligns the memory model to capture sufficient statistics for the agent's decision-making. Theoretical analysis confirms that CoMem offers a superior efficiency-effectiveness trade-off compared to coupled architectures. Our extensive experimental results on SWE-Bench-Verified show that CoMem provides 1.4x latency improvements upon vanilla long-context solutions while preserving most of the performance. Furthermore, we demonstrate that these latency gains scale favorably with increased system throughput, offering a modular path forward for the independent optimization of agent reasoning and memory compression.",
+      "identifiers": [
+        "SemanticScholar:e52381f8429203107fac01d2b5a8dcb0493a9c41"
+      ],
+      "semantic_scholar_id": "e52381f8429203107fac01d2b5a8dcb0493a9c41",
+      "canonical_id": "arXiv:2605.30842",
+      "arxiv_id": "2605.30842",
+      "doi": "10.48550/arXiv.2605.30842",
+      "authors": [
+        "Yu-Wei Zhang",
+        "Chengyu Dong",
+        "Shuo-Wei Jin",
+        "Chang-Long Yu",
+        "Hejie Cui",
+        "Hong-Ye Jin",
+        "Xinyang Zhang",
+        "Hamed Bonab",
+        "Colin Lockard",
+        "Jianshu Chen",
+        "Zhen-Yu Shi",
+        "Jingbo Shang",
+        "Xian Li",
+        "Bing Yin"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。エージェントの履歴要約を主推論から切り離し、k-step-off非同期パイプラインでメモリモデルの要約処理とエージェント推論を重ねる。SWE-Bench Verifiedで従来の長文脈方式より約1.4倍の遅延改善と性能維持を報告し、エージェントサービングの文脈圧縮・非同期実行に直接関係する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Floating-Point Quantization-Aware Training",
+      "source_url": "https://arxiv.org/abs/2606.15682",
+      "year": 2026,
+      "published": "2026-06-14",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) achieve strong problem-solving through long chain-of-thought, but their deployment is constrained by the high cost of full-precision inference and growing KV cache footprints. Microscaled FP4 formats enable efficient FP4 deployment; however, fully quantizing weights, activations, and KV caches (W4A4KV4) causes severe reasoning degradation that existing PTQ and QAT fail to recover. We identify that FP4 failures concentrate on low-entropy tokens--precise symbolic commitments such as digits and operators--where quantization noise inflates sampling errors that cascade through reasoning traces. Based on this insight, we propose ReQAT, a reasoning-centric FP4 training framework with three components: (i) Trace-Aligned QAT (TAQ), which revisits identical reasoning traces to focus updates on critical low-entropy decisions; (ii) Selective Entropy Minimization (SEM), which reinforces confidence at low-entropy positions; and (iii) Q-FIT, a quantization-friendly initialization that jointly calibrates RoPE-consistent KV cache transformations to stabilize QAT. Under the same training budget, ReQAT not only recovers but surpasses BF16 fine-tuning accuracy, while delivering up to 3.9x throughput speedup on NVIDIA DGX Spark and 3.1x on B200.",
+      "identifiers": [
+        "SemanticScholar:9eff71af6c3553cc9c03bd817b43d59e4e65ba2b"
+      ],
+      "semantic_scholar_id": "9eff71af6c3553cc9c03bd817b43d59e4e65ba2b",
+      "canonical_id": "arXiv:2606.15682",
+      "arxiv_id": "2606.15682",
+      "doi": "10.48550/arXiv.2606.15682",
+      "authors": [
+        "Janghwan Lee",
+        "Sihwa Lee",
+        "Jinseok Kim",
+        "Yongjik Kim",
+        "Jieun Lim",
+        "Jinwook Oh",
+        "Jungwook Choi"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。W4A4KV4で低エントロピーの数字・演算子トークンに量子化誤差が集中する問題に対し、Trace-Aligned QAT、選択的エントロピー最小化、RoPE整合のQ-FIT初期化を組み合わせる。DGX Spark最大3.9倍、B200最大3.1倍の推論スループットを報告し、推論用FP4量子化に直接関係する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "When Quantization Is Free: An int4 KV Cache That Outruns fp16 on Apple Silicon",
+      "source_url": "https://arxiv.org/abs/2605.05699",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache quantization is framed as a quality--latency trade-off. We show it is \\emph{inverted} on Apple Silicon's unified memory: a single fused Metal kernel (sign-randomized FFT $+$ per-channel $\\lambda$ $+$ per-group abs-max $+$ int4 nibble pack), exposed as a HuggingFace \\texttt{Cache} subclass, runs \\emph{faster than fp16} across $256$--$4096$-token prefixes on Gemma-3 1B ($-3$ to $-8\\%$ ms/tok) and at short context on Qwen2.5-1.5B ($-0.7$ to $-2.6\\%$ through $1$K), with $3\\times$ persistent memory compression and quality preserved ($\\dPPL = 0.000$ Qwen short-prompt; $+3.6$ hook $\\dPPL$ Gemma). The kernel's $\\sim\\!25$\\,ns/vec overhead is below the bandwidth savings from $3\\times$ compression. The fused kernel also closes Qwen's 4-bit per-token catastrophe ($\\dPPL = +7975 \\to +638.6$, $12.5\\times$ reduction) at $182$\\,GFLOPS / $D{=}128$. Supporting findings: $\\SRFT$ and $\\SRHT$ are statistically indistinguishable for KV quality (we pick $\\SRFT$ for mixed-radix and matrix-multiply alignment); a learned-rotation ablation surfaces a regularization role for the fixed random SRFT base (learning $R+\\lambda$ without SRFT lowers calibration MSE $84.9\\%$ vs $50.3\\%$ but yields worse PPL); Householder rotations at $k{=}d/2$ reflectors are effectively lossless at $d{=}256$.",
+      "identifiers": [
+        "SemanticScholar:06ac06a648b9f5accd03247abf69de808ee28775"
+      ],
+      "semantic_scholar_id": "06ac06a648b9f5accd03247abf69de808ee28775",
+      "canonical_id": "arXiv:2605.05699",
+      "arxiv_id": "2605.05699",
+      "doi": "10.48550/arXiv.2605.05699",
+      "authors": [
+        "Mohamed Amine Bergach"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。Apple Silicon統合メモリ上でFFT符号ランダム化、チャネル係数、group abs-max、int4 packを融合したMetalカーネルをKVキャッシュに適用。Gemma-3 1Bの256〜4096 tokenでfp16より約3〜8%短いms/token、永続メモリ約3倍圧縮を報告し、オンデバイスLLM推論の具体的カーネル・帯域最適化である。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "AQuaUI: Visual Token Reduction for GUI Agents with Adaptive Quadtrees",
+      "source_url": "https://arxiv.org/abs/2605.19260",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Multimodal Models (LMMs) have recently emerged as promising backbones for GUI-agent models, where high-resolution GUI screenshots are introduced to the prompts at each iteration step. However, these screenshots exhibit highly non-uniform spatial information density: large regions may carry little information and are visually homogeneous, while key text and icons may require high visual fidelity. Existing approaches to this problem either require additional training or rely on attention-based token compression, ignoring the structured layout and spatial redundancy of GUI screenshots. To fill the gap, this paper proposes AquaUI, a training-free inference-time token reduction method for GUI agent models that utilizes the non-uniform information density in screenshots. AQuaUI constructs an adaptive quadtree on each screenshot input and keeps one representative merged token per leaf of the quadtree. AQuaUI preserves the spatial positions of retained tokens throughout the pipeline to ensure that all position-encoding stages remain consistent. To further improve temporal consistency across multi-step GUI interactions, we propose a conditional quadtree algorithm that leverages the continuity between consecutive screenshots within a single request. Specifically, it refines the current quadtree using previous quadtrees as references, helping preserve fine-grained regions across static or mildly shifted GUI states. We implement AQuaUI on state-of-the-art GUI agent models and conduct experiments on standard grounding and navigational benchmarks. AQuaUI consistently shows improved accuracy-efficiency trade-offs over prior baselines. Notably, on GUI-Owl-1.5-32B-Instruct, AQuaUI achieves up to 13.22% speedup and 29.52% fewer visual tokens while retaining 99.06% of full-token performance, suggesting that the spatial redundancy of GUI screenshots can be exploited at inference without retraining.",
+      "identifiers": [
+        "SemanticScholar:4103399a4c055be18ed26cefce6b4bfbbb7c6992"
+      ],
+      "semantic_scholar_id": "4103399a4c055be18ed26cefce6b4bfbbb7c6992",
+      "canonical_id": "arXiv:2605.19260",
+      "arxiv_id": "2605.19260",
+      "doi": "10.48550/arXiv.2605.19260",
+      "authors": [
+        "Yuankai Li",
+        "Ting-Hui Zhu",
+        "Ha-Min Son",
+        "Zhe Zhao",
+        "Xin Liu",
+        "Mu-Hao Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 164,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。GUI画面の空間的情報密度に応じて適応四分木を構築し、葉ごとに代表視覚トークンを残す学習不要の推論時圧縮。連続画面では前回の四分木を再利用して重要な文字・アイコンを保護し、GUI-Owl-1.5-32Bで視覚トークン29.52%削減、最大13.22%高速化、フルトークン性能99.06%保持を報告する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Prox: Training-Free FFN Activation Sparsity via Approximate Intermediate-Channel Salience in LLMs",
+      "source_url": "https://arxiv.org/abs/2607.27591",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Feed-forward networks (FFNs) dominate memory traffic and computation in large language model (LLM) inference, making them a primary target for activation sparsification. However, existing training-free methods suffer substantial model-quality degradation at high sparsity due to limitations in their channel-selection strategies. We observe that the SwiGLU intermediate state provides a highly effective channel-selection signal, but obtaining it requires costly dense computation. To address this, we present \\emph{Prox}, a two-stage training-free framework for sparse SwiGLU FFNs. Prox hinges on the key insight: sparse execution requires only the channel mask induced by the intermediate state, which can be constructed from the magnitude ranking of its entries rather than their exact values. Specifically, Stage 1 uses input sparsity and quantized proxy weights to construct a shared mask; Stage 2 computes the selected channels exactly, enabling sparse execution of all three projections. Across ten LLMs from six model families, Prox outperforms training-free baselines at all sparsity levels, achieves up to a $1.99\\times$ end-to-end decoding speedup at 70\\% FFN sparsity, and is compatible with quantization and sparse attention.",
+      "identifiers": [
+        "SemanticScholar:444deb2112acc6802700ab2452a30591c46e5fea"
+      ],
+      "semantic_scholar_id": "444deb2112acc6802700ab2452a30591c46e5fea",
+      "canonical_id": "arXiv:2607.27591",
+      "arxiv_id": "2607.27591",
+      "doi": "10.48550/arXiv.2607.27591",
+      "authors": [
+        "Jinyi Liu",
+        "Wei Chen",
+        "Pengyu Chen",
+        "Xin Yuan",
+        "Minghe Bai",
+        "Guo-Quan Wu",
+        "Jun Wei"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 92,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。SwiGLU中間状態の大きさ順位からチャネルmaskだけを低コストで近似し、選択チャネルのみ正確に計算する二段階の学習不要FFN疎実行。6系列10モデルで評価し、FFN疎率70%でend-to-end復号最大1.99倍を報告。量子化・疎attentionと併用可能なLLM推論カーネル最適化である。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-abe42debcf00",
+    "round": "libimp-abe42debcf0089e6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-abe42debcf0089e6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-abe42debcf0089e6-pre01.json",
+    "receipt": "sha256:2ef982a7c1a6672dcd6278fb7a5fa173f427f632545b100bcfe32b1f3546e80b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-abe42debcf00",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-98c8523b7d6ad750-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2607.28733",
+  "reason": "\n In this paper, we describe a physics-informed neural network (PINN) framework for the asymptotic Plateau problem: the construction of minimal discs in hyperbolic space H\n 4\n meeting the sphere at infinity along a prescribed knot. By a conjecture of Joel Fine, signed counts of such discs recover coefficients of the HOMFLY polynomial of the knot. Two aspects of the framework are described in detail. The first one concerns how to encode the geometry in the architecture: the network is one ingredient of a composite map whose boundary behavior automatically matches the prescribed knot for every value of the learnable parameters, and which meets the sphere at infinity orthogonally (therefore satisfying the asymptotically minimal condition by construction). The loss then reduces to a single interior term, involving the tension field of the minimality condition, and no weighting of boundary against interior penalties is needed. The second aspect is the cost of evaluating such loss. We compute the value, Jacobian and Hessian of the model by propagating second-order jets forward through the network in closed form, in place of nested reverse-mode automatic differentiation, and we compile the resulting computational graph once instead of rebuilding it at every optimization step. On identical hardware and in double precision, these two changes reduce the cost of a training step by a factor of between forty and fifty. We hope these methodological discussions can be useful for researchers in differential geometry and geometric analysis who wish to deploy PINNs on problems of their own.\n",
+  "title": "A user's guide to PINNs in geometric analysis: lessons from the asymptotic Plateau problem",
+  "identity_tokens": [
+    "arXiv:2607.28733"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98c8523b7d6a",
+  "source_precheck_request_id": null
+}

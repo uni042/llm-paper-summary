@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4c64d127d67467b8-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.01676",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.01676",
+    "identity_tokens": [
+      "arXiv:2608.01676"
+    ],
+    "reason": "Sparse serving is the context but contribution is auditing/measurement, so fit to efficiency improvement scope is indirect.",
+    "first_checked_at": "2026-10-05T03:26:04+00:00",
+    "last_checked_at": "2026-10-05T03:26:04+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-fut.md",
+      "papers/inference/13-sparse-attention/2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+    ],
+    "title": "Understanding Sparse Attention Selectivity in Long-Context Foundation Models via Counterfactual Evaluation"
+  },
+  "processed_at": "2026-10-05T03:26:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c64d127d674",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

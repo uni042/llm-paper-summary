@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LAM: Efficient Lossy Agent Memory Framework With A Retrieval-Score Error Bound",
+      "source_url": "https://arxiv.org/abs/2609.32256",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agent memory grows as agents read inputs, reason, and call tools. Longer histories increase inference cost and eventually exceed the context window. LLM-based summarization reduces this history but adds latency and provides no explicit bound on information loss. We propose LAM, a Lossy Agent Memory system with three components: a deterministic deduplication rule with a substitution bound on retrieval scores - a bound on score perturbation, not a certificate of unchanged ranking; a memory manager that preserves the cached prefix and overlaps compaction with inference; and a performance model that estimates compaction costs before deployment. On 600 agent trajectories, LAM removes 22.47% of observation tokens while retaining 99.984% of the measured gold-patch evidence. At a fixed deletion set, the performance model predicts a 71.4x-91.6x end-to-end speedup from removing records before prefill instead of deleting them from a prefilled context. That benefit comes from the schedule rather than the rule and applies to any prefix-preserving test.",
+      "identifiers": [
+        "SemanticScholar:f56c1c2c735de6d7285d7bd7500540bd61e25b5c"
+      ],
+      "semantic_scholar_id": "f56c1c2c735de6d7285d7bd7500540bd61e25b5c",
+      "canonical_id": "arXiv:2609.32256",
+      "arxiv_id": "2609.32256",
+      "authors": [
+        "Bai-Xi Sun",
+        "Le Chen",
+        "Anjir Ahmed Chowdhury",
+        "Xiao-Long Ma",
+        "Chih-Hsuan Yang",
+        "Ming-Ze Xia",
+        "Syed Zawad",
+        "Sheng Di",
+        "R. Kettimuthu",
+        "Hui-Huo Zheng",
+        "Rajeev Thakur",
+        "Venkat Vishwanath",
+        "Feng Yan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エージェント観測履歴をスコア誤差上界付きで重複削減し、prefix cacheを保持しながら圧縮を重ねる。600軌跡で観測トークン22.47%削減。",
+      "library_body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+      "source_url": "https://arxiv.org/abs/2609.34380",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing LLM serving systems virtualize and optimize KV-cache memory, but treat model-weight memory as fixed throughout execution. Recent work on multi-precision model representations challenges this design by allowing a single stored model to support both full-accuracy and lower-precision execution, making the effective weight footprint runtime-dependent. This creates an opportunity under bursty workloads, where temporary spikes in KV-cache demand often determine throughput and SLO compliance. We present DPS, a dual-precision LLM serving system that turns weight memory into an elastic resource: under normal load, DPS serves the full-accuracy model; under KV pressure, it switches to a nested, lower-precision variant and repurposes unused weight memory for KV cache blocks. DPS is built on Semi-Unified Memory (SUM), which partitions the weight region into a persistent lower-precision sub-region and a shared region that alternates between residual weight tensors and KV-cache blocks, preserving compatibility with paged KV-cache management. We implement DPS on top of vLLM and evaluate it across both dense and MoE models and various production workload traces. Our results show that \\sysname improves sustained throughput by $2.1$--$3.3\\times$ and effective pass@1 by up to $+41$\\,pp over Static FP16, while preserving FP16-class accuracy.",
+      "identifiers": [
+        "SemanticScholar:0469b1d19d084c64cf860f19adf5523e166dff34"
+      ],
+      "semantic_scholar_id": "0469b1d19d084c64cf860f19adf5523e166dff34",
+      "canonical_id": "arXiv:2609.34380",
+      "arxiv_id": "2609.34380",
+      "authors": [
+        "Xuan Truong Nguyen",
+        "Tien-Son Pham",
+        "Tuan-Duc Chu",
+        "Wookeun Jung",
+        "Thanh Tuan Dao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      },
+      "reason": "混雑時にモデルを低精度へ切替え、解放した重み領域をKVキャッシュに転用するvLLM実装。静的FP16比2.1～3.3倍の持続スループットを報告。",
+      "library_body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LatentIndex: Cross-Layer Sharing with Layer-Specific Selection for Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2610.04635",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention reduces core-attention computation, but its indexers still incur repeated selection work and per-layer key-cache storage. Reusing selected indices across layers reduces this overhead but constrains multiple layers to the same token set. We introduce LatentIndex, which extends the latent-sharing principle of Multi-head Latent Attention across indexer layers. Each layer group constructs a shared latent cache from its first layer's hidden states, while layer-specific scoring enables independent token selection. Absorbing key decoders into queries enables direct scoring of the shared cache without reconstructing historical per-layer keys. We develop training-free calibration and investigate a training-aware instantiation of this principle. To balance quality and computation, a hierarchical selection (HS) variant lets followers independently refine a shared candidate set proposed by the anchor. With four-layer sharing, LatentIndex reduces logical indexer-cache storage by 61.1% on DeepSeek-V3.2. Across DeepSeek-V3.2 and GLM-5, training-free LatentIndex improves head-wise attention-mass recall over IndexCache by up to 3.28 percentage points while maintaining RULER and LongBench performance close to native DSA. HS further achieves 2.30-2.72 times decode indexer speedups over DSA across 8K-128K contexts, retaining most of LatentIndex's recall. LatentIndex offers a new perspective on cross-layer indexing: sharing continuous representations rather than discrete selections enables efficient reuse while preserving layer-specific token selection.",
+      "identifiers": [
+        "SemanticScholar:23fd98ed144ceaaa93e2e72be7a41cc3f0b24b63"
+      ],
+      "semantic_scholar_id": "23fd98ed144ceaaa93e2e72be7a41cc3f0b24b63",
+      "canonical_id": "arXiv:2610.04635",
+      "arxiv_id": "2610.04635",
+      "authors": [
+        "Zhao-Hui Wang",
+        "Zhi-Xin Pan",
+        "Fan-Xu Meng",
+        "Mu-Han Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      },
+      "reason": "層間で連続latent索引キャッシュを共有しつつ層別のトークン選択を維持。4層共有で索引キャッシュ61.1%削減、8K～128Kで索引計算2.30～2.72倍高速化。",
+      "library_body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Understanding KV Residency in Production-Scale Agentic LLM Workloads",
+      "source_url": "https://arxiv.org/abs/2610.22863",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic large language model (LLM) applications turn one user request into a sequence of model and tool calls over a growing context. Retaining this context's key-value (KV) state in GPU memory lets later calls reuse it instead of recomputing it, but at fleet scale this needs substantial memory. We characterize four production Microsoft M365 workload traces (Deep Research, Enterprise Assistant, Coding Agent and Enterprise Chat) spanning more than 121 million model calls. In Deep Research, the application issues 89% of model calls and the median context grows from about 10K to 68K tokens by the 30th call. About 80% of context tokens are served from the prefix cache. With the public Llama-2-70B KV layout standing in for confidential models, one 99th-percentile Deep Research session exceeds the 80 GB HBM of an NVIDIA H100, and holding all live sessions at their peak needs an estimated 501.8 TB of HBM, although inference occupies only 5.6% of that retention time. Trace-driven replay shows that a one-hour idle cap cuts this ceiling by 3.6x while raising the share of calls that recompute context only from 4.07% to 4.53%. Under tighter budgets, eviction alone is insufficient: at one tenth of the busiest hour's demand, LRU eviction makes 63% of Deep Research calls recompute and clairvoyant furthest-next-use 31%, whereas multi-resolution retention (MRR), which demotes the LRU session's KV state to int4, lowers this to 13.6%. Placement imposes a separate limit: when the next call reaches a different deployment, cached-context reuse drops from 89% to 29%, and treating KV state as deployment-local raises the recompute floor under unlimited memory from 5.4% to 20.2%. These findings motivate retention that changes the representation of KV state, together with deployment-aware routing or migration. We plan to release AgenticTraceSim, a parametric trace generator, and a residency replay framework.",
+      "identifiers": [
+        "SemanticScholar:ca841e0e0b933dcedafb7b118e02c04cc5832696"
+      ],
+      "semantic_scholar_id": "ca841e0e0b933dcedafb7b118e02c04cc5832696",
+      "canonical_id": "arXiv:2610.22863",
+      "arxiv_id": "2610.22863",
+      "authors": [
+        "Mayank Arya",
+        "Agrim Bari",
+        "Anjaly Parayil",
+        "Y. Simmhan",
+        "Renée St. Amant",
+        "Victor Ruhle",
+        "S. Rajmohan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      },
+      "reason": "1.21億超の本番モデル呼出しからエージェントのKV保持需要を分析。LRUと多段精度保持、配置局所性の影響を定量化したシステム特性評価。",
+      "library_body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "UltraSketchLLM: Sub-1-Bit LLM Compression via Sketch and Hardware-Friendly Operators",
+      "source_url": "https://arxiv.org/abs/2506.17255",
+      "year": 2025,
+      "published": "2025-06-08",
+      "venue": "Proceedings of the 63rd ACM/IEEE Design Automation Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) require larger GPU memory size these days, necessitating efficient and extreme weight compression methods. Existing compression methods are either theoretically limited by 1 bit per weight or face severe performance degradation and inefficiency. To deploy LLMs in resource-constrained scenarios, we introduce UltraSketchLLM, compressing LLMs with data sketch. It reduces peak GPU memory footprint with a high compression rate down to 0.5 bit per weight. Combined with hardware-friendly implementation, UltraSketchLLM keeps tolerable performance degradation and extremely low latency overhead with 14.9× speedup compared to naive sketch solution.",
+      "identifiers": [
+        "SemanticScholar:3d3f808fac6efd310e9552ab4c064be7f3199262"
+      ],
+      "semantic_scholar_id": "3d3f808fac6efd310e9552ab4c064be7f3199262",
+      "canonical_id": "arXiv:2506.17255",
+      "arxiv_id": "2506.17255",
+      "doi": "10.1145/3770743.3804314",
+      "authors": [
+        "Su-Nan Zou",
+        "Xu Sun",
+        "Zi-Yun Zhang",
+        "Guo-Jie Luo"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 517,
+        "matched_prestigious_venue": null
+      },
+      "reason": "重みの重要度に応じたsketch割当と学習を組み合わせ、Llama-3.2-1Bを0.5 bit/weightまで圧縮。低ビット推論のメモリ削減に直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-acdc16d6b698",
+    "round": "libimp-acdc16d6b698f56b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-acdc16d6b698f56b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-acdc16d6b698f56b-pre01.json",
+    "receipt": "sha256:51af5cad51d67809fe039bbed156954b0583d573cdb7c5720ff306ce0d187eaa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-acdc16d6b698",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

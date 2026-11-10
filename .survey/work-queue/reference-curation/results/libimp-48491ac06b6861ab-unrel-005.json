@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-48491ac06b6861ab-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.03658",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.03658",
+    "identity_tokens": [
+      "arXiv:2311.03658"
+    ],
+    "reason": "Abstract studies the geometry and linear representation hypothesis in language models; no inference-efficiency or serving method is presented.",
+    "first_checked_at": "2026-10-05T00:53:14+00:00",
+    "last_checked_at": "2026-10-05T00:53:14+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+    ],
+    "title": "The Linear Representation Hypothesis and the Geometry of Large Language Models"
+  },
+  "processed_at": "2026-10-05T00:53:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-48491ac06b68",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

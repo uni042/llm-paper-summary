@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9e60dcea2f80cde-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.24184",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.24184",
+    "identity_tokens": [
+      "arXiv:2606.24184"
+    ],
+    "reason": "合成計画向けプロンプト条件付き経路生成で、LLM推論システムや推論時効率化を扱わない。",
+    "first_checked_at": "2026-10-05T03:44:12+00:00",
+    "last_checked_at": "2026-10-05T03:44:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+    ],
+    "title": "Project Ariadne: Prompt-Conditioned Route Generation for Synthesis Planning"
+  },
+  "processed_at": "2026-10-05T03:44:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9e60dcea2f8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

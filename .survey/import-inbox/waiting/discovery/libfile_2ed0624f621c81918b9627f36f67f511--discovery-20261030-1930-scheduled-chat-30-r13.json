@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r13",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.06630",
+      "identity_tokens": [
+        "arXiv:2608.06630"
+      ],
+      "title": "The Sparsity Whisperer",
+      "reason": "LLM MLPのup/gate投影で大きい活性値だけを保つ剪定基準が、入力の微小差を識別するニューロンを落とす問題に対し、出力差を保つ重み重要度Wisp/Whisperを提案。Llama 2/3.1の7B〜405Bで非構造・構造化疎化の品質と推論計算費用を比較する。",
+      "source_url": "https://arxiv.org/abs/2608.06630",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:19+09:00",
+      "last_checked_at": "2026-10-30T19:43:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 166,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.12414",
+      "identity_tokens": [
+        "arXiv:2603.12414"
+      ],
+      "title": "SpectralGuard: Detecting Memory Collapse Attacks in State Space Models",
+      "reason": "Mamba等のSSMが攻撃的入力により遷移演算子のスペクトル半径を小さくされ長期記憶を失う問題を、層別スペクトル安定性の実時間監視SpectralGuardで検出する。SSM推論状態の安全性には関連するが、主たる成果は攻撃検知であり推論速度・メモリ削減ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2603.12414",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:19+09:00",
+      "last_checked_at": "2026-10-30T19:43:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 168,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.12487",
+      "identity_tokens": [
+        "arXiv:2606.12487"
+      ],
+      "title": "PhaseQuant: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics",
+      "reason": "W/A/KVを4bitへ量子化すると残差ストリームに急激に注入される巨大活性が情報を損なう問題を、層別更新優位率と履歴保持指標で分析するPhaseQuant。敏感層の活性だけ8bitとし、他は4bitの混合精度PTQを行う。LLM推論の低ビット量子化と品質維持に直接関連。",
+      "source_url": "https://arxiv.org/abs/2606.12487",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:19+09:00",
+      "last_checked_at": "2026-10-30T19:43:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 169,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2510.10528",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2510.10528",
+        "arXiv:2510.10528"
+      ],
+      "title": "Merlin’s Whisper: Enabling Efficient Reasoning in Large Language Models via Black-box Persuasive Prompting",
+      "reason": "黒箱の推論LLMへ短い思考を促す説得的プロンプトを反復生成し、Qwen3や閉鎖APIで出力トークンを減らす。生成費用には関係するが、主な手法はプロンプト制御でありGPUカーネル・KV管理・推論サービング基盤を改善するものではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2510.10528",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:19+09:00",
+      "last_checked_at": "2026-10-30T19:43:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 170,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.10932",
+      "identity_tokens": [
+        "arXiv:2606.10932"
+      ],
+      "title": "Density Field State Space Models: 1-Bit Distillation, Efficient Inference, and Knowledge Organization in Mamba-2",
+      "reason": "Mamba-2を1bit基盤とINT8低ランク補償へ圧縮するDF-SSM。Mamba-2 1.3Bを約278MBへ圧縮し、cuBLAS INT8・カスタムCUDA状態更新・AVX-512 CPU経路を組み合わせる。基準実装比のGPU batch1推論21.4倍高速化と報告する低精度SSM推論実装研究。",
+      "source_url": "https://arxiv.org/abs/2606.10932",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:19+09:00",
+      "last_checked_at": "2026-10-30T19:43:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 171,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.10535",
+      "identity_tokens": [
+        "arXiv:2603.10535"
+      ],
+      "title": "Tackling Length Inflation Without Trade-offs: Group Relative Reward Rescaling for Reinforcement Learning",
+      "reason": "RL学習で長い思考が報酬最適化上有利になり生成長が膨らむ問題を、乗法的報酬再スケーリングGR³で抑制する。推論トークン費用削減には関係するが、主題はRL目的関数・学習ダイナミクスであり、推論エンジン・サービング最適化の実装ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2603.10535",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:19+09:00",
+      "last_checked_at": "2026-10-30T19:43:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 172,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.17449",
+      "identity_tokens": [
+        "arXiv:2603.17449"
+      ],
+      "title": "TRiMS: Real-Time Tracking of Minimal Sufficient Length for Efficient Reasoning via RL",
+      "reason": "正答を保つ最小思考長MSLを理論的に定義し、GRPO学習時にその推定値を利用してCoTを短縮するTRiMS。80%超の思考トークン削減を報告するが、手法の中心はRL訓練と出力長制御で、GPU推論基盤の直接改善ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2603.17449",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:19+09:00",
+      "last_checked_at": "2026-10-30T19:43:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 173,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2209.10052",
+      "identity_tokens": [
+        "arXiv:2209.10052"
+      ],
+      "title": "Adapting Pretrained Text-to-Text Models for Long Text Sequences",
+      "reason": "既存の短文脈text-to-textモデルを長文脈へ適応させるため、pooling付きブロック注意とspanマスク事前学習、データ構成を検討する。長系列注意の計算構造に関係するが、主な評価は長文書QA・要約品質と学習レシピであり生成LLMサービング速度の直接検証ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2209.10052",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:19+09:00",
+      "last_checked_at": "2026-10-30T19:43:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 174,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.01790",
+      "identity_tokens": [
+        "arXiv:2606.01790"
+      ],
+      "title": "STaR-KV: Spatio-Temporal Adaptive Re-weighting for KV Cache Compression in GUI Vision-Language Models",
+      "reason": "GUI操作エージェントでスクリーンショット履歴によりKVが膨らむ問題を、注意サブ空間の空間相互情報量、時間安定性、スコア分布の温度補正で抑えるSTaR-KV。GUIベンチマークで20%のKV予算下においてピークGPUメモリ約40%削減と報告。GUI-VLMの直接的な推論キャッシュ最適化。",
+      "source_url": "https://arxiv.org/abs/2606.01790",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:19+09:00",
+      "last_checked_at": "2026-10-30T19:43:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 176,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.20706",
+      "identity_tokens": [
+        "arXiv:2601.20706"
+      ],
+      "title": "NPU Design for Diffusion Language Model Inference",
+      "reason": "拡散LLMの双方向注意、ブロックKV再更新、反復サンプリングがAR向けNPUに合わない問題に対し、dLLM専用ISA・コンパイラ・メモリ階層・Block-Adaptive Online Smoothing量子化を備えるNPUを設計。7nm RTL合成と複数粒度シミュレータで評価する直接的なdLLM推論ハードウェア研究。",
+      "source_url": "https://arxiv.org/abs/2601.20706",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:19+09:00",
+      "last_checked_at": "2026-10-30T19:43:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 178,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}

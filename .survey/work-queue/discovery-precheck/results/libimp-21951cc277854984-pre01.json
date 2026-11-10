@@ -1,0 +1,1678 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-21951cc277854984-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-21951cc27785",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/infocom59046.2026.11571411",
+    "DOI:10.18653/v1/2026.bigpicture-main.6",
+    "SemanticScholar:61599f7d6d202fa5b7cd1055dd194f2182ef773c",
+    "arXiv:2402.09360",
+    "arXiv:2405.14597",
+    "arXiv:2501.01144",
+    "arXiv:2501.02086",
+    "arXiv:2512.09238",
+    "arXiv:2602.06025",
+    "arXiv:2604.08584",
+    "arXiv:2604.12798",
+    "arXiv:2606.10537",
+    "arXiv:2607.04884",
+    "arXiv:2608.00434",
+    "arXiv:2609.31009",
+    "arXiv:2609.31568",
+    "arXiv:2609.38706"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 17,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e0ea96262a1e16cb5354aaf56b5514f0e63adbea",
+  "raw_search_result_count": 17,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 17,
+  "provider_progress": {
+    "requested_count": 17,
+    "status_counts": {
+      "allowed": 17,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-08T19:20:34.992625+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/infocom59046.2026.11571411",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.bigpicture-main.6",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:61599f7d6d202fa5b7cd1055dd194f2182ef773c",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.09360",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.14597",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.01144",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.02086",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.09238",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.06025",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.08584",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.12798",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.10537",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.04884",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.00434",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.31009",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.31568",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.38706",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory",
+      "source_url": "https://arxiv.org/abs/2602.06025",
+      "year": 2026,
+      "published": "2026-02-05",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Memory is increasingly central to Large Language Model (LLM) agents operating beyond a single context window, yet most existing systems rely on offline, query-agnostic memory construction that can be inefficient and may discard query-critical information. Although runtime memory utilization is a natural alternative, prior work often incurs substantial overhead and offers limited explicit control over the performance-cost trade-off. In this work, we present \\textbf{BudgetMem}, a runtime agent memory framework for explicit, query-aware performance-cost control. BudgetMem structures memory processing as a set of memory modules, each offered in three budget tiers (i.e., \\textsc{Low}/\\textsc{Mid}/\\textsc{High}). A lightweight router performs budget-tier routing across modules to balance task performance and memory construction cost, which is implemented as a compact neural policy trained with reinforcement learning. Using BudgetMem as a unified testbed, we study three complementary strategies for realizing budget tiers: implementation (method complexity), reasoning (inference behavior), and capacity (module model size). Across LoCoMo, LongMemEval, and HotpotQA, BudgetMem surpasses strong baselines when performance is prioritized (i.e., high-budget setting), and delivers better accuracy-cost frontiers under tighter budgets. Moreover, our analysis disentangles the strengths and weaknesses of different tiering strategies, clarifying when each axis delivers the most favorable trade-offs under varying budget regimes.",
+      "identifiers": [
+        "SemanticScholar:009aada8e187dd11170976feb633b67ff114c433"
+      ],
+      "semantic_scholar_id": "009aada8e187dd11170976feb633b67ff114c433",
+      "canonical_id": "arXiv:2602.06025",
+      "arxiv_id": "2602.06025",
+      "doi": "10.48550/arXiv.2602.06025",
+      "authors": [
+        "Haozhen Zhang",
+        "Hao-Dong Yue",
+        "Tao Feng",
+        "Quan-Yu Long",
+        "Jian-Zhu Bao",
+        "Bowen Jin",
+        "Wei-Zhi Zhang",
+        "Xiao Li",
+        "Jia-Xuan You",
+        "Chengwei Qin",
+        "Wen-Ya Wang"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 245,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better",
+      "source_url": "https://arxiv.org/abs/2607.04884",
+      "year": 2026,
+      "published": "2026-07-06",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present HunyuanOCR-1.5, a lightweight end-to-end OCR-specialized vision-language model. HunyuanOCR unifies document parsing, text spotting, information extraction, text-image translation, and multi-image document understanding within a single end-to-end VLM. Building upon the lightweight architecture of HunyuanOCR-1.0, HunyuanOCR-1.5 does not redesign the backbone, but systematically improves both efficiency and capability. For efficiency, we adapt DFlash to OCR decoding, significantly reducing the latency of long structured outputs such as dense documents, tables, and formulas while preserving output distribution. Powered by DFlash, HunyuanOCR-1.5 achieves a 6.37x Transformer inference speedup and a 2.14x speedup under vLLM, delivering the fastest inference among lightweight OCR VLMs. For capability, we propose Agentic Data Flow, an agent-driven data construction system that transforms model weaknesses into executable data requirements and autonomously performs material search, quality verification, and pipeline development. It substantially improves long-tail capabilities in ancient-script OCR, fine-grained chart and table parsing, multi-image text-centric QA, low-resource multilingual parsing, and document hallucination evaluation. HunyuanOCR-1.5 ranks among the top-tier end-to-end OCR solutions on OmniDocBench v1.6 while achieving new performance milestones across these long-tail tasks. Combined with an upgraded pretraining and post-training recipe, HunyuanOCR-1.5 further extends its capability in high-resolution, long-context, and multi-task scenarios. Experiments demonstrate faster inference, broader OCR capability coverage, and the deployment advantages of a lightweight end-to-end model. We will release the model weights and training code to support future research and real-world OCR applications.",
+      "identifiers": [
+        "SemanticScholar:82f9b645066610612839c8bd8cab810eb201d6fd"
+      ],
+      "semantic_scholar_id": "82f9b645066610612839c8bd8cab810eb201d6fd",
+      "canonical_id": "arXiv:2607.04884",
+      "arxiv_id": "2607.04884",
+      "doi": "10.48550/arXiv.2607.04884",
+      "authors": [
+        "Gengluo Li",
+        "Xingyu Wan",
+        "Shangpin Peng",
+        "Wei-Nong Wang",
+        "Hao Feng",
+        "Yong-Kun Du",
+        "Bing-Hong Wu",
+        "Zheng-Hao Ruan",
+        "Zhiqiong Lu",
+        "Liang Wu",
+        "Pengyuan Lyu",
+        "Hua-Wen Shen",
+        "Zibin Lin",
+        "Shi-Jing Hu",
+        "Jie Yang",
+        "Hongbing Wen",
+        "Guang-Hua Yu",
+        "Hong Liu",
+        "Bo-Chao Wang",
+        "Can Ma",
+        "Han Hu",
+        "Cheng-Quan Zhang",
+        "Yu ZHOU"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 94,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CSAttention: Centroid-Scoring Attention for Accelerating LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.08584",
+      "year": 2026,
+      "published": "2026-03-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLMs increasingly rely on extended, reusable prefill prompts for agents and domain Q&A, pushing attention and KV-cache to become the dominant decode-time bottlenecks. While sparse attention reduces computation and transfer costs, it often struggles to maintain accuracy at high sparsity levels due to the inherent distribution shift between Queries and Keys. We propose Centroid-Scoring Attention (CSAttention), a training-free sparse attention method optimized for high-throughput serving of reusable contexts. CSAttention adopts a storage-for-computation strategy tailored to the offline-prefill/online-decode setting: it front-loads computation into a one-time offline prefill phase that can be amortized across multiple queries, while aggressively optimizing per-step decoding latency. Specifically, CSAttention constructs query-centric lookup tables during offline prefill, whose size remains fixed during decoding, and enables online decoding to replace full-context scans with efficient table lookups and GPU-friendly score accumulation. Extensive experiments demonstrate that CSAttention achieves near-identical accuracy to full attention. Under high sparsity (95%) and long-context settings (32K-128K), CSAttention consistently outperforms state-of-the-art sparse attention methods in both model accuracy and inference speed, achieving up to 4.6x inference speedup over the most accurate baseline at a context length of 128K.",
+      "identifiers": [
+        "SemanticScholar:8f00ffce9ea4464b25dd1f2700d975ab1314ef6f"
+      ],
+      "semantic_scholar_id": "8f00ffce9ea4464b25dd1f2700d975ab1314ef6f",
+      "canonical_id": "arXiv:2604.08584",
+      "arxiv_id": "2604.08584",
+      "doi": "10.48550/arXiv.2604.08584",
+      "authors": [
+        "Chu-Xu Song",
+        "Zhen-Can Peng",
+        "Jiu-Qi Wei",
+        "Chuan-Hui Yang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 192,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VFA: Relieving Vector Operations in Flash Attention with Global Maximum Pre-computation",
+      "source_url": "https://arxiv.org/abs/2604.12798",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "FlashAttention-style online softmax enables exact attention computation with linear memory by streaming score tiles through on-chip memory and maintaining a running maximum and normalizer. However, as attention kernels approach peak tensor-core/cube-core throughput on modern accelerators, non-matmul components of online softmax -- especially per-tile rowmax and rowsum reductions and rescale chains -- can become vector or SIMD limited and dominate latency. This paper revisits FlashAttention and proposes Vector Relieved Flash Attention (VFA), a hardware-friendly method that reduces rowmax-driven updates of the running maximum while retaining the online-softmax structure. VFA initializes the running maximum via a cheap approximation from key-block representations, reorders key-block traversal to prioritize high-impact sink and local blocks, and freezes the maximum for remaining blocks to avoid repeated reductions and rescaling. We further integrate VFA with block-sparse skipping methods such as BLASST to form Vector Relieved Sparse Attention (VSA), which reduces both block count and per-block overhead. Notably, VFA and VSA completely avoid the conditional rescale operation in the update stage used in FA4.0. Extensive evaluations on benchmarks including MMLU and MATH500, together with attention statistics, verify our design: (i) sink and local reordering stabilizes the running maximum early; (ii) simple Q and K block summaries fail due to intra-block heterogeneity; (iii) m-initialization is required when maxima appear in middle blocks. Overall, VFA and VSA efficiently alleviate online-softmax reduction bottlenecks without performance loss. Compared to the C16V32 baseline, C8V32, C4V32 and C4V16 achieve nearly two times speedup on modern hardware while hitting the vector bottleneck. With upcoming architecture improvements, C4V16 will deliver six times speedup by enhancing exponent capacity.",
+      "identifiers": [
+        "SemanticScholar:2f2a962223134684eb56dc132226fd18cbb57f08"
+      ],
+      "semantic_scholar_id": "2f2a962223134684eb56dc132226fd18cbb57f08",
+      "canonical_id": "arXiv:2604.12798",
+      "arxiv_id": "2604.12798",
+      "doi": "10.48550/arXiv.2604.12798",
+      "authors": [
+        "Yupeng Sun",
+        "Yanzhao Li",
+        "Zhiqiang Zou",
+        "B. Du",
+        "Zhiyuan Zhang",
+        "Huilin Dong",
+        "G. Fan",
+        "Hui Wang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2606.10537",
+      "year": 2026,
+      "published": "2026-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (dLLMs) re-encode the entire prefix at every denoising step, causing recomputation that scales quadratically with context length and becomes prohibitive for long-context scenarios. We propose Prefilling-dLLM, a training-free prefill-decode disaggregation framework for dLLMs that partitions the prefix into N chunks, caches their KV representations once, and selects the top-K most relevant chunks with intra-chunk token sparsity for decoding, showing that sparse prefilling can outperform dense attention while reducing per-step complexity from quadratic in the full sequence length to quadratic only in the decode length. On LongBench and InfiniteBench, Prefilling-dLLM achieves state-of-the-art quality among dLLM acceleration methods, and an attention kernel that parallelizes decoding over the non-contiguously cached chunk KV yields 9.1--28.0x speedup at 8K--32K contexts. We further show that beginning-of-sequence tokens prepended to each chunk act as periodic attention anchors that eliminate the lost-in-the-middle phenomenon. Code is available at https://github.com/menik1126/Prefilling-dLLM.",
+      "identifiers": [
+        "SemanticScholar:27ef7de54553661516c27b10c3339d1ef6cbe24f"
+      ],
+      "semantic_scholar_id": "27ef7de54553661516c27b10c3339d1ef6cbe24f",
+      "canonical_id": "arXiv:2606.10537",
+      "arxiv_id": "2606.10537",
+      "doi": "10.48550/arXiv.2606.10537",
+      "authors": [
+        "Jingfei Xiong",
+        "Qilong Han",
+        "Shansan Gong",
+        "Yun-Ta Hsieh",
+        "Bo-Yuan Zheng",
+        "Cheng-Yue Wu",
+        "Chao-Fan Tao",
+        "Chenyang Zhao",
+        "Ngai Wong"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Training-free Context-adaptive Attention for Efficient Long Context Modeling",
+      "source_url": "https://arxiv.org/abs/2512.09238",
+      "year": 2025,
+      "published": "2025-12-10",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities across a wide range of natural language processing tasks. These capabilities stem primarily from the self-attention mechanism, which enables the modeling of long-range dependencies. However, the quadratic complexity of self-attention with respect to sequence length poses significant computational and memory challenges, especially as sequence length extends to extremes. While various sparse attention and KV cache compression methods have been proposed to improve efficiency, they often suffer from limitations such as reliance on fixed patterns, inability to accelerate both prefilling and decoding stages, or the requirement for additional training. In this paper, we propose Training-free Context-adaptive Attention (TCA-Attention), a training-free sparse attention mechanism that selectively attends to only the informative tokens for efficient long-context inference. Our method consists of two lightweight phases: i) an offline calibration phase that determines head-specific sparsity budgets via a single forward pass, and ii) an online token selection phase that adaptively retains core context tokens using a lightweight redundancy metric. TCA-Attention provides a unified solution that accelerates both prefilling and decoding while reducing the KV cache memory footprint, without requiring parameter updates or architectural changes. Theoretical analysis shows that our approach maintains bounded approximation error. Extensive experiments demonstrate that TCA-Attention achieves a 2.8× speedup and reduces KV cache by 61% at 128K context length while maintaining performance comparable to full attention across various benchmarks, offering a practical plug-and-play solution for efficient long-context inference.",
+      "identifiers": [
+        "SemanticScholar:f56b12228283cf42cf8120a18fee60849b965f83"
+      ],
+      "semantic_scholar_id": "f56b12228283cf42cf8120a18fee60849b965f83",
+      "canonical_id": "arXiv:2512.09238",
+      "arxiv_id": "2512.09238",
+      "doi": "10.48550/arXiv.2512.09238",
+      "authors": [
+        "Zeng You",
+        "Yao-Fo Chen",
+        "Shu-Hai Zhang",
+        "Zhijie Qiu",
+        "Ting Wu",
+        "Ying-Jian Li",
+        "Yaowei Wang",
+        "Ming-Kui Tan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 302,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Memory-Efficient KV Cache Optimization for Large Language Model Inference at the Edge",
+      "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571411",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "IEEE Conference on Computer Communications",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of large language models (LLMs) on edge devices offers notable advantages in privacy preservation, low-latency response, and operational autonomy, but faces significant challenges due to the memory-intensive key-value (KV) cache required for autoregressive decoding. Sparse attention methods alleviate computational costs but typically fail to preserve the generation quality and inference efficiency under memory constraints, which becomes particularly acute on edge platforms. In this paper, we first formalize and prove the NP-hardness of the KV cache replacement problem under top-k sparse attention, where k is the number of pages involved in each attention calculation. Then, we propose LiteKV, a lightweight memory-efficient online KV cache replacement algorithm tailored for edge-based LLM inference. LiteKV introduces a (1 + ϵ)-relaxation strategy that tolerates minimal precision loss in attention scores, allowing significant improvements in cache utilization. Moreover, LiteKV is orthogonal to existing sparse attention and quantization methods, enabling scalable, high-performance LLM inference under stringent memory budgets. We provide theoretical guarantees on LiteKV’s competitive ratio under realistic attention score distributions. Experiments on real-world workloads demonstrate that LiteKV reduces memory usage by up to 75% compared to state-of-the-art memory-unconstrained baselines, while preserving comparable generation quality and 95% of their decoding efficiency.",
+      "identifiers": [
+        "SemanticScholar:77d0136313411122d60e879a9c8bd3674e0744c4"
+      ],
+      "semantic_scholar_id": "77d0136313411122d60e879a9c8bd3674e0744c4",
+      "doi": "10.1109/INFOCOM59046.2026.11571411",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571411",
+      "authors": [
+        "Chi Zhang",
+        "Haisheng Tan",
+        "Hao Pan",
+        "Yang Xu",
+        "Haohua Du",
+        "Li Zhang",
+        "Xiao-Hui Fu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Instruction-Following Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2501.02086",
+      "year": 2025,
+      "published": "2025-01-03",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 25,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rapid scaling of large language models (LLMs), structured pruning has become a widely used technique to learn efficient, smaller models from larger ones, delivering superior performance compared to training similarly sized models from scratch. In this paper, we move beyond the traditional static pruning approach of determining a fixed pruning mask for a model, and propose a dynamic approach to structured pruning. In our method, the pruning mask is input-dependent and adapts dynamically based on the information described in a user instruction. Our approach, termed\"instruction-following pruning\", introduces a sparse mask predictor that takes the user instruction as input and dynamically selects the most relevant model parameters for the given task. To identify and activate effective parameters, we jointly optimize the sparse mask predictor and the LLM, leveraging both instruction-following data and the pre-training corpus. Experimental results demonstrate the effectiveness of our approach on a wide range of evaluation benchmarks. For example, our 3B activated model improves over the 3B dense model by 5-8 points of absolute margin on domains such as math and coding, and rivals the performance of a 9B model.",
+      "identifiers": [
+        "SemanticScholar:3508e210163ae8438ae2b38225ff969f5cde14fa"
+      ],
+      "semantic_scholar_id": "3508e210163ae8438ae2b38225ff969f5cde14fa",
+      "canonical_id": "arXiv:2501.02086",
+      "arxiv_id": "2501.02086",
+      "doi": "10.48550/arXiv.2501.02086",
+      "authors": [
+        "Bai-Ru Hou",
+        "Qi-Bin Chen",
+        "Jianyu Wang",
+        "Guoli Yin",
+        "Chong Wang",
+        "Nan Du",
+        "Ruoming Pang",
+        "Shi-Yu Chang",
+        "Tao Lei"
+      ],
+      "priority": 35,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 25,
+        "citation_count": 25,
+        "total": 35,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 643,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "BlockDialect: Block-wise Fine-grained Mixed Format Quantization for Energy-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2501.01144",
+      "year": 2025,
+      "published": "2025-01-02",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapidly increasing size of large language models (LLMs) presents significant challenges in memory usage and computational costs. Quantizing both weights and activations can address these issues, with hardware-supported fine-grained scaling emerging as a promising solution to mitigate outliers. However, existing methods struggle to capture nuanced block data distributions. We propose BlockDialect, a block-wise fine-grained mixed format technique that assigns a per-block optimal number format from a formatbook for better data representation. Additionally, we introduce DialectFP4, a formatbook of FP4 variants (akin to dialects) that adapt to diverse data distributions. To leverage this efficiently, we propose a two-stage approach for online DialectFP4 activation quantization. Importantly, DialectFP4 ensures energy efficiency by selecting representable values as scaled integers compatible with low-precision integer arithmetic. BlockDialect achieves 10.78% (7.48%) accuracy gain on the LLaMA3-8B (LLaMA2-7B) model compared to MXFP4 format with lower bit usage per data, while being only 5.45% (2.69%) below full precision even when quantizing full-path matrix multiplication. Focusing on how to represent over how to scale, our work presents a promising path for energy-efficient LLM inference.",
+      "identifiers": [
+        "SemanticScholar:cd2cdaf7563147ff15233b1734067773d58e1866"
+      ],
+      "semantic_scholar_id": "cd2cdaf7563147ff15233b1734067773d58e1866",
+      "canonical_id": "arXiv:2501.01144",
+      "arxiv_id": "2501.01144",
+      "doi": "10.48550/arXiv.2501.01144",
+      "authors": [
+        "Wonsuk Jang",
+        "Thierry Tambe"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 644,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "HiRE: High Recall Approximate Top-k Estimation for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2402.09360",
+      "year": 2024,
+      "published": "2024-02-14",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding with generative Large Language Models (LLMs) on accelerators (GPUs/TPUs) is often memory-bound where most of the time is spent on transferring model parameters from high bandwidth memory (HBM) to cache. On the other hand, recent works show that LLMs can maintain quality with significant sparsity/redundancy in the feedforward (FFN) layers by appropriately training the model to operate on a top-$k$ fraction of rows/columns (where $k \\approx 0.05$), there by suggesting a way to reduce the transfer of model parameters, and hence latency. However, exploiting this sparsity for improving latency is hindered by the fact that identifying top rows/columns is data-dependent and is usually performed using full matrix operations, severely limiting potential gains. To address these issues, we introduce HiRE (High Recall Approximate Top-k Estimation). HiRE comprises of two novel components: (i) a compression scheme to cheaply predict top-$k$ rows/columns with high recall, followed by full computation restricted to the predicted subset, and (ii) DA-TOP-$k$: an efficient multi-device approximate top-$k$ operator. We demonstrate that on a one billion parameter model, HiRE applied to both the softmax as well as feedforward layers, achieves almost matching pretraining and downstream accuracy, and speeds up inference latency by $1.47\\times$ on a single TPUv5e device.",
+      "identifiers": [
+        "SemanticScholar:91ce2245d50c91c3bc5d9310d264982a184e965e"
+      ],
+      "semantic_scholar_id": "91ce2245d50c91c3bc5d9310d264982a184e965e",
+      "canonical_id": "arXiv:2402.09360",
+      "arxiv_id": "2402.09360",
+      "doi": "10.48550/arXiv.2402.09360",
+      "authors": [
+        "Yashas Samaga",
+        "V. Yerram",
+        "Chong You",
+        "Srinadh Bhojanapalli",
+        "Sanjiv Kumar",
+        "Prateek Jain",
+        "Praneeth Netrapalli"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 967,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AdaMTP: An Adaptive Training Paradigm for Multi-Token Prediction",
+      "source_url": "https://arxiv.org/abs/2608.00434",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-Token Prediction (MTP) has emerged as an effective paradigm that augments a shared Large Language Model backbone with auxiliary heads, training the model to predict several future tokens in parallel to enrich its supervision signal and accelerate inference. However, existing training frameworks adopt a rigid, fixed-length prediction horizon, disregarding the highly non-uniform information density of natural language and code. Forcing the auxiliary heads to predict across high-entropy semantic boundaries injects noisy, conflicting training signals; because these heads share the backbone's latent representations, the resulting gradients backpropagate and interfere with the model's core capabilities. We propose AdaMTP, an adaptive training paradigm that dynamically aligns the prediction horizon with the intrinsic predictability of the sequence. At its core, an entropy-based segmentation algorithm leverages the base model to detect sudden surges in uncertainty as semantic boundaries, partitioning sequences into variable-length groups. Each token is assigned an adaptive prediction depth, and a dynamically masked MTP objective suppresses the loss for predictions that cross these boundaries, attenuating the noisy gradients that degrade the backbone. Across mathematical reasoning, code generation, and general benchmarks on three backbones (Llama-3.1-8B, Qwen-2.5-7B, Gemma-3-12B), AdaMTP consistently outperforms standard MTP in both task performance and inference speedup.",
+      "identifiers": [
+        "SemanticScholar:9020c3ff7ac719bbcbb0f61276c6bf8a0a8d7858"
+      ],
+      "semantic_scholar_id": "9020c3ff7ac719bbcbb0f61276c6bf8a0a8d7858",
+      "canonical_id": "arXiv:2608.00434",
+      "arxiv_id": "2608.00434",
+      "authors": [
+        "Zi-Qiang Cui",
+        "Han Shi",
+        "Bowei He",
+        "Yu Pan",
+        "Peiyang Liu",
+        "Sheng-Yin Sun",
+        "Yan-Kai Chen",
+        "Hao-Li Bai",
+        "Yichun Yin",
+        "Xue Liu",
+        "Chen Ma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 68,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "G$^2$PTQ: Improving LLM Post-Training Quantization with Generalized Gradient Compensation",
+      "source_url": "https://arxiv.org/abs/2609.31009",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is a practical approach to reducing the memory and computational footprint of large language models (LLMs) without retraining. GPTQ-based methods have become the de facto standard, yet they suffer from two complementary limitations. Methods with local, layer-wise objectives lack global supervision; while methods with global objectives fix their Hessian estimates at the start and ignore first-order gradients, so their guidance grows stale as quantization proceeds. This paper presents G$^2$PTQ, a unified PTQ framework with Generalized Gradient Compensation that integrates both first- and second-order information under a globally supervised, block-wise optimization objective. By refreshing gradient and Hessian estimates before quantizing each Transformer block, G$^2$PTQ avoids the staleness of prior global methods. Furthermore, to stabilize the exact first-order compensation, we introduce a trust-region scaling mechanism that dynamically bounds the gradient step to prevent exploding weight updates. Finally, we derive efficient implementations for block-wise Hessian approximation and exact gradient compensation. Experimental results on various model families and bit-widths demonstrate that G$^2$PTQ enables better alignment with the full-precision model, outperforming state-of-the-art baselines. Code is available at: https://github.com/G2PTQ/G2PTQ.",
+      "identifiers": [
+        "SemanticScholar:dd6f438611037b9db2ff9f12564bd6274b167097"
+      ],
+      "semantic_scholar_id": "dd6f438611037b9db2ff9f12564bd6274b167097",
+      "canonical_id": "arXiv:2609.31009",
+      "arxiv_id": "2609.31009",
+      "authors": [
+        "Rui-Kang Liu",
+        "Hao-Li Bai",
+        "Yuxuan Sun",
+        "Qian Zhang",
+        "Wen-Zheng Cai",
+        "Yan-Qi Hao",
+        "Feiyu Wang",
+        "Wei-Dong Zhong",
+        "Zhu-Yue Wang",
+        "Tong Yang",
+        "Xiang-Sheng Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education",
+      "source_url": "https://arxiv.org/abs/2609.31568",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI tutoring could markedly improve learning outcomes for students in developing regions such as Vietnam, yet the two obvious paths both fall short. Cloud assistants such as ChatGPT route sensitive student data to foreign servers---violating data-sovereignty laws such as Vietnam's Decree 53---and, pre-trained on Western-centric corpora, are not organized around the national textbook curriculum, so their knowledge of local content is unsystematic and frequently hallucinated. Self-hosting an open model keeps data on-premise but hits a two-fold wall: post-training quantization (AWQ, GPTQ) tames the static weight footprint, yet the dynamic KV cache and prefill latency of long tutoring contexts still cause out-of-memory failures and slow responses on consumer GPUs, while the model keeps hallucinating on region-specific material. We present DeepEdu-v1, an AI-tutoring system for Vietnamese education built on SCALE (Self-improving Context-Aware Learning Engine), a framework with two innovations. First, a long-context inference engine amortizes token selection from per-sub-chunk to per-cluster granularity; on long-context retrieval it issues x7.7 fewer retrieval calls than a state-of-the-art selective-attention baseline, cutting prefill latency (TTFT) by roughly 35% while matching or improving task accuracy. Second, a self-improving agentic layer continuously curates a verified playbook from past interactions instead of fine-tuning, a design intended to progressively reduce reliance on dominant-language priors as trustworthy local knowledge accumulates. In its deployed configuration, DeepEdu achieves a nearly x2 TTFT speedup over standard vLLM serving and lifts agentic accuracy from 70.0% to 79.5% on complex tasks, with the strongest per-track gains across financial-reasoning and interactive-agent benchmarks.",
+      "identifiers": [
+        "SemanticScholar:181ecbd0a1f87a72e93869a102a61f2e2dcf07db"
+      ],
+      "semantic_scholar_id": "181ecbd0a1f87a72e93869a102a61f2e2dcf07db",
+      "canonical_id": "arXiv:2609.31568",
+      "arxiv_id": "2609.31568",
+      "authors": [
+        "Q. Nguyen",
+        "H. Nguyễn",
+        "H. Hoàng",
+        "T. Pham",
+        "Cong Tran",
+        "Nam Vu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Preserving Provenance in Shared KV Caches for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.38706",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Production LLM serving stacks combine an inference engine's local prefix cache with a shared KV-cache tier for fleet-wide reuse. The local cache distinguishes requests by adapter, weight configuration and sharing domain, but the shared tier may key entries only by token content and coarse model metadata. This boundary erases provenance and lets identical tokens under incompatible computational or sharing contexts collide. We call this composition gap provenance-blind reuse and present its first systematic study. A source audit of three vLLM connectors confirms the structural omission, while runtime experiments reproduce it across vLLM and two SGLang releases, 12 models from 7 families (0.5 B-32 B), and over 160 configurations. Cross-adapter collisions reduce accuracy from 0.94 to 0.64, incompatible KV representations reduce reasoning accuracy to zero, and salt omission enables 93% prompt identification from timing. We formalize the missing guarantee as the KV provenance contract: for a declared dimension registry, shared keys must be injective over computational and sharing provenance, with identities stable across workers. Any dimension with a stable identity can therefore be added without connector-specific key logic. A canonical descriptor binds per-request and per-worker provenance into lookup and store keys, while a differential checker detects dimensions that change KV state without changing the key. Implemented in vLLM and SGLang 0.5.20 across three cache paths, provenance binding eliminates unsafe reuse while preserving legitimate sharing. Hit-path latency changes remain within 0.34 ms and below run-to-run variation; retention grows with provenance diversity.",
+      "identifiers": [
+        "SemanticScholar:b29f1c09161c210d899d6b424d09213c03a6f8f0"
+      ],
+      "semantic_scholar_id": "b29f1c09161c210d899d6b424d09213c03a6f8f0",
+      "canonical_id": "arXiv:2609.38706",
+      "arxiv_id": "2609.38706",
+      "authors": [
+        "Wei Song",
+        "Yu-Xin Cao",
+        "Xi Zheng",
+        "Leo Zhang",
+        "Xiao-Hun Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 8,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The End of Transformers? On Challenging Attention and the Rise of Sub-Quadratic Architectures",
+      "source_url": "https://arxiv.org/abs/2510.05364",
+      "year": 2025,
+      "published": "2025-10-06",
+      "venue": "Proceedings of The Big Picture v2: Crafting a Research Narrative",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have dominated sequence processing tasks for the past seven years -- most notably language modeling. However, the inherent quadratic complexity of their attention mechanism remains a significant bottleneck as context length increases. This paper surveys recent efforts to overcome this bottleneck, including advances in (sub-quadratic) attention variants, recurrent neural networks, state space models, and hybrid architectures. We critically analyze these approaches in terms of compute and memory complexity, benchmark results, and fundamental limitations to assess whether the dominance of pure-attention transformers may soon be challenged.",
+      "identifiers": [
+        "SemanticScholar:f0be13d09e0f8bd1f652b50cde0183a0324dec73"
+      ],
+      "semantic_scholar_id": "f0be13d09e0f8bd1f652b50cde0183a0324dec73",
+      "canonical_id": "arXiv:2510.05364",
+      "arxiv_id": "2510.05364",
+      "doi": "10.18653/v1/2026.bigpicture-main.6",
+      "authors": [
+        "Alexander M. Fichtl",
+        "Jeremias Bohn",
+        "Josefin Kelber",
+        "Edoardo Mosca",
+        "Georg Groh"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 367,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CaR: An Efficient KV Cache Reuse System for Large Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/61599f7d6d202fa5b7cd1055dd194f2182ef773c",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:61599f7d6d202fa5b7cd1055dd194f2182ef773c"
+      ],
+      "semantic_scholar_id": "61599f7d6d202fa5b7cd1055dd194f2182ef773c",
+      "canonical_id": "SemanticScholar:61599f7d6d202fa5b7cd1055dd194f2182ef773c",
+      "authors": [
+        "Kexin Chu",
+        "Tzechinh Liu",
+        "Yun-Ding Li",
+        "Pengchao Yuan",
+        "Wei Zhang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Integer Scale: A Free Lunch for Faster Fine-grained Quantization of LLMs",
+      "source_url": "https://arxiv.org/abs/2405.14597",
+      "year": 2024,
+      "published": "2024-05-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce Integer Scale, a novel post-training quantization scheme for large language models that effectively resolves the inference bottleneck in current fine-grained quantization approaches while maintaining similar accuracies. Integer Scale is a free lunch as it requires no extra calibration or fine-tuning which will otherwise incur additional costs. It can be used plug-and-play for most fine-grained quantization methods. Its integration results in at most 1.85x end-to-end speed boost over the original counterpart with comparable accuracy. Additionally, due to the orchestration of the proposed Integer Scale and fine-grained quantization, we resolved the quantization difficulty for Mixtral-8x7B and LLaMA-3 models with negligible performance degradation, and it comes with an end-to-end speed boost of 2.13x, and 2.31x compared with their FP16 versions respectively.",
+      "identifiers": [
+        "SemanticScholar:bbcc2ca90b7f852cb2abade5067bc8d0e9351f05"
+      ],
+      "semantic_scholar_id": "bbcc2ca90b7f852cb2abade5067bc8d0e9351f05",
+      "canonical_id": "arXiv:2405.14597",
+      "arxiv_id": "2405.14597",
+      "doi": "10.48550/arXiv.2405.14597",
+      "authors": [
+        "Qing-Yuan Li",
+        "Ran Meng",
+        "Yiduo Li",
+        "Bo Zhang",
+        "Yifan Lu",
+        "Yerui Sun",
+        "Lin Ma",
+        "Yu-Chen Xie"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 868,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.06025",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.06025",
+        "id:SemanticScholar:009aada8e187dd11170976feb633b67ff114c433",
+        "id:arXiv:2602.06025",
+        "title:learning queryaware budgettier routing for runtime agent memory",
+        "url:https://arxiv.org/abs/2602.06025"
+      ],
+      "record": {
+        "title": "Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory",
+        "source_url": "https://arxiv.org/abs/2602.06025",
+        "year": 2026,
+        "published": "2026-02-05",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Memory is increasingly central to Large Language Model (LLM) agents operating beyond a single context window, yet most existing systems rely on offline, query-agnostic memory construction that can be inefficient and may discard query-critical information. Although runtime memory utilization is a natural alternative, prior work often incurs substantial overhead and offers limited explicit control over the performance-cost trade-off. In this work, we present \\textbf{BudgetMem}, a runtime agent memory framework for explicit, query-aware performance-cost control. BudgetMem structures memory processing as a set of memory modules, each offered in three budget tiers (i.e., \\textsc{Low}/\\textsc{Mid}/\\textsc{High}). A lightweight router performs budget-tier routing across modules to balance task performance and memory construction cost, which is implemented as a compact neural policy trained with reinforcement learning. Using BudgetMem as a unified testbed, we study three complementary strategies for realizing budget tiers: implementation (method complexity), reasoning (inference behavior), and capacity (module model size). Across LoCoMo, LongMemEval, and HotpotQA, BudgetMem surpasses strong baselines when performance is prioritized (i.e., high-budget setting), and delivers better accuracy-cost frontiers under tighter budgets. Moreover, our analysis disentangles the strengths and weaknesses of different tiering strategies, clarifying when each axis delivers the most favorable trade-offs under varying budget regimes.",
+        "identifiers": [
+          "SemanticScholar:009aada8e187dd11170976feb633b67ff114c433"
+        ],
+        "semantic_scholar_id": "009aada8e187dd11170976feb633b67ff114c433",
+        "canonical_id": "arXiv:2602.06025",
+        "arxiv_id": "2602.06025",
+        "doi": "10.48550/arXiv.2602.06025",
+        "authors": [
+          "Haozhen Zhang",
+          "Hao-Dong Yue",
+          "Tao Feng",
+          "Quan-Yu Long",
+          "Jian-Zhu Bao",
+          "Bowen Jin",
+          "Wei-Zhi Zhang",
+          "Xiao Li",
+          "Jia-Xuan You",
+          "Chengwei Qin",
+          "Wen-Ya Wang"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 245,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.04884",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.04884",
+        "id:SemanticScholar:82f9b645066610612839c8bd8cab810eb201d6fd",
+        "id:arXiv:2607.04884",
+        "title:hunyuanocr15 making lightweight ocr vlms faster and better",
+        "url:https://arxiv.org/abs/2607.04884"
+      ],
+      "record": {
+        "title": "HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better",
+        "source_url": "https://arxiv.org/abs/2607.04884",
+        "year": 2026,
+        "published": "2026-07-06",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present HunyuanOCR-1.5, a lightweight end-to-end OCR-specialized vision-language model. HunyuanOCR unifies document parsing, text spotting, information extraction, text-image translation, and multi-image document understanding within a single end-to-end VLM. Building upon the lightweight architecture of HunyuanOCR-1.0, HunyuanOCR-1.5 does not redesign the backbone, but systematically improves both efficiency and capability. For efficiency, we adapt DFlash to OCR decoding, significantly reducing the latency of long structured outputs such as dense documents, tables, and formulas while preserving output distribution. Powered by DFlash, HunyuanOCR-1.5 achieves a 6.37x Transformer inference speedup and a 2.14x speedup under vLLM, delivering the fastest inference among lightweight OCR VLMs. For capability, we propose Agentic Data Flow, an agent-driven data construction system that transforms model weaknesses into executable data requirements and autonomously performs material search, quality verification, and pipeline development. It substantially improves long-tail capabilities in ancient-script OCR, fine-grained chart and table parsing, multi-image text-centric QA, low-resource multilingual parsing, and document hallucination evaluation. HunyuanOCR-1.5 ranks among the top-tier end-to-end OCR solutions on OmniDocBench v1.6 while achieving new performance milestones across these long-tail tasks. Combined with an upgraded pretraining and post-training recipe, HunyuanOCR-1.5 further extends its capability in high-resolution, long-context, and multi-task scenarios. Experiments demonstrate faster inference, broader OCR capability coverage, and the deployment advantages of a lightweight end-to-end model. We will release the model weights and training code to support future research and real-world OCR applications.",
+        "identifiers": [
+          "SemanticScholar:82f9b645066610612839c8bd8cab810eb201d6fd"
+        ],
+        "semantic_scholar_id": "82f9b645066610612839c8bd8cab810eb201d6fd",
+        "canonical_id": "arXiv:2607.04884",
+        "arxiv_id": "2607.04884",
+        "doi": "10.48550/arXiv.2607.04884",
+        "authors": [
+          "Gengluo Li",
+          "Xingyu Wan",
+          "Shangpin Peng",
+          "Wei-Nong Wang",
+          "Hao Feng",
+          "Yong-Kun Du",
+          "Bing-Hong Wu",
+          "Zheng-Hao Ruan",
+          "Zhiqiong Lu",
+          "Liang Wu",
+          "Pengyuan Lyu",
+          "Hua-Wen Shen",
+          "Zibin Lin",
+          "Shi-Jing Hu",
+          "Jie Yang",
+          "Hongbing Wen",
+          "Guang-Hua Yu",
+          "Hong Liu",
+          "Bo-Chao Wang",
+          "Can Ma",
+          "Han Hu",
+          "Cheng-Quan Zhang",
+          "Yu ZHOU"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 94,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.08584",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.08584",
+        "id:SemanticScholar:8f00ffce9ea4464b25dd1f2700d975ab1314ef6f",
+        "id:arXiv:2604.08584",
+        "title:csattention centroidscoring attention for accelerating llm inference",
+        "url:https://arxiv.org/abs/2604.08584"
+      ],
+      "record": {
+        "title": "CSAttention: Centroid-Scoring Attention for Accelerating LLM Inference",
+        "source_url": "https://arxiv.org/abs/2604.08584",
+        "year": 2026,
+        "published": "2026-03-30",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context LLMs increasingly rely on extended, reusable prefill prompts for agents and domain Q&A, pushing attention and KV-cache to become the dominant decode-time bottlenecks. While sparse attention reduces computation and transfer costs, it often struggles to maintain accuracy at high sparsity levels due to the inherent distribution shift between Queries and Keys. We propose Centroid-Scoring Attention (CSAttention), a training-free sparse attention method optimized for high-throughput serving of reusable contexts. CSAttention adopts a storage-for-computation strategy tailored to the offline-prefill/online-decode setting: it front-loads computation into a one-time offline prefill phase that can be amortized across multiple queries, while aggressively optimizing per-step decoding latency. Specifically, CSAttention constructs query-centric lookup tables during offline prefill, whose size remains fixed during decoding, and enables online decoding to replace full-context scans with efficient table lookups and GPU-friendly score accumulation. Extensive experiments demonstrate that CSAttention achieves near-identical accuracy to full attention. Under high sparsity (95%) and long-context settings (32K-128K), CSAttention consistently outperforms state-of-the-art sparse attention methods in both model accuracy and inference speed, achieving up to 4.6x inference speedup over the most accurate baseline at a context length of 128K.",
+        "identifiers": [
+          "SemanticScholar:8f00ffce9ea4464b25dd1f2700d975ab1314ef6f"
+        ],
+        "semantic_scholar_id": "8f00ffce9ea4464b25dd1f2700d975ab1314ef6f",
+        "canonical_id": "arXiv:2604.08584",
+        "arxiv_id": "2604.08584",
+        "doi": "10.48550/arXiv.2604.08584",
+        "authors": [
+          "Chu-Xu Song",
+          "Zhen-Can Peng",
+          "Jiu-Qi Wei",
+          "Chuan-Hui Yang"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 192,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.12798",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.12798",
+        "id:SemanticScholar:2f2a962223134684eb56dc132226fd18cbb57f08",
+        "id:arXiv:2604.12798",
+        "title:vfa relieving vector operations in flash attention with global maximum precomputation",
+        "url:https://arxiv.org/abs/2604.12798"
+      ],
+      "record": {
+        "title": "VFA: Relieving Vector Operations in Flash Attention with Global Maximum Pre-computation",
+        "source_url": "https://arxiv.org/abs/2604.12798",
+        "year": 2026,
+        "published": "2026-04-14",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "FlashAttention-style online softmax enables exact attention computation with linear memory by streaming score tiles through on-chip memory and maintaining a running maximum and normalizer. However, as attention kernels approach peak tensor-core/cube-core throughput on modern accelerators, non-matmul components of online softmax -- especially per-tile rowmax and rowsum reductions and rescale chains -- can become vector or SIMD limited and dominate latency. This paper revisits FlashAttention and proposes Vector Relieved Flash Attention (VFA), a hardware-friendly method that reduces rowmax-driven updates of the running maximum while retaining the online-softmax structure. VFA initializes the running maximum via a cheap approximation from key-block representations, reorders key-block traversal to prioritize high-impact sink and local blocks, and freezes the maximum for remaining blocks to avoid repeated reductions and rescaling. We further integrate VFA with block-sparse skipping methods such as BLASST to form Vector Relieved Sparse Attention (VSA), which reduces both block count and per-block overhead. Notably, VFA and VSA completely avoid the conditional rescale operation in the update stage used in FA4.0. Extensive evaluations on benchmarks including MMLU and MATH500, together with attention statistics, verify our design: (i) sink and local reordering stabilizes the running maximum early; (ii) simple Q and K block summaries fail due to intra-block heterogeneity; (iii) m-initialization is required when maxima appear in middle blocks. Overall, VFA and VSA efficiently alleviate online-softmax reduction bottlenecks without performance loss. Compared to the C16V32 baseline, C8V32, C4V32 and C4V16 achieve nearly two times speedup on modern hardware while hitting the vector bottleneck. With upcoming architecture improvements, C4V16 will deliver six times speedup by enhancing exponent capacity.",
+        "identifiers": [
+          "SemanticScholar:2f2a962223134684eb56dc132226fd18cbb57f08"
+        ],
+        "semantic_scholar_id": "2f2a962223134684eb56dc132226fd18cbb57f08",
+        "canonical_id": "arXiv:2604.12798",
+        "arxiv_id": "2604.12798",
+        "doi": "10.48550/arXiv.2604.12798",
+        "authors": [
+          "Yupeng Sun",
+          "Yanzhao Li",
+          "Zhiqiang Zou",
+          "B. Du",
+          "Zhiyuan Zhang",
+          "Huilin Dong",
+          "G. Fan",
+          "Hui Wang"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 177,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.10537",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.10537",
+        "id:SemanticScholar:27ef7de54553661516c27b10c3339d1ef6cbe24f",
+        "id:arXiv:2606.10537",
+        "title:prefillingdllm predictive prefilling for longcontext inference in diffusion language models",
+        "url:https://arxiv.org/abs/2606.10537"
+      ],
+      "record": {
+        "title": "Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2606.10537",
+        "year": 2026,
+        "published": "2026-06-09",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models (dLLMs) re-encode the entire prefix at every denoising step, causing recomputation that scales quadratically with context length and becomes prohibitive for long-context scenarios. We propose Prefilling-dLLM, a training-free prefill-decode disaggregation framework for dLLMs that partitions the prefix into N chunks, caches their KV representations once, and selects the top-K most relevant chunks with intra-chunk token sparsity for decoding, showing that sparse prefilling can outperform dense attention while reducing per-step complexity from quadratic in the full sequence length to quadratic only in the decode length. On LongBench and InfiniteBench, Prefilling-dLLM achieves state-of-the-art quality among dLLM acceleration methods, and an attention kernel that parallelizes decoding over the non-contiguously cached chunk KV yields 9.1--28.0x speedup at 8K--32K contexts. We further show that beginning-of-sequence tokens prepended to each chunk act as periodic attention anchors that eliminate the lost-in-the-middle phenomenon. Code is available at https://github.com/menik1126/Prefilling-dLLM.",
+        "identifiers": [
+          "SemanticScholar:27ef7de54553661516c27b10c3339d1ef6cbe24f"
+        ],
+        "semantic_scholar_id": "27ef7de54553661516c27b10c3339d1ef6cbe24f",
+        "canonical_id": "arXiv:2606.10537",
+        "arxiv_id": "2606.10537",
+        "doi": "10.48550/arXiv.2606.10537",
+        "authors": [
+          "Jingfei Xiong",
+          "Qilong Han",
+          "Shansan Gong",
+          "Yun-Ta Hsieh",
+          "Bo-Yuan Zheng",
+          "Cheng-Yue Wu",
+          "Chao-Fan Tao",
+          "Chenyang Zhao",
+          "Ngai Wong"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 121,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.09238",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.09238",
+        "id:SemanticScholar:f56b12228283cf42cf8120a18fee60849b965f83",
+        "id:arXiv:2512.09238",
+        "title:trainingfree contextadaptive attention for efficient long context modeling",
+        "url:https://arxiv.org/abs/2512.09238"
+      ],
+      "record": {
+        "title": "Training-free Context-adaptive Attention for Efficient Long Context Modeling",
+        "source_url": "https://arxiv.org/abs/2512.09238",
+        "year": 2025,
+        "published": "2025-12-10",
+        "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities across a wide range of natural language processing tasks. These capabilities stem primarily from the self-attention mechanism, which enables the modeling of long-range dependencies. However, the quadratic complexity of self-attention with respect to sequence length poses significant computational and memory challenges, especially as sequence length extends to extremes. While various sparse attention and KV cache compression methods have been proposed to improve efficiency, they often suffer from limitations such as reliance on fixed patterns, inability to accelerate both prefilling and decoding stages, or the requirement for additional training. In this paper, we propose Training-free Context-adaptive Attention (TCA-Attention), a training-free sparse attention mechanism that selectively attends to only the informative tokens for efficient long-context inference. Our method consists of two lightweight phases: i) an offline calibration phase that determines head-specific sparsity budgets via a single forward pass, and ii) an online token selection phase that adaptively retains core context tokens using a lightweight redundancy metric. TCA-Attention provides a unified solution that accelerates both prefilling and decoding while reducing the KV cache memory footprint, without requiring parameter updates or architectural changes. Theoretical analysis shows that our approach maintains bounded approximation error. Extensive experiments demonstrate that TCA-Attention achieves a 2.8× speedup and reduces KV cache by 61% at 128K context length while maintaining performance comparable to full attention across various benchmarks, offering a practical plug-and-play solution for efficient long-context inference.",
+        "identifiers": [
+          "SemanticScholar:f56b12228283cf42cf8120a18fee60849b965f83"
+        ],
+        "semantic_scholar_id": "f56b12228283cf42cf8120a18fee60849b965f83",
+        "canonical_id": "arXiv:2512.09238",
+        "arxiv_id": "2512.09238",
+        "doi": "10.48550/arXiv.2512.09238",
+        "authors": [
+          "Zeng You",
+          "Yao-Fo Chen",
+          "Shu-Hai Zhang",
+          "Zhijie Qiu",
+          "Ting Wu",
+          "Ying-Jian Li",
+          "Yaowei Wang",
+          "Ming-Kui Tan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 302,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/infocom59046.2026.11571411",
+      "identity_tokens": [
+        "id:DOI:10.1109/infocom59046.2026.11571411",
+        "id:SemanticScholar:77d0136313411122d60e879a9c8bd3674e0744c4",
+        "title:memoryefficient kv cache optimization for large language model inference at the edge",
+        "url:https://doi.org/10.1109/INFOCOM59046.2026.11571411"
+      ],
+      "record": {
+        "title": "Memory-Efficient KV Cache Optimization for Large Language Model Inference at the Edge",
+        "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571411",
+        "year": 2026,
+        "published": "2026-05-18",
+        "venue": "IEEE Conference on Computer Communications",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of large language models (LLMs) on edge devices offers notable advantages in privacy preservation, low-latency response, and operational autonomy, but faces significant challenges due to the memory-intensive key-value (KV) cache required for autoregressive decoding. Sparse attention methods alleviate computational costs but typically fail to preserve the generation quality and inference efficiency under memory constraints, which becomes particularly acute on edge platforms. In this paper, we first formalize and prove the NP-hardness of the KV cache replacement problem under top-k sparse attention, where k is the number of pages involved in each attention calculation. Then, we propose LiteKV, a lightweight memory-efficient online KV cache replacement algorithm tailored for edge-based LLM inference. LiteKV introduces a (1 + ϵ)-relaxation strategy that tolerates minimal precision loss in attention scores, allowing significant improvements in cache utilization. Moreover, LiteKV is orthogonal to existing sparse attention and quantization methods, enabling scalable, high-performance LLM inference under stringent memory budgets. We provide theoretical guarantees on LiteKV’s competitive ratio under realistic attention score distributions. Experiments on real-world workloads demonstrate that LiteKV reduces memory usage by up to 75% compared to state-of-the-art memory-unconstrained baselines, while preserving comparable generation quality and 95% of their decoding efficiency.",
+        "identifiers": [
+          "SemanticScholar:77d0136313411122d60e879a9c8bd3674e0744c4"
+        ],
+        "semantic_scholar_id": "77d0136313411122d60e879a9c8bd3674e0744c4",
+        "doi": "10.1109/INFOCOM59046.2026.11571411",
+        "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571411",
+        "authors": [
+          "Chi Zhang",
+          "Haisheng Tan",
+          "Hao Pan",
+          "Yang Xu",
+          "Haohua Du",
+          "Li Zhang",
+          "Xiao-Hui Fu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 143,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.02086",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.02086",
+        "id:SemanticScholar:3508e210163ae8438ae2b38225ff969f5cde14fa",
+        "id:arXiv:2501.02086",
+        "title:instructionfollowing pruning for large language models",
+        "url:https://arxiv.org/abs/2501.02086"
+      ],
+      "record": {
+        "title": "Instruction-Following Pruning for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2501.02086",
+        "year": 2025,
+        "published": "2025-01-03",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 25,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the rapid scaling of large language models (LLMs), structured pruning has become a widely used technique to learn efficient, smaller models from larger ones, delivering superior performance compared to training similarly sized models from scratch. In this paper, we move beyond the traditional static pruning approach of determining a fixed pruning mask for a model, and propose a dynamic approach to structured pruning. In our method, the pruning mask is input-dependent and adapts dynamically based on the information described in a user instruction. Our approach, termed\"instruction-following pruning\", introduces a sparse mask predictor that takes the user instruction as input and dynamically selects the most relevant model parameters for the given task. To identify and activate effective parameters, we jointly optimize the sparse mask predictor and the LLM, leveraging both instruction-following data and the pre-training corpus. Experimental results demonstrate the effectiveness of our approach on a wide range of evaluation benchmarks. For example, our 3B activated model improves over the 3B dense model by 5-8 points of absolute margin on domains such as math and coding, and rivals the performance of a 9B model.",
+        "identifiers": [
+          "SemanticScholar:3508e210163ae8438ae2b38225ff969f5cde14fa"
+        ],
+        "semantic_scholar_id": "3508e210163ae8438ae2b38225ff969f5cde14fa",
+        "canonical_id": "arXiv:2501.02086",
+        "arxiv_id": "2501.02086",
+        "doi": "10.48550/arXiv.2501.02086",
+        "authors": [
+          "Bai-Ru Hou",
+          "Qi-Bin Chen",
+          "Jianyu Wang",
+          "Guoli Yin",
+          "Chong Wang",
+          "Nan Du",
+          "Ruoming Pang",
+          "Shi-Yu Chang",
+          "Tao Lei"
+        ],
+        "priority": 35,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 25,
+          "citation_count": 25,
+          "total": 35,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 643,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.01144",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.01144",
+        "id:SemanticScholar:cd2cdaf7563147ff15233b1734067773d58e1866",
+        "id:arXiv:2501.01144",
+        "title:blockdialect blockwise finegrained mixed format quantization for energyefficient llm inference",
+        "url:https://arxiv.org/abs/2501.01144"
+      ],
+      "record": {
+        "title": "BlockDialect: Block-wise Fine-grained Mixed Format Quantization for Energy-Efficient LLM Inference",
+        "source_url": "https://arxiv.org/abs/2501.01144",
+        "year": 2025,
+        "published": "2025-01-02",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapidly increasing size of large language models (LLMs) presents significant challenges in memory usage and computational costs. Quantizing both weights and activations can address these issues, with hardware-supported fine-grained scaling emerging as a promising solution to mitigate outliers. However, existing methods struggle to capture nuanced block data distributions. We propose BlockDialect, a block-wise fine-grained mixed format technique that assigns a per-block optimal number format from a formatbook for better data representation. Additionally, we introduce DialectFP4, a formatbook of FP4 variants (akin to dialects) that adapt to diverse data distributions. To leverage this efficiently, we propose a two-stage approach for online DialectFP4 activation quantization. Importantly, DialectFP4 ensures energy efficiency by selecting representable values as scaled integers compatible with low-precision integer arithmetic. BlockDialect achieves 10.78% (7.48%) accuracy gain on the LLaMA3-8B (LLaMA2-7B) model compared to MXFP4 format with lower bit usage per data, while being only 5.45% (2.69%) below full precision even when quantizing full-path matrix multiplication. Focusing on how to represent over how to scale, our work presents a promising path for energy-efficient LLM inference.",
+        "identifiers": [
+          "SemanticScholar:cd2cdaf7563147ff15233b1734067773d58e1866"
+        ],
+        "semantic_scholar_id": "cd2cdaf7563147ff15233b1734067773d58e1866",
+        "canonical_id": "arXiv:2501.01144",
+        "arxiv_id": "2501.01144",
+        "doi": "10.48550/arXiv.2501.01144",
+        "authors": [
+          "Wonsuk Jang",
+          "Thierry Tambe"
+        ],
+        "priority": 24,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 24,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 644,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.09360",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.09360",
+        "id:SemanticScholar:91ce2245d50c91c3bc5d9310d264982a184e965e",
+        "id:arXiv:2402.09360",
+        "title:hire high recall approximate topk estimation for efficient llm inference",
+        "url:https://arxiv.org/abs/2402.09360"
+      ],
+      "record": {
+        "title": "HiRE: High Recall Approximate Top-k Estimation for Efficient LLM Inference",
+        "source_url": "https://arxiv.org/abs/2402.09360",
+        "year": 2024,
+        "published": "2024-02-14",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive decoding with generative Large Language Models (LLMs) on accelerators (GPUs/TPUs) is often memory-bound where most of the time is spent on transferring model parameters from high bandwidth memory (HBM) to cache. On the other hand, recent works show that LLMs can maintain quality with significant sparsity/redundancy in the feedforward (FFN) layers by appropriately training the model to operate on a top-$k$ fraction of rows/columns (where $k \\approx 0.05$), there by suggesting a way to reduce the transfer of model parameters, and hence latency. However, exploiting this sparsity for improving latency is hindered by the fact that identifying top rows/columns is data-dependent and is usually performed using full matrix operations, severely limiting potential gains. To address these issues, we introduce HiRE (High Recall Approximate Top-k Estimation). HiRE comprises of two novel components: (i) a compression scheme to cheaply predict top-$k$ rows/columns with high recall, followed by full computation restricted to the predicted subset, and (ii) DA-TOP-$k$: an efficient multi-device approximate top-$k$ operator. We demonstrate that on a one billion parameter model, HiRE applied to both the softmax as well as feedforward layers, achieves almost matching pretraining and downstream accuracy, and speeds up inference latency by $1.47\\times$ on a single TPUv5e device.",
+        "identifiers": [
+          "SemanticScholar:91ce2245d50c91c3bc5d9310d264982a184e965e"
+        ],
+        "semantic_scholar_id": "91ce2245d50c91c3bc5d9310d264982a184e965e",
+        "canonical_id": "arXiv:2402.09360",
+        "arxiv_id": "2402.09360",
+        "doi": "10.48550/arXiv.2402.09360",
+        "authors": [
+          "Yashas Samaga",
+          "V. Yerram",
+          "Chong You",
+          "Srinadh Bhojanapalli",
+          "Sanjiv Kumar",
+          "Prateek Jain",
+          "Praneeth Netrapalli"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 967,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00434",
+      "identity_tokens": [
+        "id:SemanticScholar:9020c3ff7ac719bbcbb0f61276c6bf8a0a8d7858",
+        "id:arXiv:2608.00434",
+        "title:adamtp an adaptive training paradigm for multitoken prediction",
+        "url:https://arxiv.org/abs/2608.00434"
+      ],
+      "record": {
+        "title": "AdaMTP: An Adaptive Training Paradigm for Multi-Token Prediction",
+        "source_url": "https://arxiv.org/abs/2608.00434",
+        "year": 2026,
+        "published": "2026-08-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-Token Prediction (MTP) has emerged as an effective paradigm that augments a shared Large Language Model backbone with auxiliary heads, training the model to predict several future tokens in parallel to enrich its supervision signal and accelerate inference. However, existing training frameworks adopt a rigid, fixed-length prediction horizon, disregarding the highly non-uniform information density of natural language and code. Forcing the auxiliary heads to predict across high-entropy semantic boundaries injects noisy, conflicting training signals; because these heads share the backbone's latent representations, the resulting gradients backpropagate and interfere with the model's core capabilities. We propose AdaMTP, an adaptive training paradigm that dynamically aligns the prediction horizon with the intrinsic predictability of the sequence. At its core, an entropy-based segmentation algorithm leverages the base model to detect sudden surges in uncertainty as semantic boundaries, partitioning sequences into variable-length groups. Each token is assigned an adaptive prediction depth, and a dynamically masked MTP objective suppresses the loss for predictions that cross these boundaries, attenuating the noisy gradients that degrade the backbone. Across mathematical reasoning, code generation, and general benchmarks on three backbones (Llama-3.1-8B, Qwen-2.5-7B, Gemma-3-12B), AdaMTP consistently outperforms standard MTP in both task performance and inference speedup.",
+        "identifiers": [
+          "SemanticScholar:9020c3ff7ac719bbcbb0f61276c6bf8a0a8d7858"
+        ],
+        "semantic_scholar_id": "9020c3ff7ac719bbcbb0f61276c6bf8a0a8d7858",
+        "canonical_id": "arXiv:2608.00434",
+        "arxiv_id": "2608.00434",
+        "authors": [
+          "Zi-Qiang Cui",
+          "Han Shi",
+          "Bowei He",
+          "Yu Pan",
+          "Peiyang Liu",
+          "Sheng-Yin Sun",
+          "Yan-Kai Chen",
+          "Hao-Li Bai",
+          "Yichun Yin",
+          "Xue Liu",
+          "Chen Ma"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 68,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31009",
+      "identity_tokens": [
+        "id:SemanticScholar:dd6f438611037b9db2ff9f12564bd6274b167097",
+        "id:arXiv:2609.31009",
+        "title:g2ptq improving llm posttraining quantization with generalized gradient compensation",
+        "url:https://arxiv.org/abs/2609.31009"
+      ],
+      "record": {
+        "title": "G$^2$PTQ: Improving LLM Post-Training Quantization with Generalized Gradient Compensation",
+        "source_url": "https://arxiv.org/abs/2609.31009",
+        "year": 2026,
+        "published": "2026-09-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) is a practical approach to reducing the memory and computational footprint of large language models (LLMs) without retraining. GPTQ-based methods have become the de facto standard, yet they suffer from two complementary limitations. Methods with local, layer-wise objectives lack global supervision; while methods with global objectives fix their Hessian estimates at the start and ignore first-order gradients, so their guidance grows stale as quantization proceeds. This paper presents G$^2$PTQ, a unified PTQ framework with Generalized Gradient Compensation that integrates both first- and second-order information under a globally supervised, block-wise optimization objective. By refreshing gradient and Hessian estimates before quantizing each Transformer block, G$^2$PTQ avoids the staleness of prior global methods. Furthermore, to stabilize the exact first-order compensation, we introduce a trust-region scaling mechanism that dynamically bounds the gradient step to prevent exploding weight updates. Finally, we derive efficient implementations for block-wise Hessian approximation and exact gradient compensation. Experimental results on various model families and bit-widths demonstrate that G$^2$PTQ enables better alignment with the full-precision model, outperforming state-of-the-art baselines. Code is available at: https://github.com/G2PTQ/G2PTQ.",
+        "identifiers": [
+          "SemanticScholar:dd6f438611037b9db2ff9f12564bd6274b167097"
+        ],
+        "semantic_scholar_id": "dd6f438611037b9db2ff9f12564bd6274b167097",
+        "canonical_id": "arXiv:2609.31009",
+        "arxiv_id": "2609.31009",
+        "authors": [
+          "Rui-Kang Liu",
+          "Hao-Li Bai",
+          "Yuxuan Sun",
+          "Qian Zhang",
+          "Wen-Zheng Cai",
+          "Yan-Qi Hao",
+          "Feiyu Wang",
+          "Wei-Dong Zhong",
+          "Zhu-Yue Wang",
+          "Tong Yang",
+          "Xiang-Sheng Zhou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 13,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31568",
+      "identity_tokens": [
+        "id:SemanticScholar:181ecbd0a1f87a72e93869a102a61f2e2dcf07db",
+        "id:arXiv:2609.31568",
+        "title:deepeduv1 efficient and scalable agentic llms for vietnamese education",
+        "url:https://arxiv.org/abs/2609.31568"
+      ],
+      "record": {
+        "title": "DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education",
+        "source_url": "https://arxiv.org/abs/2609.31568",
+        "year": 2026,
+        "published": "2026-09-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "AI tutoring could markedly improve learning outcomes for students in developing regions such as Vietnam, yet the two obvious paths both fall short. Cloud assistants such as ChatGPT route sensitive student data to foreign servers---violating data-sovereignty laws such as Vietnam's Decree 53---and, pre-trained on Western-centric corpora, are not organized around the national textbook curriculum, so their knowledge of local content is unsystematic and frequently hallucinated. Self-hosting an open model keeps data on-premise but hits a two-fold wall: post-training quantization (AWQ, GPTQ) tames the static weight footprint, yet the dynamic KV cache and prefill latency of long tutoring contexts still cause out-of-memory failures and slow responses on consumer GPUs, while the model keeps hallucinating on region-specific material. We present DeepEdu-v1, an AI-tutoring system for Vietnamese education built on SCALE (Self-improving Context-Aware Learning Engine), a framework with two innovations. First, a long-context inference engine amortizes token selection from per-sub-chunk to per-cluster granularity; on long-context retrieval it issues x7.7 fewer retrieval calls than a state-of-the-art selective-attention baseline, cutting prefill latency (TTFT) by roughly 35% while matching or improving task accuracy. Second, a self-improving agentic layer continuously curates a verified playbook from past interactions instead of fine-tuning, a design intended to progressively reduce reliance on dominant-language priors as trustworthy local knowledge accumulates. In its deployed configuration, DeepEdu achieves a nearly x2 TTFT speedup over standard vLLM serving and lifts agentic accuracy from 70.0% to 79.5% on complex tasks, with the strongest per-track gains across financial-reasoning and interactive-agent benchmarks.",
+        "identifiers": [
+          "SemanticScholar:181ecbd0a1f87a72e93869a102a61f2e2dcf07db"
+        ],
+        "semantic_scholar_id": "181ecbd0a1f87a72e93869a102a61f2e2dcf07db",
+        "canonical_id": "arXiv:2609.31568",
+        "arxiv_id": "2609.31568",
+        "authors": [
+          "Q. Nguyen",
+          "H. Nguyễn",
+          "H. Hoàng",
+          "T. Pham",
+          "Cong Tran",
+          "Nam Vu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 13,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38706",
+      "identity_tokens": [
+        "id:SemanticScholar:b29f1c09161c210d899d6b424d09213c03a6f8f0",
+        "id:arXiv:2609.38706",
+        "title:preserving provenance in shared kv caches for llm serving",
+        "url:https://arxiv.org/abs/2609.38706"
+      ],
+      "record": {
+        "title": "Preserving Provenance in Shared KV Caches for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.38706",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Production LLM serving stacks combine an inference engine's local prefix cache with a shared KV-cache tier for fleet-wide reuse. The local cache distinguishes requests by adapter, weight configuration and sharing domain, but the shared tier may key entries only by token content and coarse model metadata. This boundary erases provenance and lets identical tokens under incompatible computational or sharing contexts collide. We call this composition gap provenance-blind reuse and present its first systematic study. A source audit of three vLLM connectors confirms the structural omission, while runtime experiments reproduce it across vLLM and two SGLang releases, 12 models from 7 families (0.5 B-32 B), and over 160 configurations. Cross-adapter collisions reduce accuracy from 0.94 to 0.64, incompatible KV representations reduce reasoning accuracy to zero, and salt omission enables 93% prompt identification from timing. We formalize the missing guarantee as the KV provenance contract: for a declared dimension registry, shared keys must be injective over computational and sharing provenance, with identities stable across workers. Any dimension with a stable identity can therefore be added without connector-specific key logic. A canonical descriptor binds per-request and per-worker provenance into lookup and store keys, while a differential checker detects dimensions that change KV state without changing the key. Implemented in vLLM and SGLang 0.5.20 across three cache paths, provenance binding eliminates unsafe reuse while preserving legitimate sharing. Hit-path latency changes remain within 0.34 ms and below run-to-run variation; retention grows with provenance diversity.",
+        "identifiers": [
+          "SemanticScholar:b29f1c09161c210d899d6b424d09213c03a6f8f0"
+        ],
+        "semantic_scholar_id": "b29f1c09161c210d899d6b424d09213c03a6f8f0",
+        "canonical_id": "arXiv:2609.38706",
+        "arxiv_id": "2609.38706",
+        "authors": [
+          "Wei Song",
+          "Yu-Xin Cao",
+          "Xi Zheng",
+          "Leo Zhang",
+          "Xiao-Hun Cheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 8,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.05364",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.bigpicture-main.6",
+        "id:SemanticScholar:f0be13d09e0f8bd1f652b50cde0183a0324dec73",
+        "id:arXiv:2510.05364",
+        "title:the end of transformers on challenging attention and the rise of subquadratic architectures",
+        "url:https://arxiv.org/abs/2510.05364"
+      ],
+      "record": {
+        "title": "The End of Transformers? On Challenging Attention and the Rise of Sub-Quadratic Architectures",
+        "source_url": "https://arxiv.org/abs/2510.05364",
+        "year": 2025,
+        "published": "2025-10-06",
+        "venue": "Proceedings of The Big Picture v2: Crafting a Research Narrative",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have dominated sequence processing tasks for the past seven years -- most notably language modeling. However, the inherent quadratic complexity of their attention mechanism remains a significant bottleneck as context length increases. This paper surveys recent efforts to overcome this bottleneck, including advances in (sub-quadratic) attention variants, recurrent neural networks, state space models, and hybrid architectures. We critically analyze these approaches in terms of compute and memory complexity, benchmark results, and fundamental limitations to assess whether the dominance of pure-attention transformers may soon be challenged.",
+        "identifiers": [
+          "SemanticScholar:f0be13d09e0f8bd1f652b50cde0183a0324dec73"
+        ],
+        "semantic_scholar_id": "f0be13d09e0f8bd1f652b50cde0183a0324dec73",
+        "canonical_id": "arXiv:2510.05364",
+        "arxiv_id": "2510.05364",
+        "doi": "10.18653/v1/2026.bigpicture-main.6",
+        "authors": [
+          "Alexander M. Fichtl",
+          "Jeremias Bohn",
+          "Josefin Kelber",
+          "Edoardo Mosca",
+          "Georg Groh"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 367,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:61599f7d6d202fa5b7cd1055dd194f2182ef773c",
+      "identity_tokens": [
+        "id:SemanticScholar:61599f7d6d202fa5b7cd1055dd194f2182ef773c",
+        "title:car an efficient kv cache reuse system for large language model inference",
+        "url:https://www.semanticscholar.org/paper/61599f7d6d202fa5b7cd1055dd194f2182ef773c"
+      ],
+      "record": {
+        "title": "CaR: An Efficient KV Cache Reuse System for Large Language Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/61599f7d6d202fa5b7cd1055dd194f2182ef773c",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:61599f7d6d202fa5b7cd1055dd194f2182ef773c"
+        ],
+        "semantic_scholar_id": "61599f7d6d202fa5b7cd1055dd194f2182ef773c",
+        "canonical_id": "SemanticScholar:61599f7d6d202fa5b7cd1055dd194f2182ef773c",
+        "authors": [
+          "Kexin Chu",
+          "Tzechinh Liu",
+          "Yun-Ding Li",
+          "Pengchao Yuan",
+          "Wei Zhang"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.14597",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.14597",
+        "id:SemanticScholar:bbcc2ca90b7f852cb2abade5067bc8d0e9351f05",
+        "id:arXiv:2405.14597",
+        "title:integer scale a free lunch for faster finegrained quantization of llms",
+        "url:https://arxiv.org/abs/2405.14597"
+      ],
+      "record": {
+        "title": "Integer Scale: A Free Lunch for Faster Fine-grained Quantization of LLMs",
+        "source_url": "https://arxiv.org/abs/2405.14597",
+        "year": 2024,
+        "published": "2024-05-23",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce Integer Scale, a novel post-training quantization scheme for large language models that effectively resolves the inference bottleneck in current fine-grained quantization approaches while maintaining similar accuracies. Integer Scale is a free lunch as it requires no extra calibration or fine-tuning which will otherwise incur additional costs. It can be used plug-and-play for most fine-grained quantization methods. Its integration results in at most 1.85x end-to-end speed boost over the original counterpart with comparable accuracy. Additionally, due to the orchestration of the proposed Integer Scale and fine-grained quantization, we resolved the quantization difficulty for Mixtral-8x7B and LLaMA-3 models with negligible performance degradation, and it comes with an end-to-end speed boost of 2.13x, and 2.31x compared with their FP16 versions respectively.",
+        "identifiers": [
+          "SemanticScholar:bbcc2ca90b7f852cb2abade5067bc8d0e9351f05"
+        ],
+        "semantic_scholar_id": "bbcc2ca90b7f852cb2abade5067bc8d0e9351f05",
+        "canonical_id": "arXiv:2405.14597",
+        "arxiv_id": "2405.14597",
+        "doi": "10.48550/arXiv.2405.14597",
+        "authors": [
+          "Qing-Yuan Li",
+          "Ran Meng",
+          "Yiduo Li",
+          "Bo Zhang",
+          "Yifan Lu",
+          "Yerui Sun",
+          "Lin Ma",
+          "Yu-Chen Xie"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 868,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f157c8683033622b6252050dceec51815fc53c498f177583d8d5bb2eb507f55d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

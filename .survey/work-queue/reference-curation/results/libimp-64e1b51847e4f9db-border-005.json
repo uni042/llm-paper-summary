@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-64e1b51847e4f9db-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.18056",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.18056",
+    "identity_tokens": [
+      "arXiv:2606.18056"
+    ],
+    "reason": "Plausible inference design, but checked cost evidence is training FLOPs only.",
+    "first_checked_at": "2026-10-05T12:02:44+00:00",
+    "last_checked_at": "2026-10-05T12:02:44+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "ConSA: Controllable Sparsity in Hybrid Attention via Learnable Allocation"
+  },
+  "processed_at": "2026-10-05T12:02:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-64e1b51847e4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f23b9c580d65dae-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.05802",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.05802",
+    "identity_tokens": [
+      "arXiv:2605.05802"
+    ],
+    "reason": "Selective Rollout stops converged multi-sample agent trajectories during GRPO training; its Qwen2.5-7B/ALFWorld run reports 10.7% lower training wall-clock and a directional +2.5 pp held-out shift, but transfer and significance are limited (four seeds, one model/environment). It reduces training-rollout work rather than deployed inference cost.",
+    "first_checked_at": "2026-10-06T16:04:32+00:00",
+    "last_checked_at": "2026-10-06T16:04:32+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Selective Rollout: Mid-Trajectory Termination for Multi-Sample Agent RL"
+  },
+  "processed_at": "2026-10-06T16:04:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f23b9c580d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

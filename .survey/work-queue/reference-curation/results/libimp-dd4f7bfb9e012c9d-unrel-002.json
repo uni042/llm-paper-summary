@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd4f7bfb9e012c9d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.15547",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.15547",
+    "identity_tokens": [
+      "arXiv:2503.15547"
+    ],
+    "reason": "Contribution is prompt-flow security and privilege-escalation mitigation for agents, not inference efficiency. Primary abstract: Large Language Models (LLMs) are combined with tools to create powerful LLM agents that provide a wide range of services. Unlike traditional software, LLM agent's behavior is determined at runtime by natural language prompts from either user or tool's data. This flexibility enables a new computing paradigm with unlimited capabilities and programmability, but also introduces new security risks, vulnerable to privilege escalation attacks. Moreover, user prompts are prone to be",
+    "first_checked_at": "2026-10-05T12:24:54+00:00",
+    "last_checked_at": "2026-10-05T12:24:54+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
+    ],
+    "title": "Prompt Flow Integrity to Prevent Privilege Escalation in LLM Agents"
+  },
+  "processed_at": "2026-10-05T12:24:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd4f7bfb9e01",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261101-0349-scheduled-chat-45/r01",
+  "reference_main_sha": "e15fd0b7697a3f77485d7a311e9eb192a0494803",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.09436",
+      "identity_tokens": [
+        "arXiv:2310.09436",
+        "DOI:10.48550/arXiv.2310.09436"
+      ],
+      "title": "Sub-network Discovery and Soft-masking for Continual Learning of Mixed Tasks",
+      "reason": "原著arXivの要旨によると、異種タスクの継続学習で破滅的忘却を防ぎつつ知識転移を促すため、タスクごとにサブネットワークを発見し、過去の知識を保護するsoft-maskingを用いる。分類・生成・情報抽出のタスクで学習性能を比較する研究であり、LLM推論サービング、KVキャッシュ、推論カーネル、メモリ階層、デコードの効率改善を提案・評価していないため、現在の推論システム技術サーベイではunrelatedと判定。",
+      "source_url": "https://arxiv.org/abs/2310.09436",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T03:54:35+09:00",
+      "last_checked_at": "2026-11-01T03:54:35+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 500"
+      ],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

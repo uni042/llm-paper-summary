@@ -1,0 +1,178 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r02",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.20507",
+      "identity_tokens": [
+        "arXiv:2607.20507",
+        "DOI:10.48550/arXiv.2607.20507"
+      ],
+      "title": "CacheSpec: Finding the Sweet Spot for Small Models in Large Language Models",
+      "reason": "arXiv現行v2の正式題名はCacheSpecであり、worklistのMiniCacheとは異なるため同一arXivの題名変更として扱う。PoT型プログラムを再利用キャッシュに変換し、小型モデルを変数抽出と投機ドラフトに兼用する。最大約3.1倍の遅延改善、並列サービングで約2.8倍のスループット改善を報告し、LLM推論の直接的な高速化に該当する。",
+      "source_url": "https://arxiv.org/abs/2607.20507",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:31:50+09:00",
+      "last_checked_at": "2026-10-30T20:31:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 196,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.21869",
+      "identity_tokens": [
+        "arXiv:2606.21869",
+        "DOI:10.48550/arXiv.2606.21869"
+      ],
+      "title": "The Language-Energy Divide: Measuring Energy Costs of Multilingual LLM Inference",
+      "reason": "ML.Energyを使って多言語LLM推論のエネルギー消費を比較し、出力トークン当たり最大8.3倍、固定要求集合の総エネルギーは英語17.6kJ対パシュトー語3147kJと最大179倍の差を報告する。生成トークン数と文字体系によるエネルギー費用を分解した推論評価研究で、サービング効率の測定・ベンチマーク系統に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2606.21869",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:31:50+09:00",
+      "last_checked_at": "2026-10-30T20:31:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 197,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.02816",
+      "identity_tokens": [
+        "arXiv:2604.02816",
+        "DOI:10.48550/arXiv.2604.02816"
+      ],
+      "title": "QAPruner: Quantization-Aware Vision Token Pruning for Multimodal Large Language Models",
+      "reason": "W4A4など低ビットMLLMで通常の意味類似度による視覚トークン間引きが重要な活性outlierを捨て、量子化誤差を悪化させる問題を扱う。group-wise量子化誤差とoutlier強度を統合した重要度でトークンを選び、視覚トークン12.5%保持で比較方式より精度2.24%改善したと報告する。",
+      "source_url": "https://arxiv.org/abs/2604.02816",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:31:50+09:00",
+      "last_checked_at": "2026-10-30T20:31:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 198,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.208",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.208"
+      ],
+      "title": "MeMoTune: A Measure and Moment-Driven Fine-Tuning Framework for Quantized Large Language Models",
+      "reason": "ACL Anthologyの一次要旨は、量子化済みLLMを確率測度空間で低ランク微調整し、scaled gradientで収束と頑健性を高める学習法を主題とする。Llama2-13B GSM8Kの精度5.5ポイント改善を示すが、推論時の実測速度・KV・サービング最適化が主貢献ではないため境界扱い。",
+      "source_url": "https://aclanthology.org/2025.findings-acl.208/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:31:50+09:00",
+      "last_checked_at": "2026-10-30T20:31:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 199,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11133184",
+      "identity_tokens": [
+        "DOI:10.1109/DAC63849.2025.11133184"
+      ],
+      "title": "Precon: A Precision-Convertible Architecture for Accelerating Quantized Deep Learning Models across Various Domains Including LLMs",
+      "reason": "著者所属大学の一次研究概要によると、FP16デコードと整数分解を切り替える共有演算器によりINT4-FP16、INT4-INT4、INT4-INT8を単一アーキテクチャで支援する。LLMを含む量子化推論を対象に最大4.1倍高速化と81.4%省エネルギーを報告。ただし最大値は複数ドメイン全体の値でありLLM単独の保証ではない。",
+      "source_url": "https://khu.elsevierpure.com/en/publications/precon-a-precision-convertible-architecture-for-accelerating-quan/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:31:50+09:00",
+      "last_checked_at": "2026-10-30T20:31:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 200,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.17470",
+      "identity_tokens": [
+        "arXiv:2405.17470",
+        "DOI:10.48550/arXiv.2405.17470"
+      ],
+      "title": "Athena: Efficient Block-Wise Post-Training Quantization for Large Language Models Using Second-Order Matrix Derivative Information",
+      "reason": "二階行列微分情報による曲率を利用し、重みを行・列のブロックに分けて量子化とパラメータ更新を反復する後量子化法。大規模LLMの記憶量・計算量を減らしつつ品質を保つことを目的とする直接的な圧縮研究。",
+      "source_url": "https://arxiv.org/abs/2405.17470",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:31:50+09:00",
+      "last_checked_at": "2026-10-30T20:31:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 201,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.09471",
+      "identity_tokens": [
+        "arXiv:2508.09471",
+        "DOI:10.48550/arXiv.2508.09471"
+      ],
+      "title": "EGGS-PTP: An Expander-Graph Guided Structured Post-training Pruning Method for Large Language Models",
+      "reason": "エキスパンダーグラフの情報流保存を手掛かりにN:M構造的枝刈りパターンを設計し、LLMのパラメータ量と計算量を削減する。一次要旨は既存の構造的枝刈りに対する精度改善と速度・メモリ削減を報告しており、推論向けモデル圧縮に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2508.09471",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:31:50+09:00",
+      "last_checked_at": "2026-10-30T20:31:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 202,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.12928",
+      "identity_tokens": [
+        "arXiv:2604.12928",
+        "DOI:10.48550/arXiv.2604.12928"
+      ],
+      "title": "MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models",
+      "reason": "フルデュプレックス音声LLMが会話を始めてから主要情報を話すまでの時間差に検索処理を重ね、外部知識を非同期に取得する。モデルを大型化せず応答の事実性を高め、会話の即時性を維持する推論時オーケストレーションである。速度比の明示は要旨にないため、数値的な高速化とは断定しない。",
+      "source_url": "https://arxiv.org/abs/2604.12928",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:31:50+09:00",
+      "last_checked_at": "2026-10-30T20:31:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 205,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.09061",
+      "identity_tokens": [
+        "arXiv:2506.09061",
+        "DOI:10.48550/arXiv.2506.09061"
+      ],
+      "title": "EdgeProfiler: A Fast Profiling Framework for Lightweight LLMs on Edge Using Analytical Model",
+      "reason": "TinyLLaMA、Gemma3.1B、Llama3.2-1B、DeepSeek-R1-1.5Bをエッジで解析モデルと実測によりプロファイルし、遅延・FLOPs・電力を推定する。INT4ではモデルメモリ60～70%削減、FP16比推論速度2～3倍、モデル化された電力35～50%削減を報告。電力削減はモデル推定と区別する。",
+      "source_url": "https://arxiv.org/abs/2506.09061",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:31:50+09:00",
+      "last_checked_at": "2026-10-30T20:31:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 206,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.12065",
+      "identity_tokens": [
+        "arXiv:2505.12065",
+        "DOI:10.48550/arXiv.2505.12065"
+      ],
+      "title": "Demystifying and Enhancing the Efficiency of Large Language Model Based Search Agents",
+      "reason": "SearchAgent-Xは検索と生成の交互実行で生じる検索停止と遅延の連鎖を分析し、高再現率の近似検索、優先度スケジューリング、non-stall retrievalを組み合わせる。vLLM/HNSW系の比較で最大3.4倍のスループット、最大5倍の遅延改善を報告する推論システム研究。",
+      "source_url": "https://arxiv.org/abs/2505.12065",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:31:50+09:00",
+      "last_checked_at": "2026-10-30T20:31:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 207,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

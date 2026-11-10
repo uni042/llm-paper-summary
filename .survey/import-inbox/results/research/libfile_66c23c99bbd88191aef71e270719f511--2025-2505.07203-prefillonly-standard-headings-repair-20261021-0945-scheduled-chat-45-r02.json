@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7b9a1bfaba80162ed0023c930ff2b0c462f4ffc900becb9ef0eb87d8cd624b73",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_66c23c99bbd88191aef71e270719f511--2025-2505.07203-prefillonly-standard-headings-repair-20261021-0945-scheduled-chat-45-r02.md",
+  "canonical_id": "arXiv:2505.07203",
+  "worker_completed_at": "2026-10-21T10:04:49+09:00",
+  "worker_run_key": "20261021-0945-scheduled-chat-45/r02",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8896,
+    "body_paragraphs": 51,
+    "method_chars": 3467,
+    "method_paragraphs": 21,
+    "evaluation_chars": 2003,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md と 23 段落 / 4751文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T18:34:05+00:00"
+}

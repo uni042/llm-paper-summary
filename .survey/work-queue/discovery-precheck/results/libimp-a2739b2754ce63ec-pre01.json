@@ -1,0 +1,719 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a2739b2754ce63ec-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a2739b2754ce",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2501.16385",
+    "arXiv:2602.22592",
+    "arXiv:2604.10180",
+    "arXiv:2606.04349",
+    "arXiv:2606.29629",
+    "arXiv:2608.04771",
+    "arXiv:2609.24698"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "adc562db0d0ac2a642b6288851c26b6468446794",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T21:05:15.126017+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2501.16385",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.22592",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.10180",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.04349",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.29629",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.04771",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.24698",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Fewer Tokens, Smaller Cache: Reward-Coordinated Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2608.04771",
+      "year": 2026,
+      "published": "2026-08-05",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) excel on complex tasks through long chain-of-thought (CoT) reasoning, but their lengthy intermediate steps cause severe overthinking that inflates inference cost. KV-cache compression is a common solution, yet existing reasoning-oriented methods apply a uniform policy across the trajectory and judge compression only by what it removes from the cache. Two observations point the other way. First, a reasoning state's tolerance to context loss varies along the trajectory, and process reward tracks it: deleting tokens at high-reward steps preserves accuracy far better than deleting the same budget at random. Second, compression is not free on the generation side, since a smaller cache leads the model to generate more tokens, partly canceling the saving. Together these motivate coordinating both sides under a single process reward. We propose ReCo (Reward-Coordinated Compression), a step-wise framework in which a lightweight process-reward estimator scores each completed step and drives three components: (1) reward-adaptive KV-cache compression that shrinks the retained cache harder at high-reward steps and less at low-reward ones, (2) a reward-banded penalty on reflection tokens that curbs redundant generation, and (3) confidence-based early stopping that triggers when the reasoning is reliable. Across three reasoning models and six benchmarks, ReCo reduces generated tokens by 37%-65% and end-to-end latency by 2.08x-2.35x over Full CoT, all while largely preserving accuracy.",
+      "identifiers": [
+        "SemanticScholar:a9023cec0566ec56962857115767aa131891f1db"
+      ],
+      "semantic_scholar_id": "a9023cec0566ec56962857115767aa131891f1db",
+      "canonical_id": "arXiv:2608.04771",
+      "arxiv_id": "2608.04771",
+      "authors": [
+        "Qi-Yuan Zhu",
+        "De-Zhi Li",
+        "Pengyu Cheng",
+        "Tian-Le Chen",
+        "Jiacheng Wang",
+        "Ruijie Shen",
+        "Hao Gu",
+        "Si-Da Lin",
+        "Zi-Rui Liu",
+        "Jia-Cheng Liu",
+        "Si-Rui Han"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 84,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "pQuant: Towards Effective Low-Bit Language Models via Decoupled Linear Quantization-Aware Training",
+      "source_url": "https://arxiv.org/abs/2602.22592",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization-Aware Training from scratch has emerged as a promising approach for building efficient large language models (LLMs) with extremely low-bit weights (sub 2-bit), which can offer substantial advantages for edge deployment. However, existing methods still fail to achieve satisfactory accuracy and scalability. In this work, we identify a parameter democratization effect as a key bottleneck: the sensitivity of all parameters becomes homogenized, severely limiting expressivity. To address this, we propose pQuant, a method that decouples parameters by splitting linear layers into two specialized branches: a dominant 1-bit branch for efficient computation and a compact high-precision branch dedicated to preserving the most sensitive parameters. Through tailored feature scaling, we explicitly guide the model to allocate sensitive parameters to the high-precision branch. Furthermore, we extend this branch into multiple, sparsely-activated experts, enabling efficient capacity scaling. Extensive experiments indicate our pQuant achieves state-of-the-art performance in extremely low-bit quantization.",
+      "identifiers": [
+        "SemanticScholar:b82bb0e9fd5f8d490884811ef77a3aaa9fba63b5"
+      ],
+      "semantic_scholar_id": "b82bb0e9fd5f8d490884811ef77a3aaa9fba63b5",
+      "canonical_id": "arXiv:2602.22592",
+      "arxiv_id": "2602.22592",
+      "doi": "10.48550/arXiv.2602.22592",
+      "authors": [
+        "Wen-Zheng Zhang",
+        "Bing-Zhe Liu",
+        "Yang Hu",
+        "Xiaoying Bai",
+        "Wen-Tao Zhang",
+        "Bin Cui"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 244,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Tessera: Unlocking Heterogeneous GPUs through Kernel-Granularity Disaggregation",
+      "source_url": "https://arxiv.org/abs/2604.10180",
+      "year": 2026,
+      "published": "2026-04-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Disaggregation maps parts of an AI workload to different types of GPUs, offering a path to utilize modern heterogeneous GPU clusters. However, existing solutions operate at a coarse granularity and are tightly coupled to specific model architectures, leaving much room for performance improvement. This paper presents Tessera, the first kernel disaggregation system to improve performance and cost efficiency on heterogeneous GPUs for large model inference. Our key insight is that kernels within a single application exhibit diverse resource demands, making them the most suitable granularity for aligning computation with hardware capabilities. Tessera integrates offline analysis with online adaptation by extracting precise inter-kernel dependencies from PTX to ensure correctness, overlapping communication with computation through a pipelined execution model, and employing workload-aware scheduling with lightweight runtime adaptation. Extensive evaluations across five heterogeneous GPUs and four model architectures, scaling up to 16 GPUs, show that Tessera improves serving throughput and cost efficiency by up to 2.3x and 1.6x, respectively, compared to existing disaggregation methods, while generalizing to model architectures where prior approaches do not apply. Surprisingly, a heterogeneous GPU pair under Tessera can even exceed the throughput of two homogeneous high-end GPUs at a lower cost.",
+      "identifiers": [
+        "SemanticScholar:545fa063da4619c758ecdde8d907483483a6fe49"
+      ],
+      "semantic_scholar_id": "545fa063da4619c758ecdde8d907483483a6fe49",
+      "canonical_id": "arXiv:2604.10180",
+      "arxiv_id": "2604.10180",
+      "doi": "10.48550/arXiv.2604.10180",
+      "authors": [
+        "Tian-Cheng Hu",
+        "Jin Qin",
+        "Zheng Wang",
+        "Jun-Hao Hu",
+        "Yu-Zheng Wang",
+        "Lei Chen",
+        "Yizhou Shan",
+        "Mingxing Zhang",
+        "Ting Cao",
+        "Chun-Wei Xia",
+        "Hui-Min Cui",
+        "Tao Xie",
+        "Chen-Xi Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 200,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MorphoQuant: Modality-Aware Quantization for Omni-modal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2606.04349",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Conventional Post-Training Quantization (PTQ) methods struggle with 4-bit Omni-modal Large Language Models (OLLMs) due to the extreme distribution heterogeneity and disparate outlier patterns across modalities. To address this, we propose MorphoQuant, a modality-aware PTQ framework engineered to preserve cross-modal morphology and mitigate outlier loss. Specifically, we introduce Distribution-Aware Bias Compensation (DABC), which selectively absorbs long-tailed outliers into channel-wise biases. This mechanism safeguards outlier magnitudes while maintaining high-precision discretization for dense inliers, thereby preserving accurate discretization across diverse modal distribution. Complementing this, we propose Morphology-Directed Quantization Function Optimization (MDQFO) to co-optimize the quantization grid with the bias mask, ensuring fine-grained alignment across modalities. Extensive evaluations on Qwen2.5-Omni across benchmarks like MMMU and Video-MME demonstrate our approach's superiority. Notably, our W4A4 model achieves 76.63% on ScienceQA, significantly outperforming SOTA W4A4 methods and surprisingly surpassing the W4A16 baseline, which fully demonstrates the exceptional accuracy-efficiency trade-off of our framework.",
+      "identifiers": [
+        "SemanticScholar:6cdc14bfb24d632269f90e628afb1bd630c49c69"
+      ],
+      "semantic_scholar_id": "6cdc14bfb24d632269f90e628afb1bd630c49c69",
+      "canonical_id": "arXiv:2606.04349",
+      "arxiv_id": "2606.04349",
+      "doi": "10.48550/arXiv.2606.04349",
+      "authors": [
+        "Yueh-Hua Wu",
+        "Chang-Yuan Wang",
+        "Zi-Xuan Wang",
+        "Shi-Lin Ma",
+        "Yansong Tang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 147,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Energy-Efficient Multimodal Inference Serving with Tri-serve",
+      "source_url": "https://arxiv.org/abs/2606.29629",
+      "year": 2026,
+      "published": "2026-06-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal model inference creates substantial energy demand with growing performance requirements. Within GPUs, power is autonomously managed by an on-board power management unit (PMU), which makes frequency boosting/throttling decisions. However, we find that these hardware-managed frequency decisions can cause significant power inefficiency. This work identifies three classes of power inefficiencies within modern multimodal inference serving: (1) inter-stage dependency stalls run at near-maximum frequency despite being idle; (2) anti-correlation between auto-boost frequency and arithmetic intensity (A.I.) results in compute-bound phases (e.g., prefill) running at lower frequency and vice versa; and (3) thermal throttling degrades SM frequency and throughput. We propose Tri-serve, a software-based DVFS controller that jointly accounts for inter-stage dependency stalls, the arithmetic-intensity effect on frequency and power, and the thermal-throttling effect of high A.I. phases, to deliver energy-efficient multimodal serving on commodity GPUs. We show that Tri-serve achieves a 22% energy-efficiency improvement with no latency or throughput impact.",
+      "identifiers": [
+        "SemanticScholar:3dc77b3e6ab6decb9cefe3e2d1dcf9577a309bd7"
+      ],
+      "semantic_scholar_id": "3dc77b3e6ab6decb9cefe3e2d1dcf9577a309bd7",
+      "canonical_id": "arXiv:2606.29629",
+      "arxiv_id": "2606.29629",
+      "doi": "10.48550/arXiv.2606.29629",
+      "authors": [
+        "Ziyang Jia",
+        "Sara Rashidi Golrouye",
+        "L. Bhuyan",
+        "Benjamin Kubwimana",
+        "Devashree Tripathy",
+        "Zexin Li",
+        "Cong Liu",
+        "Daniel Wong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adapting Tree-Structured Speculative Decoding to DeepSeek-V4 for Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2609.24698",
+      "year": 2026,
+      "published": "2026-09-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Repeated execution of the target model during autoregressive decoding is a major source of LLM inference latency. Unlike linear speculation, which follows a single candidate chain, tree-structured speculation retains multiple branches from shared prefixes; under the same budget, this broader coverage can improve acceptance and efficiency. Adapting it to DeepSeek-V4 is nontrivial: its CSA/HCA online compressed attention concentrates the difficulty on the target-verify side, where branches diverging from a shared prefix compress into different states, breaking cross-branch state consistency. We integrate tree-structured speculative decoding into the DeepSeek-V4-Flash pipeline via branch-aware causal verification, temporary state isolation, and accepted-path state refresh, keeping verification and compressed-state updates consistent across branches. Across budgets D=5 to D=8, batch sizes 1 to 64, and three datasets (GSM8K, MBPP, ShareGPT), tree speculation achieves a higher accepted length than the matched linear configurations in all settings (e.g., at D=8 about 2.83--3.41 versus 2.39--2.84) and improves throughput in nearly all configurations---marginal only at the smallest budget---by up to about 18.5%. More importantly, the gains follow stable, transferable regularities: the relative gain grows with the budget and is most pronounced for less predictable workloads at small-to-medium batch sizes, while beyond a certain budget throughput plateaus and decouples from the still-rising accepted length. These results show that retaining multiple candidate paths under the same budget can effectively improve DeepSeek-V4 decoding efficiency, and offer experience for adapting speculative decoding to future models with compressed, sparse, or structured context representations.",
+      "identifiers": [
+        "SemanticScholar:2c7d5c0c2899088351df7dbdee6135e65f816c75"
+      ],
+      "semantic_scholar_id": "2c7d5c0c2899088351df7dbdee6135e65f816c75",
+      "canonical_id": "arXiv:2609.24698",
+      "arxiv_id": "2609.24698",
+      "authors": [
+        "Chang-Xu Liu",
+        "Zhao-Geng Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FBQuant: FeedBack Quantization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2501.16385",
+      "year": 2025,
+      "published": "2025-01-25",
+      "venue": "International Joint Conference on Artificial Intelligence",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) on edge devices is increasingly important, as it eliminates reliance on network connections, reduces expensive API calls, and enhances user privacy. However, on-device deployment is challenging due to the limited computational resources of edge devices. In particular, the key bottleneck stems from memory bandwidth constraints related to weight loading. \n\nWeight-only quantization effectively reduces memory access, yet often induces significant accuracy degradation. \n\nRecent efforts to incorporate sub-branches have shown promise for mitigating quantization errors, but these methods either lack robust optimization strategies or rely on suboptimal objectives. To address these gaps, we propose FeedBack Quantization (FBQuant), a novel approach inspired by negative feedback mechanisms in automatic control.\n\nFBQuant inherently ensures that the reconstructed weights remain bounded by the quantization process, thereby reducing the risk of overfitting.\n\nTo further offset the additional latency introduced by sub-branches, we develop an efficient CUDA kernel that decreases 60% of extra inference time. \n\nComprehensive experiments demonstrate the efficiency and effectiveness of FBQuant across various LLMs. Notably, for 3-bit Llama2-7B, FBQuant improves zero-shot accuracy by 1.2%.",
+      "identifiers": [
+        "SemanticScholar:4fa01315f74e9efed29f0ae581ae117d34b56e0a"
+      ],
+      "semantic_scholar_id": "4fa01315f74e9efed29f0ae581ae117d34b56e0a",
+      "canonical_id": "arXiv:2501.16385",
+      "arxiv_id": "2501.16385",
+      "doi": "10.48550/arXiv.2501.16385",
+      "authors": [
+        "Yi-Jiang Liu",
+        "Heng-Yu Fang",
+        "Liulu He",
+        "Rong-Yu Zhang",
+        "Yichuan Bai",
+        "Yuan Du",
+        "Li Du"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 641,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.04771",
+      "identity_tokens": [
+        "id:SemanticScholar:a9023cec0566ec56962857115767aa131891f1db",
+        "id:arXiv:2608.04771",
+        "title:fewer tokens smaller cache rewardcoordinated efficient reasoning",
+        "url:https://arxiv.org/abs/2608.04771"
+      ],
+      "record": {
+        "title": "Fewer Tokens, Smaller Cache: Reward-Coordinated Efficient Reasoning",
+        "source_url": "https://arxiv.org/abs/2608.04771",
+        "year": 2026,
+        "published": "2026-08-05",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) excel on complex tasks through long chain-of-thought (CoT) reasoning, but their lengthy intermediate steps cause severe overthinking that inflates inference cost. KV-cache compression is a common solution, yet existing reasoning-oriented methods apply a uniform policy across the trajectory and judge compression only by what it removes from the cache. Two observations point the other way. First, a reasoning state's tolerance to context loss varies along the trajectory, and process reward tracks it: deleting tokens at high-reward steps preserves accuracy far better than deleting the same budget at random. Second, compression is not free on the generation side, since a smaller cache leads the model to generate more tokens, partly canceling the saving. Together these motivate coordinating both sides under a single process reward. We propose ReCo (Reward-Coordinated Compression), a step-wise framework in which a lightweight process-reward estimator scores each completed step and drives three components: (1) reward-adaptive KV-cache compression that shrinks the retained cache harder at high-reward steps and less at low-reward ones, (2) a reward-banded penalty on reflection tokens that curbs redundant generation, and (3) confidence-based early stopping that triggers when the reasoning is reliable. Across three reasoning models and six benchmarks, ReCo reduces generated tokens by 37%-65% and end-to-end latency by 2.08x-2.35x over Full CoT, all while largely preserving accuracy.",
+        "identifiers": [
+          "SemanticScholar:a9023cec0566ec56962857115767aa131891f1db"
+        ],
+        "semantic_scholar_id": "a9023cec0566ec56962857115767aa131891f1db",
+        "canonical_id": "arXiv:2608.04771",
+        "arxiv_id": "2608.04771",
+        "authors": [
+          "Qi-Yuan Zhu",
+          "De-Zhi Li",
+          "Pengyu Cheng",
+          "Tian-Le Chen",
+          "Jiacheng Wang",
+          "Ruijie Shen",
+          "Hao Gu",
+          "Si-Da Lin",
+          "Zi-Rui Liu",
+          "Jia-Cheng Liu",
+          "Si-Rui Han"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 84,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.22592",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.22592",
+        "id:SemanticScholar:b82bb0e9fd5f8d490884811ef77a3aaa9fba63b5",
+        "id:arXiv:2602.22592",
+        "title:pquant towards effective lowbit language models via decoupled linear quantizationaware training",
+        "url:https://arxiv.org/abs/2602.22592"
+      ],
+      "record": {
+        "title": "pQuant: Towards Effective Low-Bit Language Models via Decoupled Linear Quantization-Aware Training",
+        "source_url": "https://arxiv.org/abs/2602.22592",
+        "year": 2026,
+        "published": "2026-02-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization-Aware Training from scratch has emerged as a promising approach for building efficient large language models (LLMs) with extremely low-bit weights (sub 2-bit), which can offer substantial advantages for edge deployment. However, existing methods still fail to achieve satisfactory accuracy and scalability. In this work, we identify a parameter democratization effect as a key bottleneck: the sensitivity of all parameters becomes homogenized, severely limiting expressivity. To address this, we propose pQuant, a method that decouples parameters by splitting linear layers into two specialized branches: a dominant 1-bit branch for efficient computation and a compact high-precision branch dedicated to preserving the most sensitive parameters. Through tailored feature scaling, we explicitly guide the model to allocate sensitive parameters to the high-precision branch. Furthermore, we extend this branch into multiple, sparsely-activated experts, enabling efficient capacity scaling. Extensive experiments indicate our pQuant achieves state-of-the-art performance in extremely low-bit quantization.",
+        "identifiers": [
+          "SemanticScholar:b82bb0e9fd5f8d490884811ef77a3aaa9fba63b5"
+        ],
+        "semantic_scholar_id": "b82bb0e9fd5f8d490884811ef77a3aaa9fba63b5",
+        "canonical_id": "arXiv:2602.22592",
+        "arxiv_id": "2602.22592",
+        "doi": "10.48550/arXiv.2602.22592",
+        "authors": [
+          "Wen-Zheng Zhang",
+          "Bing-Zhe Liu",
+          "Yang Hu",
+          "Xiaoying Bai",
+          "Wen-Tao Zhang",
+          "Bin Cui"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 244,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.10180",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.10180",
+        "id:SemanticScholar:545fa063da4619c758ecdde8d907483483a6fe49",
+        "id:arXiv:2604.10180",
+        "title:tessera unlocking heterogeneous gpus through kernelgranularity disaggregation",
+        "url:https://arxiv.org/abs/2604.10180"
+      ],
+      "record": {
+        "title": "Tessera: Unlocking Heterogeneous GPUs through Kernel-Granularity Disaggregation",
+        "source_url": "https://arxiv.org/abs/2604.10180",
+        "year": 2026,
+        "published": "2026-04-11",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Disaggregation maps parts of an AI workload to different types of GPUs, offering a path to utilize modern heterogeneous GPU clusters. However, existing solutions operate at a coarse granularity and are tightly coupled to specific model architectures, leaving much room for performance improvement. This paper presents Tessera, the first kernel disaggregation system to improve performance and cost efficiency on heterogeneous GPUs for large model inference. Our key insight is that kernels within a single application exhibit diverse resource demands, making them the most suitable granularity for aligning computation with hardware capabilities. Tessera integrates offline analysis with online adaptation by extracting precise inter-kernel dependencies from PTX to ensure correctness, overlapping communication with computation through a pipelined execution model, and employing workload-aware scheduling with lightweight runtime adaptation. Extensive evaluations across five heterogeneous GPUs and four model architectures, scaling up to 16 GPUs, show that Tessera improves serving throughput and cost efficiency by up to 2.3x and 1.6x, respectively, compared to existing disaggregation methods, while generalizing to model architectures where prior approaches do not apply. Surprisingly, a heterogeneous GPU pair under Tessera can even exceed the throughput of two homogeneous high-end GPUs at a lower cost.",
+        "identifiers": [
+          "SemanticScholar:545fa063da4619c758ecdde8d907483483a6fe49"
+        ],
+        "semantic_scholar_id": "545fa063da4619c758ecdde8d907483483a6fe49",
+        "canonical_id": "arXiv:2604.10180",
+        "arxiv_id": "2604.10180",
+        "doi": "10.48550/arXiv.2604.10180",
+        "authors": [
+          "Tian-Cheng Hu",
+          "Jin Qin",
+          "Zheng Wang",
+          "Jun-Hao Hu",
+          "Yu-Zheng Wang",
+          "Lei Chen",
+          "Yizhou Shan",
+          "Mingxing Zhang",
+          "Ting Cao",
+          "Chun-Wei Xia",
+          "Hui-Min Cui",
+          "Tao Xie",
+          "Chen-Xi Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 200,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04349",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.04349",
+        "id:SemanticScholar:6cdc14bfb24d632269f90e628afb1bd630c49c69",
+        "id:arXiv:2606.04349",
+        "title:morphoquant modalityaware quantization for omnimodal large language models",
+        "url:https://arxiv.org/abs/2606.04349"
+      ],
+      "record": {
+        "title": "MorphoQuant: Modality-Aware Quantization for Omni-modal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2606.04349",
+        "year": 2026,
+        "published": "2026-06-03",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Conventional Post-Training Quantization (PTQ) methods struggle with 4-bit Omni-modal Large Language Models (OLLMs) due to the extreme distribution heterogeneity and disparate outlier patterns across modalities. To address this, we propose MorphoQuant, a modality-aware PTQ framework engineered to preserve cross-modal morphology and mitigate outlier loss. Specifically, we introduce Distribution-Aware Bias Compensation (DABC), which selectively absorbs long-tailed outliers into channel-wise biases. This mechanism safeguards outlier magnitudes while maintaining high-precision discretization for dense inliers, thereby preserving accurate discretization across diverse modal distribution. Complementing this, we propose Morphology-Directed Quantization Function Optimization (MDQFO) to co-optimize the quantization grid with the bias mask, ensuring fine-grained alignment across modalities. Extensive evaluations on Qwen2.5-Omni across benchmarks like MMMU and Video-MME demonstrate our approach's superiority. Notably, our W4A4 model achieves 76.63% on ScienceQA, significantly outperforming SOTA W4A4 methods and surprisingly surpassing the W4A16 baseline, which fully demonstrates the exceptional accuracy-efficiency trade-off of our framework.",
+        "identifiers": [
+          "SemanticScholar:6cdc14bfb24d632269f90e628afb1bd630c49c69"
+        ],
+        "semantic_scholar_id": "6cdc14bfb24d632269f90e628afb1bd630c49c69",
+        "canonical_id": "arXiv:2606.04349",
+        "arxiv_id": "2606.04349",
+        "doi": "10.48550/arXiv.2606.04349",
+        "authors": [
+          "Yueh-Hua Wu",
+          "Chang-Yuan Wang",
+          "Zi-Xuan Wang",
+          "Shi-Lin Ma",
+          "Yansong Tang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 147,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.29629",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.29629",
+        "id:SemanticScholar:3dc77b3e6ab6decb9cefe3e2d1dcf9577a309bd7",
+        "id:arXiv:2606.29629",
+        "title:energyefficient multimodal inference serving with triserve",
+        "url:https://arxiv.org/abs/2606.29629"
+      ],
+      "record": {
+        "title": "Energy-Efficient Multimodal Inference Serving with Tri-serve",
+        "source_url": "https://arxiv.org/abs/2606.29629",
+        "year": 2026,
+        "published": "2026-06-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal model inference creates substantial energy demand with growing performance requirements. Within GPUs, power is autonomously managed by an on-board power management unit (PMU), which makes frequency boosting/throttling decisions. However, we find that these hardware-managed frequency decisions can cause significant power inefficiency. This work identifies three classes of power inefficiencies within modern multimodal inference serving: (1) inter-stage dependency stalls run at near-maximum frequency despite being idle; (2) anti-correlation between auto-boost frequency and arithmetic intensity (A.I.) results in compute-bound phases (e.g., prefill) running at lower frequency and vice versa; and (3) thermal throttling degrades SM frequency and throughput. We propose Tri-serve, a software-based DVFS controller that jointly accounts for inter-stage dependency stalls, the arithmetic-intensity effect on frequency and power, and the thermal-throttling effect of high A.I. phases, to deliver energy-efficient multimodal serving on commodity GPUs. We show that Tri-serve achieves a 22% energy-efficiency improvement with no latency or throughput impact.",
+        "identifiers": [
+          "SemanticScholar:3dc77b3e6ab6decb9cefe3e2d1dcf9577a309bd7"
+        ],
+        "semantic_scholar_id": "3dc77b3e6ab6decb9cefe3e2d1dcf9577a309bd7",
+        "canonical_id": "arXiv:2606.29629",
+        "arxiv_id": "2606.29629",
+        "doi": "10.48550/arXiv.2606.29629",
+        "authors": [
+          "Ziyang Jia",
+          "Sara Rashidi Golrouye",
+          "L. Bhuyan",
+          "Benjamin Kubwimana",
+          "Devashree Tripathy",
+          "Zexin Li",
+          "Cong Liu",
+          "Daniel Wong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 122,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24698",
+      "identity_tokens": [
+        "id:SemanticScholar:2c7d5c0c2899088351df7dbdee6135e65f816c75",
+        "id:arXiv:2609.24698",
+        "title:adapting treestructured speculative decoding to deepseekv4 for efficient inference",
+        "url:https://arxiv.org/abs/2609.24698"
+      ],
+      "record": {
+        "title": "Adapting Tree-Structured Speculative Decoding to DeepSeek-V4 for Efficient Inference",
+        "source_url": "https://arxiv.org/abs/2609.24698",
+        "year": 2026,
+        "published": "2026-09-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Repeated execution of the target model during autoregressive decoding is a major source of LLM inference latency. Unlike linear speculation, which follows a single candidate chain, tree-structured speculation retains multiple branches from shared prefixes; under the same budget, this broader coverage can improve acceptance and efficiency. Adapting it to DeepSeek-V4 is nontrivial: its CSA/HCA online compressed attention concentrates the difficulty on the target-verify side, where branches diverging from a shared prefix compress into different states, breaking cross-branch state consistency. We integrate tree-structured speculative decoding into the DeepSeek-V4-Flash pipeline via branch-aware causal verification, temporary state isolation, and accepted-path state refresh, keeping verification and compressed-state updates consistent across branches. Across budgets D=5 to D=8, batch sizes 1 to 64, and three datasets (GSM8K, MBPP, ShareGPT), tree speculation achieves a higher accepted length than the matched linear configurations in all settings (e.g., at D=8 about 2.83--3.41 versus 2.39--2.84) and improves throughput in nearly all configurations---marginal only at the smallest budget---by up to about 18.5%. More importantly, the gains follow stable, transferable regularities: the relative gain grows with the budget and is most pronounced for less predictable workloads at small-to-medium batch sizes, while beyond a certain budget throughput plateaus and decouples from the still-rising accepted length. These results show that retaining multiple candidate paths under the same budget can effectively improve DeepSeek-V4 decoding efficiency, and offer experience for adapting speculative decoding to future models with compressed, sparse, or structured context representations.",
+        "identifiers": [
+          "SemanticScholar:2c7d5c0c2899088351df7dbdee6135e65f816c75"
+        ],
+        "semantic_scholar_id": "2c7d5c0c2899088351df7dbdee6135e65f816c75",
+        "canonical_id": "arXiv:2609.24698",
+        "arxiv_id": "2609.24698",
+        "authors": [
+          "Chang-Xu Liu",
+          "Zhao-Geng Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 37,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.16385",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.16385",
+        "id:SemanticScholar:4fa01315f74e9efed29f0ae581ae117d34b56e0a",
+        "id:arXiv:2501.16385",
+        "title:fbquant feedback quantization for large language models",
+        "url:https://arxiv.org/abs/2501.16385"
+      ],
+      "record": {
+        "title": "FBQuant: FeedBack Quantization for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2501.16385",
+        "year": 2025,
+        "published": "2025-01-25",
+        "venue": "International Joint Conference on Artificial Intelligence",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying Large Language Models (LLMs) on edge devices is increasingly important, as it eliminates reliance on network connections, reduces expensive API calls, and enhances user privacy. However, on-device deployment is challenging due to the limited computational resources of edge devices. In particular, the key bottleneck stems from memory bandwidth constraints related to weight loading. \n\nWeight-only quantization effectively reduces memory access, yet often induces significant accuracy degradation. \n\nRecent efforts to incorporate sub-branches have shown promise for mitigating quantization errors, but these methods either lack robust optimization strategies or rely on suboptimal objectives. To address these gaps, we propose FeedBack Quantization (FBQuant), a novel approach inspired by negative feedback mechanisms in automatic control.\n\nFBQuant inherently ensures that the reconstructed weights remain bounded by the quantization process, thereby reducing the risk of overfitting.\n\nTo further offset the additional latency introduced by sub-branches, we develop an efficient CUDA kernel that decreases 60% of extra inference time. \n\nComprehensive experiments demonstrate the efficiency and effectiveness of FBQuant across various LLMs. Notably, for 3-bit Llama2-7B, FBQuant improves zero-shot accuracy by 1.2%.",
+        "identifiers": [
+          "SemanticScholar:4fa01315f74e9efed29f0ae581ae117d34b56e0a"
+        ],
+        "semantic_scholar_id": "4fa01315f74e9efed29f0ae581ae117d34b56e0a",
+        "canonical_id": "arXiv:2501.16385",
+        "arxiv_id": "2501.16385",
+        "doi": "10.48550/arXiv.2501.16385",
+        "authors": [
+          "Yi-Jiang Liu",
+          "Heng-Yu Fang",
+          "Liulu He",
+          "Rong-Yu Zhang",
+          "Yichuan Bai",
+          "Yuan Du",
+          "Li Du"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 641,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2a41227d95c9797cedcf4ffe22c72d3d6bdba75fcb6deca22aafdec2c936edea",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

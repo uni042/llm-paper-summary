@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260921T043930Z-scheduled-chat-llm-30-repair2",
+  "worker_id": "scheduled-chat-llm-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-a748d42a4b0082c7",
+      "claim_id": "claim-f13484682295d4ae46534672",
+      "worker_id": "scheduled-chat-llm-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-f13484682295d4ae46534672",
+      "claimed_at": "2026-09-21T04:39:52+00:00",
+      "expires_at": "2026-09-21T06:09:52+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-a748d42a4b0082c7"
+      ],
+      "job": {
+        "job_id": "job-research-a748d42a4b0082c7",
+        "type": "research",
+        "parent_job_id": "job-d6ac1ce03302d648",
+        "priority": 99,
+        "canonical_id": "arXiv:2606.17107",
+        "arxiv_id": "2606.17107",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Models Take Notes at Prefill: KV Cache Can Be Editable and Composable",
+        "source_url": "https://www.semanticscholar.org/paper/bad8f4a1c5b4fd2942a14c223dcd5442a18ea123",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md",
+        "selection_reason": "prefill済みKVを編集・位置移動・合成して再計算を回避。online vLLMでprefix cache hit率98.5%を維持しp90 TTFTを53–398倍短縮。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:11:26+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism"
+        ],
+        "last_validation_failed_at": "2026-09-21T04:39:18+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-366d346973cd87c804efb287"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-366d346973cd87c804efb287.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T04:39:52+00:00",
+  "checkpoint_released": 0
+}

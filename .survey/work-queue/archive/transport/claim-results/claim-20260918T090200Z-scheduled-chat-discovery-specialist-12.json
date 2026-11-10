@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T090200Z-scheduled-chat-discovery-specialist-12",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-23f0e2222a013ba4",
+      "claim_id": "claim-78cfe446e04d42ebf3f9efb8",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-78cfe446e04d42ebf3f9efb8",
+      "claimed_at": "2026-09-18T09:02:51+00:00",
+      "expires_at": "2026-09-18T10:32:51+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-23f0e2222a013ba4"
+      ],
+      "job": {
+        "job_id": "job-research-23f0e2222a013ba4",
+        "type": "research",
+        "parent_job_id": "job-27c84efbe30148e1",
+        "priority": 87,
+        "canonical_id": "arXiv:2407.05858",
+        "title": "Fast On-device LLM Inference with NPUs",
+        "source_url": "https://arxiv.org/abs/2407.05858",
+        "paper_path": "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+        "selection_reason": "オンデバイスNPUへprefillをオフロードするLLM inference systemで、可変長promptの固定chunk化、outlierをCPU/GPUへ分離してNPUと並列実行、blockをhardware affinity/accuracy sensitivityに応じてCPU/GPU/NPUへout-of-order schedulingする三層co-designを提案する。競合baseline比で平均22.4倍のprefill高速化、30.7倍のenergy saving、実アプリで最大32.8倍、billion-scale modelで1000 tok/s超prefillを報告しており、heterogeneous/offload系統の重要な未収録systems研究。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-18T08:01:56+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T09:02:51+00:00",
+  "checkpoint_released": 0
+}

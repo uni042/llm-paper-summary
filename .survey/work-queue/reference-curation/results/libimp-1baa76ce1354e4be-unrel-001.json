@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1baa76ce1354e4be-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:1aa219b2069de522081980d2d9d764958197e545",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:1aa219b2069de522081980d2d9d764958197e545",
+    "identity_tokens": [
+      "SemanticScholar:1aa219b2069de522081980d2d9d764958197e545"
+    ],
+    "reason": "Microsoft Floating Point（MSFP）の独自低精度数値形式をクラウド推論用専用ハードウェアへ実装し、CNN・RNN・Transformerの画像分類、検索、質問応答等を横断評価する2020年の汎用深層学習推論研究。生成LLMの逐次復号、KVキャッシュ、LLMサービング、MoE推論等を対象にした方式ではない。",
+    "first_checked_at": "2026-10-07T21:48:49+00:00",
+    "last_checked_at": "2026-10-07T21:48:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+    ],
+    "title": "Pushing the Limits of Narrow Precision Inferencing at Cloud Scale with Microsoft Floating Point"
+  },
+  "processed_at": "2026-10-07T21:48:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1baa76ce1354",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

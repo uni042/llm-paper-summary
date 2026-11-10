@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b8f564880b24ca8-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.30685",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.30685",
+    "identity_tokens": [
+      "arXiv:2608.30685"
+    ],
+    "reason": "要旨はindustrial tool-use agentのdiagnostic evaluation framework。",
+    "first_checked_at": "2026-10-05T07:48:23+00:00",
+    "last_checked_at": "2026-10-05T07:48:23+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "ATLAS: Dual-Horizon Diagnostic Evaluation for Industrial Tool-Use Agents"
+  },
+  "processed_at": "2026-10-05T07:48:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b8f564880b2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

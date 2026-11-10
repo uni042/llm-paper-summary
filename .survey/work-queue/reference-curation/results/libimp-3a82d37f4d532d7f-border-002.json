@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3a82d37f4d532d7f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.10200",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.10200",
+    "identity_tokens": [
+      "arXiv:2503.10200"
+    ],
+    "reason": "長時間動画の質問応答でモデルライブラリから複数MLLMエージェントを選び、時間区間検索・回答共有・反省によってチームを動的更新するLVAgent。検索の計算効率への言及はあるが、主要な成果はLongVideoBenchの正答率向上（+13.3ポイント）で、推論資源や実行速度の直接最適化は主眼ではない。",
+    "first_checked_at": "2026-10-30T17:57:59+00:00",
+    "last_checked_at": "2026-10-30T17:57:59+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "LVAgent: Long Video Understanding by Multi-Round Dynamical Collaboration of MLLM Agents"
+  },
+  "processed_at": "2026-10-30T17:58:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3a82d37f4d53",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

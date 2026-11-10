@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f21e4dbc7dfce78-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.19213",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.19213",
+    "identity_tokens": [
+      "arXiv:2609.19213"
+    ],
+    "reason": "一次要旨: In this paper, we introduce layer-wise curriculum learning for efficient LLM compression. The proposed method facilitates the knowledge transfer from the teacher model to the student model, utilizing a curriculum learning approach that begins with easier optimization tasks and progressively tackles harder ones. In order to adopt the layer-wise learning in LLM compression, we partition the whole model into multiple segments con",
+    "first_checked_at": "2026-10-05T06:36:02+00:00",
+    "last_checked_at": "2026-10-05T06:36:02+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Layer-wise Curriculum Learning for Efficient LLM Compression"
+  },
+  "processed_at": "2026-10-05T06:36:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f21e4dbc7df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

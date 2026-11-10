@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad0e833855c5f823-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1901.02860",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1901.02860",
+    "identity_tokens": [
+      "DOI:10.18653/v1/p19-1285",
+      "arXiv:1901.02860"
+    ],
+    "reason": "segment-level recurrenceとrelative positionで長文脈を効率化する基礎アーキテクチャ。重要な先行研究だがLLM servingシステムではない。",
+    "first_checked_at": "2026-09-27T07:00:57+09:00",
+    "last_checked_at": "2026-09-30T09:45:55+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context"
+  },
+  "processed_at": "2026-09-30T09:45:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad0e833855c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

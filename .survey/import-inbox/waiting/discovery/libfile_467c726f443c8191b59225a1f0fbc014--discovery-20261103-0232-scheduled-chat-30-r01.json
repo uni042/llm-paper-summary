@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261103-0232-scheduled-chat-30/r01",
+  "reference_main_sha": "ceae730f9ef5ffba98c2d323111c1e57585d29ed",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41968",
+      "identity_tokens": [
+        "arXiv:2610.41968"
+      ],
+      "title": "Prune Gradually, Adapt Sparsely: Efficient Pruning of Large Language Models at Extreme Sparsity",
+      "reason": "ETAPSはLLMの重みを段階的に削りながら小規模な疎な差分パラメータを学習し、50〜90%の高スパース化でも精度を保つ圧縮手法。125M〜13Bの6モデルでELSAよりperplexityが低く、最大42%改善と報告。LLaMA2-7Bの90%剪定では持続状態5分の1、GPU時間49%削減。最終重みの保存量・推論時演算削減を目的とするためaccept。ただしabstractに実測の推論速度向上はない。",
+      "source_url": "https://arxiv.org/abs/2610.41968",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:36:44+09:00",
+      "last_checked_at": "2026-11-03T02:36:44+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41970",
+      "identity_tokens": [
+        "arXiv:2610.41970"
+      ],
+      "title": "When Does Test-Time Search Help World Action Models? An Empirical Audit of Candidate Selection and Simulator Integrity",
+      "reason": "Cosmos PolicyとRoboCasaのworld-action modelでテスト時候補探索・トークン剪定の実効性を検証。剪定でforward FLOPsを最大47%減らしても実経路のend-to-end高速化は最大1.15倍で、探索候補の82%は結果が同じだった。推論計算量と実時間の乖離を定量評価する点は関連するが、主対象はロボット制御のworld-action modelでありLLM推論サービングの直接改善ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41970",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:36:44+09:00",
+      "last_checked_at": "2026-11-03T02:36:44+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41124",
+      "identity_tokens": [
+        "arXiv:2610.41124"
+      ],
+      "title": "Confident Fools or Careful Searchers? A Behavioural Study of When LLMs Search Beyond Their Static Internal Memory",
+      "reason": "400問の既知情報と学習後ニュースの区別を使い、LLMエージェントが検索ツールを呼ぶ判断を5製品で評価。GPT-5 miniとGrok 4 Fastは新情報で90%以上検索し既知問題では約1%しか検索しない一方、別モデルは新情報でも20%程度。不要検索の遅延・費用を避ける運用上の接点はあるが、検索呼出し判断の行動評価が主でGPU実行・キャッシュ・推論サービング技術の提案ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41124",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:36:44+09:00",
+      "last_checked_at": "2026-11-03T02:36:44+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41038",
+      "identity_tokens": [
+        "arXiv:2610.41038"
+      ],
+      "title": "When can Optimally Trained Transformers Achieve Near-Lossless Token Prediction for non-Markovian Data?",
+      "reason": "非Markov系列に対するTransformer次トークン予測を確率的最適制御と有限窓近似で理論化し、安定性条件下で窓長Mに応じた誤差減衰を示す。M+1層の単一head構成による近似フィルタ実現を扱い、文脈長と予測誤差の関係は推論研究に隣接する。しかしLLMの推論速度・メモリ・実運用最適化は評価せず、抽象理論が主目的のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41038",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:36:44+09:00",
+      "last_checked_at": "2026-11-03T02:36:44+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41218",
+      "identity_tokens": [
+        "arXiv:2610.41218"
+      ],
+      "title": "A Positional Realizability Theory of Length Generalization in Single-Head Attention",
+      "reason": "位置情報だけを使う単一attention headで、絶対・相対位置符号化が長さ外挿できる条件を伝達作用素T_Lと指標alpha_Lで特徴付ける。制御された設定で2625の学習モデル測定により分類を検証するが、対象は位置チャネルの理論であり内容依存タスクは定理の範囲外。長文脈Transformerへの理論的接点はある一方、KV削減や高速化の直接寄与は示さないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41218",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:36:44+09:00",
+      "last_checked_at": "2026-11-03T02:36:44+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41104",
+      "identity_tokens": [
+        "arXiv:2610.41104"
+      ],
+      "title": "MUON-RT Reusing the Teacher's Trajectory for Momentum-Free Muon for LLM Self-Distillation",
+      "reason": "自己蒸留のEMA教師と生徒の重み差を再利用し、Muonのmomentum bufferを削る学習用optimizer Muon-RT。Qwen2.5-7Bの蒸留でAdamW比持続メモリ42%削減、momentum Muon比27%削減と平均精度改善を報告。LLMのメモリ効率に技術的接点はあるが、節約対象は学習optimizer状態であり凍結範囲の学習最適化、推論時重み・KV・実行速度の改善ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41104",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:36:44+09:00",
+      "last_checked_at": "2026-11-03T02:36:44+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41933",
+      "identity_tokens": [
+        "arXiv:2610.41933"
+      ],
+      "title": "Binary Sparse Codes: Where are we on Energy Efficient Representations?",
+      "reason": "生物学的皮質表現に着想した二値疎符号について、入力間の類似性を保存する度合いと活性密度のトレードオフを測定する評価指標を提案し、4種の符号化方式を比較。LLM重み剪定・MoE推論・GPU実装・サービングを対象とせず、一般的な表現学習と生物学的疎符号の評価が主題のためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41933",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:36:44+09:00",
+      "last_checked_at": "2026-11-03T02:36:44+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41222",
+      "identity_tokens": [
+        "arXiv:2610.41222"
+      ],
+      "title": "Corroborative Learning: Mutual Enhancement through Task-Response Reconstruction",
+      "reason": "独立に学習した複数モデルの補完性を保つため、協力モデル表現から応答増分を再構成する学習正則化を提案。6言語タスク・24モデル・36組合せで適応精度を評価し、推論時に相手モデルへの依存を追加しない。研究の主眼は共同学習の予測品質で、LLM推論の計算・メモリ・配信最適化ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41222",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:36:44+09:00",
+      "last_checked_at": "2026-11-03T02:36:44+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41213",
+      "identity_tokens": [
+        "arXiv:2610.41213"
+      ],
+      "title": "Beyond Scarcity: When Encoder Adaptation Is Worthwhile",
+      "reason": "長尾クラス認識で分類器の不均衡補正後にencoderまで再学習すべき条件を、稀少クラスの独立例数と表現学習割当を分離して調査。ImageNet規模の認識精度と学習設定を評価する研究で、生成LLMの推論やメモリ階層・サービングへの技術的適用を示さないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41213",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:36:44+09:00",
+      "last_checked_at": "2026-11-03T02:36:44+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41445",
+      "identity_tokens": [
+        "arXiv:2610.41445"
+      ],
+      "title": "From Representation to Readout: Mechanistic Analysis of Membership Signals in Language Models",
+      "reason": "LLMの学習データmembership情報を内部表現から復号可能な量と出力readoutに現れる量へ分け、SFT・RLのmembership inferenceとactivation patchingで機構を分析。対象は記憶・プライバシー・解釈可能性であり、推論計算量やKVキャッシュ・サービング効率の改善は示さないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41445",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:36:44+09:00",
+      "last_checked_at": "2026-11-03T02:36:44+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

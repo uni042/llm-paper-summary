@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1048f6ff17c63e7a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.03051",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.03051",
+    "identity_tokens": [
+      "arXiv:2410.03051"
+    ],
+    "reason": "AuroraCapは視覚トークン結合で動画入力を短縮するが、主な貢献は動画の詳細キャプションモデル、VDCベンチマークとVDCscore評価法。一次要旨ではトークン削減の品質維持を示す一方、GPU実測遅延・KVキャッシュ・サービング最適化の独立した比較は確認できない。",
+    "first_checked_at": "2026-10-12T18:49:58+00:00",
+    "last_checked_at": "2026-10-12T18:49:58+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
+  },
+  "processed_at": "2026-10-12T18:49:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1048f6ff17c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

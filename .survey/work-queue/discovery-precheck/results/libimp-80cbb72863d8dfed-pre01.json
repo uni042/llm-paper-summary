@@ -1,0 +1,321 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-80cbb72863d8dfed-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-80cbb72863d8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2608.01662",
+    "arXiv:2608.12026",
+    "arXiv:2608.19147"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4468b7306d82ca0fca1e93cb240c4149e9326b3c",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T05:24:29.836900+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2608.01662",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.12026",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.19147",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LongCat Sparse Attention: Taming the Lightning via Streaming-aware Hierarchical Cross-Layer Indexing",
+      "source_url": "https://arxiv.org/abs/2608.01662",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "DeepSeek Sparse Attention (DSA) enables efficient long-context modeling through its Lightning Indexer. However, practical deployment remains constrained by the indexer's expensive $O(L^2)$ scoring overhead and the hardware-inefficient, discontinuous memory-access patterns induced by its outputs. To address these system-level bottlenecks, we introduce LongCat Sparse Attention (LSA), a hardware-algorithm co-designed framework comprising three complementary and orthogonal strategies: (1) Streaming-Aware Indexing, which selectively converts scattered KV entries into hardware-aligned contiguous layouts to enable coalesced HBM access; (2) Cross-Layer Indexing, which amortizes indexing overhead by reusing the results produced by a single layer across consecutive layers, supported by cross-layer distillation; and (3) Hierarchical Indexing, which adopts a coarse-to-fine scoring scheme to progressively narrow the candidate set for each query, thereby substantially reducing indexing computation. Extensive scaling experiments, ranging from 69B-A3B to 560B-A27B models, demonstrate that LSA consistently achieves performance on par with full attention across both general-purpose and long-context benchmarks. Moreover, LSA supports native training with context lengths of up to one million tokens and underpins the development of LongCat-2.0 (1.6T-A48B). To facilitate further research, we also introduce and open-source LongCat-Flash-Lite-Sparse (69B-A3B), which integrates LSA into LongCat-Flash-Lite and incorporates an updated long-context training corpus.",
+      "identifiers": [
+        "SemanticScholar:5851d8117b0d2bec48ba621754dd0d253a5d2cc2"
+      ],
+      "semantic_scholar_id": "5851d8117b0d2bec48ba621754dd0d253a5d2cc2",
+      "canonical_id": "arXiv:2608.01662",
+      "arxiv_id": "2608.01662",
+      "authors": [
+        "Wen Zan",
+        "Jiaqi Zhang",
+        "Jian-Chao Tan",
+        "Hong Liu",
+        "Cunguang Wang",
+        "Xiang Li",
+        "Du-Yue Ma",
+        "Guanyu Wu",
+        "Yifan Lu",
+        "Fengcun Li",
+        "Yerui Sun",
+        "Peng Pei",
+        "Yu-Chen Xie",
+        "Xun-Liang Cai"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "freshness_age_days": 62,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SoftWater: Class-Aware Rate Allocation for Softmax Quantization",
+      "source_url": "https://arxiv.org/abs/2608.12026",
+      "year": 2026,
+      "published": "2026-08-12",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization pipelines routinely leave the softmax output layer in high precision. Yet in small LLMs with modern vocabularies, the head holds 15--30\\% of all parameters, so a nominal ``2-bit''model with an fp16 head can store several times as many bits per weight. We pose softmax-layer quantization as a rate-distortion problem under the KL divergence between the original and quantized output distributions. A second-order analysis reveals a class-aware geometry: quantization error is weighted jointly by feature covariance and class-specific softmax curvature. A separability approximation replaces the $Kn\\times Kn$ Cholesky with one $n\\times n$ factorization rescaled per class, making the lattice encodable by successive interference cancellation, with both statistics from a single forward pass. The resulting method, SoftWater, gives fine grids to frequent, low-variance classes and coarse grids to rare ones, a large gap under Zipfian token distributions. Across five models from 1B to 32B, SoftWater outperforms the released WaterSIC quantizer (near-optimal under linear-layer WMSE but not output KL) at matched head rates on 59 of 60 test points, using none of that pipeline's refinements and cutting head-induced KL by $6.5\\times$--$8.3\\times$ at 2 bits. On Llama-3.2-1B-Instruct with quantized bodies, a 2-bit head removes 45--60\\% of stored bytes for a $2.9$--$3.7\\%$ perplexity increase. Because the class-side statistic comes from calibration data, matching calibration to the deployment domain gives the lowest KL on that domain throughout. On a tied model, a 4-bit head is near-lossless and a 2-bit head costs under 4\\% perplexity, making head quantization of such models practical.",
+      "identifiers": [
+        "SemanticScholar:92745417a735fc71d8f05d8ecbe975f3aa3e4947"
+      ],
+      "semantic_scholar_id": "92745417a735fc71d8f05d8ecbe975f3aa3e4947",
+      "canonical_id": "arXiv:2608.12026",
+      "arxiv_id": "2608.12026",
+      "authors": [
+        "Joao V. Cavalcanti",
+        "Ashia C. Wilson"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "freshness_age_days": 53,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets",
+      "source_url": "https://arxiv.org/abs/2608.19147",
+      "year": 2026,
+      "published": "2026-08-19",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern Intel AI PCs ship capable integrated GPUs and NPUs with 16+ GB of unified memory, and they spend considerable time idle. That is not enough memory to fit a large model such as a 70B-parameter LLM. We show that a handful of AIPCs, working together over an ordinary network, can serve models beyond the capability of any single one. We use pipeline parallelism: a model is split by layer into per-stage shards, each pre-compiled into an OpenVINO graph, so that every machine runs one shard and passes activations to the next. Three techniques make this fast enough to be useful. First, we recover the speed of the unsplit model: a naive per-stage export runs well below monolithic inference because it misses an OpenVINO GPU optimization, and injecting a beam_idx Gather into each shard triggers that optimization (the IndirectKVCache fusion) and brings the shards to parity. Second, we leverage speculative decoding on stateful OpenVINO models. Third, the pipeline serves several users at once by interleaving their requests across the stages, each request carrying its own cache (micro-batching). Together, a two-node Llama 3.1 8B INT4 pipeline serves two concurrent users at 1.79x the single-user throughput of the unsplit model on the same hardware, and the gap widens under simulated wide-area latency. The same design scales to a 70B model that no single fleet member can hold: a four-node deployment of Lunar Lake AI PCs on Intel Tiber Cloud serves a single user at interactive speed, with output token-for-token identical to the same four-node pipeline decoding without speculation. Code, raw benchmark logs, and reproduction scripts ship as a self-contained package at https://github.com/labscommunity/pipeline-sharded-inference-paper (in the top-level reproduction/ directory).",
+      "identifiers": [
+        "SemanticScholar:dd2a0fe5c9eaf9fe9e8c04f4ffb480bb49f71f8a"
+      ],
+      "semantic_scholar_id": "dd2a0fe5c9eaf9fe9e8c04f4ffb480bb49f71f8a",
+      "canonical_id": "arXiv:2608.19147",
+      "arxiv_id": "2608.19147",
+      "authors": [
+        "Tate Berenbaum",
+        "M. Venkatachalam"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.01662",
+      "identity_tokens": [
+        "id:SemanticScholar:5851d8117b0d2bec48ba621754dd0d253a5d2cc2",
+        "id:arXiv:2608.01662",
+        "title:longcat sparse attention taming the lightning via streamingaware hierarchical crosslayer indexing",
+        "url:https://arxiv.org/abs/2608.01662"
+      ],
+      "record": {
+        "title": "LongCat Sparse Attention: Taming the Lightning via Streaming-aware Hierarchical Cross-Layer Indexing",
+        "source_url": "https://arxiv.org/abs/2608.01662",
+        "year": 2026,
+        "published": "2026-08-03",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "DeepSeek Sparse Attention (DSA) enables efficient long-context modeling through its Lightning Indexer. However, practical deployment remains constrained by the indexer's expensive $O(L^2)$ scoring overhead and the hardware-inefficient, discontinuous memory-access patterns induced by its outputs. To address these system-level bottlenecks, we introduce LongCat Sparse Attention (LSA), a hardware-algorithm co-designed framework comprising three complementary and orthogonal strategies: (1) Streaming-Aware Indexing, which selectively converts scattered KV entries into hardware-aligned contiguous layouts to enable coalesced HBM access; (2) Cross-Layer Indexing, which amortizes indexing overhead by reusing the results produced by a single layer across consecutive layers, supported by cross-layer distillation; and (3) Hierarchical Indexing, which adopts a coarse-to-fine scoring scheme to progressively narrow the candidate set for each query, thereby substantially reducing indexing computation. Extensive scaling experiments, ranging from 69B-A3B to 560B-A27B models, demonstrate that LSA consistently achieves performance on par with full attention across both general-purpose and long-context benchmarks. Moreover, LSA supports native training with context lengths of up to one million tokens and underpins the development of LongCat-2.0 (1.6T-A48B). To facilitate further research, we also introduce and open-source LongCat-Flash-Lite-Sparse (69B-A3B), which integrates LSA into LongCat-Flash-Lite and incorporates an updated long-context training corpus.",
+        "identifiers": [
+          "SemanticScholar:5851d8117b0d2bec48ba621754dd0d253a5d2cc2"
+        ],
+        "semantic_scholar_id": "5851d8117b0d2bec48ba621754dd0d253a5d2cc2",
+        "canonical_id": "arXiv:2608.01662",
+        "arxiv_id": "2608.01662",
+        "authors": [
+          "Wen Zan",
+          "Jiaqi Zhang",
+          "Jian-Chao Tan",
+          "Hong Liu",
+          "Cunguang Wang",
+          "Xiang Li",
+          "Du-Yue Ma",
+          "Guanyu Wu",
+          "Yifan Lu",
+          "Fengcun Li",
+          "Yerui Sun",
+          "Peng Pei",
+          "Yu-Chen Xie",
+          "Xun-Liang Cai"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "freshness_age_days": 62,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.12026",
+      "identity_tokens": [
+        "id:SemanticScholar:92745417a735fc71d8f05d8ecbe975f3aa3e4947",
+        "id:arXiv:2608.12026",
+        "title:softwater classaware rate allocation for softmax quantization",
+        "url:https://arxiv.org/abs/2608.12026"
+      ],
+      "record": {
+        "title": "SoftWater: Class-Aware Rate Allocation for Softmax Quantization",
+        "source_url": "https://arxiv.org/abs/2608.12026",
+        "year": 2026,
+        "published": "2026-08-12",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization pipelines routinely leave the softmax output layer in high precision. Yet in small LLMs with modern vocabularies, the head holds 15--30\\% of all parameters, so a nominal ``2-bit''model with an fp16 head can store several times as many bits per weight. We pose softmax-layer quantization as a rate-distortion problem under the KL divergence between the original and quantized output distributions. A second-order analysis reveals a class-aware geometry: quantization error is weighted jointly by feature covariance and class-specific softmax curvature. A separability approximation replaces the $Kn\\times Kn$ Cholesky with one $n\\times n$ factorization rescaled per class, making the lattice encodable by successive interference cancellation, with both statistics from a single forward pass. The resulting method, SoftWater, gives fine grids to frequent, low-variance classes and coarse grids to rare ones, a large gap under Zipfian token distributions. Across five models from 1B to 32B, SoftWater outperforms the released WaterSIC quantizer (near-optimal under linear-layer WMSE but not output KL) at matched head rates on 59 of 60 test points, using none of that pipeline's refinements and cutting head-induced KL by $6.5\\times$--$8.3\\times$ at 2 bits. On Llama-3.2-1B-Instruct with quantized bodies, a 2-bit head removes 45--60\\% of stored bytes for a $2.9$--$3.7\\%$ perplexity increase. Because the class-side statistic comes from calibration data, matching calibration to the deployment domain gives the lowest KL on that domain throughout. On a tied model, a 4-bit head is near-lossless and a 2-bit head costs under 4\\% perplexity, making head quantization of such models practical.",
+        "identifiers": [
+          "SemanticScholar:92745417a735fc71d8f05d8ecbe975f3aa3e4947"
+        ],
+        "semantic_scholar_id": "92745417a735fc71d8f05d8ecbe975f3aa3e4947",
+        "canonical_id": "arXiv:2608.12026",
+        "arxiv_id": "2608.12026",
+        "authors": [
+          "Joao V. Cavalcanti",
+          "Ashia C. Wilson"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "freshness_age_days": 53,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.19147",
+      "identity_tokens": [
+        "id:SemanticScholar:dd2a0fe5c9eaf9fe9e8c04f4ffb480bb49f71f8a",
+        "id:arXiv:2608.19147",
+        "title:precompiled pipeline shards for distributed llm inference on intel ai pc fleets",
+        "url:https://arxiv.org/abs/2608.19147"
+      ],
+      "record": {
+        "title": "Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets",
+        "source_url": "https://arxiv.org/abs/2608.19147",
+        "year": 2026,
+        "published": "2026-08-19",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern Intel AI PCs ship capable integrated GPUs and NPUs with 16+ GB of unified memory, and they spend considerable time idle. That is not enough memory to fit a large model such as a 70B-parameter LLM. We show that a handful of AIPCs, working together over an ordinary network, can serve models beyond the capability of any single one. We use pipeline parallelism: a model is split by layer into per-stage shards, each pre-compiled into an OpenVINO graph, so that every machine runs one shard and passes activations to the next. Three techniques make this fast enough to be useful. First, we recover the speed of the unsplit model: a naive per-stage export runs well below monolithic inference because it misses an OpenVINO GPU optimization, and injecting a beam_idx Gather into each shard triggers that optimization (the IndirectKVCache fusion) and brings the shards to parity. Second, we leverage speculative decoding on stateful OpenVINO models. Third, the pipeline serves several users at once by interleaving their requests across the stages, each request carrying its own cache (micro-batching). Together, a two-node Llama 3.1 8B INT4 pipeline serves two concurrent users at 1.79x the single-user throughput of the unsplit model on the same hardware, and the gap widens under simulated wide-area latency. The same design scales to a 70B model that no single fleet member can hold: a four-node deployment of Lunar Lake AI PCs on Intel Tiber Cloud serves a single user at interactive speed, with output token-for-token identical to the same four-node pipeline decoding without speculation. Code, raw benchmark logs, and reproduction scripts ship as a self-contained package at https://github.com/labscommunity/pipeline-sharded-inference-paper (in the top-level reproduction/ directory).",
+        "identifiers": [
+          "SemanticScholar:dd2a0fe5c9eaf9fe9e8c04f4ffb480bb49f71f8a"
+        ],
+        "semantic_scholar_id": "dd2a0fe5c9eaf9fe9e8c04f4ffb480bb49f71f8a",
+        "canonical_id": "arXiv:2608.19147",
+        "arxiv_id": "2608.19147",
+        "authors": [
+          "Tate Berenbaum",
+          "M. Venkatachalam"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ad7a10f6bc7daaefbe8f34cfdcd0cfde8e2d2310ca97163a0bbcfa7565bae51b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

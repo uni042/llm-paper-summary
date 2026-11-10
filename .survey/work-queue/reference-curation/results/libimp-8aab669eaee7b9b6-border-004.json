@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8aab669eaee7b9b6-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.35586",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.35586",
+    "identity_tokens": [
+      "arXiv:2609.35586"
+    ],
+    "reason": "一次本文では計算上の対象はLLM向けanalog IMCだが、実証された時間短縮はclipping calibrationのみ。serving inferenceのenergy/latency改善は未計測で、主題との適合は限定的。",
+    "first_checked_at": "2026-10-05T05:04:07+00:00",
+    "last_checked_at": "2026-10-05T05:04:07+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "IMC-CLINIC: Coupled Loss-Informed Newton Iterations for Clipping in Analog In-Memory Computing"
+  },
+  "processed_at": "2026-10-05T05:04:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8aab669eaee7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

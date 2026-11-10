@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3a82d37f4d532d7f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.18302",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.18302",
+    "identity_tokens": [
+      "arXiv:2601.18302"
+    ],
+    "reason": "Transformerの最終層前後の隠れ状態角度の急変を定量化し、事前学習時にJREG正則化で抑えて下流能力を改善する研究。主要操作はpretrainingの損失関数変更であり、推論時の層省略や計算量・メモリ削減は実証していない。",
+    "first_checked_at": "2026-10-30T17:58:00+00:00",
+    "last_checked_at": "2026-10-30T17:58:00+00:00",
+    "linked_from": [],
+    "title": "Suppressing Final Layer Hidden State Jumps in Transformer Pretraining"
+  },
+  "processed_at": "2026-10-30T17:58:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3a82d37f4d53",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

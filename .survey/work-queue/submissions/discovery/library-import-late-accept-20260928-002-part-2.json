@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "INT v.s. FP: A Comprehensive Study of Fine-Grained Low-bit Quantization Formats",
+      "source_url": "https://arxiv.org/abs/2510.25602",
+      "year": 2025,
+      "published": "2025-10-29",
+      "abstract": "Modern AI hardware, such as Nvidia's Blackwell architecture, is increasingly embracing low-precision floating-point (FP) formats to handle the pervasive activation outliers in Large Language Models (LLMs). Despite this industry trend, a unified comparison of FP and integer (INT) quantization across varying granularities has been missing, leaving algorithm and hardware co-design without clear guidance. This paper fills that gap by systematically investigating the trade-offs between FP and INT formats. We reveal a critical performance crossover: while FP excels in coarse-grained quantization, the comparison at fine-grained (block-wise) levels is more nuanced. Our comprehensive comparison demonstrates that for popular 8-bit fine-grained formats (e.g., MX with block size 32), MXINT8 is superior to its FP counterpart in both algorithmic accuracy and hardware efficiency. However, for 4-bit formats, FP (e.g., MXFP4, NVFP4) often holds an accuracy advantage , though we show that NVINT4 can surpass NVFP4 when outlier-mitigation techniques like Hadamard rotation are applied. We also introduce a symmetric clipping method that resolves gradient bias in fine-grained low-bit INT training, enabling nearly lossless performance for MXINT8 training. These findings challenge the current hardware trajectory, demonstrating that a one-size-fits-all FP approach is suboptimal and advocating that fine-grained INT formats, particularly MXINT8, offer a better balance of accuracy, power, and efficiency for future AI accelerators.",
+      "canonical_id": "arXiv:2510.25602",
+      "arxiv_id": "2510.25602",
+      "doi": "10.48550/arXiv.2510.25602",
+      "authors": [
+        "Mengzhao Chen",
+        "Meng Wu",
+        "Hui Jin",
+        "Zhihang Yuan",
+        "Jing Liu",
+        "Chaoyi Zhang",
+        "Yunshui Li",
+        "Jie Huang",
+        "Jin Ma",
+        "Ze-Yue Xue",
+        "Zhi-Heng Liu",
+        "Xingyan Bin",
+        "Ping Luo"
+      ],
+      "reason": "細粒度INT/FP低bit formatを比較し推論hardwareと精度の設計判断に寄与する。",
+      "priority": 50
+    },
+    {
+      "title": "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution",
+      "source_url": "https://arxiv.org/abs/2510.15312",
+      "year": 2025,
+      "published": "2025-10-17",
+      "abstract": "Performing Retrieval-Augmented Generation (RAG) directly on mobile devices is promising for data privacy and responsiveness but is hindered by the architectural constraints of mobile NPUs. Specifically, current hardware struggles with the variable workloads intrinsic to RAG: the transition between processing extensive contexts and generating tokens incurs significant overhead due to static graph constraints, while the memory-bound generation phase leaves computational resources underutilized. In this work, we propose a holistic acceleration framework sd.npu, designed to maximize NPU efficiency for on-device RAG ecosystem. To address the latency caused by NPU graph switching during phase transitions, we introduce a pipelined execution strategy. This approach masks the overhead of model reconfiguration by parallelizing the loading of decoding graphs with the computation of partitioned context chunks (chunked prefill), thereby ensuring continuous execution flow. Furthermore, to mitigate low hardware utilization during the decoding phase, we develop an NPU-centric speculative decoding mechanism. By calibrating generation distributions and extending draft sequences, our method effectively converts idle NPU cycles into valid token throughput. Experiments on commercial smartphones show that our framework significantly outperforms existing baselines, delivering 1.06$\\times$--3.81$\\times$ speedups and 1.07$\\times$--4.71$\\times$ energy savings across various RAG tasks.",
+      "canonical_id": "arXiv:2510.15312",
+      "arxiv_id": "2510.15312",
+      "doi": "10.48550/arXiv.2510.15312",
+      "authors": [
+        "Zhi-Yang Chen",
+        "Daliang Xu",
+        "Haiyang Shen",
+        "Mengwei Xu",
+        "Shangguang Wang",
+        "Yun Ma"
+      ],
+      "reason": "chunked prefillとNPU向けspeculative decodingでmobile RAGを高速・省電力化する。",
+      "priority": 50
+    },
+    {
+      "title": "ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2510.02613",
+      "year": 2025,
+      "published": "2025-10-02",
+      "abstract": "Mixture-of-Experts (MoE) models promise efficient scaling of large language models (LLMs) by activating only a small subset of experts per token, but their parallelized inference pipelines make elastic serving challenging. Existing strategies fall short: horizontal scaling provisions entire replicas of the current configuration, often tens to hundreds of accelerators, leading to coarse granularity, long provisioning delays, and costly overprovisioning. Vertical scaling offers finer adjustments but typically requires instance restarts, incurring downtime. These limitations make current approaches ill-suited for the bursty, short-lived traffic patterns common in cloud deployments. We present ElasticMoE, an elastic scaling framework for MoE LLMs that achieves fine-grained, low-latency, and zero-downtime scaling. ElasticMoE decouples inference execution from memory operations, enabling scaling steps to proceed concurrently with serving. An HBM Management Module (HMM) reuses weights and KV caches via zero-copy remapping, while high-bandwidth peer-to-peer transfers bring newly added accelerators online without interrupting service. A virtual memory based expert redistribution mechanism migrates MoE experts without costly buffer reallocations, reducing peak memory usage during expert parallelism reconfiguration. Our evaluation on Ascend NPUs with three popular MoE LLMs shows that ElasticMoE achieves up to 9x lower scale-up latency, up to 2x better throughput during scaling, and significantly improves SLO attainment compared to baselines. By enabling fine-grained, concurrent scaling with minimal disruption, ElasticMoE advances the practicality of deploying massive MoE LLMs in dynamic cloud environments.",
+      "canonical_id": "arXiv:2510.02613",
+      "arxiv_id": "2510.02613",
+      "doi": "10.48550/arXiv.2510.02613",
+      "authors": [
+        "Gursimran Singh",
+        "T. Yu",
+        "Haley Li",
+        "Cheng Chen",
+        "Hanieh Sadri",
+        "Qintao Zhang",
+        "Yu Zhang",
+        "Ying Xiong",
+        "Yong Zhang",
+        "Zhe-Nan Fan"
+      ],
+      "reason": "zero-copy HBM/KV再利用とvirtual-memory expert再配置で無停止autoscalingを実現する。",
+      "priority": 50
+    },
+    {
+      "title": "SpecVLM: Fast Speculative Decoding in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2509.11815",
+      "year": 2025,
+      "published": "2025-09-15",
+      "abstract": "Speculative decoding is a powerful way to accelerate autoregressive large language models (LLMs), but directly porting it to vision-language models (VLMs) faces unique systems constraints: the prefill stage is dominated by visual tokens whose count scales with image resolution and video length, inflating both compute and memory, especially the key-value (KV) cache. We study speculative decoding for VLMs and introduce SpecVLM, a practical system that (1) establishes a strong EAGLE-2-style baseline, EagleVLM, delivering 1.5--2.3x end-to-end speedups over full autoregressive inference, and (2) further accelerates VLM inference with an elastic visual compressor that adaptively selects among pruning, pooling, convolution, and resampler primitives to balance FLOPs/parameters and accuracy per input. To avoid costly offline distillation corpora, we propose an online-logit distillation protocol that trains the draft model with on-the-fly teacher logits and penultimate features using a combined cross-entropy and Smooth L1 objective, eliminating storage and preprocessing while remaining compute-efficient. This protocol reveals a training-time scaling effect: longer online training monotonically increases the draft model's average accepted length, improving speculative efficiency. Empirically, SpecVLM achieves additional acceleration, culminating in 2.5--2.9x end-to-end speedups within 5 epochs across LLaVA and MMMU, consistently over resolutions and task difficulties, while preserving the target model's output distribution (lossless decoding). Our code is available at https://github.com/haiduo/SpecVLM.",
+      "canonical_id": "arXiv:2509.11815",
+      "arxiv_id": "2509.11815",
+      "doi": "10.48550/arXiv.2509.11815",
+      "authors": [
+        "Hai-Duo Huang",
+        "Fuwei Yang",
+        "Zhenhua Liu",
+        "Xuan-Wu Yin",
+        "Dong Li",
+        "Peng-Ju Ren",
+        "E. Barsoum"
+      ],
+      "reason": "visual token圧縮とonline-logit distillationでVLM speculative decodingを高速化する。",
+      "priority": 50
+    },
+    {
+      "title": "HFX: Joint Design of Algorithms and Systems for Multi-SLO Serving and Fast Scaling",
+      "source_url": "https://arxiv.org/abs/2508.15919",
+      "year": 2025,
+      "published": "2025-08-21",
+      "abstract": "Large language model (LLM) serving faces the dual challenge of meeting strict user-specific service-level objectives (SLOs) while minimizing computational cost under dynamic, multi-task workloads. Existing approaches either rely on static scheduling policies or focus on single-task settings, limiting their applicability in real-world deployments with heterogeneous requests, variable prompt lengths, and elastic scaling requirements. We present HFX, a production LLM serving system that jointly optimizes request scheduling and elastic scaling across model replicas to satisfy diverse SLOs. HFX introduces a \\textbf{scheduler} that performs proactive budget estimation and prioritization to ensure SLO compliance for both new and in-flight requests. HFX also integrates a \\textbf{scaler} that supports fast device-to-device (D2D) weight transfer, reducing cold-start latency. Additionally, the system supports both colocated and disaggregated prefill/decode deployments, enabling adaptation to diverse workload patterns and cloud environments. Through extensive experiments on multi-task workloads, we demonstrate consistently higher SLO attainment, lower end-to-end latency, and lower NPU usage cost by up to 4.44$\\times$, 65.82\\%, and 49.81\\%, respectively, compared to state-of-the-art systems. Our results highlight the effectiveness of SLO-aware scheduling and scaling in practical LLM serving, providing a robust framework for cost-efficient and SLO-compliant deployments.",
+      "canonical_id": "arXiv:2508.15919",
+      "arxiv_id": "2508.15919",
+      "authors": [
+        "Zahra Yousefijamarani",
+        "Xing-Lu Wang",
+        "Qian Wang",
+        "Morgan Lindsay Heisler",
+        "Taha Shabani",
+        "N. Gholipour",
+        "Parham Yassini",
+        "Hong Chang",
+        "Kang Chen",
+        "Qiantao Zhang",
+        "Xiao-Long Bai",
+        "Jian-Nan Wang",
+        "Ying Xiong",
+        "Yong Zhang",
+        "Zhe-Nan Fan"
+      ],
+      "reason": "request schedulingとreplica scalingを共同最適化しmulti-SLO servingのcost/latencyを抑える。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928-late",
+    "round": "library-import-late-accept-20260928-002",
+    "axis": "explicit-library-late-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "最新Library Discovery runでaccept済みだが未反映の候補を正規Research候補へ取り込む。",
+    "candidate_count": 20,
+    "round_submission_index": 2,
+    "round_submission_count": 4
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-late-accept-20260928-002",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-late-accept-20260928-002.json",
+    "receipt": "sha256:b0a7ee39453a3295a330eae5c9acd64e432021875575f2313f16886993b96950"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928-late",
+    "summary": "Library上の未反映accept成果をGitHubの正規Research候補へ反映する。"
+  }
+}

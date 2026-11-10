@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r18",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.14929",
+      "identity_tokens": [
+        "arXiv:2605.14929",
+        "DOI:10.48550/arXiv.2605.14929"
+      ],
+      "title": "A Hardware-Aware, Per-Layer Methodology for Post-Training Quantization of Large Language Models",
+      "reason": "SOPは層ごとに固定・動的コードブック、block scale、活性重み付き誤差、outlier補正を選び、ハードウェアLUTを用いる低ビットLLM PTQを提案。6モデル系列で6.5bpwのFP6が8.0bpw FP8より重み再構成誤差を減らす条件を報告する。",
+      "source_url": "https://arxiv.org/abs/2605.14929",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:50+09:00",
+      "last_checked_at": "2026-10-30T20:43:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 462,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.00433",
+      "identity_tokens": [
+        "arXiv:2405.00433",
+        "DOI:10.48550/arXiv.2405.00433"
+      ],
+      "title": "Weight Sparsity Complements Activity Sparsity in Neuromorphic Language Models",
+      "reason": "小規模Penn Treebank/WikiText-2のスパイキング言語モデルで活性疎性と重み疎性の相乗効果を分析する。言語生成の省演算モデル設計に関係するが、生成LLMの実GPU推論や大規模モデルでの速度評価はない。arXivに文章重複の管理者注記あり。",
+      "source_url": "https://arxiv.org/abs/2405.00433",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:50+09:00",
+      "last_checked_at": "2026-10-30T20:43:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 464,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.13359",
+      "identity_tokens": [
+        "arXiv:2504.13359",
+        "DOI:10.48550/arXiv.2504.13359"
+      ],
+      "title": "Cost-of-Pass: An Economic Framework for Evaluating Language Models",
+      "reason": "正解1件を得る期待金銭費用cost-of-passを定義し、モデル選択・多数決・自己修正・予算制御の効率を比較する。小型・大型・推論モデルのタスク別費用最適性を分析する、LLM推論コストの直接評価ベンチマーク。",
+      "source_url": "https://arxiv.org/abs/2504.13359",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:50+09:00",
+      "last_checked_at": "2026-10-30T20:43:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 468,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.20621",
+      "identity_tokens": [
+        "arXiv:2511.20621",
+        "DOI:10.48550/arXiv.2511.20621"
+      ],
+      "title": "DiFR: Inference Verification Despite Nondeterminism",
+      "reason": "LLM生成の数値非決定性を考慮し、seed同期によるToken-DiFRと圧縮activation fingerprintのActivation-DiFRで推論正当性を監査する。vLLM統合で4bit量子化を2トークンでAUC>0.999検出し、通信費用25～75%削減と報告する推論検証システム。",
+      "source_url": "https://arxiv.org/abs/2511.20621",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:50+09:00",
+      "last_checked_at": "2026-10-30T20:43:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 469,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.16429",
+      "identity_tokens": [
+        "arXiv:2606.16429",
+        "DOI:10.48550/arXiv.2606.16429"
+      ],
+      "title": "Taylor-Calibrate: Principled Initialization for Hybrid Linear Attention Distillation",
+      "reason": "softmax注意をGated DeltaNetへ変換する際の減衰・書込み・出力ゲートをTaylor近似統計で初期化する。長文脈のKV負荷を抑えるハイブリッド線形注意への変換で、基準と同じ回復品質に必要な蒸留トークンを4.9～9.2倍削減。これは訓練側の値であり推論TPSとは区別する。",
+      "source_url": "https://arxiv.org/abs/2606.16429",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:50+09:00",
+      "last_checked_at": "2026-10-30T20:43:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 470,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.04096",
+      "identity_tokens": [
+        "arXiv:2602.04096",
+        "DOI:10.48550/arXiv.2602.04096"
+      ],
+      "title": "CORE: Context-Robust Remasking for Diffusion Language Models",
+      "reason": "拡散LLMの確信度が高くても文脈に脆いトークンを検出するため、部分mask摂動への感度から再mask候補を選ぶ。LLaDA-8BでMBPP精度最大9.2ポイント改善するが、計算予算を揃えた品質比較が主であり実測推論高速化は示されていない。",
+      "source_url": "https://arxiv.org/abs/2602.04096",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:50+09:00",
+      "last_checked_at": "2026-10-30T20:43:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 472,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.27190",
+      "identity_tokens": [
+        "arXiv:2605.27190",
+        "DOI:10.48550/arXiv.2605.27190"
+      ],
+      "title": "Learning When to Think While Listening in Large Audio-Language Models",
+      "reason": "ストリーミング音声LLMで待機・途中推論・最終回答の時点を選ぶ制御器を学習する。Qwen2.5-Omni-7Bでpost-endpoint思考長14%削減、精度67.6→70.3%改善を報告し、音声LLMの可視遅延と計算予算配分に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2605.27190",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:50+09:00",
+      "last_checked_at": "2026-10-30T20:43:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 473,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.23625",
+      "identity_tokens": [
+        "arXiv:2509.23625",
+        "DOI:10.48550/arXiv.2509.23625"
+      ],
+      "title": "RIV: Recursive Introspection Mask Diffusion Vision Language Model",
+      "reason": "マスク拡散VLMへ自己誤り検出器とunmask/remask反復を追加し、生成結果の論理誤りを修正する。品質改善が主目的であり、推論ステップ増加の費用や速度改善は一次要旨で示されていない。",
+      "source_url": "https://arxiv.org/abs/2509.23625",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:50+09:00",
+      "last_checked_at": "2026-10-30T20:43:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 477,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.21834",
+      "identity_tokens": [
+        "arXiv:2609.21834",
+        "DOI:10.48550/arXiv.2609.21834"
+      ],
+      "title": "Beyond Shadow Weights: Quantization-Aware Training as Quantized-Endpoint Descent",
+      "reason": "QATでFP shadow weightを保持せず量子化コード自体を更新するQARを提案し、LLM後学習で同等以上の精度を保ちながら訓練メモリを削減する。推論用低ビットendpointを直接最適化するモデル圧縮技術。",
+      "source_url": "https://arxiv.org/abs/2609.21834",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:50+09:00",
+      "last_checked_at": "2026-10-30T20:43:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 479,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.17739",
+      "identity_tokens": [
+        "arXiv:2508.17739",
+        "DOI:10.48550/arXiv.2508.17739"
+      ],
+      "title": "Speculative Safety-Aware Decoding",
+      "reason": "小型安全モデルの確率分布と大型LLMの分布を投機的サンプリングで統合し、match ratioに応じて安全重視と有用性重視の復号を切り替える。推論時の安全性向上と投機的復号による速度改善を同時に目指す。",
+      "source_url": "https://arxiv.org/abs/2508.17739",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:50+09:00",
+      "last_checked_at": "2026-10-30T20:43:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 480,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

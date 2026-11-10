@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce8a174cfcd006c7-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1038/s41591-026-04521-4",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1038/s41591-026-04521-4",
+    "identity_tokens": [
+      "DOI:10.1038/s41591-026-04521-4"
+    ],
+    "reason": "一次資料未取得。publisher URLの取得結果はinaccessible/403。",
+    "first_checked_at": "2026-10-05T01:21:54+00:00",
+    "last_checked_at": "2026-10-05T01:21:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "End-to-end multimodal pathology foundation model with clinical dialogue"
+  },
+  "processed_at": "2026-10-05T01:21:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce8a174cfcd0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

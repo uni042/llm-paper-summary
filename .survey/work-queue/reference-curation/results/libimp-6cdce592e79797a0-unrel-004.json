@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6cdce592e79797a0-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.04391",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.04391",
+    "identity_tokens": [
+      "arXiv:2607.04391"
+    ],
+    "reason": "The abstract presents an auditable agent-memory architecture and retrieval design but no concrete inference-cost, latency, throughput, or serving-efficiency evaluation.",
+    "first_checked_at": "2026-10-05T10:38:47+00:00",
+    "last_checked_at": "2026-10-05T10:38:47+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+    ],
+    "title": "Memory-Orchestrated Semantic System (MOSS): An Auditable Agentic Memory Architecture"
+  },
+  "processed_at": "2026-10-05T10:38:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6cdce592e797",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

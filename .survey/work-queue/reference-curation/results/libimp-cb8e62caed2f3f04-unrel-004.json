@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cb8e62caed2f3f04-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/mm.2021.3061394",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/mm.2021.3061394",
+    "identity_tokens": [
+      "DOI:10.1109/mm.2021.3061394"
+    ],
+    "reason": "A100 GPUのTensor Core、非同期data movement、L2/HBM2/NVLink等のhardware機能を紹介するGPU architecture論文で、LLM推論方式そのものを提案・評価しない。",
+    "first_checked_at": "2026-10-04T13:00:44+00:00",
+    "last_checked_at": "2026-10-04T13:00:44+00:00",
+    "linked_from": [],
+    "title": "NVIDIA A100 Tensor Core GPU: Performance and Innovation"
+  },
+  "processed_at": "2026-10-04T13:00:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cb8e62caed2f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

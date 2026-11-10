@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b66d932e0b82733-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1002/sd.70942",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1002/sd.70942",
+    "identity_tokens": [
+      "DOI:10.1002/sd.70942"
+    ],
+    "reason": "The full article was not available through the primary page: the full-text link redirected to an abstract page without reviewable survey sections, leaving its fit uncertain.",
+    "first_checked_at": "2026-10-05T13:27:13+00:00",
+    "last_checked_at": "2026-10-05T13:27:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+    ],
+    "title": "Toward Sustainable Agentic\n AI\n Systems: A Survey of Architectures and Methodologies"
+  },
+  "processed_at": "2026-10-05T13:27:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b66d932e0b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

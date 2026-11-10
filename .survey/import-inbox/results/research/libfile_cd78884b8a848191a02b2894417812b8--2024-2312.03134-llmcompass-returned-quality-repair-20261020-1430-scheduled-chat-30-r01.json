@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "ef658f953fb19022537b0675c0958b8071603a20d3bb6b069f4785d67f8b58a1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_cd78884b8a848191a02b2894417812b8--2024-2312.03134-llmcompass-returned-quality-repair-20261020-1430-scheduled-chat-30-r01.md",
+  "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
+  "worker_completed_at": "2026-10-20T14:38:00+09:00",
+  "worker_run_key": "20261020-1430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7075,
+    "body_paragraphs": 39,
+    "method_chars": 2583,
+    "method_paragraphs": 14,
+    "evaluation_chars": 355,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 355 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 355 < 500"
+  ],
+  "processed_at": "2026-10-20T16:46:09+00:00"
+}

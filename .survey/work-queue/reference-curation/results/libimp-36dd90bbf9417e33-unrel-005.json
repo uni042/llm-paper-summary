@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36dd90bbf9417e33-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.53941/tai.2025.100014",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.53941/tai.2025.100014",
+    "identity_tokens": [
+      "DOI:10.53941/tai.2025.100014"
+    ],
+    "reason": "黄河文化の文書コーパスを使うmulti-modal RAGアプリ。inference engineの効率化ではない。",
+    "first_checked_at": "2026-10-05T13:57:28+00:00",
+    "last_checked_at": "2026-10-05T13:57:28+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md"
+    ],
+    "title": "RiverEcho-2.0: A Real-Time Interactive System for Yellow River Culture via Enhanced MultiModal Document RAG"
+  },
+  "processed_at": "2026-10-05T13:57:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36dd90bbf941",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

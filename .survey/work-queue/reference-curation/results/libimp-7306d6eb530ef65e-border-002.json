@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7306d6eb530ef65e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.18234",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.18234",
+    "identity_tokens": [
+      "arXiv:2510.18234"
+    ],
+    "reason": "一次要旨は長文を二次元画像へ写像して視覚トークンへ圧縮する方式を提案し、10倍未満でOCR精度97%、20倍で約60%を報告する。入力トークン削減は推論メモリ・文脈長に関連するが、主評価は光学文字認識とデータ生成であり、LLMサービングの独立した性能評価は要旨から確認できない。",
+    "first_checked_at": "2026-10-12T17:45:22+00:00",
+    "last_checked_at": "2026-10-12T21:37:59+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "DeepSeek-OCR: Contexts Optical Compression"
+  },
+  "processed_at": "2026-10-12T21:37:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7306d6eb530e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e7a3f355619875a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.06688",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.06688",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.06688",
+      "arXiv:2512.06688",
+      "id:arXiv:2512.06688",
+      "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d",
+      "url:https://arxiv.org/abs/2512.06688"
+    ],
+    "reason": "一次要旨によると、暗黙的なユーザー選好を推測するための1000件の対話・300以上の状況・2万以上の選好を含む個人化データセットを作成し、強化微調整と可読なエージェント記憶を評価する。記憶を約2000トークンへ縮約し、3万2000トークンの会話履歴と比べて入力トークンを16分の1にする結果は推論費用に接点がある。しかし主たる技術的貢献は個人化能力・記憶の学習と正答率改善で、汎用LLMのKVキャッシュ、メモリ階層、配信スケジューラ等の実行基盤は直接最適化していないため境界判定。",
+    "first_checked_at": "2026-10-11T10:43:47+00:00",
+    "last_checked_at": "2026-10-19T15:52:13+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
+  },
+  "processed_at": "2026-10-19T15:52:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e7a3f355619",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

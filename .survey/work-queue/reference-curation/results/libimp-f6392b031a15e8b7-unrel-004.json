@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6392b031a15e8b7-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.07339",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.07339",
+    "identity_tokens": [
+      "arXiv:2401.07339"
+    ],
+    "reason": "外部toolを統合したLLM agentでrepo-level code generationの正確性を改善するagent capability研究。CodeAgentBenchで18.1〜250%の性能改善を評価するが、agentic inference runtime/serving効率化ではない。",
+    "first_checked_at": "2026-10-05T02:04:36+00:00",
+    "last_checked_at": "2026-10-05T16:43:48+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2510.18586-tokencake-agent-kv-cache-serving.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md",
+      "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md"
+    ],
+    "title": "CodeAgent: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges"
+  },
+  "processed_at": "2026-10-05T16:43:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6392b031a15",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

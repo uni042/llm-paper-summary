@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29b6d9e42f015c47-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.02907",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.02907",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2607.02907",
+      "SemanticScholar:274ac7edd2aa9be9697709329eac3a397c50f081",
+      "arXiv:2607.02907"
+    ],
+    "reason": "ProLaViT replaces explicit visual-generation reasoning with latent-space derivation and says it avoids inference-time tools, but the abstract does not quantify runtime, token, memory, or throughput savings.",
+    "first_checked_at": "2026-10-12T22:18:01+00:00",
+    "last_checked_at": "2026-10-12T22:18:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ProLaViT: Learning Progressive Latent Visual Thoughts in Structured Latent Space"
+  },
+  "processed_at": "2026-10-12T22:18:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29b6d9e42f01",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

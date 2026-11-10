@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc5e32baa0d7941b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2003.03033",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2003.03033",
+    "identity_tokens": [
+      "arXiv:2003.03033"
+    ],
+    "reason": "81本のpruning研究をmeta-analysisしShrinkBenchで一般neural network pruningを標準評価するsurvey/benchmark研究。LLM推論runtimeやLLM配備を最終適用先としない。",
+    "first_checked_at": "2026-10-04T22:50:52+00:00",
+    "last_checked_at": "2026-10-04T22:50:52+00:00",
+    "linked_from": [],
+    "title": "What is the State of Neural Network Pruning?"
+  },
+  "processed_at": "2026-10-04T22:50:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc5e32baa0d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

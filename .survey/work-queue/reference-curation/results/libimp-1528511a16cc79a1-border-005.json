@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1528511a16cc79a1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.00175",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.00175",
+    "identity_tokens": [
+      "arXiv:2603.00175"
+    ],
+    "reason": "Primary text proposes linear attention, but its method and reported efficiency evaluation are explicitly for Vision Transformers/high-resolution vision; transfer to LLM inference is unestablished.",
+    "first_checked_at": "2026-10-06T11:11:22+00:00",
+    "last_checked_at": "2026-10-06T11:11:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Self-Attention And Beyond the Infinite: Towards Linear Transformers with Infinite Self-Attention"
+  },
+  "processed_at": "2026-10-06T11:11:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1528511a16cc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

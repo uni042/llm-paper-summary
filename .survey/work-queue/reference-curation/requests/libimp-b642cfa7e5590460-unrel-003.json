@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b642cfa7e5590460-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "OpenReview:T5nUQDrM4u",
+  "reason": "既存dense checkpointをMoEへ変換して追加事前学習費用を減らす学習効率化が主目的であり、最終適用先が凍結対象の学習工程そのもの。",
+  "title": "Sparse Upcycling: Training Mixture-of-Experts from Dense Checkpoints",
+  "identity_tokens": [
+    "OpenReview:T5nUQDrM4u",
+    "arXiv:2212.05055"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md",
+    "papers/inference/02-adaptive-expert-computation-compression/2026-2602.07616-sere-similarity-expert-rerouting.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b642cfa7e559",
+  "source_precheck_request_id": null
+}

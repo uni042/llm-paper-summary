@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Foundations of Large Language Model Compression - Part 1: Weight Quantization",
+      "source_url": "https://arxiv.org/abs/2409.02026",
+      "year": 2024,
+      "published": "2024-09-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In recent years, compression of large language models (LLMs) has emerged as an important problem to enable language model deployment on resource-constrained devices, reduce computational costs, and mitigate the environmental footprint of large-scale AI infrastructure. In this paper, we lay down the foundation for LLM quantization from a convex optimization perspective and propose a quantization technique that builds on this foundation for optimum quantization outcomes. Our quantization framework, CVXQ, scales to models containing hundreds of billions of weight parameters and provides users with the flexibility to compress models to any specified model size, post-training. A reference implementation of CVXQ can be obtained from github.com/seannz/cvxq.",
+      "identifiers": [
+        "SemanticScholar:30cd84d234d77a23961e3323e26db0bbe576f96e"
+      ],
+      "semantic_scholar_id": "30cd84d234d77a23961e3323e26db0bbe576f96e",
+      "canonical_id": "arXiv:2409.02026",
+      "arxiv_id": "2409.02026",
+      "doi": "10.48550/arXiv.2409.02026",
+      "authors": [
+        "S. Young"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 787,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者一次要旨では凸最適化に基づくLLM重み量子化の理論を構築し、目標モデル容量を指定して学習後に圧縮するCVXQを提案する。数百Bパラメータまで拡張可能と主張し公式実装も提示する。推論デバイスのメモリ容量・重み圧縮という直接的な推論実装課題に寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_review"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-59556de389f3",
+    "round": "libimp-59556de389f3fc55-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-59556de389f3fc55-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-59556de389f3fc55-pre01.json",
+    "receipt": "sha256:4f701649083bc225ff9a6818f1a94eac25d31f19702a201b9861d3c7fa9515f4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-59556de389f3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

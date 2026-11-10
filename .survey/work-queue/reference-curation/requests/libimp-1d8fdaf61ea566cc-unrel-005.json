@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1d8fdaf61ea566cc-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2506.05668",
+  "reason": "本文のRNEはdiffusion model inference-time control/density estimationであり、sample conditioningやtarget alignmentが目的。sampling step数、latency、memoryを削減する推論高速化ではないため、diffusion inference-controlという表題だけでは対象効率に該当しない。",
+  "title": "RNE: plug-and-play diffusion inference-time control and energy-based training",
+  "identity_tokens": [
+    "arXiv:2506.05668"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d8fdaf61ea5",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

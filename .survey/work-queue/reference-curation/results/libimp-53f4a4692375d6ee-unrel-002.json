@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-53f4a4692375d6ee-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.05979",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.05979",
+    "identity_tokens": [
+      "arXiv:2503.05979"
+    ],
+    "reason": "一次資料abstractはAutoregressive models (ARMs) have become the workhorse for sequence generation tasks, since many problems can be modeled as next-token prediction. While there appears to be a natural ordering for text (i.e., left-to-righを対象とする。LLM推論の計算量、メモリ、latency、throughput、KV cache、quantization、offload、servingへの具体的な技術接続がないためunrelated。",
+    "first_checked_at": "2026-10-06T16:39:09+00:00",
+    "last_checked_at": "2026-10-06T16:39:09+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "Learning-Order Autoregressive Models with Application to Molecular Graph Generation"
+  },
+  "processed_at": "2026-10-06T16:39:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-53f4a4692375",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

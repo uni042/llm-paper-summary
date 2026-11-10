@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27a030b29cf8b8ae-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.15181",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.15181",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.15181",
+      "SemanticScholar:2ab439ca08421cea06949d1f3eef2e53e539f24d",
+      "arXiv:2605.15181"
+    ],
+    "reason": "The planner/orchestrator learns multi-step image-editing workflows; it targets editing quality and task execution rather than LLM inference infrastructure.",
+    "first_checked_at": "2026-10-13T18:22:09+00:00",
+    "last_checked_at": "2026-10-13T18:22:09+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+    ],
+    "title": "From Plans to Pixels: Learning to Plan and Orchestrate for Open-Ended Image Editing"
+  },
+  "processed_at": "2026-10-13T18:22:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27a030b29cf8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b3a894cc5f1385ba-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.01915",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.01915",
+    "identity_tokens": [
+      "arXiv:2403.01915"
+    ],
+    "reason": "xT studies nested tokenization for large images/vision context rather than LLM inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T15:07:44+00:00",
+    "last_checked_at": "2026-10-05T15:07:44+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+    ],
+    "title": "xT: Nested Tokenization for Larger Context in Large Images"
+  },
+  "processed_at": "2026-10-05T15:07:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b3a894cc5f13",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

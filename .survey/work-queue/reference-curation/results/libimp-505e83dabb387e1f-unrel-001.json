@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-505e83dabb387e1f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.01231",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.01231",
+    "identity_tokens": [
+      "arXiv:2410.01231"
+    ],
+    "reason": "The contribution is approximate-nearest-neighbor proximity-graph index construction; RAG retrieval is application context, not LLM inference efficiency.",
+    "first_checked_at": "2026-10-05T14:53:03+00:00",
+    "last_checked_at": "2026-10-05T14:53:03+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+    ],
+    "title": "Revisiting the Index Construction of Proximity Graph-Based Approximate Nearest Neighbor Search"
+  },
+  "processed_at": "2026-10-05T14:53:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-505e83dabb38",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,302 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e6b9b6e23eadbe5e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e6b9b6e23ead",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2510.11938",
+    "arXiv:2510.12357",
+    "arXiv:2510.12872",
+    "arXiv:2510.13602",
+    "arXiv:2510.15312",
+    "arXiv:2510.20171",
+    "arXiv:2510.24051",
+    "arXiv:2510.25602",
+    "arXiv:2510.26730",
+    "arXiv:2510.26913",
+    "arXiv:2510.27257",
+    "arXiv:2510.27656",
+    "arXiv:2511.00330",
+    "arXiv:2511.00606",
+    "arXiv:2511.02230",
+    "arXiv:2511.04805",
+    "arXiv:2511.05814",
+    "arXiv:2511.07427",
+    "arXiv:2511.08923",
+    "arXiv:2511.13676"
+  ],
+  "target_unseen": 20,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "064360a792d23dbd3bad312136313555127bbf16",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 19,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 20,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 19,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T18:51:24.941665+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2510.11938",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3767295.3769316"
+    },
+    {
+      "requested_id": "arXiv:2510.12357",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2510.12357"
+    },
+    {
+      "requested_id": "arXiv:2510.12872",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2510.12872"
+    },
+    {
+      "requested_id": "arXiv:2510.13602",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2510.13602"
+    },
+    {
+      "requested_id": "arXiv:2510.15312",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2510.15312"
+    },
+    {
+      "requested_id": "arXiv:2510.20171",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2510.20171"
+    },
+    {
+      "requested_id": "arXiv:2510.24051",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3731569.3764814"
+    },
+    {
+      "requested_id": "arXiv:2510.25602",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2510.25602"
+    },
+    {
+      "requested_id": "arXiv:2510.26730",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2510.26730"
+    },
+    {
+      "requested_id": "arXiv:2510.26913",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2510.26913"
+    },
+    {
+      "requested_id": "arXiv:2510.27257",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.27656",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2510.27656"
+    },
+    {
+      "requested_id": "arXiv:2511.00330",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2511.00330"
+    },
+    {
+      "requested_id": "arXiv:2511.00606",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2511.00606"
+    },
+    {
+      "requested_id": "arXiv:2511.02230",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2511.02230"
+    },
+    {
+      "requested_id": "arXiv:2511.04805",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2511.04805"
+    },
+    {
+      "requested_id": "arXiv:2511.05814",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2511.05814"
+    },
+    {
+      "requested_id": "arXiv:2511.07427",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2511.07427"
+    },
+    {
+      "requested_id": "arXiv:2511.08923",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2511.08923"
+    },
+    {
+      "requested_id": "arXiv:2511.13676",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2511.13676"
+    }
+  ],
+  "results": [
+    {
+      "title": "Synergistic Tensor and Pipeline Parallelism",
+      "source_url": "https://arxiv.org/abs/2510.27257",
+      "year": 2025,
+      "published": "2025-10-31",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In the machine learning system, the hybrid model parallelism combining tensor parallelism (TP) and pipeline parallelism (PP) has become the dominant solution for distributed training of Large Language Models~(LLMs) and Multimodal LLMs (MLLMs). However, TP introduces significant collective communication overheads, while PP suffers from synchronization inefficiencies such as pipeline bubbles. Existing works primarily address these challenges from isolated perspectives, focusing either on overlapping TP communication or on flexible PP scheduling to mitigate pipeline bubbles. In this paper, we propose a new synergistic tensor and pipeline parallelism schedule that simultaneously reduces both types of bubbles. Our proposed schedule decouples the forward and backward passes in PP into fine-grained computation units, which are then braided to form a composite computation sequence. This compositional structure enables near-complete elimination of TP-related bubbles. Building upon this structure, we further design the PP schedule to minimize PP bubbles. Experimental results demonstrate that our approach improves training throughput by up to 12% for LLMs and 16% for MLLMs compared to existing scheduling methods. Our source code is avaiable at https://github.com/MICLAB-BUPT/STP.",
+      "identifiers": [
+        "SemanticScholar:820526f9baccb9d5beb5d8aea1ae663e0be6dd96"
+      ],
+      "semantic_scholar_id": "820526f9baccb9d5beb5d8aea1ae663e0be6dd96",
+      "canonical_id": "arXiv:2510.27257",
+      "arxiv_id": "2510.27257",
+      "doi": "10.48550/arXiv.2510.27257",
+      "authors": [
+        "Mengshi Qi",
+        "Jiaxuan Peng",
+        "Jie Zhang",
+        "Juan Zhu",
+        "Yong Li",
+        "Huadong Ma"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "freshness_age_days": 337,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.27257",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.27257",
+        "id:SemanticScholar:820526f9baccb9d5beb5d8aea1ae663e0be6dd96",
+        "id:arXiv:2510.27257",
+        "title:synergistic tensor and pipeline parallelism",
+        "url:https://arxiv.org/abs/2510.27257"
+      ],
+      "record": {
+        "title": "Synergistic Tensor and Pipeline Parallelism",
+        "source_url": "https://arxiv.org/abs/2510.27257",
+        "year": 2025,
+        "published": "2025-10-31",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In the machine learning system, the hybrid model parallelism combining tensor parallelism (TP) and pipeline parallelism (PP) has become the dominant solution for distributed training of Large Language Models~(LLMs) and Multimodal LLMs (MLLMs). However, TP introduces significant collective communication overheads, while PP suffers from synchronization inefficiencies such as pipeline bubbles. Existing works primarily address these challenges from isolated perspectives, focusing either on overlapping TP communication or on flexible PP scheduling to mitigate pipeline bubbles. In this paper, we propose a new synergistic tensor and pipeline parallelism schedule that simultaneously reduces both types of bubbles. Our proposed schedule decouples the forward and backward passes in PP into fine-grained computation units, which are then braided to form a composite computation sequence. This compositional structure enables near-complete elimination of TP-related bubbles. Building upon this structure, we further design the PP schedule to minimize PP bubbles. Experimental results demonstrate that our approach improves training throughput by up to 12% for LLMs and 16% for MLLMs compared to existing scheduling methods. Our source code is avaiable at https://github.com/MICLAB-BUPT/STP.",
+        "identifiers": [
+          "SemanticScholar:820526f9baccb9d5beb5d8aea1ae663e0be6dd96"
+        ],
+        "semantic_scholar_id": "820526f9baccb9d5beb5d8aea1ae663e0be6dd96",
+        "canonical_id": "arXiv:2510.27257",
+        "arxiv_id": "2510.27257",
+        "doi": "10.48550/arXiv.2510.27257",
+        "authors": [
+          "Mengshi Qi",
+          "Jiaxuan Peng",
+          "Jie Zhang",
+          "Juan Zhu",
+          "Yong Li",
+          "Huadong Ma"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "freshness_age_days": 337,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5d7bcf95ca747129150fbc390e67e366206ed6376295aff739302fb2cb9c5984",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

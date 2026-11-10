@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e6b627a8e4810c82-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.12087",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.12087",
+    "identity_tokens": [
+      "arXiv:2606.12087"
+    ],
+    "reason": "FORT-Searcher generates tasks for evaluating/search agents; it is task-generation methodology, not an inference efficiency technique.",
+    "first_checked_at": "2026-10-07T12:00:56+00:00",
+    "last_checked_at": "2026-10-07T12:00:56+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "FORT-Searcher: Synthesizing Shortcut-Resistant Search Tasks for Training Deep Search Agents"
+  },
+  "processed_at": "2026-10-07T12:00:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e6b627a8e481",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

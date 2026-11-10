@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-23e39f8d0d55aac6-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.13654",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.13654",
+    "identity_tokens": [
+      "arXiv:2609.13654"
+    ],
+    "reason": "一次要旨: Pretrained foundation models (FMs) have achieved remarkable success in computer vision, yet their high fine-tuning cost limits practical deployment. Parameter-efficient fine-tuning (PEFT) methods such as Low-Rank Adaptation (LoRA) improve efficiency by constraining updates to a predefined low-rank subspace. However, when applied to remote sensing tasks with substantial domain shifts, the fixed subspace is constructed",
+    "first_checked_at": "2026-10-05T06:47:42+00:00",
+    "last_checked_at": "2026-10-05T06:47:42+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+    ],
+    "title": "Multimodal Foundation Models Adaptation based on Domain-Aware Relaxed Orthogonal Subspace for Remote Sensing"
+  },
+  "processed_at": "2026-10-05T06:47:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-23e39f8d0d55",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

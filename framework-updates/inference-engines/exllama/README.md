@@ -1,0 +1,122 @@
+# ExLlama
+
+ExLlama系の主要な機能・性能更新を継続的に記録する集約ページ。ExLlamaV2の後継であるExLlamaV3も同じ系統として扱う。GPU memoryへ収まりきらないMoE expert / KV cacheのCPU offload、投機的デコード（speculative decoding）、MTP、VRAM allocatorなどを中心に記録する。
+
+## 現在できること
+
+- **consumer GPUでの低bit推論**: NVIDIA GPUを中心に、EXL3などの2〜8 bit級weight量子化を使ってmodel本体のVRAM使用量とweight読出し量を削減できる。量子化形式に合わせた専用kernelでdecode速度を維持することを狙う。
+- **複数requestの同時serving**: continuous / dynamic batchingで、到着時刻や生成長が異なるrequestを同じGPU上で継続的にbatchへ出し入れできる。固定batchの終了待ちを減らし、対話serverでGPUが空く時間を減らせる。
+- **複数GPUへのmodel配置**: tensor parallelismでdense計算を複数GPUへ分割し、MoEではexpert parallelismでexpert群を別GPUへ配置できる。dense部分とexpert部分を同じ分割規則へ固定せず、GPU枚数とVRAM容量に合わせて配置を変えられる。
+- **MoE expertのCPU offload**: 全expertをVRAMへ常駐させず、一部をCPU DRAMへ置いて必要なexpertを利用する構成を取れる。巨大MoEを少ないVRAMで動かせる代わりに、CPU memory帯域とPCIe転送が新しい律速になり得る。
+- **KV cacheの容量削減と階層化**: KVを2〜8 bitへ量子化してtoken当たりのcache量を減らせるほか、VRAMに収まらないKV pageをCPU DRAMへ退避できる。長contextや複数conversationを同時保持するときのVRAM pressureを下げられる。
+- **投機的デコード**: draft model、MTP、n-gram等で複数token候補を先に作り、target modelでまとめて検証できる。draft量やconfidence thresholdも動的に調整でき、外れた候補を大量に計算する無駄を抑えられる。
+- **LoRA・multimodal・API serving**: LoRA adapter、画像等を含むmultimodal modelを扱え、TabbyAPI等と組み合わせればOpenAI互換APIとして複数clientへ提供できる。Hugging Face Transformers pluginとして既存workflowからbackend利用することもできる。
+
+以下の更新履歴は、これらの主要能力が**どのhardware構成まで使えるようになったか、VRAM / CPU RAM / PCIeをどう使い分けられるようになったか、decodeの無駄やallocator断片化をどこまで減らしたか**という観点で追う。
+
+## 初期収録期間
+
+2026-06-03〜2026-09-03
+
+ExLlamaV2には期間内の本質的更新がなく、後継のExLlamaV3を同じ系統として追跡する。
+
+## 要点
+
+この期間のExLlamaV3は、**GPUへ置くexpert / KVとCPUへ逃がす部分を実行中に調整しながら、投機的デコードのdraft量もworkloadに合わせて変える**方向へ進んでいる。
+
+固定的に「このlayerは全部CPU」と決めるのではなく、GPU memory残量や利用状況に合わせて一部expert・cacheをCPUへ移すため、VRAM容量とPCIe / CPU RAM bandwidthのtrade-offを細かく調整できる。
+
+## 2026-10-25 — ExLlamaV3 v1.6.5（正式版）
+
+2026-10-25に正式公開されたv1.6.5を追加。v1.6.4から、VRAM上のprefill cache削減、hot/sparse vocabularyを用いたdraft latency削減、Gemma 4 MTP（Gemma4AssistantForCausalLM）対応、AVX2/AVX512 MoE CPU offload、Nemotron Super VL対応、tokenizer prompt cache修正が含まれる。Windows向けCUDA 12.8/13.2 wheelも公開された。個別機能の説明から全モデル共通のE2E生成速度倍率は推定できず、実測倍率は記載しない。
+
+一次資料: https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.5 ; https://github.com/turboderp-org/exllamav3/compare/v1.6.4...v1.6.5
+
+## 主要更新
+
+### 2026-10-20 — ExLlamaV3 v1.6.4（正式版）
+- `Lfm2VlForConditionalGeneration`とNemotron 3.5 Bolt（NemotronH拡張）への対応を追加し、並列要求間のprefill / decode schedulingをより公平に調整。
+- tensor parallelism / shared memoryの問題と、投機的draft有効時にrequestを再queueするとcontext上限を超える不具合を修正。
+- releaseに速度倍率やVRAM使用量の数値はない。[正式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.4)
+
+### 2026-10-17 — ExLlamaV3 v1.6.3（正式版）
+- Ling-3.0 / 3.1の`BailingMoeV3ForCausalLM`構造に対応し、不具合修正を含む。release noteは修正の詳細や速度倍率を示していない。
+- Windows x64 CUDA 12.8（cu128）wheelが配布されているが、手元のCUDA環境での動作保証や12GB VRAMへのmodel収容を意味しない。[正式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.3)
+
+### 2026-10-14 — ExLlamaV3 v1.6.2（正式版）
+- CPU offloadingの高速化、tensor parallelismモデルのDFlash2 draft対応、GDN / KDA / MLA層のVRAM固定負荷削減、ROCm gfx11系の注意計算高速化・不具合修正を含む。
+- 公開release noteに条件付き速度倍率・VRAM削減量はない。TPとDFlash2の組合せは複数GPU向けで、単一RTX 4070 SUPERで使えると限らない。[正式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.2)。
+
+### 2026-10-11 — ExLlamaV3 v1.6.1
+- GDN/KDA/Mambaドラフトの固定VRAM負荷を削減し、再帰型ドラフト、DFlashのスライディング注意、ドラフトとlong-ngramの混合投機的復号などを追加。Windows 11 / RTX 4070 SUPERでの速度・メモリ節約量は未確認。[公式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.1)。
+
+### 2026-10-08 JST — ExLlamaV3 v1.6.0（正式公開、UTC 2026-10-07）
+
+- **CPU退避とメモリ使用量を改善**: AVX2対応CPUでの重み・専門家のCPU退避（offloading）を高速化し、CPUコアの割当・固定（pinning）を既定で最適化。システムRAMの追加使用量も削減した。比較可能な公式速度倍率・RAM削減量はリリースノートに記載されていないため断定しない。
+- **ROCm対応は初期段階**: ROCm 10、gfx1100以降のGPUで暫定対応を追加。安定版CUDA経路と同等の互換性を保証する記載ではない。GLM4とQwen3-VLの画像処理部分も修正。
+- 一次資料: https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.0
+
+### 2026-10-04 JST — ExLlamaV3 v1.5.4（正式公開、UTC 2026-10-03）
+
+- **埋め込み層の量子化・ディスク逐次読込**: トークン埋め込み（token embedding）の量子化とディスク逐次読込（disk streaming）の選択肢を追加し、モデル読み込みを高速化。量子化精度を改善し、システムRAMとVRAMの使用量を削減した。具体的な削減率は公式ノートにない。
+- **Transformers 5連携**: Hugging Face Transformers 5向け統合モジュールを更新し、EXL3層を包んだモデルで逆伝播（backpropagation）を追加。
+- 一次資料: https://github.com/turboderp-org/exllamav3/releases/tag/v1.5.4
+
+### 2026-07-25 — ExLlamaV3 v1.2.0（released）
+
+- **experimental expert-layer CPU offload**: MoE layerのexpert weightをCPU RAMへ退避し、必要なexpertだけGPU計算へ使う経路を追加。巨大MoEを少ないVRAMで動かせる一方、expert読込がCPU memory / PCIe bandwidthへ依存する。
+
+- **dynamic draft window**: 投機的デコードで先読みするtoken数を固定せず、直近の受理状況などに応じて増減する。draftしすぎによる無駄なverifyを減らす狙い。
+
+[release](https://github.com/turboderp-org/exllamav3/releases/tag/v1.2.0)
+
+### 2026-07-31 — v1.3.0（released）
+
+- **第2階層CPU KV cache**: 過去tokenのKVをすべてVRAMへ置かず、一部pageをCPU RAMへ退避できるようにした。
+
+- **page / checkpoint eviction policy**: cache容量が足りなくなったとき、どのKV pageやcheckpointを残し、どれを追い出すかをpolicyで選べるようにする。
+
+  これにより長contextや複数conversationを扱うとき、単純な「古いものから全部捨てる」以外のcache管理が可能になる。
+
+[release](https://github.com/turboderp-org/exllamav3/releases/tag/v1.3.0)
+
+### 2026-08-06 — v1.4.0（released）
+
+- **AVX-512 CPU offload path高速化**: CPUへ退避したweight / expert計算で、512-bit幅のSIMD命令AVX-512を使う経路を改善。
+
+- **prefill高速化**: 長いpromptをまとめて処理するprefill pathも調整。release noteには比較可能な公式数値なし。
+
+[release](https://github.com/turboderp-org/exllamav3/releases/tag/v1.4.0)
+
+### 2026-08-23 — v1.4.3（released）
+
+- **partial CPU expert offloadを動的配置へ変更**: MoE layer全体ではなくexpert単位でCPU / GPU配置を変えられるようにし、VRAM残量へ合わせたより細かいoffloadを可能にした。
+
+- **self-calibrating confidence threshold**: 投機的デコードでdraftを続けるか止めるかのconfidence閾値を固定せず、実際の受理傾向から自動調整する。
+
+- **TP時のCPU cache offload**: tensor parallelism（TP）でmodelを複数GPUへ分割している場合にもCPU側KV/cache階層を利用できるようにした。
+
+[release](https://github.com/turboderp-org/exllamav3/releases/tag/v1.4.3)
+
+### 2026-08-31 — v1.4.5（released）
+
+- **MoE MTP高速化**: MoE modelでMTP（Multi-Token Prediction; 複数token予測）を使う際のdraft / verify pathを高速化。
+
+- **MoE layerのslab allocation**: expertごとに細かくVRAM領域を確保して隙間を増やす代わりに、大きな連続領域（slab）を先に確保して内部で分配する方式へ変更。
+
+  これにより異なるshapeのallocationを繰り返して生じるVRAM断片化（fragmentation）と、alignmentによる未使用領域を減らす。
+
+[release](https://github.com/turboderp-org/exllamav3/releases/tag/v1.4.5)
+
+### 2026-09-02 — v1.4.6（released）
+
+- **Windows向けexperimental n-gram streaming**: 直前のtoken列に一致する過去n-gramを使って次token候補を先読みする軽量なdraft方式を追加。別のneural draft modelを動かさず、既出token patternから候補を作るためdraft costが小さい。
+
+[release](https://github.com/turboderp-org/exllamav3/releases/tag/v1.4.6)
+
+### 用語メモ
+
+- **CPU offload**: GPU memoryへ置ききれないweightやKVをCPU RAMへ置き、必要時だけGPU側から利用する方式。
+- **eviction policy**: cacheが満杯になったとき、何を追い出すか決める規則。
+- **slab allocation**: 大きなmemory領域をまとめて確保し、その中から小領域を切り出すallocator方式。細かいallocationによる断片化を減らせる。
+- **n-gram drafting**: 過去に現れた連続token patternを基に将来tokenを予測する、model-freeに近い投機候補生成方式。

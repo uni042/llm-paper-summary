@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab77c3f3682b697f-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2102.11402",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2102.11402",
+    "identity_tokens": [
+      "arXiv:2102.11402"
+    ],
+    "reason": "Transformer微調整へMixUpを適用して汎化・較正を改善する学習手法で、システム効率化への直接寄与がない。",
+    "first_checked_at": "2026-09-27T04:28:31+09:00",
+    "last_checked_at": "2026-09-30T09:50:07+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 489"
+    ],
+    "title": "MixUp Training Leads to Reduced Overfitting and Improved Calibration for the Transformer Architecture"
+  },
+  "processed_at": "2026-09-30T09:50:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab77c3f3682b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

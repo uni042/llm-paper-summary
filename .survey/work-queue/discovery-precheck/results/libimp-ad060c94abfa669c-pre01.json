@@ -1,0 +1,287 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ad060c94abfa669c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ad060c94abfa",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2204.09656",
+    "arXiv:2412.04468"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f7c44efc2ab85368e35824b77293d08c2719d7f6",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-05T16:04:59.741314+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2204.09656",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.04468",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "NVILA: Efficient Frontier Visual Language Models",
+      "source_url": "https://arxiv.org/abs/2412.04468",
+      "year": 2024,
+      "published": "2024-12-05",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 257,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual language models (VLMs) have made significant advances in accuracy in recent years. However, their efficiency has received much less attention. This paper introduces NVILA, a family of open VLMs designed to optimize both efficiency and accuracy. Building on top of VILA, we improve its model architecture by first scaling up the spatial and temporal resolutions, and then compressing visual tokens. This \"scale-then-compress\" approach enables NVILA to efficiently process high-resolution images and long videos. We also conduct a systematic investigation to enhance the efficiency of NVILA throughout its entire lifecycle, from training to deployment. NVILA matches or surpasses the accuracy of many leading open and proprietary VLMs across a wide range of image and video benchmarks. At the same time, it reduces training costs by 1.9-5.1×, prefilling latency by 1.6-2.2×, and decoding latency by 1.2-2.8×.",
+      "identifiers": [
+        "SemanticScholar:7929ce6d325e7be6976f321765106d4384e08aab"
+      ],
+      "semantic_scholar_id": "7929ce6d325e7be6976f321765106d4384e08aab",
+      "canonical_id": "arXiv:2412.04468",
+      "arxiv_id": "2412.04468",
+      "doi": "10.1109/CVPR52734.2025.00390",
+      "authors": [
+        "Zhijian Liu",
+        "Ligeng Zhu",
+        "Baifeng Shi",
+        "Zhuoyang Zhang",
+        "Yuming Lou",
+        "Shang Yang",
+        "Hao-Cheng Xi",
+        "Shiyi Cao",
+        "Yu-Xian Gu",
+        "Da-Cheng Li",
+        "Xiuyu Li",
+        "Yun-Hao Fang",
+        "Yu-Kang Chen",
+        "Cheng-Yu Hsieh",
+        "De-An Huang",
+        "An-Chieh Cheng",
+        "Vishwesh Nath",
+        "Jinyi Hu",
+        "Si-Fei Liu",
+        "Ranjay Krishna",
+        "Da-Guang Xu",
+        "Xiaolong Wang",
+        "Pavlo Molchanov",
+        "Jan Kautz",
+        "Hongxu Yin",
+        "Song Han",
+        "Yao Lu"
+      ],
+      "priority": 257,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 257,
+        "citation_count": 257,
+        "total": 257,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 669,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Fast Post-Training Pruning Framework for Transformers",
+      "source_url": "https://arxiv.org/abs/2204.09656",
+      "year": 2022,
+      "published": "2022-03-29",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 247,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning is an effective way to reduce the huge inference cost of Transformer models. However, prior work on pruning Transformers requires retraining the models. This can add high training cost and high complexity to model deployment, making it difficult to use in many practical situations. To address this, we propose a fast post-training pruning framework for Transformers that does not require any retraining. Given a resource constraint and a sample dataset, our framework automatically prunes the Transformer model using structured sparsity methods. To retain high accuracy without retraining, we introduce three novel techniques: (i) a lightweight mask search algorithm that finds which heads and filters to prune based on the Fisher information; (ii) mask rearrangement that complements the search algorithm; and (iii) mask tuning that reconstructs the output activations for each layer. We apply our method to BERT-base and DistilBERT, and we evaluate its effectiveness on GLUE and SQuAD benchmarks. Our framework achieves up to 2.0x reduction in FLOPs and 1.56x speedup in inference latency, while maintaining<1% loss in accuracy. Importantly, our framework prunes Transformers in less than 3 minutes on a single GPU, which is over two orders of magnitude faster than existing pruning approaches that retrain the models.",
+      "identifiers": [
+        "SemanticScholar:fb145e1e49d3269d8223c7710e22b45438613ff0"
+      ],
+      "semantic_scholar_id": "fb145e1e49d3269d8223c7710e22b45438613ff0",
+      "canonical_id": "arXiv:2204.09656",
+      "arxiv_id": "2204.09656",
+      "doi": "10.48550/arXiv.2204.09656",
+      "authors": [
+        "Woosuk Kwon",
+        "Sehoon Kim",
+        "Michael W. Mahoney",
+        "Joseph Hassoun",
+        "K. Keutzer",
+        "A. Gholami"
+      ],
+      "priority": 257,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 247,
+        "citation_count": 247,
+        "total": 257,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1651,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2412.04468",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvpr52734.2025.00390",
+        "id:SemanticScholar:7929ce6d325e7be6976f321765106d4384e08aab",
+        "id:arXiv:2412.04468",
+        "title:nvila efficient frontier visual language models",
+        "url:https://arxiv.org/abs/2412.04468"
+      ],
+      "record": {
+        "title": "NVILA: Efficient Frontier Visual Language Models",
+        "source_url": "https://arxiv.org/abs/2412.04468",
+        "year": 2024,
+        "published": "2024-12-05",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 257,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual language models (VLMs) have made significant advances in accuracy in recent years. However, their efficiency has received much less attention. This paper introduces NVILA, a family of open VLMs designed to optimize both efficiency and accuracy. Building on top of VILA, we improve its model architecture by first scaling up the spatial and temporal resolutions, and then compressing visual tokens. This \"scale-then-compress\" approach enables NVILA to efficiently process high-resolution images and long videos. We also conduct a systematic investigation to enhance the efficiency of NVILA throughout its entire lifecycle, from training to deployment. NVILA matches or surpasses the accuracy of many leading open and proprietary VLMs across a wide range of image and video benchmarks. At the same time, it reduces training costs by 1.9-5.1×, prefilling latency by 1.6-2.2×, and decoding latency by 1.2-2.8×.",
+        "identifiers": [
+          "SemanticScholar:7929ce6d325e7be6976f321765106d4384e08aab"
+        ],
+        "semantic_scholar_id": "7929ce6d325e7be6976f321765106d4384e08aab",
+        "canonical_id": "arXiv:2412.04468",
+        "arxiv_id": "2412.04468",
+        "doi": "10.1109/CVPR52734.2025.00390",
+        "authors": [
+          "Zhijian Liu",
+          "Ligeng Zhu",
+          "Baifeng Shi",
+          "Zhuoyang Zhang",
+          "Yuming Lou",
+          "Shang Yang",
+          "Hao-Cheng Xi",
+          "Shiyi Cao",
+          "Yu-Xian Gu",
+          "Da-Cheng Li",
+          "Xiuyu Li",
+          "Yun-Hao Fang",
+          "Yu-Kang Chen",
+          "Cheng-Yu Hsieh",
+          "De-An Huang",
+          "An-Chieh Cheng",
+          "Vishwesh Nath",
+          "Jinyi Hu",
+          "Si-Fei Liu",
+          "Ranjay Krishna",
+          "Da-Guang Xu",
+          "Xiaolong Wang",
+          "Pavlo Molchanov",
+          "Jan Kautz",
+          "Hongxu Yin",
+          "Song Han",
+          "Yao Lu"
+        ],
+        "priority": 257,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 257,
+          "citation_count": 257,
+          "total": 257,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 669,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2204.09656",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2204.09656",
+        "id:SemanticScholar:fb145e1e49d3269d8223c7710e22b45438613ff0",
+        "id:arXiv:2204.09656",
+        "title:a fast posttraining pruning framework for transformers",
+        "url:https://arxiv.org/abs/2204.09656"
+      ],
+      "record": {
+        "title": "A Fast Post-Training Pruning Framework for Transformers",
+        "source_url": "https://arxiv.org/abs/2204.09656",
+        "year": 2022,
+        "published": "2022-03-29",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 247,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pruning is an effective way to reduce the huge inference cost of Transformer models. However, prior work on pruning Transformers requires retraining the models. This can add high training cost and high complexity to model deployment, making it difficult to use in many practical situations. To address this, we propose a fast post-training pruning framework for Transformers that does not require any retraining. Given a resource constraint and a sample dataset, our framework automatically prunes the Transformer model using structured sparsity methods. To retain high accuracy without retraining, we introduce three novel techniques: (i) a lightweight mask search algorithm that finds which heads and filters to prune based on the Fisher information; (ii) mask rearrangement that complements the search algorithm; and (iii) mask tuning that reconstructs the output activations for each layer. We apply our method to BERT-base and DistilBERT, and we evaluate its effectiveness on GLUE and SQuAD benchmarks. Our framework achieves up to 2.0x reduction in FLOPs and 1.56x speedup in inference latency, while maintaining<1% loss in accuracy. Importantly, our framework prunes Transformers in less than 3 minutes on a single GPU, which is over two orders of magnitude faster than existing pruning approaches that retrain the models.",
+        "identifiers": [
+          "SemanticScholar:fb145e1e49d3269d8223c7710e22b45438613ff0"
+        ],
+        "semantic_scholar_id": "fb145e1e49d3269d8223c7710e22b45438613ff0",
+        "canonical_id": "arXiv:2204.09656",
+        "arxiv_id": "2204.09656",
+        "doi": "10.48550/arXiv.2204.09656",
+        "authors": [
+          "Woosuk Kwon",
+          "Sehoon Kim",
+          "Michael W. Mahoney",
+          "Joseph Hassoun",
+          "K. Keutzer",
+          "A. Gholami"
+        ],
+        "priority": 257,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 247,
+          "citation_count": 247,
+          "total": 257,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1651,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d03aa6d78f37bcae93604706e3fbd179bb05cbc33359023e8a4e7c1ab061c8c6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

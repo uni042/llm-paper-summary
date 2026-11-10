@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a1672abcdac690f1-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.30379",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.30379",
+    "identity_tokens": [
+      "arXiv:2609.30379"
+    ],
+    "reason": "Variable-size inputs are common in deep learning, but dense batching allocates a shared envelope and spends computation on padding. The cost multiplies across varying axes: an explicit pair state allocates $BN_{\\max}^2$ positions instead of $\\sum_i N_i^2$. Packing removes that waste, but composing packed operations still requires the logical axes and sample boundaries a flat buffer no longer exposes. We present DanLing NestedTensor, a PyTorch tensor abstraction that makes multi-ragged structure a property of the te",
+    "first_checked_at": "2026-10-05T05:41:28+00:00",
+    "last_checked_at": "2026-10-05T05:41:28+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "DanLing NestedTensor: Composable Multi-Ragged Tensors for Deep Learning"
+  },
+  "processed_at": "2026-10-05T05:41:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a1672abcdac6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

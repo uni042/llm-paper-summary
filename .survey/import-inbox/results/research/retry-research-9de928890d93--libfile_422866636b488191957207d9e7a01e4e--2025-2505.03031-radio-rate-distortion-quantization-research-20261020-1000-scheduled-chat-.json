@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "9e1446cfd7263d9bb8a5e2a73005df4650589d1358183c125dc95bb07325a7ee",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9de928890d93--libfile_422866636b488191957207d9e7a01e4e--2025-2505.03031-radio-rate-distortion-quantization-research-20261020-1000-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2505.03031",
+  "worker_completed_at": "2026-10-20T10:00:00+09:00",
+  "worker_run_key": "20261020-1000-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7122,
+    "body_paragraphs": 43,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-20T18:04:37+00:00"
+}

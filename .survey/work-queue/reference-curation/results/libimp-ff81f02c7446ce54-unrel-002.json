@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff81f02c7446ce54-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/isca52012.2021.00011",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/isca52012.2021.00011",
+    "identity_tokens": [
+      "DOI:10.1109/isca52012.2021.00011"
+    ],
+    "reason": "Samsung mobile SoC向けの汎用sparsity-aware NPU architectureで、LLM/Transformer推論固有の方式・評価を最終適用先としない。",
+    "first_checked_at": "2026-10-04T02:16:20+00:00",
+    "last_checked_at": "2026-10-04T02:16:20+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Sparsity-Aware and Re-configurable NPU Architecture for Samsung Flagship Mobile SoC"
+  },
+  "processed_at": "2026-10-04T02:16:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff81f02c7446",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

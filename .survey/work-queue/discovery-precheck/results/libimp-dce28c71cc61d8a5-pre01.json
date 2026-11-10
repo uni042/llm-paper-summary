@@ -1,0 +1,418 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-dce28c71cc61d8a5-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-dce28c71cc61",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2025.findings-emnlp.363",
+    "SemanticScholar:24f9368e615de9c60ae3074d615d485492a6f284",
+    "arXiv:2511.12031",
+    "arXiv:2511.21736"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0f9400b1713ee507effed6d54e61227d0b1b0452",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T23:23:00.349259+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-emnlp.363",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:24f9368e615de9c60ae3074d615d485492a6f284",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.12031",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.21736",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Conv-Basis: A New Paradigm for Efficient Attention Inference and Gradient Computation in Transformers",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.363",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:4611931e3c6b7bce4a44e8d15a14f11ac663398d"
+      ],
+      "semantic_scholar_id": "4611931e3c6b7bce4a44e8d15a14f11ac663398d",
+      "doi": "10.18653/v1/2025.findings-emnlp.363",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.363",
+      "authors": [
+        "Ying-Yu Liang",
+        "Heshan Liu",
+        "Zhenmei Shi",
+        "Zhao Song",
+        "Zhuoyan Xu",
+        "Jiale Zhao",
+        "Zhen Zhuang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 469,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Attention-Level Speculation",
+      "source_url": "https://www.semanticscholar.org/paper/24f9368e615de9c60ae3074d615d485492a6f284",
+      "year": 2025,
+      "published": null,
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:24f9368e615de9c60ae3074d615d485492a6f284"
+      ],
+      "semantic_scholar_id": "24f9368e615de9c60ae3074d615d485492a6f284",
+      "canonical_id": "SemanticScholar:24f9368e615de9c60ae3074d615d485492a6f284",
+      "authors": [
+        "Jack Cai",
+        "A. Vora",
+        "Ran Zhang",
+        "M. O'Connor",
+        "M. C. Jeffrey"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 469,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Striking the Right Balance between Compute and Copy: Improving LLM Inferencing Under Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2511.12031",
+      "year": 2025,
+      "published": "2025-11-15",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the skyrocketing costs of GPUs and their virtual instances in the cloud, there is a significant desire to use CPUs for large language model (LLM) inference. KV cache update, often implemented as allocation, copying, and in-place strided update for each generated token, incurs significant overhead. As the sequence length increases, the allocation and copy overheads dominate the performance. Alternate approaches may allocate large KV tensors upfront to enable in-place updates, but these matrices (with zero-padded rows) cause redundant computations. In this work, we propose a new KV cache allocation mechanism called Balancing Memory and Compute (BMC). BMC allocates, once every r iterations, KV tensors with r redundant rows, allowing in-place update without copy overhead for those iterations, but at the expense of a small amount of redundant computation. Second, we make an interesting observation that the extra rows allocated in the KV tensors and the resulting redundant computation can be repurposed for Speculative Decoding (SD) that improves token generation efficiency. Last, BMC represents a spectrum of design points with different values of r. To identify the best-performing design point(s), we derive a simple analytical model for BMC. The proposed BMC method achieves an average throughput acceleration of up to 3.2x over baseline HuggingFace (without SD). Importantly when we apply BMC with SD, it results in an additional speedup of up to 1.39x, over and above the speedup offered by SD. Further, BMC achieves a throughput acceleration of up to 1.36x and 2.29x over state-of-the-art inference servers vLLM and DeepSpeed, respectively. Although the BMC technique is evaluated extensively across different classes of CPUs (desktop and server class), we also evaluate the scheme with GPUs and demonstrate that it works well for GPUs.",
+      "identifiers": [
+        "SemanticScholar:61110b18baed2ba8f16ba66943ec48b40077767f"
+      ],
+      "semantic_scholar_id": "61110b18baed2ba8f16ba66943ec48b40077767f",
+      "canonical_id": "arXiv:2511.12031",
+      "arxiv_id": "2511.12031",
+      "doi": "10.48550/arXiv.2511.12031",
+      "authors": [
+        "A. Ramachandran",
+        "R. Govindarajan",
+        "Murali Annavaram",
+        "P. Raghavendra",
+        "Hossein Entezari Zarch",
+        "Lei Gao",
+        "Chaoyi Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 332,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "R2Q: Towards Robust 2-Bit Large Language Models via Residual Refinement Quantization",
+      "source_url": "https://arxiv.org/abs/2511.21736",
+      "year": 2025,
+      "published": "2025-11-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid progress of Large Language Models (LLMs) has brought substantial computational and memory demands, spurring the adoption of low-bit quantization. While 8-bit and 4-bit formats have become prevalent, extending quantization to 2 bits remains challenging due to severe accuracy degradation. To address this, we propose Residual Refinement Quantization (R2Q)-a novel 2-bit quantization framework that decomposes the process into two sequential 1-bit sub-quantizations, forming an adaptive quantization lattice. Extensive evaluations on Llama, OPT, and Qwen across diverse benchmarks-covering question answering, commonsense reasoning, and language modeling-demonstrate that R2Q consistently outperforms existing 2-bit quantization methods in both fine-grained and coarse-grained settings. By refining quantization through a residual learning mechanism, R2Q enhances performance, improves training stability, and accelerates convergence under extreme compression. Furthermore, its modular design enables seamless integration with existing quantization-aware training (QAT) frameworks.",
+      "identifiers": [
+        "SemanticScholar:58274eae24e160f4adcb73790dca8821e1411641"
+      ],
+      "semantic_scholar_id": "58274eae24e160f4adcb73790dca8821e1411641",
+      "canonical_id": "arXiv:2511.21736",
+      "arxiv_id": "2511.21736",
+      "doi": "10.48550/arXiv.2511.21736",
+      "authors": [
+        "Jiayi Chen",
+        "Jie-Qi Shi",
+        "Jing Huo",
+        "Chen Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 326,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.findings-emnlp.363",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-emnlp.363",
+        "id:SemanticScholar:4611931e3c6b7bce4a44e8d15a14f11ac663398d",
+        "title:convbasis a new paradigm for efficient attention inference and gradient computation in transformers",
+        "url:https://doi.org/10.18653/v1/2025.findings-emnlp.363"
+      ],
+      "record": {
+        "title": "Conv-Basis: A New Paradigm for Efficient Attention Inference and Gradient Computation in Transformers",
+        "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.363",
+        "year": 2025,
+        "published": null,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:4611931e3c6b7bce4a44e8d15a14f11ac663398d"
+        ],
+        "semantic_scholar_id": "4611931e3c6b7bce4a44e8d15a14f11ac663398d",
+        "doi": "10.18653/v1/2025.findings-emnlp.363",
+        "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.363",
+        "authors": [
+          "Ying-Yu Liang",
+          "Heshan Liu",
+          "Zhenmei Shi",
+          "Zhao Song",
+          "Zhuoyan Xu",
+          "Jiale Zhao",
+          "Zhen Zhuang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 469,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:24f9368e615de9c60ae3074d615d485492a6f284",
+      "identity_tokens": [
+        "id:SemanticScholar:24f9368e615de9c60ae3074d615d485492a6f284",
+        "title:attentionlevel speculation",
+        "url:https://www.semanticscholar.org/paper/24f9368e615de9c60ae3074d615d485492a6f284"
+      ],
+      "record": {
+        "title": "Attention-Level Speculation",
+        "source_url": "https://www.semanticscholar.org/paper/24f9368e615de9c60ae3074d615d485492a6f284",
+        "year": 2025,
+        "published": null,
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:24f9368e615de9c60ae3074d615d485492a6f284"
+        ],
+        "semantic_scholar_id": "24f9368e615de9c60ae3074d615d485492a6f284",
+        "canonical_id": "SemanticScholar:24f9368e615de9c60ae3074d615d485492a6f284",
+        "authors": [
+          "Jack Cai",
+          "A. Vora",
+          "Ran Zhang",
+          "M. O'Connor",
+          "M. C. Jeffrey"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 469,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.12031",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.12031",
+        "id:SemanticScholar:61110b18baed2ba8f16ba66943ec48b40077767f",
+        "id:arXiv:2511.12031",
+        "title:striking the right balance between compute and copy improving llm inferencing under speculative decoding",
+        "url:https://arxiv.org/abs/2511.12031"
+      ],
+      "record": {
+        "title": "Striking the Right Balance between Compute and Copy: Improving LLM Inferencing Under Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2511.12031",
+        "year": 2025,
+        "published": "2025-11-15",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the skyrocketing costs of GPUs and their virtual instances in the cloud, there is a significant desire to use CPUs for large language model (LLM) inference. KV cache update, often implemented as allocation, copying, and in-place strided update for each generated token, incurs significant overhead. As the sequence length increases, the allocation and copy overheads dominate the performance. Alternate approaches may allocate large KV tensors upfront to enable in-place updates, but these matrices (with zero-padded rows) cause redundant computations. In this work, we propose a new KV cache allocation mechanism called Balancing Memory and Compute (BMC). BMC allocates, once every r iterations, KV tensors with r redundant rows, allowing in-place update without copy overhead for those iterations, but at the expense of a small amount of redundant computation. Second, we make an interesting observation that the extra rows allocated in the KV tensors and the resulting redundant computation can be repurposed for Speculative Decoding (SD) that improves token generation efficiency. Last, BMC represents a spectrum of design points with different values of r. To identify the best-performing design point(s), we derive a simple analytical model for BMC. The proposed BMC method achieves an average throughput acceleration of up to 3.2x over baseline HuggingFace (without SD). Importantly when we apply BMC with SD, it results in an additional speedup of up to 1.39x, over and above the speedup offered by SD. Further, BMC achieves a throughput acceleration of up to 1.36x and 2.29x over state-of-the-art inference servers vLLM and DeepSpeed, respectively. Although the BMC technique is evaluated extensively across different classes of CPUs (desktop and server class), we also evaluate the scheme with GPUs and demonstrate that it works well for GPUs.",
+        "identifiers": [
+          "SemanticScholar:61110b18baed2ba8f16ba66943ec48b40077767f"
+        ],
+        "semantic_scholar_id": "61110b18baed2ba8f16ba66943ec48b40077767f",
+        "canonical_id": "arXiv:2511.12031",
+        "arxiv_id": "2511.12031",
+        "doi": "10.48550/arXiv.2511.12031",
+        "authors": [
+          "A. Ramachandran",
+          "R. Govindarajan",
+          "Murali Annavaram",
+          "P. Raghavendra",
+          "Hossein Entezari Zarch",
+          "Lei Gao",
+          "Chaoyi Jiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 332,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.21736",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.21736",
+        "id:SemanticScholar:58274eae24e160f4adcb73790dca8821e1411641",
+        "id:arXiv:2511.21736",
+        "title:r2q towards robust 2bit large language models via residual refinement quantization",
+        "url:https://arxiv.org/abs/2511.21736"
+      ],
+      "record": {
+        "title": "R2Q: Towards Robust 2-Bit Large Language Models via Residual Refinement Quantization",
+        "source_url": "https://arxiv.org/abs/2511.21736",
+        "year": 2025,
+        "published": "2025-11-21",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid progress of Large Language Models (LLMs) has brought substantial computational and memory demands, spurring the adoption of low-bit quantization. While 8-bit and 4-bit formats have become prevalent, extending quantization to 2 bits remains challenging due to severe accuracy degradation. To address this, we propose Residual Refinement Quantization (R2Q)-a novel 2-bit quantization framework that decomposes the process into two sequential 1-bit sub-quantizations, forming an adaptive quantization lattice. Extensive evaluations on Llama, OPT, and Qwen across diverse benchmarks-covering question answering, commonsense reasoning, and language modeling-demonstrate that R2Q consistently outperforms existing 2-bit quantization methods in both fine-grained and coarse-grained settings. By refining quantization through a residual learning mechanism, R2Q enhances performance, improves training stability, and accelerates convergence under extreme compression. Furthermore, its modular design enables seamless integration with existing quantization-aware training (QAT) frameworks.",
+        "identifiers": [
+          "SemanticScholar:58274eae24e160f4adcb73790dca8821e1411641"
+        ],
+        "semantic_scholar_id": "58274eae24e160f4adcb73790dca8821e1411641",
+        "canonical_id": "arXiv:2511.21736",
+        "arxiv_id": "2511.21736",
+        "doi": "10.48550/arXiv.2511.21736",
+        "authors": [
+          "Jiayi Chen",
+          "Jie-Qi Shi",
+          "Jing Huo",
+          "Chen Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 326,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:42cfa29bcecaafd935f5d96180d2ea72bc285672903f97ac6e08d53dec9842d8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

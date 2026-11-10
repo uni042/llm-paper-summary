@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2fec93ead216206f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.02881",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.02881",
+    "identity_tokens": [
+      "arXiv:2609.02881"
+    ],
+    "reason": "Graph Machine is an architectural pretraining study; its sparse retrieval is evaluated during pretraining, with no LLM serving-efficiency result.",
+    "first_checked_at": "2026-10-05T07:19:36+00:00",
+    "last_checked_at": "2026-10-05T07:19:36+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Graph Machine: Towards Better Pretraining via Edges"
+  },
+  "processed_at": "2026-10-05T07:19:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2fec93ead216",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

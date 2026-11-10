@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cdf26d84be07fe9a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.16774",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.16774",
+    "identity_tokens": [
+      "arXiv:2606.16774"
+    ],
+    "reason": "agent skill-tree/task solving qualityでmodel inference optimizationでない。",
+    "first_checked_at": "2026-10-05T02:59:44+00:00",
+    "last_checked_at": "2026-10-05T02:59:44+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "OpenClaw-Skill: Collective Skill Tree Search for Agentic Large Language Models"
+  },
+  "processed_at": "2026-10-05T02:59:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cdf26d84be07",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

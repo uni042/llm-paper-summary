@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-df09b1d3b79527ac-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1805.04833",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1805.04833",
+    "identity_tokens": [
+      "arXiv:1805.04833"
+    ],
+    "reason": "story premiseからplotを生成し、それを条件にstoryを生成する階層型物語生成モデルの品質改善が主題で、LLM推論runtime効率化を提案しない。",
+    "first_checked_at": "2026-10-04T14:30:19+00:00",
+    "last_checked_at": "2026-10-04T14:30:19+00:00",
+    "linked_from": [],
+    "title": "Hierarchical Neural Story Generation"
+  },
+  "processed_at": "2026-10-04T14:30:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df09b1d3b795",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

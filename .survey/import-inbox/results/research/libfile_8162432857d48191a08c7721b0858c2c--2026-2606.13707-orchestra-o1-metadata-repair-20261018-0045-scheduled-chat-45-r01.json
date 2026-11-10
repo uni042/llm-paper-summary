@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1d29a2d7f10eb9d352d0b47d5fa631d7fa251816aafdba95ad699b0af8bc9b8c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_8162432857d48191a08c7721b0858c2c--2026-2606.13707-orchestra-o1-metadata-repair-20261018-0045-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2606.13707",
+  "worker_completed_at": "2026-10-18T00:51:20+09:00",
+  "worker_run_key": "20261018-0045-scheduled-chat-45/r01/metadata-repair",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5666,
+    "body_paragraphs": 39,
+    "method_chars": 2220,
+    "method_paragraphs": 14,
+    "evaluation_chars": 147,
+    "limitation_chars": 637,
+    "insufficiency_flags": [
+      "評価説明量 147 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 147 < 500"
+  ],
+  "processed_at": "2026-10-17T16:16:27+00:00"
+}

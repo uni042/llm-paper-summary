@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d61e1ef7dd481a83-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2405.03553",
+  "reason": "Although recent advancements in large language models (LLMs) have significantly improved their performance on various tasks, they still face challenges with complex and symbolic multi-step reasoning, particularly in mathematical reasoning. To bolster the mathematical reasoning capabilities of LLMs, most existing efforts concentrate on seeking assistance from either domain experts or GPT-4 for high-quality process-supervised data, which is not only expensive but also labor-intensive. In our study, we propose an innovative framework, AlphaMath, that bypasses the need for process annotations (from humans or GPTs) by leveraging Monte Carlo Tree Search (MCTS). This framework focuses on unleashing the potential of a well-pretrained LLM to autonomously enhance its mathematical reasoning. Specifically, we integrate a value model with the LLM, automatically generating both process supervision and step-level evaluation signals in MCTS. Furthermore, we propose an efficient inference strategy, step-level beam search, where the value model is crafted to assist the policy model (i.e., LLM) in navigating more effective reasoning paths, rather than solely relying on prior probabilities. The experi",
+  "title": "AlphaMath Almost Zero: process Supervision without process",
+  "identity_tokens": [
+    "arXiv:2405.03553"
+  ],
+  "linked_from": [
+    "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d61e1ef7dd48",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

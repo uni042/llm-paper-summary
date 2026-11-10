@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5f4b40d3fb22bdc90b2491c938370908eebf3da50910d052388f4172d1f9e1e4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1fe965fd405e--libfile_c3c4033f669081919a4474987932e320--2025-2506.05333-kinetics-memory-aware-test-time-scaling-returned-repair-20261020-1330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2506.05333",
+  "worker_completed_at": "2026-10-20T13:30:00+09:00",
+  "worker_run_key": "20261020-1330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4765,
+    "body_paragraphs": 26,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-20T17:31:56+00:00"
+}

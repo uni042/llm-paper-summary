@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-741d3f3fdb33e0e6-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.12204",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.12204",
+    "identity_tokens": [
+      "arXiv:2607.12204"
+    ],
+    "reason": "The primary abstract studies auditable removal and readout behavior for a support-vector memory, not LLM inference or serving efficiency.",
+    "first_checked_at": "2026-10-05T02:41:37+00:00",
+    "last_checked_at": "2026-10-05T02:41:37+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+    ],
+    "title": "What a Deletion Certificate Covers, and Where It Expires: Auditable Removal from a Support-Vector Memory"
+  },
+  "processed_at": "2026-10-05T02:41:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-741d3f3fdb33",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

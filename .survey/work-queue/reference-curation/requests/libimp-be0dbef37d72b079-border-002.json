@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-be0dbef37d72b079-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1145/3830418.3843911",
+  "reason": "著者公開の公式成果物資料は、SANDHIが複数のfine-tuned LLM間で層ごとのattention/MLP projectionを選択的に統合し、推論時のtensor重複排除でモデル重みのGPUメモリを削減する手法を説明している。2〜12モデルのpoolで重みメモリを26.7〜48.2%削減し、全データセット精度の劣化を2%以内に抑え、独立配信比で最大2.93倍のthroughputと最大1052倍低いP95 TTFTを報告しており、LLM servingおよびモデル統合の候補として関連性が高い。一方、出版社の本文を取得できず、論文本文の手法詳細・評価条件・限界を照合できていないため、acceptとはせずborderlineとする。",
+  "title": "Sandhi: Fine-Grained Merging for Memory Efficient Multi-Model Serving",
+  "identity_tokens": [
+    "DOI:10.1145/3830418.3843911"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+    "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be0dbef37d72",
+  "source_precheck_request_id": null
+}

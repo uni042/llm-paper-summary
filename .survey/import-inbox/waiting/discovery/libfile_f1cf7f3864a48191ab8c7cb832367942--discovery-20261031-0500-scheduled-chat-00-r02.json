@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0500-scheduled-chat-00/r02",
+  "reference_main_sha": "9b549d8a9d6426cca023726866319ed0466aab04",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.01168",
+      "identity_tokens": [
+        "arXiv:2606.01168"
+      ],
+      "title": "Thinking Economically: A Hierarchical Framework for Adaptive-Complexity Reasoning in LLMs",
+      "reason": "arXiv由来一次書誌・要旨では、HABが問題間の思考深度と推論ステップ内のトークン予算を粗密二段で学習し、PPL比較・Pareto最適化・Fisher情報による枝刈りで短い推論を学習する。GSM8K・MATH500で標準CoTより高精度かつ少トークンと報告するが、主貢献は訓練時の思考効率学習で、推論時のサービング制御は示されていない。",
+      "source_url": "https://arxiv.org/abs/2606.01168",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:02:32+09:00",
+      "last_checked_at": "2026-10-31T05:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.17442",
+      "identity_tokens": [
+        "arXiv:2608.17442"
+      ],
+      "title": "FESC: Remodeling Long-Context Private Inference with Encrypted State-Space Models",
+      "reason": "一次arXiv書誌・要旨では、暗号化された長文書のMamba-2系SSM推論向けにFHE/MPC間の変換を圧縮するfactorized scan-contractとGPU向けCKKSカーネルを提案。A100単体で2048トークン・12層Mamba-baseの推論を77.3分、最大32.7GBで実行と報告する。高速な通常推論ではなく秘匿推論の実行可能性とメモリ制御を対象とする直接的な推論システム研究。",
+      "source_url": "https://arxiv.org/abs/2608.17442",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:04:15+09:00",
+      "last_checked_at": "2026-10-31T05:04:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 311,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.24351",
+      "identity_tokens": [
+        "arXiv:2604.24351"
+      ],
+      "title": "Diffusion Templates: A Unified Plugin Framework for Controllable Diffusion",
+      "reason": "一次arXiv書誌・要旨では、画像拡散モデルの制御能力をTemplate model・cache・pipelineの3部品に分離し、KV-CacheやLoRAなど異種能力を同一の実行時インターフェースで組み込む。推論ランタイムのモジュール化技術として隣接するが、主対象は画像編集・超解像等の制御可能生成で、LLM推論性能やメモリ最適化の直接評価は示されない。",
+      "source_url": "https://arxiv.org/abs/2604.24351",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:04:15+09:00",
+      "last_checked_at": "2026-10-31T05:04:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 315,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.06813",
+      "identity_tokens": [
+        "arXiv:2301.06813"
+      ],
+      "title": "AutoDDL: Automatic Distributed Deep Learning with Near-Optimal Bandwidth Cost",
+      "reason": "一次arXiv書誌・要旨ではOneFlowのSBP抽象と座標降下による自動並列化でVGG・Transformerの分散学習時間を削減するAutoDDLを提案。主目的・評価は訓練の通信・並列化であり、推論サービング、KVキャッシュ、デコード等への直接的貢献は示されない。",
+      "source_url": "https://arxiv.org/abs/2301.06813",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:04:15+09:00",
+      "last_checked_at": "2026-10-31T05:04:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 324,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.24148",
+      "identity_tokens": [
+        "arXiv:2607.24148"
+      ],
+      "title": "A Motion-Aware Vector Quantization Framework with Centroid Reuse for Efficient VLA Inference",
+      "reason": "一次arXiv書誌・要旨ではVQVLAがロボット動作状態に応じてVLAモデルの重み量子化精度を変え、コードブック中心の再利用GEMMで冗長演算を除去する専用アクセラレータを提案。A100に対して6.5倍、既存VLAアクセラレータDadu-Corkiに対して2.8倍の推論高速化を報告。対象はVLAだが、推論量子化と演算器・メモリの協調設計に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2607.24148",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:04:15+09:00",
+      "last_checked_at": "2026-10-31T05:04:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 336,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2302.10360",
+      "identity_tokens": [
+        "arXiv:2302.10360"
+      ],
+      "title": "Optical Transformers",
+      "reason": "一次arXiv書誌・要旨ではTransformer演算を光学行列ベクトル乗算器で実行する小規模プロトタイプ実験を行い、その測定で検証したシミュレーションから大規模モデルでの電力効率スケーリングを解析。100倍以上の効率優位は大規模光学ハードウェアを仮定した推計であり実機測定値ではない。Transformer推論向け演算器・エネルギー効率の基盤研究。",
+      "source_url": "https://arxiv.org/abs/2302.10360",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:04:15+09:00",
+      "last_checked_at": "2026-10-31T05:04:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 341,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.10886",
+      "identity_tokens": [
+        "arXiv:2605.10886"
+      ],
+      "title": "LoKA: Low-precision Kernel Applications for Recommendation Models At Scale",
+      "reason": "一次arXiv書誌・要旨では推薦モデルにFP8を適用する際、オンライン統計による層別安全性の計測、数値安定性を保つモデル変更、条件を満たす高速FP8カーネル選択ランタイムを統合するLoKAを提案。カーネル選択と低精度化の手法は転用可能だが、直接の対象は推薦モデルの学習・実行でありLLM推論での評価はない。",
+      "source_url": "https://arxiv.org/abs/2605.10886",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:04:15+09:00",
+      "last_checked_at": "2026-10-31T05:04:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 344,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.11916",
+      "identity_tokens": [
+        "arXiv:2305.11916"
+      ],
+      "title": "F-PABEE: Flexible-patience-based Early Exiting for Single-label and Multi-label text Classification Tasks",
+      "reason": "一次arXiv書誌・要旨ではBERT・ALBERT等の文書分類モデルで層間の予測分布類似度が連続して高いとき早期終了するF-PABEEを提案し、精度と推論速度の両立を報告。推論時の条件付き計算量削減技術だが、生成LLMの自己回帰デコードやサービングでの実証はない。",
+      "source_url": "https://arxiv.org/abs/2305.11916",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:04:15+09:00",
+      "last_checked_at": "2026-10-31T05:04:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 355,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.00390",
+      "identity_tokens": [
+        "arXiv:2606.00390"
+      ],
+      "title": "Zamba2-VL Technical Report",
+      "reason": "一次arXiv書誌・要旨ではMamba2状態空間層と少数の共有Transformerブロックを組み合わせるZamba2-VLを提案。近線形のprefill計算とほぼ一定サイズの再帰状態により、同規模Transformer VLM比でTTFTを約1桁短縮したと報告し、1.2B・2.7B・7Bの推論コードを公開。推論アーキテクチャと長文脈実行コストへの直接的な貢献。",
+      "source_url": "https://arxiv.org/abs/2606.00390",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:04:15+09:00",
+      "last_checked_at": "2026-10-31T05:04:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 357,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.07919",
+      "identity_tokens": [
+        "arXiv:2506.07919"
+      ],
+      "title": "Uncovering the Computational Roles of Nonlinearity in Sequence Modeling Using Almost-Linear RNNs",
+      "reason": "一次arXiv書誌・要旨では非線形性を段階的に減衰させるAlmost-Linear RNNを使い、ゲーティング・規則統合・記憶依存過渡などの機能と疎な非線形性の効果を解析。計算量削減の示唆はあるが、主貢献は汎用系列モデルの機構解釈・アーキテクチャ研究でありLLM推論サービングの実測はない。",
+      "source_url": "https://arxiv.org/abs/2506.07919",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:04:15+09:00",
+      "last_checked_at": "2026-10-31T05:04:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 359,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

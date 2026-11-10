@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a31a2e1cc6b2663a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icws72778.2026.00022",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icws72778.2026.00022",
+    "identity_tokens": [
+      "DOI:10.1109/icws72778.2026.00022"
+    ],
+    "reason": "一次abstractはedge LLM servicesへのsemantic backdoor攻撃とservice integrity評価であり、効率化ではない。",
+    "first_checked_at": "2026-10-05T11:22:15+00:00",
+    "last_checked_at": "2026-10-05T11:22:15+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "Service Integrity of LLM-Driven Edge Web Services Under Semantic Backdoor Attacks"
+  },
+  "processed_at": "2026-10-05T11:22:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a31a2e1cc6b2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

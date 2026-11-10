@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "fe748a0a13e63204e7f81ec4e655e751db0bef8ef792831ee6af3eb7601e56f4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ac1cd60e6c6081918d6ec2170a965370--2022-doi-10.1613-jair.1.13896-aanplus-returned-heading-repair-20261029-2356-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.1613/jair.1.13896",
+  "worker_completed_at": "2026-10-29T23:57:57+09:00",
+  "worker_run_key": "20261029-2356-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5110,
+    "body_paragraphs": 28,
+    "method_chars": 601,
+    "method_paragraphs": 4,
+    "evaluation_chars": 2207,
+    "limitation_chars": 541,
+    "insufficiency_flags": [
+      "手法説明量 601 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 601 < 700"
+  ],
+  "processed_at": "2026-10-29T15:52:48+00:00"
+}

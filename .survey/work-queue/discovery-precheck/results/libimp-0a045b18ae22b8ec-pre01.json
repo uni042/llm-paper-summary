@@ -1,0 +1,240 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0a045b18ae22b8ec-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0a045b18ae22",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2304.11062",
+    "arXiv:2308.09723",
+    "arXiv:2308.13137"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7e778ee828e16698ae406782bcd6b3710b35b44f",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T15:17:37.488656+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2304.11062",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2308.09723",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2308.13137",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2308.13137"
+    }
+  ],
+  "results": [
+    {
+      "title": "Scaling Transformer to 1M tokens and beyond with RMT",
+      "source_url": "https://arxiv.org/abs/2304.11062",
+      "year": 2023,
+      "published": "2023-04-19",
+      "venue": "arXiv.org",
+      "citation_count": 118,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A major limitation for the broader scope of problems solvable by transformers is the quadratic scaling of computational complexity with input size. In this study, we investigate the recurrent memory augmentation of pre-trained transformer models to extend input context length while linearly scaling compute. Our approach demonstrates the capability to store information in memory for sequences of up to an unprecedented two million tokens while maintaining high retrieval accuracy. Experiments with language modeling tasks show perplexity improvement as the number of processed input segments increases. These results underscore the effectiveness of our method, which has significant potential to enhance long-term dependency handling in natural language understanding and generation tasks, as well as enable large-scale context processing for memory-intensive applications.",
+      "identifiers": [
+        "SemanticScholar:594d8e1696619f3cebb7c6bffdad8e0a5592f006"
+      ],
+      "semantic_scholar_id": "594d8e1696619f3cebb7c6bffdad8e0a5592f006",
+      "canonical_id": "arXiv:2304.11062",
+      "arxiv_id": "2304.11062",
+      "doi": "10.48550/arXiv.2304.11062",
+      "authors": [
+        "A. Bulatov",
+        "Yuri Kuratov",
+        "Yermek Kapushev",
+        "M. Burtsev"
+      ],
+      "priority": 118,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 118,
+        "citation_count": 118,
+        "total": 118,
+        "is_fresh": false,
+        "freshness_age_days": 1263,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FineQuant: Unlocking Efficiency with Fine-Grained Weight-Only Quantization for LLMs",
+      "source_url": "https://arxiv.org/abs/2308.09723",
+      "year": 2023,
+      "published": "2023-08-16",
+      "venue": "arXiv.org",
+      "citation_count": 27,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved state-of-the-art performance across various language tasks but pose challenges for practical deployment due to their substantial memory requirements. Furthermore, the latest generative models suffer from high inference costs caused by the memory bandwidth bottleneck in the auto-regressive decoding process. To address these issues, we propose an efficient weight-only quantization method that reduces memory consumption and accelerates inference for LLMs. To ensure minimal quality degradation, we introduce a simple and effective heuristic approach that utilizes only the model weights of a pre-trained model. This approach is applicable to both Mixture-of-Experts (MoE) and dense models without requiring additional fine-tuning. To demonstrate the effectiveness of our proposed method, we first analyze the challenges and issues associated with LLM quantization. Subsequently, we present our heuristic approach, which adaptively finds the granularity of quantization, effectively addressing these problems. Furthermore, we implement highly efficient GPU GEMMs that perform on-the-fly matrix multiplication and dequantization, supporting the multiplication of fp16 or bf16 activations with int8 or int4 weights. We evaluate our approach on large-scale open source models such as OPT-175B and internal MoE models, showcasing minimal accuracy loss while achieving up to 3.65 times higher throughput on the same number of GPUs.",
+      "identifiers": [
+        "SemanticScholar:7ac38c3398f2696754bec69f296468e7a8237a64"
+      ],
+      "semantic_scholar_id": "7ac38c3398f2696754bec69f296468e7a8237a64",
+      "canonical_id": "arXiv:2308.09723",
+      "arxiv_id": "2308.09723",
+      "doi": "10.48550/arXiv.2308.09723",
+      "authors": [
+        "Young Jin Kim",
+        "Rawn Henry",
+        "Raffy Fahim",
+        "H. Awadalla"
+      ],
+      "priority": 27,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 27,
+        "citation_count": 27,
+        "total": 27,
+        "is_fresh": false,
+        "freshness_age_days": 1144,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2304.11062",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2304.11062",
+        "id:SemanticScholar:594d8e1696619f3cebb7c6bffdad8e0a5592f006",
+        "id:arXiv:2304.11062",
+        "title:scaling transformer to 1m tokens and beyond with rmt",
+        "url:https://arxiv.org/abs/2304.11062"
+      ],
+      "record": {
+        "title": "Scaling Transformer to 1M tokens and beyond with RMT",
+        "source_url": "https://arxiv.org/abs/2304.11062",
+        "year": 2023,
+        "published": "2023-04-19",
+        "venue": "arXiv.org",
+        "citation_count": 118,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A major limitation for the broader scope of problems solvable by transformers is the quadratic scaling of computational complexity with input size. In this study, we investigate the recurrent memory augmentation of pre-trained transformer models to extend input context length while linearly scaling compute. Our approach demonstrates the capability to store information in memory for sequences of up to an unprecedented two million tokens while maintaining high retrieval accuracy. Experiments with language modeling tasks show perplexity improvement as the number of processed input segments increases. These results underscore the effectiveness of our method, which has significant potential to enhance long-term dependency handling in natural language understanding and generation tasks, as well as enable large-scale context processing for memory-intensive applications.",
+        "identifiers": [
+          "SemanticScholar:594d8e1696619f3cebb7c6bffdad8e0a5592f006"
+        ],
+        "semantic_scholar_id": "594d8e1696619f3cebb7c6bffdad8e0a5592f006",
+        "canonical_id": "arXiv:2304.11062",
+        "arxiv_id": "2304.11062",
+        "doi": "10.48550/arXiv.2304.11062",
+        "authors": [
+          "A. Bulatov",
+          "Yuri Kuratov",
+          "Yermek Kapushev",
+          "M. Burtsev"
+        ],
+        "priority": 118,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 118,
+          "citation_count": 118,
+          "total": 118,
+          "is_fresh": false,
+          "freshness_age_days": 1263,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2308.09723",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2308.09723",
+        "id:SemanticScholar:7ac38c3398f2696754bec69f296468e7a8237a64",
+        "id:arXiv:2308.09723",
+        "title:finequant unlocking efficiency with finegrained weightonly quantization for llms",
+        "url:https://arxiv.org/abs/2308.09723"
+      ],
+      "record": {
+        "title": "FineQuant: Unlocking Efficiency with Fine-Grained Weight-Only Quantization for LLMs",
+        "source_url": "https://arxiv.org/abs/2308.09723",
+        "year": 2023,
+        "published": "2023-08-16",
+        "venue": "arXiv.org",
+        "citation_count": 27,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have achieved state-of-the-art performance across various language tasks but pose challenges for practical deployment due to their substantial memory requirements. Furthermore, the latest generative models suffer from high inference costs caused by the memory bandwidth bottleneck in the auto-regressive decoding process. To address these issues, we propose an efficient weight-only quantization method that reduces memory consumption and accelerates inference for LLMs. To ensure minimal quality degradation, we introduce a simple and effective heuristic approach that utilizes only the model weights of a pre-trained model. This approach is applicable to both Mixture-of-Experts (MoE) and dense models without requiring additional fine-tuning. To demonstrate the effectiveness of our proposed method, we first analyze the challenges and issues associated with LLM quantization. Subsequently, we present our heuristic approach, which adaptively finds the granularity of quantization, effectively addressing these problems. Furthermore, we implement highly efficient GPU GEMMs that perform on-the-fly matrix multiplication and dequantization, supporting the multiplication of fp16 or bf16 activations with int8 or int4 weights. We evaluate our approach on large-scale open source models such as OPT-175B and internal MoE models, showcasing minimal accuracy loss while achieving up to 3.65 times higher throughput on the same number of GPUs.",
+        "identifiers": [
+          "SemanticScholar:7ac38c3398f2696754bec69f296468e7a8237a64"
+        ],
+        "semantic_scholar_id": "7ac38c3398f2696754bec69f296468e7a8237a64",
+        "canonical_id": "arXiv:2308.09723",
+        "arxiv_id": "2308.09723",
+        "doi": "10.48550/arXiv.2308.09723",
+        "authors": [
+          "Young Jin Kim",
+          "Rawn Henry",
+          "Raffy Fahim",
+          "H. Awadalla"
+        ],
+        "priority": 27,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 27,
+          "citation_count": 27,
+          "total": 27,
+          "is_fresh": false,
+          "freshness_age_days": 1144,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5a8175d2e868184cef87a9071fff8f39ae9b657759cc288ada25a06ee41b87f9",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

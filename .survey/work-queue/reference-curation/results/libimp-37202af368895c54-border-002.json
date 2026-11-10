@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-37202af368895c54-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.05930",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.05930",
+    "identity_tokens": [
+      "arXiv:2402.05930"
+    ],
+    "reason": "Borderline because browser-agent contexts can affect LLM serving cost, and the paper quantifies large HTML/token burdens. However, the contribution is a dataset/benchmark, not an inference optimization; keep only as context for future agent-serving comparisons.",
+    "first_checked_at": "2026-10-06T23:50:31+00:00",
+    "last_checked_at": "2026-10-06T23:50:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md",
+      "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "WebLINX: Real-World Website Navigation with Multi-Turn Dialogue"
+  },
+  "processed_at": "2026-10-06T23:50:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-37202af36889",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-11-07T05:53:59.971131+00:00",
+  "schema_version": 1,
+  "queue_kind": "under_16kb_semantic_reaudit",
+  "queue_version": "2026-10-07-v1",
+  "threshold_bytes_exclusive": 16000,
+  "minimum_japanese_ratio": 0.8,
+  "count": 1,
+  "worker_counts": {
+    "scheduled-chat-00": 1,
+    "scheduled-chat-30": 0,
+    "scheduled-chat-45": 0
+  },
+  "entries": [
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2020-fa2b92104549-cannikin-no-lagger-of-slo-in-concurrent-multiple-lora-llm-serving.md",
+      "canonical_id": "DOI:10.1109/TPDS.2025.3590014",
+      "title": "Cannikin: No Lagger of SLO in Concurrent Multiple LoRA LLM Serving",
+      "file_bytes": 9952,
+      "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
+      "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.8674,
+      "quality_metrics": {
+        "body_chars": 2663,
+        "method_chars": 553,
+        "evaluation_chars": 712,
+        "limitation_chars": 186
+      },
+      "mechanical_failures": [
+        "16KB未満再監査: 手法説明量 553 < 700"
+      ],
+      "warnings": []
+    }
+  ]
+}

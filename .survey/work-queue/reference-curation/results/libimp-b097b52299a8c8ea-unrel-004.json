@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b097b52299a8c8ea-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1305.0445",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1305.0445",
+    "identity_tokens": [
+      "arXiv:1305.0445"
+    ],
+    "reason": "The paper's inference discussion concerns latent-variable inference and sampling in probabilistic deep-learning models, primarily as an inner loop of training; it does not address LLM generation or serving.",
+    "first_checked_at": "2026-10-05T00:53:14+00:00",
+    "last_checked_at": "2026-10-05T00:53:14+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+      "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md"
+    ],
+    "title": "Deep Learning of Representations: Looking Forward"
+  },
+  "processed_at": "2026-10-05T00:53:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b097b52299a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "bb96503970c7735ea5e7b9d01bf52572724b32a9ea427a5e095b8f22a70f1fba",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2e818ff941a1--libfile_393f1fcbed1c8191bcb92b044f31c422--2026-2604.05438-residual-mass-accounting-partial-kv-research-20261027-2245-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2604.05438",
+  "worker_completed_at": "2026-10-27T22:45:00+09:00",
+  "worker_run_key": "20261027-2245-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5372,
+    "body_paragraphs": 30,
+    "method_chars": 1403,
+    "method_paragraphs": 9,
+    "evaluation_chars": 144,
+    "limitation_chars": 587,
+    "insufficiency_flags": [
+      "評価説明量 144 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 144 < 500"
+  ],
+  "processed_at": "2026-10-27T17:00:41+00:00"
+}

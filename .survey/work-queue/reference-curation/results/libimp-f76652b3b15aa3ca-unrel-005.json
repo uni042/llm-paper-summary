@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f76652b3b15aa3ca-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.01935",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.01935",
+    "identity_tokens": [
+      "arXiv:2605.01935"
+    ],
+    "reason": "ViM-QはVision Mambaの活性・重み量子化とFPGA上のLUT演算・状態空間モデルのパイプラインを協調設計し、ViM-tinyでRTX 3090比較の速度・電力改善を報告する。効率化手法は具体的だが対象は画像認識用Vision Mambaであり、LLM推論やMoEサービングへの適用実証は要旨にないため本サーベイでは対象外。",
+    "first_checked_at": "2026-10-30T20:07:34+00:00",
+    "last_checked_at": "2026-10-30T20:07:34+00:00",
+    "linked_from": [],
+    "title": "ViM-Q: Scalable Algorithm-Hardware Co-Design for Vision Mamba Model Inference on FPGA"
+  },
+  "processed_at": "2026-10-30T20:07:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f76652b3b15a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

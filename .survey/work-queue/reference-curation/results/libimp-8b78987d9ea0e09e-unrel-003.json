@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8b78987d9ea0e09e-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.17497",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.17497",
+    "identity_tokens": [
+      "arXiv:2503.17497"
+    ],
+    "reason": "AnytimeYOLOはCNN系物体検出器に任意時点で出力する早期終了を加える研究で、LLMやTransformer推論の最適化ではない。",
+    "first_checked_at": "2026-10-06T18:49:01+00:00",
+    "last_checked_at": "2026-10-06T18:49:01+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+    ],
+    "title": "You Only Look Once at Anytime (AnytimeYOLO): Analysis and Optimization of Early-Exits for Object-Detection"
+  },
+  "processed_at": "2026-10-06T18:49:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8b78987d9ea0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

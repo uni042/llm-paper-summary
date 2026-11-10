@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17097fcf64e89c22-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3763075",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3763075",
+    "identity_tokens": [
+      "28abc0597967f1f5ece53e7e018660fb6463a990",
+      "DOI:10.1145/3763075",
+      "SemanticScholar:28abc0597967f1f5ece53e7e018660fb6463a990"
+    ],
+    "reason": "Assesses WebGPU data-race memory safety and compiler behavior; contribution is security/correctness.",
+    "first_checked_at": "2026-10-13T00:49:48+00:00",
+    "last_checked_at": "2026-10-14T13:11:23+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "SafeRace: Assessing and Addressing WebGPU Memory Safety in the Presence of Data Races"
+  },
+  "processed_at": "2026-10-14T13:11:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17097fcf64e8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

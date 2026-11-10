@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f5321174beae1b2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.18706",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.18706",
+    "identity_tokens": [
+      "arXiv:2512.18706"
+    ],
+    "reason": "著者要旨は音声活動検出、音声強調、音声認識、感情・環境音解析、LLMと検索拡張生成をモジュール化した音声対話パイプラインを提示し、1秒未満の応答遅延を主張する。エンドツーエンド遅延とモジュール接続は推論システムに関連するが、汎用LLMの復号カーネル、KVメモリ管理、バッチ処理を直接最適化したものではなく、音声対話アプリケーションのシステム設計が主眼のため境界的。",
+    "first_checked_at": "2026-10-12T17:45:21+00:00",
+    "last_checked_at": "2026-10-18T10:00:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System"
+  },
+  "processed_at": "2026-10-18T10:00:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f5321174bea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

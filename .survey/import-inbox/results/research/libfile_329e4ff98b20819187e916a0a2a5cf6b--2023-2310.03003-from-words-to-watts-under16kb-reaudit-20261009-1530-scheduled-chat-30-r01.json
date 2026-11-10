@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "66605d0a7ee9bb5e175322e983b5969162d23aa2bca6965c5336099147cdfb4f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_329e4ff98b20819187e916a0a2a5cf6b--2023-2310.03003-from-words-to-watts-under16kb-reaudit-20261009-1530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2310.03003",
+  "worker_completed_at": "2026-10-09T15:30:00+09:00",
+  "worker_run_key": "20261009-1530-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4610,
+    "body_paragraphs": 28,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1024,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-09T16:15:50+00:00"
+}

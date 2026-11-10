@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-7fc8ce433bb0f994-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2607.26192",
+  "reason": "一次本文§4.4–4.5を確認。FeatureGateは全Transformer blockを実行し、Denseより実測30.8%遅くthroughput 23.5%低下。MUDDPythia-1.4Bでも全block実行。dynamic parameterizationだけではdynamic inference/compute savingsにならないと検証する負例研究。推論効率の誤認防止には関連するが、効率化技法や改善手法ではなく対象寄与は限定的。",
+  "title": "Dynamic Parameterization Is Not Dynamic Inference",
+  "identity_tokens": [
+    "arXiv:2607.26192"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+    "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7fc8ce433bb0",
+  "source_precheck_request_id": null
+}

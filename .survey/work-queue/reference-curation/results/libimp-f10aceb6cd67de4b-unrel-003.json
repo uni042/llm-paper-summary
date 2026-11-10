@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f10aceb6cd67de4b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.23301",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.23301",
+    "identity_tokens": [
+      "arXiv:2609.23301"
+    ],
+    "reason": "Distributed tracing in large-scale AI infrastructure fails silently when clock accuracy is insufficient: causal events are misordered, fault attribution is corrupted, and performance diagnoses are unreliable. We present TempoTrace, a system that co-designs IEEE 1588v2 PTP time synchronization with distributed tracing to preserve causal ordering across heterogeneous, multi-tenant GPU clusters. We formally prove that NTP-grade clocks produce causal inversions at 25-30% of directed operation pairs under WAN/cloud conditions (11.3% under LAN NTP). A Laplace heavy-tail noise model extends the analysis beyond Gaussian assumptions, giving a weighted expected misorder rate of 27.76% vs. 29.37% Gaussian, confirming robustness to tail shape. TempoTrace reduces GPU-to-host timestamp uncertainty from 2.1 us to a design target of 0.056 us residual standard deviation via GPUDirect RDMA hardware timestamping, with sub-100 ns PTP synchronization. A bounded Sketch Vector Clock tracks causal relationships with false-positive rate below 10^-5 for up to four participants. A hybrid rule-based and XGBoost diagnosis engine achieves macro-F1 0.974 in controlled validation (1,800-incident corpus; McNemar p=1.25e-23). A formally proven multi-tenant model provides isolated logical clock domains. For RoCEv2/ECMP fabrics, P4-based in-band network telemetry corrects path-delay asymmetry, yielding 99.1% attribution accuracy. Application Confidence Policies let workloads specify precision requirements and degraded-mode fallback. Evaluation combines physical five-node measurements (NTP inversion rate 44.978%, Laplace fit preferred over Gaussian by AIC under congestion) and controlled synthetic validation with illustrative configurations from 512 to 16,384 H100 GPUs across InfiniBand and RoCEv2 fabrics.",
+    "first_checked_at": "2026-10-05T06:14:24+00:00",
+    "last_checked_at": "2026-10-05T06:14:24+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md"
+    ],
+    "title": "Accurate Distributed Tracing for Large-Scale AI Infrastructure: Time Synchronization as a Foundation for Reliable Observability"
+  },
+  "processed_at": "2026-10-05T06:14:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f10aceb6cd67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

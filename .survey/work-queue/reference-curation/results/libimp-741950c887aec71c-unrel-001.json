@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-741950c887aec71c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.08223",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.08223",
+    "identity_tokens": [
+      "arXiv:2503.08223"
+    ],
+    "reason": "The primary abstract identifies distributed/federated training of LLMs on edge devices as the central subject, not inference serving.",
+    "first_checked_at": "2026-10-05T15:31:24+00:00",
+    "last_checked_at": "2026-10-05T15:31:24+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+      "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
+      "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md"
+    ],
+    "title": "Will LLMs Scaling Hit the Wall? Breaking Barriers via Distributed Resources on Massive Edge Devices"
+  },
+  "processed_at": "2026-10-05T15:31:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-741950c887ae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc4d131e1a05fcd8-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3745756.3809221",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3745756.3809221",
+    "identity_tokens": [
+      "DOI:10.1145/3745756.3809221"
+    ],
+    "reason": "Primary abstract reviewed: With recent wireless standards such as 5G NR utilizing large bandwidth channels, wideband OFDM backscatter can achieve very high data rates (tens of Mbps) and support applications such as HD video streaming from low-power IoT sensors. However, realizing wideband OFDM backscatter in practice is challenging due to its extremely high complexity of demodulation, its dependence on a… This is a 5G backscatter communications and receiver demodulation, not LLM inference.",
+    "first_checked_at": "2026-10-05T11:54:31+00:00",
+    "last_checked_at": "2026-10-05T11:54:31+00:00",
+    "linked_from": [
+      "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+    ],
+    "title": "Wideband Low-complexity High-speed 5G NR Backscatter"
+  },
+  "processed_at": "2026-10-05T11:54:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc4d131e1a05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

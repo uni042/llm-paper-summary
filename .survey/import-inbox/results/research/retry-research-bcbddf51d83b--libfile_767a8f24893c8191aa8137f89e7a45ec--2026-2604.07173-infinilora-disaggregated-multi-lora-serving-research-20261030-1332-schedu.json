@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7092b33d9faad266f829b350e675c94de453a98e03b9ab7c248d295a69b6b13c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bcbddf51d83b--libfile_767a8f24893c8191aa8137f89e7a45ec--2026-2604.07173-infinilora-disaggregated-multi-lora-serving-research-20261030-1332-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2604.07173",
+  "worker_completed_at": "2026-10-30T14:16:00+09:00",
+  "worker_run_key": "20261030-1332-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 9811,
+    "body_paragraphs": 58,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 651,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-30T09:48:00+00:00"
+}

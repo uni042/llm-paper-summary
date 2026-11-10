@@ -1,0 +1,683 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c7e11bca22567d3e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c7e11bca2256",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.eswa.2026.133227",
+    "DOI:10.18653/v1/2024.findings-eacl.143",
+    "SemanticScholar:d64b13ce85d02f006f11b0c7ca724740198d38c5",
+    "arXiv:2509.22832",
+    "arXiv:2510.07081",
+    "arXiv:2512.18126",
+    "arXiv:2603.13430"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "110902c196fc61b8622615a51517d8a1e3943017",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T03:19:49.552657+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.eswa.2026.133227",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2024.findings-eacl.143",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:d64b13ce85d02f006f11b0c7ca724740198d38c5",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.22832",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.07081",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.18126",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.13430",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Dynamic Sparse Attention: Access Patterns and Architecture",
+      "source_url": "https://arxiv.org/abs/2603.13430",
+      "year": 2026,
+      "published": "2026-03-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dynamic sparse attention (DSA) reduces the per-token attention bandwidth by restricting computation to a top-k subset of cached key-value (KV) entries, but its token-dependent selection pattern introduces a system-level challenge: the KV working set is fragmented, volatile, and difficult to prefetch, which can translate into poor cache locality and stalled decode throughput. We study these effects by implementing a lightweight indexer for DSA-style selection on multiple open-source backbones and logging per-layer KV indices during autoregressive decoding. Our analysis shows a gap in serving DSA backbones - a potential for a high volume of blocking LL (last level) cache miss events, causing inefficiency; we propose a novel LL cache reservation system to save KV tokens in the LL cache between decode steps, combined with a token-granularity LRU eviction policy, and show on the data we collected how this architecture can benefit serving with DSA implemented on different backbones. Finally, we propose directions for future architectural and algorithmic exploration to improve serving of DSA on modern inference platforms.",
+      "identifiers": [
+        "SemanticScholar:d4965c7a094439ab78d91433c5a54a5e8a1fd5d9"
+      ],
+      "semantic_scholar_id": "d4965c7a094439ab78d91433c5a54a5e8a1fd5d9",
+      "canonical_id": "arXiv:2603.13430",
+      "arxiv_id": "2603.13430",
+      "doi": "10.48550/arXiv.2603.13430",
+      "authors": [
+        "Noam Levy"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 215,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Accelerating Diffusion LLM Inference via Local Determinism Propagation",
+      "source_url": "https://arxiv.org/abs/2510.07081",
+      "year": 2025,
+      "published": "2025-10-08",
+      "venue": "arXiv.org",
+      "citation_count": 21,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (dLLMs) represent a significant advancement in text generation, offering parallel token decoding capabilities. However, existing open-source implementations suffer from quality-speed trade-offs that impede their practical deployment. Conservative sampling strategies typically decode only the most confident token per step to ensure quality (i.e., greedy decoding), at the cost of inference efficiency due to repeated redundant refinement iterations--a phenomenon we term delayed decoding. Through systematic analysis of dLLM decoding dynamics, we characterize this delayed decoding behavior and propose a training-free adaptive parallel decoding strategy, named LocalLeap, to address these inefficiencies. LocalLeap is built on two fundamental empirical principles: local determinism propagation centered on high-confidence anchors and progressive spatial consistency decay. By applying these principles, LocalLeap identifies anchors and performs localized relaxed parallel decoding within bounded neighborhoods, achieving substantial inference step reduction through early commitment of already-determined tokens without compromising output quality. Comprehensive evaluation on various benchmarks demonstrates that LocalLeap achieves 6.94$\\times$ throughput improvements and reduces decoding steps to just 14.2\\% of the original requirement, achieving these gains with negligible performance impact. The source codes are available at: https://github.com/friedrichor/LocalLeap.",
+      "identifiers": [
+        "SemanticScholar:057dcf8166773f04b5d596757f49e806ccdf01cf"
+      ],
+      "semantic_scholar_id": "057dcf8166773f04b5d596757f49e806ccdf01cf",
+      "canonical_id": "arXiv:2510.07081",
+      "arxiv_id": "2510.07081",
+      "doi": "10.48550/arXiv.2510.07081",
+      "authors": [
+        "Fan-Heng Kong",
+        "Jing-Yuan Zhang",
+        "Ya-Hui Liu",
+        "Zi-Rui Wu",
+        "Yu Tian",
+        "W. Victoria",
+        "Guorui Zhou"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 21,
+        "citation_count": 21,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 371,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Mixture-of-Agents Serving via Tree-Structured Routing, Adaptive Pruning, and Dependency-Aware Prefill-Decode Overlap",
+      "source_url": "https://arxiv.org/abs/2512.18126",
+      "year": 2025,
+      "published": "2025-12-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Agents (MoA) inference can suffer from dense inter-agent communication and low hardware utilization, which jointly inflate serving latency. We present a serving design that targets these bottlenecks through an algorithm-system co-design. First, we replace dense agent interaction graphs with a hierarchical tree topology that induces structured sparsity in inter-agent communication. Second, we introduce a runtime adaptive mechanism that selectively terminates or skips downstream agent invocations using semantic agreement and confidence signals from intermediate outputs. Third, we pipeline agent execution by overlapping incremental prefilling with decoding across dependency-related agents, improving utilization and reducing inference latency. Across representative tasks, this approach substantially reduces end-to-end latency (up to 90%) while maintaining comparable accuracy (within $\\pm$1%) relative to dense-connectivity MoA baselines, and can improve accuracy in certain settings.",
+      "identifiers": [
+        "SemanticScholar:23c7faea1b36386163b0e7ecdad4549849168fbd"
+      ],
+      "semantic_scholar_id": "23c7faea1b36386163b0e7ecdad4549849168fbd",
+      "canonical_id": "arXiv:2512.18126",
+      "arxiv_id": "2512.18126",
+      "doi": "10.48550/arXiv.2512.18126",
+      "authors": [
+        "Zi-Jun Wang",
+        "Yijiahao Qi",
+        "Hanqiu Chen",
+        "Zishen Wan",
+        "Gong-Jin Sun",
+        "Dongyang Li",
+        "Shuyi Pei",
+        "Cong Hao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 299,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Overcoming contextless web markup text translation: A parallel and selective Q&A-driven LLM approach",
+      "source_url": "https://doi.org/10.1016/j.eswa.2026.133227",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "Expert systems with applications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e7e626fc1dbbde261671afe1dd1d9754af1d4335"
+      ],
+      "semantic_scholar_id": "e7e626fc1dbbde261671afe1dd1d9754af1d4335",
+      "doi": "10.1016/j.eswa.2026.133227",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.133227",
+      "authors": [
+        "Byunggill Joe",
+        "Saim Shin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hierarchical and Dynamic Prompt Compression for Efficient Zero-shot API Usage",
+      "source_url": "https://doi.org/10.18653/v1/2024.findings-eacl.143",
+      "year": 2024,
+      "published": null,
+      "venue": "Findings",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long prompts present a significant challenge for practical LLM-based systems that need to operate with low latency and limited resources. We investigate prompt compression for zero-shot dialogue systems that learn to use unseen APIs directly in-context from their documentation, which may take up hundreds of prompt tokens per API. We start from a recently introduced approach (Mu et al., 2023) that learns to compress the prompt into a few “gist token” activations during finetuning. However, this simple idea is ineffective in compressing API documentation, resulting in low accuracy compared to the baseline using an uncompressed prompt. In this work, we introduce two major improvements. First, we specialize gist tokens for different hierarchies within an API: we use one \\mathrm{Gist}_{\\mathrm{arg}} token for compressing an argument and one \\mathrm{Gist}_{\\mathrm{value}} token for compressing an acceptable value of a categorical argument. We then dynamically reveal \\mathrm{Gist}_{\\mathrm{value}} tokens only when they are needed. Second, we add a reconstruction loss to predict the API documentation from the gist tokens. On multiple API-calling tasks, our proposed system keeps the simplicity, efficiency, and large compression factor (20x on SGD) of the gist token approach while achieving significantly better accuracy.",
+      "identifiers": [
+        "SemanticScholar:ad0f51ed98ff4dbac039c5695add18ae7c6b5688"
+      ],
+      "semantic_scholar_id": "ad0f51ed98ff4dbac039c5695add18ae7c6b5688",
+      "doi": "10.18653/v1/2024.findings-eacl.143",
+      "canonical_id": "DOI:10.18653/v1/2024.findings-eacl.143",
+      "authors": [
+        "Yichen Jiang",
+        "M. Vecchio",
+        "Mohit Bansal",
+        "Anders Johannsen"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 835,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Fine-Grained Gpu Performance Modeling for Distributed Deep Learning of Llm",
+      "source_url": "https://arxiv.org/abs/2509.22832",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "International Conference on High Performance Computing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training Large Language Models(LLMs) is one of the most compute-intensive tasks in high-performance computing. Predicting end-to-end training time for multi-billion parameter models distributed across hundreds of GPUs remains challenging due to complex interactions between transformer components, parallelism strategies(data, model, pipeline, tensor), and multi-tier communication. Learned models require costly sampling, while analytical models often struggle with real-world network and hardware complexities. We address this by decomposing LLMs into core computational primitives and modeling them with: (1) operator-level decomposition for fine-grained analysis; (2) lightweight sampling based hardware-aware prediction models for key operations; (3) an end-to-end prediction system integrating these components across complex parallelization strategies. Crucially, our methodology has been validated on two large-scale HPC systems. Our framework achieves low average prediction errors-4.98% on Perlmutter(A100) and 9.38% on Vista(GH200)-for models up to 20B parameters across 128 GPUs. Importantly, it runs entirely on CPUs, enabling rapid iteration over hardware configurations and training strategies without costly on-cluster experimentation.",
+      "identifiers": [
+        "SemanticScholar:4ae3bd5038de5b67c04fa3923c36584e29582b09"
+      ],
+      "semantic_scholar_id": "4ae3bd5038de5b67c04fa3923c36584e29582b09",
+      "canonical_id": "arXiv:2509.22832",
+      "arxiv_id": "2509.22832",
+      "doi": "10.1109/HiPC66333.2025.00012",
+      "authors": [
+        "Biyao Zhang",
+        "Ming-Kai Zheng",
+        "Debargha Ganguly",
+        "Xuecen Zhang",
+        "Vikash Singh",
+        "Vipin Chaudhary",
+        "Zhao Zhang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 383,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hardware Lifecycle-Aware Power Planning in Commercial Hyperscale Datacenters (Operational Systems)",
+      "source_url": "https://www.semanticscholar.org/paper/d64b13ce85d02f006f11b0c7ca724740198d38c5",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:d64b13ce85d02f006f11b0c7ca724740198d38c5"
+      ],
+      "semantic_scholar_id": "d64b13ce85d02f006f11b0c7ca724740198d38c5",
+      "canonical_id": "SemanticScholar:d64b13ce85d02f006f11b0c7ca724740198d38c5",
+      "authors": [
+        "Rui-Hao Li",
+        "Leonardo Piga",
+        "Wei-Xuan Su",
+        "Carlos Torres",
+        "Meta Jovan Stojkovic",
+        "N. Yadwadkar",
+        "L. John",
+        "Abhishek Dhanotia"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.13430",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.13430",
+        "id:SemanticScholar:d4965c7a094439ab78d91433c5a54a5e8a1fd5d9",
+        "id:arXiv:2603.13430",
+        "title:dynamic sparse attention access patterns and architecture",
+        "url:https://arxiv.org/abs/2603.13430"
+      ],
+      "record": {
+        "title": "Dynamic Sparse Attention: Access Patterns and Architecture",
+        "source_url": "https://arxiv.org/abs/2603.13430",
+        "year": 2026,
+        "published": "2026-03-13",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Dynamic sparse attention (DSA) reduces the per-token attention bandwidth by restricting computation to a top-k subset of cached key-value (KV) entries, but its token-dependent selection pattern introduces a system-level challenge: the KV working set is fragmented, volatile, and difficult to prefetch, which can translate into poor cache locality and stalled decode throughput. We study these effects by implementing a lightweight indexer for DSA-style selection on multiple open-source backbones and logging per-layer KV indices during autoregressive decoding. Our analysis shows a gap in serving DSA backbones - a potential for a high volume of blocking LL (last level) cache miss events, causing inefficiency; we propose a novel LL cache reservation system to save KV tokens in the LL cache between decode steps, combined with a token-granularity LRU eviction policy, and show on the data we collected how this architecture can benefit serving with DSA implemented on different backbones. Finally, we propose directions for future architectural and algorithmic exploration to improve serving of DSA on modern inference platforms.",
+        "identifiers": [
+          "SemanticScholar:d4965c7a094439ab78d91433c5a54a5e8a1fd5d9"
+        ],
+        "semantic_scholar_id": "d4965c7a094439ab78d91433c5a54a5e8a1fd5d9",
+        "canonical_id": "arXiv:2603.13430",
+        "arxiv_id": "2603.13430",
+        "doi": "10.48550/arXiv.2603.13430",
+        "authors": [
+          "Noam Levy"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 215,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.07081",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.07081",
+        "id:SemanticScholar:057dcf8166773f04b5d596757f49e806ccdf01cf",
+        "id:arXiv:2510.07081",
+        "title:accelerating diffusion llm inference via local determinism propagation",
+        "url:https://arxiv.org/abs/2510.07081"
+      ],
+      "record": {
+        "title": "Accelerating Diffusion LLM Inference via Local Determinism Propagation",
+        "source_url": "https://arxiv.org/abs/2510.07081",
+        "year": 2025,
+        "published": "2025-10-08",
+        "venue": "arXiv.org",
+        "citation_count": 21,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models (dLLMs) represent a significant advancement in text generation, offering parallel token decoding capabilities. However, existing open-source implementations suffer from quality-speed trade-offs that impede their practical deployment. Conservative sampling strategies typically decode only the most confident token per step to ensure quality (i.e., greedy decoding), at the cost of inference efficiency due to repeated redundant refinement iterations--a phenomenon we term delayed decoding. Through systematic analysis of dLLM decoding dynamics, we characterize this delayed decoding behavior and propose a training-free adaptive parallel decoding strategy, named LocalLeap, to address these inefficiencies. LocalLeap is built on two fundamental empirical principles: local determinism propagation centered on high-confidence anchors and progressive spatial consistency decay. By applying these principles, LocalLeap identifies anchors and performs localized relaxed parallel decoding within bounded neighborhoods, achieving substantial inference step reduction through early commitment of already-determined tokens without compromising output quality. Comprehensive evaluation on various benchmarks demonstrates that LocalLeap achieves 6.94$\\times$ throughput improvements and reduces decoding steps to just 14.2\\% of the original requirement, achieving these gains with negligible performance impact. The source codes are available at: https://github.com/friedrichor/LocalLeap.",
+        "identifiers": [
+          "SemanticScholar:057dcf8166773f04b5d596757f49e806ccdf01cf"
+        ],
+        "semantic_scholar_id": "057dcf8166773f04b5d596757f49e806ccdf01cf",
+        "canonical_id": "arXiv:2510.07081",
+        "arxiv_id": "2510.07081",
+        "doi": "10.48550/arXiv.2510.07081",
+        "authors": [
+          "Fan-Heng Kong",
+          "Jing-Yuan Zhang",
+          "Ya-Hui Liu",
+          "Zi-Rui Wu",
+          "Yu Tian",
+          "W. Victoria",
+          "Guorui Zhou"
+        ],
+        "priority": 21,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 21,
+          "citation_count": 21,
+          "total": 21,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 371,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.18126",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.18126",
+        "id:SemanticScholar:23c7faea1b36386163b0e7ecdad4549849168fbd",
+        "id:arXiv:2512.18126",
+        "title:efficient mixtureofagents serving via treestructured routing adaptive pruning and dependencyaware prefilldecode overlap",
+        "url:https://arxiv.org/abs/2512.18126"
+      ],
+      "record": {
+        "title": "Efficient Mixture-of-Agents Serving via Tree-Structured Routing, Adaptive Pruning, and Dependency-Aware Prefill-Decode Overlap",
+        "source_url": "https://arxiv.org/abs/2512.18126",
+        "year": 2025,
+        "published": "2025-12-19",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Agents (MoA) inference can suffer from dense inter-agent communication and low hardware utilization, which jointly inflate serving latency. We present a serving design that targets these bottlenecks through an algorithm-system co-design. First, we replace dense agent interaction graphs with a hierarchical tree topology that induces structured sparsity in inter-agent communication. Second, we introduce a runtime adaptive mechanism that selectively terminates or skips downstream agent invocations using semantic agreement and confidence signals from intermediate outputs. Third, we pipeline agent execution by overlapping incremental prefilling with decoding across dependency-related agents, improving utilization and reducing inference latency. Across representative tasks, this approach substantially reduces end-to-end latency (up to 90%) while maintaining comparable accuracy (within $\\pm$1%) relative to dense-connectivity MoA baselines, and can improve accuracy in certain settings.",
+        "identifiers": [
+          "SemanticScholar:23c7faea1b36386163b0e7ecdad4549849168fbd"
+        ],
+        "semantic_scholar_id": "23c7faea1b36386163b0e7ecdad4549849168fbd",
+        "canonical_id": "arXiv:2512.18126",
+        "arxiv_id": "2512.18126",
+        "doi": "10.48550/arXiv.2512.18126",
+        "authors": [
+          "Zi-Jun Wang",
+          "Yijiahao Qi",
+          "Hanqiu Chen",
+          "Zishen Wan",
+          "Gong-Jin Sun",
+          "Dongyang Li",
+          "Shuyi Pei",
+          "Cong Hao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 299,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.eswa.2026.133227",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.eswa.2026.133227",
+        "id:SemanticScholar:e7e626fc1dbbde261671afe1dd1d9754af1d4335",
+        "title:overcoming contextless web markup text translation a parallel and selective qadriven llm approach",
+        "url:https://doi.org/10.1016/j.eswa.2026.133227"
+      ],
+      "record": {
+        "title": "Overcoming contextless web markup text translation: A parallel and selective Q&A-driven LLM approach",
+        "source_url": "https://doi.org/10.1016/j.eswa.2026.133227",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "Expert systems with applications",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:e7e626fc1dbbde261671afe1dd1d9754af1d4335"
+        ],
+        "semantic_scholar_id": "e7e626fc1dbbde261671afe1dd1d9754af1d4335",
+        "doi": "10.1016/j.eswa.2026.133227",
+        "canonical_id": "DOI:10.1016/j.eswa.2026.133227",
+        "authors": [
+          "Byunggill Joe",
+          "Saim Shin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 135,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2024.findings-eacl.143",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2024.findings-eacl.143",
+        "id:SemanticScholar:ad0f51ed98ff4dbac039c5695add18ae7c6b5688",
+        "title:hierarchical and dynamic prompt compression for efficient zeroshot api usage",
+        "url:https://doi.org/10.18653/v1/2024.findings-eacl.143"
+      ],
+      "record": {
+        "title": "Hierarchical and Dynamic Prompt Compression for Efficient Zero-shot API Usage",
+        "source_url": "https://doi.org/10.18653/v1/2024.findings-eacl.143",
+        "year": 2024,
+        "published": null,
+        "venue": "Findings",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long prompts present a significant challenge for practical LLM-based systems that need to operate with low latency and limited resources. We investigate prompt compression for zero-shot dialogue systems that learn to use unseen APIs directly in-context from their documentation, which may take up hundreds of prompt tokens per API. We start from a recently introduced approach (Mu et al., 2023) that learns to compress the prompt into a few “gist token” activations during finetuning. However, this simple idea is ineffective in compressing API documentation, resulting in low accuracy compared to the baseline using an uncompressed prompt. In this work, we introduce two major improvements. First, we specialize gist tokens for different hierarchies within an API: we use one \\mathrm{Gist}_{\\mathrm{arg}} token for compressing an argument and one \\mathrm{Gist}_{\\mathrm{value}} token for compressing an acceptable value of a categorical argument. We then dynamically reveal \\mathrm{Gist}_{\\mathrm{value}} tokens only when they are needed. Second, we add a reconstruction loss to predict the API documentation from the gist tokens. On multiple API-calling tasks, our proposed system keeps the simplicity, efficiency, and large compression factor (20x on SGD) of the gist token approach while achieving significantly better accuracy.",
+        "identifiers": [
+          "SemanticScholar:ad0f51ed98ff4dbac039c5695add18ae7c6b5688"
+        ],
+        "semantic_scholar_id": "ad0f51ed98ff4dbac039c5695add18ae7c6b5688",
+        "doi": "10.18653/v1/2024.findings-eacl.143",
+        "canonical_id": "DOI:10.18653/v1/2024.findings-eacl.143",
+        "authors": [
+          "Yichen Jiang",
+          "M. Vecchio",
+          "Mohit Bansal",
+          "Anders Johannsen"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 835,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.22832",
+      "identity_tokens": [
+        "id:DOI:10.1109/hipc66333.2025.00012",
+        "id:SemanticScholar:4ae3bd5038de5b67c04fa3923c36584e29582b09",
+        "id:arXiv:2509.22832",
+        "title:efficient finegrained gpu performance modeling for distributed deep learning of llm",
+        "url:https://arxiv.org/abs/2509.22832"
+      ],
+      "record": {
+        "title": "Efficient Fine-Grained Gpu Performance Modeling for Distributed Deep Learning of Llm",
+        "source_url": "https://arxiv.org/abs/2509.22832",
+        "year": 2025,
+        "published": "2025-09-26",
+        "venue": "International Conference on High Performance Computing",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Training Large Language Models(LLMs) is one of the most compute-intensive tasks in high-performance computing. Predicting end-to-end training time for multi-billion parameter models distributed across hundreds of GPUs remains challenging due to complex interactions between transformer components, parallelism strategies(data, model, pipeline, tensor), and multi-tier communication. Learned models require costly sampling, while analytical models often struggle with real-world network and hardware complexities. We address this by decomposing LLMs into core computational primitives and modeling them with: (1) operator-level decomposition for fine-grained analysis; (2) lightweight sampling based hardware-aware prediction models for key operations; (3) an end-to-end prediction system integrating these components across complex parallelization strategies. Crucially, our methodology has been validated on two large-scale HPC systems. Our framework achieves low average prediction errors-4.98% on Perlmutter(A100) and 9.38% on Vista(GH200)-for models up to 20B parameters across 128 GPUs. Importantly, it runs entirely on CPUs, enabling rapid iteration over hardware configurations and training strategies without costly on-cluster experimentation.",
+        "identifiers": [
+          "SemanticScholar:4ae3bd5038de5b67c04fa3923c36584e29582b09"
+        ],
+        "semantic_scholar_id": "4ae3bd5038de5b67c04fa3923c36584e29582b09",
+        "canonical_id": "arXiv:2509.22832",
+        "arxiv_id": "2509.22832",
+        "doi": "10.1109/HiPC66333.2025.00012",
+        "authors": [
+          "Biyao Zhang",
+          "Ming-Kai Zheng",
+          "Debargha Ganguly",
+          "Xuecen Zhang",
+          "Vikash Singh",
+          "Vipin Chaudhary",
+          "Zhao Zhang"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 383,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:d64b13ce85d02f006f11b0c7ca724740198d38c5",
+      "identity_tokens": [
+        "id:SemanticScholar:d64b13ce85d02f006f11b0c7ca724740198d38c5",
+        "title:hardware lifecycleaware power planning in commercial hyperscale datacenters operational systems",
+        "url:https://www.semanticscholar.org/paper/d64b13ce85d02f006f11b0c7ca724740198d38c5"
+      ],
+      "record": {
+        "title": "Hardware Lifecycle-Aware Power Planning in Commercial Hyperscale Datacenters (Operational Systems)",
+        "source_url": "https://www.semanticscholar.org/paper/d64b13ce85d02f006f11b0c7ca724740198d38c5",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:d64b13ce85d02f006f11b0c7ca724740198d38c5"
+        ],
+        "semantic_scholar_id": "d64b13ce85d02f006f11b0c7ca724740198d38c5",
+        "canonical_id": "SemanticScholar:d64b13ce85d02f006f11b0c7ca724740198d38c5",
+        "authors": [
+          "Rui-Hao Li",
+          "Leonardo Piga",
+          "Wei-Xuan Su",
+          "Carlos Torres",
+          "Meta Jovan Stojkovic",
+          "N. Yadwadkar",
+          "L. John",
+          "Abhishek Dhanotia"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:07958db7ea2d6624a72724cc3180dd78c89f2e6b9267ab522c549afb114a747d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

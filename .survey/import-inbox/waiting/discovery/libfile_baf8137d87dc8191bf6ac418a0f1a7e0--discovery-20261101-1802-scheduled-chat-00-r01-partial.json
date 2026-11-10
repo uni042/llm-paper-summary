@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261101-1802-scheduled-chat-00/r01",
+  "reference_main_sha": "f4f6e34937b41535643a6707eba8c7bf84f73dc2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00168",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA66397.2026.00168"
+      ],
+      "title": "PowerWeave: Unlocking Energy-Efficient ML on GPUs with OS-Level Spatial Power Management",
+      "reason": "ISCA 2026の著者公開原著PDF（15頁）で一次資料を確認。PowerWeaveはGPU内で複数の電圧・周波数領域を独立制御するspatial DVFSを提案し、CUDAカーネルの実行時間から周波数対遅延特性をオンライン学習するInterposerと、TTFT/TPOT・テナント別SLO余裕・RPS変動を監視するGovernorを組み合わせる。LLM prefillの計算律速とdecodeのメモリ律速を分け、必要な領域だけ高周波数化する。B200/vLLM/LMCacheを用いたLLM推論評価で、disaggregated prefillの平均省エネルギー率28%（単一周波数DVFSのLithOSは13%）、multi-tenant平均28%（LithOSは10%）を報告。現行B200は領域別DVFSを直接提供しないため、複数GPUへのTPC割当による空間DVFS模擬実験であり、実機の単一GPU領域別DVFS実装を実証した値ではない。GPU実行時電力制御とLLM推論サービングのSLO維持を直接対象とするためaccept。",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00168",
+      "primary_evidence_url": "https://www.cs.cmu.edu/~dskarlat/publications/powerweave_isca26.pdf",
+      "body_check": "primary_author_pdf_abstract_and_selected_methods_evaluation_sections_read; paper_fulltext_not_exhaustively_read; spatial_dvfs_emulated_on_multiple_B200_GPUs",
+      "first_checked_at": "2026-11-01T18:07:36+09:00",
+      "last_checked_at": "2026-11-01T18:07:36+09:00",
+      "linked_from": [
+        "KV Cache Offload / Recomputation",
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM serving / energy management / cluster scheduling / dynamic reconfiguration",
+        "LLM serving / prefill-decode disaggregation",
+        "inference-systems",
+        "serving-scheduling"
+      ],
+      "worklist_rank": 16,
+      "origin": "discovery_worklist_primary_paper"
+    }
+  ]
+}

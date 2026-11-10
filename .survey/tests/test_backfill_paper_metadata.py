@@ -1,0 +1,360 @@
+from __future__ import annotations
+
+import sys
+import tempfile
+import unittest
+from io import BytesIO
+from urllib.error import HTTPError
+from unittest.mock import patch
+from pathlib import Path
+
+
+SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
+sys.path.insert(0, str(SCRIPTS))
+
+import backfill_paper_metadata  # noqa: E402
+
+
+class BackfillPaperMetadataTests(unittest.TestCase):
+    def test_incomplete_import_is_completed_from_existing_text_and_arxiv_facts(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paper = root / "papers/inference/99-other-inference-systems/2026-2609.99991-test.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text(
+                """---
+canonical_id: "arXiv:2609.99991"
+arxiv_id: "2609.99991"
+title: "Imported Test Paper"
+list_summary: "既存の一文解説をそのまま再利用してメタデータを補完するためのテスト論文である。"
+source: "https://arxiv.org/abs/2609.99991"
+---
+
+# Imported Test Paper
+
+## 一文解説
+既存の一文解説をそのまま再利用してメタデータを補完するためのテスト論文である。
+
+## 概要
+本文。
+""",
+                encoding="utf-8",
+            )
+            meta, body = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertTrue(backfill_paper_metadata.metadata_needs_backfill(meta, body))
+
+            changed, added = backfill_paper_metadata.backfill(
+                paper,
+                {
+                    "2609.99991": {
+                        "authors": ["Example Author"],
+                        "published": "2026-09-01",
+                        "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
+                        "abs_url": "https://arxiv.org/abs/2609.99991",
+                        "pdf_url": "https://arxiv.org/pdf/2609.99991",
+                    }
+                },
+                "2026-09-26",
+            )
+
+            self.assertTrue(changed)
+            self.assertIn("summary(existing-one-line)", added)
+            meta, body = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertEqual(meta["summary"], meta["list_summary"])
+            self.assertEqual(meta["authors"], ["Example Author"])
+            self.assertEqual(meta["publication"], "arXiv")
+            self.assertEqual(meta["publication_type"], "プレプリント")
+            self.assertEqual(meta["publication_status"], "arXiv preprint")
+            self.assertEqual(meta["arxiv_categories"]["primary"], "cs.LG")
+            self.assertIsNone(meta["code"])
+            self.assertEqual(meta["last_checked"], "2026-09-26")
+            self.assertFalse(backfill_paper_metadata.metadata_needs_backfill(meta, body))
+
+    def test_body_one_line_can_fill_missing_list_and_summary(self) -> None:
+        meta = {
+            "canonical_id": "arXiv:2609.99992",
+            "arxiv_id": "2609.99992",
+            "title": "Legacy Import",
+        }
+        body = """# Legacy Import
+
+## 一文解説
+チャット退避から戻した旧形式本文に残っている説明を再利用する。
+"""
+        self.assertEqual(
+            backfill_paper_metadata.body_one_line_summary(body),
+            "チャット退避から戻した旧形式本文に残っている説明を再利用する。",
+        )
+        self.assertTrue(backfill_paper_metadata.metadata_needs_backfill(meta, body))
+
+
+    def test_arxiv_fetch_falls_back_after_http_error(self) -> None:
+        xml = b"""<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
+  <entry>
+    <id>http://arxiv.org/abs/2609.99991v1</id>
+    <published>2026-09-01T00:00:00Z</published>
+    <author><name>Example Author</name></author>
+    <arxiv:primary_category term="cs.LG"/>
+    <category term="cs.LG"/>
+  </entry>
+</feed>"""
+        class Response:
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self):
+                return xml
+
+        calls = []
+        def fake_urlopen(req, timeout=60):
+            calls.append(req.full_url)
+            if req.full_url.startswith("https://export.arxiv.org/"):
+                raise HTTPError(req.full_url, 406, "Not Acceptable", {}, BytesIO())
+            return Response()
+
+        with patch.object(backfill_paper_metadata, "urlopen", side_effect=fake_urlopen):
+            with patch.object(backfill_paper_metadata.time, "sleep"):
+                result = backfill_paper_metadata.fetch_arxiv(["2609.99991"])
+
+        self.assertIn("2609.99991", result)
+        self.assertEqual(result["2609.99991"]["authors"], ["Example Author"])
+        self.assertTrue(any(url.startswith("https://arxiv.org/api/query?") for url in calls))
+
+
+    def test_arxiv_fetch_falls_back_to_html_metadata(self) -> None:
+        html = b"""<html><head>
+<meta name="citation_author" content="Example Author">
+<meta name="citation_author" content="Second Author">
+<meta name="citation_date" content="2026/09/01">
+<meta name="citation_keywords" content="Machine Learning (cs.LG); Artificial Intelligence (cs.AI)">
+</head><body></body></html>"""
+
+        class Response:
+            def __init__(self, payload):
+                self.payload = payload
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self):
+                return self.payload
+
+        def fake_urlopen(req, timeout=60):
+            url = req.full_url
+            if "/api/query?" in url:
+                raise HTTPError(url, 406, "Not Acceptable", {}, BytesIO())
+            if url == "https://arxiv.org/html/2609.99991":
+                return Response(html)
+            raise AssertionError(url)
+
+        with patch.object(backfill_paper_metadata, "urlopen", side_effect=fake_urlopen):
+            with patch.object(backfill_paper_metadata.time, "sleep"):
+                result = backfill_paper_metadata.fetch_arxiv(["2609.99991"])
+
+        row = result["2609.99991"]
+        self.assertEqual(row["authors"], ["Example Author", "Second Author"])
+        self.assertEqual(row["published"], "2026-09-01")
+        self.assertEqual(row["arxiv_categories"]["primary"], "cs.LG")
+        self.assertEqual(row["arxiv_categories"]["cross_list"], ["cs.AI"])
+
+
+    def test_html_metadata_uses_abs_primary_subject_when_full_html_has_no_category(self) -> None:
+        full_html = b"""<html><head>
+<meta name="citation_author" content="Example Author">
+<meta name="citation_date" content="2026-09-01">
+</head><body></body></html>"""
+        abs_html = b"""<html><head>
+<meta name="citation_author" content="Example Author">
+<meta name="citation_date" content="2026-09-01">
+</head><body><span class="primary-subject">Machine Learning (cs.LG)</span></body></html>"""
+
+        class Response:
+            def __init__(self, payload):
+                self.payload = payload
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                return False
+            def read(self):
+                return self.payload
+
+        def fake_urlopen(req, timeout=60):
+            if req.full_url.endswith("/html/2609.99991"):
+                return Response(full_html)
+            if req.full_url.endswith("/abs/2609.99991"):
+                return Response(abs_html)
+            raise AssertionError(req.full_url)
+
+        with patch.object(backfill_paper_metadata, "urlopen", side_effect=fake_urlopen):
+            row = backfill_paper_metadata._fetch_arxiv_html("2609.99991")
+
+        self.assertIsNotNone(row)
+        self.assertEqual(row["arxiv_categories"]["primary"], "cs.LG")
+        self.assertEqual(row["arxiv_categories"]["cross_list"], [])
+
+
+    def test_legacy_arxiv_identity_and_one_line_formats_are_reused(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paper = root / "papers/inference/test/2026-2603.12645-lightmoe.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text(
+                """---
+canonical_id: "arXiv:2603.12645"
+title: "LightMoE"
+primary_url: "https://arxiv.org/abs/2603.12645"
+---
+
+# LightMoE
+
+**一文解説:** 既存本文の一文解説を正規summaryへ再利用する。
+""",
+                encoding="utf-8",
+            )
+            meta, body = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertEqual(
+                backfill_paper_metadata.infer_arxiv_id(meta, paper),
+                "2603.12645",
+            )
+            changed, _ = backfill_paper_metadata.backfill(
+                paper,
+                {
+                    "2603.12645": {
+                        "authors": ["Example Author"],
+                        "published": "2026-03-01",
+                        "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
+                        "abs_url": "https://arxiv.org/abs/2603.12645",
+                        "pdf_url": "https://arxiv.org/pdf/2603.12645",
+                    }
+                },
+                "2026-09-26",
+            )
+            self.assertTrue(changed)
+            meta, _ = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertEqual(meta["arxiv_id"], "2603.12645")
+            self.assertEqual(meta["summary"], "既存本文の一文解説を正規summaryへ再利用する。")
+            self.assertEqual(meta["source"], "https://arxiv.org/abs/2603.12645")
+
+    def test_list_summary_heading_and_published_online_are_reused(self) -> None:
+        meta = {
+            "canonical_id": "DOI:10.1000/example",
+            "title": "Journal Paper",
+            "publication": "Journal 1 (2026)",
+            "published_online": "2026-09-11",
+            "doi": "10.1000/example",
+            "source": "https://doi.org/10.1000/example",
+        }
+        body = """# Journal Paper
+
+## 一覧用要約
+
+既存の一覧用要約をsummaryへ昇格する。
+"""
+        self.assertEqual(
+            backfill_paper_metadata.body_one_line_summary(body),
+            "既存の一覧用要約をsummaryへ昇格する。",
+        )
+
+
+    def test_body_arxiv_categories_recovers_explicit_bibliography_codes(self) -> None:
+        body = """# Example
+
+## 書誌情報
+
+2026年のarXiv論文。主分類は機械学習（cs.LG）、副分類は人工知能（cs.AI）。
+
+## 概要
+
+本文。
+"""
+        self.assertEqual(
+            backfill_paper_metadata.body_arxiv_categories(body),
+            {"primary": "cs.LG", "cross_list": ["cs.AI"]},
+        )
+
+
+    def test_body_heading_and_overview_fill_missing_title_and_summary(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            paper = Path(td) / "paper.md"
+            paper.write_text(
+                """---
+canonical_id: arXiv:2604.26968
+authors:
+- Example Author
+published: '2026-04-19'
+publication: arXiv
+publication_type: プレプリント
+publication_status: arXiv preprint
+source: https://arxiv.org/abs/2604.26968
+sources:
+- https://arxiv.org/abs/2604.26968
+implementation: 実装済み。
+code: null
+last_checked: '2026-09-26'
+---
+
+# Predictive Multi-Tier Memory Management
+
+## 概要
+
+既存本文の概要を正規メタデータへ再利用する。
+""",
+                encoding="utf-8",
+            )
+            changed, added = backfill_paper_metadata.backfill(paper, {}, "2026-09-28")
+            self.assertTrue(changed)
+            self.assertIn("title(body-h1)", added)
+            self.assertIn("summary(existing-body)", added)
+            meta, _ = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertEqual(meta["title"], "Predictive Multi-Tier Memory Management")
+            self.assertEqual(meta["summary"], "既存本文の概要を正規メタデータへ再利用する。")
+
+    def test_scalar_authors_are_normalized_and_valid_legacy_date_is_reused(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            paper = Path(td) / "paper.md"
+            paper.write_text(
+                """---
+canonical_id: DOI:10.1145/example
+title: Example
+summary: Example summary.
+authors: Alice Example; Bob Example
+published_year: '2026-08'
+publication: Conference
+publication_status: Conference
+implementation: 実装済み。
+code: null
+last_checked: '2026-09-26'
+---
+
+# Example
+""",
+                encoding="utf-8",
+            )
+            meta_before, body_before = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertTrue(backfill_paper_metadata.metadata_needs_backfill(meta_before, body_before))
+            changed, _ = backfill_paper_metadata.backfill(paper, {}, "2026-09-28")
+            self.assertTrue(changed)
+            meta, body = backfill_paper_metadata.parse_frontmatter(paper)
+            self.assertEqual(meta["authors"], ["Alice Example", "Bob Example"])
+            self.assertEqual(meta["published"], "2026-08")
+            self.assertEqual(meta["source"], "https://doi.org/10.1145/example")
+            self.assertEqual(meta["sources"], ["https://doi.org/10.1145/example"])
+            self.assertEqual(meta["publication_type"], "査読付き国際会議論文")
+            self.assertFalse(backfill_paper_metadata.metadata_needs_backfill(meta, body))
+
+    def test_html_metadata_recovers_title_without_atom_api(self) -> None:
+        html = b"""<html><head>
+<meta name="citation_title" content="Recovered arXiv Title">
+<meta name="citation_author" content="Example Author">
+<meta name="citation_date" content="2026/09/01">
+<meta name="citation_keywords" content="Machine Learning (cs.LG)">
+</head><body></body></html>"""
+        row = backfill_paper_metadata._parse_arxiv_html_metadata("2609.99991", html)
+        self.assertIsNotNone(row)
+        self.assertEqual(row["title"], "Recovered arXiv Title")
+
+
+if __name__ == "__main__":
+    unittest.main()

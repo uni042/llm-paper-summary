@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1402-scheduled-chat-00/r06",
+  "reference_main_sha": "afab2f7def975f91b7e54f8737fc55697c6becbf",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.09778",
+      "identity_tokens": [
+        "id:arXiv:2610.09778",
+        "id:DOI:10.48550/arXiv.2610.09778"
+      ],
+      "title": "Reproducible LLM Inference Benchmarking: A Sequential Isolation Protocol for Regression Testing",
+      "reason": "LLM serving性能の繰返し計測でsystem stateと並列度によるばらつきを分離するSequential Isolation Methodologyを提案。A100/vLLM 0.9.1、3 LLM、6文脈長、8同時実行数で5回ずつ計測し、一次要旨はTTFT P50の反復CVを15.2%から2.2%へ低減、144設定中113でCV3%未満を報告。推論サービングbenchmarkの再現性向上としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.09778",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:14:55+09:00",
+      "last_checked_at": "2026-11-02T14:14:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.15629",
+      "identity_tokens": [
+        "id:arXiv:2610.15629",
+        "id:DOI:10.48550/arXiv.2610.15629"
+      ],
+      "title": "The Price of Precision: A Calibrated Cost Model for Mixed-Precision LLM Serving",
+      "reason": "LLMのmixed precisionで平均bit数を速度の代理とすると、prefill/decode・batch・文脈に応じたcompute/weight/KVの律速変化を見逃す。モデル・GPU・serving stackでcalibrateしたlatency modelとtensor別accuracy costを組み合わせ、動的計画法でlatency/精度予算下のbit配分を選ぶ。一次要旨は3 hardware classで予測精度とbyte-aware等との配分比較を報告。推論速度を意識した量子化設定の直接的最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.15629",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:14:55+09:00",
+      "last_checked_at": "2026-11-02T14:14:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.21815",
+      "identity_tokens": [
+        "id:arXiv:2610.21815",
+        "id:DOI:10.48550/arXiv.2610.21815"
+      ],
+      "title": "Exact Makespan Bounds and the GPipe Homogeneity Bias for Heterogeneous LLM Inference Pipelines",
+      "reason": "異種GPU上のLLM microbatch pipelineで均質GPipe公式がmakespanを過大推定する問題に対し、stage service timeと通信遅延のcritical pathを解析する。非blocking通信では通信が定数項に入り、blocking通信では遅いstageの定常傾きへ加わる条件を導く。一次要旨はRTX5090/3090/GTX1070混成を含む11構成・16万点fuzzで解析式を検証。異種GPU推論pipelineの性能モデルとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.21815",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:14:55+09:00",
+      "last_checked_at": "2026-11-02T14:14:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.32711",
+      "identity_tokens": [
+        "id:arXiv:2610.32711",
+        "id:DOI:10.48550/arXiv.2610.32711"
+      ],
+      "title": "Beyond Hotness: High-Resolution Memory Characterization of Cloud and LLM Workloads for Tiered Memory with ARM SPE",
+      "reason": "ARM SPEを用いてCloudSuiteとLLMの8 workloadを高分解能にprofileし、region別のaccess pattern・memory idle period・latency profileからtiered memoryの配置適性を判定する方法を提示。一次要旨は従来のhotness指標だけでは見えないtiering機会を調査する。LLM推論を含むDRAM階層配置の測定基盤としてaccept。ただし個別のLLM throughput改善量は要旨未報告。",
+      "source_url": "https://arxiv.org/abs/2610.32711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:14:55+09:00",
+      "last_checked_at": "2026-11-02T14:14:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.23951",
+      "identity_tokens": [
+        "id:arXiv:2610.23951",
+        "id:DOI:10.48550/arXiv.2610.23951"
+      ],
+      "title": "LatLM: Line-Parallel Language Models with Deferred Commitment",
+      "reason": "複数lineを並列生成する言語モデルで固定commit scheduleが依存未解決のtokenを早期確定する問題に対し、2次元lattice上のfrontierを評価して確信度に応じcommitを遅延するLatLMを提案。append-only cacheで確定状態を保持し、2D causal maskで学習する。一次要旨は482Mモデルで独立line課題を自回帰比25～41%のround数で解き、混合依存鎖ではLCLM比精度96.5%対78.5%と報告。新規parallel LM decoding方式としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.23951",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:14:55+09:00",
+      "last_checked_at": "2026-11-02T14:14:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17191",
+      "identity_tokens": [
+        "id:arXiv:2610.17191",
+        "id:DOI:10.48550/arXiv.2610.17191"
+      ],
+      "title": "FreeSolo: Linear-time Sparse Attention with Zero-Shot Length Extrapolation",
+      "reason": "固定長recurrent stateの記憶容量とfull attentionの二次計算を両立するため、短距離sliding-window branchと長距離keypoint-cell選択branchを持つFreeSoloを提案。FS-Lは短いcontinued pretrainingでprefixを事前pruneしてquery依存選択し、FS-Bはbalanced treeを探索する。一次要旨は長文脈fine-tuningなしで既存法よりzero-shot length extrapolationが良いと報告。LLM長文脈sparse attentionの推論計算削減としてaccept（実測decode速度は要旨未報告）。",
+      "source_url": "https://arxiv.org/abs/2610.17191",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:14:55+09:00",
+      "last_checked_at": "2026-11-02T14:14:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07782",
+      "identity_tokens": [
+        "id:arXiv:2610.07782",
+        "id:DOI:10.48550/arXiv.2610.07782"
+      ],
+      "title": "Persistent Memory in Multi-Agent LLM Inference: What It Costs, What It Buys, and When You Can Tell",
+      "reason": "協調agentへ長文脈を分割するとcallごとのKV working setを小さくできる一方、persistent reasoning traceの追加効果は測定条件に依存することを検証。一次要旨は単一pass/RAGのpeak KV 35.5/35.3MiBに対し分割agentが14.3MiB、persistent tierはKVを0.368MiB増やし正解率の有意改善を示さなかったと報告。LLM agent推論のKV memoryと評価設計に直接関係する負の結果としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.07782",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:14:55+09:00",
+      "last_checked_at": "2026-11-02T14:14:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.24328",
+      "identity_tokens": [
+        "id:arXiv:2610.24328",
+        "id:DOI:10.48550/arXiv.2610.24328"
+      ],
+      "title": "SigmaTrace: Library-Agnostic Observability for CPU/GPU-Initiated RDMA Communication",
+      "reason": "CPU/GPU initiated RDMAを通信library非依存でoperation単位に追跡するSigmaTraceを提案。一次要旨はNCCL 128GPUで1.3% overhead、RCCL 1024GPUで2%未満、MoE inferenceでnode間traffic 2.13倍の偏りを検出したと報告。MoE推論通信の分析に有用だが主要成果は汎用RDMA profilingでLLM固有のschedulerやthroughput改善を提示していないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.24328",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:14:55+09:00",
+      "last_checked_at": "2026-11-02T14:14:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.09894",
+      "identity_tokens": [
+        "id:arXiv:2610.09894",
+        "id:DOI:10.48550/arXiv.2610.09894"
+      ],
+      "title": "QCATS: Query Context-Aware Transformer Slicing for Efficient Predictive Query Processing",
+      "reason": "database queryのpredicateとmetadataから推論前にTransformer FFN sliceを選ぶQCATSを提案し、offline expert構築、query単位routing、CPU/GPU非同期pipelineとbatchingを組み合わせる。一次要旨はBERT-base/Qwen-0.6Bの4予測query workloadでlatency最大4.42倍削減と報告。推論runtimeに関係するが対象はDB内predictive queryで自回帰LLM servingではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.09894",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:14:55+09:00",
+      "last_checked_at": "2026-11-02T14:14:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.07641",
+      "identity_tokens": [
+        "id:arXiv:2610.07641",
+        "id:DOI:10.48550/arXiv.2610.07641"
+      ],
+      "title": "Hiding Tool Latency in On-Device Cascaded Voice Agent through Speculative Execution",
+      "reason": "Android音声agentでASRの部分仮説からtool callを先読みして音声入力中に実行し、結果をcacheしてLLM promptへ挿入する。自己訂正時はrule-based検証で誤結果を除外する。一次要旨は実機のfirst-audio中央値を5.79秒から4.60秒へ短縮と報告。agent全体の応答遅延には寄与するがLLM自体の推論・KV/weight計算は変更しないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.07641",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:14:55+09:00",
+      "last_checked_at": "2026-11-02T14:14:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c713ffc7fbc76409-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.19161",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.19161",
+    "identity_tokens": [
+      "arXiv:2608.19161"
+    ],
+    "reason": "一次要旨はlatent multi-agent communicationのsecurity monitoring/steeringが主題で、serving efficiencyではない。",
+    "first_checked_at": "2026-10-05T03:17:01+00:00",
+    "last_checked_at": "2026-10-05T03:17:01+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+    ],
+    "title": "Beyond the Transcript: Detecting Covert Co ordination in Latent Multi-Agent Communication"
+  },
+  "processed_at": "2026-10-05T03:17:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c713ffc7fbc7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff95657d0622bf8b-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.10147",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.10147",
+    "identity_tokens": [
+      "arXiv:2606.10147"
+    ],
+    "reason": "Qwen2.5-OmniとVideo-SALMONN2 Plusで音声・視覚トークンが出力へ寄与する経路を分析し、情報伝達が終わった層以降でトークンを捨てても精度が保たれる場合を示す。一次本文の評価では単一動画と交互入力の両方で削除層の感度を比較。トークン圧縮への応用可能性はあるが、主眼は内部情報流の解釈であり推論実装の速度改善は副次的なためborderline。",
+    "first_checked_at": "2026-10-30T13:55:18+00:00",
+    "last_checked_at": "2026-10-30T13:55:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "From Senses to Decisions: The Information Flow of Auditory and Visual Perception in Multimodal LLMs"
+  },
+  "processed_at": "2026-10-30T13:55:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff95657d0622",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

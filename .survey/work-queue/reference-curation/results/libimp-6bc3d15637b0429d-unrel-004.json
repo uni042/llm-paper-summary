@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6bc3d15637b0429d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.23651",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.23651",
+    "identity_tokens": [
+      "arXiv:2608.23651"
+    ],
+    "reason": "failed tool-call repetitionを測るagent reliability/harness研究。提案は再試行挙動・安全性の修正であり、主目的はinference efficiencyではない。",
+    "first_checked_at": "2026-10-05T02:34:44+00:00",
+    "last_checked_at": "2026-10-05T02:34:44+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Feedback That Backfires: Why Small Language Model Agents Repeat the Call They Just Watched Fail"
+  },
+  "processed_at": "2026-10-05T02:34:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6bc3d15637b0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

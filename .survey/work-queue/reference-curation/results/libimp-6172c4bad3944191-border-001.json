@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6172c4bad3944191-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.15607/rss.2024.xx.090",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.15607/rss.2024.xx.090",
+    "identity_tokens": [
+      "DOI:10.15607/rss.2024.xx.090"
+    ],
+    "reason": "候補に記載の一次DOI URLを開いたが一次論文・要旨本文を取得できず、内容をタイトルから推定しない。",
+    "first_checked_at": "2026-10-05T01:26:17+00:00",
+    "last_checked_at": "2026-10-05T01:26:17+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2026-2609.25376-vlaquantbench.md"
+    ],
+    "title": "Octo: An Open-Source Generalist Robot Policy"
+  },
+  "processed_at": "2026-10-05T01:26:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6172c4bad394",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0200-scheduled-chat-00/r06",
+  "reference_main_sha": "bfbf4444d3e126ebc965c380558cb94e575463ae",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.12618",
+      "identity_tokens": [
+        "arXiv:2602.12618"
+      ],
+      "title": "Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models",
+      "reason": "arXiv一次要旨はLLMの深層で視覚情報が言語へ伝達される性質を利用し、特定層で均一ダウンサンプリングを挟むADSCを提案。追加のスコア計算や注意改造なしにFlashAttentionと併用でき、LLaVA-1.5でFLOPs53.7%、ピークKVメモリ56.7%削減し元性能98.2%を維持する推論圧縮方式。",
+      "source_url": "https://arxiv.org/abs/2602.12618",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:06:29+09:00",
+      "last_checked_at": "2026-10-31T02:06:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 378,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04594",
+      "identity_tokens": [
+        "arXiv:2606.04594"
+      ],
+      "title": "Ekka: Automated Diagnosis of Silent Errors in LLM Inference",
+      "reason": "arXiv一次要旨はLLMサービングフレームワークで明示エラーなしに出力品質が悪化するsilent errorを、正しい参照実装と対象実装の中間状態を段階的に照合する差分デバッグ問題として解くEkkaを提案。実障害ベンチマークで原因診断pass@1 80%、pass@5 88%と報告する推論基盤の品質診断技術。",
+      "source_url": "https://arxiv.org/abs/2606.04594",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:06:29+09:00",
+      "last_checked_at": "2026-10-31T02:06:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 380,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.02267",
+      "identity_tokens": [
+        "arXiv:2405.02267"
+      ],
+      "title": "Structural Pruning of Pre-trained Language Models via Neural Architecture Search",
+      "reason": "arXiv一次要旨はBERT/RoBERTaの分類向け微調整モデルに対し、重み共有型ニューラル構造探索で層・構造を剪定しサイズ・遅延・精度のPareto集合を得る方式。推論効率化の技術はあるが生成LLMやデコード・サービングを対象とせず、現行系統との接続は境界的。",
+      "source_url": "https://arxiv.org/abs/2405.02267",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:06:29+09:00",
+      "last_checked_at": "2026-10-31T02:06:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 381,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.18137",
+      "identity_tokens": [
+        "arXiv:2405.18137"
+      ],
+      "title": "Exploiting LLM Quantization",
+      "reason": "arXiv一次要旨は量子化前の全精度LLMを無害に見せ、量子化後に悪意ある挙動が現れるよう重みを細工するセキュリティ攻撃を提案。LLM量子化を扱うが、目的・評価は脆弱性と攻撃成立性であり、推論の速度・メモリ・カーネル・サービング効率を改善するシステム貢献はない。",
+      "source_url": "https://arxiv.org/abs/2405.18137",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:06:29+09:00",
+      "last_checked_at": "2026-10-31T02:06:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 383,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03134",
+      "identity_tokens": [
+        "arXiv:2602.03134"
+      ],
+      "title": "SwiftVLM: Efficient Vision-Language Model Inference via Cross-Layer Token Bypass",
+      "reason": "arXiv一次要旨は浅層で不要と判定した視覚トークンが深層では重要になり得る問題に対し、削除せず次の選別段階へ迂回させるtoken bypassを提案。層ごとの独立した選別で細粒度視覚情報を守りつつVLM推論計算を削減する訓練不要のトークン管理方式。",
+      "source_url": "https://arxiv.org/abs/2602.03134",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:06:29+09:00",
+      "last_checked_at": "2026-10-31T02:06:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 384,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.18085",
+      "identity_tokens": [
+        "arXiv:2604.18085"
+      ],
+      "title": "Predicting LLM Compression Degradation from Spectral Statistics",
+      "reason": "arXiv一次要旨はQwen3/Gemma3に4種の低ランク圧縮を適用し、圧縮率と安定ランクの積から事前に品質劣化を予測する指標を検証。注意層でPearson相関0.890、MLPで0.839と報告するが、主貢献は圧縮方式選択の品質予測であり推論ランタイムの速度・メモリ改善自体は未実証のため保留。",
+      "source_url": "https://arxiv.org/abs/2604.18085",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:06:29+09:00",
+      "last_checked_at": "2026-10-31T02:06:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 389,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.15177",
+      "identity_tokens": [
+        "arXiv:2609.15177"
+      ],
+      "title": "Temporal Self-Distillation: Faster Inference in Discrete Diffusion Language Models",
+      "reason": "arXiv一次要旨は拡散LLMの初期ノイズ除去分布を、各トークンが最終確定される時点の同一モデル予測へ蒸留するTSDを提案。別教師のオフライン生成を必要とせず、数学・計画・コード7ベンチマークで低計算予算下の速度品質曲線を改善する推論時並列復号高速化。",
+      "source_url": "https://arxiv.org/abs/2609.15177",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:06:29+09:00",
+      "last_checked_at": "2026-10-31T02:06:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 390,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.08864",
+      "identity_tokens": [
+        "arXiv:2602.08864"
+      ],
+      "title": "Understanding Dynamic Compute Allocation in Recurrent Transformers",
+      "reason": "arXiv一次要旨はトークンごとに反復深度を変えるANIRAを合成言語・アルゴリズム課題で分析し、計算割当が課題複雑度と一致しても未知入力長へ汎化しないことを示す。適応推論計算の分析基盤だが、実際の生成LLMサービングの計測・効率改善は主要成果ではないため境界的。",
+      "source_url": "https://arxiv.org/abs/2602.08864",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:06:29+09:00",
+      "last_checked_at": "2026-10-31T02:06:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 394,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.13147",
+      "identity_tokens": [
+        "arXiv:2511.13147"
+      ],
+      "title": "OTARo: Once Tuning for All Precisions toward Robust On-Device LLMs",
+      "reason": "arXiv一次要旨はShared Exponent Floating Pointで同一モデルの仮数を切り詰めて複数ビット幅へ切替えられる量子化方式と、精度横断の学習経路探索・低精度勾配蓄積を提案。端末上のタスクに応じたLLM推論精度とメモリ使用量の動的切替えを直接可能にする。",
+      "source_url": "https://arxiv.org/abs/2511.13147",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:06:29+09:00",
+      "last_checked_at": "2026-10-31T02:06:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 395,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.02071",
+      "identity_tokens": [
+        "arXiv:2602.02071"
+      ],
+      "title": "BAPS: A Fine-Grained Low-Precision Scheme for Softmax in Attention via Block-Aware Precision reScaling",
+      "reason": "arXiv一次要旨は注意softmaxをHiF8とブロック単位の精度再スケーリングで8ビット化し、行列演算器からベクトル演算器へのデータ転送帯域を半減、指数演算器の面積を縮小するハード・ソフト協調設計を提案。推論attentionの帯域・回路面積を直接最適化する。",
+      "source_url": "https://arxiv.org/abs/2602.02071",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:06:29+09:00",
+      "last_checked_at": "2026-10-31T02:06:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 397,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

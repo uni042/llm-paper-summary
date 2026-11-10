@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-53be652149ac9a10-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.30854",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.30854",
+    "identity_tokens": [
+      "arXiv:2609.30854"
+    ],
+    "reason": "KV量子化・eviction・paging・prefix sharing・heterogeneous tieringを統一条件で整理するSoKで、推論最適化そのものには強く関連するが、新規の実装方式より分析・設計指針が主貢献のためborderline。",
+    "first_checked_at": "2026-09-30T09:12:10+00:00",
+    "last_checked_at": "2026-09-30T09:12:10+00:00",
+    "linked_from": [
+      "fresh-discovery"
+    ],
+    "title": "The KV Cache Is the New Memory Wall"
+  },
+  "processed_at": "2026-09-30T09:12:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-53be652149ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

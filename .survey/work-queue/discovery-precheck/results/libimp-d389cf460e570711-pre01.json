@@ -1,0 +1,1698 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d389cf460e570711-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d389cf460e57",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:e673d258703cc317b3714bc7da0d9d9b02ebc146",
+    "arXiv:2406.13474",
+    "arXiv:2408.04678",
+    "arXiv:2501.04211",
+    "arXiv:2502.12594",
+    "arXiv:2504.04308",
+    "arXiv:2505.12215",
+    "arXiv:2506.03510",
+    "arXiv:2506.05664",
+    "arXiv:2511.18868",
+    "arXiv:2601.00919",
+    "arXiv:2603.03333",
+    "arXiv:2603.18426",
+    "arXiv:2603.21096",
+    "arXiv:2604.18592",
+    "arXiv:2605.25344",
+    "arXiv:2606.11690",
+    "arXiv:2608.22237"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 18,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "afb18d220d5d89f5ee3bcb7d3693c61e485d8835",
+  "raw_search_result_count": 18,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 18,
+  "provider_progress": {
+    "requested_count": 18,
+    "status_counts": {
+      "allowed": 18,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-08T23:30:05.522083+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:e673d258703cc317b3714bc7da0d9d9b02ebc146",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2406.13474",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.04678",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.04211",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.12594",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.04308",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.12215",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.03510",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.05664",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.18868",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.00919",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.03333",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.18426",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.21096",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.18592",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.25344",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.11690",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.22237",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Prune-then-Quantize or Quantize-then-Prune? Understanding the Impact of Compression Order in Joint Model Compression",
+      "source_url": "https://arxiv.org/abs/2603.18426",
+      "year": 2026,
+      "published": "2026-03-19",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "What happens when multiple compression methods are combined-does the order in which they are applied matter? Joint model compression has emerged as a powerful strategy to achieve higher efficiency by combining multiple methods such as pruning and quantization. A central but underexplored factor in joint model compression is the compression order, or the sequence of different methods within the compression pipeline. Most prior studies have either sidestepped the issue by assuming orthogonality between techniques, while a few have examined them only in highly constrained cases. Consequently, the broader role of compression order in shaping model performance remains poorly understood. In this paper, we address the overlooked problem of compression order and provide both theoretical and empirical analysis. We formulate the problem of optimizing the compression order and introduce the Progressive Intensity Hypothesis, which states that weaker perturbations should precede stronger ones. We provide theoretical guarantees showing that the relative benefit of one order increases with the underlying performance gap. Extensive experiments on both language and vision models validate the hypothesis, and further show its generality to broader setups such as multi-stage compression and mixed-precision quantization.",
+      "identifiers": [
+        "SemanticScholar:2916d16f178825381c0e92c70176e1bc8d680390"
+      ],
+      "semantic_scholar_id": "2916d16f178825381c0e92c70176e1bc8d680390",
+      "canonical_id": "arXiv:2603.18426",
+      "arxiv_id": "2603.18426",
+      "doi": "10.48550/arXiv.2603.18426",
+      "authors": [
+        "Minjun Kim",
+        "Jaehyeon Choi",
+        "H. Yang",
+        "Jongjin Kim",
+        "Jinho Song",
+        "U. Kang"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Attention Needs to Focus: A Unified Perspective on Attention Allocation",
+      "source_url": "https://arxiv.org/abs/2601.00919",
+      "year": 2026,
+      "published": "2026-01-01",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer architecture, a cornerstone of modern Large Language Models (LLMs), has achieved extraordinary success in sequence modeling, primarily due to its attention mechanism. However, despite its power, the standard attention mechanism is plagued by well-documented issues: representational collapse and attention sink. Although prior work has proposed approaches for these issues, they are often studied in isolation, obscuring their deeper connection. In this paper, we present a unified perspective, arguing that both can be traced to a common root -- improper attention allocation. We identify two failure modes: 1) Attention Overload, where tokens receive comparable high weights, blurring semantic features that lead to representational collapse; 2) Attention Underload, where no token is semantically relevant, yet attention is still forced to distribute, resulting in spurious focus such as attention sink. Building on this insight, we introduce Lazy Attention, a novel mechanism designed for a more focused attention distribution. To mitigate overload, it employs positional discrimination across both heads and dimensions to sharpen token distinctions. To counteract underload, it incorporates Elastic-Softmax, a modified normalization function that relaxes the standard softmax constraint to suppress attention on irrelevant tokens. Experiments on the FineWeb-Edu corpus, evaluated across nine diverse benchmarks, demonstrate that Lazy Attention successfully mitigates attention sink and achieves competitive performance compared to both standard attention and modern architectures, while reaching up to 59.58% attention sparsity.",
+      "identifiers": [
+        "SemanticScholar:677e49df983cd212ba26d75086df6ad029f7968b"
+      ],
+      "semantic_scholar_id": "677e49df983cd212ba26d75086df6ad029f7968b",
+      "canonical_id": "arXiv:2601.00919",
+      "arxiv_id": "2601.00919",
+      "doi": "10.48550/arXiv.2601.00919",
+      "authors": [
+        "Zi-Chuan Fu",
+        "Wentao Song",
+        "Guo-Jing Li",
+        "Yejing Wang",
+        "Xian Wu",
+        "Yimin Deng",
+        "Hanyu Yan",
+        "Yefeng Zheng",
+        "Xiang-Yu Zhao"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 280,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KernelBand: Steering LLM-based Kernel Optimization via Hardware-Aware Multi-Armed Bandits",
+      "source_url": "https://arxiv.org/abs/2511.18868",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "High-performance GPU kernels are critical for efficient LLM serving, yet their optimization remains a bottleneck requiring deep system expertise. While code LLMs show promise in generating functionally correct code, kernel optimization is intrinsically a search problem over a vast optimization space. The fundamental mismatch prevents existing LLM agents from efficiently exploring the optimization space for diverse hardware and compute patterns. To bridge the gap, we present KernelBand, a framework that formulates kernel optimization as a Multi-Armed Bandit (MAB) problem, explicitly balancing exploration and exploitation to unlock the potential of code LLMs. To navigate the infinite arm space of optimization strategies applied to candidate kernels, we design two key mechanisms: a hardware-aware pruning strategy via profiling bounds and a trace-driven clustering algorithm that leverages Lipschitz continuity. Theoretically, we prove that KernelBand reduces the regret bound to depend on the compact covering number of runtime clusters, ensuring sample-efficient discovery of high-performance kernels. Extensive experiments on TritonBench-G with three GPU architectures and four code LLMs show that KernelBand consistently and substantially outperforms state-of-the-art methods with over 33% average improvement.",
+      "identifiers": [
+        "SemanticScholar:1f411fe8db82ee468d8eedf0737a0d4b41fb11fa"
+      ],
+      "semantic_scholar_id": "1f411fe8db82ee468d8eedf0737a0d4b41fb11fa",
+      "canonical_id": "arXiv:2511.18868",
+      "arxiv_id": "2511.18868",
+      "authors": [
+        "De-Zhi Ran",
+        "Shu-Xiao Xie",
+        "Mingfang Ji",
+        "Anmin Liu",
+        "Meng-Zhou Wu",
+        "Yuan Cao",
+        "Yu-Zhe Guo",
+        "Hao Yu",
+        "Lin-Yi Li",
+        "Yi-Tao Hu",
+        "Wei Yang",
+        "Tao Xie"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 318,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Per-Token Pricing: A Concurrency-Aware Methodology for LLM Infrastructure Cost Estimation",
+      "source_url": "https://arxiv.org/abs/2606.11690",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Every public LLM cost calculator we surveyed treats GPU utilization as a fixed input -- entered by the user, baked in as a preset, or silently assumed at 100% -- never measured against the operator's actual load. We show that this assumption is the dominant source of error: on identical H100 hardware, effective cost spans \\$0.21 to \\$15.25 per million output tokens, an underutilization penalty of 2.5-24x across low-to-moderate enterprise loads (1-10 rps) and up to 36.3x near idle -- driven by one operator-controlled variable, offered request rate lambda, which sets in-flight concurrency via Little's Law and which no open-source calculator exposes. Because calculators take utilization as a user-supplied input, any utilization-naive estimate understates true cost by exactly 1/U, systematically mispricing self-hosting -- most severely over-selling it for low-traffic workloads. We propose a measurement methodology that parameterizes the relationship as C_eff = f(H, M, Q, lambda, L), validate it with 42 benchmarks across dense, ultra-sparse MoE, and sparse MoE models, and release vllm-cost-meter, an open-source cost meter that attaches to a live vLLM server and reports real \\$/M-tokens against the operator's own traffic. We further show that FP8 quantization benefits the MoE architectures we tested roughly 2.2-2.4x more than the dense model (+69 to +74% vs. +31% peak throughput; n=3, broader validation needed), and our data are consistent with active parameter count, not total model size, being a primary predictor of saturation economics. To rule out single-hardware confounding we repeat the core sweep on A100 80GB PCIe (56 runs): the load-driven spread reproduces at 7.0-11.4x, the active-parameters ordering survives at FP8, and the dense-FP8 advantage inverts on silicon without native FP8 tensor cores -- a hardware-conditional caveat the framework already accommodates.",
+      "identifiers": [
+        "SemanticScholar:8ca0c343e86cb77b539a58dffb019bb4bc40ab41"
+      ],
+      "semantic_scholar_id": "8ca0c343e86cb77b539a58dffb019bb4bc40ab41",
+      "canonical_id": "arXiv:2606.11690",
+      "arxiv_id": "2606.11690",
+      "doi": "10.48550/arXiv.2606.11690",
+      "authors": [
+        "Chitral Patil"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 120,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mixture of Chapters: Scaling Learnt Memory in Transformers",
+      "source_url": "https://arxiv.org/abs/2603.21096",
+      "year": 2026,
+      "published": "2026-03-22",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers lack an explicit architectural mechanism for storing and organizing knowledge acquired during training. We introduce learnable sparse memory banks: a set of latent tokens, randomly initialized and trained end-to-end, that transformer layers query via cross-attention to retrieve stored knowledge. To scale memory capacity without prohibitive attention costs, we propose chapter-based routing inspired by Mixture-of-Experts architectures, partitioning the memory bank into chapters and training a router to select relevant subsets per input. This enables scaling to 262K memory tokens while maintaining tractable computation. We evaluate our approach against standard transformers (in iso-FLOP settings) on pre-training and instruction fine-tuning across relevant benchmarks. Our models surpass iso-FLOP baselines suggesting scope for a new axis of scaling, demonstrating that explicit associative memory provides complementary capacity to what is captured implicitly in model parameters. Additionally, we observe improved knowledge retention under continued training, with robustness to forgetting when transitioning between training phases (e.g., pretraining to instruction fine-tuning).",
+      "identifiers": [
+        "SemanticScholar:768d45e915c3de59ea780d61c9612ba4aa106635"
+      ],
+      "semantic_scholar_id": "768d45e915c3de59ea780d61c9612ba4aa106635",
+      "canonical_id": "arXiv:2603.21096",
+      "arxiv_id": "2603.21096",
+      "doi": "10.48550/arXiv.2603.21096",
+      "authors": [
+        "Tasmay Pankaj Tibrewal",
+        "Pritish Saha",
+        "Ankit Meda",
+        "Kunal Singh",
+        "Pradeep Moturi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 200,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GMSA: Enhancing Context Compression via Group Merging and Layer Semantic Alignment",
+      "source_url": "https://arxiv.org/abs/2505.12215",
+      "year": 2025,
+      "published": "2025-05-18",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable performance across a wide range of Natural Language Processing (NLP) tasks. However, in long-context scenarios, they face two challenges: high computational cost and information redundancy. To address these challenges, we propose GMSA, an encoder-decoder context compression framework that generates a compact sequence of soft tokens for downstream tasks. GMSA introduces Group Merging to achieve more uniform aggregation, mitigating semantic dominance during autoencoder pretraining, and Layer Semantic Alignment (LSA) to bridge the semantic gap between high-level abstract semantics and low-level input semantics. We first pretrain GMSA as an autoencoder and then fine-tune it for downstream tasks. Experiments demonstrate that GMSA improves context reconstruction compared to existing soft prompt compression paradigm and outperforms baselines on multiple long-context question answering and summarization benchmarks across two backbone models, while maintaining low end-to-end latency.",
+      "identifiers": [
+        "SemanticScholar:fb8891088089924708d1a8d094baceef278cd9bb"
+      ],
+      "semantic_scholar_id": "fb8891088089924708d1a8d094baceef278cd9bb",
+      "canonical_id": "arXiv:2505.12215",
+      "arxiv_id": "2505.12215",
+      "doi": "10.48550/arXiv.2505.12215",
+      "authors": [
+        "Jiwei Tang",
+        "Zhicheng Zhang",
+        "Shun-Long Wu",
+        "Jingheng Ye",
+        "Lichen Bai",
+        "Zitai Wang",
+        "Tingwei Lu",
+        "Jia-Qi Chen",
+        "Hai Lin",
+        "Hai-Tao Zheng",
+        "Hong-Gee Kim"
+      ],
+      "priority": 36,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 36,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Attention-aware Post-training Quantization without Backpropagation",
+      "source_url": "https://arxiv.org/abs/2406.13474",
+      "year": 2024,
+      "published": "2024-06-19",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is a promising solution for deploying large language models (LLMs) on resource-constrained devices. Early methods developed for small-scale networks, such as ResNet, rely on gradient-based optimization, which becomes impractical for hyper-scale LLMs with billions of parameters. While recently proposed backpropagation-free or transformation-based methods alleviate this issue, they ignore inter-layer interactions or use the naive nearest-rounding-based quantized weight assignment to save the heavy computational cost of weight optimization. In this paper, we introduce a novel backpropagation-free PTQ algorithm that optimizes quantized weights by considering inter-layer dependencies. The key innovation is the development of attention-aware Hessian matrices that capture inter-layer interactions within the attention module. Extensive experiments demonstrate that our approach not only outperforms existing weight quantization methods but also shows good synergy with conventional methods to suppress activation outliers, leading to state-of-the-art weight-activation quantization performance. The code will be available at https://github.com/SamsungLabs/BoA.",
+      "identifiers": [
+        "SemanticScholar:c9e77deb53e23e81824b660c092fa303a64d5863"
+      ],
+      "semantic_scholar_id": "c9e77deb53e23e81824b660c092fa303a64d5863",
+      "canonical_id": "arXiv:2406.13474",
+      "arxiv_id": "2406.13474",
+      "doi": "10.48550/arXiv.2406.13474",
+      "authors": [
+        "Junhan Kim",
+        "Ho-Young Kim",
+        "Eulrang Cho",
+        "Chung-Kuei Lee",
+        "Joonyoung Kim",
+        "Yongkweon Jeon"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 841,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Gating is Weighting: Understanding Gated Linear Attention through In-context Learning",
+      "source_url": "https://arxiv.org/abs/2504.04308",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention methods offer a compelling alternative to softmax attention due to their efficiency in recurrent decoding. Recent research has focused on enhancing standard linear attention by incorporating gating while retaining its computational benefits. Such Gated Linear Attention (GLA) architectures include competitive models such as Mamba and RWKV. In this work, we investigate the in-context learning capabilities of the GLA model and make the following contributions. We show that a multilayer GLA can implement a general class of Weighted Preconditioned Gradient Descent (WPGD) algorithms with data-dependent weights. These weights are induced by the gating mechanism and the input, enabling the model to control the contribution of individual tokens to prediction. To further understand the mechanics of this weighting, we introduce a novel data model with multitask prompts and characterize the optimization landscape of learning a WPGD algorithm. Under mild conditions, we establish the existence and uniqueness (up to scaling) of a global minimum, corresponding to a unique WPGD solution. Finally, we translate these findings to explore the optimization landscape of GLA and shed light on how gating facilitates context-aware learning and when it is provably better than vanilla linear attention.",
+      "identifiers": [
+        "SemanticScholar:3ecc9c4df941d08dc396ad4736d4ab0da8f6d7ab"
+      ],
+      "semantic_scholar_id": "3ecc9c4df941d08dc396ad4736d4ab0da8f6d7ab",
+      "canonical_id": "arXiv:2504.04308",
+      "arxiv_id": "2504.04308",
+      "doi": "10.48550/arXiv.2504.04308",
+      "authors": [
+        "Ying-Cong Li",
+        "Davoud Ataee Tarzanagh",
+        "A. Rawat",
+        "Maryam Fazel",
+        "Samet Oymak"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 550,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Training-free Dropout Sampling for Semantic Token Acceptance in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2603.03333",
+      "year": 2026,
+      "published": "2026-02-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference by proposing tokens with a lightweight draft model and selectively accepting them using a target model. This work introduces DropMatch, a novel approach that matches draft tokens to the predictive distribution of the target model via Monte Carlo dropout applied exclusively to the LM head, enabling sampling-based acceptance decisions. By generating multiple decoding paths, our method forms an empirical token distribution against which draft tokens are evaluated for consistency. This acceptance mechanism enables the model to adaptively control the size of decoding paths under an appropriate dropout probability, preventing substantial distortion of the target model predictive distribution. The proposed method operates in a training-free, data-free, and calibration-free manner, requires no architectural modification to pretrained models, and can be orthogonally integrated with a wide range of existing speculative decoding and inference acceleration techniques. Experiments across multiple benchmarks demonstrate that our approach increases acceptance length while maintaining competitive task performance, yielding inference speedups ranging from 1.09x to 1.33x over the standard baseline, and up to an additional 1.09x speedup when applied on top of EAGLE3.",
+      "identifiers": [
+        "SemanticScholar:522a0e9b1726f0946cf235e2b2deb1b55e000b3e"
+      ],
+      "semantic_scholar_id": "522a0e9b1726f0946cf235e2b2deb1b55e000b3e",
+      "canonical_id": "arXiv:2603.03333",
+      "arxiv_id": "2603.03333",
+      "doi": "10.48550/arXiv.2603.03333",
+      "authors": [
+        "Jeongtae Lee",
+        "Minjung Jo",
+        "H. Jeong",
+        "Gunho Park",
+        "Sunghyeon Woo",
+        "Joo-Young Kim",
+        "S. Kwon",
+        "Dongsoo Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 239,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Two-dimensional early exit optimisation of LLM inference",
+      "source_url": "https://arxiv.org/abs/2604.18592",
+      "year": 2026,
+      "published": "2026-03-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce a two-dimensional (2D) early exit strategy that coordinates layer-wise and sentence-wise exiting for classification tasks in large language models. By processing input incrementally sentence-by-sentence while progressively activating deeper layers, our method achieves multiplicative computational savings that exceed those from optimizing either dimension independently. Experimental evaluation across four state-of-the-art LLMs (Llama 3.1, Llama 3.2, Gemma, Qwen; 3B-8B parameters) on three sentiment classification datasets demonstrates additional speed-ups of 1.4--2.3$\\times$ over optimal layer-wise early exit for simpler tasks with vanilla models, with graceful degradation on complex multi-class problems. Fine-tuning reduces but does not eliminate this advantage. The approach is model-agnostic, requires only lightweight classification adapters, and is orthogonal to complementary efficiency methods such as quantization and pruning. Our findings indicate that 2D early exit strategies excel when semantic information accumulates predictably across input structure, suggesting possible applicability to sequence-processing tasks beyond sentiment classification.",
+      "identifiers": [
+        "SemanticScholar:98ddc0792131a211d8d40d507ccc156ab573944a"
+      ],
+      "semantic_scholar_id": "98ddc0792131a211d8d40d507ccc156ab573944a",
+      "canonical_id": "arXiv:2604.18592",
+      "arxiv_id": "2604.18592",
+      "doi": "10.48550/arXiv.2604.18592",
+      "authors": [
+        "Jan Hůla",
+        "D. Adamczyk",
+        "Tomás Filip",
+        "M. Pavlíček",
+        "Petr Sosík"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 195,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Hamiltonian-Inspired Local-Operator Ansatz for Slimming Large Language Models",
+      "source_url": "https://arxiv.org/abs/2605.25344",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dense linear maps carry much of the parameter and computational burden of modern neural networks, yet their dense form leaves the organization of learned couplings implicit. Quantum many-body physics organizes exponentially large operators by writing a global Hamiltonian as a sum of local terms, \\(\\hat H=\\sum_k\\hat h_k\\). Whether the same structural principle can carry learned neural maps is unknown. We introduce Tensor Mixture (MixT), which represents a dense map as a natively executable sum of overlapping local tensor operators without imposing an explicit matrix-rank constraint. The local-term count \\(N_T\\) sets the effective nonlocality and operator complexity, while the number of replaced Transformer blocks \\(N_B\\) extends this structural coordinate across network depth. Tests on Qwen3-8B and LLaMA2-7B reveal a broad recoverable regime followed by an abrupt, model-specific boundary that is remarkably stable against changes in \\(N_T\\). Accuracy and output-distribution statistics reorganize together across the boundary; in LLaMA2-7B, the same depth separates two scaling regimes of inter-layer geometry drift. The directly executed structure also reduces parameters, arithmetic, storage, and memory. These results establish the local-sum structure as a viable organizing principle for learned linear maps at billion-parameter scale and expose a sharp boundary in their tolerance to structural simplification.",
+      "identifiers": [
+        "SemanticScholar:37730136505c94951dfd65f4ccd676b78b8842a9"
+      ],
+      "semantic_scholar_id": "37730136505c94951dfd65f4ccd676b78b8842a9",
+      "canonical_id": "arXiv:2605.25344",
+      "arxiv_id": "2605.25344",
+      "authors": [
+        "Yingjing Lu",
+        "P. Zhou",
+        "Qianru Fang",
+        "Pan Zhang",
+        "Shi-Ju Ran",
+        "Gang Su"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 136,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Read Less, Solve More: Token-Efficient Sparse Reading for AI Agents",
+      "source_url": "https://arxiv.org/abs/2608.22237",
+      "year": 2026,
+      "published": "2026-08-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon agents increasingly rely on repeated access to external artifacts, yet current reading interfaces often expose entire objects even when only sparse evidence is needed. This over-reading increases token and latency costs and can dilute task-relevant evidence, while existing context-reduction methods mainly intervene after broad content has already entered the trajectory. We present SparseRead, a training-free, model-transparent reading layer that controls content admission before unnecessary evidence reaches the model context. SparseRead combines a regime-aware Read Gate, extensible Reader Backends, and a stateful protocol for bounded, source-anchored evidence acquisition with explicit refinement, verification, stopping, and fallback. Across six frontier models, including Claude Opus 5, and five workload scenarios, SparseRead reduces token volume by up to 92.9% and wall time by up to 89.0%, while preserving or improving task quality. Its consistent gains across three agent frameworks further demonstrate broad portability.",
+      "identifiers": [
+        "SemanticScholar:85de89762aa36e70c995c4005d2bd3a121c4c832"
+      ],
+      "semantic_scholar_id": "85de89762aa36e70c995c4005d2bd3a121c4c832",
+      "canonical_id": "arXiv:2608.22237",
+      "arxiv_id": "2608.22237",
+      "authors": [
+        "Ze-Dong Liu",
+        "Jiaan Wu",
+        "Xin-Yang Ma",
+        "Lewei Xu",
+        "Kai Wang",
+        "Yuan-Chao Hu",
+        "Ding-Wen Tao",
+        "Guang-Ming Tan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Accurate Sublayer Pruning for Large Language Models by Exploiting Latency and Tunability Information",
+      "source_url": "https://arxiv.org/abs/2506.03510",
+      "year": 2025,
+      "published": "2025-06-04",
+      "venue": "International Joint Conference on Artificial Intelligence",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "How can we accelerate large language models (LLMs) without sacrificing accuracy? The slow inference speed of LLMs hinders us to benefit from their remarkable performance in diverse applications. This is mainly because numerous sublayers are stacked together in LLMs. Sublayer pruning compresses and expedites LLMs via removing unnecessary sublayers. However, existing sublayer pruning algorithms are limited in accuracy since they naively select sublayers to prune, overlooking the different characteristics of each sublayer.\n\nIn this paper, we propose SPRINT (Sublayer Pruning with Latency and Tunability Information), an accurate sublayer pruning method for LLMs. SPRINT accurately selects a target sublayer to prune by considering 1) the amount of latency reduction after pruning and 2) the tunability of sublayers. SPRINT iteratively prunes redundant sublayers and swiftly tunes the parameters of remaining sublayers. Experiments show that SPRINT achieves the best accuracy-speedup trade-off, exhibiting up to 23.88%p higher accuracy on zero-shot commonsense reasoning benchmarks compared to existing pruning algorithms.",
+      "identifiers": [
+        "SemanticScholar:17f28465a8b9666629d9a72352c2c45e374b29d9"
+      ],
+      "semantic_scholar_id": "17f28465a8b9666629d9a72352c2c45e374b29d9",
+      "canonical_id": "arXiv:2506.03510",
+      "arxiv_id": "2506.03510",
+      "doi": "10.48550/arXiv.2506.03510",
+      "authors": [
+        "Seungcheol Park",
+        "Sojin Lee",
+        "Jongjin Kim",
+        "Jinsik Lee",
+        "Hyunjik Jo",
+        "U. Kang"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 491,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PASER: Post-Training Data Selection for Efficient Pruned Large Language Model Recovery",
+      "source_url": "https://arxiv.org/abs/2502.12594",
+      "year": 2025,
+      "published": "2025-02-18",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Model pruning is an effective approach for compressing large language models (LLMs). However, this process often leads to significant degradation of model capabilities. While post-training techniques such as instruction tuning are commonly employed to recover model performance, existing methods often overlook the uneven deterioration of model capabilities and incur high computational costs. Moreover, some irrelevant instructions may also introduce negative effects to model capacity recovery. To address these challenges, we propose the \\textbf{P}ost-training d\\textbf{A}ta \\textbf{S}election method for \\textbf{E}fficient pruned large language model \\textbf{R}ecovery (\\textbf{PASER}). PASER aims to identify instructions to recover the most compromised model capacities with a certain data budget. Our approach first applies manifold learning and spectral clustering to group recovery instructions in the semantic space, revealing capability-specific instruction sets. Then, the data budget is adaptively allocated across clusters by the degree of corresponding model capability degradation. In each cluster, we prioritize data samples that lead to the most decline of model performance. To mitigate potential negative tuning effects, we also detect and filter out conflicting or irrelevant recovery data. Extensive experiments demonstrate that PASER significantly outperforms conventional baselines, effectively recovering the general capabilities of pruned LLMs while utilizing merely 4\\%-20\\% of the original post-training data. We provide the code repository in \\href{https://github.com/BokwaiHo/PASER}{Link}.",
+      "identifiers": [
+        "SemanticScholar:457dc36422faf1f978129419a6b506a98a9f01d1"
+      ],
+      "semantic_scholar_id": "457dc36422faf1f978129419a6b506a98a9f01d1",
+      "canonical_id": "arXiv:2502.12594",
+      "arxiv_id": "2502.12594",
+      "doi": "10.48550/arXiv.2502.12594",
+      "authors": [
+        "Bowei He",
+        "Lihao Yin",
+        "Hui-Ling Zhen",
+        "Xiao-Kun Zhang",
+        "Ming-Xuan Yuan",
+        "Chen Ma"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 597,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PASS: Pruning Attention Heads with Almost-sure Sparsity Targets",
+      "source_url": "https://www.semanticscholar.org/paper/e673d258703cc317b3714bc7da0d9d9b02ebc146",
+      "year": 2024,
+      "published": null,
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e673d258703cc317b3714bc7da0d9d9b02ebc146"
+      ],
+      "semantic_scholar_id": "e673d258703cc317b3714bc7da0d9d9b02ebc146",
+      "canonical_id": "SemanticScholar:e673d258703cc317b3714bc7da0d9d9b02ebc146",
+      "authors": [
+        "Dujian Ding",
+        "Ganesh Jawahar",
+        "L. Lakshmanan"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 829,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CURing Large Models: Compression via CUR Decomposition",
+      "source_url": "https://arxiv.org/abs/2501.04211",
+      "year": 2025,
+      "published": "2025-01-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large deep learning models have achieved remarkable success but are resource-intensive, posing challenges such as memory usage. We introduce CURing, a novel model compression method based on CUR matrix decomposition, which approximates weight matrices as the product of selected columns (C) and rows (R), and a small linking matrix (U). We apply this decomposition to weights chosen based on the combined influence of their magnitudes and activations. By identifying and retaining informative rows and columns, CURing significantly reduces model size with minimal performance loss. For example, it reduces Llama3.1-8B's parameters to 7.32B (-9%) in just 129 seconds, over 20 times faster than prior compression methods.",
+      "identifiers": [
+        "SemanticScholar:f1c81da6b0f1777594a908589c015e26aa93f935"
+      ],
+      "semantic_scholar_id": "f1c81da6b0f1777594a908589c015e26aa93f935",
+      "canonical_id": "arXiv:2501.04211",
+      "arxiv_id": "2501.04211",
+      "doi": "10.48550/arXiv.2501.04211",
+      "authors": [
+        "Sanghyeon Park",
+        "Soo-Mook Moon"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 638,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CREST: Effectively Compacting a Datastore For Retrieval-Based Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2408.04678",
+      "year": 2024,
+      "published": "2024-08-08",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present CREST (Compact Retrieval-Based Speculative Decoding), a redesign of REST that allows it to be effectively\"compacted\". REST is a drafting technique for speculative decoding based on retrieving exact n-gram matches of the most recent n tokens generated by the target LLM from a datastore. The key idea of CREST is to only store a subset of the smallest and most common n-grams in the datastore with the hope of achieving comparable performance with less storage space. We found that storing a subset of n-grams both reduces storage space and improves performance. CREST matches REST's accepted token length with 10.6-13.5x less storage space and achieves a 16.5-17.1% higher acceptance length than REST using the same storage space on the HumanEval and MT Bench benchmarks.",
+      "identifiers": [
+        "SemanticScholar:2bed1ccec84f4f8b6ae898e4d34541f3c7af96c5"
+      ],
+      "semantic_scholar_id": "2bed1ccec84f4f8b6ae898e4d34541f3c7af96c5",
+      "canonical_id": "arXiv:2408.04678",
+      "arxiv_id": "2408.04678",
+      "doi": "10.48550/arXiv.2408.04678",
+      "authors": [
+        "Sophia Ho",
+        "Jinsol Park",
+        "Patricia Wang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 791,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BAQ: Efficient Bit Allocation Quantization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2506.05664",
+      "year": 2025,
+      "published": "2025-06-06",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training model quantization is a widely adopted technique for reducing the memory and computational costs of large language models (LLMs). However, most existing methods rely on uniform or heuristic bitwidth assignments, failing to account for the nonuniform sensitivity of weights to quantization noise. In this paper, we propose a novel framework for allocating quantization bitwidths based on sensitivity metrics derived from a Hessian proxy. We make key assumptions, which allow the layer/component-wise loss function to be expressed as an explicit function of the bitwidths. This enables a neat formulation of the bit allocation problem as a convex optimization task, whose closed-form solution adapts precision across weights to minimize the layer-wise quantization loss. Inspecting the solution provides several insights (such as the equal-loss structure), which are then exploited to design the proposed \\textbf{BAQ} (Bit Allocation Quantization) algorithm. The proposed algorithm achieves a good trade-off between loss minimization and complexity and allows BAQ to be integrated into standard quantization pipelines with minimal overhead. Experimental results show that BAQ consistently outperforms GPTQ, achieving up to 56$\\times$ lower perplexity at the same bitwidth on large language models ranging from 125M to 30B parameters. Leveraging our analytical results derived from solving the optimal bit allocation problem, we also provide a theoretical explanation for the observed gains. All codes of this paper are available at https://github.com/CSU-ModelCompression/BAQ.",
+      "identifiers": [
+        "SemanticScholar:8241c6c3207376185e08886eaa91dc525d3a1fbe"
+      ],
+      "semantic_scholar_id": "8241c6c3207376185e08886eaa91dc525d3a1fbe",
+      "canonical_id": "arXiv:2506.05664",
+      "arxiv_id": "2506.05664",
+      "doi": "10.48550/arXiv.2506.05664",
+      "authors": [
+        "Chao Zhang",
+        "Li Wang",
+        "S. Lasaulce",
+        "M. Debbah"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 489,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.18426",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.18426",
+        "id:SemanticScholar:2916d16f178825381c0e92c70176e1bc8d680390",
+        "id:arXiv:2603.18426",
+        "title:prunethenquantize or quantizethenprune understanding the impact of compression order in joint model compression",
+        "url:https://arxiv.org/abs/2603.18426"
+      ],
+      "record": {
+        "title": "Prune-then-Quantize or Quantize-then-Prune? Understanding the Impact of Compression Order in Joint Model Compression",
+        "source_url": "https://arxiv.org/abs/2603.18426",
+        "year": 2026,
+        "published": "2026-03-19",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "What happens when multiple compression methods are combined-does the order in which they are applied matter? Joint model compression has emerged as a powerful strategy to achieve higher efficiency by combining multiple methods such as pruning and quantization. A central but underexplored factor in joint model compression is the compression order, or the sequence of different methods within the compression pipeline. Most prior studies have either sidestepped the issue by assuming orthogonality between techniques, while a few have examined them only in highly constrained cases. Consequently, the broader role of compression order in shaping model performance remains poorly understood. In this paper, we address the overlooked problem of compression order and provide both theoretical and empirical analysis. We formulate the problem of optimizing the compression order and introduce the Progressive Intensity Hypothesis, which states that weaker perturbations should precede stronger ones. We provide theoretical guarantees showing that the relative benefit of one order increases with the underlying performance gap. Extensive experiments on both language and vision models validate the hypothesis, and further show its generality to broader setups such as multi-stage compression and mixed-precision quantization.",
+        "identifiers": [
+          "SemanticScholar:2916d16f178825381c0e92c70176e1bc8d680390"
+        ],
+        "semantic_scholar_id": "2916d16f178825381c0e92c70176e1bc8d680390",
+        "canonical_id": "arXiv:2603.18426",
+        "arxiv_id": "2603.18426",
+        "doi": "10.48550/arXiv.2603.18426",
+        "authors": [
+          "Minjun Kim",
+          "Jaehyeon Choi",
+          "H. Yang",
+          "Jongjin Kim",
+          "Jinho Song",
+          "U. Kang"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 203,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.00919",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.00919",
+        "id:SemanticScholar:677e49df983cd212ba26d75086df6ad029f7968b",
+        "id:arXiv:2601.00919",
+        "title:attention needs to focus a unified perspective on attention allocation",
+        "url:https://arxiv.org/abs/2601.00919"
+      ],
+      "record": {
+        "title": "Attention Needs to Focus: A Unified Perspective on Attention Allocation",
+        "source_url": "https://arxiv.org/abs/2601.00919",
+        "year": 2026,
+        "published": "2026-01-01",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Transformer architecture, a cornerstone of modern Large Language Models (LLMs), has achieved extraordinary success in sequence modeling, primarily due to its attention mechanism. However, despite its power, the standard attention mechanism is plagued by well-documented issues: representational collapse and attention sink. Although prior work has proposed approaches for these issues, they are often studied in isolation, obscuring their deeper connection. In this paper, we present a unified perspective, arguing that both can be traced to a common root -- improper attention allocation. We identify two failure modes: 1) Attention Overload, where tokens receive comparable high weights, blurring semantic features that lead to representational collapse; 2) Attention Underload, where no token is semantically relevant, yet attention is still forced to distribute, resulting in spurious focus such as attention sink. Building on this insight, we introduce Lazy Attention, a novel mechanism designed for a more focused attention distribution. To mitigate overload, it employs positional discrimination across both heads and dimensions to sharpen token distinctions. To counteract underload, it incorporates Elastic-Softmax, a modified normalization function that relaxes the standard softmax constraint to suppress attention on irrelevant tokens. Experiments on the FineWeb-Edu corpus, evaluated across nine diverse benchmarks, demonstrate that Lazy Attention successfully mitigates attention sink and achieves competitive performance compared to both standard attention and modern architectures, while reaching up to 59.58% attention sparsity.",
+        "identifiers": [
+          "SemanticScholar:677e49df983cd212ba26d75086df6ad029f7968b"
+        ],
+        "semantic_scholar_id": "677e49df983cd212ba26d75086df6ad029f7968b",
+        "canonical_id": "arXiv:2601.00919",
+        "arxiv_id": "2601.00919",
+        "doi": "10.48550/arXiv.2601.00919",
+        "authors": [
+          "Zi-Chuan Fu",
+          "Wentao Song",
+          "Guo-Jing Li",
+          "Yejing Wang",
+          "Xian Wu",
+          "Yimin Deng",
+          "Hanyu Yan",
+          "Yefeng Zheng",
+          "Xiang-Yu Zhao"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 280,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.18868",
+      "identity_tokens": [
+        "id:SemanticScholar:1f411fe8db82ee468d8eedf0737a0d4b41fb11fa",
+        "id:arXiv:2511.18868",
+        "title:kernelband steering llmbased kernel optimization via hardwareaware multiarmed bandits",
+        "url:https://arxiv.org/abs/2511.18868"
+      ],
+      "record": {
+        "title": "KernelBand: Steering LLM-based Kernel Optimization via Hardware-Aware Multi-Armed Bandits",
+        "source_url": "https://arxiv.org/abs/2511.18868",
+        "year": 2025,
+        "published": "2025-11-24",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "High-performance GPU kernels are critical for efficient LLM serving, yet their optimization remains a bottleneck requiring deep system expertise. While code LLMs show promise in generating functionally correct code, kernel optimization is intrinsically a search problem over a vast optimization space. The fundamental mismatch prevents existing LLM agents from efficiently exploring the optimization space for diverse hardware and compute patterns. To bridge the gap, we present KernelBand, a framework that formulates kernel optimization as a Multi-Armed Bandit (MAB) problem, explicitly balancing exploration and exploitation to unlock the potential of code LLMs. To navigate the infinite arm space of optimization strategies applied to candidate kernels, we design two key mechanisms: a hardware-aware pruning strategy via profiling bounds and a trace-driven clustering algorithm that leverages Lipschitz continuity. Theoretically, we prove that KernelBand reduces the regret bound to depend on the compact covering number of runtime clusters, ensuring sample-efficient discovery of high-performance kernels. Extensive experiments on TritonBench-G with three GPU architectures and four code LLMs show that KernelBand consistently and substantially outperforms state-of-the-art methods with over 33% average improvement.",
+        "identifiers": [
+          "SemanticScholar:1f411fe8db82ee468d8eedf0737a0d4b41fb11fa"
+        ],
+        "semantic_scholar_id": "1f411fe8db82ee468d8eedf0737a0d4b41fb11fa",
+        "canonical_id": "arXiv:2511.18868",
+        "arxiv_id": "2511.18868",
+        "authors": [
+          "De-Zhi Ran",
+          "Shu-Xiao Xie",
+          "Mingfang Ji",
+          "Anmin Liu",
+          "Meng-Zhou Wu",
+          "Yuan Cao",
+          "Yu-Zhe Guo",
+          "Hao Yu",
+          "Lin-Yi Li",
+          "Yi-Tao Hu",
+          "Wei Yang",
+          "Tao Xie"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 318,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.11690",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.11690",
+        "id:SemanticScholar:8ca0c343e86cb77b539a58dffb019bb4bc40ab41",
+        "id:arXiv:2606.11690",
+        "title:beyond pertoken pricing a concurrencyaware methodology for llm infrastructure cost estimation",
+        "url:https://arxiv.org/abs/2606.11690"
+      ],
+      "record": {
+        "title": "Beyond Per-Token Pricing: A Concurrency-Aware Methodology for LLM Infrastructure Cost Estimation",
+        "source_url": "https://arxiv.org/abs/2606.11690",
+        "year": 2026,
+        "published": "2026-06-10",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Every public LLM cost calculator we surveyed treats GPU utilization as a fixed input -- entered by the user, baked in as a preset, or silently assumed at 100% -- never measured against the operator's actual load. We show that this assumption is the dominant source of error: on identical H100 hardware, effective cost spans \\$0.21 to \\$15.25 per million output tokens, an underutilization penalty of 2.5-24x across low-to-moderate enterprise loads (1-10 rps) and up to 36.3x near idle -- driven by one operator-controlled variable, offered request rate lambda, which sets in-flight concurrency via Little's Law and which no open-source calculator exposes. Because calculators take utilization as a user-supplied input, any utilization-naive estimate understates true cost by exactly 1/U, systematically mispricing self-hosting -- most severely over-selling it for low-traffic workloads. We propose a measurement methodology that parameterizes the relationship as C_eff = f(H, M, Q, lambda, L), validate it with 42 benchmarks across dense, ultra-sparse MoE, and sparse MoE models, and release vllm-cost-meter, an open-source cost meter that attaches to a live vLLM server and reports real \\$/M-tokens against the operator's own traffic. We further show that FP8 quantization benefits the MoE architectures we tested roughly 2.2-2.4x more than the dense model (+69 to +74% vs. +31% peak throughput; n=3, broader validation needed), and our data are consistent with active parameter count, not total model size, being a primary predictor of saturation economics. To rule out single-hardware confounding we repeat the core sweep on A100 80GB PCIe (56 runs): the load-driven spread reproduces at 7.0-11.4x, the active-parameters ordering survives at FP8, and the dense-FP8 advantage inverts on silicon without native FP8 tensor cores -- a hardware-conditional caveat the framework already accommodates.",
+        "identifiers": [
+          "SemanticScholar:8ca0c343e86cb77b539a58dffb019bb4bc40ab41"
+        ],
+        "semantic_scholar_id": "8ca0c343e86cb77b539a58dffb019bb4bc40ab41",
+        "canonical_id": "arXiv:2606.11690",
+        "arxiv_id": "2606.11690",
+        "doi": "10.48550/arXiv.2606.11690",
+        "authors": [
+          "Chitral Patil"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 120,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.21096",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.21096",
+        "id:SemanticScholar:768d45e915c3de59ea780d61c9612ba4aa106635",
+        "id:arXiv:2603.21096",
+        "title:mixture of chapters scaling learnt memory in transformers",
+        "url:https://arxiv.org/abs/2603.21096"
+      ],
+      "record": {
+        "title": "Mixture of Chapters: Scaling Learnt Memory in Transformers",
+        "source_url": "https://arxiv.org/abs/2603.21096",
+        "year": 2026,
+        "published": "2026-03-22",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers lack an explicit architectural mechanism for storing and organizing knowledge acquired during training. We introduce learnable sparse memory banks: a set of latent tokens, randomly initialized and trained end-to-end, that transformer layers query via cross-attention to retrieve stored knowledge. To scale memory capacity without prohibitive attention costs, we propose chapter-based routing inspired by Mixture-of-Experts architectures, partitioning the memory bank into chapters and training a router to select relevant subsets per input. This enables scaling to 262K memory tokens while maintaining tractable computation. We evaluate our approach against standard transformers (in iso-FLOP settings) on pre-training and instruction fine-tuning across relevant benchmarks. Our models surpass iso-FLOP baselines suggesting scope for a new axis of scaling, demonstrating that explicit associative memory provides complementary capacity to what is captured implicitly in model parameters. Additionally, we observe improved knowledge retention under continued training, with robustness to forgetting when transitioning between training phases (e.g., pretraining to instruction fine-tuning).",
+        "identifiers": [
+          "SemanticScholar:768d45e915c3de59ea780d61c9612ba4aa106635"
+        ],
+        "semantic_scholar_id": "768d45e915c3de59ea780d61c9612ba4aa106635",
+        "canonical_id": "arXiv:2603.21096",
+        "arxiv_id": "2603.21096",
+        "doi": "10.48550/arXiv.2603.21096",
+        "authors": [
+          "Tasmay Pankaj Tibrewal",
+          "Pritish Saha",
+          "Ankit Meda",
+          "Kunal Singh",
+          "Pradeep Moturi"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 200,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.12215",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.12215",
+        "id:SemanticScholar:fb8891088089924708d1a8d094baceef278cd9bb",
+        "id:arXiv:2505.12215",
+        "title:gmsa enhancing context compression via group merging and layer semantic alignment",
+        "url:https://arxiv.org/abs/2505.12215"
+      ],
+      "record": {
+        "title": "GMSA: Enhancing Context Compression via Group Merging and Layer Semantic Alignment",
+        "source_url": "https://arxiv.org/abs/2505.12215",
+        "year": 2025,
+        "published": "2025-05-18",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 26,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have achieved remarkable performance across a wide range of Natural Language Processing (NLP) tasks. However, in long-context scenarios, they face two challenges: high computational cost and information redundancy. To address these challenges, we propose GMSA, an encoder-decoder context compression framework that generates a compact sequence of soft tokens for downstream tasks. GMSA introduces Group Merging to achieve more uniform aggregation, mitigating semantic dominance during autoencoder pretraining, and Layer Semantic Alignment (LSA) to bridge the semantic gap between high-level abstract semantics and low-level input semantics. We first pretrain GMSA as an autoencoder and then fine-tune it for downstream tasks. Experiments demonstrate that GMSA improves context reconstruction compared to existing soft prompt compression paradigm and outperforms baselines on multiple long-context question answering and summarization benchmarks across two backbone models, while maintaining low end-to-end latency.",
+        "identifiers": [
+          "SemanticScholar:fb8891088089924708d1a8d094baceef278cd9bb"
+        ],
+        "semantic_scholar_id": "fb8891088089924708d1a8d094baceef278cd9bb",
+        "canonical_id": "arXiv:2505.12215",
+        "arxiv_id": "2505.12215",
+        "doi": "10.48550/arXiv.2505.12215",
+        "authors": [
+          "Jiwei Tang",
+          "Zhicheng Zhang",
+          "Shun-Long Wu",
+          "Jingheng Ye",
+          "Lichen Bai",
+          "Zitai Wang",
+          "Tingwei Lu",
+          "Jia-Qi Chen",
+          "Hai Lin",
+          "Hai-Tao Zheng",
+          "Hong-Gee Kim"
+        ],
+        "priority": 36,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 26,
+          "citation_count": 26,
+          "total": 36,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 508,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.13474",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2406.13474",
+        "id:SemanticScholar:c9e77deb53e23e81824b660c092fa303a64d5863",
+        "id:arXiv:2406.13474",
+        "title:attentionaware posttraining quantization without backpropagation",
+        "url:https://arxiv.org/abs/2406.13474"
+      ],
+      "record": {
+        "title": "Attention-aware Post-training Quantization without Backpropagation",
+        "source_url": "https://arxiv.org/abs/2406.13474",
+        "year": 2024,
+        "published": "2024-06-19",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) is a promising solution for deploying large language models (LLMs) on resource-constrained devices. Early methods developed for small-scale networks, such as ResNet, rely on gradient-based optimization, which becomes impractical for hyper-scale LLMs with billions of parameters. While recently proposed backpropagation-free or transformation-based methods alleviate this issue, they ignore inter-layer interactions or use the naive nearest-rounding-based quantized weight assignment to save the heavy computational cost of weight optimization. In this paper, we introduce a novel backpropagation-free PTQ algorithm that optimizes quantized weights by considering inter-layer dependencies. The key innovation is the development of attention-aware Hessian matrices that capture inter-layer interactions within the attention module. Extensive experiments demonstrate that our approach not only outperforms existing weight quantization methods but also shows good synergy with conventional methods to suppress activation outliers, leading to state-of-the-art weight-activation quantization performance. The code will be available at https://github.com/SamsungLabs/BoA.",
+        "identifiers": [
+          "SemanticScholar:c9e77deb53e23e81824b660c092fa303a64d5863"
+        ],
+        "semantic_scholar_id": "c9e77deb53e23e81824b660c092fa303a64d5863",
+        "canonical_id": "arXiv:2406.13474",
+        "arxiv_id": "2406.13474",
+        "doi": "10.48550/arXiv.2406.13474",
+        "authors": [
+          "Junhan Kim",
+          "Ho-Young Kim",
+          "Eulrang Cho",
+          "Chung-Kuei Lee",
+          "Joonyoung Kim",
+          "Yongkweon Jeon"
+        ],
+        "priority": 25,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 25,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 841,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.04308",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.04308",
+        "id:SemanticScholar:3ecc9c4df941d08dc396ad4736d4ab0da8f6d7ab",
+        "id:arXiv:2504.04308",
+        "title:gating is weighting understanding gated linear attention through incontext learning",
+        "url:https://arxiv.org/abs/2504.04308"
+      ],
+      "record": {
+        "title": "Gating is Weighting: Understanding Gated Linear Attention through In-context Learning",
+        "source_url": "https://arxiv.org/abs/2504.04308",
+        "year": 2025,
+        "published": "2025-04-06",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention methods offer a compelling alternative to softmax attention due to their efficiency in recurrent decoding. Recent research has focused on enhancing standard linear attention by incorporating gating while retaining its computational benefits. Such Gated Linear Attention (GLA) architectures include competitive models such as Mamba and RWKV. In this work, we investigate the in-context learning capabilities of the GLA model and make the following contributions. We show that a multilayer GLA can implement a general class of Weighted Preconditioned Gradient Descent (WPGD) algorithms with data-dependent weights. These weights are induced by the gating mechanism and the input, enabling the model to control the contribution of individual tokens to prediction. To further understand the mechanics of this weighting, we introduce a novel data model with multitask prompts and characterize the optimization landscape of learning a WPGD algorithm. Under mild conditions, we establish the existence and uniqueness (up to scaling) of a global minimum, corresponding to a unique WPGD solution. Finally, we translate these findings to explore the optimization landscape of GLA and shed light on how gating facilitates context-aware learning and when it is provably better than vanilla linear attention.",
+        "identifiers": [
+          "SemanticScholar:3ecc9c4df941d08dc396ad4736d4ab0da8f6d7ab"
+        ],
+        "semantic_scholar_id": "3ecc9c4df941d08dc396ad4736d4ab0da8f6d7ab",
+        "canonical_id": "arXiv:2504.04308",
+        "arxiv_id": "2504.04308",
+        "doi": "10.48550/arXiv.2504.04308",
+        "authors": [
+          "Ying-Cong Li",
+          "Davoud Ataee Tarzanagh",
+          "A. Rawat",
+          "Maryam Fazel",
+          "Samet Oymak"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 550,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.03333",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.03333",
+        "id:SemanticScholar:522a0e9b1726f0946cf235e2b2deb1b55e000b3e",
+        "id:arXiv:2603.03333",
+        "title:trainingfree dropout sampling for semantic token acceptance in speculative decoding",
+        "url:https://arxiv.org/abs/2603.03333"
+      ],
+      "record": {
+        "title": "Training-free Dropout Sampling for Semantic Token Acceptance in Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2603.03333",
+        "year": 2026,
+        "published": "2026-02-11",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model inference by proposing tokens with a lightweight draft model and selectively accepting them using a target model. This work introduces DropMatch, a novel approach that matches draft tokens to the predictive distribution of the target model via Monte Carlo dropout applied exclusively to the LM head, enabling sampling-based acceptance decisions. By generating multiple decoding paths, our method forms an empirical token distribution against which draft tokens are evaluated for consistency. This acceptance mechanism enables the model to adaptively control the size of decoding paths under an appropriate dropout probability, preventing substantial distortion of the target model predictive distribution. The proposed method operates in a training-free, data-free, and calibration-free manner, requires no architectural modification to pretrained models, and can be orthogonally integrated with a wide range of existing speculative decoding and inference acceleration techniques. Experiments across multiple benchmarks demonstrate that our approach increases acceptance length while maintaining competitive task performance, yielding inference speedups ranging from 1.09x to 1.33x over the standard baseline, and up to an additional 1.09x speedup when applied on top of EAGLE3.",
+        "identifiers": [
+          "SemanticScholar:522a0e9b1726f0946cf235e2b2deb1b55e000b3e"
+        ],
+        "semantic_scholar_id": "522a0e9b1726f0946cf235e2b2deb1b55e000b3e",
+        "canonical_id": "arXiv:2603.03333",
+        "arxiv_id": "2603.03333",
+        "doi": "10.48550/arXiv.2603.03333",
+        "authors": [
+          "Jeongtae Lee",
+          "Minjung Jo",
+          "H. Jeong",
+          "Gunho Park",
+          "Sunghyeon Woo",
+          "Joo-Young Kim",
+          "S. Kwon",
+          "Dongsoo Lee"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 239,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.18592",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.18592",
+        "id:SemanticScholar:98ddc0792131a211d8d40d507ccc156ab573944a",
+        "id:arXiv:2604.18592",
+        "title:twodimensional early exit optimisation of llm inference",
+        "url:https://arxiv.org/abs/2604.18592"
+      ],
+      "record": {
+        "title": "Two-dimensional early exit optimisation of LLM inference",
+        "source_url": "https://arxiv.org/abs/2604.18592",
+        "year": 2026,
+        "published": "2026-03-27",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce a two-dimensional (2D) early exit strategy that coordinates layer-wise and sentence-wise exiting for classification tasks in large language models. By processing input incrementally sentence-by-sentence while progressively activating deeper layers, our method achieves multiplicative computational savings that exceed those from optimizing either dimension independently. Experimental evaluation across four state-of-the-art LLMs (Llama 3.1, Llama 3.2, Gemma, Qwen; 3B-8B parameters) on three sentiment classification datasets demonstrates additional speed-ups of 1.4--2.3$\\times$ over optimal layer-wise early exit for simpler tasks with vanilla models, with graceful degradation on complex multi-class problems. Fine-tuning reduces but does not eliminate this advantage. The approach is model-agnostic, requires only lightweight classification adapters, and is orthogonal to complementary efficiency methods such as quantization and pruning. Our findings indicate that 2D early exit strategies excel when semantic information accumulates predictably across input structure, suggesting possible applicability to sequence-processing tasks beyond sentiment classification.",
+        "identifiers": [
+          "SemanticScholar:98ddc0792131a211d8d40d507ccc156ab573944a"
+        ],
+        "semantic_scholar_id": "98ddc0792131a211d8d40d507ccc156ab573944a",
+        "canonical_id": "arXiv:2604.18592",
+        "arxiv_id": "2604.18592",
+        "doi": "10.48550/arXiv.2604.18592",
+        "authors": [
+          "Jan Hůla",
+          "D. Adamczyk",
+          "Tomás Filip",
+          "M. Pavlíček",
+          "Petr Sosík"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 195,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.25344",
+      "identity_tokens": [
+        "id:SemanticScholar:37730136505c94951dfd65f4ccd676b78b8842a9",
+        "id:arXiv:2605.25344",
+        "title:a hamiltonianinspired localoperator ansatz for slimming large language models",
+        "url:https://arxiv.org/abs/2605.25344"
+      ],
+      "record": {
+        "title": "A Hamiltonian-Inspired Local-Operator Ansatz for Slimming Large Language Models",
+        "source_url": "https://arxiv.org/abs/2605.25344",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Dense linear maps carry much of the parameter and computational burden of modern neural networks, yet their dense form leaves the organization of learned couplings implicit. Quantum many-body physics organizes exponentially large operators by writing a global Hamiltonian as a sum of local terms, \\(\\hat H=\\sum_k\\hat h_k\\). Whether the same structural principle can carry learned neural maps is unknown. We introduce Tensor Mixture (MixT), which represents a dense map as a natively executable sum of overlapping local tensor operators without imposing an explicit matrix-rank constraint. The local-term count \\(N_T\\) sets the effective nonlocality and operator complexity, while the number of replaced Transformer blocks \\(N_B\\) extends this structural coordinate across network depth. Tests on Qwen3-8B and LLaMA2-7B reveal a broad recoverable regime followed by an abrupt, model-specific boundary that is remarkably stable against changes in \\(N_T\\). Accuracy and output-distribution statistics reorganize together across the boundary; in LLaMA2-7B, the same depth separates two scaling regimes of inter-layer geometry drift. The directly executed structure also reduces parameters, arithmetic, storage, and memory. These results establish the local-sum structure as a viable organizing principle for learned linear maps at billion-parameter scale and expose a sharp boundary in their tolerance to structural simplification.",
+        "identifiers": [
+          "SemanticScholar:37730136505c94951dfd65f4ccd676b78b8842a9"
+        ],
+        "semantic_scholar_id": "37730136505c94951dfd65f4ccd676b78b8842a9",
+        "canonical_id": "arXiv:2605.25344",
+        "arxiv_id": "2605.25344",
+        "authors": [
+          "Yingjing Lu",
+          "P. Zhou",
+          "Qianru Fang",
+          "Pan Zhang",
+          "Shi-Ju Ran",
+          "Gang Su"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 136,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.22237",
+      "identity_tokens": [
+        "id:SemanticScholar:85de89762aa36e70c995c4005d2bd3a121c4c832",
+        "id:arXiv:2608.22237",
+        "title:read less solve more tokenefficient sparse reading for ai agents",
+        "url:https://arxiv.org/abs/2608.22237"
+      ],
+      "record": {
+        "title": "Read Less, Solve More: Token-Efficient Sparse Reading for AI Agents",
+        "source_url": "https://arxiv.org/abs/2608.22237",
+        "year": 2026,
+        "published": "2026-08-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-horizon agents increasingly rely on repeated access to external artifacts, yet current reading interfaces often expose entire objects even when only sparse evidence is needed. This over-reading increases token and latency costs and can dilute task-relevant evidence, while existing context-reduction methods mainly intervene after broad content has already entered the trajectory. We present SparseRead, a training-free, model-transparent reading layer that controls content admission before unnecessary evidence reaches the model context. SparseRead combines a regime-aware Read Gate, extensible Reader Backends, and a stateful protocol for bounded, source-anchored evidence acquisition with explicit refinement, verification, stopping, and fallback. Across six frontier models, including Claude Opus 5, and five workload scenarios, SparseRead reduces token volume by up to 92.9% and wall time by up to 89.0%, while preserving or improving task quality. Its consistent gains across three agent frameworks further demonstrate broad portability.",
+        "identifiers": [
+          "SemanticScholar:85de89762aa36e70c995c4005d2bd3a121c4c832"
+        ],
+        "semantic_scholar_id": "85de89762aa36e70c995c4005d2bd3a121c4c832",
+        "canonical_id": "arXiv:2608.22237",
+        "arxiv_id": "2608.22237",
+        "authors": [
+          "Ze-Dong Liu",
+          "Jiaan Wu",
+          "Xin-Yang Ma",
+          "Lewei Xu",
+          "Kai Wang",
+          "Yuan-Chao Hu",
+          "Ding-Wen Tao",
+          "Guang-Ming Tan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.03510",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.03510",
+        "id:SemanticScholar:17f28465a8b9666629d9a72352c2c45e374b29d9",
+        "id:arXiv:2506.03510",
+        "title:accurate sublayer pruning for large language models by exploiting latency and tunability information",
+        "url:https://arxiv.org/abs/2506.03510"
+      ],
+      "record": {
+        "title": "Accurate Sublayer Pruning for Large Language Models by Exploiting Latency and Tunability Information",
+        "source_url": "https://arxiv.org/abs/2506.03510",
+        "year": 2025,
+        "published": "2025-06-04",
+        "venue": "International Joint Conference on Artificial Intelligence",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "How can we accelerate large language models (LLMs) without sacrificing accuracy? The slow inference speed of LLMs hinders us to benefit from their remarkable performance in diverse applications. This is mainly because numerous sublayers are stacked together in LLMs. Sublayer pruning compresses and expedites LLMs via removing unnecessary sublayers. However, existing sublayer pruning algorithms are limited in accuracy since they naively select sublayers to prune, overlooking the different characteristics of each sublayer.\n\nIn this paper, we propose SPRINT (Sublayer Pruning with Latency and Tunability Information), an accurate sublayer pruning method for LLMs. SPRINT accurately selects a target sublayer to prune by considering 1) the amount of latency reduction after pruning and 2) the tunability of sublayers. SPRINT iteratively prunes redundant sublayers and swiftly tunes the parameters of remaining sublayers. Experiments show that SPRINT achieves the best accuracy-speedup trade-off, exhibiting up to 23.88%p higher accuracy on zero-shot commonsense reasoning benchmarks compared to existing pruning algorithms.",
+        "identifiers": [
+          "SemanticScholar:17f28465a8b9666629d9a72352c2c45e374b29d9"
+        ],
+        "semantic_scholar_id": "17f28465a8b9666629d9a72352c2c45e374b29d9",
+        "canonical_id": "arXiv:2506.03510",
+        "arxiv_id": "2506.03510",
+        "doi": "10.48550/arXiv.2506.03510",
+        "authors": [
+          "Seungcheol Park",
+          "Sojin Lee",
+          "Jongjin Kim",
+          "Jinsik Lee",
+          "Hyunjik Jo",
+          "U. Kang"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 491,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.12594",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.12594",
+        "id:SemanticScholar:457dc36422faf1f978129419a6b506a98a9f01d1",
+        "id:arXiv:2502.12594",
+        "title:paser posttraining data selection for efficient pruned large language model recovery",
+        "url:https://arxiv.org/abs/2502.12594"
+      ],
+      "record": {
+        "title": "PASER: Post-Training Data Selection for Efficient Pruned Large Language Model Recovery",
+        "source_url": "https://arxiv.org/abs/2502.12594",
+        "year": 2025,
+        "published": "2025-02-18",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Model pruning is an effective approach for compressing large language models (LLMs). However, this process often leads to significant degradation of model capabilities. While post-training techniques such as instruction tuning are commonly employed to recover model performance, existing methods often overlook the uneven deterioration of model capabilities and incur high computational costs. Moreover, some irrelevant instructions may also introduce negative effects to model capacity recovery. To address these challenges, we propose the \\textbf{P}ost-training d\\textbf{A}ta \\textbf{S}election method for \\textbf{E}fficient pruned large language model \\textbf{R}ecovery (\\textbf{PASER}). PASER aims to identify instructions to recover the most compromised model capacities with a certain data budget. Our approach first applies manifold learning and spectral clustering to group recovery instructions in the semantic space, revealing capability-specific instruction sets. Then, the data budget is adaptively allocated across clusters by the degree of corresponding model capability degradation. In each cluster, we prioritize data samples that lead to the most decline of model performance. To mitigate potential negative tuning effects, we also detect and filter out conflicting or irrelevant recovery data. Extensive experiments demonstrate that PASER significantly outperforms conventional baselines, effectively recovering the general capabilities of pruned LLMs while utilizing merely 4\\%-20\\% of the original post-training data. We provide the code repository in \\href{https://github.com/BokwaiHo/PASER}{Link}.",
+        "identifiers": [
+          "SemanticScholar:457dc36422faf1f978129419a6b506a98a9f01d1"
+        ],
+        "semantic_scholar_id": "457dc36422faf1f978129419a6b506a98a9f01d1",
+        "canonical_id": "arXiv:2502.12594",
+        "arxiv_id": "2502.12594",
+        "doi": "10.48550/arXiv.2502.12594",
+        "authors": [
+          "Bowei He",
+          "Lihao Yin",
+          "Hui-Ling Zhen",
+          "Xiao-Kun Zhang",
+          "Ming-Xuan Yuan",
+          "Chen Ma"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 597,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:e673d258703cc317b3714bc7da0d9d9b02ebc146",
+      "identity_tokens": [
+        "id:SemanticScholar:e673d258703cc317b3714bc7da0d9d9b02ebc146",
+        "title:pass pruning attention heads with almostsure sparsity targets",
+        "url:https://www.semanticscholar.org/paper/e673d258703cc317b3714bc7da0d9d9b02ebc146"
+      ],
+      "record": {
+        "title": "PASS: Pruning Attention Heads with Almost-sure Sparsity Targets",
+        "source_url": "https://www.semanticscholar.org/paper/e673d258703cc317b3714bc7da0d9d9b02ebc146",
+        "year": 2024,
+        "published": null,
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:e673d258703cc317b3714bc7da0d9d9b02ebc146"
+        ],
+        "semantic_scholar_id": "e673d258703cc317b3714bc7da0d9d9b02ebc146",
+        "canonical_id": "SemanticScholar:e673d258703cc317b3714bc7da0d9d9b02ebc146",
+        "authors": [
+          "Dujian Ding",
+          "Ganesh Jawahar",
+          "L. Lakshmanan"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 829,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.04211",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.04211",
+        "id:SemanticScholar:f1c81da6b0f1777594a908589c015e26aa93f935",
+        "id:arXiv:2501.04211",
+        "title:curing large models compression via cur decomposition",
+        "url:https://arxiv.org/abs/2501.04211"
+      ],
+      "record": {
+        "title": "CURing Large Models: Compression via CUR Decomposition",
+        "source_url": "https://arxiv.org/abs/2501.04211",
+        "year": 2025,
+        "published": "2025-01-08",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large deep learning models have achieved remarkable success but are resource-intensive, posing challenges such as memory usage. We introduce CURing, a novel model compression method based on CUR matrix decomposition, which approximates weight matrices as the product of selected columns (C) and rows (R), and a small linking matrix (U). We apply this decomposition to weights chosen based on the combined influence of their magnitudes and activations. By identifying and retaining informative rows and columns, CURing significantly reduces model size with minimal performance loss. For example, it reduces Llama3.1-8B's parameters to 7.32B (-9%) in just 129 seconds, over 20 times faster than prior compression methods.",
+        "identifiers": [
+          "SemanticScholar:f1c81da6b0f1777594a908589c015e26aa93f935"
+        ],
+        "semantic_scholar_id": "f1c81da6b0f1777594a908589c015e26aa93f935",
+        "canonical_id": "arXiv:2501.04211",
+        "arxiv_id": "2501.04211",
+        "doi": "10.48550/arXiv.2501.04211",
+        "authors": [
+          "Sanghyeon Park",
+          "Soo-Mook Moon"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 638,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.04678",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.04678",
+        "id:SemanticScholar:2bed1ccec84f4f8b6ae898e4d34541f3c7af96c5",
+        "id:arXiv:2408.04678",
+        "title:crest effectively compacting a datastore for retrievalbased speculative decoding",
+        "url:https://arxiv.org/abs/2408.04678"
+      ],
+      "record": {
+        "title": "CREST: Effectively Compacting a Datastore For Retrieval-Based Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2408.04678",
+        "year": 2024,
+        "published": "2024-08-08",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present CREST (Compact Retrieval-Based Speculative Decoding), a redesign of REST that allows it to be effectively\"compacted\". REST is a drafting technique for speculative decoding based on retrieving exact n-gram matches of the most recent n tokens generated by the target LLM from a datastore. The key idea of CREST is to only store a subset of the smallest and most common n-grams in the datastore with the hope of achieving comparable performance with less storage space. We found that storing a subset of n-grams both reduces storage space and improves performance. CREST matches REST's accepted token length with 10.6-13.5x less storage space and achieves a 16.5-17.1% higher acceptance length than REST using the same storage space on the HumanEval and MT Bench benchmarks.",
+        "identifiers": [
+          "SemanticScholar:2bed1ccec84f4f8b6ae898e4d34541f3c7af96c5"
+        ],
+        "semantic_scholar_id": "2bed1ccec84f4f8b6ae898e4d34541f3c7af96c5",
+        "canonical_id": "arXiv:2408.04678",
+        "arxiv_id": "2408.04678",
+        "doi": "10.48550/arXiv.2408.04678",
+        "authors": [
+          "Sophia Ho",
+          "Jinsol Park",
+          "Patricia Wang"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 791,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.05664",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.05664",
+        "id:SemanticScholar:8241c6c3207376185e08886eaa91dc525d3a1fbe",
+        "id:arXiv:2506.05664",
+        "title:baq efficient bit allocation quantization for large language models",
+        "url:https://arxiv.org/abs/2506.05664"
+      ],
+      "record": {
+        "title": "BAQ: Efficient Bit Allocation Quantization for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2506.05664",
+        "year": 2025,
+        "published": "2025-06-06",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training model quantization is a widely adopted technique for reducing the memory and computational costs of large language models (LLMs). However, most existing methods rely on uniform or heuristic bitwidth assignments, failing to account for the nonuniform sensitivity of weights to quantization noise. In this paper, we propose a novel framework for allocating quantization bitwidths based on sensitivity metrics derived from a Hessian proxy. We make key assumptions, which allow the layer/component-wise loss function to be expressed as an explicit function of the bitwidths. This enables a neat formulation of the bit allocation problem as a convex optimization task, whose closed-form solution adapts precision across weights to minimize the layer-wise quantization loss. Inspecting the solution provides several insights (such as the equal-loss structure), which are then exploited to design the proposed \\textbf{BAQ} (Bit Allocation Quantization) algorithm. The proposed algorithm achieves a good trade-off between loss minimization and complexity and allows BAQ to be integrated into standard quantization pipelines with minimal overhead. Experimental results show that BAQ consistently outperforms GPTQ, achieving up to 56$\\times$ lower perplexity at the same bitwidth on large language models ranging from 125M to 30B parameters. Leveraging our analytical results derived from solving the optimal bit allocation problem, we also provide a theoretical explanation for the observed gains. All codes of this paper are available at https://github.com/CSU-ModelCompression/BAQ.",
+        "identifiers": [
+          "SemanticScholar:8241c6c3207376185e08886eaa91dc525d3a1fbe"
+        ],
+        "semantic_scholar_id": "8241c6c3207376185e08886eaa91dc525d3a1fbe",
+        "canonical_id": "arXiv:2506.05664",
+        "arxiv_id": "2506.05664",
+        "doi": "10.48550/arXiv.2506.05664",
+        "authors": [
+          "Chao Zhang",
+          "Li Wang",
+          "S. Lasaulce",
+          "M. Debbah"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 489,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c9f9494cd5b8f4e8f6271621d4849c619678a5c38479e393e0d676c6f474aae7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

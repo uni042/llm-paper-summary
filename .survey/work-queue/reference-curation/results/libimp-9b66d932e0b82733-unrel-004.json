@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b66d932e0b82733-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.16063",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.16063",
+    "identity_tokens": [
+      "arXiv:2603.16063"
+    ],
+    "reason": "The abstract concerns linear-attention adaptation for vision transformers and vision tasks, not LLM inference/serving/compression.",
+    "first_checked_at": "2026-10-05T13:27:14+00:00",
+    "last_checked_at": "2026-10-05T13:27:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+    ],
+    "title": "ViT-AdaLA: Adapting Vision Transformers with Linear Attention"
+  },
+  "processed_at": "2026-10-05T13:27:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b66d932e0b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

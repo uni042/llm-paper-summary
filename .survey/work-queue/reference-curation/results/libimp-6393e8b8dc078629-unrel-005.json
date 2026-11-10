@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6393e8b8dc078629-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.06330",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.06330",
+    "identity_tokens": [
+      "arXiv:2505.06330"
+    ],
+    "reason": "The work applies prompting to a non-intrusive load-monitoring task; it does not present an LLM inference-efficiency technique.",
+    "first_checked_at": "2026-10-06T11:42:54+00:00",
+    "last_checked_at": "2026-10-06T11:42:54+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+    ],
+    "title": "Prompting Large Language Models for Training-Free Non-Intrusive Load Monitoring"
+  },
+  "processed_at": "2026-10-06T11:42:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6393e8b8dc07",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17097fcf64e89c22-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/ipdpsw66978.2025.00043",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/ipdpsw66978.2025.00043",
+    "identity_tokens": [
+      "6887e41003f489f72bc3d8d3f2d73f97ce64a8f3",
+      "DOI:10.1109/ipdpsw66978.2025.00043",
+      "SemanticScholar:6887e41003f489f72bc3d8d3f2d73f97ce64a8f3"
+    ],
+    "reason": "Title/DOI are identified by conference records, but the official IEEE abstract was not accessible; candidate text is not independently verified as the publisher abstract.",
+    "first_checked_at": "2026-10-13T00:49:47+00:00",
+    "last_checked_at": "2026-10-14T13:11:21+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.17126-large-language-models-as-tool-makers.md",
+      "papers/inference/99-other-inference-systems/2020-2005.08025-intellicode-compose-code-generation-using-transformer.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Gen-AI in a Bottle: Experiments with LLMs to Generate HPC Kernels"
+  },
+  "processed_at": "2026-10-14T13:11:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17097fcf64e8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

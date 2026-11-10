@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-caa50e93c4ded679-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.02818",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.02818",
+    "identity_tokens": [
+      "arXiv:2511.02818"
+    ],
+    "reason": "一次本文では表形式ICL専用で、特徴方向のblock-sparse attentionを使い高次元表の計算・メモリを改善する。ただし言語列/LLMのsequence inferenceではなく、LLM推論への適用可能性は未検証のため隣接技術として保留。",
+    "first_checked_at": "2026-10-07T09:30:26+00:00",
+    "last_checked_at": "2026-10-07T09:30:26+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Orion-MSP: Multi-Scale Sparse Attention for Tabular In-Context Learning"
+  },
+  "processed_at": "2026-10-07T09:30:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-caa50e93c4de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

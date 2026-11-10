@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-sas-eac46ddd-03",
+  "kind": "research",
+  "attempt_id": "attempt-eac46ddd3cb449fe8b2c0320",
+  "job_id": "job-research-6542fa570cf353a1",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:8df531c6e7c9879b13673fd791d2a2c5be7d8001a6f48f2614e0e6a862a123b5",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "b311e00ae487eb4441d13c3c511a40e9840c12aa"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "0ecb05b613b922885e21774a603996868a0dae4b"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "6ece9c52714056701a4513d8a095ccf9e166d39f"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "222eb297d2856d77bb8a5f3f99117867119f2aff"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "1042b0d8d3570fea27944978a6a816239c7e932d"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T07:36:04+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md",
+    "status": "FAIL",
+    "file_bytes": 24194,
+    "prose_chars": 6864,
+    "paragraphs": 28,
+    "method_paragraphs": 14,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7168604651162791,
+    "japanese_chars": 4932,
+    "latin_chars": 1948,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 71.7% < 警告基準 80.0%"
+    ]
+  }
+}

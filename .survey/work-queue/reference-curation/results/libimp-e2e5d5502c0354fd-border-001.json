@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2e5d5502c0354fd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.29581",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.29581",
+    "identity_tokens": [
+      "arXiv:2608.29581"
+    ],
+    "reason": "SemSpot proposes semantic-aware spot capacity for LLM-as-a-service and audits 1,535 cases across six agent benchmarks. It analyzes state resume, verified-segment commits and economic filters, but an empirical runtime/platform trace evaluation is explicitly future work; memory/bandwidth overhead may erase savings.",
+    "first_checked_at": "2026-10-05T07:51:15+00:00",
+    "last_checked_at": "2026-10-05T07:51:15+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+      "papers/inference/99-other-inference-systems/2024-2410.01228-conserve-fine-grained-gpu-harvesting-for-llm-online-and-offline-co-serving.md",
+      "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md"
+    ],
+    "title": "Bridging Agent Semantics with Spot Capacity: An Elastic and Recoverable Service Model"
+  },
+  "processed_at": "2026-10-05T07:51:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2e5d5502c03",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-db6d2e8e57761659-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2504.03159",
+  "reason": "本文のP3はzero-shot text classificationで複数位置のtoken確率を一回のmodel runで得てprompt頑健性を評価する。主な成果は分類精度/分散で、一般的な生成推論のthroughput・memory改善を測っていないため、multi-token推論技法としてborderlineに残す。",
+  "title": "Beyond the Next Token: Towards Prompt-Robust Zero-Shot Classification via Efficient Multi-Token Prediction",
+  "identity_tokens": [
+    "arXiv:2504.03159"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db6d2e8e5776",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

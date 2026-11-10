@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "3b54a552d197feff78009a99b9afe9c7fc016296d0fb5847bf4e7172d4ce80d3",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9031b2a2c39881918cf2384136bfc8be--2024-2407.18003-keep-cost-down-under16kb-reaudit-20261010-0930-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2407.18003",
+  "worker_completed_at": "2026-10-10T09:41:07+09:00",
+  "worker_run_key": "20261010-0930-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4633,
+    "body_paragraphs": 27,
+    "method_chars": 2136,
+    "method_paragraphs": 12,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-10T00:52:32+00:00"
+}

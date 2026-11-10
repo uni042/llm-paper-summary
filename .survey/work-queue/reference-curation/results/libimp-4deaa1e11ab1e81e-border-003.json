@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4deaa1e11ab1e81e-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.knosys.2025.113002",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.knosys.2025.113002",
+    "identity_tokens": [
+      "DOI:10.1016/j.knosys.2025.113002"
+    ],
+    "reason": "The candidate packet abstract is empty and the primary DOI request returned an internal retrieval error; without the article body its channel-pruning method, evaluation, and limitations cannot be assessed.",
+    "first_checked_at": "2026-10-06T02:48:19+00:00",
+    "last_checked_at": "2026-10-06T02:48:19+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Automatic channel pruning by neural network based on improved poplar optimisation algorithm"
+  },
+  "processed_at": "2026-10-06T02:48:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4deaa1e11ab1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

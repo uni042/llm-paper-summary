@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0d312223d1fcefd-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.03819",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.03819",
+    "identity_tokens": [
+      "arXiv:2506.03819"
+    ],
+    "reason": "The primary abstract describes We present a dataset for rainfall streamflow modeling that is fully spatially resolved with the aim of taking neural network-driven hydrological modeling beyond lumped catchme…. The identified task is Spatially Resolved Meteorological and Ancillary Data in Central Europe for Rainfall Streamflow Modeling; it does not establish an LLM inference-system efficiency contribution.",
+    "first_checked_at": "2026-10-16T05:16:26+00:00",
+    "last_checked_at": "2026-10-16T05:16:26+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Spatially Resolved Meteorological and Ancillary Data in Central Europe for Rainfall Streamflow Modeling"
+  },
+  "processed_at": "2026-10-16T05:16:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0d312223d1f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

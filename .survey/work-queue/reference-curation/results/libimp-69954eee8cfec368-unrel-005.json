@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69954eee8cfec368-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.00820",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.00820",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2506.00820",
+      "arXiv:2506.00820"
+    ],
+    "reason": "QuantFaceはface restoration diffusion向けlow-bit quantizationであり、LLM inferenceとの具体的接続なし。",
+    "first_checked_at": "2026-10-10T03:54:14+00:00",
+    "last_checked_at": "2026-10-10T03:54:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md",
+      "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "QuantFace: Low-Bit Post-Training Quantization for One-Step Diffusion Face Restoration"
+  },
+  "processed_at": "2026-10-10T03:54:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69954eee8cfe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-28266788289528a1-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.06220",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.06220",
+    "identity_tokens": [
+      "arXiv:2501.06220"
+    ],
+    "reason": "This work designs a small Vision Transformer for CIFAR-10 and targets image classification performance; it does not establish an LLM inference-system contribution.",
+    "first_checked_at": "2026-10-14T04:12:35+00:00",
+    "last_checked_at": "2026-10-14T04:12:35+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "Powerful Design of Small Vision Transformer on CIFAR10"
+  },
+  "processed_at": "2026-10-14T04:12:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-282667882895",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

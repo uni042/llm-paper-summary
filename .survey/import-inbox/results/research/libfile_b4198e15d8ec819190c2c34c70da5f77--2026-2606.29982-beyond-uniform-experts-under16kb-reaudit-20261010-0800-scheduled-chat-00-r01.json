@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2d7b1a7c8e96b45c152a0ff2aa042abab274c36ffc80a3b5e1e24a71080b3afb",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_b4198e15d8ec819190c2c34c70da5f77--2026-2606.29982-beyond-uniform-experts-under16kb-reaudit-20261010-0800-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2606.29982",
+  "worker_completed_at": "2026-10-10T08:00:00+09:00",
+  "worker_run_key": "20261010-0800-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7360,
+    "body_paragraphs": 38,
+    "method_chars": 2444,
+    "method_paragraphs": 12,
+    "evaluation_chars": 388,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 388 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 388 < 500"
+  ],
+  "processed_at": "2026-10-09T23:26:43+00:00"
+}

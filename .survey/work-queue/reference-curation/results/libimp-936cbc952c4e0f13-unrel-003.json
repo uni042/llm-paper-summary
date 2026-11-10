@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-936cbc952c4e0f13-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2108.05542",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2108.05542",
+    "identity_tokens": [
+      "arXiv:2108.05542"
+    ],
+    "reason": "Transformer系pretrained modelを体系化するNLP surveyで、モデル分類・事前学習・下流適用が主題。推論runtime・memory hierarchy・serving最適化の新規方式を提案しない。",
+    "first_checked_at": "2026-10-05T15:43:19+00:00",
+    "last_checked_at": "2026-10-05T15:43:19+00:00",
+    "linked_from": [],
+    "title": "AMMUS : A Survey of Transformer-based Pretrained Models in Natural Language Processing"
+  },
+  "processed_at": "2026-10-05T15:43:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-936cbc952c4e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

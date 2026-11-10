@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fe522bd101a6f7bd-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.11875",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.11875",
+    "identity_tokens": [
+      "arXiv:2607.11875"
+    ],
+    "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+    "first_checked_at": "2026-10-06T15:57:11+00:00",
+    "last_checked_at": "2026-10-06T15:57:11+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "title": "Invariant Learning Dynamics of Transformers in Inductive Reasoning Tasks"
+  },
+  "processed_at": "2026-10-06T15:57:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fe522bd101a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

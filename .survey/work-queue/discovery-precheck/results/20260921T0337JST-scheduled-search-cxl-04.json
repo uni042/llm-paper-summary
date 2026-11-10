@@ -1,0 +1,875 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0337JST-scheduled-search-cxl-04",
+  "collector_id": "scheduled-20260921T0330-search-cxl",
+  "run_key": "scheduled-20260921T0330JST",
+  "axis": "CXL remote shared memory for LLM KV cache and inference serving",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20inference%20CXL%20remote%20shared%20memory%20KV%20cache%20serving&filter=from_publication_date:2024-01-01,to_publication_date:2026-09-21&sort=publication_date:desc",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 3,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "299c5c49a081a09135c43b05a9457da27e903970",
+  "raw_search_result_count": 52,
+  "retrieval_duplicate_filtered_count": 24,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T18:38:22.355620+00:00",
+  "results": [
+    {
+      "title": "Architectural Implications of Agentic AI Workflows",
+      "source_url": "https://arxiv.org/abs/2608.04458",
+      "year": 2026,
+      "published": "2026-08-05",
+      "canonical_id": "arXiv:2608.04458",
+      "arxiv_id": "2608.04458",
+      "authors": [
+        "Jirong Yang",
+        "Peizhe Liu",
+        "Chaojie Zhang",
+        "Jovan Stojkovic"
+      ]
+    },
+    {
+      "title": "Beyond Storage: State as a Runtime Control Problem in Parallel and Distributed Systems",
+      "source_url": "https://arxiv.org/abs/2607.16836",
+      "year": 2026,
+      "published": "2026-07-18",
+      "canonical_id": "arXiv:2607.16836",
+      "arxiv_id": "2607.16836",
+      "authors": [
+        "Shuhao Zhang",
+        "H H Peng",
+        "Chun Ho",
+        "Yancan Mao",
+        "Yufeng Du",
+        "Liu S",
+        "Ruijie Qiu",
+        "Xiaofei Liao",
+        "Hai Jin"
+      ]
+    },
+    {
+      "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02574",
+      "year": 2026,
+      "published": "2026-06-30",
+      "canonical_id": "arXiv:2607.02574",
+      "arxiv_id": "2607.02574",
+      "authors": [
+        "Jie Li",
+        "Tongyang Wang",
+        "Yong Chen"
+      ]
+    },
+    {
+      "title": "Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+      "source_url": "https://hdl.handle.net/10919/143438",
+      "year": 2026,
+      "published": "2026-06-16",
+      "canonical_id": "OpenAlex:W7165293849",
+      "authors": [
+        "Dongha Yoon"
+      ]
+    },
+    {
+      "title": "Tiara: A Programmable Line-Rate ISA for Remote Memory Access",
+      "source_url": "https://arxiv.org/abs/2606.13708",
+      "year": 2026,
+      "published": "2026-06-10",
+      "canonical_id": "arXiv:2606.13708",
+      "arxiv_id": "2606.13708",
+      "authors": [
+        "Bojie Li"
+      ]
+    },
+    {
+      "title": "Energy-Aware Computing in the Year 2026",
+      "source_url": "https://arxiv.org/abs/2605.24569",
+      "year": 2026,
+      "published": "2026-05-23",
+      "canonical_id": "arXiv:2605.24569",
+      "arxiv_id": "2605.24569",
+      "authors": [
+        "Roblex Nana Tchakoute",
+        "Claude Tadonki"
+      ]
+    },
+    {
+      "title": "Serving Hybrid LLM Loads with SLO Guarantees Using CPU-GPU Attention Piggybacking",
+      "source_url": "https://doi.org/10.1145/3802107",
+      "year": 2026,
+      "published": "2026-05-18",
+      "canonical_id": "arXiv:2603.12831",
+      "arxiv_id": "2603.12831",
+      "authors": [
+        "Zizhao Mo",
+        "Junlin Chen",
+        "Huanle Xu",
+        "Chengzhong Xu"
+      ]
+    },
+    {
+      "title": "Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2605.11277",
+      "year": 2026,
+      "published": "2026-05-11",
+      "canonical_id": "arXiv:2605.11277",
+      "arxiv_id": "2605.11277",
+      "authors": [
+        "Jungwoo Kim",
+        "Rubens Lacouture",
+        "Genghan Zhang",
+        "Gina Sohn",
+        "Qizheng Zhang",
+        "Swapnil Gandhi",
+        "Christos Kozyrakis",
+        "Kunle Olukotun"
+      ]
+    },
+    {
+      "title": "Cloud-native and Distributed Systems for Efficient and Scalable Large Language Models -- A Research Agenda",
+      "source_url": "https://arxiv.org/abs/2604.17227",
+      "year": 2026,
+      "published": "2026-04-19",
+      "canonical_id": "arXiv:2604.17227",
+      "arxiv_id": "2604.17227",
+      "authors": [
+        "Minxian Xu",
+        "吴劲风",
+        "Shengye Song",
+        "Satish Narayana Srirama",
+        "Bahman Javad",
+        "Rajiv Ranjan",
+        "Devki Nandan Jha",
+        "Sa Wang",
+        "Wenhong Tian",
+        "Huanle Xu",
+        "Li Li",
+        "Zizhao Mo",
+        "Shuo Ren",
+        "Thomas Kunz",
+        "Petar Kochovski",
+        "Vlado Stankovski",
+        "Kejiang Ye",
+        "Chengzhong Xu",
+        "Rajkumar Buyya"
+      ]
+    },
+    {
+      "title": "d-HNSW: A High-performance Vector Search Engine on Disaggregated Memory",
+      "source_url": "http://arxiv.org/abs/2603.13591",
+      "year": 2026,
+      "published": "2026-03-13",
+      "canonical_id": "arXiv:2603.13591",
+      "arxiv_id": "2603.13591",
+      "authors": [
+        "Fei Fang",
+        "Yi Liu",
+        "Chen Qian"
+      ]
+    },
+    {
+      "title": "Pooling Engram Conditional Memory in Large Language Models using CXL",
+      "source_url": "http://arxiv.org/abs/2603.10087",
+      "year": 2026,
+      "published": "2026-03-10",
+      "canonical_id": "arXiv:2603.10087",
+      "arxiv_id": "2603.10087",
+      "authors": [
+        "Ruiyang Ma",
+        "Teng Ma",
+        "Zhiyuan Su",
+        "Hantian Zha",
+        "X Zhao",
+        "Xuchun Shang",
+        "Xingrui Yi",
+        "Zheng Liu",
+        "Zhu Cao",
+        "An Wu",
+        "Zhichong Dou",
+        "Ziqian Liu",
+        "Daikang Kuang",
+        "Guojie Luo"
+      ]
+    },
+    {
+      "title": "CCCL: Node-Spanning GPU Collectives with CXL Memory Pooling",
+      "source_url": "https://arxiv.org/abs/2602.22457",
+      "year": 2026,
+      "published": "2026-02-25",
+      "canonical_id": "arXiv:2602.22457",
+      "arxiv_id": "2602.22457",
+      "authors": [
+        "Dong Xu",
+        "Han Meng",
+        "Xinyu Chen",
+        "Dengcheng Zhu",
+        "Wei Tang",
+        "Fei Liu",
+        "Liguang Xie",
+        "Wu Xiang",
+        "Rui Shi",
+        "Yue Li",
+        "Henry Hu",
+        "Hui Zhang",
+        "Jianping Jiang",
+        "Dong Li"
+      ]
+    },
+    {
+      "title": "Reconfigurable SmartNICs: A Comprehensive Review of FPGA Shells and Heterogeneous Offloading Architectures",
+      "source_url": "https://doi.org/10.3390/app16031476",
+      "year": 2026,
+      "published": "2026-02-01",
+      "canonical_id": "DOI:10.3390/app16031476",
+      "doi": "10.3390/app16031476",
+      "authors": [
+        "A. Ulmamei",
+        "Călin Bîră"
+      ]
+    },
+    {
+      "title": "FlashServe: Cost-Efficient Serverless Inference Scheduling for Large Language Models via Tiered Memory Management and Predictive Autoscaling",
+      "source_url": "https://doi.org/10.20944/preprints202512.1908.v1",
+      "year": 2025,
+      "published": "2025-12-22",
+      "canonical_id": "DOI:10.20944/preprints202512.1908.v1",
+      "doi": "10.20944/preprints202512.1908.v1",
+      "authors": [
+        "Bolin Chen"
+      ]
+    },
+    {
+      "title": "Survey of storage systems in high performance computing",
+      "source_url": "https://doi.org/10.1007/s42514-025-00268-5",
+      "year": 2025,
+      "published": "2025-12-17",
+      "canonical_id": "DOI:10.1007/s42514-025-00268-5",
+      "doi": "10.1007/s42514-025-00268-5",
+      "authors": [
+        "Gen Zhang",
+        "Zhenlong Song",
+        "Wenzhe Zhang",
+        "Xinhai Chen",
+        "Shan Huang",
+        "Yong Dong"
+      ]
+    },
+    {
+      "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
+      "source_url": "https://doi.org/10.1145/3773772",
+      "year": 2025,
+      "published": "2025-11-15",
+      "canonical_id": "DOI:10.1145/3773772",
+      "doi": "10.1145/3773772",
+      "authors": [
+        "Ruoyu Qin",
+        "Zheming Li",
+        "Weiran He",
+        "Jialei Cui",
+        "Heyi Tang",
+        "Feng Ren",
+        "Teng Ma",
+        "Shangming Cai",
+        "Y X Zhang",
+        "Mingxing Zhang",
+        "Yongwei Wu",
+        "Weimin Zheng",
+        "Xinran Xu"
+      ]
+    },
+    {
+      "title": "LIA: A Single-GPU LLM Inference Acceleration with Cooperative AMX-Enabled CPU-GPU Computation and CXL Offloading",
+      "source_url": "https://doi.org/10.1145/3695053.3731092",
+      "year": 2025,
+      "published": "2025-06-20",
+      "canonical_id": "DOI:10.1145/3695053.3731092",
+      "doi": "10.1145/3695053.3731092",
+      "authors": [
+        "Hyungyo Kim",
+        "Nachuan Wang",
+        "Qirong Xia",
+        "Jinghan Huang",
+        "Amir Yazdanbakhsh",
+        "Nam Sung Kim"
+      ]
+    },
+    {
+      "title": "CARINA: An Efficient CXL-Oriented Embedding Serving System for Recommendation Models",
+      "source_url": "https://doi.org/10.1145/3725274",
+      "year": 2025,
+      "published": "2025-06-17",
+      "canonical_id": "DOI:10.1145/3725274",
+      "doi": "10.1145/3725274",
+      "authors": [
+        "Peiqi Yin",
+        "Qihui Zhou",
+        "Xiao Yan",
+        "Chao Wang",
+        "Eric Lo",
+        "Changji Li",
+        "Lan Lu",
+        "Hua Fan",
+        "Wenchao Zhou",
+        "Ming-Chang Yang",
+        "James Cheng"
+      ]
+    },
+    {
+      "title": "MetaEC: An Efficient and Resilient Erasure-Coded KV Store on Disaggregated Memory",
+      "source_url": "https://doi.org/10.1145/3744905",
+      "year": 2025,
+      "published": "2025-06-16",
+      "canonical_id": "DOI:10.1145/3744905",
+      "doi": "10.1145/3744905",
+      "authors": [
+        "Qiliang Li",
+        "Min Lyu",
+        "Tian Liu",
+        "Liangliang Xu",
+        "Wei Wang",
+        "Yinlong Xu"
+      ]
+    },
+    {
+      "title": "MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference",
+      "source_url": "https://arxiv.org/abs/2504.09775",
+      "year": 2025,
+      "published": "2025-04-14",
+      "canonical_id": "arXiv:2504.09775",
+      "arxiv_id": "2504.09775",
+      "authors": [
+        "Abhimanyu Rajeshkumar Bambhaniya",
+        "Hanjiang Wu",
+        "Suvinay Subramanian",
+        "Sudarshan Srinivasan",
+        "Souvik Kundu",
+        "Amir Yazdanbakhsh",
+        "Midhilesh Elavazhagan",
+        "Madhu Kumar",
+        "Yu, Minlan",
+        "Raychowdhury, Arijit",
+        "Tushar Krishna"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.04458",
+      "identity_tokens": [
+        "id:arXiv:2608.04458",
+        "title:architectural implications of agentic ai workflows",
+        "url:https://arxiv.org/abs/2608.04458"
+      ],
+      "record": {
+        "title": "Architectural Implications of Agentic AI Workflows",
+        "source_url": "https://arxiv.org/abs/2608.04458",
+        "year": 2026,
+        "published": "2026-08-05",
+        "canonical_id": "arXiv:2608.04458",
+        "arxiv_id": "2608.04458",
+        "authors": [
+          "Jirong Yang",
+          "Peizhe Liu",
+          "Chaojie Zhang",
+          "Jovan Stojkovic"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.16836",
+      "identity_tokens": [
+        "id:arXiv:2607.16836",
+        "title:beyond storage state as a runtime control problem in parallel and distributed systems",
+        "url:https://arxiv.org/abs/2607.16836"
+      ],
+      "record": {
+        "title": "Beyond Storage: State as a Runtime Control Problem in Parallel and Distributed Systems",
+        "source_url": "https://arxiv.org/abs/2607.16836",
+        "year": 2026,
+        "published": "2026-07-18",
+        "canonical_id": "arXiv:2607.16836",
+        "arxiv_id": "2607.16836",
+        "authors": [
+          "Shuhao Zhang",
+          "H H Peng",
+          "Chun Ho",
+          "Yancan Mao",
+          "Yufeng Du",
+          "Liu S",
+          "Ruijie Qiu",
+          "Xiaofei Liao",
+          "Hai Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02574",
+      "identity_tokens": [
+        "id:arXiv:2607.02574",
+        "title:from tensor buffer to distributed memory hierarchy a survey of kv cache management for llm serving",
+        "url:https://arxiv.org/abs/2607.02574"
+      ],
+      "record": {
+        "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2607.02574",
+        "year": 2026,
+        "published": "2026-06-30",
+        "canonical_id": "arXiv:2607.02574",
+        "arxiv_id": "2607.02574",
+        "authors": [
+          "Jie Li",
+          "Tongyang Wang",
+          "Yong Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:OpenAlex:W7165293849",
+      "identity_tokens": [
+        "id:OpenAlex:W7165293849",
+        "title:disaggregated llm serving with cxl shared memory kv cache at rackscale",
+        "url:https://hdl.handle.net/10919/143438"
+      ],
+      "record": {
+        "title": "Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+        "source_url": "https://hdl.handle.net/10919/143438",
+        "year": 2026,
+        "published": "2026-06-16",
+        "canonical_id": "OpenAlex:W7165293849",
+        "authors": [
+          "Dongha Yoon"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.13708",
+      "identity_tokens": [
+        "id:arXiv:2606.13708",
+        "title:tiara a programmable linerate isa for remote memory access",
+        "url:https://arxiv.org/abs/2606.13708"
+      ],
+      "record": {
+        "title": "Tiara: A Programmable Line-Rate ISA for Remote Memory Access",
+        "source_url": "https://arxiv.org/abs/2606.13708",
+        "year": 2026,
+        "published": "2026-06-10",
+        "canonical_id": "arXiv:2606.13708",
+        "arxiv_id": "2606.13708",
+        "authors": [
+          "Bojie Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.24569",
+      "identity_tokens": [
+        "id:arXiv:2605.24569",
+        "title:energyaware computing in the year 2026",
+        "url:https://arxiv.org/abs/2605.24569"
+      ],
+      "record": {
+        "title": "Energy-Aware Computing in the Year 2026",
+        "source_url": "https://arxiv.org/abs/2605.24569",
+        "year": 2026,
+        "published": "2026-05-23",
+        "canonical_id": "arXiv:2605.24569",
+        "arxiv_id": "2605.24569",
+        "authors": [
+          "Roblex Nana Tchakoute",
+          "Claude Tadonki"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.12831",
+      "identity_tokens": [
+        "id:DOI:10.1145/3802107",
+        "id:arXiv:2603.12831",
+        "title:serving hybrid llm loads with slo guarantees using cpugpu attention piggybacking",
+        "url:https://doi.org/10.1145/3802107"
+      ],
+      "record": {
+        "title": "Serving Hybrid LLM Loads with SLO Guarantees Using CPU-GPU Attention Piggybacking",
+        "source_url": "https://doi.org/10.1145/3802107",
+        "year": 2026,
+        "published": "2026-05-18",
+        "canonical_id": "arXiv:2603.12831",
+        "arxiv_id": "2603.12831",
+        "authors": [
+          "Zizhao Mo",
+          "Junlin Chen",
+          "Huanle Xu",
+          "Chengzhong Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11277",
+      "identity_tokens": [
+        "id:arXiv:2605.11277",
+        "title:sieve dynamic expertaware pim acceleration for evolving mixtureofexperts models",
+        "url:https://arxiv.org/abs/2605.11277"
+      ],
+      "record": {
+        "title": "Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models",
+        "source_url": "https://arxiv.org/abs/2605.11277",
+        "year": 2026,
+        "published": "2026-05-11",
+        "canonical_id": "arXiv:2605.11277",
+        "arxiv_id": "2605.11277",
+        "authors": [
+          "Jungwoo Kim",
+          "Rubens Lacouture",
+          "Genghan Zhang",
+          "Gina Sohn",
+          "Qizheng Zhang",
+          "Swapnil Gandhi",
+          "Christos Kozyrakis",
+          "Kunle Olukotun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.17227",
+      "identity_tokens": [
+        "id:arXiv:2604.17227",
+        "title:cloudnative and distributed systems for efficient and scalable large language models a research agenda",
+        "url:https://arxiv.org/abs/2604.17227"
+      ],
+      "record": {
+        "title": "Cloud-native and Distributed Systems for Efficient and Scalable Large Language Models -- A Research Agenda",
+        "source_url": "https://arxiv.org/abs/2604.17227",
+        "year": 2026,
+        "published": "2026-04-19",
+        "canonical_id": "arXiv:2604.17227",
+        "arxiv_id": "2604.17227",
+        "authors": [
+          "Minxian Xu",
+          "吴劲风",
+          "Shengye Song",
+          "Satish Narayana Srirama",
+          "Bahman Javad",
+          "Rajiv Ranjan",
+          "Devki Nandan Jha",
+          "Sa Wang",
+          "Wenhong Tian",
+          "Huanle Xu",
+          "Li Li",
+          "Zizhao Mo",
+          "Shuo Ren",
+          "Thomas Kunz",
+          "Petar Kochovski",
+          "Vlado Stankovski",
+          "Kejiang Ye",
+          "Chengzhong Xu",
+          "Rajkumar Buyya"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.13591",
+      "identity_tokens": [
+        "id:arXiv:2603.13591",
+        "title:dhnsw a highperformance vector search engine on disaggregated memory",
+        "url:http://arxiv.org/abs/2603.13591"
+      ],
+      "record": {
+        "title": "d-HNSW: A High-performance Vector Search Engine on Disaggregated Memory",
+        "source_url": "http://arxiv.org/abs/2603.13591",
+        "year": 2026,
+        "published": "2026-03-13",
+        "canonical_id": "arXiv:2603.13591",
+        "arxiv_id": "2603.13591",
+        "authors": [
+          "Fei Fang",
+          "Yi Liu",
+          "Chen Qian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.10087",
+      "identity_tokens": [
+        "id:arXiv:2603.10087",
+        "title:pooling engram conditional memory in large language models using cxl",
+        "url:http://arxiv.org/abs/2603.10087"
+      ],
+      "record": {
+        "title": "Pooling Engram Conditional Memory in Large Language Models using CXL",
+        "source_url": "http://arxiv.org/abs/2603.10087",
+        "year": 2026,
+        "published": "2026-03-10",
+        "canonical_id": "arXiv:2603.10087",
+        "arxiv_id": "2603.10087",
+        "authors": [
+          "Ruiyang Ma",
+          "Teng Ma",
+          "Zhiyuan Su",
+          "Hantian Zha",
+          "X Zhao",
+          "Xuchun Shang",
+          "Xingrui Yi",
+          "Zheng Liu",
+          "Zhu Cao",
+          "An Wu",
+          "Zhichong Dou",
+          "Ziqian Liu",
+          "Daikang Kuang",
+          "Guojie Luo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.22457",
+      "identity_tokens": [
+        "id:arXiv:2602.22457",
+        "title:cccl nodespanning gpu collectives with cxl memory pooling",
+        "url:https://arxiv.org/abs/2602.22457"
+      ],
+      "record": {
+        "title": "CCCL: Node-Spanning GPU Collectives with CXL Memory Pooling",
+        "source_url": "https://arxiv.org/abs/2602.22457",
+        "year": 2026,
+        "published": "2026-02-25",
+        "canonical_id": "arXiv:2602.22457",
+        "arxiv_id": "2602.22457",
+        "authors": [
+          "Dong Xu",
+          "Han Meng",
+          "Xinyu Chen",
+          "Dengcheng Zhu",
+          "Wei Tang",
+          "Fei Liu",
+          "Liguang Xie",
+          "Wu Xiang",
+          "Rui Shi",
+          "Yue Li",
+          "Henry Hu",
+          "Hui Zhang",
+          "Jianping Jiang",
+          "Dong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/app16031476",
+      "identity_tokens": [
+        "id:DOI:10.3390/app16031476",
+        "title:reconfigurable smartnics a comprehensive review of fpga shells and heterogeneous offloading architectures",
+        "url:https://doi.org/10.3390/app16031476"
+      ],
+      "record": {
+        "title": "Reconfigurable SmartNICs: A Comprehensive Review of FPGA Shells and Heterogeneous Offloading Architectures",
+        "source_url": "https://doi.org/10.3390/app16031476",
+        "year": 2026,
+        "published": "2026-02-01",
+        "canonical_id": "DOI:10.3390/app16031476",
+        "doi": "10.3390/app16031476",
+        "authors": [
+          "A. Ulmamei",
+          "Călin Bîră"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.20944/preprints202512.1908.v1",
+      "identity_tokens": [
+        "id:DOI:10.20944/preprints202512.1908.v1",
+        "title:flashserve costefficient serverless inference scheduling for large language models via tiered memory management and predictive autoscaling",
+        "url:https://doi.org/10.20944/preprints202512.1908.v1"
+      ],
+      "record": {
+        "title": "FlashServe: Cost-Efficient Serverless Inference Scheduling for Large Language Models via Tiered Memory Management and Predictive Autoscaling",
+        "source_url": "https://doi.org/10.20944/preprints202512.1908.v1",
+        "year": 2025,
+        "published": "2025-12-22",
+        "canonical_id": "DOI:10.20944/preprints202512.1908.v1",
+        "doi": "10.20944/preprints202512.1908.v1",
+        "authors": [
+          "Bolin Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s42514-025-00268-5",
+      "identity_tokens": [
+        "id:DOI:10.1007/s42514-025-00268-5",
+        "title:survey of storage systems in high performance computing",
+        "url:https://doi.org/10.1007/s42514-025-00268-5"
+      ],
+      "record": {
+        "title": "Survey of storage systems in high performance computing",
+        "source_url": "https://doi.org/10.1007/s42514-025-00268-5",
+        "year": 2025,
+        "published": "2025-12-17",
+        "canonical_id": "DOI:10.1007/s42514-025-00268-5",
+        "doi": "10.1007/s42514-025-00268-5",
+        "authors": [
+          "Gen Zhang",
+          "Zhenlong Song",
+          "Wenzhe Zhang",
+          "Xinhai Chen",
+          "Shan Huang",
+          "Yong Dong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3773772",
+      "identity_tokens": [
+        "id:DOI:10.1145/3773772",
+        "title:mooncake a kvcachecentric disaggregated architecture for llm serving",
+        "url:https://doi.org/10.1145/3773772"
+      ],
+      "record": {
+        "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
+        "source_url": "https://doi.org/10.1145/3773772",
+        "year": 2025,
+        "published": "2025-11-15",
+        "canonical_id": "DOI:10.1145/3773772",
+        "doi": "10.1145/3773772",
+        "authors": [
+          "Ruoyu Qin",
+          "Zheming Li",
+          "Weiran He",
+          "Jialei Cui",
+          "Heyi Tang",
+          "Feng Ren",
+          "Teng Ma",
+          "Shangming Cai",
+          "Y X Zhang",
+          "Mingxing Zhang",
+          "Yongwei Wu",
+          "Weimin Zheng",
+          "Xinran Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3695053.3731092",
+      "identity_tokens": [
+        "id:DOI:10.1145/3695053.3731092",
+        "title:lia a singlegpu llm inference acceleration with cooperative amxenabled cpugpu computation and cxl offloading",
+        "url:https://doi.org/10.1145/3695053.3731092"
+      ],
+      "record": {
+        "title": "LIA: A Single-GPU LLM Inference Acceleration with Cooperative AMX-Enabled CPU-GPU Computation and CXL Offloading",
+        "source_url": "https://doi.org/10.1145/3695053.3731092",
+        "year": 2025,
+        "published": "2025-06-20",
+        "canonical_id": "DOI:10.1145/3695053.3731092",
+        "doi": "10.1145/3695053.3731092",
+        "authors": [
+          "Hyungyo Kim",
+          "Nachuan Wang",
+          "Qirong Xia",
+          "Jinghan Huang",
+          "Amir Yazdanbakhsh",
+          "Nam Sung Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3725274",
+      "identity_tokens": [
+        "id:DOI:10.1145/3725274",
+        "title:carina an efficient cxloriented embedding serving system for recommendation models",
+        "url:https://doi.org/10.1145/3725274"
+      ],
+      "record": {
+        "title": "CARINA: An Efficient CXL-Oriented Embedding Serving System for Recommendation Models",
+        "source_url": "https://doi.org/10.1145/3725274",
+        "year": 2025,
+        "published": "2025-06-17",
+        "canonical_id": "DOI:10.1145/3725274",
+        "doi": "10.1145/3725274",
+        "authors": [
+          "Peiqi Yin",
+          "Qihui Zhou",
+          "Xiao Yan",
+          "Chao Wang",
+          "Eric Lo",
+          "Changji Li",
+          "Lan Lu",
+          "Hua Fan",
+          "Wenchao Zhou",
+          "Ming-Chang Yang",
+          "James Cheng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3744905",
+      "identity_tokens": [
+        "id:DOI:10.1145/3744905",
+        "title:metaec an efficient and resilient erasurecoded kv store on disaggregated memory",
+        "url:https://doi.org/10.1145/3744905"
+      ],
+      "record": {
+        "title": "MetaEC: An Efficient and Resilient Erasure-Coded KV Store on Disaggregated Memory",
+        "source_url": "https://doi.org/10.1145/3744905",
+        "year": 2025,
+        "published": "2025-06-16",
+        "canonical_id": "DOI:10.1145/3744905",
+        "doi": "10.1145/3744905",
+        "authors": [
+          "Qiliang Li",
+          "Min Lyu",
+          "Tian Liu",
+          "Liangliang Xu",
+          "Wei Wang",
+          "Yinlong Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.09775",
+      "identity_tokens": [
+        "id:arXiv:2504.09775",
+        "title:mist a codesign framework for heterogeneous multistage llm inference",
+        "url:https://arxiv.org/abs/2504.09775"
+      ],
+      "record": {
+        "title": "MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference",
+        "source_url": "https://arxiv.org/abs/2504.09775",
+        "year": 2025,
+        "published": "2025-04-14",
+        "canonical_id": "arXiv:2504.09775",
+        "arxiv_id": "2504.09775",
+        "authors": [
+          "Abhimanyu Rajeshkumar Bambhaniya",
+          "Hanjiang Wu",
+          "Suvinay Subramanian",
+          "Sudarshan Srinivasan",
+          "Souvik Kundu",
+          "Amir Yazdanbakhsh",
+          "Midhilesh Elavazhagan",
+          "Madhu Kumar",
+          "Yu, Minlan",
+          "Raychowdhury, Arijit",
+          "Tushar Krishna"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:a0669278825e374a33bcb493fbbf9b97f9a0f345a49479d455a2aa5ad775f52a",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

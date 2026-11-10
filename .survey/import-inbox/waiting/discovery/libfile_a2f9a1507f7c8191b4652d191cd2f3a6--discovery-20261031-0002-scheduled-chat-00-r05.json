@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0002-scheduled-chat-00/r05",
+  "reference_main_sha": "67e9465d6a63dbfa3a71a8b8c1eb1142de42713c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.08569",
+      "identity_tokens": [
+        "arXiv:2608.08569"
+      ],
+      "title": "VoxZip: Semantic-Anchored Temporal KV Cache Compression for Long-Context Audio Inference",
+      "reason": "arXiv一次要旨。ASR転写を意味アンカーにして音声tokenを時間方向に整列・圧縮し、蓄積attentionの時間減衰で追加退避する学習不要の二段階KV圧縮。Qwen3-Omniの6音声ベンチマークで20倍圧縮時に元性能90%超を維持、4倍圧縮で推論スループット1.9倍・ピークメモリ3.3倍削減と報告。",
+      "source_url": "https://arxiv.org/abs/2608.08569",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:20:53+09:00",
+      "last_checked_at": "2026-10-31T00:20:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 437,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.03484",
+      "identity_tokens": [
+        "arXiv:2601.03484"
+      ],
+      "title": "From Bits to Chips: An LLM-based Hardware-Aware Quantization Agent for Streamlined Deployment of LLMs",
+      "reason": "arXiv一次要旨。ハードウェア制約を考慮してLLM量子化のハイパーパラメータと配備構成を自動探索するHAQA。Llama上の未最適化モデルに比べ推論最大2.3倍高速化とスループット・精度改善を報告。LLMを使った最適化エージェントが主な新規性だが、評価対象は量子化LLMの実配備性能であり直接関連する。",
+      "source_url": "https://arxiv.org/abs/2601.03484",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:20:53+09:00",
+      "last_checked_at": "2026-10-31T00:20:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 439,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.11729",
+      "identity_tokens": [
+        "arXiv:2511.11729"
+      ],
+      "title": "Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms",
+      "reason": "arXiv一次要旨。メモリ帯域律速のLLM decode GPUに計算律速のPEFT学習を同居させ、統合メモリアロケータ、decode遅延予測、QoS保証スケジューラで干渉を管理。推論decodeの厳格なQoSを守りつつPEFTスループット平均46.2%、最大92.0%改善を報告。LLMサービング資源の同居最適化。",
+      "source_url": "https://arxiv.org/abs/2511.11729",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:20:53+09:00",
+      "last_checked_at": "2026-10-31T00:20:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 440,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.13440",
+      "identity_tokens": [
+        "arXiv:2604.13440"
+      ],
+      "title": "A KL Lens on Quantization: Fast, Forward-Only Sensitivity for Mixed-Precision SSM-Transformer Models",
+      "reason": "arXiv一次要旨。SSM-TransformerハイブリッドLLMで量子化感度をbackpropなしのforward KL指標で評価し、層別混合精度を選ぶ。Intel Lunar LakeのCPU/GPU実測でUniform INT4と競合するサイズ・スループットを保ちつつFP16に近いPPLを報告。端末内LLM推論量子化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2604.13440",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:20:53+09:00",
+      "last_checked_at": "2026-10-31T00:20:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 443,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.05994",
+      "identity_tokens": [
+        "arXiv:2605.05994"
+      ],
+      "title": "DiBA: Diagonal and Binary Matrix Approximation for Neural Network Weight Compression",
+      "reason": "arXiv一次要旨。対角行列と0/1行列の積でdense重みを近似し、乗算数をmnからm+k+nへ減らす理論的圧縮法。評価は公開重み行列40件とDistilBERTのmasked-token、音声分類の部品置換であり、生成LLMの復号・サービング性能は未検証のためborderline。",
+      "source_url": "https://arxiv.org/abs/2605.05994",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:20:53+09:00",
+      "last_checked_at": "2026-10-31T00:20:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 446,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.19993",
+      "identity_tokens": [
+        "arXiv:2606.19993"
+      ],
+      "title": "Activation- and Influence-Aware Ranks (AIR): Function-Preserving SVD Compression for LLMs",
+      "reason": "arXiv一次要旨。SVD-LLM(W)の活性感度にbackward influenceを組み合わせた一回のALS更新で低ランク近似を改善。60%以下のパラメータ保持率でPPLを18%超改善、同品質で校正データ約90%減、FLOPs・ピークメモリ・token当たり遅延改善も報告。LLM推論用重み圧縮に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2606.19993",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:20:53+09:00",
+      "last_checked_at": "2026-10-31T00:20:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 447,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.09616",
+      "identity_tokens": [
+        "arXiv:2507.09616"
+      ],
+      "title": "MLoRQ: Bridging Low-Rank and Quantization for Transformer Compression",
+      "reason": "arXiv一次要旨。低ランク近似と混合精度量子化のrank/bit配分を最適化するが、実験は画像分類・物体検出・インスタンス分割用Vision Transformerのみで、生成LLMの推論・言語品質・KV・デコード評価はない。対象のLLM推論研究から外れる。",
+      "source_url": "https://arxiv.org/abs/2507.09616",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:20:53+09:00",
+      "last_checked_at": "2026-10-31T00:20:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 449,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22730",
+      "identity_tokens": [
+        "arXiv:2601.22730"
+      ],
+      "title": "ImgCoT: Compressing Long Chain of Thought into Compact Visual Tokens for Efficient Reasoning of Large Language Model",
+      "reason": "arXiv一次要旨。長いCoTを画像化した視覚的推論軌跡から潜在tokenへ圧縮し、必要な細部は低token尤度の文章ステップで補うハイブリッドImgCoTを提案。複数LLMとデータセットで、完全なCoTより少ないtokenで推論構造と精度を維持する。推論時のreasoning token圧縮に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2601.22730",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:20:53+09:00",
+      "last_checked_at": "2026-10-31T00:20:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 468,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.26488",
+      "identity_tokens": [
+        "arXiv:2609.26488"
+      ],
+      "title": "Spoken Language Models that Think Aloud",
+      "reason": "arXiv一次要旨。Thinker-Talkerの推論ストリームと短い進捗発話ストリームを非同期で動かし、ユーザーに聞こえる沈黙を減らす。リアルタイム対話の体感遅延と実行制御に関連するが、LLM自体のtoken生成速度・計算量・メモリの削減は要旨で未確認のためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.26488",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:20:53+09:00",
+      "last_checked_at": "2026-10-31T00:20:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 469,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.37818",
+      "identity_tokens": [
+        "arXiv:2609.37818"
+      ],
+      "title": "Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue",
+      "reason": "arXiv一次要旨。音声情報を用いた潜在推論をループTransformerで実行し、明示的なCoTを生成せず直接発話するLoopSLM。EchoMindでCoT-SFT比64.5%少ない生成token・約半分の遅延、Qwen3-Omni-Thinking比で34倍低遅延を報告し、音声LLMの推論効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.37818",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:20:53+09:00",
+      "last_checked_at": "2026-10-31T00:20:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 477,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

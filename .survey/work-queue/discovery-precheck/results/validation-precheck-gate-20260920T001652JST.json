@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "validation-precheck-gate-20260920T001652JST",
+  "run_key": "2026-09-20T00:16:52+09:00",
+  "axis": "validation-precheck-gate",
+  "snapshot_source_commit": "9ab53b795ff41a2c4c0c1e527b2d50695487bb61",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unseen_result_count": 0,
+  "results": [],
+  "allowed_records": [],
+  "receipt": "sha256:39031f5d0afb7aa1cd8d3dcf409f94cdd9cc531e564f0994ba862ccda7de24bc",
+  "next_action": "Evaluate only records in results[]. Do not re-add filtered records. When writing submit_discovery_round, include discovery_precheck.result_path and this receipt."
+}

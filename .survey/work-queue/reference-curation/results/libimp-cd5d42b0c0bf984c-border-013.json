@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd5d42b0c0bf984c-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.11453",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.11453",
+    "identity_tokens": [
+      "arXiv:2310.11453"
+    ],
+    "reason": "1bit重みでメモリ・エネルギーを削減するがモデル設計が主で実運用ランタイム評価は限定的。",
+    "first_checked_at": "2026-09-27T02:00:00+09:00",
+    "last_checked_at": "2026-09-30T09:47:28+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "BitNet: Scaling 1-bit Transformers for Large Language Models"
+  },
+  "processed_at": "2026-09-30T09:47:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd5d42b0c0bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

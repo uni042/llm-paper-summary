@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6e0b39d17fb8ec59-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1806.03822",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1806.03822",
+    "identity_tokens": [
+      "DOI:10.18653/v1/p18-2124",
+      "arXiv:1806.03822"
+    ],
+    "reason": "50,000超のadversarially written unanswerable questionを追加したSQuAD後継のreading-comprehension datasetを構築し、answerability判定能力を評価するdataset/benchmark研究で、LLM推論system効率化を提案しない。",
+    "first_checked_at": "2026-10-04T12:58:18+00:00",
+    "last_checked_at": "2026-10-04T12:58:18+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md"
+    ],
+    "title": "Know What You Don’t Know: Unanswerable Questions for SQuAD"
+  },
+  "processed_at": "2026-10-04T12:58:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6e0b39d17fb8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

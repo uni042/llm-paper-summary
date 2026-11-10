@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "93fb8a4c06d03a215f7a1d36f24315a8fd6c10066c7e71875de4a9057598222a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_eee1e8ea93748191bf11ad92df813a8d--2025-2503.18292-jenga-research-20261016-0230-scheduled-chat-30-r01.md",
+  "canonical_id": "DOI:10.1145/3731569.3764823",
+  "worker_completed_at": "2026-10-16T02:34:26+09:00",
+  "worker_run_key": "20261016-0230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6739,
+    "body_paragraphs": 40,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 125,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 125 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 125 < 500"
+  ],
+  "processed_at": "2026-10-16T14:22:33+00:00"
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b2c88a78ad6ce589-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.13035",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.13035",
+    "identity_tokens": [
+      "arXiv:2602.13035"
+    ],
+    "reason": "temperature policyをRLVR training trajectoryから学習する研究。decoding policy自体の最適化が主題だが、推論資源/時間削減が成果として示されない。",
+    "first_checked_at": "2026-10-05T14:13:42+00:00",
+    "last_checked_at": "2026-10-05T14:13:42+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md"
+    ],
+    "title": "Look Inward to Explore Outward: Learning Temperature Policy from LLM Internal States via Hierarchical RL"
+  },
+  "processed_at": "2026-10-05T14:13:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b2c88a78ad6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

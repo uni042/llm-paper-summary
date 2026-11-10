@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-11bc257b2b554907-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2606.27449",
+  "reason": "Primary abstract reviewed: Multi-head attention conventionally partitions the hidden dimension equally across all heads at every layer, enforcing an identical representational subspace dimension (dh = dmodel/h) throughout the models depth. In this work, we identify this uniform allocation as a fundamental structural bottleneck: due to their restricted dimensional space, early-layer heads are unable to faithfully capture complex, high-dimension… Out of scope: Compute-neutral architecture explicitly has no inference overhead change.",
+  "title": "Prism Transformer: Progressive Head Schedules for Hierarchical Attention Processing",
+  "identity_tokens": [
+    "arXiv:2606.27449"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+    "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11bc257b2b55",
+  "source_precheck_request_id": null
+}

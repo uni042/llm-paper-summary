@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7622440e7e17acf2-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1910.01108",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1910.01108",
+    "identity_tokens": [
+      "arXiv:1910.01108"
+    ],
+    "reason": "knowledge distillationでBERTを40%小型化し、97%の言語理解性能を保持しつつCPU推論を60%高速化、iPhone 7 PlusではBERT-base比71%高速化するなど、推論圧縮・edge deploymentへの明確な最終適用を持つ。一方、対象は2019年のencoder-only BERTで現代の生成LLM servingそのものではないためborderlineとする。",
+    "first_checked_at": "2026-10-04T14:32:42+00:00",
+    "last_checked_at": "2026-10-04T14:32:42+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
+    ],
+    "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter"
+  },
+  "processed_at": "2026-10-04T14:32:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7622440e7e17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

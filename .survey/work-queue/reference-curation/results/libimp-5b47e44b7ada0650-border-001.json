@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5b47e44b7ada0650-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.13407",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.13407",
+    "identity_tokens": [
+      "arXiv:2602.13407"
+    ],
+    "reason": "推論時の思考トークン長を短縮する目的で、自己生成した正解かつ簡潔な解答によるon-policy SFTへ多報酬RLを単純化する。推論コスト削減には関係するが、中心は学習目的関数・訓練効率であり、サービング・推論ランタイムや計算カーネルの新規実装ではないため境界扱い。",
+    "first_checked_at": "2026-10-30T10:54:03+00:00",
+    "last_checked_at": "2026-10-30T10:54:03+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "On-Policy Supervised Fine-Tuning for Efficient Reasoning"
+  },
+  "processed_at": "2026-10-30T10:54:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b47e44b7ada",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

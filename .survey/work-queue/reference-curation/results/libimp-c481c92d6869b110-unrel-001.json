@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c481c92d6869b110-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3695053.3731079",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3695053.3731079",
+    "identity_tokens": [
+      "DOI:10.1145/3695053.3731079"
+    ],
+    "reason": "高性能なdense retrievalをアルゴリズムと専用ハードウェアの協調設計で高速化する研究だが、最終適用先はベクトル検索エンジンであり、LLM本体の推論・サービング・KV管理を直接最適化しないため対象外。",
+    "first_checked_at": "2026-10-02T11:13:19+00:00",
+    "last_checked_at": "2026-10-02T11:13:19+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+    ],
+    "title": "DReX: Accurate and Scalable Dense Retrieval Acceleration via Algorithmic-Hardware Codesign"
+  },
+  "processed_at": "2026-10-02T11:13:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c481c92d6869",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

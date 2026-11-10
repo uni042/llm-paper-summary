@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "manual-e2e-20260923T0402Z-00",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "run_key": "manual-e2e-20260923T0402Z-00",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-23T04:02:00+00:00",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-17efeee08a231d8b",
+      "claim_id": "claim-ff6c2afd7fe3644b99148c7f",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-ff6c2afd7fe3644b99148c7f",
+      "claimed_at": "2026-09-23T04:04:26+00:00",
+      "expires_at": "2026-09-23T05:34:26+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-17efeee08a231d8b"
+      ],
+      "job": {
+        "job_id": "job-research-17efeee08a231d8b",
+        "type": "research",
+        "parent_job_id": "job-2fef032c4dc8c67d",
+        "priority": 96,
+        "canonical_id": "arXiv:2609.17890",
+        "arxiv_id": "2609.17890",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "OBC-Prune: Outcome-Based Calibration for Large Reasoning Model Pruning",
+        "source_url": "https://www.semanticscholar.org/paper/8456b042150e6d30d62ada358c9b4df669274113",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2609.17890-obc-prune-outcome-based-calibration-for-large-reasoning-model-pruning.md",
+        "selection_reason": "reasoning tokenのcausal importanceでSparseGPT/Wanda/ALPSのcalibration activationを再重み付けし40–50% sparsityでreasoning性能を改善。推論overhead削減系の高品質候補。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:23:26+00:00"
+      },
+      "run_key": "manual-e2e-20260923T0402Z-00",
+      "scheduled_slot": "00",
+      "actual_invocation_start": "2026-09-23T04:02:00+00:00",
+      "record_bank": "f",
+      "record_bank_root": ".survey/work-queue/records/chat-record-f",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-f/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-f/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-23T04:04:26+00:00",
+  "checkpoint_released": 0
+}

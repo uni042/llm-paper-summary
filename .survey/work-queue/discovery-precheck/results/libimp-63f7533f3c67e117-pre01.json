@@ -1,0 +1,1131 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-63f7533f3c67e117-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-63f7533f3c67",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1609/aaai.v39i23.34690",
+    "DOI:10.18653/v1/2025.findings-emnlp.1286",
+    "SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2",
+    "arXiv:2408.05391",
+    "arXiv:2501.18154",
+    "arXiv:2503.15758",
+    "arXiv:2504.12526",
+    "arXiv:2507.12442",
+    "arXiv:2508.06974",
+    "arXiv:2510.21956",
+    "arXiv:2510.26182",
+    "arXiv:2511.18936",
+    "arXiv:2512.12744"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "133023427db6dc3231cabfcde32b3a019e8cb756",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 12,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 12,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T06:06:08.189978+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1609/aaai.v39i23.34690",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-emnlp.1286",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.05391",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.18154",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.15758",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.12526",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.12442",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.06974",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.21956",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.26182",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.18936",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.12744",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:d77319a372d49ffb806701447b740feb411e6a37"
+    }
+  ],
+  "results": [
+    {
+      "title": "Dynamic-Width Speculative Beam Decoding for LLM Inference",
+      "source_url": "https://doi.org/10.1609/aaai.v39i23.34690",
+      "year": 2025,
+      "published": "2025-04-11",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) based on transformer architecture have shown outstanding performance across numerous real-world tasks. However, the autoregressive nature of these models makes the inference process slow and costly. \nSpeculative decoding has emerged as a promising solution, leveraging a smaller auxiliary model to draft future tokens, which are then validated simultaneously by the larger model, achieving a speed-up of 1-2x. Although speculative decoding matches the same distribution as multinomial sampling, multinomial sampling itself is prone to suboptimal outputs, where as beam sampling is widely recognized for producing higher-quality results by maintaining multiple candidate sequences at each step.\nThis paper explores the novel integration of speculative decoding with beam sampling. However, there are four key challenges: (1) how to generate multiple sequences from the larger model's distribution given drafts sequences from the small model; (2) how to dynamically optimize the number of beams to balance efficiency and accuracy; (3) how to efficiently verify the multiple drafts in parallel; and (4) how to address the extra memory costs inherent in beam sampling.\nTo address these challenges, we propose dynamic-width speculative beam decoding (DSBD). Specifically, we first introduce a novel draft and verification scheme that generates multiple sequences following the large model's distribution based on beam sampling trajectories from the small model. Then, we introduce an adaptive mechanism to dynamically tune the number of beams based on the context, optimizing efficiency and effectiveness. Besides, we extend tree-based parallel verification to handle multiple trees simultaneously, accelerating the verification process. Finally, we illustrate a simple modification to our algorithm to mitigate the memory overhead of beam sampling.\nExperimental results show that our approach achieves a 1.5-1.9x speed-up and1.8-2.5x lower energy consumption compared to beam sampling, with no loss in downstream performance. Moreover, it can produce significantly higher-quality outputs than speculative decoding, while maintaining similar time, memory, and energy costs. In summary, our method offers a more efficient and effective inference process for LLMs.",
+      "identifiers": [
+        "SemanticScholar:6c0809d8e8592da06643b474f0fd9d0b41f2ee35"
+      ],
+      "semantic_scholar_id": "6c0809d8e8592da06643b474f0fd9d0b41f2ee35",
+      "doi": "10.1609/aaai.v39i23.34690",
+      "canonical_id": "DOI:10.1609/aaai.v39i23.34690",
+      "authors": [
+        "Zong-Yue Qin",
+        "Zifan He",
+        "Neha Prakriya",
+        "Jason Cong",
+        "Yi-Zhou Sun"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 551,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FractalLLM: Lossless Self-Speculative Decoding with Layer Embedded Self-Compression",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.1286",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:449c6f530faa986b355c4b5309303d1f7019d2b2"
+      ],
+      "semantic_scholar_id": "449c6f530faa986b355c4b5309303d1f7019d2b2",
+      "doi": "10.18653/v1/2025.findings-emnlp.1286",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1286",
+      "authors": [
+        "Juhyeong Kim",
+        "Sangyeon Yu",
+        "Gyunyeop Kim",
+        "Sangwoo Kang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 470,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "SWAN: Sparse Winnowed Attention for Reduced Inference Memory via Decompression-Free KV-Cache Compression",
+      "source_url": "https://arxiv.org/abs/2511.18936",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) face a significant bottleneck during autoregressive inference due to the massive memory footprint of the Key-Value (KV) cache. Existing compression techniques like token eviction, quantization, or other low-rank methods often risk information loss, have fixed limits, or introduce significant computational overhead from explicit decompression steps. In this work, we introduce SWAN, a novel, fine-tuning-free framework that eliminates this overhead. Our method uses an offline orthogonal matrix to rotate and prune the KV-cache, which is then used directly in the attention computation without any reconstruction. Our extensive experiments demonstrate that SWAN, augmented with a small dense buffer, offers a robust trade-off, maintaining performance close to the uncompressed baseline even at aggressive 50-60% memory savings per-token on KV-cache. A key advantage is its runtime-tunable compression level, allowing operators to dynamically adjust the memory footprint, a flexibility absent in methods requiring fixed offline configurations. This combination of a decompression-free design, high performance under compression, and adaptability makes SWAN a practical and efficient solution for serving LLMs with long contexts.",
+      "identifiers": [
+        "SemanticScholar:b9afd9a3ca4d75ed264ce5ef47fe2e391c7b911d"
+      ],
+      "semantic_scholar_id": "b9afd9a3ca4d75ed264ce5ef47fe2e391c7b911d",
+      "canonical_id": "arXiv:2511.18936",
+      "arxiv_id": "2511.18936",
+      "doi": "10.48550/arXiv.2511.18936",
+      "authors": [
+        "S. SanthoshG",
+        "Saurav Prakash",
+        "Balaraman Ravindran"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 324,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mixed-Precision Graph Neural Quantization for Low Bit Large Language Models",
+      "source_url": "https://arxiv.org/abs/2501.18154",
+      "year": 2025,
+      "published": "2025-01-30",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-Training Quantization (PTQ) is pivotal for deploying large language models (LLMs) within resource-limited settings by significantly reducing resource demands. However, existing PTQ strategies underperform at low bit levels (< 3 bits) due to the significant difference between the quantized and original weights. To enhance the quantization performance at low bit widths, we introduce a Mixed-precision Graph Neural PTQ (MG-PTQ) approach, employing a graph neural network (GNN) module to capture dependencies among weights and adaptively assign quantization bit-widths. Through the information propagation of the GNN module, our method more effectively captures dependencies among target weights, leading to a more accurate assessment of weight importance and optimized allocation of quantization strategies. Extensive experiments on the WikiText2 and C4 datasets demonstrate that our MG-PTQ method outperforms previous state-of-the-art PTQ method GPTQ, setting new benchmarks for quantization performance under low-bit (< 3 bits) conditions.",
+      "identifiers": [
+        "SemanticScholar:71b88208d78cfda1cde863c8b5f04a5661167184"
+      ],
+      "semantic_scholar_id": "71b88208d78cfda1cde863c8b5f04a5661167184",
+      "canonical_id": "arXiv:2501.18154",
+      "arxiv_id": "2501.18154",
+      "doi": "10.1109/ICASSP49660.2025.10889834",
+      "authors": [
+        "Wan-Long Liu",
+        "Yi-Chen Xiao",
+        "DingYi Zeng",
+        "Hong-Yang Zhao",
+        "Wen-Yu Chen",
+        "Ma-Lu Zhang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 622,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SAMSA: Efficient Transformer for Many Data Modalities",
+      "source_url": "https://arxiv.org/abs/2408.05391",
+      "year": 2024,
+      "published": "2024-08-10",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The versatility of self-attention mechanism earned transformers great success in almost all data modalities, with limitations on the quadratic complexity and difficulty of training. Efficient transformers, on the other hand, often rely on clever data-modality-dependent construction to get over the quadratic complexity of transformers. This greatly hinders their applications on different data modalities, which is one of the pillars of contemporary foundational modeling. In this paper, we lay the groundwork for efficient foundational modeling by proposing SAMSA - SAMpling-Self-Attention, a context-aware linear complexity self-attention mechanism that works well on multiple data modalities. Our mechanism is based on a differentiable sampling without replacement method we discovered. This enables the self-attention module to attend to the most important token set, where the importance is defined by data. Moreover, as differentiability is not needed in inference, the sparse formulation of our method costs little time overhead, further lowering computational costs. In short, SAMSA achieved competitive or even SOTA results on many benchmarks, while being faster in inference, compared to other very specialized models. Against full self-attention, real inference time significantly decreases while performance ranges from negligible degradation to outperformance. We release our source code in the repository: https://github.com/HySonLab/SAMSA",
+      "identifiers": [
+        "SemanticScholar:bca796f85c77f21df1d8c9c48c9b24cc94bc895f"
+      ],
+      "semantic_scholar_id": "bca796f85c77f21df1d8c9c48c9b24cc94bc895f",
+      "canonical_id": "arXiv:2408.05391",
+      "arxiv_id": "2408.05391",
+      "doi": "10.48550/arXiv.2408.05391",
+      "authors": [
+        "Minh Lenhat",
+        "Viet Anh Nguyen",
+        "Khoa Nguyen",
+        "Hieu Duc Duong",
+        "Dao Huu Hung",
+        "T. Hy"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 795,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ATTENTION2D: Communication Efficient Distributed Self-Attention Mechanism",
+      "source_url": "https://arxiv.org/abs/2503.15758",
+      "year": 2025,
+      "published": "2025-03-19",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models have emerged as a leading architecture for natural language processing, natural language generation, and image generation tasks. A fundamental element of the transformer architecture is self-attention, which allows the model to capture intricate dependencies within the data. However, the self-attention mechanism also incurs significant computational and memory costs, particularly for long sequences. In this paper, we introduce ATTENTION2D, a novel approach that exploits parallelism along two dimensions - query and key/value - of the self-attention operation. This method enables efficient distribution and parallelization of computations across multiple devices. Our approach facilitates asymptotically faster training and inference phases compared to previous methods, without relying on approximations or incurring additional computational or memory overheads. Furthermore, unlike existing techniques that struggle to scale with an increasing number of processing units, our approach effectively scales with additional processing units. Our experimental results confirm the effectiveness of our method in improving communication efficiency and scalability. Compared to Ring Attention, our approach demonstrated up to a 5x performance boost on a GPT-3-like model using 64 NVIDIA A100 GPUs across 16 nodes, and up to a 9.4x performance boost on 64 NVIDIA H100 GPUs across 64 nodes.",
+      "identifiers": [
+        "SemanticScholar:b8becdf566f351dabb45220110eff06200635f26"
+      ],
+      "semantic_scholar_id": "b8becdf566f351dabb45220110eff06200635f26",
+      "canonical_id": "arXiv:2503.15758",
+      "arxiv_id": "2503.15758",
+      "doi": "10.48550/arXiv.2503.15758",
+      "authors": [
+        "V. Elango"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 574,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MOM: Memory-Efficient Offloaded Mini-Sequence Inference for Long Context Language Models",
+      "source_url": "https://arxiv.org/abs/2504.12526",
+      "year": 2025,
+      "published": "2025-04-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context language models exhibit impressive performance but remain challenging to deploy due to high GPU memory demands during inference. We propose Memory-efficient Offloaded Mini-sequence Inference (MOM), a method that partitions critical layers into smaller\"mini-sequences\"and integrates seamlessly with KV cache offloading. Experiments on various Llama, Qwen, and Mistral models demonstrate that MOM reduces peak memory usage by over 50\\% on average. On Meta-Llama-3.2-8B, MOM extends the maximum context length from 155k to 455k tokens on a single A100 80GB GPU, while keeping outputs identical and not compromising accuracy. MOM also maintains highly competitive throughput due to minimal computational overhead and efficient last-layer processing. Compared to traditional chunked prefill methods, MOM achieves a 35\\% greater context length extension. More importantly, our method drastically reduces prefill memory consumption, eliminating it as the longstanding dominant memory bottleneck during inference. This breakthrough fundamentally changes research priorities, redirecting future efforts from prefill-stage optimizations to improving decode-stage residual KV cache efficiency.",
+      "identifiers": [
+        "SemanticScholar:7974ac956c392d91b82c66c0ad55842dcce28963"
+      ],
+      "semantic_scholar_id": "7974ac956c392d91b82c66c0ad55842dcce28963",
+      "canonical_id": "arXiv:2504.12526",
+      "arxiv_id": "2504.12526",
+      "doi": "10.48550/arXiv.2504.12526",
+      "authors": [
+        "Junyang Zhang",
+        "Tianyi Zhu",
+        "Cheng Luo",
+        "Anima Anandkumar"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 546,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Characterizing State Space Model and Hybrid Language Model Performance with Long Context",
+      "source_url": "https://arxiv.org/abs/2507.12442",
+      "year": 2025,
+      "published": "2025-07-16",
+      "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Emerging applications such as AR are driving demands for machine intelligence capable of processing continuous and/or long-context inputs on local devices. However, currently dominant models based on Transformer architecture suffers from the quadratic computational and memory overhead, which hinders applications required to process long contexts. This has spurred a paradigm shift towards new architectures like State Space Models (SSMs) and SSM-Transformer hybrid models, which provide near-linear scaling. The near-linear scaling enabled efficient handling of millions of tokens while delivering high performance in recent studies. Although such works present promising results, their workload characteristics in terms of computational performance and hardware resource requirements are not yet thoroughly explored, which limits our understanding of their implications to the system level optimizations. To address this gap, we present a comprehensive, comparative benchmarking of carefully selected Transformers, SSMs, and hybrid models specifically for long-context inference on consumer and embedded GPUs. Our analysis shows that SSMs are well-suited for on-device AI on consumer and embedded GPUs for long context inferences. While Transformers are up to $1.9 \\times$ faster at short sequences ($ \\lt 8 \\mathrm{~K}$ tokens), SSMs demonstrate a dramatic performance inversion, becoming up to $4 \\times$ faster at very long contexts ($\\sim 57 \\mathrm{~K}$ tokens), thanks to their linear computational complexity and $\\boldsymbol{\\sim} \\mathbf{6 4 \\%}$ reduced memory footprint. Our operator-level analysis reveals that custom SSM kernels like selective scan despite being hardware-aware to minimize memory IO, dominate the inference runtime on edge platforms, accounting for over $55 \\%$ of latency due to their sequential, element-wise nature. To foster further research, we are sharing CPU/GPU profiling traces and have made our characterization framework SSM-Scope open-sourced at https://github.com/sapmitra/ssm-scope",
+      "identifiers": [
+        "SemanticScholar:e84fb028bcea9b4e0e293187e6c7f432e4b44741"
+      ],
+      "semantic_scholar_id": "e84fb028bcea9b4e0e293187e6c7f432e4b44741",
+      "canonical_id": "arXiv:2507.12442",
+      "arxiv_id": "2507.12442",
+      "doi": "10.1109/ISPASS69572.2026.00013",
+      "authors": [
+        "Saptarshi Mitra",
+        "Rachid Karami",
+        "Hao-Cheng Xu",
+        "Si-Tao Huang",
+        "Hyoukjun Kwon"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 455,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rethinking 1-bit Optimization Leveraging Pre-trained Large Language Models",
+      "source_url": "https://arxiv.org/abs/2508.06974",
+      "year": 2025,
+      "published": "2025-08-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "1-bit LLM quantization offers significant advantages in reducing storage and computational costs. However, existing methods typically train 1-bit LLMs from scratch, failing to fully leverage pre-trained models. This results in high training costs and notable accuracy degradation. We identify that the large gap between full precision and 1-bit representations makes naive adaptation difficult. In this paper, we introduce a consistent progressive training for both forward and backward, smoothly converting the full-precision weights into the binarized ones. Additionally, we incorporate binary-aware initialization and dual-scaling compensation to reduce the difficulty of progressive training and improve the performance. Experimental results on LLMs of various sizes demonstrate that our method outperforms existing approaches. Our results show that high-performance 1-bit LLMs can be achieved using pre-trained models, eliminating the need for expensive training from scratch.",
+      "identifiers": [
+        "SemanticScholar:bd2e46bd9abbff3f94d53de40b59cfc98c21362b"
+      ],
+      "semantic_scholar_id": "bd2e46bd9abbff3f94d53de40b59cfc98c21362b",
+      "canonical_id": "arXiv:2508.06974",
+      "arxiv_id": "2508.06974",
+      "doi": "10.48550/arXiv.2508.06974",
+      "authors": [
+        "Zhi-Jun Tu",
+        "Jian Li",
+        "Yuan-Yuan Xi",
+        "Siqi Liu",
+        "Chuanjian Liu",
+        "Hanting Chen",
+        "Jie Hu",
+        "Yunhe Wang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 431,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Transformer Based Linear Attention with Optimized GPU Kernel Implementation",
+      "source_url": "https://arxiv.org/abs/2510.21956",
+      "year": 2025,
+      "published": "2025-10-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The original softmax-based attention mechanism (regular attention) in the extremely successful Transformer architecture computes attention between $N$ tokens, each embedded in a $D$-dimensional head, with a time complexity of $O(N^2D)$. Given the success of Transformers, improving their runtime during both training and inference is a popular research area. One such approach is the introduction of the linear attention (LA) mechanisms, which offers a linear time complexity of $O(ND^2)$ and have demonstrated comparable accuracy to regular attention. However, LA in practice lags behind its theoretical efficiency. We propose a novel method for LA's forward and backward passes, along with a highly-optimized CUDA implementation. Our approach outperforms the state-of-the-art by 3.3 times in speed and reduces memory consumption by 3.6 times. We validate these improvements in both single-layer and end-to-end settings by training a 1.4 billion parameter language model, which demonstrates similar expressivity to regular attention on major reasoning benchmarks.",
+      "identifiers": [
+        "SemanticScholar:ae9c60679affdfe22737799527c81a47e2d70d00"
+      ],
+      "semantic_scholar_id": "ae9c60679affdfe22737799527c81a47e2d70d00",
+      "canonical_id": "arXiv:2510.21956",
+      "arxiv_id": "2510.21956",
+      "doi": "10.48550/arXiv.2510.21956",
+      "authors": [
+        "Armin Gerami",
+        "R. Duraiswami"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 355,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Characterizing self-speculative decoding approaches for accelerating LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/abb6ba1bc5470508150fe420ecb1cdd07caf0fa2",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2"
+      ],
+      "semantic_scholar_id": "abb6ba1bc5470508150fe420ecb1cdd07caf0fa2",
+      "canonical_id": "SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2",
+      "authors": [
+        "Jungmin Ha",
+        "Karthik Ganesan",
+        "Anh Nguyen",
+        "Tanvir Ahmed",
+        "A. Moshovos"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MossNet: Mixture of State-Space Experts is a Multi-Head Attention",
+      "source_url": "https://arxiv.org/abs/2510.26182",
+      "year": 2025,
+      "published": "2025-10-30",
+      "venue": "IJCNLP-AACL",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have significantly advanced generative applications in natural language processing (NLP). Recent trends in model architectures revolve around efficient variants of transformers or state-space/gated-recurrent models (SSMs, GRMs). However, prevailing SSM/GRM-based methods often emulate only a single attention head, potentially limiting their expressiveness. In this work, we propose MossNet, a novel mixture-of-state-space-experts architecture that emulates a linear multi-head attention (MHA). MossNet leverages a mixture-of-experts (MoE) implementation not only in channel-mixing multi-layered perceptron (MLP) blocks but also in the time-mixing SSM kernels to realize multiple\"attention heads.\"Extensive experiments on language modeling and downstream evaluations show that MossNet outperforms both transformer- and SSM-based architectures of similar model size and data budgets. Larger variants of MossNet, trained on trillions of tokens, further confirm its scalability and superior performance. In addition, real-device profiling on a Samsung Galaxy S24 Ultra and an Nvidia A100 GPU demonstrate favorable runtime speed and resource usage compared to similarly sized baselines. Our results suggest that MossNet is a compelling new direction for efficient, high-performing recurrent LLM architectures.",
+      "identifiers": [
+        "SemanticScholar:d963d02f7528354f31f6e59f858bb9af05bbdb5d"
+      ],
+      "semantic_scholar_id": "d963d02f7528354f31f6e59f858bb9af05bbdb5d",
+      "canonical_id": "arXiv:2510.26182",
+      "arxiv_id": "2510.26182",
+      "doi": "10.48550/arXiv.2510.26182",
+      "authors": [
+        "Shikhar Tuli",
+        "James Seale Smith",
+        "Haris Jeelani",
+        "Chi-Heng Lin",
+        "Abhishek Patel",
+        "Vasili Ramanishka",
+        "Yen-Chang Hsu",
+        "Hongxia Jin"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 349,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1609/aaai.v39i23.34690",
+      "identity_tokens": [
+        "id:DOI:10.1609/aaai.v39i23.34690",
+        "id:SemanticScholar:6c0809d8e8592da06643b474f0fd9d0b41f2ee35",
+        "title:dynamicwidth speculative beam decoding for llm inference",
+        "url:https://doi.org/10.1609/aaai.v39i23.34690"
+      ],
+      "record": {
+        "title": "Dynamic-Width Speculative Beam Decoding for LLM Inference",
+        "source_url": "https://doi.org/10.1609/aaai.v39i23.34690",
+        "year": 2025,
+        "published": "2025-04-11",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) based on transformer architecture have shown outstanding performance across numerous real-world tasks. However, the autoregressive nature of these models makes the inference process slow and costly. \nSpeculative decoding has emerged as a promising solution, leveraging a smaller auxiliary model to draft future tokens, which are then validated simultaneously by the larger model, achieving a speed-up of 1-2x. Although speculative decoding matches the same distribution as multinomial sampling, multinomial sampling itself is prone to suboptimal outputs, where as beam sampling is widely recognized for producing higher-quality results by maintaining multiple candidate sequences at each step.\nThis paper explores the novel integration of speculative decoding with beam sampling. However, there are four key challenges: (1) how to generate multiple sequences from the larger model's distribution given drafts sequences from the small model; (2) how to dynamically optimize the number of beams to balance efficiency and accuracy; (3) how to efficiently verify the multiple drafts in parallel; and (4) how to address the extra memory costs inherent in beam sampling.\nTo address these challenges, we propose dynamic-width speculative beam decoding (DSBD). Specifically, we first introduce a novel draft and verification scheme that generates multiple sequences following the large model's distribution based on beam sampling trajectories from the small model. Then, we introduce an adaptive mechanism to dynamically tune the number of beams based on the context, optimizing efficiency and effectiveness. Besides, we extend tree-based parallel verification to handle multiple trees simultaneously, accelerating the verification process. Finally, we illustrate a simple modification to our algorithm to mitigate the memory overhead of beam sampling.\nExperimental results show that our approach achieves a 1.5-1.9x speed-up and1.8-2.5x lower energy consumption compared to beam sampling, with no loss in downstream performance. Moreover, it can produce significantly higher-quality outputs than speculative decoding, while maintaining similar time, memory, and energy costs. In summary, our method offers a more efficient and effective inference process for LLMs.",
+        "identifiers": [
+          "SemanticScholar:6c0809d8e8592da06643b474f0fd9d0b41f2ee35"
+        ],
+        "semantic_scholar_id": "6c0809d8e8592da06643b474f0fd9d0b41f2ee35",
+        "doi": "10.1609/aaai.v39i23.34690",
+        "canonical_id": "DOI:10.1609/aaai.v39i23.34690",
+        "authors": [
+          "Zong-Yue Qin",
+          "Zifan He",
+          "Neha Prakriya",
+          "Jason Cong",
+          "Yi-Zhou Sun"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 551,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.findings-emnlp.1286",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-emnlp.1286",
+        "id:SemanticScholar:449c6f530faa986b355c4b5309303d1f7019d2b2",
+        "title:fractalllm lossless selfspeculative decoding with layer embedded selfcompression",
+        "url:https://doi.org/10.18653/v1/2025.findings-emnlp.1286"
+      ],
+      "record": {
+        "title": "FractalLLM: Lossless Self-Speculative Decoding with Layer Embedded Self-Compression",
+        "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.1286",
+        "year": 2025,
+        "published": null,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:449c6f530faa986b355c4b5309303d1f7019d2b2"
+        ],
+        "semantic_scholar_id": "449c6f530faa986b355c4b5309303d1f7019d2b2",
+        "doi": "10.18653/v1/2025.findings-emnlp.1286",
+        "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1286",
+        "authors": [
+          "Juhyeong Kim",
+          "Sangyeon Yu",
+          "Gyunyeop Kim",
+          "Sangwoo Kang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 470,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.18936",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.18936",
+        "id:SemanticScholar:b9afd9a3ca4d75ed264ce5ef47fe2e391c7b911d",
+        "id:arXiv:2511.18936",
+        "title:swan sparse winnowed attention for reduced inference memory via decompressionfree kvcache compression",
+        "url:https://arxiv.org/abs/2511.18936"
+      ],
+      "record": {
+        "title": "SWAN: Sparse Winnowed Attention for Reduced Inference Memory via Decompression-Free KV-Cache Compression",
+        "source_url": "https://arxiv.org/abs/2511.18936",
+        "year": 2025,
+        "published": "2025-11-24",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) face a significant bottleneck during autoregressive inference due to the massive memory footprint of the Key-Value (KV) cache. Existing compression techniques like token eviction, quantization, or other low-rank methods often risk information loss, have fixed limits, or introduce significant computational overhead from explicit decompression steps. In this work, we introduce SWAN, a novel, fine-tuning-free framework that eliminates this overhead. Our method uses an offline orthogonal matrix to rotate and prune the KV-cache, which is then used directly in the attention computation without any reconstruction. Our extensive experiments demonstrate that SWAN, augmented with a small dense buffer, offers a robust trade-off, maintaining performance close to the uncompressed baseline even at aggressive 50-60% memory savings per-token on KV-cache. A key advantage is its runtime-tunable compression level, allowing operators to dynamically adjust the memory footprint, a flexibility absent in methods requiring fixed offline configurations. This combination of a decompression-free design, high performance under compression, and adaptability makes SWAN a practical and efficient solution for serving LLMs with long contexts.",
+        "identifiers": [
+          "SemanticScholar:b9afd9a3ca4d75ed264ce5ef47fe2e391c7b911d"
+        ],
+        "semantic_scholar_id": "b9afd9a3ca4d75ed264ce5ef47fe2e391c7b911d",
+        "canonical_id": "arXiv:2511.18936",
+        "arxiv_id": "2511.18936",
+        "doi": "10.48550/arXiv.2511.18936",
+        "authors": [
+          "S. SanthoshG",
+          "Saurav Prakash",
+          "Balaraman Ravindran"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 324,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.18154",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp49660.2025.10889834",
+        "id:SemanticScholar:71b88208d78cfda1cde863c8b5f04a5661167184",
+        "id:arXiv:2501.18154",
+        "title:mixedprecision graph neural quantization for low bit large language models",
+        "url:https://arxiv.org/abs/2501.18154"
+      ],
+      "record": {
+        "title": "Mixed-Precision Graph Neural Quantization for Low Bit Large Language Models",
+        "source_url": "https://arxiv.org/abs/2501.18154",
+        "year": 2025,
+        "published": "2025-01-30",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-Training Quantization (PTQ) is pivotal for deploying large language models (LLMs) within resource-limited settings by significantly reducing resource demands. However, existing PTQ strategies underperform at low bit levels (< 3 bits) due to the significant difference between the quantized and original weights. To enhance the quantization performance at low bit widths, we introduce a Mixed-precision Graph Neural PTQ (MG-PTQ) approach, employing a graph neural network (GNN) module to capture dependencies among weights and adaptively assign quantization bit-widths. Through the information propagation of the GNN module, our method more effectively captures dependencies among target weights, leading to a more accurate assessment of weight importance and optimized allocation of quantization strategies. Extensive experiments on the WikiText2 and C4 datasets demonstrate that our MG-PTQ method outperforms previous state-of-the-art PTQ method GPTQ, setting new benchmarks for quantization performance under low-bit (< 3 bits) conditions.",
+        "identifiers": [
+          "SemanticScholar:71b88208d78cfda1cde863c8b5f04a5661167184"
+        ],
+        "semantic_scholar_id": "71b88208d78cfda1cde863c8b5f04a5661167184",
+        "canonical_id": "arXiv:2501.18154",
+        "arxiv_id": "2501.18154",
+        "doi": "10.1109/ICASSP49660.2025.10889834",
+        "authors": [
+          "Wan-Long Liu",
+          "Yi-Chen Xiao",
+          "DingYi Zeng",
+          "Hong-Yang Zhao",
+          "Wen-Yu Chen",
+          "Ma-Lu Zhang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 622,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.05391",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.05391",
+        "id:SemanticScholar:bca796f85c77f21df1d8c9c48c9b24cc94bc895f",
+        "id:arXiv:2408.05391",
+        "title:samsa efficient transformer for many data modalities",
+        "url:https://arxiv.org/abs/2408.05391"
+      ],
+      "record": {
+        "title": "SAMSA: Efficient Transformer for Many Data Modalities",
+        "source_url": "https://arxiv.org/abs/2408.05391",
+        "year": 2024,
+        "published": "2024-08-10",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The versatility of self-attention mechanism earned transformers great success in almost all data modalities, with limitations on the quadratic complexity and difficulty of training. Efficient transformers, on the other hand, often rely on clever data-modality-dependent construction to get over the quadratic complexity of transformers. This greatly hinders their applications on different data modalities, which is one of the pillars of contemporary foundational modeling. In this paper, we lay the groundwork for efficient foundational modeling by proposing SAMSA - SAMpling-Self-Attention, a context-aware linear complexity self-attention mechanism that works well on multiple data modalities. Our mechanism is based on a differentiable sampling without replacement method we discovered. This enables the self-attention module to attend to the most important token set, where the importance is defined by data. Moreover, as differentiability is not needed in inference, the sparse formulation of our method costs little time overhead, further lowering computational costs. In short, SAMSA achieved competitive or even SOTA results on many benchmarks, while being faster in inference, compared to other very specialized models. Against full self-attention, real inference time significantly decreases while performance ranges from negligible degradation to outperformance. We release our source code in the repository: https://github.com/HySonLab/SAMSA",
+        "identifiers": [
+          "SemanticScholar:bca796f85c77f21df1d8c9c48c9b24cc94bc895f"
+        ],
+        "semantic_scholar_id": "bca796f85c77f21df1d8c9c48c9b24cc94bc895f",
+        "canonical_id": "arXiv:2408.05391",
+        "arxiv_id": "2408.05391",
+        "doi": "10.48550/arXiv.2408.05391",
+        "authors": [
+          "Minh Lenhat",
+          "Viet Anh Nguyen",
+          "Khoa Nguyen",
+          "Hieu Duc Duong",
+          "Dao Huu Hung",
+          "T. Hy"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 795,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.15758",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.15758",
+        "id:SemanticScholar:b8becdf566f351dabb45220110eff06200635f26",
+        "id:arXiv:2503.15758",
+        "title:attention2d communication efficient distributed selfattention mechanism",
+        "url:https://arxiv.org/abs/2503.15758"
+      ],
+      "record": {
+        "title": "ATTENTION2D: Communication Efficient Distributed Self-Attention Mechanism",
+        "source_url": "https://arxiv.org/abs/2503.15758",
+        "year": 2025,
+        "published": "2025-03-19",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based models have emerged as a leading architecture for natural language processing, natural language generation, and image generation tasks. A fundamental element of the transformer architecture is self-attention, which allows the model to capture intricate dependencies within the data. However, the self-attention mechanism also incurs significant computational and memory costs, particularly for long sequences. In this paper, we introduce ATTENTION2D, a novel approach that exploits parallelism along two dimensions - query and key/value - of the self-attention operation. This method enables efficient distribution and parallelization of computations across multiple devices. Our approach facilitates asymptotically faster training and inference phases compared to previous methods, without relying on approximations or incurring additional computational or memory overheads. Furthermore, unlike existing techniques that struggle to scale with an increasing number of processing units, our approach effectively scales with additional processing units. Our experimental results confirm the effectiveness of our method in improving communication efficiency and scalability. Compared to Ring Attention, our approach demonstrated up to a 5x performance boost on a GPT-3-like model using 64 NVIDIA A100 GPUs across 16 nodes, and up to a 9.4x performance boost on 64 NVIDIA H100 GPUs across 64 nodes.",
+        "identifiers": [
+          "SemanticScholar:b8becdf566f351dabb45220110eff06200635f26"
+        ],
+        "semantic_scholar_id": "b8becdf566f351dabb45220110eff06200635f26",
+        "canonical_id": "arXiv:2503.15758",
+        "arxiv_id": "2503.15758",
+        "doi": "10.48550/arXiv.2503.15758",
+        "authors": [
+          "V. Elango"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 574,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.12526",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.12526",
+        "id:SemanticScholar:7974ac956c392d91b82c66c0ad55842dcce28963",
+        "id:arXiv:2504.12526",
+        "title:mom memoryefficient offloaded minisequence inference for long context language models",
+        "url:https://arxiv.org/abs/2504.12526"
+      ],
+      "record": {
+        "title": "MOM: Memory-Efficient Offloaded Mini-Sequence Inference for Long Context Language Models",
+        "source_url": "https://arxiv.org/abs/2504.12526",
+        "year": 2025,
+        "published": "2025-04-16",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context language models exhibit impressive performance but remain challenging to deploy due to high GPU memory demands during inference. We propose Memory-efficient Offloaded Mini-sequence Inference (MOM), a method that partitions critical layers into smaller\"mini-sequences\"and integrates seamlessly with KV cache offloading. Experiments on various Llama, Qwen, and Mistral models demonstrate that MOM reduces peak memory usage by over 50\\% on average. On Meta-Llama-3.2-8B, MOM extends the maximum context length from 155k to 455k tokens on a single A100 80GB GPU, while keeping outputs identical and not compromising accuracy. MOM also maintains highly competitive throughput due to minimal computational overhead and efficient last-layer processing. Compared to traditional chunked prefill methods, MOM achieves a 35\\% greater context length extension. More importantly, our method drastically reduces prefill memory consumption, eliminating it as the longstanding dominant memory bottleneck during inference. This breakthrough fundamentally changes research priorities, redirecting future efforts from prefill-stage optimizations to improving decode-stage residual KV cache efficiency.",
+        "identifiers": [
+          "SemanticScholar:7974ac956c392d91b82c66c0ad55842dcce28963"
+        ],
+        "semantic_scholar_id": "7974ac956c392d91b82c66c0ad55842dcce28963",
+        "canonical_id": "arXiv:2504.12526",
+        "arxiv_id": "2504.12526",
+        "doi": "10.48550/arXiv.2504.12526",
+        "authors": [
+          "Junyang Zhang",
+          "Tianyi Zhu",
+          "Cheng Luo",
+          "Anima Anandkumar"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 546,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.12442",
+      "identity_tokens": [
+        "id:DOI:10.1109/ispass69572.2026.00013",
+        "id:SemanticScholar:e84fb028bcea9b4e0e293187e6c7f432e4b44741",
+        "id:arXiv:2507.12442",
+        "title:characterizing state space model and hybrid language model performance with long context",
+        "url:https://arxiv.org/abs/2507.12442"
+      ],
+      "record": {
+        "title": "Characterizing State Space Model and Hybrid Language Model Performance with Long Context",
+        "source_url": "https://arxiv.org/abs/2507.12442",
+        "year": 2025,
+        "published": "2025-07-16",
+        "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Emerging applications such as AR are driving demands for machine intelligence capable of processing continuous and/or long-context inputs on local devices. However, currently dominant models based on Transformer architecture suffers from the quadratic computational and memory overhead, which hinders applications required to process long contexts. This has spurred a paradigm shift towards new architectures like State Space Models (SSMs) and SSM-Transformer hybrid models, which provide near-linear scaling. The near-linear scaling enabled efficient handling of millions of tokens while delivering high performance in recent studies. Although such works present promising results, their workload characteristics in terms of computational performance and hardware resource requirements are not yet thoroughly explored, which limits our understanding of their implications to the system level optimizations. To address this gap, we present a comprehensive, comparative benchmarking of carefully selected Transformers, SSMs, and hybrid models specifically for long-context inference on consumer and embedded GPUs. Our analysis shows that SSMs are well-suited for on-device AI on consumer and embedded GPUs for long context inferences. While Transformers are up to $1.9 \\times$ faster at short sequences ($ \\lt 8 \\mathrm{~K}$ tokens), SSMs demonstrate a dramatic performance inversion, becoming up to $4 \\times$ faster at very long contexts ($\\sim 57 \\mathrm{~K}$ tokens), thanks to their linear computational complexity and $\\boldsymbol{\\sim} \\mathbf{6 4 \\%}$ reduced memory footprint. Our operator-level analysis reveals that custom SSM kernels like selective scan despite being hardware-aware to minimize memory IO, dominate the inference runtime on edge platforms, accounting for over $55 \\%$ of latency due to their sequential, element-wise nature. To foster further research, we are sharing CPU/GPU profiling traces and have made our characterization framework SSM-Scope open-sourced at https://github.com/sapmitra/ssm-scope",
+        "identifiers": [
+          "SemanticScholar:e84fb028bcea9b4e0e293187e6c7f432e4b44741"
+        ],
+        "semantic_scholar_id": "e84fb028bcea9b4e0e293187e6c7f432e4b44741",
+        "canonical_id": "arXiv:2507.12442",
+        "arxiv_id": "2507.12442",
+        "doi": "10.1109/ISPASS69572.2026.00013",
+        "authors": [
+          "Saptarshi Mitra",
+          "Rachid Karami",
+          "Hao-Cheng Xu",
+          "Si-Tao Huang",
+          "Hyoukjun Kwon"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 455,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.06974",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.06974",
+        "id:SemanticScholar:bd2e46bd9abbff3f94d53de40b59cfc98c21362b",
+        "id:arXiv:2508.06974",
+        "title:rethinking 1bit optimization leveraging pretrained large language models",
+        "url:https://arxiv.org/abs/2508.06974"
+      ],
+      "record": {
+        "title": "Rethinking 1-bit Optimization Leveraging Pre-trained Large Language Models",
+        "source_url": "https://arxiv.org/abs/2508.06974",
+        "year": 2025,
+        "published": "2025-08-09",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "1-bit LLM quantization offers significant advantages in reducing storage and computational costs. However, existing methods typically train 1-bit LLMs from scratch, failing to fully leverage pre-trained models. This results in high training costs and notable accuracy degradation. We identify that the large gap between full precision and 1-bit representations makes naive adaptation difficult. In this paper, we introduce a consistent progressive training for both forward and backward, smoothly converting the full-precision weights into the binarized ones. Additionally, we incorporate binary-aware initialization and dual-scaling compensation to reduce the difficulty of progressive training and improve the performance. Experimental results on LLMs of various sizes demonstrate that our method outperforms existing approaches. Our results show that high-performance 1-bit LLMs can be achieved using pre-trained models, eliminating the need for expensive training from scratch.",
+        "identifiers": [
+          "SemanticScholar:bd2e46bd9abbff3f94d53de40b59cfc98c21362b"
+        ],
+        "semantic_scholar_id": "bd2e46bd9abbff3f94d53de40b59cfc98c21362b",
+        "canonical_id": "arXiv:2508.06974",
+        "arxiv_id": "2508.06974",
+        "doi": "10.48550/arXiv.2508.06974",
+        "authors": [
+          "Zhi-Jun Tu",
+          "Jian Li",
+          "Yuan-Yuan Xi",
+          "Siqi Liu",
+          "Chuanjian Liu",
+          "Hanting Chen",
+          "Jie Hu",
+          "Yunhe Wang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 431,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.21956",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.21956",
+        "id:SemanticScholar:ae9c60679affdfe22737799527c81a47e2d70d00",
+        "id:arXiv:2510.21956",
+        "title:transformer based linear attention with optimized gpu kernel implementation",
+        "url:https://arxiv.org/abs/2510.21956"
+      ],
+      "record": {
+        "title": "Transformer Based Linear Attention with Optimized GPU Kernel Implementation",
+        "source_url": "https://arxiv.org/abs/2510.21956",
+        "year": 2025,
+        "published": "2025-10-24",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The original softmax-based attention mechanism (regular attention) in the extremely successful Transformer architecture computes attention between $N$ tokens, each embedded in a $D$-dimensional head, with a time complexity of $O(N^2D)$. Given the success of Transformers, improving their runtime during both training and inference is a popular research area. One such approach is the introduction of the linear attention (LA) mechanisms, which offers a linear time complexity of $O(ND^2)$ and have demonstrated comparable accuracy to regular attention. However, LA in practice lags behind its theoretical efficiency. We propose a novel method for LA's forward and backward passes, along with a highly-optimized CUDA implementation. Our approach outperforms the state-of-the-art by 3.3 times in speed and reduces memory consumption by 3.6 times. We validate these improvements in both single-layer and end-to-end settings by training a 1.4 billion parameter language model, which demonstrates similar expressivity to regular attention on major reasoning benchmarks.",
+        "identifiers": [
+          "SemanticScholar:ae9c60679affdfe22737799527c81a47e2d70d00"
+        ],
+        "semantic_scholar_id": "ae9c60679affdfe22737799527c81a47e2d70d00",
+        "canonical_id": "arXiv:2510.21956",
+        "arxiv_id": "2510.21956",
+        "doi": "10.48550/arXiv.2510.21956",
+        "authors": [
+          "Armin Gerami",
+          "R. Duraiswami"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 355,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2",
+      "identity_tokens": [
+        "id:SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2",
+        "title:characterizing selfspeculative decoding approaches for accelerating llms",
+        "url:https://www.semanticscholar.org/paper/abb6ba1bc5470508150fe420ecb1cdd07caf0fa2"
+      ],
+      "record": {
+        "title": "Characterizing self-speculative decoding approaches for accelerating LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/abb6ba1bc5470508150fe420ecb1cdd07caf0fa2",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2"
+        ],
+        "semantic_scholar_id": "abb6ba1bc5470508150fe420ecb1cdd07caf0fa2",
+        "canonical_id": "SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2",
+        "authors": [
+          "Jungmin Ha",
+          "Karthik Ganesan",
+          "Anh Nguyen",
+          "Tanvir Ahmed",
+          "A. Moshovos"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.26182",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.26182",
+        "id:SemanticScholar:d963d02f7528354f31f6e59f858bb9af05bbdb5d",
+        "id:arXiv:2510.26182",
+        "title:mossnet mixture of statespace experts is a multihead attention",
+        "url:https://arxiv.org/abs/2510.26182"
+      ],
+      "record": {
+        "title": "MossNet: Mixture of State-Space Experts is a Multi-Head Attention",
+        "source_url": "https://arxiv.org/abs/2510.26182",
+        "year": 2025,
+        "published": "2025-10-30",
+        "venue": "IJCNLP-AACL",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have significantly advanced generative applications in natural language processing (NLP). Recent trends in model architectures revolve around efficient variants of transformers or state-space/gated-recurrent models (SSMs, GRMs). However, prevailing SSM/GRM-based methods often emulate only a single attention head, potentially limiting their expressiveness. In this work, we propose MossNet, a novel mixture-of-state-space-experts architecture that emulates a linear multi-head attention (MHA). MossNet leverages a mixture-of-experts (MoE) implementation not only in channel-mixing multi-layered perceptron (MLP) blocks but also in the time-mixing SSM kernels to realize multiple\"attention heads.\"Extensive experiments on language modeling and downstream evaluations show that MossNet outperforms both transformer- and SSM-based architectures of similar model size and data budgets. Larger variants of MossNet, trained on trillions of tokens, further confirm its scalability and superior performance. In addition, real-device profiling on a Samsung Galaxy S24 Ultra and an Nvidia A100 GPU demonstrate favorable runtime speed and resource usage compared to similarly sized baselines. Our results suggest that MossNet is a compelling new direction for efficient, high-performing recurrent LLM architectures.",
+        "identifiers": [
+          "SemanticScholar:d963d02f7528354f31f6e59f858bb9af05bbdb5d"
+        ],
+        "semantic_scholar_id": "d963d02f7528354f31f6e59f858bb9af05bbdb5d",
+        "canonical_id": "arXiv:2510.26182",
+        "arxiv_id": "2510.26182",
+        "doi": "10.48550/arXiv.2510.26182",
+        "authors": [
+          "Shikhar Tuli",
+          "James Seale Smith",
+          "Haris Jeelani",
+          "Chi-Heng Lin",
+          "Abhishek Patel",
+          "Vasili Ramanishka",
+          "Yen-Chang Hsu",
+          "Hongxia Jin"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 349,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e920e8856876376aecc6b861d5bccf560503ca7c4443987dbba3e15f338ef89b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

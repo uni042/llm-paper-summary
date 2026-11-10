@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-91c27f1c1c2b7e8a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.03244",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.03244",
+    "identity_tokens": [
+      "arXiv:2605.03244"
+    ],
+    "reason": "arXiv要旨は映画脚本の物語要約とplot nuclei抽出を提案し、LLMを含む処理も物語要約用。推論基盤、LLM推論の計算・メモリ効率やservingを改善する手法ではない。",
+    "first_checked_at": "2026-10-06T20:45:19+00:00",
+    "last_checked_at": "2026-10-06T20:45:19+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "S2tory: Story Spine Distillation for Movie Script Summarization"
+  },
+  "processed_at": "2026-10-06T20:45:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-91c27f1c1c2b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

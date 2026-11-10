@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-580e8d455d2bd88c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.17518",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.17518",
+    "identity_tokens": [
+      "arXiv:2606.17518"
+    ],
+    "reason": "Speculative generation accelerates agentic GPU-kernel optimization/search; LLM is a tool, not the served inference target.",
+    "first_checked_at": "2026-10-05T12:02:44+00:00",
+    "last_checked_at": "2026-10-05T12:02:44+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "SpecGen: Accelerating Agentic Kernel Optimization with Speculative Generation"
+  },
+  "processed_at": "2026-10-05T12:02:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-580e8d455d2b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

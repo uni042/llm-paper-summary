@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a3c398d0522dbf2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.03336",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.03336",
+    "identity_tokens": [
+      "arXiv:2604.03336"
+    ],
+    "reason": "NativeTernary encodes ternary weights and structure; a BitNet b1.58 2B example estimates 91-byte boundary metadata vs about 42KB GGUF headers. Benchmarks are assumption-based/single-core synthetic, with checkpoint validation planned. It reduces format/header overhead, not inference compute/runtime memory; weak serving relation.",
+    "first_checked_at": "2026-10-06T10:45:43+00:00",
+    "last_checked_at": "2026-10-06T10:45:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "NativeTernary: A Self-Delimiting Binary Encoding with Unary Run-Length Hierarchy Markers for Ternary Neural Network Weights, Structured Data, and General Computing Infrastructure"
+  },
+  "processed_at": "2026-10-06T10:45:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a3c398d0522",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

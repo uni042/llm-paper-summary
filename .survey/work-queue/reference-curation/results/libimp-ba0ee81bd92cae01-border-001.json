@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ba0ee81bd92cae01-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.01444",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.01444",
+    "identity_tokens": [
+      "arXiv:2607.01444"
+    ],
+    "reason": "一次要旨は、既存の混合専門家（MoE）モデル4種類について既存の専門家枝刈り法6種類と複数の削減率を、生物医学分野内外の生成・分類タスクで比較し、軽度枝刈りでは分野内性能を保てても高削減率で幻覚が増え、一般分野へ移ると性能と事実信頼性が急落すると報告する。推論時のモデル容量削減という関係はあるが、新しい枝刈りアルゴリズム、推論カーネル、配置、オフロード、実測サービング機構の提案を一次要旨から確認できない。性能・信頼性の応用領域評価が中心なので、推論システム技術の直接貢献としてacceptせずborderlineとする。",
+    "first_checked_at": "2026-10-11T17:49:18+00:00",
+    "last_checked_at": "2026-10-20T03:48:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "On the Utility and Factual Reliability of Pruned Mixture-of-Experts Models in the Biomedical Domain"
+  },
+  "processed_at": "2026-10-20T03:48:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ba0ee81bd92c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

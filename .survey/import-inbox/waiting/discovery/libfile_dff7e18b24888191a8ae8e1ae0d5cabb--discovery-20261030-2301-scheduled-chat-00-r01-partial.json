@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2301-scheduled-chat-00/r01",
+  "reference_main_sha": "456436e84aa7ad209abb14a1086680aabe8d1f67",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3534619",
+      "identity_tokens": [
+        "DOI:10.1145/3534619"
+      ],
+      "title": "MobiVQA: Efficient On-Device Visual Question Answering",
+      "reason": "著者所属大学の正式書誌・一次要旨では、画像と言語を組み合わせる視覚質問応答をクラウドなしで携帯端末上で動かすため、視覚と言語の依存関係を考慮した複数の最適化を提案する。2つのVQA評価系と2種類のモバイル環境を対象に、携帯端末上163ミリ秒の応答、従来高精度モデルの20秒超との比較、正解率低下1ポイント未満を報告する。ただし2022年の専用VQA推論であり、生成LLMのKVキャッシュ、デコード、サービングへの具体的適用やLLM上の測定は要旨で確認できないため、推論効率との接点はあるが直接収録を保留する。",
+      "source_url": "https://doi.org/10.1145/3534619",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T14:01:42.968878+00:00",
+      "last_checked_at": "2026-10-30T14:01:42.968878+00:00",
+      "linked_from": [
+        "Sparse Attention"
+      ],
+      "worklist_rank": 490,
+      "primary_abstract_url": "https://researchconnect.stonybrook.edu/en/publications/mobivqa-efficient-on-device-visual-question-answering/"
+    }
+  ]
+}

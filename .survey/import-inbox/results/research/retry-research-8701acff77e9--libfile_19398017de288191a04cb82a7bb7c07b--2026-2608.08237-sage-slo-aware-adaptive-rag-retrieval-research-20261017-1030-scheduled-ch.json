@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5d9f60302c83f8fe5fcbe721e36d94a4e68fab8a3e8888f9cb3646188268e24b",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8701acff77e9--libfile_19398017de288191a04cb82a7bb7c07b--2026-2608.08237-sage-slo-aware-adaptive-rag-retrieval-research-20261017-1030-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2608.08237",
+  "worker_completed_at": "2026-10-17T10:40:00+09:00",
+  "worker_run_key": "20261017-1030-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4963,
+    "body_paragraphs": 30,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 617,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-17T17:03:41+00:00"
+}

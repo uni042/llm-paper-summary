@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-190b413bbec4643a-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2201.11903",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2201.11903",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2201.11903",
+      "arXiv:2201.11903"
+    ],
+    "reason": "Chain-of-Thought prompting is performed at inference and improves reasoning accuracy by adding intermediate generated reasoning steps. The primary paper evaluates task accuracy, not inference serving, runtime efficiency, or memory/compression; longer reasoning can increase token generation. It is adjacent to inference-time methods but does not establish an inference-efficiency contribution, so retain as borderline rather than treating it as an in-scope systems paper.",
+    "first_checked_at": "2026-10-03T14:28:52+00:00",
+    "last_checked_at": "2026-10-03T14:28:52+00:00",
+    "linked_from": [
+      "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[8]"
+    ],
+    "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+  },
+  "processed_at": "2026-10-03T14:28:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-190b413bbec4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

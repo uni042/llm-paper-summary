@@ -1,0 +1,109 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7eb00600c81e89b6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7eb00600c81e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2401.08383"
+  ],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "076e48215212df370a7dc7589914cfc9fa7db66f",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T06:05:29.263835+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2401.08383",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Exploiting Inter-Layer Expert Affinity for Accelerating Mixture-of-Experts Model Inference",
+      "source_url": "https://arxiv.org/abs/2401.08383",
+      "year": 2024,
+      "published": "2024-01-16",
+      "abstract": "In the realm of large language models (LLMs) like the Generative Pre-trained Transformer (GPT), the Mixture of Experts (MoE) paradigm has emerged as a powerful technique for enhancing model expressiveness and accuracy. However, the deployment of GPT MoE models for parallel inference on distributed systems presents significant challenges, primarily due to the extensive Alltoall communication required for expert routing and aggregation. This communication bottleneck exacerbates the already complex computational landscape, hindering the efficient utilization of high-performance computing resources. In this paper, we propose a lightweight optimization technique called ExFlow, to largely accelerate the inference of these MoE models. We take a new perspective on alleviating the communication overhead by exploiting the inter-layer expert affinity. Unlike previous methods, our solution can be directly applied to pre-trained MoE models without any fine-tuning or accuracy degradation. By proposing a context-coherent expert parallelism on distributed systems, our ExFlow design only uses one Alltoall communication to deliver the same functionality while previous methods all require two Alltoalls. By carefully examining the conditional probability in tokens’ routing across multiple layers, we proved that pre-trained GPT MoE models implicitly exhibit a strong inter-layer expert affinity. We then design an efficient integer programming model to precisely capture such features and show that by properly placing the experts on corresponding GPUs, we can reduce up to 67% of tokens’ cross-GPU routing latency on various hardware configurations and topologies. Our solution beats the cutting-edge Deepspeed-MoE in GPT MoE models with experts from 8 to 64, with up to 2.2x improvement in inference throughput. To the best of our knowledge, this is the first work in leveraging inter-layer expert affinity to accelerate the inference of GPT MoE models. We further provide a detailed study of how the model implicitly acquires this expert affinity at the very early training stage and how this affinity evolves and stabilizes during training.",
+      "canonical_id": "arXiv:2401.08383",
+      "arxiv_id": "2401.08383",
+      "doi": "10.1109/IPDPS57955.2024.00086",
+      "authors": [
+        "Jinghan Yao",
+        "Quentin Anthony",
+        "A. Shafi",
+        "H. Subramoni",
+        "Dhabaleswar K. Dk Panda"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2401.08383",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdps57955.2024.00086",
+        "id:arXiv:2401.08383",
+        "title:exploiting interlayer expert affinity for accelerating mixtureofexperts model inference",
+        "url:https://arxiv.org/abs/2401.08383"
+      ],
+      "record": {
+        "title": "Exploiting Inter-Layer Expert Affinity for Accelerating Mixture-of-Experts Model Inference",
+        "source_url": "https://arxiv.org/abs/2401.08383",
+        "year": 2024,
+        "published": "2024-01-16",
+        "abstract": "In the realm of large language models (LLMs) like the Generative Pre-trained Transformer (GPT), the Mixture of Experts (MoE) paradigm has emerged as a powerful technique for enhancing model expressiveness and accuracy. However, the deployment of GPT MoE models for parallel inference on distributed systems presents significant challenges, primarily due to the extensive Alltoall communication required for expert routing and aggregation. This communication bottleneck exacerbates the already complex computational landscape, hindering the efficient utilization of high-performance computing resources. In this paper, we propose a lightweight optimization technique called ExFlow, to largely accelerate the inference of these MoE models. We take a new perspective on alleviating the communication overhead by exploiting the inter-layer expert affinity. Unlike previous methods, our solution can be directly applied to pre-trained MoE models without any fine-tuning or accuracy degradation. By proposing a context-coherent expert parallelism on distributed systems, our ExFlow design only uses one Alltoall communication to deliver the same functionality while previous methods all require two Alltoalls. By carefully examining the conditional probability in tokens’ routing across multiple layers, we proved that pre-trained GPT MoE models implicitly exhibit a strong inter-layer expert affinity. We then design an efficient integer programming model to precisely capture such features and show that by properly placing the experts on corresponding GPUs, we can reduce up to 67% of tokens’ cross-GPU routing latency on various hardware configurations and topologies. Our solution beats the cutting-edge Deepspeed-MoE in GPT MoE models with experts from 8 to 64, with up to 2.2x improvement in inference throughput. To the best of our knowledge, this is the first work in leveraging inter-layer expert affinity to accelerate the inference of GPT MoE models. We further provide a detailed study of how the model implicitly acquires this expert affinity at the very early training stage and how this affinity evolves and stabilizes during training.",
+        "canonical_id": "arXiv:2401.08383",
+        "arxiv_id": "2401.08383",
+        "doi": "10.1109/IPDPS57955.2024.00086",
+        "authors": [
+          "Jinghan Yao",
+          "Quentin Anthony",
+          "A. Shafi",
+          "H. Subramoni",
+          "Dhabaleswar K. Dk Panda"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:99f33ef1737ebfb1d7f51dcf85a4ffa08d2e014e278890a55d3a2b222ec0481f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

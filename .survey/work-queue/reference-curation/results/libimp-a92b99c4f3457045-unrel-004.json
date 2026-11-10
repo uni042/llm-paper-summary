@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a92b99c4f3457045-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/jssc.2026.3679560",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/jssc.2026.3679560",
+    "identity_tokens": [
+      "DOI:10.1109/jssc.2026.3679560"
+    ],
+    "reason": "一次要旨はedge AIのfloating-point training/inference向けSRAM CIM macroを設計する回路研究。LLMまたはLLM servingの利用・評価が要旨にないため、今回のscope適合根拠にならない。",
+    "first_checked_at": "2026-10-05T07:41:23+00:00",
+    "last_checked_at": "2026-10-05T07:41:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+    ],
+    "title": "A 28-nm Digital Transpose SRAM Compute-in-Memory Macro With Accurate/Approximate Dual Mode for Floating-Point Edge Training and Inference"
+  },
+  "processed_at": "2026-10-05T07:41:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a92b99c4f345",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

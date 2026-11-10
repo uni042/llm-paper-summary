@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-48e8f4bbf3d5208b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2112.07916",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2112.07916",
+    "identity_tokens": [
+      "arXiv:2112.07916"
+    ],
+    "reason": "LongT5のsparse encoder attentionは長入力時の系列処理速度・メモリに関係するが、一次本文の効率比較は学習 throughput中心であり、decoder/decoder-to-encoder attentionは将来課題として明示される。encoder-decoder LLMの推論prefillへの適用可能性はあるものの、現在のLLM serving効率への適合は限定的でborderline。",
+    "first_checked_at": "2026-10-05T02:17:27+00:00",
+    "last_checked_at": "2026-10-05T02:17:27+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "LongT5: Efficient Text-To-Text Transformer for Long Sequences"
+  },
+  "processed_at": "2026-10-05T02:17:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-48e8f4bbf3d5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

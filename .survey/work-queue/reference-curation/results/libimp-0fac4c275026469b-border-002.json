@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0fac4c275026469b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.10890",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.10890",
+    "identity_tokens": [
+      "arXiv:2606.10890"
+    ],
+    "reason": "本文の主たる評価はquantization qualityとscale-search法で、inference throughput、resident memory、serving latencyの直接比較を確認できない。低bit PTQへの寄与はあるが効率研究としての証拠が不足。",
+    "first_checked_at": "2026-10-05T03:57:00+00:00",
+    "last_checked_at": "2026-10-05T03:57:00+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+      "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "Optimal Post-Training Quantization Scales and Where to Find Them"
+  },
+  "processed_at": "2026-10-05T03:57:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0fac4c275026",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

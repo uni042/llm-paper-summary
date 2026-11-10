@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b9aff9e8deaa783-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.18706",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.18706",
+    "identity_tokens": [
+      "arXiv:2512.18706"
+    ],
+    "reason": "一次要旨は音声認識・LLM・音声生成を分離した音声対話システムを提案し、ストリーミングと非同期連携により1秒未満の対話遅延を目指す。システム遅延最適化の接点はあるが、LLM単体の推論カーネル・KVキャッシュ・GPU配信性能を主題としないため境界扱いとする。",
+    "first_checked_at": "2026-10-12T17:45:21+00:00",
+    "last_checked_at": "2026-10-22T14:50:44+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System"
+  },
+  "processed_at": "2026-10-22T14:50:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b9aff9e8dea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5c3a6d52d7e97e15-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.08073",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.08073",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2212.08073",
+      "arXiv:2212.08073"
+    ],
+    "reason": "原則リストに基づく自己批評・改訂の教師あり学習とAI feedbackによる強化学習でharmless assistantを訓練するアラインメント研究。推論システム効率化ではない。",
+    "first_checked_at": "2026-09-27T07:31:21+09:00",
+    "last_checked_at": "2026-10-04T22:50:52+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 311"
+    ],
+    "title": "Constitutional AI: Harmlessness from AI Feedback"
+  },
+  "processed_at": "2026-10-04T22:50:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5c3a6d52d7e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

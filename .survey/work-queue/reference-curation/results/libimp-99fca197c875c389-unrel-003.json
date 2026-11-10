@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99fca197c875c389-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.19636",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.19636",
+    "identity_tokens": [
+      "arXiv:2606.19636"
+    ],
+    "reason": "The paper uses matched-compute activation interventions to diagnose whether estimated reasoning difficulty is hard or merely unreached; the mechanism modifies internal activations for analysis rather than changing ordinary decoding.",
+    "first_checked_at": "2026-10-05T03:54:52+00:00",
+    "last_checked_at": "2026-10-05T03:54:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+    ],
+    "title": "Hard or Just Unreached? Diagnosing the Sampling Blind Spot in Math-Reasoning Difficulty Estimation"
+  },
+  "processed_at": "2026-10-05T03:54:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99fca197c875",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

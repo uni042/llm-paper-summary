@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c188d7d18d951a6f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.52497/jitipee.v10i1.416",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.52497/jitipee.v10i1.416",
+    "identity_tokens": [
+      "DOI:10.52497/jitipee.v10i1.416"
+    ],
+    "reason": "一次要旨は産業flowsheet生成のためのモデルfine-tuningと生成品質が主題であり、学習時手法でLLM inference/serving効率ではない。",
+    "first_checked_at": "2026-10-05T10:09:49+00:00",
+    "last_checked_at": "2026-10-05T10:09:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Spécialisation d'un modèle de langage pour la génération de gammes opératoires industrielles multi-étapes : injection d'un référentiel d'équipements par fine-tuning sur données structurées"
+  },
+  "processed_at": "2026-10-05T10:09:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c188d7d18d95",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

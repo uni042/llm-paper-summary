@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17097fcf64e89c22-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.33915",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.33915",
+    "identity_tokens": [
+      "11a8f0f1d1357f9946b7d3033230f1c156271e05",
+      "SemanticScholar:11a8f0f1d1357f9946b7d3033230f1c156271e05",
+      "arXiv:2609.33915"
+    ],
+    "reason": "Studies training integrity and trust, not inference/serving.",
+    "first_checked_at": "2026-10-05T05:14:50+00:00",
+    "last_checked_at": "2026-10-14T13:11:24+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md",
+      "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
+    ],
+    "title": "Training Witnesses: Trusting the Training without Trusting the Trainer"
+  },
+  "processed_at": "2026-10-14T13:11:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17097fcf64e8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

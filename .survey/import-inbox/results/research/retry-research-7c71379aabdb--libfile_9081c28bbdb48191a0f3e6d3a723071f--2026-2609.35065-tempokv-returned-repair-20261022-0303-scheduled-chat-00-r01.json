@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "772ebca82d0bf751ab7916182460d1a10086c2200ca834fcea230fb6a8838ee3",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7c71379aabdb--libfile_9081c28bbdb48191a0f3e6d3a723071f--2026-2609.35065-tempokv-returned-repair-20261022-0303-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2609.35065",
+  "worker_completed_at": "2026-10-22T03:03:00+09:00",
+  "worker_run_key": "20261022-0303-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5998,
+    "body_paragraphs": 29,
+    "method_chars": 2074,
+    "method_paragraphs": 10,
+    "evaluation_chars": 1353,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2609.35065-tempokv-timely-staging-of-llm-kv-caches-for-memory-semantic-flash.md と 20 段落 / 4605文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-22T17:41:40+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260917T041600Z-scheduled-chat-discovery-specialist-11",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-476e11d12d88d15c",
+      "claim_id": "claim-e27a1765145ab45647cea4cb",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-e27a1765145ab45647cea4cb",
+      "claimed_at": "2026-09-17T04:07:58+00:00",
+      "expires_at": "2026-09-17T05:37:58+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-476e11d12d88d15c"
+      ],
+      "job": {
+        "job_id": "job-research-476e11d12d88d15c",
+        "type": "research",
+        "parent_job_id": "job-390a2ff0c6f51a4c",
+        "priority": 87,
+        "canonical_id": "arXiv:2603.01058",
+        "title": "TriMoE: Augmenting GPU with AMX-Enabled CPU and DIMM-NDP for High-Throughput MoE Inference via Offloading",
+        "source_url": "https://arxiv.org/abs/2603.01058",
+        "paper_path": "papers/inference/05-moe-expert-offload/2026-2603.01058-trimoe-gpu-cpu-ndp-offloading.md",
+        "selection_reason": "hot/warm/cold expertをGPU・AMX CPU・DIMM-NDPへ分担し、bottleneck-aware schedulingとprediction-driven relayoutを組み合わせる三階層MoE offload。最大2.83x高速化を報告し、階層memory/expert placementの重要比較対象。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T19:03:45+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-17T04:07:58+00:00",
+  "checkpoint_released": 0
+}

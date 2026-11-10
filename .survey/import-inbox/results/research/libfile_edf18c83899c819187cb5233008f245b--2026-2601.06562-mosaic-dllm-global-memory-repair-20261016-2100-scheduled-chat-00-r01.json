@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "864d50ae922ab02ae85f33ae56d80d25f9ee16df2f8a9027b7775cb248b18624",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_edf18c83899c819187cb5233008f245b--2026-2601.06562-mosaic-dllm-global-memory-repair-20261016-2100-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2601.06562",
+  "worker_completed_at": "2026-10-16T21:18:00+09:00",
+  "worker_run_key": "20261016-2100-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4797,
+    "body_paragraphs": 27,
+    "method_chars": 1967,
+    "method_paragraphs": 10,
+    "evaluation_chars": 453,
+    "limitation_chars": 656,
+    "insufficiency_flags": [
+      "評価説明量 453 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 453 < 500"
+  ],
+  "processed_at": "2026-10-17T08:12:18+00:00"
+}

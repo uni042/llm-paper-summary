@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-90d8c2198f41e240-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.07317",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.07317",
+    "identity_tokens": [
+      "arXiv:2511.07317"
+    ],
+    "reason": "本文はadaptive difficultyをもつverifiable environmentsを用いてLLMのreinforcement-learning trainingを効率化する研究。性能差/計算量はtraining-stageの比較であり、推論時compute、memory、latency、serving最適化ではない。",
+    "first_checked_at": "2026-10-08T07:31:55+00:00",
+    "last_checked_at": "2026-10-08T07:31:55+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+    ],
+    "title": "RLVE: Scaling Up Reinforcement Learning for Language Models with Adaptive Verifiable Environments"
+  },
+  "processed_at": "2026-10-08T07:31:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90d8c2198f41",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2509.03377",
+      "title": "Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing",
+      "source_url": "https://arxiv.org/abs/2509.03377",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2509.03377-cxl-ndp-llm-inference.md",
+      "priority": 96,
+      "reason": "CXL拡張メモリ内で動的量子化とweight/KV cache圧縮を透過的に実行するnear-data processing。end-to-end servingでthroughput 43%向上、最大context 87%拡張、KV footprint 46.9%削減を報告し、階層メモリ・CXLの重点テーマに直結する。"
+    },
+    {
+      "canonical_id": "arXiv:2511.12286",
+      "title": "Sangam: Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing",
+      "source_url": "https://arxiv.org/abs/2511.12286",
+      "paper_path": "papers/inference/02-hardware-accelerators/2025-2511.12286-sangam-cxl-dram-pim-llm-inference.md",
+      "priority": 93,
+      "reason": "CXL接続DRAM-PIM chipletをGPU代替またはGPU協調で用いるLLM推論アクセラレータ。複数モデルでend-to-end latency 2.82–4.22倍、decode throughput 6.36–10.3倍を報告し、CXL/PIMと階層実行の研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2509.12993",
+      "title": "HPIM: Heterogeneous Processing-In-Memory-based Accelerator for Large Language Models Inference",
+      "source_url": "https://arxiv.org/abs/2509.12993",
+      "paper_path": "papers/inference/02-hardware-accelerators/2025-2509.12993-hpim-heterogeneous-pim-llm-inference.md",
+      "priority": 89,
+      "reason": "SRAM-PIMをattention、HBM-PIMをweight-intensive GEMVへ割り当て、両者をpipelineする異種PIM設計。cycle-accurate評価でA100比最大22.8倍を報告し、memory-centric inference architectureとして有力。"
+    },
+    {
+      "canonical_id": "arXiv:2601.19908",
+      "title": "CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference",
+      "source_url": "https://arxiv.org/abs/2601.19908",
+      "paper_path": "papers/inference/02-hardware-accelerators/2026-2601.19908-chime-chiplet-near-memory-mllm-inference.md",
+      "priority": 86,
+      "reason": "M3D DRAMとRRAM chipletを組み合わせ、attentionとweight storageを異種near-memory実行するMLLM推論設計。Jetson Orin NX比最大54倍高速・246倍energy efficiencyを報告し、異種メモリ実行の隣接研究として有用。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T12:00:00+09:00",
+    "round": "specialist-cxl-pim-2",
+    "axis": "CXL・PIM・near-memory・chiplet LLM inference",
+    "query_summary": "第1roundの2026年9月新着軸から離れ、CXL拡張メモリ、near-data processing、DRAM/HBM/SRAM-PIM、chiplet near-memoryを独立探索した。一次arXiv抄録と評価値を軽量確認し、最新mainのcanonical ID検索で既存一致がないことを確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "network collective/RDMA・GPU runtime/kernel scheduling、または重要CXL/SSD論文のforward/backward citationへ移る",
+    "empty_round_reason": null,
+    "search_windows": [{
+      "topic": "cxl-pim-near-memory",
+      "source": "arxiv-web-search",
+      "date_range": "2025-09..2026-09",
+      "category": "systems-hardware-inference",
+      "citation_direction": "none",
+      "query_family": "cxl-pim-near-memory-llm-inference",
+      "raw_result_count": 7,
+      "unseen_result_count": 4,
+      "duplicate_filtered_count": 0,
+      "rejection_filtered_count": 0,
+      "candidate_evaluation_count": 4,
+      "candidate_accepted_count": 4,
+      "position": "web-search-batch-2"
+    }]
+  }
+}

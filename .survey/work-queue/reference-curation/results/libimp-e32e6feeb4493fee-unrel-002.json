@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e32e6feeb4493fee-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.20552",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.20552",
+    "identity_tokens": [
+      "arXiv:2601.20552"
+    ],
+    "reason": "visual tokenを画像semanticに応じて動的並べ替えし2D理解を改善するencoder architecture研究。主目的はvisual causal reasoning/理解品質で、token数・latency・memory等の推論効率削減を主要貢献としない。",
+    "first_checked_at": "2026-10-07T04:52:13+00:00",
+    "last_checked_at": "2026-10-07T04:52:13+00:00",
+    "linked_from": [],
+    "title": "DeepSeek-OCR 2: Visual Causal Flow"
+  },
+  "processed_at": "2026-10-07T04:52:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e32e6feeb449",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,1211 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a51d5ea230e80dab-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a51d5ea230e8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/dac63849.2025.11133343",
+    "DOI:10.1109/iccad66269.2025.11240926",
+    "DOI:10.3724/2096-7004.di.2025.0077",
+    "SemanticScholar:ecee781ec40b65342c1da703529e953e715e66e0",
+    "arXiv:2412.05693",
+    "arXiv:2502.01659",
+    "arXiv:2502.20576",
+    "arXiv:2506.05229",
+    "arXiv:2506.06095",
+    "arXiv:2508.17807",
+    "arXiv:2509.25155",
+    "arXiv:2510.12966",
+    "arXiv:2510.19670"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "cb67be9ac585ae4c6d22f01af19cdd2a1d839520",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 13,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T02:18:54.607576+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/dac63849.2025.11133343",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iccad66269.2025.11240926",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.3724/2096-7004.di.2025.0077",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:ecee781ec40b65342c1da703529e953e715e66e0",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.05693",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.01659",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.20576",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.05229",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.06095",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.17807",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.25155",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.12966",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.19670",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "OmniRouter: Budget and Performance Controllable Multi-LLM Routing",
+      "source_url": "https://arxiv.org/abs/2502.20576",
+      "year": 2025,
+      "published": "2025-02-27",
+      "venue": "SIGKDD Explorations",
+      "citation_count": 46,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) deliver superior performance but require substantial computational resources and operate with relatively low efficiency, while smaller models can efficiently handle simpler tasks with fewer resources. LLMrouting is a crucial paradigm that dynamically selects the most suitable large language models from a pool of candidates to process diverse inputs, ensuring optimal resource utilization while maintaining response quality. Existing routing frameworks typically model this as a locally optimal decision-making problem, selecting the presumed best-fit LLM for each query individually, which overlooks global budget constraints, resulting in ineffective resource allocation. To tackle this problem, we introduce OmniRouter, a fundamentally controllable routing framework for multi- LLM serving. Instead of making per-query greedy choices, OmniRouter models the routing task as a constrained optimization problem, assigning models that minimize total cost while ensuring the required performance level. Specifically, a hybrid retrieval-augmented predictor is designed to predict the capabilities and costs of LLMs. After obtaining the predicted cost and performance, we utilize a constrained optimizer for cost-optimal assignments that employs Lagrangian dual decomposition with adaptive multipliers. It iteratively converges toward the globally optimal query-model allocation, dynamically balancing latency minimization against quality thresholds while adhering to heterogeneous capacity constraints. Experiments show that OmniRouter achieves up to 6.30% improvement in response accuracy while simultaneously reducing computational costs by at least 10.15% compared to competitive router baselines. The code and the dataset are available at https: //github.com/dongyuanjushi/OmniRouter.",
+      "identifiers": [
+        "SemanticScholar:0cee4179e3d184b59621e6712884a08fb4fe92e3"
+      ],
+      "semantic_scholar_id": "0cee4179e3d184b59621e6712884a08fb4fe92e3",
+      "canonical_id": "arXiv:2502.20576",
+      "arxiv_id": "2502.20576",
+      "doi": "10.1145/3787470.3787480",
+      "authors": [
+        "Kai Mei",
+        "Wujiang Xu",
+        "Ming-Hao Guo",
+        "Shuhang Lin",
+        "Yongfeng Zhang"
+      ],
+      "priority": 46,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 46,
+        "citation_count": 46,
+        "total": 46,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 594,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Longer Attention Span: Increasing Transformer Context Length With Sparse Graph Processing Techniques",
+      "source_url": "https://arxiv.org/abs/2502.01659",
+      "year": 2025,
+      "published": "2025-01-31",
+      "venue": "IEEE International Parallel and Distributed Processing Symposium",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have demonstrated great success in numerous domains including natural language processing and bioinformatics. This success stems from the use of the attention mechanism by these models in order to represent and propagate pairwise interactions between individual tokens of sequential data. However, the primary limitation of this operation is its quadratic memory and time complexity in relation to the input's context length - the length of a sequence over which the interactions need to be captured. This significantly limits the length of sequences that can be inferred upon by these models. Extensive research has been conducted to reduce the number of pairwise interactions to sub-quadratic in relation to the context length by introducing sparsity into the attention mechanism through the development of sparse attention masks. However, efficient implementations that achieve “true sparsity” are lacking. In this work, we address this issue by proposing a graph computing view of attention where tokens are perceived as nodes of the graph and the attention mask determines the edges of the graph. Using this view, we develop graph processing algorithms to implement the attention mechanism. Both theoretically and empirically, we demonstrate that our algorithms only perform the needed computations, i.e., they are work optimal. We also perform extensive experimentation using popular attention masks to explore the impact of sparsity on execution time and achievable context length. Our experiments demonstrate significant speedups in execution times compared to state-of-theart attention implementations such as FlashAttention for large sequence lengths. We also demonstrate that our algorithms are able to achieve extremely long sequence lengths of as high as 160 million on a single NVIDIA A100 GPU (SXM4 80 GB). GitHub: https://github.com/KLab-AI3/Graph-Processing-Attention-IPDPS-2025",
+      "identifiers": [
+        "SemanticScholar:b5145269d6068942687b6182a0935e70e73ebf57"
+      ],
+      "semantic_scholar_id": "b5145269d6068942687b6182a0935e70e73ebf57",
+      "canonical_id": "arXiv:2502.01659",
+      "arxiv_id": "2502.01659",
+      "doi": "10.1109/IPDPS64566.2025.00107",
+      "authors": [
+        "Nathaniel Tomczak",
+        "S. Kuppannagari"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 621,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Attention Debiasing for Token Pruning in Vision Language Models",
+      "source_url": "https://arxiv.org/abs/2508.17807",
+      "year": 2025,
+      "published": "2025-08-25",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) typically encode substantially more visual tokens than text tokens, resulting in significant token redundancy. Pruning uninformative visual tokens is therefore crucial for improving computational efficiency, and language-to-vision attention has become a widely used importance criterion for this purpose. However, we find that attention in VLMs is systematically biased. It disproportionately favors tokens appearing later in the sequence, manifesting as over-attention to lower image regions, and assigns inflated scores to semantically empty padding tokens. These behaviors stem from intrinsic recency bias and attention sink effects inherited from large language models (LLMs), and they distort attention-based pruning by preserving irrelevant visual content. To derive a pruning criterion better aligned with semantic relevance, we introduce two lightweight yet effective debiasing techniques that restore the reliability of attention. The first compensates for positional distortions by removing recency-induced attention trends, producing a content-aware and position-agnostic importance measure. The second suppresses attention sink effects by eliminating spurious attention on padding tokens. Our method is model-agnostic, pruning-method-agnostic, and task-agnostic, enabling plug-and-play integration with existing VLM pruning models. Despite its simplicity, our approach consistently delivers strong performance gains. We evaluate our method on ten vision-language benchmarks spanning both image-based and video-based tasks, in comparison with seven state-of-the-art visual token pruning methods and across two representative VLM architectures. Our method achieves substantial performance gains, demonstrating strong effectiveness and generalizability. Our code is available at https://github.com/intcomp/attention-bias.",
+      "identifiers": [
+        "SemanticScholar:225bbb60ff185360093e6c72c17e65a97096c519"
+      ],
+      "semantic_scholar_id": "225bbb60ff185360093e6c72c17e65a97096c519",
+      "canonical_id": "arXiv:2508.17807",
+      "arxiv_id": "2508.17807",
+      "authors": [
+        "Kai Zhao",
+        "Wubang Yuan",
+        "Yuchen Lin",
+        "Liting Ruan",
+        "Xiao-Feng Lu",
+        "Deng-Ping Fan",
+        "Ming-Ming Cheng",
+        "Dan Zeng"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 415,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Diagonal Batching Unlocks Parallelism in Recurrent Memory Transformers for Long Contexts",
+      "source_url": "https://arxiv.org/abs/2506.05229",
+      "year": 2025,
+      "published": "2025-06-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models struggle with long-context inference due to their quadratic time and linear memory complexity. Recurrent Memory Transformers (RMTs) offer a solution by reducing the asymptotic cost to linear time and constant memory usage. However, their memory update mechanism leads to sequential execution, causing a performance bottleneck. We introduce Diagonal Batching, a scheduling scheme that unlocks parallelism across segments in RMTs while preserving exact recurrence. This approach eliminates the sequential constraint, enabling efficient GPU inference even for single long-context inputs without complex batching and pipelining techniques. Because the technique is purely a run-time computation reordering, existing RMT models adopt it with no retraining. Applied to a LLaMA-1B ARMT model, Diagonal Batching yields a 3.3x speedup over standard full-attention LLaMA-1B and a 1.8x speedup over the sequential RMT implementation on 131,072-token sequences. By removing sequential bottleneck, Diagonal Batching reduces inference cost and latency, thereby strengthening RMTs as a practical solution for real-world, long-context applications.",
+      "identifiers": [
+        "SemanticScholar:377008cba8b1bbea862557a8e4d7bd03758dffa6"
+      ],
+      "semantic_scholar_id": "377008cba8b1bbea862557a8e4d7bd03758dffa6",
+      "canonical_id": "arXiv:2506.05229",
+      "arxiv_id": "2506.05229",
+      "doi": "10.48550/arXiv.2506.05229",
+      "authors": [
+        "Danil Sivtsov",
+        "I. Rodkin",
+        "Gleb Kuzmin",
+        "Yuri Kuratov",
+        "I. Oseledets"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 496,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CoSense-LLM: Semantics at the Edge with Cost- and Uncertainty-Aware Cloud-Edge Cooperation",
+      "source_url": "https://arxiv.org/abs/2510.19670",
+      "year": 2025,
+      "published": "2025-10-22",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present CoSense-LLM, an edge-first framework that turns continuous multimodal sensor streams (for example Wi-Fi CSI, IMU, audio, RFID, and lightweight vision) into compact, verifiable semantic tokens and coordinates with large language models under explicit latency, energy, bandwidth, and privacy constraints. CoSense-LLM has four parts: (i) SenseFusion, a lightweight encoder that aligns sensor embeddings with language and compresses them into short discrete code sequences; (ii) Edge-RAG, a local hybrid retrieval layer that grounds generation in site specific policies and notes; (iii) PromptRouter, a cost and uncertainty aware policy that selects edge only generation, edge plus retrieval, or compact cloud escalation; and (iv) Secure Execution, an auditable redaction path that enforces data minimization so raw waveforms never leave the device. The system works with modern serving optimizations, including paged or streaming KV caches, FlashAttention style kernels, speculative decoding, and quantized LoRA adapters, and supports on device personalization and federated updates under non IID drift. Across home, office, and clinic deployments, CoSense-LLM delivers grounded explanations while meeting tight service level objectives: it sustains sub second (p95) end to end latency on edge dominant paths, reduces inter tier token and bandwidth costs by preferring local retrieval grounded responses, and preserves privacy by transmitting only discrete codes and redacted metadata. Ablations show that Edge-RAG improves factual consistency and reduces contradictions, calibrated uncertainty enables selective abstention and controlled escalations, and KV plus decoding accelerators lower energy per decision. The results support an edge first design that treats semantics, privacy, and predictable latency as co equal goals for large model deployments in interference prone environments.",
+      "identifiers": [
+        "SemanticScholar:563a3fb557cd12f3f303bcbe70d23d8dce7f9793"
+      ],
+      "semantic_scholar_id": "563a3fb557cd12f3f303bcbe70d23d8dce7f9793",
+      "canonical_id": "arXiv:2510.19670",
+      "arxiv_id": "2510.19670",
+      "doi": "10.48550/arXiv.2510.19670",
+      "authors": [
+        "H. Akgul",
+        "Mari Eplik",
+        "Javier Rojas",
+        "Aina Binti Abdullah",
+        "P. van der Merwe"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 357,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OA-LAMA: An Outlier-Adaptive LLM Inference Accelerator with Memory-Aligned Mixed-Precision Group Quantization",
+      "source_url": "https://doi.org/10.1109/ICCAD66269.2025.11240926",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) face significant deployment challenges due to their substantial memory and computational demands. While low-precision quantization offers a promising solution, the presence of activation outliers severely degrades model accuracy. Existing approaches either compromise hardware efficiency through misaligned memory access or sacrifice quantization granularity through rigid bit-width allocation, particularly when handling non-uniform tensor distributions across and within layers. This paper presents a hardware-software co-designed framework resulting in an outlier-adaptive LLM inference accelerator with memory-aligned mixed-precision group quantization, named OA-LAMA. The framework comprises three key innovations: First, an outlier-adaptive memory-aligned mixed-precision group (OAMAG) format with a novel outlier reordering technique is proposed to preserve accuracy while maintaining DRAM-aligned memory access. Second, a distribution-aware group allocation strategy is proposed to address inter-layer outlier ratio variance. Finally, we design the OA-LAMA hardware architecture with a three-level accumulation architecture and timing-balanced processing elements to support the OAMAG format efficiently. Evaluations demonstrate that OA-LAMA achieves better accuracy than state-of-the-art 4-bit quantization methods while delivering 1.21–3.09× performance improvement and 1.35–2.47× energy efficiency gains over leading LLM accelerators. OA-LAMA establishes new Pareto frontiers in accuracy-efficiency co-optimization for LLM inference. OA-LAMA is open-sourced at https://github.com/CLab-HKUST-GZ/ICCAD25_OA-LAMA.git.",
+      "identifiers": [
+        "SemanticScholar:837c15e5670a71e0406ad35a0575006aaabd0057"
+      ],
+      "semantic_scholar_id": "837c15e5670a71e0406ad35a0575006aaabd0057",
+      "doi": "10.1109/ICCAD66269.2025.11240926",
+      "canonical_id": "DOI:10.1109/ICCAD66269.2025.11240926",
+      "authors": [
+        "Huangxu Chen",
+        "Ying-Bo Hao",
+        "Yi Zou",
+        "Xin-Yu Chen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 353,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Accelerating Sparse Transformer Inference on GPU",
+      "source_url": "https://arxiv.org/abs/2506.06095",
+      "year": 2025,
+      "published": "2025-06-06",
+      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are popular around the world due to their powerful understanding capabilities. As the core component of LLMs, accelerating Transformer through parallelization has gradually become a hot research topic. Mask layers introduce sparsity into Transformer to reduce calculations. However, previous works rarely focus on the performance optimization of sparse Transformer. In addition, current static operator fusion schemes fail to adapt to diverse application scenarios. To address the above problems, we propose STOF, a framework that incorporates optimizations for Sparse Transformer that enables flexible masking and Operator Fusion on GPU. For multi-head attention (MHA) structure, STOF maps the computation to row-wise or block-wise kernels with unique storage formats according to analytical modeling. For downstream operators, STOF maps the fusion scheme to compilation templates and determines the optimal running configuration through two-stage searching. The experimental results show that compared to the state-of-the-art work, STOF achieves maximum speedups of 1.6× in MHA computation and 1.4× in end-to-end inference.",
+      "identifiers": [
+        "SemanticScholar:044c9dcc0f58dddd36567ad32b26066a52a08893"
+      ],
+      "semantic_scholar_id": "044c9dcc0f58dddd36567ad32b26066a52a08893",
+      "canonical_id": "arXiv:2506.06095",
+      "arxiv_id": "2506.06095",
+      "doi": "10.1145/3774934.3786434",
+      "authors": [
+        "Wen-Hao Dai",
+        "Hao-Dong Deng",
+        "Mengfei Rong",
+        "Xin-Yu Yang",
+        "Hongyu Liu",
+        "Fang-Xin Liu",
+        "Hailong Yang",
+        "Qi Cao",
+        "Qing-Xiao Sun"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 495,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DIAS: Distance-based Attention Sparsity for Ultra-Long-Sequence Transformer with Tree-like Processing-in-Memory Architecture",
+      "source_url": "https://doi.org/10.1109/DAC63849.2025.11133343",
+      "year": 2025,
+      "published": "2025-06-22",
+      "venue": "Design Automation Conference",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference has become a central focus in recent self-regressive Transformer research. However, challenges still remain in performing decode stage due to the memory bandwidth bottleneck of attention mechanisms and the substantial memory overhead associated with KV cache. Although attention sparsity has been proposed as a potential solution, conventional sparsity methods that rely on heuristic algorithms often suffer from accuracy degradation when applied to ultra-long sequences. To break through the dilemma between accuracy-performance and bandwidth-capacity, this work proposes DIAS, a distancebased irregular attention sparsity approach with processing-inmemory (PIM) architecture. DIAS employs approximate topK attention (AKAttention) scores through graph-based search to improve inference efficiency while maintaining accuracy. Furthermore, a scalable tree-like PIM (TreePIM) architecture is introduced to achieve both memory capacity and bandwidth improvement by isolating enormous memory access for KV cache into the PIM units. Evaluations on various configurations of DIAS for Longbench with Llama3-405B models with 1 M sequence length show up to 75 times speedup compared with the state-of-the-art LLM accelerator, with accuracy drop of less than $1 \\%$. Index Terms-AI and Machine Learning, Architecture & System Design",
+      "identifiers": [
+        "SemanticScholar:3192beddae4e932657ceb8a66829598c73f1436d"
+      ],
+      "semantic_scholar_id": "3192beddae4e932657ceb8a66829598c73f1436d",
+      "doi": "10.1109/DAC63849.2025.11133343",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11133343",
+      "authors": [
+        "Ze-Kai Chen",
+        "Yi-Ming Chen",
+        "Teng Wan",
+        "Tianyi Yu",
+        "Yu Wang",
+        "Hua-Zhong Yang",
+        "Xue-Qing Li"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 479,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Lightweighting Large Models: A Review of Model Compression Techniques",
+      "source_url": "https://doi.org/10.3724/2096-7004.di.2025.0077",
+      "year": 2025,
+      "published": "2025-09-01",
+      "venue": "Data Intelligence",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rapid development of deep learning technology, neural network models have achieved remarkable results, but their large number of references and high computational resource requirements limit the wide range of applications.Therefore, model compression techniques emerge, aiming to reduce computational complexity, memory occupation, and energy consumption overhead of the models to meet the practical deployment requirements without sacrificing performance. In this paper, we systematically sort out the research results in the field of model compression in recent years. Firstly, we introduce the definition and goals of model compression, and discuss its challenge and evolution of the techniques. Then a variety of mainstream compression methods are elaborated in detail, including pruning, quantization, knowledge distillation, low-rank factorization, and parameter sharing, and analyze their principles, strengths, weaknesses, and applicability scenarios. We also provide a comparative analysis of these methods, high-lighting their trade-o ff s in terms of compression rate, performance, and computational e ffi ciency. In addition, we introduce commonly used datasets, evaluation metrics, and future research directions for model compression in image classification and natural language processing tasks. By comprehensively summarizing and analyzing the existing work, we expect to provide model compression researchers with a clear technology mapping and research roadmap to promote their researches.",
+      "identifiers": [
+        "SemanticScholar:2cd7b7c01f2bfc86a6d97e0976b59b2787c1e5fa"
+      ],
+      "semantic_scholar_id": "2cd7b7c01f2bfc86a6d97e0976b59b2787c1e5fa",
+      "doi": "10.3724/2096-7004.di.2025.0077",
+      "canonical_id": "DOI:10.3724/2096-7004.di.2025.0077",
+      "authors": [
+        "Hao-Ran Guan",
+        "Jun-Hao Lv",
+        "Xi Chen",
+        "Lei Qi"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 408,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hardware Characterization of Di ! usion vs. Autoregressive Language Model Inference: Compute vs. Memory Bottlenecks",
+      "source_url": "https://www.semanticscholar.org/paper/ecee781ec40b65342c1da703529e953e715e66e0",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:ecee781ec40b65342c1da703529e953e715e66e0"
+      ],
+      "semantic_scholar_id": "ecee781ec40b65342c1da703529e953e715e66e0",
+      "canonical_id": "SemanticScholar:ecee781ec40b65342c1da703529e953e715e66e0",
+      "authors": [
+        "Zhen-Xing Fan",
+        "Kevin Skadron"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Batch-Max: Higher LLM Throughput using Larger Batch Sizes and KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2412.05693",
+      "year": 2024,
+      "published": "2024-12-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Several works have developed eviction policies to remove key-value (KV) pairs from the KV cache for more efficient inference. The focus has been on compressing the KV cache after the input prompt has been processed for faster token generation. In settings with limited GPU memory, and when the input context is longer than the generation length, we show that by also compressing the KV cache during the input processing phase, larger batch sizes can be used resulting in significantly higher throughput while still maintaining the original model's accuracy.",
+      "identifiers": [
+        "SemanticScholar:dced3f26ae6d9dd60d8aec71db34823dc95ee3c4"
+      ],
+      "semantic_scholar_id": "dced3f26ae6d9dd60d8aec71db34823dc95ee3c4",
+      "canonical_id": "arXiv:2412.05693",
+      "arxiv_id": "2412.05693",
+      "doi": "10.48550/arXiv.2412.05693",
+      "authors": [
+        "Michael R. Metel",
+        "Boxing Chen",
+        "Mehdi Rezagholizadeh"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 676,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Context-Driven Performance Modeling for Causal Inference Operators on Neural Processing Units",
+      "source_url": "https://arxiv.org/abs/2509.25155",
+      "year": 2025,
+      "published": "2025-09-29",
+      "venue": "International Conference on High Performance Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The proliferation of large language models has driven demand for long-context inference on resourceconstrained edge platforms. However, deploying these models on Neural Processing Units (NPUs) presents significant challenges due to architectural mismatch: the quadratic complexity of standard attention conflicts with NPU memory and compute patterns. This paper presents a comprehensive performance analysis of causal inference operators on a modern NPU, benchmarking quadratic attention against sub-quadratic alternatives including structured state-space models and causal convolutions. Our analysis reveals a spectrum of critical bottlenecks: quadratic attention becomes severely memory-bound with catastrophic cache inefficiency, while sub-quadratic variants span from computebound on programmable vector cores to memory-bound by data movement. These findings provide essential insights for codesigning hardware-aware models and optimization strategies to enable efficient long-context inference on edge platforms.",
+      "identifiers": [
+        "SemanticScholar:2bee05f5ad785364eb2fd8197fea4245eab3b7a3"
+      ],
+      "semantic_scholar_id": "2bee05f5ad785364eb2fd8197fea4245eab3b7a3",
+      "canonical_id": "arXiv:2509.25155",
+      "arxiv_id": "2509.25155",
+      "doi": "10.1109/HiPC66333.2025.00044",
+      "authors": [
+        "Neelesh Gupta",
+        "Rakshith Jayanth",
+        "Dhruv Parikh",
+        "Viktor K. Prasanna"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 380,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "3-Model Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2510.12966",
+      "year": 2025,
+      "published": "2025-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) accelerates inference in large language models by using a smaller draft model to propose tokens, which are then verified by a larger target model. However, the throughput gains of SD are fundamentally limited by a trade-off between draft model size and token acceptance: smaller draft models generate tokens more quickly but exhibit greater divergence from the target model, resulting in lower acceptance rates and reduced speedups. We introduce Pyramid Speculative Decoding (PyramidSD), an extension of SD that inserts an intermediate qualifier model between the draft and target to bridge the distributional gap in output predictions, allowing smaller model to be used for drafting. This hierarchical decoding strategy improves alignment across models, enabling higher acceptance rates and allowing the use of significantly smaller draft models without sacrificing overall performance. PyramidSD builds on fuzzy acceptance criteria to support relaxed divergence thresholds at each stage, improving throughput. In experiments, PyramidSD achieves up to 1.91x generation speed over standard SD, reaching 124 tokens per second on a consumer GPU (RTX 4090). In small-memory settings with a 1B-parameter draft model and an 8B target model, PyramidSD minimally trades target model quality for improved throughput. Overall, PyramidSD offers a practical approach to enhancing speculative decoding efficiency and can be readily applied to existing inference pipelines.",
+      "identifiers": [
+        "SemanticScholar:e416258901e77805699d3852768fd4ebee310662"
+      ],
+      "semantic_scholar_id": "e416258901e77805699d3852768fd4ebee310662",
+      "canonical_id": "arXiv:2510.12966",
+      "arxiv_id": "2510.12966",
+      "doi": "10.48550/arXiv.2510.12966",
+      "authors": [
+        "Sanghyun Byun",
+        "Mohanad Odema",
+        "J. Guack",
+        "Baisub Lee",
+        "Jacob Song",
+        "Woo Seong Chung"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 365,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2502.20576",
+      "identity_tokens": [
+        "id:DOI:10.1145/3787470.3787480",
+        "id:SemanticScholar:0cee4179e3d184b59621e6712884a08fb4fe92e3",
+        "id:arXiv:2502.20576",
+        "title:omnirouter budget and performance controllable multillm routing",
+        "url:https://arxiv.org/abs/2502.20576"
+      ],
+      "record": {
+        "title": "OmniRouter: Budget and Performance Controllable Multi-LLM Routing",
+        "source_url": "https://arxiv.org/abs/2502.20576",
+        "year": 2025,
+        "published": "2025-02-27",
+        "venue": "SIGKDD Explorations",
+        "citation_count": 46,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) deliver superior performance but require substantial computational resources and operate with relatively low efficiency, while smaller models can efficiently handle simpler tasks with fewer resources. LLMrouting is a crucial paradigm that dynamically selects the most suitable large language models from a pool of candidates to process diverse inputs, ensuring optimal resource utilization while maintaining response quality. Existing routing frameworks typically model this as a locally optimal decision-making problem, selecting the presumed best-fit LLM for each query individually, which overlooks global budget constraints, resulting in ineffective resource allocation. To tackle this problem, we introduce OmniRouter, a fundamentally controllable routing framework for multi- LLM serving. Instead of making per-query greedy choices, OmniRouter models the routing task as a constrained optimization problem, assigning models that minimize total cost while ensuring the required performance level. Specifically, a hybrid retrieval-augmented predictor is designed to predict the capabilities and costs of LLMs. After obtaining the predicted cost and performance, we utilize a constrained optimizer for cost-optimal assignments that employs Lagrangian dual decomposition with adaptive multipliers. It iteratively converges toward the globally optimal query-model allocation, dynamically balancing latency minimization against quality thresholds while adhering to heterogeneous capacity constraints. Experiments show that OmniRouter achieves up to 6.30% improvement in response accuracy while simultaneously reducing computational costs by at least 10.15% compared to competitive router baselines. The code and the dataset are available at https: //github.com/dongyuanjushi/OmniRouter.",
+        "identifiers": [
+          "SemanticScholar:0cee4179e3d184b59621e6712884a08fb4fe92e3"
+        ],
+        "semantic_scholar_id": "0cee4179e3d184b59621e6712884a08fb4fe92e3",
+        "canonical_id": "arXiv:2502.20576",
+        "arxiv_id": "2502.20576",
+        "doi": "10.1145/3787470.3787480",
+        "authors": [
+          "Kai Mei",
+          "Wujiang Xu",
+          "Ming-Hao Guo",
+          "Shuhang Lin",
+          "Yongfeng Zhang"
+        ],
+        "priority": 46,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 46,
+          "citation_count": 46,
+          "total": 46,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 594,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.01659",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdps64566.2025.00107",
+        "id:SemanticScholar:b5145269d6068942687b6182a0935e70e73ebf57",
+        "id:arXiv:2502.01659",
+        "title:longer attention span increasing transformer context length with sparse graph processing techniques",
+        "url:https://arxiv.org/abs/2502.01659"
+      ],
+      "record": {
+        "title": "Longer Attention Span: Increasing Transformer Context Length With Sparse Graph Processing Techniques",
+        "source_url": "https://arxiv.org/abs/2502.01659",
+        "year": 2025,
+        "published": "2025-01-31",
+        "venue": "IEEE International Parallel and Distributed Processing Symposium",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have demonstrated great success in numerous domains including natural language processing and bioinformatics. This success stems from the use of the attention mechanism by these models in order to represent and propagate pairwise interactions between individual tokens of sequential data. However, the primary limitation of this operation is its quadratic memory and time complexity in relation to the input's context length - the length of a sequence over which the interactions need to be captured. This significantly limits the length of sequences that can be inferred upon by these models. Extensive research has been conducted to reduce the number of pairwise interactions to sub-quadratic in relation to the context length by introducing sparsity into the attention mechanism through the development of sparse attention masks. However, efficient implementations that achieve “true sparsity” are lacking. In this work, we address this issue by proposing a graph computing view of attention where tokens are perceived as nodes of the graph and the attention mask determines the edges of the graph. Using this view, we develop graph processing algorithms to implement the attention mechanism. Both theoretically and empirically, we demonstrate that our algorithms only perform the needed computations, i.e., they are work optimal. We also perform extensive experimentation using popular attention masks to explore the impact of sparsity on execution time and achievable context length. Our experiments demonstrate significant speedups in execution times compared to state-of-theart attention implementations such as FlashAttention for large sequence lengths. We also demonstrate that our algorithms are able to achieve extremely long sequence lengths of as high as 160 million on a single NVIDIA A100 GPU (SXM4 80 GB). GitHub: https://github.com/KLab-AI3/Graph-Processing-Attention-IPDPS-2025",
+        "identifiers": [
+          "SemanticScholar:b5145269d6068942687b6182a0935e70e73ebf57"
+        ],
+        "semantic_scholar_id": "b5145269d6068942687b6182a0935e70e73ebf57",
+        "canonical_id": "arXiv:2502.01659",
+        "arxiv_id": "2502.01659",
+        "doi": "10.1109/IPDPS64566.2025.00107",
+        "authors": [
+          "Nathaniel Tomczak",
+          "S. Kuppannagari"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 621,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.17807",
+      "identity_tokens": [
+        "id:SemanticScholar:225bbb60ff185360093e6c72c17e65a97096c519",
+        "id:arXiv:2508.17807",
+        "title:attention debiasing for token pruning in vision language models",
+        "url:https://arxiv.org/abs/2508.17807"
+      ],
+      "record": {
+        "title": "Attention Debiasing for Token Pruning in Vision Language Models",
+        "source_url": "https://arxiv.org/abs/2508.17807",
+        "year": 2025,
+        "published": "2025-08-25",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language models (VLMs) typically encode substantially more visual tokens than text tokens, resulting in significant token redundancy. Pruning uninformative visual tokens is therefore crucial for improving computational efficiency, and language-to-vision attention has become a widely used importance criterion for this purpose. However, we find that attention in VLMs is systematically biased. It disproportionately favors tokens appearing later in the sequence, manifesting as over-attention to lower image regions, and assigns inflated scores to semantically empty padding tokens. These behaviors stem from intrinsic recency bias and attention sink effects inherited from large language models (LLMs), and they distort attention-based pruning by preserving irrelevant visual content. To derive a pruning criterion better aligned with semantic relevance, we introduce two lightweight yet effective debiasing techniques that restore the reliability of attention. The first compensates for positional distortions by removing recency-induced attention trends, producing a content-aware and position-agnostic importance measure. The second suppresses attention sink effects by eliminating spurious attention on padding tokens. Our method is model-agnostic, pruning-method-agnostic, and task-agnostic, enabling plug-and-play integration with existing VLM pruning models. Despite its simplicity, our approach consistently delivers strong performance gains. We evaluate our method on ten vision-language benchmarks spanning both image-based and video-based tasks, in comparison with seven state-of-the-art visual token pruning methods and across two representative VLM architectures. Our method achieves substantial performance gains, demonstrating strong effectiveness and generalizability. Our code is available at https://github.com/intcomp/attention-bias.",
+        "identifiers": [
+          "SemanticScholar:225bbb60ff185360093e6c72c17e65a97096c519"
+        ],
+        "semantic_scholar_id": "225bbb60ff185360093e6c72c17e65a97096c519",
+        "canonical_id": "arXiv:2508.17807",
+        "arxiv_id": "2508.17807",
+        "authors": [
+          "Kai Zhao",
+          "Wubang Yuan",
+          "Yuchen Lin",
+          "Liting Ruan",
+          "Xiao-Feng Lu",
+          "Deng-Ping Fan",
+          "Ming-Ming Cheng",
+          "Dan Zeng"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 415,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.05229",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.05229",
+        "id:SemanticScholar:377008cba8b1bbea862557a8e4d7bd03758dffa6",
+        "id:arXiv:2506.05229",
+        "title:diagonal batching unlocks parallelism in recurrent memory transformers for long contexts",
+        "url:https://arxiv.org/abs/2506.05229"
+      ],
+      "record": {
+        "title": "Diagonal Batching Unlocks Parallelism in Recurrent Memory Transformers for Long Contexts",
+        "source_url": "https://arxiv.org/abs/2506.05229",
+        "year": 2025,
+        "published": "2025-06-05",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer models struggle with long-context inference due to their quadratic time and linear memory complexity. Recurrent Memory Transformers (RMTs) offer a solution by reducing the asymptotic cost to linear time and constant memory usage. However, their memory update mechanism leads to sequential execution, causing a performance bottleneck. We introduce Diagonal Batching, a scheduling scheme that unlocks parallelism across segments in RMTs while preserving exact recurrence. This approach eliminates the sequential constraint, enabling efficient GPU inference even for single long-context inputs without complex batching and pipelining techniques. Because the technique is purely a run-time computation reordering, existing RMT models adopt it with no retraining. Applied to a LLaMA-1B ARMT model, Diagonal Batching yields a 3.3x speedup over standard full-attention LLaMA-1B and a 1.8x speedup over the sequential RMT implementation on 131,072-token sequences. By removing sequential bottleneck, Diagonal Batching reduces inference cost and latency, thereby strengthening RMTs as a practical solution for real-world, long-context applications.",
+        "identifiers": [
+          "SemanticScholar:377008cba8b1bbea862557a8e4d7bd03758dffa6"
+        ],
+        "semantic_scholar_id": "377008cba8b1bbea862557a8e4d7bd03758dffa6",
+        "canonical_id": "arXiv:2506.05229",
+        "arxiv_id": "2506.05229",
+        "doi": "10.48550/arXiv.2506.05229",
+        "authors": [
+          "Danil Sivtsov",
+          "I. Rodkin",
+          "Gleb Kuzmin",
+          "Yuri Kuratov",
+          "I. Oseledets"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 496,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.19670",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.19670",
+        "id:SemanticScholar:563a3fb557cd12f3f303bcbe70d23d8dce7f9793",
+        "id:arXiv:2510.19670",
+        "title:cosensellm semantics at the edge with cost and uncertaintyaware cloudedge cooperation",
+        "url:https://arxiv.org/abs/2510.19670"
+      ],
+      "record": {
+        "title": "CoSense-LLM: Semantics at the Edge with Cost- and Uncertainty-Aware Cloud-Edge Cooperation",
+        "source_url": "https://arxiv.org/abs/2510.19670",
+        "year": 2025,
+        "published": "2025-10-22",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present CoSense-LLM, an edge-first framework that turns continuous multimodal sensor streams (for example Wi-Fi CSI, IMU, audio, RFID, and lightweight vision) into compact, verifiable semantic tokens and coordinates with large language models under explicit latency, energy, bandwidth, and privacy constraints. CoSense-LLM has four parts: (i) SenseFusion, a lightweight encoder that aligns sensor embeddings with language and compresses them into short discrete code sequences; (ii) Edge-RAG, a local hybrid retrieval layer that grounds generation in site specific policies and notes; (iii) PromptRouter, a cost and uncertainty aware policy that selects edge only generation, edge plus retrieval, or compact cloud escalation; and (iv) Secure Execution, an auditable redaction path that enforces data minimization so raw waveforms never leave the device. The system works with modern serving optimizations, including paged or streaming KV caches, FlashAttention style kernels, speculative decoding, and quantized LoRA adapters, and supports on device personalization and federated updates under non IID drift. Across home, office, and clinic deployments, CoSense-LLM delivers grounded explanations while meeting tight service level objectives: it sustains sub second (p95) end to end latency on edge dominant paths, reduces inter tier token and bandwidth costs by preferring local retrieval grounded responses, and preserves privacy by transmitting only discrete codes and redacted metadata. Ablations show that Edge-RAG improves factual consistency and reduces contradictions, calibrated uncertainty enables selective abstention and controlled escalations, and KV plus decoding accelerators lower energy per decision. The results support an edge first design that treats semantics, privacy, and predictable latency as co equal goals for large model deployments in interference prone environments.",
+        "identifiers": [
+          "SemanticScholar:563a3fb557cd12f3f303bcbe70d23d8dce7f9793"
+        ],
+        "semantic_scholar_id": "563a3fb557cd12f3f303bcbe70d23d8dce7f9793",
+        "canonical_id": "arXiv:2510.19670",
+        "arxiv_id": "2510.19670",
+        "doi": "10.48550/arXiv.2510.19670",
+        "authors": [
+          "H. Akgul",
+          "Mari Eplik",
+          "Javier Rojas",
+          "Aina Binti Abdullah",
+          "P. van der Merwe"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 357,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iccad66269.2025.11240926",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccad66269.2025.11240926",
+        "id:SemanticScholar:837c15e5670a71e0406ad35a0575006aaabd0057",
+        "title:oalama an outlieradaptive llm inference accelerator with memoryaligned mixedprecision group quantization",
+        "url:https://doi.org/10.1109/ICCAD66269.2025.11240926"
+      ],
+      "record": {
+        "title": "OA-LAMA: An Outlier-Adaptive LLM Inference Accelerator with Memory-Aligned Mixed-Precision Group Quantization",
+        "source_url": "https://doi.org/10.1109/ICCAD66269.2025.11240926",
+        "year": 2025,
+        "published": "2025-10-26",
+        "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) face significant deployment challenges due to their substantial memory and computational demands. While low-precision quantization offers a promising solution, the presence of activation outliers severely degrades model accuracy. Existing approaches either compromise hardware efficiency through misaligned memory access or sacrifice quantization granularity through rigid bit-width allocation, particularly when handling non-uniform tensor distributions across and within layers. This paper presents a hardware-software co-designed framework resulting in an outlier-adaptive LLM inference accelerator with memory-aligned mixed-precision group quantization, named OA-LAMA. The framework comprises three key innovations: First, an outlier-adaptive memory-aligned mixed-precision group (OAMAG) format with a novel outlier reordering technique is proposed to preserve accuracy while maintaining DRAM-aligned memory access. Second, a distribution-aware group allocation strategy is proposed to address inter-layer outlier ratio variance. Finally, we design the OA-LAMA hardware architecture with a three-level accumulation architecture and timing-balanced processing elements to support the OAMAG format efficiently. Evaluations demonstrate that OA-LAMA achieves better accuracy than state-of-the-art 4-bit quantization methods while delivering 1.21–3.09× performance improvement and 1.35–2.47× energy efficiency gains over leading LLM accelerators. OA-LAMA establishes new Pareto frontiers in accuracy-efficiency co-optimization for LLM inference. OA-LAMA is open-sourced at https://github.com/CLab-HKUST-GZ/ICCAD25_OA-LAMA.git.",
+        "identifiers": [
+          "SemanticScholar:837c15e5670a71e0406ad35a0575006aaabd0057"
+        ],
+        "semantic_scholar_id": "837c15e5670a71e0406ad35a0575006aaabd0057",
+        "doi": "10.1109/ICCAD66269.2025.11240926",
+        "canonical_id": "DOI:10.1109/ICCAD66269.2025.11240926",
+        "authors": [
+          "Huangxu Chen",
+          "Ying-Bo Hao",
+          "Yi Zou",
+          "Xin-Yu Chen"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 353,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.06095",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774934.3786434",
+        "id:SemanticScholar:044c9dcc0f58dddd36567ad32b26066a52a08893",
+        "id:arXiv:2506.06095",
+        "title:accelerating sparse transformer inference on gpu",
+        "url:https://arxiv.org/abs/2506.06095"
+      ],
+      "record": {
+        "title": "Accelerating Sparse Transformer Inference on GPU",
+        "source_url": "https://arxiv.org/abs/2506.06095",
+        "year": 2025,
+        "published": "2025-06-06",
+        "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are popular around the world due to their powerful understanding capabilities. As the core component of LLMs, accelerating Transformer through parallelization has gradually become a hot research topic. Mask layers introduce sparsity into Transformer to reduce calculations. However, previous works rarely focus on the performance optimization of sparse Transformer. In addition, current static operator fusion schemes fail to adapt to diverse application scenarios. To address the above problems, we propose STOF, a framework that incorporates optimizations for Sparse Transformer that enables flexible masking and Operator Fusion on GPU. For multi-head attention (MHA) structure, STOF maps the computation to row-wise or block-wise kernels with unique storage formats according to analytical modeling. For downstream operators, STOF maps the fusion scheme to compilation templates and determines the optimal running configuration through two-stage searching. The experimental results show that compared to the state-of-the-art work, STOF achieves maximum speedups of 1.6× in MHA computation and 1.4× in end-to-end inference.",
+        "identifiers": [
+          "SemanticScholar:044c9dcc0f58dddd36567ad32b26066a52a08893"
+        ],
+        "semantic_scholar_id": "044c9dcc0f58dddd36567ad32b26066a52a08893",
+        "canonical_id": "arXiv:2506.06095",
+        "arxiv_id": "2506.06095",
+        "doi": "10.1145/3774934.3786434",
+        "authors": [
+          "Wen-Hao Dai",
+          "Hao-Dong Deng",
+          "Mengfei Rong",
+          "Xin-Yu Yang",
+          "Hongyu Liu",
+          "Fang-Xin Liu",
+          "Hailong Yang",
+          "Qi Cao",
+          "Qing-Xiao Sun"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 495,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/dac63849.2025.11133343",
+      "identity_tokens": [
+        "id:DOI:10.1109/dac63849.2025.11133343",
+        "id:SemanticScholar:3192beddae4e932657ceb8a66829598c73f1436d",
+        "title:dias distancebased attention sparsity for ultralongsequence transformer with treelike processinginmemory architecture",
+        "url:https://doi.org/10.1109/DAC63849.2025.11133343"
+      ],
+      "record": {
+        "title": "DIAS: Distance-based Attention Sparsity for Ultra-Long-Sequence Transformer with Tree-like Processing-in-Memory Architecture",
+        "source_url": "https://doi.org/10.1109/DAC63849.2025.11133343",
+        "year": 2025,
+        "published": "2025-06-22",
+        "venue": "Design Automation Conference",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context inference has become a central focus in recent self-regressive Transformer research. However, challenges still remain in performing decode stage due to the memory bandwidth bottleneck of attention mechanisms and the substantial memory overhead associated with KV cache. Although attention sparsity has been proposed as a potential solution, conventional sparsity methods that rely on heuristic algorithms often suffer from accuracy degradation when applied to ultra-long sequences. To break through the dilemma between accuracy-performance and bandwidth-capacity, this work proposes DIAS, a distancebased irregular attention sparsity approach with processing-inmemory (PIM) architecture. DIAS employs approximate topK attention (AKAttention) scores through graph-based search to improve inference efficiency while maintaining accuracy. Furthermore, a scalable tree-like PIM (TreePIM) architecture is introduced to achieve both memory capacity and bandwidth improvement by isolating enormous memory access for KV cache into the PIM units. Evaluations on various configurations of DIAS for Longbench with Llama3-405B models with 1 M sequence length show up to 75 times speedup compared with the state-of-the-art LLM accelerator, with accuracy drop of less than $1 \\%$. Index Terms-AI and Machine Learning, Architecture & System Design",
+        "identifiers": [
+          "SemanticScholar:3192beddae4e932657ceb8a66829598c73f1436d"
+        ],
+        "semantic_scholar_id": "3192beddae4e932657ceb8a66829598c73f1436d",
+        "doi": "10.1109/DAC63849.2025.11133343",
+        "canonical_id": "DOI:10.1109/DAC63849.2025.11133343",
+        "authors": [
+          "Ze-Kai Chen",
+          "Yi-Ming Chen",
+          "Teng Wan",
+          "Tianyi Yu",
+          "Yu Wang",
+          "Hua-Zhong Yang",
+          "Xue-Qing Li"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 479,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3724/2096-7004.di.2025.0077",
+      "identity_tokens": [
+        "id:DOI:10.3724/2096-7004.di.2025.0077",
+        "id:SemanticScholar:2cd7b7c01f2bfc86a6d97e0976b59b2787c1e5fa",
+        "title:lightweighting large models a review of model compression techniques",
+        "url:https://doi.org/10.3724/2096-7004.di.2025.0077"
+      ],
+      "record": {
+        "title": "Lightweighting Large Models: A Review of Model Compression Techniques",
+        "source_url": "https://doi.org/10.3724/2096-7004.di.2025.0077",
+        "year": 2025,
+        "published": "2025-09-01",
+        "venue": "Data Intelligence",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the rapid development of deep learning technology, neural network models have achieved remarkable results, but their large number of references and high computational resource requirements limit the wide range of applications.Therefore, model compression techniques emerge, aiming to reduce computational complexity, memory occupation, and energy consumption overhead of the models to meet the practical deployment requirements without sacrificing performance. In this paper, we systematically sort out the research results in the field of model compression in recent years. Firstly, we introduce the definition and goals of model compression, and discuss its challenge and evolution of the techniques. Then a variety of mainstream compression methods are elaborated in detail, including pruning, quantization, knowledge distillation, low-rank factorization, and parameter sharing, and analyze their principles, strengths, weaknesses, and applicability scenarios. We also provide a comparative analysis of these methods, high-lighting their trade-o ff s in terms of compression rate, performance, and computational e ffi ciency. In addition, we introduce commonly used datasets, evaluation metrics, and future research directions for model compression in image classification and natural language processing tasks. By comprehensively summarizing and analyzing the existing work, we expect to provide model compression researchers with a clear technology mapping and research roadmap to promote their researches.",
+        "identifiers": [
+          "SemanticScholar:2cd7b7c01f2bfc86a6d97e0976b59b2787c1e5fa"
+        ],
+        "semantic_scholar_id": "2cd7b7c01f2bfc86a6d97e0976b59b2787c1e5fa",
+        "doi": "10.3724/2096-7004.di.2025.0077",
+        "canonical_id": "DOI:10.3724/2096-7004.di.2025.0077",
+        "authors": [
+          "Hao-Ran Guan",
+          "Jun-Hao Lv",
+          "Xi Chen",
+          "Lei Qi"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 408,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:ecee781ec40b65342c1da703529e953e715e66e0",
+      "identity_tokens": [
+        "id:SemanticScholar:ecee781ec40b65342c1da703529e953e715e66e0",
+        "title:hardware characterization of di usion vs autoregressive language model inference compute vs memory bottlenecks",
+        "url:https://www.semanticscholar.org/paper/ecee781ec40b65342c1da703529e953e715e66e0"
+      ],
+      "record": {
+        "title": "Hardware Characterization of Di ! usion vs. Autoregressive Language Model Inference: Compute vs. Memory Bottlenecks",
+        "source_url": "https://www.semanticscholar.org/paper/ecee781ec40b65342c1da703529e953e715e66e0",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:ecee781ec40b65342c1da703529e953e715e66e0"
+        ],
+        "semantic_scholar_id": "ecee781ec40b65342c1da703529e953e715e66e0",
+        "canonical_id": "SemanticScholar:ecee781ec40b65342c1da703529e953e715e66e0",
+        "authors": [
+          "Zhen-Xing Fan",
+          "Kevin Skadron"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.05693",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.05693",
+        "id:SemanticScholar:dced3f26ae6d9dd60d8aec71db34823dc95ee3c4",
+        "id:arXiv:2412.05693",
+        "title:batchmax higher llm throughput using larger batch sizes and kv cache compression",
+        "url:https://arxiv.org/abs/2412.05693"
+      ],
+      "record": {
+        "title": "Batch-Max: Higher LLM Throughput using Larger Batch Sizes and KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2412.05693",
+        "year": 2024,
+        "published": "2024-12-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Several works have developed eviction policies to remove key-value (KV) pairs from the KV cache for more efficient inference. The focus has been on compressing the KV cache after the input prompt has been processed for faster token generation. In settings with limited GPU memory, and when the input context is longer than the generation length, we show that by also compressing the KV cache during the input processing phase, larger batch sizes can be used resulting in significantly higher throughput while still maintaining the original model's accuracy.",
+        "identifiers": [
+          "SemanticScholar:dced3f26ae6d9dd60d8aec71db34823dc95ee3c4"
+        ],
+        "semantic_scholar_id": "dced3f26ae6d9dd60d8aec71db34823dc95ee3c4",
+        "canonical_id": "arXiv:2412.05693",
+        "arxiv_id": "2412.05693",
+        "doi": "10.48550/arXiv.2412.05693",
+        "authors": [
+          "Michael R. Metel",
+          "Boxing Chen",
+          "Mehdi Rezagholizadeh"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 676,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.25155",
+      "identity_tokens": [
+        "id:DOI:10.1109/hipc66333.2025.00044",
+        "id:SemanticScholar:2bee05f5ad785364eb2fd8197fea4245eab3b7a3",
+        "id:arXiv:2509.25155",
+        "title:contextdriven performance modeling for causal inference operators on neural processing units",
+        "url:https://arxiv.org/abs/2509.25155"
+      ],
+      "record": {
+        "title": "Context-Driven Performance Modeling for Causal Inference Operators on Neural Processing Units",
+        "source_url": "https://arxiv.org/abs/2509.25155",
+        "year": 2025,
+        "published": "2025-09-29",
+        "venue": "International Conference on High Performance Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The proliferation of large language models has driven demand for long-context inference on resourceconstrained edge platforms. However, deploying these models on Neural Processing Units (NPUs) presents significant challenges due to architectural mismatch: the quadratic complexity of standard attention conflicts with NPU memory and compute patterns. This paper presents a comprehensive performance analysis of causal inference operators on a modern NPU, benchmarking quadratic attention against sub-quadratic alternatives including structured state-space models and causal convolutions. Our analysis reveals a spectrum of critical bottlenecks: quadratic attention becomes severely memory-bound with catastrophic cache inefficiency, while sub-quadratic variants span from computebound on programmable vector cores to memory-bound by data movement. These findings provide essential insights for codesigning hardware-aware models and optimization strategies to enable efficient long-context inference on edge platforms.",
+        "identifiers": [
+          "SemanticScholar:2bee05f5ad785364eb2fd8197fea4245eab3b7a3"
+        ],
+        "semantic_scholar_id": "2bee05f5ad785364eb2fd8197fea4245eab3b7a3",
+        "canonical_id": "arXiv:2509.25155",
+        "arxiv_id": "2509.25155",
+        "doi": "10.1109/HiPC66333.2025.00044",
+        "authors": [
+          "Neelesh Gupta",
+          "Rakshith Jayanth",
+          "Dhruv Parikh",
+          "Viktor K. Prasanna"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 380,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.12966",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.12966",
+        "id:SemanticScholar:e416258901e77805699d3852768fd4ebee310662",
+        "id:arXiv:2510.12966",
+        "title:3model speculative decoding",
+        "url:https://arxiv.org/abs/2510.12966"
+      ],
+      "record": {
+        "title": "3-Model Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2510.12966",
+        "year": 2025,
+        "published": "2025-10-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative Decoding (SD) accelerates inference in large language models by using a smaller draft model to propose tokens, which are then verified by a larger target model. However, the throughput gains of SD are fundamentally limited by a trade-off between draft model size and token acceptance: smaller draft models generate tokens more quickly but exhibit greater divergence from the target model, resulting in lower acceptance rates and reduced speedups. We introduce Pyramid Speculative Decoding (PyramidSD), an extension of SD that inserts an intermediate qualifier model between the draft and target to bridge the distributional gap in output predictions, allowing smaller model to be used for drafting. This hierarchical decoding strategy improves alignment across models, enabling higher acceptance rates and allowing the use of significantly smaller draft models without sacrificing overall performance. PyramidSD builds on fuzzy acceptance criteria to support relaxed divergence thresholds at each stage, improving throughput. In experiments, PyramidSD achieves up to 1.91x generation speed over standard SD, reaching 124 tokens per second on a consumer GPU (RTX 4090). In small-memory settings with a 1B-parameter draft model and an 8B target model, PyramidSD minimally trades target model quality for improved throughput. Overall, PyramidSD offers a practical approach to enhancing speculative decoding efficiency and can be readily applied to existing inference pipelines.",
+        "identifiers": [
+          "SemanticScholar:e416258901e77805699d3852768fd4ebee310662"
+        ],
+        "semantic_scholar_id": "e416258901e77805699d3852768fd4ebee310662",
+        "canonical_id": "arXiv:2510.12966",
+        "arxiv_id": "2510.12966",
+        "doi": "10.48550/arXiv.2510.12966",
+        "authors": [
+          "Sanghyun Byun",
+          "Mohanad Odema",
+          "J. Guack",
+          "Baisub Lee",
+          "Jacob Song",
+          "Woo Seong Chung"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 365,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:48e5f60cf9fd4bd1793a3b873d0b3494236e6ede823ef7b119f99356f470a7fb",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

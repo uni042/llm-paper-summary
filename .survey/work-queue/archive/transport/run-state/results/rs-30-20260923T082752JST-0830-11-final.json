@@ -1,0 +1,71 @@
+{
+  "active_assignment": true,
+  "active_job_ids": [
+    "job-research-9fc5a1ad8ad0b2d8"
+  ],
+  "actual_invocation_start": "2026-09-22T23:27:52+00:00",
+  "candidate_inventory": 189,
+  "claim_monitor_window_seconds": 60,
+  "claim_result_pending": false,
+  "claim_result_pending_age_seconds": 0,
+  "claim_state_checked": true,
+  "discovery_evaluation_pending": false,
+  "discovery_evaluation_request_ids": [],
+  "discovery_precheck_result_pending": false,
+  "discovery_recovery_required": false,
+  "discovery_recovery_targets": [],
+  "discovery_rounds_completed": 0,
+  "discovery_selector": {
+    "historical_direction_scores": {
+      "backward": 3.625,
+      "forward": 17.5
+    },
+    "next_direction": "backward",
+    "reason": "same_run_backward_missing",
+    "rule": "This selector controls Discovery route order only. It does not score Candidate quality. Candidate base/lineage/recency/venue judgement remains governed by worker-router.md.",
+    "run_key": "scheduled-chat-30-20260923T082752JST-11",
+    "same_run_attempted_directions": [],
+    "schema_version": 1,
+    "seed_fallback": "Use the lexicographically first canonical_id from the current eligible seed pool.",
+    "selected_seed_canonical_id": null
+  },
+  "discovery_submission_result_pending": false,
+  "gate": {
+    "decision": "STOP_RUN",
+    "finalization_allowed": true,
+    "required_action": "FINALIZE",
+    "stop_reasons": [
+      "scheduled_0830_maintenance_complete"
+    ],
+    "work_mode": "maintenance"
+  },
+  "independent_work": true,
+  "last_terminal_job_status": "none",
+  "next_action": "FINALIZE",
+  "ok": true,
+  "pending_attempt_ids": [],
+  "pending_claim_request_ages_seconds": {},
+  "pending_claim_request_ids": [],
+  "pending_discovery_precheck_request_ids": [],
+  "pending_discovery_submission_ids": [],
+  "pipeline_ahead_count": 0,
+  "processed_at": "2026-09-22T23:31:49.930691+00:00",
+  "request_id": "rs-30-20260923T082752JST-0830-11-final",
+  "research_audit_completed_this_invocation": 0,
+  "rule": "Use this durable derived snapshot instead of manually inventing continuation-gate booleans. The first successful snapshot for run_key freezes candidate_inventory/work_mode. Active same-worker claims from a previous invocation are resumed rather than hidden by the new start time; only terminal results processed during this invocation count toward its completion quota. New Research/Audit descriptors use <attempt_id>.json; legacy arbitrary names are read-only compatible. The final handoff guard begins at 180 seconds remaining, while the 600-second window only forbids new independent work. runtime_condition must name a concrete observed platform/transport event; retriable read/transport conditions require confirmation after at least two failed recovery attempts. A pending claim exposes its request age; for the first 60 seconds the gate requires active Survey claim fast-lane monitoring rather than passive waiting. Discovery async state and carry-over immutable submissions remain visible across run boundaries.",
+  "run_key": "scheduled-chat-30-20260923T082752JST-11",
+  "runtime_condition": "none",
+  "runtime_condition_attempts": 0,
+  "runtime_condition_confirmed": false,
+  "runtime_condition_detail": "",
+  "runtime_condition_ignored_reason": null,
+  "runtime_condition_requested": "none",
+  "scheduled_slot": "0830",
+  "schema_version": 1,
+  "seconds_to_run_deadline": 3362,
+  "submission_result_pending": false,
+  "submission_state_checked": true,
+  "submitted_attempt_ids": [],
+  "work_mode": "maintenance",
+  "worker_id": "scheduled-chat-30"
+}

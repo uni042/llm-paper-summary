@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43694713bfdcedca-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.13130",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.13130",
+    "identity_tokens": [
+      "arXiv:2502.13130"
+    ],
+    "reason": "We present Magma, a foundation model that serves multimodal AI agentic tasks in both the digital and physical worlds. Magma is a significant extension of vision-language (VL) models in that it not only retains the VL understanding ability (verbal intelligence) of the latter, but is also equipped with the ability to ground and act in the visual-spatial world (spatial-temporal intelligence). To endow agentic capabilities for tasks ranging from UI navigation to robot manipulation, Magma is trained on large amounts of heterogeneous datasets that span from images, videos to robotics data, where actionable visual objects (e.g. clickable buttons in GUI) in images are labeled by Set-of-Mark (SoM) for action grounding, and object movements (e.g. trace of human hands or robotic arms) in videos are labeled by Trace-of-Mark (ToM) for action planning. Extensive experiments show that SoM and ToM help bridge the gap between verbal and action abilities and significantly enhance spatio-temporal intelligence which is fundamental to agentic tasks, as shown in Fig. 1. In particular, Magma creates new state-of-the-art results on UI navigation and robotic manipulation tasks, outperforming previous model",
+    "first_checked_at": "2026-10-06T13:16:33+00:00",
+    "last_checked_at": "2026-10-06T13:16:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+    ],
+    "title": "Magma: A Foundation Model for Multimodal AI Agents"
+  },
+  "processed_at": "2026-10-06T13:16:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43694713bfdc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

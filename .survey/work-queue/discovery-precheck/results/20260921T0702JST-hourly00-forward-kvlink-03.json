@@ -1,0 +1,846 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0702JST-hourly00-forward-kvlink-03",
+  "collector_id": "hourly00-20260921T0658JST-forward-kvlink",
+  "run_key": "2026-09-21T06:58:37+09:00",
+  "axis": "forward citations of KVLink efficient KV cache reuse",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2502.16002/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "590cfaef040a0b11714aa12e1af3f38d50228594",
+  "raw_search_result_count": 75,
+  "retrieval_duplicate_filtered_count": 14,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 1,
+  "intra_batch_alias_duplicate_filtered_count": 1,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T22:01:52.628783+00:00",
+  "results": [
+    {
+      "title": "Where Should a Document Live: Context, Representations, or Parameters?",
+      "source_url": "https://www.semanticscholar.org/paper/b754dbfba7611bc3ca75a82f88f9cd0aa98ca712",
+      "year": 2026,
+      "published": "2026-09-15",
+      "abstract": "To answer questions outside of their pre-training data, large language models (LLMs) need access to new information, which can be presented in the context window as documents, encoded into the model's parameters, or injected as latent representations. However, each of these methods comes with different efficiency, cost, and performance trade-offs, with no single winner. We present a controlled comparison of representation-based (KV-cache based) and parametric (fine-tuning-based) adaptation methods on five knowledge-intensive benchmarks. We show that in the oracle setting, Cartridges (KV) are the most accurate injection method at nearly every storage budget, outperforming parametric methods by 10 points. Compaction (KV) matches Cartridges only at low compression rates, lagging behind the parametric methods by 10 points at rates higher than $50\\times$. In the more realistic multi-document retrieval scenario, Cartridges are the only method that matches in-context learning (ICL), leading the parametric methods by 29 points and Compaction by 15 points. Nonetheless, Cartridges are also the only method, besides full fine-tuning and large MLP adapters, that suffers from catastrophic forgetting, i.e., a 6% performance degradation on control benchmarks, with 13% in coding.",
+      "canonical_id": "arXiv:2609.17346",
+      "arxiv_id": "2609.17346",
+      "authors": [
+        "Nathanaël Carraz Rakotonirina",
+        "Momchil Hardalov",
+        "Gonzalo Iglesias",
+        "Adrià de Gispert"
+      ]
+    },
+    {
+      "title": "NumCache: KV Cache Compression and Retrieval for Financial Document QA",
+      "source_url": "https://www.semanticscholar.org/paper/e7a5505dbbd4b122a935ceb69783ba56180c8b5d",
+      "year": 2026,
+      "published": "2026-08-08",
+      "abstract": "Large Language Models (LLMs) are increasingly deployed in financial applications, particularly for interpreting U.S. Securities and Exchange Commission (SEC) filings. However, financial QA over these filings is challenging, as they are extremely long, numerically dense, and often require cross-document reasoning. Existing approaches struggle to scale to such settings due to long-context degradation and loss of numerical fidelity under context compression. Long-document Retrieval-Augmented Generation (RAG) improves evidence coverage through coarse-to-fine retrieval, yet semantic retrievers collapse fine-grained magnitudes and units, returning passages that lack the precise values needed for correct reasoning. Cache-Augmented Generation (CAG) projects attention states into compact KV representations and treats precomputed caches as reusable internal memory, but typically assumes caches are already well-formed and query-relevant, leaving open how to build and select number-faithful caches. To address this gap, we propose NumCache, which compresses SEC filings into KV caches initialized from numerically dense regions and trained directly on financial QAs. On top of these caches, we then train a contrastive retriever that aligns questions with cache representations, thus improving retrieval performance. We evaluate NumCache on the Fin-RATE benchmark, which comprises SEC-filing QA tasks covering single-filing reasoning, cross-firm comparison, and longitudinal trend analysis. NumCache achieves up to 4× context compression with competitive accuracy (41.4% vs.\\ 44.8% for uncompressed Qwen3-4B on single-filing reasoning) and a 6.4× inference speedup, while its contrastive retriever attains 68.3% Recall@1 on single-filing retrieval; 2.3× the strongest text-based baseline (29.7%). These results highlight cache-based retrieval with number-preserving representations as an effective approach for long-context financial QA.",
+      "canonical_id": "DOI:10.1145/3770855.3818131",
+      "doi": "10.1145/3770855.3818131",
+      "authors": [
+        "Eftychia Makri",
+        "Peiwen Li",
+        "Yidong Jiang",
+        "Junrong Chen",
+        "Jialin Chen",
+        "Ali Maatouk",
+        "Leandros Tassiulas",
+        "Eliot Brenner",
+        "Bing Xiang",
+        "Rex Ying"
+      ]
+    },
+    {
+      "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+      "source_url": "https://www.semanticscholar.org/paper/6b1afffee709753c80d1959fb99cbf558b9b32cd",
+      "year": 2026,
+      "published": "2026-08-07",
+      "abstract": "Recent optimization studies on Retrieval-Augmented Generation (RAG) have exploited chunk-level KV cache reuse to avoid processing long retrieved contexts for higher efficiency, while significant information redundancy and noise still remain in the coarse-grained chunks. This paper optimizes the Pareto frontier under low prefill latency constraints while maximizing accuracy by proposing CoinRAG (Contextualized Information Nugget KV Cache Reuse for Long-Context RAG). The name metaphorically reflects our core mechanism: much like assembling small tokens (or\"coins\") to accumulate a larger value, CoinRAG compositionally reuses offline-computed, fine-grained nugget caches to form a learned contextual representation efficiently in a more semantically relevant but compact manner. Specifically, instead of full-chunk encoding, CoinRAG identifies query-relevant semantic units within retrieved chunks through two-stage retrieval and seamlessly assembles their sliced KV representations with a chunk-level context. Extensive evaluations on LongBench multi-hop question answering tasks demonstrate that CoinRAG significantly reduces operational costs and outperforms the other baselines with a new Pareto frontier and an average 5.3% relative improvement in answer quality (F1) under a standard fast prefill latency budget.",
+      "canonical_id": "arXiv:2608.07458",
+      "arxiv_id": "2608.07458",
+      "authors": [
+        "Gyuwan Kim",
+        "Cheoneum Park",
+        "Tao Yang"
+      ]
+    },
+    {
+      "title": "Mixture-of-Translators: Translating KV Caches Across Heterogeneous Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/d8cba695d43821b2c35f597bc7eed3c043800a17",
+      "year": 2026,
+      "published": "2026-07-31",
+      "abstract": "Heterogeneous Large Language Model (LLM) systems increasingly rely on shared contexts, retrieved evidence, and multi-agent dialogue histories, yet their internal key-value (KV) caches remain model-specific and cannot be reused across architectures. Consequently, each model must repeatedly prefill or store caches for the same context, limiting the scalability of multi-model reasoning and long-context generation. We propose Mixture-of-Translators(MoT), a cache translation framework that maps context KV caches from a source LLM into the cache space of a target LLM. Unlike prior approaches that depend on a single projection path or global shared latent space, MoT uses multiple translator modules to capture diverse source--target mappings. To further reduce residual translation error, we introduce a Context Correction Loss that aligns the replayed target trajectory with the native target trajectory. We reveal two competing failure modes in cache translation: propagated translation shift from early injection and last-state shift from late injection. MoT addresses them through translator mixtures and target-side correction. Across homogeneous and heterogeneous translations among Qwen2.5, GPT-2, and OPT models, MoT preserves downstream QA performance, including Qwen2.5-7B-scale translation with 51.0% average closed-set QA accuracy and 0.43 average extractive QA F1. In practical case studies, MoT enables quality-preserving memory reuse for multi-agent reasoning and retains 96.3% of direct-context quality in long-context cache-augmented generation, demonstrating scalable KV cache reuse across heterogeneous LLMs.",
+      "canonical_id": "arXiv:2607.28979",
+      "arxiv_id": "2607.28979",
+      "authors": [
+        "Jin-woo Lee",
+        "Minkyung Song",
+        "Junghyun Oh",
+        "Seunghoon Han",
+        "Soyoung Park",
+        "Gwangseon Jang",
+        "Sungsu Lim"
+      ]
+    },
+    {
+      "title": "SemPIC: Learning Semantic Position-Independent KV Caches",
+      "source_url": "https://www.semanticscholar.org/paper/f48d751da47d9a84046858a1ef820b02aa7775b1",
+      "year": 2026,
+      "published": "2026-07-30",
+      "abstract": "Long-context retrieval and agentic workloads repeatedly reuse the same documents under changing instructions, histories, and document orders. Prefix caching cannot exploit this reuse, while position-independent caching (PIC) remains unreliable because independently compiled KV states lack the future context in which they will be consumed. Our diagnostics show that a learned boundary-conditioned baseline sharply reduces attention deviation near reusable-block boundaries but leaves interior and task-level residuals, motivating adaptation of the document representation itself. We present \\emph{SemPIC}, which trains a LoRA-enabled Writer to compile native per-layer document KVs through behavioral distillation while retaining the pretrained decoder as an unchanged Reader. Adaptation is confined to offline cache construction, preserving the standard KV interface and cache-hit decoding path. We further introduce KV Gradient Checkpointing, which reduces peak training memory without severing gradients through cached KVs. Across three models and four tasks, SemPIC raises mean micro-F1 over KV Packet from 0.53 to 0.60, approaching Full Recompute at 0.62. Code: https://github.com/jn12-29/SemPIC",
+      "canonical_id": "arXiv:2607.28069",
+      "arxiv_id": "2607.28069",
+      "authors": [
+        "Hui Xie",
+        "Peng Xiao",
+        "Yutong Deng",
+        "Shuo-Ran Dou",
+        "Jian Yang",
+        "Jinyang Guo"
+      ]
+    },
+    {
+      "title": "Compute Globally, Materialize Locally: The Memory Contract of Sparse Event-KV",
+      "source_url": "https://www.semanticscholar.org/paper/d26053eb9c925b2634ae21305bab90a6cac139e5",
+      "year": 2026,
+      "published": "2026-07-26",
+      "abstract": "Long-horizon agents increasingly reuse their KV cache as memory: a serving system keeps a subset of cached entries and drops the rest. Eviction and episodic-memory schemes therefore rest on a premise rarely tested directly, that a retained event is still informative once the observations that produced it are gone. We test it by omitting one earlier observation from what is served, across otherwise identical agent histories. Among items sensitive to that observation, the answer overwhelmingly follows the omitted value, though no served span says which value is correct. We call this semantic materialization: a downstream event's cached rows act as an independently servable view of computation whose inputs are gone. It can also be written on purpose. A deliberately phrased, answer-free event raises donor-aligned recovery from 6% to 51% on Qwen3-8B without ever naming the value, whereas passively harvesting natural mentions from long-term dialog yields no detected advantage. What such a row carries is specific and bounded. Compact state survives, larger payloads decay toward chance, and whether a construction writes at all turns on phrasing rather than on meaning alone, so two phrasings the model comprehends equally well can diverge sharply. The result is a memory contract for sparse event-KV serving: what to write, where it lands, and what survives once the source is gone. For anyone who evicts the corollary is that dropping a source event and observing no accuracy loss does not show the source was unnecessary.",
+      "canonical_id": "arXiv:2607.23693",
+      "arxiv_id": "2607.23693",
+      "authors": [
+        "Ze-Yuan Cai",
+        "Zesen Cai"
+      ]
+    },
+    {
+      "title": "HijackKV: New Threat in Position-Independent KV Cache Reuse",
+      "source_url": "https://www.semanticscholar.org/paper/ea1f90058a3c09feb2b83df36b57bdf235b68476",
+      "year": 2026,
+      "published": "2026-07-22",
+      "abstract": "Key-Value (KV) cache reduces inference latency in large language models (LLMs). Traditional prefix-based reuse has low cache hit rates across inference requests because it requires exact token and position matches. To improve efficiency, recent system optimizations introduce position-independent KV reuse, allowing KV cache to be reused whenever identical text chunks appear, regardless of their position in the sequence. We show this design introduces a new threat, KV Cache Hijacking. Since KV caches are retrieved by token match but encode the context in which they were originally computed, the KV tied to a benign-looking token chunk may encode an attacker-controlled prefix. When later reused in a victim query, this contaminated KV silently hijacks the model's behavior, even if no attacker-controlled text appears in the input. We introduce HIJACKKV, the first attack framework that systematically exploits this vulnerability, demonstrating its severity and practicality. HIJACKKV optimizes an attacker-controlled prefix, so that the KV computed for a subsequent common benign text encodes the attacker's goal, while the text remains unchanged for future cache hits. HIJACKKV achieves an average 94% success rate in a single attempt, remains effective under realistic constraints including low hit rates (10%) and frequent recomputation (50%), persists over multi-turn interactions, and transfers across models in black-box settings. We further provide design insights for building secure KV reuse systems.",
+      "canonical_id": "arXiv:2607.19957",
+      "arxiv_id": "2607.19957",
+      "authors": [
+        "Yichi Zhang",
+        "Zhiqi Wang",
+        "Huan Zhang",
+        "Yuchen Yang"
+      ]
+    },
+    {
+      "title": "ChronoStitch: Training-Free Composition of Visual KV Memories for Long-Horizon Temporal Reasoning",
+      "source_url": "https://www.semanticscholar.org/paper/e21cf4ed9b6d05c506fa9b21d526a308e135d1f0",
+      "year": 2026,
+      "published": "2026-07-21",
+      "abstract": "Long-video question answering requires a model to preserve visual evidence over time without repeatedly reprocessing the same video. A practical approach is to store the vision-language model's internal key-value (KV) cache for each video chunk and retrieve that state at query time. However, independently cached video chunks do not compose correctly: every chunk is prefilled from local rotary position zero, so naive concatenation collides temporal phases and removes the global order required for questions about what happened first, how often events occurred, or what changed across the video. This paper presents ChronoStitch, a training-free method for composing independently stored visual KV memories. The method first re-bases stored post-rotary keys onto a global three-axis multimodal RoPE coordinate system that preserves time, height, and width structure. We show why a one-dimensional scalar re-indexing is geometrically inconsistent for visual tokens because it turns spatial order within a frame into false temporal displacement. We then address the residual content gap left by positional repair: later chunks were originally encoded without attending to earlier chunks. ChronoStitch therefore selectively recomputes a small fraction of high-deviation later-chunk visual tokens while allowing them to attend over the composed cache. On Qwen2.5-VL-3B and the temporal split of TempCompass, ChronoStitch outperforms naive composition and position-only variants, improving event-ordering accuracy while running 3.3x faster than full joint re-prefilling.",
+      "canonical_id": "arXiv:2607.19547",
+      "arxiv_id": "2607.19547",
+      "authors": [
+        "Santiram Tiwari",
+        "Nishant Sinha",
+        "K. Kislay"
+      ]
+    },
+    {
+      "title": "MaSRead: Content-Addressed Reading of Replicated Latent Stores",
+      "source_url": "https://www.semanticscholar.org/paper/9818272727d7eb12bfc0c83c93341496d3b849d4",
+      "year": 2026,
+      "published": "2026-07-21",
+      "abstract": "Independent agents that reason in latent space can share computed state as key-value cache fragments rather than text. Merged by a conflict-free replicated data type, these fragments form a store that converges under any delivery order or duplication. Yet a later query, unknown at encode time, cannot reliably read the merged cache: colocated fragments interfere, so colocation is not addressability. MaSRead addresses the read to content. It routes through opaque keyed tag sets derived from fragment words and decodes each selected fragment under a hard attention mask that hides the rest. Under lexical connectivity, a graph walk reaches the fragments required by a multi-hop query. Across chain, pipeline, symmetric, hub, and natural-language stores, MaSRead recovers visited fragments in isolation, remains effective as unrelated fragments accumulate, and transfers to another model family. After routing, materialized decoding depends on fragment length rather than total store size; end-to-end work still includes store-dependent routing and one read per visited fragment. The limits are explicit: lexical routing can miss disconnected evidence, and answer composition remains bounded by the frozen reader. Thus a replicated latent store becomes selectively readable for later queries when the needed fragments connect to the query through content.",
+      "canonical_id": "arXiv:2608.11218",
+      "arxiv_id": "2608.11218",
+      "authors": [
+        "Carlos Baquero",
+        "Lu'is Brito",
+        "João Resende"
+      ]
+    },
+    {
+      "title": "Efficient and Effective Personalized In-Context Learning for On-Device Large Model Services",
+      "source_url": "https://www.semanticscholar.org/paper/0424bef6348ea6c48eba1a95f95f331e23f1eac4",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "Recently, on-device large models (e.g., 7B parameter LLMs and LVLMs) are increasingly deployed in real-world services such as mobile assistants, edge computing, and IoT systems, where low latency and resource efficiency are critical. Since large models trained on general-domain data are typically suboptimal for downstream services, In-Context Learning (ICL) technique is widely used to enhance their task-specific service performance without extra tuning. However, effective ICL methods generally necessitate a sufficient amount of supervised data to provide abundant service-related information, which usually leads to a long context (i.e., more texts or images input) for models to process. This long context issue can significantly degrade the real-time inference efficiency and also impact the information utilization effectiveness, particularly for on-device large models with limited long context modeling capacities. To tackle this challenge, we propose a Personalized Knowledge Refinement (PKR) framework to achieve efficient and effective ICL for on-device large models. Specifically, we first introduce a personalized knowledge extraction module, which analyzes the inference behaviors of the target model on small-scale supervised data and then converts these behavioral patterns into personalized service-specific knowledge as the instruction context. Furthermore, we propose an adaptive knowledge filtration mechanism to model the informativeness of the extracted knowledge and eliminate the redundant ones, further improving the knowledge encoding efficiency per unit of context length. Experiments based on 14 benchmarks spanning both textual and visual task services, and 4 large models, demonstrated that PKR consistently improves task accuracy while reducing context length and inference latency, making it a practical solution for real-world on-device services.",
+      "canonical_id": "DOI:10.1109/TSC.2026.3697569",
+      "doi": "10.1109/TSC.2026.3697569",
+      "authors": [
+        "Huili Wang",
+        "Yuan-Hong Huang",
+        "Zhiyang Hu",
+        "Qing Li",
+        "Ping-Yi Fan",
+        "Yongfeng Huang",
+        "Shangguang Wang",
+        "Tao Qi"
+      ]
+    },
+    {
+      "title": "UNAS: Urgency- and Fairness-Aware Scheduling for SLO-Oriented LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/17a763adfab93a50c20671cadbcf4cb57f82e5b3",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "The widespread adoption and strong generalizability of large language models (LLMs) lead to highly heterogeneous workloads that exhibit substantial variability in request lengths and latency requirements. This pronounced heterogeneity causes existing scheduling strategies to suffer from head-of-line blocking and inefficient request ordering, resulting in significant SLO violations and inflated end-to-end latency. In this paper, we present UNAS, a hierarchical scheduler for end-to-end SLO-oriented LLM serving. UNAS adopts a two-level design. At the cluster level, it classifies incoming requests into urgent and normal queues based on estimated service times derived from request features and runtime statistics, and dynamically updates their queue priorities as latency pressure evolves. At the instance level, UNAS performs fine-grained dispatch using a least-slack-first policy, prioritizing requests with the highest risk of SLO violations. Experimental results demonstrate that UNAS consistently outperforms representative baselines across diverse workloads, improving end-to-end SLO attainment by up to 11.1% and reducing mean end-to-end latency by up to $1.47 \\times$.",
+      "canonical_id": "DOI:10.1109/JCC72984.2026.00058",
+      "doi": "10.1109/JCC72984.2026.00058",
+      "authors": [
+        "Tian-Nan Fu",
+        "Jianxiong Liao",
+        "Xu Chen",
+        "Zhi Zhou"
+      ]
+    },
+    {
+      "title": "Kamera: Unified Position-Invariant Multimodal KV Cache for Training-Free Reuse",
+      "source_url": "https://www.semanticscholar.org/paper/e962fc426aa3942927b54fea893f18a7ce219d17",
+      "year": 2026,
+      "published": "2026-06-22",
+      "abstract": "Multimodal agents repeatedly re-examine the same video frames, UI screenshots, and rendered artifacts as their context window slides and reasoning iterates, yet every look-back re-encodes from scratch, because prefix caches serve reuse only at a fixed leading position. We show this recompute is avoidable, and identify exactly what naive KV reuse loses: the cross-chunk conditioning a chunk absorbs from its neighbours. This loss is asymmetric. The direct readout of a cached chunk is recovered exactly and for free by the standard state-merge. What remains is a diffuse, low-rank residue concentrated in deep layers, invisible to single-hop retrieval but precisely what multi-hop reasoning binds on. Blind reuse therefore leaves single-hop recall intact while halving multi-hop accuracy; this is the failure mode prior position-independent caches, designed for single-context or single-image reuse, do not address. We repair it with a small, training-free low-rank conditioning patch stored alongside each position-free chunk. Reuse reduces to one operator across MLA, GQA, and MHA: exact RoPE re-rotation to any target position, plus the patch that restores cross-chunk binding. This makes three window operations cheap: reorder (one patch serves every ordering of a cached set), sliding-window survival (surviving chunks relocate via rotation only, zero re-encode), and recall (an evicted chunk is rehydrated by its patch, never re-encoded). A rank-m patch recovers full task accuracy on cross-chunk-binding benchmarks, MM-NIAH across two attention families and two-page doc-QA, at a fraction of the KV footprint, and reconstructs re-prefill KV to within bf16 rounding in a production SGLang kernel across six backbones. The conditioning signal is strongest in redundant vision and video streams, making our solution most impactful where multimodal agents spend their recompute budget.",
+      "canonical_id": "arXiv:2606.23581",
+      "arxiv_id": "2606.23581",
+      "authors": [
+        "Bole Ma",
+        "Jan Eitzinger",
+        "H. Koestler",
+        "Gerhard Wellein"
+      ]
+    },
+    {
+      "title": "VLMCache: Efficient On-Device Vision-Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/1de573e13db6a2c30db4b5ccd93a0526d870d43e",
+      "year": 2026,
+      "published": "2026-06-20",
+      "abstract": "Vision Language Models (VLMs) are foundational for low-latency, privacy-preserving on-device AI in real-time applications like UI agents and VQA. The VLM prefilling phase, which processes the entire visual-textual input, faces the critical challenge of a long Time-to-First-Token (TTFT). One promising approach to reduce TTFT is to exploit the temporal locality by reusing block-level computations across consecutive frames. Unfortunately, current Transformer-based VLMs break the spatial invariance of CNNs and invalidate the strict-prefix KV-cache mechanism of decoder-only LLMs; in practice, even a single-pixel mismatch can prevent reuse. We present VLMCache, the first system to enable effective block-level visual caching and reuse for on-device VLM inference. The core idea is to disaggregate stable (background) and dynamic (foreground) visual blocks: stable blocks are encoded into the sequence as a reusable KV-cache prefix, while dynamic blocks are recomputed. To make this feasible, VLMCache introduces semantic disaggregation to robustly identify reusable visual blocks and an isolate-then-fuse strategy that restores the global attention interactions and positional coherence lost when foreground and background are separated. Across diverse VLMs and datasets, VLMCache delivers 1.4–3.8× speedup with <1% average accuracy loss, making low-latency VLM inference practical on resource-constrained devices.",
+      "canonical_id": "DOI:10.1145/3745756.3809243",
+      "doi": "10.1145/3745756.3809243",
+      "authors": [
+        "Yinyuan Zhang",
+        "Daliang Xu",
+        "Zhiyang Chen",
+        "Cheng-Hua Wang",
+        "Ying Zhang",
+        "Mengwei Xu",
+        "Gang Huang"
+      ]
+    },
+    {
+      "title": "KVEraser: Learning to Steer KV Cache for Efficient Localized Context Erasing",
+      "source_url": "https://www.semanticscholar.org/paper/1759010234718b3ece22e9beb554f55b22b06fbe",
+      "year": 2026,
+      "published": "2026-06-15",
+      "abstract": "Post-hoc context erasing over the KV cache is challenging because a local edit has a global consequence: once a span has been processed, its influence propagates into the cached states of all subsequent tokens. This issue arises naturally in long-context LLM applications, where stale retrieved facts, incorrect tool observations, retracted user preferences, or harmful prompt injections may be identified only after prefill. Exact erasing must then recompute all tokens after the deleted span, making its computational cost depend on suffix length rather than erased-span length. We introduce KVEraser, a learned KV-cache editing method for efficient localized context erasing. Given a processed context and a span to remove, KVEraser replaces only the KV states of the erased interval with learned steering states while reusing the remaining cache unchanged. To learn a transferable erasing mechanism, we build a two-stage training pipeline: generic span-neighbor pre-training teaches the eraser to suppress the influence of the erased span, while task-specific fine-tuning adapts this capability to downstream scenarios. Experiments show that KVEraser nearly matches full recomputation in post-erasure performance on in-domain tasks across 1K--32K context lengths, while its latency increases by only 24% compared with a 17.6x increase for full recomputation. KVEraser also generalizes to unseen long-document QA tasks with harmful factual distractors, achieving the best performance among approximate baselines with a 3--4x speedup over full recomputation.",
+      "canonical_id": "arXiv:2606.17034",
+      "arxiv_id": "2606.17034",
+      "authors": [
+        "Mufei Li",
+        "Shikun Liu",
+        "Dongqi Fu",
+        "H. Wang",
+        "Ying-Long Xia",
+        "Hong Li",
+        "Hong Yan",
+        "Pan Li"
+      ]
+    },
+    {
+      "title": "Models Take Notes at Prefill: KV Cache Can Be Editable and Composable",
+      "source_url": "https://www.semanticscholar.org/paper/bad8f4a1c5b4fd2942a14c223dcd5442a18ea123",
+      "year": 2026,
+      "published": "2026-06-14",
+      "abstract": "Prefix caching reuses prefill only across an exactly shared prefix, so one changed field invalidates the entire downstream cache. Yet overwriting the field's own key/value vectors and reusing the rest leaves the model acting on the old value. The reason, established causally across four model families: at prefill the model has already written the field-conditioned conclusion onto downstream notes; the field's own key/value drives under 1% of the decision. Read as a notebook of memoized conclusions, two capabilities follow. (1) It is editable. A salient erratum amends the notes; and with chain-of-thought, editing the field alone recovers the decision (1.00 at 8B, ~1% compute), while without CoT it is ignored. (2) It is composable. The notes are position-portable, so a precompiled skill can be RoPE-repositioned and spliced into any context, indistinguishable from full recompute (logit cosine 0.90-0.999, twelve models) at O(L) rather than O(L^2) time-to-first-token. A unified edit+compose agent stays decision-identical to recompute at up to 14.9x lower latency. The approach applies to any per-token attention KV cache, validated across scale, quantization, Mixture-of-Experts, and multimodal caches, and extends to several attention variants through small adapters. Because the erratum is append-only, it composes with production prefix caching: in an online vLLM benchmark it keeps the prefix cache-aligned (98.5% hit-rate), cutting p90 time-to-first-token by 53-398x.",
+      "canonical_id": "arXiv:2606.17107",
+      "arxiv_id": "2606.17107",
+      "authors": [
+        "Bo-Jie Li"
+      ]
+    },
+    {
+      "title": "VCU-LLM: Prompt-efficient On-device Large Language Model for Vague Command Understanding in Smart Homes",
+      "source_url": "https://www.semanticscholar.org/paper/41a5c7fe6162873e5e78401e0ddac9135226e03d",
+      "year": 2026,
+      "published": "2026-06-13",
+      "abstract": "Smart homes are receiving growing interest in global markets. However, current smart home assistant systems either control appliances solely through users' explicit commands or rely on cloud-based large language models (LLMs) for vague command understanding, which brings drawbacks such as high latency, privacy concern, and high cost. In this work, we propose VCU-LLM, the first system to deploy LLMs on edge devices for local vague command understanding and smart device control plan generation. VCU-LLM introduces a novel vague command knowledge retrieval algorithm that refines device-related information in the input prompt, thereby accelerating the LLM's on-device inference and reducing task complexity. We further construct a dataset for LLM fine-tuning to simulate the use of smart home assistants in controlling devices across different households. During inference, a customized KV-cache technique is applied for further inference acceleration. Our evaluations with both human-based and LLM-based scoring demonstrate that VCU-LLM improves the quality of generated control plans by an average of 43.3% compared with SOTA baselines, while reducing time overhead by an average of 8.44x compared with other on-device baselines. We also implement VCU-LLM through a case study in a real home environment, demonstrating its feasibility in real-world application.",
+      "canonical_id": "DOI:10.1145/3810190",
+      "doi": "10.1145/3810190",
+      "authors": [
+        "Zheng-Yuan Zhang",
+        "Dong Zhao",
+        "Tiancheng He",
+        "Zilong Wang",
+        "Xiangyu Li",
+        "Huadong Ma"
+      ]
+    },
+    {
+      "title": "Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows",
+      "source_url": "https://www.semanticscholar.org/paper/726a78ee5da7eb4da0409a83ded429a39bdfb57e",
+      "year": 2026,
+      "published": "2026-06-12",
+      "abstract": "Large language models increasingly serve as execution engines for agentic systems, yet they still consume context through a sequential text interface. This creates a mismatch with modern structured agent workflows, in which independent branches explore subtasks, retrieve evidence, or generate candidate solutions before a final synthesis step. Existing systems typically merge these branches by concatenating their textual outputs, which discards the parallel structure and incurs redundant prefill computation. In this work, we introduce Parallel-Synthesis, a plug-and-play framework that enables a synthesizer to directly consume the KV caches produced by parallel worker agents. Parallel-Synthesis combines a cache mapper that calibrates independently generated branch caches with a fine-tuned synthesizer adapter that enables generation from this non-sequential cache interface. We train Parallel-Synthesis using data that exposes the synthesizer to parallel cache contexts, teaches aggregation across cached branches, and distills reasoning behavior from standard text-concatenation-based synthesis. Across nine downstream datasets spanning math, science QA, code generation, GAIA, and multi-agent database diagnosis, Parallel-Synthesis matches or outperforms text-based synthesis on seven datasets and remains close on the other two. It also reduces time-to-first-token by 2.5x-11x, suggesting that direct cache-based synthesis is a promising interface for more native and efficient synthesis over parallel agent branches.",
+      "canonical_id": "arXiv:2606.14672",
+      "arxiv_id": "2606.14672",
+      "authors": [
+        "Shikun Liu",
+        "Mufei Li",
+        "Dongqi Fu",
+        "H. Wang",
+        "Ying-Long Xia",
+        "Hong Li",
+        "Hong Yan",
+        "Pan Li"
+      ]
+    },
+    {
+      "title": "SIFT: Selective-Index For Fast Compute of RAG Prefill by Exploiting Attention Invariance",
+      "source_url": "https://www.semanticscholar.org/paper/65f18475c4e7668bc441e3e9c4fabbb36863f3a0",
+      "year": 2026,
+      "published": "2026-06-08",
+      "abstract": "Retrieval-Augmented Generation (RAG) injects LLM queries with relevant documents to improve response quality. This injection increases prompt length and slows time to first token (TTFT). Unlike standard queries, RAG queries have a unique property of context reuse where the same documents recur across user queries. Thus, fully recomputing documents for every RAG query does redundant compute and increases TTFT. Prior works precompute KV tensors of RAG documents offline and coarsely recompute some tokens during online prefill. However, such KV reuse is often slower than full recomputation on modern GPUs due to high-latency disk transfers. Further, such a coarse-grained recomputation degrades accuracy. To address these limitations, this paper proposes SIFT: Selective-Index For Fast Compute of RAG Prefill by Exploiting Attention Invariance. SIFT processes documents offline and extracts fine-grained locations of high attention scores for each document. Next, we identify the following attention invariance insights that enable us to exploit the extracted locations during runtime: (1) Local-Attention Invariance: The location of high attention scores within a document remain invariant to surrounding documents. This helps us predict the location of high scores where the document attends to itself. (2) Cross-Attention Consistency: Keys with high intra-document attention also attract cross-attention from subsequent documents. This helps us predict the location of high scores where the document attends to future documents. Critically, SIFT stores no KV data and only stores locations of high scores in the form of two compact bit vectors. SIFT's storage is up to 24,000x smaller than KV tensors, obviating costly disk transfers. During prefill, SIFT computes the attention only for the marked locations and improves TTFT by 1.71x while holding accuracy within 1% of full recompute.",
+      "canonical_id": "arXiv:2606.09441",
+      "arxiv_id": "2606.09441",
+      "authors": [
+        "Rya Sanovar",
+        "Srikant Bharadwaj",
+        "Hritvik Taneja",
+        "Moinuddin Qureshi"
+      ]
+    },
+    {
+      "title": "KV Cache Reuse for Elastic LLM Inference on Edge Devices",
+      "source_url": "https://www.semanticscholar.org/paper/967d90edf7f28d9deae2efa40ce3897eba5be40f",
+      "year": 2026,
+      "published": "2026-06-01",
+      "abstract": "Deploying Large Language Models (LLMs) on edge devices is increasingly critical due to network and privacy constraints. Key-Value (KV) cache reuse and elastic LLM inference are both essential for on-device LLM deployment as the available resources on edge devices are limited and vary over time. However, directly using the KV caches from a different precision model can cause performance degradation due to numerical deviation of the KV cache. To address this issue, we present ElastKV, a scheme that reuses precomputed KV caches generated by mixed-precision LLMs by selectively recomputing a small subset of KV values. ElastKV first filters tokens using a recomputation rule, then ranks them based on their estimated recomputation priority. Unlike prior methods, ElastKV estimates this priority by combining each token's KV deviation with its estimated influence on output tokens, which is derived from pairwise token influence estimation and influence paths. We evaluate ElastKV on four open-source LLMs with different quantization bit-widths over four datasets. Results show that ElastKV limits average accuracy loss to within 2% and provides an average recomputation speedup of nearly 3× compared to full recomputation and achieves a better speed-quality trade-off than all state-of-the-art KV cache reuse methods.",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00035",
+      "doi": "10.1109/2575-8411.2026.00035",
+      "authors": [
+        "Pei-Shuo Wang",
+        "Zhenzhe Zheng",
+        "Xiao-Yao Huang",
+        "Jie Wu",
+        "Fan Wu",
+        "Guihai Chen"
+      ]
+    },
+    {
+      "title": "Efficient KV Cache Migration for Geo-Distributed LLM Inference in Collaborative Edge Computing",
+      "source_url": "https://www.semanticscholar.org/paper/b44091c6dccb2b8ec9af01e02164b1cb30b1d2de",
+      "year": 2026,
+      "published": "2026-06-01",
+      "abstract": "Large Language Models (LLMs) have shown exceptional capabilities but rely heavily on centralized cloud GPU clusters, leading to high bandwidth costs, latency, and privacy issues. Edge computing offers a solution by deploying LLMs closer to users on edge servers, yet single edge servers often cannot meet LLMs' heavy computational demands. Collaborative Edge Computing (CEC) address this challenge by integrating resources of multiple geo-distributed heterogeneous edge servers, which jointly host small model shards and associated Key-Value (KV) cache for distributed inference. However, edge servers may disconnect or easily become overloaded, making it essential to migrate stateful KV cache to other servers for ensuring continuous service. Existing cloud-based KV cache management methods, such as direct cross-GPUs transmission and recomputation from input tokens are ill-suited for bandwidth-constrained and resource-limited edge environments. In this work, we propose EdgeFlow, a novel hybrid KV cache migration scheme that integrates direct KV cache transmission with activation-based recomputation, leveraging parallel computation and communication to minimize migration time. On this basis, we formulate a multi-node KV migration optimization problem and design a 2approximation algorithm based on improved linear programming relaxation and bipartite graph techniques. Extensive experiments on a real-world distributed LLM inference platform demonstrate that EdgeFlow reduces migration time by up to 45%, significantly enhancing the robustness and efficiency of distributed LLM inference in collaborative edge environments.",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00033",
+      "doi": "10.1109/2575-8411.2026.00033",
+      "authors": [
+        "Mingjin Zhang",
+        "Jian-Nong Cao",
+        "Tao Wu",
+        "Xiangchun Chen",
+        "Ne Wang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.17346",
+      "identity_tokens": [
+        "id:arXiv:2609.17346",
+        "title:where should a document live context representations or parameters",
+        "url:https://www.semanticscholar.org/paper/b754dbfba7611bc3ca75a82f88f9cd0aa98ca712"
+      ],
+      "record": {
+        "title": "Where Should a Document Live: Context, Representations, or Parameters?",
+        "source_url": "https://www.semanticscholar.org/paper/b754dbfba7611bc3ca75a82f88f9cd0aa98ca712",
+        "year": 2026,
+        "published": "2026-09-15",
+        "abstract": "To answer questions outside of their pre-training data, large language models (LLMs) need access to new information, which can be presented in the context window as documents, encoded into the model's parameters, or injected as latent representations. However, each of these methods comes with different efficiency, cost, and performance trade-offs, with no single winner. We present a controlled comparison of representation-based (KV-cache based) and parametric (fine-tuning-based) adaptation methods on five knowledge-intensive benchmarks. We show that in the oracle setting, Cartridges (KV) are the most accurate injection method at nearly every storage budget, outperforming parametric methods by 10 points. Compaction (KV) matches Cartridges only at low compression rates, lagging behind the parametric methods by 10 points at rates higher than $50\\times$. In the more realistic multi-document retrieval scenario, Cartridges are the only method that matches in-context learning (ICL), leading the parametric methods by 29 points and Compaction by 15 points. Nonetheless, Cartridges are also the only method, besides full fine-tuning and large MLP adapters, that suffers from catastrophic forgetting, i.e., a 6% performance degradation on control benchmarks, with 13% in coding.",
+        "canonical_id": "arXiv:2609.17346",
+        "arxiv_id": "2609.17346",
+        "authors": [
+          "Nathanaël Carraz Rakotonirina",
+          "Momchil Hardalov",
+          "Gonzalo Iglesias",
+          "Adrià de Gispert"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3770855.3818131",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770855.3818131",
+        "title:numcache kv cache compression and retrieval for financial document qa",
+        "url:https://www.semanticscholar.org/paper/e7a5505dbbd4b122a935ceb69783ba56180c8b5d"
+      ],
+      "record": {
+        "title": "NumCache: KV Cache Compression and Retrieval for Financial Document QA",
+        "source_url": "https://www.semanticscholar.org/paper/e7a5505dbbd4b122a935ceb69783ba56180c8b5d",
+        "year": 2026,
+        "published": "2026-08-08",
+        "abstract": "Large Language Models (LLMs) are increasingly deployed in financial applications, particularly for interpreting U.S. Securities and Exchange Commission (SEC) filings. However, financial QA over these filings is challenging, as they are extremely long, numerically dense, and often require cross-document reasoning. Existing approaches struggle to scale to such settings due to long-context degradation and loss of numerical fidelity under context compression. Long-document Retrieval-Augmented Generation (RAG) improves evidence coverage through coarse-to-fine retrieval, yet semantic retrievers collapse fine-grained magnitudes and units, returning passages that lack the precise values needed for correct reasoning. Cache-Augmented Generation (CAG) projects attention states into compact KV representations and treats precomputed caches as reusable internal memory, but typically assumes caches are already well-formed and query-relevant, leaving open how to build and select number-faithful caches. To address this gap, we propose NumCache, which compresses SEC filings into KV caches initialized from numerically dense regions and trained directly on financial QAs. On top of these caches, we then train a contrastive retriever that aligns questions with cache representations, thus improving retrieval performance. We evaluate NumCache on the Fin-RATE benchmark, which comprises SEC-filing QA tasks covering single-filing reasoning, cross-firm comparison, and longitudinal trend analysis. NumCache achieves up to 4× context compression with competitive accuracy (41.4% vs.\\ 44.8% for uncompressed Qwen3-4B on single-filing reasoning) and a 6.4× inference speedup, while its contrastive retriever attains 68.3% Recall@1 on single-filing retrieval; 2.3× the strongest text-based baseline (29.7%). These results highlight cache-based retrieval with number-preserving representations as an effective approach for long-context financial QA.",
+        "canonical_id": "DOI:10.1145/3770855.3818131",
+        "doi": "10.1145/3770855.3818131",
+        "authors": [
+          "Eftychia Makri",
+          "Peiwen Li",
+          "Yidong Jiang",
+          "Junrong Chen",
+          "Jialin Chen",
+          "Ali Maatouk",
+          "Leandros Tassiulas",
+          "Eliot Brenner",
+          "Bing Xiang",
+          "Rex Ying"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.07458",
+      "identity_tokens": [
+        "id:arXiv:2608.07458",
+        "title:coinrag contextualized information nugget kv cache reuse for longcontext rag",
+        "url:https://www.semanticscholar.org/paper/6b1afffee709753c80d1959fb99cbf558b9b32cd"
+      ],
+      "record": {
+        "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+        "source_url": "https://www.semanticscholar.org/paper/6b1afffee709753c80d1959fb99cbf558b9b32cd",
+        "year": 2026,
+        "published": "2026-08-07",
+        "abstract": "Recent optimization studies on Retrieval-Augmented Generation (RAG) have exploited chunk-level KV cache reuse to avoid processing long retrieved contexts for higher efficiency, while significant information redundancy and noise still remain in the coarse-grained chunks. This paper optimizes the Pareto frontier under low prefill latency constraints while maximizing accuracy by proposing CoinRAG (Contextualized Information Nugget KV Cache Reuse for Long-Context RAG). The name metaphorically reflects our core mechanism: much like assembling small tokens (or\"coins\") to accumulate a larger value, CoinRAG compositionally reuses offline-computed, fine-grained nugget caches to form a learned contextual representation efficiently in a more semantically relevant but compact manner. Specifically, instead of full-chunk encoding, CoinRAG identifies query-relevant semantic units within retrieved chunks through two-stage retrieval and seamlessly assembles their sliced KV representations with a chunk-level context. Extensive evaluations on LongBench multi-hop question answering tasks demonstrate that CoinRAG significantly reduces operational costs and outperforms the other baselines with a new Pareto frontier and an average 5.3% relative improvement in answer quality (F1) under a standard fast prefill latency budget.",
+        "canonical_id": "arXiv:2608.07458",
+        "arxiv_id": "2608.07458",
+        "authors": [
+          "Gyuwan Kim",
+          "Cheoneum Park",
+          "Tao Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.28979",
+      "identity_tokens": [
+        "id:arXiv:2607.28979",
+        "title:mixtureoftranslators translating kv caches across heterogeneous large language models",
+        "url:https://www.semanticscholar.org/paper/d8cba695d43821b2c35f597bc7eed3c043800a17"
+      ],
+      "record": {
+        "title": "Mixture-of-Translators: Translating KV Caches Across Heterogeneous Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/d8cba695d43821b2c35f597bc7eed3c043800a17",
+        "year": 2026,
+        "published": "2026-07-31",
+        "abstract": "Heterogeneous Large Language Model (LLM) systems increasingly rely on shared contexts, retrieved evidence, and multi-agent dialogue histories, yet their internal key-value (KV) caches remain model-specific and cannot be reused across architectures. Consequently, each model must repeatedly prefill or store caches for the same context, limiting the scalability of multi-model reasoning and long-context generation. We propose Mixture-of-Translators(MoT), a cache translation framework that maps context KV caches from a source LLM into the cache space of a target LLM. Unlike prior approaches that depend on a single projection path or global shared latent space, MoT uses multiple translator modules to capture diverse source--target mappings. To further reduce residual translation error, we introduce a Context Correction Loss that aligns the replayed target trajectory with the native target trajectory. We reveal two competing failure modes in cache translation: propagated translation shift from early injection and last-state shift from late injection. MoT addresses them through translator mixtures and target-side correction. Across homogeneous and heterogeneous translations among Qwen2.5, GPT-2, and OPT models, MoT preserves downstream QA performance, including Qwen2.5-7B-scale translation with 51.0% average closed-set QA accuracy and 0.43 average extractive QA F1. In practical case studies, MoT enables quality-preserving memory reuse for multi-agent reasoning and retains 96.3% of direct-context quality in long-context cache-augmented generation, demonstrating scalable KV cache reuse across heterogeneous LLMs.",
+        "canonical_id": "arXiv:2607.28979",
+        "arxiv_id": "2607.28979",
+        "authors": [
+          "Jin-woo Lee",
+          "Minkyung Song",
+          "Junghyun Oh",
+          "Seunghoon Han",
+          "Soyoung Park",
+          "Gwangseon Jang",
+          "Sungsu Lim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.28069",
+      "identity_tokens": [
+        "id:arXiv:2607.28069",
+        "title:sempic learning semantic positionindependent kv caches",
+        "url:https://www.semanticscholar.org/paper/f48d751da47d9a84046858a1ef820b02aa7775b1"
+      ],
+      "record": {
+        "title": "SemPIC: Learning Semantic Position-Independent KV Caches",
+        "source_url": "https://www.semanticscholar.org/paper/f48d751da47d9a84046858a1ef820b02aa7775b1",
+        "year": 2026,
+        "published": "2026-07-30",
+        "abstract": "Long-context retrieval and agentic workloads repeatedly reuse the same documents under changing instructions, histories, and document orders. Prefix caching cannot exploit this reuse, while position-independent caching (PIC) remains unreliable because independently compiled KV states lack the future context in which they will be consumed. Our diagnostics show that a learned boundary-conditioned baseline sharply reduces attention deviation near reusable-block boundaries but leaves interior and task-level residuals, motivating adaptation of the document representation itself. We present \\emph{SemPIC}, which trains a LoRA-enabled Writer to compile native per-layer document KVs through behavioral distillation while retaining the pretrained decoder as an unchanged Reader. Adaptation is confined to offline cache construction, preserving the standard KV interface and cache-hit decoding path. We further introduce KV Gradient Checkpointing, which reduces peak training memory without severing gradients through cached KVs. Across three models and four tasks, SemPIC raises mean micro-F1 over KV Packet from 0.53 to 0.60, approaching Full Recompute at 0.62. Code: https://github.com/jn12-29/SemPIC",
+        "canonical_id": "arXiv:2607.28069",
+        "arxiv_id": "2607.28069",
+        "authors": [
+          "Hui Xie",
+          "Peng Xiao",
+          "Yutong Deng",
+          "Shuo-Ran Dou",
+          "Jian Yang",
+          "Jinyang Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.23693",
+      "identity_tokens": [
+        "id:arXiv:2607.23693",
+        "title:compute globally materialize locally the memory contract of sparse eventkv",
+        "url:https://www.semanticscholar.org/paper/d26053eb9c925b2634ae21305bab90a6cac139e5"
+      ],
+      "record": {
+        "title": "Compute Globally, Materialize Locally: The Memory Contract of Sparse Event-KV",
+        "source_url": "https://www.semanticscholar.org/paper/d26053eb9c925b2634ae21305bab90a6cac139e5",
+        "year": 2026,
+        "published": "2026-07-26",
+        "abstract": "Long-horizon agents increasingly reuse their KV cache as memory: a serving system keeps a subset of cached entries and drops the rest. Eviction and episodic-memory schemes therefore rest on a premise rarely tested directly, that a retained event is still informative once the observations that produced it are gone. We test it by omitting one earlier observation from what is served, across otherwise identical agent histories. Among items sensitive to that observation, the answer overwhelmingly follows the omitted value, though no served span says which value is correct. We call this semantic materialization: a downstream event's cached rows act as an independently servable view of computation whose inputs are gone. It can also be written on purpose. A deliberately phrased, answer-free event raises donor-aligned recovery from 6% to 51% on Qwen3-8B without ever naming the value, whereas passively harvesting natural mentions from long-term dialog yields no detected advantage. What such a row carries is specific and bounded. Compact state survives, larger payloads decay toward chance, and whether a construction writes at all turns on phrasing rather than on meaning alone, so two phrasings the model comprehends equally well can diverge sharply. The result is a memory contract for sparse event-KV serving: what to write, where it lands, and what survives once the source is gone. For anyone who evicts the corollary is that dropping a source event and observing no accuracy loss does not show the source was unnecessary.",
+        "canonical_id": "arXiv:2607.23693",
+        "arxiv_id": "2607.23693",
+        "authors": [
+          "Ze-Yuan Cai",
+          "Zesen Cai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.19957",
+      "identity_tokens": [
+        "id:arXiv:2607.19957",
+        "title:hijackkv new threat in positionindependent kv cache reuse",
+        "url:https://www.semanticscholar.org/paper/ea1f90058a3c09feb2b83df36b57bdf235b68476"
+      ],
+      "record": {
+        "title": "HijackKV: New Threat in Position-Independent KV Cache Reuse",
+        "source_url": "https://www.semanticscholar.org/paper/ea1f90058a3c09feb2b83df36b57bdf235b68476",
+        "year": 2026,
+        "published": "2026-07-22",
+        "abstract": "Key-Value (KV) cache reduces inference latency in large language models (LLMs). Traditional prefix-based reuse has low cache hit rates across inference requests because it requires exact token and position matches. To improve efficiency, recent system optimizations introduce position-independent KV reuse, allowing KV cache to be reused whenever identical text chunks appear, regardless of their position in the sequence. We show this design introduces a new threat, KV Cache Hijacking. Since KV caches are retrieved by token match but encode the context in which they were originally computed, the KV tied to a benign-looking token chunk may encode an attacker-controlled prefix. When later reused in a victim query, this contaminated KV silently hijacks the model's behavior, even if no attacker-controlled text appears in the input. We introduce HIJACKKV, the first attack framework that systematically exploits this vulnerability, demonstrating its severity and practicality. HIJACKKV optimizes an attacker-controlled prefix, so that the KV computed for a subsequent common benign text encodes the attacker's goal, while the text remains unchanged for future cache hits. HIJACKKV achieves an average 94% success rate in a single attempt, remains effective under realistic constraints including low hit rates (10%) and frequent recomputation (50%), persists over multi-turn interactions, and transfers across models in black-box settings. We further provide design insights for building secure KV reuse systems.",
+        "canonical_id": "arXiv:2607.19957",
+        "arxiv_id": "2607.19957",
+        "authors": [
+          "Yichi Zhang",
+          "Zhiqi Wang",
+          "Huan Zhang",
+          "Yuchen Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.19547",
+      "identity_tokens": [
+        "id:arXiv:2607.19547",
+        "title:chronostitch trainingfree composition of visual kv memories for longhorizon temporal reasoning",
+        "url:https://www.semanticscholar.org/paper/e21cf4ed9b6d05c506fa9b21d526a308e135d1f0"
+      ],
+      "record": {
+        "title": "ChronoStitch: Training-Free Composition of Visual KV Memories for Long-Horizon Temporal Reasoning",
+        "source_url": "https://www.semanticscholar.org/paper/e21cf4ed9b6d05c506fa9b21d526a308e135d1f0",
+        "year": 2026,
+        "published": "2026-07-21",
+        "abstract": "Long-video question answering requires a model to preserve visual evidence over time without repeatedly reprocessing the same video. A practical approach is to store the vision-language model's internal key-value (KV) cache for each video chunk and retrieve that state at query time. However, independently cached video chunks do not compose correctly: every chunk is prefilled from local rotary position zero, so naive concatenation collides temporal phases and removes the global order required for questions about what happened first, how often events occurred, or what changed across the video. This paper presents ChronoStitch, a training-free method for composing independently stored visual KV memories. The method first re-bases stored post-rotary keys onto a global three-axis multimodal RoPE coordinate system that preserves time, height, and width structure. We show why a one-dimensional scalar re-indexing is geometrically inconsistent for visual tokens because it turns spatial order within a frame into false temporal displacement. We then address the residual content gap left by positional repair: later chunks were originally encoded without attending to earlier chunks. ChronoStitch therefore selectively recomputes a small fraction of high-deviation later-chunk visual tokens while allowing them to attend over the composed cache. On Qwen2.5-VL-3B and the temporal split of TempCompass, ChronoStitch outperforms naive composition and position-only variants, improving event-ordering accuracy while running 3.3x faster than full joint re-prefilling.",
+        "canonical_id": "arXiv:2607.19547",
+        "arxiv_id": "2607.19547",
+        "authors": [
+          "Santiram Tiwari",
+          "Nishant Sinha",
+          "K. Kislay"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.11218",
+      "identity_tokens": [
+        "id:arXiv:2608.11218",
+        "title:masread contentaddressed reading of replicated latent stores",
+        "url:https://www.semanticscholar.org/paper/9818272727d7eb12bfc0c83c93341496d3b849d4"
+      ],
+      "record": {
+        "title": "MaSRead: Content-Addressed Reading of Replicated Latent Stores",
+        "source_url": "https://www.semanticscholar.org/paper/9818272727d7eb12bfc0c83c93341496d3b849d4",
+        "year": 2026,
+        "published": "2026-07-21",
+        "abstract": "Independent agents that reason in latent space can share computed state as key-value cache fragments rather than text. Merged by a conflict-free replicated data type, these fragments form a store that converges under any delivery order or duplication. Yet a later query, unknown at encode time, cannot reliably read the merged cache: colocated fragments interfere, so colocation is not addressability. MaSRead addresses the read to content. It routes through opaque keyed tag sets derived from fragment words and decodes each selected fragment under a hard attention mask that hides the rest. Under lexical connectivity, a graph walk reaches the fragments required by a multi-hop query. Across chain, pipeline, symmetric, hub, and natural-language stores, MaSRead recovers visited fragments in isolation, remains effective as unrelated fragments accumulate, and transfers to another model family. After routing, materialized decoding depends on fragment length rather than total store size; end-to-end work still includes store-dependent routing and one read per visited fragment. The limits are explicit: lexical routing can miss disconnected evidence, and answer composition remains bounded by the frozen reader. Thus a replicated latent store becomes selectively readable for later queries when the needed fragments connect to the query through content.",
+        "canonical_id": "arXiv:2608.11218",
+        "arxiv_id": "2608.11218",
+        "authors": [
+          "Carlos Baquero",
+          "Lu'is Brito",
+          "João Resende"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tsc.2026.3697569",
+      "identity_tokens": [
+        "id:DOI:10.1109/tsc.2026.3697569",
+        "title:efficient and effective personalized incontext learning for ondevice large model services",
+        "url:https://www.semanticscholar.org/paper/0424bef6348ea6c48eba1a95f95f331e23f1eac4"
+      ],
+      "record": {
+        "title": "Efficient and Effective Personalized In-Context Learning for On-Device Large Model Services",
+        "source_url": "https://www.semanticscholar.org/paper/0424bef6348ea6c48eba1a95f95f331e23f1eac4",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "Recently, on-device large models (e.g., 7B parameter LLMs and LVLMs) are increasingly deployed in real-world services such as mobile assistants, edge computing, and IoT systems, where low latency and resource efficiency are critical. Since large models trained on general-domain data are typically suboptimal for downstream services, In-Context Learning (ICL) technique is widely used to enhance their task-specific service performance without extra tuning. However, effective ICL methods generally necessitate a sufficient amount of supervised data to provide abundant service-related information, which usually leads to a long context (i.e., more texts or images input) for models to process. This long context issue can significantly degrade the real-time inference efficiency and also impact the information utilization effectiveness, particularly for on-device large models with limited long context modeling capacities. To tackle this challenge, we propose a Personalized Knowledge Refinement (PKR) framework to achieve efficient and effective ICL for on-device large models. Specifically, we first introduce a personalized knowledge extraction module, which analyzes the inference behaviors of the target model on small-scale supervised data and then converts these behavioral patterns into personalized service-specific knowledge as the instruction context. Furthermore, we propose an adaptive knowledge filtration mechanism to model the informativeness of the extracted knowledge and eliminate the redundant ones, further improving the knowledge encoding efficiency per unit of context length. Experiments based on 14 benchmarks spanning both textual and visual task services, and 4 large models, demonstrated that PKR consistently improves task accuracy while reducing context length and inference latency, making it a practical solution for real-world on-device services.",
+        "canonical_id": "DOI:10.1109/TSC.2026.3697569",
+        "doi": "10.1109/TSC.2026.3697569",
+        "authors": [
+          "Huili Wang",
+          "Yuan-Hong Huang",
+          "Zhiyang Hu",
+          "Qing Li",
+          "Ping-Yi Fan",
+          "Yongfeng Huang",
+          "Shangguang Wang",
+          "Tao Qi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jcc72984.2026.00058",
+      "identity_tokens": [
+        "id:DOI:10.1109/jcc72984.2026.00058",
+        "title:unas urgency and fairnessaware scheduling for slooriented llm serving",
+        "url:https://www.semanticscholar.org/paper/17a763adfab93a50c20671cadbcf4cb57f82e5b3"
+      ],
+      "record": {
+        "title": "UNAS: Urgency- and Fairness-Aware Scheduling for SLO-Oriented LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/17a763adfab93a50c20671cadbcf4cb57f82e5b3",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "The widespread adoption and strong generalizability of large language models (LLMs) lead to highly heterogeneous workloads that exhibit substantial variability in request lengths and latency requirements. This pronounced heterogeneity causes existing scheduling strategies to suffer from head-of-line blocking and inefficient request ordering, resulting in significant SLO violations and inflated end-to-end latency. In this paper, we present UNAS, a hierarchical scheduler for end-to-end SLO-oriented LLM serving. UNAS adopts a two-level design. At the cluster level, it classifies incoming requests into urgent and normal queues based on estimated service times derived from request features and runtime statistics, and dynamically updates their queue priorities as latency pressure evolves. At the instance level, UNAS performs fine-grained dispatch using a least-slack-first policy, prioritizing requests with the highest risk of SLO violations. Experimental results demonstrate that UNAS consistently outperforms representative baselines across diverse workloads, improving end-to-end SLO attainment by up to 11.1% and reducing mean end-to-end latency by up to $1.47 \\times$.",
+        "canonical_id": "DOI:10.1109/JCC72984.2026.00058",
+        "doi": "10.1109/JCC72984.2026.00058",
+        "authors": [
+          "Tian-Nan Fu",
+          "Jianxiong Liao",
+          "Xu Chen",
+          "Zhi Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.23581",
+      "identity_tokens": [
+        "id:arXiv:2606.23581",
+        "title:kamera unified positioninvariant multimodal kv cache for trainingfree reuse",
+        "url:https://www.semanticscholar.org/paper/e962fc426aa3942927b54fea893f18a7ce219d17"
+      ],
+      "record": {
+        "title": "Kamera: Unified Position-Invariant Multimodal KV Cache for Training-Free Reuse",
+        "source_url": "https://www.semanticscholar.org/paper/e962fc426aa3942927b54fea893f18a7ce219d17",
+        "year": 2026,
+        "published": "2026-06-22",
+        "abstract": "Multimodal agents repeatedly re-examine the same video frames, UI screenshots, and rendered artifacts as their context window slides and reasoning iterates, yet every look-back re-encodes from scratch, because prefix caches serve reuse only at a fixed leading position. We show this recompute is avoidable, and identify exactly what naive KV reuse loses: the cross-chunk conditioning a chunk absorbs from its neighbours. This loss is asymmetric. The direct readout of a cached chunk is recovered exactly and for free by the standard state-merge. What remains is a diffuse, low-rank residue concentrated in deep layers, invisible to single-hop retrieval but precisely what multi-hop reasoning binds on. Blind reuse therefore leaves single-hop recall intact while halving multi-hop accuracy; this is the failure mode prior position-independent caches, designed for single-context or single-image reuse, do not address. We repair it with a small, training-free low-rank conditioning patch stored alongside each position-free chunk. Reuse reduces to one operator across MLA, GQA, and MHA: exact RoPE re-rotation to any target position, plus the patch that restores cross-chunk binding. This makes three window operations cheap: reorder (one patch serves every ordering of a cached set), sliding-window survival (surviving chunks relocate via rotation only, zero re-encode), and recall (an evicted chunk is rehydrated by its patch, never re-encoded). A rank-m patch recovers full task accuracy on cross-chunk-binding benchmarks, MM-NIAH across two attention families and two-page doc-QA, at a fraction of the KV footprint, and reconstructs re-prefill KV to within bf16 rounding in a production SGLang kernel across six backbones. The conditioning signal is strongest in redundant vision and video streams, making our solution most impactful where multimodal agents spend their recompute budget.",
+        "canonical_id": "arXiv:2606.23581",
+        "arxiv_id": "2606.23581",
+        "authors": [
+          "Bole Ma",
+          "Jan Eitzinger",
+          "H. Koestler",
+          "Gerhard Wellein"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3745756.3809243",
+      "identity_tokens": [
+        "id:DOI:10.1145/3745756.3809243",
+        "title:vlmcache efficient ondevice visionlanguage model inference",
+        "url:https://www.semanticscholar.org/paper/1de573e13db6a2c30db4b5ccd93a0526d870d43e"
+      ],
+      "record": {
+        "title": "VLMCache: Efficient On-Device Vision-Language Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/1de573e13db6a2c30db4b5ccd93a0526d870d43e",
+        "year": 2026,
+        "published": "2026-06-20",
+        "abstract": "Vision Language Models (VLMs) are foundational for low-latency, privacy-preserving on-device AI in real-time applications like UI agents and VQA. The VLM prefilling phase, which processes the entire visual-textual input, faces the critical challenge of a long Time-to-First-Token (TTFT). One promising approach to reduce TTFT is to exploit the temporal locality by reusing block-level computations across consecutive frames. Unfortunately, current Transformer-based VLMs break the spatial invariance of CNNs and invalidate the strict-prefix KV-cache mechanism of decoder-only LLMs; in practice, even a single-pixel mismatch can prevent reuse. We present VLMCache, the first system to enable effective block-level visual caching and reuse for on-device VLM inference. The core idea is to disaggregate stable (background) and dynamic (foreground) visual blocks: stable blocks are encoded into the sequence as a reusable KV-cache prefix, while dynamic blocks are recomputed. To make this feasible, VLMCache introduces semantic disaggregation to robustly identify reusable visual blocks and an isolate-then-fuse strategy that restores the global attention interactions and positional coherence lost when foreground and background are separated. Across diverse VLMs and datasets, VLMCache delivers 1.4–3.8× speedup with <1% average accuracy loss, making low-latency VLM inference practical on resource-constrained devices.",
+        "canonical_id": "DOI:10.1145/3745756.3809243",
+        "doi": "10.1145/3745756.3809243",
+        "authors": [
+          "Yinyuan Zhang",
+          "Daliang Xu",
+          "Zhiyang Chen",
+          "Cheng-Hua Wang",
+          "Ying Zhang",
+          "Mengwei Xu",
+          "Gang Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.17034",
+      "identity_tokens": [
+        "id:arXiv:2606.17034",
+        "title:kveraser learning to steer kv cache for efficient localized context erasing",
+        "url:https://www.semanticscholar.org/paper/1759010234718b3ece22e9beb554f55b22b06fbe"
+      ],
+      "record": {
+        "title": "KVEraser: Learning to Steer KV Cache for Efficient Localized Context Erasing",
+        "source_url": "https://www.semanticscholar.org/paper/1759010234718b3ece22e9beb554f55b22b06fbe",
+        "year": 2026,
+        "published": "2026-06-15",
+        "abstract": "Post-hoc context erasing over the KV cache is challenging because a local edit has a global consequence: once a span has been processed, its influence propagates into the cached states of all subsequent tokens. This issue arises naturally in long-context LLM applications, where stale retrieved facts, incorrect tool observations, retracted user preferences, or harmful prompt injections may be identified only after prefill. Exact erasing must then recompute all tokens after the deleted span, making its computational cost depend on suffix length rather than erased-span length. We introduce KVEraser, a learned KV-cache editing method for efficient localized context erasing. Given a processed context and a span to remove, KVEraser replaces only the KV states of the erased interval with learned steering states while reusing the remaining cache unchanged. To learn a transferable erasing mechanism, we build a two-stage training pipeline: generic span-neighbor pre-training teaches the eraser to suppress the influence of the erased span, while task-specific fine-tuning adapts this capability to downstream scenarios. Experiments show that KVEraser nearly matches full recomputation in post-erasure performance on in-domain tasks across 1K--32K context lengths, while its latency increases by only 24% compared with a 17.6x increase for full recomputation. KVEraser also generalizes to unseen long-document QA tasks with harmful factual distractors, achieving the best performance among approximate baselines with a 3--4x speedup over full recomputation.",
+        "canonical_id": "arXiv:2606.17034",
+        "arxiv_id": "2606.17034",
+        "authors": [
+          "Mufei Li",
+          "Shikun Liu",
+          "Dongqi Fu",
+          "H. Wang",
+          "Ying-Long Xia",
+          "Hong Li",
+          "Hong Yan",
+          "Pan Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.17107",
+      "identity_tokens": [
+        "id:arXiv:2606.17107",
+        "title:models take notes at prefill kv cache can be editable and composable",
+        "url:https://www.semanticscholar.org/paper/bad8f4a1c5b4fd2942a14c223dcd5442a18ea123"
+      ],
+      "record": {
+        "title": "Models Take Notes at Prefill: KV Cache Can Be Editable and Composable",
+        "source_url": "https://www.semanticscholar.org/paper/bad8f4a1c5b4fd2942a14c223dcd5442a18ea123",
+        "year": 2026,
+        "published": "2026-06-14",
+        "abstract": "Prefix caching reuses prefill only across an exactly shared prefix, so one changed field invalidates the entire downstream cache. Yet overwriting the field's own key/value vectors and reusing the rest leaves the model acting on the old value. The reason, established causally across four model families: at prefill the model has already written the field-conditioned conclusion onto downstream notes; the field's own key/value drives under 1% of the decision. Read as a notebook of memoized conclusions, two capabilities follow. (1) It is editable. A salient erratum amends the notes; and with chain-of-thought, editing the field alone recovers the decision (1.00 at 8B, ~1% compute), while without CoT it is ignored. (2) It is composable. The notes are position-portable, so a precompiled skill can be RoPE-repositioned and spliced into any context, indistinguishable from full recompute (logit cosine 0.90-0.999, twelve models) at O(L) rather than O(L^2) time-to-first-token. A unified edit+compose agent stays decision-identical to recompute at up to 14.9x lower latency. The approach applies to any per-token attention KV cache, validated across scale, quantization, Mixture-of-Experts, and multimodal caches, and extends to several attention variants through small adapters. Because the erratum is append-only, it composes with production prefix caching: in an online vLLM benchmark it keeps the prefix cache-aligned (98.5% hit-rate), cutting p90 time-to-first-token by 53-398x.",
+        "canonical_id": "arXiv:2606.17107",
+        "arxiv_id": "2606.17107",
+        "authors": [
+          "Bo-Jie Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3810190",
+      "identity_tokens": [
+        "id:DOI:10.1145/3810190",
+        "title:vcullm promptefficient ondevice large language model for vague command understanding in smart homes",
+        "url:https://www.semanticscholar.org/paper/41a5c7fe6162873e5e78401e0ddac9135226e03d"
+      ],
+      "record": {
+        "title": "VCU-LLM: Prompt-efficient On-device Large Language Model for Vague Command Understanding in Smart Homes",
+        "source_url": "https://www.semanticscholar.org/paper/41a5c7fe6162873e5e78401e0ddac9135226e03d",
+        "year": 2026,
+        "published": "2026-06-13",
+        "abstract": "Smart homes are receiving growing interest in global markets. However, current smart home assistant systems either control appliances solely through users' explicit commands or rely on cloud-based large language models (LLMs) for vague command understanding, which brings drawbacks such as high latency, privacy concern, and high cost. In this work, we propose VCU-LLM, the first system to deploy LLMs on edge devices for local vague command understanding and smart device control plan generation. VCU-LLM introduces a novel vague command knowledge retrieval algorithm that refines device-related information in the input prompt, thereby accelerating the LLM's on-device inference and reducing task complexity. We further construct a dataset for LLM fine-tuning to simulate the use of smart home assistants in controlling devices across different households. During inference, a customized KV-cache technique is applied for further inference acceleration. Our evaluations with both human-based and LLM-based scoring demonstrate that VCU-LLM improves the quality of generated control plans by an average of 43.3% compared with SOTA baselines, while reducing time overhead by an average of 8.44x compared with other on-device baselines. We also implement VCU-LLM through a case study in a real home environment, demonstrating its feasibility in real-world application.",
+        "canonical_id": "DOI:10.1145/3810190",
+        "doi": "10.1145/3810190",
+        "authors": [
+          "Zheng-Yuan Zhang",
+          "Dong Zhao",
+          "Tiancheng He",
+          "Zilong Wang",
+          "Xiangyu Li",
+          "Huadong Ma"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.14672",
+      "identity_tokens": [
+        "id:arXiv:2606.14672",
+        "title:towards direct latentspace synthesis for parallel branches in llmagent workflows",
+        "url:https://www.semanticscholar.org/paper/726a78ee5da7eb4da0409a83ded429a39bdfb57e"
+      ],
+      "record": {
+        "title": "Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows",
+        "source_url": "https://www.semanticscholar.org/paper/726a78ee5da7eb4da0409a83ded429a39bdfb57e",
+        "year": 2026,
+        "published": "2026-06-12",
+        "abstract": "Large language models increasingly serve as execution engines for agentic systems, yet they still consume context through a sequential text interface. This creates a mismatch with modern structured agent workflows, in which independent branches explore subtasks, retrieve evidence, or generate candidate solutions before a final synthesis step. Existing systems typically merge these branches by concatenating their textual outputs, which discards the parallel structure and incurs redundant prefill computation. In this work, we introduce Parallel-Synthesis, a plug-and-play framework that enables a synthesizer to directly consume the KV caches produced by parallel worker agents. Parallel-Synthesis combines a cache mapper that calibrates independently generated branch caches with a fine-tuned synthesizer adapter that enables generation from this non-sequential cache interface. We train Parallel-Synthesis using data that exposes the synthesizer to parallel cache contexts, teaches aggregation across cached branches, and distills reasoning behavior from standard text-concatenation-based synthesis. Across nine downstream datasets spanning math, science QA, code generation, GAIA, and multi-agent database diagnosis, Parallel-Synthesis matches or outperforms text-based synthesis on seven datasets and remains close on the other two. It also reduces time-to-first-token by 2.5x-11x, suggesting that direct cache-based synthesis is a promising interface for more native and efficient synthesis over parallel agent branches.",
+        "canonical_id": "arXiv:2606.14672",
+        "arxiv_id": "2606.14672",
+        "authors": [
+          "Shikun Liu",
+          "Mufei Li",
+          "Dongqi Fu",
+          "H. Wang",
+          "Ying-Long Xia",
+          "Hong Li",
+          "Hong Yan",
+          "Pan Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.09441",
+      "identity_tokens": [
+        "id:arXiv:2606.09441",
+        "title:sift selectiveindex for fast compute of rag prefill by exploiting attention invariance",
+        "url:https://www.semanticscholar.org/paper/65f18475c4e7668bc441e3e9c4fabbb36863f3a0"
+      ],
+      "record": {
+        "title": "SIFT: Selective-Index For Fast Compute of RAG Prefill by Exploiting Attention Invariance",
+        "source_url": "https://www.semanticscholar.org/paper/65f18475c4e7668bc441e3e9c4fabbb36863f3a0",
+        "year": 2026,
+        "published": "2026-06-08",
+        "abstract": "Retrieval-Augmented Generation (RAG) injects LLM queries with relevant documents to improve response quality. This injection increases prompt length and slows time to first token (TTFT). Unlike standard queries, RAG queries have a unique property of context reuse where the same documents recur across user queries. Thus, fully recomputing documents for every RAG query does redundant compute and increases TTFT. Prior works precompute KV tensors of RAG documents offline and coarsely recompute some tokens during online prefill. However, such KV reuse is often slower than full recomputation on modern GPUs due to high-latency disk transfers. Further, such a coarse-grained recomputation degrades accuracy. To address these limitations, this paper proposes SIFT: Selective-Index For Fast Compute of RAG Prefill by Exploiting Attention Invariance. SIFT processes documents offline and extracts fine-grained locations of high attention scores for each document. Next, we identify the following attention invariance insights that enable us to exploit the extracted locations during runtime: (1) Local-Attention Invariance: The location of high attention scores within a document remain invariant to surrounding documents. This helps us predict the location of high scores where the document attends to itself. (2) Cross-Attention Consistency: Keys with high intra-document attention also attract cross-attention from subsequent documents. This helps us predict the location of high scores where the document attends to future documents. Critically, SIFT stores no KV data and only stores locations of high scores in the form of two compact bit vectors. SIFT's storage is up to 24,000x smaller than KV tensors, obviating costly disk transfers. During prefill, SIFT computes the attention only for the marked locations and improves TTFT by 1.71x while holding accuracy within 1% of full recompute.",
+        "canonical_id": "arXiv:2606.09441",
+        "arxiv_id": "2606.09441",
+        "authors": [
+          "Rya Sanovar",
+          "Srikant Bharadwaj",
+          "Hritvik Taneja",
+          "Moinuddin Qureshi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/2575-8411.2026.00035",
+      "identity_tokens": [
+        "id:DOI:10.1109/2575-8411.2026.00035",
+        "title:kv cache reuse for elastic llm inference on edge devices",
+        "url:https://www.semanticscholar.org/paper/967d90edf7f28d9deae2efa40ce3897eba5be40f"
+      ],
+      "record": {
+        "title": "KV Cache Reuse for Elastic LLM Inference on Edge Devices",
+        "source_url": "https://www.semanticscholar.org/paper/967d90edf7f28d9deae2efa40ce3897eba5be40f",
+        "year": 2026,
+        "published": "2026-06-01",
+        "abstract": "Deploying Large Language Models (LLMs) on edge devices is increasingly critical due to network and privacy constraints. Key-Value (KV) cache reuse and elastic LLM inference are both essential for on-device LLM deployment as the available resources on edge devices are limited and vary over time. However, directly using the KV caches from a different precision model can cause performance degradation due to numerical deviation of the KV cache. To address this issue, we present ElastKV, a scheme that reuses precomputed KV caches generated by mixed-precision LLMs by selectively recomputing a small subset of KV values. ElastKV first filters tokens using a recomputation rule, then ranks them based on their estimated recomputation priority. Unlike prior methods, ElastKV estimates this priority by combining each token's KV deviation with its estimated influence on output tokens, which is derived from pairwise token influence estimation and influence paths. We evaluate ElastKV on four open-source LLMs with different quantization bit-widths over four datasets. Results show that ElastKV limits average accuracy loss to within 2% and provides an average recomputation speedup of nearly 3× compared to full recomputation and achieves a better speed-quality trade-off than all state-of-the-art KV cache reuse methods.",
+        "canonical_id": "DOI:10.1109/2575-8411.2026.00035",
+        "doi": "10.1109/2575-8411.2026.00035",
+        "authors": [
+          "Pei-Shuo Wang",
+          "Zhenzhe Zheng",
+          "Xiao-Yao Huang",
+          "Jie Wu",
+          "Fan Wu",
+          "Guihai Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/2575-8411.2026.00033",
+      "identity_tokens": [
+        "id:DOI:10.1109/2575-8411.2026.00033",
+        "title:efficient kv cache migration for geodistributed llm inference in collaborative edge computing",
+        "url:https://www.semanticscholar.org/paper/b44091c6dccb2b8ec9af01e02164b1cb30b1d2de"
+      ],
+      "record": {
+        "title": "Efficient KV Cache Migration for Geo-Distributed LLM Inference in Collaborative Edge Computing",
+        "source_url": "https://www.semanticscholar.org/paper/b44091c6dccb2b8ec9af01e02164b1cb30b1d2de",
+        "year": 2026,
+        "published": "2026-06-01",
+        "abstract": "Large Language Models (LLMs) have shown exceptional capabilities but rely heavily on centralized cloud GPU clusters, leading to high bandwidth costs, latency, and privacy issues. Edge computing offers a solution by deploying LLMs closer to users on edge servers, yet single edge servers often cannot meet LLMs' heavy computational demands. Collaborative Edge Computing (CEC) address this challenge by integrating resources of multiple geo-distributed heterogeneous edge servers, which jointly host small model shards and associated Key-Value (KV) cache for distributed inference. However, edge servers may disconnect or easily become overloaded, making it essential to migrate stateful KV cache to other servers for ensuring continuous service. Existing cloud-based KV cache management methods, such as direct cross-GPUs transmission and recomputation from input tokens are ill-suited for bandwidth-constrained and resource-limited edge environments. In this work, we propose EdgeFlow, a novel hybrid KV cache migration scheme that integrates direct KV cache transmission with activation-based recomputation, leveraging parallel computation and communication to minimize migration time. On this basis, we formulate a multi-node KV migration optimization problem and design a 2approximation algorithm based on improved linear programming relaxation and bipartite graph techniques. Extensive experiments on a real-world distributed LLM inference platform demonstrate that EdgeFlow reduces migration time by up to 45%, significantly enhancing the robustness and efficiency of distributed LLM inference in collaborative edge environments.",
+        "canonical_id": "DOI:10.1109/2575-8411.2026.00033",
+        "doi": "10.1109/2575-8411.2026.00033",
+        "authors": [
+          "Mingjin Zhang",
+          "Jian-Nong Cao",
+          "Tao Wu",
+          "Xiangchun Chen",
+          "Ne Wang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:04ca41f76a080e605cc0f619e7b2d40cc076b76a195df41a650e1621e080f818",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

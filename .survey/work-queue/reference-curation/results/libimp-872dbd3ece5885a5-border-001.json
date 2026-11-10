@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-872dbd3ece5885a5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.08468",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.08468",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.08468",
+      "SemanticScholar:84277627a53d81f0e4741a28dedd906645d4ec74",
+      "arXiv:2604.08468"
+    ],
+    "reason": "Test-time adaptation improves quality; no inference-efficiency reduction is shown.",
+    "first_checked_at": "2026-10-13T06:32:25+00:00",
+    "last_checked_at": "2026-10-13T06:32:25+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2509.16105-diep-differentiable-expert-pruning.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TTVS: Boosting Self-Exploring Reinforcement Learning via Test-time Variational Synthesis"
+  },
+  "processed_at": "2026-10-13T06:32:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-872dbd3ece58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

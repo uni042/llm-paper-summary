@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-934c09b99881d937-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2210.13452",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2210.13452",
+    "identity_tokens": [
+      "DOI:10.1109/tpami.2023.3329173",
+      "arXiv:2210.13452",
+      "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
+    ],
+    "reason": "視覚認識向けMetaFormerのモデル構造・基準方式を扱う。LLMの生成推論、KVキャッシュ、MoE実行、GPUサービングの効率化ではなく、視覚モデルのアーキテクチャ研究なので対象外。",
+    "first_checked_at": "2026-10-11T20:48:40+00:00",
+    "last_checked_at": "2026-10-21T09:53:03+00:00",
+    "linked_from": [],
+    "title": "MetaFormer Baselines for Vision"
+  },
+  "processed_at": "2026-10-21T09:53:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-934c09b99881",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

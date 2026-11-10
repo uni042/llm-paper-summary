@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-727aefece77a55c5-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.10696",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.10696",
+    "identity_tokens": [
+      "arXiv:2403.10696"
+    ],
+    "reason": "一次要旨ではVision MambaとViTの少数例転移学習を線形プローブ・視覚プロンプトで比較する研究で、LLM推論、サービング、量子化、KVキャッシュの効率化は扱っていない。研究対象が明確に異なるため対象外。",
+    "first_checked_at": "2026-10-28T21:47:44+00:00",
+    "last_checked_at": "2026-10-28T21:47:44+00:00",
+    "linked_from": [],
+    "title": "On the low-shot transferability of [V]-Mamba"
+  },
+  "processed_at": "2026-10-28T21:47:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-727aefece77a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

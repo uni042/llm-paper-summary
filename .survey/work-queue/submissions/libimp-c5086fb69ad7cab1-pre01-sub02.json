@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Ekka: Automated Diagnosis of Silent Errors in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.04594",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM serving frameworks are quickly evolving with a complex software stack and a vast number of optimizations. The rapid development process can introduce silent errors where output quality silently degrades without any explicit error signals. Diagnosing silent errors is notoriously difficult due to the substantial semantic gap between the high-level symptoms and the low-level root causes. We observe that diagnosis of silent errors can be effectively framed as a differential debugging problem by leveraging the existence of semantically correct reference implementations. We propose Ekka, an automated diagnosis system that identifies root causes by systematically aligning and comparing intermediate execution states between a target and a reference framework. We constructed a benchmark of real-world silent errors from popular serving frameworks, where Ekka shows 80% pass@1 diagnosis accuracy and 88% pass@5 diagnosis accuracy, outperforming state-of-the-art systems. Ekka also diagnoses 4 new silent errors from serving frameworks, all of which have been confirmed by the developers.",
+      "identifiers": [
+        "SemanticScholar:16342e899d94dbe100c4a5653c0c0c0ce620a0b3"
+      ],
+      "semantic_scholar_id": "16342e899d94dbe100c4a5653c0c0c0ce620a0b3",
+      "canonical_id": "arXiv:2606.04594",
+      "arxiv_id": "2606.04594",
+      "doi": "10.48550/arXiv.2606.04594",
+      "authors": [
+        "Yi-Le Gu",
+        "Zhen Zhang",
+        "Shaowei Zhu",
+        "Xinwei Fu",
+        "Jun Wu",
+        "Yi-Da Wang",
+        "Baris Kasikci"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はLLM配信フレームワークの最適化で生じる静かな精度劣化を参照実装と中間状態の差分照合で診断するEkkaを提案。実際のsilent errorベンチマークでpass@1 80%、pass@5 88%と報告。推論システムの正確性・検証基盤に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pre-Training Curriculum for Multi-Token Prediction in Language Models",
+      "source_url": "https://arxiv.org/abs/2505.22757",
+      "year": 2025,
+      "published": "2025-05-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-token prediction (MTP) is a recently proposed pre-training objective for language models. Rather than predicting only the next token (NTP), MTP predicts the next $k$ tokens at each prediction step, using multiple prediction heads. MTP has shown promise in improving downstream performance, inference speed, and training efficiency, particularly for large models. However, prior work has shown that smaller language models (SLMs) struggle with the MTP objective. To address this, we propose a curriculum learning strategy for MTP training, exploring two variants: a forward curriculum, which gradually increases the complexity of the pre-training objective from NTP to MTP, and a reverse curriculum, which does the opposite. Our experiments show that the forward curriculum enables SLMs to better leverage the MTP objective during pre-training, improving downstream NTP performance and generative output quality, while retaining the benefits of self-speculative decoding. The reverse curriculum achieves stronger NTP performance and output quality, but fails to provide any self-speculative decoding benefits.",
+      "identifiers": [
+        "SemanticScholar:9f2ac1776f9154540917b1cff8f960fe8de9b9a4"
+      ],
+      "semantic_scholar_id": "9f2ac1776f9154540917b1cff8f960fe8de9b9a4",
+      "canonical_id": "arXiv:2505.22757",
+      "arxiv_id": "2505.22757",
+      "doi": "10.48550/arXiv.2505.22757",
+      "authors": [
+        "Ansar Aynetdinov",
+        "Alan Akbik"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 520,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv一次要旨は小型LMがmulti-token predictionを学びにくい問題に対し、NTPからMTPへ段階的に学習するcurriculumを提案。自己投機的復号の速度利点を維持しながら小型モデルの生成品質を改善。MTPの推論高速化を可能にする学習設計として関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OTARo: Once Tuning for All Precisions toward Robust On-Device LLMs",
+      "source_url": "https://arxiv.org/abs/2511.13147",
+      "year": 2025,
+      "published": "2025-11-17",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) fine-tuning techniques not only improve the adaptability to diverse downstream tasks, but also mitigate adverse effects of model quantization. \nDespite this, conventional quantization suffers from its structural limitation that hinders flexibility during the fine-tuning and deployment stages. \nPractical on-device tasks demand different quantization precisions (i.e. different bit-widths), e.g., understanding tasks tend to exhibit higher tolerance to reduced precision compared to generation tasks. \nConventional quantization, typically relying on scaling factors that are incompatible across bit-widths, fails to support the on-device switching of precisions when confronted with complex real‑world scenarios.\nTo overcome the dilemma, we propose OTARo, a novel method that enables on-device LLMs to flexibly switch quantization precisions while maintaining performance robustness through once fine-tuning. \nOTARo introduces Shared Exponent Floating Point (SEFP), a distinct quantization mechanism, to produce different bit-widths through simple mantissa truncations of a single model.\nMoreover, to achieve bit-width robustness in downstream applications, OTARo performs a learning process toward losses induced by different bit-widths.\nThe method involves two critical strategies: (1) Exploitation-Exploration Bit-Width Path Search (BPS), which iteratively updates the search path via a designed scoring mechanism; (2) Low-Precision Asynchronous Accumulation (LAA), which performs asynchronous gradient accumulations and delayed updates under low bit-widths. \nExperiments on popular LLMs, e.g., LLaMA3.2-1B, LLaMA3-8B, demonstrate that OTARo achieves consistently strong and robust performance for all precisions.",
+      "identifiers": [
+        "SemanticScholar:2c6531de930169e7530f2e7894ea260a957002f9"
+      ],
+      "semantic_scholar_id": "2c6531de930169e7530f2e7894ea260a957002f9",
+      "canonical_id": "arXiv:2511.13147",
+      "arxiv_id": "2511.13147",
+      "doi": "10.48550/arXiv.2511.13147",
+      "authors": [
+        "Shao-Yuan Chen",
+        "Zhi-Xuan Chen",
+        "Da-Wei Yang",
+        "Zhihang Yuan",
+        "Qiang Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 347,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はShared Exponent Floating Pointで複数ビット幅を共通の一度のfine-tuningから扱うOTARoを提案。端末上でタスクに応じて量子化精度を切り替えながら品質を保つための低ビット推論実装に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Predicting LLM Compression Degradation from Spectral Statistics",
+      "source_url": "https://arxiv.org/abs/2604.18085",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Matrix-level low-rank compression is a promising way to reduce the cost of large language models, but running compression and evaluating the resulting models on language tasks can be prohibitively expensive. Can compression-induced degradation be predicted before committing to this compute? We systematically analyze the Qwen3 and Gemma3 model families across four representative low-rank compression methods: vanilla SVD, two ASVD variants, and SVD-LLM. We find that stable rank and information density, measured in bits per parameter, dominate performance degradation. The interaction term $\\gamma \\cdot \\bar{\\rho}_s$, defined as compression ratio times stable rank, is a robust predictor of accuracy degradation, achieving leave-one-out cross-validation Pearson correlations of $0.890$ for attention layers and $0.839$ for MLP layers. We provide theoretical intuition for why this predictor succeeds by connecting it to standard SVD truncation bounds and error composition mechanisms in transformer layers. These findings enable a predict-then-compress workflow: compute $\\gamma \\cdot \\bar{\\rho}_s$ from weights, estimate degradation, and invest compute only in desirable configurations.",
+      "identifiers": [
+        "SemanticScholar:d4073c0578f284232f19c91d659cfb8a27a70e65"
+      ],
+      "semantic_scholar_id": "d4073c0578f284232f19c91d659cfb8a27a70e65",
+      "canonical_id": "arXiv:2604.18085",
+      "arxiv_id": "2604.18085",
+      "doi": "10.48550/arXiv.2604.18085",
+      "authors": [
+        "Mingxue Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はQwen3/Gemma3の低ランク圧縮でstable rankと情報密度から精度悪化を予測する方法を提案。attention層の交差検証Pearson相関0.890、MLP層0.839を報告。圧縮後の高価な評価を減らす事前選択に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Temporal Self-Distillation: Faster Inference in Discrete Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.15177",
+      "year": 2026,
+      "published": "2026-09-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (dLLMs) promise fast inference by generating multiple tokens in parallel, but suffer severe performance degradation when parallel decoding is pushed too aggressively. We introduce Temporal Self-Distillation (TSD), a simple on-policy method that trains dLLMs for fast inference by distilling predictions across time. Specifically, TSD distills the model's denoising distribution at earlier timesteps toward its distribution at the final timestep at which a token is committed. This encourages earlier predictions to better anticipate the model's eventual output, enabling much more aggressive parallel decoding. Because its teacher signal comes from the model itself, TSD requires no offline teacher generation and applies seamlessly to both base and post-trained policies. Across seven benchmarks in mathematics, planning, and code, TSD substantially shifts the speed--quality frontier toward the low-compute regime. TSD thus provides a simple, single-stage approach to accelerating dLLMs, achieving speedups competitive with offline distillation while avoiding a complex two-stage pipeline.",
+      "identifiers": [
+        "SemanticScholar:8163b95a8dad51d4ff4c0a3dd75003fbea3b5b0a"
+      ],
+      "semantic_scholar_id": "8163b95a8dad51d4ff4c0a3dd75003fbea3b5b0a",
+      "canonical_id": "arXiv:2609.15177",
+      "arxiv_id": "2609.15177",
+      "authors": [
+        "Shi-Jia Xu",
+        "Andrea Miele",
+        "Metod Jazbec",
+        "Volker Roth",
+        "Eric T. Nalisnick",
+        "Ilija Bogunovic"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は拡散LMの早期ステップ予測を最終確定時の分布へ自己蒸留し、より積極的な並列unmaskingを可能にするTSDを提案。数学・計画・コードの7ベンチマークで低計算領域の速度品質Paretoを改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c5086fb69ad7",
+    "round": "libimp-c5086fb69ad7cab1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c5086fb69ad7cab1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c5086fb69ad7cab1-pre01.json",
+    "receipt": "sha256:06426eb800a993e000aa4fc940d83eebbc683b6f83a83d252626570760de4901"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c5086fb69ad7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

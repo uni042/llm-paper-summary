@@ -1,0 +1,168 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ce0d2c2986c7a11e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ce0d2c2986c7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tc.2025.3585339",
+    "arXiv:2406.11823"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a10557e89f468bddf72c778e641225d2e8bee4c7",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T15:15:48.448751+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tc.2025.3585339",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2406.11823",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2406.11823"
+    }
+  ],
+  "results": [
+    {
+      "title": "FlashDecoding++Next: High Throughput LLM Inference With Latency and Memory Optimization",
+      "source_url": "https://doi.org/10.1109/TC.2025.3585339",
+      "year": 2025,
+      "published": "2025-10-01",
+      "venue": "IEEE transactions on computers",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the Large Language Model (LLM) becomes increasingly important in various domains, the performance of LLM inference is crucial to massive LLM applications. However, centering around the computational efficiency and the memory utilization, the following challenges remain unsolved in achieving high-throughput LLM inference: (1) Synchronous partial softmax update. The softmax operation requires a synchronous update operation among each partial softmax result, leading to <inline-formula><tex-math notation=\"LaTeX\">$\\sim$</tex-math><alternatives><mml:math><mml:mo>∼</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq1-3585339.gif\"/></alternatives></inline-formula>20% overheads for the attention computation in LLMs. (2) Under-utilized computation of flat GEMM. The shape of matrices performing GEMM in LLM inference tends to be flat, leading to under-utilized computation and 50% performance loss after padding zeros in previous designs (<italic>e.g.,</italic> cuBLAS, CUTLASS, etc.). (3) Memory redundancy caused by activations. Dynamic allocation of activations during inference leads to redundant storage of useless variables, bringing 22% more memory consumption. We present <italic>FlashDecoding++Next</italic>, a high-throughput inference engine supporting mainstream LLMs and hardware backends. To tackle the above challenges, <italic>FlashDecoding++Next</italic> creatively proposes: <bold>(1) Asynchronous softmax with unified maximum.</bold> <italic>FlashDecoding++Next</italic> introduces a unified maximum technique for different partial softmax computations to avoid synchronization. Based on this, a fine-grained pipelining is proposed, leading to 1.18<inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq2-3585339.gif\"/></alternatives></inline-formula> and 1.14<inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq3-3585339.gif\"/></alternatives></inline-formula> for the <italic>prefill</italic> and decode phases in LLM inference, respectively. <bold>(2) Flat GEMM optimization with double buffering.</bold> <italic>FlashDecoding++Next</italic> points out that flat GEMMs with different shapes face varied bottlenecks. Then, techniques like double buffering are introduced, resulting in up to 52% speedup for the flat GEMM operation. (3) Buffer reusing and unified memory management. <italic>FlashDecoding++Next</italic> reuses the pre-allocated activation buffers throughout the inference process to remove redundancy. Based on that, we unify the management of different types of storage to further exploit the reusing opportunity. The memory optimization enables up to 1.57<inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq4-3585339.gif\"/></alternatives></inline-formula> longer sequence to be processed. <italic>FlashDecoding++Next</italic> demonstrates remarkable throughput improvement, delivering up to <bold>68.88</bold><inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq5-3585339.gif\"/></alternatives></inline-formula> higher throughput compared to the HuggingFace <xref ref-type=\"bibr\" rid=\"ref1\">[1]</xref> implementation. On average, <italic>FlashDecoding++Next</italic> achieves <bold>1.25</bold><inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq6-3585339.gif\"/></alternatives></inline-formula> and <bold>1.46</bold><inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq7-3585339.gif\"/></alternatives></inline-formula> higher throughput compared to vLLM <xref ref-type=\"bibr\" rid=\"ref2\">[2]</xref> and TensorRT-LLM <xref ref-type=\"bibr\" rid=\"ref3\">[3]</xref> on mainstream LLMs.",
+      "identifiers": [
+        "SemanticScholar:f6df3adce5dd0c141685afa13ea305b9ab203971"
+      ],
+      "semantic_scholar_id": "f6df3adce5dd0c141685afa13ea305b9ab203971",
+      "doi": "10.1109/TC.2025.3585339",
+      "canonical_id": "DOI:10.1109/TC.2025.3585339",
+      "authors": [
+        "Guohao Dai",
+        "Ke Hong",
+        "Qiuli Mao",
+        "Xiu-Hong Li",
+        "Jia-Ming Xu",
+        "Hao-Feng Huang",
+        "Hongtu Xia",
+        "Xue-Fei Ning",
+        "Shengen Yan",
+        "Y. Liang",
+        "Yu Wang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 378,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/tc.2025.3585339",
+      "identity_tokens": [
+        "id:DOI:10.1109/tc.2025.3585339",
+        "id:SemanticScholar:f6df3adce5dd0c141685afa13ea305b9ab203971",
+        "title:flashdecodingnext high throughput llm inference with latency and memory optimization",
+        "url:https://doi.org/10.1109/TC.2025.3585339"
+      ],
+      "record": {
+        "title": "FlashDecoding++Next: High Throughput LLM Inference With Latency and Memory Optimization",
+        "source_url": "https://doi.org/10.1109/TC.2025.3585339",
+        "year": 2025,
+        "published": "2025-10-01",
+        "venue": "IEEE transactions on computers",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As the Large Language Model (LLM) becomes increasingly important in various domains, the performance of LLM inference is crucial to massive LLM applications. However, centering around the computational efficiency and the memory utilization, the following challenges remain unsolved in achieving high-throughput LLM inference: (1) Synchronous partial softmax update. The softmax operation requires a synchronous update operation among each partial softmax result, leading to <inline-formula><tex-math notation=\"LaTeX\">$\\sim$</tex-math><alternatives><mml:math><mml:mo>∼</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq1-3585339.gif\"/></alternatives></inline-formula>20% overheads for the attention computation in LLMs. (2) Under-utilized computation of flat GEMM. The shape of matrices performing GEMM in LLM inference tends to be flat, leading to under-utilized computation and 50% performance loss after padding zeros in previous designs (<italic>e.g.,</italic> cuBLAS, CUTLASS, etc.). (3) Memory redundancy caused by activations. Dynamic allocation of activations during inference leads to redundant storage of useless variables, bringing 22% more memory consumption. We present <italic>FlashDecoding++Next</italic>, a high-throughput inference engine supporting mainstream LLMs and hardware backends. To tackle the above challenges, <italic>FlashDecoding++Next</italic> creatively proposes: <bold>(1) Asynchronous softmax with unified maximum.</bold> <italic>FlashDecoding++Next</italic> introduces a unified maximum technique for different partial softmax computations to avoid synchronization. Based on this, a fine-grained pipelining is proposed, leading to 1.18<inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq2-3585339.gif\"/></alternatives></inline-formula> and 1.14<inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq3-3585339.gif\"/></alternatives></inline-formula> for the <italic>prefill</italic> and decode phases in LLM inference, respectively. <bold>(2) Flat GEMM optimization with double buffering.</bold> <italic>FlashDecoding++Next</italic> points out that flat GEMMs with different shapes face varied bottlenecks. Then, techniques like double buffering are introduced, resulting in up to 52% speedup for the flat GEMM operation. (3) Buffer reusing and unified memory management. <italic>FlashDecoding++Next</italic> reuses the pre-allocated activation buffers throughout the inference process to remove redundancy. Based on that, we unify the management of different types of storage to further exploit the reusing opportunity. The memory optimization enables up to 1.57<inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq4-3585339.gif\"/></alternatives></inline-formula> longer sequence to be processed. <italic>FlashDecoding++Next</italic> demonstrates remarkable throughput improvement, delivering up to <bold>68.88</bold><inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq5-3585339.gif\"/></alternatives></inline-formula> higher throughput compared to the HuggingFace <xref ref-type=\"bibr\" rid=\"ref1\">[1]</xref> implementation. On average, <italic>FlashDecoding++Next</italic> achieves <bold>1.25</bold><inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq6-3585339.gif\"/></alternatives></inline-formula> and <bold>1.46</bold><inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\times}$</tex-math><alternatives><mml:math><mml:mo mathvariant=\"bold\">×</mml:mo></mml:math><inline-graphic xlink:href=\"dai-ieq7-3585339.gif\"/></alternatives></inline-formula> higher throughput compared to vLLM <xref ref-type=\"bibr\" rid=\"ref2\">[2]</xref> and TensorRT-LLM <xref ref-type=\"bibr\" rid=\"ref3\">[3]</xref> on mainstream LLMs.",
+        "identifiers": [
+          "SemanticScholar:f6df3adce5dd0c141685afa13ea305b9ab203971"
+        ],
+        "semantic_scholar_id": "f6df3adce5dd0c141685afa13ea305b9ab203971",
+        "doi": "10.1109/TC.2025.3585339",
+        "canonical_id": "DOI:10.1109/TC.2025.3585339",
+        "authors": [
+          "Guohao Dai",
+          "Ke Hong",
+          "Qiuli Mao",
+          "Xiu-Hong Li",
+          "Jia-Ming Xu",
+          "Hao-Feng Huang",
+          "Hongtu Xia",
+          "Xue-Fei Ning",
+          "Shengen Yan",
+          "Y. Liang",
+          "Yu Wang"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 378,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8f3b7b27ff4138320a208348aa2a1024a36b2e6d69bb1c4e62616e188db4c476",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c35b757c410ec4b-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.09251",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.09251",
+    "identity_tokens": [
+      "arXiv:2212.09251"
+    ],
+    "reason": "言語モデル自身で154の評価datasetを生成しsycophancy等のinverse scalingを発見する評価・安全性研究で、推論ランタイムやサービング効率化を提案しない。",
+    "first_checked_at": "2026-10-04T19:49:58+00:00",
+    "last_checked_at": "2026-10-04T19:49:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+    ],
+    "title": "Discovering Language Model Behaviors with Model-Written Evaluations"
+  },
+  "processed_at": "2026-10-04T19:49:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c35b757c410",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

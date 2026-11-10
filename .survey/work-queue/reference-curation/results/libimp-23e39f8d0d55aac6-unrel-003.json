@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-23e39f8d0d55aac6-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.13647",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.13647",
+    "identity_tokens": [
+      "arXiv:2609.13647"
+    ],
+    "reason": "一次要旨: The rapid development of unmanned aerial vehicle (UAV) technology has made aerial-image object detection increasingly important for natural-resource monitoring, traffic management, and disaster response. Detecting small objects in aerial images remains difficult because objects occupy very few pixels, high-frequency cues are easily lost, and global context is hard to model in cluttered scenes. Existing detectors ofte",
+    "first_checked_at": "2026-10-05T06:47:42+00:00",
+    "last_checked_at": "2026-10-05T06:47:42+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "YOLO12-MambaScan: An Efficient Object Detector with High-Frequency Enhancement and State-Space Modeling"
+  },
+  "processed_at": "2026-10-05T06:47:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-23e39f8d0d55",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-edb30c2d4aef6309-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.cie.2026.112240",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.cie.2026.112240",
+    "identity_tokens": [
+      "DOI:10.1016/j.cie.2026.112240"
+    ],
+    "reason": "DOI https://doi.org/10.1016/j.cie.2026.112240 failed and packet abstract is empty; quantization lineage merits retention.",
+    "first_checked_at": "2026-10-06T20:06:18+00:00",
+    "last_checked_at": "2026-10-06T20:06:18+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A human-centric decision support framework for edge-based cold chain transportation monitoring with Small Language Models"
+  },
+  "processed_at": "2026-10-06T20:06:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-edb30c2d4aef",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

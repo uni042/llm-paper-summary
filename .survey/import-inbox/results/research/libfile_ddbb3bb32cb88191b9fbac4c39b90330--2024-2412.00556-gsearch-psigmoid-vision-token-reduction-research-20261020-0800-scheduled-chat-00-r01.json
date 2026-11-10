@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1f52ab47b0f74a60458b85975590c837a652653cbc4f846ba69ad9178b7e30f9",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ddbb3bb32cb88191b9fbac4c39b90330--2024-2412.00556-gsearch-psigmoid-vision-token-reduction-research-20261020-0800-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2412.00556",
+  "worker_completed_at": "2026-10-20T08:00:00+09:00",
+  "worker_run_key": "20261020-0800-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6305,
+    "body_paragraphs": 38,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 122,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 122 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 122 < 500"
+  ],
+  "processed_at": "2026-10-19T23:54:37+00:00"
+}

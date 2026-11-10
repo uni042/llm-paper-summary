@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed8bd70e49510e99-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.01106",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.01106",
+    "identity_tokens": [
+      "arXiv:2609.01106"
+    ],
+    "reason": "The study evaluates hint-based code-generation quality and interventions; it does not optimize inference cost or latency.",
+    "first_checked_at": "2026-10-05T07:30:13+00:00",
+    "last_checked_at": "2026-10-05T07:30:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+    ],
+    "title": "Hints Help But Do They Teach? Evaluating Skills Transfer in Code Generation"
+  },
+  "processed_at": "2026-10-05T07:30:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed8bd70e4951",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

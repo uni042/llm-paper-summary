@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7659cf2adc85b7f-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.12078",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.12078",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.12078",
+      "SemanticScholar:13f82584a1fc5b54f21434bc4efc7218cc22848a",
+      "arXiv:2601.12078"
+    ],
+    "reason": "PURPLE uses a contextual bandit to order user-profile memories for RAG and reports effectiveness and efficiency, but the abstract does not specify a concrete reduction in prompt tokens, serving cost, or latency.",
+    "first_checked_at": "2026-10-10T14:41:52+00:00",
+    "last_checked_at": "2026-10-10T14:41:52+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Optimizing User Profiles via Contextual Bandits for Retrieval-Augmented LLM Personalization"
+  },
+  "processed_at": "2026-10-10T14:41:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7659cf2adc8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

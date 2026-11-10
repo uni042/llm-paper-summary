@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-531c5d582c5678c9-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.37712",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.37712",
+    "identity_tokens": [
+      "arXiv:2609.37712"
+    ],
+    "reason": "PolyOCR-Venus unifies OCR foundation-model tasks and discusses compact OCR systems/distillation. Packet links to multimodal expert-compute/compression lineages, so the primary text was checked. It focuses on OCR capability/training recipes, not measured inference-cost reduction; lineage connection remains indirect.",
+    "first_checked_at": "2026-10-06T09:00:56+00:00",
+    "last_checked_at": "2026-10-06T09:00:56+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PolyOCR-Venus: Unified OCR Foundation Models for Text-Centric Visual Intelligence"
+  },
+  "processed_at": "2026-10-06T09:00:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-531c5d582c56",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

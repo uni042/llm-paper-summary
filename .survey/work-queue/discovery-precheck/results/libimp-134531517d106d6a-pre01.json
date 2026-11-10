@@ -1,0 +1,681 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-134531517d106d6a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-134531517d10",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2305.12330",
+    "arXiv:2505.10782",
+    "arXiv:2509.17428",
+    "arXiv:2512.07312",
+    "arXiv:2512.14925",
+    "arXiv:2605.27849",
+    "arXiv:2607.07707"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3c1c4a6173a735a4622fed38e5183cb5ab4cbe0e",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-12T23:58:50.495653+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2305.12330",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.10782",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.17428",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.07312",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.14925",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.27849",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.07707",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DCO: Dynamic Cache Orchestration for LLM Accelerators through Predictive Management",
+      "source_url": "https://arxiv.org/abs/2512.07312",
+      "year": 2025,
+      "published": "2025-12-08",
+      "venue": "IEEE transactions on computers",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid adoption of large language models (LLMs) is pushing AI accelerators toward increasingly powerful and specialized designs. Instead of further complicating software development with deeply hierarchical scratchpad memories (SPMs) and their asynchronous management, we investigate the opposite point of the design spectrum: a multi-core AI accelerator equipped with a shared system-level cache and application-aware management policies, which keeps the programming effort modest. Our approach exploits dataflow information available in the software stack to guide cache replacement (including dead-block prediction), in concert with bypass decisions and mechanisms that alleviate cache thrashing. We assess the proposal using a cycle-accurate simulator and observe substantial performance gains (up to 1.80x speedup) compared with conventional cache architectures. In addition, we build and validate an analytical model that takes into account the actual overlapping behaviors to extend the measurement results of our policies to real-world larger-scale workloads. Experiment results show that when functioning together, our bypassing and thrashing mitigation strategies can handle scenarios both with and without inter-core data sharing and achieve remarkable speedups. Finally, we implement the design in RTL and the area of our design is $\\mathbf{0.064mm^2}$ with 15nm process, which can run at 2 GHz clock frequency. Our findings explore the potential of the shared cache design to assist the development of future AI accelerator systems.",
+      "identifiers": [
+        "SemanticScholar:38db36580e317633a81fb8f403779f4d72f3f10a"
+      ],
+      "semantic_scholar_id": "38db36580e317633a81fb8f403779f4d72f3f10a",
+      "canonical_id": "arXiv:2512.07312",
+      "arxiv_id": "2512.07312",
+      "doi": "10.1109/TC.2026.3733368",
+      "authors": [
+        "Zhongchun Zhou",
+        "Chengtao Lai",
+        "Yuhang Gu",
+        "Wei Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 308,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multiscale Aggregated Hierarchical Attention (MAHA): A Game Theoretic and Optimization Driven Approach to Efficient Contextual Modeling in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2512.14925",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic computational complexity of MultiHead SelfAttention (MHSA) remains a fundamental bottleneck in scaling Large Language Models (LLMs) for longcontext tasks. While sparse and linearized attention mechanisms attempt to mitigate this, they often compromise the representation of global dependencies or fail to capture multiscale semantic granularity effectively. In this paper, we propose Multiscale Aggregated Hierarchical Attention (MAHA), a novel architectural framework that reformulates the attention mechanism through hierarchical decomposition and mathematically rigorous aggregation. Unlike conventional approaches that treat token interactions at a single resolution, MAHA dynamically partitions the input sequence into hierarchical scales via learnable downsampling operators. The core innovation lies in its aggregation strategy: we model the fusion of scalespecific attention matrices as a resource allocation problem, solved via a convex optimization framework or a Nash equilibriumbased gametheoretic approach. This ensures a theoretically optimal balance between local nuance and global context fidelity. Implemented within a hybrid dilatedconvolutional transformer backbone, MAHA utilizes differentiable optimization layers to enable endtoend training. Experimental evaluations demonstrate that MAHA achieves superior scalability; empirical FLOPs analysis confirms an 81% reduction in computational cost at a sequence length of 4096 compared to standard attention. This work bridges the gap between optimization theory and sequence modeling, offering a scalable solution for nextgeneration LLMs.",
+      "identifiers": [
+        "SemanticScholar:d38f32b87bcc526fe642ade4b5b9d3f7d8c99730"
+      ],
+      "semantic_scholar_id": "d38f32b87bcc526fe642ade4b5b9d3f7d8c99730",
+      "canonical_id": "arXiv:2512.14925",
+      "arxiv_id": "2512.14925",
+      "doi": "10.48550/arXiv.2512.14925",
+      "authors": [
+        "C. Erden"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 300,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FPMoE: A Sparse Mixture-of-Experts Approach to Functional Code Generation",
+      "source_url": "https://arxiv.org/abs/2605.27849",
+      "year": 2026,
+      "published": "2026-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite rapid progress in LLM-based code generation, existing models are predominantly trained on imperative languages, leaving functional programming languages (FPLs) such as Haskell, OCaml, and Scala chronically underexplored, with even frontier models performing substantially worse on FPLs. Fine-tuning is a natural remedy, but our experiments show that per-language fine-tuning fails to capture shared functional abstractions, while merged multi-language fine-tuning introduces cross-language interference. To address this, we introduce FPMoE, a lightweight, open-source code generation model built on a sparse Mixture-of-Experts (MoE) architecture with three language-specific routed experts (one each for Haskell, OCaml, and Scala) and a shared expert that captures cross-language functional patterns such as monadic reasoning and type-directed programming. This design resolves both failure modes simultaneously: dedicated experts eliminate interference, while the shared expert preserves abstractions that per-language models miss. On FPEval, FPMoE substantially outperforms fine-tuned baselines and, with only 3B active parameters, matches the performance of much larger models including DeepSeek-Coder-6.7B, Qwen2.5-Coder-14B-Instruct, and Qwen3-Coder-30B-A3B.",
+      "identifiers": [
+        "SemanticScholar:fd31422b1eb0c1fab7b62deb541d4f38d785e490"
+      ],
+      "semantic_scholar_id": "fd31422b1eb0c1fab7b62deb541d4f38d785e490",
+      "canonical_id": "arXiv:2605.27849",
+      "arxiv_id": "2605.27849",
+      "doi": "10.48550/arXiv.2605.27849",
+      "authors": [
+        "Loc Pham",
+        "L. Anh",
+        "Thanh Le-Cong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+      "source_url": "https://arxiv.org/abs/2607.07707",
+      "year": 2026,
+      "published": "2026-07-08",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Externalizing knowledge in LLM pre-training is a promising avenue to achieve higher performance at smaller scales, control knowledge use, and overall increase model transparency. We propose continuous-query limited memory language models (Co-LMLM), an LLM that interleaves flexible vector retrieval queries with next-token predictions, and is pre-trained to copy knowledge returned from the KB, rather than memorize it. Co-LMLM is pre-trained with a scalable approach that jointly trains a knowledge-externalizing LLM, induces its knowledge base, and learns an expressive continuous retrieval mechanism. Across pre-training at multiple model scales, Co-LMLM outperforms prior knowledge-externalizing and vanilla LLMs in both perplexity and factual precision. At 360M scale, this includes lower perplexity than models pre-trained on 40$\\times$ more data, and SimpleQA-verified performance that is in line with gpt-4o-mini and higher than Claude Sonnet 4.5.",
+      "identifiers": [
+        "SemanticScholar:0cb5d368d2d39cbdd4056986074d7a9ef3d2395d"
+      ],
+      "semantic_scholar_id": "0cb5d368d2d39cbdd4056986074d7a9ef3d2395d",
+      "canonical_id": "arXiv:2607.07707",
+      "arxiv_id": "2607.07707",
+      "doi": "10.48550/arXiv.2607.07707",
+      "authors": [
+        "Yair Feldman",
+        "Lin-Xi Zhao",
+        "Nathan Godey",
+        "Dongyoung Go",
+        "Yilun Hua",
+        "K. Weinberger",
+        "Jennifer J. Sun",
+        "Yoav Artzi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 96,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Task-agnostic Distillation of Encoder-Decoder Language Models",
+      "source_url": "https://arxiv.org/abs/2305.12330",
+      "year": 2023,
+      "published": "2023-05-21",
+      "venue": "International Conference on Language Resources and Evaluation",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Finetuning pretrained language models (LMs) have enabled appealing performance on a diverse array of tasks. The intriguing task-agnostic property has driven a shifted focus from task-specific to task-agnostic distillation of LMs. While task-agnostic, compute-efficient, performance-preserved LMs can be yielded by task-agnostic distillation, previous studies mainly sit in distillation of either encoder-only LMs (e.g., BERT) or decoder-only ones (e.g., GPT) yet largely neglect that distillation of encoder-decoder LMs (e.g., T5) can posit very distinguished behaviors. Frustratingly, we discover that existing task-agnostic distillation methods can fail to handle the distillation of encoder-decoder LMs. To the demand, we explore a few paths and uncover a path named as MiniEnD that successfully tackles the distillation of encoder-decoder LMs in a task-agnostic fashion. We examine MiniEnD on language understanding and abstractive summarization. The results showcase that MiniEnD is generally effective and is competitive compared to other alternatives. We further scale MiniEnD up to distillation of 3B encoder-decoder language models with interpolated distillation. The results imply the opportunities and challenges in distilling large language models (e.g., LLaMA).",
+      "identifiers": [
+        "SemanticScholar:d599bc94dfa0e0fe3e624428bc3a353237975cbd"
+      ],
+      "semantic_scholar_id": "d599bc94dfa0e0fe3e624428bc3a353237975cbd",
+      "canonical_id": "arXiv:2305.12330",
+      "arxiv_id": "2305.12330",
+      "doi": "10.48550/arXiv.2305.12330",
+      "authors": [
+        "Chen Zhang",
+        "Yang Yang",
+        "Qiu-Chi Li",
+        "Jingang Wang",
+        "Da-Wei Song"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1240,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EdgeMM: Multi-Core CPU with Heterogeneous AI-Extension and Activation-aware Weight Pruning for Multimodal LLMs at Edge",
+      "source_url": "https://arxiv.org/abs/2505.10782",
+      "year": 2025,
+      "published": "2025-05-16",
+      "venue": "Design Automation Conference",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Emerging multimodal LLMs (MLLMs) exhibit strong cross-modality perception and reasoning capabilities and hold great potential for various applications at edge. However, MLLMs typically consist of a compute-intensive modality encoder and a memory-bound LLM decoder, leading to distinct bottlenecks for hardware designs. In this work, we present a multi-core CPU solution with heterogeneous AI extensions, which are based on either the compute-centric systolic array or memory-centric digital compute-in-memory (CIM) coprocessors. In addition, dynamic activation-aware weight pruning and bandwidth management are developed to enhance bandwidth efficiency and core utilization, improving overall performance. We implemented our solution using commercial 22nm technology. For representative MLLMs, our evaluations show EdgeMM can achieve $2.84 \\times$ performance speedup compared to laptop 3060 GPU.",
+      "identifiers": [
+        "SemanticScholar:0483feff02c67f63d7c4fab646bb663a3e871b88"
+      ],
+      "semantic_scholar_id": "0483feff02c67f63d7c4fab646bb663a3e871b88",
+      "canonical_id": "arXiv:2505.10782",
+      "arxiv_id": "2505.10782",
+      "doi": "10.1109/DAC63849.2025.11132644",
+      "authors": [
+        "Kangbo Bai",
+        "Le Ye",
+        "Ru Huang",
+        "Tian-Yu Jia"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 514,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QWHA: Quantization-Aware Walsh-Hadamard Adaptation for Parameter-Efficient Fine-Tuning on Large Language Models",
+      "source_url": "https://arxiv.org/abs/2509.17428",
+      "year": 2025,
+      "published": "2025-09-22",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The demand for efficient deployment of large language models (LLMs) has driven interest in quantization, which reduces inference cost, and parameter-efficient fine-tuning (PEFT), which lowers training overhead. This motivated the development of quantization-aware PEFT to produce accurate yet efficient quantized models. In this setting, reducing quantization error prior to fine-tuning is crucial for achieving high model accuracy. However, existing methods that rely on low-rank adaptation suffer from limited representational capacity. Recent Fourier-related transform (FT)-based adapters offer greater representational power than low-rank adapters, but their direct integration into quantized models often results in ineffective error reduction and increased computational overhead. To overcome these limitations, we propose QWHA, a method that integrates FT-based adapters into quantized models by employing the Walsh-Hadamard Transform (WHT) as the transform kernel, together with a novel adapter initialization scheme incorporating adaptive parameter selection and value refinement. We demonstrate that QWHA effectively mitigates quantization errors while facilitating fine-tuning, and that its design substantially reduces computational cost. Experimental results show that QWHA consistently outperforms baselines in low-bit quantization accuracy and achieves significant training speedups over existing FT-based adapters. The code is available at https://github.com/vantaa89/qwha.",
+      "identifiers": [
+        "SemanticScholar:04f9eca52d67b876ef4a7acb8647c74b054a3d64"
+      ],
+      "semantic_scholar_id": "04f9eca52d67b876ef4a7acb8647c74b054a3d64",
+      "canonical_id": "arXiv:2509.17428",
+      "arxiv_id": "2509.17428",
+      "doi": "10.48550/arXiv.2509.17428",
+      "authors": [
+        "Hyesung Jeon",
+        "Seojun Lee",
+        "Beomseok Kang",
+        "Yulhwa Kim",
+        "Jae-Joon Kim"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 385,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.07312",
+      "identity_tokens": [
+        "id:DOI:10.1109/tc.2026.3733368",
+        "id:SemanticScholar:38db36580e317633a81fb8f403779f4d72f3f10a",
+        "id:arXiv:2512.07312",
+        "title:dco dynamic cache orchestration for llm accelerators through predictive management",
+        "url:https://arxiv.org/abs/2512.07312"
+      ],
+      "record": {
+        "title": "DCO: Dynamic Cache Orchestration for LLM Accelerators through Predictive Management",
+        "source_url": "https://arxiv.org/abs/2512.07312",
+        "year": 2025,
+        "published": "2025-12-08",
+        "venue": "IEEE transactions on computers",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid adoption of large language models (LLMs) is pushing AI accelerators toward increasingly powerful and specialized designs. Instead of further complicating software development with deeply hierarchical scratchpad memories (SPMs) and their asynchronous management, we investigate the opposite point of the design spectrum: a multi-core AI accelerator equipped with a shared system-level cache and application-aware management policies, which keeps the programming effort modest. Our approach exploits dataflow information available in the software stack to guide cache replacement (including dead-block prediction), in concert with bypass decisions and mechanisms that alleviate cache thrashing. We assess the proposal using a cycle-accurate simulator and observe substantial performance gains (up to 1.80x speedup) compared with conventional cache architectures. In addition, we build and validate an analytical model that takes into account the actual overlapping behaviors to extend the measurement results of our policies to real-world larger-scale workloads. Experiment results show that when functioning together, our bypassing and thrashing mitigation strategies can handle scenarios both with and without inter-core data sharing and achieve remarkable speedups. Finally, we implement the design in RTL and the area of our design is $\\mathbf{0.064mm^2}$ with 15nm process, which can run at 2 GHz clock frequency. Our findings explore the potential of the shared cache design to assist the development of future AI accelerator systems.",
+        "identifiers": [
+          "SemanticScholar:38db36580e317633a81fb8f403779f4d72f3f10a"
+        ],
+        "semantic_scholar_id": "38db36580e317633a81fb8f403779f4d72f3f10a",
+        "canonical_id": "arXiv:2512.07312",
+        "arxiv_id": "2512.07312",
+        "doi": "10.1109/TC.2026.3733368",
+        "authors": [
+          "Zhongchun Zhou",
+          "Chengtao Lai",
+          "Yuhang Gu",
+          "Wei Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 308,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.14925",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.14925",
+        "id:SemanticScholar:d38f32b87bcc526fe642ade4b5b9d3f7d8c99730",
+        "id:arXiv:2512.14925",
+        "title:multiscale aggregated hierarchical attention maha a game theoretic and optimization driven approach to efficient contextual modeling in large language models",
+        "url:https://arxiv.org/abs/2512.14925"
+      ],
+      "record": {
+        "title": "Multiscale Aggregated Hierarchical Attention (MAHA): A Game Theoretic and Optimization Driven Approach to Efficient Contextual Modeling in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2512.14925",
+        "year": 2025,
+        "published": "2025-12-16",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quadratic computational complexity of MultiHead SelfAttention (MHSA) remains a fundamental bottleneck in scaling Large Language Models (LLMs) for longcontext tasks. While sparse and linearized attention mechanisms attempt to mitigate this, they often compromise the representation of global dependencies or fail to capture multiscale semantic granularity effectively. In this paper, we propose Multiscale Aggregated Hierarchical Attention (MAHA), a novel architectural framework that reformulates the attention mechanism through hierarchical decomposition and mathematically rigorous aggregation. Unlike conventional approaches that treat token interactions at a single resolution, MAHA dynamically partitions the input sequence into hierarchical scales via learnable downsampling operators. The core innovation lies in its aggregation strategy: we model the fusion of scalespecific attention matrices as a resource allocation problem, solved via a convex optimization framework or a Nash equilibriumbased gametheoretic approach. This ensures a theoretically optimal balance between local nuance and global context fidelity. Implemented within a hybrid dilatedconvolutional transformer backbone, MAHA utilizes differentiable optimization layers to enable endtoend training. Experimental evaluations demonstrate that MAHA achieves superior scalability; empirical FLOPs analysis confirms an 81% reduction in computational cost at a sequence length of 4096 compared to standard attention. This work bridges the gap between optimization theory and sequence modeling, offering a scalable solution for nextgeneration LLMs.",
+        "identifiers": [
+          "SemanticScholar:d38f32b87bcc526fe642ade4b5b9d3f7d8c99730"
+        ],
+        "semantic_scholar_id": "d38f32b87bcc526fe642ade4b5b9d3f7d8c99730",
+        "canonical_id": "arXiv:2512.14925",
+        "arxiv_id": "2512.14925",
+        "doi": "10.48550/arXiv.2512.14925",
+        "authors": [
+          "C. Erden"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 300,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.27849",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.27849",
+        "id:SemanticScholar:fd31422b1eb0c1fab7b62deb541d4f38d785e490",
+        "id:arXiv:2605.27849",
+        "title:fpmoe a sparse mixtureofexperts approach to functional code generation",
+        "url:https://arxiv.org/abs/2605.27849"
+      ],
+      "record": {
+        "title": "FPMoE: A Sparse Mixture-of-Experts Approach to Functional Code Generation",
+        "source_url": "https://arxiv.org/abs/2605.27849",
+        "year": 2026,
+        "published": "2026-05-27",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite rapid progress in LLM-based code generation, existing models are predominantly trained on imperative languages, leaving functional programming languages (FPLs) such as Haskell, OCaml, and Scala chronically underexplored, with even frontier models performing substantially worse on FPLs. Fine-tuning is a natural remedy, but our experiments show that per-language fine-tuning fails to capture shared functional abstractions, while merged multi-language fine-tuning introduces cross-language interference. To address this, we introduce FPMoE, a lightweight, open-source code generation model built on a sparse Mixture-of-Experts (MoE) architecture with three language-specific routed experts (one each for Haskell, OCaml, and Scala) and a shared expert that captures cross-language functional patterns such as monadic reasoning and type-directed programming. This design resolves both failure modes simultaneously: dedicated experts eliminate interference, while the shared expert preserves abstractions that per-language models miss. On FPEval, FPMoE substantially outperforms fine-tuned baselines and, with only 3B active parameters, matches the performance of much larger models including DeepSeek-Coder-6.7B, Qwen2.5-Coder-14B-Instruct, and Qwen3-Coder-30B-A3B.",
+        "identifiers": [
+          "SemanticScholar:fd31422b1eb0c1fab7b62deb541d4f38d785e490"
+        ],
+        "semantic_scholar_id": "fd31422b1eb0c1fab7b62deb541d4f38d785e490",
+        "canonical_id": "arXiv:2605.27849",
+        "arxiv_id": "2605.27849",
+        "doi": "10.48550/arXiv.2605.27849",
+        "authors": [
+          "Loc Pham",
+          "L. Anh",
+          "Thanh Le-Cong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 138,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.07707",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.07707",
+        "id:SemanticScholar:0cb5d368d2d39cbdd4056986074d7a9ef3d2395d",
+        "id:arXiv:2607.07707",
+        "title:colmlm continuousquery limited memory language models",
+        "url:https://arxiv.org/abs/2607.07707"
+      ],
+      "record": {
+        "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+        "source_url": "https://arxiv.org/abs/2607.07707",
+        "year": 2026,
+        "published": "2026-07-08",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Externalizing knowledge in LLM pre-training is a promising avenue to achieve higher performance at smaller scales, control knowledge use, and overall increase model transparency. We propose continuous-query limited memory language models (Co-LMLM), an LLM that interleaves flexible vector retrieval queries with next-token predictions, and is pre-trained to copy knowledge returned from the KB, rather than memorize it. Co-LMLM is pre-trained with a scalable approach that jointly trains a knowledge-externalizing LLM, induces its knowledge base, and learns an expressive continuous retrieval mechanism. Across pre-training at multiple model scales, Co-LMLM outperforms prior knowledge-externalizing and vanilla LLMs in both perplexity and factual precision. At 360M scale, this includes lower perplexity than models pre-trained on 40$\\times$ more data, and SimpleQA-verified performance that is in line with gpt-4o-mini and higher than Claude Sonnet 4.5.",
+        "identifiers": [
+          "SemanticScholar:0cb5d368d2d39cbdd4056986074d7a9ef3d2395d"
+        ],
+        "semantic_scholar_id": "0cb5d368d2d39cbdd4056986074d7a9ef3d2395d",
+        "canonical_id": "arXiv:2607.07707",
+        "arxiv_id": "2607.07707",
+        "doi": "10.48550/arXiv.2607.07707",
+        "authors": [
+          "Yair Feldman",
+          "Lin-Xi Zhao",
+          "Nathan Godey",
+          "Dongyoung Go",
+          "Yilun Hua",
+          "K. Weinberger",
+          "Jennifer J. Sun",
+          "Yoav Artzi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 96,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2305.12330",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2305.12330",
+        "id:SemanticScholar:d599bc94dfa0e0fe3e624428bc3a353237975cbd",
+        "id:arXiv:2305.12330",
+        "title:taskagnostic distillation of encoderdecoder language models",
+        "url:https://arxiv.org/abs/2305.12330"
+      ],
+      "record": {
+        "title": "Task-agnostic Distillation of Encoder-Decoder Language Models",
+        "source_url": "https://arxiv.org/abs/2305.12330",
+        "year": 2023,
+        "published": "2023-05-21",
+        "venue": "International Conference on Language Resources and Evaluation",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Finetuning pretrained language models (LMs) have enabled appealing performance on a diverse array of tasks. The intriguing task-agnostic property has driven a shifted focus from task-specific to task-agnostic distillation of LMs. While task-agnostic, compute-efficient, performance-preserved LMs can be yielded by task-agnostic distillation, previous studies mainly sit in distillation of either encoder-only LMs (e.g., BERT) or decoder-only ones (e.g., GPT) yet largely neglect that distillation of encoder-decoder LMs (e.g., T5) can posit very distinguished behaviors. Frustratingly, we discover that existing task-agnostic distillation methods can fail to handle the distillation of encoder-decoder LMs. To the demand, we explore a few paths and uncover a path named as MiniEnD that successfully tackles the distillation of encoder-decoder LMs in a task-agnostic fashion. We examine MiniEnD on language understanding and abstractive summarization. The results showcase that MiniEnD is generally effective and is competitive compared to other alternatives. We further scale MiniEnD up to distillation of 3B encoder-decoder language models with interpolated distillation. The results imply the opportunities and challenges in distilling large language models (e.g., LLaMA).",
+        "identifiers": [
+          "SemanticScholar:d599bc94dfa0e0fe3e624428bc3a353237975cbd"
+        ],
+        "semantic_scholar_id": "d599bc94dfa0e0fe3e624428bc3a353237975cbd",
+        "canonical_id": "arXiv:2305.12330",
+        "arxiv_id": "2305.12330",
+        "doi": "10.48550/arXiv.2305.12330",
+        "authors": [
+          "Chen Zhang",
+          "Yang Yang",
+          "Qiu-Chi Li",
+          "Jingang Wang",
+          "Da-Wei Song"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1240,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.10782",
+      "identity_tokens": [
+        "id:DOI:10.1109/dac63849.2025.11132644",
+        "id:SemanticScholar:0483feff02c67f63d7c4fab646bb663a3e871b88",
+        "id:arXiv:2505.10782",
+        "title:edgemm multicore cpu with heterogeneous aiextension and activationaware weight pruning for multimodal llms at edge",
+        "url:https://arxiv.org/abs/2505.10782"
+      ],
+      "record": {
+        "title": "EdgeMM: Multi-Core CPU with Heterogeneous AI-Extension and Activation-aware Weight Pruning for Multimodal LLMs at Edge",
+        "source_url": "https://arxiv.org/abs/2505.10782",
+        "year": 2025,
+        "published": "2025-05-16",
+        "venue": "Design Automation Conference",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Emerging multimodal LLMs (MLLMs) exhibit strong cross-modality perception and reasoning capabilities and hold great potential for various applications at edge. However, MLLMs typically consist of a compute-intensive modality encoder and a memory-bound LLM decoder, leading to distinct bottlenecks for hardware designs. In this work, we present a multi-core CPU solution with heterogeneous AI extensions, which are based on either the compute-centric systolic array or memory-centric digital compute-in-memory (CIM) coprocessors. In addition, dynamic activation-aware weight pruning and bandwidth management are developed to enhance bandwidth efficiency and core utilization, improving overall performance. We implemented our solution using commercial 22nm technology. For representative MLLMs, our evaluations show EdgeMM can achieve $2.84 \\times$ performance speedup compared to laptop 3060 GPU.",
+        "identifiers": [
+          "SemanticScholar:0483feff02c67f63d7c4fab646bb663a3e871b88"
+        ],
+        "semantic_scholar_id": "0483feff02c67f63d7c4fab646bb663a3e871b88",
+        "canonical_id": "arXiv:2505.10782",
+        "arxiv_id": "2505.10782",
+        "doi": "10.1109/DAC63849.2025.11132644",
+        "authors": [
+          "Kangbo Bai",
+          "Le Ye",
+          "Ru Huang",
+          "Tian-Yu Jia"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 514,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.17428",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.17428",
+        "id:SemanticScholar:04f9eca52d67b876ef4a7acb8647c74b054a3d64",
+        "id:arXiv:2509.17428",
+        "title:qwha quantizationaware walshhadamard adaptation for parameterefficient finetuning on large language models",
+        "url:https://arxiv.org/abs/2509.17428"
+      ],
+      "record": {
+        "title": "QWHA: Quantization-Aware Walsh-Hadamard Adaptation for Parameter-Efficient Fine-Tuning on Large Language Models",
+        "source_url": "https://arxiv.org/abs/2509.17428",
+        "year": 2025,
+        "published": "2025-09-22",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The demand for efficient deployment of large language models (LLMs) has driven interest in quantization, which reduces inference cost, and parameter-efficient fine-tuning (PEFT), which lowers training overhead. This motivated the development of quantization-aware PEFT to produce accurate yet efficient quantized models. In this setting, reducing quantization error prior to fine-tuning is crucial for achieving high model accuracy. However, existing methods that rely on low-rank adaptation suffer from limited representational capacity. Recent Fourier-related transform (FT)-based adapters offer greater representational power than low-rank adapters, but their direct integration into quantized models often results in ineffective error reduction and increased computational overhead. To overcome these limitations, we propose QWHA, a method that integrates FT-based adapters into quantized models by employing the Walsh-Hadamard Transform (WHT) as the transform kernel, together with a novel adapter initialization scheme incorporating adaptive parameter selection and value refinement. We demonstrate that QWHA effectively mitigates quantization errors while facilitating fine-tuning, and that its design substantially reduces computational cost. Experimental results show that QWHA consistently outperforms baselines in low-bit quantization accuracy and achieves significant training speedups over existing FT-based adapters. The code is available at https://github.com/vantaa89/qwha.",
+        "identifiers": [
+          "SemanticScholar:04f9eca52d67b876ef4a7acb8647c74b054a3d64"
+        ],
+        "semantic_scholar_id": "04f9eca52d67b876ef4a7acb8647c74b054a3d64",
+        "canonical_id": "arXiv:2509.17428",
+        "arxiv_id": "2509.17428",
+        "doi": "10.48550/arXiv.2509.17428",
+        "authors": [
+          "Hyesung Jeon",
+          "Seojun Lee",
+          "Beomseok Kang",
+          "Yulhwa Kim",
+          "Jae-Joon Kim"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 385,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0803892786882aa6c9fea733bf91dde8dcdcab1ea5450dac1683235bbeedddc3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

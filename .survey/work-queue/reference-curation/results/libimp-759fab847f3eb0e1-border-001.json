@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-759fab847f3eb0e1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.03051",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.03051",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2410.03051",
+      "arXiv:2410.03051"
+    ],
+    "reason": "一次要旨は、大規模マルチモーダルモデルの動画詳細説明生成において入力視覚トークンを統合して系列長を削減し、説明品質を大きく損なわないと報告する。視覚トークン圧縮はマルチモーダル推論効率へ直接接点があるが、主要な研究目的は動画キャプション生成モデル・新評価ベンチマークVDC・評価指標VDCscoreであり、汎用LLM推論基盤への適用範囲や実機の終端間遅延改善は要旨では明確でない。",
+    "first_checked_at": "2026-10-21T15:27:51+00:00",
+    "last_checked_at": "2026-10-23T06:46:03+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
+  },
+  "processed_at": "2026-10-23T06:46:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-759fab847f3e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

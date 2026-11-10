@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "baae51136f32aa1d01a7073c4ead982491d8253b70d5e874bd6c8894822ba2a2",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_4ce3569ed32881918a3cff4f40e1bed6--2026-2605.06366-layer-collapse-dlm-compression-research-20261019-0445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2605.06366",
+  "worker_completed_at": "2026-10-19T04:58:00+09:00",
+  "worker_run_key": "20261019-0445-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6005,
+    "body_paragraphs": 37,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 340,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 340 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 340 < 500"
+  ],
+  "processed_at": "2026-10-18T20:51:13+00:00"
+}

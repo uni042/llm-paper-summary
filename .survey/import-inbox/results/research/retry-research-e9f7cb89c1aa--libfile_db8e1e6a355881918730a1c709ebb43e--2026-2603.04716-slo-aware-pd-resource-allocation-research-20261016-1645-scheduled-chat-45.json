@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "d7c6046e9272511445195a3a8ecadc0be82a44fae8916d47cfbc7686210a59fb",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e9f7cb89c1aa--libfile_db8e1e6a355881918730a1c709ebb43e--2026-2603.04716-slo-aware-pd-resource-allocation-research-20261016-1645-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2603.04716",
+  "worker_completed_at": "2026-10-16T16:50:00+09:00",
+  "worker_run_key": "20261016-1645-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7630,
+    "body_paragraphs": 45,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1171,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-16T09:41:29+00:00"
+}

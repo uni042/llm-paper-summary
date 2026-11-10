@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3b7f9e3038b9c2f7-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.22895",
+  "reason": "Vision-Language-Action (VLA) models have shown strong potential for robotic manipulation, but many existing methods still rely on direct mappings from language and visual observations to dense actions. This formulation can weaken the semantic reasoning capability inherited from pre-trained Vision-Language Models (VLMs), which are mainly optimized for visual-linguistic understanding rather than low-level control, and becomes fragile under spatial variations, including changes in object positions, scene layouts, robot embodiments, and camera viewpoints. To address these limitations, we propose H-VLA, a hierarchical VLA framework that decouples high-level key-action reasoning from low-level motion generation. H-VLA combines a Key-Action Model for predicting a key-action as the next manipulation subgoal, a Motion Planning Model for generating dense future actions conditioned on the predicted key-action, and a Unified Camera-Centric Action Space for consistent representation across datasets, embodiments, and viewpoints. We further adopt a two-stage training strategy that emphasizes key-action reasoning during pre-training and dense motion generation during fine-tuning. Experiments show that H-VLA achieves strong performance on SimplerEnv, reaching 91% on Google Robot visual matching, 84% on Google Robot variant aggregation, and 81% on WidowX visual matching. On Agilex real-robot tasks, H-VLA improves over the strongest baseline by 10, 47, and 16 percentage points under in-distribution, out-of-distribution position, and out-of-distribution scene/object settings, respectively.",
+  "title": "H-VLA: Hierarchical Vision-Language-Action Model with Key-Action Reasoning and Motion Planning in a Unified Action Space",
+  "identity_tokens": [
+    "arXiv:2609.22895"
+  ],
+  "linked_from": [
+    "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b7f9e3038b9",
+  "source_precheck_request_id": null
+}

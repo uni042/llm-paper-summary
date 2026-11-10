@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6014b6b5bca4569b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1708.00055",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1708.00055",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1708.00055",
+      "arXiv:1708.00055"
+    ],
+    "reason": "多言語・言語横断の意味的文章類似度を測る共有タスクと評価データの研究で、LLM推論効率化ではない。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+    ],
+    "title": "SemEval-2017 Task 1: Semantic Textual Similarity - Multilingual and Cross-lingual Focused Evaluation"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6014b6b5bca4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

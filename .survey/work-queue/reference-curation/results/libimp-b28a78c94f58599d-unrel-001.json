@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b28a78c94f58599d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.05532",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.05532",
+    "identity_tokens": [
+      "arXiv:2605.05532"
+    ],
+    "reason": "一次要旨での研究対象は法律契約書からの構造化情報抽出であり、ドメイン特化小型モデルOlava Extractと五つの汎用大規模モデルの抽出精度・幻覚・推論利用料金を比較する。推論料金の低さはモデル選択の評価結果であり、KVキャッシュ、GPUカーネル、バッチ処理、分散サービング等の実行機構を新規提案していない。法律文書処理の応用性能比較を主題とするため、LLM推論基盤の技術サーベイ対象外と判断する。",
+    "first_checked_at": "2026-10-12T19:45:24+00:00",
+    "last_checked_at": "2026-10-18T03:51:21+00:00",
+    "linked_from": [],
+    "title": "A Few Good Clauses: Comparing LLMs vs Domain-Trained Small Language Models on Structured Contract Extraction"
+  },
+  "processed_at": "2026-10-18T03:51:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b28a78c94f58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

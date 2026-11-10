@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-13adc6d8529f9609-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.19909",
+  "reason": "一次要旨を確認。Xronosは異種エッジCPU間の共同LLM微調整で、CPUの計算・通信競合と高速ノードの待機を軽減するため、計測に基づく異種性対応のテンソル分割を行う。比較対象に対し微調整時間を18〜56%短縮し、端末遊休時間を約5.9倍削減するという学習実験である。LLMの生成推論・サービング性能改善を評価する研究ではなく、学習単独最適化の凍結範囲に該当するため対象外。",
+  "title": "Xronos: Heterogeneity-Aware Tensor Parallelism for Collaborative LLM Fine-Tuning on Edge CPUs",
+  "identity_tokens": [
+    "arxiv:2609.19909",
+    "doi:10.48550/arxiv.2609.19909"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-13adc6d8529f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

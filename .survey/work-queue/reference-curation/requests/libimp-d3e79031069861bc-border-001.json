@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d3e79031069861bc-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.07264",
+  "reason": "出力は推論用の小さいdense transformerを意図するが、実証はLLM servingでなく小規模課題/文字LMで、実測はtraining time中心。LLM推論効率への外挿に根拠が不足するためborderlineへ回す。",
+  "title": "Dense Structural Compression of Transformers via Gauge-Correct Channel Removal",
+  "identity_tokens": [
+    "arXiv:2609.07264"
+  ],
+  "linked_from": [
+    "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d3e790310698",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "proposal_id": "lineage-proposal-ab5fefbbb545bbe591e7",
+  "source_submission": "work-queue/submissions/libimp-4c9e7c202244c80b-pre01-sub01.json",
+  "evaluated_at": "2026-10-23T19:36:48+00:00",
+  "slug_tail": "diffusion-decoding-efficiency",
+  "title": "Diffusion Language Model Decoding Efficiency",
+  "description": "離散・masked diffusion言語モデルの生成token commit順序・並列幅、denoising回数、単一request内のrefinement/advancement依存、候補軌道の分岐・剪定・計算配分を制御し、NFEやlatency/throughputと品質の関係を改善する研究をまとめる。",
+  "distinctness_reason": "The common optimization unit is the diffusion generation trajectory: choosing masked-token updates, denoising rounds, per-request generation/refinement lanes, or candidate trajectories and budgets. The reviewed papers report denoising/NFE, throughput, or quality-efficiency outcomes. This differs from ordinary autoregressive layer/token pruning, target-model-verified speculative decoding, KV storage/update, kernel generation, and cross-request serving.",
+  "boundary_rule": "Include inference-time methods whose primary mechanism schedules, selects, branches, prunes, or verifies denoising states or token commitments within a discrete/masked diffusion-LM request, with direct evidence on denoising rounds/NFE, latency/throughput, or quality-efficiency. Include per-request lane scheduling only when it changes diffusion refinement/advancement dependency. Exclude new model/backbone architecture or training-only gains; general conditional layer/token skipping independent of the diffusion denoising process; external target-model draft verification (05); primary KV/cache management (07); primary kernel/runtime work (09); cross-request admission/batching/resource scheduling (11); sparse query-key computation (13); and methods whose primary evidence shows quality gains without inference-efficiency evidence.",
+  "scope_includes": [
+    "masked位置のunmask/commit順序と同時更新幅の制御",
+    "denoising round/NFE予算の適応的配分",
+    "diffusion refinement/advancementを分離する単一request内の依存制御",
+    "denoising軌道の探索・remask・剪定による品質対計算量改善"
+  ],
+  "scope_excludes": [
+    "一般model/backbone設計、training-only、効率評価のない品質改善",
+    "通常の入力token/layer skipping04、外部target-modelによるdraft verification05",
+    "主貢献がKV/cache07またはkernel/runtime09の研究",
+    "cross-request admission/batching/resource scheduling11、sparse query-key13"
+  ],
+  "neighbor_lineages": [
+    "04-conditional-computation",
+    "05-speculative-decoding-moe",
+    "11-llm-serving-scheduling-disaggregation"
+  ],
+  "confidence": "high",
+  "supporting_papers": [
+    "arXiv:2609.16450",
+    "arXiv:2603.12996",
+    "arXiv:2606.08411",
+    "arXiv:2602.01842",
+    "arXiv:2512.16229",
+    "arXiv:2512.09106",
+    "arXiv:2512.02044",
+    "arXiv:2511.21103"
+  ],
+  "verified_supporting_papers": [
+    "arXiv:2609.16450",
+    "arXiv:2603.12996",
+    "arXiv:2606.08411",
+    "arXiv:2602.01842",
+    "arXiv:2512.16229",
+    "arXiv:2512.09106",
+    "arXiv:2512.02044",
+    "arXiv:2511.21103"
+  ],
+  "collected_supporting_papers": [
+    "arXiv:2609.16450",
+    "arXiv:2603.12996",
+    "arXiv:2606.08411",
+    "arXiv:2602.01842",
+    "arXiv:2512.16229",
+    "arXiv:2512.09106",
+    "arXiv:2512.02044",
+    "arXiv:2511.21103"
+  ],
+  "status": "promoted",
+  "lineage": "22-diffusion-decoding-efficiency",
+  "reasons": []
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4de102216525473a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.31938",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.31938",
+    "identity_tokens": [
+      "arXiv:2609.31938"
+    ],
+    "reason": "Conv3D lowering for visual world-model decoders; not LLM inference/serving.",
+    "first_checked_at": "2026-10-05T05:36:05+00:00",
+    "last_checked_at": "2026-10-05T05:36:05+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "Cache-Aware Conv3D Lowering Across Embedded World-Model Decoders"
+  },
+  "processed_at": "2026-10-05T05:36:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4de102216525",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

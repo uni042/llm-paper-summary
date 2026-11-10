@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d50d8a6487177451-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.inffus.2026.104690",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.inffus.2026.104690",
+    "identity_tokens": [
+      "DOI:10.1016/j.inffus.2026.104690"
+    ],
+    "reason": "一次要旨はpacketに含まれておらず、題名が示す対象（Rethinking Modality Fusion: CT-Assisted PET Network for Efficient 3D Tumor Segmentation）はLLM推論効率/圧縮の研究ではないため要旨段階で対象外と判定。",
+    "first_checked_at": "2026-10-05T09:23:50+00:00",
+    "last_checked_at": "2026-10-05T09:23:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "title": "Rethinking Modality Fusion: CT-Assisted PET Network for Efficient 3D Tumor Segmentation"
+  },
+  "processed_at": "2026-10-05T09:23:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d50d8a648717",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

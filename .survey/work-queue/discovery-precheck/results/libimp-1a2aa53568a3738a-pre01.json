@@ -1,0 +1,141 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1a2aa53568a3738a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1a2aa53568a3",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:1909.11556"
+  ],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4985f3b70f9cd1e6be53c98ae4bac85b5438fd89",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T21:53:39.578697+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:1909.11556",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Reducing Transformer Depth on Demand with Structured Dropout",
+      "source_url": "https://arxiv.org/abs/1909.11556",
+      "year": 2019,
+      "published": "2019-09-25",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 756,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Overparameterized transformer networks have obtained state of the art results in various natural language processing tasks, such as machine translation, language modeling, and question answering. These models contain hundreds of millions of parameters, necessitating a large amount of computation and making them prone to overfitting. In this work, we explore LayerDrop, a form of structured dropout, which has a regularization effect during training and allows for efficient pruning at inference time. In particular, we show that it is possible to select sub-networks of any depth from one large network without having to finetune them and with limited impact on performance. We demonstrate the effectiveness of our approach by improving the state of the art on machine translation, language modeling, summarization, question answering, and language understanding benchmarks. Moreover, we show that our approach leads to small BERT-like models of higher quality compared to training from scratch or using distillation.",
+      "identifiers": [
+        "SemanticScholar:f4a8480cffa491020bdbb8c4c4e7a7e923b1c2c1"
+      ],
+      "semantic_scholar_id": "f4a8480cffa491020bdbb8c4c4e7a7e923b1c2c1",
+      "canonical_id": "arXiv:1909.11556",
+      "arxiv_id": "1909.11556",
+      "authors": [
+        "Angela Fan",
+        "Edouard Grave",
+        "Armand Joulin"
+      ],
+      "priority": 766,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 756,
+        "citation_count": 756,
+        "total": 766,
+        "is_fresh": false,
+        "freshness_age_days": 2566,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:1909.11556",
+      "identity_tokens": [
+        "id:SemanticScholar:f4a8480cffa491020bdbb8c4c4e7a7e923b1c2c1",
+        "id:arXiv:1909.11556",
+        "title:reducing transformer depth on demand with structured dropout",
+        "url:https://arxiv.org/abs/1909.11556"
+      ],
+      "record": {
+        "title": "Reducing Transformer Depth on Demand with Structured Dropout",
+        "source_url": "https://arxiv.org/abs/1909.11556",
+        "year": 2019,
+        "published": "2019-09-25",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 756,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Overparameterized transformer networks have obtained state of the art results in various natural language processing tasks, such as machine translation, language modeling, and question answering. These models contain hundreds of millions of parameters, necessitating a large amount of computation and making them prone to overfitting. In this work, we explore LayerDrop, a form of structured dropout, which has a regularization effect during training and allows for efficient pruning at inference time. In particular, we show that it is possible to select sub-networks of any depth from one large network without having to finetune them and with limited impact on performance. We demonstrate the effectiveness of our approach by improving the state of the art on machine translation, language modeling, summarization, question answering, and language understanding benchmarks. Moreover, we show that our approach leads to small BERT-like models of higher quality compared to training from scratch or using distillation.",
+        "identifiers": [
+          "SemanticScholar:f4a8480cffa491020bdbb8c4c4e7a7e923b1c2c1"
+        ],
+        "semantic_scholar_id": "f4a8480cffa491020bdbb8c4c4e7a7e923b1c2c1",
+        "canonical_id": "arXiv:1909.11556",
+        "arxiv_id": "1909.11556",
+        "authors": [
+          "Angela Fan",
+          "Edouard Grave",
+          "Armand Joulin"
+        ],
+        "priority": 766,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 756,
+          "citation_count": 756,
+          "total": 766,
+          "is_fresh": false,
+          "freshness_age_days": 2566,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c08354c14ead13972fbc08c6a60c331fd34a7b4cb34ff15b29e8b15df50b01cc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

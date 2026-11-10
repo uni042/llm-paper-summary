@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ed365e9304e331a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3341301.3359658",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3341301.3359658",
+    "identity_tokens": [
+      "DOI:10.1145/3341301.3359658"
+    ],
+    "reason": "GPUクラスタ上のSLO対応DNN配信として基礎的価値はあるが、LLM以前の動画DNN配信が対象。",
+    "first_checked_at": "2026-09-27T12:02:15+09:00",
+    "last_checked_at": "2026-09-30T09:49:11+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Nexus: a GPU cluster engine for accelerating DNN-based video analysis"
+  },
+  "processed_at": "2026-09-30T09:49:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ed365e9304e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

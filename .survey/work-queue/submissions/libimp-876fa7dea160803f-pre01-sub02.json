@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Express Language Modeling",
+      "source_url": "https://arxiv.org/abs/2606.10944",
+      "year": 2026,
+      "published": "2026-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce a new tool, Express, for converting a non-causal attention approximation into a causal approximation with matching approximation guarantees. When combined with the state-of-the-art Thinformer approximation, Express improves upon the best known causal attention guarantees, delivering $\\log^{3/2}(n)/s$ approximation error with only $O(s)$ memory and $O(s^2 \\log^2(n))$ compression overhead for a sequence of length $n$. We pair these developments with an efficient I/O-aware Triton implementation, demonstrate substantial speedups over FlashAttention 2, and use Express to overcome four resource bottlenecks in the language modeling pipeline: long-context prefill, KV cache compression, long-form memory-constrained decoding, and long-form compute-constrained decoding.",
+      "identifiers": [
+        "SemanticScholar:6a4b42c1a75cef0f73536278dc064889848ae892"
+      ],
+      "semantic_scholar_id": "6a4b42c1a75cef0f73536278dc064889848ae892",
+      "canonical_id": "arXiv:2606.10944",
+      "arxiv_id": "2606.10944",
+      "doi": "10.48550/arXiv.2606.10944",
+      "authors": [
+        "Albert Gong",
+        "A. Carrell",
+        "Raaz Dwivedi",
+        "L. Mackey"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨は非因果注意の近似を保証付き因果近似へ変換するExpressを提案し、I/Oを考慮したTriton実装でFlashAttention-2比の速度改善、長文脈prefill、KV圧縮、メモリ制約decodeへの適用を報告。LLM推論計算・メモリ最適化に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Just Let Linear States Forget the Distant Past: Prefix Caching via Suffix Replay for Hybrid LLMs",
+      "source_url": "https://arxiv.org/abs/2609.33477",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid LLMs interleave full-attention layers with linear-attention layers to reduce long-context inference cost, but this structure complicates prefix caching. Full-attention KV caches are token-addressable, whereas linear-attention layers maintain recurrent states that cannot be rolled back to arbitrary prefix boundaries. Existing systems materialize recurrent-state checkpoints, restricting prefix reuse to checkpoint-aligned positions. We present SuffixReplay, the first prefix caching system that lets hybrid LLMs reuse cached prefixes at every cache-supported page boundary without materializing recurrent-state checkpoints. Our key insight is to just let linear states forget the distant past. Modern linear-attention mechanisms use recurrent decay and gating to attenuate the influence of old inputs. Therefore, instead of checkpointing every prefix boundary, SuffixReplay approximates the state at a matched boundary by replaying only a recent suffix of the layer's input hidden states, which we retain as anchors. At the algorithmic level, SuffixReplay combines layer-wise and token-wise anchor sparsity with a bounded replay budget to control storage, computation, and quality. At the system level, it uses an independently managed anchor sidecar and a pipelined replay path to overlap anchor movement and state reconstruction with the native serving pipeline. We evaluate SuffixReplay on three hybrid LLMs: OLMo-Hybrid-7B, Qwen3.5-4B, and Qwen3.6-27B-FP8. Across these models, SuffixReplay retains 91.4-100% of full-prefill quality on average across LongBench and RULER, while using only 0.36-0.51x the amortized per-token storage of SGLang's default 8192-token checkpoint cache. Integrated into SGLang, SuffixReplay reduces median TTFT by 15-70% on branching workloads, sustains 2.3-4.3x SGLang's throughput when the working set exceeds HBM, and matches SGLang on high-hit continuation traffic.",
+      "identifiers": [
+        "SemanticScholar:f6fbfd531227293a9febf58313526d8d1f6380b7"
+      ],
+      "semantic_scholar_id": "f6fbfd531227293a9febf58313526d8d1f6380b7",
+      "canonical_id": "arXiv:2609.33477",
+      "arxiv_id": "2609.33477",
+      "authors": [
+        "Yi-Rui Liu",
+        "Ruo-Ling Qi",
+        "Xuan'er Wu",
+        "Yu-Xin Jin",
+        "Jian Chen",
+        "Peng-Hang Liu",
+        "Ya-Fei Huang",
+        "Jia-Wei Shao",
+        "Xue-Long Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨はlinear attentionと全域注意を組み合わせたハイブリッドLLMで、再帰状態のcheckpoint整列制約を回避し、ページ境界ごとにprefixを再利用できるSuffixReplayを提案。prefixキャッシュ再利用とprefill削減に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Confidence-Modulated Speculative Decoding for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2508.15371",
+      "year": 2025,
+      "published": "2025-08-21",
+      "venue": "2025 IEEE 6th India Council International Subsections Conference (INDISCON)",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding has proven to be a powerful method for speeding up autoregressive inference by allowing tokens to be generated in parallel using a draft-then-verify approach. However, the current techniques tend to rely on fixed lengths for drafting and strict criteria for verification, which limits their flexibility when faced with different levels of model uncertainty or varying input complexities. In this paper, we propose a new framework for speculative decoding, built on the idea of adjusting drafting based on confidence levels. By using entropy and margin-based uncertainty measures derived from the drafter’s output distribution, the approach can dynamically change the number of tokens it generates at each step. This adaptability not only reduces the need for rollbacks but also makes better use of available resources, all while ensuring that the output remains accurate. The process for verifying these drafts is also adjusted based on confidence signals, which makes it easier to accept tokens without sacrificing the quality of the generation. When tested on machine translation and summarization tasks, this method delivers impressive speedups over standard speculative decoding and even improves BLEU and ROUGE scores. This approach provides a flexible, easy-toimplement solution for more efficient and reliable decoding in large language models, especially when faced with uncertain conditions.",
+      "identifiers": [
+        "SemanticScholar:4969326024776f4ad7d6788aff8b0306b242440f"
+      ],
+      "semantic_scholar_id": "4969326024776f4ad7d6788aff8b0306b242440f",
+      "canonical_id": "arXiv:2508.15371",
+      "arxiv_id": "2508.15371",
+      "doi": "10.1109/INDISCON66021.2025.11254640",
+      "authors": [
+        "Jaydip Sen",
+        "Subhasis Dasgupta",
+        "Hetvi Waghela"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 435,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨はドラフトモデルのエントロピーとマージンから不確実性を推定し、投機的生成長を反復ごとに動的調整することで巻戻し回数と資源浪費を減らす。LLMの投機的復号の実行効率が直接の対象。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-876fa7dea160",
+    "round": "libimp-876fa7dea160803f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-876fa7dea160803f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-876fa7dea160803f-pre01.json",
+    "receipt": "sha256:14510b6b993a7c9255aa93967d49c96f60e002bd65705a45e0f394ded7f69048"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-876fa7dea160",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

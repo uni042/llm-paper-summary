@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abe42debcf0089e6-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.08966",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.08966",
+    "identity_tokens": [
+      "arXiv:2605.08966"
+    ],
+    "reason": "arXiv一次要旨。各トークンに学習可能な分数階のべき乗保持カーネルを割り当て、Gauss–Laguerre求積による指数和近似でMarkov型再帰へ変換する。定数状態の系列演算・効率的検索という推論アーキテクチャ上の接点はあるが、評価はZipf検索とentity label-copyの合成課題で、生成LLMの実機復号・サービング性能は要旨で未確認のためborderline。",
+    "first_checked_at": "2026-10-30T15:55:56+00:00",
+    "last_checked_at": "2026-10-30T15:55:56+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "VORT: Adaptive Power-Law Memory for NLP Transformers"
+  },
+  "processed_at": "2026-10-30T15:55:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abe42debcf00",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

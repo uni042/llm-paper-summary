@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2637708f67afb67f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2204.03458",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2204.03458",
+    "identity_tokens": [
+      "arXiv:2204.03458"
+    ],
+    "reason": "時空間video diffusion modelと長時間・高解像度video生成用conditional samplingを提案する生成モデル研究で、LLM推論runtime/servingではない。",
+    "first_checked_at": "2026-10-04T21:37:52+00:00",
+    "last_checked_at": "2026-10-04T21:37:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+    ],
+    "title": "Video Diffusion Models"
+  },
+  "processed_at": "2026-10-04T21:37:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2637708f67af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

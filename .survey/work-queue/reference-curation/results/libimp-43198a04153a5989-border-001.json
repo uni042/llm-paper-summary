@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43198a04153a5989-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.10011",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.10011",
+    "identity_tokens": [
+      "arXiv:2601.10011"
+    ],
+    "reason": "著者要旨では、自然言語からSQLへの変換で実体別・階層別・原子的逐次の三種類の質問分解と、過去の誤り修正対を蓄積する動的記憶を使う。BIRDで実行正答率68.5%、既存のテスト時スケーリング方式より10倍超少ない資源を報告するが、最適化はNL2SQL専用の推論手順・自己修正であり、汎用LLMサービング基盤や復号実装の改善は直接評価していないため境界的。",
+    "first_checked_at": "2026-10-18T01:47:11+00:00",
+    "last_checked_at": "2026-10-18T01:47:11+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"
+  },
+  "processed_at": "2026-10-18T01:47:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43198a04153a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

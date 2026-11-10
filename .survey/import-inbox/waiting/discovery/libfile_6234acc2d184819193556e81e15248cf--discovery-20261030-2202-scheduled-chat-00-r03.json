@@ -1,0 +1,232 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2202-scheduled-chat-00/r03",
+  "reference_main_sha": "f62375f526e53e338a3ea74e689a900c4d224731",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.21834",
+      "identity_tokens": [
+        "arXiv:2609.21834"
+      ],
+      "title": "Beyond Shadow Weights: Quantization-Aware Training as Quantized-Endpoint Descent",
+      "reason": "QATの全精度shadow重みではなく離散量子化端点の更新則を解析し、量子化コードへ直接作用するQARでshadow重みを保持せず学習メモリを減らす。一次要旨のLLM実験は後学習の端点損失とメモリ費用を扱い、生成推論ランタイムの直接高速化は中心でないためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.21834",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:16:00+09:00",
+      "last_checked_at": "2026-10-30T22:16:30+09:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2203.11086-overcoming-oscillations-in-quantization-aware-training.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ],
+      "worklist_rank": 467,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.17739",
+      "identity_tokens": [
+        "arXiv:2508.17739"
+      ],
+      "title": "Speculative Safety-Aware Decoding",
+      "reason": "SSDは安全性を備えた小型モデルと元LLMの分布を組み合わせ、投機サンプリング中の両者の一致率で脱獄リスクを推定して安全優先と効用優先の復号方式を動的に切り替える。一次要旨は安全性と無害要求への有用性を維持しつつ投機復号で推論時間を短縮すると明示するため、推論デコード方式の直接的貢献。",
+      "source_url": "https://arxiv.org/abs/2508.17739",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:16:00+09:00",
+      "last_checked_at": "2026-10-30T22:16:30+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "worklist_rank": 468,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20193",
+      "identity_tokens": [
+        "arXiv:2605.20193"
+      ],
+      "title": "Improving Quantized Model Performance in Qualitative Analysis with Multi-Pass Prompt Verification",
+      "reason": "LLaMA-3.1-8Bの2～8ビット量子化を82件のインタビュー記録の質的分析で評価し、複数回のプロンプト検証で幻覚や主題抽出の誤りを減らす応用研究。一次要旨の主目的は分析結果の妥当性で、量子化方式・GPU実行・サービングの新規高速化は示さないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2605.20193",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:16:00+09:00",
+      "last_checked_at": "2026-10-30T22:16:30+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "worklist_rank": 470,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.35232",
+      "identity_tokens": [
+        "arXiv:2609.35232"
+      ],
+      "title": "Beyond Selection: Token Parameterization for Extreme Visual Token Compression",
+      "reason": "BracoはVLM視覚トークンの極端な圧縮に対し、変換基底の切捨て、座標埋込み、予算依存の直交再パラメータ化、空間残差トークンを組み合わせる。一次要旨では23～64倍の圧縮下で視覚接地を維持し、prefill FLOPs84.2～86.7%削減、E2E最大約36%高速化を報告。視覚トークンの推論圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.35232",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:16:00+09:00",
+      "last_checked_at": "2026-10-30T22:16:30+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+        "papers/inference/99-other-inference-systems/2025-2506.10967-beyond-attention-or-similarity-maximizing-conditional-diversity-for-toke.md"
+      ],
+      "worklist_rank": 471,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.20755",
+      "identity_tokens": [
+        "arXiv:2605.20755"
+      ],
+      "title": "DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action",
+      "reason": "DuplexSLAは160msの共通チャンク時間軸上で利用者音声、応答音声、行動テキストを同時復号し、会話を止めずにツール呼出しと割込み応答を行う。一次要旨の主評価は音声対話のターン制御と行動機能であり、推論カーネルやサービング資源の効率改善は主題でないためborderline。",
+      "source_url": "https://arxiv.org/abs/2605.20755",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:16:00+09:00",
+      "last_checked_at": "2026-10-30T22:16:30+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ],
+      "worklist_rank": 473,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2502.12202",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2502.12202",
+        "arXiv:2502.12202"
+      ],
+      "title": "To Think or Not to Think: Exploring the Unthinking Vulnerability in Large Reasoning Models",
+      "reason": "公式arXiv書誌ではworklistのBoT題名から改題されている。BoTは区切りトークンを悪用して思考を迂回する脆弱性を検証し、MoTは外部監視で冗長・危険な推論を動的終了する。一次要旨は主に安全性と推論の信頼性を論じ、MoTの効率化は関連するが生成速度のシステム評価が主題ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2502.12202",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:16:00+09:00",
+      "last_checked_at": "2026-10-30T22:16:30+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
+        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md"
+      ],
+      "worklist_rank": 474,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18061",
+      "identity_tokens": [
+        "arXiv:2507.18061"
+      ],
+      "title": "TELEVAL: A Benchmark Designed for Spoken Language Models in Chinese Interactive Scenarios",
+      "reason": "中国語音声対話で意味内容の充足と相互行為の適切さを測るTELEVALベンチマークを提案し、音響変動による応答の誤りやCaption Trapを分析する。一次要旨は対話品質評価が目的で、推論速度・メモリ・並列化・サービング技術の改善を示さないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2507.18061",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:16:00+09:00",
+      "last_checked_at": "2026-10-30T22:16:30+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md",
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ],
+      "worklist_rank": 475,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2603.22267",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2603.22267",
+        "arXiv:2603.22267"
+      ],
+      "title": "TiCo: Time-Controllable Spoken Dialogue Model",
+      "reason": "TiCoは音声生成中にSpoken Time Markersで経過秒数を推定し、指定された発話時間へ出力内容を調整する。一次要旨では時間指示の誤差を基盤モデル比2.7倍改善するが、狙いは発話長の制御と対話品質で、推論レイテンシ・GPU効率を短縮する方式ではないためborderline。公式題名はworklistのTraining表記と異なる。",
+      "source_url": "https://arxiv.org/abs/2603.22267",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:16:00+09:00",
+      "last_checked_at": "2026-10-30T22:16:30+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md",
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ],
+      "worklist_rank": 477,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.04118",
+      "identity_tokens": [
+        "arXiv:2607.04118"
+      ],
+      "title": "Parametric Memory Decoding for Zero-Shot Routing in LoRA-Based External Parametric Memory",
+      "reason": "PMDRouterはLoRA外部パラメトリック記憶を検索する際、別の学習済みルータを持たずに単一の基盤モデルprefillで得た活性応答の大きさから各LoRAを採点する。一次要旨では追加ルータの学習・配備・保守費用を避け、文書・分野・スキルのzero-shotルーティングを評価。推論時アダプタ選択と実行経路の直接的な効率化。",
+      "source_url": "https://arxiv.org/abs/2607.04118",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:16:00+09:00",
+      "last_checked_at": "2026-10-30T22:16:30+09:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md",
+        "papers/inference/99-other-inference-systems/2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md",
+        "papers/inference/99-other-inference-systems/2026-2603.00573-comol-efficient-mixture-of-lora-experts-via-dynamic-core-space-merging.md"
+      ],
+      "worklist_rank": 478,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26432",
+      "identity_tokens": [
+        "arXiv:2608.26432"
+      ],
+      "title": "SpeechGym: An Audio-Native Gym for Training Voice Agents via Reinforcement Learning",
+      "reason": "SpeechGymは音声エージェント同士が外部ASR/TTSなしで会話し、ツール呼出しの失敗を報酬へ反映する音声ネイティブRL訓練環境。一次要旨の中心は音声知覚の誤りと権限逸脱を学習で改善することで、生成推論のサービング速度・メモリ・実行時スケジューリングへの直接的寄与がないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2608.26432",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:16:00+09:00",
+      "last_checked_at": "2026-10-30T22:16:30+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md",
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ],
+      "worklist_rank": 479,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

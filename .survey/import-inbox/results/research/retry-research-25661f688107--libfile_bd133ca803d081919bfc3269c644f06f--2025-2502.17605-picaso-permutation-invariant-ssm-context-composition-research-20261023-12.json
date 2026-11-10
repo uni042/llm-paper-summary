@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "dcb03eb95f513c2226fa98bec379ee9fffa639c7853631aa01ab112484fc56f0",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-25661f688107--libfile_bd133ca803d081919bfc3269c644f06f--2025-2502.17605-picaso-permutation-invariant-ssm-context-composition-research-20261023-1234-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2502.17605",
+  "worker_completed_at": "2026-10-23T12:37:43+09:00",
+  "worker_run_key": "20261023-1234-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5517,
+    "body_paragraphs": 36,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 574,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-23T04:10:23+00:00"
+}

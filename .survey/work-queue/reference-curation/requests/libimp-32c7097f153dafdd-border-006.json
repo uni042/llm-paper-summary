@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-32c7097f153dafdd-border-006",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2608.09225",
+  "reason": "KVGov binds KV-cache keys to authenticated tenants to prevent prompt reconstruction through timing attacks; the paper reports HMAC salting reduces attack success to zero. Its primary objective is security, not inference efficiency. It nevertheless quantifies serving-path overhead (+1.3 microseconds per cache-key lookup) and lost cross-tenant prefix reuse, so it is closely related to KV-cache serving trade-offs but is only borderline for this inference-optimization collection.",
+  "title": "Governing the KV Cache: Preventing Timing Side-Channel Leakage in Multi-Tenant LLM Inference",
+  "identity_tokens": [
+    "arXiv:2608.09225"
+  ],
+  "linked_from": [
+    "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[2]"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-32c7097f153d",
+  "source_precheck_request_id": null
+}

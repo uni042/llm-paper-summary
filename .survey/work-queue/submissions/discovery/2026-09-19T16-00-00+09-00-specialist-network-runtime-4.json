@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.16100",
+      "title": "Every Microsecond Matters: Achieving Near Speed-of-Light Latency in GPU Collectives",
+      "source_url": "https://arxiv.org/abs/2607.16100",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2607.16100-every-microsecond-matters-near-speed-of-light-gpu-collectives.md",
+      "priority": 82,
+      "reason": "decode-heavy長文脈LLM推論でcritical pathとなるsmall GPU collectivesを対象に、barrier-free synchronization・symmetric memory・multicast等でscale-up collective latencyのhardware下限へ近づけるsystems研究。推論network/runtimeの重点隣接領域として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.07144",
+      "title": "Autopoiesis: A Self-Evolving System Paradigm for LLM Serving Under Runtime Dynamics",
+      "source_url": "https://arxiv.org/abs/2604.07144",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2604.07144-autopoiesis-self-evolving-llm-serving-runtime-dynamics.md",
+      "priority": 78,
+      "reason": "実行時変動に応じてserving policyを継続的に再合成・更新するonline adaptive serving system。多様なruntime dynamicsで既存serving system比最大53%、平均34%改善を報告し、固定schedulerとは異なるruntime policy adaptation系統を補完する。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-19T16:00:00+09:00",
+    "round": "specialist-network-runtime-4",
+    "axis": "network・GPU collective・disaggregated transport・runtime adaptation",
+    "query_summary": "network/RDMA/collectiveとdisaggregated serving transport、runtime autoscalingを横断。MFS、SmartGen、OpScale、SCIN等はcanonical identityで既知。一方2607.16100と2604.07144は対応月identity snapshotに存在せず、repo code searchでも一致なしのため候補化した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arXiv:2603.17456", "arXiv:2607.28150", "arXiv:2608.13499", "arXiv:2603.28239"],
+    "next_axis_hint": "次はscheduler/heterogeneous resource orchestrationとGPU kernel/runtime compilationへ移る",
+    "empty_round_reason": null,
+    "search_windows": [{"topic":"network-runtime-systems","source":"web-arxiv-search","date_range":"2026-01..2026-09","category":"network-runtime","citation_direction":"none","query_family":"rdma-collective-disaggregated-transport-autoscaling","raw_result_count":18,"unseen_result_count":2,"duplicate_filtered_count":4,"rejection_filtered_count":0,"candidate_evaluation_count":6,"candidate_accepted_count":2,"position":"web-search-multi-query-4"}]
+  }
+}

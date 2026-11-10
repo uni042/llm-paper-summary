@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-amend-65c28b59-02",
+  "kind": "research",
+  "attempt_id": "attempt-65c28b59ac08b3e1cf0adad9",
+  "job_id": "job-research-ca56f81ba7248b99",
+  "record_bank": "c",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.09823-amend-audited-margins-enable-nonblocking-drops-in-gpu-pim-llm-decoding.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:c4a1dde6f1302488defa205ae95a0d88212910b0a27de1fae64b2dd897e90603",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-c/metadata.json",
+      "blob_sha": "e14b95350e72bca0a7be712c191f77261ebc4202"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-c/problem_method.json",
+      "blob_sha": "8cdd0467aacb3881da2b0246473253fcff40cacf"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-c/evaluation.json",
+      "blob_sha": "03cc038bae245ba00af7613a79569115490df58c"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-c/results.json",
+      "blob_sha": "7fb682dff5d4d9ec6819ec9328aa2bbcb09ee20e"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-c/positioning.json",
+      "blob_sha": "fade6b44da690270d30bd7de5590c4e8badfddcb"
+    }
+  ],
+  "validation_errors": [
+    "ValueError: metadata.list_summary failed quality checks: 日本語比率 48.4% < 70.0%; 日本語化できる英語専門語が裸で残っている: attention"
+  ],
+  "checked_at": "2026-09-22T07:02:19+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

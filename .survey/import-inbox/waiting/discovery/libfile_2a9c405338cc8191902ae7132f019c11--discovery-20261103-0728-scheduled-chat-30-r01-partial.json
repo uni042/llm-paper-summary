@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261103-0728-scheduled-chat-30/r01",
+  "reference_main_sha": "c219c4d55b1146c5f1427732c5dd0ea556fa2da4",
+  "round_status": "partial",
+  "round_target": 10,
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.39711",
+      "identity_tokens": [
+        "arXiv:2610.39711"
+      ],
+      "title": "Sandman: Building and Operating Sandboxes for Agentic Reinforcement Learning on Shared Kubernetes",
+      "reason": "Amazonのagentic RL訓練・評価に必要なツール実行環境を、共有Kubernetes上のsandbox podとして大量生成・回収するサービス。一次要旨では11,858個の同時sandbox、2026年10月の4件のSWE-bench Verified訓練で310万個のsandbox生成を報告。agent実行インフラとしてシステム面の接点はあるが、主用途は学習用環境の運用であり、LLMの生成推論サービング・KVキャッシュ・GPU実行高速化の直接的な手法ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.39711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T07:31:55+09:00",
+      "last_checked_at": "2026-11-03T07:31:55+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_seen_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.38458",
+      "identity_tokens": [
+        "arXiv:2610.38458"
+      ],
+      "title": "Tracekit Box: Running AI Agents in Micro-VMs Where Every Way Out Is Decided and Signed",
+      "reason": "Firecracker micro-VM内のAI agentをネットワークカードなしで隔離し、ホストのvsockゲートウェイで外向き通信・秘密情報・モデルAPI呼出し・ワークスペース差分を承認・署名する実行基盤。一次要旨は13件のE2E検査と署名ログの検証を示す。LLM呼出しを含むagent実行の安全性には関係するが、推論モデルの計算・メモリ・サービング効率改善は評価対象でなく、推論システムサーベイとの関連は周辺的なためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.38458",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T07:31:55+09:00",
+      "last_checked_at": "2026-11-03T07:31:55+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.OS/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_seen_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.33380",
+      "identity_tokens": [
+        "arXiv:2610.33380"
+      ],
+      "title": "Operating System Support for Accelerators as First-Class Compute Elements in Heterogeneous Systems",
+      "reason": "FPGA上のMEERKATにより、Linuxがアクセラレータを周辺装置扱いする際の呼出し・割込み・通信・スケジューリングのオーバーヘッドを計測し、仮想メモリ対応通信、軽量起動、動的polling/interrupt切替、アクセラレータ対応schedulerを提案。一次要旨で通信最大260倍、wall-clock性能2〜6倍を報告。ただし評価は汎用異種SoCであり、LLM推論モデル・KVキャッシュ・GPUサービングへの適用は要旨から実証できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.33380",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T07:31:55+09:00",
+      "last_checked_at": "2026-11-03T07:31:55+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.OS/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_seen_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.38778",
+      "identity_tokens": [
+        "arXiv:2610.38778"
+      ],
+      "title": "Slant: Shaping Traffic for Resource-Efficient Microservices",
+      "reason": "マイクロサービスのルーティングを意図的に不均衡化し、hot/cold podの負荷信号を明瞭化して既存VPAのスケール制御を改善するSlantを提案。一次要旨では3種のmicroservice benchmarkでCPU割当最大26%減、P99遅延最大18%減と報告。リクエスト分配・自動スケールはLLMサービングにも隣接するが、LLM特有のprefill/decodeやGPU/KVメモリの実証がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.38778",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T07:31:55+09:00",
+      "last_checked_at": "2026-11-03T07:31:55+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_seen_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.42024",
+      "identity_tokens": [
+        "arXiv:2610.42024"
+      ],
+      "title": "Know When the Equation Is Wrong: Structural Uncertainty for LLM-Guided Symbolic Regression under Extrapolation",
+      "reason": "LLM支援の記号回帰で複数の候補方程式間の不一致を構造的不確実性として表現し、外挿時の予測区間のカバレッジを改善するLLM-SR-UQ。一次要旨の評価はLLM-SRBenchの記号回帰予測品質であり、LLM生成推論の高速化・メモリ管理・サービング実行に関する技術的貢献を示さないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.42024",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T07:31:55+09:00",
+      "last_checked_at": "2026-11-03T07:31:55+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_seen_screen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ae772ee77f9bc8fa-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.26718",
+  "reason": "LYRA modifies attention scoring to improve distant-evidence use under proximal-context interference and evaluates quality on long-context benchmarks. Appendix C states asymptotic prefill/decoding complexity and KV-cache size remain unchanged; analytical added FLOPs are below 0.04%, so this is a quality-alignment method with negligible overhead, not an inference-efficiency reduction.",
+  "title": "The Sirens'Song: When Proximal Background Context Overshadows Distant Evidence",
+  "identity_tokens": [
+    "arXiv:2609.26718"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+    "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+    "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+    "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+    "papers/inference/13-sparse-attention/2025-2512.16391-kascade-a-practical-sparse-attention-method-for-long-context-inference.md",
+    "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae772ee77f9b",
+  "source_precheck_request_id": null
+}

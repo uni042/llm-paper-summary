@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0dbd0b3119e6d743-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.29279",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.29279",
+    "identity_tokens": [
+      "arXiv:2606.29279"
+    ],
+    "reason": "agent/LLM memory consolidationが誤情報を確信へ変える現象を分析するmemory reliability研究で、推論system効率化を対象としない。",
+    "first_checked_at": "2026-10-04T18:58:57+00:00",
+    "last_checked_at": "2026-10-04T18:58:57+00:00",
+    "linked_from": [],
+    "title": "Manufactured Confidence: How Memory Consolidation Turns Hearsay into Confident Facts"
+  },
+  "processed_at": "2026-10-04T18:58:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0dbd0b3119e6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

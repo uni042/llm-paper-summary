@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-59cce5a87bcf7100-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.19209",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.19209",
+    "identity_tokens": [
+      "arXiv:2405.19209",
+      "id:arXiv:2405.19209",
+      "url:https://arxiv.org/abs/2405.19209"
+    ],
+    "reason": "一次要旨では、長時間動画から質問に関連するキーフレームを段階的に選び、複数粒度の木構造へ整理してLLMへ入力する。EgoSchemaとNExT-QAでは回答精度と推論時間の改善を報告するが、最終適用先は動画質問応答であり、汎用LLMの推論カーネル・KVキャッシュ・分散サービングを改善する機構は示していない。動画入力の削減という推論効率面には関連するため、完全な無関係ではなくborderlineとする。",
+    "first_checked_at": "2026-10-13T10:45:29+00:00",
+    "last_checked_at": "2026-10-13T10:45:29+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos"
+  },
+  "processed_at": "2026-10-13T10:45:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-59cce5a87bcf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

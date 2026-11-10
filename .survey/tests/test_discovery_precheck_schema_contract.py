@@ -1,0 +1,107 @@
+from __future__ import annotations
+
+import sys
+import unittest
+from pathlib import Path
+
+
+SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
+sys.path.insert(0, str(SCRIPTS))
+
+import process_discovery_precheck as precheck  # noqa: E402
+
+
+def request(schema_version: int) -> dict:
+    return {
+        "schema_version": schema_version,
+        "operation": "precheck_discovery_candidates",
+        "request_id": "schema-contract-test",
+        "collector_id": "schema-contract",
+        "run_key": "schema-contract-run",
+        "axis": "schema-contract",
+        "provider": "repository_references",
+        "source_url": "repository://structured-references",
+        "target_unseen": 20,
+    }
+
+
+class DiscoveryPrecheckSchemaContractTests(unittest.TestCase):
+    def test_schema_v3_is_the_only_executable_request_schema(self) -> None:
+        normalized = precheck._validate_request(request(3))
+        self.assertEqual(normalized["schema_version"], 3)
+        self.assertEqual(normalized["provider"], "repository_references")
+
+    def test_legacy_schema_v2_request_is_rejected_with_migration_guidance(self) -> None:
+        payload = request(2)
+        payload["records"] = []
+        payload["provider_has_more"] = False
+        with self.assertRaises(precheck.DiscoveryPrecheckRequestError) as ctx:
+            precheck._validate_request(payload)
+        self.assertIn("exactly 3", str(ctx.exception))
+        self.assertIn("legacy", str(ctx.exception).lower())
+
+    def test_unknown_future_schema_is_not_silently_treated_as_v3(self) -> None:
+        with self.assertRaises(precheck.DiscoveryPrecheckRequestError) as ctx:
+            precheck._validate_request(request(4))
+        self.assertIn("exactly 3", str(ctx.exception))
+
+    def test_fixed_candidate_id_request_is_normalized(self) -> None:
+        payload = request(3)
+        payload.update({
+            "provider": "candidate_id_lookup",
+            "source_url": "identifier://approved-public-apis",
+            "identifiers": ["arXiv:2407.21018", "DOI:10.48550/arxiv.2407.21018"],
+        })
+        normalized = precheck._validate_request(payload)
+        self.assertEqual(normalized["mode"], "explicit_identifiers")
+        self.assertEqual(normalized["identifiers"], payload["identifiers"])
+        self.assertEqual(normalized["target_unseen"], 2)
+
+    def test_candidate_id_request_accepts_reconsideration_subset_only(self) -> None:
+        payload = request(3)
+        payload.update({
+            "provider": "candidate_id_lookup",
+            "source_url": "identifier://approved-public-apis",
+            "identifiers": ["arXiv:2407.21018", "arXiv:2407.21019"],
+            "reconsider_identifiers": ["arXiv:2407.21018"],
+        })
+        normalized = precheck._validate_request(payload)
+        self.assertEqual(normalized["reconsider_identifiers"], ["arXiv:2407.21018"])
+
+        payload["reconsider_identifiers"] = ["arXiv:2407.21999"]
+        with self.assertRaises(precheck.DiscoveryPrecheckRequestError):
+            precheck._validate_request(payload)
+
+    def test_candidate_id_request_rejects_untrusted_records_metadata_and_source(self) -> None:
+        base = request(3)
+        base.update({
+            "provider": "candidate_id_lookup",
+            "source_url": "identifier://approved-public-apis",
+            "identifiers": ["arXiv:2407.21018"],
+        })
+        for extra in (
+            {"records": []},
+            {"title": "worker-supplied title"},
+            {"abstract": "worker-supplied abstract"},
+            {"source_url": "https://attacker.example/papers"},
+            {"provider": "custom_provider"},
+        ):
+            with self.subTest(extra=extra):
+                payload = {**base, **extra}
+                with self.assertRaises(precheck.DiscoveryPrecheckRequestError):
+                    precheck._validate_request(payload)
+
+    def test_candidate_id_request_rejects_invalid_or_oversized_identifier_lists(self) -> None:
+        base = request(3)
+        base.update({
+            "provider": "candidate_id_lookup",
+            "source_url": "identifier://approved-public-apis",
+        })
+        for identifiers in ([], ["https://arxiv.org/abs/2407.21018"], ["garbage:123"], ["arXiv:2407.21018"] * 101):
+            with self.subTest(count=len(identifiers)):
+                with self.assertRaises(precheck.DiscoveryPrecheckRequestError):
+                    precheck._validate_request({**base, "identifiers": identifiers})
+
+
+if __name__ == "__main__":
+    unittest.main()

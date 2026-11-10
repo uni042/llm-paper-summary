@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8d19d7733e763786-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.22255",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.22255",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.22255",
+      "SemanticScholar:6144636f97f4743f0741c2c85db1ae9234fbaaa8",
+      "arXiv:2512.22255"
+    ],
+    "reason": "Title frames reasoning-model distribution and correctness, a capability/quality question rather than system efficiency; title-only exclusion.",
+    "first_checked_at": "2026-10-13T06:32:28+00:00",
+    "last_checked_at": "2026-10-13T06:32:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+    ],
+    "title": "Shape of Thought: When Distribution Matters More than Correctness in Reasoning Tasks"
+  },
+  "processed_at": "2026-10-13T06:32:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8d19d7733e76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

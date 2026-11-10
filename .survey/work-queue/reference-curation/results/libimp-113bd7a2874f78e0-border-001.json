@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-113bd7a2874f78e0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.18712",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.18712",
+    "identity_tokens": [
+      "arXiv:2603.18712"
+    ],
+    "reason": "要旨はmulti-channel時系列予測向けsparse attentionで、attention系統との接点はあるもののLLM inferenceを評価していない。本文HTML取得失敗のため、実装上再利用できる推論効率手法の有無が未確定。",
+    "first_checked_at": "2026-10-06T21:00:51+00:00",
+    "last_checked_at": "2026-10-06T21:00:51+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accurate and Efficient Multi-Channel Time Series Forecasting via Sparse Attention Mechanism"
+  },
+  "processed_at": "2026-10-06T21:00:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-113bd7a2874f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

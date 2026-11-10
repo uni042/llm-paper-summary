@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc5eb61cbaf034f0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.28405",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.28405",
+    "identity_tokens": [
+      "arXiv:2606.28405"
+    ],
+    "reason": "Key-correlated layer attention to improve model interactions, no LLM efficiency/runtime evidence.",
+    "first_checked_at": "2026-10-05T11:46:58+00:00",
+    "last_checked_at": "2026-10-05T11:46:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+    ],
+    "title": "Enhancing Layer Interaction Using Key-Correlated Layer Attention"
+  },
+  "processed_at": "2026-10-05T11:46:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc5eb61cbaf0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

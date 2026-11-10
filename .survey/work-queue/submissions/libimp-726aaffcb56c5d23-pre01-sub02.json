@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Streamline Without Sacrifice - Squeeze out Computation Redundancy in LMM",
+      "source_url": "https://arxiv.org/abs/2505.15816",
+      "year": 2025,
+      "published": "2025-05-21",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large multimodal models excel in multimodal tasks but face significant computational challenges due to excessive computation on visual tokens. Unlike token reduction methods that focus on token-level redundancy, we identify and study the computation-level redundancy on vision tokens to ensure no information loss. Our key insight is that vision tokens from the pretrained vision encoder do not necessarily require all the heavy operations (e.g., self-attention, FFNs) in decoder-only LMMs and could be processed more lightly with proper designs. We designed a series of experiments to discover and progressively squeeze out the vision-related computation redundancy. Based on our findings, we propose ProxyV, a novel approach that utilizes proxy vision tokens to alleviate the computational burden on original vision tokens. ProxyV enhances efficiency without compromising performance and can even yield notable performance gains in scenarios with more moderate efficiency improvements. Furthermore, the flexibility of ProxyV is demonstrated through its combination with token reduction methods to boost efficiency further. The code will be made public at this https://github.com/penghao-wu/ProxyV URL.",
+      "identifiers": [
+        "SemanticScholar:33b802ec36e29a6d211d33c39b5f93548475bb6b"
+      ],
+      "semantic_scholar_id": "33b802ec36e29a6d211d33c39b5f93548475bb6b",
+      "canonical_id": "arXiv:2505.15816",
+      "arxiv_id": "2505.15816",
+      "doi": "10.48550/arXiv.2505.15816",
+      "authors": [
+        "Peng-Hao Wu",
+        "Le-Wei Lu",
+        "Zi-Wei Liu"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 527,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "arXiv一次要旨は視覚トークン自体を削除せず、デコーダ内で視覚トークンに対するself-attentionやFFNの不要計算を減らすProxyVを提案。LMM推論の視覚関連演算の冗長性削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MOSAIC: Adaptive Inter-layer Composition for Efficient Heterogeneous Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2607.09029",
+      "year": 2026,
+      "published": "2026-07-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have achieved success using homogeneous Transformers to process multimedia data. Recent studies show that heterogeneous structures interleaving efficient mechanisms, like linear attention, improve both performance and inference latency over homogeneous designs. However, these efforts rely on handcrafted static mixing patterns, which are sub-optimal and difficult to adapt to specific hardware. To bridge this gap, we propose Multi-Objective Search for Adaptive Inter-layer Composition (MOSAIC), a hardware-aware search method that automatically transforms homogeneous models into optimized heterogeneous architectures. MOSAIC integrates diverse efficiency mechanisms--including linear, sparse, and low-rank operators--into a unified search space. By formulating the selection as a multi-objective Mixed Integer Programming (MIP) problem, our method identifies optimal configurations that maximize downstream performance under strict hardware latency constraints. To mitigate performance degradation from structural transitions, we introduce a two-stage parameter recovery process: global off-policy distillation to stabilize internal representations, followed by a dual-teacher on-policy distillation leveraging a 235B oracle for knowledge expansion and the original 4B teacher for distributional stability. We validate MOSAIC through MOSAIC-4B, derived from Qwen3-VL-4B-Instruct. Results demonstrate that MOSAIC-4B matches the baseline's performance across multiple benchmarks while requiring less than 2% of the original training cost. Furthermore, it substantially improves inference efficiency, achieving 1.76x prefilling and 2.54x decoding speedups.",
+      "identifiers": [
+        "SemanticScholar:b89f557ced301b77e446777ff0a09c20793c2159"
+      ],
+      "semantic_scholar_id": "b89f557ced301b77e446777ff0a09c20793c2159",
+      "canonical_id": "arXiv:2607.09029",
+      "arxiv_id": "2607.09029",
+      "doi": "10.48550/arXiv.2607.09029",
+      "authors": [
+        "Yun-Cheng Yang",
+        "Feiyang Ye",
+        "Shixian Luo",
+        "Yinna Zhu",
+        "Lianlei Shan",
+        "Wangcai Zhao",
+        "Kuo Zhang",
+        "Yan Chen",
+        "Yong Wu",
+        "Yan Xie"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 112,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨はVLMの層構成を固定の同質Transformerから、線形注意などを含む異種機構のハードウェア依存最適配置へ変換するMOSAICを提案。推論遅延・計算資源と品質を多目的に最適化するため直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RelaxKV: Recomputation Guided by the Query with Sparse Context Attention for Efficient KV Cache Reuse",
+      "source_url": "https://arxiv.org/abs/2609.33503",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cross-request KV caching reduces the prefill cost of Retrieval-Augmented Generation (RAG), but conventional prefix caching severely limits cache reuse across requests. Position-Independent Caching (PIC) removes this constraint by reusing independent chunks, but their KV states miss cross-chunk interactions. Existing methods selectively recompute token states to recover these missing interactions, but primarily allocate the recomputation budget to selecting which states to recompute, while fixing the recomputation context to the full causal prefix. We introduce RelaxKV, which formulates selective cache repair as a joint allocation problem over repair targets and recomputation context. Guided by the user query, RelaxKV identifies layer-specific repair targets and restricts their recomputation to a query-relevant context, reducing attention computation. Across four decoder models, RelaxKV at a 15% anchor ratio improves aggregate LongBench performance over ProphetKV on all models. On Qwen3-14B, RelaxKV provides a stronger quality-TTFT trade-off than ProphetKV across a 5%-30% anchor-ratio sweep, and achieves the best selective results on RULER-MV and LV-Eval at 16K and 32K context lengths. Controlled ablations further demonstrate the importance of recomputation context selection.",
+      "identifiers": [
+        "SemanticScholar:6a9f70dc86220d287b1b6298b1af8f0428695604"
+      ],
+      "semantic_scholar_id": "6a9f70dc86220d287b1b6298b1af8f0428695604",
+      "canonical_id": "arXiv:2609.33503",
+      "arxiv_id": "2609.33503",
+      "authors": [
+        "Ruo-Ling Qi",
+        "Yi-Rui Liu",
+        "Xuan'er Wu",
+        "Yu-Xin Jin",
+        "Jian Chen",
+        "Jia-Yu Qin",
+        "Yin Chen",
+        "Jia-Wei Shao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はRAGで独立チャンクKVを再利用した際に欠けるチャンク間相互作用を、修復対象と再計算文脈の双方を質問に応じて選ぶRelaxKVで補う。再計算量とKV再利用を最適化するLLMサービング研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DecoMoE: Decoupling Visual Propagation and Expert Computation for Efficient Multimodal MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.38823",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal mixture-of-experts (MoE) models combine sparse expert activation with visual-language capabilities, yet their inference remains costly because long visual-token sequences repeatedly incur attention, routing, dispatch, and expert-MLP computation. Existing methods typically compress either the token or expert dimension, leaving redundancy along the other. Our analysis reveals two complementary regularities: the depth required for visual propagation varies across inputs, while text-token routing exhibits concentrated and recurrent expert-importance patterns. Based on these observations, we propose DecoMoE, a two-dimensional structured compression framework that decouples visual propagation from expert computation. The Sample-Adaptive Visual Boundary (SAVB) predicts an input-dependent visual-exit layer at which the visual-token block is removed. The Routing-Calibrated Expert Prefix (RCEP) reorders experts offline using text-token routed mass and, from this predicted exit layer onward, retains at each MoE layer the shortest contiguous prefix covering a target routed-mass fraction. We evaluate DecoMoE on Qwen3-VL-MoE and InternVL3.5-30B-A3B across six benchmarks. On Qwen3-VL-MoE, DecoMoE retains 97.91% of dense-baseline performance while reducing computation from 27.06 to 16.73 TFLOPs and latency from 0.44 to 0.26 seconds, yielding a 1.69x speedup. Code will be available at https://github.com/ShawnTan86/DecoMoE.",
+      "identifiers": [
+        "SemanticScholar:fddce2f1e2b0fed60fd726b384a7d4ed576269ce"
+      ],
+      "semantic_scholar_id": "fddce2f1e2b0fed60fd726b384a7d4ed576269ce",
+      "canonical_id": "arXiv:2609.38823",
+      "arxiv_id": "2609.38823",
+      "authors": [
+        "Xu-Dong Tan",
+        "Peng Ye",
+        "Ming Xie",
+        "Chen-Yu Huang",
+        "Yao-Xin Yang",
+        "Jiayuan Fan",
+        "Tao Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨はマルチモーダルMoEで視覚トークンの伝播深度とテキスト側エキスパート選択の冗長性を分離し、二次元の構造化圧縮を行うDecoMoEを提案。視覚トークンとMoE専門家の計算削減を直接扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-726aaffcb56c",
+    "round": "libimp-726aaffcb56c5d23-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-726aaffcb56c5d23-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-726aaffcb56c5d23-pre01.json",
+    "receipt": "sha256:5916c77c1e9511240ef0d878db519c5ee4ebbb90b68156ac93366760f270f4f1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-726aaffcb56c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-72edec5741bde341-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.16267",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.16267",
+    "identity_tokens": [
+      "arXiv:2410.16267"
+    ],
+    "reason": "Video token reduction is a plausible inference-efficiency mechanism, but the measured evidence is specialized to video VLMs and does not establish runtime benefit.",
+    "first_checked_at": "2026-10-05T14:21:51+00:00",
+    "last_checked_at": "2026-10-05T14:21:51+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md"
+    ],
+    "title": "xGen-MM-Vid (BLIP-3-Video): You Only Need 32 Tokens to Represent a Video Even in VLMs"
+  },
+  "processed_at": "2026-10-05T14:21:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-72edec5741bd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87499146dc19baba-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.16883",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.16883",
+    "identity_tokens": [
+      "arXiv:2405.16883"
+    ],
+    "reason": "PyTorch互換の疎テンソル演算コード生成・融合による汎用疎深層学習基盤。本文§5.3はBigBirdをIMDB/AG News/Yahoo Answersの分類で評価し、対PyTorchで平均1.24/1.14/1.05倍の推論高速化を示す。しかし主要評価はGCN・疎オートエンコーダ・SuiteSparse行列であり、自己回帰生成LLMのKV管理・decodeサービングは測定していない。汎用カーネルのシステム貢献はあるが現行サーベイのLLM推論への直接性は境界的。",
+    "first_checked_at": "2026-10-29T19:56:27+00:00",
+    "last_checked_at": "2026-10-29T19:56:27+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Scorch: A Library for Sparse Deep Learning"
+  },
+  "processed_at": "2026-10-29T19:56:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87499146dc19",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

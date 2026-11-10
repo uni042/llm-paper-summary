@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a74eaebf6f6ff42c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.20732",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.20732",
+    "identity_tokens": [
+      "arXiv:2608.20732"
+    ],
+    "reason": "LLM API resellers have become an important access layer to modern LLM services. However, multi-level resale creates an opaque supply chain: a user's request may traverse undisclosed upstream resellers, each of which can inspect or modify prompts and responses, inducing ecosystem-level confidentiality and integrity risks. Existing studies audit individual resellers, but provide little visibility into hidden dependencies across resellers. We present CacheTracer, the first API-only measurement of such hidden dependencies. Our key insight is to exploit prefix-cache reuse as a side channel to measure dependency via cache-reach relations. CacheTracer operationalizes this insight with two primitives: Flood populates fresh cache state through one endpoint, and Prove probes whether another can reuse it while excluding probe-created hits. We then conduct a real-world measurement study with CacheTracer on 39 reseller endpoints, sending 1.1 million API requests across 636 endpoint pairs. Our measurements reveal a deep, concentrated cache-reach structure: 37.1% of measured pairs exhibit shared cache reach, the containment order spans seven layers, and one cache reach is contained within at least 31 of other nodes. We further find that the recovered structure is model-specific. We also evaluate the validity of CacheTracer through both real-world consistency checks and controlled experiments. The results show its high reliability and accuracy. These findings reveal substantial hidden dependencies among seemingly independent API resellers. Such deep and concentrated dependencies can create a large potential blast radius, where a confidentiality or integrity failure along a common upstream path may affect users across multiple downstream resellers.",
+    "first_checked_at": "2026-10-05T08:16:11+00:00",
+    "last_checked_at": "2026-10-05T08:16:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "Uncovering and Understanding Hidden Dependencies in the LLM API Reseller Ecosystem via Prefix-Cache Side Channels"
+  },
+  "processed_at": "2026-10-05T08:16:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a74eaebf6f6f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

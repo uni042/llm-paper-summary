@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-be6c64c4942c2d79-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3849380",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3849380",
+    "identity_tokens": [
+      "DOI:10.1145/3849380"
+    ],
+    "reason": "Sequential recommender systems predominantly focus on time-domain modeling, overlooking rich seasonal and periodic structures revealed in the frequency domain. While recent frequency-aware methods leverage Fourier transforms, their reliance on fixed filters introduces two critical limitations: i) inadequate sequence encoding due to indiscriminate spectral suppression, causing information degradation, and ii) semantic-degrading contrastive augmentations that compromise critical frequency components essential for behavioral semantics. To address these challenges, we propose FAESRec, a Frequency-Adaptive Encoder with three synergistic innovations: First, a Frequency-Adaptive Mixture-of-Experts (FAMoE) layer decomposes sequences into non-overlapping spectral bands with end-to-end learned boundaries, enabling dynamic weighting of heterogeneous frequency drivers. Second, a Filter-Enhanced module (FAFe) employs learnable global/local filters with adaptive thresholds to denoise spectral components while preserving energy-concentrated bands. The filtered spectral features are projected back to the time domain and encoded by a Mamba block. Third, a Frequency Semantic-aware Contrastive Learner (FSaCL) synthesizes semantically coherent views through probabilistic frequency masking, theoretically guaranteeing mutual information conservation between original and augmented sequences. Extensive experiments on six benchmarks from Amazon, Movielens and LastFM, demonstrate FAESRec's consistent superiority over thirteen SOTA baselines. It achieves significant improvements of 2.74–67.69% HR@1 and 3.95–20.38% NDCG@5, particularly under extreme sparsity. Theoretical analysis proves FSaCL preserves minimal sufficient semantics, establishing a new paradigm for frequency-aware sequential recommendation. Code is available at: https://github.com/0-1user/FAESRec.",
+    "first_checked_at": "2026-10-05T05:56:36+00:00",
+    "last_checked_at": "2026-10-05T05:56:36+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "FAESRec: Frequency Adaptive Encoder for Sequential Recommendation"
+  },
+  "processed_at": "2026-10-05T05:56:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be6c64c4942c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

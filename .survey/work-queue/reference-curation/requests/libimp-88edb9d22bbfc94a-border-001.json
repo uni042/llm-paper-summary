@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-88edb9d22bbfc94a-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2504.14872",
+  "reason": "LLMOrchはLLMが生成した外部ツール呼び出しをdef-use依存関係、相互排他関係、利用可能なプロセッサの負荷からスケジューリングする。原著の改善対象はI/O・計算集約型の関数実行待ち時間であり、LLM自身のprefill/decode、KVキャッシュ、量子化、MoE、モデルサービングの内部効率ではない。エージェントのエンドツーエンド遅延には関係するが、現行推論基盤サーベイの中心対象からは外れるためborderline。",
+  "title": "Efficient Function Orchestration for Large Language Models",
+  "identity_tokens": [
+    "arxiv:2504.14872",
+    "2504.14872"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-88edb9d22bbf",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

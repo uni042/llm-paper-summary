@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ac0c8ca71258906-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.18568",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.18568",
+    "identity_tokens": [
+      "arXiv:2602.18568"
+    ],
+    "reason": "RPU describes a decode-oriented memory-bandwidth architecture for reasoning inference, but the primary text is explicitly marked “Confidential Draft / Do NOT Distribute”; its publication and reproducibility status need resolution before advancing.",
+    "first_checked_at": "2026-10-06T04:29:56+00:00",
+    "last_checked_at": "2026-10-06T04:29:56+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2604.16007-memexplorer-navigating-the-heterogeneous-memory-design-space-for-agentic-inference-npus.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "RPU – A Reasoning Processing Unit"
+  },
+  "processed_at": "2026-10-06T04:29:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ac0c8ca7125",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

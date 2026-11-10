@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2793dbcac51605b5-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.22503",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.22503",
+    "identity_tokens": [
+      "arXiv:2608.22503"
+    ],
+    "reason": "The LLM use case and collective synchronization analysis are framed around distributed LLM training iterations (including tensor parallelism and FSDP); its final objective is training/collective-system characterization rather than reducing inference work.",
+    "first_checked_at": "2026-10-03T16:01:59+00:00",
+    "last_checked_at": "2026-10-03T16:01:59+00:00",
+    "linked_from": [
+      "workers/discovery-02/ready/20260927-u-discovery-02/manifest.json#candidate[2]"
+    ],
+    "title": "Understanding the Synchronization Tax in GPU Scale-Up Domains"
+  },
+  "processed_at": "2026-10-03T16:01:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2793dbcac516",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0855-scheduled-chat-00/r06",
+  "reference_main_sha": "2e6165d8492a62e3317901512a9adc0d8e0c4cac",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02800",
+      "identity_tokens": [
+        "id:arXiv:2610.02800",
+        "id:DOI:10.48550/arXiv.2610.02800"
+      ],
+      "title": "BitNest: Bit-Nested Speculative Decoding for Memory-Efficient LLM Inference Acceleration",
+      "reason": "別個のdraft重みを必要としない自己投機復号。低精度baseを先に作り、残差補正で高精度targetを復元するbit-nested表現を用いて両者が1つの物理重み格納を共有する。KVにも漸進精度を拡張し、著者要旨は7B～8Bの複数モデルで平均受理率95.2%、FP16通常AR比end-to-end 1.48～1.61倍と報告。ローカル推論のメモリ・投機復号共同最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.02800",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:05:49+09:00",
+      "last_checked_at": "2026-11-02T09:05:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.12570",
+      "identity_tokens": [
+        "id:arXiv:2610.12570",
+        "id:DOI:10.48550/arXiv.2610.12570"
+      ],
+      "title": "Contextual Correction of Parallel Drafts for Speculative Decoding",
+      "reason": "拡散型の並列draftではブロック内で先行tokenの実際の選択を参照できない問題に対し、複数候補を保持して隣接位置間の文脈整合性を並列評価するDCOCOを提案する。著者要旨は4種のverifierと10ベンチマークで評価した全構成で最高平均throughput、通常decode比最大6.6倍、4～32同時要求で最強比較方式比6～23%優位と報告。投機復号の候補修正と実行効率に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.12570",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:05:49+09:00",
+      "last_checked_at": "2026-11-02T09:05:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07780",
+      "identity_tokens": [
+        "id:arXiv:2610.07780",
+        "id:DOI:10.48550/arXiv.2610.07780"
+      ],
+      "title": "APEX: Speculate smarter, not deeper",
+      "reason": "投機復号のdraft方式とdraft長を固定せず、requestごとにEAGLE-3、n-gram、独立draftモデルを選び、検証blockごとに受理履歴・推論費用を使ってdepthを調整する。受理長を打ち切り観測として学習し、位置別棄却hazardと無駄token費用を推定する。vLLM/Qwen3-8Bで著者要旨は通常AR比最大5.24倍、集計APEX-S 4.27倍、APEX-B 3.27倍と報告。runtimeの動的投機制御としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.07780",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:05:49+09:00",
+      "last_checked_at": "2026-11-02T09:05:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.35957",
+      "identity_tokens": [
+        "id:arXiv:2610.35957",
+        "id:DOI:10.48550/arXiv.2610.35957"
+      ],
+      "title": "Distributed LLM Inference via Communication-Efficient Speculative Decoding",
+      "reason": "端末/サーバ協調投機復号では正確な棄却サンプリングのため語彙全体の確率分布を転送する通信が重い。DISCOはサーバ側にもdraft小型モデルの複製を置いてdraft分布を再現し、端末との通信をdraft token indexとスカラー確率に限定してtarget分布を厳密保持する。著者要旨は複数データセットで従来分散投機復号より高速、特に低帯域で有利と報告。端末/クラウド推論の通信最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.35957",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:05:49+09:00",
+      "last_checked_at": "2026-11-02T09:05:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.23939",
+      "identity_tokens": [
+        "id:arXiv:2610.23939",
+        "id:DOI:10.48550/arXiv.2610.23939"
+      ],
+      "title": "PeekKV: The First Content Token Already Knows Which Heads Matter",
+      "reason": "KV圧縮の重要attention headがprefillとdecodeで変化する点に着目し、prefill直後の最初の内容tokenだけを観測してhead-groupとtokenの重要度を推定する。head-groupに比例したKV予算を配分し各群内で高重要tokenを保持するため、offline profilingや再学習が不要。著者要旨はLlama3.1-8BのRULER 16Kで10%メモリ予算でもfull-cache精度95.7%、LongBenchの1.5%予算で95.9%保持と報告。長文脈KV圧縮としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.23939",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:05:49+09:00",
+      "last_checked_at": "2026-11-02T09:05:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.10845",
+      "identity_tokens": [
+        "id:arXiv:2610.10845",
+        "id:DOI:10.48550/arXiv.2610.10845"
+      ],
+      "title": "Real Long-Term Memory for AI: A 50-Million-Token Window That Is Faster and Cheaper Than Recompute",
+      "reason": "vLLMのKV状態を約16K token block単位で暗号化NVMeへ保存し、再利用時にbit-exactで復元するgalahad-kvを50M tokenの公開テキストで検証する。著者要旨はH100/Gemma4 12B・31Bで100/100のblock復元、再計算比2.8～4.3倍高速、GPU energy8.8～12.3倍削減と報告。ただし50M tokenの一括attention窓を実現する方式ではなく、blockを順次復元する持続KVストアである。推論状態のSSD再利用技術としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.10845",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:05:49+09:00",
+      "last_checked_at": "2026-11-02T09:05:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.33404",
+      "identity_tokens": [
+        "id:arXiv:2610.33404",
+        "id:DOI:10.48550/arXiv.2610.33404"
+      ],
+      "title": "COPE: Composable Performance Emulation for Mixture-of-Experts Offloading Policies",
+      "reason": "MoE expert offload方針の優劣がモデル疎性、CPU/GPU性能、VRAM、PCIe帯域で入れ替わるため、実装前に方針を選ぶCOPEを提案する。expert residencyと実行戦略の2軸Policy Matrixと、実機profileとrouting traceから性能を見積もるVirtual Heterogeneous Machineを組み合わせる。著者要旨は最速方針選択精度24～100%改善、性能予測誤差1.7～6.8倍低減、個別実装工数最大74%削減と報告。MoE offloadシステムの性能予測と方針選択としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.33404",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:05:49+09:00",
+      "last_checked_at": "2026-11-02T09:05:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.05123",
+      "identity_tokens": [
+        "id:arXiv:2610.05123",
+        "id:DOI:10.48550/arXiv.2610.05123"
+      ],
+      "title": "HiNa-MoE: High-Performance, Non-Intrusive MoE Inference on CPUs with Matrix Engines",
+      "reason": "CPU上のMoE expert FFNをIntel AMXで高速化するが、frameworkの重みlayoutやNUMA allocatorに侵襲的変更を要求しない演算ライブラリ。gather/store内で軽量layout変換を融合し、page interleave前提のNUMAタスク分割とdecodeの小行列化でAMXを利用する。著者要旨は既存方式比FFN kernel最大3.37倍、end-to-end推論最大2.09倍を報告。CPUオフロード時のMoE推論演算最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.05123",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:05:49+09:00",
+      "last_checked_at": "2026-11-02T09:05:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.29489",
+      "identity_tokens": [
+        "id:arXiv:2610.29489",
+        "id:DOI:10.48550/arXiv.2610.29489"
+      ],
+      "title": "Reorienting the Vector Axis: Restructuring FlashAttention for Long-Vector Processors",
+      "reason": "長ベクトルRISC-V CPUでは従来CPU FlashAttentionのhead次元方向vector化が64要素しか使わず、softmax reductionと係数spillで性能を失う。score tileとrunning outputを転置してquery方向にvector化し、exp多項式係数をscalar registerへ移す。著者要旨は2KB vector registerの実シリコンでkernel cycle1.84～2.08倍短縮、peak利用率16.2→29.7%と報告。GPU以外のattention推論kernel最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.29489",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:05:49+09:00",
+      "last_checked_at": "2026-11-02T09:05:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.21165",
+      "identity_tokens": [
+        "id:arXiv:2610.21165",
+        "id:DOI:10.48550/arXiv.2610.21165"
+      ],
+      "title": "From Long Context to Selective Memory:A Survey of Memory-Centric Compression for Large Language Models",
+      "reason": "長文脈LLMのprompt圧縮、KV offload、persistent prefix、RAG、agent memoryを計算に参加するactive memoryと参加しないinactive memoryの状態遷移として統一し、書込・回収・忘却などの費用モデルを整理する総説。KV/SSD階層の研究体系には関連するが、新規サービングruntimeやkernelの具体的実装・定量高速化を提案する論文ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.21165",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:05:49+09:00",
+      "last_checked_at": "2026-11-02T09:05:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

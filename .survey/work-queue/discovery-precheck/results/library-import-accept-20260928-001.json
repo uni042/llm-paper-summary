@@ -1,0 +1,1504 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "library-import-accept-20260928-001",
+  "collector_id": "survey-github-import",
+  "run_key": "library-import-20260928",
+  "axis": "explicit-library-accept",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2510.14973",
+    "arXiv:2510.01336",
+    "arXiv:2509.24381",
+    "arXiv:2508.19373",
+    "arXiv:2507.11417",
+    "arXiv:2506.07530",
+    "arXiv:2505.20225",
+    "arXiv:2505.13326",
+    "arXiv:2505.07858",
+    "arXiv:2504.12397",
+    "arXiv:2504.08378",
+    "arXiv:2503.07605",
+    "arXiv:2503.00634",
+    "arXiv:2501.09410",
+    "arXiv:2412.15605",
+    "arXiv:2412.04504",
+    "arXiv:2411.18462",
+    "arXiv:2411.09688",
+    "arXiv:2410.18311",
+    "arXiv:2410.14731",
+    "arXiv:2410.09426",
+    "arXiv:2409.19256",
+    "arXiv:2409.15790",
+    "arXiv:2408.05646",
+    "arXiv:2407.05467"
+  ],
+  "target_unseen": 25,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9a7af6cc101ab1bcecf5b2d7a8c6791b0a25113b",
+  "raw_search_result_count": 25,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 24,
+  "provider_progress": {
+    "requested_count": 25,
+    "status_counts": {
+      "allowed": 24,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-09-27T21:34:06.089041+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2510.14973",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.01336",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.24381",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.19373",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.11417",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.07530",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.20225",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.13326",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.07858",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.12397",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.08378",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.07605",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.00634",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.09410",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.15605",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.04504",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.18462",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.09688",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.18311",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.14731",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.09426",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2409.19256",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3689031.3696075"
+    },
+    {
+      "requested_id": "arXiv:2409.15790",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.05646",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.05467",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Attention Is All You Need for KV Cache in Diffusion LLMs",
+      "source_url": "https://arxiv.org/abs/2510.14973",
+      "year": 2025,
+      "published": "2025-10-16",
+      "abstract": "This work studies how to adaptively recompute key-value (KV) caches for diffusion large language models (DLMs) to maximize prediction accuracy while minimizing decoding latency. Prior methods'decoders recompute QKV for all tokens at every denoising step and layer, despite KV states changing little across most steps, especially in shallow layers, leading to substantial redundancy. We make three observations: (1) distant ${\\bf MASK}$ tokens primarily act as a length-bias and can be cached block-wise beyond the active prediction window; (2) KV dynamics increase with depth, suggesting that selective refresh starting from deeper layers is sufficient; and (3) the most-attended token exhibits the smallest KV drift, providing a conservative lower bound on cache change for other tokens. Building on these, we propose ${\\bf Elastic-Cache}$, a training-free, architecture-agnostic strategy that jointly decides ${when}$ to refresh (via an attention-aware drift test on the most-attended token) and ${where}$ to refresh (via a depth-aware schedule that recomputes from a chosen layer onward while reusing shallow-layer caches and off-window MASK caches). Unlike fixed-period schemes, Elastic-Cache performs adaptive, layer-aware cache updates for diffusion LLMs, reducing redundant computation and accelerating decoding with negligible loss in generation quality. Experiments on LLaDA-Instruct, LLaDA-1.5, and LLaDA-V across mathematical reasoning and code generation tasks demonstrate consistent speedups: $8.7\\times$ on GSM8K (256 tokens), and $45.1\\times$ on longer sequences, while consistently maintaining higher accuracy than the baseline. Our method achieves significantly higher throughput ($6.8\\times$ on GSM8K) than existing confidence-based approaches while preserving generation quality, enabling practical deployment of diffusion LLMs.",
+      "canonical_id": "arXiv:2510.14973",
+      "arxiv_id": "2510.14973",
+      "doi": "10.48550/arXiv.2510.14973",
+      "authors": [
+        "Quan Nguyen-Tri",
+        "Mukul Ranjan",
+        "Zhi-Qiang Shen"
+      ]
+    },
+    {
+      "title": "HiSpec: Hierarchical Speculative Decoding for LLMs",
+      "source_url": "https://arxiv.org/abs/2510.01336",
+      "year": 2025,
+      "published": "2025-10-01",
+      "abstract": "Speculative decoding accelerates LLM inference by using a smaller draft model to speculate tokens that a larger target model verifies. Verification is often the bottleneck (e.g. verification is $4\\times$ slower than token generation when a 3B model speculates for a 70B target model), but most prior works focus only on accelerating drafting. $\\textit{``Intermediate\"}$ verification reduces verification time by discarding inaccurate draft tokens early, but existing methods incur substantial training overheads in incorporating the intermediate verifier, increase the memory footprint to orchestrate the intermediate verification step, and compromise accuracy by relying on approximate heuristics. We propose $\\underline{\\textit{Hi}}\\textit{erarchical }\\underline{\\textit{Spec}}\\textit{ulative Decoding (HiSpec)}$, a framework for high-throughput speculative decoding that exploits $\\textit{early-exit (EE) models}$ for low-overhead intermediate verification. EE models allow tokens to exit early by skipping layer traversal and are explicitly trained so that hidden states at selected layers can be interpreted, making them uniquely suited for intermediate verification without drastically increasing compute and memory overheads. To improve resource-efficiency even further, we design a methodology that enables HiSpec to re-use key-value caches and hidden states between the draft, intermediate verifier, and target models. To maintain accuracy, HiSpec periodically validates the draft tokens accepted by the intermediate verifier against the target model. Our evaluations using various representative benchmarks and models show that HiSpec improves throughput by 1.28$\\times$ on average and by up to 2.01$\\times$ compared to the baseline single-layer speculation without compromising accuracy.",
+      "canonical_id": "arXiv:2510.01336",
+      "arxiv_id": "2510.01336",
+      "doi": "10.48550/arXiv.2510.01336",
+      "authors": [
+        "Avinash Kumar",
+        "Sujay Sanghavi",
+        "Poulami Das"
+      ]
+    },
+    {
+      "title": "RServe: Overlapping Encoding and Prefill for Efficient LMM Inference",
+      "source_url": "https://arxiv.org/abs/2509.24381",
+      "year": 2025,
+      "published": "2025-09-29",
+      "abstract": "Large multimodal models (LMMs) typically employ an encoding module to transform multimodal data inputs into embeddings, which are then fed to language models for further processing. However, efficiently serving LMMs remains highly challenging due to the inherent complexity of their inference pipelines. Traditional serving engines co-locate the encoding module and the language model, leading to significant resource interference and tight data dependency. Recent studies have alleviated this issue by disaggregating the encoding module from the model, following a design style of prefill-decode disaggregation. Nevertheless, these approaches fail to fully exploit parallelism both within individual requests (intra-request) and across multiple requests (inter-request). To overcome the limitation, we propose REDServe, an LMM inference system that efficiently orchestrates intra- and inter-request pipelines. REDServe is designed to reduce low latency and maximize parallelism at both intra- and inter-request granularities. Built on the disaggregated architecture of the encoding module and language model, REDServe adopts a fine-grained scheduling method that overlaps multimodal encoding with the forward computation of the language model within a single request. For inter-request pipeline, REDServe leverages schedulable tokens and token budgets to balance computational loads across micro-batches. Combined with chunked prefill, this enables a novel scheduling strategy that coordinates the execution of intra- and inter-request pipelines. Experimental evaluations on representative LMMs show that REDServe achieves substantial latency reduction of up to 66% while improving throughput by up to 109%, significantly outperforming existing serving approaches.",
+      "canonical_id": "arXiv:2509.24381",
+      "arxiv_id": "2509.24381",
+      "doi": "10.48550/arXiv.2509.24381",
+      "authors": [
+        "Tianyu Guo",
+        "Tianming Xu",
+        "Xian-Jie Chen",
+        "Jun-Ru Chen",
+        "Nong Xiao",
+        "Xian-Wei Zhang"
+      ]
+    },
+    {
+      "title": "HAP: Hybrid Adaptive Parallelism for Efficient Mixture-of-Experts Inference",
+      "source_url": "https://arxiv.org/abs/2508.19373",
+      "year": 2025,
+      "published": "2025-08-26",
+      "abstract": "Current inference systems for Mixture-of-Experts (MoE) models primarily employ static parallelization strategies. However, these static approaches cannot consistently achieve optimal performance across different inference scenarios, as they lack the flexibility to adapt to varying computational requirements. In this work, we propose HAP (Hybrid Adaptive Parallelism), a novel method that dynamically selects hybrid parallel strategies to enhance MoE inference efficiency. The fundamental innovation of HAP lies in hierarchically decomposing MoE architectures into two distinct computational modules: the Attention module and the Expert module, each augmented with a specialized inference latency simulation model. This decomposition promotes the construction of a comprehensive search space for seeking model parallel strategies. By leveraging Integer Linear Programming (ILP), HAP could solve the optimal hybrid parallel configurations to maximize inference efficiency under varying computational constraints. Our experiments demonstrate that HAP consistently determines parallel configurations that achieve comparable or superior performance to the TP strategy prevalent in mainstream inference systems. Compared to the TP-based inference, HAP-based inference achieves speedups of $1.68 \\times, 1.77 \\times$, and $1.57 \\times$ on A100, A6000, and V100 GPU platforms, respectively. Furthermore, HAP showcases remarkable generalization capability, maintaining performance effectiveness across diverse MoE model configurations, including Mixtral and Qwen series models.",
+      "canonical_id": "arXiv:2508.19373",
+      "arxiv_id": "2508.19373",
+      "doi": "10.1109/ICPADS67057.2025.11322882",
+      "authors": [
+        "Hao-Ran Lin",
+        "Xian-Zhi Yu",
+        "Kang Zhao",
+        "Han Bao",
+        "Zongyuan Zhan",
+        "Ting Hu",
+        "Wu-Long Liu",
+        "Ze-Kun Yin",
+        "Xin Li",
+        "Wei-Guo Liu"
+      ]
+    },
+    {
+      "title": "Quantifying the Energy Consumption and Carbon Emissions of LLM Inference via Simulations",
+      "source_url": "https://arxiv.org/abs/2507.11417",
+      "year": 2025,
+      "published": "2025-07-15",
+      "abstract": "The environmental impact of Large Language Models (LLMs) is rising significantly, with inference now accounting for more than half of their total lifecycle carbon emissions. However, existing simulation frameworks, which are increasingly used to determine efficient LLM deployments, lack any concept of power and, therefore, cannot accurately estimate inference-related emissions. We present a simulation framework to assess the energy and carbon implications of LLM inference under varying deployment setups. First, we extend a high-fidelity LLM inference simulator with a GPU power model that estimates power consumption based on utilization metrics, enabling analysis across configurations like batch size, sequence length, and model parallelism. Second, we integrate simulation outputs into an energy system co-simulation environment to quantify carbon emissions under specific grid conditions and explore the potential of carbon-aware scheduling. Through scenario-based analysis, our framework reveals how inference parameters affect energy demand and carbon footprint, demonstrates a renewable offset potential of up to 69.2% in an illustrative deployment case, and provides a foundation for future carbon-aware inference infrastructure design.",
+      "canonical_id": "arXiv:2507.11417",
+      "arxiv_id": "2507.11417",
+      "doi": "10.48550/arXiv.2507.11417",
+      "authors": [
+        "M. Ozcan",
+        "Philipp Wiesner",
+        "Philipp Weiß",
+        "Odej Kao"
+      ]
+    },
+    {
+      "title": "BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation",
+      "source_url": "https://arxiv.org/abs/2506.07530",
+      "year": 2025,
+      "published": "2025-06-09",
+      "abstract": "Deploying powerful Vision-Language-Action (VLA) models on edge devices is limited by their massive size. In this paper, we take a deployment-oriented view of VLA training: we target efficiency through model design and optimization, rather than relying solely on post-hoc compression. Thus, we propose BitVLA, a fully native 1-bit VLA model for robotic manipulation, where every parameters is ternary, i.e., {-1,0,1}. BitVLA is built on the publicly available 1-bit LLM BitNet b1.58 2B4T, and is trained as a vision-language-action policy that inherits the compactness of 1-bit pretraining while retaining strong task performance. To further reduce the memory footprint of the vision backbone, we introduce Quantize-then-Distill, a post-training quantization-aware training strategy that compresses a full-precision vision encoder to 1.58-bit weights, while a full-precision teacher guides representation alignment during training. Across simulation benchmarks and real-world tasks, BitVLA matches the performance of the full-precision OpenVLA-OFT baseline, while reducing model memory by 11.0x and end-to-end latency by 4.4x. These results suggest a practical path toward training-time efficiency-accuracy co-design for embodied policies, enabling competitive manipulation capability on memory-constrained edge robotic platforms. We release the code in https://github.com/ustcwhy/BitVLA, model weights in https://huggingface.co/lxsy/bitvla-bf16.",
+      "canonical_id": "arXiv:2506.07530",
+      "arxiv_id": "2506.07530",
+      "doi": "10.48550/arXiv.2506.07530",
+      "authors": [
+        "Hongyu Wang",
+        "Chuyan Xiong",
+        "Rui-Ping Wang",
+        "Xi-Lin Chen"
+      ]
+    },
+    {
+      "title": "FLAME-MoE: A Transparent End-to-End Research Platform for Mixture-of-Experts Language Models",
+      "source_url": "https://arxiv.org/abs/2505.20225",
+      "year": 2025,
+      "published": "2025-05-26",
+      "abstract": "Recent large language models such as Gemini-1.5, DeepSeek-V3, and Llama-4 increasingly adopt Mixture-of-Experts (MoE) architectures, which offer strong efficiency-performance trade-offs by activating only a fraction of the model per token. Yet academic researchers still lack a fully open, end-to-end MoE platform for investigating scaling, routing, and expert behavior. We release FLAME-MoE, a completely open-source research suite composed of seven decoder-only models, ranging from 38M to 1.7B active parameters, whose architecture--64 experts with top-8 gating and 2 shared experts--closely reflects modern production LLMs. All training data pipelines, scripts, logs, and checkpoints are publicly available to enable reproducible experimentation. Across six evaluation tasks, FLAME-MoE improves average accuracy by up to 3.4 points over dense baselines trained with identical FLOPs. Leveraging full training trace transparency, we present initial analyses showing that (i) experts increasingly specialize on distinct token subsets, (ii) co-activation matrices remain sparse, reflecting diverse expert usage, and (iii) routing behavior stabilizes early in training. All code, training logs, and model checkpoints are available at https://github.com/cmu-flame/FLAME-MoE.",
+      "canonical_id": "arXiv:2505.20225",
+      "arxiv_id": "2505.20225",
+      "doi": "10.48550/arXiv.2505.20225",
+      "authors": [
+        "Hao Kang",
+        "Zichun Yu",
+        "Chenyan Xiong"
+      ]
+    },
+    {
+      "title": "Thinking Short and Right Over Thinking Long: Serving LLM Reasoning Efficiently and Accurately",
+      "source_url": "https://arxiv.org/abs/2505.13326",
+      "year": 2025,
+      "published": "2025-05-19",
+      "abstract": "Recent advances in test-time scaling suggest that Large Language Models (LLMs) can gain better capabilities by generating Chain-of-Thought reasoning (analogous to human thinking) to respond a given request, and meanwhile exploring more reasoning branches (i.e., generating multiple responses and ensembling them) can improve the final output quality. However, when incorporating the two scaling dimensions, we find that the system efficiency is dampened significantly for two reasons. Firstly, the time cost to generate the final output increases substantially as many reasoning branches would be trapped in the over-thinking dilemma, producing excessively long responses. Secondly, generating multiple reasoning branches for each request increases memory consumption, which is unsuitable for LLM serving since we can only batch a limited number of requests to process simultaneously. To address this, we present SART, a serving framework for efficient and accurate LLM reasoning. The essential idea is to manage the thinking to be short and right, rather than long. For one thing, we devise a redundant sampling with early stopping approach based on empirical observations and theoretic analysis, which increases the likelihood of obtaining short-thinking responses when sampling reasoning branches. For another, we propose to dynamically prune low-quality branches so that only right-thinking branches are maintained, reducing the memory consumption and allowing us to batch more requests. Experimental results demonstrate that SART not only improves the accuracy of LLM reasoning but also enhances the serving efficiency, outperforming existing methods by up to 28.2 times and on average 15.7 times in terms of efficiency when achieving the same level of accuracy.",
+      "canonical_id": "arXiv:2505.13326",
+      "arxiv_id": "2505.13326",
+      "doi": "10.48550/arXiv.2505.13326",
+      "authors": [
+        "Yu-Hang Wang",
+        "You-He Jiang",
+        "Bin Cui",
+        "Fang-Cheng Fu"
+      ]
+    },
+    {
+      "title": "Scaling Laws for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2505.07858",
+      "year": 2025,
+      "published": "2025-05-08",
+      "abstract": "The escalating demand for efficient decoding in large language models (LLMs) is particularly critical for reasoning-intensive architectures like OpenAI-o3 and DeepSeek-R1, which depend on extended chain-of-thought reasoning. This study investigates speculative decoding techniques through dense LLM architectures to establish foundational insights for accelerating reasoning tasks. While speculative decoding methods leveraging parallel draft-verification cycles have emerged as promising acceleration techniques, the scaling laws governing decoding efficiency remain under-explored compared to conventional backbone LLMs developed through Pretraining->SFT->RLHF training paradigms. In this work, we discover Log-linear Scaling Laws (Theorem 1.1, 1.2 and 1.3) governing draft model acceptance rate (or decoding speed) across three dimensions: pretraining token volume, draft model capacity, and decoding batch size. Building on these laws, we achieve Scylla, which coordinates multi-dimensional scaling for popular LLMs (Llama2/3, Qwen2.5). Empirical validation shows Scylla achieves 1.5-2.2 higher acceptance rate than EAGLE2 and 0.3 higher than EAGLE3 at temperature T = 0, with peak performance gains on summarization and QA tasks (Figure 2). Industrial inference engine deployments demonstrate 2X decoding throughput improvements over EAGLE2 (Table 5), validating the transformative potential of systematic scaling for efficient LLM inference. Code will be released later.",
+      "canonical_id": "arXiv:2505.07858",
+      "arxiv_id": "2505.07858",
+      "doi": "10.48550/arXiv.2505.07858",
+      "authors": [
+        "Siyuan Yan",
+        "Mo Zhu",
+        "Guo-qing Jiang",
+        "Jianfei Wang",
+        "Jiaxing Chen",
+        "Wentai Zhang",
+        "Xiang Liao",
+        "Xiao Cui",
+        "Chen Zhang",
+        "Zhuoran Song",
+        "Ran Zhu"
+      ]
+    },
+    {
+      "title": "Activated LoRA: Fine-tuned LLMs for Intrinsics",
+      "source_url": "https://arxiv.org/abs/2504.12397",
+      "year": 2025,
+      "published": "2025-04-16",
+      "abstract": "Low-Rank Adaptation (LoRA) has emerged as a highly efficient framework for finetuning the weights of large foundation models, and has become the go-to method for data-driven customization of LLMs. Despite the promise of highly customized behaviors and capabilities, switching between relevant LoRAs in a multiturn setting is inefficient, as the key-value (KV) cache of the entire turn history must be recomputed with the LoRA weights before generation can begin. To address this problem, we propose Activated LoRA (aLoRA), an adapter architecture which modifies the LoRA framework to only adapt weights for the tokens in the sequence after the aLoRA is invoked. This change crucially allows aLoRA to accept the base model's KV cache of the input string, meaning that aLoRA can be instantly activated whenever needed in a chain without recomputing the prior keys and values. This enables building what we call intrinsics, i.e. specialized models invoked to perform well-defined operations on portions of an input chain or conversation that otherwise uses the base model by default. We train a set of aLoRA-based intrinsics models, demonstrating competitive accuracy with standard LoRA while significantly improving inference efficiency. We contributed our Activated LoRA implementation to the Huggingface PEFT library https://github.com/huggingface/peft.",
+      "canonical_id": "arXiv:2504.12397",
+      "arxiv_id": "2504.12397",
+      "doi": "10.48550/arXiv.2504.12397",
+      "authors": [
+        "K. Greenewald",
+        "Luis A. Lastras",
+        "Thomas Parnell",
+        "Vraj Shah",
+        "Lucian Popa",
+        "Giulio Zizzo",
+        "Chulaka Gunasekara",
+        "Ambrish Rawat",
+        "David Cox"
+      ]
+    },
+    {
+      "title": "Scaling Up On-Device LLMs via Active-Weight Swapping Between DRAM and Flash",
+      "source_url": "https://arxiv.org/abs/2504.08378",
+      "year": 2025,
+      "published": "2025-04-11",
+      "abstract": "Large language models (LLMs) are increasingly being deployed on mobile devices, but the limited DRAM capacity constrains the deployable model size. This paper introduces ActiveFlow, the first LLM inference framework that can achieve adaptive DRAM usage for modern LLMs (not ReLU-based), enabling the scaling up of deployable model sizes. The framework is based on the novel concept of active weight DRAM-flash swapping and incorporates three novel techniques: (1) Cross-layer active weights preloading. It uses the activations from the current layer to predict the active weights of several subsequent layers, enabling computation and data loading to overlap, as well as facilitating large I/O transfers. (2) Sparsity-aware self-distillation. It adjusts the active weights to align with the dense-model output distribution, compensating for approximations introduced by contextual sparsity. (3) Active weight DRAM-flash swapping pipeline. It orchestrates the DRAM space allocation among the hot weight cache, preloaded active weights, and computation-involved weights based on available memory. Results show ActiveFlow achieves the performance-cost Pareto frontier compared to existing efficiency optimization methods.",
+      "canonical_id": "arXiv:2504.08378",
+      "arxiv_id": "2504.08378",
+      "doi": "10.48550/arXiv.2504.08378",
+      "authors": [
+        "Fucheng Jia",
+        "Zewen Wu",
+        "Shiqi Jiang",
+        "Huiqiang Jiang",
+        "Qian-Xi Zhang",
+        "Yu-Qing Yang",
+        "Yunxin Liu",
+        "Ju Ren",
+        "Deyu Zhang",
+        "Ting Cao"
+      ]
+    },
+    {
+      "title": "SEAP: Training-free Sparse Expert Activation Pruning Unlock the Brainpower of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2503.07605",
+      "year": 2025,
+      "published": "2025-03-10",
+      "abstract": "Large Language Models have achieved remarkable success across various natural language processing tasks, yet their high computational cost during inference remains a major bottleneck. This paper introduces Sparse Expert Activation Pruning (SEAP), a training-free pruning method that selectively retains task-relevant parameters to reduce inference overhead. Inspired by the clustering patterns of hidden states and activations in LLMs, SEAP identifies task-specific expert activation patterns and prunes the model while preserving task performance and enhancing computational efficiency. Experimental results demonstrate that SEAP significantly reduces computational overhead while maintaining competitive accuracy. Notably, at 50% pruning, SEAP surpasses both WandA and FLAP by over 20%, and at 20% pruning, it incurs only a 2.2% performance drop compared to the dense model. These findings highlight SEAP's scalability and effectiveness, making it a promising approach for optimizing large-scale LLMs.",
+      "canonical_id": "arXiv:2503.07605",
+      "arxiv_id": "2503.07605",
+      "doi": "10.48550/arXiv.2503.07605",
+      "authors": [
+        "Xun Liang",
+        "Hanyu Wang",
+        "Huayi Lai",
+        "Simin Niu",
+        "Shichao Song",
+        "Jiawei Yang",
+        "Jihao Zhao",
+        "Feiyu Xiong",
+        "Bo Tang",
+        "Zhi-Yu Li"
+      ]
+    },
+    {
+      "title": "Efficiently Editing Mixture-of-Experts Models with Compressed Experts",
+      "source_url": "https://arxiv.org/abs/2503.00634",
+      "year": 2025,
+      "published": "2025-03-01",
+      "abstract": "Mixture-of-Experts (MoE) models have become a key approach for scaling large language models efficiently by activating only a subset of experts during training and inference. Typically, the number of activated experts presents a trade-off: fewer experts reduce computational costs, while more experts improve performance. Recent studies reveal that not all activated experts contribute equally to model performance, with some providing minimal utility, particularly when finetuning pretrained MoE models for specialized downstream tasks. The co-existence of significant and redundant parameters in experts provides us an opportunity to reduce the number of activated experts while maintaining model performance. In this work, we propose the concept of compressed experts, lightweight modules that serve as compact representations of full experts. Our approach preserves the most important experts while replacing other auxiliary activated experts with compressed experts. The reduction of active parameters significantly lowers inference costs while achieving comparable performance. Extensive experiments on models including Phi-MoE and OLMoE demonstrate that compressed experts recover over 90% of full expert performance across various tasks while reducing more than 30% active parameters and saving 20% in inference costs. This approach enables efficient deployment of MoE models in resource-constrained settings and facilitates scaling to larger models with manageable overhead. Our code is available at https://github.com/yifei-he/Compressed-Experts.",
+      "canonical_id": "arXiv:2503.00634",
+      "arxiv_id": "2503.00634",
+      "doi": "10.48550/arXiv.2503.00634",
+      "authors": [
+        "Yifei He",
+        "Yang Liu",
+        "Chen Liang",
+        "H. Awadalla"
+      ]
+    },
+    {
+      "title": "MoE2: Optimizing Collaborative Inference for Edge Large Language Models",
+      "source_url": "https://arxiv.org/abs/2501.09410",
+      "year": 2025,
+      "published": "2025-01-16",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities across a wide range of natural language processing tasks. Exploiting the heterogeneous capabilities of edge LLMs is crucial for diverse emerging applications, as it enables greater cost-effectiveness and reduced latency. In this work, we introduce Mixture-of-Edge-Experts (MoE2), a novel collaborative inference framework for edge LLMs. We formulate a joint gating and expert selection problem to optimize inference performance under energy and latency constraints. Unlike conventional MoE problems, LLM expert selection becomes significantly more challenging due to the combinatorial nature and the heterogeneity of edge LLMs across various attributes. To this end, we propose a two-level expert selection mechanism through which we uncover an optimality-preserving property of gating parameters across expert selections. This property enables the decomposition of the training and selection processes, significantly reducing complexity. Furthermore, we leverage the objective’s monotonicity and design a discrete monotonic optimization algorithm for optimal expert selection. We implement edge servers with NVIDIA Jetson AGX Orins and NVIDIA RTX 4090 GPUs, and perform extensive experiments. Our results validate the performance improvements for various LLM models and show that our MoE2 method can achieve optimal trade-offs among different delay and energy budgets, and outperforms baselines under various system resource constraints. We further demonstrate its strong robustness in dynamic, non-stationary environments and its effectiveness in achieving load balancing.",
+      "canonical_id": "arXiv:2501.09410",
+      "arxiv_id": "2501.09410",
+      "doi": "10.1109/TON.2026.3677371",
+      "authors": [
+        "Lyudong Jin",
+        "Yanning Zhang",
+        "Yanhan Li",
+        "Shurong Wang",
+        "H. Yang",
+        "Jian Wu",
+        "Meng Zhang"
+      ]
+    },
+    {
+      "title": "Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks",
+      "source_url": "https://arxiv.org/abs/2412.15605",
+      "year": 2024,
+      "published": "2024-12-20",
+      "abstract": "Retrieval-augmented generation (RAG) has gained traction as a powerful approach for enhancing language models by integrating external knowledge sources. However, RAG introduces challenges such as retrieval latency, potential errors in document selection, and increased system complexity. With the advent of large language models (LLMs) featuring significantly extended context windows, this paper proposes an alternative paradigm, cache-augmented generation (CAG) that bypasses real-time retrieval. Our method involves preloading all relevant resources, especially when the documents or knowledge for retrieval are of a limited and manageable size, into the LLM's extended context and caching its runtime parameters. During inference, the model utilizes these preloaded parameters to answer queries without additional retrieval steps. Comparative analyses reveal that CAG eliminates retrieval latency and minimizes retrieval errors while maintaining context relevance. Performance evaluations across multiple benchmarks highlight scenarios where long-context LLMs either outperform or complement traditional RAG pipelines. These findings suggest that, for certain applications, particularly those with a constrained knowledge base, CAG provide a streamlined and efficient alternative to RAG, achieving comparable or superior results with reduced complexity.",
+      "canonical_id": "arXiv:2412.15605",
+      "arxiv_id": "2412.15605",
+      "doi": "10.1145/3701716.3715490",
+      "authors": [
+        "Brian J. Chan",
+        "Chao-Ting Chen",
+        "Jui-Hung Cheng",
+        "Hen-Hsen Huang"
+      ]
+    },
+    {
+      "title": "Multi-Bin Batching for Increasing LLM Inference Throughput",
+      "source_url": "https://arxiv.org/abs/2412.04504",
+      "year": 2024,
+      "published": "2024-12-03",
+      "abstract": "As large language models (LLMs) grow in popularity for their diverse capabilities, improving the efficiency of their inference systems has become increasingly critical. Batching LLM requests is a critical step in scheduling the inference jobs on servers (e.g., GPUs), enabling the system to maximize throughput by allowing multiple requests to be processed in parallel. However, requests often have varying generation lengths, causing resource underutilization, as hardware must wait for the longest-running request in the batch to complete before moving to the next batch. We formalize this problem from a queueing-theoretic perspective, and aim at designing a control policy which is throughput-optimal under a static-batching framework. We propose Multi-Bin Batching, a simple yet effective method that can provably improve LLM inference throughput under this framework by grouping requests with similar (predicted) execution times into predetermined bins. Through a combination of theoretical analysis and experiments, including real-world LLM inference scenarios with static and continuous-batching baselines, we demonstrate that multi-bin batching substantially improves throughput over static batching and quantify the remaining gap to native continuous batching under both oracle and estimated length information.",
+      "canonical_id": "arXiv:2412.04504",
+      "arxiv_id": "2412.04504",
+      "doi": "10.1145/3843225",
+      "authors": [
+        "Ozgur Guldogan",
+        "Jackson Kunde",
+        "Kangwook Lee",
+        "Ramtin Pedarsani"
+      ]
+    },
+    {
+      "title": "Draft Model Knows When to Stop: Self-Verification Speculative Decoding for Long-Form Generation",
+      "source_url": "https://arxiv.org/abs/2411.18462",
+      "year": 2024,
+      "published": "2024-11-27",
+      "abstract": "Conventional speculative decoding (SD) methods utilize a predefined length policy for proposing drafts, which implies the premise that the target model smoothly accepts the proposed draft tokens. However, reality deviates from this assumption: the oracle draft length varies significantly, and the fixed-length policy hardly satisfies such a requirement. Moreover, such discrepancy is further exacerbated in scenarios involving complex reasoning and long-form generation, particularly under test-time scaling for reasoning-specialized models. Through both theoretical and empirical estimation, we establish that the discrepancy between the draft and target models can be approximated by the draft model's prediction entropy: a high entropy indicates a low acceptance rate of draft tokens, and vice versa. Based on this insight, we propose SVIP: Self-Verification Length Policy for Long-Context Speculative Decoding, which is a training-free dynamic length policy for speculative decoding systems that adaptively determines the lengths of draft sequences by referring to the draft entropy. Experimental results on mainstream SD benchmarks as well as reasoning-heavy benchmarks demonstrate the superior performance of SVIP, achieving up to 17% speedup on MT-Bench at 8K context compared with fixed draft lengths, and 22% speedup for QwQ in long-form reasoning.",
+      "canonical_id": "arXiv:2411.18462",
+      "arxiv_id": "2411.18462",
+      "doi": "10.18653/v1/2025.emnlp-main.844",
+      "authors": [
+        "Ziyin Zhang",
+        "Jia-Hao Xu",
+        "Tian Liang",
+        "Xing-Yu Chen",
+        "Zhiwei He",
+        "Rui Wang",
+        "Zhaopeng Tu"
+      ]
+    },
+    {
+      "title": "Squeezed Attention: Accelerating Long Context Length LLM Inference",
+      "source_url": "https://arxiv.org/abs/2411.09688",
+      "year": 2024,
+      "published": "2024-11-14",
+      "abstract": "Emerging Large Language Model (LLM) applications require long input context in order to perform complex tasks like document analysis and code generation. For these long context length applications, the length of the input prompt poses a significant challenge in terms of inference efficiency since the inference costs increase linearly with sequence length. However, for many of these applications, much of the context in the prompt is fixed across different user inputs, thereby providing the opportunity to perform offline optimizations in order to process user inputs quickly, as they are received. We propose Squeezed Attention to accelerate LLM applications where a large portion of the input context is fixed. We first leverage K-means clustering offline to group the keys for the fixed context based on semantic similarity and represent each cluster with a single centroid value. During inference, we compare query tokens from the user input with the centroids to predict which keys from the fixed context are semantically relevant, and then compute exact attention using only the important keys, thereby reducing bandwidth and computational costs. We also present a hierarchical version of our algorithm which can reduce the complexity of attention from linear to logarithmic with respect to the fixed context length. We evaluate our method on long-context benchmarks including LongBench, where it achieves a 3.1$\\times$ reduction in KV budget with no noticeable accuracy loss and up to an 8$\\times$ reduction with only a 0.5 point accuracy gap for the LLaMA-2-7B-32K, LWM-Text-Chat-1M, and Longchat-7B-v1.5-32K models. Futhermore, we implement kernels for centroid comparison and sparse FlashAttention with important keys, achieving more than 4$\\times$ speedups during both the prefill and generation phases for long-context inference. Our code is available at https://github.com/SqueezeAILab/SqueezedAttention.",
+      "canonical_id": "arXiv:2411.09688",
+      "arxiv_id": "2411.09688",
+      "doi": "10.48550/arXiv.2411.09688",
+      "authors": [
+        "Coleman Hooper",
+        "Sehoon Kim",
+        "Hiva Mohammadzadeh",
+        "Monishwaran Maheswaran",
+        "Sebastian Zhao",
+        "June Paik",
+        "Michael W. Mahoney",
+        "Kurt Keutzer",
+        "Amir Gholami"
+      ]
+    },
+    {
+      "title": "CoreInfer: Accelerating Large Language Model Inference with Semantics-Inspired Adaptive Sparse Activation",
+      "source_url": "https://arxiv.org/abs/2410.18311",
+      "year": 2024,
+      "published": "2024-10-23",
+      "abstract": "Large language models (LLMs) with billions of parameters have sparked a new wave of exciting AI applications. However, their high computational costs and memory demands during inference pose significant challenges. Adaptive sparse activation inference, which activates only a small number of neurons for each token, offers a novel way to accelerate model inference without degrading performance, showing great potential for resource-constrained hardware devices. Nevertheless, existing methods predict activated neurons based on individual tokens with additional MLP, which involve frequent changes in activation maps and resource calls, limiting the acceleration benefits of sparse activation. In this paper, we introduce CoreInfer, an MLP-free adaptive sparse activation inference method based on sentence-level prediction. Specifically, we propose the concept of sentence-wise core neurons, which refers to the subset of neurons most critical for a given sentence, and empirically demonstrate its effectiveness. To determine the core neurons, we explore the correlation between core neurons and the sentence's semantics. Remarkably, we discovered that core neurons exhibit both stability and similarity in relation to the sentence's semantics -- an insight overlooked by previous studies. Building on this finding, we further design two semantic-based methods for predicting core neurons to fit different input scenarios. In CoreInfer, the core neurons are determined during the pre-filling stage and fixed during the encoding stage, enabling zero-cost sparse inference. We evaluated the model generalization and task generalization of CoreInfer across various models and tasks. Notably, on an NVIDIA TITAN XP GPU, CoreInfer achieved a 10.33 times and 2.72 times speedup compared to the Huggingface implementation and PowerInfer, respectively.",
+      "canonical_id": "arXiv:2410.18311",
+      "arxiv_id": "2410.18311",
+      "doi": "10.48550/arXiv.2410.18311",
+      "authors": [
+        "Qinsi Wang",
+        "Saeed Vahidian",
+        "Hancheng Ye",
+        "Jianyang Gu",
+        "Jian-Yi Zhang",
+        "Yiran Chen"
+      ]
+    },
+    {
+      "title": "MatryoshkaKV: Adaptive KV Compression via Trainable Orthogonal Projection",
+      "source_url": "https://arxiv.org/abs/2410.14731",
+      "year": 2024,
+      "published": "2024-10-16",
+      "abstract": "KV cache has become a de facto technique for the inference of large language models (LLMs), where tensors of shape (layer number, head number, sequence length, feature dimension) are introduced to cache historical information for self-attention. As the size of the model and data grows, the KV cache can quickly become a bottleneck within the system in both storage and memory transfer. To address this, prior studies usually focus on the first three axes of the cache tensors for compression. This paper supplements them, focusing on the feature dimension axis, by utilizing low-rank projection matrices to transform the cache features into spaces with reduced dimensions. We begin by investigating the canonical orthogonal projection method for data compression through principal component analysis (PCA). We observe the issue with PCA projection where significant performance degradation is observed at low compression rates. To bridge the gap, we propose to directly tune the orthogonal projection matrices with a distillation objective using an elaborate Matryoshka training strategy. After training, we adaptively search for the optimal compression rates for various layers and heads given varying compression budgets. Compared to previous works, our method can easily embrace pre-trained LLMs and hold a smooth tradeoff between performance and compression rate. We empirically witness the high data efficiency of our training procedure and find that our method can sustain over 90% performance with an average KV cache compression rate of 60% (and up to 75% in certain extreme scenarios) for popular LLMs like LLaMA2-7B-base and Mistral-7B-v0.3-base.",
+      "canonical_id": "arXiv:2410.14731",
+      "arxiv_id": "2410.14731",
+      "doi": "10.48550/arXiv.2410.14731",
+      "authors": [
+        "Bokai Lin",
+        "Zi-Hao Zeng",
+        "Zipeng Xiao",
+        "Siqi Kou",
+        "Tianqi Hou",
+        "Xiaofeng Gao",
+        "Hao Zhang",
+        "Zhijie Deng"
+      ]
+    },
+    {
+      "title": "FlatQuant: Flatness Matters for LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2410.09426",
+      "year": 2024,
+      "published": "2024-10-12",
+      "abstract": "Recently, quantization has been widely used for the compression and acceleration of large language models (LLMs). Due to the outliers in LLMs, it is crucial to flatten weights and activations to minimize quantization error with equally spaced quantization points. Prior research explores various pre-quantization transformations to suppress outliers, such as per-channel scaling and Hadamard transformation. However, we observe that these transformed weights and activations can still exhibit steep and dispersed distributions. In this paper, we propose FlatQuant (Fast and Learnable Affine Transformation), a new post-training quantization approach that enhances the flatness of weights and activations. Our approach identifies optimal affine transformations for each linear layer, calibrated in hours via a lightweight objective. To reduce runtime overhead of affine transformation, we apply Kronecker product with two lightweight matrices, and fuse all operations in FlatQuant into a single kernel. Extensive experiments demonstrate that FlatQuant establishes a new state-of-the-art benchmark for quantization. For example, it achieves less than 1\\% accuracy drop for W4A4 quantization on the LLaMA-3-70B model, surpassing SpinQuant by 7.5\\%. Additionally, it provides up to 2.3x prefill speedup and 1.7x decoding speedup compared to the FP16 model. Code is available at: https://github.com/ruikangliu/FlatQuant.",
+      "canonical_id": "arXiv:2410.09426",
+      "arxiv_id": "2410.09426",
+      "doi": "10.48550/arXiv.2410.09426",
+      "authors": [
+        "Yuxuan Sun",
+        "Rui-Kang Liu",
+        "Hao-Li Bai",
+        "Han Bao",
+        "Kang Zhao",
+        "Yue-Ning Li",
+        "Jia-Xin Hu",
+        "Xianzhi Yu",
+        "Lu Hou",
+        "Chun Yuan",
+        "Xin Jiang",
+        "Wu-Long Liu",
+        "Jun Yao"
+      ]
+    },
+    {
+      "title": "Small Language Models: Survey, Measurements, and Insights",
+      "source_url": "https://arxiv.org/abs/2409.15790",
+      "year": 2024,
+      "published": "2024-09-24",
+      "abstract": "Small language models (SLMs), despite their widespread adoption in modern smart devices, have received significantly less academic attention compared to their large language model (LLM) counterparts, which are predominantly deployed in data centers and cloud environments. While researchers continue to improve the capabilities of LLMs in the pursuit of artificial general intelligence, SLM research aims to make machine intelligence more accessible, affordable, and efficient for everyday tasks. Focusing on transformer-based, decoder-only language models with 100M-5B parameters, we survey 70 state-of-the-art open-source SLMs, analyzing their technical innovations across three axes: architectures, training datasets, and training algorithms. In addition, we evaluate their capabilities in various domains, including commonsense reasoning, mathematics, in-context learning, and long context. To gain further insight into their on-device runtime costs, we benchmark their inference latency and memory footprints. Through in-depth analysis of our benchmarking data, we offer valuable insights to advance research in this field.",
+      "canonical_id": "arXiv:2409.15790",
+      "arxiv_id": "2409.15790",
+      "doi": "10.48550/arXiv.2409.15790",
+      "authors": [
+        "Zhen-Yan Lu",
+        "Xiang Li",
+        "Dongqi Cai",
+        "Rongjie Yi",
+        "Fang-Ming Liu",
+        "Xiwen Zhang",
+        "N. Lane",
+        "Mengwei Xu"
+      ]
+    },
+    {
+      "title": "Eigen Attention: Attention in Low-Rank Space for KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2408.05646",
+      "year": 2024,
+      "published": "2024-08-10",
+      "abstract": "Large language models (LLMs) represent a groundbreaking advancement in the domain of natural language processing due to their impressive reasoning abilities. Recently, there has been considerable interest in increasing the context lengths for these models to enhance their applicability to complex tasks. However, at long context lengths and large batch sizes, the key-value (KV) cache, which stores the attention keys and values, emerges as the new bottleneck in memory usage during inference. To address this, we propose Eigen Attention, which performs the attention operation in a low-rank space, thereby reducing the KV cache memory overhead. Our proposed approach is orthogonal to existing KV cache compression techniques and can be used synergistically with them. Through extensive experiments over OPT, MPT, and Llama model families, we demonstrate that Eigen Attention results in up to 40% reduction in KV cache sizes and up to 60% reduction in attention operation latency with minimal drop in performance. Code is available at https://github.com/UtkarshSaxena1/EigenAttn.",
+      "canonical_id": "arXiv:2408.05646",
+      "arxiv_id": "2408.05646",
+      "doi": "10.48550/arXiv.2408.05646",
+      "authors": [
+        "Utkarsh Saxena",
+        "Gobinda Saha",
+        "Sakshi Choudhary",
+        "Kaushik Roy"
+      ]
+    },
+    {
+      "title": "The infrastructure powering IBM's Gen AI model development",
+      "source_url": "https://arxiv.org/abs/2407.05467",
+      "year": 2024,
+      "published": "2024-07-07",
+      "abstract": "AI Infrastructure plays a key role in the speed and cost-competitiveness of developing and deploying advanced AI models. The current demand for powerful AI infrastructure for model training is driven by the emergence of generative AI and foundational models, where on occasion thousands of GPUs must cooperate on a single training job for the model to be trained in a reasonable time. Delivering efficient and high-performing AI training requires an end-to-end solution that combines hardware, software and holistic telemetry to cater for multiple types of AI workloads. In this report, we describe IBM's hybrid cloud infrastructure that powers our generative AI model development. This infrastructure includes (1) Vela: an AI-optimized supercomputing capability directly integrated into the IBM Cloud, delivering scalable, dynamic, multi-tenant and geographically distributed infrastructure for large-scale model training and other AI workflow steps and (2) Blue Vela: a large-scale, purpose-built, on-premises hosting environment that is optimized to support our largest and most ambitious AI model training tasks. Vela provides IBM with the dual benefit of high performance for internal use along with the flexibility to adapt to an evolving commercial landscape. Blue Vela provides us with the benefits of rapid development of our largest and most ambitious models, as well as future-proofing against the evolving model landscape in the industry. Taken together, they provide IBM with the ability to rapidly innovate in the development of both AI models and commercial offerings.",
+      "canonical_id": "arXiv:2407.05467",
+      "arxiv_id": "2407.05467",
+      "doi": "10.48550/arXiv.2407.05467",
+      "authors": [
+        "Talia Gershon",
+        "S. Seelam",
+        "Brian Belgodere",
+        "Milton Bonilla",
+        "Lan Hoang",
+        "D. Barnett",
+        "I-hsin Chung",
+        "Apoorve Mohan",
+        "Ming-Hung Chen",
+        "Lixiang Luo",
+        "Robert Walkup",
+        "C. Evangelinos",
+        "Shweta Salaria",
+        "Marc Dombrowa",
+        "Yoonho Park",
+        "Apo Kayi",
+        "L. Schour",
+        "Alim Alim",
+        "Ali Sydney",
+        "P. Maniotis",
+        "L. Schares",
+        "B. Metzler",
+        "Bengi Karacali-Akyamac",
+        "Sophia Wen",
+        "Tatsuhiro Chiba",
+        "Sunyanan Choochotkaew",
+        "Takeshi Yoshimura",
+        "C. Misale",
+        "Tonia Elengikal",
+        "K. O. Connor",
+        "Zhuoran Liu",
+        "Richard Molina",
+        "L. Schneidenbach",
+        "James Caden",
+        "Christopher Laibinis",
+        "Carlos Fonseca",
+        "Vasily Tarasov",
+        "S. Sundararaman",
+        "Frank B. Schmuck",
+        "S. Guthridge",
+        "J. Cohn",
+        "Marc Eshel",
+        "Paul Muench",
+        "Runyu Liu",
+        "W. Pointer",
+        "D. Wyskida",
+        "Bob Krull",
+        "Ray Rose",
+        "B. Wolfe",
+        "William Cornejo",
+        "J. Walter",
+        "Colm Malone",
+        "Clifford Perucci",
+        "F. Franco",
+        "N. Hinds",
+        "Bob Calio",
+        "Pavel Druyan",
+        "R. Kilduff",
+        "John Kienle",
+        "Connor McStay",
+        "Andrew Figueroa",
+        "M. Connolly",
+        "Edie Fost",
+        "Gina Roma",
+        "J. Fonseca",
+        "Ido Levy",
+        "Michele Payne",
+        "Ryan Schenkel",
+        "A. Malki",
+        "Lion Schneider",
+        "Aniruddha Narkhede",
+        "Shekeba Moshref",
+        "Alexandra Kisin",
+        "Olga Dodin",
+        "Bill Rippon",
+        "Henry Wrieth",
+        "John M. Ganci",
+        "John E. Colino",
+        "Donna Habeger-Rose",
+        "Rakesh Pandey",
+        "Aditya Gidh",
+        "Aditya Gaur",
+        "Dennis Patterson",
+        "Samsuddin Salmani",
+        "Rambilas Varma",
+        "Rumana Rumana",
+        "Shubham Sharma",
+        "Mayank Mishra",
+        "Rameswar Panda",
+        "Aditya Prasad",
+        "Matt Stallone",
+        "Gaoyuan Zhang",
+        "Yikang Shen",
+        "David Cox",
+        "Ruchir Puri",
+        "Dakshit Agrawal",
+        "Drew Thorstensen",
+        "Joel Belog",
+        "Brent Tang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.14973",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.14973",
+        "id:arXiv:2510.14973",
+        "title:attention is all you need for kv cache in diffusion llms",
+        "url:https://arxiv.org/abs/2510.14973"
+      ],
+      "record": {
+        "title": "Attention Is All You Need for KV Cache in Diffusion LLMs",
+        "source_url": "https://arxiv.org/abs/2510.14973",
+        "year": 2025,
+        "published": "2025-10-16",
+        "abstract": "This work studies how to adaptively recompute key-value (KV) caches for diffusion large language models (DLMs) to maximize prediction accuracy while minimizing decoding latency. Prior methods'decoders recompute QKV for all tokens at every denoising step and layer, despite KV states changing little across most steps, especially in shallow layers, leading to substantial redundancy. We make three observations: (1) distant ${\\bf MASK}$ tokens primarily act as a length-bias and can be cached block-wise beyond the active prediction window; (2) KV dynamics increase with depth, suggesting that selective refresh starting from deeper layers is sufficient; and (3) the most-attended token exhibits the smallest KV drift, providing a conservative lower bound on cache change for other tokens. Building on these, we propose ${\\bf Elastic-Cache}$, a training-free, architecture-agnostic strategy that jointly decides ${when}$ to refresh (via an attention-aware drift test on the most-attended token) and ${where}$ to refresh (via a depth-aware schedule that recomputes from a chosen layer onward while reusing shallow-layer caches and off-window MASK caches). Unlike fixed-period schemes, Elastic-Cache performs adaptive, layer-aware cache updates for diffusion LLMs, reducing redundant computation and accelerating decoding with negligible loss in generation quality. Experiments on LLaDA-Instruct, LLaDA-1.5, and LLaDA-V across mathematical reasoning and code generation tasks demonstrate consistent speedups: $8.7\\times$ on GSM8K (256 tokens), and $45.1\\times$ on longer sequences, while consistently maintaining higher accuracy than the baseline. Our method achieves significantly higher throughput ($6.8\\times$ on GSM8K) than existing confidence-based approaches while preserving generation quality, enabling practical deployment of diffusion LLMs.",
+        "canonical_id": "arXiv:2510.14973",
+        "arxiv_id": "2510.14973",
+        "doi": "10.48550/arXiv.2510.14973",
+        "authors": [
+          "Quan Nguyen-Tri",
+          "Mukul Ranjan",
+          "Zhi-Qiang Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.01336",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.01336",
+        "id:arXiv:2510.01336",
+        "title:hispec hierarchical speculative decoding for llms",
+        "url:https://arxiv.org/abs/2510.01336"
+      ],
+      "record": {
+        "title": "HiSpec: Hierarchical Speculative Decoding for LLMs",
+        "source_url": "https://arxiv.org/abs/2510.01336",
+        "year": 2025,
+        "published": "2025-10-01",
+        "abstract": "Speculative decoding accelerates LLM inference by using a smaller draft model to speculate tokens that a larger target model verifies. Verification is often the bottleneck (e.g. verification is $4\\times$ slower than token generation when a 3B model speculates for a 70B target model), but most prior works focus only on accelerating drafting. $\\textit{``Intermediate\"}$ verification reduces verification time by discarding inaccurate draft tokens early, but existing methods incur substantial training overheads in incorporating the intermediate verifier, increase the memory footprint to orchestrate the intermediate verification step, and compromise accuracy by relying on approximate heuristics. We propose $\\underline{\\textit{Hi}}\\textit{erarchical }\\underline{\\textit{Spec}}\\textit{ulative Decoding (HiSpec)}$, a framework for high-throughput speculative decoding that exploits $\\textit{early-exit (EE) models}$ for low-overhead intermediate verification. EE models allow tokens to exit early by skipping layer traversal and are explicitly trained so that hidden states at selected layers can be interpreted, making them uniquely suited for intermediate verification without drastically increasing compute and memory overheads. To improve resource-efficiency even further, we design a methodology that enables HiSpec to re-use key-value caches and hidden states between the draft, intermediate verifier, and target models. To maintain accuracy, HiSpec periodically validates the draft tokens accepted by the intermediate verifier against the target model. Our evaluations using various representative benchmarks and models show that HiSpec improves throughput by 1.28$\\times$ on average and by up to 2.01$\\times$ compared to the baseline single-layer speculation without compromising accuracy.",
+        "canonical_id": "arXiv:2510.01336",
+        "arxiv_id": "2510.01336",
+        "doi": "10.48550/arXiv.2510.01336",
+        "authors": [
+          "Avinash Kumar",
+          "Sujay Sanghavi",
+          "Poulami Das"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.24381",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.24381",
+        "id:arXiv:2509.24381",
+        "title:rserve overlapping encoding and prefill for efficient lmm inference",
+        "url:https://arxiv.org/abs/2509.24381"
+      ],
+      "record": {
+        "title": "RServe: Overlapping Encoding and Prefill for Efficient LMM Inference",
+        "source_url": "https://arxiv.org/abs/2509.24381",
+        "year": 2025,
+        "published": "2025-09-29",
+        "abstract": "Large multimodal models (LMMs) typically employ an encoding module to transform multimodal data inputs into embeddings, which are then fed to language models for further processing. However, efficiently serving LMMs remains highly challenging due to the inherent complexity of their inference pipelines. Traditional serving engines co-locate the encoding module and the language model, leading to significant resource interference and tight data dependency. Recent studies have alleviated this issue by disaggregating the encoding module from the model, following a design style of prefill-decode disaggregation. Nevertheless, these approaches fail to fully exploit parallelism both within individual requests (intra-request) and across multiple requests (inter-request). To overcome the limitation, we propose REDServe, an LMM inference system that efficiently orchestrates intra- and inter-request pipelines. REDServe is designed to reduce low latency and maximize parallelism at both intra- and inter-request granularities. Built on the disaggregated architecture of the encoding module and language model, REDServe adopts a fine-grained scheduling method that overlaps multimodal encoding with the forward computation of the language model within a single request. For inter-request pipeline, REDServe leverages schedulable tokens and token budgets to balance computational loads across micro-batches. Combined with chunked prefill, this enables a novel scheduling strategy that coordinates the execution of intra- and inter-request pipelines. Experimental evaluations on representative LMMs show that REDServe achieves substantial latency reduction of up to 66% while improving throughput by up to 109%, significantly outperforming existing serving approaches.",
+        "canonical_id": "arXiv:2509.24381",
+        "arxiv_id": "2509.24381",
+        "doi": "10.48550/arXiv.2509.24381",
+        "authors": [
+          "Tianyu Guo",
+          "Tianming Xu",
+          "Xian-Jie Chen",
+          "Jun-Ru Chen",
+          "Nong Xiao",
+          "Xian-Wei Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.19373",
+      "identity_tokens": [
+        "id:DOI:10.1109/icpads67057.2025.11322882",
+        "id:arXiv:2508.19373",
+        "title:hap hybrid adaptive parallelism for efficient mixtureofexperts inference",
+        "url:https://arxiv.org/abs/2508.19373"
+      ],
+      "record": {
+        "title": "HAP: Hybrid Adaptive Parallelism for Efficient Mixture-of-Experts Inference",
+        "source_url": "https://arxiv.org/abs/2508.19373",
+        "year": 2025,
+        "published": "2025-08-26",
+        "abstract": "Current inference systems for Mixture-of-Experts (MoE) models primarily employ static parallelization strategies. However, these static approaches cannot consistently achieve optimal performance across different inference scenarios, as they lack the flexibility to adapt to varying computational requirements. In this work, we propose HAP (Hybrid Adaptive Parallelism), a novel method that dynamically selects hybrid parallel strategies to enhance MoE inference efficiency. The fundamental innovation of HAP lies in hierarchically decomposing MoE architectures into two distinct computational modules: the Attention module and the Expert module, each augmented with a specialized inference latency simulation model. This decomposition promotes the construction of a comprehensive search space for seeking model parallel strategies. By leveraging Integer Linear Programming (ILP), HAP could solve the optimal hybrid parallel configurations to maximize inference efficiency under varying computational constraints. Our experiments demonstrate that HAP consistently determines parallel configurations that achieve comparable or superior performance to the TP strategy prevalent in mainstream inference systems. Compared to the TP-based inference, HAP-based inference achieves speedups of $1.68 \\times, 1.77 \\times$, and $1.57 \\times$ on A100, A6000, and V100 GPU platforms, respectively. Furthermore, HAP showcases remarkable generalization capability, maintaining performance effectiveness across diverse MoE model configurations, including Mixtral and Qwen series models.",
+        "canonical_id": "arXiv:2508.19373",
+        "arxiv_id": "2508.19373",
+        "doi": "10.1109/ICPADS67057.2025.11322882",
+        "authors": [
+          "Hao-Ran Lin",
+          "Xian-Zhi Yu",
+          "Kang Zhao",
+          "Han Bao",
+          "Zongyuan Zhan",
+          "Ting Hu",
+          "Wu-Long Liu",
+          "Ze-Kun Yin",
+          "Xin Li",
+          "Wei-Guo Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.11417",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.11417",
+        "id:arXiv:2507.11417",
+        "title:quantifying the energy consumption and carbon emissions of llm inference via simulations",
+        "url:https://arxiv.org/abs/2507.11417"
+      ],
+      "record": {
+        "title": "Quantifying the Energy Consumption and Carbon Emissions of LLM Inference via Simulations",
+        "source_url": "https://arxiv.org/abs/2507.11417",
+        "year": 2025,
+        "published": "2025-07-15",
+        "abstract": "The environmental impact of Large Language Models (LLMs) is rising significantly, with inference now accounting for more than half of their total lifecycle carbon emissions. However, existing simulation frameworks, which are increasingly used to determine efficient LLM deployments, lack any concept of power and, therefore, cannot accurately estimate inference-related emissions. We present a simulation framework to assess the energy and carbon implications of LLM inference under varying deployment setups. First, we extend a high-fidelity LLM inference simulator with a GPU power model that estimates power consumption based on utilization metrics, enabling analysis across configurations like batch size, sequence length, and model parallelism. Second, we integrate simulation outputs into an energy system co-simulation environment to quantify carbon emissions under specific grid conditions and explore the potential of carbon-aware scheduling. Through scenario-based analysis, our framework reveals how inference parameters affect energy demand and carbon footprint, demonstrates a renewable offset potential of up to 69.2% in an illustrative deployment case, and provides a foundation for future carbon-aware inference infrastructure design.",
+        "canonical_id": "arXiv:2507.11417",
+        "arxiv_id": "2507.11417",
+        "doi": "10.48550/arXiv.2507.11417",
+        "authors": [
+          "M. Ozcan",
+          "Philipp Wiesner",
+          "Philipp Weiß",
+          "Odej Kao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.07530",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.07530",
+        "id:arXiv:2506.07530",
+        "title:bitvla 1bit visionlanguageaction models for robotics manipulation",
+        "url:https://arxiv.org/abs/2506.07530"
+      ],
+      "record": {
+        "title": "BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation",
+        "source_url": "https://arxiv.org/abs/2506.07530",
+        "year": 2025,
+        "published": "2025-06-09",
+        "abstract": "Deploying powerful Vision-Language-Action (VLA) models on edge devices is limited by their massive size. In this paper, we take a deployment-oriented view of VLA training: we target efficiency through model design and optimization, rather than relying solely on post-hoc compression. Thus, we propose BitVLA, a fully native 1-bit VLA model for robotic manipulation, where every parameters is ternary, i.e., {-1,0,1}. BitVLA is built on the publicly available 1-bit LLM BitNet b1.58 2B4T, and is trained as a vision-language-action policy that inherits the compactness of 1-bit pretraining while retaining strong task performance. To further reduce the memory footprint of the vision backbone, we introduce Quantize-then-Distill, a post-training quantization-aware training strategy that compresses a full-precision vision encoder to 1.58-bit weights, while a full-precision teacher guides representation alignment during training. Across simulation benchmarks and real-world tasks, BitVLA matches the performance of the full-precision OpenVLA-OFT baseline, while reducing model memory by 11.0x and end-to-end latency by 4.4x. These results suggest a practical path toward training-time efficiency-accuracy co-design for embodied policies, enabling competitive manipulation capability on memory-constrained edge robotic platforms. We release the code in https://github.com/ustcwhy/BitVLA, model weights in https://huggingface.co/lxsy/bitvla-bf16.",
+        "canonical_id": "arXiv:2506.07530",
+        "arxiv_id": "2506.07530",
+        "doi": "10.48550/arXiv.2506.07530",
+        "authors": [
+          "Hongyu Wang",
+          "Chuyan Xiong",
+          "Rui-Ping Wang",
+          "Xi-Lin Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.20225",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.20225",
+        "id:arXiv:2505.20225",
+        "title:flamemoe a transparent endtoend research platform for mixtureofexperts language models",
+        "url:https://arxiv.org/abs/2505.20225"
+      ],
+      "record": {
+        "title": "FLAME-MoE: A Transparent End-to-End Research Platform for Mixture-of-Experts Language Models",
+        "source_url": "https://arxiv.org/abs/2505.20225",
+        "year": 2025,
+        "published": "2025-05-26",
+        "abstract": "Recent large language models such as Gemini-1.5, DeepSeek-V3, and Llama-4 increasingly adopt Mixture-of-Experts (MoE) architectures, which offer strong efficiency-performance trade-offs by activating only a fraction of the model per token. Yet academic researchers still lack a fully open, end-to-end MoE platform for investigating scaling, routing, and expert behavior. We release FLAME-MoE, a completely open-source research suite composed of seven decoder-only models, ranging from 38M to 1.7B active parameters, whose architecture--64 experts with top-8 gating and 2 shared experts--closely reflects modern production LLMs. All training data pipelines, scripts, logs, and checkpoints are publicly available to enable reproducible experimentation. Across six evaluation tasks, FLAME-MoE improves average accuracy by up to 3.4 points over dense baselines trained with identical FLOPs. Leveraging full training trace transparency, we present initial analyses showing that (i) experts increasingly specialize on distinct token subsets, (ii) co-activation matrices remain sparse, reflecting diverse expert usage, and (iii) routing behavior stabilizes early in training. All code, training logs, and model checkpoints are available at https://github.com/cmu-flame/FLAME-MoE.",
+        "canonical_id": "arXiv:2505.20225",
+        "arxiv_id": "2505.20225",
+        "doi": "10.48550/arXiv.2505.20225",
+        "authors": [
+          "Hao Kang",
+          "Zichun Yu",
+          "Chenyan Xiong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.13326",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.13326",
+        "id:arXiv:2505.13326",
+        "title:thinking short and right over thinking long serving llm reasoning efficiently and accurately",
+        "url:https://arxiv.org/abs/2505.13326"
+      ],
+      "record": {
+        "title": "Thinking Short and Right Over Thinking Long: Serving LLM Reasoning Efficiently and Accurately",
+        "source_url": "https://arxiv.org/abs/2505.13326",
+        "year": 2025,
+        "published": "2025-05-19",
+        "abstract": "Recent advances in test-time scaling suggest that Large Language Models (LLMs) can gain better capabilities by generating Chain-of-Thought reasoning (analogous to human thinking) to respond a given request, and meanwhile exploring more reasoning branches (i.e., generating multiple responses and ensembling them) can improve the final output quality. However, when incorporating the two scaling dimensions, we find that the system efficiency is dampened significantly for two reasons. Firstly, the time cost to generate the final output increases substantially as many reasoning branches would be trapped in the over-thinking dilemma, producing excessively long responses. Secondly, generating multiple reasoning branches for each request increases memory consumption, which is unsuitable for LLM serving since we can only batch a limited number of requests to process simultaneously. To address this, we present SART, a serving framework for efficient and accurate LLM reasoning. The essential idea is to manage the thinking to be short and right, rather than long. For one thing, we devise a redundant sampling with early stopping approach based on empirical observations and theoretic analysis, which increases the likelihood of obtaining short-thinking responses when sampling reasoning branches. For another, we propose to dynamically prune low-quality branches so that only right-thinking branches are maintained, reducing the memory consumption and allowing us to batch more requests. Experimental results demonstrate that SART not only improves the accuracy of LLM reasoning but also enhances the serving efficiency, outperforming existing methods by up to 28.2 times and on average 15.7 times in terms of efficiency when achieving the same level of accuracy.",
+        "canonical_id": "arXiv:2505.13326",
+        "arxiv_id": "2505.13326",
+        "doi": "10.48550/arXiv.2505.13326",
+        "authors": [
+          "Yu-Hang Wang",
+          "You-He Jiang",
+          "Bin Cui",
+          "Fang-Cheng Fu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.07858",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.07858",
+        "id:arXiv:2505.07858",
+        "title:scaling laws for speculative decoding",
+        "url:https://arxiv.org/abs/2505.07858"
+      ],
+      "record": {
+        "title": "Scaling Laws for Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2505.07858",
+        "year": 2025,
+        "published": "2025-05-08",
+        "abstract": "The escalating demand for efficient decoding in large language models (LLMs) is particularly critical for reasoning-intensive architectures like OpenAI-o3 and DeepSeek-R1, which depend on extended chain-of-thought reasoning. This study investigates speculative decoding techniques through dense LLM architectures to establish foundational insights for accelerating reasoning tasks. While speculative decoding methods leveraging parallel draft-verification cycles have emerged as promising acceleration techniques, the scaling laws governing decoding efficiency remain under-explored compared to conventional backbone LLMs developed through Pretraining->SFT->RLHF training paradigms. In this work, we discover Log-linear Scaling Laws (Theorem 1.1, 1.2 and 1.3) governing draft model acceptance rate (or decoding speed) across three dimensions: pretraining token volume, draft model capacity, and decoding batch size. Building on these laws, we achieve Scylla, which coordinates multi-dimensional scaling for popular LLMs (Llama2/3, Qwen2.5). Empirical validation shows Scylla achieves 1.5-2.2 higher acceptance rate than EAGLE2 and 0.3 higher than EAGLE3 at temperature T = 0, with peak performance gains on summarization and QA tasks (Figure 2). Industrial inference engine deployments demonstrate 2X decoding throughput improvements over EAGLE2 (Table 5), validating the transformative potential of systematic scaling for efficient LLM inference. Code will be released later.",
+        "canonical_id": "arXiv:2505.07858",
+        "arxiv_id": "2505.07858",
+        "doi": "10.48550/arXiv.2505.07858",
+        "authors": [
+          "Siyuan Yan",
+          "Mo Zhu",
+          "Guo-qing Jiang",
+          "Jianfei Wang",
+          "Jiaxing Chen",
+          "Wentai Zhang",
+          "Xiang Liao",
+          "Xiao Cui",
+          "Chen Zhang",
+          "Zhuoran Song",
+          "Ran Zhu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.12397",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.12397",
+        "id:arXiv:2504.12397",
+        "title:activated lora finetuned llms for intrinsics",
+        "url:https://arxiv.org/abs/2504.12397"
+      ],
+      "record": {
+        "title": "Activated LoRA: Fine-tuned LLMs for Intrinsics",
+        "source_url": "https://arxiv.org/abs/2504.12397",
+        "year": 2025,
+        "published": "2025-04-16",
+        "abstract": "Low-Rank Adaptation (LoRA) has emerged as a highly efficient framework for finetuning the weights of large foundation models, and has become the go-to method for data-driven customization of LLMs. Despite the promise of highly customized behaviors and capabilities, switching between relevant LoRAs in a multiturn setting is inefficient, as the key-value (KV) cache of the entire turn history must be recomputed with the LoRA weights before generation can begin. To address this problem, we propose Activated LoRA (aLoRA), an adapter architecture which modifies the LoRA framework to only adapt weights for the tokens in the sequence after the aLoRA is invoked. This change crucially allows aLoRA to accept the base model's KV cache of the input string, meaning that aLoRA can be instantly activated whenever needed in a chain without recomputing the prior keys and values. This enables building what we call intrinsics, i.e. specialized models invoked to perform well-defined operations on portions of an input chain or conversation that otherwise uses the base model by default. We train a set of aLoRA-based intrinsics models, demonstrating competitive accuracy with standard LoRA while significantly improving inference efficiency. We contributed our Activated LoRA implementation to the Huggingface PEFT library https://github.com/huggingface/peft.",
+        "canonical_id": "arXiv:2504.12397",
+        "arxiv_id": "2504.12397",
+        "doi": "10.48550/arXiv.2504.12397",
+        "authors": [
+          "K. Greenewald",
+          "Luis A. Lastras",
+          "Thomas Parnell",
+          "Vraj Shah",
+          "Lucian Popa",
+          "Giulio Zizzo",
+          "Chulaka Gunasekara",
+          "Ambrish Rawat",
+          "David Cox"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.08378",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.08378",
+        "id:arXiv:2504.08378",
+        "title:scaling up ondevice llms via activeweight swapping between dram and flash",
+        "url:https://arxiv.org/abs/2504.08378"
+      ],
+      "record": {
+        "title": "Scaling Up On-Device LLMs via Active-Weight Swapping Between DRAM and Flash",
+        "source_url": "https://arxiv.org/abs/2504.08378",
+        "year": 2025,
+        "published": "2025-04-11",
+        "abstract": "Large language models (LLMs) are increasingly being deployed on mobile devices, but the limited DRAM capacity constrains the deployable model size. This paper introduces ActiveFlow, the first LLM inference framework that can achieve adaptive DRAM usage for modern LLMs (not ReLU-based), enabling the scaling up of deployable model sizes. The framework is based on the novel concept of active weight DRAM-flash swapping and incorporates three novel techniques: (1) Cross-layer active weights preloading. It uses the activations from the current layer to predict the active weights of several subsequent layers, enabling computation and data loading to overlap, as well as facilitating large I/O transfers. (2) Sparsity-aware self-distillation. It adjusts the active weights to align with the dense-model output distribution, compensating for approximations introduced by contextual sparsity. (3) Active weight DRAM-flash swapping pipeline. It orchestrates the DRAM space allocation among the hot weight cache, preloaded active weights, and computation-involved weights based on available memory. Results show ActiveFlow achieves the performance-cost Pareto frontier compared to existing efficiency optimization methods.",
+        "canonical_id": "arXiv:2504.08378",
+        "arxiv_id": "2504.08378",
+        "doi": "10.48550/arXiv.2504.08378",
+        "authors": [
+          "Fucheng Jia",
+          "Zewen Wu",
+          "Shiqi Jiang",
+          "Huiqiang Jiang",
+          "Qian-Xi Zhang",
+          "Yu-Qing Yang",
+          "Yunxin Liu",
+          "Ju Ren",
+          "Deyu Zhang",
+          "Ting Cao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.07605",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.07605",
+        "id:arXiv:2503.07605",
+        "title:seap trainingfree sparse expert activation pruning unlock the brainpower of large language models",
+        "url:https://arxiv.org/abs/2503.07605"
+      ],
+      "record": {
+        "title": "SEAP: Training-free Sparse Expert Activation Pruning Unlock the Brainpower of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2503.07605",
+        "year": 2025,
+        "published": "2025-03-10",
+        "abstract": "Large Language Models have achieved remarkable success across various natural language processing tasks, yet their high computational cost during inference remains a major bottleneck. This paper introduces Sparse Expert Activation Pruning (SEAP), a training-free pruning method that selectively retains task-relevant parameters to reduce inference overhead. Inspired by the clustering patterns of hidden states and activations in LLMs, SEAP identifies task-specific expert activation patterns and prunes the model while preserving task performance and enhancing computational efficiency. Experimental results demonstrate that SEAP significantly reduces computational overhead while maintaining competitive accuracy. Notably, at 50% pruning, SEAP surpasses both WandA and FLAP by over 20%, and at 20% pruning, it incurs only a 2.2% performance drop compared to the dense model. These findings highlight SEAP's scalability and effectiveness, making it a promising approach for optimizing large-scale LLMs.",
+        "canonical_id": "arXiv:2503.07605",
+        "arxiv_id": "2503.07605",
+        "doi": "10.48550/arXiv.2503.07605",
+        "authors": [
+          "Xun Liang",
+          "Hanyu Wang",
+          "Huayi Lai",
+          "Simin Niu",
+          "Shichao Song",
+          "Jiawei Yang",
+          "Jihao Zhao",
+          "Feiyu Xiong",
+          "Bo Tang",
+          "Zhi-Yu Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.00634",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.00634",
+        "id:arXiv:2503.00634",
+        "title:efficiently editing mixtureofexperts models with compressed experts",
+        "url:https://arxiv.org/abs/2503.00634"
+      ],
+      "record": {
+        "title": "Efficiently Editing Mixture-of-Experts Models with Compressed Experts",
+        "source_url": "https://arxiv.org/abs/2503.00634",
+        "year": 2025,
+        "published": "2025-03-01",
+        "abstract": "Mixture-of-Experts (MoE) models have become a key approach for scaling large language models efficiently by activating only a subset of experts during training and inference. Typically, the number of activated experts presents a trade-off: fewer experts reduce computational costs, while more experts improve performance. Recent studies reveal that not all activated experts contribute equally to model performance, with some providing minimal utility, particularly when finetuning pretrained MoE models for specialized downstream tasks. The co-existence of significant and redundant parameters in experts provides us an opportunity to reduce the number of activated experts while maintaining model performance. In this work, we propose the concept of compressed experts, lightweight modules that serve as compact representations of full experts. Our approach preserves the most important experts while replacing other auxiliary activated experts with compressed experts. The reduction of active parameters significantly lowers inference costs while achieving comparable performance. Extensive experiments on models including Phi-MoE and OLMoE demonstrate that compressed experts recover over 90% of full expert performance across various tasks while reducing more than 30% active parameters and saving 20% in inference costs. This approach enables efficient deployment of MoE models in resource-constrained settings and facilitates scaling to larger models with manageable overhead. Our code is available at https://github.com/yifei-he/Compressed-Experts.",
+        "canonical_id": "arXiv:2503.00634",
+        "arxiv_id": "2503.00634",
+        "doi": "10.48550/arXiv.2503.00634",
+        "authors": [
+          "Yifei He",
+          "Yang Liu",
+          "Chen Liang",
+          "H. Awadalla"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.09410",
+      "identity_tokens": [
+        "id:DOI:10.1109/ton.2026.3677371",
+        "id:arXiv:2501.09410",
+        "title:moe2 optimizing collaborative inference for edge large language models",
+        "url:https://arxiv.org/abs/2501.09410"
+      ],
+      "record": {
+        "title": "MoE2: Optimizing Collaborative Inference for Edge Large Language Models",
+        "source_url": "https://arxiv.org/abs/2501.09410",
+        "year": 2025,
+        "published": "2025-01-16",
+        "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities across a wide range of natural language processing tasks. Exploiting the heterogeneous capabilities of edge LLMs is crucial for diverse emerging applications, as it enables greater cost-effectiveness and reduced latency. In this work, we introduce Mixture-of-Edge-Experts (MoE2), a novel collaborative inference framework for edge LLMs. We formulate a joint gating and expert selection problem to optimize inference performance under energy and latency constraints. Unlike conventional MoE problems, LLM expert selection becomes significantly more challenging due to the combinatorial nature and the heterogeneity of edge LLMs across various attributes. To this end, we propose a two-level expert selection mechanism through which we uncover an optimality-preserving property of gating parameters across expert selections. This property enables the decomposition of the training and selection processes, significantly reducing complexity. Furthermore, we leverage the objective’s monotonicity and design a discrete monotonic optimization algorithm for optimal expert selection. We implement edge servers with NVIDIA Jetson AGX Orins and NVIDIA RTX 4090 GPUs, and perform extensive experiments. Our results validate the performance improvements for various LLM models and show that our MoE2 method can achieve optimal trade-offs among different delay and energy budgets, and outperforms baselines under various system resource constraints. We further demonstrate its strong robustness in dynamic, non-stationary environments and its effectiveness in achieving load balancing.",
+        "canonical_id": "arXiv:2501.09410",
+        "arxiv_id": "2501.09410",
+        "doi": "10.1109/TON.2026.3677371",
+        "authors": [
+          "Lyudong Jin",
+          "Yanning Zhang",
+          "Yanhan Li",
+          "Shurong Wang",
+          "H. Yang",
+          "Jian Wu",
+          "Meng Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.15605",
+      "identity_tokens": [
+        "id:DOI:10.1145/3701716.3715490",
+        "id:arXiv:2412.15605",
+        "title:dont do rag when cacheaugmented generation is all you need for knowledge tasks",
+        "url:https://arxiv.org/abs/2412.15605"
+      ],
+      "record": {
+        "title": "Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks",
+        "source_url": "https://arxiv.org/abs/2412.15605",
+        "year": 2024,
+        "published": "2024-12-20",
+        "abstract": "Retrieval-augmented generation (RAG) has gained traction as a powerful approach for enhancing language models by integrating external knowledge sources. However, RAG introduces challenges such as retrieval latency, potential errors in document selection, and increased system complexity. With the advent of large language models (LLMs) featuring significantly extended context windows, this paper proposes an alternative paradigm, cache-augmented generation (CAG) that bypasses real-time retrieval. Our method involves preloading all relevant resources, especially when the documents or knowledge for retrieval are of a limited and manageable size, into the LLM's extended context and caching its runtime parameters. During inference, the model utilizes these preloaded parameters to answer queries without additional retrieval steps. Comparative analyses reveal that CAG eliminates retrieval latency and minimizes retrieval errors while maintaining context relevance. Performance evaluations across multiple benchmarks highlight scenarios where long-context LLMs either outperform or complement traditional RAG pipelines. These findings suggest that, for certain applications, particularly those with a constrained knowledge base, CAG provide a streamlined and efficient alternative to RAG, achieving comparable or superior results with reduced complexity.",
+        "canonical_id": "arXiv:2412.15605",
+        "arxiv_id": "2412.15605",
+        "doi": "10.1145/3701716.3715490",
+        "authors": [
+          "Brian J. Chan",
+          "Chao-Ting Chen",
+          "Jui-Hung Cheng",
+          "Hen-Hsen Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.04504",
+      "identity_tokens": [
+        "id:DOI:10.1145/3843225",
+        "id:arXiv:2412.04504",
+        "title:multibin batching for increasing llm inference throughput",
+        "url:https://arxiv.org/abs/2412.04504"
+      ],
+      "record": {
+        "title": "Multi-Bin Batching for Increasing LLM Inference Throughput",
+        "source_url": "https://arxiv.org/abs/2412.04504",
+        "year": 2024,
+        "published": "2024-12-03",
+        "abstract": "As large language models (LLMs) grow in popularity for their diverse capabilities, improving the efficiency of their inference systems has become increasingly critical. Batching LLM requests is a critical step in scheduling the inference jobs on servers (e.g., GPUs), enabling the system to maximize throughput by allowing multiple requests to be processed in parallel. However, requests often have varying generation lengths, causing resource underutilization, as hardware must wait for the longest-running request in the batch to complete before moving to the next batch. We formalize this problem from a queueing-theoretic perspective, and aim at designing a control policy which is throughput-optimal under a static-batching framework. We propose Multi-Bin Batching, a simple yet effective method that can provably improve LLM inference throughput under this framework by grouping requests with similar (predicted) execution times into predetermined bins. Through a combination of theoretical analysis and experiments, including real-world LLM inference scenarios with static and continuous-batching baselines, we demonstrate that multi-bin batching substantially improves throughput over static batching and quantify the remaining gap to native continuous batching under both oracle and estimated length information.",
+        "canonical_id": "arXiv:2412.04504",
+        "arxiv_id": "2412.04504",
+        "doi": "10.1145/3843225",
+        "authors": [
+          "Ozgur Guldogan",
+          "Jackson Kunde",
+          "Kangwook Lee",
+          "Ramtin Pedarsani"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.18462",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.emnlp-main.844",
+        "id:arXiv:2411.18462",
+        "title:draft model knows when to stop selfverification speculative decoding for longform generation",
+        "url:https://arxiv.org/abs/2411.18462"
+      ],
+      "record": {
+        "title": "Draft Model Knows When to Stop: Self-Verification Speculative Decoding for Long-Form Generation",
+        "source_url": "https://arxiv.org/abs/2411.18462",
+        "year": 2024,
+        "published": "2024-11-27",
+        "abstract": "Conventional speculative decoding (SD) methods utilize a predefined length policy for proposing drafts, which implies the premise that the target model smoothly accepts the proposed draft tokens. However, reality deviates from this assumption: the oracle draft length varies significantly, and the fixed-length policy hardly satisfies such a requirement. Moreover, such discrepancy is further exacerbated in scenarios involving complex reasoning and long-form generation, particularly under test-time scaling for reasoning-specialized models. Through both theoretical and empirical estimation, we establish that the discrepancy between the draft and target models can be approximated by the draft model's prediction entropy: a high entropy indicates a low acceptance rate of draft tokens, and vice versa. Based on this insight, we propose SVIP: Self-Verification Length Policy for Long-Context Speculative Decoding, which is a training-free dynamic length policy for speculative decoding systems that adaptively determines the lengths of draft sequences by referring to the draft entropy. Experimental results on mainstream SD benchmarks as well as reasoning-heavy benchmarks demonstrate the superior performance of SVIP, achieving up to 17% speedup on MT-Bench at 8K context compared with fixed draft lengths, and 22% speedup for QwQ in long-form reasoning.",
+        "canonical_id": "arXiv:2411.18462",
+        "arxiv_id": "2411.18462",
+        "doi": "10.18653/v1/2025.emnlp-main.844",
+        "authors": [
+          "Ziyin Zhang",
+          "Jia-Hao Xu",
+          "Tian Liang",
+          "Xing-Yu Chen",
+          "Zhiwei He",
+          "Rui Wang",
+          "Zhaopeng Tu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.09688",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2411.09688",
+        "id:arXiv:2411.09688",
+        "title:squeezed attention accelerating long context length llm inference",
+        "url:https://arxiv.org/abs/2411.09688"
+      ],
+      "record": {
+        "title": "Squeezed Attention: Accelerating Long Context Length LLM Inference",
+        "source_url": "https://arxiv.org/abs/2411.09688",
+        "year": 2024,
+        "published": "2024-11-14",
+        "abstract": "Emerging Large Language Model (LLM) applications require long input context in order to perform complex tasks like document analysis and code generation. For these long context length applications, the length of the input prompt poses a significant challenge in terms of inference efficiency since the inference costs increase linearly with sequence length. However, for many of these applications, much of the context in the prompt is fixed across different user inputs, thereby providing the opportunity to perform offline optimizations in order to process user inputs quickly, as they are received. We propose Squeezed Attention to accelerate LLM applications where a large portion of the input context is fixed. We first leverage K-means clustering offline to group the keys for the fixed context based on semantic similarity and represent each cluster with a single centroid value. During inference, we compare query tokens from the user input with the centroids to predict which keys from the fixed context are semantically relevant, and then compute exact attention using only the important keys, thereby reducing bandwidth and computational costs. We also present a hierarchical version of our algorithm which can reduce the complexity of attention from linear to logarithmic with respect to the fixed context length. We evaluate our method on long-context benchmarks including LongBench, where it achieves a 3.1$\\times$ reduction in KV budget with no noticeable accuracy loss and up to an 8$\\times$ reduction with only a 0.5 point accuracy gap for the LLaMA-2-7B-32K, LWM-Text-Chat-1M, and Longchat-7B-v1.5-32K models. Futhermore, we implement kernels for centroid comparison and sparse FlashAttention with important keys, achieving more than 4$\\times$ speedups during both the prefill and generation phases for long-context inference. Our code is available at https://github.com/SqueezeAILab/SqueezedAttention.",
+        "canonical_id": "arXiv:2411.09688",
+        "arxiv_id": "2411.09688",
+        "doi": "10.48550/arXiv.2411.09688",
+        "authors": [
+          "Coleman Hooper",
+          "Sehoon Kim",
+          "Hiva Mohammadzadeh",
+          "Monishwaran Maheswaran",
+          "Sebastian Zhao",
+          "June Paik",
+          "Michael W. Mahoney",
+          "Kurt Keutzer",
+          "Amir Gholami"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.18311",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.18311",
+        "id:arXiv:2410.18311",
+        "title:coreinfer accelerating large language model inference with semanticsinspired adaptive sparse activation",
+        "url:https://arxiv.org/abs/2410.18311"
+      ],
+      "record": {
+        "title": "CoreInfer: Accelerating Large Language Model Inference with Semantics-Inspired Adaptive Sparse Activation",
+        "source_url": "https://arxiv.org/abs/2410.18311",
+        "year": 2024,
+        "published": "2024-10-23",
+        "abstract": "Large language models (LLMs) with billions of parameters have sparked a new wave of exciting AI applications. However, their high computational costs and memory demands during inference pose significant challenges. Adaptive sparse activation inference, which activates only a small number of neurons for each token, offers a novel way to accelerate model inference without degrading performance, showing great potential for resource-constrained hardware devices. Nevertheless, existing methods predict activated neurons based on individual tokens with additional MLP, which involve frequent changes in activation maps and resource calls, limiting the acceleration benefits of sparse activation. In this paper, we introduce CoreInfer, an MLP-free adaptive sparse activation inference method based on sentence-level prediction. Specifically, we propose the concept of sentence-wise core neurons, which refers to the subset of neurons most critical for a given sentence, and empirically demonstrate its effectiveness. To determine the core neurons, we explore the correlation between core neurons and the sentence's semantics. Remarkably, we discovered that core neurons exhibit both stability and similarity in relation to the sentence's semantics -- an insight overlooked by previous studies. Building on this finding, we further design two semantic-based methods for predicting core neurons to fit different input scenarios. In CoreInfer, the core neurons are determined during the pre-filling stage and fixed during the encoding stage, enabling zero-cost sparse inference. We evaluated the model generalization and task generalization of CoreInfer across various models and tasks. Notably, on an NVIDIA TITAN XP GPU, CoreInfer achieved a 10.33 times and 2.72 times speedup compared to the Huggingface implementation and PowerInfer, respectively.",
+        "canonical_id": "arXiv:2410.18311",
+        "arxiv_id": "2410.18311",
+        "doi": "10.48550/arXiv.2410.18311",
+        "authors": [
+          "Qinsi Wang",
+          "Saeed Vahidian",
+          "Hancheng Ye",
+          "Jianyang Gu",
+          "Jian-Yi Zhang",
+          "Yiran Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.14731",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.14731",
+        "id:arXiv:2410.14731",
+        "title:matryoshkakv adaptive kv compression via trainable orthogonal projection",
+        "url:https://arxiv.org/abs/2410.14731"
+      ],
+      "record": {
+        "title": "MatryoshkaKV: Adaptive KV Compression via Trainable Orthogonal Projection",
+        "source_url": "https://arxiv.org/abs/2410.14731",
+        "year": 2024,
+        "published": "2024-10-16",
+        "abstract": "KV cache has become a de facto technique for the inference of large language models (LLMs), where tensors of shape (layer number, head number, sequence length, feature dimension) are introduced to cache historical information for self-attention. As the size of the model and data grows, the KV cache can quickly become a bottleneck within the system in both storage and memory transfer. To address this, prior studies usually focus on the first three axes of the cache tensors for compression. This paper supplements them, focusing on the feature dimension axis, by utilizing low-rank projection matrices to transform the cache features into spaces with reduced dimensions. We begin by investigating the canonical orthogonal projection method for data compression through principal component analysis (PCA). We observe the issue with PCA projection where significant performance degradation is observed at low compression rates. To bridge the gap, we propose to directly tune the orthogonal projection matrices with a distillation objective using an elaborate Matryoshka training strategy. After training, we adaptively search for the optimal compression rates for various layers and heads given varying compression budgets. Compared to previous works, our method can easily embrace pre-trained LLMs and hold a smooth tradeoff between performance and compression rate. We empirically witness the high data efficiency of our training procedure and find that our method can sustain over 90% performance with an average KV cache compression rate of 60% (and up to 75% in certain extreme scenarios) for popular LLMs like LLaMA2-7B-base and Mistral-7B-v0.3-base.",
+        "canonical_id": "arXiv:2410.14731",
+        "arxiv_id": "2410.14731",
+        "doi": "10.48550/arXiv.2410.14731",
+        "authors": [
+          "Bokai Lin",
+          "Zi-Hao Zeng",
+          "Zipeng Xiao",
+          "Siqi Kou",
+          "Tianqi Hou",
+          "Xiaofeng Gao",
+          "Hao Zhang",
+          "Zhijie Deng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.09426",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.09426",
+        "id:arXiv:2410.09426",
+        "title:flatquant flatness matters for llm quantization",
+        "url:https://arxiv.org/abs/2410.09426"
+      ],
+      "record": {
+        "title": "FlatQuant: Flatness Matters for LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2410.09426",
+        "year": 2024,
+        "published": "2024-10-12",
+        "abstract": "Recently, quantization has been widely used for the compression and acceleration of large language models (LLMs). Due to the outliers in LLMs, it is crucial to flatten weights and activations to minimize quantization error with equally spaced quantization points. Prior research explores various pre-quantization transformations to suppress outliers, such as per-channel scaling and Hadamard transformation. However, we observe that these transformed weights and activations can still exhibit steep and dispersed distributions. In this paper, we propose FlatQuant (Fast and Learnable Affine Transformation), a new post-training quantization approach that enhances the flatness of weights and activations. Our approach identifies optimal affine transformations for each linear layer, calibrated in hours via a lightweight objective. To reduce runtime overhead of affine transformation, we apply Kronecker product with two lightweight matrices, and fuse all operations in FlatQuant into a single kernel. Extensive experiments demonstrate that FlatQuant establishes a new state-of-the-art benchmark for quantization. For example, it achieves less than 1\\% accuracy drop for W4A4 quantization on the LLaMA-3-70B model, surpassing SpinQuant by 7.5\\%. Additionally, it provides up to 2.3x prefill speedup and 1.7x decoding speedup compared to the FP16 model. Code is available at: https://github.com/ruikangliu/FlatQuant.",
+        "canonical_id": "arXiv:2410.09426",
+        "arxiv_id": "2410.09426",
+        "doi": "10.48550/arXiv.2410.09426",
+        "authors": [
+          "Yuxuan Sun",
+          "Rui-Kang Liu",
+          "Hao-Li Bai",
+          "Han Bao",
+          "Kang Zhao",
+          "Yue-Ning Li",
+          "Jia-Xin Hu",
+          "Xianzhi Yu",
+          "Lu Hou",
+          "Chun Yuan",
+          "Xin Jiang",
+          "Wu-Long Liu",
+          "Jun Yao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.15790",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2409.15790",
+        "id:arXiv:2409.15790",
+        "title:small language models survey measurements and insights",
+        "url:https://arxiv.org/abs/2409.15790"
+      ],
+      "record": {
+        "title": "Small Language Models: Survey, Measurements, and Insights",
+        "source_url": "https://arxiv.org/abs/2409.15790",
+        "year": 2024,
+        "published": "2024-09-24",
+        "abstract": "Small language models (SLMs), despite their widespread adoption in modern smart devices, have received significantly less academic attention compared to their large language model (LLM) counterparts, which are predominantly deployed in data centers and cloud environments. While researchers continue to improve the capabilities of LLMs in the pursuit of artificial general intelligence, SLM research aims to make machine intelligence more accessible, affordable, and efficient for everyday tasks. Focusing on transformer-based, decoder-only language models with 100M-5B parameters, we survey 70 state-of-the-art open-source SLMs, analyzing their technical innovations across three axes: architectures, training datasets, and training algorithms. In addition, we evaluate their capabilities in various domains, including commonsense reasoning, mathematics, in-context learning, and long context. To gain further insight into their on-device runtime costs, we benchmark their inference latency and memory footprints. Through in-depth analysis of our benchmarking data, we offer valuable insights to advance research in this field.",
+        "canonical_id": "arXiv:2409.15790",
+        "arxiv_id": "2409.15790",
+        "doi": "10.48550/arXiv.2409.15790",
+        "authors": [
+          "Zhen-Yan Lu",
+          "Xiang Li",
+          "Dongqi Cai",
+          "Rongjie Yi",
+          "Fang-Ming Liu",
+          "Xiwen Zhang",
+          "N. Lane",
+          "Mengwei Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.05646",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.05646",
+        "id:arXiv:2408.05646",
+        "title:eigen attention attention in lowrank space for kv cache compression",
+        "url:https://arxiv.org/abs/2408.05646"
+      ],
+      "record": {
+        "title": "Eigen Attention: Attention in Low-Rank Space for KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2408.05646",
+        "year": 2024,
+        "published": "2024-08-10",
+        "abstract": "Large language models (LLMs) represent a groundbreaking advancement in the domain of natural language processing due to their impressive reasoning abilities. Recently, there has been considerable interest in increasing the context lengths for these models to enhance their applicability to complex tasks. However, at long context lengths and large batch sizes, the key-value (KV) cache, which stores the attention keys and values, emerges as the new bottleneck in memory usage during inference. To address this, we propose Eigen Attention, which performs the attention operation in a low-rank space, thereby reducing the KV cache memory overhead. Our proposed approach is orthogonal to existing KV cache compression techniques and can be used synergistically with them. Through extensive experiments over OPT, MPT, and Llama model families, we demonstrate that Eigen Attention results in up to 40% reduction in KV cache sizes and up to 60% reduction in attention operation latency with minimal drop in performance. Code is available at https://github.com/UtkarshSaxena1/EigenAttn.",
+        "canonical_id": "arXiv:2408.05646",
+        "arxiv_id": "2408.05646",
+        "doi": "10.48550/arXiv.2408.05646",
+        "authors": [
+          "Utkarsh Saxena",
+          "Gobinda Saha",
+          "Sakshi Choudhary",
+          "Kaushik Roy"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.05467",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.05467",
+        "id:arXiv:2407.05467",
+        "title:the infrastructure powering ibms gen ai model development",
+        "url:https://arxiv.org/abs/2407.05467"
+      ],
+      "record": {
+        "title": "The infrastructure powering IBM's Gen AI model development",
+        "source_url": "https://arxiv.org/abs/2407.05467",
+        "year": 2024,
+        "published": "2024-07-07",
+        "abstract": "AI Infrastructure plays a key role in the speed and cost-competitiveness of developing and deploying advanced AI models. The current demand for powerful AI infrastructure for model training is driven by the emergence of generative AI and foundational models, where on occasion thousands of GPUs must cooperate on a single training job for the model to be trained in a reasonable time. Delivering efficient and high-performing AI training requires an end-to-end solution that combines hardware, software and holistic telemetry to cater for multiple types of AI workloads. In this report, we describe IBM's hybrid cloud infrastructure that powers our generative AI model development. This infrastructure includes (1) Vela: an AI-optimized supercomputing capability directly integrated into the IBM Cloud, delivering scalable, dynamic, multi-tenant and geographically distributed infrastructure for large-scale model training and other AI workflow steps and (2) Blue Vela: a large-scale, purpose-built, on-premises hosting environment that is optimized to support our largest and most ambitious AI model training tasks. Vela provides IBM with the dual benefit of high performance for internal use along with the flexibility to adapt to an evolving commercial landscape. Blue Vela provides us with the benefits of rapid development of our largest and most ambitious models, as well as future-proofing against the evolving model landscape in the industry. Taken together, they provide IBM with the ability to rapidly innovate in the development of both AI models and commercial offerings.",
+        "canonical_id": "arXiv:2407.05467",
+        "arxiv_id": "2407.05467",
+        "doi": "10.48550/arXiv.2407.05467",
+        "authors": [
+          "Talia Gershon",
+          "S. Seelam",
+          "Brian Belgodere",
+          "Milton Bonilla",
+          "Lan Hoang",
+          "D. Barnett",
+          "I-hsin Chung",
+          "Apoorve Mohan",
+          "Ming-Hung Chen",
+          "Lixiang Luo",
+          "Robert Walkup",
+          "C. Evangelinos",
+          "Shweta Salaria",
+          "Marc Dombrowa",
+          "Yoonho Park",
+          "Apo Kayi",
+          "L. Schour",
+          "Alim Alim",
+          "Ali Sydney",
+          "P. Maniotis",
+          "L. Schares",
+          "B. Metzler",
+          "Bengi Karacali-Akyamac",
+          "Sophia Wen",
+          "Tatsuhiro Chiba",
+          "Sunyanan Choochotkaew",
+          "Takeshi Yoshimura",
+          "C. Misale",
+          "Tonia Elengikal",
+          "K. O. Connor",
+          "Zhuoran Liu",
+          "Richard Molina",
+          "L. Schneidenbach",
+          "James Caden",
+          "Christopher Laibinis",
+          "Carlos Fonseca",
+          "Vasily Tarasov",
+          "S. Sundararaman",
+          "Frank B. Schmuck",
+          "S. Guthridge",
+          "J. Cohn",
+          "Marc Eshel",
+          "Paul Muench",
+          "Runyu Liu",
+          "W. Pointer",
+          "D. Wyskida",
+          "Bob Krull",
+          "Ray Rose",
+          "B. Wolfe",
+          "William Cornejo",
+          "J. Walter",
+          "Colm Malone",
+          "Clifford Perucci",
+          "F. Franco",
+          "N. Hinds",
+          "Bob Calio",
+          "Pavel Druyan",
+          "R. Kilduff",
+          "John Kienle",
+          "Connor McStay",
+          "Andrew Figueroa",
+          "M. Connolly",
+          "Edie Fost",
+          "Gina Roma",
+          "J. Fonseca",
+          "Ido Levy",
+          "Michele Payne",
+          "Ryan Schenkel",
+          "A. Malki",
+          "Lion Schneider",
+          "Aniruddha Narkhede",
+          "Shekeba Moshref",
+          "Alexandra Kisin",
+          "Olga Dodin",
+          "Bill Rippon",
+          "Henry Wrieth",
+          "John M. Ganci",
+          "John E. Colino",
+          "Donna Habeger-Rose",
+          "Rakesh Pandey",
+          "Aditya Gidh",
+          "Aditya Gaur",
+          "Dennis Patterson",
+          "Samsuddin Salmani",
+          "Rambilas Varma",
+          "Rumana Rumana",
+          "Shubham Sharma",
+          "Mayank Mishra",
+          "Rameswar Panda",
+          "Aditya Prasad",
+          "Matt Stallone",
+          "Gaoyuan Zhang",
+          "Yikang Shen",
+          "David Cox",
+          "Ruchir Puri",
+          "Dakshit Agrawal",
+          "Drew Thorstensen",
+          "Joel Belog",
+          "Brent Tang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:66bb7d7842b6e932365464bc2d0543a9441255589c0181700af31415476ff3cb",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

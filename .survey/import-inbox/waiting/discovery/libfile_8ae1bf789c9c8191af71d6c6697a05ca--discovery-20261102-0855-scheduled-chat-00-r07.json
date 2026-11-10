@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0855-scheduled-chat-00/r07",
+  "reference_main_sha": "2e6165d8492a62e3317901512a9adc0d8e0c4cac",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.28947",
+      "identity_tokens": [
+        "id:arXiv:2610.28947",
+        "id:DOI:10.48550/arXiv.2610.28947"
+      ],
+      "title": "Is 2:4 Sparsity Still Worth It? Semi-Structured Sparsity versus Quantization in LLM Inference",
+      "reason": "LLM推論で同じbit予算なら2:4半構造疎化とさらに低精度への量子化のどちらが有利かを、sparsity metadataを含めて3世代GPUのkernel・品質・vLLM実行で比較する。著者要旨は低精度が残る限り2:4追加は精度・速度で劣り、最小精度まで到達した後は線形層を1.3～1.7倍高速化すると報告。H100の再訓練2:4 FP8でprefill throughput27%増とする一方、Blackwell FP4では精度回復に失敗した条件も記載。量子化・疎化の実用選択に直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.28947",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:06:55+09:00",
+      "last_checked_at": "2026-11-02T09:06:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07443",
+      "identity_tokens": [
+        "id:arXiv:2610.07443",
+        "id:DOI:10.48550/arXiv.2610.07443"
+      ],
+      "title": "A Shape-Adaptive Architecture with Disaggregated Quantization for Efficient LLM Serving",
+      "reason": "prefillの大規模GEMMとdecodeの小規模GEMVの実行形状に合わせてsystolic arrayのMinimum Efficient Unitを空間/時間方向へ変形し、phaseごとにprefillの両側量子化とdecodeの重みのみ量子化を切り替えるDynaCoreを提案する。runtimeはbatchに応じてMEUを選択する。著者要旨は実serving traceで量子化方式と再構成accelerator比TTFTを3.50/2.97倍、TPOTを36.55/8.02倍改善と報告。推論向けhardware/runtime協調としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.07443",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:06:55+09:00",
+      "last_checked_at": "2026-11-02T09:06:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.30480",
+      "identity_tokens": [
+        "id:arXiv:2610.30480",
+        "id:DOI:10.48550/arXiv.2610.30480"
+      ],
+      "title": "FIGFLEX: A Mixed-Precision FP-INT GEMM Accelerator Co-Designed with Low-Bit LLM Quantization",
+      "reason": "LLMの重みのみ2～3bit混合精度量子化を、dequantしてFP16 GEMMへ渡すのではなく、bit幅に応じて演算量が減るradix-4 FP-INT shift-add datapathで直接処理するFIGFLEXを提案する。channel groupごとの精度割当と入力スケーリングを協調設計する。著者要旨はLlama2-7Bの3/2bit平均でperplexity5.85/8.77、3bit混合精度線形GEMMの面積当たりthroughputがAxCore比1.56倍、FIGLUT比1.42倍と報告。推論量子化アクセラレータとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.30480",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:06:55+09:00",
+      "last_checked_at": "2026-11-02T09:06:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.29873",
+      "identity_tokens": [
+        "id:arXiv:2610.29873",
+        "id:DOI:10.48550/arXiv.2610.29873"
+      ],
+      "title": "HAWK: Heterogeneity-Aware KV Cache Transfer for Efficient GPU-NPU Phase-Disaggregated LLM Inference",
+      "reason": "GPUでprefill、NPUでdecodeを行う異種accelerator分離で、KV tensor layout差と転送経路が障害となる。HAWKはNPU側の最終layoutに合わせたRDMA bufferを確保し、GPUからの直接転送で追加tensor再配置を不要にする。商用GPU/NPU構成の著者要旨は同じSLOでGPU-only比性能差7.88%以内、電力効率最大1.26倍、費用効率最大1.72倍と報告。KV移送と異種デバイスの実装研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.29873",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:06:55+09:00",
+      "last_checked_at": "2026-11-02T09:06:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.40292",
+      "identity_tokens": [
+        "id:arXiv:2610.40292",
+        "id:DOI:10.48550/arXiv.2610.40292"
+      ],
+      "title": "DolphinRouting: Cluster-Level Binary Routing for Disaggregated LLM Inference Serving",
+      "reason": "prefill/decode分離サービングで要求をlocal prefillかremote prefillへ振り分ける二値経路選択を、prompt長・両poolでのcache調整入力長・予測出力長からcluster化し、offline SLO feedbackでclusterごとの方針を学習する。onlineは特徴抽出とtable lookupのみ。著者要旨は実PD clusterの混合/実workloadでDynamo比P90 TTFT5.7～7.9%、P90 TPOT2.6～10.1%低減と報告。分離LLM推論のrouting制御としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.40292",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:06:55+09:00",
+      "last_checked_at": "2026-11-02T09:06:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37810",
+      "identity_tokens": [
+        "id:arXiv:2610.37810",
+        "id:DOI:10.48550/arXiv.2610.37810"
+      ],
+      "title": "ConfluxServe: Reconciling Resource Utilization and Parallelism Efficiency across Prefill and Decode in LLM Serving",
+      "reason": "prefillとdecodeを分離すると補完的な資源が遊び、同一batchへ混ぜると最適parallelismが異なる問題に対し、同じbatch内でoperatorごとに異なるbatch/parallel構成を実行するConflux Parallelismを提案する。ConfluxServeはTTFT/TBT制約下のgoodputを最適化し、著者要旨はproduction workloadで最強比較方式比1.26～1.62倍のgoodputを報告。phase別実行並列性の協調サービングとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.37810",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:06:55+09:00",
+      "last_checked_at": "2026-11-02T09:06:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37230",
+      "identity_tokens": [
+        "id:arXiv:2610.37230",
+        "id:DOI:10.48550/arXiv.2610.37230"
+      ],
+      "title": "TAO: Tool-Aware Joint Scheduling for LLM-Based Agentic Serving",
+      "reason": "GPU推論と外部CPU toolを交互に実行するagent sessionのスケジューリングで、toolの戻り見込み時刻・cache再利用価値・token footprintを統合し、待機sessionのadmissionとGPU配置を動的計画法で同時決定する。著者要旨は12条件で最良比較方式比latency最大26.8%、平均TTFT最大36.3%減、decode throughput最大29.5%増と報告。agentic LLMサービングの依存関係認識型schedulingとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.37230",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:06:55+09:00",
+      "last_checked_at": "2026-11-02T09:06:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07219",
+      "identity_tokens": [
+        "id:arXiv:2610.07219",
+        "id:DOI:10.48550/arXiv.2610.07219"
+      ],
+      "title": "Cascadia: Resident 975B MoE Inference on Eleven AI PCs",
+      "reason": "総975B/活性41BのMoEモデルを64GB共有メモリとIntel Arc内蔵GPUを持つ11台のAI PCへ分散常駐させる実装。OpenVINO融合primitive向け圧縮graph、層ごとのexpert配置、FP16演算とFP32復元、streaming pipelineを構築する。著者要旨は88同時streamでaggregate decode60.29 token/s、全phase込み46.87 token/s、15streamでmedian TTFT6.05秒と報告。データセンター以外のMoE推論実装と制約を示すためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.07219",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:06:55+09:00",
+      "last_checked_at": "2026-11-02T09:06:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36339",
+      "identity_tokens": [
+        "id:arXiv:2610.36339",
+        "id:DOI:10.48550/arXiv.2610.36339"
+      ],
+      "title": "INC-MoE: Overlapping In-Network Collectives and Expert Computation for Expert-Parallel Mixture-of-Experts Inference",
+      "reason": "multi-node MoE expert parallelismのdispatch/combineをswitch側AllGather/ReduceScatterへ移し、token band単位の3段pipelineで通信とexpert FFNを重ねる。vLLMのMoE layer差替えとして実装し、著者要旨は4nodeを模擬したin-network switch環境でOLMoE prefillのTTFT最大33%短縮、throughput最大50%増と報告。実switchでの本番運用ではなく専用acceleratorによるemulationである点を留保しつつaccept。",
+      "source_url": "https://arxiv.org/abs/2610.36339",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:06:55+09:00",
+      "last_checked_at": "2026-11-02T09:06:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.15899",
+      "identity_tokens": [
+        "id:arXiv:2610.15899",
+        "id:DOI:10.48550/arXiv.2610.15899"
+      ],
+      "title": "Lightweight Scheduling Policies for Continuously Batched LLM Serving Across GPU Architectures",
+      "reason": "モデルやkernelを変更せずcontinuous batchingの軽量優先規則を比較する。PyTorch/Hugging Face実行testbenchでL40S/A100/H100、Qwen/Gemma/Mistralの6モデル、ShareGPT由来workloadに対し1152構成を評価する。著者要旨はaging shortest-prompt-firstがL40Sと混合workloadで実用的な有力baselineとし、oracle残長優先でもhardwareとbatchingの影響を無視できないと示す。新規大規模システムではないがLLM serving schedulerの実機比較としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.15899",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:06:55+09:00",
+      "last_checked_at": "2026-11-02T09:06:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

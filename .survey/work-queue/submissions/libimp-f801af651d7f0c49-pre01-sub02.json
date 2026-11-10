@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Exact Makespan Bounds and the GPipe Homogeneity Bias for Heterogeneous LLM Inference Pipelines",
+      "source_url": "https://arxiv.org/abs/2610.21815",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We give an exact critical-path characterization of the makespan of micro-batch pipelines serving LLMs on heterogeneous GPU clusters, quantifying how the classic homogeneous GPipe formula errs. In the pure-forward, communication-free, infinite-buffer setting, T(M) = (M-1)tau_max + Sum_j tau_j, where tau_j is stage j's per-micro-batch service time and M the micro-batch count (Theorem 1). Under asynchronous communication -- modern NCCL-based serving -- it extends to T(M) = Sum_j tau_j + Sum_j d_j + (M-1)tau_max, with Sum_j d_j a purely additive constant (Theorem 2); under blocking communication, T(M) = (M-1)sigma_max + Sum_s sigma_s with sigma_s = tau_s + d_s, so communication enters the steady-state slope iff some d_s>tau_max - tau_s (Theorem 3). These results quantify the GPipe overestimate, decompose the bias into a homogeneity term Sum_j (tau_max - tau_j) and a communication-ignoring term Sum_j d_j, and imply that balancing per-stage compute dominates communication reduction for steady-state throughput. A real system with partial overlap is sandwiched between Theorems 2 and 3, with a closed-form bound on the overlap throughput gain. All claims are validated pointwise (error<10^-9) on eleven configurations and a 1.6x10^5-point fuzz, including a mixed RTX 5090/3090/GTX 1070 partition. We situate the results in flow-shop scheduling and list open extensions: bandwidth-limited communication, bounded buffers, prefill-decode interleaving.",
+      "identifiers": [
+        "SemanticScholar:1c26318566bf2cc01977d1842e9aae5ce479e5a3"
+      ],
+      "semantic_scholar_id": "1c26318566bf2cc01977d1842e9aae5ce479e5a3",
+      "canonical_id": "arXiv:2610.21815",
+      "arxiv_id": "2610.21815",
+      "authors": [
+        "Wen-Bo Zhu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      },
+      "reason": "異種GPU上のLLM microbatch pipelineで均質GPipe公式がmakespanを過大推定する問題に対し、stage service timeと通信遅延のcritical pathを解析する。非blocking通信では通信が定数項に入り、blocking通信では遅いstageの定常傾きへ加わる条件を導く。一次要旨はRTX5090/3090/GTX1070混成を含む11構成・16万点fuzzで解析式を検証。異種GPU推論pipelineの性能モデルとしてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Beyond Hotness: High-Resolution Memory Characterization of Cloud and LLM Workloads for Tiered Memory with ARM SPE",
+      "source_url": "https://arxiv.org/abs/2610.32711",
+      "year": 2026,
+      "published": "2026-10-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Memory demands from data analytics and LLM workloads grow rapidly, driving up memory costs in cloud and data centers. Multi-tier memory has emerged as a promising solution to balance performance and cost. However, effectively leveraging it requires a deep understanding of workload memory behaviors. This work introduces a high-resolution memory characterization methodology for analyzing workload-specific opportunities for multi-tier memory usage. In response to the increasing deployment of ARM-based processors in data centers, we implement our methodology using the recent Statistical Profiling Extension (SPE) for ARM. By characterizing eight memory-intensive workloads from CloudSuite and LLM applications, we identify region-specific access patterns, evaluate the effectiveness of cloud-oriented cache hierarchies, and propose new metrics based on memory idle periods and latency profiles to determine suitable data placement for tiered memory.",
+      "identifiers": [
+        "SemanticScholar:5318ae3318d3eeae2855a77681ff122d80b7f8b0"
+      ],
+      "semantic_scholar_id": "5318ae3318d3eeae2855a77681ff122d80b7f8b0",
+      "canonical_id": "arXiv:2610.32711",
+      "arxiv_id": "2610.32711",
+      "authors": [
+        "Jie Ren",
+        "Ivy Bo Peng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ARM SPEを用いてCloudSuiteとLLMの8 workloadを高分解能にprofileし、region別のaccess pattern・memory idle period・latency profileからtiered memoryの配置適性を判定する方法を提示。一次要旨は従来のhotness指標だけでは見えないtiering機会を調査する。LLM推論を含むDRAM階層配置の測定基盤としてaccept。ただし個別のLLM throughput改善量は要旨未報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f801af651d7f",
+    "round": "libimp-f801af651d7f0c49-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f801af651d7f0c49-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f801af651d7f0c49-pre01.json",
+    "receipt": "sha256:35eaacd6394e2748d484bf4bc752d36ff55e79e7b2e8930ed1157bd58b3e5ca9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f801af651d7f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

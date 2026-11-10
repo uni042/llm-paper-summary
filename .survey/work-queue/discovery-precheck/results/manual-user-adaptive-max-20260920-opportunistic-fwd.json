@@ -1,0 +1,80 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-user-adaptive-max-20260920-opportunistic-fwd",
+  "collector_id": "manual-user-adaptive-max-opportunistic-fwd",
+  "run_key": "manual-user-adaptive-max-2026-09-20-more-seeds",
+  "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2511.02237 (batch-aware opportunistic expert activation)",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2511.02237/citations",
+  "target_unseen": 50,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6bc6c48c13d297627989002ee13f9c690d128896",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T11:50:33.375519+00:00",
+  "results": [
+    {
+      "title": "dMoE: dLLMs with Learnable Block Experts",
+      "source_url": "https://www.semanticscholar.org/paper/1faad461feece1366e39cb8e296014426f7b72ab",
+      "year": 2026,
+      "published": "2026-05-29",
+      "abstract": "Diffusion Large Language Models (dLLMs) have recently emerged as a promising alternative to autoregressive models, offering competitive performance while naturally supporting parallel decoding. However, as dLLMs are increasingly integrated with Mixture-of-Experts (MoE) architectures to scale model capacity, a fundamental mismatch arises between block parallel decoding and token-level expert selection. Specifically, each dLLM forward pass processes multiple tokens with bidirectional dependencies, whereas conventional MoE layers route each token independently. This mismatch substantially increases the number of uniquely activated experts, making inference increasingly memory-bound. To address this, we propose dMoE, a simple yet effective block-level MoE framework. The central idea of dMoE is to aggregate token-level expert distributions within each block into a unified block-level expert distribution, which is then used to guide expert routing in a more coherent manner. In this way, dMoE substantially reduces the number of uniquely activated experts during inference without sacrificing performance, thereby mitigating the memory-bound bottleneck. Extensive experiments across a variety of benchmarks demonstrate the effectiveness of dMoE. On average, dMoE reduces the number of uniquely activated experts from 69.5 to 14.6 while retaining 99.11% of the original performance. Meanwhile, it reduces memory usage by 76.64% to 79.84% and achieves 1.14$\\times$ to 1.66$\\times$ end-to-end latency speedup. Code is available at: https://github.com/fscdc/dMoE",
+      "canonical_id": "arXiv:2605.30876",
+      "arxiv_id": "2605.30876",
+      "authors": [
+        "Sicheng Feng",
+        "Zigeng Chen",
+        "Gongfan Fang",
+        "Xinyin Ma",
+        "Xinchao Wang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.30876",
+      "identity_tokens": [
+        "id:arXiv:2605.30876",
+        "title:dmoe dllms with learnable block experts",
+        "url:https://www.semanticscholar.org/paper/1faad461feece1366e39cb8e296014426f7b72ab"
+      ],
+      "record": {
+        "title": "dMoE: dLLMs with Learnable Block Experts",
+        "source_url": "https://www.semanticscholar.org/paper/1faad461feece1366e39cb8e296014426f7b72ab",
+        "year": 2026,
+        "published": "2026-05-29",
+        "abstract": "Diffusion Large Language Models (dLLMs) have recently emerged as a promising alternative to autoregressive models, offering competitive performance while naturally supporting parallel decoding. However, as dLLMs are increasingly integrated with Mixture-of-Experts (MoE) architectures to scale model capacity, a fundamental mismatch arises between block parallel decoding and token-level expert selection. Specifically, each dLLM forward pass processes multiple tokens with bidirectional dependencies, whereas conventional MoE layers route each token independently. This mismatch substantially increases the number of uniquely activated experts, making inference increasingly memory-bound. To address this, we propose dMoE, a simple yet effective block-level MoE framework. The central idea of dMoE is to aggregate token-level expert distributions within each block into a unified block-level expert distribution, which is then used to guide expert routing in a more coherent manner. In this way, dMoE substantially reduces the number of uniquely activated experts during inference without sacrificing performance, thereby mitigating the memory-bound bottleneck. Extensive experiments across a variety of benchmarks demonstrate the effectiveness of dMoE. On average, dMoE reduces the number of uniquely activated experts from 69.5 to 14.6 while retaining 99.11% of the original performance. Meanwhile, it reduces memory usage by 76.64% to 79.84% and achieves 1.14$\\times$ to 1.66$\\times$ end-to-end latency speedup. Code is available at: https://github.com/fscdc/dMoE",
+        "canonical_id": "arXiv:2605.30876",
+        "arxiv_id": "2605.30876",
+        "authors": [
+          "Sicheng Feng",
+          "Zigeng Chen",
+          "Gongfan Fang",
+          "Xinyin Ma",
+          "Xinchao Wang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:7bfe74dc8eab58b4461fc512ab91d7fa330b38bc13ce9710f1e1109551c14be6",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

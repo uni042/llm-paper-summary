@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad74d02b3999b70e-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.10071",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.10071",
+    "identity_tokens": [
+      "arXiv:2212.10071"
+    ],
+    "reason": "大規模teacher LLMが生成したchain-of-thought rationaleで小型modelをfine-tuneするFine-tune-CoTを提案しreasoning能力を改善するdistillation/training研究。deployment sizeへの動機はあるが、推論runtime・serving最適化方式を評価しない。",
+    "first_checked_at": "2026-10-05T01:01:02+00:00",
+    "last_checked_at": "2026-10-05T16:24:17+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+    ],
+    "title": "Large Language Models Are Reasoning Teachers"
+  },
+  "processed_at": "2026-10-05T16:24:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad74d02b3999",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

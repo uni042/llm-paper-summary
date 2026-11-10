@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8a8741cb8f99b4cd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.03051",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.03051",
+    "identity_tokens": [
+      "arXiv:2410.03051"
+    ],
+    "reason": "一次要旨では長い動画系列の視覚トークンを統合して入力トークン数を減らす方式を採用しており、マルチモーダルLLMの入力圧縮という推論最適化に接点がある。一方、中心貢献は動画詳細キャプションモデルとVDC評価基盤で、定量結果はキャプション品質（Flickr30k CIDEr 88.9等）に重点があり、汎用LLM配信のトークン生成速度・KVメモリ・サービング負荷改善を直接示すものではないためborderlineとする。",
+    "first_checked_at": "2026-10-21T15:27:51+00:00",
+    "last_checked_at": "2026-10-21T15:27:51+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
+  },
+  "processed_at": "2026-10-21T15:27:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8a8741cb8f99",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

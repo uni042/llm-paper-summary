@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c2956ddac5d7fe79-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.15724",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.15724",
+    "identity_tokens": [
+      "arXiv:2303.15724"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2303.15724. Abstract summary: In this paper, we introduce SDM-UniPS, a groundbreaking Scalable, Detailed, Mask-free, and Universal Photometric Stereo network. Our approach can recover astonishingly intricate surface normal maps, rivaling the quality of 3D scanners, even when images are captured under unknown, spatially-varying lighting conditions in uncontro Out of scope: Photometric stereo vision reconstruction.",
+    "first_checked_at": "2026-10-05T12:35:29+00:00",
+    "last_checked_at": "2026-10-05T12:35:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+    ],
+    "title": "Scalable, Detailed and Mask-Free Universal Photometric Stereo"
+  },
+  "processed_at": "2026-10-05T12:35:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c2956ddac5d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-22d49d41be743680-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2402.10462",
+  "reason": "4bit量子化と動的LoRAを組み合わせ、複数rankを1回のfine-tuningで学習することが主目的。推論時のrank選択柔軟性はあるが、主要貢献と評価は学習メモリ・fine-tuning効率なので凍結範囲。",
+  "title": "QDyLoRA: Quantized Dynamic Low-Rank Adaptation for Efficient Large Language Model Tuning",
+  "identity_tokens": [
+    "arXiv:2402.10462",
+    "DOI:10.48550/arXiv.2402.10462"
+  ],
+  "linked_from": [
+    "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-22d49d41be74",
+  "source_precheck_request_id": null
+}

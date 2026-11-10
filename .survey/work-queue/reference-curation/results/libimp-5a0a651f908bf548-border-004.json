@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5a0a651f908bf548-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.03320",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.03320",
+    "identity_tokens": [
+      "arXiv:2610.03320"
+    ],
+    "reason": "The paper studies inference-time refinement steps and best-of-K search in masked-diffusion text-to-speech, evaluating intelligibility and speaker identity over model sizes and step budgets. It finds the two compute sources help different capabilities. This is speech synthesis rather than LLM/VLM inference, and the linked reasoning-compute family is only an analogy; retain borderline.",
+    "first_checked_at": "2026-10-06T08:40:57+00:00",
+    "last_checked_at": "2026-10-06T08:40:57+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Refinement Buys Intelligibility, Search Buys Identity: What Test-Time Compute Buys in Masked-Diffusion TTS"
+  },
+  "processed_at": "2026-10-06T08:40:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5a0a651f908b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

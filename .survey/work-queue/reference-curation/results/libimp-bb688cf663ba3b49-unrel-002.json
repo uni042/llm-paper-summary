@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bb688cf663ba3b49-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.19412",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.19412",
+    "identity_tokens": [
+      "arXiv:2305.19412"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2305.19412. Primary abstract studies ConvNet knowledge distillation for image classification, a training task outside language-model inference.",
+    "first_checked_at": "2026-10-05T14:37:31+00:00",
+    "last_checked_at": "2026-10-05T14:37:31+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+    ],
+    "title": "Are Large Kernels Better Teachers than Transformers for ConvNets?"
+  },
+  "processed_at": "2026-10-05T14:37:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb688cf663ba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

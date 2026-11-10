@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-475cacdc9e43b223-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.22448",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.22448",
+    "identity_tokens": [
+      "arXiv:2607.22448"
+    ],
+    "reason": "一次要旨はagent pipelineのinformation-omission attributionを測るbenchmarkであり、inference efficiency手法ではない。context-length/quantizationとのomission関連は品質挙動の分析。",
+    "first_checked_at": "2026-10-05T10:01:02+00:00",
+    "last_checked_at": "2026-10-05T10:01:02+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md"
+    ],
+    "title": "Where Facts Go Missing: A Layerwise Taxonomy and Per-Layer Attribution of Information Omission in Air-Gapped LLMAgent Pipelines"
+  },
+  "processed_at": "2026-10-05T10:01:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-475cacdc9e43",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

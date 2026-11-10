@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8b41d0fbf5b739ee-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.12365",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.12365",
+    "identity_tokens": [
+      "arXiv:2604.12365"
+    ],
+    "reason": "Adaptive Spiking Neurons add learnable layer-wise membrane thresholds; 19 vision/language datasets are evaluated. Energy estimates are theoretical, not measured on neuromorphic hardware, with DVS validation left open. General SNNs do not establish generative LLM inference performance; weak architecture adjacency only.",
+    "first_checked_at": "2026-10-06T10:45:44+00:00",
+    "last_checked_at": "2026-10-06T10:45:44+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Spiking Neurons for Vision and Language Modeling"
+  },
+  "processed_at": "2026-10-06T10:45:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8b41d0fbf5b7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

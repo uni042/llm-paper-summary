@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-af30c15b3af47400-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.11722",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.11722",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.11722",
+      "arXiv:2605.11722"
+    ],
+    "reason": "一次要旨では、画像生成プロンプトの物体・数・属性・関係を述語へ変換し、画像の検証結果に応じて局所編集または再生成を選択する。GenEval2の画像合成条件達成率と画像モデル呼出し数を改善するが、対象は画像生成品質の制御であり、LLM推論サービングの計算・メモリ・通信基盤の新規手法ではない。inference-timeの語だけでは収録対象とならない。",
+    "first_checked_at": "2026-10-13T21:31:16+00:00",
+    "last_checked_at": "2026-10-23T04:50:03+00:00",
+    "linked_from": [],
+    "title": "EPIC: Efficient Predicate-Guided Inference-Time Control for Compositional Text-to-Image Generation"
+  },
+  "processed_at": "2026-10-23T04:50:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-af30c15b3af4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58612a04b67e365c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.21407",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.21407",
+    "identity_tokens": [
+      "arXiv:2601.21407"
+    ],
+    "reason": "一次資料の要旨を確認。Neuroscience and artificial intelligence represent distinct yet complementary pathways to general intelligence. However, amid the ongoing boom in AI research and applications, the translational synergy between these two fields has grown increasingly elusive-hampered by a widening infrastructural incompatibility: modern AI frameworks lack native support for biophysical realism, while neural simulat",
+    "first_checked_at": "2026-10-06T21:12:49+00:00",
+    "last_checked_at": "2026-10-06T21:12:49+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "BrainFuse: a unified infrastructure integrating realistic biological modeling and core AI methodology"
+  },
+  "processed_at": "2026-10-06T21:12:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58612a04b67e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

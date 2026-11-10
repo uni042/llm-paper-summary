@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c6820282018722f7-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:4de76b074b39cb77614f40d5c70a06924a37c7f6",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:4de76b074b39cb77614f40d5c70a06924a37c7f6",
+    "identity_tokens": [
+      "SemanticScholar:4de76b074b39cb77614f40d5c70a06924a37c7f6",
+      "id:SemanticScholar:4de76b074b39cb77614f40d5c70a06924a37c7f6"
+    ],
+    "reason": "ICML 2024の公式PMLR一次要旨を確認。Transformerの注意に長距離畳み込み・SSM由来のlocalityとsmoothnessの帰納バイアスを追加し、Long Range Arenaで長距離依存の性能を改善、追加学習パラメータを不要とする。長文脈attention構造と計算効率の技術的関連はあるが、原著要旨の主評価はLRAの予測性能であり、現代のLLM autoregressive decoding、KV cache、serving throughputや実機レイテンシを直接評価した研究ではない。attention系の隣接研究としてborderline。",
+    "first_checked_at": "2026-11-02T05:57:31+00:00",
+    "last_checked_at": "2026-11-02T05:57:31+00:00",
+    "linked_from": [
+      "sparse attention / long-context Transformer",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Viewing Transformers Through the Lens of Long Convolutions Layers"
+  },
+  "processed_at": "2026-11-02T05:57:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c68202820187",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-46fdf4ea0be27c64-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/hpca68181.2026.11408525",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/hpca68181.2026.11408525",
+    "identity_tokens": [
+      "DOI:10.1109/hpca68181.2026.11408525"
+    ],
+    "reason": "Focus targets streaming VLM inference; transfer to general LLM serving is uncertain.",
+    "first_checked_at": "2026-10-06T03:49:07+00:00",
+    "last_checked_at": "2026-10-06T03:49:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Focus: A Streaming Concentration Architecture for Efficient Vision-Language Models"
+  },
+  "processed_at": "2026-10-06T03:49:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-46fdf4ea0be2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

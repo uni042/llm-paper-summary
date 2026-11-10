@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f69a3db302d64d9-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.12354",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.12354",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.12354",
+      "arXiv:2402.12354"
+    ],
+    "reason": "LoRAのA/B行列へ異なる学習率を与えてfine-tuningを高速・高品質化する学習手法で、最終適用先が学習工程そのものの高速化である凍結対象。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+    ],
+    "title": "LoRA+: Efficient Low Rank Adaptation of Large Models"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f69a3db302d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,177 @@
+# PIM / Near-Data Acceleration
+
+メモリ内処理（PIM）、メモリ近傍処理、ストレージ内処理（in-storage）、計算機能を持つHBM/NAND/DIMMなどへLLM演算を寄せ、データ移動そのものを減らす推論アクセラレーション研究をまとめる。
+
+## 分類境界
+
+主要貢献がPIM/CIM、near-memory、in-storage、memory-side computeによってLLM演算・検索・逆量子化・attention等をデータ近傍で実行する研究を含め、受動的なSSD/CPUへの保存・転送だけのoffloadは含めない。
+
+### 含める研究
+
+- HBM/DIMM/NAND上のPIM・CIM
+- near-memory weight dequantization
+- in-storage retrieval／memory-side attention
+
+### 含めない研究
+
+- 受動的なSSD/NVMe offload
+- 計算機能を持たない単なる階層メモリ配置
+
+## 近傍系統
+
+- [01-offload-hierarchical-memory](../01-offload-hierarchical-memory/)
+- [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
+- [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
+
+<!-- survey:auto:start -->
+## 自動生成の論文一覧（33本）
+
+[この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
+
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-12〜2026-11**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
+
+### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
+
+- **2026-03 · [PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System](2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  長文脈のLLMがトークンを一つずつ生成するとき、注意機構はこれまでの各トークンに対応する鍵・値キャッシュ（KV キャッシュ）を読み返す。動的PIMアクセス（動的 PIM Access; DPA）は生成中のトークン数に応じたループとアドレス変換を使い、KVキャッシュを実行時に1MB単位で追加する。
+
+- **2026-03 · [Hardware-Software Co-design for 3D-DRAM-based LLM Serving Accelerator](2026-2603.04797-hardware-software-co-design-for-3d-dram-based-llm-serving-accelerator.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  Heliosは、動的な大規模言語モデルの推論提供に適した三次元積層DRAM型の近メモリ処理装置を、記憶管理・演算・通信の三層から共同設計する研究である。Heliosは鍵・値キャッシュを64トークンなどの細粒度ブロックに分割し、4×4個の処理エンジンへ分散配置する。
+
+- **2025-12 · [KVNAND: Efficient On-Device Large Language Model Inference Using DRAM-Free In-Flash Computing](2025-2512.03608-kvnand-dram-free-in-flash-computing.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  重みとKVキャッシュを計算機能付き三次元NANDに置き、短文脈用の共置型と長文脈用の分離型を使い分けて、フラッシュ内注意計算とページ配置を最適化する。
+
+### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-09 · [LLM Inference in a Flash!](2026-2609.16161-llm-inference-in-a-flash.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  フラッシュ内計算向けに整数のみのLLM推論と静的辞書型KV圧縮を共同設計し、品質をほぼ維持したまま動的KV転送を約15分の1へ削減する。
+
+- **2026-09 · [AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding](2026-2609.09823-amend-audited-margins-enable-nonblocking-drops-in-gpu-pim-llm-decoding.md)**  
+  実装：[✓](https://github.com/Miketan1/AMEND_code) ・ リポジトリ内被引用：0  
+  過去ステップで監査した注意マージンから次の生存ブロックを先行予測し、GPUの生存ブロック計算と高帯域メモリ内計算による補集合監査を並列化して、キー転送と直列待ちを同時に削減する長文デコード設計。
+
+- **2026-08 · [Rethinking Unified Memory for NPU-PIM Systems: Dual-View Memory for Dynamic Inference of LLM](2026-2608.06989-dual-view-memory-npu-pim.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  NPU/PIMで共有する物理配置と各デバイスが見る論理配置を分離し、実行時の演算特性に応じて実行先を切り替えても帯域を落とさない統合メモリ方式。
+
+- **2026-08 · [NOVA: Technology-Architecture Co-Design of Near-Memory Processing for Attention-SSM-MoE Hybrid LLM Inference](2026-2608.22613-nova-technology-architecture-co-design-near-memory-hybrid-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  4F² DRAMと近メモリ演算器を組み合わせ、注意・SSM・MoEごとに実行層を選び並列化して、GPU比較で平均4.5倍のデコードスループットを報告する推論アクセラレータ。
+
+- **2026-08 · [H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU](2026-h3-attn.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  積層DRAMには多数のバンクと高い内部帯域があっても、使われないバンクの帯域は活用できない。KVキャッシュをロジックブロック群へインターリーブ配置し、局所または全体のGather/All-Gather/Reduce-Scatterで部分注意結果を合成する。
+
+- **2026-08 · [Bridging Efficiency and Scalability in LLM System via 3D Hybrid PIM with 2D In-Transit Computation](2026-2509.13710-bridging-efficiency-and-scalability-in-llm-system-via-3d-hybrid-pim-with.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  メモリ内演算（processing-in-メモリ、PIM）は重みや中間値の移動を抑えるが、DRAM上のPIMだけでは高バッチ時の行列演算性能が不足し、SRAM上のPIMだけではモデル重みを収める容量が足りない。さらにSoftmax、回転位置埋め込み、正規化のような非線形演算を中央の処理器へ集める方式では、長い文脈でバンク間の移動が増える。
+
+- **2026-07 · [StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration](2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  HBMベースダイ上で重みを読み出しながら逆量子化し、GPU側CUDA逆量子化と中間重みの余分なHBM往復を除去する近メモリ推論機構。
+
+- **2026-07 · [Selective KV Cache Protection for Noise-Resilient LLM Inference on Analog Compute-In-Memory Systems](2026-2607.29076-selective-kv-cache-protection-analog-cim-noise-resilient-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  アナログ計算の雑音で劣化しやすい先頭・直近のKV項目だけをデジタルに保護し、中間項目を一括移行してアナログ計算へ送り、精度と書込み行稼働率を両立する。
+
+- **2026-07 · [D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation](2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  RAGのベクトル検索を三次元NAND配列内の二重境界検出へ変換し、候補埋め込みの外部読出しを避けてCPU比最大41.7倍高速化する。
+
+- **2026-05 · [NASiC: 3D NAND-based CAM-Selected Multibit CIM Architecture for Efficient On-Device Mixture-of-Experts LLM Inference](2026-2605.23294-nasic-3d-nand-based-cam-selected-multibit-cim-architecture-for-efficient-on-device-mixture-of-experts-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  三次元NAND内部で専門家番号の照合と選択専門家の計算を一体化し、多値記憶とブロック並列化によって専門家混合モデルを高密度に直接実行する。
+
+- **2026-04 · [Rethinking Compute Substrates for 3D-Stacked Near-Memory LLM Decoding: Microarchitecture–Scheduling Co-Design](2026-2604.04253-rethinking-compute-substrates-for-3d-stacked-near-memory-llm-decoding-mi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  提案方式SNAKEは、同じ積層メモリ構成と処理ユニット面積を用いた回路合成・性能モデル上で、積和演算木方式比の復号速度平均2.90倍、ロジックダイのエネルギー効率2.40倍を報告する。
+
+- **2026-03 · [PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies](2026-2603.09216-pim-sherpa-software-method-for-on-device-llm-inference-by-resolving-pim-memory-attribute-and-layout-inconsistencies.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  PIM向け重みを一つだけ保持し、キャッシュ可能バッファへの実行時並べ替えで前処理と生成の属性・配置矛盾を解消してDRAM容量を約半減する。
+
+- **2025-12 · [CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference](2026-2601.19908-chime-chiplet-near-memory-mllm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚入力で膨らむKVキャッシュと演算重みをDRAM・RRAMへ役割分担し、近メモリ実行と局所性を保つ演算融合で端末MLLM推論のデータ移動を抑える設計を示す。
+
+### 2年前（2024-12〜2025-11）
+
+- **2025-10 · [Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving](2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：12  
+  Mono3D DRAM＋近メモリ処理をGPUと統合し、層ごとの遅延差を8-階層化、話題別の高頻度 専門家配置へ利用してGPU比最大8.29倍の復号スループットを示す。
+
+- **2025-09 · [Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM Inference](2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  長文脈エージェント推論の帯域・容量の二重メモリ壁に対し、平坦化シストリック配列、非対称4ビット量子化、FlashAttention専用支援を共同設計し、シミュレーションでA100比最大2.23倍、TPU v6e比最大4.70倍のスループットを示す。
+
+- **2025-06 · [AiF: Accelerating On-Device LLM Inference Using In-Flash Processing](2026-21d5070d498a-aif-accelerating-on-device-llm-inference-using-in-flash-processing.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  LLM重みの行列ベクトル積をNAND内部へ移し、電荷再利用読み出しとLSB優先符号化でSSD内部帯域を引き出して端末推論を高速化する。
+
+- **2025-02 · [PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System](2025-2502.15470-papi-exploiting-dynamic-parallelism-in-large-language-model-decoding-wit.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  PAPIは、大規模言語モデルの復号時に生じる同じ全結合層でも並列度によって計算律速とメモリ律速が入れ替わる現象を、実行先の動的選択へ結び付けたメモリ内処理（Processing-in-メモリ、PIM）型の異種計算機構である。
+
+- **2025-04 · [CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM](2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  KV容量と注意帯域を同時拡張できるDIMM-PIMへデコード注意を分離し、GPU全結合層と重畳してHBM-PIM比最大5.15倍のスループットを得る。
+
+- **2025-11 · [LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs](2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md)**  
+  実装：[✓](https://github.com/LUT-FPGA/LUT-LLM) ・ リポジトリ内被引用：2  
+  活性値・重み共同ベクトル量子化で線形層を2次元表引きへ変換し、AMD V80上のQwen3 1.7BでGPU比1.10〜3.29倍高速化を示す。
+
+- **2025-03 · [Reimagining Memory Access for LLM Inference: Compression-Aware Memory Controller Design](2025-2503.18869-reimagining-memory-access-for-llm-inference-compression-aware-memory-controller-design.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  重みとKVキャッシュをビットプレーン・チャネル単位に再配置して無損失圧縮を効かせ、動的量子化時は必要ビットだけを読むメモリ制御器で容量・帯域・エネルギーを同時に削減する。
+
+- **2025-11 · [Sangam: Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing](2025-2511.12286-sangam-chiplet-based-dram-pim-accelerator-with-cxl-integration-for-llm-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LLMの復号段階では、一つの出力トークンを作るたびに大きな重み行列と過去のKVキャッシュを読み出す。バッチが小さいと行列積は実質的に行列とベクトルの積になり、GPUの大量の演算器を十分に使えないまま外部メモリの帯域が律速になる。GPUを使わずに推論する構成と、計算集約的な処理をGPUへ任せる協調構成の両方を設計対象とする。
+
+- **2025-09 · [HPIM: Heterogeneous Processing-In-Memory-based Accelerator for Large Language Models Inference](2025-2509.12993-hpim-heterogeneous-processing-in-memory-based-accelerator-for-large-lang.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  HPIMは、単一リクエスト・単一バッチのLLMデコードにおいて、重みを毎トークン読み込むGEMVの帯域制約と、KVキャッシュを使う注意演算の低遅延・複雑な演算制約を、異なるPIM（Processing-In-メモリ）メモリ階層で処理するハードウェア・ソフトウェア協調設計である。
+
+- **2025-03 · [MVDRAM: Enabling GeMV Execution in Unmodified DRAM for Low-Bit LLM Acceleration](2025-2503.23817-mvdram-enabling-gemv-execution-in-unmodified-dram-for-low-bit-llm-accele.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MVDRAMは、メモリそのものを演算資源にすることで、大規模言語モデル（LLM）の逐次生成における重み読み出しを減らす実機システムである。著者らはXilinx Alveo U200上のメモリ制御器と市販DDR4-2400モジュール4枚で実験し、2ビットLlama2-13Bのトークン生成処理量をCPU基準比2.18倍、4ビットでは1.31倍にした。
+
+### 3年前（2023-12〜2024-11）
+
+- **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
+  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：30  
+  一方、各要求が別々の過去トークン列を持つ多頭注意では、問い合わせベクトルと鍵キャッシュ、注意重みと値キャッシュの積が、メモリ帯域に制約されやすい行列とベクトルの積（GEMV）になる。NeuPIMsは、この非対称性をNPUとPIMの役割分担で解決するだけでなく、従来のNPU+PIM結合方式では双方を同時に動かせないという問題まで対象にする。
+
+- **2024-04 · [AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference](2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md)**  
+  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：28  
+  GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
+
+- **2024-04 · [IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System](2024-2410.15008-ianus-integrated-accelerator-based-on-npu-pim-unified-memory-system.md)**  
+  実装：✓ ・ リポジトリ内被引用：9  
+  IANUSは、大規模言語モデル（LLM）の入力処理と逐次生成を、演算特性の異なる二種類のハードウェアへ分担させる推論専用システムである。論文の主結果は、GPT-2系列におけるNVIDIA A100比平均6.2倍、先行DFX比平均3.2倍の推論高速化である。
+
+- **2024-09 · [Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching](2024-2409.01141-duplex-a-device-for-large-language-models-with-mixture-of-experts-groupe.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  グループ化クエリ注意（Grouped-Query 注意機構; GQA）はKVキャッシュを減らすが、各要求の注意計算は依然として独立したKVにアクセスするため、メモリ帯域が性能を制限する。著者はMICRO 2024の論文で、GPU基準に対し最大2.67倍の推論処理量、最大2.57倍の端から端までの遅延改善、最大42.03%のエネルギー削減を報告する。
+
+- **2024-10 · [A Survey: Collaborative Hardware and Software Design in the Era of Large Language Models](2024-2410.07265-a-survey-collaborative-hardware-and-software-design-in-the-era-of-large-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LLM学習・推論を対象に、演算融合、KVメモリ管理、連続バッチ、事前入力と復号の分離、MoE、注意近似、投機的復号、量子化・疎性、PIM/CIMなどをアルゴリズムとハードウェアの協調設計という軸で整理する2024年のレビュー。
+
+### 4年前（2022-12〜2023-11）
+
+- **2023-08 · [Samsung PIM/PNM for Transformer based AI: Energy Efficiency on PIM/PNM Cluster](2023-0a1390643d73-samsung-pim-pnm-for-transformer-based-ai-energy-efficiency-on-pim-pnm-cl.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  この研究は、SamsungがHot Chips 35で公開した、メモリ内処理（processing-in-メモリ、PIM）とメモリ近傍処理（processing-near-メモリ、PNM）のシステム実装報告である。
+
+### 5年前（2021-12〜2022-11）
+
+- **2022-04 · [TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer](2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md)**  
+  実装：✓ ・ リポジトリ内被引用：19  
+  高帯域メモリ（High Bandwidth メモリ、HBM）の近くへ演算を移すメモリ内処理（Processing-in-メモリ、PIM）やメモリ近傍計算（Near-メモリ Computing、NMC）は有力だが、従来の方式をそのままTransformerへ適用しても層間のデータ再配置や注意機構の削減演算が律速になる。
+<!-- survey:auto:end -->

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d13d9bcb5aaec419-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.19115",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.19115",
+    "identity_tokens": [
+      "arXiv:2403.19115"
+    ],
+    "reason": "Hierarchical RoPEでcode LLMのcontext-length extrapolationを改善する研究。文脈長・品質の拡張であり推論効率化ではない。",
+    "first_checked_at": "2026-10-05T14:42:31+00:00",
+    "last_checked_at": "2026-10-05T14:42:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+    ],
+    "title": "HiRoPE: Length Extrapolation for Code Models Using Hierarchical Position"
+  },
+  "processed_at": "2026-10-05T14:42:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d13d9bcb5aae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

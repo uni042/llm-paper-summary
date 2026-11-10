@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0040fa68904d7e0e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tmc.2026.3696603",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tmc.2026.3696603",
+    "identity_tokens": [
+      "DOI:10.1109/tmc.2026.3696603"
+    ],
+    "reason": "Hybrid-float FPGA inference is evaluated on CNNs and BERT; it is general DNN/mobile acceleration without an LLM serving or generation study.",
+    "first_checked_at": "2026-10-05T04:18:35+00:00",
+    "last_checked_at": "2026-10-05T04:18:35+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+    ],
+    "title": "DRL-Enabled Polymorphic Acceleration Framework for Flexible and Energy-Efficient Hybrid-Float Deep Learning Inference in Mobile Computing"
+  },
+  "processed_at": "2026-10-05T04:18:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0040fa68904d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

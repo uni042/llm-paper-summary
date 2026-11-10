@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7554d1db016d59f4-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1911.03852",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1911.03852",
+    "identity_tokens": [
+      "arXiv:1911.03852"
+    ],
+    "reason": "Borderline because mixed-precision quantization is a direct potential inference-memory/latency technique, but no LLM/transformer evaluation in this source demonstrates transfer or serving benefit.",
+    "first_checked_at": "2026-10-06T23:37:16+00:00",
+    "last_checked_at": "2026-10-06T23:37:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HAWQ-V2: Hessian Aware trace-Weighted Quantization of Neural Networks"
+  },
+  "processed_at": "2026-10-06T23:37:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7554d1db016d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

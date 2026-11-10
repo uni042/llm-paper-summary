@@ -1,0 +1,176 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0631-scheduled-chat-30/r01",
+  "reference_main_sha": "80410f5d9f12581feeefc830ec4dce10a6506047",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539704",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539704"
+      ],
+      "title": "Boosting the Performance of Tree-Based Speculative Decoding of LLMs on FPGAs",
+      "reason": "DATE 2026の著者原稿を確認。GPUで有効な木型投機復号がFPGAでは検証長増大により計算律速となり逆効果になり得る問題に対し、rooflineと平均受理トークン長を組み合わせて検証長・木構造を最適化。AMD FPGAとLongSpec/EAGLE-3で通常の自己回帰復号比2.54〜3.89倍の高速化を報告。LLMの復号実行効率を直接改善する。",
+      "source_url": "https://past.date-conference.com/proceedings-archive/2026/DATA/371.pdf",
+      "body_check": "primary_conference_pdf_abstract_and_intro_checked; full_experimental_tables_not_reviewed",
+      "first_checked_at": "2026-10-31T06:39:06+09:00",
+      "last_checked_at": "2026-10-31T06:39:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 18,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539596",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539596"
+      ],
+      "title": "BOLD-Q: Blockwise Outlier-aware Logarithmic Dual-Bias Quantization for Hardware-Efficient LLM Inference",
+      "reason": "DATE 2026の著者原稿を確認。MXのブロック単位量子化と対数数値表現、重み・活性のDual-Bias、LNS-MACシストリックアレイを協調設計。LLaMA-2 7BでW4/A8のPPL増加+0.32、W4/A4で+0.60を報告し、比較対象のハードウェア設計に対して面積最大34.0%、エネルギー21.4%削減。量子化と推論アクセラレータの直接研究。",
+      "source_url": "https://past.date-conference.com/proceedings-archive/2026/DATA/440.pdf",
+      "body_check": "primary_conference_pdf_abstract_and_intro_checked; full_experimental_tables_not_reviewed",
+      "first_checked_at": "2026-10-31T06:39:06+09:00",
+      "last_checked_at": "2026-10-31T06:39:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 19,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1631",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1631",
+        "ACL:2026.acl-long.1631"
+      ],
+      "title": "Octopus: Gated Selective Attention for Memory-Bounded Long-Context Inference in Large Language Models",
+      "reason": "著者所属Adobe Researchの正式論文要旨を確認。学習可能なGated Selective Attentionで有用なKV状態を動的選択し、事前学習Transformerを固定KVメモリ予算の推論に適応。GSM8Kで同一メモリ制約の線形化ベースライン比36ポイント超の改善を報告。追加学習を要するが、KVキャッシュ容量を直接制御する手法。",
+      "source_url": "https://research.adobe.com/publication/octopus-gated-selective-attention-for-memory-bounded-long-context-inference-in-large-language-models/",
+      "body_check": "primary_author_institution_publication_abstract_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:39:06+09:00",
+      "last_checked_at": "2026-10-31T06:39:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 156,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539190",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539190"
+      ],
+      "title": "Fast and Energy-Efficient Support for Low-Precision LLMs on PIM",
+      "reason": "DATE 2026の正式論文を確認。DRAM-PIM上で2/4-bitの対称・非対称group-wise weight-only量子化のGEMVを、復元処理の遅延を抑えつつ支援する。group size 128の非対称量子化でFP16 GEMV比、INT4は容量約4倍圧縮・速度1.16倍・エネルギー効率1.41倍、INT2は容量約8倍圧縮・速度1.27倍・エネルギー効率1.57倍と報告。PIM推論カーネルの直接研究。",
+      "source_url": "https://past.date-conference.com/proceedings-archive/2026/DATA/1597.pdf",
+      "body_check": "primary_conference_pdf_abstract_checked; full_experimental_tables_not_reviewed",
+      "first_checked_at": "2026-10-31T06:39:06+09:00",
+      "last_checked_at": "2026-10-31T06:39:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 159,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.63317/3mnfp3i37gy2",
+      "identity_tokens": [
+        "DOI:10.63317/3mnfp3i37gy2",
+        "ACL:2026.lrec-1.789"
+      ],
+      "title": "Distribution-aware Low-bitwidth Quantization for Large Language Models",
+      "reason": "ACL Anthologyの正式LREC 2026要旨を確認。2〜3bitのLLM重みPTQでKL分布整合に基づく校正、ノイズ置換による学習可能コードブック、統計類似性による層グルーピングを組み合わせる。追加fine-tuningなしで比較手法と競争力ある品質を報告。推論時の低bitメモリ削減に直結する量子化研究であり、具体的な速度倍率は要旨から未確認。",
+      "source_url": "https://aclanthology.org/2026.lrec-1.789/",
+      "body_check": "primary_publisher_abstract_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:39:06+09:00",
+      "last_checked_at": "2026-10-31T06:39:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 194,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.20819",
+      "identity_tokens": [
+        "arXiv:2604.20819",
+        "DOI:10.48550/arXiv.2604.20819"
+      ],
+      "title": "Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling",
+      "reason": "arXiv著者要旨を確認。Cyclic Quorum Sets由来のCQS Divideで厳密attentionを独立した部分計算へ分解・再合成し、GPUメモリ予算に応じてstreaming実行する。数学的に元のattentionと等価で近似誤差を導入せず、単一GPUで10億token系列のexact attention実行可能性を報告。ただしLLM全体のend-to-end遅延・実サービス性能は要旨から未確認。",
+      "source_url": "https://arxiv.org/abs/2604.20819",
+      "body_check": "primary_arxiv_abstract_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:39:06+09:00",
+      "last_checked_at": "2026-10-31T06:39:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 242,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.04664",
+      "identity_tokens": [
+        "arXiv:2508.04664",
+        "DOI:10.48550/arXiv.2508.04664"
+      ],
+      "title": "Sculptor: Empowering LLMs with Cognitive Agency via Active Context Management",
+      "reason": "arXiv著者要旨を確認。文脈断片化、要約・隠蔽・復元、検索のツールでエージェントが作業文脈を能動的に整理し、長文推論の干渉を低減する。情報密度の低いベンチマークで品質改善を報告するが、主目的は認知・推論性能でありGPUサービングの遅延・KVメモリ・実行費用の実測改善は要旨にない。推論時文脈圧縮との接点はあるためborderline。",
+      "source_url": "https://arxiv.org/abs/2508.04664",
+      "body_check": "primary_arxiv_abstract_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:39:06+09:00",
+      "last_checked_at": "2026-10-31T06:39:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 243,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.12876",
+      "identity_tokens": [
+        "arXiv:2506.12876",
+        "DOI:10.48550/arXiv.2506.12876"
+      ],
+      "title": "MaskPro: Linear-Space Probabilistic Learning for Strict (N:M)-Sparsity on Large Language Models",
+      "reason": "arXiv著者要旨を確認。厳密N:M半構造化枝刈りマスクを、重みグループのカテゴリ分布から重複なしサンプリングで学習し、マスク学習用メモリを線形規模へ抑える。推論用疎行列を作る圧縮技術だが、主要貢献は枝刈りマスクの学習メモリと最適化安定性であり、LLM推論のend-to-end高速化値は要旨から未確認のためborderline。",
+      "source_url": "https://arxiv.org/abs/2506.12876",
+      "body_check": "primary_arxiv_abstract_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:39:06+09:00",
+      "last_checked_at": "2026-10-31T06:39:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 256,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.00439",
+      "identity_tokens": [
+        "arXiv:2502.00439",
+        "DOI:10.48550/arXiv.2502.00439"
+      ],
+      "title": "UniAttn: Reducing Inference Costs via Softmax Unification for Post-Training LLMs",
+      "reason": "arXiv著者要旨を確認。post-training済みLLMの複数Transformer blockでSoftmax活性の冗長性を見出し、Softmax Unificationと線形射影による誤差補償で計算・メモリ負担を削減。モデル品質を維持しつつ推論費用を減らすことを主目的とする。具体的な速度・メモリ倍率は著者要旨からは確定できない。",
+      "source_url": "https://arxiv.org/abs/2502.00439",
+      "body_check": "primary_arxiv_abstract_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:39:06+09:00",
+      "last_checked_at": "2026-10-31T06:39:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 271,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/LANMAN69841.2026.11623563",
+      "identity_tokens": [
+        "DOI:10.1109/LANMAN69841.2026.11623563"
+      ],
+      "title": "Improving the Performance of LLM Inference: Understanding the Role of CUDA Graphs",
+      "reason": "IEEE Xploreの正式LANMAN 2026要旨を確認。CPU主導のGPUカーネル起動オーバーヘッドをCUDA Graph replayで抑える手法について、モデルサイズ・並列化方式・ノード間リンク・prefill/decode構成・BurstGPT/ServeGenトレースを用いて分散LLM推論の効果を系統評価する。直接的なLLMサービング実行効率の研究。具体的な速度倍率は要旨に記載なし。",
+      "source_url": "https://doi.org/10.1109/LANMAN69841.2026.11623563",
+      "body_check": "primary_publisher_abstract_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:39:06+09:00",
+      "last_checked_at": "2026-10-31T06:39:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 367,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

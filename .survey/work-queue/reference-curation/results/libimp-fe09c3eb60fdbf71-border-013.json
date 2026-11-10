@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fe09c3eb60fdbf71-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.01928",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.01928",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.01928",
+      "arXiv:2603.01928"
+    ],
+    "reason": "LaST-VLA adopts physically grounded latent reasoning, but the abstract reports task quality rather than compute savings.",
+    "first_checked_at": "2026-10-11T06:45:23+00:00",
+    "last_checked_at": "2026-10-11T06:45:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
+      "papers/inference/99-other-inference-systems/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LaST-VLA: Thinking in Latent Spatio-Temporal Space for Vision-Language-Action in Autonomous Driving"
+  },
+  "processed_at": "2026-10-11T06:45:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fe09c3eb60fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

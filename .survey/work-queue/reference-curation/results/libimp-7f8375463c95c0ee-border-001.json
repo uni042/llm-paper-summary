@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f8375463c95c0ee-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2408.16725",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2408.16725",
+    "identity_tokens": [
+      "arXiv:2408.16725"
+    ],
+    "reason": "音声対話の低遅延を目標とし、テキスト・音声トークンの並列復号やバッチ並列を導入するため推論アルゴリズムに接点がある。ただし研究の主眼は音声対応のモデル設計・学習データと対話品質であり、汎用LLM推論サービング、KVキャッシュ、オフロード、カーネル等のシステム性能の直接比較は著者要旨から確認できない。本文再確認待ちの微妙。",
+    "first_checked_at": "2026-10-11T02:50:02+00:00",
+    "last_checked_at": "2026-10-11T02:50:02+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming"
+  },
+  "processed_at": "2026-10-11T02:50:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f8375463c95",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

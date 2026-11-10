@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e5bffbda21447225-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1712.01887",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1712.01887",
+    "identity_tokens": [
+      "arXiv:1712.01887"
+    ],
+    "reason": "分散SGDのgradient通信を270–600倍圧縮するtraining通信最適化で、最終適用先が分散学習工程そのもののため凍結範囲。",
+    "first_checked_at": "2026-10-04T16:44:27+00:00",
+    "last_checked_at": "2026-10-04T16:44:27+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
+    ],
+    "title": "Deep Gradient Compression: Reducing the Communication Bandwidth for Distributed Training"
+  },
+  "processed_at": "2026-10-04T16:44:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e5bffbda2144",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-206eb580ac8286d4-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2605.18163",
+  "reason": "TRACE is a training-free inference-time hallucination correction algorithm, but its primary full text reports substantial added inference cost: extra intermediate-layer output projections and mean 2.27x wall-clock latency versus baseline. It has a possible connection to inference-time decoding/correction lineages, but it is not an efficiency improvement and the measured overhead weakens scope fit.",
+  "title": "TRACE: Trajectory Correction from Cross-layer Evidence for Hallucination Reduction",
+  "identity_tokens": [
+    "arXiv:2605.18163"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+    "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-206eb580ac82",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

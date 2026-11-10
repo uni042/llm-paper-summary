@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-22fedde65a40a94c-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2308.01390",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2308.01390",
+    "identity_tokens": [
+      "arXiv:2308.01390"
+    ],
+    "reason": "3B–9Bのautoregressive vision-language modelをopen-sourceで再現し、training data/hyperparameterと7 vision-language datasetの能力を評価するtechnical report。推論runtime/serving効率化を主目的としない。",
+    "first_checked_at": "2026-10-04T23:27:41+00:00",
+    "last_checked_at": "2026-10-04T23:27:41+00:00",
+    "linked_from": [],
+    "title": "OpenFlamingo: An Open-Source Framework for Training Large Autoregressive Vision-Language Models"
+  },
+  "processed_at": "2026-10-04T23:27:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-22fedde65a40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

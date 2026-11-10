@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3999e8ee77b23666-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.13550",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.13550",
+    "identity_tokens": [
+      "arXiv:2606.13550"
+    ],
+    "reason": "Uncertainty-aware multi-granularity retrieval improves RAG evidence/answer quality but does not claim inference cost, token, latency, memory or energy savings.",
+    "first_checked_at": "2026-10-05T12:14:18+00:00",
+    "last_checked_at": "2026-10-05T12:14:18+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+    ],
+    "title": "Uncertainty-Aware Hybrid Retrieval for Long-Document RAG"
+  },
+  "processed_at": "2026-10-05T12:14:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3999e8ee77b2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

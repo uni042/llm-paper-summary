@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8b1f6daadcdbb2fc-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.24198",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.24198",
+    "identity_tokens": [
+      "arXiv:2604.24198"
+    ],
+    "reason": "Process reward modeling for agentic data analysis; contribution is supervision/evaluation rather than inference-resource reduction.",
+    "first_checked_at": "2026-10-08T06:35:31+00:00",
+    "last_checked_at": "2026-10-08T06:35:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "Rewarding the Scientific Process: Process-Level Reward Modeling for Agentic Data Analysis"
+  },
+  "processed_at": "2026-10-08T06:35:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8b1f6daadcdb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

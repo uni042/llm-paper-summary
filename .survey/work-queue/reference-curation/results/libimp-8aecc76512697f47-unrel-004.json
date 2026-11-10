@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8aecc76512697f47-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.18982",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.18982",
+    "identity_tokens": [
+      "arXiv:2410.18982"
+    ],
+    "reason": "一次要旨はo1 replication進捗とreasoning capabilityの報告で、推論効率を主張しない。",
+    "first_checked_at": "2026-10-05T01:31:06+00:00",
+    "last_checked_at": "2026-10-05T01:31:06+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md"
+    ],
+    "title": "O1 Replication Journey: A Strategic Progress Report - Part 1"
+  },
+  "processed_at": "2026-10-05T01:31:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8aecc7651269",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

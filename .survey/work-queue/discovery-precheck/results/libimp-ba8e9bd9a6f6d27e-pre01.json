@@ -1,0 +1,1699 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ba8e9bd9a6f6d27e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ba8e9bd9a6f6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/jcc62314.2024.00017",
+    "DOI:10.1162/tacl.a.23",
+    "DOI:10.18653/v1/2025.acl-long.564",
+    "DOI:10.18653/v1/2025.findings-acl.1288",
+    "arXiv:2305.14706",
+    "arXiv:2407.12021",
+    "arXiv:2412.01129",
+    "arXiv:2503.10571",
+    "arXiv:2504.00424",
+    "arXiv:2505.19155",
+    "arXiv:2505.23666",
+    "arXiv:2506.04118",
+    "arXiv:2507.02591",
+    "arXiv:2507.07694",
+    "arXiv:2508.19740",
+    "arXiv:2510.00536",
+    "arXiv:2510.13890",
+    "arXiv:2510.22951"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 18,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f59aad98729fada3d1faf2bdcd8b7f5153f3aa7c",
+  "raw_search_result_count": 18,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 18,
+  "provider_progress": {
+    "requested_count": 18,
+    "status_counts": {
+      "allowed": 18,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T21:17:13.431636+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/jcc62314.2024.00017",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1162/tacl.a.23",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.acl-long.564",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-acl.1288",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2305.14706",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.12021",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.01129",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.10571",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.00424",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.19155",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.23666",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.04118",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.02591",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.07694",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.19740",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.00536",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.13890",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.22951",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Sparse-to-Dense: A Free Lunch for Lossless Acceleration of Video Understanding in LLMs",
+      "source_url": "https://arxiv.org/abs/2505.19155",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Due to the auto-regressive nature of current video large language models (Video-LLMs), the inference latency increases as the input sequence length grows, posing challenges for the efficient processing of video sequences that are usually very long. We observe that during decoding, the attention scores of most tokens in Video-LLMs tend to be sparse and concentrated, with only certain tokens requiring comprehensive full attention. Based on this insight, we introduce Sparse-to-Dense (StD), a novel decoding strategy that integrates two distinct modules: one leveraging sparse top-K attention and the other employing dense full attention. These modules collaborate to accelerate Video-LLMs without loss. The fast (sparse) model speculatively decodes multiple tokens, while the slow (dense) model verifies them in parallel. StD is a tuning-free, plug-and-play solution that achieves up to a 1.94$\\times$ walltime speedup in video processing. It maintains model performance while enabling a seamless transition from a standard Video-LLM to a sparse Video-LLM with minimal code modifications.",
+      "identifiers": [
+        "SemanticScholar:08a81bee39870f31aaf239b71a969cf68c9cdbe9"
+      ],
+      "semantic_scholar_id": "08a81bee39870f31aaf239b71a969cf68c9cdbe9",
+      "canonical_id": "arXiv:2505.19155",
+      "arxiv_id": "2505.19155",
+      "doi": "10.48550/arXiv.2505.19155",
+      "authors": [
+        "Xuan Zhang",
+        "Cun-Xiao Du",
+        "Sicheng Yu",
+        "Jiawei Wu",
+        "Feng-Zhuo Zhang",
+        "Wei Gao",
+        "Qian Liu"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Adaptive Draft-Verification for Efficient Large Language Model Decoding",
+      "source_url": "https://arxiv.org/abs/2407.12021",
+      "year": 2024,
+      "published": "2024-06-27",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) decoding involves generating a sequence of tokens based on a given context, where each token is predicted one at a time using the model's learned probabilities. \n\nThe typical autoregressive decoding method requires a separate forward pass through the model for each token generated, which is computationally inefficient and poses challenges for deploying LLMs in latency-sensitive scenarios.\n\nThe main limitations of current decoding methods stem from their inefficiencies and resource demands. Existing approaches either necessitate fine-tuning smaller models, which is resource-intensive, or relying on fixed retrieval schemes to construct drafts for the next tokens, which lack adaptability and fail to generalize across different models and contexts.\n\nTo address these issues, we introduce a novel methodology called Adaptix, which accelerates LLM decoding without requiring fine-tuning. Our approach involves an adaptive draft-verification process that evolves over time to improve efficiency. We utilize a tri-gram matrix-based LLM representation to dynamically approximate the output distribution of the LLM, allowing the model to adjust to changing token probabilities during the decoding process. Additionally, we implement a draft construction mechanism that effectively balances exploration and exploitation, ensuring that the drafts generated are both diverse and close to the true output distribution of the LLM.\n\nThe importance of this design lies in its ability to optimize the draft distribution adaptively, leading to faster and more accurate decoding. Through extensive experiments on various benchmark datasets and LLM architectures, we demonstrate that Adaptix significantly accelerates the decoding process while maintaining high accuracy, making it suitable for deployment in a wide range of practical applications.",
+      "identifiers": [
+        "SemanticScholar:853a593768d0128b7104017e296028b9ae87ec27"
+      ],
+      "semantic_scholar_id": "853a593768d0128b7104017e296028b9ae87ec27",
+      "canonical_id": "arXiv:2407.12021",
+      "arxiv_id": "2407.12021",
+      "doi": "10.48550/arXiv.2407.12021",
+      "authors": [
+        "Xu-Kun Liu",
+        "Bowen Lei",
+        "Ruqi Zhang",
+        "Dongkuan Xu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 838,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FP4-Quantization: Lossless 4bit Quantization for Large Language Models",
+      "source_url": "https://doi.org/10.1109/JCC62314.2024.00017",
+      "year": 2024,
+      "published": "2024-07-15",
+      "venue": "Fall Joint Computer Conference",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models(LLMs) have demonstrated exceptional performance across a wide range of tasks. However, their extensive computational and storage requirements hinder their widespread deployment. To address this, low-bit quantization has emerged as a highly effective approach to reducing the inference cost of LLMs. Nevertheless, the existing repertoire of 4-bit quantization techniques is plagued by a substantial decline in model precision. In this paper, we introduce a novel 4-bit weight quantization method, FP4-Quantization, which leverages a 4-bit floating-point(FP4) representation that aligns better with the weight distribution characteristics of LLMs. Furthermore, it incorporates a Low-Rank Quantization Error Correction(LREC), involving progressive fine-tuning of low-rank parameters to rectify quantization errors, thereby enabling the achievement of precision-preserving 4-bit weight-only quantization. Our Experimental results on multiple zero-shot tasks demonstrate that FP4-Quantization achieves 4-bit weight quantization with an accuracy degradation of less than 0.5%.",
+      "identifiers": [
+        "SemanticScholar:44699a12d61e0fa6bccf2e635efb57f051e48e69"
+      ],
+      "semantic_scholar_id": "44699a12d61e0fa6bccf2e635efb57f051e48e69",
+      "doi": "10.1109/JCC62314.2024.00017",
+      "canonical_id": "DOI:10.1109/JCC62314.2024.00017",
+      "authors": [
+        "Jie Wang",
+        "Huan-Xi Liu",
+        "Da-Wei Feng",
+        "Jie Ding",
+        "Bo Ding"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 820,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Guided Speculative Inference for Efficient Test-Time Alignment of LLMs",
+      "source_url": "https://arxiv.org/abs/2506.04118",
+      "year": 2025,
+      "published": "2025-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose Guided Speculative Inference (GSI), a novel algorithm for efficient reward-guided decoding in large language models. GSI combines soft best-of-$n$ test-time scaling with a reward model $r(x,y)$ and speculative samples from a small auxiliary model $\\pi_S(y\\mid x)$. We provably approximate both the optimal tilted policy $\\pi_{\\beta,B}(y\\mid x) \\propto \\pi_B(y\\mid x)\\exp(\\beta\\,r(x,y))$ of soft best-of-$n$ under the base model $\\pi_B$, as well as the expected reward under the optimal policy. In experiments on reasoning benchmarks (MATH500, OlympiadBench, Minerva Math, MMLU-STEM, GSM8K) and across different model families, our method achieves higher accuracy than standard soft best-of-$n$ with $\\pi_S$ and reward-guided speculative decoding (Liao et al., 2025), and in certain settings even outperforms soft best-of-$n$ with $\\pi_B$, while reducing end-to-end latency by up to $28\\%$. The code is available at https://github.com/j-geuter/GSI .",
+      "identifiers": [
+        "SemanticScholar:c059189646ac8499574d861d2613c0d1b3baecc1"
+      ],
+      "semantic_scholar_id": "c059189646ac8499574d861d2613c0d1b3baecc1",
+      "canonical_id": "arXiv:2506.04118",
+      "arxiv_id": "2506.04118",
+      "doi": "10.48550/arXiv.2506.04118",
+      "authors": [
+        "Jonathan Geuter",
+        "Youssef Mroueh",
+        "David Alvarez-Melis"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 496,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Accurate and Efficient Fine-Tuning of Quantized Large Language Models Through Optimal Balance in Adaptation",
+      "source_url": "https://doi.org/10.1162/tacl.a.23",
+      "year": 2025,
+      "published": null,
+      "venue": "Transactions of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "\n Large Language Models (LLMs) have demonstrated impressive performance across various domains. However, the enormous number of model parameters makes fine-tuning challenging, significantly limiting their application and deployment. Existing solutions combine parameter quantization with Low-Rank Adaptation (LoRA), reducing memory usage but causing performance degradation. Additionally, converting fine-tuned models to low-precision representations further degrades performance. In this paper, we identify an imbalance in fine-tuning quantized LLMs with LoRA: overly complex adapter inputs and outputs versus low effective trainability of the adapter, leading to underfitting during fine-tuning. Thus, we propose Quantized LLMs fine-tuning with Balanced Low-Rank Adaptation (Q-BLoRA), which simplifies the adapter’s inputs and outputs while increasing the adapter’s rank to alleviate underfitting during fine-tuning. For low-precision deployment, we propose Quantization-Aware fine-tuning with Balanced Low-Rank Adaptation (QA-BLoRA), which aligns with the block-wise quantization and facilitates quantization-aware fine-tuning of low-rank adaptation based on the parameter merging of Q-BLoRA. Both Q-BLoRA and QA-BLoRA are easily implemented and offer the following optimizations: (i) Q-BLoRA consistently achieves state-of-the-art accuracy compared to baselines and other variants; (ii) QA-BLoRA enables the direct generation of low-precision inference models, which exhibit significant performance improvements over other low-precision models. We validate the effectiveness of Q-BLoRA and QA-BLoRA across various models and scenarios. Code has been made available at https://github.com/xiaocaigou/qbaraqahira.",
+      "identifiers": [
+        "SemanticScholar:a212b0292a38c4bfcb87d3bca005c448e6853d7a"
+      ],
+      "semantic_scholar_id": "a212b0292a38c4bfcb87d3bca005c448e6853d7a",
+      "doi": "10.1162/tacl.a.23",
+      "canonical_id": "DOI:10.1162/tacl.a.23",
+      "authors": [
+        "Ao Shen",
+        "Zhi-Quan Lai",
+        "Qiang Wang",
+        "Xiong-Lve Li",
+        "Lizhi Zhang",
+        "Dongsheng Li",
+        "Jiaxi Li"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 469,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Scaling up the State Size of RNN LLMs for Long-Context Scenarios",
+      "source_url": "https://doi.org/10.18653/v1/2025.acl-long.564",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer architecture has become the standard LLM architecture due to its powerful self-attention mechanism. However, it suffers from quadratic computational complexity and linear memory complexity. RNN-based LLMs have been proposed as alternatives. Yet, RNN models struggle in long-context scenarios, making it challenging to replace self-attention with RNNs. We identify the state size as a critical bottleneck, which is significantly smaller than that of Transformers with a basic context length of 2k. However, simply increasing the state size significantly raises the number of parameters and lowers training efficiency. In this paper, we propose an efficient scaling method to scale the state size of RNN models to match the 2k context length of Transformers, with small parameters overhead. Experimental re-sults demonstrate that scaling the state size significantly enhances long-context understanding. Retrieval performance scales almost linearly with state size, with a 454M model featuring an expanded state achieving performance comparable to a 1.47B model on FDA, a recall-intensive task. These findings highlight state scaling as a promising approach for advancing RNN-based LLMs.",
+      "identifiers": [
+        "SemanticScholar:d8e70363b55655b55fee8b70ade285006f4cc9c3"
+      ],
+      "semantic_scholar_id": "d8e70363b55655b55fee8b70ade285006f4cc9c3",
+      "doi": "10.18653/v1/2025.acl-long.564",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.564",
+      "authors": [
+        "Kai Liu",
+        "Jianfei Gao",
+        "Kai Chen"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 469,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Multi-matrix Factorization Attention",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.1288",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:dfc3ae8c9f7ef2418500b27a7c0011a4d648c2d7"
+      ],
+      "semantic_scholar_id": "dfc3ae8c9f7ef2418500b27a7c0011a4d648c2d7",
+      "doi": "10.18653/v1/2025.findings-acl.1288",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1288",
+      "authors": [
+        "Jing-Cheng Hu",
+        "Houyi Li",
+        "Yin-Min Zhang",
+        "Zi-Li Wang",
+        "Shuigeng Zhou",
+        "Xiangyu Zhang",
+        "Harry Shum"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 469,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "PruMUX: Augmenting Data Multiplexing with Model Compression",
+      "source_url": "https://arxiv.org/abs/2305.14706",
+      "year": 2023,
+      "published": "2023-05-24",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As language models increase in size by the day, methods for efficient inference are critical to leveraging their capabilities for various applications. Prior work has investigated techniques like model pruning, knowledge distillation, and data multiplexing to increase model throughput without sacrificing accuracy. In this paper, we combine two such methods -- structured pruning and data multiplexing -- to compound the speedup gains obtained by either method. Our approach, PruMUX, obtains up to 7.5-29.5X throughput improvement over BERT-base model with accuracy threshold from 80% to 74%. We further study various combinations of parameters (such as sparsity and multiplexing factor) in the two techniques to provide a comprehensive analysis of the tradeoff between accuracy and throughput in the resulting models. We then propose Auto-PruMUX, a meta-level model that can predict the high-performance parameters for pruning and multiplexing given a desired accuracy loss budget, providing a practical method to leverage the combination effectively.",
+      "identifiers": [
+        "SemanticScholar:04b07a44718555a24d98e5bf2120cb587b87b000"
+      ],
+      "semantic_scholar_id": "04b07a44718555a24d98e5bf2120cb587b87b000",
+      "canonical_id": "arXiv:2305.14706",
+      "arxiv_id": "2305.14706",
+      "doi": "10.48550/arXiv.2305.14706",
+      "authors": [
+        "Yushan Su",
+        "Vishvak Murahari",
+        "Karthik R. Narasimhan",
+        "K. Li"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1238,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Radar: Fast Long-Context Decoding for Any Transformer",
+      "source_url": "https://arxiv.org/abs/2503.10571",
+      "year": 2025,
+      "published": "2025-03-13",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models have demonstrated exceptional performance across a wide range of applications. Though forming the foundation of Transformer models, the dot-product attention does not scale well to long-context data since its time requirement grows quadratically with context length. In this work, we propose Radar, a training-free approach that accelerates inference by dynamically searching for the most important context tokens. For any pre-trained Transformer, Radar can reduce the decoding time complexity without training or heuristically evicting tokens. Moreover, we provide theoretical justification for our approach, demonstrating that Radar can reliably identify the most important tokens with high probability. We conduct extensive comparisons with the previous methods on a wide range of tasks. The results demonstrate that Radar achieves the state-of-the-art performance across different architectures with reduced time complexity, offering a practical solution for efficient long-context processing of Transformers.",
+      "identifiers": [
+        "SemanticScholar:14ef3ca91d73b404e476df81b8b1877528fde73c"
+      ],
+      "semantic_scholar_id": "14ef3ca91d73b404e476df81b8b1877528fde73c",
+      "canonical_id": "arXiv:2503.10571",
+      "arxiv_id": "2503.10571",
+      "doi": "10.48550/arXiv.2503.10571",
+      "authors": [
+        "Yongchang Hao",
+        "Meng-Yao Zhai",
+        "Hossein Hajimirsadeghi",
+        "Sepidehsadat Hosseini",
+        "Frederick Tung"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 579,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "SAS: Simulated Attention Score",
+      "source_url": "https://arxiv.org/abs/2507.07694",
+      "year": 2025,
+      "published": "2025-07-10",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The attention mechanism is a core component of the Transformer architecture. Various methods have been developed to compute attention scores, including multi-head attention (MHA), multi-query attention, group-query attention and so on. We further analyze the MHA and observe that its performance improves as the number of attention heads increases, provided the hidden size per head remains sufficiently large. Therefore, increasing both the head count and hidden size per head with minimal parameter overhead can lead to significant performance gains at a low cost. Motivated by this insight, we introduce Simulated Attention Score (SAS), which maintains a compact model size while simulating a larger number of attention heads and hidden feature dimension per head. This is achieved by projecting a low-dimensional head representation into a higher-dimensional space, effectively increasing attention capacity without increasing parameter count. Beyond the head representations, we further extend the simulation approach to feature dimension of the key and query embeddings, enhancing expressiveness by mimicking the behavior of a larger model while preserving the original model size. To control the parameter cost, we also propose Parameter-Efficient Attention Aggregation (PEAA). Comprehensive experiments on a variety of datasets and tasks demonstrate the effectiveness of the proposed SAS method, achieving significant improvements over different attention variants.",
+      "identifiers": [
+        "SemanticScholar:ac9313e9ec5065a3e0a5d38110505f7b8a0df0c7"
+      ],
+      "semantic_scholar_id": "ac9313e9ec5065a3e0a5d38110505f7b8a0df0c7",
+      "canonical_id": "arXiv:2507.07694",
+      "arxiv_id": "2507.07694",
+      "doi": "10.48550/arXiv.2507.07694",
+      "authors": [
+        "Chuanyang Zheng",
+        "Jiankai Sun",
+        "Yi-Hang Gao",
+        "Yuehao Wang",
+        "Peihao Wang",
+        "Jing Xiong",
+        "Li-Liang Ren",
+        "Hao Cheng",
+        "Janardhan Kulkarni",
+        "Yelong Shen",
+        "Atlas Wang",
+        "Mac Schwager",
+        "Anderson Schneider",
+        "Xiao-Dong Liu",
+        "Jian-Feng Gao"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 460,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Spotlight Attention: Towards Efficient LLM Generation via Non-linear Hashing-based KV Cache Retrieval",
+      "source_url": "https://arxiv.org/abs/2508.19740",
+      "year": 2025,
+      "published": "2025-08-27",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reducing the key-value (KV) cache burden in Large Language Models (LLMs) significantly accelerates inference. Dynamically selecting critical KV caches during decoding helps maintain performance. Existing methods use random linear hashing to identify important tokens, but this approach is inefficient due to the orthogonal distribution of queries and keys within two narrow cones in LLMs. We introduce Spotlight Attention, a novel method that employs non-linear hashing functions to optimize the embedding distribution of queries and keys, enhancing coding efficiency and robustness. We also developed a lightweight, stable training framework using a Bradley-Terry ranking-based loss, enabling optimization of the non-linear hashing module on GPUs with 16GB memory in 8 hours. Experimental results show that Spotlight Attention drastically improves retrieval precision while shortening the length of the hash code at least 5$\\times$ compared to traditional linear hashing. Finally, we exploit the computational advantages of bitwise operations by implementing specialized CUDA kernels, achieving hashing retrieval for 512K tokens in under 100$\\mu$s on a single A100 GPU, with end-to-end throughput up to 3$\\times$ higher than vanilla decoding.",
+      "identifiers": [
+        "SemanticScholar:05aba32b812f84a5ee1c89c4223a8b3552bff245"
+      ],
+      "semantic_scholar_id": "05aba32b812f84a5ee1c89c4223a8b3552bff245",
+      "canonical_id": "arXiv:2508.19740",
+      "arxiv_id": "2508.19740",
+      "doi": "10.48550/arXiv.2508.19740",
+      "authors": [
+        "Wenhao Li",
+        "Yuxin Zhang",
+        "Gen Luo",
+        "Hai-Yuan Wan",
+        "Ziyang Gong",
+        "Fei Chao",
+        "Rong-Rong Ji"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 412,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Hankel Singular Value Regularization for Highly Compressible State Space Models",
+      "source_url": "https://arxiv.org/abs/2510.22951",
+      "year": 2025,
+      "published": "2025-10-27",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep neural networks using state space models as layers are well suited for long-range sequence tasks but can be challenging to compress after training. We use that regularizing the sum of Hankel singular values of state space models leads to a fast decay of these singular values and thus to compressible models. To make the proposed Hankel singular value regularization scalable, we develop an algorithm to efficiently compute the Hankel singular values during training iterations by exploiting the specific block-diagonal structure of the system matrices that we use in our state space model parametrization. Experiments on Long Range Arena benchmarks demonstrate that the regularized state space layers are up to 10$\\times$ more compressible than standard state space layers while maintaining high accuracy.",
+      "identifiers": [
+        "SemanticScholar:7513501b227f7a4e80cb4b69f8b31d22aed7d8e3"
+      ],
+      "semantic_scholar_id": "7513501b227f7a4e80cb4b69f8b31d22aed7d8e3",
+      "canonical_id": "arXiv:2510.22951",
+      "arxiv_id": "2510.22951",
+      "doi": "10.48550/arXiv.2510.22951",
+      "authors": [
+        "Paul Schwerdtner",
+        "Jules Berman",
+        "Benjamin Peherstorfer"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 351,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "RILQ: Rank-Insensitive LoRA-based Quantization Error Compensation for Boosting 2-bit Large Language Model Accuracy",
+      "source_url": "https://arxiv.org/abs/2412.01129",
+      "year": 2024,
+      "published": "2024-12-02",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-rank adaptation (LoRA) has become the dominant method for parameter-efficient LLM fine-tuning, with LoRA-based quantization error compensation (LQEC) emerging as a powerful tool for recovering accuracy in compressed LLMs. However, LQEC has underperformed in sub-4-bit scenarios, with no prior investigation into understanding this limitation. We propose RILQ (Rank-Insensitive LoRA-based Quantization Error Compensation) to boost 2-bit LLM accuracy. Based on rank analysis revealing model-wise activation discrepancy loss's rank-insensitive nature, RILQ employs this loss to adjust adapters cooperatively across layers, enabling robust error compensation with low-rank adapters. Evaluations on LLaMA-2 and LLaMA-3 demonstrate RILQ's consistent improvements in 2-bit quantized inference across various state-of-the-art quantizers and enhanced accuracy in task-specific fine-tuning. RILQ maintains computational efficiency comparable to existing LoRA methods, enabling adapter-merged weight-quantized LLM inference with significantly enhanced accuracy, making it a promising approach for boosting 2-bit LLM performance.",
+      "identifiers": [
+        "SemanticScholar:c939e388d918f17ea3f9a84324b28f97d7e1eb1e"
+      ],
+      "semantic_scholar_id": "c939e388d918f17ea3f9a84324b28f97d7e1eb1e",
+      "canonical_id": "arXiv:2412.01129",
+      "arxiv_id": "2412.01129",
+      "doi": "10.48550/arXiv.2412.01129",
+      "authors": [
+        "Geonho Lee",
+        "Janghwan Lee",
+        "S. Hong",
+        "Minsoo Kim",
+        "Euijai Ahn",
+        "Duhyeuk Chang",
+        "Jungwook Choi"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 680,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hawkeye:Efficient Reasoning with Model Collaboration",
+      "source_url": "https://arxiv.org/abs/2504.00424",
+      "year": 2025,
+      "published": "2025-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-Thought (CoT) reasoning has demonstrated remarkable effectiveness in enhancing the reasoning abilities of large language models (LLMs). However, its efficiency remains a challenge due to the generation of excessive intermediate reasoning tokens, which introduce semantic redundancy and overly detailed reasoning steps. Moreover, computational expense and latency are significant concerns, as the cost scales with the number of output tokens, including those intermediate steps. In this work, we observe that most CoT tokens are unnecessary, and retaining only a small portion of them is sufficient for producing high-quality responses. Inspired by this, we propose HAWKEYE, a novel post-training and inference framework where a large model produces concise CoT instructions to guide a smaller model in response generation. HAWKEYE quantifies redundancy in CoT reasoning and distills high-density information via reinforcement learning. By leveraging these concise CoTs, HAWKEYE is able to expand responses while reducing token usage and computational cost significantly. Our evaluation shows that HAWKEYE can achieve comparable response quality using only 35% of the full CoTs, while improving clarity, coherence, and conciseness by approximately 10%. Furthermore, HAWKEYE can accelerate end-to-end reasoning by up to 3.4x on complex math tasks while reducing inference cost by up to 60%. HAWKEYE will be open-sourced and the models will be available soon.",
+      "identifiers": [
+        "SemanticScholar:18264e04721b87ca664e54cbd07e8ff1b2d683c1"
+      ],
+      "semantic_scholar_id": "18264e04721b87ca664e54cbd07e8ff1b2d683c1",
+      "canonical_id": "arXiv:2504.00424",
+      "arxiv_id": "2504.00424",
+      "doi": "10.48550/arXiv.2504.00424",
+      "authors": [
+        "Jian-Yu She",
+        "Zhuohao Li",
+        "Zhemin Huang",
+        "Qi Li",
+        "Pei-Ran Xu",
+        "Hao-Nan Li",
+        "Qi-Rong Ho"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 560,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LoLA: Low-Rank Linear Attention With Sparse Caching",
+      "source_url": "https://arxiv.org/abs/2505.23666",
+      "year": 2025,
+      "published": "2025-05-29",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The per-token cost of transformer inference scales with context length, preventing its application to lifelong in-context learning. Linear attention is an efficient alternative that maintains a constant memory footprint, even on infinite context lengths. While this is a potential candidate for lifelong learning, it falls short in memory capacity. In this paper, we propose LoLA, a training-free augmentation to linear attention that boosts associative recall. LoLA distributes past key-value pairs from context into three memory systems: (i) recent pairs in a local sliding window cache; (ii) difficult-to-memorize pairs in a sparse, global cache; and (iii) generic pairs in the recurrent hidden state of linear attention. We show through ablations that our self-recall error metric is crucial to efficiently manage long-term associative memories. On pass-key retrieval tasks, LoLA improves the base model's performance from 0.6% to 97.4% accuracy. This is achieved with a 4.6x smaller cache than Llama-3.1 8B on 4K context length. LoLA also outperforms other 1B and 8B parameter subquadratic models on zero-shot commonsense reasoning tasks.",
+      "identifiers": [
+        "SemanticScholar:4b85bd2479cbbca6535159fa0d390697231aec3e"
+      ],
+      "semantic_scholar_id": "4b85bd2479cbbca6535159fa0d390697231aec3e",
+      "canonical_id": "arXiv:2505.23666",
+      "arxiv_id": "2505.23666",
+      "doi": "10.48550/arXiv.2505.23666",
+      "authors": [
+        "Luke McDermott",
+        "Robert W. Heath",
+        "Rahul Parhi"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 502,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Bringing RNNs Back to Efficient Open-Ended Video Understanding",
+      "source_url": "https://arxiv.org/abs/2507.02591",
+      "year": 2025,
+      "published": "2025-07-03",
+      "venue": "IEEE International Conference on Computer Vision",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The challenge of long video understanding lies in its high computational complexity and prohibitive memory cost, since the memory and computation required by transformer-based LLMs scale quadratically with input sequence length. We propose Auroralong to address this challenge by replacing the LLM component in MLLMs with a linear RNN language model that handles input sequence of arbitrary length with constant-size hidden states. To further increase throughput and efficiency, we combine visual token merge with linear RNN models by reordering the visual tokens by their sizes in ascending order. Despite having only $2 B$ parameters and being trained exclusively on public data, AuroraLong achieves performance comparable to Transformer-based models of similar size trained on private datasets across multiple video benchmarks. This demonstrates the potential of efficient, linear RNNs to democratize long video understanding by lowering its computational entry barrier. To our best knowledge, we are the first to use a linear RNN based LLM backbone in a LLaVA-like model for open-ended video understanding.",
+      "identifiers": [
+        "SemanticScholar:9d8e7f71f46ce2e90e2c71f5e905d95eca7e1d9a"
+      ],
+      "semantic_scholar_id": "9d8e7f71f46ce2e90e2c71f5e905d95eca7e1d9a",
+      "canonical_id": "arXiv:2507.02591",
+      "arxiv_id": "2507.02591",
+      "doi": "10.1109/ICCV51701.2025.02177",
+      "authors": [
+        "Wei-Li Xu",
+        "En-Xin Song",
+        "Wenhao Chai",
+        "Xuexiang Wen",
+        "Tianbo Ye",
+        "Gao-Ang Wang"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 467,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GUI-KV: Efficient GUI Agents via KV Cache with Spatio-Temporal Awareness",
+      "source_url": "https://arxiv.org/abs/2510.00536",
+      "year": 2025,
+      "published": "2025-10-01",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Graphical user interface (GUI) agents built on vision-language models have emerged as a promising approach to automate human-computer workflows. However, they also face the inefficiency challenge as they process long sequences of high-resolution screenshots and solving long-horizon tasks, making inference slow, costly and memory-bound. While key-value (KV) caching can mitigate this, storing the full cache is prohibitive for image-heavy contexts. Existing cache-compression methods are sub-optimal as they do not account for the spatial and temporal redundancy of GUIs. In this work, we first analyze attention patterns in GUI agent workloads and find that, unlike in natural images, attention sparsity is uniformly high across all transformer layers. This insight motivates a simple uniform budget allocation strategy, which we show empirically outperforms more complex layer-varying schemes. Building on this, we introduce GUI-KV, a plug-and-play KV cache compression method for GUI agents that requires no retraining. GUI-KV combines two novel techniques: (i) spatial saliency guidance, which augments attention scores with the L2 norm of hidden states to better preserve semantically important visual tokens, and (ii) temporal redundancy scoring, which projects previous frames'keys onto the current frame's key subspace to preferentially prune redundant history. Across standard GUI agent benchmarks and models, GUI-KV outperforms competitive KV compression baselines, closely matching full-cache accuracy at modest budgets. Notably, in a 5-screenshot setting on the AgentNetBench benchmark, GUI-KV reduces decoding FLOPs by 38.9% while increasing step accuracy by 4.1% over the full-cache baseline. These results demonstrate that exploiting GUI-specific redundancies enables efficient and reliable agent performance.",
+      "identifiers": [
+        "SemanticScholar:b5e6a38593d5a6b55ec88b9f69a45a0f1526273b"
+      ],
+      "semantic_scholar_id": "b5e6a38593d5a6b55ec88b9f69a45a0f1526273b",
+      "canonical_id": "arXiv:2510.00536",
+      "arxiv_id": "2510.00536",
+      "doi": "10.48550/arXiv.2510.00536",
+      "authors": [
+        "Kung-Hsiang Huang",
+        "Haoyi Qiu",
+        "Yu-Tong Dai",
+        "Cai-Ming Xiong",
+        "Chien-Sheng Wu"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 377,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Survey on Collaborating Small and Large Language Models for Performance, Cost-effectiveness, Cloud-edge Privacy, and Trustworthiness",
+      "source_url": "https://arxiv.org/abs/2510.13890",
+      "year": 2025,
+      "published": "2025-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved remarkable progress across domains and applications but face challenges such as high fine-tuning costs, inference latency, limited edge deployability, and reliability concerns. Small language models (SLMs), with compact, efficient, and adaptable features, offer promising solutions. Building on this potential, recent research explores collaborative frameworks that integrate their complementary strengths, leveraging SLMs'specialization and efficiency with LLMs'generalization and reasoning to address diverse objectives across tasks and deployment scenarios. Motivated by these developments, this paper presents a systematic survey of SLM-LLM collaboration from the perspective of collaboration objectives. We propose a taxonomy covering four goals: performance enhancement, cost-effectiveness, cloud-edge privacy, and trustworthiness. Under this framework, we review representative methods, summarize design paradigms, and outline open challenges and future directions toward efficient and secure SLM-LLM collaboration. The collected papers are available at https://github.com/FairyFali/SLMs-Survey.",
+      "identifiers": [
+        "SemanticScholar:3b8e77b3e81eed3b1c529108c2a953d9a811234b"
+      ],
+      "semantic_scholar_id": "3b8e77b3e81eed3b1c529108c2a953d9a811234b",
+      "canonical_id": "arXiv:2510.13890",
+      "arxiv_id": "2510.13890",
+      "doi": "10.48550/arXiv.2510.13890",
+      "authors": [
+        "Fali Wang",
+        "Jihai Chen",
+        "Shuhua Yang",
+        "Ali Al-Lawati",
+        "Li-Juan Tang",
+        "Hui Liu",
+        "Su-Hang Wang"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 364,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2505.19155",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.19155",
+        "id:SemanticScholar:08a81bee39870f31aaf239b71a969cf68c9cdbe9",
+        "id:arXiv:2505.19155",
+        "title:sparsetodense a free lunch for lossless acceleration of video understanding in llms",
+        "url:https://arxiv.org/abs/2505.19155"
+      ],
+      "record": {
+        "title": "Sparse-to-Dense: A Free Lunch for Lossless Acceleration of Video Understanding in LLMs",
+        "source_url": "https://arxiv.org/abs/2505.19155",
+        "year": 2025,
+        "published": "2025-05-25",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Due to the auto-regressive nature of current video large language models (Video-LLMs), the inference latency increases as the input sequence length grows, posing challenges for the efficient processing of video sequences that are usually very long. We observe that during decoding, the attention scores of most tokens in Video-LLMs tend to be sparse and concentrated, with only certain tokens requiring comprehensive full attention. Based on this insight, we introduce Sparse-to-Dense (StD), a novel decoding strategy that integrates two distinct modules: one leveraging sparse top-K attention and the other employing dense full attention. These modules collaborate to accelerate Video-LLMs without loss. The fast (sparse) model speculatively decodes multiple tokens, while the slow (dense) model verifies them in parallel. StD is a tuning-free, plug-and-play solution that achieves up to a 1.94$\\times$ walltime speedup in video processing. It maintains model performance while enabling a seamless transition from a standard Video-LLM to a sparse Video-LLM with minimal code modifications.",
+        "identifiers": [
+          "SemanticScholar:08a81bee39870f31aaf239b71a969cf68c9cdbe9"
+        ],
+        "semantic_scholar_id": "08a81bee39870f31aaf239b71a969cf68c9cdbe9",
+        "canonical_id": "arXiv:2505.19155",
+        "arxiv_id": "2505.19155",
+        "doi": "10.48550/arXiv.2505.19155",
+        "authors": [
+          "Xuan Zhang",
+          "Cun-Xiao Du",
+          "Sicheng Yu",
+          "Jiawei Wu",
+          "Feng-Zhuo Zhang",
+          "Wei Gao",
+          "Qian Liu"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 506,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.12021",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.12021",
+        "id:SemanticScholar:853a593768d0128b7104017e296028b9ae87ec27",
+        "id:arXiv:2407.12021",
+        "title:adaptive draftverification for efficient large language model decoding",
+        "url:https://arxiv.org/abs/2407.12021"
+      ],
+      "record": {
+        "title": "Adaptive Draft-Verification for Efficient Large Language Model Decoding",
+        "source_url": "https://arxiv.org/abs/2407.12021",
+        "year": 2024,
+        "published": "2024-06-27",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) decoding involves generating a sequence of tokens based on a given context, where each token is predicted one at a time using the model's learned probabilities. \n\nThe typical autoregressive decoding method requires a separate forward pass through the model for each token generated, which is computationally inefficient and poses challenges for deploying LLMs in latency-sensitive scenarios.\n\nThe main limitations of current decoding methods stem from their inefficiencies and resource demands. Existing approaches either necessitate fine-tuning smaller models, which is resource-intensive, or relying on fixed retrieval schemes to construct drafts for the next tokens, which lack adaptability and fail to generalize across different models and contexts.\n\nTo address these issues, we introduce a novel methodology called Adaptix, which accelerates LLM decoding without requiring fine-tuning. Our approach involves an adaptive draft-verification process that evolves over time to improve efficiency. We utilize a tri-gram matrix-based LLM representation to dynamically approximate the output distribution of the LLM, allowing the model to adjust to changing token probabilities during the decoding process. Additionally, we implement a draft construction mechanism that effectively balances exploration and exploitation, ensuring that the drafts generated are both diverse and close to the true output distribution of the LLM.\n\nThe importance of this design lies in its ability to optimize the draft distribution adaptively, leading to faster and more accurate decoding. Through extensive experiments on various benchmark datasets and LLM architectures, we demonstrate that Adaptix significantly accelerates the decoding process while maintaining high accuracy, making it suitable for deployment in a wide range of practical applications.",
+        "identifiers": [
+          "SemanticScholar:853a593768d0128b7104017e296028b9ae87ec27"
+        ],
+        "semantic_scholar_id": "853a593768d0128b7104017e296028b9ae87ec27",
+        "canonical_id": "arXiv:2407.12021",
+        "arxiv_id": "2407.12021",
+        "doi": "10.48550/arXiv.2407.12021",
+        "authors": [
+          "Xu-Kun Liu",
+          "Bowen Lei",
+          "Ruqi Zhang",
+          "Dongkuan Xu"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 838,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jcc62314.2024.00017",
+      "identity_tokens": [
+        "id:DOI:10.1109/jcc62314.2024.00017",
+        "id:SemanticScholar:44699a12d61e0fa6bccf2e635efb57f051e48e69",
+        "title:fp4quantization lossless 4bit quantization for large language models",
+        "url:https://doi.org/10.1109/JCC62314.2024.00017"
+      ],
+      "record": {
+        "title": "FP4-Quantization: Lossless 4bit Quantization for Large Language Models",
+        "source_url": "https://doi.org/10.1109/JCC62314.2024.00017",
+        "year": 2024,
+        "published": "2024-07-15",
+        "venue": "Fall Joint Computer Conference",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models(LLMs) have demonstrated exceptional performance across a wide range of tasks. However, their extensive computational and storage requirements hinder their widespread deployment. To address this, low-bit quantization has emerged as a highly effective approach to reducing the inference cost of LLMs. Nevertheless, the existing repertoire of 4-bit quantization techniques is plagued by a substantial decline in model precision. In this paper, we introduce a novel 4-bit weight quantization method, FP4-Quantization, which leverages a 4-bit floating-point(FP4) representation that aligns better with the weight distribution characteristics of LLMs. Furthermore, it incorporates a Low-Rank Quantization Error Correction(LREC), involving progressive fine-tuning of low-rank parameters to rectify quantization errors, thereby enabling the achievement of precision-preserving 4-bit weight-only quantization. Our Experimental results on multiple zero-shot tasks demonstrate that FP4-Quantization achieves 4-bit weight quantization with an accuracy degradation of less than 0.5%.",
+        "identifiers": [
+          "SemanticScholar:44699a12d61e0fa6bccf2e635efb57f051e48e69"
+        ],
+        "semantic_scholar_id": "44699a12d61e0fa6bccf2e635efb57f051e48e69",
+        "doi": "10.1109/JCC62314.2024.00017",
+        "canonical_id": "DOI:10.1109/JCC62314.2024.00017",
+        "authors": [
+          "Jie Wang",
+          "Huan-Xi Liu",
+          "Da-Wei Feng",
+          "Jie Ding",
+          "Bo Ding"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 820,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.04118",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.04118",
+        "id:SemanticScholar:c059189646ac8499574d861d2613c0d1b3baecc1",
+        "id:arXiv:2506.04118",
+        "title:guided speculative inference for efficient testtime alignment of llms",
+        "url:https://arxiv.org/abs/2506.04118"
+      ],
+      "record": {
+        "title": "Guided Speculative Inference for Efficient Test-Time Alignment of LLMs",
+        "source_url": "https://arxiv.org/abs/2506.04118",
+        "year": 2025,
+        "published": "2025-06-04",
+        "venue": "arXiv.org",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose Guided Speculative Inference (GSI), a novel algorithm for efficient reward-guided decoding in large language models. GSI combines soft best-of-$n$ test-time scaling with a reward model $r(x,y)$ and speculative samples from a small auxiliary model $\\pi_S(y\\mid x)$. We provably approximate both the optimal tilted policy $\\pi_{\\beta,B}(y\\mid x) \\propto \\pi_B(y\\mid x)\\exp(\\beta\\,r(x,y))$ of soft best-of-$n$ under the base model $\\pi_B$, as well as the expected reward under the optimal policy. In experiments on reasoning benchmarks (MATH500, OlympiadBench, Minerva Math, MMLU-STEM, GSM8K) and across different model families, our method achieves higher accuracy than standard soft best-of-$n$ with $\\pi_S$ and reward-guided speculative decoding (Liao et al., 2025), and in certain settings even outperforms soft best-of-$n$ with $\\pi_B$, while reducing end-to-end latency by up to $28\\%$. The code is available at https://github.com/j-geuter/GSI .",
+        "identifiers": [
+          "SemanticScholar:c059189646ac8499574d861d2613c0d1b3baecc1"
+        ],
+        "semantic_scholar_id": "c059189646ac8499574d861d2613c0d1b3baecc1",
+        "canonical_id": "arXiv:2506.04118",
+        "arxiv_id": "2506.04118",
+        "doi": "10.48550/arXiv.2506.04118",
+        "authors": [
+          "Jonathan Geuter",
+          "Youssef Mroueh",
+          "David Alvarez-Melis"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 496,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1162/tacl.a.23",
+      "identity_tokens": [
+        "id:DOI:10.1162/tacl.a.23",
+        "id:SemanticScholar:a212b0292a38c4bfcb87d3bca005c448e6853d7a",
+        "title:accurate and efficient finetuning of quantized large language models through optimal balance in adaptation",
+        "url:https://doi.org/10.1162/tacl.a.23"
+      ],
+      "record": {
+        "title": "Accurate and Efficient Fine-Tuning of Quantized Large Language Models Through Optimal Balance in Adaptation",
+        "source_url": "https://doi.org/10.1162/tacl.a.23",
+        "year": 2025,
+        "published": null,
+        "venue": "Transactions of the Association for Computational Linguistics",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "\n Large Language Models (LLMs) have demonstrated impressive performance across various domains. However, the enormous number of model parameters makes fine-tuning challenging, significantly limiting their application and deployment. Existing solutions combine parameter quantization with Low-Rank Adaptation (LoRA), reducing memory usage but causing performance degradation. Additionally, converting fine-tuned models to low-precision representations further degrades performance. In this paper, we identify an imbalance in fine-tuning quantized LLMs with LoRA: overly complex adapter inputs and outputs versus low effective trainability of the adapter, leading to underfitting during fine-tuning. Thus, we propose Quantized LLMs fine-tuning with Balanced Low-Rank Adaptation (Q-BLoRA), which simplifies the adapter’s inputs and outputs while increasing the adapter’s rank to alleviate underfitting during fine-tuning. For low-precision deployment, we propose Quantization-Aware fine-tuning with Balanced Low-Rank Adaptation (QA-BLoRA), which aligns with the block-wise quantization and facilitates quantization-aware fine-tuning of low-rank adaptation based on the parameter merging of Q-BLoRA. Both Q-BLoRA and QA-BLoRA are easily implemented and offer the following optimizations: (i) Q-BLoRA consistently achieves state-of-the-art accuracy compared to baselines and other variants; (ii) QA-BLoRA enables the direct generation of low-precision inference models, which exhibit significant performance improvements over other low-precision models. We validate the effectiveness of Q-BLoRA and QA-BLoRA across various models and scenarios. Code has been made available at https://github.com/xiaocaigou/qbaraqahira.",
+        "identifiers": [
+          "SemanticScholar:a212b0292a38c4bfcb87d3bca005c448e6853d7a"
+        ],
+        "semantic_scholar_id": "a212b0292a38c4bfcb87d3bca005c448e6853d7a",
+        "doi": "10.1162/tacl.a.23",
+        "canonical_id": "DOI:10.1162/tacl.a.23",
+        "authors": [
+          "Ao Shen",
+          "Zhi-Quan Lai",
+          "Qiang Wang",
+          "Xiong-Lve Li",
+          "Lizhi Zhang",
+          "Dongsheng Li",
+          "Jiaxi Li"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 469,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.acl-long.564",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.acl-long.564",
+        "id:SemanticScholar:d8e70363b55655b55fee8b70ade285006f4cc9c3",
+        "title:scaling up the state size of rnn llms for longcontext scenarios",
+        "url:https://doi.org/10.18653/v1/2025.acl-long.564"
+      ],
+      "record": {
+        "title": "Scaling up the State Size of RNN LLMs for Long-Context Scenarios",
+        "source_url": "https://doi.org/10.18653/v1/2025.acl-long.564",
+        "year": 2025,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Transformer architecture has become the standard LLM architecture due to its powerful self-attention mechanism. However, it suffers from quadratic computational complexity and linear memory complexity. RNN-based LLMs have been proposed as alternatives. Yet, RNN models struggle in long-context scenarios, making it challenging to replace self-attention with RNNs. We identify the state size as a critical bottleneck, which is significantly smaller than that of Transformers with a basic context length of 2k. However, simply increasing the state size significantly raises the number of parameters and lowers training efficiency. In this paper, we propose an efficient scaling method to scale the state size of RNN models to match the 2k context length of Transformers, with small parameters overhead. Experimental re-sults demonstrate that scaling the state size significantly enhances long-context understanding. Retrieval performance scales almost linearly with state size, with a 454M model featuring an expanded state achieving performance comparable to a 1.47B model on FDA, a recall-intensive task. These findings highlight state scaling as a promising approach for advancing RNN-based LLMs.",
+        "identifiers": [
+          "SemanticScholar:d8e70363b55655b55fee8b70ade285006f4cc9c3"
+        ],
+        "semantic_scholar_id": "d8e70363b55655b55fee8b70ade285006f4cc9c3",
+        "doi": "10.18653/v1/2025.acl-long.564",
+        "canonical_id": "DOI:10.18653/v1/2025.acl-long.564",
+        "authors": [
+          "Kai Liu",
+          "Jianfei Gao",
+          "Kai Chen"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 469,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.findings-acl.1288",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-acl.1288",
+        "id:SemanticScholar:dfc3ae8c9f7ef2418500b27a7c0011a4d648c2d7",
+        "title:multimatrix factorization attention",
+        "url:https://doi.org/10.18653/v1/2025.findings-acl.1288"
+      ],
+      "record": {
+        "title": "Multi-matrix Factorization Attention",
+        "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.1288",
+        "year": 2025,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:dfc3ae8c9f7ef2418500b27a7c0011a4d648c2d7"
+        ],
+        "semantic_scholar_id": "dfc3ae8c9f7ef2418500b27a7c0011a4d648c2d7",
+        "doi": "10.18653/v1/2025.findings-acl.1288",
+        "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1288",
+        "authors": [
+          "Jing-Cheng Hu",
+          "Houyi Li",
+          "Yin-Min Zhang",
+          "Zi-Li Wang",
+          "Shuigeng Zhou",
+          "Xiangyu Zhang",
+          "Harry Shum"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 469,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2305.14706",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2305.14706",
+        "id:SemanticScholar:04b07a44718555a24d98e5bf2120cb587b87b000",
+        "id:arXiv:2305.14706",
+        "title:prumux augmenting data multiplexing with model compression",
+        "url:https://arxiv.org/abs/2305.14706"
+      ],
+      "record": {
+        "title": "PruMUX: Augmenting Data Multiplexing with Model Compression",
+        "source_url": "https://arxiv.org/abs/2305.14706",
+        "year": 2023,
+        "published": "2023-05-24",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As language models increase in size by the day, methods for efficient inference are critical to leveraging their capabilities for various applications. Prior work has investigated techniques like model pruning, knowledge distillation, and data multiplexing to increase model throughput without sacrificing accuracy. In this paper, we combine two such methods -- structured pruning and data multiplexing -- to compound the speedup gains obtained by either method. Our approach, PruMUX, obtains up to 7.5-29.5X throughput improvement over BERT-base model with accuracy threshold from 80% to 74%. We further study various combinations of parameters (such as sparsity and multiplexing factor) in the two techniques to provide a comprehensive analysis of the tradeoff between accuracy and throughput in the resulting models. We then propose Auto-PruMUX, a meta-level model that can predict the high-performance parameters for pruning and multiplexing given a desired accuracy loss budget, providing a practical method to leverage the combination effectively.",
+        "identifiers": [
+          "SemanticScholar:04b07a44718555a24d98e5bf2120cb587b87b000"
+        ],
+        "semantic_scholar_id": "04b07a44718555a24d98e5bf2120cb587b87b000",
+        "canonical_id": "arXiv:2305.14706",
+        "arxiv_id": "2305.14706",
+        "doi": "10.48550/arXiv.2305.14706",
+        "authors": [
+          "Yushan Su",
+          "Vishvak Murahari",
+          "Karthik R. Narasimhan",
+          "K. Li"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1238,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.10571",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.10571",
+        "id:SemanticScholar:14ef3ca91d73b404e476df81b8b1877528fde73c",
+        "id:arXiv:2503.10571",
+        "title:radar fast longcontext decoding for any transformer",
+        "url:https://arxiv.org/abs/2503.10571"
+      ],
+      "record": {
+        "title": "Radar: Fast Long-Context Decoding for Any Transformer",
+        "source_url": "https://arxiv.org/abs/2503.10571",
+        "year": 2025,
+        "published": "2025-03-13",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer models have demonstrated exceptional performance across a wide range of applications. Though forming the foundation of Transformer models, the dot-product attention does not scale well to long-context data since its time requirement grows quadratically with context length. In this work, we propose Radar, a training-free approach that accelerates inference by dynamically searching for the most important context tokens. For any pre-trained Transformer, Radar can reduce the decoding time complexity without training or heuristically evicting tokens. Moreover, we provide theoretical justification for our approach, demonstrating that Radar can reliably identify the most important tokens with high probability. We conduct extensive comparisons with the previous methods on a wide range of tasks. The results demonstrate that Radar achieves the state-of-the-art performance across different architectures with reduced time complexity, offering a practical solution for efficient long-context processing of Transformers.",
+        "identifiers": [
+          "SemanticScholar:14ef3ca91d73b404e476df81b8b1877528fde73c"
+        ],
+        "semantic_scholar_id": "14ef3ca91d73b404e476df81b8b1877528fde73c",
+        "canonical_id": "arXiv:2503.10571",
+        "arxiv_id": "2503.10571",
+        "doi": "10.48550/arXiv.2503.10571",
+        "authors": [
+          "Yongchang Hao",
+          "Meng-Yao Zhai",
+          "Hossein Hajimirsadeghi",
+          "Sepidehsadat Hosseini",
+          "Frederick Tung"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 579,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.07694",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.07694",
+        "id:SemanticScholar:ac9313e9ec5065a3e0a5d38110505f7b8a0df0c7",
+        "id:arXiv:2507.07694",
+        "title:sas simulated attention score",
+        "url:https://arxiv.org/abs/2507.07694"
+      ],
+      "record": {
+        "title": "SAS: Simulated Attention Score",
+        "source_url": "https://arxiv.org/abs/2507.07694",
+        "year": 2025,
+        "published": "2025-07-10",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The attention mechanism is a core component of the Transformer architecture. Various methods have been developed to compute attention scores, including multi-head attention (MHA), multi-query attention, group-query attention and so on. We further analyze the MHA and observe that its performance improves as the number of attention heads increases, provided the hidden size per head remains sufficiently large. Therefore, increasing both the head count and hidden size per head with minimal parameter overhead can lead to significant performance gains at a low cost. Motivated by this insight, we introduce Simulated Attention Score (SAS), which maintains a compact model size while simulating a larger number of attention heads and hidden feature dimension per head. This is achieved by projecting a low-dimensional head representation into a higher-dimensional space, effectively increasing attention capacity without increasing parameter count. Beyond the head representations, we further extend the simulation approach to feature dimension of the key and query embeddings, enhancing expressiveness by mimicking the behavior of a larger model while preserving the original model size. To control the parameter cost, we also propose Parameter-Efficient Attention Aggregation (PEAA). Comprehensive experiments on a variety of datasets and tasks demonstrate the effectiveness of the proposed SAS method, achieving significant improvements over different attention variants.",
+        "identifiers": [
+          "SemanticScholar:ac9313e9ec5065a3e0a5d38110505f7b8a0df0c7"
+        ],
+        "semantic_scholar_id": "ac9313e9ec5065a3e0a5d38110505f7b8a0df0c7",
+        "canonical_id": "arXiv:2507.07694",
+        "arxiv_id": "2507.07694",
+        "doi": "10.48550/arXiv.2507.07694",
+        "authors": [
+          "Chuanyang Zheng",
+          "Jiankai Sun",
+          "Yi-Hang Gao",
+          "Yuehao Wang",
+          "Peihao Wang",
+          "Jing Xiong",
+          "Li-Liang Ren",
+          "Hao Cheng",
+          "Janardhan Kulkarni",
+          "Yelong Shen",
+          "Atlas Wang",
+          "Mac Schwager",
+          "Anderson Schneider",
+          "Xiao-Dong Liu",
+          "Jian-Feng Gao"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 460,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.19740",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.19740",
+        "id:SemanticScholar:05aba32b812f84a5ee1c89c4223a8b3552bff245",
+        "id:arXiv:2508.19740",
+        "title:spotlight attention towards efficient llm generation via nonlinear hashingbased kv cache retrieval",
+        "url:https://arxiv.org/abs/2508.19740"
+      ],
+      "record": {
+        "title": "Spotlight Attention: Towards Efficient LLM Generation via Non-linear Hashing-based KV Cache Retrieval",
+        "source_url": "https://arxiv.org/abs/2508.19740",
+        "year": 2025,
+        "published": "2025-08-27",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reducing the key-value (KV) cache burden in Large Language Models (LLMs) significantly accelerates inference. Dynamically selecting critical KV caches during decoding helps maintain performance. Existing methods use random linear hashing to identify important tokens, but this approach is inefficient due to the orthogonal distribution of queries and keys within two narrow cones in LLMs. We introduce Spotlight Attention, a novel method that employs non-linear hashing functions to optimize the embedding distribution of queries and keys, enhancing coding efficiency and robustness. We also developed a lightweight, stable training framework using a Bradley-Terry ranking-based loss, enabling optimization of the non-linear hashing module on GPUs with 16GB memory in 8 hours. Experimental results show that Spotlight Attention drastically improves retrieval precision while shortening the length of the hash code at least 5$\\times$ compared to traditional linear hashing. Finally, we exploit the computational advantages of bitwise operations by implementing specialized CUDA kernels, achieving hashing retrieval for 512K tokens in under 100$\\mu$s on a single A100 GPU, with end-to-end throughput up to 3$\\times$ higher than vanilla decoding.",
+        "identifiers": [
+          "SemanticScholar:05aba32b812f84a5ee1c89c4223a8b3552bff245"
+        ],
+        "semantic_scholar_id": "05aba32b812f84a5ee1c89c4223a8b3552bff245",
+        "canonical_id": "arXiv:2508.19740",
+        "arxiv_id": "2508.19740",
+        "doi": "10.48550/arXiv.2508.19740",
+        "authors": [
+          "Wenhao Li",
+          "Yuxin Zhang",
+          "Gen Luo",
+          "Hai-Yuan Wan",
+          "Ziyang Gong",
+          "Fei Chao",
+          "Rong-Rong Ji"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 412,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.22951",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.22951",
+        "id:SemanticScholar:7513501b227f7a4e80cb4b69f8b31d22aed7d8e3",
+        "id:arXiv:2510.22951",
+        "title:hankel singular value regularization for highly compressible state space models",
+        "url:https://arxiv.org/abs/2510.22951"
+      ],
+      "record": {
+        "title": "Hankel Singular Value Regularization for Highly Compressible State Space Models",
+        "source_url": "https://arxiv.org/abs/2510.22951",
+        "year": 2025,
+        "published": "2025-10-27",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deep neural networks using state space models as layers are well suited for long-range sequence tasks but can be challenging to compress after training. We use that regularizing the sum of Hankel singular values of state space models leads to a fast decay of these singular values and thus to compressible models. To make the proposed Hankel singular value regularization scalable, we develop an algorithm to efficiently compute the Hankel singular values during training iterations by exploiting the specific block-diagonal structure of the system matrices that we use in our state space model parametrization. Experiments on Long Range Arena benchmarks demonstrate that the regularized state space layers are up to 10$\\times$ more compressible than standard state space layers while maintaining high accuracy.",
+        "identifiers": [
+          "SemanticScholar:7513501b227f7a4e80cb4b69f8b31d22aed7d8e3"
+        ],
+        "semantic_scholar_id": "7513501b227f7a4e80cb4b69f8b31d22aed7d8e3",
+        "canonical_id": "arXiv:2510.22951",
+        "arxiv_id": "2510.22951",
+        "doi": "10.48550/arXiv.2510.22951",
+        "authors": [
+          "Paul Schwerdtner",
+          "Jules Berman",
+          "Benjamin Peherstorfer"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 351,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.01129",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.01129",
+        "id:SemanticScholar:c939e388d918f17ea3f9a84324b28f97d7e1eb1e",
+        "id:arXiv:2412.01129",
+        "title:rilq rankinsensitive lorabased quantization error compensation for boosting 2bit large language model accuracy",
+        "url:https://arxiv.org/abs/2412.01129"
+      ],
+      "record": {
+        "title": "RILQ: Rank-Insensitive LoRA-based Quantization Error Compensation for Boosting 2-bit Large Language Model Accuracy",
+        "source_url": "https://arxiv.org/abs/2412.01129",
+        "year": 2024,
+        "published": "2024-12-02",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-rank adaptation (LoRA) has become the dominant method for parameter-efficient LLM fine-tuning, with LoRA-based quantization error compensation (LQEC) emerging as a powerful tool for recovering accuracy in compressed LLMs. However, LQEC has underperformed in sub-4-bit scenarios, with no prior investigation into understanding this limitation. We propose RILQ (Rank-Insensitive LoRA-based Quantization Error Compensation) to boost 2-bit LLM accuracy. Based on rank analysis revealing model-wise activation discrepancy loss's rank-insensitive nature, RILQ employs this loss to adjust adapters cooperatively across layers, enabling robust error compensation with low-rank adapters. Evaluations on LLaMA-2 and LLaMA-3 demonstrate RILQ's consistent improvements in 2-bit quantized inference across various state-of-the-art quantizers and enhanced accuracy in task-specific fine-tuning. RILQ maintains computational efficiency comparable to existing LoRA methods, enabling adapter-merged weight-quantized LLM inference with significantly enhanced accuracy, making it a promising approach for boosting 2-bit LLM performance.",
+        "identifiers": [
+          "SemanticScholar:c939e388d918f17ea3f9a84324b28f97d7e1eb1e"
+        ],
+        "semantic_scholar_id": "c939e388d918f17ea3f9a84324b28f97d7e1eb1e",
+        "canonical_id": "arXiv:2412.01129",
+        "arxiv_id": "2412.01129",
+        "doi": "10.48550/arXiv.2412.01129",
+        "authors": [
+          "Geonho Lee",
+          "Janghwan Lee",
+          "S. Hong",
+          "Minsoo Kim",
+          "Euijai Ahn",
+          "Duhyeuk Chang",
+          "Jungwook Choi"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 680,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.00424",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.00424",
+        "id:SemanticScholar:18264e04721b87ca664e54cbd07e8ff1b2d683c1",
+        "id:arXiv:2504.00424",
+        "title:hawkeyeefficient reasoning with model collaboration",
+        "url:https://arxiv.org/abs/2504.00424"
+      ],
+      "record": {
+        "title": "Hawkeye:Efficient Reasoning with Model Collaboration",
+        "source_url": "https://arxiv.org/abs/2504.00424",
+        "year": 2025,
+        "published": "2025-04-01",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chain-of-Thought (CoT) reasoning has demonstrated remarkable effectiveness in enhancing the reasoning abilities of large language models (LLMs). However, its efficiency remains a challenge due to the generation of excessive intermediate reasoning tokens, which introduce semantic redundancy and overly detailed reasoning steps. Moreover, computational expense and latency are significant concerns, as the cost scales with the number of output tokens, including those intermediate steps. In this work, we observe that most CoT tokens are unnecessary, and retaining only a small portion of them is sufficient for producing high-quality responses. Inspired by this, we propose HAWKEYE, a novel post-training and inference framework where a large model produces concise CoT instructions to guide a smaller model in response generation. HAWKEYE quantifies redundancy in CoT reasoning and distills high-density information via reinforcement learning. By leveraging these concise CoTs, HAWKEYE is able to expand responses while reducing token usage and computational cost significantly. Our evaluation shows that HAWKEYE can achieve comparable response quality using only 35% of the full CoTs, while improving clarity, coherence, and conciseness by approximately 10%. Furthermore, HAWKEYE can accelerate end-to-end reasoning by up to 3.4x on complex math tasks while reducing inference cost by up to 60%. HAWKEYE will be open-sourced and the models will be available soon.",
+        "identifiers": [
+          "SemanticScholar:18264e04721b87ca664e54cbd07e8ff1b2d683c1"
+        ],
+        "semantic_scholar_id": "18264e04721b87ca664e54cbd07e8ff1b2d683c1",
+        "canonical_id": "arXiv:2504.00424",
+        "arxiv_id": "2504.00424",
+        "doi": "10.48550/arXiv.2504.00424",
+        "authors": [
+          "Jian-Yu She",
+          "Zhuohao Li",
+          "Zhemin Huang",
+          "Qi Li",
+          "Pei-Ran Xu",
+          "Hao-Nan Li",
+          "Qi-Rong Ho"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 560,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.23666",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.23666",
+        "id:SemanticScholar:4b85bd2479cbbca6535159fa0d390697231aec3e",
+        "id:arXiv:2505.23666",
+        "title:lola lowrank linear attention with sparse caching",
+        "url:https://arxiv.org/abs/2505.23666"
+      ],
+      "record": {
+        "title": "LoLA: Low-Rank Linear Attention With Sparse Caching",
+        "source_url": "https://arxiv.org/abs/2505.23666",
+        "year": 2025,
+        "published": "2025-05-29",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The per-token cost of transformer inference scales with context length, preventing its application to lifelong in-context learning. Linear attention is an efficient alternative that maintains a constant memory footprint, even on infinite context lengths. While this is a potential candidate for lifelong learning, it falls short in memory capacity. In this paper, we propose LoLA, a training-free augmentation to linear attention that boosts associative recall. LoLA distributes past key-value pairs from context into three memory systems: (i) recent pairs in a local sliding window cache; (ii) difficult-to-memorize pairs in a sparse, global cache; and (iii) generic pairs in the recurrent hidden state of linear attention. We show through ablations that our self-recall error metric is crucial to efficiently manage long-term associative memories. On pass-key retrieval tasks, LoLA improves the base model's performance from 0.6% to 97.4% accuracy. This is achieved with a 4.6x smaller cache than Llama-3.1 8B on 4K context length. LoLA also outperforms other 1B and 8B parameter subquadratic models on zero-shot commonsense reasoning tasks.",
+        "identifiers": [
+          "SemanticScholar:4b85bd2479cbbca6535159fa0d390697231aec3e"
+        ],
+        "semantic_scholar_id": "4b85bd2479cbbca6535159fa0d390697231aec3e",
+        "canonical_id": "arXiv:2505.23666",
+        "arxiv_id": "2505.23666",
+        "doi": "10.48550/arXiv.2505.23666",
+        "authors": [
+          "Luke McDermott",
+          "Robert W. Heath",
+          "Rahul Parhi"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 502,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.02591",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccv51701.2025.02177",
+        "id:SemanticScholar:9d8e7f71f46ce2e90e2c71f5e905d95eca7e1d9a",
+        "id:arXiv:2507.02591",
+        "title:bringing rnns back to efficient openended video understanding",
+        "url:https://arxiv.org/abs/2507.02591"
+      ],
+      "record": {
+        "title": "Bringing RNNs Back to Efficient Open-Ended Video Understanding",
+        "source_url": "https://arxiv.org/abs/2507.02591",
+        "year": 2025,
+        "published": "2025-07-03",
+        "venue": "IEEE International Conference on Computer Vision",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The challenge of long video understanding lies in its high computational complexity and prohibitive memory cost, since the memory and computation required by transformer-based LLMs scale quadratically with input sequence length. We propose Auroralong to address this challenge by replacing the LLM component in MLLMs with a linear RNN language model that handles input sequence of arbitrary length with constant-size hidden states. To further increase throughput and efficiency, we combine visual token merge with linear RNN models by reordering the visual tokens by their sizes in ascending order. Despite having only $2 B$ parameters and being trained exclusively on public data, AuroraLong achieves performance comparable to Transformer-based models of similar size trained on private datasets across multiple video benchmarks. This demonstrates the potential of efficient, linear RNNs to democratize long video understanding by lowering its computational entry barrier. To our best knowledge, we are the first to use a linear RNN based LLM backbone in a LLaVA-like model for open-ended video understanding.",
+        "identifiers": [
+          "SemanticScholar:9d8e7f71f46ce2e90e2c71f5e905d95eca7e1d9a"
+        ],
+        "semantic_scholar_id": "9d8e7f71f46ce2e90e2c71f5e905d95eca7e1d9a",
+        "canonical_id": "arXiv:2507.02591",
+        "arxiv_id": "2507.02591",
+        "doi": "10.1109/ICCV51701.2025.02177",
+        "authors": [
+          "Wei-Li Xu",
+          "En-Xin Song",
+          "Wenhao Chai",
+          "Xuexiang Wen",
+          "Tianbo Ye",
+          "Gao-Ang Wang"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 467,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.00536",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.00536",
+        "id:SemanticScholar:b5e6a38593d5a6b55ec88b9f69a45a0f1526273b",
+        "id:arXiv:2510.00536",
+        "title:guikv efficient gui agents via kv cache with spatiotemporal awareness",
+        "url:https://arxiv.org/abs/2510.00536"
+      ],
+      "record": {
+        "title": "GUI-KV: Efficient GUI Agents via KV Cache with Spatio-Temporal Awareness",
+        "source_url": "https://arxiv.org/abs/2510.00536",
+        "year": 2025,
+        "published": "2025-10-01",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Graphical user interface (GUI) agents built on vision-language models have emerged as a promising approach to automate human-computer workflows. However, they also face the inefficiency challenge as they process long sequences of high-resolution screenshots and solving long-horizon tasks, making inference slow, costly and memory-bound. While key-value (KV) caching can mitigate this, storing the full cache is prohibitive for image-heavy contexts. Existing cache-compression methods are sub-optimal as they do not account for the spatial and temporal redundancy of GUIs. In this work, we first analyze attention patterns in GUI agent workloads and find that, unlike in natural images, attention sparsity is uniformly high across all transformer layers. This insight motivates a simple uniform budget allocation strategy, which we show empirically outperforms more complex layer-varying schemes. Building on this, we introduce GUI-KV, a plug-and-play KV cache compression method for GUI agents that requires no retraining. GUI-KV combines two novel techniques: (i) spatial saliency guidance, which augments attention scores with the L2 norm of hidden states to better preserve semantically important visual tokens, and (ii) temporal redundancy scoring, which projects previous frames'keys onto the current frame's key subspace to preferentially prune redundant history. Across standard GUI agent benchmarks and models, GUI-KV outperforms competitive KV compression baselines, closely matching full-cache accuracy at modest budgets. Notably, in a 5-screenshot setting on the AgentNetBench benchmark, GUI-KV reduces decoding FLOPs by 38.9% while increasing step accuracy by 4.1% over the full-cache baseline. These results demonstrate that exploiting GUI-specific redundancies enables efficient and reliable agent performance.",
+        "identifiers": [
+          "SemanticScholar:b5e6a38593d5a6b55ec88b9f69a45a0f1526273b"
+        ],
+        "semantic_scholar_id": "b5e6a38593d5a6b55ec88b9f69a45a0f1526273b",
+        "canonical_id": "arXiv:2510.00536",
+        "arxiv_id": "2510.00536",
+        "doi": "10.48550/arXiv.2510.00536",
+        "authors": [
+          "Kung-Hsiang Huang",
+          "Haoyi Qiu",
+          "Yu-Tong Dai",
+          "Cai-Ming Xiong",
+          "Chien-Sheng Wu"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 377,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.13890",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.13890",
+        "id:SemanticScholar:3b8e77b3e81eed3b1c529108c2a953d9a811234b",
+        "id:arXiv:2510.13890",
+        "title:a survey on collaborating small and large language models for performance costeffectiveness cloudedge privacy and trustworthiness",
+        "url:https://arxiv.org/abs/2510.13890"
+      ],
+      "record": {
+        "title": "A Survey on Collaborating Small and Large Language Models for Performance, Cost-effectiveness, Cloud-edge Privacy, and Trustworthiness",
+        "source_url": "https://arxiv.org/abs/2510.13890",
+        "year": 2025,
+        "published": "2025-10-14",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have achieved remarkable progress across domains and applications but face challenges such as high fine-tuning costs, inference latency, limited edge deployability, and reliability concerns. Small language models (SLMs), with compact, efficient, and adaptable features, offer promising solutions. Building on this potential, recent research explores collaborative frameworks that integrate their complementary strengths, leveraging SLMs'specialization and efficiency with LLMs'generalization and reasoning to address diverse objectives across tasks and deployment scenarios. Motivated by these developments, this paper presents a systematic survey of SLM-LLM collaboration from the perspective of collaboration objectives. We propose a taxonomy covering four goals: performance enhancement, cost-effectiveness, cloud-edge privacy, and trustworthiness. Under this framework, we review representative methods, summarize design paradigms, and outline open challenges and future directions toward efficient and secure SLM-LLM collaboration. The collected papers are available at https://github.com/FairyFali/SLMs-Survey.",
+        "identifiers": [
+          "SemanticScholar:3b8e77b3e81eed3b1c529108c2a953d9a811234b"
+        ],
+        "semantic_scholar_id": "3b8e77b3e81eed3b1c529108c2a953d9a811234b",
+        "canonical_id": "arXiv:2510.13890",
+        "arxiv_id": "2510.13890",
+        "doi": "10.48550/arXiv.2510.13890",
+        "authors": [
+          "Fali Wang",
+          "Jihai Chen",
+          "Shuhua Yang",
+          "Ali Al-Lawati",
+          "Li-Juan Tang",
+          "Hui Liu",
+          "Su-Hang Wang"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 364,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:263fbe6aebbf9118f3eec5c752cd4b7469b1e4baf3a7f2652fe05ace0b4326db",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

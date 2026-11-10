@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb08ab20a07f382c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1904.10631",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1904.10631",
+    "identity_tokens": [
+      "arXiv:1904.10631"
+    ],
+    "reason": "一次要旨はWideResNetとDynamicConv Transformer等のtraining memory削減。学習時効率でありLLM推論対象外。",
+    "first_checked_at": "2026-10-05T01:03:26+00:00",
+    "last_checked_at": "2026-10-05T01:03:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md"
+    ],
+    "title": "Low-Memory Neural Network Training: A Technical Report"
+  },
+  "processed_at": "2026-10-05T01:03:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb08ab20a07f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

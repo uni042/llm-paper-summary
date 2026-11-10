@@ -1,0 +1,1185 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-dbc57b1463191e00-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-dbc57b146319",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.ipm.2025.104449",
+    "arXiv:2511.11346",
+    "arXiv:2511.12309",
+    "arXiv:2512.02044",
+    "arXiv:2605.15206",
+    "arXiv:2605.23071",
+    "arXiv:2605.30010",
+    "arXiv:2606.01926",
+    "arXiv:2606.04438",
+    "arXiv:2606.06087",
+    "arXiv:2606.06448",
+    "arXiv:2606.06574"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "947347c937bef9ab24c8ac5037dd464d1775d56c",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 12,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 12,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T08:57:57.957907+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.ipm.2025.104449",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.11346",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.12309",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.02044",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.15206",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.23071",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.30010",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.01926",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.04438",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.06087",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.06448",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.06574",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2512.02044",
+      "year": 2025,
+      "published": "2025-11-26",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (DLMs) have recently achieved significant success due to their any-order generation capabilities. However, existing inference methods typically rely on local, immediate-step metrics such as confidence or entropy which inherently lack a more reliable perspective. This limitation frequently leads to inconsistent sampling trajectories and suboptimal generation quality. To address this, we propose Coherent Contextual Decoding (CCD), a novel inference framework built upon two core innovations. First, CCD employs a trajectory rectification mechanism that leverages historical context to enhance sequence coherence, enabling the early rejection of suboptimal paths. We demonstrate that this mechanism is theoretically equivalent to modeling the consistency of historical steps via the conditional mutual information between context and token predictions. Building on this theoretical insight, we further address the inefficiency of conventional uniform decoding budgets. Instead of rigid allocations based on diffusion steps, we introduce an adaptive sampling strategy that dynamically adjusts the unmasking budget for each step according to our consistency metric. Consequently, our method significantly improves the quality of generation trajectories while accelerating the sampling process. Empirically, our method achieves a simultaneous enhancement in both inference speed and performance across diverse benchmarks on Dream and LLaDA, delivering up to 3.48x speedup alongside 3.91% performance improvement.",
+      "identifiers": [
+        "SemanticScholar:f77ba99099e53a6accfd14b15e15cbe6b016a2a6"
+      ],
+      "semantic_scholar_id": "f77ba99099e53a6accfd14b15e15cbe6b016a2a6",
+      "canonical_id": "arXiv:2512.02044",
+      "arxiv_id": "2512.02044",
+      "doi": "10.48550/arXiv.2512.02044",
+      "authors": [
+        "Ke Chen",
+        "Zi-Rui Liu",
+        "Xi-Jia Tao",
+        "Hui Liu",
+        "Xin-Yu Fu",
+        "Sui-Yun Zhang",
+        "Dandan Tu",
+        "Lingpeng Kong",
+        "Rui Liu",
+        "Hao-Liang Li"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 321,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Skip a Layer or Loop It? Learning Program-of-Layers in LLMs",
+      "source_url": "https://arxiv.org/abs/2606.06574",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) perform inference by following a fixed depth and order, non-recurrent execution of all layers. We reveal the wide existence of training-free, flexible, dynamic program-of-layers (PoLar), where pretrained layers can be packed as modules and then skipped or looped to form a customized program for each input. For most inputs, substantially shorter program executions can achieve the same or better accuracy, while incorrect predictions of the original LLM can be corrected by alternative programs with fewer layers. These observations indicate that inference admits multiple valid latent computations beyond the standard forward pass. To efficiently achieve PoLar in practice, we propose a lightweight PoLar prediction network, which learns to generate execution programs that dynamically skip or repeat pretrained layers for each input. Experiments on mathematical reasoning benchmarks demonstrate that PoLar consistently improves accuracy over standard inference and prior dynamic-depth methods, often while executing fewer layers, and that these gains persist under out-of-distribution evaluation. Our results suggest that fixed-depth execution captures only a narrow subset of an LLM's latent reasoning capacity.",
+      "identifiers": [
+        "SemanticScholar:89d20514985e9b5eaf5353a844d7e87db0f53734"
+      ],
+      "semantic_scholar_id": "89d20514985e9b5eaf5353a844d7e87db0f53734",
+      "canonical_id": "arXiv:2606.06574",
+      "arxiv_id": "2606.06574",
+      "doi": "10.48550/arXiv.2606.06574",
+      "authors": [
+        "Zi-Yue Li",
+        "Yang Li",
+        "Tianyi Zhou"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 131,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast and Expressive Multi-Byte Prediction with Probabilistic Circuits",
+      "source_url": "https://arxiv.org/abs/2511.11346",
+      "year": 2025,
+      "published": "2025-11-14",
+      "venue": null,
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-token prediction (MTP) is a prominent strategy to significantly speed up generation in large language models (LLMs), especially in byte-level LLMs, which are tokeniser-free but prohibitively slow. However, many existing MTP methods either assume independence between future tokens, sacrificing expressiveness, or generate tokens one at a time within the window, increasing latency. In this work, we investigate the trade-off between expressiveness and latency in MTP within the framework of probabilistic circuits (PCs). Our framework, MTPC, allows one to explore different ways to encode the joint distributions over future tokens by selecting circuit architectures, generalising classical models such as (hierarchical) mixture models, hidden Markov models, and tensor networks. We show the efficacy of MTPC by retrofitting existing byte-level LLMs, such as EvaByte, and byte-fied subword models, such as Llama3.2 3B. Our experiments show that, when combined with speculative decoding, MTPC substantially speeds up generation compared to MTP with independence assumptions, while guaranteeing to retain the performance of the original verifier LLM. We also rigorously study the optimal trade-off between expressiveness and latency when exploring the possible parameterisations of MTPC, such as PC architectures and partial layer sharing between the verifier and draft LLMs.",
+      "identifiers": [
+        "SemanticScholar:6b92c06f28784c64d1567f57423f19786aa7f873"
+      ],
+      "semantic_scholar_id": "6b92c06f28784c64d1567f57423f19786aa7f873",
+      "canonical_id": "arXiv:2511.11346",
+      "arxiv_id": "2511.11346",
+      "authors": [
+        "Andreas Grivas",
+        "Lorenzo Loconte",
+        "Emile van Krieken",
+        "Piotr Nawrot",
+        "Yu Zhao",
+        "Euan Wielewski",
+        "Pasquale Minervini",
+        "E. Ponti",
+        "Antonio Vergari"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 333,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Optimal Self-Consistency for Efficient Reasoning with Large Language Models",
+      "source_url": "https://arxiv.org/abs/2511.12309",
+      "year": 2025,
+      "published": "2025-11-15",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-consistency (SC) is a widely used test-time inference technique for improving performance in chain-of-thought reasoning. It consists of generating multiple responses, or ``samples\", from a large language model (LLM) and selecting the most frequent answer. This procedure can naturally be viewed as a majority vote or empirical mode estimation. Despite its effectiveness, self-consistency is prohibitively expensive at scale when naively applied to datasets, and it lacks a unified theoretical understanding of sample efficiency and scaling behavior. In this paper, we provide the first comprehensive analysis of SC's scaling behavior and its variants, drawing on mode estimation and voting theory. We derive and empirically validate power law scaling for self-consistency across datasets, and analyze the sample efficiency for fixed-allocation and dynamic-allocation sampling schemes. From these insights, we introduce Blend-ASC, a novel variant of self-consistency that dynamically allocates samples to questions during inference, achieving state-of-the-art sample efficiency. Our approach uses 4.8 times fewer samples than vanilla SC on average, outperforming both fixed- and dynamic-allocation SC baselines, thereby demonstrating the superiority of our approach in terms of efficiency. In contrast to existing variants, we note that Blend-ASC is hyperparameter-free, supports batching, and can fit any budget of samples, ensuring it can be easily applied to any self-consistency application.",
+      "identifiers": [
+        "SemanticScholar:316cdfe851a54d205268ef660021084c2f94a0d5"
+      ],
+      "semantic_scholar_id": "316cdfe851a54d205268ef660021084c2f94a0d5",
+      "canonical_id": "arXiv:2511.12309",
+      "arxiv_id": "2511.12309",
+      "doi": "10.48550/arXiv.2511.12309",
+      "authors": [
+        "A. Feng",
+        "Marius Alonso",
+        "Ambroise Odonnat",
+        "Vasilii Feofanov",
+        "I. Redko"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 332,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Leveraging historical information to boost retrieval-augmented generation in conversations",
+      "source_url": "https://doi.org/10.1016/j.ipm.2025.104449",
+      "year": 2026,
+      "published": "2026-03-01",
+      "venue": "Information Processing & Management",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:b5f42632997f7f9ee9728eac077aefa122c62fd2"
+      ],
+      "semantic_scholar_id": "b5f42632997f7f9ee9728eac077aefa122c62fd2",
+      "doi": "10.1016/j.ipm.2025.104449",
+      "canonical_id": "DOI:10.1016/j.ipm.2025.104449",
+      "authors": [
+        "Fengran Mo",
+        "Yi-Fan Gao",
+        "Zhuofeng Wu",
+        "Xin Liu",
+        "Pei Chen",
+        "Zheng Li",
+        "Zhengyang Wang",
+        "Xian Li",
+        "Meng Jiang",
+        "Jian-yun Nie"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 226,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LoopMoE: Unifying Iterative Computation with Mixture-of-Experts for Language Modeling",
+      "source_url": "https://arxiv.org/abs/2606.04438",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) and looped architectures scale models along two orthogonal axes, namely parameter capacity and effective depth. However, mainstream looped architectures rely on dense backbones that couple parameter count with per-token FLOPs, which makes it impossible to isolate the effect of iterative computation under matched budgets. To this end, we present LoopMoE, a looped MoE language model that integrates sparse routing with iterative weight-shared computation through two designs. The first is IterAdaLN, which resolves weight-sharing symmetry via a modulation signal jointly conditioned on the iteration index and the per-token hidden state. The second is a capacity-balancing strategy that recovers the attention-to-FFN active parameter ratio of well-tuned non-looped references. Together, these designs enable the first strictly controlled, head-to-head evaluation of a looped MoE against a Vanilla MoE under identical total parameters, per-token FLOPs, and active sublayer ratios. Across nine downstream benchmarks, LoopMoE's average improvement over its matched vanilla MoE increases from over 1 point at the 3B scale to approximately 3 points at the 9B scale. These results provide initial evidence that the benefits of iterative sparse computation may strengthen with scale, positioning LoopMoE as a promising architecture for scalable looped language models.",
+      "identifiers": [
+        "SemanticScholar:5e6a650e8ccff682d083511026a8b10966e01538"
+      ],
+      "semantic_scholar_id": "5e6a650e8ccff682d083511026a8b10966e01538",
+      "canonical_id": "arXiv:2606.04438",
+      "arxiv_id": "2606.04438",
+      "doi": "10.48550/arXiv.2606.04438",
+      "authors": [
+        "Wen-Kai Chen",
+        "Tian-Shu Li",
+        "Wen-Yong Huang",
+        "Yi-Chun Yin",
+        "Lifeng Shang",
+        "Cheng-Wei Qin"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 132,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices",
+      "source_url": "https://arxiv.org/abs/2605.15206",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "CAIS",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autonomous agents powered by large language models (LLMs) are increasingly used to automate complex, multi-step tasks such as coding or web-based question answering. While remote, cloud-based agents offer scalability and ease of deployment, they raise privacy concerns, depend on network connectivity, and incur recurring API costs. Deploying agents locally on user devices mitigates these issues by preserving data privacy and eliminating usage-based fees. However, agentic workflows are far more resource-intensive than typical LLM interactions. Iterative reasoning, tool use, and failure retries substantially increase token consumption, often expending significant compute without successfully completing tasks. In this work, we investigate the time, token, and energy overhead of locally deployed LLM-based agents on consumer hardware. Our measurements show that agentic execution increases GPU power draw, temperature, and battery drain compared to single-inference workloads. To address this inefficiency, we introduce AgentStop, a lightweight efficiency supervisor that predicts and preemptively terminates trajectories unlikely to succeed. Leveraging low-cost execution signals, such as token-level log probabilities, AgentStop can reduce wasted energy by 15-20% with minimal impact on task performance (<5% utility drop) for challenging web-based question answering and coding benchmarks. These findings position predictive early termination as a practical mechanism for enabling sustainable, privacy-preserving LLM agents on user devices. Our project code and data are available at https://github.com/brave-experiments/AgentStop.",
+      "identifiers": [
+        "SemanticScholar:748d1eaa3b2a09a665f87fbbbc7b40602fc37236"
+      ],
+      "semantic_scholar_id": "748d1eaa3b2a09a665f87fbbbc7b40602fc37236",
+      "canonical_id": "arXiv:2605.15206",
+      "arxiv_id": "2605.15206",
+      "doi": "10.1145/3786335.3813163",
+      "authors": [
+        "Dzung Pham",
+        "Kleomenis Katevas",
+        "Ali Shahin Shamsabadi",
+        "Hamed Haddadi"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Efficiency Frontier: A Unified Framework for Cost–Performance Optimization in LLM Context Management",
+      "source_url": "https://arxiv.org/abs/2605.23071",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "2026 International Conference on Large Models and Intelligent Agent Technologies (LMIAT)",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) increasingly rely on long-context processing, but expanding context windows introduces substantial computational and financial costs. Existing context reduction approaches, including retrieval and memory compression methods, are typically evaluated using performance and efficiency metrics independently, limiting systematic comparison and deployment-aware decision-making.This paper introduces The Efficiency Frontier, a unified framework for cost–performance optimization in LLM context management. The framework models context strategy selection as a deployment-aware optimization problem that jointly accounts for task performance, token cost, and preprocessing reuse through amortized cost modeling. Unlike existing evaluations that compare methods in isolation, the proposed framework enables decision-oriented analysis. It identifies when different context management strategies become preferable under varying operational conditions. Experiments on HotpotQA reveal distinct operational regimes and transition boundaries between retrieval-based and preprocessing-based strategies. Results show that deployment-aware optimization reduces effective token usage by approximately 25% at comparable performance, enabling more cost-efficient deployment of large language model systems, while amortized memory compression achieves over 50% lower token cost relative to full-context prompting in higher-performance settings. Overall, the proposed framework provides a principled and practical foundation for evaluating and deploying scalable, efficient, and sustainable LLM systems across enterprise, scientific, and public-sector applications.",
+      "identifiers": [
+        "SemanticScholar:3e185881254a1b8c4132a7715a51fab861292287"
+      ],
+      "semantic_scholar_id": "3e185881254a1b8c4132a7715a51fab861292287",
+      "canonical_id": "arXiv:2605.23071",
+      "arxiv_id": "2605.23071",
+      "doi": "10.1109/LMIAT70705.2026.11682707",
+      "authors": [
+        "Bin-Qi Shen",
+        "Li Jin",
+        "Han-Yu Cai",
+        "Lang-Xiang Hu",
+        "Yu-Ting Xin"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EarlyTom: Early Token Compression Completes Fast Video Understanding",
+      "source_url": "https://arxiv.org/abs/2605.30010",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video large language models (Video-LLMs) have demonstrated strong capabilities in video understanding tasks. However, their practical deployment is still hindered by the inefficiency introduced by processing massive amounts of visual tokens. Although recent approaches achieve extremely low token retention ratios while maintaining accuracy comparable to full-token baselines, most of them perform compression only at the late stage of prefilling, leaving the efficiency of the vision encoder unoptimized. In this paper, we first show that vision encoding contributes a large portion to the time-to-first-token (TTFT). Therefore, instead of compressing visual tokens only after the vision encoder, performing compression inside the encoder still leaves substantial room for exploration. Based on this insight, we propose EarlyTom, a training-free token compression framework that performs early-stage visual token compression inside the vision encoder, enabling significantly better TTFT reduction and higher throughput. In addition, we introduce a decoupled spatial token selection strategy that improves the overall compression effectiveness. EarlyTom reduces TTFT by up to 2.65x and FLOPs by up to 61% on a single NVIDIA A100 GPU for the LLaVA-OneVision-7B model, while maintaining accuracy comparable to the full-token baseline. These improvements substantially enhance the practicality of deploying Video-LLMs in real-world production scenarios.",
+      "identifiers": [
+        "SemanticScholar:7f47dbd6606d1d6fcb52226773db12fb0d830814"
+      ],
+      "semantic_scholar_id": "7f47dbd6606d1d6fcb52226773db12fb0d830814",
+      "canonical_id": "arXiv:2605.30010",
+      "arxiv_id": "2605.30010",
+      "doi": "10.48550/arXiv.2605.30010",
+      "authors": [
+        "He-Song Wang",
+        "Xin Jin",
+        "Lu Lu",
+        "Chenhao Li",
+        "Jian Chen",
+        "Qiang Liu",
+        "Huan Wang"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mitigating Bias in Locally Constrained Decoding via Tractable Proposals",
+      "source_url": "https://arxiv.org/abs/2606.01926",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Generations from large language models often fail to conform to desired constraints such as JSON schema. Existing locally constrained decoding (LCD) approaches enforce constraints by myopically masking out next tokens, resulting in biased sampling and degradation in performance. Recent work uses sequential Monte Carlo (SMC) methods to mitigate such biases, but designing effective proposal distributions or potential functions remains a key challenge. In this work, we propose a generic approach to construct proposals and potentials for SMC sampling from $p_{\\mathrm{lm}}( \\cdot \\mid \\mathrm{constraint})$. First, we show that constraints specified as finite automata can be tensorized for efficient execution on GPUs, which we use to construct globally constrained decoding (GCD) proposals. In addition, leveraging the fact that tensorized finite automata share the same circuit structure as hidden Markov models, we circuit-multiply them to obtain the probabilistic GCD (P-GCD) proposals encoding both logical and probabilistic information about the target distributions. We evaluate (P-)GCD on the tasks of function calling, keyword-based generation, and SQL generation. Experiments show that under the same SMC sampling setup, compared to LCD proposals, (P-)GCD converges faster to the target distribution with significantly fewer particles.",
+      "identifiers": [
+        "SemanticScholar:e02316b5ac22a534e030fb6dc4668878102d9145"
+      ],
+      "semantic_scholar_id": "e02316b5ac22a534e030fb6dc4668878102d9145",
+      "canonical_id": "arXiv:2606.01926",
+      "arxiv_id": "2606.01926",
+      "doi": "10.48550/arXiv.2606.01926",
+      "authors": [
+        "Mei-Hua Dang",
+        "Lin-Xin Song",
+        "Honghua Zhang",
+        "Jie-Yu Zhao",
+        "Guy Van den Broeck",
+        "S. Ermon"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 134,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents",
+      "source_url": "https://arxiv.org/abs/2606.06087",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agent systems increasingly use textual skills to encode reusable task procedures, but injecting these skills into the prompt at every step incurs substantial context overhead and exposes skill content as plaintext. We present LatentSkill, a framework that converts textual skills into plug-and-play LoRA adapters through a pretrained hypernetwork. LatentSkill stores skill knowledge in weight space rather than context space, removing per-step skill tokens while preserving modular loading, scaling, and composition. On ALFWorld and Search-QA, LatentSkill outperforms the corresponding in-context skill baseline while using substantially fewer prefill tokens: it improves ALFWorld success by 21.4 and 13.4 points on the seen and unseen splits with 63.9% fewer prefill tokens on average, and improves Search-QA exact match by 3.0 points while using 71.8% fewer tokens per step. Further analysis shows that generated skill LoRAs form a structured semantic geometry, can be continuously modulated via the LoRA scaling coefficient, and can be composed through parameter-space arithmetic when skill components are aligned. These findings suggest that weight-space skills provide an efficient, modular, and less exposed substrate for extending LLM agents.",
+      "identifiers": [
+        "SemanticScholar:18a8ee09a6eb7203837165ad682a82a39e60eb42"
+      ],
+      "semantic_scholar_id": "18a8ee09a6eb7203837165ad682a82a39e60eb42",
+      "canonical_id": "arXiv:2606.06087",
+      "arxiv_id": "2606.06087",
+      "doi": "10.48550/arXiv.2606.06087",
+      "authors": [
+        "Ao Yu",
+        "Chenyue Zhou",
+        "Tian-Yi Xu",
+        "Zihan Guo",
+        "Shan Rong",
+        "Zhi-Hui Fu",
+        "Jun Wang",
+        "Wei-Wen Liu",
+        "Yong Yu",
+        "Wei-Nan Zhang",
+        "Jianghao Lin"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 131,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads",
+      "source_url": "https://arxiv.org/abs/2606.06448",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents are increasingly deployed on long-horizon tasks requiring sustained reasoning over extended interaction histories. Realizing this at scale requires agents to persistently store, retrieve, and update their own memory across sessions. A rich ecosystem of agent memory systems has emerged spanning flat retrieval, LLM-mediated extraction, consolidating fact stores, and agentic control flows. Yet, their system-level behavior remains uncharacterized. We present the first systems characterization of agent memory. First, we introduce a system-oriented taxonomy classifying agent memory systems along four axes. Second, we build a phase-aware profiling harness attributing cost to construction, retrieval, and generation. Third, we characterize ten representative systems across two benchmark suites, uncovering how design choices shift cost across the write and read paths. Finally, we derive 10 system recommendations covering construction scheduling, capability floors, amortization via query volume, freshness-latency tradeoffs, and fleet-scale management.",
+      "identifiers": [
+        "SemanticScholar:453fe21f545a9b7f885aea2ee9165e4ada4e144f"
+      ],
+      "semantic_scholar_id": "453fe21f545a9b7f885aea2ee9165e4ada4e144f",
+      "canonical_id": "arXiv:2606.06448",
+      "arxiv_id": "2606.06448",
+      "doi": "10.48550/arXiv.2606.06448",
+      "authors": [
+        "Yasmine Omri",
+        "Ziyun Gan",
+        "Zachary Broveak",
+        "Robin Geens",
+        "Ze-Xue He",
+        "A. Pentland",
+        "Marian Verhelst",
+        "T. Weissman",
+        "Thierry Tambe"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 131,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.02044",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.02044",
+        "id:SemanticScholar:f77ba99099e53a6accfd14b15e15cbe6b016a2a6",
+        "id:arXiv:2512.02044",
+        "title:beyond confidence adaptive and coherent decoding for diffusion language models",
+        "url:https://arxiv.org/abs/2512.02044"
+      ],
+      "record": {
+        "title": "Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2512.02044",
+        "year": 2025,
+        "published": "2025-11-26",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Language Models (DLMs) have recently achieved significant success due to their any-order generation capabilities. However, existing inference methods typically rely on local, immediate-step metrics such as confidence or entropy which inherently lack a more reliable perspective. This limitation frequently leads to inconsistent sampling trajectories and suboptimal generation quality. To address this, we propose Coherent Contextual Decoding (CCD), a novel inference framework built upon two core innovations. First, CCD employs a trajectory rectification mechanism that leverages historical context to enhance sequence coherence, enabling the early rejection of suboptimal paths. We demonstrate that this mechanism is theoretically equivalent to modeling the consistency of historical steps via the conditional mutual information between context and token predictions. Building on this theoretical insight, we further address the inefficiency of conventional uniform decoding budgets. Instead of rigid allocations based on diffusion steps, we introduce an adaptive sampling strategy that dynamically adjusts the unmasking budget for each step according to our consistency metric. Consequently, our method significantly improves the quality of generation trajectories while accelerating the sampling process. Empirically, our method achieves a simultaneous enhancement in both inference speed and performance across diverse benchmarks on Dream and LLaDA, delivering up to 3.48x speedup alongside 3.91% performance improvement.",
+        "identifiers": [
+          "SemanticScholar:f77ba99099e53a6accfd14b15e15cbe6b016a2a6"
+        ],
+        "semantic_scholar_id": "f77ba99099e53a6accfd14b15e15cbe6b016a2a6",
+        "canonical_id": "arXiv:2512.02044",
+        "arxiv_id": "2512.02044",
+        "doi": "10.48550/arXiv.2512.02044",
+        "authors": [
+          "Ke Chen",
+          "Zi-Rui Liu",
+          "Xi-Jia Tao",
+          "Hui Liu",
+          "Xin-Yu Fu",
+          "Sui-Yun Zhang",
+          "Dandan Tu",
+          "Lingpeng Kong",
+          "Rui Liu",
+          "Hao-Liang Li"
+        ],
+        "priority": 110,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 110,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 321,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.06574",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.06574",
+        "id:SemanticScholar:89d20514985e9b5eaf5353a844d7e87db0f53734",
+        "id:arXiv:2606.06574",
+        "title:skip a layer or loop it learning programoflayers in llms",
+        "url:https://arxiv.org/abs/2606.06574"
+      ],
+      "record": {
+        "title": "Skip a Layer or Loop It? Learning Program-of-Layers in LLMs",
+        "source_url": "https://arxiv.org/abs/2606.06574",
+        "year": 2026,
+        "published": "2026-06-04",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) perform inference by following a fixed depth and order, non-recurrent execution of all layers. We reveal the wide existence of training-free, flexible, dynamic program-of-layers (PoLar), where pretrained layers can be packed as modules and then skipped or looped to form a customized program for each input. For most inputs, substantially shorter program executions can achieve the same or better accuracy, while incorrect predictions of the original LLM can be corrected by alternative programs with fewer layers. These observations indicate that inference admits multiple valid latent computations beyond the standard forward pass. To efficiently achieve PoLar in practice, we propose a lightweight PoLar prediction network, which learns to generate execution programs that dynamically skip or repeat pretrained layers for each input. Experiments on mathematical reasoning benchmarks demonstrate that PoLar consistently improves accuracy over standard inference and prior dynamic-depth methods, often while executing fewer layers, and that these gains persist under out-of-distribution evaluation. Our results suggest that fixed-depth execution captures only a narrow subset of an LLM's latent reasoning capacity.",
+        "identifiers": [
+          "SemanticScholar:89d20514985e9b5eaf5353a844d7e87db0f53734"
+        ],
+        "semantic_scholar_id": "89d20514985e9b5eaf5353a844d7e87db0f53734",
+        "canonical_id": "arXiv:2606.06574",
+        "arxiv_id": "2606.06574",
+        "doi": "10.48550/arXiv.2606.06574",
+        "authors": [
+          "Zi-Yue Li",
+          "Yang Li",
+          "Tianyi Zhou"
+        ],
+        "priority": 110,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 110,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 131,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.11346",
+      "identity_tokens": [
+        "id:SemanticScholar:6b92c06f28784c64d1567f57423f19786aa7f873",
+        "id:arXiv:2511.11346",
+        "title:fast and expressive multibyte prediction with probabilistic circuits",
+        "url:https://arxiv.org/abs/2511.11346"
+      ],
+      "record": {
+        "title": "Fast and Expressive Multi-Byte Prediction with Probabilistic Circuits",
+        "source_url": "https://arxiv.org/abs/2511.11346",
+        "year": 2025,
+        "published": "2025-11-14",
+        "venue": null,
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-token prediction (MTP) is a prominent strategy to significantly speed up generation in large language models (LLMs), especially in byte-level LLMs, which are tokeniser-free but prohibitively slow. However, many existing MTP methods either assume independence between future tokens, sacrificing expressiveness, or generate tokens one at a time within the window, increasing latency. In this work, we investigate the trade-off between expressiveness and latency in MTP within the framework of probabilistic circuits (PCs). Our framework, MTPC, allows one to explore different ways to encode the joint distributions over future tokens by selecting circuit architectures, generalising classical models such as (hierarchical) mixture models, hidden Markov models, and tensor networks. We show the efficacy of MTPC by retrofitting existing byte-level LLMs, such as EvaByte, and byte-fied subword models, such as Llama3.2 3B. Our experiments show that, when combined with speculative decoding, MTPC substantially speeds up generation compared to MTP with independence assumptions, while guaranteeing to retain the performance of the original verifier LLM. We also rigorously study the optimal trade-off between expressiveness and latency when exploring the possible parameterisations of MTPC, such as PC architectures and partial layer sharing between the verifier and draft LLMs.",
+        "identifiers": [
+          "SemanticScholar:6b92c06f28784c64d1567f57423f19786aa7f873"
+        ],
+        "semantic_scholar_id": "6b92c06f28784c64d1567f57423f19786aa7f873",
+        "canonical_id": "arXiv:2511.11346",
+        "arxiv_id": "2511.11346",
+        "authors": [
+          "Andreas Grivas",
+          "Lorenzo Loconte",
+          "Emile van Krieken",
+          "Piotr Nawrot",
+          "Yu Zhao",
+          "Euan Wielewski",
+          "Pasquale Minervini",
+          "E. Ponti",
+          "Antonio Vergari"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 333,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.12309",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.12309",
+        "id:SemanticScholar:316cdfe851a54d205268ef660021084c2f94a0d5",
+        "id:arXiv:2511.12309",
+        "title:optimal selfconsistency for efficient reasoning with large language models",
+        "url:https://arxiv.org/abs/2511.12309"
+      ],
+      "record": {
+        "title": "Optimal Self-Consistency for Efficient Reasoning with Large Language Models",
+        "source_url": "https://arxiv.org/abs/2511.12309",
+        "year": 2025,
+        "published": "2025-11-15",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Self-consistency (SC) is a widely used test-time inference technique for improving performance in chain-of-thought reasoning. It consists of generating multiple responses, or ``samples\", from a large language model (LLM) and selecting the most frequent answer. This procedure can naturally be viewed as a majority vote or empirical mode estimation. Despite its effectiveness, self-consistency is prohibitively expensive at scale when naively applied to datasets, and it lacks a unified theoretical understanding of sample efficiency and scaling behavior. In this paper, we provide the first comprehensive analysis of SC's scaling behavior and its variants, drawing on mode estimation and voting theory. We derive and empirically validate power law scaling for self-consistency across datasets, and analyze the sample efficiency for fixed-allocation and dynamic-allocation sampling schemes. From these insights, we introduce Blend-ASC, a novel variant of self-consistency that dynamically allocates samples to questions during inference, achieving state-of-the-art sample efficiency. Our approach uses 4.8 times fewer samples than vanilla SC on average, outperforming both fixed- and dynamic-allocation SC baselines, thereby demonstrating the superiority of our approach in terms of efficiency. In contrast to existing variants, we note that Blend-ASC is hyperparameter-free, supports batching, and can fit any budget of samples, ensuring it can be easily applied to any self-consistency application.",
+        "identifiers": [
+          "SemanticScholar:316cdfe851a54d205268ef660021084c2f94a0d5"
+        ],
+        "semantic_scholar_id": "316cdfe851a54d205268ef660021084c2f94a0d5",
+        "canonical_id": "arXiv:2511.12309",
+        "arxiv_id": "2511.12309",
+        "doi": "10.48550/arXiv.2511.12309",
+        "authors": [
+          "A. Feng",
+          "Marius Alonso",
+          "Ambroise Odonnat",
+          "Vasilii Feofanov",
+          "I. Redko"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 332,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.ipm.2025.104449",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.ipm.2025.104449",
+        "id:SemanticScholar:b5f42632997f7f9ee9728eac077aefa122c62fd2",
+        "title:leveraging historical information to boost retrievalaugmented generation in conversations",
+        "url:https://doi.org/10.1016/j.ipm.2025.104449"
+      ],
+      "record": {
+        "title": "Leveraging historical information to boost retrieval-augmented generation in conversations",
+        "source_url": "https://doi.org/10.1016/j.ipm.2025.104449",
+        "year": 2026,
+        "published": "2026-03-01",
+        "venue": "Information Processing & Management",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:b5f42632997f7f9ee9728eac077aefa122c62fd2"
+        ],
+        "semantic_scholar_id": "b5f42632997f7f9ee9728eac077aefa122c62fd2",
+        "doi": "10.1016/j.ipm.2025.104449",
+        "canonical_id": "DOI:10.1016/j.ipm.2025.104449",
+        "authors": [
+          "Fengran Mo",
+          "Yi-Fan Gao",
+          "Zhuofeng Wu",
+          "Xin Liu",
+          "Pei Chen",
+          "Zheng Li",
+          "Zhengyang Wang",
+          "Xian Li",
+          "Meng Jiang",
+          "Jian-yun Nie"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 226,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04438",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.04438",
+        "id:SemanticScholar:5e6a650e8ccff682d083511026a8b10966e01538",
+        "id:arXiv:2606.04438",
+        "title:loopmoe unifying iterative computation with mixtureofexperts for language modeling",
+        "url:https://arxiv.org/abs/2606.04438"
+      ],
+      "record": {
+        "title": "LoopMoE: Unifying Iterative Computation with Mixture-of-Experts for Language Modeling",
+        "source_url": "https://arxiv.org/abs/2606.04438",
+        "year": 2026,
+        "published": "2026-06-03",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) and looped architectures scale models along two orthogonal axes, namely parameter capacity and effective depth. However, mainstream looped architectures rely on dense backbones that couple parameter count with per-token FLOPs, which makes it impossible to isolate the effect of iterative computation under matched budgets. To this end, we present LoopMoE, a looped MoE language model that integrates sparse routing with iterative weight-shared computation through two designs. The first is IterAdaLN, which resolves weight-sharing symmetry via a modulation signal jointly conditioned on the iteration index and the per-token hidden state. The second is a capacity-balancing strategy that recovers the attention-to-FFN active parameter ratio of well-tuned non-looped references. Together, these designs enable the first strictly controlled, head-to-head evaluation of a looped MoE against a Vanilla MoE under identical total parameters, per-token FLOPs, and active sublayer ratios. Across nine downstream benchmarks, LoopMoE's average improvement over its matched vanilla MoE increases from over 1 point at the 3B scale to approximately 3 points at the 9B scale. These results provide initial evidence that the benefits of iterative sparse computation may strengthen with scale, positioning LoopMoE as a promising architecture for scalable looped language models.",
+        "identifiers": [
+          "SemanticScholar:5e6a650e8ccff682d083511026a8b10966e01538"
+        ],
+        "semantic_scholar_id": "5e6a650e8ccff682d083511026a8b10966e01538",
+        "canonical_id": "arXiv:2606.04438",
+        "arxiv_id": "2606.04438",
+        "doi": "10.48550/arXiv.2606.04438",
+        "authors": [
+          "Wen-Kai Chen",
+          "Tian-Shu Li",
+          "Wen-Yong Huang",
+          "Yi-Chun Yin",
+          "Lifeng Shang",
+          "Cheng-Wei Qin"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 132,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.15206",
+      "identity_tokens": [
+        "id:DOI:10.1145/3786335.3813163",
+        "id:SemanticScholar:748d1eaa3b2a09a665f87fbbbc7b40602fc37236",
+        "id:arXiv:2605.15206",
+        "title:agentstop terminating local ai agents early to save energy in consumer devices",
+        "url:https://arxiv.org/abs/2605.15206"
+      ],
+      "record": {
+        "title": "AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices",
+        "source_url": "https://arxiv.org/abs/2605.15206",
+        "year": 2026,
+        "published": "2026-05-01",
+        "venue": "CAIS",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autonomous agents powered by large language models (LLMs) are increasingly used to automate complex, multi-step tasks such as coding or web-based question answering. While remote, cloud-based agents offer scalability and ease of deployment, they raise privacy concerns, depend on network connectivity, and incur recurring API costs. Deploying agents locally on user devices mitigates these issues by preserving data privacy and eliminating usage-based fees. However, agentic workflows are far more resource-intensive than typical LLM interactions. Iterative reasoning, tool use, and failure retries substantially increase token consumption, often expending significant compute without successfully completing tasks. In this work, we investigate the time, token, and energy overhead of locally deployed LLM-based agents on consumer hardware. Our measurements show that agentic execution increases GPU power draw, temperature, and battery drain compared to single-inference workloads. To address this inefficiency, we introduce AgentStop, a lightweight efficiency supervisor that predicts and preemptively terminates trajectories unlikely to succeed. Leveraging low-cost execution signals, such as token-level log probabilities, AgentStop can reduce wasted energy by 15-20% with minimal impact on task performance (<5% utility drop) for challenging web-based question answering and coding benchmarks. These findings position predictive early termination as a practical mechanism for enabling sustainable, privacy-preserving LLM agents on user devices. Our project code and data are available at https://github.com/brave-experiments/AgentStop.",
+        "identifiers": [
+          "SemanticScholar:748d1eaa3b2a09a665f87fbbbc7b40602fc37236"
+        ],
+        "semantic_scholar_id": "748d1eaa3b2a09a665f87fbbbc7b40602fc37236",
+        "canonical_id": "arXiv:2605.15206",
+        "arxiv_id": "2605.15206",
+        "doi": "10.1145/3786335.3813163",
+        "authors": [
+          "Dzung Pham",
+          "Kleomenis Katevas",
+          "Ali Shahin Shamsabadi",
+          "Hamed Haddadi"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 165,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.23071",
+      "identity_tokens": [
+        "id:DOI:10.1109/lmiat70705.2026.11682707",
+        "id:SemanticScholar:3e185881254a1b8c4132a7715a51fab861292287",
+        "id:arXiv:2605.23071",
+        "title:the efficiency frontier a unified framework for costperformance optimization in llm context management",
+        "url:https://arxiv.org/abs/2605.23071"
+      ],
+      "record": {
+        "title": "The Efficiency Frontier: A Unified Framework for Cost–Performance Optimization in LLM Context Management",
+        "source_url": "https://arxiv.org/abs/2605.23071",
+        "year": 2026,
+        "published": "2026-05-21",
+        "venue": "2026 International Conference on Large Models and Intelligent Agent Technologies (LMIAT)",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) increasingly rely on long-context processing, but expanding context windows introduces substantial computational and financial costs. Existing context reduction approaches, including retrieval and memory compression methods, are typically evaluated using performance and efficiency metrics independently, limiting systematic comparison and deployment-aware decision-making.This paper introduces The Efficiency Frontier, a unified framework for cost–performance optimization in LLM context management. The framework models context strategy selection as a deployment-aware optimization problem that jointly accounts for task performance, token cost, and preprocessing reuse through amortized cost modeling. Unlike existing evaluations that compare methods in isolation, the proposed framework enables decision-oriented analysis. It identifies when different context management strategies become preferable under varying operational conditions. Experiments on HotpotQA reveal distinct operational regimes and transition boundaries between retrieval-based and preprocessing-based strategies. Results show that deployment-aware optimization reduces effective token usage by approximately 25% at comparable performance, enabling more cost-efficient deployment of large language model systems, while amortized memory compression achieves over 50% lower token cost relative to full-context prompting in higher-performance settings. Overall, the proposed framework provides a principled and practical foundation for evaluating and deploying scalable, efficient, and sustainable LLM systems across enterprise, scientific, and public-sector applications.",
+        "identifiers": [
+          "SemanticScholar:3e185881254a1b8c4132a7715a51fab861292287"
+        ],
+        "semantic_scholar_id": "3e185881254a1b8c4132a7715a51fab861292287",
+        "canonical_id": "arXiv:2605.23071",
+        "arxiv_id": "2605.23071",
+        "doi": "10.1109/LMIAT70705.2026.11682707",
+        "authors": [
+          "Bin-Qi Shen",
+          "Li Jin",
+          "Han-Yu Cai",
+          "Lang-Xiang Hu",
+          "Yu-Ting Xin"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.30010",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.30010",
+        "id:SemanticScholar:7f47dbd6606d1d6fcb52226773db12fb0d830814",
+        "id:arXiv:2605.30010",
+        "title:earlytom early token compression completes fast video understanding",
+        "url:https://arxiv.org/abs/2605.30010"
+      ],
+      "record": {
+        "title": "EarlyTom: Early Token Compression Completes Fast Video Understanding",
+        "source_url": "https://arxiv.org/abs/2605.30010",
+        "year": 2026,
+        "published": "2026-05-28",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video large language models (Video-LLMs) have demonstrated strong capabilities in video understanding tasks. However, their practical deployment is still hindered by the inefficiency introduced by processing massive amounts of visual tokens. Although recent approaches achieve extremely low token retention ratios while maintaining accuracy comparable to full-token baselines, most of them perform compression only at the late stage of prefilling, leaving the efficiency of the vision encoder unoptimized. In this paper, we first show that vision encoding contributes a large portion to the time-to-first-token (TTFT). Therefore, instead of compressing visual tokens only after the vision encoder, performing compression inside the encoder still leaves substantial room for exploration. Based on this insight, we propose EarlyTom, a training-free token compression framework that performs early-stage visual token compression inside the vision encoder, enabling significantly better TTFT reduction and higher throughput. In addition, we introduce a decoupled spatial token selection strategy that improves the overall compression effectiveness. EarlyTom reduces TTFT by up to 2.65x and FLOPs by up to 61% on a single NVIDIA A100 GPU for the LLaVA-OneVision-7B model, while maintaining accuracy comparable to the full-token baseline. These improvements substantially enhance the practicality of deploying Video-LLMs in real-world production scenarios.",
+        "identifiers": [
+          "SemanticScholar:7f47dbd6606d1d6fcb52226773db12fb0d830814"
+        ],
+        "semantic_scholar_id": "7f47dbd6606d1d6fcb52226773db12fb0d830814",
+        "canonical_id": "arXiv:2605.30010",
+        "arxiv_id": "2605.30010",
+        "doi": "10.48550/arXiv.2605.30010",
+        "authors": [
+          "He-Song Wang",
+          "Xin Jin",
+          "Lu Lu",
+          "Chenhao Li",
+          "Jian Chen",
+          "Qiang Liu",
+          "Huan Wang"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 138,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01926",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.01926",
+        "id:SemanticScholar:e02316b5ac22a534e030fb6dc4668878102d9145",
+        "id:arXiv:2606.01926",
+        "title:mitigating bias in locally constrained decoding via tractable proposals",
+        "url:https://arxiv.org/abs/2606.01926"
+      ],
+      "record": {
+        "title": "Mitigating Bias in Locally Constrained Decoding via Tractable Proposals",
+        "source_url": "https://arxiv.org/abs/2606.01926",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Generations from large language models often fail to conform to desired constraints such as JSON schema. Existing locally constrained decoding (LCD) approaches enforce constraints by myopically masking out next tokens, resulting in biased sampling and degradation in performance. Recent work uses sequential Monte Carlo (SMC) methods to mitigate such biases, but designing effective proposal distributions or potential functions remains a key challenge. In this work, we propose a generic approach to construct proposals and potentials for SMC sampling from $p_{\\mathrm{lm}}( \\cdot \\mid \\mathrm{constraint})$. First, we show that constraints specified as finite automata can be tensorized for efficient execution on GPUs, which we use to construct globally constrained decoding (GCD) proposals. In addition, leveraging the fact that tensorized finite automata share the same circuit structure as hidden Markov models, we circuit-multiply them to obtain the probabilistic GCD (P-GCD) proposals encoding both logical and probabilistic information about the target distributions. We evaluate (P-)GCD on the tasks of function calling, keyword-based generation, and SQL generation. Experiments show that under the same SMC sampling setup, compared to LCD proposals, (P-)GCD converges faster to the target distribution with significantly fewer particles.",
+        "identifiers": [
+          "SemanticScholar:e02316b5ac22a534e030fb6dc4668878102d9145"
+        ],
+        "semantic_scholar_id": "e02316b5ac22a534e030fb6dc4668878102d9145",
+        "canonical_id": "arXiv:2606.01926",
+        "arxiv_id": "2606.01926",
+        "doi": "10.48550/arXiv.2606.01926",
+        "authors": [
+          "Mei-Hua Dang",
+          "Lin-Xin Song",
+          "Honghua Zhang",
+          "Jie-Yu Zhao",
+          "Guy Van den Broeck",
+          "S. Ermon"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 134,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.06087",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.06087",
+        "id:SemanticScholar:18a8ee09a6eb7203837165ad682a82a39e60eb42",
+        "id:arXiv:2606.06087",
+        "title:latentskill from incontext textual skills to inweight latent skills for llm agents",
+        "url:https://arxiv.org/abs/2606.06087"
+      ],
+      "record": {
+        "title": "LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents",
+        "source_url": "https://arxiv.org/abs/2606.06087",
+        "year": 2026,
+        "published": "2026-06-04",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agent systems increasingly use textual skills to encode reusable task procedures, but injecting these skills into the prompt at every step incurs substantial context overhead and exposes skill content as plaintext. We present LatentSkill, a framework that converts textual skills into plug-and-play LoRA adapters through a pretrained hypernetwork. LatentSkill stores skill knowledge in weight space rather than context space, removing per-step skill tokens while preserving modular loading, scaling, and composition. On ALFWorld and Search-QA, LatentSkill outperforms the corresponding in-context skill baseline while using substantially fewer prefill tokens: it improves ALFWorld success by 21.4 and 13.4 points on the seen and unseen splits with 63.9% fewer prefill tokens on average, and improves Search-QA exact match by 3.0 points while using 71.8% fewer tokens per step. Further analysis shows that generated skill LoRAs form a structured semantic geometry, can be continuously modulated via the LoRA scaling coefficient, and can be composed through parameter-space arithmetic when skill components are aligned. These findings suggest that weight-space skills provide an efficient, modular, and less exposed substrate for extending LLM agents.",
+        "identifiers": [
+          "SemanticScholar:18a8ee09a6eb7203837165ad682a82a39e60eb42"
+        ],
+        "semantic_scholar_id": "18a8ee09a6eb7203837165ad682a82a39e60eb42",
+        "canonical_id": "arXiv:2606.06087",
+        "arxiv_id": "2606.06087",
+        "doi": "10.48550/arXiv.2606.06087",
+        "authors": [
+          "Ao Yu",
+          "Chenyue Zhou",
+          "Tian-Yi Xu",
+          "Zihan Guo",
+          "Shan Rong",
+          "Zhi-Hui Fu",
+          "Jun Wang",
+          "Wei-Wen Liu",
+          "Yong Yu",
+          "Wei-Nan Zhang",
+          "Jianghao Lin"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 131,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.06448",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.06448",
+        "id:SemanticScholar:453fe21f545a9b7f885aea2ee9165e4ada4e144f",
+        "id:arXiv:2606.06448",
+        "title:agent memory characterization and system implications of stateful longhorizon workloads",
+        "url:https://arxiv.org/abs/2606.06448"
+      ],
+      "record": {
+        "title": "Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads",
+        "source_url": "https://arxiv.org/abs/2606.06448",
+        "year": 2026,
+        "published": "2026-06-04",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM agents are increasingly deployed on long-horizon tasks requiring sustained reasoning over extended interaction histories. Realizing this at scale requires agents to persistently store, retrieve, and update their own memory across sessions. A rich ecosystem of agent memory systems has emerged spanning flat retrieval, LLM-mediated extraction, consolidating fact stores, and agentic control flows. Yet, their system-level behavior remains uncharacterized. We present the first systems characterization of agent memory. First, we introduce a system-oriented taxonomy classifying agent memory systems along four axes. Second, we build a phase-aware profiling harness attributing cost to construction, retrieval, and generation. Third, we characterize ten representative systems across two benchmark suites, uncovering how design choices shift cost across the write and read paths. Finally, we derive 10 system recommendations covering construction scheduling, capability floors, amortization via query volume, freshness-latency tradeoffs, and fleet-scale management.",
+        "identifiers": [
+          "SemanticScholar:453fe21f545a9b7f885aea2ee9165e4ada4e144f"
+        ],
+        "semantic_scholar_id": "453fe21f545a9b7f885aea2ee9165e4ada4e144f",
+        "canonical_id": "arXiv:2606.06448",
+        "arxiv_id": "2606.06448",
+        "doi": "10.48550/arXiv.2606.06448",
+        "authors": [
+          "Yasmine Omri",
+          "Ziyun Gan",
+          "Zachary Broveak",
+          "Robin Geens",
+          "Ze-Xue He",
+          "A. Pentland",
+          "Marian Verhelst",
+          "T. Weissman",
+          "Thierry Tambe"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 131,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f583edfe2ed123c1f6cf651f99319949a9fefffb04d015ecf717b24a95ea2901",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

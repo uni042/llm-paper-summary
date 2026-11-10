@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd14315bec04bd7b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.28758",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.28758",
+    "identity_tokens": [
+      "arXiv:2609.28758"
+    ],
+    "reason": "We describe our submission to the Unsupervised Speech in the Wild (UPS) Challenge at Interspeech 2026, a bidirectional Mamba-2 (BiMamba2) encoder trained with masked discrete-unit prediction following the HuBERT-style paradigm. The 47.88M-parameter model is trained on 250 hours of speech across 67 languages from the MLCommons Unsupervised People's Speech dataset, with no labeled data. The objective combines masked k-means pseudo-label prediction with language identification supervision and VICRe",
+    "first_checked_at": "2026-10-05T05:48:44+00:00",
+    "last_checked_at": "2026-10-05T05:48:44+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "BiMamba2 Masked Discrete-Unit Prediction for Multilingual Speech Representation for Unsupervised Speech in the Wild Challenge"
+  },
+  "processed_at": "2026-10-05T05:48:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd14315bec04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

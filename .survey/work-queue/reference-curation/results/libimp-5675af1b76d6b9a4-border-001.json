@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5675af1b76d6b9a4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.02663",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.02663",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.02663",
+      "arXiv:2507.02663",
+      "title:think how to think  mitigating overthinking with autonomous difficulty cognition in large reasoning models"
+    ],
+    "reason": "arXiv一次要旨では推論モデルの過剰な長い思考列を抑えるため、難易度認識と冗長性認識を出力接頭辞・中間思考に注入する二段階微調整TH2Tを提案。易しい課題で70%以上、難しい課題で40%の推論費用を削減すると報告するが、主たる技術は学習時の行動誘導であり、推論サーバ・KV・カーネル・スケジューラの実行機構ではないため境界扱い。",
+    "first_checked_at": "2026-10-27T22:45:57+00:00",
+    "last_checked_at": "2026-10-27T22:45:57+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Think How to Think: Mitigating Overthinking with Autonomous Difficulty Cognition in Large Reasoning Models"
+  },
+  "processed_at": "2026-10-27T22:45:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5675af1b76d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

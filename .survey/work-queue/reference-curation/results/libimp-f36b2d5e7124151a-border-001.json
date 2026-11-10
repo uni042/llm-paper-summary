@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f36b2d5e7124151a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.15983",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.15983",
+    "identity_tokens": [
+      "SemanticScholar:f04a1bc5eeb3ff5162eb9eab4e739cfad53a56b4",
+      "arXiv:2412.15983"
+    ],
+    "reason": "Reset-free RNN inference may reduce synchronization and computational costs, but the abstract does not quantify system-efficiency effects or connect to serving/runtime systems.",
+    "first_checked_at": "2026-10-13T01:21:59+00:00",
+    "last_checked_at": "2026-10-13T01:21:59+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Never Reset Again: A Mathematical Framework for Continual Inference in Recurrent Neural Networks"
+  },
+  "processed_at": "2026-10-13T01:21:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f36b2d5e7124",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

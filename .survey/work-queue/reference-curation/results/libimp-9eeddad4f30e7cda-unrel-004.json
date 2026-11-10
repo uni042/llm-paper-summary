@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9eeddad4f30e7cda-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.18239",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.18239",
+    "identity_tokens": [
+      "arXiv:2609.18239"
+    ],
+    "reason": "一次要旨: Structured pruning is commonly formulated as ranking individual channels, although channel responses can be complementary or cancel through downstream mixing. Motivated by these response interactions, we formulate pruning as the selection of a subset with large joint response capacity, followed by a separate functional realization step. Our unified response geometry maps each candidate set to \\(M(D,R)=D^{1/2}RD^{1/2}\\) and use",
+    "first_checked_at": "2026-10-05T06:33:17+00:00",
+    "last_checked_at": "2026-10-05T06:33:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+    ],
+    "title": "Unified Response Geometry for Structured Pruning"
+  },
+  "processed_at": "2026-10-05T06:33:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9eeddad4f30e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

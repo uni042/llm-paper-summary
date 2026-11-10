@@ -1,0 +1,296 @@
+from __future__ import annotations
+
+import datetime as dt
+import sys
+import unittest
+from pathlib import Path
+
+SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
+sys.path.insert(0, str(SCRIPTS))
+
+import candidate_priority  # noqa: E402
+import refresh_candidate_priority  # noqa: E402
+
+
+class CandidatePriorityTest(unittest.TestCase):
+    def policy(self):
+        return {
+            "schema_version": 1,
+            "policy_name": "test",
+            "freshness": {
+                "enabled": True,
+                "window_mode": "rolling_months",
+                "months": 12,
+                "score": 10,
+                "cited_score": 100,
+                "year_only_is_fresh": False,
+            },
+            "prestigious_venue": {
+                "enabled": True,
+                "score": 10,
+                "aliases": ["OSDI", "NeurIPS"],
+            },
+            "citations": {
+                "enabled": True,
+                "score_per_citation": 1,
+                "max_score": None,
+            },
+            "fallback_priority": 0,
+        }
+
+    def test_fresh_venue_and_citations_are_additive_and_unbounded(self):
+        got = candidate_priority.score_record(
+            {"published": "2026-09-01", "venue": "OSDI", "citation_count": 140},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 3),
+            config=self.policy(),
+        )
+        self.assertEqual(got["freshness"], 100)
+        self.assertEqual(got["prestigious_venue"], 10)
+        self.assertEqual(got["citations"], 140)
+        self.assertEqual(got["total"], 250)
+
+    def test_recent_cited_gets_attention_equivalent_boost(self):
+        cited = candidate_priority.score_record(
+            {"published": "2026-09-01", "citation_count": 1},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 3),
+            config=self.policy(),
+        )
+        uncited = candidate_priority.score_record(
+            {"published": "2026-09-01", "citation_count": 0},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 3),
+            config=self.policy(),
+        )
+        self.assertTrue(cited["is_recent_cited"])
+        self.assertEqual(cited["freshness"], 100)
+        self.assertEqual(cited["total"], 101)
+        self.assertFalse(uncited["is_recent_cited"])
+        self.assertEqual(uncited["freshness"], 10)
+        self.assertEqual(uncited["total"], 10)
+
+    def test_recent_window_matches_survey_list_month_buckets(self):
+        november = candidate_priority.score_record(
+            {"published": "2025-11-01", "citation_count": 0},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 31),
+            config=self.policy(),
+        )
+        october = candidate_priority.score_record(
+            {"published": "2025-10-31", "citation_count": 0},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 1),
+            config=self.policy(),
+        )
+        self.assertTrue(november["is_fresh"])
+        self.assertFalse(october["is_fresh"])
+
+    def test_old_highly_cited_paper_can_outrank_fresh_uncited_paper(self):
+        old = candidate_priority.score_record(
+            {"published": "2020-01-01", "citation_count": 500},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 3),
+            config=self.policy(),
+        )
+        fresh = candidate_priority.score_record(
+            {"published": "2026-10-01"},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 3),
+            config=self.policy(),
+        )
+        self.assertGreater(old["total"], fresh["total"])
+
+    def test_year_only_metadata_does_not_claim_freshness(self):
+        got = candidate_priority.score_record(
+            {"year": 2026, "citation_count": 2},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 3),
+            config=self.policy(),
+        )
+        self.assertFalse(got["is_fresh"])
+        self.assertEqual(got["total"], 2)
+
+    def test_embedded_provider_metadata_seeds_priority_cache_without_lookup(self):
+        cache = {
+            "schema_version": 1,
+            "records": {},
+            "aliases": {},
+            "lookup_failures": {
+                "arXiv:2609.00001": {
+                    "status": "error",
+                    "checked_at": "2026-10-01T00:00:00+00:00",
+                }
+            },
+        }
+        rows = [
+            {
+                "_lookup_id": "arXiv:2609.00001",
+                "canonical_id": "arXiv:2609.00001",
+                "arxiv_id": "2609.00001",
+                "title": "Forward candidate",
+                "published": "2026-09-30",
+                "venue": "OSDI",
+                "citation_count": 17,
+                "citation_count_source": "semantic_scholar",
+                "last_seen_at": "2026-10-03T17:38:36+00:00",
+            }
+        ]
+        seeded = refresh_candidate_priority._seed_cache_from_embedded_metadata(
+            cache, rows
+        )
+        self.assertEqual(seeded, 1)
+        stored = cache["records"]["arXiv:2609.00001"]
+        self.assertEqual(stored["citation_count"], 17)
+        self.assertEqual(
+            stored["citation_count_checked_at"],
+            "2026-10-03T17:38:36+00:00",
+        )
+        self.assertNotIn("arXiv:2609.00001", cache["lookup_failures"])
+
+        self.assertEqual(
+            refresh_candidate_priority._seed_cache_from_embedded_metadata(
+                cache, rows
+            ),
+            0,
+        )
+
+    def test_priority_refresh_candidate_set_includes_borderline_records(self):
+        import json
+        import tempfile
+
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            ledger = root / ".survey/work-queue/reference-curation/borderline-papers.json"
+            ledger.parent.mkdir(parents=True)
+            ledger.write_text(json.dumps({
+                "schema_version": 1,
+                "classification": "borderline",
+                "records": {
+                    "arXiv:2609.77777": {
+                        "canonical_id": "arXiv:2609.77777",
+                        "identity_tokens": ["arXiv:2609.77777"],
+                        "title": "Borderline candidate",
+                    }
+                },
+            }), encoding="utf-8")
+            rows = refresh_candidate_priority._candidate_records(root)
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(rows[0]["_lookup_id"], "arXiv:2609.77777")
+
+    def test_priority_cache_shards_roundtrip_without_losing_metadata(self):
+        import json
+        import tempfile
+        from unittest.mock import patch
+        import candidate_priority_state
+
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            target = root / ".survey/work-queue/candidate-priority-cache.json"
+            state = {
+                "schema_version": 1,
+                "updated_at": "2026-10-08T05:40:00+00:00",
+                "records": {
+                    "paper-1": {"citation_count": 30, "source_url": "https://doi.org/a"},
+                    "paper-2": {"citation_count": 70, "venue": "OSDI"},
+                },
+                "aliases": {"doi-a": "paper-1", "doi-b": "paper-2"},
+                "lookup_failures": {"missing": {"status": "error", "checked_at": "2026-10-08"}},
+            }
+            with patch.object(candidate_priority_state, "INLINE_LIMIT", 1):
+                self.assertTrue(candidate_priority_state.write(target, state))
+                manifest = json.loads(target.read_text(encoding="utf-8"))
+                self.assertEqual(len(manifest["cache_shards"]), 32)
+                self.assertNotIn("records", manifest)
+                self.assertEqual(candidate_priority.load_cache(root), state)
+                self.assertFalse(candidate_priority_state.write(target, state))
+                shard = target.parent / "candidate-priority-cache-shards" / manifest["cache_shards"][0]
+                shard.unlink()
+                with self.assertRaises(FileNotFoundError):
+                    candidate_priority.load_cache(root)
+
+    def test_priority_cache_keeps_small_legacy_format(self):
+        import tempfile
+        import candidate_priority_state
+
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            target = root / candidate_priority.CACHE_PATH
+            state = {"schema_version": 1, "records": {}, "aliases": {}, "lookup_failures": {}}
+            self.assertTrue(candidate_priority_state.write(target, state))
+            self.assertEqual(candidate_priority.load_cache(root), state)
+
+    def test_cache_cannot_overwrite_authoritative_bibliographic_metadata(self):
+        record = {
+            "canonical_id": "arXiv:2405.21060",
+            "published": "2024-05-31",
+            "year": 2024,
+            "venue": "ICML 2024",
+            "semantic_scholar_id": "correct-paper-id",
+            "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality",
+            "source_url": "https://arxiv.org/abs/2405.21060",
+            "citation_count": 70,
+        }
+        cache = {
+            "records": {
+                "arXiv:2405.21060": {
+                    "published": "2026-01-01",
+                    "year": 2026,
+                    "venue": "Wrong Venue",
+                    "semantic_scholar_id": "wrong-paper-id",
+                    "title": "Wrong aliased title",
+                    "source_url": "https://example.invalid/wrong",
+                    "citation_count": 78,
+                    "citation_count_source": "openalex",
+                    "citation_count_checked_at": "2026-10-30T00:00:00+00:00",
+                }
+            },
+            "aliases": {},
+        }
+        got = candidate_priority.merge_cached_metadata(record, cache)
+        for field in (
+            "published", "year", "venue", "semantic_scholar_id", "title", "source_url",
+        ):
+            self.assertEqual(got[field], record[field])
+        self.assertEqual(got["citation_count"], 78)
+        self.assertEqual(got["citation_count_source"], "openalex")
+        self.assertEqual(
+            got["citation_count_checked_at"], "2026-10-30T00:00:00+00:00"
+        )
+
+    def test_cache_can_fill_missing_bibliographic_metadata(self):
+        got = candidate_priority.merge_cached_metadata(
+            {"canonical_id": "arXiv:2601.00001"},
+            {
+                "records": {
+                    "arXiv:2601.00001": {
+                        "title": "Filled title",
+                        "source_url": "https://arxiv.org/abs/2601.00001",
+                        "published": "2026-01-01",
+                        "venue": "arXiv",
+                    }
+                },
+                "aliases": {},
+            },
+        )
+        self.assertEqual(got["title"], "Filled title")
+        self.assertEqual(got["published"], "2026-01-01")
+        self.assertEqual(got["venue"], "arXiv")
+
+    def test_weights_are_configuration_driven(self):
+        policy = self.policy()
+        policy["freshness"]["score"] = 7
+        policy["freshness"]["cited_score"] = 7
+        policy["prestigious_venue"]["score"] = 3
+        policy["citations"]["score_per_citation"] = 2
+        got = candidate_priority.score_record(
+            {"published": "2026-10-01", "venue": "NeurIPS 2026", "citation_count": 5},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 3),
+            config=policy,
+        )
+        self.assertEqual(got["total"], 20)
+
+
+if __name__ == "__main__":
+    unittest.main()

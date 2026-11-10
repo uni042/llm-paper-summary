@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fd125b2e9f47cb82-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.17465",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.17465",
+    "identity_tokens": [
+      "DOI:10.1109/cvpr52734.2025.01816",
+      "arXiv:2411.17465",
+      "id:arXiv:2411.17465",
+      "semanticscholar:02128b757f31f1385c9b839201783ceae5cd2088",
+      "url:https://arxiv.org/abs/2411.17465"
+    ],
+    "reason": "GUI画像を連結グラフとして扱う視覚トークン選択により冗長トークンを33%減らし、報告された1.4倍高速化は学習過程の値である。視覚言語行動モデルの入力圧縮・計算削減には関連するが、LLM推論配信の実測高速化やメモリ階層の一般化を主目的としないため境界判定とする。",
+    "first_checked_at": "2026-10-11T03:46:34+00:00",
+    "last_checked_at": "2026-10-13T15:47:55+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ShowUI: One Vision-Language-Action Model for GUI Visual Agent"
+  },
+  "processed_at": "2026-10-13T15:47:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fd125b2e9f47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

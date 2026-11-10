@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1b0f7b6e083987cc6af9b73c9a1cd41bb008eb157f3d3a3146afb267c34dd646",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_f9bad6adad74819189590e6f7b22d6c5--2025-2503.01066-alchemist-serving-activation-reuse-research-20261027-1345-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2503.01066",
+  "worker_completed_at": "2026-10-27T13:47:20+09:00",
+  "worker_run_key": "20261027-1345-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6574,
+    "body_paragraphs": 37,
+    "method_chars": 2648,
+    "method_paragraphs": 13,
+    "evaluation_chars": 190,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 190 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 190 < 500"
+  ],
+  "processed_at": "2026-10-27T07:40:24+00:00"
+}

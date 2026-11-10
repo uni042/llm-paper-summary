@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e346e9b945d6b813-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.11444",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.11444",
+    "identity_tokens": [
+      "arXiv:2607.11444"
+    ],
+    "reason": "一次要旨はMoE domain training。推論costを維持し寄与はtraining品質改善。",
+    "first_checked_at": "2026-10-05T10:26:03+00:00",
+    "last_checked_at": "2026-10-05T10:26:03+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
+      "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+    ],
+    "title": "UMoE:Unlocking Every Expert in Domain-Specific Training"
+  },
+  "processed_at": "2026-10-05T10:26:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e346e9b945d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

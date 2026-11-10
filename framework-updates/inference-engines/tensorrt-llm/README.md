@@ -1,0 +1,131 @@
+# TensorRT-LLM
+
+TensorRT-LLMの主要な機能・性能更新を継続的に記録する集約ページ。正式release前のrelease candidate（RC）は、stable版と混同しないよう明示して記録する。
+
+この期間は、**KV cacheをGPU外へ階層化すること、prefill / decodeを別workerへ分離すること、CUDA Graph適用範囲を広げること、MoE通信と低bit KVを強化すること**が中心。
+
+## 現在できること
+
+- **NVIDIA GPU向けcompiled LLM serving**: modelをTensorRT-LLM向けengine / runtimeへbuildし、NVIDIA GPU用に選ばれたattention、GEMM、normalization、MoE等のkernelで実行できる。Python model codeをそのまま逐次実行するより、graph・precision・kernelをまとめて最適化することを狙う。
+- **continuous / in-flight batching**: 生成途中のrequestをbatchへ出し入れし、終了したrequestのslotへ新着requestを入れられる。固定batchの終了待ちを減らし、GPU throughputを高く保ちやすい。
+- **paged KV cache**: KVをpage / block単位で確保し、長さの違うrequestが混在しても大きな連続領域をrequestごとに予約せずに済む。block reuseとprefix reuseにより同じKVを再利用できる。
+- **KV cacheの階層化**: GPU HBMだけでなくCPU memory、disk等の下位tierへKVをoffloadし、必要なblockだけprefetch / onloadできる。GPU memory容量を超えるconversation / contextを保持できる一方、PCIe / storage I/Oがlatencyへ効く。
+- **cold KV compression**: しばらく使わないKV pageを低bit / codecで圧縮し、下位tierの保存容量と再転送量を減らせる。hot pageとcold pageでprecision / storage costを分ける考え方。
+- **conversation / prefix KV reuse**: 過去conversationや同じprefixから作ったKV blockを再利用し、system promptや長い共通contextを繰り返しprefillする計算を減らせる。
+- **prefill / decode分離**: promptをまとめて処理するprefill workerと、1 tokenずつ生成するdecode workerを別GPU群へ分けられる。phaseごとのcompute / bandwidth特性に合わせ、cluster resourceを別々に割り当てられる。
+- **KV transceiver / connector**: prefill側で生成したKVをdecode側や外部cacheへ送受信できる。NIXL等を使ってGPU間 / node間data movementを行い、CPU stagingや再計算を減らせる。
+- **tensor / pipeline parallelism**: dense modelを複数GPUへ分割し、単一GPUに収まらないmodelを実行できる。model size、layer構成、GPU間linkに応じて分割方法を選ぶ。
+- **expert parallelism / MoE**: MoE expertを複数GPUへ分散し、routingされたtokenだけを対応expertへ送る。All-to-All通信でpaddingや不要writeを減らし、低bit expert kernelも使える。
+- **低bit weight / activation**: FP8、FP4、NVFP4、INT8等のprecisionでweightやactivationを扱い、HBM使用量・HBM traffic・matrix compute costを削減できる。hardware世代ごとのTensor Core対応が性能を左右する。
+- **低bit KV cache**: FP8 / FP4等でKV自体を保持し、長contextで支配的になるcache memoryとworker間転送量を減らせる。model weightとKVを別precisionで最適化できる。
+- **投機的デコード**: EAGLE、DFlash、DSpark等で複数token候補をdraftし、target modelでまとめて検証できる。候補が受理されればtarget forward回数を減らせる。
+- **tree型speculative decoding**: draft候補を単一列ではなくtree状に展開し、複数branchを1回のtarget実行で検証できる。途中tokenが外れても別branchを採用できる可能性を残し、acceptanceを上げる狙いがある。
+- **chunked / fine-grained prefill**: 長いpromptを小さいchunkへ分け、schedulerがdecode requestと混ぜて実行できる。巨大prefillによるmemory peakとdecodeの長時間stallを減らせる。
+- **context / sequence parallel系実行**: 長いsequenceのattention / KVを複数GPUへ分割し、1 GPU当たりのKV memoryとattention workを減らせる。long-context modelをmulti-GPUへ拡張する手段。
+- **CUDA Graph**: decode等で繰り返すkernel列をcaptureし、CPUから毎token大量のkernelをlaunchするoverheadを減らせる。prefillもshape bucketごとにcaptureし、適用範囲を広げられる。
+- **breakable / dynamic Graph利用**: Graph化できない一部operationだけ通常kernel pathへ逃がし、それ以外をGraphのまま実行できる。完全固定shapeを要求する場合よりproduction workloadへ適用しやすい。
+- **fused kernel**: attention前後のnormalization、quantization、MoE routing / MLP等をまとめ、中間tensorのHBM書き戻しとkernel launch回数を減らせる。
+- **memory pool / VMM管理**: GPU仮想memoryを使って大きなKV / workspace poolを柔軟に割り当て、長時間servingの断片化やprocess間memory共有を改善できる。
+- **multimodal pipeline**: vision encoder等を含むmodelも実行し、encoder側にもCUDA Graph等の最適化を適用できる。text decoder以外の前処理計算も同じruntime stackへ統合できる。
+- **distributed serving coordination**: Ray等を使って複数workerを管理し、P/D分離、multi-GPU parallelism、KV poolをclusterとして構成できる。単一engineだけでなく大規模NVIDIA serving stackとして使える。
+- **production向けC++ runtime**: cache managerやcritical pathをC++側へ寄せ、Python scheduling / object overheadを減らす方向の設計を取る。TensorRT / CUDA ecosystemと密接に連携することが強み。
+
+以下の更新履歴は、**KVCacheManager、tiered KV、P/D分離、低bit KV / MoE、投機的デコード、Graph実行**がstable / RCでどう広がったかを追う。
+
+## 初期収録期間
+
+2026-06-03〜2026-09-03
+
+対象期間の更新はv1.3.0 release candidate群で、以下はすべて**正式版前（pre-release）**の機能である。
+
+## 主要更新
+
+### 2026-10-22 — TensorRT-LLM v1.4.0rc1（公開候補版）
+- **RC1であり正式版ではない。** KV cache manager V2とPython KV cache transceiverを既定にし、未使用の`LlmRequest` fieldを削除、C++ `ArrayView`を`std::span`へ変更するなど破壊的API変更を含む。既存連携は互換性試験が必要。
+- **追加モデル経路**: DeepSeek-V4.1-Flash、GLM-5.3-Flash NVFP4、Qwen3.8-Flash-Next NVFP4（実験的Modeling V2）、DFlashのLiLiCorr草稿checkpoint。対応範囲はモデルごとに異なる。
+- **推論基盤**: Mooncake connectorとKV cache V2の統合、ホスト階層への段階的充填、NVFP4冷却ページ圧縮でのRoPE精度選択、信頼度に基づく可変長DSpark検証、要求ごとのseed再現性、piecewise CUDA Graphの選択的compileを追加。
+- **既知の問題**: A100でstreaming requestをcancelした後、既定Python KV transceiverを使うprefill/decode分離要求がKV転送エラーになる場合がある。Qwen3のJSON schema例が上限のない長さで応答する場合がある。
+- release noteはこの更新全体の公平なend-to-end速度倍率を示していない。Windows 11 / RTX 4070 SUPER 12GBの正式な対応や速度・VRAM改善へ外挿しない。[公式RC1](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc1)
+
+### 2026-10-14 — TensorRT-LLM v1.4.0rc0（公開候補版）
+- GLM-5.3-Flash、K-EXAONE-2、Nemotron Super 3.5 VL、MiniMax-M3のNVFP4 KV cacheなどへ対応を拡張。疎KV構成、階層認識lock / offload、DeepSeek V4向け疎KV offload準備、小batch（8 token以下）のMoE routing、MTP draft loopを更新。
+- **RC0であり正式版ではない**。KVCacheManagerV2のPython backend削除、LlmRequest field移行は破壊的変更。H100のmulti-GPU worker pool再利用でhangする可能性、SM120/121のDeepSeek MLAでCUDA Graph capture時の不正memory accessという既知問題がある。[公式RC](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc0)。
+
+### 2026-10-12 — ReplaySSMの再帰状態最適化（研究・統合状況）
+- SSMの状態更新を定期保存・入力バッファ再生で代替し、投機的復号の巻き戻しと低精度状態読み出しを高速化する研究。NVIDIAの技術記事でTensorRT-LLMを含む関連基盤への適用を紹介。
+- B300/H100等で大規模バッチの復号ステップが最大1.47倍、対象120B級の投機的復号が1.85〜2.10倍という**研究評価**であり、**バッチ1では改善なし**。標準安定版のTensorRT-LLM全モデル・全経路で同倍率が利用可能という意味ではない。[NVIDIA解説](https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/)／[原著](https://arxiv.org/abs/2610.13778)／[実装](https://github.com/Johnny-Liou/ReplaySSM)
+
+### 2026-06-10〜06-30 — rc18〜rc20
+
+- **GPU間memory共有基盤をCUDA IPCからVMM / MNNVLへ拡張**: VMM（Virtual Memory Management; GPU仮想memory管理）を使い、複数process / GPU間でmemory領域をより柔軟に共有・再配置できるようにする方向へ移行。
+- **KVCacheManagerV2**: KV cache blockの割当、再利用、offload、外部tierとの転送をまとめて扱う新cache managerをC++側へ導入。
+- **disk KV cache**: GPU / CPU memoryだけでなくdiskもKVの下位階層として利用できるようにする。
+- **非同期Ulysses（async Ulysses）**: 長いsequenceを複数GPUへ分割するsequence parallel系通信を、計算とより重ねて実行する。
+- **EAGLE3 dynamic tree**: 投機的デコード（speculative decoding）で候補tokenを固定本数ではなくtree状に展開し、状況に応じて検証する。
+- **KV prefetch block数制御**: 下位tierからGPUへKVを戻す際、先読み量を明示的に調整できるようにする。
+- **MXFP8 / NVFP4 MoE**: MoE expert計算を低bit形式で実行し、memory量とmatrix multiply costを削減。
+- **multimodal encoderのCUDA Graph対応**: 画像などのencoder側にもCUDA Graphを適用し、CPU launch overheadを減らす。
+
+[rc18](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc18) [rc19](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc19) [rc20](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc20)
+
+### 2026-07-15〜07-31 — rc21〜rc23
+
+- **KV cache transceiver / offload**: KV blockを別workerや別memory tierへ送受信する役割をcache managerへ統合。
+- **分離serving coordinator（disaggregated coordinator）**: promptを処理するprefill workerと、token生成するdecode workerを別GPU群へ分ける構成を管理。
+- **DFlash / DSpark**: draft候補を先に作り本体modelでまとめて検証する投機的デコード方式を追加。
+- **FP4 KV cache**: KV cache自体を4-bit形式で保持し、context長あたりmemoryを削減。
+- **runtime KV compression**: 実行中にKVを圧縮し、cache容量と転送量を減らす。
+- **fine-grained context chunk**: 長いpromptをより細かいchunkへ分け、prefillのmemory peakとscheduler自由度を改善。
+- **conversation単位KV reuse**: 会話の共通prefixなど、以前計算したKVをrequestをまたいで再利用する。
+
+[rc21](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc21) [rc22](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc22) [rc23](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc23)
+
+### 2026-08-12 — rc24
+
+- **prefill CUDA Graph / capture bucket**: prompt長などが異なるrequestをいくつかのshape区分へまとめ、それぞれにCUDA Graphを事前captureする。完全一致shapeだけに限定するよりGraphを再利用しやすくする。
+- **breakable graph**: Graph実行中でも一部処理だけ通常kernel pathへ逃がせる構成を追加し、CUDA Graphを適用できるworkload範囲を拡大。
+- **KVCacheManagerV2 paged attention / block reuse**: KVを固定連続領域ではなくpage / block単位で管理し、解放済みblockや同一prefix blockを再利用。
+- **batched KV compaction**: 断片化したKV block整理を複数requestまとめて処理し、管理overheadを削減。
+- **Ray / NIXL disaggregation**: Rayでworker群を管理し、NIXLを使ってprefill→decode間のKVを高速転送する構成を追加。
+
+[release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc24)
+
+### 2026-08-31 — rc25
+
+- **KVCacheManagerV2を主要modelで既定化**: 新cache管理系を実運用pathへ移行。
+- **zero-copy token passing**: worker間でtoken情報を渡す際、不要な中間buffer copyを減らす。
+- **distributed pool rebalance**: 複数workerにまたがるmemory / KV poolの偏りを再配分。
+- **cold-page codec**: しばらく使わないKV pageを圧縮し、下位tierの容量・転送量を減らす。
+- **DSA writeback overlap**: attention関連stateの書き戻しを次計算と重ね、critical pathから外す。
+- **counted-write MoE A2A**: MoEのAll-to-All通信で、実token数に応じた送信量だけを扱いpaddingや不要writeを減らす。
+- **tiered GVR TopK**: routing / Top-k処理をmemory階層と連携して効率化する実装を追加。
+
+[release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc25)
+
+### 2026-09-23 — v1.3.0rc28（pre-release）
+
+- **KV Cache Manager V2への移行継続**: 新規modelではV2を既定にし、既存modelも順次移行。V1はdeprecated予定。
+- **legacy TensorRT backend縮小**: legacy TensorRT backendのPython module / test削除やserver argument変更など、PyTorch backend中心へのarchitecture移行を継続。
+- **既知問題を伴うRC**: disaggregated serving startup、NIXL KV transfer、FlashInfer attention backendの長時間serverでのGPU memory増加、DeepSeek系SM120、低bit MoE等の既知問題が列挙されているため、stable機能とは分けて扱う。
+
+[release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc28)
+
+### 2026-09-29 — v1.3.0rc29（pre-release）
+
+- **DSpark / Helix投機経路を拡張**: MLA-backed standalone DSpark drafterをInferact / Kimi K3向けに追加し、Helix speculative verificationをFP8、FP4 MLA、DSpark groupへ拡張した。
+- **低bit MLA / MoE経路を拡張**: DeepSeek V4向けNVFP4 MLA residual switch、W4A16 NVFP4 group size 32、Marlin NVFP4 MoE向けTriton top-k combineを追加。MLA contextのFP8 Q量子化をabsorb BMM epilogueへ融合し、中間処理を減らす。
+- **分散実行**: Ray orchestrator経由のMNNVL all-reduceを追加。
+- **breaking change**: AutoDeploy統合と公開entry pointを削除。rc29も正式版前なのでstable機能とは分けて扱う。
+
+[release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc29)
+
+## 読み方の注意
+
+release noteには比較可能なend-to-end benchmarkが少なく、上記は「機能が入ったこと」と「内部pathが変わったこと」を中心に記録している。特にv1.3.0 RC群は正式版前なので、APIや既定値がstable releaseまでに変わる可能性がある。
+
+### 用語メモ
+
+- **KV cache**: 過去tokenのattention用Key / Valueを保存し、decode時の再計算を避けるmemory。
+- **paged attention**: KVを小さいblock単位で管理し、requestごとの長さが違ってもVRAM断片化を抑える方式。
+- **disaggregated serving**: prefillとdecode、あるいはexpert処理などを別GPU群へ分けるserving構成。
+- **CUDA Graph**: GPU kernelの起動列を事前記録し、CPUから毎回kernelをlaunchするoverheadを減らす仕組み。

@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0103-scheduled-chat-00/r01",
+  "reference_main_sha": "ca2682b25c1b283ccb7818e8b8137f5bf2388eae",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.03484",
+      "identity_tokens": [
+        "arXiv:2601.03484"
+      ],
+      "title": "From Bits to Chips: An LLM-based Hardware-Aware Quantization Agent for Streamlined Deployment of LLMs",
+      "reason": "HAQAは対象ハードウェアの制約を考慮して量子化のハイパーパラメータと配備構成を自動探索する。Llama系の実験で未最適化モデル比最大2.3倍の推論高速化とスループット・精度の改善を報告しており、LLMの実行時資源制約に対する直接的な配備最適化。",
+      "source_url": "https://arxiv.org/abs/2601.03484",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:03:00+09:00",
+      "last_checked_at": "2026-10-31T01:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 439,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.11729",
+      "identity_tokens": [
+        "arXiv:2511.11729"
+      ],
+      "title": "Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms",
+      "reason": "Harliはメモリ帯域律速のデコードGPUに計算律速のPEFT微調整を同居させるため、統合メモリアロケータ、二段階デコード遅延予測器、QoS保証スケジューラを組み合わせる。推論デコードのQoSを維持しつつ微調整スループット平均46.2%向上を報告し、推論サービング資源管理に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2511.11729",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:03:00+09:00",
+      "last_checked_at": "2026-10-31T01:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 440,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.08343",
+      "identity_tokens": [
+        "arXiv:2508.08343"
+      ],
+      "title": "A Data-driven ML Approach for Maximizing Performance in LLM-Adapter Serving",
+      "reason": "単一GPU上で多数のLoRAアダプタを同時提供する際、メモリ超過による飢餓を避けながら同時・並列アダプタ数を選ぶデータ駆動方式。LLM-adapterサービングのDigital Twinは実スループットとの差5.1%、構成予測誤差最大7.2%と報告され、キャッシュ容量とGPUスループットの直接最適化を扱う。",
+      "source_url": "https://arxiv.org/abs/2508.08343",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:03:00+09:00",
+      "last_checked_at": "2026-10-31T01:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 441,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.13440",
+      "identity_tokens": [
+        "arXiv:2604.13440"
+      ],
+      "title": "A KL Lens on Quantization: Fast, Forward-Only Sensitivity for Mixed-Precision SSM-Transformer Models",
+      "reason": "ハイブリッドSSM-Transformerの構成要素ごとに量子化劣化の感度を逆伝播なしの順方向KLダイバージェンスで推定し、混合精度を選ぶ。Intel Lunar LakeのCPU/GPU実機計測でFP16に近いPPLを保ちながらUniform INT4と競争力のある容量・スループットを報告し、端末内推論の量子化配置に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2604.13440",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:03:00+09:00",
+      "last_checked_at": "2026-10-31T01:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 443,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.22730",
+      "identity_tokens": [
+        "arXiv:2601.22730"
+      ],
+      "title": "ImgCoT: Compressing Long Chain of Thought into Compact Visual Tokens for Efficient Reasoning of Large Language Model",
+      "reason": "長い思考連鎖を画像として描画し、視覚潜在トークンへ圧縮して推論構造を表現するImgCoTと、低尤度箇所に少量のテキスト推論を補うloose ImgCoTを提案する。思考トークン削減と効率化には関連するが、要旨に推論サービング実測・KV/カーネル最適化の具体的証拠がないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2601.22730",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:03:00+09:00",
+      "last_checked_at": "2026-10-31T01:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 468,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21397",
+      "identity_tokens": [
+        "arXiv:2511.21397",
+        "DOI:10.48550/arxiv.2511.21397"
+      ],
+      "title": "Understanding the Effects of Distractors on Reasoning Vision-Language Models",
+      "reason": "Idis画像質問応答データセットで無関係な視覚情報がVLMの思考長と正答率へ与える影響を分析し、視覚妨害では思考長を増やさず精度を下げると示す研究。主貢献は推論能力・頑健性の評価とプロンプト対策で、計算量・キャッシュ・サービング・カーネル等の実行系最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2511.21397",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:03:00+09:00",
+      "last_checked_at": "2026-10-31T01:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 470,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.18950",
+      "identity_tokens": [
+        "arXiv:2511.18950"
+      ],
+      "title": "Compressor-VLA: Instruction-Guided Visual Token Compression for Efficient Robotic Manipulation",
+      "reason": "ロボット操作向けVLAで言語指示を使い、意味的なタスク全体を残すSTCと細かな位置情報を残すSRCを組み合わせて視覚トークンを3分の1未満、FLOPsを59%削減する。推論時の視覚トークン圧縮機構は参考になるが、対象はロボット行動モデルでLLM/VLM一般サービングの直接評価はない。",
+      "source_url": "https://arxiv.org/abs/2511.18950",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:03:00+09:00",
+      "last_checked_at": "2026-10-31T01:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 471,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37818",
+      "identity_tokens": [
+        "arXiv:2609.37818"
+      ],
+      "title": "Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue",
+      "reason": "LoopSLMは音声対話の韻律・非言語情報を潜在状態へ取り込み、デコーダブロックを反復して明示的CoTなしに応答する。CoT-SFT比で生成トークン64.5%減、遅延約半減を報告するが、主対象は共感的音声対話品質であり汎用LLM推論システムのスケジューラやカーネルは未評価。",
+      "source_url": "https://arxiv.org/abs/2609.37818",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:03:00+09:00",
+      "last_checked_at": "2026-10-31T01:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 477,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.08684",
+      "identity_tokens": [
+        "arXiv:2606.08684"
+      ],
+      "title": "BLUE: Toward Better Language Use in Efficient Vision-Language-Action Models for Autonomous Driving",
+      "reason": "自動運転VLAの隠れ状態から0.11Mパラメータの軽量ゲートが言語生成の必要性をフレーム単位で判定し、不要時は直接行動予測する。Bench2Drive等でバックボーン比2.54倍の推論高速化を報告するが、適用対象は自動運転行動生成で汎用LLMサービングへの移植性は未確認。",
+      "source_url": "https://arxiv.org/abs/2606.08684",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:03:00+09:00",
+      "last_checked_at": "2026-10-31T01:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 479,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.10644",
+      "identity_tokens": [
+        "arXiv:2409.10644"
+      ],
+      "title": "Improving Multi-candidate Speculative Decoding",
+      "reason": "複数候補の投機的復号において、対象モデル側で候補を初期化し、動的に長さを変えるスライス型トポロジー対応因果マスクと早期停止判定モデルを導入する。Llama 2-7B対象・JackFram 68Mドラフトで従来MCSD比最大27.5%の生成高速化を報告し、LLMデコードの直接的な実行最適化に該当する。",
+      "source_url": "https://arxiv.org/abs/2409.10644",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:03:00+09:00",
+      "last_checked_at": "2026-10-31T01:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 494,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

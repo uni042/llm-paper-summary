@@ -1,0 +1,851 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2f4f9e3f9244f174-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2f4f9e3f9244",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2508.03760",
+    "arXiv:2510.05069",
+    "arXiv:2510.18269",
+    "arXiv:2602.02159",
+    "arXiv:2606.18042",
+    "arXiv:2608.11212",
+    "arXiv:2608.20397",
+    "arXiv:2609.32114",
+    "arXiv:2609.38386"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e0467d1c8e9b0a95a23d70d32f2216cf00b5219c",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T11:59:38.708691+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2508.03760",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.05069",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.18269",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02159",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.18042",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.11212",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.20397",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32114",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.38386",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Focus-dLLM: Accelerating Long-Context Diffusion LLM Inference via Confidence-Guided Context Focusing",
+      "source_url": "https://arxiv.org/abs/2602.02159",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (dLLMs) deliver strong long-context processing capability in a non-autoregressive decoding paradigm. However, the considerable computational cost of bidirectional full attention limits the inference efficiency. Although sparse attention is promising, existing methods remain ineffective. This stems from the need to estimate attention importance for tokens yet to be decoded, while the unmasked token positions are unknown during diffusion. In this paper, we present Focus-dLLM, a novel training-free attention sparsification framework tailored for accurate and efficient long-context dLLM inference. Based on the finding that token confidence strongly correlates across adjacent steps, we first design a past confidence-guided indicator to predict unmasked regions. Built upon this, we propose a sink-aware pruning strategy to accurately estimate and remove redundant attention computation, while preserving highly influential attention sinks. To further reduce overhead, this strategy reuses identified sink locations across layers, leveraging the observed cross-layer consistency. Experimental results show that our method offers more than $29\\times$ lossless speedup under $32K$ context length. The code is publicly available at: https://github.com/Longxmas/Focus-dLLM",
+      "identifiers": [
+        "SemanticScholar:00792499cb94c54a514b07d19cc6e1e64f3ea3ba"
+      ],
+      "semantic_scholar_id": "00792499cb94c54a514b07d19cc6e1e64f3ea3ba",
+      "canonical_id": "arXiv:2602.02159",
+      "arxiv_id": "2602.02159",
+      "doi": "10.48550/arXiv.2602.02159",
+      "authors": [
+        "Lingkun Long",
+        "Yu-Shi Huang",
+        "Shi-Hao Bai",
+        "Rui-Hao Gong",
+        "Jun Zhang",
+        "Ao Zhou",
+        "Jian-Lei Yang"
+      ],
+      "priority": 118,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 118,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Detecting a Route Flip Is Easier Than Knowing Whether to Fix It: Causal Route-Mediated Damage in Quantized Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2608.11212",
+      "year": 2026,
+      "published": "2026-07-14",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Top-k Mixture-of-Experts (MoE) routing is discontinuous, so a deployment-motivated numerical disturbance -- simulated 4-bit KV-cache quantization read by a protected BF16 gate -- pushes tokens across decision boundaries and flips which experts fire. This paper proposes no new mitigation; it supplies a causal apparatus, empirical findings, and a detection-limit result. A four-run apparatus prices the route-mediated fraction (RMF) of quantization damage, a token-level attribution decomposes it by mechanism, and pre-registered probes carry the findings across three architectures. On OLMoE-1B-7B at 4-bit KV (pilot), about a third of the damage is routing-mediated: RMF ~ 0.31 (discovery 0.31 [0.20, 0.41]; process-replicated mean 0.313 +/- 0.020; pre-registered re-execution 0.231). The deployable router margin detects that a flip occurred (AUC 0.772) but cannot tell a harmful flip from a helpful one (at chance): among the tested local, inference-observable router statistics we find no predictor of a flip's loss sign above chance -- an empirical benefit-detection barrier bounding selective repair restricted to this feature family. The signed-flip tax and sign-inseparability carry cross-model; the clean-reference remedy's payout is architecture-modulated; a controlled same-checkpoint flag-swap re-scopes the gate's normalization convention to a damage-magnitude moderator, not a route-recoverability mechanism. A real int4 KV kernel yields a fraction compatible with the fake-quant dose curve but underpowered (95% CI [-0.111, 0.394] includes zero) -- ruling out gross disagreement, not an independent replication. Hypotheses, thresholds, and evaluations were pre-registered before measurement, with misses reported; a pre-registered held-out read replicates the partition and the near-cancelling tax out of sample, while the strict impossibility exclusion narrowly misses.",
+      "identifiers": [
+        "SemanticScholar:bb744f53889a748dce34c406b51d1f3089a11d97"
+      ],
+      "semantic_scholar_id": "bb744f53889a748dce34c406b51d1f3089a11d97",
+      "canonical_id": "arXiv:2608.11212",
+      "arxiv_id": "2608.11212",
+      "authors": [
+        "Parvel Gu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 108,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Latency Prediction for LLM Inference on NPU Systems",
+      "source_url": "https://arxiv.org/abs/2606.18042",
+      "year": 2026,
+      "published": "2026-06-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) requires exploring a large configuration space spanning parallelization strategies, batching techniques, and scheduling policies. Exhaustive measurement across this space is impractical, making latency prediction essential for system optimization. While NPUs have emerged as accelerators designed for LLM inference, no prediction methodology has been established for them. Specifically, applying prior work to LLM inference latency prediction on NPUs faces three challenges: undisclosed microarchitecture of commercial NPUs, unpredictable compiler optimizations, and latency non-linearity induced by bucketing. We present LENS, a latency estimator that predicts NPU inference latency without information on the microarchitecture or compiler, and captures the non-linear latency induced by bucketing. LENS profiles each bucket with two end-to-end (E2E) measurements and composes the results to predict latency for arbitrary input-output length combinations. We validate LENS across NPUs from multiple vendors, several LLMs, and diverse workloads, achieving a mean prediction error of 2.15\\%. We further compare LENS against two methodologically related baselines, confirming the validity of its approach.",
+      "identifiers": [
+        "SemanticScholar:799164d9ad9a909cee23a3ea495d42464ca2d845"
+      ],
+      "semantic_scholar_id": "799164d9ad9a909cee23a3ea495d42464ca2d845",
+      "canonical_id": "arXiv:2606.18042",
+      "arxiv_id": "2606.18042",
+      "doi": "10.48550/arXiv.2606.18042",
+      "authors": [
+        "Juhyun Park",
+        "Seung-Woo Jeong",
+        "Jing-Yu Lee",
+        "Kyungyong Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 136,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "StreamingTOM: Streaming Token Compression for Efficient Video Understanding",
+      "source_url": "https://arxiv.org/abs/2510.18269",
+      "year": 2025,
+      "published": "2025-10-21",
+      "venue": "arXiv.org",
+      "citation_count": 49,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Unlike offline processing, streaming video vision-language models face two fundamental constraints: causality and accumulation. Causality prevents access to future frames that offline methods exploit, while accumulation causes tokens to grow unbounded, creating efficiency bottlenecks. However, existing approaches only regulate post-LLM kv-cache, leaving costly pre-LLM prefill unchanged. We introduce StreamingTOM, a training-free, plug-and-play two-stage framework that addresses both pre-LLM and post-LLM bottlenecks. Causal Temporal Reduction imposes a fixed per-frame budget and selects tokens based on adjacent-frame changes and token saliency, drastically reducing per-frame prefill cost by processing only a compact subset of visual tokens, ensuring predictable latency. Online Quantized Memory stores tokens in 4-bit format, retrieves relevant groups on demand, and dequantizes them, keeping the active kv-cache bounded regardless of stream length. Experiments demonstrate our method achieves $15.7\\times$ kv-cache compression ratio; compared to prior SOTA (LiveVLM), it delivers $1.2\\times$ lower peak memory and $2\\times$ faster TTFT. StreamingTOM achieves state-of-the-art accuracy among training-free methods with an average of $63.8\\%$ on offline benchmarks and $55.8\\%$ accuracy and $3.7$ score on RVS. These results demonstrate that real-time streaming video understanding with bounded active memory is achievable without model retraining.",
+      "identifiers": [
+        "SemanticScholar:d3094c64d4111f945fd721671f594d02a9651845"
+      ],
+      "semantic_scholar_id": "d3094c64d4111f945fd721671f594d02a9651845",
+      "canonical_id": "arXiv:2510.18269",
+      "arxiv_id": "2510.18269",
+      "doi": "10.48550/arXiv.2510.18269",
+      "authors": [
+        "Xueyi Chen",
+        "Keda Tao",
+        "Kele Shao",
+        "Huan Wang"
+      ],
+      "priority": 49,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 49,
+        "citation_count": 49,
+        "total": 49,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 374,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SwiReasoning: Switch-Thinking in Latent and Explicit for Pareto-Superior Reasoning LLMs",
+      "source_url": "https://arxiv.org/abs/2510.05069",
+      "year": 2025,
+      "published": "2025-10-06",
+      "venue": "arXiv.org",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work shows that, beyond discrete reasoning through explicit chain-of-thought steps, which are limited by the boundaries of natural languages, large language models (LLMs) can also reason continuously in latent space, allowing richer information per step and thereby improving token efficiency. Despite this promise, latent reasoning still faces two challenges, especially in training-free settings: 1) purely latent reasoning broadens the search distribution by maintaining multiple implicit paths, which diffuses probability mass, introduces noise, and impedes convergence to a single high-confidence solution, thereby hurting accuracy; and 2) overthinking persists even without explicit text, wasting tokens and degrading efficiency. To address these issues, we introduce SwiReasoning, a training-free framework for LLM reasoning which features two key innovations: 1) SwiReasoning dynamically switches between explicit and latent reasoning, guided by block-wise confidence estimated from entropy trends in next-token distributions, to balance exploration and exploitation and promote timely convergence. 2) By limiting the maximum number of thinking-block switches, SwiReasoning curbs overthinking and improves token efficiency across varying problem difficulties. On widely used mathematics, STEM, coding, and general benchmarks, SwiReasoning consistently improves average accuracy by 1.8%-3.1% across reasoning LLMs of different model families and scales. Furthermore, under constrained budgets, SwiReasoning improves average token efficiency by 57%-79%, with larger gains as budgets tighten.",
+      "identifiers": [
+        "SemanticScholar:13e4df024956363fe8dd2b21ccd2291eab8527f9"
+      ],
+      "semantic_scholar_id": "13e4df024956363fe8dd2b21ccd2291eab8527f9",
+      "canonical_id": "arXiv:2510.05069",
+      "arxiv_id": "2510.05069",
+      "doi": "10.48550/arXiv.2510.05069",
+      "authors": [
+        "Dachuan Shi",
+        "Abedelkadir Asi",
+        "Keying Li",
+        "Xiang-Chi Yuan",
+        "Le-Yan Pan",
+        "Wen-Ke Lee",
+        "W. Xiao"
+      ],
+      "priority": 26,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 26,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 389,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory",
+      "source_url": "https://arxiv.org/abs/2608.20397",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic large language models (LLMs) on the Model Context Protocol (MCP) re-encode verbose tool schemas every turn, so prefill - quadratic in sequence length - dominates time-to-first-token (TTFT) as the tool registry grows. Nexus's primary lever is to decouple routing from the schema-prefill cost: an INT8 semantic lookaside buffer (SLB) with a calibrated cross-encoder margin gate selects tools by retrieval, and arguments are generated over a compressed textual signature (median 19 tokens) rather than over spliced key/value (KV) cache. This path is depth-independent: routing accuracy stays near 89% as the registry scales to 250 tools - where a concatenate-all-schemas baseline overflows the context window entirely - and it reaches a first-argument token 1.66x sooner than a full-schema re-prefill at a ~80% main-context token saving. As a secondary, bounded lever we transplant a compiled schema KV block directly into the live context. This is fundamentally limited by rotary position embedding (RoPE) phase drift: an anchored splice is output-exact, but off-anchor placement corrupts attention, so beyond a threshold P=256 Nexus repairs the seam with a depth-adaptive suffix redecode that escalates to a full re-prefill. The resulting never-regress property is a guarantee on output fidelity (top-1 agreement, D_KL approx. 0) - not on latency, which can dip to 0.98x before converging to parity - alongside a 1.1-1.7x TTFT speedup at moderate depth that narrows to parity at deep context. Two negative results bound the design: the off-anchor RoPE fidelity boundary, and the failure of a reference-free drift gate to predict drift (Spearman rho = 0.193). All measurements are from one model tuple (Qwen2.5-14B-Instruct Q4_K_M) on Apple-silicon unified memory; the qualitative boundaries generalize, while the quantitative envelope is tuple-specific.",
+      "identifiers": [
+        "SemanticScholar:717587f9a25592c8bec90af38876f7f439a82a21"
+      ],
+      "semantic_scholar_id": "717587f9a25592c8bec90af38876f7f439a82a21",
+      "canonical_id": "arXiv:2608.20397",
+      "arxiv_id": "2608.20397",
+      "authors": [
+        "Mustafa Arslan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Empowering Hybrid Attention Models on NPUs",
+      "source_url": "https://arxiv.org/abs/2609.32114",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid attention models have emerged as a crucial architecture for Large Language Models (LLMs) (e.g., the Qwen3.5 and Kimi series). Their memory and computational efficiency make them highly attractive for on-device inference, forming a promising synergy with edge Neural Processing Units (NPUs). However, naive execution of these hybrid models on edge NPUs fails to deliver these benefits, often bottlenecking the prefill stage due to severe memory-system inefficiencies and architectural mismatches within the linear attention (LA) layers. We present HA-NPU, the first system to enable efficient hybrid attention LLM inference on edge NPUs without modifying the underlying algorithms. HA-NPU enhances execution efficiency by reorganizing the dataflow of the LA components across three levels: (1) At the core level, it partitions workloads by the head dimension and fuses dependent operators, eliminating cross-core global memory accesses; (2) At the operator level, it reorders execution to consume intermediate tensors immediately, drastically minimizing local-buffer pressure; (3) At the tensor level, it employs dataflow-aware layout planning to minimize transformation overhead between matrix and vector processing units. Compared to competitive baselines, HA-NPU achieves up to 35.95$\\times$ LA kernel speedup and 36.14$\\times$ energy reduction, delivering up to 2.03$\\times$ faster end-to-end request latency. The source code will be made publicly available at https://github.com/yinyuanzhang/HA-NPU",
+      "identifiers": [
+        "SemanticScholar:23a9d414dc4f3482940a91394118782d1ef6a152"
+      ],
+      "semantic_scholar_id": "23a9d414dc4f3482940a91394118782d1ef6a152",
+      "canonical_id": "arXiv:2609.32114",
+      "arxiv_id": "2609.32114",
+      "authors": [
+        "Yin-Yuan Zhang",
+        "Da-Liang Xu",
+        "Xiao-Long Huang",
+        "Wang-Song Yin",
+        "Yun Ma",
+        "Meng-Wei Xu",
+        "Gang Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Decode-Latency Feedback Prefill: A Model-Free Controller and Its Generalization Limits",
+      "source_url": "https://arxiv.org/abs/2609.38386",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Concurrent autoregressive inference creates a fundamental interference problem: prefilling a newly arrived long prompt can delay tokens for requests that are already decoding. Fixed prefill chunks reduce this interference, but the best chunk size depends on the model, hardware, load, and latency objective. We introduce Decode-Latency Feedback Prefill (DLFP), a model-free controller that changes only prefill work that overlaps active decodes. After a guarded scheduling cycle, DLFP uses the observed interval as proportional feedback to resize the next prefill chunk; isolated prefills remain unrestricted. We implement DLFP in vLLM and evaluate it with open-loop Poisson arrivals, exact token accounting, raw request traces, and NVIDIA telemetry. On Qwen3-0.6B in BF16 on one A100 80 GB GPU, three paired 100-request trials reduce P99 inter-token latency by 24.8%, 30.1%, and 28.2% (mean 27.7%, paired 95% confidence interval 21.0% to 34.3%) with exact output agreement, no failures, and unchanged SLO compliance. The benefit is not free: mean P99 time to first token increases 34.8% while remaining inside the declared SLO. Crucially, the mechanism does not generalize to Qwen3-8B, Qwen3-32B, or a two-GPU tensor-parallel configuration. We trace the failure to an asynchronous scheduler-call interval that is only a proxy for completed GPU iteration time. This negative result defines the boundary of the contribution and motivates a completion-timed controller for concurrent CPU and on-device inference. We do not claim mobile-device performance; the present work is a reproducible proof-of-concept and generalization study.",
+      "identifiers": [
+        "SemanticScholar:4819aec328da16cb1394b0d8e31c06cd8354409e"
+      ],
+      "semantic_scholar_id": "4819aec328da16cb1394b0d8e31c06cd8354409e",
+      "canonical_id": "arXiv:2609.38386",
+      "arxiv_id": "2609.38386",
+      "authors": [
+        "Gaurav Agarwal",
+        "Ashish Garg",
+        "Isha Singhal"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlashCommunication V2: Bit Splitting and Spike Reserving for Any Bit Communication",
+      "source_url": "https://arxiv.org/abs/2508.03760",
+      "year": 2025,
+      "published": "2025-08-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Nowadays, communication bottlenecks have emerged as a critical challenge in the distributed training and deployment of large language models (LLMs). This paper introduces FlashCommunication V2, a novel communication paradigm enabling efficient cross-GPU transmission at arbitrary bit widths. Its core innovations lie in the proposed bit splitting and spike reserving techniques, which address the challenges of low-bit quantization. Bit splitting decomposes irregular bit widths into basic units, ensuring compatibility with hardware capabilities and thus enabling transmission at any bit width. Spike reserving, on the other hand, retains numerical outliers (i.e., minima and maxima) as floating-point numbers, which shrinks the dynamic numerical range and pushes the quantization limits to 2-bit with acceptable losses. FlashCommunication V2 significantly enhances the flexibility and resource utilization of communication systems. Through meticulous software-hardware co-design, it delivers robust performance and reduced overhead across both NVLink-based and PCIe-based architectures, achieving a maximum 3.2$\\times$ speedup in AllReduce and 2$\\times$ in All2All communication.",
+      "identifiers": [
+        "SemanticScholar:1a4947b830efa340ee7093a7771d7f7d27d86579"
+      ],
+      "semantic_scholar_id": "1a4947b830efa340ee7093a7771d7f7d27d86579",
+      "canonical_id": "arXiv:2508.03760",
+      "arxiv_id": "2508.03760",
+      "doi": "10.48550/arXiv.2508.03760",
+      "authors": [
+        "Qing-Yuan Li",
+        "Bo Zhang",
+        "Hui Kang",
+        "Tianhao Xu",
+        "Yu-Lei Qian",
+        "Yu-Chen Xie",
+        "Lin Ma"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 452,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.02159",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02159",
+        "id:SemanticScholar:00792499cb94c54a514b07d19cc6e1e64f3ea3ba",
+        "id:arXiv:2602.02159",
+        "title:focusdllm accelerating longcontext diffusion llm inference via confidenceguided context focusing",
+        "url:https://arxiv.org/abs/2602.02159"
+      ],
+      "record": {
+        "title": "Focus-dLLM: Accelerating Long-Context Diffusion LLM Inference via Confidence-Guided Context Focusing",
+        "source_url": "https://arxiv.org/abs/2602.02159",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Large Language Models (dLLMs) deliver strong long-context processing capability in a non-autoregressive decoding paradigm. However, the considerable computational cost of bidirectional full attention limits the inference efficiency. Although sparse attention is promising, existing methods remain ineffective. This stems from the need to estimate attention importance for tokens yet to be decoded, while the unmasked token positions are unknown during diffusion. In this paper, we present Focus-dLLM, a novel training-free attention sparsification framework tailored for accurate and efficient long-context dLLM inference. Based on the finding that token confidence strongly correlates across adjacent steps, we first design a past confidence-guided indicator to predict unmasked regions. Built upon this, we propose a sink-aware pruning strategy to accurately estimate and remove redundant attention computation, while preserving highly influential attention sinks. To further reduce overhead, this strategy reuses identified sink locations across layers, leveraging the observed cross-layer consistency. Experimental results show that our method offers more than $29\\times$ lossless speedup under $32K$ context length. The code is publicly available at: https://github.com/Longxmas/Focus-dLLM",
+        "identifiers": [
+          "SemanticScholar:00792499cb94c54a514b07d19cc6e1e64f3ea3ba"
+        ],
+        "semantic_scholar_id": "00792499cb94c54a514b07d19cc6e1e64f3ea3ba",
+        "canonical_id": "arXiv:2602.02159",
+        "arxiv_id": "2602.02159",
+        "doi": "10.48550/arXiv.2602.02159",
+        "authors": [
+          "Lingkun Long",
+          "Yu-Shi Huang",
+          "Shi-Hao Bai",
+          "Rui-Hao Gong",
+          "Jun Zhang",
+          "Ao Zhou",
+          "Jian-Lei Yang"
+        ],
+        "priority": 118,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 118,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 270,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.11212",
+      "identity_tokens": [
+        "id:SemanticScholar:bb744f53889a748dce34c406b51d1f3089a11d97",
+        "id:arXiv:2608.11212",
+        "title:detecting a route flip is easier than knowing whether to fix it causal routemediated damage in quantized mixtureofexperts",
+        "url:https://arxiv.org/abs/2608.11212"
+      ],
+      "record": {
+        "title": "Detecting a Route Flip Is Easier Than Knowing Whether to Fix It: Causal Route-Mediated Damage in Quantized Mixture-of-Experts",
+        "source_url": "https://arxiv.org/abs/2608.11212",
+        "year": 2026,
+        "published": "2026-07-14",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Top-k Mixture-of-Experts (MoE) routing is discontinuous, so a deployment-motivated numerical disturbance -- simulated 4-bit KV-cache quantization read by a protected BF16 gate -- pushes tokens across decision boundaries and flips which experts fire. This paper proposes no new mitigation; it supplies a causal apparatus, empirical findings, and a detection-limit result. A four-run apparatus prices the route-mediated fraction (RMF) of quantization damage, a token-level attribution decomposes it by mechanism, and pre-registered probes carry the findings across three architectures. On OLMoE-1B-7B at 4-bit KV (pilot), about a third of the damage is routing-mediated: RMF ~ 0.31 (discovery 0.31 [0.20, 0.41]; process-replicated mean 0.313 +/- 0.020; pre-registered re-execution 0.231). The deployable router margin detects that a flip occurred (AUC 0.772) but cannot tell a harmful flip from a helpful one (at chance): among the tested local, inference-observable router statistics we find no predictor of a flip's loss sign above chance -- an empirical benefit-detection barrier bounding selective repair restricted to this feature family. The signed-flip tax and sign-inseparability carry cross-model; the clean-reference remedy's payout is architecture-modulated; a controlled same-checkpoint flag-swap re-scopes the gate's normalization convention to a damage-magnitude moderator, not a route-recoverability mechanism. A real int4 KV kernel yields a fraction compatible with the fake-quant dose curve but underpowered (95% CI [-0.111, 0.394] includes zero) -- ruling out gross disagreement, not an independent replication. Hypotheses, thresholds, and evaluations were pre-registered before measurement, with misses reported; a pre-registered held-out read replicates the partition and the near-cancelling tax out of sample, while the strict impossibility exclusion narrowly misses.",
+        "identifiers": [
+          "SemanticScholar:bb744f53889a748dce34c406b51d1f3089a11d97"
+        ],
+        "semantic_scholar_id": "bb744f53889a748dce34c406b51d1f3089a11d97",
+        "canonical_id": "arXiv:2608.11212",
+        "arxiv_id": "2608.11212",
+        "authors": [
+          "Parvel Gu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 108,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.18042",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.18042",
+        "id:SemanticScholar:799164d9ad9a909cee23a3ea495d42464ca2d845",
+        "id:arXiv:2606.18042",
+        "title:latency prediction for llm inference on npu systems",
+        "url:https://arxiv.org/abs/2606.18042"
+      ],
+      "record": {
+        "title": "Latency Prediction for LLM Inference on NPU Systems",
+        "source_url": "https://arxiv.org/abs/2606.18042",
+        "year": 2026,
+        "published": "2026-06-16",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying Large Language Models (LLMs) requires exploring a large configuration space spanning parallelization strategies, batching techniques, and scheduling policies. Exhaustive measurement across this space is impractical, making latency prediction essential for system optimization. While NPUs have emerged as accelerators designed for LLM inference, no prediction methodology has been established for them. Specifically, applying prior work to LLM inference latency prediction on NPUs faces three challenges: undisclosed microarchitecture of commercial NPUs, unpredictable compiler optimizations, and latency non-linearity induced by bucketing. We present LENS, a latency estimator that predicts NPU inference latency without information on the microarchitecture or compiler, and captures the non-linear latency induced by bucketing. LENS profiles each bucket with two end-to-end (E2E) measurements and composes the results to predict latency for arbitrary input-output length combinations. We validate LENS across NPUs from multiple vendors, several LLMs, and diverse workloads, achieving a mean prediction error of 2.15\\%. We further compare LENS against two methodologically related baselines, confirming the validity of its approach.",
+        "identifiers": [
+          "SemanticScholar:799164d9ad9a909cee23a3ea495d42464ca2d845"
+        ],
+        "semantic_scholar_id": "799164d9ad9a909cee23a3ea495d42464ca2d845",
+        "canonical_id": "arXiv:2606.18042",
+        "arxiv_id": "2606.18042",
+        "doi": "10.48550/arXiv.2606.18042",
+        "authors": [
+          "Juhyun Park",
+          "Seung-Woo Jeong",
+          "Jing-Yu Lee",
+          "Kyungyong Lee"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 136,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.18269",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.18269",
+        "id:SemanticScholar:d3094c64d4111f945fd721671f594d02a9651845",
+        "id:arXiv:2510.18269",
+        "title:streamingtom streaming token compression for efficient video understanding",
+        "url:https://arxiv.org/abs/2510.18269"
+      ],
+      "record": {
+        "title": "StreamingTOM: Streaming Token Compression for Efficient Video Understanding",
+        "source_url": "https://arxiv.org/abs/2510.18269",
+        "year": 2025,
+        "published": "2025-10-21",
+        "venue": "arXiv.org",
+        "citation_count": 49,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Unlike offline processing, streaming video vision-language models face two fundamental constraints: causality and accumulation. Causality prevents access to future frames that offline methods exploit, while accumulation causes tokens to grow unbounded, creating efficiency bottlenecks. However, existing approaches only regulate post-LLM kv-cache, leaving costly pre-LLM prefill unchanged. We introduce StreamingTOM, a training-free, plug-and-play two-stage framework that addresses both pre-LLM and post-LLM bottlenecks. Causal Temporal Reduction imposes a fixed per-frame budget and selects tokens based on adjacent-frame changes and token saliency, drastically reducing per-frame prefill cost by processing only a compact subset of visual tokens, ensuring predictable latency. Online Quantized Memory stores tokens in 4-bit format, retrieves relevant groups on demand, and dequantizes them, keeping the active kv-cache bounded regardless of stream length. Experiments demonstrate our method achieves $15.7\\times$ kv-cache compression ratio; compared to prior SOTA (LiveVLM), it delivers $1.2\\times$ lower peak memory and $2\\times$ faster TTFT. StreamingTOM achieves state-of-the-art accuracy among training-free methods with an average of $63.8\\%$ on offline benchmarks and $55.8\\%$ accuracy and $3.7$ score on RVS. These results demonstrate that real-time streaming video understanding with bounded active memory is achievable without model retraining.",
+        "identifiers": [
+          "SemanticScholar:d3094c64d4111f945fd721671f594d02a9651845"
+        ],
+        "semantic_scholar_id": "d3094c64d4111f945fd721671f594d02a9651845",
+        "canonical_id": "arXiv:2510.18269",
+        "arxiv_id": "2510.18269",
+        "doi": "10.48550/arXiv.2510.18269",
+        "authors": [
+          "Xueyi Chen",
+          "Keda Tao",
+          "Kele Shao",
+          "Huan Wang"
+        ],
+        "priority": 49,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 49,
+          "citation_count": 49,
+          "total": 49,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 374,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.05069",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.05069",
+        "id:SemanticScholar:13e4df024956363fe8dd2b21ccd2291eab8527f9",
+        "id:arXiv:2510.05069",
+        "title:swireasoning switchthinking in latent and explicit for paretosuperior reasoning llms",
+        "url:https://arxiv.org/abs/2510.05069"
+      ],
+      "record": {
+        "title": "SwiReasoning: Switch-Thinking in Latent and Explicit for Pareto-Superior Reasoning LLMs",
+        "source_url": "https://arxiv.org/abs/2510.05069",
+        "year": 2025,
+        "published": "2025-10-06",
+        "venue": "arXiv.org",
+        "citation_count": 26,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent work shows that, beyond discrete reasoning through explicit chain-of-thought steps, which are limited by the boundaries of natural languages, large language models (LLMs) can also reason continuously in latent space, allowing richer information per step and thereby improving token efficiency. Despite this promise, latent reasoning still faces two challenges, especially in training-free settings: 1) purely latent reasoning broadens the search distribution by maintaining multiple implicit paths, which diffuses probability mass, introduces noise, and impedes convergence to a single high-confidence solution, thereby hurting accuracy; and 2) overthinking persists even without explicit text, wasting tokens and degrading efficiency. To address these issues, we introduce SwiReasoning, a training-free framework for LLM reasoning which features two key innovations: 1) SwiReasoning dynamically switches between explicit and latent reasoning, guided by block-wise confidence estimated from entropy trends in next-token distributions, to balance exploration and exploitation and promote timely convergence. 2) By limiting the maximum number of thinking-block switches, SwiReasoning curbs overthinking and improves token efficiency across varying problem difficulties. On widely used mathematics, STEM, coding, and general benchmarks, SwiReasoning consistently improves average accuracy by 1.8%-3.1% across reasoning LLMs of different model families and scales. Furthermore, under constrained budgets, SwiReasoning improves average token efficiency by 57%-79%, with larger gains as budgets tighten.",
+        "identifiers": [
+          "SemanticScholar:13e4df024956363fe8dd2b21ccd2291eab8527f9"
+        ],
+        "semantic_scholar_id": "13e4df024956363fe8dd2b21ccd2291eab8527f9",
+        "canonical_id": "arXiv:2510.05069",
+        "arxiv_id": "2510.05069",
+        "doi": "10.48550/arXiv.2510.05069",
+        "authors": [
+          "Dachuan Shi",
+          "Abedelkadir Asi",
+          "Keying Li",
+          "Xiang-Chi Yuan",
+          "Le-Yan Pan",
+          "Wen-Ke Lee",
+          "W. Xiao"
+        ],
+        "priority": 26,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 26,
+          "citation_count": 26,
+          "total": 26,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 389,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.20397",
+      "identity_tokens": [
+        "id:SemanticScholar:717587f9a25592c8bec90af38876f7f439a82a21",
+        "id:arXiv:2608.20397",
+        "title:nexus depthadaptive kvcache splicing and retrievaldecoupled tool routing for agentic llms on unified memory",
+        "url:https://arxiv.org/abs/2608.20397"
+      ],
+      "record": {
+        "title": "Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory",
+        "source_url": "https://arxiv.org/abs/2608.20397",
+        "year": 2026,
+        "published": "2026-07-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agentic large language models (LLMs) on the Model Context Protocol (MCP) re-encode verbose tool schemas every turn, so prefill - quadratic in sequence length - dominates time-to-first-token (TTFT) as the tool registry grows. Nexus's primary lever is to decouple routing from the schema-prefill cost: an INT8 semantic lookaside buffer (SLB) with a calibrated cross-encoder margin gate selects tools by retrieval, and arguments are generated over a compressed textual signature (median 19 tokens) rather than over spliced key/value (KV) cache. This path is depth-independent: routing accuracy stays near 89% as the registry scales to 250 tools - where a concatenate-all-schemas baseline overflows the context window entirely - and it reaches a first-argument token 1.66x sooner than a full-schema re-prefill at a ~80% main-context token saving. As a secondary, bounded lever we transplant a compiled schema KV block directly into the live context. This is fundamentally limited by rotary position embedding (RoPE) phase drift: an anchored splice is output-exact, but off-anchor placement corrupts attention, so beyond a threshold P=256 Nexus repairs the seam with a depth-adaptive suffix redecode that escalates to a full re-prefill. The resulting never-regress property is a guarantee on output fidelity (top-1 agreement, D_KL approx. 0) - not on latency, which can dip to 0.98x before converging to parity - alongside a 1.1-1.7x TTFT speedup at moderate depth that narrows to parity at deep context. Two negative results bound the design: the off-anchor RoPE fidelity boundary, and the failure of a reference-free drift gate to predict drift (Spearman rho = 0.193). All measurements are from one model tuple (Qwen2.5-14B-Instruct Q4_K_M) on Apple-silicon unified memory; the qualitative boundaries generalize, while the quantitative envelope is tuple-specific.",
+        "identifiers": [
+          "SemanticScholar:717587f9a25592c8bec90af38876f7f439a82a21"
+        ],
+        "semantic_scholar_id": "717587f9a25592c8bec90af38876f7f439a82a21",
+        "canonical_id": "arXiv:2608.20397",
+        "arxiv_id": "2608.20397",
+        "authors": [
+          "Mustafa Arslan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 121,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32114",
+      "identity_tokens": [
+        "id:SemanticScholar:23a9d414dc4f3482940a91394118782d1ef6a152",
+        "id:arXiv:2609.32114",
+        "title:empowering hybrid attention models on npus",
+        "url:https://arxiv.org/abs/2609.32114"
+      ],
+      "record": {
+        "title": "Empowering Hybrid Attention Models on NPUs",
+        "source_url": "https://arxiv.org/abs/2609.32114",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hybrid attention models have emerged as a crucial architecture for Large Language Models (LLMs) (e.g., the Qwen3.5 and Kimi series). Their memory and computational efficiency make them highly attractive for on-device inference, forming a promising synergy with edge Neural Processing Units (NPUs). However, naive execution of these hybrid models on edge NPUs fails to deliver these benefits, often bottlenecking the prefill stage due to severe memory-system inefficiencies and architectural mismatches within the linear attention (LA) layers. We present HA-NPU, the first system to enable efficient hybrid attention LLM inference on edge NPUs without modifying the underlying algorithms. HA-NPU enhances execution efficiency by reorganizing the dataflow of the LA components across three levels: (1) At the core level, it partitions workloads by the head dimension and fuses dependent operators, eliminating cross-core global memory accesses; (2) At the operator level, it reorders execution to consume intermediate tensors immediately, drastically minimizing local-buffer pressure; (3) At the tensor level, it employs dataflow-aware layout planning to minimize transformation overhead between matrix and vector processing units. Compared to competitive baselines, HA-NPU achieves up to 35.95$\\times$ LA kernel speedup and 36.14$\\times$ energy reduction, delivering up to 2.03$\\times$ faster end-to-end request latency. The source code will be made publicly available at https://github.com/yinyuanzhang/HA-NPU",
+        "identifiers": [
+          "SemanticScholar:23a9d414dc4f3482940a91394118782d1ef6a152"
+        ],
+        "semantic_scholar_id": "23a9d414dc4f3482940a91394118782d1ef6a152",
+        "canonical_id": "arXiv:2609.32114",
+        "arxiv_id": "2609.32114",
+        "authors": [
+          "Yin-Yuan Zhang",
+          "Da-Liang Xu",
+          "Xiao-Long Huang",
+          "Wang-Song Yin",
+          "Yun Ma",
+          "Meng-Wei Xu",
+          "Gang Huang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38386",
+      "identity_tokens": [
+        "id:SemanticScholar:4819aec328da16cb1394b0d8e31c06cd8354409e",
+        "id:arXiv:2609.38386",
+        "title:decodelatency feedback prefill a modelfree controller and its generalization limits",
+        "url:https://arxiv.org/abs/2609.38386"
+      ],
+      "record": {
+        "title": "Decode-Latency Feedback Prefill: A Model-Free Controller and Its Generalization Limits",
+        "source_url": "https://arxiv.org/abs/2609.38386",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Concurrent autoregressive inference creates a fundamental interference problem: prefilling a newly arrived long prompt can delay tokens for requests that are already decoding. Fixed prefill chunks reduce this interference, but the best chunk size depends on the model, hardware, load, and latency objective. We introduce Decode-Latency Feedback Prefill (DLFP), a model-free controller that changes only prefill work that overlaps active decodes. After a guarded scheduling cycle, DLFP uses the observed interval as proportional feedback to resize the next prefill chunk; isolated prefills remain unrestricted. We implement DLFP in vLLM and evaluate it with open-loop Poisson arrivals, exact token accounting, raw request traces, and NVIDIA telemetry. On Qwen3-0.6B in BF16 on one A100 80 GB GPU, three paired 100-request trials reduce P99 inter-token latency by 24.8%, 30.1%, and 28.2% (mean 27.7%, paired 95% confidence interval 21.0% to 34.3%) with exact output agreement, no failures, and unchanged SLO compliance. The benefit is not free: mean P99 time to first token increases 34.8% while remaining inside the declared SLO. Crucially, the mechanism does not generalize to Qwen3-8B, Qwen3-32B, or a two-GPU tensor-parallel configuration. We trace the failure to an asynchronous scheduler-call interval that is only a proxy for completed GPU iteration time. This negative result defines the boundary of the contribution and motivates a completion-timed controller for concurrent CPU and on-device inference. We do not claim mobile-device performance; the present work is a reproducible proof-of-concept and generalization study.",
+        "identifiers": [
+          "SemanticScholar:4819aec328da16cb1394b0d8e31c06cd8354409e"
+        ],
+        "semantic_scholar_id": "4819aec328da16cb1394b0d8e31c06cd8354409e",
+        "canonical_id": "arXiv:2609.38386",
+        "arxiv_id": "2609.38386",
+        "authors": [
+          "Gaurav Agarwal",
+          "Ashish Garg",
+          "Isha Singhal"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.03760",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.03760",
+        "id:SemanticScholar:1a4947b830efa340ee7093a7771d7f7d27d86579",
+        "id:arXiv:2508.03760",
+        "title:flashcommunication v2 bit splitting and spike reserving for any bit communication",
+        "url:https://arxiv.org/abs/2508.03760"
+      ],
+      "record": {
+        "title": "FlashCommunication V2: Bit Splitting and Spike Reserving for Any Bit Communication",
+        "source_url": "https://arxiv.org/abs/2508.03760",
+        "year": 2025,
+        "published": "2025-08-04",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Nowadays, communication bottlenecks have emerged as a critical challenge in the distributed training and deployment of large language models (LLMs). This paper introduces FlashCommunication V2, a novel communication paradigm enabling efficient cross-GPU transmission at arbitrary bit widths. Its core innovations lie in the proposed bit splitting and spike reserving techniques, which address the challenges of low-bit quantization. Bit splitting decomposes irregular bit widths into basic units, ensuring compatibility with hardware capabilities and thus enabling transmission at any bit width. Spike reserving, on the other hand, retains numerical outliers (i.e., minima and maxima) as floating-point numbers, which shrinks the dynamic numerical range and pushes the quantization limits to 2-bit with acceptable losses. FlashCommunication V2 significantly enhances the flexibility and resource utilization of communication systems. Through meticulous software-hardware co-design, it delivers robust performance and reduced overhead across both NVLink-based and PCIe-based architectures, achieving a maximum 3.2$\\times$ speedup in AllReduce and 2$\\times$ in All2All communication.",
+        "identifiers": [
+          "SemanticScholar:1a4947b830efa340ee7093a7771d7f7d27d86579"
+        ],
+        "semantic_scholar_id": "1a4947b830efa340ee7093a7771d7f7d27d86579",
+        "canonical_id": "arXiv:2508.03760",
+        "arxiv_id": "2508.03760",
+        "doi": "10.48550/arXiv.2508.03760",
+        "authors": [
+          "Qing-Yuan Li",
+          "Bo Zhang",
+          "Hui Kang",
+          "Tianhao Xu",
+          "Yu-Lei Qian",
+          "Yu-Chen Xie",
+          "Lin Ma"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 452,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4211ce0e20005b44e88cb144b8e99effc32daeb60191e746956adcc2a32e72e8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "da0cb49c5286505b4c8729ca5bffb4013b11142bcb98370c0c73a6f050a8fbb1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-research-20261023-0200-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2608.28846",
+  "worker_completed_at": "2026-10-23T02:02:00+09:00",
+  "worker_run_key": "20261023-0200-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6147,
+    "body_paragraphs": 37,
+    "method_chars": 1626,
+    "method_paragraphs": 9,
+    "evaluation_chars": 131,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 131 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 131 < 500"
+  ],
+  "processed_at": "2026-10-24T14:46:44+00:00"
+}

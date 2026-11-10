@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2230-scheduled-chat-30/r03",
+  "reference_main_sha": "79c501f86a182e0ede9111ad52f8ea0b6d133398",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21238",
+      "identity_tokens": [
+        "arXiv:2601.21238"
+      ],
+      "title": "PTQ4ARVG: Post-Training Quantization for AutoRegressive Visual Generation Models",
+      "reason": "PTQ4ARVGは自己回帰型画像生成モデルのチャネル外れ値をGain-Projected Scalingで補正し、固定長・位置分布を利用したStatic Token-Wise Quantizationと分布誘導較正で8/6ビット量子化を実現する。一次要旨の最終適用先は画像生成ARVGであり、生成LLMの推論システムへの直接実証はないが、自己回帰量子化技術の類似性があるため境界。",
+      "source_url": "https://arxiv.org/abs/2601.21238",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:32:40+09:00",
+      "last_checked_at": "2026-10-30T22:32:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 457,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.23500",
+      "identity_tokens": [
+        "arXiv:2509.23500"
+      ],
+      "title": "Beyond Outliers: A Study of Optimizers Under Quantization",
+      "reason": "6種類の最適化器で50M〜1.5Bモデルを訓練した後のPTQ耐性と、量子化認識学習（QAT）時の精度劣化を比較。一次要旨はMMRや尖度が最適化器間のPTQ劣化を予測しないこと、ShampooがQATで低劣化であることを報告する。推論向け量子化の品質設計には関係するが、主寄与は学習最適化器とQATの相互作用であり境界。",
+      "source_url": "https://arxiv.org/abs/2509.23500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:32:40+09:00",
+      "last_checked_at": "2026-10-30T22:32:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 460,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

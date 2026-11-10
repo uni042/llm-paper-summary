@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r15",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.30944",
+      "identity_tokens": [
+        "arXiv:2606.30944",
+        "DOI:10.48550/arXiv.2606.30944"
+      ],
+      "title": "Preserving Speech-to-Text LLM Capabilities in Speech-to-Speech Generation",
+      "reason": "凍結S2T LLMの途中隠れ状態から音声codec tokenを因果的に生成するpost-decoderを並列実行し、逐次TTSボトルネックを解消するPRIME-Speechを提案。MTPで初回音声遅延も削減するリアルタイム音声LLM推論構成。",
+      "source_url": "https://arxiv.org/abs/2606.30944",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:41:43+09:00",
+      "last_checked_at": "2026-10-30T20:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 411,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.07627",
+      "identity_tokens": [
+        "arXiv:2506.07627",
+        "DOI:10.48550/arXiv.2506.07627"
+      ],
+      "title": "Event-Priori-Based Vision-Language Model for Efficient Visual Understanding",
+      "reason": "event visionの動き事前情報でRGBパッチを疎化し、位置情報を保持したtokenizationでVLMの無駄な視覚計算を減らすEP-VLMを提案。Qwen2-VL-2B比FLOPs50%削減、RealWorldQA元精度98%保持を報告する。",
+      "source_url": "https://arxiv.org/abs/2506.07627",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:41:43+09:00",
+      "last_checked_at": "2026-10-30T20:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 412,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.00356",
+      "identity_tokens": [
+        "arXiv:2603.00356",
+        "DOI:10.48550/arXiv.2603.00356"
+      ],
+      "title": "Token Management in Multi-Tenant AI Inference Platforms",
+      "reason": "推論token/s、KV cache、同時実行数を統合的なentitlementとして管理するtoken poolsを提案。Kubernetes/vLLM実験で負荷超過時に保証クラスのP99を有界に保ち、低優先度要求を選択的に抑制するLLMサービング制御方式。",
+      "source_url": "https://arxiv.org/abs/2603.00356",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:41:43+09:00",
+      "last_checked_at": "2026-10-30T20:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 413,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.01394",
+      "identity_tokens": [
+        "arXiv:2510.01394",
+        "DOI:10.48550/arXiv.2510.01394"
+      ],
+      "title": "Optimal Stopping vs Best-of-N for Inference Time Optimization",
+      "reason": "複数候補生成をPandora's Box最適停止問題として定式化し、報酬分布が未知でもUCB型停止則を学習する。AlpacaFarm/HH-RLHFで固定Best-of-Nと同等品質に必要な生成数を平均15～35%削減する推論時計算予算配分研究。",
+      "source_url": "https://arxiv.org/abs/2510.01394",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:41:43+09:00",
+      "last_checked_at": "2026-10-30T20:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 415,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.23994",
+      "identity_tokens": [
+        "arXiv:2604.23994",
+        "DOI:10.48550/arXiv.2604.23994"
+      ],
+      "title": "When to Commit? Towards Variable-Size Self-Contained Blocks for Discrete Diffusion Language Models",
+      "reason": "拡散LLMのブロック境界を固定長ではなく、将来文脈あり・なしの予測分布差から自己完結性を判定して可変長に選ぶVSBを提案。復号の品質と並列性を両立する推論時ブロック構成アルゴリズム。",
+      "source_url": "https://arxiv.org/abs/2604.23994",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:41:43+09:00",
+      "last_checked_at": "2026-10-30T20:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 416,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.03965",
+      "identity_tokens": [
+        "arXiv:2606.03965",
+        "DOI:10.48550/arXiv.2606.03965"
+      ],
+      "title": "Agentic Chain-of-Thought Steering for Efficient and Controllable LLM Reasoning",
+      "reason": "凍結推論モデルの途中思考と残り予算を観測する制御エージェントが、次の思考戦略と開始文を選ぶACTSを提案。予算条件付きRLでトークン節約と精度の交換関係を動的に制御する推論時計算割当方式。",
+      "source_url": "https://arxiv.org/abs/2606.03965",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:41:43+09:00",
+      "last_checked_at": "2026-10-30T20:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 417,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34358",
+      "identity_tokens": [
+        "arXiv:2609.34358",
+        "DOI:10.48550/arXiv.2609.34358"
+      ],
+      "title": "FORGE: Form-Optimal Routing of Grounded Evidence for Frozen LLM Agents",
+      "reason": "入力ごとに根拠提示形式と思考深度を同時に選ぶ269Kパラメータのルータを学習し、凍結LLMのtoken costと回答品質を両立するFORGEを提案。5知識ベンチマーク・8モデルで42～45%のトークン費用削減と精度改善を報告する。",
+      "source_url": "https://arxiv.org/abs/2609.34358",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:41:43+09:00",
+      "last_checked_at": "2026-10-30T20:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 420,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.11153",
+      "identity_tokens": [
+        "arXiv:2505.11153",
+        "DOI:10.48550/arXiv.2505.11153"
+      ],
+      "title": "Bi-directional Recurrence Improves Transformer in Partially Observable Markov Decision Processes",
+      "reason": "POMDP強化学習で双方向再帰層を使ってサンプル効率とモデルサイズを改善する研究。評価は23のPOMDP環境であり、生成LLMの推論速度・KV・サービング最適化への直接評価はない。",
+      "source_url": "https://arxiv.org/abs/2505.11153",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:41:43+09:00",
+      "last_checked_at": "2026-10-30T20:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 421,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.04915",
+      "identity_tokens": [
+        "arXiv:2602.04915",
+        "DOI:10.48550/arXiv.2602.04915"
+      ],
+      "title": "SLAY: Geometry-Aware Spherical Linearized Attention with Yat-Kernel",
+      "reason": "query/keyを単位球面へ制限し、正値のrandom feature近似でYat-kernel注意をO(L)時間・メモリへ線形化するSLAYを提案。softmax注意に近い品質を保ち、既存線形注意より良い性能を示す長文脈注意アーキテクチャ。",
+      "source_url": "https://arxiv.org/abs/2602.04915",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:41:43+09:00",
+      "last_checked_at": "2026-10-30T20:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 422,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.09982",
+      "identity_tokens": [
+        "arXiv:2605.09982",
+        "DOI:10.48550/arXiv.2605.09982"
+      ],
+      "title": "ERASE: Eliminating Redundant Visual Tokens via Adaptive Two-Stage Token Pruning",
+      "reason": "画像統計による第1段の画像冗長性除去と、decoder層ごとの指示非関連トークン削除を分離するERASEを提案。Qwen2.5-VL-7Bで視覚トークン25%保持時に元精度95.70%を維持する。",
+      "source_url": "https://arxiv.org/abs/2605.09982",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:41:43+09:00",
+      "last_checked_at": "2026-10-30T20:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 423,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8737671bc499bd1-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.27480",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.27480",
+    "identity_tokens": [
+      "arXiv:2605.27480"
+    ],
+    "reason": "一次要旨はLLMサービングを要求単位で計測し、運用・製造由来の生物多様性影響と回答品質を同時に評価するBIRDSを提案する。モデル・GPU・地域・要求負荷によるサービング設計の比較指標として関連するが、提案の中心は環境影響の定量評価であり、推論スケジューラやGPU実行の高速化・メモリ削減を直接実装する研究ではない。",
+    "first_checked_at": "2026-10-12T19:45:24+00:00",
+    "last_checked_at": "2026-10-12T19:45:24+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "BIRDS: Characterizing and Understanding Biodiversity Impact of Large Language Model Serving"
+  },
+  "processed_at": "2026-10-12T19:45:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8737671bc49",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

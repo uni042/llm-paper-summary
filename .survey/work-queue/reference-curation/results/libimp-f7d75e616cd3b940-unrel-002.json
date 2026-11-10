@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7d75e616cd3b940-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1803.07416",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1803.07416",
+    "identity_tokens": [
+      "arXiv:1803.07416"
+    ],
+    "reason": "Transformer参照実装を含む深層学習ライブラリTensor2Tensorをニューラル機械翻訳向けに紹介する実装・モデル基盤論文。現行LLM推論runtime、serving、memory最適化の研究ではない。",
+    "first_checked_at": "2026-10-05T00:50:53+00:00",
+    "last_checked_at": "2026-10-05T15:48:51+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md"
+    ],
+    "title": "Tensor2Tensor for Neural Machine Translation"
+  },
+  "processed_at": "2026-10-05T15:48:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7d75e616cd3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

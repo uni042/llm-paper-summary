@@ -1,0 +1,478 @@
+name: survey-maintenance
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/maintenance-cycle.json'
+  schedule:
+    # GitHub Actions cron is UTC: 23:30 UTC = 08:30 JST.
+    - cron: '30 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Maintenance has its own queue. Sharing a concurrency group across unrelated workflows
+# can replace pending runs, so cross-workflow serialization is handled by push retries.
+concurrency:
+  group: survey-maintenance-main
+  cancel-in-progress: false
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main before maintenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check whether maintenance is pending
+        id: pending
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          state = json.loads(Path('.survey/work-queue/maintenance-cycle.json').read_text())
+          pending = bool(state.get('maintenance_pending'))
+          request_token = str(state.get('maintenance_request_token') or '')
+          event_name = os.environ.get('GITHUB_EVENT_NAME', '')
+          run = pending or event_name in {'schedule', 'workflow_dispatch'}
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f'pending={str(pending).lower()}\n')
+              f.write(f'run={str(run).lower()}\n')
+              f.write(f'request_token={request_token}\n')
+          PY
+
+      - name: Install survey dependencies
+        if: steps.pending.outputs.run == 'true'
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+
+      - name: Compact settled worker transport
+        if: steps.pending.outputs.run == 'true'
+        continue-on-error: true
+        run: |
+          python .survey/scripts/compact_worker_transport.py \
+            --repo-root . \
+            --apply \
+            --min-age-seconds 7200 \
+            --report .survey/reports/transport-compact-latest.json
+
+      - name: Run full GC
+        if: steps.pending.outputs.run == 'true'
+        run: |
+          python .survey/scripts/full_gc.py \
+            --repo-root . \
+            --apply \
+            --report .survey/reports/full-gc-latest.json
+
+      - name: Backfill incomplete canonical paper metadata
+        if: steps.pending.outputs.run == 'true'
+        continue-on-error: true
+        run: |
+          python .survey/scripts/backfill_paper_metadata.py \
+            --repo-root . \
+            --missing-only \
+            --metadata-cache /tmp/arxiv-metadata-cache.json
+
+      - name: Normalize nullable canonical metadata keys
+        if: steps.pending.outputs.run == 'true'
+        run: python .survey/scripts/normalize_paper_metadata.py --root . --apply
+
+      - name: Normalize Japanese terminology in legacy quality failures
+        if: steps.pending.outputs.run == 'true'
+        run: python .survey/scripts/normalize_paper_japanese_terms.py --root . --apply
+
+      - name: Rebuild derived paper indexes
+        if: steps.pending.outputs.run == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --name-only | sort -u > /tmp/pre-index-diff.txt
+          python .survey/scripts/survey.py --root .survey build
+          git restore .survey/survey-state/paper-identity-index.json 2>/dev/null || true
+          git diff --name-only | sort -u > /tmp/post-index-diff.txt
+          comm -13 /tmp/pre-index-diff.txt /tmp/post-index-diff.txt > /tmp/derived-index-drift.txt || true
+          echo 'Derived index files repaired:'
+          cat /tmp/derived-index-drift.txt || true
+
+      - name: Run quality regression audits
+        if: steps.pending.outputs.run == 'true'
+        run: |
+          # Prevent a malformed Git blob hash from propagating to durable queues.
+          python -m unittest discover -s .survey/tests -p 'test_under16kb_reaudit.py'
+          python .survey/scripts/audit_paper_quality.py \
+            --no-fail-exit \
+            --markdown-out /tmp/paper-quality-audit.md \
+            --json-out .survey/reports/paper-quality-latest.json
+          python .survey/scripts/refresh_under16kb_reaudit_queue.py \
+            --repo-root . \
+            --apply
+          python .survey/scripts/audit_list_summary_quality.py \
+            --no-fail-exit \
+            --markdown-out /tmp/list-summary-quality-audit.md \
+            --json-out .survey/reports/list-summary-quality-latest.json
+          python .survey/scripts/audit_overview_results.py \
+            --no-fail-exit \
+            --markdown-out /tmp/overview-result-quality-audit.md \
+            --json-out .survey/reports/overview-result-quality-latest.json
+
+      - name: Refresh citation coverage from current paper metadata
+        if: steps.pending.outputs.run == 'true'
+        run: |
+          python .survey/scripts/citation_graph.py \
+            --root . \
+            --graph-report .survey/reports/citation-graph-latest.json \
+            --coverage-report .survey/reports/citation-coverage-latest.json
+
+      - name: Refresh metadata coverage
+        if: steps.pending.outputs.run == 'true'
+        id: metadata
+        continue-on-error: true
+        run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out .survey/reports/metadata-coverage-latest.json --strict
+
+      - name: Audit queue, state, quality regressions, and report freshness
+        if: steps.pending.outputs.run == 'true'
+        id: health
+        shell: bash
+        run: |
+          set +e
+          python .survey/scripts/maintenance_health.py \
+            --root . \
+            --paper-quality .survey/reports/paper-quality-latest.json \
+            --list-quality .survey/reports/list-summary-quality-latest.json \
+            --overview-quality .survey/reports/overview-result-quality-latest.json \
+            --index-drift-file /tmp/derived-index-drift.txt \
+            --repair-snapshot \
+            --fail-on-error \
+            --report .survey/reports/maintenance-health-latest.json
+          rc=$?
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Build post-maintenance inventory
+        if: steps.pending.outputs.run == 'true'
+        run: |
+          python .survey/scripts/build_repository_inventory.py \
+            --root . \
+            --output /tmp/repo-inventory.json \
+            --source-commit post-maintenance-working-tree
+
+      - name: Run repository-wide consistency check
+        if: steps.pending.outputs.run == 'true'
+        id: consistency
+        shell: bash
+        run: |
+          set +e
+          python .survey/scripts/check_repository.py \
+            --root . \
+            --inventory /tmp/repo-inventory.json \
+            --report .survey/reports/consistency-latest.json
+          rc=$?
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Finalize maintenance state
+        if: steps.pending.outputs.run == 'true'
+        run: |
+          python - <<'PY'
+          import datetime as dt, json
+          from pathlib import Path
+          state_path = Path('.survey/work-queue/maintenance-cycle.json')
+          state = json.loads(state_path.read_text())
+          gc = json.loads(Path('.survey/reports/full-gc-latest.json').read_text())
+          health = json.loads(Path('.survey/reports/maintenance-health-latest.json').read_text())
+          consistency = json.loads(Path('.survey/reports/consistency-latest.json').read_text())
+          metadata = json.loads(Path('.survey/reports/metadata-coverage-latest.json').read_text())
+          metadata_incomplete = int((metadata.get('summary') or {}).get('incomplete') or 0)
+          state['maintenance_pending'] = False
+          state['last_maintenance_completed_at'] = dt.datetime.now(dt.timezone.utc).isoformat()
+          state['last_gc_deleted'] = gc.get('deleted_count', 0)
+          state['last_gc_checked_at'] = gc.get('checked_at')
+          state['last_health_status'] = health.get('status')
+          state['last_health_checked_at'] = health.get('checked_at')
+          state['last_health_errors'] = health.get('error_count', 0)
+          state['last_health_warnings'] = health.get('warning_count', 0)
+          state['last_queue_snapshot_repaired'] = bool(health.get('queue', {}).get('snapshot_repaired'))
+          state['last_index_repairs'] = health.get('derived_indexes', {}).get('repair_count', 0)
+          state['last_quality_regressions'] = sum(
+              len(v) for v in health.get('quality', {}).get('new_failures', {}).values()
+              if isinstance(v, list)
+          )
+          state['last_metadata_status'] = 'passed' if metadata_incomplete == 0 else 'issues_found'
+          state['last_metadata_checked_at'] = metadata.get('checked_at')
+          state['last_metadata_incomplete'] = metadata_incomplete
+          state['last_consistency_status'] = consistency.get('status')
+          state['last_consistency_checked_at'] = consistency.get('checked_at')
+          state['last_maintenance_status'] = (
+              'passed'
+              if (
+                  consistency.get('status') == 'passed'
+                  and health.get('status') == 'passed'
+                  and metadata_incomplete == 0
+              )
+              else 'issues_found'
+          )
+          state['last_maintenance_status_source'] = 'maintenance_workflow'
+          state.pop('maintenance_request_token', None)
+          state.pop('maintenance_request_reason', None)
+          state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n')
+          PY
+
+      - name: Refresh STATUS from finalized maintenance evidence
+        if: steps.pending.outputs.run == 'true'
+        run: |
+          python .survey/scripts/render_status_dashboard.py \
+            --repo-root . \
+            --output STATUS.md
+
+      - name: Commit maintenance results
+        if: steps.pending.outputs.run == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-maintenance[bot]'
+          git config user.email 'survey-maintenance[bot]@users.noreply.github.com'
+
+          # STATUS.md, next-jobs.json, and the under-16KB re-audit queue are
+          # derived, high-churn views updated by other writers. Keep them out
+          # of the broad maintenance commit, then regenerate each from the
+          # latest main. In particular, never rebase an under-16KB queue that
+          # contains source hashes computed from an older paper snapshot.
+          git add -A
+          git reset -- STATUS.md .survey/work-queue/next-jobs.json .survey/work-queue/maintenance-cycle.json .survey/repair-queue/under-16kb-reaudit.json
+          git restore -- STATUS.md .survey/work-queue/next-jobs.json .survey/work-queue/maintenance-cycle.json .survey/repair-queue/under-16kb-reaudit.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'survey-maintenance: GC, reconcile, and health audit'
+            maintenance_pushed=0
+            for push_attempt in 1 2 3 4 5; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                echo 'Maintenance data conflicts with newer main; rerun maintenance from the new state.' >&2
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                maintenance_pushed=1
+                break
+              fi
+              echo "Maintenance push race on attempt ${push_attempt}; retrying after refetch."
+              sleep $((push_attempt * 2))
+            done
+            if [ "$maintenance_pushed" -ne 1 ]; then
+              echo 'Failed to publish maintenance results after 5 retries.' >&2
+              exit 1
+            fi
+          fi
+
+          # Finalize maintenance-cycle.json against the latest main. Only clear
+          # the pending request if it is still the same request this run observed;
+          # a newer request must survive for the next maintenance run.
+          state_pushed=0
+          for state_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            OBSERVED_MAINTENANCE_TOKEN='${{ steps.pending.outputs.request_token }}' python - <<'PY'
+          import datetime as dt
+          import json
+          import os
+          from pathlib import Path
+
+          state_path = Path('.survey/work-queue/maintenance-cycle.json')
+          state = json.loads(state_path.read_text())
+          gc = json.loads(Path('.survey/reports/full-gc-latest.json').read_text())
+          health = json.loads(Path('.survey/reports/maintenance-health-latest.json').read_text())
+          consistency = json.loads(Path('.survey/reports/consistency-latest.json').read_text())
+          metadata = json.loads(Path('.survey/reports/metadata-coverage-latest.json').read_text())
+          metadata_incomplete = int((metadata.get('summary') or {}).get('incomplete') or 0)
+
+          observed = os.environ.get('OBSERVED_MAINTENANCE_TOKEN', '')
+          current = str(state.get('maintenance_request_token') or '')
+          same_request = current == observed
+
+          state['last_maintenance_completed_at'] = dt.datetime.now(dt.timezone.utc).isoformat()
+          state['last_gc_deleted'] = gc.get('deleted_count', 0)
+          state['last_gc_checked_at'] = gc.get('checked_at')
+          state['last_health_status'] = health.get('status')
+          state['last_health_checked_at'] = health.get('checked_at')
+          state['last_health_errors'] = health.get('error_count', 0)
+          state['last_health_warnings'] = health.get('warning_count', 0)
+          state['last_queue_snapshot_repaired'] = bool(health.get('queue', {}).get('snapshot_repaired'))
+          state['last_index_repairs'] = health.get('derived_indexes', {}).get('repair_count', 0)
+          state['last_quality_regressions'] = sum(
+              len(v) for v in health.get('quality', {}).get('new_failures', {}).values()
+              if isinstance(v, list)
+          )
+          state['last_metadata_status'] = 'passed' if metadata_incomplete == 0 else 'issues_found'
+          state['last_metadata_checked_at'] = metadata.get('checked_at')
+          state['last_metadata_incomplete'] = metadata_incomplete
+          state['last_consistency_status'] = consistency.get('status')
+          state['last_consistency_checked_at'] = consistency.get('checked_at')
+          state['last_maintenance_status'] = (
+              'passed'
+              if (
+                  consistency.get('status') == 'passed'
+                  and health.get('status') == 'passed'
+                  and metadata_incomplete == 0
+              )
+              else 'issues_found'
+          )
+          state['last_maintenance_status_source'] = 'maintenance_workflow'
+
+          if same_request:
+              state['maintenance_pending'] = False
+              state.pop('maintenance_request_token', None)
+              state.pop('maintenance_request_reason', None)
+          else:
+              # A new request arrived while this run was executing. Preserve it.
+              state['maintenance_pending'] = bool(state.get('maintenance_pending', True))
+
+          state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n')
+          print({
+              'observed_request_token': observed,
+              'current_request_token': current,
+              'same_request': same_request,
+              'maintenance_pending': state.get('maintenance_pending'),
+          })
+          PY
+            git add .survey/work-queue/maintenance-cycle.json
+            if git diff --cached --quiet; then
+              state_pushed=1
+              break
+            fi
+            git commit -m 'survey-maintenance: finalize maintenance state'
+            if git push origin HEAD:main; then
+              state_pushed=1
+              break
+            fi
+            echo "Maintenance state push race on attempt ${state_attempt}; recomputing from latest main."
+            sleep $((state_attempt * 2))
+          done
+          if [ "$state_pushed" -ne 1 ]; then
+            echo 'Failed to publish maintenance-cycle.json after 5 retries.' >&2
+            exit 1
+          fi
+
+          # Rebuild the queue snapshot from the latest canonical job files.
+          # On a push race, throw away the stale snapshot and regenerate it
+          # again from the new main instead of rebasing derived JSON.
+          queue_pushed=0
+          for queue_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python - <<'PY'
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, str(Path('.survey/scripts').resolve()))
+          from maintenance_health import audit_queue
+          result = audit_queue(Path('.'), repair_snapshot=True)
+          errors = [x for x in result.get('findings', []) if x.get('severity') == 'error']
+          if errors:
+              raise SystemExit(f"queue snapshot repair is unsafe: {errors}")
+          print({
+              'snapshot_drift': result.get('snapshot_drift'),
+              'snapshot_repaired': result.get('snapshot_repaired'),
+              'job_count': result.get('job_count'),
+          })
+          PY
+            git add .survey/work-queue/next-jobs.json
+            if git diff --cached --quiet; then
+              queue_pushed=1
+              break
+            fi
+            git commit -m 'chore: refresh survey queue snapshot'
+            if git push origin HEAD:main; then
+              queue_pushed=1
+              break
+            fi
+            echo "Queue snapshot push race on attempt ${queue_attempt}; regenerating from latest main."
+            sleep $((queue_attempt * 2))
+          done
+          if [ "$queue_pushed" -ne 1 ]; then
+            echo 'Failed to publish refreshed next-jobs.json after 5 retries.' >&2
+            exit 1
+          fi
+
+          # Rebuild the under-16KB semantic re-audit queue from the latest main.
+          # This file embeds source SHA-256 / Git blob SHA for each paper, so it
+          # must never be rebased from an older checkout across concurrent paper
+          # writes. On any push race, discard it and regenerate from scratch.
+          reaudit_pushed=0
+          for reaudit_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python .survey/scripts/refresh_under16kb_reaudit_queue.py \
+              --repo-root . \
+              --apply
+            git add .survey/repair-queue/under-16kb-reaudit.json
+            if git diff --cached --quiet; then
+              reaudit_pushed=1
+              break
+            fi
+            git commit -m 'chore: refresh under-16KB re-audit queue'
+            if git push origin HEAD:main; then
+              reaudit_pushed=1
+              break
+            fi
+            echo "Re-audit queue push race on attempt ${reaudit_attempt}; regenerating from latest main."
+            sleep $((reaudit_attempt * 2))
+          done
+          if [ "$reaudit_pushed" -ne 1 ]; then
+            echo 'Failed to publish refreshed under-16KB re-audit queue after 5 retries.' >&2
+            exit 1
+          fi
+
+          # Regenerate the derived dashboard from the latest main after the
+          # canonical maintenance state/reports are durable. Retry from scratch
+          # on a concurrent dashboard update instead of rebasing STATUS.md.
+          status_pushed=0
+          for status_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python .survey/scripts/render_status_dashboard.py \
+              --repo-root . \
+              --output STATUS.md
+            git add STATUS.md
+            if git diff --cached --quiet; then
+              status_pushed=1
+              break
+            fi
+            git commit -m 'chore: refresh survey status dashboard'
+            if git push origin HEAD:main; then
+              status_pushed=1
+              break
+            fi
+            echo "STATUS refresh push race on attempt ${status_attempt}; regenerating from latest main."
+            sleep $((status_attempt * 2))
+          done
+          if [ "$status_pushed" -ne 1 ]; then
+            echo 'Failed to publish refreshed STATUS.md after 5 retries.' >&2
+            exit 1
+          fi
+
+      - name: Surface maintenance audit failures
+        if: always() && steps.pending.outputs.run == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          health_rc='${{ steps.health.outputs.exit_code }}'
+          consistency_rc='${{ steps.consistency.outputs.exit_code }}'
+          metadata_outcome='${{ steps.metadata.outcome }}'
+          if [[ "${health_rc:-1}" != "0" || "${consistency_rc:-1}" != "0" || "$metadata_outcome" != "success" ]]; then
+            echo "Maintenance persisted its reports/state, but one or more audits found issues." >&2
+            echo "health_exit=${health_rc:-missing} consistency_exit=${consistency_rc:-missing} metadata_outcome=${metadata_outcome:-missing}" >&2
+            exit 1
+          fi

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b4de4ffce0e6e7f-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.01743",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.01743",
+    "identity_tokens": [
+      "arXiv:2503.01743"
+    ],
+    "reason": "GQAやMixture-of-LoRAsで効率的な小型モデルを構成するが、主貢献はモデル・学習レシピと能力評価で推論systemsとの境界。",
+    "first_checked_at": "2026-09-30T09:04:57+00:00",
+    "last_checked_at": "2026-10-02T08:18:21+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-30.json"
+    ],
+    "title": "Phi-4-Mini Technical Report: Compact yet Powerful Multimodal Language Models via Mixture-of-LoRAs"
+  },
+  "processed_at": "2026-10-02T08:18:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b4de4ffce0e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

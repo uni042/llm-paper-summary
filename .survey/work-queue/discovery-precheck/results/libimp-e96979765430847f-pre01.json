@@ -1,0 +1,154 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e96979765430847f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e96979765430",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3777471"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ce9c52d45ca0e2fcbeef0e5d2931e5737c28b51f",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-31T15:11:53.487428+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3777471",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Rethinking Variable-Length Encoding: Exploiting Bit Sparsity for Parallel Decoding in LLM Accelerators",
+      "source_url": "https://doi.org/10.1145/3777471",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) have achieved remarkable success. However, their growing size presents challenges due to the increasing mismatch between model scale and hardware capacity. Model compression techniques have been proposed to address this issue, but existing methods often struggle to cope with the large dynamic range of model parameters, including both activations and weights. Additionally, current outlier-aware encoding schemes introduce complex logic, which limits their effectiveness in both compression ratio and hardware efficiency. To overcome these challenges, we propose SPADE, a co-designed algorithm–architecture solution for post-training quantized INT8 large language models, introducing a hybrid-precision encoding scheme. SPADE employs variable-length data representation guided by metadata, enabling local, value-dependent encoding with only 3.66% hardware area overhead while delivering up to 4.88× speedup and 70.5% energy reduction compared with state-of-the-art encoding-based accelerators. Our key insight is that only a small portion of activations are outliers that require high-precision such as INT8, while the vast majority can be accurately represented with INT4. This allows us to exploit the sparsity of high-significance bits across the data. By assigning an identifier bit to each data element, SPADE dynamically selects between compact INT4 encoding for normal values and higher INT8 encoding for rare outliers, eliminating unnecessary bit-width and reducing data redundancy. Moreover, we analyze the limitations of existing variable-length encoding methods, which typically require serialization and deserialization due to uncertainty in the precision format of loaded data blocks. SPADE integrates precision information directly into its encoding rules, enabling parallel decoding and computation on systolic arrays. This design significantly boosts computational throughput and helps realize the theoretical performance advantages of structured encoding. We evaluate SPADE-based accelerators against state-of-the-art encoding-based accelerators, and our results demonstrate that the SPADE-based accelerator achieves up to 4.88× speedup and 70.5% energy reduction, while maintaining superior model accuracy. The codes are available at https://github.com/jlsbz/SPADE.",
+      "identifiers": [
+        "SemanticScholar:f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d"
+      ],
+      "semantic_scholar_id": "f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d",
+      "doi": "10.1145/3777471",
+      "canonical_id": "DOI:10.1145/3777471",
+      "authors": [
+        "Ning Yang",
+        "Fang-Xin Liu",
+        "Jun-Jie Wang",
+        "Chen-Yang Guan",
+        "Zong-Wu Wang",
+        "Junping Zhao",
+        "Li Jiang",
+        "Hai-Bing Guan"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 334,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3777471",
+      "identity_tokens": [
+        "id:DOI:10.1145/3777471",
+        "id:SemanticScholar:f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d",
+        "title:rethinking variablelength encoding exploiting bit sparsity for parallel decoding in llm accelerators",
+        "url:https://doi.org/10.1145/3777471"
+      ],
+      "record": {
+        "title": "Rethinking Variable-Length Encoding: Exploiting Bit Sparsity for Parallel Decoding in LLM Accelerators",
+        "source_url": "https://doi.org/10.1145/3777471",
+        "year": 2025,
+        "published": "2025-12-01",
+        "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based large language models (LLMs) have achieved remarkable success. However, their growing size presents challenges due to the increasing mismatch between model scale and hardware capacity. Model compression techniques have been proposed to address this issue, but existing methods often struggle to cope with the large dynamic range of model parameters, including both activations and weights. Additionally, current outlier-aware encoding schemes introduce complex logic, which limits their effectiveness in both compression ratio and hardware efficiency. To overcome these challenges, we propose SPADE, a co-designed algorithm–architecture solution for post-training quantized INT8 large language models, introducing a hybrid-precision encoding scheme. SPADE employs variable-length data representation guided by metadata, enabling local, value-dependent encoding with only 3.66% hardware area overhead while delivering up to 4.88× speedup and 70.5% energy reduction compared with state-of-the-art encoding-based accelerators. Our key insight is that only a small portion of activations are outliers that require high-precision such as INT8, while the vast majority can be accurately represented with INT4. This allows us to exploit the sparsity of high-significance bits across the data. By assigning an identifier bit to each data element, SPADE dynamically selects between compact INT4 encoding for normal values and higher INT8 encoding for rare outliers, eliminating unnecessary bit-width and reducing data redundancy. Moreover, we analyze the limitations of existing variable-length encoding methods, which typically require serialization and deserialization due to uncertainty in the precision format of loaded data blocks. SPADE integrates precision information directly into its encoding rules, enabling parallel decoding and computation on systolic arrays. This design significantly boosts computational throughput and helps realize the theoretical performance advantages of structured encoding. We evaluate SPADE-based accelerators against state-of-the-art encoding-based accelerators, and our results demonstrate that the SPADE-based accelerator achieves up to 4.88× speedup and 70.5% energy reduction, while maintaining superior model accuracy. The codes are available at https://github.com/jlsbz/SPADE.",
+        "identifiers": [
+          "SemanticScholar:f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d"
+        ],
+        "semantic_scholar_id": "f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d",
+        "doi": "10.1145/3777471",
+        "canonical_id": "DOI:10.1145/3777471",
+        "authors": [
+          "Ning Yang",
+          "Fang-Xin Liu",
+          "Jun-Jie Wang",
+          "Chen-Yang Guan",
+          "Zong-Wu Wang",
+          "Junping Zhao",
+          "Li Jiang",
+          "Hai-Bing Guan"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 334,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f68836778e9bc7f2b0b2b1a2d2bd963725bd468e4c2736404dfa02ace82d7ad3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

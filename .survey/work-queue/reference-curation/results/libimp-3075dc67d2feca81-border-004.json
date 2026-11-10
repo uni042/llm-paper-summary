@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3075dc67d2feca81-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.15517",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.15517",
+    "identity_tokens": [
+      "SemanticScholar:f23ec5dee82855ddf343f3eac6f78d251d156734",
+      "arXiv:2608.15517"
+    ],
+    "reason": "GLaQ may reduce multimodal reasoning overhead by avoiding external visual tools and sequential latent rollouts, but no cost or latency comparison appears in the abstract.",
+    "first_checked_at": "2026-10-13T04:24:17+00:00",
+    "last_checked_at": "2026-10-13T04:24:17+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "GLaQ: Grounding Latent Queries in Visual Evidence for Multimodal Reasoning"
+  },
+  "processed_at": "2026-10-13T04:24:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3075dc67d2fe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

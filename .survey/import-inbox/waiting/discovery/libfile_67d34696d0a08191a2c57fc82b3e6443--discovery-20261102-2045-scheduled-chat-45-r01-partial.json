@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261102-2045-scheduled-chat-45/r01",
+  "reference_main_sha": "1d9ad6383d5a78c7c5a08257807d7523a6f11c6a",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41079",
+      "identity_tokens": [
+        "arXiv:2610.41079"
+      ],
+      "title": "EDU-Jev Training System-One Decision Models for Education",
+      "reason": "教育の選択肢判定を生成型LLMの逐次デコードではなく、選択肢マーカーをpointer headで採点する単一forwardのdecision modelに置き換える。0.8B/2B/4Bを構築し、2BモデルはH100 1基で約150 decisions/sと報告。生成・パースを省く推論効率の設計に関連するが、教育用途に特化したモデル学習と評価が主題で、汎用LLM serving engineやKV/カーネルの最適化ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41079",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:50:08+09:00",
+      "last_checked_at": "2026-11-02T20:50:08+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41905",
+      "identity_tokens": [
+        "arXiv:2610.41905"
+      ],
+      "title": "Completeness and Cost of Retrieval Structures for Multi-Tool Requests in LLM Agents",
+      "reason": "LLM agentが複数ツールを必要とする際の検索構造6種を比較し、LLM呼出回数・token・遅延を計測。AppWorld 345件、MCP-Bench 103件を評価し、学習型set-level retrieverは追加LLM呼出なしでcomplete@16=0.33/0.58、LLM階層探索は0.30/0.40だが中央値31〜38回のLLM呼出と約5分を要すると報告。エージェント推論のtool retrieval costを直接測るが、LLM本体の推論実行・serving/メモリ最適化ではなく周辺検索器の比較研究なのでborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41905",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:50:08+09:00",
+      "last_checked_at": "2026-11-02T20:50:08+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

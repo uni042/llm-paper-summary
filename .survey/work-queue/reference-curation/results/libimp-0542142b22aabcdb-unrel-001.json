@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0542142b22aabcdb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.21964",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.21964",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.21964",
+      "arXiv:2601.21964"
+    ],
+    "reason": "SoftMol/SoftBDの対象は薬剤探索の分子構造・SMILES生成で、評価は化学的妥当性、結合親和性、多様性、分子生成の速度。ブロック拡散や言語モデルの用語は共通するが、汎用LLMの推論基盤・配信・メモリ階層の改善を直接評価する研究ではない。原著要旨を確認して除外。",
+    "first_checked_at": "2026-10-23T15:08:39+00:00",
+    "last_checked_at": "2026-10-23T15:08:39+00:00",
+    "linked_from": [],
+    "title": "From Tokens to Blocks: A Block-Diffusion Perspective on Molecular Generation"
+  },
+  "processed_at": "2026-10-23T15:08:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0542142b22aa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

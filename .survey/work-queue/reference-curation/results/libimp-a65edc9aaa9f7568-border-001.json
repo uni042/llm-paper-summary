@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a65edc9aaa9f7568-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.04744",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.04744",
+    "identity_tokens": [
+      "arXiv:2402.04744"
+    ],
+    "reason": "Progressive gradient flow is a training procedure for robust N:M sparsity in transformers; reported work addresses sparse pretraining rather than inference-time execution, so downstream serving benefit remains unestablished.",
+    "first_checked_at": "2026-10-06T08:00:00+00:00",
+    "last_checked_at": "2026-10-06T08:00:00+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Progressive Gradient Flow for Robust N: M Sparsity Training in Transformers"
+  },
+  "processed_at": "2026-10-06T08:00:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a65edc9aaa9f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

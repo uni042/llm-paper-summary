@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b2346b7fb7a9174-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.27306",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.27306",
+    "identity_tokens": [
+      "arXiv:2609.27306"
+    ],
+    "reason": "Conventional score-based diffusion models learn scores without representing normalized densities, whereas tractable normalized models support both sampling and direct likelihood evaluation. A recent tensor-network approach provides such a representation but is largely restricted to low-dimensional lattices. Here we introduce a discrete diffusion model that parameterizes normalized probability distributions using variational autoregressive networks. Explicit Markov jump operators govern the forwa",
+    "first_checked_at": "2026-10-05T05:44:52+00:00",
+    "last_checked_at": "2026-10-05T05:44:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+    ],
+    "title": "Discrete Diffusion Models via Evolving Variational Autoregressive Networks"
+  },
+  "processed_at": "2026-10-05T05:44:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b2346b7fb7a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

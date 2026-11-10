@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1f6c36fc078cfd32dd1a42f21bf0204679ac994f78b209a03ece98eed7606b7e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-dq-2609.26333.md",
+  "canonical_id": "arXiv:2609.26333",
+  "worker_completed_at": "2026-10-07T22:06:00Z",
+  "worker_run_key": "interactive-20261008-bottom-up-reaudit-dq",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4927,
+    "body_paragraphs": 27,
+    "method_chars": 1744,
+    "method_paragraphs": 11,
+    "evaluation_chars": 1368,
+    "limitation_chars": 288,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md と 3 段落 / 686文字 (29.7%) が完全一致"
+  ],
+  "processed_at": "2026-10-07T22:05:10+00:00"
+}

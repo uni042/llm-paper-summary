@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6a30018d565e9157-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.24049",
+  "reason": "Accurate retinal vessel segmentation is important for computer-aided ophthalmic analysis, yet thin vessels, low contrast, and severe foreground-background imbalance remain challenging for encoder-decoder networks. This paper presents U-PEN Mamba, a U-shaped retinal vessel segmentation architecture that couples progressive nonlinear feature expansion with selective state-space modeling. The proposed network enriches local vessel responses with progressive expansion, models long-range spatial dependencies through a Mamba Global Context (MGC) block with linear sequence complexity, and uses attention-based decoder fusion to recover fine vascular boundaries. We evaluate U-PEN Mamba on CHASE DB1 and DRIVE using a consistent patch-based preprocessing pipeline and compare it with convolutional, attention-based, transformer-based, and Mamba-based segmentation baselines. U-PEN Mamba obtains the best mean intersection over union among the compared methods, achieving 0.8394 on CHASE DB1 and 0.8221 on DRIVE, with Dice scores of 0.8187 and 0.8078, respectively, using 21.6M trainable parameters. Ablation studies show that the MGC block contributes the largest gain over the U-Net baseline, while projection dimension and state size provide practical accuracy-efficiency control. These results indicate that selective state-space modeling is a promising global-context mechanism for parameter-efficient retinal vessel segmentation. Code is available at: https://github.com/areyesan/UPEN_Mamba.",
+  "title": "U-PEN Mamba: Progressive Expansion with Selective State-Space Modeling for Efficient Retinal Vessel Segmentation",
+  "identity_tokens": [
+    "arXiv:2609.24049"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6a30018d565e",
+  "source_precheck_request_id": null
+}

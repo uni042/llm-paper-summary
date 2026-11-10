@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9a366da0237a828e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.02689",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.02689",
+    "identity_tokens": [
+      "arXiv:2609.02689"
+    ],
+    "reason": "一次要旨: Embedded devices typically lack the resources of GPU-equipped machines, and existing inference methods suffer from either high computational overhead (patch-based) or accuracy loss (approximation-based). We propose GaLe, a memory-efficient technique that enables the deployment of pretrained networks on constrained devices without retraining. GaLe partitions feature maps into two components: a local exact (Le) representation that preserves fine details and a global approximate (Ga) representation that retains long-range dependencies. Unlike standard tiling, GaLe supports global operations and attention mechanisms found in hybrid CNN-transformer models. Validated on ImageNet, our method matches exact-inference performance while achieving up to 65% speedup and 90% RAM reduction on a Cortex-M33 compared to patch-based inference. We further demonstrate GaLe's versatility across classification, detection, and generation tasks, highlighting its potential as a foundation for resource-efficient architecture design.",
+    "first_checked_at": "2026-10-05T07:32:30+00:00",
+    "last_checked_at": "2026-10-05T07:32:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "GALE: Memory-Efficient Global Approximate and Local Exact Features"
+  },
+  "processed_at": "2026-10-05T07:32:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9a366da0237a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

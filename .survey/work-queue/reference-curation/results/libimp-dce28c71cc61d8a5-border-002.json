@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dce28c71cc61d8a5-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/globecom59602.2025.11432593",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/globecom59602.2025.11432593",
+    "identity_tokens": [
+      "DOI:10.1109/globecom59602.2025.11432593"
+    ],
+    "reason": "Identity/title were confirmed from the DOI and institutional publication record, and the official IEEE Xplore URL was tried. Its abstract could not be retrieved past the JavaScript/robot gate, so the edge/server speculative-decoding details and efficiency contribution remain unverified from primary text.",
+    "first_checked_at": "2026-10-13T23:22:08+00:00",
+    "last_checked_at": "2026-10-13T23:22:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Device-Server Collaborative Speculative Decoding for Real-Time LLM Streaming"
+  },
+  "processed_at": "2026-10-13T23:22:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dce28c71cc61",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

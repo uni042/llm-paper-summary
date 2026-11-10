@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99f77a0862a3b9ef-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.08621",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.08621",
+    "identity_tokens": [
+      "arXiv:2608.08621"
+    ],
+    "reason": "Business Arena is an environment for cross-border business decision-making and scores marketplace outcomes across frontier models. Ablations test policy mechanisms such as demand inference, portfolio choice, pricing, and customer service. The paper states it abstracts production systems and does not evaluate updating live storefronts or operating real interfaces. It is a task benchmark, not an agent sandbox/recovery or LLM inference-serving method.",
+    "first_checked_at": "2026-10-05T22:17:57+00:00",
+    "last_checked_at": "2026-10-05T22:17:57+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+    ],
+    "title": "Business Arena: Benchmarking LLM Agents in a Realistic Marketplace"
+  },
+  "processed_at": "2026-10-05T22:17:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99f77a0862a3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

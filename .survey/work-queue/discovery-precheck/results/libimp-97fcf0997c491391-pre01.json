@@ -1,0 +1,109 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-97fcf0997c491391-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-97fcf0997c49",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2310.07096"
+  ],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3e491ea32a931a5f25385943867e458f504346ad",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-02T10:59:39.214903+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2310.07096",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Sparse Universal Transformer",
+      "source_url": "https://arxiv.org/abs/2310.07096",
+      "year": 2023,
+      "published": "2023-10-11",
+      "abstract": "The Universal Transformer (UT) is a variant of the Transformer that shares parameters across its layers. Empirical evidence shows that UTs have better compositional generalization than Vanilla Transformers (VTs) in formal language tasks. The parameter-sharing also affords it better parameter efficiency than VTs. Despite its many advantages, scaling UT parameters is much more compute and memory intensive than scaling up a VT. This paper proposes the Sparse Universal Transformer (SUT), which leverages Sparse Mixture of Experts (SMoE) and a new stick-breaking-based dynamic halting mechanism to reduce UT's computation complexity while retaining its parameter efficiency and generalization ability. Experiments show that SUT achieves the same performance as strong baseline models while only using half computation and parameters on WMT'14 and strong generalization results on formal language tasks (Logical inference and CFQ). The new halting mechanism also enables around 50\\% reduction in computation during inference with very little performance decrease on formal language tasks.",
+      "canonical_id": "arXiv:2310.07096",
+      "arxiv_id": "2310.07096",
+      "doi": "10.48550/arXiv.2310.07096",
+      "authors": [
+        "Shawn Tan",
+        "Yikang Shen",
+        "Zhenfang Chen",
+        "Aaron C. Courville",
+        "Chuang Gan"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2310.07096",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.07096",
+        "id:arXiv:2310.07096",
+        "title:sparse universal transformer",
+        "url:https://arxiv.org/abs/2310.07096"
+      ],
+      "record": {
+        "title": "Sparse Universal Transformer",
+        "source_url": "https://arxiv.org/abs/2310.07096",
+        "year": 2023,
+        "published": "2023-10-11",
+        "abstract": "The Universal Transformer (UT) is a variant of the Transformer that shares parameters across its layers. Empirical evidence shows that UTs have better compositional generalization than Vanilla Transformers (VTs) in formal language tasks. The parameter-sharing also affords it better parameter efficiency than VTs. Despite its many advantages, scaling UT parameters is much more compute and memory intensive than scaling up a VT. This paper proposes the Sparse Universal Transformer (SUT), which leverages Sparse Mixture of Experts (SMoE) and a new stick-breaking-based dynamic halting mechanism to reduce UT's computation complexity while retaining its parameter efficiency and generalization ability. Experiments show that SUT achieves the same performance as strong baseline models while only using half computation and parameters on WMT'14 and strong generalization results on formal language tasks (Logical inference and CFQ). The new halting mechanism also enables around 50\\% reduction in computation during inference with very little performance decrease on formal language tasks.",
+        "canonical_id": "arXiv:2310.07096",
+        "arxiv_id": "2310.07096",
+        "doi": "10.48550/arXiv.2310.07096",
+        "authors": [
+          "Shawn Tan",
+          "Yikang Shen",
+          "Zhenfang Chen",
+          "Aaron C. Courville",
+          "Chuang Gan"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:1c95dae00170b1c92c4cf5df60f0c099130f723efcb040684c7fde3afe61718b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

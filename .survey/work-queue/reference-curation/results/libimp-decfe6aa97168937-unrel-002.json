@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-decfe6aa97168937-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.10347",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.10347",
+    "identity_tokens": [
+      "SemanticScholar:25a9df450bc2c4393ef7973a9a80ec1df64db6ba",
+      "arXiv:2609.10347"
+    ],
+    "reason": "CertiFlash verifies SSD flash-translation layers, not model inference.",
+    "first_checked_at": "2026-10-05T06:58:58+00:00",
+    "last_checked_at": "2026-10-14T12:50:23+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
+      "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
+      "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+    ],
+    "title": "CertiFlash: A Formal Verification Framework for Flash Translation Layers in Computational Solid State Drives"
+  },
+  "processed_at": "2026-10-14T12:50:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-decfe6aa9716",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

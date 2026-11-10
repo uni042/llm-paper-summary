@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f68fe99cc40e42e-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.28374",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.28374",
+    "identity_tokens": [
+      "arXiv:2607.28374"
+    ],
+    "reason": "Auditable multimodal agent evidence runtime; no concrete inference resource reduction.",
+    "first_checked_at": "2026-10-06T06:40:10+00:00",
+    "last_checked_at": "2026-10-06T06:40:10+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+    ],
+    "title": "LEDGERMIND: Provenance-Constrained Multimodal Agentic Reasoning with a Structured Evidence Ledger"
+  },
+  "processed_at": "2026-10-06T06:40:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f68fe99cc40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

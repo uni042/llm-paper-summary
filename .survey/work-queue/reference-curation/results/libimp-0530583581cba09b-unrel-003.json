@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0530583581cba09b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.29376",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.29376",
+    "identity_tokens": [
+      "arXiv:2609.29376"
+    ],
+    "reason": "Automatic 12-lead electrocardiogram (ECG) classification requires representations that jointly capture local waveform morphology, long-range temporal dynamics, and cross-lead dependencies, yet integrating these properties within a single efficient architecture remains challenging. This paper introduces a hybrid CNN-SSM-Attention backbone for 12-lead ECG classification. A convolutional stem performs early waveform tokenization and temporal reduction, mixed state-space and depthwise-convolutional blocks model tempora",
+    "first_checked_at": "2026-10-05T05:38:56+00:00",
+    "last_checked_at": "2026-10-05T05:38:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "A Hybrid CNN--State-Space--Attention Backbone with Joint-Embedding Predictive Pretraining for 12-Lead ECG Classification"
+  },
+  "processed_at": "2026-10-05T05:38:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0530583581cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

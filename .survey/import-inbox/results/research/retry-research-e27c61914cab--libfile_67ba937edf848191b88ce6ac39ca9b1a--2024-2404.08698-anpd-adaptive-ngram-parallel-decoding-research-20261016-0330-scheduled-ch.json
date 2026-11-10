@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "a5616beeff4518459ad129363b23de2824b260e13a9c057470041f5a123d84de",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e27c61914cab--libfile_67ba937edf848191b88ce6ac39ca9b1a--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding-research-20261016-0330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2404.08698",
+  "worker_completed_at": "2026-10-16T03:39:46+09:00",
+  "worker_run_key": "20261016-0330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5432,
+    "body_paragraphs": 32,
+    "method_chars": 1624,
+    "method_paragraphs": 9,
+    "evaluation_chars": 0,
+    "limitation_chars": 746,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-16T16:20:01+00:00"
+}

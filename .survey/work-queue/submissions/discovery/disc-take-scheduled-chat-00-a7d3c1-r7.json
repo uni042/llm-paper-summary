@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.1145/3797905.3800532",
+      "doi": "10.1145/3797905.3800532",
+      "title": "dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving",
+      "source_url": "https://doi.org/10.1145/3797905.3800532",
+      "priority": 94,
+      "reason": "Serving framework targeting diffusion-language-model memory dynamics and parallel decoding."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "disc-take-scheduled-chat-00-a7d3c1-r7",
+    "result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-a7d3c1-r7.json",
+    "receipt": "sha256:43879bb2a865dc439adc77542f023c86e90539156888b8717798f61967ac3ffb"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+    "round": "disc-take-scheduled-chat-00-a7d3c1-r7",
+    "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+    "candidate_count": 20,
+    "accepted_count": 1,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}

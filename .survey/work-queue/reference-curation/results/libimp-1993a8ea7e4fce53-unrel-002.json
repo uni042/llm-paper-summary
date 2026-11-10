@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1993a8ea7e4fce53-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.00054",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.00054",
+    "identity_tokens": [
+      "arXiv:2610.00054"
+    ],
+    "reason": "Audits first-token readout of LLM judges/evaluation validity; no serving optimization.",
+    "first_checked_at": "2026-10-05T07:14:48+00:00",
+    "last_checked_at": "2026-10-05T07:14:48+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "The First Token Is Not the Verdict: Hidden Costs of Reading LLM Judges Without Generating"
+  },
+  "processed_at": "2026-10-05T07:14:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1993a8ea7e4f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

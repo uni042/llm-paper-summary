@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f288343f0184a3d0-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.19633",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.19633",
+    "identity_tokens": [
+      "arXiv:2602.19633"
+    ],
+    "reason": "TAPE improves agent planning success using tools, constrained decoding, and replanning; the abstract reports task quality, not efficiency gains.",
+    "first_checked_at": "2026-10-05T13:35:19+00:00",
+    "last_checked_at": "2026-10-05T13:35:19+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "TAPE: Tool-Guided Adaptive Planning and Constrained Execution in Language Model Agents"
+  },
+  "processed_at": "2026-10-05T13:35:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f288343f0184",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

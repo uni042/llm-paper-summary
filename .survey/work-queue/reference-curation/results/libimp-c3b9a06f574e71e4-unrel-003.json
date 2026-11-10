@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c3b9a06f574e71e4-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1088/1361-6560/ae8419",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1088/1361-6560/ae8419",
+    "identity_tokens": [
+      "DOI:10.1088/1361-6560/ae8419"
+    ],
+    "reason": "Primary abstract reviewed: Objective. Existing sparse attention networks in medical image segmentation suffer from fixed K values across modules and scales, hindering effective adaptation to the wide variability in lesion sizes and shapes. The objective of this study is to develop an adaptive, differentiable sparse attention mechanism to solve this issue for both the robustness and the segmentation accuracy of medical image analysis systems. Approach. We propose patch adaptive cut-off network (PACNet), [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+    "first_checked_at": "2026-10-05T11:37:33+00:00",
+    "last_checked_at": "2026-10-05T11:37:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "PAC-Net: patch adaptive cut-off network with differentiable module-wise K-learning for robust and efficient medical image segmentation"
+  },
+  "processed_at": "2026-10-05T11:37:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c3b9a06f574e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2811ed13d5a8a52e-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.17957",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.17957",
+    "identity_tokens": [
+      "arXiv:2410.17957"
+    ],
+    "reason": "BERT-tiny/miniのmicrocontroller上のテキスト分類向けinferenceであり、対象契約のLLM推論/servingではない。",
+    "first_checked_at": "2026-10-05T13:16:04+00:00",
+    "last_checked_at": "2026-10-05T13:16:04+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+      "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+    ],
+    "title": "MCUBERT: Memory-Efficient BERT Inference on Commodity Microcontrollers"
+  },
+  "processed_at": "2026-10-05T13:16:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2811ed13d5a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

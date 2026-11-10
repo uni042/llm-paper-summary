@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r01",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.18177",
+      "identity_tokens": [
+        "arXiv:2508.18177",
+        "DOI:10.48550/arXiv.2508.18177"
+      ],
+      "title": "Scene-Aware Vectorized Memory Multi-Agent Framework with Cross-Modal Differentiated Quantization VLMs for Visually Impaired Assistance",
+      "reason": "視覚障害者支援を主用途とするが、19B級VLMのクロスモーダル差別化量子化を提案し、モデル占有メモリを38GBから11.3GBへ削減する。MMBenchの低下2.05%とOCR-VQA 64.9→63.7も報告しており、推論向け圧縮機構が独立した技術的貢献として確認できる。",
+      "source_url": "https://arxiv.org/abs/2508.18177",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:30:42+09:00",
+      "last_checked_at": "2026-10-30T20:30:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 183,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.07880",
+      "identity_tokens": [
+        "arXiv:2510.07880",
+        "DOI:10.48550/arXiv.2510.07880"
+      ],
+      "title": "Do LLMs Really Need 10+ Thoughts for \"Find the Time 1000 Days Later\"? Towards Structural Understanding of LLM Overthinking",
+      "reason": "TRACEで思考を最小の下位思考へ分解し、談話関係グラフからExplorerとLate Landingという過剰思考パターンを分析する。単純問題で長考モデルが5～20倍遅いと測定するが、推論エンジンの実行資源・KV・スケジューラを直接最適化する実装ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2510.07880",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:30:42+09:00",
+      "last_checked_at": "2026-10-30T20:30:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 184,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.21919",
+      "identity_tokens": [
+        "arXiv:2601.21919",
+        "DOI:10.48550/arXiv.2601.21919"
+      ],
+      "title": "Self-Compression of Chain-of-Thought via Multi-Agent Reinforcement Learning",
+      "reason": "SCMAは推論時の冗長な思考を減らすため、学習時にSegmentation AgentとScoring Agentで思考片の重要度を評価し、Reasoning Agentへ重要度付き長さ罰則を与える。推論時に追加エージェントを要せず、生成長を11.1～39.0%減らしつつ精度を4.33～10.02%改善したと報告する。学習法だが最終的な推論トークン予算削減が直接の目的。",
+      "source_url": "https://arxiv.org/abs/2601.21919",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:30:42+09:00",
+      "last_checked_at": "2026-10-30T20:30:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 185,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.08982",
+      "identity_tokens": [
+        "arXiv:2603.08982",
+        "DOI:10.48550/arXiv.2603.08982"
+      ],
+      "title": "SVG-EAR: Parameter-Free Linear Compensation for Sparse Video Generation via Error-aware Routing",
+      "reason": "対象はWan2.2・HunyuanVideoなど動画拡散Transformerであり、注意ブロックの重心近似と誤差対費用比で選ぶルーティングにより動画生成を高速化する。生成LLMのKV管理・テキスト推論サービングへの直接評価はなく、現行のLLM推論サーベイの対象外。",
+      "source_url": "https://arxiv.org/abs/2603.08982",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:30:42+09:00",
+      "last_checked_at": "2026-10-30T20:30:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 186,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.05413",
+      "identity_tokens": [
+        "arXiv:2603.05413",
+        "DOI:10.48550/arXiv.2603.05413"
+      ],
+      "title": "Building Enterprise Realtime Voice Agents from Scratch: A Technical Tutorial",
+      "reason": "Qwen3-OmniのDashScope・vLLM Thinkerのみ・Transformers全体実行の音声遅延を比較し、STT→LLM→TTSのストリーミング実装で初回音声755msを報告する。vLLMを用いた運用上の実測は有用だが、新規のLLMサービングアルゴリズムやカーネル最適化を主張する研究ではなくチュートリアル中心。",
+      "source_url": "https://arxiv.org/abs/2603.05413",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:30:42+09:00",
+      "last_checked_at": "2026-10-30T20:30:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 187,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01847",
+      "identity_tokens": [
+        "arXiv:2608.01847",
+        "DOI:10.48550/arXiv.2608.01847"
+      ],
+      "title": "FOCUS: FP4 Optimization via Coupled-Relaxation and Dual-Granularity Scaling",
+      "reason": "FP4後量子化で、保存不要な量子化スケールをハードウェアのE8M0制約から緩和するCRSと、サブブロック単位でスケールを細分化するDGSを組み合わせる。MXFP4/NVFP4対応のまま追加推論時オーバーヘッドなしで低ビット精度を改善する直接的な推論圧縮手法。",
+      "source_url": "https://arxiv.org/abs/2608.01847",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:30:42+09:00",
+      "last_checked_at": "2026-10-30T20:30:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 188,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.02689",
+      "identity_tokens": [
+        "arXiv:2604.02689",
+        "DOI:10.48550/arXiv.2604.02689"
+      ],
+      "title": "Efficient3D: A Unified Framework for Adaptive and Debiased Token Reduction in 3D MLLMs",
+      "reason": "3DマルチモーダルLLMの入力視覚トークンを、浅い層の偏りを補正するDVTIE重要度推定と場面複雑度で削減率を調整するATRで間引く。ScanRefer等5ベンチマークを評価し、Scan2CapではCIDErが2.57%改善したと報告する。推論時トークン数・計算負荷を直接削減する。",
+      "source_url": "https://arxiv.org/abs/2604.02689",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:30:42+09:00",
+      "last_checked_at": "2026-10-30T20:30:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 189,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.05489",
+      "identity_tokens": [
+        "arXiv:2407.05489",
+        "DOI:10.48550/arXiv.2407.05489"
+      ],
+      "title": "How Effective are State Space Models for Machine Translation?",
+      "reason": "RetNet・Mamba・注意を混ぜたMambaを翻訳課題で比較し、文・段落単位の翻訳品質、長さ外挿、固有名詞再現を調べる。状態空間モデルの線形再帰という効率的構造に関連するが、要旨で中心となる貢献は翻訳品質比較であり、LLM推論サービングや実測メモリ・遅延最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2407.05489",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:30:42+09:00",
+      "last_checked_at": "2026-10-30T20:30:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 190,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.20641",
+      "identity_tokens": [
+        "arXiv:2610.20641",
+        "DOI:10.48550/arXiv.2610.20641"
+      ],
+      "title": "AbridgeKV: Compressing Long Reasoning into the KV Cache of Learned Pause Tokens",
+      "reason": "長い思考の生成済み区間を学習済みpause token数個のKVへ圧縮し、元の生成区間のKVを解放する。層ごとに価値を測って予算配分し、vLLM/H100の飽和負荷では系列当たりキャッシュ3.5倍削減、問題完了3.2倍高速化を報告する。推論時KV占有と実測サービング速度へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2610.20641",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:30:42+09:00",
+      "last_checked_at": "2026-10-30T20:30:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 193,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.21105",
+      "identity_tokens": [
+        "arXiv:2603.21105",
+        "DOI:10.48550/arXiv.2603.21105"
+      ],
+      "title": "ResPrune: Text-Conditioned Subspace Reconstruction for Visual Token Pruning in Large Vision-Language Models",
+      "reason": "LVLMの視覚トークンを残差エネルギーによる部分空間再構成とテキスト関連度の両方で選び、再学習不要で入力トークンを削減する。LLaVA-1.5、LLaVA-NeXT、Qwen2.5-VLで計算・メモリ・推論遅延を削減するため、直接的なマルチモーダルLLM推論効率化として採用。",
+      "source_url": "https://arxiv.org/abs/2603.21105",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:30:42+09:00",
+      "last_checked_at": "2026-10-30T20:30:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 194,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

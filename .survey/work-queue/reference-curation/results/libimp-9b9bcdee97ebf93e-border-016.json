@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b9bcdee97ebf93e-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2403.07378",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2403.07378",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.07378",
+      "arXiv:2403.07378"
+    ],
+    "reason": "SVDによるLLM圧縮でサイズ・計算量を減らすが、主貢献は圧縮アルゴリズムでランタイム／カーネルの新規性は限定的。",
+    "first_checked_at": "2026-09-27T10:28:09+09:00",
+    "last_checked_at": "2026-09-30T09:47:28+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 210"
+    ],
+    "title": "SVD-LLM: Truncation-aware Singular Value Decomposition for Large Language Model Compression"
+  },
+  "processed_at": "2026-09-30T09:47:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b9bcdee97eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

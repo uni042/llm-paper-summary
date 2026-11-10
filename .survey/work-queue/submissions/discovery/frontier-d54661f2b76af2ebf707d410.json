@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2512.21487",
+      "arxiv_id": "2512.21487",
+      "title": "Efficient MoE Inference with Fine-Grained Scheduling of Disaggregated Expert Parallelism",
+      "source_url": "https://arxiv.org/abs/2512.21487",
+      "priority": 90,
+      "reason": "Fine-grained disaggregated expert-parallel scheduling for MoE serving."
+    },
+    {
+      "canonical_id": "arXiv:2512.17073",
+      "arxiv_id": "2512.17073",
+      "title": "Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation",
+      "source_url": "https://arxiv.org/abs/2512.17073",
+      "priority": 88,
+      "reason": "Adaptive expert compression reduces offload bandwidth."
+    },
+    {
+      "canonical_id": "arXiv:2512.13525",
+      "arxiv_id": "2512.13525",
+      "title": "Janus: Disaggregating Attention and Experts for Scalable MoE Inference",
+      "source_url": "https://arxiv.org/abs/2512.13525",
+      "priority": 90,
+      "reason": "Attention-expert disaggregation for scalable MoE serving."
+    },
+    {
+      "canonical_id": "arXiv:2510.05497",
+      "arxiv_id": "2510.05497",
+      "title": "Patterns Behind Chaos: Forecasting Data Movement for Efficient Large-Scale Moe LLM Inference",
+      "source_url": "https://arxiv.org/abs/2510.05497",
+      "priority": 88,
+      "reason": "Forecasting MoE data movement targets irregular expert-transfer bottlenecks."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-d54661f2b76af2ebf707d410",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-d54661f2b76af2ebf707d410.json",
+    "receipt": "sha256:afbeab6ab94e14f547e072c3eda9b77ef0b4f5c497c0cb428db6df8b9e6a220f"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T070210+0900-run1",
+    "round": "frontier-d54661f2b76af2ebf707d410",
+    "axis": "forward citations of MoE-Lightning for offloaded MoE inference",
+    "candidate_count": 20,
+    "accepted_count": 4,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}

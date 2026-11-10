@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bb6b23126d3dea60-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.22643",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.22643",
+    "identity_tokens": [
+      "arXiv:2607.22643"
+    ],
+    "reason": "MM-R2 improves multimodal RAG planning/retrieval, a possible context/retrieval-cost adjacency, but its demonstrated contribution is answer quality and trace interpretability rather than inference efficiency.",
+    "first_checked_at": "2026-10-06T20:11:31+00:00",
+    "last_checked_at": "2026-10-06T20:11:31+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Reason Before You Retrieve: Agentic Planning for Multi-modal RAG"
+  },
+  "processed_at": "2026-10-06T20:11:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb6b23126d3d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

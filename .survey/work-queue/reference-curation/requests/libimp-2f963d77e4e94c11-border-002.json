@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2f963d77e4e94c11-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.35115",
+  "reason": "評価はfull-duplex speech synthesis/model pipelineのtimeline-specific stateと小演算に強く依存し、general LLM servingやtext-only generationへの外挿は不明。",
+  "title": "DuplexCadence: Exact State and Execution from a Speech Model's Declared Timelines",
+  "identity_tokens": [
+    "arXiv:2609.35115"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+    "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+    "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f963d77e4e9",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a38e750f853cccec-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.11977",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.11977",
+    "identity_tokens": [
+      "arXiv:2508.11977"
+    ],
+    "reason": "一次要旨はe-commerceの商品推薦向けgenerative retrievalであり、LLM inference servingや言語モデルの推論効率改善を扱わない。",
+    "first_checked_at": "2026-10-06T18:06:49+00:00",
+    "last_checked_at": "2026-10-06T18:06:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "TBGRecall: A Generative Retrieval Model for E-commerce Recommendation Scenarios"
+  },
+  "processed_at": "2026-10-06T18:06:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a38e750f853c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

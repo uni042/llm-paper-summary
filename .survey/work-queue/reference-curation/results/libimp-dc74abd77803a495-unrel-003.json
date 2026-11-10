@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dc74abd77803a495-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2201.08383",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2201.08383",
+    "identity_tokens": [
+      "arXiv:2201.08383"
+    ],
+    "reason": "MeMViTはvision-only video recognition用multiscale Transformer。video-memoryは扱うがLLM/LMM servingへの言語モデル改善がない。",
+    "first_checked_at": "2026-10-08T07:22:22+00:00",
+    "last_checked_at": "2026-10-08T07:22:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md"
+    ],
+    "title": "MeMViT: Memory-Augmented Multiscale Vision Transformer for Efficient Long-Term Video Recognition"
+  },
+  "processed_at": "2026-10-08T07:22:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dc74abd77803",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

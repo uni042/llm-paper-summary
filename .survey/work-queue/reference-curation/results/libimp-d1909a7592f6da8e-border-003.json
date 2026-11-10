@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1909a7592f6da8e-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.15054",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.15054",
+    "identity_tokens": [
+      "arXiv:2605.15054"
+    ],
+    "reason": "Primary arXiv HTML, sections 1, method, experiments/ablations: LATERN uses gated historical summaries and recursive event-window aggregation for VLM video anomaly detection; InternVL2-8B UCF-Crime AUC is reported as 87.63 vs 86.42 baseline, and ungated summaries degrade results. The tested contribution is temporal context/reasoning quality, not measured inference-cost reduction or compression; memory/token overhead is not shown. Weak VLM context-management adjacency only.",
+    "first_checked_at": "2026-10-06T10:35:15+00:00",
+    "last_checked_at": "2026-10-06T10:35:15+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LATERN: Test-Time Context-Aware Explainable Video Anomaly Detection"
+  },
+  "processed_at": "2026-10-06T10:35:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1909a7592f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

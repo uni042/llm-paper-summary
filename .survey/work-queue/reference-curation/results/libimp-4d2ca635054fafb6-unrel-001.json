@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4d2ca635054fafb6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.01967",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.01967",
+    "identity_tokens": [
+      "arXiv:2401.01967"
+    ],
+    "reason": "DPOでGPT2-mediumの毒性表現・アラインメント機構を解析する安全性/学習アルゴリズム研究で、推論サービングや推論システム効率化を最終適用先としない。",
+    "first_checked_at": "2026-10-04T02:16:19+00:00",
+    "last_checked_at": "2026-10-04T02:16:19+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "A Mechanistic Understanding of Alignment Algorithms: A Case Study on DPO and Toxicity"
+  },
+  "processed_at": "2026-10-04T02:16:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4d2ca635054f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

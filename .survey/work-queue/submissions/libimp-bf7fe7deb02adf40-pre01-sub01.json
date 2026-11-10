@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CtrlCoT: Dual-Granularity Chain-of-Thought Compression for Controllable Reasoning",
+      "source_url": "https://arxiv.org/abs/2601.20467",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-thought (CoT) prompting improves LLM reasoning but incurs high latency and memory cost due to verbose traces, motivating CoT compression with preserved correctness. Existing methods either shorten CoTs at the semantic level, which is often conservative, or prune tokens aggressively, which can miss task-critical cues and degrade accuracy. Moreover, combining the two is non-trivial due to sequential dependency, task-agnostic pruning, and distribution mismatch. We propose \\textbf{CtrlCoT}, a dual-granularity CoT compression framework that harmonizes semantic abstraction and token-level pruning through three components: Hierarchical Reasoning Abstraction produces CoTs at multiple semantic granularities; Logic-Preserving Distillation trains a logic-aware pruner to retain indispensable reasoning cues (e.g., numbers and operators) across pruning ratios; and Distribution-Alignment Generation aligns compressed traces with fluent inference-time reasoning styles to avoid fragmentation. On MATH-500 with Qwen2.5-7B-Instruct, CtrlCoT uses 30.7\\% fewer tokens while achieving 7.6 percentage points higher than the strongest baseline, demonstrating more efficient and reliable reasoning. Our code will be publicly available at https://github.com/fanzhenxuan/Ctrl-CoT.",
+      "identifiers": [
+        "SemanticScholar:65119b500b6c4363f934af411b370caac3a21e2f"
+      ],
+      "semantic_scholar_id": "65119b500b6c4363f934af411b370caac3a21e2f",
+      "canonical_id": "arXiv:2601.20467",
+      "arxiv_id": "2601.20467",
+      "doi": "10.48550/arXiv.2601.20467",
+      "authors": [
+        "Zhen-Xuan Fan",
+        "Jie Cao",
+        "Yang Dai",
+        "Zhe-Qi Lv",
+        "Wen-Qiao Zhang",
+        "Zhong-Le Xie",
+        "Lu Peng",
+        "Beng Chin Ooi"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 275,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はCoTの意味段階の抽象化と重要トークンの論理保存枝刈り、生成分布の再整合を組み合わせるCtrlCoTを提案。MATH-500でQwen2.5-7Bの推論トークン30.7%削減し、比較方式比7.6ポイントの精度改善を報告。推論トークン数削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Towards Fast and Effective Long Video Understanding of Multimodal Large Language Models via Adaptive Quasi-Gaussian Sampling",
+      "source_url": "https://arxiv.org/abs/2606.24187",
+      "year": 2026,
+      "published": "2026-06-23",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long video understanding remains a daunting challenge for Multimodal Large Language Models (MLLMs) due to the excessive computation and memory footprint. Thus, keyframe selection is often adopted to mitigate this shortcoming, which however still suffers from low flexibility and high noise due to its hard sampling principle. In this paper, we define video frame selection as a problem of Quasi-Gaussian Sampling, and propose an adaptive and training-free approach termed AdaQ. Inspired by the 3-$\\sigma$ rule of Gaussian distribution, the objective of AdaQ is to achieve the optimal 3-$\\sigma$ interval for different examples, i.e., a smaller 3-$\\sigma$ interval for the local query and a larger one for the global query, thereby facilitating robust and adaptive frame sampling. To validate AdaQ, we apply it to four MLLMs with three embedding models. The extensive experimental results not only show its obvious performance gains over the default MLLMs and the SOTA keyframe selection methods, e.g., helping Qwen3-VL-8B outperform GPT4o by 15.8% on average by using only 64 frames, but also confirm its superior robustness and high efficiency for long-video understanding, e.g., only 1 hyper-parameter needs to be set.",
+      "identifiers": [
+        "SemanticScholar:048a997fdfb9fabdefd014c6c39017640b00a8aa"
+      ],
+      "semantic_scholar_id": "048a997fdfb9fabdefd014c6c39017640b00a8aa",
+      "canonical_id": "arXiv:2606.24187",
+      "arxiv_id": "2606.24187",
+      "doi": "10.48550/arXiv.2606.24187",
+      "authors": [
+        "Kun Zhang",
+        "Chenxin Fang",
+        "Tao Chen",
+        "Baiyang Song",
+        "Yun-Hang Shen",
+        "Yi-Yi Zhou",
+        "Rongrong Ji"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 129,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は質問の局所・大域性に応じ準ガウス分布の3σ区間を調整してキーフレームを選ぶAdaQを提案。4種MLLM・3埋め込みモデルで64フレームのみの長動画理解を評価し、入力トークン・推論負荷削減に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LCIRC: A Recurrent Compression Approach for Efficient Long-form Context and Query Dependent Modeling in LLMs",
+      "source_url": "https://arxiv.org/abs/2502.06139",
+      "year": 2025,
+      "published": "2025-02-10",
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While large language models (LLMs) excel in generating coherent and contextually rich outputs, their capacity to efficiently handle long-form contexts is limited by fixed-length position embeddings. Additionally, the computational cost of processing long sequences increases quadratically, making it challenging to extend context length. To address these challenges, we propose Long-form Context Injection with Recurrent Compression (LCIRC), a method that enables the efficient processing long-form sequences beyond the model's length limit through recurrent compression without retraining the entire model. We further introduce query dependent context modeling, which selectively compresses query-relevant information, ensuring that the model retains the most pertinent content. Our empirical results demonstrate that Query Dependent LCIRC (QD-LCIRC) significantly improves LLM's ability to manage extended contexts, making it well-suited for tasks that require both comprehensive context understanding and query relevance.",
+      "identifiers": [
+        "SemanticScholar:9fb2e1f56db824279dd856692b7e268a2fbde024"
+      ],
+      "semantic_scholar_id": "9fb2e1f56db824279dd856692b7e268a2fbde024",
+      "canonical_id": "arXiv:2502.06139",
+      "arxiv_id": "2502.06139",
+      "doi": "10.48550/arXiv.2502.06139",
+      "authors": [
+        "Sumin An",
+        "Junyoung Sung",
+        "Wonpyo Park",
+        "Chanjun Park",
+        "Paul Hongsuck Seo"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 627,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv v2一次要旨は長文脈を再帰的に圧縮し、質問関連情報を選択的に保持するLCIRC/QD-LCIRCを提案。モデル全体の再学習なしに長文脈入力を扱うための圧縮を導入し、LLM推論時の入力長・メモリ削減に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+      "source_url": "https://arxiv.org/abs/2604.08077",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long-form videos with Video Large Language Models (Video-LLMs) is computationally prohibitive. Current efficiency methods often compromise fine-grained perception through irreversible information disposal or inhibit long-range temporal modeling via rigid, predefined sparse patterns. This paper introduces AdaSpark, an adaptive sparsity framework designed to address these limitations. AdaSpark first partitions video inputs into 3D spatio-temporal cubes. It then employs two co-designed, context-aware components: (1) Adaptive Cube-Selective Attention (AdaS-Attn), which adaptively selects a subset of relevant video cubes to attend for each query token, and (2) Adaptive Token-Selective FFN (AdaS-FFN), which selectively processes only the most salient tokens within each cube. An entropy-based (Top-p) selection mechanism adaptively allocates computational resources based on input complexity. Experiments demonstrate that AdaSpark significantly reduces computational load by up to 57% FLOPs while maintaining comparable performance to dense models and preserving fine-grained, long-range dependencies, as validated on challenging hour-scale video benchmarks.",
+      "identifiers": [
+        "SemanticScholar:26de9913033c9237a713e5aef5961f6c5c2d26fa"
+      ],
+      "semantic_scholar_id": "26de9913033c9237a713e5aef5961f6c5c2d26fa",
+      "canonical_id": "arXiv:2604.08077",
+      "arxiv_id": "2604.08077",
+      "doi": "10.48550/arXiv.2604.08077",
+      "authors": [
+        "Handong Li",
+        "Zi-Kang Liu",
+        "Long-Teng Guo",
+        "Tong-Tian Yue",
+        "Yepeng Tang",
+        "Xin-Xin Zhu",
+        "Chuanyang Zheng",
+        "Zi-Ming Wang",
+        "Zhi-Bin Wang",
+        "Jun Song",
+        "Chenglin Yu",
+        "Bo Zheng",
+        "Jing Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は動画を3D時空間キューブに分け、クエリごとに注意対象キューブとFFN実行トークンを適応選択するAdaSparkを提案。入力複雑度に応じtop-pで予算を割り当て、長動画MLLMでFLOPs最大57%削減を報告。視覚推論の計算疎化に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CoQuant: Joint Weight-Activation Subspace Projection for Mixed-Precision LLMs",
+      "source_url": "https://arxiv.org/abs/2604.26378",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) has become an important technique for reducing the inference cost of Large Language Models (LLMs). While recent mixed-precision methods improve ultra-low bit quantization by preserving critical subspaces in high precision, they typically construct these subspaces relying solely on activation statistics. This ignores the fundamental nature of linear operations, where the output perturbation is jointly driven by both activation and weight quantization noise. In this paper, we propose CoQuant, a joint weight-activation subspace projection method. By theoretically modeling the expected output error, CoQuant formulates a closed-form weighted PCA solution that balances activation and weight covariances to select the optimal high-precision subspace. Extensive experiments on Llama-3.2 and Qwen2.5 models show that CoQuant consistently outperforms strong PTQ baselines in both WikiText perplexity and zero-shot common-sense reasoning accuracy. These results demonstrate that joint weight-activation subspace modeling provides a principled and effective direction for low-bit LLM quantization. The source code is available at https://github.com/Zachary5895/CoQuant.",
+      "identifiers": [
+        "SemanticScholar:5c42df8174888754596a90f82b371ec6fac7abc4"
+      ],
+      "semantic_scholar_id": "5c42df8174888754596a90f82b371ec6fac7abc4",
+      "canonical_id": "arXiv:2604.26378",
+      "arxiv_id": "2604.26378",
+      "doi": "10.48550/arXiv.2604.26378",
+      "authors": [
+        "Zhe Ding",
+        "Su Pan",
+        "Duowei Pan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は重みと活性の両方の量子化誤差共分散を考慮し、重み付きPCAの閉形式解で高精度保持部分空間を選ぶCoQuantを提案。Llama-3.2とQwen2.5でPPL・ゼロショット精度を改善。LLM推論向け混合精度PTQに直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-bf7fe7deb02a",
+    "round": "libimp-bf7fe7deb02adf40-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-bf7fe7deb02adf40-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-bf7fe7deb02adf40-pre01.json",
+    "receipt": "sha256:c2483568fffd4d52246784998ba2c8a3cf4825f1d7af5bc788bbb1e1358a4259"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-bf7fe7deb02a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

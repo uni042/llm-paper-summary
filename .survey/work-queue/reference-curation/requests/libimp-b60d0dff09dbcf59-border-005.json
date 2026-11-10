@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b60d0dff09dbcf59-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2003.03033",
+  "reason": "本文はpruningを推論時のネットワーク規模・計算量削減として明示し、サイズ/速度と精度のtradeoffを扱うため、inference-time compressionとしては範囲に直接関係する。一方、81論文のsurveyとShrinkBenchの評価は主にCNN/ResNet/VGG、ImageNet/CIFAR等を対象とし、LLMやLLM servingへの適用・測定を示さない。LLM推論に限定するscopeへ含めるかは根拠だけで確定できないためborderlineとしてroot判断に保留する。",
+  "title": "What is the State of Neural Network Pruning?",
+  "identity_tokens": [
+    "arXiv:2003.03033"
+  ],
+  "linked_from": [
+    "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b60d0dff09db",
+  "source_precheck_request_id": null
+}

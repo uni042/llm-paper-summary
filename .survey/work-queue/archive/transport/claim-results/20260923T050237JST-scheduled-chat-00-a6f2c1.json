@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "20260923T050237JST-scheduled-chat-00-a6f2c1",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-6e36f8b25c1d84c6",
+      "claim_id": "claim-900cad5c6178df049a8d9dec",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-900cad5c6178df049a8d9dec",
+      "claimed_at": "2026-09-22T19:17:29+00:00",
+      "expires_at": "2026-09-22T21:33:42+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-6e36f8b25c1d84c6"
+      ],
+      "job": {
+        "job_id": "job-research-6e36f8b25c1d84c6",
+        "type": "research",
+        "parent_job_id": "job-33e5193f52cf7fd1",
+        "priority": 96,
+        "canonical_id": "arXiv:2512.14531",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse",
+        "source_url": "https://arxiv.org/abs/2512.14531",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2512.14531-versatileffn-adaptive-wide-deep-reuse.md",
+        "selection_reason": "difficulty-aware gateでshared FFNをwidth-wise sub-expert reuseかdepth-wise repeated computationへ動的配分し、parameter一定でcomputeを適応させる。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T10:59:22+00:00"
+      },
+      "record_bank": "f"
+    }
+  ],
+  "processed_at": "2026-09-22T20:03:42+00:00",
+  "reason": "resumed active unsubmitted claim",
+  "checkpoint_released": 0
+}

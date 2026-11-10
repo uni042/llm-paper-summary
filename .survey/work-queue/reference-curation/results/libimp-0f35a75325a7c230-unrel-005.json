@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f35a75325a7c230-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3627703.3650083",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3627703.3650083",
+    "identity_tokens": [
+      "DOI:10.1145/3627703.3650083"
+    ],
+    "reason": "MoE通信・task schedulingは近接分野だが、主目的が分散MoE学習高速化であり、凍結しているtraining-only系統に該当する。",
+    "first_checked_at": "2026-09-30T09:07:47+00:00",
+    "last_checked_at": "2026-10-02T23:09:34+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07536-moe-overlap-resource-manager.md",
+      "papers/inference/12-moe-parallelism-communication/2026-2607.19539-tile-level-compute-communication-overlap-moe.md"
+    ],
+    "title": "ScheMoE: An Extensible Mixture-of-Experts Distributed Training System with Tasks Scheduling"
+  },
+  "processed_at": "2026-10-02T23:09:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f35a75325a7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

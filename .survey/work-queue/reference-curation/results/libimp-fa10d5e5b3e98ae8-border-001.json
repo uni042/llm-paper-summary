@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa10d5e5b3e98ae8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2207.01405",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2207.01405",
+    "identity_tokens": [
+      "arXiv:2207.01405"
+    ],
+    "reason": "Borderline transfer candidate: low-bit integer quantization is relevant to LLM inference, but the method is validated on ViT image classification/Turing Tensor Cores and may not preserve decoder language quality or map to LLM kernels. Follow up only with an LLM quantization/quality benchmark.",
+    "first_checked_at": "2026-10-06T23:50:35+00:00",
+    "last_checked_at": "2026-10-06T23:50:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "I-ViT: Integer-only Quantization for Efficient Vision Transformer Inference"
+  },
+  "processed_at": "2026-10-06T23:50:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa10d5e5b3e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

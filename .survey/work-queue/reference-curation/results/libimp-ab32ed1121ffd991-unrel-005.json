@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab32ed1121ffd991-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1211.5063",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1211.5063",
+    "identity_tokens": [
+      "arXiv:1211.5063"
+    ],
+    "reason": "再帰型ニューラルネットワークの勾配消失・爆発を解析し、gradient norm clippingとsoft constraintを提案する学習安定化研究で、推論工程の効率化を扱わない。",
+    "first_checked_at": "2026-10-04T13:05:22+00:00",
+    "last_checked_at": "2026-10-04T13:05:22+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
+    ],
+    "title": "On the difficulty of training recurrent neural networks"
+  },
+  "processed_at": "2026-10-04T13:05:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab32ed1121ff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

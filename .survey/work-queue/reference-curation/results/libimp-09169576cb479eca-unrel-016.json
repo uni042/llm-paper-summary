@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-09169576cb479eca-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1609/aaai.v34i05.6399",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1609/aaai.v34i05.6399",
+    "identity_tokens": [
+      "DOI:10.1145/3474381",
+      "DOI:10.1609/aaai.v34i05.6399"
+    ],
+    "reason": "常識推論ベンチマーク／データセットが主貢献で、実行システム最適化を扱わない。",
+    "first_checked_at": "2026-09-27T04:57:30+09:00",
+    "last_checked_at": "2026-09-30T09:52:34+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "worker-worklist-30 discovery_review rank 267"
+    ],
+    "title": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale"
+  },
+  "processed_at": "2026-09-30T09:52:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-09169576cb47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

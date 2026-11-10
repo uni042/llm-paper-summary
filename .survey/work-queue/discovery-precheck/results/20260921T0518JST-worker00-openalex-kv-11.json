@@ -1,0 +1,807 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0518JST-worker00-openalex-kv-11",
+  "collector_id": "worker00-openalex-kv-cache",
+  "run_key": "2026-09-21T05:01:46+09:00",
+  "axis": "OpenAlex recent KV cache compression offload serving",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20KV%20cache%20compression%20offload%20serving&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzgxNTY4MDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MTY1MjE4MzAzJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9eae3dbd6976df640e7d12a9dc326ed7a75b3adf",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 35,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 5,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T20:18:39.796756+00:00",
+  "results": [
+    {
+      "title": "To Each Language Its Tokenizer: Modular Tokenizers for Efficient Multilingual LLMs",
+      "source_url": "https://arxiv.org/abs/2609.15528",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15528",
+      "arxiv_id": "2609.15528",
+      "authors": [
+        "Franck Signe",
+        "Hippolyte Pilchen",
+        "François Yvon",
+        "Édouard Grave"
+      ]
+    },
+    {
+      "title": "AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.09823",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.09823",
+      "arxiv_id": "2609.09823",
+      "authors": [
+        "Zuxiong Tan",
+        "Will Wei-Jen Wang",
+        "Wei Shao",
+        "Ali Karkehabadi",
+        "Houman Homayoun",
+        "Avesta Sasan"
+      ]
+    },
+    {
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "source_url": "https://arxiv.org/abs/2609.10355",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10355",
+      "arxiv_id": "2609.10355",
+      "authors": [
+        "Killian Steunou",
+        "Yannis Tevissen",
+        "Mounîm A. El Yacoubi"
+      ]
+    },
+    {
+      "title": "BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.08566",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08566",
+      "arxiv_id": "2609.08566",
+      "authors": [
+        "Yanhong Qian",
+        "何宣莹",
+        "Qingguo Meng",
+        "Shihao Ding",
+        "Xingbo Dong",
+        "Zhe Jin"
+      ]
+    },
+    {
+      "title": "Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution",
+      "source_url": "https://arxiv.org/abs/2609.09240",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.09240",
+      "arxiv_id": "2609.09240",
+      "authors": [
+        "Anirudh Malik",
+        "M Sparsh Mehra",
+        "Poojith Devan"
+      ]
+    },
+    {
+      "title": "VestigeKV: The NoPE-MLA KV Cache Carries Its Own Sparse-Attention Signal in a Vestigial Branch",
+      "source_url": "https://arxiv.org/abs/2609.03949",
+      "year": 2026,
+      "published": "2026-09-03",
+      "canonical_id": "arXiv:2609.03949",
+      "arxiv_id": "2609.03949",
+      "authors": [
+        "WenJie Fan"
+      ]
+    },
+    {
+      "title": "Computation-bandwidth-memory trade-offs: a unified paradigm for AI infrastructure",
+      "source_url": "https://doi.org/10.1007/s44336-026-00041-4",
+      "year": 2026,
+      "published": "2026-09-02",
+      "canonical_id": "DOI:10.1007/s44336-026-00041-4",
+      "doi": "10.1007/s44336-026-00041-4",
+      "authors": [
+        "Yuankai Fan",
+        "Qizhen Weng",
+        "Xuelong Li"
+      ]
+    },
+    {
+      "title": "XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression",
+      "source_url": "https://arxiv.org/abs/2609.02083",
+      "year": 2026,
+      "published": "2026-09-02",
+      "canonical_id": "arXiv:2609.02083",
+      "arxiv_id": "2609.02083",
+      "authors": [
+        "Jundong Hu",
+        "Shekar Ramachandran"
+      ]
+    },
+    {
+      "title": "M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/502",
+      "year": 2026,
+      "published": "2026-09-01",
+      "canonical_id": "DOI:10.24963/ijcai.2026/502",
+      "doi": "10.24963/ijcai.2026/502",
+      "authors": [
+        "Shaolong Li",
+        "Xiang Yang",
+        "Qi Qi",
+        "Haifeng Sun",
+        "Zirui Zhuang",
+        "Bo He",
+        "Wanyi Ning",
+        "Jingyu Wang"
+      ]
+    },
+    {
+      "title": "Self–Optimizing AI data systems: a systematic literature review of CQLE-Aware query optimization, Edge–cloud offloading, Cloud/HPC orchestration, Data–Centric MLOps, and RAG",
+      "source_url": "https://doi.org/10.1007/s10791-026-10515-0",
+      "year": 2026,
+      "published": "2026-08-31",
+      "canonical_id": "DOI:10.1007/s10791-026-10515-0",
+      "doi": "10.1007/s10791-026-10515-0",
+      "authors": [
+        "Chaitanya Ranga Singamaneni",
+        "S. Rakesh"
+      ]
+    },
+    {
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "source_url": "https://arxiv.org/abs/2608.28048",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "arXiv:2608.28048",
+      "arxiv_id": "2608.28048",
+      "authors": [
+        "Siddharth Patel",
+        "Rohit Singh"
+      ]
+    },
+    {
+      "title": "LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression",
+      "source_url": "https://arxiv.org/abs/2608.26389",
+      "year": 2026,
+      "published": "2026-08-26",
+      "canonical_id": "arXiv:2608.26389",
+      "arxiv_id": "2608.26389",
+      "authors": [
+        "Zishan Shao",
+        "Lixun Zhang",
+        "Kangning Cui",
+        "Wenhao Wu",
+        "Jinhee Kim",
+        "Yixiao Wang",
+        "Ting Jiang",
+        "Hancheng Ye",
+        "Qinsi Wang",
+        "Fan Yang",
+        "Danyang Zhuo",
+        "Yiran Chen",
+        "Hai Li"
+      ]
+    },
+    {
+      "title": "Hydra: Phase-Aware Workload Characterization of LLM Inference across Edge SoC Generations, Backends, and Quantization Levels",
+      "source_url": "https://arxiv.org/abs/2608.25053",
+      "year": 2026,
+      "published": "2026-08-25",
+      "canonical_id": "arXiv:2608.25053",
+      "arxiv_id": "2608.25053",
+      "authors": [
+        "Amir Taherin",
+        "Sana Taghipour Anvari",
+        "Charles Amante",
+        "Yixiao Chen",
+        "Ruben Noroian",
+        "Zlatan Feric",
+        "Nícolas Bohm Agostini",
+        "Pu Zhao",
+        "José Cano",
+        "Bin Ren",
+        "Yanzhi Wang",
+        "David Kaeli"
+      ]
+    },
+    {
+      "title": "WnW: Waxing-and-Waning KV Cache for Long-Form Speech LLMs",
+      "source_url": "https://arxiv.org/abs/2608.22704",
+      "year": 2026,
+      "published": "2026-08-24",
+      "canonical_id": "arXiv:2608.22704",
+      "arxiv_id": "2608.22704",
+      "authors": [
+        "Yiming Yao",
+        "Chenyang Lyu",
+        "Xuanfan Ni",
+        "Longyue Wang",
+        "Weihua Luo",
+        "Yazheng Yang",
+        "Jinsong Su"
+      ]
+    },
+    {
+      "title": "EcoVLA: Energy-Efficient Device-Edge Co-inference for Vision-Language-Action Models Under Real-Time Constraints",
+      "source_url": "https://doi.org/10.1007/978-981-92-4805-6_46",
+      "year": 2026,
+      "published": "2026-08-23",
+      "canonical_id": "arXiv:2608.15502",
+      "arxiv_id": "2608.15502",
+      "authors": [
+        "Ao Zhou",
+        "Bo Dai",
+        "Le Yu",
+        "Xingyu Liu",
+        "Zeyu Hao",
+        "Lingkun Long",
+        "Chunming Hu",
+        "Jianlei Yang"
+      ]
+    },
+    {
+      "title": "Model Compression and Hardware-Aware Acceleration for Deep Learning on FPGAs: A Co-Design Taxonomy and Comparative Analysis",
+      "source_url": "https://arxiv.org/abs/2608.21657",
+      "year": 2026,
+      "published": "2026-08-21",
+      "canonical_id": "arXiv:2608.21657",
+      "arxiv_id": "2608.21657",
+      "authors": [
+        "Peter Forcha",
+        "H. Kajekusumadhar",
+        "Mbua Peter",
+        "Muhammed Kawser",
+        "Audrey Cyriell Mo",
+        "Christophe Bobda"
+      ]
+    },
+    {
+      "title": "Learning how to Forget: Fine-tuning for Long-Context Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2608.19920",
+      "year": 2026,
+      "published": "2026-08-20",
+      "canonical_id": "arXiv:2608.19920",
+      "arxiv_id": "2608.19920",
+      "authors": [
+        "Matthias Seeger",
+        "Zeyu Zhang",
+        "Vihang Patil",
+        "Konstantinos Benidis",
+        "Sebastian Schelter"
+      ]
+    },
+    {
+      "title": "Anatomy of a Quantized Agent: VRAM Stability and Forecasting in Code-Synthesis Agentic Workloads",
+      "source_url": "https://arxiv.org/abs/2608.15117",
+      "year": 2026,
+      "published": "2026-08-15",
+      "canonical_id": "arXiv:2608.15117",
+      "arxiv_id": "2608.15117",
+      "authors": [
+        "Anubhab Banerjee"
+      ]
+    },
+    {
+      "title": "vToken: Token-Level Virtualization for Reclaimable KV Caches",
+      "source_url": "https://arxiv.org/abs/2608.13263",
+      "year": 2026,
+      "published": "2026-08-13",
+      "canonical_id": "arXiv:2608.13263",
+      "arxiv_id": "2608.13263",
+      "authors": [
+        "Yuanhang Gao",
+        "Xiangrui Yang",
+        "Yuanfeng Chen",
+        "Hongjia Chen",
+        "Qianru Lv",
+        "Wenfei Wu",
+        "Dongsheng Li"
+      ]
+    },
+    {
+      "title": "Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving",
+      "source_url": "https://doi.org/10.4108/eetiot.13349",
+      "year": 2026,
+      "published": "2026-08-12",
+      "canonical_id": "DOI:10.4108/eetiot.13349",
+      "doi": "10.4108/eetiot.13349",
+      "authors": [
+        "K. B. Aruna",
+        "V. Kaliraj",
+        "I. Sudha",
+        "V. Sureka"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.15528",
+      "identity_tokens": [
+        "id:arXiv:2609.15528",
+        "title:to each language its tokenizer modular tokenizers for efficient multilingual llms",
+        "url:https://arxiv.org/abs/2609.15528"
+      ],
+      "record": {
+        "title": "To Each Language Its Tokenizer: Modular Tokenizers for Efficient Multilingual LLMs",
+        "source_url": "https://arxiv.org/abs/2609.15528",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15528",
+        "arxiv_id": "2609.15528",
+        "authors": [
+          "Franck Signe",
+          "Hippolyte Pilchen",
+          "François Yvon",
+          "Édouard Grave"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09823",
+      "identity_tokens": [
+        "id:arXiv:2609.09823",
+        "title:amend audited margins enable nonblocking drops in gpupim llm decoding",
+        "url:https://arxiv.org/abs/2609.09823"
+      ],
+      "record": {
+        "title": "AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2609.09823",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.09823",
+        "arxiv_id": "2609.09823",
+        "authors": [
+          "Zuxiong Tan",
+          "Will Wei-Jen Wang",
+          "Wei Shao",
+          "Ali Karkehabadi",
+          "Houman Homayoun",
+          "Avesta Sasan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10355",
+      "identity_tokens": [
+        "id:arXiv:2609.10355",
+        "title:why is video still so expensive a survey of inferenceefficiency mechanisms in video and audiovisual llms",
+        "url:https://arxiv.org/abs/2609.10355"
+      ],
+      "record": {
+        "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+        "source_url": "https://arxiv.org/abs/2609.10355",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10355",
+        "arxiv_id": "2609.10355",
+        "authors": [
+          "Killian Steunou",
+          "Yannis Tevissen",
+          "Mounîm A. El Yacoubi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08566",
+      "identity_tokens": [
+        "id:arXiv:2609.08566",
+        "title:biomemart biometricaware kv cache memory for multiuser llm agents",
+        "url:https://arxiv.org/abs/2609.08566"
+      ],
+      "record": {
+        "title": "BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents",
+        "source_url": "https://arxiv.org/abs/2609.08566",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08566",
+        "arxiv_id": "2609.08566",
+        "authors": [
+          "Yanhong Qian",
+          "何宣莹",
+          "Qingguo Meng",
+          "Shihao Ding",
+          "Xingbo Dong",
+          "Zhe Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09240",
+      "identity_tokens": [
+        "id:arXiv:2609.09240",
+        "title:scaling posttraining ternarisation to qwen38b capability retention reproduction lossless packing and packed execution",
+        "url:https://arxiv.org/abs/2609.09240"
+      ],
+      "record": {
+        "title": "Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution",
+        "source_url": "https://arxiv.org/abs/2609.09240",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.09240",
+        "arxiv_id": "2609.09240",
+        "authors": [
+          "Anirudh Malik",
+          "M Sparsh Mehra",
+          "Poojith Devan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.03949",
+      "identity_tokens": [
+        "id:arXiv:2609.03949",
+        "title:vestigekv the nopemla kv cache carries its own sparseattention signal in a vestigial branch",
+        "url:https://arxiv.org/abs/2609.03949"
+      ],
+      "record": {
+        "title": "VestigeKV: The NoPE-MLA KV Cache Carries Its Own Sparse-Attention Signal in a Vestigial Branch",
+        "source_url": "https://arxiv.org/abs/2609.03949",
+        "year": 2026,
+        "published": "2026-09-03",
+        "canonical_id": "arXiv:2609.03949",
+        "arxiv_id": "2609.03949",
+        "authors": [
+          "WenJie Fan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s44336-026-00041-4",
+      "identity_tokens": [
+        "id:DOI:10.1007/s44336-026-00041-4",
+        "title:computationbandwidthmemory tradeoffs a unified paradigm for ai infrastructure",
+        "url:https://doi.org/10.1007/s44336-026-00041-4"
+      ],
+      "record": {
+        "title": "Computation-bandwidth-memory trade-offs: a unified paradigm for AI infrastructure",
+        "source_url": "https://doi.org/10.1007/s44336-026-00041-4",
+        "year": 2026,
+        "published": "2026-09-02",
+        "canonical_id": "DOI:10.1007/s44336-026-00041-4",
+        "doi": "10.1007/s44336-026-00041-4",
+        "authors": [
+          "Yuankai Fan",
+          "Qizhen Weng",
+          "Xuelong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.02083",
+      "identity_tokens": [
+        "id:arXiv:2609.02083",
+        "title:xmerge crossaxis selection and reconstructive layer merging for llm depth compression",
+        "url:https://arxiv.org/abs/2609.02083"
+      ],
+      "record": {
+        "title": "XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression",
+        "source_url": "https://arxiv.org/abs/2609.02083",
+        "year": 2026,
+        "published": "2026-09-02",
+        "canonical_id": "arXiv:2609.02083",
+        "arxiv_id": "2609.02083",
+        "authors": [
+          "Jundong Hu",
+          "Shekar Ramachandran"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.24963/ijcai.2026/502",
+      "identity_tokens": [
+        "id:DOI:10.24963/ijcai.2026/502",
+        "title:mlora efficient serving for concurrent lora adapters with memoryaware speculative scheduler on single gpu",
+        "url:https://doi.org/10.24963/ijcai.2026/502"
+      ],
+      "record": {
+        "title": "M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU",
+        "source_url": "https://doi.org/10.24963/ijcai.2026/502",
+        "year": 2026,
+        "published": "2026-09-01",
+        "canonical_id": "DOI:10.24963/ijcai.2026/502",
+        "doi": "10.24963/ijcai.2026/502",
+        "authors": [
+          "Shaolong Li",
+          "Xiang Yang",
+          "Qi Qi",
+          "Haifeng Sun",
+          "Zirui Zhuang",
+          "Bo He",
+          "Wanyi Ning",
+          "Jingyu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s10791-026-10515-0",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10791-026-10515-0",
+        "title:selfoptimizing ai data systems a systematic literature review of cqleaware query optimization edgecloud offloading cloudhpc orchestration datacentric mlops and rag",
+        "url:https://doi.org/10.1007/s10791-026-10515-0"
+      ],
+      "record": {
+        "title": "Self–Optimizing AI data systems: a systematic literature review of CQLE-Aware query optimization, Edge–cloud offloading, Cloud/HPC orchestration, Data–Centric MLOps, and RAG",
+        "source_url": "https://doi.org/10.1007/s10791-026-10515-0",
+        "year": 2026,
+        "published": "2026-08-31",
+        "canonical_id": "DOI:10.1007/s10791-026-10515-0",
+        "doi": "10.1007/s10791-026-10515-0",
+        "authors": [
+          "Chaitanya Ranga Singamaneni",
+          "S. Rakesh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28048",
+      "identity_tokens": [
+        "id:arXiv:2608.28048",
+        "title:ai hardware accelerators for large language models architectures and the memory wall",
+        "url:https://arxiv.org/abs/2608.28048"
+      ],
+      "record": {
+        "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+        "source_url": "https://arxiv.org/abs/2608.28048",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "arXiv:2608.28048",
+        "arxiv_id": "2608.28048",
+        "authors": [
+          "Siddharth Patel",
+          "Rohit Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.26389",
+      "identity_tokens": [
+        "id:arXiv:2608.26389",
+        "title:lowrankarena a standardized evaluation platform for svdbased llm compression",
+        "url:https://arxiv.org/abs/2608.26389"
+      ],
+      "record": {
+        "title": "LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression",
+        "source_url": "https://arxiv.org/abs/2608.26389",
+        "year": 2026,
+        "published": "2026-08-26",
+        "canonical_id": "arXiv:2608.26389",
+        "arxiv_id": "2608.26389",
+        "authors": [
+          "Zishan Shao",
+          "Lixun Zhang",
+          "Kangning Cui",
+          "Wenhao Wu",
+          "Jinhee Kim",
+          "Yixiao Wang",
+          "Ting Jiang",
+          "Hancheng Ye",
+          "Qinsi Wang",
+          "Fan Yang",
+          "Danyang Zhuo",
+          "Yiran Chen",
+          "Hai Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25053",
+      "identity_tokens": [
+        "id:arXiv:2608.25053",
+        "title:hydra phaseaware workload characterization of llm inference across edge soc generations backends and quantization levels",
+        "url:https://arxiv.org/abs/2608.25053"
+      ],
+      "record": {
+        "title": "Hydra: Phase-Aware Workload Characterization of LLM Inference across Edge SoC Generations, Backends, and Quantization Levels",
+        "source_url": "https://arxiv.org/abs/2608.25053",
+        "year": 2026,
+        "published": "2026-08-25",
+        "canonical_id": "arXiv:2608.25053",
+        "arxiv_id": "2608.25053",
+        "authors": [
+          "Amir Taherin",
+          "Sana Taghipour Anvari",
+          "Charles Amante",
+          "Yixiao Chen",
+          "Ruben Noroian",
+          "Zlatan Feric",
+          "Nícolas Bohm Agostini",
+          "Pu Zhao",
+          "José Cano",
+          "Bin Ren",
+          "Yanzhi Wang",
+          "David Kaeli"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.22704",
+      "identity_tokens": [
+        "id:arXiv:2608.22704",
+        "title:wnw waxingandwaning kv cache for longform speech llms",
+        "url:https://arxiv.org/abs/2608.22704"
+      ],
+      "record": {
+        "title": "WnW: Waxing-and-Waning KV Cache for Long-Form Speech LLMs",
+        "source_url": "https://arxiv.org/abs/2608.22704",
+        "year": 2026,
+        "published": "2026-08-24",
+        "canonical_id": "arXiv:2608.22704",
+        "arxiv_id": "2608.22704",
+        "authors": [
+          "Yiming Yao",
+          "Chenyang Lyu",
+          "Xuanfan Ni",
+          "Longyue Wang",
+          "Weihua Luo",
+          "Yazheng Yang",
+          "Jinsong Su"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15502",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-981-92-4805-6_46",
+        "id:arXiv:2608.15502",
+        "title:ecovla energyefficient deviceedge coinference for visionlanguageaction models under realtime constraints",
+        "url:https://doi.org/10.1007/978-981-92-4805-6_46"
+      ],
+      "record": {
+        "title": "EcoVLA: Energy-Efficient Device-Edge Co-inference for Vision-Language-Action Models Under Real-Time Constraints",
+        "source_url": "https://doi.org/10.1007/978-981-92-4805-6_46",
+        "year": 2026,
+        "published": "2026-08-23",
+        "canonical_id": "arXiv:2608.15502",
+        "arxiv_id": "2608.15502",
+        "authors": [
+          "Ao Zhou",
+          "Bo Dai",
+          "Le Yu",
+          "Xingyu Liu",
+          "Zeyu Hao",
+          "Lingkun Long",
+          "Chunming Hu",
+          "Jianlei Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21657",
+      "identity_tokens": [
+        "id:arXiv:2608.21657",
+        "title:model compression and hardwareaware acceleration for deep learning on fpgas a codesign taxonomy and comparative analysis",
+        "url:https://arxiv.org/abs/2608.21657"
+      ],
+      "record": {
+        "title": "Model Compression and Hardware-Aware Acceleration for Deep Learning on FPGAs: A Co-Design Taxonomy and Comparative Analysis",
+        "source_url": "https://arxiv.org/abs/2608.21657",
+        "year": 2026,
+        "published": "2026-08-21",
+        "canonical_id": "arXiv:2608.21657",
+        "arxiv_id": "2608.21657",
+        "authors": [
+          "Peter Forcha",
+          "H. Kajekusumadhar",
+          "Mbua Peter",
+          "Muhammed Kawser",
+          "Audrey Cyriell Mo",
+          "Christophe Bobda"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.19920",
+      "identity_tokens": [
+        "id:arXiv:2608.19920",
+        "title:learning how to forget finetuning for longcontext sparse attention",
+        "url:https://arxiv.org/abs/2608.19920"
+      ],
+      "record": {
+        "title": "Learning how to Forget: Fine-tuning for Long-Context Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2608.19920",
+        "year": 2026,
+        "published": "2026-08-20",
+        "canonical_id": "arXiv:2608.19920",
+        "arxiv_id": "2608.19920",
+        "authors": [
+          "Matthias Seeger",
+          "Zeyu Zhang",
+          "Vihang Patil",
+          "Konstantinos Benidis",
+          "Sebastian Schelter"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15117",
+      "identity_tokens": [
+        "id:arXiv:2608.15117",
+        "title:anatomy of a quantized agent vram stability and forecasting in codesynthesis agentic workloads",
+        "url:https://arxiv.org/abs/2608.15117"
+      ],
+      "record": {
+        "title": "Anatomy of a Quantized Agent: VRAM Stability and Forecasting in Code-Synthesis Agentic Workloads",
+        "source_url": "https://arxiv.org/abs/2608.15117",
+        "year": 2026,
+        "published": "2026-08-15",
+        "canonical_id": "arXiv:2608.15117",
+        "arxiv_id": "2608.15117",
+        "authors": [
+          "Anubhab Banerjee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.13263",
+      "identity_tokens": [
+        "id:arXiv:2608.13263",
+        "title:vtoken tokenlevel virtualization for reclaimable kv caches",
+        "url:https://arxiv.org/abs/2608.13263"
+      ],
+      "record": {
+        "title": "vToken: Token-Level Virtualization for Reclaimable KV Caches",
+        "source_url": "https://arxiv.org/abs/2608.13263",
+        "year": 2026,
+        "published": "2026-08-13",
+        "canonical_id": "arXiv:2608.13263",
+        "arxiv_id": "2608.13263",
+        "authors": [
+          "Yuanhang Gao",
+          "Xiangrui Yang",
+          "Yuanfeng Chen",
+          "Hongjia Chen",
+          "Qianru Lv",
+          "Wenfei Wu",
+          "Dongsheng Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.4108/eetiot.13349",
+      "identity_tokens": [
+        "id:DOI:10.4108/eetiot.13349",
+        "title:janus joint prefilldecode disaggregation with kvcacheaware multicloud routing for edgeadjacent llm serving",
+        "url:https://doi.org/10.4108/eetiot.13349"
+      ],
+      "record": {
+        "title": "Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving",
+        "source_url": "https://doi.org/10.4108/eetiot.13349",
+        "year": 2026,
+        "published": "2026-08-12",
+        "canonical_id": "DOI:10.4108/eetiot.13349",
+        "doi": "10.4108/eetiot.13349",
+        "authors": [
+          "K. B. Aruna",
+          "V. Kaliraj",
+          "I. Sudha",
+          "V. Sureka"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:8cef4e8643fab75436e8e5f822ba08fd6e2a03183d1239f42f054da6e5847d94",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

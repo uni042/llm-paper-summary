@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cc9441123f98dcbd-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.13707",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.13707",
+    "identity_tokens": [
+      "arXiv:2305.13707"
+    ],
+    "reason": "言語ごとのtokenization差が商用LLM API料金と多言語性能の公平性へ与える影響を分析する研究。token数・context制約・料金は扱うが、推論システムの速度・memory・servingを改善する方式を提案しない。",
+    "first_checked_at": "2026-10-06T21:42:58+00:00",
+    "last_checked_at": "2026-10-06T21:42:58+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+      "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+      "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+    ],
+    "title": "Do All Languages Cost the Same? Tokenization in the Era of Commercial Language Models"
+  },
+  "processed_at": "2026-10-06T21:42:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cc9441123f98",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

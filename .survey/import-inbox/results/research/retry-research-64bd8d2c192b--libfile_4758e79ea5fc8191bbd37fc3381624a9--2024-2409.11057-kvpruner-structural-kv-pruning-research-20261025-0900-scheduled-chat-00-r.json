@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "cafb340abaeb5e371d18a1153d13ad0704dae1904a53c1bc76e2424e706a2595",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-64bd8d2c192b--libfile_4758e79ea5fc8191bbd37fc3381624a9--2024-2409.11057-kvpruner-structural-kv-pruning-research-20261025-0900-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2409.11057",
+  "worker_completed_at": "2026-10-25T09:00:00+09:00",
+  "worker_run_key": "20261025-0900-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5111,
+    "body_paragraphs": 26,
+    "method_chars": 1490,
+    "method_paragraphs": 8,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-25T01:05:21+00:00"
+}

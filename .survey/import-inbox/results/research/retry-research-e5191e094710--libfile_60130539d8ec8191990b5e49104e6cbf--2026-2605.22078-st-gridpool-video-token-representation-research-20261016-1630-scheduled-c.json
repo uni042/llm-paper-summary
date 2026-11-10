@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "62c1f2c827a6445379db4ade1a88b007c01c37c75f24431d668e47671bc08625",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e5191e094710--libfile_60130539d8ec8191990b5e49104e6cbf--2026-2605.22078-st-gridpool-video-token-representation-research-20261016-1630-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.22078",
+  "worker_completed_at": "2026-10-16T16:38:00+09:00",
+  "worker_run_key": "20261016-1630-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5905,
+    "body_paragraphs": 36,
+    "method_chars": 1595,
+    "method_paragraphs": 9,
+    "evaluation_chars": 144,
+    "limitation_chars": 694,
+    "insufficiency_flags": [
+      "評価説明量 144 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 144 < 500"
+  ],
+  "processed_at": "2026-10-16T16:20:01+00:00"
+}

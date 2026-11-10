@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "00a560e363dff0878bae334e01ca0be9b103fb70e22cdef7eb5e2cb0b3867dc2",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2a0585c746dd--libfile_5207f693f6148191ba7b5e5f75d66aef--2026-2604.13634-csd-calibrated-speculative-decoding-research-20261020-0703-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2604.13634",
+  "worker_completed_at": "2026-10-20T07:12:00+09:00",
+  "worker_run_key": "20261020-0703-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5540,
+    "body_paragraphs": 29,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 535,
+    "limitation_chars": 423,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-20T17:31:57+00:00"
+}

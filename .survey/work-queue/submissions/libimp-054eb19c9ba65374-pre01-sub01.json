@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Efficient self-attention with smart pruning for sustainable large language models",
+      "source_url": "https://doi.org/10.1038/s41598-025-92586-5",
+      "year": 2025,
+      "published": "2025-03-24",
+      "venue": "Scientific Reports",
+      "citation_count": 42,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have revolutionized artificial intelligence by enabling multitasking across diverse fields. However, their high computational demands result in significant environmental impacts, particularly in terms of energy and water consumption. This paper addresses these issues by proposing an innovative compression approach to reducing LLM sizes. We focus on compressing the internal transformer layers, which are critical contributors to LLMs’ computational complexity. Our approach combines new mathematical and structural key methods for model compression. We begin by applying Forward Propagation Pruning (FPP) to compress the embedding and feed-forward layers, utilizing a weight freezing and zeroing technique for suspected unused parameters. This reduces the number of trainable parameters, accelerating the overall training process and enabling faster convergence. Second, the Weight Matrix Folding method is introduced to efficiently prune the self-attention layer matrices in a simple and efficient mathematical model. This method integrates Identical Row Compression (IRC) to optimize the compression of the Query and Key matrices, alongside Diagonal Weight Compression (DWC), which reformulates the Value matrix into a diagonal structure. Consequently, this technique significantly diminishes parameter variability across the three metrics, enhancing consistency and performance while simplifying complexity. The compression approach is evaluated on three language modeling datasets and eight widely used classification datasets, comparing it to various pruning methods. Our method successfully compresses transformer layers by 99% and linear layers by 70%, resulting in an overall model compression of around 70%, while maintaining nearly the same accuracy. Notably, with moderate compression rates of 20% to 40%, model performance not only remained stable but even improved. This leads to substantial reductions in memory usage and computational demands, making LLMs more resource-efficient and highlighting the potential to optimize them for a more sustainable AI future.",
+      "identifiers": [
+        "SemanticScholar:6a75b227672ac3ee14e1167f8f6498c7e0abe122"
+      ],
+      "semantic_scholar_id": "6a75b227672ac3ee14e1167f8f6498c7e0abe122",
+      "doi": "10.1038/s41598-025-92586-5",
+      "canonical_id": "DOI:10.1038/s41598-025-92586-5",
+      "authors": [
+        "S. Belhaouari",
+        "Insaf Kraidia"
+      ],
+      "priority": 42,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 42,
+        "citation_count": 42,
+        "total": 42,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 586,
+        "matched_prestigious_venue": null
+      },
+      "reason": "出版社Scientific Reportsの一次本文で、埋め込み・FFNにForward Propagation Pruning、注意のQ/KにIdentical Row Compression、VにDiagonal Weight Compressionを組み合わせる手法を確認。LLaMA2-7B、OPT-175B、TinyLLaMA-1Bなどで圧縮率・推論高速化を比較しており、LLMの重み・注意計算を直接軽量化する研究。数値は論文記載条件に限り、他のLLMへの一般化は未検証。",
+      "library_body_check": "出版社の一次全文（方法・評価・制約）を確認。",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "title": "Towards Efficient and Effective Diffusion Language Model Inference via Semantic-Aware Adaptive Denoising",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.819",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:8a96a258869f452a46f85b9f42f660f6c6520d63"
+      ],
+      "semantic_scholar_id": "8a96a258869f452a46f85b9f42f660f6c6520d63",
+      "doi": "10.18653/v1/2026.acl-long.819",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.819",
+      "authors": [
+        "Fan Li",
+        "Yu Gu",
+        "Zhigang Wang",
+        "Fangling Leng",
+        "Zheng-Hao Liu",
+        "Ge Yu"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL Anthology一次要旨は、拡散言語モデルの反復denoisingで意味的に収束したトークンを識別し、信頼度履歴の特徴量と適応的クラスタリングで不要な計算を省くAda-DLMを提案。システム最適化を併用し、比較方式に対して最大2倍の高速化と品質改善を報告。DLMの推論実行時間を直接短縮する。",
+      "library_body_check": "ACL Anthology正式一次要旨を確認。本文未読。",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "title": "CLARO: Controlled Attribute-Driven Reasoning Optimization for Efficient Chain-of-Thought",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1335",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models exhibit strong reasoning capabilities but often require significant computational resources due to verbose, un-structured Chain-of-Thought outputs. Recent approaches guide reasoning length through to-ken penalties or truncation, risking the omission of necessary steps. We posit that conciseness should be an emergent property of structured thought, rather than a result of artificially forced brevity. To this end, we first demonstrate that Attribute-Guided Prompting , a lightweight zero-shot strategy, improves reasoning performance while reducing inference cost. Building on this foundation, we introduce C ontro l led A ttribute-Driven R easoning O ptimization ( CLARO ), a reinforcement learning framework designed to internalize these benefits. CLARO guides models to embed high-quality structural attributes, such as read-ability, math density, syntactic compression, and low redundancy, within a user-defined to-ken budget. The proposed method outperforms state-of-the-art baselines across diverse benchmarks, yielding accuracy gains of up to 63.6%, demonstrating that guiding generated output language structure enhances reasoning. Overall, our findings establish that optimizing the thought process structure refines reasoning efficacy, with computational efficiency emerging as a derivative benefit of a clearer thought process. Code and models are available at https://github.com/odedsc/CLARO .",
+      "identifiers": [
+        "SemanticScholar:0f9dbe92a4aa652fc6cbfb9e0abf69b185ccf936"
+      ],
+      "semantic_scholar_id": "0f9dbe92a4aa652fc6cbfb9e0abf69b185ccf936",
+      "doi": "10.18653/v1/2026.findings-acl.1335",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1335",
+      "authors": [
+        "Oded Schlesinger",
+        "Young Kyung Kim",
+        "Matías Di Martino",
+        "Guillermo Sapiro"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL Anthology一次要旨は、推論過程の構造的属性（可読性・数学表現密度・冗長性等）を報酬学習に組み込み、指定トークン予算内でChain-of-Thoughtを簡潔化するCLAROを提案。短縮のみを強制する手法と異なり、複数ベンチマークで推論精度と計算費用の改善を報告。推論トークン数削減を直接対象とする。",
+      "library_body_check": "ACL Anthology正式一次要旨・書誌を確認。本文未読。",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "title": "Selection-Based Structured Reasoning: Toward Efficient Multimodal Search Agents",
+      "source_url": "https://arxiv.org/abs/2610.01892",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal agents commonly generate free-form reasoning before each action. For small models, limited model capacity can result in lengthy reasoning that provides little useful guidance for action generation while incurring substantial inference cost. To address this challenge, we introduce Selection-based Structured Reasoning (SSR), a framework that reformulates reasoning as selection instead of open-ended generation. SSR represents recurring high-level reasoning as pre-specified, reusable natural-language candidates. At each turn, the model selects from these reasoning candidates based on their likelihoods given the current context, without requiring an auxiliary task head. Using pre-specified reasoning traces enables parallel scoring, where teacher-forced prefilling computes token likelihoods concurrently within and across candidates using a shared context KV cache. We evaluate SSR on seven multimodal search benchmarks using 2B and 4B models. Across multiple reinforcement learning objectives and supervised fine-tuning, SSR delivers significant efficiency gains without sacrificing task performance. SSR achieves an average success rate competitive with leading search agents of the same scale, while reducing per-turn reasoning latency by over 90% and total per-question model inference latency by 28-54%. Project page: https://zfy0314.github.io/ssr-webpage/.",
+      "identifiers": [
+        "SemanticScholar:c62b40fb4ec78581ecc3dc05d17c858cb377c8ae"
+      ],
+      "semantic_scholar_id": "c62b40fb4ec78581ecc3dc05d17c858cb377c8ae",
+      "canonical_id": "arXiv:2610.01892",
+      "arxiv_id": "2610.01892",
+      "authors": [
+        "Feiyu Zhu",
+        "Xiao-Yu Zhu",
+        "Ji-Qian Yang",
+        "Rui-Jie Yang",
+        "Arnab Mondal",
+        "Yan-Cheng Wang",
+        "Xin-Ke Deng",
+        "Jean Oh",
+        "Reid G. Simmons",
+        "Joerg Liebelt",
+        "Xiang Kong",
+        "Zhong-Yu Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次本文は、毎ターンの自由形式の逐次推論文生成を、事前定義した理由候補の並列尤度評価へ置き換えるSSRを提案。teacher forcingと共有KVキャッシュで候補を評価し、2B/4Bのマルチモーダル検索エージェントでターン当たり推論遅延90%超、質問当たりモデル推論遅延28～54%削減を報告。生成時レイテンシ最適化に直接該当する。",
+      "library_body_check": "arXiv一次本文の要旨・導入・評価概要を確認。",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "title": "LoRATEE: A Secure and Efficient Inference Framework for Multi-Tenant LoRA LLMs Based on TEE",
+      "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10890445",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-Rank Adaptation (LoRA) is a parameter-efficient fine-tuning approach that adaptes pre-trained Large Language Models (LLMs) to multi-tenant tasks by generating a variety of LoRA adapters. However, this approach faces significant security challenges and is particularly susceptible to malicious servers stealing model parameters and sensitive data. Existing research on addressing security risks in multi-tenant environments remains constrained and insufficient. This paper explores the security challenges and proposes the LoRATEE framework, which embeds LoRA adapters within a server-side Trusted Execution Environment (TEE) and employs a lightweight One-Time Pad (OTP) encryption mechanism to ensure secure data transmission. Additionally, we design a dynamic LoRA adapter prefetching mechanism to reduce I/O latency. Moreover, a LoRA adapter module equivalence-sharing strategy based on Parameter-Efficient Fine-Tuning (PEFT) and minimalist design principles was introduced to optimize adapters loading. Experimental results show that LoRATEE maintains inference efficiency while securing multi-tenant LoRA LLMs systems.",
+      "identifiers": [
+        "SemanticScholar:6814d707b0e1f550baebde21c6753d0d7e2f6996"
+      ],
+      "semantic_scholar_id": "6814d707b0e1f550baebde21c6753d0d7e2f6996",
+      "doi": "10.1109/ICASSP49660.2025.10890445",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10890445",
+      "authors": [
+        "Zechao Lin",
+        "Sisi Zhang",
+        "Xing-Bin Wang",
+        "Yulan Su",
+        "Yan Wang",
+        "Rui Hou",
+        "Dan Meng"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 573,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE Xplore一次要旨は、マルチテナントLoRA推論でアダプタをTEEに配置し、ワンタイムパッドによる伝送保護、動的アダプタ事前読み込み、等価モジュール共有によるI/O削減を提案。推論サービスのセキュリティとアダプタ切替効率の両立が主題で、単なる学習時LoRAではない。要旨に具体的な速度倍率はなく未確認。",
+      "library_body_check": "IEEE Xploreの正式出版一次要旨を確認。本文未読。",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_source_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-054eb19c9ba6",
+    "round": "libimp-054eb19c9ba65374-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-054eb19c9ba65374-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-054eb19c9ba65374-pre01.json",
+    "receipt": "sha256:a4a9841cd83a88750a31ee613565e2d5b84fe78149aa4bb029aafb170a56f8d1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-054eb19c9ba6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

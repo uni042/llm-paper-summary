@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a26916076937093b-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.19609",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.19609",
+    "identity_tokens": [
+      "arXiv:2604.19609"
+    ],
+    "reason": "Volume Transformer is a 3D scene model that uses full global self-attention and training/data techniques. Its discussion of optimized software/hardware stacks is a motivation, not an LLM inference method or measured serving improvement; keep borderline because it is linked to exact attention-kernel work.",
+    "first_checked_at": "2026-10-07T13:51:07+00:00",
+    "last_checked_at": "2026-10-07T13:51:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Volume Transformer: Revisiting Vanilla Transformers for 3D Scene Understanding"
+  },
+  "processed_at": "2026-10-07T13:51:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a26916076937",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

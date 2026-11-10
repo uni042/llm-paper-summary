@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b3b4415e4a85e8e7-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.22994",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.22994",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.22994",
+      "SemanticScholar:46401fe1d819c66c19498966fce52af3d30fc585",
+      "arXiv:2606.22994"
+    ],
+    "reason": "The study proposes an evaluation protocol for sparse-autoencoder feature hierarchies; it concerns interpretability quality, not LLM inference systems.",
+    "first_checked_at": "2026-10-13T18:20:58+00:00",
+    "last_checked_at": "2026-10-13T18:20:58+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md"
+    ],
+    "title": "Do Sparse Autoencoders Learn Meaningful Concept Hierarchies?"
+  },
+  "processed_at": "2026-10-13T18:20:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b3b4415e4a85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "preflight-worker-925000-cxl-kv-01",
+  "kind": "research",
+  "attempt_id": "attempt-preload-4cb587870cc33021ea9f2c50",
+  "job_id": "job-research-5cbec5c2c470e865",
+  "record_bank": "i",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-4885970e907b-llm-kv-cache-storage-using-cxl-memory.md",
+  "expected_blob_sha": null,
+  "worker_id": "worker-925000",
+  "run_key": "worker-925000-20260924T153200Z-lazyprobe",
+  "scheduled_slot": "adhoc",
+  "actual_invocation_start": "2026-09-24T15:32:00+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:b820786dc7394c2b435447582e96884ef7b02213c7b0e91fdf13ec644676e066",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-i/metadata.json",
+      "blob_sha": "92ba6aa782345317f49cc9e3e2d0b27b7d575cc7"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-i/problem_method.json",
+      "blob_sha": "d22b0bd58c27b0d6aab491f1f1a89e60b55df713"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-i/evaluation.json",
+      "blob_sha": "853bd8ba362e9f9089a54949e8f667d592b2d103"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-i/results.json",
+      "blob_sha": "57ed95e18ca84892984fe8f5456f889e878e6d1d"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-i/positioning.json",
+      "blob_sha": "065f080febbb64984f52305764296045f261419c"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-24T15:39:54+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-4885970e907b-llm-kv-cache-storage-using-cxl-memory.md",
+    "status": "FAIL",
+    "file_bytes": 22393,
+    "prose_chars": 4749,
+    "paragraphs": 16,
+    "method_paragraphs": 5,
+    "method_components": 5,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.9714411247803163,
+    "japanese_chars": 4422,
+    "latin_chars": 130,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}

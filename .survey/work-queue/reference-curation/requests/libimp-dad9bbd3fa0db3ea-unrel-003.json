@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-dad9bbd3fa0db3ea-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.06691",
+  "reason": "一次要旨: Latency-critical cloud services place growing pressure on memory while requiring isolation, fairness, and predictable QoS. Near-data processing (NDP) reduces data movement by executing requests close to memory, and prior systems further improve locality through caching and replication. However, writes make replica maintenance expensive, while uneven compute and memory traffic can overload a few NDP units and increase tail latency. Existing throughput-oriented schedulers do not fully address these challenges for co-located cloud services. We present Gutenberg, a CPU+NDP for mutable, latency-critical cloud services. Gutenberg stages subpage updates in a CPU-resident delta buffer, allowing hot writable pages to remain replicated without eager full-page synchronization. It also adopts CPU helper cores to assist request execution when NDP execution or replica maintenance becomes costly. An online controller jointly decides page placement, replication, CPU/NDP execution, and routing using access patterns, queue pressure, and feedback from prior decisions. The system further enforces isolation and fair resource allocation across services. We also model-check CPU--NDP coordination protocol for correctness. We evaluate on TailBench using ZSim with Ramulator-calibrated memory timing. Across evaluated services, Gutenberg outperforms prior systems, reducing average and p99 latency by up to 80.4% and 85.8%. It also improves isolation and fairness while adapting to changing workload behaviors.",
+  "title": "Gutenberg: Taming Latency-Critical Cloud Services with Near-Data-Processing",
+  "identity_tokens": [
+    "arXiv:2609.06691"
+  ],
+  "linked_from": [
+    "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+    "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dad9bbd3fa0d",
+  "source_precheck_request_id": null
+}

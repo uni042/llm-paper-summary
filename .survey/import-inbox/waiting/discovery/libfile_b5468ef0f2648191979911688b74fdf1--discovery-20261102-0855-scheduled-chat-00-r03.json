@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0855-scheduled-chat-00/r03",
+  "reference_main_sha": "2e6165d8492a62e3317901512a9adc0d8e0c4cac",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31479",
+      "identity_tokens": [
+        "id:arXiv:2610.31479",
+        "id:DOI:10.48550/arXiv.2610.31479"
+      ],
+      "title": "Evaluating the Applicability of LLM Inference Optimizations on Apple Silicon",
+      "reason": "Apple Siliconの単一要求decodeを対象に、KV削減、投機復号、GPU kernel移植、事後量子化の4系統を同一条件で比較する。著者要旨ではKV pruningがApple上で最大1.75倍のend-to-end throughputを得る一方、評価した投機復号方式はすべてApple上でthroughputを低下させ、Metalの非同期コピー制約も移植効果を制限した。4台のApple機と可能な範囲のRTX4090比較を含む、ローカル推論最適化の適用条件を明らかにする一次評価としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.31479",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:02:51+09:00",
+      "last_checked_at": "2026-11-02T09:02:51+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.38981",
+      "identity_tokens": [
+        "id:arXiv:2610.38981",
+        "id:DOI:10.48550/arXiv.2610.38981"
+      ],
+      "title": "Why Speculative Decoding Works Better Than Predicted on Sparse MoE Models",
+      "reason": "MoE投機復号のspeedupを活性化expert総byte数だけから予測すると、低バッチのfine-grained expertモデルの性能を説明できない問題を検証する。30B～1Tの10モデルで、draft token間のexpert共用、L2での再利用、MoE kernelの高い実効帯域を測定し、routing overlapから一意expert数を予測する最大エントロピーIPFモデルを提案する。著者要旨では一意expert数の予測誤差4%未満と報告。MoE投機検証の実測と性能モデルに直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.38981",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:02:51+09:00",
+      "last_checked_at": "2026-11-02T09:02:51+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.33501",
+      "identity_tokens": [
+        "id:arXiv:2610.33501",
+        "id:DOI:10.48550/arXiv.2610.33501"
+      ],
+      "title": "DualPace: Decoupled Scheduling and Cooperative GPU--CPU Decoding for LLM Serving",
+      "reason": "KVがGPUメモリに収まらない要求のdecodeを、GPU schedulerが空いた時だけCPUで進めるのではなく、AMX対応CPU側に独立のbatch/schedulerを持つdecode engineを設ける。CPUが1 iterationを完結する経路と、dense stageだけGPU支援を使う経路を使い分ける。著者要旨はdecode中心の設定でNEO比throughput6.9～43.2%、vLLM比11.5～90.6%改善、同程度の遅延を維持と報告。CPU/GPU分離実行とKV offloadを組み合わせる推論runtimeとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.33501",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:02:51+09:00",
+      "last_checked_at": "2026-11-02T09:02:51+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39216",
+      "identity_tokens": [
+        "id:arXiv:2610.39216",
+        "id:DOI:10.48550/arXiv.2610.39216"
+      ],
+      "title": "PDScope: Breaking the Prefill-Decode Seesaw for Memory-Bound MoE Inference",
+      "reason": "メモリ制約のMoEでprefillはGPU計算重視、decodeはPCIe I/O重視という非対称性を利用し、phaseごとにexpert活性予測、配置、prefetch、実行pipelineを分離して最適化する。cross-layer cost modelとstatic graph、zero-copy非同期I/Oで制御費用を隠す。著者要旨は既存方式比prefill throughput2.5～10.3倍、decode throughput2.1～6.1倍を報告。ローカルCPU/GPU MoE推論の具体的なphase-aware設計としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.39216",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:02:51+09:00",
+      "last_checked_at": "2026-11-02T09:02:51+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.34721",
+      "identity_tokens": [
+        "id:arXiv:2610.34721",
+        "id:DOI:10.48550/arXiv.2610.34721"
+      ],
+      "title": "Prefetch-Steered Routing: Deterministic Cache-Aware Expert Selection for Offloaded Mixture-of-Experts Decoding",
+      "reason": "MoEのresident expertを優先するroutingを非同期prefetchと組み合わせると出力が転送タイミングに依存する問題に対し、予測expertをtoken/層ごとに決定論的な論理cacheへ挿入するprefetch-steered routingを提案する。物理転送は遅延のみを変え、出力のrouting決定から切り離す。著者要旨はOLMoEの50%/25% expert residencyでexact routing+LRU比2.2～2.3倍、Cache-Prior比25～30%高速と報告。ただしQwen3.6等ではspeedupが消える場合があり、適用条件を明示したMoE offload研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.34721",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:02:51+09:00",
+      "last_checked_at": "2026-11-02T09:02:51+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.23796",
+      "identity_tokens": [
+        "id:arXiv:2610.23796",
+        "id:DOI:10.48550/arXiv.2610.23796"
+      ],
+      "title": "FuTransformer: FP8 prefill and INT4 decode for Llama-style inference on Hopper",
+      "reason": "prefillをFP8 GEMM、decodeをINT4重み・INT4 KVに分け、RMSNorm gainの重み折込み、直接KV配置、MMA fragment向けdequant、Hadamard変換によるoutlier対策をCUDA blockへ統合する。著者要旨ではH100でprefillがcompiled PyTorch FP8比最大1.48倍、8B/70B形状のdecodeがPyTorch BF16/INT4の速い方より1.3～2.4倍高速。Llama3.1-8Bのbatch1 decodeが2.8ms/step対8.1msと報告するが量子化によるperplexity上昇も記載。実装・カーネル評価が推論に直結するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.23796",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:02:51+09:00",
+      "last_checked_at": "2026-11-02T09:02:51+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31169",
+      "identity_tokens": [
+        "id:arXiv:2610.31169",
+        "id:DOI:10.48550/arXiv.2610.31169"
+      ],
+      "title": "SARIA: Persistence-Aware KV Caching with Coordinated DRAM--SSD Reload for LLM Agents",
+      "reason": "長期agent sessionのKVをSSDへ無差別保存すると書込耐久性を損ない、少数SSDの再読込帯域もTTFTを律速する。SariaはDRAM退去後も再利用される見込みのKVだけをSSDへ保存し、SSD-hitしたblockの一部をDRAMへ昇格する。SSD転送中のDRAM読出しもGPU入口帯域を競合しないよう調停する。著者要旨はLMCache MP実装で全面複製比SSD書込57.1～58.9%削減、DRAM-only比平均TTFT42.3～79.7%短縮を報告。SSD寿命とKV再利用を両立する直接的システム貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.31169",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:02:51+09:00",
+      "last_checked_at": "2026-11-02T09:02:51+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.34103",
+      "identity_tokens": [
+        "id:arXiv:2610.34103",
+        "id:DOI:10.48550/arXiv.2610.34103"
+      ],
+      "title": "T2D: Target-to-Draft Model Pruning & Adaptation for Efficient Speculative Decoding",
+      "reason": "投機復号のdraftモデルを別途学習する代わりにtargetモデルを構造化剪定し、実測draft推論遅延とtarget応答に対するcross-entropyを同時最適化する。分布整合性とdrafter実行時間のトレードオフを直接設計する方式で、著者要旨ではtargetパラメータを最大92%剪定して競争力のあるdraftを生成し、他のtoken alignment/蒸留方式と併用可能と報告。ただし要旨に具体的なend-to-end速度倍率はない。最終目的が投機復号の実行効率であるためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.34103",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:02:51+09:00",
+      "last_checked_at": "2026-11-02T09:02:51+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.40287",
+      "identity_tokens": [
+        "id:arXiv:2610.40287",
+        "id:DOI:10.48550/arXiv.2610.40287"
+      ],
+      "title": "Only Accepted Tokens Count: An Energy Accounting of Speculative Decoding Under Latency Targets",
+      "reason": "投機復号のエネルギー効率を、draftした総tokenではなくtargetが実際に受理したtokenと検証計算費から評価する。SGLang/CUDA graphsの本番型構成でH100/H200、batch最大64、5コーパスを測定し、batch増大時は重み読込の共有が既に進み投機の省エネ余地が縮むこと、低受理率やcompute-boundなblock drafterでは逆にエネルギー/出力tokenが悪化することを示す。著者要旨は一律の省エネ倍率を主張しないが、LLM推論のレイテンシ制約下の省電力設計・投機長選択に直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.40287",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:02:51+09:00",
+      "last_checked_at": "2026-11-02T09:02:51+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26991",
+      "identity_tokens": [
+        "id:arXiv:2610.26991",
+        "id:DOI:10.48550/arXiv.2610.26991"
+      ],
+      "title": "3D-MoE: Complementarity-Guided Hardware-Software Co-Design for MoE Decode on 3D-Stacked NMP",
+      "reason": "3D積層DRAMのnear-memory processingでMoE expertの局所性と負荷分散が競合する問題に対し、tokenのdomainごとにexpert負荷変動が相補的になる性質を使ってoffline groupingと配置を決める。残るhot expertはCMNの局所broadcastで重みtileをhelper coreへ配り、online remappingで分布変動に対応する。著者要旨ではexpert-parallel比MoE層平均4.63倍、最強NMP baseline比end-to-end throughput1.58～1.86倍、追加logic面積2.11%を報告。推論向けハード・ソフト協調設計としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.26991",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:02:51+09:00",
+      "last_checked_at": "2026-11-02T09:02:51+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

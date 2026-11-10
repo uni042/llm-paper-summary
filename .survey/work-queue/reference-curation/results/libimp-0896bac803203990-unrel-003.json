@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0896bac803203990-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1809.10853",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1809.10853",
+    "identity_tokens": [
+      "arXiv:1809.10853"
+    ],
+    "reason": "語頻度に応じてinput embedding容量を変えるadaptive representationでparameter数とtraining時間を減らし、WikiText-103等のperplexityを改善するlanguage-model architecture/training研究。報告速度はtraining中心で推論system評価ではない。",
+    "first_checked_at": "2026-10-05T15:48:52+00:00",
+    "last_checked_at": "2026-10-05T16:12:44+00:00",
+    "linked_from": [],
+    "title": "Adaptive Input Representations for Neural Language Modeling"
+  },
+  "processed_at": "2026-10-05T16:12:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0896bac80320",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

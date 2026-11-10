@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3b786df0a07965a4-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.20532",
+  "reason": "NVIDIA provides a SASS disassembler but no public SASS assembler for recent data-center GPUs, limiting controlled machine-code rewriting. We present F2Asm, which learns exact 128-bit SASS encoders from paired disassembly and original CUBIN instruction words. To our knowledge, F2Asm is the first system to learn SASS instruction encoders as vector-valued affine maps over $\\mathbb{F}_2$ and the first open-source NVIDIA SASS assembler to support Rubin SM107. F2Asm uses Gaussian elimination over $\\mathbb{F}_2$ to incrementally build a compact basis, detect inconsistencies, and reject inputs outside the learned span. F2Asm separates target-specific control bits, relocation rules, and CUBIN metadata from its learning algorithm. We train encoders for Hopper SM90/SM90a, Blackwell SM100, and Rubin SM107 using 3,225 CUBINs from pinned NVIDIA and third-party production libraries, CUDA 13.3 packages, and CUDA 13.4 Developer Preview archives. In round-trip tests, F2Asm reassembles each CUBIN's disassembled SASS, and all compared executable text sections match the originals exactly. Joint training with F2Asm yields one shared encoder for five Blackwell SM targets and another for three Rubin SM targets, providing strong evidence of a common SASS encoding scheme for instructions shared within each family. Continual training extends the Rubin encoder to all 17,159 previously unsupported cuTile and GROMACS queries with 1,504 additional basis rows, matching the derived lower bound.",
+  "title": "Learning Exact NVIDIA SASS Encoders with $\\mathbb{F}_2$ Linear Algebra",
+  "identity_tokens": [
+    "arXiv:2608.20532"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b786df0a079",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5a0a651f908bf548-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.03084",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.03084",
+    "identity_tokens": [
+      "arXiv:2610.03084"
+    ],
+    "reason": "NegT2IBench is a text-to-image polarity benchmark with controlled positive/negative constraints and detector-based scoring, validated with human labels across models. It measures generation adherence, not LLM inference efficiency; the linked VLM paper is only a broad multimodal connection.",
+    "first_checked_at": "2026-10-06T08:40:57+00:00",
+    "last_checked_at": "2026-10-06T08:40:57+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+    ],
+    "title": "NegT2IBench: When Negation Changes the Picture. A Polarity Benchmark for Text-to-Image Models"
+  },
+  "processed_at": "2026-10-06T08:40:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5a0a651f908b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

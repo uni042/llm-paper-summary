@@ -1,0 +1,1090 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-14d5c156e3241f71-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-14d5c156e324",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:5319240e5148bdec7c4a9324204f6ac3c1639dfc",
+    "SemanticScholar:d0ac671c47bbc11cb659096f678b41dbcdf3afb2",
+    "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
+    "arXiv:2403.13112",
+    "arXiv:2407.15516",
+    "arXiv:2409.15097",
+    "arXiv:2412.04788",
+    "arXiv:2507.03294",
+    "arXiv:2507.18073",
+    "arXiv:2507.21526",
+    "arXiv:2510.07486",
+    "arXiv:2605.26099",
+    "arXiv:2607.12550"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "cb67be9ac585ae4c6d22f01af19cdd2a1d839520",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 12,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 12,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T02:18:54.616280+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:5319240e5148bdec7c4a9324204f6ac3c1639dfc",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:d0ac671c47bbc11cb659096f678b41dbcdf3afb2",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2403.13112",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.15516",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2409.15097",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.04788",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.03294",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.18073",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.21526",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.07486",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.26099",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.12550",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:987db28d690bb277289c0472809dba523e438619"
+    }
+  ],
+  "results": [
+    {
+      "title": "Accelerating Prefilling via Decoding-time Contribution Sparsity",
+      "source_url": "https://arxiv.org/abs/2507.21526",
+      "year": 2025,
+      "published": "2025-07-29",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) incur quadratic attention complexity with input length, creating a major time bottleneck in the prefilling stage. Existing acceleration methods largely exploit attention score sparsity by estimating blocks with high attention scores and applying dynamic sparse attention. In this work, we identify another untapped form of sparsity in the prefilling stage, namely decoding-time contribution sparsity, where many attention blocks exhibit nontrivial attention scores during prefilling yet contribute negligibly to subsequent decoding, as indicated by gradient-based analysis. Building on this observation, we propose TriangleMix, a training-free static attention pattern that uses dense attention in a subset of layers and switches to Triangle attention in the others. Extensive experiments show that TriangleMix preserves nearly lossless performance relative to dense attention while substantially reducing attention overhead in Triangle layers. For 128K inputs, Triangle attention achieves a 15.3x speedup in attention computation, significantly exceeding the acceleration of typical dynamic sparse methods (1.9x to 3.4x). Furthermore, TriangleMix can be seamlessly combined with dynamic sparsity approaches, delivering an additional 6% to 19% reduction in TTFT over using dynamic sparsity alone. Our code is released at https://aka.ms/TriangleMix.",
+      "identifiers": [
+        "SemanticScholar:51946d924add1d7b30d456dd192de9e37c2df8e1"
+      ],
+      "semantic_scholar_id": "51946d924add1d7b30d456dd192de9e37c2df8e1",
+      "canonical_id": "arXiv:2507.21526",
+      "arxiv_id": "2507.21526",
+      "doi": "10.18653/v1/2026.findings-acl.801",
+      "authors": [
+        "Zhiyuan He",
+        "Yi-Ke Zhang",
+        "Chengruidong Zhang",
+        "Huiqiang Jiang",
+        "Yu-Qing Yang",
+        "Lili Qiu"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 442,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Do Language Models Need Sleep? Offline Recurrence for Improved Online Inference",
+      "source_url": "https://arxiv.org/abs/2605.26099",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models are increasingly used for long-horizon tasks; however, their attention mechanism scales poorly with context length. To handle this, we study a sleep-like consolidation mechanism in which a model periodically converts recent context into persistent fast weights before clearing its key-value cache. During sleep, the model performs $N$ offline recurrent passes over the accumulated context and updates the fast weights in its state-space model (SSM) blocks through a learned local rule. During inference, this shifts extra computation to sleep while preserving the latency of wake-time prediction. We test our method on controlled synthetic tasks, including cellular automata and multi-hop graph retrieval, as well as a realistic math reasoning task, on which a regular transformer as well as SSM-attention hybrid models fail. We then show that increasing sleep duration $N$ for our models improves performance, with the largest gains on examples that require deeper reasoning.",
+      "identifiers": [
+        "SemanticScholar:9a8f9ea656c4eda9671daed0059ed2f1fc490963"
+      ],
+      "semantic_scholar_id": "9a8f9ea656c4eda9671daed0059ed2f1fc490963",
+      "canonical_id": "arXiv:2605.26099",
+      "arxiv_id": "2605.26099",
+      "doi": "10.48550/arXiv.2605.26099",
+      "authors": [
+        "Sang-Yun Lee",
+        "Sean McLeish",
+        "Tom Goldstein",
+        "Giulia Fanti"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Encoder-Decoder Transformer Decoding for Decomposable Tasks",
+      "source_url": "https://arxiv.org/abs/2403.13112",
+      "year": 2024,
+      "published": "2024-03-19",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based NLP models are powerful but have high computational costs that limit deployment. Finetuned encoder-decoder models are popular in specialized domains and can outperform larger more generalized decoder-only models, such as GPT-4. We introduce a new configuration for encoder-decoder models that improves efficiency on structured output and decomposable tasks where multiple outputs are required for a single shared input. Our method, prompt-in-decoder (PiD), encodes the input once and decodes the output in parallel, boosting both training and inference efficiency by avoiding duplicate input encoding and increasing the operational intensity (ratio of numbers of arithmetic operation to memory access) of decoding process by sharing the input key-value cache. We achieve computation reduction that roughly scales with the number of subtasks, gaining up to 4.6x speed-up over state-of-the-art models for dialogue state tracking, summarization, and question-answering tasks, with comparable or better performance.",
+      "identifiers": [
+        "SemanticScholar:ef9d3494c0a73c99020d96c3a10e72106d2683eb"
+      ],
+      "semantic_scholar_id": "ef9d3494c0a73c99020d96c3a10e72106d2683eb",
+      "canonical_id": "arXiv:2403.13112",
+      "arxiv_id": "2403.13112",
+      "authors": [
+        "Bo-Ru Lu",
+        "Nikita Haduong",
+        "Chien-Yu Lin",
+        "Hao Cheng",
+        "Noah A. Smith",
+        "M. Ostendorf"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 939,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Attention Is All You Need But You Don't Need All Of It For Inference of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2407.15516",
+      "year": 2024,
+      "published": "2024-07-22",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The inference demand for LLMs has skyrocketed in recent months, and serving models with low latencies remains challenging due to the quadratic input length complexity of the attention layers. In this work, we investigate the effect of dropping MLP and attention layers at inference time on the performance of Llama-v2 models. We find that dropping dreeper attention layers only marginally decreases performance but leads to the best speedups alongside dropping entire layers. For example, removing 33\\% of attention layers in a 13B Llama2 model results in a 1.8\\% drop in average performance over the OpenLLM benchmark. We also observe that skipping layers except the latter layers reduces performances for more layers skipped, except for skipping the attention layers.",
+      "identifiers": [
+        "SemanticScholar:081e0d061ba6efeb7e46507a5e3dc88375c20837"
+      ],
+      "semantic_scholar_id": "081e0d061ba6efeb7e46507a5e3dc88375c20837",
+      "canonical_id": "arXiv:2407.15516",
+      "arxiv_id": "2407.15516",
+      "doi": "10.48550/arXiv.2407.15516",
+      "authors": [
+        "Georgy Tyukin",
+        "G. Dovonon",
+        "Jean Kaddour",
+        "Pasquale Minervini"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 814,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficiently Dispatching Flash Attention For Partially Filled Attention Masks",
+      "source_url": "https://arxiv.org/abs/2409.15097",
+      "year": 2024,
+      "published": "2024-09-23",
+      "venue": "ENLSP",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers are widely used across various applications, many of which yield sparse or partially filled attention matrices. Examples include attention masks designed to reduce the quadratic complexity of attention, sequence packing techniques, and recent innovations like tree masking for fast validation in MEDUSA. Despite the inherent sparsity in these matrices, the state-of-the-art algorithm Flash Attention still processes them with quadratic complexity as though they were dense. In this paper, we introduce Binary Block Masking, a highly efficient modification that enhances Flash Attention by making it mask-aware. We further propose two optimizations: one tailored for masks with contiguous non-zero patterns and another for extremely sparse masks. Our experiments on attention masks derived from real-world scenarios demonstrate up to a 9x runtime improvement. The implementation will be publicly released to foster further research and application.",
+      "identifiers": [
+        "SemanticScholar:0d6cf5795f73c4731e48957758b46936ec40f709"
+      ],
+      "semantic_scholar_id": "0d6cf5795f73c4731e48957758b46936ec40f709",
+      "canonical_id": "arXiv:2409.15097",
+      "arxiv_id": "2409.15097",
+      "doi": "10.48550/arXiv.2409.15097",
+      "authors": [
+        "Agniv Sharma",
+        "Jonas Geiping"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 751,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments",
+      "source_url": "https://arxiv.org/abs/2412.04788",
+      "year": 2024,
+      "published": "2024-12-06",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficiently deploying large language models (LLMs) in real-world scenarios remains a critical challenge, primarily due to hardware heterogeneity, inference framework limitations, and workload complexities.Efficiently deploying large language models (LLMs) in real-world scenarios remains a critical challenge, primarily due to hardware heterogeneity, inference framework limitations, and workload complexities. These challenges often lead to inefficiencies in memory utilization, latency, and throughput, hindering the effective deployment of LLMs, especially for non-experts. Through extensive experiments, we identify key performance bottlenecks, including sudden drops in memory utilization, latency fluctuations with varying batch sizes, and inefficiencies in multi-GPU configurations. These insights reveal a vast optimization space shaped by the intricate interplay of hardware, frameworks, and workload parameters. This underscores the need for a systematic approach to optimize LLM inference, motivating the design of our framework, GUIDE. GUIDE leverages dynamic modeling and simulation-based optimization to address these issues, achieving prediction errors between 9.9% and 42.3% for key metrics such as batch latency, TTFT, and decode throughput. By effectively bridging the gap between theoretical performance and practical deployment, our framework empowers practitioners, particularly non-specialists, to make data-driven decisions and unlock the full potential of LLMs in heterogeneous environments cheaply.",
+      "identifiers": [
+        "SemanticScholar:3d2718606e65c460cc56295316cd0a4df6871cc7"
+      ],
+      "semantic_scholar_id": "3d2718606e65c460cc56295316cd0a4df6871cc7",
+      "canonical_id": "arXiv:2412.04788",
+      "arxiv_id": "2412.04788",
+      "doi": "10.48550/arXiv.2412.04788",
+      "authors": [
+        "Yan-Yu Chen",
+        "Ganhong Huang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 677,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AsyncSpade: Efficient Test-Time Scaling with Asynchronous Sparse Decoding",
+      "source_url": "https://arxiv.org/abs/2510.07486",
+      "year": 2025,
+      "published": "2025-10-08",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling (TTS) boosts LLM reasoning via long chain-of-thought (CoT), but the linear KV-cache growth amplifies the memory-bound bottleneck of LLM decoding. Query-aware page-level sparse decoding can achieve state-of-the-art performance under constrained FLOPs budgets, but is limited by both sequential-dependent page filtering and coarse-grained token selection, hampering serving efficiency and model performance on TTS tasks under high concurrency and long CoT scenarios (consuming even higher runtime than the forward pipeline itself). In this paper, we first find that the current-step query state can be accurately approximated in a unified manner from a short window of recent queries, enabling training-free query-aware sparsity without waiting in the decoding loop. We propose AsyncSpade, an asynchronous framework for efficient TTS built on two core components: (1) a novel light-weight temporal-regressive module that predicts the next-token query state; (2) an asynchronous and disaggregated framework that decouples the KV cache filtering from the auto-regressive decoding loop, overlapping the token-level KV selection with the forward inference computation through asynchronism. To our knowledge, AsyncSpade is the first to eliminate the sequential dependence without sacrificing model performance. We validate the effectiveness of AsyncSpade on common LLM serving setups with an A100 node, where AsyncSpade fully overlaps KV-cache operations with the inference pipeline, achieving theoretical optimal time-per-output-token (TPOT). Specifically, AsyncSpade delivers over 20% reduction on TPOT compared to SoTA baseline (i.e. Quest) and at least 50% TPOT reduction compared to full attention on Qwen3-8B and Qwen3-32B models, while matching or surpassing their accuracy on various TTS benchmarks (AIME-24/25, GPQA-Diamond, MATH-500).",
+      "identifiers": [
+        "SemanticScholar:cdd27c5237ee385ebba0e3db379e8e98e33a8065"
+      ],
+      "semantic_scholar_id": "cdd27c5237ee385ebba0e3db379e8e98e33a8065",
+      "canonical_id": "arXiv:2510.07486",
+      "arxiv_id": "2510.07486",
+      "doi": "10.48550/arXiv.2510.07486",
+      "authors": [
+        "Shu-Qing Luo",
+        "Yi-Lin Guan",
+        "Ping-Zhi Li",
+        "Hanrui Wang",
+        "Tianlong Chen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 371,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Importance Weighted Multi-Draft Speculative Sampling",
+      "source_url": "https://www.semanticscholar.org/paper/d0ac671c47bbc11cb659096f678b41dbcdf3afb2",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:d0ac671c47bbc11cb659096f678b41dbcdf3afb2"
+      ],
+      "semantic_scholar_id": "d0ac671c47bbc11cb659096f678b41dbcdf3afb2",
+      "canonical_id": "SemanticScholar:d0ac671c47bbc11cb659096f678b41dbcdf3afb2",
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Minstrel: Application-Aware SLM Inference Optimization on Edge Devices",
+      "source_url": "https://www.semanticscholar.org/paper/ea787530a21d09f9cc7db101f900cda209efcf1e",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e"
+      ],
+      "semantic_scholar_id": "ea787530a21d09f9cc7db101f900cda209efcf1e",
+      "canonical_id": "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
+      "authors": [
+        "Bakshree Mishra"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Squeeze10-LLM: Squeezing LLMs' Weights by 10 Times via a Staged Mixed-Precision Quantization Method",
+      "source_url": "https://arxiv.org/abs/2507.18073",
+      "year": 2025,
+      "published": "2025-07-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models (LLMs) is challenging due to their massive parameters and high computational costs. Ultra low-bit quantization can significantly reduce storage and accelerate inference, but extreme compression (i.e., mean bit-width<= 2) often leads to severe performance degradation. To address this, we propose Squeeze10-LLM, effectively\"squeezing\"16-bit LLMs'weights by 10 times. Specifically, Squeeze10-LLM is a staged mixed-precision post-training quantization (PTQ) framework and achieves an average of 1.6 bits per weight by quantizing 80% of the weights to 1 bit and 20% to 4 bits. We introduce Squeeze10LLM with two key innovations: Post-Binarization Activation Robustness (PBAR) and Full Information Activation Supervision (FIAS). PBAR is a refined weight significance metric that accounts for the impact of quantization on activations, improving accuracy in low-bit settings. FIAS is a strategy that preserves full activation information during quantization to mitigate cumulative error propagation across layers. Experiments on LLaMA and LLaMA2 show that Squeeze10-LLM achieves state-of-the-art performance for sub-2bit weight-only quantization, improving average accuracy from 43% to 56% on six zero-shot classification tasks--a significant boost over existing PTQ methods.",
+      "identifiers": [
+        "SemanticScholar:4a9ecc2ecefd5cfea22a314b706414bc8c1cac52"
+      ],
+      "semantic_scholar_id": "4a9ecc2ecefd5cfea22a314b706414bc8c1cac52",
+      "canonical_id": "arXiv:2507.18073",
+      "arxiv_id": "2507.18073",
+      "doi": "10.48550/arXiv.2507.18073",
+      "authors": [
+        "Qingcheng Zhu",
+        "Yang-Yang Ren",
+        "Lin-Lin Yang",
+        "Mingbao Lin",
+        "Yanjing Li",
+        "Sheng Xu",
+        "Zi-Chao Feng",
+        "Hao-Dong Zhu",
+        "Yuguang Yang",
+        "Juan Zhang",
+        "Runqi Wang",
+        "Bao-Chang Zhang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 447,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Safety-Constrained Contextual Bandit for Dynamic Power Management",
+      "source_url": "https://www.semanticscholar.org/paper/5319240e5148bdec7c4a9324204f6ac3c1639dfc",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:5319240e5148bdec7c4a9324204f6ac3c1639dfc"
+      ],
+      "semantic_scholar_id": "5319240e5148bdec7c4a9324204f6ac3c1639dfc",
+      "canonical_id": "SemanticScholar:5319240e5148bdec7c4a9324204f6ac3c1639dfc",
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MGAA: Multi-Granular Adaptive Allocation fof Low-Rank Compression of LLMs",
+      "source_url": "https://arxiv.org/abs/2507.03294",
+      "year": 2025,
+      "published": "2025-07-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The enormous parameter scale of large language models (LLMs) has made model compression a research hotspot, which aims to alleviate computational resource demands during deployment and inference. As a promising direction, low-rank approximation technique has made remarkable achievements. Nevertheless, unfortunately, the vast majority of studies to low-rank approximation compression generally apply uniform compression ratios across all weight matrices, while disregarding their inherently differentiated impacts on the model's performance. Although a few recent work attempts to employ heuristic search strategies to achieve the optimal parameter allocation, such strategies are computationally inefficient and lose the generalization ability in the era of LLMs. In this study, we propose a novel parameter Multi-Granular Adaptive Allocation (MGAA) method, which can adaptively allocate parameters between and within sublayers without task-specific evaluations in the compression process. MGAA consists of two components: 1) Among different sublayers, it assigns compression ratios based on their cosine similarity between inputs and outputs, allowing for a more tailored compression in sublayers with varying degrees of importance, and 2) Within each sublayer, it allocates different compression ratios to weight matrices based on their energy distribution characteristics, ensuring a consistent energy retention ratio while optimizing compression efficiency. Comprehensive evaluations of MGAA across multiple LLMs backbone models and benchmark datasets demonstrate its superior performance. Additionally, we apply our MGAA to multimodal model LLaVA, exhibiting remarkable performance improvements.",
+      "identifiers": [
+        "SemanticScholar:f8da4c2f0af4a6e897844cdfdd35814192f84bfd"
+      ],
+      "semantic_scholar_id": "f8da4c2f0af4a6e897844cdfdd35814192f84bfd",
+      "canonical_id": "arXiv:2507.03294",
+      "arxiv_id": "2507.03294",
+      "doi": "10.48550/arXiv.2507.03294",
+      "authors": [
+        "Guangyan Li",
+        "Yong-Qiang Tang",
+        "Wen-Sheng Zhang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 468,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2507.21526",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.801",
+        "id:SemanticScholar:51946d924add1d7b30d456dd192de9e37c2df8e1",
+        "id:arXiv:2507.21526",
+        "title:accelerating prefilling via decodingtime contribution sparsity",
+        "url:https://arxiv.org/abs/2507.21526"
+      ],
+      "record": {
+        "title": "Accelerating Prefilling via Decoding-time Contribution Sparsity",
+        "source_url": "https://arxiv.org/abs/2507.21526",
+        "year": 2025,
+        "published": "2025-07-29",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) incur quadratic attention complexity with input length, creating a major time bottleneck in the prefilling stage. Existing acceleration methods largely exploit attention score sparsity by estimating blocks with high attention scores and applying dynamic sparse attention. In this work, we identify another untapped form of sparsity in the prefilling stage, namely decoding-time contribution sparsity, where many attention blocks exhibit nontrivial attention scores during prefilling yet contribute negligibly to subsequent decoding, as indicated by gradient-based analysis. Building on this observation, we propose TriangleMix, a training-free static attention pattern that uses dense attention in a subset of layers and switches to Triangle attention in the others. Extensive experiments show that TriangleMix preserves nearly lossless performance relative to dense attention while substantially reducing attention overhead in Triangle layers. For 128K inputs, Triangle attention achieves a 15.3x speedup in attention computation, significantly exceeding the acceleration of typical dynamic sparse methods (1.9x to 3.4x). Furthermore, TriangleMix can be seamlessly combined with dynamic sparsity approaches, delivering an additional 6% to 19% reduction in TTFT over using dynamic sparsity alone. Our code is released at https://aka.ms/TriangleMix.",
+        "identifiers": [
+          "SemanticScholar:51946d924add1d7b30d456dd192de9e37c2df8e1"
+        ],
+        "semantic_scholar_id": "51946d924add1d7b30d456dd192de9e37c2df8e1",
+        "canonical_id": "arXiv:2507.21526",
+        "arxiv_id": "2507.21526",
+        "doi": "10.18653/v1/2026.findings-acl.801",
+        "authors": [
+          "Zhiyuan He",
+          "Yi-Ke Zhang",
+          "Chengruidong Zhang",
+          "Huiqiang Jiang",
+          "Yu-Qing Yang",
+          "Lili Qiu"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 442,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.26099",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.26099",
+        "id:SemanticScholar:9a8f9ea656c4eda9671daed0059ed2f1fc490963",
+        "id:arXiv:2605.26099",
+        "title:do language models need sleep offline recurrence for improved online inference",
+        "url:https://arxiv.org/abs/2605.26099"
+      ],
+      "record": {
+        "title": "Do Language Models Need Sleep? Offline Recurrence for Improved Online Inference",
+        "source_url": "https://arxiv.org/abs/2605.26099",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based large language models are increasingly used for long-horizon tasks; however, their attention mechanism scales poorly with context length. To handle this, we study a sleep-like consolidation mechanism in which a model periodically converts recent context into persistent fast weights before clearing its key-value cache. During sleep, the model performs $N$ offline recurrent passes over the accumulated context and updates the fast weights in its state-space model (SSM) blocks through a learned local rule. During inference, this shifts extra computation to sleep while preserving the latency of wake-time prediction. We test our method on controlled synthetic tasks, including cellular automata and multi-hop graph retrieval, as well as a realistic math reasoning task, on which a regular transformer as well as SSM-attention hybrid models fail. We then show that increasing sleep duration $N$ for our models improves performance, with the largest gains on examples that require deeper reasoning.",
+        "identifiers": [
+          "SemanticScholar:9a8f9ea656c4eda9671daed0059ed2f1fc490963"
+        ],
+        "semantic_scholar_id": "9a8f9ea656c4eda9671daed0059ed2f1fc490963",
+        "canonical_id": "arXiv:2605.26099",
+        "arxiv_id": "2605.26099",
+        "doi": "10.48550/arXiv.2605.26099",
+        "authors": [
+          "Sang-Yun Lee",
+          "Sean McLeish",
+          "Tom Goldstein",
+          "Giulia Fanti"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.13112",
+      "identity_tokens": [
+        "id:SemanticScholar:ef9d3494c0a73c99020d96c3a10e72106d2683eb",
+        "id:arXiv:2403.13112",
+        "title:efficient encoderdecoder transformer decoding for decomposable tasks",
+        "url:https://arxiv.org/abs/2403.13112"
+      ],
+      "record": {
+        "title": "Efficient Encoder-Decoder Transformer Decoding for Decomposable Tasks",
+        "source_url": "https://arxiv.org/abs/2403.13112",
+        "year": 2024,
+        "published": "2024-03-19",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based NLP models are powerful but have high computational costs that limit deployment. Finetuned encoder-decoder models are popular in specialized domains and can outperform larger more generalized decoder-only models, such as GPT-4. We introduce a new configuration for encoder-decoder models that improves efficiency on structured output and decomposable tasks where multiple outputs are required for a single shared input. Our method, prompt-in-decoder (PiD), encodes the input once and decodes the output in parallel, boosting both training and inference efficiency by avoiding duplicate input encoding and increasing the operational intensity (ratio of numbers of arithmetic operation to memory access) of decoding process by sharing the input key-value cache. We achieve computation reduction that roughly scales with the number of subtasks, gaining up to 4.6x speed-up over state-of-the-art models for dialogue state tracking, summarization, and question-answering tasks, with comparable or better performance.",
+        "identifiers": [
+          "SemanticScholar:ef9d3494c0a73c99020d96c3a10e72106d2683eb"
+        ],
+        "semantic_scholar_id": "ef9d3494c0a73c99020d96c3a10e72106d2683eb",
+        "canonical_id": "arXiv:2403.13112",
+        "arxiv_id": "2403.13112",
+        "authors": [
+          "Bo-Ru Lu",
+          "Nikita Haduong",
+          "Chien-Yu Lin",
+          "Hao Cheng",
+          "Noah A. Smith",
+          "M. Ostendorf"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 939,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.15516",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.15516",
+        "id:SemanticScholar:081e0d061ba6efeb7e46507a5e3dc88375c20837",
+        "id:arXiv:2407.15516",
+        "title:attention is all you need but you dont need all of it for inference of large language models",
+        "url:https://arxiv.org/abs/2407.15516"
+      ],
+      "record": {
+        "title": "Attention Is All You Need But You Don't Need All Of It For Inference of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2407.15516",
+        "year": 2024,
+        "published": "2024-07-22",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The inference demand for LLMs has skyrocketed in recent months, and serving models with low latencies remains challenging due to the quadratic input length complexity of the attention layers. In this work, we investigate the effect of dropping MLP and attention layers at inference time on the performance of Llama-v2 models. We find that dropping dreeper attention layers only marginally decreases performance but leads to the best speedups alongside dropping entire layers. For example, removing 33\\% of attention layers in a 13B Llama2 model results in a 1.8\\% drop in average performance over the OpenLLM benchmark. We also observe that skipping layers except the latter layers reduces performances for more layers skipped, except for skipping the attention layers.",
+        "identifiers": [
+          "SemanticScholar:081e0d061ba6efeb7e46507a5e3dc88375c20837"
+        ],
+        "semantic_scholar_id": "081e0d061ba6efeb7e46507a5e3dc88375c20837",
+        "canonical_id": "arXiv:2407.15516",
+        "arxiv_id": "2407.15516",
+        "doi": "10.48550/arXiv.2407.15516",
+        "authors": [
+          "Georgy Tyukin",
+          "G. Dovonon",
+          "Jean Kaddour",
+          "Pasquale Minervini"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 814,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.15097",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2409.15097",
+        "id:SemanticScholar:0d6cf5795f73c4731e48957758b46936ec40f709",
+        "id:arXiv:2409.15097",
+        "title:efficiently dispatching flash attention for partially filled attention masks",
+        "url:https://arxiv.org/abs/2409.15097"
+      ],
+      "record": {
+        "title": "Efficiently Dispatching Flash Attention For Partially Filled Attention Masks",
+        "source_url": "https://arxiv.org/abs/2409.15097",
+        "year": 2024,
+        "published": "2024-09-23",
+        "venue": "ENLSP",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers are widely used across various applications, many of which yield sparse or partially filled attention matrices. Examples include attention masks designed to reduce the quadratic complexity of attention, sequence packing techniques, and recent innovations like tree masking for fast validation in MEDUSA. Despite the inherent sparsity in these matrices, the state-of-the-art algorithm Flash Attention still processes them with quadratic complexity as though they were dense. In this paper, we introduce Binary Block Masking, a highly efficient modification that enhances Flash Attention by making it mask-aware. We further propose two optimizations: one tailored for masks with contiguous non-zero patterns and another for extremely sparse masks. Our experiments on attention masks derived from real-world scenarios demonstrate up to a 9x runtime improvement. The implementation will be publicly released to foster further research and application.",
+        "identifiers": [
+          "SemanticScholar:0d6cf5795f73c4731e48957758b46936ec40f709"
+        ],
+        "semantic_scholar_id": "0d6cf5795f73c4731e48957758b46936ec40f709",
+        "canonical_id": "arXiv:2409.15097",
+        "arxiv_id": "2409.15097",
+        "doi": "10.48550/arXiv.2409.15097",
+        "authors": [
+          "Agniv Sharma",
+          "Jonas Geiping"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 751,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.04788",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.04788",
+        "id:SemanticScholar:3d2718606e65c460cc56295316cd0a4df6871cc7",
+        "id:arXiv:2412.04788",
+        "title:guide a global unified inference engine for deploying large language models in heterogeneous environments",
+        "url:https://arxiv.org/abs/2412.04788"
+      ],
+      "record": {
+        "title": "GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments",
+        "source_url": "https://arxiv.org/abs/2412.04788",
+        "year": 2024,
+        "published": "2024-12-06",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficiently deploying large language models (LLMs) in real-world scenarios remains a critical challenge, primarily due to hardware heterogeneity, inference framework limitations, and workload complexities.Efficiently deploying large language models (LLMs) in real-world scenarios remains a critical challenge, primarily due to hardware heterogeneity, inference framework limitations, and workload complexities. These challenges often lead to inefficiencies in memory utilization, latency, and throughput, hindering the effective deployment of LLMs, especially for non-experts. Through extensive experiments, we identify key performance bottlenecks, including sudden drops in memory utilization, latency fluctuations with varying batch sizes, and inefficiencies in multi-GPU configurations. These insights reveal a vast optimization space shaped by the intricate interplay of hardware, frameworks, and workload parameters. This underscores the need for a systematic approach to optimize LLM inference, motivating the design of our framework, GUIDE. GUIDE leverages dynamic modeling and simulation-based optimization to address these issues, achieving prediction errors between 9.9% and 42.3% for key metrics such as batch latency, TTFT, and decode throughput. By effectively bridging the gap between theoretical performance and practical deployment, our framework empowers practitioners, particularly non-specialists, to make data-driven decisions and unlock the full potential of LLMs in heterogeneous environments cheaply.",
+        "identifiers": [
+          "SemanticScholar:3d2718606e65c460cc56295316cd0a4df6871cc7"
+        ],
+        "semantic_scholar_id": "3d2718606e65c460cc56295316cd0a4df6871cc7",
+        "canonical_id": "arXiv:2412.04788",
+        "arxiv_id": "2412.04788",
+        "doi": "10.48550/arXiv.2412.04788",
+        "authors": [
+          "Yan-Yu Chen",
+          "Ganhong Huang"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 677,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.07486",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.07486",
+        "id:SemanticScholar:cdd27c5237ee385ebba0e3db379e8e98e33a8065",
+        "id:arXiv:2510.07486",
+        "title:asyncspade efficient testtime scaling with asynchronous sparse decoding",
+        "url:https://arxiv.org/abs/2510.07486"
+      ],
+      "record": {
+        "title": "AsyncSpade: Efficient Test-Time Scaling with Asynchronous Sparse Decoding",
+        "source_url": "https://arxiv.org/abs/2510.07486",
+        "year": 2025,
+        "published": "2025-10-08",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Test-time scaling (TTS) boosts LLM reasoning via long chain-of-thought (CoT), but the linear KV-cache growth amplifies the memory-bound bottleneck of LLM decoding. Query-aware page-level sparse decoding can achieve state-of-the-art performance under constrained FLOPs budgets, but is limited by both sequential-dependent page filtering and coarse-grained token selection, hampering serving efficiency and model performance on TTS tasks under high concurrency and long CoT scenarios (consuming even higher runtime than the forward pipeline itself). In this paper, we first find that the current-step query state can be accurately approximated in a unified manner from a short window of recent queries, enabling training-free query-aware sparsity without waiting in the decoding loop. We propose AsyncSpade, an asynchronous framework for efficient TTS built on two core components: (1) a novel light-weight temporal-regressive module that predicts the next-token query state; (2) an asynchronous and disaggregated framework that decouples the KV cache filtering from the auto-regressive decoding loop, overlapping the token-level KV selection with the forward inference computation through asynchronism. To our knowledge, AsyncSpade is the first to eliminate the sequential dependence without sacrificing model performance. We validate the effectiveness of AsyncSpade on common LLM serving setups with an A100 node, where AsyncSpade fully overlaps KV-cache operations with the inference pipeline, achieving theoretical optimal time-per-output-token (TPOT). Specifically, AsyncSpade delivers over 20% reduction on TPOT compared to SoTA baseline (i.e. Quest) and at least 50% TPOT reduction compared to full attention on Qwen3-8B and Qwen3-32B models, while matching or surpassing their accuracy on various TTS benchmarks (AIME-24/25, GPQA-Diamond, MATH-500).",
+        "identifiers": [
+          "SemanticScholar:cdd27c5237ee385ebba0e3db379e8e98e33a8065"
+        ],
+        "semantic_scholar_id": "cdd27c5237ee385ebba0e3db379e8e98e33a8065",
+        "canonical_id": "arXiv:2510.07486",
+        "arxiv_id": "2510.07486",
+        "doi": "10.48550/arXiv.2510.07486",
+        "authors": [
+          "Shu-Qing Luo",
+          "Yi-Lin Guan",
+          "Ping-Zhi Li",
+          "Hanrui Wang",
+          "Tianlong Chen"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 371,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:d0ac671c47bbc11cb659096f678b41dbcdf3afb2",
+      "identity_tokens": [
+        "id:SemanticScholar:d0ac671c47bbc11cb659096f678b41dbcdf3afb2",
+        "title:importance weighted multidraft speculative sampling",
+        "url:https://www.semanticscholar.org/paper/d0ac671c47bbc11cb659096f678b41dbcdf3afb2"
+      ],
+      "record": {
+        "title": "Importance Weighted Multi-Draft Speculative Sampling",
+        "source_url": "https://www.semanticscholar.org/paper/d0ac671c47bbc11cb659096f678b41dbcdf3afb2",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:d0ac671c47bbc11cb659096f678b41dbcdf3afb2"
+        ],
+        "semantic_scholar_id": "d0ac671c47bbc11cb659096f678b41dbcdf3afb2",
+        "canonical_id": "SemanticScholar:d0ac671c47bbc11cb659096f678b41dbcdf3afb2",
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
+      "identity_tokens": [
+        "id:SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
+        "title:minstrel applicationaware slm inference optimization on edge devices",
+        "url:https://www.semanticscholar.org/paper/ea787530a21d09f9cc7db101f900cda209efcf1e"
+      ],
+      "record": {
+        "title": "Minstrel: Application-Aware SLM Inference Optimization on Edge Devices",
+        "source_url": "https://www.semanticscholar.org/paper/ea787530a21d09f9cc7db101f900cda209efcf1e",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e"
+        ],
+        "semantic_scholar_id": "ea787530a21d09f9cc7db101f900cda209efcf1e",
+        "canonical_id": "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
+        "authors": [
+          "Bakshree Mishra"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.18073",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.18073",
+        "id:SemanticScholar:4a9ecc2ecefd5cfea22a314b706414bc8c1cac52",
+        "id:arXiv:2507.18073",
+        "title:squeeze10llm squeezing llms weights by 10 times via a staged mixedprecision quantization method",
+        "url:https://arxiv.org/abs/2507.18073"
+      ],
+      "record": {
+        "title": "Squeeze10-LLM: Squeezing LLMs' Weights by 10 Times via a Staged Mixed-Precision Quantization Method",
+        "source_url": "https://arxiv.org/abs/2507.18073",
+        "year": 2025,
+        "published": "2025-07-24",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying large language models (LLMs) is challenging due to their massive parameters and high computational costs. Ultra low-bit quantization can significantly reduce storage and accelerate inference, but extreme compression (i.e., mean bit-width<= 2) often leads to severe performance degradation. To address this, we propose Squeeze10-LLM, effectively\"squeezing\"16-bit LLMs'weights by 10 times. Specifically, Squeeze10-LLM is a staged mixed-precision post-training quantization (PTQ) framework and achieves an average of 1.6 bits per weight by quantizing 80% of the weights to 1 bit and 20% to 4 bits. We introduce Squeeze10LLM with two key innovations: Post-Binarization Activation Robustness (PBAR) and Full Information Activation Supervision (FIAS). PBAR is a refined weight significance metric that accounts for the impact of quantization on activations, improving accuracy in low-bit settings. FIAS is a strategy that preserves full activation information during quantization to mitigate cumulative error propagation across layers. Experiments on LLaMA and LLaMA2 show that Squeeze10-LLM achieves state-of-the-art performance for sub-2bit weight-only quantization, improving average accuracy from 43% to 56% on six zero-shot classification tasks--a significant boost over existing PTQ methods.",
+        "identifiers": [
+          "SemanticScholar:4a9ecc2ecefd5cfea22a314b706414bc8c1cac52"
+        ],
+        "semantic_scholar_id": "4a9ecc2ecefd5cfea22a314b706414bc8c1cac52",
+        "canonical_id": "arXiv:2507.18073",
+        "arxiv_id": "2507.18073",
+        "doi": "10.48550/arXiv.2507.18073",
+        "authors": [
+          "Qingcheng Zhu",
+          "Yang-Yang Ren",
+          "Lin-Lin Yang",
+          "Mingbao Lin",
+          "Yanjing Li",
+          "Sheng Xu",
+          "Zi-Chao Feng",
+          "Hao-Dong Zhu",
+          "Yuguang Yang",
+          "Juan Zhang",
+          "Runqi Wang",
+          "Bao-Chang Zhang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 447,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:5319240e5148bdec7c4a9324204f6ac3c1639dfc",
+      "identity_tokens": [
+        "id:SemanticScholar:5319240e5148bdec7c4a9324204f6ac3c1639dfc",
+        "title:safetyconstrained contextual bandit for dynamic power management",
+        "url:https://www.semanticscholar.org/paper/5319240e5148bdec7c4a9324204f6ac3c1639dfc"
+      ],
+      "record": {
+        "title": "Safety-Constrained Contextual Bandit for Dynamic Power Management",
+        "source_url": "https://www.semanticscholar.org/paper/5319240e5148bdec7c4a9324204f6ac3c1639dfc",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:5319240e5148bdec7c4a9324204f6ac3c1639dfc"
+        ],
+        "semantic_scholar_id": "5319240e5148bdec7c4a9324204f6ac3c1639dfc",
+        "canonical_id": "SemanticScholar:5319240e5148bdec7c4a9324204f6ac3c1639dfc",
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.03294",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.03294",
+        "id:SemanticScholar:f8da4c2f0af4a6e897844cdfdd35814192f84bfd",
+        "id:arXiv:2507.03294",
+        "title:mgaa multigranular adaptive allocation fof lowrank compression of llms",
+        "url:https://arxiv.org/abs/2507.03294"
+      ],
+      "record": {
+        "title": "MGAA: Multi-Granular Adaptive Allocation fof Low-Rank Compression of LLMs",
+        "source_url": "https://arxiv.org/abs/2507.03294",
+        "year": 2025,
+        "published": "2025-07-03",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The enormous parameter scale of large language models (LLMs) has made model compression a research hotspot, which aims to alleviate computational resource demands during deployment and inference. As a promising direction, low-rank approximation technique has made remarkable achievements. Nevertheless, unfortunately, the vast majority of studies to low-rank approximation compression generally apply uniform compression ratios across all weight matrices, while disregarding their inherently differentiated impacts on the model's performance. Although a few recent work attempts to employ heuristic search strategies to achieve the optimal parameter allocation, such strategies are computationally inefficient and lose the generalization ability in the era of LLMs. In this study, we propose a novel parameter Multi-Granular Adaptive Allocation (MGAA) method, which can adaptively allocate parameters between and within sublayers without task-specific evaluations in the compression process. MGAA consists of two components: 1) Among different sublayers, it assigns compression ratios based on their cosine similarity between inputs and outputs, allowing for a more tailored compression in sublayers with varying degrees of importance, and 2) Within each sublayer, it allocates different compression ratios to weight matrices based on their energy distribution characteristics, ensuring a consistent energy retention ratio while optimizing compression efficiency. Comprehensive evaluations of MGAA across multiple LLMs backbone models and benchmark datasets demonstrate its superior performance. Additionally, we apply our MGAA to multimodal model LLaVA, exhibiting remarkable performance improvements.",
+        "identifiers": [
+          "SemanticScholar:f8da4c2f0af4a6e897844cdfdd35814192f84bfd"
+        ],
+        "semantic_scholar_id": "f8da4c2f0af4a6e897844cdfdd35814192f84bfd",
+        "canonical_id": "arXiv:2507.03294",
+        "arxiv_id": "2507.03294",
+        "doi": "10.48550/arXiv.2507.03294",
+        "authors": [
+          "Guangyan Li",
+          "Yong-Qiang Tang",
+          "Wen-Sheng Zhang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 468,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:91e104c077208d4834584e29278a6c0319a105c1acbf9287e8e79f173b64fed6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cfe31f198083225a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1811.04909",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1811.04909",
+    "identity_tokens": [
+      "arXiv:1811.04909"
+    ],
+    "reason": "quantum-inspired low-rank stochastic regression algorithmの研究でLLM推論との適用がない。",
+    "first_checked_at": "2026-10-05T01:17:37+00:00",
+    "last_checked_at": "2026-10-05T01:17:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md"
+    ],
+    "title": "Quantum-inspired low-rank stochastic regression with logarithmic dependence on the dimension"
+  },
+  "processed_at": "2026-10-05T01:17:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cfe31f198083",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

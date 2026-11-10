@@ -1,0 +1,122 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8b6f2f21b54d1724-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8b6f2f21b54d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2609.03515",
+    "arXiv:2609.03949",
+    "arXiv:2609.11744",
+    "arXiv:2609.13161",
+    "arXiv:2609.17475",
+    "arXiv:2609.17863",
+    "arXiv:2609.18063",
+    "arXiv:2609.34727"
+  ],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6af79f9fb2c0ba1548c1c16b5dc82101d50d00b3",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 8,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 0,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 0,
+      "filtered_by_snapshot": 8,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T01:50:08.517763+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2609.03515",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2609.03515"
+    },
+    {
+      "requested_id": "arXiv:2609.03949",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2609.03949"
+    },
+    {
+      "requested_id": "arXiv:2609.11744",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2609.11744"
+    },
+    {
+      "requested_id": "arXiv:2609.13161",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2609.13161"
+    },
+    {
+      "requested_id": "arXiv:2609.17475",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2609.17475"
+    },
+    {
+      "requested_id": "arXiv:2609.17863",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2609.17863"
+    },
+    {
+      "requested_id": "arXiv:2609.18063",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2609.18063"
+    },
+    {
+      "requested_id": "arXiv:2609.34727",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2609.34727"
+    }
+  ],
+  "results": [],
+  "allowed_records": [],
+  "receipt": "sha256:6a6f52b950fedd7a3b0c99f45a8b4bddbb9c69c42909474cb67a9ac17931cec3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

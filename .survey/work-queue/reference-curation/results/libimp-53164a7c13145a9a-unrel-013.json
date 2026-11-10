@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-53164a7c13145a9a-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.15755",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.15755",
+    "identity_tokens": [
+      "arXiv:2309.15755"
+    ],
+    "reason": "CAIT compresses Vision Transformer models for accuracy, inference speed, and transferability; the abstract centers ViT image classification rather than LLM or general-purpose inference infrastructure.",
+    "first_checked_at": "2026-10-13T00:49:44+00:00",
+    "last_checked_at": "2026-10-13T00:49:44+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "CAIT: Triple-Win Compression Toward High Accuracy, Fast Inference, and Favorable Transferability for ViTs"
+  },
+  "processed_at": "2026-10-13T00:49:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-53164a7c1314",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

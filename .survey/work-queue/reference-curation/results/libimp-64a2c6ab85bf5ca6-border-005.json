@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-64a2c6ab85bf5ca6-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.26551",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.26551",
+    "identity_tokens": [
+      "arXiv:2609.26551"
+    ],
+    "reason": "Toki is a profiling framework for HBM performance with RISC-V FPGA soft cores and PCIe DMA, measuring memory access patterns, locality, contention and host traffic. Its primary full text makes it plausibly adjacent to the linked FPGA LLM-inference/offload lineage, but it evaluates general workloads/microbenchmarks rather than LLM inference directly, so retain as borderline for a concrete workload-fit check.",
+    "first_checked_at": "2026-10-06T09:04:15+00:00",
+    "last_checked_at": "2026-10-06T09:04:15+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Toki: Profiling HBM Performance on FPGA Systems with RISC-V Soft Cores and PCIe Host DMA Traffic"
+  },
+  "processed_at": "2026-10-06T09:04:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-64a2c6ab85bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

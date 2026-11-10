@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-92c73052a1bf6ff2-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/2745844.2745848",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/2745844.2745848",
+    "identity_tokens": [
+      "DOI:10.1145/2745844.2745848"
+    ],
+    "reason": "FacebookデータセンターのSSD故障を約4年間の実運用データで分析し、摩耗・配置・温度・読出し妨害などの信頼性要因を評価するストレージ研究。LLMのKVオフロードやモデル推論の性能最適化ではない。",
+    "first_checked_at": "2026-10-07T21:38:12+00:00",
+    "last_checked_at": "2026-10-07T21:38:12+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md"
+    ],
+    "title": "A Large-Scale Study of Flash Memory Failures in the Field"
+  },
+  "processed_at": "2026-10-07T21:38:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-92c73052a1bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

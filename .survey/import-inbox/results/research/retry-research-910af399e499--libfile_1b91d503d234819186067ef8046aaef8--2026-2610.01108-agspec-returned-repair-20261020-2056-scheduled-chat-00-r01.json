@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "054db4603324ff6991245e19517f2fb0b28449253c901971a62e7d9e832fad54",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-910af399e499--libfile_1b91d503d234819186067ef8046aaef8--2026-2610.01108-agspec-returned-repair-20261020-2056-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2610.01108",
+  "worker_completed_at": "2026-10-20T21:04:39+09:00",
+  "worker_run_key": "20261020-2056-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6334,
+    "body_paragraphs": 38,
+    "method_chars": 2504,
+    "method_paragraphs": 16,
+    "evaluation_chars": 120,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 120 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 120 < 500"
+  ],
+  "processed_at": "2026-10-20T17:54:59+00:00"
+}

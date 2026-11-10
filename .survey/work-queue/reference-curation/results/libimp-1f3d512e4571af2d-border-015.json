@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f3d512e4571af2d-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.21933",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.21933",
+    "identity_tokens": [
+      "SemanticScholar:55a8ee88e6d1a3d524e51cde30692072dd802100",
+      "arXiv:2601.21933"
+    ],
+    "reason": "FeatJND guides token-wise dynamic quantization of deep visual features under constrained resources; it is a vision-feature compression technique with no stated LLM inference/serving evaluation.",
+    "first_checked_at": "2026-10-14T14:34:38+00:00",
+    "last_checked_at": "2026-10-14T14:34:38+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Just Noticeable Difference Modeling for Deep Visual Features"
+  },
+  "processed_at": "2026-10-14T14:34:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f3d512e4571",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

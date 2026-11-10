@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f63006bbc8e9adb-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s10462-022-10166-9",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s10462-022-10166-9",
+    "identity_tokens": [
+      "DOI:10.1007/s10462-022-10166-9"
+    ],
+    "reason": "タイトルの対象は視覚知覚と知識ベースの学習・推論であり、LLMの生成推論・量子化・サービング等の技術的貢献は示されていないためタイトル先行除外。要旨と本文は未読。",
+    "first_checked_at": "2026-10-30T20:07:28+00:00",
+    "last_checked_at": "2026-10-30T20:07:28+00:00",
+    "linked_from": [],
+    "title": "Computational knowledge vision: paradigmatic knowledge based prescriptive learning and reasoning for perception and vision"
+  },
+  "processed_at": "2026-10-30T20:07:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f63006bbc8e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

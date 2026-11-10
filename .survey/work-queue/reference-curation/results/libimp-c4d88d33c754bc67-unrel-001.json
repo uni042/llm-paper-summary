@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4d88d33c754bc67-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.12469",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.12469",
+    "identity_tokens": [
+      "arXiv:2501.12469"
+    ],
+    "reason": "Primary abstract: Public-service outage/recovery analysis, not efficiency method.",
+    "first_checked_at": "2026-10-05T13:08:15+00:00",
+    "last_checked_at": "2026-10-05T13:08:15+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+    ],
+    "title": "An Empirical Characterization of Outages and Incidents in Public Services for Large Language Models"
+  },
+  "processed_at": "2026-10-05T13:08:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4d88d33c754",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

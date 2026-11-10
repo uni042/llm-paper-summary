@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0958-scheduled-chat-00/r06",
+  "reference_main_sha": "289552474aa320e0664b5cfdf2e6087cc159fc0a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26693",
+      "identity_tokens": [
+        "id:arXiv:2610.26693",
+        "id:DOI:10.48550/arXiv.2610.26693"
+      ],
+      "title": "Parallel Language Models via Variational Decoding",
+      "reason": "Parallel Language Modelsは潜在補助変数を通じてtoken間依存を伝播させ、1 forwardで相互整合する複数tokenを生成する。自己回帰損失と並列decode損失を含む変分下界で学習し、80M～3Bの事前学習モデルで品質と速度のPareto改善を示す。1.3Bのpost-trainingモデルで数理・coding・指示追従品質を保ちながら推論2.3～5.7倍高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2610.26693",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:08:29+09:00",
+      "last_checked_at": "2026-11-02T10:08:29+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17917",
+      "identity_tokens": [
+        "id:arXiv:2610.17917",
+        "id:DOI:10.48550/arXiv.2610.17917"
+      ],
+      "title": "Batch-Paced: Fixed-Budget Batch Decoding in Discrete Diffusion Language Models",
+      "reason": "Batch-Pacedは離散拡散LLMの複数要求に対し、固定のdecode計算予算を要求間で動的配分してbatch全体の品質を高める学習不要方式。2種類のbackbone・5ベンチマークと混合負荷で同一予算下の品質を改善し、batchが大きいほど効果が高まる傾向を報告。低信頼要求の確定token信頼度を上げる効果が主要因で、decode時間も競争的とする。",
+      "source_url": "https://arxiv.org/abs/2610.17917",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:08:29+09:00",
+      "last_checked_at": "2026-11-02T10:08:29+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37642",
+      "identity_tokens": [
+        "id:arXiv:2610.37642",
+        "id:DOI:10.48550/arXiv.2610.37642"
+      ],
+      "title": "Metacognitive Decoding: Efficient Inference for Diffusion Language Agents",
+      "reason": "拡散言語エージェントの生成を制御する軽量metacognitive controllerを学習し、どのtokenをいつ確定するか、どの長さまで生成するかを環境との相互作用に合わせて決める。5ベンチマークで最も効率的な比較法より平均20.6%少ない推論FLOPsで競争的な精度を維持と報告。",
+      "source_url": "https://arxiv.org/abs/2610.37642",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:08:29+09:00",
+      "last_checked_at": "2026-11-02T10:08:29+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.28559",
+      "identity_tokens": [
+        "id:arXiv:2610.28559",
+        "id:DOI:10.48550/arXiv.2610.28559"
+      ],
+      "title": "Large Flow Language Models",
+      "reason": "Lafaはprefix側を因果注意、block内を双方向非同期flowで処理する8B規模のcontinuous flow言語モデル。既存ARからの適応とprefix cache・block並列decodeで推論を高速化し、flow draftを同一モデルの自己回帰検証にかけるself-speculative方式を導入する。品質を保ちつつAR比2.54倍のthroughputを報告。",
+      "source_url": "https://arxiv.org/abs/2610.28559",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:08:29+09:00",
+      "last_checked_at": "2026-11-02T10:08:29+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.03394",
+      "identity_tokens": [
+        "id:arXiv:2610.03394",
+        "id:DOI:10.48550/arXiv.2610.03394"
+      ],
+      "title": "EdgeAgent: Orchestrating On-Device LLM inference for End-User Multi-Agent Systems on CPU-GPU Unified Memory Architectures",
+      "reason": "EdgeAgentはApple M4等のCPU/GPU統合メモリ環境で、decodeのバス競合とエージェントtool待機を同時に扱う。UMA-aware zero-copy tensor parallelism、draft難易度に応じた投機予算制御、停止中agentの非同期suspend-and-yieldを組み合わせる。M4評価で実行方式のみで1.29倍、tool待機が多い条件で全体1.77倍の高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2610.03394",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:08:29+09:00",
+      "last_checked_at": "2026-11-02T10:08:29+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02598",
+      "identity_tokens": [
+        "id:arXiv:2610.02598",
+        "id:DOI:10.48550/arXiv.2610.02598"
+      ],
+      "title": "Activation Sparsity with Weight Approximation for Faster LLM Decoding on Offloaded Weights",
+      "reason": "SpAxはCPU RAM/flashへ重みをoffloadしたLLMで、activationの小さい行に対応する重みを完全取得・圧縮近似取得・省略の3段階で選ぶ。小さなactivationでは重み近似誤差の影響が弱いことを利用し、CPU offloadで16bit平均3.86倍、4bit平均2.06倍のdecode高速化、flash offloadで16bit平均3.31倍を報告。WikiText-2 perplexity増加は最大10%という品質コストに注意。",
+      "source_url": "https://arxiv.org/abs/2610.02598",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:08:29+09:00",
+      "last_checked_at": "2026-11-02T10:08:29+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.28500",
+      "identity_tokens": [
+        "id:arXiv:2610.28500",
+        "id:DOI:10.48550/arXiv.2610.28500"
+      ],
+      "title": "BitMTP: When Multi-Token Prediction Meets Low-Bit Large Language Models",
+      "reason": "BitMTPは1.58bit等の低bit重みとmulti-token predictionを併用し、AR/投機/混合decodeの品質速度trade-offを1モデル内で実現する。accepted-prefix alignmentでcausal KV境界とCUDA Graph replayを整合させ、width特化低bit kernelを再利用する。H20でBitNet b1.58-2Bの5タスク平均2.2倍、Bonsai 1.7～4Bで2.1～2.4倍、Jetson OrinでMBPP+最大3.3倍を報告。",
+      "source_url": "https://arxiv.org/abs/2610.28500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:08:29+09:00",
+      "last_checked_at": "2026-11-02T10:08:29+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.38095",
+      "identity_tokens": [
+        "id:arXiv:2610.38095",
+        "id:DOI:10.48550/arXiv.2610.38095"
+      ],
+      "title": "Nemotron 3.5 Super and Lightning: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Models for Agentic AI",
+      "reason": "120B/12B-activeのSuperと30B/3B-activeのLightningを報告するモデル技術論文。MoE・Mamba/Transformer混合、MTP投機decode、NVFP4量子化等の推論効率要素を含み、MTP受理長最大21.8%改善、GB200でGPU当たり最大4856 output tok/sを報告するが、主貢献はモデル開発・post-training全体で独立した推論システムの新方式に限定されないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.38095",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:08:29+09:00",
+      "last_checked_at": "2026-11-02T10:08:29+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.02404",
+      "identity_tokens": [
+        "id:arXiv:2610.02404",
+        "id:DOI:10.48550/arXiv.2610.02404"
+      ],
+      "title": "Trained Agentic Context Management",
+      "reason": "自己呼出しと入力contextのtoken範囲読出しだけを持つ簡単なharnessでQwen3.6-35B-A3Bをfinetuneし、8K contextでも40K超のOOLONG-synthでGPT-5.4の1M contextと同程度の性能を報告する。長文脈運用のtoken効率には関連するが、GPU KV管理や推論ランタイムの最適化そのものではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.02404",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:08:29+09:00",
+      "last_checked_at": "2026-11-02T10:08:29+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.06069",
+      "identity_tokens": [
+        "id:arXiv:2610.06069",
+        "id:DOI:10.48550/arXiv.2610.06069"
+      ],
+      "title": "Attention Tax, Handoff Tax: A Stylised Model of When Multi-Agent LLM Systems Help",
+      "reason": "長文脈を維持する単一agentのattention costと、分解・引継ぎで生じる情報欠落のhandoff taxをモデル化し、multi-agent分解が有利になる深さの交点を推定する。ledger-reconciliationの実験では深さ10を交点と予測し20/50/100で分解が優位になることを確認。agent推論の費用分析として関連するが、具体的なサービング実装や高速化kernelを提示しないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.06069",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:08:29+09:00",
+      "last_checked_at": "2026-11-02T10:08:29+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

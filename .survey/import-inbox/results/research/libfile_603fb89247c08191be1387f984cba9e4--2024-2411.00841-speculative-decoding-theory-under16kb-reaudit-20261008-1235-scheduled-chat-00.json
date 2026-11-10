@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "004b9cc8234ca0420d5ee4b98d10e0af5e9934380118aad6dfc447c779209fc1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_603fb89247c08191be1387f984cba9e4--2024-2411.00841-speculative-decoding-theory-under16kb-reaudit-20261008-1235-scheduled-chat-00.md",
+  "canonical_id": "arXiv:2411.00841",
+  "worker_completed_at": "2026-10-08T12:34:32+09:00",
+  "worker_run_key": "20261008-1226-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5769,
+    "body_paragraphs": 42,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 手法説明量 0 < 700",
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-08T07:59:13+00:00"
+}

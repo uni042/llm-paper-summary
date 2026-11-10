@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0958-scheduled-chat-00/r08",
+  "reference_main_sha": "289552474aa320e0664b5cfdf2e6087cc159fc0a",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17551",
+      "identity_tokens": [
+        "id:arXiv:2610.17551",
+        "id:DOI:10.48550/arXiv.2610.17551"
+      ],
+      "title": "Capacity over TFLOPS: Memory-Centric Deployment of Large Clinical Language Models on Consumer CPUs",
+      "reason": "27B級モデルのINT4重みをconsumer GPU 4～6GBでは収容できない条件で、RAM 34/67GBのCPU推論に切り替える容量中心の配備評価。synthetic FHIR promptで27Bモデルが0.6～2.4tok/s、RAM利用率60/37%で動作し、GPUは推論前にOOMとなることを報告。新規高速化kernelではないが低VRAM端末の実装・性能・電力評価としてaccept。医療性能の実証ではなく合成データによる配備評価である。",
+      "source_url": "https://arxiv.org/abs/2610.17551",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:10:03+09:00",
+      "last_checked_at": "2026-11-02T10:10:03+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.14793",
+      "identity_tokens": [
+        "id:arXiv:2610.14793",
+        "id:DOI:10.48550/arXiv.2610.14793"
+      ],
+      "title": "Energy-Aware Agentic Orchestration for Multi-Site Service Deployment",
+      "reason": "2欧州データセンターのKubernetes実験でsingle-shot/ReAct/plan-and-executeのLLM判断GPU電力と実行可能性を測定する。ReActではprefix cacheにより平均GPUエネルギー29.4%削減を報告する一方、複数推論の意思決定電力が軽量なインフラ制御での省エネを上回る可能性を示す。LLM推論費用の実測に関連するが、主対象はmulti-site運用であり推論サービング方式の提案ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.14793",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:10:03+09:00",
+      "last_checked_at": "2026-11-02T10:10:03+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3992a79a6ecdcb63-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.12344",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.12344",
+    "identity_tokens": [
+      "arXiv:2606.12344"
+    ],
+    "reason": "Benchmark compares coding agent harnesses and reports runtime/API costs; it proposes no inference optimization method, and KV-cache lineage is not technically established.",
+    "first_checked_at": "2026-10-06T13:52:01+00:00",
+    "last_checked_at": "2026-10-06T13:52:01+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+    ],
+    "title": "Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks"
+  },
+  "processed_at": "2026-10-06T13:52:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3992a79a6ecd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

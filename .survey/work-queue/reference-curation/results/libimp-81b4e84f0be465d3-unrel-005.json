@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-81b4e84f0be465d3-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.03667",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.03667",
+    "identity_tokens": [
+      "arXiv:2609.03667"
+    ],
+    "reason": "Offline multi-agent reinforcement-learning sequence models, not LLM serving.",
+    "first_checked_at": "2026-10-05T07:14:49+00:00",
+    "last_checked_at": "2026-10-05T07:14:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "title": "Out-of-Distribution Generalisation with Sequence Models in Offline Multi-Agent Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T07:14:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-81b4e84f0be4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

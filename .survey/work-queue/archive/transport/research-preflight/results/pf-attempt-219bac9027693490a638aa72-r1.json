@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-219bac9027693490a638aa72-r1",
+  "kind": "research",
+  "attempt_id": "attempt-219bac9027693490a638aa72",
+  "job_id": "job-research-ff0b776f31e2fc4b",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2510.02345-dynamic-expert-clustering-structured-compression.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": true,
+  "repair_required": false,
+  "decision": "READY_FOR_SUBMISSION",
+  "descriptor_sha256": "sha256:96b01e4e180489f59873a1229e07c9eb378e2a7a41967575378b98d03c8d3df9",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "8c1cf9380a535692ca98fc50b2f8e9ed4d02871a"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "728cb8ac3a17478b1682545d3addf9f8ad2e009b"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "9d1e85a9bf52160d1eb9044018b84e104e708ca0"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "4216f67578bd05e540a193ba5dba536f6ce405bd"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "83dfed31aa7c5adf63ac4dfd1f13ac1209657291"
+    }
+  ],
+  "quality": {
+    "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2510.02345-dynamic-expert-clustering-structured-compression.md",
+    "status": "WARN",
+    "file_bytes": 23627,
+    "prose_chars": 7071,
+    "paragraphs": 36,
+    "method_paragraphs": 16,
+    "method_components": 7,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7738701725554643,
+    "japanese_chars": 4709,
+    "latin_chars": 1376,
+    "bare_english_terms": [],
+    "failures": [],
+    "warnings": [
+      "日本語比率 77.4% < 警告基準 80.0%"
+    ]
+  },
+  "checked_at": "2026-09-22T13:10:44+00:00",
+  "next_action": "Create .survey/work-queue/completed-submission-requests/<attempt_id>.json and set preflight_result to this exact result path. Do not edit any record slot after this check; if a slot changes, run a new preflight first."
+}

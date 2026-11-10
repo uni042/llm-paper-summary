@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18b0e830e3624fe8-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.07864",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.07864",
+    "identity_tokens": [
+      "arXiv:2309.07864"
+    ],
+    "reason": "LLMエージェントの構成、応用、エージェント社会、リスクを体系化するサーベイであり、エージェント推論サービング基盤やKV管理の新規方式を提案する一次研究ではないため対象外。",
+    "first_checked_at": "2026-09-30T01:35:07+00:00",
+    "last_checked_at": "2026-10-02T07:48:29+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+      "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+    ],
+    "title": "The Rise and Potential of Large Language Model Based Agents: A Survey"
+  },
+  "processed_at": "2026-10-02T07:48:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18b0e830e362",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

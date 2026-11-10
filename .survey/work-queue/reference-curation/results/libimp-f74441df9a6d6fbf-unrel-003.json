@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f74441df9a6d6fbf-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3832810.3832905",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3832810.3832905",
+    "identity_tokens": [
+      "DOI:10.1145/3832810.3832905"
+    ],
+    "reason": "serverless WebAssembly workflowのserialization overhead削減であり、LLM inferenceではない。",
+    "first_checked_at": "2026-10-05T05:19:28+00:00",
+    "last_checked_at": "2026-10-05T05:19:28+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md"
+    ],
+    "title": "AeroFlow:Accelerating Serverless Workflows through Serialization-Free WebAssembly Execution"
+  },
+  "processed_at": "2026-10-05T05:19:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f74441df9a6d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

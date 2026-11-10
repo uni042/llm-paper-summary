@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f586678eb62e0a2e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.16537",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.16537",
+    "identity_tokens": [
+      "arXiv:2609.16537"
+    ],
+    "reason": "一次本文のlayer-importance diagnostic protocol、Transformer/SSM結果とimplicationsを確認。重要度解析がcompressionに関連するが、主目的はarchitecture-dependent necessity/plasticityの分析で、compression/inference efficiency methodやruntime評価は示していない。寄与が間接的なためborderline。",
+    "first_checked_at": "2026-10-05T06:39:31+00:00",
+    "last_checked_at": "2026-10-05T06:39:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "What Does Layer-Importance Reveal About Transformers and State-Space Models?"
+  },
+  "processed_at": "2026-10-05T06:39:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f586678eb62e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

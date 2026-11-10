@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0855-scheduled-chat-00/r10",
+  "reference_main_sha": "2e6165d8492a62e3317901512a9adc0d8e0c4cac",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.38315",
+      "identity_tokens": [
+        "id:arXiv:2610.38315",
+        "id:DOI:10.48550/arXiv.2610.38315"
+      ],
+      "title": "LLM-PowerTrace: A Dataset of Time-Resolved GPU Power Traces for AI Compute",
+      "reason": "LLM推論とfine-tuningの100ms刻みGPU電力トレースを公開し、推論側は同時要求数、GPU周波数、KV/重み量子化、入出力長、到着分布を制御して電力ramp・peak・energyを分析する。推論の電力/熱設計に有用な一次データセットだが、新規サービングruntimeや推論高速化方式を直接提案するものではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.38315",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:09:54+09:00",
+      "last_checked_at": "2026-11-02T09:09:54+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31309",
+      "identity_tokens": [
+        "id:arXiv:2610.31309",
+        "id:DOI:10.48550/arXiv.2610.31309"
+      ],
+      "title": "Extreme Compression of Per-Layer Embeddings via Cross-Layer Latent Vector Quantization",
+      "reason": "Gemma4 E4Bの大きなper-layer embeddingを、tokenごとに1つの量子化code tupleを保持し各層のaffine decoderで復元するOPTICで圧縮する。元vectorの再構成でなくoutput pathの誤差に合わせて符号を学習する。著者要旨は約100倍のPLE圧縮で元モデル性能97.8%を保持し、推論GPUメモリ29.7%削減、速度低下0.40%以内と報告。LLM重み/embedding容量削減の直接的方式としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.31309",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:09:54+09:00",
+      "last_checked_at": "2026-11-02T09:09:54+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.05748",
+      "identity_tokens": [
+        "id:arXiv:2610.05748",
+        "id:DOI:10.48550/arXiv.2610.05748"
+      ],
+      "title": "MOLT: A Fine-Grained GPU Memory Sharing System for LLM Serving with Opportunistic Fine-Tuning",
+      "reason": "LLM serving replicaのGPUメモリに残る余剰領域をPEFTと共有し、推論要求が増えたらtraining backward用の保存activation単位で安全に回収して必要時再計算する。CPU/GPU非同期とtensor parallelでもin-flight利用中のメモリを回収しない制御を設計。著者要旨はH100/B200・24B～70Bの4構成で推論SLO達成率99.7%以上を維持しつつdiscard型共有比fine-tuning作業1.9～3.3倍を報告。推論メモリ管理の直接的システム貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.05748",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:09:54+09:00",
+      "last_checked_at": "2026-11-02T09:09:54+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.04951",
+      "identity_tokens": [
+        "id:arXiv:2610.04951",
+        "id:DOI:10.48550/arXiv.2610.04951"
+      ],
+      "title": "LLBPE: Linked-List Based GPU-Parallel BPE Tokenizer",
+      "reason": "LLM推論前処理のBPE tokenizerをGPUで高速化するため、mergeを配列linked listの定数時間pointer更新にし、rank lookup・minimum選択・mergeを1kernelへ融合する。著者要旨は既存GPU方式比最大5.2倍、最適化CPU比24.6倍のtokenizer throughputを報告。ただしtoken列に少数の差異が生じる点と、対象が生成本体の推論runtimeではなく入力前処理である点からborderline。",
+      "source_url": "https://arxiv.org/abs/2610.04951",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:09:54+09:00",
+      "last_checked_at": "2026-11-02T09:09:54+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.07094",
+      "identity_tokens": [
+        "id:arXiv:2610.07094",
+        "id:DOI:10.48550/arXiv.2610.07094"
+      ],
+      "title": "Evaluating Inference Compute for Generative AI: A Framework for Enterprise Workloads",
+      "reason": "逐次依存のagentic trajectoryでは単純なtoken/sよりTPOT、成功率、episode当たり費用が重要という観点で、rooflineとepisode遅延式を使って企業LLM推論のhardware評価軸とbenchmark protocolを提案する。著者要旨は6 task familyと統計検定、vendor benchmark監査を整理するが、新しい実機推論最適化の検証結果は中心でなく、今後の反証可能仮説を提示する枠組みであるためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.07094",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:09:54+09:00",
+      "last_checked_at": "2026-11-02T09:09:54+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.36804",
+      "identity_tokens": [
+        "id:arXiv:2610.36804",
+        "id:DOI:10.48550/arXiv.2610.36804"
+      ],
+      "title": "DFIP: Decision-Focused Inference Path for System One Models",
+      "reason": "小さな構造化出力を返すdecisionモデルのGPU launch・全語彙projection・batching overheadを、CUDA graph replay、候補token projection、長さ認識batchで削減する実測研究。著者要旨はPPLX-Deciderの短Boolean応答でnative比2.47倍、Clefで1.45倍のresident speedupと報告するが、arrival workloadでは効果が逆転する条件も示す。LLM系推論kernelには関係するものの対象は汎用自回帰LLMより小型decisionモデルなのでborderline。",
+      "source_url": "https://arxiv.org/abs/2610.36804",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:09:54+09:00",
+      "last_checked_at": "2026-11-02T09:09:54+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.25717",
+      "identity_tokens": [
+        "id:arXiv:2610.25717",
+        "id:DOI:10.48550/arXiv.2610.25717"
+      ],
+      "title": "Fine-Grained Units, Flat Decisions: Hierarchical Micro-Expert Pruning for Mixture-of-Experts Models",
+      "reason": "MoEのmicro-expert pruningをexpert間の保持容量配分とexpert内channel選択に分離し、cross-domain較正のCAPEと交換探索RAMPで構成するUC-RAMPを提案する。著者要旨は3モデルで25/50%剪定時のtask accuracy改善、A100で25%剪定時TTFT19.7～23.9%、TPOT20.2～22.3%削減を報告。MoEの圧縮と推論実測が直接結び付くためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.25717",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:09:54+09:00",
+      "last_checked_at": "2026-11-02T09:09:54+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.32009",
+      "identity_tokens": [
+        "id:arXiv:2610.32009",
+        "id:DOI:10.48550/arXiv.2610.32009"
+      ],
+      "title": "GS-MoE: Training-Free MoE Compression via Groupwise Subspace Sharing and Pruning",
+      "reason": "expert間の共通低rank部分空間とexpert内のNyström型neuron圧縮を組み合わせ、gradient不要の層重要度でrank/幅予算を配分するGS-MoEを提案する。著者要旨はDeepSeekMoE16Bで総パラメータ60%削減時に元の推論性能の約90%を保持し、比較D²-MoEの73%を上回ると報告。推論速度の直接数値は要旨にないがexpert重みメモリ削減に直結するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.32009",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:09:54+09:00",
+      "last_checked_at": "2026-11-02T09:09:54+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.25136",
+      "identity_tokens": [
+        "id:arXiv:2610.25136",
+        "id:DOI:10.48550/arXiv.2610.25136"
+      ],
+      "title": "Visual Cache Reuse for Efficient Multimodal Inference",
+      "reason": "VLMの大きな画像入力でexact prefix hitだけではKV再利用が限られる問題に対し、patch entropyで近似hitを検出し、queryに応じたwarmup attentionで再計算patchを選ぶVisMemoを提案する。GPU/CPU/SSDでexact/approx hit別にI/O・保持政策を分ける。著者要旨は実production traceでcache hit率27.78→61.45%、8K入力のprefill latency最大48.3%短縮を報告。VLMサービングと階層KVの直接的貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.25136",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:09:54+09:00",
+      "last_checked_at": "2026-11-02T09:09:54+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26083",
+      "identity_tokens": [
+        "id:arXiv:2610.26083",
+        "id:DOI:10.48550/arXiv.2610.26083"
+      ],
+      "title": "MX-Like Tensor Core for LLM Inference with NPU Integration via Hardware-Software Co-Design Exploration",
+      "reason": "MX/NVFP4系のblock scaleとweight/activation非対称精度を、LLM推論向けNPUのMAC datapathまで含めて共同探索する。SNAX NPUの自動設計フローで8bit scale形式を比較し、FP4領域の精度・面積・電力のPareto条件を整理する。著者要旨はUE5M3構成がNVFP4-like比perplexity悪化を最大25.3%減らし、面積+0.06%、電力+0.49%に留めると報告。低bit推論hardware/quantizationの直接的研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.26083",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:09:54+09:00",
+      "last_checked_at": "2026-11-02T09:09:54+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

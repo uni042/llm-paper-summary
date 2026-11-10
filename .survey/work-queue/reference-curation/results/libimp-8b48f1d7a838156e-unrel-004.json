@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8b48f1d7a838156e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.20066",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.20066",
+    "identity_tokens": [
+      "arXiv:2609.20066"
+    ],
+    "reason": "Event cameras offer high temporal resolution and motion sensitivity for tiny UAV detection, yet distant targets generate sparse and fragmented events that are easily overwhelmed by clutter and ego-motion. Existing methods mainly rely on dense event representations or local sparse spatiotemporal modeling, resulting in redundant computation or fragmented modeling of motion continuity across distant asynchronous events. To address this limitation, we introduce serialized motion evidence accumulation, which treats motion continuity as an ordered evidence propagation process. Specifically, the same event stream is organized into locality-preserving spatiotemporal paths and chronology-preserving temporal paths through the latent complementary serializations. Based on this principle, we propose PointEvent, a lightweight event-wise state-space framework that alternates serialized scans across the complementary orders, progressively consolidating fragmented motion evidence beyond fixed local neighborhoods. A high-resolution event branch preserves fine-grained target responses, while compact context modulation suppresses interference. Experiments demonstrate that PointEvent achieves SOTA with the fewest parameters and fastest measured inference among the compared methods. Code: https://github.com/wzz-z/PointEvent",
+    "first_checked_at": "2026-10-05T06:26:38+00:00",
+    "last_checked_at": "2026-10-05T06:26:38+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "PointEvent: Rethinking Event-based Tiny Object Detection via Serialized Motion Evidence Accumulation"
+  },
+  "processed_at": "2026-10-05T06:26:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8b48f1d7a838",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

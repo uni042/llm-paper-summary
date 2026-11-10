@@ -1,0 +1,215 @@
+---
+last_audited: '2026-10-08'
+under16kb_reaudit_target_path: papers/inference/04-conditional-computation/2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md
+under16kb_reaudit_source_git_blob_sha: '641cca0e31a6508bba62e5a13858bed6a34b6ade'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+worker_run_key: 'interactive-20261008-bottom-up-reaudit-r3-turbosparse-2406.05955'
+worker_completed_at: '2026-10-08T10:13:00+09:00'
+canonical_id: arXiv:2406.05955
+title: 'Turbo Sparse: Achieving LLM SOTA Performance with Minimal Activated Parameters'
+summary: SwiGLU等は活性が十分疎でなく、単純なReLU置換はモデル品質を落とす。 疎な活性を生むdReLUと高品質データ混合で既存モデルを再学習し、MoE専門家内部でもゼロ活性ニューロンの計算を省く。 推論反復の活性パラメータをMistral約25億、Mixtral約43億まで減らし、2〜5倍のデコード高速化を示す。
+list_summary: 二重ReLU系活性化と再学習用データ混合でMistral/Mixtralを疎化し、2〜5倍のデコード高速化、携帯端末で毎秒11トークンを報告する。
+publication_type: paper
+publication_status: Published/Preprint
+lineage: inference-systems
+topics:
+- LLM推論
+- システム効率化
+source: https://arxiv.org/abs/2406.05955
+sources:
+- https://arxiv.org/abs/2406.05955
+last_checked: '2026-09-27'
+arxiv_id: '2406.05955'
+authors:
+- Song, Yixin
+- Xie, Haotong
+- Zhang, Zhengyan
+- Wen, Bo
+- Ma, Li
+- Mi, Zeyu
+- Chen, Haibo
+published: '2024-06-10'
+arxiv_categories:
+  primary: cs.LG
+  cross_list: []
+publication: arXiv
+code: null
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
+references:
+- canonical_id: arXiv:2305.13245
+- canonical_id: arXiv:2207.00032
+- canonical_id: arXiv:2309.16609
+  arxiv_id: '2309.16609'
+- canonical_id: arXiv:1511.06297
+  arxiv_id: '1511.06297'
+- canonical_id: arXiv:2401.10774
+  arxiv_id: '2401.10774'
+- canonical_id: arXiv:2403.17297
+  arxiv_id: '2403.17297'
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+  arxiv_id: '2302.01318'
+- canonical_id: arXiv:1803.05457
+  arxiv_id: '1803.05457'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2101.00027
+  arxiv_id: '2101.00027'
+- canonical_id: arXiv:2312.00752
+  arxiv_id: '2312.00752'
+- canonical_id: arXiv:1606.08415
+  arxiv_id: '1606.08415'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2006.16668
+  arxiv_id: '2006.16668'
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2210.06313
+  arxiv_id: '2210.06313'
+- canonical_id: arXiv:2306.00978
+  arxiv_id: '2306.00978'
+- canonical_id: arXiv:2401.04044
+  arxiv_id: '2401.04044'
+- canonical_id: arXiv:1711.05101
+  arxiv_id: '1711.05101'
+- canonical_id: arXiv:2310.04564
+  arxiv_id: '2310.04564'
+- canonical_id: arXiv:2201.05596
+- canonical_id: arXiv:1710.05941
+  arxiv_id: '1710.05941'
+- canonical_id: arXiv:2002.05202
+  arxiv_id: '2002.05202'
+- canonical_id: arXiv:1701.06538
+  arxiv_id: '1701.06538'
+- canonical_id: arXiv:2402.13516
+  arxiv_id: '2402.13516'
+- canonical_id: arXiv:2312.12456
+  arxiv_id: '2312.12456'
+- canonical_id: arXiv:2403.08295
+  arxiv_id: '2403.08295'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2406.06282
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2110.01786
+  arxiv_id: '2110.01786'
+- canonical_id: arXiv:2402.03804
+  arxiv_id: '2402.03804'
+- canonical_id: arXiv:2403.13372
+  arxiv_id: '2403.13372'
+references_checked_at: '2026-10-03'
+references_source: arxiv-html-reference-section
+references_total: 70
+audit_version: 0
+---
+
+# Turbo Sparse: Achieving LLM SOTA Performance with Minimal Activated Parameters
+
+> SwiGLUのゲート側だけでなくup射影側にもReLUを掛ける二重ReLU（dReLU）へ置換し、継続事前学習で性能を回復する。Mistral-7BはFFNの約90%、Mixtral-47Bは専門家ルーティング込みで約97%を非活性化し、PowerInfer系の疎実行で2〜5倍のデコード高速化を報告する。
+
+## 概要
+
+活性疎性（activation sparsity）は、入力ごとに値がゼロになるニューロンを計算・重み読出しから外すことで推論量を減らす方法である。しかし現代のLLMで一般的なSwiGLU/GeGLUは厳密なゼロを作りにくく、単純にReLUへ置換する既存の再ReLU化（ReLUfication）でも疎性は十分に上がらない。論文の分析ではLlama-2-7Bの約40%に対し、ReLULlamaは67%、閾値をずらした方式でも71%程度に留まる。
+
+Turbo Sparseは、Gated-MLPの二つの入力枝のうちゲート射影だけをReLU化するのではなく、up射影側にもReLUを掛けるdReLUを導入する。概念的には
+`max(0, xW_gate) × max(0, xW_up)`
+として、どちらか一方が負なら積をゼロにする。これにより、非線形性を保ちながらゼロ活性を大幅に増やす。
+
+ただし活性化関数を置き換えるだけでは元モデルの能力が崩れるため、Mistral-7BとMixtral-47BをdReLUへ変換し、Web・書籍・数学・コード・学術データを混ぜた150Bトークンで継続事前学習し、さらに教師あり微調整（Supervised Fine-Tuning; SFT）を行う。最終的にTurboSparse-Mistral-7BはFFNの平均約90%が非活性、TurboSparse-Mixtral-47BはMoEの専門家選択による75%疎性に専門家内部の約85%疎性を重ね、MoE層全体では約97%を非活性にする。
+
+## 問題設定
+
+SwiGLUのFFNは、ゲート射影とup射影の二つのベクトルを要素積した後、down射影へ渡す。既存のReLU化は主にゲート側へReLUを入れるため、ゲートが負の位置はゼロになるが、up射影側の符号分布はほぼそのまま残る。著者らは「最終的な積の疎性は両枝で決まるのに、一方だけを疎にしている」ことを既存法の上限と捉える。
+
+もう一つの問題は、論理的なゼロが増えても通常の密行列積カーネルでは全ニューロンを計算してしまう点である。Turbo Sparseのモデル側の貢献は高いゼロ率を作ること、速度側の貢献はPowerInferのような活性疎性対応ランタイムで非活性ニューロンの重み読出しと積和を省くことに分かれる。したがって、疎性率と実測高速化は別の評価軸である。
+
+## 手法
+
+### 1. dReLUでゲートとup射影の両方をゼロ化する
+
+通常のGated-MLPでは、ゲート側の活性化とup射影の出力を掛け合わせる。dReLUは両方へReLUを適用してから要素積する。ゲート側またはup側のどちらかが負ならその中間ニューロンの出力は厳密にゼロになるため、片側だけをReLU化する方式より高い疎性を作れる。
+
+著者らは小型300MモデルをFineWeb 5Bトークンで事前学習し、SwiGLUとの比較でdReLU自体が学習収束を壊さないことを確認する。さらに活性値の絶対値上位だけを残す人工的なtop-k評価では、高い疎性でもdReLUの劣化がSwiGLUより小さく、90%近い疎性まで余裕があることを示す。
+
+### 2. 既存Mistral/MixtralをdReLUへ置換して能力を回復する
+
+Mistral-7BとMixtral-47BのSwiGLU FFNをdReLUへ置換しただけでは品質を維持できないため、継続事前学習で表現を再適応させる。学習コーパスはWebが中心だが、数学、コード、書籍、学術文献を明示的に混ぜる。Webだけへ寄せず、元モデルが持つ広い能力を回復させる狙いである。
+
+学習はllm-foundryと完全シャードデータ並列（Fully Sharded Data Parallel; FSDP）を用い、150Bトークンを処理する。代表設定は系列長4096、グローバルバッチ2048、AdamW、学習率5e-5から5e-6へのコサイン減衰、ウォームアップ1000ステップ、A800 80GBを64基である。継続事前学習後はorca-math-word-problemsやbagelなどでSFTする。
+
+### 3. MoEでは「専門家選択」と「専門家内部疎性」を掛け合わせる
+
+Mixtral-8×7Bは各トークンが8専門家中2つだけを使うため、専門家レベルで既に75%のFFNが非活性である。Turbo Sparseは選ばれた2専門家の内部でもdReLUにより平均約85%のニューロンをゼロにする。
+
+この二段階疎性を合わせると、MoE層全体では約3%のパラメータだけが活性化する。つまりMoEのルータで「どの専門家を使うか」を選び、その専門家内でdReLUが「どのニューロンを使うか」をさらに選ぶ。論文がMixtralで特に大きな活性パラメータ削減を得る理由はこの積構造にある。
+
+### 4. 疎実行ランタイムでゼロ活性を実時間削減へ変える
+
+モデルがゼロ活性を作っても、密GEMMをそのまま呼べば速度は上がらない。評価ではPowerInfer系のランタイムを利用し、入力ごとに活性化するニューロンだけを実行することで、重みアクセスと計算を削減する。
+
+このためTurbo Sparseは「重み自体を恒久的に枝刈りした小型モデル」ではない。総パラメータは保持したまま、入力依存で活性集合を変える。高い疎性ほど理論計算量は減る一方、インデックス管理や不規則アクセスの費用があるため、専用ランタイムとの組合せが実測性能に重要である。
+
+## 評価
+
+### 評価条件
+
+|項目|条件|
+|---|---|
+|変換対象|Mistral-7B、Mixtral-47B|
+|継続事前学習|150Bトークン、Web・学術・書籍・数学・コード混合|
+|代表学習設定|系列長4096、バッチ2048、AdamW、5e-5→5e-6、A800 80GB ×64|
+|品質評価|ARC-Challenge、HellaSwag、MMLU、TruthfulQA、WinoGrande、GSM8K、常識推論など|
+|疎性評価|FineWeb入力で層ごとのゼロ活性率を測定|
+|推論実装|活性疎性を利用するPowerInfer系ランタイム|
+|対象環境|CPU、CPU+GPU、モバイル端末を含む複数構成|
+|主要指標|活性パラメータ数、FFN疎性、デコード速度、下流品質|
+
+### 代表結果
+
+|条件|指標|元/比較|Turbo Sparse|読み取れること|
+|---|---|---:|---:|---|
+|Mistral-7B|FFN平均非活性率|既存ReLU化は約67〜71%|約90%|up射影側もReLU化するdReLUが疎性上限を押し上げる|
+|Mixtral-47B|MoE層の総非活性率|専門家選択のみ75%|約97%|専門家内ニューロン疎性を重ねる効果|
+|Mistral-7B|1反復の活性パラメータ|密/元構成より大|約2.5B|総7Bを毎回読む必要を減らす|
+|Mixtral-47B|1反復の活性パラメータ|元Mixtralより大|約4.3B|47B級でも実際に触る重みを大幅に絞る|
+|複数推論環境|デコード速度|元モデル|2〜5×高速化|高いゼロ率が専用疎実行で実時間へ変換される|
+|モバイル、TurboSparse-Mixtral-47B|生成速度|—|約11 token/s|巨大MoEを端末側へ載せる実装可能性を示す|
+
+品質評価では、TurboSparse-Mistral/Mixtralは元モデルと同等以上となる課題も報告される。これは「推論時に90〜97%を強制的に捨てても無損失」という意味ではなく、dReLUへ構造を変えた後に150Bトークン規模で再学習して、高疎性を前提とした重みへ適応させた結果である。
+
+### どこまで速度へ効くか
+
+2〜5倍という速度改善は、活性パラメータ比の逆数そのものではない。非活性重みの読出しを避ける一方、活性集合の管理、CPU/GPU間配置、不規則アクセスなどのオーバーヘッドが残るためである。逆にモバイルのようにメモリ帯域が厳しい環境では、計算削減以上に重み読出し削減が効く場合がある。
+
+### 疎な活性化と実行時高速化を分ける
+
+Turbo Sparseの実験では、Mistral系列で多層パーセプトロンの非活性率を約九十パーセントまで、Mixtralでは専門家選択と専門家内部の非活性化を合わせて約九十七パーセントまで高めた。これは一回のトークン処理で実際に使う重みを大きく減らせることを示すが、モデル全体の保存容量が同じ割合で小さくなるという意味ではない。入力によって使われるニューロンが変わるため、別のトークンでは異なる重みが必要になり得る。
+
+実験が示す二〜五倍の実測高速化は、活性化されない重みの読み出しを飛ばせる実行系と組み合わせた結果である。通常の密な行列積カーネルでは、結果がゼロになる位置も計算してしまうことがあるため、九十パーセントのゼロ率が十倍の速度へ直結するわけではない。位置情報の管理や不規則メモリアクセス、CPUとGPUの配置も実行時間へ影響する。モバイルで巨大なMixtral系モデルを約毎秒十一トークン生成したという報告も、専用実行系とハードウェア条件を含む結果として理解する必要がある。
+
+品質の面でも、既存のチェックポイントに推論時の枝刈りだけを適用して元の能力が無損失で残ったわけではない。ゲートと上方射影の双方でゼロを生むよう構造を変更した後、千五百億トークン規模の継続事前学習で新しい計算パターンへ適応させている。必要な学習費用を無視すると、学習済みモデルへ数分で導入できる実装最適化であるかのように誤解する。運用評価では変換前の品質、追加学習費用、非活性率、実際の生成速度を別々に比較すべきである。
+
+## 既存研究との差
+
+従来のReLU化はSwiGLUのゲート枝をReLUへ変えることが中心で、up射影側に残る負値を疎性へ利用していなかった。dReLUはGated-MLPの二枝の符号を両方使い、学習可能な構造のままゼロを増やす。
+
+静的な重み枝刈りとは異なり、ニューロンの活性/非活性は入力ごとに変わる。そのため総モデル容量は小さくならないが、活性局所性を利用するランタイムと組み合わせれば、一反復で触る重みを2.5B/4.3B規模へ下げられる。MoEでは専門家ルーティングと競合せず、その内部に追加の疎性を作れる点も特徴である。
+
+## 限界・実装状況
+
+最も大きい制約は、既存チェックポイントへ後処理だけで適用できる圧縮ではないことだ。Mistral/Mixtralの変換には150Bトークン規模の継続事前学習が使われており、計算予算の小さい利用者が任意モデルを同じ方法で即座に疎化できるわけではない。
+
+また、高い活性疎性が速度になるには疎実行対応カーネル・ランタイムが必要である。通常の密GEMMしか使わない環境ではゼロ値でも計算されるため、90〜97%という疎性率と2〜5倍という実測速度を混同してはいけない。入力分布が変わったときの活性局所性や、現行GPUの大規模バッチでどこまで利得が残るかも別途検証が必要である。
+
+## 一次資料
+
+- https://arxiv.org/abs/2406.05955
+- https://huggingface.co/PowerInfer
+- https://github.com/SJTU-IPADS/PowerInfer
+
+## 修正履歴
+
+- 2026-09-28: 現行品質ガイドに合わせて汎用テンプレートを除去。dReLUの二枝ReLU化、150Bトークンの能力回復、MoE内二段疎性、PowerInferによる実行までを因果順に再構成し、学習条件・疎性・活性パラメータ・速度を評価表へ追加。

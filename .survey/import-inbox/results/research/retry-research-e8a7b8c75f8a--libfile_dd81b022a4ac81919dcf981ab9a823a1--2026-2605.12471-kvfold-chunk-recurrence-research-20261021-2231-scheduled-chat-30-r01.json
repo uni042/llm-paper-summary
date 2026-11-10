@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "922eec980564aca534d83752febf89b8f5f0c59530bf206154759b5da27c01e9",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e8a7b8c75f8a--libfile_dd81b022a4ac81919dcf981ab9a823a1--2026-2605.12471-kvfold-chunk-recurrence-research-20261021-2231-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.12471",
+  "worker_completed_at": "2026-10-21T22:31:00+09:00",
+  "worker_run_key": "20261021-2231-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6256,
+    "body_paragraphs": 36,
+    "method_chars": 681,
+    "method_paragraphs": 4,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 681 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 681 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-22T02:45:47+00:00"
+}

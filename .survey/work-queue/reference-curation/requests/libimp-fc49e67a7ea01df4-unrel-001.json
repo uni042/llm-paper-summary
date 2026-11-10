@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-fc49e67a7ea01df4-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2603.20284",
+  "reason": "タイトルにキャッシュ圧縮が含まれるが、その対象はストリーミング3次元再構成の時空間表現であり、LLMのKVキャッシュや生成サービングの圧縮ではない。異なるタスクのキャッシュ圧縮をLLM推論システムと同一視しないため除外する。",
+  "title": "STAC: Plug-and-Play Spatio-Temporal Aware Cache Compression for Streaming 3D Reconstruction",
+  "identity_tokens": [
+    "id:arXiv:2603.20284",
+    "url:https://arxiv.org/abs/2603.20284"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc49e67a7ea0",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

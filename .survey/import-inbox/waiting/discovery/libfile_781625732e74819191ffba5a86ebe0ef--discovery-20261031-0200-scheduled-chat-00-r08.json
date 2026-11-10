@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0200-scheduled-chat-00/r08",
+  "reference_main_sha": "bfbf4444d3e126ebc965c380558cb94e575463ae",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.11938",
+      "identity_tokens": [
+        "arXiv:2609.11938"
+      ],
+      "title": "Hardware-Attributed Operator Profiling for PyTorch",
+      "reason": "arXiv一次要旨はtorch.profiler/CUPTI、NVTX、Inductor融合情報を突合し、GPUハードウェアカウンタをPyTorch演算へ帰属させるOperator Profilerを提案。GPT-2とSDPA注意のコンパイル済み負荷でカーネル時間95〜100%を帰属し、最適化例で1.76〜2.24倍のカーネル時間高速化を報告する推論実装の性能診断基盤。",
+      "source_url": "https://arxiv.org/abs/2609.11938",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:08:21+09:00",
+      "last_checked_at": "2026-10-31T02:08:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 428,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.03728",
+      "identity_tokens": [
+        "arXiv:2511.03728"
+      ],
+      "title": "Efficient On-Device Agents via Adaptive Context Management",
+      "reason": "arXiv一次要旨は端末内エージェントの会話履歴をLoRAで構造化Context State Objectへ圧縮し、ツール定義を選択時だけ投入するJITスキーマ方式を提案。3B SLMの実装で初期ツール文脈を6分の1以下、会話文脈増大率を10〜25分の1へ抑え、推論時文脈・KVメモリ負荷を直接減らす。",
+      "source_url": "https://arxiv.org/abs/2511.03728",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:08:21+09:00",
+      "last_checked_at": "2026-10-31T02:08:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 430,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14877",
+      "identity_tokens": [
+        "arXiv:2605.14877"
+      ],
+      "title": "HeatKV: Head-tuned KV-cache Compression for Visual Autoregressive Modeling",
+      "reason": "arXiv一次要旨は画像生成用のVisual Autoregressiveモデルで、各注意ヘッドの過去スケールへの注意度からKVキャッシュの静的剪定スケジュールを決めるHeatKVを提案。Infinity-2BでKVメモリ割当を従来比2倍圧縮するが、対象は画像生成であり言語LLM推論・サービングへの検証はないため境界的。",
+      "source_url": "https://arxiv.org/abs/2605.14877",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:08:21+09:00",
+      "last_checked_at": "2026-10-31T02:08:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 433,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2306.16601",
+      "identity_tokens": [
+        "arXiv:2306.16601"
+      ],
+      "title": "An Efficient Sparse Inference Software Accelerator for Transformer-based Language Models on CPUs",
+      "reason": "arXiv一次要旨は固定ブロック疎重みのSpMMをIntel Deep Learning Boostへ最適化するCPU推論スタックを提案。70〜90%疎性のカーネルでoneMKL/TVM等を大幅に上回り、BERT系推論でDeepSparse比最大1.5倍と報告。生成デコードの実証はないが、言語Transformer推論の汎用CPUカーネル技術として直接関連する。",
+      "source_url": "https://arxiv.org/abs/2306.16601",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:08:21+09:00",
+      "last_checked_at": "2026-10-31T02:08:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 437,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.23495",
+      "identity_tokens": [
+        "arXiv:2603.23495"
+      ],
+      "title": "VISion On Request: Enhanced VLLM efficiency with sparse, dynamically selected, vision-language interactions",
+      "reason": "arXiv一次要旨は画像トークンを捨てる代わりに言語・画像間の交差注意を少数層へ集約し、複雑度に応じて画像側自己注意層を動的選択するVISORを提案。高解像度視覚情報を保持しながらVLMの計算量を削減する推論時の注意配置最適化。",
+      "source_url": "https://arxiv.org/abs/2603.23495",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:08:21+09:00",
+      "last_checked_at": "2026-10-31T02:08:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 438,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04063",
+      "identity_tokens": [
+        "arXiv:2606.04063"
+      ],
+      "title": "LLM Compression with Jointly Optimizing Architectural and Quantization choices",
+      "reason": "arXiv一次要旨は微分可能な構造探索でLLMの層構成と混合精度量子化を同時最適化し、端末向け圧縮の精度・レイテンシParetoを改善する。構造探索後に量子化する基準比で同程度の精度なら推論最大1.4倍高速化、同等レイテンシなら7推論課題平均精度最大6%向上を報告。",
+      "source_url": "https://arxiv.org/abs/2606.04063",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:08:21+09:00",
+      "last_checked_at": "2026-10-31T02:08:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 443,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34765",
+      "identity_tokens": [
+        "arXiv:2609.34765"
+      ],
+      "title": "Beyond Reconstruction Loss in Post-Training Quantization: Balanced Fitting for Large Vision-Language Models",
+      "reason": "arXiv一次要旨は視覚言語モデルの重み・視覚活性・テキスト活性ごとの量子化感度と正則化効果を測り、敏感成分は精密に、他は粗く較正するBalanced Fittingを提案。重み専用・重み活性双方の低ビットPTQで従来法を上回るVLM推論向け圧縮研究。",
+      "source_url": "https://arxiv.org/abs/2609.34765",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:08:21+09:00",
+      "last_checked_at": "2026-10-31T02:08:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 444,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.12187",
+      "identity_tokens": [
+        "arXiv:2410.12187"
+      ],
+      "title": "DAQ: Density-Aware Post-Training Weight-Only Quantization For LLMs",
+      "reason": "arXiv一次要旨は重み分布の高密度領域を中心に浮動小数点量子化範囲を整列し、出力影響に応じてスケール・ゼロ点を調整するDAQを提案。LLaMA/LLaMA-2で既存最良法よりPPL損失を平均22.8%/19.6%低減と報告する、LLM重み容量削減の直接的なPTQ技術。",
+      "source_url": "https://arxiv.org/abs/2410.12187",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:08:21+09:00",
+      "last_checked_at": "2026-10-31T02:08:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 445,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.20621",
+      "identity_tokens": [
+        "arXiv:2511.20621"
+      ],
+      "title": "DiFR: Inference Verification Despite Nondeterminism",
+      "reason": "arXiv一次要旨は同じ乱数種でも数値ノイズで出力が揺れるLLMサービングを対象に、参照実装の予測トークンと生成結果を照合するToken-DiFRと、活性をランダム射影で指紋化するActivation-DiFRを提案。vLLM統合と通信費削減はあるが主目的は推論の正当性検証であり、高速化・メモリ最適化の系統では境界的。",
+      "source_url": "https://arxiv.org/abs/2511.20621",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:08:21+09:00",
+      "last_checked_at": "2026-10-31T02:08:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 449,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.04096",
+      "identity_tokens": [
+        "arXiv:2602.04096"
+      ],
+      "title": "CoRe: Context-Robust Remasking for Diffusion Language Models",
+      "reason": "arXiv一次要旨は拡散LLMの早期確定トークンが文脈変化に脆弱な場合、対象位置を再マスクした際の予測変化から改訂優先度を決める訓練不要のCoReを提案。LLaDA-8B-Baseで同計算予算の既存改訂法より推論・コード精度を改善し、MBPPで最大9.2ポイント改善を報告する復号時トークン選択方式。",
+      "source_url": "https://arxiv.org/abs/2602.04096",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:08:21+09:00",
+      "last_checked_at": "2026-10-31T02:08:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 452,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

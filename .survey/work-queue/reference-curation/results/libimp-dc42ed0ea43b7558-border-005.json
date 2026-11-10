@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dc42ed0ea43b7558-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2211.04236",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2211.04236",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2211.04236",
+      "arXiv:2211.04236"
+    ],
+    "reason": "自己回帰生成を置き換える連続拡散型テキスト生成で、推論時にアクセラレータ上で並列化しやすい可能性を明示するが、主要貢献・評価は生成モデル構造と品質であり、実測LLM推論高速化システムではないため境界扱い。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "worker-worklist-30 rank 447"
+    ],
+    "title": "Self-conditioned Embedding Diffusion for Text Generation"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dc42ed0ea43b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

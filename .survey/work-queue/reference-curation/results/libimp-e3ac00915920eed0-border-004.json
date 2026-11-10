@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3ac00915920eed0-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.38699",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.38699",
+    "identity_tokens": [
+      "arXiv:2609.38699"
+    ],
+    "reason": "Useful evidence about test-time budget accounting and policy boundary effects, but the paper is an observational controller/replay analysis rather than a demonstrated inference-efficiency optimization; its own results reject strong equal-compute or equivalence claims. Keep borderline for scope/claim strength.",
+    "first_checked_at": "2026-10-05T04:21:08+00:00",
+    "last_checked_at": "2026-10-05T04:21:08+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+    ],
+    "title": "Budget Boundary Effects in Test-Time Mathematical Reasoning"
+  },
+  "processed_at": "2026-10-05T04:21:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3ac00915920",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

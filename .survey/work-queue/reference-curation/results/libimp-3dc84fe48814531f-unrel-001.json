@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3dc84fe48814531f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.19171",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.19171",
+    "identity_tokens": [
+      "arXiv:2608.19171"
+    ],
+    "reason": "Primary abstract studies uncertainty estimates for continuous-time attention in irregularly sampled time-series prediction, not LLM inference/serving.",
+    "first_checked_at": "2026-10-05T08:22:00+00:00",
+    "last_checked_at": "2026-10-05T08:22:00+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "L\\'evy Attention: Single-Pass Predictive Uncertainty for Continuous-Time Attention"
+  },
+  "processed_at": "2026-10-05T08:22:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3dc84fe48814",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

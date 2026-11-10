@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-054a4ce684d06083-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2511.02358",
+  "reason": "M-Solomonはマルチモーダル検索用の埋め込みモデルで、/augmentと/embedを選択して検索質問の生成的拡張を省略できる。MMEBでAlwaysAug比の生成遅延を1320→716msへ下げつつ、検索P@1を67.4→67.6へ改善した。しかし主題は検索表現学習と検索品質の改善であり、LLMの自己回帰推論、KVキャッシュ、GPUサービング、モデル実行系の資源管理そのものへのシステム貢献は検証していない。検索前処理の条件付き生成による推論遅延削減という接点はあるため無関係ではなくborderlineとする。",
+  "title": "Let Multimodal Embedders Learn When to Augment Query via Adaptive Query Augmentation",
+  "identity_tokens": [
+    "arxiv:2511.02358",
+    "arxiv:2511.02358v1"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-054a4ce684d0",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-332ede5ddff79c8e-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.03109",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.03109",
+    "identity_tokens": [
+      "arXiv:2307.03109"
+    ],
+    "reason": "LLMを何・どこで・どう評価するか、各種benchmark、成功/失敗例を整理する評価surveyで、推論runtime・memory・servingの最適化方式を提案しない。",
+    "first_checked_at": "2026-10-04T20:53:45+00:00",
+    "last_checked_at": "2026-10-04T20:53:45+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.04643-qaq-quality-adaptive-quantization-for-llm-kv-cache.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+    ],
+    "title": "A Survey on Evaluation of Large Language Models"
+  },
+  "processed_at": "2026-10-04T20:53:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-332ede5ddff7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,790 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-17097fcf64e89c22-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-17097fcf64e8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/cisat71030.2026.11682186",
+    "arXiv:2310.15929",
+    "arXiv:2407.00945",
+    "arXiv:2602.12305",
+    "arXiv:2602.18420",
+    "arXiv:2604.24110",
+    "arXiv:2606.17872",
+    "arXiv:2609.19203",
+    "arXiv:2609.30057"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4e28b7eb73c6da2e9f7d8ae00579f8a8214f3e61",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T13:15:00.398054+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/cisat71030.2026.11682186",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.15929",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.00945",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2407.00945"
+    },
+    {
+      "requested_id": "arXiv:2602.12305",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.18420",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.24110",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.17872",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.19203",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.30057",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Semantic-Aware Intelligent Request Routing in Multi-Model LLM Backend Gateways",
+      "source_url": "https://doi.org/10.1109/CISAT71030.2026.11682186",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "2026 9th International Conference on Computer Information Science and Application Technology (CISAT)",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As backend systems increasingly integrate multiple large language models (LLMs) with heterogeneous capabilities and costs, API gateways face the non-trivial challenge of routing each incoming request to the most appropriate model. Existing routing strategies rely on either static endpoint configurations or simplistic cost/latency heuristics, lacking semantic understanding of request complexity. We propose APIRouter, a framework that embeds a lightweight semantic-aware routing mechanism within the API gateway layer. APIRouter extracts low-cost request features, classifies request complexity into three levels using a compact DistilBERT-based classifier (<100M parameters), and employs a contextual bandit algorithm to dynamically learn routing policies based on real-time model load, cost, and downstream quality feedback. We evaluate APIRouter on a curated dataset of 10,000 requests from LMSYS-Chat-1M and ShareGPT, routed across three model backends with substantially different pricing, including a 17× output-price gap between GPT-4o and GPT-4o-mini. Experimental results show that APIRouter reduces average inference cost by 59.8% compared to routing all requests to the strongest model, while retaining most of the strongest-model baseline quality under LLM-judge evaluation. The routing overhead of approximately 9 ms per request suggests feasibility for gateway-oriented deployment scenarios.",
+      "identifiers": [
+        "SemanticScholar:a51eca39bbf9e8346b054eaad97173fcdb7bb836"
+      ],
+      "semantic_scholar_id": "a51eca39bbf9e8346b054eaad97173fcdb7bb836",
+      "doi": "10.1109/CISAT71030.2026.11682186",
+      "canonical_id": "DOI:10.1109/CISAT71030.2026.11682186",
+      "authors": [
+        "Ze-Gui Jiang",
+        "Shi-Rui Zhang",
+        "Wen Huang",
+        "Shao-Rui Pi",
+        "Saina Shawulieti",
+        "Shuo Xu"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 105,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OptiML: An End-to-End Framework for Program Synthesis and CUDA Kernel Optimization",
+      "source_url": "https://arxiv.org/abs/2602.12305",
+      "year": 2026,
+      "published": "2026-02-12",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Generating high-performance CUDA kernels remains challenging due to the need to navigate a combinatorial space of low-level transformations under noisy and expensive hardware feedback. Although large language models can synthesize functionally correct CUDA code, achieving competitive performance requires systematic exploration and verification of optimization choices. We present OptiML, an end-to-end framework that maps either natural-language intent or input CUDA code to performance-optimized CUDA kernels by formulating kernel optimization as search under verification. OptiML consists of two decoupled stages. When the input is natural language, a Mixture-of-Thoughts generator (OptiML-G) acts as a proposal policy over kernel implementation strategies, producing an initial executable program. A search-based optimizer (OptiML-X) then refines either synthesized or user-provided kernels using Monte Carlo Tree Search over LLM-driven edits, guided by a hardware-aware reward derived from profiler feedback. Each candidate transformation is compiled, verified, and profiled with Nsight Compute, and evaluated by a composite objective that combines runtime with hardware bottleneck proxies and guardrails against regressions. We evaluate OptiML in both synthesis-and-optimize and optimization-only settings on a diverse suite of CUDA kernels. Results show that OptiML consistently discovers verified performance improvements over strong LLM baselines and produces interpretable optimization trajectories grounded in profiler evidence.",
+      "identifiers": [
+        "SemanticScholar:3fade5f5581a09034acb13aed10f9b5a1f37085d"
+      ],
+      "semantic_scholar_id": "3fade5f5581a09034acb13aed10f9b5a1f37085d",
+      "canonical_id": "arXiv:2602.12305",
+      "arxiv_id": "2602.12305",
+      "doi": "10.48550/arXiv.2602.12305",
+      "authors": [
+        "Arijit Bhattacharjee",
+        "Heng Ping",
+        "S. Le",
+        "P. Bogdan",
+        "Nesreen K. Ahmed",
+        "Ali Jannesari"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 244,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Latency and Cost of Multi-Agent Intelligent Tutoring at Scale",
+      "source_url": "https://arxiv.org/abs/2604.24110",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent LLM tutoring systems improve response quality through agent specialization, but each student query triggers several concurrent API calls whose latencies compound through a parallel-phase maximum effect that single-agent systems do not face. We instrument ITAS, a four-agent tutoring system built on Gemini 2.5 Flash and Google Vertex AI, across three throughput tiers (Standard PayGo, Priority PayGo, and Provisioned Throughput) and eleven concurrency levels up to 50 simultaneous users, producing over 3,000 requests drawn from a live graduate STEM deployment. Priority PayGo maintains flat sub-4-second response times across the full load range; Standard PayGo degrades substantially under classroom-scale concurrency; and Provisioned Throughput delivers the lowest latency at low concurrency but saturates its reserved capacity above approximately 20 concurrent users. Cost analysis places both pay-per-token tiers well below the price of a STEM textbook per student per semester under a worst-case usage ceiling. Provisioned Throughput, expensive under continuous provisioning, becomes cost-competitive for institutions that can predict and concentrate their traffic toward high utilization. These results provide concrete tier-selection guidance across deployment scales from a single seminar to a university-wide rollout.",
+      "identifiers": [
+        "SemanticScholar:b0e1b4dfae2d75824329e4aed587830277cc9122"
+      ],
+      "semantic_scholar_id": "b0e1b4dfae2d75824329e4aed587830277cc9122",
+      "canonical_id": "arXiv:2604.24110",
+      "arxiv_id": "2604.24110",
+      "doi": "10.48550/arXiv.2604.24110",
+      "authors": [
+        "Iizalaarab Elhaimeur",
+        "Nikos Chrisochoides"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "E-Sparse: Boosting the Large Language Model Inference through Entropy-based N: M Sparsity",
+      "source_url": "https://arxiv.org/abs/2310.15929",
+      "year": 2023,
+      "published": "2023-10-24",
+      "venue": "arXiv.org",
+      "citation_count": 24,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Traditional pruning methods are known to be challenging to work in Large Language Models (LLMs) for Generative AI because of their unaffordable training process and large computational demands. For the first time, we introduce the information entropy of hidden state features into a pruning metric design, namely E-Sparse, to improve the accuracy of N:M sparsity on LLM. E-Sparse employs the information richness to leverage the channel importance, and further incorporates several novel techniques to put it into effect: (1) it introduces information entropy to enhance the significance of parameter weights and input feature norms as a novel pruning metric, and performs N:M sparsity without modifying the remaining weights. (2) it designs global naive shuffle and local block shuffle to quickly optimize the information distribution and adequately cope with the impact of N:M sparsity on LLMs' accuracy. E-Sparse is implemented as a Sparse-GEMM on FasterTransformer and runs on NVIDIA Ampere GPUs. Extensive experiments on the LLaMA family and OPT models show that E-Sparse can significantly speed up the model inference over the dense model (up to 1.53X) and obtain significant memory saving (up to 43.52%), with acceptable accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:9df4bfd06331557e1c0edf7937d20bd755369ed0"
+      ],
+      "semantic_scholar_id": "9df4bfd06331557e1c0edf7937d20bd755369ed0",
+      "canonical_id": "arXiv:2310.15929",
+      "arxiv_id": "2310.15929",
+      "doi": "10.48550/arXiv.2310.15929",
+      "authors": [
+        "Yun Li",
+        "Lin Niu",
+        "Xi-Peng Zhang",
+        "Kai Liu",
+        "Jian-Chen Zhu",
+        "Zhanhui Kang"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 24,
+        "citation_count": 24,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1086,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SPQ: An Ensemble Technique for Large Language Model Compression",
+      "source_url": "https://arxiv.org/abs/2602.18420",
+      "year": 2026,
+      "published": "2026-02-20",
+      "venue": "International Conference on Language Resources and Evaluation",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This study presents an ensemble technique, SPQ (SVD-Pruning-Quantization), for large language model (LLM) compression that combines variance-retained singular value decomposition (SVD), activation-based pruning, and post-training linear quantization. Each component targets a different source of inefficiency: i) pruning removes redundant neurons in MLP layers, ii) SVD reduces attention projections into compact low-rank factors, iii) and 8-bit quantization uniformly compresses all linear layers. At matched compression ratios, SPQ outperforms individual methods (SVD-only, pruning-only, or quantization-only) in perplexity, demonstrating the benefit of combining complementary techniques. Applied to LLaMA-2-7B, SPQ achieves up to 75% memory reduction while maintaining or improving perplexity (e.g., WikiText-2 5.47 to 4.91) and preserving accuracy on downstream benchmarks such as C4, TruthfulQA, and GSM8K. Compared to strong baselines like GPTQ and SparseGPT, SPQ offers competitive perplexity and accuracy while using less memory (6.86 GB vs. 7.16 GB for GPTQ). Moreover, SPQ improves inference throughput over GPTQ, achieving up to a 1.9x speedup, which further enhances its practicality for real-world deployment. The effectiveness of SPQ's robust compression through layer-aware and complementary compression techniques may provide practical deployment of LLMs in memory-constrained environments. Code is available at: https://github.com/JiaminYao/SPQ_LLM_Compression/",
+      "identifiers": [
+        "SemanticScholar:955f7cd98960622b825ce3778db3326c0f47d3f6"
+      ],
+      "semantic_scholar_id": "955f7cd98960622b825ce3778db3326c0f47d3f6",
+      "canonical_id": "arXiv:2602.18420",
+      "arxiv_id": "2602.18420",
+      "doi": "10.48550/arXiv.2602.18420",
+      "authors": [
+        "Jia-Yu Yao",
+        "E. Gultepe"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 236,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AnchorKV: Safety-Aware KV Cache Compression via Soft Penalty with a Refusal Anchor",
+      "source_url": "https://arxiv.org/abs/2606.17872",
+      "year": 2026,
+      "published": "2026-06-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) outperform earlier architectures on generative inference and long-context tasks, but their large size introduces significant challenges in memory usage, energy cost, and on-device deployment. Since scaling pre-trained language models improves downstream capability \\cite{zhao2023survey}, the key-value (KV) cache becomes a dominant inference bottleneck. Recent KV cache compression methods \\cite{jo2025fastkv,li2024snapkv,zhou2024dynamickv} reduce this cost by retaining only a subset of attention-relevant tokens. However, while these approaches preserve accuracy on benign workloads, their compression policies either fail to defend against jailbreak attacks \\cite{jiang2024robustkv} or degrade safety alignment under aggressive eviction. We propose AnchorKV, a drop-in modification to KV cache compression that biases token retention scores away from directions in key space associated with harmful prompts. AnchorKV constructs an offline safety anchor by adapting a difference-of-means representation engineering approach \\cite{arditi2024refusal,zou2023representation} to the layer-specific key projection space used in KV caching. Based on this anchor, a soft penalty token selection rule trades a small amount of utility for substantially improved safety alignment, while reducing to the original compressor when the penalty is zero.",
+      "identifiers": [
+        "SemanticScholar:6d13c3c38b58974f3e2ff7273b1d5b9084e2ab15"
+      ],
+      "semantic_scholar_id": "6d13c3c38b58974f3e2ff7273b1d5b9084e2ab15",
+      "canonical_id": "arXiv:2606.17872",
+      "arxiv_id": "2606.17872",
+      "doi": "10.48550/arXiv.2606.17872",
+      "authors": [
+        "Ning Ni",
+        "Ying-Jie Lao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 120,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Position: It is Time to Virtualize Foundation Models with a Self-evolving Operating System Layer",
+      "source_url": "https://arxiv.org/abs/2609.19203",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI applications have shifted from single, monolithic foundation models (FM) to compound agentic systems. Yet today's stacks remain fragmented: even as protocols (e.g., MCP, A2A) ease tool/agent connectivity, each framework embeds an implicit runtime for state, memory, budgets, and guardrails, making behavior non-portable and governance brittle. It mirrors computing before operating systems, when every program re-implemented basic services. This position paper argues that the field now needs a Foundation Model Operating System (FMOS) -- a system layer that virtualizes FM interactions analogous to how virtual machines abstract physical hardware, giving applications the illusion of dedicated, trustworthy FM instances with effectively unbounded capabilities. Internally, the FMOS orchestrates knowledge across memory tiers, model selection and resource allocation, and verification and policy enforcement. Like the human brain switching between fast intuition and slow deliberation, the FMOS learns when to intervene and when to let inference proceed directly and continuously adapting its policies based on operational experience.",
+      "identifiers": [
+        "SemanticScholar:a22173667625f56978c04ce791100f80bf8c0af7"
+      ],
+      "semantic_scholar_id": "a22173667625f56978c04ce791100f80bf8c0af7",
+      "canonical_id": "arXiv:2609.19203",
+      "arxiv_id": "2609.19203",
+      "authors": [
+        "Suparna Bhattacharya",
+        "Tarun Kumar",
+        "Cong Xu",
+        "Satish Kumar Mopur",
+        "Jia-Hao Li",
+        "Ashish Mishra",
+        "Aalap Tripathy",
+        "Ann Mary Justine Koomthanam",
+        "Martin Foltin",
+        "Ian T. Foster"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity",
+      "source_url": "https://arxiv.org/abs/2609.30057",
+      "year": 2026,
+      "published": "2026-09-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents automate GPU kernel optimization by repeatedly composing candidates and measuring their duration on real GPUs. Existing systems preserve measurement fidelity by reserving a GPU for an entire agent session or benchmarking command. However, this results in poor utilization because only a small fraction of command execution requires exclusive GPU access. Sharing GPUs could recover this idle capacity, but introduces contention that compromises measurement fidelity and misdirects the agent's search. We present KREX, a runtime for concurrent kernel agent benchmarking with region-granular exclusivity. KREX lets agents mark critical regions involving timing-sensitive operations within a benchmarking command. The runtime then enforces exclusivity within marked regions and allows concurrent execution outside them, achieving high throughput while preserving measurement fidelity. To enforce in-region exclusivity, KREX blocks new competing GPU submissions and drains outstanding work before freezing sibling processes and isolating CPU cores, protecting both GPU execution and the host threads that drive measurements. To maximize off-region concurrency, KREX reuses GPU contexts in persistent context processes to avoid repeated, node-wide serialized context creation. We evaluate KREX on NVIDIA and AMD GPUs. Compared with command-granular exclusivity baselines, KREX delivers up to $3.4\\times$ the benchmarking throughput with a negligible p95 timing inflation of $0.30\\%$, $1.58\\%$, and $3.90\\%$ for kernels longer than 10 ms, 1 ms, and 0.1 ms, respectively.",
+      "identifiers": [
+        "SemanticScholar:2c7ac604a130f59e8a1b84a9bac69d50ff9392cf"
+      ],
+      "semantic_scholar_id": "2c7ac604a130f59e8a1b84a9bac69d50ff9392cf",
+      "canonical_id": "arXiv:2609.30057",
+      "arxiv_id": "2609.30057",
+      "authors": [
+        "Tian-Yu Feng",
+        "Hao-Xuan Yu",
+        "Tian-Yuan Wu",
+        "Ling-Yun Yang",
+        "Dao-Cheng Ying",
+        "Yu-Xiao Wang",
+        "Rui-Bo Fan",
+        "Ying-Hao Yu",
+        "Guo-Dong Yang",
+        "Li-Ping Zhang",
+        "Wei Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/cisat71030.2026.11682186",
+      "identity_tokens": [
+        "id:DOI:10.1109/cisat71030.2026.11682186",
+        "id:SemanticScholar:a51eca39bbf9e8346b054eaad97173fcdb7bb836",
+        "title:semanticaware intelligent request routing in multimodel llm backend gateways",
+        "url:https://doi.org/10.1109/CISAT71030.2026.11682186"
+      ],
+      "record": {
+        "title": "Semantic-Aware Intelligent Request Routing in Multi-Model LLM Backend Gateways",
+        "source_url": "https://doi.org/10.1109/CISAT71030.2026.11682186",
+        "year": 2026,
+        "published": "2026-07-01",
+        "venue": "2026 9th International Conference on Computer Information Science and Application Technology (CISAT)",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As backend systems increasingly integrate multiple large language models (LLMs) with heterogeneous capabilities and costs, API gateways face the non-trivial challenge of routing each incoming request to the most appropriate model. Existing routing strategies rely on either static endpoint configurations or simplistic cost/latency heuristics, lacking semantic understanding of request complexity. We propose APIRouter, a framework that embeds a lightweight semantic-aware routing mechanism within the API gateway layer. APIRouter extracts low-cost request features, classifies request complexity into three levels using a compact DistilBERT-based classifier (<100M parameters), and employs a contextual bandit algorithm to dynamically learn routing policies based on real-time model load, cost, and downstream quality feedback. We evaluate APIRouter on a curated dataset of 10,000 requests from LMSYS-Chat-1M and ShareGPT, routed across three model backends with substantially different pricing, including a 17× output-price gap between GPT-4o and GPT-4o-mini. Experimental results show that APIRouter reduces average inference cost by 59.8% compared to routing all requests to the strongest model, while retaining most of the strongest-model baseline quality under LLM-judge evaluation. The routing overhead of approximately 9 ms per request suggests feasibility for gateway-oriented deployment scenarios.",
+        "identifiers": [
+          "SemanticScholar:a51eca39bbf9e8346b054eaad97173fcdb7bb836"
+        ],
+        "semantic_scholar_id": "a51eca39bbf9e8346b054eaad97173fcdb7bb836",
+        "doi": "10.1109/CISAT71030.2026.11682186",
+        "canonical_id": "DOI:10.1109/CISAT71030.2026.11682186",
+        "authors": [
+          "Ze-Gui Jiang",
+          "Shi-Rui Zhang",
+          "Wen Huang",
+          "Shao-Rui Pi",
+          "Saina Shawulieti",
+          "Shuo Xu"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 105,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.12305",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.12305",
+        "id:SemanticScholar:3fade5f5581a09034acb13aed10f9b5a1f37085d",
+        "id:arXiv:2602.12305",
+        "title:optiml an endtoend framework for program synthesis and cuda kernel optimization",
+        "url:https://arxiv.org/abs/2602.12305"
+      ],
+      "record": {
+        "title": "OptiML: An End-to-End Framework for Program Synthesis and CUDA Kernel Optimization",
+        "source_url": "https://arxiv.org/abs/2602.12305",
+        "year": 2026,
+        "published": "2026-02-12",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Generating high-performance CUDA kernels remains challenging due to the need to navigate a combinatorial space of low-level transformations under noisy and expensive hardware feedback. Although large language models can synthesize functionally correct CUDA code, achieving competitive performance requires systematic exploration and verification of optimization choices. We present OptiML, an end-to-end framework that maps either natural-language intent or input CUDA code to performance-optimized CUDA kernels by formulating kernel optimization as search under verification. OptiML consists of two decoupled stages. When the input is natural language, a Mixture-of-Thoughts generator (OptiML-G) acts as a proposal policy over kernel implementation strategies, producing an initial executable program. A search-based optimizer (OptiML-X) then refines either synthesized or user-provided kernels using Monte Carlo Tree Search over LLM-driven edits, guided by a hardware-aware reward derived from profiler feedback. Each candidate transformation is compiled, verified, and profiled with Nsight Compute, and evaluated by a composite objective that combines runtime with hardware bottleneck proxies and guardrails against regressions. We evaluate OptiML in both synthesis-and-optimize and optimization-only settings on a diverse suite of CUDA kernels. Results show that OptiML consistently discovers verified performance improvements over strong LLM baselines and produces interpretable optimization trajectories grounded in profiler evidence.",
+        "identifiers": [
+          "SemanticScholar:3fade5f5581a09034acb13aed10f9b5a1f37085d"
+        ],
+        "semantic_scholar_id": "3fade5f5581a09034acb13aed10f9b5a1f37085d",
+        "canonical_id": "arXiv:2602.12305",
+        "arxiv_id": "2602.12305",
+        "doi": "10.48550/arXiv.2602.12305",
+        "authors": [
+          "Arijit Bhattacharjee",
+          "Heng Ping",
+          "S. Le",
+          "P. Bogdan",
+          "Nesreen K. Ahmed",
+          "Ali Jannesari"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 244,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.24110",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.24110",
+        "id:SemanticScholar:b0e1b4dfae2d75824329e4aed587830277cc9122",
+        "id:arXiv:2604.24110",
+        "title:latency and cost of multiagent intelligent tutoring at scale",
+        "url:https://arxiv.org/abs/2604.24110"
+      ],
+      "record": {
+        "title": "Latency and Cost of Multi-Agent Intelligent Tutoring at Scale",
+        "source_url": "https://arxiv.org/abs/2604.24110",
+        "year": 2026,
+        "published": "2026-04-27",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-agent LLM tutoring systems improve response quality through agent specialization, but each student query triggers several concurrent API calls whose latencies compound through a parallel-phase maximum effect that single-agent systems do not face. We instrument ITAS, a four-agent tutoring system built on Gemini 2.5 Flash and Google Vertex AI, across three throughput tiers (Standard PayGo, Priority PayGo, and Provisioned Throughput) and eleven concurrency levels up to 50 simultaneous users, producing over 3,000 requests drawn from a live graduate STEM deployment. Priority PayGo maintains flat sub-4-second response times across the full load range; Standard PayGo degrades substantially under classroom-scale concurrency; and Provisioned Throughput delivers the lowest latency at low concurrency but saturates its reserved capacity above approximately 20 concurrent users. Cost analysis places both pay-per-token tiers well below the price of a STEM textbook per student per semester under a worst-case usage ceiling. Provisioned Throughput, expensive under continuous provisioning, becomes cost-competitive for institutions that can predict and concentrate their traffic toward high utilization. These results provide concrete tier-selection guidance across deployment scales from a single seminar to a university-wide rollout.",
+        "identifiers": [
+          "SemanticScholar:b0e1b4dfae2d75824329e4aed587830277cc9122"
+        ],
+        "semantic_scholar_id": "b0e1b4dfae2d75824329e4aed587830277cc9122",
+        "canonical_id": "arXiv:2604.24110",
+        "arxiv_id": "2604.24110",
+        "doi": "10.48550/arXiv.2604.24110",
+        "authors": [
+          "Iizalaarab Elhaimeur",
+          "Nikos Chrisochoides"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.15929",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.15929",
+        "id:SemanticScholar:9df4bfd06331557e1c0edf7937d20bd755369ed0",
+        "id:arXiv:2310.15929",
+        "title:esparse boosting the large language model inference through entropybased n m sparsity",
+        "url:https://arxiv.org/abs/2310.15929"
+      ],
+      "record": {
+        "title": "E-Sparse: Boosting the Large Language Model Inference through Entropy-based N: M Sparsity",
+        "source_url": "https://arxiv.org/abs/2310.15929",
+        "year": 2023,
+        "published": "2023-10-24",
+        "venue": "arXiv.org",
+        "citation_count": 24,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Traditional pruning methods are known to be challenging to work in Large Language Models (LLMs) for Generative AI because of their unaffordable training process and large computational demands. For the first time, we introduce the information entropy of hidden state features into a pruning metric design, namely E-Sparse, to improve the accuracy of N:M sparsity on LLM. E-Sparse employs the information richness to leverage the channel importance, and further incorporates several novel techniques to put it into effect: (1) it introduces information entropy to enhance the significance of parameter weights and input feature norms as a novel pruning metric, and performs N:M sparsity without modifying the remaining weights. (2) it designs global naive shuffle and local block shuffle to quickly optimize the information distribution and adequately cope with the impact of N:M sparsity on LLMs' accuracy. E-Sparse is implemented as a Sparse-GEMM on FasterTransformer and runs on NVIDIA Ampere GPUs. Extensive experiments on the LLaMA family and OPT models show that E-Sparse can significantly speed up the model inference over the dense model (up to 1.53X) and obtain significant memory saving (up to 43.52%), with acceptable accuracy loss.",
+        "identifiers": [
+          "SemanticScholar:9df4bfd06331557e1c0edf7937d20bd755369ed0"
+        ],
+        "semantic_scholar_id": "9df4bfd06331557e1c0edf7937d20bd755369ed0",
+        "canonical_id": "arXiv:2310.15929",
+        "arxiv_id": "2310.15929",
+        "doi": "10.48550/arXiv.2310.15929",
+        "authors": [
+          "Yun Li",
+          "Lin Niu",
+          "Xi-Peng Zhang",
+          "Kai Liu",
+          "Jian-Chen Zhu",
+          "Zhanhui Kang"
+        ],
+        "priority": 24,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 24,
+          "citation_count": 24,
+          "total": 24,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1086,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.18420",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.18420",
+        "id:SemanticScholar:955f7cd98960622b825ce3778db3326c0f47d3f6",
+        "id:arXiv:2602.18420",
+        "title:spq an ensemble technique for large language model compression",
+        "url:https://arxiv.org/abs/2602.18420"
+      ],
+      "record": {
+        "title": "SPQ: An Ensemble Technique for Large Language Model Compression",
+        "source_url": "https://arxiv.org/abs/2602.18420",
+        "year": 2026,
+        "published": "2026-02-20",
+        "venue": "International Conference on Language Resources and Evaluation",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This study presents an ensemble technique, SPQ (SVD-Pruning-Quantization), for large language model (LLM) compression that combines variance-retained singular value decomposition (SVD), activation-based pruning, and post-training linear quantization. Each component targets a different source of inefficiency: i) pruning removes redundant neurons in MLP layers, ii) SVD reduces attention projections into compact low-rank factors, iii) and 8-bit quantization uniformly compresses all linear layers. At matched compression ratios, SPQ outperforms individual methods (SVD-only, pruning-only, or quantization-only) in perplexity, demonstrating the benefit of combining complementary techniques. Applied to LLaMA-2-7B, SPQ achieves up to 75% memory reduction while maintaining or improving perplexity (e.g., WikiText-2 5.47 to 4.91) and preserving accuracy on downstream benchmarks such as C4, TruthfulQA, and GSM8K. Compared to strong baselines like GPTQ and SparseGPT, SPQ offers competitive perplexity and accuracy while using less memory (6.86 GB vs. 7.16 GB for GPTQ). Moreover, SPQ improves inference throughput over GPTQ, achieving up to a 1.9x speedup, which further enhances its practicality for real-world deployment. The effectiveness of SPQ's robust compression through layer-aware and complementary compression techniques may provide practical deployment of LLMs in memory-constrained environments. Code is available at: https://github.com/JiaminYao/SPQ_LLM_Compression/",
+        "identifiers": [
+          "SemanticScholar:955f7cd98960622b825ce3778db3326c0f47d3f6"
+        ],
+        "semantic_scholar_id": "955f7cd98960622b825ce3778db3326c0f47d3f6",
+        "canonical_id": "arXiv:2602.18420",
+        "arxiv_id": "2602.18420",
+        "doi": "10.48550/arXiv.2602.18420",
+        "authors": [
+          "Jia-Yu Yao",
+          "E. Gultepe"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 236,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.17872",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.17872",
+        "id:SemanticScholar:6d13c3c38b58974f3e2ff7273b1d5b9084e2ab15",
+        "id:arXiv:2606.17872",
+        "title:anchorkv safetyaware kv cache compression via soft penalty with a refusal anchor",
+        "url:https://arxiv.org/abs/2606.17872"
+      ],
+      "record": {
+        "title": "AnchorKV: Safety-Aware KV Cache Compression via Soft Penalty with a Refusal Anchor",
+        "source_url": "https://arxiv.org/abs/2606.17872",
+        "year": 2026,
+        "published": "2026-06-16",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) outperform earlier architectures on generative inference and long-context tasks, but their large size introduces significant challenges in memory usage, energy cost, and on-device deployment. Since scaling pre-trained language models improves downstream capability \\cite{zhao2023survey}, the key-value (KV) cache becomes a dominant inference bottleneck. Recent KV cache compression methods \\cite{jo2025fastkv,li2024snapkv,zhou2024dynamickv} reduce this cost by retaining only a subset of attention-relevant tokens. However, while these approaches preserve accuracy on benign workloads, their compression policies either fail to defend against jailbreak attacks \\cite{jiang2024robustkv} or degrade safety alignment under aggressive eviction. We propose AnchorKV, a drop-in modification to KV cache compression that biases token retention scores away from directions in key space associated with harmful prompts. AnchorKV constructs an offline safety anchor by adapting a difference-of-means representation engineering approach \\cite{arditi2024refusal,zou2023representation} to the layer-specific key projection space used in KV caching. Based on this anchor, a soft penalty token selection rule trades a small amount of utility for substantially improved safety alignment, while reducing to the original compressor when the penalty is zero.",
+        "identifiers": [
+          "SemanticScholar:6d13c3c38b58974f3e2ff7273b1d5b9084e2ab15"
+        ],
+        "semantic_scholar_id": "6d13c3c38b58974f3e2ff7273b1d5b9084e2ab15",
+        "canonical_id": "arXiv:2606.17872",
+        "arxiv_id": "2606.17872",
+        "doi": "10.48550/arXiv.2606.17872",
+        "authors": [
+          "Ning Ni",
+          "Ying-Jie Lao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 120,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19203",
+      "identity_tokens": [
+        "id:SemanticScholar:a22173667625f56978c04ce791100f80bf8c0af7",
+        "id:arXiv:2609.19203",
+        "title:position it is time to virtualize foundation models with a selfevolving operating system layer",
+        "url:https://arxiv.org/abs/2609.19203"
+      ],
+      "record": {
+        "title": "Position: It is Time to Virtualize Foundation Models with a Self-evolving Operating System Layer",
+        "source_url": "https://arxiv.org/abs/2609.19203",
+        "year": 2026,
+        "published": "2026-09-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "AI applications have shifted from single, monolithic foundation models (FM) to compound agentic systems. Yet today's stacks remain fragmented: even as protocols (e.g., MCP, A2A) ease tool/agent connectivity, each framework embeds an implicit runtime for state, memory, budgets, and guardrails, making behavior non-portable and governance brittle. It mirrors computing before operating systems, when every program re-implemented basic services. This position paper argues that the field now needs a Foundation Model Operating System (FMOS) -- a system layer that virtualizes FM interactions analogous to how virtual machines abstract physical hardware, giving applications the illusion of dedicated, trustworthy FM instances with effectively unbounded capabilities. Internally, the FMOS orchestrates knowledge across memory tiers, model selection and resource allocation, and verification and policy enforcement. Like the human brain switching between fast intuition and slow deliberation, the FMOS learns when to intervene and when to let inference proceed directly and continuously adapting its policies based on operational experience.",
+        "identifiers": [
+          "SemanticScholar:a22173667625f56978c04ce791100f80bf8c0af7"
+        ],
+        "semantic_scholar_id": "a22173667625f56978c04ce791100f80bf8c0af7",
+        "canonical_id": "arXiv:2609.19203",
+        "arxiv_id": "2609.19203",
+        "authors": [
+          "Suparna Bhattacharya",
+          "Tarun Kumar",
+          "Cong Xu",
+          "Satish Kumar Mopur",
+          "Jia-Hao Li",
+          "Ashish Mishra",
+          "Aalap Tripathy",
+          "Ann Mary Justine Koomthanam",
+          "Martin Foltin",
+          "Ian T. Foster"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30057",
+      "identity_tokens": [
+        "id:SemanticScholar:2c7ac604a130f59e8a1b84a9bac69d50ff9392cf",
+        "id:arXiv:2609.30057",
+        "title:krex concurrent kernel benchmarking on shared gpus via regiongranular exclusivity",
+        "url:https://arxiv.org/abs/2609.30057"
+      ],
+      "record": {
+        "title": "KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity",
+        "source_url": "https://arxiv.org/abs/2609.30057",
+        "year": 2026,
+        "published": "2026-09-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM agents automate GPU kernel optimization by repeatedly composing candidates and measuring their duration on real GPUs. Existing systems preserve measurement fidelity by reserving a GPU for an entire agent session or benchmarking command. However, this results in poor utilization because only a small fraction of command execution requires exclusive GPU access. Sharing GPUs could recover this idle capacity, but introduces contention that compromises measurement fidelity and misdirects the agent's search. We present KREX, a runtime for concurrent kernel agent benchmarking with region-granular exclusivity. KREX lets agents mark critical regions involving timing-sensitive operations within a benchmarking command. The runtime then enforces exclusivity within marked regions and allows concurrent execution outside them, achieving high throughput while preserving measurement fidelity. To enforce in-region exclusivity, KREX blocks new competing GPU submissions and drains outstanding work before freezing sibling processes and isolating CPU cores, protecting both GPU execution and the host threads that drive measurements. To maximize off-region concurrency, KREX reuses GPU contexts in persistent context processes to avoid repeated, node-wide serialized context creation. We evaluate KREX on NVIDIA and AMD GPUs. Compared with command-granular exclusivity baselines, KREX delivers up to $3.4\\times$ the benchmarking throughput with a negligible p95 timing inflation of $0.30\\%$, $1.58\\%$, and $3.90\\%$ for kernels longer than 10 ms, 1 ms, and 0.1 ms, respectively.",
+        "identifiers": [
+          "SemanticScholar:2c7ac604a130f59e8a1b84a9bac69d50ff9392cf"
+        ],
+        "semantic_scholar_id": "2c7ac604a130f59e8a1b84a9bac69d50ff9392cf",
+        "canonical_id": "arXiv:2609.30057",
+        "arxiv_id": "2609.30057",
+        "authors": [
+          "Tian-Yu Feng",
+          "Hao-Xuan Yu",
+          "Tian-Yuan Wu",
+          "Ling-Yun Yang",
+          "Dao-Cheng Ying",
+          "Yu-Xiao Wang",
+          "Rui-Bo Fan",
+          "Ying-Hao Yu",
+          "Guo-Dong Yang",
+          "Li-Ping Zhang",
+          "Wei Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f22343fd8c790f36519a46b5752afd9a441062b3b7ff78aedefd95f7d800e0df",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8fb8cfc905a65874-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.10523",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.10523",
+    "identity_tokens": [
+      "arXiv:2511.10523"
+    ],
+    "reason": "会話memory benchmark本文は文脈規模ごとのcost trade-off、要約抽出で大規模会話を短縮する構成を扱い、agentic memory系統には近い。一方、中心成果はbenchmark/評価で、一般LLM inference servingの具体的改善は限定的。",
+    "first_checked_at": "2026-10-07T10:48:23+00:00",
+    "last_checked_at": "2026-10-07T10:48:23+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Convomem Benchmark: Why Your First 150 Conversations Don't Need RAG"
+  },
+  "processed_at": "2026-10-07T10:48:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8fb8cfc905a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

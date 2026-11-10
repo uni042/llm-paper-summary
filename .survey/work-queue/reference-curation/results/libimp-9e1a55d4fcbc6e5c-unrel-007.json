@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e1a55d4fcbc6e5c-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1604.01696",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1604.01696",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1604.01696",
+      "arXiv:1604.01696"
+    ],
+    "reason": "常識物語理解のコーパスと評価枠組みを構築するNLPデータセット研究で、推論基盤効率化ではない。",
+    "first_checked_at": "2026-10-03T15:16:51+00:00",
+    "last_checked_at": "2026-10-03T15:16:51+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "A Corpus and Evaluation Framework for Deeper Understanding of Commonsense Stories"
+  },
+  "processed_at": "2026-10-03T15:16:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e1a55d4fcbc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

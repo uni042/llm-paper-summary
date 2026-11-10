@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-895c1612f0809ff0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3600006.3613145",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3600006.3613145",
+    "identity_tokens": [
+      "DOI:10.1145/3600006.3613145"
+    ],
+    "reason": "タイトルで明示された研究対象は、分散学習の障害復旧をメモリ内チェックポイントで高速化する仕組みである。推論サービングやLLM実行時のKVキャッシュ・推論用階層メモリ管理ではなく、現行サーベイで凍結中の学習専用システム技術なのでタイトル段階で対象外とした。一次要旨と本文は確認していない。",
+    "first_checked_at": "2026-09-30T09:52:33+00:00",
+    "last_checked_at": "2026-10-12T14:54:01+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 264",
+      "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[8]"
+    ],
+    "title": "GEMINI: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints"
+  },
+  "processed_at": "2026-10-12T14:54:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-895c1612f080",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

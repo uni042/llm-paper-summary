@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f376ec2afa400443-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.13549",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.13549",
+    "identity_tokens": [
+      "arXiv:2306.13549"
+    ],
+    "reason": "マルチモーダル大規模言語モデルのアーキテクチャ・学習・データ・評価・幻覚等を広く整理する総合サーベイで、推論システム効率化を主対象としない。",
+    "first_checked_at": "2026-10-03T17:50:30+00:00",
+    "last_checked_at": "2026-10-03T17:50:30+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+      "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+    ],
+    "title": "A survey on multimodal large language models"
+  },
+  "processed_at": "2026-10-03T17:50:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f376ec2afa40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

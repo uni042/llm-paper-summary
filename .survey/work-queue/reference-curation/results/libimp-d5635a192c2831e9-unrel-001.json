@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5635a192c2831e9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.18324",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.18324",
+    "identity_tokens": [
+      "arXiv:2606.18324"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.18324. Abstract summary: SWave is a complex-valued recurrent language model (169.26M parameters, D=384, L=16, T=2048) trained on FineWeb-Edu using 2xH100 NVL. It was designed around three founding premises: that representing language as complex waves rather than real-valued numbers enables richer information encoding; that a Cayley-parameterised unitary Out of scope: Recurrent LM retrospective/training; no inference-efficiency result.",
+    "first_checked_at": "2026-10-05T12:02:46+00:00",
+    "last_checked_at": "2026-10-05T12:02:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "title": "Why SWAVE May Not Be All You Need:A Concept-Evolution Retrospective on Complex-Valued Recurrent Language Models"
+  },
+  "processed_at": "2026-10-05T12:02:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5635a192c28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

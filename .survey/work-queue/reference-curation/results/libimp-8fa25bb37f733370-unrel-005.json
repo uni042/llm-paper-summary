@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8fa25bb37f733370-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.06671",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.06671",
+    "identity_tokens": [
+      "arXiv:2503.06671"
+    ],
+    "reason": "画像超解像Transformerのattention置換で、画像品質と遅延を最適化する研究。",
+    "first_checked_at": "2026-10-05T14:29:14+00:00",
+    "last_checked_at": "2026-10-05T14:29:14+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+    ],
+    "title": "Emulating Self-attention with Convolution for Efficient Image Super-Resolution"
+  },
+  "processed_at": "2026-10-05T14:29:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8fa25bb37f73",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

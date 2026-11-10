@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-fbedc67bdbaba21b-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2411.02571",
+  "reason": "本文はMLLMをbi-encoder retrieverとしてfine-tuneする情報検索研究で、appendixにretrieval latency/storageの実測がある一方、MM-Embed自体はCLIP/BLIPより大きく遅い。結論で小型retrieverへのdistillationを将来課題として示すが、本論文はLLM inference最適化手法ではなく、適用範囲との接続は弱い。",
+  "title": "MM-Embed: Universal Multimodal Retrieval with Multimodal LLMs",
+  "identity_tokens": [
+    "arXiv:2411.02571"
+  ],
+  "linked_from": [
+    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbedc67bdbab",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

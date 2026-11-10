@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6e2a34ba963ef56b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.30785",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.30785",
+    "identity_tokens": [
+      "arXiv:2608.30785"
+    ],
+    "reason": "In a content-moderation skill-bundle harness (n=200), the selected configuration removes 38.1% of bundle content and 10.4% of runtime tokens; compressed accuracy is 89% versus 91–92% in uncompressed baselines. The evaluated object is agent skill/prompt content, not model weights or serving infrastructure, and evidence is from one application.",
+    "first_checked_at": "2026-10-05T07:48:22+00:00",
+    "last_checked_at": "2026-10-05T07:48:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+      "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+    ],
+    "title": "SkillZip Pro: Execution-Aware Dynamic Compression of Progressively Loaded Skills for Self-Evolving Agents"
+  },
+  "processed_at": "2026-10-05T07:48:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6e2a34ba963e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

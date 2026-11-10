@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-78e7b00d8cb4e117-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2010.11125",
+  "reason": "The paper is a many-to-many neural machine-translation system, not an LLM serving or inference-systems paper. Its full text does describe language-specific sparse parameter layers and says they scale model capacity without significantly changing inference time, so there is a weak technical adjacency to sparse inference architectures. The contribution is capacity scaling and translation quality across languages, not LLM inference-time compression or a measured efficiency improvement; it is therefore borderline rather than accepted.",
+  "title": "Beyond English-Centric Multilingual Machine Translation",
+  "identity_tokens": [
+    "id:arXiv:2010.11125",
+    "url:https://arxiv.org/abs/2010.11125"
+  ],
+  "linked_from": [
+    "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78e7b00d8cb4",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4c64d127d67467b8-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.02059",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.02059",
+    "identity_tokens": [
+      "arXiv:2608.02059"
+    ],
+    "reason": "Primary abstract: Recent advances in unified multimodal models have significantly improved text-guided image editing abilities. In particular, models such as Nano-Banana-Pro and GPT-Image-2 demonstrate emerging capabilities in multi-source image editing (MIE), including tasks s Image-editing evaluation benchmark, not inference efficiency.",
+    "first_checked_at": "2026-10-05T03:26:04+00:00",
+    "last_checked_at": "2026-10-05T03:26:04+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "MIEScore: Human-Aligned Evaluation for Multi-Source Image Editing"
+  },
+  "processed_at": "2026-10-05T03:26:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c64d127d674",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

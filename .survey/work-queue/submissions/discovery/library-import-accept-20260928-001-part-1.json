@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Attention Is All You Need for KV Cache in Diffusion LLMs",
+      "source_url": "https://arxiv.org/abs/2510.14973",
+      "year": 2025,
+      "published": "2025-10-16",
+      "abstract": "This work studies how to adaptively recompute key-value (KV) caches for diffusion large language models (DLMs) to maximize prediction accuracy while minimizing decoding latency. Prior methods'decoders recompute QKV for all tokens at every denoising step and layer, despite KV states changing little across most steps, especially in shallow layers, leading to substantial redundancy. We make three observations: (1) distant ${\\bf MASK}$ tokens primarily act as a length-bias and can be cached block-wise beyond the active prediction window; (2) KV dynamics increase with depth, suggesting that selective refresh starting from deeper layers is sufficient; and (3) the most-attended token exhibits the smallest KV drift, providing a conservative lower bound on cache change for other tokens. Building on these, we propose ${\\bf Elastic-Cache}$, a training-free, architecture-agnostic strategy that jointly decides ${when}$ to refresh (via an attention-aware drift test on the most-attended token) and ${where}$ to refresh (via a depth-aware schedule that recomputes from a chosen layer onward while reusing shallow-layer caches and off-window MASK caches). Unlike fixed-period schemes, Elastic-Cache performs adaptive, layer-aware cache updates for diffusion LLMs, reducing redundant computation and accelerating decoding with negligible loss in generation quality. Experiments on LLaDA-Instruct, LLaDA-1.5, and LLaDA-V across mathematical reasoning and code generation tasks demonstrate consistent speedups: $8.7\\times$ on GSM8K (256 tokens), and $45.1\\times$ on longer sequences, while consistently maintaining higher accuracy than the baseline. Our method achieves significantly higher throughput ($6.8\\times$ on GSM8K) than existing confidence-based approaches while preserving generation quality, enabling practical deployment of diffusion LLMs.",
+      "canonical_id": "arXiv:2510.14973",
+      "arxiv_id": "2510.14973",
+      "doi": "10.48550/arXiv.2510.14973",
+      "authors": [
+        "Quan Nguyen-Tri",
+        "Mukul Ranjan",
+        "Zhi-Qiang Shen"
+      ],
+      "reason": "拡散LLMのKVキャッシュを層・反復段階ごとに適応更新し、冗長計算を削る直接的な推論最適化である。",
+      "priority": 50
+    },
+    {
+      "title": "HiSpec: Hierarchical Speculative Decoding for LLMs",
+      "source_url": "https://arxiv.org/abs/2510.01336",
+      "year": 2025,
+      "published": "2025-10-01",
+      "abstract": "Speculative decoding accelerates LLM inference by using a smaller draft model to speculate tokens that a larger target model verifies. Verification is often the bottleneck (e.g. verification is $4\\times$ slower than token generation when a 3B model speculates for a 70B target model), but most prior works focus only on accelerating drafting. $\\textit{``Intermediate\"}$ verification reduces verification time by discarding inaccurate draft tokens early, but existing methods incur substantial training overheads in incorporating the intermediate verifier, increase the memory footprint to orchestrate the intermediate verification step, and compromise accuracy by relying on approximate heuristics. We propose $\\underline{\\textit{Hi}}\\textit{erarchical }\\underline{\\textit{Spec}}\\textit{ulative Decoding (HiSpec)}$, a framework for high-throughput speculative decoding that exploits $\\textit{early-exit (EE) models}$ for low-overhead intermediate verification. EE models allow tokens to exit early by skipping layer traversal and are explicitly trained so that hidden states at selected layers can be interpreted, making them uniquely suited for intermediate verification without drastically increasing compute and memory overheads. To improve resource-efficiency even further, we design a methodology that enables HiSpec to re-use key-value caches and hidden states between the draft, intermediate verifier, and target models. To maintain accuracy, HiSpec periodically validates the draft tokens accepted by the intermediate verifier against the target model. Our evaluations using various representative benchmarks and models show that HiSpec improves throughput by 1.28$\\times$ on average and by up to 2.01$\\times$ compared to the baseline single-layer speculation without compromising accuracy.",
+      "canonical_id": "arXiv:2510.01336",
+      "arxiv_id": "2510.01336",
+      "doi": "10.48550/arXiv.2510.01336",
+      "authors": [
+        "Avinash Kumar",
+        "Sujay Sanghavi",
+        "Poulami Das"
+      ],
+      "reason": "早期終了モデルを中間検証器に使い、KVキャッシュと隠れ状態を再利用する投機的デコード基盤である。",
+      "priority": 50
+    },
+    {
+      "title": "RServe: Overlapping Encoding and Prefill for Efficient LMM Inference",
+      "source_url": "https://arxiv.org/abs/2509.24381",
+      "year": 2025,
+      "published": "2025-09-29",
+      "abstract": "Large multimodal models (LMMs) typically employ an encoding module to transform multimodal data inputs into embeddings, which are then fed to language models for further processing. However, efficiently serving LMMs remains highly challenging due to the inherent complexity of their inference pipelines. Traditional serving engines co-locate the encoding module and the language model, leading to significant resource interference and tight data dependency. Recent studies have alleviated this issue by disaggregating the encoding module from the model, following a design style of prefill-decode disaggregation. Nevertheless, these approaches fail to fully exploit parallelism both within individual requests (intra-request) and across multiple requests (inter-request). To overcome the limitation, we propose REDServe, an LMM inference system that efficiently orchestrates intra- and inter-request pipelines. REDServe is designed to reduce low latency and maximize parallelism at both intra- and inter-request granularities. Built on the disaggregated architecture of the encoding module and language model, REDServe adopts a fine-grained scheduling method that overlaps multimodal encoding with the forward computation of the language model within a single request. For inter-request pipeline, REDServe leverages schedulable tokens and token budgets to balance computational loads across micro-batches. Combined with chunked prefill, this enables a novel scheduling strategy that coordinates the execution of intra- and inter-request pipelines. Experimental evaluations on representative LMMs show that REDServe achieves substantial latency reduction of up to 66% while improving throughput by up to 109%, significantly outperforming existing serving approaches.",
+      "canonical_id": "arXiv:2509.24381",
+      "arxiv_id": "2509.24381",
+      "doi": "10.48550/arXiv.2509.24381",
+      "authors": [
+        "Tianyu Guo",
+        "Tianming Xu",
+        "Xian-Jie Chen",
+        "Jun-Ru Chen",
+        "Nong Xiao",
+        "Xian-Wei Zhang"
+      ],
+      "reason": "マルチモーダル符号化とプリフィルを要求内・要求間で重畳する配信システムである。",
+      "priority": 50
+    },
+    {
+      "title": "HAP: Hybrid Adaptive Parallelism for Efficient Mixture-of-Experts Inference",
+      "source_url": "https://arxiv.org/abs/2508.19373",
+      "year": 2025,
+      "published": "2025-08-26",
+      "abstract": "Current inference systems for Mixture-of-Experts (MoE) models primarily employ static parallelization strategies. However, these static approaches cannot consistently achieve optimal performance across different inference scenarios, as they lack the flexibility to adapt to varying computational requirements. In this work, we propose HAP (Hybrid Adaptive Parallelism), a novel method that dynamically selects hybrid parallel strategies to enhance MoE inference efficiency. The fundamental innovation of HAP lies in hierarchically decomposing MoE architectures into two distinct computational modules: the Attention module and the Expert module, each augmented with a specialized inference latency simulation model. This decomposition promotes the construction of a comprehensive search space for seeking model parallel strategies. By leveraging Integer Linear Programming (ILP), HAP could solve the optimal hybrid parallel configurations to maximize inference efficiency under varying computational constraints. Our experiments demonstrate that HAP consistently determines parallel configurations that achieve comparable or superior performance to the TP strategy prevalent in mainstream inference systems. Compared to the TP-based inference, HAP-based inference achieves speedups of $1.68 \\times, 1.77 \\times$, and $1.57 \\times$ on A100, A6000, and V100 GPU platforms, respectively. Furthermore, HAP showcases remarkable generalization capability, maintaining performance effectiveness across diverse MoE model configurations, including Mixtral and Qwen series models.",
+      "canonical_id": "arXiv:2508.19373",
+      "arxiv_id": "2508.19373",
+      "doi": "10.1109/ICPADS67057.2025.11322882",
+      "authors": [
+        "Hao-Ran Lin",
+        "Xian-Zhi Yu",
+        "Kang Zhao",
+        "Han Bao",
+        "Zongyuan Zhan",
+        "Ting Hu",
+        "Wu-Long Liu",
+        "Ze-Kun Yin",
+        "Xin Li",
+        "Wei-Guo Liu"
+      ],
+      "reason": "MoE推論の注意部と専門家部を分け、整数線形計画で並列方式を動的選択するシステムである。",
+      "priority": 50
+    },
+    {
+      "title": "Quantifying the Energy Consumption and Carbon Emissions of LLM Inference via Simulations",
+      "source_url": "https://arxiv.org/abs/2507.11417",
+      "year": 2025,
+      "published": "2025-07-15",
+      "abstract": "The environmental impact of Large Language Models (LLMs) is rising significantly, with inference now accounting for more than half of their total lifecycle carbon emissions. However, existing simulation frameworks, which are increasingly used to determine efficient LLM deployments, lack any concept of power and, therefore, cannot accurately estimate inference-related emissions. We present a simulation framework to assess the energy and carbon implications of LLM inference under varying deployment setups. First, we extend a high-fidelity LLM inference simulator with a GPU power model that estimates power consumption based on utilization metrics, enabling analysis across configurations like batch size, sequence length, and model parallelism. Second, we integrate simulation outputs into an energy system co-simulation environment to quantify carbon emissions under specific grid conditions and explore the potential of carbon-aware scheduling. Through scenario-based analysis, our framework reveals how inference parameters affect energy demand and carbon footprint, demonstrates a renewable offset potential of up to 69.2% in an illustrative deployment case, and provides a foundation for future carbon-aware inference infrastructure design.",
+      "canonical_id": "arXiv:2507.11417",
+      "arxiv_id": "2507.11417",
+      "doi": "10.48550/arXiv.2507.11417",
+      "authors": [
+        "M. Ozcan",
+        "Philipp Wiesner",
+        "Philipp Weiß",
+        "Odej Kao"
+      ],
+      "reason": "LLM推論シミュレータへGPU電力モデルを統合し、配置条件ごとの電力・炭素排出を評価する基盤である。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928",
+    "round": "library-import-accept-20260928-001",
+    "axis": "explicit-library-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "Libraryでaccept済みのDiscovery成果を正規Research候補へ取り込む。",
+    "candidate_count": 24,
+    "round_submission_index": 1,
+    "round_submission_count": 5
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-accept-20260928-001",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-accept-20260928-001.json",
+    "receipt": "sha256:66bb7d7842b6e932365464bc2d0543a9441255589c0181700af31415476ff3cb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928",
+    "summary": "Library上のaccept済みDiscovery成果をGitHubの正規Research候補へ反映する。"
+  }
+}

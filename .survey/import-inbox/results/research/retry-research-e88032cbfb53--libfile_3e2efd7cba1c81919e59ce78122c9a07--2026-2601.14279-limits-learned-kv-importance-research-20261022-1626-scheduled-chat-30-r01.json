@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "db8d8cde0cc23a408526a71307ee01026040da72341ee7981473cd83e6045dd7",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e88032cbfb53--libfile_3e2efd7cba1c81919e59ce78122c9a07--2026-2601.14279-limits-learned-kv-importance-research-20261022-1626-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2601.14279",
+  "worker_completed_at": "2026-10-22T16:26:45+09:00",
+  "worker_run_key": "20261022-1626-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4914,
+    "body_paragraphs": 35,
+    "method_chars": 928,
+    "method_paragraphs": 6,
+    "evaluation_chars": 137,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 137 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 137 < 500",
+    "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2601.14279-on-the-limits-of-learned-importance-scoring-for-kv-cache-compression.md と 13 段落 / 2685文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-22T18:00:12+00:00"
+}

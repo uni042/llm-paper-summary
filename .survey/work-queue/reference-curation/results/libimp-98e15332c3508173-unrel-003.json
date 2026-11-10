@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98e15332c3508173-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.06388",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.06388",
+    "identity_tokens": [
+      "arXiv:2605.06388"
+    ],
+    "reason": "The paper compares reconstruction and semantic latent spaces for robot world models. Its objective is representation quality for robotics, not LLM inference efficiency.",
+    "first_checked_at": "2026-10-06T13:32:14+00:00",
+    "last_checked_at": "2026-10-06T13:32:14+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Reconstruction or Semantics? What Makes a Latent Space Useful for Robotic World Models"
+  },
+  "processed_at": "2026-10-06T13:32:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98e15332c350",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

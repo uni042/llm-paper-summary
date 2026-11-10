@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-bada7b8565efe629-unrel-016",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2605.08346",
+  "reason": "Long-form hallucination detectionのsanity-check/scorerはLLM traceのerror detection品質を扱う。軽量scorerでも推論latency/cost改善の実証がなく、主眼は検出性能。",
+  "title": "Sanity Checks for Long-Form Hallucination Detection",
+  "identity_tokens": [
+    "arxiv:2605.08346",
+    "doi:10.48550/arxiv.2605.08346",
+    "PRIMARY:https://arxiv.org/abs/2605.08346v1"
+  ],
+  "linked_from": [
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bada7b8565ef",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

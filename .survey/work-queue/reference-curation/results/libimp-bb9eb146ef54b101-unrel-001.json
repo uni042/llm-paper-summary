@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bb9eb146ef54b101-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.27995",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.27995",
+    "identity_tokens": [
+      "arXiv:2605.27995"
+    ],
+    "reason": "題名は複数タスクでの非同期関数呼出し能力の評価であり、エージェントの能力ベンチマークを主題とする。実行基盤の非同期スケジューリングやLLMサービング高速化を提案する題名ではないため対象外。",
+    "first_checked_at": "2026-10-20T07:55:02+00:00",
+    "last_checked_at": "2026-10-20T07:55:02+00:00",
+    "linked_from": [],
+    "title": "AsyncTool: Evaluating the Asynchronous Function Calling Capability under Multi-Task Scenarios"
+  },
+  "processed_at": "2026-10-20T07:55:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb9eb146ef54",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

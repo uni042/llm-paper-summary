@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9c02f2f25db900d0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.11892",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.11892",
+    "identity_tokens": [
+      "arXiv:2505.11892"
+    ],
+    "reason": "The fast regime depends on bounded entries, and the paper does not demonstrate end-to-end LLM decoding speed or deployment compatibility.",
+    "first_checked_at": "2026-10-05T14:39:50+00:00",
+    "last_checked_at": "2026-10-05T14:39:50+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fast RoPE Attention: Combining the Polynomial Method and Fast Fourier Transform"
+  },
+  "processed_at": "2026-10-05T14:39:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9c02f2f25db9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

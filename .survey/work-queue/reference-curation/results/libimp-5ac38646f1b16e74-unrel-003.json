@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5ac38646f1b16e74-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.22752",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.22752",
+    "identity_tokens": [
+      "DOI:10.1145/3799682.3840567",
+      "DOI:10.48550/arxiv.2608.22752",
+      "arXiv:2608.22752"
+    ],
+    "reason": "長期エージェント知識の型別保持・要約・検索を改善するアプリケーション記憶管理で、LLM推論ランタイムの速度・KV・メモリ階層最適化が最終適用先ではない。",
+    "first_checked_at": "2026-10-02T10:58:57+00:00",
+    "last_checked_at": "2026-10-02T10:58:57+00:00",
+    "linked_from": [],
+    "title": "The Compaction Cliff in Long-Running AI Agent Memory"
+  },
+  "processed_at": "2026-10-02T10:58:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5ac38646f1b1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

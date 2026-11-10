@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5375fc5d74d9262a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.11605",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.11605",
+    "identity_tokens": [
+      "arXiv:2602.11605"
+    ],
+    "reason": "Rec2PM compresses long user histories into recurrent preference memory and reports inference memory/latency gains, but it is a generative recommender-specific architecture rather than a general-purpose LLM inference method.",
+    "first_checked_at": "2026-10-05T13:44:06+00:00",
+    "last_checked_at": "2026-10-05T13:44:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+    ],
+    "title": "Recurrent Preference Memory for Efficient Long-Sequence Generative Recommendation"
+  },
+  "processed_at": "2026-10-05T13:44:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5375fc5d74d9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

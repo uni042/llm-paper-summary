@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-42efc4a5f68e0c89-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.13287",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.13287",
+    "identity_tokens": [
+      "arXiv:2609.13287"
+    ],
+    "reason": "The central contribution is a trained GUI agent and benchmark capability result; the abstract’s efficiency motivation is not substantiated by a system-level speed measurement in the inspected evaluation.",
+    "first_checked_at": "2026-10-05T06:58:58+00:00",
+    "last_checked_at": "2026-10-05T06:58:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+    ],
+    "title": "LLaDA-UI: Bringing Block-wise Diffusion to Vision-Language GUI Agents"
+  },
+  "processed_at": "2026-10-05T06:58:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-42efc4a5f68e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260917T230300Z-scheduled-chat-discovery-specialist-0800",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-146f944f1c748398",
+      "claim_id": "claim-dbef48f08bbefbb3ea1b0135",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-dbef48f08bbefbb3ea1b0135",
+      "claimed_at": "2026-09-17T23:02:23+00:00",
+      "expires_at": "2026-09-18T00:32:23+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-146f944f1c748398"
+      ],
+      "job": {
+        "job_id": "job-research-146f944f1c748398",
+        "type": "research",
+        "parent_job_id": "job-eb22aac21645da23",
+        "priority": 85,
+        "canonical_id": "arXiv:2506.06295",
+        "title": "dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching",
+        "source_url": "https://arxiv.org/abs/2506.06295",
+        "paper_path": "papers/inference/06-kv-cache-memory/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "selection_reason": "diffusion LLMの静的promptと部分的に変化するresponseの安定性を利用し、long-interval prompt cachingとfeature-similarity-guided partial response updateを組み合わせるtraining-free adaptive cache。LLaDA/Dreamで最大9.1倍のspeedupを報告し、dLLM KV/cache系統の基礎として重要。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-17T19:08:05+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-17T22:31:19+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-a65fafc0985029a9a69cb193"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-a65fafc0985029a9a69cb193.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-17T23:02:23+00:00",
+  "checkpoint_released": 0
+}

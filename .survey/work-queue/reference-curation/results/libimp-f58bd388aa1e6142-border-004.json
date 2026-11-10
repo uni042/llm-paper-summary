@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f58bd388aa1e6142-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3789240.3829347",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3789240.3829347",
+    "identity_tokens": [
+      "DOI:10.1145/3789240.3829347"
+    ],
+    "reason": "要旨上はLLM推論/servingに直接関連するが、一次本文を取得できず、機構・評価・限界を確認できないためborderlineとする。再確認できる一次本文URLまたは著者公開版は今回確認できなかった。",
+    "first_checked_at": "2026-10-05T08:30:21+00:00",
+    "last_checked_at": "2026-10-05T08:30:21+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md"
+    ],
+    "title": "DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving"
+  },
+  "processed_at": "2026-10-05T08:30:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f58bd388aa1e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

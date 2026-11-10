@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a41dce75e4681845-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.01534",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.01534",
+    "identity_tokens": [
+      "arXiv:2608.01534"
+    ],
+    "reason": "Hard symbolic-reasoning tasks such as Sudoku, maze pathfinding, and ARC remain challenging for LLMs due to their fixed-depth autoregressive reasoning, which limits systematic search, refinement, and backtracking. While recursive models such as Hierarchical Reasoning Model (HRM) and Tiny Recursive Model (TRM) address this limitation through iterative latent-state refinement, they are typically task-specific and do not leverage pretrained language priors. We propose R-Qwen, a recursive reasoning framework built upon a pretrained Qwen backbone. R-Qwen repeatedly refines a candidate solution through programmatic self-recursion and deep supervision, combining the structured iterative computation of recursive models with the linguistic and reasoning priors of pretrained LLMs. We further adapt Hierarchical Supervision Weighting (HSW) to autoregressive models by exponentially weighting losses across recursive steps. HSW reduces gradient variance by at least 50\\%, improves the signal-to-noise ratio of stochastic gradients, and accelerates convergence. Across eight challenging benchmarks, R-Qwen consistently outperforms prior recursive reasoning models and substantially larger LLMs while using a comparable number of trainable parameters. Notably, on ARC-AGI dataset, our model achieves a 27.6\\% improvement over the baseline, highlighting the effectiveness of recursive refinement for general symbolic reasoning. These results suggest that recursive reasoning mechanisms and pretrained language model priors are complementary approaches for improving symbolic puzzle-solving. Code and models will be released after acceptance.",
+    "first_checked_at": "2026-10-05T09:17:59+00:00",
+    "last_checked_at": "2026-10-05T09:17:59+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+    ],
+    "title": "Recursive Vision Language Models for General Symbolic Reasoning"
+  },
+  "processed_at": "2026-10-05T09:17:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a41dce75e468",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

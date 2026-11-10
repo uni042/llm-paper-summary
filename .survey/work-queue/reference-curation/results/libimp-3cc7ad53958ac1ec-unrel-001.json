@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3cc7ad53958ac1ec-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.06440",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.06440",
+    "identity_tokens": [
+      "arXiv:2307.06440"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2307.06440. Abstract summary: The computation necessary for training Transformer-based language models has skyrocketed in recent years. This trend has motivated research on efficient training algorithms designed to improve training, validation, and downstream performance faster than standard training. In this work, we revisit three categories of such algorit Out of scope: Transformer training algorithm efficiency, training-only.",
+    "first_checked_at": "2026-10-05T12:32:44+00:00",
+    "last_checked_at": "2026-10-05T12:32:44+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+    ],
+    "title": "No Train No Gain: Revisiting Efficient Training Algorithms For Transformer-based Language Models"
+  },
+  "processed_at": "2026-10-05T12:32:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3cc7ad53958a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

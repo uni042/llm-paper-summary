@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4b481870c37c7021-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tcsvt.2025.3596747",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tcsvt.2025.3596747",
+    "identity_tokens": [
+      "DOI:10.1109/tcsvt.2025.3596747"
+    ],
+    "reason": "Mamba architecture for talking-head video generation, not LLM/VLM inference.",
+    "first_checked_at": "2026-10-06T06:40:06+00:00",
+    "last_checked_at": "2026-10-06T06:40:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+    ],
+    "title": "TH-Mamba: Spatial-Temporal Correlation Learning for Mamba-Based Talking Head Generation"
+  },
+  "processed_at": "2026-10-06T06:40:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4b481870c37c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

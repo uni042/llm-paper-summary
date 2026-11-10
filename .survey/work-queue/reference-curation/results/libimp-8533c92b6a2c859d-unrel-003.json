@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8533c92b6a2c859d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.20614",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.20614",
+    "identity_tokens": [
+      "arXiv:2609.20614"
+    ],
+    "reason": "Frontier AI models are rapidly gaining the ability to exploit vulnerabilities in complex pieces of software. The risk is not theoretical, as evidenced by recent sandbox escapes performed by frontier models at OpenAI and Anthropic. Discussions of how to sandbox inference stack components often focus on components other than the inference engine itself (e.g., network proxies or code execution environments). However, the inference engine is an attractive target for a misaligned model. For example, if a model can trigger exploits in that engine merely by generating specially-crafted output tokens, the model can initiate a multi-step, to-the-bare-metal exploit chain in the engine, without relying on vulnerabilities in other components of the inference stack, and without assistance from externally-provided, maliciously-crafted input tokens. In this paper, we show that a misaligned model can perform inference engine fingerprinting to determine the specific engine (e.g., vLLM, SGLang) which executes the model. Once the engine has been fingerprinted, the model can leverage engine-specific exploits to take control of the engine using only carefully-selected output tokens. We provide concrete examples of model fingerprints in five popular engines, and demonstrate how realistic agentic harnesses allow a model to leverage those fingerprints to identify the local engine. We also describe a proof-of-concept, to-the-bare-metal exploit chain that originates from a fingerprinted (and subsequently compromised) inference engine. We conclude by discussing several ways that inference engines could be changed to make fingerprinting attacks more difficult.",
+    "first_checked_at": "2026-10-05T06:26:37+00:00",
+    "last_checked_at": "2026-10-05T06:26:37+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "Inference-Engine Fingerprinting Attacks are Practical: Exploring Model-Driven Environmental Discovery, Exploitation, and Escape"
+  },
+  "processed_at": "2026-10-05T06:26:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8533c92b6a2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

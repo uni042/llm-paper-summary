@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6fa0b95b962a351c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.15051",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.15051",
+    "identity_tokens": [
+      "arXiv:2608.15051"
+    ],
+    "reason": "電力変換器過渡応答のMamba-MoE surrogateによるシミュレーション/予測で、LLM inference対象外。",
+    "first_checked_at": "2026-10-05T08:30:19+00:00",
+    "last_checked_at": "2026-10-05T08:30:19+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+    ],
+    "title": "A Unified Mamba--MoE Surrogate for Closed-Loop Simulation and Measurement-Window Forecasting of Inverter Transients"
+  },
+  "processed_at": "2026-10-05T08:30:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6fa0b95b962a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6ca94b3f270bf581-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1007/s10586-026-06535-6",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1007/s10586-026-06535-6",
+    "identity_tokens": [
+      "DOI:10.1007/s10586-026-06535-6"
+    ],
+    "reason": "The packet has no primary abstract, and the DOI primary page was attempted but the retrieval tool reported it inaccessible; scope and paper details could not be verified.",
+    "first_checked_at": "2026-10-05T04:49:14+00:00",
+    "last_checked_at": "2026-10-05T04:49:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "A novel approach to detecting advanced persistent threats in imbalanced network traffic"
+  },
+  "processed_at": "2026-10-05T04:49:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6ca94b3f270b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

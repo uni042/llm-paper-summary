@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-63f7533f3c67e117-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/taslpro.2026.3724410",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/taslpro.2026.3724410",
+    "identity_tokens": [
+      "DOI:10.1109/taslpro.2026.3724410"
+    ],
+    "reason": "IEEE publisher abstract pageを取得できず、Conformer/Speech model量子化の具体策を一次資料で確認できない。 試行URL: https://doi.org/10.1109/TASLPRO.2026.3724410; IEEE publisher abstract pageを取得できず、Conformer/Speech model量子化の具体策を一次資料で確認できない。",
+    "first_checked_at": "2026-10-14T06:02:18+00:00",
+    "last_checked_at": "2026-10-14T06:02:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Toward Extremely Low-Bit and Multi-Precision Conformer and Speech Foundation Model Quantization"
+  },
+  "processed_at": "2026-10-14T06:02:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-63f7533f3c67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

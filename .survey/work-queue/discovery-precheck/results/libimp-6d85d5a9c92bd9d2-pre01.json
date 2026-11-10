@@ -1,0 +1,346 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6d85d5a9c92bd9d2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6d85d5a9c92b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3694715.3695948",
+    "OpenReview:cFu7ze7xUm",
+    "arXiv:2408.11850",
+    "arXiv:2501.14743"
+  ],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9069f46f51270662db00be4281270163c7b4d158",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 1,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "openreview_notes",
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T18:58:23.461880+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3694715.3695948",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "OpenReview:cFu7ze7xUm",
+      "status": "provider_error",
+      "lookup_route": "openreview_notes",
+      "error": "explicit identifier lookup failed: HTTP Error 403: Forbidden"
+    },
+    {
+      "requested_id": "arXiv:2408.11850",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.14743",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism",
+      "source_url": "https://arxiv.org/abs/2404.09526",
+      "year": 2024,
+      "published": "2024-04-15",
+      "venue": "Symposium on Operating Systems Principles",
+      "citation_count": 200,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The context window of large language models (LLMs) is rapidly increasing, leading to a huge variance in resource usage between different requests as well as between different phases of the same request. Restricted by static parallelism strategies, existing LLM serving systems cannot efficiently utilize the underlying resources to serve variable-length requests in different phases. To address this problem, we propose a new parallelism paradigm, elastic sequence parallelism (ESP), to elastically adapt to the variance across different requests and phases. Based on ESP, we design and build LoongServe, an LLM serving system that (1) improves computation efficiency by elastically adjusting the degree of parallelism in real-time, (2) improves communication efficiency by reducing key-value cache migration overhead and overlapping partial decoding communication with computation, and (3) improves GPU memory efficiency by reducing key-value cache fragmentation across instances. Our evaluation under diverse real-world datasets shows that LoongServe improves the throughput by up to 3.85× compared to chunked prefill and 5.81× compared to prefill-decoding disaggregation.",
+      "identifiers": [
+        "SemanticScholar:eb06e95dd3eb5a916e52d2e463f474ef4967d8ca"
+      ],
+      "semantic_scholar_id": "eb06e95dd3eb5a916e52d2e463f474ef4967d8ca",
+      "canonical_id": "arXiv:2404.09526",
+      "arxiv_id": "2404.09526",
+      "doi": "10.1145/3694715.3695948",
+      "authors": [
+        "Bing-Ya Wu",
+        "Sheng-Yu Liu",
+        "Yinmin Zhong",
+        "Peng Sun",
+        "Xuanzhe Liu",
+        "Xin Jin"
+      ],
+      "priority": 210,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 200,
+        "citation_count": 200,
+        "total": 210,
+        "is_fresh": false,
+        "freshness_age_days": 901,
+        "matched_prestigious_venue": "Symposium on Operating Systems Principles"
+      }
+    },
+    {
+      "title": "Parallel Speculative Decoding with Adaptive Draft Length",
+      "source_url": "https://arxiv.org/abs/2408.11850",
+      "year": 2024,
+      "published": "2024-08-13",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 100,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD), where an extra draft model is employed to provide multiple draft tokens first, and then the original target model verifies these tokens in parallel, has shown great power for LLM inference acceleration. However, existing SD methods suffer from the mutual waiting problem, i.e., the target model gets stuck when the draft model is guessing tokens, and vice versa. This problem is directly incurred by the asynchronous execution of the draft model and the target model and is exacerbated due to the fixed draft length in speculative decoding. To address these challenges, we propose a conceptually simple, flexible, and general framework to boost speculative decoding, namely Parallel spEculative decoding with Adaptive dRaft Length (PEARL). Specifically, PEARL proposes pre-verify to verify the first draft token in advance during the drafting phase, and post-verify to generate more draft tokens during the verification phase. PEARL parallels the drafting phase and the verification phase via applying the two strategies, and achieves adaptive draft length for different scenarios, which effectively alleviates the mutual waiting problem. Experiments on various text generation benchmarks demonstrate the effectiveness of our PEARL, leading to a superior speed up performance up to 4.43$\\times$ and 1.50$\\times$, compared to auto-regressive decoding and vanilla speculative decoding, respectively. Our code is available at https://github.com/smart-lty/ParallelSpeculativeDecoding.",
+      "identifiers": [
+        "SemanticScholar:ace3d2bcecc658a97632c9be4ce461450271eb5b"
+      ],
+      "semantic_scholar_id": "ace3d2bcecc658a97632c9be4ce461450271eb5b",
+      "canonical_id": "arXiv:2408.11850",
+      "arxiv_id": "2408.11850",
+      "doi": "10.48550/arXiv.2408.11850",
+      "authors": [
+        "Tianyu Liu",
+        "Yun Li",
+        "Qitan Lv",
+        "Kai Liu",
+        "Jian-Chen Zhu",
+        "Winston Hu",
+        "Xiao Sun"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 100,
+        "citation_count": 100,
+        "total": 110,
+        "is_fresh": false,
+        "freshness_age_days": 781,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "KVDirect: Distributed Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2501.14743",
+      "year": 2024,
+      "published": "2024-12-13",
+      "venue": "arXiv.org",
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have become the new foundation for many applications, reshaping human society like a storm. Disaggregated inference, which separates prefill and decode stages, is a promising approach to improving hardware utilization and service quality. However, due to inefficient inter-node communication, existing systems restrict disaggregated inference to a single node, limiting resource allocation flexibility and reducing service capacity. This paper introduces KVDirect, which optimizes KV cache transfer to enable a distributed disaggregated LLM inference. KVDirect achieves this through the following contributions. First, we propose a novel tensor-centric communication mechanism that reduces the synchronization overhead in traditional distributed GPU systems. Second, we design a custom communication library to support dynamic GPU resource scheduling and efficient KV cache transfer. Third, we introduce a pull-based KV cache transfer strategy that reduces GPU resource idling and improves latency. Finally, we implement KVDirect as an open-source LLM inference framework. Our evaluation demonstrates that KVDirect reduces per-request latency by 55% compared to the baseline across diverse workloads under the same resource constraints.",
+      "identifiers": [
+        "SemanticScholar:03cf3b22608fbaaf3a37ff18434f4e7a8484a0d8"
+      ],
+      "semantic_scholar_id": "03cf3b22608fbaaf3a37ff18434f4e7a8484a0d8",
+      "canonical_id": "arXiv:2501.14743",
+      "arxiv_id": "2501.14743",
+      "doi": "10.48550/arXiv.2501.14743",
+      "authors": [
+        "Shi-Yang Chen",
+        "Rain Jiang",
+        "Dezhi Yu",
+        "Jinlai Xu",
+        "M. Chao",
+        "Fanlong Meng",
+        "Chenyu Jiang",
+        "Wei Xu",
+        "Hang Liu"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 18,
+        "is_fresh": false,
+        "freshness_age_days": 659,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2404.09526",
+      "identity_tokens": [
+        "id:DOI:10.1145/3694715.3695948",
+        "id:SemanticScholar:eb06e95dd3eb5a916e52d2e463f474ef4967d8ca",
+        "id:arXiv:2404.09526",
+        "title:loongserve efficiently serving longcontext large language models with elastic sequence parallelism",
+        "url:https://arxiv.org/abs/2404.09526"
+      ],
+      "record": {
+        "title": "LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism",
+        "source_url": "https://arxiv.org/abs/2404.09526",
+        "year": 2024,
+        "published": "2024-04-15",
+        "venue": "Symposium on Operating Systems Principles",
+        "citation_count": 200,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The context window of large language models (LLMs) is rapidly increasing, leading to a huge variance in resource usage between different requests as well as between different phases of the same request. Restricted by static parallelism strategies, existing LLM serving systems cannot efficiently utilize the underlying resources to serve variable-length requests in different phases. To address this problem, we propose a new parallelism paradigm, elastic sequence parallelism (ESP), to elastically adapt to the variance across different requests and phases. Based on ESP, we design and build LoongServe, an LLM serving system that (1) improves computation efficiency by elastically adjusting the degree of parallelism in real-time, (2) improves communication efficiency by reducing key-value cache migration overhead and overlapping partial decoding communication with computation, and (3) improves GPU memory efficiency by reducing key-value cache fragmentation across instances. Our evaluation under diverse real-world datasets shows that LoongServe improves the throughput by up to 3.85× compared to chunked prefill and 5.81× compared to prefill-decoding disaggregation.",
+        "identifiers": [
+          "SemanticScholar:eb06e95dd3eb5a916e52d2e463f474ef4967d8ca"
+        ],
+        "semantic_scholar_id": "eb06e95dd3eb5a916e52d2e463f474ef4967d8ca",
+        "canonical_id": "arXiv:2404.09526",
+        "arxiv_id": "2404.09526",
+        "doi": "10.1145/3694715.3695948",
+        "authors": [
+          "Bing-Ya Wu",
+          "Sheng-Yu Liu",
+          "Yinmin Zhong",
+          "Peng Sun",
+          "Xuanzhe Liu",
+          "Xin Jin"
+        ],
+        "priority": 210,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 200,
+          "citation_count": 200,
+          "total": 210,
+          "is_fresh": false,
+          "freshness_age_days": 901,
+          "matched_prestigious_venue": "Symposium on Operating Systems Principles"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.11850",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.11850",
+        "id:SemanticScholar:ace3d2bcecc658a97632c9be4ce461450271eb5b",
+        "id:arXiv:2408.11850",
+        "title:parallel speculative decoding with adaptive draft length",
+        "url:https://arxiv.org/abs/2408.11850"
+      ],
+      "record": {
+        "title": "Parallel Speculative Decoding with Adaptive Draft Length",
+        "source_url": "https://arxiv.org/abs/2408.11850",
+        "year": 2024,
+        "published": "2024-08-13",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 100,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD), where an extra draft model is employed to provide multiple draft tokens first, and then the original target model verifies these tokens in parallel, has shown great power for LLM inference acceleration. However, existing SD methods suffer from the mutual waiting problem, i.e., the target model gets stuck when the draft model is guessing tokens, and vice versa. This problem is directly incurred by the asynchronous execution of the draft model and the target model and is exacerbated due to the fixed draft length in speculative decoding. To address these challenges, we propose a conceptually simple, flexible, and general framework to boost speculative decoding, namely Parallel spEculative decoding with Adaptive dRaft Length (PEARL). Specifically, PEARL proposes pre-verify to verify the first draft token in advance during the drafting phase, and post-verify to generate more draft tokens during the verification phase. PEARL parallels the drafting phase and the verification phase via applying the two strategies, and achieves adaptive draft length for different scenarios, which effectively alleviates the mutual waiting problem. Experiments on various text generation benchmarks demonstrate the effectiveness of our PEARL, leading to a superior speed up performance up to 4.43$\\times$ and 1.50$\\times$, compared to auto-regressive decoding and vanilla speculative decoding, respectively. Our code is available at https://github.com/smart-lty/ParallelSpeculativeDecoding.",
+        "identifiers": [
+          "SemanticScholar:ace3d2bcecc658a97632c9be4ce461450271eb5b"
+        ],
+        "semantic_scholar_id": "ace3d2bcecc658a97632c9be4ce461450271eb5b",
+        "canonical_id": "arXiv:2408.11850",
+        "arxiv_id": "2408.11850",
+        "doi": "10.48550/arXiv.2408.11850",
+        "authors": [
+          "Tianyu Liu",
+          "Yun Li",
+          "Qitan Lv",
+          "Kai Liu",
+          "Jian-Chen Zhu",
+          "Winston Hu",
+          "Xiao Sun"
+        ],
+        "priority": 110,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 100,
+          "citation_count": 100,
+          "total": 110,
+          "is_fresh": false,
+          "freshness_age_days": 781,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.14743",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.14743",
+        "id:SemanticScholar:03cf3b22608fbaaf3a37ff18434f4e7a8484a0d8",
+        "id:arXiv:2501.14743",
+        "title:kvdirect distributed disaggregated llm inference",
+        "url:https://arxiv.org/abs/2501.14743"
+      ],
+      "record": {
+        "title": "KVDirect: Distributed Disaggregated LLM Inference",
+        "source_url": "https://arxiv.org/abs/2501.14743",
+        "year": 2024,
+        "published": "2024-12-13",
+        "venue": "arXiv.org",
+        "citation_count": 18,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have become the new foundation for many applications, reshaping human society like a storm. Disaggregated inference, which separates prefill and decode stages, is a promising approach to improving hardware utilization and service quality. However, due to inefficient inter-node communication, existing systems restrict disaggregated inference to a single node, limiting resource allocation flexibility and reducing service capacity. This paper introduces KVDirect, which optimizes KV cache transfer to enable a distributed disaggregated LLM inference. KVDirect achieves this through the following contributions. First, we propose a novel tensor-centric communication mechanism that reduces the synchronization overhead in traditional distributed GPU systems. Second, we design a custom communication library to support dynamic GPU resource scheduling and efficient KV cache transfer. Third, we introduce a pull-based KV cache transfer strategy that reduces GPU resource idling and improves latency. Finally, we implement KVDirect as an open-source LLM inference framework. Our evaluation demonstrates that KVDirect reduces per-request latency by 55% compared to the baseline across diverse workloads under the same resource constraints.",
+        "identifiers": [
+          "SemanticScholar:03cf3b22608fbaaf3a37ff18434f4e7a8484a0d8"
+        ],
+        "semantic_scholar_id": "03cf3b22608fbaaf3a37ff18434f4e7a8484a0d8",
+        "canonical_id": "arXiv:2501.14743",
+        "arxiv_id": "2501.14743",
+        "doi": "10.48550/arXiv.2501.14743",
+        "authors": [
+          "Shi-Yang Chen",
+          "Rain Jiang",
+          "Dezhi Yu",
+          "Jinlai Xu",
+          "M. Chao",
+          "Fanlong Meng",
+          "Chenyu Jiang",
+          "Wei Xu",
+          "Hang Liu"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 18,
+          "citation_count": 18,
+          "total": 18,
+          "is_fresh": false,
+          "freshness_age_days": 659,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:3977784720e9d3083feff5fd09ff7fc64f996cb776f02c2389b873d8565cbb38",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

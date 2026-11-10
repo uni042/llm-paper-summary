@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-42ed9b8bef7d6235-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1711.09485",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1711.09485",
+    "identity_tokens": [
+      "arXiv:1711.09485"
+    ],
+    "reason": "入力ごとに畳み込みブロックをskipする動的CNNで計算量を30–90%削減する研究だが、最終適用先は画像認識用convolutional networkでありLLM/Transformer推論ではない。",
+    "first_checked_at": "2026-10-06T20:56:30+00:00",
+    "last_checked_at": "2026-10-06T20:56:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md"
+    ],
+    "title": "SkipNet: Learning Dynamic Routing in Convolutional Networks"
+  },
+  "processed_at": "2026-10-06T20:56:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-42ed9b8bef7d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

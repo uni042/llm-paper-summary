@@ -1,0 +1,229 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-936932a1899be34e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-936932a1899b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2406.11823",
+    "arXiv:2510.06410"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "58135fe0a657dca9daa89f95290f1c1f60fe8bef",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T12:04:46.733071+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2406.11823",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.06410",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "On Efficient Language and Vision Assistants for Visually-Situated Natural Language Understanding: What Matters in Reading and Reasoning",
+      "source_url": "https://arxiv.org/abs/2406.11823",
+      "year": 2024,
+      "published": "2024-06-17",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in language and vision assistants have showcased impressive capabilities but suffer from a lack of transparency, limiting broader research and reproducibility. While open-source models handle general image tasks effectively, they face challenges with the high computational demands of complex visually-situated text understanding. Such tasks often require increased token inputs and large vision modules to harness high-resolution information. Striking a balance between model size and data importance remains an open question. This study aims to redefine the design of vision-language models by identifying key components and creating efficient models with constrained inference costs. By strategically formulating datasets, optimizing vision modules, and enhancing supervision techniques, we achieve significant improvements in inference throughput while maintaining high performance. Extensive experiments across models ranging from 160M to 13B parameters offer insights into model optimization.We will fully open-source our codebase, models, and datasets at https://github.com/naver-ai/elva.",
+      "identifiers": [
+        "SemanticScholar:45d6b0140a488c2443f62ddeeaa226544387095c"
+      ],
+      "semantic_scholar_id": "45d6b0140a488c2443f62ddeeaa226544387095c",
+      "canonical_id": "arXiv:2406.11823",
+      "arxiv_id": "2406.11823",
+      "doi": "10.48550/arXiv.2406.11823",
+      "authors": [
+        "Geewook Kim",
+        "Minjoon Seo"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 849,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Off-Trajectory Reasoning: Can LLMs Collaborate on Reasoning Trajectory?",
+      "source_url": "https://arxiv.org/abs/2510.06410",
+      "year": 2025,
+      "published": "2025-10-07",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning LLMs are trained to verbalize their reasoning process, yielding strong gains on complex tasks. This transparency also opens a promising direction: multiple reasoners can directly collaborate on each other's thinking within a shared trajectory, yielding better inference efficiency and exploration. A key prerequisite, however, is the ability to assess the usefulness and build on another model's partial thinking -- we call this off-trajectory reasoning. Our paper investigates a critical question: can standard solo-reasoning training pipelines deliver desired off-trajectory behaviors? We propose twin tests that capture the two extremes of the off-trajectory spectrum, namely Recoverability, which tests whether LLMs can backtrack from\"distractions\"induced by misleading reasoning traces, and Guidability, which tests their ability to build upon correct reasoning from stronger collaborators. Our study evaluates 15 open-weight LLMs (1.5B-32B) and reveals a counterintuitive finding --\"stronger\"LLMs on benchmarks are often more fragile under distraction. Moreover, all models tested fail to effectively leverage guiding steps from collaborators on problems beyond their inherent capabilities with solve rates remaining under 9.2%. Finally, we conduct control studies to isolate the effects of three factors in post-training on these behaviors: the choice of distillation teacher, the use of RL, and data selection strategy. Our results provide actionable insights for training natively strong reasoning collaborators; e.g., we find that suboptimal recoverability behaviors of teacher models are transferred to distilled students even if the distillation trajectories are correct. Taken together, this work lays the groundwork for evaluating multi-model collaborations in shared reasoning trajectories and highlights the limitations of off-the-shelf reasoning LLMs.",
+      "identifiers": [
+        "SemanticScholar:45321654247119b752985b19e25fcf3b7dfe6585"
+      ],
+      "semantic_scholar_id": "45321654247119b752985b19e25fcf3b7dfe6585",
+      "canonical_id": "arXiv:2510.06410",
+      "arxiv_id": "2510.06410",
+      "doi": "10.48550/arXiv.2510.06410",
+      "authors": [
+        "Aochong Oliver Li",
+        "Tanya Goyal"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 372,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2406.11823",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2406.11823",
+        "id:SemanticScholar:45d6b0140a488c2443f62ddeeaa226544387095c",
+        "id:arXiv:2406.11823",
+        "title:on efficient language and vision assistants for visuallysituated natural language understanding what matters in reading and reasoning",
+        "url:https://arxiv.org/abs/2406.11823"
+      ],
+      "record": {
+        "title": "On Efficient Language and Vision Assistants for Visually-Situated Natural Language Understanding: What Matters in Reading and Reasoning",
+        "source_url": "https://arxiv.org/abs/2406.11823",
+        "year": 2024,
+        "published": "2024-06-17",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advancements in language and vision assistants have showcased impressive capabilities but suffer from a lack of transparency, limiting broader research and reproducibility. While open-source models handle general image tasks effectively, they face challenges with the high computational demands of complex visually-situated text understanding. Such tasks often require increased token inputs and large vision modules to harness high-resolution information. Striking a balance between model size and data importance remains an open question. This study aims to redefine the design of vision-language models by identifying key components and creating efficient models with constrained inference costs. By strategically formulating datasets, optimizing vision modules, and enhancing supervision techniques, we achieve significant improvements in inference throughput while maintaining high performance. Extensive experiments across models ranging from 160M to 13B parameters offer insights into model optimization.We will fully open-source our codebase, models, and datasets at https://github.com/naver-ai/elva.",
+        "identifiers": [
+          "SemanticScholar:45d6b0140a488c2443f62ddeeaa226544387095c"
+        ],
+        "semantic_scholar_id": "45d6b0140a488c2443f62ddeeaa226544387095c",
+        "canonical_id": "arXiv:2406.11823",
+        "arxiv_id": "2406.11823",
+        "doi": "10.48550/arXiv.2406.11823",
+        "authors": [
+          "Geewook Kim",
+          "Minjoon Seo"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 849,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.06410",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.06410",
+        "id:SemanticScholar:45321654247119b752985b19e25fcf3b7dfe6585",
+        "id:arXiv:2510.06410",
+        "title:offtrajectory reasoning can llms collaborate on reasoning trajectory",
+        "url:https://arxiv.org/abs/2510.06410"
+      ],
+      "record": {
+        "title": "Off-Trajectory Reasoning: Can LLMs Collaborate on Reasoning Trajectory?",
+        "source_url": "https://arxiv.org/abs/2510.06410",
+        "year": 2025,
+        "published": "2025-10-07",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning LLMs are trained to verbalize their reasoning process, yielding strong gains on complex tasks. This transparency also opens a promising direction: multiple reasoners can directly collaborate on each other's thinking within a shared trajectory, yielding better inference efficiency and exploration. A key prerequisite, however, is the ability to assess the usefulness and build on another model's partial thinking -- we call this off-trajectory reasoning. Our paper investigates a critical question: can standard solo-reasoning training pipelines deliver desired off-trajectory behaviors? We propose twin tests that capture the two extremes of the off-trajectory spectrum, namely Recoverability, which tests whether LLMs can backtrack from\"distractions\"induced by misleading reasoning traces, and Guidability, which tests their ability to build upon correct reasoning from stronger collaborators. Our study evaluates 15 open-weight LLMs (1.5B-32B) and reveals a counterintuitive finding --\"stronger\"LLMs on benchmarks are often more fragile under distraction. Moreover, all models tested fail to effectively leverage guiding steps from collaborators on problems beyond their inherent capabilities with solve rates remaining under 9.2%. Finally, we conduct control studies to isolate the effects of three factors in post-training on these behaviors: the choice of distillation teacher, the use of RL, and data selection strategy. Our results provide actionable insights for training natively strong reasoning collaborators; e.g., we find that suboptimal recoverability behaviors of teacher models are transferred to distilled students even if the distillation trajectories are correct. Taken together, this work lays the groundwork for evaluating multi-model collaborations in shared reasoning trajectories and highlights the limitations of off-the-shelf reasoning LLMs.",
+        "identifiers": [
+          "SemanticScholar:45321654247119b752985b19e25fcf3b7dfe6585"
+        ],
+        "semantic_scholar_id": "45321654247119b752985b19e25fcf3b7dfe6585",
+        "canonical_id": "arXiv:2510.06410",
+        "arxiv_id": "2510.06410",
+        "doi": "10.48550/arXiv.2510.06410",
+        "authors": [
+          "Aochong Oliver Li",
+          "Tanya Goyal"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 372,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c85ca7f7c15553523f2fbc3bbea7460efaa781cf4ebab4b659b3c5aa779e7646",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a0260679bc257d27-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.01469",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.01469",
+    "identity_tokens": [
+      "arXiv:2310.01469"
+    ],
+    "reason": "LLM hallucinationをadversarial exampleとして捉え、random-token promptによるhallucination誘発、attack、defenseを分析する安全性・頑健性研究。推論runtime・memory・serving効率化を扱わないためunrelated。",
+    "first_checked_at": "2026-10-05T15:43:21+00:00",
+    "last_checked_at": "2026-10-05T15:43:21+00:00",
+    "linked_from": [],
+    "title": "LLM Lies: Hallucinations are not Bugs, but Features as Adversarial Examples"
+  },
+  "processed_at": "2026-10-05T15:43:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0260679bc25",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

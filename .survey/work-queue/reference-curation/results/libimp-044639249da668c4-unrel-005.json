@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-044639249da668c4-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.14314",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.14314",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2305.14314",
+      "DOI:10.52202/075280-0441",
+      "arXiv:2305.14314"
+    ],
+    "reason": "4-bit量子化モデルへLoRAを学習するfine-tuning memory削減が主目的で、推論runtime・serving効率化の評価ではない。",
+    "first_checked_at": "2026-09-27T00:01:48+09:00",
+    "last_checked_at": "2026-10-05T16:03:27+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+    ],
+    "title": "QLoRA: Efficient Finetuning of Quantized LLMs"
+  },
+  "processed_at": "2026-10-05T16:03:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-044639249da6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

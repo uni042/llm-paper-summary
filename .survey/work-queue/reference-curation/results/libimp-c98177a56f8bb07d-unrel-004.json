@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c98177a56f8bb07d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.18284",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.18284",
+    "identity_tokens": [
+      "arXiv:2607.18284"
+    ],
+    "reason": "本文確認の対象はBERT系encoder圧縮とGLUE精度で、decoder LLM inference/serving効率の寄与ではないためunrelated。",
+    "first_checked_at": "2026-10-05T11:34:44+00:00",
+    "last_checked_at": "2026-10-05T11:34:44+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+      "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "Compressing What Matters: Neuron Importance Meets Data-Aware Low Rank Approximation for Language Model Compression"
+  },
+  "processed_at": "2026-10-05T11:34:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c98177a56f8b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

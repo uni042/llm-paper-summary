@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-757a19e8ca8bcb7b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.11113",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.11113",
+    "identity_tokens": [
+      "arXiv:2310.11113"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2310.11113. Abstract summary: Software development involves collaborative interactions where stakeholders express opinions across various platforms. Recognizing the sentiments conveyed in these interactions is crucial for the effective development and ongoing maintenance of software systems. For software products, analyzing the sentiment of user feedback, e.g., review Out of scope: Software sentiment-analysis task study, not inference efficiency.",
+    "first_checked_at": "2026-10-05T12:49:57+00:00",
+    "last_checked_at": "2026-10-05T12:49:57+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md"
+    ],
+    "title": "Revisiting Sentiment Analysis for Software Engineering in the Era of Large Language Models"
+  },
+  "processed_at": "2026-10-05T12:49:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-757a19e8ca8b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

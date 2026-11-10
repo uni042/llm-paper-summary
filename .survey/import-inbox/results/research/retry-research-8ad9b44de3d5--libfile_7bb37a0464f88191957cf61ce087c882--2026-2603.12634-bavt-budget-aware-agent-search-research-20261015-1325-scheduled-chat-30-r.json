@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "143ef931d68858997c5f8cd486b09609b89bd2ad21973a962d10b70d2f3faa6f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8ad9b44de3d5--libfile_7bb37a0464f88191957cf61ce087c882--2026-2603.12634-bavt-budget-aware-agent-search-research-20261015-1325-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2603.12634",
+  "worker_completed_at": "2026-10-15T13:32:18+09:00",
+  "worker_run_key": "20261015-1325-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6045,
+    "body_paragraphs": 41,
+    "method_chars": 1980,
+    "method_paragraphs": 16,
+    "evaluation_chars": 146,
+    "limitation_chars": 697,
+    "insufficiency_flags": [
+      "評価説明量 146 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 146 < 500"
+  ],
+  "processed_at": "2026-10-16T15:47:52+00:00"
+}

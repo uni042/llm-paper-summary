@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad5cc2fea733ee99-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.04700",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.04700",
+    "identity_tokens": [
+      "arXiv:2401.04700"
+    ],
+    "reason": "Primary abstract read at https://arxiv.org/abs/2401.04700: Model editing/general-ability preservation, no inference efficiency contribution.",
+    "first_checked_at": "2026-10-05T01:45:00+00:00",
+    "last_checked_at": "2026-10-05T01:45:00+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+    ],
+    "title": "Model Editing Harms General Abilities of Large Language Models: Regularization to the Rescue"
+  },
+  "processed_at": "2026-10-05T01:45:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad5cc2fea733",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

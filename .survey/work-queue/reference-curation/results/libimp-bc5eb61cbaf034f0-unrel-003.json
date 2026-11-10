@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc5eb61cbaf034f0-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s41598-026-59638-w",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s41598-026-59638-w",
+    "identity_tokens": [
+      "DOI:10.1038/s41598-026-59638-w"
+    ],
+    "reason": "KV representation compression for lightweight transformer sentiment-analysis explainability, not LLM inference efficiency.",
+    "first_checked_at": "2026-10-05T11:46:59+00:00",
+    "last_checked_at": "2026-10-05T11:46:59+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+    ],
+    "title": "Analyzing the impact of KV representation compression on explainability in lightweight transformer-based sentiment analysis"
+  },
+  "processed_at": "2026-10-05T11:46:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc5eb61cbaf0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

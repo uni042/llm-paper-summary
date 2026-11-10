@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "operation": "derive_run_state",
+  "request_id": "20260925T0337JST-scheduled-chat-30-runtime-handoff",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "scheduled_slot": "30",
+  "run_key": "scheduled-chat-30-20260925T033706JST-01",
+  "actual_invocation_start": "2026-09-25T03:37:06+09:00",
+  "candidate_inventory_at_start": 299,
+  "work_mode_at_start": "research",
+  "research_discovery_threshold": 288,
+  "hot_dispatch_generated_at": "2026-09-24T17:50:33+00:00",
+  "runtime_condition": "platform_transport_write_blocked",
+  "runtime_condition_detail": "Research foreground attempt-preload-0eb96878e292ba8c65359cba resumed. GitHub reads succeeded. problem_method update succeeded at commit 949d1e2e046db2656760f8886631f0e8b9afb6a0. Subsequent update_file writes for evaluation and results were each blocked by OpenAI safety checks before connector execution; evaluation retry was also blocked. Resume same attempt and repair remaining preflight fields."
+}

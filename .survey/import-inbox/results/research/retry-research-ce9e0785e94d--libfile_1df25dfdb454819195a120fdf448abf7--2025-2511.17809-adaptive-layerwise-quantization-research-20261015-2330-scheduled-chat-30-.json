@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "16d5cd0ff06c9cddbdd88a71fe658c4a594ba06e86ebddfb3d432609c6067064",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ce9e0785e94d--libfile_1df25dfdb454819195a120fdf448abf7--2025-2511.17809-adaptive-layerwise-quantization-research-20261015-2330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2511.17809",
+  "worker_completed_at": "2026-10-15T23:30:00+09:00",
+  "worker_run_key": "20261015-2330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6471,
+    "body_paragraphs": 33,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 673,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-15T15:10:39+00:00"
+}

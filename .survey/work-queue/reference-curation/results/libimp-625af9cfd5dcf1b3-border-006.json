@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-625af9cfd5dcf1b3-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tip.2022.3232232",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tip.2022.3232232",
+    "identity_tokens": [
+      "DOI:10.1109/tip.2022.3232232",
+      "SemanticScholar:15456168f0f6e81440bea9af13c1c0a2ca4593f9"
+    ],
+    "reason": "The DOI/title metadata identifies a Moiré-pattern detection method for digital photos, but the official publisher abstract was inaccessible; relevance cannot be resolved from primary abstract evidence.",
+    "first_checked_at": "2026-10-16T06:19:22+00:00",
+    "last_checked_at": "2026-10-16T06:19:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Doing More With Moiré Pattern Detection in Digital Photos"
+  },
+  "processed_at": "2026-10-16T06:19:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-625af9cfd5dc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

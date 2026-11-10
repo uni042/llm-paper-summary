@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f36b2d5e7124151a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.23438",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.23438",
+    "identity_tokens": [
+      "SemanticScholar:3a7cc6605d0a75669885bc46b4c0cc3406d14e4b",
+      "arXiv:2602.23438"
+    ],
+    "reason": "The work concerns preference modeling and layout-generation quality, not inference-system efficiency.",
+    "first_checked_at": "2026-10-13T01:22:00+00:00",
+    "last_checked_at": "2026-10-13T01:22:00+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+    ],
+    "title": "DesignSense: A Human Preference Dataset and Reward Modeling Framework for Graphic Layout Generation"
+  },
+  "processed_at": "2026-10-13T01:22:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f36b2d5e7124",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

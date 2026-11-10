@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r04",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.02530",
+      "identity_tokens": [
+        "arXiv:2411.02530",
+        "DOI:10.48550/arXiv.2411.02530"
+      ],
+      "title": "A Comprehensive Study on Quantization Techniques for Large Language Models",
+      "reason": "LLMの量子化理論・方式・実装・性能を概説するサーベイであり、推論のメモリ削減と高速化に関連するが、一次要旨では新しい量子化カーネルやモデル圧縮アルゴリズムを提示していない。参考文献探索には有用だが新規手法としてのResearch優先度は低い。",
+      "source_url": "https://arxiv.org/abs/2411.02530",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:33:36+09:00",
+      "last_checked_at": "2026-10-30T20:33:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 224,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.15038",
+      "identity_tokens": [
+        "arXiv:2512.15038",
+        "DOI:10.48550/arXiv.2512.15038"
+      ],
+      "title": "LADY: Linear Attention for Autonomous Driving Efficiency without Transformers",
+      "reason": "自動運転の長期時系列融合へ線形クロス注意を導入し、NAVSIMとBench2Driveで計画精度・エッジ遅延を評価する生成モデル。LLMテキスト生成・KVサービングの最適化を対象としておらず、自動運転特化の効率化であるため現行サーベイの対象外。",
+      "source_url": "https://arxiv.org/abs/2512.15038",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:33:36+09:00",
+      "last_checked_at": "2026-10-30T20:33:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 225,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.10315",
+      "identity_tokens": [
+        "arXiv:2505.10315",
+        "DOI:10.48550/arXiv.2505.10315"
+      ],
+      "title": "Private Transformer Inference in MLaaS: A Survey",
+      "reason": "秘密分散計算・準同型暗号などでTransformer推論のデータとモデルの秘匿性を保つ技術を整理し、資源効率とのトレードオフを分類するサーベイ。推論システムの性能に関連するが、主眼はプライバシーと既存手法の整理であり新規LLM高速化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2505.10315",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:33:36+09:00",
+      "last_checked_at": "2026-10-30T20:33:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 226,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.17260",
+      "identity_tokens": [
+        "arXiv:2605.17260",
+        "DOI:10.48550/arXiv.2605.17260"
+      ],
+      "title": "LiteFrame: Efficient Vision Encoders Unlock Frame Scaling in Video LLMs",
+      "reason": "長い動画を処理するVideo LLMで視覚トークン削減後のボトルネックがフレームごとの視覚エンコーダへ移ることを分析する。CTDで小型エンコーダを蒸留し、InternVL3-8B比で8倍のフレームを処理しながらend-to-end遅延35%削減と品質改善を報告する。",
+      "source_url": "https://arxiv.org/abs/2605.17260",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:33:36+09:00",
+      "last_checked_at": "2026-10-30T20:33:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 232,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25954",
+      "identity_tokens": [
+        "arXiv:2605.25954",
+        "DOI:10.48550/arXiv.2605.25954"
+      ],
+      "title": "Step-TP: A Grounded, Step-Level Dataset with Chain-of-Thought Reasoning for LLM-Guided Tensor Program Optimization",
+      "reason": "TVM TIRへ決定的に変換可能な中間表現と段階的CoT教師信号を持つ、LLMによるテンソルプログラム最適化の訓練データセットを提案する。コンパイラ最適化への間接的貢献はあるが、要旨でLLM推論エンジンの性能向上を直接実証していない。",
+      "source_url": "https://arxiv.org/abs/2605.25954",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:33:36+09:00",
+      "last_checked_at": "2026-10-30T20:33:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 233,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.11200",
+      "identity_tokens": [
+        "arXiv:2601.11200",
+        "DOI:10.48550/arXiv.2601.11200"
+      ],
+      "title": "FAQ: Mitigating Quantization Error via Regenerating Calibration Data with Family-Aware Quantization",
+      "reason": "同一モデル系列の大規模LLMを使って校正サンプルを再生成し、CoTを含む活性分布に近いデータを選別・再正規化するFamily-Aware Quantizationを提案する。Qwen3-8Bを含む後量子化で、元の校正データを使う基準線比の精度損失を最大28.5%軽減したと報告。推論向け低ビット量子化の品質改善に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2601.11200",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:33:36+09:00",
+      "last_checked_at": "2026-10-30T20:33:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 234,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.06672",
+      "identity_tokens": [
+        "arXiv:2410.06672",
+        "DOI:10.48550/arXiv.2410.06672"
+      ],
+      "title": "Towards Universality: Studying Mechanistic Similarity Across Language Model Architectures",
+      "reason": "TransformerとMambaの内部表現をSparse Autoencoderで分離し、誘導回路やOff-by-One motifの機構的類似性を研究する解釈可能性論文。生成LLMの推論速度・メモリ・計算量を削減する手法やサービング実験は一次要旨にない。",
+      "source_url": "https://arxiv.org/abs/2410.06672",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:33:36+09:00",
+      "last_checked_at": "2026-10-30T20:33:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 235,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.12860",
+      "identity_tokens": [
+        "arXiv:2506.12860",
+        "DOI:10.48550/arXiv.2506.12860"
+      ],
+      "title": "QFFT, Question-Free Fine-Tuning for Adaptive Reasoning",
+      "reason": "学習時に質問を除き長いCoT応答だけを使うQFFTで、簡単な問題には短い推論、難問には長い推論を適応的に出すようにする。数学課題で平均応答長を50%超削減しSFTと同程度の品質を維持すると報告。学習手法だが推論時の生成トークン量削減が直接の目的。",
+      "source_url": "https://arxiv.org/abs/2506.12860",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:33:36+09:00",
+      "last_checked_at": "2026-10-30T20:33:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 236,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.20293",
+      "identity_tokens": [
+        "arXiv:2508.20293",
+        "DOI:10.48550/arXiv.2508.20293"
+      ],
+      "title": "Beacon: Post-Training Quantization with Integrated Grid Selection",
+      "reason": "per-channel PTQの量子化格子とスケールを同時に決めるため、手動スケール探索を不要にする一般的な後量子化法。バックプロパゲーションや大規模校正を要さずモデル展開効率に関連するが、一次要旨に生成LLMの具体的な実験が示されず、LLM推論への直接性は要本文確認。",
+      "source_url": "https://arxiv.org/abs/2508.20293",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:33:36+09:00",
+      "last_checked_at": "2026-10-30T20:33:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 237,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26531",
+      "identity_tokens": [
+        "arXiv:2610.26531",
+        "DOI:10.48550/arXiv.2610.26531"
+      ],
+      "title": "ReAnchor: Reusing Rejected Verifier States for Diffusion Drafting",
+      "reason": "投機的復号のターゲット検証で最初の不採用位置以降に計算された隠れ状態を捨てず、拡散ドラフタをずらした位置へ再アンカーして複数ドラフトブロックを生成する。Gemma4-12Bで受理長19.4%、復号速度17.9%改善、4ターゲット平均で復号速度13.4%改善を報告する。",
+      "source_url": "https://arxiv.org/abs/2610.26531",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:33:36+09:00",
+      "last_checked_at": "2026-10-30T20:33:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 240,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T090800Z-scheduled-chat-discovery-specialist-14",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-fbee62800783475d",
+      "claim_id": "claim-cb5d2b02a2622c74cd9e23d6",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-cb5d2b02a2622c74cd9e23d6",
+      "claimed_at": "2026-09-18T09:07:22+00:00",
+      "expires_at": "2026-09-18T10:37:22+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-fbee62800783475d"
+      ],
+      "job": {
+        "job_id": "job-research-fbee62800783475d",
+        "type": "research",
+        "parent_job_id": "job-262a244fbc8c0261",
+        "priority": 83,
+        "canonical_id": "arXiv:2604.10907",
+        "title": "RouterWise: Joint Resource Allocation and Routing for Latency-Aware Multi-Model LLM Serving",
+        "source_url": "https://arxiv.org/abs/2604.10907",
+        "paper_path": "papers/inference/06-serving-scheduling/2026-2604.10907-routerwise-resource-allocation-routing.md",
+        "selection_reason": "multi-model LLM servingでroutingとGPU resource allocationの相互依存を明示し、profiling由来latency modelとdual-price routingでSLO下のquality最大化を共同最適化する。system setupだけでquality scoreが最大87%変動することを示す。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-17T19:10:15+00:00",
+        "blocker": "一次資料全文を再取得した。前回attemptではarXiv公式PDFから本文前半までは取得できたが、取得基盤の明示的上限で後半を読めずblockedとなった。今回attemptでは同一論文のarXiv公式HTML https://arxiv.org/html/2604.10907 を独立経路として取得し直したが、取得基盤からDisabledErrorが返り本文を取得できなかった。GitHub検索でも論文名・arXiv番号を照合したが、確認できたのは第三者の論文ノートや索引で、著者公式の全文コピーは確認できなかった。前回PDF経路と今回HTML経路の双方で全文を安全に取得できず、評価条件・主要結果・限界を二次資料から補完しないため、このattemptも一時的blockedとして耐久保存する。永久除外にはせず、次回はarXiv公式PDF/HTMLまたは著者・会議公式の全文経路が利用可能になった時点で再試行する。",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-c0cab04c270b3f1647d6bd86.json",
+        "blocked_attempts": 2,
+        "last_recorded_blocked_event": "2026-09-18T05:42:12+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-18T00:49:16+00:00",
+            "reason": "一次資料の全文精読を開始し、arXiv公式PDF https://arxiv.org/pdf/2604.10907 から本文前半（問題設定、GPU共有、ルーティングモデル、共同最適化、dual-price formulation、setup-specific latency model、最適化手順の途中）までは取得できた。しかし同一runでWeb取得基盤から明示的な外部アクセス上限エラー（web.run too many times; do not call this tool again）を受け、残りページの一次資料を取得できなくなった。全文未読のため評価条件・主要結果・限界を推測で補完せず、このattemptは一時的blockedとして耐久保存する。次回はarXiv公式PDFまたは同一論文の公式公開経路から残りを取得して全文確認後に5-slotを作成する。"
+          },
+          {
+            "attempt": 2,
+            "blocked_at": "2026-09-18T05:42:12+00:00",
+            "reason": "一次資料全文を再取得した。前回attemptではarXiv公式PDFから本文前半までは取得できたが、取得基盤の明示的上限で後半を読めずblockedとなった。今回attemptでは同一論文のarXiv公式HTML https://arxiv.org/html/2604.10907 を独立経路として取得し直したが、取得基盤からDisabledErrorが返り本文を取得できなかった。GitHub検索でも論文名・arXiv番号を照合したが、確認できたのは第三者の論文ノートや索引で、著者公式の全文コピーは確認できなかった。前回PDF経路と今回HTML経路の双方で全文を安全に取得できず、評価条件・主要結果・限界を二次資料から補完しないため、このattemptも一時的blockedとして耐久保存する。永久除外にはせず、次回はarXiv公式PDF/HTMLまたは著者・会議公式の全文経路が利用可能になった時点で再試行する。"
+          }
+        ],
+        "last_blocked_at": "2026-09-18T05:42:12+00:00",
+        "retry_queued_at": "2026-09-18T07:03:06+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T09:07:22+00:00",
+  "checkpoint_released": 0
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0dbf2b22c5d69463-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/iccv.2015.11",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/iccv.2015.11",
+    "identity_tokens": [
+      "DOI:10.1109/iccv.2015.11",
+      "arXiv:1506.06724"
+    ],
+    "reason": "書籍文と映画クリップを文・動画埋め込みと文脈対応CNNで対応付け、視覚内容へ物語的説明を付与する画像・動画理解研究。LLM推論、サービング、メモリ、推論カーネルの効率化を扱わない。",
+    "first_checked_at": "2026-09-27T05:31:34+09:00",
+    "last_checked_at": "2026-10-04T23:24:23+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "worker-worklist-30 discovery_review rank 468"
+    ],
+    "title": "Aligning Books and Movies: Towards Story-Like Visual Explanations by Watching Movies and Reading Books"
+  },
+  "processed_at": "2026-10-04T23:24:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0dbf2b22c5d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

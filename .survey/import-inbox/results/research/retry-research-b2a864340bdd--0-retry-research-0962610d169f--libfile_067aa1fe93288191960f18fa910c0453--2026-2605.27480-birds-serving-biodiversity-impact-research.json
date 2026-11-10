@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "980e2248386e6fb0e98146af3f6327a64b97a131fa6ba9feb9609ff01369a057",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b2a864340bdd--0-retry-research-0962610d169f--libfile_067aa1fe93288191960f18fa910c0453--2026-2605.27480-birds-serving-biodiversity-impact-research-20261023-0800-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2605.27480",
+  "worker_completed_at": "2026-10-23T08:08:55+09:00",
+  "worker_run_key": "20261023-0800-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5437,
+    "body_paragraphs": 38,
+    "method_chars": 1761,
+    "method_paragraphs": 12,
+    "evaluation_chars": 631,
+    "limitation_chars": 718,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.27480-birds-characterizing-and-understanding-biodiversity-impact-of-large-lang.md と 13 段落 / 3771文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T22:16:59+00:00"
+}

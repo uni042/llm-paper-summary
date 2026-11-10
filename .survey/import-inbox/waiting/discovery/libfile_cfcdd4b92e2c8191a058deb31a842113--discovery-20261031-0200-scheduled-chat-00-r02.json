@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0200-scheduled-chat-00/r02",
+  "reference_main_sha": "bfbf4444d3e126ebc965c380558cb94e575463ae",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.16214",
+      "identity_tokens": [
+        "arXiv:2504.16214"
+      ],
+      "title": "Hexcute: A Compiler Framework for Automating Layout Synthesis in GPU Programs",
+      "reason": "arXiv一次要旨はGPUテンソル配置の制約解法と型推論による自動合成を提示し、GEMMとAttentionに加え混合精度MoE演算でTriton比平均6.46倍、vLLM上のDeepSeek系評価で最大2.60倍の高速化を報告。LLM推論カーネル実装へ直接適用する。",
+      "source_url": "https://arxiv.org/abs/2504.16214",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:03:07+09:00",
+      "last_checked_at": "2026-10-31T02:03:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 285,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.06527",
+      "identity_tokens": [
+        "arXiv:2602.06527"
+      ],
+      "title": "HyPER: Bridging Exploration and Exploitation for Scalable LLM Reasoning with Hypothesis Path Expansion and Reduction",
+      "reason": "arXiv一次要旨はMoE推論の複数仮説経路に対し、探索と活用をオンライン制御して生成時の経路を縮約する訓練不要の推論計算配分を提案。4つのMoEモデルで正答率8〜10%改善とトークン使用25〜40%削減を報告し、テスト時計算予算の最適化に直結する。",
+      "source_url": "https://arxiv.org/abs/2602.06527",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:03:07+09:00",
+      "last_checked_at": "2026-10-31T02:03:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 286,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.09595",
+      "identity_tokens": [
+        "arXiv:2604.09595"
+      ],
+      "title": "Why Smaller Is Slower? Dimensional Misalignment in Compressed LLMs",
+      "reason": "arXiv一次要旨はASVD等の圧縮で生じる不規則なテンソル次元がGPU演算の整列要件に合わず、Llama-3-8Bを15%小さくしても高速化しない事例を解析。GPU-Aligned Compressionが同一パラメータ予算内で整列次元を選び直し最大1.5倍の推論高速化を回復する、実行基盤と圧縮の共同設計。",
+      "source_url": "https://arxiv.org/abs/2604.09595",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:03:07+09:00",
+      "last_checked_at": "2026-10-31T02:03:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 287,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.23027",
+      "identity_tokens": [
+        "arXiv:2601.23027"
+      ],
+      "title": "Divide-and-Conquer CoT: RL for Reducing Latency via Parallel Reasoning",
+      "reason": "arXiv一次要旨では推論モデルをdirectorとして副問題へ分割し並列workerに実行させ、最長依存経路を短縮するDC-CoTを提案。SFTと段階的RLで精度を回復し、数学ベンチマークで同程度の正確性を維持しつつ最長経路を35〜40%削減。逐次CoTの応答遅延を直接対象とする。",
+      "source_url": "https://arxiv.org/abs/2601.23027",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:03:07+09:00",
+      "last_checked_at": "2026-10-31T02:03:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 288,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.12784",
+      "identity_tokens": [
+        "arXiv:2502.12784"
+      ],
+      "title": "SparkAttention: High-Performance Multi-Head Attention for Large Models on Volta GPU Architecture",
+      "reason": "arXiv一次要旨でVolta V100のTensor Core形状に合わせたMHAのカーネル融合・HBMアクセス削減を提案しPyTorch比平均1.80倍のエンドツーエンド高速化を報告。ただし評価と主目的はTransformerの学習高速化で、生成LLM推論の復号・サービングへの直接効果は要旨に示されないため保留。",
+      "source_url": "https://arxiv.org/abs/2502.12784",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:03:07+09:00",
+      "last_checked_at": "2026-10-31T02:03:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 290,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.15810",
+      "identity_tokens": [
+        "arXiv:2608.15810"
+      ],
+      "title": "Pricing the Risk of Runtime Compression: Anytime-Valid Admission and a Served-Output Law for Compressed Serving State",
+      "reason": "arXiv一次要旨は推論サービング状態の実行時圧縮で、リクエスト長が未知でも品質リスクを逐次保証する台帳と、配信出力の全変動距離に対する閾値設計則を提案。352,333回の実負荷admissionで保証を確認し、同等リスクで厳密フォールバック率0.30から0.14へ減らすと報告する推論キャッシュ品質管理。",
+      "source_url": "https://arxiv.org/abs/2608.15810",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:03:07+09:00",
+      "last_checked_at": "2026-10-31T02:03:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 292,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.27494",
+      "identity_tokens": [
+        "arXiv:2605.27494"
+      ],
+      "title": "Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer?",
+      "reason": "arXiv一次要旨はRAG回答キャッシュの再利用を、質問類似度・取得根拠重複・情報源版の有効性・根拠による回答支持の4条件で許可するGroundedCacheを提案。Qwen2.5-7B/vLLMの12,000生成を使い誤ったキャッシュ回答率を評価し、TTFTと安全性の交換条件を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2605.27494",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:03:07+09:00",
+      "last_checked_at": "2026-10-31T02:03:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 293,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.22840",
+      "identity_tokens": [
+        "arXiv:2606.22840"
+      ],
+      "title": "RLM-Cascade: Response-Level Speculative Decoding for Cost-Efficient LLM API Serving",
+      "reason": "arXiv一次要旨では安価なドラフトLLMの回答を高性能検証LLMへ送るか、複雑度ルータで検証自体を省くプロキシ層を提案。実際のコーディング125要求で直接高性能モデル呼出し比API費用45.8%削減、応答時間中央値3698msから2026msと報告。モデル内部に触れず推論サービング費用を削減する。",
+      "source_url": "https://arxiv.org/abs/2606.22840",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:03:07+09:00",
+      "last_checked_at": "2026-10-31T02:03:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 296,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.30509",
+      "identity_tokens": [
+        "arXiv:2608.30509"
+      ],
+      "title": "CHIPSMORE: Compute-in-Interconnect and -Memory Chiplets for Multi-Mode Multi-Request LLM Inference Acceleration",
+      "reason": "arXiv一次要旨はRRAMアナログ計算メモリとSRAMデジタル計算メモリを接続する計算ネットワーク、階層KV配置、重み複製なしの多要求パイプラインを組み合わせるLLM推論アクセラレータを提案。サイクル精度のハード・ソフト協調シミュレーションによる評価であり実機測定と区別して収録する。",
+      "source_url": "https://arxiv.org/abs/2608.30509",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:03:07+09:00",
+      "last_checked_at": "2026-10-31T02:03:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 298,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.23410",
+      "identity_tokens": [
+        "arXiv:2509.23410"
+      ],
+      "title": "PATCH: Learnable Tile-level Hybrid Sparsity for LLMs",
+      "reason": "arXiv一次要旨では重み行列をタイルに分割し、タイル単位で密行列か2:4疎行列かを学習選択して0〜50%の疎性を制御。LLaMA-2 7B/A6000で密基準比1.18〜1.38倍のエンドツーエンド高速化を報告し、LLM推論カーネルで利用可能な構造的剪定に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2509.23410",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:03:07+09:00",
+      "last_checked_at": "2026-10-31T02:03:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 302,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

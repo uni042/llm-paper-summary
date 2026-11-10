@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa6a33676667520b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.02276",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.02276",
+    "identity_tokens": [
+      "arXiv:2602.02276"
+    ],
+    "reason": "Kimi K2.5のモデル・学習報告が中心だが、Agent Swarmでタスクを並列分解・実行しsingle-agent比最大4.5xのlatency削減を報告する。agentic inference orchestrationに直接関係する一方、汎用serving runtimeのsystem評価が主貢献ではないためborderline。",
+    "first_checked_at": "2026-10-05T16:00:04+00:00",
+    "last_checked_at": "2026-10-05T16:00:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Kimi K2.5: Visual Agentic Intelligence"
+  },
+  "processed_at": "2026-10-05T16:00:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa6a33676667",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

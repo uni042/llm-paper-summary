@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4124370624b982b2-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.20501",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.20501",
+    "identity_tokens": [
+      "arXiv:2607.20501"
+    ],
+    "reason": "MKEvolveは複数agentでGPU kernel codeを生成・評価し、KernelBench等で生成kernelの正確性/性能を高めるframework。 高速化対象は生成されたGPU kernels一般で、LLM自身の推論・servingやLLM inference kernelsに焦点を置かない。LLMはコード生成の道具として使われるため対象外。",
+    "first_checked_at": "2026-10-05T03:47:24+00:00",
+    "last_checked_at": "2026-10-05T03:47:24+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+      "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md"
+    ],
+    "title": "MKEvolve: A Modular Multi-Agent Framework for Kernel Code Generation"
+  },
+  "processed_at": "2026-10-05T03:47:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4124370624b9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

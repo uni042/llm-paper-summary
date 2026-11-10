@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Dissecting the Carbon-SLO Tension in Geo-Distributed LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.14571",
+      "year": 2026,
+      "published": "2026-10-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) inference is driving a growing share of datacenter carbon emissions. Although carbon-aware scheduling can reduce these emissions in geo-distributed datacenters by exploiting the spatiotemporal variations in grid carbon intensity, the latency-sensitive nature of LLM serving constrains this design space. While prior studies investigate the carbon savings achievable through spatial scheduling, they oversimplify the dynamics of modern inference engines, such as queueing and continuous batching, which strongly shape inference latency. We address this issue by designing and evaluating a latency-centric, geo-distributed inference simulator, calibrated with hardware-grounded latency and power measurements, that reproduces these dynamics and enables the study of carbon savings under strict service-level objectives (SLOs). We then formulate a series of SLO- and carbon-aware schedulers of increasing sophistication, from per-request heuristics to batch-level optimization: (i) a greedy heuristic, (ii) an integer linear programming (ILP)-based scheduler jointly assigning batches of requests, (iii) an iterative ILP-based solution projecting its own assignments back into the load estimates to capture load coupling, and (iv) a facility mixed-integer linear programming (MILP) scheduler pricing the energy of batched requests collectively rather than in isolation. Across three LLMs under MLPerf SLOs and varying system loads, the MILP-based option offers the best carbon-SLO balance, reducing carbon emissions by up to 60% relative to the round-robin policy, with an average SLO violation of 3%. Our characterization further shows that savings grow with the spread of carbon intensity across datacenters and shrink as system load increases, while SLO attainment depends on how frequently schedulers receive datacenters'load updates.",
+      "identifiers": [
+        "SemanticScholar:dff8276708cbc3b9b7b80f5508c91ea7ea91ccd1"
+      ],
+      "semantic_scholar_id": "dff8276708cbc3b9b7b80f5508c91ea7ea91ccd1",
+      "canonical_id": "arXiv:2610.14571",
+      "arxiv_id": "2610.14571",
+      "authors": [
+        "Burak Topçu",
+        "Musa Cim",
+        "Zuhal Ozturk",
+        "M. T. Kandemir"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      },
+      "reason": "地理分散LLMサービングで炭素強度の低い拠点へ要求を振り分ける際、連続バッチ処理と待ち行列がTTFT/TPOTのSLOを制約する問題を扱う。実GPUの電力・遅延測定で較正したシミュレータ上でgreedy、ILP、反復ILP、facility MILPのスケジューラを比較。著者要旨では3モデル・MLPerf SLOの条件でMILPがround-robin比最大60%排出削減、平均SLO違反3%と報告。省エネとサービングSLOの直接的なスケジューリング研究としてaccept。ただし実拠点運用での削減実績ではない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Stable Token-level Scheduling for Serverless LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.17689",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serverless inference is emerging as an efficient deployment model for Large Language Models (LLMs) due to its ability to elastically scale resources, improve GPU utilization through resource sharing, and reduce infrastructure costs. However, existing approaches primarily optimize time to first token (TTFT) while overlooking inter-token latency (ITL), a key determinant of user experience during response generation. We observe that LLM inference comprises a computation-intensive prefill stage and a bandwidth-bound decode stage, where admitting new requests can disrupt ongoing decoding and increase latency. To address this, we propose Token Window Pacing (TWP), a closed-loop scheduling framework that leverages runtime feedback from ITL, queue depth, and workload characteristics to regulate request admission at the token level instead of the batch level. TWP dynamically adjusts a selfregulating token window and incorporates chunk-based prefill to minimize interference from incoming requests. Experiments on realistic serverless workloads show that TWP delivers stable TTFT, significantly reduces latency spikes, lowers P99 tail latency, minimizes ITL variation, and improves throughput by up to 45% over ServerlessLLM and 58% over conventional schedulers. These results demonstrate that feedback-driven tokenlevel scheduling enables stable, high-throughput serverless LLM inference without modifying the underlying model.",
+      "identifiers": [
+        "SemanticScholar:84513bc45205cd6bd73ad2a5d75015b284509f3a"
+      ],
+      "semantic_scholar_id": "84513bc45205cd6bd73ad2a5d75015b284509f3a",
+      "canonical_id": "arXiv:2610.17689",
+      "arxiv_id": "2610.17689",
+      "authors": [
+        "Hardi Ashishbhai Desai",
+        "K. BalajiN",
+        "Sourav Kanti Addya"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "サーバレスLLM推論のprefill要求流入が既存decodeのITLを乱す問題に対し、ITL・queue depth・ワークロードの実行時feedbackでtoken windowを閉ループ調整し、batch単位でなくtoken単位のadmissionを制御するToken Window Pacing (TWP)を提案する。chunked prefillと併用し、著者要旨はServerlessLLM比最大45%、従来scheduler比最大58%のthroughput向上とp99遅延変動低減を報告。LLM serving runtimeの直接的なスケジューリング貢献としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "DLite: History-free Speculative Decoding for Agentic AI",
+      "source_url": "https://arxiv.org/abs/2610.23787",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding has become a mainstream technique for accelerating large language model (LLM) inference by using a lightweight draft model to generate candidate tokens that are subsequently verified by the target model. However, agentic workloads introduce long and continuously evolving contexts and frequent multi-turn interactions. Under such workloads, we observe that existing draft models suffer from up to an 80% degradation in acceptance length, while maintaining their historical KV cache introduces substantial system overhead. In this paper, we identify the growing historical context as a common source of both problems and introduce DLite, a history-free speculative decoding framework for agentic AI. DLite directly reuses contextual hidden states from the target model and performs local speculative prediction without explicitly maintaining the historical context, transforming an increasingly complex modeling problem into local simple prediction problem. A lightweight sequential head further restores intra-block causal dependencies with low overhead. To effectively train this heterogeneous history-free architecture, we introduce a tailored two-stage training strategy. Experiments on general-purpose, long-context and agentic workloads show that DLite achieves 2-6 acceptance length and outperforms the state-of-the-art speculative decoding method, DSpark, up to 70%.",
+      "identifiers": [
+        "SemanticScholar:9cb4eaf05345fa18505d0fb53d2076448718428f"
+      ],
+      "semantic_scholar_id": "9cb4eaf05345fa18505d0fb53d2076448718428f",
+      "canonical_id": "arXiv:2610.23787",
+      "arxiv_id": "2610.23787",
+      "authors": [
+        "Jia-Ming Xu",
+        "Han-Zhen Wang",
+        "Tian-Lang Zhao",
+        "Jie-Wen Xiao",
+        "Cheng-Ze Yuan",
+        "Jia-Yi Pan",
+        "Yong-Kang Zhou",
+        "Jian-Cai Ye",
+        "Yu Wang",
+        "Guo-Hao Dai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長い対話履歴を持つagentic workloadではdraftモデルの受理長が最大80%悪化し、draft側KV保持も重い。DLiteはtargetモデルの文脈hidden stateを直接再利用し、長期履歴を明示保持せず局所的に候補を予測する。ブロック内依存を軽量逐次headで補い、二段階学習を用いる。著者要旨は受理長2～6、DSpark比最大70%改善を報告。長文脈agentの投機復号高速化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "FlashMap: Flow Map Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.24365",
+      "year": 2026,
+      "published": "2026-10-17",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a lightweight drafter to propose a block of tokens that the target model verifies in one parallel pass. Autoregressive drafters generate this block one token at a time, whereas block diffusion drafters such as DFlash generate it in one pass, making drafting faster. However, these diffusion drafters predict each token independently, ignoring dependencies between tokens in the block. We introduce FlashMap, a continuous flow drafter that conditions a flow map language model on the target model's hidden states and generates the whole block in one forward pass while capturing inter-token dependencies. On Qwen3-8B, FlashMap is faster than a matched DFlash baseline on every benchmark, with 7% higher average speedup and up to 6.1x lossless acceleration.",
+      "identifiers": [
+        "SemanticScholar:3569a3ae399ae36ea1af7aff045a1ed1400b4276"
+      ],
+      "semantic_scholar_id": "3569a3ae399ae36ea1af7aff045a1ed1400b4276",
+      "canonical_id": "arXiv:2610.24365",
+      "arxiv_id": "2610.24365",
+      "authors": [
+        "Jeff Shen",
+        "Zhejian Zhou",
+        "Ryan Lee",
+        "Jonathan May",
+        "Shirley Ho"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      },
+      "reason": "並列draftのblock diffusion方式は候補token間の依存を無視しがちという問題に対し、targetのhidden stateに条件づけた連続flow mapのdrafterで候補ブロックを1 forwardで生成する。Qwen3-8Bを使った著者要旨の比較ではDFlash相当のbaselineより平均speedupが7%高く、最大6.1倍のlossless accelerationを報告。投機復号の受理効率とドラフト計算の高速化に直結するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "RCSD: Reinforcement and Continual Learning for Domain-Specific Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.29527",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference by employing a compact draft model to propose candidate tokens that are verified in parallel by a target model. Conventional training relies on soft-label distillation, which forces the draft model to mimic the target's full output distribution, including high-entropy regions that degrade acceptance rates and increase early rejection risk. We propose RCSD (Reinforcement and Continual Learning for Speculative Decoding), a training framework that aligns draft model optimization with the system-level objective of maximizing acceptance length. RCSD leverages naturally occurring accepted and rejected sequences during speculative inference to construct implicit preference pairs, with masked loss to avoid penalizing target-aligned tokens. Evaluated across multiple benchmarks, RCSD improves average acceptance length by 35% over HASS and achieves 1.35x faster end-to-end inference than HASS on practical workloads, without compromising generation quality.",
+      "identifiers": [
+        "SemanticScholar:f6fa585754ff9aaf0022a353361b02e80340f727"
+      ],
+      "semantic_scholar_id": "f6fa585754ff9aaf0022a353361b02e80340f727",
+      "canonical_id": "arXiv:2610.29527",
+      "arxiv_id": "2610.29527",
+      "authors": [
+        "Ming-Kang Liu",
+        "Wei-Ming Meng",
+        "P. Jiao",
+        "Jia-Wei Zhang",
+        "Tian-Yuan Liu",
+        "Jun-Yan Li",
+        "Li-Chen Pang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投機復号のdraft学習をtargetの全確率分布への蒸留から、実際の受理長を増やす目的へ転換する。投機推論中に観測される受理/棄却系列から暗黙の選好対を作り、targetと一致したtokenを誤って罰しないmasked lossで継続学習する。arXiv一次登録要旨はHASS比で平均受理長35%改善、実用ワークロードでend-to-end推論1.35倍高速化を報告。学習手法だが最終目的と実測は投機復号の推論高速化なのでaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-212c69c1a2dd",
+    "round": "libimp-212c69c1a2ddb0f8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-212c69c1a2ddb0f8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-212c69c1a2ddb0f8-pre01.json",
+    "receipt": "sha256:0d42cd9a8368d93c70ae4f9c44f83949f66ce3c5159491ae90241be3b83806b2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-212c69c1a2dd",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

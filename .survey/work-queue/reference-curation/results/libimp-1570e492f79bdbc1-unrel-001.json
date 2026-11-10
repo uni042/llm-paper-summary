@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1570e492f79bdbc1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.31963",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.31963",
+    "identity_tokens": [
+      "arXiv:2606.31963"
+    ],
+    "reason": "RMSNorm Transformerのcheckpoint座標・steering等を整合させるgauge transport研究で、推論性能最適化を扱わない。",
+    "first_checked_at": "2026-10-05T03:52:08+00:00",
+    "last_checked_at": "2026-10-05T03:52:08+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+    ],
+    "title": "Signed-Permutation Coordinate Transport for RMSNorm Transformers"
+  },
+  "processed_at": "2026-10-05T03:52:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1570e492f79b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

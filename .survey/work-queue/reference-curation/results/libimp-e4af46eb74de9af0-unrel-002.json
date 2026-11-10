@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e4af46eb74de9af0-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s44267-024-00065-8",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s44267-024-00065-8",
+    "identity_tokens": [
+      "DOI:10.1007/s44267-024-00065-8"
+    ],
+    "reason": "Broad overview of large AI models and industrial applications; not a focused inference-efficiency contribution.",
+    "first_checked_at": "2026-10-05T12:24:54+00:00",
+    "last_checked_at": "2026-10-05T12:24:54+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+    ],
+    "title": "An overview of large AI models and their applications"
+  },
+  "processed_at": "2026-10-05T12:24:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e4af46eb74de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

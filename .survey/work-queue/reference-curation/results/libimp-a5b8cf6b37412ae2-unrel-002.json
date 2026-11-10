@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5b8cf6b37412ae2-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.10691",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.10691",
+    "identity_tokens": [
+      "arXiv:2309.10691"
+    ],
+    "reason": "MINTはtool interaction feedback下でのLLM能力評価benchmarkで、推論の効率化手法ではない。",
+    "first_checked_at": "2026-10-05T02:17:27+00:00",
+    "last_checked_at": "2026-10-05T02:17:27+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2506.02634-kvcache-cache-in-the-wild-characterizing-and-optimizing-kvcache-cache-at.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md"
+    ],
+    "title": "MINT: Evaluating LLMs in Multi-turn Interaction with Tools and Language Feedback"
+  },
+  "processed_at": "2026-10-05T02:17:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5b8cf6b3741",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

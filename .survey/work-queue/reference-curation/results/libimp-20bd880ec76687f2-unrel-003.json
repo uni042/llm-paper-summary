@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20bd880ec76687f2-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2308.12216",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2308.12216",
+    "identity_tokens": [
+      "arXiv:2308.12216"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2308.12216. Abstract summary: Vision Transformer has demonstrated impressive success across various vision tasks. However, its heavy computation cost, which grows quadratically with respect to the token sequence length, largely limits its power in handling large feature maps. To alleviate the computation cost, previous works rely on either fine-grained self- Out of scope: Vision Transformer token reallocation for image tasks.",
+    "first_checked_at": "2026-10-05T12:30:32+00:00",
+    "last_checked_at": "2026-10-05T12:30:32+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+    ],
+    "title": "SG-Former: Self-guided Transformer with Evolving Token Reallocation"
+  },
+  "processed_at": "2026-10-05T12:30:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20bd880ec766",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

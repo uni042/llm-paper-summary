@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86d6ab9f5e8aedbd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.14173",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.14173",
+    "identity_tokens": [
+      "arXiv:2505.14173"
+    ],
+    "reason": "一次要旨はneural machine translation向けMoE expert routingを扱う。",
+    "first_checked_at": "2026-10-05T15:33:57+00:00",
+    "last_checked_at": "2026-10-05T15:33:57+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
+      "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+    ],
+    "title": "THOR-MoE: Hierarchical Task-Guided and Context-Responsive Routing for Neural Machine Translation"
+  },
+  "processed_at": "2026-10-05T15:33:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86d6ab9f5e8a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-81cde91d9b06081c-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.31281",
+  "reason": "MA-WAM uses a world-action model to generate/rank candidate multi-agent trajectories at test time. Reported planning can improve task returns over reactive policies, but uses up to eight candidate rollouts; its cost discussion concerns world-model test-time planning, not LLM inference/serving or reducing compute. It evaluates coordination benchmarks rather than LLM workloads; benefits are limited near the task ceiling and experiments use M=8/horizon cap 8.",
+  "title": "MA-WAM: Multi-Agent World-Action Model for Test-Time Planning",
+  "identity_tokens": [
+    "arXiv:2609.31281"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-81cde91d9b06",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

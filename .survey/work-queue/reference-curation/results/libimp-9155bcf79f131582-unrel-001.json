@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9155bcf79f131582-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.08719",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.08719",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2503.08719",
+      "arXiv:2503.08719"
+    ],
+    "reason": "ウェアラブル医用画像処理向けU-Netの量子化ビット幅を学習可能にする研究であり、生成LLMやLLMサービング向けの量子化ではない。タイトルから医用画像用U-Netへの適用が明白なため先行除外する。",
+    "first_checked_at": "2026-10-23T14:48:53+00:00",
+    "last_checked_at": "2026-10-23T14:48:53+00:00",
+    "linked_from": [],
+    "title": "QuantU-Net: Efficient Wearable Medical Imaging Using Bitwidth as a Trainable Parameter"
+  },
+  "processed_at": "2026-10-23T14:48:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9155bcf79f13",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

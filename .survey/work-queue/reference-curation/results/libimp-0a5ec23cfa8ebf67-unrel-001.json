@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0a5ec23cfa8ebf67-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.04678",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.04678",
+    "identity_tokens": [
+      "arXiv:2512.04678",
+      "id:arXiv:2512.04678",
+      "url:https://arxiv.org/abs/2512.04678"
+    ],
+    "reason": "一次要旨の対象は動画拡散モデルのストリーミング映像生成で、EMA-Sinkによるフレーム文脈保持と動きの報酬を使う分布一致蒸留で映像の運動品質を改善する。単一H100で23.1FPSと効率測定はあるが、LLMの言語トークン復号、推論基盤、KVキャッシュ管理、MoE通信、オフロードの研究ではない。動画生成モデル固有の品質・時系列一貫性が主題。",
+    "first_checked_at": "2026-10-12T18:49:58+00:00",
+    "last_checked_at": "2026-10-16T13:52:39+00:00",
+    "linked_from": [],
+    "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation"
+  },
+  "processed_at": "2026-10-16T13:52:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0a5ec23cfa8e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

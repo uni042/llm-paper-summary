@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2690519519eb463f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.13975",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.13975",
+    "identity_tokens": [
+      "arXiv:2409.13975"
+    ],
+    "reason": "Relevant FPGA Transformer family and FTRANS/FlightLLM neighborhood, but decoder/prefill/decode transfer remains untested.",
+    "first_checked_at": "2026-10-06T11:42:50+00:00",
+    "last_checked_at": "2026-10-06T11:42:50+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+      "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ProTEA: Programmable Transformer Encoder Acceleration on FPGA"
+  },
+  "processed_at": "2026-10-06T11:42:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2690519519eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-45ffa45be78d0423-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2006.12065",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2006.12065",
+    "identity_tokens": [
+      "arXiv:2006.12065"
+    ],
+    "reason": "The same arXiv ID and author list persist across versions. Latest v4 is �gA Trainable Optimal Transport Embedding for Feature Aggregation and its Relationship to Attention�h; it is a general feature-aggregation kernel/attention method, but the abstract does not establish an LLM inference deployment result.",
+    "first_checked_at": "2026-10-13T00:49:39+00:00",
+    "last_checked_at": "2026-10-13T00:49:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "A Trainable Optimal Transport Embedding for Feature Aggregation and its Relationship to Attention"
+  },
+  "processed_at": "2026-10-13T00:49:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-45ffa45be78d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b786df0a07965a4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.20172",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.20172",
+    "identity_tokens": [
+      "arXiv:2608.20172"
+    ],
+    "reason": "Attention dominates token mixing, but it collapses relation formation and flow allocation into a single score-to-flow step. We introduce Relation, which separates them by first organizing pairwise evidence into explicit Self and Exchange relations and deriving information flow afterward. Relation first decides whether a token should rely on itself or draw from its history, and if it draws from history, where to look. This relational organization gives rise to Full Relation, FlashRelation, Linear Relation, and Hybrid Relation. Across matched decoder-only models, Full Relation achieves lower mean final-validation NLL than MHA and reaches the paired MHA final training loss with 4.5-7.3% fewer tokens. Structural diagnostics further show that Relation learns a distinct depth organization: the first layer acts as a current-token anchor and a high-rank router, while later layers shift strongly toward history. In a fixed-context reference benchmark, FlashRelation is 4.17-5.28x faster than the materialized Full Relation implementation. Across scale-matched production workloads, it reaches 89.7-92.9% of PyTorch FlashAttention throughput while executing the exact Full Relation operator. Hybrid Relation demonstrates that Full and Linear Relation layers can be composed within a single decoder. These results support a relation-first view of token mixing: ask Self, ask Others, then let Flow follow Relation.",
+    "first_checked_at": "2026-10-05T08:19:06+00:00",
+    "last_checked_at": "2026-10-05T08:19:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Ask Self, Ask Others: Relation Is All You Need"
+  },
+  "processed_at": "2026-10-05T08:19:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b786df0a079",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

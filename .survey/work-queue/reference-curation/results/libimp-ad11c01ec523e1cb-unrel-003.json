@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad11c01ec523e1cb-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/iccvbic71195.2026.11688292",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/iccvbic71195.2026.11688292",
+    "identity_tokens": [
+      "DOI:10.1109/iccvbic71195.2026.11688292"
+    ],
+    "reason": "The growing use of abstractive text summarization in news, scientific literature, and multi-document analysis has increased the need for summaries that contain factual information supported by their sources. Recent Transformer-based summarization models generate fluent and coherent summaries, but they often include hallucinated information, particularly in long and multi-document settings. Existing factuality-guided frameworks improve consistency using verification and refinement techniques, but most approaches rely on static pipelines and limited reasoning capabilities. In this work, we propose a Hierarchical Reasoning and Evidence-Guided Agentic Framework (HREAF) for factual text summarization. The framework retrieves supporting evidence, analyzes relationships among facts, generates summaries using fact planning, verifies factual correctness, and improves uncertain content through iterative refinement. Unlike earlier methods, the framework identifies uncertain parts of the summary and improves them using supporting evidence through multiple refinement steps. Experimental evaluation on the CNN/DailyMail, WikiSum, Multi-News, and DUC datasets demonstrates remarkable improvements in factual-consistency metrics, with FactCC scores of $\\text{0. 9 4}, \\text{0. 9 2}, \\text{0. 9 3}, \\text{0. 9 1}$, compared to strong baseline models. It also maintains competitive ROUGE performance with an R-L score of 43.6 on the CNN/DailyMail dataset. Ablation results demonstrate that iterative refinement is the most influential component, improving FactCC by 0.15, while hierarchical reasoning increases factual consistency by 0.07.",
+    "first_checked_at": "2026-10-05T09:35:36+00:00",
+    "last_checked_at": "2026-10-05T09:35:36+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Hierarchical Reasoning and Evidence-Guided Agentic Framework for Factual Text Summarization"
+  },
+  "processed_at": "2026-10-05T09:35:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad11c01ec523",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

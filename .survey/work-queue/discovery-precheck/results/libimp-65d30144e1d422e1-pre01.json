@@ -1,0 +1,678 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-65d30144e1d422e1-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-65d30144e1d4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2507.20030",
+    "arXiv:2509.18172",
+    "arXiv:2604.00757",
+    "arXiv:2604.24008",
+    "arXiv:2605.16343",
+    "arXiv:2605.17672",
+    "arXiv:2605.26092"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ef8aa6822e25563fbf7e22ae15a4c32dc319367c",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T21:57:57.360178+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2507.20030",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.18172",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.00757",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.24008",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.16343",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.17672",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.26092",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2605.17672",
+      "year": 2026,
+      "published": "2026-05-17",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) achieve strong performance by generating long chains of thought (CoT), but often overthink, continuing to reason after a solution has already stabilized and thereby wasting tokens and increasing latency. Existing inference-time early-exit methods rely primarily on answer-level signals, such as confidence or trial-answer consistency, to decide when to stop. However, these signals mainly reflect answer readiness rather than reasoning convergence: they may trigger before the model has finished exploring or self-correcting, causing premature exits that can degrade final-answer accuracy and leave the retained reasoning chain semantically incomplete. We identify reasoning-level semantic redundancy as a complementary signal for semantic-preserving early exit: when successive steps no longer add novel progress and instead revisit established conclusions, the reasoning trajectory has likely converged. Building on this insight, we propose PUMA, a plug-and-play framework that combines a lightweight Redundancy Detector with answer-level verification. The detector flags semantically redundant candidate exits, while verification confirms whether stopping is safe, allowing PUMA to remove redundant continuation while preserving both answer accuracy and a coherent reasoning prefix. Across five LRMs and five challenging reasoning benchmarks, PUMA achieves 26.2% average token reduction while preserving accuracy and retained CoT quality. Additional experiments on code generation, zero-shot vision-language reasoning, and learned stopping-policy internalization further demonstrate that reasoning-level redundancy is a robust, transferable, and learnable signal for efficient reasoning. Our code is available at \\url{https://github.com/giovanni-vaccarino/PUMA}.",
+      "identifiers": [
+        "SemanticScholar:8ec022e440eb90215c85f741b0137c8cd9b620ea"
+      ],
+      "semantic_scholar_id": "8ec022e440eb90215c85f741b0137c8cd9b620ea",
+      "canonical_id": "arXiv:2605.17672",
+      "arxiv_id": "2605.17672",
+      "doi": "10.48550/arXiv.2605.17672",
+      "authors": [
+        "De-Hai Min",
+        "G. Vaccarino",
+        "Huiyi Chen",
+        "Yong-Liang Wu",
+        "G. Yona",
+        "Lu Cheng"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 164,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LoopQ: Quantization for Looped Language Models",
+      "source_url": "https://arxiv.org/abs/2605.16343",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped language models (LoopLMs) increase effective computational depth by repeatedly applying shared Transformer blocks without increasing the parameter count. However, this reuse makes them particularly sensitive to post-training quantization (PTQ). We systematically study PTQ in LoopLMs and identify three sources of degradation: distribution shift across roles, state reuse across loop transitions, and recursive error accumulation. We propose LoopQ, a loop-aware PTQ framework that preserves a shared quantized backbone while introducing lightweight adaptations. LoopQ combines loop-aware activation scaling and selective transformations to accommodate changing hidden-state distributions, cross-loop state alignment to stabilize transitions, and trajectory-aware calibration to limit accumulated error. Under W4A4 quantization, LoopQ achieves a 67.8% average relative improvement in five-task mean accuracy across four backbones and a conservative estimate of 75.2% for the average relative perplexity reduction across eight backbone-dataset pairs, compared with the strongest static PTQ baseline for each comparison.",
+      "identifiers": [
+        "SemanticScholar:dca24f9228738d24f5a9929fe2e51070a9fd7d12"
+      ],
+      "semantic_scholar_id": "dca24f9228738d24f5a9929fe2e51070a9fd7d12",
+      "canonical_id": "arXiv:2605.16343",
+      "arxiv_id": "2605.16343",
+      "authors": [
+        "Rui Fang",
+        "Hsi-Wen Chen",
+        "Chi Cheng",
+        "Ming-Syan Chen"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 173,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GoQuant: Geometric Orthogonal Residual Projection for Multiplier-Free Power-of-Two Transformer Quantization",
+      "source_url": "https://arxiv.org/abs/2605.26092",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of Large Language Models (LLMs) and Vision Transformers (ViTs) on edge devices is significantly constrained by memory capacity and the critical timing bottlenecks introduced by dense Multiply--Accumulate (MAC) arrays. In the ultra-low-bit regime, logarithmic Power-of-Two (PoT) quantization provides a hardware-efficient alternative by replacing general multiplications in the dominant dot-product computation with bit-shift operations. However, its non-uniform exponential lattice inherently suffers from a \\textbf{Low Angular Resolution Regime}, a structural limitation that becomes particularly pronounced below 4-bit precision and can substantially degrade the representation of high-dimensional feature manifolds. To address this geometric limitation, we propose Geometric Orthogonal Residual Projection Quantization (GoQuant), an algorithm--hardware co-design framework for multiplier-reduced low-bit inference. By formulating quantization as a dual-basis geometric projection, GoQuant constructs a higher-resolution residual lattice while retaining a shift-and-add inner-product structure. Its analytical solver further avoids computationally intensive gradient-based or iterative search procedures. The data-free Geometric-Only (GEO) mode quantizes LLaMA-2-7B in only 0.47 minutes, while the Activation-Refined (REF) mode completes full-model quantization in approximately \\textbf{4.4 minutes}.",
+      "identifiers": [
+        "SemanticScholar:ce9fe47ef1371905780872e716593a9b6ca723e9"
+      ],
+      "semantic_scholar_id": "ce9fe47ef1371905780872e716593a9b6ca723e9",
+      "canonical_id": "arXiv:2605.26092",
+      "arxiv_id": "2605.26092",
+      "doi": "10.48550/arXiv.2605.26092",
+      "authors": [
+        "Mao-Yang Xiang",
+        "Tao Luo",
+        "Bo Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 156,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FAEDKV: Infinite-Window Fourier Transform for Unbiased KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2507.20030",
+      "year": 2025,
+      "published": "2025-07-26",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The efficacy of Large Language Models (LLMs) in long-context tasks is often hampered by the substantial memory footprint and computational demands of the Key-Value (KV) cache. Current compression strategies, including token eviction and learned projections, frequently lead to biased representations -- either by overemphasizing recent/high-attention tokens or by repeatedly degrading information from earlier context -- and may require costly model retraining. We present FAEDKV (Frequency-Adaptive Infinite-Window for KV cache), a novel, training-free KV cache compression framework that ensures unbiased information retention. FAEDKV operates by transforming the KV cache into the frequency domain using a proposed Infinite-Window Fourier Transform (IWDFT). This approach allows for the equalized contribution of all tokens to the compressed representation, effectively preserving both early and recent contextual information. A preliminary frequency ablation study identifies critical spectral components for layer-wise, targeted compression. Experiments on LongBench benchmark demonstrate FAEDKV's superiority over existing methods by up to 22\\%. In addition, our method shows superior, position-agnostic retrieval accuracy on the Needle-In-A-Haystack task compared to compression based approaches.",
+      "identifiers": [
+        "SemanticScholar:95291694922286c2f28d35ae63d1b2cb2932eaa2"
+      ],
+      "semantic_scholar_id": "95291694922286c2f28d35ae63d1b2cb2932eaa2",
+      "canonical_id": "arXiv:2507.20030",
+      "arxiv_id": "2507.20030",
+      "doi": "10.48550/arXiv.2507.20030",
+      "authors": [
+        "Runchao Li",
+        "Yao Fu",
+        "Mu Sheng",
+        "Xian-Xuan Long",
+        "Haotian Yu",
+        "Pan Li"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 459,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "IWP: Token Pruning as Implicit Weight Pruning in Large Vision Language Models",
+      "source_url": "https://arxiv.org/abs/2604.00757",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision Language Models show impressive performance across image and video understanding tasks, yet their computational cost grows rapidly with the number of visual tokens. Existing token pruning methods mitigate this issue through empirical approaches while overlooking the internal mechanism of attention. In this paper, we propose a novel training free token pruning framework grounded in the dual form perspective of attention. We reformulate attention as an implicit linear layer whose weight matrix is the sum of rank 1 outer products, each generated by a single token's key value pair. Token pruning thus reduces to selecting an optimal subset of these rank 1 updates that best approximates the original dual weight matrix. Extending this perspective to standard softmax attention in LVLMs, we derive a novel metric quantifying both a token's information magnitude and information duplication. To efficiently select the subset with the proposed metric, we introduce Progressive Chunked Maximal Marginal Relevance. Extensive experiments demonstrate that our method achieves a better trade off between performance and efficiency, while providing another perspective on existing pruning approaches.",
+      "identifiers": [
+        "SemanticScholar:cce8b8153c03fe053209e4f2a4c993b13f049d2b"
+      ],
+      "semantic_scholar_id": "cce8b8153c03fe053209e4f2a4c993b13f049d2b",
+      "canonical_id": "arXiv:2604.00757",
+      "arxiv_id": "2604.00757",
+      "doi": "10.48550/arXiv.2604.00757",
+      "authors": [
+        "Dong-Jae Lee",
+        "S. Baek",
+        "Junmo Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 210,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Coverage-Based Calibration for Post-Training Quantization via Weighted Set Cover over Outlier Channels",
+      "source_url": "https://arxiv.org/abs/2604.24008",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-Training Quantization (PTQ) compresses large language models to low bit-widths using a small calibration set, and its quality depends strongly on which samples are chosen. We identify a failure mode in which calibration samples fail to activate outlier channels, hidden dimensions with unusually large activations, causing the quantizer to underestimate their dynamic range and producing per-channel reconstruction errors that dominate layer-wise loss. Motivated by this observation, we argue that PTQ calibration quality is governed more by weighted outlier-channel coverage than by generic sample representativeness, and formulate calibration selection as a weighted set cover problem over outlier channels. The objective is monotone submodular, and the greedy algorithm, COVERCAL, operates on pre-computed activation statistics and requires no GPU time at selection. We further show that the weight choice is internally consistent: under a stylized clipping model, missed weighted coverage upper-bounds surrogate loss, justifying the weighted coverage objective as principled rather than purely empirical. Across LLaMA-2, LLaMA-3, and Mistral, under AWQ and GPTQ backends and five downstream evaluations, COVERCAL improves over random, max-perplexity, max-activation-variance, and stratified baselines, with the largest gains at small calibration budgets. At INT4 with 128 samples, COVERCAL improves MMLU by 1.2 to 1.5 points over random calibration and reduces perplexity degradation by 15 to 30\\%; with 64 samples, it matches or exceeds random calibration at 256. The contribution is not a new PTQ backend but a formulation of calibration selection as weighted outlier coverage, with a simple, efficient algorithm and a surrogate-based justification.",
+      "identifiers": [
+        "SemanticScholar:84ebb5d879084673e6b81dee9cb50898bb11cf3c"
+      ],
+      "semantic_scholar_id": "84ebb5d879084673e6b81dee9cb50898bb11cf3c",
+      "canonical_id": "arXiv:2604.24008",
+      "arxiv_id": "2604.24008",
+      "doi": "10.48550/arXiv.2604.24008",
+      "authors": [
+        "Ibne Farabi Shihab",
+        "Sanjeda Akter",
+        "Anuj Sharma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SBVR: Summation of BitVector Representation for Efficient LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2509.18172",
+      "year": 2025,
+      "published": "2025-09-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the advent of large language models (LLMs), numerous Post-Training Quantization (PTQ) strategies have been proposed to alleviate deployment barriers created by their enormous parameter counts. Quantization achieves compression by limiting the number of representable points in the data. Therefore, the key to achieving efficient quantization is selecting the optimal combination of representation points, or codes, for the given data. Existing PTQ solutions adopt two major approaches to this problem: Round-To-Nearest (RTN)-based methods and codebook-based methods. RTN-based methods map LLM weights onto uniformly distributed integer grids, failing to account for the Gaussian-like weight distribution of LLM weights. Codebook-based methods mitigate this issue by constructing distribution-aware codebooks; however, they suffer from random and strided memory access patterns, resulting in degraded inference speed that is exacerbated by the limited size of GPU L1 cache. To overcome these limitations, we propose a novel LLM quantization method, SBVR (Summation of BitVector Representation), that enables Gaussian-like code representation in a hardware-friendly manner for fast inference. SBVR maps weight values to non-uniform representation points whose distribution follows the actual distribution of LLM weights, enabling more accurate compression. Additionally, we design a custom CUDA kernel that allows matrix-vector multiplication directly in the SBVR format without decompression, thereby enabling high-performance execution of SBVR-compressed models. Our evaluations of SBVR on various models demonstrate state-of-the-art perplexity and accuracy benchmark performance while delivering a 2.21x- 3.04x end-to-end token-generation speedup over naive FP16 models in the 4-bit quantization regime.",
+      "identifiers": [
+        "SemanticScholar:95322868d0cf535fb21b42a4c9c8b1d825cd1ebf"
+      ],
+      "semantic_scholar_id": "95322868d0cf535fb21b42a4c9c8b1d825cd1ebf",
+      "canonical_id": "arXiv:2509.18172",
+      "arxiv_id": "2509.18172",
+      "doi": "10.48550/arXiv.2509.18172",
+      "authors": [
+        "Wonjun Bang",
+        "Jongseok Park",
+        "Hong Yu",
+        "Kyungmin Bin",
+        "Kyunghan Lee"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 406,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.17672",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.17672",
+        "id:SemanticScholar:8ec022e440eb90215c85f741b0137c8cd9b620ea",
+        "id:arXiv:2605.17672",
+        "title:stop when reasoning converges semanticpreserving early exit for reasoning models",
+        "url:https://arxiv.org/abs/2605.17672"
+      ],
+      "record": {
+        "title": "Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models",
+        "source_url": "https://arxiv.org/abs/2605.17672",
+        "year": 2026,
+        "published": "2026-05-17",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) achieve strong performance by generating long chains of thought (CoT), but often overthink, continuing to reason after a solution has already stabilized and thereby wasting tokens and increasing latency. Existing inference-time early-exit methods rely primarily on answer-level signals, such as confidence or trial-answer consistency, to decide when to stop. However, these signals mainly reflect answer readiness rather than reasoning convergence: they may trigger before the model has finished exploring or self-correcting, causing premature exits that can degrade final-answer accuracy and leave the retained reasoning chain semantically incomplete. We identify reasoning-level semantic redundancy as a complementary signal for semantic-preserving early exit: when successive steps no longer add novel progress and instead revisit established conclusions, the reasoning trajectory has likely converged. Building on this insight, we propose PUMA, a plug-and-play framework that combines a lightweight Redundancy Detector with answer-level verification. The detector flags semantically redundant candidate exits, while verification confirms whether stopping is safe, allowing PUMA to remove redundant continuation while preserving both answer accuracy and a coherent reasoning prefix. Across five LRMs and five challenging reasoning benchmarks, PUMA achieves 26.2% average token reduction while preserving accuracy and retained CoT quality. Additional experiments on code generation, zero-shot vision-language reasoning, and learned stopping-policy internalization further demonstrate that reasoning-level redundancy is a robust, transferable, and learnable signal for efficient reasoning. Our code is available at \\url{https://github.com/giovanni-vaccarino/PUMA}.",
+        "identifiers": [
+          "SemanticScholar:8ec022e440eb90215c85f741b0137c8cd9b620ea"
+        ],
+        "semantic_scholar_id": "8ec022e440eb90215c85f741b0137c8cd9b620ea",
+        "canonical_id": "arXiv:2605.17672",
+        "arxiv_id": "2605.17672",
+        "doi": "10.48550/arXiv.2605.17672",
+        "authors": [
+          "De-Hai Min",
+          "G. Vaccarino",
+          "Huiyi Chen",
+          "Yong-Liang Wu",
+          "G. Yona",
+          "Lu Cheng"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 164,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.16343",
+      "identity_tokens": [
+        "id:SemanticScholar:dca24f9228738d24f5a9929fe2e51070a9fd7d12",
+        "id:arXiv:2605.16343",
+        "title:loopq quantization for looped language models",
+        "url:https://arxiv.org/abs/2605.16343"
+      ],
+      "record": {
+        "title": "LoopQ: Quantization for Looped Language Models",
+        "source_url": "https://arxiv.org/abs/2605.16343",
+        "year": 2026,
+        "published": "2026-05-08",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped language models (LoopLMs) increase effective computational depth by repeatedly applying shared Transformer blocks without increasing the parameter count. However, this reuse makes them particularly sensitive to post-training quantization (PTQ). We systematically study PTQ in LoopLMs and identify three sources of degradation: distribution shift across roles, state reuse across loop transitions, and recursive error accumulation. We propose LoopQ, a loop-aware PTQ framework that preserves a shared quantized backbone while introducing lightweight adaptations. LoopQ combines loop-aware activation scaling and selective transformations to accommodate changing hidden-state distributions, cross-loop state alignment to stabilize transitions, and trajectory-aware calibration to limit accumulated error. Under W4A4 quantization, LoopQ achieves a 67.8% average relative improvement in five-task mean accuracy across four backbones and a conservative estimate of 75.2% for the average relative perplexity reduction across eight backbone-dataset pairs, compared with the strongest static PTQ baseline for each comparison.",
+        "identifiers": [
+          "SemanticScholar:dca24f9228738d24f5a9929fe2e51070a9fd7d12"
+        ],
+        "semantic_scholar_id": "dca24f9228738d24f5a9929fe2e51070a9fd7d12",
+        "canonical_id": "arXiv:2605.16343",
+        "arxiv_id": "2605.16343",
+        "authors": [
+          "Rui Fang",
+          "Hsi-Wen Chen",
+          "Chi Cheng",
+          "Ming-Syan Chen"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 173,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.26092",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.26092",
+        "id:SemanticScholar:ce9fe47ef1371905780872e716593a9b6ca723e9",
+        "id:arXiv:2605.26092",
+        "title:goquant geometric orthogonal residual projection for multiplierfree poweroftwo transformer quantization",
+        "url:https://arxiv.org/abs/2605.26092"
+      ],
+      "record": {
+        "title": "GoQuant: Geometric Orthogonal Residual Projection for Multiplier-Free Power-of-Two Transformer Quantization",
+        "source_url": "https://arxiv.org/abs/2605.26092",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of Large Language Models (LLMs) and Vision Transformers (ViTs) on edge devices is significantly constrained by memory capacity and the critical timing bottlenecks introduced by dense Multiply--Accumulate (MAC) arrays. In the ultra-low-bit regime, logarithmic Power-of-Two (PoT) quantization provides a hardware-efficient alternative by replacing general multiplications in the dominant dot-product computation with bit-shift operations. However, its non-uniform exponential lattice inherently suffers from a \\textbf{Low Angular Resolution Regime}, a structural limitation that becomes particularly pronounced below 4-bit precision and can substantially degrade the representation of high-dimensional feature manifolds. To address this geometric limitation, we propose Geometric Orthogonal Residual Projection Quantization (GoQuant), an algorithm--hardware co-design framework for multiplier-reduced low-bit inference. By formulating quantization as a dual-basis geometric projection, GoQuant constructs a higher-resolution residual lattice while retaining a shift-and-add inner-product structure. Its analytical solver further avoids computationally intensive gradient-based or iterative search procedures. The data-free Geometric-Only (GEO) mode quantizes LLaMA-2-7B in only 0.47 minutes, while the Activation-Refined (REF) mode completes full-model quantization in approximately \\textbf{4.4 minutes}.",
+        "identifiers": [
+          "SemanticScholar:ce9fe47ef1371905780872e716593a9b6ca723e9"
+        ],
+        "semantic_scholar_id": "ce9fe47ef1371905780872e716593a9b6ca723e9",
+        "canonical_id": "arXiv:2605.26092",
+        "arxiv_id": "2605.26092",
+        "doi": "10.48550/arXiv.2605.26092",
+        "authors": [
+          "Mao-Yang Xiang",
+          "Tao Luo",
+          "Bo Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 156,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.20030",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.20030",
+        "id:SemanticScholar:95291694922286c2f28d35ae63d1b2cb2932eaa2",
+        "id:arXiv:2507.20030",
+        "title:faedkv infinitewindow fourier transform for unbiased kv cache compression",
+        "url:https://arxiv.org/abs/2507.20030"
+      ],
+      "record": {
+        "title": "FAEDKV: Infinite-Window Fourier Transform for Unbiased KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2507.20030",
+        "year": 2025,
+        "published": "2025-07-26",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The efficacy of Large Language Models (LLMs) in long-context tasks is often hampered by the substantial memory footprint and computational demands of the Key-Value (KV) cache. Current compression strategies, including token eviction and learned projections, frequently lead to biased representations -- either by overemphasizing recent/high-attention tokens or by repeatedly degrading information from earlier context -- and may require costly model retraining. We present FAEDKV (Frequency-Adaptive Infinite-Window for KV cache), a novel, training-free KV cache compression framework that ensures unbiased information retention. FAEDKV operates by transforming the KV cache into the frequency domain using a proposed Infinite-Window Fourier Transform (IWDFT). This approach allows for the equalized contribution of all tokens to the compressed representation, effectively preserving both early and recent contextual information. A preliminary frequency ablation study identifies critical spectral components for layer-wise, targeted compression. Experiments on LongBench benchmark demonstrate FAEDKV's superiority over existing methods by up to 22\\%. In addition, our method shows superior, position-agnostic retrieval accuracy on the Needle-In-A-Haystack task compared to compression based approaches.",
+        "identifiers": [
+          "SemanticScholar:95291694922286c2f28d35ae63d1b2cb2932eaa2"
+        ],
+        "semantic_scholar_id": "95291694922286c2f28d35ae63d1b2cb2932eaa2",
+        "canonical_id": "arXiv:2507.20030",
+        "arxiv_id": "2507.20030",
+        "doi": "10.48550/arXiv.2507.20030",
+        "authors": [
+          "Runchao Li",
+          "Yao Fu",
+          "Mu Sheng",
+          "Xian-Xuan Long",
+          "Haotian Yu",
+          "Pan Li"
+        ],
+        "priority": 23,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 23,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 459,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.00757",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.00757",
+        "id:SemanticScholar:cce8b8153c03fe053209e4f2a4c993b13f049d2b",
+        "id:arXiv:2604.00757",
+        "title:iwp token pruning as implicit weight pruning in large vision language models",
+        "url:https://arxiv.org/abs/2604.00757"
+      ],
+      "record": {
+        "title": "IWP: Token Pruning as Implicit Weight Pruning in Large Vision Language Models",
+        "source_url": "https://arxiv.org/abs/2604.00757",
+        "year": 2026,
+        "published": "2026-04-01",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision Language Models show impressive performance across image and video understanding tasks, yet their computational cost grows rapidly with the number of visual tokens. Existing token pruning methods mitigate this issue through empirical approaches while overlooking the internal mechanism of attention. In this paper, we propose a novel training free token pruning framework grounded in the dual form perspective of attention. We reformulate attention as an implicit linear layer whose weight matrix is the sum of rank 1 outer products, each generated by a single token's key value pair. Token pruning thus reduces to selecting an optimal subset of these rank 1 updates that best approximates the original dual weight matrix. Extending this perspective to standard softmax attention in LVLMs, we derive a novel metric quantifying both a token's information magnitude and information duplication. To efficiently select the subset with the proposed metric, we introduce Progressive Chunked Maximal Marginal Relevance. Extensive experiments demonstrate that our method achieves a better trade off between performance and efficiency, while providing another perspective on existing pruning approaches.",
+        "identifiers": [
+          "SemanticScholar:cce8b8153c03fe053209e4f2a4c993b13f049d2b"
+        ],
+        "semantic_scholar_id": "cce8b8153c03fe053209e4f2a4c993b13f049d2b",
+        "canonical_id": "arXiv:2604.00757",
+        "arxiv_id": "2604.00757",
+        "doi": "10.48550/arXiv.2604.00757",
+        "authors": [
+          "Dong-Jae Lee",
+          "S. Baek",
+          "Junmo Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 210,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.24008",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.24008",
+        "id:SemanticScholar:84ebb5d879084673e6b81dee9cb50898bb11cf3c",
+        "id:arXiv:2604.24008",
+        "title:coveragebased calibration for posttraining quantization via weighted set cover over outlier channels",
+        "url:https://arxiv.org/abs/2604.24008"
+      ],
+      "record": {
+        "title": "Coverage-Based Calibration for Post-Training Quantization via Weighted Set Cover over Outlier Channels",
+        "source_url": "https://arxiv.org/abs/2604.24008",
+        "year": 2026,
+        "published": "2026-04-27",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-Training Quantization (PTQ) compresses large language models to low bit-widths using a small calibration set, and its quality depends strongly on which samples are chosen. We identify a failure mode in which calibration samples fail to activate outlier channels, hidden dimensions with unusually large activations, causing the quantizer to underestimate their dynamic range and producing per-channel reconstruction errors that dominate layer-wise loss. Motivated by this observation, we argue that PTQ calibration quality is governed more by weighted outlier-channel coverage than by generic sample representativeness, and formulate calibration selection as a weighted set cover problem over outlier channels. The objective is monotone submodular, and the greedy algorithm, COVERCAL, operates on pre-computed activation statistics and requires no GPU time at selection. We further show that the weight choice is internally consistent: under a stylized clipping model, missed weighted coverage upper-bounds surrogate loss, justifying the weighted coverage objective as principled rather than purely empirical. Across LLaMA-2, LLaMA-3, and Mistral, under AWQ and GPTQ backends and five downstream evaluations, COVERCAL improves over random, max-perplexity, max-activation-variance, and stratified baselines, with the largest gains at small calibration budgets. At INT4 with 128 samples, COVERCAL improves MMLU by 1.2 to 1.5 points over random calibration and reduces perplexity degradation by 15 to 30\\%; with 64 samples, it matches or exceeds random calibration at 256. The contribution is not a new PTQ backend but a formulation of calibration selection as weighted outlier coverage, with a simple, efficient algorithm and a surrogate-based justification.",
+        "identifiers": [
+          "SemanticScholar:84ebb5d879084673e6b81dee9cb50898bb11cf3c"
+        ],
+        "semantic_scholar_id": "84ebb5d879084673e6b81dee9cb50898bb11cf3c",
+        "canonical_id": "arXiv:2604.24008",
+        "arxiv_id": "2604.24008",
+        "doi": "10.48550/arXiv.2604.24008",
+        "authors": [
+          "Ibne Farabi Shihab",
+          "Sanjeda Akter",
+          "Anuj Sharma"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 184,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.18172",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.18172",
+        "id:SemanticScholar:95322868d0cf535fb21b42a4c9c8b1d825cd1ebf",
+        "id:arXiv:2509.18172",
+        "title:sbvr summation of bitvector representation for efficient llm quantization",
+        "url:https://arxiv.org/abs/2509.18172"
+      ],
+      "record": {
+        "title": "SBVR: Summation of BitVector Representation for Efficient LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2509.18172",
+        "year": 2025,
+        "published": "2025-09-17",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the advent of large language models (LLMs), numerous Post-Training Quantization (PTQ) strategies have been proposed to alleviate deployment barriers created by their enormous parameter counts. Quantization achieves compression by limiting the number of representable points in the data. Therefore, the key to achieving efficient quantization is selecting the optimal combination of representation points, or codes, for the given data. Existing PTQ solutions adopt two major approaches to this problem: Round-To-Nearest (RTN)-based methods and codebook-based methods. RTN-based methods map LLM weights onto uniformly distributed integer grids, failing to account for the Gaussian-like weight distribution of LLM weights. Codebook-based methods mitigate this issue by constructing distribution-aware codebooks; however, they suffer from random and strided memory access patterns, resulting in degraded inference speed that is exacerbated by the limited size of GPU L1 cache. To overcome these limitations, we propose a novel LLM quantization method, SBVR (Summation of BitVector Representation), that enables Gaussian-like code representation in a hardware-friendly manner for fast inference. SBVR maps weight values to non-uniform representation points whose distribution follows the actual distribution of LLM weights, enabling more accurate compression. Additionally, we design a custom CUDA kernel that allows matrix-vector multiplication directly in the SBVR format without decompression, thereby enabling high-performance execution of SBVR-compressed models. Our evaluations of SBVR on various models demonstrate state-of-the-art perplexity and accuracy benchmark performance while delivering a 2.21x- 3.04x end-to-end token-generation speedup over naive FP16 models in the 4-bit quantization regime.",
+        "identifiers": [
+          "SemanticScholar:95322868d0cf535fb21b42a4c9c8b1d825cd1ebf"
+        ],
+        "semantic_scholar_id": "95322868d0cf535fb21b42a4c9c8b1d825cd1ebf",
+        "canonical_id": "arXiv:2509.18172",
+        "arxiv_id": "2509.18172",
+        "doi": "10.48550/arXiv.2509.18172",
+        "authors": [
+          "Wonjun Bang",
+          "Jongseok Park",
+          "Hong Yu",
+          "Kyungmin Bin",
+          "Kyunghan Lee"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 406,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9b6734d561663b615f7c7caacb54815d11b930e1200e958b7d0753dadf21ec17",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

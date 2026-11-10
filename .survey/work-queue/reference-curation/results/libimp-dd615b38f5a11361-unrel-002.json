@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd615b38f5a11361-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3579445",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3579445",
+    "identity_tokens": [
+      "DOI:10.1145/3579445"
+    ],
+    "reason": "完全分離型計算機の一般的な遠隔メモリ・データ移動機構で、LLM推論固有ではない。",
+    "first_checked_at": "2026-10-02T06:58:22+00:00",
+    "last_checked_at": "2026-10-02T06:58:22+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-45.json"
+    ],
+    "title": "DaeMon: Architectural Support for Efficient Data Movement in Fully Disaggregated Systems"
+  },
+  "processed_at": "2026-10-02T06:58:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd615b38f5a1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

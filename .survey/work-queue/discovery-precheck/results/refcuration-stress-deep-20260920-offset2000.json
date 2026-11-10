@@ -1,0 +1,898 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "refcuration-stress-deep-20260920-offset2000",
+  "collector_id": "repository-reference-curation-stress-deep",
+  "run_key": "manual-stress-deep-2026-09-20",
+  "axis": "structured references deep stress probe at raw offset 2000",
+  "provider": "repository_references",
+  "source_url": "repository://structured-references",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "2100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ab882ac135124d5537a67168d9dcddde70f7c195",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "results": [
+    {
+      "canonical_id": "arXiv:2404.15778",
+      "identity_tokens": [
+        "arXiv:2404.15778"
+      ],
+      "arxiv_id": "2404.15778",
+      "source_url": "https://arxiv.org/abs/2404.15778",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/05-speculative-decoding/2025-2506.01986-specmemo-memory-aware-speculative-decoding.md"
+      ],
+      "linked_from_titles": [
+        "SpecMemo: Speculative Decoding is in Your Pocket"
+      ],
+      "linked_from_lineages": [
+        "投機的デコード／メモリ制約推論／分散・バッチ投機実行"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2404.16645",
+      "identity_tokens": [
+        "arXiv:2404.16645"
+      ],
+      "arxiv_id": "2404.16645",
+      "source_url": "https://arxiv.org/abs/2404.16645",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md"
+      ],
+      "linked_from_titles": [
+        "MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall"
+      ],
+      "linked_from_lineages": [
+        "オフロード／階層メモリ"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2404.16914",
+      "identity_tokens": [
+        "arXiv:2404.16914"
+      ],
+      "arxiv_id": "2404.16914",
+      "source_url": "https://arxiv.org/abs/2404.16914",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/04-moe-offload-expert-cache/2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md"
+      ],
+      "linked_from_titles": [
+        "ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill"
+      ],
+      "linked_from_lineages": [
+        "MoE serving / attention-MoE disaggregation / asynchronous inference"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2404.18424",
+      "identity_tokens": [
+        "arXiv:2404.18424"
+      ],
+      "arxiv_id": "2404.18424",
+      "source_url": "https://arxiv.org/abs/2404.18424",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/kv-cache/2608.19662.md"
+      ],
+      "linked_from_titles": [
+        "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents"
+      ],
+      "linked_from_lineages": [
+        "KVキャッシュ再利用 / エージェント型LLM / ツール呼出し / KV圧縮 / 構造的枝刈り"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2404.19429",
+      "identity_tokens": [
+        "arXiv:2404.19429"
+      ],
+      "arxiv_id": "2404.19429",
+      "source_url": "https://arxiv.org/abs/2404.19429",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/04-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md"
+      ],
+      "linked_from_titles": [
+        "MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing"
+      ],
+      "linked_from_lineages": [
+        "MoE推論／エキスパート並列／エキスパート配置／全対全通信／負荷分散"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.00263",
+      "identity_tokens": [
+        "arXiv:2405.00263"
+      ],
+      "arxiv_id": "2405.00263",
+      "source_url": "https://arxiv.org/abs/2405.00263",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md"
+      ],
+      "linked_from_titles": [
+        "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding"
+      ],
+      "linked_from_lineages": [
+        "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.01481",
+      "identity_tokens": [
+        "arXiv:2405.01481"
+      ],
+      "arxiv_id": "2405.01481",
+      "source_url": "https://arxiv.org/abs/2405.01481",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md"
+      ],
+      "linked_from_titles": [
+        "GrowMTP: Can RL Grow Its Own Draft Head?"
+      ],
+      "linked_from_lineages": [
+        "投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.02842",
+      "identity_tokens": [
+        "arXiv:2405.02842"
+      ],
+      "arxiv_id": "2405.02842",
+      "source_url": "https://arxiv.org/abs/2405.02842",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md"
+      ],
+      "linked_from_titles": [
+        "MagicPIG: LSH Sampling for Efficient LLM Generation"
+      ],
+      "linked_from_lineages": [
+        "kv-cache-optimization-compression"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.03917",
+      "identity_tokens": [
+        "arXiv:2405.03917"
+      ],
+      "arxiv_id": "2405.03917",
+      "source_url": "https://arxiv.org/abs/2405.03917",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2504.15364-keydiff-key-similarity-based-kv-cache-eviction-for-long-context-llm-inference-in-resource-constrained-environments.md"
+      ],
+      "linked_from_titles": [
+        "KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments"
+      ],
+      "linked_from_lineages": [
+        "kv-cache-optimization-compression"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.04674",
+      "identity_tokens": [
+        "arXiv:2405.04674"
+      ],
+      "arxiv_id": "2405.04674",
+      "source_url": "https://arxiv.org/abs/2405.04674",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.01989-taichi-unified-prefill-decode-serving.md"
+      ],
+      "linked_from_titles": [
+        "Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving"
+      ],
+      "linked_from_lineages": [
+        "llm-serving-scheduling-disaggregation"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.05254",
+      "identity_tokens": [
+        "arXiv:2405.05254"
+      ],
+      "arxiv_id": "2405.05254",
+      "source_url": "https://arxiv.org/abs/2405.05254",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2503.16163-specache-speculative-kv-caching.md"
+      ],
+      "linked_from_titles": [
+        "SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs"
+      ],
+      "linked_from_lineages": [
+        "KV Cache Offload / Retrieval / Compression"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.05803",
+      "identity_tokens": [
+        "arXiv:2405.05803"
+      ],
+      "arxiv_id": "2405.05803",
+      "source_url": "https://arxiv.org/abs/2405.05803",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.26498-rps-serve-modality-aware-scheduling.md"
+      ],
+      "linked_from_titles": [
+        "TCM-Serve: Modality-aware Scheduling for Multimodal Large Language Model Inference"
+      ],
+      "linked_from_lineages": [
+        "llm-serving-scheduling-disaggregation"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.06211",
+      "identity_tokens": [
+        "arXiv:2405.06211"
+      ],
+      "arxiv_id": "2405.06211",
+      "source_url": "https://arxiv.org/abs/2405.06211",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
+      ],
+      "linked_from_titles": [
+        "P/D-Serve: Serving Disaggregated Large Language Model at Scale"
+      ],
+      "linked_from_lineages": [
+        "Prefill/Decode Disaggregation / Production LLM Serving"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.07135",
+      "identity_tokens": [
+        "arXiv:2405.07135"
+      ],
+      "arxiv_id": "2405.07135",
+      "source_url": "https://arxiv.org/abs/2405.07135",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md"
+      ],
+      "linked_from_titles": [
+        "Examining Post-Training Quantization for Mixture-of-Experts: A Benchmark"
+      ],
+      "linked_from_lineages": [
+        "Quantization × MoE × Offload"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.07883",
+      "identity_tokens": [
+        "arXiv:2405.07883"
+      ],
+      "arxiv_id": "2405.07883",
+      "source_url": "https://arxiv.org/abs/2405.07883",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md"
+      ],
+      "linked_from_titles": [
+        "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding"
+      ],
+      "linked_from_lineages": [
+        "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.12981",
+      "identity_tokens": [
+        "arXiv:2405.12981"
+      ],
+      "arxiv_id": "2405.12981",
+      "source_url": "https://arxiv.org/abs/2405.12981",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/10-sparse-attention/2026-2609.07306-routerelay-cross-layer-route-reuse.md"
+      ],
+      "linked_from_titles": [
+        "RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention"
+      ],
+      "linked_from_lineages": [
+        "sparse-attention"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.13019",
+      "identity_tokens": [
+        "arXiv:2405.13019"
+      ],
+      "arxiv_id": "2405.13019",
+      "source_url": "https://arxiv.org/abs/2405.13019",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+      ],
+      "linked_from_titles": [
+        "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities"
+      ],
+      "linked_from_lineages": [
+        "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.14636",
+      "identity_tokens": [
+        "arXiv:2405.14636"
+      ],
+      "arxiv_id": "2405.14636",
+      "source_url": "https://arxiv.org/abs/2405.14636",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15359-maps-memory-aware-predictive-scheduling.md"
+      ],
+      "linked_from_titles": [
+        "MAPS: Memory-Aware Predictive Scheduling Framework for Large Language Model Serving"
+      ],
+      "linked_from_lineages": [
+        "分離型LLMサービング／予測型スケジューリング／KVメモリ認識型配置"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.14838",
+      "identity_tokens": [
+        "arXiv:2405.14838"
+      ],
+      "arxiv_id": "2405.14838",
+      "source_url": "https://arxiv.org/abs/2405.14838",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.15338-dynamic-semantic-compression-latent-space-inference.md"
+      ],
+      "linked_from_titles": [
+        "Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models"
+      ],
+      "linked_from_lineages": [
+        "latent-space inference / semantic compression"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2405.15179",
+      "identity_tokens": [
+        "arXiv:2405.15179"
+      ],
+      "arxiv_id": "2405.15179",
+      "source_url": "https://arxiv.org/abs/2405.15179",
+      "relation_count": 1,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md"
+      ],
+      "linked_from_titles": [
+        "Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving"
+      ],
+      "linked_from_lineages": [
+        "llm-serving-scheduling-disaggregation"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2404.15778",
+      "identity_tokens": [
+        "id:arXiv:2404.15778",
+        "url:https://arxiv.org/abs/2404.15778"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2404.15778",
+        "identity_tokens": [
+          "arXiv:2404.15778"
+        ],
+        "arxiv_id": "2404.15778",
+        "source_url": "https://arxiv.org/abs/2404.15778",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/05-speculative-decoding/2025-2506.01986-specmemo-memory-aware-speculative-decoding.md"
+        ],
+        "linked_from_titles": [
+          "SpecMemo: Speculative Decoding is in Your Pocket"
+        ],
+        "linked_from_lineages": [
+          "投機的デコード／メモリ制約推論／分散・バッチ投機実行"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.16645",
+      "identity_tokens": [
+        "id:arXiv:2404.16645",
+        "url:https://arxiv.org/abs/2404.16645"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2404.16645",
+        "identity_tokens": [
+          "arXiv:2404.16645"
+        ],
+        "arxiv_id": "2404.16645",
+        "source_url": "https://arxiv.org/abs/2404.16645",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md"
+        ],
+        "linked_from_titles": [
+          "MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall"
+        ],
+        "linked_from_lineages": [
+          "オフロード／階層メモリ"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.16914",
+      "identity_tokens": [
+        "id:arXiv:2404.16914",
+        "url:https://arxiv.org/abs/2404.16914"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2404.16914",
+        "identity_tokens": [
+          "arXiv:2404.16914"
+        ],
+        "arxiv_id": "2404.16914",
+        "source_url": "https://arxiv.org/abs/2404.16914",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/04-moe-offload-expert-cache/2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md"
+        ],
+        "linked_from_titles": [
+          "ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill"
+        ],
+        "linked_from_lineages": [
+          "MoE serving / attention-MoE disaggregation / asynchronous inference"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.18424",
+      "identity_tokens": [
+        "id:arXiv:2404.18424",
+        "url:https://arxiv.org/abs/2404.18424"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2404.18424",
+        "identity_tokens": [
+          "arXiv:2404.18424"
+        ],
+        "arxiv_id": "2404.18424",
+        "source_url": "https://arxiv.org/abs/2404.18424",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/kv-cache/2608.19662.md"
+        ],
+        "linked_from_titles": [
+          "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents"
+        ],
+        "linked_from_lineages": [
+          "KVキャッシュ再利用 / エージェント型LLM / ツール呼出し / KV圧縮 / 構造的枝刈り"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.19429",
+      "identity_tokens": [
+        "id:arXiv:2404.19429",
+        "url:https://arxiv.org/abs/2404.19429"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2404.19429",
+        "identity_tokens": [
+          "arXiv:2404.19429"
+        ],
+        "arxiv_id": "2404.19429",
+        "source_url": "https://arxiv.org/abs/2404.19429",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/04-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md"
+        ],
+        "linked_from_titles": [
+          "MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing"
+        ],
+        "linked_from_lineages": [
+          "MoE推論／エキスパート並列／エキスパート配置／全対全通信／負荷分散"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.00263",
+      "identity_tokens": [
+        "id:arXiv:2405.00263",
+        "url:https://arxiv.org/abs/2405.00263"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.00263",
+        "identity_tokens": [
+          "arXiv:2405.00263"
+        ],
+        "arxiv_id": "2405.00263",
+        "source_url": "https://arxiv.org/abs/2405.00263",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md"
+        ],
+        "linked_from_titles": [
+          "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding"
+        ],
+        "linked_from_lineages": [
+          "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.01481",
+      "identity_tokens": [
+        "id:arXiv:2405.01481",
+        "url:https://arxiv.org/abs/2405.01481"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.01481",
+        "identity_tokens": [
+          "arXiv:2405.01481"
+        ],
+        "arxiv_id": "2405.01481",
+        "source_url": "https://arxiv.org/abs/2405.01481",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/99-other-inference-systems/2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md"
+        ],
+        "linked_from_titles": [
+          "GrowMTP: Can RL Grow Its Own Draft Head?"
+        ],
+        "linked_from_lineages": [
+          "投機的デコード／多トークン予測／強化学習ロールアウト高速化／オンラインドラフトヘッド学習"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.02842",
+      "identity_tokens": [
+        "id:arXiv:2405.02842",
+        "url:https://arxiv.org/abs/2405.02842"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.02842",
+        "identity_tokens": [
+          "arXiv:2405.02842"
+        ],
+        "arxiv_id": "2405.02842",
+        "source_url": "https://arxiv.org/abs/2405.02842",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md"
+        ],
+        "linked_from_titles": [
+          "MagicPIG: LSH Sampling for Efficient LLM Generation"
+        ],
+        "linked_from_lineages": [
+          "kv-cache-optimization-compression"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.03917",
+      "identity_tokens": [
+        "id:arXiv:2405.03917",
+        "url:https://arxiv.org/abs/2405.03917"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.03917",
+        "identity_tokens": [
+          "arXiv:2405.03917"
+        ],
+        "arxiv_id": "2405.03917",
+        "source_url": "https://arxiv.org/abs/2405.03917",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/99-other-inference-systems/2025-2504.15364-keydiff-key-similarity-based-kv-cache-eviction-for-long-context-llm-inference-in-resource-constrained-environments.md"
+        ],
+        "linked_from_titles": [
+          "KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments"
+        ],
+        "linked_from_lineages": [
+          "kv-cache-optimization-compression"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.04674",
+      "identity_tokens": [
+        "id:arXiv:2405.04674",
+        "url:https://arxiv.org/abs/2405.04674"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.04674",
+        "identity_tokens": [
+          "arXiv:2405.04674"
+        ],
+        "arxiv_id": "2405.04674",
+        "source_url": "https://arxiv.org/abs/2405.04674",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.01989-taichi-unified-prefill-decode-serving.md"
+        ],
+        "linked_from_titles": [
+          "Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving"
+        ],
+        "linked_from_lineages": [
+          "llm-serving-scheduling-disaggregation"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.05254",
+      "identity_tokens": [
+        "id:arXiv:2405.05254",
+        "url:https://arxiv.org/abs/2405.05254"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.05254",
+        "identity_tokens": [
+          "arXiv:2405.05254"
+        ],
+        "arxiv_id": "2405.05254",
+        "source_url": "https://arxiv.org/abs/2405.05254",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/10-kv-cache-offload-recomputation/2025-2503.16163-specache-speculative-kv-caching.md"
+        ],
+        "linked_from_titles": [
+          "SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs"
+        ],
+        "linked_from_lineages": [
+          "KV Cache Offload / Retrieval / Compression"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.05803",
+      "identity_tokens": [
+        "id:arXiv:2405.05803",
+        "url:https://arxiv.org/abs/2405.05803"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.05803",
+        "identity_tokens": [
+          "arXiv:2405.05803"
+        ],
+        "arxiv_id": "2405.05803",
+        "source_url": "https://arxiv.org/abs/2405.05803",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.26498-rps-serve-modality-aware-scheduling.md"
+        ],
+        "linked_from_titles": [
+          "TCM-Serve: Modality-aware Scheduling for Multimodal Large Language Model Inference"
+        ],
+        "linked_from_lineages": [
+          "llm-serving-scheduling-disaggregation"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.06211",
+      "identity_tokens": [
+        "id:arXiv:2405.06211",
+        "url:https://arxiv.org/abs/2405.06211"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.06211",
+        "identity_tokens": [
+          "arXiv:2405.06211"
+        ],
+        "arxiv_id": "2405.06211",
+        "source_url": "https://arxiv.org/abs/2405.06211",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
+        ],
+        "linked_from_titles": [
+          "P/D-Serve: Serving Disaggregated Large Language Model at Scale"
+        ],
+        "linked_from_lineages": [
+          "Prefill/Decode Disaggregation / Production LLM Serving"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.07135",
+      "identity_tokens": [
+        "id:arXiv:2405.07135",
+        "url:https://arxiv.org/abs/2405.07135"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.07135",
+        "identity_tokens": [
+          "arXiv:2405.07135"
+        ],
+        "arxiv_id": "2405.07135",
+        "source_url": "https://arxiv.org/abs/2405.07135",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/06-moe-quantization-compression/2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md"
+        ],
+        "linked_from_titles": [
+          "Examining Post-Training Quantization for Mixture-of-Experts: A Benchmark"
+        ],
+        "linked_from_lineages": [
+          "Quantization × MoE × Offload"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.07883",
+      "identity_tokens": [
+        "id:arXiv:2405.07883",
+        "url:https://arxiv.org/abs/2405.07883"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.07883",
+        "identity_tokens": [
+          "arXiv:2405.07883"
+        ],
+        "arxiv_id": "2405.07883",
+        "source_url": "https://arxiv.org/abs/2405.07883",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md"
+        ],
+        "linked_from_titles": [
+          "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding"
+        ],
+        "linked_from_lineages": [
+          "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.12981",
+      "identity_tokens": [
+        "id:arXiv:2405.12981",
+        "url:https://arxiv.org/abs/2405.12981"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.12981",
+        "identity_tokens": [
+          "arXiv:2405.12981"
+        ],
+        "arxiv_id": "2405.12981",
+        "source_url": "https://arxiv.org/abs/2405.12981",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/10-sparse-attention/2026-2609.07306-routerelay-cross-layer-route-reuse.md"
+        ],
+        "linked_from_titles": [
+          "RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention"
+        ],
+        "linked_from_lineages": [
+          "sparse-attention"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.13019",
+      "identity_tokens": [
+        "id:arXiv:2405.13019",
+        "url:https://arxiv.org/abs/2405.13019"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.13019",
+        "identity_tokens": [
+          "arXiv:2405.13019"
+        ],
+        "arxiv_id": "2405.13019",
+        "source_url": "https://arxiv.org/abs/2405.13019",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+        ],
+        "linked_from_titles": [
+          "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities"
+        ],
+        "linked_from_lineages": [
+          "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.14636",
+      "identity_tokens": [
+        "id:arXiv:2405.14636",
+        "url:https://arxiv.org/abs/2405.14636"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.14636",
+        "identity_tokens": [
+          "arXiv:2405.14636"
+        ],
+        "arxiv_id": "2405.14636",
+        "source_url": "https://arxiv.org/abs/2405.14636",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15359-maps-memory-aware-predictive-scheduling.md"
+        ],
+        "linked_from_titles": [
+          "MAPS: Memory-Aware Predictive Scheduling Framework for Large Language Model Serving"
+        ],
+        "linked_from_lineages": [
+          "分離型LLMサービング／予測型スケジューリング／KVメモリ認識型配置"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.14838",
+      "identity_tokens": [
+        "id:arXiv:2405.14838",
+        "url:https://arxiv.org/abs/2405.14838"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.14838",
+        "identity_tokens": [
+          "arXiv:2405.14838"
+        ],
+        "arxiv_id": "2405.14838",
+        "source_url": "https://arxiv.org/abs/2405.14838",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/99-other-inference-systems/2026-2609.15338-dynamic-semantic-compression-latent-space-inference.md"
+        ],
+        "linked_from_titles": [
+          "Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models"
+        ],
+        "linked_from_lineages": [
+          "latent-space inference / semantic compression"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.15179",
+      "identity_tokens": [
+        "id:arXiv:2405.15179",
+        "url:https://arxiv.org/abs/2405.15179"
+      ],
+      "record": {
+        "canonical_id": "arXiv:2405.15179",
+        "identity_tokens": [
+          "arXiv:2405.15179"
+        ],
+        "arxiv_id": "2405.15179",
+        "source_url": "https://arxiv.org/abs/2405.15179",
+        "relation_count": 1,
+        "linked_from": [
+          "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md"
+        ],
+        "linked_from_titles": [
+          "Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving"
+        ],
+        "linked_from_lineages": [
+          "llm-serving-scheduling-disaggregation"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:343ff493a270e2acee9ee4fb77228a63e2a953701326a880f8d598bf616ebd9e",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

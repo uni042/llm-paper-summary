@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30f50094396cc85a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1511.05950",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1511.05950",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1511.05950",
+      "arXiv:1511.05950"
+    ],
+    "reason": "分散深層学習で古い勾配に応じて学習率を調整する非同期SGD研究で、最終適用先は凍結中の学習工程。",
+    "first_checked_at": "2026-10-03T15:20:46+00:00",
+    "last_checked_at": "2026-10-03T15:20:46+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
+    ],
+    "title": "Staleness-aware Async-SGD for Distributed Deep Learning"
+  },
+  "processed_at": "2026-10-03T15:20:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30f50094396c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

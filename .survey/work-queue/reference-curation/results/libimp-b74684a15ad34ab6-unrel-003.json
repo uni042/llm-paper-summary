@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b74684a15ad34ab6-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.32100",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.32100",
+    "identity_tokens": [
+      "arXiv:2609.32100"
+    ],
+    "reason": "LLM attentionのtraining scaling law分析。効率化手法もinference評価もなく学習解析が対象。",
+    "first_checked_at": "2026-10-05T05:22:53+00:00",
+    "last_checked_at": "2026-10-05T05:22:53+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "title": "Emergent One-Third Scaling Law as Attention Tries to Concentrate"
+  },
+  "processed_at": "2026-10-05T05:22:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b74684a15ad3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

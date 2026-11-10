@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T113000Z-scheduled-chat-30-8c4e21-batchgen-pf3",
+  "kind": "research",
+  "attempt_id": "attempt-04e285682c3e9ed7b0782532",
+  "job_id": "job-research-ded5355ef64410a7",
+  "record_bank": "g",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.21712-batchgen-an-architecture-for-scalable-and-efficient-batch-inference.md",
+  "expected_blob_sha": null,
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "ok": true,
+  "preflight_passed": true,
+  "repair_required": false,
+  "decision": "READY_FOR_SUBMISSION",
+  "descriptor_sha256": "sha256:7d709c7aa8679ca400c864ae4780322b4d047842825d47277e47c348afdab7cc",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "44f1d4c43e05bd809713bfdca157ce97b9dacace"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "b5eee80e7d504da06c158981c928b40ea39b08be"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "80efde4c0baeff940e70d9609e0d95583c88709a"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "6e43c37985cae3b2e3b9d0b6cc8d4c4ffd962c07"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "9e500c8bb47c2de8c8336e8ac8ce9ca795339537"
+    }
+  ],
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2606.21712-batchgen-an-architecture-for-scalable-and-efficient-batch-inference.md",
+    "status": "WARN",
+    "file_bytes": 22240,
+    "prose_chars": 6744,
+    "paragraphs": 32,
+    "method_paragraphs": 13,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7281538221041113,
+    "japanese_chars": 4658,
+    "latin_chars": 1739,
+    "bare_english_terms": [],
+    "failures": [],
+    "warnings": [
+      "日本語比率 72.8% < 警告基準 80.0%"
+    ]
+  },
+  "checked_at": "2026-09-23T10:56:43+00:00",
+  "next_action": "Do not create a completed-submission request manually. The GitHub publication pipeline will materialize the audit request and immutable descriptor from this exact passing result, then dispatch one batch submission drain. Do not edit any record slot after this check; if a slot changes, run a new preflight first."
+}

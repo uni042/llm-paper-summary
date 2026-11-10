@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5b3fe53cc73225bb-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.12096",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.12096",
+    "identity_tokens": [
+      "arXiv:2404.12096"
+    ],
+    "reason": "LongEmbed extends embedding model input length and evaluates retrieval quality; not LLM generation efficiency. Primary abstract: Embedding models play a pivotal role in modern NLP applications such as document retrieval. However, existing embedding models are limited to encoding short documents of typically 512 tokens, restrained from application scenarios requiring long inputs. This paper explores context window extension of existing embedding models, pushing their input length to a maximum of 32,768. We begin by evaluating the performance of existing embedding models using our newly constructed LongE",
+    "first_checked_at": "2026-10-05T12:30:32+00:00",
+    "last_checked_at": "2026-10-05T12:30:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+    ],
+    "title": "LongEmbed: Extending Embedding Models for Long Context Retrieval"
+  },
+  "processed_at": "2026-10-05T12:30:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b3fe53cc732",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

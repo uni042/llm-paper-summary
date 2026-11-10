@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-594cf4d0adc4c930-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.20624",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.20624",
+    "identity_tokens": [
+      "arXiv:2310.20624"
+    ],
+    "reason": "量子化LoRAを用いて安全調整を低コストで解除できることを示すAI safety研究で、効率的fine-tuningは手段でありLLM推論システム効率化が目的ではない。",
+    "first_checked_at": "2026-10-07T08:53:51+00:00",
+    "last_checked_at": "2026-10-07T22:08:48+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "title": "LoRA Fine-tuning Efficiently Undoes Safety Training in Llama 2-Chat 70B"
+  },
+  "processed_at": "2026-10-07T22:08:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-594cf4d0adc4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

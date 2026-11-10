@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ffda63e1132b7466-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34376",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34376",
+    "identity_tokens": [
+      "arXiv:2609.34376"
+    ],
+    "reason": "Schedules evidence acquisition for assurance-aware distributed systems; no LLM inference/serving efficiency method.",
+    "first_checked_at": "2026-10-05T04:53:52+00:00",
+    "last_checked_at": "2026-10-05T04:53:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "Before Agents Act: Assurance-Aware Semantic Scheduling for Evidence Acquisition in Distributed Systems"
+  },
+  "processed_at": "2026-10-05T04:53:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ffda63e1132b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

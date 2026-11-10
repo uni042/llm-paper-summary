@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c2d69def663b1a8e-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.30420",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.30420",
+    "identity_tokens": [
+      "arXiv:2606.30420"
+    ],
+    "reason": "LLM reasoningのexperience-augmented policy optimizationというRL post-training手法。inference-time効率ではない。",
+    "first_checked_at": "2026-10-05T02:43:17+00:00",
+    "last_checked_at": "2026-10-05T02:43:17+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+    ],
+    "title": "Experience Augmented Policy Optimization for LLM Reasoning"
+  },
+  "processed_at": "2026-10-05T02:43:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c2d69def663b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

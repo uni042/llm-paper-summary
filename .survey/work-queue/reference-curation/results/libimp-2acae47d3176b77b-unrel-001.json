@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2acae47d3176b77b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1902.09506",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1902.09506",
+    "identity_tokens": [
+      "arXiv:1902.09506"
+    ],
+    "reason": "Visual Genomeのシーングラフから2,200万件の画像質問を生成する視覚質問応答データセットGQAと、整合性・根拠・妥当性を測る評価指標を提案する。画像理解モデルの能力評価が主題で、LLM推論の高速化、KVキャッシュ、メモリやサービングは扱わない。",
+    "first_checked_at": "2026-10-07T22:08:43+00:00",
+    "last_checked_at": "2026-10-07T22:08:43+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.29639-rtp-llm.md"
+    ],
+    "title": "GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering"
+  },
+  "processed_at": "2026-10-07T22:08:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2acae47d3176",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

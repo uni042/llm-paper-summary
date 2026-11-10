@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc9b9265bf7c8b18-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2108.07435",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2108.07435",
+    "identity_tokens": [
+      "SemanticScholar:b42d20ec9580ebd76860890a1d7a7fdcc742677e",
+      "arXiv:2108.07435"
+    ],
+    "reason": "The language model is applied to protein sequence representation and biological analysis, not general LLM systems.",
+    "first_checked_at": "2026-10-16T06:17:53+00:00",
+    "last_checked_at": "2026-10-16T06:17:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+    ],
+    "title": "Modeling Protein Using Large-scale Pretrain Language Model"
+  },
+  "processed_at": "2026-10-16T06:17:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc9b9265bf7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

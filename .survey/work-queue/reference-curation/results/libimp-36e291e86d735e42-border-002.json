@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36e291e86d735e42-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.21257",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.21257",
+    "identity_tokens": [
+      "arXiv:2606.21257"
+    ],
+    "reason": "本文確認後も関連は弱い。主題は効率化に隣接するが、実用的なLLM推論/serving効率を示す根拠が不足しているためborderline。",
+    "first_checked_at": "2026-10-05T11:54:28+00:00",
+    "last_checked_at": "2026-10-05T11:54:28+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+      "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
+      "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+    ],
+    "title": "An Empirical Study of OpenPangu Quantization on Ascend NPUs"
+  },
+  "processed_at": "2026-10-05T11:54:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36e291e86d73",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

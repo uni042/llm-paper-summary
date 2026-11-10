@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4c64d127d67467b8-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.02569",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.02569",
+    "identity_tokens": [
+      "arXiv:2608.02569"
+    ],
+    "reason": "Primary abstract: The efficiency of a datacenter rests on its control plane policies. Designing these policies is increasingly hard: the hardware-software stack grows fast, the design space is vast and interdependent, and prototyping a single policy takes months. Agentic AI pro Agentic generation of datacenter control policies is not inference-serving optimization.",
+    "first_checked_at": "2026-10-05T03:26:04+00:00",
+    "last_checked_at": "2026-10-05T03:26:04+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+    ],
+    "title": "AtumAI: A Principled Framework for Agentic Generation of Datacenter Control-Plane Policies"
+  },
+  "processed_at": "2026-10-05T03:26:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c64d127d674",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

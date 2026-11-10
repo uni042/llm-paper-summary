@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f5adc866cb896ad6-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3745756.3809197",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3745756.3809197",
+    "identity_tokens": [
+      "DOI:10.1145/3745756.3809197"
+    ],
+    "reason": "評価条件・方法・限界をprimary full textで検証できず、abstractだけでは最終的な貢献の適合性を確定できないためborderline。",
+    "first_checked_at": "2026-10-05T11:54:29+00:00",
+    "last_checked_at": "2026-10-05T11:54:29+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+      "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+      "papers/inference/04-conditional-computation/2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md",
+      "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md"
+    ],
+    "title": "SpMAP: Transparent Sparsity for LLMs"
+  },
+  "processed_at": "2026-10-05T11:54:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5adc866cb89",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

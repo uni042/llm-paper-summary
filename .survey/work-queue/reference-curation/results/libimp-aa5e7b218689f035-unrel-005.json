@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa5e7b218689f035-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.14325",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.14325",
+    "identity_tokens": [
+      "arXiv:2305.14325"
+    ],
+    "reason": "複数LLM agentを複数round討論させてfactualityとreasoning accuracyを改善する推論戦略研究で、複数model callによって計算を増やす能力改善方式。ランタイム、KV cache、serving効率化を提案しない。",
+    "first_checked_at": "2026-10-04T17:56:14+00:00",
+    "last_checked_at": "2026-10-04T18:58:58+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+    ],
+    "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate"
+  },
+  "processed_at": "2026-10-04T18:58:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa5e7b218689",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

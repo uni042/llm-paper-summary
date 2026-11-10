@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b72e5ce5e7b2742-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.08654",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.08654",
+    "identity_tokens": [
+      "arXiv:2605.08654"
+    ],
+    "reason": "Singer四角形の乗数に関する組合せ数学の研究で、LLMの実行・推論・メモリ管理ではない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+    "first_checked_at": "2026-10-29T20:46:20+00:00",
+    "last_checked_at": "2026-10-29T20:46:20+00:00",
+    "linked_from": [],
+    "title": "On the multipliers of a Singer quadrangle"
+  },
+  "processed_at": "2026-10-29T20:46:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b72e5ce5e7b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

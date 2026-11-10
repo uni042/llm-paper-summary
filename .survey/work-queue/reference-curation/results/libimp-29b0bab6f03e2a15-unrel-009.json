@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29b0bab6f03e2a15-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.14008",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.14008",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.14008",
+      "arXiv:2402.14008"
+    ],
+    "reason": "数学・物理の高度推論能力を測るベンチマークで、LLMシステム効率の評価ではない。",
+    "first_checked_at": "2026-09-27T12:29:48+09:00",
+    "last_checked_at": "2026-09-30T09:51:41+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 388",
+      "worker-worklist-30 discovery_review rank 421",
+      "worker-worklist-30 discovery_review tail-to-head"
+    ],
+    "title": "OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems"
+  },
+  "processed_at": "2026-09-30T09:51:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29b0bab6f03e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

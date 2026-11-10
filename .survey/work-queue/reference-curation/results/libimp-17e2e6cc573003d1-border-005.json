@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17e2e6cc573003d1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.13870",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.13870",
+    "identity_tokens": [
+      "arXiv:2510.13870"
+    ],
+    "reason": "The primary full text supports a potential reduction in denoising steps, but the efficiency benefit is indirect and is not shown as measured serving latency or a broadly applicable inference-cost reduction.",
+    "first_checked_at": "2026-10-05T15:33:53+00:00",
+    "last_checked_at": "2026-10-05T15:33:53+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+      "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Unlocking the Potential of Diffusion Language Models through Template Infilling"
+  },
+  "processed_at": "2026-10-05T15:33:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17e2e6cc5730",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

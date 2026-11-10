@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-62db38cc64ca63bc-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1809.00732",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1809.00732",
+    "identity_tokens": [
+      "arXiv:1809.00732"
+    ],
+    "reason": "電子医療記録から大規模QA corpusを構築するdataset/benchmark研究で、LLM推論システム最適化を扱わない。",
+    "first_checked_at": "2026-10-06T13:04:53+00:00",
+    "last_checked_at": "2026-10-06T13:04:53+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2512.16822-mepic-position-independent-chunk-kv-sharing.md"
+    ],
+    "title": "emrQA: A Large Corpus for Question Answering on Electronic Medical Records"
+  },
+  "processed_at": "2026-10-06T13:04:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-62db38cc64ca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

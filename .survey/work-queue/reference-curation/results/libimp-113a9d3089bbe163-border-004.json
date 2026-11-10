@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-113a9d3089bbe163-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1007/s10044-025-01540-8",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1007/s10044-025-01540-8",
+    "identity_tokens": [
+      "DOI:10.1007/s10044-025-01540-8"
+    ],
+    "reason": "No abstract in packet; publisher DOI inaccessible and no primary text found. Pathology-image method cannot be evaluated against the linked attention lineage.",
+    "first_checked_at": "2026-10-06T12:43:43+00:00",
+    "last_checked_at": "2026-10-06T12:43:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Stain normalization of pathological images using self-attention based cycleGAN with grey scale consistency loss"
+  },
+  "processed_at": "2026-10-06T12:43:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-113a9d3089bb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

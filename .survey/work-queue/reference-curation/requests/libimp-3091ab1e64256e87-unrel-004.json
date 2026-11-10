@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3091ab1e64256e87-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.20981",
+  "reason": "Autoregressive (AR) models suffer from local greediness, while diffusion language models (DLMs) often lack the strict causal structure required for reasoning. To combine the advantages and overcome the drawbacks of the dual, we propose Causal Latent Revision (CaLR), a framework that reformulates reasoning as constrained latent optimization. By adopting a causal topology matrix (CTM) from an expert model and implicit differentiation, CaLR performs gradient-guided ``thought revision\"to enforce logical consistency, enabling dynamic self-correction of intermediate steps during parallel generation. Empirically, CaLR achieves SOTA DLM performance on complex benchmarks, surpassing strong AR baselines and demonstrating superior robustness in constrained tasks like Sudoku.",
+  "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
+  "identity_tokens": [
+    "arXiv:2609.20981"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3091ab1e6425",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb3bc5896e3f8241-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.23582",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.23582",
+    "identity_tokens": [
+      "arXiv:2608.23582"
+    ],
+    "reason": "transformer推論hardwareとして関連するが、現状のprimary evidenceは小型T5のRTLデモと投影に限られ、LLM推論への適用は未実証のためborderline。",
+    "first_checked_at": "2026-10-05T09:00:21+00:00",
+    "last_checked_at": "2026-10-05T09:00:21+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "Transformer Accelerator (TFA): A Macro-Op INT8 Hardware Chip for Transformer Inference and Machine Translation"
+  },
+  "processed_at": "2026-10-05T09:00:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb3bc5896e3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b9bcdee97ebf93e-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.13516",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.13516",
+    "identity_tokens": [
+      "arXiv:2402.13516"
+    ],
+    "reason": "LLM activation sparsityを学習で高め推論効率を狙うが、主貢献はモデル訓練・活性化設計でランタイム機構は二次的。",
+    "first_checked_at": "2026-09-27T09:28:42+09:00",
+    "last_checked_at": "2026-09-30T09:47:28+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 245"
+    ],
+    "title": "ProSparse: Introducing and Enhancing Intrinsic Activation Sparsity within Large Language Models"
+  },
+  "processed_at": "2026-09-30T09:47:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b9bcdee97eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-03c2915b4172aa51-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.21810",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.21810",
+    "identity_tokens": [
+      "arXiv:2603.21810"
+    ],
+    "reason": "本文は安全なmulti-agent vehicle control向けpartial attentionを扱う。attention計算を絞る着想は隣接するが、LLM workloadの測定や推論効率への移植可能性は示されない。",
+    "first_checked_at": "2026-10-06T21:00:49+00:00",
+    "last_checked_at": "2026-10-06T21:00:49+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Partial Attention in Deep Reinforcement Learning for Safe Multi-Agent Control"
+  },
+  "processed_at": "2026-10-06T21:00:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-03c2915b4172",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

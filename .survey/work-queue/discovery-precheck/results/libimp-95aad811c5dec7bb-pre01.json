@@ -1,0 +1,1521 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-95aad811c5dec7bb-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-95aad811c5de",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/access.2026.3664084",
+    "DOI:10.1145/3805621.3807650",
+    "DOI:10.3390/fi17040185",
+    "DOI:10.5220/0014920900004039",
+    "arXiv:2408.08470",
+    "arXiv:2410.06846",
+    "arXiv:2501.18795",
+    "arXiv:2504.05598",
+    "arXiv:2509.11177",
+    "arXiv:2601.21709",
+    "arXiv:2602.16760",
+    "arXiv:2604.01178",
+    "arXiv:2605.25203",
+    "arXiv:2606.29228",
+    "arXiv:2606.31796",
+    "arXiv:2608.03276",
+    "arXiv:2609.37828"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 17,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0ddea46703a1eea82c881a6a4ed92900e3a421ac",
+  "raw_search_result_count": 17,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 17,
+  "provider_progress": {
+    "requested_count": 17,
+    "status_counts": {
+      "allowed": 17,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-08T18:47:52.600359+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/access.2026.3664084",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3805621.3807650",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.3390/fi17040185",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.5220/0014920900004039",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.08470",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.06846",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.18795",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.05598",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.11177",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.21709",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.16760",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.01178",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.25203",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.29228",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.31796",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.03276",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.37828",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Why Attention Patterns Exist: A Unifying Temporal Perspective Analysis",
+      "source_url": "https://arxiv.org/abs/2601.21709",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention patterns play a crucial role in both training and inference of large language models (LLMs). Prior works have identified individual patterns such as retrieval heads, sink heads, and diagonal traces, yet these observations remain fragmented and lack a unifying explanation. To bridge this gap, we introduce \\textbf{Temporal Attention Pattern Predictability Analysis (TAPPA), a unifying framework that explains diverse attention patterns by analyzing their underlying mathematical formulations} from a temporally continuous perspective. TAPPA both deepens the understanding of attention behavior and guides inference acceleration approaches. Specifically, TAPPA characterizes attention patterns as predictable patterns with clear regularities and unpredictable patterns that appear effectively random. Our analysis further reveals that this distinction can be explained by the degree of query self-similarity along the temporal dimension. Focusing on the predictable patterns, we further provide a detailed mathematical analysis of three representative cases through the joint effect of queries, keys, and Rotary Positional Embeddings (RoPE). We validate TAPPA by applying its insights to KV cache compression and LLM pruning tasks. Across these tasks, a simple metric motivated by TAPPA consistently improves performance over baseline methods. The code is available at https://github.com/MIRALab-USTC/LLM-TAPPA.",
+      "identifiers": [
+        "SemanticScholar:a83a39fd58e91bab953771846afbba2bccc3a2d9"
+      ],
+      "semantic_scholar_id": "a83a39fd58e91bab953771846afbba2bccc3a2d9",
+      "canonical_id": "arXiv:2601.21709",
+      "arxiv_id": "2601.21709",
+      "doi": "10.48550/arXiv.2601.21709",
+      "authors": [
+        "Qingyue Yang",
+        "Jie Wang",
+        "Xing Li",
+        "Yinqi Bai",
+        "Xia-Liang Tong",
+        "Hui-Ling Zhen",
+        "Jian-Ye Hao",
+        "Ming-Hu Yuan",
+        "Bin Li"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Screening Is Enough",
+      "source_url": "https://arxiv.org/abs/2604.01178",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We call query--key relevance absolute when its values lie on a fixed bounded scale, depend on neither competing keys nor sequence length, require no sequence-length-dependent calibration, and can all be zero. To realize this notion, we introduce screening, whose explicit threshold transforms bounded query--key similarities into relevance values, enabling exact rejection, empty selection, and direct inspection on a common scale. In a controlled comparison of 12 attention mechanisms on a matched Transformer backbone, only screening maintains both low long-context perplexity and robust retrieval beyond the training context; notably, it does so without inference-time scaling. Building on screening, we introduce Multiscreen, a language-model architecture composed of parallel gated screening tiles. Multiscreen retains these long-context gains while achieving greater parameter efficiency, stronger general zero-shot downstream performance, lower training cost at larger scales, and lower model-side time to first token than Transformer baselines. We further develop a normalization design that keeps Multiscreen training stable even at a learning rate of $1$ and show that an adapted version likewise stabilizes Transformer at the same learning rate.",
+      "identifiers": [
+        "SemanticScholar:1b0ce347db427a016aa2ee81f56d7c582c7205e2"
+      ],
+      "semantic_scholar_id": "1b0ce347db427a016aa2ee81f56d7c582c7205e2",
+      "canonical_id": "arXiv:2604.01178",
+      "arxiv_id": "2604.01178",
+      "doi": "10.48550/arXiv.2604.01178",
+      "authors": [
+        "K. Nakanishi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 190,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Influence-Inspired Spectral Rotations for Extreme Low-Bit LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2605.25203",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We apply the influence-adaptive Walsh geometry of a companion theory paper (arXiv:2605.01637) to extreme low-bit weight-only LLM quantization. The recipe is one math-invariant transformation: WHT-rotate each linear layer's weight matrix and rescale its columns by per-coordinate Walsh-basis activation energy before handing off to a reconstruction-error quantizer (Intel auto-round). This biases per-group integer rounding toward high-spectral-energy channels. On four pretrained decoder-only models from 135M to 1.5B parameters, BBT-spectral reduces wikitext-2 perplexity by 15-58% relative to vanilla auto-round at W2A16; we also report a TinyLlama-1.1B auxiliary data point. Three extensions transfer the recipe to families it failed on: a per-head PCA matrix-Gamma replacement of q_norm/k_norm for Qwen3 attention (PPL 136.76 ->88.99 on Qwen3-0.6B); an SO(2) per-pair rotation that commutes with RoPE (PPL 36.93 ->21.84 on Qwen2.5-1.5B); and an MoE-aware input-side absorption fix identified by architectural fuzzing of Laguna-style fused-expert layouts. A W2-vs-W4 ablation gives a deliberate negative control: the redistribution payoff falls within the +/-0.5 PPL noise floor at W4, consistent with the Schur-convexity intuition that the cost of unconcentrated influence vanishes as the noise budget shrinks. All quantized weights export to OpenVINO IR and run on Intel NPU + Arc dGPU + CPU with PPL invariant to device within +/-0.1. We do not claim a formal Boolean-to-real-valued transfer of the theory paper's majorization argument: the WHT activation energy used here is not the Boolean influence of the theory paper, the link is intuitive, and the contribution is engineering value rather than a transferred theorem. Head-to-head benchmarks against SpinQuant, QuaRot, QuIP-sharp, AQLM, OmniQuant, and ButterflyQuant at matched calibration are the main future-work item.",
+      "identifiers": [
+        "SemanticScholar:d02f1f49b96cea46436e95a7b46fbc0ead146a93"
+      ],
+      "semantic_scholar_id": "d02f1f49b96cea46436e95a7b46fbc0ead146a93",
+      "canonical_id": "arXiv:2605.25203",
+      "arxiv_id": "2605.25203",
+      "doi": "10.48550/arXiv.2605.25203",
+      "authors": [
+        "G. Pavlov"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 137,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CHERRY: Compressed Hierarchical Experts with Recurrent Representational Yield",
+      "source_url": "https://arxiv.org/abs/2606.31796",
+      "year": 2026,
+      "published": "2026-06-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Frontier language capability is usually bought with frontier compute; CHERRY shows a different trade. It is a sovereign Korean model family built on one principle: supervise the tokens that decide the answer, and let shared weights carry the rest. Under matched compute this exposes a sharp, reproducible dissociation---selected-token supervision preserves held-out discrimination yet collapses free generation, and a full-sequence anchor recovers only part of the gap. The same signal drives a heal-after-merge recurrent-representational-yield loop that collapses 48 layers to 6 unique blocks at near-dense parity (227M at loss 2.934 vs a 566M dense model at 2.926) and composes them by MoEE fusion (2.789)---a recurrent-compression direction independently pursued by concurrent frontier looped-MoE work, which we project (not yet measure) to frontier scale. It also installs metacognition from two-token supervision (200 held-out KO prompts/type, kappa>0.82, +/-6.9pp): self-correction 12->47% and jailbreak 23->4% at 97.6% loss-retention on 1.2B, with a pre-registered 1B->13.7B ablation localising the operand-binding limit to capacity (1B lookup vs 13.7B H-PRESERVE); and it specializes a 1.8B model to reported human-expert level on CyberMetric (75.0% vs a 30-expert average 72.24%). The released 1.8B tokenizer is 9.2% more Korean-efficient than Gemma-4; the from-scratch 12B adds a sovereign Korean tokenizer (vocab 131,037). On the government-operated K-AI Korean-LLM leaderboard the released 1.8B leads the HLE(Ko) column (0.123 vs 0.077; overall 51/78). At the frontier we fine-tune and serve an adapted 122B model on one 120GB accelerator (83GB measured peak). Provenance differs by member and we state it exactly; the architecture and recipe are ours throughout, and every claim is bound to a released curated measurement.",
+      "identifiers": [
+        "SemanticScholar:6001593b17998092eaf9b132b70612e30fd66717"
+      ],
+      "semantic_scholar_id": "6001593b17998092eaf9b132b70612e30fd66717",
+      "canonical_id": "arXiv:2606.31796",
+      "arxiv_id": "2606.31796",
+      "doi": "10.48550/arXiv.2606.31796",
+      "authors": [
+        "Dohyeon Kwon",
+        "Youngjin Park"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rope to Nope and Back Again: A New Hybrid Attention Strategy",
+      "source_url": "https://arxiv.org/abs/2501.18795",
+      "year": 2025,
+      "published": "2025-01-30",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 51,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context large language models (LLMs) have achieved remarkable advancements, driven by techniques like Rotary Position Embedding (RoPE) (Su et al., 2023) and its extensions (Chen et al., 2023; Liu et al., 2024c; Peng et al., 2023). By adjusting RoPE parameters and incorporating training data with extended contexts, we can train performant models with considerably longer input sequences. However, existing RoPE-based methods exhibit performance limitations when applied to extended context lengths. This paper presents a comprehensive analysis of various attention mechanisms, including RoPE, No Positional Embedding (NoPE), and Query-Key Normalization (QK-Norm), identifying their strengths and shortcomings in long-context modeling. Our investigation identifies distinctive attention patterns in these methods and highlights their impact on long-context performance, providing valuable insights for architectural design. Building on these findings, we propose a novel architecture featuring a hybrid attention mechanism that integrates global and local attention spans. This design not only surpasses conventional RoPE-based transformer models with full attention in both long and short context tasks but also delivers substantial efficiency gains during training and inference.",
+      "identifiers": [
+        "SemanticScholar:e6b867fd81eb90c67ee64d9a768d3c5c867c9ab4"
+      ],
+      "semantic_scholar_id": "e6b867fd81eb90c67ee64d9a768d3c5c867c9ab4",
+      "canonical_id": "arXiv:2501.18795",
+      "arxiv_id": "2501.18795",
+      "doi": "10.48550/arXiv.2501.18795",
+      "authors": [
+        "Bowen Yang",
+        "Bharat Venkitesh",
+        "Dwarak Talupuru",
+        "Hangyu Lin",
+        "David Cairuz",
+        "P. Blunsom",
+        "Acyr F. Locatelli"
+      ],
+      "priority": 61,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 51,
+        "citation_count": 51,
+        "total": 61,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 616,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Where the Time Goes: Analysis of a Public LLM Serving System",
+      "source_url": "https://doi.org/10.1145/3805621.3807650",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "EuroMLSys@EuroSys",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this study, we present a characterization of serving traces collected from Public Al's serving of Apertus, an open source Large Language Model (LLM). The trace spans roughly five months (September 2025-January 2026) and contains 337K requests. We analyzed request sizes, token and timing behaviour, latency, model-size effects, and temporal patterns. Our findings show insights that do not align with common assumptions; (1) time-to-first-token is often driven by queuing rather than prefill compute, especially for small requests; (2) the 8B and 70B models show nearly the same user-perceived latency despite a 9× parameter gap; (3) a substantial fraction of requests are prefill/queuing-dominated rather than decode-dominated; and; (4) observable input features are weak predictors of output, which makes size-aware scheduling difficult at arrival time. As a contribution to the research community, we will publish this anonymized trace along with its analysis.",
+      "identifiers": [
+        "SemanticScholar:dc6d661c59e396865ced31c72a788068788c184e"
+      ],
+      "semantic_scholar_id": "dc6d661c59e396865ced31c72a788068788c184e",
+      "doi": "10.1145/3805621.3807650",
+      "canonical_id": "DOI:10.1145/3805621.3807650",
+      "authors": [
+        "Büşra Karatay Demiray",
+        "Ehsan Yousefzadeh-Asl-Miandoab",
+        "B. Garbinato",
+        "Pınar Tözün",
+        "Pamela Delgado"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 164,
+        "matched_prestigious_venue": "EuroSys"
+      }
+    },
+    {
+      "title": "Context-Aware Assistant Selection for Improved Inference Acceleration with Large Language Models",
+      "source_url": "https://arxiv.org/abs/2408.08470",
+      "year": 2024,
+      "published": "2024-08-16",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite their widespread adoption, large language models (LLMs) remain prohibitive to use under resource constraints, with their ever growing sizes only increasing the barrier for use. One particular issue stems from the high latency associated with auto-regressive generation in LLMs, rendering the largest LLMs difficult to use without advanced computing infrastructure. Assisted decoding, where a smaller draft model guides a larger expert model’s generation, has helped alleviate this concern, but remains dependent on alignment between the two models. Thus if the draft model is insufficiently capable on some domain of interest relative to the target model, performance can degrade. Alternatively, one can leverage multiple draft models to better cover the expertise of the target, but when multiple black-box draft models are available, selecting an assistant without details about its construction can be difficult. To better understand this decision making problem, we observe it as a contextual bandit, where a policy must choose a draft model based on a context. We show that even without prior knowledge of the draft models, creating an offline dataset from only outputs of independent draft/target models and training a policy over the alignment of these outputs can accelerate performance on multiple domains as long as an individual draft model is effective. We observe these results hold on various settings with multiple assisted decoding candidates, highlighting its flexibility and the advantageous role that such decision making can play.",
+      "identifiers": [
+        "SemanticScholar:1fb76e69ee4180204f9480853abc8c7bc5d4ddcf"
+      ],
+      "semantic_scholar_id": "1fb76e69ee4180204f9480853abc8c7bc5d4ddcf",
+      "canonical_id": "arXiv:2408.08470",
+      "arxiv_id": "2408.08470",
+      "doi": "10.48550/arXiv.2408.08470",
+      "authors": [
+        "Jerry Huang",
+        "Prasanna Parthasarathi",
+        "Mehdi Rezagholizadeh",
+        "Sarath Chandar"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 783,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Joint Fine-tuning and Conversion of Pretrained Speech and Language Models towards Linear Complexity",
+      "source_url": "https://arxiv.org/abs/2410.06846",
+      "year": 2024,
+      "published": "2024-10-09",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Architectures such as Linformer and Mamba have recently emerged as competitive linear time replacements for transformers. However, corresponding large pretrained models are often unavailable, especially in non-text domains. To remedy this, we present a Cross-Architecture Layerwise Distillation (CALD) approach that jointly converts a transformer model to a linear time substitute and fine-tunes it to a target task. We also compare several means to guide the fine-tuning to optimally retain the desired inference capability from the original model. The methods differ in their use of the target model and the trajectory of the parameters. In a series of empirical studies on language processing, language modeling, and speech processing, we show that CALD can effectively recover the result of the original model, and that the guiding strategy contributes to the result. Some reasons for the variation are suggested.",
+      "identifiers": [
+        "SemanticScholar:9d4e300ba4e5fe36489d1b547677987cc2face3d"
+      ],
+      "semantic_scholar_id": "9d4e300ba4e5fe36489d1b547677987cc2face3d",
+      "canonical_id": "arXiv:2410.06846",
+      "arxiv_id": "2410.06846",
+      "doi": "10.48550/arXiv.2410.06846",
+      "authors": [
+        "Mutian He",
+        "Philip N. Garner"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 729,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "DEL: Context-Aware Dynamic Exit Layer for Efficient Self-Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2504.05598",
+      "year": 2025,
+      "published": "2025-04-08",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) is a widely used approach to accelerate the inference of large language models (LLMs) without reducing generation quality. It operates by first using a compact model to draft multiple tokens efficiently, followed by parallel verification using the target LLM. This approach leads to faster inference compared to auto-regressive decoding. While there are multiple approaches to create a draft model, one promising approach is to use early-exit methods. These methods draft candidate tokens by using a subset of layers of the primary model and applying the remaining layers for verification, allowing a single model to handle both drafting and verification. While this technique reduces memory usage and computational cost, its performance relies on the choice of the exit layer for drafting and the number of tokens drafted (speculation length) in each SD round. Prior works use hyperparameter exploration to statically select these values. However, our evaluations show that these hyperparameter values are task-specific, and even within a task they are dependent on the current sequence context. We introduce DEL (Dynamic Exit Layer), a plug-and-play method that adaptively selects the exit layer and speculation length during inference. DEL dynamically tracks the token acceptance rate if the tokens are drafted at each layer of an LLM and uses that knowledge to heuristically select the optimal exit layer and speculation length. Our experiments across a broad range of models and downstream tasks show that DEL achieves overall speedups of $2.16\\times$$\\sim$$2.62\\times$ over vanilla auto-regressive decoding and improves upon state-of-the-art SD methods, which peak at $2.43\\times$, by up to $0.19\\times$. The code is available at https://github.com/hoenza/DEL.",
+      "identifiers": [
+        "SemanticScholar:fc9d2213a8c550077973534f5adbcb94a726e094"
+      ],
+      "semantic_scholar_id": "fc9d2213a8c550077973534f5adbcb94a726e094",
+      "canonical_id": "arXiv:2504.05598",
+      "arxiv_id": "2504.05598",
+      "doi": "10.48550/arXiv.2504.05598",
+      "authors": [
+        "Hossein Entezari Zarch",
+        "Lei Gao",
+        "Chaoyi Jiang",
+        "Murali Annavaram"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 548,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Privacy-Aware Split Inference with Speculative Decoding for Large Language Models over Wide-Area Networks",
+      "source_url": "https://arxiv.org/abs/2602.16760",
+      "year": 2026,
+      "published": "2026-02-18",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a practical system for privacy-aware large language model (LLM) inference that splits a transformer between a trusted local GPU and an untrusted cloud GPU, communicating only intermediate activations over the network. Our system addresses the unique challenges of autoregressive LLM decoding over high-latency wide-area networks (WANs), contributing: (1) an asymmetric layer split where embedding and unembedding layers remain local, ensuring raw tokens never leave the trusted device; (2) the first application of lookahead decoding to split inference over WANs, amortizing network round-trip latency across multiple tokens per iteration; (3) an empirical inversion attack evaluation showing that split depth provides a tunable privacy-performance tradeoff -- an attacker can recover ~59%% of tokens at a 2-layer split but only ~35%% at an 8-layer split, with minimal throughput impact; (4) ablation experiments showing that n-gram speculation accepts 1.2-1.3 tokens per decoding step on average (peak of 7 observed on code), with acceptance rates consistent across model scales; (5) formal verification that lookahead decoding produces token-identical output to sequential decoding under greedy argmax, with zero quality degradation; and (6) scaling validation on Mistral NeMo 12B (40 layers), demonstrating that the system generalizes to larger models with only 4.9 GB local VRAM and matching 7B throughput. Evaluated on Mistral 7B and NeMo 12B over a ~80ms WAN link, our system achieves 8.7-9.3 tok/s (7B) and 7.8-8.7 tok/s (12B) with lookahead decoding, with an RTT decomposition model (validated at<6.2%% cross-validation error) projecting 15-19 tok/s at 20ms RTT.",
+      "identifiers": [
+        "SemanticScholar:e5cd3f85837673b8d8df2da0f88f251421a9d22f"
+      ],
+      "semantic_scholar_id": "e5cd3f85837673b8d8df2da0f88f251421a9d22f",
+      "canonical_id": "arXiv:2602.16760",
+      "arxiv_id": "2602.16760",
+      "doi": "10.48550/arXiv.2602.16760",
+      "authors": [
+        "M. Cunningham"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 232,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Understanding Evaluation Illusion in Diffusion Large Language Models",
+      "source_url": "https://arxiv.org/abs/2606.29228",
+      "year": 2026,
+      "published": "2026-06-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite the capability of parallel decoding, diffusion large language models (dLLMs) require many denoising steps to maintain generation quality, motivating recent research on efficient decoding strategies. However, existing studies have reported inconsistent evaluation results even under seemingly identical evaluation settings, risking biased conclusions about dLLM decoding methods. To understand this evaluation concern, we conduct a rigorous evaluation of current decoding methods for dLLMs across diverse evaluation settings. Surprisingly, our analysis reveals that the ranking of decoding methods is highly sensitive to the choice of prompt templates. Single-template evaluation can lead to an illusion that decoding methods improve inference efficiency without performance degradation. Through comprehensive experiments, we find that current parallel decoding methods consistently underperform the single-token decoding baseline, failing to overcome the speed-quality trade-off. We further identify this evaluation inconsistency as the high sensitivity of parallel decoding methods to minor variations in prompt templates. Our experiments show that an effective prompt template can achieve strong evaluation results even with fewer denoising steps, markedly outperforming the marginal gain from increasing denoising steps. Beyond prompt templates, our experiments indicate that overlooked evaluation settings can also notably affect the assessment of decoding methods. Based on these findings, we propose practical guidelines for the reliable evaluation of decoding methods in dLLMs.",
+      "identifiers": [
+        "SemanticScholar:005a6227eb8a263ba34e085ab859d546fd1c87bf"
+      ],
+      "semantic_scholar_id": "005a6227eb8a263ba34e085ab859d546fd1c87bf",
+      "canonical_id": "arXiv:2606.29228",
+      "arxiv_id": "2606.29228",
+      "doi": "10.48550/arXiv.2606.29228",
+      "authors": [
+        "Hengxiang Zhang",
+        "Jiaxiang Ren",
+        "Renchunzi Xie",
+        "Hongxin Wei"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 102,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TaskPress: Query-Agnostic KV Cache Compression via Task-Guided Pruning",
+      "source_url": "https://arxiv.org/abs/2608.03276",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference with large language models is constrained by the linear growth of the key-value cache to sequence length. While pruning offers mitigation, prevailing methods determine query-specific token importance that cannot be reused across unseen queries. In contrast, we introduce TaskPress, a framework for task-guided, query-agnostic KV cache eviction. Instead of optimizing the cache for a single query, TaskPress constructs a reusable memory representation conditioned on a high-level task guide. The guide functions as a meta-query during prefill to filter irrelevant tokens before downstream queries are issued. In addition, TaskPress leverages quantization scale factors as a zero-cost signal for detecting influential representation outliers, providing an efficient proxy for token importance. Experiments on conducted on various tasks with long context input demonstrate that TaskPress efficiently creates a compact, reusable cache across diverse queries.",
+      "identifiers": [
+        "SemanticScholar:0aca25dd8923a980dacd73c37de6fa2569c18af9"
+      ],
+      "semantic_scholar_id": "0aca25dd8923a980dacd73c37de6fa2569c18af9",
+      "canonical_id": "arXiv:2608.03276",
+      "arxiv_id": "2608.03276",
+      "authors": [
+        "Wonpyo Park",
+        "Seung-won Hwang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 65,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Joint Effects of GPU Server Topology, Parallelism, and Congestion Control on MoE Inference: A Controlled Simulation Study",
+      "source_url": "https://arxiv.org/abs/2609.37828",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-experts (MoE) models expand capacity via sparse activation, but inference across GPUs introduces tensor-parallel (TP) collectives and expert-parallel (EP) dispatch and combine operations. Completion time depends not just on communication volume but on how logical groups map onto intra-server interconnects, GPU--NIC connections, and the inter-node network. Using ASTRA-sim with the NS-3 discrete-event backend, we build a controlled matrix of 32 GPU ranks with data and pipeline parallelism fixed at one. Workloads are fixed-length 4096-token prefill-like synthetic Chakra traces from four MoE configurations. Experiments cover six server topologies, four TP/EP partitions, two TP collective algorithms, and four network/congestion-control modes, yielding 768 deterministic simulations. In the 144-configuration feedback-enabled subset per model, exposed communication accounts for 89.9%--95.8% of mean completion time. TP16EP2 requires 3.68--4.35x the mean completion time of TP2EP16. With fixed rank mapping, ASTRA-sim Double Binary Tree (DBT) incurs 28.3%--83.2% more time than Ring. InfiniBand-like High Precision Congestion Control (HPCC) is ~0.9% lower than HPCC over RDMA over Converged Ethernet (RoCE), whereas RoCE with Data Center Quantized Congestion Notification (DCQCN) is 23.8%--35.7% slower than RoCE HPCC. Topology effects are conditional: Topology~6 leads at low TP degrees but loses its advantage at high TP degrees, and additional GPUs or NICs help only when rank mapping balances traffic across injection paths. Under uniform 32-way sharding, the largest checkpoint-weight shard is ~48.75 GB per rank, so all configurations meet a 64 GB per-accelerator weight-residency criterion. Within the evaluated workload and simulator semantics, server topology, parallelism, collective implementation, and congestion control jointly determine exposed communication and completion time.",
+      "identifiers": [
+        "SemanticScholar:d1c78e3e9ee876f1f51125e589dc150438440561"
+      ],
+      "semantic_scholar_id": "d1c78e3e9ee876f1f51125e589dc150438440561",
+      "canonical_id": "arXiv:2609.37828",
+      "arxiv_id": "2609.37828",
+      "authors": [
+        "Kai-Kai Yuan",
+        "Rui Xi",
+        "Yu Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Optimal Brain Restoration for Joint Quantization and Sparsification of LLMs",
+      "source_url": "https://arxiv.org/abs/2509.11177",
+      "year": 2025,
+      "published": "2025-09-14",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Large Language Model (LLM) compression, such as quantization and pruning, have achieved notable success. However, as these techniques gradually approach their respective limits, relying on a single method for further compression has become increasingly challenging. In this work, we explore an alternative solution by combining quantization and sparsity. This joint approach, though promising, introduces new difficulties due to the inherently conflicting requirements on weight distributions: quantization favors compact ranges, while pruning benefits from high variance. To attack this problem, we propose Optimal Brain Restoration (OBR), a general and training-free framework that aligns pruning and quantization by error compensation between both. OBR minimizes performance degradation on downstream tasks by building on a second-order Hessian objective, which is then reformulated into a tractable problem through surrogate approximation and ultimately reaches a closed-form solution via group error compensation. Experiments show that OBR enables aggressive W4A4KV4 quantization with 50% sparsity on existing LLMs, and delivers up to 4.72x speedup and 6.4x memory reduction compared to the FP16-dense baseline.",
+      "identifiers": [
+        "SemanticScholar:107e600ec6f6674cd38deb0c8d1650f499d4b880"
+      ],
+      "semantic_scholar_id": "107e600ec6f6674cd38deb0c8d1650f499d4b880",
+      "canonical_id": "arXiv:2509.11177",
+      "arxiv_id": "2509.11177",
+      "doi": "10.48550/arXiv.2509.11177",
+      "authors": [
+        "Hang Guo",
+        "Yawei Li",
+        "Luca Benini"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 389,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models",
+      "source_url": "https://doi.org/10.3390/fi17040185",
+      "year": 2025,
+      "published": "2025-04-21",
+      "venue": "Future Internet",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern large language models (LLMs) achieve state-of-the-art performance through architectural advancements but require high computational costs for inference. Post-training quantization is a widely adopted approach to reduce these costs by quantizing weights and activations to lower precision, such as INT8. However, we identify a critical challenge in activation quantization for GLU (Gated Linear Unit) variants, which are commonly used in the feed-forward networks of modern LLMs like the LLaMA family. Specifically, severe local quantization errors arise due to excessively large activation magnitudes, which we refer to as activation spikes, leading to significant degradation in model performance. Our analysis reveals a systematic pattern of these spikes: they predominantly occur in the FFN (feed-forward network) layers at the early and late layers of the model and are concentrated on a small subset of tokens rather than being uniformly distributed across a token sequence. To mitigate this issue, we propose two empirical methods: Quantization-free Module (QFeM) and Quantization-free Prefix (QFeP), which isolate activation spikes during quantization. Extensive experiments demonstrated that our methods effectively improve activation quantization, particularly in coarse-grained quantization schemes, enhancing the performance of LLMs with GLU variants and addressing the limitations of existing quantization techniques. The code for implementing our methods and reproducing the experiments is publicly available our GitHub repository.",
+      "identifiers": [
+        "SemanticScholar:e33cd488644bab8fd2cc8df3420f9d942e9aa156"
+      ],
+      "semantic_scholar_id": "e33cd488644bab8fd2cc8df3420f9d942e9aa156",
+      "doi": "10.3390/fi17040185",
+      "canonical_id": "DOI:10.3390/fi17040185",
+      "authors": [
+        "Jaewoo Yang",
+        "Hayun Kim",
+        "Junyung Ji",
+        "Younghoon Kim"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 535,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SpinOut: Enhanced Rotation-Based Quantization for LLM by Outlier Injection",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3664084",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is a crucial technique for deploying Large Language Models (LLMs) in resource-constrained environments. However, minimizing performance degradation due to outliers in activation distributions remains a significant challenge, especially in low-precision quantization. Rotation-based quantization methods have emerged as promising approaches to mitigate outlier effects by transforming the distribution of weights and activations. However, existing methods either suffer from high performance variance due to random rotations or performance degradation when the calibration sample is not sufficient. In this paper, we propose SpinOut, a novel method that enhances rotation-matrix training for LLM quantization by selectively injecting outliers into outlier-sensitive layers. We introduce a method to score layer sensitivity that quantitatively measures each layer’s responsiveness to outliers using Kurtosis and performance metrics, and propose a search algorithm to determine the best subset of layers for outlier injection. By intentionally injecting artificial outliers during training, SpinOut makes rotation matrices more robust to outliers, leading to improved quantization performance. Experimental results on the Llama-2 7B and the Llama-3.2 1B/3B models demonstrate that SpinOut outperforms existing rotation-based quantization methods across various bit configurations. In the W4A4KV4 quantization setting, SpinOut achieves 0.09, 0.83, and 0.12 lower WikiText2 perplexity compared to widely-known SpinQuant, QuaRot, and AMXFP4, respectively, on Llama-2 7B. Furthermore, SpinOut reduces the required number of training samples and the iteration counts by 75% and 50% compared to SpinQuant while achieving a lower performance variance (0.23 vs. 0.3), demonstrating both efficiency and stability. Our method achieves state-of-the-art performance in most experimental settings, including W4A4KV16 quantization, and in the W4A8KV16 configuration, it even surpasses weight-only quantization methods.",
+      "identifiers": [
+        "SemanticScholar:dbf75af952ffe5c26dc56321ac277bbd97860ba4"
+      ],
+      "semantic_scholar_id": "dbf75af952ffe5c26dc56321ac277bbd97860ba4",
+      "doi": "10.1109/ACCESS.2026.3664084",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3664084",
+      "authors": [
+        "Sangki Park",
+        "Ki-Seok Chung"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 99,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NIKA: Optimal KV Cache Transfer for Minimizing the Latency of Disaggregated LLM Inference",
+      "source_url": "https://doi.org/10.5220/0014920900004039",
+      "year": 2026,
+      "published": null,
+      "venue": "International Conference on Cloud Computing and Services Science",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ": In disaggregated Large Language Model (LLM) inference systems, the transfer of the KV cache between the prefill and decode stages often becomes a significant latency bottleneck, increasing the Time to First Token (TTFT). In cloud environments, where inference components are often distributed across nodes to optimize resource costs, this issue is further exacerbated by limited inter-node network bandwidth. This paper proposes an optimal KV cache transfer method that mitigates this bottleneck by utilizing the residual capacity of the decode GPU to minimize TTFT without sacrificing throughput. We introduce an analytical performance model to determine the optimal ratio of KV cache to transfer versus recompute, based on profiled compute resources and network conditions. Experimental results demonstrate that our approach achieves a reduction of up to 54% in TTFT. Importantly, these latency gains are achieved without compromising system throughput, ensuring high resource utilization in disaggregated inference environments.",
+      "identifiers": [
+        "SemanticScholar:e59d8bf0fa6023b5d8a929c925efa65a9253b198"
+      ],
+      "semantic_scholar_id": "e59d8bf0fa6023b5d8a929c925efa65a9253b198",
+      "doi": "10.5220/0014920900004039",
+      "canonical_id": "DOI:10.5220/0014920900004039",
+      "authors": [
+        "Chih-Ta Tsai",
+        "Zhan-Wei Wu",
+        "Yi-Syuan Ke",
+        "Sao-Hsuan Lin",
+        "Jerry Chou"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 99,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.21709",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.21709",
+        "id:SemanticScholar:a83a39fd58e91bab953771846afbba2bccc3a2d9",
+        "id:arXiv:2601.21709",
+        "title:why attention patterns exist a unifying temporal perspective analysis",
+        "url:https://arxiv.org/abs/2601.21709"
+      ],
+      "record": {
+        "title": "Why Attention Patterns Exist: A Unifying Temporal Perspective Analysis",
+        "source_url": "https://arxiv.org/abs/2601.21709",
+        "year": 2026,
+        "published": "2026-01-29",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Attention patterns play a crucial role in both training and inference of large language models (LLMs). Prior works have identified individual patterns such as retrieval heads, sink heads, and diagonal traces, yet these observations remain fragmented and lack a unifying explanation. To bridge this gap, we introduce \\textbf{Temporal Attention Pattern Predictability Analysis (TAPPA), a unifying framework that explains diverse attention patterns by analyzing their underlying mathematical formulations} from a temporally continuous perspective. TAPPA both deepens the understanding of attention behavior and guides inference acceleration approaches. Specifically, TAPPA characterizes attention patterns as predictable patterns with clear regularities and unpredictable patterns that appear effectively random. Our analysis further reveals that this distinction can be explained by the degree of query self-similarity along the temporal dimension. Focusing on the predictable patterns, we further provide a detailed mathematical analysis of three representative cases through the joint effect of queries, keys, and Rotary Positional Embeddings (RoPE). We validate TAPPA by applying its insights to KV cache compression and LLM pruning tasks. Across these tasks, a simple metric motivated by TAPPA consistently improves performance over baseline methods. The code is available at https://github.com/MIRALab-USTC/LLM-TAPPA.",
+        "identifiers": [
+          "SemanticScholar:a83a39fd58e91bab953771846afbba2bccc3a2d9"
+        ],
+        "semantic_scholar_id": "a83a39fd58e91bab953771846afbba2bccc3a2d9",
+        "canonical_id": "arXiv:2601.21709",
+        "arxiv_id": "2601.21709",
+        "doi": "10.48550/arXiv.2601.21709",
+        "authors": [
+          "Qingyue Yang",
+          "Jie Wang",
+          "Xing Li",
+          "Yinqi Bai",
+          "Xia-Liang Tong",
+          "Hui-Ling Zhen",
+          "Jian-Ye Hao",
+          "Ming-Hu Yuan",
+          "Bin Li"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 252,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.01178",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.01178",
+        "id:SemanticScholar:1b0ce347db427a016aa2ee81f56d7c582c7205e2",
+        "id:arXiv:2604.01178",
+        "title:screening is enough",
+        "url:https://arxiv.org/abs/2604.01178"
+      ],
+      "record": {
+        "title": "Screening Is Enough",
+        "source_url": "https://arxiv.org/abs/2604.01178",
+        "year": 2026,
+        "published": "2026-04-01",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We call query--key relevance absolute when its values lie on a fixed bounded scale, depend on neither competing keys nor sequence length, require no sequence-length-dependent calibration, and can all be zero. To realize this notion, we introduce screening, whose explicit threshold transforms bounded query--key similarities into relevance values, enabling exact rejection, empty selection, and direct inspection on a common scale. In a controlled comparison of 12 attention mechanisms on a matched Transformer backbone, only screening maintains both low long-context perplexity and robust retrieval beyond the training context; notably, it does so without inference-time scaling. Building on screening, we introduce Multiscreen, a language-model architecture composed of parallel gated screening tiles. Multiscreen retains these long-context gains while achieving greater parameter efficiency, stronger general zero-shot downstream performance, lower training cost at larger scales, and lower model-side time to first token than Transformer baselines. We further develop a normalization design that keeps Multiscreen training stable even at a learning rate of $1$ and show that an adapted version likewise stabilizes Transformer at the same learning rate.",
+        "identifiers": [
+          "SemanticScholar:1b0ce347db427a016aa2ee81f56d7c582c7205e2"
+        ],
+        "semantic_scholar_id": "1b0ce347db427a016aa2ee81f56d7c582c7205e2",
+        "canonical_id": "arXiv:2604.01178",
+        "arxiv_id": "2604.01178",
+        "doi": "10.48550/arXiv.2604.01178",
+        "authors": [
+          "K. Nakanishi"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 190,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.25203",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.25203",
+        "id:SemanticScholar:d02f1f49b96cea46436e95a7b46fbc0ead146a93",
+        "id:arXiv:2605.25203",
+        "title:influenceinspired spectral rotations for extreme lowbit llm quantization",
+        "url:https://arxiv.org/abs/2605.25203"
+      ],
+      "record": {
+        "title": "Influence-Inspired Spectral Rotations for Extreme Low-Bit LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2605.25203",
+        "year": 2026,
+        "published": "2026-05-24",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We apply the influence-adaptive Walsh geometry of a companion theory paper (arXiv:2605.01637) to extreme low-bit weight-only LLM quantization. The recipe is one math-invariant transformation: WHT-rotate each linear layer's weight matrix and rescale its columns by per-coordinate Walsh-basis activation energy before handing off to a reconstruction-error quantizer (Intel auto-round). This biases per-group integer rounding toward high-spectral-energy channels. On four pretrained decoder-only models from 135M to 1.5B parameters, BBT-spectral reduces wikitext-2 perplexity by 15-58% relative to vanilla auto-round at W2A16; we also report a TinyLlama-1.1B auxiliary data point. Three extensions transfer the recipe to families it failed on: a per-head PCA matrix-Gamma replacement of q_norm/k_norm for Qwen3 attention (PPL 136.76 ->88.99 on Qwen3-0.6B); an SO(2) per-pair rotation that commutes with RoPE (PPL 36.93 ->21.84 on Qwen2.5-1.5B); and an MoE-aware input-side absorption fix identified by architectural fuzzing of Laguna-style fused-expert layouts. A W2-vs-W4 ablation gives a deliberate negative control: the redistribution payoff falls within the +/-0.5 PPL noise floor at W4, consistent with the Schur-convexity intuition that the cost of unconcentrated influence vanishes as the noise budget shrinks. All quantized weights export to OpenVINO IR and run on Intel NPU + Arc dGPU + CPU with PPL invariant to device within +/-0.1. We do not claim a formal Boolean-to-real-valued transfer of the theory paper's majorization argument: the WHT activation energy used here is not the Boolean influence of the theory paper, the link is intuitive, and the contribution is engineering value rather than a transferred theorem. Head-to-head benchmarks against SpinQuant, QuaRot, QuIP-sharp, AQLM, OmniQuant, and ButterflyQuant at matched calibration are the main future-work item.",
+        "identifiers": [
+          "SemanticScholar:d02f1f49b96cea46436e95a7b46fbc0ead146a93"
+        ],
+        "semantic_scholar_id": "d02f1f49b96cea46436e95a7b46fbc0ead146a93",
+        "canonical_id": "arXiv:2605.25203",
+        "arxiv_id": "2605.25203",
+        "doi": "10.48550/arXiv.2605.25203",
+        "authors": [
+          "G. Pavlov"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 137,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.31796",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.31796",
+        "id:SemanticScholar:6001593b17998092eaf9b132b70612e30fd66717",
+        "id:arXiv:2606.31796",
+        "title:cherry compressed hierarchical experts with recurrent representational yield",
+        "url:https://arxiv.org/abs/2606.31796"
+      ],
+      "record": {
+        "title": "CHERRY: Compressed Hierarchical Experts with Recurrent Representational Yield",
+        "source_url": "https://arxiv.org/abs/2606.31796",
+        "year": 2026,
+        "published": "2026-06-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Frontier language capability is usually bought with frontier compute; CHERRY shows a different trade. It is a sovereign Korean model family built on one principle: supervise the tokens that decide the answer, and let shared weights carry the rest. Under matched compute this exposes a sharp, reproducible dissociation---selected-token supervision preserves held-out discrimination yet collapses free generation, and a full-sequence anchor recovers only part of the gap. The same signal drives a heal-after-merge recurrent-representational-yield loop that collapses 48 layers to 6 unique blocks at near-dense parity (227M at loss 2.934 vs a 566M dense model at 2.926) and composes them by MoEE fusion (2.789)---a recurrent-compression direction independently pursued by concurrent frontier looped-MoE work, which we project (not yet measure) to frontier scale. It also installs metacognition from two-token supervision (200 held-out KO prompts/type, kappa>0.82, +/-6.9pp): self-correction 12->47% and jailbreak 23->4% at 97.6% loss-retention on 1.2B, with a pre-registered 1B->13.7B ablation localising the operand-binding limit to capacity (1B lookup vs 13.7B H-PRESERVE); and it specializes a 1.8B model to reported human-expert level on CyberMetric (75.0% vs a 30-expert average 72.24%). The released 1.8B tokenizer is 9.2% more Korean-efficient than Gemma-4; the from-scratch 12B adds a sovereign Korean tokenizer (vocab 131,037). On the government-operated K-AI Korean-LLM leaderboard the released 1.8B leads the HLE(Ko) column (0.123 vs 0.077; overall 51/78). At the frontier we fine-tune and serve an adapted 122B model on one 120GB accelerator (83GB measured peak). Provenance differs by member and we state it exactly; the architecture and recipe are ours throughout, and every claim is bound to a released curated measurement.",
+        "identifiers": [
+          "SemanticScholar:6001593b17998092eaf9b132b70612e30fd66717"
+        ],
+        "semantic_scholar_id": "6001593b17998092eaf9b132b70612e30fd66717",
+        "canonical_id": "arXiv:2606.31796",
+        "arxiv_id": "2606.31796",
+        "doi": "10.48550/arXiv.2606.31796",
+        "authors": [
+          "Dohyeon Kwon",
+          "Youngjin Park"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 100,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.18795",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.18795",
+        "id:SemanticScholar:e6b867fd81eb90c67ee64d9a768d3c5c867c9ab4",
+        "id:arXiv:2501.18795",
+        "title:rope to nope and back again a new hybrid attention strategy",
+        "url:https://arxiv.org/abs/2501.18795"
+      ],
+      "record": {
+        "title": "Rope to Nope and Back Again: A New Hybrid Attention Strategy",
+        "source_url": "https://arxiv.org/abs/2501.18795",
+        "year": 2025,
+        "published": "2025-01-30",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 51,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context large language models (LLMs) have achieved remarkable advancements, driven by techniques like Rotary Position Embedding (RoPE) (Su et al., 2023) and its extensions (Chen et al., 2023; Liu et al., 2024c; Peng et al., 2023). By adjusting RoPE parameters and incorporating training data with extended contexts, we can train performant models with considerably longer input sequences. However, existing RoPE-based methods exhibit performance limitations when applied to extended context lengths. This paper presents a comprehensive analysis of various attention mechanisms, including RoPE, No Positional Embedding (NoPE), and Query-Key Normalization (QK-Norm), identifying their strengths and shortcomings in long-context modeling. Our investigation identifies distinctive attention patterns in these methods and highlights their impact on long-context performance, providing valuable insights for architectural design. Building on these findings, we propose a novel architecture featuring a hybrid attention mechanism that integrates global and local attention spans. This design not only surpasses conventional RoPE-based transformer models with full attention in both long and short context tasks but also delivers substantial efficiency gains during training and inference.",
+        "identifiers": [
+          "SemanticScholar:e6b867fd81eb90c67ee64d9a768d3c5c867c9ab4"
+        ],
+        "semantic_scholar_id": "e6b867fd81eb90c67ee64d9a768d3c5c867c9ab4",
+        "canonical_id": "arXiv:2501.18795",
+        "arxiv_id": "2501.18795",
+        "doi": "10.48550/arXiv.2501.18795",
+        "authors": [
+          "Bowen Yang",
+          "Bharat Venkitesh",
+          "Dwarak Talupuru",
+          "Hangyu Lin",
+          "David Cairuz",
+          "P. Blunsom",
+          "Acyr F. Locatelli"
+        ],
+        "priority": 61,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 51,
+          "citation_count": 51,
+          "total": 61,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 616,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3805621.3807650",
+      "identity_tokens": [
+        "id:DOI:10.1145/3805621.3807650",
+        "id:SemanticScholar:dc6d661c59e396865ced31c72a788068788c184e",
+        "title:where the time goes analysis of a public llm serving system",
+        "url:https://doi.org/10.1145/3805621.3807650"
+      ],
+      "record": {
+        "title": "Where the Time Goes: Analysis of a Public LLM Serving System",
+        "source_url": "https://doi.org/10.1145/3805621.3807650",
+        "year": 2026,
+        "published": "2026-04-27",
+        "venue": "EuroMLSys@EuroSys",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this study, we present a characterization of serving traces collected from Public Al's serving of Apertus, an open source Large Language Model (LLM). The trace spans roughly five months (September 2025-January 2026) and contains 337K requests. We analyzed request sizes, token and timing behaviour, latency, model-size effects, and temporal patterns. Our findings show insights that do not align with common assumptions; (1) time-to-first-token is often driven by queuing rather than prefill compute, especially for small requests; (2) the 8B and 70B models show nearly the same user-perceived latency despite a 9× parameter gap; (3) a substantial fraction of requests are prefill/queuing-dominated rather than decode-dominated; and; (4) observable input features are weak predictors of output, which makes size-aware scheduling difficult at arrival time. As a contribution to the research community, we will publish this anonymized trace along with its analysis.",
+        "identifiers": [
+          "SemanticScholar:dc6d661c59e396865ced31c72a788068788c184e"
+        ],
+        "semantic_scholar_id": "dc6d661c59e396865ced31c72a788068788c184e",
+        "doi": "10.1145/3805621.3807650",
+        "canonical_id": "DOI:10.1145/3805621.3807650",
+        "authors": [
+          "Büşra Karatay Demiray",
+          "Ehsan Yousefzadeh-Asl-Miandoab",
+          "B. Garbinato",
+          "Pınar Tözün",
+          "Pamela Delgado"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 164,
+          "matched_prestigious_venue": "EuroSys"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.08470",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.08470",
+        "id:SemanticScholar:1fb76e69ee4180204f9480853abc8c7bc5d4ddcf",
+        "id:arXiv:2408.08470",
+        "title:contextaware assistant selection for improved inference acceleration with large language models",
+        "url:https://arxiv.org/abs/2408.08470"
+      ],
+      "record": {
+        "title": "Context-Aware Assistant Selection for Improved Inference Acceleration with Large Language Models",
+        "source_url": "https://arxiv.org/abs/2408.08470",
+        "year": 2024,
+        "published": "2024-08-16",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite their widespread adoption, large language models (LLMs) remain prohibitive to use under resource constraints, with their ever growing sizes only increasing the barrier for use. One particular issue stems from the high latency associated with auto-regressive generation in LLMs, rendering the largest LLMs difficult to use without advanced computing infrastructure. Assisted decoding, where a smaller draft model guides a larger expert model’s generation, has helped alleviate this concern, but remains dependent on alignment between the two models. Thus if the draft model is insufficiently capable on some domain of interest relative to the target model, performance can degrade. Alternatively, one can leverage multiple draft models to better cover the expertise of the target, but when multiple black-box draft models are available, selecting an assistant without details about its construction can be difficult. To better understand this decision making problem, we observe it as a contextual bandit, where a policy must choose a draft model based on a context. We show that even without prior knowledge of the draft models, creating an offline dataset from only outputs of independent draft/target models and training a policy over the alignment of these outputs can accelerate performance on multiple domains as long as an individual draft model is effective. We observe these results hold on various settings with multiple assisted decoding candidates, highlighting its flexibility and the advantageous role that such decision making can play.",
+        "identifiers": [
+          "SemanticScholar:1fb76e69ee4180204f9480853abc8c7bc5d4ddcf"
+        ],
+        "semantic_scholar_id": "1fb76e69ee4180204f9480853abc8c7bc5d4ddcf",
+        "canonical_id": "arXiv:2408.08470",
+        "arxiv_id": "2408.08470",
+        "doi": "10.48550/arXiv.2408.08470",
+        "authors": [
+          "Jerry Huang",
+          "Prasanna Parthasarathi",
+          "Mehdi Rezagholizadeh",
+          "Sarath Chandar"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 783,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.06846",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.06846",
+        "id:SemanticScholar:9d4e300ba4e5fe36489d1b547677987cc2face3d",
+        "id:arXiv:2410.06846",
+        "title:joint finetuning and conversion of pretrained speech and language models towards linear complexity",
+        "url:https://arxiv.org/abs/2410.06846"
+      ],
+      "record": {
+        "title": "Joint Fine-tuning and Conversion of Pretrained Speech and Language Models towards Linear Complexity",
+        "source_url": "https://arxiv.org/abs/2410.06846",
+        "year": 2024,
+        "published": "2024-10-09",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Architectures such as Linformer and Mamba have recently emerged as competitive linear time replacements for transformers. However, corresponding large pretrained models are often unavailable, especially in non-text domains. To remedy this, we present a Cross-Architecture Layerwise Distillation (CALD) approach that jointly converts a transformer model to a linear time substitute and fine-tunes it to a target task. We also compare several means to guide the fine-tuning to optimally retain the desired inference capability from the original model. The methods differ in their use of the target model and the trajectory of the parameters. In a series of empirical studies on language processing, language modeling, and speech processing, we show that CALD can effectively recover the result of the original model, and that the guiding strategy contributes to the result. Some reasons for the variation are suggested.",
+        "identifiers": [
+          "SemanticScholar:9d4e300ba4e5fe36489d1b547677987cc2face3d"
+        ],
+        "semantic_scholar_id": "9d4e300ba4e5fe36489d1b547677987cc2face3d",
+        "canonical_id": "arXiv:2410.06846",
+        "arxiv_id": "2410.06846",
+        "doi": "10.48550/arXiv.2410.06846",
+        "authors": [
+          "Mutian He",
+          "Philip N. Garner"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 729,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.05598",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.05598",
+        "id:SemanticScholar:fc9d2213a8c550077973534f5adbcb94a726e094",
+        "id:arXiv:2504.05598",
+        "title:del contextaware dynamic exit layer for efficient selfspeculative decoding",
+        "url:https://arxiv.org/abs/2504.05598"
+      ],
+      "record": {
+        "title": "DEL: Context-Aware Dynamic Exit Layer for Efficient Self-Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2504.05598",
+        "year": 2025,
+        "published": "2025-04-08",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative Decoding (SD) is a widely used approach to accelerate the inference of large language models (LLMs) without reducing generation quality. It operates by first using a compact model to draft multiple tokens efficiently, followed by parallel verification using the target LLM. This approach leads to faster inference compared to auto-regressive decoding. While there are multiple approaches to create a draft model, one promising approach is to use early-exit methods. These methods draft candidate tokens by using a subset of layers of the primary model and applying the remaining layers for verification, allowing a single model to handle both drafting and verification. While this technique reduces memory usage and computational cost, its performance relies on the choice of the exit layer for drafting and the number of tokens drafted (speculation length) in each SD round. Prior works use hyperparameter exploration to statically select these values. However, our evaluations show that these hyperparameter values are task-specific, and even within a task they are dependent on the current sequence context. We introduce DEL (Dynamic Exit Layer), a plug-and-play method that adaptively selects the exit layer and speculation length during inference. DEL dynamically tracks the token acceptance rate if the tokens are drafted at each layer of an LLM and uses that knowledge to heuristically select the optimal exit layer and speculation length. Our experiments across a broad range of models and downstream tasks show that DEL achieves overall speedups of $2.16\\times$$\\sim$$2.62\\times$ over vanilla auto-regressive decoding and improves upon state-of-the-art SD methods, which peak at $2.43\\times$, by up to $0.19\\times$. The code is available at https://github.com/hoenza/DEL.",
+        "identifiers": [
+          "SemanticScholar:fc9d2213a8c550077973534f5adbcb94a726e094"
+        ],
+        "semantic_scholar_id": "fc9d2213a8c550077973534f5adbcb94a726e094",
+        "canonical_id": "arXiv:2504.05598",
+        "arxiv_id": "2504.05598",
+        "doi": "10.48550/arXiv.2504.05598",
+        "authors": [
+          "Hossein Entezari Zarch",
+          "Lei Gao",
+          "Chaoyi Jiang",
+          "Murali Annavaram"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 548,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.16760",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.16760",
+        "id:SemanticScholar:e5cd3f85837673b8d8df2da0f88f251421a9d22f",
+        "id:arXiv:2602.16760",
+        "title:privacyaware split inference with speculative decoding for large language models over widearea networks",
+        "url:https://arxiv.org/abs/2602.16760"
+      ],
+      "record": {
+        "title": "Privacy-Aware Split Inference with Speculative Decoding for Large Language Models over Wide-Area Networks",
+        "source_url": "https://arxiv.org/abs/2602.16760",
+        "year": 2026,
+        "published": "2026-02-18",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present a practical system for privacy-aware large language model (LLM) inference that splits a transformer between a trusted local GPU and an untrusted cloud GPU, communicating only intermediate activations over the network. Our system addresses the unique challenges of autoregressive LLM decoding over high-latency wide-area networks (WANs), contributing: (1) an asymmetric layer split where embedding and unembedding layers remain local, ensuring raw tokens never leave the trusted device; (2) the first application of lookahead decoding to split inference over WANs, amortizing network round-trip latency across multiple tokens per iteration; (3) an empirical inversion attack evaluation showing that split depth provides a tunable privacy-performance tradeoff -- an attacker can recover ~59%% of tokens at a 2-layer split but only ~35%% at an 8-layer split, with minimal throughput impact; (4) ablation experiments showing that n-gram speculation accepts 1.2-1.3 tokens per decoding step on average (peak of 7 observed on code), with acceptance rates consistent across model scales; (5) formal verification that lookahead decoding produces token-identical output to sequential decoding under greedy argmax, with zero quality degradation; and (6) scaling validation on Mistral NeMo 12B (40 layers), demonstrating that the system generalizes to larger models with only 4.9 GB local VRAM and matching 7B throughput. Evaluated on Mistral 7B and NeMo 12B over a ~80ms WAN link, our system achieves 8.7-9.3 tok/s (7B) and 7.8-8.7 tok/s (12B) with lookahead decoding, with an RTT decomposition model (validated at<6.2%% cross-validation error) projecting 15-19 tok/s at 20ms RTT.",
+        "identifiers": [
+          "SemanticScholar:e5cd3f85837673b8d8df2da0f88f251421a9d22f"
+        ],
+        "semantic_scholar_id": "e5cd3f85837673b8d8df2da0f88f251421a9d22f",
+        "canonical_id": "arXiv:2602.16760",
+        "arxiv_id": "2602.16760",
+        "doi": "10.48550/arXiv.2602.16760",
+        "authors": [
+          "M. Cunningham"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 232,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.29228",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.29228",
+        "id:SemanticScholar:005a6227eb8a263ba34e085ab859d546fd1c87bf",
+        "id:arXiv:2606.29228",
+        "title:understanding evaluation illusion in diffusion large language models",
+        "url:https://arxiv.org/abs/2606.29228"
+      ],
+      "record": {
+        "title": "Understanding Evaluation Illusion in Diffusion Large Language Models",
+        "source_url": "https://arxiv.org/abs/2606.29228",
+        "year": 2026,
+        "published": "2026-06-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite the capability of parallel decoding, diffusion large language models (dLLMs) require many denoising steps to maintain generation quality, motivating recent research on efficient decoding strategies. However, existing studies have reported inconsistent evaluation results even under seemingly identical evaluation settings, risking biased conclusions about dLLM decoding methods. To understand this evaluation concern, we conduct a rigorous evaluation of current decoding methods for dLLMs across diverse evaluation settings. Surprisingly, our analysis reveals that the ranking of decoding methods is highly sensitive to the choice of prompt templates. Single-template evaluation can lead to an illusion that decoding methods improve inference efficiency without performance degradation. Through comprehensive experiments, we find that current parallel decoding methods consistently underperform the single-token decoding baseline, failing to overcome the speed-quality trade-off. We further identify this evaluation inconsistency as the high sensitivity of parallel decoding methods to minor variations in prompt templates. Our experiments show that an effective prompt template can achieve strong evaluation results even with fewer denoising steps, markedly outperforming the marginal gain from increasing denoising steps. Beyond prompt templates, our experiments indicate that overlooked evaluation settings can also notably affect the assessment of decoding methods. Based on these findings, we propose practical guidelines for the reliable evaluation of decoding methods in dLLMs.",
+        "identifiers": [
+          "SemanticScholar:005a6227eb8a263ba34e085ab859d546fd1c87bf"
+        ],
+        "semantic_scholar_id": "005a6227eb8a263ba34e085ab859d546fd1c87bf",
+        "canonical_id": "arXiv:2606.29228",
+        "arxiv_id": "2606.29228",
+        "doi": "10.48550/arXiv.2606.29228",
+        "authors": [
+          "Hengxiang Zhang",
+          "Jiaxiang Ren",
+          "Renchunzi Xie",
+          "Hongxin Wei"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 102,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.03276",
+      "identity_tokens": [
+        "id:SemanticScholar:0aca25dd8923a980dacd73c37de6fa2569c18af9",
+        "id:arXiv:2608.03276",
+        "title:taskpress queryagnostic kv cache compression via taskguided pruning",
+        "url:https://arxiv.org/abs/2608.03276"
+      ],
+      "record": {
+        "title": "TaskPress: Query-Agnostic KV Cache Compression via Task-Guided Pruning",
+        "source_url": "https://arxiv.org/abs/2608.03276",
+        "year": 2026,
+        "published": "2026-08-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context inference with large language models is constrained by the linear growth of the key-value cache to sequence length. While pruning offers mitigation, prevailing methods determine query-specific token importance that cannot be reused across unseen queries. In contrast, we introduce TaskPress, a framework for task-guided, query-agnostic KV cache eviction. Instead of optimizing the cache for a single query, TaskPress constructs a reusable memory representation conditioned on a high-level task guide. The guide functions as a meta-query during prefill to filter irrelevant tokens before downstream queries are issued. In addition, TaskPress leverages quantization scale factors as a zero-cost signal for detecting influential representation outliers, providing an efficient proxy for token importance. Experiments on conducted on various tasks with long context input demonstrate that TaskPress efficiently creates a compact, reusable cache across diverse queries.",
+        "identifiers": [
+          "SemanticScholar:0aca25dd8923a980dacd73c37de6fa2569c18af9"
+        ],
+        "semantic_scholar_id": "0aca25dd8923a980dacd73c37de6fa2569c18af9",
+        "canonical_id": "arXiv:2608.03276",
+        "arxiv_id": "2608.03276",
+        "authors": [
+          "Wonpyo Park",
+          "Seung-won Hwang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 65,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37828",
+      "identity_tokens": [
+        "id:SemanticScholar:d1c78e3e9ee876f1f51125e589dc150438440561",
+        "id:arXiv:2609.37828",
+        "title:joint effects of gpu server topology parallelism and congestion control on moe inference a controlled simulation study",
+        "url:https://arxiv.org/abs/2609.37828"
+      ],
+      "record": {
+        "title": "Joint Effects of GPU Server Topology, Parallelism, and Congestion Control on MoE Inference: A Controlled Simulation Study",
+        "source_url": "https://arxiv.org/abs/2609.37828",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-experts (MoE) models expand capacity via sparse activation, but inference across GPUs introduces tensor-parallel (TP) collectives and expert-parallel (EP) dispatch and combine operations. Completion time depends not just on communication volume but on how logical groups map onto intra-server interconnects, GPU--NIC connections, and the inter-node network. Using ASTRA-sim with the NS-3 discrete-event backend, we build a controlled matrix of 32 GPU ranks with data and pipeline parallelism fixed at one. Workloads are fixed-length 4096-token prefill-like synthetic Chakra traces from four MoE configurations. Experiments cover six server topologies, four TP/EP partitions, two TP collective algorithms, and four network/congestion-control modes, yielding 768 deterministic simulations. In the 144-configuration feedback-enabled subset per model, exposed communication accounts for 89.9%--95.8% of mean completion time. TP16EP2 requires 3.68--4.35x the mean completion time of TP2EP16. With fixed rank mapping, ASTRA-sim Double Binary Tree (DBT) incurs 28.3%--83.2% more time than Ring. InfiniBand-like High Precision Congestion Control (HPCC) is ~0.9% lower than HPCC over RDMA over Converged Ethernet (RoCE), whereas RoCE with Data Center Quantized Congestion Notification (DCQCN) is 23.8%--35.7% slower than RoCE HPCC. Topology effects are conditional: Topology~6 leads at low TP degrees but loses its advantage at high TP degrees, and additional GPUs or NICs help only when rank mapping balances traffic across injection paths. Under uniform 32-way sharding, the largest checkpoint-weight shard is ~48.75 GB per rank, so all configurations meet a 64 GB per-accelerator weight-residency criterion. Within the evaluated workload and simulator semantics, server topology, parallelism, collective implementation, and congestion control jointly determine exposed communication and completion time.",
+        "identifiers": [
+          "SemanticScholar:d1c78e3e9ee876f1f51125e589dc150438440561"
+        ],
+        "semantic_scholar_id": "d1c78e3e9ee876f1f51125e589dc150438440561",
+        "canonical_id": "arXiv:2609.37828",
+        "arxiv_id": "2609.37828",
+        "authors": [
+          "Kai-Kai Yuan",
+          "Rui Xi",
+          "Yu Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 9,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.11177",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.11177",
+        "id:SemanticScholar:107e600ec6f6674cd38deb0c8d1650f499d4b880",
+        "id:arXiv:2509.11177",
+        "title:optimal brain restoration for joint quantization and sparsification of llms",
+        "url:https://arxiv.org/abs/2509.11177"
+      ],
+      "record": {
+        "title": "Optimal Brain Restoration for Joint Quantization and Sparsification of LLMs",
+        "source_url": "https://arxiv.org/abs/2509.11177",
+        "year": 2025,
+        "published": "2025-09-14",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in Large Language Model (LLM) compression, such as quantization and pruning, have achieved notable success. However, as these techniques gradually approach their respective limits, relying on a single method for further compression has become increasingly challenging. In this work, we explore an alternative solution by combining quantization and sparsity. This joint approach, though promising, introduces new difficulties due to the inherently conflicting requirements on weight distributions: quantization favors compact ranges, while pruning benefits from high variance. To attack this problem, we propose Optimal Brain Restoration (OBR), a general and training-free framework that aligns pruning and quantization by error compensation between both. OBR minimizes performance degradation on downstream tasks by building on a second-order Hessian objective, which is then reformulated into a tractable problem through surrogate approximation and ultimately reaches a closed-form solution via group error compensation. Experiments show that OBR enables aggressive W4A4KV4 quantization with 50% sparsity on existing LLMs, and delivers up to 4.72x speedup and 6.4x memory reduction compared to the FP16-dense baseline.",
+        "identifiers": [
+          "SemanticScholar:107e600ec6f6674cd38deb0c8d1650f499d4b880"
+        ],
+        "semantic_scholar_id": "107e600ec6f6674cd38deb0c8d1650f499d4b880",
+        "canonical_id": "arXiv:2509.11177",
+        "arxiv_id": "2509.11177",
+        "doi": "10.48550/arXiv.2509.11177",
+        "authors": [
+          "Hang Guo",
+          "Yawei Li",
+          "Luca Benini"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 389,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/fi17040185",
+      "identity_tokens": [
+        "id:DOI:10.3390/fi17040185",
+        "id:SemanticScholar:e33cd488644bab8fd2cc8df3420f9d942e9aa156",
+        "title:mitigating quantization errors due to activation spikes in gated linear unitbased large language models",
+        "url:https://doi.org/10.3390/fi17040185"
+      ],
+      "record": {
+        "title": "Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models",
+        "source_url": "https://doi.org/10.3390/fi17040185",
+        "year": 2025,
+        "published": "2025-04-21",
+        "venue": "Future Internet",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern large language models (LLMs) achieve state-of-the-art performance through architectural advancements but require high computational costs for inference. Post-training quantization is a widely adopted approach to reduce these costs by quantizing weights and activations to lower precision, such as INT8. However, we identify a critical challenge in activation quantization for GLU (Gated Linear Unit) variants, which are commonly used in the feed-forward networks of modern LLMs like the LLaMA family. Specifically, severe local quantization errors arise due to excessively large activation magnitudes, which we refer to as activation spikes, leading to significant degradation in model performance. Our analysis reveals a systematic pattern of these spikes: they predominantly occur in the FFN (feed-forward network) layers at the early and late layers of the model and are concentrated on a small subset of tokens rather than being uniformly distributed across a token sequence. To mitigate this issue, we propose two empirical methods: Quantization-free Module (QFeM) and Quantization-free Prefix (QFeP), which isolate activation spikes during quantization. Extensive experiments demonstrated that our methods effectively improve activation quantization, particularly in coarse-grained quantization schemes, enhancing the performance of LLMs with GLU variants and addressing the limitations of existing quantization techniques. The code for implementing our methods and reproducing the experiments is publicly available our GitHub repository.",
+        "identifiers": [
+          "SemanticScholar:e33cd488644bab8fd2cc8df3420f9d942e9aa156"
+        ],
+        "semantic_scholar_id": "e33cd488644bab8fd2cc8df3420f9d942e9aa156",
+        "doi": "10.3390/fi17040185",
+        "canonical_id": "DOI:10.3390/fi17040185",
+        "authors": [
+          "Jaewoo Yang",
+          "Hayun Kim",
+          "Junyung Ji",
+          "Younghoon Kim"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 535,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/access.2026.3664084",
+      "identity_tokens": [
+        "id:DOI:10.1109/access.2026.3664084",
+        "id:SemanticScholar:dbf75af952ffe5c26dc56321ac277bbd97860ba4",
+        "title:spinout enhanced rotationbased quantization for llm by outlier injection",
+        "url:https://doi.org/10.1109/ACCESS.2026.3664084"
+      ],
+      "record": {
+        "title": "SpinOut: Enhanced Rotation-Based Quantization for LLM by Outlier Injection",
+        "source_url": "https://doi.org/10.1109/ACCESS.2026.3664084",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Access",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization is a crucial technique for deploying Large Language Models (LLMs) in resource-constrained environments. However, minimizing performance degradation due to outliers in activation distributions remains a significant challenge, especially in low-precision quantization. Rotation-based quantization methods have emerged as promising approaches to mitigate outlier effects by transforming the distribution of weights and activations. However, existing methods either suffer from high performance variance due to random rotations or performance degradation when the calibration sample is not sufficient. In this paper, we propose SpinOut, a novel method that enhances rotation-matrix training for LLM quantization by selectively injecting outliers into outlier-sensitive layers. We introduce a method to score layer sensitivity that quantitatively measures each layer’s responsiveness to outliers using Kurtosis and performance metrics, and propose a search algorithm to determine the best subset of layers for outlier injection. By intentionally injecting artificial outliers during training, SpinOut makes rotation matrices more robust to outliers, leading to improved quantization performance. Experimental results on the Llama-2 7B and the Llama-3.2 1B/3B models demonstrate that SpinOut outperforms existing rotation-based quantization methods across various bit configurations. In the W4A4KV4 quantization setting, SpinOut achieves 0.09, 0.83, and 0.12 lower WikiText2 perplexity compared to widely-known SpinQuant, QuaRot, and AMXFP4, respectively, on Llama-2 7B. Furthermore, SpinOut reduces the required number of training samples and the iteration counts by 75% and 50% compared to SpinQuant while achieving a lower performance variance (0.23 vs. 0.3), demonstrating both efficiency and stability. Our method achieves state-of-the-art performance in most experimental settings, including W4A4KV16 quantization, and in the W4A8KV16 configuration, it even surpasses weight-only quantization methods.",
+        "identifiers": [
+          "SemanticScholar:dbf75af952ffe5c26dc56321ac277bbd97860ba4"
+        ],
+        "semantic_scholar_id": "dbf75af952ffe5c26dc56321ac277bbd97860ba4",
+        "doi": "10.1109/ACCESS.2026.3664084",
+        "canonical_id": "DOI:10.1109/ACCESS.2026.3664084",
+        "authors": [
+          "Sangki Park",
+          "Ki-Seok Chung"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 99,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.5220/0014920900004039",
+      "identity_tokens": [
+        "id:DOI:10.5220/0014920900004039",
+        "id:SemanticScholar:e59d8bf0fa6023b5d8a929c925efa65a9253b198",
+        "title:nika optimal kv cache transfer for minimizing the latency of disaggregated llm inference",
+        "url:https://doi.org/10.5220/0014920900004039"
+      ],
+      "record": {
+        "title": "NIKA: Optimal KV Cache Transfer for Minimizing the Latency of Disaggregated LLM Inference",
+        "source_url": "https://doi.org/10.5220/0014920900004039",
+        "year": 2026,
+        "published": null,
+        "venue": "International Conference on Cloud Computing and Services Science",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ": In disaggregated Large Language Model (LLM) inference systems, the transfer of the KV cache between the prefill and decode stages often becomes a significant latency bottleneck, increasing the Time to First Token (TTFT). In cloud environments, where inference components are often distributed across nodes to optimize resource costs, this issue is further exacerbated by limited inter-node network bandwidth. This paper proposes an optimal KV cache transfer method that mitigates this bottleneck by utilizing the residual capacity of the decode GPU to minimize TTFT without sacrificing throughput. We introduce an analytical performance model to determine the optimal ratio of KV cache to transfer versus recompute, based on profiled compute resources and network conditions. Experimental results demonstrate that our approach achieves a reduction of up to 54% in TTFT. Importantly, these latency gains are achieved without compromising system throughput, ensuring high resource utilization in disaggregated inference environments.",
+        "identifiers": [
+          "SemanticScholar:e59d8bf0fa6023b5d8a929c925efa65a9253b198"
+        ],
+        "semantic_scholar_id": "e59d8bf0fa6023b5d8a929c925efa65a9253b198",
+        "doi": "10.5220/0014920900004039",
+        "canonical_id": "DOI:10.5220/0014920900004039",
+        "authors": [
+          "Chih-Ta Tsai",
+          "Zhan-Wei Wu",
+          "Yi-Syuan Ke",
+          "Sao-Hsuan Lin",
+          "Jerry Chou"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 99,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0abe00df0cbe70226c51b53b383650f00ce6aa5c43d3396671e44085ca379323",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

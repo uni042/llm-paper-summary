@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5fd86d74244c192d-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1016/j.neucom.2026.135039",
+  "reason": "一次publisher recordのabstractはLLM向けrotated-space joint quantization/sparsificationを提案し、inference latency/memory削減を扱うため強い適合可能性がある。ただし実験条件・圧縮率・quality trade-offの本文確認ができず、確定評価を避けborderline。",
+  "title": "RotSQ: Joint quantization and sparsification of large language models in rotated space",
+  "identity_tokens": [
+    "DOI:10.1016/j.neucom.2026.135039"
+  ],
+  "linked_from": [
+    "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+    "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5fd86d74244c",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d65096591a5cb52d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1607.08022",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1607.08022",
+    "identity_tokens": [
+      "arXiv:1607.08022"
+    ],
+    "reason": "fast image stylizationでBatch NormalizationをInstance Normalizationへ置換し生成画像品質を改善するcomputer vision研究。real-time image generationを扱うがLLM/Transformer推論systemとは対象が異なる。",
+    "first_checked_at": "2026-10-04T14:23:33+00:00",
+    "last_checked_at": "2026-10-04T14:23:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+    ],
+    "title": "Instance Normalization: The Missing Ingredient for Fast Stylization"
+  },
+  "processed_at": "2026-10-04T14:23:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d65096591a5c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

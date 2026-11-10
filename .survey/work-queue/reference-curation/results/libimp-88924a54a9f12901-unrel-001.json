@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-88924a54a9f12901-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.02707",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.02707",
+    "identity_tokens": [
+      "arXiv:2306.02707"
+    ],
+    "reason": "GPT-4/ChatGPTのexplanation traceを教師信号として13Bモデルをprogressive imitation learningする能力・学習研究。推論runtime/serving効率化を提案しない。",
+    "first_checked_at": "2026-10-05T16:19:07+00:00",
+    "last_checked_at": "2026-10-05T22:23:04+00:00",
+    "linked_from": [],
+    "title": "Orca: Progressive Learning from Complex Explanation Traces of GPT-4"
+  },
+  "processed_at": "2026-10-05T22:23:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-88924a54a9f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

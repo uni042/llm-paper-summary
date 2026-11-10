@@ -1,0 +1,420 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e6281caabeb99725-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e6281caabeb9",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.52202/085713-5740",
+    "DOI:10.5555/3692070.3694679",
+    "arXiv:2508.05282",
+    "arXiv:2609.05760",
+    "arXiv:2609.32961"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3a4053b0a8856b5c78eb2e3859c816ea4a6483b4",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 1,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-10-31T02:17:42.163058+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.52202/085713-5740",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.5555/3692070.3694679",
+      "status": "provider_unresolved",
+      "lookup_route": "semantic_scholar_single"
+    },
+    {
+      "requested_id": "arXiv:2508.05282",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.05760",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32961",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Beyond Token Savings: A Systematic Study of Context Compression in LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.32961",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As LLM agents tackle longer tasks, they increasingly compress growing histories of reasoning, actions, and tool outputs. Compression can reduce token use, but it also changes the information available for later decisions. Existing agentic harnesses bundle decisions about what to compress, when to compress, and how much to remove into fixed policies. A systematic characterization is needed to disentangle these decisions and reveal how each affects task success and execution cost. We systematically vary these decisions across three open-weight models on SWE-bench Verified and Terminal-Bench 1.0. Across nearly 35,000 agent runs, we measure task success, token use, end-to-end latency, and estimated cost. We find that fewer tokens need not mean faster or cheaper execution: on Terminal-Bench with Qwen, policies using roughly one-third as many tokens can take 20-80% longer than the uncompressed agent. Policies with similar overall success can solve different tasks, while the same policy can perform quite differently across models. Our results motivate evaluating compression by its effects on agent execution and tailoring policies to the task, model, and workload.",
+      "identifiers": [
+        "SemanticScholar:496d3cf4a25ee814d9b992d82afe3f11232482a9"
+      ],
+      "semantic_scholar_id": "496d3cf4a25ee814d9b992d82afe3f11232482a9",
+      "canonical_id": "arXiv:2609.32961",
+      "arxiv_id": "2609.32961",
+      "authors": [
+        "Ritul Satish",
+        "Prasoon Sinha",
+        "Akiho Kawada",
+        "N. Yadwadkar"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SmartCache: Context-aware Semantic Cache for Efficient Multi-turn LLM Inference",
+      "source_url": "https://doi.org/10.52202/085713-5740",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) for multi-turn conversations suffer from inefficiency: semantically similar queries across different user sessions trigger redundant computation and duplicate memory-intensive Key-Value (KV) caches. Existing optimizations such as prefix caching overlook semantic similarities, while typical semantic caches either ignore conversational context or are not integrated with low-level KV cache management. We propose SmartCache, a system-algorithm co-design framework that tackles this inefficiency by exploiting semantic query similarity across sessions. SmartCache leverages a Semantic Forest structure to hierarchically index conversational turns, enabling efficient retrieval and reuse of responses only when both the semantic query and conversational context match. To maintain accuracy during topic shifts, it leverages internal LLM attention scores—computed during standard prefill—to dynamically detect context changes with minimal computational overhead. Importantly, this semantic understanding is co-designed alongside the memory system: a novel two-level mapping enables transparent cross-session KV cache sharing for semantically equivalent states, complemented by a semantics-aware eviction policy that significantly improves memory utilization. This holistic approach significantly reduces redundant computations and optimizes GPU memory utilization. The evaluation demonstrates SmartCache’s effectiveness across multiple benchmarks. On the CoQA and SQuAD datasets, SmartCache reduces KV cache memory usage by up to 59 . 1% compared to pre-fix caching and 56 . 0% over semantic caching, while cutting Time-to-First-Token (TTFT) by 78 . 0% and 71 . 7% , respectively. It improves answer quality metrics, achieving 39 . 9% higher F1 and 39 . 1% higher ROUGE-L",
+      "identifiers": [
+        "SemanticScholar:3b130131979f3dca14ad20837f4a06f26d7d19c5"
+      ],
+      "semantic_scholar_id": "3b130131979f3dca14ad20837f4a06f26d7d19c5",
+      "doi": "10.52202/085713-5740",
+      "canonical_id": "DOI:10.52202/085713-5740",
+      "authors": [
+        "Cheng Yu",
+        "Tianyu Wang",
+        "Zi-Li Shao",
+        "Songhao Jiang"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 487,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "RAGMark: A Comprehensive Framework for Benchmarking Retrieval-Augmented Generation Systems",
+      "source_url": "https://arxiv.org/abs/2609.05760",
+      "year": 2026,
+      "published": "2026-09-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present RAGMark, a modular benchmarking framework for advanced Retrieval-Augmented Generation (RAG) systems targeting small-scale multi-GPU environments. RAGMark evaluates diverse RAG components, including retrievers, vector databases, prompt-processing methods, and generator models, while collecting detailed per-stage metrics such as latency, GPU utilization, memory consumption, power usage, time to first token (TTFT), throughput, and answer quality. The framework is highly extensible, separating RAG stages, timing, and resource monitoring into modular components, and is designed to efficiently sweep large configuration spaces while minimizing repeated model and database initialization overhead. Using RAGMark, we characterize five RAG workloads on open-domain QA datasets across varying retrieval depths, model scales, reranking, compression methods, and vector database configurations. We show that while autoregressive generation dominates latency in naive pipelines, context-reduction techniques shift bottlenecks across compute, memory bandwidth, and preprocessing stages. Reranking and compression produce compounding benefits: reranking reduces compression workload itself, while both jointly reduce prefill and KV-cache traversal costs, lowering energy consumption by up to 66%. We further observe strong cross-stage interactions, where small upstream context reductions cascade through downstream latency, memory traffic, and energy consumption. The RAGMark source code is publicly available at: https://github.com/zferic/RAGMark.",
+      "identifiers": [
+        "SemanticScholar:4ee5af1e3ea159fc2313db012dfbdca4f3773460"
+      ],
+      "semantic_scholar_id": "4ee5af1e3ea159fc2313db012dfbdca4f3773460",
+      "canonical_id": "arXiv:2609.05760",
+      "arxiv_id": "2609.05760",
+      "authors": [
+        "Z. Feric",
+        "Amir Taherin",
+        "Bin Ren",
+        "Yan-Zhi Wang",
+        "Jennifer G. Dy",
+        "David R. Kaeli"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 57,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Not All Errors Are Created Equal: ASCoT Addresses Late-Stage Fragility in Efficient LLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2508.05282",
+      "year": 2025,
+      "published": "2025-08-07",
+      "venue": null,
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Chain-of-Thought (CoT) prompting empowers Large Language Models (LLMs), ensuring reasoning reliability remains an open challenge. Contrary to the prevailing cascading failure hypothesis which posits that early errors are most detrimental, we identify a counter-intuitive phenomenon termed \\textbf{Late-Stage Fragility}: errors introduced in later reasoning stages are significantly more prone to corrupting final answers. To address this, we introduce ASCoT (Adaptive Self-Correction Chain-of-Thought), a method harmonizing efficiency with robust verification. ASCoT first employs semantic pruning to compress redundant steps, then utilizes an Adaptive Verification Manager (AVM) to prioritize high risk, late-stage steps via a positional impact score, triggering a Multi-Perspective Self-Correction Engine (MSCE) only when necessary. Experiments on GSM8K and MATH-500 demonstrate that ASCoT effectively reallocates computational resources: it reduces token usage by 21\\%--30\\% for LLaMA-3.1-8B with negligible accuracy drops ($<1.8\\%$), achieving a superior trade-off between inference efficiency and reasoning fidelity.",
+      "identifiers": [
+        "SemanticScholar:6f2aac686793c0f66619b6881ed08247d49f748a"
+      ],
+      "semantic_scholar_id": "6f2aac686793c0f66619b6881ed08247d49f748a",
+      "canonical_id": "arXiv:2508.05282",
+      "arxiv_id": "2508.05282",
+      "authors": [
+        "Dong-Xu Zhang",
+        "Yujun Wu",
+        "Yi-Ding Sun",
+        "Jin-Na Yang",
+        "Ning Yang",
+        "Ji-Hua Zhu",
+        "Miao Xin",
+        "Bao-Liang Tian"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 450,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.32961",
+      "identity_tokens": [
+        "id:SemanticScholar:496d3cf4a25ee814d9b992d82afe3f11232482a9",
+        "id:arXiv:2609.32961",
+        "title:beyond token savings a systematic study of context compression in llm agents",
+        "url:https://arxiv.org/abs/2609.32961"
+      ],
+      "record": {
+        "title": "Beyond Token Savings: A Systematic Study of Context Compression in LLM Agents",
+        "source_url": "https://arxiv.org/abs/2609.32961",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As LLM agents tackle longer tasks, they increasingly compress growing histories of reasoning, actions, and tool outputs. Compression can reduce token use, but it also changes the information available for later decisions. Existing agentic harnesses bundle decisions about what to compress, when to compress, and how much to remove into fixed policies. A systematic characterization is needed to disentangle these decisions and reveal how each affects task success and execution cost. We systematically vary these decisions across three open-weight models on SWE-bench Verified and Terminal-Bench 1.0. Across nearly 35,000 agent runs, we measure task success, token use, end-to-end latency, and estimated cost. We find that fewer tokens need not mean faster or cheaper execution: on Terminal-Bench with Qwen, policies using roughly one-third as many tokens can take 20-80% longer than the uncompressed agent. Policies with similar overall success can solve different tasks, while the same policy can perform quite differently across models. Our results motivate evaluating compression by its effects on agent execution and tailoring policies to the task, model, and workload.",
+        "identifiers": [
+          "SemanticScholar:496d3cf4a25ee814d9b992d82afe3f11232482a9"
+        ],
+        "semantic_scholar_id": "496d3cf4a25ee814d9b992d82afe3f11232482a9",
+        "canonical_id": "arXiv:2609.32961",
+        "arxiv_id": "2609.32961",
+        "authors": [
+          "Ritul Satish",
+          "Prasoon Sinha",
+          "Akiho Kawada",
+          "N. Yadwadkar"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 35,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.52202/085713-5740",
+      "identity_tokens": [
+        "id:DOI:10.52202/085713-5740",
+        "id:SemanticScholar:3b130131979f3dca14ad20837f4a06f26d7d19c5",
+        "title:smartcache contextaware semantic cache for efficient multiturn llm inference",
+        "url:https://doi.org/10.52202/085713-5740"
+      ],
+      "record": {
+        "title": "SmartCache: Context-aware Semantic Cache for Efficient Multi-turn LLM Inference",
+        "source_url": "https://doi.org/10.52202/085713-5740",
+        "year": 2025,
+        "published": null,
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) for multi-turn conversations suffer from inefficiency: semantically similar queries across different user sessions trigger redundant computation and duplicate memory-intensive Key-Value (KV) caches. Existing optimizations such as prefix caching overlook semantic similarities, while typical semantic caches either ignore conversational context or are not integrated with low-level KV cache management. We propose SmartCache, a system-algorithm co-design framework that tackles this inefficiency by exploiting semantic query similarity across sessions. SmartCache leverages a Semantic Forest structure to hierarchically index conversational turns, enabling efficient retrieval and reuse of responses only when both the semantic query and conversational context match. To maintain accuracy during topic shifts, it leverages internal LLM attention scores—computed during standard prefill—to dynamically detect context changes with minimal computational overhead. Importantly, this semantic understanding is co-designed alongside the memory system: a novel two-level mapping enables transparent cross-session KV cache sharing for semantically equivalent states, complemented by a semantics-aware eviction policy that significantly improves memory utilization. This holistic approach significantly reduces redundant computations and optimizes GPU memory utilization. The evaluation demonstrates SmartCache’s effectiveness across multiple benchmarks. On the CoQA and SQuAD datasets, SmartCache reduces KV cache memory usage by up to 59 . 1% compared to pre-fix caching and 56 . 0% over semantic caching, while cutting Time-to-First-Token (TTFT) by 78 . 0% and 71 . 7% , respectively. It improves answer quality metrics, achieving 39 . 9% higher F1 and 39 . 1% higher ROUGE-L",
+        "identifiers": [
+          "SemanticScholar:3b130131979f3dca14ad20837f4a06f26d7d19c5"
+        ],
+        "semantic_scholar_id": "3b130131979f3dca14ad20837f4a06f26d7d19c5",
+        "doi": "10.52202/085713-5740",
+        "canonical_id": "DOI:10.52202/085713-5740",
+        "authors": [
+          "Cheng Yu",
+          "Tianyu Wang",
+          "Zi-Li Shao",
+          "Songhao Jiang"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 487,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05760",
+      "identity_tokens": [
+        "id:SemanticScholar:4ee5af1e3ea159fc2313db012dfbdca4f3773460",
+        "id:arXiv:2609.05760",
+        "title:ragmark a comprehensive framework for benchmarking retrievalaugmented generation systems",
+        "url:https://arxiv.org/abs/2609.05760"
+      ],
+      "record": {
+        "title": "RAGMark: A Comprehensive Framework for Benchmarking Retrieval-Augmented Generation Systems",
+        "source_url": "https://arxiv.org/abs/2609.05760",
+        "year": 2026,
+        "published": "2026-09-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present RAGMark, a modular benchmarking framework for advanced Retrieval-Augmented Generation (RAG) systems targeting small-scale multi-GPU environments. RAGMark evaluates diverse RAG components, including retrievers, vector databases, prompt-processing methods, and generator models, while collecting detailed per-stage metrics such as latency, GPU utilization, memory consumption, power usage, time to first token (TTFT), throughput, and answer quality. The framework is highly extensible, separating RAG stages, timing, and resource monitoring into modular components, and is designed to efficiently sweep large configuration spaces while minimizing repeated model and database initialization overhead. Using RAGMark, we characterize five RAG workloads on open-domain QA datasets across varying retrieval depths, model scales, reranking, compression methods, and vector database configurations. We show that while autoregressive generation dominates latency in naive pipelines, context-reduction techniques shift bottlenecks across compute, memory bandwidth, and preprocessing stages. Reranking and compression produce compounding benefits: reranking reduces compression workload itself, while both jointly reduce prefill and KV-cache traversal costs, lowering energy consumption by up to 66%. We further observe strong cross-stage interactions, where small upstream context reductions cascade through downstream latency, memory traffic, and energy consumption. The RAGMark source code is publicly available at: https://github.com/zferic/RAGMark.",
+        "identifiers": [
+          "SemanticScholar:4ee5af1e3ea159fc2313db012dfbdca4f3773460"
+        ],
+        "semantic_scholar_id": "4ee5af1e3ea159fc2313db012dfbdca4f3773460",
+        "canonical_id": "arXiv:2609.05760",
+        "arxiv_id": "2609.05760",
+        "authors": [
+          "Z. Feric",
+          "Amir Taherin",
+          "Bin Ren",
+          "Yan-Zhi Wang",
+          "Jennifer G. Dy",
+          "David R. Kaeli"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 57,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.05282",
+      "identity_tokens": [
+        "id:SemanticScholar:6f2aac686793c0f66619b6881ed08247d49f748a",
+        "id:arXiv:2508.05282",
+        "title:not all errors are created equal ascot addresses latestage fragility in efficient llm reasoning",
+        "url:https://arxiv.org/abs/2508.05282"
+      ],
+      "record": {
+        "title": "Not All Errors Are Created Equal: ASCoT Addresses Late-Stage Fragility in Efficient LLM Reasoning",
+        "source_url": "https://arxiv.org/abs/2508.05282",
+        "year": 2025,
+        "published": "2025-08-07",
+        "venue": null,
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Chain-of-Thought (CoT) prompting empowers Large Language Models (LLMs), ensuring reasoning reliability remains an open challenge. Contrary to the prevailing cascading failure hypothesis which posits that early errors are most detrimental, we identify a counter-intuitive phenomenon termed \\textbf{Late-Stage Fragility}: errors introduced in later reasoning stages are significantly more prone to corrupting final answers. To address this, we introduce ASCoT (Adaptive Self-Correction Chain-of-Thought), a method harmonizing efficiency with robust verification. ASCoT first employs semantic pruning to compress redundant steps, then utilizes an Adaptive Verification Manager (AVM) to prioritize high risk, late-stage steps via a positional impact score, triggering a Multi-Perspective Self-Correction Engine (MSCE) only when necessary. Experiments on GSM8K and MATH-500 demonstrate that ASCoT effectively reallocates computational resources: it reduces token usage by 21\\%--30\\% for LLaMA-3.1-8B with negligible accuracy drops ($<1.8\\%$), achieving a superior trade-off between inference efficiency and reasoning fidelity.",
+        "identifiers": [
+          "SemanticScholar:6f2aac686793c0f66619b6881ed08247d49f748a"
+        ],
+        "semantic_scholar_id": "6f2aac686793c0f66619b6881ed08247d49f748a",
+        "canonical_id": "arXiv:2508.05282",
+        "arxiv_id": "2508.05282",
+        "authors": [
+          "Dong-Xu Zhang",
+          "Yujun Wu",
+          "Yi-Ding Sun",
+          "Jin-Na Yang",
+          "Ning Yang",
+          "Ji-Hua Zhu",
+          "Miao Xin",
+          "Bao-Liang Tian"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 450,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:81c9e5b523a8d88523a04472281c2641cc3196fb54fbff8d2496c83294534deb",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b94827ed02a8195f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.01279",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.01279",
+    "identity_tokens": [
+      "arXiv:2609.01279"
+    ],
+    "reason": "分類headの分析に留まり、実serving効率改善との関係が弱い。",
+    "first_checked_at": "2026-10-06T00:17:40+00:00",
+    "last_checked_at": "2026-10-06T00:17:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+      "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Some Emotions Run Deeper: Layer-wise Probing and Causal Intervention in Large Language Models"
+  },
+  "processed_at": "2026-10-06T00:17:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b94827ed02a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

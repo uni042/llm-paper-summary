@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cb298aa060858490-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2002.10941",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2002.10941",
+    "identity_tokens": [
+      "arXiv:2002.10941"
+    ],
+    "reason": "注意機構を近似して高速化する専用アクセラレータ研究だが、対象は一般ニューラルネットのattentionであり、LLM推論サービングやKVキャッシュ最適化を扱わない。",
+    "first_checked_at": "2026-10-03T17:51:23+00:00",
+    "last_checked_at": "2026-10-03T17:51:23+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "A^3: Accelerating Attention Mechanisms in Neural Networks with Approximation"
+  },
+  "processed_at": "2026-10-03T17:51:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cb298aa06085",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

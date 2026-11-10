@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b2aeb4e0c78d04c9-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.03084",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.03084",
+    "identity_tokens": [
+      "DOI:10.1109/tvcg.2025.3635116",
+      "SemanticScholar:04d57840b0c78b2efc993bc83ed997a15e5e1eca",
+      "arXiv:2506.03084"
+    ],
+    "reason": "InterMamba accelerates human-motion generation, an independent application.",
+    "first_checked_at": "2026-10-14T12:48:54+00:00",
+    "last_checked_at": "2026-10-14T12:48:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "InterMamba: Efficient Human-Human Interaction Generation With Adaptive Spatio-Temporal Mamba"
+  },
+  "processed_at": "2026-10-14T12:48:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b2aeb4e0c78d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

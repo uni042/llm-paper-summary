@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4268e1de10040674-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.09337",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.09337",
+    "identity_tokens": [
+      "arXiv:2409.09337"
+    ],
+    "reason": "本文のWave-U-Mambaはspeech waveform super-resolutionをA100で高速化し、AudioSR比536.3倍の測定を報告するが、音声signal restoration taskでlanguage model decodingではない。Jamba系統とMamba共通性の範囲に留めborderlineとする。",
+    "first_checked_at": "2026-10-06T17:50:22+00:00",
+    "last_checked_at": "2026-10-06T17:50:22+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Wave-U-Mamba: An End-To-End Framework For High-Quality And Efficient Speech Super Resolution"
+  },
+  "processed_at": "2026-10-06T17:50:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4268e1de1004",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

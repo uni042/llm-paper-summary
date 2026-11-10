@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c188d7d18d951a6f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.18629",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.18629",
+    "identity_tokens": [
+      "arXiv:2607.18629"
+    ],
+    "reason": "一次要旨はEMG-to-speech合成と音声品質が主題で、LLM推論効率ではない。",
+    "first_checked_at": "2026-10-05T10:09:49+00:00",
+    "last_checked_at": "2026-10-05T10:09:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+    ],
+    "title": "CS-ETS: Chaos-Inspired Samba-Based EMG-To-Speech Synthesis with Nonlinear Chaotic Losses"
+  },
+  "processed_at": "2026-10-05T10:09:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c188d7d18d95",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

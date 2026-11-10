@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e1062dec1f444d06-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3805625",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3805625",
+    "identity_tokens": [
+      "DOI:10.1145/3805625"
+    ],
+    "reason": "Primary DOI/publisher page could not be fetched; full text unavailable for linked-lineage review.",
+    "first_checked_at": "2026-10-06T20:31:53+00:00",
+    "last_checked_at": "2026-10-06T20:31:53+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Unified Framework for Online Combinatorial Allocation of Reusable Resources under Endogenous Deterioration"
+  },
+  "processed_at": "2026-10-06T20:31:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e1062dec1f44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

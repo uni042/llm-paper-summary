@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d9e02f1c6b6b15d1-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.21502",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.21502",
+    "identity_tokens": [
+      "arXiv:2609.21502"
+    ],
+    "reason": "一次要旨: Recent 3D foundation models enable generalizable geometric reasoning from RGB images but remain limited in persistent memory, scalability, and renderable scene modeling. We present a memory-centric 3D foundation model for scalable robotic localization, reconstruction, and Gaussian rendering. Its core is an adaptive world memory mechanism that combines transf",
+    "first_checked_at": "2026-10-05T06:20:29+00:00",
+    "last_checked_at": "2026-10-05T06:20:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Adaptive World Memory 3D Foundation Model for Scalable 3D Mapping, Localization, and Rendering"
+  },
+  "processed_at": "2026-10-05T06:20:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d9e02f1c6b6b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

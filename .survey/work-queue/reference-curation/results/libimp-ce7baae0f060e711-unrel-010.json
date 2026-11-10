@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce7baae0f060e711-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.13010",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.13010",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2312.13010",
+      "arXiv:2312.13010"
+    ],
+    "reason": "3エージェント構成でコード生成品質を高め、他multi-agent方式よりtoken overheadも減らすが、最終目的はcode generation品質でありLLM推論サービング基盤の最適化ではない。",
+    "first_checked_at": "2026-10-03T07:46:12+00:00",
+    "last_checked_at": "2026-10-03T07:46:12+00:00",
+    "linked_from": [
+      "worker-worklist-00 discovery_review rank 470"
+    ],
+    "title": "AgentCoder: Multi-Agent Code Generation with Effective Testing and Self-optimisation"
+  },
+  "processed_at": "2026-10-03T07:46:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce7baae0f060",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-262b3f97b574c877-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-262b3f97b574",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2105.03824"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "30c444c33870eb4d693dcf311246b3f3df2faa03",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-06T21:27:03.911366+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2105.03824",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "FNet: Mixing Tokens with Fourier Transforms",
+      "source_url": "https://arxiv.org/abs/2105.03824",
+      "year": 2021,
+      "published": "2021-05-09",
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 799,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We show that Transformer encoder architectures can be sped up, with limited accuracy costs, by replacing the self-attention sublayers with simple linear transformations that “mix” input tokens. Most surprisingly, we find that replacing the self-attention sublayer in a Transformer encoder with a standard, unparameterized Fourier Transform achieves 92-97% of the accuracy of BERT counterparts on the GLUE benchmark, but trains 80% faster on GPUs and 70% faster on TPUs at standard 512 input lengths. At longer input lengths, our FNet model is significantly faster: when compared to the “efficient Transformers” on the Long Range Arena benchmark, FNet matches the accuracy of the most accurate models, while outpacing the fastest models across all sequence lengths on GPUs (and across relatively shorter lengths on TPUs). Finally, FNet has a light memory footprint and is particularly efficient at smaller model sizes; for a fixed speed and accuracy budget, small FNet models outperform Transformer counterparts.",
+      "identifiers": [
+        "SemanticScholar:1f133158a8973fb33fea188f20517cd7e69bfe7f"
+      ],
+      "semantic_scholar_id": "1f133158a8973fb33fea188f20517cd7e69bfe7f",
+      "canonical_id": "arXiv:2105.03824",
+      "arxiv_id": "2105.03824",
+      "doi": "10.18653/v1/2022.naacl-main.319",
+      "authors": [
+        "J. Lee-Thorp",
+        "Joshua Ainslie",
+        "Ilya Eckstein",
+        "Santiago Ontañón"
+      ],
+      "priority": 809,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 799,
+        "citation_count": 799,
+        "total": 809,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1976,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2105.03824",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2022.naacl-main.319",
+        "id:SemanticScholar:1f133158a8973fb33fea188f20517cd7e69bfe7f",
+        "id:arXiv:2105.03824",
+        "title:fnet mixing tokens with fourier transforms",
+        "url:https://arxiv.org/abs/2105.03824"
+      ],
+      "record": {
+        "title": "FNet: Mixing Tokens with Fourier Transforms",
+        "source_url": "https://arxiv.org/abs/2105.03824",
+        "year": 2021,
+        "published": "2021-05-09",
+        "venue": "North American Chapter of the Association for Computational Linguistics",
+        "citation_count": 799,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We show that Transformer encoder architectures can be sped up, with limited accuracy costs, by replacing the self-attention sublayers with simple linear transformations that “mix” input tokens. Most surprisingly, we find that replacing the self-attention sublayer in a Transformer encoder with a standard, unparameterized Fourier Transform achieves 92-97% of the accuracy of BERT counterparts on the GLUE benchmark, but trains 80% faster on GPUs and 70% faster on TPUs at standard 512 input lengths. At longer input lengths, our FNet model is significantly faster: when compared to the “efficient Transformers” on the Long Range Arena benchmark, FNet matches the accuracy of the most accurate models, while outpacing the fastest models across all sequence lengths on GPUs (and across relatively shorter lengths on TPUs). Finally, FNet has a light memory footprint and is particularly efficient at smaller model sizes; for a fixed speed and accuracy budget, small FNet models outperform Transformer counterparts.",
+        "identifiers": [
+          "SemanticScholar:1f133158a8973fb33fea188f20517cd7e69bfe7f"
+        ],
+        "semantic_scholar_id": "1f133158a8973fb33fea188f20517cd7e69bfe7f",
+        "canonical_id": "arXiv:2105.03824",
+        "arxiv_id": "2105.03824",
+        "doi": "10.18653/v1/2022.naacl-main.319",
+        "authors": [
+          "J. Lee-Thorp",
+          "Joshua Ainslie",
+          "Ilya Eckstein",
+          "Santiago Ontañón"
+        ],
+        "priority": 809,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 799,
+          "citation_count": 799,
+          "total": 809,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1976,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9318550fa5b5a1487a7ef4faca7c769230c460fa116fc8fccb4150514dd07c61",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

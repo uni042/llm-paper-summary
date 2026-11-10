@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-543e298d8e6a1158-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3582016.3582063",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3582016.3582063",
+    "identity_tokens": [
+      "DOI:10.1145/3582016.3582063",
+      "arXiv:2206.02878"
+    ],
+    "reason": "CXL階層メモリでLinuxページをDRAM/CXL間へ昇降格するOSメモリ管理研究であり、LLM推論・KVキャッシュ・LLMサービングを対象にしていない。",
+    "first_checked_at": "2026-10-03T18:37:26+00:00",
+    "last_checked_at": "2026-10-03T18:37:26+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-30.json"
+    ],
+    "title": "TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory"
+  },
+  "processed_at": "2026-10-03T18:37:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-543e298d8e6a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

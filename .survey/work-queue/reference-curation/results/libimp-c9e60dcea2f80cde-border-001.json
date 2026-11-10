@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9e60dcea2f80cde-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.25509",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.25509",
+    "identity_tokens": [
+      "arXiv:2606.25509"
+    ],
+    "reason": "特定の自動運転制御アーキテクチャ内のLLM呼出制御であり、汎用LLM inference/serving mechanismではない。screen対象範囲への移送可能性は限定的。",
+    "first_checked_at": "2026-10-05T03:44:12+00:00",
+    "last_checked_at": "2026-10-05T03:44:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "title": "ASSCG: Just-Right Gating over Chattering for Fast-Slow LLM Planning in Autonomous Driving"
+  },
+  "processed_at": "2026-10-05T03:44:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9e60dcea2f8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abc834bac2939e5e-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.24953",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.24953",
+    "identity_tokens": [
+      "arXiv:2607.24953"
+    ],
+    "reason": "Primary abstract read at https://arxiv.org/abs/2607.24953: Explicitly focuses on FP4 LLM training stability and training precision efficiency; training-only scope.",
+    "first_checked_at": "2026-10-05T01:59:05+00:00",
+    "last_checked_at": "2026-10-05T01:59:05+00:00",
+    "linked_from": [
+      "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+    ],
+    "title": "Stable FP4 Training via Transposition-Invariant Block Quantization"
+  },
+  "processed_at": "2026-10-05T01:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abc834bac293",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

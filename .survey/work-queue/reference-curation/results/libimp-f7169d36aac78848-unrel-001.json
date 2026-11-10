@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7169d36aac78848-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.30579",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.30579",
+    "identity_tokens": [
+      "arXiv:2609.30579"
+    ],
+    "reason": "一次論文は離散群の部分群族に対する位相的複雑度TC_Fを定義し、分布的位相的複雑度の下界、Bredonコホモロジーによる不変量、torsion-free群の定理を証明する純粋数学研究である。本文のmotion planningは位相空間上の経路選択の不変量を意味し、LLMの推論計画・サービング・KVキャッシュ・MoE・量子化・分散実行とは関係しない。研究ワーカーの候補同一性が誤ってこの数学論文へ結び付いたため、収録対象外と確定する。",
+    "first_checked_at": "2026-10-20T13:06:25+00:00",
+    "last_checked_at": "2026-10-20T13:06:25+00:00",
+    "linked_from": [],
+    "title": "Motion planning invariants and families of subgroups"
+  },
+  "processed_at": "2026-10-20T13:06:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7169d36aac7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

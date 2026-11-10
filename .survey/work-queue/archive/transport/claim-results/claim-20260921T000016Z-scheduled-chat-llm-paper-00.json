@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260921T000016Z-scheduled-chat-llm-paper-00",
+  "worker_id": "scheduled-chat-llm-paper-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-d21a98f99faeb4fe",
+      "claim_id": "claim-1be2739c9c40297615d57ea3",
+      "worker_id": "scheduled-chat-llm-paper-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-1be2739c9c40297615d57ea3",
+      "claimed_at": "2026-09-21T00:02:50+00:00",
+      "expires_at": "2026-09-21T01:32:50+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-d21a98f99faeb4fe"
+      ],
+      "job": {
+        "job_id": "job-research-d21a98f99faeb4fe",
+        "type": "research",
+        "parent_job_id": "job-d78803446ba63921",
+        "priority": 104,
+        "canonical_id": "arXiv:2608.01785",
+        "arxiv_id": "2608.01785",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "HorizonServe: Coordinating Request Scheduling with GPU Sharing for Omni-Model Serving",
+        "source_url": "https://www.semanticscholar.org/paper/21aebb63151da6d9e2d6bbe6a7c524e954476f04",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md",
+        "selection_reason": "異種モダリティと異なるfirst-response SLOを同一GPUで扱い、要求admissionとGPU空間・時間共有を協調制御する最新サービング研究。既存LLM/マルチモーダルserving系統をomni-modelへ直接拡張する。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T23:08:39+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T00:02:50+00:00",
+  "checkpoint_released": 0
+}

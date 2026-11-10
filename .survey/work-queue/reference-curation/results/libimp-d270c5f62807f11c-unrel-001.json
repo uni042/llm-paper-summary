@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d270c5f62807f11c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2002.08307",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2002.08307",
+    "identity_tokens": [
+      "arXiv:2002.08307"
+    ],
+    "reason": "BERTのpre-training中weight pruningがtransfer learningへ与える影響を調べ、30〜40% pruning等の精度特性を評価する圧縮研究。deployment動機はあるが、対象はBERT encoderでLLM生成推論runtime/servingの方式・評価ではない。",
+    "first_checked_at": "2026-10-05T15:55:20+00:00",
+    "last_checked_at": "2026-10-05T15:55:20+00:00",
+    "linked_from": [],
+    "title": "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning"
+  },
+  "processed_at": "2026-10-05T15:55:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d270c5f62807",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

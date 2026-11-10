@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-78a21344c7b66618-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3832779",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3832779",
+    "identity_tokens": [
+      "DOI:10.1145/3832779"
+    ],
+    "reason": "一次要旨は分散DNN trainingのgradient sparsification/communication最適化で訓練時だけを対象とする。",
+    "first_checked_at": "2026-10-05T10:11:50+00:00",
+    "last_checked_at": "2026-10-05T10:11:50+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Enabling Efficient All-Dimension Top-k Sparsification for High-Performance Distributed DNN Training Systems"
+  },
+  "processed_at": "2026-10-05T10:11:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78a21344c7b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-33f961df17efa496-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2205.05198",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2205.05198",
+    "identity_tokens": [
+      "arXiv:2205.05198"
+    ],
+    "reason": "大規模Transformer学習のactivation recomputation削減が主目的で、最終用途が学習高速化。",
+    "first_checked_at": "2026-09-27T12:02:15+09:00",
+    "last_checked_at": "2026-09-30T09:50:06+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Reducing Activation Recomputation in Large Transformer Models"
+  },
+  "processed_at": "2026-09-30T09:50:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-33f961df17ef",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

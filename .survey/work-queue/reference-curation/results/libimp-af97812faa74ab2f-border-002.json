@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-af97812faa74ab2f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icde65706.2026.00107",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icde65706.2026.00107",
+    "identity_tokens": [
+      "DOI:10.1109/icde65706.2026.00107",
+      "SemanticScholar:2e66c3b2ea4c85b707dfe9381a09f0007f490a6c"
+    ],
+    "reason": "The DOI/title are confirmed by the ICDE 2026 proceedings record and bibliographic metadata, but IEEE Xplore abstract/document/00107 was inaccessible. A non-publisher abstract summary indicates distributed-training communication optimization; it was not substituted for primary evidence.",
+    "first_checked_at": "2026-10-13T01:21:56+00:00",
+    "last_checked_at": "2026-10-13T01:21:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SSFusion: Tensor Fusion with Selective Sparsification for Efficient Distributed DNN Training"
+  },
+  "processed_at": "2026-10-13T01:21:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-af97812faa74",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

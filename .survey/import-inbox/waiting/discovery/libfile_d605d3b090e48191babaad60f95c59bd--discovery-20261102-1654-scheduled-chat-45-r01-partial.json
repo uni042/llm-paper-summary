@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261102-1654-scheduled-chat-45/r01",
+  "reference_main_sha": "c07b0bcf2d70b0939f420401f1179b740e1e0782",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICEIC69189.2026.11386008",
+      "identity_tokens": [
+        "DOI:10.1109/ICEIC69189.2026.11386008"
+      ],
+      "title": "GDE: Grid-based Diversity Enhancement for Efficient Vision Token Selection in VLMs",
+      "reason": "著者所属機関Seoul National University of Science and Technologyの一次書誌・要旨を確認。VLMの視覚トークンをdiversity-based手法で削減すると、極小トークン予算で画像の空間的カバレッジが失われる問題に対し、画像を格子分割して各領域から最低1代表トークンを残すGrid-based Diversity Enhancementを提案。LLaVA-1.5-7Bの画像理解評価では128視覚トークンで元モデルの精度の97.4%を保持したと報告。VLM推論時の視覚トークン圧縮に直接適用するためaccept。速度やGPUメモリ削減の実測値は一次要旨にないため推定しない。",
+      "source_url": "https://pure.seoultech.ac.kr/en/publications/gde-grid-based-diversity-enhancement-for-efficient-vision-token-s/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T16:58:31+09:00",
+      "last_checked_at": "2026-11-02T16:58:31+09:00",
+      "linked_from": [],
+      "worklist_rank": 499,
+      "origin": "scheduled_chat_discovery_worklist"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.22397",
+      "identity_tokens": [
+        "arXiv:2601.22397"
+      ],
+      "title": "SAIR: Cost-Efficient Multi-Stage ML Pipeline Autoscaling via In-Context Reinforcement Learning",
+      "reason": "arXiv一次論文の要旨・導入と関連研究節を確認。複数段ML推論パイプラインのCPU/GPU資源配分を、LLMをin-context強化学習の制御器として用い、Pareto報酬・surprisalに基づく経験検索・ユーザー空間CUDA呼出し制御で調整する。4種類のML serving pipelineでP99遅延最大50%改善・実効費用最大97%削減（GPU rate-control仮定）を報告。ただし論文はLLMをサービング対象ではなく制御器として使い、対象ワークロードは一般MLパイプラインでありLLM推論固有のKV管理・デコード・サービング最適化を示さない。汎用推論基盤への間接的関連にとどまるためborderline。",
+      "source_url": "https://arxiv.org/abs/2601.22397",
+      "body_check": "abstract_and_introduction_checked; related_work_checked; full_body_not_read",
+      "first_checked_at": "2026-11-02T16:58:31+09:00",
+      "last_checked_at": "2026-11-02T16:58:31+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "scheduled_chat_discovery_worklist"
+    }
+  ]
+}

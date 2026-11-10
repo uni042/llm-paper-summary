@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8aa553ac4b2281e9-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1909.07606",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1909.07606",
+    "identity_tokens": [
+      "arXiv:1909.07606",
+      "id:arXiv:1909.07606",
+      "url:https://arxiv.org/abs/1909.07606"
+    ],
+    "reason": "The primary abstract proposes injecting knowledge-graph triples into BERT inputs using soft positions and a visible matrix to improve domain-specific language representation, reporting results on NLP tasks. It does not study generative LLM inference/serving or an inference-time efficiency technique; the stated contribution is knowledge-enhanced representation quality.",
+    "first_checked_at": "2026-10-04T22:47:25+00:00",
+    "last_checked_at": "2026-10-04T22:47:25+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+    ],
+    "title": "K-BERT: Enabling Language Representation with Knowledge Graph"
+  },
+  "processed_at": "2026-10-04T22:47:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8aa553ac4b22",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

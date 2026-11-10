@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21590320b7375db4-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.24977",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.24977",
+    "identity_tokens": [
+      "SemanticScholar:692da6d2f18abbcdbd4675836fd23bc3bdff28a4",
+      "arXiv:2512.24977"
+    ],
+    "reason": "SymSeqBench is a software toolkit and benchmark for symbolic sequence learning; the abstract does not identify LLM inference or system-efficiency improvements.",
+    "first_checked_at": "2026-10-13T01:51:43+00:00",
+    "last_checked_at": "2026-10-13T01:51:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "SymSeqBench: a unified framework for the generation and analysis of rule-based symbolic sequences and datasets"
+  },
+  "processed_at": "2026-10-13T01:51:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21590320b737",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

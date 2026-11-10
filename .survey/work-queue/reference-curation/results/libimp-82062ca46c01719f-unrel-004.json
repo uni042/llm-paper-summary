@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-82062ca46c01719f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/ictbig68706.2025.11323935",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/ictbig68706.2025.11323935",
+    "identity_tokens": [
+      "DOI:10.1109/ictbig68706.2025.11323935"
+    ],
+    "reason": "EdgeCNN-TrafficNet v2 is an edge CNN for traffic congestion detection with on-device adaptation/compression; it is a non-language vision task and has no transferable LLM inference mechanism established.",
+    "first_checked_at": "2026-10-06T07:40:27+00:00",
+    "last_checked_at": "2026-10-06T07:40:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+    ],
+    "title": "EdgeCNN-TrafficNet v2: Clip-Wise Spatio - Temporal Fusion and On-Device Adaptation for Energy-Efficient Real-Time Traffic Congestion Detection"
+  },
+  "processed_at": "2026-10-06T07:40:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-82062ca46c01",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

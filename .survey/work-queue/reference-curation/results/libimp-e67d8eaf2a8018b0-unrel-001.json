@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e67d8eaf2a8018b0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.06158",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.06158",
+    "identity_tokens": [
+      "arXiv:2410.06158"
+    ],
+    "reason": "Robot manipulation video-language-action model and policy performance, not LLM serving efficiency.",
+    "first_checked_at": "2026-10-05T02:20:12+00:00",
+    "last_checked_at": "2026-10-05T02:20:12+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md"
+    ],
+    "title": "GR-2: A Generative Video-Language-Action Model with Web-Scale Knowledge for Robot Manipulation"
+  },
+  "processed_at": "2026-10-05T02:20:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e67d8eaf2a80",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

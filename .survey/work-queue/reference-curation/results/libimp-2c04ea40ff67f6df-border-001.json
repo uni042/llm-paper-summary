@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2c04ea40ff67f6df-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.30562",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.30562",
+    "identity_tokens": [
+      "arXiv:2606.30562"
+    ],
+    "reason": "FlashMorphはTransformerを全注意層と線形注意層の混合へ変換する際、合成長文脈検索データで層ゲートを最適化し、蒸留・追加学習で品質を保つ。推論効率化を目指す設計だが、要旨の中心は層選択コストと学習・品質であり、実測サービング遅延・メモリの定量寄与が不明なため境界扱い。",
+    "first_checked_at": "2026-10-28T21:47:38+00:00",
+    "last_checked_at": "2026-10-28T21:47:38+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Morphing into Hybrid Attention Models"
+  },
+  "processed_at": "2026-10-28T21:47:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2c04ea40ff67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

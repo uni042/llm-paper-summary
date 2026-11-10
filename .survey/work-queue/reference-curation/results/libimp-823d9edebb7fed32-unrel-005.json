@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-823d9edebb7fed32-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.20305",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.20305",
+    "identity_tokens": [
+      "arXiv:2505.20305"
+    ],
+    "reason": "The abstract is an explainability survey for LLMs and proposes no inference, serving, or compression efficiency contribution.",
+    "first_checked_at": "2026-10-05T15:28:29+00:00",
+    "last_checked_at": "2026-10-05T15:28:29+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+    ],
+    "title": "Making Sense of the Unsensible: Reflection, Survey, and Challenges for XAI in Large Language Models Toward Human-Centered AI"
+  },
+  "processed_at": "2026-10-05T15:28:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-823d9edebb7f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

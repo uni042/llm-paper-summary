@@ -1,0 +1,779 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6f905c538bd05858-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6f905c538bd0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2603.25385",
+    "arXiv:2604.23798",
+    "arXiv:2606.12487",
+    "arXiv:2607.10640",
+    "arXiv:2608.01665",
+    "arXiv:2608.05780",
+    "arXiv:2608.06630",
+    "arXiv:2609.34612"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:23.416692+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2603.25385",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.23798",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.12487",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.10640",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.01665",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.05780",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.06630",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34612",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2607.10640",
+      "year": 2026,
+      "published": "2026-07-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) are costly at inference time because they must process long sequences of visual tokens. Existing token pruning methods often degrade under high compression by blindly discarding information, breaking spatial structure or collapsing diversity. We propose SpecFlow, a training-free framework that shifts the paradigm from destructive pruning to conservative condensation, strictly enforcing spatial coverage and statistical conservation to ensure stability. Treating visual tokens as nodes in a $k$NN graph, SpecFlow (i) computes a stable importance field via spectral heat flow to preserve structural coherence, (ii) allocates budgets via adaptive spatial partitioning to guarantee coverage, and (iii) aggregates discarded information into coreset sinks to maintain statistical conservation. The method is plug-and-play, requires no fine-tuning, and is compatible with FlashAttention. Experiments confirm that our SpecFlow outperforms SOTA methods across tasks, VLM architectures, and pruning ratios. Notably, LLaVA-1.5 with SpecFlow retains 95.6% of original performance despite pruning 88.9% of visual tokens, offering an exceptional efficiency-accuracy balance. Code is available at https://github.com/Lzy-dot/SpecFlow",
+      "identifiers": [
+        "SemanticScholar:95f53e77f7f779555bc959e6ff3ffa40056b2b16"
+      ],
+      "semantic_scholar_id": "95f53e77f7f779555bc959e6ff3ffa40056b2b16",
+      "canonical_id": "arXiv:2607.10640",
+      "arxiv_id": "2607.10640",
+      "doi": "10.48550/arXiv.2607.10640",
+      "authors": [
+        "Zhao-Yang Li",
+        "Yanjun Li",
+        "Wangkai Li",
+        "Yujia Chen",
+        "Tianzhu Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 110,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Allocation Before Ranking: Decoupled Token Compression for OmniLLMs",
+      "source_url": "https://arxiv.org/abs/2608.01665",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token compression in OmniLLMs is typically posed as a single saliency-ranking problem: score each multimodal token, keep the top-K. We argue this abstraction is mis-specified. The same attention score simultaneously decides two things: how much retained capacity each modality receives, and which tokens within a modality are kept. A shared top-K rule therefore inherits this audio-favoring allocation prior, spending retained capacity on audio before video tokens have a chance to compete. We propose Macer, a training-free compressor that first assigns explicit audio and video budgets, then performs allocation-normalized ranking within each modality at modality-specific shallow layers. Macer significantly reduces token cost while preserving accuracy across audio-grounded, audio--video joint, visual-dominant, and video-centric benchmarks. At 25 % retention, Macer preserves 98.7 % of full-token performance on Qwen2.5-Omni-7B and 97.3 % on Qwen2.5-Omni-3B. On Qwen2.5-Omni-7B, this 25 % setting reaches OmniZip-level performance at 45 % retention while using lower FLOPs. On OmniVinci-9B, the same allocation-before-ranking principle improves over shared top-K ranking by up to 12.9 points.",
+      "identifiers": [
+        "SemanticScholar:fb4863fd660b1bda468a813d006a2a2119c6a95b"
+      ],
+      "semantic_scholar_id": "fb4863fd660b1bda468a813d006a2a2119c6a95b",
+      "canonical_id": "arXiv:2608.01665",
+      "arxiv_id": "2608.01665",
+      "authors": [
+        "Zhenghui Guo",
+        "Yilin Yang",
+        "Yuanbin Man",
+        "Miao Yin",
+        "Wei-Dong Shi",
+        "Rabimba Karanjai",
+        "O. Gnawali",
+        "Cheng-Ming Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GlowQ: Group-Shared LOw-Rank Approximation for Quantized LLMs",
+      "source_url": "https://arxiv.org/abs/2603.25385",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization techniques such as BitsAndBytes, AWQ, and GPTQ are widely used as a standard method in deploying large language models but often degrades accuracy when using low-bit representations, e.g., 4 bits. Low-rank correction methods (e.g., LQER, QERA, ASER) has been proposed to mitigate this issue, however, they restore all layers and insert error-correction modules into every decoder block, which increases latency and memory overhead. To address this limitation, we propose GlowQ, a group-shared low-rank approximation for quantized LLMs that caches a single shared right factor per input-sharing group and restores only the groups or layers that yield the highest accuracy benefit. GlowQ computes the high-precision projection once per input-sharing group and reuses it across its modules, reducing parameter and memory overhead, and retaining the expressivity of layer-specific corrections. We also propose a selective variant, GlowQ-S, that applies the cached shared module only where it provides the largest benefit. Compared with strong baselines, our approach reduces TTFB by (5.6%) and increases throughput by (9.6%) on average, while reducing perplexity on WikiText-2 by (0.17%) and increasing downstream accuracy by 0.42 percentage points. The selective model GlowQ-S further reduces latency, cutting TTFB by (23.4%) and increasing throughput by (37.4%), while maintaining accuracy within 0.2 percentage points on average. Code is available at https://github.com/ahnselim/GlowQ.",
+      "identifiers": [
+        "SemanticScholar:144713214950f337c2f9bc5867dd7d3c2c1dd973"
+      ],
+      "semantic_scholar_id": "144713214950f337c2f9bc5867dd7d3c2c1dd973",
+      "canonical_id": "arXiv:2603.25385",
+      "arxiv_id": "2603.25385",
+      "doi": "10.48550/arXiv.2603.25385",
+      "authors": [
+        "S. An",
+        "Ilhong Suh",
+        "Yeseong Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers",
+      "source_url": "https://arxiv.org/abs/2604.23798",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing attention accelerators often trade exact softmax semantics, depend on fused Tensor Core kernels, or incur sequential depth that limits FP32 throughput on long sequences. We present ELSA, an algorithmic reformulation of online softmax attention that (i) preserves exact softmax semantics in real arithmetic with a provable $\\mathcal{O}(u \\log n)$ FP32 relative error bound; (ii) casts the online softmax update as a prefix scan over an associative monoid $(m, S, W)$, yielding $O(n)$ extra memory and $O(\\log n)$ parallel depth; and (iii) is Tensor-Core independent, implemented in Triton and CUDA C++, and deployable as a drop-in replacement requiring no retraining or weight modification. Unlike FlashAttention-2/3, which rely on HMMA/GMMA Tensor Core instructions and provide no compatible FP32 path, ELSA operates identically on A100s and resourceconstrained edge devices such as Jetson TX2-making it the only hardware-agnostic exact-attention kernel that reduces parallel depth to $O(\\log n)$ at full precision. On A100 and Jetson TX2, ELSA delivers $1.3-3.5\\times$ FP32 speedup over memory-efficient SDPA on attention-only benchmarks (1K-16K tokens), $1.97-2.27\\times$ speedup on BERT benchmarks, and 17.8-20.2% throughput gains under LLaMA-13B offloading at $\\geq 32 K$ tokens. In FP16, ELSA approaches hardware-fused baselines at long sequences while retaining full FP32 capability, offering a unified kernel for highprecision inference across platforms. Our code and implementation is available at https://github.com/ming0531/ELSA.",
+      "identifiers": [
+        "SemanticScholar:1d2311ec84451e14856008a993ae9cb3b9530981"
+      ],
+      "semantic_scholar_id": "1d2311ec84451e14856008a993ae9cb3b9530981",
+      "canonical_id": "arXiv:2604.23798",
+      "arxiv_id": "2604.23798",
+      "doi": "10.1109/CVPRF71909.2026.00291",
+      "authors": [
+        "Chih-Chung Hsu",
+        "Xing-Chen Ma",
+        "Wo-Ting Liao",
+        "Chia-Ming Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 187,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PhaseQuant: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics",
+      "source_url": "https://arxiv.org/abs/2606.12487",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is essential for efficient large language model (LLM) inference, but reliably quantizing activations remains challenging when weights, activations, and KV caches are all quantized to 4-bit precision. A key difficulty lies in massive activations, whose extreme values dominate the activation range and amplify quantization error. State-of-the-art methods mitigate massive activations through transformation-based smoothing, such as orthogonal rotations and affine scaling, but overlook the cross-layer dynamics of the residual stream. In this paper, we show that massive activations emerge and disappear in a phase-wise pattern across network depth, injecting abrupt updates into the residual stream. These updates cause the newly injected layer-wise signal to dominate the 4-bit quantization scale and weaken the accumulated residual information. To characterize this behavior, we introduce two metrics, the Update Dominance Ratio (UDR) and the Historical Retention Score (HRS), and show that static transformation-based smoothing cannot fully resolve the resulting dynamic quantization instability. Based on this analysis, we propose PhaseQuant, a phase-aware mixed-precision post-training quantization policy for activation quantization. PhaseQuant identifies quantization-sensitive layers from residual-stream dynamics and assigns 8-bit activation precision only to these layers, while keeping weights, KV caches, and all remaining activations at 4-bit precision. It can be directly integrated with strong PTQ baselines such as QuaRot, SpinQuant, and FlatQuant. Experiments on LLaMA-2 and LLaMA-3 show that PhaseQuant consistently improves perplexity and zero-shot QA performance under W4A4KV4 quantization, while achieving 1.05$\\times$--1.07$\\times$ throughput improvement with modest memory overhead. These results demonstrate a practical path toward robust low-bit LLM inference.",
+      "identifiers": [
+        "SemanticScholar:48e0051ae0ec82aca38f1faf069f18190ef9becc"
+      ],
+      "semantic_scholar_id": "48e0051ae0ec82aca38f1faf069f18190ef9becc",
+      "canonical_id": "arXiv:2606.12487",
+      "arxiv_id": "2606.12487",
+      "authors": [
+        "Zimo Zhao",
+        "Mao-Lin Wang",
+        "Bo-Wen Yu",
+        "Bo-Wen Liu",
+        "Xiao Han",
+        "Xiangyu Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Evidence-Driven Dynamic Visual Selector for Efficient Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2608.05780",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in MLLM-based long-form video understanding have mitigated inference-time computational cost and limited context lengths by selecting query-relevant frames. However, existing approaches predominantly rely on external proxy scorers and rigid heuristic rules, inevitably suffering from misalignment with the target MLLM's intrinsic evidence and failing to accommodate the non-uniform spatiotemporal information density. In this paper, we propose a fine-grained dynamic visual selection framework named EviSelect, grounded in the target MLLM internal attention evidence. Our method efficiently probes visual evidence via sparse prefilling as a structured prior to guide distribution-aware dynamic sampling. Specifically, we efficiently approximate attention maps of the target MLLM using highly compressed visual inputs and sparse attention, well-aligned to the full counterpart. Conditioned on three complementary attention components derived from this prior, we design a lightweight selector that not only precisely locates query-relevant timestamps but also adaptively adjusts the local sampling rate and spatial resolution. To enable evidence-conditioned spatiotemporal sampling, we formulate the selector as a stochastic policy and optimize it via GRPO under a joint accuracy--efficiency reward. By rewarding correct predictions under lower visual cost through group-relative comparisons, our method encourages the policy to allocate computation dynamically according to the information density of each video. Across three long video understanding benchmarks, EviSelect achieves superior performance compared to existing methods while reducing selected visual tokens by about 50\\% and achieving a 3.9x end-to-end speedup.",
+      "identifiers": [
+        "SemanticScholar:9a2d0dbc593d57d887f49b359c81416d90a3deb4"
+      ],
+      "semantic_scholar_id": "9a2d0dbc593d57d887f49b359c81416d90a3deb4",
+      "canonical_id": "arXiv:2608.05780",
+      "arxiv_id": "2608.05780",
+      "authors": [
+        "Bo Zhang",
+        "Wenxin Wang",
+        "Feng Chen",
+        "Zhi-Hao Zhang",
+        "Zi-Xuan Wang",
+        "Changsheng Li",
+        "Yin-Jie Lei"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Sparsity Whisperer",
+      "source_url": "https://arxiv.org/abs/2608.06630",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning reduces the inference cost of large language models, but existing criteria primarily preserve large activations or reconstruct layer outputs. We argue that this overlooks a key computation performed by particularly sparsity-sensitive neurons in the MLP up and gate projections: separating similar inputs into dissimilar outputs. This suggests that effective pruning should preserve not only activations, but also the differences between outputs more broadly. We introduce a family of difference-informed pruning methods built upon this principle. Wisp is a first-order, update-free method that scores weights using input-difference norms, and Wisp+ refines this score neuronwise using the input pairs each neuron separates most strongly. Finally, Whisper is a second-order method that uses a lightly regularized difference Hessian as its reconstruction objective. Across Llama 2 and 3.1 models from 7B to 405B parameters, our second-order variant consistently improves over strong reconstruction-based baselines, while our update-free variants improve over activation-aware baselines, especially in constrained settings. The improvements over Wanda and SparseGPT extend to structured sparsity, downstream evaluations, and other model families. Augmenting stronger techniques such as RIA and ALPS with our difference-informed criteria yields further improvements, shifting the overall accuracy-runtime frontier outward at negligible additional cost. These results suggest that preserving output differences is a broadly useful and composable signal for post-training LLM sparsification.",
+      "identifiers": [
+        "SemanticScholar:0dc5114ff4fbab93c587f6fa85d9946404ec83b5"
+      ],
+      "semantic_scholar_id": "0dc5114ff4fbab93c587f6fa85d9946404ec83b5",
+      "canonical_id": "arXiv:2608.06630",
+      "arxiv_id": "2608.06630",
+      "authors": [
+        "Linghao Kong",
+        "Inimai Subramanian",
+        "Micah Adler",
+        "Dan Alistarh",
+        "D. Gutfreund",
+        "N. Shavit"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SPIMOE: Exploiting Hybrid Sparsity for Reasoning MoE Inference on Heterogeneous PIM Architectures",
+      "source_url": "https://arxiv.org/abs/2609.34612",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-reasoning Mixture-of-Experts (MoE) models expose two coupled inference bottlenecks: growing KV caches shift the critical path toward attention, while sparse expert activation causes load imbalance and low hardware utilization. Although Processing-in-Memory (PIM) offers a promising way to mitigate data movement overhead, existing PIM-based accelerators typically optimize attention or FFNs in isolation. We propose SPIMOE, the first co-design framework that exploits hybrid sparsity for efficient MoE inference on heterogeneous PIM architectures. SPIMOE combines adaptive expert routing with block-sparse attention and physical KV-cache eviction, and disaggregates attention and FFNs across SRAM-PIM and HBM-PIM. Static expert mapping and dynamic sub-batch scheduling further balance channel loads and overlap the two paths. Evaluations show that SPIMOE achieves up to $8.35\\times$ end-to-end speedup over an NVIDIA A100 GPU and $3.33\\times$ speedup in MoE FFN execution over PIMoE, while preserving reasoning accuracy comparable to full-attention baselines.",
+      "identifiers": [
+        "SemanticScholar:8ca5f42a6fb2abf92f404bde4d01a69ebe1980dd"
+      ],
+      "semantic_scholar_id": "8ca5f42a6fb2abf92f404bde4d01a69ebe1980dd",
+      "canonical_id": "arXiv:2609.34612",
+      "arxiv_id": "2609.34612",
+      "doi": "10.1145/3831252.3834223",
+      "authors": [
+        "Ru-Bing Yang",
+        "Cen-Lin Duan",
+        "Ying-Jie Qi",
+        "Xiao-Lin He",
+        "Xiao Ma",
+        "Jian-Lei Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.10640",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.10640",
+        "id:SemanticScholar:95f53e77f7f779555bc959e6ff3ffa40056b2b16",
+        "id:arXiv:2607.10640",
+        "title:spectral heat flow for conservative token condensation in visionlanguage models",
+        "url:https://arxiv.org/abs/2607.10640"
+      ],
+      "record": {
+        "title": "Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2607.10640",
+        "year": 2026,
+        "published": "2026-07-12",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) are costly at inference time because they must process long sequences of visual tokens. Existing token pruning methods often degrade under high compression by blindly discarding information, breaking spatial structure or collapsing diversity. We propose SpecFlow, a training-free framework that shifts the paradigm from destructive pruning to conservative condensation, strictly enforcing spatial coverage and statistical conservation to ensure stability. Treating visual tokens as nodes in a $k$NN graph, SpecFlow (i) computes a stable importance field via spectral heat flow to preserve structural coherence, (ii) allocates budgets via adaptive spatial partitioning to guarantee coverage, and (iii) aggregates discarded information into coreset sinks to maintain statistical conservation. The method is plug-and-play, requires no fine-tuning, and is compatible with FlashAttention. Experiments confirm that our SpecFlow outperforms SOTA methods across tasks, VLM architectures, and pruning ratios. Notably, LLaVA-1.5 with SpecFlow retains 95.6% of original performance despite pruning 88.9% of visual tokens, offering an exceptional efficiency-accuracy balance. Code is available at https://github.com/Lzy-dot/SpecFlow",
+        "identifiers": [
+          "SemanticScholar:95f53e77f7f779555bc959e6ff3ffa40056b2b16"
+        ],
+        "semantic_scholar_id": "95f53e77f7f779555bc959e6ff3ffa40056b2b16",
+        "canonical_id": "arXiv:2607.10640",
+        "arxiv_id": "2607.10640",
+        "doi": "10.48550/arXiv.2607.10640",
+        "authors": [
+          "Zhao-Yang Li",
+          "Yanjun Li",
+          "Wangkai Li",
+          "Yujia Chen",
+          "Tianzhu Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 110,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01665",
+      "identity_tokens": [
+        "id:SemanticScholar:fb4863fd660b1bda468a813d006a2a2119c6a95b",
+        "id:arXiv:2608.01665",
+        "title:allocation before ranking decoupled token compression for omnillms",
+        "url:https://arxiv.org/abs/2608.01665"
+      ],
+      "record": {
+        "title": "Allocation Before Ranking: Decoupled Token Compression for OmniLLMs",
+        "source_url": "https://arxiv.org/abs/2608.01665",
+        "year": 2026,
+        "published": "2026-08-03",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Token compression in OmniLLMs is typically posed as a single saliency-ranking problem: score each multimodal token, keep the top-K. We argue this abstraction is mis-specified. The same attention score simultaneously decides two things: how much retained capacity each modality receives, and which tokens within a modality are kept. A shared top-K rule therefore inherits this audio-favoring allocation prior, spending retained capacity on audio before video tokens have a chance to compete. We propose Macer, a training-free compressor that first assigns explicit audio and video budgets, then performs allocation-normalized ranking within each modality at modality-specific shallow layers. Macer significantly reduces token cost while preserving accuracy across audio-grounded, audio--video joint, visual-dominant, and video-centric benchmarks. At 25 % retention, Macer preserves 98.7 % of full-token performance on Qwen2.5-Omni-7B and 97.3 % on Qwen2.5-Omni-3B. On Qwen2.5-Omni-7B, this 25 % setting reaches OmniZip-level performance at 45 % retention while using lower FLOPs. On OmniVinci-9B, the same allocation-before-ranking principle improves over shared top-K ranking by up to 12.9 points.",
+        "identifiers": [
+          "SemanticScholar:fb4863fd660b1bda468a813d006a2a2119c6a95b"
+        ],
+        "semantic_scholar_id": "fb4863fd660b1bda468a813d006a2a2119c6a95b",
+        "canonical_id": "arXiv:2608.01665",
+        "arxiv_id": "2608.01665",
+        "authors": [
+          "Zhenghui Guo",
+          "Yilin Yang",
+          "Yuanbin Man",
+          "Miao Yin",
+          "Wei-Dong Shi",
+          "Rabimba Karanjai",
+          "O. Gnawali",
+          "Cheng-Ming Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 88,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.25385",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.25385",
+        "id:SemanticScholar:144713214950f337c2f9bc5867dd7d3c2c1dd973",
+        "id:arXiv:2603.25385",
+        "title:glowq groupshared lowrank approximation for quantized llms",
+        "url:https://arxiv.org/abs/2603.25385"
+      ],
+      "record": {
+        "title": "GlowQ: Group-Shared LOw-Rank Approximation for Quantized LLMs",
+        "source_url": "https://arxiv.org/abs/2603.25385",
+        "year": 2026,
+        "published": "2026-03-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization techniques such as BitsAndBytes, AWQ, and GPTQ are widely used as a standard method in deploying large language models but often degrades accuracy when using low-bit representations, e.g., 4 bits. Low-rank correction methods (e.g., LQER, QERA, ASER) has been proposed to mitigate this issue, however, they restore all layers and insert error-correction modules into every decoder block, which increases latency and memory overhead. To address this limitation, we propose GlowQ, a group-shared low-rank approximation for quantized LLMs that caches a single shared right factor per input-sharing group and restores only the groups or layers that yield the highest accuracy benefit. GlowQ computes the high-precision projection once per input-sharing group and reuses it across its modules, reducing parameter and memory overhead, and retaining the expressivity of layer-specific corrections. We also propose a selective variant, GlowQ-S, that applies the cached shared module only where it provides the largest benefit. Compared with strong baselines, our approach reduces TTFB by (5.6%) and increases throughput by (9.6%) on average, while reducing perplexity on WikiText-2 by (0.17%) and increasing downstream accuracy by 0.42 percentage points. The selective model GlowQ-S further reduces latency, cutting TTFB by (23.4%) and increasing throughput by (37.4%), while maintaining accuracy within 0.2 percentage points on average. Code is available at https://github.com/ahnselim/GlowQ.",
+        "identifiers": [
+          "SemanticScholar:144713214950f337c2f9bc5867dd7d3c2c1dd973"
+        ],
+        "semantic_scholar_id": "144713214950f337c2f9bc5867dd7d3c2c1dd973",
+        "canonical_id": "arXiv:2603.25385",
+        "arxiv_id": "2603.25385",
+        "doi": "10.48550/arXiv.2603.25385",
+        "authors": [
+          "S. An",
+          "Ilhong Suh",
+          "Yeseong Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 218,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.23798",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprf71909.2026.00291",
+        "id:SemanticScholar:1d2311ec84451e14856008a993ae9cb3b9530981",
+        "id:arXiv:2604.23798",
+        "title:elsa exact linearscan attention for fast and memorylight vision transformers",
+        "url:https://arxiv.org/abs/2604.23798"
+      ],
+      "record": {
+        "title": "ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers",
+        "source_url": "https://arxiv.org/abs/2604.23798",
+        "year": 2026,
+        "published": "2026-04-26",
+        "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing attention accelerators often trade exact softmax semantics, depend on fused Tensor Core kernels, or incur sequential depth that limits FP32 throughput on long sequences. We present ELSA, an algorithmic reformulation of online softmax attention that (i) preserves exact softmax semantics in real arithmetic with a provable $\\mathcal{O}(u \\log n)$ FP32 relative error bound; (ii) casts the online softmax update as a prefix scan over an associative monoid $(m, S, W)$, yielding $O(n)$ extra memory and $O(\\log n)$ parallel depth; and (iii) is Tensor-Core independent, implemented in Triton and CUDA C++, and deployable as a drop-in replacement requiring no retraining or weight modification. Unlike FlashAttention-2/3, which rely on HMMA/GMMA Tensor Core instructions and provide no compatible FP32 path, ELSA operates identically on A100s and resourceconstrained edge devices such as Jetson TX2-making it the only hardware-agnostic exact-attention kernel that reduces parallel depth to $O(\\log n)$ at full precision. On A100 and Jetson TX2, ELSA delivers $1.3-3.5\\times$ FP32 speedup over memory-efficient SDPA on attention-only benchmarks (1K-16K tokens), $1.97-2.27\\times$ speedup on BERT benchmarks, and 17.8-20.2% throughput gains under LLaMA-13B offloading at $\\geq 32 K$ tokens. In FP16, ELSA approaches hardware-fused baselines at long sequences while retaining full FP32 capability, offering a unified kernel for highprecision inference across platforms. Our code and implementation is available at https://github.com/ming0531/ELSA.",
+        "identifiers": [
+          "SemanticScholar:1d2311ec84451e14856008a993ae9cb3b9530981"
+        ],
+        "semantic_scholar_id": "1d2311ec84451e14856008a993ae9cb3b9530981",
+        "canonical_id": "arXiv:2604.23798",
+        "arxiv_id": "2604.23798",
+        "doi": "10.1109/CVPRF71909.2026.00291",
+        "authors": [
+          "Chih-Chung Hsu",
+          "Xing-Chen Ma",
+          "Wo-Ting Liao",
+          "Chia-Ming Lee"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 187,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.12487",
+      "identity_tokens": [
+        "id:SemanticScholar:48e0051ae0ec82aca38f1faf069f18190ef9becc",
+        "id:arXiv:2606.12487",
+        "title:phasequant mitigating activation quantization collapse via residualstream dynamics",
+        "url:https://arxiv.org/abs/2606.12487"
+      ],
+      "record": {
+        "title": "PhaseQuant: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics",
+        "source_url": "https://arxiv.org/abs/2606.12487",
+        "year": 2026,
+        "published": "2026-06-10",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) is essential for efficient large language model (LLM) inference, but reliably quantizing activations remains challenging when weights, activations, and KV caches are all quantized to 4-bit precision. A key difficulty lies in massive activations, whose extreme values dominate the activation range and amplify quantization error. State-of-the-art methods mitigate massive activations through transformation-based smoothing, such as orthogonal rotations and affine scaling, but overlook the cross-layer dynamics of the residual stream. In this paper, we show that massive activations emerge and disappear in a phase-wise pattern across network depth, injecting abrupt updates into the residual stream. These updates cause the newly injected layer-wise signal to dominate the 4-bit quantization scale and weaken the accumulated residual information. To characterize this behavior, we introduce two metrics, the Update Dominance Ratio (UDR) and the Historical Retention Score (HRS), and show that static transformation-based smoothing cannot fully resolve the resulting dynamic quantization instability. Based on this analysis, we propose PhaseQuant, a phase-aware mixed-precision post-training quantization policy for activation quantization. PhaseQuant identifies quantization-sensitive layers from residual-stream dynamics and assigns 8-bit activation precision only to these layers, while keeping weights, KV caches, and all remaining activations at 4-bit precision. It can be directly integrated with strong PTQ baselines such as QuaRot, SpinQuant, and FlatQuant. Experiments on LLaMA-2 and LLaMA-3 show that PhaseQuant consistently improves perplexity and zero-shot QA performance under W4A4KV4 quantization, while achieving 1.05$\\times$--1.07$\\times$ throughput improvement with modest memory overhead. These results demonstrate a practical path toward robust low-bit LLM inference.",
+        "identifiers": [
+          "SemanticScholar:48e0051ae0ec82aca38f1faf069f18190ef9becc"
+        ],
+        "semantic_scholar_id": "48e0051ae0ec82aca38f1faf069f18190ef9becc",
+        "canonical_id": "arXiv:2606.12487",
+        "arxiv_id": "2606.12487",
+        "authors": [
+          "Zimo Zhao",
+          "Mao-Lin Wang",
+          "Bo-Wen Yu",
+          "Bo-Wen Liu",
+          "Xiao Han",
+          "Xiangyu Zhao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.05780",
+      "identity_tokens": [
+        "id:SemanticScholar:9a2d0dbc593d57d887f49b359c81416d90a3deb4",
+        "id:arXiv:2608.05780",
+        "title:evidencedriven dynamic visual selector for efficient long video understanding",
+        "url:https://arxiv.org/abs/2608.05780"
+      ],
+      "record": {
+        "title": "Evidence-Driven Dynamic Visual Selector for Efficient Long Video Understanding",
+        "source_url": "https://arxiv.org/abs/2608.05780",
+        "year": 2026,
+        "published": "2026-08-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advancements in MLLM-based long-form video understanding have mitigated inference-time computational cost and limited context lengths by selecting query-relevant frames. However, existing approaches predominantly rely on external proxy scorers and rigid heuristic rules, inevitably suffering from misalignment with the target MLLM's intrinsic evidence and failing to accommodate the non-uniform spatiotemporal information density. In this paper, we propose a fine-grained dynamic visual selection framework named EviSelect, grounded in the target MLLM internal attention evidence. Our method efficiently probes visual evidence via sparse prefilling as a structured prior to guide distribution-aware dynamic sampling. Specifically, we efficiently approximate attention maps of the target MLLM using highly compressed visual inputs and sparse attention, well-aligned to the full counterpart. Conditioned on three complementary attention components derived from this prior, we design a lightweight selector that not only precisely locates query-relevant timestamps but also adaptively adjusts the local sampling rate and spatial resolution. To enable evidence-conditioned spatiotemporal sampling, we formulate the selector as a stochastic policy and optimize it via GRPO under a joint accuracy--efficiency reward. By rewarding correct predictions under lower visual cost through group-relative comparisons, our method encourages the policy to allocate computation dynamically according to the information density of each video. Across three long video understanding benchmarks, EviSelect achieves superior performance compared to existing methods while reducing selected visual tokens by about 50\\% and achieving a 3.9x end-to-end speedup.",
+        "identifiers": [
+          "SemanticScholar:9a2d0dbc593d57d887f49b359c81416d90a3deb4"
+        ],
+        "semantic_scholar_id": "9a2d0dbc593d57d887f49b359c81416d90a3deb4",
+        "canonical_id": "arXiv:2608.05780",
+        "arxiv_id": "2608.05780",
+        "authors": [
+          "Bo Zhang",
+          "Wenxin Wang",
+          "Feng Chen",
+          "Zhi-Hao Zhang",
+          "Zi-Xuan Wang",
+          "Changsheng Li",
+          "Yin-Jie Lei"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 85,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.06630",
+      "identity_tokens": [
+        "id:SemanticScholar:0dc5114ff4fbab93c587f6fa85d9946404ec83b5",
+        "id:arXiv:2608.06630",
+        "title:the sparsity whisperer",
+        "url:https://arxiv.org/abs/2608.06630"
+      ],
+      "record": {
+        "title": "The Sparsity Whisperer",
+        "source_url": "https://arxiv.org/abs/2608.06630",
+        "year": 2026,
+        "published": "2026-08-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pruning reduces the inference cost of large language models, but existing criteria primarily preserve large activations or reconstruct layer outputs. We argue that this overlooks a key computation performed by particularly sparsity-sensitive neurons in the MLP up and gate projections: separating similar inputs into dissimilar outputs. This suggests that effective pruning should preserve not only activations, but also the differences between outputs more broadly. We introduce a family of difference-informed pruning methods built upon this principle. Wisp is a first-order, update-free method that scores weights using input-difference norms, and Wisp+ refines this score neuronwise using the input pairs each neuron separates most strongly. Finally, Whisper is a second-order method that uses a lightly regularized difference Hessian as its reconstruction objective. Across Llama 2 and 3.1 models from 7B to 405B parameters, our second-order variant consistently improves over strong reconstruction-based baselines, while our update-free variants improve over activation-aware baselines, especially in constrained settings. The improvements over Wanda and SparseGPT extend to structured sparsity, downstream evaluations, and other model families. Augmenting stronger techniques such as RIA and ALPS with our difference-informed criteria yields further improvements, shifting the overall accuracy-runtime frontier outward at negligible additional cost. These results suggest that preserving output differences is a broadly useful and composable signal for post-training LLM sparsification.",
+        "identifiers": [
+          "SemanticScholar:0dc5114ff4fbab93c587f6fa85d9946404ec83b5"
+        ],
+        "semantic_scholar_id": "0dc5114ff4fbab93c587f6fa85d9946404ec83b5",
+        "canonical_id": "arXiv:2608.06630",
+        "arxiv_id": "2608.06630",
+        "authors": [
+          "Linghao Kong",
+          "Inimai Subramanian",
+          "Micah Adler",
+          "Dan Alistarh",
+          "D. Gutfreund",
+          "N. Shavit"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 85,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34612",
+      "identity_tokens": [
+        "id:DOI:10.1145/3831252.3834223",
+        "id:SemanticScholar:8ca5f42a6fb2abf92f404bde4d01a69ebe1980dd",
+        "id:arXiv:2609.34612",
+        "title:spimoe exploiting hybrid sparsity for reasoning moe inference on heterogeneous pim architectures",
+        "url:https://arxiv.org/abs/2609.34612"
+      ],
+      "record": {
+        "title": "SPIMOE: Exploiting Hybrid Sparsity for Reasoning MoE Inference on Heterogeneous PIM Architectures",
+        "source_url": "https://arxiv.org/abs/2609.34612",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-reasoning Mixture-of-Experts (MoE) models expose two coupled inference bottlenecks: growing KV caches shift the critical path toward attention, while sparse expert activation causes load imbalance and low hardware utilization. Although Processing-in-Memory (PIM) offers a promising way to mitigate data movement overhead, existing PIM-based accelerators typically optimize attention or FFNs in isolation. We propose SPIMOE, the first co-design framework that exploits hybrid sparsity for efficient MoE inference on heterogeneous PIM architectures. SPIMOE combines adaptive expert routing with block-sparse attention and physical KV-cache eviction, and disaggregates attention and FFNs across SRAM-PIM and HBM-PIM. Static expert mapping and dynamic sub-batch scheduling further balance channel loads and overlap the two paths. Evaluations show that SPIMOE achieves up to $8.35\\times$ end-to-end speedup over an NVIDIA A100 GPU and $3.33\\times$ speedup in MoE FFN execution over PIMoE, while preserving reasoning accuracy comparable to full-attention baselines.",
+        "identifiers": [
+          "SemanticScholar:8ca5f42a6fb2abf92f404bde4d01a69ebe1980dd"
+        ],
+        "semantic_scholar_id": "8ca5f42a6fb2abf92f404bde4d01a69ebe1980dd",
+        "canonical_id": "arXiv:2609.34612",
+        "arxiv_id": "2609.34612",
+        "doi": "10.1145/3831252.3834223",
+        "authors": [
+          "Ru-Bing Yang",
+          "Cen-Lin Duan",
+          "Ying-Jie Qi",
+          "Xiao-Lin He",
+          "Xiao Ma",
+          "Jian-Lei Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5c1d592c0bdba8a1510707caa0ad26d10a0b052ae3ac1683895cd0bf5d83aeb4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

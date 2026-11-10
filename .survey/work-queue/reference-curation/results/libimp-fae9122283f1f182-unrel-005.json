@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fae9122283f1f182-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.12050",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.12050",
+    "identity_tokens": [
+      "arXiv:2507.12050"
+    ],
+    "reason": "IDFace protects face templates for secure identification using a privacy-preserving representation and evaluates identification/security utility. It is biometric template security, not language-model quantization or inference; the linked BitNet paper is unrelated to its method.",
+    "first_checked_at": "2026-10-06T08:41:01+00:00",
+    "last_checked_at": "2026-10-06T08:41:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+    ],
+    "title": "IDFace: Face Template Protection for Efficient and Secure Identification"
+  },
+  "processed_at": "2026-10-06T08:41:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fae9122283f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

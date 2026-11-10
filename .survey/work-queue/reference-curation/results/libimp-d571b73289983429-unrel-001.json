@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d571b73289983429-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icws72778.2026.00075",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icws72778.2026.00075",
+    "identity_tokens": [
+      "DOI:10.1109/icws72778.2026.00075"
+    ],
+    "reason": "要旨はservice orchestration/recommendation/fog placement/QoS predictionまたは一般transformer compressionで、LLM inference性能・serving最適化を評価していない。 Primary abstract: The heterogeneity of communication interfaces has been a challenge in the Web services domain, especially for services that physically interact with users and environments. Recent advances in Large Language Models (LLMs) enable software agents to process unconstrained natural language fluently. However, existing approaches are limited to using LLMs to transl",
+    "first_checked_at": "2026-10-05T11:22:16+00:00",
+    "last_checked_at": "2026-10-05T11:22:16+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "LANCE: Linguistic Agent Network for Cooperative Ensemble of Heterogeneous Physical AI Services"
+  },
+  "processed_at": "2026-10-05T11:22:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d571b7328998",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

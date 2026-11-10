@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d566a205f728f95-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.10825",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.10825",
+    "identity_tokens": [
+      "arXiv:2405.10825"
+    ],
+    "reason": "通信分野のLLM利用を総覧するsurvey。通信応用が主題でLLM推論効率の研究ではない。",
+    "first_checked_at": "2026-10-05T02:12:07+00:00",
+    "last_checked_at": "2026-10-05T02:12:07+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md",
+      "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md"
+    ],
+    "title": "Large Language Model (LLM) for Telecommunications: A Comprehensive Survey on Principles, Key Techniques, and Opportunities"
+  },
+  "processed_at": "2026-10-05T02:12:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d566a205f72",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

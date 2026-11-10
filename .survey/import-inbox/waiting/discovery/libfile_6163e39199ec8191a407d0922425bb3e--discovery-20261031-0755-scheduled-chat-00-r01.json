@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0755-scheduled-chat-00/r01",
+  "reference_main_sha": "35406e7029f97dbd56bcc7020f7c259cdd86148b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/075280-0396",
+      "identity_tokens": [
+        "DOI:10.52202/075280-0396"
+      ],
+      "title": "PackQViT: Faster Sub-8-bit Vision Transformers via Full and Packed Quantization on the Mobile",
+      "reason": "NeurIPS一次要旨で、ViTの長尾活性とチャネル外れ値に対する量子化、整数Softmax/LayerNorm/GELU、携帯CPU向け4bit packed乗算器を確認。端末での推論高速化は具体的だが対象は画像分類ViTであり、LLM生成推論・サービングへの直接評価がないため境界候補。",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/1c92edb990a05f2269f0cc3afbb4c952-Abstract-Conference.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 187
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/CGO68049.2026.11395227",
+      "identity_tokens": [
+        "DOI:10.1109/CGO68049.2026.11395227"
+      ],
+      "title": "Progressive Low-Precision Approximation of Tensor Operators on GPUs: Enabling Greater Trade-Offs between Performance and Accuracy",
+      "reason": "CGO 2026公式一次要旨でPlatensorを確認。GPUタイル単位の低精度構成を規則ベース探索と進化的探索で選び、異なる精度のタイルを混合するカーネルを自動生成する。GEMMとLLMを含む評価があり、推論用GPU演算の精度・速度トレードオフへ直接寄与する。",
+      "source_url": "https://2026.cgo.org/details/cgo-2026-papers/41/Progressive-Low-Precision-Approximation-of-Tensor-Operators-on-GPUs-Enabling-Greater",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 226
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.27965",
+      "identity_tokens": [
+        "arXiv:2603.27965"
+      ],
+      "title": "ExFusion: Efficient Transformer Training via Multi-Experts Fusion",
+      "reason": "arXiv一次要旨で、学習時にFFNを複数expertへ展開し、重み付き融合で単一expert相当の順伝播を行い、学習後も一つへ統合して配置時の追加記憶費を避けることを確認。主たる新規性は学習効率・初期化であり、LLM推論サービング性能の直接評価がないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2603.27965",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 270
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.21247",
+      "identity_tokens": [
+        "arXiv:2608.21247"
+      ],
+      "title": "Just Noticeable Difference Modeling for Token Compression in Vision-Language-Action Models",
+      "reason": "arXiv一次要旨でAction-JNDを確認。言語条件付きVLA方策の行動偏差許容量を軽量トークン別推定器で見積もり、stale-KV再利用と視覚トークン剪定の圧縮選択へ使う。推論時トークン削減は直接的だが、評価の中心はLIBERO上のロボット行動予測で汎用LLMサービングではないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2608.21247",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 300
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IPDPS65963.2026.00083",
+      "identity_tokens": [
+        "DOI:10.1109/IPDPS65963.2026.00083"
+      ],
+      "title": "Beyond Throughput: Performance and Energy Insights of LLM Inference Across AI Accelerators",
+      "reason": "著者らの公式実験リポジトリでIPDPS 2026論文の再現コードと計測軸を確認。NVIDIA/AMD/Intel GPUおよびCerebras/SambaNovaの推論を対象に、vLLM、単一・複数GPU、MoEのTP/EP、消費電力・遅延・スループットを比較する実証研究で、LLM推論基盤のハードウェア選択・エネルギー最適化へ直接寄与する。詳細数値は原著本文未確認のためここでは採用しない。",
+      "source_url": "https://github.com/SPEAR-UIC/IPDPS26-LLM-Energy",
+      "body_check": "official_author_artifact_and_bibliography_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 325
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.10580",
+      "identity_tokens": [
+        "arXiv:2401.10580"
+      ],
+      "title": "PHOENIX: Open-Source Language Adaption for Direct Preference Optimization",
+      "reason": "arXiv一次要旨でLlama-2やZephyr等のドイツ語適応にDirect Preference Optimizationを適用する研究と確認。学習・アラインメントが主題で、推論カーネル、メモリ、量子化、サービングの効率化機構は示されていないため対象外。",
+      "source_url": "https://arxiv.org/abs/2401.10580",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 355
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.01159",
+      "identity_tokens": [
+        "arXiv:2406.01159"
+      ],
+      "title": "Dimba: Transformer-Mamba Diffusion Models",
+      "reason": "arXiv一次要旨でTransformer層とMamba層を交互に積み、交差注意で条件情報を注入するテキスト画像生成用拡散モデルと確認。画像品質・画像生成スループットの評価であり、拡散言語モデルやLLM推論のデコード効率とは別領域のため対象外。",
+      "source_url": "https://arxiv.org/abs/2406.01159",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 385
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.22451",
+      "identity_tokens": [
+        "arXiv:2503.22451"
+      ],
+      "title": "STADE: Standard Deviation as a Pruning Metric",
+      "reason": "arXiv一次要旨で、Wanda枝刈りが最適となる条件を理論解析し、条件外では入力標準偏差に基づくSTADE枝刈り尺度を提案すると確認。LlamaとOPTで再学習なしの枝刈り品質を検証しており、推論時のモデル計算量削減へ直接つながるLLM圧縮技術。",
+      "source_url": "https://arxiv.org/abs/2503.22451",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18331",
+      "identity_tokens": [
+        "arXiv:2603.18331"
+      ],
+      "title": "Understanding the Theoretical Foundations of Deep Neural Networks through Differential Equations",
+      "reason": "arXiv一次要旨でDNN全体・層を微分方程式として捉え、理論的理解、設計、一般的性能改善と応用を整理するサーベイと確認。LLM推論実装やサービングの計算・メモリ効率に関する具体的技術貢献がないため対象外。",
+      "source_url": "https://arxiv.org/abs/2603.18331",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.03805",
+      "identity_tokens": [
+        "arXiv:2510.03805"
+      ],
+      "title": "Beyond Token Length: Step Pruner for Efficient and Accurate Reasoning in Large Language Models",
+      "reason": "arXiv一次要旨でStep Prunerを確認。推論ステップ単位の報酬と動的な学習停止により、推論時の冗長な思考ステップを削減し、AIME24で出力トークンを69.7%削減したと報告。ただし中心機構はRLポストトレーニングであり、サービング実行系の直接的な最適化ではないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2510.03805",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:55:45+09:00",
+      "last_checked_at": "2026-10-31T07:55:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 498
+    }
+  ]
+}

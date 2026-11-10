@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-04e85614019663c4-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:0902.0271",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:0902.0271",
+    "identity_tokens": [
+      "arXiv:0902.0271"
+    ],
+    "reason": "Primary abstract read at https://arxiv.org/abs/0902.0271: General entropy coding method, not neural model inference.",
+    "first_checked_at": "2026-10-05T01:42:16+00:00",
+    "last_checked_at": "2026-10-05T01:42:16+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2509.00579-kvcomp-a-high-performance-llm-aware-lossy-compression-framework-for-kv-c.md"
+    ],
+    "title": "Asymmetric numeral systems"
+  },
+  "processed_at": "2026-10-05T01:42:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-04e856140196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

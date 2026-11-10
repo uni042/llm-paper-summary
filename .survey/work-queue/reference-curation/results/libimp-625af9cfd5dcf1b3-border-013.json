@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-625af9cfd5dcf1b3-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/access.2020.2971383",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/access.2020.2971383",
+    "identity_tokens": [
+      "DOI:10.1109/access.2020.2971383",
+      "SemanticScholar:3c068f406de090bc3232582473580beaa5631faa"
+    ],
+    "reason": "The DOI/title metadata describes pediatric echocardiography segmentation, but IEEE’s primary abstract was inaccessible; no evidence supports an efficiency classification.",
+    "first_checked_at": "2026-10-16T06:19:23+00:00",
+    "last_checked_at": "2026-10-16T06:19:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AIDAN: An Attention-Guided Dual-Path Network for Pediatric Echocardiography Segmentation"
+  },
+  "processed_at": "2026-10-16T06:19:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-625af9cfd5dc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-c38aefc50c08da92ba7b2ee0",
+  "job_id": "job-research-e434f2731ff9316c",
+  "claim_id": "claim-c38aefc50c08da92ba7b2ee0",
+  "worker_id": "scheduled-chat-00",
+  "status": "blocked",
+  "reason": "前runからのactive claimを再開。著者・研究機関配布の一次PDFが存在することは確認できたが、この実行環境ではPDF本体を完全ダウンロードしてLibraryへ保存する経路を確立できず、従来フォールバックでも一次本文全文を最後まで検証できなかった。前runで手法・JTOM・実験部の途中まで読解済みだが、未確認箇所を抄録・検索断片から推測して5スロットを完成させないため一時blockedとする。",
+  "retrieval_evidence": [
+    "DOI: https://doi.org/10.1109/TON.2026.3704584",
+    "TU Berlin TKN official literature entry identifies an Authors' Version PDF and bibliographic record: https://www.tkn.tu-berlin.de/bib/zhang2026efficient/",
+    "TU Berlin TKN publications page lists the paper with a PDF link, but the available web retrieval interface did not expose a downloadable PDF body in this run",
+    "ResearchGate record reports no full-text available",
+    "ChatGPT Library search by exact title and DOI found no cached primary PDF to reuse"
+  ],
+  "blocked_at": "2026-09-22T16:05:00+00:00"
+}

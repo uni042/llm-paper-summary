@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0474eef7eb597d22-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:8e8582198850220ffeeb65ca1049f6ac1419aa86",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:8e8582198850220ffeeb65ca1049f6ac1419aa86",
+    "identity_tokens": [
+      "SemanticScholar:8e8582198850220ffeeb65ca1049f6ac1419aa86"
+    ],
+    "reason": "Packet contains no primary abstract. The Semantic Scholar record page supplied no abstract/full text in this screen; relevance of GPU multi-NIC communication to LLM serving cannot be inferred from title alone.",
+    "first_checked_at": "2026-10-05T14:37:28+00:00",
+    "last_checked_at": "2026-10-05T14:37:28+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Enabling Efficient GPU Communication over Multiple NICs with FuseLink"
+  },
+  "processed_at": "2026-10-05T14:37:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0474eef7eb59",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

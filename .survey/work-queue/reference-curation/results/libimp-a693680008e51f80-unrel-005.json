@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a693680008e51f80-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.11807",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.11807",
+    "identity_tokens": [
+      "arXiv:2505.11807"
+    ],
+    "reason": "offline RL criticによるLLM agentの経験活用と品質向上で、推論効率の寄与なし。",
+    "first_checked_at": "2026-10-05T14:49:24+00:00",
+    "last_checked_at": "2026-10-05T14:49:24+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "Retrospex: Language Agent Meets Offline Reinforcement Learning Critic"
+  },
+  "processed_at": "2026-10-05T14:49:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a693680008e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

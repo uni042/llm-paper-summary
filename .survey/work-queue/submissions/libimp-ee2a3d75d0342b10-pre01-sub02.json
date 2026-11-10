@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TriSP: Tri-Signal Structured Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.22587",
+      "year": 2026,
+      "published": "2026-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve strong performance across diverse tasks but their deployment is constrained by the memory and compute cost of their parameters. Structured pruning addresses this by removing entire structures such as attention heads and Multi-Layer Perceptron (MLP) neurons to produce smaller dense models that run efficiently on standard hardware. However, existing methods rely on either gradient-based importance estimation, which is memory-prohibitive, or activation-based statistical proxies, which do not directly measure the effect of removal on the loss. Furthermore, the interaction between the importance criterion and the post-pruning recovery strategy has not been systematically studied. We propose TriSP (Tri-Signal Structured Pruning), an importance metric that combines weight magnitude scaled by activation norm with first-order gradient sensitivity via a geometric mean, producing a channel-level score that captures both structural and loss-sensitivity signals. Combined with adaptive per-layer budget allocation and low-rank adaptation (LoRA) recovery, TriSP achieves the lowest perplexity and highest zero-shot accuracy across all tested configurations, reaching 6.80 WikiText-2 perplexity at 20% pruning on LLaMA-7B. Inference throughput improves by 82% at 50% pruning, while still maintaining competitive performance.",
+      "identifiers": [
+        "SemanticScholar:15f386e5a96c34ee7ef5337a5f3fd16e3ce0e07c"
+      ],
+      "semantic_scholar_id": "15f386e5a96c34ee7ef5337a5f3fd16e3ce0e07c",
+      "canonical_id": "arXiv:2607.22587",
+      "arxiv_id": "2607.22587",
+      "doi": "10.48550/arXiv.2607.22587",
+      "authors": [
+        "Manel Kara Laouar",
+        "Soumia Bouyahiaoui",
+        "Aicha Boutorh"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は重み×活性ノルムと一次勾配感度を幾何平均で統合する重要度指標TriSPを提案。attention headやMLPニューロンを構造的に削除し、層別予算配分とLoRA回復で精度を保持。20%枝刈りでWikiText2困惑度6.80と報告。標準ハードウェアで走る小型dense LLMの生成に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RLM-Cascade: Response-Level Speculative Decoding for Cost-Efficient LLM API Serving",
+      "source_url": "https://arxiv.org/abs/2606.22840",
+      "year": 2026,
+      "published": "2026-06-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present RLM-Cascade, a proxy-layer system that applies speculative decoding at the response level to reduce LLM API costs without requiring model architecture access or a shared vocabulary. A fast, inexpensive draft model generates a candidate response; a capable verify model accepts, enhances, or is bypassed entirely depending on a lightweight complexity router. On a real-world agentic coding workload (Claude Code), RLM-Cascade achieves a draft-use rate of 88.8% across 125 production requests, reducing API cost by 45.8% relative to a direct Opus baseline. Counter-intuitively, the proxy also reduces end-to-end latency: median response time is 2,026 ms versus 3,698 ms for Native Opus -- a 1.83X speedup at p50 -- because the SKIPPED path (DeepSeek only, no Opus call) dominates the workload distribution. Quality matches or exceeds the Opus baseline: 100% pass rate on a 20-task Code/Math/Instruct benchmark versus 95% for Native Opus. We further describe a rule-based complexity router that selects the SKIPPED path for simple agentic turns and a hybrid tool-call strategy that bypasses the speculative pipeline for schema-critical tool-selection turns. RLM-Cascade is deployed in production as an enterprise AI infrastructure component and published as open source with a live metrics dashboard and Prometheus endpoint.",
+      "identifiers": [
+        "SemanticScholar:b4debda8ca6146bc995b4101b68b37a4ff7ae387"
+      ],
+      "semantic_scholar_id": "b4debda8ca6146bc995b4101b68b37a4ff7ae387",
+      "canonical_id": "arXiv:2606.22840",
+      "arxiv_id": "2606.22840",
+      "doi": "10.48550/arXiv.2606.22840",
+      "authors": [
+        "Hai-Feng Wu",
+        "Srinivasan Manoharan",
+        "Fang Tu",
+        "Jun Zhao",
+        "Jianwei Wan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 130,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は異なる語彙・APIモデル間でも使える応答単位の投機的カスケードを提案。安価なdraft応答を高性能モデルが受理・補強・省略する。125件のClaude Code実運用要求でAPI費45.8%削減、中央値遅延3698msから2026msへ短縮と報告。API配信の実行費用・遅延へ直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pricing the Risk of Runtime Compression: Anytime-Valid Admission and a Served-Output Law for Compressed Serving State",
+      "source_url": "https://arxiv.org/abs/2608.15810",
+      "year": 2026,
+      "published": "2026-08-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Runtime compression of serving state trades quality for capacity with no priced guarantee: systems adapt precision on load signals with no soundness statement, and certified approaches budget request-level risk by a union bound over a pre-declared event count. We show the union budget exhausts on every long request in a production serving stack (100% of requests), and replace it with an anytime-valid, physically accounted ledger whose bound holds at every one of 352,333 admission calls on live traffic and which, in a pre-registered held-out confirmatory round, halves the exact-fallback rate at matched risk (0.30 ->0.14) -- coverage is bought at a price the account states. We then price the remaining distance from the certified witness to what a user experiences: a machine-checked design law (TV<= tanh(a_q w_thr)) turns the served-TV target into a threshold knob, and a three-layer audit of its instantiation -- an operator-norm query envelope measured 1.5x from tight, a measured-ellipsoid replacement for the Cauchy-Schwarz ball that buys nothing (0.89x, held-out sound), and the gate's operating point (~700x) -- localizes the entire 1064x gap to the operating point, a price the law now states rather than an unknown. A priced bound is worth nothing on a request one has not seen, so the third link is the quantifier: exchangeable extrapolation across 80 serving histories replaces binary conformal prediction's vacuous certificates with order-statistic bounds that discriminate (0.41 against 0.51 calibration risk). All probabilistic kernels are Lean 4-checked (228 exported theorems, no sorry); which object deserves this machinery at all is settled empirically in a companion paper that adjudicates -- and rejects -- the natural alternative of certifying routing. What ships is an account: risk you can spend, a gap you can read off a law, and a bound that survives the request you have not seen.",
+      "identifiers": [
+        "SemanticScholar:210c7668deacf519aefb7e6afa88371c2b28a7d9"
+      ],
+      "semantic_scholar_id": "210c7668deacf519aefb7e6afa88371c2b28a7d9",
+      "canonical_id": "arXiv:2608.15810",
+      "arxiv_id": "2608.15810",
+      "authors": [
+        "Fan-Zhe Wei",
+        "Li Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 75,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は推論中のserving state圧縮に伴う品質リスクを逐次保証するanytime-valid ledgerとserved-output TV距離の上界を設計。35万超のadmission呼び出しで検証し、同一リスクの厳密fallback率を0.30から0.14へ削減。KV等の圧縮時のリスク保証と運用制御に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CHIPSMORE: Compute-in-Interconnect and -Memory Chiplets for Multi-Mode Multi-Request LLM Inference Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.30509",
+      "year": 2026,
+      "published": "2026-08-31",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference exhibits substantial variability across adaptation modes, context lengths, and request concurrency, creating challenges for maintaining high utilization, memory efficiency, and scalable performance on compute-in-memory (CIM) accelerators. This paper presents CHIPSMORE, a multi-mode and multi-request LLM inference accelerator that integrates compute-in-interconnect and CIM to support both base-mode and low-rank adaptation (LoRA) inference under diverse workloads. CHIPSMORE employs heterogeneous processing elements consisting of resistive RAM analog compute-in-memory (RRAM-ACIM) and static RAM digital compute-in-memory (SRAM-DCIM) interconnected through a programmable Inter-PE computational network (IPCN). A composable hierarchical key-value (KV) memory scheme dynamically allocates router scratchpad, SRAM-DCIM, and embedded DRAM (eDRAM) resources according to workload requirements, enabling scalable support for long-context and batched inference. Furthermore, a non-replicated multi-request execution pipeline exploits request-level parallelism without duplicating pretrained weights, while a state-aware resource reconfiguration mechanism selectively retains runtime states and power-gates inactive resources to improve energy efficiency. Evaluation using cycle-accurate hardware-software co-simulation demonstrates that CHIPSMORE effectively sustains high throughput across varying model sizes, context lengths, and batch sizes while maintaining favorable power scaling. Compared with Nvidia H100, CHIPSMORE achieves up to $2.38\\times$ higher throughput and $27\\times$ higher energy efficiency on Mistral-7B inference while eliminating weight replication for multi-request serving.",
+      "identifiers": [
+        "SemanticScholar:6dde5d5d83a425a67cdfab710a23b9b988554ccd"
+      ],
+      "semantic_scholar_id": "6dde5d5d83a425a67cdfab710a23b9b988554ccd",
+      "canonical_id": "arXiv:2608.30509",
+      "arxiv_id": "2608.30509",
+      "authors": [
+        "Yue Jiet Chong",
+        "Yimin Wang",
+        "Zhen Wu",
+        "Zi-Xuan Wang",
+        "Wei Zhang",
+        "Xuan-Yao Fong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 60,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はRRAMアナログCIMとSRAMデジタルCIMをInter-PEネットワークで結合し、LoRA適応と基盤モデルの複数要求を処理するCHIPSMOREを提案。階層KVメモリ、重み複製不要の多要求パイプライン、動的リソース再構成で推論の利用率・メモリ効率を改善する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ee2a3d75d034",
+    "round": "libimp-ee2a3d75d0342b10-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ee2a3d75d0342b10-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ee2a3d75d0342b10-pre01.json",
+    "receipt": "sha256:cd284a6472f41ac9942a4b1f7bd5c49f7ede118e9710743aa31358e60bf38f5b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ee2a3d75d034",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

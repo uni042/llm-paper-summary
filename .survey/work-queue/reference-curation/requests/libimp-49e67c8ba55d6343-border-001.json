@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-49e67c8ba55d6343-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2110.04711",
+  "reason": "SuperShaperは幅の異なるBERT部分ネットワークを同時に事前学習し、モデルサイズと精度の選択や複数CPU・GPUでのレイテンシ比較を扱うため、言語モデルを資源制約に合わせる点で接点がある。一方、対象はBERTによるNLUで、主貢献は事前学習と形状探索であり、自己回帰LLMの推論、KV cache、serving基盤の最適化は扱わないため微妙とする。",
+  "title": "SuperShaper: Task-Agnostic Super Pre-training of BERT Models with Variable Hidden Dimensions",
+  "identity_tokens": [
+    "arXiv:2110.04711",
+    "DOI:10.48550/arxiv.2110.04711"
+  ],
+  "linked_from": [
+    ".survey/work-queue/WORKLIST-45.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-49e67c8ba55d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

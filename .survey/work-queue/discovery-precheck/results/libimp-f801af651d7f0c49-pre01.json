@@ -1,0 +1,646 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f801af651d7f0c49-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f801af651d7f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.07782",
+    "arXiv:2610.09778",
+    "arXiv:2610.15629",
+    "arXiv:2610.17191",
+    "arXiv:2610.21815",
+    "arXiv:2610.23951",
+    "arXiv:2610.32711"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "baf388b28f5080a9b008ac124e1c02f44d1dbaba",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-02T06:07:19.147091+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.07782",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.09778",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.15629",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.17191",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.21815",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.23951",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.32711",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Persistent Memory in Multi-Agent LLM Inference: What It Costs, What It Buys, and When You Can Tell",
+      "source_url": "https://arxiv.org/abs/2610.07782",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Decomposing long-context inference across cooperating agents bounds the active KV cache per call rather than total evidence, which matters when KV-cache memory binds. Many such systems add a persistent tier storing and recalling reasoning traces, usually validated by an ablation reporting an accuracy gain. We measure both on one three-tier agent architecture. Decomposition delivers: peak KV working set of 14.3 MiB per query against 35.5 and 35.3 MiB for single-pass and retrieval-augmented baselines. The persistent tier does not: across eight controlled dataset pairs at n=100 per arm it costs +0.368 MiB [+0.167, +0.590] of peak cache and produces no detectable accuracy change (+0.015, 95% CI [-0.011, +0.046]). We argue the null is structural: single-question benchmarks supply each item with its own evidence and score it independently, and correctness requires resetting stored traces between conditions, so recall has nothing informative to retrieve. Reaching it took four measurement corrections -- three inflating the apparent benefit, the fourth making an effect that size look resolvable -- none visible in the results table. We give the conditions an agent-memory ablation must satisfy and detection procedures that need no knowledge of the specific defect.",
+      "identifiers": [
+        "SemanticScholar:6085f30247c7db70bf119bb42c37fcfd01f0a8bb"
+      ],
+      "semantic_scholar_id": "6085f30247c7db70bf119bb42c37fcfd01f0a8bb",
+      "canonical_id": "arXiv:2610.07782",
+      "arxiv_id": "2610.07782",
+      "authors": [
+        "Ho-Chan Son",
+        "Kyu J. Han",
+        "Jaehan Koh",
+        "Xiao-Wu Dai",
+        "Wen-Lu Xu",
+        "Guang Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Reproducible LLM Inference Benchmarking: A Sequential Isolation Protocol for Regression Testing",
+      "source_url": "https://arxiv.org/abs/2610.09778",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reproducible benchmarking of Large Language Model (LLM) inference is challenging because repeated measurements can vary with execution and system state. We present the Sequential Isolation Methodology, a controlled benchmarking and regression-testing protocol designed to reduce between-run measurement variance while deliberately varying workload concurrency. We evaluate three representative open-source LLMs on an NVIDIA A100 80GB GPU using vLLM 0.9.1 across six context sizes and eight concurrency levels, with five repetitions per configuration. The final protocol reduces average coefficient of variation (CV) from 15.2% in the least controlled methodology stage to 2.2% under the final protocol; using CV computed across the five repetition-level median (P50) TTFT values per configuration, 113 of 144 configurations (78.5%) achieve CV below 3%. The measurements also show a marked latency transition between 200 and 500 concurrent users on the tested stack and descriptive differences in P99 latency across the three models. We additionally provide an explicit cost break-even model with sensitivity to API pricing. The protocol is intended to provide a stable reference for reproducible comparison and regression testing rather than to predict absolute behavior under uncontrolled production traffic. Infrastructure-as-Code and benchmark scripts support replication of the experimental environment.",
+      "identifiers": [
+        "SemanticScholar:d2346ff0d17a1189c1f8c3e0b095423f0c1e4e57"
+      ],
+      "semantic_scholar_id": "d2346ff0d17a1189c1f8c3e0b095423f0c1e4e57",
+      "canonical_id": "arXiv:2610.09778",
+      "arxiv_id": "2610.09778",
+      "authors": [
+        "Arnold Olympio",
+        "Juan Manuel Servera Bondroit",
+        "Wael Abdelmalek",
+        "Guang Lu",
+        "João G. Carvalho"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LatLM: Line-Parallel Language Models with Deferred Commitment",
+      "source_url": "https://arxiv.org/abs/2610.23951",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Line-parallel language models advance multiple lines concurrently for substantial speedups. However, frameworks like the Line-Coupled Language Model (LCLM) enforce a fixed commitment schedule across lines. Because dependencies vary within text, a fixed schedule cannot hold back a line whose prerequisites remain uncomputed, forcing premature commitments and cascading reasoning errors. To address this limitation, we introduce the Lattice Language Model (LatLM), making commitment schedules an adaptive decoding-time choice. Text occupies a 2D lattice where eligible frontier tokens are scored each round; a policy commits confident candidates while deferring unready ones for extended context. One forward pass supervises entire sampled trajectories via 2D causal masking, while an append-only cache retains exact states. At 482M parameters, we establish two findings. (1) LatLM matches a data- and capacity-matched autoregressive model on held-out text when decoded sequentially, while its adaptive parallel decoder achieves near-autoregressive accuracy on independent-line tasks using 25--41% as many decoding rounds. (2) When cross-line dependencies cause LCLM's fixed schedule to fail, deferred commitment substantially improves accuracy while retaining parallelism where dependencies permit. On mixed dependency chains, LatLM achieves 96.5% accuracy versus LCLM's 78.5%, using fewer than half the decoding rounds of the autoregressive baseline.",
+      "identifiers": [
+        "SemanticScholar:1ffcab6cf3ea98ad78ec31145b012a1985afd334"
+      ],
+      "semantic_scholar_id": "1ffcab6cf3ea98ad78ec31145b012a1985afd334",
+      "canonical_id": "arXiv:2610.23951",
+      "arxiv_id": "2610.23951",
+      "authors": [
+        "Shao-Rong Zhang",
+        "Shi-Yuan Li",
+        "Long-Xuan Yu",
+        "G. V. Steeg"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 24,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Price of Precision: A Calibrated Cost Model for Mixed-Precision LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.15629",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Choosing a mixed-precision configuration for large language model (LLM) serving trades speed against accuracy. Allocators that use average bit-width or a memory budget as a speed proxy can miss changes in the resource that limits execution. We argue that served speed can be limited by compute, weight loading, or key-value (KV) cache access, depending on the phase, batch size, and context length. A byte-based proxy does not capture all of these costs, so fewer bits do not always mean faster serving. To address this gap, we build a cost model that accounts for the binding resource and use it in two ways. First, as a predictor: given a configuration and operating point, it estimates serving latency using constants calibrated for the model, GPU, and serving stack. We evaluate its accuracy across three hardware classes. Second, as an allocator: we combine modeled time costs with measured per-tensor accuracy costs and use a dynamic program to select a configuration under a latency or accuracy budget. We compare its configurations against byte-aware and sensitivity-only allocation.",
+      "identifiers": [
+        "SemanticScholar:ac8770ba88aedabfce5d4f80313831dcc0f061ee"
+      ],
+      "semantic_scholar_id": "ac8770ba88aedabfce5d4f80313831dcc0f061ee",
+      "canonical_id": "arXiv:2610.15629",
+      "arxiv_id": "2610.15629",
+      "authors": [
+        "Mukund Athmaram",
+        "Manoj Rao",
+        "Liang Ma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FreeSolo: Linear-time Sparse Attention with Zero-Shot Length Extrapolation",
+      "source_url": "https://arxiv.org/abs/2610.17191",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear-time sequence models typically store long-context information in a recurrent state. A fixed-size state limits how much information can be stored, while hybrid architectures that add full attention for better recall incur quadratic sequence cost. Alternatively, sparse attention with continued pretraining (CPT) can extend the effective context length. Generalization beyond the trained length remains challenging, however, and CPT can be costly. We introduce FreeSolo, a native sparse attention mechanism with a short-range sliding window branch and a long-range branch that selects keypoint cells for direct token attention. Its linear-time variant, FS-L, learns to prune the prefix before query-dependent selection through short CPT. FS-B searches balanced trees with $O(N\\log^2 N)$ algorithmic cost including radix-sort construction. FreeSolo demonstrates better zero-shot length extrapolation than the baselines without long-context fine-tuning.",
+      "identifiers": [
+        "SemanticScholar:27114cce572b9563757ae1f863015cdec88cc484"
+      ],
+      "semantic_scholar_id": "27114cce572b9563757ae1f863015cdec88cc484",
+      "canonical_id": "arXiv:2610.17191",
+      "arxiv_id": "2610.17191",
+      "authors": [
+        "Ze-Kun Shi",
+        "Alastair J. A. Price"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Exact Makespan Bounds and the GPipe Homogeneity Bias for Heterogeneous LLM Inference Pipelines",
+      "source_url": "https://arxiv.org/abs/2610.21815",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We give an exact critical-path characterization of the makespan of micro-batch pipelines serving LLMs on heterogeneous GPU clusters, quantifying how the classic homogeneous GPipe formula errs. In the pure-forward, communication-free, infinite-buffer setting, T(M) = (M-1)tau_max + Sum_j tau_j, where tau_j is stage j's per-micro-batch service time and M the micro-batch count (Theorem 1). Under asynchronous communication -- modern NCCL-based serving -- it extends to T(M) = Sum_j tau_j + Sum_j d_j + (M-1)tau_max, with Sum_j d_j a purely additive constant (Theorem 2); under blocking communication, T(M) = (M-1)sigma_max + Sum_s sigma_s with sigma_s = tau_s + d_s, so communication enters the steady-state slope iff some d_s>tau_max - tau_s (Theorem 3). These results quantify the GPipe overestimate, decompose the bias into a homogeneity term Sum_j (tau_max - tau_j) and a communication-ignoring term Sum_j d_j, and imply that balancing per-stage compute dominates communication reduction for steady-state throughput. A real system with partial overlap is sandwiched between Theorems 2 and 3, with a closed-form bound on the overlap throughput gain. All claims are validated pointwise (error<10^-9) on eleven configurations and a 1.6x10^5-point fuzz, including a mixed RTX 5090/3090/GTX 1070 partition. We situate the results in flow-shop scheduling and list open extensions: bandwidth-limited communication, bounded buffers, prefill-decode interleaving.",
+      "identifiers": [
+        "SemanticScholar:1c26318566bf2cc01977d1842e9aae5ce479e5a3"
+      ],
+      "semantic_scholar_id": "1c26318566bf2cc01977d1842e9aae5ce479e5a3",
+      "canonical_id": "arXiv:2610.21815",
+      "arxiv_id": "2610.21815",
+      "authors": [
+        "Wen-Bo Zhu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Hotness: High-Resolution Memory Characterization of Cloud and LLM Workloads for Tiered Memory with ARM SPE",
+      "source_url": "https://arxiv.org/abs/2610.32711",
+      "year": 2026,
+      "published": "2026-10-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Memory demands from data analytics and LLM workloads grow rapidly, driving up memory costs in cloud and data centers. Multi-tier memory has emerged as a promising solution to balance performance and cost. However, effectively leveraging it requires a deep understanding of workload memory behaviors. This work introduces a high-resolution memory characterization methodology for analyzing workload-specific opportunities for multi-tier memory usage. In response to the increasing deployment of ARM-based processors in data centers, we implement our methodology using the recent Statistical Profiling Extension (SPE) for ARM. By characterizing eight memory-intensive workloads from CloudSuite and LLM applications, we identify region-specific access patterns, evaluate the effectiveness of cloud-oriented cache hierarchies, and propose new metrics based on memory idle periods and latency profiles to determine suitable data placement for tiered memory.",
+      "identifiers": [
+        "SemanticScholar:5318ae3318d3eeae2855a77681ff122d80b7f8b0"
+      ],
+      "semantic_scholar_id": "5318ae3318d3eeae2855a77681ff122d80b7f8b0",
+      "canonical_id": "arXiv:2610.32711",
+      "arxiv_id": "2610.32711",
+      "authors": [
+        "Jie Ren",
+        "Ivy Bo Peng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.07782",
+      "identity_tokens": [
+        "id:SemanticScholar:6085f30247c7db70bf119bb42c37fcfd01f0a8bb",
+        "id:arXiv:2610.07782",
+        "title:persistent memory in multiagent llm inference what it costs what it buys and when you can tell",
+        "url:https://arxiv.org/abs/2610.07782"
+      ],
+      "record": {
+        "title": "Persistent Memory in Multi-Agent LLM Inference: What It Costs, What It Buys, and When You Can Tell",
+        "source_url": "https://arxiv.org/abs/2610.07782",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Decomposing long-context inference across cooperating agents bounds the active KV cache per call rather than total evidence, which matters when KV-cache memory binds. Many such systems add a persistent tier storing and recalling reasoning traces, usually validated by an ablation reporting an accuracy gain. We measure both on one three-tier agent architecture. Decomposition delivers: peak KV working set of 14.3 MiB per query against 35.5 and 35.3 MiB for single-pass and retrieval-augmented baselines. The persistent tier does not: across eight controlled dataset pairs at n=100 per arm it costs +0.368 MiB [+0.167, +0.590] of peak cache and produces no detectable accuracy change (+0.015, 95% CI [-0.011, +0.046]). We argue the null is structural: single-question benchmarks supply each item with its own evidence and score it independently, and correctness requires resetting stored traces between conditions, so recall has nothing informative to retrieve. Reaching it took four measurement corrections -- three inflating the apparent benefit, the fourth making an effect that size look resolvable -- none visible in the results table. We give the conditions an agent-memory ablation must satisfy and detection procedures that need no knowledge of the specific defect.",
+        "identifiers": [
+          "SemanticScholar:6085f30247c7db70bf119bb42c37fcfd01f0a8bb"
+        ],
+        "semantic_scholar_id": "6085f30247c7db70bf119bb42c37fcfd01f0a8bb",
+        "canonical_id": "arXiv:2610.07782",
+        "arxiv_id": "2610.07782",
+        "authors": [
+          "Ho-Chan Son",
+          "Kyu J. Han",
+          "Jaehan Koh",
+          "Xiao-Wu Dai",
+          "Wen-Lu Xu",
+          "Guang Cheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.09778",
+      "identity_tokens": [
+        "id:SemanticScholar:d2346ff0d17a1189c1f8c3e0b095423f0c1e4e57",
+        "id:arXiv:2610.09778",
+        "title:reproducible llm inference benchmarking a sequential isolation protocol for regression testing",
+        "url:https://arxiv.org/abs/2610.09778"
+      ],
+      "record": {
+        "title": "Reproducible LLM Inference Benchmarking: A Sequential Isolation Protocol for Regression Testing",
+        "source_url": "https://arxiv.org/abs/2610.09778",
+        "year": 2026,
+        "published": "2026-10-07",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reproducible benchmarking of Large Language Model (LLM) inference is challenging because repeated measurements can vary with execution and system state. We present the Sequential Isolation Methodology, a controlled benchmarking and regression-testing protocol designed to reduce between-run measurement variance while deliberately varying workload concurrency. We evaluate three representative open-source LLMs on an NVIDIA A100 80GB GPU using vLLM 0.9.1 across six context sizes and eight concurrency levels, with five repetitions per configuration. The final protocol reduces average coefficient of variation (CV) from 15.2% in the least controlled methodology stage to 2.2% under the final protocol; using CV computed across the five repetition-level median (P50) TTFT values per configuration, 113 of 144 configurations (78.5%) achieve CV below 3%. The measurements also show a marked latency transition between 200 and 500 concurrent users on the tested stack and descriptive differences in P99 latency across the three models. We additionally provide an explicit cost break-even model with sensitivity to API pricing. The protocol is intended to provide a stable reference for reproducible comparison and regression testing rather than to predict absolute behavior under uncontrolled production traffic. Infrastructure-as-Code and benchmark scripts support replication of the experimental environment.",
+        "identifiers": [
+          "SemanticScholar:d2346ff0d17a1189c1f8c3e0b095423f0c1e4e57"
+        ],
+        "semantic_scholar_id": "d2346ff0d17a1189c1f8c3e0b095423f0c1e4e57",
+        "canonical_id": "arXiv:2610.09778",
+        "arxiv_id": "2610.09778",
+        "authors": [
+          "Arnold Olympio",
+          "Juan Manuel Servera Bondroit",
+          "Wael Abdelmalek",
+          "Guang Lu",
+          "João G. Carvalho"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.23951",
+      "identity_tokens": [
+        "id:SemanticScholar:1ffcab6cf3ea98ad78ec31145b012a1985afd334",
+        "id:arXiv:2610.23951",
+        "title:latlm lineparallel language models with deferred commitment",
+        "url:https://arxiv.org/abs/2610.23951"
+      ],
+      "record": {
+        "title": "LatLM: Line-Parallel Language Models with Deferred Commitment",
+        "source_url": "https://arxiv.org/abs/2610.23951",
+        "year": 2026,
+        "published": "2026-10-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Line-parallel language models advance multiple lines concurrently for substantial speedups. However, frameworks like the Line-Coupled Language Model (LCLM) enforce a fixed commitment schedule across lines. Because dependencies vary within text, a fixed schedule cannot hold back a line whose prerequisites remain uncomputed, forcing premature commitments and cascading reasoning errors. To address this limitation, we introduce the Lattice Language Model (LatLM), making commitment schedules an adaptive decoding-time choice. Text occupies a 2D lattice where eligible frontier tokens are scored each round; a policy commits confident candidates while deferring unready ones for extended context. One forward pass supervises entire sampled trajectories via 2D causal masking, while an append-only cache retains exact states. At 482M parameters, we establish two findings. (1) LatLM matches a data- and capacity-matched autoregressive model on held-out text when decoded sequentially, while its adaptive parallel decoder achieves near-autoregressive accuracy on independent-line tasks using 25--41% as many decoding rounds. (2) When cross-line dependencies cause LCLM's fixed schedule to fail, deferred commitment substantially improves accuracy while retaining parallelism where dependencies permit. On mixed dependency chains, LatLM achieves 96.5% accuracy versus LCLM's 78.5%, using fewer than half the decoding rounds of the autoregressive baseline.",
+        "identifiers": [
+          "SemanticScholar:1ffcab6cf3ea98ad78ec31145b012a1985afd334"
+        ],
+        "semantic_scholar_id": "1ffcab6cf3ea98ad78ec31145b012a1985afd334",
+        "canonical_id": "arXiv:2610.23951",
+        "arxiv_id": "2610.23951",
+        "authors": [
+          "Shao-Rong Zhang",
+          "Shi-Yuan Li",
+          "Long-Xuan Yu",
+          "G. V. Steeg"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 24,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.15629",
+      "identity_tokens": [
+        "id:SemanticScholar:ac8770ba88aedabfce5d4f80313831dcc0f061ee",
+        "id:arXiv:2610.15629",
+        "title:the price of precision a calibrated cost model for mixedprecision llm serving",
+        "url:https://arxiv.org/abs/2610.15629"
+      ],
+      "record": {
+        "title": "The Price of Precision: A Calibrated Cost Model for Mixed-Precision LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.15629",
+        "year": 2026,
+        "published": "2026-10-11",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Choosing a mixed-precision configuration for large language model (LLM) serving trades speed against accuracy. Allocators that use average bit-width or a memory budget as a speed proxy can miss changes in the resource that limits execution. We argue that served speed can be limited by compute, weight loading, or key-value (KV) cache access, depending on the phase, batch size, and context length. A byte-based proxy does not capture all of these costs, so fewer bits do not always mean faster serving. To address this gap, we build a cost model that accounts for the binding resource and use it in two ways. First, as a predictor: given a configuration and operating point, it estimates serving latency using constants calibrated for the model, GPU, and serving stack. We evaluate its accuracy across three hardware classes. Second, as an allocator: we combine modeled time costs with measured per-tensor accuracy costs and use a dynamic program to select a configuration under a latency or accuracy budget. We compare its configurations against byte-aware and sensitivity-only allocation.",
+        "identifiers": [
+          "SemanticScholar:ac8770ba88aedabfce5d4f80313831dcc0f061ee"
+        ],
+        "semantic_scholar_id": "ac8770ba88aedabfce5d4f80313831dcc0f061ee",
+        "canonical_id": "arXiv:2610.15629",
+        "arxiv_id": "2610.15629",
+        "authors": [
+          "Mukund Athmaram",
+          "Manoj Rao",
+          "Liang Ma"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.17191",
+      "identity_tokens": [
+        "id:SemanticScholar:27114cce572b9563757ae1f863015cdec88cc484",
+        "id:arXiv:2610.17191",
+        "title:freesolo lineartime sparse attention with zeroshot length extrapolation",
+        "url:https://arxiv.org/abs/2610.17191"
+      ],
+      "record": {
+        "title": "FreeSolo: Linear-time Sparse Attention with Zero-Shot Length Extrapolation",
+        "source_url": "https://arxiv.org/abs/2610.17191",
+        "year": 2026,
+        "published": "2026-10-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear-time sequence models typically store long-context information in a recurrent state. A fixed-size state limits how much information can be stored, while hybrid architectures that add full attention for better recall incur quadratic sequence cost. Alternatively, sparse attention with continued pretraining (CPT) can extend the effective context length. Generalization beyond the trained length remains challenging, however, and CPT can be costly. We introduce FreeSolo, a native sparse attention mechanism with a short-range sliding window branch and a long-range branch that selects keypoint cells for direct token attention. Its linear-time variant, FS-L, learns to prune the prefix before query-dependent selection through short CPT. FS-B searches balanced trees with $O(N\\log^2 N)$ algorithmic cost including radix-sort construction. FreeSolo demonstrates better zero-shot length extrapolation than the baselines without long-context fine-tuning.",
+        "identifiers": [
+          "SemanticScholar:27114cce572b9563757ae1f863015cdec88cc484"
+        ],
+        "semantic_scholar_id": "27114cce572b9563757ae1f863015cdec88cc484",
+        "canonical_id": "arXiv:2610.17191",
+        "arxiv_id": "2610.17191",
+        "authors": [
+          "Ze-Kun Shi",
+          "Alastair J. A. Price"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 21,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.21815",
+      "identity_tokens": [
+        "id:SemanticScholar:1c26318566bf2cc01977d1842e9aae5ce479e5a3",
+        "id:arXiv:2610.21815",
+        "title:exact makespan bounds and the gpipe homogeneity bias for heterogeneous llm inference pipelines",
+        "url:https://arxiv.org/abs/2610.21815"
+      ],
+      "record": {
+        "title": "Exact Makespan Bounds and the GPipe Homogeneity Bias for Heterogeneous LLM Inference Pipelines",
+        "source_url": "https://arxiv.org/abs/2610.21815",
+        "year": 2026,
+        "published": "2026-10-15",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We give an exact critical-path characterization of the makespan of micro-batch pipelines serving LLMs on heterogeneous GPU clusters, quantifying how the classic homogeneous GPipe formula errs. In the pure-forward, communication-free, infinite-buffer setting, T(M) = (M-1)tau_max + Sum_j tau_j, where tau_j is stage j's per-micro-batch service time and M the micro-batch count (Theorem 1). Under asynchronous communication -- modern NCCL-based serving -- it extends to T(M) = Sum_j tau_j + Sum_j d_j + (M-1)tau_max, with Sum_j d_j a purely additive constant (Theorem 2); under blocking communication, T(M) = (M-1)sigma_max + Sum_s sigma_s with sigma_s = tau_s + d_s, so communication enters the steady-state slope iff some d_s>tau_max - tau_s (Theorem 3). These results quantify the GPipe overestimate, decompose the bias into a homogeneity term Sum_j (tau_max - tau_j) and a communication-ignoring term Sum_j d_j, and imply that balancing per-stage compute dominates communication reduction for steady-state throughput. A real system with partial overlap is sandwiched between Theorems 2 and 3, with a closed-form bound on the overlap throughput gain. All claims are validated pointwise (error<10^-9) on eleven configurations and a 1.6x10^5-point fuzz, including a mixed RTX 5090/3090/GTX 1070 partition. We situate the results in flow-shop scheduling and list open extensions: bandwidth-limited communication, bounded buffers, prefill-decode interleaving.",
+        "identifiers": [
+          "SemanticScholar:1c26318566bf2cc01977d1842e9aae5ce479e5a3"
+        ],
+        "semantic_scholar_id": "1c26318566bf2cc01977d1842e9aae5ce479e5a3",
+        "canonical_id": "arXiv:2610.21815",
+        "arxiv_id": "2610.21815",
+        "authors": [
+          "Wen-Bo Zhu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 18,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.32711",
+      "identity_tokens": [
+        "id:SemanticScholar:5318ae3318d3eeae2855a77681ff122d80b7f8b0",
+        "id:arXiv:2610.32711",
+        "title:beyond hotness highresolution memory characterization of cloud and llm workloads for tiered memory with arm spe",
+        "url:https://arxiv.org/abs/2610.32711"
+      ],
+      "record": {
+        "title": "Beyond Hotness: High-Resolution Memory Characterization of Cloud and LLM Workloads for Tiered Memory with ARM SPE",
+        "source_url": "https://arxiv.org/abs/2610.32711",
+        "year": 2026,
+        "published": "2026-10-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Memory demands from data analytics and LLM workloads grow rapidly, driving up memory costs in cloud and data centers. Multi-tier memory has emerged as a promising solution to balance performance and cost. However, effectively leveraging it requires a deep understanding of workload memory behaviors. This work introduces a high-resolution memory characterization methodology for analyzing workload-specific opportunities for multi-tier memory usage. In response to the increasing deployment of ARM-based processors in data centers, we implement our methodology using the recent Statistical Profiling Extension (SPE) for ARM. By characterizing eight memory-intensive workloads from CloudSuite and LLM applications, we identify region-specific access patterns, evaluate the effectiveness of cloud-oriented cache hierarchies, and propose new metrics based on memory idle periods and latency profiles to determine suitable data placement for tiered memory.",
+        "identifiers": [
+          "SemanticScholar:5318ae3318d3eeae2855a77681ff122d80b7f8b0"
+        ],
+        "semantic_scholar_id": "5318ae3318d3eeae2855a77681ff122d80b7f8b0",
+        "canonical_id": "arXiv:2610.32711",
+        "arxiv_id": "2610.32711",
+        "authors": [
+          "Jie Ren",
+          "Ivy Bo Peng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 10,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:35eaacd6394e2748d484bf4bc752d36ff55e79e7b2e8930ed1157bd58b3e5ca9",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

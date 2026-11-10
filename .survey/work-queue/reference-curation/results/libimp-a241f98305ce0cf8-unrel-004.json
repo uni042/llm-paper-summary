@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a241f98305ce0cf8-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.64882/ijrt.v14.i3.1755",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.64882/ijrt.v14.i3.1755",
+    "identity_tokens": [
+      "DOI:10.64882/ijrt.v14.i3.1755"
+    ],
+    "reason": "The experiments compress ResNet/CNN image classifiers, not LLMs.",
+    "first_checked_at": "2026-10-05T08:47:10+00:00",
+    "last_checked_at": "2026-10-05T08:47:10+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "Improving Performance–Efficiency Trade-offs Through Model Compression and Optimization Strategies"
+  },
+  "processed_at": "2026-10-05T08:47:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a241f98305ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

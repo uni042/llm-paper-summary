@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0b4d6619892b383-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:uYLFoz1vlAC",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:uYLFoz1vlAC",
+    "identity_tokens": [
+      "OpenReview:uYLFoz1vlAC"
+    ],
+    "reason": "S4という汎用系列モデルの新アーキテクチャが主題であり、LLM推論時のメモリ階層・サービング・KV管理・ランタイム最適化を扱う研究ではない。",
+    "first_checked_at": "2026-09-30T08:00:58+00:00",
+    "last_checked_at": "2026-09-30T08:00:58+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13134-subquadratic-attention-heterogeneous-disaggregation.md"
+    ],
+    "title": "Efficiently Modeling Long Sequences with Structured State Spaces"
+  },
+  "processed_at": "2026-09-30T08:00:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0b4d6619892",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

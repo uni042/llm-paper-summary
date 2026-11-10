@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-84e0caec9146efee-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.20473",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.20473",
+    "identity_tokens": [
+      "arXiv:2605.20473"
+    ],
+    "reason": "一次要旨で、DiffCodeGenは複数のコード候補を生成し、既存テスト不要の被覆率誘導ファジングで入力を合成、候補間の実行結果をクラスタ化して最大クラスタの代表解を選ぶと確認した。候補選択時に追加LLM呼出しを不要にして推論時トークン消費と所要時間を減らすが、主たる貢献はコード生成問題の解答選択・検証手続きであり、汎用LLMサービング、GPU実行、KVキャッシュ、モデル並列化等の推論基盤そのものを最適化する方式ではない。推論時費用削減との接点はあるため対象外と断定せず微妙とする。",
+    "first_checked_at": "2026-10-12T21:38:03+00:00",
+    "last_checked_at": "2026-10-12T21:38:03+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Code Generation by Differential Test Time Scaling"
+  },
+  "processed_at": "2026-10-12T21:38:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-84e0caec9146",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,1399 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-530c9ea948b6da71-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-530c9ea948b6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3774934.3786444",
+    "arXiv:2512.04857",
+    "arXiv:2512.12602",
+    "arXiv:2512.17452",
+    "arXiv:2512.23995",
+    "arXiv:2602.13215",
+    "arXiv:2605.03884",
+    "arXiv:2605.04738",
+    "arXiv:2605.12110",
+    "arXiv:2605.22884",
+    "arXiv:2605.24786",
+    "arXiv:2605.25745",
+    "arXiv:2605.29727",
+    "arXiv:2606.02775",
+    "arXiv:2606.05698"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 15,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "544a4409df07494e677c344c74797c0da4acbbd9",
+  "raw_search_result_count": 15,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 15,
+  "provider_progress": {
+    "requested_count": 15,
+    "status_counts": {
+      "allowed": 15,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T20:22:37.968711+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3774934.3786444",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.04857",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.12602",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.17452",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.23995",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.13215",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.03884",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.04738",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.12110",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.22884",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.24786",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.25745",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.29727",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.02775",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.05698",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Exact Flow Linear Attention: Exact Solution from Continuous-Time Dynamics",
+      "source_url": "https://arxiv.org/abs/2512.12602",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we introduce Exact Flow Linear Attention~(EFLA), an exact-flow formulation of delta-rule linear attention. We show that the delta-rule update can be interpreted as an explicit Euler discretization of an underlying continuous-time system. EFLA replaces this first-order update with the exact closed-form flow. By exploiting the rank-1 structure of the dynamics matrix, both the matrix exponential and the input integral collapse to a simple update that preserves delta-rule linear attention's algebraic structure, parameter count, linear-time complexity, and chunkwise parallelism. This attention mechanism removes the Euler discretization error of the delta-rule dynamics without introducing additional parameters. Experiments on robustness tests, language modeling benchmarks, and the MAD synthetic benchmark show that EFLA improves stability under corrupted and high-energy inputs, reduces perplexity, and achieves stronger downstream performance compared to SSM and Euler-style baselines. These results establish exact-flow integration as a principled and scalable update mechanism for delta-rule linear attention.",
+      "identifiers": [
+        "SemanticScholar:7016587ec92805544197140b06677dfb96310c90"
+      ],
+      "semantic_scholar_id": "7016587ec92805544197140b06677dfb96310c90",
+      "canonical_id": "arXiv:2512.12602",
+      "arxiv_id": "2512.12602",
+      "authors": [
+        "Jing-Di Lei",
+        "Di Zhang",
+        "Soujanya Poria"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 303,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Autoregressive Image Generation Needs Only a Few Lines of Cached Tokens",
+      "source_url": "https://arxiv.org/abs/2512.04857",
+      "year": 2025,
+      "published": "2025-12-04",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive (AR) visual generation has emerged as a powerful paradigm for image and multimodal synthesis, owing to its scalability and generality. However, existing AR image generation suffers from severe memory bottlenecks due to the need to cache all previously generated visual tokens during decoding, leading to both high storage requirements and low throughput. In this paper, we introduce \\textbf{LineAR}, a novel, training-free progressive key-value (KV) cache compression pipeline for autoregressive image generation. By fully exploiting the intrinsic characteristics of visual attention, LineAR manages the cache at the line level using a 2D view, preserving the visual dependency regions while progressively evicting less-informative tokens that are harmless for subsequent line generation, guided by inter-line attention. LineAR enables efficient autoregressive (AR) image generation by utilizing only a few lines of cache, achieving both memory savings and throughput speedup, while maintaining or even improving generation quality. Extensive experiments across six autoregressive image generation models, including class-conditional and text-to-image generation, validate its effectiveness and generality. LineAR improves ImageNet FID from 2.77 to 2.68 and COCO FID from 23.85 to 22.86 on LlamaGen-XL and Janus-Pro-1B, while retaining only 1/6 KV cache. It also improves DPG on Lumina-mGPT-768 with just 1/8 KV cache. Additionally, LineAR achieves significant memory and throughput gains, including up to 67.61% memory reduction and 7.57x speedup on LlamaGen-XL, and 39.66% memory reduction and 5.62x speedup on Janus-Pro-7B.",
+      "identifiers": [
+        "SemanticScholar:f41456437797b11fd52811e98ee3117b833928ef"
+      ],
+      "semantic_scholar_id": "f41456437797b11fd52811e98ee3117b833928ef",
+      "canonical_id": "arXiv:2512.04857",
+      "arxiv_id": "2512.04857",
+      "doi": "10.48550/arXiv.2512.04857",
+      "authors": [
+        "Ziran Qin",
+        "Youru Lv",
+        "Mingbao Lin",
+        "Zeren Zhang",
+        "Changyi Gan",
+        "Tieyuan Chen",
+        "Weiyao Lin"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 313,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KV Admission: Learning What to Write for Efficient Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2512.17452",
+      "year": 2025,
+      "published": "2025-12-19",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM inference is bottlenecked by the quadratic attention complexity and linear Key-Value (KV) cache growth. Prior approaches mitigate this via post-hoc selection or eviction but overlook the root inefficiency: indiscriminate token admission. In this paper, we formalize KV management as a causal system of three primitives: KV Admission, Selection, and Eviction. We instantiate KV Admission via Write-Gated KV (WG-KV), a lightweight mechanism that learns to predict token utility before cache entry. By filtering out redundant states early to maintain a compact global cache alongside a sliding local cache, WG-KV significantly reduces memory usage and accelerates both prefill and decode phases. Our results demonstrate that learning what to write is a principled and practical recipe for efficient long-context inference. Code is available at https://github.com/EMCLab-Sinica/WG-KV.",
+      "identifiers": [
+        "SemanticScholar:327d3bb056e1456bb96ff711a2ec54317ca61feb"
+      ],
+      "semantic_scholar_id": "327d3bb056e1456bb96ff711a2ec54317ca61feb",
+      "canonical_id": "arXiv:2512.17452",
+      "arxiv_id": "2512.17452",
+      "authors": [
+        "Yen-Chieh Huang",
+        "P. Hsiu",
+        "Rui Fang",
+        "Ming-Syan Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 298,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RepetitionCurse: Measuring and Understanding Router Imbalance in Mixture-of-Experts LLMs under DoS Stress",
+      "source_url": "https://arxiv.org/abs/2512.23995",
+      "year": 2025,
+      "published": "2025-12-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts architectures have become the standard for scaling large language models due to their superior parameter efficiency. To accommodate the growing number of experts in practice, modern inference systems commonly adopt expert parallelism to distribute experts across devices. However, the absence of explicit load balancing constraints during inference allows adversarial inputs to trigger severe routing concentration. We demonstrate that out-of-distribution prompts can manipulate the routing strategy such that all tokens are consistently routed to the same set of top-$k$ experts, which creates computational bottlenecks on certain devices while forcing others to idle. This converts an efficiency mechanism into a denial-of-service attack vector, leading to violations of service-level agreements for time to first token. We propose RepetitionCurse, a low-cost black-box strategy to exploit this vulnerability. By identifying a universal flaw in MoE router behavior, RepetitionCurse constructs adversarial prompts using simple repetitive token patterns in a model-agnostic manner. On widely deployed MoE models like Mixtral-8x7B, our method increases end-to-end inference latency by 3.063x, degrading service availability significantly.",
+      "identifiers": [
+        "SemanticScholar:b9fd049c8f61a728e9e837f34696bdae4aaa1305"
+      ],
+      "semantic_scholar_id": "b9fd049c8f61a728e9e837f34696bdae4aaa1305",
+      "canonical_id": "arXiv:2512.23995",
+      "arxiv_id": "2512.23995",
+      "doi": "10.48550/arXiv.2512.23995",
+      "authors": [
+        "Ruixuan Huang",
+        "Qing-Yue Wang",
+        "Hantao Huang",
+        "Yu-Dong Gao",
+        "Dong Chen",
+        "Shuai Wang",
+        "Wei Wang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 287,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "When to Think Fast and Slow? AMOR: Adaptive Entropy Gate for Hybrid Models",
+      "source_url": "https://arxiv.org/abs/2602.13215",
+      "year": 2026,
+      "published": "2026-01-22",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recurrent-attention hybrids aim to combine the efficiency of recurrence with the contextual recall of attention, but existing approaches typically apply attention uniformly across all positions, even when the recurrent state alone is sufficient for accurate prediction. We introduce AMOR (Adaptive Metacognitive Output Router), a post-hoc hybrid architecture that selectively invokes attention based on predictive uncertainty. A recurrent backbone is augmented with entropy-gated attention blocks that activate only when the model's output entropy exceeds a dynamic threshold derived from a running batch median and scaled standard deviation. The resulting binary gate requires no learned routing parameters. Pretrained from scratch on FineWeb-Edu and with attention invoked on only ~40% of positions, one of the AMOR variants (Mamba2 or Gated DeltaNet backbones) achieves the highest eight-task common-sense reasoning average at each scale among pure recurrent, pure attention, and fixed-schedule hybrid models. AMOR also improves retrieval performance over pure recurrent models while remaining competitive against fixed-schedule hybrids. Additionally, AMOR retains the long-context robustness of its recurrent backbones, where the Transformer and other hybrid architectures degrade under distribution shift. These results suggest that when attention is applied matters as much as how much: selectively allocating attention based on predictive uncertainty improves accuracy, robustness, and efficiency, offering a simple alternative to uniform or fixed routing strategies.",
+      "identifiers": [
+        "SemanticScholar:8ef34187d81dbce9783d45361b30e289c6e9de7d"
+      ],
+      "semantic_scholar_id": "8ef34187d81dbce9783d45361b30e289c6e9de7d",
+      "canonical_id": "arXiv:2602.13215",
+      "arxiv_id": "2602.13215",
+      "authors": [
+        "Zheng Haoran",
+        "Sha-Ni Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 264,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MetaAttention: A Unified and Performant Attention Framework across Hardware Backends",
+      "source_url": "https://doi.org/10.1145/3774934.3786444",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Computing attention is the backbone of transformer-based models like large language models. However, the increasing diversity of attention algorithms presents significant challenges for unleashing hardware performance. State-of-the-art variants like FlashAttention target a specific attention algorithm or hardware platform, which fail to generalize to other algorithms and platforms. We present MetaAttention, a framework that automatically derives the optimal implementation of an attention algorithm given a hardware platform. Our key insight is that variants of attention can be abstracted into two operations: relevance scoring and aggregation, complemented by customizable functions and configurations like the input shape. Based on it, we systematically design a cross-backend attention runtime around these operations that generalizes to variants of attention with customizable operators. To unleash the hardware performance, we further propose an IntermediateTensor-based search method to find the optimal tiling strategy and the parallelism scheme according to the attention customization and hardware features. MetaAttention delivers up to a 10.4× speedup for configurations previously unsupported by state-of-the-art systems. Additionally, MetaAttention achieves performance comparable to manually-optimized libraries such as FlashMLA while significantly reducing the amount of code required.",
+      "identifiers": [
+        "SemanticScholar:aa760b966fed2e7223bb966725fd5369bc326746"
+      ],
+      "semantic_scholar_id": "aa760b966fed2e7223bb966725fd5369bc326746",
+      "doi": "10.1145/3774934.3786444",
+      "canonical_id": "DOI:10.1145/3774934.3786444",
+      "authors": [
+        "Feiyang Chen",
+        "Yu Cheng",
+        "Lei Wang",
+        "Yuqing Xia",
+        "Zi-Ming Miao",
+        "Ling-Xiao Ma",
+        "Fan Yang",
+        "Ji-Long Xue",
+        "Zhi Yang",
+        "Mao Yang",
+        "Xingda Wei",
+        "Hai-Bo Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 258,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AURA: Action-Gated Memory for Robot Policies at Constant VRAM",
+      "source_url": "https://arxiv.org/abs/2606.02775",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The KV-cache is the right memory for datacenters but the wrong memory for robots. Datacenter inference batches many short requests and resets them, amortizing an attention cache across a crowd. Embodied agents instead run one long, non-resetting episode on bandwidth-limited edge hardware, where high-bandwidth memory and flash are scarce, flash has finite write endurance, and memory writes rather than compute can become the binding constraint. AURA-Mem (Action-Utility Recurrent Adaptive Memory) targets this regime. It wraps a frozen vision-language-action backbone with a constant-size recurrent memory and a learned gate that writes only when the current observation would change the next action: memory that knows when to stay silent. Unlike reconstruction-based memory, the gate is trained directly against a closed-loop action-error signal. Its inference state is fixed at 4,224 bytes regardless of horizon, while a KV-cache grows to 6,061 times larger at 100,000 steps. On a controlled synthetic benchmark, AURA-Mem matches the best O(1) baseline in accuracy while using 5.19-6.13 times fewer writes, and up to 9.19 times fewer writes on easier configurations. Budget-matched random and periodic schedules do not recover this gain, isolating the benefit to the action-surprise signal. On a trained closed-loop OpenVLA-OFT 7B panel on LIBERO-Long (n=60 episodes per arm), the gate does not hurt success: AURA-Mem matches the ungated base policy (0.233) and slightly exceeds an always-write KV arm (0.217), while using 7.0 times fewer writes and constant memory. We also instantiate an approximate-information-state value-loss bound as a methodology demonstration; at this scale, the bound is vacuous rather than a guarantee.",
+      "identifiers": [
+        "SemanticScholar:a2c1ac3d56532780e00f3448d0fee499441fa0f2"
+      ],
+      "semantic_scholar_id": "a2c1ac3d56532780e00f3448d0fee499441fa0f2",
+      "canonical_id": "arXiv:2606.02775",
+      "arxiv_id": "2606.02775",
+      "doi": "10.48550/arXiv.2606.02775",
+      "authors": [
+        "J. Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 134,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QKVShare: Quantized KV-Cache Handoff for Multi-Agent On-Device LLMs",
+      "source_url": "https://arxiv.org/abs/2605.03884",
+      "year": 2026,
+      "published": "2026-05-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent LLM systems on edge devices need to hand off latent context efficiently, but the practical choices today are expensive re-prefill or full-precision KV transfer. We study QKVShare, a framework for quantized KV-cache handoff between agents that combines token-level mixed-precision allocation, a self-contained CacheCard representation, and a HuggingFace-compatible cache injection path. Our current results support a narrower but clearer story than the original draft: on 150 GSM8K problems with Llama-3.1-8B-Instruct, adaptive quantization remains competitive under repeated handoff and shows its clearest gains against uniform quantization in deeper-hop, higher budget settings; for handoff latency, the QKVShare path reduces TTFT relative to full re prefill at every tested context, from 130.7 ms vs. 150.2 ms at nominal 1K context to 397.1 ms vs. 1029.7 ms at nominal 8K context;. Stage timing shows that post-injection generation, not card creation, dominates the current QKVShare latency path. These results position quantized KV handoff as a promising on-device systems direction while also highlighting the need for stronger controller ablations and apples-to-apples runtime comparisons.",
+      "identifiers": [
+        "SemanticScholar:722dc2aa9d54ea1a13e4a07b57f9934696d4e113"
+      ],
+      "semantic_scholar_id": "722dc2aa9d54ea1a13e4a07b57f9934696d4e113",
+      "canonical_id": "arXiv:2605.03884",
+      "arxiv_id": "2605.03884",
+      "doi": "10.48550/arXiv.2605.03884",
+      "authors": [
+        "Pratik Honavar",
+        "L. TejpratapG.V.S."
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 161,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OSAQ: Outlier Self-Absorption for Accurate Low-bit LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2605.04738",
+      "year": 2026,
+      "published": "2026-05-06",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities. However, their massive parameter scale leads to significant resource consumption and latency during inference. Post-training weight-only quantization offers a promising solution by reducing model size and accelerating token generation through alleviating the memory-bound issue. Nevertheless, the presence of inherent systematic outliers in weights continues to be a major obstacle. While existing methods, such as scaling and rotation, attempt to address this issue, the performance remains unsatisfactory. In this paper, we propose Outlier Self-Absorption Quantization (OSAQ), which performs additive weight suppression guided by the second-order low-rank property for low-bit weight-only quantization of LLMs. Specifically, we observe that the Hessian exhibits low-rank consistency across different inputs, with certain directions consistently showing vanishing curvature. Leveraging this property, we identify a stable null space of the Hessian and then construct an additive weight transformation by linearly combining the vectors within this null space, thereby suppressing weight outliers without affecting the task loss. This additive transformation can be absorbed into the weights offline, requiring no inter-layer transformations and introducing no inference overhead. Moreover, the construction is efficiently achieved by a closed-form solution, without resource-intensive training or iterative procedures. Extensive experiments demonstrate that OSAQ effectively suppresses outliers and enhances low-bit quantization performance. For instance, in 2-bit quantization, OSAQ, when integrated with GPTQ, achieves over 40% lower perplexity compared to vanilla GPTQ.",
+      "identifiers": [
+        "SemanticScholar:d98375c2dbbade32217544b5fa61f23b742bb779"
+      ],
+      "semantic_scholar_id": "d98375c2dbbade32217544b5fa61f23b742bb779",
+      "canonical_id": "arXiv:2605.04738",
+      "arxiv_id": "2605.04738",
+      "doi": "10.48550/arXiv.2605.04738",
+      "authors": [
+        "Zhikai Li",
+        "Zhen Dong",
+        "Xue-Wen Liu",
+        "Jing Zhang",
+        "Qingyi Gu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 160,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AB-Sparse: Sparse Attention with Adaptive Block Size for Accurate and Efficient Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2605.12110",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models scale to longer contexts, loading the growing KV cache during attention computation becomes a critical bottleneck. Previous work has shown that attention computation is dominated by a small subset of tokens. This motivates block sparse attention methods that partition the KV cache into fixed-size blocks and selectively compute attention over those blocks exhibiting high importance. However, these methods assign a uniform block size across all attention heads, implicitly assuming homogeneous behavior throughout the model. Our analysis reveals that this assumption is flawed: attention heads exhibit widely varying sensitivity to block granularity, and uniformity leads to suboptimal accuracy. We present AB-Sparse, a training-free algorithm-system co-designed framework that improves accuracy while preserving throughput. AB-Sparse introduces lightweight adaptive block size allocation across attention heads to improve accuracy. To compensate for the additional memory overhead, it further employs lossless block centroid quantization. In addition, custom GPU kernels are developed to support efficient execution with variable block sizes. Evaluation results demonstrate that AB-Sparse achieves an accuracy improvement of up to 5.43% over existing block sparse attention baselines without throughput overhead.",
+      "identifiers": [
+        "SemanticScholar:9c5706af172ef68b120e31a40f2208055a44dab6"
+      ],
+      "semantic_scholar_id": "9c5706af172ef68b120e31a40f2208055a44dab6",
+      "canonical_id": "arXiv:2605.12110",
+      "arxiv_id": "2605.12110",
+      "doi": "10.48550/arXiv.2605.12110",
+      "authors": [
+        "Dian-Bo Liu",
+        "Rui-Tian Wang",
+        "Chen Chen",
+        "Mingliang Gong",
+        "Yongjie Yuan",
+        "Han Zhao",
+        "Yuan-Nuo Feng",
+        "Quan Chen",
+        "Min-Yi Guo"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Tensor Cache: Eviction-conditioned Associative Memory for Transformers",
+      "source_url": "https://arxiv.org/abs/2605.22884",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive Transformer KV caches grow linearly with context length; sliding-window caching bounds memory but discards evicted tokens entirely, so relevant evidence outside the window becomes inaccessible. We introduce \\emph{Tensor Cache}, a two-level cache that pairs sliding-window softmax attention as a first-level cache (L1) with a fixed-size outer-product fast-weight memory as a second-level cache (L2) fed by KV pairs evicted from the window. Recent tokens remain in exact local attention; evicted pairs are compressed into a per-layer matrix $A$ and read by future queries through a single matrix multiplication, exploiting the linear-attention identity $q_t(k_i \\otimes v_i)=\\langle q_t,k_i\\rangle v_i$. A learned scalar gate fuses the L1 and L2 outputs, and per-head decay and write-rate parameters are trained end-to-end. The outer-product memory and the read identity are well-known; our contribution is their use as an L2 cache fed exclusively by sliding-window evictions, plus identifying that the common chunked-mean training shortcut $A\\!\\leftarrow\\!\\lambda A\\!+\\!\\eta(\\bar k\\!\\otimes\\!\\bar v)$ silently introduces $C^2{-}C$ spurious cross-token outer products per chunk, and closing the gap with a parallel weighted-sum scan equivalent to per-token writes within float32 epsilon. Across systems scaling, controlled associative recall, long-context language modeling, and memory-capacity diagnostics, Tensor Cache improves the memory--quality frontier over bounded-state baselines.",
+      "identifiers": [
+        "SemanticScholar:a633c6baa01082f61a4a5ebcc65e8d49ecfebd38"
+      ],
+      "semantic_scholar_id": "a633c6baa01082f61a4a5ebcc65e8d49ecfebd38",
+      "canonical_id": "arXiv:2605.22884",
+      "arxiv_id": "2605.22884",
+      "doi": "10.48550/arXiv.2605.22884",
+      "authors": [
+        "Kabir Swain",
+        "Si-Jie Han",
+        "D. Weidele",
+        "Mauro Martino",
+        "Antonio Torralba"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CONF-KV: Confidence-Aware KV Cache Eviction with Mixed-Precision Storage for Long-Horizon LLM",
+      "source_url": "https://arxiv.org/abs/2605.24786",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon LLM inference turns the key--value (KV) cache into the dominant GPU memory consumer and makes per-token attention increasingly expensive. Many common eviction policies use static recency windows or historical attention, leaving unused a signal computed on every decoding step: the model's current uncertainty. We introduce CONF-KV, a KV-cache manager that converts the next-token distribution into a scalar confidence score and uses it to choose the per-step cache budget, retaining more context when the model is uncertain and pruning aggressively when it is confident. Within each budget, tokens are ranked by a composite of accumulated attention mass and recency, while a protected recent window preserves local coherence. We combine the policy with blockwise online-softmax attention, mixed FP16/INT8 storage, and a pyramidal per-layer budget variant. Across four model families and generated lengths up to 4K, CONF-KV stays near the footprint of a fixed 512-token sliding window while remaining within 1.5--2.1 perplexity points of full KV. On Needle-in-a-Haystack up to 32K tokens, CONF-KV reaches 91.4% retrieval accuracy versus 53.8% for sliding windows and 80.6% for H2O; on 75 VisualWebArena tasks it retains 95.3% of full-KV success at 2.8 times lower peak memory.",
+      "identifiers": [
+        "SemanticScholar:c1805212d538eb82ef43faf076721291572655a7"
+      ],
+      "semantic_scholar_id": "c1805212d538eb82ef43faf076721291572655a7",
+      "canonical_id": "arXiv:2605.24786",
+      "arxiv_id": "2605.24786",
+      "doi": "10.48550/arXiv.2605.24786",
+      "authors": [
+        "Yubo Li",
+        "Yidi Miao"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Selective Latent Thinking: Adaptive Compression of LLM Reasoning Chains",
+      "source_url": "https://arxiv.org/abs/2605.25745",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Explicit chain-of-thought (CoT) reasoning substantially improves the reasoning ability of large language models (LLMs), but incurs high inference cost due to lengthy autoregressive traces. Existing latent reasoning methods offer a promising alternative, yet they often treat reasoning as uniformly compressible, causing precision-critical intermediate steps to be overly compressed and thereby degrading reasoning accuracy. In this work, we propose Selective Latent Thinking (SLT), a framework that selectively compresses redundant reasoning spans into latent representations while preserving precision-critical spans as explicit CoT within the same reasoning trajectory. Specifically, SLT first uses a lightweight decoder to anticipate a short upcoming reasoning span, and then applies confidence-based gating to determine the longest span that can be reliably compressed. The accepted span is encoded into a compact latent representation to improve reasoning efficiency, while uncertain or precision-critical reasoning remains in explicit CoT form to preserve accuracy. To learn this selective compression policy, SLT adopts a three-stage training strategy that combines span-level latent compression, reliability-aware future reasoning prediction, and trajectory-level reinforcement learning to optimize the trade-off between answer correctness and reasoning cost. Extensive experiments across four mathematical reasoning benchmarks demonstrate that SLT achieves 22.7\\% higher accuracy than latent reasoning baselines at comparable compression ratios, while reducing reasoning chain length by 58.4\\% with only 2.8\\% accuracy degradation compared to explicit CoT,Our code can be found in https://github.com/hunshi34/SLT.",
+      "identifiers": [
+        "SemanticScholar:0f62ba9f3d2c13ac767eb7d7e71975641ab9e33d"
+      ],
+      "semantic_scholar_id": "0f62ba9f3d2c13ac767eb7d7e71975641ab9e33d",
+      "canonical_id": "arXiv:2605.25745",
+      "arxiv_id": "2605.25745",
+      "doi": "10.48550/arXiv.2605.25745",
+      "authors": [
+        "Hui-Ling Xie",
+        "Jie Liu",
+        "Ziyue Qiao",
+        "J. Vanschoren"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 141,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Bastion: Budget-Aware Speculative Decoding with Tree-structured Block Diffusion Drafting",
+      "source_url": "https://arxiv.org/abs/2605.29727",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block-diffusion drafters have recently emerged as a powerful alternative for speculative decoding by predicting multiple future-token distributions in a single parallel step. However, since these parallel predictions are sampled from position-wise marginals rather than fully conditioned sequences, committing to a single greedy path often fails to capture the target model's preferred trajectory. To address this, we propose BASTION, a budget-aware speculative decoding framework with tree-based diffusion drafting. Unlike existing methods that rely on static tree topologies, BASTION dynamically constructs query-dependent trees by balancing draft quality against hardware constraints. Our framework integrates three synergistic components: (1) an acceptance surrogate that estimates expected accepted length via path confidence, (2) an online latency estimator that calibrates a hardware-aware roofline model, and (3) an adaptive best-first expansion that grows the tree until marginal gains no longer justify incremental verification costs. BASTION is training-free, preserves the target model's distribution, and requires no per-setting tuning. Across diverse benchmarks and GPU architectures, BASTION achieves up to a 6.61x speedup over standard autoregressive decoding, outperforming state-of-the-art block-diffusion baselines by 39%.",
+      "identifiers": [
+        "SemanticScholar:ef86789aa7662b87dfd498da51de6d9135c45326"
+      ],
+      "semantic_scholar_id": "ef86789aa7662b87dfd498da51de6d9135c45326",
+      "canonical_id": "arXiv:2605.29727",
+      "arxiv_id": "2605.29727",
+      "doi": "10.48550/arXiv.2605.29727",
+      "authors": [
+        "Soowon Oh",
+        "Nam Cao",
+        "Yujin Kim",
+        "Hojung Jung",
+        "Huzama Ahmad",
+        "Sangmin Bae",
+        "SeYoung Yun"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rethinking LoRA Memory Through the Lens of KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2606.05698",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parametric retrieval augmentation encodes document information into lightweight, document-specific modules such as LoRA adapters, reducing the need to include all evidence as input context. However, it remains unclear how this parameter-side memory interacts with context-side memory stored in the KV cache. We study this interaction in document-level question answering by progressively evicting document key-value states and measuring when a document LoRA contributes beyond the retained context. We find that document LoRA adds little when the KV cache is largely intact, but becomes increasingly useful under aggressive compression, recovering 13-21 ROUGE-L points when no document context remains. The gain is largest when the base model encodes the document, and the adapter is applied only during answer generation, suggesting that document LoRA is better understood as decoding-time parametric memory than as a document encoder. Finally, QA-style supervision produces substantially stronger adapters than raw-context next-token-prediction. These results position document LoRA as a complementary memory channel whose value emerges precisely when context-side evidence is scarce.",
+      "identifiers": [
+        "SemanticScholar:496880a4fc1e790158d1bd26e3f7abc711464927"
+      ],
+      "semantic_scholar_id": "496880a4fc1e790158d1bd26e3f7abc711464927",
+      "canonical_id": "arXiv:2606.05698",
+      "arxiv_id": "2606.05698",
+      "doi": "10.48550/arXiv.2606.05698",
+      "authors": [
+        "Chunsheng Zuo",
+        "Liaoyaqi Wang",
+        "William Jurayj",
+        "William Fleshman",
+        "Benjamin Van Durme"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 131,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.12602",
+      "identity_tokens": [
+        "id:SemanticScholar:7016587ec92805544197140b06677dfb96310c90",
+        "id:arXiv:2512.12602",
+        "title:exact flow linear attention exact solution from continuoustime dynamics",
+        "url:https://arxiv.org/abs/2512.12602"
+      ],
+      "record": {
+        "title": "Exact Flow Linear Attention: Exact Solution from Continuous-Time Dynamics",
+        "source_url": "https://arxiv.org/abs/2512.12602",
+        "year": 2025,
+        "published": "2025-12-14",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this paper, we introduce Exact Flow Linear Attention~(EFLA), an exact-flow formulation of delta-rule linear attention. We show that the delta-rule update can be interpreted as an explicit Euler discretization of an underlying continuous-time system. EFLA replaces this first-order update with the exact closed-form flow. By exploiting the rank-1 structure of the dynamics matrix, both the matrix exponential and the input integral collapse to a simple update that preserves delta-rule linear attention's algebraic structure, parameter count, linear-time complexity, and chunkwise parallelism. This attention mechanism removes the Euler discretization error of the delta-rule dynamics without introducing additional parameters. Experiments on robustness tests, language modeling benchmarks, and the MAD synthetic benchmark show that EFLA improves stability under corrupted and high-energy inputs, reduces perplexity, and achieves stronger downstream performance compared to SSM and Euler-style baselines. These results establish exact-flow integration as a principled and scalable update mechanism for delta-rule linear attention.",
+        "identifiers": [
+          "SemanticScholar:7016587ec92805544197140b06677dfb96310c90"
+        ],
+        "semantic_scholar_id": "7016587ec92805544197140b06677dfb96310c90",
+        "canonical_id": "arXiv:2512.12602",
+        "arxiv_id": "2512.12602",
+        "authors": [
+          "Jing-Di Lei",
+          "Di Zhang",
+          "Soujanya Poria"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 303,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.04857",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.04857",
+        "id:SemanticScholar:f41456437797b11fd52811e98ee3117b833928ef",
+        "id:arXiv:2512.04857",
+        "title:autoregressive image generation needs only a few lines of cached tokens",
+        "url:https://arxiv.org/abs/2512.04857"
+      ],
+      "record": {
+        "title": "Autoregressive Image Generation Needs Only a Few Lines of Cached Tokens",
+        "source_url": "https://arxiv.org/abs/2512.04857",
+        "year": 2025,
+        "published": "2025-12-04",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive (AR) visual generation has emerged as a powerful paradigm for image and multimodal synthesis, owing to its scalability and generality. However, existing AR image generation suffers from severe memory bottlenecks due to the need to cache all previously generated visual tokens during decoding, leading to both high storage requirements and low throughput. In this paper, we introduce \\textbf{LineAR}, a novel, training-free progressive key-value (KV) cache compression pipeline for autoregressive image generation. By fully exploiting the intrinsic characteristics of visual attention, LineAR manages the cache at the line level using a 2D view, preserving the visual dependency regions while progressively evicting less-informative tokens that are harmless for subsequent line generation, guided by inter-line attention. LineAR enables efficient autoregressive (AR) image generation by utilizing only a few lines of cache, achieving both memory savings and throughput speedup, while maintaining or even improving generation quality. Extensive experiments across six autoregressive image generation models, including class-conditional and text-to-image generation, validate its effectiveness and generality. LineAR improves ImageNet FID from 2.77 to 2.68 and COCO FID from 23.85 to 22.86 on LlamaGen-XL and Janus-Pro-1B, while retaining only 1/6 KV cache. It also improves DPG on Lumina-mGPT-768 with just 1/8 KV cache. Additionally, LineAR achieves significant memory and throughput gains, including up to 67.61% memory reduction and 7.57x speedup on LlamaGen-XL, and 39.66% memory reduction and 5.62x speedup on Janus-Pro-7B.",
+        "identifiers": [
+          "SemanticScholar:f41456437797b11fd52811e98ee3117b833928ef"
+        ],
+        "semantic_scholar_id": "f41456437797b11fd52811e98ee3117b833928ef",
+        "canonical_id": "arXiv:2512.04857",
+        "arxiv_id": "2512.04857",
+        "doi": "10.48550/arXiv.2512.04857",
+        "authors": [
+          "Ziran Qin",
+          "Youru Lv",
+          "Mingbao Lin",
+          "Zeren Zhang",
+          "Changyi Gan",
+          "Tieyuan Chen",
+          "Weiyao Lin"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 313,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.17452",
+      "identity_tokens": [
+        "id:SemanticScholar:327d3bb056e1456bb96ff711a2ec54317ca61feb",
+        "id:arXiv:2512.17452",
+        "title:kv admission learning what to write for efficient longcontext llm inference",
+        "url:https://arxiv.org/abs/2512.17452"
+      ],
+      "record": {
+        "title": "KV Admission: Learning What to Write for Efficient Long-Context LLM Inference",
+        "source_url": "https://arxiv.org/abs/2512.17452",
+        "year": 2025,
+        "published": "2025-12-19",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context LLM inference is bottlenecked by the quadratic attention complexity and linear Key-Value (KV) cache growth. Prior approaches mitigate this via post-hoc selection or eviction but overlook the root inefficiency: indiscriminate token admission. In this paper, we formalize KV management as a causal system of three primitives: KV Admission, Selection, and Eviction. We instantiate KV Admission via Write-Gated KV (WG-KV), a lightweight mechanism that learns to predict token utility before cache entry. By filtering out redundant states early to maintain a compact global cache alongside a sliding local cache, WG-KV significantly reduces memory usage and accelerates both prefill and decode phases. Our results demonstrate that learning what to write is a principled and practical recipe for efficient long-context inference. Code is available at https://github.com/EMCLab-Sinica/WG-KV.",
+        "identifiers": [
+          "SemanticScholar:327d3bb056e1456bb96ff711a2ec54317ca61feb"
+        ],
+        "semantic_scholar_id": "327d3bb056e1456bb96ff711a2ec54317ca61feb",
+        "canonical_id": "arXiv:2512.17452",
+        "arxiv_id": "2512.17452",
+        "authors": [
+          "Yen-Chieh Huang",
+          "P. Hsiu",
+          "Rui Fang",
+          "Ming-Syan Chen"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 298,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.23995",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.23995",
+        "id:SemanticScholar:b9fd049c8f61a728e9e837f34696bdae4aaa1305",
+        "id:arXiv:2512.23995",
+        "title:repetitioncurse measuring and understanding router imbalance in mixtureofexperts llms under dos stress",
+        "url:https://arxiv.org/abs/2512.23995"
+      ],
+      "record": {
+        "title": "RepetitionCurse: Measuring and Understanding Router Imbalance in Mixture-of-Experts LLMs under DoS Stress",
+        "source_url": "https://arxiv.org/abs/2512.23995",
+        "year": 2025,
+        "published": "2025-12-30",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts architectures have become the standard for scaling large language models due to their superior parameter efficiency. To accommodate the growing number of experts in practice, modern inference systems commonly adopt expert parallelism to distribute experts across devices. However, the absence of explicit load balancing constraints during inference allows adversarial inputs to trigger severe routing concentration. We demonstrate that out-of-distribution prompts can manipulate the routing strategy such that all tokens are consistently routed to the same set of top-$k$ experts, which creates computational bottlenecks on certain devices while forcing others to idle. This converts an efficiency mechanism into a denial-of-service attack vector, leading to violations of service-level agreements for time to first token. We propose RepetitionCurse, a low-cost black-box strategy to exploit this vulnerability. By identifying a universal flaw in MoE router behavior, RepetitionCurse constructs adversarial prompts using simple repetitive token patterns in a model-agnostic manner. On widely deployed MoE models like Mixtral-8x7B, our method increases end-to-end inference latency by 3.063x, degrading service availability significantly.",
+        "identifiers": [
+          "SemanticScholar:b9fd049c8f61a728e9e837f34696bdae4aaa1305"
+        ],
+        "semantic_scholar_id": "b9fd049c8f61a728e9e837f34696bdae4aaa1305",
+        "canonical_id": "arXiv:2512.23995",
+        "arxiv_id": "2512.23995",
+        "doi": "10.48550/arXiv.2512.23995",
+        "authors": [
+          "Ruixuan Huang",
+          "Qing-Yue Wang",
+          "Hantao Huang",
+          "Yu-Dong Gao",
+          "Dong Chen",
+          "Shuai Wang",
+          "Wei Wang"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 287,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.13215",
+      "identity_tokens": [
+        "id:SemanticScholar:8ef34187d81dbce9783d45361b30e289c6e9de7d",
+        "id:arXiv:2602.13215",
+        "title:when to think fast and slow amor adaptive entropy gate for hybrid models",
+        "url:https://arxiv.org/abs/2602.13215"
+      ],
+      "record": {
+        "title": "When to Think Fast and Slow? AMOR: Adaptive Entropy Gate for Hybrid Models",
+        "source_url": "https://arxiv.org/abs/2602.13215",
+        "year": 2026,
+        "published": "2026-01-22",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recurrent-attention hybrids aim to combine the efficiency of recurrence with the contextual recall of attention, but existing approaches typically apply attention uniformly across all positions, even when the recurrent state alone is sufficient for accurate prediction. We introduce AMOR (Adaptive Metacognitive Output Router), a post-hoc hybrid architecture that selectively invokes attention based on predictive uncertainty. A recurrent backbone is augmented with entropy-gated attention blocks that activate only when the model's output entropy exceeds a dynamic threshold derived from a running batch median and scaled standard deviation. The resulting binary gate requires no learned routing parameters. Pretrained from scratch on FineWeb-Edu and with attention invoked on only ~40% of positions, one of the AMOR variants (Mamba2 or Gated DeltaNet backbones) achieves the highest eight-task common-sense reasoning average at each scale among pure recurrent, pure attention, and fixed-schedule hybrid models. AMOR also improves retrieval performance over pure recurrent models while remaining competitive against fixed-schedule hybrids. Additionally, AMOR retains the long-context robustness of its recurrent backbones, where the Transformer and other hybrid architectures degrade under distribution shift. These results suggest that when attention is applied matters as much as how much: selectively allocating attention based on predictive uncertainty improves accuracy, robustness, and efficiency, offering a simple alternative to uniform or fixed routing strategies.",
+        "identifiers": [
+          "SemanticScholar:8ef34187d81dbce9783d45361b30e289c6e9de7d"
+        ],
+        "semantic_scholar_id": "8ef34187d81dbce9783d45361b30e289c6e9de7d",
+        "canonical_id": "arXiv:2602.13215",
+        "arxiv_id": "2602.13215",
+        "authors": [
+          "Zheng Haoran",
+          "Sha-Ni Chen"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 264,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3774934.3786444",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774934.3786444",
+        "id:SemanticScholar:aa760b966fed2e7223bb966725fd5369bc326746",
+        "title:metaattention a unified and performant attention framework across hardware backends",
+        "url:https://doi.org/10.1145/3774934.3786444"
+      ],
+      "record": {
+        "title": "MetaAttention: A Unified and Performant Attention Framework across Hardware Backends",
+        "source_url": "https://doi.org/10.1145/3774934.3786444",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Computing attention is the backbone of transformer-based models like large language models. However, the increasing diversity of attention algorithms presents significant challenges for unleashing hardware performance. State-of-the-art variants like FlashAttention target a specific attention algorithm or hardware platform, which fail to generalize to other algorithms and platforms. We present MetaAttention, a framework that automatically derives the optimal implementation of an attention algorithm given a hardware platform. Our key insight is that variants of attention can be abstracted into two operations: relevance scoring and aggregation, complemented by customizable functions and configurations like the input shape. Based on it, we systematically design a cross-backend attention runtime around these operations that generalizes to variants of attention with customizable operators. To unleash the hardware performance, we further propose an IntermediateTensor-based search method to find the optimal tiling strategy and the parallelism scheme according to the attention customization and hardware features. MetaAttention delivers up to a 10.4× speedup for configurations previously unsupported by state-of-the-art systems. Additionally, MetaAttention achieves performance comparable to manually-optimized libraries such as FlashMLA while significantly reducing the amount of code required.",
+        "identifiers": [
+          "SemanticScholar:aa760b966fed2e7223bb966725fd5369bc326746"
+        ],
+        "semantic_scholar_id": "aa760b966fed2e7223bb966725fd5369bc326746",
+        "doi": "10.1145/3774934.3786444",
+        "canonical_id": "DOI:10.1145/3774934.3786444",
+        "authors": [
+          "Feiyang Chen",
+          "Yu Cheng",
+          "Lei Wang",
+          "Yuqing Xia",
+          "Zi-Ming Miao",
+          "Ling-Xiao Ma",
+          "Fan Yang",
+          "Ji-Long Xue",
+          "Zhi Yang",
+          "Mao Yang",
+          "Xingda Wei",
+          "Hai-Bo Chen"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 258,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.02775",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.02775",
+        "id:SemanticScholar:a2c1ac3d56532780e00f3448d0fee499441fa0f2",
+        "id:arXiv:2606.02775",
+        "title:aura actiongated memory for robot policies at constant vram",
+        "url:https://arxiv.org/abs/2606.02775"
+      ],
+      "record": {
+        "title": "AURA: Action-Gated Memory for Robot Policies at Constant VRAM",
+        "source_url": "https://arxiv.org/abs/2606.02775",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The KV-cache is the right memory for datacenters but the wrong memory for robots. Datacenter inference batches many short requests and resets them, amortizing an attention cache across a crowd. Embodied agents instead run one long, non-resetting episode on bandwidth-limited edge hardware, where high-bandwidth memory and flash are scarce, flash has finite write endurance, and memory writes rather than compute can become the binding constraint. AURA-Mem (Action-Utility Recurrent Adaptive Memory) targets this regime. It wraps a frozen vision-language-action backbone with a constant-size recurrent memory and a learned gate that writes only when the current observation would change the next action: memory that knows when to stay silent. Unlike reconstruction-based memory, the gate is trained directly against a closed-loop action-error signal. Its inference state is fixed at 4,224 bytes regardless of horizon, while a KV-cache grows to 6,061 times larger at 100,000 steps. On a controlled synthetic benchmark, AURA-Mem matches the best O(1) baseline in accuracy while using 5.19-6.13 times fewer writes, and up to 9.19 times fewer writes on easier configurations. Budget-matched random and periodic schedules do not recover this gain, isolating the benefit to the action-surprise signal. On a trained closed-loop OpenVLA-OFT 7B panel on LIBERO-Long (n=60 episodes per arm), the gate does not hurt success: AURA-Mem matches the ungated base policy (0.233) and slightly exceeds an always-write KV arm (0.217), while using 7.0 times fewer writes and constant memory. We also instantiate an approximate-information-state value-loss bound as a methodology demonstration; at this scale, the bound is vacuous rather than a guarantee.",
+        "identifiers": [
+          "SemanticScholar:a2c1ac3d56532780e00f3448d0fee499441fa0f2"
+        ],
+        "semantic_scholar_id": "a2c1ac3d56532780e00f3448d0fee499441fa0f2",
+        "canonical_id": "arXiv:2606.02775",
+        "arxiv_id": "2606.02775",
+        "doi": "10.48550/arXiv.2606.02775",
+        "authors": [
+          "J. Chen"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 134,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.03884",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.03884",
+        "id:SemanticScholar:722dc2aa9d54ea1a13e4a07b57f9934696d4e113",
+        "id:arXiv:2605.03884",
+        "title:qkvshare quantized kvcache handoff for multiagent ondevice llms",
+        "url:https://arxiv.org/abs/2605.03884"
+      ],
+      "record": {
+        "title": "QKVShare: Quantized KV-Cache Handoff for Multi-Agent On-Device LLMs",
+        "source_url": "https://arxiv.org/abs/2605.03884",
+        "year": 2026,
+        "published": "2026-05-05",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-agent LLM systems on edge devices need to hand off latent context efficiently, but the practical choices today are expensive re-prefill or full-precision KV transfer. We study QKVShare, a framework for quantized KV-cache handoff between agents that combines token-level mixed-precision allocation, a self-contained CacheCard representation, and a HuggingFace-compatible cache injection path. Our current results support a narrower but clearer story than the original draft: on 150 GSM8K problems with Llama-3.1-8B-Instruct, adaptive quantization remains competitive under repeated handoff and shows its clearest gains against uniform quantization in deeper-hop, higher budget settings; for handoff latency, the QKVShare path reduces TTFT relative to full re prefill at every tested context, from 130.7 ms vs. 150.2 ms at nominal 1K context to 397.1 ms vs. 1029.7 ms at nominal 8K context;. Stage timing shows that post-injection generation, not card creation, dominates the current QKVShare latency path. These results position quantized KV handoff as a promising on-device systems direction while also highlighting the need for stronger controller ablations and apples-to-apples runtime comparisons.",
+        "identifiers": [
+          "SemanticScholar:722dc2aa9d54ea1a13e4a07b57f9934696d4e113"
+        ],
+        "semantic_scholar_id": "722dc2aa9d54ea1a13e4a07b57f9934696d4e113",
+        "canonical_id": "arXiv:2605.03884",
+        "arxiv_id": "2605.03884",
+        "doi": "10.48550/arXiv.2605.03884",
+        "authors": [
+          "Pratik Honavar",
+          "L. TejpratapG.V.S."
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 161,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.04738",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.04738",
+        "id:SemanticScholar:d98375c2dbbade32217544b5fa61f23b742bb779",
+        "id:arXiv:2605.04738",
+        "title:osaq outlier selfabsorption for accurate lowbit llm quantization",
+        "url:https://arxiv.org/abs/2605.04738"
+      ],
+      "record": {
+        "title": "OSAQ: Outlier Self-Absorption for Accurate Low-bit LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2605.04738",
+        "year": 2026,
+        "published": "2026-05-06",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities. However, their massive parameter scale leads to significant resource consumption and latency during inference. Post-training weight-only quantization offers a promising solution by reducing model size and accelerating token generation through alleviating the memory-bound issue. Nevertheless, the presence of inherent systematic outliers in weights continues to be a major obstacle. While existing methods, such as scaling and rotation, attempt to address this issue, the performance remains unsatisfactory. In this paper, we propose Outlier Self-Absorption Quantization (OSAQ), which performs additive weight suppression guided by the second-order low-rank property for low-bit weight-only quantization of LLMs. Specifically, we observe that the Hessian exhibits low-rank consistency across different inputs, with certain directions consistently showing vanishing curvature. Leveraging this property, we identify a stable null space of the Hessian and then construct an additive weight transformation by linearly combining the vectors within this null space, thereby suppressing weight outliers without affecting the task loss. This additive transformation can be absorbed into the weights offline, requiring no inter-layer transformations and introducing no inference overhead. Moreover, the construction is efficiently achieved by a closed-form solution, without resource-intensive training or iterative procedures. Extensive experiments demonstrate that OSAQ effectively suppresses outliers and enhances low-bit quantization performance. For instance, in 2-bit quantization, OSAQ, when integrated with GPTQ, achieves over 40% lower perplexity compared to vanilla GPTQ.",
+        "identifiers": [
+          "SemanticScholar:d98375c2dbbade32217544b5fa61f23b742bb779"
+        ],
+        "semantic_scholar_id": "d98375c2dbbade32217544b5fa61f23b742bb779",
+        "canonical_id": "arXiv:2605.04738",
+        "arxiv_id": "2605.04738",
+        "doi": "10.48550/arXiv.2605.04738",
+        "authors": [
+          "Zhikai Li",
+          "Zhen Dong",
+          "Xue-Wen Liu",
+          "Jing Zhang",
+          "Qingyi Gu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 160,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.12110",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.12110",
+        "id:SemanticScholar:9c5706af172ef68b120e31a40f2208055a44dab6",
+        "id:arXiv:2605.12110",
+        "title:absparse sparse attention with adaptive block size for accurate and efficient longcontext inference",
+        "url:https://arxiv.org/abs/2605.12110"
+      ],
+      "record": {
+        "title": "AB-Sparse: Sparse Attention with Adaptive Block Size for Accurate and Efficient Long-Context Inference",
+        "source_url": "https://arxiv.org/abs/2605.12110",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models scale to longer contexts, loading the growing KV cache during attention computation becomes a critical bottleneck. Previous work has shown that attention computation is dominated by a small subset of tokens. This motivates block sparse attention methods that partition the KV cache into fixed-size blocks and selectively compute attention over those blocks exhibiting high importance. However, these methods assign a uniform block size across all attention heads, implicitly assuming homogeneous behavior throughout the model. Our analysis reveals that this assumption is flawed: attention heads exhibit widely varying sensitivity to block granularity, and uniformity leads to suboptimal accuracy. We present AB-Sparse, a training-free algorithm-system co-designed framework that improves accuracy while preserving throughput. AB-Sparse introduces lightweight adaptive block size allocation across attention heads to improve accuracy. To compensate for the additional memory overhead, it further employs lossless block centroid quantization. In addition, custom GPU kernels are developed to support efficient execution with variable block sizes. Evaluation results demonstrate that AB-Sparse achieves an accuracy improvement of up to 5.43% over existing block sparse attention baselines without throughput overhead.",
+        "identifiers": [
+          "SemanticScholar:9c5706af172ef68b120e31a40f2208055a44dab6"
+        ],
+        "semantic_scholar_id": "9c5706af172ef68b120e31a40f2208055a44dab6",
+        "canonical_id": "arXiv:2605.12110",
+        "arxiv_id": "2605.12110",
+        "doi": "10.48550/arXiv.2605.12110",
+        "authors": [
+          "Dian-Bo Liu",
+          "Rui-Tian Wang",
+          "Chen Chen",
+          "Mingliang Gong",
+          "Yongjie Yuan",
+          "Han Zhao",
+          "Yuan-Nuo Feng",
+          "Quan Chen",
+          "Min-Yi Guo"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 154,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.22884",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.22884",
+        "id:SemanticScholar:a633c6baa01082f61a4a5ebcc65e8d49ecfebd38",
+        "id:arXiv:2605.22884",
+        "title:tensor cache evictionconditioned associative memory for transformers",
+        "url:https://arxiv.org/abs/2605.22884"
+      ],
+      "record": {
+        "title": "Tensor Cache: Eviction-conditioned Associative Memory for Transformers",
+        "source_url": "https://arxiv.org/abs/2605.22884",
+        "year": 2026,
+        "published": "2026-05-21",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive Transformer KV caches grow linearly with context length; sliding-window caching bounds memory but discards evicted tokens entirely, so relevant evidence outside the window becomes inaccessible. We introduce \\emph{Tensor Cache}, a two-level cache that pairs sliding-window softmax attention as a first-level cache (L1) with a fixed-size outer-product fast-weight memory as a second-level cache (L2) fed by KV pairs evicted from the window. Recent tokens remain in exact local attention; evicted pairs are compressed into a per-layer matrix $A$ and read by future queries through a single matrix multiplication, exploiting the linear-attention identity $q_t(k_i \\otimes v_i)=\\langle q_t,k_i\\rangle v_i$. A learned scalar gate fuses the L1 and L2 outputs, and per-head decay and write-rate parameters are trained end-to-end. The outer-product memory and the read identity are well-known; our contribution is their use as an L2 cache fed exclusively by sliding-window evictions, plus identifying that the common chunked-mean training shortcut $A\\!\\leftarrow\\!\\lambda A\\!+\\!\\eta(\\bar k\\!\\otimes\\!\\bar v)$ silently introduces $C^2{-}C$ spurious cross-token outer products per chunk, and closing the gap with a parallel weighted-sum scan equivalent to per-token writes within float32 epsilon. Across systems scaling, controlled associative recall, long-context language modeling, and memory-capacity diagnostics, Tensor Cache improves the memory--quality frontier over bounded-state baselines.",
+        "identifiers": [
+          "SemanticScholar:a633c6baa01082f61a4a5ebcc65e8d49ecfebd38"
+        ],
+        "semantic_scholar_id": "a633c6baa01082f61a4a5ebcc65e8d49ecfebd38",
+        "canonical_id": "arXiv:2605.22884",
+        "arxiv_id": "2605.22884",
+        "doi": "10.48550/arXiv.2605.22884",
+        "authors": [
+          "Kabir Swain",
+          "Si-Jie Han",
+          "D. Weidele",
+          "Mauro Martino",
+          "Antonio Torralba"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.24786",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.24786",
+        "id:SemanticScholar:c1805212d538eb82ef43faf076721291572655a7",
+        "id:arXiv:2605.24786",
+        "title:confkv confidenceaware kv cache eviction with mixedprecision storage for longhorizon llm",
+        "url:https://arxiv.org/abs/2605.24786"
+      ],
+      "record": {
+        "title": "CONF-KV: Confidence-Aware KV Cache Eviction with Mixed-Precision Storage for Long-Horizon LLM",
+        "source_url": "https://arxiv.org/abs/2605.24786",
+        "year": 2026,
+        "published": "2026-05-24",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-horizon LLM inference turns the key--value (KV) cache into the dominant GPU memory consumer and makes per-token attention increasingly expensive. Many common eviction policies use static recency windows or historical attention, leaving unused a signal computed on every decoding step: the model's current uncertainty. We introduce CONF-KV, a KV-cache manager that converts the next-token distribution into a scalar confidence score and uses it to choose the per-step cache budget, retaining more context when the model is uncertain and pruning aggressively when it is confident. Within each budget, tokens are ranked by a composite of accumulated attention mass and recency, while a protected recent window preserves local coherence. We combine the policy with blockwise online-softmax attention, mixed FP16/INT8 storage, and a pyramidal per-layer budget variant. Across four model families and generated lengths up to 4K, CONF-KV stays near the footprint of a fixed 512-token sliding window while remaining within 1.5--2.1 perplexity points of full KV. On Needle-in-a-Haystack up to 32K tokens, CONF-KV reaches 91.4% retrieval accuracy versus 53.8% for sliding windows and 80.6% for H2O; on 75 VisualWebArena tasks it retains 95.3% of full-KV success at 2.8 times lower peak memory.",
+        "identifiers": [
+          "SemanticScholar:c1805212d538eb82ef43faf076721291572655a7"
+        ],
+        "semantic_scholar_id": "c1805212d538eb82ef43faf076721291572655a7",
+        "canonical_id": "arXiv:2605.24786",
+        "arxiv_id": "2605.24786",
+        "doi": "10.48550/arXiv.2605.24786",
+        "authors": [
+          "Yubo Li",
+          "Yidi Miao"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.25745",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.25745",
+        "id:SemanticScholar:0f62ba9f3d2c13ac767eb7d7e71975641ab9e33d",
+        "id:arXiv:2605.25745",
+        "title:selective latent thinking adaptive compression of llm reasoning chains",
+        "url:https://arxiv.org/abs/2605.25745"
+      ],
+      "record": {
+        "title": "Selective Latent Thinking: Adaptive Compression of LLM Reasoning Chains",
+        "source_url": "https://arxiv.org/abs/2605.25745",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Explicit chain-of-thought (CoT) reasoning substantially improves the reasoning ability of large language models (LLMs), but incurs high inference cost due to lengthy autoregressive traces. Existing latent reasoning methods offer a promising alternative, yet they often treat reasoning as uniformly compressible, causing precision-critical intermediate steps to be overly compressed and thereby degrading reasoning accuracy. In this work, we propose Selective Latent Thinking (SLT), a framework that selectively compresses redundant reasoning spans into latent representations while preserving precision-critical spans as explicit CoT within the same reasoning trajectory. Specifically, SLT first uses a lightweight decoder to anticipate a short upcoming reasoning span, and then applies confidence-based gating to determine the longest span that can be reliably compressed. The accepted span is encoded into a compact latent representation to improve reasoning efficiency, while uncertain or precision-critical reasoning remains in explicit CoT form to preserve accuracy. To learn this selective compression policy, SLT adopts a three-stage training strategy that combines span-level latent compression, reliability-aware future reasoning prediction, and trajectory-level reinforcement learning to optimize the trade-off between answer correctness and reasoning cost. Extensive experiments across four mathematical reasoning benchmarks demonstrate that SLT achieves 22.7\\% higher accuracy than latent reasoning baselines at comparable compression ratios, while reducing reasoning chain length by 58.4\\% with only 2.8\\% accuracy degradation compared to explicit CoT,Our code can be found in https://github.com/hunshi34/SLT.",
+        "identifiers": [
+          "SemanticScholar:0f62ba9f3d2c13ac767eb7d7e71975641ab9e33d"
+        ],
+        "semantic_scholar_id": "0f62ba9f3d2c13ac767eb7d7e71975641ab9e33d",
+        "canonical_id": "arXiv:2605.25745",
+        "arxiv_id": "2605.25745",
+        "doi": "10.48550/arXiv.2605.25745",
+        "authors": [
+          "Hui-Ling Xie",
+          "Jie Liu",
+          "Ziyue Qiao",
+          "J. Vanschoren"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 141,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.29727",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.29727",
+        "id:SemanticScholar:ef86789aa7662b87dfd498da51de6d9135c45326",
+        "id:arXiv:2605.29727",
+        "title:bastion budgetaware speculative decoding with treestructured block diffusion drafting",
+        "url:https://arxiv.org/abs/2605.29727"
+      ],
+      "record": {
+        "title": "Bastion: Budget-Aware Speculative Decoding with Tree-structured Block Diffusion Drafting",
+        "source_url": "https://arxiv.org/abs/2605.29727",
+        "year": 2026,
+        "published": "2026-05-28",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block-diffusion drafters have recently emerged as a powerful alternative for speculative decoding by predicting multiple future-token distributions in a single parallel step. However, since these parallel predictions are sampled from position-wise marginals rather than fully conditioned sequences, committing to a single greedy path often fails to capture the target model's preferred trajectory. To address this, we propose BASTION, a budget-aware speculative decoding framework with tree-based diffusion drafting. Unlike existing methods that rely on static tree topologies, BASTION dynamically constructs query-dependent trees by balancing draft quality against hardware constraints. Our framework integrates three synergistic components: (1) an acceptance surrogate that estimates expected accepted length via path confidence, (2) an online latency estimator that calibrates a hardware-aware roofline model, and (3) an adaptive best-first expansion that grows the tree until marginal gains no longer justify incremental verification costs. BASTION is training-free, preserves the target model's distribution, and requires no per-setting tuning. Across diverse benchmarks and GPU architectures, BASTION achieves up to a 6.61x speedup over standard autoregressive decoding, outperforming state-of-the-art block-diffusion baselines by 39%.",
+        "identifiers": [
+          "SemanticScholar:ef86789aa7662b87dfd498da51de6d9135c45326"
+        ],
+        "semantic_scholar_id": "ef86789aa7662b87dfd498da51de6d9135c45326",
+        "canonical_id": "arXiv:2605.29727",
+        "arxiv_id": "2605.29727",
+        "doi": "10.48550/arXiv.2605.29727",
+        "authors": [
+          "Soowon Oh",
+          "Nam Cao",
+          "Yujin Kim",
+          "Hojung Jung",
+          "Huzama Ahmad",
+          "Sangmin Bae",
+          "SeYoung Yun"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 138,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.05698",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.05698",
+        "id:SemanticScholar:496880a4fc1e790158d1bd26e3f7abc711464927",
+        "id:arXiv:2606.05698",
+        "title:rethinking lora memory through the lens of kv cache compression",
+        "url:https://arxiv.org/abs/2606.05698"
+      ],
+      "record": {
+        "title": "Rethinking LoRA Memory Through the Lens of KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2606.05698",
+        "year": 2026,
+        "published": "2026-06-04",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Parametric retrieval augmentation encodes document information into lightweight, document-specific modules such as LoRA adapters, reducing the need to include all evidence as input context. However, it remains unclear how this parameter-side memory interacts with context-side memory stored in the KV cache. We study this interaction in document-level question answering by progressively evicting document key-value states and measuring when a document LoRA contributes beyond the retained context. We find that document LoRA adds little when the KV cache is largely intact, but becomes increasingly useful under aggressive compression, recovering 13-21 ROUGE-L points when no document context remains. The gain is largest when the base model encodes the document, and the adapter is applied only during answer generation, suggesting that document LoRA is better understood as decoding-time parametric memory than as a document encoder. Finally, QA-style supervision produces substantially stronger adapters than raw-context next-token-prediction. These results position document LoRA as a complementary memory channel whose value emerges precisely when context-side evidence is scarce.",
+        "identifiers": [
+          "SemanticScholar:496880a4fc1e790158d1bd26e3f7abc711464927"
+        ],
+        "semantic_scholar_id": "496880a4fc1e790158d1bd26e3f7abc711464927",
+        "canonical_id": "arXiv:2606.05698",
+        "arxiv_id": "2606.05698",
+        "doi": "10.48550/arXiv.2606.05698",
+        "authors": [
+          "Chunsheng Zuo",
+          "Liaoyaqi Wang",
+          "William Jurayj",
+          "William Fleshman",
+          "Benjamin Van Durme"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 131,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:02dadda55fae37c8c4ddf2583f18d2d0c33a096c077744e804fcb3051dfb94d0",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

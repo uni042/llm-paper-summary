@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-586ac864aa84e7c6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.05511",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.05511",
+    "identity_tokens": [
+      "DOI:10.1109/cvpr52729.2023.00976",
+      "DOI:10.48550/arxiv.2303.05511",
+      "arXiv:2303.05511",
+      "id:arXiv:2303.05511",
+      "url:https://arxiv.org/abs/2303.05511"
+    ],
+    "reason": "画像生成向け敵対的生成ネットワーク（GAN）の規模拡大を研究する題名であり、言語モデルの推論基盤、サービング、KVキャッシュ、量子化、推論メモリ管理を直接対象としていない。",
+    "first_checked_at": "2026-10-11T08:49:39+00:00",
+    "last_checked_at": "2026-10-20T13:06:13+00:00",
+    "linked_from": [],
+    "title": "Scaling up GANs for Text-to-Image Synthesis"
+  },
+  "processed_at": "2026-10-20T13:06:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-586ac864aa84",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

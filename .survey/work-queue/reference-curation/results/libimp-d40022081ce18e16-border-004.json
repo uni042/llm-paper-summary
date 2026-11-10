@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d40022081ce18e16-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.17249",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.17249",
+    "identity_tokens": [
+      "arXiv:2506.17249"
+    ],
+    "reason": "本文では対象範囲への一般化が弱い/寄与が限定的であるか、本文取得失敗のため裏付けが不足しておりborderline。",
+    "first_checked_at": "2026-10-05T13:24:47+00:00",
+    "last_checked_at": "2026-10-05T13:24:47+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+    ],
+    "title": "Improving Prediction Certainty Estimation for Reliable Early Exiting via Null Space Projection"
+  },
+  "processed_at": "2026-10-05T13:24:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d40022081ce1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

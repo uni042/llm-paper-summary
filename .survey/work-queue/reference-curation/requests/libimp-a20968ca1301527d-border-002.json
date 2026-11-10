@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a20968ca1301527d-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.48550/arXiv.2510.10528",
+  "reason": "黒箱の推論LLMへ短い思考を促す説得的プロンプトを反復生成し、Qwen3や閉鎖APIで出力トークンを減らす。生成費用には関係するが、主な手法はプロンプト制御でありGPUカーネル・KV管理・推論サービング基盤を改善するものではないため境界扱い。",
+  "title": "Merlin’s Whisper: Enabling Efficient Reasoning in Large Language Models via Black-box Persuasive Prompting",
+  "identity_tokens": [
+    "DOI:10.48550/arXiv.2510.10528",
+    "arXiv:2510.10528"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a20968ca1301",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

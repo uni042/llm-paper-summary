@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b4403570b2f6cadd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.neucom.2026.134404",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.neucom.2026.134404",
+    "identity_tokens": [
+      "DOI:10.1016/j.neucom.2026.134404"
+    ],
+    "reason": "packetに一次abstractがなく、今回利用できた一次資料から要旨本文を確認できなかった。title単独では対象範囲との関連を確定しない。",
+    "first_checked_at": "2026-10-05T04:12:38+00:00",
+    "last_checked_at": "2026-10-05T04:12:38+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+    ],
+    "title": "EssLM-MoE: A mixture-of-experts-enhanced framework for protein essentiality prediction using fused protein language models"
+  },
+  "processed_at": "2026-10-05T04:12:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b4403570b2f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

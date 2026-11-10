@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "discovery-specialist-20260916T1459JST-004",
+  "worker_id": "scheduled-chat-discovery-specialist-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-c5668a715755a331",
+      "claim_id": "claim-ae853adbe01956e7c70dbf4c",
+      "worker_id": "scheduled-chat-discovery-specialist-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-ae853adbe01956e7c70dbf4c",
+      "claimed_at": "2026-09-16T06:06:53+00:00",
+      "expires_at": "2026-09-16T07:36:53+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-c5668a715755a331"
+      ],
+      "job": {
+        "job_id": "job-research-c5668a715755a331",
+        "type": "research",
+        "parent_job_id": "job-bbb8440cc7587970",
+        "priority": 79,
+        "canonical_id": "arXiv:2608.13573",
+        "title": "A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing",
+        "source_url": "https://arxiv.org/abs/2608.13573",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.13573-year-llm-serving-workload-evolution.md",
+        "selection_reason": "1年間のproduction traceでmodel/user構造、caching、load balancingを分析するworkload characterization。serving研究の評価trace・仮定の妥当性を監査する基準資料として重要。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T05:47:27+00:00"
+      },
+      "record_bank": "f"
+    }
+  ],
+  "processed_at": "2026-09-16T06:06:53+00:00",
+  "checkpoint_released": 0
+}

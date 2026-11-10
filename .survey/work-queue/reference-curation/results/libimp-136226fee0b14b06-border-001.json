@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-136226fee0b14b06-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.06850",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.06850",
+    "identity_tokens": [
+      "arXiv:2605.06850"
+    ],
+    "reason": "対象はLLMの強化学習後訓練におけるロールアウトKVキャッシュ圧縮で、LLM推論時メモリと学習の両方に直接関連する。ただしarXivの2026-09-16付v2に著者による撤回が明示され、理由は実験結果に誤りが見つかったこと。2026-10-22現在の書誌では論文の性能数値を信頼してResearch収録できないため、撤回を理由に保留分類する。",
+    "first_checked_at": "2026-10-14T09:44:19+00:00",
+    "last_checked_at": "2026-10-22T14:47:07+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "How to Compress KV Cache in RL Post-Training? Shadow Mask Distillation for Memory-Efficient Alignment"
+  },
+  "processed_at": "2026-10-22T14:47:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-136226fee0b1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

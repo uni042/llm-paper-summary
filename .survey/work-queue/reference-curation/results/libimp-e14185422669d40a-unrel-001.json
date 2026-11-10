@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e14185422669d40a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.02050",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.02050",
+    "identity_tokens": [
+      "arXiv:2608.02050"
+    ],
+    "reason": "The body reports 53k tokens/s for Hier-TextNCA versus 138k tokens/s for Transformer-6L at batch 32 / length 512, and says TextNCA is not computationally Pareto-superior at this scale. Its test-time iteration knob carries substantial perplexity cost.",
+    "first_checked_at": "2026-10-05T09:13:50+00:00",
+    "last_checked_at": "2026-10-05T09:13:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+    ],
+    "title": "TextNCA: Neural Cellular Automata for Language Modeling via Hierarchical Local Attention"
+  },
+  "processed_at": "2026-10-05T09:13:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e14185422669",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

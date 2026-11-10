@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c650c080526056f5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.25684",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.25684",
+    "identity_tokens": [
+      "arXiv:2509.25684"
+    ],
+    "reason": "The proposed sparsity mechanism is plausibly efficiency-adjacent, but lack of demonstrated inference savings makes fit too weak to advance now.",
+    "first_checked_at": "2026-10-05T15:28:31+00:00",
+    "last_checked_at": "2026-10-05T15:28:31+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LD-MoLE: Learnable Dynamic Routing for Mixture of LoRA Experts"
+  },
+  "processed_at": "2026-10-05T15:28:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c650c0805260",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

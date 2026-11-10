@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eefc15f9ffa433dd-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.17817",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.17817",
+    "identity_tokens": [
+      "arXiv:2609.17817"
+    ],
+    "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+    "first_checked_at": "2026-10-05T23:59:24+00:00",
+    "last_checked_at": "2026-10-05T23:59:24+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md"
+    ],
+    "title": "Reflections on Trusting Trust, Revisited: Contaminating Self-Modifying AI Coding Agents with Poisoned Benchmarks"
+  },
+  "processed_at": "2026-10-05T23:59:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eefc15f9ffa4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

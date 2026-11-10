@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-21855088a09eb556-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "OpenReview:EvDeiLv7qc",
+  "reason": "主目的はMoEと軽量adapterを組み合わせ、1%未満の更新parameterでinstruction tuningを行う学習・微調整効率化であり、凍結対象のtraining-side optimizationに該当するため新規Research対象外。",
+  "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning",
+  "identity_tokens": [
+    "OpenReview:EvDeiLv7qc",
+    "arXiv:2309.05444"
+  ],
+  "linked_from": [
+    "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
+    "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21855088a09e",
+  "source_precheck_request_id": null
+}

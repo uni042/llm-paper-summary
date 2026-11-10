@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f815812ab803766-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/n18-2097",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/n18-2097",
+    "identity_tokens": [
+      "DOI:10.18653/v1/n18-2097"
+    ],
+    "reason": "長文のdiscourse structureをattentionへ組み込みabstractive summarization品質を改善するNLP model研究で、LLM推論system効率化を対象としない。",
+    "first_checked_at": "2026-10-04T17:54:51+00:00",
+    "last_checked_at": "2026-10-04T17:54:51+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+    ],
+    "title": "A Discourse-Aware Attention Model for Abstractive Summarization of Long Documents"
+  },
+  "processed_at": "2026-10-04T17:54:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f815812ab80",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

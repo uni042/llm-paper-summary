@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7fd74a56f925afc154de6012f96a812a467dbce05f5df5cb704f7986a80b3ac7",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_95f949bbb72c8191a7a9f3eb576c5c64--2026-2604.02047-goose-research-20261012-0355-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2604.02047",
+  "worker_completed_at": "2026-10-12T03:55:56+09:00",
+  "worker_run_key": "20261012-0355-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6542,
+    "body_paragraphs": 34,
+    "method_chars": 2451,
+    "method_paragraphs": 12,
+    "evaluation_chars": 250,
+    "limitation_chars": 514,
+    "insufficiency_flags": [
+      "評価説明量 250 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 250 < 500"
+  ],
+  "processed_at": "2026-10-12T02:36:15+00:00"
+}

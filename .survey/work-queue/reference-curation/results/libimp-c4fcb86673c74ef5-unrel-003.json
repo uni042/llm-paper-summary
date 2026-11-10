@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4fcb86673c74ef5-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3037697.3037702",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3037697.3037702",
+    "identity_tokens": [
+      "DOI:10.1145/3037697.3037702"
+    ],
+    "reason": "3D memoryを用いた汎用ニューラルネットワーク推論アクセラレータとdataflow/partitioningが主題で、LLMまたはTransformer推論を対象にしない。",
+    "first_checked_at": "2026-10-04T05:27:33+00:00",
+    "last_checked_at": "2026-10-04T05:27:33+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+    ],
+    "title": "TETRIS: Scalable and Efficient Neural Network Acceleration with 3D Memory"
+  },
+  "processed_at": "2026-10-04T05:27:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4fcb86673c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

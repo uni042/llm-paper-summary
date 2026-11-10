@@ -1,0 +1,836 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "worker-240052-20260924T0109JST-forward-03",
+  "collector_id": "worker-240052-forward-awq",
+  "run_key": "adhoc-20260924T005200+09-00-worker-240052",
+  "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.00978/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4325b894985b85d6c56070f0f8f74ce5d492f021",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-23T16:10:05.345823+00:00",
+  "preload_id": "preload-0d0f5d3198f3331ccd94",
+  "preload_seed": false,
+  "preload_cache_used": true,
+  "preload_cached_pages_used": 1,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": "preload-0d0f5d3198f3331ccd94",
+  "results": [
+    {
+      "title": "Optimizing Whisper models for Turkish automatic speech recognition: A comprehensive study on parameter-efficient fine-tuning and model compression",
+      "source_url": "https://www.semanticscholar.org/paper/c17ab55bb4daba6ef8d71b646937684d2cc85f2d",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.jestch.2026.102505",
+      "doi": "10.1016/j.jestch.2026.102505",
+      "authors": [
+        "Saadin Oyucu",
+        "Bilgehan Arslan",
+        "C. Koçak",
+        "Şeref Sağıroğlu"
+      ]
+    },
+    {
+      "title": "Navigating maritime emergencies with large models: A lifecycle-oriented review",
+      "source_url": "https://www.semanticscholar.org/paper/87bd19f3b479204f2d3f7a6da4cbed192ddd55ab",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.engappai.2026.115411",
+      "doi": "10.1016/j.engappai.2026.115411",
+      "authors": [
+        "Jing Xu",
+        "Qingqing Yang",
+        "Zhiwei Yang",
+        "Yingying Gao",
+        "Kewei Yang",
+        "Jiang Jiang"
+      ]
+    },
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "doi": "10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "Forecast-Preserving low-bit quantization for transformer-based time-series forecasting",
+      "source_url": "https://www.semanticscholar.org/paper/6235547bd0265d1c893dec9744cb71bf6e91d73d",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.engappai.2026.116054",
+      "doi": "10.1016/j.engappai.2026.116054",
+      "authors": [
+        "Meng-Ke Wang",
+        "Min Gan",
+        "Fang Yuan",
+        "Jian-Nan Su"
+      ]
+    },
+    {
+      "title": "Accelerating the Mitigation of LLM Inference Nondeterminism Across GPU Architectures",
+      "source_url": "https://www.semanticscholar.org/paper/ea2c23ddf00fe3566381be04dc14534f81ba4c2a",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Large language model (LLM) outputs are expected to be reproducible under greedy decoding, yet in practice the same model, prompt, and software stack produce different outputs on different GPUs. The root cause is floating-point non-associativity combined with hardware-dependent kernel selection. Inference frameworks select different matrix-multiplication kernels on each architecture, with different parallel reduction orders and unspecified tensor-core arithmetic, and the resulting rounding differences can flip output tokens. Existing solutions have imperfect cross-architecture reproducibility and incur a significant performance penalty. We present a solution employing a set of fixed-configuration fused-upcast GEMM kernels that load 16-bit weights from memory, upcast them to FP32 in registers, and accumulate with IEEE-754 arithmetic in a reduction order that is a pure function of the problem shape and is therefore independent of the device, its SM count, or kernel scheduling. By fixing the floating-point reduction order as a function of problem shape alone, every GPU runs the same operation sequence, so cross-architecture reproducibility of the linear layers reduces to correct IEEE-754 arithmetic rather than to rounding differences staying below a tie-flip threshold. We confirm our solution's linear-layer outputs are bitwise identical across NVIDIA Ampere, Ada, and Hopper GPUs, while running $1.17$ to $3.1\\times$ faster end-to-end than the state-of-the-art solution and cutting weight-memory traffic in half.",
+      "canonical_id": "arXiv:2609.25624",
+      "arxiv_id": "2609.25624",
+      "authors": [
+        "L. Cooper",
+        "Shinnung Jeong",
+        "Hyeran Jeon",
+        "Jeffrey S. Young",
+        "Hyesoon Kim"
+      ]
+    },
+    {
+      "title": "Beyond Scalar Sensitivity: Activation-Aware Mixed-Precision LLM Quantization with Cross-Layer Refinement",
+      "source_url": "https://www.semanticscholar.org/paper/21bd7e3b09e4e1b7a72197bcca5e270539335449",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "Mixed-precision weight quantization is commonly formulated as a Multiple-Choice Knapsack Problem (MCKP), yet existing solvers rely on scalar sensitivity proxies that collapse each weight matrix's Hessian into a single number and treat every module independently. We prove that even the optimal scalar proxy incurs multiplicative distortion up to $\\sqrt{\\kappa(\\mathbf{A})\\kappa(\\mathbf{B})}$ relative to the full activation-aware quadratic, where $\\kappa(\\mathbf{A})$ and $\\kappa(\\mathbf{B})$ denote the condition numbers of the input- and output-side Hessian factors. This bound varies from $10^1$ to $10^{13}$ for typical LLM modules, making inter-module sensitivity ranking unreliable. To address these limitations, we propose Cross-layer Activation-aware Sensitivity Allocation (CASA), a two-phase method. In Stage 1, the scalar proxy is replaced by an activation-aware metric derived from the Kronecker-factored Hessian, reducing the MCKP to a form whose continuous relaxation admits a closed-form solution. In Stage 2, a cross-layer-aware local search evaluates bit-width updates using the end-to-end model loss. Experiments on multiple LLMs across different bit budgets show that CASA achieves lower perplexity than the latest scalar-proxy baselines, especially at ultra-low bit-widths ($<3$ bits per weight). Moreover, the performance gain in zero-shot accuracy tracks the per-model average condition-number over modules, confirming the distortion bound as a practical indicator of scalar-proxy failure.",
+      "canonical_id": "arXiv:2609.25916",
+      "arxiv_id": "2609.25916",
+      "authors": [
+        "Akihiro Yoshida",
+        "Yuma Ichikawa"
+      ]
+    },
+    {
+      "title": "QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for World Models and Video Generation",
+      "source_url": "https://www.semanticscholar.org/paper/b6f74d970088140f053af583a73a19d59f0657ad",
+      "year": 2026,
+      "published": "2026-09-22",
+      "abstract": "KV cache memory has become a major deployment bottleneck for video generation and world models, which motivates low-bit quantization study for efficiency. Existing 2-bit KV cache quantization methods can achieve nearly lossless performance on video benchmarks such as VBench, however, we find that they still cause severe temporal flickering and visual degradation. Meanwhile, deeper investigates show that Key quantization produces smaller reconstruction errors than Value, but surprisingly leads to much larger output degradation. We trace this discrepancy to attention: small Key perturbations can change the attention logits, i.e., QK^\\top, and shift the temporal-spatial tokens selected by Queries. These observations motivate us to explicitly preserve attention logits and temporal-spatial token selection during KV cache quantization to alleviate the visual degradation problem. To address this issue, we present QuantWM, a training-free and strictly causal 2-bit KV cache quantization framework. QuantWM introduces two complementary techniques to mitigate the attention shifts. Firstly, quantization-sensitivity-aware clustering (QSAC) jointly considers historical Query sensitivity and residual ranges to select INT2-friendly Key centroids, which reduces quantization errors in channels that are more critical to attention. In addition, principal-subspace attention compensation (PSAC) restores the remaining Key errors along the dominant Query subspace using low-rank projections, which provides a direct and efficient correction to stabilize attention logits. Extensive experiments on Causal-Forcing, LingBot-World-v2, HY-World 1.5, Matrix-Game-2 and Longcat-Video demonstrate that QuantWM significantly improves visual quality and temporal consistency, while outperforming existing methods across image and video quality metrics with up to 6.20x KV cache memory compression and limited additional overhead.",
+      "canonical_id": "arXiv:2609.26425",
+      "arxiv_id": "2609.26425",
+      "authors": [
+        "Jia-Qi Zhao",
+        "Xiao-Bin Hu",
+        "Bo Yin",
+        "Jun-Peng Jiang",
+        "Miao Zhang",
+        "Shui-Cheng Yan"
+      ]
+    },
+    {
+      "title": "The Undetected Damage of Quantization on Retrieval and How to Fix It",
+      "source_url": "https://www.semanticscholar.org/paper/06faaa874d4fe0e82aeca2474754beca361ac8d3",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "We show that a quantized model that keeps its classification accuracy still changes $14$ to $46\\%$ of its top-1 retrieval results, and that aggregate ranking metrics reveal only part of this damage. We tie this failure to the gap between the two highest scores and use that gap to decide when a quantized answer can be trusted and where additional precision should be spent. We show that the top-1 result is guaranteed to survive quantization only when this gap exceeds twice the largest rounding error. In classification, scores are the logits, and the loss function pushes the correct class away from other classes, encouraging this gap. In retrieval, scores are query-document scores, and nothing separates the top-1 item from the second. This gap can be measured without labels. Before deployment, it predicts which models will break under quantization, and at deployment time it tells, per input, whether the quantized answer still matches the full-precision answer. Most classification inputs have a gap wide enough to trust the quantized answer, but few retrieval queries do. That gap motivates a different fix in each task. In retrieval, spending extra bit-width on the layers whose quantization moves the gap most recovers up to three-quarters of an extra bit's benefit for half its cost. In classification, routing the few low-gap inputs to full precision recovers most of the lost accuracy at a fraction of the cost.",
+      "canonical_id": "arXiv:2609.24322",
+      "arxiv_id": "2609.24322",
+      "authors": [
+        "Luca Zhou",
+        "Alessandro Zirilli",
+        "Daniele Solombrino",
+        "Roberto Dessì",
+        "Emanuele Rodolà"
+      ]
+    },
+    {
+      "title": "From Bits to Beliefs: Recoverable Semantic Fingerprints for Black-Box Verification of Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/f5916b4ba6c7eb5b2394b6d3a3714fa27155757e",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Open-weight large language models (LLMs) can be copied, modified, and redeployed behind black-box APIs, making post-release ownership verification difficult. Existing black-box fingerprints often rely on secret query-key pairs that reproduce predefined responses, and can therefore be easily disrupted by fine-tuning, pruning, quantization, model merging, and serving-time prompt changes. We propose SimPrint, a recoverable semantic fingerprinting framework for black-box LLM ownership verification. Rather than relying on isolated exact matches, SimPrint encodes a private owner signature into a coded semantic fingerprint domain, distributing ownership evidence across natural binary question-answering probes. It implants only base-deviating probes through a low-interference batch update that preserves the original model behavior, and later recovers the signature by parsing suspect-model responses into reliable bits or erasures with an error-correcting recovery mechanism. Because verification only uses input-output queries, SimPrint remains applicable when model weights or activations are inaccessible. Experiments on three open-weight LLMs show that SimPrint reliably recovers the owner signature in both clean and modified settings, remains robust under fine-tuning, pruning, quantization, model merging, and serving-time perturbations, and maintains comparable downstream utility.",
+      "canonical_id": "arXiv:2609.24084",
+      "arxiv_id": "2609.24084",
+      "authors": [
+        "Jia-Xin Hong",
+        "Yu-Xin Peng",
+        "Hong-Yao Yu",
+        "Hao Fang",
+        "Shuo-Yang Sun",
+        "Bin Chen"
+      ]
+    },
+    {
+      "title": "FoldQuantVLA: Native Low-Bit Quantization of Vision-Language-Action Models via Consistent Folding",
+      "source_url": "https://www.semanticscholar.org/paper/410088c7f1cd21f310f4b71a794a8691416db78b",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Low-bit vision-language-action inference must reduce observation-to-action latency while preserving robot behavior. We present FoldQuantVLA, a post-training quantization framework that carries a consistent activation representation through calibration, weight rounding, and native integer execution. It combines channel scaling and block Hadamard transforms with dynamic per-token quantization, without policy retraining. Custom TensorRT plugins execute projections in both the language backbone and iterative action expert with four-bit weights and activations (W4A4) on Ada GPUs and Jetson AGX Orin. Evaluation spans LIBERO, SimplerEnv, and two robot platforms. Across three GR00T checkpoints and $\\pi_{0.5}$, W4A4 achieves $1.20$ to $1.33\\times$ speedups over floating-point TensorRT on Orin and $1.25$ to $1.52\\times$ on desktop. Retaining language attention-output and feed-forward down projections at eight bits (W8A8) improves held-out action fidelity on all four checkpoints. Across four real-robot tasks, this configuration raises observed GR00T N1.7 success from $80.0\\%$ with uniform W4A4 to $92.5\\%$ over 80 trials per configuration, with a measured additional Orin latency of 1 ms.",
+      "canonical_id": "arXiv:2609.24433",
+      "arxiv_id": "2609.24433",
+      "authors": [
+        "Hung T. Ho",
+        "Khanh-Binh Nguyen",
+        "Quang D. Nguyen",
+        "Thanh Duong",
+        "N. Le",
+        "Meng Guo",
+        "V. Ngo",
+        "A. T. Le"
+      ]
+    },
+    {
+      "title": "VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models",
+      "source_url": "https://www.semanticscholar.org/paper/1c0a6195f848f07bc3a6cd4c418d5420bcbee41d",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Post-training quantization reduces the memory requirements of vision-language-action (VLA) models, but precision selection must account for the interaction between layer scope, numerical format, and calibration. We introduce \\textbf{VLAQuantBench}, a controlled evaluation with 409 runs and 94,574 simulation episodes: four models on LIBERO, with X-VLA additionally evaluated on three simulation benchmark families. Under uncalibrated W4A4 round-to-nearest quantization, expanding a $\\pi_{0.5}$ action-head subset from 126 to 167 layers raises success from 7.0\\% to 70.5\\%. Fixed-observation replay confirms a corresponding numerical recovery. Two-episode calibration removes the severe joint failures in the tested subsets, whereas the same smoothing-and-clipping recipe lowers $\\pi_0$ success and does not recover OpenVLA-OFT end-to-end. For OpenVLA-OFT, protecting one 28,672-parameter output projection instead restores near-baseline success: the remaining 441 eligible linear layers retain W3 on LIBERO-Long or eight-bit activations across all four suites. Task-clustered intervals support the large failure and recovery contrasts. These results establish recipe-dependent interactions and identify concrete precision assignments, rather than universal layer-sensitivity rules. Real-kernel and physical-robot measurements complement the accuracy analysis. Code, configurations, and episode records are publicly available at https://github.com/jiuyixu25/VLAQuantBench.",
+      "canonical_id": "arXiv:2609.25376",
+      "arxiv_id": "2609.25376",
+      "authors": [
+        "Jiu-Yi Xu",
+        "Qing Jin",
+        "Mei-Da Chen",
+        "Song Wang",
+        "Yang Sui",
+        "Yang-Ming Shi"
+      ]
+    },
+    {
+      "title": "RGSQ: Riemannian Geometry-Sensitive Quantization for Large Vision-Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/c007118773adf6b30b6d17e003733e1327d41895",
+      "year": 2026,
+      "published": "2026-09-21",
+      "abstract": "Large vision-language models (VLMs) can be efficiently deployed under stringent memory and latency constraints through post training quantization (PTQ). However, most PTQ methods are designed for unimodal large language models (LLMs). These methods treat quantization errors as isotropic perturbations under the Euclidean assumption, which provides weak guidance on directions most sensitive to quantization in VLMs. Consequently, directly adapting unimodal PTQ approaches or solely employing modality-specific scaling often leads to uneven bit-width distribution and inconsistent performance in low-bit settings. To address these challenges, we propose Riemannian Geometry-Sensitive Quantization (RGSQ), which formulates quantization as a reconstruction problem under a unified Fisher-Riemannian metric. RGSQ identifies modality-specific sensitive directions via Riemannian manifold mappings built from modality-partitioned empirical Fisher factors and fused into a modality-aware Kronecker-structured metric. We then apply geometry-aligned rotations to reorient the local tangent frame, steering low-bit perturbations toward loss-insensitive axes. Finally, we apply a whitening transformation that maps the Riemannian objective to an equivalent Euclidean form, enabling standard unimodal PTQ methods to evaluate multimodal quantization error under their original assumptions. Across an extensive and diverse set of mainstream VLM benchmarks, RGSQ achieves the highest accuracy and stability under extremely low-bit settings (W2A8 and W3A8). It outperforms VLM-aware baselines, such as MBQ and MQuant, by up to 5.9% and surpasses single-modality improvements by up to 8.6%.",
+      "canonical_id": "arXiv:2609.25492",
+      "arxiv_id": "2609.25492",
+      "authors": [
+        "Zhi-Ping Wu",
+        "Dong-Dong Ren",
+        "Yang Zhou",
+        "Zheng-Jie Zhang",
+        "Wen-Bin Li",
+        "Hong-Bing Pan",
+        "Yang Gao"
+      ]
+    },
+    {
+      "title": "On the Efficiency-Safety Dilemma in Large Reasoning Models",
+      "source_url": "https://www.semanticscholar.org/paper/3eb86e4321aa4c2987110db39db9d9dc3d83f213",
+      "year": 2026,
+      "published": "2026-09-20",
+      "abstract": "Large reasoning models (LRMs) incur high inference costs, often mitigated by efficiency techniques like quantization and pruning. However, the impact of these techniques on model adversarial robustness remains largely unexplored. This study provides the first comprehensive analysis of the interplay between efficiency, jailbreak vulnerability, and reasoning in LRMs. We find that while efficiency methods seemingly reduce the success rate of jailbreak attacks, this improvement is often superficial. It largely arises from degraded reasoning capabilities leading to\"attempted but failed\"malicious responses, rather than an increase in genuine alignment. Mechanistic analysis of representational drift confirms this, revealing a strict coupling between reasoning capability loss and the model's inability to maintain malicious semantic trajectories. Additionally, we identify quantization with pruning as the optimal strategy to balance efficiency and robustness. These findings clarify the distinction between true safety alignment and capability-induced failure, providing an empirical foundation for LRM deployment.",
+      "canonical_id": "arXiv:2609.23587",
+      "arxiv_id": "2609.23587",
+      "authors": [
+        "Yifei Yang",
+        "Zou-Ying Cao",
+        "Xing-Rui Wang",
+        "Xiao Zhou",
+        "Yuexian Li",
+        "Dongjie Yang",
+        "Hai Zhao"
+      ]
+    },
+    {
+      "title": "Global Ranks Survive, Selected Heads Shift: BOS-Sink Topology under 4-bit Weight-Only Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/f992275cced1c153a71a0ad630ebbff2f1ddefa1",
+      "year": 2026,
+      "published": "2026-09-20",
+      "abstract": "Sink-aware deployment may identify important first-token attention heads before a model is quantized, then reuse that map at the edge. We test when this shortcut is safe for 4-bit NF4 weight-only post-training quantization (PTQ). Our Sink Topology Consistency (STC) metrics separate global rank preservation, top-$k$ set overlap, and layerwise sink-mass shift, and distinguish per-input sensitivity from calibration-map transfer. Across Qwen2.5-0.5B, Qwen2.5-1.5B, and Llama-3.2-1B, global bf16-to-4-bit ranks remain high at 4,096 tokens ($\\rho_s \\geq 0.980$), yet top-$k$ Jaccard overlap is only 0.619-0.793, corresponding to 76.5-88.5% membership retention. The global statistic also masks local failures: terminal Qwen layers shift by 6.2-7.9x their model means, whereas Llama-3.2-1B shows low, nearly uniform drift. Under a C4-to-LongBench shift, cross-domain overlap degrades more than the within-domain precision comparison for both Qwen models, but not for Llama-3.2-1B. Matched-domain 4-bit recalibration reaches 90% of a split-half stability plateau at the smallest tested $n=8$ for both Qwen models and $n=32$ for Llama-3.2-1B, though not as a sharp threshold; for the two Qwen models, updating only selected layers does not reach the full-map stability criterion. On Jetson Orin NX, the 16-sample workload takes seconds for the two models with valid on-device sink measurements. The practical message is precise: global rankings often transfer, but discrete head sets, layer-local policies, and cross-domain calibration should be revalidated after quantization.",
+      "canonical_id": "arXiv:2609.23585",
+      "arxiv_id": "2609.23585",
+      "authors": [
+        "Kuan-Lin Chen",
+        "Chen-Wei Kuo",
+        "Cheng-En Ou"
+      ]
+    },
+    {
+      "title": "SMIT: Static mixed integer training quantization",
+      "source_url": "https://www.semanticscholar.org/paper/1f31f53c2f92d1c68c648fbaeabcb00e85ff547b",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": null,
+      "canonical_id": "DOI:10.1007/s11227-026-08857-z",
+      "doi": "10.1007/s11227-026-08857-z",
+      "authors": [
+        "Anoosh Mahjabin",
+        "Hakem Beitollahi",
+        "A. Amirkhani",
+        "Pejman Lotfi-Kamran"
+      ]
+    },
+    {
+      "title": "Understanding LLM Quantization through Activation-Guided Compensation and Orthogonal Residuals",
+      "source_url": "https://www.semanticscholar.org/paper/4bc350d63aeade610b2ffccc236935ac34647a3d",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": "Post-training weight-activation quantization reduces the memory and inference costs of large language models, but aggressive W4A4 quantization remains difficult because activation outliers degrade effective quantization resolution. Although weight optimization, channel-wise scaling, and orthogonal rotation mitigate this problem, the error components they address and their relationship remain unclear. Using an exact decomposition of local weight-activation quantization error into an activation-guided weight compensation term and an orthogonal residual, we bound the residual using persistent channel-wise outlier and regular activation quantities. This decomposition clarifies which error components can be addressed by weight compensation and which require transformation design. We then use the residual bounds to derive practical guidelines for applying randomized Hadamard rotation, sign selection, and channel scaling. In particular, the analysis explains how random signs suppress constructive interference among persistent outlier channels, how sampling multiple sign patterns can improve transformation selection, and how second-moment balancing leads to an $L_2$ scaling rule while a further relaxation recovers SmoothQuant-style $L_\\infty$ scaling. We evaluate these guidelines through backpropagation-free configurations across eight Llama and Mistral models, obtaining performance competitive with gradient-trained SpinQuant.",
+      "canonical_id": "arXiv:2609.21450",
+      "arxiv_id": "2609.21450",
+      "authors": [
+        "Yamato Narita",
+        "Issei Sato"
+      ]
+    },
+    {
+      "title": "Beyond Shadow Weights: Quantization-Aware Training as Quantized-Endpoint Descent",
+      "source_url": "https://www.semanticscholar.org/paper/7c89a6b28057e5c0b6c038a3e2cee2635e19e4a1",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": "Quantization-aware training (QAT) updates a full-precision shadow weight $\\mathbf{x}$ but deploys the quantized endpoint $Q(\\mathbf{x})$. Existing explanations for QAT largely view its success through the lens of shadow weights: QAT can move $\\mathbf{x}$ toward flatter basins, gain robustness from quantization-induced oscillations, or balance the shadow loss $f(\\mathbf{x})$ against the quantization error $\\|\\mathbf{x}-Q(\\mathbf{x})\\|_2$. These perspectives do not directly explain the empirical observation that the deployed endpoint loss $f(Q(\\mathbf{x}))$ improves while the shadow loss $f(\\mathbf{x})$ does not, and can even increase substantially. In this paper, we offer a different explanation by treating QAT as finite-grid endpoint dynamics. Motivated by the approximate normality of rescaled pretrained weights, we propose an idealized model for the residual phase, which records where each shadow weight sits inside its quantization cell as a fraction of the cell width. This model leads to a crossing law that determines which coordinates cross quantization boundaries after a shadow update. Inspired by the idealized model and signal-imbalance phenomenon in QAT, we further propose QAR (Quantization with Amplified Routing), an algorithmic framework that directly operates on the quantization code. In contrast to QAT, QAR is both theoretically grounded and memory-efficient: it admits feasible-gradient bounds for a family of power amplifiers up to unavoidable finite-grid floors without retaining a full-precision shadow weight copy. Experiments on post-training of large language models provide evidence consistent with the endpoint view and show that QAR can be comparable to or better than QAT with smaller memory cost.",
+      "canonical_id": "arXiv:2609.21834",
+      "arxiv_id": "2609.21834",
+      "authors": [
+        "Sheng-An Xu",
+        "Hanyang Li",
+        "Jian-Hao Ma",
+        "Ying-Han Cui"
+      ]
+    },
+    {
+      "title": "Accelerating Dense LLMs via L0-regularized Mixture-of-Experts",
+      "source_url": "https://www.semanticscholar.org/paper/6a5dbd9fa51ed94d2de8cafc0ca37a8e39ef73a0",
+      "year": 2026,
+      "published": "2026-09-18",
+      "abstract": "Large language models (LLMs) achieve strong performance but suffer from slow and costly inference. Existing acceleration methods often lead to noticeable performance degradation, while Mixture-of-Experts (MoE) models require extensive computational resources. In this paper, we propose L0-MoE, a lightweight MoE approach using L0-regularization to accelerate dense LLMs nearly without performance loss. Our method introduces a cluster confusion matrix for domain-aware dataset curation and applies dynamic batching for efficient training. Experiments show that L0-MoE achieves up to 2.5x speedup over dense models while maintaining competitive performance, outperforming existing LLM acceleration baselines.",
+      "canonical_id": "arXiv:2609.21672",
+      "arxiv_id": "2609.21672",
+      "authors": [
+        "Zhen-Yu Zhang",
+        "Jiu-Dong Yang",
+        "Zhaowen Tao",
+        "Meng Chen"
+      ]
+    },
+    {
+      "title": "Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models",
+      "source_url": "https://www.semanticscholar.org/paper/5a5001330d3b932278bf04ee955777b733279496",
+      "year": 2026,
+      "published": "2026-09-16",
+      "abstract": "World action models (WAMs) rely on video-generation backbones, requiring substantial memory and compute for deployment. Post-training quantization reduces memory and can accelerate inference, but bit width, grouping, and quantizer choice define a large configuration space. Identifying configurations that preserve task performance through exhaustive closed-loop evaluation is costly. We propose PreDE (Predict Before You Deploy), a policy-calibrated framework for predicting quantization-induced task degradation from offline action deviations. Using closed-loop outcomes from a small development set, PreDE calibrates two thresholds and accepts, rejects, or defers new configurations using a fixed observation log. Under a within-setting label-ordering hypothesis, the rule issues decisions where all thresholds consistent with the development labels agree. Across five WAMs and four benchmark settings, quantization produces configuration-dependent task losses that cannot be explained by bit width alone or a shared deviation threshold. Across 28 held-out configurations from two policies, PreDE issued 21 decisions before observing closed-loop outcomes (75% coverage), all matching the observed acceptable or degraded labels. Deferred candidates included both acceptable outcomes and a 33-percentage-point loss. In 450 Franka Research 3 trials across two independently fine-tuned policies, all configurations assigned to high-deviation groups before testing showed significant degradation, while low-deviation comparisons showed no statistically significant degradation. On the real robot, W4A4 achieved a 1.37x action-query speedup and approximately 44% lower peak memory. These results support policy-specific behavioral calibration for quantization configuration selection while identifying candidates that require closed-loop evaluation. The code is available at https://github.com/jiuyixu25/PreDE.",
+      "canonical_id": "arXiv:2609.19441",
+      "arxiv_id": "2609.19441",
+      "authors": [
+        "Jiu-Yi Xu",
+        "Jin-Jia Guo",
+        "Mei-Da Chen",
+        "Jing Du",
+        "Yang-Ming Shi"
+      ]
+    },
+    {
+      "title": "CoAdapt: An LLM-based Framework for Adaptive Collaborative Perception in IIoT Robotic Swarms",
+      "source_url": "https://www.semanticscholar.org/paper/06480a54b7ecd63759540c0e0629f7c5607f9842",
+      "year": 2026,
+      "published": "2026-09-15",
+      "abstract": "Industrial IoT environments increasingly deploy autonomous mobile robots for tasks such as material handling, product assembly, or infrastructure inspection. In such deployments, collaborative perception enables robots to share LiDAR observations and collectively construct a richer model of their environment than an individual agent could produce alone. However, industrial environments are dynamic spaces where robot positions shift continuously, network bandwidth fluctuates, and the marginal contribution of robots to perception quality varies at runtime. Existing collaborative perception approaches are designed for static participation assumptions and cannot adapt to these dynamics without sacrificing either detection precision or communication efficiency. This paper presents CoAdapt, an adaptive collaborative perception framework for IIoT robotic swarms in which a Large Language Model (LLM) serves as a runtime fusion controller, jointly deciding which robots participate in the fusion process and which fusion algorithm to apply based on the current spatial configuration and network state. The LLM reasons over structured natural language descriptions of the scene derived from raw LiDAR point clouds, requiring no taskspecific training and generalizing to unseen swarm topologies. Evaluated on the OPV2V benchmark across 25 scenarios, our approach achieves a 38% reduction in communication cost while maintaining detection precision comparable to static baseline approaches.",
+      "canonical_id": "arXiv:2609.16852",
+      "arxiv_id": "2609.16852",
+      "authors": [
+        "Houssam Hajj Hassan",
+        "Antonia Masucci",
+        "Lynda Zitoune",
+        "S. Elayoubi"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.jestch.2026.102505",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.jestch.2026.102505",
+        "title:optimizing whisper models for turkish automatic speech recognition a comprehensive study on parameterefficient finetuning and model compression",
+        "url:https://www.semanticscholar.org/paper/c17ab55bb4daba6ef8d71b646937684d2cc85f2d"
+      ],
+      "record": {
+        "title": "Optimizing Whisper models for Turkish automatic speech recognition: A comprehensive study on parameter-efficient fine-tuning and model compression",
+        "source_url": "https://www.semanticscholar.org/paper/c17ab55bb4daba6ef8d71b646937684d2cc85f2d",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.jestch.2026.102505",
+        "doi": "10.1016/j.jestch.2026.102505",
+        "authors": [
+          "Saadin Oyucu",
+          "Bilgehan Arslan",
+          "C. Koçak",
+          "Şeref Sağıroğlu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.115411",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.115411",
+        "title:navigating maritime emergencies with large models a lifecycleoriented review",
+        "url:https://www.semanticscholar.org/paper/87bd19f3b479204f2d3f7a6da4cbed192ddd55ab"
+      ],
+      "record": {
+        "title": "Navigating maritime emergencies with large models: A lifecycle-oriented review",
+        "source_url": "https://www.semanticscholar.org/paper/87bd19f3b479204f2d3f7a6da4cbed192ddd55ab",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.engappai.2026.115411",
+        "doi": "10.1016/j.engappai.2026.115411",
+        "authors": [
+          "Jing Xu",
+          "Qingqing Yang",
+          "Zhiwei Yang",
+          "Yingying Gao",
+          "Kewei Yang",
+          "Jiang Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "doi": "10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.116054",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.116054",
+        "title:forecastpreserving lowbit quantization for transformerbased timeseries forecasting",
+        "url:https://www.semanticscholar.org/paper/6235547bd0265d1c893dec9744cb71bf6e91d73d"
+      ],
+      "record": {
+        "title": "Forecast-Preserving low-bit quantization for transformer-based time-series forecasting",
+        "source_url": "https://www.semanticscholar.org/paper/6235547bd0265d1c893dec9744cb71bf6e91d73d",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.engappai.2026.116054",
+        "doi": "10.1016/j.engappai.2026.116054",
+        "authors": [
+          "Meng-Ke Wang",
+          "Min Gan",
+          "Fang Yuan",
+          "Jian-Nan Su"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25624",
+      "identity_tokens": [
+        "id:arXiv:2609.25624",
+        "title:accelerating the mitigation of llm inference nondeterminism across gpu architectures",
+        "url:https://www.semanticscholar.org/paper/ea2c23ddf00fe3566381be04dc14534f81ba4c2a"
+      ],
+      "record": {
+        "title": "Accelerating the Mitigation of LLM Inference Nondeterminism Across GPU Architectures",
+        "source_url": "https://www.semanticscholar.org/paper/ea2c23ddf00fe3566381be04dc14534f81ba4c2a",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Large language model (LLM) outputs are expected to be reproducible under greedy decoding, yet in practice the same model, prompt, and software stack produce different outputs on different GPUs. The root cause is floating-point non-associativity combined with hardware-dependent kernel selection. Inference frameworks select different matrix-multiplication kernels on each architecture, with different parallel reduction orders and unspecified tensor-core arithmetic, and the resulting rounding differences can flip output tokens. Existing solutions have imperfect cross-architecture reproducibility and incur a significant performance penalty. We present a solution employing a set of fixed-configuration fused-upcast GEMM kernels that load 16-bit weights from memory, upcast them to FP32 in registers, and accumulate with IEEE-754 arithmetic in a reduction order that is a pure function of the problem shape and is therefore independent of the device, its SM count, or kernel scheduling. By fixing the floating-point reduction order as a function of problem shape alone, every GPU runs the same operation sequence, so cross-architecture reproducibility of the linear layers reduces to correct IEEE-754 arithmetic rather than to rounding differences staying below a tie-flip threshold. We confirm our solution's linear-layer outputs are bitwise identical across NVIDIA Ampere, Ada, and Hopper GPUs, while running $1.17$ to $3.1\\times$ faster end-to-end than the state-of-the-art solution and cutting weight-memory traffic in half.",
+        "canonical_id": "arXiv:2609.25624",
+        "arxiv_id": "2609.25624",
+        "authors": [
+          "L. Cooper",
+          "Shinnung Jeong",
+          "Hyeran Jeon",
+          "Jeffrey S. Young",
+          "Hyesoon Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25916",
+      "identity_tokens": [
+        "id:arXiv:2609.25916",
+        "title:beyond scalar sensitivity activationaware mixedprecision llm quantization with crosslayer refinement",
+        "url:https://www.semanticscholar.org/paper/21bd7e3b09e4e1b7a72197bcca5e270539335449"
+      ],
+      "record": {
+        "title": "Beyond Scalar Sensitivity: Activation-Aware Mixed-Precision LLM Quantization with Cross-Layer Refinement",
+        "source_url": "https://www.semanticscholar.org/paper/21bd7e3b09e4e1b7a72197bcca5e270539335449",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "Mixed-precision weight quantization is commonly formulated as a Multiple-Choice Knapsack Problem (MCKP), yet existing solvers rely on scalar sensitivity proxies that collapse each weight matrix's Hessian into a single number and treat every module independently. We prove that even the optimal scalar proxy incurs multiplicative distortion up to $\\sqrt{\\kappa(\\mathbf{A})\\kappa(\\mathbf{B})}$ relative to the full activation-aware quadratic, where $\\kappa(\\mathbf{A})$ and $\\kappa(\\mathbf{B})$ denote the condition numbers of the input- and output-side Hessian factors. This bound varies from $10^1$ to $10^{13}$ for typical LLM modules, making inter-module sensitivity ranking unreliable. To address these limitations, we propose Cross-layer Activation-aware Sensitivity Allocation (CASA), a two-phase method. In Stage 1, the scalar proxy is replaced by an activation-aware metric derived from the Kronecker-factored Hessian, reducing the MCKP to a form whose continuous relaxation admits a closed-form solution. In Stage 2, a cross-layer-aware local search evaluates bit-width updates using the end-to-end model loss. Experiments on multiple LLMs across different bit budgets show that CASA achieves lower perplexity than the latest scalar-proxy baselines, especially at ultra-low bit-widths ($<3$ bits per weight). Moreover, the performance gain in zero-shot accuracy tracks the per-model average condition-number over modules, confirming the distortion bound as a practical indicator of scalar-proxy failure.",
+        "canonical_id": "arXiv:2609.25916",
+        "arxiv_id": "2609.25916",
+        "authors": [
+          "Akihiro Yoshida",
+          "Yuma Ichikawa"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26425",
+      "identity_tokens": [
+        "id:arXiv:2609.26425",
+        "title:quantwm temporally consistent 2bit kv cache quantization for world models and video generation",
+        "url:https://www.semanticscholar.org/paper/b6f74d970088140f053af583a73a19d59f0657ad"
+      ],
+      "record": {
+        "title": "QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for World Models and Video Generation",
+        "source_url": "https://www.semanticscholar.org/paper/b6f74d970088140f053af583a73a19d59f0657ad",
+        "year": 2026,
+        "published": "2026-09-22",
+        "abstract": "KV cache memory has become a major deployment bottleneck for video generation and world models, which motivates low-bit quantization study for efficiency. Existing 2-bit KV cache quantization methods can achieve nearly lossless performance on video benchmarks such as VBench, however, we find that they still cause severe temporal flickering and visual degradation. Meanwhile, deeper investigates show that Key quantization produces smaller reconstruction errors than Value, but surprisingly leads to much larger output degradation. We trace this discrepancy to attention: small Key perturbations can change the attention logits, i.e., QK^\\top, and shift the temporal-spatial tokens selected by Queries. These observations motivate us to explicitly preserve attention logits and temporal-spatial token selection during KV cache quantization to alleviate the visual degradation problem. To address this issue, we present QuantWM, a training-free and strictly causal 2-bit KV cache quantization framework. QuantWM introduces two complementary techniques to mitigate the attention shifts. Firstly, quantization-sensitivity-aware clustering (QSAC) jointly considers historical Query sensitivity and residual ranges to select INT2-friendly Key centroids, which reduces quantization errors in channels that are more critical to attention. In addition, principal-subspace attention compensation (PSAC) restores the remaining Key errors along the dominant Query subspace using low-rank projections, which provides a direct and efficient correction to stabilize attention logits. Extensive experiments on Causal-Forcing, LingBot-World-v2, HY-World 1.5, Matrix-Game-2 and Longcat-Video demonstrate that QuantWM significantly improves visual quality and temporal consistency, while outperforming existing methods across image and video quality metrics with up to 6.20x KV cache memory compression and limited additional overhead.",
+        "canonical_id": "arXiv:2609.26425",
+        "arxiv_id": "2609.26425",
+        "authors": [
+          "Jia-Qi Zhao",
+          "Xiao-Bin Hu",
+          "Bo Yin",
+          "Jun-Peng Jiang",
+          "Miao Zhang",
+          "Shui-Cheng Yan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24322",
+      "identity_tokens": [
+        "id:arXiv:2609.24322",
+        "title:the undetected damage of quantization on retrieval and how to fix it",
+        "url:https://www.semanticscholar.org/paper/06faaa874d4fe0e82aeca2474754beca361ac8d3"
+      ],
+      "record": {
+        "title": "The Undetected Damage of Quantization on Retrieval and How to Fix It",
+        "source_url": "https://www.semanticscholar.org/paper/06faaa874d4fe0e82aeca2474754beca361ac8d3",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "We show that a quantized model that keeps its classification accuracy still changes $14$ to $46\\%$ of its top-1 retrieval results, and that aggregate ranking metrics reveal only part of this damage. We tie this failure to the gap between the two highest scores and use that gap to decide when a quantized answer can be trusted and where additional precision should be spent. We show that the top-1 result is guaranteed to survive quantization only when this gap exceeds twice the largest rounding error. In classification, scores are the logits, and the loss function pushes the correct class away from other classes, encouraging this gap. In retrieval, scores are query-document scores, and nothing separates the top-1 item from the second. This gap can be measured without labels. Before deployment, it predicts which models will break under quantization, and at deployment time it tells, per input, whether the quantized answer still matches the full-precision answer. Most classification inputs have a gap wide enough to trust the quantized answer, but few retrieval queries do. That gap motivates a different fix in each task. In retrieval, spending extra bit-width on the layers whose quantization moves the gap most recovers up to three-quarters of an extra bit's benefit for half its cost. In classification, routing the few low-gap inputs to full precision recovers most of the lost accuracy at a fraction of the cost.",
+        "canonical_id": "arXiv:2609.24322",
+        "arxiv_id": "2609.24322",
+        "authors": [
+          "Luca Zhou",
+          "Alessandro Zirilli",
+          "Daniele Solombrino",
+          "Roberto Dessì",
+          "Emanuele Rodolà"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24084",
+      "identity_tokens": [
+        "id:arXiv:2609.24084",
+        "title:from bits to beliefs recoverable semantic fingerprints for blackbox verification of large language models",
+        "url:https://www.semanticscholar.org/paper/f5916b4ba6c7eb5b2394b6d3a3714fa27155757e"
+      ],
+      "record": {
+        "title": "From Bits to Beliefs: Recoverable Semantic Fingerprints for Black-Box Verification of Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/f5916b4ba6c7eb5b2394b6d3a3714fa27155757e",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Open-weight large language models (LLMs) can be copied, modified, and redeployed behind black-box APIs, making post-release ownership verification difficult. Existing black-box fingerprints often rely on secret query-key pairs that reproduce predefined responses, and can therefore be easily disrupted by fine-tuning, pruning, quantization, model merging, and serving-time prompt changes. We propose SimPrint, a recoverable semantic fingerprinting framework for black-box LLM ownership verification. Rather than relying on isolated exact matches, SimPrint encodes a private owner signature into a coded semantic fingerprint domain, distributing ownership evidence across natural binary question-answering probes. It implants only base-deviating probes through a low-interference batch update that preserves the original model behavior, and later recovers the signature by parsing suspect-model responses into reliable bits or erasures with an error-correcting recovery mechanism. Because verification only uses input-output queries, SimPrint remains applicable when model weights or activations are inaccessible. Experiments on three open-weight LLMs show that SimPrint reliably recovers the owner signature in both clean and modified settings, remains robust under fine-tuning, pruning, quantization, model merging, and serving-time perturbations, and maintains comparable downstream utility.",
+        "canonical_id": "arXiv:2609.24084",
+        "arxiv_id": "2609.24084",
+        "authors": [
+          "Jia-Xin Hong",
+          "Yu-Xin Peng",
+          "Hong-Yao Yu",
+          "Hao Fang",
+          "Shuo-Yang Sun",
+          "Bin Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24433",
+      "identity_tokens": [
+        "id:arXiv:2609.24433",
+        "title:foldquantvla native lowbit quantization of visionlanguageaction models via consistent folding",
+        "url:https://www.semanticscholar.org/paper/410088c7f1cd21f310f4b71a794a8691416db78b"
+      ],
+      "record": {
+        "title": "FoldQuantVLA: Native Low-Bit Quantization of Vision-Language-Action Models via Consistent Folding",
+        "source_url": "https://www.semanticscholar.org/paper/410088c7f1cd21f310f4b71a794a8691416db78b",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Low-bit vision-language-action inference must reduce observation-to-action latency while preserving robot behavior. We present FoldQuantVLA, a post-training quantization framework that carries a consistent activation representation through calibration, weight rounding, and native integer execution. It combines channel scaling and block Hadamard transforms with dynamic per-token quantization, without policy retraining. Custom TensorRT plugins execute projections in both the language backbone and iterative action expert with four-bit weights and activations (W4A4) on Ada GPUs and Jetson AGX Orin. Evaluation spans LIBERO, SimplerEnv, and two robot platforms. Across three GR00T checkpoints and $\\pi_{0.5}$, W4A4 achieves $1.20$ to $1.33\\times$ speedups over floating-point TensorRT on Orin and $1.25$ to $1.52\\times$ on desktop. Retaining language attention-output and feed-forward down projections at eight bits (W8A8) improves held-out action fidelity on all four checkpoints. Across four real-robot tasks, this configuration raises observed GR00T N1.7 success from $80.0\\%$ with uniform W4A4 to $92.5\\%$ over 80 trials per configuration, with a measured additional Orin latency of 1 ms.",
+        "canonical_id": "arXiv:2609.24433",
+        "arxiv_id": "2609.24433",
+        "authors": [
+          "Hung T. Ho",
+          "Khanh-Binh Nguyen",
+          "Quang D. Nguyen",
+          "Thanh Duong",
+          "N. Le",
+          "Meng Guo",
+          "V. Ngo",
+          "A. T. Le"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25376",
+      "identity_tokens": [
+        "id:arXiv:2609.25376",
+        "title:vlaquantbench closedloop evaluation of posttraining quantization for visionlanguageaction models",
+        "url:https://www.semanticscholar.org/paper/1c0a6195f848f07bc3a6cd4c418d5420bcbee41d"
+      ],
+      "record": {
+        "title": "VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models",
+        "source_url": "https://www.semanticscholar.org/paper/1c0a6195f848f07bc3a6cd4c418d5420bcbee41d",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Post-training quantization reduces the memory requirements of vision-language-action (VLA) models, but precision selection must account for the interaction between layer scope, numerical format, and calibration. We introduce \\textbf{VLAQuantBench}, a controlled evaluation with 409 runs and 94,574 simulation episodes: four models on LIBERO, with X-VLA additionally evaluated on three simulation benchmark families. Under uncalibrated W4A4 round-to-nearest quantization, expanding a $\\pi_{0.5}$ action-head subset from 126 to 167 layers raises success from 7.0\\% to 70.5\\%. Fixed-observation replay confirms a corresponding numerical recovery. Two-episode calibration removes the severe joint failures in the tested subsets, whereas the same smoothing-and-clipping recipe lowers $\\pi_0$ success and does not recover OpenVLA-OFT end-to-end. For OpenVLA-OFT, protecting one 28,672-parameter output projection instead restores near-baseline success: the remaining 441 eligible linear layers retain W3 on LIBERO-Long or eight-bit activations across all four suites. Task-clustered intervals support the large failure and recovery contrasts. These results establish recipe-dependent interactions and identify concrete precision assignments, rather than universal layer-sensitivity rules. Real-kernel and physical-robot measurements complement the accuracy analysis. Code, configurations, and episode records are publicly available at https://github.com/jiuyixu25/VLAQuantBench.",
+        "canonical_id": "arXiv:2609.25376",
+        "arxiv_id": "2609.25376",
+        "authors": [
+          "Jiu-Yi Xu",
+          "Qing Jin",
+          "Mei-Da Chen",
+          "Song Wang",
+          "Yang Sui",
+          "Yang-Ming Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25492",
+      "identity_tokens": [
+        "id:arXiv:2609.25492",
+        "title:rgsq riemannian geometrysensitive quantization for large visionlanguage models",
+        "url:https://www.semanticscholar.org/paper/c007118773adf6b30b6d17e003733e1327d41895"
+      ],
+      "record": {
+        "title": "RGSQ: Riemannian Geometry-Sensitive Quantization for Large Vision-Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/c007118773adf6b30b6d17e003733e1327d41895",
+        "year": 2026,
+        "published": "2026-09-21",
+        "abstract": "Large vision-language models (VLMs) can be efficiently deployed under stringent memory and latency constraints through post training quantization (PTQ). However, most PTQ methods are designed for unimodal large language models (LLMs). These methods treat quantization errors as isotropic perturbations under the Euclidean assumption, which provides weak guidance on directions most sensitive to quantization in VLMs. Consequently, directly adapting unimodal PTQ approaches or solely employing modality-specific scaling often leads to uneven bit-width distribution and inconsistent performance in low-bit settings. To address these challenges, we propose Riemannian Geometry-Sensitive Quantization (RGSQ), which formulates quantization as a reconstruction problem under a unified Fisher-Riemannian metric. RGSQ identifies modality-specific sensitive directions via Riemannian manifold mappings built from modality-partitioned empirical Fisher factors and fused into a modality-aware Kronecker-structured metric. We then apply geometry-aligned rotations to reorient the local tangent frame, steering low-bit perturbations toward loss-insensitive axes. Finally, we apply a whitening transformation that maps the Riemannian objective to an equivalent Euclidean form, enabling standard unimodal PTQ methods to evaluate multimodal quantization error under their original assumptions. Across an extensive and diverse set of mainstream VLM benchmarks, RGSQ achieves the highest accuracy and stability under extremely low-bit settings (W2A8 and W3A8). It outperforms VLM-aware baselines, such as MBQ and MQuant, by up to 5.9% and surpasses single-modality improvements by up to 8.6%.",
+        "canonical_id": "arXiv:2609.25492",
+        "arxiv_id": "2609.25492",
+        "authors": [
+          "Zhi-Ping Wu",
+          "Dong-Dong Ren",
+          "Yang Zhou",
+          "Zheng-Jie Zhang",
+          "Wen-Bin Li",
+          "Hong-Bing Pan",
+          "Yang Gao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23587",
+      "identity_tokens": [
+        "id:arXiv:2609.23587",
+        "title:on the efficiencysafety dilemma in large reasoning models",
+        "url:https://www.semanticscholar.org/paper/3eb86e4321aa4c2987110db39db9d9dc3d83f213"
+      ],
+      "record": {
+        "title": "On the Efficiency-Safety Dilemma in Large Reasoning Models",
+        "source_url": "https://www.semanticscholar.org/paper/3eb86e4321aa4c2987110db39db9d9dc3d83f213",
+        "year": 2026,
+        "published": "2026-09-20",
+        "abstract": "Large reasoning models (LRMs) incur high inference costs, often mitigated by efficiency techniques like quantization and pruning. However, the impact of these techniques on model adversarial robustness remains largely unexplored. This study provides the first comprehensive analysis of the interplay between efficiency, jailbreak vulnerability, and reasoning in LRMs. We find that while efficiency methods seemingly reduce the success rate of jailbreak attacks, this improvement is often superficial. It largely arises from degraded reasoning capabilities leading to\"attempted but failed\"malicious responses, rather than an increase in genuine alignment. Mechanistic analysis of representational drift confirms this, revealing a strict coupling between reasoning capability loss and the model's inability to maintain malicious semantic trajectories. Additionally, we identify quantization with pruning as the optimal strategy to balance efficiency and robustness. These findings clarify the distinction between true safety alignment and capability-induced failure, providing an empirical foundation for LRM deployment.",
+        "canonical_id": "arXiv:2609.23587",
+        "arxiv_id": "2609.23587",
+        "authors": [
+          "Yifei Yang",
+          "Zou-Ying Cao",
+          "Xing-Rui Wang",
+          "Xiao Zhou",
+          "Yuexian Li",
+          "Dongjie Yang",
+          "Hai Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23585",
+      "identity_tokens": [
+        "id:arXiv:2609.23585",
+        "title:global ranks survive selected heads shift bossink topology under 4bit weightonly quantization",
+        "url:https://www.semanticscholar.org/paper/f992275cced1c153a71a0ad630ebbff2f1ddefa1"
+      ],
+      "record": {
+        "title": "Global Ranks Survive, Selected Heads Shift: BOS-Sink Topology under 4-bit Weight-Only Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/f992275cced1c153a71a0ad630ebbff2f1ddefa1",
+        "year": 2026,
+        "published": "2026-09-20",
+        "abstract": "Sink-aware deployment may identify important first-token attention heads before a model is quantized, then reuse that map at the edge. We test when this shortcut is safe for 4-bit NF4 weight-only post-training quantization (PTQ). Our Sink Topology Consistency (STC) metrics separate global rank preservation, top-$k$ set overlap, and layerwise sink-mass shift, and distinguish per-input sensitivity from calibration-map transfer. Across Qwen2.5-0.5B, Qwen2.5-1.5B, and Llama-3.2-1B, global bf16-to-4-bit ranks remain high at 4,096 tokens ($\\rho_s \\geq 0.980$), yet top-$k$ Jaccard overlap is only 0.619-0.793, corresponding to 76.5-88.5% membership retention. The global statistic also masks local failures: terminal Qwen layers shift by 6.2-7.9x their model means, whereas Llama-3.2-1B shows low, nearly uniform drift. Under a C4-to-LongBench shift, cross-domain overlap degrades more than the within-domain precision comparison for both Qwen models, but not for Llama-3.2-1B. Matched-domain 4-bit recalibration reaches 90% of a split-half stability plateau at the smallest tested $n=8$ for both Qwen models and $n=32$ for Llama-3.2-1B, though not as a sharp threshold; for the two Qwen models, updating only selected layers does not reach the full-map stability criterion. On Jetson Orin NX, the 16-sample workload takes seconds for the two models with valid on-device sink measurements. The practical message is precise: global rankings often transfer, but discrete head sets, layer-local policies, and cross-domain calibration should be revalidated after quantization.",
+        "canonical_id": "arXiv:2609.23585",
+        "arxiv_id": "2609.23585",
+        "authors": [
+          "Kuan-Lin Chen",
+          "Chen-Wei Kuo",
+          "Cheng-En Ou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11227-026-08857-z",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11227-026-08857-z",
+        "title:smit static mixed integer training quantization",
+        "url:https://www.semanticscholar.org/paper/1f31f53c2f92d1c68c648fbaeabcb00e85ff547b"
+      ],
+      "record": {
+        "title": "SMIT: Static mixed integer training quantization",
+        "source_url": "https://www.semanticscholar.org/paper/1f31f53c2f92d1c68c648fbaeabcb00e85ff547b",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": null,
+        "canonical_id": "DOI:10.1007/s11227-026-08857-z",
+        "doi": "10.1007/s11227-026-08857-z",
+        "authors": [
+          "Anoosh Mahjabin",
+          "Hakem Beitollahi",
+          "A. Amirkhani",
+          "Pejman Lotfi-Kamran"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21450",
+      "identity_tokens": [
+        "id:arXiv:2609.21450",
+        "title:understanding llm quantization through activationguided compensation and orthogonal residuals",
+        "url:https://www.semanticscholar.org/paper/4bc350d63aeade610b2ffccc236935ac34647a3d"
+      ],
+      "record": {
+        "title": "Understanding LLM Quantization through Activation-Guided Compensation and Orthogonal Residuals",
+        "source_url": "https://www.semanticscholar.org/paper/4bc350d63aeade610b2ffccc236935ac34647a3d",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": "Post-training weight-activation quantization reduces the memory and inference costs of large language models, but aggressive W4A4 quantization remains difficult because activation outliers degrade effective quantization resolution. Although weight optimization, channel-wise scaling, and orthogonal rotation mitigate this problem, the error components they address and their relationship remain unclear. Using an exact decomposition of local weight-activation quantization error into an activation-guided weight compensation term and an orthogonal residual, we bound the residual using persistent channel-wise outlier and regular activation quantities. This decomposition clarifies which error components can be addressed by weight compensation and which require transformation design. We then use the residual bounds to derive practical guidelines for applying randomized Hadamard rotation, sign selection, and channel scaling. In particular, the analysis explains how random signs suppress constructive interference among persistent outlier channels, how sampling multiple sign patterns can improve transformation selection, and how second-moment balancing leads to an $L_2$ scaling rule while a further relaxation recovers SmoothQuant-style $L_\\infty$ scaling. We evaluate these guidelines through backpropagation-free configurations across eight Llama and Mistral models, obtaining performance competitive with gradient-trained SpinQuant.",
+        "canonical_id": "arXiv:2609.21450",
+        "arxiv_id": "2609.21450",
+        "authors": [
+          "Yamato Narita",
+          "Issei Sato"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21834",
+      "identity_tokens": [
+        "id:arXiv:2609.21834",
+        "title:beyond shadow weights quantizationaware training as quantizedendpoint descent",
+        "url:https://www.semanticscholar.org/paper/7c89a6b28057e5c0b6c038a3e2cee2635e19e4a1"
+      ],
+      "record": {
+        "title": "Beyond Shadow Weights: Quantization-Aware Training as Quantized-Endpoint Descent",
+        "source_url": "https://www.semanticscholar.org/paper/7c89a6b28057e5c0b6c038a3e2cee2635e19e4a1",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": "Quantization-aware training (QAT) updates a full-precision shadow weight $\\mathbf{x}$ but deploys the quantized endpoint $Q(\\mathbf{x})$. Existing explanations for QAT largely view its success through the lens of shadow weights: QAT can move $\\mathbf{x}$ toward flatter basins, gain robustness from quantization-induced oscillations, or balance the shadow loss $f(\\mathbf{x})$ against the quantization error $\\|\\mathbf{x}-Q(\\mathbf{x})\\|_2$. These perspectives do not directly explain the empirical observation that the deployed endpoint loss $f(Q(\\mathbf{x}))$ improves while the shadow loss $f(\\mathbf{x})$ does not, and can even increase substantially. In this paper, we offer a different explanation by treating QAT as finite-grid endpoint dynamics. Motivated by the approximate normality of rescaled pretrained weights, we propose an idealized model for the residual phase, which records where each shadow weight sits inside its quantization cell as a fraction of the cell width. This model leads to a crossing law that determines which coordinates cross quantization boundaries after a shadow update. Inspired by the idealized model and signal-imbalance phenomenon in QAT, we further propose QAR (Quantization with Amplified Routing), an algorithmic framework that directly operates on the quantization code. In contrast to QAT, QAR is both theoretically grounded and memory-efficient: it admits feasible-gradient bounds for a family of power amplifiers up to unavoidable finite-grid floors without retaining a full-precision shadow weight copy. Experiments on post-training of large language models provide evidence consistent with the endpoint view and show that QAR can be comparable to or better than QAT with smaller memory cost.",
+        "canonical_id": "arXiv:2609.21834",
+        "arxiv_id": "2609.21834",
+        "authors": [
+          "Sheng-An Xu",
+          "Hanyang Li",
+          "Jian-Hao Ma",
+          "Ying-Han Cui"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21672",
+      "identity_tokens": [
+        "id:arXiv:2609.21672",
+        "title:accelerating dense llms via l0regularized mixtureofexperts",
+        "url:https://www.semanticscholar.org/paper/6a5dbd9fa51ed94d2de8cafc0ca37a8e39ef73a0"
+      ],
+      "record": {
+        "title": "Accelerating Dense LLMs via L0-regularized Mixture-of-Experts",
+        "source_url": "https://www.semanticscholar.org/paper/6a5dbd9fa51ed94d2de8cafc0ca37a8e39ef73a0",
+        "year": 2026,
+        "published": "2026-09-18",
+        "abstract": "Large language models (LLMs) achieve strong performance but suffer from slow and costly inference. Existing acceleration methods often lead to noticeable performance degradation, while Mixture-of-Experts (MoE) models require extensive computational resources. In this paper, we propose L0-MoE, a lightweight MoE approach using L0-regularization to accelerate dense LLMs nearly without performance loss. Our method introduces a cluster confusion matrix for domain-aware dataset curation and applies dynamic batching for efficient training. Experiments show that L0-MoE achieves up to 2.5x speedup over dense models while maintaining competitive performance, outperforming existing LLM acceleration baselines.",
+        "canonical_id": "arXiv:2609.21672",
+        "arxiv_id": "2609.21672",
+        "authors": [
+          "Zhen-Yu Zhang",
+          "Jiu-Dong Yang",
+          "Zhaowen Tao",
+          "Meng Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19441",
+      "identity_tokens": [
+        "id:arXiv:2609.19441",
+        "title:predict before you deploy offline prediction of quantizationinduced task degradation for world action models",
+        "url:https://www.semanticscholar.org/paper/5a5001330d3b932278bf04ee955777b733279496"
+      ],
+      "record": {
+        "title": "Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models",
+        "source_url": "https://www.semanticscholar.org/paper/5a5001330d3b932278bf04ee955777b733279496",
+        "year": 2026,
+        "published": "2026-09-16",
+        "abstract": "World action models (WAMs) rely on video-generation backbones, requiring substantial memory and compute for deployment. Post-training quantization reduces memory and can accelerate inference, but bit width, grouping, and quantizer choice define a large configuration space. Identifying configurations that preserve task performance through exhaustive closed-loop evaluation is costly. We propose PreDE (Predict Before You Deploy), a policy-calibrated framework for predicting quantization-induced task degradation from offline action deviations. Using closed-loop outcomes from a small development set, PreDE calibrates two thresholds and accepts, rejects, or defers new configurations using a fixed observation log. Under a within-setting label-ordering hypothesis, the rule issues decisions where all thresholds consistent with the development labels agree. Across five WAMs and four benchmark settings, quantization produces configuration-dependent task losses that cannot be explained by bit width alone or a shared deviation threshold. Across 28 held-out configurations from two policies, PreDE issued 21 decisions before observing closed-loop outcomes (75% coverage), all matching the observed acceptable or degraded labels. Deferred candidates included both acceptable outcomes and a 33-percentage-point loss. In 450 Franka Research 3 trials across two independently fine-tuned policies, all configurations assigned to high-deviation groups before testing showed significant degradation, while low-deviation comparisons showed no statistically significant degradation. On the real robot, W4A4 achieved a 1.37x action-query speedup and approximately 44% lower peak memory. These results support policy-specific behavioral calibration for quantization configuration selection while identifying candidates that require closed-loop evaluation. The code is available at https://github.com/jiuyixu25/PreDE.",
+        "canonical_id": "arXiv:2609.19441",
+        "arxiv_id": "2609.19441",
+        "authors": [
+          "Jiu-Yi Xu",
+          "Jin-Jia Guo",
+          "Mei-Da Chen",
+          "Jing Du",
+          "Yang-Ming Shi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16852",
+      "identity_tokens": [
+        "id:arXiv:2609.16852",
+        "title:coadapt an llmbased framework for adaptive collaborative perception in iiot robotic swarms",
+        "url:https://www.semanticscholar.org/paper/06480a54b7ecd63759540c0e0629f7c5607f9842"
+      ],
+      "record": {
+        "title": "CoAdapt: An LLM-based Framework for Adaptive Collaborative Perception in IIoT Robotic Swarms",
+        "source_url": "https://www.semanticscholar.org/paper/06480a54b7ecd63759540c0e0629f7c5607f9842",
+        "year": 2026,
+        "published": "2026-09-15",
+        "abstract": "Industrial IoT environments increasingly deploy autonomous mobile robots for tasks such as material handling, product assembly, or infrastructure inspection. In such deployments, collaborative perception enables robots to share LiDAR observations and collectively construct a richer model of their environment than an individual agent could produce alone. However, industrial environments are dynamic spaces where robot positions shift continuously, network bandwidth fluctuates, and the marginal contribution of robots to perception quality varies at runtime. Existing collaborative perception approaches are designed for static participation assumptions and cannot adapt to these dynamics without sacrificing either detection precision or communication efficiency. This paper presents CoAdapt, an adaptive collaborative perception framework for IIoT robotic swarms in which a Large Language Model (LLM) serves as a runtime fusion controller, jointly deciding which robots participate in the fusion process and which fusion algorithm to apply based on the current spatial configuration and network state. The LLM reasons over structured natural language descriptions of the scene derived from raw LiDAR point clouds, requiring no taskspecific training and generalizing to unseen swarm topologies. Evaluated on the OPV2V benchmark across 25 scenarios, our approach achieves a 38% reduction in communication cost while maintaining detection precision comparable to static baseline approaches.",
+        "canonical_id": "arXiv:2609.16852",
+        "arxiv_id": "2609.16852",
+        "authors": [
+          "Houssam Hajj Hassan",
+          "Antonia Masucci",
+          "Lynda Zitoune",
+          "S. Elayoubi"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:8afbc0acffeea211f1b4efb6f0befb8ee3f101b493d6b4b7cd408429cd5f35e2",
+  "next_action": "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; the cached records were re-filtered against this run's current identity snapshot and any shortfall was topped up from the same fixed source. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

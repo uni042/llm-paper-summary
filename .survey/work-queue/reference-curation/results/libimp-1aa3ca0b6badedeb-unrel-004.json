@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1aa3ca0b6badedeb-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.12110",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.12110",
+    "identity_tokens": [
+      "arXiv:2502.12110"
+    ],
+    "reason": "エージェントの長期記憶内容の生成・編成が主題で、推論サービングやKV/メモリ階層のシステム最適化ではない。",
+    "first_checked_at": "2026-10-05T22:27:25+00:00",
+    "last_checked_at": "2026-10-06T12:12:52+00:00",
+    "linked_from": [],
+    "title": "A-MEM: Agentic Memory for LLM Agents"
+  },
+  "processed_at": "2026-10-06T12:12:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1aa3ca0b6bad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

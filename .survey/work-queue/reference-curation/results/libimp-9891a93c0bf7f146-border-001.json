@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9891a93c0bf7f146-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2104.10640",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2104.10640",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2104.10640",
+      "arXiv:2104.10640"
+    ],
+    "reason": "一次要旨はTransformer系NLPモデルの全般的なサーベイで、枝刈り、量子化、知識蒸留、長系列注意の効率化を既存技術として概説する。圧縮と推論効率の章題は現行サーベイに関連するが、個別LLM推論基盤の新規機構・検証ではなく幅広いNLPモデル解説が主目的のため収録を保留。",
+    "first_checked_at": "2026-10-21T15:27:48+00:00",
+    "last_checked_at": "2026-10-22T15:52:09+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "The NLP Cookbook: Modern Recipes for Transformer Based Deep Learning Architectures"
+  },
+  "processed_at": "2026-10-22T15:52:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9891a93c0bf7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

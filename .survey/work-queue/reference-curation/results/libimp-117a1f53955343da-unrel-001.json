@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-117a1f53955343da-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.01988",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.01988",
+    "identity_tokens": [
+      "arXiv:2409.01988"
+    ],
+    "reason": "原著は衛星・ドローン等の地球観測画像を、機上の疎な線形変換で圧縮し、地上でunrolled NA-ALISTAと画像分類器へ渡す通信路を扱う。最終評価は画像の意味圧縮と分類であり、LLMの重み・KVキャッシュ圧縮やテキスト生成の実行系ではない。",
+    "first_checked_at": "2026-10-25T04:51:26+00:00",
+    "last_checked_at": "2026-10-25T04:51:26+00:00",
+    "linked_from": [],
+    "title": "Compressed learning based onboard semantic compression for remote sensing platforms"
+  },
+  "processed_at": "2026-10-25T04:51:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-117a1f539553",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

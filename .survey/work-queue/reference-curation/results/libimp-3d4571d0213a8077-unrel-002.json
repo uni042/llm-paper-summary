@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d4571d0213a8077-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.20690",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.20690",
+    "identity_tokens": [
+      "arXiv:2504.20690"
+    ],
+    "reason": "一次要旨では拡散Transformerを用いた指示付き画像編集が主目的。少量微調整と視覚言語モデルによるノイズ候補選択で画像編集品質・効率を改善するが、LLM生成推論エンジンやサービング効率を対象としない。",
+    "first_checked_at": "2026-10-07T21:38:05+00:00",
+    "last_checked_at": "2026-10-07T21:38:05+00:00",
+    "linked_from": [
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "In-Context Edit: Enabling Instructional Image Editing with In-Context Generation in Large Scale Diffusion Transformer"
+  },
+  "processed_at": "2026-10-07T21:38:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d4571d0213a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

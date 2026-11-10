@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0077823f3ec87b2c-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.48550/arxiv.2601.21282",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.48550/arxiv.2601.21282",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.21282",
+      "arXiv:2601.21282"
+    ],
+    "reason": "This is a diagnostic benchmark for world models and does not state a concrete LLM inference, serving, or runtime-efficiency contribution.",
+    "first_checked_at": "2026-10-10T15:55:38+00:00",
+    "last_checked_at": "2026-10-10T15:55:38+00:00",
+    "linked_from": [],
+    "title": "WorldBench: Disambiguating Physics for Diagnostic Evaluation of World Models"
+  },
+  "processed_at": "2026-10-10T15:55:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0077823f3ec8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

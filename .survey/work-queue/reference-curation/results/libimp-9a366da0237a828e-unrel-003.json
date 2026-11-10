@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9a366da0237a828e-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.01864",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.01864",
+    "identity_tokens": [
+      "arXiv:2609.01864"
+    ],
+    "reason": "一次要旨: NVIDIA distributed shared memory (DSMEM) enables direct shared-memory access within a thread block cluster. However, cluster synchronization, remote access, and resource costs make it difficult to determine when DSMEM improves performance. To fill this gap, we propose CREDIT, a cost-guided framework that identifies DSMEM-profitable workload patterns, predicts their profitability range, and delivers consistent speedups across diverse workloads. CREDIT combines three innovations: (1) a profiling-driven characterization that identifies workload patterns likely to benefit from DSMEM; (2) a transformation that applies DSMEM to reduction-reuse workloads; (3) a cost model based on profiling data, to determine its profitability range. Evaluations on diverse workloads show CREDIT achieves 91.7% prediction accuracy on profitability. CREDIT beats torch.compile, Triton, and optimized non-DSMEM CUDA baselines on all six workloads, with geometric-mean speedups of 1.466x on RTX 5090 and 1.318x on H100. CREDIT's source code is publicly available at https://github.com/zhengxiongli08/CREDIT.",
+    "first_checked_at": "2026-10-05T07:32:30+00:00",
+    "last_checked_at": "2026-10-05T07:32:30+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+    ],
+    "title": "CREDIT: Cost-guided Reduction-reuse with Efficient DSMEM Inter-CTA Tiling"
+  },
+  "processed_at": "2026-10-05T07:32:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9a366da0237a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

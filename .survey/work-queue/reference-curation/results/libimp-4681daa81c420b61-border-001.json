@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4681daa81c420b61-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.25380",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.25380",
+    "identity_tokens": [
+      "arXiv:2607.25380",
+      "id:arXiv:2607.25380",
+      "url:https://arxiv.org/abs/2607.25380"
+    ],
+    "reason": "このサーベイはLLM記憶を表現形式、更新時点、永続性で分類し、注意KV・再帰状態・パラメータ更新・外部検索の記憶書込みと経路制御を横断整理する。システム効率上の論点は含むが対象が長期知識記憶やモデル能力にも広く及び、推論サービングの特定最適化を直接提案しないためborderline。",
+    "first_checked_at": "2026-10-28T20:55:25+00:00",
+    "last_checked_at": "2026-10-28T20:55:25+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Memory for Large Language Models"
+  },
+  "processed_at": "2026-10-28T20:55:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4681daa81c42",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

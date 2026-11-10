@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a3b255899b286d67-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.26708",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.26708",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2609.26708",
+      "arXiv:2609.26708",
+      "title:train where the quantized model goes  on policy distillation for low bit reasoning"
+    ],
+    "reason": "arXiv一次要旨では3bit未満の量子化推論で長い推論列が反復ループへ逸脱する問題に対し、量子化済み学生が実際に生成する接頭辞へフル精度教師のトークン指導と検証報酬を与えるon-policy蒸留を提案。1.88/2.79bitの配備品質回復に関係するが主な技術的貢献は訓練時の蒸留方針であり、推論時カーネル・スケジューリング・レイテンシの直接改善は要旨にないため境界扱い。",
+    "first_checked_at": "2026-10-27T22:46:01+00:00",
+    "last_checked_at": "2026-10-27T22:46:01+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Train Where the Quantized Model Goes: On-Policy Distillation for Low-Bit Reasoning"
+  },
+  "processed_at": "2026-10-27T22:46:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a3b255899b28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

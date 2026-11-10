@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-315374c4cdf1215e-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1088/1361-6501/ae9c61",
+  "reason": "Multiscale fusion-based fault diagnosis methods can exploit complementary fault information across different scales and are therefore effective in improving diagnostic accuracy. However, when noisy multiscale information is represented or fused, noise components from different scales tend to interfere with one another, which may obscure critical fault-related features and consequently degrade diagnostic performance. To address this issue, we propose a Multi-Channel Noise-Resistant Transformer (MNRformer) for fault diagnosis under noisy conditions, with the aim of reducing noise interference among multiscale information. Specifically, a channel-independent modeling strategy is adopted to construct Transformer subchannels with shared embedding representations and parameter weights, where features from different scales are modeled independently to mitigate mutual noise interference across scales. In addition, we design a dynamic weighting algorithm based on inverse information entropy to guide the feedforward network to adaptively enhance the response to channels with higher feature representation stability, thereby improving the discriminant robustness and overall reliability in the fault diagnosis process. Experimental results on four public rotating machinery datasets and one laboratory-built natural-noise dataset show that MNRformer maintains smaller performance degradation under different noise conditions, verifying its noise robustness in rotating machinery fault diagnosis.",
+  "title": "Multi-channel noise-resistant transformer with multiscale adaptive fusion for fault diagnosis of rotating machinery",
+  "identity_tokens": [
+    "DOI:10.1088/1361-6501/ae9c61"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-315374c4cdf1",
+  "source_precheck_request_id": null
+}

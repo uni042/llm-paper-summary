@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d77fb23a3698a0f-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1162/089976698300017746",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1162/089976698300017746",
+    "identity_tokens": [
+      "DOI:10.1162/089976698300017746"
+    ],
+    "reason": "情報幾何に基づく自然勾配（natural gradient）をperceptron、blind source separation、linear dynamical systemの学習へ適用し、Fisher効率性やlearning-rate更新を解析する学習アルゴリズム研究。推論効率化は対象外。",
+    "first_checked_at": "2026-10-04T12:52:28+00:00",
+    "last_checked_at": "2026-10-04T13:07:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2608.24945-fampwq-fisher-information-based-adaptive-mixed-precision-weight-quantization-for-effective-llm-inference.md"
+    ],
+    "title": "Natural Gradient Works Efficiently in Learning"
+  },
+  "processed_at": "2026-10-04T13:07:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d77fb23a369",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-83c29158e37d460b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.21322",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.21322",
+    "identity_tokens": [
+      "arXiv:2609.21322"
+    ],
+    "reason": "一次要旨: Heavy rainfall severely degrades outdoor videos by corrupting high-frequency details and introducing motion blur, critically undermining the reliability of visual tasks. Recently, State Space Models (SSMs), particularly Mamba, have emerged as efficient alternatives for vision tasks with their linear complexity and ability to model long-range dependencies. Ho",
+    "first_checked_at": "2026-10-05T06:17:39+00:00",
+    "last_checked_at": "2026-10-05T06:17:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "S3VD: Semantic-Guidance Spatio-Temporal Scanning for Video Deraining"
+  },
+  "processed_at": "2026-10-05T06:17:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-83c29158e37d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

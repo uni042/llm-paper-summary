@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8b2283bc04b60b4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.37809",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.37809",
+    "identity_tokens": [
+      "arXiv:2609.37809"
+    ],
+    "reason": "Pixel-level attention is evaluated for satellite-based canopy-height regression and other remote-sensing tasks, not LLM inference or serving.",
+    "first_checked_at": "2026-10-05T04:44:33+00:00",
+    "last_checked_at": "2026-10-05T04:44:33+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "Pixel-Level Transformers in Remote Sensing: A Canopy Height Case Study"
+  },
+  "processed_at": "2026-10-05T04:44:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8b2283bc04b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

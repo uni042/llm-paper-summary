@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ac5347cd62c3a7c-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3352460.3358260",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3352460.3358260",
+    "identity_tokens": [
+      "DOI:10.1145/3352460.3358260"
+    ],
+    "reason": "市販DRAMを改変せずtiming violationでrow copy・AND・ORを実現するPIM基礎研究で、LLM専用ではない一方、LLM向けPIM/near-data acceleratorの直接的な基盤技術なのでborderline。",
+    "first_checked_at": "2026-10-06T16:31:55+00:00",
+    "last_checked_at": "2026-10-06T16:31:55+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ComputeDRAM: In-Memory Compute Using Off-the-Shelf DRAMs"
+  },
+  "processed_at": "2026-10-06T16:31:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ac5347cd62c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

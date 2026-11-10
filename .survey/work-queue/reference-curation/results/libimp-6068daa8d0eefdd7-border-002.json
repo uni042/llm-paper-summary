@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6068daa8d0eefdd7-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.06501",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.06501",
+    "identity_tokens": [
+      "arXiv:2605.06501"
+    ],
+    "reason": "Cubit replaces attention with a kernel-ridge-regression token mixer, but its full-text evaluation reports language-model quality rather than inference speed or memory gains; the inverse-Gram formulation leaves efficiency unclear.",
+    "first_checked_at": "2026-10-13T22:56:13+00:00",
+    "last_checked_at": "2026-10-13T22:56:13+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Cubit: Token Mixer with Kernel Ridge Regression"
+  },
+  "processed_at": "2026-10-13T22:56:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6068daa8d0ee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,229 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4ac5e71d44f673ea-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4ac5e71d44f6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2605.12396",
+    "arXiv:2605.13295"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c77466f2a6df75482ebb59213433c0756ce1b148",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-11T07:48:49.884125+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2605.12396",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.13295",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "NCCLZ: Compression-Enabled GPU Collectives with Decoupled Quantization and Entropy Coding",
+      "source_url": "https://arxiv.org/abs/2605.12396",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "IEEE International Symposium on High-Performance Parallel Distributed Computing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large multi-node GPU jobs often become limited by the number of bytes injected into the inter-node network path. Compression can reduce this traffic, but existing compression-assisted collective libraries either sit outside NCCL’s GPU-centric execution model or mainly rely on quantization alone. We present NCCLZ, a compression-enabled extension to NCCL that decouples lossy quantization from lossless entropy coding. NCCLZ performs approximation once before communication by converting tensors into integer symbols, and then applies lossless byte reduction inside NCCL’s communication pipeline. This placement keeps numerical approximation explicit, avoids repeated lossy recompression during reductions, and preserves NCCL’s native pipelined execution model. NCCLZ combines a runtime selector with slot-aware framing and pipelined staging to choose among raw transmission, fixed-length packing, and GPU Huffman coding. Initial results on Polaris show up to 9.65× compression ratio and up to 4.79× higher end-to-end AllReduce throughput than baseline NCCL on representative scientific and training tensors.",
+      "identifiers": [
+        "SemanticScholar:34218995c994cba7b20ffd108491b09428fac252"
+      ],
+      "semantic_scholar_id": "34218995c994cba7b20ffd108491b09428fac252",
+      "canonical_id": "arXiv:2605.12396",
+      "arxiv_id": "2605.12396",
+      "doi": "10.1145/3806645.3820073",
+      "authors": [
+        "Jia-Min Wang",
+        "Zhi-Jing Ye",
+        "Xiao-Dong Yu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CANTANTE: Optimizing Agentic Systems via Contrastive Credit Attribution",
+      "source_url": "https://arxiv.org/abs/2605.13295",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM-based multi-agent systems have demonstrated strong performance across complex real-world tasks, such as software engineering, predictive modeling, and retrieval-augmented generation. Yet automating their configuration remains a structural challenge, as scores are available only at the system level, whereas the parameters governing agent behavior are local. We argue that optimizing these systems is fundamentally a credit-assignment problem. We therefore introduce CANTANTE, a framework that decomposes system-level rewards into per-agent update signals by contrasting rollouts of multiple joint configurations on the same query. We instantiate it for prompt optimization, treating agent prompts as learnable system parameters. We evaluate CANTANTE against GEPA and MIPROv2 on programming (MBPP), mathematical reasoning (GSM8K), and multi-hop question answering (HotpotQA). Across these benchmarks, CANTANTE achieves the best average rank among all evaluated optimizers and consistently outperforms unoptimized prompts. It improves over the strongest baseline by +18.9 percentage points on MBPP and +12.5 percentage points on GSM8K, while incurring a lower inference cost. It remains within one standard deviation of the strongest baseline on HotpotQA. Crucially, our credit correlation analysis confirms that the attributer produces meaningful per-agent signals rather than echoing the global system score.",
+      "identifiers": [
+        "SemanticScholar:0f87d697d9d3eb7a5d97227eeaeb7517a01ef149"
+      ],
+      "semantic_scholar_id": "0f87d697d9d3eb7a5d97227eeaeb7517a01ef149",
+      "canonical_id": "arXiv:2605.13295",
+      "arxiv_id": "2605.13295",
+      "doi": "10.48550/arXiv.2605.13295",
+      "authors": [
+        "Tom Zehle"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.12396",
+      "identity_tokens": [
+        "id:DOI:10.1145/3806645.3820073",
+        "id:SemanticScholar:34218995c994cba7b20ffd108491b09428fac252",
+        "id:arXiv:2605.12396",
+        "title:ncclz compressionenabled gpu collectives with decoupled quantization and entropy coding",
+        "url:https://arxiv.org/abs/2605.12396"
+      ],
+      "record": {
+        "title": "NCCLZ: Compression-Enabled GPU Collectives with Decoupled Quantization and Entropy Coding",
+        "source_url": "https://arxiv.org/abs/2605.12396",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": "IEEE International Symposium on High-Performance Parallel Distributed Computing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large multi-node GPU jobs often become limited by the number of bytes injected into the inter-node network path. Compression can reduce this traffic, but existing compression-assisted collective libraries either sit outside NCCL’s GPU-centric execution model or mainly rely on quantization alone. We present NCCLZ, a compression-enabled extension to NCCL that decouples lossy quantization from lossless entropy coding. NCCLZ performs approximation once before communication by converting tensors into integer symbols, and then applies lossless byte reduction inside NCCL’s communication pipeline. This placement keeps numerical approximation explicit, avoids repeated lossy recompression during reductions, and preserves NCCL’s native pipelined execution model. NCCLZ combines a runtime selector with slot-aware framing and pipelined staging to choose among raw transmission, fixed-length packing, and GPU Huffman coding. Initial results on Polaris show up to 9.65× compression ratio and up to 4.79× higher end-to-end AllReduce throughput than baseline NCCL on representative scientific and training tensors.",
+        "identifiers": [
+          "SemanticScholar:34218995c994cba7b20ffd108491b09428fac252"
+        ],
+        "semantic_scholar_id": "34218995c994cba7b20ffd108491b09428fac252",
+        "canonical_id": "arXiv:2605.12396",
+        "arxiv_id": "2605.12396",
+        "doi": "10.1145/3806645.3820073",
+        "authors": [
+          "Jia-Min Wang",
+          "Zhi-Jing Ye",
+          "Xiao-Dong Yu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 152,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.13295",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.13295",
+        "id:SemanticScholar:0f87d697d9d3eb7a5d97227eeaeb7517a01ef149",
+        "id:arXiv:2605.13295",
+        "title:cantante optimizing agentic systems via contrastive credit attribution",
+        "url:https://arxiv.org/abs/2605.13295"
+      ],
+      "record": {
+        "title": "CANTANTE: Optimizing Agentic Systems via Contrastive Credit Attribution",
+        "source_url": "https://arxiv.org/abs/2605.13295",
+        "year": 2026,
+        "published": "2026-05-13",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM-based multi-agent systems have demonstrated strong performance across complex real-world tasks, such as software engineering, predictive modeling, and retrieval-augmented generation. Yet automating their configuration remains a structural challenge, as scores are available only at the system level, whereas the parameters governing agent behavior are local. We argue that optimizing these systems is fundamentally a credit-assignment problem. We therefore introduce CANTANTE, a framework that decomposes system-level rewards into per-agent update signals by contrasting rollouts of multiple joint configurations on the same query. We instantiate it for prompt optimization, treating agent prompts as learnable system parameters. We evaluate CANTANTE against GEPA and MIPROv2 on programming (MBPP), mathematical reasoning (GSM8K), and multi-hop question answering (HotpotQA). Across these benchmarks, CANTANTE achieves the best average rank among all evaluated optimizers and consistently outperforms unoptimized prompts. It improves over the strongest baseline by +18.9 percentage points on MBPP and +12.5 percentage points on GSM8K, while incurring a lower inference cost. It remains within one standard deviation of the strongest baseline on HotpotQA. Crucially, our credit correlation analysis confirms that the attributer produces meaningful per-agent signals rather than echoing the global system score.",
+        "identifiers": [
+          "SemanticScholar:0f87d697d9d3eb7a5d97227eeaeb7517a01ef149"
+        ],
+        "semantic_scholar_id": "0f87d697d9d3eb7a5d97227eeaeb7517a01ef149",
+        "canonical_id": "arXiv:2605.13295",
+        "arxiv_id": "2605.13295",
+        "doi": "10.48550/arXiv.2605.13295",
+        "authors": [
+          "Tom Zehle"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 151,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:490d30ec5385933d055b7b72fd405fd4a7356267caa9f5477ec0d71358c5e227",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

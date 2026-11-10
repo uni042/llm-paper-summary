@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1c22b5b014875bd0-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.31268",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.31268",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.31268",
+      "arXiv:2605.31268"
+    ],
+    "reason": "12B総パラメータ・2.5B活性MoEのコード向けモデルを紹介し、GQA・sliding-window attention・内蔵MTPドラフトを設計に採用する。推論効率の制約を考慮した技術報告として参考になるが、要旨の主貢献はモデル全体の訓練・評価であり独立したサービング高速化手法の検証ではない。",
+    "first_checked_at": "2026-10-30T11:54:38+00:00",
+    "last_checked_at": "2026-10-30T11:54:38+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Mellum2 Technical Report"
+  },
+  "processed_at": "2026-10-30T11:54:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1c22b5b01487",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb460ae8fc173dcf-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/cisr70722.2026.11680199",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/cisr70722.2026.11680199",
+    "identity_tokens": [
+      "DOI:10.1109/cisr70722.2026.11680199"
+    ],
+    "reason": "This paper systematically evaluates the capabilities of fourteen Large language models(LLMs) in the domain of mechanical engineering. First, we develop a specialized test bank tailored for large models in the mechanical field, comprising various question formats including single-choice, multiple-choice, true/false, and fill-in-the-blank items. Subsequently, we conduct assessments on models including DeepSeek-v3/R1, Claude-opus-4.0, GPT-4.1, Qwen2.5, and KiMi. The evaluation results indicate that DeepSeek-v3pro and Qwen2.5 outperform other models in terms of knowledge accuracy, achieving accuracy rates of 83.72% and 79.19%, respectively.",
+    "first_checked_at": "2026-10-05T09:35:36+00:00",
+    "last_checked_at": "2026-10-05T09:35:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+    ],
+    "title": "Evaluation of Large Language Models' Capabilities in the Field of Mechanical Engineering"
+  },
+  "processed_at": "2026-10-05T09:35:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb460ae8fc17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

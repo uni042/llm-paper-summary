@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6a20ab3537dc26d0-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.14306",
+  "reason": "Training a Mixture-of-Experts (MoE) model at long context or large batch size fails as soon as any one component's peak allocation exceeds device memory, so the target is every peak at once, not the average footprint. Four are left unbounded by the parallelism plans in common use, and each grows differently: expert dispatch with the routing matrix, the vocabulary projection with tokens times vocabulary, gradient checkpoint boundaries with depth times sequence length, and optimizer state with parameter count. Which one runs out first changes with the model, the context length, and the device count, so lowering the largest only exposes the next. We bound all four with schedules whose GPU working set is fixed at launch: PipelinedLLEP extends least-loaded expert parallelism with a cap on the tokens each source contributes to a dispatch chunk, Ring-DTP circulates activations or weight shards around a ring at the vocabulary projection and folds each block of logits into an online log-sum-exp, Selective checkpoint offload (SCO) keeps the one long-lived tensor of each checkpoint boundary in CPU memory, and OffloadStreamAdamW turns the serial CPU Adam update of optimizer offload into a bucket pipeline. All four change only the order and granularity of computation and data movement, so the loss and gradients stay exact. In matched component tests, they cut the MoE dispatch peak by up to $59.3\\%$ without losing throughput, the vocabulary projection peak by $86.6\\%$, and the offloaded optimizer step by $2.05\\times$ faster. Composed on MoE models from 120B to 667B parameters, they train at 1M context length, $8$--$32\\times$ the reach of a tuned FSDP2 baseline, and up to $10.4\\times$ its throughput.",
+  "title": "Flattening Every Memory Peak in Long-Context Mixture-of-Experts Training",
+  "identity_tokens": [
+    "arXiv:2609.14306"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+    "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+    "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+    "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+    "papers/inference/12-moe-parallelism-communication/2026-2601.17111-least-loaded-expert-parallelism-load-balancing-an-imbalanced-mixture-of-.md",
+    "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+    "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+    "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+    "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6a20ab3537dc",
+  "source_precheck_request_id": null
+}

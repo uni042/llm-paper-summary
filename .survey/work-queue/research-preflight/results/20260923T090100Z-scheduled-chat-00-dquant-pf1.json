@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T090100Z-scheduled-chat-00-dquant-pf1",
+  "kind": "research",
+  "attempt_id": "attempt-3e602a0f4e7177d85de6b301",
+  "job_id": "job-research-b8145b0c5f2892c4",
+  "record_bank": "g",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.19880-d-quant-driftable-entropy-coding-for-kv-cache-quantization.md",
+  "expected_blob_sha": null,
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:49b10347d1e95e6e551c6eb30614d87cadc4f8f871e931aeaad35f4323dd3883",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "d55c187e2aef834c7ce2c7a3e34c53948b778f3a"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "95588d160afcadd7584450a98f1c58eb842f5bac"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "758b2017ddceaf75db62ff90113cec62b7d278b8"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "1cb01fd53db03dae82fd74c7e5dfa5fcae0b8d97"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "ee57ac0a6d18b9b6095d474059d462f51d3b9a50"
+    }
+  ],
+  "validation_errors": [
+    "metadata.source is required",
+    "metadata.sources is required",
+    "metadata.implementation is required",
+    "metadata.last_checked is required",
+    "metadata.code is required; use null when no official URL was confirmed",
+    "metadata.hardware_evaluation is required",
+    "metadata.quality_effect is required",
+    "metadata.references is required; use [] after checking a reference section with no normalized identifiers",
+    "problem_method.components is required",
+    "problem_method.system_design is required",
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components requires at least two major mechanisms",
+    "results.overview must explain the main result and its practical meaning",
+    "results.key_results[0] must be an object",
+    "results.key_results[1] must be an object",
+    "results.key_results[2] must be an object",
+    "results.key_results[3] must be an object",
+    "results.key_results[4] must be an object",
+    "results.key_results[5] must be an object",
+    "results.key_results[6] must be an object",
+    "results.negative_results is required; record degradation and boundary conditions",
+    "results.interpretation is required; explain why gains change across conditions",
+    "results.quality_impact is required; distinguish lossless from approximate methods",
+    "positioning.limitations is required",
+    "positioning.differences is required",
+    "positioning.implementation_status is required",
+    "positioning.research_positioning is required"
+  ],
+  "checked_at": "2026-09-23T09:00:38+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

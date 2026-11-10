@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff1f701cf8e5ba78-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.25361",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.25361",
+    "identity_tokens": [
+      "arXiv:2606.25361"
+    ],
+    "reason": "会話エージェントのメモリ役割を比較する性能評価で、推論効率またはserving最適化を扱わない。",
+    "first_checked_at": "2026-10-05T03:44:14+00:00",
+    "last_checked_at": "2026-10-05T03:44:14+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+    ],
+    "title": "Memory Makes the Difference: Evaluating How Different Memory Roles Shape Conversational Agents"
+  },
+  "processed_at": "2026-10-05T03:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff1f701cf8e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

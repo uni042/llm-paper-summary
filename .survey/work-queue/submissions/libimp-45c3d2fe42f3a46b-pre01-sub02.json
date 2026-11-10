@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SalQ-VLM: Fine-Grained Saliency-Guided Quantization for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2508.03351",
+      "year": 2025,
+      "published": "2025-08-05",
+      "venue": null,
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities across diverse language tasks, motivating their extension to vision-language models (VLMs) for multimodal understanding. However, billion-parameter VLMs incur substantial memory and computational costs that hinder deployment in resource-constrained settings. Post-training quantization (PTQ) compresses models and accelerates inference without retraining, yet remains underexplored for VLMs. We identify two intrinsic VLM activation properties in PTQ: (1) visual over-representation, where vision tokens are excessive and often redundant, and (2) the modality gap separating text and vision tokens in the latent feature space. Prior methods largely overlook these properties, leading to quantization performance degradation. To address this mismatch, we propose SalQ-VLM, an importance-aware PTQ framework that prioritizes salient tokens and suppresses redundant vision tokens during calibration. We derive a gradient-driven importance factor that captures token-level importance variance and is theoretically grounded in the relationship among loss perturbation, activation errors, and output gradients. SalQ-VLM obtains this factor through a single lightweight block-wise gradient-caching pass and incorporates it into the layer-wise reconstruction objective. Because SalQ-VLM modifies only calibration, it adds no inference-time operations and remains compatible with existing high-performance kernels. Extensive evaluations across benchmarks and backbones show that SalQ-VLM consistently outperforms strong PTQ baselines, especially under ultra-low-bit quantization. Notably, it improves MME-RealWorld accuracy by 16.45% under INT2g128 quantization.",
+      "identifiers": [
+        "SemanticScholar:c456823b66367c9219c20c603fcf434bb6ca5f99"
+      ],
+      "semantic_scholar_id": "c456823b66367c9219c20c603fcf434bb6ca5f99",
+      "canonical_id": "arXiv:2508.03351",
+      "arxiv_id": "2508.03351",
+      "authors": [
+        "Yufei Xue",
+        "Yu-Shi Huang",
+        "Lu Zhu",
+        "Jia-Wei Shao",
+        "Jun Zhang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 451,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は、視覚トークンとテキストトークンの量的な非対称性を考慮した重要度重み付きHessianを用いるVLM向けPTQを提案。0.5B〜32Bの8ベンチマークで2ビット量子化時のMME-RealWorldを16.45%改善と報告。マルチモーダルLLMの推論メモリ削減に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "I N - BATCH E NSEMBLE D RAFTING : R OBUST S PECULA - TIVE D ECODING FOR LVLM S",
+      "source_url": "https://www.semanticscholar.org/paper/1dc981fcc9e78b4cfc21923892dd1e970356d52b",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:1dc981fcc9e78b4cfc21923892dd1e970356d52b"
+      ],
+      "semantic_scholar_id": "1dc981fcc9e78b4cfc21923892dd1e970356d52b",
+      "canonical_id": "SemanticScholar:1dc981fcc9e78b4cfc21923892dd1e970356d52b",
+      "authors": [
+        "Minjae Lee",
+        "WonjunKang",
+        "Byeongkeun Ahn",
+        "Christian Classen",
+        "Ming Yan",
+        "H. Koo",
+        "Kangwook Lee",
+        "FuriosaAI"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ICLR 2025 Workshop論文の一次要旨は、視覚言語モデルの投機的復号で複数のドラフト方式をバッチ内で組み合わせるIbEDを提案。マルチモーダルドラフト比のblock efficiencyが平均6%、最大23%改善と報告。実際のwall-clock高速化とblock efficiencyは同義ではないが、LVLM推論高速化に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-45c3d2fe42f3",
+    "round": "libimp-45c3d2fe42f3a46b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-45c3d2fe42f3a46b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-45c3d2fe42f3a46b-pre01.json",
+    "receipt": "sha256:2f7726b13392ba467be33b023aabe3bcc2d3a1fc466eccd8aa20bbdf3ae359a6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-45c3d2fe42f3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

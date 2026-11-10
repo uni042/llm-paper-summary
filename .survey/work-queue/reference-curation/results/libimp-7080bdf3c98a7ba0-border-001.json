@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7080bdf3c98a7ba0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.14354",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.14354",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2412.14354",
+      "SemanticScholar:b96f33a001601e0a6b727c3325fc0aa4ffccdf25",
+      "arXiv:2412.14354"
+    ],
+    "reason": "Benchmarks SSM rerankers and efficiency tradeoffs, but is application-level reranking evaluation rather than LLM inference optimization.",
+    "first_checked_at": "2026-10-14T09:47:17+00:00",
+    "last_checked_at": "2026-10-14T09:47:17+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "State Space Models are Strong Text Rerankers"
+  },
+  "processed_at": "2026-10-14T09:47:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7080bdf3c98a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6383913424b40721-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.05806",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.05806",
+    "identity_tokens": [
+      "arXiv:2603.05806"
+    ],
+    "reason": "MoE Lens studies expert specialization/selective deployment, but does not directly evaluate inference acceleration.",
+    "first_checked_at": "2026-10-06T03:49:09+00:00",
+    "last_checked_at": "2026-10-06T03:49:09+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2605.06663-emo-emergent-modularity.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MoE Lens - An Expert Is All You Need"
+  },
+  "processed_at": "2026-10-06T03:49:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6383913424b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

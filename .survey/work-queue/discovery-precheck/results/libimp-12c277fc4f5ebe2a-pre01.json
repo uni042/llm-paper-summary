@@ -1,0 +1,794 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-12c277fc4f5ebe2a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-12c277fc4f5e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2310.07911",
+    "arXiv:2505.22107",
+    "arXiv:2506.23225",
+    "arXiv:2604.02367",
+    "arXiv:2606.02011",
+    "arXiv:2607.05475",
+    "arXiv:2607.22586",
+    "arXiv:2609.38166"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:23.380664+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2310.07911",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.22107",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.23225",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.02367",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.02011",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.05475",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.22586",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.38166",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.05475",
+      "year": 2026,
+      "published": "2026-07-06",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) on mobile devices enhances privacy and reduces latency, but is severely constrained by hardware inefficiencies. We present the first comprehensive, cross-layer measurement study of mobile LLM inference, spanning five mainstream frameworks (e.g., llama.cpp and GENIE) and three hardware backends (CPU, GPU, and NPU). To enable this analysis, we develop PowerBench, a fine-grained profiling tool that measures LLM throughput and provides the first backend-specific energy attribution for mobile LLM inference, going beyond traditional device-level measurements. We further conduct hardware microbenchmarks to characterize the memory-system performance and compute capabilities of mobile CPUs, GPUs, and NPUs. Our study yields three critical insights: (1) Framework-induced performance gaps are substantially amplified on NPUs, reaching up to $10\\times$ due to differences in offloading strategies, hardware-underutilizing operators, and activation quantization strategies. (2) We identify a distinct ``phase split,''in which NPUs excel at compute-bound prefilling, while CPUs outperform all other backends in memory-bound decoding. This split is driven by NPUs'preference for large, fixed-shape workloads, which conflicts with the small-kernel, dynamic nature of decoding. (3) Backend-specific profiling uncovers substantial scheduling headroom missed by prior work. Suboptimal thread configurations, uncoordinated NPU sleep latencies, and CPU polling intervals result in unnecessary energy consumption. For example, tuning CPU frequency alone reduces energy consumption by up to $39.7\\%$. Leveraging these findings, we estimate that an energy-oriented configuration can reduce energy consumption by up to $53.2\\%$ on the NPU backend across three datasets, highlighting the substantial potential for further efficiency improvements in mobile LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:70ea82273ae258725936011cf4ed651f71ed7b5b"
+      ],
+      "semantic_scholar_id": "70ea82273ae258725936011cf4ed651f71ed7b5b",
+      "canonical_id": "arXiv:2607.05475",
+      "arxiv_id": "2607.05475",
+      "doi": "10.48550/arXiv.2607.05475",
+      "authors": [
+        "Guanyu Cai",
+        "Ruiming Tian",
+        "Lang Yang",
+        "Zhouhong Ren",
+        "Jinliang Yuan",
+        "Ling-Kun Li",
+        "Ji-Liang Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 116,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery",
+      "source_url": "https://arxiv.org/abs/2606.02011",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) rely on long reasoning traces, making inference expensive. While low-bit quantization reduces per-token decoding cost, we show that aggressive 2-bit inference can fail to deliver end-to-end speedup because instability in the generation process inflates total token count. Instead of merely lowering answer accuracy, 2-bit quantization often produces much longer traces with repetitive loops, budget exhaustion, delayed commitment, and unclosed reasoning segments. We analyze full reasoning traces of Qwen3 reasoning models across mathematical and commonsense benchmarks and show that accuracy degradation is tightly linked to these process-level failures. To address them, we introduce two lightweight controls: FP16 planning, which gives the 2-bit model a short high-precision outline, and loop rescue, which detects repetitive traces and either commits to an earlier answer or falls back to FP16. On MATH-500, loop rescue improves Qwen3-8B accuracy from 17.2% to 74.2%, while planning plus loop rescue improves Qwen3-32B from 65.0% to 87.2%. Overall, our results show that extreme low-bit reasoning becomes practical when its failures are treated as controllable generation pathologies: with lightweight detection and selective FP16 support, 2-bit inference can recover accuracy while preserving real end-to-end speed. Our code is available at: https://github.com/brain-lab-research/quantized-reasoning.",
+      "identifiers": [
+        "SemanticScholar:83ea264ff248b1c8ae6af4dac34d77b15b6117ea"
+      ],
+      "semantic_scholar_id": "83ea264ff248b1c8ae6af4dac34d77b15b6117ea",
+      "canonical_id": "arXiv:2606.02011",
+      "arxiv_id": "2606.02011",
+      "doi": "10.48550/arXiv.2606.02011",
+      "authors": [
+        "Ekaterina Alimaskina",
+        "Darya Rudas",
+        "Denis Shveykin",
+        "G. Molodtsov",
+        "P. Vasiliev",
+        "A. Beznosikov"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+      "source_url": "https://arxiv.org/abs/2609.38166",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent LLMs increasingly adopt hybrid designs that replace standard attention with linear attention, such as Gated DeltaNet (GDN) and Kimi Delta Attention (KDA). Although they compress the context into a fixed-size recurrent state and substantially reduce the cost of long-context processing, repeatedly reading and updating that state remains a major inference bottleneck. Quantization offers a natural way to reduce this cost, but can significantly degrade model quality, due to the accumulation of rounding errors and the presence of outlier rows and columns in the state. To address these challenges, we propose LeapQuant, a training-free method that achieves near-lossless performance under 8-bit recurrent-state quantization. First, to mitigate error accumulation, we propose per-window quantization, which leaps over a window of tokens and quantizes the state only once at its end. Within a window, outputs are computed from the fixed low-bit state together with high-precision buffered updates. Second, to reduce the error introduced by each quantization, LeapQuant retains the state's largest outliers as a few high-precision Compensator Tokens, which share the update path of real tokens. We then smooth the remaining residual before quantization to further reduce the error. Comprehensive experiments across the Qwen, Kimi, and GLM model families show that LeapQuant substantially reduces memory and compute costs during inference. With accuracy comparable to the FP32 baseline, it achieves average speedups of 2.05--3.70$\\times$ at the kernel level and 1.47$\\times$ for end-to-end inference on NVIDIA B200, RTX PRO 6000, and RTX 5090 GPUs.",
+      "identifiers": [
+        "SemanticScholar:3ecf62f53d3386586c160ec4c305708e9dc33d45"
+      ],
+      "semantic_scholar_id": "3ecf62f53d3386586c160ec4c305708e9dc33d45",
+      "canonical_id": "arXiv:2609.38166",
+      "arxiv_id": "2609.38166",
+      "authors": [
+        "Yi Pan",
+        "Hao-Cheng Xi",
+        "Kan Zhu",
+        "Xing-Yang Li",
+        "Yi-Bo Wu",
+        "Mayank Mishra",
+        "Hong-Tao Zhang",
+        "William X.Zheng",
+        "Baris Kasikci",
+        "Song Han",
+        "Kurt Keutzer",
+        "Rishabh K. Iyer",
+        "Ion Stoica"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MM-ShiftKV: Decode-Aware Prefill-Stage KV Selection for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.22586",
+      "year": 2026,
+      "published": "2026-06-09",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-Value (KV) caching is essential for efficient inference in multimodal large language models (MLLMs), yet its memory footprint grows linearly with context length and becomes a major bottleneck due to the large number of visual tokens. Recent prefill-stage KV selection methods estimate KV importance from prefilling statistics, implicitly assuming that prefilling-time queries are representative of those encountered during decoding. We show that this assumption breaks down in multimodal inference, where decoding-time queries exhibit substantially larger variance than prefilling-stage representations, leading to unstable KV importance estimation under tight cache budgets. As a result, small ranking errors can disproportionately discard semantically critical visual tokens and degrade grounding and reasoning performance. We propose MM-ShiftKV, a training-free, decode-aware and strictly prefill-only KV selection method. MM-ShiftKV approximates decoding-time query behavior during prefilling by constructing variance-expanded query proxies and estimates prompt KV importance based on their aggregated attention mass. Experiments on multimodal benchmarks demonstrate that MM-ShiftKV consistently outperforms existing methods under strict KV-cache budgets. Our code is available at https://github.com/zjuDBxAI/MM-ShiftKV.",
+      "identifiers": [
+        "SemanticScholar:98ea762425bcbff95ae28a66635d261779239986"
+      ],
+      "semantic_scholar_id": "98ea762425bcbff95ae28a66635d261779239986",
+      "canonical_id": "arXiv:2607.22586",
+      "arxiv_id": "2607.22586",
+      "doi": "10.18653/v1/2026.findings-acl.1447",
+      "authors": [
+        "Jin-Song Shu",
+        "Chenyang Wu",
+        "Zhong-Le Xie",
+        "Bao-Kun Wang",
+        "Li-Dan Shou"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Curse of High Dimensionality Issue in Transformer for Long-context Modeling",
+      "source_url": "https://arxiv.org/abs/2505.22107",
+      "year": 2025,
+      "published": "2025-05-28",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) excel in natural language processing tasks by capturing long-range dependencies through self-attention mechanisms. However, long-context modeling faces significant computational inefficiencies due to \\textit{redundant} attention computations: while attention weights are often \\textit{sparse}, all tokens consume \\textit{equal} computational resources. In this paper, we reformulate traditional probabilistic sequence modeling as a \\textit{supervised learning task}, enabling the separation of relevant and irrelevant tokens and providing a clearer understanding of redundancy. Based on this reformulation, we theoretically analyze attention sparsity, revealing that only a few tokens significantly contribute to predictions. Building on this, we formulate attention optimization as a linear coding problem and propose a \\textit{group coding strategy}, theoretically showing its ability to improve robustness against random noise and enhance learning efficiency. Motivated by this, we propose \\textit{Dynamic Group Attention} (DGA), which leverages the group coding to explicitly reduce redundancy by aggregating less important tokens during attention computation. Empirical results show that our DGA significantly reduces computational costs while maintaining competitive performance.Code is available at https://github.com/bolixinyu/DynamicGroupAttention.",
+      "identifiers": [
+        "SemanticScholar:8c99036877c646d4149d376652d6f0d4b37a6594"
+      ],
+      "semantic_scholar_id": "8c99036877c646d4149d376652d6f0d4b37a6594",
+      "canonical_id": "arXiv:2505.22107",
+      "arxiv_id": "2505.22107",
+      "doi": "10.48550/arXiv.2505.22107",
+      "authors": [
+        "Shu-Hai Zhang",
+        "Z. You",
+        "Yao-Fo Chen",
+        "Zhi-Quan Wen",
+        "Qianyue Wang",
+        "Zhijie Qiu",
+        "Yuanqing Li",
+        "Ming-Kui Tan"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 520,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Pit One Against Many: Leveraging Attention-head Embeddings for Parameter-efficient Multi-head Attention",
+      "source_url": "https://arxiv.org/abs/2310.07911",
+      "year": 2023,
+      "published": "2023-10-11",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling pre-trained language models has resulted in large performance gains in various natural language processing tasks but comes with a large cost in memory requirements. Inspired by the position embeddings in transformers, we aim to simplify and reduce the memory footprint of the multi-head attention (MHA) mechanism. We propose an alternative module that uses only a single shared projection matrix and multiple head embeddings (MHE), i.e. one per head. We empirically demonstrate that our MHE attention is substantially more memory efficient compared to alternative attention mechanisms while achieving high predictive performance retention ratio to vanilla MHA on several downstream tasks. MHE attention only requires a negligible fraction of additional parameters ($3nd$, where $n$ is the number of attention heads and $d$ the size of the head embeddings) compared to a single-head attention, while MHA requires $(3n^2-3n)d^2-3nd$ additional parameters.",
+      "identifiers": [
+        "SemanticScholar:c30deb8f4b0e942a36e5ef5c87bed01f575c0c6e"
+      ],
+      "semantic_scholar_id": "c30deb8f4b0e942a36e5ef5c87bed01f575c0c6e",
+      "canonical_id": "arXiv:2310.07911",
+      "arxiv_id": "2310.07911",
+      "doi": "10.48550/arXiv.2310.07911",
+      "authors": [
+        "Huiyin Xue",
+        "Nikolaos Aletras"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1115,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Masked Gated Linear Unit",
+      "source_url": "https://arxiv.org/abs/2506.23225",
+      "year": 2025,
+      "published": "2025-06-29",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Gated Linear Units (GLUs) have become essential components in the feed-forward networks of state-of-the-art Large Language Models (LLMs). However, they require twice as many memory reads compared to feed-forward layers without gating, due to the use of separate weight matrices for the gate and value streams. To address this bottleneck, we introduce Masked Gated Linear Units (MGLUs), a novel family of GLUs with an efficient kernel implementation. The core contribution of MGLUs include: (1) the Mixture of Element-wise Gating (MoEG) architecture that learns multiple binary masks, each determining gate or value assignments at the element level on a single shared weight matrix resulting in reduced memory transfer, and (2) FlashMGLU, a hardware-friendly kernel that yields up to a 19.7 $\\times$ inference-time speed-up over a naive PyTorch MGLU and is 47% more memory-efficient and 34% faster than standard GLUs despite added architectural complexity on an RTX5090 GPU. In LLM experiments, the Swish-activated variant SwiMGLU preserves its memory advantages while matching - or even surpassing - the downstream accuracy of the SwiGLU baseline.",
+      "identifiers": [
+        "SemanticScholar:c93517473d72ea3b3b6205a41c53f09a4e83b487"
+      ],
+      "semantic_scholar_id": "c93517473d72ea3b3b6205a41c53f09a4e83b487",
+      "canonical_id": "arXiv:2506.23225",
+      "arxiv_id": "2506.23225",
+      "doi": "10.48550/arXiv.2506.23225",
+      "authors": [
+        "Yukito Tajima",
+        "Nakamasa Inoue",
+        "Yusuke Sekikawa",
+        "Ikuro Sato",
+        "Rio Yokota"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 488,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Evaluating Small Language Models for Front-Door Routing: A Harmonized Benchmark and Synthetic-Traffic Experiment",
+      "source_url": "https://arxiv.org/abs/2604.02367",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Selecting the appropriate model at inference time -- the routing problem -- requires jointly optimizing output quality, cost, latency, and governance constraints. Existing approaches delegate this decision to LLM-based classifiers or preference-trained routers that are themselves costly and high-latency, reducing a multi-objective optimization to single-dimensional quality prediction. We argue that small language models (SLMs, 1-4B parameters) have now achieved sufficient reasoning capability for sub-second, zero-marginal-cost, self-hosted task classification, potentially making the routing decision negligible in the inference budget. We test this thesis on a six-label taxonomy through two studies. Study 1 is a harmonized offline benchmark of Phi-3.5-mini, Qwen2.5-1.5B, and Qwen-2.5-3B on identical Azure T4 hardware, serving stack, quantization, and a fixed 60-case corpus. Qwen-2.5-3B achieves the best exact-match accuracy (0.783), the strongest latency-accuracy tradeoff, and the only nonzero accuracy on all six task families. Study 2 is a pre-registered four-arm randomized experiment under synthetic traffic with an effective sample size of 60 unique cases per arm, comparing Phi-4-mini, Qwen-2.5-3B, and DeepSeek-V3 against a no-routing control. DeepSeek-V3 attains the highest accuracy (0.830) but fails the pre-registered P95 latency gate (2,295 ms); Qwen-2.5-3B is Pareto-dominant among self-hosted models (0.793 accuracy, 988 ms median, $0 marginal cost). No model meets the standalone viability criterion (>=0.85 accuracy,<=2,000 ms P95). The cost and latency prerequisites for SLM-based routing are met; the accuracy gap of 6-8 percentage points and the untested question of whether correct classification translates to downstream output quality bound the remaining distance to production viability.",
+      "identifiers": [
+        "SemanticScholar:955dbe8538998f44691f9407ef96a46d1088703e"
+      ],
+      "semantic_scholar_id": "955dbe8538998f44691f9407ef96a46d1088703e",
+      "canonical_id": "arXiv:2604.02367",
+      "arxiv_id": "2604.02367",
+      "doi": "10.48550/arXiv.2604.02367",
+      "authors": [
+        "Warren Johnson",
+        "Charles Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.05475",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.05475",
+        "id:SemanticScholar:70ea82273ae258725936011cf4ed651f71ed7b5b",
+        "id:arXiv:2607.05475",
+        "title:is your npu ready for llms dissecting the hidden efficiency bottlenecks in mobile llm inference",
+        "url:https://arxiv.org/abs/2607.05475"
+      ],
+      "record": {
+        "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+        "source_url": "https://arxiv.org/abs/2607.05475",
+        "year": 2026,
+        "published": "2026-07-06",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying Large Language Models (LLMs) on mobile devices enhances privacy and reduces latency, but is severely constrained by hardware inefficiencies. We present the first comprehensive, cross-layer measurement study of mobile LLM inference, spanning five mainstream frameworks (e.g., llama.cpp and GENIE) and three hardware backends (CPU, GPU, and NPU). To enable this analysis, we develop PowerBench, a fine-grained profiling tool that measures LLM throughput and provides the first backend-specific energy attribution for mobile LLM inference, going beyond traditional device-level measurements. We further conduct hardware microbenchmarks to characterize the memory-system performance and compute capabilities of mobile CPUs, GPUs, and NPUs. Our study yields three critical insights: (1) Framework-induced performance gaps are substantially amplified on NPUs, reaching up to $10\\times$ due to differences in offloading strategies, hardware-underutilizing operators, and activation quantization strategies. (2) We identify a distinct ``phase split,''in which NPUs excel at compute-bound prefilling, while CPUs outperform all other backends in memory-bound decoding. This split is driven by NPUs'preference for large, fixed-shape workloads, which conflicts with the small-kernel, dynamic nature of decoding. (3) Backend-specific profiling uncovers substantial scheduling headroom missed by prior work. Suboptimal thread configurations, uncoordinated NPU sleep latencies, and CPU polling intervals result in unnecessary energy consumption. For example, tuning CPU frequency alone reduces energy consumption by up to $39.7\\%$. Leveraging these findings, we estimate that an energy-oriented configuration can reduce energy consumption by up to $53.2\\%$ on the NPU backend across three datasets, highlighting the substantial potential for further efficiency improvements in mobile LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:70ea82273ae258725936011cf4ed651f71ed7b5b"
+        ],
+        "semantic_scholar_id": "70ea82273ae258725936011cf4ed651f71ed7b5b",
+        "canonical_id": "arXiv:2607.05475",
+        "arxiv_id": "2607.05475",
+        "doi": "10.48550/arXiv.2607.05475",
+        "authors": [
+          "Guanyu Cai",
+          "Ruiming Tian",
+          "Lang Yang",
+          "Zhouhong Ren",
+          "Jinliang Yuan",
+          "Ling-Kun Li",
+          "Ji-Liang Wang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 116,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.02011",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.02011",
+        "id:SemanticScholar:83ea264ff248b1c8ae6af4dac34d77b15b6117ea",
+        "id:arXiv:2606.02011",
+        "title:extreme lowbit inference in reasoning models failure modes and targeted recovery",
+        "url:https://arxiv.org/abs/2606.02011"
+      ],
+      "record": {
+        "title": "Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery",
+        "source_url": "https://arxiv.org/abs/2606.02011",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) rely on long reasoning traces, making inference expensive. While low-bit quantization reduces per-token decoding cost, we show that aggressive 2-bit inference can fail to deliver end-to-end speedup because instability in the generation process inflates total token count. Instead of merely lowering answer accuracy, 2-bit quantization often produces much longer traces with repetitive loops, budget exhaustion, delayed commitment, and unclosed reasoning segments. We analyze full reasoning traces of Qwen3 reasoning models across mathematical and commonsense benchmarks and show that accuracy degradation is tightly linked to these process-level failures. To address them, we introduce two lightweight controls: FP16 planning, which gives the 2-bit model a short high-precision outline, and loop rescue, which detects repetitive traces and either commits to an earlier answer or falls back to FP16. On MATH-500, loop rescue improves Qwen3-8B accuracy from 17.2% to 74.2%, while planning plus loop rescue improves Qwen3-32B from 65.0% to 87.2%. Overall, our results show that extreme low-bit reasoning becomes practical when its failures are treated as controllable generation pathologies: with lightweight detection and selective FP16 support, 2-bit inference can recover accuracy while preserving real end-to-end speed. Our code is available at: https://github.com/brain-lab-research/quantized-reasoning.",
+        "identifiers": [
+          "SemanticScholar:83ea264ff248b1c8ae6af4dac34d77b15b6117ea"
+        ],
+        "semantic_scholar_id": "83ea264ff248b1c8ae6af4dac34d77b15b6117ea",
+        "canonical_id": "arXiv:2606.02011",
+        "arxiv_id": "2606.02011",
+        "doi": "10.48550/arXiv.2606.02011",
+        "authors": [
+          "Ekaterina Alimaskina",
+          "Darya Rudas",
+          "Denis Shveykin",
+          "G. Molodtsov",
+          "P. Vasiliev",
+          "A. Beznosikov"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 151,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38166",
+      "identity_tokens": [
+        "id:SemanticScholar:3ecf62f53d3386586c160ec4c305708e9dc33d45",
+        "id:arXiv:2609.38166",
+        "title:leapquant efficient linear attention with accurate recurrent state quantization",
+        "url:https://arxiv.org/abs/2609.38166"
+      ],
+      "record": {
+        "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+        "source_url": "https://arxiv.org/abs/2609.38166",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent LLMs increasingly adopt hybrid designs that replace standard attention with linear attention, such as Gated DeltaNet (GDN) and Kimi Delta Attention (KDA). Although they compress the context into a fixed-size recurrent state and substantially reduce the cost of long-context processing, repeatedly reading and updating that state remains a major inference bottleneck. Quantization offers a natural way to reduce this cost, but can significantly degrade model quality, due to the accumulation of rounding errors and the presence of outlier rows and columns in the state. To address these challenges, we propose LeapQuant, a training-free method that achieves near-lossless performance under 8-bit recurrent-state quantization. First, to mitigate error accumulation, we propose per-window quantization, which leaps over a window of tokens and quantizes the state only once at its end. Within a window, outputs are computed from the fixed low-bit state together with high-precision buffered updates. Second, to reduce the error introduced by each quantization, LeapQuant retains the state's largest outliers as a few high-precision Compensator Tokens, which share the update path of real tokens. We then smooth the remaining residual before quantization to further reduce the error. Comprehensive experiments across the Qwen, Kimi, and GLM model families show that LeapQuant substantially reduces memory and compute costs during inference. With accuracy comparable to the FP32 baseline, it achieves average speedups of 2.05--3.70$\\times$ at the kernel level and 1.47$\\times$ for end-to-end inference on NVIDIA B200, RTX PRO 6000, and RTX 5090 GPUs.",
+        "identifiers": [
+          "SemanticScholar:3ecf62f53d3386586c160ec4c305708e9dc33d45"
+        ],
+        "semantic_scholar_id": "3ecf62f53d3386586c160ec4c305708e9dc33d45",
+        "canonical_id": "arXiv:2609.38166",
+        "arxiv_id": "2609.38166",
+        "authors": [
+          "Yi Pan",
+          "Hao-Cheng Xi",
+          "Kan Zhu",
+          "Xing-Yang Li",
+          "Yi-Bo Wu",
+          "Mayank Mishra",
+          "Hong-Tao Zhang",
+          "William X.Zheng",
+          "Baris Kasikci",
+          "Song Han",
+          "Kurt Keutzer",
+          "Rishabh K. Iyer",
+          "Ion Stoica"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22586",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.1447",
+        "id:SemanticScholar:98ea762425bcbff95ae28a66635d261779239986",
+        "id:arXiv:2607.22586",
+        "title:mmshiftkv decodeaware prefillstage kv selection for multimodal large language models",
+        "url:https://arxiv.org/abs/2607.22586"
+      ],
+      "record": {
+        "title": "MM-ShiftKV: Decode-Aware Prefill-Stage KV Selection for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2607.22586",
+        "year": 2026,
+        "published": "2026-06-09",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Key-Value (KV) caching is essential for efficient inference in multimodal large language models (MLLMs), yet its memory footprint grows linearly with context length and becomes a major bottleneck due to the large number of visual tokens. Recent prefill-stage KV selection methods estimate KV importance from prefilling statistics, implicitly assuming that prefilling-time queries are representative of those encountered during decoding. We show that this assumption breaks down in multimodal inference, where decoding-time queries exhibit substantially larger variance than prefilling-stage representations, leading to unstable KV importance estimation under tight cache budgets. As a result, small ranking errors can disproportionately discard semantically critical visual tokens and degrade grounding and reasoning performance. We propose MM-ShiftKV, a training-free, decode-aware and strictly prefill-only KV selection method. MM-ShiftKV approximates decoding-time query behavior during prefilling by constructing variance-expanded query proxies and estimates prompt KV importance based on their aggregated attention mass. Experiments on multimodal benchmarks demonstrate that MM-ShiftKV consistently outperforms existing methods under strict KV-cache budgets. Our code is available at https://github.com/zjuDBxAI/MM-ShiftKV.",
+        "identifiers": [
+          "SemanticScholar:98ea762425bcbff95ae28a66635d261779239986"
+        ],
+        "semantic_scholar_id": "98ea762425bcbff95ae28a66635d261779239986",
+        "canonical_id": "arXiv:2607.22586",
+        "arxiv_id": "2607.22586",
+        "doi": "10.18653/v1/2026.findings-acl.1447",
+        "authors": [
+          "Jin-Song Shu",
+          "Chenyang Wu",
+          "Zhong-Le Xie",
+          "Bao-Kun Wang",
+          "Li-Dan Shou"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 143,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.22107",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.22107",
+        "id:SemanticScholar:8c99036877c646d4149d376652d6f0d4b37a6594",
+        "id:arXiv:2505.22107",
+        "title:curse of high dimensionality issue in transformer for longcontext modeling",
+        "url:https://arxiv.org/abs/2505.22107"
+      ],
+      "record": {
+        "title": "Curse of High Dimensionality Issue in Transformer for Long-context Modeling",
+        "source_url": "https://arxiv.org/abs/2505.22107",
+        "year": 2025,
+        "published": "2025-05-28",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based large language models (LLMs) excel in natural language processing tasks by capturing long-range dependencies through self-attention mechanisms. However, long-context modeling faces significant computational inefficiencies due to \\textit{redundant} attention computations: while attention weights are often \\textit{sparse}, all tokens consume \\textit{equal} computational resources. In this paper, we reformulate traditional probabilistic sequence modeling as a \\textit{supervised learning task}, enabling the separation of relevant and irrelevant tokens and providing a clearer understanding of redundancy. Based on this reformulation, we theoretically analyze attention sparsity, revealing that only a few tokens significantly contribute to predictions. Building on this, we formulate attention optimization as a linear coding problem and propose a \\textit{group coding strategy}, theoretically showing its ability to improve robustness against random noise and enhance learning efficiency. Motivated by this, we propose \\textit{Dynamic Group Attention} (DGA), which leverages the group coding to explicitly reduce redundancy by aggregating less important tokens during attention computation. Empirical results show that our DGA significantly reduces computational costs while maintaining competitive performance.Code is available at https://github.com/bolixinyu/DynamicGroupAttention.",
+        "identifiers": [
+          "SemanticScholar:8c99036877c646d4149d376652d6f0d4b37a6594"
+        ],
+        "semantic_scholar_id": "8c99036877c646d4149d376652d6f0d4b37a6594",
+        "canonical_id": "arXiv:2505.22107",
+        "arxiv_id": "2505.22107",
+        "doi": "10.48550/arXiv.2505.22107",
+        "authors": [
+          "Shu-Hai Zhang",
+          "Z. You",
+          "Yao-Fo Chen",
+          "Zhi-Quan Wen",
+          "Qianyue Wang",
+          "Zhijie Qiu",
+          "Yuanqing Li",
+          "Ming-Kui Tan"
+        ],
+        "priority": 19,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 19,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 520,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.07911",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.07911",
+        "id:SemanticScholar:c30deb8f4b0e942a36e5ef5c87bed01f575c0c6e",
+        "id:arXiv:2310.07911",
+        "title:pit one against many leveraging attentionhead embeddings for parameterefficient multihead attention",
+        "url:https://arxiv.org/abs/2310.07911"
+      ],
+      "record": {
+        "title": "Pit One Against Many: Leveraging Attention-head Embeddings for Parameter-efficient Multi-head Attention",
+        "source_url": "https://arxiv.org/abs/2310.07911",
+        "year": 2023,
+        "published": "2023-10-11",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling pre-trained language models has resulted in large performance gains in various natural language processing tasks but comes with a large cost in memory requirements. Inspired by the position embeddings in transformers, we aim to simplify and reduce the memory footprint of the multi-head attention (MHA) mechanism. We propose an alternative module that uses only a single shared projection matrix and multiple head embeddings (MHE), i.e. one per head. We empirically demonstrate that our MHE attention is substantially more memory efficient compared to alternative attention mechanisms while achieving high predictive performance retention ratio to vanilla MHA on several downstream tasks. MHE attention only requires a negligible fraction of additional parameters ($3nd$, where $n$ is the number of attention heads and $d$ the size of the head embeddings) compared to a single-head attention, while MHA requires $(3n^2-3n)d^2-3nd$ additional parameters.",
+        "identifiers": [
+          "SemanticScholar:c30deb8f4b0e942a36e5ef5c87bed01f575c0c6e"
+        ],
+        "semantic_scholar_id": "c30deb8f4b0e942a36e5ef5c87bed01f575c0c6e",
+        "canonical_id": "arXiv:2310.07911",
+        "arxiv_id": "2310.07911",
+        "doi": "10.48550/arXiv.2310.07911",
+        "authors": [
+          "Huiyin Xue",
+          "Nikolaos Aletras"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1115,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.23225",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.23225",
+        "id:SemanticScholar:c93517473d72ea3b3b6205a41c53f09a4e83b487",
+        "id:arXiv:2506.23225",
+        "title:masked gated linear unit",
+        "url:https://arxiv.org/abs/2506.23225"
+      ],
+      "record": {
+        "title": "Masked Gated Linear Unit",
+        "source_url": "https://arxiv.org/abs/2506.23225",
+        "year": 2025,
+        "published": "2025-06-29",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Gated Linear Units (GLUs) have become essential components in the feed-forward networks of state-of-the-art Large Language Models (LLMs). However, they require twice as many memory reads compared to feed-forward layers without gating, due to the use of separate weight matrices for the gate and value streams. To address this bottleneck, we introduce Masked Gated Linear Units (MGLUs), a novel family of GLUs with an efficient kernel implementation. The core contribution of MGLUs include: (1) the Mixture of Element-wise Gating (MoEG) architecture that learns multiple binary masks, each determining gate or value assignments at the element level on a single shared weight matrix resulting in reduced memory transfer, and (2) FlashMGLU, a hardware-friendly kernel that yields up to a 19.7 $\\times$ inference-time speed-up over a naive PyTorch MGLU and is 47% more memory-efficient and 34% faster than standard GLUs despite added architectural complexity on an RTX5090 GPU. In LLM experiments, the Swish-activated variant SwiMGLU preserves its memory advantages while matching - or even surpassing - the downstream accuracy of the SwiGLU baseline.",
+        "identifiers": [
+          "SemanticScholar:c93517473d72ea3b3b6205a41c53f09a4e83b487"
+        ],
+        "semantic_scholar_id": "c93517473d72ea3b3b6205a41c53f09a4e83b487",
+        "canonical_id": "arXiv:2506.23225",
+        "arxiv_id": "2506.23225",
+        "doi": "10.48550/arXiv.2506.23225",
+        "authors": [
+          "Yukito Tajima",
+          "Nakamasa Inoue",
+          "Yusuke Sekikawa",
+          "Ikuro Sato",
+          "Rio Yokota"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 488,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.02367",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.02367",
+        "id:SemanticScholar:955dbe8538998f44691f9407ef96a46d1088703e",
+        "id:arXiv:2604.02367",
+        "title:evaluating small language models for frontdoor routing a harmonized benchmark and synthetictraffic experiment",
+        "url:https://arxiv.org/abs/2604.02367"
+      ],
+      "record": {
+        "title": "Evaluating Small Language Models for Front-Door Routing: A Harmonized Benchmark and Synthetic-Traffic Experiment",
+        "source_url": "https://arxiv.org/abs/2604.02367",
+        "year": 2026,
+        "published": "2026-03-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Selecting the appropriate model at inference time -- the routing problem -- requires jointly optimizing output quality, cost, latency, and governance constraints. Existing approaches delegate this decision to LLM-based classifiers or preference-trained routers that are themselves costly and high-latency, reducing a multi-objective optimization to single-dimensional quality prediction. We argue that small language models (SLMs, 1-4B parameters) have now achieved sufficient reasoning capability for sub-second, zero-marginal-cost, self-hosted task classification, potentially making the routing decision negligible in the inference budget. We test this thesis on a six-label taxonomy through two studies. Study 1 is a harmonized offline benchmark of Phi-3.5-mini, Qwen2.5-1.5B, and Qwen-2.5-3B on identical Azure T4 hardware, serving stack, quantization, and a fixed 60-case corpus. Qwen-2.5-3B achieves the best exact-match accuracy (0.783), the strongest latency-accuracy tradeoff, and the only nonzero accuracy on all six task families. Study 2 is a pre-registered four-arm randomized experiment under synthetic traffic with an effective sample size of 60 unique cases per arm, comparing Phi-4-mini, Qwen-2.5-3B, and DeepSeek-V3 against a no-routing control. DeepSeek-V3 attains the highest accuracy (0.830) but fails the pre-registered P95 latency gate (2,295 ms); Qwen-2.5-3B is Pareto-dominant among self-hosted models (0.793 accuracy, 988 ms median, $0 marginal cost). No model meets the standalone viability criterion (>=0.85 accuracy,<=2,000 ms P95). The cost and latency prerequisites for SLM-based routing are met; the accuracy gap of 6-8 percentage points and the untested question of whether correct classification translates to downstream output quality bound the remaining distance to production viability.",
+        "identifiers": [
+          "SemanticScholar:955dbe8538998f44691f9407ef96a46d1088703e"
+        ],
+        "semantic_scholar_id": "955dbe8538998f44691f9407ef96a46d1088703e",
+        "canonical_id": "arXiv:2604.02367",
+        "arxiv_id": "2604.02367",
+        "doi": "10.48550/arXiv.2604.02367",
+        "authors": [
+          "Warren Johnson",
+          "Charles Lee"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 218,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:fe397f52a734f6086c54e660fa64290e91b8a4bdc872ede2af7254f8f336deca",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

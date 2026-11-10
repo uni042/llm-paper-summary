@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r07",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.13500",
+      "identity_tokens": [
+        "arXiv:2607.13500",
+        "DOI:10.48550/arXiv.2607.13500"
+      ],
+      "title": "Attention-Free and Lightweight Token Reduction for Efficient Vision-Language Models",
+      "reason": "注意マップ取得や二乗のトークン間類似度を避け、情報エントロピーによる重要度と変換一貫性のソート・間引きで視覚トークンを軽量に削減する。VLMの推論負荷を下げるプラグイン型の入力圧縮法。",
+      "source_url": "https://arxiv.org/abs/2607.13500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:40+09:00",
+      "last_checked_at": "2026-10-30T20:35:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 272,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.00935",
+      "identity_tokens": [
+        "arXiv:2509.00935",
+        "DOI:10.48550/arXiv.2509.00935"
+      ],
+      "title": "SCOUT: Toward Sub-Quadratic Attention via Segment Compression for Optimized Utility in Transformers",
+      "reason": "MambaまたはSWAの局所ミキサで短距離情報を混ぜ、過去系列を圧縮したcheckpoint tokenへだけ疎注意を行う。400M/1.3Bの言語モデルで全注意に近い品質と高いend-to-endスループットを報告する長文脈推論アーキテクチャ。",
+      "source_url": "https://arxiv.org/abs/2509.00935",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:40+09:00",
+      "last_checked_at": "2026-10-30T20:35:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 273,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.09505",
+      "identity_tokens": [
+        "arXiv:2508.09505",
+        "DOI:10.48550/arXiv.2508.09505"
+      ],
+      "title": "Verify Distributed Deep Learning Model Implementation Refinement with Iterative Relation Inference",
+      "reason": "GraphGuardは分散GPU実装の出力が逐次モデルと一致するか、反復的な式書換えで静的に検証し、GPT/Llama-3の分散実装にも適用する。LLMサービングの正確性検証に関連するが、推論速度・メモリを直接削減するアルゴリズムではない。",
+      "source_url": "https://arxiv.org/abs/2508.09505",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:40+09:00",
+      "last_checked_at": "2026-10-30T20:35:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 274,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.15503",
+      "identity_tokens": [
+        "arXiv:2511.15503",
+        "DOI:10.48550/arXiv.2511.15503"
+      ],
+      "title": "DCC: Data-Centric Compilation of Machine Learning Kernels for Processing-In-Memory Architectures",
+      "reason": "PIMのデータ配置と演算ループを統合的に最適化するコンパイラ。AttAccでのend-to-end GPT-3/LLaMA-2推論はGPU比平均4.52倍、LLaMA-2で最大7.71倍と報告し、直接的なLLM推論カーネル・PIM実行高速化に該当する。",
+      "source_url": "https://arxiv.org/abs/2511.15503",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:40+09:00",
+      "last_checked_at": "2026-10-30T20:35:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 275,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.13057",
+      "identity_tokens": [
+        "arXiv:2608.13057",
+        "DOI:10.48550/arXiv.2608.13057"
+      ],
+      "title": "TEMPO: Makespan-Aware Expert-Parallel Load Balancing Across Memory- and Compute-Bound Regimes",
+      "reason": "MoE expert parallelでHBM重みストリーム支配とGEMM計算支配を跨ぐ実行時間をmax-affineでモデル化し、最遅GPUのmakespanを最小化するdispatchを提案する。Qwen3-235Bでスループット4～6%増、p99遅延約15.6%減。DeepSeek-V3では通信支配のため利得がなく、条件付き効果を明記する。",
+      "source_url": "https://arxiv.org/abs/2608.13057",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:40+09:00",
+      "last_checked_at": "2026-10-30T20:35:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 276,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.14239",
+      "identity_tokens": [
+        "arXiv:2508.14239",
+        "DOI:10.48550/arXiv.2508.14239"
+      ],
+      "title": "A Distributed Learned Hash Table",
+      "reason": "学習済み写像でDHTの範囲検索を高速化し、試験環境でメッセージ費用と検索遅延を80～90%以上削減する。LLM servingを用途例に挙げるが、要旨でLLMのKV配置・モデルルーティング・推論遅延の直接評価は示されず、一般的な分散データ構造の研究。",
+      "source_url": "https://arxiv.org/abs/2508.14239",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:40+09:00",
+      "last_checked_at": "2026-10-30T20:35:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 277,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15714",
+      "identity_tokens": [
+        "arXiv:2601.15714",
+        "DOI:10.48550/arXiv.2601.15714"
+      ],
+      "title": "Even GPT-5.2 Can't Count to Five: The Case for Zero-Error Horizons in Trustworthy LLMs",
+      "reason": "Zero-Error Horizonという正確性評価指標でLLMの単純計算失敗を分析する研究。木構造とonline softmaxで指標計算自体を最大一桁高速化するが、対象は評価手続きでありLLM生成推論サービングの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2601.15714",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:40+09:00",
+      "last_checked_at": "2026-10-30T20:35:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 279,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.06190",
+      "identity_tokens": [
+        "arXiv:2511.06190",
+        "DOI:10.48550/arXiv.2511.06190"
+      ],
+      "title": "Confidence-Guided Stepwise Model Routing for Cost-Efficient Reasoning",
+      "reason": "STEERは小型モデルの各推論ステップ前のlogit信頼度を用いて、大型LLMへの委譲を必要時だけ行う。AIMEで大型モデル単独比48%少ないFLOPsで精度20%改善という条件を報告し、推論時のモデル間動的計算配分に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2511.06190",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:40+09:00",
+      "last_checked_at": "2026-10-30T20:35:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 280,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.11142",
+      "identity_tokens": [
+        "arXiv:2312.11142",
+        "DOI:10.48550/arXiv.2312.11142"
+      ],
+      "title": "Efficiency-oriented approaches for self-supervised speech representation learning",
+      "reason": "音声の自己教師あり表現学習における訓練・微調整・データ効率を整理するレビュー。LLM生成推論・KVキャッシュ・サービングの技術的改善を直接扱わず、対象外。",
+      "source_url": "https://arxiv.org/abs/2312.11142",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:40+09:00",
+      "last_checked_at": "2026-10-30T20:35:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 282,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.02560",
+      "identity_tokens": [
+        "arXiv:2608.02560",
+        "DOI:10.48550/arXiv.2608.02560"
+      ],
+      "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
+      "reason": "SSMの固定サイズ状態を文書ごとに事前計算し、検索結果の状態を直接注入してRAGの文脈prefillを省くPRECOGを提案。TENNs-LLM 1.2Bでprefill約27秒から6ms未満を報告するが、Transformer KVへ同じ方式を直接適用できない制約がある。",
+      "source_url": "https://arxiv.org/abs/2608.02560",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:40+09:00",
+      "last_checked_at": "2026-10-30T20:35:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 284,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

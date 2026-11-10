@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "da8bf52aee4e16da2703be2ad01181475716e4a11931b31ef487f59b456676c6",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_68c7919974bc8191979ab7131c8435f9--2026-2608.12114-ingestion-tax-metadata-repair-20261013-1445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2608.12114",
+  "worker_completed_at": "2026-10-13T14:50:24+09:00",
+  "worker_run_key": "20261013-1445-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5356,
+    "body_paragraphs": 34,
+    "method_chars": 1160,
+    "method_paragraphs": 8,
+    "evaluation_chars": 394,
+    "limitation_chars": 746,
+    "insufficiency_flags": [
+      "評価説明量 394 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 394 < 500"
+  ],
+  "processed_at": "2026-10-13T06:48:40+00:00"
+}

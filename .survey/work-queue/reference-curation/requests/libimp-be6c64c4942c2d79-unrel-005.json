@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-be6c64c4942c2d79-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.64189/ssc.26213",
+  "reason": "Edge Artificial Intelligence (Edge AI) and Federated Learning (FL) have emerged as the two dominant methodological trends reshaping how AI and Internet of Things (IoT) systems are deployed across urban engineering domains, yet existing reviews continue to organize the field by application sector rather than by these transversal deployment paradigms. This review addresses the gap through a cross-domain synthesis of Edge AI and FL implementations spanning transportation, environmental, and building engineering, drawing on peer-reviewed literature published between January 2021 and February 2026. A structured search protocol applied across IEEE Xplore, Scopus, ScienceDirect, ACM Digital Library, and Web of Science identified an initial corpus that, after screening against pre-registered inclusion criteria and a PRISMA 2020 selection flow, yielded over 200 studies for inclusion. The review makes four contributions: (1) a transversal taxonomy that classifies smart city AI implementations along axes of computation locality (cloud, fog, edge, on-device) and learning paradigm (centralized, federated, hybrid), exposing methodological convergence patterns invisible in domain-siloed reviews; (2) a five-layer reference architecture explicitly annotated with Edge AI and FL placement decisions; (3) a comparative synthesis of deployment outcomes across more than thirty international case studies, contrasting infrastructure-intensive and resource-constrained settings; and (4) an evidence-based research agenda identifying eight open problems where Edge AI and FL maturity remains insufficient for production-grade urban deployment. The findings indicate that Edge AI delivers consistent latency and energy benefits in transportation and building applications where on-device inference is feasible, while FL is most impactful where data sovereignty, regulatory constraint, or cross-jurisdictional coordination dominate the problem geometry, particularly in environmental monitoring and multi-stakeholder energy systems. Implementation challenges persist in model drift under non-IID urban data, communication efficiency under intermittent connectivity, and the absence of standardized fairness and explainability tooling for distributed urban AI. This work provides actionable guidance for civil engineers, urban planners, technology providers, and policymakers selecting between centralized, edge, and federated deployment strategies for next-generation urban infrastructure.",
+  "title": "Edge AI and Federated Learning in Smart City Engineering: A Cross-Domain Review of Architectures, Applications, and Deployment Challenges in Transportation, Environmental, and Building Systems",
+  "identity_tokens": [
+    "DOI:10.64189/ssc.26213"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be6c64c4942c",
+  "source_precheck_request_id": null
+}

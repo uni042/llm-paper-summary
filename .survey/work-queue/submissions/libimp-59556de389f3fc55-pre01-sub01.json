@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A training-inference consistent framework for early exiting in language models with parallel decoding",
+      "source_url": "https://doi.org/10.1007/s13042-025-02952-y",
+      "year": 2026,
+      "published": "2026-02-16",
+      "venue": "International Journal of Machine Learning and Cybernetics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:d412c35197a8239dcc311b3d9f5520334a037b2a"
+      ],
+      "semantic_scholar_id": "d412c35197a8239dcc311b3d9f5520334a037b2a",
+      "doi": "10.1007/s13042-025-02952-y",
+      "canonical_id": "DOI:10.1007/s13042-025-02952-y",
+      "authors": [
+        "Zi-Qian Zeng",
+        "Ze-Lin Chen",
+        "Hui-Ping Zhuang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      },
+      "reason": "出版社Springerの一次要旨を確認。ConsistentEEは全中間分類器へ正解を要求する訓練目的と、推論では一つの正解出口で十分という条件の不一致を、強化学習型出口ポリシーと難度推定用Memory Layerで改善する。層スキップ時のKVキャッシュ近似誤差へ並列復号で対処し、言語理解・生成の効率を評価する。推論の早期終了・KV状態管理へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "title": "SeerAttention: Self-distilled Attention Gating for Efficient Long-context Prefilling",
+      "source_url": "https://doi.org/10.52202/085713-1869",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention is the cornerstone of modern Large Language Models (LLMs). Yet its quadratic complexity hinders efficiency and scalability, especially for long-context processing. A promising approach is to leverage sparsity in attention. However, existing sparsity-based solutions predominantly rely on predefined patterns or heuristics at the attention head level, struggling to adapt dynamically to different contexts efficiently. We propose SeerAttention, a simple yet effective attention mechanism that directly learns the block-level attention sparsity from the LLM itself. Inspired by the gating mechanism in Mixture of Experts (MoE), SeerAttention augments the conventional attention with a learnable gate that selectively activates important blocks within the attention map. Specifically, the gate first pools the query (Q) and key (K) tensors along the sequence dimension and processes them through learnable linear layers. The resulting matrices are then multiplied together to produce the gating scores, which are used to predict block-level attention sparsity. Combined with our block-sparse FlashAttention kernel, SeerAttention can achieve significant speedup on GPUs. When applied to pre-trained LLMs, SeerAttention only requires training the gate parameters in a lightweight self-distillation manner, allowing rapid convergence. Our evaluation results demonstrate that SeerAttention achieves better model accuracy and lower latency for long-context pre-filling compared to prior methods. Code is available at: https://github.com/microsoft/SeerAttention.",
+      "identifiers": [
+        "SemanticScholar:e5f60df4954327a2b9d30b788a16717473f9ae06"
+      ],
+      "semantic_scholar_id": "e5f60df4954327a2b9d30b788a16717473f9ae06",
+      "doi": "10.52202/085713-1869",
+      "canonical_id": "DOI:10.52202/085713-1869",
+      "authors": [
+        "Yi-Zhao Gao",
+        "Zhichen Zeng",
+        "Da-You Du",
+        "Shi-Jie Cao",
+        "Peiyuan Zhou",
+        "Ji Qi",
+        "Junjie Lai",
+        "Hayden Kwok-Hay So",
+        "Ting Cao",
+        "Fan Yang",
+        "Mao Yang"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "NeurIPS 2025の著者所属機関による一次要旨を確認。系列方向にプールしたQ/Kから学習可能なゲートで重要な注意ブロックを選択し、ブロック疎FlashAttentionカーネルで長文脈prefillの計算と遅延を削減する。自己蒸留でゲートのみを追加学習する推論向け疎注意方式であり、推論システム最適化へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "title": "Quantize What Counts: More for Keys, Less for Values",
+      "source_url": "https://arxiv.org/abs/2502.15075",
+      "year": 2025,
+      "published": "2025-02-20",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) suffer inference-time memory bottlenecks dominated by the attention Key-Value (KV) cache, which scales with model size and context length. While KV-cache quantization alleviates this cost, bit allocation between keys and values is often tuned heuristically, lacking theoretical grounding and generalizability. This paper proposes two theorems that anchor mixed-precision KV quantization in the intrinsic geometry of Transformer models. First, key projections systematically have larger spectral and Frobenius norms than value matrices, implying higher information density along the key path. Second, for any given memory budget, prioritizing precision for keys over values strictly reduces quantization error and better preserves accuracy. Empirical evaluations across various prominent LLMs and benchmarks show that key-favored allocations (e.g., 4-bit keys, 2-bit values) retain up to 98.3\\% accuracy compared to uniform allocations (e.g., 4-bit for both), while conserving memory. These results transform bit allocation from ad hoc tuning into a theoretically grounded, geometry-driven design principle for efficient LLM inference. Source code is available at https://github.com/mohsenhariri/spectral-kv.",
+      "identifiers": [
+        "SemanticScholar:d99ec0428aee7b8500a380918dc074968eac4e87"
+      ],
+      "semantic_scholar_id": "d99ec0428aee7b8500a380918dc074968eac4e87",
+      "canonical_id": "arXiv:2502.15075",
+      "arxiv_id": "2502.15075",
+      "doi": "10.18653/v1/2026.findings-acl.1314",
+      "authors": [
+        "Mohsen Hariri",
+        "Alan Luo",
+        "Wei-Cong Chen",
+        "Shao-Chen Zhong",
+        "Tianyi Zhang",
+        "Qi-Fan Wang",
+        "Xia Ben Hu",
+        "Xiao-Tian Han",
+        "Vipin Chaudhary"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 617,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "著者一次arXiv要旨で、Key投影のスペクトル/FrobeniusノルムがValueより大きい傾向を解析し、同一KVメモリ予算でKey側へ高ビットを割り当てる理論と混合精度量子化の実験を提示することを確認。例としてKey 4bit/Value 2bitを比較する推論時KVキャッシュ圧縮の直接研究。worklistの旧題名「Bit Allocation Insights Informed by Spectral Gaps...」は現在のarXiv表示題名「More for Keys, Less for Values」と異なるため、同一arXiv IDで版同一性を保持し題名を更新した。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "title": "Threshold-Based Exclusive Batching for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.00516",
+      "year": 2026,
+      "published": "2026-05-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixed batching (MB)--interleaving prefill and decode in a single batch--has become the standard scheduling strategy for large language model (LLM) inference due to its efficiency in maximizing compute and memory utilization. However, through controlled experiments, we find that prefill-decode interference inflates MB's per-step marginal cost above that of pure decode. On the high-bandwidth H200 (4.8 TB/s), this occurs only when decode tokens exceed 80% of the batch; however, on the bandwidth-constrained RTX PRO 6000 (1.792 TB/s), this threshold plummets to just 20%. Consequently, the optimal choice between MB and exclusive batching (EB) fundamentally depends on GPU memory bandwidth, model size, and workload composition. We derive a closed-form condition for this EB-MB performance crossover, along with asymptotically optimal phase-switching thresholds and memory-safe batch sizing for EB. Optimized EB achieves up to 41.9% higher throughput on bandwidth-constrained GPUs, while MB retains its advantage on high-bandwidth hardware with larger models. Our hybrid scheduler EB+ applies this condition online to dynamically switch between EB and MB without manual intervention. Under non-stationary traffic with distribution or concurrency shifts, EB+ attains the highest or near-highest throughput in every setting, outperforming MB by up to 36.4%.",
+      "identifiers": [
+        "SemanticScholar:68237fd9025258f83d589b4ba2c7459dbd32a05e"
+      ],
+      "semantic_scholar_id": "68237fd9025258f83d589b4ba2c7459dbd32a05e",
+      "canonical_id": "arXiv:2606.00516",
+      "arxiv_id": "2606.00516",
+      "doi": "10.48550/arXiv.2606.00516",
+      "authors": [
+        "Wei-Fang Zhang",
+        "Yu-Zhou Nie",
+        "Bowen Pang",
+        "Guang-Rui Ma",
+        "Shining Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 153,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者一次要旨ではprefill/decode混合バッチと排他的バッチの損益分岐をGPUメモリ帯域・モデル規模・トークン構成から導出する。H200ではdecode比80%超、RTX PRO 6000では20%超で混合の限界が現れ、EB+が負荷変動に応じ方式を切替える。推論サービングのスケジューリングへ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "title": "Beyond Binary Priorities: Multi-Tier SLA Scheduling for Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2608.16336",
+      "year": 2026,
+      "published": "2026-08-17",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern LLM serving deployments must simultaneously satisfy heterogeneous service-level objectives (SLOs) across a diverse population of user tiers, ranging from latency-critical API calls to background batch processing. Llumnix introduced a dynamic, migration-capable multi-instance scheduler for LLM inference that achieves load balancing, defragmentation, prioritization, and auto-scaling through a unified\"freeness\"metric. However, Llumnix's priority model is restricted to two levels (high and normal), an abstraction too coarse to express the richer SLA classes common in production deployments. In this work, we extend Llumnix's priority model to support an arbitrary number of tiers and evaluate the effects of this extension under three realistic priority distributions (uniform, Gaussian, enterprise) using Vidur, a high-fidelity LLM inference simulator. We implement per-tier headroom with exponential decay, tier-aware dispatch ordering, and the full Llumnix migration pipeline inside Vidur's hierarchical scheduling framework. We compare our extended scheduler against INFaaS (global routing baseline), vLLM, Orca, and Sarathi-Serve (per-replica baselines), sweeping priority levels from 1 to 10. Our experiments demonstrate that four priority tiers yields the best cost-effectiveness tradeoff, achieving prefill mean speedups of up to 8.3x and end-to-end P99 speedups of up to 3.1x over INFaaS with cost-per-latency improvements of 46 to 68%, while preserving strong SLO differentiation across tiers. We further show that the system sustains these gains at 10 priority levels without tail latency collapse, with overhead concentrated in the prefill phase.",
+      "identifiers": [
+        "SemanticScholar:945f6ad1d64df020c3f1186ccf0ac2d9298eb878"
+      ],
+      "semantic_scholar_id": "945f6ad1d64df020c3f1186ccf0ac2d9298eb878",
+      "canonical_id": "arXiv:2608.16336",
+      "arxiv_id": "2608.16336",
+      "authors": [
+        "Anders Vestrum",
+        "Arya Raeesi",
+        "Hanna Roed"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 74,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者一次要旨ではLlumnixの高/通常2階層優先度を任意階層へ拡張し、階層別余裕量、dispatch順序、レプリカ移動をVidurシミュレータへ実装する。1〜10優先度、複数分布を比較し4階層の費用対遅延の良さと10階層でのtail維持を評価する。LLM推論サービングのSLO対応スケジューリングに直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_review"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-59556de389f3",
+    "round": "libimp-59556de389f3fc55-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-59556de389f3fc55-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-59556de389f3fc55-pre01.json",
+    "receipt": "sha256:4f701649083bc225ff9a6818f1a94eac25d31f19702a201b9861d3c7fa9515f4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-59556de389f3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

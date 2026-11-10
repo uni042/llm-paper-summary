@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9df7bb4832544bf-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.19797",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.19797",
+    "identity_tokens": [
+      "arXiv:2505.19797"
+    ],
+    "reason": "multiple small LMsをrepeated sampling/votingで組合せ回答qualityを向上するmethod。推論費用を下げる研究ではなく、反復呼出しを利用する。",
+    "first_checked_at": "2026-10-05T14:16:16+00:00",
+    "last_checked_at": "2026-10-05T14:16:16+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+    ],
+    "title": "The Avengers: A Simple Recipe for Uniting Smaller Language Models to Challenge Proprietary Giants"
+  },
+  "processed_at": "2026-10-05T14:16:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9df7bb48325",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

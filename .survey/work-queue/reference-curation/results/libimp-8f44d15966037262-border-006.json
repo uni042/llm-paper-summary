@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f44d15966037262-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.00774",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.00774",
+    "identity_tokens": [
+      "arXiv:2411.00774"
+    ],
+    "reason": "一次要旨では言語モデル本体を凍結して音声入出力を結合する三段階学習と二重音声対話を提案し、低遅延の音声応答を目指す。低遅延推論の応用はあるが、主たる寄与は音声モデル構築と学習方式であり、一般LLMサービングのスケジューリング・キャッシュ・オフロード最適化は明示されない。",
+    "first_checked_at": "2026-10-12T15:14:02+00:00",
+    "last_checked_at": "2026-10-13T06:45:22+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM"
+  },
+  "processed_at": "2026-10-13T06:45:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f44d1596603",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

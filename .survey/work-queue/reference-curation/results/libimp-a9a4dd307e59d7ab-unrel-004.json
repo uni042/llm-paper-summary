@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9a4dd307e59d7ab-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.06136",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.06136",
+    "identity_tokens": [
+      "arXiv:2407.06136"
+    ],
+    "reason": "Mambaを用いて画像のfew-shot class-incremental learningにおける旧クラス保持と新クラス適応を両立する二重SSM projectorと選択的scanを提案。miniImageNet/CIFAR-100/CUB-200の分類精度が中心で、LLM推論・サービング最適化ではない。",
+    "first_checked_at": "2026-10-30T19:08:19+00:00",
+    "last_checked_at": "2026-10-30T19:08:19+00:00",
+    "linked_from": [],
+    "title": "Mamba-FSCIL: Dynamic Adaptation with Selective State Space Model for Few-Shot Class-Incremental Learning"
+  },
+  "processed_at": "2026-10-30T19:08:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9a4dd307e59",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

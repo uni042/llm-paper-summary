@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6172c4bad3944191-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.00135",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.00135",
+    "identity_tokens": [
+      "arXiv:2409.00135"
+    ],
+    "reason": "一次要旨はmaterials science向けLLM agent、知識baseとtool hubによるタスク品質改善を扱い、推論効率化の貢献を示さない。",
+    "first_checked_at": "2026-10-05T01:26:17+00:00",
+    "last_checked_at": "2026-10-05T01:26:17+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md"
+    ],
+    "title": "HoneyComb: A Flexible LLM-Based Agent System for Materials Science"
+  },
+  "processed_at": "2026-10-05T01:26:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6172c4bad394",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e1b11899f35ce1e1e1af8737729e1980d4901f357a7019f1500c9499af9d058d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_608715f0ee9881919fd7050286c3bcc9--2024-2407.05690-transact-transitional-activation-pruning-research-20261020-1000-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2407.05690",
+  "worker_completed_at": "2026-10-20T10:00:00+09:00",
+  "worker_run_key": "20261020-1000-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7800,
+    "body_paragraphs": 46,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 496,
+    "limitation_chars": 633,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 496 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 496 < 500"
+  ],
+  "processed_at": "2026-10-20T15:01:54+00:00"
+}

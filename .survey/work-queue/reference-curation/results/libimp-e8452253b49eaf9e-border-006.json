@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8452253b49eaf9e-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1805.00907",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1805.00907",
+    "identity_tokens": [
+      "arXiv:1805.00907"
+    ],
+    "reason": "neural network graphを高位・低位のtyped IRへloweringし、instruction scheduling、static memory allocation、copy elimination、target-specific code generationを行うML compiler。推論kernel/runtime compilerの基礎として関連するが、評価対象は汎用NNでLLM/Transformer推論専用ではないためborderline。",
+    "first_checked_at": "2026-10-05T22:27:28+00:00",
+    "last_checked_at": "2026-10-05T22:27:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Glow: Graph Lowering Compiler Techniques for Neural Networks"
+  },
+  "processed_at": "2026-10-05T22:27:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8452253b49e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

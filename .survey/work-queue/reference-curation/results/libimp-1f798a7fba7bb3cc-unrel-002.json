@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f798a7fba7bb3cc-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:uYLFoz1vlAC",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:uYLFoz1vlAC",
+    "identity_tokens": [
+      "OpenReview:uYLFoz1vlAC",
+      "arXiv:2111.00396"
+    ],
+    "reason": "S4という系列モデルアーキテクチャを提案し長距離依存を効率化する研究。生成速度の利点はあるが、既存LLMの推論システムやサービングを最適化する手法ではなく、主貢献がモデルアーキテクチャそのものなので対象外。",
+    "first_checked_at": "2026-09-30T08:00:58+00:00",
+    "last_checked_at": "2026-10-03T18:25:45+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      ".survey/work-queue/worker-worklist-30.json",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13134-subquadratic-attention-heterogeneous-disaggregation.md"
+    ],
+    "title": "Efficiently Modeling Long Sequences with Structured State Spaces"
+  },
+  "processed_at": "2026-10-03T18:25:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f798a7fba7b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

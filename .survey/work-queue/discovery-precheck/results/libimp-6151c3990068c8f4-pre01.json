@@ -1,0 +1,1131 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6151c3990068c8f4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6151c3990068",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1613/jair.1.13896",
+    "DOI:10.3389/fnbot.2023.1214203",
+    "arXiv:2110.04821",
+    "arXiv:2203.12276",
+    "arXiv:2210.08164",
+    "arXiv:2301.08353",
+    "arXiv:2403.02411",
+    "arXiv:2407.17412",
+    "arXiv:2408.09158",
+    "arXiv:2409.00592",
+    "arXiv:2503.23174",
+    "arXiv:2504.04342"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "44c613f993b19fe4829db28593ec1c18e6e8def1",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 12,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 12,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T07:47:53.630839+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1613/jair.1.13896",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.3389/fnbot.2023.1214203",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2110.04821",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2203.12276",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2210.08164",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2301.08353",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2403.02411",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.17412",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.09158",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2409.00592",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.23174",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.04342",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ERNIE-SPARSE: Learning Hierarchical Efficient Transformer Through Regularized Self-Attention",
+      "source_url": "https://arxiv.org/abs/2203.12276",
+      "year": 2022,
+      "published": "2022-03-23",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse Transformer has recently attracted a lot of attention since the ability for reducing the quadratic dependency on the sequence length. We argue that two factors, information bottleneck sensitivity and inconsistency between different attention topologies, could affect the performance of the Sparse Transformer. This paper proposes a well-designed model named ERNIE-Sparse. It consists of two distinctive parts: (i) Hierarchical Sparse Transformer (HST) to sequentially unify local and global information. (ii) Self-Attention Regularization (SAR) method, a novel regularization designed to minimize the distance for transformers with different attention topologies. To evaluate the effectiveness of ERNIE-Sparse, we perform extensive evaluations. Firstly, we perform experiments on a multi-modal long sequence modeling task benchmark, Long Range Arena (LRA). Experimental results demonstrate that ERNIE-Sparse significantly outperforms a variety of strong baseline methods including the dense attention and other efficient sparse attention methods and achieves improvements by 2.77% (57.78% vs. 55.01%). Secondly, to further show the effectiveness of our method, we pretrain ERNIE-Sparse and verified it on 3 text classification and 2 QA downstream tasks, achieve improvements on classification benchmark by 0.83% (92.46% vs. 91.63%), on QA benchmark by 3.24% (74.67% vs. 71.43%). Experimental results continue to demonstrate its superior performance.",
+      "identifiers": [
+        "SemanticScholar:94e46e18d2628343a926acf6c3d0817e11d35d58"
+      ],
+      "semantic_scholar_id": "94e46e18d2628343a926acf6c3d0817e11d35d58",
+      "canonical_id": "arXiv:2203.12276",
+      "arxiv_id": "2203.12276",
+      "doi": "10.48550/arXiv.2203.12276",
+      "authors": [
+        "Yang Liu",
+        "Jia-Xiang Liu",
+        "Li Chen",
+        "Yu-Xiang Lu",
+        "Shi Feng",
+        "Zhi-Da Feng",
+        "Yu Sun",
+        "Hao Tian",
+        "Huan-Cheng Wu",
+        "Hai-feng Wang"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1662,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A novel approach to attention mechanism using kernel functions: Kerformer",
+      "source_url": "https://doi.org/10.3389/fnbot.2023.1214203",
+      "year": 2023,
+      "published": "2023-08-24",
+      "venue": "Frontiers Neurorobotics",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Artificial Intelligence (AI) is driving advancements across various fields by simulating and enhancing human intelligence. In Natural Language Processing (NLP), transformer models like the Kerformer, a linear transformer based on a kernel approach, have garnered success. However, traditional attention mechanisms in these models have quadratic calculation costs linked to input sequence lengths, hampering efficiency in tasks with extended orders. To tackle this, Kerformer introduces a nonlinear reweighting mechanism, transforming maximum attention into feature-based dot product attention. By exploiting the non-negativity and non-linear weighting traits of softmax computation, separate non-negativity operations for Query(Q) and Key(K) computations are performed. The inclusion of the SE Block further enhances model performance. Kerformer significantly reduces attention matrix time complexity from O(N2) to O(N), with N representing sequence length. This transformation results in remarkable efficiency and scalability gains, especially for prolonged tasks. Experimental results demonstrate Kerformer's superiority in terms of time and memory consumption, yielding higher average accuracy (83.39%) in NLP and vision tasks. In tasks with long sequences, Kerformer achieves an average accuracy of 58.94% and exhibits superior efficiency and convergence speed in visual tasks. This model thus offers a promising solution to the limitations posed by conventional attention mechanisms in handling lengthy tasks.",
+      "identifiers": [
+        "SemanticScholar:92f86c59a221752560e72466b2e1026e83bfdc12"
+      ],
+      "semantic_scholar_id": "92f86c59a221752560e72466b2e1026e83bfdc12",
+      "doi": "10.3389/fnbot.2023.1214203",
+      "canonical_id": "DOI:10.3389/fnbot.2023.1214203",
+      "authors": [
+        "Yao Gan",
+        "Yan-yun Fu",
+        "De-Yong Wang",
+        "Yong-Ming Li"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1143,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Linear Video Transformer with Feature Fixation",
+      "source_url": "https://arxiv.org/abs/2210.08164",
+      "year": 2022,
+      "published": "2022-10-15",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision Transformers have achieved impressive performance in video classification, while suffering from the quadratic complexity caused by the Softmax attention mechanism. Some studies alleviate the computational costs by reducing the number of tokens in attention calculation, but the complexity is still quadratic. Another promising way is to replace Softmax attention with linear attention, which owns linear complexity but presents a clear performance drop. We find that such a drop in linear attention results from the lack of attention concentration on critical features. Therefore, we propose a feature fixation module to reweight the feature importance of the query and key before computing linear attention. Specifically, we regard the query, key, and value as various latent representations of the input token, and learn the feature fixation ratio by aggregating Query-Key-Value information. This is beneficial for measuring the feature importance comprehensively. Furthermore, we enhance the feature fixation by neighborhood association, which leverages additional guidance from spatial and temporal neighbouring tokens. The proposed method significantly improves the linear attention baseline and achieves state-of-the-art performance among linear video Transformers on three popular video classification benchmarks. With fewer parameters and higher efficiency, our performance is even comparable to some Softmax-based quadratic Transformers.",
+      "identifiers": [
+        "SemanticScholar:ee1e1afe75eb0e20d57bf316f5ab1ca2c369d100"
+      ],
+      "semantic_scholar_id": "ee1e1afe75eb0e20d57bf316f5ab1ca2c369d100",
+      "canonical_id": "arXiv:2210.08164",
+      "arxiv_id": "2210.08164",
+      "doi": "10.48550/arXiv.2210.08164",
+      "authors": [
+        "Kaiyue Lu",
+        "Ze-Xia Liu",
+        "Jianyuan Wang",
+        "Weixuan Sun",
+        "Zhen Qin",
+        "Dong Li",
+        "Xu-Yang Shen",
+        "Huizhong Deng",
+        "Xiaodong Han",
+        "Yuchao Dai",
+        "Yiran Zhong"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1456,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AAN+: Generalized Average Attention Network for Accelerating Neural Transformer",
+      "source_url": "https://doi.org/10.1613/jair.1.13896",
+      "year": 2022,
+      "published": "2022-11-06",
+      "venue": "Journal of Artificial Intelligence Research",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer benefits from the high parallelization of attention networks in fast training, but it still suffers from slow decoding partially due to the linear dependency O(m) of the decoder self-attention on previous target words at inference. In this paper, we propose a generalized average attention network (AAN+) aiming at speeding up decoding by reducing the dependency from O(m) to O(1). We find that the learned self-attention weights in the decoder follow some patterns which can be approximated via a dynamic structure. Based on this insight, we develop AAN+, extending our previously proposed average attention (Zhang et al., 2018a, AAN) to support more general position- and content-based attention patterns. AAN+ only requires to maintain a small constant number of hidden states during decoding, ensuring its O(1) dependency. We apply AAN+ as a drop-in replacement of the decoder selfattention and conduct experiments on machine translation (with diverse language pairs), table-to-text generation and document summarization. With masking tricks and dynamic programming, AAN+ enables Transformer to decode sentences around 20% faster without largely compromising in the training speed and the generation performance. Our results further reveal the importance of the localness (neighboring words) in AAN+ and its capability in modeling long-range dependency.",
+      "identifiers": [
+        "SemanticScholar:b6438d56b9f18f0260953d5a32d11c1c758954c7"
+      ],
+      "semantic_scholar_id": "b6438d56b9f18f0260953d5a32d11c1c758954c7",
+      "doi": "10.1613/jair.1.13896",
+      "canonical_id": "DOI:10.1613/jair.1.13896",
+      "authors": [
+        "Biao Zhang",
+        "Deyi Xiong",
+        "Yubin Ge",
+        "Junfeng Yao",
+        "Hao Yue",
+        "Jinsong Su"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1434,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AdaEnsemble: Learning Adaptively Sparse Structured Ensemble Network for Click-Through Rate Prediction",
+      "source_url": "https://arxiv.org/abs/2301.08353",
+      "year": 2023,
+      "published": "2023-01-06",
+      "venue": "AdKDD@KDD",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Learning feature interactions is crucial to success for large-scale CTR prediction in recommender systems and Ads ranking. Researchers and practitioners extensively proposed various neural network architectures for searching and modeling feature interactions. However, we observe that different datasets favor different neural network architectures and feature interaction types, suggesting that different feature interaction learning methods may have their own unique advantages. Inspired by this observation, we propose AdaEnsemble: a Sparsely-Gated Mixture-of-Experts (SparseMoE) architecture that can leverage the strengths of heterogeneous feature interaction experts and adaptively learns the routing to a sparse combination of experts for each example, allowing us to build a dynamic hierarchy of the feature interactions of different types and orders. To further improve the prediction accuracy and inference efficiency, we incorporate the dynamic early exiting mechanism for feature interaction depth selection. The AdaEnsemble can adaptively choose the feature interaction depth and find the corresponding SparseMoE stacking layer to exit and compute prediction from. Therefore, our proposed architecture inherits the advantages of the exponential combinations of sparsely gated experts within SparseMoE layers and further dynamically selects the optimal feature interaction depth without executing deeper layers. We implement the proposed AdaEnsemble and evaluate its performance on real-world datasets. Extensive experiment results demonstrate the efficiency and effectiveness of AdaEnsemble over state-of-the-art models.",
+      "identifiers": [
+        "SemanticScholar:800352afe54fb7d9fa75bcabc4e1cbaadeff7415"
+      ],
+      "semantic_scholar_id": "800352afe54fb7d9fa75bcabc4e1cbaadeff7415",
+      "canonical_id": "arXiv:2301.08353",
+      "arxiv_id": "2301.08353",
+      "doi": "10.48550/arXiv.2301.08353",
+      "authors": [
+        "Yachen Yan",
+        "Liubo Li"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1373,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hyper-Compression: Model Compression via Hyperfunction",
+      "source_url": "https://arxiv.org/abs/2409.00592",
+      "year": 2024,
+      "published": "2024-09-01",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth of large models’ size has far outpaced that of computing resources. To bridge this gap, encouraged by the parsimonious relationship between genotype and phenotype in the brain’s growth and development, we propose the so-called Hyper-Compression that turns the model compression into the issue of parameter representation via a hyperfunction. Specifically, it is known that the trajectory of some low-dimensional dynamic systems can fill the high-dimensional space eventually. Thus, Hyper-Compression, using these dynamic systems as the hyperfunctions, represents the parameters of the target network by their corresponding composition number or trajectory length. This suggests a novel mechanism for model compression, substantially different from the existing pruning, quantization, distillation, and decomposition. Along this direction, we methodologically identify a suitable dynamic system with the irrational winding as the hyperfunction and theoretically derive its associated error bound. Next, guided by our theoretical insights, we propose several engineering twists to make the Hyper-Compression pragmatic and effective. Lastly, systematic and comprehensive experiments on NLP models such as LLaMA and Qwen series and vision models confirm that Hyper-Compression enjoys the following PNAS merits: 1) Preferable compression ratio; 2) No post-hoc retraining; 3) Affordable inference time; and 4) Short compression time. It compresses LLaMA2-7B in an hour and achieves close-to-int4-quantization performance, without retraining and with a performance drop of less than 1%.",
+      "identifiers": [
+        "SemanticScholar:796e98fca33d096aa76b66c097dac9d862278fcb"
+      ],
+      "semantic_scholar_id": "796e98fca33d096aa76b66c097dac9d862278fcb",
+      "canonical_id": "arXiv:2409.00592",
+      "arxiv_id": "2409.00592",
+      "doi": "10.1109/TPAMI.2026.3673772",
+      "authors": [
+        "Feng-Lei Fan",
+        "Jun-Tong Fan",
+        "Dayang Wang",
+        "Jingbo Zhang",
+        "Zelin Dong",
+        "Shi-Jun Zhang",
+        "Ge Wang",
+        "Tieyong Zeng"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 769,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pruning Laws for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2504.04342",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling up model parameters and training data consistently improves the performance of large language models (LLMs), but at the cost of rapidly growing memory and compute requirements, which makes deployment on resource-limited hardware infeasible. Model pruning, a widely used compression technique, reduces inference costs by removing redundant parameters. However, its impact on downstream performance remains unpredictable and is typically assessed only through costly empirical sweeps. To address this gap, we introduce pruning laws, simple and interpretable scaling relations that connect a pruned LLM's post-pruning performance to its unpruned performance and pruning ratio. Across ten LLMs (1.3B-30B parameters), a 20B mixture-of-experts model, three pruning strategies (unstructured, width, and depth), and eight diverse tasks, we show that pruning laws achieve strong predictive accuracy (average extrapolation error less than 7%), reliably quantify performance degradation, and identify critical pruning thresholds beyond which recovery is infeasible. Moreover, we demonstrate that the functional form transfers across dense and mixture-of-experts architectures, pruning methods, and unseen models in zero-shot and one-shot setups, with task- and method-specific coefficients that vary in interpretable ways. These results provide both researchers and practitioners with a principled framework to select pruning strategies, estimate safe pruning ratios without exhaustive tuning, and deploy LLMs efficiently under real-world compute and latency constraints.",
+      "identifiers": [
+        "SemanticScholar:ce8a8a9207f2a46d693eb804046fd746248221d3"
+      ],
+      "semantic_scholar_id": "ce8a8a9207f2a46d693eb804046fd746248221d3",
+      "canonical_id": "arXiv:2504.04342",
+      "arxiv_id": "2504.04342",
+      "authors": [
+        "Ayan Sengupta",
+        "Siddhant Chaudhary",
+        "Tanmoy Chakraborty"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 552,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TRA: Better Length Generalisation with Threshold Relative Attention",
+      "source_url": "https://arxiv.org/abs/2503.23174",
+      "year": 2025,
+      "published": "2025-03-29",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers struggle with length generalisation, displaying poor performance even on basic tasks. We test whether these limitations can be explained through two key failures of the self-attention mechanism. The first is the inability to fully remove irrelevant information. The second is tied to position, even if the dot product between a key and query is highly negative (i.e. an irrelevant key) learned positional biases may unintentionally up-weight such information - dangerous when distances become out of distribution. Put together, these two failure cases lead to compounding generalisation difficulties. We test whether they can be mitigated through the combination of a) selective sparsity - completely removing irrelevant keys from the attention softmax and b) contextualised relative distance - distance is only considered as between the query and the keys that matter. We show how refactoring the attention mechanism with these two mitigations in place can substantially improve the generalisation capabilities of decoder only transformers.",
+      "identifiers": [
+        "SemanticScholar:abad5178463d5e34f233e746e22a164a47ae926d"
+      ],
+      "semantic_scholar_id": "abad5178463d5e34f233e746e22a164a47ae926d",
+      "canonical_id": "arXiv:2503.23174",
+      "arxiv_id": "2503.23174",
+      "doi": "10.48550/arXiv.2503.23174",
+      "authors": [
+        "Mattia Opper",
+        "Roland Fernandez",
+        "P. Smolensky",
+        "Jianfeng Gao"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 560,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DCT: Dynamic Compressive Transformer for Modeling Unbounded Sequence",
+      "source_url": "https://arxiv.org/abs/2110.04821",
+      "year": 2021,
+      "published": "2021-10-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose Dynamic Compressive Transformer (DCT), a transformer-based framework for modeling the unbounded sequence. In contrast to the previous baselines which append every sentence representation to memory, conditionally selecting and appending them is a more reasonable solution to deal with unlimited long sequences. Our model uses a policy that determines whether the sequence should be kept in memory with a compressed state or discarded during the training process. With the benefits of retaining semantically meaningful sentence information in the memory system, our experiment results on Enwik8 benchmark show that DCT outperforms the previous state-of-the-art (SOTA) model.",
+      "identifiers": [
+        "SemanticScholar:2a28aec16ed9b4cda1c7eb2c936509d0232ccfa1"
+      ],
+      "semantic_scholar_id": "2a28aec16ed9b4cda1c7eb2c936509d0232ccfa1",
+      "canonical_id": "arXiv:2110.04821",
+      "arxiv_id": "2110.04821",
+      "authors": [
+        "Kai-Po Chang",
+        "Wei-Yun Ma"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1826,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NiNformer: a network in network transformer with token mixing generated gating function",
+      "source_url": "https://arxiv.org/abs/2403.02411",
+      "year": 2024,
+      "published": "2024-03-04",
+      "venue": "Neural computing & applications (Print)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The attention mechanism is the primary component of the transformer architecture; it has led to significant advancements in deep learning spanning many domains and covering multiple tasks. In computer vision, the attention mechanism was first incorporated in the vision transformer (ViT), and then its usage has expanded into many tasks in the vision domain, such as classification, segmentation, object detection, and image generation. While the attention mechanism is very expressive and capable, it comes with the disadvantage of being computationally expensive and requiring datasets of considerable size for effective optimization. To address these shortcomings, many designs have been proposed in the literature to reduce the computational burden and alleviate the data size requirements. Examples of such attempts in the vision domain are the MLP-Mixer, the Conv-Mixer, the Perceiver-IO, and many more attempts with different sets of advantages and disadvantages. This paper introduces a new computational block as an alternative to the standard ViT block. The newly proposed block reduces the computational requirements by replacing the normal attention layers with a network in network structure, therefore enhancing the static approach of the MLP-Mixer with a dynamic learning of element-wise gating function generated by a token-mixing process. Extensive experimentation shows that the proposed design provides better performance than the baseline architectures on multiple datasets applied in the image classification task of the vision domain.",
+      "identifiers": [
+        "SemanticScholar:ef256a2f8f0ad258f71bdfe56fb5f7e1a5ce6f66"
+      ],
+      "semantic_scholar_id": "ef256a2f8f0ad258f71bdfe56fb5f7e1a5ce6f66",
+      "canonical_id": "arXiv:2403.02411",
+      "arxiv_id": "2403.02411",
+      "doi": "10.1007/s00521-025-11226-1",
+      "authors": [
+        "Abdullah Nazhat Abdullah",
+        "Tarkan Aydin"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 950,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "(PASS) Visual Prompt Locates Good Structure Sparsity through a Recurrent HyperNetwork",
+      "source_url": "https://arxiv.org/abs/2407.17412",
+      "year": 2024,
+      "published": "2024-07-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale neural networks have demonstrated remarkable performance in different domains like vision and language processing, although at the cost of massive computation resources. As illustrated by compression literature, structural model pruning is a prominent algorithm to encourage model efficiency, thanks to its acceleration-friendly sparsity patterns. One of the key questions of structural pruning is how to estimate the channel significance. In parallel, work on data-centric AI has shown that prompting-based techniques enable impressive generalization of large language models across diverse downstream tasks. In this paper, we investigate a charming possibility - \\textit{leveraging visual prompts to capture the channel importance and derive high-quality structural sparsity}. To this end, we propose a novel algorithmic framework, namely \\texttt{PASS}. It is a tailored hyper-network to take both visual prompts and network weight statistics as input, and output layer-wise channel sparsity in a recurrent manner. Such designs consider the intrinsic channel dependency between layers. Comprehensive experiments across multiple network architectures and six datasets demonstrate the superiority of \\texttt{PASS} in locating good structural sparsity. For example, at the same FLOPs level, \\texttt{PASS} subnetworks achieve $1\\%\\sim 3\\%$ better accuracy on Food101 dataset; or with a similar performance of $80\\%$ accuracy, \\texttt{PASS} subnetworks obtain $0.35\\times$ more speedup than the baselines.",
+      "identifiers": [
+        "SemanticScholar:2936fb8f584efc3a503617cb43ed3dd571d5205e"
+      ],
+      "semantic_scholar_id": "2936fb8f584efc3a503617cb43ed3dd571d5205e",
+      "canonical_id": "arXiv:2407.17412",
+      "arxiv_id": "2407.17412",
+      "doi": "10.48550/arXiv.2407.17412",
+      "authors": [
+        "Tianjin Huang",
+        "Meng Fang",
+        "Lijuan Shen",
+        "Fan Liu",
+        "Yu-Long Pei",
+        "Mykola Pechenizkiy",
+        "Shiwei Liu",
+        "Tian-Long Chen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 808,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Linear Attention is Enough in Spatial-Temporal Forecasting",
+      "source_url": "https://arxiv.org/abs/2408.09158",
+      "year": 2024,
+      "published": "2024-08-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the most representative scenario of spatial-temporal forecasting tasks, the traffic forecasting task attracted numerous attention from machine learning community due to its intricate correlation both in space and time dimension. Existing methods often treat road networks over time as spatial-temporal graphs, addressing spatial and temporal representations independently. However, these approaches struggle to capture the dynamic topology of road networks, encounter issues with message passing mechanisms and over-smoothing, and face challenges in learning spatial and temporal relationships separately. To address these limitations, we propose treating nodes in road networks at different time steps as independent spatial-temporal tokens and feeding them into a vanilla Transformer to learn complex spatial-temporal patterns, design \\textbf{STformer} achieving SOTA. Given its quadratic complexity, we introduce a variant \\textbf{NSTformer} based on Nystr$\\ddot{o}$m method to approximate self-attention with linear complexity but even slightly better than former in a few cases astonishingly. Extensive experimental results on traffic datasets demonstrate that the proposed method achieves state-of-the-art performance at an affordable computational cost. Our code is available at \\href{https://github.com/XinyuNing/STformer-and-NSTformer}{https://github.com/XinyuNing/STformer-and-NSTformer}.",
+      "identifiers": [
+        "SemanticScholar:68b260739d1efb80558305eabc68f65b7a872e8b"
+      ],
+      "semantic_scholar_id": "68b260739d1efb80558305eabc68f65b7a872e8b",
+      "canonical_id": "arXiv:2408.09158",
+      "arxiv_id": "2408.09158",
+      "doi": "10.48550/arXiv.2408.09158",
+      "authors": [
+        "Xinyu Ning"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 784,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2203.12276",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2203.12276",
+        "id:SemanticScholar:94e46e18d2628343a926acf6c3d0817e11d35d58",
+        "id:arXiv:2203.12276",
+        "title:erniesparse learning hierarchical efficient transformer through regularized selfattention",
+        "url:https://arxiv.org/abs/2203.12276"
+      ],
+      "record": {
+        "title": "ERNIE-SPARSE: Learning Hierarchical Efficient Transformer Through Regularized Self-Attention",
+        "source_url": "https://arxiv.org/abs/2203.12276",
+        "year": 2022,
+        "published": "2022-03-23",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse Transformer has recently attracted a lot of attention since the ability for reducing the quadratic dependency on the sequence length. We argue that two factors, information bottleneck sensitivity and inconsistency between different attention topologies, could affect the performance of the Sparse Transformer. This paper proposes a well-designed model named ERNIE-Sparse. It consists of two distinctive parts: (i) Hierarchical Sparse Transformer (HST) to sequentially unify local and global information. (ii) Self-Attention Regularization (SAR) method, a novel regularization designed to minimize the distance for transformers with different attention topologies. To evaluate the effectiveness of ERNIE-Sparse, we perform extensive evaluations. Firstly, we perform experiments on a multi-modal long sequence modeling task benchmark, Long Range Arena (LRA). Experimental results demonstrate that ERNIE-Sparse significantly outperforms a variety of strong baseline methods including the dense attention and other efficient sparse attention methods and achieves improvements by 2.77% (57.78% vs. 55.01%). Secondly, to further show the effectiveness of our method, we pretrain ERNIE-Sparse and verified it on 3 text classification and 2 QA downstream tasks, achieve improvements on classification benchmark by 0.83% (92.46% vs. 91.63%), on QA benchmark by 3.24% (74.67% vs. 71.43%). Experimental results continue to demonstrate its superior performance.",
+        "identifiers": [
+          "SemanticScholar:94e46e18d2628343a926acf6c3d0817e11d35d58"
+        ],
+        "semantic_scholar_id": "94e46e18d2628343a926acf6c3d0817e11d35d58",
+        "canonical_id": "arXiv:2203.12276",
+        "arxiv_id": "2203.12276",
+        "doi": "10.48550/arXiv.2203.12276",
+        "authors": [
+          "Yang Liu",
+          "Jia-Xiang Liu",
+          "Li Chen",
+          "Yu-Xiang Lu",
+          "Shi Feng",
+          "Zhi-Da Feng",
+          "Yu Sun",
+          "Hao Tian",
+          "Huan-Cheng Wu",
+          "Hai-feng Wang"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1662,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3389/fnbot.2023.1214203",
+      "identity_tokens": [
+        "id:DOI:10.3389/fnbot.2023.1214203",
+        "id:SemanticScholar:92f86c59a221752560e72466b2e1026e83bfdc12",
+        "title:a novel approach to attention mechanism using kernel functions kerformer",
+        "url:https://doi.org/10.3389/fnbot.2023.1214203"
+      ],
+      "record": {
+        "title": "A novel approach to attention mechanism using kernel functions: Kerformer",
+        "source_url": "https://doi.org/10.3389/fnbot.2023.1214203",
+        "year": 2023,
+        "published": "2023-08-24",
+        "venue": "Frontiers Neurorobotics",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Artificial Intelligence (AI) is driving advancements across various fields by simulating and enhancing human intelligence. In Natural Language Processing (NLP), transformer models like the Kerformer, a linear transformer based on a kernel approach, have garnered success. However, traditional attention mechanisms in these models have quadratic calculation costs linked to input sequence lengths, hampering efficiency in tasks with extended orders. To tackle this, Kerformer introduces a nonlinear reweighting mechanism, transforming maximum attention into feature-based dot product attention. By exploiting the non-negativity and non-linear weighting traits of softmax computation, separate non-negativity operations for Query(Q) and Key(K) computations are performed. The inclusion of the SE Block further enhances model performance. Kerformer significantly reduces attention matrix time complexity from O(N2) to O(N), with N representing sequence length. This transformation results in remarkable efficiency and scalability gains, especially for prolonged tasks. Experimental results demonstrate Kerformer's superiority in terms of time and memory consumption, yielding higher average accuracy (83.39%) in NLP and vision tasks. In tasks with long sequences, Kerformer achieves an average accuracy of 58.94% and exhibits superior efficiency and convergence speed in visual tasks. This model thus offers a promising solution to the limitations posed by conventional attention mechanisms in handling lengthy tasks.",
+        "identifiers": [
+          "SemanticScholar:92f86c59a221752560e72466b2e1026e83bfdc12"
+        ],
+        "semantic_scholar_id": "92f86c59a221752560e72466b2e1026e83bfdc12",
+        "doi": "10.3389/fnbot.2023.1214203",
+        "canonical_id": "DOI:10.3389/fnbot.2023.1214203",
+        "authors": [
+          "Yao Gan",
+          "Yan-yun Fu",
+          "De-Yong Wang",
+          "Yong-Ming Li"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1143,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2210.08164",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2210.08164",
+        "id:SemanticScholar:ee1e1afe75eb0e20d57bf316f5ab1ca2c369d100",
+        "id:arXiv:2210.08164",
+        "title:linear video transformer with feature fixation",
+        "url:https://arxiv.org/abs/2210.08164"
+      ],
+      "record": {
+        "title": "Linear Video Transformer with Feature Fixation",
+        "source_url": "https://arxiv.org/abs/2210.08164",
+        "year": 2022,
+        "published": "2022-10-15",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision Transformers have achieved impressive performance in video classification, while suffering from the quadratic complexity caused by the Softmax attention mechanism. Some studies alleviate the computational costs by reducing the number of tokens in attention calculation, but the complexity is still quadratic. Another promising way is to replace Softmax attention with linear attention, which owns linear complexity but presents a clear performance drop. We find that such a drop in linear attention results from the lack of attention concentration on critical features. Therefore, we propose a feature fixation module to reweight the feature importance of the query and key before computing linear attention. Specifically, we regard the query, key, and value as various latent representations of the input token, and learn the feature fixation ratio by aggregating Query-Key-Value information. This is beneficial for measuring the feature importance comprehensively. Furthermore, we enhance the feature fixation by neighborhood association, which leverages additional guidance from spatial and temporal neighbouring tokens. The proposed method significantly improves the linear attention baseline and achieves state-of-the-art performance among linear video Transformers on three popular video classification benchmarks. With fewer parameters and higher efficiency, our performance is even comparable to some Softmax-based quadratic Transformers.",
+        "identifiers": [
+          "SemanticScholar:ee1e1afe75eb0e20d57bf316f5ab1ca2c369d100"
+        ],
+        "semantic_scholar_id": "ee1e1afe75eb0e20d57bf316f5ab1ca2c369d100",
+        "canonical_id": "arXiv:2210.08164",
+        "arxiv_id": "2210.08164",
+        "doi": "10.48550/arXiv.2210.08164",
+        "authors": [
+          "Kaiyue Lu",
+          "Ze-Xia Liu",
+          "Jianyuan Wang",
+          "Weixuan Sun",
+          "Zhen Qin",
+          "Dong Li",
+          "Xu-Yang Shen",
+          "Huizhong Deng",
+          "Xiaodong Han",
+          "Yuchao Dai",
+          "Yiran Zhong"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1456,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1613/jair.1.13896",
+      "identity_tokens": [
+        "id:DOI:10.1613/jair.1.13896",
+        "id:SemanticScholar:b6438d56b9f18f0260953d5a32d11c1c758954c7",
+        "title:aan generalized average attention network for accelerating neural transformer",
+        "url:https://doi.org/10.1613/jair.1.13896"
+      ],
+      "record": {
+        "title": "AAN+: Generalized Average Attention Network for Accelerating Neural Transformer",
+        "source_url": "https://doi.org/10.1613/jair.1.13896",
+        "year": 2022,
+        "published": "2022-11-06",
+        "venue": "Journal of Artificial Intelligence Research",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer benefits from the high parallelization of attention networks in fast training, but it still suffers from slow decoding partially due to the linear dependency O(m) of the decoder self-attention on previous target words at inference. In this paper, we propose a generalized average attention network (AAN+) aiming at speeding up decoding by reducing the dependency from O(m) to O(1). We find that the learned self-attention weights in the decoder follow some patterns which can be approximated via a dynamic structure. Based on this insight, we develop AAN+, extending our previously proposed average attention (Zhang et al., 2018a, AAN) to support more general position- and content-based attention patterns. AAN+ only requires to maintain a small constant number of hidden states during decoding, ensuring its O(1) dependency. We apply AAN+ as a drop-in replacement of the decoder selfattention and conduct experiments on machine translation (with diverse language pairs), table-to-text generation and document summarization. With masking tricks and dynamic programming, AAN+ enables Transformer to decode sentences around 20% faster without largely compromising in the training speed and the generation performance. Our results further reveal the importance of the localness (neighboring words) in AAN+ and its capability in modeling long-range dependency.",
+        "identifiers": [
+          "SemanticScholar:b6438d56b9f18f0260953d5a32d11c1c758954c7"
+        ],
+        "semantic_scholar_id": "b6438d56b9f18f0260953d5a32d11c1c758954c7",
+        "doi": "10.1613/jair.1.13896",
+        "canonical_id": "DOI:10.1613/jair.1.13896",
+        "authors": [
+          "Biao Zhang",
+          "Deyi Xiong",
+          "Yubin Ge",
+          "Junfeng Yao",
+          "Hao Yue",
+          "Jinsong Su"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1434,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2301.08353",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2301.08353",
+        "id:SemanticScholar:800352afe54fb7d9fa75bcabc4e1cbaadeff7415",
+        "id:arXiv:2301.08353",
+        "title:adaensemble learning adaptively sparse structured ensemble network for clickthrough rate prediction",
+        "url:https://arxiv.org/abs/2301.08353"
+      ],
+      "record": {
+        "title": "AdaEnsemble: Learning Adaptively Sparse Structured Ensemble Network for Click-Through Rate Prediction",
+        "source_url": "https://arxiv.org/abs/2301.08353",
+        "year": 2023,
+        "published": "2023-01-06",
+        "venue": "AdKDD@KDD",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Learning feature interactions is crucial to success for large-scale CTR prediction in recommender systems and Ads ranking. Researchers and practitioners extensively proposed various neural network architectures for searching and modeling feature interactions. However, we observe that different datasets favor different neural network architectures and feature interaction types, suggesting that different feature interaction learning methods may have their own unique advantages. Inspired by this observation, we propose AdaEnsemble: a Sparsely-Gated Mixture-of-Experts (SparseMoE) architecture that can leverage the strengths of heterogeneous feature interaction experts and adaptively learns the routing to a sparse combination of experts for each example, allowing us to build a dynamic hierarchy of the feature interactions of different types and orders. To further improve the prediction accuracy and inference efficiency, we incorporate the dynamic early exiting mechanism for feature interaction depth selection. The AdaEnsemble can adaptively choose the feature interaction depth and find the corresponding SparseMoE stacking layer to exit and compute prediction from. Therefore, our proposed architecture inherits the advantages of the exponential combinations of sparsely gated experts within SparseMoE layers and further dynamically selects the optimal feature interaction depth without executing deeper layers. We implement the proposed AdaEnsemble and evaluate its performance on real-world datasets. Extensive experiment results demonstrate the efficiency and effectiveness of AdaEnsemble over state-of-the-art models.",
+        "identifiers": [
+          "SemanticScholar:800352afe54fb7d9fa75bcabc4e1cbaadeff7415"
+        ],
+        "semantic_scholar_id": "800352afe54fb7d9fa75bcabc4e1cbaadeff7415",
+        "canonical_id": "arXiv:2301.08353",
+        "arxiv_id": "2301.08353",
+        "doi": "10.48550/arXiv.2301.08353",
+        "authors": [
+          "Yachen Yan",
+          "Liubo Li"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1373,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.00592",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpami.2026.3673772",
+        "id:SemanticScholar:796e98fca33d096aa76b66c097dac9d862278fcb",
+        "id:arXiv:2409.00592",
+        "title:hypercompression model compression via hyperfunction",
+        "url:https://arxiv.org/abs/2409.00592"
+      ],
+      "record": {
+        "title": "Hyper-Compression: Model Compression via Hyperfunction",
+        "source_url": "https://arxiv.org/abs/2409.00592",
+        "year": 2024,
+        "published": "2024-09-01",
+        "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid growth of large models’ size has far outpaced that of computing resources. To bridge this gap, encouraged by the parsimonious relationship between genotype and phenotype in the brain’s growth and development, we propose the so-called Hyper-Compression that turns the model compression into the issue of parameter representation via a hyperfunction. Specifically, it is known that the trajectory of some low-dimensional dynamic systems can fill the high-dimensional space eventually. Thus, Hyper-Compression, using these dynamic systems as the hyperfunctions, represents the parameters of the target network by their corresponding composition number or trajectory length. This suggests a novel mechanism for model compression, substantially different from the existing pruning, quantization, distillation, and decomposition. Along this direction, we methodologically identify a suitable dynamic system with the irrational winding as the hyperfunction and theoretically derive its associated error bound. Next, guided by our theoretical insights, we propose several engineering twists to make the Hyper-Compression pragmatic and effective. Lastly, systematic and comprehensive experiments on NLP models such as LLaMA and Qwen series and vision models confirm that Hyper-Compression enjoys the following PNAS merits: 1) Preferable compression ratio; 2) No post-hoc retraining; 3) Affordable inference time; and 4) Short compression time. It compresses LLaMA2-7B in an hour and achieves close-to-int4-quantization performance, without retraining and with a performance drop of less than 1%.",
+        "identifiers": [
+          "SemanticScholar:796e98fca33d096aa76b66c097dac9d862278fcb"
+        ],
+        "semantic_scholar_id": "796e98fca33d096aa76b66c097dac9d862278fcb",
+        "canonical_id": "arXiv:2409.00592",
+        "arxiv_id": "2409.00592",
+        "doi": "10.1109/TPAMI.2026.3673772",
+        "authors": [
+          "Feng-Lei Fan",
+          "Jun-Tong Fan",
+          "Dayang Wang",
+          "Jingbo Zhang",
+          "Zelin Dong",
+          "Shi-Jun Zhang",
+          "Ge Wang",
+          "Tieyong Zeng"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 769,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.04342",
+      "identity_tokens": [
+        "id:SemanticScholar:ce8a8a9207f2a46d693eb804046fd746248221d3",
+        "id:arXiv:2504.04342",
+        "title:pruning laws for large language models",
+        "url:https://arxiv.org/abs/2504.04342"
+      ],
+      "record": {
+        "title": "Pruning Laws for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2504.04342",
+        "year": 2025,
+        "published": "2025-04-06",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling up model parameters and training data consistently improves the performance of large language models (LLMs), but at the cost of rapidly growing memory and compute requirements, which makes deployment on resource-limited hardware infeasible. Model pruning, a widely used compression technique, reduces inference costs by removing redundant parameters. However, its impact on downstream performance remains unpredictable and is typically assessed only through costly empirical sweeps. To address this gap, we introduce pruning laws, simple and interpretable scaling relations that connect a pruned LLM's post-pruning performance to its unpruned performance and pruning ratio. Across ten LLMs (1.3B-30B parameters), a 20B mixture-of-experts model, three pruning strategies (unstructured, width, and depth), and eight diverse tasks, we show that pruning laws achieve strong predictive accuracy (average extrapolation error less than 7%), reliably quantify performance degradation, and identify critical pruning thresholds beyond which recovery is infeasible. Moreover, we demonstrate that the functional form transfers across dense and mixture-of-experts architectures, pruning methods, and unseen models in zero-shot and one-shot setups, with task- and method-specific coefficients that vary in interpretable ways. These results provide both researchers and practitioners with a principled framework to select pruning strategies, estimate safe pruning ratios without exhaustive tuning, and deploy LLMs efficiently under real-world compute and latency constraints.",
+        "identifiers": [
+          "SemanticScholar:ce8a8a9207f2a46d693eb804046fd746248221d3"
+        ],
+        "semantic_scholar_id": "ce8a8a9207f2a46d693eb804046fd746248221d3",
+        "canonical_id": "arXiv:2504.04342",
+        "arxiv_id": "2504.04342",
+        "authors": [
+          "Ayan Sengupta",
+          "Siddhant Chaudhary",
+          "Tanmoy Chakraborty"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 552,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.23174",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.23174",
+        "id:SemanticScholar:abad5178463d5e34f233e746e22a164a47ae926d",
+        "id:arXiv:2503.23174",
+        "title:tra better length generalisation with threshold relative attention",
+        "url:https://arxiv.org/abs/2503.23174"
+      ],
+      "record": {
+        "title": "TRA: Better Length Generalisation with Threshold Relative Attention",
+        "source_url": "https://arxiv.org/abs/2503.23174",
+        "year": 2025,
+        "published": "2025-03-29",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers struggle with length generalisation, displaying poor performance even on basic tasks. We test whether these limitations can be explained through two key failures of the self-attention mechanism. The first is the inability to fully remove irrelevant information. The second is tied to position, even if the dot product between a key and query is highly negative (i.e. an irrelevant key) learned positional biases may unintentionally up-weight such information - dangerous when distances become out of distribution. Put together, these two failure cases lead to compounding generalisation difficulties. We test whether they can be mitigated through the combination of a) selective sparsity - completely removing irrelevant keys from the attention softmax and b) contextualised relative distance - distance is only considered as between the query and the keys that matter. We show how refactoring the attention mechanism with these two mitigations in place can substantially improve the generalisation capabilities of decoder only transformers.",
+        "identifiers": [
+          "SemanticScholar:abad5178463d5e34f233e746e22a164a47ae926d"
+        ],
+        "semantic_scholar_id": "abad5178463d5e34f233e746e22a164a47ae926d",
+        "canonical_id": "arXiv:2503.23174",
+        "arxiv_id": "2503.23174",
+        "doi": "10.48550/arXiv.2503.23174",
+        "authors": [
+          "Mattia Opper",
+          "Roland Fernandez",
+          "P. Smolensky",
+          "Jianfeng Gao"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 560,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2110.04821",
+      "identity_tokens": [
+        "id:SemanticScholar:2a28aec16ed9b4cda1c7eb2c936509d0232ccfa1",
+        "id:arXiv:2110.04821",
+        "title:dct dynamic compressive transformer for modeling unbounded sequence",
+        "url:https://arxiv.org/abs/2110.04821"
+      ],
+      "record": {
+        "title": "DCT: Dynamic Compressive Transformer for Modeling Unbounded Sequence",
+        "source_url": "https://arxiv.org/abs/2110.04821",
+        "year": 2021,
+        "published": "2021-10-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this paper, we propose Dynamic Compressive Transformer (DCT), a transformer-based framework for modeling the unbounded sequence. In contrast to the previous baselines which append every sentence representation to memory, conditionally selecting and appending them is a more reasonable solution to deal with unlimited long sequences. Our model uses a policy that determines whether the sequence should be kept in memory with a compressed state or discarded during the training process. With the benefits of retaining semantically meaningful sentence information in the memory system, our experiment results on Enwik8 benchmark show that DCT outperforms the previous state-of-the-art (SOTA) model.",
+        "identifiers": [
+          "SemanticScholar:2a28aec16ed9b4cda1c7eb2c936509d0232ccfa1"
+        ],
+        "semantic_scholar_id": "2a28aec16ed9b4cda1c7eb2c936509d0232ccfa1",
+        "canonical_id": "arXiv:2110.04821",
+        "arxiv_id": "2110.04821",
+        "authors": [
+          "Kai-Po Chang",
+          "Wei-Yun Ma"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1826,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.02411",
+      "identity_tokens": [
+        "id:DOI:10.1007/s00521-025-11226-1",
+        "id:SemanticScholar:ef256a2f8f0ad258f71bdfe56fb5f7e1a5ce6f66",
+        "id:arXiv:2403.02411",
+        "title:ninformer a network in network transformer with token mixing generated gating function",
+        "url:https://arxiv.org/abs/2403.02411"
+      ],
+      "record": {
+        "title": "NiNformer: a network in network transformer with token mixing generated gating function",
+        "source_url": "https://arxiv.org/abs/2403.02411",
+        "year": 2024,
+        "published": "2024-03-04",
+        "venue": "Neural computing & applications (Print)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The attention mechanism is the primary component of the transformer architecture; it has led to significant advancements in deep learning spanning many domains and covering multiple tasks. In computer vision, the attention mechanism was first incorporated in the vision transformer (ViT), and then its usage has expanded into many tasks in the vision domain, such as classification, segmentation, object detection, and image generation. While the attention mechanism is very expressive and capable, it comes with the disadvantage of being computationally expensive and requiring datasets of considerable size for effective optimization. To address these shortcomings, many designs have been proposed in the literature to reduce the computational burden and alleviate the data size requirements. Examples of such attempts in the vision domain are the MLP-Mixer, the Conv-Mixer, the Perceiver-IO, and many more attempts with different sets of advantages and disadvantages. This paper introduces a new computational block as an alternative to the standard ViT block. The newly proposed block reduces the computational requirements by replacing the normal attention layers with a network in network structure, therefore enhancing the static approach of the MLP-Mixer with a dynamic learning of element-wise gating function generated by a token-mixing process. Extensive experimentation shows that the proposed design provides better performance than the baseline architectures on multiple datasets applied in the image classification task of the vision domain.",
+        "identifiers": [
+          "SemanticScholar:ef256a2f8f0ad258f71bdfe56fb5f7e1a5ce6f66"
+        ],
+        "semantic_scholar_id": "ef256a2f8f0ad258f71bdfe56fb5f7e1a5ce6f66",
+        "canonical_id": "arXiv:2403.02411",
+        "arxiv_id": "2403.02411",
+        "doi": "10.1007/s00521-025-11226-1",
+        "authors": [
+          "Abdullah Nazhat Abdullah",
+          "Tarkan Aydin"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 950,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.17412",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.17412",
+        "id:SemanticScholar:2936fb8f584efc3a503617cb43ed3dd571d5205e",
+        "id:arXiv:2407.17412",
+        "title:pass visual prompt locates good structure sparsity through a recurrent hypernetwork",
+        "url:https://arxiv.org/abs/2407.17412"
+      ],
+      "record": {
+        "title": "(PASS) Visual Prompt Locates Good Structure Sparsity through a Recurrent HyperNetwork",
+        "source_url": "https://arxiv.org/abs/2407.17412",
+        "year": 2024,
+        "published": "2024-07-24",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large-scale neural networks have demonstrated remarkable performance in different domains like vision and language processing, although at the cost of massive computation resources. As illustrated by compression literature, structural model pruning is a prominent algorithm to encourage model efficiency, thanks to its acceleration-friendly sparsity patterns. One of the key questions of structural pruning is how to estimate the channel significance. In parallel, work on data-centric AI has shown that prompting-based techniques enable impressive generalization of large language models across diverse downstream tasks. In this paper, we investigate a charming possibility - \\textit{leveraging visual prompts to capture the channel importance and derive high-quality structural sparsity}. To this end, we propose a novel algorithmic framework, namely \\texttt{PASS}. It is a tailored hyper-network to take both visual prompts and network weight statistics as input, and output layer-wise channel sparsity in a recurrent manner. Such designs consider the intrinsic channel dependency between layers. Comprehensive experiments across multiple network architectures and six datasets demonstrate the superiority of \\texttt{PASS} in locating good structural sparsity. For example, at the same FLOPs level, \\texttt{PASS} subnetworks achieve $1\\%\\sim 3\\%$ better accuracy on Food101 dataset; or with a similar performance of $80\\%$ accuracy, \\texttt{PASS} subnetworks obtain $0.35\\times$ more speedup than the baselines.",
+        "identifiers": [
+          "SemanticScholar:2936fb8f584efc3a503617cb43ed3dd571d5205e"
+        ],
+        "semantic_scholar_id": "2936fb8f584efc3a503617cb43ed3dd571d5205e",
+        "canonical_id": "arXiv:2407.17412",
+        "arxiv_id": "2407.17412",
+        "doi": "10.48550/arXiv.2407.17412",
+        "authors": [
+          "Tianjin Huang",
+          "Meng Fang",
+          "Lijuan Shen",
+          "Fan Liu",
+          "Yu-Long Pei",
+          "Mykola Pechenizkiy",
+          "Shiwei Liu",
+          "Tian-Long Chen"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 808,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.09158",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.09158",
+        "id:SemanticScholar:68b260739d1efb80558305eabc68f65b7a872e8b",
+        "id:arXiv:2408.09158",
+        "title:linear attention is enough in spatialtemporal forecasting",
+        "url:https://arxiv.org/abs/2408.09158"
+      ],
+      "record": {
+        "title": "Linear Attention is Enough in Spatial-Temporal Forecasting",
+        "source_url": "https://arxiv.org/abs/2408.09158",
+        "year": 2024,
+        "published": "2024-08-17",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As the most representative scenario of spatial-temporal forecasting tasks, the traffic forecasting task attracted numerous attention from machine learning community due to its intricate correlation both in space and time dimension. Existing methods often treat road networks over time as spatial-temporal graphs, addressing spatial and temporal representations independently. However, these approaches struggle to capture the dynamic topology of road networks, encounter issues with message passing mechanisms and over-smoothing, and face challenges in learning spatial and temporal relationships separately. To address these limitations, we propose treating nodes in road networks at different time steps as independent spatial-temporal tokens and feeding them into a vanilla Transformer to learn complex spatial-temporal patterns, design \\textbf{STformer} achieving SOTA. Given its quadratic complexity, we introduce a variant \\textbf{NSTformer} based on Nystr$\\ddot{o}$m method to approximate self-attention with linear complexity but even slightly better than former in a few cases astonishingly. Extensive experimental results on traffic datasets demonstrate that the proposed method achieves state-of-the-art performance at an affordable computational cost. Our code is available at \\href{https://github.com/XinyuNing/STformer-and-NSTformer}{https://github.com/XinyuNing/STformer-and-NSTformer}.",
+        "identifiers": [
+          "SemanticScholar:68b260739d1efb80558305eabc68f65b7a872e8b"
+        ],
+        "semantic_scholar_id": "68b260739d1efb80558305eabc68f65b7a872e8b",
+        "canonical_id": "arXiv:2408.09158",
+        "arxiv_id": "2408.09158",
+        "doi": "10.48550/arXiv.2408.09158",
+        "authors": [
+          "Xinyu Ning"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 784,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b4daacc3f523def9fd86f26545357068857a8f8ab701df56410508316f00ac12",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-64e1b51847e4f9db-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.17650",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.17650",
+    "identity_tokens": [
+      "arXiv:2606.17650"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.17650. Abstract summary: Text-guided Open-vocabulary Object Counting (TOOC) aims to estimate the number of objects described by text prompts, which is particularly challenging in dense scenes with large scale variations. Existing TOOC approaches predominantly rely on Transformers, whose quadratic complexity with respect to image resolution limits their Out of scope: Visual object-counting task, not LLM serving.",
+    "first_checked_at": "2026-10-05T12:02:45+00:00",
+    "last_checked_at": "2026-10-05T12:02:45+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+    ],
+    "title": "MambaCount: Efficient Text-guided Open-vocabulary Object Counting with Spatial Sparse State Space Duality Block"
+  },
+  "processed_at": "2026-10-05T12:02:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-64e1b51847e4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

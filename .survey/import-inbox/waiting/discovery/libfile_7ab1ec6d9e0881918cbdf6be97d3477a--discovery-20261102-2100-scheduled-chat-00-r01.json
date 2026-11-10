@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-2100-scheduled-chat-00/r01",
+  "reference_main_sha": "d421f2728239cd9ded2137ba6832c7b0543879c4",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41508",
+      "identity_tokens": [
+        "arXiv:2610.41508"
+      ],
+      "title": "HiState: Hierarchical Prefix Cache Management for Hybrid LLM Serving in Agentic Workloads",
+      "reason": "ハイブリッドLLMのprefix再利用ではKVは一致prefix全体を読む一方、再帰状態checkpointは1つしか必要ないという非対称性に着目。過去checkpointをSSDに置き、速いメモリをKVに優先配分する。checkpoint間隔を適応制御し古いagent分岐を統合退避するvLLM実装で、coding-agent実トレースのp99 TTFTがvLLM-Marconi比最大5.73倍、SGLang-HiCache比最大5.44倍高速。推論時の階層cache管理に直接貢献するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.41508",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T21:02:38+09:00",
+      "last_checked_at": "2026-11-02T21:02:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41825",
+      "identity_tokens": [
+        "arXiv:2610.41825"
+      ],
+      "title": "Where KV-Cache Error Lives in Looped Language Models: A Diagnostic Study of Ouro and Huginn",
+      "reason": "反復ブロックを4回または32回実行するlooped LLMの各loop別KV planeの量子化誤差を調査。値側のFisher対角質量が94%でも、実測KLは誤差の大きいkey側が支配する。cell単位のbit配分でBF16容量の25〜48%に圧縮した条件の1-step KLを改善する一方、Ouro-2.6Bの追加試験では31%容量でFisher方式への優位性が再現しない。推論KV圧縮の失敗条件を含む直接的な評価研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.41825",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T21:02:38+09:00",
+      "last_checked_at": "2026-11-02T21:02:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41919",
+      "identity_tokens": [
+        "arXiv:2610.41919"
+      ],
+      "title": "Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads",
+      "reason": "B200/B300を各8GPUの別クラスタで比較し、Llama-3-8B/70BのLLM推論とHPC/画像ワークロードを測定。B300は70B LLM throughputでB200より24〜27%低い条件があり、同一B300シリコンでも開発版vLLMの違いだけでTTFTが2.1倍変わる。機種名だけでなくruntimeと電力挙動が推論性能を左右することを定量的に示す推論基盤評価なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2610.41919",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T21:02:38+09:00",
+      "last_checked_at": "2026-11-02T21:02:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41160",
+      "identity_tokens": [
+        "arXiv:2610.41160",
+        "DOI:10.1145/3789240.3828750"
+      ],
+      "title": "ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference",
+      "reason": "prefill/decode分離LLMの大容量KV転送がECMPハッシュ衝突で特定spineへ集中する問題を扱う。送信元ポートを協調選択し、長寿命RDMA flowを異なるspineへ分散するARKを提案。switch改造や受信側の並べ替えなしで、packet-level RDMAシミュレーションでは平均FCT最大27.3%、P95 FCT最大34.0%削減、平均TTFT最大12.9%削減を報告。分散推論通信の直接最適化なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2610.41160",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T21:02:38+09:00",
+      "last_checked_at": "2026-11-02T21:02:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.22731",
+      "identity_tokens": [
+        "arXiv:2610.22731"
+      ],
+      "title": "Accelerated Dataflow: scaling inference in streaming data analytics with efficiency",
+      "reason": "Google Cloud Dataflow上のLLMを含むstreaming ML推論を、異種worker poolの協調autoscalingとprefix-aware batchingで実行する設計。データ移動中心の従来streaming基盤がGPU推論で非効率になる問題に対し、LLMを使うpipelineでthroughput 1.5〜2倍、最大75%のpeak resource削減、最大84%のpeak tail latency削減を報告。LLMを組み込む実行基盤の直接的な性能改善なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2610.22731",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T21:02:38+09:00",
+      "last_checked_at": "2026-11-02T21:02:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.40943",
+      "identity_tokens": [
+        "arXiv:2610.40943"
+      ],
+      "title": "Kernel-based Interpolatory Methods for Context Compression of Attention Mechanisms",
+      "reason": "attentionをカーネルHilbert空間で二つの線形写像の比として表現し、GEIM/Q-DEIM由来のGAIM/Q-DAIMによるKV文脈圧縮を構築。素朴な補間計算の文脈長二乗コストをTaylor/Performer/Random Fourier Featuresによるsurrogateで線形化し、streaming更新にも拡張する。LongBench-Eの初期実験で既存法と同程度の性能を報告するが、実際のdecode速度は要旨では未検証。推論KV圧縮手法への直接寄与としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.40943",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T21:02:38+09:00",
+      "last_checked_at": "2026-11-02T21:02:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41112",
+      "identity_tokens": [
+        "arXiv:2610.41112"
+      ],
+      "title": "Calibration of Large Model Quantization based on HiFloat4 Format",
+      "reason": "3段階スケールを持つblock floating-pointのHiFloat4（HiF4）でLLMを4bit化する際の校正不足に対し、HiGPTQ・HiAutoRound・HiFlatQuantの3方式を検討。直接HiF4変換より推論精度を改善し、BF16との精度差を1%未満へ抑え、評価したモデルと下流タスクでNVFP4を上回ると要旨で報告。低bit推論用量子化品質を直接改善するためaccept。実測tokens/sの値はabstractにない。",
+      "source_url": "https://arxiv.org/abs/2610.41112",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T21:02:38+09:00",
+      "last_checked_at": "2026-11-02T21:02:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41291",
+      "identity_tokens": [
+        "arXiv:2610.41291"
+      ],
+      "title": "In-Model Context Compression with Agentic Soft Tokens for Long-Horizon LLM Agents",
+      "reason": "Agentic Soft-Token Compression（ASTC）はハイブリッドGated Delta Networkとattentionの内部再帰状態から既吸収情報をsoft tokenとして引き継ぎ、正確な値はhard tokenに残す学習不要の長期agent文脈圧縮。後段計算を減らし再利用可能なKVを作り、長期タスクで精度を維持・改善しつつend-to-end Attention Pairsを最大50.68%削減と報告。LLM推論の文脈・KV計算量削減に直接関連するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.41291",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T21:02:38+09:00",
+      "last_checked_at": "2026-11-02T21:02:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.40927",
+      "identity_tokens": [
+        "arXiv:2610.40927"
+      ],
+      "title": "Agentic World Modeling for Agent Test-time Scaling without Environment Replica",
+      "reason": "共有・永続環境ではagentの複数候補trajectoryを実行すると副作用が生じるため、AWMはread-onlyな環境問い合わせと実行可能計算で仮想行動後の観測を推定する。tau-bench、AppWorld、OfficeBenchでsingle-shot simulation比平均40.07%改善を報告。並列test-time探索の実行方式には関連するが、LLM本体のtoken生成、KV/カーネル、serving性能の改善を測る研究ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.40927",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T21:02:38+09:00",
+      "last_checked_at": "2026-11-02T21:02:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26441",
+      "identity_tokens": [
+        "arXiv:2606.26441"
+      ],
+      "title": "GPUSparse: GPU-Accelerated Learned Sparse Retrieval with Parallel Inverted Indices",
+      "reason": "SPLADEの転置索引をGPU並列化し、warp-coalesced posting listとbatched scatter-add、Triton融合カーネルで厳密な疎検索を高速化。MS MARCO 880万文書ではPyserini CPU比235倍（1 queryあたり298ms→1.27ms）を報告。RAGの検索側に使えるGPU実行技術だが、LLMの生成推論、KV cache、サービングの直接最適化ではなくretrieverのscoring engineが主題なのでborderline。",
+      "source_url": "https://arxiv.org/abs/2606.26441",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T21:02:38+09:00",
+      "last_checked_at": "2026-11-02T21:02:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "scheduled-chat-00-20260923T070124Z-latentmoe-r5",
+  "kind": "research",
+  "attempt_id": "attempt-3b0b8499edf3a5b73b2ca7f6",
+  "job_id": "job-research-88a9229b2587f714",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-00",
+  "run_key": "scheduled-chat-00-20260923T070124Z",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-23T07:01:24+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:7ef7f77175fb3f56ffa84232aed03501d47a4cb3ac565d406e30978fb12f1314",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "1c495c92e0189c13d1e3326a201b5e0c9272e7de"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "c45e96c9d222ed3002fc29e0dbe56bba2bef09ea"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "6a600c24790e82773f400af5dba78834a3b52665"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "7bf48fda12555754e7aed8b6329f5220889227d4"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "17432d6be8335917e7534fe9a970d5d5910776e6"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2",
+    "手法構成要素#6 の段落数 1 < 2",
+    "手法構成要素#7 の段落数 1 < 2",
+    "手法構成要素#8 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-23T07:04:05+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md",
+    "status": "FAIL",
+    "file_bytes": 23943,
+    "prose_chars": 6578,
+    "paragraphs": 23,
+    "method_paragraphs": 9,
+    "method_components": 8,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.8371206102018115,
+    "japanese_chars": 5268,
+    "latin_chars": 1025,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2",
+      "手法構成要素#6 の段落数 1 < 2",
+      "手法構成要素#7 の段落数 1 < 2",
+      "手法構成要素#8 の段落数 1 < 2"
+    ],
+    "warnings": []
+  }
+}

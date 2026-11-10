@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "222ee1ac4427c35ddd4e516c40b299b6ca952ed7adb0b9862245596d7ac5b4ff",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_6314533ac0d48191b8ec39b37981c7f4--2026-2603.10087-pooling-engram-cxl-returned-repair-20261012-1904-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2603.10087",
+  "worker_completed_at": "2026-10-12T19:13:01+09:00",
+  "worker_run_key": "20261012-1904-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6617,
+    "body_paragraphs": 33,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1590,
+    "limitation_chars": 869,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-12T10:49:25+00:00"
+}

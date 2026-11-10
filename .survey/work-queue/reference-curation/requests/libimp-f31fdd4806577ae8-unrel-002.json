@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f31fdd4806577ae8-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2405.01248",
+  "reason": "本文のDiffusionPipeはlarge diffusion modelのpipeline training throughputとpipeline bubbleを最適化するが、言語モデルを対象にせず推論samplingも扱わない。Training Offload/Memory Systemsとの一般システム類似だけでLLM対象には含めない。",
+  "title": "DiffusionPipe: Training Large Diffusion Models with Efficient Pipelines",
+  "identity_tokens": [
+    "arXiv:2405.01248"
+  ],
+  "linked_from": [
+    "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f31fdd480657",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

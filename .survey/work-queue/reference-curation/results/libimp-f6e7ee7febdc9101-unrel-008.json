@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6e7ee7febdc9101-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1908.09791",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1908.09791",
+    "identity_tokens": [
+      "arXiv:1908.09791"
+    ],
+    "reason": "trains a once-for-all vision network and selects device-specific subnets; efficient deployment is central but final models/tasks are CNN/mobile vision rather than LLM/Transformer inference.",
+    "first_checked_at": "2026-10-04T19:49:58+00:00",
+    "last_checked_at": "2026-10-04T21:43:58+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
+    ],
+    "title": "Once for All: Train One Network and Specialize it for Efficient Deployment"
+  },
+  "processed_at": "2026-10-04T21:43:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6e7ee7febdc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fbbd28f9b5a891cc-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.08553",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.08553",
+    "identity_tokens": [
+      "arXiv:2405.08553"
+    ],
+    "reason": "arXiv v2一次要旨は注意ヘッド間を入力依存で動的合成するDCMHAを提案し、同程度の品質を約1.7〜2.0倍計算規模のTransformerに匹敵するモデルで実現。ただし中心は学習済みモデルの表現力と品質であり、実推論カーネル・サービングのレイテンシー評価は要旨にないため境界的。",
+    "first_checked_at": "2026-10-30T07:16:21+00:00",
+    "last_checked_at": "2026-10-30T07:16:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Improving Transformers with Dynamically Composable Multi-Head Attention"
+  },
+  "processed_at": "2026-10-30T07:16:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbbd28f9b5a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

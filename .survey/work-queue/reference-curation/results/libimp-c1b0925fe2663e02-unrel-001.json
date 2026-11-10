@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c1b0925fe2663e02-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.18740",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.18740",
+    "identity_tokens": [
+      "arXiv:2605.18740"
+    ],
+    "reason": "The paper studies regional-to-global self-distillation to improve fine-grained visual understanding; it removes inference-time visual tools by training the model, but does not introduce inference cost, memory, throughput, serving, or cache optimization.",
+    "first_checked_at": "2026-10-07T09:04:22+00:00",
+    "last_checked_at": "2026-10-07T09:04:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+    ],
+    "title": "Vision-OPD: Learning to See Fine Details for Multimodal LLMs via On-Policy Self-Distillation"
+  },
+  "processed_at": "2026-10-07T09:04:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c1b0925fe266",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

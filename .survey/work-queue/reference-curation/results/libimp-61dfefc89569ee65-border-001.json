@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-61dfefc89569ee65-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.03563",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.03563",
+    "identity_tokens": [
+      "arXiv:2602.03563"
+    ],
+    "reason": "一次論文の方法節では分類器のラベル埋込みをアンカーとする対比学習（ACL-Embed）、交差エントロピーと対比損失の勾配が90度超で衝突するバッチでは対比損失を切るACL-Grad、深層出口から浅層出口へ蒸留するACL-CLを提案する。GLUEのBERT/RoBERTa分類精度と中間出口の精度向上が主要評価であり、早期終了推論に間接的に関連する一方、生成LLMの推論基盤・実測速度・メモリ・スループットを主対象としないため現行サーベイでは境界的。",
+    "first_checked_at": "2026-10-15T20:49:13+00:00",
+    "last_checked_at": "2026-10-15T20:49:13+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ACL: Aligned Contrastive Learning Improves BERT and Multi-exit BERT Fine-tuning"
+  },
+  "processed_at": "2026-10-15T20:49:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-61dfefc89569",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

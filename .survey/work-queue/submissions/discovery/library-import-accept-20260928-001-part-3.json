@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Scaling Up On-Device LLMs via Active-Weight Swapping Between DRAM and Flash",
+      "source_url": "https://arxiv.org/abs/2504.08378",
+      "year": 2025,
+      "published": "2025-04-11",
+      "abstract": "Large language models (LLMs) are increasingly being deployed on mobile devices, but the limited DRAM capacity constrains the deployable model size. This paper introduces ActiveFlow, the first LLM inference framework that can achieve adaptive DRAM usage for modern LLMs (not ReLU-based), enabling the scaling up of deployable model sizes. The framework is based on the novel concept of active weight DRAM-flash swapping and incorporates three novel techniques: (1) Cross-layer active weights preloading. It uses the activations from the current layer to predict the active weights of several subsequent layers, enabling computation and data loading to overlap, as well as facilitating large I/O transfers. (2) Sparsity-aware self-distillation. It adjusts the active weights to align with the dense-model output distribution, compensating for approximations introduced by contextual sparsity. (3) Active weight DRAM-flash swapping pipeline. It orchestrates the DRAM space allocation among the hot weight cache, preloaded active weights, and computation-involved weights based on available memory. Results show ActiveFlow achieves the performance-cost Pareto frontier compared to existing efficiency optimization methods.",
+      "canonical_id": "arXiv:2504.08378",
+      "arxiv_id": "2504.08378",
+      "doi": "10.48550/arXiv.2504.08378",
+      "authors": [
+        "Fucheng Jia",
+        "Zewen Wu",
+        "Shiqi Jiang",
+        "Huiqiang Jiang",
+        "Qian-Xi Zhang",
+        "Yu-Qing Yang",
+        "Yunxin Liu",
+        "Ju Ren",
+        "Deyu Zhang",
+        "Ting Cao"
+      ],
+      "reason": "端末DRAMとフラッシュ間で活性重みを予測・先読み・交換し、搭載可能モデルを拡大する。",
+      "priority": 50
+    },
+    {
+      "title": "SEAP: Training-free Sparse Expert Activation Pruning Unlock the Brainpower of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2503.07605",
+      "year": 2025,
+      "published": "2025-03-10",
+      "abstract": "Large Language Models have achieved remarkable success across various natural language processing tasks, yet their high computational cost during inference remains a major bottleneck. This paper introduces Sparse Expert Activation Pruning (SEAP), a training-free pruning method that selectively retains task-relevant parameters to reduce inference overhead. Inspired by the clustering patterns of hidden states and activations in LLMs, SEAP identifies task-specific expert activation patterns and prunes the model while preserving task performance and enhancing computational efficiency. Experimental results demonstrate that SEAP significantly reduces computational overhead while maintaining competitive accuracy. Notably, at 50% pruning, SEAP surpasses both WandA and FLAP by over 20%, and at 20% pruning, it incurs only a 2.2% performance drop compared to the dense model. These findings highlight SEAP's scalability and effectiveness, making it a promising approach for optimizing large-scale LLMs.",
+      "canonical_id": "arXiv:2503.07605",
+      "arxiv_id": "2503.07605",
+      "doi": "10.48550/arXiv.2503.07605",
+      "authors": [
+        "Xun Liang",
+        "Hanyu Wang",
+        "Huayi Lai",
+        "Simin Niu",
+        "Shichao Song",
+        "Jiawei Yang",
+        "Jihao Zhao",
+        "Feiyu Xiong",
+        "Bo Tang",
+        "Zhi-Yu Li"
+      ],
+      "reason": "タスク別活性パターンから重要パラメータを選び、追加学習なしで推論計算を削減する。",
+      "priority": 50
+    },
+    {
+      "title": "Efficiently Editing Mixture-of-Experts Models with Compressed Experts",
+      "source_url": "https://arxiv.org/abs/2503.00634",
+      "year": 2025,
+      "published": "2025-03-01",
+      "abstract": "Mixture-of-Experts (MoE) models have become a key approach for scaling large language models efficiently by activating only a subset of experts during training and inference. Typically, the number of activated experts presents a trade-off: fewer experts reduce computational costs, while more experts improve performance. Recent studies reveal that not all activated experts contribute equally to model performance, with some providing minimal utility, particularly when finetuning pretrained MoE models for specialized downstream tasks. The co-existence of significant and redundant parameters in experts provides us an opportunity to reduce the number of activated experts while maintaining model performance. In this work, we propose the concept of compressed experts, lightweight modules that serve as compact representations of full experts. Our approach preserves the most important experts while replacing other auxiliary activated experts with compressed experts. The reduction of active parameters significantly lowers inference costs while achieving comparable performance. Extensive experiments on models including Phi-MoE and OLMoE demonstrate that compressed experts recover over 90% of full expert performance across various tasks while reducing more than 30% active parameters and saving 20% in inference costs. This approach enables efficient deployment of MoE models in resource-constrained settings and facilitates scaling to larger models with manageable overhead. Our code is available at https://github.com/yifei-he/Compressed-Experts.",
+      "canonical_id": "arXiv:2503.00634",
+      "arxiv_id": "2503.00634",
+      "doi": "10.48550/arXiv.2503.00634",
+      "authors": [
+        "Yifei He",
+        "Yang Liu",
+        "Chen Liang",
+        "H. Awadalla"
+      ],
+      "reason": "寄与の小さい活性専門家を圧縮専門家に置換し、MoEの活性パラメータと推論費用を削減する。",
+      "priority": 50
+    },
+    {
+      "title": "MoE2: Optimizing Collaborative Inference for Edge Large Language Models",
+      "source_url": "https://arxiv.org/abs/2501.09410",
+      "year": 2025,
+      "published": "2025-01-16",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities across a wide range of natural language processing tasks. Exploiting the heterogeneous capabilities of edge LLMs is crucial for diverse emerging applications, as it enables greater cost-effectiveness and reduced latency. In this work, we introduce Mixture-of-Edge-Experts (MoE2), a novel collaborative inference framework for edge LLMs. We formulate a joint gating and expert selection problem to optimize inference performance under energy and latency constraints. Unlike conventional MoE problems, LLM expert selection becomes significantly more challenging due to the combinatorial nature and the heterogeneity of edge LLMs across various attributes. To this end, we propose a two-level expert selection mechanism through which we uncover an optimality-preserving property of gating parameters across expert selections. This property enables the decomposition of the training and selection processes, significantly reducing complexity. Furthermore, we leverage the objective’s monotonicity and design a discrete monotonic optimization algorithm for optimal expert selection. We implement edge servers with NVIDIA Jetson AGX Orins and NVIDIA RTX 4090 GPUs, and perform extensive experiments. Our results validate the performance improvements for various LLM models and show that our MoE2 method can achieve optimal trade-offs among different delay and energy budgets, and outperforms baselines under various system resource constraints. We further demonstrate its strong robustness in dynamic, non-stationary environments and its effectiveness in achieving load balancing.",
+      "canonical_id": "arXiv:2501.09410",
+      "arxiv_id": "2501.09410",
+      "doi": "10.1109/TON.2026.3677371",
+      "authors": [
+        "Lyudong Jin",
+        "Yanning Zhang",
+        "Yanhan Li",
+        "Shurong Wang",
+        "H. Yang",
+        "Jian Wu",
+        "Meng Zhang"
+      ],
+      "reason": "異種エッジLLM群の選択を遅延・電力制約下で最適化する協調推論システムである。",
+      "priority": 50
+    },
+    {
+      "title": "Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks",
+      "source_url": "https://arxiv.org/abs/2412.15605",
+      "year": 2024,
+      "published": "2024-12-20",
+      "abstract": "Retrieval-augmented generation (RAG) has gained traction as a powerful approach for enhancing language models by integrating external knowledge sources. However, RAG introduces challenges such as retrieval latency, potential errors in document selection, and increased system complexity. With the advent of large language models (LLMs) featuring significantly extended context windows, this paper proposes an alternative paradigm, cache-augmented generation (CAG) that bypasses real-time retrieval. Our method involves preloading all relevant resources, especially when the documents or knowledge for retrieval are of a limited and manageable size, into the LLM's extended context and caching its runtime parameters. During inference, the model utilizes these preloaded parameters to answer queries without additional retrieval steps. Comparative analyses reveal that CAG eliminates retrieval latency and minimizes retrieval errors while maintaining context relevance. Performance evaluations across multiple benchmarks highlight scenarios where long-context LLMs either outperform or complement traditional RAG pipelines. These findings suggest that, for certain applications, particularly those with a constrained knowledge base, CAG provide a streamlined and efficient alternative to RAG, achieving comparable or superior results with reduced complexity.",
+      "canonical_id": "arXiv:2412.15605",
+      "arxiv_id": "2412.15605",
+      "doi": "10.1145/3701716.3715490",
+      "authors": [
+        "Brian J. Chan",
+        "Chao-Ting Chen",
+        "Jui-Hung Cheng",
+        "Hen-Hsen Huang"
+      ],
+      "reason": "限定知識集合を長文脈へ事前ロードし実行状態をキャッシュして、検索遅延と検索誤りを避ける。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928",
+    "round": "library-import-accept-20260928-001",
+    "axis": "explicit-library-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "Libraryでaccept済みのDiscovery成果を正規Research候補へ取り込む。",
+    "candidate_count": 24,
+    "round_submission_index": 3,
+    "round_submission_count": 5
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-accept-20260928-001",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-accept-20260928-001.json",
+    "receipt": "sha256:66bb7d7842b6e932365464bc2d0543a9441255589c0181700af31415476ff3cb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928",
+    "summary": "Library上のaccept済みDiscovery成果をGitHubの正規Research候補へ反映する。"
+  }
+}

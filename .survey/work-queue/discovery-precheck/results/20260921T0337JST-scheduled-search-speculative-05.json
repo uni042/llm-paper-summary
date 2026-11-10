@@ -1,0 +1,880 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0337JST-scheduled-search-speculative-05",
+  "collector_id": "scheduled-20260921T0330-search-speculative",
+  "run_key": "scheduled-20260921T0330JST",
+  "axis": "speculative decoding serving scheduling memory constrained LLM inference",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20speculative%20decoding%20serving%20scheduling%20memory%20inference&filter=from_publication_date:2025-01-01,to_publication_date:2026-09-21&sort=publication_date:desc",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 2,
+  "next_cursor": "IlsxNzg4NjUyODAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjEyMDQ3MzkyJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "299c5c49a081a09135c43b05a9457da27e903970",
+  "raw_search_result_count": 40,
+  "retrieval_duplicate_filtered_count": 18,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 2,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T18:38:23.693253+00:00",
+  "results": [
+    {
+      "title": "Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache",
+      "source_url": "https://arxiv.org/abs/2609.15030",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15030",
+      "arxiv_id": "2609.15030",
+      "authors": [
+        "Frank Li"
+      ]
+    },
+    {
+      "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+      "source_url": "https://arxiv.org/abs/2609.15636",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15636",
+      "arxiv_id": "2609.15636",
+      "authors": [
+        "Pengfei Xia",
+        "Tuo Hao",
+        "Shengwei Li",
+        "Jinjing Chen",
+        "Shiru Wei",
+        "Wenjun Zou",
+        "Rui Zhang",
+        "Hui Zang"
+      ]
+    },
+    {
+      "title": "When does a scaling result justify a different allocation? A critical review of resource-allocation evidence for AI systems",
+      "source_url": "https://arxiv.org/abs/2609.14500",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2609.14500",
+      "arxiv_id": "2609.14500",
+      "authors": [
+        "Seyed Morteza Emadi"
+      ]
+    },
+    {
+      "title": "Lightning Weave: Improving the Accuracy-Efficiency Frontier of Reasoning Models through Capability Composition",
+      "source_url": "https://arxiv.org/abs/2609.14708",
+      "year": 2026,
+      "published": "2026-09-13",
+      "canonical_id": "arXiv:2609.14708",
+      "arxiv_id": "2609.14708",
+      "authors": [
+        "Yecheng Wu",
+        "Song Han",
+        "Han Cai"
+      ]
+    },
+    {
+      "title": "Training Specialist Models without Reasoning Trajectories for Domain Expert Distillation",
+      "source_url": "https://arxiv.org/abs/2609.13770",
+      "year": 2026,
+      "published": "2026-09-12",
+      "canonical_id": "arXiv:2609.13770",
+      "arxiv_id": "2609.13770",
+      "authors": [
+        "Yilei Tu",
+        "Zihao Li",
+        "Shaoxiong Ji",
+        "Jörg Tiedemann",
+        "Fei Yuan"
+      ]
+    },
+    {
+      "title": "One Size Does Not Fit All: Setting Inference Depth from the Questions a Deployment Actually Asks",
+      "source_url": "https://arxiv.org/abs/2609.14144",
+      "year": 2026,
+      "published": "2026-09-12",
+      "canonical_id": "arXiv:2609.14144",
+      "arxiv_id": "2609.14144",
+      "authors": [
+        "Jerry Kaplan"
+      ]
+    },
+    {
+      "title": "Operationalising cognitive digital twins through a cognitive-function framework and GenAI tools",
+      "source_url": "https://doi.org/10.1080/00207543.2026.2732141",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "DOI:10.1080/00207543.2026.2732141",
+      "doi": "10.1080/00207543.2026.2732141",
+      "authors": [
+        "Yangyang Liu",
+        "Tang Ji",
+        "Xiangyu Guo",
+        "Yinwang Ren",
+        "Xun Xu",
+        "Jan Polzer"
+      ]
+    },
+    {
+      "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+      "source_url": "https://arxiv.org/abs/2609.12550",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12550",
+      "arxiv_id": "2609.12550",
+      "authors": [
+        "Zhenghong Huang",
+        "Hongfan Wu",
+        "Jiheng Zhang"
+      ]
+    },
+    {
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "source_url": "https://arxiv.org/abs/2609.11873",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11873",
+      "arxiv_id": "2609.11873",
+      "authors": [
+        "Yi Duan",
+        "Ying Liu",
+        "Zirui Tang",
+        "Haodong Chen",
+        "Jun Zhou",
+        "Yumou Liu",
+        "Xu BangRui",
+        "Yukai Wu",
+        "Sidi Chen",
+        "Yuhan Zhou",
+        "Haoyu Wang",
+        "Xiaoyou Yu",
+        "Shaokun Han",
+        "Xuzhou Zhu",
+        "Le Zhou",
+        "Bolin Lu",
+        "Wei Zhou",
+        "Jiachen Liu",
+        "Nuozhou Fang",
+        "Jiaxin Tian",
+        "Ruoyu Chen",
+        "Yuxuan Li",
+        "Kai Zuo",
+        "Kaiyan Zhang",
+        "Qianyu Yang",
+        "Zijie Wang",
+        "黎国樑",
+        "Conghui He",
+        "Zhiyuan Liu",
+        "Bowen Zhou",
+        "Zhiyuan Liu",
+        "Zhoufutu Wen",
+        "Jihua Kang",
+        "Xuanhe Zhou",
+        "Fan Wu"
+      ]
+    },
+    {
+      "title": "SpecGuard: Inference-Time Backdoor Detection For Free",
+      "source_url": "https://arxiv.org/abs/2609.11799",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.11799",
+      "arxiv_id": "2609.11799",
+      "authors": [
+        "Rui Wen",
+        "Ahmed Salem",
+        "Andrew Paverd",
+        "Mark Russinovich",
+        "Zheng Li"
+      ]
+    },
+    {
+      "title": "AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.09823",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.09823",
+      "arxiv_id": "2609.09823",
+      "authors": [
+        "Zuxiong Tan",
+        "Will Wei-Jen Wang",
+        "Wei Shao",
+        "Ali Karkehabadi",
+        "Houman Homayoun",
+        "Avesta Sasan"
+      ]
+    },
+    {
+      "title": "$Φ$-Bench: Can Large Language Models Engineer the Infrastructure That Powers Them?",
+      "source_url": "https://arxiv.org/abs/2609.10226",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10226",
+      "arxiv_id": "2609.10226",
+      "authors": [
+        "Leilei Ding",
+        "Shumin Wang",
+        "Yuting Huang",
+        "Fanqi Wan",
+        "Yinmin Zhang",
+        "Qi Han",
+        "Yiming Xu",
+        "Feiyuan Zhang",
+        "Xiaomeng Chu",
+        "Guoliang You",
+        "Wuyang Zhang",
+        "Daxin Jiang",
+        "Yanyong Zhang"
+      ]
+    },
+    {
+      "title": "PACE: Perceived-Latency-Aware Cascading Service Routing and Filler Control for QoE-Efficient Retrieval-Augmented Dialogue Serving",
+      "source_url": "https://arxiv.org/abs/2609.10372",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10372",
+      "arxiv_id": "2609.10372",
+      "authors": [
+        "Lin Huang",
+        "Yujuan Tan",
+        "Weisheng Li",
+        "Lixiang Zeng",
+        "Kun Yang",
+        "Yongzong Wang",
+        "Suihan Xiao"
+      ]
+    },
+    {
+      "title": "From Semantic to Token Communication: The Next Paradigm for Large-Model-Driven 6G Intelligent Connectivity",
+      "source_url": "https://arxiv.org/abs/2609.10714",
+      "year": 2026,
+      "published": "2026-09-09",
+      "canonical_id": "arXiv:2609.10714",
+      "arxiv_id": "2609.10714",
+      "authors": [
+        "Yu Ma",
+        "Zhen Gao",
+        "Li Qiao",
+        "Xiaoyuan Zhang",
+        "Mahdi Boloursaz Mashhadi",
+        "Yin Xu",
+        "Wenjun Xu",
+        "Xiaodong Xu",
+        "Kaibin Huang",
+        "Jiangzhou Wang",
+        "Rahim Tafazolli",
+        "Sheng Chen",
+        "Tony Q. S. Quek",
+        "Ping Zhang"
+      ]
+    },
+    {
+      "title": "EvSpark: Lossless Speculative Decoding for Hybrid DNA Foundation Models",
+      "source_url": "https://doi.org/10.64898/2026.09.02.749017",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "DOI:10.64898/2026.09.02.749017",
+      "doi": "10.64898/2026.09.02.749017",
+      "authors": [
+        "Hao Ding",
+        "Nannan Wu",
+        "Tianyi Qiu"
+      ]
+    },
+    {
+      "title": "TontaubeV1: Streaming Text-to-Speech with Hierarchical Codec Modeling and Bounded Context",
+      "source_url": "https://arxiv.org/abs/2609.08703",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.08703",
+      "arxiv_id": "2609.08703",
+      "authors": [
+        "Fritz Cremer",
+        "Jonathan Cremer"
+      ]
+    },
+    {
+      "title": "OmniEye: Efficient Multimodal Forensic Video Intelligence for Law-Enforcement Body-Worn Cameras",
+      "source_url": "https://arxiv.org/abs/2609.09460",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "arXiv:2609.09460",
+      "arxiv_id": "2609.09460",
+      "authors": [
+        "Mamadou Keïta",
+        "Angela Srbinovska",
+        "Anita Srbinovska",
+        "Nishka Desai",
+        "Isabella Zicari",
+        "P. Kwaku Sanaah-Faried",
+        "Sujith Makam",
+        "Wyatt Auten",
+        "V. Senthil",
+        "Hannah Desnick",
+        "Jonathan Bateman",
+        "Adrián Martín",
+        "Christopher Homan",
+        "John McCluskey",
+        "Ernest Fokoué"
+      ]
+    },
+    {
+      "title": "Line-Coupled Language Model",
+      "source_url": "https://arxiv.org/abs/2609.07129",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07129",
+      "arxiv_id": "2609.07129",
+      "authors": [
+        "Shiyuan Li",
+        "Shaorong Zhang",
+        "Zhaorui Yang",
+        "Qian Zhang",
+        "Greg Ver Steeg",
+        "Bo Li"
+      ]
+    },
+    {
+      "title": "Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context RL Post-Training",
+      "source_url": "https://arxiv.org/abs/2609.07108",
+      "year": 2026,
+      "published": "2026-09-07",
+      "canonical_id": "arXiv:2609.07108",
+      "arxiv_id": "2609.07108",
+      "authors": [
+        "Zili Wang",
+        "Zhaopeng Qiu",
+        "Yuekai Zhang",
+        "Shuang Yu",
+        "Junjie Lai"
+      ]
+    },
+    {
+      "title": "GreenPassport: Request-Level Carbon Accounting for Cross-Border AI Inference",
+      "source_url": "https://arxiv.org/abs/2609.06784",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06784",
+      "arxiv_id": "2609.06784",
+      "authors": [
+        "Rui Lu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.15030",
+      "identity_tokens": [
+        "id:arXiv:2609.15030",
+        "title:validating hybridstate cache recovery for glm53flash with vllm and lmcache",
+        "url:https://arxiv.org/abs/2609.15030"
+      ],
+      "record": {
+        "title": "Validating Hybrid-State Cache Recovery for GLM-5.3-Flash with vLLM and LMCache",
+        "source_url": "https://arxiv.org/abs/2609.15030",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15030",
+        "arxiv_id": "2609.15030",
+        "authors": [
+          "Frank Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15636",
+      "identity_tokens": [
+        "id:arXiv:2609.15636",
+        "title:trillionparameter moe in a box decoupling memory provisioning with highbandwidth flash",
+        "url:https://arxiv.org/abs/2609.15636"
+      ],
+      "record": {
+        "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+        "source_url": "https://arxiv.org/abs/2609.15636",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15636",
+        "arxiv_id": "2609.15636",
+        "authors": [
+          "Pengfei Xia",
+          "Tuo Hao",
+          "Shengwei Li",
+          "Jinjing Chen",
+          "Shiru Wei",
+          "Wenjun Zou",
+          "Rui Zhang",
+          "Hui Zang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14500",
+      "identity_tokens": [
+        "id:arXiv:2609.14500",
+        "title:when does a scaling result justify a different allocation a critical review of resourceallocation evidence for ai systems",
+        "url:https://arxiv.org/abs/2609.14500"
+      ],
+      "record": {
+        "title": "When does a scaling result justify a different allocation? A critical review of resource-allocation evidence for AI systems",
+        "source_url": "https://arxiv.org/abs/2609.14500",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2609.14500",
+        "arxiv_id": "2609.14500",
+        "authors": [
+          "Seyed Morteza Emadi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14708",
+      "identity_tokens": [
+        "id:arXiv:2609.14708",
+        "title:lightning weave improving the accuracyefficiency frontier of reasoning models through capability composition",
+        "url:https://arxiv.org/abs/2609.14708"
+      ],
+      "record": {
+        "title": "Lightning Weave: Improving the Accuracy-Efficiency Frontier of Reasoning Models through Capability Composition",
+        "source_url": "https://arxiv.org/abs/2609.14708",
+        "year": 2026,
+        "published": "2026-09-13",
+        "canonical_id": "arXiv:2609.14708",
+        "arxiv_id": "2609.14708",
+        "authors": [
+          "Yecheng Wu",
+          "Song Han",
+          "Han Cai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13770",
+      "identity_tokens": [
+        "id:arXiv:2609.13770",
+        "title:training specialist models without reasoning trajectories for domain expert distillation",
+        "url:https://arxiv.org/abs/2609.13770"
+      ],
+      "record": {
+        "title": "Training Specialist Models without Reasoning Trajectories for Domain Expert Distillation",
+        "source_url": "https://arxiv.org/abs/2609.13770",
+        "year": 2026,
+        "published": "2026-09-12",
+        "canonical_id": "arXiv:2609.13770",
+        "arxiv_id": "2609.13770",
+        "authors": [
+          "Yilei Tu",
+          "Zihao Li",
+          "Shaoxiong Ji",
+          "Jörg Tiedemann",
+          "Fei Yuan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14144",
+      "identity_tokens": [
+        "id:arXiv:2609.14144",
+        "title:one size does not fit all setting inference depth from the questions a deployment actually asks",
+        "url:https://arxiv.org/abs/2609.14144"
+      ],
+      "record": {
+        "title": "One Size Does Not Fit All: Setting Inference Depth from the Questions a Deployment Actually Asks",
+        "source_url": "https://arxiv.org/abs/2609.14144",
+        "year": 2026,
+        "published": "2026-09-12",
+        "canonical_id": "arXiv:2609.14144",
+        "arxiv_id": "2609.14144",
+        "authors": [
+          "Jerry Kaplan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1080/00207543.2026.2732141",
+      "identity_tokens": [
+        "id:DOI:10.1080/00207543.2026.2732141",
+        "title:operationalising cognitive digital twins through a cognitivefunction framework and genai tools",
+        "url:https://doi.org/10.1080/00207543.2026.2732141"
+      ],
+      "record": {
+        "title": "Operationalising cognitive digital twins through a cognitive-function framework and GenAI tools",
+        "source_url": "https://doi.org/10.1080/00207543.2026.2732141",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "DOI:10.1080/00207543.2026.2732141",
+        "doi": "10.1080/00207543.2026.2732141",
+        "authors": [
+          "Yangyang Liu",
+          "Tang Ji",
+          "Xiangyu Guo",
+          "Yinwang Ren",
+          "Xun Xu",
+          "Jan Polzer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12550",
+      "identity_tokens": [
+        "id:arXiv:2609.12550",
+        "title:qualityconstrained routing over a fixed pool of quantized mixtureofexperts instances",
+        "url:https://arxiv.org/abs/2609.12550"
+      ],
+      "record": {
+        "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+        "source_url": "https://arxiv.org/abs/2609.12550",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12550",
+        "arxiv_id": "2609.12550",
+        "authors": [
+          "Zhenghong Huang",
+          "Hongfan Wu",
+          "Jiheng Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11873",
+      "identity_tokens": [
+        "id:arXiv:2609.11873",
+        "title:the last ai built by humans toward genuine recursive selfimprovement",
+        "url:https://arxiv.org/abs/2609.11873"
+      ],
+      "record": {
+        "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+        "source_url": "https://arxiv.org/abs/2609.11873",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11873",
+        "arxiv_id": "2609.11873",
+        "authors": [
+          "Yi Duan",
+          "Ying Liu",
+          "Zirui Tang",
+          "Haodong Chen",
+          "Jun Zhou",
+          "Yumou Liu",
+          "Xu BangRui",
+          "Yukai Wu",
+          "Sidi Chen",
+          "Yuhan Zhou",
+          "Haoyu Wang",
+          "Xiaoyou Yu",
+          "Shaokun Han",
+          "Xuzhou Zhu",
+          "Le Zhou",
+          "Bolin Lu",
+          "Wei Zhou",
+          "Jiachen Liu",
+          "Nuozhou Fang",
+          "Jiaxin Tian",
+          "Ruoyu Chen",
+          "Yuxuan Li",
+          "Kai Zuo",
+          "Kaiyan Zhang",
+          "Qianyu Yang",
+          "Zijie Wang",
+          "黎国樑",
+          "Conghui He",
+          "Zhiyuan Liu",
+          "Bowen Zhou",
+          "Zhiyuan Liu",
+          "Zhoufutu Wen",
+          "Jihua Kang",
+          "Xuanhe Zhou",
+          "Fan Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11799",
+      "identity_tokens": [
+        "id:arXiv:2609.11799",
+        "title:specguard inferencetime backdoor detection for free",
+        "url:https://arxiv.org/abs/2609.11799"
+      ],
+      "record": {
+        "title": "SpecGuard: Inference-Time Backdoor Detection For Free",
+        "source_url": "https://arxiv.org/abs/2609.11799",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.11799",
+        "arxiv_id": "2609.11799",
+        "authors": [
+          "Rui Wen",
+          "Ahmed Salem",
+          "Andrew Paverd",
+          "Mark Russinovich",
+          "Zheng Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09823",
+      "identity_tokens": [
+        "id:arXiv:2609.09823",
+        "title:amend audited margins enable nonblocking drops in gpupim llm decoding",
+        "url:https://arxiv.org/abs/2609.09823"
+      ],
+      "record": {
+        "title": "AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2609.09823",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.09823",
+        "arxiv_id": "2609.09823",
+        "authors": [
+          "Zuxiong Tan",
+          "Will Wei-Jen Wang",
+          "Wei Shao",
+          "Ali Karkehabadi",
+          "Houman Homayoun",
+          "Avesta Sasan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10226",
+      "identity_tokens": [
+        "id:arXiv:2609.10226",
+        "title:φbench can large language models engineer the infrastructure that powers them",
+        "url:https://arxiv.org/abs/2609.10226"
+      ],
+      "record": {
+        "title": "$Φ$-Bench: Can Large Language Models Engineer the Infrastructure That Powers Them?",
+        "source_url": "https://arxiv.org/abs/2609.10226",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10226",
+        "arxiv_id": "2609.10226",
+        "authors": [
+          "Leilei Ding",
+          "Shumin Wang",
+          "Yuting Huang",
+          "Fanqi Wan",
+          "Yinmin Zhang",
+          "Qi Han",
+          "Yiming Xu",
+          "Feiyuan Zhang",
+          "Xiaomeng Chu",
+          "Guoliang You",
+          "Wuyang Zhang",
+          "Daxin Jiang",
+          "Yanyong Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10372",
+      "identity_tokens": [
+        "id:arXiv:2609.10372",
+        "title:pace perceivedlatencyaware cascading service routing and filler control for qoeefficient retrievalaugmented dialogue serving",
+        "url:https://arxiv.org/abs/2609.10372"
+      ],
+      "record": {
+        "title": "PACE: Perceived-Latency-Aware Cascading Service Routing and Filler Control for QoE-Efficient Retrieval-Augmented Dialogue Serving",
+        "source_url": "https://arxiv.org/abs/2609.10372",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10372",
+        "arxiv_id": "2609.10372",
+        "authors": [
+          "Lin Huang",
+          "Yujuan Tan",
+          "Weisheng Li",
+          "Lixiang Zeng",
+          "Kun Yang",
+          "Yongzong Wang",
+          "Suihan Xiao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10714",
+      "identity_tokens": [
+        "id:arXiv:2609.10714",
+        "title:from semantic to token communication the next paradigm for largemodeldriven 6g intelligent connectivity",
+        "url:https://arxiv.org/abs/2609.10714"
+      ],
+      "record": {
+        "title": "From Semantic to Token Communication: The Next Paradigm for Large-Model-Driven 6G Intelligent Connectivity",
+        "source_url": "https://arxiv.org/abs/2609.10714",
+        "year": 2026,
+        "published": "2026-09-09",
+        "canonical_id": "arXiv:2609.10714",
+        "arxiv_id": "2609.10714",
+        "authors": [
+          "Yu Ma",
+          "Zhen Gao",
+          "Li Qiao",
+          "Xiaoyuan Zhang",
+          "Mahdi Boloursaz Mashhadi",
+          "Yin Xu",
+          "Wenjun Xu",
+          "Xiaodong Xu",
+          "Kaibin Huang",
+          "Jiangzhou Wang",
+          "Rahim Tafazolli",
+          "Sheng Chen",
+          "Tony Q. S. Quek",
+          "Ping Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.64898/2026.09.02.749017",
+      "identity_tokens": [
+        "id:DOI:10.64898/2026.09.02.749017",
+        "title:evspark lossless speculative decoding for hybrid dna foundation models",
+        "url:https://doi.org/10.64898/2026.09.02.749017"
+      ],
+      "record": {
+        "title": "EvSpark: Lossless Speculative Decoding for Hybrid DNA Foundation Models",
+        "source_url": "https://doi.org/10.64898/2026.09.02.749017",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "DOI:10.64898/2026.09.02.749017",
+        "doi": "10.64898/2026.09.02.749017",
+        "authors": [
+          "Hao Ding",
+          "Nannan Wu",
+          "Tianyi Qiu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.08703",
+      "identity_tokens": [
+        "id:arXiv:2609.08703",
+        "title:tontaubev1 streaming texttospeech with hierarchical codec modeling and bounded context",
+        "url:https://arxiv.org/abs/2609.08703"
+      ],
+      "record": {
+        "title": "TontaubeV1: Streaming Text-to-Speech with Hierarchical Codec Modeling and Bounded Context",
+        "source_url": "https://arxiv.org/abs/2609.08703",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.08703",
+        "arxiv_id": "2609.08703",
+        "authors": [
+          "Fritz Cremer",
+          "Jonathan Cremer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09460",
+      "identity_tokens": [
+        "id:arXiv:2609.09460",
+        "title:omnieye efficient multimodal forensic video intelligence for lawenforcement bodyworn cameras",
+        "url:https://arxiv.org/abs/2609.09460"
+      ],
+      "record": {
+        "title": "OmniEye: Efficient Multimodal Forensic Video Intelligence for Law-Enforcement Body-Worn Cameras",
+        "source_url": "https://arxiv.org/abs/2609.09460",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "arXiv:2609.09460",
+        "arxiv_id": "2609.09460",
+        "authors": [
+          "Mamadou Keïta",
+          "Angela Srbinovska",
+          "Anita Srbinovska",
+          "Nishka Desai",
+          "Isabella Zicari",
+          "P. Kwaku Sanaah-Faried",
+          "Sujith Makam",
+          "Wyatt Auten",
+          "V. Senthil",
+          "Hannah Desnick",
+          "Jonathan Bateman",
+          "Adrián Martín",
+          "Christopher Homan",
+          "John McCluskey",
+          "Ernest Fokoué"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07129",
+      "identity_tokens": [
+        "id:arXiv:2609.07129",
+        "title:linecoupled language model",
+        "url:https://arxiv.org/abs/2609.07129"
+      ],
+      "record": {
+        "title": "Line-Coupled Language Model",
+        "source_url": "https://arxiv.org/abs/2609.07129",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07129",
+        "arxiv_id": "2609.07129",
+        "authors": [
+          "Shiyuan Li",
+          "Shaorong Zhang",
+          "Zhaorui Yang",
+          "Qian Zhang",
+          "Greg Ver Steeg",
+          "Bo Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07108",
+      "identity_tokens": [
+        "id:arXiv:2609.07108",
+        "title:online draft cotraining for speculative decoding in largescale longcontext rl posttraining",
+        "url:https://arxiv.org/abs/2609.07108"
+      ],
+      "record": {
+        "title": "Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context RL Post-Training",
+        "source_url": "https://arxiv.org/abs/2609.07108",
+        "year": 2026,
+        "published": "2026-09-07",
+        "canonical_id": "arXiv:2609.07108",
+        "arxiv_id": "2609.07108",
+        "authors": [
+          "Zili Wang",
+          "Zhaopeng Qiu",
+          "Yuekai Zhang",
+          "Shuang Yu",
+          "Junjie Lai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06784",
+      "identity_tokens": [
+        "id:arXiv:2609.06784",
+        "title:greenpassport requestlevel carbon accounting for crossborder ai inference",
+        "url:https://arxiv.org/abs/2609.06784"
+      ],
+      "record": {
+        "title": "GreenPassport: Request-Level Carbon Accounting for Cross-Border AI Inference",
+        "source_url": "https://arxiv.org/abs/2609.06784",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06784",
+        "arxiv_id": "2609.06784",
+        "authors": [
+          "Rui Lu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:2792be59828d8a25fcf28fe81745e7cb15ee90f951d0440b1b01804dc1002ced",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

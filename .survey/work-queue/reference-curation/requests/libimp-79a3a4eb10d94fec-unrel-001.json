@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-79a3a4eb10d94fec-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2410.18252",
+  "reason": "Asynchronous RLHF accelerates training runs, not deployed model inference. Primary abstract: The dominant paradigm for RLHF is online and on-policy RL: synchronously generating from the large language model (LLM) policy, labelling with a reward model, and learning using feedback on the LLM's own outputs. While performant, this paradigm is computationally inefficient. Inspired by classical deep RL literature, we propose separating generation and learning in RLHF. This enables asynchronous generation of new samples while simultaneously training on old samples, leading ",
+  "title": "Asynchronous RLHF: Faster and More Efficient Off-Policy RL for Language Models",
+  "identity_tokens": [
+    "arXiv:2410.18252"
+  ],
+  "linked_from": [
+    "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79a3a4eb10d9",
+  "source_precheck_request_id": null
+}

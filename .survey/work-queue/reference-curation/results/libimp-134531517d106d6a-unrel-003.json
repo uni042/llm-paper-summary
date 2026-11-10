@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-134531517d106d6a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.16670",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.16670",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2505.16670",
+      "arXiv:2505.16670"
+    ],
+    "reason": "The abstract frames bit-flip methods as an inference-cost attack against LLMs; it studies an attack/threat rather than a system technique that improves inference efficiency.",
+    "first_checked_at": "2026-10-12T23:55:55+00:00",
+    "last_checked_at": "2026-10-12T23:55:55+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "BitHydra: Towards Bit-flip Inference Cost Attack against Large Language Models"
+  },
+  "processed_at": "2026-10-12T23:55:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-134531517d10",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

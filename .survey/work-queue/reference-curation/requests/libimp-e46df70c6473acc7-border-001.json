@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e46df70c6473acc7-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.539",
+  "reason": "査読済み全文の§3.1はBERT等の識別型Transformerによる多クラス分類を対象と明記し、§4.1–4.2の実験はGLUEの7分類課題、BERT/ALBERT/DeBERTaを使用する。複数の早期終了分岐に独立LoRAを付け、優位な後段分岐から蒸留し、GPU上で主幹GEMMとLoRA用SGMVをバッチ実行するため、推論時の遅延・メモリ効率への直接寄与はある。一方、自己回帰の生成、KVキャッシュ、LLMサービング負荷での有効性は未評価で、原著§7も生成型LLMへの拡張を将来課題と明記。現行の生成型LLM推論基盤サーベイへの採録は境界的としてborderline。",
+  "title": "LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters",
+  "identity_tokens": [
+    "doi:10.18653/v1/2024.findings-emnlp.539",
+    "acl:2024.findings-emnlp.539"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e46df70c6473",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

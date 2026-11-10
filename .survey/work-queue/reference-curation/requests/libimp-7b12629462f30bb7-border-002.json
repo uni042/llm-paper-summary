@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-7b12629462f30bb7-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1145/3240765.3240801",
+  "reason": "FPGA向けDNN acceleratorを自動生成し、fine-grained layer pipeline、column-based cache、memory bandwidth/resource-aware design-space explorationでlatencyとBRAMを削減する。推論acceleratorとして関連するが、評価対象はAlexNet/ZF/VGG16/YOLOでLLM/Transformer推論専用ではないためborderline。",
+  "title": "DNNBuilder: an Automated Tool for Building High-Performance DNN Hardware Accelerators for FPGAs",
+  "identity_tokens": [
+    "DOI:10.1145/3240765.3240801"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7b12629462f3",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

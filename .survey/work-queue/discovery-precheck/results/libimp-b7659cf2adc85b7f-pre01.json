@@ -1,0 +1,177 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b7659cf2adc85b7f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b7659cf2adc8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2512.18706"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9bb041b420efaa9e490935ded698144fa9169243",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T14:47:35.564612+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2512.18706",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System",
+      "source_url": "https://arxiv.org/abs/2512.18706",
+      "year": 2025,
+      "published": "2025-12-21",
+      "venue": "arXiv.org",
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present X-Talk, an open-source framework that champions a decoupled, modular design for LLM-driven speech-to-speech (S2S) systems. While the dominant trend favors end-to-end (E2E) modeling to optimize information flow, these\"omni-models\"often struggle to balance the competing objectives of complex speech tasks within a single network. X-Talk challenges this paradigm by demonstrating that a systematically optimized cascaded pipeline can achieve sub-second latency without sacrificing modular flexibility. Our framework seamlessly integrates specialized front-end components (e.g., VAD, speech enhancement) and diverse understanding models (e.g., ASR, emotion, and environmental sound analysis) with LLM capabilities like retrieval-augmented generation (RAG) and tool use. By revitalizing the cascaded approach, X-Talk highlights the underestimated potential of modular S2S systems and provides a robust foundation for future research and applications.",
+      "identifiers": [
+        "SemanticScholar:dbd1c05bd3f7f43b1e097ab49c582fbd55442983"
+      ],
+      "semantic_scholar_id": "dbd1c05bd3f7f43b1e097ab49c582fbd55442983",
+      "canonical_id": "arXiv:2512.18706",
+      "arxiv_id": "2512.18706",
+      "doi": "10.48550/arXiv.2512.18706",
+      "authors": [
+        "Zhan-Xun Liu",
+        "Yi-Fan Duan",
+        "Mengmeng Wang",
+        "Pengchao Feng",
+        "Hao-Tian Zhang",
+        "Xiaoyu Xing",
+        "Y. Shan",
+        "Haina Zhu",
+        "Yu-Hang Dai",
+        "Chao-Chao Lu",
+        "Xi-Peng Qiu",
+        "Lei Xie",
+        "Lan Wang",
+        "Nan Yan",
+        "Zi-Long Zheng",
+        "Ziyang Ma",
+        "Kai Yu",
+        "Xie Chen"
+      ],
+      "priority": 118,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 118,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 293,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.18706",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.18706",
+        "id:SemanticScholar:dbd1c05bd3f7f43b1e097ab49c582fbd55442983",
+        "id:arXiv:2512.18706",
+        "title:xtalk on the underestimated potential of modular speechtospeech dialogue system",
+        "url:https://arxiv.org/abs/2512.18706"
+      ],
+      "record": {
+        "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System",
+        "source_url": "https://arxiv.org/abs/2512.18706",
+        "year": 2025,
+        "published": "2025-12-21",
+        "venue": "arXiv.org",
+        "citation_count": 18,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present X-Talk, an open-source framework that champions a decoupled, modular design for LLM-driven speech-to-speech (S2S) systems. While the dominant trend favors end-to-end (E2E) modeling to optimize information flow, these\"omni-models\"often struggle to balance the competing objectives of complex speech tasks within a single network. X-Talk challenges this paradigm by demonstrating that a systematically optimized cascaded pipeline can achieve sub-second latency without sacrificing modular flexibility. Our framework seamlessly integrates specialized front-end components (e.g., VAD, speech enhancement) and diverse understanding models (e.g., ASR, emotion, and environmental sound analysis) with LLM capabilities like retrieval-augmented generation (RAG) and tool use. By revitalizing the cascaded approach, X-Talk highlights the underestimated potential of modular S2S systems and provides a robust foundation for future research and applications.",
+        "identifiers": [
+          "SemanticScholar:dbd1c05bd3f7f43b1e097ab49c582fbd55442983"
+        ],
+        "semantic_scholar_id": "dbd1c05bd3f7f43b1e097ab49c582fbd55442983",
+        "canonical_id": "arXiv:2512.18706",
+        "arxiv_id": "2512.18706",
+        "doi": "10.48550/arXiv.2512.18706",
+        "authors": [
+          "Zhan-Xun Liu",
+          "Yi-Fan Duan",
+          "Mengmeng Wang",
+          "Pengchao Feng",
+          "Hao-Tian Zhang",
+          "Xiaoyu Xing",
+          "Y. Shan",
+          "Haina Zhu",
+          "Yu-Hang Dai",
+          "Chao-Chao Lu",
+          "Xi-Peng Qiu",
+          "Lei Xie",
+          "Lan Wang",
+          "Nan Yan",
+          "Zi-Long Zheng",
+          "Ziyang Ma",
+          "Kai Yu",
+          "Xie Chen"
+        ],
+        "priority": 118,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 18,
+          "citation_count": 18,
+          "total": 118,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 293,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:bfb4b21c1808a52347c9e04a62fdcc838cc7e5db2ee391e10ba9a16c3467456e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-93b4de8607c348da-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.16952",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.16952",
+    "identity_tokens": [
+      "arXiv:2403.16952"
+    ],
+    "reason": "事前学習データの混合比と性能の関係を予測し、学習データ配分を最適化するtraining研究。1Bモデル100B token学習等が主要評価で、推論systemsへの最終適用がない。",
+    "first_checked_at": "2026-10-07T05:57:32+00:00",
+    "last_checked_at": "2026-10-07T05:57:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "title": "Data Mixing Laws: Optimizing Data Mixtures by Predicting Language Modeling Performance"
+  },
+  "processed_at": "2026-10-07T05:57:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-93b4de8607c3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

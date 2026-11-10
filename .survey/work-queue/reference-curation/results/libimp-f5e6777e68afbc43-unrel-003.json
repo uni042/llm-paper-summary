@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f5e6777e68afbc43-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.35440",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.35440",
+    "identity_tokens": [
+      "arXiv:2609.35440"
+    ],
+    "reason": "shared-output local learningによる言語モデルのpretraining方法で、serving効率の証拠がない。",
+    "first_checked_at": "2026-10-05T05:01:49+00:00",
+    "last_checked_at": "2026-10-05T05:01:49+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "SOLO: Pretraining Billion-Parameter Language Models with Shared-Output Local Learning"
+  },
+  "processed_at": "2026-10-05T05:01:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5e6777e68af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

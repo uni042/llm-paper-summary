@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-190b413bbec4643a-unrel-010",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2110.14895",
+  "reason": "EdgePipe is an inference system for large deep neural networks split across heterogeneous edge devices, but its empirical evaluation focuses on image-classification/computer-vision models including ViT-Base, ViT-Large and ViT-Huge, with throughput measured in images per second. The primary paper does not evaluate LLM or language-model serving, KV state, or text generation. Its generic inference partitioning is outside this LLM-inference candidate scope.",
+  "title": "Pipeline Parallelism for Inference on Heterogeneous Edge Computing",
+  "identity_tokens": [
+    "arXiv:2110.14895"
+  ],
+  "linked_from": [
+    "workers/discovery-02/ready/20260927-u-wave10/manifest.json#candidate[2]"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-190b413bbec4",
+  "source_precheck_request_id": null
+}

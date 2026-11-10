@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2402bfdfc8d2abe0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.14476",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.14476",
+    "identity_tokens": [
+      "arXiv:2503.14476"
+    ],
+    "reason": "Qwen2.5-32Bを用いた大規模強化学習の再現性とreasoning性能向上を目的に、Decoupled ClipやDynamic Sampling等のRL学習技法を提案するtraining研究。AIME 2024精度と学習安定性が主評価で、LLM推論runtime・serving最適化ではない。",
+    "first_checked_at": "2026-10-05T01:59:06+00:00",
+    "last_checked_at": "2026-10-05T16:24:13+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md",
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+      "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md"
+    ],
+    "title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale"
+  },
+  "processed_at": "2026-10-05T16:24:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2402bfdfc8d2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

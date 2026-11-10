@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-513a00817feed331-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.10937",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.10937",
+    "identity_tokens": [
+      "arXiv:2609.10937"
+    ],
+    "reason": "Agentic search and automated optimization of GPU kernels are powerful tools for large language model inference. Their effectiveness, however, depends not on the sophistication of the search itself, but on the clarity of the optimization problem being solved. We provide an application-first approach that drives a hierarchical code generation tool from operator specifi cation down to GPU instructions, and show that a clearly defined computational model makes the optimization problem tractable.",
+    "first_checked_at": "2026-10-05T06:54:05+00:00",
+    "last_checked_at": "2026-10-05T06:54:05+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "The Art of Closed-Formula Defaults: Search-Free Code Generation for Tensor Operators"
+  },
+  "processed_at": "2026-10-05T06:54:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-513a00817fee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

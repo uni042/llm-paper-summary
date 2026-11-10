@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-0148-scheduled-chat-45/r01",
+  "reference_main_sha": "f7f76531a3902cd38f69bf92c35172314f65c165",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.patcog.2026.113599",
+      "identity_tokens": [
+        "DOI:10.1016/j.patcog.2026.113599"
+      ],
+      "title": "Structure prediction and opportunity-cost scheduler for LLM inference",
+      "reason": "出版社要旨で、SPOSが応答構造を軽量予測し、構造別の要求グループと待機時間・予測出力長・機会費用を組み合わせてvLLMの実行順を調整すると確認。FCFSのhead-of-line blockingを抑え、平均JCTを最大22.27%削減する推論サービングの直接的なスケジューリング研究。",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0031320326005650",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:56:36+09:00",
+      "last_checked_at": "2026-10-31T01:56:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 7,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.486",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.486"
+      ],
+      "title": "Faster Speculative Decoding via Effective Draft Decoder with Pruned Candidate Tree",
+      "reason": "ACL公式要旨で、EDDは対象LLMの符号化結果をsoft promptとしてドラフトへ渡しKL損失で分布を合わせ、PCTはドラフト信頼度から木ノードの期待時間利得を見積もり不要枝を除くと確認。投機的復号の受理効率と推論遅延を直接改善する方式。",
+      "source_url": "https://aclanthology.org/2025.acl-long.486/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:56:36+09:00",
+      "last_checked_at": "2026-10-31T01:56:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 27,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.32604/cmc.2026.079522",
+      "identity_tokens": [
+        "DOI:10.32604/cmc.2026.079522"
+      ],
+      "title": "AI Model Compression Methods: A Distribution-Aware Residual Entropy Quantization",
+      "reason": "出版社一次要旨で、DARE-Qはチャネル別対称重み量子化のスケール選択にL2近似誤差と残差エントロピーの正則化を組み合わせると確認。OPT-125M/350MのWikiText-2 PPLで検証し、再学習・較正データを不要とする。大規模サービング実測はないが、LLM重み圧縮への直接的なアルゴリズム貢献がある。",
+      "source_url": "https://www.techscience.com/cmc/v88n2/67618",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:56:36+09:00",
+      "last_checked_at": "2026-10-31T01:56:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 35,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1386",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.1386"
+      ],
+      "title": "Automated Fine-Grained Mixture-of-Experts Quantization",
+      "reason": "ACL Findings公式要旨で、MoE expertのチャネル別外れ値とFisher情報・条件数を用い、down-projectionの精度感度が高いことに応じてビット幅を自動配分する量子化方式と確認。Mixtral-8x7Bの圧縮・言語理解評価があり、MoE推論の重み容量削減に直接関連する。",
+      "source_url": "https://aclanthology.org/2025.findings-acl.1386/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:56:36+09:00",
+      "last_checked_at": "2026-10-31T01:56:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 129,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.24174",
+      "identity_tokens": [
+        "arXiv:2602.24174"
+      ],
+      "title": "Task-Centric Acceleration of Small-Language Models",
+      "reason": "arXiv一次要旨で、TASC-ftは出力n-gramを語彙へ追加する微調整、TASC-specはタスク出力コーパスと文脈のn-gramを使う訓練不要のドラフト生成を提案すると確認。後者は追加ドラフトモデル学習なしで投機的復号を実施し、低変動出力タスクの推論効率を改善するため直接関連する。",
+      "source_url": "https://arxiv.org/abs/2602.24174",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:56:36+09:00",
+      "last_checked_at": "2026-10-31T01:56:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 134,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.15805",
+      "identity_tokens": [
+        "arXiv:2606.15805"
+      ],
+      "title": "Mean-Field Parallel Decoding for Discrete Diffusion Language Models",
+      "reason": "arXiv一次要旨で、離散拡散言語モデルの複数位置同時確定時の競合を、予測分布から得た位置間相互作用と平均場の固定点更新で抑える訓練不要デコーダと確認。推論パスごとの並列確定を増やし品質・遅延の交換条件を改善する復号アルゴリズムである。",
+      "source_url": "https://arxiv.org/abs/2606.15805",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:56:36+09:00",
+      "last_checked_at": "2026-10-31T01:56:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 135,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20112",
+      "identity_tokens": [
+        "arXiv:2505.20112"
+      ],
+      "title": "ERC-SVD: Error-Controlled SVD for Large Language Model Compression",
+      "reason": "arXiv最新版の一次要旨で、現行題名はworklistのResSVDからERC-SVDへ変わっていることを確認。同じarXiv identityの論文で、低ランクSVDの切捨て残差を補償し、圧縮する層を後段へ限定して誤差伝播を抑える後学習LLM圧縮法を提案する。重み容量と性能維持の直接的な技術研究。",
+      "source_url": "https://arxiv.org/abs/2505.20112",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:56:36+09:00",
+      "last_checked_at": "2026-10-31T01:56:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 136,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.04226",
+      "identity_tokens": [
+        "arXiv:2509.04226"
+      ],
+      "title": "LISM: Long-range Integrative State space Models via Input-Latent State Interactions",
+      "reason": "arXiv一次要旨で、LISMは安定再帰で記憶が指数減衰するSSMの問題に対し、一時的な不安定更新と入力・潜在状態の相互作用で長期記憶を改善すると確認。言語モデリング等の品質・安定性を評価するが、LLMサービングの実測遅延・メモリ削減や推論ランタイム最適化を直接示さず、推論システム収録には境界的。",
+      "source_url": "https://arxiv.org/abs/2509.04226",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:56:36+09:00",
+      "last_checked_at": "2026-10-31T01:56:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 212,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02110",
+      "identity_tokens": [
+        "arXiv:2602.02110"
+      ],
+      "title": "An Empirical Study of World Model Quantization",
+      "reason": "arXiv一次要旨の対象はDINO-WM世界モデルの視覚的計画と行動予測であり、重み・活性量子化の低ビット時の計画成功率を分析する。LLMの生成推論、サービング、KVメモリ、MoE推論等への適用・測定は示されず、今回のLLM推論システム系統からは対象外。",
+      "source_url": "https://arxiv.org/abs/2602.02110",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:56:36+09:00",
+      "last_checked_at": "2026-10-31T01:56:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 215,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.21627",
+      "identity_tokens": [
+        "arXiv:2512.21627"
+      ],
+      "title": "AstraNav-Memory: Contexts Compression for Long Memory",
+      "reason": "arXiv一次要旨で、Qwen2.5-VLを用いた生涯ナビゲーション向けにDINOv3特徴とPixelUnshuffle/Convで画像履歴を圧縮し、16倍設定では画像約30トークンへ縮小すると確認。視覚文脈圧縮は関連するが、主評価はGOAT-Bench/HM3D-OVONの移動性能であり、汎用VLMサービングの速度・メモリ最適化を直接検証していないため境界的。",
+      "source_url": "https://arxiv.org/abs/2512.21627",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:56:36+09:00",
+      "last_checked_at": "2026-10-31T01:56:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 250,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

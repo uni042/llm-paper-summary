@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e4d71940aba7f5f1-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.10191",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.10191",
+    "identity_tokens": [
+      "arXiv:2503.10191"
+    ],
+    "reason": "The primary abstract addresses adversarial robustness of Vision Transformers; its low-cost token tuning is a robustness method, not an LLM inference or serving optimization.",
+    "first_checked_at": "2026-10-10T07:24:14+00:00",
+    "last_checked_at": "2026-10-10T07:24:14+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+    ],
+    "title": "Robustness Tokens: Towards Adversarial Robustness of Transformers"
+  },
+  "processed_at": "2026-10-10T07:24:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e4d71940aba7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

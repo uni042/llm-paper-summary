@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eefd7cd458107e8d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.34185",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.34185",
+    "identity_tokens": [
+      "arXiv:2609.34185"
+    ],
+    "reason": "arXiv著者要旨はE8格子量子化と条件付き確率モデルを用い、任意ビット率で重みをエントロピー符号化し、タイル単位で復号可能なEntroPackを提案。推論時の重み格納量と復号費用に関係するが、要旨の主対象は一般の大規模ニューラルネットで、LLMサービング固有の実機効果が中心とは確認できないためborderline。",
+    "first_checked_at": "2026-10-30T07:20:40+00:00",
+    "last_checked_at": "2026-10-30T07:20:40+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EntroPack: Fast and Accurate Entropy-Coded Weight Compression at Arbitrary Bitrates"
+  },
+  "processed_at": "2026-10-30T07:20:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eefd7cd45810",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

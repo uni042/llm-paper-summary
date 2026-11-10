@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-e1881183879733d0f0a4eb0e-r4",
+  "kind": "research",
+  "attempt_id": "attempt-e1881183879733d0f0a4eb0e",
+  "job_id": "job-research-6a21e987e314dd70",
+  "record_bank": "g",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:2ba151183abb32bd5a9deaf3852b49d895c69df7b36cc0b69433f48572ef3bd7",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "209cf8bef0dc9fe9b863ffed6771f9c472f528e8"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "83491fa06cf07254284b63b016fb7a3e6cabb09f"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "211f5f4c8ae71a2bee2e1bf552118b2f72f63a39"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "eae6339e01077000432b763265f671160961db67"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "11ce8e37873df39d3cd153848fdd8d125a4bf777"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2",
+    "手法構成要素#6 の段落数 1 < 2",
+    "手法構成要素#7 の段落数 1 < 2",
+    "手法構成要素#8 の段落数 1 < 2",
+    "手法構成要素#9 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-22T10:39:22+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md",
+    "status": "FAIL",
+    "file_bytes": 26704,
+    "prose_chars": 7625,
+    "paragraphs": 23,
+    "method_paragraphs": 9,
+    "method_components": 9,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7665944706332016,
+    "japanese_chars": 6017,
+    "latin_chars": 1832,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2",
+      "手法構成要素#6 の段落数 1 < 2",
+      "手法構成要素#7 の段落数 1 < 2",
+      "手法構成要素#8 の段落数 1 < 2",
+      "手法構成要素#9 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 76.7% < 警告基準 80.0%"
+    ]
+  }
+}

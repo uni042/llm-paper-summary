@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-146aeafe0fc664b4-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.21020",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.21020",
+    "identity_tokens": [
+      "arXiv:2504.21020"
+    ],
+    "reason": "CECSは文脈重要度重み付け、多段contrastive search、適応temperatureを用いて長文生成の一貫性・多様性・関連性を改善する。要旨で比較するのはBLEU、ROUGE、意味類似度などの出力品質であり、推論コスト、生成速度、GPU実装の改善は示されない。復号の品質研究であって推論システム効率化の対象外。",
+    "first_checked_at": "2026-10-30T20:07:24+00:00",
+    "last_checked_at": "2026-10-30T20:07:24+00:00",
+    "linked_from": [],
+    "title": "Context-Enhanced Contrastive Search for Improved LLM Text Generation"
+  },
+  "processed_at": "2026-10-30T20:07:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-146aeafe0fc6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

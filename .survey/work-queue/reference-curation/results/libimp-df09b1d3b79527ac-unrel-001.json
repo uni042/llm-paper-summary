@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-df09b1d3b79527ac-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3115/1073083.1073135",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3115/1073083.1073135",
+    "identity_tokens": [
+      "DOI:10.3115/1073083.1073135"
+    ],
+    "reason": "機械翻訳出力を人手評価に近い形で自動採点するBLEU評価指標が主題で、LLM推論ランタイム、メモリ、カーネル、サービング最適化を提案しない。",
+    "first_checked_at": "2026-10-04T14:28:32+00:00",
+    "last_checked_at": "2026-10-04T14:28:32+00:00",
+    "linked_from": [],
+    "title": "Bleu: a Method for Automatic Evaluation of Machine Translation"
+  },
+  "processed_at": "2026-10-04T14:28:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df09b1d3b795",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

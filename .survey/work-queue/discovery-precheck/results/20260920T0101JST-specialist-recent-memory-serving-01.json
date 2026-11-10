@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260920T0101JST-specialist-recent-memory-serving-01",
+  "run_key": "2026-09-20T01:01:07+09:00",
+  "axis": "recent heterogeneous KV memory pooling and robust KV reservation",
+  "snapshot_source_commit": "75aa06dfbe73f418b7bba378e0d506a18e504bea",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unseen_result_count": 0,
+  "results": [],
+  "allowed_records": [],
+  "receipt": "sha256:8c3ec8664a44ae30fe1718015f5404f763a4e8f5153f9cf8589eb2a1fdf4108f",
+  "next_action": "Evaluate only records in results[]. Do not re-add filtered records. When writing submit_discovery_round, include discovery_precheck.result_path and this receipt."
+}

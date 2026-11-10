@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-19d54c5304d94af9-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2505.13000",
+  "reason": "一次論文の手法§3と評価§4を確認。自己教師あり音声特徴と波形特徴を別経路で符号化し、12.5/25Hzの低フレーム率で音声生成モデルのトークン列を短縮する。音声生成の推論効率への接続はあるが、主要な技術貢献・実験はニューラル音声符号化の音質・意味保持・音声合成であり、汎用LLM推論基盤のKVキャッシュ、GPU実行、サービング改善ではない。隣接領域としてborderlineにする。",
+  "title": "DualCodec: A Low-Frame-Rate, Semantically-Enhanced Neural Audio Codec for Speech Generation",
+  "identity_tokens": [
+    "arxiv:2505.13000"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-19d54c5304d9",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

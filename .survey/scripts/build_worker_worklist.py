@@ -1,0 +1,756 @@
+#!/usr/bin/env python3
+"""Build dedicated worklists for scheduled-chat-00, scheduled-chat-30, and scheduled-chat-45.
+
+Research/Audit keeps the existing 200-item per-worker surface. Discovery review
+uses a larger 500-item per-worker surface so full-text suitability screening does
+not starve for candidates. The worklists are rebuildable selection indexes only.
+Canonical job/claim state, paper files, and reference relevance ledgers remain
+authoritative. The three worker pages are deterministically disjoint whenever enough
+eligible rows exist for the requested per-lane limits. The status-dashboard publisher
+materializes all three dedicated worker surfaces, including :45.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import tempfile
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+import candidate_priority
+import discovery_relevance_prefilter
+import citation_graph
+import claim_state
+import paper_identity
+import reference_pool
+import forward_citation_state
+import forward_lineage_citation
+import research_job_reconciliation
+
+DEFAULT_RESEARCH_LIMIT = 200
+DEFAULT_DISCOVERY_LIMIT = 500
+DEFAULT_BORDERLINE_REFILL_TARGET = 600
+DEFAULT_BORDERLINE_REPEAT_PENALTY = 100_000_000
+WORKERS = ("00", "30", "45")
+
+
+def _now() -> str:
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+
+def _read(path: Path, default: Any = None) -> Any:
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, UnicodeError):
+        return default
+
+
+def _write_text(path: Path, text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return
+    with tempfile.NamedTemporaryFile(
+        "w", encoding="utf-8", dir=path.parent, delete=False
+    ) as tmp:
+        tmp.write(text)
+        temp = Path(tmp.name)
+    temp.replace(path)
+
+
+def _jobs(root: Path) -> list[dict[str, Any]]:
+    folder = root / ".survey/work-queue/jobs"
+    rows: list[dict[str, Any]] = []
+    if not folder.is_dir():
+        return rows
+    for path in folder.glob("*.json"):
+        value = _read(path, {})
+        if not isinstance(value, dict):
+            continue
+        row = dict(value)
+        row.setdefault("job_id", path.stem)
+        rows.append(row)
+    return rows
+
+
+def _published_rank(row: dict[str, Any]) -> int:
+    text = str(row.get("published") or "").strip()
+    digits = "".join(ch for ch in text if ch.isdigit())
+    if len(digits) >= 8:
+        return int(digits[:8])
+    if len(digits) >= 6:
+        return int(digits[:6] + "00")
+    year = row.get("year")
+    try:
+        return int(year) * 10000
+    except (TypeError, ValueError):
+        return 0
+
+
+def _priority_sort_key(row: dict[str, Any]) -> tuple[Any, ...]:
+    return (
+        -int(row.get("priority") or 0),
+        -candidate_priority.citation_count(row),
+        -_published_rank(row),
+        str(row.get("canonical_id") or "").casefold(),
+    )
+
+
+def _score_row(
+    row: dict[str, Any],
+    *,
+    root: Path,
+    cache: dict[str, Any],
+    config: dict[str, Any],
+) -> dict[str, Any]:
+    enriched = candidate_priority.merge_cached_metadata(row, cache)
+    return candidate_priority.apply_priority(enriched, repo_root=root, config=config)
+
+
+def _borderline_policy(config: dict[str, Any]) -> tuple[int, int]:
+    raw = config.get("borderline_reconsideration")
+    if not isinstance(raw, dict):
+        raw = {}
+    try:
+        refill_target = max(int(raw.get("refill_target", DEFAULT_BORDERLINE_REFILL_TARGET)), 0)
+    except (TypeError, ValueError):
+        refill_target = DEFAULT_BORDERLINE_REFILL_TARGET
+    try:
+        repeat_penalty = max(int(raw.get("repeat_penalty", DEFAULT_BORDERLINE_REPEAT_PENALTY)), 0)
+    except (TypeError, ValueError):
+        repeat_penalty = DEFAULT_BORDERLINE_REPEAT_PENALTY
+    return refill_target, repeat_penalty
+
+
+def _source_url_from_canonical(canonical_id: Any) -> str | None:
+    canonical = str(canonical_id or "").strip()
+    if canonical.startswith("arXiv:"):
+        return "https://arxiv.org/abs/" + canonical.split(":", 1)[1]
+    if canonical.startswith("DOI:"):
+        return "https://doi.org/" + canonical.split(":", 1)[1]
+    if canonical.startswith("OpenReview:"):
+        return "https://openreview.net/forum?id=" + canonical.split(":", 1)[1]
+    return None
+
+
+def _borderline_reconsideration_candidates(
+    root: Path,
+    *,
+    cache: dict[str, Any],
+    config: dict[str, Any],
+) -> list[dict[str, Any]]:
+    ledger = _read(root / reference_pool.DEFAULT_BORDERLINE_LEDGER, {})
+    records = ledger.get("records") if isinstance(ledger, dict) else None
+    if not isinstance(records, dict):
+        return []
+
+    represented = {
+        identifier
+        for paper in citation_graph.load_records(root)
+        for identifier in paper.identifiers
+    }
+    unrelated = reference_pool._load_ledger_tokens(
+        root / reference_pool.DEFAULT_UNRELATED_LEDGER,
+        label="unrelated-paper",
+    )
+    _refill_target, repeat_penalty = _borderline_policy(config)
+    rows: list[dict[str, Any]] = []
+    for key, raw in records.items():
+        if not isinstance(raw, dict):
+            continue
+        row = dict(raw)
+        row.setdefault("canonical_id", str(key))
+        tokens = _worklist_identity_tokens(row)
+        if tokens and (tokens.intersection(represented) or tokens.intersection(unrelated)):
+            continue
+        if not row.get("source_url"):
+            source_url = _source_url_from_canonical(row.get("canonical_id"))
+            if source_url:
+                row["source_url"] = source_url
+        scored = _score_row(row, root=root, cache=cache, config=config)
+        try:
+            recheck_count = max(int(row.get("borderline_recheck_count") or 0), 0)
+        except (TypeError, ValueError):
+            recheck_count = 0
+        base_priority = int(scored.get("priority") or 0)
+        penalty = recheck_count * repeat_penalty
+        scored["priority"] = base_priority - penalty
+        breakdown = dict(scored.get("priority_breakdown") or {})
+        breakdown["base_total"] = base_priority
+        breakdown["borderline_recheck_count"] = recheck_count
+        breakdown["borderline_recheck_penalty"] = -penalty
+        breakdown["total"] = scored["priority"]
+        scored["priority_breakdown"] = breakdown
+        scored["source_kind"] = "borderline_reconsideration"
+        scored["origin"] = "borderline_reconsideration"
+        scored["borderline_recheck_count"] = recheck_count
+        rows.append(scored)
+
+    rows.sort(key=_priority_sort_key)
+    return _dedupe_rows_by_identity(rows)
+
+
+def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int, list[dict[str, Any]]]:
+    jobs = _jobs(root)
+    claims = claim_state.current_claims(root)
+    paper_index = research_job_reconciliation.build_paper_index(root)
+    cache = candidate_priority.load_cache(root)
+    config = candidate_priority.load_config(root)
+    # Relevance records are authoritative even if an older Research job remains
+    # ready. Keep borderline exclusions reversible without mutating that job.
+    relevance_excluded = (
+        reference_pool._load_ledger_tokens(
+            root / reference_pool.DEFAULT_UNRELATED_LEDGER, label="unrelated-paper"
+        )
+        | reference_pool._load_ledger_tokens(
+            root / reference_pool.DEFAULT_BORDERLINE_LEDGER, label="borderline-paper"
+        )
+    )
+    # Ledger identifiers use e.g. "arxiv:...", while worklist identifiers
+    # are namespaced as "id:arxiv:..."; compare normalized exact IDs.
+    relevance_excluded_ids = {
+        "id:" + token for token in relevance_excluded
+        if token and not token.startswith(("id:", "url:", "title-hash:"))
+    }
+    ready = [
+        row
+        for row in jobs
+        if row.get("status") == "ready"
+        and row.get("type") in {"research", "audit"}
+        and not (
+            row.get("type") == "research"
+            and (
+                bool(_worklist_identity_tokens(row) & relevance_excluded_ids)
+                or research_job_reconciliation.match_represented_research_job(
+                    row, paper_index
+                ) is not None
+            )
+        )
+    ]
+    claimable = [
+        row
+        for row in ready
+        if not claims.get(str(row.get("job_id") or ""), {}).get("active")
+    ]
+    scored_claimable: list[dict[str, Any]] = []
+    for row in claimable:
+        if row.get("type") == "research":
+            scored_claimable.append(_score_row(row, root=root, cache=cache, config=config))
+        else:
+            scored_claimable.append(dict(row))
+    scored_claimable.sort(key=_priority_sort_key)
+
+    out: list[dict[str, Any]] = []
+    for source_rank, row in enumerate(scored_claimable, start=1):
+        out.append(
+            {
+                "source_rank": source_rank,
+                "source_kind": "research_job",
+                "job_id": row.get("job_id"),
+                "type": row.get("type"),
+                "priority": row.get("priority"),
+                "priority_breakdown": row.get("priority_breakdown"),
+                "canonical_id": row.get("canonical_id"),
+                "title": row.get("title"),
+                "source_url": row.get("source_url"),
+                "paper_path": row.get("paper_path"),
+                "published": row.get("published"),
+                "venue": row.get("venue"),
+                "citation_count": row.get("citation_count"),
+                "created_at": row.get("created_at"),
+            }
+        )
+    return out, len(ready), [dict(row) for row in ready]
+
+
+def _current_research_reservations(root: Path) -> list[dict[str, Any]]:
+    """Follow the STATUS nonterminal research identity exclusion."""
+    terminal = {"completed", "rejected", "superseded", "blocked_permanent"}
+    return [
+        row for row in _jobs(root)
+        if row.get("type") in {"research", "audit"}
+        and str(row.get("status") or "").strip().lower() not in terminal
+    ]
+
+
+def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
+    pool = reference_pool.build_reference_pool(root)
+    source = pool.get("candidates")
+    backward = source if isinstance(source, list) else []
+
+    forward_state = forward_citation_state.load(root / ".survey/work-queue/forward-citation-sweep.json", {})
+    forward_source = forward_state.get("candidates") if isinstance(forward_state, dict) else {}
+    forward = list(forward_source.values()) if isinstance(forward_source, dict) else []
+
+    papers = citation_graph.load_records(root)
+    seed_lineages, seed_paths = forward_lineage_citation.seed_indexes(papers)
+    represented = {
+        identifier
+        for paper in papers
+        for identifier in paper.identifiers
+    }
+    unrelated = reference_pool._load_ledger_tokens(
+        root / reference_pool.DEFAULT_UNRELATED_LEDGER,
+        label="unrelated-paper",
+    )
+    borderline = reference_pool._load_ledger_tokens(
+        root / reference_pool.DEFAULT_BORDERLINE_LEDGER,
+        label="borderline-paper",
+    )
+    excluded = represented | unrelated | borderline
+
+    cache = candidate_priority.load_cache(root)
+    config = candidate_priority.load_config(root)
+    rows: list[dict[str, Any]] = []
+    for source_kind, candidates in (
+        ("reference_review_candidate", backward),
+        ("forward_citation_candidate", forward),
+    ):
+        for row in candidates:
+            if not isinstance(row, dict):
+                continue
+            if source_kind == "forward_citation_candidate":
+                identities = paper_identity.record_identifiers(row)
+                if identities and identities.intersection(excluded):
+                    continue
+            scored = _score_row(row, root=root, cache=cache, config=config)
+            scored["source_kind"] = source_kind
+            if source_kind == "forward_citation_candidate":
+                counts = forward_lineage_citation.forward_lineage_counts(
+                    row, seed_lineages, seed_paths, source_kind=source_kind
+                )
+                scored["forward_lineage_citation_counts"] = counts
+                scored["forward_lineage_citation_max"] = max(counts.values(), default=0)
+                scored["forward_lineage_citation_total"] = sum(counts.values())
+            rows.append(scored)
+
+    # Keep exact identity deduplication, but do not lose forward citation evidence
+    # when the backward record of the SAME paper won the original priority sort.
+    rows.sort(key=_priority_sort_key)
+    rows = _dedupe_rows_by_identity(rows)
+    alias_to_row: dict[str, int] = {}
+    for index, item in enumerate(rows):
+        for token in _worklist_identity_tokens(item):
+            alias_to_row[token] = index
+    forward_seeds: dict[int, set[str]] = {}
+    forward_paths: dict[int, set[str]] = {}
+    for item in forward:
+        if not isinstance(item, dict):
+            continue
+        indices = {alias_to_row[token] for token in _worklist_identity_tokens(item) if token in alias_to_row}
+        if not indices:
+            continue
+        index = min(indices)
+        # Use forward_seed_ids as authority. Legacy forward rows use their
+        # OWN linked_from paths. Never interpret backward linked_from as this edge.
+        source_ids = item.get("forward_seed_ids")
+        if isinstance(source_ids, list):
+            forward_seeds.setdefault(index, set()).update(str(x) for x in source_ids if x)
+        source_paths = item.get("linked_from")
+        if isinstance(source_paths, list):
+            forward_paths.setdefault(index, set()).update(str(x) for x in source_paths if x)
+    for index in sorted(set(forward_seeds) | set(forward_paths)):
+        item = rows[index]
+        counts = forward_lineage_citation.forward_lineage_counts(
+            {"forward_seed_ids": sorted(forward_seeds.get(index, set())),
+             "linked_from": sorted(forward_paths.get(index, set()))},
+            seed_lineages, seed_paths, source_kind="forward_citation_candidate",
+        )
+        item["forward_lineage_citation_counts"] = counts
+        item["forward_lineage_citation_max"] = max(counts.values(), default=0)
+        item["forward_lineage_citation_total"] = sum(counts.values())
+        item["discovery_routes"] = sorted(
+            set(item.get("discovery_routes") or []) | {"forward_citation_sweep"}
+        )
+
+    refill_target, _repeat_penalty = _borderline_policy(config)
+    if not rows and refill_target > 0:
+        seen: set[str] = set()
+        for row in rows:
+            seen.update(_worklist_identity_tokens(row))
+        for row in _borderline_reconsideration_candidates(root, cache=cache, config=config):
+            if len(rows) >= refill_target:
+                break
+            tokens = _worklist_identity_tokens(row)
+            if tokens and seen.intersection(tokens):
+                continue
+            seen.update(tokens)
+            rows.append(row)
+
+    out: list[dict[str, Any]] = []
+    for source_rank, row in enumerate(rows, start=1):
+        out.append(
+            {
+                "source_rank": source_rank,
+                "source_kind": row.get("source_kind"),
+                "origin": row.get("origin"),
+                "borderline_recheck_count": row.get("borderline_recheck_count"),
+                "priority": row.get("priority"),
+                "priority_breakdown": row.get("priority_breakdown"),
+                "canonical_id": row.get("canonical_id"),
+                "identity_tokens": row.get("identity_tokens"),
+                "title": row.get("title"),
+                "abstract": row.get("abstract"),
+                "source_url": row.get("source_url"),
+                "year": row.get("year"),
+                "published": row.get("published"),
+                "venue": row.get("venue"),
+                "citation_count": row.get("citation_count"),
+                "citation_count_checked_at": row.get("citation_count_checked_at"),
+                "relation_count": row.get("relation_count"),
+                "linked_from_lineages": row.get("linked_from_lineages"),
+                "linked_from": row.get("linked_from"),
+                "discovery_routes": row.get("discovery_routes"),
+                "forward_lineage_citation_counts": row.get("forward_lineage_citation_counts"),
+                "forward_lineage_citation_max": row.get("forward_lineage_citation_max", 0),
+                "forward_lineage_citation_total": row.get("forward_lineage_citation_total", 0),
+            }
+        )
+    return out, len(out)
+
+
+def _worklist_identity_tokens(row: dict[str, Any]) -> set[str]:
+    """Return exact paper aliases used to keep both worker surfaces disjoint."""
+    probe = dict(row)
+    aliases: list[str] = []
+    existing = probe.get("identifiers")
+    if isinstance(existing, list):
+        aliases.extend(str(value) for value in existing if value)
+    elif existing:
+        aliases.append(str(existing))
+    extra = probe.get("identity_tokens")
+    if isinstance(extra, list):
+        aliases.extend(str(value) for value in extra if value)
+    elif extra:
+        aliases.append(str(extra))
+    if aliases:
+        probe["identifiers"] = list(dict.fromkeys(aliases))
+
+    tokens = set(paper_identity.stable_identity_tokens(probe))
+    title_hash = paper_identity.normalized_title_hash(probe.get("title"))
+    if title_hash:
+        tokens.add("title-hash:" + title_hash)
+    return tokens
+
+
+def _dedupe_rows_by_identity(
+    rows: list[dict[str, Any]], *, preserve_distinct_job_types: bool = False
+) -> list[dict[str, Any]]:
+    """Keep the first ranked row per identity, optionally separating job types."""
+    seen: set[str] = set()
+    out: list[dict[str, Any]] = []
+    for row in rows:
+        tokens = _worklist_identity_tokens(row)
+        if (
+            preserve_distinct_job_types
+            and row.get("job_id")
+            and row.get("type") in {"research", "audit"}
+        ):
+            tokens = {f"job-type:{row['type']}:{token}" for token in tokens}
+        duplicate = bool(tokens and seen.intersection(tokens))
+        seen.update(tokens)
+        if duplicate:
+            continue
+        out.append(row)
+    return out
+
+
+def _exclude_reserved_identities(
+    rows: list[dict[str, Any]],
+    *,
+    reserved_rows: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Drop Discovery rows already reserved by Research/Audit and dedupe the rest."""
+    seen: set[str] = set()
+    for row in reserved_rows:
+        seen.update(_worklist_identity_tokens(row))
+
+    out: list[dict[str, Any]] = []
+    for row in rows:
+        tokens = _worklist_identity_tokens(row)
+        duplicate_or_reserved = bool(tokens and seen.intersection(tokens))
+        seen.update(tokens)
+        if duplicate_or_reserved:
+            continue
+        out.append(row)
+    return out
+
+
+def _split(rows: list[dict[str, Any]], *, limit: int) -> dict[str, list[dict[str, Any]]]:
+    """Assign canonical rows round-robin across all scheduled workers, with no overlap."""
+    assigned = {worker: [] for worker in WORKERS}
+    for index, source in enumerate(rows):
+        worker = None
+        for offset in range(len(WORKERS)):
+            candidate = WORKERS[(index + offset) % len(WORKERS)]
+            if len(assigned[candidate]) < limit:
+                worker = candidate
+                break
+        if worker is None:
+            break
+        row = dict(source)
+        row["rank"] = len(assigned[worker]) + 1
+        row["assigned_worker"] = f"scheduled-chat-{worker}"
+        assigned[worker].append(row)
+        if all(len(assigned[key]) >= limit for key in WORKERS):
+            break
+    return assigned
+
+
+def build(
+    root: Path,
+    *,
+    research_limit: int = DEFAULT_RESEARCH_LIMIT,
+    discovery_limit: int = DEFAULT_DISCOVERY_LIMIT,
+    limit: int | None = None,
+) -> dict[str, dict[str, Any]]:
+    """Build all worker lists, retaining the legacy shared-limit API."""
+    if limit is not None:
+        if limit <= 0:
+            raise ValueError("limit must be > 0")
+        research_limit = limit
+        discovery_limit = limit
+    if research_limit <= 0:
+        raise ValueError("research_limit must be > 0")
+    if discovery_limit <= 0:
+        raise ValueError("discovery_limit must be > 0")
+
+    research_all, research_ready, research_reserved = _research_candidates(root)
+    discovery_all, _ = _discovery_candidates(root)
+
+    # A paper that already has a ready Research/Audit job must never be offered
+    # again as Discovery work, even if it is claimed by the other scheduled worker
+    # or appears through a DOI/arXiv/URL/title alias. Research/Audit takes precedence.
+    research_all = _dedupe_rows_by_identity(
+        research_all, preserve_distinct_job_types=True
+    )
+    discovery_all = _exclude_reserved_identities(
+        discovery_all,
+        reserved_rows=research_reserved + _current_research_reservations(root),
+    )
+    discovery_pending = len(discovery_all)
+    discovery_all, prefilter_stats = discovery_relevance_prefilter.triage_worklist(
+        discovery_all, discovery_relevance_prefilter.load_policy(root), root=root
+    )
+    # Abstracts are used for selection, not persisted in oversized worklists.
+    discovery_all = [{k: v for k, v in row.items() if k != "abstract"} for row in discovery_all]
+
+    research = _split(research_all, limit=research_limit)
+    discovery = _split(discovery_all, limit=discovery_limit)
+
+    result: dict[str, dict[str, Any]] = {}
+    for worker in WORKERS:
+        worker_id = f"scheduled-chat-{worker}"
+        result[worker] = {
+            "schema_version": 2,
+            "purpose": "dedicated-scheduled-worker-selection-surface",
+            "worker_id": worker_id,
+            "assignment_policy": "deterministic_disjoint_round_robin",
+            "selection_rules": [
+                "Use only this worker's dedicated page/index; do not consume another scheduled worker's page.",
+                "This is a rebuildable index; canonical jobs, claims, papers, and relevance ledgers remain authoritative.",
+                "Re-check canonical state immediately before work and skip rows that are no longer pending or are actively claimed.",
+                "For Library-first runs, skip an identity already saved in ChatGPT Library as a completed pending GitHub import.",
+                "Discovery rows are candidates only: before counting a row toward the 10-paper review quota, verify its canonical identity is still unprocessed in both GitHub durable state and ChatGPT Library; then read the primary paper body and classify it as accept, unrelated, or borderline. Title/abstract-only acceptance is forbidden.",
+                "Only when the ordinary Discovery pool is exhausted, refill it with up to the configured target count from durable borderline records. For source_kind=borderline_reconsideration, copy origin=borderline_reconsideration and borderline_recheck_count_before from the worklist row into the completed Discovery record regardless of final classification.",
+                "Apply mechanical domain rules first, then retain configurable percent ranked by same-lineage forward citations. Read selected ranks in this order; deferred candidates are not automatically reintroduced, and quarantine is reversible.",
+            ],
+            "research_audit": {
+                "ready_total": research_ready,
+                "claimable_total": len(research_all),
+                "displayed": len(research[worker]),
+                "rows": research[worker],
+            },
+            "discovery_review": {
+                "pending_total": discovery_pending,
+                "prefilter": prefilter_stats,
+                "displayed": len(discovery[worker]),
+                "rows": discovery[worker],
+            },
+        }
+    return result
+
+
+def _esc(value: Any) -> str:
+    text = "" if value is None else str(value)
+    return text.replace("|", "\\|").replace("\n", " ").strip()
+
+
+def _link(label: Any, url: Any) -> str:
+    label_s = _esc(label) or "source"
+    url_s = str(url or "").strip()
+    return f"[{label_s}]({url_s})" if url_s else label_s
+
+
+def render_markdown(payload: dict[str, Any], worker: str) -> str:
+    generated = str(payload.get("generated_at") or "")
+    research = payload["research_audit"]
+    discovery = payload["discovery_review"]
+    out = [
+        f"# Scheduled worker :{worker} worklist",
+        "",
+        f"Worker: `scheduled-chat-{worker}`  ",
+        f"Generated: `{generated}`",
+        "",
+        "このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。",
+        "正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。",
+        "",
+        "- このページに割り当てられた候補だけを使用する。",
+        "- Library-first runでは、同じidentityの完成原稿・探索結果がChatGPT Libraryへ保存済みならskipする。",
+        "- 最新状態で処理済み・claim済み・対象外ならskipし、同じページ内の次候補へ進む。",
+        "- Discoveryは候補提示面にすぎない。10件へ数える前にcanonical identityをGitHubとChatGPT Libraryの両方で照合して未処理の新規候補だと確認し、その後に一次資料本文を読み、accept / unrelated / borderline を判定する。既処理・重複が判明した候補は10件から外して補充する。タイトル・要旨だけでacceptしない。",
+        "",
+        "## 未処理 Research / Audit",
+        "",
+        f"ready総数: **{research['ready_total']}** / 未claim総数: **{research['claimable_total']}** / このworker向け: **{research['displayed']}**",
+        "",
+        "| # | score | 種別 | identity | title | source | 想定配置先 |",
+        "|---:|---:|---|---|---|---|---|",
+    ]
+    for row in research["rows"]:
+        out.append(
+            "| {rank} | {score} | {kind} | {identity} | {title} | {source} | {path} |".format(
+                rank=row["rank"],
+                score=_esc(row.get("priority")),
+                kind=_esc(row.get("type")),
+                identity=_esc(row.get("canonical_id")),
+                title=_esc(row.get("title")),
+                source=_link("primary", row.get("source_url")),
+                path=f"`{_esc(row.get('paper_path'))}`" if row.get("paper_path") else "",
+            )
+        )
+
+    out.extend(
+        [
+            "",
+            "## リスト入り判定待ち Discovery候補",
+            "",
+            f"未判定総数: **{discovery['pending_total']}** / このworker向け: **{discovery['displayed']}**",
+            f"事前選別: **{discovery.get('prefilter', {}).get('mode', 'off')}** / "
+            f"暫定隔離 **{discovery.get('prefilter', {}).get('quarantine_count', 0)}** / "
+            f"監査再投入 **{discovery.get('prefilter', {}).get('audit_count', 0)}** "
+            f"/ 機械規則適用後 **{discovery.get('prefilter', {}).get('quota_eligible_count', 0)}** "
+            f"/ 選抜率 **{discovery.get('prefilter', {}).get('quota_retain_percent', 100)}%** "
+            "（候補の正本は保持。隔離はunrelated判定ではない）",
+            "",
+            "| # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |",
+            "|---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|",
+        ]
+    )
+    for row in discovery["rows"]:
+        lineages = ", ".join(row.get("linked_from_lineages") or [])
+        out.append(
+            "| {rank} | {score} | {same} | {same_total} | {identity} | {title} | {published} | {venue} | {citations} | {relations} | {lineages} | {source} |".format(
+                rank=row["rank"],
+                score=_esc(row.get("priority")),
+                same=_esc(row.get("forward_lineage_citation_max", 0)),
+                same_total=_esc(row.get("forward_lineage_citation_total", 0)),
+                identity=_esc(row.get("canonical_id")),
+                title=_esc(row.get("title")),
+                published=_esc(row.get("published") or row.get("year")),
+                venue=_esc(row.get("venue")),
+                citations=_esc(row.get("citation_count")),
+                relations=_esc(row.get("relation_count")),
+                lineages=_esc(lineages),
+                source=_link("source", row.get("source_url")),
+            )
+        )
+    out.extend(
+        [
+            "",
+            "## Machine-readable",
+            "",
+            f"同じ割当は [worker-worklist-{worker}.json](worker-worklist-{worker}.json) にあります。",
+            "",
+        ]
+    )
+    return "\n".join(out)
+
+
+def _paths(output_dir: Path, worker: str) -> tuple[Path, Path]:
+    return (
+        output_dir / f"worker-worklist-{worker}.json",
+        output_dir / f"WORKLIST-{worker}.md",
+    )
+
+
+def write_outputs(root: Path, payloads: dict[str, dict[str, Any]], *, output_dir: Path) -> dict[str, dict[str, Any]]:
+    base = output_dir if output_dir.is_absolute() else root / output_dir
+    final: dict[str, dict[str, Any]] = {}
+    for worker in WORKERS:
+        json_path, markdown_path = _paths(base, worker)
+        payload = payloads[worker]
+        old = _read(json_path, {})
+        old_cmp = dict(old) if isinstance(old, dict) else {}
+        old_cmp.pop("generated_at", None)
+        generated = (
+            str(old.get("generated_at") or _now())
+            if old_cmp == payload
+            else _now()
+        )
+        worker_payload = {"generated_at": generated, **payload}
+        _write_text(
+            json_path,
+            json.dumps(worker_payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        )
+        _write_text(markdown_path, render_markdown(worker_payload, worker) + "\n")
+        final[worker] = worker_payload
+    return final
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repo-root", type=Path, default=Path("."))
+    parser.add_argument(
+        "--research-limit", type=int, default=DEFAULT_RESEARCH_LIMIT,
+        help="per-worker Research/Audit display limit (default: 200)",
+    )
+    parser.add_argument(
+        "--discovery-limit", type=int, default=DEFAULT_DISCOVERY_LIMIT,
+        help="per-worker Discovery review display limit (default: 500)",
+    )
+    parser.add_argument(
+        "--limit", type=int, default=None,
+        help="legacy compatibility: set both lane limits to the same value",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path(".survey/work-queue"),
+    )
+    args = parser.parse_args()
+    research_limit = args.research_limit
+    discovery_limit = args.discovery_limit
+    if args.limit is not None:
+        if args.limit <= 0:
+            parser.error("--limit must be > 0")
+        research_limit = args.limit
+        discovery_limit = args.limit
+    if research_limit <= 0:
+        parser.error("--research-limit must be > 0")
+    if discovery_limit <= 0:
+        parser.error("--discovery-limit must be > 0")
+    root = args.repo_root.resolve()
+    payloads = build(
+        root,
+        research_limit=research_limit,
+        discovery_limit=discovery_limit,
+    )
+    final = write_outputs(root, payloads, output_dir=args.output_dir)
+    print(
+        json.dumps(
+            {
+                worker: {
+                    "research_displayed": final[worker]["research_audit"]["displayed"],
+                    "discovery_displayed": final[worker]["discovery_review"]["displayed"],
+                }
+                for worker in WORKERS
+            },
+            ensure_ascii=False,
+        )
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7713266864966180af44a7306ce33f6dc0d96d3a763cb500ffb20b8522764954",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_c8c2d4c8de9081919f3f5f7e80ac5dcd--2025-doi-10.1109-tkde.2025.3554028-moe-survey-research-20261016-1700-scheduled-chat-00-r01-reviewed.md",
+  "canonical_id": "DOI:10.1109/TKDE.2025.3554028",
+  "worker_completed_at": "2026-10-16T17:05:00+09:00",
+  "worker_run_key": "20261016-1700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7856,
+    "body_paragraphs": 41,
+    "method_chars": 1254,
+    "method_paragraphs": 6,
+    "evaluation_chars": 446,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 446 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 446 < 500"
+  ],
+  "processed_at": "2026-10-16T08:51:33+00:00"
+}

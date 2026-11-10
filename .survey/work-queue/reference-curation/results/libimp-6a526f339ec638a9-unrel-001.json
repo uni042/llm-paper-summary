@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6a526f339ec638a9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1807.03748",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1807.03748",
+    "identity_tokens": [
+      "arXiv:1807.03748"
+    ],
+    "reason": "対照予測符号化による汎用表現学習が主題で、LLM推論・配信・学習システム最適化への直接寄与がない。",
+    "first_checked_at": "2026-09-27T04:28:31+09:00",
+    "last_checked_at": "2026-09-30T09:49:12+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "worker-worklist-30 discovery_review rank 471"
+    ],
+    "title": "Representation Learning with Contrastive Predictive Coding"
+  },
+  "processed_at": "2026-09-30T09:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6a526f339ec6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

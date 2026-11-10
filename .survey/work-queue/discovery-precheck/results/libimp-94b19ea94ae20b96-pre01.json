@@ -1,0 +1,254 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-94b19ea94ae20b96-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-94b19ea94ae2",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:1907.05242",
+    "arXiv:2203.16487",
+    "arXiv:2411.00774"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3f00729c05705e1cad52e6b08f47ec306aae2daf",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-07T01:56:53.344832+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:1907.05242",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2203.16487",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/v1/2023.findings-emnlp.257"
+    },
+    {
+      "requested_id": "arXiv:2411.00774",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM",
+      "source_url": "https://arxiv.org/abs/2411.00774",
+      "year": 2024,
+      "published": "2024-11-01",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 205,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Rapidly developing large language models (LLMs) have brought tremendous intelligent applications. Especially, the GPT-4o's excellent duplex speech interaction ability has brought impressive experience to users. Researchers have recently proposed several multi-modal LLMs in this direction that can achieve user-agent speech-to-speech conversations. This paper proposes a novel speech-text multimodal LLM architecture called Freeze-Omni. Our main contribution is that the speech input and output modalities can be easily connected to a textual LLM while keeping the LLM's parameters frozen throughout the training process. We design a three-stage training strategy for modeling both the speech input and output, enabling Freeze-Omni to obtain speech-to-speech conversation ability using text-speech paired data (such as ASR and TTS data) and only 60,000 multi-round text Q&A data on 8 GPUs. Moreover, we can effectively ensure that the intelligence of the Freeze-Omni in the speech modality is at the same level compared with that in the text modality of its backbone LLM, while achieving low latency end-to-end spoken response. In addition, we also designed a method to achieve duplex dialogue ability through multi-task training, giving Freeze-Omni a more natural style of dialogue ability between users and agents. In summary, Freeze-Omni holds great potential to conduct speech-to-speech dialogue based on a multimodal LLM under the condition of a frozen LLM, avoiding the catastrophic forgetting problem caused by limited data and training resources.",
+      "identifiers": [
+        "SemanticScholar:45b53401717decd82cea2068fa8b1c4947b70594"
+      ],
+      "semantic_scholar_id": "45b53401717decd82cea2068fa8b1c4947b70594",
+      "canonical_id": "arXiv:2411.00774",
+      "arxiv_id": "2411.00774",
+      "doi": "10.48550/arXiv.2411.00774",
+      "authors": [
+        "Xiong Wang",
+        "Yang-Ze Li",
+        "Chaoyou Fu",
+        "Yi-Ke Zhang",
+        "Yun-Hang Shen",
+        "Lei Xie",
+        "Ke Li",
+        "Xing Sun",
+        "Long Ma"
+      ],
+      "priority": 215,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 205,
+        "citation_count": 205,
+        "total": 215,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 705,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Large Memory Layers with Product Keys",
+      "source_url": "https://arxiv.org/abs/1907.05242",
+      "year": 2019,
+      "published": "2019-07-10",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 197,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces a structured memory which can be easily integrated into a neural network. The memory is very large by design and significantly increases the capacity of the architecture, by up to a billion parameters with a negligible computational overhead. Its design and access pattern is based on product keys, which enable fast and exact nearest neighbor search. The ability to increase the number of parameters while keeping the same computational budget lets the overall system strike a better trade-off between prediction accuracy and computation efficiency both at training and test time. This memory layer allows us to tackle very large scale language modeling tasks. In our experiments we consider a dataset with up to 30 billion words, and we plug our memory layer in a state-of-the-art transformer-based architecture. In particular, we found that a memory augmented model with only 12 layers outperforms a baseline transformer model with 24 layers, while being twice faster at inference time. We release our code for reproducibility purposes.",
+      "identifiers": [
+        "SemanticScholar:bf442ab269074665a68e4dbbe19e4efc97862541"
+      ],
+      "semantic_scholar_id": "bf442ab269074665a68e4dbbe19e4efc97862541",
+      "canonical_id": "arXiv:1907.05242",
+      "arxiv_id": "1907.05242",
+      "authors": [
+        "Guillaume Lample",
+        "Alexandre Sablayrolles",
+        "M. Ranzato",
+        "Ludovic Denoyer",
+        "H. Jégou"
+      ],
+      "priority": 207,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 197,
+        "citation_count": 197,
+        "total": 207,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2646,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2411.00774",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2411.00774",
+        "id:SemanticScholar:45b53401717decd82cea2068fa8b1c4947b70594",
+        "id:arXiv:2411.00774",
+        "title:freezeomni a smart and low latency speechtospeech dialogue model with frozen llm",
+        "url:https://arxiv.org/abs/2411.00774"
+      ],
+      "record": {
+        "title": "Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM",
+        "source_url": "https://arxiv.org/abs/2411.00774",
+        "year": 2024,
+        "published": "2024-11-01",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 205,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Rapidly developing large language models (LLMs) have brought tremendous intelligent applications. Especially, the GPT-4o's excellent duplex speech interaction ability has brought impressive experience to users. Researchers have recently proposed several multi-modal LLMs in this direction that can achieve user-agent speech-to-speech conversations. This paper proposes a novel speech-text multimodal LLM architecture called Freeze-Omni. Our main contribution is that the speech input and output modalities can be easily connected to a textual LLM while keeping the LLM's parameters frozen throughout the training process. We design a three-stage training strategy for modeling both the speech input and output, enabling Freeze-Omni to obtain speech-to-speech conversation ability using text-speech paired data (such as ASR and TTS data) and only 60,000 multi-round text Q&A data on 8 GPUs. Moreover, we can effectively ensure that the intelligence of the Freeze-Omni in the speech modality is at the same level compared with that in the text modality of its backbone LLM, while achieving low latency end-to-end spoken response. In addition, we also designed a method to achieve duplex dialogue ability through multi-task training, giving Freeze-Omni a more natural style of dialogue ability between users and agents. In summary, Freeze-Omni holds great potential to conduct speech-to-speech dialogue based on a multimodal LLM under the condition of a frozen LLM, avoiding the catastrophic forgetting problem caused by limited data and training resources.",
+        "identifiers": [
+          "SemanticScholar:45b53401717decd82cea2068fa8b1c4947b70594"
+        ],
+        "semantic_scholar_id": "45b53401717decd82cea2068fa8b1c4947b70594",
+        "canonical_id": "arXiv:2411.00774",
+        "arxiv_id": "2411.00774",
+        "doi": "10.48550/arXiv.2411.00774",
+        "authors": [
+          "Xiong Wang",
+          "Yang-Ze Li",
+          "Chaoyou Fu",
+          "Yi-Ke Zhang",
+          "Yun-Hang Shen",
+          "Lei Xie",
+          "Ke Li",
+          "Xing Sun",
+          "Long Ma"
+        ],
+        "priority": 215,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 205,
+          "citation_count": 205,
+          "total": 215,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 705,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1907.05242",
+      "identity_tokens": [
+        "id:SemanticScholar:bf442ab269074665a68e4dbbe19e4efc97862541",
+        "id:arXiv:1907.05242",
+        "title:large memory layers with product keys",
+        "url:https://arxiv.org/abs/1907.05242"
+      ],
+      "record": {
+        "title": "Large Memory Layers with Product Keys",
+        "source_url": "https://arxiv.org/abs/1907.05242",
+        "year": 2019,
+        "published": "2019-07-10",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 197,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper introduces a structured memory which can be easily integrated into a neural network. The memory is very large by design and significantly increases the capacity of the architecture, by up to a billion parameters with a negligible computational overhead. Its design and access pattern is based on product keys, which enable fast and exact nearest neighbor search. The ability to increase the number of parameters while keeping the same computational budget lets the overall system strike a better trade-off between prediction accuracy and computation efficiency both at training and test time. This memory layer allows us to tackle very large scale language modeling tasks. In our experiments we consider a dataset with up to 30 billion words, and we plug our memory layer in a state-of-the-art transformer-based architecture. In particular, we found that a memory augmented model with only 12 layers outperforms a baseline transformer model with 24 layers, while being twice faster at inference time. We release our code for reproducibility purposes.",
+        "identifiers": [
+          "SemanticScholar:bf442ab269074665a68e4dbbe19e4efc97862541"
+        ],
+        "semantic_scholar_id": "bf442ab269074665a68e4dbbe19e4efc97862541",
+        "canonical_id": "arXiv:1907.05242",
+        "arxiv_id": "1907.05242",
+        "authors": [
+          "Guillaume Lample",
+          "Alexandre Sablayrolles",
+          "M. Ranzato",
+          "Ludovic Denoyer",
+          "H. Jégou"
+        ],
+        "priority": 207,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 197,
+          "citation_count": 197,
+          "total": 207,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2646,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:313ed682e83b779d776611f3b83aedcd14d01e1a1ca65bbc633fc30b699b6a0e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

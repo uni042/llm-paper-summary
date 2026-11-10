@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67e51dfa5a0c8846-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.39888",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.39888",
+    "identity_tokens": [
+      "arXiv:2609.39888"
+    ],
+    "reason": "MaDE corrects learned vehicle/physical-system trajectories under dynamics constraints; it is not language-model inference.",
+    "first_checked_at": "2026-10-05T04:30:36+00:00",
+    "last_checked_at": "2026-10-05T04:30:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Markovian Dynamics Enforcer: Feasibility Preserving Correction on Learned Dynamics Manifolds"
+  },
+  "processed_at": "2026-10-05T04:30:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67e51dfa5a0c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

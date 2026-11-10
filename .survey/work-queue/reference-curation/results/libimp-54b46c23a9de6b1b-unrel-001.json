@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54b46c23a9de6b1b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.05278",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.05278",
+    "identity_tokens": [
+      "arXiv:2605.05278"
+    ],
+    "reason": "タイトルにはMoE推論の通信効率があるが、一次論文の実体はMNIST上の事前学習済みCNN 25候補からのモデル選択と、サンプル依存性I(S;W)・入力からルータへの相互情報量I(X;T)の統計的推定である。表IはR=25、標本数m=256、反復M=300、訓練誤差0.0802、テスト誤差0.0846を報告。実際のLLM、トークン単位MoE、専門家並列通信、GPU推論時間、KVキャッシュを評価しておらず、現行LLM推論・学習効率サーベイの主対象から外す。",
+    "first_checked_at": "2026-10-22T14:47:08+00:00",
+    "last_checked_at": "2026-10-22T14:47:08+00:00",
+    "linked_from": [],
+    "title": "Expert Routing for Communication-Efficient MoE via Finite Expert Banks"
+  },
+  "processed_at": "2026-10-22T14:47:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54b46c23a9de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

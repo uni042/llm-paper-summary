@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "fd3a56c09b63a6006325edea4f4d932e7a51508bd01e124fa32ec37bbfe9fe9c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_e972d94cb720819192d504ccb4c997d8--2024-2311.08623-deed-dynamic-early-exit-returned-repair-20261022-0157-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2311.08623",
+  "worker_completed_at": "2026-10-22T02:02:15+09:00",
+  "worker_run_key": "20261022-0157-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6123,
+    "body_paragraphs": 37,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 184,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 184 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 184 < 500"
+  ],
+  "processed_at": "2026-10-22T00:27:48+00:00"
+}

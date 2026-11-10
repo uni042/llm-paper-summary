@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-73ff5d864fbcd85c-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2212.09095",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2212.09095",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2212.09095",
+      "arXiv:2212.09095"
+    ],
+    "reason": "注意ヘッド・FFNの重要度分析から大幅な削減可能性を示すが、主貢献は解釈性分析で実行ランタイムではない。",
+    "first_checked_at": "2026-09-27T13:32:58+09:00",
+    "last_checked_at": "2026-09-30T09:46:42+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review tail-to-head"
+    ],
+    "title": "Rethinking the Role of Scale for In-Context Learning: An Interpretability-based Case Study at 66 Billion Scale"
+  },
+  "processed_at": "2026-09-30T09:46:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-73ff5d864fbc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

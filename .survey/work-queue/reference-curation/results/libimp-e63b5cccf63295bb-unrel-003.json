@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e63b5cccf63295bb-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.16821",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.16821",
+    "identity_tokens": [
+      "arXiv:2404.16821"
+    ],
+    "reason": "InternVL 1.5の視覚encoder、動的高解像度入力、二言語データでマルチモーダル理解能力を改善するモデル研究。動的タイル処理はあるが推論効率化ではなく、18 benchmark中8でSOTAという能力評価が中心。",
+    "first_checked_at": "2026-10-04T20:49:55+00:00",
+    "last_checked_at": "2026-10-04T20:49:55+00:00",
+    "linked_from": [],
+    "title": "How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites"
+  },
+  "processed_at": "2026-10-04T20:49:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e63b5cccf632",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

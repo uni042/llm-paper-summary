@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8d5af466e5ef96a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1007/s42979-026-05384-9",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1007/s42979-026-05384-9",
+    "identity_tokens": [
+      "DOI:10.1007/s42979-026-05384-9"
+    ],
+    "reason": "No abstract is included in the packet. Primary DOI open https://doi.org/10.1007/s42979-026-05384-9 returned an internal error; no primary abstract/text could be reviewed.",
+    "first_checked_at": "2026-10-05T04:09:44+00:00",
+    "last_checked_at": "2026-10-05T04:09:44+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Noise-Resilient Hybrid Quantum-Classical Learning for Smart Grid Stability: A Systematic Study of Architecture, Embedding, and Robustness"
+  },
+  "processed_at": "2026-10-05T04:09:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8d5af466e5e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

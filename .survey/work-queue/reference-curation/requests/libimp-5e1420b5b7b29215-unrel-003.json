@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5e1420b5b7b29215-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.3390/ai7090358",
+  "reason": "Smart systems, the Industrial Internet of Things, and cyber-physical networks increasingly make decisions on the devices where data is generated, on nodes short of memory, compute, energy, and bandwidth, and exposed to real adversaries. Two research currents have grown to meet this: one makes artificial intelligence small and distributed (quantization, pruning, distillation, TinyML, federated and split learning), the other makes it safe (defenses against poisoning, backdoors, inversion, and evasion). This review argues that the two are entangled rather than parallel. Operators that shrink a model or scatter it across nodes also redraw its attack surface, each carrying a security dividend and a security liability, and because a node’s resources are finite and shared, model capacity and defense strength compete for one multi-dimensional budget. We formalize this as an efficiency-decentralization-security (EDS) design tension, explicitly a tension and not an impossibility, and show with published measurements that the coupling is non-monotonic. Around this thesis we build three artifacts, following an explicit design-science research process: an evidence-graded scoring matrix that separates each operator’s security dividend from its liability across seven axes and reports the direction of every effect separately from the confidence in the evidence behind it; a resource-aware threat model that judges attack and defense feasibility against a tiered device, gateway, network, and server budget with stated units; and a co-design framework whose decision workflow terminates in a defense-selection program and a verification step under adaptive attack. We work the framework through an industrial predictive-maintenance scenario with the resource arithmetic computed line by line, and evaluate it retrospectively against six published edge-AI systems. The result is a decision-support guide for building edge AI that is efficient, decentralized, and secure at once.",
+  "title": "The Efficiency-Decentralization-Security Trilemma: A Co-Design Framework for Lightweight, Decentralized AI in Cyber-Physical Systems",
+  "identity_tokens": [
+    "DOI:10.3390/ai7090358"
+  ],
+  "linked_from": [
+    "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+    "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5e1420b5b7b2",
+  "source_precheck_request_id": null
+}

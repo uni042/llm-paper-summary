@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7dc772f946cbb45d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.15269",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.15269",
+    "identity_tokens": [
+      "arXiv:2505.15269"
+    ],
+    "reason": "Measured gains are relevant but narrowly specialized to online video; broader LLM-serving applicability is uncertain.",
+    "first_checked_at": "2026-10-05T12:49:57+00:00",
+    "last_checked_at": "2026-10-05T12:49:57+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md"
+    ],
+    "title": "LiveVLM: Efficient Online Video Understanding via Streaming-Oriented KV Cache and Retrieval"
+  },
+  "processed_at": "2026-10-05T12:49:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7dc772f946cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

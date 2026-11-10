@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c6a07a3aa19635c2-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.07939",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.07939",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.07939",
+      "arXiv:2402.07939"
+    ],
+    "reason": "LLMを使うWindows操作エージェントだが、主貢献はUI理解・アプリ選択・操作計画であり、LLM推論サービング基盤の最適化ではない。エージェント実行系との境界領域としてborderline。",
+    "first_checked_at": "2026-10-03T07:46:12+00:00",
+    "last_checked_at": "2026-10-03T07:46:12+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.06948-kairos-multi-agent-serving.md"
+    ],
+    "title": "UFO: A UI-Focused Agent for Windows OS Interaction"
+  },
+  "processed_at": "2026-10-03T07:46:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6a07a3aa196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

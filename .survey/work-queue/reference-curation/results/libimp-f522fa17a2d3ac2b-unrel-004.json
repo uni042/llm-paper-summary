@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f522fa17a2d3ac2b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.15116",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.15116",
+    "identity_tokens": [
+      "arXiv:2410.15116"
+    ],
+    "reason": "COFT highlights retrieved context to reduce hallucinations; its stated contribution concerns answer reliability rather than resource efficiency.",
+    "first_checked_at": "2026-10-05T14:45:36+00:00",
+    "last_checked_at": "2026-10-05T14:45:36+00:00",
+    "linked_from": [
+      "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+      "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md",
+      "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+    ],
+    "title": "Coarse-to-Fine Highlighting: Reducing Knowledge Hallucination in Large Language Models"
+  },
+  "processed_at": "2026-10-05T14:45:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f522fa17a2d3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

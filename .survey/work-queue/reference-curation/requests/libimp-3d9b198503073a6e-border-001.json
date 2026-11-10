@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3d9b198503073a6e-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+  "reason": "題名と出版社の一次資料ページのIntroductionは、LLMを複数のGPUサーバ上の推論チェーンへ分割配置し、KV-cacheを含む資源制約下で同時実行可能数と通信費を合わせて扱う研究と示しており、LLM inference serving / deployment の対象範囲に強く関係する。一方、本文の手法・評価節および論文自身の限界を確認できていないため、適合を確定せずborderlineとする。",
+  "title": "Profit-aware deployment of large language model-enabled inference chains in data centers",
+  "identity_tokens": [
+    "DOI:10.1016/j.comnet.2026.112609"
+  ],
+  "linked_from": [
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d9b19850307",
+  "source_precheck_request_id": null
+}

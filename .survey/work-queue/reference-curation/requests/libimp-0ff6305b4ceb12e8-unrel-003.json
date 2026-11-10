@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0ff6305b4ceb12e8-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2312.03732",
+  "reason": "LoRAのrank依存スケーリングを1/rから1/sqrt(r)へ変更して高rank微調整を安定化する学習手法で、推論計算費は変えないと明記されており凍結中の学習系。",
+  "title": "A Rank Stabilization Scaling Factor for Fine-Tuning with LoRA",
+  "identity_tokens": [
+    "arXiv:2312.03732",
+    "DOI:10.48550/arXiv.2312.03732"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2025-2509.14900-furina-router-free-linear-expert-aggregation.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0ff6305b4ceb",
+  "source_precheck_request_id": null
+}

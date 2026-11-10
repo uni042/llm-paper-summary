@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b69f0d560ecabb8e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.01652",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.01652",
+    "identity_tokens": [
+      "arXiv:2507.01652"
+    ],
+    "reason": "The target is image generation, not LLM inference or serving.",
+    "first_checked_at": "2026-10-14T00:03:37+00:00",
+    "last_checked_at": "2026-10-14T00:03:37+00:00",
+    "linked_from": [],
+    "title": "Autoregressive Image Generation with Linear Complexity: A Spatial-Aware Decay Perspective"
+  },
+  "processed_at": "2026-10-14T00:03:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b69f0d560eca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

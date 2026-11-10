@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5622f045983fc3f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.18421",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.18421",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.18421",
+      "arXiv:2403.18421"
+    ],
+    "reason": "一次論文の要旨を確認。PubMedの抄録と全文で2.7Bの自己回帰モデルを事前学習し、医療質問応答の品質とドメイン特化モデルの実用性を評価する。主貢献はモデル公開と領域特化学習・応用評価であり、LLM推論基盤や学習アルゴリズムの計算効率改善を直接検証しないため対象外。",
+    "first_checked_at": "2026-10-13T13:47:00+00:00",
+    "last_checked_at": "2026-10-18T10:00:31+00:00",
+    "linked_from": [],
+    "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
+  },
+  "processed_at": "2026-10-18T10:00:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5622f045983",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

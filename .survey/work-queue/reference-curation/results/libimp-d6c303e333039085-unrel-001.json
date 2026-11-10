@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d6c303e333039085-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.15296",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.15296",
+    "identity_tokens": [
+      "arXiv:2609.15296"
+    ],
+    "reason": "Universal multimodal embedding (UME) maps multimodal inputs into a shared embedding space for diverse retrieval tasks. Recent methods improve embeddings through Chain-of-Thought (CoT) reasoning optimized with GRPO using retrieval rewards. However, existing methods overlook the mismatch bettween candidate-aware retrieval supervision and input-only CoT generation: (1)trajectory-level rewards convey retrieval outcomes without explicitly identifying the input-supported evidence that distinguishes the positive from hard negatives; (2) input-only generation cannot directly assess whether further reasoning improves retrieval, potentially producing redundant CoTs with substantial latency. To bridge this gap, we propose Reason What Matters (ReWAM), a retrieval-grounded framework that aligns candidate-aware supervision with input-only generation. Specifically, we introduce Retrieval-Aware Self-Distillation (RASD), which extracts privileged guidance from input-supported facts and evidence distinguishing the positive from hard negatives. Conditioned on this guidance, an on-policy self-teacher provides token-level feedback to refine credit assignment, directing policy updates toward retrieval-relevant reasoning grounded in the input. We further propose Retrieval-Adaptive Inference (RAI), which learns a retrieval-aware stopping criterion from prefix-level retrieval feedback. It stops redundant reasoning without candidate access and uses speculative decoding to further reduce CoT latency. Extensive experiments on MMEB-V2 and MRMR demonstrate that ReWAM achieves state-of-the-art retrieval performance while delivering up to 5x the inference throughput of competitive explicit-CoT UME methods. ReWAM thus enables high-quality retrieval through efficient input-only reasoning, making explicit CoT practical for corpus-scale multimodal retrieval. The code will be publicly available.",
+    "first_checked_at": "2026-10-05T06:44:58+00:00",
+    "last_checked_at": "2026-10-05T06:44:58+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "Reason What Matters: Retrieval-Grounded Reasoning for Universal Multimodal Embeddings"
+  },
+  "processed_at": "2026-10-05T06:44:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d6c303e33303",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

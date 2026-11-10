@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1500-scheduled-chat-00/r06",
+  "reference_main_sha": "2961ce802c7c010bf18836afa636780b500c3e8b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.29",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.29"
+      ],
+      "title": "Variable Layerwise Quantization: A Simple and Effective Approach to Quantize LLMs",
+      "reason": "ACL公式要旨は層の入出力埋め込み差や大振幅重み数で重要度を測り、重要層に高ビットを割り当てる可変層別量子化を提案。優先順位に従う場合は25〜50%の層を低精度化しても性能維持するが、無作為順序では5〜10%にとどまる。推論向け混合精度圧縮に直接該当。",
+      "source_url": "https://aclanthology.org/2025.findings-acl.29/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:11:44+09:00",
+      "last_checked_at": "2026-10-30T15:11:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 93
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34866",
+      "identity_tokens": [
+        "arXiv:2609.34866"
+      ],
+      "title": "From Attention Sensitivity to Layer Role: Revisiting Mixed-Precision Quantization of Transformers",
+      "reason": "arXiv一次要旨はQ/K/Vを一体で評価するJAB注意出力誤差を用いた混合精度量子化と、層役割に基づく簡易オフセット規則を比較。Mistral-7BではMLPも含めるとJABより役割ベースが優れ、3.56倍圧縮時PPL6.933を報告。量子化ビット配分と評価指標の直接的な研究。",
+      "source_url": "https://arxiv.org/abs/2609.34866",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:11:44+09:00",
+      "last_checked_at": "2026-10-30T15:11:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 94
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.03190",
+      "identity_tokens": [
+        "arXiv:2605.03190"
+      ],
+      "title": "VDCores: Resource Decoupled Programming and Execution for Asynchronous GPU",
+      "reason": "arXiv一次要旨はGPUの非同期演算・メモリユニットを仮想資源隔離コアとして抽象化し、依存グラフのmicro-opを動的に重畳するVDCoresを提案。GH200/H100/RTX6000 Pro上の4種LLM推論ワークロードでdecodeスループット平均24%、動的入力で最大77%改善。推論GPUランタイムに直接該当。",
+      "source_url": "https://arxiv.org/abs/2605.03190",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:11:44+09:00",
+      "last_checked_at": "2026-10-30T15:11:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 95
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.06532",
+      "identity_tokens": [
+        "arXiv:2606.06532"
+      ],
+      "title": "GOPAgen: Codec-Aware Agentic Long-Video Understanding with Structured Memory",
+      "reason": "arXiv v2一次要旨は動画コーデックのGOPと動きベクトルを使い、エージェントが必要な区間だけ視覚証拠を検索・保持するGOPAgenを提案。MotionBenchやEgoSchemaなどで精度を比較し、長時間動画推論の無関係区間の再処理と履歴メモリを削減。MLLMエージェント推論の選択的実行に直接関連するが、GPU遅延実測は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2606.06532",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:11:44+09:00",
+      "last_checked_at": "2026-10-30T15:11:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 96
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.09558",
+      "identity_tokens": [
+        "arXiv:2604.09558"
+      ],
+      "title": "VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination",
+      "reason": "arXiv v2一次要旨はデータ移動を物理コピーではなく索引写像で表すvirtual tensorを導入し、DNN/LLMを含む計算グラフの不要な移動を除去。NVIDIA GPU上で既存MLコンパイラ比最大1.93倍・平均1.28倍、推論メモリ最大60%削減を報告。推論カーネルのメモリ移動最適化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2604.09558",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:11:44+09:00",
+      "last_checked_at": "2026-10-30T15:11:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 97
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.17383",
+      "identity_tokens": [
+        "arXiv:2405.17383"
+      ],
+      "title": "Unlocking the Secrets of Linear Complexity Sequence Model from A Unified Perspective",
+      "reason": "arXiv一次要旨は線形注意・SSM・長畳み込み・線形RNNをExpand/Oscillation/Shrinkの共通モデルとして整理し、言語モデリングと検索精度を評価。線形時間推論の基礎に関係するが、要旨は推論実装の速度・メモリ削減やサービング評価を直接主張しないため境界的。",
+      "source_url": "https://arxiv.org/abs/2405.17383",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:11:44+09:00",
+      "last_checked_at": "2026-10-30T15:11:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 98
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.15732",
+      "identity_tokens": [
+        "arXiv:2604.15732"
+      ],
+      "title": "Accuracy Is Speed: Towards Long-Context-Aware Routing for Distributed LLM Serving",
+      "reason": "arXiv一次要旨は長文脈で誤答による再試行が実ユーザー遅延を増やす点に注目し、正答までの時間TTCAを導入。長さ・言語に依存する精度変動を踏まえて能力ベースのLAARルーティングを提案しTTCAを改善。LLMサービングの正確性とレイテンシーを共同最適化する直接的な研究。",
+      "source_url": "https://arxiv.org/abs/2604.15732",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:11:44+09:00",
+      "last_checked_at": "2026-10-30T15:11:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 99
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.17404",
+      "identity_tokens": [
+        "arXiv:2406.17404"
+      ],
+      "title": "Make Some Noise: Unlocking Language Model Parallel Inference Capability through Noisy Training",
+      "reason": "arXiv v2一次要旨はノイズ入力の復元学習を使い、追加ドラフト構造なしに言語モデルの並列デコード能力を高めるMSNとTR-Jacobi復号を提案。一般・コード領域で品質を維持しつつ推論を2.3〜2.7倍高速化と報告。推論時の並列トークン生成に直接該当。",
+      "source_url": "https://arxiv.org/abs/2406.17404",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:11:44+09:00",
+      "last_checked_at": "2026-10-30T15:11:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 100
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34977",
+      "identity_tokens": [
+        "arXiv:2609.34977"
+      ],
+      "title": "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
+      "reason": "arXiv一次要旨は視覚エンコーダの中間層トークンから意味情報を選別し、LLMデコーダで注意・FFNの役割差に応じサブレイヤをスキップするSPIDERを提案。LLaVA-NeXT-7BでFLOPs79%削減し元性能96%維持と報告。MLLMの視覚・デコーダ双方の計算削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.34977",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:11:44+09:00",
+      "last_checked_at": "2026-10-30T15:11:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 102
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.23264",
+      "identity_tokens": [
+        "arXiv:2607.23264"
+      ],
+      "title": "X-Stage: Modeling Post-Issue Backpressure in GPU Communication--Computation Fusion",
+      "reason": "arXiv v2一次要旨はEP/TP/UP並列GPUで通信を発行した後のsender側バックプレッシャーを有限なX-Stageとしてモデル化し、送信バーストと計算窓を調整。代表的並列ワークロードで融合カーネル最大1.62倍、E2E最大1.75倍などを報告。分散LLM推論カーネルの通信計算融合に直接該当。",
+      "source_url": "https://arxiv.org/abs/2607.23264",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:11:44+09:00",
+      "last_checked_at": "2026-10-30T15:11:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 104
+    }
+  ]
+}

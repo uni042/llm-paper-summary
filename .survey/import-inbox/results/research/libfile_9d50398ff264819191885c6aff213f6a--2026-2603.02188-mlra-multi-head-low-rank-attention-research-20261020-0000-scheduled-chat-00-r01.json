@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "012f44e1578a04816eda520da012f8a7dbc488c710fd013dde51adb7a59d1777",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9d50398ff264819191885c6aff213f6a--2026-2603.02188-mlra-multi-head-low-rank-attention-research-20261020-0000-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2603.02188",
+  "worker_completed_at": "2026-10-20T00:13:53+09:00",
+  "worker_run_key": "20261020-0000-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5512,
+    "body_paragraphs": 27,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-20T15:58:40+00:00"
+}

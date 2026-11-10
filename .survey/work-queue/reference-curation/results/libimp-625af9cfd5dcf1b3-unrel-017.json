@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-625af9cfd5dcf1b3-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.09773",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.09773",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2408.09773",
+      "SemanticScholar:bf184e23d67837e00bac4ec043c8afb691dc718c",
+      "arXiv:2408.09773"
+    ],
+    "reason": "The paper compares probabilistic and verbalized confidence calibration in LLMs; it evaluates reliability rather than inference efficiency.",
+    "first_checked_at": "2026-10-16T06:19:27+00:00",
+    "last_checked_at": "2026-10-16T06:19:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+    ],
+    "title": "Are Large Language Models More Honest in Their Probabilistic or Verbalized Confidence?"
+  },
+  "processed_at": "2026-10-16T06:19:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-625af9cfd5dc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

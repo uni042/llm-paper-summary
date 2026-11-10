@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-efcdfebd54672739-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.29814",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.29814",
+    "identity_tokens": [
+      "arXiv:2606.29814"
+    ],
+    "reason": "Primary abstract reviewed: We propose Nemotron-Labs-Diffusion-Image, a state-of-the-art masked discrete diffusion model (MDM) for high-resolution text-to-image synthesis. Compared with prior work on masked image generation, Nemotron-Labs-Diffusion-Image addresses two key challenges. First, unlike continuous diffusion models which progressively refine latent representations across the entire image, standard MDMs lack self-correcting capability because discrete tokens cannot be modified once they are unm [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+    "first_checked_at": "2026-10-05T11:37:34+00:00",
+    "last_checked_at": "2026-10-05T11:37:34+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md"
+    ],
+    "title": "Nemotron-Labs-Diffusion-Image: Advancing Masked Discrete Diffusion for High-Resolution Image Synthesis"
+  },
+  "processed_at": "2026-10-05T11:37:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-efcdfebd5467",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

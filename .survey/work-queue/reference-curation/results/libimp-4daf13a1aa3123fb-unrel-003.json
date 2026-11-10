@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4daf13a1aa3123fb-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.15756",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.15756",
+    "identity_tokens": [
+      "arXiv:2405.15756"
+    ],
+    "reason": "一次要旨・題名が扱うのはWasserstein距離、神経活動のentanglementとsparsityの数学的関係で、LLMの重み量子化・疎量子化手法や言語モデル評価を示さない。量子化系統との語彙上の近さだけでは直接候補にならない。",
+    "first_checked_at": "2026-10-06T17:55:03+00:00",
+    "last_checked_at": "2026-10-06T17:55:03+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+    ],
+    "title": "Wasserstein Distances, Neuronal Entanglement, and Sparsity"
+  },
+  "processed_at": "2026-10-06T17:55:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4daf13a1aa31",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

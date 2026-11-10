@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b78ecf03541b6e0-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.19307",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.19307",
+    "identity_tokens": [
+      "arXiv:2510.19307"
+    ],
+    "reason": "RIL trains smaller VLM students to improve vision-language benchmark quality and states that inference runs at the original student speed without a think phase. This is a plausible multimodal deployment neighbor, retained as borderline: the paper does not measure memory/latency gains against an equal-quality baseline or modify an LLM decoding/serving algorithm, despite its speculative-decoding lineage link.",
+    "first_checked_at": "2026-10-06T17:30:25+00:00",
+    "last_checked_at": "2026-10-06T17:30:25+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Unified Reinforcement and Imitation Learning for Vision-Language Models"
+  },
+  "processed_at": "2026-10-06T17:30:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b78ecf03541",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

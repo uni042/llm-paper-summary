@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad060c94abfa669c-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.12499",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.12499",
+    "identity_tokens": [
+      "arXiv:2309.12499"
+    ],
+    "reason": "repository-level codingをplanning problemとして、dependency analysisとadaptive planningでLLM呼出しのmulti-step edit chainを生成しcodebase変更成功率を高めるagent/coding能力研究。推論runtime・KV cache・serving効率化ではない。",
+    "first_checked_at": "2026-10-05T16:03:30+00:00",
+    "last_checked_at": "2026-10-05T16:03:30+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md"
+    ],
+    "title": "CodePlan: Repository-level Coding using LLMs and Planning"
+  },
+  "processed_at": "2026-10-05T16:03:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad060c94abfa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

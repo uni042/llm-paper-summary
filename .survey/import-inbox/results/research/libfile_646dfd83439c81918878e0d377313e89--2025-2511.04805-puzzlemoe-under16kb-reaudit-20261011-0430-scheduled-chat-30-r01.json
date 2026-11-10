@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "f4bb05bd3323f2b5610d0ce499083ca349c18c2adb57ac49385d1a85b85fc0ee",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_646dfd83439c81918878e0d377313e89--2025-2511.04805-puzzlemoe-under16kb-reaudit-20261011-0430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2511.04805",
+  "worker_completed_at": "2026-10-11T04:38:00+09:00",
+  "worker_run_key": "20261011-0430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 9644,
+    "body_paragraphs": 50,
+    "method_chars": 2854,
+    "method_paragraphs": 16,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-11T03:50:52+00:00"
+}

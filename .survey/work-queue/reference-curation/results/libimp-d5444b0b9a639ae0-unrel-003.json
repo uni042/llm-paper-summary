@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5444b0b9a639ae0-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.18271",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.18271",
+    "identity_tokens": [
+      "arXiv:2608.18271"
+    ],
+    "reason": "On-policy self-distillation (OPSD) trains a student on its own responses using token-level supervision from the same model conditioned on privileged reference information. We investigate whether performance gains from OPSD show that the student learned the information in the reference or instead reflect recovery of reasoning behavior already present in the base model. We perform OPSD experiments on science and mathematics datasets using Qwen3 models ranging from 1.7B to 8B. O",
+    "first_checked_at": "2026-10-05T06:01:09+00:00",
+    "last_checked_at": "2026-10-05T06:01:09+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "Rethinking Privileged Information in On-Policy Self-Distillation"
+  },
+  "processed_at": "2026-10-05T06:01:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5444b0b9a63",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

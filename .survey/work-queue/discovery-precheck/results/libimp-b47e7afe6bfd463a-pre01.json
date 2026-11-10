@@ -1,0 +1,723 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b47e7afe6bfd463a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b47e7afe6bfd",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2603.21957",
+    "arXiv:2604.02965",
+    "arXiv:2604.04745",
+    "arXiv:2604.20796",
+    "arXiv:2604.22709",
+    "arXiv:2604.23950",
+    "arXiv:2604.24447"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "947347c937bef9ab24c8ac5037dd464d1775d56c",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T08:58:00.253624+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2603.21957",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.02965",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.04745",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.20796",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.22709",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.23950",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.24447",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model",
+      "source_url": "https://arxiv.org/abs/2604.20796",
+      "year": 2026,
+      "published": "2026-04-22",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present LLaDA2.0-Uni, a unified discrete diffusion large language model (dLLM) that supports multimodal understanding and generation within a natively integrated framework. Its architecture combines a fully semantic discrete tokenizer, a MoE-based dLLM backbone, and a diffusion decoder. By discretizing continuous visual inputs via SigLIP-VQ, the model enables block-level masked diffusion for both text and vision inputs within the backbone, while the decoder reconstructs visual tokens into high-fidelity images. Inference efficiency is enhanced beyond parallel decoding through prefix-aware optimizations in the backbone and few-step distillation in the decoder. Supported by carefully curated large-scale data and a tailored multi-stage training pipeline, LLaDA2.0-Uni matches specialized VLMs in multimodal understanding while delivering strong performance in image generation and editing. Its native support for interleaved generation and reasoning establishes a promising and scalable paradigm for next-generation unified foundation models. Codes and models are available at https://github.com/inclusionAI/LLaDA2.0-Uni.",
+      "identifiers": [
+        "SemanticScholar:019e2884371a4a8a4bf1061df13d7c434f826989"
+      ],
+      "semantic_scholar_id": "019e2884371a4a8a4bf1061df13d7c434f826989",
+      "canonical_id": "arXiv:2604.20796",
+      "arxiv_id": "2604.20796",
+      "doi": "10.48550/arXiv.2604.20796",
+      "authors": [
+        "Tiwei Bie",
+        "Hao-Xin Chen",
+        "Tieyuan Chen",
+        "Zhenglin Cheng",
+        "Long Cui",
+        "Kailei Gan",
+        "Zhicheng Huang",
+        "Zhen-Zhong Lan",
+        "Hao-Quan Li",
+        "Jianguo Li",
+        "Tao Lin",
+        "Qiujieli Qin",
+        "Hongjun Wang",
+        "Xiaomei Wang",
+        "Hao Wu",
+        "Yi Xin",
+        "Jun Zhao"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Unified Spatiotemporal Token Compression for Video-LLMs at Ultra-Low Retention",
+      "source_url": "https://arxiv.org/abs/2603.21957",
+      "year": 2026,
+      "published": "2026-03-23",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video large language models (Video-LLMs) face high computational costs due to large volumes of visual tokens. Existing token compression methods typically adopt a two-stage spatiotemporal compression strategy, relying on stage-specific metrics and an implicit assumption of spatiotemporal separability. Under extremely low retention ratios, however, such approaches often result in unbalanced allocation and loss of visual evidence essential for question answering. We reformulate token compression as a spatiotemporal allocation task within a global token retention pool. We propose a unified selection mechanism that integrates attention weights and semantic similarity to globally select tokens with high contribution and low redundancy. Unselected tokens are merged via clustering and refilled, preserving information integrity. Inside the LLM, we further introduce text-aware merging to perform secondary compression based on query relevance. Without requiring retraining, our method serves as a plug-and-play module compatible with existing Video-LLMs. Experiments show that retaining only about 2% of visual tokens preserves 90.1% of baseline performance across multiple benchmarks, while reducing FLOPs to roughly 2.6%. These benefits generalize across diverse backbones, decreasing end-to-end inference latency and memory consumption. Our unified spatiotemporal token compression strategy establishes the state-of-the-art in video understanding under ultra-low token retention.",
+      "identifiers": [
+        "SemanticScholar:5316b2eafc26ea62a77f6dce929abb05794a0c5a"
+      ],
+      "semantic_scholar_id": "5316b2eafc26ea62a77f6dce929abb05794a0c5a",
+      "canonical_id": "arXiv:2603.21957",
+      "arxiv_id": "2603.21957",
+      "doi": "10.48550/arXiv.2603.21957",
+      "authors": [
+        "Jun Du",
+        "Jia-Hao Xue",
+        "An-Qi Li",
+        "Jincheng Dai",
+        "Guo Lu"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Open-Loop Planning, Closed-Loop Verification: Speculative Verification for VLA",
+      "source_url": "https://arxiv.org/abs/2604.02965",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) models, as large foundation models for embodied control, have shown strong performance in manipulation tasks. However, their performance comes at high inference cost. To improve efficiency, recent methods adopt action chunking, which predicts a sequence of future actions for open-loop execution. Although effective for reducing computation, open-loop execution is sensitive to environmental changes and prone to error accumulation due to the lack of close-loop feedback. To address this limitation, we propose Speculative Verification for VLA Control (SV-VLA), a framework that combines efficient open-loop long-horizon planning with lightweight closed-loop online verification. Specifically, SV-VLA uses a heavy VLA as a low-frequency macro-planner to generate an action chunk together with a planning context, while a lightweight verifier continuously monitors execution based on the latest observations. Conditioned on both the current observation and the planning context, the verifier compares the planned action against a closed-loop reference action and triggers replanning only when necessary. Experiments demonstrate that SV-VLA combines the efficiency of chunked prediction with the robustness of closed-loop control, enabling efficient and reliable VLA-based control in dynamic environments. Code is available: https://github.com/edsad122/SV-VLA.",
+      "identifiers": [
+        "SemanticScholar:af49770d14c0e496f2555865969d34eda4fd8d8b"
+      ],
+      "semantic_scholar_id": "af49770d14c0e496f2555865969d34eda4fd8d8b",
+      "canonical_id": "arXiv:2604.02965",
+      "arxiv_id": "2604.02965",
+      "doi": "10.48550/arXiv.2604.02965",
+      "authors": [
+        "Zihua Wang",
+        "Zhi-Heng Lin",
+        "Ruibo Li",
+        "Yu Zhang",
+        "Xu Yang",
+        "Siya Mi",
+        "Xiu-Shen Wei"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Energy Cost of Execution-Idle in GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2604.04745",
+      "year": 2026,
+      "published": "2026-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "GPUs are becoming a major contributor to data center power, yet unlike CPUs, they can remain at high power even when visible activity is near zero. We call this state execution-idle. Using per-second telemetry from a large academic AI cluster, we characterize execution-idle as a recurring low-activity yet high-power state in real deployments. Across diverse workloads and multiple GPU generations, it accounts for 19.7% of in-execution time and 10.7% of energy. This suggests a need to both reduce the cost of execution-idle and reduce exposure to it. We therefore build two prototypes: one uses automatic downscaling during execution-idle, and the other uses load imbalance to reduce exposure, both with performance trade-offs. These findings suggest that future energy-efficient GPU systems should treat execution-idle as a first-class operating state.",
+      "identifiers": [
+        "SemanticScholar:9692e7bcb0b62d72b463b9a63413a7fc5bbd6747"
+      ],
+      "semantic_scholar_id": "9692e7bcb0b62d72b463b9a63413a7fc5bbd6747",
+      "canonical_id": "arXiv:2604.04745",
+      "arxiv_id": "2604.04745",
+      "doi": "10.48550/arXiv.2604.04745",
+      "authors": [
+        "Yiran Lei",
+        "Jared Fernandez",
+        "Vasilis Kypriotis",
+        "D. Skarlatos",
+        "Emma Strubell",
+        "Justine Sherry",
+        "Daniel Vosler"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 190,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought",
+      "source_url": "https://arxiv.org/abs/2604.22709",
+      "year": 2026,
+      "published": "2026-04-24",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While long, explicit chains-of-thought (CoT) have proven effective on complex reasoning tasks, they are costly to generate during inference. Non-verbal reasoning methods have emerged with shorter generation lengths by leveraging continuous representations, yet their performance lags behind verbalized CoT. We propose $\\textbf{Abstract Chain-of-Thought}$, a discrete latent reasoning post-training mechanism in which the language model produces a short sequence of tokens from a reserved vocabulary in lieu of a natural language CoT, before generating a response. To make previously unseen''abstract''tokens useful, we introduce a policy iteration-style warm-up loop that alternates between (i.) bottlenecking from a verbal CoT via masking and performing supervised fine-tuning, and (ii.) self-distillation by training the model to generate abstract tokens from the prompt alone via constrained decoding with the codebook. After warm-up, we optimize the generation of abstract sequences with warm-started reinforcement learning under constrained decoding. Abstract-CoT achieves up to $11.6\\times$ fewer reasoning tokens while demonstrating comparable performance across mathematical reasoning, instruction-following, and multi-hop reasoning, and generalizes across language model families. We also find an emergent power law distribution over the abstract vocabulary, akin to those seen in natural language, that evolves across the training phases. Our findings highlight the potential for post-training latent reasoning mechanisms that enable efficient inference through a learned abstract reasoning language.",
+      "identifiers": [
+        "SemanticScholar:f7d597c04e529e21ca6bb5ae00e0c84be2a51055"
+      ],
+      "semantic_scholar_id": "f7d597c04e529e21ca6bb5ae00e0c84be2a51055",
+      "canonical_id": "arXiv:2604.22709",
+      "arxiv_id": "2604.22709",
+      "doi": "10.48550/arXiv.2604.22709",
+      "authors": [
+        "Keshav Ramji",
+        "Tahira Naseem",
+        "R. Astudillo"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models",
+      "source_url": "https://arxiv.org/abs/2604.23950",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have recently demonstrated remarkable capabilities in visual understanding and reasoning, but they also impose significant computational burdens due to long visual sequence inputs. Recent works address this issue by pruning unimportant visual tokens, achieving substantial computational reduction while maintaining model performance. The core of token pruning lies in determining token importance, with current approaches primarily relying on attention scores from vision encoders or Large Language Models (LLMs). In this paper, we analyze the effectiveness of attention mechanisms in both vision encoders and LLMs. We find that vision encoders suffer from attention sink, leading to poor focus on informative foreground regions, while in LLMs, although prior studies have identified attention bias toward token positions, text-to-vision attention demonstrates resistance to this bias and enables effective pruning guidance in middle layers. Based on these observations, we propose LearnPruner, a two-stage token pruning framework that first removes redundant vision tokens via a learnable pruning module after the vision encoder, then retains only task-relevant tokens in the LLM's middle layer. Experimental results show that our LearnPruner can preserve approximately 95% of the original performance while using only 5.5% of vision tokens, and achieve 3.2$\\times$ inference acceleration, demonstrating a superior accuracy-efficiency trade-off.",
+      "identifiers": [
+        "SemanticScholar:b2e32fdd58d98f327d2ef26d4e79eaabc424ea21"
+      ],
+      "semantic_scholar_id": "b2e32fdd58d98f327d2ef26d4e79eaabc424ea21",
+      "canonical_id": "arXiv:2604.23950",
+      "arxiv_id": "2604.23950",
+      "doi": "10.48550/arXiv.2604.23950",
+      "authors": [
+        "Rinyoichi Takezoe",
+        "Ya-Qian Li",
+        "Zi-Hao Bo",
+        "Anzhou Hou",
+        "Mo Guang",
+        "Kai-Wen Long"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Characterizing Vision-Language-Action Models across XPUs: Constraints and Acceleration for On-Robot Deployment",
+      "source_url": "https://arxiv.org/abs/2604.24447",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) models are promising for generalist robot control, but on-robot deployment is bottlenecked by real-time inference under tight cost and energy budgets. Most prior evaluations rely on desktop-grade GPUs, obscuring the trade-offs and opportunities offered by heterogeneous edge accelerators (GPUs/XPUs/NPUs). We present a systematic analysis for low-cost VLA deployment via model-hardware co-characterization. First, we build a cross-accelerator leaderboard and evaluate model-hardware pairs under CET (Cost, Energy, Time), showing that right-sized edge devices can be more cost-/energy-efficient than flagship GPUs while meeting control-rate constraints. Second, using in-depth profiling, we uncover a consistent two-phase inference pattern: a compute-bound VLM backbone followed by a memory-bound Action Expert, which induces phase-dependent underutilization and hardware inefficiency. Finally, guided by these insights, we propose DP-Cache and V-AEFusion to reduce diffusion redundancy and enable asynchronous pipeline parallelism, achieving up to 2.9x speedup on GPUs and 6x on edge NPUs with only marginal success degradation. The example leaderboard website is available at: https://vla-leaderboard-01.vercel.app/.",
+      "identifiers": [
+        "SemanticScholar:85a0406fe5a99201d23c89b086e59e2ea38307c1"
+      ],
+      "semantic_scholar_id": "85a0406fe5a99201d23c89b086e59e2ea38307c1",
+      "canonical_id": "arXiv:2604.24447",
+      "arxiv_id": "2604.24447",
+      "doi": "10.48550/arXiv.2604.24447",
+      "authors": [
+        "Kai-Jun Zhou",
+        "Qi-Wei Chen",
+        "Dajiang Peng",
+        "Zhi-Yang Li",
+        "Xi-Jun Li",
+        "Jin-Yu Gu"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.20796",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.20796",
+        "id:SemanticScholar:019e2884371a4a8a4bf1061df13d7c434f826989",
+        "id:arXiv:2604.20796",
+        "title:llada20uni unifying multimodal understanding and generation with diffusion large language model",
+        "url:https://arxiv.org/abs/2604.20796"
+      ],
+      "record": {
+        "title": "LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model",
+        "source_url": "https://arxiv.org/abs/2604.20796",
+        "year": 2026,
+        "published": "2026-04-22",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present LLaDA2.0-Uni, a unified discrete diffusion large language model (dLLM) that supports multimodal understanding and generation within a natively integrated framework. Its architecture combines a fully semantic discrete tokenizer, a MoE-based dLLM backbone, and a diffusion decoder. By discretizing continuous visual inputs via SigLIP-VQ, the model enables block-level masked diffusion for both text and vision inputs within the backbone, while the decoder reconstructs visual tokens into high-fidelity images. Inference efficiency is enhanced beyond parallel decoding through prefix-aware optimizations in the backbone and few-step distillation in the decoder. Supported by carefully curated large-scale data and a tailored multi-stage training pipeline, LLaDA2.0-Uni matches specialized VLMs in multimodal understanding while delivering strong performance in image generation and editing. Its native support for interleaved generation and reasoning establishes a promising and scalable paradigm for next-generation unified foundation models. Codes and models are available at https://github.com/inclusionAI/LLaDA2.0-Uni.",
+        "identifiers": [
+          "SemanticScholar:019e2884371a4a8a4bf1061df13d7c434f826989"
+        ],
+        "semantic_scholar_id": "019e2884371a4a8a4bf1061df13d7c434f826989",
+        "canonical_id": "arXiv:2604.20796",
+        "arxiv_id": "2604.20796",
+        "doi": "10.48550/arXiv.2604.20796",
+        "authors": [
+          "Tiwei Bie",
+          "Hao-Xin Chen",
+          "Tieyuan Chen",
+          "Zhenglin Cheng",
+          "Long Cui",
+          "Kailei Gan",
+          "Zhicheng Huang",
+          "Zhen-Zhong Lan",
+          "Hao-Quan Li",
+          "Jianguo Li",
+          "Tao Lin",
+          "Qiujieli Qin",
+          "Hongjun Wang",
+          "Xiaomei Wang",
+          "Hao Wu",
+          "Yi Xin",
+          "Jun Zhao"
+        ],
+        "priority": 110,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 110,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 174,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.21957",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.21957",
+        "id:SemanticScholar:5316b2eafc26ea62a77f6dce929abb05794a0c5a",
+        "id:arXiv:2603.21957",
+        "title:unified spatiotemporal token compression for videollms at ultralow retention",
+        "url:https://arxiv.org/abs/2603.21957"
+      ],
+      "record": {
+        "title": "Unified Spatiotemporal Token Compression for Video-LLMs at Ultra-Low Retention",
+        "source_url": "https://arxiv.org/abs/2603.21957",
+        "year": 2026,
+        "published": "2026-03-23",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video large language models (Video-LLMs) face high computational costs due to large volumes of visual tokens. Existing token compression methods typically adopt a two-stage spatiotemporal compression strategy, relying on stage-specific metrics and an implicit assumption of spatiotemporal separability. Under extremely low retention ratios, however, such approaches often result in unbalanced allocation and loss of visual evidence essential for question answering. We reformulate token compression as a spatiotemporal allocation task within a global token retention pool. We propose a unified selection mechanism that integrates attention weights and semantic similarity to globally select tokens with high contribution and low redundancy. Unselected tokens are merged via clustering and refilled, preserving information integrity. Inside the LLM, we further introduce text-aware merging to perform secondary compression based on query relevance. Without requiring retraining, our method serves as a plug-and-play module compatible with existing Video-LLMs. Experiments show that retaining only about 2% of visual tokens preserves 90.1% of baseline performance across multiple benchmarks, while reducing FLOPs to roughly 2.6%. These benefits generalize across diverse backbones, decreasing end-to-end inference latency and memory consumption. Our unified spatiotemporal token compression strategy establishes the state-of-the-art in video understanding under ultra-low token retention.",
+        "identifiers": [
+          "SemanticScholar:5316b2eafc26ea62a77f6dce929abb05794a0c5a"
+        ],
+        "semantic_scholar_id": "5316b2eafc26ea62a77f6dce929abb05794a0c5a",
+        "canonical_id": "arXiv:2603.21957",
+        "arxiv_id": "2603.21957",
+        "doi": "10.48550/arXiv.2603.21957",
+        "authors": [
+          "Jun Du",
+          "Jia-Hao Xue",
+          "An-Qi Li",
+          "Jincheng Dai",
+          "Guo Lu"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 204,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.02965",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.02965",
+        "id:SemanticScholar:af49770d14c0e496f2555865969d34eda4fd8d8b",
+        "id:arXiv:2604.02965",
+        "title:openloop planning closedloop verification speculative verification for vla",
+        "url:https://arxiv.org/abs/2604.02965"
+      ],
+      "record": {
+        "title": "Open-Loop Planning, Closed-Loop Verification: Speculative Verification for VLA",
+        "source_url": "https://arxiv.org/abs/2604.02965",
+        "year": 2026,
+        "published": "2026-04-03",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language-Action (VLA) models, as large foundation models for embodied control, have shown strong performance in manipulation tasks. However, their performance comes at high inference cost. To improve efficiency, recent methods adopt action chunking, which predicts a sequence of future actions for open-loop execution. Although effective for reducing computation, open-loop execution is sensitive to environmental changes and prone to error accumulation due to the lack of close-loop feedback. To address this limitation, we propose Speculative Verification for VLA Control (SV-VLA), a framework that combines efficient open-loop long-horizon planning with lightweight closed-loop online verification. Specifically, SV-VLA uses a heavy VLA as a low-frequency macro-planner to generate an action chunk together with a planning context, while a lightweight verifier continuously monitors execution based on the latest observations. Conditioned on both the current observation and the planning context, the verifier compares the planned action against a closed-loop reference action and triggers replanning only when necessary. Experiments demonstrate that SV-VLA combines the efficiency of chunked prediction with the robustness of closed-loop control, enabling efficient and reliable VLA-based control in dynamic environments. Code is available: https://github.com/edsad122/SV-VLA.",
+        "identifiers": [
+          "SemanticScholar:af49770d14c0e496f2555865969d34eda4fd8d8b"
+        ],
+        "semantic_scholar_id": "af49770d14c0e496f2555865969d34eda4fd8d8b",
+        "canonical_id": "arXiv:2604.02965",
+        "arxiv_id": "2604.02965",
+        "doi": "10.48550/arXiv.2604.02965",
+        "authors": [
+          "Zihua Wang",
+          "Zhi-Heng Lin",
+          "Ruibo Li",
+          "Yu Zhang",
+          "Xu Yang",
+          "Siya Mi",
+          "Xiu-Shen Wei"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 193,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.04745",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.04745",
+        "id:SemanticScholar:9692e7bcb0b62d72b463b9a63413a7fc5bbd6747",
+        "id:arXiv:2604.04745",
+        "title:the energy cost of executionidle in gpu clusters",
+        "url:https://arxiv.org/abs/2604.04745"
+      ],
+      "record": {
+        "title": "The Energy Cost of Execution-Idle in GPU Clusters",
+        "source_url": "https://arxiv.org/abs/2604.04745",
+        "year": 2026,
+        "published": "2026-04-06",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "GPUs are becoming a major contributor to data center power, yet unlike CPUs, they can remain at high power even when visible activity is near zero. We call this state execution-idle. Using per-second telemetry from a large academic AI cluster, we characterize execution-idle as a recurring low-activity yet high-power state in real deployments. Across diverse workloads and multiple GPU generations, it accounts for 19.7% of in-execution time and 10.7% of energy. This suggests a need to both reduce the cost of execution-idle and reduce exposure to it. We therefore build two prototypes: one uses automatic downscaling during execution-idle, and the other uses load imbalance to reduce exposure, both with performance trade-offs. These findings suggest that future energy-efficient GPU systems should treat execution-idle as a first-class operating state.",
+        "identifiers": [
+          "SemanticScholar:9692e7bcb0b62d72b463b9a63413a7fc5bbd6747"
+        ],
+        "semantic_scholar_id": "9692e7bcb0b62d72b463b9a63413a7fc5bbd6747",
+        "canonical_id": "arXiv:2604.04745",
+        "arxiv_id": "2604.04745",
+        "doi": "10.48550/arXiv.2604.04745",
+        "authors": [
+          "Yiran Lei",
+          "Jared Fernandez",
+          "Vasilis Kypriotis",
+          "D. Skarlatos",
+          "Emma Strubell",
+          "Justine Sherry",
+          "Daniel Vosler"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 190,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.22709",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.22709",
+        "id:SemanticScholar:f7d597c04e529e21ca6bb5ae00e0c84be2a51055",
+        "id:arXiv:2604.22709",
+        "title:thinking without words efficient latent reasoning with abstract chainofthought",
+        "url:https://arxiv.org/abs/2604.22709"
+      ],
+      "record": {
+        "title": "Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought",
+        "source_url": "https://arxiv.org/abs/2604.22709",
+        "year": 2026,
+        "published": "2026-04-24",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While long, explicit chains-of-thought (CoT) have proven effective on complex reasoning tasks, they are costly to generate during inference. Non-verbal reasoning methods have emerged with shorter generation lengths by leveraging continuous representations, yet their performance lags behind verbalized CoT. We propose $\\textbf{Abstract Chain-of-Thought}$, a discrete latent reasoning post-training mechanism in which the language model produces a short sequence of tokens from a reserved vocabulary in lieu of a natural language CoT, before generating a response. To make previously unseen''abstract''tokens useful, we introduce a policy iteration-style warm-up loop that alternates between (i.) bottlenecking from a verbal CoT via masking and performing supervised fine-tuning, and (ii.) self-distillation by training the model to generate abstract tokens from the prompt alone via constrained decoding with the codebook. After warm-up, we optimize the generation of abstract sequences with warm-started reinforcement learning under constrained decoding. Abstract-CoT achieves up to $11.6\\times$ fewer reasoning tokens while demonstrating comparable performance across mathematical reasoning, instruction-following, and multi-hop reasoning, and generalizes across language model families. We also find an emergent power law distribution over the abstract vocabulary, akin to those seen in natural language, that evolves across the training phases. Our findings highlight the potential for post-training latent reasoning mechanisms that enable efficient inference through a learned abstract reasoning language.",
+        "identifiers": [
+          "SemanticScholar:f7d597c04e529e21ca6bb5ae00e0c84be2a51055"
+        ],
+        "semantic_scholar_id": "f7d597c04e529e21ca6bb5ae00e0c84be2a51055",
+        "canonical_id": "arXiv:2604.22709",
+        "arxiv_id": "2604.22709",
+        "doi": "10.48550/arXiv.2604.22709",
+        "authors": [
+          "Keshav Ramji",
+          "Tahira Naseem",
+          "R. Astudillo"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 172,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.23950",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.23950",
+        "id:SemanticScholar:b2e32fdd58d98f327d2ef26d4e79eaabc424ea21",
+        "id:arXiv:2604.23950",
+        "title:learnpruner rethinking attentionbased token pruning in vision language models",
+        "url:https://arxiv.org/abs/2604.23950"
+      ],
+      "record": {
+        "title": "LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models",
+        "source_url": "https://arxiv.org/abs/2604.23950",
+        "year": 2026,
+        "published": "2026-04-27",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) have recently demonstrated remarkable capabilities in visual understanding and reasoning, but they also impose significant computational burdens due to long visual sequence inputs. Recent works address this issue by pruning unimportant visual tokens, achieving substantial computational reduction while maintaining model performance. The core of token pruning lies in determining token importance, with current approaches primarily relying on attention scores from vision encoders or Large Language Models (LLMs). In this paper, we analyze the effectiveness of attention mechanisms in both vision encoders and LLMs. We find that vision encoders suffer from attention sink, leading to poor focus on informative foreground regions, while in LLMs, although prior studies have identified attention bias toward token positions, text-to-vision attention demonstrates resistance to this bias and enables effective pruning guidance in middle layers. Based on these observations, we propose LearnPruner, a two-stage token pruning framework that first removes redundant vision tokens via a learnable pruning module after the vision encoder, then retains only task-relevant tokens in the LLM's middle layer. Experimental results show that our LearnPruner can preserve approximately 95% of the original performance while using only 5.5% of vision tokens, and achieve 3.2$\\times$ inference acceleration, demonstrating a superior accuracy-efficiency trade-off.",
+        "identifiers": [
+          "SemanticScholar:b2e32fdd58d98f327d2ef26d4e79eaabc424ea21"
+        ],
+        "semantic_scholar_id": "b2e32fdd58d98f327d2ef26d4e79eaabc424ea21",
+        "canonical_id": "arXiv:2604.23950",
+        "arxiv_id": "2604.23950",
+        "doi": "10.48550/arXiv.2604.23950",
+        "authors": [
+          "Rinyoichi Takezoe",
+          "Ya-Qian Li",
+          "Zi-Hao Bo",
+          "Anzhou Hou",
+          "Mo Guang",
+          "Kai-Wen Long"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 169,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.24447",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.24447",
+        "id:SemanticScholar:85a0406fe5a99201d23c89b086e59e2ea38307c1",
+        "id:arXiv:2604.24447",
+        "title:characterizing visionlanguageaction models across xpus constraints and acceleration for onrobot deployment",
+        "url:https://arxiv.org/abs/2604.24447"
+      ],
+      "record": {
+        "title": "Characterizing Vision-Language-Action Models across XPUs: Constraints and Acceleration for On-Robot Deployment",
+        "source_url": "https://arxiv.org/abs/2604.24447",
+        "year": 2026,
+        "published": "2026-04-27",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language-Action (VLA) models are promising for generalist robot control, but on-robot deployment is bottlenecked by real-time inference under tight cost and energy budgets. Most prior evaluations rely on desktop-grade GPUs, obscuring the trade-offs and opportunities offered by heterogeneous edge accelerators (GPUs/XPUs/NPUs). We present a systematic analysis for low-cost VLA deployment via model-hardware co-characterization. First, we build a cross-accelerator leaderboard and evaluate model-hardware pairs under CET (Cost, Energy, Time), showing that right-sized edge devices can be more cost-/energy-efficient than flagship GPUs while meeting control-rate constraints. Second, using in-depth profiling, we uncover a consistent two-phase inference pattern: a compute-bound VLM backbone followed by a memory-bound Action Expert, which induces phase-dependent underutilization and hardware inefficiency. Finally, guided by these insights, we propose DP-Cache and V-AEFusion to reduce diffusion redundancy and enable asynchronous pipeline parallelism, achieving up to 2.9x speedup on GPUs and 6x on edge NPUs with only marginal success degradation. The example leaderboard website is available at: https://vla-leaderboard-01.vercel.app/.",
+        "identifiers": [
+          "SemanticScholar:85a0406fe5a99201d23c89b086e59e2ea38307c1"
+        ],
+        "semantic_scholar_id": "85a0406fe5a99201d23c89b086e59e2ea38307c1",
+        "canonical_id": "arXiv:2604.24447",
+        "arxiv_id": "2604.24447",
+        "doi": "10.48550/arXiv.2604.24447",
+        "authors": [
+          "Kai-Jun Zhou",
+          "Qi-Wei Chen",
+          "Dajiang Peng",
+          "Zhi-Yang Li",
+          "Xi-Jun Li",
+          "Jin-Yu Gu"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 169,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a04ec74ee1bbf5674b52ab4860a27713a4d45d87bc64bc5dafd514b8476f5d22",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

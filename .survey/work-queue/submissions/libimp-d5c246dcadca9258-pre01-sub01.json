@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Layer Importance Metric for Quantization Accounting for the Speed-Quality Trade-off in Autoregressive Models",
+      "source_url": "https://arxiv.org/abs/2608.26926",
+      "year": 2026,
+      "published": "2026-08-27",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Small language models (sLLMs) are nowadays hosted on devices with limited memory and computational budget. In an autoregressive setup, inference is memory-bandwidth bound: uniform quantization is often detrimental to such models, since their architecture has limited redundancies and only a few layers are not very sensitive to lower precision. We propose a composite metric that combines two orthogonal criteria: information retention (measured in terms of a normalized SQNR-based coefficient) and throughput gains (modeled using a roofline-based latency analysis). By profiling Gemma 3 1B, we find that Feed-Forward Network blocks and the embedding matrix are the most promising targets for acceleration. For each candidate, we estimate a normalized quality score based on simulated quantization and a normalized speed score based on roofline modeling with no actual execution needed. We combine the two scores in a composite priority coefficient, allowing us to tune the trade-off between speed and quality as needed. Our metric is general and can be used to prioritize individual blocks, their projection sublayers, or transformer layers as a whole. We evaluate our approach on several model architectures, showing that our estimates have at around 4% prediction error for the accelerated speedup. We find that our method generally allocates more resources to the most expressive layers compared to evolutionary search, specialized accelerators, or Shapley-value-based approaches that require expensive approximate inference. Our analytical approach makes sLLM quantization a predictable engineering task.",
+      "identifiers": [
+        "SemanticScholar:57886b53d0c59059dfd0680f096ecf24a283d64a"
+      ],
+      "semantic_scholar_id": "57886b53d0c59059dfd0680f096ecf24a283d64a",
+      "canonical_id": "arXiv:2608.26926",
+      "arxiv_id": "2608.26926",
+      "authors": [
+        "A. Safronov"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 64,
+        "matched_prestigious_venue": null
+      },
+      "reason": "小型自己回帰LLMの量子化対象層を、正規化SQNRによる情報保持スコアとroofline遅延モデルによる速度推定の複合指標で優先順位付けする。Gemma 3 1BのFFN・埋込層を重点対象とし、複数モデルで速度予測誤差約4%を報告。実行速度はモデル推定を含み、実測高速化そのものとは区別する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "CipherPrune: Efficient and Scalable Private Transformer Inference",
+      "source_url": "https://arxiv.org/abs/2502.16782",
+      "year": 2025,
+      "published": "2025-02-24",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Private Transformer inference using cryptographic protocols offers promising solutions for privacy-preserving machine learning; however, it still faces significant runtime overhead (efficiency issues) and challenges in handling long-token inputs (scalability issues). We observe that the Transformer's operational complexity scales quadratically with the number of input tokens, making it essential to reduce the input token length. Notably, each token varies in importance, and many inputs contain redundant tokens. Additionally, prior private inference methods that rely on high-degree polynomial approximations for non-linear activations are computationally expensive. Therefore, reducing the polynomial degree for less important tokens can significantly accelerate private inference. Building on these observations, we propose \\textit{CipherPrune}, an efficient and scalable private inference framework that includes a secure encrypted token pruning protocol, a polynomial reduction protocol, and corresponding Transformer network optimizations. At the protocol level, encrypted token pruning adaptively removes unimportant tokens from encrypted inputs in a progressive, layer-wise manner. Additionally, encrypted polynomial reduction assigns lower-degree polynomials to less important tokens after pruning, enhancing efficiency without decryption. At the network level, we introduce protocol-aware network optimization via a gradient-based search to maximize pruning thresholds and polynomial reduction conditions while maintaining the desired accuracy. Our experiments demonstrate that CipherPrune reduces the execution overhead of private Transformer inference by approximately $6.1\\times$ for 128-token inputs and $10.6\\times$ for 512-token inputs, compared to previous methods, with only a marginal drop in accuracy. The code is publicly available at https://github.com/UCF-Lou-Lab-PET/cipher-prune-inference.",
+      "identifiers": [
+        "SemanticScholar:0fbe70eafa252178bef9d4ee7ac747972c3a044b"
+      ],
+      "semantic_scholar_id": "0fbe70eafa252178bef9d4ee7ac747972c3a044b",
+      "canonical_id": "arXiv:2502.16782",
+      "arxiv_id": "2502.16782",
+      "doi": "10.48550/arXiv.2502.16782",
+      "authors": [
+        "Yan-Cheng Zhang",
+        "Jiaqi Xue",
+        "Meng Zheng",
+        "Mi-Mi Xie",
+        "Ming-Zhe Zhang",
+        "Lei Jiang",
+        "Qian Lou"
+      ],
+      "priority": 32,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 32,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 613,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "暗号化したTransformer推論の通信・計算負荷に対し、暗号文のまま重要度の低いトークンを層ごとに削り、残存トークンの重要度に応じて非線形近似の多項式次数も下げる。プロトコルを考慮した閾値探索を組み合わせ、128トークンで約6.1倍、512トークンで約10.6倍のprivate inference実行費用削減を報告。暗号化推論の直接的なシステム最適化。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Signs Beat Floats: Low-Rank Double-Binary Adaptation for On-Device Fine-Tuning",
+      "source_url": "https://arxiv.org/abs/2605.24058",
+      "year": 2026,
+      "published": "2026-05-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "On-device adaptation of large language models commonly keeps a quantized base model frozen while training and deploying a small, task-specific LoRA adapter. In the unmerged adapter-mode setting, however, the adapter is more than a compact storage module; it introduces an additional dense floating-point branch, maintains a trainable state for local updates, and acts as a unit of communication and hot-swapping.We introduce LoRDBA, a LoRA-compatible adapter that replaces both low-rank factors with binary sign carriers while representing magnitudes through lightweight, channel-wise scales, converting the dense adapter branch into two sign-accumulation matrix multiplications interleaved with channel-wise scaling. A finite-sample analysis shows that reconstruction quality is governed by the residual-to-magnitude ratio of the original LoRA factors. In adapter-mode experiments, LoRDBA outperforms low-bit baselines at matched model sizes while matching fp16 LoRA quality in selected regimes. The unmerged adapter incurs at most 8% prefill latency overhead at matched rank r=16 despite an over 10x reduction in adapter footprint, with moderate training memory overhead of approximately 1.6x that of fp16 LoRA.",
+      "identifiers": [
+        "SemanticScholar:a494e7b015bf952c5fa9cea24b5896512a3d3123"
+      ],
+      "semantic_scholar_id": "a494e7b015bf952c5fa9cea24b5896512a3d3123",
+      "canonical_id": "arXiv:2605.24058",
+      "arxiv_id": "2605.24058",
+      "doi": "10.48550/arXiv.2605.24058",
+      "authors": [
+        "Yoshihiko Fujisawa",
+        "Yuma Ichikawa",
+        "Yudai Fujimoto",
+        "Akira Sakai",
+        "Katsuki Fujisawa"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 161,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LoRAの低ランク行列2本を符号の二値表現とチャネル別スケールへ置換するLoRDBAを提案。未マージadapter-modeでアダプタ容量を10倍超削減し、rank16のprefill遅延増を最大8%に抑えると報告。主題はオンデバイス微調整だが、推論時のアダプタ常駐容量・ホットスワップ・prefill費用を直接扱う。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "FlowState: Execution State as Memory for Long-Horizon LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.34565",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon tasks require LLM agents to continually draw on information from earlier interactions. However, retaining the full history increases context costs, while compressing it risks losing details needed later, and the relevance of historical information often becomes apparent as the task progresses. To address these challenges, we propose FlowState, which treats execution state as memory that can be retained and revisited across requests, unifying current decision-making with the reuse of historical information. FlowState preserves semantically typed state nodes, their relations, and references to raw tool observations, separating persistent retention from on-demand access. Within a single execution loop, Incremental State Update (ISU) maintains the current state based on new inputs and feedback, while Progressive State Access (PSA) progressively reveals historical states and supporting evidence as needed during reasoning. Together, these mechanisms enable agents to reassess prior decisions in light of new information and guide subsequent actions. Compared with a full-context baseline using the same DeepSeek-V4-Flash model, FlowState improves the average success rate on MemoryArena and the average pass rate on $\\tau^3$-Bench by 4.55 and 13.95 percentage points, respectively, while reducing total token consumption by 43.2% and 40.6%. These results demonstrate the performance and efficiency advantages of FlowState on long-horizon tasks.",
+      "identifiers": [
+        "SemanticScholar:de10302e264d2181190b2d1cda345b99ceb5f776"
+      ],
+      "semantic_scholar_id": "de10302e264d2181190b2d1cda345b99ceb5f776",
+      "canonical_id": "arXiv:2609.34565",
+      "arxiv_id": "2609.34565",
+      "authors": [
+        "Ming-Hao Li",
+        "Bang-Yan Li",
+        "Zi-Fan Wang",
+        "Yu-Long Li",
+        "Hu Xu",
+        "Gan Zhang",
+        "Jing-Tong Wu",
+        "Wen-Qiang Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エージェント実行状態を意味付きノード・関係・ツール観測参照として保持し、ISUで逐次更新、PSAで必要時に履歴を段階的に再取得する。DeepSeek-V4-Flashを用いたMemoryArenaとτ³-Benchで成功率・pass率を4.55/13.95ポイント改善し、トークン消費を43.2/40.6%削減。エージェント実行時コンテキストの圧縮・オンデマンド読み出しに直接関連。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Priority-Aware Preemptive Scheduling for Mixed-Priority Workloads in MoE Inference",
+      "source_url": "https://arxiv.org/abs/2503.09304",
+      "year": 2025,
+      "published": "2025-03-12",
+      "venue": "EuroMLSys",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models have revolutionized natural language processing, yet serving them efficiently in data centers remains challenging due to mixed workloads comprising latency-sensitive (LS) and best-effort (BE) jobs. Existing inference systems employ iteration-level first-come-first-served scheduling, causing head-of-line blocking when BE jobs delay LS jobs. We introduce QLLM, a novel inference system designed for Mixture of Experts (MoE) models, featuring a fine-grained, priority-aware preemptive scheduler. QLLM enables expert-level preemption, deferring BE job execution while minimizing LS time-to-first-token (TTFT). Our approach removes iteration-level scheduling constraints, enabling the scheduler to preempt jobs at any layer based on priority. Evaluations on an Nvidia A100 GPU show that QLLM significantly improves performance. It reduces LS TTFT by an average of 65.5× and meets the SLO at up to 7 requests/sec, whereas the baseline fails to do so under the tested workload. Additionally, it cuts LS turnaround time by up to 12.8× without impacting throughput. QLLM is modular, extensible, and seamlessly integrates with Hugging Face MoE models.",
+      "identifiers": [
+        "SemanticScholar:15d03d5ebcc6c8f2340c49796457c064aec55d53"
+      ],
+      "semantic_scholar_id": "15d03d5ebcc6c8f2340c49796457c064aec55d53",
+      "canonical_id": "arXiv:2503.09304",
+      "arxiv_id": "2503.09304",
+      "doi": "10.1145/3721146.3721956",
+      "authors": [
+        "Mohammad Siavashi",
+        "Faezeh Keshmiri Dindarloo",
+        "Dejan Kostić",
+        "Marco Chiesa"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 597,
+        "matched_prestigious_venue": null
+      },
+      "reason": "QLLMはMoEのexpert単位で低優先要求をプリエンプトし、iteration境界に縛られず高優先リクエストを先行実行する。A100でlatency-sensitive要求のTTFTを平均65.5倍改善し、最大7 requests/sでSLOを満たすと報告。head-of-line blockingを減らす直接的な推論スケジューリング。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d5c246dcadca",
+    "round": "libimp-d5c246dcadca9258-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d5c246dcadca9258-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d5c246dcadca9258-pre01.json",
+    "receipt": "sha256:af6d0e232c6c0fb2092efd936156f1ef60f0acc4a8ce9e84ea03db385d02d3fe"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d5c246dcadca",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

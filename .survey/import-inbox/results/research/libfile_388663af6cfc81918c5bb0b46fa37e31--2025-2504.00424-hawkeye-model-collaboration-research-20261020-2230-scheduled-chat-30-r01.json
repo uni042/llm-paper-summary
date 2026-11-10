@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "3c3d9559b79180cd2c4be3d03f8357f1c2e187c6435d36936192745c384776a0",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_388663af6cfc81918c5bb0b46fa37e31--2025-2504.00424-hawkeye-model-collaboration-research-20261020-2230-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2504.00424",
+  "worker_completed_at": "2026-10-20T22:30:00+09:00",
+  "worker_run_key": "20261020-2230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4275,
+    "body_paragraphs": 24,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 146,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 146 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 146 < 500"
+  ],
+  "processed_at": "2026-10-21T16:46:01+00:00"
+}

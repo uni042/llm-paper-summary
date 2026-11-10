@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-394f8ca2b5dfd303-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/1476589.1476628",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/1476589.1476628",
+    "identity_tokens": [
+      "DOI:10.1145/1476589.1476628"
+    ],
+    "reason": "端末を介した人間–計算機対話で用途別に許容可能な応答時間を論じる1968年のHCI研究で、LLM推論サービングやSLO最適化を対象としない。",
+    "first_checked_at": "2026-10-04T05:28:31+00:00",
+    "last_checked_at": "2026-10-04T05:28:31+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2608.07458-coinrag.md"
+    ],
+    "title": "Response time in man-computer conversational transactions"
+  },
+  "processed_at": "2026-10-04T05:28:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-394f8ca2b5df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

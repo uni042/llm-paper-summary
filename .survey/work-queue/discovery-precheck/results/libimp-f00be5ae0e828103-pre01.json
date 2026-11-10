@@ -1,0 +1,779 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f00be5ae0e828103-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f00be5ae0e82",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/978-3-030-92185-9_30",
+    "DOI:10.1007/978-981-96-0960-4_24",
+    "DOI:10.1007/s00371-025-04264-2",
+    "DOI:10.1007/s00530-025-02179-5",
+    "DOI:10.1007/s00778-026-00993-5",
+    "DOI:10.1007/s10499-026-02644-6",
+    "DOI:10.1007/s10515-025-00560-2",
+    "DOI:10.1007/s10791-026-10353-0",
+    "DOI:10.1007/s10791-026-10580-5",
+    "DOI:10.1007/s11042-021-11224-0",
+    "DOI:10.1007/s11227-026-08777-y"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "adf825a2e5baf18d84ceed08077c3dad916dcdff",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-16T06:21:58.779872+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/978-3-030-92185-9_30",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1007/978-3-030-92185-9_30"
+    },
+    {
+      "requested_id": "DOI:10.1007/978-981-96-0960-4_24",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1007/s00371-025-04264-2",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1007/s00530-025-02179-5",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1007/s00778-026-00993-5",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1007/s10499-026-02644-6",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1007/s10515-025-00560-2",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1007/s10515-025-00560-2"
+    },
+    {
+      "requested_id": "DOI:10.1007/s10791-026-10353-0",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1007/s10791-026-10580-5",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1007/s10791-026-10580-5"
+    },
+    {
+      "requested_id": "DOI:10.1007/s11042-021-11224-0",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1007/s11227-026-08777-y",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "MambaStereo: enhancing stereo matching accuracy in ill-posed regions via Mamba-based cost volume",
+      "source_url": "https://doi.org/10.1007/s00371-025-04264-2",
+      "year": 2025,
+      "published": "2025-12-23",
+      "venue": "The Visual Computer",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:afb09c830f622cedb6871f0aef298869e88a1364"
+      ],
+      "semantic_scholar_id": "afb09c830f622cedb6871f0aef298869e88a1364",
+      "doi": "10.1007/s00371-025-04264-2",
+      "canonical_id": "DOI:10.1007/s00371-025-04264-2",
+      "authors": [
+        "Zhen Zhang",
+        "Jinlong Liu",
+        "Yaping Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 297,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A fire monitoring and alarm system based on channel-wise pruned YOLOv3",
+      "source_url": "https://doi.org/10.1007/s11042-021-11224-0",
+      "year": 2021,
+      "published": "2021-10-14",
+      "venue": "Multimedia tools and applications",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a1da08e69d4fdde56255bfd3a0b75a2b510c6b48"
+      ],
+      "semantic_scholar_id": "a1da08e69d4fdde56255bfd3a0b75a2b510c6b48",
+      "doi": "10.1007/s11042-021-11224-0",
+      "canonical_id": "DOI:10.1007/s11042-021-11224-0",
+      "authors": [
+        "Huimin Qian",
+        "Fei Shi",
+        "Wei Chen",
+        "Yilong Ma",
+        "Min Huang"
+      ],
+      "priority": 26,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 26,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1828,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DNN task computation offloading and resource allocation optimization strategy based on probabilistic early exit",
+      "source_url": "https://doi.org/10.1007/s11227-026-08777-y",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": "Journal of Supercomputing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:3da0177e351caa780c38fd776ac20df2ca7944ab"
+      ],
+      "semantic_scholar_id": "3da0177e351caa780c38fd776ac20df2ca7944ab",
+      "doi": "10.1007/s11227-026-08777-y",
+      "canonical_id": "DOI:10.1007/s11227-026-08777-y",
+      "authors": [
+        "Xianzhong Tian",
+        "Xuhua Mao",
+        "Xipeng Zhou"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 76,
+        "matched_prestigious_venue": "Supercomputing"
+      }
+    },
+    {
+      "title": "Towards balancing the efficiency and effectiveness: a unified edit-based framework for automatic image captioning",
+      "source_url": "https://doi.org/10.1007/s00530-025-02179-5",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "Multimedia Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:6f50203f92e887d7f1957754cd3d33dc4ee53b29"
+      ],
+      "semantic_scholar_id": "6f50203f92e887d7f1957754cd3d33dc4ee53b29",
+      "doi": "10.1007/s00530-025-02179-5",
+      "canonical_id": "DOI:10.1007/s00530-025-02179-5",
+      "authors": [
+        "Rui-Fan Li",
+        "Siwei Xu",
+        "Pengyue Lin",
+        "Fangxiang Feng",
+        "Zhan Ma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 255,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Distilled documentation for dialect-specific SQL generation",
+      "source_url": "https://doi.org/10.1007/s00778-026-00993-5",
+      "year": 2026,
+      "published": "2026-07-03",
+      "venue": "The VLDB journal",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:72609dee8efe42344ae1cbe5db3359054680a797"
+      ],
+      "semantic_scholar_id": "72609dee8efe42344ae1cbe5db3359054680a797",
+      "doi": "10.1007/s00778-026-00993-5",
+      "canonical_id": "DOI:10.1007/s00778-026-00993-5",
+      "authors": [
+        "Till Döhmen",
+        "Adithya Krishnan",
+        "Hamilton Ulmer",
+        "P. Boncz",
+        "Sebastian Schelter"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 105,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NCSSD-YOLO: a non-causal state space duality-based instance segmentation model for pacific white shrimp",
+      "source_url": "https://doi.org/10.1007/s10499-026-02644-6",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": "Aquaculture International",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:ace614f2020e6c84a6e369bd8eb100776e4a7068"
+      ],
+      "semantic_scholar_id": "ace614f2020e6c84a6e369bd8eb100776e4a7068",
+      "doi": "10.1007/s10499-026-02644-6",
+      "canonical_id": "DOI:10.1007/s10499-026-02644-6",
+      "authors": [
+        "Weiqiang Ni",
+        "Chenqing Zhang",
+        "Yiqing Zhang",
+        "Si-Yi Li",
+        "Hai-Tao Wang",
+        "Chen-Chen Wu",
+        "Lin Luo",
+        "Qinglang Liang",
+        "Ze-Qun Peng",
+        "Sheng-Hua Li",
+        "Yanqing Chen",
+        "Shiyin Chen",
+        "Jian Zhao",
+        "Jian-Lin Guo",
+        "Zhangying Ye"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 76,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mamba-enhanced detection transformer with selective state space models for multi-category defect detection in transmission lines",
+      "source_url": "https://doi.org/10.1007/s10791-026-10353-0",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": "Discover Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Automated defect detection in transmission lines is critical for power grid safety, yet existing detectors face three key limitations: limited global context in CNNs, quadratic computational complexity \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$\\mathcal {O}(N^2)$$\\end{document} in Transformers, and inadequate multi-scale fusion for geometrically diverse defects under long-tailed category distributions. This paper proposes MambaTL-Det, a novel detection framework built upon RT-DETR with four complementary innovations: (1) a MobileMamba backbone leveraging selective state space models to achieve linear \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$\\mathcal {O}(N)$$\\end{document} complexity while preserving global modelling capability; (2) a Dynamic Aspect Perception Block (DAP-Block) for aspect-ratio-aware feature enhancement via dual-branch spatial and channel attention; (3) a Strategic Collaborative Optimization Network (SCO-Net) for discriminative cross-scale feature fusion; and (4) a Hierarchical Category-Balanced (HCB) loss that jointly addresses category imbalance, instance difficulty, and geometric diversity. We also construct and release TL-Defect5K, a large-scale dataset comprising 6,908 images with over 25,500 annotations across five defect categories. Extensive experiments demonstrate that MambaTL-Det achieves 87.6% ± 0.3 mAP@0.5 and 62.4% ± 0.2 mAP@0.5:0.95 at 72.5 FPS, consistently outperforming 18 state-of-the-art baselines across four detection paradigms with statistical significance (\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$p<0.05$$\\end{document}, Wilcoxon signed-rank test over five independent runs). The dataset and code are available at https://github.com/Dali8710/TL-Defect5K.",
+      "identifiers": [
+        "SemanticScholar:e9f74894fc5aba91d0a78e87441063051983cae4"
+      ],
+      "semantic_scholar_id": "e9f74894fc5aba91d0a78e87441063051983cae4",
+      "doi": "10.1007/s10791-026-10353-0",
+      "canonical_id": "DOI:10.1007/s10791-026-10353-0",
+      "authors": [
+        "Peng-Hui Jia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 76,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QR-DETR: Query Routing for Detection Transformer",
+      "source_url": "https://doi.org/10.1007/978-981-96-0960-4_24",
+      "year": 2024,
+      "published": null,
+      "venue": "Asian Conference on Computer Vision",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:398e952317104da86936c264f0de152c016b2c9c"
+      ],
+      "semantic_scholar_id": "398e952317104da86936c264f0de152c016b2c9c",
+      "doi": "10.1007/978-981-96-0960-4_24",
+      "canonical_id": "DOI:10.1007/978-981-96-0960-4_24",
+      "authors": [
+        "Tharsan Senthivel",
+        "Ngoc-Son Vu"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 837,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1007/s00371-025-04264-2",
+      "identity_tokens": [
+        "id:DOI:10.1007/s00371-025-04264-2",
+        "id:SemanticScholar:afb09c830f622cedb6871f0aef298869e88a1364",
+        "title:mambastereo enhancing stereo matching accuracy in illposed regions via mambabased cost volume",
+        "url:https://doi.org/10.1007/s00371-025-04264-2"
+      ],
+      "record": {
+        "title": "MambaStereo: enhancing stereo matching accuracy in ill-posed regions via Mamba-based cost volume",
+        "source_url": "https://doi.org/10.1007/s00371-025-04264-2",
+        "year": 2025,
+        "published": "2025-12-23",
+        "venue": "The Visual Computer",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:afb09c830f622cedb6871f0aef298869e88a1364"
+        ],
+        "semantic_scholar_id": "afb09c830f622cedb6871f0aef298869e88a1364",
+        "doi": "10.1007/s00371-025-04264-2",
+        "canonical_id": "DOI:10.1007/s00371-025-04264-2",
+        "authors": [
+          "Zhen Zhang",
+          "Jinlong Liu",
+          "Yaping Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 297,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11042-021-11224-0",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11042-021-11224-0",
+        "id:SemanticScholar:a1da08e69d4fdde56255bfd3a0b75a2b510c6b48",
+        "title:a fire monitoring and alarm system based on channelwise pruned yolov3",
+        "url:https://doi.org/10.1007/s11042-021-11224-0"
+      ],
+      "record": {
+        "title": "A fire monitoring and alarm system based on channel-wise pruned YOLOv3",
+        "source_url": "https://doi.org/10.1007/s11042-021-11224-0",
+        "year": 2021,
+        "published": "2021-10-14",
+        "venue": "Multimedia tools and applications",
+        "citation_count": 26,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:a1da08e69d4fdde56255bfd3a0b75a2b510c6b48"
+        ],
+        "semantic_scholar_id": "a1da08e69d4fdde56255bfd3a0b75a2b510c6b48",
+        "doi": "10.1007/s11042-021-11224-0",
+        "canonical_id": "DOI:10.1007/s11042-021-11224-0",
+        "authors": [
+          "Huimin Qian",
+          "Fei Shi",
+          "Wei Chen",
+          "Yilong Ma",
+          "Min Huang"
+        ],
+        "priority": 26,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 26,
+          "citation_count": 26,
+          "total": 26,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1828,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11227-026-08777-y",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11227-026-08777-y",
+        "id:SemanticScholar:3da0177e351caa780c38fd776ac20df2ca7944ab",
+        "title:dnn task computation offloading and resource allocation optimization strategy based on probabilistic early exit",
+        "url:https://doi.org/10.1007/s11227-026-08777-y"
+      ],
+      "record": {
+        "title": "DNN task computation offloading and resource allocation optimization strategy based on probabilistic early exit",
+        "source_url": "https://doi.org/10.1007/s11227-026-08777-y",
+        "year": 2026,
+        "published": "2026-08-01",
+        "venue": "Journal of Supercomputing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:3da0177e351caa780c38fd776ac20df2ca7944ab"
+        ],
+        "semantic_scholar_id": "3da0177e351caa780c38fd776ac20df2ca7944ab",
+        "doi": "10.1007/s11227-026-08777-y",
+        "canonical_id": "DOI:10.1007/s11227-026-08777-y",
+        "authors": [
+          "Xianzhong Tian",
+          "Xuhua Mao",
+          "Xipeng Zhou"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 76,
+          "matched_prestigious_venue": "Supercomputing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s00530-025-02179-5",
+      "identity_tokens": [
+        "id:DOI:10.1007/s00530-025-02179-5",
+        "id:SemanticScholar:6f50203f92e887d7f1957754cd3d33dc4ee53b29",
+        "title:towards balancing the efficiency and effectiveness a unified editbased framework for automatic image captioning",
+        "url:https://doi.org/10.1007/s00530-025-02179-5"
+      ],
+      "record": {
+        "title": "Towards balancing the efficiency and effectiveness: a unified edit-based framework for automatic image captioning",
+        "source_url": "https://doi.org/10.1007/s00530-025-02179-5",
+        "year": 2026,
+        "published": "2026-02-03",
+        "venue": "Multimedia Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:6f50203f92e887d7f1957754cd3d33dc4ee53b29"
+        ],
+        "semantic_scholar_id": "6f50203f92e887d7f1957754cd3d33dc4ee53b29",
+        "doi": "10.1007/s00530-025-02179-5",
+        "canonical_id": "DOI:10.1007/s00530-025-02179-5",
+        "authors": [
+          "Rui-Fan Li",
+          "Siwei Xu",
+          "Pengyue Lin",
+          "Fangxiang Feng",
+          "Zhan Ma"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 255,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s00778-026-00993-5",
+      "identity_tokens": [
+        "id:DOI:10.1007/s00778-026-00993-5",
+        "id:SemanticScholar:72609dee8efe42344ae1cbe5db3359054680a797",
+        "title:distilled documentation for dialectspecific sql generation",
+        "url:https://doi.org/10.1007/s00778-026-00993-5"
+      ],
+      "record": {
+        "title": "Distilled documentation for dialect-specific SQL generation",
+        "source_url": "https://doi.org/10.1007/s00778-026-00993-5",
+        "year": 2026,
+        "published": "2026-07-03",
+        "venue": "The VLDB journal",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:72609dee8efe42344ae1cbe5db3359054680a797"
+        ],
+        "semantic_scholar_id": "72609dee8efe42344ae1cbe5db3359054680a797",
+        "doi": "10.1007/s00778-026-00993-5",
+        "canonical_id": "DOI:10.1007/s00778-026-00993-5",
+        "authors": [
+          "Till Döhmen",
+          "Adithya Krishnan",
+          "Hamilton Ulmer",
+          "P. Boncz",
+          "Sebastian Schelter"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 105,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s10499-026-02644-6",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10499-026-02644-6",
+        "id:SemanticScholar:ace614f2020e6c84a6e369bd8eb100776e4a7068",
+        "title:ncssdyolo a noncausal state space dualitybased instance segmentation model for pacific white shrimp",
+        "url:https://doi.org/10.1007/s10499-026-02644-6"
+      ],
+      "record": {
+        "title": "NCSSD-YOLO: a non-causal state space duality-based instance segmentation model for pacific white shrimp",
+        "source_url": "https://doi.org/10.1007/s10499-026-02644-6",
+        "year": 2026,
+        "published": "2026-08-01",
+        "venue": "Aquaculture International",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:ace614f2020e6c84a6e369bd8eb100776e4a7068"
+        ],
+        "semantic_scholar_id": "ace614f2020e6c84a6e369bd8eb100776e4a7068",
+        "doi": "10.1007/s10499-026-02644-6",
+        "canonical_id": "DOI:10.1007/s10499-026-02644-6",
+        "authors": [
+          "Weiqiang Ni",
+          "Chenqing Zhang",
+          "Yiqing Zhang",
+          "Si-Yi Li",
+          "Hai-Tao Wang",
+          "Chen-Chen Wu",
+          "Lin Luo",
+          "Qinglang Liang",
+          "Ze-Qun Peng",
+          "Sheng-Hua Li",
+          "Yanqing Chen",
+          "Shiyin Chen",
+          "Jian Zhao",
+          "Jian-Lin Guo",
+          "Zhangying Ye"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 76,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s10791-026-10353-0",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10791-026-10353-0",
+        "id:SemanticScholar:e9f74894fc5aba91d0a78e87441063051983cae4",
+        "title:mambaenhanced detection transformer with selective state space models for multicategory defect detection in transmission lines",
+        "url:https://doi.org/10.1007/s10791-026-10353-0"
+      ],
+      "record": {
+        "title": "Mamba-enhanced detection transformer with selective state space models for multi-category defect detection in transmission lines",
+        "source_url": "https://doi.org/10.1007/s10791-026-10353-0",
+        "year": 2026,
+        "published": "2026-08-01",
+        "venue": "Discover Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Automated defect detection in transmission lines is critical for power grid safety, yet existing detectors face three key limitations: limited global context in CNNs, quadratic computational complexity \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$\\mathcal {O}(N^2)$$\\end{document} in Transformers, and inadequate multi-scale fusion for geometrically diverse defects under long-tailed category distributions. This paper proposes MambaTL-Det, a novel detection framework built upon RT-DETR with four complementary innovations: (1) a MobileMamba backbone leveraging selective state space models to achieve linear \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$\\mathcal {O}(N)$$\\end{document} complexity while preserving global modelling capability; (2) a Dynamic Aspect Perception Block (DAP-Block) for aspect-ratio-aware feature enhancement via dual-branch spatial and channel attention; (3) a Strategic Collaborative Optimization Network (SCO-Net) for discriminative cross-scale feature fusion; and (4) a Hierarchical Category-Balanced (HCB) loss that jointly addresses category imbalance, instance difficulty, and geometric diversity. We also construct and release TL-Defect5K, a large-scale dataset comprising 6,908 images with over 25,500 annotations across five defect categories. Extensive experiments demonstrate that MambaTL-Det achieves 87.6% ± 0.3 mAP@0.5 and 62.4% ± 0.2 mAP@0.5:0.95 at 72.5 FPS, consistently outperforming 18 state-of-the-art baselines across four detection paradigms with statistical significance (\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$p<0.05$$\\end{document}, Wilcoxon signed-rank test over five independent runs). The dataset and code are available at https://github.com/Dali8710/TL-Defect5K.",
+        "identifiers": [
+          "SemanticScholar:e9f74894fc5aba91d0a78e87441063051983cae4"
+        ],
+        "semantic_scholar_id": "e9f74894fc5aba91d0a78e87441063051983cae4",
+        "doi": "10.1007/s10791-026-10353-0",
+        "canonical_id": "DOI:10.1007/s10791-026-10353-0",
+        "authors": [
+          "Peng-Hui Jia"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 76,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/978-981-96-0960-4_24",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-981-96-0960-4_24",
+        "id:SemanticScholar:398e952317104da86936c264f0de152c016b2c9c",
+        "title:qrdetr query routing for detection transformer",
+        "url:https://doi.org/10.1007/978-981-96-0960-4_24"
+      ],
+      "record": {
+        "title": "QR-DETR: Query Routing for Detection Transformer",
+        "source_url": "https://doi.org/10.1007/978-981-96-0960-4_24",
+        "year": 2024,
+        "published": null,
+        "venue": "Asian Conference on Computer Vision",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:398e952317104da86936c264f0de152c016b2c9c"
+        ],
+        "semantic_scholar_id": "398e952317104da86936c264f0de152c016b2c9c",
+        "doi": "10.1007/978-981-96-0960-4_24",
+        "canonical_id": "DOI:10.1007/978-981-96-0960-4_24",
+        "authors": [
+          "Tharsan Senthivel",
+          "Ngoc-Son Vu"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 837,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a26ecfe6e517bbcd360a5caca7ab155379457572848ce83d70f8e7ef04170328",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

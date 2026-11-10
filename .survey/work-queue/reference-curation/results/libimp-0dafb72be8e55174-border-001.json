@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0dafb72be8e55174-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.33992",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.33992",
+    "identity_tokens": [
+      "arXiv:2609.33992"
+    ],
+    "reason": "The system addresses inference availability under adversarial routing, not an ordinary efficiency gain; survey fit is weak despite serving/queueing evidence.",
+    "first_checked_at": "2026-10-05T05:14:49+00:00",
+    "last_checked_at": "2026-10-05T05:14:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "GateDrain: Availability Attacks and Admission-Side Defense for Confidence-Gated Edge-Cloud Inference"
+  },
+  "processed_at": "2026-10-05T05:14:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0dafb72be8e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

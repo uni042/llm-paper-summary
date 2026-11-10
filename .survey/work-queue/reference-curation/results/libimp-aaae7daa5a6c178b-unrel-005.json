@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aaae7daa5a6c178b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2207.09094",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2207.09094",
+    "identity_tokens": [
+      "arXiv:2207.09094"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2207.09094. Primary abstract addresses MoE overfitting and task quality in machine translation/NLU; its contribution is learning/regularization, not inference efficiency.",
+    "first_checked_at": "2026-10-05T14:37:31+00:00",
+    "last_checked_at": "2026-10-05T14:37:31+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md"
+    ],
+    "title": "MoEC: Mixture of Expert Clusters"
+  },
+  "processed_at": "2026-10-05T14:37:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aaae7daa5a6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,1346 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1b74fe66df1afb56-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1b74fe66df1a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2412.13437",
+    "arXiv:2503.01820",
+    "arXiv:2503.24000",
+    "arXiv:2506.14851",
+    "arXiv:2507.16731",
+    "arXiv:2510.11292",
+    "arXiv:2511.16193",
+    "arXiv:2602.01274",
+    "arXiv:2602.05191",
+    "arXiv:2604.07857",
+    "arXiv:2604.17227",
+    "arXiv:2605.05888",
+    "arXiv:2606.01725",
+    "arXiv:2608.26070"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 14,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "179c5c41a0f47df3fb7cbf4d3bda07050ea5cbe2",
+  "raw_search_result_count": 14,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": {
+    "requested_count": 14,
+    "status_counts": {
+      "allowed": 13,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T10:32:39.994174+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2412.13437",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.01820",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.24000",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.14851",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.16731",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.11292",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.16193",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.01274",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.05191",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.07857",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.17227",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "rejection_ledger",
+      "matched_token": "id:arXiv:2604.17227"
+    },
+    {
+      "requested_id": "arXiv:2605.05888",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.01725",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.26070",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Fast LLM Post-training via Decoupled and Fastest-of-N Speculation",
+      "source_url": "https://arxiv.org/abs/2511.16193",
+      "year": 2025,
+      "published": "2025-11-20",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Rollout dominates the training time in large language model (LLM) post-training, where the trained model is used to generate tokens given a batch of prompts. This work, SpecActor, achieves fast rollout with speculative decoding that deploys a fast draft path to accelerate the unparallelizable generation, while the correctness is guaranteed by fast parallel verification of the outputs with the original model. SpecActor addresses two foundational challenges that hinder speculation efficiency: (1) a Decoupled speculation method that overcomes the computation inefficiency issue when executing speculative decoding with relative large per-worker batch size -- a common configuration in training but unfriendly to speculation, and (2) a Fastest-of-N speculation method that selects and combines different draft methods according to the rollout progress to approximate the optimal draft method even when the best one is unknown a priori. Extensive evaluations on production traces show that SpecActor accelerates mean rollout speed by 2.0--2.4x, with up to 2.7x speedup, over common post-training baselines. The results are consistent across both dense and MoE models and across different RL algorithms. Notably, SpecActor is 1.1--2.6x faster compared to vanilla speculative rollout in different traces. The accelerated rollout achieves 1.4--2.3x faster end-to-end training time.",
+      "identifiers": [
+        "SemanticScholar:085366ea390ce5e3c9a8acf57e78a7c808b3bf1e"
+      ],
+      "semantic_scholar_id": "085366ea390ce5e3c9a8acf57e78a7c808b3bf1e",
+      "canonical_id": "arXiv:2511.16193",
+      "arxiv_id": "2511.16193",
+      "doi": "10.48550/arXiv.2511.16193",
+      "authors": [
+        "Rongxin Cheng",
+        "Kai Zhou",
+        "Xing-Da Wei",
+        "Si-Yuan Liu",
+        "Mingcong Han",
+        "Ming-Jin Ai",
+        "Yeju Zhou",
+        "Bao-Quan Zhong",
+        "Wencong Xiao",
+        "Rong Chen",
+        "Hai-Bo Chen"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 328,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Double-P: Hierarchical Top-P Sparse Attention for Long-Context LLMs",
+      "source_url": "https://arxiv.org/abs/2602.05191",
+      "year": 2026,
+      "published": "2026-02-05",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As long-context inference becomes central to large language models (LLMs), attention over growing key-value caches emerges as a dominant decoding bottleneck, motivating sparse attention for scalable inference. Fixed-budget top-k sparse attention cannot adapt to heterogeneous attention distributions across heads and layers, whereas top-p sparse attention directly preserves attention mass and provides stronger accuracy guarantees. Existing top-p methods, however, fail to jointly optimize top-p accuracy, selection overhead, and sparse attention cost, which limits their overall efficiency. We present Double-P, a hierarchical sparse attention framework that optimizes all three stages. Double-P first performs coarse-grained top-p estimation at the cluster level using size-weighted centroids, then adaptively refines computation through a second top-p stage that allocates token-level attention only when needed. Across long-context benchmarks, Double-P consistently achieves near-zero accuracy drop, reducing attention computation overhead by up to 1.8x and delivers up to 1.3x end-to-end decoding speedup over state-of-the-art fixed-budget sparse attention methods.",
+      "identifiers": [
+        "SemanticScholar:a71f4c23d5ebedafe58f60c73399418581bfa64a"
+      ],
+      "semantic_scholar_id": "a71f4c23d5ebedafe58f60c73399418581bfa64a",
+      "canonical_id": "arXiv:2602.05191",
+      "arxiv_id": "2602.05191",
+      "doi": "10.48550/arXiv.2602.05191",
+      "authors": [
+        "Wentao Ni",
+        "Kang-Qi Zhang",
+        "Zhongming Yu",
+        "Oren Nelson",
+        "Min-Gu Lee",
+        "Hong Cai",
+        "F. Porikli",
+        "Jongryool Kim",
+        "Zhijian Liu",
+        "Ji-Shen Zhao"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 251,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Characterizing How Complex Agentic AI Systems Handle General Tasks: A Trace-Based Simulation Study",
+      "source_url": "https://arxiv.org/abs/2606.01725",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic AI completes tasks through iterative planning, tool use, and reasoning based on observed outcomes. Despite its popularity, its system-level behavior remains poorly understood, particularly for complex datasets and agent architectures-owing to highly non-deterministic execution, prohibitive evaluation costs, and limited visibility into proprietary models. This paper presents GAIATrace, the first token-level trace dataset of two state-of-the-art agentic systems (MiroThinker and OWL) running GAIA, a benchmark composed of a heterogeneous mix of general-purpose tasks. Unlike prior trace datasets, GAIATrace captures full reasoning tokens, task-level structures, and activities of every major participating LLMs, enabling in-depth systems research. Complementing the dataset, we present Vidur-Agent, a trace-driven simulator that can replay GAIATrace to perform reproducible, low-cost system evaluation across diverse simulated environments. Using both artifacts, we characterize how modern agentic systems handle general tasks and how various system design choices shape their behavior, yielding several unique findings.",
+      "identifiers": [
+        "SemanticScholar:66fdd0c49ac5fd22de48517088f31892c54acbd0"
+      ],
+      "semantic_scholar_id": "66fdd0c49ac5fd22de48517088f31892c54acbd0",
+      "canonical_id": "arXiv:2606.01725",
+      "arxiv_id": "2606.01725",
+      "doi": "10.1109/IISWC71020.2026.00018",
+      "authors": [
+        "Donghwan Kim",
+        "Prakhar Singh",
+        "Younghoon Min",
+        "Jongryool Kim",
+        "Jongse Park",
+        "K. Maeng"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pacer: Blockwise Pre-Verification for Speculative Decoding With Adaptive Length",
+      "source_url": "https://arxiv.org/abs/2602.01274",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "IEEE Transactions on Audio, Speech, and Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) is a powerful technique for accelerating the inference process of large language models (LLMs) without sacrificing accuracy. Typically, SD employs a small draft model to generate a fixed number of draft tokens, which are then verified in parallel by the target model. However, our experiments reveal that the optimal draft length varies significantly across different decoding steps. This variation suggests that using a fixed draft length limits the potential for further improvements in decoding speed. To address this challenge, we propose <sc>Pacer</sc>, a novel approach that dynamically controls draft length using a lightweight, trainable pre-verification layer. This layer pre-verifies draft tokens blockwise before they are sent to the target model, allowing the draft model to stop token generation if the blockwise pre-verification fails. We implement <sc>Pacer</sc> on multiple SD model pairs and evaluate its performance across various benchmarks. Our results demonstrate that <sc>Pacer</sc> achieves up to <inline-formula><tex-math notation=\"LaTeX\">$2.66\\times$</tex-math></inline-formula> Speedup over autoregressive decoding and consistently outperforms standard speculative decoding. Furthermore, <sc>Pacer</sc> achieves up to <inline-formula><tex-math notation=\"LaTeX\">$3.09\\times$</tex-math></inline-formula> speedup when integrated with Ouroboros and up to <inline-formula><tex-math notation=\"LaTeX\">$3.93\\times$</tex-math></inline-formula> when combined with EAGLE-2, demonstrating the compatibility of our method.",
+      "identifiers": [
+        "SemanticScholar:bd9914e3c727a2ed76fa402b305e5c561595b106"
+      ],
+      "semantic_scholar_id": "bd9914e3c727a2ed76fa402b305e5c561595b106",
+      "canonical_id": "arXiv:2602.01274",
+      "arxiv_id": "2602.01274",
+      "doi": "10.1109/TASLPRO.2026.3705693",
+      "authors": [
+        "Si-Tuo Zhang",
+        "Yi-Fan Zhang",
+        "Zichen Zhu",
+        "Hankun Wang",
+        "Da Ma",
+        "Danyang Zhang",
+        "Lu Chen",
+        "Kai Yu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 255,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Prefix Sliding for efficient test-time scaling",
+      "source_url": "https://arxiv.org/abs/2608.26070",
+      "year": 2026,
+      "published": "2026-08-26",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling uses extra test-time compute to improve performance, such as letting language models reason longer when solving a problem. As models keep the entire reasoning trace in memory via full attention, hard tasks that need long thinking can be prohibitively expensive. However, we find most intermediate reasoning tokens lose importance as the model continues reasoning. This calls into question whether retaining them is worth the cost. Based on this insight, we propose Prefix Sliding, which discards tokens during reasoning that are not part of the prefix or the window of the last few thousand tokens. The prefix has key instructions and tools available to the model, while the most recent tokens are the current reasoning the model is working on. This caps the total memory requirement regardless of how long the model reasons, allowing for efficient long-horizon test-time scaling. Without training, Prefix Sliding can make existing models 3x faster while maintaining performance. Training with Prefix Sliding using reinforcement learning can achieve better performance by enabling scaling to reasoning traces beyond a hundred thousand tokens. Ablations show Prefix Sliding outperforms summarizing intermediate tokens or vanilla sliding window. Our code is at https://github.com/Muennighoff/prefix-sliding",
+      "identifiers": [
+        "SemanticScholar:8deb2520597538cb4c5b421a605b88afd0f5b64a"
+      ],
+      "semantic_scholar_id": "8deb2520597538cb4c5b421a605b88afd0f5b64a",
+      "canonical_id": "arXiv:2608.26070",
+      "arxiv_id": "2608.26070",
+      "authors": [
+        "Niklas Muennighoff",
+        "Zhengyuan Wang",
+        "Ze-Ya Chen",
+        "Weijia Shi",
+        "Binyuan Hui",
+        "John Yang",
+        "Dayi Jiang",
+        "Mika Senghaas",
+        "Fares Obeid",
+        "Johannes Hagemann",
+        "Sami Jaghouar",
+        "Ludwig Schmidt",
+        "Percy Liang",
+        "Jason Wei",
+        "Andrew Y. Ng",
+        "Luke S. Zettlemoyer",
+        "Yejin Choi",
+        "Mike Lewis"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 49,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Collaborative Inference and Learning between Edge SLMs and Cloud LLMs: A Survey of Algorithms, Execution, and Open Challenges",
+      "source_url": "https://arxiv.org/abs/2507.16731",
+      "year": 2025,
+      "published": "2025-07-22",
+      "venue": "ACM Computing Surveys",
+      "citation_count": 35,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) evolve, deploying them solely in the cloud or compressing them for edge devices is increasingly inadequate due to latency, privacy, cost, and personalization concerns. This survey examines a collaborative paradigm in which cloud-based LLMs and edge-deployed small language models (SLMs) cooperate for both inference and training. We propose a unified taxonomy of edge-cloud collaboration strategies. For inference, we categorize approaches into task assignment, task division, and mixture-based collaboration at both task- and token-levels, encompassing adaptive scheduling, resource-aware offloading, speculative decoding, and modular routing. For training, we review distributed adaptation techniques, including parameter alignment, pruning, bidirectional distillation, and small-model-guided optimization. We further summarize datasets, benchmarks, and deployment practices, and highlight privacy-preserving methods and vertical applications. This survey aims to establish a systematic foundation for LLM-SLM collaboration, bridging system-algorithm co-design toward efficient, scalable, and trustworthy edge-cloud intelligence.",
+      "identifiers": [
+        "SemanticScholar:bf96193f2ee46de6a9efbd859c7ce7cb6338b31a"
+      ],
+      "semantic_scholar_id": "bf96193f2ee46de6a9efbd859c7ce7cb6338b31a",
+      "canonical_id": "arXiv:2507.16731",
+      "arxiv_id": "2507.16731",
+      "doi": "10.1145/3838593",
+      "authors": [
+        "Sen-Yao Li",
+        "Hao-Zhao Wang",
+        "Wen-Chao Xu",
+        "Rui Zhang",
+        "Song Guo",
+        "Jingling Yuan",
+        "Xian Zhong",
+        "Tian-Wei Zhang",
+        "Rui-Xuan Li"
+      ],
+      "priority": 35,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 35,
+        "citation_count": 35,
+        "total": 35,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 449,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rethinking Key-Value Cache Compression Techniques for Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2503.24000",
+      "year": 2025,
+      "published": "2025-03-31",
+      "venue": "Conference on Machine Learning and Systems",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-Value cache (\\texttt{KV} \\texttt{cache}) compression has emerged as a promising technique to optimize Large Language Model (LLM) serving. It primarily decreases the memory consumption of \\texttt{KV} \\texttt{cache} to reduce the computation cost. Despite the development of many compression algorithms, their applications in production environments are still not prevalent. In this paper, we revisit mainstream \\texttt{KV} \\texttt{cache} compression solutions from a practical perspective. Our contributions are three-fold. First, we comprehensively review existing algorithmic designs and benchmark studies for \\texttt{KV} \\texttt{cache} compression and identify missing pieces in their performance measurement, which could hinder their adoption in practice. Second, we empirically evaluate representative \\texttt{KV} \\texttt{cache} compression methods to uncover two key issues that affect the computational efficiency: (1) while compressing \\texttt{KV} \\texttt{cache} can reduce memory consumption, current implementations (e.g., FlashAttention, PagedAttention) do not optimize for production-level LLM serving, resulting in suboptimal throughput performance; (2) compressing \\texttt{KV} \\texttt{cache} may lead to longer outputs, resulting in increased end-to-end latency. We further investigate the accuracy performance of individual samples rather than the overall performance, revealing the intrinsic limitations in \\texttt{KV} \\texttt{cache} compression when handling specific LLM tasks. Third, we provide tools to shed light on future \\texttt{KV} \\texttt{cache} compression studies and facilitate their practical deployment in production. They are open-sourced in \\href{https://github.com/LLMkvsys/rethink-kv-compression}{https://github.com/LLMkvsys/rethink-kv-compression}.",
+      "identifiers": [
+        "SemanticScholar:4ee95cee32006ba7e6632863f1c68f3c30e2f839"
+      ],
+      "semantic_scholar_id": "4ee95cee32006ba7e6632863f1c68f3c30e2f839",
+      "canonical_id": "arXiv:2503.24000",
+      "arxiv_id": "2503.24000",
+      "doi": "10.48550/arXiv.2503.24000",
+      "authors": [
+        "Wei Gao",
+        "Xin-yan Zhou",
+        "Peng Sun",
+        "Tian-Wei Zhang",
+        "Yonggang Wen"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 562,
+        "matched_prestigious_venue": "Machine Learning and Systems"
+      }
+    },
+    {
+      "title": "MoE-Hub: Taming Software Complexity for Seamless MoE Overlap with Hardware-Accelerated Communication on Multi-GPU Systems",
+      "source_url": "https://arxiv.org/abs/2605.05888",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Mixture-of-Experts (MoE) architecture is crucial for scaling large language models, but its scalability is severely limited by inter-GPU communication bottlenecks in multi-GPU systems. Although overlapping communication with computation is a widely recognized optimization, its effective deployment still remains challenging, both in terms of performance and programmability. In this work, we identify the root cause as a fundamental abstraction mismatch between MoE's dynamic, irregular token-to-expert mapping and the static, address-centric communication model of modern GPUs, which necessitates a complex software mediation phase to resolve addresses before data transfers, limiting performance and software flexibility. To resolve this, we propose MoE-Hub, a hardware-software co-design that introduces a destination-agnostic communication paradigm. MoE-Hub decouples data transmission from address management, allowing producers to send data immediately after routing using only a logical destination, while address allocation and data-flow orchestration are handled transparently by lightweight hardware in the GPU hub. By hardware-accelerating the entire communication control plane, MoE-Hub enables seamless and transparent overlap. Our evaluation shows that MoE-Hub achieves $\\mathbf{1. 4 0} \\boldsymbol{\\times} \\mathbf{- 3. 0 8} \\boldsymbol{\\times}$ per-layer and $\\mathbf{1. 2 1} \\boldsymbol{\\times} \\mathbf{- 1. 9 8} \\boldsymbol{\\times}$ end-to-end speedup over state-of-the-art systems.",
+      "identifiers": [
+        "SemanticScholar:1ac595429371620f150028cd9685df27688910e9"
+      ],
+      "semantic_scholar_id": "1ac595429371620f150028cd9685df27688910e9",
+      "canonical_id": "arXiv:2605.05888",
+      "arxiv_id": "2605.05888",
+      "doi": "10.1109/ISCA66397.2026.00172",
+      "authors": [
+        "Zhuoshan Zhou",
+        "Chen Zhang",
+        "Shu-Yi Zhang",
+        "Qi-Jun Zhang",
+        "Haibo Wang",
+        "Zhe Zhou",
+        "Zhipeng Tu",
+        "Guang-Yu Sun",
+        "Yijia Diao",
+        "Zhigang Ji",
+        "Jingwen Leng",
+        "Guang-Hui He",
+        "Min-Yi Guo"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 160,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "Deploying Foundation Model Powered Agent Services: A Survey",
+      "source_url": "https://arxiv.org/abs/2412.13437",
+      "year": 2024,
+      "published": "2024-12-18",
+      "venue": "IEEE Communications Surveys and Tutorials",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Foundation model (FM) powered agent services are regarded as a promising solution to develop intelligent and personalized applications for advancing toward Artificial General Intelligence (AGI). To achieve high reliability and scalability in deploying these agent services, it is essential to collaboratively optimize computational and communication resources, thereby ensuring effective resource allocation and seamless service delivery. In pursuit of this vision, this paper proposes a unified framework aimed at providing a comprehensive survey on deploying FM-based agent services across heterogeneous devices, with the emphasis on the integration of model and resource optimization to establish a robust infrastructure for these services. Particularly, this paper begins with exploring various low-level optimization strategies during inference and studies approaches that enhance system scalability, such as parallelism techniques and resource scaling methods. The paper then discusses several prominent FMs and investigates research efforts focused on inference acceleration, including techniques such as model compression and token reduction. Moreover, the paper also investigates critical components for constructing agent services and highlights notable intelligent applications. Finally, the paper presents potential research directions for developing real-time agent services with high Quality of Service (QoS).",
+      "identifiers": [
+        "SemanticScholar:1567d7739436fe14ad422d89bc7567d22b748744"
+      ],
+      "semantic_scholar_id": "1567d7739436fe14ad422d89bc7567d22b748744",
+      "canonical_id": "arXiv:2412.13437",
+      "arxiv_id": "2412.13437",
+      "doi": "10.1109/COMST.2025.3580745",
+      "authors": [
+        "Wen-Chao Xu",
+        "Jinyu Chen",
+        "Peirong Zheng",
+        "Xiao-Quan Yi",
+        "Tian Tian",
+        "Wen-Hui Zhu",
+        "Quan Wan",
+        "Hao-Zhao Wang",
+        "Yunfeng Fan",
+        "Qinliang Su",
+        "Xuemin Shen"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 665,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Networking-Aware Energy Efficiency in Agentic AI Inference: A Survey",
+      "source_url": "https://arxiv.org/abs/2604.07857",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid emergence of Large Language Models (LLMs) has catalyzed Agentic artificial intelligence (AI), autonomous systems integrating perception, reasoning, and action into closed-loop pipelines for continuous adaptation. While unlocking transformative applications in mobile edge computing, autonomous systems, and next-generation wireless networks, this paradigm creates fundamental energy challenges through iterative inference and persistent data exchange. Unlike traditional AI where bottlenecks are computational Floating Point Operations (FLOPs), Agentic AI faces compounding computational and communication energy costs. In this survey, we propose an energy accounting framework identifying computational and communication costs across the Perception-Reasoning-Action cycle. We establish a unified taxonomy spanning model simplification, computation control, input and attention optimization, and hardware-aware inference. We explore cross-layer co-design strategies jointly optimizing model parameters, wireless transmissions, and edge resources. Finally, we identify open challenges of federated green learning, carbon-aware agency, 6th generation mobile communication (6G)-native Agentic AI, and self-sustaining systems, providing a roadmap for scalable autonomous intelligence.",
+      "identifiers": [
+        "SemanticScholar:aede4373725295a148574fdba79706c302e81ae8"
+      ],
+      "semantic_scholar_id": "aede4373725295a148574fdba79706c302e81ae8",
+      "canonical_id": "arXiv:2604.07857",
+      "arxiv_id": "2604.07857",
+      "doi": "10.48550/arXiv.2604.07857",
+      "authors": [
+        "Xiao-Jing Chen",
+        "Haiqiu Yu",
+        "Wei Ni",
+        "D. Niyato",
+        "Rui-Chen Zhang",
+        "Xin Wang",
+        "Shun-Qing Zhang",
+        "Shugong Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 188,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LouisKV: Efficient KV Cache Retrieval for Long Input-Output Sequences",
+      "source_url": "https://arxiv.org/abs/2510.11292",
+      "year": 2025,
+      "published": "2025-10-13",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Key-Value (KV) cache succeeds in reducing redundant computations in auto-regressive models, it introduces significant memory overhead, limiting its practical deployment in long-sequence scenarios. Existing KV retrieval methods mitigate this by dynamically retaining only a subset of KV entries on the GPU. However, they still suffer from notable efficiency and accuracy bottlenecks due to per-token retrieval and coarse-grained page-level KV management, especially in long-output reasoning scenarios. With the emergence of large reasoning models, efficiently handling such scenarios has become increasingly important. To address this issue, we present two key observations: (1) critical KVs exhibit strong temporal locality during decoding, and (2) these KVs exhibit distinct distribution patterns across the input prompt and generated output. Building on these observations, we propose LouisKV, an efficient KV cache retrieval framework designed for various long-sequence scenarios. Specifically, LouisKV introduces a semantic-aware retrieval strategy leveraging temporal locality to trigger retrieval only at semantic boundaries, drastically reducing computation and data transfer overhead. LouisKV also designs a decoupled, fine-grained management scheme that tailors differentiated strategies for input and output sequences to create retrieval units that better match the model's attention patterns, enabling precise identification of critical KVs. Furthermore, to boost efficiency, LouisKV incorporates several kernel-level optimizations, including custom Triton and CUDA kernels to accelerate the KV clustering and retrieval. Evaluations show that LouisKV achieves up to 4.7$\\times$ speedup over state-of-the-art KV retrieval methods while maintaining near-lossless accuracy across diverse long-sequence tasks, including long-input short-output, short-input long-output, and long-input long-output scenarios.",
+      "identifiers": [
+        "SemanticScholar:2dbc190fb236c0e1d595700f8df63690e39c999f"
+      ],
+      "semantic_scholar_id": "2dbc190fb236c0e1d595700f8df63690e39c999f",
+      "canonical_id": "arXiv:2510.11292",
+      "arxiv_id": "2510.11292",
+      "doi": "10.48550/arXiv.2510.11292",
+      "authors": [
+        "Wenbo Wu",
+        "Qing-Yi Si",
+        "Xiurui Pan",
+        "Ye Wang",
+        "Jie Zhang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 366,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RSQ: Learning from Important Tokens Leads to Better Quantized LLMs",
+      "source_url": "https://arxiv.org/abs/2503.01820",
+      "year": 2025,
+      "published": "2025-03-03",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Layer-wise quantization is a key technique for efficiently compressing large models without expensive retraining. Previous methods typically quantize the weights of each layer by\"uniformly\"optimizing the layer reconstruction loss across all output tokens. However, in this paper, we demonstrate that better-quantized models can be obtained by prioritizing learning from important tokens (e.g. which have large attention scores). Building on this finding, we propose RSQ (Rotate, Scale, then Quantize), which (1) applies rotations (orthogonal transformation) to the model to mitigate outliers (those with exceptionally large magnitude), (2) scales the token feature based on its importance, and (3) quantizes the model using the GPTQ framework with the second-order statistics computed by scaled tokens. To compute token importance, we explore both heuristic and dynamic strategies. Based on a thorough analysis of all approaches, we adopt attention concentration, which uses attention scores of each token as its importance, as the best approach. We demonstrate that RSQ consistently outperforms baseline methods across multiple downstream tasks and three model families: LLaMA3, Mistral, and Qwen2.5. Additionally, models quantized with RSQ achieve superior performance on long-context tasks, further highlighting its effectiveness. Lastly, RSQ demonstrates generalizability across various setups, including different model sizes, calibration datasets, bit precisions, and quantization methods.",
+      "identifiers": [
+        "SemanticScholar:0774348505d0484f23fbc28bc99803661f7e3f50"
+      ],
+      "semantic_scholar_id": "0774348505d0484f23fbc28bc99803661f7e3f50",
+      "canonical_id": "arXiv:2503.01820",
+      "arxiv_id": "2503.01820",
+      "doi": "10.48550/arXiv.2503.01820",
+      "authors": [
+        "Yi-Lin Sung",
+        "Prateek Yadav",
+        "Jialu Li",
+        "Jaehong Yoon",
+        "Mohit Bansal"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 590,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hermes: Efficient Serving of LLM Applications with Probabilistic Demand Modeling",
+      "source_url": "https://arxiv.org/abs/2506.14851",
+      "year": 2025,
+      "published": "2025-06-17",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Applications based on Large Language Models (LLMs) contain a series of tasks to address real-world problems with boosted capability, which have dynamic demand volumes on diverse backends. Existing serving systems treat the resource demands of LLM applications as a blackbox, compromising end-to-end efficiency due to improper queuing order and backend warm up latency. We find that the resource demands of LLM applications can be modeled in a general and accurate manner with Probabilistic Demand Graph (PDGraph). We then propose Hermes, which leverages PDGraph for efficient serving of LLM applications. Confronting probabilistic demand description, Hermes applies the Gittins policy to determine the scheduling order that can minimize the average application completion time. It also uses the PDGraph model to help prewarm cold backends at proper moments. Experiments with diverse LLM applications confirm that Hermes can effectively improve the application serving efficiency, reducing the average completion time by over 70% and the P95 completion time by over 80%.",
+      "identifiers": [
+        "SemanticScholar:992024cac00a9a7b4165a8ef917ce8886a2b7080"
+      ],
+      "semantic_scholar_id": "992024cac00a9a7b4165a8ef917ce8886a2b7080",
+      "canonical_id": "arXiv:2506.14851",
+      "arxiv_id": "2506.14851",
+      "doi": "10.1145/3803390",
+      "authors": [
+        "Yifei Liu",
+        "Zuo Gan",
+        "Zheng-Hao Gan",
+        "Weiye Wang",
+        "Chen Chen",
+        "Yizhou Shan",
+        "Xu-Sheng Chen",
+        "Zhenhua Han",
+        "Yifei Zhu",
+        "Shixuan Sun",
+        "Min-Yi Guo"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 484,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.16193",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.16193",
+        "id:SemanticScholar:085366ea390ce5e3c9a8acf57e78a7c808b3bf1e",
+        "id:arXiv:2511.16193",
+        "title:fast llm posttraining via decoupled and fastestofn speculation",
+        "url:https://arxiv.org/abs/2511.16193"
+      ],
+      "record": {
+        "title": "Fast LLM Post-training via Decoupled and Fastest-of-N Speculation",
+        "source_url": "https://arxiv.org/abs/2511.16193",
+        "year": 2025,
+        "published": "2025-11-20",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Rollout dominates the training time in large language model (LLM) post-training, where the trained model is used to generate tokens given a batch of prompts. This work, SpecActor, achieves fast rollout with speculative decoding that deploys a fast draft path to accelerate the unparallelizable generation, while the correctness is guaranteed by fast parallel verification of the outputs with the original model. SpecActor addresses two foundational challenges that hinder speculation efficiency: (1) a Decoupled speculation method that overcomes the computation inefficiency issue when executing speculative decoding with relative large per-worker batch size -- a common configuration in training but unfriendly to speculation, and (2) a Fastest-of-N speculation method that selects and combines different draft methods according to the rollout progress to approximate the optimal draft method even when the best one is unknown a priori. Extensive evaluations on production traces show that SpecActor accelerates mean rollout speed by 2.0--2.4x, with up to 2.7x speedup, over common post-training baselines. The results are consistent across both dense and MoE models and across different RL algorithms. Notably, SpecActor is 1.1--2.6x faster compared to vanilla speculative rollout in different traces. The accelerated rollout achieves 1.4--2.3x faster end-to-end training time.",
+        "identifiers": [
+          "SemanticScholar:085366ea390ce5e3c9a8acf57e78a7c808b3bf1e"
+        ],
+        "semantic_scholar_id": "085366ea390ce5e3c9a8acf57e78a7c808b3bf1e",
+        "canonical_id": "arXiv:2511.16193",
+        "arxiv_id": "2511.16193",
+        "doi": "10.48550/arXiv.2511.16193",
+        "authors": [
+          "Rongxin Cheng",
+          "Kai Zhou",
+          "Xing-Da Wei",
+          "Si-Yuan Liu",
+          "Mingcong Han",
+          "Ming-Jin Ai",
+          "Yeju Zhou",
+          "Bao-Quan Zhong",
+          "Wencong Xiao",
+          "Rong Chen",
+          "Hai-Bo Chen"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 328,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.05191",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.05191",
+        "id:SemanticScholar:a71f4c23d5ebedafe58f60c73399418581bfa64a",
+        "id:arXiv:2602.05191",
+        "title:doublep hierarchical topp sparse attention for longcontext llms",
+        "url:https://arxiv.org/abs/2602.05191"
+      ],
+      "record": {
+        "title": "Double-P: Hierarchical Top-P Sparse Attention for Long-Context LLMs",
+        "source_url": "https://arxiv.org/abs/2602.05191",
+        "year": 2026,
+        "published": "2026-02-05",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As long-context inference becomes central to large language models (LLMs), attention over growing key-value caches emerges as a dominant decoding bottleneck, motivating sparse attention for scalable inference. Fixed-budget top-k sparse attention cannot adapt to heterogeneous attention distributions across heads and layers, whereas top-p sparse attention directly preserves attention mass and provides stronger accuracy guarantees. Existing top-p methods, however, fail to jointly optimize top-p accuracy, selection overhead, and sparse attention cost, which limits their overall efficiency. We present Double-P, a hierarchical sparse attention framework that optimizes all three stages. Double-P first performs coarse-grained top-p estimation at the cluster level using size-weighted centroids, then adaptively refines computation through a second top-p stage that allocates token-level attention only when needed. Across long-context benchmarks, Double-P consistently achieves near-zero accuracy drop, reducing attention computation overhead by up to 1.8x and delivers up to 1.3x end-to-end decoding speedup over state-of-the-art fixed-budget sparse attention methods.",
+        "identifiers": [
+          "SemanticScholar:a71f4c23d5ebedafe58f60c73399418581bfa64a"
+        ],
+        "semantic_scholar_id": "a71f4c23d5ebedafe58f60c73399418581bfa64a",
+        "canonical_id": "arXiv:2602.05191",
+        "arxiv_id": "2602.05191",
+        "doi": "10.48550/arXiv.2602.05191",
+        "authors": [
+          "Wentao Ni",
+          "Kang-Qi Zhang",
+          "Zhongming Yu",
+          "Oren Nelson",
+          "Min-Gu Lee",
+          "Hong Cai",
+          "F. Porikli",
+          "Jongryool Kim",
+          "Zhijian Liu",
+          "Ji-Shen Zhao"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 251,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01725",
+      "identity_tokens": [
+        "id:DOI:10.1109/iiswc71020.2026.00018",
+        "id:SemanticScholar:66fdd0c49ac5fd22de48517088f31892c54acbd0",
+        "id:arXiv:2606.01725",
+        "title:characterizing how complex agentic ai systems handle general tasks a tracebased simulation study",
+        "url:https://arxiv.org/abs/2606.01725"
+      ],
+      "record": {
+        "title": "Characterizing How Complex Agentic AI Systems Handle General Tasks: A Trace-Based Simulation Study",
+        "source_url": "https://arxiv.org/abs/2606.01725",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agentic AI completes tasks through iterative planning, tool use, and reasoning based on observed outcomes. Despite its popularity, its system-level behavior remains poorly understood, particularly for complex datasets and agent architectures-owing to highly non-deterministic execution, prohibitive evaluation costs, and limited visibility into proprietary models. This paper presents GAIATrace, the first token-level trace dataset of two state-of-the-art agentic systems (MiroThinker and OWL) running GAIA, a benchmark composed of a heterogeneous mix of general-purpose tasks. Unlike prior trace datasets, GAIATrace captures full reasoning tokens, task-level structures, and activities of every major participating LLMs, enabling in-depth systems research. Complementing the dataset, we present Vidur-Agent, a trace-driven simulator that can replay GAIATrace to perform reproducible, low-cost system evaluation across diverse simulated environments. Using both artifacts, we characterize how modern agentic systems handle general tasks and how various system design choices shape their behavior, yielding several unique findings.",
+        "identifiers": [
+          "SemanticScholar:66fdd0c49ac5fd22de48517088f31892c54acbd0"
+        ],
+        "semantic_scholar_id": "66fdd0c49ac5fd22de48517088f31892c54acbd0",
+        "canonical_id": "arXiv:2606.01725",
+        "arxiv_id": "2606.01725",
+        "doi": "10.1109/IISWC71020.2026.00018",
+        "authors": [
+          "Donghwan Kim",
+          "Prakhar Singh",
+          "Younghoon Min",
+          "Jongryool Kim",
+          "Jongse Park",
+          "K. Maeng"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 135,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.01274",
+      "identity_tokens": [
+        "id:DOI:10.1109/taslpro.2026.3705693",
+        "id:SemanticScholar:bd9914e3c727a2ed76fa402b305e5c561595b106",
+        "id:arXiv:2602.01274",
+        "title:pacer blockwise preverification for speculative decoding with adaptive length",
+        "url:https://arxiv.org/abs/2602.01274"
+      ],
+      "record": {
+        "title": "Pacer: Blockwise Pre-Verification for Speculative Decoding With Adaptive Length",
+        "source_url": "https://arxiv.org/abs/2602.01274",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "IEEE Transactions on Audio, Speech, and Language Processing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD) is a powerful technique for accelerating the inference process of large language models (LLMs) without sacrificing accuracy. Typically, SD employs a small draft model to generate a fixed number of draft tokens, which are then verified in parallel by the target model. However, our experiments reveal that the optimal draft length varies significantly across different decoding steps. This variation suggests that using a fixed draft length limits the potential for further improvements in decoding speed. To address this challenge, we propose <sc>Pacer</sc>, a novel approach that dynamically controls draft length using a lightweight, trainable pre-verification layer. This layer pre-verifies draft tokens blockwise before they are sent to the target model, allowing the draft model to stop token generation if the blockwise pre-verification fails. We implement <sc>Pacer</sc> on multiple SD model pairs and evaluate its performance across various benchmarks. Our results demonstrate that <sc>Pacer</sc> achieves up to <inline-formula><tex-math notation=\"LaTeX\">$2.66\\times$</tex-math></inline-formula> Speedup over autoregressive decoding and consistently outperforms standard speculative decoding. Furthermore, <sc>Pacer</sc> achieves up to <inline-formula><tex-math notation=\"LaTeX\">$3.09\\times$</tex-math></inline-formula> speedup when integrated with Ouroboros and up to <inline-formula><tex-math notation=\"LaTeX\">$3.93\\times$</tex-math></inline-formula> when combined with EAGLE-2, demonstrating the compatibility of our method.",
+        "identifiers": [
+          "SemanticScholar:bd9914e3c727a2ed76fa402b305e5c561595b106"
+        ],
+        "semantic_scholar_id": "bd9914e3c727a2ed76fa402b305e5c561595b106",
+        "canonical_id": "arXiv:2602.01274",
+        "arxiv_id": "2602.01274",
+        "doi": "10.1109/TASLPRO.2026.3705693",
+        "authors": [
+          "Si-Tuo Zhang",
+          "Yi-Fan Zhang",
+          "Zichen Zhu",
+          "Hankun Wang",
+          "Da Ma",
+          "Danyang Zhang",
+          "Lu Chen",
+          "Kai Yu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 255,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.26070",
+      "identity_tokens": [
+        "id:SemanticScholar:8deb2520597538cb4c5b421a605b88afd0f5b64a",
+        "id:arXiv:2608.26070",
+        "title:prefix sliding for efficient testtime scaling",
+        "url:https://arxiv.org/abs/2608.26070"
+      ],
+      "record": {
+        "title": "Prefix Sliding for efficient test-time scaling",
+        "source_url": "https://arxiv.org/abs/2608.26070",
+        "year": 2026,
+        "published": "2026-08-26",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Test-time scaling uses extra test-time compute to improve performance, such as letting language models reason longer when solving a problem. As models keep the entire reasoning trace in memory via full attention, hard tasks that need long thinking can be prohibitively expensive. However, we find most intermediate reasoning tokens lose importance as the model continues reasoning. This calls into question whether retaining them is worth the cost. Based on this insight, we propose Prefix Sliding, which discards tokens during reasoning that are not part of the prefix or the window of the last few thousand tokens. The prefix has key instructions and tools available to the model, while the most recent tokens are the current reasoning the model is working on. This caps the total memory requirement regardless of how long the model reasons, allowing for efficient long-horizon test-time scaling. Without training, Prefix Sliding can make existing models 3x faster while maintaining performance. Training with Prefix Sliding using reinforcement learning can achieve better performance by enabling scaling to reasoning traces beyond a hundred thousand tokens. Ablations show Prefix Sliding outperforms summarizing intermediate tokens or vanilla sliding window. Our code is at https://github.com/Muennighoff/prefix-sliding",
+        "identifiers": [
+          "SemanticScholar:8deb2520597538cb4c5b421a605b88afd0f5b64a"
+        ],
+        "semantic_scholar_id": "8deb2520597538cb4c5b421a605b88afd0f5b64a",
+        "canonical_id": "arXiv:2608.26070",
+        "arxiv_id": "2608.26070",
+        "authors": [
+          "Niklas Muennighoff",
+          "Zhengyuan Wang",
+          "Ze-Ya Chen",
+          "Weijia Shi",
+          "Binyuan Hui",
+          "John Yang",
+          "Dayi Jiang",
+          "Mika Senghaas",
+          "Fares Obeid",
+          "Johannes Hagemann",
+          "Sami Jaghouar",
+          "Ludwig Schmidt",
+          "Percy Liang",
+          "Jason Wei",
+          "Andrew Y. Ng",
+          "Luke S. Zettlemoyer",
+          "Yejin Choi",
+          "Mike Lewis"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 49,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.16731",
+      "identity_tokens": [
+        "id:DOI:10.1145/3838593",
+        "id:SemanticScholar:bf96193f2ee46de6a9efbd859c7ce7cb6338b31a",
+        "id:arXiv:2507.16731",
+        "title:collaborative inference and learning between edge slms and cloud llms a survey of algorithms execution and open challenges",
+        "url:https://arxiv.org/abs/2507.16731"
+      ],
+      "record": {
+        "title": "Collaborative Inference and Learning between Edge SLMs and Cloud LLMs: A Survey of Algorithms, Execution, and Open Challenges",
+        "source_url": "https://arxiv.org/abs/2507.16731",
+        "year": 2025,
+        "published": "2025-07-22",
+        "venue": "ACM Computing Surveys",
+        "citation_count": 35,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) evolve, deploying them solely in the cloud or compressing them for edge devices is increasingly inadequate due to latency, privacy, cost, and personalization concerns. This survey examines a collaborative paradigm in which cloud-based LLMs and edge-deployed small language models (SLMs) cooperate for both inference and training. We propose a unified taxonomy of edge-cloud collaboration strategies. For inference, we categorize approaches into task assignment, task division, and mixture-based collaboration at both task- and token-levels, encompassing adaptive scheduling, resource-aware offloading, speculative decoding, and modular routing. For training, we review distributed adaptation techniques, including parameter alignment, pruning, bidirectional distillation, and small-model-guided optimization. We further summarize datasets, benchmarks, and deployment practices, and highlight privacy-preserving methods and vertical applications. This survey aims to establish a systematic foundation for LLM-SLM collaboration, bridging system-algorithm co-design toward efficient, scalable, and trustworthy edge-cloud intelligence.",
+        "identifiers": [
+          "SemanticScholar:bf96193f2ee46de6a9efbd859c7ce7cb6338b31a"
+        ],
+        "semantic_scholar_id": "bf96193f2ee46de6a9efbd859c7ce7cb6338b31a",
+        "canonical_id": "arXiv:2507.16731",
+        "arxiv_id": "2507.16731",
+        "doi": "10.1145/3838593",
+        "authors": [
+          "Sen-Yao Li",
+          "Hao-Zhao Wang",
+          "Wen-Chao Xu",
+          "Rui Zhang",
+          "Song Guo",
+          "Jingling Yuan",
+          "Xian Zhong",
+          "Tian-Wei Zhang",
+          "Rui-Xuan Li"
+        ],
+        "priority": 35,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 35,
+          "citation_count": 35,
+          "total": 35,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 449,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.24000",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.24000",
+        "id:SemanticScholar:4ee95cee32006ba7e6632863f1c68f3c30e2f839",
+        "id:arXiv:2503.24000",
+        "title:rethinking keyvalue cache compression techniques for large language model serving",
+        "url:https://arxiv.org/abs/2503.24000"
+      ],
+      "record": {
+        "title": "Rethinking Key-Value Cache Compression Techniques for Large Language Model Serving",
+        "source_url": "https://arxiv.org/abs/2503.24000",
+        "year": 2025,
+        "published": "2025-03-31",
+        "venue": "Conference on Machine Learning and Systems",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Key-Value cache (\\texttt{KV} \\texttt{cache}) compression has emerged as a promising technique to optimize Large Language Model (LLM) serving. It primarily decreases the memory consumption of \\texttt{KV} \\texttt{cache} to reduce the computation cost. Despite the development of many compression algorithms, their applications in production environments are still not prevalent. In this paper, we revisit mainstream \\texttt{KV} \\texttt{cache} compression solutions from a practical perspective. Our contributions are three-fold. First, we comprehensively review existing algorithmic designs and benchmark studies for \\texttt{KV} \\texttt{cache} compression and identify missing pieces in their performance measurement, which could hinder their adoption in practice. Second, we empirically evaluate representative \\texttt{KV} \\texttt{cache} compression methods to uncover two key issues that affect the computational efficiency: (1) while compressing \\texttt{KV} \\texttt{cache} can reduce memory consumption, current implementations (e.g., FlashAttention, PagedAttention) do not optimize for production-level LLM serving, resulting in suboptimal throughput performance; (2) compressing \\texttt{KV} \\texttt{cache} may lead to longer outputs, resulting in increased end-to-end latency. We further investigate the accuracy performance of individual samples rather than the overall performance, revealing the intrinsic limitations in \\texttt{KV} \\texttt{cache} compression when handling specific LLM tasks. Third, we provide tools to shed light on future \\texttt{KV} \\texttt{cache} compression studies and facilitate their practical deployment in production. They are open-sourced in \\href{https://github.com/LLMkvsys/rethink-kv-compression}{https://github.com/LLMkvsys/rethink-kv-compression}.",
+        "identifiers": [
+          "SemanticScholar:4ee95cee32006ba7e6632863f1c68f3c30e2f839"
+        ],
+        "semantic_scholar_id": "4ee95cee32006ba7e6632863f1c68f3c30e2f839",
+        "canonical_id": "arXiv:2503.24000",
+        "arxiv_id": "2503.24000",
+        "doi": "10.48550/arXiv.2503.24000",
+        "authors": [
+          "Wei Gao",
+          "Xin-yan Zhou",
+          "Peng Sun",
+          "Tian-Wei Zhang",
+          "Yonggang Wen"
+        ],
+        "priority": 21,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 21,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 562,
+          "matched_prestigious_venue": "Machine Learning and Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.05888",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00172",
+        "id:SemanticScholar:1ac595429371620f150028cd9685df27688910e9",
+        "id:arXiv:2605.05888",
+        "title:moehub taming software complexity for seamless moe overlap with hardwareaccelerated communication on multigpu systems",
+        "url:https://arxiv.org/abs/2605.05888"
+      ],
+      "record": {
+        "title": "MoE-Hub: Taming Software Complexity for Seamless MoE Overlap with Hardware-Accelerated Communication on Multi-GPU Systems",
+        "source_url": "https://arxiv.org/abs/2605.05888",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Mixture-of-Experts (MoE) architecture is crucial for scaling large language models, but its scalability is severely limited by inter-GPU communication bottlenecks in multi-GPU systems. Although overlapping communication with computation is a widely recognized optimization, its effective deployment still remains challenging, both in terms of performance and programmability. In this work, we identify the root cause as a fundamental abstraction mismatch between MoE's dynamic, irregular token-to-expert mapping and the static, address-centric communication model of modern GPUs, which necessitates a complex software mediation phase to resolve addresses before data transfers, limiting performance and software flexibility. To resolve this, we propose MoE-Hub, a hardware-software co-design that introduces a destination-agnostic communication paradigm. MoE-Hub decouples data transmission from address management, allowing producers to send data immediately after routing using only a logical destination, while address allocation and data-flow orchestration are handled transparently by lightweight hardware in the GPU hub. By hardware-accelerating the entire communication control plane, MoE-Hub enables seamless and transparent overlap. Our evaluation shows that MoE-Hub achieves $\\mathbf{1. 4 0} \\boldsymbol{\\times} \\mathbf{- 3. 0 8} \\boldsymbol{\\times}$ per-layer and $\\mathbf{1. 2 1} \\boldsymbol{\\times} \\mathbf{- 1. 9 8} \\boldsymbol{\\times}$ end-to-end speedup over state-of-the-art systems.",
+        "identifiers": [
+          "SemanticScholar:1ac595429371620f150028cd9685df27688910e9"
+        ],
+        "semantic_scholar_id": "1ac595429371620f150028cd9685df27688910e9",
+        "canonical_id": "arXiv:2605.05888",
+        "arxiv_id": "2605.05888",
+        "doi": "10.1109/ISCA66397.2026.00172",
+        "authors": [
+          "Zhuoshan Zhou",
+          "Chen Zhang",
+          "Shu-Yi Zhang",
+          "Qi-Jun Zhang",
+          "Haibo Wang",
+          "Zhe Zhou",
+          "Zhipeng Tu",
+          "Guang-Yu Sun",
+          "Yijia Diao",
+          "Zhigang Ji",
+          "Jingwen Leng",
+          "Guang-Hui He",
+          "Min-Yi Guo"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 160,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.13437",
+      "identity_tokens": [
+        "id:DOI:10.1109/comst.2025.3580745",
+        "id:SemanticScholar:1567d7739436fe14ad422d89bc7567d22b748744",
+        "id:arXiv:2412.13437",
+        "title:deploying foundation model powered agent services a survey",
+        "url:https://arxiv.org/abs/2412.13437"
+      ],
+      "record": {
+        "title": "Deploying Foundation Model Powered Agent Services: A Survey",
+        "source_url": "https://arxiv.org/abs/2412.13437",
+        "year": 2024,
+        "published": "2024-12-18",
+        "venue": "IEEE Communications Surveys and Tutorials",
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Foundation model (FM) powered agent services are regarded as a promising solution to develop intelligent and personalized applications for advancing toward Artificial General Intelligence (AGI). To achieve high reliability and scalability in deploying these agent services, it is essential to collaboratively optimize computational and communication resources, thereby ensuring effective resource allocation and seamless service delivery. In pursuit of this vision, this paper proposes a unified framework aimed at providing a comprehensive survey on deploying FM-based agent services across heterogeneous devices, with the emphasis on the integration of model and resource optimization to establish a robust infrastructure for these services. Particularly, this paper begins with exploring various low-level optimization strategies during inference and studies approaches that enhance system scalability, such as parallelism techniques and resource scaling methods. The paper then discusses several prominent FMs and investigates research efforts focused on inference acceleration, including techniques such as model compression and token reduction. Moreover, the paper also investigates critical components for constructing agent services and highlights notable intelligent applications. Finally, the paper presents potential research directions for developing real-time agent services with high Quality of Service (QoS).",
+        "identifiers": [
+          "SemanticScholar:1567d7739436fe14ad422d89bc7567d22b748744"
+        ],
+        "semantic_scholar_id": "1567d7739436fe14ad422d89bc7567d22b748744",
+        "canonical_id": "arXiv:2412.13437",
+        "arxiv_id": "2412.13437",
+        "doi": "10.1109/COMST.2025.3580745",
+        "authors": [
+          "Wen-Chao Xu",
+          "Jinyu Chen",
+          "Peirong Zheng",
+          "Xiao-Quan Yi",
+          "Tian Tian",
+          "Wen-Hui Zhu",
+          "Quan Wan",
+          "Hao-Zhao Wang",
+          "Yunfeng Fan",
+          "Qinliang Su",
+          "Xuemin Shen"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 665,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.07857",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.07857",
+        "id:SemanticScholar:aede4373725295a148574fdba79706c302e81ae8",
+        "id:arXiv:2604.07857",
+        "title:networkingaware energy efficiency in agentic ai inference a survey",
+        "url:https://arxiv.org/abs/2604.07857"
+      ],
+      "record": {
+        "title": "Networking-Aware Energy Efficiency in Agentic AI Inference: A Survey",
+        "source_url": "https://arxiv.org/abs/2604.07857",
+        "year": 2026,
+        "published": "2026-04-09",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid emergence of Large Language Models (LLMs) has catalyzed Agentic artificial intelligence (AI), autonomous systems integrating perception, reasoning, and action into closed-loop pipelines for continuous adaptation. While unlocking transformative applications in mobile edge computing, autonomous systems, and next-generation wireless networks, this paradigm creates fundamental energy challenges through iterative inference and persistent data exchange. Unlike traditional AI where bottlenecks are computational Floating Point Operations (FLOPs), Agentic AI faces compounding computational and communication energy costs. In this survey, we propose an energy accounting framework identifying computational and communication costs across the Perception-Reasoning-Action cycle. We establish a unified taxonomy spanning model simplification, computation control, input and attention optimization, and hardware-aware inference. We explore cross-layer co-design strategies jointly optimizing model parameters, wireless transmissions, and edge resources. Finally, we identify open challenges of federated green learning, carbon-aware agency, 6th generation mobile communication (6G)-native Agentic AI, and self-sustaining systems, providing a roadmap for scalable autonomous intelligence.",
+        "identifiers": [
+          "SemanticScholar:aede4373725295a148574fdba79706c302e81ae8"
+        ],
+        "semantic_scholar_id": "aede4373725295a148574fdba79706c302e81ae8",
+        "canonical_id": "arXiv:2604.07857",
+        "arxiv_id": "2604.07857",
+        "doi": "10.48550/arXiv.2604.07857",
+        "authors": [
+          "Xiao-Jing Chen",
+          "Haiqiu Yu",
+          "Wei Ni",
+          "D. Niyato",
+          "Rui-Chen Zhang",
+          "Xin Wang",
+          "Shun-Qing Zhang",
+          "Shugong Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 188,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.11292",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.11292",
+        "id:SemanticScholar:2dbc190fb236c0e1d595700f8df63690e39c999f",
+        "id:arXiv:2510.11292",
+        "title:louiskv efficient kv cache retrieval for long inputoutput sequences",
+        "url:https://arxiv.org/abs/2510.11292"
+      ],
+      "record": {
+        "title": "LouisKV: Efficient KV Cache Retrieval for Long Input-Output Sequences",
+        "source_url": "https://arxiv.org/abs/2510.11292",
+        "year": 2025,
+        "published": "2025-10-13",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Key-Value (KV) cache succeeds in reducing redundant computations in auto-regressive models, it introduces significant memory overhead, limiting its practical deployment in long-sequence scenarios. Existing KV retrieval methods mitigate this by dynamically retaining only a subset of KV entries on the GPU. However, they still suffer from notable efficiency and accuracy bottlenecks due to per-token retrieval and coarse-grained page-level KV management, especially in long-output reasoning scenarios. With the emergence of large reasoning models, efficiently handling such scenarios has become increasingly important. To address this issue, we present two key observations: (1) critical KVs exhibit strong temporal locality during decoding, and (2) these KVs exhibit distinct distribution patterns across the input prompt and generated output. Building on these observations, we propose LouisKV, an efficient KV cache retrieval framework designed for various long-sequence scenarios. Specifically, LouisKV introduces a semantic-aware retrieval strategy leveraging temporal locality to trigger retrieval only at semantic boundaries, drastically reducing computation and data transfer overhead. LouisKV also designs a decoupled, fine-grained management scheme that tailors differentiated strategies for input and output sequences to create retrieval units that better match the model's attention patterns, enabling precise identification of critical KVs. Furthermore, to boost efficiency, LouisKV incorporates several kernel-level optimizations, including custom Triton and CUDA kernels to accelerate the KV clustering and retrieval. Evaluations show that LouisKV achieves up to 4.7$\\times$ speedup over state-of-the-art KV retrieval methods while maintaining near-lossless accuracy across diverse long-sequence tasks, including long-input short-output, short-input long-output, and long-input long-output scenarios.",
+        "identifiers": [
+          "SemanticScholar:2dbc190fb236c0e1d595700f8df63690e39c999f"
+        ],
+        "semantic_scholar_id": "2dbc190fb236c0e1d595700f8df63690e39c999f",
+        "canonical_id": "arXiv:2510.11292",
+        "arxiv_id": "2510.11292",
+        "doi": "10.48550/arXiv.2510.11292",
+        "authors": [
+          "Wenbo Wu",
+          "Qing-Yi Si",
+          "Xiurui Pan",
+          "Ye Wang",
+          "Jie Zhang"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 366,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.01820",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.01820",
+        "id:SemanticScholar:0774348505d0484f23fbc28bc99803661f7e3f50",
+        "id:arXiv:2503.01820",
+        "title:rsq learning from important tokens leads to better quantized llms",
+        "url:https://arxiv.org/abs/2503.01820"
+      ],
+      "record": {
+        "title": "RSQ: Learning from Important Tokens Leads to Better Quantized LLMs",
+        "source_url": "https://arxiv.org/abs/2503.01820",
+        "year": 2025,
+        "published": "2025-03-03",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Layer-wise quantization is a key technique for efficiently compressing large models without expensive retraining. Previous methods typically quantize the weights of each layer by\"uniformly\"optimizing the layer reconstruction loss across all output tokens. However, in this paper, we demonstrate that better-quantized models can be obtained by prioritizing learning from important tokens (e.g. which have large attention scores). Building on this finding, we propose RSQ (Rotate, Scale, then Quantize), which (1) applies rotations (orthogonal transformation) to the model to mitigate outliers (those with exceptionally large magnitude), (2) scales the token feature based on its importance, and (3) quantizes the model using the GPTQ framework with the second-order statistics computed by scaled tokens. To compute token importance, we explore both heuristic and dynamic strategies. Based on a thorough analysis of all approaches, we adopt attention concentration, which uses attention scores of each token as its importance, as the best approach. We demonstrate that RSQ consistently outperforms baseline methods across multiple downstream tasks and three model families: LLaMA3, Mistral, and Qwen2.5. Additionally, models quantized with RSQ achieve superior performance on long-context tasks, further highlighting its effectiveness. Lastly, RSQ demonstrates generalizability across various setups, including different model sizes, calibration datasets, bit precisions, and quantization methods.",
+        "identifiers": [
+          "SemanticScholar:0774348505d0484f23fbc28bc99803661f7e3f50"
+        ],
+        "semantic_scholar_id": "0774348505d0484f23fbc28bc99803661f7e3f50",
+        "canonical_id": "arXiv:2503.01820",
+        "arxiv_id": "2503.01820",
+        "doi": "10.48550/arXiv.2503.01820",
+        "authors": [
+          "Yi-Lin Sung",
+          "Prateek Yadav",
+          "Jialu Li",
+          "Jaehong Yoon",
+          "Mohit Bansal"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 590,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.14851",
+      "identity_tokens": [
+        "id:DOI:10.1145/3803390",
+        "id:SemanticScholar:992024cac00a9a7b4165a8ef917ce8886a2b7080",
+        "id:arXiv:2506.14851",
+        "title:hermes efficient serving of llm applications with probabilistic demand modeling",
+        "url:https://arxiv.org/abs/2506.14851"
+      ],
+      "record": {
+        "title": "Hermes: Efficient Serving of LLM Applications with Probabilistic Demand Modeling",
+        "source_url": "https://arxiv.org/abs/2506.14851",
+        "year": 2025,
+        "published": "2025-06-17",
+        "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Applications based on Large Language Models (LLMs) contain a series of tasks to address real-world problems with boosted capability, which have dynamic demand volumes on diverse backends. Existing serving systems treat the resource demands of LLM applications as a blackbox, compromising end-to-end efficiency due to improper queuing order and backend warm up latency. We find that the resource demands of LLM applications can be modeled in a general and accurate manner with Probabilistic Demand Graph (PDGraph). We then propose Hermes, which leverages PDGraph for efficient serving of LLM applications. Confronting probabilistic demand description, Hermes applies the Gittins policy to determine the scheduling order that can minimize the average application completion time. It also uses the PDGraph model to help prewarm cold backends at proper moments. Experiments with diverse LLM applications confirm that Hermes can effectively improve the application serving efficiency, reducing the average completion time by over 70% and the P95 completion time by over 80%.",
+        "identifiers": [
+          "SemanticScholar:992024cac00a9a7b4165a8ef917ce8886a2b7080"
+        ],
+        "semantic_scholar_id": "992024cac00a9a7b4165a8ef917ce8886a2b7080",
+        "canonical_id": "arXiv:2506.14851",
+        "arxiv_id": "2506.14851",
+        "doi": "10.1145/3803390",
+        "authors": [
+          "Yifei Liu",
+          "Zuo Gan",
+          "Zheng-Hao Gan",
+          "Weiye Wang",
+          "Chen Chen",
+          "Yizhou Shan",
+          "Xu-Sheng Chen",
+          "Zhenhua Han",
+          "Yifei Zhu",
+          "Shixuan Sun",
+          "Min-Yi Guo"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 484,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0c777f72cab0749bb80f177e2e85b24ab2c9228f626acae286cdbe241d90c460",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

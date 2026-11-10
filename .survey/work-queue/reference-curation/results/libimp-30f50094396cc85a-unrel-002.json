@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30f50094396cc85a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1511.08228",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1511.08228",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1511.08228",
+      "arXiv:1511.08228"
+    ],
+    "reason": "畳み込み型ゲート付き再帰ユニットで並列なニューラル計算機を構成しアルゴリズム学習を行う研究で、LLM推論基盤を対象としない。",
+    "first_checked_at": "2026-10-03T15:20:46+00:00",
+    "last_checked_at": "2026-10-03T15:20:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+    ],
+    "title": "Neural GPUs Learn Algorithms"
+  },
+  "processed_at": "2026-10-03T15:20:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30f50094396c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

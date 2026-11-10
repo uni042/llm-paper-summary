@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2ff7504eb0ab3966-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.19233",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.19233",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2310.19233",
+      "arXiv:2310.19233"
+    ],
+    "reason": "会議要約用途でGPT-4/3.5、PaLM-2、LLaMA-2の品質・費用・privacyを比較する応用評価で、新規LLM推論システム最適化を提案しない。",
+    "first_checked_at": "2026-10-03T11:02:04+00:00",
+    "last_checked_at": "2026-10-03T11:02:04+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md"
+    ],
+    "title": "Building Real-World Meeting Summarization Systems using Large Language Models: A Practical Perspective"
+  },
+  "processed_at": "2026-10-03T11:02:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2ff7504eb0ab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

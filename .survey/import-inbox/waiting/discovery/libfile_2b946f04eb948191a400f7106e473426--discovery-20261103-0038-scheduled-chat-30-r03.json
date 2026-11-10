@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261103-0038-scheduled-chat-30/r03",
+  "reference_main_sha": "4b7b7f8555bb75041a67a43abace9824e183efa6",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31840",
+      "identity_tokens": [
+        "arXiv:2610.31840"
+      ],
+      "title": "SPECMEM: Accelerating Agentic Tool Calling via Live Memory Management",
+      "reason": "agentic tool callの自己回帰生成を投機的decodeで加速するため、過去に検証済みのtool callをuser別LRU上限付きstoreへonline書き戻しし、draftを再利用するSpecMem。副作用のあるtool callはtarget検証完了まで実行を遅延させる。3つのopen-weight modelとmulti-session/user query streamで、固定store比平均accepted tokenが27%高く、wall-clock速度最大1.74倍と報告。再利用storeの更新と安全な検証を含むLLM agent servingの直接最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.31840",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:46:35+09:00",
+      "last_checked_at": "2026-11-03T00:46:35+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37732",
+      "identity_tokens": [
+        "arXiv:2610.37732"
+      ],
+      "title": "ThinkJev: One Thought, Every Budget for Calibrated Typed Decisions",
+      "reason": "closed-setのtyped decisionに対し同一hybrid-thinking LLMから高速な直接probability読み取り（System 1）と、同じcached promptで思考後にprobabilityを読むSystem 2を構成。System 1の選択を統計的error-rate gateで制限し、残りは思考中に確信度を満たす時点で停止する。Qwen3.5-27Bで5% error target時24.5%のdecisionをSystem 1のみで処理し、残りを適応停止するとalways-thinkingの82.7%精度に対し81.6%を72%のthought tokenで達成。token budgetに応じたLLM推論計算削減としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.37732",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:46:35+09:00",
+      "last_checked_at": "2026-11-03T00:46:35+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.38822",
+      "identity_tokens": [
+        "arXiv:2610.38822"
+      ],
+      "title": "CopyLoop: Fast Looped Transformer Decoding via Context Copying and Shallow Screening",
+      "reason": "共有blockを反復するLooped Transformerで、繰り返しcontextからmulti-token suffixをcopy proposalし、浅いrecurrent depthで誤った枝をscreenした後、先行blockのfull-depth検証と後続blockの処理を重ねるtraining-free CopyLoop。Ouro/Raven/Huginnの6 checkpointでfull-depth autoregressive decode比Base 2.98〜10.70倍、Thinking 2.74〜3.52倍のdecode高速化を報告。recurrent-depth LLM推論を直接加速するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.38822",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:47:42+09:00",
+      "last_checked_at": "2026-11-03T00:47:42+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36617",
+      "identity_tokens": [
+        "arXiv:2610.36617"
+      ],
+      "title": "Balanced State Subspaces for Mamba-2 State Compression",
+      "reason": "Mamba-2 recurrent stateの大きなenergy方向とoutputが読む情報方向が一致しない問題に対し、write/readのcontrollability・observability Gramianを用いたbalanced truncationで状態空間を回転・切り詰める。HARPはHankel spectrumからlayer別rankを配分しretrieval-sensitive layerを保護。130M〜2.7B modelでstate次元半減時のWikiText-2 perplexity悪化平均0.3点（GHOST 1.6点）、較正1 forward passと報告。推論時のSSM state容量・帯域を直接削減するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.36617",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:47:42+09:00",
+      "last_checked_at": "2026-11-03T00:47:42+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.33006",
+      "identity_tokens": [
+        "arXiv:2610.33006"
+      ],
+      "title": "Linear-Time Context Compression with State-Space Encoding",
+      "reason": "Transformer系soft-prompt compressorの計算負荷を避け、Mamba SSMが任意長contextを線形時間でencodingし、凍結したtarget LLMへ短い表現として渡すBoa Compressor。full-context teacherとcompressed-context studentの次token logitsを蒸留で一致させる。既存Transformer compressor比約1桁高速で同等以上の圧縮後品質、最大16倍の圧縮率を評価し、online毎query圧縮でend-to-end遅延を削減すると報告。LLM推論時のprompt圧縮としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.33006",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:47:42+09:00",
+      "last_checked_at": "2026-11-03T00:47:42+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.30664",
+      "identity_tokens": [
+        "arXiv:2610.30664"
+      ],
+      "title": "Compiling Autoregressive LLM Control into Policy-Exact Parallel Inference for Hierarchical RAG",
+      "reason": "階層RAGでb-of-k選択を逐次JSON/grammar decodeする代わりに、有限深度のaction-prefix treeをコンパイルし、root prefillとtree-causal probeで全action-prefix条件付き分布を並列評価する。exact arithmetic下で元の逐次policyと一致する構造を証明し、MetaX実機の4 split/2 scaleで制御latencyを逐次decode比35〜47%、理想chunk engine比6〜7%削減。浮動小数点near-tieで実際の選択一致率は84〜89%と報告。LLM制御出力の推論並列化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.30664",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:47:42+09:00",
+      "last_checked_at": "2026-11-03T00:47:42+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.31305",
+      "identity_tokens": [
+        "arXiv:2610.31305"
+      ],
+      "title": "Cola2: Co-Adaptive Hierarchical Language Modeling with Continuous Semantic Compression and Balanced Discrete Generation",
+      "reason": "semantic spanを動的分割してcontinuous latentへ圧縮し、block-causal masked diffusion decoderが再構成と生成を組み合わせる階層言語モデル。約210B token学習と下流taskで表現・品質を評価し、推論時に生成文を再encodeしてlatent履歴整合性を維持する。生成効率を目指す構造ではあるが、一次要旨にtoken/s、latency、メモリ削減の直接評価はなくモデル品質・学習構成が中心のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.31305",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:47:42+09:00",
+      "last_checked_at": "2026-11-03T00:47:42+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.40577",
+      "identity_tokens": [
+        "arXiv:2610.40577"
+      ],
+      "title": "Multi-View MoE: Letting Every Router Shape Expert Computation",
+      "reason": "複数routerのsigmoid scoreを集約してexpertを選び、同じscoreからlatent viewを混ぜてexpert入力を変えるMulti-View MoE。選択expertは各1 forwardでactive expert数・FLOPs・all-to-all通信量を維持し、10B-A1B modelを708B token学習後9 task平均+1.18ptの品質改善。固定推論計算予算下のMoE品質改善だが、推論システムの速度・メモリ・負荷分散の改善は一次要旨で示されないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.40577",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:47:42+09:00",
+      "last_checked_at": "2026-11-03T00:47:42+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.38960",
+      "identity_tokens": [
+        "arXiv:2610.38960"
+      ],
+      "title": "Efficient Agentic Audio-Visual Question Answering through Toolset Pruning and Modality Consolidation",
+      "reason": "OmniAgentの多数の音声・映像専用toolを段階的に削り、omni-modal captioningとomni-modal QAの2 toolへ統合するagentic AVQA。3 AVQA benchmarkで精度を維持または改善しながらinference costを約70%削減と報告。tool-call構成によるagent推論費用削減として関連するが、LLMサービングエンジンのdecode/KV/GPU資源を直接最適化する研究ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.38960",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:47:42+09:00",
+      "last_checked_at": "2026-11-03T00:47:42+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.35328",
+      "identity_tokens": [
+        "arXiv:2610.35328"
+      ],
+      "title": "Constrained Decoding: Harmful or Beneficial? Revisiting Its Impact on LLM Performance",
+      "reason": "format/validity/reasoning constraintの3種がLLMの回答正確性・抽出可能性へ与える影響を、4 model family・11 open-source modelの因果的ablationで検証。非等価promptやoutput formatが性能劣化の見かけを生むことを示し、validity/reasoning制約による回答品質改善を分析する。ここでのperformanceは主として回答品質で、推論latency・throughput・GPU memory削減の手法・評価は一次要旨にないため、推論効率サーベイの範囲外としてunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.35328",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:47:42+09:00",
+      "last_checked_at": "2026-11-03T00:47:42+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

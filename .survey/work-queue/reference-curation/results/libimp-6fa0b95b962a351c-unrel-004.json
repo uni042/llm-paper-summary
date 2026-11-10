@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6fa0b95b962a351c-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.15251",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.15251",
+    "identity_tokens": [
+      "arXiv:2608.15251"
+    ],
+    "reason": "航空/地上画像のstructure-from-motionによる3D再構成で、LLM推論とは無関係。",
+    "first_checked_at": "2026-10-05T08:30:20+00:00",
+    "last_checked_at": "2026-10-05T08:30:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+    ],
+    "title": "Robust structure from motion for aerial-ground images via detector-free feature matching and multi-view track refinement"
+  },
+  "processed_at": "2026-10-05T08:30:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6fa0b95b962a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

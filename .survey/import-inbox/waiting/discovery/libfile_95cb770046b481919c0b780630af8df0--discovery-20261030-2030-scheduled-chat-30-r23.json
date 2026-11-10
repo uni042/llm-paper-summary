@@ -1,0 +1,177 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r23",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00104",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA66397.2026.00104"
+      ],
+      "title": "Bringing Near Data Processing Into the Low-Bit Floating-Point Era",
+      "reason": "ISCA2026の論文で、DRAM近傍計算に低bit FP group量子化を導入する際のコンパイラ・メモリ容量の問題を解き、精度設定別のNDP配置を最適化する。LLMの低bit推論ハードウェア設計に直接関連するが、出版社本文は未取得のため定量値は記載しない。",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00104",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:48:30+09:00",
+      "last_checked_at": "2026-10-30T20:48:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 335,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.12769",
+      "identity_tokens": [
+        "arXiv:2507.12769",
+        "DOI:10.48550/arXiv.2507.12769"
+      ],
+      "title": "Synergy: End-to-end Concept Model",
+      "reason": "byte-levelモデルで学習済みルータが一部のbyteを概念トークンとして深い層へ渡す。192概念トークン程度でBBPE約241トークンと比較可能な品質を報告するが、本文ではLlama3より約1.5倍のFLOPsが必要であり、現状の実測推論高速化は示されていない。",
+      "source_url": "https://arxiv.org/abs/2507.12769",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:48:30+09:00",
+      "last_checked_at": "2026-10-30T20:48:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 337,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41598-026-49583-z",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-49583-z"
+      ],
+      "title": "Gated transformer with shallow decoder for machine translation",
+      "reason": "Scientific Reports一次全文では、attentionとFFNをgate融合し、cross-attentionを単一head化し、深いencoderと浅いdecoderでWMT14翻訳の遅延を減らす。GTSD21-3は品質・速度が良好だが、GTSD24-1はBLEUが1～1.5ポイント低下。一般生成LLMサービングの評価はない。",
+      "source_url": "https://www.nature.com/articles/s41598-026-49583-z",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:48:30+09:00",
+      "last_checked_at": "2026-10-30T20:48:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 351,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3775043.3775047",
+      "identity_tokens": [
+        "DOI:10.1145/3775043.3775047"
+      ],
+      "title": "Idle Consumer GPUs as a Complement to Enterprise Hardware for LLM Inference: Performance, Cost and Carbon Analysis",
+      "reason": "ACM出版社一次全文はRTX4090とH100をvLLM/FlashInferの同一FP16条件で比較し、4090群が遅延許容負荷でtoken当たり費用を最大75%削減する一方、H100の電力効率が約3.1倍と報告する。消費電力はTDP前提の推定であり実測エネルギーと混同しない。",
+      "source_url": "https://doi.org/10.1145/3775043.3775047",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:48:30+09:00",
+      "last_checked_at": "2026-10-30T20:48:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 353,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.20362",
+      "identity_tokens": [
+        "arXiv:2503.20362",
+        "DOI:10.48550/arXiv.2503.20362"
+      ],
+      "title": "Self-ReS: Self-Reflection in Large Vision-Language Models for Long Video Understanding",
+      "reason": "長動画VLMの注意マップから重要区間を選び直すSelfReSを提案。外部モデルや追加学習なしで入力動画の冗長部分を減らし、同一GPUメモリ予算で最大46%の推論高速化を報告する。",
+      "source_url": "https://arxiv.org/abs/2503.20362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:48:30+09:00",
+      "last_checked_at": "2026-10-30T20:48:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 357,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00686",
+      "identity_tokens": [
+        "arXiv:2602.00686",
+        "DOI:10.48550/arXiv.2602.00686"
+      ],
+      "title": "Learning to Accelerate Vision-Language-Action Models through Adaptive Visual Token Caching",
+      "reason": "ロボットVLAでCached Token SelectorとCache Ratio Predictorを学習し、再利用する視覚トークンを場面に応じて変える。LIBEROで1.76倍のwall-clock推論高速化を報告するが、主対象は行動生成であり一般のLLM推論への直接評価はない。",
+      "source_url": "https://arxiv.org/abs/2602.00686",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:48:30+09:00",
+      "last_checked_at": "2026-10-30T20:48:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 358,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11111",
+      "identity_tokens": [
+        "arXiv:2605.11111",
+        "DOI:10.48550/arXiv.2605.11111"
+      ],
+      "title": "ShardTensor: Domain Parallelism for Scientific Machine Learning",
+      "reason": "巨大な空間データを複数デバイスへdomain分割する科学機械学習の分散テンソル基盤。学習・推論の拡張性は評価するが、LLMテキスト生成のサービング・KV管理を対象としない。",
+      "source_url": "https://arxiv.org/abs/2605.11111",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:48:30+09:00",
+      "last_checked_at": "2026-10-30T20:48:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 375,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07854",
+      "identity_tokens": [
+        "arXiv:2602.07854",
+        "DOI:10.48550/arXiv.2602.07854"
+      ],
+      "title": "Geometry-Aware Rotary Position Embedding for Consistent Video World Model",
+      "reason": "カメラ視線方向をRoPEへ組み込むViewRoPEと幾何的frame-sparse attentionで動画world modelの3D一貫性を改善する。動画生成・幾何保持が対象で、LLM生成推論の効率化は直接評価していない。",
+      "source_url": "https://arxiv.org/abs/2602.07854",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:48:30+09:00",
+      "last_checked_at": "2026-10-30T20:48:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 377,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.22543",
+      "identity_tokens": [
+        "arXiv:2602.22543",
+        "DOI:10.48550/arXiv.2602.22543"
+      ],
+      "title": "Ruyi2 Technical Report",
+      "reason": "可変深さモデル群の重み共有とMegatron-LMによる3D並列訓練を統合し、Ruyi比2～3倍の訓練高速化を報告する。Train Once Deploy Manyの推論アーキテクチャ構想は関連するが、要旨の速度値は学習時であり推論TPSとは異なる。",
+      "source_url": "https://arxiv.org/abs/2602.22543",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:48:30+09:00",
+      "last_checked_at": "2026-10-30T20:48:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 378,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.02013",
+      "identity_tokens": [
+        "arXiv:2406.02013",
+        "DOI:10.48550/arXiv.2406.02013"
+      ],
+      "title": "Mamba as Decision Maker: Exploring Multi-scale Sequence Modeling in Offline Reinforcement Learning",
+      "reason": "MambaDMはoffline RLのAtari/Gym行動系列の局所・大域依存を学習する。主指標はRLスコアであり、LLMテキスト生成の推論速度・メモリ最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2406.02013",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:48:30+09:00",
+      "last_checked_at": "2026-10-30T20:48:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 385,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

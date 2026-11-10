@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "083b5349a03e6c6b37941bdd8c963e416e67de8cc5de1ca6df81aa7d6bafdb31",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_c8ea4c655e508191b10ae205a04bc33d--2025-2505.03031-radio-rate-distortion-quantization-returned-repair-20261023-0345-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2505.03031",
+  "worker_completed_at": "2026-10-23T03:54:00+09:00",
+  "worker_run_key": "20261023-0345-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7756,
+    "body_paragraphs": 37,
+    "method_chars": 2025,
+    "method_paragraphs": 10,
+    "evaluation_chars": 239,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 239 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 239 < 500"
+  ],
+  "processed_at": "2026-10-22T19:55:56+00:00"
+}

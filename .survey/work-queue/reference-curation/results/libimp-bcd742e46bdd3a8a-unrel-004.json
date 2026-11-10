@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bcd742e46bdd3a8a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.12982",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.12982",
+    "identity_tokens": [
+      "arXiv:2502.12982"
+    ],
+    "reason": "Sailor2 is a multilingual model family produced through large-scale continued pretraining; the abstract concerns training and language quality, not inference optimization.",
+    "first_checked_at": "2026-10-05T15:10:32+00:00",
+    "last_checked_at": "2026-10-05T15:10:32+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md"
+    ],
+    "title": "Sailor2: Sailing in South-East Asia with Inclusive Multilingual LLMs"
+  },
+  "processed_at": "2026-10-05T15:10:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bcd742e46bdd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

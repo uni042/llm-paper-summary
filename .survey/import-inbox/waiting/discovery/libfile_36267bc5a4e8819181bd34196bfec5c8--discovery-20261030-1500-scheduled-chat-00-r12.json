@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1500-scheduled-chat-00/r12",
+  "reference_main_sha": "2961ce802c7c010bf18836afa636780b500c3e8b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01665",
+      "identity_tokens": [
+        "arXiv:2608.01665"
+      ],
+      "title": "Allocation Before Ranking: Decoupled Token Compression for OmniLLMs",
+      "reason": "arXiv一次要旨は音声と動画の注意スコアを一括ランキングすると音声に予算が偏る問題に対し、モダリティ別予算配分後に各内部でトークンを選ぶMacerを提案。Qwen2.5-Omni-7Bの25%保持で元性能98.7%を維持し、OmniZipの45%保持と同等の品質をより低FLOPsで達成。マルチモーダル推論入力圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2608.01665",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:17:08+09:00",
+      "last_checked_at": "2026-10-30T15:17:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 180
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08977",
+      "identity_tokens": [
+        "arXiv:2609.08977"
+      ],
+      "title": "Multimodal Duplex Interaction Agent",
+      "reason": "arXiv v3一次要旨はMiniCPM-o4.5に基づく双方向リアルタイム会話エージェントGanderを提案し、軽量応答側と複雑推論側の非同期協調・割り込み対応を実装。推論実行構造は関連するが、主評価は対話・ツール実行品質でありLLMサービングの定量的高速化は要旨にないため境界的。",
+      "source_url": "https://arxiv.org/abs/2609.08977",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:17:08+09:00",
+      "last_checked_at": "2026-10-30T15:17:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 181
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.05780",
+      "identity_tokens": [
+        "arXiv:2608.05780"
+      ],
+      "title": "Evidence-Driven Dynamic Visual Selector for Efficient Long Video Understanding",
+      "reason": "arXiv一次要旨は対象MLLMの疎prefillで得た注意証拠を使い、動画の関連時刻・フレーム間隔・空間解像度を適応選択するEviSelectを提案。GRPOで精度と視覚計算コストを共同最適化し、長動画MLLMの視覚入力削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2608.05780",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:17:08+09:00",
+      "last_checked_at": "2026-10-30T15:17:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 183
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.23798",
+      "identity_tokens": [
+        "arXiv:2604.23798"
+      ],
+      "title": "ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers",
+      "reason": "arXiv一次要旨はオンラインsoftmax注意を結合的monoidのprefix scanとして再定式化し、O(n)追加メモリ・O(log n)並列深さを実現するELSAを提案。A100 FP32でSDPA比1.3〜3.5倍、Jetson TX2でも高速化し、LLaMA-13Bオフロードの実測も報告。注意カーネル最適化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2604.23798",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:17:08+09:00",
+      "last_checked_at": "2026-10-30T15:17:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 186
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34612",
+      "identity_tokens": [
+        "arXiv:2609.34612"
+      ],
+      "title": "SPIMOE: Exploiting Hybrid Sparsity for Reasoning MoE Inference on Heterogeneous PIM Architectures",
+      "reason": "arXiv一次要旨はMoEの専門家疎性と注意のブロック疎性・KV物理削除を同時に活用し、SRAM-PIM/HBM-PIMに注意とFFNを分離するSPIMOEを提案。A100 GPU比E2E最大8.35倍、PIMoE比MoE FFN最大3.33倍と報告。PIMによる推論アクセラレーションに直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.34612",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:17:08+09:00",
+      "last_checked_at": "2026-10-30T15:17:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 187
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.16964",
+      "identity_tokens": [
+        "arXiv:2511.16964"
+      ],
+      "title": "Optimizing PyTorch Inference with LLM-Based Multi-Agent Systems",
+      "reason": "arXiv v2一次要旨はLLMエージェント群がPyTorch演算のコード最適化を行う際の探索・修正戦略を比較し、H100のKernelBenchでEager比平均2.88倍、torch.compile比1.85倍を報告。推論カーネル開発には関連するが、一般ML演算の評価でありLLMモデルE2Eの直接実測が要旨にないため境界的。",
+      "source_url": "https://arxiv.org/abs/2511.16964",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:17:08+09:00",
+      "last_checked_at": "2026-10-30T15:17:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 188
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.25385",
+      "identity_tokens": [
+        "arXiv:2603.25385"
+      ],
+      "title": "GlowQ: Group-Shared LOw-Rank Approximation for Quantized LLMs",
+      "reason": "arXiv v2一次要旨は量子化誤差を補正する低ランク射影の右因子を入力共有グループ内でキャッシュして再利用し、層ごとの重複補正を減らすGlowQを提案。選択的GlowQ-SでTTFB23.4%削減・スループット37.4%増加と報告。量子化LLM推論の補正計算削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2603.25385",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:17:08+09:00",
+      "last_checked_at": "2026-10-30T15:17:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 189
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.10640",
+      "identity_tokens": [
+        "arXiv:2607.10640"
+      ],
+      "title": "Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models",
+      "reason": "arXiv v2一次要旨は視覚トークンをkNNグラフとみなし、スペクトル熱流による重要度、空間予算、coreset sinkへの情報集約を組み合わせるSpecFlowを提案。LLaVA-1.5で視覚トークン88.9%削減時に元性能95.6%を維持。VLM推論の非破壊的視覚圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2607.10640",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:17:08+09:00",
+      "last_checked_at": "2026-10-30T15:17:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 191
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.06630",
+      "identity_tokens": [
+        "arXiv:2608.06630"
+      ],
+      "title": "The Sparsity Whisperer",
+      "reason": "arXiv一次要旨はMLPの類似入力を分離する能力を維持するよう差分情報に基づく枝刈り指標Wisp/Wisp+/Whisperを提案。Llama2/3.1の7B〜405BでWanda・SparseGPT等より品質と実行コストのPareto前線を改善。LLM推論向け疎性最適化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2608.06630",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:17:08+09:00",
+      "last_checked_at": "2026-10-30T15:17:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 192
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.12487",
+      "identity_tokens": [
+        "arXiv:2606.12487"
+      ],
+      "title": "PhaseQuant: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics",
+      "reason": "arXiv公式の題名はPhaseQuantであり、worklistのDynamicPTQとは表記が異なる。同一arXiv identityの最新版要旨は、残差ストリームで巨大活性が現れる層だけ活性8bitを割り当て、他の重み・KV・活性を4bitに維持するPhaseQuantを提案。QuaRot/SpinQuant等に統合できるため、推論向け混合精度PTQに直接該当。",
+      "source_url": "https://arxiv.org/abs/2606.12487",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:17:08+09:00",
+      "last_checked_at": "2026-10-30T15:17:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 195
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-416e208a0c3f81ce-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.06747",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.06747",
+    "identity_tokens": [
+      "arXiv:2512.06747"
+    ],
+    "reason": "暗号化されたLLM推論を複数ドローンの協調に適用し、秘密分散計算（MPC）に合わせたTransformer非線形演算の近似で低遅延化を図る。一次要旨は推論効率を扱う一方、主要な実証対象はUAV群の機密性・指令の意味的精度・編隊制御である。一般的なLLM推論サービングへの適用可能性と基盤レベルの比較条件は要旨から十分に判定できないため境界的候補とする。",
+    "first_checked_at": "2026-10-18T10:00:24+00:00",
+    "last_checked_at": "2026-10-18T10:00:24+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "PrivLLMSwarm: Privacy-Preserving LLM-Driven UAV Swarms for Secure IoT Surveillance"
+  },
+  "processed_at": "2026-10-18T10:00:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-416e208a0c3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

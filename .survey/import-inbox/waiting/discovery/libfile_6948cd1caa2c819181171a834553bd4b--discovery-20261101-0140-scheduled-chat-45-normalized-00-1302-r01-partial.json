@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1302-scheduled-chat-00/r01",
+  "reference_main_sha": "6412f8a2fbfbb7fbfbe57d501dd843156d70cc78",
+  "record_count": 2,
+  "records": [
+    {
+      "canonical_id": "arXiv:2509.15148",
+      "identity_tokens": [
+        "arXiv:2509.15148",
+        "SemanticScholar:e56474be2ecd67a734319fbe422eb8ea5c4b1bb0"
+      ],
+      "title": "ATTS: Asynchronous Test-Time Scaling via Conformal Prediction",
+      "classification": "accept",
+      "reason": "LLM推論時スケーリングの同期・メモリ負担を削減する直接的な効率化研究。ICLR 2026公式一次要旨では、オンライン較正と仮説検定に基づく非同期の3段階rejection samplingで並列・逐次両軸のtest-time scalingを扱い、MATH/AMC23/AIME24/AIME25等で最大56.7倍のtest-time scaling高速化と4.14倍のthroughput改善を報告。比較基準・モデル条件を限定した最大値であり、通常の単一要求の推論速度を56.7倍にするとの意味ではない。WORKLISTのA1は改題前タイトルで、ICLR 2026ではATTSとして掲載。",
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/48c292f57f37569241ea9191a507031d-Abstract-Conference.html",
+      "body_check": "ICLR 2026公式の論文タイトル・著者・要旨を確認。全文は未読。arXiv:2509.15148との同一性を確認し、worklistのSemanticScholar識別子をaliasに残した。",
+      "linked_from": [
+        "WORKLIST-00.md rank 17; speculative decoding / test-time scaling"
+      ],
+      "worklist_rank": 17,
+      "first_checked_at": "2026-10-31T13:06:19+09:00",
+      "last_checked_at": "2026-10-31T13:06:19+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1016/j.knosys.2025.115018",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2025.115018"
+      ],
+      "title": "Accelerating long-context inference of large language models via dynamic attention load balancing",
+      "classification": "accept",
+      "reason": "長文LLM推論の疎注意におけるヘッド間GPU負荷不均衡を、ヘッド別プロファイリングと入力長に応じた配置戦略探索、重みの事前再配置、cross-prefetchで改善するFlexAttn。著者所属のメルボルン大学公開の査読誌原著PDFによれば、LLaMA3-8Bで160k〜768k文脈の長文推論throughputを34.95〜40.9%改善。RTX 3090の768k条件では2447.07対2023.25 tokens/s（20.95%増）も報告するが、比較条件が異なるため数字を混同しない。GPU4台・最大768k文脈等の適用範囲制約がある。",
+      "source_url": "https://clouds.cis.unimelb.edu.au/papers/LLM-LB-KBS2026.pdf",
+      "body_check": "著者所属機関が公開するKnowledge-Based Systems 333 (2026) 115018原著PDFのAbstract、評価・結論・限界節を確認。Discovery分類でありResearch完成Markdownではない。",
+      "linked_from": [
+        "WORKLIST-00.md rank 22; long-context inference / attention scheduling"
+      ],
+      "worklist_rank": 22,
+      "first_checked_at": "2026-10-31T13:06:19+09:00",
+      "last_checked_at": "2026-10-31T13:06:19+09:00"
+    }
+  ],
+  "source_legacy_sha256": "b67c00831656365a0693ae6892cfa141b4d9d40e4117e49484ddd5975b30245c",
+  "legacy_status": "partial",
+  "normalization_note": "Schema-only normalization of 20261031-1302 original; records preserved byte-for-byte in semantic JSON values; original archived after verified GitHub handoff."
+}

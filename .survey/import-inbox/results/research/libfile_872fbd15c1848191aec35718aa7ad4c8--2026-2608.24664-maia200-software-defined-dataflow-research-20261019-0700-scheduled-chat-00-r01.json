@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e25fdbfa17a7a182314b702a2816081924151b3ade5f79e1cf9dbaf7b7105422",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_872fbd15c1848191aec35718aa7ad4c8--2026-2608.24664-maia200-software-defined-dataflow-research-20261019-0700-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2608.24664",
+  "worker_completed_at": "2026-10-19T07:00:00+09:00",
+  "worker_run_key": "20261019-0700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4761,
+    "body_paragraphs": 28,
+    "method_chars": 1712,
+    "method_paragraphs": 10,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-19T13:20:21+00:00"
+}

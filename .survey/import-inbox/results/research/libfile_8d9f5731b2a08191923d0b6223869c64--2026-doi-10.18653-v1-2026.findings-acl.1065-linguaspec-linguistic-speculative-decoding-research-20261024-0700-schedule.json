@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "551006dc25a08229e1b00b28f1d3f91cec2f06bf1aa8742293c003c47f4d1c26",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_8d9f5731b2a08191923d0b6223869c64--2026-doi-10.18653-v1-2026.findings-acl.1065-linguaspec-linguistic-speculative-decoding-research-20261024-0700-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1065",
+  "worker_completed_at": "2026-10-24T07:02:00+09:00",
+  "worker_run_key": "20261024-0700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7080,
+    "body_paragraphs": 36,
+    "method_chars": 1958,
+    "method_paragraphs": 10,
+    "evaluation_chars": 1891,
+    "limitation_chars": 919,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2026-2ad70212cfe6-training-free-adaptive-speculative-decoding-via-linguistic-priors.md と 25 段落 / 6063文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T17:28:07+00:00"
+}

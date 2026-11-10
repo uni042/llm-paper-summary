@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3b0d93e0c294379d-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.18653/v1/2020.nlp4convai-1.5",
+  "reason": "USE/ConveRTを固定encoderとしてfew-shot intent detectionを低data・低training costで実現する応用研究。single-CPUで数分のtraining efficiencyが主で、LLM生成推論runtime/serving最適化ではない。",
+  "title": "Efficient Intent Detection with Dual Sentence Encoders",
+  "identity_tokens": [
+    "DOI:10.18653/v1/2020.nlp4convai-1.5",
+    "arXiv:2003.04807"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b0d93e0c294",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

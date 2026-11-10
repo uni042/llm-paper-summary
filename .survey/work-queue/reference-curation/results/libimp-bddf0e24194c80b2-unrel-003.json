@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bddf0e24194c80b2-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.00620",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.00620",
+    "identity_tokens": [
+      "arXiv:2606.00620"
+    ],
+    "reason": "FlowNar improves memory and throughput for streaming video narration, an independent video application rather than LLM inference or shared language-model infrastructure.",
+    "first_checked_at": "2026-10-13T20:41:51+00:00",
+    "last_checked_at": "2026-10-13T20:41:51+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md",
+      "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+    ],
+    "title": "FlowNar: Scalable Streaming Narration for Long-Form Videos"
+  },
+  "processed_at": "2026-10-13T20:41:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bddf0e24194c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

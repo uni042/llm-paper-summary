@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67c0d2474a1ec850-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.12307",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.12307",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2309.12307",
+      "arXiv:2309.12307"
+    ],
+    "reason": "長文脈化のための効率的fine-tuningが主目的で、推論時はdense global attentionが必要と明記されるため学習高速化凍結範囲。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md"
+    ],
+    "title": "LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67c0d2474a1e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

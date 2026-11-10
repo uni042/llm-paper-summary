@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e53240e3f85fb14-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.09487",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.09487",
+    "identity_tokens": [
+      "arXiv:2512.09487"
+    ],
+    "reason": "本文の節3は強化学習によって文章検索・グラフ検索・回答の選択方策を獲得する二段階学習を主題とする。節4では検索時間を報酬に加えると7Bモデルの平均検索回数が2.70から2.25へ減り、回答F1は59.5から60.6へ改善する。ただし改善対象は検索方策と回答品質であり、GPU推論カーネル、LLMサービングの要求スケジューラ、KVキャッシュやモデルオフロードの最適化ではない。推論時の外部検索回数という資源指標との接点はあるため完全無関係ではなく境界候補とする。",
+    "first_checked_at": "2026-10-11T13:05:05+00:00",
+    "last_checked_at": "2026-10-11T13:05:05+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning"
+  },
+  "processed_at": "2026-10-11T13:05:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e53240e3f85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

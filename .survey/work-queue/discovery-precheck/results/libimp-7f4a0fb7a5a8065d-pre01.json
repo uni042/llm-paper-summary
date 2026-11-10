@@ -1,0 +1,1348 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7f4a0fb7a5a8065d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7f4a0fb7a5a8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/s11432-024-4137-4",
+    "DOI:10.1109/southeastcon63549.2026.11476301",
+    "DOI:10.65109/sgxl4097",
+    "SemanticScholar:72493d38ed8c95e0f49ee5b6cf672470d69261df",
+    "SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1",
+    "arXiv:2503.10725",
+    "arXiv:2511.06247",
+    "arXiv:2601.21444",
+    "arXiv:2602.03563",
+    "arXiv:2602.05853",
+    "arXiv:2603.00030",
+    "arXiv:2604.12452",
+    "arXiv:2604.13806",
+    "arXiv:2605.27646"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 14,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9d9f0647cbb3b7dbd9dd5f81230327f4e708d937",
+  "raw_search_result_count": 14,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 14,
+  "provider_progress": {
+    "requested_count": 14,
+    "status_counts": {
+      "allowed": 14,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T22:36:27.652393+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/s11432-024-4137-4",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/southeastcon63549.2026.11476301",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.65109/sgxl4097",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:72493d38ed8c95e0f49ee5b6cf672470d69261df",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.10725",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.06247",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.21444",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.03563",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.05853",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.00030",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.12452",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.13806",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.27646",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Optimizing Long-context LLM Serving via Fine-grained Sequence Parallelism",
+      "source_url": "https://arxiv.org/abs/2511.06247",
+      "year": 2025,
+      "published": "2025-11-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the advancement of large language models (LLMs), their context windows have rapidly expanded. To meet diverse demands from varying-length requests in online services, existing state-of-the-art systems tune the sequence parallelism (SP) allocation. However, current dynamic SP allocation lacks flexibility to (1) support stage-specific parallelism requirements in LLM inference, (2) mitigate the global latency degradation from excessive SP allocation, and (3) exploit resource fragments arising from SP size variation. To tackle this problem, we propose Chunkwise Dynamic Sequence Parallelism (CDSP), a fine-grained parallelism strategy that assigns SP sizes across \\textit{intra-request} token segments. Based on CDSP, we build Tetris, an LLM serving system that (1) efficiently integrates CDSP into disaggregated cluster to satisfy parallelism heterogeneity, (2) dynamically regulates SP size expansion based on real-time load conditions, and (3) adaptively explores chunking plans to utilize fragmented resources while meeting per-request demands. Compared with state-of-the-art systems, Tetris achieves up to 4.35$\\times$ lower time-to-first-token (TTFT) under max sustainable loads, reduces median time-between-tokens (TBT) by up to 40.1\\%, and increases the max request capacity by up to 45\\%.",
+      "identifiers": [
+        "SemanticScholar:e7488527756e435789e0169e42d958f6a1015354"
+      ],
+      "semantic_scholar_id": "e7488527756e435789e0169e42d958f6a1015354",
+      "canonical_id": "arXiv:2511.06247",
+      "arxiv_id": "2511.06247",
+      "doi": "10.48550/arXiv.2511.06247",
+      "authors": [
+        "Cong Li",
+        "Yuzhe Yang",
+        "Xuegui Zheng",
+        "Qifan Yang",
+        "Yijin Guan",
+        "Si-Ze Zheng",
+        "Li-Wen Chang",
+        "Shu-Fan Liu",
+        "Xin Liu",
+        "Guangyu Sun"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 338,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ACL: Aligned Contrastive Learning Improves BERT and Multi-exit BERT Fine-tuning",
+      "source_url": "https://arxiv.org/abs/2602.03563",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite its success in self-supervised learning, contrastive learning is less studied in the supervised setting. In this work, we first use a set of pilot experiments to show that in the supervised setting, the cross-entropy loss objective (CE) and the contrastive learning objective often conflict with each other, thus hindering the applications of CL in supervised settings. To resolve this problem, we introduce a novel \\underline{A}ligned \\underline{C}ontrastive \\underline{L}earning (ACL) framework. First, ACL-Embed regards label embeddings as extra augmented samples with different labels and employs contrastive learning to align the label embeddings with its samples'representations. Second, to facilitate the optimization of ACL-Embed objective combined with the CE loss, we propose ACL-Grad, which will discard the ACL-Embed term if the two objectives are in conflict. To further enhance the performances of intermediate exits of multi-exit BERT, we further propose cross-layer ACL (ACL-CL), which is to ask the teacher exit to guide the optimization of student shallow exits. Extensive experiments on the GLUE benchmark results in the following takeaways: (a) ACL-BRT outperforms or performs comparably with CE and CE+SCL on the GLUE tasks; (b) ACL, especially CL-ACL, significantly surpasses the baseline methods on the fine-tuning of multi-exit BERT, thus providing better quality-speed tradeoffs for low-latency applications.",
+      "identifiers": [
+        "SemanticScholar:69b4ef8f1cc747a93979529296540117406f766c"
+      ],
+      "semantic_scholar_id": "69b4ef8f1cc747a93979529296540117406f766c",
+      "canonical_id": "arXiv:2602.03563",
+      "arxiv_id": "2602.03563",
+      "doi": "10.48550/arXiv.2602.03563",
+      "authors": [
+        "Liz Li",
+        "Wei Zhu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SimpleTool: Parallel Decoding for Real-Time LLM Function Calling",
+      "source_url": "https://arxiv.org/abs/2603.00030",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM-based function calling enables intelligent agents to interact with external tools and environments, yet autoregressive decoding imposes a fundamental latency bottleneck that limits real-time applications such as embodied intelligence, game AI, and interactive avatars (e.g., 10 Hz control frequency). We observe that function calling differs fundamentally from free-form text generation: structured outputs exhibit substantial token redundancy (delimiters, parameter names), and arguments exhibit weak causal dependencies. Crucially, these two properties must be exploited jointly to achieve real-time performance. We present SimpleTool, which introduces special tokens that serve a dual role: compressing low-entropy tokens (4-6x reduction) while acting as mode selectors that enable independent parallel generation of function name and arguments. This synergistic design achieves 3-6x end-to-end speedup (up to 9.6x) with only +8.2% parallelization overhead. Experiments on five benchmarks across Qwen-series models (0.5B-14B) demonstrate substantial speedup while maintaining competitive or improved accuracy. On Mobile Actions, ST-Qwen-0.5B outperforms Google's FunctionGemma in both accuracy and latency consistency. With quantization on consumer-grade GPU, SimpleTool achieves 61.2ms P50 latency, enabling 16 Hz real-time control at 4B model scale, bridging the gap between LLM function calling and latency-critical real-world deployment.",
+      "identifiers": [
+        "SemanticScholar:996186b9fa743093936bae789c2c01ebfea98f6a"
+      ],
+      "semantic_scholar_id": "996186b9fa743093936bae789c2c01ebfea98f6a",
+      "canonical_id": "arXiv:2603.00030",
+      "arxiv_id": "2603.00030",
+      "doi": "10.48550/arXiv.2603.00030",
+      "authors": [
+        "Xiao Shi",
+        "Jiaxin Wan",
+        "Linkang Dong",
+        "Wei Jiang",
+        "Yue Liu",
+        "Zengfeng Huang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 251,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2602.05853",
+      "year": 2026,
+      "published": "2026-02-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic complexity of attention mechanisms poses a critical bottleneck for large language models processing long contexts. While dynamic sparse attention methods offer input-adaptive efficiency, they face fundamental trade-offs: requiring preprocessing, lacking global evaluation, violating query independence, or incurring high computational overhead. We present RRAttention, a novel dynamic sparse attention method that simultaneously achieves all desirable properties through a head \\underline{r}ound-\\underline{r}obin (RR) sampling strategy. By rotating query sampling positions across attention heads within each stride, RRAttention maintains query independence while enabling efficient global pattern discovery with stride-level aggregation. Our method reduces complexity from $O(L^2)$ to $O(L^2/S^2)$ and employs adaptive Top-$\\tau$ selection for optimal sparsity. Extensive experiments on natural language understanding (HELMET) and multimodal video comprehension (Video-MME) demonstrate that RRAttention recovers over 99\\% of full attention performance while computing only half of the attention blocks, achieving 2.4$\\times$ speedup at 128K context length and outperforming existing dynamic sparse attention methods.",
+      "identifiers": [
+        "SemanticScholar:8c99e76d42086d6cf5d3d7a7fcf86e517a4ccb38"
+      ],
+      "semantic_scholar_id": "8c99e76d42086d6cf5d3d7a7fcf86e517a4ccb38",
+      "canonical_id": "arXiv:2602.05853",
+      "arxiv_id": "2602.05853",
+      "doi": "10.48550/arXiv.2602.05853",
+      "authors": [
+        "Si-Ran Liu",
+        "Guo-Xia Wang",
+        "Sai Wang",
+        "Jinle Zeng",
+        "Haoyang Xie",
+        "Siyu Lou",
+        "Jiabin Yang",
+        "Dian-Hai Yu",
+        "Haifeng Wang",
+        "Chao-Fei Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 250,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adaptive Load Balancing for Multi-Tier LLM Inference with Dynamic Model Routing",
+      "source_url": "https://doi.org/10.1109/SoutheastCon63549.2026.11476301",
+      "year": 2026,
+      "published": "2026-02-20",
+      "venue": "SoutheastCon",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) inference systems face critical challenges in balancing latency, cost, and quality across heterogeneous GPU infrastructure. Existing approaches rely on static routing policies or simple load balancing, resulting in suboptimal resource utilization, high tail latencies, and excessive operational costs. This paper presents an adaptive load balancing framework for multi-tier LLM inference that dynamically routes requests based on real-time system state, request characteristics, and learned performance patterns. Our approach employs reinforcement learning to jointly optimize latency, cost, and Service Level Objective (SLO) compliance across edge, mid-tier, and cloud GPU resources. Experimental evaluation on a realistic workload of 5,000 requests demonstrates that our adaptive router reduces average latency by $\\mathbf{5 1. 1 8 \\%}$ and total operational cost by $\\mathbf{7 0. 0 8 \\%}$ compared to round-robin baseline, while achieving 12.02 percentage points fewer SLO violations. The system achieves these improvements through intelligent tier assignment that matches request complexity to appropriate model capacity.",
+      "identifiers": [
+        "SemanticScholar:e7e66c886e8bcd05b505d85af00e60730b3d8f51"
+      ],
+      "semantic_scholar_id": "e7e66c886e8bcd05b505d85af00e60730b3d8f51",
+      "doi": "10.1109/SoutheastCon63549.2026.11476301",
+      "canonical_id": "DOI:10.1109/SoutheastCon63549.2026.11476301",
+      "authors": [
+        "Tejas Pravinbhai Patel",
+        "Chaitanya Kulkarni",
+        "Sandeep Shivam",
+        "Amit Kumar Padhy",
+        "Viswanathan Ranganathan",
+        "S. Bayyavarapu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 235,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Spava: Accelerating Long-Video Understanding via Sequence-Parallelism-aware Approximate Attention",
+      "source_url": "https://arxiv.org/abs/2601.21444",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The efficiency of long-video inference remains a critical bottleneck, mainly due to the dense computation in the prefill stage of Large Multimodal Models (LMMs). Existing methods either compress visual embeddings or apply sparse attention on a single GPU, yielding limited acceleration or degraded performance and restricting LMMs from handling longer, more complex videos. To overcome these issues, we propose APB-V, a sequence-parallel framework with optimized attention that accelerates long-video inference across multiple GPUs. By distributing approximate attention, APB-V reduces computation and increases parallelism, enabling efficient processing of more visual embeddings without compression and thereby improving task performance. System-level optimizations, such as load balancing and fused forward passes, further unleash the potential of APB-V, delivering speedups of 12.72x, 1.70x, and 1.18x over FlashAttn, ZigZagRing, and APB, without notable performance loss. Code available at https://github.com/thunlp/APB",
+      "identifiers": [
+        "SemanticScholar:6dcf2945310a03e8d3528c85805c8a32ad3950ec"
+      ],
+      "semantic_scholar_id": "6dcf2945310a03e8d3528c85805c8a32ad3950ec",
+      "canonical_id": "arXiv:2601.21444",
+      "arxiv_id": "2601.21444",
+      "doi": "10.48550/arXiv.2601.21444",
+      "authors": [
+        "Yu-Xiang Huang",
+        "Mingye Li",
+        "Xu Han",
+        "Chao-Jun Xiao",
+        "Weilin Zhao",
+        "Ao Sun",
+        "Ziqing Yuan",
+        "Hao Zhou",
+        "Fan-Dong Meng",
+        "Zhiyuan Liu"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Latent-Condensed Transformer for Efficient Long Context Modeling",
+      "source_url": "https://arxiv.org/abs/2604.12452",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) face significant challenges in processing long contexts due to the linear growth of the key-value (KV) cache and quadratic complexity of self-attention. Existing approaches address these bottlenecks separately: Multi-head Latent Attention (MLA) reduces the KV cache by projecting tokens into a low-dimensional latent space, while sparse attention reduces computation. However, sparse methods cannot operate natively on MLA's compressed latent structure, missing opportunities for joint optimization. In this paper, we propose Latent-Condensed Attention (LCA), which directly condenses context within MLA's latent space, where the representation is disentangled into semantic latent vectors and positional keys. LCA separately aggregates semantic vectors via query-aware pooling and preserves positional keys via anchor selection. This approach jointly reduces both computational cost and KV cache without adding parameters. Beyond MLA, LCA's design is architecture-agnostic and readily extends to other attention mechanisms such as GQA. Theoretically, we prove a length-independent error bound. Experiments show LCA achieves up to 2.5$\\times$ prefilling speedup and 90% KV cache reduction at 128K context while maintaining competitive performance.",
+      "identifiers": [
+        "SemanticScholar:8b76cf474cf37226774ffeb777d14ba545c422bf"
+      ],
+      "semantic_scholar_id": "8b76cf474cf37226774ffeb777d14ba545c422bf",
+      "canonical_id": "arXiv:2604.12452",
+      "arxiv_id": "2604.12452",
+      "doi": "10.48550/arXiv.2604.12452",
+      "authors": [
+        "Zeng You",
+        "Yao-Fo Chen",
+        "Qiuwu Chen",
+        "Ying Sun",
+        "Shu-Hai Zhang",
+        "Ying-Jian Li",
+        "Yaowei Wang",
+        "Ming-Kui Tan"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 182,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Robust Ultra Low-Bit Post-Training Quantization via Stable Diagonal Curvature Estimate",
+      "source_url": "https://arxiv.org/abs/2604.13806",
+      "year": 2026,
+      "published": "2026-04-15",
+      "venue": "EuroMLSys@EuroSys",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are widely used across many domains, but their scale makes deployment challenging. Post-Training Quantization (PTQ) reduces memory footprint without retraining by leveraging a small calibration set. Recent Hessian-based PTQ methods compensate quantization error via cross-channel dependencies, but such approaches degrade at low bit-widths due to noisy curvature estimates from limited calibration data. We propose DASH-Q, a robust PTQ framework using diagonal Hessian approximation and iterative weighted least squares. By discarding noise-prone dependencies, DASH-Q filters sampling noise while prioritizing the preservation of salient feature power. We outperform other PTQ baselines in ultra low-bit regime, improving zero-shot accuracy by 7.01% on average and up to 14.01% over the strongest baselines across five baseline LLM models, while showing robust and stable performance with very small calibration data.",
+      "identifiers": [
+        "SemanticScholar:9e1b83f6a5dc85c6aff113cc732376d11eec0266"
+      ],
+      "semantic_scholar_id": "9e1b83f6a5dc85c6aff113cc732376d11eec0266",
+      "canonical_id": "arXiv:2604.13806",
+      "arxiv_id": "2604.13806",
+      "doi": "10.1145/3805621.3807619",
+      "authors": [
+        "Jaemin Kim",
+        "Sungkyun Kim",
+        "Junyeol Lee",
+        "Jiwon Seo"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 181,
+        "matched_prestigious_venue": "EuroSys"
+      }
+    },
+    {
+      "title": "GEAR: An Efficient Error Reduction Framework for KV Cache Compression in LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/72493d38ed8c95e0f49ee5b6cf672470d69261df",
+      "year": 2024,
+      "published": null,
+      "venue": "ENLSP",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:72493d38ed8c95e0f49ee5b6cf672470d69261df"
+      ],
+      "semantic_scholar_id": "72493d38ed8c95e0f49ee5b6cf672470d69261df",
+      "canonical_id": "SemanticScholar:72493d38ed8c95e0f49ee5b6cf672470d69261df",
+      "authors": [
+        "Hao Kang",
+        "Qingru Zhang",
+        "Souvik Kundu",
+        "Geonhwa Jeong",
+        "Zaoxing Liu",
+        "Tushar Krishna",
+        "Tuo Zhao"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 834,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hardware-oriented algorithms for softmax and layer normalization of large language models",
+      "source_url": "https://doi.org/10.1007/s11432-024-4137-4",
+      "year": 2024,
+      "published": "2024-09-12",
+      "venue": "Science China Information Sciences",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:b5c0d58f0e7797dd43d73c5d3c4ec17a0b414e4e"
+      ],
+      "semantic_scholar_id": "b5c0d58f0e7797dd43d73c5d3c4ec17a0b414e4e",
+      "doi": "10.1007/s11432-024-4137-4",
+      "canonical_id": "DOI:10.1007/s11432-024-4137-4",
+      "authors": [
+        "Wenji Li",
+        "Dongxu Lyu",
+        "Gang Wang",
+        "Aokun Hu",
+        "Ningyi Xu",
+        "Guang-Hui He"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 761,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Exploring CXL-based KV Cache Storage for LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/beb9d034f9accbff20525bddf9d345fb799805b1",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1"
+      ],
+      "semantic_scholar_id": "beb9d034f9accbff20525bddf9d345fb799805b1",
+      "canonical_id": "SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1",
+      "authors": [
+        "Yupeng Tang",
+        "Run-Xi Cheng",
+        "Ping Zhou",
+        "Tongping Liu",
+        "Fei Liu",
+        "Wei Tang",
+        "Kyoung-ryun Bae",
+        "Jianjun Chen",
+        "Wu Xiang",
+        "Rui Shi"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores",
+      "source_url": "https://arxiv.org/abs/2503.10725",
+      "year": 2025,
+      "published": "2025-03-13",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The escalating size of Mixture-of-Experts (MoE) based Large Language Models (LLMs) presents significant computational and memory challenges, necessitating innovative solutions to enhance efficiency without compromising model accuracy. Structured sparsity emerges as a compelling strategy to address these challenges by leveraging the emerging sparse computing hardware. Prior works mainly focus on the sparsity in model parameters, neglecting the inherent sparse patterns in activations. This oversight can lead to additional computational costs associated with activations, potentially resulting in suboptimal performance. This paper presents Samoyeds, an innovative acceleration system for MoE LLMs utilizing Sparse Tensor Cores (SpTCs). Samoyeds is the first to apply sparsity simultaneously to both activations and model parameters. It introduces a bespoke sparse data format tailored for MoE computation and develops a specialized sparse-sparse matrix multiplication kernel. Furthermore, Samoyeds incorporates systematic optimizations specifically designed for the execution of dual-side structured sparse MoE LLMs on SpTCs, further enhancing system performance. Evaluations show that Samoyeds outperforms SOTA works by up to 1.99× at the kernel level and 1.58× at the model level. Moreover, it enhances memory efficiency, increasing maximum supported batch sizes by 4.41× on average. Additionally, Samoyeds surpasses existing SOTA structured sparse solutions in both model accuracy and hardware portability.",
+      "identifiers": [
+        "SemanticScholar:340ab414c7c60e40e439941ca81610374f48becd"
+      ],
+      "semantic_scholar_id": "340ab414c7c60e40e439941ca81610374f48becd",
+      "canonical_id": "arXiv:2503.10725",
+      "arxiv_id": "2503.10725",
+      "doi": "10.1145/3689031.3717455",
+      "authors": [
+        "Chenpeng Wu",
+        "Qiqi Gu",
+        "Heng Shi",
+        "Jian-Guo Yao",
+        "Hai-Bing Guan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 579,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RAC: Request-adaptive Configuration for Efficient Speculative Decoding",
+      "source_url": "https://doi.org/10.65109/SGXL4097",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding enhances the inference efficiency of large language models by employing a lightweight draft model to generate candidate tokens, which are then verified in parallel by the target model. However, existing approaches typically use fixed speculative configurations—such as the draft model and speculative length—across similar requests, neglecting semantic and structural differences. This limits acceleration potential and reduces adaptability to diverse, dynamic real-world scenarios. To address this, we propose a reinforcement learning-based method called Request-Adaptive Configuration selection (RAC). By formulating speculative configuration selection as a Markov decision process, RAC dynamically determines the optimal draft model and speculative length for each incoming request. It integrates static request features with historical execution feedback to enable fine-grained, request-level inference optimization. Experiments on various text generation benchmarks demonstrate that RAC achieves maximum speedups of 2.02× and 1.37× over autoregressive decoding and vanilla speculative decoding, respectively.",
+      "identifiers": [
+        "SemanticScholar:1f44997f067d28ae279e23f5bf141715a0e18eb7"
+      ],
+      "semantic_scholar_id": "1f44997f067d28ae279e23f5bf141715a0e18eb7",
+      "doi": "10.65109/SGXL4097",
+      "canonical_id": "DOI:10.65109/SGXL4097",
+      "authors": [
+        "Jinhao Sheng",
+        "Xiao Huang",
+        "Hongxin Wei",
+        "Feng Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 141,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hurwitz Quaternion Multiplicative Quantization for KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2605.27646",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose \\textbf{Hurwitz Quaternion Multiplicative Quantization (HQMQ)}, a \\textbf{calibration-free} method for KV cache compression of large language models. HQMQ treats each 4-element chunk of K or V as a quaternion and quantizes its unit direction to the \\emph{product} $q_p \\cdot q_s$, where $q_p$ ranges over the 24-element Hurwitz group $2T$ (the 24 vertices of the 24-cell on $S^3$, pairwise angle $60^\\circ$) and $q_s$ ranges over a per-(layer, head) secondary codebook of $S$ \\emph{random} unit quaternions. The multiplicative composition yields $24S$ effective codewords at $S$ stored parameters; random initialization suffices because left-multiplication is an $S^3$ isometry, so seeded codebooks vary in end-task ppl by $<1.5\\%$. A per-batch median-multiplier outlier extraction step ($C{=}3$, no calibration) handles modern outlier-heavy architectures. We evaluate on five modern open models: Mistral-7B (dense MHA), Llama-3-8B and Qwen2.5-7B and Qwen3-8B (dense GQA), and gpt-oss-20b (sparse MoE). On Mistral-7B and Qwen3-8B, HQMQ matches fp16 within $0.02$--$0.03$ ppl points at $\\sim$5 bits. On Qwen2.5-7B and Qwen3-8B, where naive int4 collapses to $10^4{+}$ ppl, HQMQ + Med3$\\times$ recovers fp16 quality within $0.02$--$0.10$ ppl points at $\\sim$5 bits. HQMQ Pareto-dominates naive int by $3$--$1900\\times$ at matched bits across all five models, and downstream zero-shot accuracy matches fp16 at $3.79$ bits on Mistral. Against the strongest calibrated KV-quantization baseline, HQMQ at $3.79$ bits matches KIVI-4 ($\\sim 4.5$ bits) within ${\\sim}1$ pt on CoQA, $0.6$ pts on TruthfulQA, and $2.3$ pts on GSM8K, at $16\\%$ fewer bits and without a calibration pass. At the storage level, HQMQ delivers up to $5.05\\times$ KV compression, shrinking a Llama-3-70B 128k-context cache from 43 GB to 8.5 GB.",
+      "identifiers": [
+        "SemanticScholar:2fc1f6374f533613f57f10a0caf6df133ed63af0"
+      ],
+      "semantic_scholar_id": "2fc1f6374f533613f57f10a0caf6df133ed63af0",
+      "canonical_id": "arXiv:2605.27646",
+      "arxiv_id": "2605.27646",
+      "doi": "10.48550/arXiv.2605.27646",
+      "authors": [
+        "Kabir Swain",
+        "Si-Jie Han",
+        "D. Weidele",
+        "Mauro Martino",
+        "David D. Cox",
+        "Antonio Torralba"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.06247",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.06247",
+        "id:SemanticScholar:e7488527756e435789e0169e42d958f6a1015354",
+        "id:arXiv:2511.06247",
+        "title:optimizing longcontext llm serving via finegrained sequence parallelism",
+        "url:https://arxiv.org/abs/2511.06247"
+      ],
+      "record": {
+        "title": "Optimizing Long-context LLM Serving via Fine-grained Sequence Parallelism",
+        "source_url": "https://arxiv.org/abs/2511.06247",
+        "year": 2025,
+        "published": "2025-11-09",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the advancement of large language models (LLMs), their context windows have rapidly expanded. To meet diverse demands from varying-length requests in online services, existing state-of-the-art systems tune the sequence parallelism (SP) allocation. However, current dynamic SP allocation lacks flexibility to (1) support stage-specific parallelism requirements in LLM inference, (2) mitigate the global latency degradation from excessive SP allocation, and (3) exploit resource fragments arising from SP size variation. To tackle this problem, we propose Chunkwise Dynamic Sequence Parallelism (CDSP), a fine-grained parallelism strategy that assigns SP sizes across \\textit{intra-request} token segments. Based on CDSP, we build Tetris, an LLM serving system that (1) efficiently integrates CDSP into disaggregated cluster to satisfy parallelism heterogeneity, (2) dynamically regulates SP size expansion based on real-time load conditions, and (3) adaptively explores chunking plans to utilize fragmented resources while meeting per-request demands. Compared with state-of-the-art systems, Tetris achieves up to 4.35$\\times$ lower time-to-first-token (TTFT) under max sustainable loads, reduces median time-between-tokens (TBT) by up to 40.1\\%, and increases the max request capacity by up to 45\\%.",
+        "identifiers": [
+          "SemanticScholar:e7488527756e435789e0169e42d958f6a1015354"
+        ],
+        "semantic_scholar_id": "e7488527756e435789e0169e42d958f6a1015354",
+        "canonical_id": "arXiv:2511.06247",
+        "arxiv_id": "2511.06247",
+        "doi": "10.48550/arXiv.2511.06247",
+        "authors": [
+          "Cong Li",
+          "Yuzhe Yang",
+          "Xuegui Zheng",
+          "Qifan Yang",
+          "Yijin Guan",
+          "Si-Ze Zheng",
+          "Li-Wen Chang",
+          "Shu-Fan Liu",
+          "Xin Liu",
+          "Guangyu Sun"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 338,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.03563",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.03563",
+        "id:SemanticScholar:69b4ef8f1cc747a93979529296540117406f766c",
+        "id:arXiv:2602.03563",
+        "title:acl aligned contrastive learning improves bert and multiexit bert finetuning",
+        "url:https://arxiv.org/abs/2602.03563"
+      ],
+      "record": {
+        "title": "ACL: Aligned Contrastive Learning Improves BERT and Multi-exit BERT Fine-tuning",
+        "source_url": "https://arxiv.org/abs/2602.03563",
+        "year": 2026,
+        "published": "2026-02-03",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite its success in self-supervised learning, contrastive learning is less studied in the supervised setting. In this work, we first use a set of pilot experiments to show that in the supervised setting, the cross-entropy loss objective (CE) and the contrastive learning objective often conflict with each other, thus hindering the applications of CL in supervised settings. To resolve this problem, we introduce a novel \\underline{A}ligned \\underline{C}ontrastive \\underline{L}earning (ACL) framework. First, ACL-Embed regards label embeddings as extra augmented samples with different labels and employs contrastive learning to align the label embeddings with its samples'representations. Second, to facilitate the optimization of ACL-Embed objective combined with the CE loss, we propose ACL-Grad, which will discard the ACL-Embed term if the two objectives are in conflict. To further enhance the performances of intermediate exits of multi-exit BERT, we further propose cross-layer ACL (ACL-CL), which is to ask the teacher exit to guide the optimization of student shallow exits. Extensive experiments on the GLUE benchmark results in the following takeaways: (a) ACL-BRT outperforms or performs comparably with CE and CE+SCL on the GLUE tasks; (b) ACL, especially CL-ACL, significantly surpasses the baseline methods on the fine-tuning of multi-exit BERT, thus providing better quality-speed tradeoffs for low-latency applications.",
+        "identifiers": [
+          "SemanticScholar:69b4ef8f1cc747a93979529296540117406f766c"
+        ],
+        "semantic_scholar_id": "69b4ef8f1cc747a93979529296540117406f766c",
+        "canonical_id": "arXiv:2602.03563",
+        "arxiv_id": "2602.03563",
+        "doi": "10.48550/arXiv.2602.03563",
+        "authors": [
+          "Liz Li",
+          "Wei Zhu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 252,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.00030",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.00030",
+        "id:SemanticScholar:996186b9fa743093936bae789c2c01ebfea98f6a",
+        "id:arXiv:2603.00030",
+        "title:simpletool parallel decoding for realtime llm function calling",
+        "url:https://arxiv.org/abs/2603.00030"
+      ],
+      "record": {
+        "title": "SimpleTool: Parallel Decoding for Real-Time LLM Function Calling",
+        "source_url": "https://arxiv.org/abs/2603.00030",
+        "year": 2026,
+        "published": "2026-02-04",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM-based function calling enables intelligent agents to interact with external tools and environments, yet autoregressive decoding imposes a fundamental latency bottleneck that limits real-time applications such as embodied intelligence, game AI, and interactive avatars (e.g., 10 Hz control frequency). We observe that function calling differs fundamentally from free-form text generation: structured outputs exhibit substantial token redundancy (delimiters, parameter names), and arguments exhibit weak causal dependencies. Crucially, these two properties must be exploited jointly to achieve real-time performance. We present SimpleTool, which introduces special tokens that serve a dual role: compressing low-entropy tokens (4-6x reduction) while acting as mode selectors that enable independent parallel generation of function name and arguments. This synergistic design achieves 3-6x end-to-end speedup (up to 9.6x) with only +8.2% parallelization overhead. Experiments on five benchmarks across Qwen-series models (0.5B-14B) demonstrate substantial speedup while maintaining competitive or improved accuracy. On Mobile Actions, ST-Qwen-0.5B outperforms Google's FunctionGemma in both accuracy and latency consistency. With quantization on consumer-grade GPU, SimpleTool achieves 61.2ms P50 latency, enabling 16 Hz real-time control at 4B model scale, bridging the gap between LLM function calling and latency-critical real-world deployment.",
+        "identifiers": [
+          "SemanticScholar:996186b9fa743093936bae789c2c01ebfea98f6a"
+        ],
+        "semantic_scholar_id": "996186b9fa743093936bae789c2c01ebfea98f6a",
+        "canonical_id": "arXiv:2603.00030",
+        "arxiv_id": "2603.00030",
+        "doi": "10.48550/arXiv.2603.00030",
+        "authors": [
+          "Xiao Shi",
+          "Jiaxin Wan",
+          "Linkang Dong",
+          "Wei Jiang",
+          "Yue Liu",
+          "Zengfeng Huang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 251,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.05853",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.05853",
+        "id:SemanticScholar:8c99e76d42086d6cf5d3d7a7fcf86e517a4ccb38",
+        "id:arXiv:2602.05853",
+        "title:rrattention dynamic block sparse attention via perhead roundrobin shifts for longcontext inference",
+        "url:https://arxiv.org/abs/2602.05853"
+      ],
+      "record": {
+        "title": "RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference",
+        "source_url": "https://arxiv.org/abs/2602.05853",
+        "year": 2026,
+        "published": "2026-02-05",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quadratic complexity of attention mechanisms poses a critical bottleneck for large language models processing long contexts. While dynamic sparse attention methods offer input-adaptive efficiency, they face fundamental trade-offs: requiring preprocessing, lacking global evaluation, violating query independence, or incurring high computational overhead. We present RRAttention, a novel dynamic sparse attention method that simultaneously achieves all desirable properties through a head \\underline{r}ound-\\underline{r}obin (RR) sampling strategy. By rotating query sampling positions across attention heads within each stride, RRAttention maintains query independence while enabling efficient global pattern discovery with stride-level aggregation. Our method reduces complexity from $O(L^2)$ to $O(L^2/S^2)$ and employs adaptive Top-$\\tau$ selection for optimal sparsity. Extensive experiments on natural language understanding (HELMET) and multimodal video comprehension (Video-MME) demonstrate that RRAttention recovers over 99\\% of full attention performance while computing only half of the attention blocks, achieving 2.4$\\times$ speedup at 128K context length and outperforming existing dynamic sparse attention methods.",
+        "identifiers": [
+          "SemanticScholar:8c99e76d42086d6cf5d3d7a7fcf86e517a4ccb38"
+        ],
+        "semantic_scholar_id": "8c99e76d42086d6cf5d3d7a7fcf86e517a4ccb38",
+        "canonical_id": "arXiv:2602.05853",
+        "arxiv_id": "2602.05853",
+        "doi": "10.48550/arXiv.2602.05853",
+        "authors": [
+          "Si-Ran Liu",
+          "Guo-Xia Wang",
+          "Sai Wang",
+          "Jinle Zeng",
+          "Haoyang Xie",
+          "Siyu Lou",
+          "Jiabin Yang",
+          "Dian-Hai Yu",
+          "Haifeng Wang",
+          "Chao-Fei Yang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 250,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/southeastcon63549.2026.11476301",
+      "identity_tokens": [
+        "id:DOI:10.1109/southeastcon63549.2026.11476301",
+        "id:SemanticScholar:e7e66c886e8bcd05b505d85af00e60730b3d8f51",
+        "title:adaptive load balancing for multitier llm inference with dynamic model routing",
+        "url:https://doi.org/10.1109/SoutheastCon63549.2026.11476301"
+      ],
+      "record": {
+        "title": "Adaptive Load Balancing for Multi-Tier LLM Inference with Dynamic Model Routing",
+        "source_url": "https://doi.org/10.1109/SoutheastCon63549.2026.11476301",
+        "year": 2026,
+        "published": "2026-02-20",
+        "venue": "SoutheastCon",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM) inference systems face critical challenges in balancing latency, cost, and quality across heterogeneous GPU infrastructure. Existing approaches rely on static routing policies or simple load balancing, resulting in suboptimal resource utilization, high tail latencies, and excessive operational costs. This paper presents an adaptive load balancing framework for multi-tier LLM inference that dynamically routes requests based on real-time system state, request characteristics, and learned performance patterns. Our approach employs reinforcement learning to jointly optimize latency, cost, and Service Level Objective (SLO) compliance across edge, mid-tier, and cloud GPU resources. Experimental evaluation on a realistic workload of 5,000 requests demonstrates that our adaptive router reduces average latency by $\\mathbf{5 1. 1 8 \\%}$ and total operational cost by $\\mathbf{7 0. 0 8 \\%}$ compared to round-robin baseline, while achieving 12.02 percentage points fewer SLO violations. The system achieves these improvements through intelligent tier assignment that matches request complexity to appropriate model capacity.",
+        "identifiers": [
+          "SemanticScholar:e7e66c886e8bcd05b505d85af00e60730b3d8f51"
+        ],
+        "semantic_scholar_id": "e7e66c886e8bcd05b505d85af00e60730b3d8f51",
+        "doi": "10.1109/SoutheastCon63549.2026.11476301",
+        "canonical_id": "DOI:10.1109/SoutheastCon63549.2026.11476301",
+        "authors": [
+          "Tejas Pravinbhai Patel",
+          "Chaitanya Kulkarni",
+          "Sandeep Shivam",
+          "Amit Kumar Padhy",
+          "Viswanathan Ranganathan",
+          "S. Bayyavarapu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 235,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.21444",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.21444",
+        "id:SemanticScholar:6dcf2945310a03e8d3528c85805c8a32ad3950ec",
+        "id:arXiv:2601.21444",
+        "title:spava accelerating longvideo understanding via sequenceparallelismaware approximate attention",
+        "url:https://arxiv.org/abs/2601.21444"
+      ],
+      "record": {
+        "title": "Spava: Accelerating Long-Video Understanding via Sequence-Parallelism-aware Approximate Attention",
+        "source_url": "https://arxiv.org/abs/2601.21444",
+        "year": 2026,
+        "published": "2026-01-29",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The efficiency of long-video inference remains a critical bottleneck, mainly due to the dense computation in the prefill stage of Large Multimodal Models (LMMs). Existing methods either compress visual embeddings or apply sparse attention on a single GPU, yielding limited acceleration or degraded performance and restricting LMMs from handling longer, more complex videos. To overcome these issues, we propose APB-V, a sequence-parallel framework with optimized attention that accelerates long-video inference across multiple GPUs. By distributing approximate attention, APB-V reduces computation and increases parallelism, enabling efficient processing of more visual embeddings without compression and thereby improving task performance. System-level optimizations, such as load balancing and fused forward passes, further unleash the potential of APB-V, delivering speedups of 12.72x, 1.70x, and 1.18x over FlashAttn, ZigZagRing, and APB, without notable performance loss. Code available at https://github.com/thunlp/APB",
+        "identifiers": [
+          "SemanticScholar:6dcf2945310a03e8d3528c85805c8a32ad3950ec"
+        ],
+        "semantic_scholar_id": "6dcf2945310a03e8d3528c85805c8a32ad3950ec",
+        "canonical_id": "arXiv:2601.21444",
+        "arxiv_id": "2601.21444",
+        "doi": "10.48550/arXiv.2601.21444",
+        "authors": [
+          "Yu-Xiang Huang",
+          "Mingye Li",
+          "Xu Han",
+          "Chao-Jun Xiao",
+          "Weilin Zhao",
+          "Ao Sun",
+          "Ziqing Yuan",
+          "Hao Zhou",
+          "Fan-Dong Meng",
+          "Zhiyuan Liu"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 257,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.12452",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.12452",
+        "id:SemanticScholar:8b76cf474cf37226774ffeb777d14ba545c422bf",
+        "id:arXiv:2604.12452",
+        "title:latentcondensed transformer for efficient long context modeling",
+        "url:https://arxiv.org/abs/2604.12452"
+      ],
+      "record": {
+        "title": "Latent-Condensed Transformer for Efficient Long Context Modeling",
+        "source_url": "https://arxiv.org/abs/2604.12452",
+        "year": 2026,
+        "published": "2026-04-14",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) face significant challenges in processing long contexts due to the linear growth of the key-value (KV) cache and quadratic complexity of self-attention. Existing approaches address these bottlenecks separately: Multi-head Latent Attention (MLA) reduces the KV cache by projecting tokens into a low-dimensional latent space, while sparse attention reduces computation. However, sparse methods cannot operate natively on MLA's compressed latent structure, missing opportunities for joint optimization. In this paper, we propose Latent-Condensed Attention (LCA), which directly condenses context within MLA's latent space, where the representation is disentangled into semantic latent vectors and positional keys. LCA separately aggregates semantic vectors via query-aware pooling and preserves positional keys via anchor selection. This approach jointly reduces both computational cost and KV cache without adding parameters. Beyond MLA, LCA's design is architecture-agnostic and readily extends to other attention mechanisms such as GQA. Theoretically, we prove a length-independent error bound. Experiments show LCA achieves up to 2.5$\\times$ prefilling speedup and 90% KV cache reduction at 128K context while maintaining competitive performance.",
+        "identifiers": [
+          "SemanticScholar:8b76cf474cf37226774ffeb777d14ba545c422bf"
+        ],
+        "semantic_scholar_id": "8b76cf474cf37226774ffeb777d14ba545c422bf",
+        "canonical_id": "arXiv:2604.12452",
+        "arxiv_id": "2604.12452",
+        "doi": "10.48550/arXiv.2604.12452",
+        "authors": [
+          "Zeng You",
+          "Yao-Fo Chen",
+          "Qiuwu Chen",
+          "Ying Sun",
+          "Shu-Hai Zhang",
+          "Ying-Jian Li",
+          "Yaowei Wang",
+          "Ming-Kui Tan"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 182,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.13806",
+      "identity_tokens": [
+        "id:DOI:10.1145/3805621.3807619",
+        "id:SemanticScholar:9e1b83f6a5dc85c6aff113cc732376d11eec0266",
+        "id:arXiv:2604.13806",
+        "title:robust ultra lowbit posttraining quantization via stable diagonal curvature estimate",
+        "url:https://arxiv.org/abs/2604.13806"
+      ],
+      "record": {
+        "title": "Robust Ultra Low-Bit Post-Training Quantization via Stable Diagonal Curvature Estimate",
+        "source_url": "https://arxiv.org/abs/2604.13806",
+        "year": 2026,
+        "published": "2026-04-15",
+        "venue": "EuroMLSys@EuroSys",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) are widely used across many domains, but their scale makes deployment challenging. Post-Training Quantization (PTQ) reduces memory footprint without retraining by leveraging a small calibration set. Recent Hessian-based PTQ methods compensate quantization error via cross-channel dependencies, but such approaches degrade at low bit-widths due to noisy curvature estimates from limited calibration data. We propose DASH-Q, a robust PTQ framework using diagonal Hessian approximation and iterative weighted least squares. By discarding noise-prone dependencies, DASH-Q filters sampling noise while prioritizing the preservation of salient feature power. We outperform other PTQ baselines in ultra low-bit regime, improving zero-shot accuracy by 7.01% on average and up to 14.01% over the strongest baselines across five baseline LLM models, while showing robust and stable performance with very small calibration data.",
+        "identifiers": [
+          "SemanticScholar:9e1b83f6a5dc85c6aff113cc732376d11eec0266"
+        ],
+        "semantic_scholar_id": "9e1b83f6a5dc85c6aff113cc732376d11eec0266",
+        "canonical_id": "arXiv:2604.13806",
+        "arxiv_id": "2604.13806",
+        "doi": "10.1145/3805621.3807619",
+        "authors": [
+          "Jaemin Kim",
+          "Sungkyun Kim",
+          "Junyeol Lee",
+          "Jiwon Seo"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 181,
+          "matched_prestigious_venue": "EuroSys"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:72493d38ed8c95e0f49ee5b6cf672470d69261df",
+      "identity_tokens": [
+        "id:SemanticScholar:72493d38ed8c95e0f49ee5b6cf672470d69261df",
+        "title:gear an efficient error reduction framework for kv cache compression in llm inference",
+        "url:https://www.semanticscholar.org/paper/72493d38ed8c95e0f49ee5b6cf672470d69261df"
+      ],
+      "record": {
+        "title": "GEAR: An Efficient Error Reduction Framework for KV Cache Compression in LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/72493d38ed8c95e0f49ee5b6cf672470d69261df",
+        "year": 2024,
+        "published": null,
+        "venue": "ENLSP",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:72493d38ed8c95e0f49ee5b6cf672470d69261df"
+        ],
+        "semantic_scholar_id": "72493d38ed8c95e0f49ee5b6cf672470d69261df",
+        "canonical_id": "SemanticScholar:72493d38ed8c95e0f49ee5b6cf672470d69261df",
+        "authors": [
+          "Hao Kang",
+          "Qingru Zhang",
+          "Souvik Kundu",
+          "Geonhwa Jeong",
+          "Zaoxing Liu",
+          "Tushar Krishna",
+          "Tuo Zhao"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 834,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11432-024-4137-4",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11432-024-4137-4",
+        "id:SemanticScholar:b5c0d58f0e7797dd43d73c5d3c4ec17a0b414e4e",
+        "title:hardwareoriented algorithms for softmax and layer normalization of large language models",
+        "url:https://doi.org/10.1007/s11432-024-4137-4"
+      ],
+      "record": {
+        "title": "Hardware-oriented algorithms for softmax and layer normalization of large language models",
+        "source_url": "https://doi.org/10.1007/s11432-024-4137-4",
+        "year": 2024,
+        "published": "2024-09-12",
+        "venue": "Science China Information Sciences",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:b5c0d58f0e7797dd43d73c5d3c4ec17a0b414e4e"
+        ],
+        "semantic_scholar_id": "b5c0d58f0e7797dd43d73c5d3c4ec17a0b414e4e",
+        "doi": "10.1007/s11432-024-4137-4",
+        "canonical_id": "DOI:10.1007/s11432-024-4137-4",
+        "authors": [
+          "Wenji Li",
+          "Dongxu Lyu",
+          "Gang Wang",
+          "Aokun Hu",
+          "Ningyi Xu",
+          "Guang-Hui He"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 761,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1",
+      "identity_tokens": [
+        "id:SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1",
+        "title:exploring cxlbased kv cache storage for llm serving",
+        "url:https://www.semanticscholar.org/paper/beb9d034f9accbff20525bddf9d345fb799805b1"
+      ],
+      "record": {
+        "title": "Exploring CXL-based KV Cache Storage for LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/beb9d034f9accbff20525bddf9d345fb799805b1",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1"
+        ],
+        "semantic_scholar_id": "beb9d034f9accbff20525bddf9d345fb799805b1",
+        "canonical_id": "SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1",
+        "authors": [
+          "Yupeng Tang",
+          "Run-Xi Cheng",
+          "Ping Zhou",
+          "Tongping Liu",
+          "Fei Liu",
+          "Wei Tang",
+          "Kyoung-ryun Bae",
+          "Jianjun Chen",
+          "Wu Xiang",
+          "Rui Shi"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.10725",
+      "identity_tokens": [
+        "id:DOI:10.1145/3689031.3717455",
+        "id:SemanticScholar:340ab414c7c60e40e439941ca81610374f48becd",
+        "id:arXiv:2503.10725",
+        "title:samoyeds accelerating moe models with structured sparsity leveraging sparse tensor cores",
+        "url:https://arxiv.org/abs/2503.10725"
+      ],
+      "record": {
+        "title": "Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores",
+        "source_url": "https://arxiv.org/abs/2503.10725",
+        "year": 2025,
+        "published": "2025-03-13",
+        "venue": "European Conference on Computer Systems",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The escalating size of Mixture-of-Experts (MoE) based Large Language Models (LLMs) presents significant computational and memory challenges, necessitating innovative solutions to enhance efficiency without compromising model accuracy. Structured sparsity emerges as a compelling strategy to address these challenges by leveraging the emerging sparse computing hardware. Prior works mainly focus on the sparsity in model parameters, neglecting the inherent sparse patterns in activations. This oversight can lead to additional computational costs associated with activations, potentially resulting in suboptimal performance. This paper presents Samoyeds, an innovative acceleration system for MoE LLMs utilizing Sparse Tensor Cores (SpTCs). Samoyeds is the first to apply sparsity simultaneously to both activations and model parameters. It introduces a bespoke sparse data format tailored for MoE computation and develops a specialized sparse-sparse matrix multiplication kernel. Furthermore, Samoyeds incorporates systematic optimizations specifically designed for the execution of dual-side structured sparse MoE LLMs on SpTCs, further enhancing system performance. Evaluations show that Samoyeds outperforms SOTA works by up to 1.99× at the kernel level and 1.58× at the model level. Moreover, it enhances memory efficiency, increasing maximum supported batch sizes by 4.41× on average. Additionally, Samoyeds surpasses existing SOTA structured sparse solutions in both model accuracy and hardware portability.",
+        "identifiers": [
+          "SemanticScholar:340ab414c7c60e40e439941ca81610374f48becd"
+        ],
+        "semantic_scholar_id": "340ab414c7c60e40e439941ca81610374f48becd",
+        "canonical_id": "arXiv:2503.10725",
+        "arxiv_id": "2503.10725",
+        "doi": "10.1145/3689031.3717455",
+        "authors": [
+          "Chenpeng Wu",
+          "Qiqi Gu",
+          "Heng Shi",
+          "Jian-Guo Yao",
+          "Hai-Bing Guan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 579,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.65109/sgxl4097",
+      "identity_tokens": [
+        "id:DOI:10.65109/sgxl4097",
+        "id:SemanticScholar:1f44997f067d28ae279e23f5bf141715a0e18eb7",
+        "title:rac requestadaptive configuration for efficient speculative decoding",
+        "url:https://doi.org/10.65109/SGXL4097"
+      ],
+      "record": {
+        "title": "RAC: Request-adaptive Configuration for Efficient Speculative Decoding",
+        "source_url": "https://doi.org/10.65109/SGXL4097",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding enhances the inference efficiency of large language models by employing a lightweight draft model to generate candidate tokens, which are then verified in parallel by the target model. However, existing approaches typically use fixed speculative configurations—such as the draft model and speculative length—across similar requests, neglecting semantic and structural differences. This limits acceleration potential and reduces adaptability to diverse, dynamic real-world scenarios. To address this, we propose a reinforcement learning-based method called Request-Adaptive Configuration selection (RAC). By formulating speculative configuration selection as a Markov decision process, RAC dynamically determines the optimal draft model and speculative length for each incoming request. It integrates static request features with historical execution feedback to enable fine-grained, request-level inference optimization. Experiments on various text generation benchmarks demonstrate that RAC achieves maximum speedups of 2.02× and 1.37× over autoregressive decoding and vanilla speculative decoding, respectively.",
+        "identifiers": [
+          "SemanticScholar:1f44997f067d28ae279e23f5bf141715a0e18eb7"
+        ],
+        "semantic_scholar_id": "1f44997f067d28ae279e23f5bf141715a0e18eb7",
+        "doi": "10.65109/SGXL4097",
+        "canonical_id": "DOI:10.65109/SGXL4097",
+        "authors": [
+          "Jinhao Sheng",
+          "Xiao Huang",
+          "Hongxin Wei",
+          "Feng Zhou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 141,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.27646",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.27646",
+        "id:SemanticScholar:2fc1f6374f533613f57f10a0caf6df133ed63af0",
+        "id:arXiv:2605.27646",
+        "title:hurwitz quaternion multiplicative quantization for kv cache compression",
+        "url:https://arxiv.org/abs/2605.27646"
+      ],
+      "record": {
+        "title": "Hurwitz Quaternion Multiplicative Quantization for KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2605.27646",
+        "year": 2026,
+        "published": "2026-05-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose \\textbf{Hurwitz Quaternion Multiplicative Quantization (HQMQ)}, a \\textbf{calibration-free} method for KV cache compression of large language models. HQMQ treats each 4-element chunk of K or V as a quaternion and quantizes its unit direction to the \\emph{product} $q_p \\cdot q_s$, where $q_p$ ranges over the 24-element Hurwitz group $2T$ (the 24 vertices of the 24-cell on $S^3$, pairwise angle $60^\\circ$) and $q_s$ ranges over a per-(layer, head) secondary codebook of $S$ \\emph{random} unit quaternions. The multiplicative composition yields $24S$ effective codewords at $S$ stored parameters; random initialization suffices because left-multiplication is an $S^3$ isometry, so seeded codebooks vary in end-task ppl by $<1.5\\%$. A per-batch median-multiplier outlier extraction step ($C{=}3$, no calibration) handles modern outlier-heavy architectures. We evaluate on five modern open models: Mistral-7B (dense MHA), Llama-3-8B and Qwen2.5-7B and Qwen3-8B (dense GQA), and gpt-oss-20b (sparse MoE). On Mistral-7B and Qwen3-8B, HQMQ matches fp16 within $0.02$--$0.03$ ppl points at $\\sim$5 bits. On Qwen2.5-7B and Qwen3-8B, where naive int4 collapses to $10^4{+}$ ppl, HQMQ + Med3$\\times$ recovers fp16 quality within $0.02$--$0.10$ ppl points at $\\sim$5 bits. HQMQ Pareto-dominates naive int by $3$--$1900\\times$ at matched bits across all five models, and downstream zero-shot accuracy matches fp16 at $3.79$ bits on Mistral. Against the strongest calibrated KV-quantization baseline, HQMQ at $3.79$ bits matches KIVI-4 ($\\sim 4.5$ bits) within ${\\sim}1$ pt on CoQA, $0.6$ pts on TruthfulQA, and $2.3$ pts on GSM8K, at $16\\%$ fewer bits and without a calibration pass. At the storage level, HQMQ delivers up to $5.05\\times$ KV compression, shrinking a Llama-3-70B 128k-context cache from 43 GB to 8.5 GB.",
+        "identifiers": [
+          "SemanticScholar:2fc1f6374f533613f57f10a0caf6df133ed63af0"
+        ],
+        "semantic_scholar_id": "2fc1f6374f533613f57f10a0caf6df133ed63af0",
+        "canonical_id": "arXiv:2605.27646",
+        "arxiv_id": "2605.27646",
+        "doi": "10.48550/arXiv.2605.27646",
+        "authors": [
+          "Kabir Swain",
+          "Si-Jie Han",
+          "D. Weidele",
+          "Mauro Martino",
+          "David D. Cox",
+          "Antonio Torralba"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0d1b61ec685ec7e0373beb1f2b9952092ecb43818c590e9de0cd4c6ae84343c5",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

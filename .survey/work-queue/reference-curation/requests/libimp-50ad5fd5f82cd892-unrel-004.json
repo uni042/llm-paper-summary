@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-50ad5fd5f82cd892-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.23686",
+  "reason": "Patch-based autoregressive time-series forecasting often ties input representation, learned transitions, and recursive execution to one patch length. We ask which of these roles can be adjusted separately. A supporting atomic-encoding study finds greater sensitivity to model width than to atom grouping on the evaluated grid. Our main finding is that a frozen parent's recursive trajectory is easier to fit than the observed future with lightweight parallel exits. Autoregressive Trajectory Distillation (ATD) turns this into selectable ATD-1/2/4/8 execution, with ATD-1 exactly recovering the parent. On a paired four-data-set comparison, ATD-8 reaches $5.54\\times$ end-to-end speedup with stable quality across widths. Fewer calls do not automatically remove the parent's existing forecast error: ATD improves trajectory fidelity in all 21 seed runs but forecast accuracy in only 15 against matched clean-future supervision. We further find a correctable residual projection along a train-selected periodic history direction. Spectrum Tangent applies this correction without adding neural parameters or Transformer calls. At horizon 720, it reduces mean squared error (MSE) and mean absolute error (MAE) by 2.54% and 2.33% over seven data sets and two output widths, while remaining $3.24\\times$ faster than recursive inference. Level and shape projections sometimes disagree. Trajectory compressibility, the fidelity-accuracy mismatch, and the correction recur across three public AR parents. Together these results separate representation, transition, and execution as AR design axes. Code is available at https://github.com/RowanFFF/ATD-Spectrum-Tangent.",
+  "title": "One Patch, Three Roles: What Is Actually Coupled in Autoregressive Time-Series Forecasting?",
+  "identity_tokens": [
+    "arXiv:2609.23686"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+    "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+    "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-50ad5fd5f82c",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b2899245ffe170a1-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s44458-026-00152-5",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s44458-026-00152-5",
+    "identity_tokens": [
+      "DOI:10.1038/s44458-026-00152-5"
+    ],
+    "reason": "The rapid growth of generative artificial intelligence is increasing global electricity demand and placing new pressure on power systems. Here we show that electricity use by data centers built for artificial intelligence could rise from about 118 terawatt-hours in 2024 to between 239 and 295 terawatt-hours by 2030, or about 1% of global electricity demand. New computing infrastructure is highly concentrated in North America, Western Europe, and the Asia-Pacific, which together account for more than 90% of projected computing capacity. Some regions, including Oregon, Ireland, and Iowa, face greater pressure from concentrated data-center loads, whereas larger systems such as Texas can absorb new demand more effectively. These results indicate that artificial intelligence infrastructure is becoming a structural part of power-system dynamics. The study combines large language model analysis of corporate, policy, and media sources with scenario-based projections of future electricity demand. AI data centers could consume 239 to 295 terawatt hours by 2030, about 1% of global electricity demand, with capacity concentrated in North America, Western Europe and Asia-Pacific, according to a framework combining large language model analysis and electricity demand scenarios",
+    "first_checked_at": "2026-10-05T06:12:08+00:00",
+    "last_checked_at": "2026-10-05T06:12:08+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md"
+    ],
+    "title": "Artificial intelligence data centers could reach one percent of global electricity demand by 2030"
+  },
+  "processed_at": "2026-10-05T06:12:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b2899245ffe1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

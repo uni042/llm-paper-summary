@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20bd880ec76687f2-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.11761",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.11761",
+    "identity_tokens": [
+      "arXiv:2410.11761"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.11761. Abstract summary: Despite the progress made by multimodal large language models (MLLMs) in computational pathology, they remain limited by a predominant focus on patch-level analysis, missing essential contextual information at the whole-slide level. The lack of large-scale instruction datasets and the gigapixel scale of whole slide images (WSIs) Out of scope: Whole-slide pathology VLM dataset/assistant capability work, no serving efficiency claim.",
+    "first_checked_at": "2026-10-05T12:30:31+00:00",
+    "last_checked_at": "2026-10-05T12:30:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+    ],
+    "title": "SlideChat: A Large Vision-Language Assistant for Whole-Slide Pathology Image Understanding"
+  },
+  "processed_at": "2026-10-05T12:30:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20bd880ec766",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

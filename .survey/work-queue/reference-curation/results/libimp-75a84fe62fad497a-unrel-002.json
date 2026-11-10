@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75a84fe62fad497a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.13359",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.13359",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2408.13359",
+      "arXiv:2408.13359"
+    ],
+    "reason": "言語モデル事前学習の学習率スケジューラが主題で、凍結中の学習高速化・学習設定側に属する。",
+    "first_checked_at": "2026-10-02T07:05:49+00:00",
+    "last_checked_at": "2026-10-03T18:20:06+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
+      "papers/inference/12-moe-parallelism-communication/2025-2505.13345-occult-collaborative-expert-communication.md"
+    ],
+    "title": "Power Scheduler: A Batch Size and Token Number Agnostic Learning Rate Scheduler"
+  },
+  "processed_at": "2026-10-03T18:20:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75a84fe62fad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

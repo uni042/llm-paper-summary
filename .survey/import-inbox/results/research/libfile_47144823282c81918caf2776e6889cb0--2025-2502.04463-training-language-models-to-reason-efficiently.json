@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5e201ab7e108ebbf94c980141b2816cfb2188cb40da83e3acc2884d0cd03c5ac",
+  "normalized_source_sha256": "f05dcae94dabc732794aa6fe688832a227c68481538e4cb6b646164c177b8b17",
+  "japanese_normalized": true,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_47144823282c81918caf2776e6889cb0--2025-2502.04463-training-language-models-to-reason-efficiently.md",
+  "canonical_id": "arXiv:2502.04463",
+  "worker_completed_at": "2026-10-07T16:04:41+09:00",
+  "worker_run_key": "20261007-1604-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 1971,
+    "body_paragraphs": 15,
+    "method_chars": 580,
+    "method_paragraphs": 4,
+    "evaluation_chars": 225,
+    "limitation_chars": 326,
+    "insufficiency_flags": [
+      "本文説明量 1971 < 2200",
+      "手法説明量 580 < 700",
+      "評価説明量 225 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 本文説明量 1971 < 2200",
+    "説明不足トリガー: 手法説明量 580 < 700",
+    "説明不足トリガー: 評価説明量 225 < 500"
+  ],
+  "processed_at": "2026-10-07T21:55:18+00:00"
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-02ef5da2a38176f5-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1511.02301",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1511.02301",
+    "identity_tokens": [
+      "arXiv:1511.02301"
+    ],
+    "reason": "children's booksの意味語予測とCNN QAでexplicit memory representationの粒度を評価するlanguage modeling/QA能力研究。推論runtime・serving最適化を目的としない。",
+    "first_checked_at": "2026-10-05T01:01:01+00:00",
+    "last_checked_at": "2026-10-05T02:52:34+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "The Goldilocks Principle: Reading Children's Books with Explicit Memory Representations"
+  },
+  "processed_at": "2026-10-05T02:52:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-02ef5da2a381",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

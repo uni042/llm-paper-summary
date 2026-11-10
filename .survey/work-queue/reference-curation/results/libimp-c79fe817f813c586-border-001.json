@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c79fe817f813c586-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.21744",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.21744",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.21744",
+      "arXiv:2601.21744"
+    ],
+    "reason": "TeGuはMTPから弱いamateur予測を構成し、cMTPPを使って時間方向の自己対比で生成品質を高める。補助モデル負荷を抑える工夫はあるが、主目的は生成品質改善であり、トークン毎の推論速度やサービング性能への直接的改善は要旨では十分に示されない。",
+    "first_checked_at": "2026-10-28T22:45:56+00:00",
+    "last_checked_at": "2026-10-28T22:45:56+00:00",
+    "linked_from": [
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Temporal Guidance for Large Language Models"
+  },
+  "processed_at": "2026-10-28T22:45:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c79fe817f813",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

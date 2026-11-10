@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "d7b16b647686c5e9a9ed11aa99630dd939da8db02f3659f17d2c804943cc1975",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f3ddf085ed34--libfile_7018682f5288819185e591ee2ff8a3d6--2026-2605.16839-compactattention-block-union-returned-repair-20261022-0645-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2605.16839",
+  "worker_completed_at": "2026-10-22T07:08:00+09:00",
+  "worker_run_key": "20261022-0645-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6765,
+    "body_paragraphs": 35,
+    "method_chars": 2235,
+    "method_paragraphs": 12,
+    "evaluation_chars": 1303,
+    "limitation_chars": 572,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2026-2605.16839-compactattention-accelerating-chunked-prefill-with-block-union-kv-select.md と 23 段落 / 5111文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-22T18:08:22+00:00"
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Transformer-Based Resource and Stage-Aware Scheduling for Model-Parallel LLM Inference",
+      "source_url": "https://doi.org/10.1145/3737611.3776613",
+      "year": 2026,
+      "published": "2026-01-04",
+      "venue": "ICDCN Companion",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current large language model (LLM) serving systems face three key limitations in distributed scheduling. First, most parallelization strategies are not stage-aware: they treat prefill and decode as uniform workloads despite their distinct compute and communication profiles. Second, many assume homogeneous hardware and ignore resource diversity in memory and bandwidth across nodes. Third, they overlook network congestion, as they are primarily designed for data-center environments with abundant interconnect bandwidth. We address these gaps with a resource- and stage-aware scheduler that models heterogeneous GPU clusters, communication costs, and per-stage characteristics. We compare three approaches: a heuristic stage-based policy, a continuous-batching (vLLM-style) baseline, and a transformer-based scheduler trained by imitation to replicate and improve the heuristic. Our evaluation spans eight representative scenarios covering large models that exceed a single GPU, prefill-dominant and mixed workloads, heterogeneous and bandwidth-limited clusters, strict SLO constraints, and multi-tenant or elastic deployments. The learned scheduler reduces latency by up to 50% under bandwidth-constrained or heterogeneous conditions while maintaining throughput within 20–30% of vLLM. It further improves latency by 3–17% over its heuristic teacher while preserving 100% feasibility. Continuous batching remains superior on high-bandwidth fabrics. These results identify bandwidth as a first-order determinant of optimal scheduling and demonstrate that learned schedulers can unify heuristic feasibility with adaptive, resource-aware optimization.",
+      "identifiers": [
+        "SemanticScholar:5be714b739f3f60bb5ea5d20a8d6168ac8192450"
+      ],
+      "semantic_scholar_id": "5be714b739f3f60bb5ea5d20a8d6168ac8192450",
+      "doi": "10.1145/3737611.3776613",
+      "canonical_id": "DOI:10.1145/3737611.3776613",
+      "authors": [
+        "Rami Naeem",
+        "Tengis Buyantogtokh",
+        "Hamada Rizk",
+        "Tatsuya Amano",
+        "Hirozumi Yamaguchi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 299,
+        "matched_prestigious_venue": null
+      },
+      "reason": "大阪大学著者が公開したICDCN Companion 2026論文本文を確認。prefill/decodeの段階別計算特性とGPUメモリ・帯域・通信費用を考慮し、模倣学習TransformerスケジューラをvLLM-style continuous batchingと比較。低帯域・異種GPU条件で最大50%の遅延削減、ヒューリスティック比3〜17%改善、可行性100%と報告。一方高帯域ではcontinuous batchingが優位。分散LLM推論スケジューリングの直接研究。",
+      "library_body_check": "primary_author_uploaded_conference_pdf_abstract_and_intro_checked; full_experimental_tables_not_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "ATQ: Activation Transformation forWeight-Activation Quantization of Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2024.findings-emnlp.1001",
+      "year": 2024,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:82fcdbe7decbc0610013ad78400b0250d70ad14a"
+      ],
+      "semantic_scholar_id": "82fcdbe7decbc0610013ad78400b0250d70ad14a",
+      "doi": "10.18653/v1/2024.findings-emnlp.1001",
+      "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.1001",
+      "authors": [
+        "Yu Gai",
+        "Ping Li"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 851,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "ACL Findings EMNLP 2024の正式PDF要旨を確認。INT8のweight-activation量子化において、等価変換により重みと活性の量子化誤差を分離して抑え、重みのin-feature次元量子化と補償、活性の正規範囲化を組み合わせる。LLMの推論時メモリと演算効率に直接関連し、著者はほぼ損失のない精度を主張。具体的な推論速度倍率は要旨から未確認。",
+      "library_body_check": "primary_publisher_pdf_abstract_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Enhancing Domain-Specific Code Completion via Collaborative Inference with Large and Small Language Models",
+      "source_url": "https://doi.org/10.1145/3770748",
+      "year": 2025,
+      "published": "2025-10-03",
+      "venue": "ACM Transactions on Software Engineering and Methodology",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model-based code completion has demonstrated excellent performance, but still encounters challenges in capturing domain-specific knowledge for more precise completion within specific domains, i.e., domain-specific code completion. Prior work has studied fine-tuning techniques or retrieval-augmented techniques for this task. Nevertheless, it requires a lot of computational resources to fine-tune large language models (LLMs), and the cost can increase quadratically with the model size. Retrieval-augmented techniques face difficulties in accurately and adaptively retrieving relevant information. Moreover, considering that code completion tools work in real time, how to utilize large language models more efficiently poses challenges. To tackle these challenges, in this article, we first conduct preliminary experiments and observe that the code completion results of a small model fine-tuned within a specific domain complement those of a large model. Building on this insight, we propose a collaborative framework to effectively combine large and small models for better domain-specific code completion. Specifically, we fine-tune a small code model instead of a large model with the PEFT method, reducing the overhead of fine-tuning. We utilize a well-designed classifier to facilitate the adaptive combination of distinct completion results. The classifier relies on features in various dimensions, such as the similarity between the completed code and the context, and is used to adaptively determine how to combine the tokens predicted by the large and small models for better code completion. Evaluation results show that our approach achieves an average improvement in the exact match of 7.42% and 4.67% over the state-of-the-art baselines in the intra-project and intra-domain code completion scenarios, respectively. Furthermore, compared to the state-of-the-art domain-specific code completion approach FT2Ra, the inference speed of our approach is 1.40 times faster, and the average space requirement drops from 25.98G to 13.69G. These advantages make our approach much more accessible and efficient.",
+      "identifiers": [
+        "SemanticScholar:3485b47d76e7babaabfdc0cd92e80b61b9d42d7c"
+      ],
+      "semantic_scholar_id": "3485b47d76e7babaabfdc0cd92e80b61b9d42d7c",
+      "doi": "10.1145/3770748",
+      "canonical_id": "DOI:10.1145/3770748",
+      "authors": [
+        "Jingrong Yu",
+        "Zhi-Peng Gao",
+        "Ling-Feng Bao",
+        "Zhong-Xin Liu"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 392,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ACM Transactions on Software Engineering and Methodology 2026の原著PDF要旨を確認。ドメイン特化の小型コードモデルと大型コードモデルを分類器・投機的復号で協調させ、FT2Ra比で推論速度1.40倍、メモリ要件25.98GBから13.69GB、intra-project/intra-domainのExact Matchをそれぞれ7.42/4.67ポイント改善と報告。コード補完に特化するがLLM協調推論の効率を直接評価する。",
+      "library_body_check": "primary_publisher_pdf_abstract_checked_via_original_pdf_preview; full_experiments_not_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-015dddfd0caf",
+    "round": "libimp-015dddfd0caf85e1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-015dddfd0caf85e1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-015dddfd0caf85e1-pre01.json",
+    "receipt": "sha256:da43281a2114c03cee74f576e67f0b5bee6819141b170ae16f6ebfca0259658b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-015dddfd0caf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

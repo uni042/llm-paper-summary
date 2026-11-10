@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-65babf6032088f9e-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.11783",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.11783",
+    "identity_tokens": [
+      "arXiv:2505.11783"
+    ],
+    "reason": "This is adjacent retrieval infrastructure rather than an LLM inference/serving optimization; whether to include such systems is unresolved for this scope.",
+    "first_checked_at": "2026-10-05T15:18:52+00:00",
+    "last_checked_at": "2026-10-05T15:18:52+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md",
+      "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md",
+      "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Vector Search on Disaggregated Memory with d-HNSW"
+  },
+  "processed_at": "2026-10-05T15:18:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-65babf603208",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

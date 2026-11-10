@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LoopAhead: Speculating Ahead for Faster Decoding in Looped Language Models",
+      "source_url": "https://arxiv.org/abs/2610.21594",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Transformers improve parameter efficiency by repeatedly applying the same Transformer layers. However, generating each token still involves sequential computation and repeated access to model weights, leading to high decoding latency. Recent pipelined self-speculative decoding methods reduce this delay by drafting tokens from early-loop predictions and asynchronously advancing tokens at different recurrent depths in the same batch, but they do not fully exploit early-loop features for longer lookahead and still spend computation verifying incorrect speculative branches. We introduce \\method, a speculative decoding framework for looped transformers that enables earlier drafting of future tokens and assigns complementary roles to different recurrent depths. A lightweight lookahead drafter (LAD) predicts multiple future tokens with early-loop states, and deeper-loop feedback helps decide which draft branches to continue and which to pause, while the full-depth model makes the final token decisions. LoopAhead achieves up to 7.82x decoding speedup over autoregressive decoding while preserving the target model's output distribution.",
+      "identifiers": [
+        "SemanticScholar:e0cdfa1ee16bdfb1bad129a5ce97b3003c7df751"
+      ],
+      "semantic_scholar_id": "e0cdfa1ee16bdfb1bad129a5ce97b3003c7df751",
+      "canonical_id": "arXiv:2610.21594",
+      "arxiv_id": "2610.21594",
+      "authors": [
+        "Zi-Xuan Liu",
+        "Nan Xue",
+        "Rui Bao",
+        "Yu-Hang Xu",
+        "Xiao-Feng Cao",
+        "Jiangchao Yao",
+        "Zhi-Yong Chen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      },
+      "reason": "共有Transformer層を反復するLoopLMの投機復号で、早いloopの特徴から軽量drafterが複数将来tokenを予測し、深いloopのfeedbackで誤ったbranchを早期停止し、full-depth modelが最終確定するLoopAheadを提案。一次要旨はtarget分布を保持しつつ通常自回帰decode比最大7.82倍の高速化を報告。LoopLM専用speculative decodingとしてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "HBFSim: A Simulator for Exploring HBF in Memory Hierarchies for LLMs",
+      "source_url": "https://arxiv.org/abs/2610.23503",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "High Bandwidth Flash (HBF) has recently emerged as a promising technology that provides terabyte-scale accelerator-local capacity at bandwidths approaching HBM, with a potential cost-per-bit advantage over HBM. However, its NAND foundation brings long latency, out-of-place updates, and finite write endurance directly into the accelerator memory hierarchy, making its effects on performance and lifetime difficult to predict. To study this emerging design space, we present HBFSim, an LLM-aware event-driven simulator for heterogeneous HBM+HBF memory systems that preserves application-level memory semantics while modeling flash-internal behavior. HBFSim models HBM, HBF with host-managed flash translation, and conventional capacity tiers in one simulation driven by a calibrated serving frontend. Using HBFSim, we study decoding of Llama-3.1-70B and Qwen3-235B-A22B under three workloads that differ in their input and output lengths. HBF serves data that does not fit in HBM 11.0--19.0$\\times$ faster than host DRAM; HBM is better used to hold the running sequences'KV cache than as a cache for HBF; and at a published peak load of Llama-3.1-70B, HBF lasts 2.0 to 6.9 years, in proportion to the stacks that share the KV writes. The artifact is available at https://github.com/FlashLabAE/HBFSim and will track public HBF device data as it becomes available.",
+      "identifiers": [
+        "SemanticScholar:821fb25f05d7e7c9f52227050e0f8737207d4b51"
+      ],
+      "semantic_scholar_id": "821fb25f05d7e7c9f52227050e0f8737207d4b51",
+      "canonical_id": "arXiv:2610.23503",
+      "arxiv_id": "2610.23503",
+      "doi": "10.1145/3848591.3856870",
+      "authors": [
+        "Jin-Heng Li",
+        "Guo-Sheng Wang",
+        "Hong-Chao Du",
+        "Shang-Yu Wu",
+        "Qiao Li",
+        "Chun Jason Xue"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HBMに近い帯域と大容量を持つHigh Bandwidth FlashのNAND特有の遅延・書込み寿命を、LLM serving frontendとflash内部動作を組み合わせたevent-driven simulator HBFSimで評価。一次要旨はLlama-3.1-70B/Qwen3-235B-A22BのdecodeでHBFがhost DRAM比11～19倍高速なデータ供給を示し、HBMはHBFのcacheよりKV保持へ割り当てる方が有利と報告。実機ではなくsimulationである点を明示した上でLLMメモリ階層設計としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Context-Aware Precision Scheduling for Small Language Models",
+      "source_url": "https://arxiv.org/abs/2610.15640",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Small language models (SLMs) used as on-device agents must balance accuracy and latency as their context grows. Mixed precision helps manage this tradeoff by assigning different precisions to weight tensors according to their size and sensitivity. However, these choices depend on the operating conditions, so a configuration selected for a short context may no longer provide the best tradeoff at a longer one. We calibrate a timing model from measurements at different precisions and context lengths, and combine it with tensor sensitivities to choose configurations under a latency or accuracy budget. We argue that fewer bits do not always mean faster execution, so our predictor estimates latency from calibrated execution costs rather than weight bytes alone. Under a latency budget, reading the larger key-value (KV) cache leaves less time for weight operations, leading the allocator to select lower precisions. This gives a schedule of tensor changes that can be prepared before execution. Our runtime follows the schedule while retaining the session's KV cache. We evaluate executed schedules on a laptop GPU, including a longer-context schedule with three weight formats and a tool-use benchmark measuring full response time and correctness. Under an accuracy budget, measured error from a quantized KV cache determines the budget left for weights. The allocator can raise or lower weight precision as this estimate changes. These experiments show where context-aware precision helps and where accuracy recovery remains limited.",
+      "identifiers": [
+        "SemanticScholar:ffb7efa1ab732b872ad430767a91c67d1a73d136"
+      ],
+      "semantic_scholar_id": "ffb7efa1ab732b872ad430767a91c67d1a73d136",
+      "canonical_id": "arXiv:2610.15640",
+      "arxiv_id": "2610.15640",
+      "authors": [
+        "Mukund Athmaram",
+        "Manoj Rao",
+        "Liang Ma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      },
+      "reason": "端末内SLMで文脈長に応じてKV読出しが増えると、重みprecisionを固定する最適化は崩れる。tensor感度と文脈長別の実測latency modelを組み合わせ、精度/遅延制約下で複数weight formatを切替えるscheduleを事前構築する。一次要旨はlaptop GPUで実際にscheduleを実行し、tool-use全応答時間・正解率を評価。KV量子化誤差も精度予算へ組み込むLLM推論時の動的precision選択としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.18143",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefix reuse improves LLM inference by sharing the KV cache of common prompt prefixes. This helps only if the scheduler can execute a matched branch in the current worker round. Schedulers assume that a matched prefix is ready, which holds for full attention but fails for hybrid LLMs. There, a branch (the consumer) may need recurrent state that another branch (the producer) is still computing in the same round. The native scheduler stops its waiting-queue scan at this blocked consumer, and the resulting head-of-line blocking creates \\emph{execution bubbles}: idle batch slots that independent work could fill. We introduce RadixFlow, which decouples prefix matching from state readiness. Its state-ready traversal turns a global scan barrier into a local wait: only the consumer is blocked until the next round, while feasible independent branches keep filling the batch under the native state check. On five hybrid models, RadixFlow lowers mean latency by 3\\% to 24\\% and worker rounds by 11\\% to 44\\% at almost unchanged reuse. On the larger Qwen3.5 models, ablations show that most of the gain comes from traversal, which adds little on a full-attention control. Heavier rounds limit how much of this saving reaches latency.",
+      "identifiers": [
+        "SemanticScholar:8c79cfb1892914e97379cdab87d58e5cae3d9efd"
+      ],
+      "semantic_scholar_id": "8c79cfb1892914e97379cdab87d58e5cae3d9efd",
+      "canonical_id": "arXiv:2610.18143",
+      "arxiv_id": "2610.18143",
+      "authors": [
+        "Hui-Hao Jing",
+        "Wen-Bin Hu",
+        "Shao-Jin Chen",
+        "Hao-Chen Shi",
+        "Haoyu Huang",
+        "Si-Rui Zhang",
+        "Yuxuan Liu",
+        "Zhong-Wei Xie",
+        "Hao-Ran Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "prefix共有するhybrid linear-attention LLMでは、recurrent stateの生成待ちconsumerがschedulerのwaiting scanを止め、独立requestのbatch slotまで空く問題を扱う。RadixFlowはprefix一致とstate ready判定を分離し、未準備consumerだけを次roundへ送り独立requestを継続投入する。一次要旨は5 hybrid modelで平均latency3～24%削減、worker round11～44%削減を報告。LLM serving schedulerのhead-of-line blocking解消としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "ReaDy: Recurrent States as Dynamic Context for Speculative Drafting in Hybrid Linear Attention Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.20503",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive generation by drafting multiple tokens per step, yet feature-based drafters rely on target hidden features whose contextual emphasis may not align with the needs of subsequent draft positions. Hybrid linear attention (HLA) models maintain compact recurrent states that accumulate historical associations, offering an efficient source of complementary context for speculative drafting. We introduce ReaDy, the first speculative decoding method, to the best of our knowledge, to leverage HLA recurrent states for position-specific context retrieval during drafting. ReaDy equips each draft position with a learned query to retrieve supplementary context directly from the target's committed recurrent states. A lightweight state reader integrates this context into draft representations through residual updates, while low-rank state reads and fused operators keep additional computation and I/O overhead low. Building on DSpark's parallel backbone and sequential prediction head, ReaDy employs a lightweight two-stage adaptation strategy, with reader capacity, state sources, and residual placement examined through ablation studies. Across seven benchmarks spanning mathematics, code generation, and dialogue, ReaDy achieves an average $3.16\\times$ decoding speedup over autoregressive decoding with Qwen3.8-27B on a single NVIDIA B200 GPU. It outperforms DSpark on every benchmark, improving throughput by 7.97% and acceptance length by 8.50% on average. Our code is available at https://github.com/StartLuxLabs/ReaDy.",
+      "identifiers": [
+        "SemanticScholar:d728a44420cdc27a3e6a791ca9296ed80d49261f"
+      ],
+      "semantic_scholar_id": "d728a44420cdc27a3e6a791ca9296ed80d49261f",
+      "canonical_id": "arXiv:2610.20503",
+      "arxiv_id": "2610.20503",
+      "authors": [
+        "Bo Sun",
+        "Zun-Hai Su",
+        "Xia-Lie Zhuang",
+        "Jian-Jing Li",
+        "Ngai Wong",
+        "Chuan-Wei Kuo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "hybrid linear attention LLMのrecurrent stateをdraft位置別の追加contextとして読み出し、low-rank state readとfused operatorでI/O負荷を抑えるReaDyを提案。DSpark型parallel backboneに位置別query readerを加え、軽量な2段階適応でdraftを改善する。一次要旨はQwen3.8-27B/B200単体で平均3.16倍のdecode speedup、DSpark比throughput7.97%・受理長8.50%増を報告。hybrid LLMの投機復号高速化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1890c0c2b968",
+    "round": "libimp-1890c0c2b968f090-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1890c0c2b968f090-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1890c0c2b968f090-pre01.json",
+    "receipt": "sha256:b0fc4dad1b74fb1d848ce87f3a63ef21ba8649ddfcb4d5358fdf89ae756d6951"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1890c0c2b968",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-09ae00ad9cd3bce4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.18758",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.18758",
+    "identity_tokens": [
+      "arXiv:2505.18758",
+      "id:arXiv:2505.18758",
+      "url:https://arxiv.org/abs/2505.18758"
+    ],
+    "reason": "CERWUはレート制約付き量子化とエントロピー符号化で汎用事前学習ネットワークの格納量を削減するが、原著要旨の実験は画像認識ネットワークでありLLM推論・サービングの実証がない。現行のLLM推論系統への直接適合を確認できないため対象外とする。",
+    "first_checked_at": "2026-10-28T22:45:52+00:00",
+    "last_checked_at": "2026-10-28T22:45:52+00:00",
+    "linked_from": [],
+    "title": "Reducing Storage of Pretrained Neural Networks by Rate-Constrained Quantization and Entropy Coding"
+  },
+  "processed_at": "2026-10-28T22:45:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-09ae00ad9cd3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

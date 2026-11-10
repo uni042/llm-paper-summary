@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-78a21344c7b66618-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.11218",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.11218",
+    "identity_tokens": [
+      "arXiv:2608.11218"
+    ],
+    "reason": "一次要旨はreplicated latent-storeのcontent-addressed agent readingを扱い、LLM推論効率の明確な評価がない。",
+    "first_checked_at": "2026-10-05T10:11:50+00:00",
+    "last_checked_at": "2026-10-05T10:11:50+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2410.15332-epic-position-independent-caching.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2502.16002-kvlink.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+    ],
+    "title": "MaSRead: Content-Addressed Reading of Replicated Latent Stores"
+  },
+  "processed_at": "2026-10-05T10:11:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78a21344c7b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

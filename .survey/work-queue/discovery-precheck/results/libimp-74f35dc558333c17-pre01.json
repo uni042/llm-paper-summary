@@ -1,0 +1,974 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-74f35dc558333c17-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-74f35dc55833",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2503.09657",
+    "arXiv:2602.06822",
+    "arXiv:2603.06938",
+    "arXiv:2604.18002",
+    "arXiv:2607.11368",
+    "arXiv:2607.19358",
+    "arXiv:2608.08730",
+    "arXiv:2609.15160",
+    "arXiv:2609.27298",
+    "arXiv:2609.32256"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:25.867802+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2503.09657",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.06822",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.06938",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.18002",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.11368",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.19358",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.08730",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.15160",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.27298",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32256",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Neural Garbage Collection: Learning to Forget while Learning to Reason",
+      "source_url": "https://arxiv.org/abs/2604.18002",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-thought reasoning has driven striking advances in language model capability, yet every reasoning step grows the KV cache, creating a bottleneck to scaling this paradigm further. Current approaches manage these constraints on the model's behalf using hand-designed criteria. A more scalable approach would let end-to-end learning subsume this design choice entirely, following a broader pattern in deep learning. After all, if a model can learn to reason, why can't it learn to forget? We introduce Neural Garbage Collection (NGC), in which a language model learns to forget while learning to reason, trained end-to-end from outcome-based task reward alone. As the model reasons, it periodically pauses, decides which KV cache entries to evict, and continues to reason conditioned on the remaining cache. By treating tokens in a chain-of-thought and cache-eviction decisions as discrete actions sampled from the language model, we can use reinforcement learning to jointly optimize how the model reasons and how it manages its own memory: what the model evicts shapes what it remembers, what it remembers shapes its reasoning, and the correctness of that reasoning determines its reward. Crucially, the model learns this behavior entirely from a single learning signal - the outcome-based task reward - without supervised fine-tuning or proxy objectives. On Countdown, AMC, and AIME tasks, NGC maintains strong accuracy relative to the full-cache upper bound at 2-3x peak KV cache size compression and substantially outperforms eviction baselines. Our results are a first step towards a broader vision where end-to-end optimization drives both capability and efficiency in language models.",
+      "identifiers": [
+        "SemanticScholar:2a0a80a2bac24fb306865f0251dcb93f929498a9"
+      ],
+      "semantic_scholar_id": "2a0a80a2bac24fb306865f0251dcb93f929498a9",
+      "canonical_id": "arXiv:2604.18002",
+      "arxiv_id": "2604.18002",
+      "doi": "10.48550/arXiv.2604.18002",
+      "authors": [
+        "Michael Y. Li",
+        "Jubayer Ibn Hamid",
+        "Emily Fox",
+        "Noah D. Goodman"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "T-LoopFormer: Token-Level Elastic-Depth Looped Transformers with Dynamic Routing",
+      "source_url": "https://arxiv.org/abs/2609.15160",
+      "year": 2026,
+      "published": "2026-09-14",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Transformers have recently demonstrated strong performance in both reasoning and language tasks by reusing a shared set of parameters across multiple iterations, achieving parameter efficiency without sacrificing representational power. Besides, looped Transformers perform inference directly in the latent space (latent reasoning) to reduce the number of tokens consumed during inference, thereby achieving improved sample efficiency. However, these models typically apply a fixed recursion depth uniformly to every token, leading to suboptimal compute allocation and leaving significant efficiency gains on the table. In this work, we propose \\textbf{t}oken-level elastic-depth \\textbf{looped transformers}: T-LoopFormer. T-LoopFormer uses \\textbf{dynamic token-choice routing}, which enables each token to adaptively determine its own number of loop iterations based on its hidden state, which could improve the token generation accuracy. Moreover, we further introduce recursion-wise KV cache, which maintains an independent key-value cache for each recursion loop of active tokens; this design ensures that tokens at different depths only attend to their corresponding cached states, effectively enabling faster autoregressive decoding. Extensive experiments show that T-LoopFormer achieves robust performance on a wide range of language modeling and zero-shot reasoning tasks, and our model could reach the lowest decoding latency, which validates the effectiveness of token-choice router and recursion-wise KV cache. Code is available at https://github.com/YuMingQian1234/T-LoopFormer",
+      "identifiers": [
+        "SemanticScholar:f5e23c0eeaf327756679900da113871ca70ef0ca"
+      ],
+      "semantic_scholar_id": "f5e23c0eeaf327756679900da113871ca70ef0ca",
+      "canonical_id": "arXiv:2609.15160",
+      "arxiv_id": "2609.15160",
+      "authors": [
+        "Ming-Qian Yu",
+        "Wen-Peng Zhang",
+        "Shao-Bo Cui",
+        "Pei-Lin Zhao"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Decomposing Runtime, Kernel, and Quantization Speedups via a Matched FP16 Intermediate: A Hardware-Conditioned Case Study on Four NVIDIA RTX A5000 GPUs",
+      "source_url": "https://arxiv.org/abs/2607.11368",
+      "year": 2026,
+      "published": "2026-07-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reported serving speedups from quantized kernels typically bundle the weight format, the kernel, and the inference runtime into one number. We present an attribution study on four NVIDIA RTX A5000 GPUs, 24 GiB each, on a single host with NVLink-bridged pairs. A matched intermediate stack that keeps the faster runtime without the quantized kernel splits the full speedup into a runtime part and a kernel and quantization part. Under matched greedy decoding the full stack reaches $2.58\\times$ end to end, with the runtime change accounting for about two thirds of that gain on a logarithmic scale; across three similar model families the kernel and quantization part moves by at most 1.5%. Sharding one instance across all four cards falls well below doubling: a profiler trace attributes about 80% of the per token shortfall to coordination, and an NVLink versus PCIe control on the same hardware shows similar realized bandwidth on both links, pointing away from link bandwidth as the cause. Whether to run one sharded instance or several independent ones depends on the workload and the model, with the ranking reversing on the larger model: the smaller model splits between sharding and multiple instances by workload, while the larger model favors two paired instances on every workload. Quantization extends sustainable concurrent users roughly four times past a reproducible half precision memory cliff. Differences in sampling mode and prompt pool between the two stacks are documented as threats to validity.",
+      "identifiers": [
+        "SemanticScholar:af8fe4d0c19d59d954ba3f0cb0caf019ae260293"
+      ],
+      "semantic_scholar_id": "af8fe4d0c19d59d954ba3f0cb0caf019ae260293",
+      "canonical_id": "arXiv:2607.11368",
+      "arxiv_id": "2607.11368",
+      "doi": "10.48550/arXiv.2607.11368",
+      "authors": [
+        "Wei-Jia Han",
+        "Li-Sha Qu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 109,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "StateComp: Learning When to Compress History in Long Horizon Agents",
+      "source_url": "https://arxiv.org/abs/2609.27298",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon agents continuously accumulate interaction history during task execution, yet the importance of past interactions changes as the agent state evolves. Existing context management methods largely compress history based on fixed windows, periodic schedules, or current relevance, overlooking a more fundamental question: when has a past interaction become safe to replace? Premature compression may remove information still needed for future actions, while overly conservative retention leads to substantial context overhead. To address this, we propose State Conditioned Compression (StateComp), a framework that determines when historical interactions can be safely compressed according to the current agent state. StateComp constructs KEEP and READY supervision through a two-stage annotation procedure and trains an imbalance-aware router on hidden representations from a frozen language model. A bounded state representation further reduces the cost of evaluating long histories, while adjacent READY interactions are grouped into continuous spans and replaced with compact summaries during execution. Experiments on WorkBuddyBench show that StateComp reduces total agent and summarization tokens by 52.27% while maintaining task performance, and achieves a 12.67-fold speedup in representation extraction.",
+      "identifiers": [
+        "SemanticScholar:fa59cb5fd32931e6100dd3106f1704896d9d8cca"
+      ],
+      "semantic_scholar_id": "fa59cb5fd32931e6100dd3106f1704896d9d8cca",
+      "canonical_id": "arXiv:2609.27298",
+      "arxiv_id": "2609.27298",
+      "authors": [
+        "Ming-Xuan Wang",
+        "Hong-Yue Chen",
+        "Ying-Long Guo",
+        "Fei Luo",
+        "Chao Ning",
+        "Bo Wang",
+        "Guo-Run Yao",
+        "Yan-Biao Ma",
+        "Jun-Gong Han"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Týr-the-Pruner: Unlocking Accurate 50% Structural Pruning for LLMs via Global Sparsity Distribution Optimization",
+      "source_url": "https://arxiv.org/abs/2503.09657",
+      "year": 2025,
+      "published": "2025-03-12",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structural pruning enhances hardware-agnostic inference efficiency for large language models (LLMs) yet often fails to maintain comparable performance. Local pruning performs efficient layer-by-layer compression but ignores global topology. Although global pruning aims to identify an optimal sparse model, intuitive methods typically adopt a two-stage paradigm that first evaluates substructure saliency and then applies global pruning, which ignores inter-structure dependencies and fails to achieve end-to-end optimization. To address these limitations, we propose T\\'yr-the-Pruner, an efficient end-to-end search-based global structural pruning framework. This framework constructs a supernet by repeatedly applying local pruning across a range of sparsity ratios to each layer in an LLM, with the core goal of determining the optimal sparsity distribution under a target overall sparsity ratio. Concretely, we introduce an effective local pruning and an expectation error accumulation approach to improve supernet construction. Furthermore, we employ an iterative prune-and-search strategy with coarse-to-fine sparsity granularity to ensure efficient search convergence. Experimental results show that T\\'yr-the-Pruner achieves state-of-the-art structural pruning, retaining 97% of the dense model's performance while removing a challenging 50% of Llama-3.1-70B's parameters. Code will be available at https://github.com/AMD-AGI/Tyr-the-Pruner.",
+      "identifiers": [
+        "SemanticScholar:4990d126876c4b14b51963622630788f752c6d94"
+      ],
+      "semantic_scholar_id": "4990d126876c4b14b51963622630788f752c6d94",
+      "canonical_id": "arXiv:2503.09657",
+      "arxiv_id": "2503.09657",
+      "doi": "10.48550/arXiv.2503.09657",
+      "authors": [
+        "Guan-Chen Li",
+        "Yi-Xing Xu",
+        "Ze-Ping Li",
+        "Ji Liu",
+        "Xuan-Wu Yin",
+        "Dong Li",
+        "E. Barsoum"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 597,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models",
+      "source_url": "https://arxiv.org/abs/2602.06822",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large foundation models (LFMs) achieve strong performance through scaling, yet current structural pruning methods derive fixed pruning decisions during inference, overlooking sparsity patterns that emerge in the autoregressive token generation. In this paper, we propose POP (Partition-guided Online Pruning), an efficient online structural pruning framework that enables context-conditioned dynamic pruning with minimal computational overhead. POP partitions model channels into retained, candidate, and pruned regions, where prefilling defines a coarse pruning partition, and the decoding stage generates a fine-grained mask within the candidate region, avoiding full-channel re-evaluation. The coarse pruning partition preserves consistently important weights, while the fine-grained masking provides context-conditioned variation during decoding. Moreover, POP is a lightweight, plug-and-play method that requires no preprocessing, including offline calibration, retraining, or learning predictors. Extensive evaluations across diverse LFMs, including large language models (LLMs), mixture-of-experts models (MoEs), and vision-language models (VLMs), demonstrate that POP consistently delivers higher accuracy than existing pruning approaches while incurring smaller computational overhead and minimizing inference latency.",
+      "identifiers": [
+        "SemanticScholar:6adc07c64a98a11174b72e77714f6d4427a1e3a8"
+      ],
+      "semantic_scholar_id": "6adc07c64a98a11174b72e77714f6d4427a1e3a8",
+      "canonical_id": "arXiv:2602.06822",
+      "arxiv_id": "2602.06822",
+      "doi": "10.48550/arXiv.2602.06822",
+      "authors": [
+        "Yi Chen",
+        "Wonjin Shin",
+        "Shuhong Liu",
+        "Tho Mai",
+        "Jeongmo Lee",
+        "Chuan-Bo Hua",
+        "Kunlun Wang",
+        "Jun Liu",
+        "Jooyul Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 266,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Swimba: Switch Mamba Model Scales State Space Models",
+      "source_url": "https://arxiv.org/abs/2603.06938",
+      "year": 2026,
+      "published": "2026-03-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-experts (MoE) is a common approach for increasing parameter capacity, but applying MoE to state space model (SSM) token mixers can multiply the cost of the recurrent state update. We study how to introduce expert specialization into selective SSMs while preserving computational efficiency. We show that MoE--SSM can refer to two designs: (1) MoE over separated SSMs, which maintains multiple state trajectories and thus scales compute with the number of experts; and (2) MoE-parameterized SSM, which mixes experts in parameter space, maintains a single state trajectory, and evaluates the recurrence once. Our method, Switch Mamba (Swimba), follows the second design by routing over expert-produced SSM streams. Theoretically, we establish well-definedness and stability for MoE-parameterized SSMs and characterize the relationship between the two designs. Empirically, we evaluate Swimba on standard benchmark tasks and measure real-time throughput and latency. Under matched FLOPs, Swimba achieves slightly better average performance than the baseline, with a small slowdown in real-time latency and throughput. Overall, these results suggest that parameter-space MoE can increase SSM capacity while keeping the dominant recurrence cost fixed.",
+      "identifiers": [
+        "SemanticScholar:c27cb845ea3b3b2093563bd4d1ef315da7a874f5"
+      ],
+      "semantic_scholar_id": "c27cb845ea3b3b2093563bd4d1ef315da7a874f5",
+      "canonical_id": "arXiv:2603.06938",
+      "arxiv_id": "2603.06938",
+      "doi": "10.48550/arXiv.2603.06938",
+      "authors": [
+        "Zhi-Xu Du",
+        "Krishna Teja Chitty-Venkata",
+        "M. Emani",
+        "Venkat Vishwanath",
+        "Hai Li",
+        "Yi-Ran Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 238,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning",
+      "source_url": "https://arxiv.org/abs/2607.19358",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought (CoT) reasoning models such as DeepSeek-R1 keep lengthening their inference chains under test-time scaling, yet standard self-attention incurs quadratic cost in context length, making long-CoT deployment costly in production. We therefore introduce LISA (Linear-Indexed Sparse Attention), a plug-and-play replacement for self-attention that requires no full pretraining. LISA combines a linear-attention branch for long-range memory with a Lightning Indexer that dynamically selects the most relevant tokens for a sparse self-attention branch. The two branches are fused through a learned gate, so the model retains broad context while focusing computation on informative tokens. We train LISA in two stages. In Stage 1, a linear-attention branch is integrated with sliding-window attention and distilled from a frozen teacher's full-attention distribution. In Stage 2, the Lightning Indexer replaces the static window and is trained with a per-head KL-divergence objective to mimic teacher attention patterns. The resulting model reduces eager-mode self-attention computation from quadratic in sequence length to linear in the number of generated tokens and the selected context budget. Experiments on DeepSeek-distilled Qwen models show that LISA cuts measured eager-mode mean sample latency by 23.9% at 16K context without degrading long-context reasoning quality. Across nine mathematical and code reasoning benchmarks, the gated LISA-1.5B model improves the equal-weight benchmark average by 4.2 percentage points relative to the full-attention baseline.",
+      "identifiers": [
+        "SemanticScholar:c61efb0bf86ba56f6f9ebf8ec851436ea118611f"
+      ],
+      "semantic_scholar_id": "c61efb0bf86ba56f6f9ebf8ec851436ea118611f",
+      "canonical_id": "arXiv:2607.19358",
+      "arxiv_id": "2607.19358",
+      "authors": [
+        "Yu Zhao",
+        "Ze-Kun Zhang",
+        "Fan Jiang",
+        "Bo Zeng",
+        "Xin-Tong Wang",
+        "Chong-Han Liu",
+        "Shimin Shan",
+        "Yi-Chao Du",
+        "Yu Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dispatch Overhead, Not Kernel Quality: The Performance Bottleneck in Single-Stream WebGPU LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.08730",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models are increasingly deployed in resource-constrained, single-stream settings, from internet browsers to edge devices, where requests arrive one at a time at batch size 1 rather than in large batches. In this regime, where WebGPU serves as a modern cross-platform standard, per-operation dispatch overhead, rather than kernel compute, can dominate inference cost, yet it remains poorly characterized. In this work, we introduce a sequential-dispatch measurement method and show that naive single-operation measurements overestimate per-dispatch cost by conflating dispatch with synchronization. Using our method, we measure the per-dispatch cost and show that it is independent of data type used. Through a controlled fusion experiment, we show that the dispatch overhead, not kernel quality, is the bottleneck at batch size 1, and isolate the dispatch count as the cause. We conclude that at batch size 1, the effective approach to LLM inference optimization in WebGPU is reducing dispatch count. Our findings point to dispatch amortization, in the inference engines and in the WebGPU specification, as a path to practical browser-based inference.",
+      "identifiers": [
+        "SemanticScholar:bc5ffa38aa24d8bc8da7bfe155f9771884cdc49a"
+      ],
+      "semantic_scholar_id": "bc5ffa38aa24d8bc8da7bfe155f9771884cdc49a",
+      "canonical_id": "arXiv:2608.08730",
+      "arxiv_id": "2608.08730",
+      "authors": [
+        "Jędrzej Maczan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 82,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LAM: Efficient Lossy Agent Memory Framework With A Retrieval-Score Error Bound",
+      "source_url": "https://arxiv.org/abs/2609.32256",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agent memory grows as agents read inputs, reason, and call tools. Longer histories increase inference cost and eventually exceed the context window. LLM-based summarization reduces this history but adds latency and provides no explicit bound on information loss. We propose LAM, a Lossy Agent Memory system with three components: a deterministic deduplication rule with a substitution bound on retrieval scores - a bound on score perturbation, not a certificate of unchanged ranking; a memory manager that preserves the cached prefix and overlaps compaction with inference; and a performance model that estimates compaction costs before deployment. On 600 agent trajectories, LAM removes 22.47% of observation tokens while retaining 99.984% of the measured gold-patch evidence. At a fixed deletion set, the performance model predicts a 71.4x-91.6x end-to-end speedup from removing records before prefill instead of deleting them from a prefilled context. That benefit comes from the schedule rather than the rule and applies to any prefix-preserving test.",
+      "identifiers": [
+        "SemanticScholar:f56c1c2c735de6d7285d7bd7500540bd61e25b5c"
+      ],
+      "semantic_scholar_id": "f56c1c2c735de6d7285d7bd7500540bd61e25b5c",
+      "canonical_id": "arXiv:2609.32256",
+      "arxiv_id": "2609.32256",
+      "authors": [
+        "Bai-Xi Sun",
+        "Le Chen",
+        "Anjir Ahmed Chowdhury",
+        "Xiao-Long Ma",
+        "Chih-Hsuan Yang",
+        "Ming-Ze Xia",
+        "Syed Zawad",
+        "Sheng Di",
+        "R. Kettimuthu",
+        "Hui-Huo Zheng",
+        "Rajeev Thakur",
+        "Venkat Vishwanath",
+        "Feng Yan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.18002",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.18002",
+        "id:SemanticScholar:2a0a80a2bac24fb306865f0251dcb93f929498a9",
+        "id:arXiv:2604.18002",
+        "title:neural garbage collection learning to forget while learning to reason",
+        "url:https://arxiv.org/abs/2604.18002"
+      ],
+      "record": {
+        "title": "Neural Garbage Collection: Learning to Forget while Learning to Reason",
+        "source_url": "https://arxiv.org/abs/2604.18002",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chain-of-thought reasoning has driven striking advances in language model capability, yet every reasoning step grows the KV cache, creating a bottleneck to scaling this paradigm further. Current approaches manage these constraints on the model's behalf using hand-designed criteria. A more scalable approach would let end-to-end learning subsume this design choice entirely, following a broader pattern in deep learning. After all, if a model can learn to reason, why can't it learn to forget? We introduce Neural Garbage Collection (NGC), in which a language model learns to forget while learning to reason, trained end-to-end from outcome-based task reward alone. As the model reasons, it periodically pauses, decides which KV cache entries to evict, and continues to reason conditioned on the remaining cache. By treating tokens in a chain-of-thought and cache-eviction decisions as discrete actions sampled from the language model, we can use reinforcement learning to jointly optimize how the model reasons and how it manages its own memory: what the model evicts shapes what it remembers, what it remembers shapes its reasoning, and the correctness of that reasoning determines its reward. Crucially, the model learns this behavior entirely from a single learning signal - the outcome-based task reward - without supervised fine-tuning or proxy objectives. On Countdown, AMC, and AIME tasks, NGC maintains strong accuracy relative to the full-cache upper bound at 2-3x peak KV cache size compression and substantially outperforms eviction baselines. Our results are a first step towards a broader vision where end-to-end optimization drives both capability and efficiency in language models.",
+        "identifiers": [
+          "SemanticScholar:2a0a80a2bac24fb306865f0251dcb93f929498a9"
+        ],
+        "semantic_scholar_id": "2a0a80a2bac24fb306865f0251dcb93f929498a9",
+        "canonical_id": "arXiv:2604.18002",
+        "arxiv_id": "2604.18002",
+        "doi": "10.48550/arXiv.2604.18002",
+        "authors": [
+          "Michael Y. Li",
+          "Jubayer Ibn Hamid",
+          "Emily Fox",
+          "Noah D. Goodman"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 193,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15160",
+      "identity_tokens": [
+        "id:SemanticScholar:f5e23c0eeaf327756679900da113871ca70ef0ca",
+        "id:arXiv:2609.15160",
+        "title:tloopformer tokenlevel elasticdepth looped transformers with dynamic routing",
+        "url:https://arxiv.org/abs/2609.15160"
+      ],
+      "record": {
+        "title": "T-LoopFormer: Token-Level Elastic-Depth Looped Transformers with Dynamic Routing",
+        "source_url": "https://arxiv.org/abs/2609.15160",
+        "year": 2026,
+        "published": "2026-09-14",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped Transformers have recently demonstrated strong performance in both reasoning and language tasks by reusing a shared set of parameters across multiple iterations, achieving parameter efficiency without sacrificing representational power. Besides, looped Transformers perform inference directly in the latent space (latent reasoning) to reduce the number of tokens consumed during inference, thereby achieving improved sample efficiency. However, these models typically apply a fixed recursion depth uniformly to every token, leading to suboptimal compute allocation and leaving significant efficiency gains on the table. In this work, we propose \\textbf{t}oken-level elastic-depth \\textbf{looped transformers}: T-LoopFormer. T-LoopFormer uses \\textbf{dynamic token-choice routing}, which enables each token to adaptively determine its own number of loop iterations based on its hidden state, which could improve the token generation accuracy. Moreover, we further introduce recursion-wise KV cache, which maintains an independent key-value cache for each recursion loop of active tokens; this design ensures that tokens at different depths only attend to their corresponding cached states, effectively enabling faster autoregressive decoding. Extensive experiments show that T-LoopFormer achieves robust performance on a wide range of language modeling and zero-shot reasoning tasks, and our model could reach the lowest decoding latency, which validates the effectiveness of token-choice router and recursion-wise KV cache. Code is available at https://github.com/YuMingQian1234/T-LoopFormer",
+        "identifiers": [
+          "SemanticScholar:f5e23c0eeaf327756679900da113871ca70ef0ca"
+        ],
+        "semantic_scholar_id": "f5e23c0eeaf327756679900da113871ca70ef0ca",
+        "canonical_id": "arXiv:2609.15160",
+        "arxiv_id": "2609.15160",
+        "authors": [
+          "Ming-Qian Yu",
+          "Wen-Peng Zhang",
+          "Shao-Bo Cui",
+          "Pei-Lin Zhao"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.11368",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.11368",
+        "id:SemanticScholar:af8fe4d0c19d59d954ba3f0cb0caf019ae260293",
+        "id:arXiv:2607.11368",
+        "title:decomposing runtime kernel and quantization speedups via a matched fp16 intermediate a hardwareconditioned case study on four nvidia rtx a5000 gpus",
+        "url:https://arxiv.org/abs/2607.11368"
+      ],
+      "record": {
+        "title": "Decomposing Runtime, Kernel, and Quantization Speedups via a Matched FP16 Intermediate: A Hardware-Conditioned Case Study on Four NVIDIA RTX A5000 GPUs",
+        "source_url": "https://arxiv.org/abs/2607.11368",
+        "year": 2026,
+        "published": "2026-07-13",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reported serving speedups from quantized kernels typically bundle the weight format, the kernel, and the inference runtime into one number. We present an attribution study on four NVIDIA RTX A5000 GPUs, 24 GiB each, on a single host with NVLink-bridged pairs. A matched intermediate stack that keeps the faster runtime without the quantized kernel splits the full speedup into a runtime part and a kernel and quantization part. Under matched greedy decoding the full stack reaches $2.58\\times$ end to end, with the runtime change accounting for about two thirds of that gain on a logarithmic scale; across three similar model families the kernel and quantization part moves by at most 1.5%. Sharding one instance across all four cards falls well below doubling: a profiler trace attributes about 80% of the per token shortfall to coordination, and an NVLink versus PCIe control on the same hardware shows similar realized bandwidth on both links, pointing away from link bandwidth as the cause. Whether to run one sharded instance or several independent ones depends on the workload and the model, with the ranking reversing on the larger model: the smaller model splits between sharding and multiple instances by workload, while the larger model favors two paired instances on every workload. Quantization extends sustainable concurrent users roughly four times past a reproducible half precision memory cliff. Differences in sampling mode and prompt pool between the two stacks are documented as threats to validity.",
+        "identifiers": [
+          "SemanticScholar:af8fe4d0c19d59d954ba3f0cb0caf019ae260293"
+        ],
+        "semantic_scholar_id": "af8fe4d0c19d59d954ba3f0cb0caf019ae260293",
+        "canonical_id": "arXiv:2607.11368",
+        "arxiv_id": "2607.11368",
+        "doi": "10.48550/arXiv.2607.11368",
+        "authors": [
+          "Wei-Jia Han",
+          "Li-Sha Qu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 109,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27298",
+      "identity_tokens": [
+        "id:SemanticScholar:fa59cb5fd32931e6100dd3106f1704896d9d8cca",
+        "id:arXiv:2609.27298",
+        "title:statecomp learning when to compress history in long horizon agents",
+        "url:https://arxiv.org/abs/2609.27298"
+      ],
+      "record": {
+        "title": "StateComp: Learning When to Compress History in Long Horizon Agents",
+        "source_url": "https://arxiv.org/abs/2609.27298",
+        "year": 2026,
+        "published": "2026-09-23",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-horizon agents continuously accumulate interaction history during task execution, yet the importance of past interactions changes as the agent state evolves. Existing context management methods largely compress history based on fixed windows, periodic schedules, or current relevance, overlooking a more fundamental question: when has a past interaction become safe to replace? Premature compression may remove information still needed for future actions, while overly conservative retention leads to substantial context overhead. To address this, we propose State Conditioned Compression (StateComp), a framework that determines when historical interactions can be safely compressed according to the current agent state. StateComp constructs KEEP and READY supervision through a two-stage annotation procedure and trains an imbalance-aware router on hidden representations from a frozen language model. A bounded state representation further reduces the cost of evaluating long histories, while adjacent READY interactions are grouped into continuous spans and replaced with compact summaries during execution. Experiments on WorkBuddyBench show that StateComp reduces total agent and summarization tokens by 52.27% while maintaining task performance, and achieves a 12.67-fold speedup in representation extraction.",
+        "identifiers": [
+          "SemanticScholar:fa59cb5fd32931e6100dd3106f1704896d9d8cca"
+        ],
+        "semantic_scholar_id": "fa59cb5fd32931e6100dd3106f1704896d9d8cca",
+        "canonical_id": "arXiv:2609.27298",
+        "arxiv_id": "2609.27298",
+        "authors": [
+          "Ming-Xuan Wang",
+          "Hong-Yue Chen",
+          "Ying-Long Guo",
+          "Fei Luo",
+          "Chao Ning",
+          "Bo Wang",
+          "Guo-Run Yao",
+          "Yan-Biao Ma",
+          "Jun-Gong Han"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 37,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.09657",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.09657",
+        "id:SemanticScholar:4990d126876c4b14b51963622630788f752c6d94",
+        "id:arXiv:2503.09657",
+        "title:týrthepruner unlocking accurate 50 structural pruning for llms via global sparsity distribution optimization",
+        "url:https://arxiv.org/abs/2503.09657"
+      ],
+      "record": {
+        "title": "Týr-the-Pruner: Unlocking Accurate 50% Structural Pruning for LLMs via Global Sparsity Distribution Optimization",
+        "source_url": "https://arxiv.org/abs/2503.09657",
+        "year": 2025,
+        "published": "2025-03-12",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Structural pruning enhances hardware-agnostic inference efficiency for large language models (LLMs) yet often fails to maintain comparable performance. Local pruning performs efficient layer-by-layer compression but ignores global topology. Although global pruning aims to identify an optimal sparse model, intuitive methods typically adopt a two-stage paradigm that first evaluates substructure saliency and then applies global pruning, which ignores inter-structure dependencies and fails to achieve end-to-end optimization. To address these limitations, we propose T\\'yr-the-Pruner, an efficient end-to-end search-based global structural pruning framework. This framework constructs a supernet by repeatedly applying local pruning across a range of sparsity ratios to each layer in an LLM, with the core goal of determining the optimal sparsity distribution under a target overall sparsity ratio. Concretely, we introduce an effective local pruning and an expectation error accumulation approach to improve supernet construction. Furthermore, we employ an iterative prune-and-search strategy with coarse-to-fine sparsity granularity to ensure efficient search convergence. Experimental results show that T\\'yr-the-Pruner achieves state-of-the-art structural pruning, retaining 97% of the dense model's performance while removing a challenging 50% of Llama-3.1-70B's parameters. Code will be available at https://github.com/AMD-AGI/Tyr-the-Pruner.",
+        "identifiers": [
+          "SemanticScholar:4990d126876c4b14b51963622630788f752c6d94"
+        ],
+        "semantic_scholar_id": "4990d126876c4b14b51963622630788f752c6d94",
+        "canonical_id": "arXiv:2503.09657",
+        "arxiv_id": "2503.09657",
+        "doi": "10.48550/arXiv.2503.09657",
+        "authors": [
+          "Guan-Chen Li",
+          "Yi-Xing Xu",
+          "Ze-Ping Li",
+          "Ji Liu",
+          "Xuan-Wu Yin",
+          "Dong Li",
+          "E. Barsoum"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 597,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.06822",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.06822",
+        "id:SemanticScholar:6adc07c64a98a11174b72e77714f6d4427a1e3a8",
+        "id:arXiv:2602.06822",
+        "title:pop online structural pruning enables efficient inference of large foundation models",
+        "url:https://arxiv.org/abs/2602.06822"
+      ],
+      "record": {
+        "title": "POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models",
+        "source_url": "https://arxiv.org/abs/2602.06822",
+        "year": 2026,
+        "published": "2026-02-06",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large foundation models (LFMs) achieve strong performance through scaling, yet current structural pruning methods derive fixed pruning decisions during inference, overlooking sparsity patterns that emerge in the autoregressive token generation. In this paper, we propose POP (Partition-guided Online Pruning), an efficient online structural pruning framework that enables context-conditioned dynamic pruning with minimal computational overhead. POP partitions model channels into retained, candidate, and pruned regions, where prefilling defines a coarse pruning partition, and the decoding stage generates a fine-grained mask within the candidate region, avoiding full-channel re-evaluation. The coarse pruning partition preserves consistently important weights, while the fine-grained masking provides context-conditioned variation during decoding. Moreover, POP is a lightweight, plug-and-play method that requires no preprocessing, including offline calibration, retraining, or learning predictors. Extensive evaluations across diverse LFMs, including large language models (LLMs), mixture-of-experts models (MoEs), and vision-language models (VLMs), demonstrate that POP consistently delivers higher accuracy than existing pruning approaches while incurring smaller computational overhead and minimizing inference latency.",
+        "identifiers": [
+          "SemanticScholar:6adc07c64a98a11174b72e77714f6d4427a1e3a8"
+        ],
+        "semantic_scholar_id": "6adc07c64a98a11174b72e77714f6d4427a1e3a8",
+        "canonical_id": "arXiv:2602.06822",
+        "arxiv_id": "2602.06822",
+        "doi": "10.48550/arXiv.2602.06822",
+        "authors": [
+          "Yi Chen",
+          "Wonjin Shin",
+          "Shuhong Liu",
+          "Tho Mai",
+          "Jeongmo Lee",
+          "Chuan-Bo Hua",
+          "Kunlun Wang",
+          "Jun Liu",
+          "Jooyul Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 266,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.06938",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.06938",
+        "id:SemanticScholar:c27cb845ea3b3b2093563bd4d1ef315da7a874f5",
+        "id:arXiv:2603.06938",
+        "title:swimba switch mamba model scales state space models",
+        "url:https://arxiv.org/abs/2603.06938"
+      ],
+      "record": {
+        "title": "Swimba: Switch Mamba Model Scales State Space Models",
+        "source_url": "https://arxiv.org/abs/2603.06938",
+        "year": 2026,
+        "published": "2026-03-06",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-experts (MoE) is a common approach for increasing parameter capacity, but applying MoE to state space model (SSM) token mixers can multiply the cost of the recurrent state update. We study how to introduce expert specialization into selective SSMs while preserving computational efficiency. We show that MoE--SSM can refer to two designs: (1) MoE over separated SSMs, which maintains multiple state trajectories and thus scales compute with the number of experts; and (2) MoE-parameterized SSM, which mixes experts in parameter space, maintains a single state trajectory, and evaluates the recurrence once. Our method, Switch Mamba (Swimba), follows the second design by routing over expert-produced SSM streams. Theoretically, we establish well-definedness and stability for MoE-parameterized SSMs and characterize the relationship between the two designs. Empirically, we evaluate Swimba on standard benchmark tasks and measure real-time throughput and latency. Under matched FLOPs, Swimba achieves slightly better average performance than the baseline, with a small slowdown in real-time latency and throughput. Overall, these results suggest that parameter-space MoE can increase SSM capacity while keeping the dominant recurrence cost fixed.",
+        "identifiers": [
+          "SemanticScholar:c27cb845ea3b3b2093563bd4d1ef315da7a874f5"
+        ],
+        "semantic_scholar_id": "c27cb845ea3b3b2093563bd4d1ef315da7a874f5",
+        "canonical_id": "arXiv:2603.06938",
+        "arxiv_id": "2603.06938",
+        "doi": "10.48550/arXiv.2603.06938",
+        "authors": [
+          "Zhi-Xu Du",
+          "Krishna Teja Chitty-Venkata",
+          "M. Emani",
+          "Venkat Vishwanath",
+          "Hai Li",
+          "Yi-Ran Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 238,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.19358",
+      "identity_tokens": [
+        "id:SemanticScholar:c61efb0bf86ba56f6f9ebf8ec851436ea118611f",
+        "id:arXiv:2607.19358",
+        "title:lisa linearindexed sparse attention for efficient longcontext reasoning",
+        "url:https://arxiv.org/abs/2607.19358"
+      ],
+      "record": {
+        "title": "LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning",
+        "source_url": "https://arxiv.org/abs/2607.19358",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long chain-of-thought (CoT) reasoning models such as DeepSeek-R1 keep lengthening their inference chains under test-time scaling, yet standard self-attention incurs quadratic cost in context length, making long-CoT deployment costly in production. We therefore introduce LISA (Linear-Indexed Sparse Attention), a plug-and-play replacement for self-attention that requires no full pretraining. LISA combines a linear-attention branch for long-range memory with a Lightning Indexer that dynamically selects the most relevant tokens for a sparse self-attention branch. The two branches are fused through a learned gate, so the model retains broad context while focusing computation on informative tokens. We train LISA in two stages. In Stage 1, a linear-attention branch is integrated with sliding-window attention and distilled from a frozen teacher's full-attention distribution. In Stage 2, the Lightning Indexer replaces the static window and is trained with a per-head KL-divergence objective to mimic teacher attention patterns. The resulting model reduces eager-mode self-attention computation from quadratic in sequence length to linear in the number of generated tokens and the selected context budget. Experiments on DeepSeek-distilled Qwen models show that LISA cuts measured eager-mode mean sample latency by 23.9% at 16K context without degrading long-context reasoning quality. Across nine mathematical and code reasoning benchmarks, the gated LISA-1.5B model improves the equal-weight benchmark average by 4.2 percentage points relative to the full-attention baseline.",
+        "identifiers": [
+          "SemanticScholar:c61efb0bf86ba56f6f9ebf8ec851436ea118611f"
+        ],
+        "semantic_scholar_id": "c61efb0bf86ba56f6f9ebf8ec851436ea118611f",
+        "canonical_id": "arXiv:2607.19358",
+        "arxiv_id": "2607.19358",
+        "authors": [
+          "Yu Zhao",
+          "Ze-Kun Zhang",
+          "Fan Jiang",
+          "Bo Zeng",
+          "Xin-Tong Wang",
+          "Chong-Han Liu",
+          "Shimin Shan",
+          "Yi-Chao Du",
+          "Yu Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 154,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08730",
+      "identity_tokens": [
+        "id:SemanticScholar:bc5ffa38aa24d8bc8da7bfe155f9771884cdc49a",
+        "id:arXiv:2608.08730",
+        "title:dispatch overhead not kernel quality the performance bottleneck in singlestream webgpu llm inference",
+        "url:https://arxiv.org/abs/2608.08730"
+      ],
+      "record": {
+        "title": "Dispatch Overhead, Not Kernel Quality: The Performance Bottleneck in Single-Stream WebGPU LLM Inference",
+        "source_url": "https://arxiv.org/abs/2608.08730",
+        "year": 2026,
+        "published": "2026-08-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models are increasingly deployed in resource-constrained, single-stream settings, from internet browsers to edge devices, where requests arrive one at a time at batch size 1 rather than in large batches. In this regime, where WebGPU serves as a modern cross-platform standard, per-operation dispatch overhead, rather than kernel compute, can dominate inference cost, yet it remains poorly characterized. In this work, we introduce a sequential-dispatch measurement method and show that naive single-operation measurements overestimate per-dispatch cost by conflating dispatch with synchronization. Using our method, we measure the per-dispatch cost and show that it is independent of data type used. Through a controlled fusion experiment, we show that the dispatch overhead, not kernel quality, is the bottleneck at batch size 1, and isolate the dispatch count as the cause. We conclude that at batch size 1, the effective approach to LLM inference optimization in WebGPU is reducing dispatch count. Our findings point to dispatch amortization, in the inference engines and in the WebGPU specification, as a path to practical browser-based inference.",
+        "identifiers": [
+          "SemanticScholar:bc5ffa38aa24d8bc8da7bfe155f9771884cdc49a"
+        ],
+        "semantic_scholar_id": "bc5ffa38aa24d8bc8da7bfe155f9771884cdc49a",
+        "canonical_id": "arXiv:2608.08730",
+        "arxiv_id": "2608.08730",
+        "authors": [
+          "Jędrzej Maczan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 82,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32256",
+      "identity_tokens": [
+        "id:SemanticScholar:f56c1c2c735de6d7285d7bd7500540bd61e25b5c",
+        "id:arXiv:2609.32256",
+        "title:lam efficient lossy agent memory framework with a retrievalscore error bound",
+        "url:https://arxiv.org/abs/2609.32256"
+      ],
+      "record": {
+        "title": "LAM: Efficient Lossy Agent Memory Framework With A Retrieval-Score Error Bound",
+        "source_url": "https://arxiv.org/abs/2609.32256",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agent memory grows as agents read inputs, reason, and call tools. Longer histories increase inference cost and eventually exceed the context window. LLM-based summarization reduces this history but adds latency and provides no explicit bound on information loss. We propose LAM, a Lossy Agent Memory system with three components: a deterministic deduplication rule with a substitution bound on retrieval scores - a bound on score perturbation, not a certificate of unchanged ranking; a memory manager that preserves the cached prefix and overlaps compaction with inference; and a performance model that estimates compaction costs before deployment. On 600 agent trajectories, LAM removes 22.47% of observation tokens while retaining 99.984% of the measured gold-patch evidence. At a fixed deletion set, the performance model predicts a 71.4x-91.6x end-to-end speedup from removing records before prefill instead of deleting them from a prefilled context. That benefit comes from the schedule rather than the rule and applies to any prefix-preserving test.",
+        "identifiers": [
+          "SemanticScholar:f56c1c2c735de6d7285d7bd7500540bd61e25b5c"
+        ],
+        "semantic_scholar_id": "f56c1c2c735de6d7285d7bd7500540bd61e25b5c",
+        "canonical_id": "arXiv:2609.32256",
+        "arxiv_id": "2609.32256",
+        "authors": [
+          "Bai-Xi Sun",
+          "Le Chen",
+          "Anjir Ahmed Chowdhury",
+          "Xiao-Long Ma",
+          "Chih-Hsuan Yang",
+          "Ming-Ze Xia",
+          "Syed Zawad",
+          "Sheng Di",
+          "R. Kettimuthu",
+          "Hui-Huo Zheng",
+          "Rajeev Thakur",
+          "Venkat Vishwanath",
+          "Feng Yan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:bc9466628fab8ff7c1425919198172cc3bae32ae5ccf2eda90979d583e252339",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

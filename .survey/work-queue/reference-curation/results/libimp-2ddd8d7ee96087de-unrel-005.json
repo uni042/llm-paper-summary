@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2ddd8d7ee96087de-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.40258",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.40258",
+    "identity_tokens": [
+      "arXiv:2609.40258"
+    ],
+    "reason": "The LLM is used to search spiking-neural-network architectures; the target model/inference system is an SNN, not LLM serving.",
+    "first_checked_at": "2026-10-05T04:30:35+00:00",
+    "last_checked_at": "2026-10-05T04:30:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Large Language Model-Guided Evolutionary Discovery of Native Neural Architectures for Spiking Sequence Modeling"
+  },
+  "processed_at": "2026-10-05T04:30:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2ddd8d7ee960",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

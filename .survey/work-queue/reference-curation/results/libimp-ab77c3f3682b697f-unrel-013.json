@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab77c3f3682b697f-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2010.11934",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2010.11934",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2010.11934",
+      "arXiv:2010.11934"
+    ],
+    "reason": "多言語事前学習モデルと能力評価が主貢献で、実行システム最適化ではない。",
+    "first_checked_at": "2026-09-27T13:32:58+09:00",
+    "last_checked_at": "2026-09-30T09:50:07+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review tail-to-head"
+    ],
+    "title": "mT5: A massively multilingual pre-trained text-to-text transformer"
+  },
+  "processed_at": "2026-09-30T09:50:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab77c3f3682b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

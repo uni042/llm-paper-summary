@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5d3253e4edc834fa-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.12143",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.12143",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2401.12143",
+      "arXiv:2401.12143"
+    ],
+    "reason": "Transformer内部表現の異方性が自己注意に内在することを調べる表現解析で、推論速度・メモリ・サービング最適化を提案しない。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2504.15364-keydiff-key-similarity-based-kv-cache-eviction-for-long-context-llm-inference-in-resource-constrained-environments.md"
+    ],
+    "title": "Anisotropy Is Inherent to Self-Attention in Transformers"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5d3253e4edc8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "req-scheduled-chat-00-20260922T031300Z-f7d5a0",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-d872577f35056ccd",
+      "claim_id": "claim-bfa8cf590d28a92deda4a59b",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-bfa8cf590d28a92deda4a59b",
+      "claimed_at": "2026-09-22T03:13:09+00:00",
+      "expires_at": "2026-09-22T04:43:09+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-d872577f35056ccd"
+      ],
+      "job": {
+        "job_id": "job-research-d872577f35056ccd",
+        "type": "research",
+        "parent_job_id": "job-8dd6611528f42303",
+        "priority": 98,
+        "canonical_id": "arXiv:2405.14297",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models",
+        "source_url": "https://arxiv.org/abs/2405.14297",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2024-2405.14297-dynmoe-auto-tuning.md",
+        "selection_reason": "各tokenがactivateするexpert数を自動決定し、training中のexpert数もadaptiveに調整するfoundational dynamic MoE。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T11:03:59+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T03:13:09+00:00",
+  "checkpoint_released": 0
+}

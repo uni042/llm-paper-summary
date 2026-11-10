@@ -1,0 +1,96 @@
+# Expert Prefetch
+
+MoEで次に使われるexpertを**routing結果が確定する前に予測して先にGPUへ読み込む**ことで、CPU / storageからの重み転送待ちを隠す研究をまとめる。予測器、過去のrouting履歴、前のlayerの状態などを使って将来のexpert需要を見積もり、現在の計算と次の転送を重ねるのが基本形となる。
+
+一部の手法はexpertを小さく分けたり、予測したexpertをそのまま使うなどして、予測ミス時の追加I/Oまで減らす。将来需要の予測をcache保持判断に使い、必ずしも先読み転送しない方式も含む。最終目的が推論高速化であるため、予測器自体に学習が必要でもこの系統に分類する。
+
+<!-- survey:auto:start -->
+## 自動生成の論文一覧（18本）
+
+[この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/03-expert-prefetch/)
+
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-12〜2026-11**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
+
+### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
+
+- **2026-09 · [Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference](2026-2609.04895-cache-aware-joint-router-adaptation.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  本研究はMoEルータを追加学習し、GPU内キャッシュの再利用を促す時間・時空間ルータを作る。必要時だけ限定的に先読みし、専門家重みの転送量と待ち時間を減らす。
+
+- **2026-06 · [SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models](2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-for-sparse-moe-foundation-mo.md)**  
+  実装：[✓](https://github.com/wei390/SpecPrefetch) ・ リポジトリ内被引用：1  
+  SpecPrefetchは、混合専門家モデル（Mixture of エキスパート、MoE）の重みをGPUにすべて置けない環境で、必要な専門家をストレージから読み込む待ち時間を短縮する研究である。提案方式は、一つ前の層の状態から次層で使いそうな専門家を軽量な予測器で推定し、現在層の計算と専門家の非同期転送を重ねる。
+
+- **2026-03 · [Speculating Experts Accelerates Inference for Mixture-of-Experts](2026-2603.19289-speculating-experts-accelerates-inference-for-mixture-of-experts.md)**  
+  実装：[✓](https://github.com/axonn-ai/yalis/tree/offload_prefetch) ・ リポジトリ内被引用：1  
+  論文のA6000でのQwen3-30B-A3B評価では、要求時に専門家を読み込む方式のTPOTの約84〜88%を転送が占める。
+
+- **2026-03 · [FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference](2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  FIRM-MoEは、専門家混合（Mixture-of-Experts、MoE）型の大規模言語モデルをGPUメモリの小さい端末で推論するとき、CPUからGPUへ専門家重みを運ぶ待ち時間を削減する仕組みである。従来の専門家先読みは、将来選択される専門家を予測して重み全体を先に転送する。
+
+- **2026-03 · [CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints](2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  不要な専門家をCPU側に退避し、必要時だけGPUへ読み込む方式は容量を節約するが、CPU・GPU間の転送が推論遅延を支配する。
+
+- **2025-12 · [OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference](2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  OD-MoEは、GPUメモリが小さい複数のエッジ装置を協調させて混合専門家モデル（Mixture-of-Experts; MoE）を実行するための分散推論方式である。著者らの10ノード実験では、Mixtral-8x7Bの復号速度が平均3.6925トークン/秒となり、全専門家をGPUへ保持する比較方式の4.8900トークン/秒の75.51%に相当する。
+
+### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-08 · [SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration](2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md)**  
+  実装：[✓](https://anonymous.4open.science/r/SPICE) ・ リポジトリ内被引用：0  
+  一文解説： GPUに全専門家の重みが載らない混合専門家モデルで、SPICEは将来必要になる専門家を予測して早めに転送し、予測を外した場合も「近似して即時に進む」「CPUで正確に計算する」「GPUへ重みを移して正確に計算する」の三経路を選び、転送待ちを減らす。
+
+- **2026-05 · [Efficient MoE Inference on Single Consumer-grade GPU with Dynamic Expert Caching](2020-2026.00101-efficient-moe-inference-on-single-consumer-grade-gpu-with-dynamic-expert-caching.md)**  
+  実装：[✓](https://github.com/rzhang772/SMOE) ・ リポジトリ内被引用：0  
+  プリフィルの動的エキスパート配置とデコードのトークン-wise予測取得を組み合わせ、単一RTX 4090で671B級MoEを高速化するCPU/GPUハイブリッド基盤。
+
+- **2026-03 · [CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices](2026-casmoe-a-cascaded-framework-for-efficient-moe-inference-on-resource-constrained-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  しかし専門家の総重量は大きく、GPUにすべて常駐させると容量不足になりやすい。CPU側へ非活性専門家を退避し、必要なものだけGPUへ移せば容量は節約できるが、専門家が決まってから転送するとPCIeの待機が推論時間へ直接加算される。
+
+- **2026-02 · [Two-Stage Expert Offloading for Domain-Aware MoE Inference](2026-dacc3922b5b4-two-stage-expert-offloading-for-domain-aware-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  領域別プリフィル事前読込と時間・層間・領域局所性によるデコード先読みを組み合わせ、MoEのCPU退避でI/O待ち50%削減、投影TPOT 3.45倍高速化、全常駐比33%メモリ削減を狙う。
+
+### 2年前（2024-12〜2025-11）
+
+- **2024-12 · [DAOP: Data-Aware Offloading and Predictive Pre-Calculation for Efficient MoE Inference](2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md)**  
+  実装：[✓](https://github.com/ecolab-nus/DAOP) ・ リポジトリ内被引用：19  
+  しかし、GPUメモリが限られると専門家の重みをすべて常駐させられない。従来のCPU専門家実行方式Fiddlerに対し、DAOPは二つの最適化を加える。RTX A6000 48GBと18コアCPUの実機評価では、Fiddler比で専門家キャッシュ比率を変えた場合の平均生成速度改善が35.4%、一部条件では40.4%である。
+
+- **2025-02 · [Fate: Fast Edge Inference of Mixture-of-Experts Models via Cross-Layer Gate](2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md)**  
+  実装：✓ ・ リポジトリ内被引用：14  
+  11GBのGPUメモリしか持たないRTX 1080Tiでは全専門家を常駐させられず、CPUメモリから必要な専門家を都度転送すると待機時間が発生する。加えて、先読みの外れやすい浅い層へGPUキャッシュを重点配分し、最近使った専門家と繰り返し使う専門家を適応的に残す。
+
+- **2025-09 · [LayerScope: Predictive Cross-Layer Scheduling for Efficient Multi-Batch MoE Inference on Legacy Servers](2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  将来必要になる専門家を予測しても、その先読みがPCIe帯域を占有すると、現在必要な専門家の緊急転送が遅れる。LayerScopeは、先読み、必要時転送、CPUでの直接計算を複数バッチ・複数層の時間軸で一体的に計画する。
+
+- **2025-10 · [ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference](2025-2510.26730-expertflow-adaptive-prefetch.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  固定先読み幅を帯域・入力・待機フィードバックで動的化し、予測器・二段LRU・キャッシュ認識ルーティングを協調させてMoEエキスパート転送待ちを隠蔽する実行時システム。
+
+- **2025-08 · [MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices](2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md)**  
+  実装：[✓](https://github.com/ngavhane/moe-beyond) ・ リポジトリ内被引用：2  
+  トークン埋め込みと層IDから次のMoEエキスパートを予測する4層Transformerを学習し、10%容量のGPUキャッシュでMoE-Infinityの17%に対し約72%の適中率を示す。
+
+### 3年前（2023-12〜2024-11）
+
+- **2024-10 · [ProMoE: Fast MoE-based LLM Serving using Proactive Caching](2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md)**  
+  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：39  
+  ProMoEは数層先のルーティングから必要な専門家を予測し、CPUからGPUへ分割転送する。誤予測を止め、到着済みから実行して、重み転送待ちを計算の裏に隠す。
+
+### 4年前（2022-12〜2023-11）
+
+- **2023-08 · [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md)**  
+  実装：✓ ・ リポジトリ内被引用：97  
+  Pre-gated MoEは、混合専門家モデル（Mixture-of-Experts、MoE）をGPUメモリより大きな規模で動かす際、CPU主記憶から専門家重みを読み込む時間を削減するための、モデル側のルーティング変更と実行系の協調設計である。著者らは単一のA100 80GBと大容量CPU主記憶を使い、SwitchTransformerの複数規模を評価した。
+
+- **2023-10 · [SiDA-MoE: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models](2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md)**  
+  実装：[✓](https://github.com/timlee0212/SiDA-MoE) ・ リポジトリ内被引用：7  
+  SiDA-MoEは小型LSTMで各トークンの専門家を先に予測し、予測した重みだけをCPUからGPUへ読む。予測結果をルーティングにも使うため、外れれば品質が変わる近似方式である。
+<!-- survey:auto:end -->

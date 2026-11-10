@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "preflight-scheduled-chat-30-zipnn-20260925T0735-01",
+  "kind": "research",
+  "attempt_id": "attempt-preload-7b508da4f5b23e0f0512f37f",
+  "job_id": "job-research-14b72fcf4a8168cf",
+  "record_bank": "q",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-zipnn-lossless-model-compression.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260925T072853+0900-run7",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T22:28:53+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:ab52f9265585e311dcfc0de6fa531830f42e404a14a3ea955dc70bb8fc8e9ed8",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-q/metadata.json",
+      "blob_sha": "765028ecb7daf6e9dc0fecf7ee0cf4d5b8036a57"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-q/problem_method.json",
+      "blob_sha": "a43aec7ca3dd4c8773865d177697f37c7914cfa3"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-q/evaluation.json",
+      "blob_sha": "58210f4570de34567709024d2c0c0c9ce57c6c77"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-q/results.json",
+      "blob_sha": "27188fdd0dd1bbfb442545abe3b796adfcdbb145"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-q/positioning.json",
+      "blob_sha": "a21815ccc8921cf35a5c6ebb95e42e5c2cb4fafb"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2",
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-24T22:30:14+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/01-offload-hierarchical-memory/2025-zipnn-lossless-model-compression.md",
+    "status": "FAIL",
+    "file_bytes": 24101,
+    "prose_chars": 4984,
+    "paragraphs": 18,
+    "method_paragraphs": 6,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7544663307375172,
+    "japanese_chars": 4941,
+    "latin_chars": 1608,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2",
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 75.4% < 警告基準 80.0%"
+    ]
+  }
+}

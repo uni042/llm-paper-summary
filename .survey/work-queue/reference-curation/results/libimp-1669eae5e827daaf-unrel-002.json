@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1669eae5e827daaf-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.13578",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.13578",
+    "identity_tokens": [
+      "arXiv:2608.13578"
+    ],
+    "reason": "Although the architecture is language-model-related, its evaluated efficiency contribution is training-only, outside this screening scope.",
+    "first_checked_at": "2026-10-05T10:38:46+00:00",
+    "last_checked_at": "2026-10-05T10:38:46+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "title": "BCMT: Blockwise Causal Memory Transformer"
+  },
+  "processed_at": "2026-10-05T10:38:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1669eae5e827",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

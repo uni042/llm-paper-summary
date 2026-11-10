@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-319cd3ab5b4ae707-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2312.16733",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2312.16733",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2312.16733",
+      "arXiv:2312.16733"
+    ],
+    "reason": "予測不能・burstyなML推論を対象に、weight-shared SuperNetworkからsubnetを瞬時切替するserving system。LLM専用ではないが、推論サービングのSLO/accuracy schedulingに直接隣接するため境界領域。",
+    "first_checked_at": "2026-10-03T07:46:12+00:00",
+    "last_checked_at": "2026-10-03T07:46:12+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md"
+    ],
+    "title": "SuperServe: Fine-Grained Inference Serving for Unpredictable Workloads"
+  },
+  "processed_at": "2026-10-03T07:46:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-319cd3ab5b4a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

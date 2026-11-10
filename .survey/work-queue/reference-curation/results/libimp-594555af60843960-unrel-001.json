@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-594555af60843960-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.12289",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.12289",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.12289",
+      "arXiv:2402.12289",
+      "semanticscholar:758c2dc290c037a6f211ec503beee70abe2d1197"
+    ],
+    "reason": "一次要旨で示される主な貢献は、自動運転の複雑な交通状況を視覚言語モデルで記述・分析し、階層的な運転計画へつなぐDriveVLMと、従来の自動運転パイプラインを組み合わせるDriveVLM-Dualである。実車・nuScenes等での運転理解と計画の有効性が評価対象であり、LLM推論のGPUカーネル、実行時メモリ、量子化、サービング基盤の改善が主貢献ではない。計算負荷への言及はあるが、サーベイの推論システム技術への直接的寄与を一次要旨から確認できないため対象外。",
+    "first_checked_at": "2026-10-05T02:49:32+00:00",
+    "last_checked_at": "2026-10-12T14:50:11+00:00",
+    "linked_from": [],
+    "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
+  },
+  "processed_at": "2026-10-12T14:50:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-594555af6084",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

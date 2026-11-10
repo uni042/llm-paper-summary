@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4cae069685bdada909b5f58ad775b390a2424c54f64e60bdd79c887ff3188cfa",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-55aa81267aef--libfile_e88c46fd91ac8191a266a67ec5133564--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2604.07812",
+  "worker_completed_at": "2026-10-14T14:39:15+09:00",
+  "worker_run_key": "20261014-1430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4686,
+    "body_paragraphs": 28,
+    "method_chars": 1331,
+    "method_paragraphs": 9,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500",
+    "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-d21837a25782--libfile_ded311cd47cc8191a429e5b92de682d4--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.md と 9 段落 / 1929文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T08:28:14+00:00"
+}

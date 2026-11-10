@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9843613ed4089c35-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.12042",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.12042",
+    "identity_tokens": [
+      "arXiv:2601.12042"
+    ],
+    "reason": "Visual-token compression safety analysis, not a proposed compression optimization.",
+    "first_checked_at": "2026-10-06T14:15:24+00:00",
+    "last_checked_at": "2026-10-06T14:15:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Less Is More - Until It Breaks: Security Pitfalls of Vision Token Compression in Large Vision-Language Models"
+  },
+  "processed_at": "2026-10-06T14:15:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9843613ed408",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

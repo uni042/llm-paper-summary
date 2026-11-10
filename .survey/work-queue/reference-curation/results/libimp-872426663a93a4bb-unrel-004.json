@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-872426663a93a4bb-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.01019",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.01019",
+    "identity_tokens": [
+      "arXiv:2610.01019"
+    ],
+    "reason": "ロボットworld modelの学習およびalternative futures生成が主題で、LLM推論システムを対象としない。",
+    "first_checked_at": "2026-10-05T03:59:34+00:00",
+    "last_checked_at": "2026-10-05T03:59:34+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "title": "FutureWorlds: Learning Robotic World Models from Alternative Futures"
+  },
+  "processed_at": "2026-10-05T03:59:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-872426663a93",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

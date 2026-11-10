@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-9e00ff58c3e351a2-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.19909",
+  "reason": "一次要旨は異種CPU端末での協調LLM微調整に特化する。テンソル並列の負荷分割で学習時間を既存テンソル並列比18%、パイプライン並列比56%短縮するが、測定対象は勾配を伴う微調整とCPU待機率であり、デコード時の推論遅延・サービング性能は評価されない。学習単独最適化のため現行収録対象外。",
+  "title": "Xronos: Heterogeneity-Aware Tensor Parallelism for Collaborative LLM Fine-Tuning on Edge CPUs",
+  "identity_tokens": [
+    "arxiv:2609.19909",
+    "doi:10.48550/arxiv.2609.19909"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e00ff58c3e3",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

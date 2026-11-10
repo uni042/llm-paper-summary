@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9f3eafc1fadba2c0-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.08300",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.08300",
+    "identity_tokens": [
+      "arXiv:2605.08300"
+    ],
+    "reason": "Primary arXiv HTML URL was attempted but returned an internal retrieval error; arXiv abstract page is not primary full text. Title/abstract identify state-space language models and residual hyperconnections/adapters, a plausible architecture-lineage connection, but method, inference evaluation, and limitations remain unverified.",
+    "first_checked_at": "2026-10-06T10:35:12+00:00",
+    "last_checked_at": "2026-10-06T10:35:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "mHC-SSM: Manifold-Constrained Hyper-Connections for State Space Language Models with Stream-Specialized Adapters"
+  },
+  "processed_at": "2026-10-06T10:35:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9f3eafc1fadb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

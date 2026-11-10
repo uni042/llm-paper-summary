@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-103fcbeb39da014d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tbme.2025.3612381",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tbme.2025.3612381",
+    "identity_tokens": [
+      "DOI:10.1109/tbme.2025.3612381"
+    ],
+    "reason": "Automated analysis of neonatal fundus images presents a uniquely intricate challenge in medical imaging. Existing methodologies predominantly focus on diagnosing abnormalities from individual images, often leading to inaccuracies due to the diverse and subtle nature of neonatal retinal features. Consequently, clinical standards frequently mandate the acquisition of retinal images from multiple angles to ensure the detection of minute lesions. To accommodate this, we propose leveraging multiple fundus images captured from various regions of the retina to comprehensively screen for a wide range",
+    "first_checked_at": "2026-10-06T13:04:46+00:00",
+    "last_checked_at": "2026-10-06T13:04:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+    ],
+    "title": "Enhancing Instance Feature Representation: A Foundation Model-Based Multi-Instance Approach for Neonatal Retinal Screening"
+  },
+  "processed_at": "2026-10-06T13:04:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-103fcbeb39da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

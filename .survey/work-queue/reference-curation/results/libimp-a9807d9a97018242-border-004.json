@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9807d9a97018242-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.18706",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.18706",
+    "identity_tokens": [
+      "arXiv:2512.18706"
+    ],
+    "reason": "一次要旨では、音声活動検出・音声強調・認識・環境音理解とLLMをモジュール化して接続し、音声対話を1秒未満の遅延で処理する設計を提案する。LLMを含む実時間推論パイプラインの遅延最適化は関連するが、主貢献は音声対話アプリケーションのモジュール設計であり、汎用LLMランタイムやモデル内推論高速化は対象外のため境界判定。",
+    "first_checked_at": "2026-10-12T17:45:21+00:00",
+    "last_checked_at": "2026-10-20T13:06:22+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System"
+  },
+  "processed_at": "2026-10-20T13:06:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9807d9a9701",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

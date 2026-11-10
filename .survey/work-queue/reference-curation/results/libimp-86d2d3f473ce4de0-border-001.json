@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86d2d3f473ce4de0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.03626",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.03626",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2404.03626",
+      "arXiv:2404.03626"
+    ],
+    "reason": "Equal-Info Windowsでニューラル圧縮テキスト上のLLM学習を可能にし、より短い系列での生成によって推論ステップ数とレイテンシを抑える研究である。圧縮表現と系列長は推論コストに直結するため接点がある。一方、中心的貢献は圧縮トークナイザと学習可能性の検討で、サービングランタイム、KV管理、スケジューリング、カーネル最適化を扱わないため境界扱いとする。",
+    "first_checked_at": "2026-10-22T17:20:12+00:00",
+    "last_checked_at": "2026-10-22T17:20:12+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Training LLMs over Neurally Compressed Text"
+  },
+  "processed_at": "2026-10-22T17:20:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86d2d3f473ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

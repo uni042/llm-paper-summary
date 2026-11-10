@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7793f2e57c85baff-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.05881",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.05881",
+    "identity_tokens": [
+      "arXiv:2609.05881"
+    ],
+    "reason": "Detects defective quantized LLM artifacts; reliability rather than efficient inference.",
+    "first_checked_at": "2026-10-05T07:09:19+00:00",
+    "last_checked_at": "2026-10-05T07:09:19+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+    ],
+    "title": "Broken on Arrival: Silently Defective LLM Artifacts in Public Model Registries and How to Catch Them"
+  },
+  "processed_at": "2026-10-05T07:09:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7793f2e57c85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-09aa81da98981265-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.15061",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.15061",
+    "identity_tokens": [
+      "arXiv:2501.15061"
+    ],
+    "reason": "一次要旨で、正負のクエリ・キー相互作用を取り込む線形注意を画像分類などの視覚Transformerへ適用する研究と確認。LLMの推論サービング、KVキャッシュ、言語生成や分散学習の実装・評価は示されず、対象外。",
+    "first_checked_at": "2026-10-11T21:44:20+00:00",
+    "last_checked_at": "2026-10-17T04:46:12+00:00",
+    "linked_from": [],
+    "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers"
+  },
+  "processed_at": "2026-10-17T04:46:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-09aa81da9898",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

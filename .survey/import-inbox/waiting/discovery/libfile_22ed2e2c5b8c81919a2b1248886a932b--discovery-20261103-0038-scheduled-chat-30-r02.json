@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261103-0038-scheduled-chat-30/r02",
+  "reference_main_sha": "4b7b7f8555bb75041a67a43abace9824e183efa6",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39562",
+      "identity_tokens": [
+        "arXiv:2610.39562"
+      ],
+      "title": "Raincheck: Deferred Multimodal Prefill for Efficient Multi-Turn MLLM Inference",
+      "reason": "MLLM複数ターンで初回prefill tokenをpruneしながら、除外tokenを破棄せずdecode中の余剰計算枠や応答後のscheduling gapで順次prefillするRaincheck。attention visibility制御とaffine state mappingで生成開始後のcontext更新を可能にし、prefill/decode fusionで重み再読を抑える。Qwen3-VL-8BとQwen3.5-9B、初期30% token保持条件で、SGLang実装はMultiVerseの初回TTFTをfull prefill比最大24.1%削減し、平均TPOT増加は0.5%未満。MLLM推論時のprefill資源配分に直接関係しaccept。",
+      "source_url": "https://arxiv.org/abs/2610.39562",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:44:52+09:00",
+      "last_checked_at": "2026-11-03T00:44:52+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.39372",
+      "identity_tokens": [
+        "arXiv:2610.39372"
+      ],
+      "title": "Cord: Confidence-Anchored Order Residual Decoding for Masked Diffusion Language Models",
+      "reason": "masked diffusion LLMのtoken reveal順を、confidence基準に幾何学的残差（生成方向、既公開contextとの距離、双方向infilling）を加える低次元policyで適応化する。3 dLLM・5 benchmarkで成功率32.0%から48.2%へ改善し、0.53M trainable parameter、追加backbone forwardなしだが推論latencyは5.39%増加。推論時のdecode方策ではあるものの主貢献は品質改善で速度・メモリ効率は悪化するためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.39372",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:44:52+09:00",
+      "last_checked_at": "2026-11-03T00:44:52+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.32492",
+      "identity_tokens": [
+        "arXiv:2610.32492"
+      ],
+      "title": "Accordion: Elastic-Depth Inference via Fixed-Prefix Layer Looping",
+      "reason": "5つの推論計算予算に対し、固定prefixのlayer looping実行経路を持つMoEモデルAccordionを提案。各micro-batchでbudgetをサンプルするjoint pretrainingとbudget別SFT/RL・複数expertのdistillationで1モデルが異なる推論深度に対応。Accordion-6B-A0.5Bは3.6T token事前学習後、追加layer実行の中間budgetで最大品質改善の89%を半分の追加layer実行数で獲得と報告。サービングthroughput実測は要旨にないが、明示的な計算予算と品質のtradeoffを提供する推論時適応計算の研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.32492",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:44:52+09:00",
+      "last_checked_at": "2026-11-03T00:44:52+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.32213",
+      "identity_tokens": [
+        "arXiv:2610.32213"
+      ],
+      "title": "Head Dimension Matters in Language Models for Long-Context Retrieval",
+      "reason": "固定パラメータ予算下でattention headを少数・幅広にすると、短文脈lossや一般taskをほぼ変えず長文脈retrieval性能が向上することを実験。幅広headでretrieval head割合が高まり、attention projectionを凍結した長文脈継続学習でも改善が残る。モデル設計と長文脈性能には関係するが、推論時のtoken/s、メモリ、cache、kernel最適化は一次要旨で示されないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.32213",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:44:52+09:00",
+      "last_checked_at": "2026-11-03T00:44:52+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37645",
+      "identity_tokens": [
+        "arXiv:2610.37645"
+      ],
+      "title": "Multi-State Linear Attention with Generalized Second-Order Routing",
+      "reason": "multi-state linear attentionでsegmentごとのkey-query平均alignmentだけを使うroutingでは分布の広がりを捉えられない。MERLINは各segment keyの一次・二次momentを保持し、queryごとのalignment平均と分散から各stateのreadoutを重み付けする。Gated DeltaNet-1.3BとMamba-2-780MのRULER/LongBenchで改善し、4倍メモリを使うbaselineも上回ると要旨は報告。推論時の圧縮state routingで長文脈品質とメモリのtradeoffを改善する直接手法としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.37645",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:45:37+09:00",
+      "last_checked_at": "2026-11-03T00:45:37+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.34180",
+      "identity_tokens": [
+        "arXiv:2610.34180"
+      ],
+      "title": "Write What Matters: Disentangling Token Selection from Slot Allocation in Recurrent Memory",
+      "reason": "recurrent-memory modelでtokenを記録するかのgateと、何slotに書くかのallocationを分離するFactorized Write Routing。合成Feature Recallでは常時writeの精度0.472がselective writeの0.337を上回る一方、疎なPasskeyではselective 0.222が常時0.048を上回る。推論時の固定slot記憶には関連するが、評価は合成taskの精度中心でLLM servingのlatency・memory/throughput実測がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.34180",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:45:37+09:00",
+      "last_checked_at": "2026-11-03T00:45:37+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.39854",
+      "identity_tokens": [
+        "arXiv:2610.39854"
+      ],
+      "title": "Attention, Dynamic Wave and Hybrid Sequence Mixers in Language Models",
+      "reason": "Dynamic Waveの指数減衰・位相変調を用いたrecurrent mixerを、10.94M parameterのTinyStories modelでTransformer/Hybridと比較。4096 token時にunfused attention比Pure WaveのVRAMは78.7%小さいが、fused SDPA比ではほぼ同じ（1404.3対1403.6MB）で、loop外への演算移動はlayer latencyを2.53倍改善。比較backendが効率結論を左右する有用な測定だが、規模は小型モデルで大規模LLM serving評価はなくborderline。",
+      "source_url": "https://arxiv.org/abs/2610.39854",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:45:37+09:00",
+      "last_checked_at": "2026-11-03T00:45:37+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.34146",
+      "identity_tokens": [
+        "arXiv:2610.34146"
+      ],
+      "title": "Rethinking Retrieval in the Long-Context Era: Training-Free Semantic Trees for Adaptive Context Construction",
+      "reason": "全文書類から一度semantic hierarchyを作り、queryごとに構造・意味scoreと語彙対応から必要なsource spanと祖先contextを選ぶtraining-free context構成。4 frontier answer model・LongBench 3 taskで全文投入比QA-F1平均+1.72、answer-context長58.55%削減と報告。LLMへ渡すpromptを短縮する間接的な推論負荷削減に関係するが、prefill TTFTやGPU throughputの実測が一次要旨になく、retrieval品質中心のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.34146",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:45:37+09:00",
+      "last_checked_at": "2026-11-03T00:45:37+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39380",
+      "identity_tokens": [
+        "arXiv:2610.39380"
+      ],
+      "title": "Learning to Formulate: Agentic Hardware-Software Co-Design of AI Infrastructure through Progressive Optimization and Verification",
+      "reason": "LLM agentが計算graphからchip制約まで設計の数理定式化を段階的に生成し、solverが最適化、検証・実測が仮定と結果を確認するFormulaic。NVIDIA GB10上でQwen3-8Bの完全layerをSGLang比1.075倍高速化し、Ventus GPU simulationでQwen2.5-0.5Bのworst-case cycleを基準の0.428まで削減（software-onlyは0.934）。異なる個別studyであり単一end-to-end deploymentではない。LLM inference layerとGPU設計の共同最適化を直接評価するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.39380",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:45:37+09:00",
+      "last_checked_at": "2026-11-03T00:45:37+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.39040",
+      "identity_tokens": [
+        "arXiv:2610.39040"
+      ],
+      "title": "IMPACT: Constraint-Aware Search for Imperfectly Factorized Accelerator Mappings",
+      "reason": "DNN acceleratorのtensor tile・演算順序・processing-element並列化のmappingを、遺伝的探索と制約違反を修復するoperatorで探索するIMPACT。DeepBenchおよび5種の一般ネットワークを用いたCIM accelerator実験でEDP 66%、latency 47%、energy 18%改善を報告。一次要旨ではLLM/Transformer推論のweight/KVやLLM serving固有の実装・評価を扱わず、一般DNN accelerator mappingに限定されるためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.39040",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:45:37+09:00",
+      "last_checked_at": "2026-11-03T00:45:37+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

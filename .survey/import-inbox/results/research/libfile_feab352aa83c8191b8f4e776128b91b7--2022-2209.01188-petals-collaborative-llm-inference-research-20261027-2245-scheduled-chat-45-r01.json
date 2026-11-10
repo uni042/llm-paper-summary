@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4ab2c44feecc2818d99b6b734deefddaff932b5e52fef368abacaa3f57c52994",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_feab352aa83c8191b8f4e776128b91b7--2022-2209.01188-petals-collaborative-llm-inference-research-20261027-2245-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2209.01188",
+  "worker_completed_at": "2026-10-27T22:45:00+09:00",
+  "worker_run_key": "20261027-2245-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4774,
+    "body_paragraphs": 27,
+    "method_chars": 1646,
+    "method_paragraphs": 10,
+    "evaluation_chars": 131,
+    "limitation_chars": 714,
+    "insufficiency_flags": [
+      "評価説明量 131 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 131 < 500"
+  ],
+  "processed_at": "2026-10-27T17:00:37+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c28d9ef1c71282daef0cc05ed33eb593fad1f3bc2d09eef9bac078e77df71d5b",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_fa47f440184081918d6d7a6aff04e2c7--2025-2505.13109-freekv-speculative-retrieval-cpu-gpu-layout-research-20261019-1930-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2505.13109",
+  "worker_completed_at": "2026-10-19T19:39:00+09:00",
+  "worker_run_key": "20261019-1930-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 9577,
+    "body_paragraphs": 61,
+    "method_chars": 1475,
+    "method_paragraphs": 9,
+    "evaluation_chars": 189,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 189 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 189 < 500"
+  ],
+  "processed_at": "2026-10-19T15:02:21+00:00"
+}

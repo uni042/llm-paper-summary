@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-823d9edebb7fed32-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.14336",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.14336",
+    "identity_tokens": [
+      "arXiv:2505.14336"
+    ],
+    "reason": "Full text reports AVSR quality gains and claims negligible inference overhead but supplies no measured latency, memory, or energy evidence; the specialized speech-task fit is too weak for general inference-efficiency inclusion.",
+    "first_checked_at": "2026-10-05T15:28:28+00:00",
+    "last_checked_at": "2026-10-05T15:28:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Scaling and Enhancing LLM-based AVSR: A Sparse Mixture of Projectors Approach"
+  },
+  "processed_at": "2026-10-05T15:28:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-823d9edebb7f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

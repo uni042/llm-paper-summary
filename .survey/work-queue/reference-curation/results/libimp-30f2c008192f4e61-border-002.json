@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30f2c008192f4e61-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/gcwcn66157.2025.11448404",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/gcwcn66157.2025.11448404",
+    "identity_tokens": [
+      "DOI:10.1109/gcwcn66157.2025.11448404",
+      "SemanticScholar:3454199b88cef5581d4c016ff86d19d5ad1738f7"
+    ],
+    "reason": "The confirmed title concerns multi-cloud CRM analytics and LLM data synchronization, but the DOI page returned “URL is not accessible via this tool”; the primary abstract could not establish a contribution to LLM inference/serving.",
+    "first_checked_at": "2026-10-13T03:49:29+00:00",
+    "last_checked_at": "2026-10-13T03:49:29+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Multi-Cloud Infrastructure for CRM Analytics: Real-Time ML and Data Sync with LLMs"
+  },
+  "processed_at": "2026-10-13T03:49:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30f2c008192f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

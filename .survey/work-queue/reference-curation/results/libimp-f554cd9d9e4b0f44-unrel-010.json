@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f554cd9d9e4b0f44-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s002360050048",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s002360050048",
+    "identity_tokens": [
+      "DOI:10.1007/s002360050048"
+    ],
+    "reason": "高挿入量ファイル向けにメモリ/ディスク階層をrolling mergeするデータベース索引構造の研究で、LLM推論のKVキャッシュ・ベクトル格納等への直接適用研究ではない。",
+    "first_checked_at": "2026-10-03T17:51:24+00:00",
+    "last_checked_at": "2026-10-03T17:51:24+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md"
+    ],
+    "title": "The log-structured merge-tree (LSM-tree)"
+  },
+  "processed_at": "2026-10-03T17:51:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f554cd9d9e4b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

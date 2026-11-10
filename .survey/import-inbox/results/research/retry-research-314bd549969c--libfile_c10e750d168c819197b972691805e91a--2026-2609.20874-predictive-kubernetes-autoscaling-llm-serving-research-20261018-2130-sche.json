@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "30018cd46cef0abac3c7403769524beae3a92e51bbdee3128efcb3272f53a40c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-314bd549969c--libfile_c10e750d168c819197b972691805e91a--2026-2609.20874-predictive-kubernetes-autoscaling-llm-serving-research-20261018-2130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.20874",
+  "worker_completed_at": "2026-10-18T21:39:00+09:00",
+  "worker_run_key": "20261018-2130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6921,
+    "body_paragraphs": 38,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 689,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-18T14:00:13+00:00"
+}

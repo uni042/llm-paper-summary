@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-22ce76f3a9319609-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.15569",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.15569",
+    "identity_tokens": [
+      "arXiv:2607.15569"
+    ],
+    "reason": "The paper studies elastic CXL shared memory for unmodified multithreaded applications, not LLM inference/serving.",
+    "first_checked_at": "2026-10-05T10:17:52+00:00",
+    "last_checked_at": "2026-10-05T10:17:52+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+    ],
+    "title": "Scaling Unmodified Multithreaded Applications with Elastic CXL-based Distributed Shared Memory"
+  },
+  "processed_at": "2026-10-05T10:17:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-22ce76f3a931",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

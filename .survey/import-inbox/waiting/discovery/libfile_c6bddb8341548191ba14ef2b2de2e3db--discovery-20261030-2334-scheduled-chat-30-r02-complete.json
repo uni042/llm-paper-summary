@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2334-scheduled-chat-30/r02",
+  "reference_main_sha": "c8092faa6258df5ace8418aa0cd94fe7ec132aef",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.09100",
+      "identity_tokens": [
+        "arXiv:2605.09100"
+      ],
+      "title": "GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression",
+      "reason": "GRCはメタ潜在トークンを介して生成・埋め込み・文脈圧縮を1回のforwardで統合し、更新可能なO(1)長の潜在KVメモリとhybrid paged attentionを用いる。一次要旨はRAG推論の配置負担軽減と遅延評価を扱うが、学習方式の提案も大きいため推論時の圧縮・キャッシュ機構に注目して収録する。",
+      "source_url": "https://arxiv.org/abs/2605.09100",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:38:11+09:00",
+      "last_checked_at": "2026-10-30T23:38:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 177,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.31224",
+      "identity_tokens": [
+        "arXiv:2609.31224"
+      ],
+      "title": "Acoustic-to-Text KV Compression for Full-Duplex Speech Models",
+      "reason": "全二重音声LLMの長時間対話で蓄積する音響KVを文字起こしへ変換し、古い音響状態を破棄する。LoRA学習の文字起こし側路と蒸留を用い、MiniCPM-o 4.5の10分対話でピークKVサイズ64.6%減を報告。音声生成モデルの推論時キャッシュ管理へ直接関連。",
+      "source_url": "https://arxiv.org/abs/2609.31224",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:39:47+09:00",
+      "last_checked_at": "2026-10-30T23:39:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 178,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.25155",
+      "identity_tokens": [
+        "arXiv:2603.25155"
+      ],
+      "title": "Photon: Speedup Volume Understanding with Efficient Multimodal Large Language Models",
+      "reason": "医用3D画像VQAのMLLMにおいて、指示依存の可変長トークン割当と代理勾配で学習・推論の視覚トークンを削減する。一次要旨は計算資源削減と推論高速化を報告するが、医療特化の性能評価であり汎用VLMへの転用は未検証。",
+      "source_url": "https://arxiv.org/abs/2603.25155",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:39:47+09:00",
+      "last_checked_at": "2026-10-30T23:39:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 179,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.11242",
+      "identity_tokens": [
+        "arXiv:2412.11242"
+      ],
+      "title": "TrimLLM: Progressive Layer Dropping for Domain-Specific LLMs",
+      "reason": "領域特化LLMの層別専門化を利用して層を段階的に削除し、専用疎行列カーネルなしに推論を高速化する。一次要旨は50～60%圧縮で精度低下なし、消費者GPUで2.1～5.7倍、A100で最大3.1倍の推論高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2412.11242",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:39:47+09:00",
+      "last_checked_at": "2026-10-30T23:39:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 180,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.19150",
+      "identity_tokens": [
+        "arXiv:2605.19150"
+      ],
+      "title": "Flash PD-SSM: Memory-Optimized Structured Sparse State-Space Models",
+      "reason": "時刻ごとに構造化疎行列を選択するSSMで、有限状態オートマトン表現力を保ちながらメモリとスループットを改善する。一次要旨は合成追跡・長系列時系列とハイブリッドLLMへの置換実験を含み、frontier LLMで用いられるSSMより高スループット・低メモリと報告。モデルアーキテクチャ変更を伴うため既存Transformerへの即時適用ではない。",
+      "source_url": "https://arxiv.org/abs/2605.19150",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:39:47+09:00",
+      "last_checked_at": "2026-10-30T23:39:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 181,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.17187",
+      "identity_tokens": [
+        "arXiv:2601.17187",
+        "DOI:10.48550/arXiv.2601.17187"
+      ],
+      "title": "High-Rate Quantized Matrix Multiplication I",
+      "reason": "LLM導入に重要な重み・活性の双方の量子化MatMulについて、校正統計なしの汎用設定で高レート量子化の歪みとINT/FP近似を情報理論的に比較する。一次書誌ではworklistの「Theory and Practice」と題名が異なり、現行正式題名は「High-Rate Quantized Matrix Multiplication I」。理論は直接関連するがLLM推論TPS/実機カーネル測定は要旨で未確認。",
+      "source_url": "https://arxiv.org/abs/2601.17187",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:39:47+09:00",
+      "last_checked_at": "2026-10-30T23:39:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 182,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.14985",
+      "identity_tokens": [
+        "arXiv:2503.14985"
+      ],
+      "title": "ML-Triton, A Multi-Level Compilation and Language Extension to Triton GPU Programming",
+      "reason": "GPUのworkgroup→warp→intrinsicという段階的低レベル化を行うML-Tritonを提案し、GEMM・MHAやFlashAttention型の明示的warp配置を可能にする。一次要旨ではIntel GPUで専門家記述カーネルの幾何平均95%超の性能を報告。LLM推論カーネルの実装基盤として関連するがLLM全体のTPS値とは区別。",
+      "source_url": "https://arxiv.org/abs/2503.14985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:39:47+09:00",
+      "last_checked_at": "2026-10-30T23:39:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 183,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00437",
+      "identity_tokens": [
+        "arXiv:2606.00437"
+      ],
+      "title": "EST-PRM: Stress-Testing Process Reward Models Before They Become Load-Bearing",
+      "reason": "4,687の数学推論チェーンでPRMのステップ増加・並べ替え・確信マーカーに対する報酬頑健性を評価する。目的は学習時の報酬モデルの評価・修復であり、推論時間・KV・モデル圧縮・サービング最適化の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2606.00437",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:39:47+09:00",
+      "last_checked_at": "2026-10-30T23:39:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 186,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.08545",
+      "identity_tokens": [
+        "arXiv:2302.08545"
+      ],
+      "title": "THC: Accelerating Distributed Deep Learning Using Tensor Homomorphic Compression",
+      "reason": "分散DNN学習の勾配を双方向圧縮し、圧縮状態のまま集約するTHCを提案する。一次要旨では学習収束時間を1.28～1.47倍改善するが、生成LLM推論時の通信やモデル実行ではなく学習のパラメータサーバ通信が対象。",
+      "source_url": "https://arxiv.org/abs/2302.08545",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:39:47+09:00",
+      "last_checked_at": "2026-10-30T23:39:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 193,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.08877",
+      "identity_tokens": [
+        "arXiv:2507.08877"
+      ],
+      "title": "ODIA: Oriented Distillation for Inline Acceleration of LLM-based Function Calling",
+      "reason": "本番のLLM function callingから簡単な要求を抽出して小型モデルへ知識蒸留し、要求に応じて処理を分配する。一次要旨では実運用音楽アプリの60%トラフィックを小型モデルが処理し、期待遅延45%、中央値遅延78%削減と報告。実運用推論ルーティングの効率改善に直接関連。",
+      "source_url": "https://arxiv.org/abs/2507.08877",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:39:47+09:00",
+      "last_checked_at": "2026-10-30T23:39:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 200,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

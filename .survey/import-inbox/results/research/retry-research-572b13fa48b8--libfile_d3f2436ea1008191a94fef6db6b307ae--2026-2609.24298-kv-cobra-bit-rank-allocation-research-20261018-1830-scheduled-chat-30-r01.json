@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "cf2d50d3611ce2f684f3950f8ca31502508dc69501feb4a0e5287151cdcfe2d9",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-572b13fa48b8--libfile_d3f2436ea1008191a94fef6db6b307ae--2026-2609.24298-kv-cobra-bit-rank-allocation-research-20261018-1830-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.24298",
+  "worker_completed_at": "2026-10-18T18:38:00+09:00",
+  "worker_run_key": "20261018-1830-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7493,
+    "body_paragraphs": 46,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 126,
+    "limitation_chars": 847,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 126 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 126 < 500"
+  ],
+  "processed_at": "2026-10-18T14:06:04+00:00"
+}

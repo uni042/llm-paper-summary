@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-02c2a24ce9ffc25c-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.08556",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.08556",
+    "identity_tokens": [
+      "arXiv:2604.08556"
+    ],
+    "reason": "本文はEMA traceを用いるrecurrent-context representationの能力境界を分析するが、LLM servingにおけるKV/context memory削減やlatency改善は実証していない。recurrent context lineageへの転用根拠は弱い。",
+    "first_checked_at": "2026-10-06T21:00:48+00:00",
+    "last_checked_at": "2026-10-06T21:00:48+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EMA Is Not All You Need: Mapping the Boundary Between Structure and Content in Recurrent Context"
+  },
+  "processed_at": "2026-10-06T21:00:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-02c2a24ce9ff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SABER: Stability-Aware Early Exit for LLM Reasoning via Adversarial Branch Probing",
+      "source_url": "https://arxiv.org/abs/2608.27963",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) achieve strong reasoning capabilities, yet long-chain reasoning becomes inefficient once the intermediate answer stabilizes across reasoning steps: additional reasoning yields little marginal benefit while incurring substantial inference cost. Existing early-exit methods based on confidence or entropy poorly capture reasoning stability, while consistency-based approaches rely on multi-step trajectory agreement, requiring sequential evaluations that delay exit. To better balance efficiency and reliability, we propose SABER, a training-free framework for stability-aware early exit via adversarial branch probing. SABER constructs simple yet effective semantic perturbations around intermediate reasoning states to form adversarial branches, and applies lightweight probing to estimate their likely final outcomes without full trajectory rollouts. When the probed outcomes remain consistent across branches, SABER exits early; otherwise, it continues reasoning. Experiments across multiple reasoning benchmarks and model architectures show that SABER reduces reasoning token consumption by 30.2\\%--39.8\\% on average while maintaining competitive accuracy with full-length reasoning.",
+      "identifiers": [
+        "SemanticScholar:99adcbc414d03a7cf4cccdf685affe86314dee76"
+      ],
+      "semantic_scholar_id": "99adcbc414d03a7cf4cccdf685affe86314dee76",
+      "canonical_id": "arXiv:2608.27963",
+      "arxiv_id": "2608.27963",
+      "authors": [
+        "Wanzhe Cheng",
+        "Hai-Yang Xiang",
+        "Jun-Tao Li",
+        "Hong-Ling Wang",
+        "Wenliang Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は中間CoT状態の意味的摂動から複数分岐を軽量に予測し、答えが安定している場合だけ早期終了するSABERを提案。追加学習なしに推論トークンを平均30.2〜39.8%削減し品質を維持。推論時の早期終了と計算削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Scaling Laws and Efficient Inference for Ternary Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2025.acl-long.1294",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:626d94a3179935942488df86898b492b1b92014e"
+      ],
+      "semantic_scholar_id": "626d94a3179935942488df86898b492b1b92014e",
+      "doi": "10.18653/v1/2025.acl-long.1294",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.1294",
+      "authors": [
+        "Tejas Vaidhya",
+        "Ayush Kaushal",
+        "Vineet Jain",
+        "Francis Couture-Harpin",
+        "Prashant Shishodia",
+        "Majid Behbahani",
+        "Yuriy Nevmyvaka",
+        "Irina Rish"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL公式掲載の論文は三値言語モデルのスケーリング則と効率的な実行方式を扱う。1bit級の低ビット表現によるメモリ・演算削減がLLM推論に直接関係するため収録対象と判断。詳細な速度値は要旨だけから推定しない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Density Field State Space Models: 1-Bit Distillation, Efficient Inference, and Knowledge Organization in Mamba-2",
+      "source_url": "https://arxiv.org/abs/2606.10932",
+      "year": 2026,
+      "published": "2026-04-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Density Field State Space Models (DF-SSM), a framework for compressing SSMs to a 1-bit scaffold with int8 low-rank correction. Applied to Mamba-2 1.3B, we achieve a 278 MB model (9.7x smaller than the 2.7 GB FP16 teacher) that runs at 21.4x faster inference on GPU (batch=1, relative to the mamba-ssm reference implementation) while maintaining downstream task performance within 2-4 percentage points of BitMamba-2, a 1.58-bit model trained from scratch on 150B tokens. The distillation itself requires only 32M tokens and 6 hours on a single A100 GPU, though it presupposes a pretrained FP16 teacher. We develop an optimized inference pipeline combining cuBLAS INT8 tensor cores for the scaffold matmul, custom CUDA kernels for stateful SSM and convolution operations, and an AVX-512 CPU backend for efficient deployment on both GPU and CPU. Beyond compression, we investigate the internal knowledge organization of the resulting model, discovering three distinct processing phases: intent classification (layers 0-3, operating in an abstract space with no vocabulary alignment), knowledge retrieval (layers 25-35, where factual associations localize to a 5-layer window), and output formatting (layers 36-47, where category structure dissolves). Through systematic analysis of 445 factual prompts across 19 categories, we find that early-layer classification is syntactic (driven by template structure) rather than semantic, and that the model exhibits well-organized knowledge representations despite weak factual recall--suggesting that representational structure may precede factual strength.",
+      "identifiers": [
+        "SemanticScholar:f4f8b2204c48864ad439d876166b26186dfc7d3c"
+      ],
+      "semantic_scholar_id": "f4f8b2204c48864ad439d876166b26186dfc7d3c",
+      "canonical_id": "arXiv:2606.10932",
+      "arxiv_id": "2606.10932",
+      "doi": "10.48550/arXiv.2606.10932",
+      "authors": [
+        "C.U. Shinde"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 185,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はMamba-2 1.3Bを1bit骨格とINT8低ランク補正に蒸留し、モデルを9.7倍小型化。cuBLAS INT8とCUDA SSM・畳み込みカーネル、AVX512を組み合わせ、mamba-ssm基準実装比バッチ1で21.4倍高速化と報告。再帰型LLMの低ビット推論に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "KV-Pipe: On the Relation Between KV Sharing and Pipeline Parallel Efficiency in LLMs",
+      "source_url": "https://arxiv.org/abs/2608.15943",
+      "year": 2026,
+      "published": "2026-08-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pipeline parallelism (PP) is widely used to scale large language model (LLM) training, but its efficiency is often limited by stage imbalance and pipeline bubbles. Meanwhile, cross-layer KV sharing has primarily been studied as a mechanism for reducing KV-cache costs during inference, without examining how KV reuse reshapes pipeline workloads. We present \\textbf{KV-Pipe}, a stage-aware KV-sharing mechanism that turns KV reuse into a pipeline-balancing control knob. KV-Pipe starts from the tail stage, converts selected attention layers to cross-layer KV sharing in a tail-first order, and iteratively retargets the current bottleneck to drive the FLOPs Imbalance Ratio (FIR) toward $1$. The procedure is performed offline and requires only a pipeline partition and per-layer FLOPs estimates, introducing negligible runtime overhead and requiring no online tuning. Across multiple pipeline-parallel configurations, KV-Pipe consistently improves utilization and throughput, achieving up to \\textbf{9.2\\%} higher training MFU and up to a \\textbf{9.8\\%} reduction in iteration time, with larger gains at higher pipeline-parallel degrees where stage imbalance is amplified. Furthermore, the same KV-sharing mechanism provides an inference-side benefit by reducing KV-cache growth and redundant KV projection work, resulting in higher decoding throughput for long-context workloads. These results identify KV layout as a system--architecture degree of freedom for jointly improving pipeline-parallel training efficiency and long-context inference.",
+      "identifiers": [
+        "SemanticScholar:9ce502492feb6ba78479de2953486b8f0e0a9769"
+      ],
+      "semantic_scholar_id": "9ce502492feb6ba78479de2953486b8f0e0a9769",
+      "canonical_id": "arXiv:2608.15943",
+      "arxiv_id": "2608.15943",
+      "authors": [
+        "Maryam Dialameh",
+        "Hossein Rajabzadeh",
+        "Harish Murali",
+        "Walid Ahmed",
+        "Weiwei Zhang",
+        "Hyock Ju Kwon"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 75,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨はクロスレイヤKV共有を末尾ステージから順に導入し、パイプライン段階のFLOPs不均衡を解消するKV-Pipeを提案。主評価は学習MFU最大9.2%改善・iteration時間9.8%削減だが、長文脈推論でもKV増加と重複投影を削減しdecodeスループットを改善と報告。推論・学習の双方に関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Xtrace: High-Fidelity GPU Intra-Kernel Tracing via Binary-Level Instruction Splicing",
+      "source_url": "https://arxiv.org/abs/2609.28769",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern GPU kernels fuse increasingly more work into a single kernel, and intra-kernel tracing has become the mainstream method to profile them. Tracing inserts probes into the kernel to record its runtime states, and the fidelity of the trace determines the efficiency of performance optimization. Unfortunately, existing tools insert probes before compilation. These tools interfere with the compiler's optimizations, so they trace a different binary from the one the GPU executes. They also add significant runtime overhead. Xtrace is the first GPU kernel tracing system with near-zero compile-time interference and minimized runtime overhead. Xtrace inserts probes directly into the compiled kernel binary. It reuses only the registers that hold dead values at the insertion address and resolves all hazards with the compiler's hazard tables. It further schedules the instruction order, register allocation, and control bits to minimize the runtime overhead the probe introduces. Xtrace supports 19 NVIDIA and AMD GPU architectures, and is publicly available for use at https://g-watch.github.io. We evaluate Xtrace on major production large language model (LLM) kernels against the state-of-the-art tracers Neutrino and IKET from NVIDIA. On H100, B300, and MI300X GPUs, Xtrace preserves 94-98% of the instructions of the kernel, while existing tools preserve only 8-48%. Xtrace adds only 0.9-2.8% overhead, while existing tools add 3.8-75.6%. Xtrace guides a coding agent to reach the same FlashAttention-3 performance with 3.9x fewer iterations than existing traces do. Thanks to our binary-level instrumentation, Xtrace also traces the faster closed-source cuDNN kernel, which guides the agent to lift the open-source FlashAttention-4 by 5.2-13.3% in throughput.",
+      "identifiers": [
+        "SemanticScholar:38524352e34b0fe2c6d2fa2cb460dadbd69f0afa"
+      ],
+      "semantic_scholar_id": "38524352e34b0fe2c6d2fa2cb460dadbd69f0afa",
+      "canonical_id": "arXiv:2609.28769",
+      "arxiv_id": "2609.28769",
+      "authors": [
+        "Zhuo-Bin Huang",
+        "Kai Zhang",
+        "Wei-Hao Cui",
+        "Hong-Shi Tan",
+        "Liang Luo",
+        "Christopher Dewan",
+        "Shen Li",
+        "Bing-Sheng He"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はGPUコンパイル済みバイナリへ直接計測命令を挿入して最適化結果を維持するXtraceを提案。LLM本番カーネルで命令の94〜98%を維持しつつ計測オーバーヘッド0.9〜2.8%と報告。推論カーネルの性能計測・最適化基盤に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d43906978f51",
+    "round": "libimp-d43906978f51223a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d43906978f51223a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d43906978f51223a-pre01.json",
+    "receipt": "sha256:ae8e7cfa34b5341afd7e90d09b2ce27942fe718c0448624e2447579f26c77621"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d43906978f51",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

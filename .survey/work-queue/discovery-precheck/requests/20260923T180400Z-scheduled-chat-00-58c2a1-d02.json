@@ -1,0 +1,18 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "request_id": "20260923T180400Z-scheduled-chat-00-58c2a1-d02",
+  "collector_id": "scheduled-chat-00-58c2a1-forward-awq",
+  "run_key": "scheduled-chat-00-20260924T025857JST-58c2a1",
+  "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.00978/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "initial_cursor": "120",
+  "page_size": 20,
+  "max_pages": 25,
+  "target_unseen": 20,
+  "worker_id": "scheduled-chat-00",
+  "preload_id": "preload-a64cd9b9750549c9709a",
+  "discovery_bank": "ae",
+  "discovery_slot_path": ".survey/work-queue/records/chat-record-ae/discovery-preload.json"
+}

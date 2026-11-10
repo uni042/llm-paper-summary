@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30f2c008192f4e61-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icstsn67075.2025.11397886",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icstsn67075.2025.11397886",
+    "identity_tokens": [
+      "DOI:10.1109/icstsn67075.2025.11397886",
+      "SemanticScholar:3398d5c43b245fc0345c337ed230ebdacd52c63c"
+    ],
+    "reason": "The publisher URL returned “Internal Error” with one line and no abstract. The confirmed title suggests a compiler for data workflows, but its relation to LLM inference/serving cannot be resolved from primary evidence.",
+    "first_checked_at": "2026-10-13T03:49:29+00:00",
+    "last_checked_at": "2026-10-13T03:49:29+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Compiler-Enhanced Language for Scalable Data Workflows"
+  },
+  "processed_at": "2026-10-13T03:49:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30f2c008192f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

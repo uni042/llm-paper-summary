@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "a80ddccb1c1e93842927d2afe7437c3aee26d15f90792cc5faec4cbd75febfaf",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_58fd4d35ee648191af566eb13060d58e--2024-2411.02795-rwkv-evolution-survey-research-20261030-1616-scheduled-chat-45-r02.md",
+  "canonical_id": "arXiv:2411.02795",
+  "worker_completed_at": "2026-10-30T16:33:36+09:00",
+  "worker_run_key": "20261030-1616-scheduled-chat-45/r02",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5110,
+    "body_paragraphs": 25,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 600,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-30T07:54:29+00:00"
+}

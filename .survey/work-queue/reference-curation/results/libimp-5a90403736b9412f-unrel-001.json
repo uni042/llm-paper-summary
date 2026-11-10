@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5a90403736b9412f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.12584",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.12584",
+    "identity_tokens": [
+      "arXiv:2609.12584"
+    ],
+    "reason": "一次要旨: Instruction-tuning datasets for large language models (LLMs) are often large, redundant, and imbalanced, limiting efficient adaptation. Naive large-batch fine-tuning repeatedly includes overrepresented sample groups while weakly covering underrepresented but informative ones, especially under data parallelism (DP) across multiple GPUs. We propose CluSTER, a Cluster-aware balanced Sampling framework for Training Effic",
+    "first_checked_at": "2026-10-05T06:51:06+00:00",
+    "last_checked_at": "2026-10-05T06:51:06+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Clustering-Based Balanced Sampling and Allocation with Data Parallelism for High-Performance Fine-Tuning"
+  },
+  "processed_at": "2026-10-05T06:51:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5a90403736b9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

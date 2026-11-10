@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T0908JST-scheduled-chat-00-r09-02",
+  "kind": "research",
+  "attempt_id": "attempt-c67963f1064ecc2790db5b2d",
+  "job_id": "job-research-51f4efd90b7a5e12",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.09240-scaling-post-training-ternarisation-to-qwen3-8b-capability-retention-reproduction-lossless-packing-and-packed-execution.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": true,
+  "repair_required": false,
+  "decision": "READY_FOR_SUBMISSION",
+  "descriptor_sha256": "sha256:eff7958362f6d04266ca18ed3479a80b545ee6d098eafa34e7a556fec53703a1",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "e137993c129ce9a7b27a0be61e994be76dfa1f50"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "8a6f5aef4f24d3c14b4927af90e081d5021eac83"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "d6da6f37bf3470180caa0c583e121b991a3308bb"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "5e49b3d32cc2b1ad6ef5d25f16a4950d6e188eaf"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "0732d2f86df3936956dca8fd543d3fd4f39d3640"
+    }
+  ],
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2609.09240-scaling-post-training-ternarisation-to-qwen3-8b-capability-retention-reproduction-lossless-packing-and-packed-execution.md",
+    "status": "WARN",
+    "file_bytes": 20488,
+    "prose_chars": 6582,
+    "paragraphs": 31,
+    "method_paragraphs": 14,
+    "method_components": 7,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7521786492374728,
+    "japanese_chars": 4143,
+    "latin_chars": 1365,
+    "bare_english_terms": [],
+    "failures": [],
+    "warnings": [
+      "日本語比率 75.2% < 警告基準 80.0%"
+    ]
+  },
+  "checked_at": "2026-09-23T00:03:21+00:00",
+  "next_action": "Create .survey/work-queue/completed-submission-requests/<attempt_id>.json and set preflight_result to this exact result path. Do not edit any record slot after this check; if a slot changes, run a new preflight first."
+}

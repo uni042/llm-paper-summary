@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "d40ecf97fc07e525fba97bc1f35f2d4877c793c61aadc00d4ebec5b33862f583",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ff772efce3488191b17d54bb3460fdfe--2024-2408.03130-inference-optimizations-practical-survey-research-20261027-0500-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2408.03130",
+  "worker_completed_at": "2026-10-27T05:07:30+09:00",
+  "worker_run_key": "20261027-0500-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5476,
+    "body_paragraphs": 27,
+    "method_chars": 2891,
+    "method_paragraphs": 14,
+    "evaluation_chars": 315,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 315 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 315 < 500"
+  ],
+  "processed_at": "2026-10-26T21:36:10+00:00"
+}

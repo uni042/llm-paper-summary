@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-01556e847caec9153595855e-r2",
+  "kind": "research",
+  "attempt_id": "attempt-01556e847caec9153595855e",
+  "job_id": "job-research-c449ea471528f1b0",
+  "record_bank": "g",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.17109-shared-prefix-kv-reuse-across-standard-lora-adapters-quality-and-serving-tradeoffs.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:7ca7027a160a7322aa17d97680536e520fc0fee03ee6dd95c0a2a5f1afaf7628",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "669ac0f5f65774dcf894f6aa3240348b8779436f"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "0f4f3e7929d0a21a6ba9f391cd6ac92c713083d1"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "2dc74042abfdc974b3ba283db1a7cf46551eec4e"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "dcd7cf1b7619e5571788465317395f89dcc3b3bc"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "a6ca8914e731b7d231bd06e79ffab5f7a57bc8c9"
+    }
+  ],
+  "validation_errors": [
+    "ValueError: record slot too large: .survey/work-queue/records/chat-record-g/positioning.json (8800 bytes > 8192)"
+  ],
+  "checked_at": "2026-09-22T11:39:33+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

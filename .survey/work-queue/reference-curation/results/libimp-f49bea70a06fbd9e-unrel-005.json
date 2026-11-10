@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f49bea70a06fbd9e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.14651",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.14651",
+    "identity_tokens": [
+      "arXiv:2303.14651"
+    ],
+    "reason": "YOSOはリアルタイムpanoptic segmentation向け視覚アプリケーションで、対象技術であるLLM推論システムとの直接接続がない。",
+    "first_checked_at": "2026-10-13T00:16:00+00:00",
+    "last_checked_at": "2026-10-13T00:16:00+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md",
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "You Only Segment Once: Towards Real-Time Panoptic Segmentation"
+  },
+  "processed_at": "2026-10-13T00:16:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f49bea70a06f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

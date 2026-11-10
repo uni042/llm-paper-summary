@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6e378b89b61f9db-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.04789",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.04789",
+    "identity_tokens": [
+      "arXiv:2602.04789",
+      "id:arXiv:2602.04789",
+      "url:https://arxiv.org/abs/2602.04789"
+    ],
+    "reason": "一次要旨では、自己回帰型の動画拡散生成において、チャンクの重要度に応じた疎性割当とフレーム・ブロック階層の疎注意を組み合わせる。RTX 5090やH100で動画のフレーム速度を測定し、他方式と組み合わせた最大3倍の高速化を報告するが、対象は映像拡散モデルであり、テキストLLMのトークン生成・MoE・KVキャッシュ配信を実証していないため対象外とする。",
+    "first_checked_at": "2026-10-13T10:41:41+00:00",
+    "last_checked_at": "2026-10-13T10:41:41+00:00",
+    "linked_from": [],
+    "title": "Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention"
+  },
+  "processed_at": "2026-10-13T10:41:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6e378b89b61",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

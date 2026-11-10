@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-45c3d2fe42f3a46b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:13fa84b25b8960ae93b877e12551fc1d60d25739",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:13fa84b25b8960ae93b877e12551fc1d60d25739",
+    "identity_tokens": [
+      "SemanticScholar:13fa84b25b8960ae93b877e12551fc1d60d25739",
+      "arXiv:2605.03562"
+    ],
+    "reason": "arXiv 2605.03562の現行公式ページは、KVの保存誤差でなく注意ロジットの誤差を最小化するHeadQを記述し、2ビットKV量子化のPPL改善を報告。ただし2026-05-19のv3で著者が倫理的懸念を理由に論文をwithdrawnと明記しており、本文PDFは現行版で利用不能。技術範囲は関連するが撤回済みであることを明示し、通常Research候補としての扱いは慎重に保留する。",
+    "first_checked_at": "2026-10-30T07:20:24+00:00",
+    "last_checked_at": "2026-10-30T07:20:24+00:00",
+    "linked_from": [
+      "KV Cache Optimization / Compression",
+      "Weight Quantization / Compression"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HeadQ: Model-Visible Distortion and a Prototype KV Quantizer-Corrector Codec"
+  },
+  "processed_at": "2026-10-30T07:20:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-45c3d2fe42f3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e641d5850ff7e72d29c041c634907639c299b6df32ce380295c54a4a2862479a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2ad140d42cd2--libfile_eedace5f55fc8191943c675e6417534d--2026-2605.18071-kvdrive-under16kb-reaudit-20261010-1745-scheduled-chat-45-r01-corrected.md",
+  "canonical_id": "arXiv:2605.18071",
+  "worker_completed_at": "2026-10-10T17:46:00+09:00",
+  "worker_run_key": "20261010-1745-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6472,
+    "body_paragraphs": 36,
+    "method_chars": 2367,
+    "method_paragraphs": 12,
+    "evaluation_chars": 106,
+    "limitation_chars": 785,
+    "insufficiency_flags": [
+      "評価説明量 106 < 500"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 106 < 500"
+  ],
+  "processed_at": "2026-10-10T09:56:43+00:00"
+}

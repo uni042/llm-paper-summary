@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7c224027547ed9d-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.23264",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.23264",
+    "identity_tokens": [
+      "arXiv:2510.23264"
+    ],
+    "reason": "Mixed-precision inference accelerates automated circuit discovery, but the evaluated target is scientific circuit search rather than LLM or general inference infrastructure; the abstract leaves transfer to target systems unclear.",
+    "first_checked_at": "2026-10-13T00:49:47+00:00",
+    "last_checked_at": "2026-10-13T00:49:47+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+      "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+      "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PAHQ: Accelerating Automated Circuit Discovery through Mixed-Precision Inference Optimization"
+  },
+  "processed_at": "2026-10-13T00:49:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7c224027547",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

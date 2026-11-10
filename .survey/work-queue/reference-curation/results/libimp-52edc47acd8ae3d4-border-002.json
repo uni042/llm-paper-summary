@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52edc47acd8ae3d4-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.25954",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.25954",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.25954",
+      "arXiv:2605.25954"
+    ],
+    "reason": "TVM TIRに変換可能な中間表現と逐次変換の教師データを提供。カーネル最適化を支援するが、LLM推論高速化自体の実測値は一次要旨にない。",
+    "first_checked_at": "2026-11-10T10:47:03+00:00",
+    "last_checked_at": "2026-11-10T10:47:03+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Step-TP: A Grounded, Step-Level Dataset with Chain-of-Thought Reasoning for LLM-Guided Tensor Program Optimization"
+  },
+  "processed_at": "2026-11-10T10:47:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52edc47acd8a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

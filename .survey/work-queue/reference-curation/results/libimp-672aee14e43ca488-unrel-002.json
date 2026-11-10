@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-672aee14e43ca488-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.23286",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.23286",
+    "identity_tokens": [
+      "arXiv:2509.23286"
+    ],
+    "reason": "dLLMの安全アライメントと有害応答停止が主題。安全目的の早期停止評価は、通常の推論計算・メモリ・速度を改善する手法ではない。",
+    "first_checked_at": "2026-10-06T18:48:59+00:00",
+    "last_checked_at": "2026-10-06T18:48:59+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "A2D: Any-Order, Any-Step Safety Alignment for Diffusion Language Models"
+  },
+  "processed_at": "2026-10-06T18:49:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-672aee14e43c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

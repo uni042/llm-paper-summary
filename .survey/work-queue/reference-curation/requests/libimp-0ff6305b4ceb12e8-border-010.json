@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0ff6305b4ceb12e8-border-010",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2311.02262",
+  "reason": "PASTAは推論時に少数attention headの重みを変更し、モデル再学習なしで指定部分へ注意を誘導するため推論時機構ではあるが、主目的は指示追従・知識統合の品質改善で効率化ではないため境界領域。",
+  "title": "Tell Your Model Where to Attend: Post-hoc Attention Steering for LLMs",
+  "identity_tokens": [
+    "arXiv:2311.02262",
+    "DOI:10.48550/arXiv.2311.02262"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0ff6305b4ceb",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,237 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-872dbd3ece5885a5-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-872dbd3ece58",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2603.15421",
+    "arXiv:2604.12262"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d0c64ad1c0abf1b9ea6ec6cb7e401c334e2867f0",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T06:34:13.081872+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2603.15421",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.12262",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CLAG: Adaptive Memory Organization via Agent-Driven Clustering for Small Language Model Agents",
+      "source_url": "https://arxiv.org/abs/2603.15421",
+      "year": 2026,
+      "published": "2026-03-16",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model agents heavily rely on external memory to support knowledge reuse and complex reasoning tasks. Yet most memory systems store experiences in a single global retrieval pool which can gradually dilute or corrupt stored knowledge. This problem is especially pronounced for small language models (SLMs), which are highly vulnerable to irrelevant context. We introduce CLAG, a CLustering-based AGentic memory framework where an SLM agent actively organizes memory by clustering. CLAG employs an SLM-driven router to assign incoming memories to semantically coherent clusters and autonomously generates cluster-specific profiles, including topic summaries and descriptive tags, to establish each cluster as a self-contained functional unit. By performing localized evolution within these structured neighborhoods, CLAG effectively reduces cross-topic interference and enhances internal memory density. During retrieval, the framework utilizes a two-stage process that first filters relevant clusters via their profiles, thereby excluding distractors and reducing the search space. Experiments on multiple QA datasets with three SLM backbones show that CLAG consistently improves answer quality and robustness over prior memory systems for agents, remaining lightweight and efficient.",
+      "identifiers": [
+        "SemanticScholar:c24070eec9a8b76a3b459fc48fd5b70603a41054"
+      ],
+      "semantic_scholar_id": "c24070eec9a8b76a3b459fc48fd5b70603a41054",
+      "canonical_id": "arXiv:2603.15421",
+      "arxiv_id": "2603.15421",
+      "doi": "10.48550/arXiv.2603.15421",
+      "authors": [
+        "Taeyun Roh",
+        "Wonjun Jang",
+        "Jun-Ha Jung",
+        "Jaewook Kang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 211,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades",
+      "source_url": "https://arxiv.org/abs/2604.12262",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cascaded LLM systems coordinate models of varying sizes with human experts to balance accuracy, cost, and abstention under uncertainty. However, single-model tiers at each stage often struggle with ambiguous queries, triggering premature escalations to costlier models or experts due to under-confidence and inefficient compute scaling. CascadeDebate addresses this gap by inserting multi-agent deliberation directly at each tier's escalation boundary. Confidence-based routers activate lightweight agent ensembles only for uncertain cases, enabling consensus-driven resolution of ambiguities internally without invoking higher-cost upgrades. Our unified architecture alternates single-model inference with selective multi-agent deliberation across model scales, culminating in human experts as the final fallback. This design scales test-time compute dynamically according to query difficulty. Across five benchmarks spanning science, medicine, and general knowledge, CascadeDebate outperforms strong single-model cascades and standalone multi-agent systems by up to 26.75 percent. An online threshold optimizer proves essential, boosting accuracy by 20.98 to 52.33 percent relative improvement over fixed policies and enabling elastic adaptation to real-world distributions.",
+      "identifiers": [
+        "SemanticScholar:7aa0d4f6458362957ecf066dff866c6afbed02ef"
+      ],
+      "semantic_scholar_id": "7aa0d4f6458362957ecf066dff866c6afbed02ef",
+      "canonical_id": "arXiv:2604.12262",
+      "arxiv_id": "2604.12262",
+      "doi": "10.48550/arXiv.2604.12262",
+      "authors": [
+        "Raeyoung Chang",
+        "Dong-Uk Kwon",
+        "Jisoo Lee",
+        "Nikhil Verma"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 182,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.15421",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.15421",
+        "id:SemanticScholar:c24070eec9a8b76a3b459fc48fd5b70603a41054",
+        "id:arXiv:2603.15421",
+        "title:clag adaptive memory organization via agentdriven clustering for small language model agents",
+        "url:https://arxiv.org/abs/2603.15421"
+      ],
+      "record": {
+        "title": "CLAG: Adaptive Memory Organization via Agent-Driven Clustering for Small Language Model Agents",
+        "source_url": "https://arxiv.org/abs/2603.15421",
+        "year": 2026,
+        "published": "2026-03-16",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model agents heavily rely on external memory to support knowledge reuse and complex reasoning tasks. Yet most memory systems store experiences in a single global retrieval pool which can gradually dilute or corrupt stored knowledge. This problem is especially pronounced for small language models (SLMs), which are highly vulnerable to irrelevant context. We introduce CLAG, a CLustering-based AGentic memory framework where an SLM agent actively organizes memory by clustering. CLAG employs an SLM-driven router to assign incoming memories to semantically coherent clusters and autonomously generates cluster-specific profiles, including topic summaries and descriptive tags, to establish each cluster as a self-contained functional unit. By performing localized evolution within these structured neighborhoods, CLAG effectively reduces cross-topic interference and enhances internal memory density. During retrieval, the framework utilizes a two-stage process that first filters relevant clusters via their profiles, thereby excluding distractors and reducing the search space. Experiments on multiple QA datasets with three SLM backbones show that CLAG consistently improves answer quality and robustness over prior memory systems for agents, remaining lightweight and efficient.",
+        "identifiers": [
+          "SemanticScholar:c24070eec9a8b76a3b459fc48fd5b70603a41054"
+        ],
+        "semantic_scholar_id": "c24070eec9a8b76a3b459fc48fd5b70603a41054",
+        "canonical_id": "arXiv:2603.15421",
+        "arxiv_id": "2603.15421",
+        "doi": "10.48550/arXiv.2603.15421",
+        "authors": [
+          "Taeyun Roh",
+          "Wonjun Jang",
+          "Jun-Ha Jung",
+          "Jaewook Kang"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 211,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.12262",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.12262",
+        "id:SemanticScholar:7aa0d4f6458362957ecf066dff866c6afbed02ef",
+        "id:arXiv:2604.12262",
+        "title:cascadedebate multiagent deliberation for costaware llm cascades",
+        "url:https://arxiv.org/abs/2604.12262"
+      ],
+      "record": {
+        "title": "CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades",
+        "source_url": "https://arxiv.org/abs/2604.12262",
+        "year": 2026,
+        "published": "2026-04-14",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Cascaded LLM systems coordinate models of varying sizes with human experts to balance accuracy, cost, and abstention under uncertainty. However, single-model tiers at each stage often struggle with ambiguous queries, triggering premature escalations to costlier models or experts due to under-confidence and inefficient compute scaling. CascadeDebate addresses this gap by inserting multi-agent deliberation directly at each tier's escalation boundary. Confidence-based routers activate lightweight agent ensembles only for uncertain cases, enabling consensus-driven resolution of ambiguities internally without invoking higher-cost upgrades. Our unified architecture alternates single-model inference with selective multi-agent deliberation across model scales, culminating in human experts as the final fallback. This design scales test-time compute dynamically according to query difficulty. Across five benchmarks spanning science, medicine, and general knowledge, CascadeDebate outperforms strong single-model cascades and standalone multi-agent systems by up to 26.75 percent. An online threshold optimizer proves essential, boosting accuracy by 20.98 to 52.33 percent relative improvement over fixed policies and enabling elastic adaptation to real-world distributions.",
+        "identifiers": [
+          "SemanticScholar:7aa0d4f6458362957ecf066dff866c6afbed02ef"
+        ],
+        "semantic_scholar_id": "7aa0d4f6458362957ecf066dff866c6afbed02ef",
+        "canonical_id": "arXiv:2604.12262",
+        "arxiv_id": "2604.12262",
+        "doi": "10.48550/arXiv.2604.12262",
+        "authors": [
+          "Raeyoung Chang",
+          "Dong-Uk Kwon",
+          "Jisoo Lee",
+          "Nikhil Verma"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 182,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e0d0b047f6b9c6fb8897343b1aabe66e7124583e1c804cdc6d74eccbc3cc1c8b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

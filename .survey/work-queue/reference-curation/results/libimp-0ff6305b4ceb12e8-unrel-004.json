@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0ff6305b4ceb12e8-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.03113",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.03113",
+    "identity_tokens": [
+      "DOI:10.1145/3624062.3624173",
+      "DOI:10.48550/arxiv.2312.03113",
+      "arXiv:2312.03113"
+    ],
+    "reason": "CXL/低遅延flashを用いるGPU外部メモリ研究として技術的には近いが、対象workloadはグラフ探索でありLLM推論への適用・評価がないため対象外。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2609.09800-hbfsim-high-bandwidth-flash-real-gpu-execution.md"
+    ],
+    "title": "GPU Graph Processing on CXL-Based Microsecond-Latency External Memory"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0ff6305b4ceb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,1276 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-user-forwardcite-adaptive-20260920-xmoe",
+  "collector_id": "manual-user-forwardcite-adaptive-xmoe",
+  "run_key": "manual-user-forwardcite-adaptive-2026-09-20-r2",
+  "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2403.18926",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2403.18926/citations",
+  "target_unseen": 50,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "082e5fdaac2fc8d2c5233149ad0517ec97591e78",
+  "raw_search_result_count": 34,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 2,
+  "intra_batch_alias_duplicate_filtered_count": 2,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 29,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T10:21:24.969930+00:00",
+  "results": [
+    {
+      "title": "LoGo: Token-Level Dynamic Local-Global Attention",
+      "source_url": "https://www.semanticscholar.org/paper/8267a752b7ca9b73ee32e88258fd9aca42c02ed2",
+      "year": 2026,
+      "published": "2026-08-30",
+      "abstract": "As context lengths scale, attention increasingly becomes a primary computational bottleneck in large language models. Standard Transformers remain powerful but computationally inefficient, as they allocate the same attention budget to every token regardless of its contextual demand. Existing local-global hybrids provide a more efficient alternative by mixing restricted- and full-context attention, but they typically allocate span statically across layers or heads. To address these limitations, we propose LoGo, a token-level dynamic local-global attention mechanism that uses attention span as a direct proxy for attention budget allocation. Each LoGo layer contains coupled local and global branches: all tokens receive efficient local attention over a restricted context window, while a learned gate activates global attention with full-context access only for tokens requiring long-range information. A threshold-based budget controller maintains a target global ratio without auxiliary losses, and a progressive masking schedule stabilizes training before sparse routing takes effect. We further implement query-sparse Triton kernels that convert reduced global-attention computation into practical speedups. Extensive experiments validate LoGo's effectiveness, showing that it preserves the scaling behavior of full-attention Transformers across model sizes. In controlled comparisons, LoGo improves over the full-attention Transformer and matched-budget static local-global hybrids, with clear gains on long-range retrieval. Analysis further shows that LoGo learns interpretable span allocation patterns. These results suggest that learned token-level span allocation is an effective and scalable way to improve the long-context performance-compute trade-off.",
+      "canonical_id": "arXiv:2608.29539",
+      "arxiv_id": "2608.29539",
+      "authors": [
+        "Yuqi Pan",
+        "Zheng Li",
+        "Bohao Tang",
+        "Zhen Qin",
+        "Guoqi Li"
+      ]
+    },
+    {
+      "title": "SARA: Unlocking Multilingual Knowledge in Mixture-of-Experts via Semantically Anchored Routing Alignment",
+      "source_url": "https://www.semanticscholar.org/paper/d45de07434281e85720c03be7c9330ddc91d99c6",
+      "year": 2026,
+      "published": "2026-06-24",
+      "abstract": "Sparse Mixture-of-Experts (MoE) architectures have emerged as an increasingly influential paradigm as they offer a strategic balance between parameter scalability and computational efficiency. However, low-resource languages, which suffer from a scarcity of high-quality training data, often have their tokens routed to different experts than those predominantly activated by high-resource inputs, which limits cross-lingual expert sharing. This cross-lingual routing divergence consequently hinders their efficacy in multilingual contexts. To address this issue, we propose SARA (Semantically Anchored Routing Alignment), a framework designed to transfer specialized capabilities from high-resource languages as anchors to low-resource languages. SARA explicitly aligns the routing distribution of multilingual inputs with high-resource semantic anchors using a symmetric Jensen-Shannon (JS) divergence constraint. Unlike traditional distillation methods that operate on output logits, SARA directly aligns the internal routing distributions of MoE layers, encouraging mechanistic consistency in expert selection across languages. We conduct experiments on 2 LLMs across 5 low-resource languages and 3 benchmarks. Experiment results demonstrate that SARA outperforms standard instruction tuning, e.g., +0.8% on Qwen3-30B-A3B and +1.2% on Phi-3.5-MoE-instruct on Global-MMLU. Further analyses show that SARA effectively addresses performance bottlenecks in low-resource languages, providing a scalable pathway to enhance multilingual capabilities in sparse architectures.",
+      "canonical_id": "arXiv:2606.25821",
+      "arxiv_id": "2606.25821",
+      "authors": [
+        "Tianyu Dong",
+        "Yangyang Liu",
+        "Jiang Zhou",
+        "Xin-Wei Wu",
+        "Xiaohu Zhao",
+        "Hao Wang",
+        "Heng Liu",
+        "Lin-Long Xu",
+        "Longyue Wang",
+        "Wei-Hua Luo",
+        "Shaolin Zhu",
+        "Deyi Xiong"
+      ]
+    },
+    {
+      "title": "TENP: Trapezoidal Expert Neuron Pruning For Mixture-of-Experts",
+      "source_url": "https://www.semanticscholar.org/paper/bbc29f2bd66c8a0f873474978b17e4a29b7551e1",
+      "year": 2026,
+      "published": "2026-06-03",
+      "abstract": "Mixture-of-Experts large language models (LLMs) scale efficiently through sparse activation, yet their deployment is fundamentally constrained by the large static parameter footprint of experts. Existing compression approaches either remove entire experts, disrupting routing topology and harming performance, or rely on unstructured weight pruning with limited practical efficiency. To address the limitations, we propose TENP, a structured Trapezoidal ExpertNeuron Pruning framework. Using a few samples, we identify and retain important experts, while applying expert neuron pruning (ENP) to less important experts, reserving model parameters in a trapezoidal pattern from shallow to deep layers. When evaluating expert importance, we jointly consider both the magnitude of the expert output and its ability to change the direction of the input vector. For ENP, we measure each neuron's projected contribution to the expert output to identify and retain important neurons. We conduct extensive experiments on the Qwen and DeepSeek models. Under a routing expert sparsity of 40% and an average of 63.76% activated expert parameters, the DeepSeek model suffers only a 1-point drop in accuracy compared to the full-parameter model. Moreover, it outperforms the full-parameter model by 10% on code generation tasks.",
+      "canonical_id": "arXiv:2606.09885",
+      "arxiv_id": "2606.09885",
+      "authors": [
+        "Jiangyang He",
+        "Shaolin Zhu",
+        "Deyi Xiong"
+      ]
+    },
+    {
+      "title": "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE",
+      "source_url": "https://www.semanticscholar.org/paper/ccd794405e9612ab517ccfc54ed94577d5373f6f",
+      "year": 2026,
+      "published": "2026-05-14",
+      "abstract": "Mixture-of-Experts (MoE) architectures enhance the efficiency of large language models by activating only a subset of experts per token. However, standard MoE employs a fixed Top-K routing strategy, leading to redundant computation and suboptimal inference latency. Existing acceleration methods either require costly retraining with architectural changes or suffer from severe performance drop at high sparsity due to train-inference mismatch. To address these limitations, we propose BEAM (Binary Expert Activation Masking), a novel method that learns token-adaptive expert selection via trainable binary masks. With a straight-through estimator and an auxiliary regularization loss, BEAM induces dynamic expert sparsity through end-to-end training while maintaining model capability. We further implement an efficient custom CUDA kernel for BEAM, ensuring seamless integration with the vLLM inference framework. Experiments show that BEAM retains over 98\\% of the original model's performance while reducing MoE layer FLOPs by up to 85\\%, achieving up to 2.5$\\times$ faster decoding and 1.4$\\times$ higher throughput, demonstrating its effectiveness as a practical, plug-and-play solution for efficient MoE inference.",
+      "canonical_id": "arXiv:2605.14438",
+      "arxiv_id": "2605.14438",
+      "authors": [
+        "Jun-Tong Wu",
+        "Jiali Cheng",
+        "Qishen Yin",
+        "Yuefeng Dai",
+        "Yu-Liang Yan",
+        "Fuyu Lv",
+        "Ou Dan",
+        "Liangqi Yuan"
+      ]
+    },
+    {
+      "title": "Knowledge Injection Exists in MoE? Exploring Expert-Aware Contrast Decoding in MoE for Mitigating LLMs' Hallucinations",
+      "source_url": "https://www.semanticscholar.org/paper/ec2d5078637a19ed0c25bd4442629eb7be9d3914",
+      "year": 2026,
+      "published": "2026-05-08",
+      "abstract": "Existing LLM hallucination mitigation methods, including prompt engineering and model optimization, either hardly alter models'internal knowledge or have poor cross-domain generalization. Contrastive decoding mitigates hallucinations by using layer-wise differences in LLMs. However, prior studies only explore transformer-based models (e.g., GPT), ignoring other effective frameworks like mixture-of-experts (MoE) models. Since MoE alters the traditional transformer architecture, we conduct empirical studies to investigate whether similar layer-wise differences exist in MoEs. Our results show that they do not exist in MoE with shared experts; nevertheless, across different MoEs, higher layers exhibit distinct expert activation patterns between factual and non-factual outputs. Building on these, we propose EAACD, an expert-aware adaptive contrast decoding that uses expert differences in MoE's higher layers to mitigate hallucinations on QA tasks. EAACD splits high-layer experts into a higher-reliability group and several lower-reliability groups based on their confidence and consistency. It contrasts the higher-reliability group's prediction with each lower-reliability group's prediction to calibrate the model's original predictions. To strengthen this contrast, EAACD amplifies hallucinations from lower-reliability experts via attention and masking to provide stronger negative references. EAACD outperforms all baselines on four datasets.",
+      "canonical_id": "arXiv:2607.20426",
+      "arxiv_id": "2607.20426",
+      "authors": [
+        "Xinyue Fang",
+        "Zhiliang Tian",
+        "Zhen Huang",
+        "Ziyi Pan",
+        "Zhihua Wen",
+        "Xi Wang",
+        "Quntian Fang",
+        "Dongsheng Li"
+      ]
+    },
+    {
+      "title": "M\\textsuperscript{4}Fuse: Lightweight State-Space MoE with a Cross-Scale Gating Bridge for Brain Tumor Segmentation",
+      "source_url": "https://www.semanticscholar.org/paper/7e73f1a4e6bcc23de5851da8a16ecb106df192dc",
+      "year": 2026,
+      "published": "2026-05-04",
+      "abstract": "Encoder-decoder imbalance and the reliance on large input volumes make many 3D brain tumor segmentation models both compute-heavy and brittle. We present M\\textsuperscript{4}Fuse, a lightweight network that prioritizes discriminative brain tumor cues over exhaustive appearance reconstruction. Our method balances encoder and decoder capacity and replaces depth expansion with a synergistic design: it propagates long-range context with linear complexity via a grouped state space mixer, denoises and aligns skip features using a cross-scale dual-stage gating bridge, and absorbs cross-site acquisition shifts with a sample-level mixture-of-experts. On the BraTS2019 and BraTS2021 benchmarks, M\\textsuperscript{4}Fuse outperforms other lightweight excellent methods in both parameter count and performance. Even at a challenging input resolution of \\(64\\times128\\times128\\) (half that of existing excellent models), M\\textsuperscript{4}Fuse reduces parameters by 62.63\\% and improves average performance by 0.09\\%. Ablations of key components validate the method's exceptional parameter-to-accuracy efficiency and robustness across diverse data centers.",
+      "canonical_id": "arXiv:2605.02444",
+      "arxiv_id": "2605.02444",
+      "authors": [
+        "Meihua Zhou",
+        "Xinyu Tong",
+        "Li Yang"
+      ]
+    },
+    {
+      "title": "NMGE: Nested Multi-Granularity Expert Groups for Complexity-Aware Routing in Multilingual Translation",
+      "source_url": "https://www.semanticscholar.org/paper/51f44c85173cb19a0175e7d1b34678f6a9e4a492",
+      "year": 2026,
+      "published": "2026-05-03",
+      "abstract": null,
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11461288",
+      "doi": "10.1109/icassp55912.2026.11461288",
+      "authors": [
+        "Liangying Shao",
+        "Yangyang Liu",
+        "Hao Wang",
+        "Xiaohu Zhao",
+        "Hengzhu Liu",
+        "Bo Zeng",
+        "Lin-Long Xu",
+        "Longyue Wang",
+        "Weihua Luo",
+        "Kaifu Zhang"
+      ]
+    },
+    {
+      "title": "Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing",
+      "source_url": "https://www.semanticscholar.org/paper/5a23e45e2a59c986738d80af7664301170b63130",
+      "year": 2026,
+      "published": "2026-03-12",
+      "abstract": "Token-choice Mixture-of-Experts (TC-MoE) routes each token to a fixed number of experts, limiting dynamic computation allocation and requiring auxiliary losses to maintain load balance. We propose Expert Threshold (ET) routing, where each expert maintains an exponential moving average (EMA) threshold estimated from the global token distribution. At both training and inference, each token is independently routed to an expert if its score exceeds the expert's threshold, enabling dynamic computation allocation while achieving load balance without auxiliary losses. This fully causal mechanism eliminates dependence on other tokens in the batch, making it well-suited for autoregressive language modeling. In pretraining experiments scaling to 2.4B parameters on FineWeb-Edu, ET achieves 0.067 lower cross-entropy loss than TC-MoE, equivalent to reaching the same performance with 1.6$\\times$ fewer tokens.",
+      "canonical_id": "arXiv:2603.11535",
+      "arxiv_id": "2603.11535",
+      "authors": [
+        "Hanchi Sun",
+        "Yixin Liu",
+        "Yonghui Wu",
+        "Lichao Sun"
+      ]
+    },
+    {
+      "title": "Consensus-Expert DynamicMoE: ARIMA-based Capacity Prediction with Adaptive Load Balancing for Sparse Models",
+      "source_url": "https://www.semanticscholar.org/paper/bcde78ad40f5943f2e40e169b8fa7d3039fa07e2",
+      "year": 2026,
+      "published": "2026-03-12",
+      "abstract": null,
+      "canonical_id": "DOI:10.1007/s44196-026-01236-9",
+      "doi": "10.1007/s44196-026-01236-9",
+      "authors": [
+        "Jia Wen",
+        "Xiao-Jun Li",
+        "Jun-Ping Yao",
+        "Hai-Feng Sun",
+        "Xiang-Rui An"
+      ]
+    },
+    {
+      "title": "OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale",
+      "source_url": "https://www.semanticscholar.org/paper/1d43e8f248aa6695832f123d81dd698e6617d1e8",
+      "year": 2026,
+      "published": "2026-02-05",
+      "abstract": "Mixture-of-Experts (MoE) architectures are evolving towards finer granularity to improve parameter efficiency. However, existing MoE designs face an inherent trade-off between the granularity of expert specialization and hardware execution efficiency. We propose OmniMoE, a system-algorithm co-designed framework that pushes expert granularity to its logical extreme. OmniMoE introduces vector-level Atomic Experts, enabling scalable routing and execution within a single MoE layer, while retaining a shared dense MLP branch for general-purpose processing. Although this atomic design maximizes capacity, it poses severe challenges for routing complexity and memory access. To address these, OmniMoE adopts a system-algorithm co-design: (i) a Cartesian Product Router that decomposes the massive index space to reduce routing complexity from O(N) to O(sqrt(N)); and (ii) Expert-Centric Scheduling that inverts the execution order to turn scattered, memory-bound lookups into efficient dense matrix operations. Validated on seven benchmarks, OmniMoE (with 1.7B active parameters) achieves 50.9% zero-shot accuracy across seven benchmarks, outperforming coarse-grained (e.g., DeepSeekMoE) and fine-grained (e.g., PEER) baselines. Crucially, OmniMoE reduces inference latency from 73ms to 6.7ms (a 10.9-fold speedup) compared to PEER, demonstrating that massive-scale fine-grained MoE can be fast and accurate. Our code is open-sourced at https://github.com/flash-algo/omni-moe.",
+      "canonical_id": "arXiv:2602.05711",
+      "arxiv_id": "2602.05711",
+      "authors": [
+        "Jingze Shi",
+        "Zhangyang Peng",
+        "Yizhang Zhu",
+        "Yi-Fan Wu",
+        "Guang Liu",
+        "Yuyu Luo"
+      ]
+    },
+    {
+      "title": "PoseMoE: Mixture-of-Experts Network for Monocular 3D Human Pose Estimation",
+      "source_url": "https://www.semanticscholar.org/paper/6c727be49a4429ed099882f59434c6e50da8af52",
+      "year": 2025,
+      "published": "2025-12-18",
+      "abstract": "The lifting-based methods have dominated monocular 3D human pose estimation by leveraging detected 2D poses as intermediate representations. The 2D component of the final 3D human pose benefits from the detected 2D poses, whereas its depth counterpart must be estimated from scratch. The lifting-based methods encode the detected 2D pose and unknown depth in an entangled feature space, explicitly introducing depth uncertainty to the detected 2D pose, thereby limiting overall estimation accuracy. This work reveals that the depth representation is pivotal for the estimation process. Specifically, when depth is in an initial, completely unknown state, jointly encoding depth features with 2D pose features is detrimental to the estimation process. In contrast, when depth is initially refined to a more dependable state via network-based estimation, encoding it together with 2D pose information is beneficial. To address this limitation, we present a Mixture-of-Experts network for monocular 3D pose estimation named PoseMoE. Our approach introduces: 1) A mixture-of-experts network where specialized expert modules refine the well-detected 2D pose features and learn the depth features. This mixture-of-experts design disentangles the feature encoding process for 2D pose and depth, therefore reducing the explicit influence of uncertain depth features on 2D pose features. 2) A cross-expert knowledge aggregation module is proposed to aggregate cross-expert spatio-temporal contextual information. This step enhances features through bidirectional mapping between 2D pose and depth. Extensive experiments show that our proposed PoseMoE outperforms the conventional lifting-based methods on three widely used datasets: Human3.6M, MPI-INF-3DHP, and 3DPW.",
+      "canonical_id": "arXiv:2512.16494",
+      "arxiv_id": "2512.16494",
+      "authors": [
+        "Mengyuan Liu",
+        "Jiajie Liu",
+        "Jinyan Zhang",
+        "Wen-Hao Li",
+        "Junsong Yuan"
+      ]
+    },
+    {
+      "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+      "source_url": "https://www.semanticscholar.org/paper/2f945ac64c4022ee9587ff2c8ace50508558ce2c",
+      "year": 2025,
+      "published": "2025-12-16",
+      "abstract": "Sparse Mixture-of-Experts architectures are essential for scaling model capacity efficiently, yet the standard Top-$k$ routing imposes a rigid sparsity pattern that ignores the intrinsic variance in token difficulty and layer-specific computational needs. Top-$p$ routing is more adaptive because it selects experts until their cumulative routing probability reaches a threshold, allowing confident tokens to use fewer experts and ambiguous tokens to recruit more. However, we demonstrate that existing naive Top-$p$ implementations with fixed global probability thresholds provide only marginal gains over Top-$k$, suffer from hyperparameter sensitivity, and result in uncontrolled computational costs. In this paper, we propose **DTop-$p$**, a sparsity-controllable dynamic routing mechanism that learns the Top-$p$ probability threshold with a Proportional-Integral controller and uses dynamic routing normalization to support layer-wise expert selection under a global sparsity constraint. Extensive experiments on Large Language Models and Diffusion Transformers demonstrate that **DTop-$p$** consistently outperforms both Top-$k$ and fixed Top-$p$ baselines while matching the average FLOPs of Top-$k$ MoE. Our analysis confirms that **DTop-$p$** exhibits strong scaling properties across expert granularity, total expert capacity, model size, and dataset size, offering a robust and efficient MoE framework for foundation model pre-training.",
+      "canonical_id": "arXiv:2512.13996",
+      "arxiv_id": "2512.13996",
+      "authors": [
+        "Can Jin",
+        "Hongwu Peng",
+        "Mingcan Xiang",
+        "Qixin Zhang",
+        "Xiangchi Yuan",
+        "Amit Hasan",
+        "Ohi Dibua",
+        "Yi-Fan Gong",
+        "Yan Kang",
+        "Dimitris N. Metaxas"
+      ]
+    },
+    {
+      "title": "AnyExperts: On-Demand Expert Allocation for Multimodal Language Models with Mixture of Expert",
+      "source_url": "https://www.semanticscholar.org/paper/65331807c808ed9e8e7b4c11c095a2f9ccbec6b1",
+      "year": 2025,
+      "published": "2025-11-23",
+      "abstract": "Multimodal Mixture-of-Experts (MoE) models offer a promising path toward scalable and efficient large vision-language systems. However, existing approaches rely on rigid routing strategies (typically activating a fixed number of experts per token) ignoring the inherent heterogeneity in semantic importance across modalities. This leads to suboptimal compute allocation, where redundant tokens consume as many resources as critical ones. To address this, we propose AnyExperts, a novel on-demand, budget-aware dynamic routing framework that allocates a variable total number of expert slots per token based on its semantic importance. Crucially, to prevent uncontrolled compute growth, the total slots per token are constrained within a fixed range, and each slot is filled by either a real expert or a virtual expert, with the virtual share capped at a small maximum (e.g., 20%). The model then adaptively balances the real-to-virtual ratio per token, assigning more real experts to semantically rich regions and relying more on virtual experts for redundant content. Evaluated across diverse tasks in visual understanding, audio understanding, and NLP understanding, AnyExperts improves performance under the same compute budget. Notably, on general image/video tasks, it achieves comparable accuracy with 40% fewer real expert activations; on text-dense tasks (OCR and NLP), it maintains performance while reducing real expert usage by 10%. These results demonstrate that fine-grained, importance-driven expert allocation significantly enhances both the efficiency and effectiveness of multimodal MoE models.",
+      "canonical_id": "arXiv:2511.18314",
+      "arxiv_id": "2511.18314",
+      "authors": [
+        "Yuting Gao",
+        "Wang Lan",
+        "Hengyuan Zhao",
+        "Linjiang Huang",
+        "Si Liu",
+        "Qingpei Guo"
+      ]
+    },
+    {
+      "title": "An item is worth one token in Multimodal Large Language Models-based Sequential Recommendation",
+      "source_url": "https://www.semanticscholar.org/paper/99ae534951cd9b78460c2c28cee23d63a6bf1e7e",
+      "year": 2025,
+      "published": "2025-11-08",
+      "abstract": "Sequential recommendations (SR) predict users'future interactions based on their historical behavior. The rise of Large Language Models (LLMs) has brought powerful generative and reasoning capabilities, significantly enhancing SR performance, while Multimodal LLMs (MLLMs) further extend this by introducing data like images and interactive relationships. However, critical issues remain, i.e., (a) Suboptimal item representations caused by lengthy and redundant descriptions, leading to inefficiencies in both training and inference; (b) Modality-related cognitive bias, as LLMs are predominantly pretrained on textual data, limiting their ability to effectively integrate and utilize non-textual modalities; (c) Weakening sequential perception in long interaction sequences, where attention mechanisms struggle to capture earlier interactions, hindering the modeling of long-range dependencies. To address these issues, we propose Speeder, an efficient MLLM-based paradigm for SR featuring three key innovations: 1) Multimodal Representation Compression (MRC), which condenses item attributes into concise yet informative tokens, reducing redundancy and computational cost; 2) Modality-aware Progressive Optimization (MPO), enabling gradual learning of multimodal representations; 3) Sequential Position Awareness Enhancement (SPAE), improving the LLM's capability to capture both relative and absolute sequential dependencies in long interaction sequences. Extensive experiments on real-world datasets demonstrate the effectiveness and efficiency of Speeder. Speeder increases training speed to 250% of the original while reducing inference time to 25% on the Amazon dataset.",
+      "canonical_id": "arXiv:2511.05885",
+      "arxiv_id": "2511.05885",
+      "authors": [
+        "Qi-Yong Zhong",
+        "Jiajie Su",
+        "Ming Yang",
+        "Yunshan Ma",
+        "Xiaolin Zheng",
+        "Chao-Chao Chen"
+      ]
+    },
+    {
+      "title": "ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference",
+      "source_url": "https://www.semanticscholar.org/paper/4b9d760a4ee1494242cc3bf7ae91b40b87e92728",
+      "year": 2025,
+      "published": "2025-10-30",
+      "abstract": "The expansion of large language models is increasingly limited by the constrained memory capacity of modern GPUs. To mitigate this, Mixture-of-Experts (MoE) architectures activate only a small portion of parameters during inference, significantly lowering both memory demand and computational overhead. However, conventional MoE inference approaches, which select active experts independently at each layer, often introduce considerable latency because of frequent parameter transfers between host and GPU memory. In addition, current cross-layer prediction strategies, which are typically based on fixed steps, lack adaptability across different hardware platforms and workloads, thereby reducing their robustness and effectiveness. To address these challenges, we present ExpertFlow, a runtime system for MoE inference that combines adaptive expert prefetching and cache-aware routing. ExpertFlow continuously adjusts its prediction horizon for expert activation by leveraging runtime statistics such as transfer bandwidth, parameter dimensionality, and model feedback signals. Furthermore, it incorporates a hybrid cross-layer prediction scheme that fuses pregating information with intermediate computational states to anticipate future expert needs. By adaptively refining prefetching decisions and aligning them with actual usage behavior, ExpertFlow effectively decreases cache misses and removes latency caused by expert swap-ins. Our evaluation demonstrates that ExpertFlow reduces model stall time to less than 0.1% of the baseline, highlighting its capability to optimize MoE inference under stringent memory constraints.",
+      "canonical_id": "arXiv:2510.26730",
+      "arxiv_id": "2510.26730",
+      "authors": [
+        "Zixu Shen",
+        "Kexin Chu",
+        "Yifan Zhang",
+        "Dawei Xiang",
+        "Runxin Wu",
+        "Wei Zhang"
+      ]
+    },
+    {
+      "title": "Training Matryoshka Mixture-of-Experts for Elastic Inference-Time Expert Utilization",
+      "source_url": "https://www.semanticscholar.org/paper/15586d47a55bdfd213c7aa9cbba17ab0308f390b",
+      "year": 2025,
+      "published": "2025-09-30",
+      "abstract": "Mixture-of-Experts (MoE) has emerged as a promising paradigm for efficiently scaling large language models without a proportional increase in computational cost. However, the standard training strategy of Top-K router prevents MoE models from realizing their full potential for elastic inference. When the number of activated experts is altered at inference time, these models exhibit precipitous performance degradation. In this work, we introduce Matryoshka MoE (M-MoE), a training framework that instills a coarse-to-fine structure directly into the expert ensemble. By systematically varying the number of activated experts during training, M-MoE compels the model to learn a meaningful ranking: top-ranked experts collaborate to provide essential, coarse-grained capabilities, while subsequent experts add progressively finer-grained detail. We explore this principle at multiple granularities, identifying a layer-wise randomization strategy as the most effective. Our experiments demonstrate that a single M-MoE model achieves remarkable elasticity, with its performance at various expert counts closely matching that of an entire suite of specialist models, but at only a fraction of the total training cost. This flexibility not only unlocks elastic inference but also enables optimizing performance by allocating different computational budgets to different model layers. Our work paves the way for more practical and adaptable deployments of large-scale MoE models.",
+      "canonical_id": "arXiv:2509.26520",
+      "arxiv_id": "2509.26520",
+      "authors": [
+        "Yaoxiang Wang",
+        "Qing-Guo Hu",
+        "Yucheng Ding",
+        "Ruizhe Wang",
+        "Yeyun Gong",
+        "Jian Jiao",
+        "Yelong Shen",
+        "Peng Cheng",
+        "Jinsong Su"
+      ]
+    },
+    {
+      "title": "Scaling Molecular Representation Learning with Hierarchical Mixture-of-Experts",
+      "source_url": "https://www.semanticscholar.org/paper/f22686d5e2754b92b47987f6c2da7cab6c742491",
+      "year": 2025,
+      "published": "2025-08-12",
+      "abstract": null,
+      "canonical_id": "DOI:10.1101/2025.08.09.669511",
+      "doi": "10.1101/2025.08.09.669511",
+      "authors": [
+        "Xiang Zhang",
+        "Shenbao Yu",
+        "Jie Xia",
+        "Fan Yang"
+      ]
+    },
+    {
+      "title": "Timeexpert: an Expert-Guided Video Llm for Video Temporal Grounding",
+      "source_url": "https://www.semanticscholar.org/paper/ec99390d0043b73027a43038028c594eb5b062d5",
+      "year": 2025,
+      "published": "2025-08-03",
+      "abstract": "Video Temporal Grounding (VTG) aims to precisely identify video event segments in response to textual queries. The outputs of VTG tasks manifest as sequences of events, each defined by precise timestamps, saliency scores, and textual descriptions. Despite recent advances, a fundamental limitation persists in existing Video Large Language Models (Video-LLMs): they process all task tokens through identical and static pathways, failing to recognize that temporal localization, saliency assessment, and textual generation represent fundamentally distinct tasks requiring specialized processing. To address this, we introduce TimeExpert, a Mixture-of-Experts (MoE)-based Video-LLM that effectively decomposes VTG tasks by dynamically routing task-specific tokens (e.g., timestamps, saliency scores) to specialized experts, with increased computational efficiency. Our design choices enable precise handling of each subtask, leading to improved event modeling across diverse VTG applications. Extensive experiments demonstrate that TimeExpert consistently achieves state-of-the-art performance on various VTG tasks such as Dense Video Captioning, Moment Retrieval, and Video Highlight Detection.",
+      "canonical_id": "arXiv:2508.01699",
+      "arxiv_id": "2508.01699",
+      "authors": [
+        "Zuhao Yang",
+        "Yingchen Yu",
+        "Yun-Qing Zhao",
+        "Shijian Lu",
+        "Song Bai"
+      ]
+    },
+    {
+      "title": "UMoE: Unifying Attention and FFN with Shared Experts",
+      "source_url": "https://www.semanticscholar.org/paper/8c0b256d966f975c39791a9a29362d686f7ebbc3",
+      "year": 2025,
+      "published": "2025-05-12",
+      "abstract": "Sparse Mixture of Experts (MoE) architectures have emerged as a promising approach for scaling Transformer models. While initial works primarily incorporated MoE into feed-forward network (FFN) layers, recent studies have explored extending the MoE paradigm to attention layers to enhance model performance. However, existing attention-based MoE layers require specialized implementations and demonstrate suboptimal performance compared to their FFN-based counterparts. In this paper, we aim to unify MoE designs in attention and FFN layers by introducing a novel reformulation of the attention mechanism, that reveals an underlying FFN-like structure within attention modules. Our proposed architecture, UMoE, achieves superior performance through attention-based MoE layers while enabling efficient parameter sharing between FFN and attention components.",
+      "canonical_id": "arXiv:2505.07260",
+      "arxiv_id": "2505.07260",
+      "authors": [
+        "Yuanhang Yang",
+        "Chaozheng Wang",
+        "Jing Li"
+      ]
+    },
+    {
+      "title": "FT-MoE: Sustainable-learning Mixture of Experts for Fault-Tolerant Computing",
+      "source_url": "https://www.semanticscholar.org/paper/f0737e270f62e74eec77fa060830042067c0d29e",
+      "year": 2025,
+      "published": "2025-04-29",
+      "abstract": "Intelligent fault-tolerant (FT) computing has recently demonstrated significant advantages in predicting and diagnosing faults proactively, thereby ensuring reliable service delivery. However, due to the heterogeneity of fault knowledge, dynamic workloads, and limited data support, existing deep learning-based FT algorithms face challenges in fault detection quality and training efficiency. This is primarily because their homogenization of fault knowledge perception difficuties to fully capture diverse and complex fault patterns. To address these challenges, we propose FT-MoE, a sustainable-learning fault-tolerant computing framework based on a dual-path architecture for high-accuracy fault detection and classification. This model employs a mixture-of-experts (MoE) architecture, enabling different parameters to learn distinct fault knowledge. Additionally, we adopt a two-stage learning scheme that combines comprehensive offline training with continual online tuning, allowing the model to adaptively optimize its parameters in response to evolving real-time workloads. To facilitate realistic evaluation, we construct a new fault detection and classification dataset for edge networks, comprising 10,000 intervals with fine-grained resource features, surpassing existing datasets in both scale and granularity. Finally, we conduct extensive experiments on the FT benchmark to verify the effectiveness of FT-MoE. Results demonstrate that our model outperforms state-of-the-art methods.",
+      "canonical_id": "arXiv:2504.20446",
+      "arxiv_id": "2504.20446",
+      "authors": [
+        "Wen-Jing Xiao",
+        "Wenhao Song",
+        "Miao-Jiang Chen",
+        "Min Chen"
+      ]
+    },
+    {
+      "title": "DiffMoE: Dynamic Token Selection for Scalable Diffusion Transformers",
+      "source_url": "https://www.semanticscholar.org/paper/e4e6059c86aa4b344f29bac49f6f9655f237842f",
+      "year": 2025,
+      "published": "2025-03-18",
+      "abstract": "Diffusion models have demonstrated remarkable success in various image generation tasks, but their performance is often limited by the uniform processing of inputs across varying conditions and noise levels. To address this limitation, we propose a novel approach that leverages the inherent heterogeneity of the diffusion process. Our method, DiffMoE, introduces a batch-level global token pool that enables experts to access global token distributions during training, promoting specialized expert behavior. To unleash the full potential of the diffusion process, DiffMoE incorporates a capacity predictor that dynamically allocates computational resources based on noise levels and sample complexity. Through comprehensive evaluation, DiffMoE achieves state-of-the-art performance among diffusion models on ImageNet benchmark, substantially outperforming both dense architectures with 3x activated parameters and existing MoE approaches while maintaining 1x activated parameters. The effectiveness of our approach extends beyond class-conditional generation to more challenging tasks such as text-to-image generation, demonstrating its broad applicability across different diffusion model applications. Project Page: https://shiml20.github.io/DiffMoE/",
+      "canonical_id": "arXiv:2503.14487",
+      "arxiv_id": "2503.14487",
+      "authors": [
+        "Ming-Lei Shi",
+        "Ziyang Yuan",
+        "Hao-Tian Yang",
+        "Xintao Wang",
+        "Mingwu Zheng",
+        "Xin Tao",
+        "Wenliang Zhao",
+        "Wenzhao Zheng",
+        "Jie Zhou",
+        "Jiwen Lu",
+        "Pengfei Wan",
+        "Di Zhang",
+        "Kun Gai"
+      ]
+    },
+    {
+      "title": "Union of Experts: Adapting Hierarchical Routing to Equivalently Decomposed Transformer",
+      "source_url": "https://www.semanticscholar.org/paper/688ed44459dfe9732b304441918c0a133cf73e46",
+      "year": 2025,
+      "published": "2025-03-04",
+      "abstract": "Mixture-of-Experts (MoE) enhances model performance while maintaining computational efficiency, making it well-suited for large-scale applications. Conventional mixture-of-experts (MoE) architectures suffer from suboptimal coordination dynamics, where isolated expert operations expose the model to overfitting risks. Moreover, they have not been effectively extended to attention blocks, which limits further efficiency improvements. To tackle these issues, we propose Union-of-Experts (UoE), which decomposes the transformer model into an equivalent group of experts and applies a hierarchical routing mechanism to allocate input subspaces to specialized experts. Our approach advances MoE design with four key innovations: (1) Constructing expert groups by partitioning non-MoE models into functionally equivalent specialists (2) Developing a hierarchical routing paradigm that integrates patch-wise data selection and expert selection strategies. (3) Extending the MoE design to attention blocks. (4) Proposing a hardware-optimized parallelization scheme that exploits batched matrix multiplications for efficient expert computation. The experiments demonstrate that our UoE model surpasses Full Attention, state-of-the-art MoEs and efficient transformers in several tasks across image and natural language domains. In language modeling tasks, UoE achieves an average reduction of 2.38 in perplexity compared to the best-performing MoE method with only 76% of its FLOPs. In the Long Range Arena benchmark, it demonstrates an average score at least 0.68% higher than all comparison models, with only 50% of the FLOPs of the best MoE method. In image classification, it yields an average accuracy improvement of 1.75% over the best model while maintaining comparable FLOPs. The source codes are available at https://github.com/YujiaoYang-work/UoE.",
+      "canonical_id": "arXiv:2503.02495",
+      "arxiv_id": "2503.02495",
+      "authors": [
+        "Yujia Yang",
+        "Jing Lian",
+        "Linhui Li"
+      ]
+    },
+    {
+      "title": "Finedeep: Mitigating Sparse Activation in Dense LLMs via Multi-Layer Fine-Grained Experts",
+      "source_url": "https://www.semanticscholar.org/paper/043c7415a827769704a25088f9f8ed95b94b602e",
+      "year": 2025,
+      "published": "2025-02-18",
+      "abstract": "Large language models have demonstrated exceptional performance across a wide range of tasks. However, dense models usually suffer from sparse activation, where many activation values tend towards zero (i.e., being inactivated). We argue that this could restrict the efficient exploration of model representation space. To mitigate this issue, we propose Finedeep, a deep-layered fine-grained expert architecture for dense models. Our framework partitions the feed-forward neural network layers of traditional dense models into small experts, arranges them across multiple sub-layers. A novel routing mechanism is proposed to determine each expert's contribution. We conduct extensive experiments across various model sizes, demonstrating that our approach significantly outperforms traditional dense architectures in terms of perplexity and benchmark performance while maintaining a comparable number of parameters and floating-point operations. Moreover, we find that Finedeep achieves optimal results when balancing depth and width, specifically by adjusting the number of expert sub-layers and the number of experts per sub-layer. Empirical results confirm that Finedeep effectively alleviates sparse activation and efficiently utilizes representation capacity in dense models.",
+      "canonical_id": "arXiv:2502.12928",
+      "arxiv_id": "2502.12928",
+      "authors": [
+        "Leiyu Pan",
+        "Zhenpeng Su",
+        "Minxuan Lv",
+        "Yizhe Xiong",
+        "Xiangwen Zhang",
+        "Zijia Lin",
+        "Hui Chen",
+        "Jungong Han",
+        "Guiguang Ding",
+        "Cheng Luo",
+        "Di Zhang",
+        "Kun Gai",
+        "Deyi Xiong"
+      ]
+    },
+    {
+      "title": "Analytical FFN-to-MoE Restructuring via Activation Pattern Analysis",
+      "source_url": "https://www.semanticscholar.org/paper/5e7c1869239c5457b49d220b5dc57a7731820573",
+      "year": 2025,
+      "published": "2025-02-06",
+      "abstract": "Scaling large language models (LLMs) improves performance but significantly increases inference costs, with feed-forward networks (FFNs) consuming the majority of computational resources. While Mixture-of-Experts (MoE) architectures can reduce this cost through sparse activation, restructuring existing dense models into MoEs typically requires extensive retraining on hundreds of billions of tokens. We propose an analytical post-training framework that rapidly restructures FFNs into sparse MoE architectures using only a small calibration dataset. The method analyzes neuron activation patterns to partition neurons into always-active shared experts and conditionally activated routed experts, then constructs a router analytically from representative neuron statistics, enabling immediate deployment or optional lightweight fine-tuning. This approach applies both to dense models and recursively to existing MoE models for hierarchical sparsity. Experiments demonstrate up to $1.17\\times$ speedup in compute-bound scenarios with only minutes of processing and 2k-sample fine-tuning, outperforming methods requiring orders of magnitude more resources.",
+      "canonical_id": "arXiv:2502.04416",
+      "arxiv_id": "2502.04416",
+      "authors": [
+        "Ze-Hua Pei",
+        "Hui-Ling Zhen",
+        "Lancheng Zou",
+        "Xian-Zhi Yu",
+        "Wu-Long Liu",
+        "S. J. Pan",
+        "Ming-Xuan Yuan",
+        "Bei Yu"
+      ]
+    },
+    {
+      "title": "Rank Also Matters: Hierarchical Configuration for Mixture of Adapter Experts in LLM Fine-Tuning",
+      "source_url": "https://www.semanticscholar.org/paper/217dcd52e5bc059b9abeb00fe8f742fef89a5d73",
+      "year": 2025,
+      "published": "2025-02-06",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable success across various tasks, accompanied by a continuous increase in their parameter size. Parameter-efficient fine-tuning (PEFT) methods, such as Low-Rank Adaptation (LoRA), address the challenges of fine-tuning LLMs by significantly reducing the number of trainable parameters. Recent studies have integrated LoRA with Mixture of Experts (MoE) architectures, leveraging multiple adapter experts and gating mechanisms to further improve fine-tuning performance. However, existing approaches primarily focus on adjusting the allocations of adapter experts per layer to optimize the introduced trainable parameter size, while neglecting a critical factor of adapters' rank. To this end, we propose a hierarchical scheme for expert allocation and rank configuration, HILO, which dynamically adjusts the number and rank of adapter experts across layers, matching the varying representational complexity of model layers in adapter-granularity. Extensive experiments on multiple benchmark tasks demonstrate that HILO outperforms existing methods in accuracy while introducing fewer trainable parameters, providing an efficient and practical solution for fine-tuning LLMs.",
+      "canonical_id": "arXiv:2502.03884",
+      "arxiv_id": "2502.03884",
+      "authors": [
+        "Peizhuang Cong",
+        "Wen-Pu Liu",
+        "Wenhan Yu",
+        "Haochen Zhao",
+        "Tong Yang"
+      ]
+    },
+    {
+      "title": "CartesianMoE: Boosting Knowledge Sharing among Experts via Cartesian Product Routing in Mixture-of-Experts",
+      "source_url": "https://www.semanticscholar.org/paper/79d8f7b7ee59aacf30ef3801b884d9282822ab2d",
+      "year": 2024,
+      "published": "2024-10-21",
+      "abstract": "Large language models (LLM) have been attracting much attention from the community recently, due to their remarkable performance in all kinds of downstream tasks. According to the well-known scaling law, scaling up a dense LLM enhances its capabilities, but also significantly increases the computational complexity. Mixture-of-Experts (MoE) models address that by allowing the model size to grow without substantially raising training or inference costs. Yet MoE models face challenges regarding knowledge sharing among experts, making their performance somehow sensitive to routing accuracy. To tackle that, previous works introduced shared experts and combined their outputs with those of the top $K$ routed experts in an ``addition'' manner. In this paper, inspired by collective matrix factorization to learn shared knowledge among data, we propose CartesianMoE, which implements more effective knowledge sharing among experts in more like a ``multiplication'' manner. Extensive experimental results indicate that CartesianMoE outperforms previous MoE models for building LLMs, in terms of both perplexity and downstream task performance. And we also find that CartesianMoE achieves better expert routing robustness.",
+      "canonical_id": "arXiv:2410.16077",
+      "arxiv_id": "2410.16077",
+      "authors": [
+        "Zhenpeng Su",
+        "Xing Wu",
+        "Zijia Lin",
+        "Yizhe Xiong",
+        "Minxuan Lv",
+        "Guangyuan Ma",
+        "Hui Chen",
+        "Songlin Hu",
+        "Guiguang Ding"
+      ]
+    },
+    {
+      "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models",
+      "source_url": "https://www.semanticscholar.org/paper/7f6f34090d17d0523b91c0d3cd34fe9f66ebb189",
+      "year": 2024,
+      "published": "2024-05-23",
+      "abstract": "The Sparse Mixture of Experts (SMoE) has been widely employed to enhance the efficiency of training and inference for Transformer-based foundational models, yielding promising results.However, the performance of SMoE heavily depends on the choice of hyper-parameters, such as the number of experts and the number of experts to be activated (referred to as top-k), resulting in significant computational overhead due to the extensive model training by searching over various hyper-parameter configurations. As a remedy, we introduce the Dynamic Mixture of Experts (DynMoE) technique. DynMoE incorporates (1) a novel gating method that enables each token to automatically determine the number of experts to activate. (2) An adaptive process automatically adjusts the number of experts during training. Extensive numerical results across Vision, Language, and Vision-Language tasks demonstrate the effectiveness of our approach to achieve competitive performance compared to GMoE for vision and language tasks, and MoE-LLaVA for vision-language tasks, while maintaining efficiency by activating fewer parameters. Our code is available at https://github.com/LINs-lab/DynMoE.",
+      "canonical_id": "arXiv:2405.14297",
+      "arxiv_id": "2405.14297",
+      "authors": [
+        "Yong-Xin Guo",
+        "Zhenglin Cheng",
+        "Xiaoying Tang",
+        "Tao Lin"
+      ]
+    },
+    {
+      "title": "TC-MoE: Augmenting Mixture of Experts with Ternary Expert Choice",
+      "source_url": "https://www.semanticscholar.org/paper/5b269727dd4ecd8aa013950bd6f7b15ab80eaf53",
+      "year": 2025,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "SemanticScholar:5b269727dd4ecd8aa013950bd6f7b15ab80eaf53",
+      "authors": [
+        "Shen Yan",
+        "Xingyan Bin",
+        "Sijun Zhang",
+        "Yi-Sen Wang",
+        "Zhouchen Lin"
+      ]
+    },
+    {
+      "title": "Exploration-Driven Reinforcement Learning for Expert Routing Improvement in Mixture-of-Experts Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/fb533f48818bf60f2793a33b4dbf8b3cf0d75e8e",
+      "year": 2025,
+      "published": null,
+      "abstract": ",",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1282",
+      "doi": "10.18653/v1/2025.findings-emnlp.1282",
+      "authors": [
+        "Gyunyeop Kim",
+        "Sangwoo Kang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.29539",
+      "identity_tokens": [
+        "id:arXiv:2608.29539",
+        "title:logo tokenlevel dynamic localglobal attention",
+        "url:https://www.semanticscholar.org/paper/8267a752b7ca9b73ee32e88258fd9aca42c02ed2"
+      ],
+      "record": {
+        "title": "LoGo: Token-Level Dynamic Local-Global Attention",
+        "source_url": "https://www.semanticscholar.org/paper/8267a752b7ca9b73ee32e88258fd9aca42c02ed2",
+        "year": 2026,
+        "published": "2026-08-30",
+        "abstract": "As context lengths scale, attention increasingly becomes a primary computational bottleneck in large language models. Standard Transformers remain powerful but computationally inefficient, as they allocate the same attention budget to every token regardless of its contextual demand. Existing local-global hybrids provide a more efficient alternative by mixing restricted- and full-context attention, but they typically allocate span statically across layers or heads. To address these limitations, we propose LoGo, a token-level dynamic local-global attention mechanism that uses attention span as a direct proxy for attention budget allocation. Each LoGo layer contains coupled local and global branches: all tokens receive efficient local attention over a restricted context window, while a learned gate activates global attention with full-context access only for tokens requiring long-range information. A threshold-based budget controller maintains a target global ratio without auxiliary losses, and a progressive masking schedule stabilizes training before sparse routing takes effect. We further implement query-sparse Triton kernels that convert reduced global-attention computation into practical speedups. Extensive experiments validate LoGo's effectiveness, showing that it preserves the scaling behavior of full-attention Transformers across model sizes. In controlled comparisons, LoGo improves over the full-attention Transformer and matched-budget static local-global hybrids, with clear gains on long-range retrieval. Analysis further shows that LoGo learns interpretable span allocation patterns. These results suggest that learned token-level span allocation is an effective and scalable way to improve the long-context performance-compute trade-off.",
+        "canonical_id": "arXiv:2608.29539",
+        "arxiv_id": "2608.29539",
+        "authors": [
+          "Yuqi Pan",
+          "Zheng Li",
+          "Bohao Tang",
+          "Zhen Qin",
+          "Guoqi Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.25821",
+      "identity_tokens": [
+        "id:arXiv:2606.25821",
+        "title:sara unlocking multilingual knowledge in mixtureofexperts via semantically anchored routing alignment",
+        "url:https://www.semanticscholar.org/paper/d45de07434281e85720c03be7c9330ddc91d99c6"
+      ],
+      "record": {
+        "title": "SARA: Unlocking Multilingual Knowledge in Mixture-of-Experts via Semantically Anchored Routing Alignment",
+        "source_url": "https://www.semanticscholar.org/paper/d45de07434281e85720c03be7c9330ddc91d99c6",
+        "year": 2026,
+        "published": "2026-06-24",
+        "abstract": "Sparse Mixture-of-Experts (MoE) architectures have emerged as an increasingly influential paradigm as they offer a strategic balance between parameter scalability and computational efficiency. However, low-resource languages, which suffer from a scarcity of high-quality training data, often have their tokens routed to different experts than those predominantly activated by high-resource inputs, which limits cross-lingual expert sharing. This cross-lingual routing divergence consequently hinders their efficacy in multilingual contexts. To address this issue, we propose SARA (Semantically Anchored Routing Alignment), a framework designed to transfer specialized capabilities from high-resource languages as anchors to low-resource languages. SARA explicitly aligns the routing distribution of multilingual inputs with high-resource semantic anchors using a symmetric Jensen-Shannon (JS) divergence constraint. Unlike traditional distillation methods that operate on output logits, SARA directly aligns the internal routing distributions of MoE layers, encouraging mechanistic consistency in expert selection across languages. We conduct experiments on 2 LLMs across 5 low-resource languages and 3 benchmarks. Experiment results demonstrate that SARA outperforms standard instruction tuning, e.g., +0.8% on Qwen3-30B-A3B and +1.2% on Phi-3.5-MoE-instruct on Global-MMLU. Further analyses show that SARA effectively addresses performance bottlenecks in low-resource languages, providing a scalable pathway to enhance multilingual capabilities in sparse architectures.",
+        "canonical_id": "arXiv:2606.25821",
+        "arxiv_id": "2606.25821",
+        "authors": [
+          "Tianyu Dong",
+          "Yangyang Liu",
+          "Jiang Zhou",
+          "Xin-Wei Wu",
+          "Xiaohu Zhao",
+          "Hao Wang",
+          "Heng Liu",
+          "Lin-Long Xu",
+          "Longyue Wang",
+          "Wei-Hua Luo",
+          "Shaolin Zhu",
+          "Deyi Xiong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.09885",
+      "identity_tokens": [
+        "id:arXiv:2606.09885",
+        "title:tenp trapezoidal expert neuron pruning for mixtureofexperts",
+        "url:https://www.semanticscholar.org/paper/bbc29f2bd66c8a0f873474978b17e4a29b7551e1"
+      ],
+      "record": {
+        "title": "TENP: Trapezoidal Expert Neuron Pruning For Mixture-of-Experts",
+        "source_url": "https://www.semanticscholar.org/paper/bbc29f2bd66c8a0f873474978b17e4a29b7551e1",
+        "year": 2026,
+        "published": "2026-06-03",
+        "abstract": "Mixture-of-Experts large language models (LLMs) scale efficiently through sparse activation, yet their deployment is fundamentally constrained by the large static parameter footprint of experts. Existing compression approaches either remove entire experts, disrupting routing topology and harming performance, or rely on unstructured weight pruning with limited practical efficiency. To address the limitations, we propose TENP, a structured Trapezoidal ExpertNeuron Pruning framework. Using a few samples, we identify and retain important experts, while applying expert neuron pruning (ENP) to less important experts, reserving model parameters in a trapezoidal pattern from shallow to deep layers. When evaluating expert importance, we jointly consider both the magnitude of the expert output and its ability to change the direction of the input vector. For ENP, we measure each neuron's projected contribution to the expert output to identify and retain important neurons. We conduct extensive experiments on the Qwen and DeepSeek models. Under a routing expert sparsity of 40% and an average of 63.76% activated expert parameters, the DeepSeek model suffers only a 1-point drop in accuracy compared to the full-parameter model. Moreover, it outperforms the full-parameter model by 10% on code generation tasks.",
+        "canonical_id": "arXiv:2606.09885",
+        "arxiv_id": "2606.09885",
+        "authors": [
+          "Jiangyang He",
+          "Shaolin Zhu",
+          "Deyi Xiong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.14438",
+      "identity_tokens": [
+        "id:arXiv:2605.14438",
+        "title:beam binary expert activation masking for dynamic routing in moe",
+        "url:https://www.semanticscholar.org/paper/ccd794405e9612ab517ccfc54ed94577d5373f6f"
+      ],
+      "record": {
+        "title": "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE",
+        "source_url": "https://www.semanticscholar.org/paper/ccd794405e9612ab517ccfc54ed94577d5373f6f",
+        "year": 2026,
+        "published": "2026-05-14",
+        "abstract": "Mixture-of-Experts (MoE) architectures enhance the efficiency of large language models by activating only a subset of experts per token. However, standard MoE employs a fixed Top-K routing strategy, leading to redundant computation and suboptimal inference latency. Existing acceleration methods either require costly retraining with architectural changes or suffer from severe performance drop at high sparsity due to train-inference mismatch. To address these limitations, we propose BEAM (Binary Expert Activation Masking), a novel method that learns token-adaptive expert selection via trainable binary masks. With a straight-through estimator and an auxiliary regularization loss, BEAM induces dynamic expert sparsity through end-to-end training while maintaining model capability. We further implement an efficient custom CUDA kernel for BEAM, ensuring seamless integration with the vLLM inference framework. Experiments show that BEAM retains over 98\\% of the original model's performance while reducing MoE layer FLOPs by up to 85\\%, achieving up to 2.5$\\times$ faster decoding and 1.4$\\times$ higher throughput, demonstrating its effectiveness as a practical, plug-and-play solution for efficient MoE inference.",
+        "canonical_id": "arXiv:2605.14438",
+        "arxiv_id": "2605.14438",
+        "authors": [
+          "Jun-Tong Wu",
+          "Jiali Cheng",
+          "Qishen Yin",
+          "Yuefeng Dai",
+          "Yu-Liang Yan",
+          "Fuyu Lv",
+          "Ou Dan",
+          "Liangqi Yuan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.20426",
+      "identity_tokens": [
+        "id:arXiv:2607.20426",
+        "title:knowledge injection exists in moe exploring expertaware contrast decoding in moe for mitigating llms hallucinations",
+        "url:https://www.semanticscholar.org/paper/ec2d5078637a19ed0c25bd4442629eb7be9d3914"
+      ],
+      "record": {
+        "title": "Knowledge Injection Exists in MoE? Exploring Expert-Aware Contrast Decoding in MoE for Mitigating LLMs' Hallucinations",
+        "source_url": "https://www.semanticscholar.org/paper/ec2d5078637a19ed0c25bd4442629eb7be9d3914",
+        "year": 2026,
+        "published": "2026-05-08",
+        "abstract": "Existing LLM hallucination mitigation methods, including prompt engineering and model optimization, either hardly alter models'internal knowledge or have poor cross-domain generalization. Contrastive decoding mitigates hallucinations by using layer-wise differences in LLMs. However, prior studies only explore transformer-based models (e.g., GPT), ignoring other effective frameworks like mixture-of-experts (MoE) models. Since MoE alters the traditional transformer architecture, we conduct empirical studies to investigate whether similar layer-wise differences exist in MoEs. Our results show that they do not exist in MoE with shared experts; nevertheless, across different MoEs, higher layers exhibit distinct expert activation patterns between factual and non-factual outputs. Building on these, we propose EAACD, an expert-aware adaptive contrast decoding that uses expert differences in MoE's higher layers to mitigate hallucinations on QA tasks. EAACD splits high-layer experts into a higher-reliability group and several lower-reliability groups based on their confidence and consistency. It contrasts the higher-reliability group's prediction with each lower-reliability group's prediction to calibrate the model's original predictions. To strengthen this contrast, EAACD amplifies hallucinations from lower-reliability experts via attention and masking to provide stronger negative references. EAACD outperforms all baselines on four datasets.",
+        "canonical_id": "arXiv:2607.20426",
+        "arxiv_id": "2607.20426",
+        "authors": [
+          "Xinyue Fang",
+          "Zhiliang Tian",
+          "Zhen Huang",
+          "Ziyi Pan",
+          "Zhihua Wen",
+          "Xi Wang",
+          "Quntian Fang",
+          "Dongsheng Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.02444",
+      "identity_tokens": [
+        "id:arXiv:2605.02444",
+        "title:mtextsuperscript4fuse lightweight statespace moe with a crossscale gating bridge for brain tumor segmentation",
+        "url:https://www.semanticscholar.org/paper/7e73f1a4e6bcc23de5851da8a16ecb106df192dc"
+      ],
+      "record": {
+        "title": "M\\textsuperscript{4}Fuse: Lightweight State-Space MoE with a Cross-Scale Gating Bridge for Brain Tumor Segmentation",
+        "source_url": "https://www.semanticscholar.org/paper/7e73f1a4e6bcc23de5851da8a16ecb106df192dc",
+        "year": 2026,
+        "published": "2026-05-04",
+        "abstract": "Encoder-decoder imbalance and the reliance on large input volumes make many 3D brain tumor segmentation models both compute-heavy and brittle. We present M\\textsuperscript{4}Fuse, a lightweight network that prioritizes discriminative brain tumor cues over exhaustive appearance reconstruction. Our method balances encoder and decoder capacity and replaces depth expansion with a synergistic design: it propagates long-range context with linear complexity via a grouped state space mixer, denoises and aligns skip features using a cross-scale dual-stage gating bridge, and absorbs cross-site acquisition shifts with a sample-level mixture-of-experts. On the BraTS2019 and BraTS2021 benchmarks, M\\textsuperscript{4}Fuse outperforms other lightweight excellent methods in both parameter count and performance. Even at a challenging input resolution of \\(64\\times128\\times128\\) (half that of existing excellent models), M\\textsuperscript{4}Fuse reduces parameters by 62.63\\% and improves average performance by 0.09\\%. Ablations of key components validate the method's exceptional parameter-to-accuracy efficiency and robustness across diverse data centers.",
+        "canonical_id": "arXiv:2605.02444",
+        "arxiv_id": "2605.02444",
+        "authors": [
+          "Meihua Zhou",
+          "Xinyu Tong",
+          "Li Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp55912.2026.11461288",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11461288",
+        "title:nmge nested multigranularity expert groups for complexityaware routing in multilingual translation",
+        "url:https://www.semanticscholar.org/paper/51f44c85173cb19a0175e7d1b34678f6a9e4a492"
+      ],
+      "record": {
+        "title": "NMGE: Nested Multi-Granularity Expert Groups for Complexity-Aware Routing in Multilingual Translation",
+        "source_url": "https://www.semanticscholar.org/paper/51f44c85173cb19a0175e7d1b34678f6a9e4a492",
+        "year": 2026,
+        "published": "2026-05-03",
+        "abstract": null,
+        "canonical_id": "DOI:10.1109/icassp55912.2026.11461288",
+        "doi": "10.1109/icassp55912.2026.11461288",
+        "authors": [
+          "Liangying Shao",
+          "Yangyang Liu",
+          "Hao Wang",
+          "Xiaohu Zhao",
+          "Hengzhu Liu",
+          "Bo Zeng",
+          "Lin-Long Xu",
+          "Longyue Wang",
+          "Weihua Luo",
+          "Kaifu Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.11535",
+      "identity_tokens": [
+        "id:arXiv:2603.11535",
+        "title:expert threshold routing for autoregressive language modeling with dynamic computation allocation and load balancing",
+        "url:https://www.semanticscholar.org/paper/5a23e45e2a59c986738d80af7664301170b63130"
+      ],
+      "record": {
+        "title": "Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing",
+        "source_url": "https://www.semanticscholar.org/paper/5a23e45e2a59c986738d80af7664301170b63130",
+        "year": 2026,
+        "published": "2026-03-12",
+        "abstract": "Token-choice Mixture-of-Experts (TC-MoE) routes each token to a fixed number of experts, limiting dynamic computation allocation and requiring auxiliary losses to maintain load balance. We propose Expert Threshold (ET) routing, where each expert maintains an exponential moving average (EMA) threshold estimated from the global token distribution. At both training and inference, each token is independently routed to an expert if its score exceeds the expert's threshold, enabling dynamic computation allocation while achieving load balance without auxiliary losses. This fully causal mechanism eliminates dependence on other tokens in the batch, making it well-suited for autoregressive language modeling. In pretraining experiments scaling to 2.4B parameters on FineWeb-Edu, ET achieves 0.067 lower cross-entropy loss than TC-MoE, equivalent to reaching the same performance with 1.6$\\times$ fewer tokens.",
+        "canonical_id": "arXiv:2603.11535",
+        "arxiv_id": "2603.11535",
+        "authors": [
+          "Hanchi Sun",
+          "Yixin Liu",
+          "Yonghui Wu",
+          "Lichao Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s44196-026-01236-9",
+      "identity_tokens": [
+        "id:DOI:10.1007/s44196-026-01236-9",
+        "title:consensusexpert dynamicmoe arimabased capacity prediction with adaptive load balancing for sparse models",
+        "url:https://www.semanticscholar.org/paper/bcde78ad40f5943f2e40e169b8fa7d3039fa07e2"
+      ],
+      "record": {
+        "title": "Consensus-Expert DynamicMoE: ARIMA-based Capacity Prediction with Adaptive Load Balancing for Sparse Models",
+        "source_url": "https://www.semanticscholar.org/paper/bcde78ad40f5943f2e40e169b8fa7d3039fa07e2",
+        "year": 2026,
+        "published": "2026-03-12",
+        "abstract": null,
+        "canonical_id": "DOI:10.1007/s44196-026-01236-9",
+        "doi": "10.1007/s44196-026-01236-9",
+        "authors": [
+          "Jia Wen",
+          "Xiao-Jun Li",
+          "Jun-Ping Yao",
+          "Hai-Feng Sun",
+          "Xiang-Rui An"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.05711",
+      "identity_tokens": [
+        "id:arXiv:2602.05711",
+        "title:omnimoe an efficient moe by orchestrating atomic experts at scale",
+        "url:https://www.semanticscholar.org/paper/1d43e8f248aa6695832f123d81dd698e6617d1e8"
+      ],
+      "record": {
+        "title": "OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale",
+        "source_url": "https://www.semanticscholar.org/paper/1d43e8f248aa6695832f123d81dd698e6617d1e8",
+        "year": 2026,
+        "published": "2026-02-05",
+        "abstract": "Mixture-of-Experts (MoE) architectures are evolving towards finer granularity to improve parameter efficiency. However, existing MoE designs face an inherent trade-off between the granularity of expert specialization and hardware execution efficiency. We propose OmniMoE, a system-algorithm co-designed framework that pushes expert granularity to its logical extreme. OmniMoE introduces vector-level Atomic Experts, enabling scalable routing and execution within a single MoE layer, while retaining a shared dense MLP branch for general-purpose processing. Although this atomic design maximizes capacity, it poses severe challenges for routing complexity and memory access. To address these, OmniMoE adopts a system-algorithm co-design: (i) a Cartesian Product Router that decomposes the massive index space to reduce routing complexity from O(N) to O(sqrt(N)); and (ii) Expert-Centric Scheduling that inverts the execution order to turn scattered, memory-bound lookups into efficient dense matrix operations. Validated on seven benchmarks, OmniMoE (with 1.7B active parameters) achieves 50.9% zero-shot accuracy across seven benchmarks, outperforming coarse-grained (e.g., DeepSeekMoE) and fine-grained (e.g., PEER) baselines. Crucially, OmniMoE reduces inference latency from 73ms to 6.7ms (a 10.9-fold speedup) compared to PEER, demonstrating that massive-scale fine-grained MoE can be fast and accurate. Our code is open-sourced at https://github.com/flash-algo/omni-moe.",
+        "canonical_id": "arXiv:2602.05711",
+        "arxiv_id": "2602.05711",
+        "authors": [
+          "Jingze Shi",
+          "Zhangyang Peng",
+          "Yizhang Zhu",
+          "Yi-Fan Wu",
+          "Guang Liu",
+          "Yuyu Luo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.16494",
+      "identity_tokens": [
+        "id:arXiv:2512.16494",
+        "title:posemoe mixtureofexperts network for monocular 3d human pose estimation",
+        "url:https://www.semanticscholar.org/paper/6c727be49a4429ed099882f59434c6e50da8af52"
+      ],
+      "record": {
+        "title": "PoseMoE: Mixture-of-Experts Network for Monocular 3D Human Pose Estimation",
+        "source_url": "https://www.semanticscholar.org/paper/6c727be49a4429ed099882f59434c6e50da8af52",
+        "year": 2025,
+        "published": "2025-12-18",
+        "abstract": "The lifting-based methods have dominated monocular 3D human pose estimation by leveraging detected 2D poses as intermediate representations. The 2D component of the final 3D human pose benefits from the detected 2D poses, whereas its depth counterpart must be estimated from scratch. The lifting-based methods encode the detected 2D pose and unknown depth in an entangled feature space, explicitly introducing depth uncertainty to the detected 2D pose, thereby limiting overall estimation accuracy. This work reveals that the depth representation is pivotal for the estimation process. Specifically, when depth is in an initial, completely unknown state, jointly encoding depth features with 2D pose features is detrimental to the estimation process. In contrast, when depth is initially refined to a more dependable state via network-based estimation, encoding it together with 2D pose information is beneficial. To address this limitation, we present a Mixture-of-Experts network for monocular 3D pose estimation named PoseMoE. Our approach introduces: 1) A mixture-of-experts network where specialized expert modules refine the well-detected 2D pose features and learn the depth features. This mixture-of-experts design disentangles the feature encoding process for 2D pose and depth, therefore reducing the explicit influence of uncertain depth features on 2D pose features. 2) A cross-expert knowledge aggregation module is proposed to aggregate cross-expert spatio-temporal contextual information. This step enhances features through bidirectional mapping between 2D pose and depth. Extensive experiments show that our proposed PoseMoE outperforms the conventional lifting-based methods on three widely used datasets: Human3.6M, MPI-INF-3DHP, and 3DPW.",
+        "canonical_id": "arXiv:2512.16494",
+        "arxiv_id": "2512.16494",
+        "authors": [
+          "Mengyuan Liu",
+          "Jiajie Liu",
+          "Jinyan Zhang",
+          "Wen-Hao Li",
+          "Junsong Yuan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.13996",
+      "identity_tokens": [
+        "id:arXiv:2512.13996",
+        "title:dtopp moe sparsitycontrolled dynamic topp moe for foundation model pretraining",
+        "url:https://www.semanticscholar.org/paper/2f945ac64c4022ee9587ff2c8ace50508558ce2c"
+      ],
+      "record": {
+        "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+        "source_url": "https://www.semanticscholar.org/paper/2f945ac64c4022ee9587ff2c8ace50508558ce2c",
+        "year": 2025,
+        "published": "2025-12-16",
+        "abstract": "Sparse Mixture-of-Experts architectures are essential for scaling model capacity efficiently, yet the standard Top-$k$ routing imposes a rigid sparsity pattern that ignores the intrinsic variance in token difficulty and layer-specific computational needs. Top-$p$ routing is more adaptive because it selects experts until their cumulative routing probability reaches a threshold, allowing confident tokens to use fewer experts and ambiguous tokens to recruit more. However, we demonstrate that existing naive Top-$p$ implementations with fixed global probability thresholds provide only marginal gains over Top-$k$, suffer from hyperparameter sensitivity, and result in uncontrolled computational costs. In this paper, we propose **DTop-$p$**, a sparsity-controllable dynamic routing mechanism that learns the Top-$p$ probability threshold with a Proportional-Integral controller and uses dynamic routing normalization to support layer-wise expert selection under a global sparsity constraint. Extensive experiments on Large Language Models and Diffusion Transformers demonstrate that **DTop-$p$** consistently outperforms both Top-$k$ and fixed Top-$p$ baselines while matching the average FLOPs of Top-$k$ MoE. Our analysis confirms that **DTop-$p$** exhibits strong scaling properties across expert granularity, total expert capacity, model size, and dataset size, offering a robust and efficient MoE framework for foundation model pre-training.",
+        "canonical_id": "arXiv:2512.13996",
+        "arxiv_id": "2512.13996",
+        "authors": [
+          "Can Jin",
+          "Hongwu Peng",
+          "Mingcan Xiang",
+          "Qixin Zhang",
+          "Xiangchi Yuan",
+          "Amit Hasan",
+          "Ohi Dibua",
+          "Yi-Fan Gong",
+          "Yan Kang",
+          "Dimitris N. Metaxas"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.18314",
+      "identity_tokens": [
+        "id:arXiv:2511.18314",
+        "title:anyexperts ondemand expert allocation for multimodal language models with mixture of expert",
+        "url:https://www.semanticscholar.org/paper/65331807c808ed9e8e7b4c11c095a2f9ccbec6b1"
+      ],
+      "record": {
+        "title": "AnyExperts: On-Demand Expert Allocation for Multimodal Language Models with Mixture of Expert",
+        "source_url": "https://www.semanticscholar.org/paper/65331807c808ed9e8e7b4c11c095a2f9ccbec6b1",
+        "year": 2025,
+        "published": "2025-11-23",
+        "abstract": "Multimodal Mixture-of-Experts (MoE) models offer a promising path toward scalable and efficient large vision-language systems. However, existing approaches rely on rigid routing strategies (typically activating a fixed number of experts per token) ignoring the inherent heterogeneity in semantic importance across modalities. This leads to suboptimal compute allocation, where redundant tokens consume as many resources as critical ones. To address this, we propose AnyExperts, a novel on-demand, budget-aware dynamic routing framework that allocates a variable total number of expert slots per token based on its semantic importance. Crucially, to prevent uncontrolled compute growth, the total slots per token are constrained within a fixed range, and each slot is filled by either a real expert or a virtual expert, with the virtual share capped at a small maximum (e.g., 20%). The model then adaptively balances the real-to-virtual ratio per token, assigning more real experts to semantically rich regions and relying more on virtual experts for redundant content. Evaluated across diverse tasks in visual understanding, audio understanding, and NLP understanding, AnyExperts improves performance under the same compute budget. Notably, on general image/video tasks, it achieves comparable accuracy with 40% fewer real expert activations; on text-dense tasks (OCR and NLP), it maintains performance while reducing real expert usage by 10%. These results demonstrate that fine-grained, importance-driven expert allocation significantly enhances both the efficiency and effectiveness of multimodal MoE models.",
+        "canonical_id": "arXiv:2511.18314",
+        "arxiv_id": "2511.18314",
+        "authors": [
+          "Yuting Gao",
+          "Wang Lan",
+          "Hengyuan Zhao",
+          "Linjiang Huang",
+          "Si Liu",
+          "Qingpei Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.05885",
+      "identity_tokens": [
+        "id:arXiv:2511.05885",
+        "title:an item is worth one token in multimodal large language modelsbased sequential recommendation",
+        "url:https://www.semanticscholar.org/paper/99ae534951cd9b78460c2c28cee23d63a6bf1e7e"
+      ],
+      "record": {
+        "title": "An item is worth one token in Multimodal Large Language Models-based Sequential Recommendation",
+        "source_url": "https://www.semanticscholar.org/paper/99ae534951cd9b78460c2c28cee23d63a6bf1e7e",
+        "year": 2025,
+        "published": "2025-11-08",
+        "abstract": "Sequential recommendations (SR) predict users'future interactions based on their historical behavior. The rise of Large Language Models (LLMs) has brought powerful generative and reasoning capabilities, significantly enhancing SR performance, while Multimodal LLMs (MLLMs) further extend this by introducing data like images and interactive relationships. However, critical issues remain, i.e., (a) Suboptimal item representations caused by lengthy and redundant descriptions, leading to inefficiencies in both training and inference; (b) Modality-related cognitive bias, as LLMs are predominantly pretrained on textual data, limiting their ability to effectively integrate and utilize non-textual modalities; (c) Weakening sequential perception in long interaction sequences, where attention mechanisms struggle to capture earlier interactions, hindering the modeling of long-range dependencies. To address these issues, we propose Speeder, an efficient MLLM-based paradigm for SR featuring three key innovations: 1) Multimodal Representation Compression (MRC), which condenses item attributes into concise yet informative tokens, reducing redundancy and computational cost; 2) Modality-aware Progressive Optimization (MPO), enabling gradual learning of multimodal representations; 3) Sequential Position Awareness Enhancement (SPAE), improving the LLM's capability to capture both relative and absolute sequential dependencies in long interaction sequences. Extensive experiments on real-world datasets demonstrate the effectiveness and efficiency of Speeder. Speeder increases training speed to 250% of the original while reducing inference time to 25% on the Amazon dataset.",
+        "canonical_id": "arXiv:2511.05885",
+        "arxiv_id": "2511.05885",
+        "authors": [
+          "Qi-Yong Zhong",
+          "Jiajie Su",
+          "Ming Yang",
+          "Yunshan Ma",
+          "Xiaolin Zheng",
+          "Chao-Chao Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.26730",
+      "identity_tokens": [
+        "id:arXiv:2510.26730",
+        "title:expertflow adaptive expert scheduling and memory coordination for efficient moe inference",
+        "url:https://www.semanticscholar.org/paper/4b9d760a4ee1494242cc3bf7ae91b40b87e92728"
+      ],
+      "record": {
+        "title": "ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference",
+        "source_url": "https://www.semanticscholar.org/paper/4b9d760a4ee1494242cc3bf7ae91b40b87e92728",
+        "year": 2025,
+        "published": "2025-10-30",
+        "abstract": "The expansion of large language models is increasingly limited by the constrained memory capacity of modern GPUs. To mitigate this, Mixture-of-Experts (MoE) architectures activate only a small portion of parameters during inference, significantly lowering both memory demand and computational overhead. However, conventional MoE inference approaches, which select active experts independently at each layer, often introduce considerable latency because of frequent parameter transfers between host and GPU memory. In addition, current cross-layer prediction strategies, which are typically based on fixed steps, lack adaptability across different hardware platforms and workloads, thereby reducing their robustness and effectiveness. To address these challenges, we present ExpertFlow, a runtime system for MoE inference that combines adaptive expert prefetching and cache-aware routing. ExpertFlow continuously adjusts its prediction horizon for expert activation by leveraging runtime statistics such as transfer bandwidth, parameter dimensionality, and model feedback signals. Furthermore, it incorporates a hybrid cross-layer prediction scheme that fuses pregating information with intermediate computational states to anticipate future expert needs. By adaptively refining prefetching decisions and aligning them with actual usage behavior, ExpertFlow effectively decreases cache misses and removes latency caused by expert swap-ins. Our evaluation demonstrates that ExpertFlow reduces model stall time to less than 0.1% of the baseline, highlighting its capability to optimize MoE inference under stringent memory constraints.",
+        "canonical_id": "arXiv:2510.26730",
+        "arxiv_id": "2510.26730",
+        "authors": [
+          "Zixu Shen",
+          "Kexin Chu",
+          "Yifan Zhang",
+          "Dawei Xiang",
+          "Runxin Wu",
+          "Wei Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.26520",
+      "identity_tokens": [
+        "id:arXiv:2509.26520",
+        "title:training matryoshka mixtureofexperts for elastic inferencetime expert utilization",
+        "url:https://www.semanticscholar.org/paper/15586d47a55bdfd213c7aa9cbba17ab0308f390b"
+      ],
+      "record": {
+        "title": "Training Matryoshka Mixture-of-Experts for Elastic Inference-Time Expert Utilization",
+        "source_url": "https://www.semanticscholar.org/paper/15586d47a55bdfd213c7aa9cbba17ab0308f390b",
+        "year": 2025,
+        "published": "2025-09-30",
+        "abstract": "Mixture-of-Experts (MoE) has emerged as a promising paradigm for efficiently scaling large language models without a proportional increase in computational cost. However, the standard training strategy of Top-K router prevents MoE models from realizing their full potential for elastic inference. When the number of activated experts is altered at inference time, these models exhibit precipitous performance degradation. In this work, we introduce Matryoshka MoE (M-MoE), a training framework that instills a coarse-to-fine structure directly into the expert ensemble. By systematically varying the number of activated experts during training, M-MoE compels the model to learn a meaningful ranking: top-ranked experts collaborate to provide essential, coarse-grained capabilities, while subsequent experts add progressively finer-grained detail. We explore this principle at multiple granularities, identifying a layer-wise randomization strategy as the most effective. Our experiments demonstrate that a single M-MoE model achieves remarkable elasticity, with its performance at various expert counts closely matching that of an entire suite of specialist models, but at only a fraction of the total training cost. This flexibility not only unlocks elastic inference but also enables optimizing performance by allocating different computational budgets to different model layers. Our work paves the way for more practical and adaptable deployments of large-scale MoE models.",
+        "canonical_id": "arXiv:2509.26520",
+        "arxiv_id": "2509.26520",
+        "authors": [
+          "Yaoxiang Wang",
+          "Qing-Guo Hu",
+          "Yucheng Ding",
+          "Ruizhe Wang",
+          "Yeyun Gong",
+          "Jian Jiao",
+          "Yelong Shen",
+          "Peng Cheng",
+          "Jinsong Su"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1101/2025.08.09.669511",
+      "identity_tokens": [
+        "id:DOI:10.1101/2025.08.09.669511",
+        "title:scaling molecular representation learning with hierarchical mixtureofexperts",
+        "url:https://www.semanticscholar.org/paper/f22686d5e2754b92b47987f6c2da7cab6c742491"
+      ],
+      "record": {
+        "title": "Scaling Molecular Representation Learning with Hierarchical Mixture-of-Experts",
+        "source_url": "https://www.semanticscholar.org/paper/f22686d5e2754b92b47987f6c2da7cab6c742491",
+        "year": 2025,
+        "published": "2025-08-12",
+        "abstract": null,
+        "canonical_id": "DOI:10.1101/2025.08.09.669511",
+        "doi": "10.1101/2025.08.09.669511",
+        "authors": [
+          "Xiang Zhang",
+          "Shenbao Yu",
+          "Jie Xia",
+          "Fan Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.01699",
+      "identity_tokens": [
+        "id:arXiv:2508.01699",
+        "title:timeexpert an expertguided video llm for video temporal grounding",
+        "url:https://www.semanticscholar.org/paper/ec99390d0043b73027a43038028c594eb5b062d5"
+      ],
+      "record": {
+        "title": "Timeexpert: an Expert-Guided Video Llm for Video Temporal Grounding",
+        "source_url": "https://www.semanticscholar.org/paper/ec99390d0043b73027a43038028c594eb5b062d5",
+        "year": 2025,
+        "published": "2025-08-03",
+        "abstract": "Video Temporal Grounding (VTG) aims to precisely identify video event segments in response to textual queries. The outputs of VTG tasks manifest as sequences of events, each defined by precise timestamps, saliency scores, and textual descriptions. Despite recent advances, a fundamental limitation persists in existing Video Large Language Models (Video-LLMs): they process all task tokens through identical and static pathways, failing to recognize that temporal localization, saliency assessment, and textual generation represent fundamentally distinct tasks requiring specialized processing. To address this, we introduce TimeExpert, a Mixture-of-Experts (MoE)-based Video-LLM that effectively decomposes VTG tasks by dynamically routing task-specific tokens (e.g., timestamps, saliency scores) to specialized experts, with increased computational efficiency. Our design choices enable precise handling of each subtask, leading to improved event modeling across diverse VTG applications. Extensive experiments demonstrate that TimeExpert consistently achieves state-of-the-art performance on various VTG tasks such as Dense Video Captioning, Moment Retrieval, and Video Highlight Detection.",
+        "canonical_id": "arXiv:2508.01699",
+        "arxiv_id": "2508.01699",
+        "authors": [
+          "Zuhao Yang",
+          "Yingchen Yu",
+          "Yun-Qing Zhao",
+          "Shijian Lu",
+          "Song Bai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.07260",
+      "identity_tokens": [
+        "id:arXiv:2505.07260",
+        "title:umoe unifying attention and ffn with shared experts",
+        "url:https://www.semanticscholar.org/paper/8c0b256d966f975c39791a9a29362d686f7ebbc3"
+      ],
+      "record": {
+        "title": "UMoE: Unifying Attention and FFN with Shared Experts",
+        "source_url": "https://www.semanticscholar.org/paper/8c0b256d966f975c39791a9a29362d686f7ebbc3",
+        "year": 2025,
+        "published": "2025-05-12",
+        "abstract": "Sparse Mixture of Experts (MoE) architectures have emerged as a promising approach for scaling Transformer models. While initial works primarily incorporated MoE into feed-forward network (FFN) layers, recent studies have explored extending the MoE paradigm to attention layers to enhance model performance. However, existing attention-based MoE layers require specialized implementations and demonstrate suboptimal performance compared to their FFN-based counterparts. In this paper, we aim to unify MoE designs in attention and FFN layers by introducing a novel reformulation of the attention mechanism, that reveals an underlying FFN-like structure within attention modules. Our proposed architecture, UMoE, achieves superior performance through attention-based MoE layers while enabling efficient parameter sharing between FFN and attention components.",
+        "canonical_id": "arXiv:2505.07260",
+        "arxiv_id": "2505.07260",
+        "authors": [
+          "Yuanhang Yang",
+          "Chaozheng Wang",
+          "Jing Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.20446",
+      "identity_tokens": [
+        "id:arXiv:2504.20446",
+        "title:ftmoe sustainablelearning mixture of experts for faulttolerant computing",
+        "url:https://www.semanticscholar.org/paper/f0737e270f62e74eec77fa060830042067c0d29e"
+      ],
+      "record": {
+        "title": "FT-MoE: Sustainable-learning Mixture of Experts for Fault-Tolerant Computing",
+        "source_url": "https://www.semanticscholar.org/paper/f0737e270f62e74eec77fa060830042067c0d29e",
+        "year": 2025,
+        "published": "2025-04-29",
+        "abstract": "Intelligent fault-tolerant (FT) computing has recently demonstrated significant advantages in predicting and diagnosing faults proactively, thereby ensuring reliable service delivery. However, due to the heterogeneity of fault knowledge, dynamic workloads, and limited data support, existing deep learning-based FT algorithms face challenges in fault detection quality and training efficiency. This is primarily because their homogenization of fault knowledge perception difficuties to fully capture diverse and complex fault patterns. To address these challenges, we propose FT-MoE, a sustainable-learning fault-tolerant computing framework based on a dual-path architecture for high-accuracy fault detection and classification. This model employs a mixture-of-experts (MoE) architecture, enabling different parameters to learn distinct fault knowledge. Additionally, we adopt a two-stage learning scheme that combines comprehensive offline training with continual online tuning, allowing the model to adaptively optimize its parameters in response to evolving real-time workloads. To facilitate realistic evaluation, we construct a new fault detection and classification dataset for edge networks, comprising 10,000 intervals with fine-grained resource features, surpassing existing datasets in both scale and granularity. Finally, we conduct extensive experiments on the FT benchmark to verify the effectiveness of FT-MoE. Results demonstrate that our model outperforms state-of-the-art methods.",
+        "canonical_id": "arXiv:2504.20446",
+        "arxiv_id": "2504.20446",
+        "authors": [
+          "Wen-Jing Xiao",
+          "Wenhao Song",
+          "Miao-Jiang Chen",
+          "Min Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.14487",
+      "identity_tokens": [
+        "id:arXiv:2503.14487",
+        "title:diffmoe dynamic token selection for scalable diffusion transformers",
+        "url:https://www.semanticscholar.org/paper/e4e6059c86aa4b344f29bac49f6f9655f237842f"
+      ],
+      "record": {
+        "title": "DiffMoE: Dynamic Token Selection for Scalable Diffusion Transformers",
+        "source_url": "https://www.semanticscholar.org/paper/e4e6059c86aa4b344f29bac49f6f9655f237842f",
+        "year": 2025,
+        "published": "2025-03-18",
+        "abstract": "Diffusion models have demonstrated remarkable success in various image generation tasks, but their performance is often limited by the uniform processing of inputs across varying conditions and noise levels. To address this limitation, we propose a novel approach that leverages the inherent heterogeneity of the diffusion process. Our method, DiffMoE, introduces a batch-level global token pool that enables experts to access global token distributions during training, promoting specialized expert behavior. To unleash the full potential of the diffusion process, DiffMoE incorporates a capacity predictor that dynamically allocates computational resources based on noise levels and sample complexity. Through comprehensive evaluation, DiffMoE achieves state-of-the-art performance among diffusion models on ImageNet benchmark, substantially outperforming both dense architectures with 3x activated parameters and existing MoE approaches while maintaining 1x activated parameters. The effectiveness of our approach extends beyond class-conditional generation to more challenging tasks such as text-to-image generation, demonstrating its broad applicability across different diffusion model applications. Project Page: https://shiml20.github.io/DiffMoE/",
+        "canonical_id": "arXiv:2503.14487",
+        "arxiv_id": "2503.14487",
+        "authors": [
+          "Ming-Lei Shi",
+          "Ziyang Yuan",
+          "Hao-Tian Yang",
+          "Xintao Wang",
+          "Mingwu Zheng",
+          "Xin Tao",
+          "Wenliang Zhao",
+          "Wenzhao Zheng",
+          "Jie Zhou",
+          "Jiwen Lu",
+          "Pengfei Wan",
+          "Di Zhang",
+          "Kun Gai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.02495",
+      "identity_tokens": [
+        "id:arXiv:2503.02495",
+        "title:union of experts adapting hierarchical routing to equivalently decomposed transformer",
+        "url:https://www.semanticscholar.org/paper/688ed44459dfe9732b304441918c0a133cf73e46"
+      ],
+      "record": {
+        "title": "Union of Experts: Adapting Hierarchical Routing to Equivalently Decomposed Transformer",
+        "source_url": "https://www.semanticscholar.org/paper/688ed44459dfe9732b304441918c0a133cf73e46",
+        "year": 2025,
+        "published": "2025-03-04",
+        "abstract": "Mixture-of-Experts (MoE) enhances model performance while maintaining computational efficiency, making it well-suited for large-scale applications. Conventional mixture-of-experts (MoE) architectures suffer from suboptimal coordination dynamics, where isolated expert operations expose the model to overfitting risks. Moreover, they have not been effectively extended to attention blocks, which limits further efficiency improvements. To tackle these issues, we propose Union-of-Experts (UoE), which decomposes the transformer model into an equivalent group of experts and applies a hierarchical routing mechanism to allocate input subspaces to specialized experts. Our approach advances MoE design with four key innovations: (1) Constructing expert groups by partitioning non-MoE models into functionally equivalent specialists (2) Developing a hierarchical routing paradigm that integrates patch-wise data selection and expert selection strategies. (3) Extending the MoE design to attention blocks. (4) Proposing a hardware-optimized parallelization scheme that exploits batched matrix multiplications for efficient expert computation. The experiments demonstrate that our UoE model surpasses Full Attention, state-of-the-art MoEs and efficient transformers in several tasks across image and natural language domains. In language modeling tasks, UoE achieves an average reduction of 2.38 in perplexity compared to the best-performing MoE method with only 76% of its FLOPs. In the Long Range Arena benchmark, it demonstrates an average score at least 0.68% higher than all comparison models, with only 50% of the FLOPs of the best MoE method. In image classification, it yields an average accuracy improvement of 1.75% over the best model while maintaining comparable FLOPs. The source codes are available at https://github.com/YujiaoYang-work/UoE.",
+        "canonical_id": "arXiv:2503.02495",
+        "arxiv_id": "2503.02495",
+        "authors": [
+          "Yujia Yang",
+          "Jing Lian",
+          "Linhui Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.12928",
+      "identity_tokens": [
+        "id:arXiv:2502.12928",
+        "title:finedeep mitigating sparse activation in dense llms via multilayer finegrained experts",
+        "url:https://www.semanticscholar.org/paper/043c7415a827769704a25088f9f8ed95b94b602e"
+      ],
+      "record": {
+        "title": "Finedeep: Mitigating Sparse Activation in Dense LLMs via Multi-Layer Fine-Grained Experts",
+        "source_url": "https://www.semanticscholar.org/paper/043c7415a827769704a25088f9f8ed95b94b602e",
+        "year": 2025,
+        "published": "2025-02-18",
+        "abstract": "Large language models have demonstrated exceptional performance across a wide range of tasks. However, dense models usually suffer from sparse activation, where many activation values tend towards zero (i.e., being inactivated). We argue that this could restrict the efficient exploration of model representation space. To mitigate this issue, we propose Finedeep, a deep-layered fine-grained expert architecture for dense models. Our framework partitions the feed-forward neural network layers of traditional dense models into small experts, arranges them across multiple sub-layers. A novel routing mechanism is proposed to determine each expert's contribution. We conduct extensive experiments across various model sizes, demonstrating that our approach significantly outperforms traditional dense architectures in terms of perplexity and benchmark performance while maintaining a comparable number of parameters and floating-point operations. Moreover, we find that Finedeep achieves optimal results when balancing depth and width, specifically by adjusting the number of expert sub-layers and the number of experts per sub-layer. Empirical results confirm that Finedeep effectively alleviates sparse activation and efficiently utilizes representation capacity in dense models.",
+        "canonical_id": "arXiv:2502.12928",
+        "arxiv_id": "2502.12928",
+        "authors": [
+          "Leiyu Pan",
+          "Zhenpeng Su",
+          "Minxuan Lv",
+          "Yizhe Xiong",
+          "Xiangwen Zhang",
+          "Zijia Lin",
+          "Hui Chen",
+          "Jungong Han",
+          "Guiguang Ding",
+          "Cheng Luo",
+          "Di Zhang",
+          "Kun Gai",
+          "Deyi Xiong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.04416",
+      "identity_tokens": [
+        "id:arXiv:2502.04416",
+        "title:analytical ffntomoe restructuring via activation pattern analysis",
+        "url:https://www.semanticscholar.org/paper/5e7c1869239c5457b49d220b5dc57a7731820573"
+      ],
+      "record": {
+        "title": "Analytical FFN-to-MoE Restructuring via Activation Pattern Analysis",
+        "source_url": "https://www.semanticscholar.org/paper/5e7c1869239c5457b49d220b5dc57a7731820573",
+        "year": 2025,
+        "published": "2025-02-06",
+        "abstract": "Scaling large language models (LLMs) improves performance but significantly increases inference costs, with feed-forward networks (FFNs) consuming the majority of computational resources. While Mixture-of-Experts (MoE) architectures can reduce this cost through sparse activation, restructuring existing dense models into MoEs typically requires extensive retraining on hundreds of billions of tokens. We propose an analytical post-training framework that rapidly restructures FFNs into sparse MoE architectures using only a small calibration dataset. The method analyzes neuron activation patterns to partition neurons into always-active shared experts and conditionally activated routed experts, then constructs a router analytically from representative neuron statistics, enabling immediate deployment or optional lightweight fine-tuning. This approach applies both to dense models and recursively to existing MoE models for hierarchical sparsity. Experiments demonstrate up to $1.17\\times$ speedup in compute-bound scenarios with only minutes of processing and 2k-sample fine-tuning, outperforming methods requiring orders of magnitude more resources.",
+        "canonical_id": "arXiv:2502.04416",
+        "arxiv_id": "2502.04416",
+        "authors": [
+          "Ze-Hua Pei",
+          "Hui-Ling Zhen",
+          "Lancheng Zou",
+          "Xian-Zhi Yu",
+          "Wu-Long Liu",
+          "S. J. Pan",
+          "Ming-Xuan Yuan",
+          "Bei Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.03884",
+      "identity_tokens": [
+        "id:arXiv:2502.03884",
+        "title:rank also matters hierarchical configuration for mixture of adapter experts in llm finetuning",
+        "url:https://www.semanticscholar.org/paper/217dcd52e5bc059b9abeb00fe8f742fef89a5d73"
+      ],
+      "record": {
+        "title": "Rank Also Matters: Hierarchical Configuration for Mixture of Adapter Experts in LLM Fine-Tuning",
+        "source_url": "https://www.semanticscholar.org/paper/217dcd52e5bc059b9abeb00fe8f742fef89a5d73",
+        "year": 2025,
+        "published": "2025-02-06",
+        "abstract": "Large language models (LLMs) have demonstrated remarkable success across various tasks, accompanied by a continuous increase in their parameter size. Parameter-efficient fine-tuning (PEFT) methods, such as Low-Rank Adaptation (LoRA), address the challenges of fine-tuning LLMs by significantly reducing the number of trainable parameters. Recent studies have integrated LoRA with Mixture of Experts (MoE) architectures, leveraging multiple adapter experts and gating mechanisms to further improve fine-tuning performance. However, existing approaches primarily focus on adjusting the allocations of adapter experts per layer to optimize the introduced trainable parameter size, while neglecting a critical factor of adapters' rank. To this end, we propose a hierarchical scheme for expert allocation and rank configuration, HILO, which dynamically adjusts the number and rank of adapter experts across layers, matching the varying representational complexity of model layers in adapter-granularity. Extensive experiments on multiple benchmark tasks demonstrate that HILO outperforms existing methods in accuracy while introducing fewer trainable parameters, providing an efficient and practical solution for fine-tuning LLMs.",
+        "canonical_id": "arXiv:2502.03884",
+        "arxiv_id": "2502.03884",
+        "authors": [
+          "Peizhuang Cong",
+          "Wen-Pu Liu",
+          "Wenhan Yu",
+          "Haochen Zhao",
+          "Tong Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.16077",
+      "identity_tokens": [
+        "id:arXiv:2410.16077",
+        "title:cartesianmoe boosting knowledge sharing among experts via cartesian product routing in mixtureofexperts",
+        "url:https://www.semanticscholar.org/paper/79d8f7b7ee59aacf30ef3801b884d9282822ab2d"
+      ],
+      "record": {
+        "title": "CartesianMoE: Boosting Knowledge Sharing among Experts via Cartesian Product Routing in Mixture-of-Experts",
+        "source_url": "https://www.semanticscholar.org/paper/79d8f7b7ee59aacf30ef3801b884d9282822ab2d",
+        "year": 2024,
+        "published": "2024-10-21",
+        "abstract": "Large language models (LLM) have been attracting much attention from the community recently, due to their remarkable performance in all kinds of downstream tasks. According to the well-known scaling law, scaling up a dense LLM enhances its capabilities, but also significantly increases the computational complexity. Mixture-of-Experts (MoE) models address that by allowing the model size to grow without substantially raising training or inference costs. Yet MoE models face challenges regarding knowledge sharing among experts, making their performance somehow sensitive to routing accuracy. To tackle that, previous works introduced shared experts and combined their outputs with those of the top $K$ routed experts in an ``addition'' manner. In this paper, inspired by collective matrix factorization to learn shared knowledge among data, we propose CartesianMoE, which implements more effective knowledge sharing among experts in more like a ``multiplication'' manner. Extensive experimental results indicate that CartesianMoE outperforms previous MoE models for building LLMs, in terms of both perplexity and downstream task performance. And we also find that CartesianMoE achieves better expert routing robustness.",
+        "canonical_id": "arXiv:2410.16077",
+        "arxiv_id": "2410.16077",
+        "authors": [
+          "Zhenpeng Su",
+          "Xing Wu",
+          "Zijia Lin",
+          "Yizhe Xiong",
+          "Minxuan Lv",
+          "Guangyuan Ma",
+          "Hui Chen",
+          "Songlin Hu",
+          "Guiguang Ding"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.14297",
+      "identity_tokens": [
+        "id:arXiv:2405.14297",
+        "title:dynamic mixture of experts an autotuning approach for efficient transformer models",
+        "url:https://www.semanticscholar.org/paper/7f6f34090d17d0523b91c0d3cd34fe9f66ebb189"
+      ],
+      "record": {
+        "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models",
+        "source_url": "https://www.semanticscholar.org/paper/7f6f34090d17d0523b91c0d3cd34fe9f66ebb189",
+        "year": 2024,
+        "published": "2024-05-23",
+        "abstract": "The Sparse Mixture of Experts (SMoE) has been widely employed to enhance the efficiency of training and inference for Transformer-based foundational models, yielding promising results.However, the performance of SMoE heavily depends on the choice of hyper-parameters, such as the number of experts and the number of experts to be activated (referred to as top-k), resulting in significant computational overhead due to the extensive model training by searching over various hyper-parameter configurations. As a remedy, we introduce the Dynamic Mixture of Experts (DynMoE) technique. DynMoE incorporates (1) a novel gating method that enables each token to automatically determine the number of experts to activate. (2) An adaptive process automatically adjusts the number of experts during training. Extensive numerical results across Vision, Language, and Vision-Language tasks demonstrate the effectiveness of our approach to achieve competitive performance compared to GMoE for vision and language tasks, and MoE-LLaVA for vision-language tasks, while maintaining efficiency by activating fewer parameters. Our code is available at https://github.com/LINs-lab/DynMoE.",
+        "canonical_id": "arXiv:2405.14297",
+        "arxiv_id": "2405.14297",
+        "authors": [
+          "Yong-Xin Guo",
+          "Zhenglin Cheng",
+          "Xiaoying Tang",
+          "Tao Lin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:5b269727dd4ecd8aa013950bd6f7b15ab80eaf53",
+      "identity_tokens": [
+        "id:SemanticScholar:5b269727dd4ecd8aa013950bd6f7b15ab80eaf53",
+        "title:tcmoe augmenting mixture of experts with ternary expert choice",
+        "url:https://www.semanticscholar.org/paper/5b269727dd4ecd8aa013950bd6f7b15ab80eaf53"
+      ],
+      "record": {
+        "title": "TC-MoE: Augmenting Mixture of Experts with Ternary Expert Choice",
+        "source_url": "https://www.semanticscholar.org/paper/5b269727dd4ecd8aa013950bd6f7b15ab80eaf53",
+        "year": 2025,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "SemanticScholar:5b269727dd4ecd8aa013950bd6f7b15ab80eaf53",
+        "authors": [
+          "Shen Yan",
+          "Xingyan Bin",
+          "Sijun Zhang",
+          "Yi-Sen Wang",
+          "Zhouchen Lin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.findings-emnlp.1282",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-emnlp.1282",
+        "title:explorationdriven reinforcement learning for expert routing improvement in mixtureofexperts language models",
+        "url:https://www.semanticscholar.org/paper/fb533f48818bf60f2793a33b4dbf8b3cf0d75e8e"
+      ],
+      "record": {
+        "title": "Exploration-Driven Reinforcement Learning for Expert Routing Improvement in Mixture-of-Experts Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/fb533f48818bf60f2793a33b4dbf8b3cf0d75e8e",
+        "year": 2025,
+        "published": null,
+        "abstract": ",",
+        "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1282",
+        "doi": "10.18653/v1/2025.findings-emnlp.1282",
+        "authors": [
+          "Gyunyeop Kim",
+          "Sangwoo Kang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:7c72f6631d057024eb67c2c3f5da44bbda627a3f5d6963b641f583409749855a",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

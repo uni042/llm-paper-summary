@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-72a03a4dc4da2f71-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1145/3770855.3817780",
+  "reason": "Autonomous multi-modal agents are increasingly important in real-world applications due to their ability to reason about complex environments and orchestrate tool use. However, deploying multi-modal large language models (MLLMs) for tool use is often constrained by computational cost and inference latency, creating a pressing need for compact models that retain strong agentic capabilities. Training small multi-modal agents remains difficult: limited backbone capacity weakens multi-step reasoning, reward signals for tool use are often sparse and brittle, and naive distillation can fail to transfer the procedural knowledge required for reliable tool invocation and grounding. In this paper, we propose a two-stage self-evolutionary knowledge distillation framework that equips small MLLMs with robust and adaptive tool-use behaviors. Our method combines (i) mutual information-guided trajectory distillation, which selectively transfers high-utility segments of agentic trajectories from a larger teacher, and (ii) reinforcement-driven policy evolution with iterative teacher feedback. To stabilize learning and prevent semantic collapse, we introduce weighted semantic objectives and iteratively expand competence through error-driven optimization, hybrid experience replay, and group-relative policy refinement with multi-dimensional rewards over answer correctness, invocation validity, and tool effectiveness. Integrated with interactive tool modules, our approach enables small models to achieve strong performance across diverse tool-use benchmarks. Comprehensive experiments show consistent improvements over single-pass distillation and RL baselines. Overall, our framework provides a practical path to deploy efficient multi-modal agents without sacrificing tool-use reliability.",
+  "title": "Self-Evolutionary Reinforced Knowledge Distillation for Multi-Modal Tool-Use Agents",
+  "identity_tokens": [
+    "DOI:10.1145/3770855.3817780"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-72a03a4dc4da",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-de651a9e37167e7c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.10577",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.10577",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.10577",
+      "arXiv:2606.10577"
+    ],
+    "reason": "視覚言語モデルのロボット航法で、画素指定の動作ツール、距離照会ツール、テキスト履歴と小型地図画像の選択的記憶呼出しを構成する方式。長い履歴をプロンプトへ蓄積しない設計は入力文脈削減と接点があるが、評価は航法成功率・経路効率であり、LLM推論エンジンやKVキャッシュの性能を直接最適化しない。",
+    "first_checked_at": "2026-10-23T00:45:19+00:00",
+    "last_checked_at": "2026-10-23T00:45:19+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "AgenticNav: Zero-Shot Vision-and-Language Navigation as a Tool-Calling Harness"
+  },
+  "processed_at": "2026-10-23T00:45:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-de651a9e3716",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

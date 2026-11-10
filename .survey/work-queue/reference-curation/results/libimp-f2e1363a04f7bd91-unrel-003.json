@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f2e1363a04f7bd91-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.01465",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.01465",
+    "identity_tokens": [
+      "arXiv:2406.01465"
+    ],
+    "reason": "Primary text identifies AIFS as a weather-forecasting system with GNN encoder/decoder and a sliding-window transformer, trained on meteorological fields; its parallelism addresses forecast training, not LLM inference.",
+    "first_checked_at": "2026-10-07T08:53:55+00:00",
+    "last_checked_at": "2026-10-07T08:53:55+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "AIFS -- ECMWF's data-driven forecasting system"
+  },
+  "processed_at": "2026-10-07T08:53:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f2e1363a04f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

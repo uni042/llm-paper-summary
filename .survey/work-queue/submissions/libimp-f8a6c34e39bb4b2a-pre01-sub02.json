@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SpaceFusion: Advanced Deep Learning Operator Fusion via Space-Mapping Graph",
+      "source_url": "https://doi.org/10.1145/3689031.3696087",
+      "year": 2025,
+      "published": "2025-03-30",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This work proposes SpaceFusion, an advanced scheduler for efficient deep learning operator fusion. First, we develop a novel abstraction, the Space-Mapping Graph (SMG), to holistically model the spatial information of both inter- and intra-operator dependencies. Subsequently, we introduce the spatial and temporal slicers to decompose the fused spaces defined in SMGs, generating fusion schedules by analyzing and transforming dependencies. Finally, we present auto-scheduling methods that use the slicers to automatically create high-performance fusion schedules tailored to specific hardware resource configurations. End-to-end performance evaluations reveal that SpaceFusion achieves up to 8.79x speedup (3.54x on average) over baseline implementations from Huggingface for Transformer models, and a maximum of 2.21x speedup compared to the state-of-the-art manually-tuned implementations powered by FlashAttention.",
+      "identifiers": [
+        "SemanticScholar:e75f7f0135aa3586bfb5be5f599837ad85ef08ff"
+      ],
+      "semantic_scholar_id": "e75f7f0135aa3586bfb5be5f599837ad85ef08ff",
+      "doi": "10.1145/3689031.3696087",
+      "canonical_id": "DOI:10.1145/3689031.3696087",
+      "authors": [
+        "Liang Zhu",
+        "Jian-Guo Yao",
+        "Hai-Bing Guan"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 579,
+        "matched_prestigious_venue": null
+      },
+      "reason": "EuroSys 2025のACM一次要旨でSpace-Mapping Graphによる演算子間・内部依存の統合表現、spatial/temporal slicerによる融合schedule生成を確認。TransformerモデルでHugging Face基準平均3.54倍・最大8.79倍、手動FlashAttention実装比最大2.21倍を報告。LLM専用でなく一般Transformer演算子融合として位置付ける。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "AirGun: Adaptive Granularity Quantization for Accelerating Large Language Models",
+      "source_url": "https://doi.org/10.1109/ICCD63220.2024.00103",
+      "year": 2024,
+      "published": "2024-11-18",
+      "venue": "ICCD",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models have evolved into Large Language Models (LLMs) by increasing model sizes to achieve higher accuracy, but they incur significant computational and memory costs. As quantization is a promising method to mitigate the huge cost of LLMs, the presence of outliers can lead to accuracy drops during quantization. Previous work pointed out LLMs have outliers only in specific input channels of activations. This suggests that per-input channel quantization would be beneficial, but it poses excessive computational overhead without optimization. To address these challenges, we propose a hardware and software co-design that mitigates the overhead of per-input channel quantization. We first propose AirGun, a quantization method that adaptively quantizes LLM modules. We observe that LLMs have high quantization sensitivity only in specific modules. Based on our observation, AirGun applies hardware-efficient per-tensor quantization for non-sensitive modules and per-input channel quantization for sensitive modules. For per-input channel quantization, we introduce early reconstruction and adaptive dyadic numbering, dismissing the overhead while exploiting its advantages. Additionally, we propose the AirGun accelerator that fully utilizes the advantages of AirGun. As a result, the AirGun accelerator achieves a 4.19 × speedup and 63.16 % lower energy consumption compared to the previous LM accelerator while achieving higher accuracy.",
+      "identifiers": [
+        "SemanticScholar:d3f3ca736e3e61317ce7c81c0ac9198f5a21e8fb"
+      ],
+      "semantic_scholar_id": "d3f3ca736e3e61317ce7c81c0ac9198f5a21e8fb",
+      "doi": "10.1109/ICCD63220.2024.00103",
+      "canonical_id": "DOI:10.1109/ICCD63220.2024.00103",
+      "authors": [
+        "Sungbin Kim",
+        "Hyunwuk Lee",
+        "Sungwoo Kim",
+        "Cheolhwan Kim",
+        "Won Woo Ro"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 711,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者所属大学の一次研究記録で、量子化感度の高いmoduleのみ入力チャネル単位、その他はtensor単位の量子化を適用するAirGunを確認。専用アクセラレータとの協調設計で既存LMアクセラレータ比4.19倍高速化、エネルギー63.16%削減を報告。専用ハードウェア条件付き。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Searching Optimal Floating-Point Format for Sub-8-Bit Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/ICEIC61013.2024.10457111",
+      "year": 2024,
+      "published": "2024-01-28",
+      "venue": "International Conference on Electronics, Information and Communications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have shown remarkable success in various natural language processing tasks. However, their extensive parameter count leads to significant memory and computational demands. To tackle these challenges, there is growing interest in employing post-training quantization (PTQ) with reduced-precision floating-point (FP) operations. Yet, the optimal FP configuration remains a topic of debate. Existing studies often overlook a thorough analysis of the diverse data distributions found in LLMs and the crucial design choice, denormal. In this paper, we conduct a comprehensive examination of the various data distributions within LLMs and the significance of denormal representation, presenting a mixed-format floating-point framework. Our proposed framework allows for sub-8-bit inference with minimal performance degradation in language modeling and reasoning tasks across a broad spectrum of LLMs.",
+      "identifiers": [
+        "SemanticScholar:308140c2f4fc532bb9c5baa17e512f0f94b7d175"
+      ],
+      "semantic_scholar_id": "308140c2f4fc532bb9c5baa17e512f0f94b7d175",
+      "doi": "10.1109/ICEIC61013.2024.10457111",
+      "canonical_id": "DOI:10.1109/ICEIC61013.2024.10457111",
+      "authors": [
+        "Youngdeok Hwang",
+        "Janghwan Lee",
+        "Jiwoong Park",
+        "Jieun Lim",
+        "Jungwook Choi"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1006,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ICEIC 2024のOpenReview一次要旨で、LLMの分布に合わせてdenormal表現と混合浮動小数点形式を設計し、8bit未満の量子化で言語モデリング・推論課題の品質低下を抑制する方法を確認。要旨に定量的なTPS・消費電力はなく実測性能は未確認。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f8a6c34e39bb",
+    "round": "libimp-f8a6c34e39bb4b2a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f8a6c34e39bb4b2a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f8a6c34e39bb4b2a-pre01.json",
+    "receipt": "sha256:03dfcdee591889c75ed94dcea55e087570a41320622a751684eb41d897a2cc7b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f8a6c34e39bb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

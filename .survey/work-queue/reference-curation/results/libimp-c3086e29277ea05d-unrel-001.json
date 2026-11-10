@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c3086e29277ea05d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.07531",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.07531",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2410.07531",
+      "arXiv:2410.07531"
+    ],
+    "reason": "FlashAttentionのdropout乱数生成を前段GEMMと重ね、GH100上のLlama3学習ブロックで1.22倍改善を示す研究。dropoutを有効化する学習時の演算重畳が対象で、通常dropoutを無効化するLLM推論サービングの直接最適化ではない。",
+    "first_checked_at": "2026-10-30T11:54:52+00:00",
+    "last_checked_at": "2026-10-30T11:54:52+00:00",
+    "linked_from": [],
+    "title": "Reducing the Cost of Dropout in Flash-Attention by Hiding RNG with GEMM"
+  },
+  "processed_at": "2026-10-30T11:54:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c3086e29277e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

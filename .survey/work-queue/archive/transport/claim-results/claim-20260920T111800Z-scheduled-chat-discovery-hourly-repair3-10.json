@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T111800Z-scheduled-chat-discovery-hourly-repair3-10",
+  "worker_id": "scheduled-chat-discovery-hourly",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-67ddaa9ed58fd85b",
+      "claim_id": "claim-bd7edc3a59e4ce43ac25f884",
+      "worker_id": "scheduled-chat-discovery-hourly",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-bd7edc3a59e4ce43ac25f884",
+      "claimed_at": "2026-09-20T11:18:01+00:00",
+      "expires_at": "2026-09-20T12:48:01+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-67ddaa9ed58fd85b"
+      ],
+      "job": {
+        "job_id": "job-research-67ddaa9ed58fd85b",
+        "type": "research",
+        "parent_job_id": "job-aea330cec87e5b3c",
+        "priority": 99,
+        "canonical_id": "arXiv:2511.02237",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Opportunistic Expert Activation: Batch-Aware Expert Routing for Faster Decode Without Retraining",
+        "source_url": "https://arxiv.org/abs/2511.02237",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.02237-opportunistic-expert-activation.md",
+        "selection_reason": "batch-awareにtoken-to-expert mappingを動的再配置し、active expert数とdecode latencyをtraining-freeに削減する。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T10:54:04+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism"
+        ],
+        "last_validation_failed_at": "2026-09-20T11:17:35+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-483c9e80b9d0b60acbb8fb48"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-483c9e80b9d0b60acbb8fb48.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T11:18:01+00:00",
+  "checkpoint_released": 0
+}

@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-0448-scheduled-chat-45/r02",
+  "reference_main_sha": "924c21a9e73415dc41d04740cfdff282114a059a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/CANDARW64572.2024.00031",
+      "identity_tokens": [
+        "DOI:10.1109/CANDARW64572.2024.00031"
+      ],
+      "title": "Sparse Ternary Matrix Multiplication with Tensor Core for Transformer",
+      "reason": "GPUのCUDA CoreとTensor Coreに適合させた疎三値行列乗算（TMM）を提案。Ternary-BERTやBitNetのような三値重みTransformerを動機とし、疎性約88%以上でdense行列乗算を上回ると著者所属機関の一次書誌要旨で報告。Transformer低ビット推論カーネルの直接的な研究。",
+      "source_url": "https://doi.org/10.1109/CANDARW64572.2024.00031",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:57:10+09:00",
+      "last_checked_at": "2026-10-31T04:57:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 440,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3777884.3797005",
+      "identity_tokens": [
+        "DOI:10.1145/3777884.3797005"
+      ],
+      "title": "SwiftSNNI: Optimized Scheduling for Secure Neural Network Inference (SNNI) on Multi-Core Systems",
+      "reason": "暗号化された入力に対するsecure neural network inferenceのoffline前処理とonline推論を重ねるスケジューラ。ACM一次要旨の評価モデルはM1、M2、HiNet、AlexNet、VGG-16で、LLMやTransformer推論は評価していない。汎用暗号化NN処理のスケジューリングであり、本サーベイのLLM推論・学習システムとの直接の対応が乏しい。",
+      "source_url": "https://doi.org/10.1145/3777884.3797005",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:57:10+09:00",
+      "last_checked_at": "2026-10-31T04:57:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 482,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.21947",
+      "identity_tokens": [
+        "arXiv:2606.21947"
+      ],
+      "title": "ScalePredictor: Instance-aware Scale Learning for Accurate Quantization of Vision Transformers",
+      "reason": "Vision Transformerの入力ごとに浅い層のactivation範囲から深い層の量子化scaleを予測し、実行時校正を避ける動的PTQ方式。ImageNetで精度・効率のトレードオフを評価。量子化scale予測はLLM圧縮へ技術転用可能だが、主な実証対象は画像分類ViTで、LLMの言語生成やサービング評価ではない。",
+      "source_url": "https://arxiv.org/abs/2606.21947",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:57:10+09:00",
+      "last_checked_at": "2026-10-31T04:57:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 483,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.22176",
+      "identity_tokens": [
+        "arXiv:2511.22176"
+      ],
+      "title": "Focused Chain-of-Thought: Efficient LLM Reasoning via Structured Input Information",
+      "reason": "F-CoTは入力から推論に必要な情報を構造化して抽出し、その簡潔な文脈だけを使って推論させる学習不要の方式。算術文章題でzero-shot CoTと同程度の精度を保ちながら生成トークンを2〜3分の1に削減と一次要旨で報告。LLM推論時のトークン費用と遅延削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2511.22176",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:57:10+09:00",
+      "last_checked_at": "2026-10-31T04:57:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 488,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.5220/0013382400003890",
+      "identity_tokens": [
+        "DOI:10.5220/0013382400003890"
+      ],
+      "title": "When Are 1.58 Bits Enough? A Bottom-up Exploration of Quantization-Aware Training with Ternary Weights",
+      "reason": "三値重みの1.58-bit QATをMLP・GNNからencoder-only/encoder-decoder Transformer言語モデルまで評価。一次出版社論文ではencoder-onlyは隠れ幅増大により16-bit相当の精度を得られる一方、T5型encoder-decoderは16-bitより性能が落ちる負の結果を報告。言語モデル低ビット圧縮の適用範囲と限界を示す直接関連研究。",
+      "source_url": "https://doi.org/10.5220/0013382400003890",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:57:10+09:00",
+      "last_checked_at": "2026-10-31T04:57:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 493,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.11386",
+      "identity_tokens": [
+        "arXiv:2606.11386"
+      ],
+      "title": "Overcoming State Inertia in Full-Duplex Spoken Language Models via Activation Steering",
+      "reason": "Full-duplex音声言語モデルが割込み時に発話生成状態から入力知覚状態へ切替わる遅れをstate inertiaと定義。学習不要のactivation steeringでPersonaPlexの割込み応答正答率28%→45%、初語認識率40%→72%を報告。リアルタイム音声モデルの推論時挙動に関係するが、主眼は対話品質でありLLMサービングの速度・メモリ最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2606.11386",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:57:10+09:00",
+      "last_checked_at": "2026-10-31T04:57:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 494,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.10218",
+      "identity_tokens": [
+        "arXiv:2605.10218"
+      ],
+      "title": "Relative Score Policy Optimization for Diffusion Language Models",
+      "reason": "Diffusion LLMのRLVRで系列log-ratioを正確に計算しにくい問題に対し、報酬advantageから推定した目標相対log-ratioへ校正するRSPOを提案。数学・計画タスクで後学習の安定性と性能を評価。拡散LMの並列生成と隣接するが、主たる成果はRL後学習アルゴリズムであり、推論ランタイム速度の直接評価ではない。",
+      "source_url": "https://arxiv.org/abs/2605.10218",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:57:10+09:00",
+      "last_checked_at": "2026-10-31T04:57:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 495,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.10822",
+      "identity_tokens": [
+        "arXiv:2506.10822"
+      ],
+      "title": "ReCUT: Balancing Reasoning Length and Accuracy in LLMs via Stepwise Trails and Preference Optimization",
+      "reason": "ReCUTは推論過程の段階的探索と長短切替サンプリングで好み比較ペアを作り、正答重視・短い推論重視モデルを学習後にパラメータ補間する。数学推論で精度を維持または改善しながらCoT長を約30〜50%削減と報告。生成トークン削減によるLLM推論効率に直接関連。",
+      "source_url": "https://arxiv.org/abs/2506.10822",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:57:10+09:00",
+      "last_checked_at": "2026-10-31T04:57:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 496,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.23186",
+      "identity_tokens": [
+        "arXiv:2509.23186"
+      ],
+      "title": "Understanding and Enhancing the Planning Capability of Language Models via Multi-Token Prediction",
+      "reason": "Multi-Token Predictionの転送層が多段隣接関係を学習して未観測の推移関係を獲得することを理論・実験で検証。Next-Token Injectionなどを提案し、合成グラフとBlocksworld計画性能を改善。MTP自体は並列復号技術と関係するが、本論文の主目的は計画能力の向上で、推論スループットや遅延削減の検証は一次要旨にない。",
+      "source_url": "https://arxiv.org/abs/2509.23186",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:57:10+09:00",
+      "last_checked_at": "2026-10-31T04:57:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.18037",
+      "identity_tokens": [
+        "arXiv:2603.18037"
+      ],
+      "title": "Adapting Methods for Domain-Specific Japanese Small LMs: Scale, Architecture, and Quantization",
+      "reason": "日本語専門分野の小規模言語モデルをQLoRA学習・基盤モデル選択・量子化の3段階で比較する。一次要旨ではSwallow-8B Q4_K_Mのモデルサイズ4.9GB、質問当たり8.9秒、3点満点中2.830を報告し、Qwen2.5-7Bの量子化後品質悪化も示す。消費者向け機器でのSLM実用配備と量子化の実証研究として関連。",
+      "source_url": "https://arxiv.org/abs/2603.18037",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:57:10+09:00",
+      "last_checked_at": "2026-10-31T04:57:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "round_status": "complete",
+  "target_count": 10
+}

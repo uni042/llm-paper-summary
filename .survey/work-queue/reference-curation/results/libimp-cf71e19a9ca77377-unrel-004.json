@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cf71e19a9ca77377-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.10582",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.10582",
+    "identity_tokens": [
+      "arXiv:2503.10582"
+    ],
+    "reason": "ウェブ検索から視覚推論向け命令データを構築し、視覚言語モデルを微調整するデータ・学習研究で、推論基盤の高速化・省メモリ化ではないため対象外。",
+    "first_checked_at": "2026-09-30T09:07:47+00:00",
+    "last_checked_at": "2026-10-02T07:57:38+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md"
+    ],
+    "title": "VisualWebInstruct: Scaling up Multimodal Instruction Data through Web Search"
+  },
+  "processed_at": "2026-10-02T07:57:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cf71e19a9ca7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b2a35081cb05af20-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1007/s11831-026-10656-x",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1007/s11831-026-10656-x",
+    "identity_tokens": [
+      "DOI:10.1007/s11831-026-10656-x"
+    ],
+    "reason": "Packet has no abstract. The supplied primary Springer DOI page was attempted but is inaccessible in the available reader. A secondary record describes a lightweight-LLM survey, but its primary scope and full-text evidence could not be verified.",
+    "first_checked_at": "2026-10-05T12:19:31+00:00",
+    "last_checked_at": "2026-10-05T12:19:31+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+      "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+    ],
+    "title": "A Comprehensive Survey of Lightweight Large Language Models: Architectures, Techniques, and Challenges"
+  },
+  "processed_at": "2026-10-05T12:19:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b2a35081cb05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

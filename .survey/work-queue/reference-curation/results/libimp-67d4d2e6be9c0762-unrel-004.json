@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67d4d2e6be9c0762-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2002.08910",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2002.08910",
+    "identity_tokens": [
+      "arXiv:2002.08910"
+    ],
+    "reason": "言語モデルのparameter内knowledge capacityとclosed-book QA性能を調べる知識表現研究で、推論runtime効率を最終目的としない。",
+    "first_checked_at": "2026-10-06T14:30:48+00:00",
+    "last_checked_at": "2026-10-06T14:30:48+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+    ],
+    "title": "How Much Knowledge Can You Pack into the Parameters of a Language Model?"
+  },
+  "processed_at": "2026-10-06T14:30:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67d4d2e6be9c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

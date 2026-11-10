@@ -1,0 +1,18 @@
+{
+  "schema_version":1,
+  "request_id":"rs-30-20260922T224500Z-c84e31-02",
+  "run_key":"run-30-20260922T222759Z-c84e31",
+  "worker_id":"scheduled-chat-30",
+  "scheduled_slot":"30",
+  "actual_invocation_start":"2026-09-22T22:27:59+00:00",
+  "runtime_condition":"platform_context_limit",
+  "runtime_condition_detail":{
+    "failed_operation":"Primary-source full-text retrieval for arXiv:2609.19207 (MeshKV) after claim attempt-82a9eef63b857ccffc7b3a86; arXiv HTML fetch returned DisabledError and the web research channel reached its per-run call limit before a same-version full-text mirror could be verified and read end-to-end.",
+    "last_successful_operation":"Claim result cl-30-20260922T224400Z-c84e31-04 was durably read; abstract/metadata for arXiv:2609.19207 were verified, while the prior ADEPT immutable descriptor was durably created.",
+    "recovery_attempts":"Tried arXiv HTML at multiple line offsets; all returned DisabledError. Tried container download of arXiv PDF after the HTML URL had been viewed, but the download transport rejected the unseen PDF URL. Searched for same-version mirrors and found metadata/abstract mirrors, but no full primary text was verified before the web-call limit was reached. Did not infer the five-slot record from abstracts.",
+    "observed_error":"arXiv HTML: DisabledError; web research tool: maximum-call budget exhausted for this run. GitHub read/write remained available.",
+    "active_attempt_id":"attempt-82a9eef63b857ccffc7b3a86",
+    "active_job_id":"job-research-9fc5a1ad8ad0b2d8",
+    "next_operation":"Resume the active MeshKV claim before creating another claim; obtain and read the same-version full primary source end-to-end, then create the five slots and preflight. Continue monitoring pending submission result attempt-0435bf18257a114df581ef2f."
+  }
+}

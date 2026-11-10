@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260924T181800Z-oneiros-7c41a2c",
+  "kind": "research",
+  "attempt_id": "attempt-preload-f151a18e22842a355a31eb94",
+  "job_id": "job-research-fc413cbcbab0d455",
+  "record_bank": "m",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2d443f9ef666-elastic-memory-remapping-for-multi-tenant-llm-serving.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260924T085541Z-7c41a2c",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T08:55:41+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:dbd2b887f38cfb7d2cc29ae030d6bcab2baadc5fa6128d5fc8e353a37722eb16",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-m/metadata.json",
+      "blob_sha": "d8a51adff0c16f68cd3db7c9f4d3f09c2b38bec5"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-m/problem_method.json",
+      "blob_sha": "60ef5defc4938d44622b9ef066845d622ad7cc4f"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-m/evaluation.json",
+      "blob_sha": "3b0f3d7151b81edbd5296511ce4178f5a3bfaede"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-m/results.json",
+      "blob_sha": "0711cc5d70401959824b0c3c8d56d6a1e757316f"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-m/positioning.json",
+      "blob_sha": "7abd7aaaabc34176d2d11830d357b5c19b3a8c45"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.components[3].description is too short"
+  ],
+  "checked_at": "2026-09-24T09:18:05+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

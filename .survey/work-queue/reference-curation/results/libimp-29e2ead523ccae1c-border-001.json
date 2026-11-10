@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29e2ead523ccae1c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.35889/jutisi.v14i3.3327",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.35889/jutisi.v14i3.3327",
+    "identity_tokens": [
+      "DOI:10.35889/jutisi.v14i3.3327"
+    ],
+    "reason": "The title/abstract describe TinyBERT/Vosk speech control on a Raspberry Pi and the citation lineage is TinyBERT/Q-BERT; this could provide deployment evidence, but the publisher full text could not be retrieved.",
+    "first_checked_at": "2026-10-06T11:21:44+00:00",
+    "last_checked_at": "2026-10-06T11:21:44+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Optimalisasi TinyBERT-Vosk Untuk Kontrol Suara Real-Time Robot Mecanum Raspberry Pi"
+  },
+  "processed_at": "2026-10-06T11:21:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29e2ead523cc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

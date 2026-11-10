@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b786df0a07965a4-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.20566",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.20566",
+    "identity_tokens": [
+      "arXiv:2608.20566"
+    ],
+    "reason": "Operational carbon is adjacent, but primary effect is shifting workload time/location rather than serving efficiency.",
+    "first_checked_at": "2026-10-05T08:19:06+00:00",
+    "last_checked_at": "2026-10-05T08:19:06+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20322-greenllm-disaggregating-large-language-model-serving-on-heterogeneous-gpus.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+    ],
+    "title": "AgentDecarbonizer: Carbon-Aware Execution for AI Agents"
+  },
+  "processed_at": "2026-10-05T08:19:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b786df0a079",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

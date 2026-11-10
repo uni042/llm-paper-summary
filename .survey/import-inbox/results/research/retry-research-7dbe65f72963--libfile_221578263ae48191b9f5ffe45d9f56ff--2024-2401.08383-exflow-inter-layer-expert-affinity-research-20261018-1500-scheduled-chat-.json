@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2cb30bd6787195d903bf0370ef10826ee6ceceb2f784e3204b71fd6146522781",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7dbe65f72963--libfile_221578263ae48191b9f5ffe45d9f56ff--2024-2401.08383-exflow-inter-layer-expert-affinity-research-20261018-1500-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2401.08383",
+  "worker_completed_at": "2026-10-18T15:00:00+09:00",
+  "worker_run_key": "20261018-1500-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5249,
+    "body_paragraphs": 29,
+    "method_chars": 2078,
+    "method_paragraphs": 12,
+    "evaluation_chars": 261,
+    "limitation_chars": 610,
+    "insufficiency_flags": [
+      "評価説明量 261 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 261 < 500"
+  ],
+  "processed_at": "2026-10-18T07:00:39+00:00"
+}

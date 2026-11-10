@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2000-scheduled-chat-00/r03",
+  "reference_main_sha": "88e742bd76c4c3980b9b708f7d3925a0c055e53f",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.11998",
+      "identity_tokens": [
+        "arXiv:2609.11998"
+      ],
+      "title": "Fixed State, Long Reach: What a Constant-Size Cache Buys Block Diffusion at Scale",
+      "reason": "ブロック拡散言語モデルの注意型KVキャッシュとMamba型固定状態キャッシュを、3Bモデルを300Bトークン学習する共通条件で比較。256K文脈ではMamba型が11倍小さいメモリと4.3倍低いステップ遅延を報告し、拡散LLMの推論キャッシュ設計に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2609.11998",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 51
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.17946",
+      "identity_tokens": [
+        "arXiv:2603.17946"
+      ],
+      "title": "CARE: Covariance-Aware and Rank-Enhanced Decomposition for Enabling Multi-Head Latent Attention",
+      "reason": "GQAからMLAへ変換する際、重みの低ランク近似だけでなく活性共分散を保存し、層ごとにKV幅予算を配分してキャッシュ量を維持する。Qwen3とLlamaの複数規模でPPL・精度を比較し、LLM推論時のKVキャッシュ削減・変換品質が主題。",
+      "source_url": "https://arxiv.org/abs/2603.17946",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 52
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.30950",
+      "identity_tokens": [
+        "arXiv:2609.30950"
+      ],
+      "title": "Low-Bit Recurrent States in Hybrid Language Models",
+      "reason": "ハイブリッド言語モデルの固定長再帰状態を低ビット化するため、可観測性グラミアン由来の歪み重みと状態値域を使ってチャネル別ビットを配分する。4ビット平均で負の対数尤度悪化を複数基準より低減し、推論状態のメモリ圧縮に直接適用する。",
+      "source_url": "https://arxiv.org/abs/2609.30950",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 60
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.01925",
+      "identity_tokens": [
+        "arXiv:2609.01925"
+      ],
+      "title": "CRISP: Cliff-awaRe Input-adaptive Sparse Prefilling with Structural-Mass-Motivated Routing",
+      "reason": "長文脈LLMのプリフィルで、代理注意行列の構造からVertical-Slashパターンを選び、softmax後の小質量ノイズを考慮した閾値で疎注意予算を配分する。512K文脈で注意演算最大5.30倍高速化を報告し、GPU推論時の疎注意最適化が中心。",
+      "source_url": "https://arxiv.org/abs/2609.01925",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 63
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.15008",
+      "identity_tokens": [
+        "arXiv:2608.15008"
+      ],
+      "title": "Harness the Memory: A Holistic Evaluation of Memory Substrates in Memory Agents",
+      "reason": "長期LLMエージェントの記憶基盤を、密・疎インデックス、テキスト、構造化・階層ストア等で比較し、3モデル・4ベンチマーク・26性能効率指標を測る。検索量が多すぎると逐次意思決定を損ねる点を示し、エージェント推論時の記憶・検索効率評価に該当する。",
+      "source_url": "https://arxiv.org/abs/2608.15008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 69
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.03969",
+      "identity_tokens": [
+        "arXiv:2601.03969"
+      ],
+      "title": "Anti-Length Shift: Dynamic Outlier Truncation for Training Efficient Reasoning Models",
+      "reason": "正答ロールアウト群の極端に長い尾だけを学習中に切り詰めるDynamic Outlier TruncationとKL正則化・動的サンプリングを提案。推論トークン78%減を報告するが、主要機構は強化学習の生成データ・方策最適化であり、推論基盤やテスト時アルゴリズムの直接改良ではない。",
+      "source_url": "https://arxiv.org/abs/2601.03969",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 70
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.06052",
+      "identity_tokens": [
+        "arXiv:2605.06052"
+      ],
+      "title": "XtraMAC: An Efficient MAC Architecture for Mixed-Precision LLM Inference on FPGA",
+      "reason": "整数・浮動小数・混合精度の積和演算を共通整数仮数積へ分解し、DSPを動的共有するFPGA演算器を提案。Xilinx U55cで演算密度1.4～2.0倍、LLM推論ワークロードで最大1.2倍高速化を評価し、推論ハードウェアに直接関連する。",
+      "source_url": "https://arxiv.org/abs/2605.06052",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.03599",
+      "identity_tokens": [
+        "arXiv:2412.03599"
+      ],
+      "title": "CPTQuant - A Novel Mixed Precision Post-Training Quantization Techniques for Large Language Models",
+      "reason": "層間相関、枝刈り感度、Taylor展開に基づいて層別ビット幅を割り当てるCMPQ・PMPQ・TDMPQを提案。BERTとOPT-125M～2.7Bで最大4倍圧縮・2倍効率改善を報告し、事後量子化によるLLM推論のメモリ・計算削減が主題。",
+      "source_url": "https://arxiv.org/abs/2412.03599",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 74
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01185",
+      "identity_tokens": [
+        "arXiv:2608.01185"
+      ],
+      "title": "3DZip: Spatial-Aware Feature Diversity-Guided Token Compression for 3D Question Answering",
+      "reason": "3D視覚言語モデルの幾何トークンを、粗ボクセル化、特徴多様性に基づくDPPアンカー選択、空間制約付き結合の3段階で圧縮。128トークンで元精度の94.7%を維持し推論1.92倍高速化を報告し、マルチモーダル推論のトークン削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2608.01185",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 75
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.03141",
+      "identity_tokens": [
+        "arXiv:2602.03141"
+      ],
+      "title": "Short Chains, Deep Thoughts: Balancing Reasoning Efficiency and Intra-Segment Capability via Split-Merge Optimization",
+      "reason": "思考系列の冗長区間を結合し論理的欠落を分割するCoSMoを用いて、セグメント予算に基づく強化学習を実施。生成区間数28.7%減と精度3.3ポイント改善を報告するが、中心寄与は学習時の構造整形と方策訓練で、テスト時推論基盤の直接最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2602.03141",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 101
+    }
+  ]
+}

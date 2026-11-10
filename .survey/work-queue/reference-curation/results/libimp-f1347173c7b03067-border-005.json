@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f1347173c7b03067-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3816440.3818586",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3816440.3818586",
+    "identity_tokens": [
+      "DOI:10.1145/3816440.3818586"
+    ],
+    "reason": "推論効率への関連性は残る一方、一次本文を取得できず評価条件・限界を確認できないため証拠不足としてborderline。",
+    "first_checked_at": "2026-10-05T09:05:35+00:00",
+    "last_checked_at": "2026-10-05T09:05:35+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
+    ],
+    "title": "HotBa: A Heterogeneous Mamba Accelerator with Δ-Guided Early Rejection for Speculative Decoding"
+  },
+  "processed_at": "2026-10-05T09:05:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f1347173c7b0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

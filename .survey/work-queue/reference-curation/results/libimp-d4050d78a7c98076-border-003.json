@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d4050d78a7c98076-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.13900",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.13900",
+    "identity_tokens": [
+      "arXiv:2608.13900"
+    ],
+    "reason": "一次本文のsemantic state memory、checkpoint/recovery/isolation設計とKramaBench実験を確認。DeltaBox lineageとの強い概念的一致はあるが、ACID-AgentはQwen条件でClaude Codeよりtask score改善と同時にcode stepsを増やし、token/cost効果はbackboneで混在する。",
+    "first_checked_at": "2026-10-05T21:28:44+00:00",
+    "last_checked_at": "2026-10-05T21:28:44+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Agentic Transaction: Towards ACID-Compliant Agent Systems"
+  },
+  "processed_at": "2026-10-05T21:28:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d4050d78a7c9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5ac38646f1b16e74-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.38201",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.38201",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2609.38201",
+      "arXiv:2609.38201"
+    ],
+    "reason": "LLMエージェント全体の待ち時間を投機的なツール実行で削減するruntime研究だが、モデル推論・KV・decode自体ではなくtool execution層が主対象なので境界扱い。",
+    "first_checked_at": "2026-10-02T10:58:57+00:00",
+    "last_checked_at": "2026-10-02T10:58:57+00:00",
+    "linked_from": [],
+    "title": "TomasuLLM: Out-of-Order Speculative Execution for LLM Agents"
+  },
+  "processed_at": "2026-10-02T10:58:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5ac38646f1b1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3b786df0a07965a4-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1007/s10278-026-02156-y",
+  "reason": "Automated deep learning-based segmentation is increasingly used in medical imaging to enable rapid biomarker extraction. Manual quality control (QC) of segmentation outputs remains standard prior to downstream analysis. In autosomal dominant polycystic kidney disease (ADPKD), reliable segmentation is essential for accurate total kidney volume measurement, a key biomarker for disease monitoring. We developed and evaluated a 3D deep learning model that classified MR volumes and their automated segmentation outputs into downstream Accept, Reject, and Rework categories. Criteria included scan quality, native kidney coverage, and segmentation accuracy. We used a patient-disjoint dataset of 10,749 abdominal MR scans (T2-weighted coronal series) across 5708 exams from 2717 patients with ADPKD for model development. Model training utilized 9549 scans, and performance was validated on a balanced set of 600 scans against manual labels. A final balanced holdout test set of 600 scans was used for evaluation. Across three reader-defined reference standards, DenseNet121 achieved macro F1-scores of 0.78, 0.80, and 0.86 with accuracies of 79%, 80%, and 86% for R1, R2, and R3, respectively. Combined false-Accept rates were 23.3%, 23.4%, and 12.7%, respectively. Model/reference-standard agreement approached observed reference-standard variability. Multiclass classification models are a promising approach to assess MR scans and corresponding automated segmentations for downstream analysis. Further refined and externally validated derivatives of this model could support (i) clinical triage after automated segmentation to focus radiologist effort on flagged cases and (ii) expedited data curation in research studies where scan/segmentation review presents a significant bottleneck.",
+  "title": "Downstream-Aware Automated QC of Images and AI-Generated Segmentations.",
+  "identity_tokens": [
+    "DOI:10.1007/s10278-026-02156-y"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b786df0a079",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-194ce87683ee1d5d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.07664",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.07664",
+    "identity_tokens": [
+      "arXiv:2609.07664"
+    ],
+    "reason": "PTQ divergence evaluation shows fidelity shifts alongside memory/accuracy; it is a diagnostic, not an inference optimization. Fidelity metric does not establish correctness/calibration and does not lower serving cost.",
+    "first_checked_at": "2026-10-05T03:10:26+00:00",
+    "last_checked_at": "2026-10-05T03:10:26+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs"
+  },
+  "processed_at": "2026-10-05T03:10:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-194ce87683ee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-0040-scheduled-chat-45/r01",
+  "reference_main_sha": "aec128fbafac529db8b6543dccd25e0b5164d822",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.05790",
+      "identity_tokens": [
+        "arXiv:2602.05790"
+      ],
+      "title": "Price of metric universality in vector quantization is at most 0.11 bit",
+      "reason": "LLMの重み専用量子化で入力共分散に適合するベクトル符号帳の代わりに、全ての入力統計に対してほぼ最適となる普遍符号帳の存在を証明する。ガウス重みで適応型とのレート差は次元当たり0.11ビット以下。ただし存在証明は非構成的で、実装可能な符号帳や実機推論高速化を示さないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2602.05790",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:52:24+09:00",
+      "last_checked_at": "2026-10-31T00:52:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 40,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.00574",
+      "identity_tokens": [
+        "arXiv:2508.00574"
+      ],
+      "title": "SynAdapt: Learning Adaptive Reasoning in Large Language Models via Synthetic Continuous Chain-of-Thought",
+      "reason": "離散的な思考連鎖トークン生成の時間費用を抑えるため、合成した連続思考表現を教師信号として整列させ、短い連続推論の後に難問判定器で再考するかを切り替える。生成時の思考トークン数と正答率の効率を直接最適化する推論方式。",
+      "source_url": "https://arxiv.org/abs/2508.00574",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:52:24+09:00",
+      "last_checked_at": "2026-10-31T00:52:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 45,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.21952",
+      "identity_tokens": [
+        "arXiv:2604.21952"
+      ],
+      "title": "Focus Session: Hardware and Software Techniques for Accelerating Multimodal Foundation Models",
+      "reason": "マルチモーダル基盤モデルの推論を対象に、階層対応の混合精度量子化・構造枝刈り、投機的復号、小型から大型へのモデルカスケード、演算融合、メモリ効率的注意、専用アクセラレータを統合するハードウェア・ソフトウェア協調最適化の方法論を提示する。医療MFMとコード生成での適用を述べるが、各機構の独立した実機効果はResearchで要確認。",
+      "source_url": "https://arxiv.org/abs/2604.21952",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:52:24+09:00",
+      "last_checked_at": "2026-10-31T00:52:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 48,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.11152",
+      "identity_tokens": [
+        "arXiv:2608.11152"
+      ],
+      "title": "Scheduling Mixed RL Rollouts Beyond Prefix Locality",
+      "reason": "RLHF・RLVR・エージェントの異種rolloutを共有する非同期LLM推論サービスで、prefix hit率だけでは制御できないKV常駐時間と容量競合を解決するMISA-Tを提案。適応的セッション受入れ、負荷別KV容量配分、常駐時間を考慮した課金により、Step3.7とQwen3.6-35B-A3Bのrolloutスループットを比較対象より53.3%・43.6%改善したと報告。学習用rolloutだが技術貢献は推論サービングのスケジューラにある。",
+      "source_url": "https://arxiv.org/abs/2608.11152",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:52:24+09:00",
+      "last_checked_at": "2026-10-31T00:52:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 74,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22101",
+      "identity_tokens": [
+        "arXiv:2601.22101"
+      ],
+      "title": "ECO: Quantized Training without Full-Precision Master Weights",
+      "reason": "FP8/INT4学習時の高精度master weightsを除去し、量子化誤差をoptimizer momentumへ戻す誤差補償で学習メモリを削減する研究。評価はTransformer・Gemma・Sparse MoEの事前学習と微調整であり、推論時の実行機構、サービング、KV管理、推論速度の直接的改善を提案・評価していないため、現在凍結された学習単独範囲として除外。",
+      "source_url": "https://arxiv.org/abs/2601.22101",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:52:24+09:00",
+      "last_checked_at": "2026-10-31T00:52:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 81,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.28691",
+      "identity_tokens": [
+        "arXiv:2605.28691"
+      ],
+      "title": "OSP-Next: Efficient High-Quality Video Generation with Sparse Sequence Parallelism, HiF8 Quantization, and Reinforcement Learning",
+      "reason": "動画生成用Diffusion TransformerにSkiparse-2D疎注意、All-to-All一回で疎パターンを切り替えるSparse Sequence Parallelism、HiF8量子化を組み合わせる。系列並列の通信量75%削減とH200等での生成高速化を報告するが、対象は動画拡散モデルでLLM推論への直接評価はない。汎用注意・通信最適化との接点があるため境界候補。",
+      "source_url": "https://arxiv.org/abs/2605.28691",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:52:24+09:00",
+      "last_checked_at": "2026-10-31T00:52:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 161,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.00557",
+      "identity_tokens": [
+        "arXiv:2504.00557"
+      ],
+      "title": "Efficient LLaMA-3.2-Vision by Trimming Cross-attended Visual Features",
+      "reason": "LLaMA-3.2-Visionの交差注意層で画像トークン由来KVがテキスト自己注意KVより大きい点を測定し、交差注意行列の疎性に基づいて冗長な視覚特徴を選択的に削除する。追加学習なしで視覚特徴を50%削減し、精度を概ね保ったまま推論レイテンシとKVメモリを削減する直接的なVLM推論最適化。",
+      "source_url": "https://arxiv.org/abs/2504.00557",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:52:24+09:00",
+      "last_checked_at": "2026-10-31T00:52:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 168,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.00399",
+      "identity_tokens": [
+        "arXiv:2510.00399"
+      ],
+      "title": "How Can Mamba Learn In Context with Outliers and Generalize Provably?",
+      "reason": "1層Mambaの線形注意と非線形ゲートについて、外れ値を含む入力例からのin-context learningと学習収束・一般化を理論解析する。Mambaの計算効率には言及するが、主貢献は分類タスクでの学習ダイナミクスと外れ値耐性の証明であり、推論ランタイムや圧縮・サービングの新規最適化はないため対象外。",
+      "source_url": "https://arxiv.org/abs/2510.00399",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:52:24+09:00",
+      "last_checked_at": "2026-10-31T00:52:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 169,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.06738",
+      "identity_tokens": [
+        "arXiv:2603.06738"
+      ],
+      "title": "Rank-Factorized Implicit Neural Bias: Scaling Super-Resolution Transformer with FlashAttention",
+      "reason": "超解像Transformerの相対位置バイアスを低ランク暗黙表現とチャネル連結に置換し、注意スコアの加算を内積化してFlashAttentionカーネルを利用可能にする。超解像で推論時間2.9倍改善と報告するが、LLM推論では未評価。一般的な注意カーネル互換化の設計は参考になるため境界候補。",
+      "source_url": "https://arxiv.org/abs/2603.06738",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:52:24+09:00",
+      "last_checked_at": "2026-10-31T00:52:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 187,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20643",
+      "identity_tokens": [
+        "arXiv:2505.20643"
+      ],
+      "title": "Can Past Experience Accelerate LLM Reasoning?",
+      "reason": "過去に解いた類似問題の経験をメモリとして再利用し、課題関連性と計算予算に応じて推論計算を適応配分するSpeedupLLMを提案。記憶方式・推論方式・質問類似度を変えて評価し、適切な構成では推論計算費用を最大56%削減したと報告。推論時の計算割当と履歴再利用を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2505.20643",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:52:24+09:00",
+      "last_checked_at": "2026-10-31T00:52:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 196,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

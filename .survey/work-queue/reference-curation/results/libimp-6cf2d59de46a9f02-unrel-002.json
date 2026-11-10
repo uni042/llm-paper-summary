@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6cf2d59de46a9f02-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:xtaX3WyCj1",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:xtaX3WyCj1",
+    "identity_tokens": [
+      "OpenReview:xtaX3WyCj1",
+      "arXiv:2306.01708"
+    ],
+    "reason": "複数のタスク別微調整モデルを追加学習なしで統合するモデルマージ手法であり、推論時のメモリ・サービング・カーネル・スケジューリングの効率化を主目的としない。",
+    "first_checked_at": "2026-09-30T01:46:01+00:00",
+    "last_checked_at": "2026-10-03T18:48:53+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      ".survey/work-queue/worker-worklist-30.json",
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2410.08589-hc-smoe-retraining-free-merging.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md"
+    ],
+    "title": "TIES-Merging: Resolving Interference When Merging Models"
+  },
+  "processed_at": "2026-10-03T18:48:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6cf2d59de46a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

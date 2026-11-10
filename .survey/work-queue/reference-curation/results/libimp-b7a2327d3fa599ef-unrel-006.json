@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7a2327d3fa599ef-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.16588",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.16588",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2309.16588",
+      "arXiv:2309.16588"
+    ],
+    "reason": "視覚Transformerのartifactを追加register tokenで改善するコンピュータビジョンのモデル設計研究で、LLM推論効率化ではない。",
+    "first_checked_at": "2026-10-02T10:54:03+00:00",
+    "last_checked_at": "2026-10-02T10:54:03+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2507.23279-super-experts-pruning-sensitivity.md"
+    ],
+    "title": "Vision Transformers Need Registers"
+  },
+  "processed_at": "2026-10-02T10:54:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7a2327d3fa5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

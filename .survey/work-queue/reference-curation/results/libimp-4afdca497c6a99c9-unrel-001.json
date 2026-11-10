@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4afdca497c6a99c9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.08730",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.08730",
+    "identity_tokens": [
+      "arXiv:2605.08730"
+    ],
+    "reason": "一次要旨の対象は分類モデルのクラス単位機械アンラーニングであり、最終分類ヘッドのバイアス操作による忘却指標の抜け道と、TS-BGRM/LB-HRおよびバイアス評価指標を提案する。CIFAR-10/100、Tiny-ImageNetの分類評価が中心で、生成LLM推論・サービング効率化への直接的貢献はない。worklist記載の「Compute-Aware MoE Distillation for Efficient Inference」と一次書誌が一致しないため、誤identityのResearchを回避する。",
+    "first_checked_at": "2026-10-29T20:46:21+00:00",
+    "last_checked_at": "2026-10-29T20:46:21+00:00",
+    "linked_from": [],
+    "title": "Classification-Head Bias in Class-Level Machine Unlearning: Diagnosis, Mitigation, and Evaluation"
+  },
+  "processed_at": "2026-10-29T20:46:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4afdca497c6a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

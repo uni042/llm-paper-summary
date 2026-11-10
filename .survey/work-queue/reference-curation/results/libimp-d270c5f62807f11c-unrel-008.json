@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d270c5f62807f11c-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2007.01045",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2007.01045",
+    "identity_tokens": [
+      "arXiv:2007.01045"
+    ],
+    "reason": "data parallelismとpipeline parallelismを組み合わせる大規模DNN training frameworkで、planner/runtimeによりtraining throughputとtraining memoryを改善する。最終適用先が学習専用。",
+    "first_checked_at": "2026-10-05T02:04:35+00:00",
+    "last_checked_at": "2026-10-05T15:55:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md"
+    ],
+    "title": "DAPPLE: A Pipelined Data Parallel Approach for Training Large Models"
+  },
+  "processed_at": "2026-10-05T15:55:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d270c5f62807",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

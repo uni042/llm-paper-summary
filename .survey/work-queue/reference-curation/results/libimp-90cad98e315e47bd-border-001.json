@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-90cad98e315e47bd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.16249",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.16249",
+    "identity_tokens": [
+      "arXiv:2502.16249"
+    ],
+    "reason": "Potential architecture background is adjacent; no direct autoregressive LLM deployment evidence was established in the checked main sections.",
+    "first_checked_at": "2026-10-05T15:15:50+00:00",
+    "last_checked_at": "2026-10-05T15:15:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Linear Attention for Efficient Bidirectional Sequence Modeling"
+  },
+  "processed_at": "2026-10-05T15:15:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90cad98e315e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

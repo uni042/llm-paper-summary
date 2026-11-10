@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-35130f55822acaec-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2205.08084",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2205.08084",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2205.08084",
+      "arXiv:2205.08084"
+    ],
+    "reason": "M6を産業用推薦の検索・順位付け・説明生成へ適応する研究。要旨には多区間の遅延相互作用、早期終了、パラメータ共有、枝刈りによる推論時間とモデル規模の削減があるため、単純な対象外とはしない。一方、主たる新規性・評価対象は推薦アプリケーションと省データ適応であり、汎用LLMサービングの処理量・KV管理・GPU実行を直接評価したことは要旨から確認できないため、収録可否は保留。",
+    "first_checked_at": "2026-10-16T17:49:37+00:00",
+    "last_checked_at": "2026-10-22T15:48:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
+  },
+  "processed_at": "2026-10-22T15:48:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-35130f55822a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

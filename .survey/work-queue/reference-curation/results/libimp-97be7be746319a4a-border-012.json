@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-97be7be746319a4a-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.16458",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.16458",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.16458",
+      "SemanticScholar:56f2a76a6a85b054e99010c8fa3b8758d9e946d9",
+      "arXiv:2606.16458"
+    ],
+    "reason": "RHO reports fewer tool calls and shorter wall-clock time for a coding agent controlling a robot. This is a system-level agent efficiency signal, but the abstract does not isolate model inference cost or establish general serving/runtime improvements.",
+    "first_checked_at": "2026-10-13T16:56:11+00:00",
+    "last_checked_at": "2026-10-13T16:56:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "RHO: Your Coding Agent is Secretly a Roboticist"
+  },
+  "processed_at": "2026-10-13T16:56:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-97be7be74631",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

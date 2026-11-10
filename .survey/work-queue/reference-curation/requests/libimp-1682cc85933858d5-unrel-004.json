@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1682cc85933858d5-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2606.30634",
+  "reason": "Primary abstract reviewed: Modern large-scale LLM pretraining benefits from utilizing Pipeline Parallelism; however, synchronous implementations leave GPUs idle during pipeline bubbles, wasting computational resources. Asynchronous Pipeline Parallelism eliminates these bubbles, maximizing throughput at the cost of gradient staleness. Among asynchronous schedules, PipeDream-2BW is particularly appealing: unlike the original PipeDream schedule, it ensures a constant one-step gradient delay regardless of  [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+  "title": "One-Step Gradient Delay is Not a Barrier for Large-Scale Asynchronous Pipeline Parallel LLM Pretraining",
+  "identity_tokens": [
+    "arXiv:2606.30634"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+    "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1682cc859338",
+  "source_precheck_request_id": null
+}

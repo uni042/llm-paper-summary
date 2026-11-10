@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa2e8f6819d0d2be-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.12754",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.12754",
+    "identity_tokens": [
+      "arXiv:2609.12754"
+    ],
+    "reason": "一次要旨: Data-product discovery searches a full lake even when workloads revisit related products and regions. Repetition permits contracted search, but similarity cannot justify a route because one omitted asset invalidates a conjunctive product. We study when serving experience can safely reduce this work. Evolving Discovery Memory records source-labelled query--product--region evidence above a fixed regional index. SafeLak",
+    "first_checked_at": "2026-10-05T06:54:06+00:00",
+    "last_checked_at": "2026-10-05T06:54:06+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md"
+    ],
+    "title": "Learning the Lake: Reliable Experience for Adaptive Data Product Discovery"
+  },
+  "processed_at": "2026-10-05T06:54:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa2e8f6819d0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

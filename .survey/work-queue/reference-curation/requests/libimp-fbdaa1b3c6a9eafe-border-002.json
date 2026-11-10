@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-fbdaa1b3c6a9eafe-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.32825",
+  "reason": "stage間情報損失を評価しre-groundingで精度回復するが、総token中央値1.17倍となりcompute-matched対照もない。pipeline設計との接点はあるが改善されたinference効率の証拠ではない。",
+  "title": "The Decomposition Tax: LLM Pipelines Lose Up to 40 Accuracy Points at Their Own Interfaces",
+  "identity_tokens": [
+    "arXiv:2609.32825"
+  ],
+  "linked_from": [
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbdaa1b3c6a9",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

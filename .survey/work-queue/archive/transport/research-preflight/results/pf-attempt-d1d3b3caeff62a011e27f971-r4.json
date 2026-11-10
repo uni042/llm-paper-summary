@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-d1d3b3caeff62a011e27f971-r4",
+  "kind": "research",
+  "attempt_id": "attempt-d1d3b3caeff62a011e27f971",
+  "job_id": "job-research-b0919b5b9aea285a",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": true,
+  "repair_required": false,
+  "decision": "READY_FOR_SUBMISSION",
+  "descriptor_sha256": "sha256:f4f95f20fd2762b3c5af0f9d36abe3dc7cee6e617feac43613be29659c18c9e1",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "ea5d5d7beedbf000f5e1534cd39ddde9c0124f5d"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "4ef2624024f8e39015d4ceb8b5dc793380ed8397"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "839fca349284dca997ffd94e5f1c1d6df2ec3f33"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "744d7d465cbf75c4c43e6234e6d784459b511ec6"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "2228b62ec57bc2de8afaafc40b8e35766b275fb2"
+    }
+  ],
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md",
+    "status": "PASS",
+    "file_bytes": 24958,
+    "prose_chars": 7271,
+    "paragraphs": 34,
+    "method_paragraphs": 17,
+    "method_components": 8,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.8411074330424315,
+    "japanese_chars": 5590,
+    "latin_chars": 1056,
+    "bare_english_terms": [],
+    "failures": [],
+    "warnings": []
+  },
+  "checked_at": "2026-09-22T12:06:40+00:00",
+  "next_action": "Create .survey/work-queue/completed-submission-requests/<attempt_id>.json and set preflight_result to this exact result path. Do not edit any record slot after this check; if a slot changes, run a new preflight first."
+}

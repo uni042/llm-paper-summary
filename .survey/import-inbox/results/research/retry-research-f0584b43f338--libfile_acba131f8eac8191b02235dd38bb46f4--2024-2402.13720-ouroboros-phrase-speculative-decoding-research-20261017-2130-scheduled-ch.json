@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "acc48a2d8ea421ec50f383ec3731d3488cc4c8c5dca894f8fbd3265f4087ad43",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f0584b43f338--libfile_acba131f8eac8191b02235dd38bb46f4--2024-2402.13720-ouroboros-phrase-speculative-decoding-research-20261017-2130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2402.13720",
+  "worker_completed_at": "2026-10-17T21:30:00+09:00",
+  "worker_run_key": "20261017-2130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5238,
+    "body_paragraphs": 32,
+    "method_chars": 1322,
+    "method_paragraphs": 8,
+    "evaluation_chars": 276,
+    "limitation_chars": 650,
+    "insufficiency_flags": [
+      "評価説明量 276 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 276 < 500",
+    "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2024-2402.13720-ouroboros-generating-longer-drafts-phrase-by-phrase-for-faster-speculati.md と 12 段落 / 2745文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T17:35:10+00:00"
+}

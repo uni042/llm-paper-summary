@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e602c759602eee18-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.15017",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.15017",
+    "identity_tokens": [
+      "65f20ab2481203e3699792d1f00a78df14ee95a8",
+      "DOI:10.48550/arxiv.2407.15017",
+      "SemanticScholar:65f20ab2481203e3699792d1f00a78df14ee95a8",
+      "arXiv:2407.15017"
+    ],
+    "reason": "Surveys LLM knowledge mechanisms and knowledge evolution, not inference-system efficiency.",
+    "first_checked_at": "2026-10-14T13:11:26+00:00",
+    "last_checked_at": "2026-10-14T13:11:26+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md",
+      "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+    ],
+    "title": "Knowledge Mechanisms in Large Language Models: A Survey and Perspective"
+  },
+  "processed_at": "2026-10-14T13:11:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e602c759602e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

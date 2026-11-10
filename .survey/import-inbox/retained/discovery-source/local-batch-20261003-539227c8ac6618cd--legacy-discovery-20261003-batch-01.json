@@ -1,0 +1,980 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "legacy-local-migration",
+  "run_key": "legacy-discovery-20261003-batch-01",
+  "reference_main_sha": "884b5fad4638d8fba245e4b0715e035d74704f8d",
+  "record_count": 60,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1701.06538",
+      "identity_tokens": [
+        "OpenReview:B1ckMDqlg",
+        "arXiv:1701.06538"
+      ],
+      "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+      "reason": "一次本文はsparse gatingで1例当たりの計算を減らす条件付き計算を示す。一方、2017年のLSTM言語モデル・機械翻訳で最大137B parameterの容量を扱う基礎モデル研究であり、現代LLM推論配信の独立システム評価ではない。既存のborderline台帳の正規identityに一致するため再追加しない。",
+      "source_url": "https://arxiv.org/html/1701.06538",
+      "body_check": "status=primary_full_text_relevant_sections_reviewed; reviewed_sections=Abstract, §1.1 Conditional Computation, §1.2 Our Approach, §2 Mixture-of-Experts layer, §3 Addressing Performance Challenges, §5 Experiments; source_ranges=lines 81-88, lines 100-119, lines 126-157, lines 182-211; confirmed=著者はper-example sparse expert selectionにより計算を節約すると明記するが、本文の主適用はLSTMベースの言語モデリング・翻訳。実験も1-billion-word言語モデル、Google News言語モデル、翻訳ベンチマーク。現行borderline ledger reason: 「MoEの基礎的モデル／学習手法が中心。分散実装・通信帯域・負荷分散の議論はあるが、LLMシステム最適化への直接寄与は限定的。」",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-01/ready/20260927-u-wave3-17-25-b1a672/manifest.json#candidate[1]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1712.05889",
+      "identity_tokens": [
+        "arXiv:1712.05889"
+      ],
+      "title": "Ray: A Distributed Framework for Emerging AI Applications",
+      "reason": "Ray is a general-purpose distributed framework for interactive AI applications. The paper's conclusion notes a training/serving/simulation loop, but the motivating applications and reported evaluation focus on reinforcement-learning workloads and distributed task throughput (up to 1.8 million tasks/s), not LLM inference or LLM-serving efficiency. General framework applicability alone does not establish the required LLM-inference focus, so this is unrelated to the assigned scope.",
+      "source_url": "https://arxiv.org/html/1712.05889",
+      "body_check": "review_scope=Full primary arXiv HTML: task/actor programming model, scheduler and control store, workload evaluation, limitations and conclusion.; evidence=Ray is a general-purpose distributed framework for interactive AI applications. The paper's conclusion notes a training/serving/simulation loop, but the motivating applications and reported evaluation focus on reinforcement-learning workloads and distributed task throughput (up to 1.8 million tasks/s), not LLM inference or LLM-serving efficiency. General framework applicability alone does not establish the required LLM-inference focus, so this is unrelated to the assigned scope.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[3]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.08053",
+      "identity_tokens": [
+        "arXiv:1909.08053"
+      ],
+      "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+      "source_url": "https://arxiv.org/abs/1909.08053",
+      "reason": "The primary source explicitly presents an intra-layer model-parallel method for training large Transformer models; experiments train models up to 8.3B parameters using 512 NVIDIA V100 GPUs (§1, §3-5). Its 15.1 PFLOP/s application throughput and 76% scaling efficiency describe distributed training. The conclusion's future work remains larger-scale pretraining and optimizer memory efficiency (§6). No inference-time efficiency method or evaluation is presented in the reviewed paper.",
+      "body_check": "arXiv metadata and full HTML: abstract, model-parallel method, setup, training experiments, scaling results, and conclusion/future work.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[3]"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1911.02972",
+      "identity_tokens": [
+        "arXiv:1911.02972"
+      ],
+      "title": "Blockwise Self-Attention for Long Document Understanding",
+      "reason": "BlockBERT replaces dense self-attention with blockwise sparse attention and reports 27.8% lower inference time than RoBERTa at batch 8 and sequence length 1,024, with comparable QA accuracy. The evidence is for encoder-only BERT-family models and long-document QA rather than decoder-only LLM generation or serving. The attention idea is adjacent and potentially transferable, but the evaluated workload is outside core LLM inference, so it is retained as borderline.",
+      "source_url": "https://arxiv.org/html/1911.02972",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: BlockBERT blockwise sparse attention, BERT/RoBERTa training and question-answering experiments, inference-time memory and latency evaluation, ablation and conclusion.; evidence=BlockBERT replaces dense self-attention with blockwise sparse attention and reports 27.8% lower inference time than RoBERTa at batch 8 and sequence length 1,024, with comparable QA accuracy. The evidence is for encoder-only BERT-family models and long-document QA rather than decoder-only LLM generation or serving. The attention idea is adjacent and potentially transferable, but the evaluated workload is outside core LLM inference, so it is retained as borderline.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[5]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2008.12260",
+      "identity_tokens": [
+        "arXiv:2008.12260"
+      ],
+      "title": "Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning",
+      "reason": "Pollux is explicitly a deep-learning cluster scheduler that jointly tunes resources, batch sizes and learning rates for distributed DL training jobs. Its goodput metric combines training system throughput and statistical efficiency; the experiments and conclusion address training-job scheduling, not LLM inference or serving. Excluded under the training-only scope rule.",
+      "source_url": "https://arxiv.org/html/2008.12260",
+      "body_check": "review_scope=Full primary arXiv HTML: goodput objective, adaptive training-job resource allocation, testbed and simulator results, conclusion.; evidence=Pollux is explicitly a deep-learning cluster scheduler that jointly tunes resources, batch sizes and learning rates for distributed DL training jobs. Its goodput metric combines training system throughput and statistical efficiency; the experiments and conclusion address training-job scheduling, not LLM inference or serving. Excluded under the training-only scope rule.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[2]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2010.13887",
+      "identity_tokens": [
+        "arXiv:2010.13887"
+      ],
+      "title": "LightSeq: A High Performance Inference Library for Sequence Processing and Generation",
+      "reason": "LightSeq is an inference library for Transformer-family sequence generation that fuses GPU kernels, accelerates autoregressive/beam search, and reuses dynamic GPU memory. It reports up to 14x speedup over TensorFlow and 1.4x over FasterTransformer on machine-translation benchmarks; text-generation results are also compared. This is directly an inference performance library.",
+      "source_url": "https://arxiv.org/html/2010.13887",
+      "body_check": "review_scope=Full primary arXiv HTML: inference-library design and GPU optimizations, memory reuse, generation/translation performance, comparisons and conclusion.; evidence=LightSeq is an inference library for Transformer-family sequence generation that fuses GPU kernels, accelerates autoregressive/beam search, and reuses dynamic GPU memory. It reports up to 14x speedup over TensorFlow and 1.4x over FasterTransformer on machine-translation benchmarks; text-generation results are also compared. This is directly an inference performance library.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave4/manifest.json#candidate[6]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.03961",
+      "identity_tokens": [
+        "arXiv:2101.03961"
+      ],
+      "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+      "reason": "Switch Transformers use sparse expert routing with roughly constant FLOPs per token, but the paper's main goal and measured speedups are pretraining scalability and training stability (up to 7x pretraining speed in its abstract). The manuscript evaluates training/fine-tuning quality and training regimes, not inference-serving efficiency or inference-time optimization. Under the workflow's training-only exclusion it is unrelated.",
+      "source_url": "https://arxiv.org/html/2101.03961",
+      "body_check": "review_scope=Full primary arXiv HTML: sparse MoE routing/model design, pretraining and fine-tuning results, scaling, discussion and conclusion.; evidence=Switch Transformers use sparse expert routing with roughly constant FLOPs per token, but the paper's main goal and measured speedups are pretraining scalability and training stability (up to 7x pretraining speed in its abstract). The manuscript evaluates training/fine-tuning quality and training regimes, not inference-serving efficiency or inference-time optimization. Under the workflow's training-only exclusion it is unrelated.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[2]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.06840",
+      "identity_tokens": [
+        "arXiv:2101.06840"
+      ],
+      "title": "ZeRO-Offload: Democratizing Billion-Scale Model Training",
+      "reason": "ZeRO-Offload places optimizer states and computation on CPU to make billion-parameter DNN training feasible with a single GPU. The paper's stated goal and measured speedups concern model training and training throughput; it does not optimize LLM inference or serving. Excluded under the workflow's training-process-only rule.",
+      "source_url": "https://arxiv.org/html/2101.06840",
+      "body_check": "review_scope=Full primary arXiv HTML/PDF: offload design, optimizer and gradient placement, training throughput evaluation, discussion and conclusion.; evidence=ZeRO-Offload places optimizer states and computation on CPU to make billion-parameter DNN training feasible with a single GPU. The paper's stated goal and measured speedups concern model training and training throughput; it does not optimize LLM inference or serving. Excluded under the workflow's training-process-only rule.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[0]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.01611",
+      "identity_tokens": [
+        "arXiv:2109.01611"
+      ],
+      "title": "Multi-model Machine Learning Inference Serving with GPU Spatial Partitioning",
+      "reason": "The paper presents a general multi-model machine-learning inference server and evaluates it on GoogLeNet, LeNet, ResNet-50, SSD-MobileNet and VGG-16, including image/game/traffic workloads. Its gpu-let spatial partitioning improves throughput for these classical ML models, but the primary paper does not target LLM inference, LLM serving, or LLM-specific memory/compute costs. It is outside this LLM-inference-focused scope.",
+      "source_url": "https://arxiv.org/html/2109.01611",
+      "body_check": "review_scope=Full primary arXiv HTML: SLO-aware GPU partitioning and scheduler, model/application benchmarks, throughput and SLO evaluation, conclusion.; evidence=The paper presents a general multi-model machine-learning inference server and evaluates it on GoogLeNet, LeNet, ResNet-50, SSD-MobileNet and VGG-16, including image/game/traffic workloads. Its gpu-let spatial partitioning improves throughput for these classical ML models, but the primary paper does not target LLM inference, LLM serving, or LLM-specific memory/compute costs. It is outside this LLM-inference-focused scope.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[7]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.03888",
+      "identity_tokens": [
+        "arXiv:2110.03888"
+      ],
+      "title": "M6-10T: A Sharing-Delinking Paradigm for Efficient Multi-Trillion Parameter Pretraining",
+      "reason": "The paper's method, system design and reported result are about pretraining: Pseudo-to-Real cross-layer sharing/delinking and CPU offloading enable a 10-trillion-parameter model to be pretrained on 512 GPUs over 10 days. It does not evaluate inference-time efficiency, inference serving or decoding. Training efficiency is outside the requested inference-focused scope.",
+      "source_url": "https://arxiv.org/html/2110.03888",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: Pseudo-to-Real parameter sharing/delinking, training-stage memory/offloading design, pretraining and downstream evaluations, 10-trillion-parameter training case and conclusion.; evidence=The paper's method, system design and reported result are about pretraining: Pseudo-to-Real cross-layer sharing/delinking and CPU offloading enable a 10-trillion-parameter model to be pretrained on 512 GPUs over 10 days. It does not evaluate inference-time efficiency, inference serving or decoding. Training efficiency is outside the requested inference-focused scope.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[4]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.14895",
+      "identity_tokens": [
+        "arXiv:2110.14895"
+      ],
+      "title": "Pipeline Parallelism for Inference on Heterogeneous Edge Computing",
+      "reason": "EdgePipe is an inference system for large deep neural networks split across heterogeneous edge devices, but its empirical evaluation focuses on image-classification/computer-vision models including ViT-Base, ViT-Large and ViT-Huge, with throughput measured in images per second. The primary paper does not evaluate LLM or language-model serving, KV state, or text generation. Its generic inference partitioning is outside this LLM-inference candidate scope.",
+      "source_url": "https://arxiv.org/pdf/2110.14895",
+      "body_check": "review_scope=Full primary 12-page arXiv PDF reviewed: EdgePipe partitioning for heterogeneous edge devices, evaluation workloads and device setups, throughput results and conclusion.; evidence=EdgePipe is an inference system for large deep neural networks split across heterogeneous edge devices, but its empirical evaluation focuses on image-classification/computer-vision models including ViT-Base, ViT-Large and ViT-Huge, with throughput measured in images per second. The primary paper does not evaluate LLM or language-model serving, KV state, or text generation. Its generic inference partitioning is outside this LLM-inference candidate scope.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave10/manifest.json#candidate[2]"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2201.11903",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2201.11903",
+        "arXiv:2201.11903"
+      ],
+      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+      "reason": "Chain-of-Thought prompting is performed at inference and improves reasoning accuracy by adding intermediate generated reasoning steps. The primary paper evaluates task accuracy, not inference serving, runtime efficiency, or memory/compression; longer reasoning can increase token generation. It is adjacent to inference-time methods but does not establish an inference-efficiency contribution, so retain as borderline rather than treating it as an in-scope systems paper.",
+      "source_url": "https://arxiv.org/html/2201.11903",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: prompt-time chain-of-thought method, arithmetic/commonsense/symbolic task evaluations, computational-resource notes and conclusion.; evidence=Chain-of-Thought prompting is performed at inference and improves reasoning accuracy by adding intermediate generated reasoning steps. The primary paper evaluates task accuracy, not inference serving, runtime efficiency, or memory/compression; longer reasoning can increase token generation. It is adjacent to inference-time methods but does not establish an inference-efficiency contribution, so retain as borderline rather than treating it as an in-scope systems paper.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[8]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.08906",
+      "identity_tokens": [
+        "arXiv:2202.08906"
+      ],
+      "title": "ST-MoE",
+      "reason": "The primary title is ST-MoE: Designing Stable and Transferable Sparse Expert Models. Its abstract and main sections focus on training instabilities, transfer/fine-tuning quality and scaling a 269B sparse model; the paper reports a 4x pretraining speedup as context but does not study inference-serving efficiency. Its central contribution is sparse-model training stability and transfer, so it is outside the inference-efficiency scope.",
+      "source_url": "https://arxiv.org/html/2202.08906",
+      "body_check": "review_scope=Full primary arXiv HTML: sparse-model stability design, fine-tuning transfer results, expert routing, discussion and conclusion.; evidence=The primary title is ST-MoE: Designing Stable and Transferable Sparse Expert Models. Its abstract and main sections focus on training instabilities, transfer/fine-tuning quality and scaling a 269B sparse model; the paper reports a 4x pretraining speedup as context but does not study inference-serving efficiency. Its central contribution is sparse-model training stability and transfer, so it is outside the inference-efficiency scope.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[9]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2206.01861",
+      "identity_tokens": [
+        "arXiv:2206.01861"
+      ],
+      "title": "ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers",
+      "reason": "ZeroQuant is an end-to-end quantization and inference pipeline combining hardware-friendly weight/activation quantization, affordable layerwise distillation and backend support to reduce quantization overhead. It reports INT8 inference gains up to 5.19x on BERT, 3.67x on GPT-J-6B, and reduced GPT-NeoX-20B latency from 65 ms to 25 ms while reducing inference GPUs from two to one. This directly optimizes model serving performance and memory.",
+      "source_url": "https://arxiv.org/html/2206.01861",
+      "body_check": "review_scope=Full primary arXiv HTML: PTQ scheme, layerwise distillation, optimized kernels/backend, quality/memory/latency evaluation, limitations and conclusion.; evidence=ZeroQuant is an end-to-end quantization and inference pipeline combining hardware-friendly weight/activation quantization, affordable layerwise distillation and backend support to reduce quantization overhead. It reports INT8 inference gains up to 5.19x on BERT, 3.67x on GPT-J-6B, and reduced GPT-NeoX-20B latency from 65 ms to 25 ms while reducing inference GPUs from two to one. This directly optimizes model serving performance and memory.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[6]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2208.07339",
+      "identity_tokens": [
+        "arXiv:2208.07339"
+      ],
+      "title": "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale",
+      "reason": "行列積を8-bit化して大規模Transformerの推論memory footprintを削減する方式。本文はinference memoryを半減、BLOOM-176Bで1.96×削減を報告し、175B級checkpointをconsumer GPU環境で実行可能にする。速度向上は全体的に保証されず、小規模モデルではdequantization等によりslowdownする点を明示。",
+      "source_url": "https://arxiv.org/html/2208.07339",
+      "body_check": "status=primary_full_text_partial_review; reviewed_sections=Abstract, §2 Method, §5 Limitations, Appendix A, Appendix D Inference Speedups and Slowdowns; source_ranges=lines 46-53, lines 105-106, lines 208-213, lines 396-407, lines 439-446; confirmed=本文要旨は推論memoryを半減し、qualityを維持する8-bit methodと述べる。BLOOM-176Bのmemory footprint 1.96×削減。Appendix DはInt8 kernelの利点が十分なmatrix saturation (model dimension >=4096) に限られ、quantize/dequantize overheadとmixed-precision decompositionで小さいモデルを遅くし、speedupは13B/175Bのみと明記。",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-01/working/20260927-u-wave2/ready/20260927-u-wave2-17-25-b06777/manifest.json#candidate[2]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2209.01188",
+      "identity_tokens": [
+        "arXiv:2209.01188"
+      ],
+      "title": "Petals: Collaborative Inference and Fine-tuning of Large Models",
+      "reason": "Petals serves very large models collaboratively over heterogeneous participant resources, using 8-bit compression, server load balancing and low-latency client routing. It reports collaborative BLOOM-176B inference on consumer GPUs at approximately one step per second and states it outperforms RAM offloading for very large models. The work's direct subject includes collaborative LLM inference availability and latency.",
+      "source_url": "https://arxiv.org/html/2209.01188",
+      "body_check": "review_scope=Full primary arXiv HTML: distributed model-serving architecture, communication compression, load balancing and routing, benchmarks, limitations and conclusion.; evidence=Petals serves very large models collaboratively over heterogeneous participant resources, using 8-bit compression, server load balancing and low-latency client routing. It reports collaborative BLOOM-176B inference on consumer GPUs at approximately one step per second and states it outperforms RAM offloading for very large models. The work's direct subject includes collaborative LLM inference availability and latency.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[3]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.12924",
+      "identity_tokens": [
+        "arXiv:2210.12924"
+      ],
+      "title": "OLLA: Optimizing the Lifetime and Location of Arrays to Reduce the Memory Usage of Neural Networks",
+      "reason": "OLLA formulates tensor lifetime and placement optimization to reduce neural-network memory, but the abstract and conclusion frame the method around training models and its experiments measure training memory/runtime. Inference is mentioned in related work, not evaluated as OLLA's target. The main reported 30.4%/36.1% peak-memory reduction is for training workloads, so this is outside the inference-efficiency scope.",
+      "source_url": "https://arxiv.org/html/2210.12924",
+      "body_check": "review_scope=Full primary arXiv HTML: memory lifetime/location optimization formulation, experiments, training performance and conclusion; inference mentions were checked.; evidence=OLLA formulates tensor lifetime and placement optimization to reduce neural-network memory, but the abstract and conclusion frame the method around training models and its experiments measure training memory/runtime. Inference is mentioned in related work, not evaluated as OLLA's target. The main reported 30.4%/36.1% peak-memory reduction is for training workloads, so this is outside the inference-efficiency scope.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[4]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2211.10017",
+      "identity_tokens": [
+        "arXiv:2211.10017"
+      ],
+      "title": "Who Says Elephants Can't Run: Bringing Large Scale MoE Models into Cloud Scale Production",
+      "reason": "The paper presents an MoE inference framework combining optimized kernels, routing and low-bit expert weights. It reports up to 26× throughput speedup over its PyTorch baseline and reduces model size to nearly one eighth of FP32 through 4-bit expert-weight quantization. The final focus is production inference serving of larger MoE models, making inference efficiency its direct objective.",
+      "source_url": "https://arxiv.org/html/2211.10017",
+      "body_check": "review_scope=Full primary arXiv HTML: inference framework/kernels, expert quantization, routing/batching optimizations, latency-throughput and deployment-cost results, concluding discussion (§§1–5).; evidence=The paper presents an MoE inference framework combining optimized kernels, routing and low-bit expert weights. It reports up to 26× throughput speedup over its PyTorch baseline and reduces model size to nearly one eighth of FP32 through 4-bit expert-weight quantization. The final focus is production inference serving of larger MoE models, making inference efficiency its direct objective.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave2/manifest.json#candidate[6]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2301.00774",
+      "identity_tokens": [
+        "arXiv:2301.00774"
+      ],
+      "title": "SparseGPT: Massive Language Models Can be Accurately Pruned in One-Shot",
+      "reason": "SparseGPT post-training prunes GPT-family models without retraining. On OPT-175B and BLOOM-176B it reports 50-60% sparsity with minor perplexity/zero-shot accuracy loss, including more than 100 billion weights ignored at inference. It also covers hardware-friendly 2:4 and 4:8 sparsity and sparsity-plus-quantization. This is model compression intended to lower LLM inference resource cost.",
+      "source_url": "https://arxiv.org/html/2301.00774",
+      "body_check": "review_scope=Full primary arXiv HTML: pruning algorithm, quality/sparsity experiments on large GPT-family models, semi-structured patterns, quantization combination, and discussion.; evidence=SparseGPT post-training prunes GPT-family models without retraining. On OPT-175B and BLOOM-176B it reports 50-60% sparsity with minor perplexity/zero-shot accuracy loss, including more than 100 billion weights ignored at inference. It also covers hardware-friendly 2:4 and 4:8 sparsity and sparsity-plus-quantization. This is model compression intended to lower LLM inference resource cost.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave3/manifest.json#candidate[8]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.17888",
+      "identity_tokens": [
+        "arXiv:2305.17888"
+      ],
+      "title": "LLM-QAT: Data-Free Quantization Aware Training for Large Language Models",
+      "reason": "Although quantization-aware training is the method, the produced low-bit LLMs target deployment efficiency: the paper quantizes weights, activations and KV cache, identifies KV-cache quantization as important for throughput and long sequences, and evaluates LLaMA 7B/13B/30B down to 4 bits. Its conclusion states accurate 4-bit LLM quantization is achievable and ties the method to the growing cost of LLM deployments. This meets the workflow rule allowing training as an internal method when the end goal is inference compression/efficiency.",
+      "source_url": "https://arxiv.org/html/2305.17888",
+      "body_check": "review_scope=Full primary arXiv HTML: data-free QAT approach, weight/activation/KV-cache quantization, low-bit quality results, limitations and conclusion.; evidence=Although quantization-aware training is the method, the produced low-bit LLMs target deployment efficiency: the paper quantizes weights, activations and KV cache, identifies KV-cache quantization as important for throughput and long sequences, and evaluates LLaMA 7B/13B/30B down to 4 bits. Its conclusion states accurate 4-bit LLM quantization is achievable and ties the method to the growing cost of LLM deployments. This meets the workflow rule allowing training as an internal method when the end goal is inference compression/efficiency.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[4]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2306.11695",
+      "identity_tokens": [
+        "arXiv:2306.11695"
+      ],
+      "title": "A Simple and Effective Pruning Approach for Large Language Models",
+      "reason": "Wandaは重み絶対値と入力activationノルムの積で重要度を決め、事前学習LLMを重み更新なしで枝刈りできる。構造化2:4 sparsityの推論速度をA6000で評価し、線形層matmulで約1.6×、LLaMA-7B端末内推論では312msから251ms（1.24×）と報告する。推論時の計算削減・速度改善が直接の対象。",
+      "source_url": "https://arxiv.org/html/2306.11695",
+      "body_check": "status=primary_full_text_relevant_sections_reviewed; reviewed_sections=Abstract, §3 Wanda: Pruning by Weights and Activations, §4.2 Language Modeling, §4.3 Speedup, §6 Conclusion; source_ranges=lines 40-49, lines 166-191, lines 201-206; confirmed=50% unstructured/2:4/4:8 sparsityでLLaMA/LLaMA-2のperplexity比較を実施。推論速度の主張はstructured 2:4 sparsity、NVIDIA A6000上CUTLASS GEMM simulation、およびLLaMA-7Bで測った端末内latencyに限られる。精度低下は設定依存し、2:4の小型モデルはSparseGPTより悪い例もある。",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-01/ready/20260927-u-wave3-17-25-b1a672/manifest.json#candidate[2]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2309.00071",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2309.00071",
+        "arXiv:2309.00071"
+      ],
+      "title": "YaRN: Efficient Context Window Extension of Large Language Models",
+      "reason": "YaRN extends context windows for RoPE-based LLMs. The paper states that Dynamic Scaling updates the positional-embedding scale on each inference pass, and that the rotary embeddings have zero added overhead; it demonstrates extended LLaMA context lengths up to 64K and 128K. This is an inference-time long-context method, even though some YaRN variants also use limited fine-tuning.",
+      "source_url": "https://arxiv.org/html/2309.00071",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: RoPE interpolation variants, YaRN method, inference-time Dynamic Scaling, context-extension experiments, computational efficiency and conclusion.; evidence=YaRN extends context windows for RoPE-based LLMs. The paper states that Dynamic Scaling updates the positional-embedding scale on each inference pass, and that the rotary embeddings have zero added overhead; it demonstrates extended LLaMA context lengths up to 64K and 128K. This is an inference-time long-context method, even though some YaRN variants also use limited fine-tuning.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[0]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.12307",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2309.12307",
+        "arXiv:2309.12307"
+      ],
+      "title": "LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models",
+      "reason": "LongLoRA's efficiency contribution is reducing compute and GPU memory for fine-tuning long-context models using shifted sparse attention and LoRA. The paper explicitly retains full dense attention for inference and says the sparse attention is optional at inference; it presents no inference-time serving or decoding optimization. The workflow excludes training-only efficiency work, so this is unrelated to the current scope.",
+      "source_url": "https://arxiv.org/html/2309.12307",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: shifted sparse attention, LoRA context extension, training/fine-tuning efficiency evaluations, inference architecture and conclusion.; evidence=LongLoRA's efficiency contribution is reducing compute and GPU memory for fine-tuning long-context models using shifted sparse attention and LoRA. The paper explicitly retains full dense attention for inference and says the sparse attention is optional at inference; it presents no inference-time serving or decoding optimization. The workflow excludes training-only efficiency work, so this is unrelated to the current scope.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[9]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.06839",
+      "identity_tokens": [
+        "arXiv:2310.06839"
+      ],
+      "title": "LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression",
+      "reason": "LongLLMLingua proposes inference-time prompt compression for long-context LLMs. Its budget controller allocates different compression ratios across prompt parts, then iterative token-level compression and document reordering preserve question-relevant content. The paper evaluates both quality and efficiency on GPT-3.5 Turbo and LongChat; the method directly lowers the prompt workload and targets long-context inference cost and position bias.",
+      "source_url": "https://arxiv.org/html/2310.06839",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: question-aware coarse-to-fine prompt compression, document ordering and subsequence recovery, implementation, experiments, results and conclusion.; evidence=LongLLMLingua proposes inference-time prompt compression for long-context LLMs. Its budget controller allocates different compression ratios across prompt parts, then iterative token-level compression and document reordering preserve question-relevant content. The paper evaluates both quality and efficiency on GPT-3.5 Turbo and LongChat; the method directly lowers the prompt workload and targets long-context inference cost and position bias.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[1]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.05109",
+      "identity_tokens": [
+        "arXiv:2402.05109"
+      ],
+      "title": "Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding",
+      "reason": "Hydra makes speculative draft heads sequentially dependent to improve candidate quality for Medusa-style decoding. Hydra++ reports up to 1.31x decoding throughput over Medusa and 2.70x over autoregressive decoding; batched inference and typical-acceptance sampling are also evaluated. The work directly accelerates LLM decoding.",
+      "source_url": "https://arxiv.org/html/2402.05109",
+      "body_check": "review_scope=Full primary arXiv HTML: draft-head design, decoding-tree search, training/evaluation setup, batch-size-one and batched inference results, analysis and conclusion.; evidence=Hydra makes speculative draft heads sequentially dependent to improve candidate quality for Medusa-style decoding. Hydra++ reports up to 1.31x decoding throughput over Medusa and 2.70x over autoregressive decoding; batched inference and typical-acceptance sampling are also evaluated. The work directly accelerates LLM decoding.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[1]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.13720",
+      "identity_tokens": [
+        "arXiv:2402.13720"
+      ],
+      "title": "Ouroboros: Generating Longer Drafts Phrase by Phrase for Faster Speculative Decoding",
+      "reason": "Ouroboros improves draft generation and speculative decoding without model fine-tuning by generating/reusing phrases and verifying longer candidates in parallel. The primary source reports up to 2.8x speedup over speculative decoding and 3.9x over autoregressive decoding without generation-quality loss; conclusion reports 2.8x and 1.9x against speculative and lookahead decoding, respectively. This directly accelerates LLM inference.",
+      "source_url": "https://arxiv.org/html/2402.13720",
+      "body_check": "review_scope=Full primary arXiv HTML: speculative-decoding bottleneck, phrase-based draft acceleration and extension, reuse of verification/context phrases, experiments and conclusion.; evidence=Ouroboros improves draft generation and speculative decoding without model fine-tuning by generating/reusing phrases and verifying longer candidates in parallel. The primary source reports up to 2.8x speedup over speculative decoding and 3.9x over autoregressive decoding without generation-quality loss; conclusion reports 2.8x and 1.9x against speculative and lookahead decoding, respectively. This directly accelerates LLM inference.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[0]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.01136",
+      "identity_tokens": [
+        "arXiv:2403.01136"
+      ],
+      "title": "LLM-PQ: Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization",
+      "reason": "LLM-PQ jointly chooses phase-aware model partitioning, mixed-precision quantization and microbatch size for LLM serving on heterogeneous GPU clusters, optimizing inference throughput under user-specified quality targets. The paper provides serving latency/throughput models and experiments on several heterogeneous cluster setups, reporting gains over prior serving approaches. This is directly in scope.",
+      "source_url": "https://arxiv.org/html/2403.01136",
+      "body_check": "review_scope=Full primary arXiv HTML: heterogeneous-GPU serving objective, phase-aware partitioning and adaptive mixed precision, latency/throughput evaluation and conclusion.; evidence=LLM-PQ jointly chooses phase-aware model partitioning, mixed-precision quantization and microbatch size for LLM serving on heterogeneous GPU clusters, optimizing inference throughput under user-specified quality targets. The paper provides serving latency/throughput models and experiments on several heterogeneous cluster setups, reporting gains over prior serving approaches. This is directly in scope.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[7]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.20306",
+      "identity_tokens": [
+        "arXiv:2403.20306"
+      ],
+      "title": "Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference",
+      "reason": "The paper explicitly makes LLM-serving energy efficiency its primary goal under performance SLOs. It characterizes actionable platform and operating-point decisions in terms of latency, throughput and energy; its conclusion distinguishes performance-optimized and energy-optimized designs and identifies configurations that improve energy without impacting cost/performance. This directly studies inference-serving efficiency.",
+      "source_url": "https://arxiv.org/html/2403.20306",
+      "body_check": "review_scope=Full primary arXiv HTML: energy-aware serving objective, operational knobs, batch/SLO/latency/throughput/energy measurements and conclusion.; evidence=The paper explicitly makes LLM-serving energy efficiency its primary goal under performance SLOs. It characterizes actionable platform and operating-point decisions in terms of latency, throughput and energy; its conclusion distinguishes performance-optimized and energy-optimized designs and identifies configurations that improve energy without impacting cost/performance. This directly studies inference-serving efficiency.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[5]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.00456",
+      "identity_tokens": [
+        "arXiv:2404.00456"
+      ],
+      "title": "QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs",
+      "reason": "QuaRot applies rotations to remove outliers and enable end-to-end 4-bit LLM quantization across weights, activations and KV cache. For Llama 2 70B it reports retaining 99% of FP16 downstream performance, a 2.16x prefill speedup on RTX 3090 and up to 3.39x decode-stage memory savings. This directly improves LLM inference efficiency through quantization.",
+      "source_url": "https://arxiv.org/html/2404.00456",
+      "body_check": "review_scope=Full primary arXiv HTML: rotation-based outlier removal, weight/activation/KV quantization, low-bit quality and inference performance, conclusion.; evidence=QuaRot applies rotations to remove outliers and enable end-to-end 4-bit LLM quantization across weights, activations and KV cache. For Llama 2 70B it reports retaining 99% of FP16 downstream performance, a 2.16x prefill speedup on RTX 3090 and up to 3.39x decode-stage memory savings. This directly improves LLM inference efficiency through quantization.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[3]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.02258",
+      "identity_tokens": [
+        "arXiv:2404.02258"
+      ],
+      "title": "Mixture-of-Depths: Dynamically allocating compute in transformer-based language models",
+      "reason": "Mixture-of-Depths learns a router that skips transformer blocks for selected tokens, reducing per-forward-pass FLOPs. Its autoregressive evaluation shows a causal predictor can reproduce trained top-k routing with minimal degradation, and its discussion explicitly states that this tunes per-pass compute and inference time. While substantial experiments measure training/isoFLOP behavior, the primary paper verifies autoregressive sampling and supports inference-time execution, so it is relevant to adaptive inference computation.",
+      "source_url": "https://arxiv.org/html/2404.02258",
+      "body_check": "review_scope=Full primary arXiv HTML: conditional token routing, compute budget/FLOPs, autoregressive evaluation, post-training causal predictor, discussion, and inference implications.; evidence=Mixture-of-Depths learns a router that skips transformer blocks for selected tokens, reducing per-forward-pass FLOPs. Its autoregressive evaluation shows a causal predictor can reproduce trained top-k routing with minimal degradation, and its discussion explicitly states that this tunes per-pass compute and inference time. While substantial experiments measure training/isoFLOP behavior, the primary paper verifies autoregressive sampling and supports inference-time execution, so it is relevant to adaptive inference computation.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave3/manifest.json#candidate[9]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.12457",
+      "identity_tokens": [
+        "arXiv:2404.12457"
+      ],
+      "title": "RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation",
+      "reason": "RAGCache reuses intermediate states of retrieved documents across requests in a GPU/host multilevel cache and overlaps vector retrieval with LLM inference. Against vLLM+Faiss it reports up to 4x lower TTFT and 2.1x throughput; against SGLang it reports up to 3.5x lower TTFT and 1.8x throughput. This directly optimizes RAG inference.",
+      "source_url": "https://arxiv.org/html/2404.12457",
+      "body_check": "review_scope=Full primary arXiv HTML: RAG bottleneck characterization, multilevel document-state cache, replacement/scheduling, speculative pipelining, evaluation and conclusion.; evidence=RAGCache reuses intermediate states of retrieved documents across requests in a GPU/host multilevel cache and overlaps vector retrieval with LLM inference. Against vLLM+Faiss it reports up to 4x lower TTFT and 2.1x throughput; against SGLang it reports up to 3.5x lower TTFT and 1.8x throughput. This directly optimizes RAG inference.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[0]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.16406",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2405.16406",
+        "arXiv:2405.16406"
+      ],
+      "title": "SpinQuant: LLM Quantization with Learned Rotations",
+      "reason": "SpinQuant learns rotations that improve post-training quantization of LLM weights, activations and KV cache. The paper evaluates 4-bit quantization across LLMs and states that one variant merges learned rotations into weights before inference; the online Hadamard variant adds approximately 8% network latency. It directly studies inference-time memory/latency versus quantization accuracy.",
+      "source_url": "https://arxiv.org/html/2405.16406",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: weight, activation and KV-cache quantization, rotation parameterizations, accuracy results, inference-time implementation and latency measurements.; evidence=SpinQuant learns rotations that improve post-training quantization of LLM weights, activations and KV cache. The paper evaluates 4-bit quantization across LLMs and states that one variant merges learned rotations into weights before inference; the online Hadamard variant adds approximately 8% network latency. It directly studies inference-time memory/latency versus quantization accuracy.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[3]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.02500",
+      "identity_tokens": [
+        "arXiv:2406.02500"
+      ],
+      "title": "Towards Efficient Mixture of Experts: A Holistic Study of Compression Techniques",
+      "reason": "The paper evaluates Layer Drop, Block Drop, expert quantization, and pruning for MoE inference efficiency. On Mixtral-8x7B, combined trimming and quantization are reported to provide up to 6.05x speedup at 20.0 GB memory, a 77.1% reduction, while retaining over 92% of original performance. Its objective and measured results directly concern MoE inference computation and memory.",
+      "source_url": "https://arxiv.org/html/2406.02500",
+      "body_check": "review_scope=Full primary arXiv HTML: compression methods, combined pruning/quantization experiments, quality and efficiency results, and conclusion.; evidence=The paper evaluates Layer Drop, Block Drop, expert quantization, and pruning for MoE inference efficiency. On Mixtral-8x7B, combined trimming and quantization are reported to provide up to 6.05x speedup at 20.0 GB memory, a 77.1% reduction, while retaining over 92% of original performance. Its objective and measured results directly concern MoE inference computation and memory.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave3/manifest.json#candidate[2]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.07092",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2408.07092",
+        "arXiv:2408.07092"
+      ],
+      "title": "Post-Training Sparse Attention with Double Sparsity",
+      "reason": "Double Sparsity reduces LLM inference KV-cache access using token and channel sparsity, with optional offloading. The primary paper evaluates Llama-2-7B and other LLMs, reporting a minimum 1.3x throughput gain and near-2x in some tested conditions; the offload variant reports 4–8x over FlexGen on regular workloads and up to 16x on 64K–256K long sequences. This is directly inference-time attention and memory optimization.",
+      "source_url": "https://arxiv.org/html/2408.07092",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: post-training double-sparsity method, KV-cache/offload design, accuracy and serving-throughput evaluations, related work, limitations and conclusion.; evidence=Double Sparsity reduces LLM inference KV-cache access using token and channel sparsity, with optional offloading. The primary paper evaluates Llama-2-7B and other LLMs, reporting a minimum 1.3x throughput gain and near-2x in some tested conditions; the offload variant reports 4–8x over FlexGen on regular workloads and up to 16x on 64K–256K long sequences. This is directly inference-time attention and memory optimization.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[4]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.00142",
+      "identity_tokens": [
+        "arXiv:2409.00142"
+      ],
+      "title": "Dynamic Depth Decoding: Faster Speculative Decoding for LLMs",
+      "reason": "Dynamic Depth Decoding modifies EAGLE-2 by choosing draft-tree depth dynamically. The primary paper describes speculative decoding as lossless because target-model verification preserves the output, and reports an average 3.16× speedup with a 44% increase over EAGLE's average speedup across its experiments. This is directly about accelerating LLM autoregressive inference.",
+      "source_url": "https://arxiv.org/html/2409.00142",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: lossless speculative decoding context, dynamic-depth tree drafting relative to EAGLE-2, model and benchmark setup, speed measurements and conclusion.; evidence=Dynamic Depth Decoding modifies EAGLE-2 by choosing draft-tree depth dynamically. The primary paper describes speculative decoding as lossless because target-model verification preserves the output, and reports an average 3.16× speedup with a 44% increase over EAGLE's average speedup across its experiments. This is directly about accelerating LLM autoregressive inference.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[7]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02060",
+      "identity_tokens": [
+        "arXiv:2409.02060"
+      ],
+      "title": "OLMoE: Open Mixture-of-Experts Language Models",
+      "reason": "Although the model uses 1.3B active parameters out of 6.9B total and discusses compute per forward pass, the stated contribution is an open MoE model and extensive MoE training experiments. The paper's conclusion centers on releasing model/data/code and training analyses, not an inference-reduction method.",
+      "source_url": "https://arxiv.org/html/2409.02060",
+      "body_check": "review_scope=Full primary HTML reviewed: model and training setup, active-parameter comparisons, evaluations, release description, and conclusion.; evidence=Although the model uses 1.3B active parameters out of 6.9B total and discusses compute per forward pass, the stated contribution is an open MoE model and extensive MoE training experiments. The paper's conclusion centers on releasing model/data/code and training analyses, not an inference-reduction method.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-discovery-02/manifest.json#candidate[4]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.17264",
+      "identity_tokens": [
+        "arXiv:2409.17264"
+      ],
+      "title": "No Request Left Behind: Tackling Heterogeneity in Long-Context LLM Inference with Medha",
+      "reason": "Medha combines preemptive chunked prefills, Stream Pipeline Parallelism, KV-Cache Parallelism, dynamic batch packing and a length-aware scheduler for heterogeneous long-context inference. On stated workloads it reports 5.7× throughput over state-of-the-art non-preemptive systems and up to 30× lower median latency and 174× lower P99 latency. Direct serving optimization.",
+      "source_url": "https://arxiv.org/html/2409.17264",
+      "body_check": "review_scope=Full primary arXiv HTML: serving motivation, preemptive chunked prefill, adaptive chunking/SPP/KVP, LARS scheduling, workload evaluation and conclusion (§§1–8).; evidence=Medha combines preemptive chunked prefills, Stream Pipeline Parallelism, KV-Cache Parallelism, dynamic batch packing and a length-aware scheduler for heterogeneous long-context inference. On stated workloads it reports 5.7× throughput over state-of-the-art non-preemptive systems and up to 30× lower median latency and 174× lower P99 latency. Direct serving optimization.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave2/manifest.json#candidate[8]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.17375",
+      "identity_tokens": [
+        "arXiv:2410.17375"
+      ],
+      "title": "AMUSD: Asynchronous Multi-Device Speculative Decoding for LLM Acceleration",
+      "reason": "AMUSD lets draft and verify models run continuously and asynchronously on separate devices, with rollback handling to preserve consistency. Its evaluation uses Llama-3.1-8B and Llama-3.2-1B across several benchmarks; it reports up to 1.96× speedup over autoregressive decoding and identical output quality, including improved utilization through concurrent GPU execution. This directly targets LLM decoding latency and throughput.",
+      "source_url": "https://arxiv.org/html/2410.17375",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: asynchronous draft/verify execution and rollback consistency, multi-GPU implementation, model/data setup, performance and resource-utilization results, conclusion.; evidence=AMUSD lets draft and verify models run continuously and asynchronously on separate devices, with rollback handling to preserve consistency. Its evaluation uses Llama-3.1-8B and Llama-3.2-1B across several benchmarks; it reports up to 1.96× speedup over autoregressive decoding and identical output quality, including improved utilization through concurrent GPU execution. This directly targets LLM decoding latency and throughput.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[9]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.01783",
+      "identity_tokens": [
+        "arXiv:2411.01783"
+      ],
+      "title": "Context Parallelism for Scalable Million-Token Inference",
+      "reason": "The paper presents context parallelism for long-context LLM inference, including lossless pass-KV and pass-Q ring-attention variants for full prefill, partial prefill and decoding. It reports near-linear scaling to 128 H100 GPUs; a 1M-token prefill for Llama 3 405B in 77 seconds with 93% parallelization efficiency and 63% FLOPS utilization, and 128K prefill in 3.8 seconds. This directly addresses inference scalability and latency.",
+      "source_url": "https://arxiv.org/html/2411.01783",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: ring-attention context-parallel algorithms (pass-KV/pass-Q), exactness and communication, prefill/decode use cases, scaling and latency experiments, conclusion.; evidence=The paper presents context parallelism for long-context LLM inference, including lossless pass-KV and pass-Q ring-attention variants for full prefill, partial prefill and decoding. It reports near-linear scaling to 128 H100 GPUs; a 1M-token prefill for Llama 3 405B in 77 seconds with 93% parallelization efficiency and 63% FLOPS utilization, and 128K prefill in 3.8 seconds. This directly addresses inference scalability and latency.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave10/manifest.json#candidate[8]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.04975",
+      "identity_tokens": [
+        "arXiv:2411.04975"
+      ],
+      "title": "SuffixDecoding: Extreme Speculative Decoding for Emerging AI Applications",
+      "reason": "The primary title differs from the worklist title, but the identity and paper match. SuffixDecoding uses suffix trees over prompts and prior outputs to reuse repeated token sequences in speculative decoding, especially in agent workflows. The source evaluates OpenHands and AgenticSQL and reports a 5.3x average speedup over vanilla decoding on agentic tasks for the suffix-tree approach; open-ended WildChat/Magicoder results are also reported. This directly accelerates LLM generation/inference.",
+      "source_url": "https://arxiv.org/html/2411.04975",
+      "body_check": "review_scope=Full primary arXiv HTML: suffix-tree token reuse, adaptive speculative decoding, agentic/open-ended workload evaluations, conclusion and limitations.; evidence=The primary title differs from the worklist title, but the identity and paper match. SuffixDecoding uses suffix trees over prompts and prior outputs to reuse repeated token sequences in speculative decoding, especially in agent workflows. The source evaluates OpenHands and AgenticSQL and reports a 5.3x average speedup over vanilla decoding on agentic tasks for the suffix-tree approach; open-ended WildChat/Magicoder results are also reported. This directly accelerates LLM generation/inference.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[6]"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.14711",
+      "identity_tokens": [
+        "arXiv:2412.14711"
+      ],
+      "title": "ReMoE: Fully Differentiable Mixture-of-Experts with ReLU Routing",
+      "reason": "ReMoE replaces TopK+Softmax with differentiable ReLU routing and dynamically allocates experts. Its central motivation and experiments focus on differentiability and training scalability; it reports inference throughput within −2.29% to +3.89% of conventional TopK MoE, i.e. roughly comparable speed rather than an inference-efficiency gain. Relevant MoE serving architecture, but evidence does not show inference reduction as its primary objective.",
+      "source_url": "https://arxiv.org/html/2412.14711",
+      "body_check": "review_scope=Full primary HTML: ReLU routing formulation, training/scalability experiments, downstream evaluations, throughput comparison and conclusion (§§2–7; Appendix D).; evidence=ReMoE replaces TopK+Softmax with differentiable ReLU routing and dynamically allocates experts. Its central motivation and experiments focus on differentiability and training scalability; it reports inference throughput within −2.29% to +3.89% of conventional TopK MoE, i.e. roughly comparable speed rather than an inference-efficiency gain. Relevant MoE serving architecture, but evidence does not show inference reduction as its primary objective.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave2/manifest.json#candidate[2]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.05460",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2501.05460",
+        "arXiv:2501.05460"
+      ],
+      "title": "Efficiently Serving Large Multimodal Models Using EPD Disaggregation",
+      "reason": "EPD Disaggregation separates multimodal encoding, LLM prefill and decode onto dedicated resources and adds media-token caching, within-request encoder parallelism, allocation and role switching. Evaluations report up to 15x lower peak memory, up to 22x larger batches, improved SLO attainment, and up to 71% lower TTFT versus non-disaggregated systems. This directly targets multimodal LLM inference serving.",
+      "source_url": "https://arxiv.org/html/2501.05460",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: encode/prefill/decode disaggregation, multimedia-token transfer and caching, resource allocation, GPU/NPU evaluations, SLO/TTFT results and conclusion.; evidence=EPD Disaggregation separates multimodal encoding, LLM prefill and decode onto dedicated resources and adds media-token caching, within-request encoder parallelism, allocation and role switching. Evaluations report up to 15x lower peak memory, up to 22x larger batches, improved SLO attainment, and up to 71% lower TTFT versus non-disaggregated systems. This directly targets multimodal LLM inference serving.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[7]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.04420",
+      "identity_tokens": [
+        "arXiv:2502.04420"
+      ],
+      "title": "KVTuner: Sensitivity-Aware Layer-Wise Mixed-Precision KV Cache Quantization for Efficient and Nearly Lossless LLM Inference",
+      "reason": "KVTuner selects layer-wise key/value cache precision based on sensitivity and uses offline search configurations online. The paper frames the method as improving LLM inference throughput and latency for long-context/large-batch settings; it reports nearly lossless compression at 3.25 bits for Llama 3.1 8B and 4 bits for Qwen2.5 7B. This directly reduces inference KV-cache memory cost while preserving effectiveness.",
+      "source_url": "https://arxiv.org/html/2502.04420",
+      "body_check": "review_scope=Full primary arXiv HTML: layer sensitivity analysis, mixed-precision KV quantization, accuracy/memory tradeoffs, evaluation and conclusion.; evidence=KVTuner selects layer-wise key/value cache precision based on sensitivity and uses offline search configurations online. The paper frames the method as improving LLM inference throughput and latency for long-context/large-batch settings; it reports nearly lossless compression at 3.25 bits for Llama 3.1 8B and 4 bits for Qwen2.5 7B. This directly reduces inference KV-cache memory cost while preserving effectiveness.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[9]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.08363",
+      "identity_tokens": [
+        "arXiv:2502.08363"
+      ],
+      "title": "Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding",
+      "reason": "The paper reports 2-5x fewer active attention elements in prefill and 3x fewer required V-cache rows for generation while maintaining pass@1 within 1% of baseline in HumanEval; it directly targets attention compute and KV-read reduction at inference.",
+      "source_url": "https://arxiv.org/html/2502.08363",
+      "body_check": "review_scope=Full primary HTML reviewed: compensated thresholding method, calibration and implementation, prefill/generation evaluations, comparisons, and discussion.; evidence=The paper reports 2-5x fewer active attention elements in prefill and 3x fewer required V-cache rows for generation while maintaining pass@1 within 1% of baseline in HumanEval; it directly targets attention compute and KV-read reduction at inference.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-discovery-02/manifest.json#candidate[1]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.10517",
+      "identity_tokens": [
+        "arXiv:2502.10517"
+      ],
+      "title": "KernelBench: Can LLMs Write Efficient GPU Kernels?",
+      "reason": "KernelBench measures whether LLMs can generate correct and fast GPU kernels for a broad set of ML workloads. Although efficient kernels may be used by LLM inference systems, the paper's evaluated object is LLM-generated kernel code quality; it does not optimize LLM inference execution or serving. Therefore it is outside this collection's inference-efficiency scope.",
+      "source_url": "https://arxiv.org/html/2502.10517",
+      "body_check": "review_scope=Full primary arXiv HTML: benchmark scope, task design, correctness/performance metrics, evaluation and discussion.; evidence=KernelBench measures whether LLMs can generate correct and fast GPU kernels for a broad set of ML workloads. Although efficient kernels may be used by LLM inference systems, the paper's evaluated object is LLM-generated kernel code quality; it does not optimize LLM inference execution or serving. Therefore it is outside this collection's inference-efficiency scope.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave3/manifest.json#candidate[5]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.18137",
+      "identity_tokens": [
+        "arXiv:2502.18137"
+      ],
+      "title": "SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference",
+      "reason": "SpargeAttn uses a two-stage online filter to predict attention maps, eliminate selected matrix multiplications, and apply a softmax-aware filter without extra overhead. Its experiments cover diverse language, image and video generation models and report acceleration without degrading end-to-end metrics. The paper directly optimizes inference execution, including LLM attention.",
+      "source_url": "https://arxiv.org/html/2502.18137",
+      "body_check": "review_scope=Full primary arXiv HTML: two-stage online sparse/quantized attention filters, language and image/video generation evaluations, accuracy and conclusion.; evidence=SpargeAttn uses a two-stage online filter to predict attention maps, eliminate selected matrix multiplications, and apply a softmax-aware filter without extra overhead. Its experiments cover diverse language, image and video generation models and report acceleration without degrading end-to-end metrics. The paper directly optimizes inference execution, including LLM attention.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[4]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.00392",
+      "identity_tokens": [
+        "arXiv:2503.00392"
+      ],
+      "title": "Progressive Sparse Attention: Algorithm and System Co-design for Efficient Attention in LLM Serving",
+      "reason": "PSA targets long-context LLM serving by adaptively budgeting KV-cache tokens per layer and reducing CPU-GPU interleaving with pipelined execution. The paper reports up to 2.4x lower KV-cache use for attention while maintaining accuracy and up to 1.4x higher serving throughput. This directly optimizes inference memory and serving throughput.",
+      "source_url": "https://arxiv.org/html/2503.00392",
+      "body_check": "review_scope=Full primary arXiv HTML: adaptive KV-budget sparse attention, pipelined execution and GPU memory management, serving evaluation and conclusion.; evidence=PSA targets long-context LLM serving by adaptively budgeting KV-cache tokens per layer and reducing CPU-GPU interleaving with pipelined execution. The paper reports up to 2.4x lower KV-cache use for attention while maintaining accuracy and up to 1.4x higher serving throughput. This directly optimizes inference memory and serving throughput.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[9]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.09573",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2503.09573",
+        "arXiv:2503.09573"
+      ],
+      "title": "Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models",
+      "reason": "Block Diffusion introduces an LLM generation procedure that caches keys/values between blocks and samples tokens in parallel within a block, addressing inference efficiency and arbitrary-length generation. The paper also provides an optimized block-attention implementation reporting about 15% faster model forward pass than replacing the FlashAttention kernel in its tested A5000 setup. Although the work includes a training method and does not report end-to-end serving throughput, the generation algorithm and measured attention execution are within LLM inference scope.",
+      "source_url": "https://arxiv.org/html/2503.09573",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: block-diffusion sampling and KV reuse, training recipe, language-model evaluations, attention-kernel implementation and conclusion.; evidence=Block Diffusion introduces an LLM generation procedure that caches keys/values between blocks and samples tokens in parallel within a block, addressing inference efficiency and arbitrary-length generation. The paper also provides an optimized block-attention implementation reporting about 15% faster model forward pass than replacing the FlashAttention kernel in its tested A5000 setup. Although the work includes a training method and does not report end-to-end serving throughput, the generation algorithm and measured attention execution are within LLM inference scope.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[5]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.02658",
+      "identity_tokens": [
+        "arXiv:2504.02658"
+      ],
+      "title": "MiLo: Efficient Quantized MoE Inference with Mixture of Low-Rank Compensators",
+      "reason": "MiLo augments low-bit quantized MoE weights with low-rank compensators to recover accuracy and implements Tensor Core-friendly W3A16 GEMM kernels to turn compression into measured inference latency gains. On Mixtral 8×7B with an A100, its backend reports 1.2× speedup at batch size 1 and 1.26× at larger batches against MARLIN. This directly reduces MoE inference memory and latency.",
+      "source_url": "https://arxiv.org/html/2504.02658",
+      "body_check": "review_scope=Full primary arXiv/MLSys paper reviewed: low-rank compensation for extreme MoE quantization, hardware-friendly INT3 GEMM kernel, accuracy evaluations, system end-to-end latency results and conclusion.; evidence=MiLo augments low-bit quantized MoE weights with low-rank compensators to recover accuracy and implements Tensor Core-friendly W3A16 GEMM kernels to turn compression into measured inference latency gains. On Mixtral 8×7B with an A100, its backend reports 1.2× speedup at batch size 1 and 1.26× at larger batches against MARLIN. This directly reduces MoE inference memory and latency.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave10/manifest.json#candidate[1]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.15720",
+      "identity_tokens": [
+        "arXiv:2504.15720"
+      ],
+      "title": "SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference",
+      "reason": "SeaLLM directly optimizes shared LLM inference services through latency-aware scheduling, placement/replacement and a unified GPU KV cache. Under real-world traces and LLM services, the paper reports up to 13.60x normalized-latency improvement, 18.69x tail-latency improvement and 3.64x SLO-attainment improvement over existing solutions. This is directly within LLM-serving efficiency.",
+      "source_url": "https://arxiv.org/html/2504.15720",
+      "body_check": "review_scope=Full primary arXiv HTML: multi-service resource sharing, latency-aware scheduling and placement, shared KV cache, evaluation and conclusion.; evidence=SeaLLM directly optimizes shared LLM inference services through latency-aware scheduling, placement/replacement and a unified GPU KV cache. Under real-world traces and LLM services, the paper reports up to 13.60x normalized-latency improvement, 18.69x tail-latency improvement and 3.64x SLO-attainment improvement over existing solutions. This is directly within LLM-serving efficiency.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[5]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.19519",
+      "identity_tokens": [
+        "arXiv:2504.19519"
+      ],
+      "title": "Efficient and Adaptable Overlapping for Computation and Communication via Signaling and Reordering",
+      "reason": "FlashOverlap hides communication behind GEMM computation through signaling and reordering. The paper explicitly evaluates Llama 3 70B inference with tensor parallelism, including vLLM end-to-end throughput; it identifies GEMM+AllReduce as 31.6%-42.2% of end-to-end duration in tested scenarios. It reports up to 1.65x overlap speedup overall and up to 1.37x lower total GEMM+AllReduce latency on Ascend LLM-shaped cases. Although it also evaluates training and other generative tasks, its direct LLM-inference results make it relevant.",
+      "source_url": "https://arxiv.org/html/2504.19519",
+      "body_check": "review_scope=Full primary arXiv HTML: FlashOverlap's signaling/reordering approach, communication primitives, LLM inference and training evaluations, platform limits and conclusion.; evidence=FlashOverlap hides communication behind GEMM computation through signaling and reordering. The paper explicitly evaluates Llama 3 70B inference with tensor parallelism, including vLLM end-to-end throughput; it identifies GEMM+AllReduce as 31.6%-42.2% of end-to-end duration in tested scenarios. It reports up to 1.65x overlap speedup overall and up to 1.37x lower total GEMM+AllReduce latency on Ascend LLM-shaped cases. Although it also evaluates training and other generative tasks, its direct LLM-inference results make it relevant.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[5]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.13109",
+      "identity_tokens": [
+        "arXiv:2505.13109"
+      ],
+      "title": "FreeKV: Boosting KV Cache Retrieval for Efficient LLM Inference",
+      "reason": "FreeKV combines speculative KV retrieval and fine-grained correction with hybrid CPU/GPU layouts and streamed recall to move selection/recall off the critical path while preserving accuracy. Across several scenarios and models, the paper reports near-lossless accuracy and up to 13x speedup over state-of-the-art KV-retrieval methods. This directly improves LLM inference memory access and latency.",
+      "source_url": "https://arxiv.org/html/2505.13109",
+      "body_check": "review_scope=Full primary arXiv HTML: speculative retrieval and correction, CPU/GPU KV layouts, streamed recall, accuracy and inference-efficiency experiments, discussion and conclusion.; evidence=FreeKV combines speculative KV retrieval and fine-grained correction with hybrid CPU/GPU layouts and streamed recall to move selection/recall off the critical path while preserving accuracy. Across several scenarios and models, the paper reports near-lossless accuracy and up to 13x speedup over state-of-the-art KV-retrieval methods. This directly improves LLM inference memory access and latency.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[3]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.02634",
+      "identity_tokens": [
+        "arXiv:2506.02634"
+      ],
+      "title": "KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache at a Large Cloud Provider",
+      "reason": "The paper characterizes production LLM-serving KV-cache reuse at a large cloud provider and uses the observed workload patterns to design a workload-aware eviction policy. It reports improved serving performance over workload-agnostic LRU/LFU policies, particularly under limited cache capacity. This directly targets KV-cache management and LLM inference serving.",
+      "source_url": "https://arxiv.org/html/2506.02634",
+      "body_check": "review_scope=Full primary arXiv HTML: production serving-trace collection and analysis, reuse/locality/capacity findings, workload-aware eviction design, evaluation and conclusion.; evidence=The paper characterizes production LLM-serving KV-cache reuse at a large cloud provider and uses the observed workload patterns to design a workload-aware eviction policy. It reports improved serving performance over workload-agnostic LRU/LFU policies, particularly under limited cache capacity. This directly targets KV-cache management and LLM inference serving.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[1]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.07982",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2506.07982",
+        "arXiv:2506.07982"
+      ],
+      "title": "τ²-Bench: Evaluating Conversational Agents in a Dual-Control Environment",
+      "reason": "τ²-Bench is a benchmark for evaluating conversational agents that coordinate with users in shared tool environments. Its primary contribution and experiments concern task/environment design and agent reasoning/communication performance; the paper does not propose or evaluate LLM inference, serving, decoding, or inference-time compression optimizations. It is outside this inference-efficiency collection.",
+      "source_url": "https://arxiv.org/html/2506.07982",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: benchmark domains, task generator, user simulator, agent evaluation and conclusion.; evidence=τ²-Bench is a benchmark for evaluating conversational agents that coordinate with users in shared tool environments. Its primary contribution and experiments concern task/environment design and agent reasoning/communication performance; the paper does not propose or evaluate LLM inference, serving, decoding, or inference-time compression optimizations. It is outside this inference-efficiency collection.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[6]"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.09019",
+      "identity_tokens": [
+        "arXiv:2507.09019"
+      ],
+      "title": "On Evaluating Performance of LLM Inference Systems",
+      "reason": "This paper directly studies how LLM inference serving systems should be evaluated: it identifies baseline fairness, workload selection, latency/SLO and metric-design pitfalls, then demonstrates the issues through speculative decoding. It contributes an evaluation checklist and empirical analysis rather than an inference-serving mechanism or an efficiency improvement itself. Retained as borderline because its object is LLM inference-system performance and reproducibility, while its contribution is methodological evaluation rather than system optimization.",
+      "source_url": "https://arxiv.org/html/2507.09019",
+      "body_check": "review_scope=Full primary arXiv HTML: evaluation challenges and anti-patterns, performance metrics, speculative-decoding case study, checklist, limitations and conclusion.; evidence=This paper directly studies how LLM inference serving systems should be evaluated: it identifies baseline fairness, workload selection, latency/SLO and metric-design pitfalls, then demonstrates the issues through speculative decoding. It contributes an evaluation checklist and empirical analysis rather than an inference-serving mechanism or an efficiency improvement itself. Retained as borderline because its object is LLM inference-system performance and reproducibility, while its contribution is methodological evaluation rather than system optimization.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[0]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.19427",
+      "identity_tokens": [
+        "arXiv:2507.19427"
+      ],
+      "title": "Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding",
+      "reason": "Step-3のMFA attentionとattention/FFN disaggregationを含むモデル・システム共同設計によりdistributed LLM decodingの計算費用を下げ、StepMesh上で実装・評価する。本文はStep-3が比較条件下で約40% lower theoretical decoding costを主張し、Hopper複数GPU・20 tokens/s SLAにおけるthroughput結果も示すため推論効率に直接該当。",
+      "source_url": "https://arxiv.org/html/2507.19427",
+      "body_check": "status=primary_full_text_relevant_sections_reviewed; reviewed_sections=Abstract, §1 contribution, §4 cost analysis, §5 model/system architecture, §7.3 Performance Results, Conclusion; source_ranges=lines 68-83, lines 241-249, lines 437-453, lines 468-470; confirmed=比較表は平均context 4096でStep-3 FP8 attention 4039 peak tokens/GPU/sを32 Hopper GPUsで報告、著者の同一SLA比較でlong-term average 3910 TGS、DeepSeek-V3 profile 2324 TGS比約74%高い。N=system/config specific; proprietary model/network assumptions, comparisons partly rely on reported baseline results. Implementation jitter remains, numbers omit MTP; longer context/extrapolated throughput is not a measured universal result.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-01/ready/20260927-u-wave3-17-25-b1a672/manifest.json#candidate[8]",
+        "workers/discovery-02/ready/20260927-u-wave2/manifest.json#candidate[1]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.02520",
+      "identity_tokens": [
+        "arXiv:2508.02520"
+      ],
+      "title": "Huawei Cloud Model-as-a-Service on the CloudMatrix384 SuperPod",
+      "reason": "This paper describes xDeepServe, Huawei Cloud's production Model-as-a-Service system for large MoE LLMs on CloudMatrix384. It combines decentralized data-parallel serving, expert load balancing, prefill/decode and Transformerless disaggregation, and a memory-semantic communication layer. The paper reports peak decoding of 2,400 tokens/s per Ascend 910C chip at about 50 ms TPOT, and a representative production setup with 900 ms TTFT and 34.8 ms average TPOT. It directly documents LLM inference system design and measurements.",
+      "source_url": "https://arxiv.org/html/2508.02520",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: CloudMatrix384/XCCL platform, xDeepServe and FlowServe serving architecture, prefill/decode and attention/FFN disaggregation, reliability mechanisms, production evaluation and conclusion.; evidence=This paper describes xDeepServe, Huawei Cloud's production Model-as-a-Service system for large MoE LLMs on CloudMatrix384. It combines decentralized data-parallel serving, expert load balancing, prefill/decode and Transformerless disaggregation, and a memory-semantic communication layer. The paper reports peak decoding of 2,400 tokens/s per Ascend 910C chip at about 50 ms TPOT, and a representative production setup with 900 ms TTFT and 34.8 ms average TPOT. It directly documents LLM inference system design and measurements.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[2]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.18265",
+      "identity_tokens": [
+        "arXiv:2508.18265"
+      ],
+      "title": "InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency",
+      "reason": "InternVL3.5 is an MLLM model report, but it presents two explicit inference optimizations: ViR dynamically selects visual-token resolution and DvD separates vision and language computation across GPUs. The paper reports up to 4.05× throughput speedup for the 38B model at 896-pixel resolution with DvD+ViR versus its baseline, while retaining capability evaluations. These are concrete multimodal LLM inference and deployment contributions, so the paper fits the scope.",
+      "source_url": "https://arxiv.org/html/2508.18265",
+      "body_check": "review_scope=Full primary arXiv HTML reviewed: model architecture, Visual Resolution Router (ViR), Decoupled Vision-Language Deployment (DvD), test-time scaling, infrastructure design, inference benchmarking and conclusion.; evidence=InternVL3.5 is an MLLM model report, but it presents two explicit inference optimizations: ViR dynamically selects visual-token resolution and DvD separates vision and language computation across GPUs. The paper reports up to 4.05× throughput speedup for the 38B model at 896-pixel resolution with DvD+ViR versus its baseline, while retaining capability evaluations. These are concrete multimodal LLM inference and deployment contributions, so the paper fits the scope.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave10/manifest.json#candidate[0]"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.09420",
+      "identity_tokens": [
+        "arXiv:2509.09420"
+      ],
+      "title": "HD-MoE: Hybrid and Dynamic Parallelism for Mixture-of-Expert LLMs with 3D Near-Memory Processing",
+      "reason": "HD-MoE maps expert-parallel LLM inference to 3D near-memory processing and dynamically places/broadcasts experts to reduce communication and utilization imbalance. Its primary text explicitly targets inference efficiency, evaluates real-time inference traces, and reports 1.1x-1.8x speedup over tensor parallelism and 1.1x-1.5x over expert parallelism. This directly targets LLM inference.",
+      "source_url": "https://arxiv.org/html/2509.09420",
+      "body_check": "review_scope=Full primary arXiv HTML: MoE inference mapping to 3D near-memory hardware, automatic hybrid parallel mapping, online expert scheduling, latency and speedup evaluation, conclusion.; evidence=HD-MoE maps expert-parallel LLM inference to 3D near-memory processing and dynamically places/broadcasts experts to reduce communication and utilization imbalance. Its primary text explicitly targets inference efficiency, evaluates real-time inference traces, and reports 1.1x-1.8x speedup over tensor parallelism and 1.1x-1.5x over expert parallelism. This directly targets LLM inference.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[8]"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.15940",
+      "identity_tokens": [
+        "arXiv:2509.15940"
+      ],
+      "title": "Efficient Pre-Training of LLMs via Topology-Aware Communication Alignment on More Than 9600 GPUs",
+      "reason": "The primary title and abstract identify Arnold as a scheduler for LLM pre-training jobs across thousands of GPUs; the conclusion evaluates topology-aware scheduling for those pre-training jobs. The paper reports a 10.6% end-to-end improvement in production training, not inference. It is outside the inference-efficiency scope. The live worklist title field is a placeholder identity string rather than the primary paper title; the arXiv source was used to correct the reviewed title.",
+      "source_url": "https://arxiv.org/html/2509.15940",
+      "body_check": "review_scope=Full primary arXiv HTML: LLM pre-training workload characterization, topology-aware scheduling, cluster/simulation evaluation and conclusion.; evidence=The primary title and abstract identify Arnold as a scheduler for LLM pre-training jobs across thousands of GPUs; the conclusion evaluates topology-aware scheduling for those pre-training jobs. The paper reports a 10.6% end-to-end improvement in production training, not inference. It is outside the inference-efficiency scope. The live worklist title field is a placeholder identity string rather than the primary paper title; the arXiv source was used to correct the reviewed title.",
+      "first_checked_at": null,
+      "last_checked_at": null,
+      "linked_from": [
+        "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[2]"
+      ]
+    }
+  ]
+}

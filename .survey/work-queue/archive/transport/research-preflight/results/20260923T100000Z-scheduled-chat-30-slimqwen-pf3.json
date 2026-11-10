@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T100000Z-scheduled-chat-30-slimqwen-pf3",
+  "kind": "research",
+  "attempt_id": "attempt-ffa0b1baa60976c86cf81af0",
+  "job_id": "job-research-1330e1d7068cf379",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08738-slimqwen-pruning-distillation.md",
+  "expected_blob_sha": null,
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "ok": true,
+  "preflight_passed": true,
+  "repair_required": false,
+  "decision": "READY_FOR_SUBMISSION",
+  "descriptor_sha256": "sha256:e77da017a9bd89987c9f01cffaac01841bfe49927cfb547c3360676c7973165a",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "03bd2afe8b7adc684ad00789fc8699f33f1af03a"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "ba281f6409e105e93bcc086defc983d11b2b5b21"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "8d6ba571e499ba78210e49b945e125ca212f7656"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "e1c874aca7ac07617fa5e819bfbb35a2038e0b96"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "fd9e4085b0e895073018ecd11ecdf27f7561111b"
+    }
+  ],
+  "quality": {
+    "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08738-slimqwen-pruning-distillation.md",
+    "status": "WARN",
+    "file_bytes": 20856,
+    "prose_chars": 6688,
+    "paragraphs": 26,
+    "method_paragraphs": 12,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7108573320092685,
+    "japanese_chars": 4295,
+    "latin_chars": 1747,
+    "bare_english_terms": [],
+    "failures": [],
+    "warnings": [
+      "日本語比率 71.1% < 警告基準 80.0%"
+    ]
+  },
+  "checked_at": "2026-09-23T09:51:07+00:00",
+  "next_action": "Do not create a completed-submission request manually. The GitHub publication pipeline will materialize the audit request and immutable descriptor from this exact passing result, then dispatch one batch submission drain. Do not edit any record slot after this check; if a slot changes, run a new preflight first."
+}

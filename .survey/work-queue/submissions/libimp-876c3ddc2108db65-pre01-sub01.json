@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Stream2LLM: Overlap Context Streaming and Prefill for Reduced Time-to-First-Token (TTFT)",
+      "source_url": "https://arxiv.org/abs/2604.16395",
+      "year": 2026,
+      "published": "2026-03-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Context retrieval systems for LLM inference face a critical challenge: high retrieval latency creates a fundamental tension between waiting for complete context (poor time-to-first-token) and proceeding without it (reduced quality). Streaming context incrementally--overlapping retrieval with inference--can mitigate this latency, but doing so with concurrent requests introduces new challenges: requests contend for GPU compute and memory, and scheduling must adapt to dynamic context arrivals. We present Stream2LLM, a streaming-aware LLM serving system for concurrent prefill-decode disaggregated deployments. Stream2LLM introduces adaptive scheduling and preemption for two distinct retrieval patterns: append-mode (progressive context accumulation) and update-mode (iterative refinement with cache invalidation). It decouples scheduling decisions from resource acquisition, enabling flexible preemption strategies guided by hardware-specific cost models, and uses longest common prefix matching to minimize redundant computation when input changes dynamically. To evaluate Stream2LLM, we collect two large-scale, real-world streaming workloads based on web crawling and approximate nearest neighbor search. Our evaluation demonstrates that streaming architecture delivers up to 11x TTFT improvements, with cost-aware scheduling providing critical benefits under memory pressure, all while maintaining throughput parity with non-streaming baselines. Code: https://github.com/rajveerb/stream2llm/tree/mlsys_artifact",
+      "identifiers": [
+        "SemanticScholar:3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88"
+      ],
+      "semantic_scholar_id": "3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88",
+      "canonical_id": "arXiv:2604.16395",
+      "arxiv_id": "2604.16395",
+      "doi": "10.48550/arXiv.2604.16395",
+      "authors": [
+        "Rajveer Bachkaniwala",
+        "Cheng Luo",
+        "R. So",
+        "Divya Mahajan",
+        "Ke-Xin Rong"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 224,
+        "matched_prestigious_venue": null
+      },
+      "reason": "検索コンテキストの到着とprefillを重ねる分離型LLMサービングで、追記型と更新型の入力に対し適応スケジューリングとプリエンプションを使う。共通接頭辞照合で再計算を削減し、実トラフィック由来2種の負荷でTTFT最大11倍改善を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.07173",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "Workshop Proceedings of the 55th International Conference on Parallel Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LoRA enables efficient customization of LLMs and is widely used in multi-tenant and multi-task serving. However, emerging model architectures such as MoE significantly increase LoRA memory cost, making existing coupled LoRA serving designs poorly scalable and prone to tail-latency inflation. We present InfiniLoRA, a disaggregated LoRA serving system that decouples LoRA execution from base-model inference. InfiniLoRA introduces a shared LoRA Server with parallelism-aware execution, SLO-driven provisioning, and critical-path optimizations, including GPU-initiated communication and hardware-specialized LoRA kernels. Experiments show that InfiniLoRA can achieve an average 3.05 × increase in serviceable request rate under strict latency SLOs, and improves the percentage of LoRA adapters satisfying the SLO requirement by 53.1%.",
+      "identifiers": [
+        "SemanticScholar:644f54cd1f7600e7188c055c855cc615dec9d75c"
+      ],
+      "semantic_scholar_id": "644f54cd1f7600e7188c055c855cc615dec9d75c",
+      "canonical_id": "arXiv:2604.07173",
+      "arxiv_id": "2604.07173",
+      "doi": "10.48550/arXiv.2604.07173",
+      "authors": [
+        "Hong-Yu Chen",
+        "Le-Tian Ruan",
+        "Zi-Ang Xu",
+        "Yu-Chen Li",
+        "Xin-Yu Chen",
+        "Bing-Sheng He",
+        "Jingwen Leng",
+        "Jie-Ru Zhao",
+        "Shi-Xuan Sun",
+        "Min-Yi Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 214,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoEなどで増えるLoRAアダプタのメモリ費用を抑えるため、基盤モデル推論からLoRA実行を分離し共有LoRA Serverへ集約する。SLO基準の資源配置、GPU起点通信、専用カーネルで厳格な遅延SLO下の処理可能要求率を平均3.05倍と報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "BFLA: Block-Filtered Long-Context Attention Mechanism",
+      "source_url": "https://arxiv.org/abs/2605.12193",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose Block-Filtered Long-Context Attention (BFLA), a training-free sparse prefill method that combines deterministic Lightning-style block indexing, query-tile sharing, and length-adaptive Ratio-$K$ selection with block-sparse execution. BFLA evaluates attention using the original Q/K/V, requires no retraining or per-model parameter retuning, and integrates with vLLM while preserving native decoding. For fixed Q/K/V, we bound local attention-output error in terms of the omitted attention mass, indexer-score distortion, retention budget, and query-tile sharing. Evaluations on Gemma4-E4B-IT, Qwen3.6-27B, Qwen3.8-27B, and Qwen3.8-Flash-Next across LongBench-v2, RULER, InfiniteBench, and Terminal Bench 2.1 show BFLA matches or even outperforms dense baselines. BFLA shows up to approximately $4\\times$ time-to-first-token and $3.72\\times$ end-to-end request speedups over the corresponding dense-prefill baselines. Comparisons with state-of-the-art FlashPrefill V2 and Qwen Sparse Attention also demonstrate that BFLA has better performance and efficiency trade-offs. These findings highlight the value of BFLA for the acceleration of long-context serving. Project website: https://github.com/Alicewithrabbit/BFLA.",
+      "identifiers": [
+        "SemanticScholar:7ad8414655ee444560a62378390cd60eafe97c80"
+      ],
+      "semantic_scholar_id": "7ad8414655ee444560a62378390cd60eafe97c80",
+      "canonical_id": "arXiv:2605.12193",
+      "arxiv_id": "2605.12193",
+      "authors": [
+        "Chong Wu",
+        "Brian K. Chen",
+        "Chu-Xu Song",
+        "She-Zheng Song",
+        "Zhenan Feng",
+        "Ren-Jie Xu",
+        "Hou-Wang Zhang",
+        "Jiawang Cao",
+        "Mao-Lin Che",
+        "Wen-Bo Zhu",
+        "Hong Yan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Lightning系の決定的ブロック索引、query tile共有、長さ適応Ratio-K選択を組み合わせた学習不要の疎prefill。元のQ/K/Vで計算しvLLMへ統合、著者は密prefill比TTFT最大約4倍を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DuoRate: Two-Rate Per-Expert Precision Allocation for Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2610.13328",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving a Mixture-of-Experts (MoE) model pays for expert precision twice: the resident footprint pays for every expert the router can reach, while each batch-one decode step pays only for the experts it selects. These are two different rate functionals over the same per-expert widths, yet published per-expert MoE allocators constrain only the first. We call the difference the store-read gap; in the released BitsMoE checkpoint, 2.54 bits per weight (bpw) of storage become 7.50 bpw of decode traffic. We propose DuoRate, which stores once and reads per workload. Offline, it stores one uniform tier of a prefix-readable weight stream and bakes a distortion tensor. Online, it profiles a workload's own prefill without labels and solves a Lagrangian rate-distortion allocation under the decode functional; routing frequency provably cancels from every per-expert decision, and the solve costs one dot product per expert and a bisection. A deployment therefore keeps a single artifact that prefill reads at the stored rate and decode reads at the workload's own rate. On Qwen3-30B-A3B, DuoRate reading 2.3 bpw exceeds every 2-bit-class baseline by 6.3 to 47.0 points of average accuracy, and at 2.9 bpw it matches 4-bit formats that read 1.4-1.6 bpw more. The advantage is largest under long decoding: on GSM8K, DuoRate at 2.9 bpw matches or exceeds every 4-bit format and trails BF16 by only 0.25 points, and at 2.6 bpw it still matches or exceeds the 4.5-bit NF4 and FP4. Against controls in its own format, the allocation alone is worth 0.07-0.11 bpw of read rate. Code will be released upon publication.",
+      "identifiers": [
+        "SemanticScholar:f802554d8ffe5d9a0121f0e7b7ecfa9e84cf2294"
+      ],
+      "semantic_scholar_id": "f802554d8ffe5d9a0121f0e7b7ecfa9e84cf2294",
+      "canonical_id": "arXiv:2610.13328",
+      "arxiv_id": "2610.13328",
+      "authors": [
+        "Meng-Qi Guo",
+        "Zhe Wei",
+        "Yuan Yuan",
+        "Jiunn Bin Lim",
+        "Bo Pan",
+        "Michael Bi Mi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoEの保存ビット率と実際に選択されたexpertの復号読み出しビット率を分け、単一のprefix-readable重みから負荷に合わせて精度を配分する。Qwen3-30B-A3Bで2.3bpw読み出し時の精度改善を報告する推論向け量子化・帯域最適化である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WAKMan: Workload Aware KVCache Manager",
+      "source_url": "https://arxiv.org/abs/2610.36355",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefix caching enables a Large Language Model (LLM) servers to reuse the Key-Value (KV) states and accelerate prefill computation stage for requests that share a prefix with earlier prompts, thus reducing latency and serving cost. With limited memory resource, the KV cache eviction policy becomes a decisive factor in determining the overall benefits of prefix caching. Production traffic may have single-turn, multi-turn, agentic, or a mixture of any combination of these request types. Our findings indicate that agentic steps return within seconds and favor recency, while popular prompts and long conversations return after many other requests and favor frequency. Across 20 mixes, no single policy is always best: vLLM's default strategy LRU provides 12% higher cache hits as compared to the frequency-oriented S3FIFO on agentic-heavy mixes but trails it by up to 22% elsewhere, and even a single workload parameter can flip the winner even for any particular mix. We present WAKMan, a workload-aware KV cache manager that picks its eviction policy from live traffic without knowing request types or reading prompts. It improves hit rate over LRU by 5 percentage points on average, with the lowest mean and worst-case optimality gap of all policies.",
+      "identifiers": [
+        "SemanticScholar:43b292660536c197a1fe0e1d42597eb3749825f9"
+      ],
+      "semantic_scholar_id": "43b292660536c197a1fe0e1d42597eb3749825f9",
+      "canonical_id": "arXiv:2610.36355",
+      "arxiv_id": "2610.36355",
+      "authors": [
+        "Suhas Kumar Morisetty",
+        "Vaibhavi Lokegaonkar",
+        "S. Varghese",
+        "Wesley Harris"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM接頭辞KVキャッシュの追い出しを、エージェント系の再利用間隔と人気プロンプトの頻度特性に合わせ実トラフィックから適応選択する。20種類の混合負荷でLRU比平均5ポイントのヒット率向上を報告し、推論サービングのメモリ管理へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-876c3ddc2108",
+    "round": "libimp-876c3ddc2108db65-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-876c3ddc2108db65-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-876c3ddc2108db65-pre01.json",
+    "receipt": "sha256:f48283e94916f82fc245d13e4ed8a1b31ef3490e4967b8931357cc315e1250a2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-876c3ddc2108",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

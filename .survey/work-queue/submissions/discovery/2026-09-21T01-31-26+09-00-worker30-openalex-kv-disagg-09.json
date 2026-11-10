@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "precheck_result_path": ".survey/work-queue/discovery-precheck/results/20260921T0148JST-worker30-openalex-kv-disagg-09b.json",
+  "precheck_receipt": "sha256:6906c0011cca6df15539b7a04f53871c04a2d0119a6d1a233d3c9067bc75f1aa",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-21T01:31:26+09:00-worker30",
+    "round": "openalex-kv-disagg-09",
+    "axis": "KV cache disaggregation remote memory serving",
+    "query_summary": "Semantic Scholar 429後の正規recoveryとしてOpenAlex固定検索へ切替。未評価20件を取得し、既存系統との重なりやsurvey/周辺研究を確認したが新規投入は見送った。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 48,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "dynamic KV management検索へ進む",
+    "empty_round_reason": "no_candidate_selected_after_quality_screen"
+  }
+}

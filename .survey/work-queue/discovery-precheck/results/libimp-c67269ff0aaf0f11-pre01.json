@@ -1,0 +1,486 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c67269ff0aaf0f11-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c67269ff0aaf",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2008.05000",
+    "arXiv:2011.00241",
+    "arXiv:2203.11086",
+    "arXiv:2512.19905",
+    "arXiv:2602.09591"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a7b4d524fba8dc4a2138b5b6255b3c8b988b0f05",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-11T01:34:25.735485+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2008.05000",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2011.00241",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2203.11086",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.19905",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.09591",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks",
+      "source_url": "https://arxiv.org/abs/2008.05000",
+      "year": 2020,
+      "published": "2020-08-11",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 192,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Graph neural networks (GNNs) have demonstrated strong performance on a wide variety of tasks due to their ability to model non-uniform structured data. Despite their promise, there exists little research exploring methods to make them more efficient at inference time. In this work, we explore the viability of training quantized GNNs, enabling the usage of low precision integer arithmetic during inference. We identify the sources of error that uniquely arise when attempting to quantize GNNs, and propose an architecturally-agnostic method, Degree-Quant, to improve performance over existing quantization-aware training baselines commonly used on other architectures, such as CNNs. We validate our method on six datasets and show, unlike previous attempts, that models generalize to unseen graphs. Models trained with Degree-Quant for INT8 quantization perform as well as FP32 models in most cases; for INT4 models, we obtain up to 26% gains over the baselines. Our work enables up to 4.7x speedups on CPU when using INT8 arithmetic.",
+      "identifiers": [
+        "SemanticScholar:9c0e855382de7e708c8eea7b4d5cf792bcd4a326"
+      ],
+      "semantic_scholar_id": "9c0e855382de7e708c8eea7b4d5cf792bcd4a326",
+      "canonical_id": "arXiv:2008.05000",
+      "arxiv_id": "2008.05000",
+      "authors": [
+        "Shyam A. Tailor",
+        "Javier Fernandez-marques",
+        "N. Lane"
+      ],
+      "priority": 202,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 192,
+        "citation_count": 192,
+        "total": 202,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2252,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Methods for Pruning Deep Neural Networks",
+      "source_url": "https://arxiv.org/abs/2011.00241",
+      "year": 2020,
+      "published": "2020-10-31",
+      "venue": "IEEE Access",
+      "citation_count": 201,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents a survey of methods for pruning deep neural networks. It begins by categorising over 150 studies based on the underlying approach used and then focuses on three categories: methods that use magnitude based pruning, methods that utilise clustering to identify redundancy, and methods that use sensitivity analysis to assess the effect of pruning. Some of the key influencing studies within these categories are presented to highlight the underlying approaches and results achieved. Most studies present results which are distributed in the literature as new architectures, algorithms and data sets have developed with time, making comparison across different studied difficult. The paper therefore provides a resource for the community that can be used to quickly compare the results from many different methods on a variety of data sets, and a range of architectures, including AlexNet, ResNet, DenseNet and VGG. The resource is illustrated by comparing the results published for pruning AlexNet and ResNet50 on ImageNet and ResNet56 and VGG16 on the CIFAR10 data to reveal which pruning methods work well in terms of retaining accuracy whilst achieving good compression rates. The paper concludes by identifying some research gaps and promising directions for future research.",
+      "identifiers": [
+        "SemanticScholar:0fa13a5ef36168ff3fd08b03fd30f1f935d6a18a"
+      ],
+      "semantic_scholar_id": "0fa13a5ef36168ff3fd08b03fd30f1f935d6a18a",
+      "canonical_id": "arXiv:2011.00241",
+      "arxiv_id": "2011.00241",
+      "doi": "10.1109/ACCESS.2022.3182659",
+      "authors": [
+        "S. Vadera",
+        "Salem Ameen"
+      ],
+      "priority": 201,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 201,
+        "citation_count": 201,
+        "total": 201,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2171,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Overcoming Oscillations in Quantization-Aware Training",
+      "source_url": "https://arxiv.org/abs/2203.11086",
+      "year": 2022,
+      "published": "2022-03-21",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 188,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "When training neural networks with simulated quantization, we observe that quantized weights can, rather unexpectedly, oscillate between two grid-points. The importance of this effect and its impact on quantization-aware training (QAT) are not well-understood or investigated in literature. In this paper, we delve deeper into the phenomenon of weight oscillations and show that it can lead to a significant accuracy degradation due to wrongly estimated batch-normalization statistics during inference and increased noise during training. These effects are particularly pronounced in low-bit ($\\leq$ 4-bits) quantization of efficient networks with depth-wise separable layers, such as MobileNets and EfficientNets. In our analysis we investigate several previously proposed QAT algorithms and show that most of these are unable to overcome oscillations. Finally, we propose two novel QAT algorithms to overcome oscillations during training: oscillation dampening and iterative weight freezing. We demonstrate that our algorithms achieve state-of-the-art accuracy for low-bit (3&4 bits) weight and activation quantization of efficient architectures, such as MobileNetV2, MobileNetV3, and EfficentNet-lite on ImageNet. Our source code is available at {https://github.com/qualcomm-ai-research/oscillations-qat}.",
+      "identifiers": [
+        "SemanticScholar:7a7a4f41f9ca5682b1444140799ca4dde44352f5"
+      ],
+      "semantic_scholar_id": "7a7a4f41f9ca5682b1444140799ca4dde44352f5",
+      "canonical_id": "arXiv:2203.11086",
+      "arxiv_id": "2203.11086",
+      "doi": "10.48550/arXiv.2203.11086",
+      "authors": [
+        "Markus Nagel",
+        "Marios Fournarakis",
+        "Yelysei Bondarenko",
+        "Tijmen Blankevoort"
+      ],
+      "priority": 198,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 188,
+        "citation_count": 188,
+        "total": 198,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1665,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Demystifying LLM-as-a-Judge: Analytically Tractable Model for Inference-Time Scaling",
+      "source_url": "https://arxiv.org/abs/2512.19905",
+      "year": 2025,
+      "published": "2025-12-22",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent developments in large language models have shown advantages in reallocating a notable share of computational resource from training time to inference time. However, the principles behind inference time scaling are not well understood. In this paper, we introduce an analytically tractable model of inference-time scaling: Bayesian linear regression with a reward-weighted sampler, where the reward is determined from a linear model, modeling LLM-as-a-judge scenario. We study this problem in the high-dimensional regime, where the deterministic equivalents dictate a closed-form expression for the posterior predictive mean and variance. We analyze the generalization error when training data are sampled from a teacher model. We draw $k$ inference-time samples and select via softmax at a temperature applied to a quadratic reward. When the reward is not too different from the teacher, the generalization error decreases monotonically with increasing inference time samples $k$. However, the specific reward that optimizes inference-time selection generally differs from the teacher. In contrast, substantial reward misspecification induces a finite optimal $k$ beyond which more sampling can increase the generalization error. For fixed $k$, there exists an optimal sampling temperature. We experimentally verify these facts in large language model inference with an additional large language model as a judge. In the\"best-of-$k$\"limit with the teacher as reward, we theoretically show that the generalization error decays as $\\Theta(1/k^2)$ and determine the leading coefficient via extreme value theory. These formulas delineate domains where scaling inference-time computation is provably preferable to collecting more data. Finally, we demonstrate that when task difficulty increases, the previously mentioned advantage of inference-time compute degrades.",
+      "identifiers": [
+        "SemanticScholar:77275ea36c5ef2ced57271efcdcd37f49261c94c"
+      ],
+      "semantic_scholar_id": "77275ea36c5ef2ced57271efcdcd37f49261c94c",
+      "canonical_id": "arXiv:2512.19905",
+      "arxiv_id": "2512.19905",
+      "doi": "10.48550/arXiv.2512.19905",
+      "authors": [
+        "Indranil Halder",
+        "Cengiz Pehlevan"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 293,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "On the Optimal Reasoning Length for RL-Trained Language Models",
+      "source_url": "https://arxiv.org/abs/2602.09591",
+      "year": 2026,
+      "published": "2026-02-10",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reinforcement learning substantially improves reasoning in large language models, but it also tends to lengthen chain-of-thought outputs and increase computational cost. Although length-control methods have been proposed, the length-accuracy relationship they induce remains unclear. We train policies with several length-control methods on multiple base models in a controlled setup and find that, across both mathematical reasoning and code generation, accuracy is non-monotonic in output length, peaking at an intermediate value. Mode accuracy, however, continues to improve with length even in settings where sample accuracy plateaus or declines, indicating that the non-monotonic length-accuracy relationship is driven by dispersion around an increasingly correct center.",
+      "identifiers": [
+        "SemanticScholar:41c1d312819d412f3a99227ea136d148841b1749"
+      ],
+      "semantic_scholar_id": "41c1d312819d412f3a99227ea136d148841b1749",
+      "canonical_id": "arXiv:2602.09591",
+      "arxiv_id": "2602.09591",
+      "doi": "10.48550/arXiv.2602.09591",
+      "authors": [
+        "Daisuke Nohara",
+        "Taishi Nakamura",
+        "Rio Yokota"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 243,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2008.05000",
+      "identity_tokens": [
+        "id:SemanticScholar:9c0e855382de7e708c8eea7b4d5cf792bcd4a326",
+        "id:arXiv:2008.05000",
+        "title:degreequant quantizationaware training for graph neural networks",
+        "url:https://arxiv.org/abs/2008.05000"
+      ],
+      "record": {
+        "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks",
+        "source_url": "https://arxiv.org/abs/2008.05000",
+        "year": 2020,
+        "published": "2020-08-11",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 192,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Graph neural networks (GNNs) have demonstrated strong performance on a wide variety of tasks due to their ability to model non-uniform structured data. Despite their promise, there exists little research exploring methods to make them more efficient at inference time. In this work, we explore the viability of training quantized GNNs, enabling the usage of low precision integer arithmetic during inference. We identify the sources of error that uniquely arise when attempting to quantize GNNs, and propose an architecturally-agnostic method, Degree-Quant, to improve performance over existing quantization-aware training baselines commonly used on other architectures, such as CNNs. We validate our method on six datasets and show, unlike previous attempts, that models generalize to unseen graphs. Models trained with Degree-Quant for INT8 quantization perform as well as FP32 models in most cases; for INT4 models, we obtain up to 26% gains over the baselines. Our work enables up to 4.7x speedups on CPU when using INT8 arithmetic.",
+        "identifiers": [
+          "SemanticScholar:9c0e855382de7e708c8eea7b4d5cf792bcd4a326"
+        ],
+        "semantic_scholar_id": "9c0e855382de7e708c8eea7b4d5cf792bcd4a326",
+        "canonical_id": "arXiv:2008.05000",
+        "arxiv_id": "2008.05000",
+        "authors": [
+          "Shyam A. Tailor",
+          "Javier Fernandez-marques",
+          "N. Lane"
+        ],
+        "priority": 202,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 192,
+          "citation_count": 192,
+          "total": 202,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2252,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2011.00241",
+      "identity_tokens": [
+        "id:DOI:10.1109/access.2022.3182659",
+        "id:SemanticScholar:0fa13a5ef36168ff3fd08b03fd30f1f935d6a18a",
+        "id:arXiv:2011.00241",
+        "title:methods for pruning deep neural networks",
+        "url:https://arxiv.org/abs/2011.00241"
+      ],
+      "record": {
+        "title": "Methods for Pruning Deep Neural Networks",
+        "source_url": "https://arxiv.org/abs/2011.00241",
+        "year": 2020,
+        "published": "2020-10-31",
+        "venue": "IEEE Access",
+        "citation_count": 201,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper presents a survey of methods for pruning deep neural networks. It begins by categorising over 150 studies based on the underlying approach used and then focuses on three categories: methods that use magnitude based pruning, methods that utilise clustering to identify redundancy, and methods that use sensitivity analysis to assess the effect of pruning. Some of the key influencing studies within these categories are presented to highlight the underlying approaches and results achieved. Most studies present results which are distributed in the literature as new architectures, algorithms and data sets have developed with time, making comparison across different studied difficult. The paper therefore provides a resource for the community that can be used to quickly compare the results from many different methods on a variety of data sets, and a range of architectures, including AlexNet, ResNet, DenseNet and VGG. The resource is illustrated by comparing the results published for pruning AlexNet and ResNet50 on ImageNet and ResNet56 and VGG16 on the CIFAR10 data to reveal which pruning methods work well in terms of retaining accuracy whilst achieving good compression rates. The paper concludes by identifying some research gaps and promising directions for future research.",
+        "identifiers": [
+          "SemanticScholar:0fa13a5ef36168ff3fd08b03fd30f1f935d6a18a"
+        ],
+        "semantic_scholar_id": "0fa13a5ef36168ff3fd08b03fd30f1f935d6a18a",
+        "canonical_id": "arXiv:2011.00241",
+        "arxiv_id": "2011.00241",
+        "doi": "10.1109/ACCESS.2022.3182659",
+        "authors": [
+          "S. Vadera",
+          "Salem Ameen"
+        ],
+        "priority": 201,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 201,
+          "citation_count": 201,
+          "total": 201,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2171,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2203.11086",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2203.11086",
+        "id:SemanticScholar:7a7a4f41f9ca5682b1444140799ca4dde44352f5",
+        "id:arXiv:2203.11086",
+        "title:overcoming oscillations in quantizationaware training",
+        "url:https://arxiv.org/abs/2203.11086"
+      ],
+      "record": {
+        "title": "Overcoming Oscillations in Quantization-Aware Training",
+        "source_url": "https://arxiv.org/abs/2203.11086",
+        "year": 2022,
+        "published": "2022-03-21",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 188,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "When training neural networks with simulated quantization, we observe that quantized weights can, rather unexpectedly, oscillate between two grid-points. The importance of this effect and its impact on quantization-aware training (QAT) are not well-understood or investigated in literature. In this paper, we delve deeper into the phenomenon of weight oscillations and show that it can lead to a significant accuracy degradation due to wrongly estimated batch-normalization statistics during inference and increased noise during training. These effects are particularly pronounced in low-bit ($\\leq$ 4-bits) quantization of efficient networks with depth-wise separable layers, such as MobileNets and EfficientNets. In our analysis we investigate several previously proposed QAT algorithms and show that most of these are unable to overcome oscillations. Finally, we propose two novel QAT algorithms to overcome oscillations during training: oscillation dampening and iterative weight freezing. We demonstrate that our algorithms achieve state-of-the-art accuracy for low-bit (3&4 bits) weight and activation quantization of efficient architectures, such as MobileNetV2, MobileNetV3, and EfficentNet-lite on ImageNet. Our source code is available at {https://github.com/qualcomm-ai-research/oscillations-qat}.",
+        "identifiers": [
+          "SemanticScholar:7a7a4f41f9ca5682b1444140799ca4dde44352f5"
+        ],
+        "semantic_scholar_id": "7a7a4f41f9ca5682b1444140799ca4dde44352f5",
+        "canonical_id": "arXiv:2203.11086",
+        "arxiv_id": "2203.11086",
+        "doi": "10.48550/arXiv.2203.11086",
+        "authors": [
+          "Markus Nagel",
+          "Marios Fournarakis",
+          "Yelysei Bondarenko",
+          "Tijmen Blankevoort"
+        ],
+        "priority": 198,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 188,
+          "citation_count": 188,
+          "total": 198,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1665,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.19905",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.19905",
+        "id:SemanticScholar:77275ea36c5ef2ced57271efcdcd37f49261c94c",
+        "id:arXiv:2512.19905",
+        "title:demystifying llmasajudge analytically tractable model for inferencetime scaling",
+        "url:https://arxiv.org/abs/2512.19905"
+      ],
+      "record": {
+        "title": "Demystifying LLM-as-a-Judge: Analytically Tractable Model for Inference-Time Scaling",
+        "source_url": "https://arxiv.org/abs/2512.19905",
+        "year": 2025,
+        "published": "2025-12-22",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent developments in large language models have shown advantages in reallocating a notable share of computational resource from training time to inference time. However, the principles behind inference time scaling are not well understood. In this paper, we introduce an analytically tractable model of inference-time scaling: Bayesian linear regression with a reward-weighted sampler, where the reward is determined from a linear model, modeling LLM-as-a-judge scenario. We study this problem in the high-dimensional regime, where the deterministic equivalents dictate a closed-form expression for the posterior predictive mean and variance. We analyze the generalization error when training data are sampled from a teacher model. We draw $k$ inference-time samples and select via softmax at a temperature applied to a quadratic reward. When the reward is not too different from the teacher, the generalization error decreases monotonically with increasing inference time samples $k$. However, the specific reward that optimizes inference-time selection generally differs from the teacher. In contrast, substantial reward misspecification induces a finite optimal $k$ beyond which more sampling can increase the generalization error. For fixed $k$, there exists an optimal sampling temperature. We experimentally verify these facts in large language model inference with an additional large language model as a judge. In the\"best-of-$k$\"limit with the teacher as reward, we theoretically show that the generalization error decays as $\\Theta(1/k^2)$ and determine the leading coefficient via extreme value theory. These formulas delineate domains where scaling inference-time computation is provably preferable to collecting more data. Finally, we demonstrate that when task difficulty increases, the previously mentioned advantage of inference-time compute degrades.",
+        "identifiers": [
+          "SemanticScholar:77275ea36c5ef2ced57271efcdcd37f49261c94c"
+        ],
+        "semantic_scholar_id": "77275ea36c5ef2ced57271efcdcd37f49261c94c",
+        "canonical_id": "arXiv:2512.19905",
+        "arxiv_id": "2512.19905",
+        "doi": "10.48550/arXiv.2512.19905",
+        "authors": [
+          "Indranil Halder",
+          "Cengiz Pehlevan"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 293,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.09591",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.09591",
+        "id:SemanticScholar:41c1d312819d412f3a99227ea136d148841b1749",
+        "id:arXiv:2602.09591",
+        "title:on the optimal reasoning length for rltrained language models",
+        "url:https://arxiv.org/abs/2602.09591"
+      ],
+      "record": {
+        "title": "On the Optimal Reasoning Length for RL-Trained Language Models",
+        "source_url": "https://arxiv.org/abs/2602.09591",
+        "year": 2026,
+        "published": "2026-02-10",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reinforcement learning substantially improves reasoning in large language models, but it also tends to lengthen chain-of-thought outputs and increase computational cost. Although length-control methods have been proposed, the length-accuracy relationship they induce remains unclear. We train policies with several length-control methods on multiple base models in a controlled setup and find that, across both mathematical reasoning and code generation, accuracy is non-monotonic in output length, peaking at an intermediate value. Mode accuracy, however, continues to improve with length even in settings where sample accuracy plateaus or declines, indicating that the non-monotonic length-accuracy relationship is driven by dispersion around an increasingly correct center.",
+        "identifiers": [
+          "SemanticScholar:41c1d312819d412f3a99227ea136d148841b1749"
+        ],
+        "semantic_scholar_id": "41c1d312819d412f3a99227ea136d148841b1749",
+        "canonical_id": "arXiv:2602.09591",
+        "arxiv_id": "2602.09591",
+        "doi": "10.48550/arXiv.2602.09591",
+        "authors": [
+          "Daisuke Nohara",
+          "Taishi Nakamura",
+          "Rio Yokota"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 243,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:78c7c990d419adc73bcb170b47ad968afe03111605efcd6535d89feee5c98f08",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

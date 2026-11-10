@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7f7945b59e769c8-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.10631",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.10631",
+    "identity_tokens": [
+      "arXiv:2503.10631"
+    ],
+    "reason": "一次要旨はvision-language-action robot modelのdiffusion/autoregression協調方式を扱うが、LLM推論効率/servingの評価ではない。",
+    "first_checked_at": "2026-10-05T01:50:05+00:00",
+    "last_checked_at": "2026-10-05T01:50:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md"
+    ],
+    "title": "HybridVLA: Collaborative Diffusion and Autoregression in a Unified Vision-Language-Action Model"
+  },
+  "processed_at": "2026-10-05T01:50:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7f7945b59e7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

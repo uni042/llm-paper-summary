@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6e2a34ba963ef56b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.30908",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.30908",
+    "identity_tokens": [
+      "arXiv:2608.30908"
+    ],
+    "reason": "要旨の主眼は低bitモデルのfine-tuning最適化。deploymentコスト低減への言及はあるが、推論手法を評価しない。",
+    "first_checked_at": "2026-10-05T07:48:22+00:00",
+    "last_checked_at": "2026-10-05T07:48:22+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "Fine-Tuning Low-Bit Models with Gradient in Quantized Code Space"
+  },
+  "processed_at": "2026-10-05T07:48:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6e2a34ba963e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

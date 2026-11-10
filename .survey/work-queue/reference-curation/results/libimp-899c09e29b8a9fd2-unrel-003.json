@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-899c09e29b8a9fd2-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.ress.2025.111891",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.ress.2025.111891",
+    "identity_tokens": [
+      "DOI:10.1016/j.ress.2025.111891"
+    ],
+    "reason": "タイトルは海賊行為対策のオフライン業務アプリケーション向けLLM利用を主題としており、推論カーネル、KVキャッシュ、MoE、量子化、汎用サービングスケジューリングの新規技術を明示していない。明白な応用領域研究として本文深読解の対象外とする。",
+    "first_checked_at": "2026-10-16T09:22:43+00:00",
+    "last_checked_at": "2026-10-16T09:22:43+00:00",
+    "linked_from": [],
+    "title": "Pirate-GPT: A locally deployed large language model framework for reliable offline anti-piracy"
+  },
+  "processed_at": "2026-10-16T09:22:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-899c09e29b8a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

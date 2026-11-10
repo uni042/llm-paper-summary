@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b4403570b2f6cadd-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/jiot.2026.3718038",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/jiot.2026.3718038",
+    "identity_tokens": [
+      "DOI:10.1109/jiot.2026.3718038"
+    ],
+    "reason": "一次要旨とtitleはHeatPre: Efficient Diffusion-Inspired Precipitation Nowcasting for Edge Weather Intelligenceを対象とする応用・予測・認識・学習研究として記述しており、LLM推論/servingの効率機構を扱わない。",
+    "first_checked_at": "2026-10-05T04:12:39+00:00",
+    "last_checked_at": "2026-10-05T04:12:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "HeatPre: Efficient Diffusion-Inspired Precipitation Nowcasting for Edge Weather Intelligence"
+  },
+  "processed_at": "2026-10-05T04:12:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b4403570b2f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

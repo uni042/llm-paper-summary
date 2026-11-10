@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-53164a7c13145a9a-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.18849",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.18849",
+    "identity_tokens": [
+      "arXiv:2405.18849"
+    ],
+    "reason": "SFANet targets weather forecasting with spatial-frequency attention, an independent forecasting model application without a concrete LLM systems connection.",
+    "first_checked_at": "2026-10-13T00:49:42+00:00",
+    "last_checked_at": "2026-10-13T00:49:42+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md"
+    ],
+    "title": "SFANet: Spatial-Frequency Attention Network for Weather Forecasting"
+  },
+  "processed_at": "2026-10-13T00:49:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-53164a7c1314",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

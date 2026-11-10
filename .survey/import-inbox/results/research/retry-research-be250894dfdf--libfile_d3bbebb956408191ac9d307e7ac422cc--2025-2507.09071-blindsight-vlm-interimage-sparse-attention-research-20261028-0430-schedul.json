@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b62fec60a1d4a05e120c0f84ae7dadc3fe86f22f21538df9cb75907b77a30455",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-be250894dfdf--libfile_d3bbebb956408191ac9d307e7ac422cc--2025-2507.09071-blindsight-vlm-interimage-sparse-attention-research-20261028-0430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2507.09071",
+  "worker_completed_at": "2026-10-28T04:33:03+09:00",
+  "worker_run_key": "20261028-0430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7095,
+    "body_paragraphs": 37,
+    "method_chars": 2284,
+    "method_paragraphs": 12,
+    "evaluation_chars": 156,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 156 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 156 < 500"
+  ],
+  "processed_at": "2026-10-27T20:41:37+00:00"
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3fa24a4824b07236-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.06745",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.06745",
+    "identity_tokens": [
+      "SemanticScholar:cd614a084248a1dc1ed02d1d2146beb2c6d914d5",
+      "arXiv:2603.06745"
+    ],
+    "reason": "DIRECTER adjusts steering strength through KV-cache scaling to improve instruction-following quality; its abstract frames the gain as behavioral quality and gives no serving-efficiency target.",
+    "first_checked_at": "2026-10-13T09:37:05+00:00",
+    "last_checked_at": "2026-10-13T09:37:05+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.04793-squeezeattention-2d-management-of-kv-cache-in-llm-inference-via-layer-wi.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Enhancing Instruction Following of LLMs via Activation Steering with Dynamic Rejection"
+  },
+  "processed_at": "2026-10-13T09:37:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3fa24a4824b0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

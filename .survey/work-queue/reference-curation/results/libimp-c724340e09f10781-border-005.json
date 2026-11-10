@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c724340e09f10781-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.21000",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.21000",
+    "identity_tokens": [
+      "arXiv:2607.21000"
+    ],
+    "reason": "The evaluated language models are small and the paper does not establish LLM-scale generative serving throughput or wall-clock inference gains. The architectural memory trade-off is plausible but deployment-scale applicability remains unresolved.",
+    "first_checked_at": "2026-10-05T10:03:29+00:00",
+    "last_checked_at": "2026-10-05T10:03:29+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+    ],
+    "title": "Naju: A Native Discrete State-Space Model with Independent Retention and Writing for Long-Sequence Memory"
+  },
+  "processed_at": "2026-10-05T10:03:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c724340e09f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

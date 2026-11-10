@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9455a0b08573fcd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.05309",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.05309",
+    "identity_tokens": [
+      "arXiv:2609.05309"
+    ],
+    "reason": "Analysis of mHC residual streams, no inference-cost optimization.",
+    "first_checked_at": "2026-10-05T07:12:21+00:00",
+    "last_checked_at": "2026-10-05T07:12:21+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+    ],
+    "title": "How Does mHC Use Its Residual Streams? Selective Routing and Near-Identity Mixing"
+  },
+  "processed_at": "2026-10-05T07:12:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9455a0b0857",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

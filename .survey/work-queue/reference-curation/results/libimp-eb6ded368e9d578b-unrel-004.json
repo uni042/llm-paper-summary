@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb6ded368e9d578b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2111.09883",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2111.09883",
+    "identity_tokens": [
+      "arXiv:2111.09883"
+    ],
+    "reason": "Swin Transformerを巨大vision model・高解像度入力へscaleするためのnormalizationやattention設計を提案し画像認識性能を評価する。LLM推論system対象外。",
+    "first_checked_at": "2026-10-04T21:42:14+00:00",
+    "last_checked_at": "2026-10-04T22:53:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+    ],
+    "title": "Swin Transformer V2: Scaling Up Capacity and Resolution"
+  },
+  "processed_at": "2026-10-04T22:53:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb6ded368e9d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

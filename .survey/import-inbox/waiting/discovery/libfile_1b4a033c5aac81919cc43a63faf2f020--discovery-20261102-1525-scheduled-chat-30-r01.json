@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261102-1525-scheduled-chat-30/r01",
+  "reference_main_sha": "ee716ae60fd44ea0b1fb55565eef6e202c16126a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.11750",
+      "identity_tokens": [
+        "id:arXiv:2610.11750",
+        "id:DOI:10.48550/arXiv.2610.11750"
+      ],
+      "title": "Where Draft Trees Lose Target Mass: Exit-Guided Speculative Decoding",
+      "reason": "投機的デコードで固定ドラフト木がカバーするtarget確率質量から、正確な検証器が得られる出力ブロック長の上限と退出分布を導く。Tree Exit Verificationは退出ノードとbonus tokenを直接標本化して検証段階を並列化し、ExitTrainはtarget確率が木から漏れる境界に学習信号を与える。対話・コード・数学タスクでDDTree比、平均ブロック長13%増、検証遅延15%減、端から端の速度14%改善を報告するため、LLM投機的推論の直接的な効率化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.11750",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:27+09:00",
+      "last_checked_at": "2026-11-02T15:29:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 99,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.02367",
+      "identity_tokens": [
+        "id:arXiv:2604.02367",
+        "id:DOI:10.48550/arXiv.2604.02367"
+      ],
+      "title": "Evaluating Small Language Models for Front-Door Routing: A Harmonized Benchmark and Synthetic-Traffic Experiment",
+      "reason": "推論要求を低コストの小型言語モデルで分類し、後段モデル選択へつなぐフロントドアルーティングの適否を、同一T4環境での60ケース比較と合成トラフィック実験で検討する。Qwen2.5-3Bは分類精度0.793・中央値988msを報告するが、事前登録の単体実用基準である精度0.85とp95 2000msを満たすモデルはない。モデル選択の計測として関連する一方、新規サービングスケジューラや推論カーネルを提案する研究ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2604.02367",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:27+09:00",
+      "last_checked_at": "2026-11-02T15:29:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 111,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.38166",
+      "identity_tokens": [
+        "id:arXiv:2609.38166",
+        "id:DOI:10.48550/arXiv.2609.38166"
+      ],
+      "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+      "reason": "Gated DeltaNetやKimi Delta Attentionの推論で繰り返し読み書きされる再帰状態を、窓単位で一度だけ量子化し、窓内更新は高精度バッファに保持する。外れ値を高精度Compensator Tokensとして残し、残差を平滑化して8bit化することで誤差蓄積を抑える。Qwen・Kimi・GLM系でFP32相当の精度を維持しつつ、B200等でカーネル2.05〜3.70倍、エンドツーエンド平均1.47倍の速度を報告しており、線形注意の推論時状態メモリと演算を直接改善するためaccept。",
+      "source_url": "https://arxiv.org/abs/2609.38166",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:27+09:00",
+      "last_checked_at": "2026-11-02T15:29:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 112,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.05475",
+      "identity_tokens": [
+        "id:arXiv:2607.05475",
+        "id:DOI:10.48550/arXiv.2607.05475"
+      ],
+      "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+      "reason": "モバイルLLM推論を5種類のフレームワークとCPU・GPU・NPUの3バックエンドで計測し、PowerBenchによりbackend別電力とthroughputを帰属する。NPUでフレームワーク間の性能差が最大10倍に拡大する要因をoffload方針・演算器利用率・activation量子化に分解し、prefillはNPU、メモリ律速decodeはCPUが優位になるphase splitを示す。CPU周波数調整だけで最大39.7%の省電力、NPU構成で最大53.2%削減可能との推定を報告し、実測と推定を区別した推論基盤分析としてaccept。",
+      "source_url": "https://arxiv.org/abs/2607.05475",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:27+09:00",
+      "last_checked_at": "2026-11-02T15:29:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 113,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.02159",
+      "identity_tokens": [
+        "id:arXiv:2602.02159",
+        "id:DOI:10.48550/arXiv.2602.02159"
+      ],
+      "title": "Focus-dLLM: Accelerating Long-Context Diffusion LLM Inference via Confidence-Guided Context Focusing",
+      "reason": "拡散型LLMの双方向注意に対して、前のdenoisingステップでのtoken信頼度から次にunmaskされる位置を推定し、attention sinkを残しながら重要なquery/keyを選別する。sink位置は層間で再利用して探索コストを減らす。長文脈32Kで著者はvanillaに対して29倍超の速度を報告し、別条件でFast-dLLMに対して2.05倍を示す。訓練不要の拡散言語モデル推論に対する直接的な疎注意最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2602.02159",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:27+09:00",
+      "last_checked_at": "2026-11-02T15:29:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 118,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.38823",
+      "identity_tokens": [
+        "id:arXiv:2609.38823",
+        "id:DOI:10.48550/arXiv.2609.38823"
+      ],
+      "title": "DecoMoE: Decoupling Visual Propagation and Expert Computation for Efficient Multimodal MoE Inference",
+      "reason": "マルチモーダルMoEの推論で、入力ごとに視覚tokenの伝搬を終了する層を予測するSAVBと、テキストtokenのrouting質量でexpertを事前並べ替えし必要な連続prefixだけ使うRCEPを組み合わせる。Qwen3-VL-MoEとInternVL3.5-30B-A3Bで視覚token数とexpert計算の双方を削減し、前者では計算27.06→16.73 TFLOPs、遅延0.44→0.26秒、精度維持97.91%を報告する。実行時MoE推論の計算・遅延に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2609.38823",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:27+09:00",
+      "last_checked_at": "2026-11-02T15:29:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 120,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.17336",
+      "identity_tokens": [
+        "id:arXiv:2608.17336",
+        "id:DOI:10.48550/arXiv.2608.17336"
+      ],
+      "title": "TileMix: Tile-Centric Mixed-Precision Attention for LLM Inference Acceleration",
+      "reason": "長文脈prefillの密注意をhardware-alignedなscore tile群へ分割し、bitmaskでFP16またはINT8計算経路を選び、共通のonline softmax状態へ累積する。全ての合法token間接続を保持しつつ、precision groupingでメタデータ負荷を抑え、GQA・可変長batch・INT8 KVに対応する。A100上のLLaMA/Qwen/Vicunaで均一INT8より長文脈品質を改善し、FP16よりprefill throughputを改善する直接的な注意カーネル方式なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2608.17336",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:27+09:00",
+      "last_checked_at": "2026-11-02T15:29:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 123,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.13915",
+      "identity_tokens": [
+        "id:arXiv:2605.13915",
+        "id:DOI:10.48550/arXiv.2605.13915"
+      ],
+      "title": "Multi-Scale Dequant: Eliminating Dequantization Bottleneck via Activation Decomposition for Efficient LLM Inference",
+      "reason": "Ascend系NPUなどで重みをINT8/FP4からBF16へ逆量子化する操作がGEMMのcritical pathを占める問題に対し、高精度activationを複数の低精度成分に分解し、低bit重みとのnative GEMMへ渡すMulti-Scale Dequantを提案する。INT8とMXFP4の2経路について誤差上限と遅延・HBM trafficモデルを示し、KV転送を最大2.5倍減らす解析結果と行列積・FlashAttentionカーネルの数値シミュレーションを報告する。実機エンドツーエンド高速化の実証ではない点を留保しつつ、推論演算・メモリの直接最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2605.13915",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:27+09:00",
+      "last_checked_at": "2026-11-02T15:29:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 128,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.03812",
+      "identity_tokens": [
+        "id:arXiv:2608.03812",
+        "id:DOI:10.48550/arXiv.2608.03812"
+      ],
+      "title": "OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models",
+      "reason": "音声・映像tokenが多いOmni-LLMに対し、モデル投入前にモダリティ別重要度・全体被覆・類似性により構造冗長性を除去し、モデル内部でテキスト指示に沿う音声・映像の意味的集約を追加する訓練不要の二段圧縮を提案。Qwen2.5-Omni-7Bで元の性能98.0%を維持してFLOPsを16.7%に削減し、FLOPs6.8%でも性能92.9%を保持すると報告する。マルチモーダルLLM推論のtoken・計算量削減に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2608.03812",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:27+09:00",
+      "last_checked_at": "2026-11-02T15:29:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 133,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.04075",
+      "identity_tokens": [
+        "id:arXiv:2605.04075",
+        "id:DOI:10.48550/arXiv.2605.04075"
+      ],
+      "title": "RetentiveKV: State-Space Memory for Uncertainty-Aware Multimodal KV Cache Eviction",
+      "reason": "マルチモーダルLLMの視覚KV cacheで、初期注意が低くても後続生成で重要になるtokenを早期に捨てる問題に対し、entropyで将来の情報価値を見積もり、追い出すtokenをSSM型の連続記憶へ統合する。後の意味的関連性に応じて記憶を再活性化し、空間的連続性も保護する。著者はマルチモーダル評価でKV cacheを5倍圧縮、decodeを1.5倍高速化したと報告し、実行時KV管理の直接技術としてaccept。",
+      "source_url": "https://arxiv.org/abs/2605.04075",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:27+09:00",
+      "last_checked_at": "2026-11-02T15:29:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 138,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

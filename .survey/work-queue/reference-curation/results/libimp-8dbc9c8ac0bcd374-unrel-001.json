@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8dbc9c8ac0bcd374-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.20128",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.20128",
+    "identity_tokens": [
+      "arXiv:2507.20128"
+    ],
+    "reason": "表題が対象とする最終用途は記号音楽の生成であり、LLMの推論高速化、学習効率、MoE、KVキャッシュ、オフロード等の既定の研究系統ではない。タイトルのみの明白な分野外判定であり、本文の詳細内容は評価していない。",
+    "first_checked_at": "2026-10-26T16:46:07+00:00",
+    "last_checked_at": "2026-10-26T16:46:07+00:00",
+    "linked_from": [],
+    "title": "Diffusion-based Symbolic Music Generation with Structured State Space Models"
+  },
+  "processed_at": "2026-10-26T16:46:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8dbc9c8ac0bc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

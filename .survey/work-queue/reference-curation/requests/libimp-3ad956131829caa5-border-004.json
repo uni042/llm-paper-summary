@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3ad956131829caa5-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.38983",
+  "reason": "低精度Triton/CUDA kernelの検証で固定atol/rtolが誤検知・見逃しを生む問題に対し、丸め誤差を追跡するper-element受理領域を生成するnumoracleを提案。vLLM/Unsloth/Liger由来13演算子を検証し、RTX PRO 6000上のeffective mutant 124個中116個を検出。低精度推論kernelの品質保証に間接的に寄与するが、LLM推論自体の速度・メモリを改善する方法ではないためborderline。",
+  "title": "Beyond atol and rtol: Sound Test Oracles for Low-Precision GPU Kernels",
+  "identity_tokens": [
+    "arXiv:2610.38983"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3ad956131829",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

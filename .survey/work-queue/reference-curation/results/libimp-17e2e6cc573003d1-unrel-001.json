@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17e2e6cc573003d1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.19980",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.19980",
+    "identity_tokens": [
+      "arXiv:2510.19980"
+    ],
+    "reason": "一次要旨は時系列予測におけるadaptive masking lossとrepresentation consistencyを扱う。",
+    "first_checked_at": "2026-10-05T15:33:54+00:00",
+    "last_checked_at": "2026-10-05T15:33:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+    ],
+    "title": "Abstain Mask Retain Core: Time Series Prediction by Adaptive Masking Loss with Representation Consistency"
+  },
+  "processed_at": "2026-10-05T15:33:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17e2e6cc5730",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

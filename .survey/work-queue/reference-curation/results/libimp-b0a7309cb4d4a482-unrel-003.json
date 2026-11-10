@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b0a7309cb4d4a482-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.04517",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.04517",
+    "identity_tokens": [
+      "arXiv:2606.04517"
+    ],
+    "reason": "Hierarchical graph experts classify encrypted traffic, not LLM inference.",
+    "first_checked_at": "2026-10-06T07:10:19+00:00",
+    "last_checked_at": "2026-10-06T07:10:19+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+    ],
+    "title": "Treat Traffic Like Trees: A Semantic-Preserving Hierarchical Graph-Based Expert Framework for Encrypted Traffic Analysis"
+  },
+  "processed_at": "2026-10-06T07:10:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b0a7309cb4d4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

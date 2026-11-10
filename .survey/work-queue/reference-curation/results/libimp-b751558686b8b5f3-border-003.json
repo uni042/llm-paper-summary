@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b751558686b8b5f3-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.24215",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.24215",
+    "identity_tokens": [
+      "arXiv:2608.24215"
+    ],
+    "reason": "The contribution is a small social-simulation port, not an inference-efficiency evaluation; no measured inference latency, serving throughput, GPU-memory reduction, or token-cost comparison is reported. Memory compression is adjacent but scope fit remains weak.",
+    "first_checked_at": "2026-10-05T08:07:54+00:00",
+    "last_checked_at": "2026-10-05T08:07:54+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "title": "Agentopia on a Consumer GPU: A Reduced-Scale Long-Horizon Port with an 8B Model"
+  },
+  "processed_at": "2026-10-05T08:07:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b751558686b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

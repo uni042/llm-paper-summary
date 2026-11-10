@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21e3defa55749b65-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/p19-1424",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/p19-1424",
+    "identity_tokens": [
+      "DOI:10.18653/v1/p19-1424"
+    ],
+    "reason": "Abstract presents neural legal judgment prediction in English; no LLM inference-efficiency or serving contribution.",
+    "first_checked_at": "2026-10-05T00:58:25+00:00",
+    "last_checked_at": "2026-10-05T00:58:25+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "Neural Legal Judgment Prediction in English"
+  },
+  "processed_at": "2026-10-05T00:58:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21e3defa5574",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29a2d9ff18f9841e-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.04267",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.04267",
+    "identity_tokens": [
+      "arXiv:2409.04267"
+    ],
+    "reason": "domain-specific foundation modelsのcustomization surveyで、特定のLLM serving/inference efficiency研究ではない。",
+    "first_checked_at": "2026-10-05T14:16:13+00:00",
+    "last_checked_at": "2026-10-05T14:16:13+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+    ],
+    "title": "An overview of domain-specific foundation model: key technologies, applications and challenges"
+  },
+  "processed_at": "2026-10-05T14:16:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29a2d9ff18f9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

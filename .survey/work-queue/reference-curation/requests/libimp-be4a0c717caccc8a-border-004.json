@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-be4a0c717caccc8a-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.53469/jtpes.2024.04(02).08",
+  "reason": "出版社の一次要旨ではFalcon-7B chatbotに16-bit full quantizationを用いるとするが、本文PDFの取得がcache missで失敗し、量子化形式・baseline・推論メモリ/latency・品質測定を検証できない。offload/hierarchical-memory系統との関連候補としてborderlineに残す。",
+  "title": "Enhancing E-commerce Chatbots with Falcon-7B and 16-bit Full Quantization",
+  "identity_tokens": [
+    "DOI:10.53469/jtpes.2024.04(02).08"
+  ],
+  "linked_from": [
+    "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be4a0c717cac",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d4574d4704af05a5-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.14908",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.14908",
+    "identity_tokens": [
+      "arXiv:2607.14908"
+    ],
+    "reason": "CODA targets video diffusion generation on edge devices; the abstract does not concern language-model inference/serving.",
+    "first_checked_at": "2026-10-05T10:20:16+00:00",
+    "last_checked_at": "2026-10-05T10:20:16+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+      "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md"
+    ],
+    "title": "CODA: Algorithm-Hardware Co-design for Edge Video Diffusion via NMP-Enabled Compute-Cache Operator Disaggregation"
+  },
+  "processed_at": "2026-10-05T10:20:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d4574d4704af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

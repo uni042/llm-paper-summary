@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-34c90d90999ec4d6-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.32492",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.32492",
+    "identity_tokens": [
+      "arXiv:2609.32492"
+    ],
+    "reason": "Attribution-guided optimization adjusts modular LLM programs using module-level attribution and memory selection. The full text evaluates task performance and parameter sensitivity, but does not establish a direct model-inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving improvement. Runtime-cost comparison against closest inference optimization work is a concrete follow-up if retained.",
+    "first_checked_at": "2026-10-06T09:00:55+00:00",
+    "last_checked_at": "2026-10-06T09:00:55+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Prompt or Skill? Attribution-Guided Optimization of Modular LLM Programs"
+  },
+  "processed_at": "2026-10-06T09:00:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-34c90d90999e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

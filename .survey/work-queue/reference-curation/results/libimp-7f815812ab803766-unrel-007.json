@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f815812ab803766-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.16199",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.16199",
+    "identity_tokens": [
+      "arXiv:2303.16199"
+    ],
+    "reason": "凍結LLaMA 7Bへ1.2M learnable parameterを追加しzero-init attentionでinstruction fine-tuningを軽量化する学習手法。効率性はfine-tuning時間・学習parameterが中心で、推論runtime最適化ではない。",
+    "first_checked_at": "2026-10-04T17:54:50+00:00",
+    "last_checked_at": "2026-10-04T17:54:50+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
+    ],
+    "title": "LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention"
+  },
+  "processed_at": "2026-10-04T17:54:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f815812ab80",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

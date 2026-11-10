@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11663a9e8bff17df-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.12461",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.12461",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2503.12461",
+      "arXiv:2503.12461"
+    ],
+    "reason": "Mamba/SSMを用いた画像圧縮のentropy modelingを改善する研究。評価は高解像度画像の符号化効率であり、LLM生成推論のモデル圧縮・速度改善ではない。",
+    "first_checked_at": "2026-10-30T11:54:37+00:00",
+    "last_checked_at": "2026-10-30T11:54:37+00:00",
+    "linked_from": [],
+    "title": "MambaIC: State Space Models for High-Performance Learned Image Compression"
+  },
+  "processed_at": "2026-10-30T11:54:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11663a9e8bff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

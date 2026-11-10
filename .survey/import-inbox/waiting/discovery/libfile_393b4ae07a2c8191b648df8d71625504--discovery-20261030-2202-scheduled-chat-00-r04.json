@@ -1,0 +1,231 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2202-scheduled-chat-00/r04",
+  "reference_main_sha": "f62375f526e53e338a3ea74e689a900c4d224731",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.13165",
+      "identity_tokens": [
+        "arXiv:2605.13165"
+      ],
+      "title": "STOP: Structured On-Policy Pruning of Long-Form Reasoning in Low-Data Regimes",
+      "reason": "STOPは生成済みCoTを節点へ分割して推論木を構成し、最初の正解節点までの最短prefixを残すECNで冗長な検証・後戻りを除く。一次要旨ではDeepSeek-R1蒸留7B/8BのGSM8K・Math500・AIME2024で生成トークン19.4～42.4%削減と概ね同等の精度を報告。推論トークン費用削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2605.13165",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:18:00+09:00",
+      "last_checked_at": "2026-10-30T22:18:30+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ],
+      "worklist_rank": 480,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.08813",
+      "identity_tokens": [
+        "arXiv:2605.08813"
+      ],
+      "title": "AgentSlimming: Towards Efficient and Cost-Aware Multi-Agent Systems",
+      "reason": "AgentSlimmingは複数LLMエージェントの通信グラフで重要度を推定し、冗長なエージェントを削除するか低コストモデルへ置換する。性能崩壊を防ぐ基準アンカー付き受理規則を使い、一次要旨では平均トークン費用を最大78.9%削減して品質を概ね維持。マルチエージェント推論ワークフローの実行費用圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2605.08813",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:18:00+09:00",
+      "last_checked_at": "2026-10-30T22:18:30+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "worklist_rank": 482,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.22516",
+      "identity_tokens": [
+        "arXiv:2608.22516"
+      ],
+      "title": "TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding",
+      "reason": "TRACEは長動画質問に対して必要な証拠区間を満たすまで動画クリップを段階的に復号し、回答の安定と再確認で停止する訓練不要の検索エージェント。一次要旨のVES-Benchでは98.7フレーム/問で根拠被覆付き正解率50.7%、均一128フレームの40.2%を上回り、均一256フレームの0.39倍のフレーム費用。動画VLMの入力復号・推論予算制御に直接該当。",
+      "source_url": "https://arxiv.org/abs/2608.22516",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:18:00+09:00",
+      "last_checked_at": "2026-10-30T22:18:30+09:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md",
+        "papers/inference/99-other-inference-systems/2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
+        "papers/inference/99-other-inference-systems/2025-2503.12559-adaretake-adaptive-redundancy-reduction-to-perceive-longer-for-video-lan.md"
+      ],
+      "worklist_rank": 483,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.08985",
+      "identity_tokens": [
+        "arXiv:2605.08985"
+      ],
+      "title": "LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs?",
+      "reason": "LLaVA-UHD v4は高解像度画像をスライスして局所情報を保ち、ViTの浅い層で視覚トークンを早期圧縮して二次注意演算の費用を削減する。一次要旨では文書理解・OCR・VQAで品質を維持または改善しつつ視覚エンコードFLOPs55.8%削減。VLMのprefill前段にある視覚エンコーダの直接的な効率化。",
+      "source_url": "https://arxiv.org/abs/2605.08985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:18:00+09:00",
+      "last_checked_at": "2026-10-30T22:18:30+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md"
+      ],
+      "worklist_rank": 484,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22138",
+      "identity_tokens": [
+        "arXiv:2605.22138"
+      ],
+      "title": "Efficient Agentic Reasoning Through Self-Regulated Simulative Planning",
+      "reason": "SR²AMは世界モデルによる将来状態の模擬、必要時だけ計画を起動する自己調節、反応的な実行を分離し、計画頻度と深さを制御する。一次要旨ではv1.0-30Bが同種のエージェントLLMより推論トークン25.8～95.3%削減し、RL後も計画頻度増加2.0%に抑えつつ計画深さ22.8%増。推論時の計算配分に直接該当。",
+      "source_url": "https://arxiv.org/abs/2605.22138",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:18:00+09:00",
+      "last_checked_at": "2026-10-30T22:18:30+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md",
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md",
+        "papers/inference/99-other-inference-systems/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md"
+      ],
+      "worklist_rank": 485,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.25115",
+      "identity_tokens": [
+        "arXiv:2608.25115"
+      ],
+      "title": "Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting",
+      "reason": "PACEはRAGでrerankerとLLMのどちらが律速かを観測し、証拠の限界被覆量で文書を前方配置してから、両段の圧力比に応じてrerank件数を変える。一次要旨は多段QAとオンラインサービング模擬で証拠recall改善とrerank負荷が高い条件のP95遅延削減を報告。RAGの推論パイプライン全体の負荷分散に直接該当。",
+      "source_url": "https://arxiv.org/abs/2608.25115",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:18:00+09:00",
+      "last_checked_at": "2026-10-30T22:18:30+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md",
+        "papers/inference/99-other-inference-systems/2024-2412.10543-metis-fast-quality-aware-rag-systems-with-configuration-adaptation.md"
+      ],
+      "worklist_rank": 486,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.15727",
+      "identity_tokens": [
+        "arXiv:2505.15727"
+      ],
+      "title": "VocalBench: Benchmarking the Vocal Conversational Abilities for Speech Interaction Models",
+      "reason": "VocalBenchは英語・中国語の音声対話約24,000例で意味、音響、会話行動、頑健性を27モデルに評価するベンチマーク。一次要旨の貢献は対話能力と環境音への頑健性の比較であり、LLM推論速度・メモリ・カーネル・サービング資源を改善する技術ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2505.15727",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:18:00+09:00",
+      "last_checked_at": "2026-10-30T22:18:30+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ],
+      "worklist_rank": 488,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.10446",
+      "identity_tokens": [
+        "arXiv:2506.10446"
+      ],
+      "title": "Fast on the Easy, Deep on the Hard: Efficient Reasoning via Powered Length Penalty",
+      "reason": "問題の難易度にかかわらず一律に思考長を罰するRL報酬を改め、容易な問題では短く難問では必要な推論を残すpowered length penaltyを提案。一次要旨はGSM8K・MATH500で回答長を短縮しつつ精度維持または改善、AIME2024でも精度向上を報告。学習によって生成時の不要な思考トークンを減らす直接的な推論費用改善。",
+      "source_url": "https://arxiv.org/abs/2506.10446",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:18:00+09:00",
+      "last_checked_at": "2026-10-30T22:18:30+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+      ],
+      "worklist_rank": 489,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2510.24941",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2510.24941",
+        "arXiv:2510.24941"
+      ],
+      "title": "Can Aha Moments Be Fake? Towards Quantifying Decorative and True Thinking in Chain-of-Thought",
+      "reason": "True Thinking ScoreはCoT各段の最終回答への因果寄与を測り、飾りの思考と実効的な思考を区別する。一次要旨では低TTSの50%段落を削除しても性能を概ね維持し、剪定CoTの自己学習でNemotron3-Nano-30Bの思考長66%削減。ただし中心は推論の忠実性分析であり、ランタイムでの直接的な高速化方式は副次的なためborderline。公式題名はworklistの旧表記から変更。",
+      "source_url": "https://arxiv.org/abs/2510.24941",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:18:00+09:00",
+      "last_checked_at": "2026-10-30T22:18:30+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md"
+      ],
+      "worklist_rank": 491,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.23074",
+      "identity_tokens": [
+        "arXiv:2605.23074"
+      ],
+      "title": "PathCal: State-Aware Reflection-Marker Calibration for Efficient Reasoning",
+      "reason": "PathCalはwait/but/alternatively等の反省マーカーを種類別に区別し、局所的な思考分岐の競合が過大な時だけlogitを穏やかに調整する訓練不要の復号コントローラ。一次要旨では6推論ベンチマークで外部検証器や追加サンプリングなしに回答長を削減し精度を維持または改善。推論時トークン長の直接制御に該当。",
+      "source_url": "https://arxiv.org/abs/2605.23074",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:18:00+09:00",
+      "last_checked_at": "2026-10-30T22:18:30+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+      ],
+      "worklist_rank": 492,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

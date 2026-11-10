@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Multi-Bin Batching for Increasing LLM Inference Throughput",
+      "source_url": "https://arxiv.org/abs/2412.04504",
+      "year": 2024,
+      "published": "2024-12-03",
+      "abstract": "As large language models (LLMs) grow in popularity for their diverse capabilities, improving the efficiency of their inference systems has become increasingly critical. Batching LLM requests is a critical step in scheduling the inference jobs on servers (e.g., GPUs), enabling the system to maximize throughput by allowing multiple requests to be processed in parallel. However, requests often have varying generation lengths, causing resource underutilization, as hardware must wait for the longest-running request in the batch to complete before moving to the next batch. We formalize this problem from a queueing-theoretic perspective, and aim at designing a control policy which is throughput-optimal under a static-batching framework. We propose Multi-Bin Batching, a simple yet effective method that can provably improve LLM inference throughput under this framework by grouping requests with similar (predicted) execution times into predetermined bins. Through a combination of theoretical analysis and experiments, including real-world LLM inference scenarios with static and continuous-batching baselines, we demonstrate that multi-bin batching substantially improves throughput over static batching and quantify the remaining gap to native continuous batching under both oracle and estimated length information.",
+      "canonical_id": "arXiv:2412.04504",
+      "arxiv_id": "2412.04504",
+      "doi": "10.1145/3843225",
+      "authors": [
+        "Ozgur Guldogan",
+        "Jackson Kunde",
+        "Kangwook Lee",
+        "Ramtin Pedarsani"
+      ],
+      "reason": "予測生成長ごとに要求を複数ビンへ分け、静的バッチの待ちと資源遊休を減らす配信手法である。",
+      "priority": 50
+    },
+    {
+      "title": "Draft Model Knows When to Stop: Self-Verification Speculative Decoding for Long-Form Generation",
+      "source_url": "https://arxiv.org/abs/2411.18462",
+      "year": 2024,
+      "published": "2024-11-27",
+      "abstract": "Conventional speculative decoding (SD) methods utilize a predefined length policy for proposing drafts, which implies the premise that the target model smoothly accepts the proposed draft tokens. However, reality deviates from this assumption: the oracle draft length varies significantly, and the fixed-length policy hardly satisfies such a requirement. Moreover, such discrepancy is further exacerbated in scenarios involving complex reasoning and long-form generation, particularly under test-time scaling for reasoning-specialized models. Through both theoretical and empirical estimation, we establish that the discrepancy between the draft and target models can be approximated by the draft model's prediction entropy: a high entropy indicates a low acceptance rate of draft tokens, and vice versa. Based on this insight, we propose SVIP: Self-Verification Length Policy for Long-Context Speculative Decoding, which is a training-free dynamic length policy for speculative decoding systems that adaptively determines the lengths of draft sequences by referring to the draft entropy. Experimental results on mainstream SD benchmarks as well as reasoning-heavy benchmarks demonstrate the superior performance of SVIP, achieving up to 17% speedup on MT-Bench at 8K context compared with fixed draft lengths, and 22% speedup for QwQ in long-form reasoning.",
+      "canonical_id": "arXiv:2411.18462",
+      "arxiv_id": "2411.18462",
+      "doi": "10.18653/v1/2025.emnlp-main.844",
+      "authors": [
+        "Ziyin Zhang",
+        "Jia-Hao Xu",
+        "Tian Liang",
+        "Xing-Yu Chen",
+        "Zhiwei He",
+        "Rui Wang",
+        "Zhaopeng Tu"
+      ],
+      "reason": "ドラフトモデルの予測エントロピーから投機長を動的に決め、長文生成の検証無駄を減らす。",
+      "priority": 50
+    },
+    {
+      "title": "Squeezed Attention: Accelerating Long Context Length LLM Inference",
+      "source_url": "https://arxiv.org/abs/2411.09688",
+      "year": 2024,
+      "published": "2024-11-14",
+      "abstract": "Emerging Large Language Model (LLM) applications require long input context in order to perform complex tasks like document analysis and code generation. For these long context length applications, the length of the input prompt poses a significant challenge in terms of inference efficiency since the inference costs increase linearly with sequence length. However, for many of these applications, much of the context in the prompt is fixed across different user inputs, thereby providing the opportunity to perform offline optimizations in order to process user inputs quickly, as they are received. We propose Squeezed Attention to accelerate LLM applications where a large portion of the input context is fixed. We first leverage K-means clustering offline to group the keys for the fixed context based on semantic similarity and represent each cluster with a single centroid value. During inference, we compare query tokens from the user input with the centroids to predict which keys from the fixed context are semantically relevant, and then compute exact attention using only the important keys, thereby reducing bandwidth and computational costs. We also present a hierarchical version of our algorithm which can reduce the complexity of attention from linear to logarithmic with respect to the fixed context length. We evaluate our method on long-context benchmarks including LongBench, where it achieves a 3.1$\\times$ reduction in KV budget with no noticeable accuracy loss and up to an 8$\\times$ reduction with only a 0.5 point accuracy gap for the LLaMA-2-7B-32K, LWM-Text-Chat-1M, and Longchat-7B-v1.5-32K models. Futhermore, we implement kernels for centroid comparison and sparse FlashAttention with important keys, achieving more than 4$\\times$ speedups during both the prefill and generation phases for long-context inference. Our code is available at https://github.com/SqueezeAILab/SqueezedAttention.",
+      "canonical_id": "arXiv:2411.09688",
+      "arxiv_id": "2411.09688",
+      "doi": "10.48550/arXiv.2411.09688",
+      "authors": [
+        "Coleman Hooper",
+        "Sehoon Kim",
+        "Hiva Mohammadzadeh",
+        "Monishwaran Maheswaran",
+        "Sebastian Zhao",
+        "June Paik",
+        "Michael W. Mahoney",
+        "Kurt Keutzer",
+        "Amir Gholami"
+      ],
+      "reason": "固定文脈のキーを事前クラスタ化し、オンラインでは重要キーだけへ正確な注意を計算する。",
+      "priority": 50
+    },
+    {
+      "title": "CoreInfer: Accelerating Large Language Model Inference with Semantics-Inspired Adaptive Sparse Activation",
+      "source_url": "https://arxiv.org/abs/2410.18311",
+      "year": 2024,
+      "published": "2024-10-23",
+      "abstract": "Large language models (LLMs) with billions of parameters have sparked a new wave of exciting AI applications. However, their high computational costs and memory demands during inference pose significant challenges. Adaptive sparse activation inference, which activates only a small number of neurons for each token, offers a novel way to accelerate model inference without degrading performance, showing great potential for resource-constrained hardware devices. Nevertheless, existing methods predict activated neurons based on individual tokens with additional MLP, which involve frequent changes in activation maps and resource calls, limiting the acceleration benefits of sparse activation. In this paper, we introduce CoreInfer, an MLP-free adaptive sparse activation inference method based on sentence-level prediction. Specifically, we propose the concept of sentence-wise core neurons, which refers to the subset of neurons most critical for a given sentence, and empirically demonstrate its effectiveness. To determine the core neurons, we explore the correlation between core neurons and the sentence's semantics. Remarkably, we discovered that core neurons exhibit both stability and similarity in relation to the sentence's semantics -- an insight overlooked by previous studies. Building on this finding, we further design two semantic-based methods for predicting core neurons to fit different input scenarios. In CoreInfer, the core neurons are determined during the pre-filling stage and fixed during the encoding stage, enabling zero-cost sparse inference. We evaluated the model generalization and task generalization of CoreInfer across various models and tasks. Notably, on an NVIDIA TITAN XP GPU, CoreInfer achieved a 10.33 times and 2.72 times speedup compared to the Huggingface implementation and PowerInfer, respectively.",
+      "canonical_id": "arXiv:2410.18311",
+      "arxiv_id": "2410.18311",
+      "doi": "10.48550/arXiv.2410.18311",
+      "authors": [
+        "Qinsi Wang",
+        "Saeed Vahidian",
+        "Hancheng Ye",
+        "Jianyang Gu",
+        "Jian-Yi Zhang",
+        "Yiran Chen"
+      ],
+      "reason": "文単位の意味から中核ニューロンをプリフィル時に固定し、疎な推論実行を高速化する。",
+      "priority": 50
+    },
+    {
+      "title": "MatryoshkaKV: Adaptive KV Compression via Trainable Orthogonal Projection",
+      "source_url": "https://arxiv.org/abs/2410.14731",
+      "year": 2024,
+      "published": "2024-10-16",
+      "abstract": "KV cache has become a de facto technique for the inference of large language models (LLMs), where tensors of shape (layer number, head number, sequence length, feature dimension) are introduced to cache historical information for self-attention. As the size of the model and data grows, the KV cache can quickly become a bottleneck within the system in both storage and memory transfer. To address this, prior studies usually focus on the first three axes of the cache tensors for compression. This paper supplements them, focusing on the feature dimension axis, by utilizing low-rank projection matrices to transform the cache features into spaces with reduced dimensions. We begin by investigating the canonical orthogonal projection method for data compression through principal component analysis (PCA). We observe the issue with PCA projection where significant performance degradation is observed at low compression rates. To bridge the gap, we propose to directly tune the orthogonal projection matrices with a distillation objective using an elaborate Matryoshka training strategy. After training, we adaptively search for the optimal compression rates for various layers and heads given varying compression budgets. Compared to previous works, our method can easily embrace pre-trained LLMs and hold a smooth tradeoff between performance and compression rate. We empirically witness the high data efficiency of our training procedure and find that our method can sustain over 90% performance with an average KV cache compression rate of 60% (and up to 75% in certain extreme scenarios) for popular LLMs like LLaMA2-7B-base and Mistral-7B-v0.3-base.",
+      "canonical_id": "arXiv:2410.14731",
+      "arxiv_id": "2410.14731",
+      "doi": "10.48550/arXiv.2410.14731",
+      "authors": [
+        "Bokai Lin",
+        "Zi-Hao Zeng",
+        "Zipeng Xiao",
+        "Siqi Kou",
+        "Tianqi Hou",
+        "Xiaofeng Gao",
+        "Hao Zhang",
+        "Zhijie Deng"
+      ],
+      "reason": "学習可能な直交射影と層・ヘッド別予算探索によりKV特徴次元を適応圧縮する。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928",
+    "round": "library-import-accept-20260928-001",
+    "axis": "explicit-library-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "Libraryでaccept済みのDiscovery成果を正規Research候補へ取り込む。",
+    "candidate_count": 24,
+    "round_submission_index": 4,
+    "round_submission_count": 5
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-accept-20260928-001",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-accept-20260928-001.json",
+    "receipt": "sha256:66bb7d7842b6e932365464bc2d0543a9441255589c0181700af31415476ff3cb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928",
+    "summary": "Library上のaccept済みDiscovery成果をGitHubの正規Research候補へ反映する。"
+  }
+}

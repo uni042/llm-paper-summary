@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a4acb3c955b58152-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.20752",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.20752",
+    "identity_tokens": [
+      "arXiv:2506.20752"
+    ],
+    "reason": "本文はLLM trainingにおけるmicroscaling formatの不安定性と緩和を扱う。量子化形式の既存系統とは接点があるが、主対象はtraining stability。 direct inference/serving latency・memory改善の検証ではない。",
+    "first_checked_at": "2026-10-06T12:07:31+00:00",
+    "last_checked_at": "2026-10-06T12:07:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Characterization and Mitigation of Training Instabilities in Microscaling Formats"
+  },
+  "processed_at": "2026-10-06T12:07:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a4acb3c955b5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

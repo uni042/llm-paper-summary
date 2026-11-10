@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "37bbc5616dcba0ecce4fb66baa0fd3e113fa64fe0b64225550956c573e203d6d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-801d086cac20--libfile_29062c05bab48191b98f276735d09637--2025-2506.12204-semantic-scheduling-llm-inference-research-20261026-1530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2506.12204",
+  "worker_completed_at": "2026-10-26T15:36:17+09:00",
+  "worker_run_key": "20261026-1530-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5941,
+    "body_paragraphs": 35,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 290,
+    "limitation_chars": 734,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 290 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 290 < 500"
+  ],
+  "processed_at": "2026-10-26T07:02:04+00:00"
+}

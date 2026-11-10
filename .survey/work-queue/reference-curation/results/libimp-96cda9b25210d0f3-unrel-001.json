@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96cda9b25210d0f3-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.07134",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.07134",
+    "identity_tokens": [
+      "arXiv:2609.07134"
+    ],
+    "reason": "一次要旨: This paper presents our system for CCL2026-Eval Task 5: Minor-Grain Breeding Information Extraction (MGBIE), which jointly extracts 12 entity types and 6 relation types from minor-grain breeding literature. We propose RAME (Retrieval-Augmented Multi-Prompt Ensemble), a training-free framework that elicits multiple LLM outputs under controlled diversity and aggregates them by majority voting to obtain high-confidence predictions. RAME combines (i) retrieval-augmented few-shot selection via a hybrid BM25-embedding retriever, (ii) a three-prompt ensemble (Strict, Relaxed, Balanced) spanning the precision to recall spectrum, and (iii) large-scale repeated sampling with majority voting to filter noisy predictions. Built on DeepSeek-V4-Flash, RAME achieves a Total Score of 0.499 (NER 0.730, RE 0.346) on the leaderboard, ranking 1st and surpassing the official Track-A baseline powered by GPT-5.5 (0.448), representing an 11.4% relative improvement. Code is available at https://github.com/king-wang123/CCL26-RAME.",
+    "first_checked_at": "2026-10-05T07:03:38+00:00",
+    "last_checked_at": "2026-10-05T07:03:38+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+    ],
+    "title": "Retrieval-Augmented Multi-Prompt Ensemble for Minor-Grain Breeding Information Extraction"
+  },
+  "processed_at": "2026-10-05T07:03:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96cda9b25210",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

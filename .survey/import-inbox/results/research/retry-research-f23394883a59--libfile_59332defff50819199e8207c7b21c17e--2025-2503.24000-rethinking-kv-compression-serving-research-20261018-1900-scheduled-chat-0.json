@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e20b1a7b3eb2ba1881fc4f3663ad8a32e37f36f61cd5ab424b401ce4f5ea3216",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f23394883a59--libfile_59332defff50819199e8207c7b21c17e--2025-2503.24000-rethinking-kv-compression-serving-research-20261018-1900-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2503.24000",
+  "worker_completed_at": "2026-10-18T19:43:00+09:00",
+  "worker_run_key": "20261018-1900-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5474,
+    "body_paragraphs": 33,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 544,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-18T14:32:25+00:00"
+}

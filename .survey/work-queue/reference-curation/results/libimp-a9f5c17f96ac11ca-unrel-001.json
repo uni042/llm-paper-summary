@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9f5c17f96ac11ca-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.10250",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.10250",
+    "identity_tokens": [
+      "arXiv:2305.10250"
+    ],
+    "reason": "会話履歴を外部memoryへ保存・検索・更新し長期companion能力を改善するagent memory研究。推論時memory moduleには関連するが、主評価は記憶想起・人格理解・共感品質でruntime効率化が中心ではない。",
+    "first_checked_at": "2026-10-04T19:48:51+00:00",
+    "last_checked_at": "2026-10-04T19:48:51+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md"
+    ],
+    "title": "MemoryBank: Enhancing Large Language Models with Long-Term Memory"
+  },
+  "processed_at": "2026-10-04T19:48:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9f5c17f96ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

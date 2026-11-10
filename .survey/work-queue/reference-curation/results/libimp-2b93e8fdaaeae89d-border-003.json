@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2b93e8fdaaeae89d-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.21961",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.21961",
+    "identity_tokens": [
+      "arXiv:2510.21961"
+    ],
+    "reason": "Authors caution step count does not represent underlying compute; NFE is only competitive and per-step optimization is future work. Masked diffusion rather than conventional AR serving.",
+    "first_checked_at": "2026-10-05T15:31:21+00:00",
+    "last_checked_at": "2026-10-05T15:31:21+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+      "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Parallel Sampling from Masked Diffusion Models via Conditional Independence Testing"
+  },
+  "processed_at": "2026-10-05T15:31:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2b93e8fdaaea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b389c2dd08fc884b-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.15731",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.15731",
+    "identity_tokens": [
+      "arXiv:2405.15731"
+    ],
+    "reason": "Architectural motivation is relevant, but the paper’s actual evaluation is theoretical/sequence-benchmark oriented rather than LLM serving; keep borderline due uncertain transfer.",
+    "first_checked_at": "2026-10-05T12:58:31+00:00",
+    "last_checked_at": "2026-10-05T12:58:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+    ],
+    "title": "Understanding the differences in Foundation Models: Attention, State Space Models, and Recurrent Neural Networks"
+  },
+  "processed_at": "2026-10-05T12:58:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b389c2dd08fc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

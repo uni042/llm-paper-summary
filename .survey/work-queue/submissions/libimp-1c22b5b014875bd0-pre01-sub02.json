@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LEO-MINI: An Efficient Multimodal Large Language Model using Conditional Token Reduction and Mixture of Multi-Modal Experts",
+      "source_url": "https://arxiv.org/abs/2504.04653",
+      "year": 2025,
+      "published": "2025-04-07",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Redundancy of visual tokens in multi-modal large language models (MLLMs) significantly reduces their computational efficiency. Recent approaches, such as resamplers and summarizers, have sought to reduce the number of visual tokens, but at the cost of visual reasoning ability. To address this, we propose LEO-MINI, a novel MLLM that significantly reduces the number of visual tokens and simultaneously boosts visual reasoning capabilities. For efficiency, LEO-MINI incorporates CoTR, a novel token reduction module to consolidate a large number of visual tokens into a smaller set of tokens, using the similarity between visual tokens, text tokens, and a compact learnable query. For effectiveness, to scale up the model's ability with minimal computational overhead, LEO-MINI employs MMoE, a novel mixture of multi-modal experts module. MMOE employs a set of LoRA experts with a novel router to switch between them based on the input text and visual tokens instead of only using the input hidden state. MMoE also includes a general LoRA expert that is always activated to learn general knowledge for LLM reasoning. For extracting richer visual features, MMOE employs a set of vision experts trained on diverse domain-specific data. To demonstrate LEO-MINI's improved efficiency and performance, we evaluate it against existing efficient MLLMs on various benchmark vision-language tasks.",
+      "identifiers": [
+        "SemanticScholar:92658eaf0eaf6665c1bfc2bb3c57755e82926bf8"
+      ],
+      "semantic_scholar_id": "92658eaf0eaf6665c1bfc2bb3c57755e82926bf8",
+      "canonical_id": "arXiv:2504.04653",
+      "arxiv_id": "2504.04653",
+      "doi": "10.48550/arXiv.2504.04653",
+      "authors": [
+        "Yimu Wang",
+        "Mozhgan Nasr Azadani",
+        "Sean Sedwards",
+        "Krzysztof Czarnecki"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 571,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "CoTRは視覚・テキスト・学習クエリの類似度を使って視覚トークンを削減し、MMoEはLoRAエキスパートを入力モダリティに応じて選ぶ。MLLMの推論計算量を削減しつつ視覚推論品質を保つための直接的なアーキテクチャ設計。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Self-Tuning Sparse Attention: Multi-Fidelity Hyperparameter Optimization for Transformer Acceleration",
+      "source_url": "https://arxiv.org/abs/2603.18417",
+      "year": 2026,
+      "published": "2026-02-24",
+      "venue": "2026 13th International Conference on Machine Intelligence Theory and Applications (MiTA)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention mechanisms promise to break the quadratic bottleneck of long-context transformers, yet they remain underutilized in production due to a critical usability flaw: the reliance on fragile, manual hyperparameter tuning via exhaustive grid search. Current methods like SpargeAttn depend on globally fixed hyperparameters that ignore the substantial heterogeneity across layers, turning model deployment into a laborintensive calibration challenge. We propose Adaptive Fidelity Binary Search with Bayesian Optimization (AFBS-BO) framework that transforms sparse attention from a manually tuned heuristic into a self-optimizing primitive. AFBS-BO eliminates the grid search barrier by automating the discovery of optimal layer- and head-specific hyperparameters. Our hybrid algorithm couples Bayesian Optimization for global exploration with binary search for local refinement, leveraging multi-fidelity evaluation to reduce tuning costs. On Llama-2-7B, AFBS-BO achieves over $3 \\times$ faster discovery than grid search while finding configurations that reach 70 % sparsity with minimal quality loss. By removing the obstacle of manual tuning, AFBS-BO acts as a plug-andplay enabler for efficient transformer inference, unlocking the practical adoption of sparse attention across diverse architectures and domains.",
+      "identifiers": [
+        "SemanticScholar:6f360bb0acbc04a97abed9eb239d4bb76ea53b89"
+      ],
+      "semantic_scholar_id": "6f360bb0acbc04a97abed9eb239d4bb76ea53b89",
+      "canonical_id": "arXiv:2603.18417",
+      "arxiv_id": "2603.18417",
+      "doi": "10.1109/MiTA69365.2026.11582181",
+      "authors": [
+        "Arundhathi Dev",
+        "J. Zhan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 248,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AFBS-BOはBayesian Optimizationと二分探索を併用し、層・ヘッドごとの疎注意ハイパーパラメータを系列長別の多忠実度評価で自動選択する。Llama-2-7Bでgrid search比3.4倍速く、評価回数8.8倍少なく調整したと報告。これは調整時間の改善であり推論スループット比と混同しない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Near-Optimal Online Deployment and Routing for Streaming LLMs",
+      "source_url": "https://arxiv.org/abs/2506.17254",
+      "year": 2025,
+      "published": "2025-06-08",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid pace at which new large language models (LLMs) appear, and older ones become obsolete, forces providers to manage a streaming inventory under a strict concurrency cap and per-query cost budgets. We cast this as an online decision problem that couples stage-wise deployment (at fixed maintenance windows) with per-query routing among live models. We introduce StageRoute, a hierarchical algorithm that (i) optimistically selects up to $M_{\\max}$ models for the next stage using reward upper-confidence and cost lower-confidence bounds, and (ii) routes each incoming query by solving a budget- and throughput-constrained bandit subproblem over the deployed set. We prove a regret of $\\tilde{\\mathcal{O}}(T^{2/3})$ with a matching lower bound, establishing near-optimality, and validate the theory empirically: StageRoute tracks a strong oracle under tight budgets across diverse workloads.",
+      "identifiers": [
+        "SemanticScholar:afc8935aeb161cf1d49d56e81ab1ce6b58a36cd6"
+      ],
+      "semantic_scholar_id": "afc8935aeb161cf1d49d56e81ab1ce6b58a36cd6",
+      "canonical_id": "arXiv:2506.17254",
+      "arxiv_id": "2506.17254",
+      "authors": [
+        "Shao-Ang Li",
+        "Jian Li"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 509,
+        "matched_prestigious_venue": null
+      },
+      "reason": "StageRouteはモデル群の配置を保守窓単位で決め、オンライン要求を費用・スループット制約付きbanditでモデルへルーティングする。理論的regretをT^(2/3)の対数因子付きで抑え、実験でも費用予算の下でoracleに近い性能を報告するLLMサービング配置・経路制御。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1c22b5b01487",
+    "round": "libimp-1c22b5b014875bd0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1c22b5b014875bd0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1c22b5b014875bd0-pre01.json",
+    "receipt": "sha256:9f558ddcb5d4f1377563ad199e04959198bdc5baca7af97f8280a5833a0ab702"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1c22b5b01487",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ffe9f5d53726fa63-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.23885",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.23885",
+    "identity_tokens": [
+      "arXiv:2505.23885"
+    ],
+    "reason": "OWL is a multi-agent task-automation system and reduces planner training overhead, but reported results do not isolate LLM inference latency, memory, or throughput.",
+    "first_checked_at": "2026-10-06T05:30:55+00:00",
+    "last_checked_at": "2026-10-06T05:30:55+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation"
+  },
+  "processed_at": "2026-10-06T05:30:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ffe9f5d53726",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

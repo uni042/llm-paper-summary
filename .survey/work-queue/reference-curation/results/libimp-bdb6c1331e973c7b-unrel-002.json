@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bdb6c1331e973c7b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.21730",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.21730",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2511.21730",
+      "arXiv:2511.21730"
+    ],
+    "reason": "タイトルに明示された中心課題は言語エージェントの手続き記憶検索を評価するベンチマークであり、LLMの推論計算・サービング・GPUメモリ管理・分散処理などのシステム最適化を対象とする研究ではない。タイトルで明白な対象外として本文調査前に除外する。",
+    "first_checked_at": "2026-10-15T05:47:39+00:00",
+    "last_checked_at": "2026-10-15T05:47:39+00:00",
+    "linked_from": [],
+    "title": "A Benchmark for Procedural Memory Retrieval in Language Agents"
+  },
+  "processed_at": "2026-10-15T05:47:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bdb6c1331e97",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

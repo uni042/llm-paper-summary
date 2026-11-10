@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-82442971ea2b7895-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.28223",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.28223",
+    "identity_tokens": [
+      "arXiv:2607.28223"
+    ],
+    "reason": "一次本文でGPU cluster queue admissionとmodel-serving request schedulingを別問題と明示しており、候補は対象範囲外と確認した。",
+    "first_checked_at": "2026-10-05T09:47:43+00:00",
+    "last_checked_at": "2026-10-05T09:47:43+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07347-throughput-optimal-scheduling-llm-inference-ai-agents.md"
+    ],
+    "title": "Queue-Theoretic Admission Control for Multi-Tenant GPU Clusters"
+  },
+  "processed_at": "2026-10-05T09:47:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-82442971ea2b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

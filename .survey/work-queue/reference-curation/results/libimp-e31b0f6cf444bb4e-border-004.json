@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e31b0f6cf444bb4e-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.04782",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.04782",
+    "identity_tokens": [
+      "arXiv:2412.04782"
+    ],
+    "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 This survey covers environmental/economic sustainability of LLMs, energy consumption, deployment and lifecycle practices. It is useful background but synthesizes existing pruning, quantization and deployment strategies rather than adding an evaluated serving optimization.",
+    "first_checked_at": "2026-10-06T16:56:12+00:00",
+    "last_checked_at": "2026-10-06T16:56:12+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Survey of Sustainability in Large Language Models: Applications, Economics, and Challenges"
+  },
+  "processed_at": "2026-10-06T16:56:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e31b0f6cf444",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

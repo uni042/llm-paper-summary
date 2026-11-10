@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0958-scheduled-chat-00/r03",
+  "reference_main_sha": "289552474aa320e0664b5cfdf2e6087cc159fc0a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.18140",
+      "identity_tokens": [
+        "id:arXiv:2610.18140",
+        "id:DOI:10.48550/arXiv.2610.18140"
+      ],
+      "title": "SparPR: Runtime KV-Cache Recovery for Resource-Constrained LLM Inference on Consumer Hardware",
+      "reason": "SparPRは消費者向け単一GPUのKV容量・転送帯域不足に対し、query依存のKey block選択、転送と再計算のコスト比較に基づく動的保持予算、連続span単位の部分再計算を組み合わせる。FlexGen/FlexLLMGenへ実装しRTX 3070 Ti 8GBで1K/2K/4K promptのend-to-end遅延を31/52/63%短縮、throughput1.4～2.7倍を報告。学習不要の実行時KV復元方式としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.18140",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:05:07+09:00",
+      "last_checked_at": "2026-11-02T10:05:07+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.11134",
+      "identity_tokens": [
+        "id:arXiv:2610.11134",
+        "id:DOI:10.48550/arXiv.2610.11134"
+      ],
+      "title": "QUILT: Rethinking Sparse-Attention Prefill through Shared Query Execution",
+      "reason": "QUILTは近傍query間で選択KVが重複することを利用し、Shift-and-Compare Set Decompositionで不規則な集合演算を並列primitiveに変換し、attentionとパイプライン化する。tile-aware groupingと多段共有により、GLM-5.3/DeepSeek-3.2のLongBench評価でsparse attention kernel遅延最大55.1%、KV処理量最大55.9%、TTFT最大36.8%削減を報告。GPU sparse prefill実行方式の直接改善。",
+      "source_url": "https://arxiv.org/abs/2610.11134",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:05:07+09:00",
+      "last_checked_at": "2026-11-02T10:05:07+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.28096",
+      "identity_tokens": [
+        "id:arXiv:2610.28096",
+        "id:DOI:10.48550/arXiv.2610.28096"
+      ],
+      "title": "KPage: Cross-Block Page Compaction for Hardware-Efficient Sparse Attention",
+      "reason": "KPageは3D video Transformerの部分充填blockを論理境界をまたいで16行単位のKV pageへ詰め直し、HBMに再配置テンソルを実体化せずにtileを埋める。NVIDIA Block-Sparse Attention比でforward kernel幾何平均1.77倍、部分blockを含む3D layoutで2.29倍を報告。疎注意カーネルの設計は推論系統に関連するが、主要評価は動画TransformerでありLLMサービングそのものを対象としないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.28096",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:05:07+09:00",
+      "last_checked_at": "2026-11-02T10:05:07+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.33076",
+      "identity_tokens": [
+        "id:arXiv:2610.33076",
+        "id:DOI:10.48550/arXiv.2610.33076"
+      ],
+      "title": "Double KV Cache Optimization on Apple Silicon: Block-FP4, Radial Quantization, and Fused Metal Kernels",
+      "reason": "Apple M5 Max/MLXでKVのblock FP4、radial quantization、両者の直列結合、Metal融合kernelを比較する。Metal PolarQuantは46.8tok/s・3456B/tokenでbf16比3.64倍圧縮、Python参照実装比1.84倍高速化。一方、直列FP4+Polarは15.1tok/sへ悪化し、32K以上では全方式がKV全展開の累積O(N²)仕事により失速する。実装と失敗条件を明確にした端末推論性能評価としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.33076",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:05:07+09:00",
+      "last_checked_at": "2026-11-02T10:05:07+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.15384",
+      "identity_tokens": [
+        "id:arXiv:2610.15384",
+        "id:DOI:10.48550/arXiv.2610.15384"
+      ],
+      "title": "E8 Lattice Key Quantization for Low-Bit KV-Cache Compression",
+      "reason": "E8格子によるベクトル量子化でKeyの隣接次元相関を利用し、2bit K/2bit Vの均一構成でも低bitの品質を維持する。table-based非対称score計算によりattention時のcodebook全展開を避け、scalar baselineと同等のdecode throughputを維持。5種類のLLMでKV約6倍圧縮、scalar k3v2比約20%小さく、perplexity評価の80%の条件でk3v2より良好と報告。",
+      "source_url": "https://arxiv.org/abs/2610.15384",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:05:07+09:00",
+      "last_checked_at": "2026-11-02T10:05:07+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.06286",
+      "identity_tokens": [
+        "id:arXiv:2610.06286",
+        "id:DOI:10.48550/arXiv.2610.06286"
+      ],
+      "title": "DeferKV: Rethinking Eviction Timing for One-Shot KV Cache Compression",
+      "reason": "DeferKVはprefill直後にKVを不可逆破棄する既存one-shot方式を見直し、実際の最初のdecode queryの注意分布を得てから重要度を推定・evictionする。prompt側とdecode側の観測を時系列で組み合わせ、学習・draft・将来query予測を必要としない。LongBench/RULER/Needleで圧縮下の性能改善と低遅延を報告し、KV eviction timingの直接改善としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.06286",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:05:07+09:00",
+      "last_checked_at": "2026-11-02T10:05:07+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.09025",
+      "identity_tokens": [
+        "id:arXiv:2610.09025",
+        "id:DOI:10.48550/arXiv.2610.09025"
+      ],
+      "title": "SPIN: Shadow Predictive Indexer for Sparse Attention",
+      "reason": "SPINはsparse attentionでcore attention自体は軽くなってもindexerが毎token全KVをscoreする問題に対し、過去の履歴から重要KV blockを予測しfull scoringを省く。投機デコードとKV block単位の実装を考慮し、長文脈・エージェント評価でタスク品質を維持しながら30～40%の疎性を実現。vLLMサービングでoutput throughput最大14.9%改善、中央値ITL最大13.2%短縮を報告。",
+      "source_url": "https://arxiv.org/abs/2610.09025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:05:07+09:00",
+      "last_checked_at": "2026-11-02T10:05:07+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.11201",
+      "identity_tokens": [
+        "id:arXiv:2610.11201",
+        "id:DOI:10.48550/arXiv.2610.11201"
+      ],
+      "title": "PageWeaver: KV-Guided Query Unions for Sparse Attention",
+      "reason": "PageWeaverはqueryごとの選択KV pageの重なりを使ってquery群を構成し、Tensor Core tileの充填とKV page再利用を両立する。GPU上のbounded searchでquery IDを生成し、ID-aware two-CTA kernelでQ再配置やcross-page中間出力を避ける。H200のFP8 KVでFlashInfer比complete-call幾何平均1.70倍、whole-model prefill throughput7.88～14.36%改善を報告。ただしB300では準備コストが利点を相殺する条件がある。",
+      "source_url": "https://arxiv.org/abs/2610.11201",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:05:07+09:00",
+      "last_checked_at": "2026-11-02T10:05:07+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31098",
+      "identity_tokens": [
+        "id:arXiv:2610.31098",
+        "id:DOI:10.48550/arXiv.2610.31098"
+      ],
+      "title": "RIFT: KV Cache Compression for Draft Models with Complementary Compressibility Training",
+      "reason": "RIFTは投機draftの長文生成で、prefill時に選んだKVが出力伸長とともに古くなるdecode stalenessを分析し、最近生成tokenとprompt情報を両立するKV選択・適応的refreshを導入する。sparse attention maskを使うdrafter学習も組み合わせ、Qwen3.5-4BがQwen3.5-122Bのdraftを行う32K入力/4K出力/8K KV予算で、full-cache受理長の98%超を維持。",
+      "source_url": "https://arxiv.org/abs/2610.31098",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:05:07+09:00",
+      "last_checked_at": "2026-11-02T10:05:07+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.09051",
+      "identity_tokens": [
+        "id:arXiv:2610.09051",
+        "id:DOI:10.48550/arXiv.2610.09051"
+      ],
+      "title": "A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention",
+      "reason": "Universal AttentionはRoPEとsoftmaxを維持しながら複数のdecay機構を統合して学習し、重要度の低いtokenを自然にpruneする自己剪定attentionを提案する。従来の単純なdecayがsliding-windowに近づく問題を改善し、自然言語・合成タスクで10倍KV圧縮と品質向上、16K長文脈で25倍圧縮を報告。推論時KV容量削減を目的としたモデル設計としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.09051",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:05:07+09:00",
+      "last_checked_at": "2026-11-02T10:05:07+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

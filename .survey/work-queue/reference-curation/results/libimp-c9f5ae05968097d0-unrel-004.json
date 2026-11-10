@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9f5ae05968097d0-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2005.00770",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2005.00770",
+    "identity_tokens": [
+      "arXiv:2005.00770"
+    ],
+    "reason": "一次要旨はNLP task間のtransferabilityを測定・予測する研究で、推論効率改善は主題ではない。",
+    "first_checked_at": "2026-10-05T01:36:00+00:00",
+    "last_checked_at": "2026-10-05T01:36:00+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+    ],
+    "title": "Exploring and Predicting Transferability across NLP Tasks"
+  },
+  "processed_at": "2026-10-05T01:36:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9f5ae059680",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

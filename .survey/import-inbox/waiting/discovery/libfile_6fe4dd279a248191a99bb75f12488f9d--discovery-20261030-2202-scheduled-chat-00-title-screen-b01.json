@@ -1,0 +1,76 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2202-scheduled-chat-00/title-b01",
+  "reference_main_sha": "f62375f526e53e338a3ea74e689a900c4d224731",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CVPR52734.2025.01172",
+      "identity_tokens": [
+        "DOI:10.1109/CVPR52734.2025.01172"
+      ],
+      "title": "Event-based Video Super-Resolution via State Space Models",
+      "reason": "タイトルはイベントカメラ映像の超解像を状態空間モデルで行うコンピュータビジョン課題を明示しており、LLM生成推論、KVキャッシュ、サービングの最適化を研究対象としていない。",
+      "source_url": "https://doi.org/10.1109/CVPR52734.2025.01172",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "worklist_rank": 487,
+      "origin": "discovery_worklist_title_sweep"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:dbaee2b312ac358ce827a175fcaa33e109f354e5",
+      "identity_tokens": [
+        "SemanticScholar:dbaee2b312ac358ce827a175fcaa33e109f354e5"
+      ],
+      "title": "RFold: RNA Secondary Structure Prediction with Decoupled Optimization",
+      "reason": "タイトルが対象とするのはRNAの二次構造予測であり、LLM推論・サービング・メモリ階層・量子化・カーネルなどのシステム技術ではない。線形注意研究から引用されていても、その事実だけでは収録対象とならない。",
+      "source_url": "https://www.semanticscholar.org/paper/dbaee2b312ac358ce827a175fcaa33e109f354e5",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2202.06258-flowformer-linearizing-transformers-with-conservation-flows.md",
+        "papers/inference/99-other-inference-systems/2022-2202.08791-cosformer-rethinking-softmax-in-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md"
+      ],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_title_sweep"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/FASTA65681.2025.11138179",
+      "identity_tokens": [
+        "DOI:10.1109/FASTA65681.2025.11138179"
+      ],
+      "title": "Big Data Analysis From the Perspective of Fully Actuated System",
+      "reason": "タイトルは完全駆動系の理論的観点によるビッグデータ解析を主題とし、LLM生成推論・サービング・モデル圧縮や実行時メモリ管理の技術的寄与を示していない。",
+      "source_url": "https://doi.org/10.1109/FASTA65681.2025.11138179",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2022-2204.09656-a-fast-post-training-pruning-framework-for-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
+        "papers/inference/99-other-inference-systems/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md"
+      ],
+      "worklist_rank": 498,
+      "origin": "discovery_worklist_title_sweep"
+    }
+  ]
+}

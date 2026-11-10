@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a68d87b247c88798-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.20094",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.20094",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2406.20094",
+      "arXiv:2406.20094"
+    ],
+    "reason": "10億personaを用いたpersona-driven synthetic data生成方法と用途を提案するdata creation研究。LLMを生成器として使うが推論runtime/serving効率化を最終目的としない。",
+    "first_checked_at": "2026-10-05T02:14:50+00:00",
+    "last_checked_at": "2026-10-05T16:19:11+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2411.18462-draft-model-knows-when-to-stop-a-self-verification-length-policy-for-spe.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md"
+    ],
+    "title": "Scaling Synthetic Data Creation with 1,000,000,000 Personas"
+  },
+  "processed_at": "2026-10-05T16:19:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a68d87b247c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

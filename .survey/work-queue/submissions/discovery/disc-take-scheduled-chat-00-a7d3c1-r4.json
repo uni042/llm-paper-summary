@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.1109/TPDS.2026.3729256",
+      "doi": "10.1109/TPDS.2026.3729256",
+      "title": "Mix-or-Split: Latency-Aware Scheduling for Edge–Cloud LLM Inference",
+      "source_url": "https://doi.org/10.1109/TPDS.2026.3729256",
+      "priority": 93,
+      "reason": "Fine-grained edge/cloud LLM inference scheduling with KV-cache backhaul and GPU resource modeling."
+    },
+    {
+      "canonical_id": "arXiv:2609.23130",
+      "arxiv_id": "2609.23130",
+      "title": "From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.23130",
+      "priority": 91,
+      "reason": "Directly covers distributed LLM serving control-plane evolution, reusable state, placement, networking, autoscaling and SLOs."
+    },
+    {
+      "canonical_id": "DOI:10.1145/3820441.3820479",
+      "doi": "10.1145/3820441.3820479",
+      "title": "Towards Efficient Serving of Network-intensive LLM Inferences",
+      "source_url": "https://doi.org/10.1145/3820441.3820479",
+      "priority": 92,
+      "reason": "Targets distributed KV-cache transmission bottlenecks in network-intensive long-context LLM serving."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "disc-take-scheduled-chat-00-a7d3c1-r4",
+    "result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-a7d3c1-r4.json",
+    "receipt": "sha256:4f1b232a44b718ed34b32b3d7534e0ac6a64e6fb8d8ae1c1a6484340ca7bfded"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+    "round": "disc-take-scheduled-chat-00-a7d3c1-r4",
+    "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+    "candidate_count": 20,
+    "accepted_count": 3,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}

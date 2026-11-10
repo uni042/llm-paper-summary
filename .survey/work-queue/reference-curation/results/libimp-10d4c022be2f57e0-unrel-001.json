@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10d4c022be2f57e0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.27257",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.27257",
+    "identity_tokens": [
+      "arXiv:2510.27257"
+    ],
+    "reason": "テンソル並列とパイプライン並列を協調させて大規模モデルの学習スループットを改善する研究で、最終適用先が学習工程そのものの高速化であるため凍結範囲として対象外。",
+    "first_checked_at": "2026-09-30T09:07:47+00:00",
+    "last_checked_at": "2026-09-30T09:07:47+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2606.03770-e2llm-heterogeneous-edge-fog-serving.md",
+      "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
+    ],
+    "title": "Synergistic Tensor and Pipeline Parallelism"
+  },
+  "processed_at": "2026-09-30T09:07:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10d4c022be2f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

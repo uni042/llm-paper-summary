@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d21997dab1fe1772-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.09668",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.09668",
+    "identity_tokens": [
+      "arXiv:2606.09668"
+    ],
+    "reason": "Contextual queueing-bandit theory with queue-length regret; no LLM/inference workload or serving-system evaluation.",
+    "first_checked_at": "2026-10-05T12:19:32+00:00",
+    "last_checked_at": "2026-10-05T12:19:32+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md"
+    ],
+    "title": "Algorithm for Contextual Queueing Bandits with Rate-Optimal Queue Length Regret"
+  },
+  "processed_at": "2026-10-05T12:19:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d21997dab1fe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

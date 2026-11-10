@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5c0ba1aae5bafb39-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2007.10434",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2007.10434",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2007.10434",
+      "arXiv:2007.10434"
+    ],
+    "reason": "Conformer-kernelは長文書検索のrankerで、クエリ単語の独立性と畳み込み特徴を組み合わせる。生成LLMの逐次decode・KV・推論サービングを対象とせず、検索ランキング特化の研究。",
+    "first_checked_at": "2026-10-30T12:54:36+00:00",
+    "last_checked_at": "2026-10-30T12:54:36+00:00",
+    "linked_from": [],
+    "title": "Conformer-Kernel with Query Term Independence for Document Retrieval"
+  },
+  "processed_at": "2026-10-30T12:54:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5c0ba1aae5ba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

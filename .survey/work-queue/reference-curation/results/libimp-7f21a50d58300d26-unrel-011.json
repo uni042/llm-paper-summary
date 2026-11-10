@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f21a50d58300d26-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1706.03762",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1706.03762",
+    "identity_tokens": [
+      "arXiv:1706.03762"
+    ],
+    "reason": "1. **Attention Is All You Need** — `arXiv:1706.03762` ([paper](https://arxiv.org/abs/1706.03762)). Foundational Transformer architecture; no target LLM systems optimization evaluation.",
+    "first_checked_at": "2026-09-30T09:49:12+00:00",
+    "last_checked_at": "2026-09-30T09:49:12+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Attention Is All You Need"
+  },
+  "processed_at": "2026-09-30T09:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f21a50d5830",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

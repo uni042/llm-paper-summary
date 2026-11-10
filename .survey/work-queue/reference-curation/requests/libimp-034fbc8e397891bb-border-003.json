@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-034fbc8e397891bb-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2508.17209",
+  "reason": "Layer pruning is applied to reduce memory for federated LLM fine-tuning, and experiments evaluate training memory/communication and task quality. The paper studies backpropagation/federated adaptation, not inference-time serving or generation latency. Its pruning mechanism could intersect model compression, but current evidence is training-only.",
+  "title": "Memory-Efficient Federated Fine-Tuning of Large Language Models via Layer Pruning",
+  "identity_tokens": [
+    "arXiv:2508.17209"
+  ],
+  "linked_from": [
+    "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-034fbc8e3978",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

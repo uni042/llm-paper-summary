@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Understanding Calibration and Truncation Error Propagation in Training-Free Low-Rank Compression for LLMs",
+      "source_url": "https://arxiv.org/abs/2608.08506",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training-free low-rank compression frameworks have been gaining prominence for LLM compression given their effectiveness in reducing model parameter count while maintaining task-level accuracy. However, existing SOTA frameworks share two key limitations: (1) residual errors in calibration data activations accumulate across layers during compression, causing misalignment between representations simulated at compression time and those experienced at inference; (2) the assumption that layer importance distribution is preserved post-compression does not hold. Together, these two effects introduce misalignment in the compression process in relation to the deployed model. We study these effects and propose a simple, training-free methodology compatible with existing frameworks to mitigate them, comprising: (1) Layer-by-Layer Compression with Calibration Correction; (2) Iterative Compression with Rank Allocation Correction. Implemented atop an existing SOTA decomposition framework, and evaluated on Llama and Qwen3 models across various benchmarks and compression rates, our approach demonstrates up to ~1-2.5 accuracy point improvements over per-weight and joint decomposition baselines on zero-shot tasks.",
+      "identifiers": [
+        "SemanticScholar:7532a5fc2724bd67c4cae45ce0543405d0c10bcd"
+      ],
+      "semantic_scholar_id": "7532a5fc2724bd67c4cae45ce0543405d0c10bcd",
+      "canonical_id": "arXiv:2608.08506",
+      "arxiv_id": "2608.08506",
+      "authors": [
+        "Mohanad Odema",
+        "G. de Micheli",
+        "Dayin Gou",
+        "Nilesh Malpeddi",
+        "Prathamesh Vaste",
+        "Jacob Song"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 82,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨はLLMの学習不要低ランク圧縮で、校正データの残差誤差が層を越えて蓄積する問題と、圧縮後に層重要度の順位が変わる問題を分析し補正する。配備時のパラメータ削減と品質維持に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SuperThoughts: Reasoning Tokens in Superposition",
+      "source_url": "https://arxiv.org/abs/2606.13862",
+      "year": 2026,
+      "published": "2026-06-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long Chain-of-Thought (CoT) reasoning improves LLM problem-solving but is computationally expensive due to sequential token generation. While recent works explore reasoning in continuous latent spaces to bypass discrete token generation, they often struggle with training stability and fail to scale to complex, long-horizon tasks due to lack of supervision signal. We propose SuperThoughts, which compresses pairs of consecutive CoT tokens into single latent representations and decodes two tokens per step via a lightweight Multi-Token Prediction (MTP) module. This preserves discrete token supervision at training time while doubling throughput at inference time. We finetune Qwen2.5-Math-1.5B-Instruct, Qwen2.5-Math-7B-Instruct, Qwen2.5-Math-14B-Instruct, and evaluate on MATH500, AMC, OlympiadBench, and GPQA-Diamond. With a confidence-based adaptive mechanism that falls back to standard decoding when uncertain, SuperThoughts achieves $\\sim$20--30\\% CoT length reduction while maintaining accuracy with minimal degradation (1-2 points accuracy drop on most tasks).",
+      "identifiers": [
+        "SemanticScholar:782fe6d205948516c43573419e0cc9aa43f5c7eb"
+      ],
+      "semantic_scholar_id": "782fe6d205948516c43573419e0cc9aa43f5c7eb",
+      "canonical_id": "arXiv:2606.13862",
+      "arxiv_id": "2606.13862",
+      "doi": "10.48550/arXiv.2606.13862",
+      "authors": [
+        "Zheyang Xiong",
+        "Shivam Garg",
+        "Max Yu",
+        "Vaishnavi Shrivastava",
+        "Hao-Yu Zhao",
+        "Anastasios Kyrillidis",
+        "Dimitris Papailiopoulos"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 141,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨は連続するCoTトークン2個を一つの潜在表現にまとめ、軽量なMulti-Token Predictionで1反復あたり2トークンを復号するSuperThoughtsを提案。Qwen2.5-Math系列で推論時の生成スループット向上を直接狙う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Forget Without Compromise: Nexus Sampling for Streaming KV-Cache Eviction Under Fixed Budgets",
+      "source_url": "https://arxiv.org/abs/2606.23961",
+      "year": 2026,
+      "published": "2026-06-22",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context and agentic LLM workloads push the KV cache past any fixed memory budget, forcing the inference stack to permanently evict tokens at every step of a continuous-inference stream. Existing methods all share the same template, a per-step direct-attention score followed by deterministic top-$K$ selection, which converts a single below-cutoff step into an irreversible verdict and permanently erases any subtly important token that direct attention cannot single out from noise. To address this challenge, we propose Nexus Sampling, a training-free eviction method that pairs Nexus scoring, an iterative walk over direct attention that surfaces bridge tokens, with weighted reservoir sampling, which retains tokens with inclusion probability in place of deterministic top-$K$. Theoretically, we show that Nexus Sampling dominates deterministic top-$K$ in long-run survival of subtly important tokens. Empirically, at 80% KV cache eviction, Nexus Sampling matches dense attention within 1% on LongBench while outperforming top-$K$ baselines on retrieval-heavy tasks, with up to 10x smaller per-sequence cache memory.",
+      "identifiers": [
+        "SemanticScholar:ffcd70216357af991a7e1691bbb576215b003f6b"
+      ],
+      "semantic_scholar_id": "ffcd70216357af991a7e1691bbb576215b003f6b",
+      "canonical_id": "arXiv:2606.23961",
+      "arxiv_id": "2606.23961",
+      "doi": "10.48550/arXiv.2606.23961",
+      "authors": [
+        "D. Duong",
+        "H. Le",
+        "Jianwen Xie",
+        "Anshumali Shrivastava",
+        "Zhao-Zhuo Xu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 130,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨は連続ストリーミング推論で固定KV予算を守る際、単発の注意スコアによる不可逆なトークン削除を避けるため、注意グラフ上のNexus探索と重み付きリザーバサンプリングを組み合わせる。LLMの固定予算KV削除に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Recall Before You Rank: Similarity-Guided Top-K Reuse for Efficient Long-Context Attention",
+      "source_url": "https://arxiv.org/abs/2607.27692",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Top-$K$ sparse attention reduces the cost of Softmax and value aggregation by attending to only a small subset of key--value (KV) entries. However, identifying this subset still requires scoring the current query against the full KV cache and performing global Top-$K$ selection, leaving selector cost linear in context length and limiting the practical efficiency of sparse attention for long-context decoding. In this paper, we introduce ReTopK, a training-free method that accelerates dynamic Top-$K$ attention by reusing historical retrieval decisions. ReTopK builds on the observation that similar queries often attend to overlapping supports and that partially overlapping supports can still preserve most of the Exact Top-$K$ attention mass. For each attention head, it maintains a bounded cache of historical query--support pairs, retrieves the most similar cached queries for each new query, unions their stored supports with a recent window, and reranks only the resulting compact candidate set using exact current-query scores. A similarity-based fallback invokes full-history Exact Top-$K$ when reuse is unreliable, while periodic exact refreshes limit cache drift. ReTopK retains the complete KV cache and reuses only selected indices, rather than historical scores, attention weights, or outputs. Across 16K--128K contexts, ReTopK achieves the lowest PG19 perplexity and the highest NIAH and LongBench scores among the evaluated approximate methods. At 128K with $K=512$, ReTopK incurs only a 0.50\\% perplexity increase over Exact Top-$K$ while accelerating attention computation by $3.07\\times$.",
+      "identifiers": [
+        "SemanticScholar:63a1befeca97b96118c7dfa3fe64685a77f23d4f"
+      ],
+      "semantic_scholar_id": "63a1befeca97b96118c7dfa3fe64685a77f23d4f",
+      "canonical_id": "arXiv:2607.27692",
+      "arxiv_id": "2607.27692",
+      "doi": "10.48550/arXiv.2607.27692",
+      "authors": [
+        "Wen-Shuai Yao",
+        "Wen-Yong Zhou",
+        "Han-Yong Shao",
+        "Yi-Zhe Chen",
+        "Zhiyuan Ning",
+        "Yuan-Nuo Feng",
+        "Rui-Xuan Huang",
+        "Ke-Chao Tang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 92,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨はTop-K疎注意で全KVとの照合・Top-K選択が毎回必要になるボトルネックを、類似クエリ間で過去の検索結果を再利用するReTopKで削減する。長文脈decodeの疎注意選択コストを直接改善する研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ATFlash: Per-RoPE-Wavelength Attention Windows for Compute/Memory-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.02947",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The attention score with rotary position embeddings (RoPE) decomposes exactly into a sum over its 2D-rotation frequency pairs, and each pair's wavelength limits how far it can discriminate position. Aligned with this structure, we propose the per-RoPE-wavelength distance window: it prunes the query--key inner-product terms beyond a wavelength-proportional distance. Unlike a sliding window, every key remains reachable, at least through the low-frequency pairs. The reduction rate is input-independent, with a closed form logarithmic in the sequence length $N$, in contrast to dynamic-sparse methods like MInference. Such token-level selection is orthogonal to our frequency-level pruning. The window can therefore be applied on top of those methods. On Qwen2.5-0.5B and Llama-3.2-3B, the window prunes 37--48\\% of the query--key inner-product terms within each model's native context length. Relative to full attention, the top-1 match rate stays at 96--98\\% and the mean output-distribution KL at the $10^{-3}$-nat level on LongBench-v2 contexts. We examine absolute scores on long-context benchmarks such as RULER, OpenAI-MRCR, LongCodeQA, and $\\infty$Bench: they are broadly preserved. We implement the window as a slice of the query--key contraction axis, leaving the online-softmax recurrences untouched, and port it with minimal diffs into the released FlashAttention-4 prefill and FlashInfer decode. On RTX PRO 6000 with Llama, both ports outpace stock with gains growing with context length, up to $1.29\\times$ at 128K. End to end on Qwen2.5-7B-1M, with 57\\% of the inner-product terms pruned, the speedup reaches $1.31\\times$ at a 1M-token context.",
+      "identifiers": [
+        "SemanticScholar:a6bd02cb07408050edab6a2c5b81e9e4853e5ba7"
+      ],
+      "semantic_scholar_id": "a6bd02cb07408050edab6a2c5b81e9e4853e5ba7",
+      "canonical_id": "arXiv:2608.02947",
+      "arxiv_id": "2608.02947",
+      "authors": [
+        "Shun-ichiro Hayashi",
+        "Daichi Mukunoki",
+        "Tetsuya Hoshino",
+        "Takahiro Katagiri"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨はRoPE周波数対ごとの波長から距離窓を定義し、遠距離で識別できないQK内積成分を削減するATFlashを提案。低周波対を通じて遠距離キーを残しつつ注意計算を削減するため、長文脈推論効率に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-876fa7dea160",
+    "round": "libimp-876fa7dea160803f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-876fa7dea160803f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-876fa7dea160803f-pre01.json",
+    "receipt": "sha256:14510b6b993a7c9255aa93967d49c96f60e002bd65705a45e0f394ded7f69048"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-876fa7dea160",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

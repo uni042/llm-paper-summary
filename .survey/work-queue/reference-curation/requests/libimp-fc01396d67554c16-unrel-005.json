@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-fc01396d67554c16-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2506.09919",
+  "reason": "We introduce MetricHMSR, a novel framework for recovering metric human meshes and 3D scenes from a single monocular image. Existing methods struggle to recover metric scale due to monocular scale ambiguity and weak-perspective camera assumptions. Moreover, their fully coupled feature representations make it difficult to disentangle local pose from global translation, often requiring multi-stage pipelines that introduce accumulated errors. To address these challenges, we propose MetricHMR (Metric Human Mesh Recovery), which incorporates a bounding camera ray map representation to provide explicit metric cues for human reconstruction,together with a Human Mixture-of-Experts (HumanMoE) that dynamically routes image features to specialized experts, enabling the disentangled perception of local human pose and global metric position. Leveraging the recovered metric human as a geometric anchor, we further refine monocular metric depth estimation to achieve more accurate 3D alignment between humans and scenes.Comprehensive experiments demonstrate that our method achieves state-of-the-art performance on both human mesh recovery and metric human-scene reconstruction. Project Page: https://Metaverse-AI-Lab-THU.github.io/MetricHMSR.",
+  "title": "MetricHMSR:Metric Human Mesh and Scene Recovery from Monocular Images",
+  "identity_tokens": [
+    "arXiv:2506.09919"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc01396d6755",
+  "source_precheck_request_id": null
+}

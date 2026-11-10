@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b180754aa406f0ed-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2311.13381",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2311.13381",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2311.13381",
+      "arXiv:2311.13381"
+    ],
+    "reason": "主貢献はモバイル端末群でのLLM分割・pipeline trainingだが、異種CPU/GPUへのattention-head配置を行うbackend schedulerと最大8.03倍のinference speedupも含むため、学習凍結範囲とedge inferenceの境界に位置する。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "Confidant: Customizing Transformer-based LLMs via Collaborative Edge Training"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b180754aa406",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

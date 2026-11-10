@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d043895da71c2d64-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2402.04239",
+  "reason": "一次全文§3〜§5.5で、学習可能なsurrogate tokenによるクラスタ内注意とクラスタ間要約でLong Range Arenaのエンコーダ型分類タスクを高速化する研究と確認。Table 2はLRA分類精度（CAST Top-K平均59.32、S4 86.09、MEGA 88.21）を評価し、§5.5で著者自身が『生成自然言語のdecoding版が存在しない』と明記。推論カーネル・attention設計への間接的示唆はあるが、現行のLLM生成推論、KV cache、サービングに直接適用した実測がないためborderlineとし、Research完成原稿へは進めない。",
+  "title": "CAST: Clustering Self-Attention using Surrogate Tokens for Efficient Transformers",
+  "identity_tokens": [
+    "arxiv:2402.04239"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d043895da71c",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

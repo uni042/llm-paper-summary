@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e22a91ed2ac46ad9-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.12944",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.12944",
+    "identity_tokens": [
+      "arXiv:2604.12944"
+    ],
+    "reason": "一次本文はvideo LLM hallucinationの分類・要因を整理するsurveyで、linked streaming/KV lineageと長動画contextの接点はあるが、新しい推論効率手法やcost評価は提示しない。関連性は背景/評価レベルに限られる。",
+    "first_checked_at": "2026-10-07T10:30:09+00:00",
+    "last_checked_at": "2026-10-07T10:30:09+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Distorted or Fabricated? A Survey on Hallucination in Video LLMs"
+  },
+  "processed_at": "2026-10-07T10:30:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e22a91ed2ac4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

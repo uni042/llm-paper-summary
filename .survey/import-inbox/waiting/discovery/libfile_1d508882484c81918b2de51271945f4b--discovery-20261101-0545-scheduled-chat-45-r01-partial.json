@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261101-0545-scheduled-chat-45/r01",
+  "reference_main_sha": "797921af34780a61c63ec07e87b3e803ddd1f5ee",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3659051",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3659051"
+      ],
+      "title": "A Survey on the Expanding Scope and Interdisciplinary Opportunities for Processing-in-Memory Techniques",
+      "reason": "Oak Ridge National Laboratoryの著者所属機関が公開する原著要旨を確認。DRAMや不揮発性メモリを利用したcompute-in-memory・near-memory processing・混合型PIMの設計と、精度・帯域・遅延・プログラマビリティのトレードオフを整理するサーベイ。生成AIの計算負荷や高性能カーネルへのPIM適用も扱い、メモリ帯域制約の緩和というLLM推論システムとの技術的接点はある。ただし主要な射程はゲノム解析、mRNA定量、量子回路シミュレーション等も含むPIM全般で、特定のLLM推論手法・サービングシステムの性能を新規実証した研究ではないためborderline。",
+      "source_url": "https://impact.ornl.gov/en/publications/a-survey-on-the-expanding-scope-and-interdisciplinary-opportuniti/",
+      "body_check": "primary_author_institutional_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T05:48:01+09:00",
+      "last_checked_at": "2026-11-01T05:48:01+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 496",
+        "https://doi.org/10.1109/ACCESS.2026.3659051"
+      ],
+      "worklist_rank": 496,
+      "origin": "discovery_worklist_primary_author_institutional_abstract_screen"
+    }
+  ]
+}

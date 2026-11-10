@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-872426663a93a4bb-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2610.00991",
+  "reason": "Adapter ThicketsはRLVR訓練budgetを複数LoRAへ分散し、majority-vote accuracyを改善する。本文は全methodで問題あたり160 completionを固定して比較している。 提案はtraining budget配分でありinference computeを減らさず、等しい160 sample予算でqualityを比較している。学習時のaccuracy改善だけで対象推論効率には該当しない。",
+  "title": "Adapter Thickets: Splitting an RLVR Budget Beats Concentrating It",
+  "identity_tokens": [
+    "arXiv:2610.00991"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-872426663a93",
+  "source_precheck_request_id": null
+}

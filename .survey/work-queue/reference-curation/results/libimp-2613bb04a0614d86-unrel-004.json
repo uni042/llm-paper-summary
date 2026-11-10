@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2613bb04a0614d86-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1093/bib/bbag378",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1093/bib/bbag378",
+    "identity_tokens": [
+      "DOI:10.1093/bib/bbag378"
+    ],
+    "reason": "LipiDetective applies a deep model to lipid identification from mass spectra; the abstract provides no language-model inference/serving efficiency contribution.",
+    "first_checked_at": "2026-10-05T10:55:59+00:00",
+    "last_checked_at": "2026-10-05T10:55:59+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "LipiDetective: a deep learning model for the identification of molecular lipid species in tandem mass spectra"
+  },
+  "processed_at": "2026-10-05T10:55:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2613bb04a061",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

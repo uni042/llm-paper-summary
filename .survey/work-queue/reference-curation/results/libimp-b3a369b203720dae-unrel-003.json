@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b3a369b203720dae-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.06605",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.06605",
+    "identity_tokens": [
+      "arXiv:2212.06605"
+    ],
+    "reason": "This is a Johnson–Lindenstrauss-style weighted-distance projection result, not a language model, inference system or model-compression/serving method.",
+    "first_checked_at": "2026-10-06T18:44:35+00:00",
+    "last_checked_at": "2026-10-06T18:44:35+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+    ],
+    "title": "Dimensionality Reduction on Complex Vector Spaces for Euclidean Distance with Dynamic Weights"
+  },
+  "processed_at": "2026-10-06T18:44:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b3a369b20372",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

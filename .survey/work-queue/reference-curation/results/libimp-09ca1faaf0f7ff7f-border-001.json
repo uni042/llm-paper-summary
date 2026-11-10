@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-09ca1faaf0f7ff7f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2306.07174",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2306.07174",
+    "identity_tokens": [
+      "arXiv:2306.07174"
+    ],
+    "reason": "一次要旨では、凍結した言語モデルをメモリエンコーダとして使い、適応的な側枝ネットワークで過去文脈を検索・読出しするLongMemを提案する。65,000トークン相当の長期記憶を保持する外部メモリ設計は推論時の文脈利用と関連するが、主評価は長文言語モデル性能と文脈内学習であり、GPU KVキャッシュ圧縮・階層オフロード・サービング遅延の改善ではない。",
+    "first_checked_at": "2026-10-12T14:56:01+00:00",
+    "last_checked_at": "2026-10-13T03:44:19+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Augmenting Language Models with Long-Term Memory"
+  },
+  "processed_at": "2026-10-13T03:44:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-09ca1faaf0f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

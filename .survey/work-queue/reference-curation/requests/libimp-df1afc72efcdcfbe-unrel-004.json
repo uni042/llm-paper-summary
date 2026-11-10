@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-df1afc72efcdcfbe-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.21607",
+  "reason": "We investigate when a sparse nonnegative matrix can be recovered from a real-valued matrix of much lower rank by zeroing out its negative elements. The potential for such decompositions suggests a mathematical connection between sparsity and rank; we analyze a number of sparse matrices with this latent low-rank structure and use them to illustrate the geometric origins of this connection. Previous algorithms have discovered these decompositions via an alternating minimization over the factors of a low-rank matrix, but to do so, they have also needed to compute and store another matrix, neither sparse nor low-rank, that is the size of their product. We develop a stochastic, alternating least-squares algorithm that operates on smaller blocks of this dense matrix and scales as a result to much larger problems. We also show how to further accelerate this algorithm with sparse optimizations and customized CUDA kernels. As one example, we use the algorithm to analyze the sparse matrix of synaptic weights for the recently published $\\textit{Drosphilia}$ connectome. The nonzero elements of this matrix, with 139,255 rows and columns, record the number of synapses between cells in the nervous system of a female fruit fly. Despite a slowly decaying spectrum of singular values, this matrix exhibits a latent low-rank structure that is predictive of cell categories across multiple levels of specificity.",
+  "title": "Subzero matrix completion for sparse data analysis: large-scale learning of latent low-rank structure",
+  "identity_tokens": [
+    "arXiv:2608.21607"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df1afc72efcd",
+  "source_precheck_request_id": null
+}

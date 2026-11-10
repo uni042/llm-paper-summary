@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eab38c7a420d2ff9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2308.07633",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2308.07633",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2308.07633",
+      "arXiv:2308.07633"
+    ],
+    "reason": "LLM圧縮を量子化・枝刈り・知識蒸留などに分類し、評価指標も整理するsurvey。推論memory/compute削減へ直接関連するが、新規圧縮方式やruntimeの実装評価ではないためborderline。",
+    "first_checked_at": "2026-09-27T10:28:09+09:00",
+    "last_checked_at": "2026-10-05T16:12:52+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 158"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Survey on Model Compression for Large Language Models"
+  },
+  "processed_at": "2026-10-05T16:12:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eab38c7a420d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

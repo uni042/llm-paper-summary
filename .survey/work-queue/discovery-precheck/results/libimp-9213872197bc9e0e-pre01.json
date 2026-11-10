@@ -1,0 +1,1136 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-9213872197bc9e0e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-9213872197bc",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/iiswc66894.2025.00019",
+    "arXiv:2503.15369",
+    "arXiv:2510.06052",
+    "arXiv:2510.11958",
+    "arXiv:2511.08083",
+    "arXiv:2512.24545",
+    "arXiv:2603.16440",
+    "arXiv:2603.18489",
+    "arXiv:2604.14403",
+    "arXiv:2604.25326",
+    "arXiv:2605.12460",
+    "arXiv:2605.25469"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "133023427db6dc3231cabfcde32b3a019e8cb756",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 12,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 12,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T06:05:55.859088+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/iiswc66894.2025.00019",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.15369",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.06052",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.11958",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.08083",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.24545",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.16440",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.18489",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.14403",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.25326",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.12460",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.25469",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "HipKittens: Fast and Furious AMD Kernels",
+      "source_url": "https://arxiv.org/abs/2511.08083",
+      "year": 2025,
+      "published": "2025-11-11",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AMD GPUs offer state-of-the-art compute and memory bandwidth; however, peak performance AMD kernels are written in raw assembly. To address the difficulty of mapping AI algorithms to hardware, recent work proposes C++ embedded and PyTorch-inspired domain-specific languages like ThunderKittens (TK) to simplify high performance AI kernel development on NVIDIA hardware. We explore the extent to which such primitives -- for explicit tile-based programming with optimized memory accesses and fine-grained asynchronous execution across workers -- are NVIDIA-specific or general. We provide the first detailed study of the programming primitives that lead to performant AMD AI kernels, and we encapsulate these insights in the HipKittens (HK) programming framework. We find that tile-based abstractions used in prior DSLs generalize to AMD GPUs, however we need to rethink the algorithms that instantiate these abstractions for AMD. We validate the HK primitives across CDNA3 and CDNA4 AMD platforms. In evaluations, HK kernels compete with AMD's hand-optimized assembly kernels for GEMMs and attention, and consistently outperform compiler baselines. Moreover, assembly is difficult to scale to the breadth of AI workloads; reflecting this, in some settings HK outperforms all available kernel baselines by $1.2-2.4\\times$ (e.g., $d=64$ attention, GQA backwards, memory-bound kernels). These findings help pave the way for a single, tile-based software layer for high-performance AI kernels that translates across GPU vendors. HipKittens is released at: https://github.com/HazyResearch/HipKittens.",
+      "identifiers": [
+        "SemanticScholar:f659b27e5a85feeb2c01b55997873f3cdbdfc7c6"
+      ],
+      "semantic_scholar_id": "f659b27e5a85feeb2c01b55997873f3cdbdfc7c6",
+      "canonical_id": "arXiv:2511.08083",
+      "arxiv_id": "2511.08083",
+      "doi": "10.48550/arXiv.2511.08083",
+      "authors": [
+        "William Hu",
+        "Drew Wadsworth",
+        "Sean Siddens",
+        "Stanley Winata",
+        "Daniel Y. Fu",
+        "Ryan Swann",
+        "M. Osama",
+        "Christopher Ré",
+        "Simran Arora"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 337,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "More Than Bits: Multi-Envelope Double Binary Factorization for Extreme Quantization",
+      "source_url": "https://arxiv.org/abs/2512.24545",
+      "year": 2025,
+      "published": "2025-12-31",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "For extreme low-bit quantization of large language models (LLMs), Double Binary Factorization (DBF) is attractive as it enables efficient inference without sacrificing accuracy. However, the scaling parameters of DBF are too restrictive; after factoring out signs, all rank components share the same magnitude profile, resulting in performance saturation. We propose Multi-envelope DBF (MDBF), which retains a shared pair of 1-bit sign bases but replaces the single envelope with a rank-$l$ envelope. By sharing sign matrices among envelope components, MDBF effectively maintains a binary carrier and utilizes the limited memory budget for magnitude expressiveness. We also introduce a closed-form initialization and an alternating refinement method to optimize MDBF. Across the LLaMA and Qwen families, MDBF enhances perplexity and zero-shot accuracy over previous binary formats at matched bits per weight while preserving the same deployment-friendly inference primitive.",
+      "identifiers": [
+        "SemanticScholar:c7543e861b3d2af705253eec2ce8ba2ca479e1e8"
+      ],
+      "semantic_scholar_id": "c7543e861b3d2af705253eec2ce8ba2ca479e1e8",
+      "canonical_id": "arXiv:2512.24545",
+      "arxiv_id": "2512.24545",
+      "doi": "10.48550/arXiv.2512.24545",
+      "authors": [
+        "Yuma Ichikawa",
+        "Yoshihiko Fujisawa",
+        "Yudai Fujimoto",
+        "Akira Sakai",
+        "Katsuki Fujisawa"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 287,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EntropyCache: Decoded Token Entropy Guided KV Caching for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2603.18489",
+      "year": 2026,
+      "published": "2026-03-19",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based large language models (dLLMs) rely on bidirectional attention, which prevents lossless KV caching and requires a full forward pass at every denoising step. Existing approximate KV caching methods reduce this cost by selectively updating cached states, but their decision overhead scales with context length or model depth. We propose EntropyCache, a training-free KV caching method that uses the maximum entropy of newly decoded token distributions as a constant-cost signal for deciding when to recompute. Our design is grounded in two empirical observations: (1) decoded token entropy correlates with KV cache drift, providing a cheap proxy for cache staleness, and (2) feature volatility of decoded tokens persists for multiple steps after unmasking, motivating recomputation of the $k$ most recently decoded tokens. The skip-or-recompute decision requires only $O(V)$ computation per step, independent of context length and model scale. Experiments on LLaDA-8B-Instruct and Dream-7B-Instruct show that EntropyCache achieves $15.2\\times$-$26.4\\times$ speedup on standard benchmarks and $22.4\\times$-$24.1\\times$ on chain-of-thought benchmarks, with competitive accuracy and decision overhead accounting for only $0.5\\%$ of inference time. Code is available at https://github.com/mscheong01/EntropyCache.",
+      "identifiers": [
+        "SemanticScholar:d6ce55156b85e3cf7bea454d8b38a5c4bf6b2e21"
+      ],
+      "semantic_scholar_id": "d6ce55156b85e3cf7bea454d8b38a5c4bf6b2e21",
+      "canonical_id": "arXiv:2603.18489",
+      "arxiv_id": "2603.18489",
+      "doi": "10.48550/arXiv.2603.18489",
+      "authors": [
+        "Minsoo Cheong",
+        "Donghyun Son",
+        "Woo-Sang Lim",
+        "Sungjoo Yoo"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 209,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multi-Stream LLMs: Unblocking Language Models with Parallel Streams of Thoughts, Inputs and Outputs",
+      "source_url": "https://arxiv.org/abs/2605.12460",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The continued improvements in language model capability have unlocked their widespread use as drivers of autonomous agents, for example in coding or computer use applications. However, the core of these systems has not changed much since early instruction-tuned models like ChatGPT. Even advanced AI agents function on message exchange formats, successively exchanging messages with users, systems, with itself (i.e. chain-of-thought) and tools in a single stream of computation. This bottleneck to a single stream in chat models leads to a number of limitations: the agent cannot act (generate output) while reading, and in reverse, cannot react to new information while writing. Similarly, the agent cannot act while thinking and cannot think while reading or acting on information. In this work, we show that models can be unblocked by switching from instruction-tuning for sequential message formats to instruction-tuning for multiple, parallel streams of computation, splitting each role into a separate stream. Every forward pass of the language model then simultaneously reads from multiple input streams and generates tokens in multiple output streams, all of which causally depend on earlier timesteps. We argue that this data-driven change remedies a number of usability limitations as outlined above, improves model efficiency through parallelization, improves model security through better separation of concerns and can further improve model monitorability.",
+      "identifiers": [
+        "SemanticScholar:dd1c01f8c550921e78389c1f2c4e227db4c95562"
+      ],
+      "semantic_scholar_id": "dd1c01f8c550921e78389c1f2c4e227db4c95562",
+      "canonical_id": "arXiv:2605.12460",
+      "arxiv_id": "2605.12460",
+      "doi": "10.48550/arXiv.2605.12460",
+      "authors": [
+        "Gui-Nan Su",
+        "Yan-Wu Yang",
+        "Xueyan Li",
+        "Jonas Geiping"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "JacQuant: STE-Free Quantization-Aware Training via Learned Jacobian Surrogates",
+      "source_url": "https://arxiv.org/abs/2605.25469",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization-aware training (QAT) is widely deployed but typically relies on the Straight-Through Estimator (STE), which passes gradients through non-differentiable quantizers by fiat. This often makes training brittle near bin boundaries and weakly aligned with the actual behavior of the low-precision model. We introduce JacQuant, a QAT framework that learns a lightweight surrogate of the model's local sensitivity to parameter changes and uses it to stabilize and accelerate training within standard variance-reduced optimizers. The surrogate is inexpensive (diagonal or block-diagonal), data-driven, and compatible with common weight and activation quantizers. On code-preserving training phases, we prove convergence for non-convex objectives and obtain linear rates under a PL condition, and we relate the learned sensitivity to end-to-end output fidelity via a simple calibration argument. Across LLM benchmarks at $\\leq 2$ bits, JacQuant consistently reaches higher accuracy than STE-based QAT, and the runtime analyses on various models show that the added cost remains negligible under practical group sizes. The method is drop-in and requires no changes to the forward quantizers; our empirical claims are scoped to ultra-low-bit LLM QAT.",
+      "identifiers": [
+        "SemanticScholar:d15b280363a70487d01a287a28457be92d9725ac"
+      ],
+      "semantic_scholar_id": "d15b280363a70487d01a287a28457be92d9725ac",
+      "canonical_id": "arXiv:2605.25469",
+      "arxiv_id": "2605.25469",
+      "doi": "10.48550/arXiv.2605.25469",
+      "authors": [
+        "Kai Yi",
+        "Vignesh Vivekraja",
+        "Harshit Khaitan",
+        "Steven Li"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Unified Model and Document Representation for On-Device Retrieval-Augmented Generation",
+      "source_url": "https://arxiv.org/abs/2604.14403",
+      "year": 2026,
+      "published": "2026-04-15",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Traditional Retrieval-Augmented Generation (RAG) approaches generally assume that retrieval and generation occur on powerful servers removed from the end user. While this reduces local hardware constraints, it introduces significant drawbacks: privacy concerns regarding data access, recurring maintenance and storage costs, increased latency, and the necessity of an internet connection. On-device RAG addresses these challenges by executing the entire pipeline locally, making it ideal for querying sensitive personal information such as financial documents, contact details, and medical history. However, on-device deployment necessitates a delicate balance between limited memory and disk space. Specifically, the context size provided to the generative model must be restricted to manage KV cache and attention memory usage, while the size of stored embeddings must be minimized to preserve disk space. In this work, we propose a unified model that compresses the RAG context and utilizes the same representations for retrieval. This approach minimizes disk utilization compared to using separate representations, while significantly reducing the context size required for generation. With an average of 1/10 of the context, our model matches the performance of a traditional RAG reader without increasing storage requirements compared to a multi-vector retrieval model. This approach represents the first model to unify retrieval and context compression using a shared model and representation. We believe this work will inspire further consolidation of distinct models to optimize on-device performance.",
+      "identifiers": [
+        "SemanticScholar:a4b1243baeccd0d4d9522ae929f96ce989c76f89"
+      ],
+      "semantic_scholar_id": "a4b1243baeccd0d4d9522ae929f96ce989c76f89",
+      "canonical_id": "arXiv:2604.14403",
+      "arxiv_id": "2604.14403",
+      "doi": "10.48550/arXiv.2604.14403",
+      "authors": [
+        "J. Killingback",
+        "Ofer Meshi",
+        "Henry Li",
+        "Hamed Zamani",
+        "Maryam Karimzadehgan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 182,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AHASD: Asynchronous Heterogeneous Architecture for LLM Adaptive Drafting Speculative Decoding on Mobile Devices",
+      "source_url": "https://arxiv.org/abs/2604.25326",
+      "year": 2026,
+      "published": "2026-04-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding enhances the inference efficiency of large language models (LLMs) by generating drafts using a small draft language model (DLM) and verifying them in batches with a large target language model (TLM). However, adaptive drafting inference on a mobile single-NPU-PIM system faces idle overhead in traditional operator-level synchronous execution and wasted computation in asynchronous execution due to fluctuations in draft length. This paper introduces AHASD, a task-level asynchronous mobile NPU-PIM heterogeneous architecture for speculative decoding. Notably, AHASD achieves parallel drafting on the PIM and verification on a single NPU through task-level DLM-TLM decoupling and specifically, it incorporates Entropy-History-Aware Drafting Control and Time-Aware Pre-Verification Control to dynamically manage adaptive drafting algorithm execution and pre-verification timing, suppressing invalid drafting based on low-confidence drafts. Additionally, AHASD integrates Attention Algorithm Units and Gated Task Scheduling Units within LPDDR5-PIM to enable attention link localization and sub-microsecond task switching on the PIM side. Experimental results for different LLMs and adaptive drafting algorithms show that AHASD achieves up to 4.2$\\times$ in throughput and 5.6$\\times$ in energy efficiency improvements over a GPU-only baseline, and 1.5$\\times$ in throughput and 1.24$\\times$ in energy efficiency gains over the state-of-the-art GPU+PIM baseline, with hardware overhead below 3% of the DRAM area.",
+      "identifiers": [
+        "SemanticScholar:3c98dfe5ea50bf7ff2f4f2055fad507ccbfd9ac6"
+      ],
+      "semantic_scholar_id": "3c98dfe5ea50bf7ff2f4f2055fad507ccbfd9ac6",
+      "canonical_id": "arXiv:2604.25326",
+      "arxiv_id": "2604.25326",
+      "doi": "10.1145/3770743.3803965",
+      "authors": [
+        "Zirui Ma",
+        "Zhihua Fan",
+        "Wen-Xing Li",
+        "Haibin Wu",
+        "Fulin Zhang",
+        "Xiaochun Ye",
+        "Wen-Ming Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EfficientLLaVA: Generalizable Auto-Pruning for Large Vision-language Models",
+      "source_url": "https://arxiv.org/abs/2503.15369",
+      "year": 2025,
+      "published": "2025-03-19",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While multimodal large language models demonstrate strong performance in complex reasoning tasks, they pose significant challenges related to model complexity during deployment, especially for resource-limited devices. In this paper, we propose an automatic pruning method for large vision-language models to enhance the efficiency of multimodal reasoning. Conventional methods rely on the training data of the original model to select the proper pruning ratio for different network components. However, these methods are impractical for large vision-language models due to the unaffordable search costs caused by web-scale training corpus. In contrast, our approach only leverages a small number of samples to search for the desired pruning policy by maximizing its generalization ability on unknown training data while maintaining the model accuracy, which enables the achievement of an optimal trade-off between accuracy and efficiency for large visual language models. Specifically, we formulate the generalization gap of the pruning strategy using the structural risk minimization principle. Based on both task performance and generalization capability, we iteratively search for the optimal pruning policy within a given search space and optimize the vision projector to evolve the search space with higher upper bound of performance. We conduct extensive experiments on the ScienceQA, Vizwiz, MM-vet, and LLaVA-Bench datasets for the task of visual question answering. Using only 64 samples for pruning policy search, EfficientLLaVA achieves an accuracy of 83.05% on ScienceQA, along with a ×1.8 speedup compared to the dense LLaVA-v1.5-7B model. The code is available at: https://github.com/liangynTHU/EfficientLLaVA",
+      "identifiers": [
+        "SemanticScholar:aa3430baf7796b7154ab343d2637cf32bbfc8e61"
+      ],
+      "semantic_scholar_id": "aa3430baf7796b7154ab343d2637cf32bbfc8e61",
+      "canonical_id": "arXiv:2503.15369",
+      "arxiv_id": "2503.15369",
+      "doi": "10.1109/CVPR52734.2025.00882",
+      "authors": [
+        "Yi-Nan Liang",
+        "Ziwei Wang",
+        "Xiu-Wei Xu",
+        "Jie Zhou",
+        "Jiwen Lu"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 574,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Capability-Guided Compression: Toward Interpretability-Aware Budget Allocation for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2603.16440",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model compression has made substantial progress through pruning, quantization, and low-rank decomposition, yet a fundamental limitation persists across all existing methods: compression budgets are allocated without any representation of what individual model components functionally encode. We term this the capability-blind compression problem and argue it is a root cause of two well-documented failures -- the insensitivity of perplexity-based evaluation to reasoning capability loss, and the abrupt phase transitions in model performance recently characterized by Ma et al. (2026). We propose Capability-Guided Compression (CGC), a framework that addresses this by using Sparse Autoencoder (SAE)-derived capability density maps to allocate differential compression budgets across transformer components. Capability density is a formally defined scalar measure combining the feature breadth, activation entropy, and cross-input consistency of a component's SAE feature activation distribution. We prove theoretically that components with higher capability density exhibit lower structural redundancy and reach their individual phase transition points at lower compression ratios, providing the first pre-compression mechanism for component-level phase transition prediction. Experiments on GPT-2 Medium confirm that capability density is statistically independent of Wanda importance scores (Spearman rho = -0.054, n = 384 heads), establishing it as a genuinely novel compression signal orthogonal to all existing importance metrics. We report a negative result on PPL-based compression comparison and provide a principled diagnosis identifying GPT-2 Medium as an insufficient test bed for the full CGC hypothesis. The theoretical framework, density formalism, and orthogonality finding constitute a foundation for capability-aware compression research.",
+      "identifiers": [
+        "SemanticScholar:dc41b880b874f5564d92f53fabf184ae9e283221"
+      ],
+      "semantic_scholar_id": "dc41b880b874f5564d92f53fabf184ae9e283221",
+      "canonical_id": "arXiv:2603.16440",
+      "arxiv_id": "2603.16440",
+      "doi": "10.48550/arXiv.2603.16440",
+      "authors": [
+        "Rishaan Gupta"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 211,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MixReasoning: Switching Modes to Think",
+      "source_url": "https://arxiv.org/abs/2510.06052",
+      "year": 2025,
+      "published": "2025-10-07",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models enhance performance by tackling problems in a step-by-step manner, decomposing them into sub-problems and exploring long chains of thought before producing an answer. However, applying extended reasoning to every step introduces substantial redundancy, as sub-problems vary widely in difficulty and complexity: a small number of pivotal steps are genuinely challenging and decisive for the final answer, while many others only involve straightforward revisions or simple computations. Therefore, a natural idea is to endow reasoning models with the ability to adaptively respond to this variation, rather than treating all steps with the same level of elaboration. To this end, we propose MixReasoning, a framework that dynamically adjusts the depth of reasoning within a single response. The resulting chain of thought then becomes a mixture of detailed reasoning on difficult steps and concise inference on simpler ones. Experiments on GSM8K, MATH-500, and AIME show that MixReasoning shortens reasoning length and substantially improves efficiency without compromising accuracy.",
+      "identifiers": [
+        "SemanticScholar:68a1b9016a1d420ac3312aed47fd601c693cffbb"
+      ],
+      "semantic_scholar_id": "68a1b9016a1d420ac3312aed47fd601c693cffbb",
+      "canonical_id": "arXiv:2510.06052",
+      "arxiv_id": "2510.06052",
+      "doi": "10.48550/arXiv.2510.06052",
+      "authors": [
+        "Hai-Quan Lu",
+        "Gongfan Fang",
+        "Xinyin Ma",
+        "Qi Li",
+        "Xin-Chao Wang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 372,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Keeping up with Large Language Models: A Holistic Methodology of Compute, Memory, Communication, and Cost Modeling",
+      "source_url": "https://doi.org/10.1109/IISWC66894.2025.00019",
+      "year": 2025,
+      "published": "2025-10-12",
+      "venue": "IEEE International Symposium on Workload Characterization",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs), based on transformer architectures, have revolutionized numerous domains within artificial intelligence, science, and engineering due to their exceptional scalability and adaptability. However, the exponential growth in LLM size and complexity has outpaced advancements in compute capacity, memory bandwidth, network performance, and cost efficiency, posing significant challenges to their scalability on distributed systems. To address these limitations, alternative model architectures, optimization strategies, communication-aware network topologies, and novel system design approaches have been proposed in literature. This paper introduces a performance-cost modeling methodology for LLM training and inference that integrates state-of-the-art compute techniques with memory optimizations, and latest communication techniques. Building on an analytical performance model, our approach incorporates recent innovations such as the flash attention technique and mixture of experts models to address the memory bandwidth and compute bottlenecks. It also considers the impact of different network topologies and topology-specific communication algorithms with 5D parallellism. The framework also integrates a chiplet cost model. The proposed modeling methodology provides valuable insights to guide future compute system design and facilitates hardware-software co-development, in particular due to its ability to analyze performance-cost trade-offs for various system architectural configurations.",
+      "identifiers": [
+        "SemanticScholar:b7c3841561f506d20c8c78d7245e9ae24c23954e"
+      ],
+      "semantic_scholar_id": "b7c3841561f506d20c8c78d7245e9ae24c23954e",
+      "doi": "10.1109/IISWC66894.2025.00019",
+      "canonical_id": "DOI:10.1109/IISWC66894.2025.00019",
+      "authors": [
+        "Wenzhe Guo",
+        "Joyjit Kundu",
+        "Uras Tos",
+        "Weijiang Kong",
+        "G. Sisto",
+        "Timon Evenblij",
+        "M. Perumkunnil"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 367,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Direct Multi-Token Decoding",
+      "source_url": "https://arxiv.org/abs/2510.11958",
+      "year": 2025,
+      "published": "2025-10-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Decoder-only transformers have become the standard architecture for large language models (LLMs) due to their strong performance. Recent studies suggest that, in pre-trained LLMs, early, middle, and late layers may serve distinct roles: Early layers focus on understanding the input context, middle layers handle task-specific processing, and late layers convert abstract representations into output tokens. We hypothesize that once representations have been processed by the early and middle layers, the resulting hidden states may encapsulate sufficient information to support the generation of multiple tokens using only the late layers, eliminating the need to repeatedly traverse the early and middle layers. We refer to this inference paradigm as Direct Multi-Token Decoding (DMTD). Unlike speculative decoding, our method introduces no additional parameters, auxiliary routines, or post-generation verification. Despite being trained on a limited dataset, a fine-tuned DMTD Qwen3-4B model has already demonstrated promising results, achieving up to a 2x speedup with only minor performance loss. Moreover, as shown in our scaling analysis, its performance is expected to further improve with larger training datasets.",
+      "identifiers": [
+        "SemanticScholar:75ffb9886366a91f0275c0e405024e51dc1b5eae"
+      ],
+      "semantic_scholar_id": "75ffb9886366a91f0275c0e405024e51dc1b5eae",
+      "canonical_id": "arXiv:2510.11958",
+      "arxiv_id": "2510.11958",
+      "doi": "10.48550/arXiv.2510.11958",
+      "authors": [
+        "Xuan Luo",
+        "Weizhi Wang",
+        "Xifeng Yan"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 366,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.08083",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.08083",
+        "id:SemanticScholar:f659b27e5a85feeb2c01b55997873f3cdbdfc7c6",
+        "id:arXiv:2511.08083",
+        "title:hipkittens fast and furious amd kernels",
+        "url:https://arxiv.org/abs/2511.08083"
+      ],
+      "record": {
+        "title": "HipKittens: Fast and Furious AMD Kernels",
+        "source_url": "https://arxiv.org/abs/2511.08083",
+        "year": 2025,
+        "published": "2025-11-11",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "AMD GPUs offer state-of-the-art compute and memory bandwidth; however, peak performance AMD kernels are written in raw assembly. To address the difficulty of mapping AI algorithms to hardware, recent work proposes C++ embedded and PyTorch-inspired domain-specific languages like ThunderKittens (TK) to simplify high performance AI kernel development on NVIDIA hardware. We explore the extent to which such primitives -- for explicit tile-based programming with optimized memory accesses and fine-grained asynchronous execution across workers -- are NVIDIA-specific or general. We provide the first detailed study of the programming primitives that lead to performant AMD AI kernels, and we encapsulate these insights in the HipKittens (HK) programming framework. We find that tile-based abstractions used in prior DSLs generalize to AMD GPUs, however we need to rethink the algorithms that instantiate these abstractions for AMD. We validate the HK primitives across CDNA3 and CDNA4 AMD platforms. In evaluations, HK kernels compete with AMD's hand-optimized assembly kernels for GEMMs and attention, and consistently outperform compiler baselines. Moreover, assembly is difficult to scale to the breadth of AI workloads; reflecting this, in some settings HK outperforms all available kernel baselines by $1.2-2.4\\times$ (e.g., $d=64$ attention, GQA backwards, memory-bound kernels). These findings help pave the way for a single, tile-based software layer for high-performance AI kernels that translates across GPU vendors. HipKittens is released at: https://github.com/HazyResearch/HipKittens.",
+        "identifiers": [
+          "SemanticScholar:f659b27e5a85feeb2c01b55997873f3cdbdfc7c6"
+        ],
+        "semantic_scholar_id": "f659b27e5a85feeb2c01b55997873f3cdbdfc7c6",
+        "canonical_id": "arXiv:2511.08083",
+        "arxiv_id": "2511.08083",
+        "doi": "10.48550/arXiv.2511.08083",
+        "authors": [
+          "William Hu",
+          "Drew Wadsworth",
+          "Sean Siddens",
+          "Stanley Winata",
+          "Daniel Y. Fu",
+          "Ryan Swann",
+          "M. Osama",
+          "Christopher Ré",
+          "Simran Arora"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 337,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.24545",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.24545",
+        "id:SemanticScholar:c7543e861b3d2af705253eec2ce8ba2ca479e1e8",
+        "id:arXiv:2512.24545",
+        "title:more than bits multienvelope double binary factorization for extreme quantization",
+        "url:https://arxiv.org/abs/2512.24545"
+      ],
+      "record": {
+        "title": "More Than Bits: Multi-Envelope Double Binary Factorization for Extreme Quantization",
+        "source_url": "https://arxiv.org/abs/2512.24545",
+        "year": 2025,
+        "published": "2025-12-31",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "For extreme low-bit quantization of large language models (LLMs), Double Binary Factorization (DBF) is attractive as it enables efficient inference without sacrificing accuracy. However, the scaling parameters of DBF are too restrictive; after factoring out signs, all rank components share the same magnitude profile, resulting in performance saturation. We propose Multi-envelope DBF (MDBF), which retains a shared pair of 1-bit sign bases but replaces the single envelope with a rank-$l$ envelope. By sharing sign matrices among envelope components, MDBF effectively maintains a binary carrier and utilizes the limited memory budget for magnitude expressiveness. We also introduce a closed-form initialization and an alternating refinement method to optimize MDBF. Across the LLaMA and Qwen families, MDBF enhances perplexity and zero-shot accuracy over previous binary formats at matched bits per weight while preserving the same deployment-friendly inference primitive.",
+        "identifiers": [
+          "SemanticScholar:c7543e861b3d2af705253eec2ce8ba2ca479e1e8"
+        ],
+        "semantic_scholar_id": "c7543e861b3d2af705253eec2ce8ba2ca479e1e8",
+        "canonical_id": "arXiv:2512.24545",
+        "arxiv_id": "2512.24545",
+        "doi": "10.48550/arXiv.2512.24545",
+        "authors": [
+          "Yuma Ichikawa",
+          "Yoshihiko Fujisawa",
+          "Yudai Fujimoto",
+          "Akira Sakai",
+          "Katsuki Fujisawa"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 287,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.18489",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.18489",
+        "id:SemanticScholar:d6ce55156b85e3cf7bea454d8b38a5c4bf6b2e21",
+        "id:arXiv:2603.18489",
+        "title:entropycache decoded token entropy guided kv caching for diffusion language models",
+        "url:https://arxiv.org/abs/2603.18489"
+      ],
+      "record": {
+        "title": "EntropyCache: Decoded Token Entropy Guided KV Caching for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2603.18489",
+        "year": 2026,
+        "published": "2026-03-19",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion-based large language models (dLLMs) rely on bidirectional attention, which prevents lossless KV caching and requires a full forward pass at every denoising step. Existing approximate KV caching methods reduce this cost by selectively updating cached states, but their decision overhead scales with context length or model depth. We propose EntropyCache, a training-free KV caching method that uses the maximum entropy of newly decoded token distributions as a constant-cost signal for deciding when to recompute. Our design is grounded in two empirical observations: (1) decoded token entropy correlates with KV cache drift, providing a cheap proxy for cache staleness, and (2) feature volatility of decoded tokens persists for multiple steps after unmasking, motivating recomputation of the $k$ most recently decoded tokens. The skip-or-recompute decision requires only $O(V)$ computation per step, independent of context length and model scale. Experiments on LLaDA-8B-Instruct and Dream-7B-Instruct show that EntropyCache achieves $15.2\\times$-$26.4\\times$ speedup on standard benchmarks and $22.4\\times$-$24.1\\times$ on chain-of-thought benchmarks, with competitive accuracy and decision overhead accounting for only $0.5\\%$ of inference time. Code is available at https://github.com/mscheong01/EntropyCache.",
+        "identifiers": [
+          "SemanticScholar:d6ce55156b85e3cf7bea454d8b38a5c4bf6b2e21"
+        ],
+        "semantic_scholar_id": "d6ce55156b85e3cf7bea454d8b38a5c4bf6b2e21",
+        "canonical_id": "arXiv:2603.18489",
+        "arxiv_id": "2603.18489",
+        "doi": "10.48550/arXiv.2603.18489",
+        "authors": [
+          "Minsoo Cheong",
+          "Donghyun Son",
+          "Woo-Sang Lim",
+          "Sungjoo Yoo"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 209,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.12460",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.12460",
+        "id:SemanticScholar:dd1c01f8c550921e78389c1f2c4e227db4c95562",
+        "id:arXiv:2605.12460",
+        "title:multistream llms unblocking language models with parallel streams of thoughts inputs and outputs",
+        "url:https://arxiv.org/abs/2605.12460"
+      ],
+      "record": {
+        "title": "Multi-Stream LLMs: Unblocking Language Models with Parallel Streams of Thoughts, Inputs and Outputs",
+        "source_url": "https://arxiv.org/abs/2605.12460",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The continued improvements in language model capability have unlocked their widespread use as drivers of autonomous agents, for example in coding or computer use applications. However, the core of these systems has not changed much since early instruction-tuned models like ChatGPT. Even advanced AI agents function on message exchange formats, successively exchanging messages with users, systems, with itself (i.e. chain-of-thought) and tools in a single stream of computation. This bottleneck to a single stream in chat models leads to a number of limitations: the agent cannot act (generate output) while reading, and in reverse, cannot react to new information while writing. Similarly, the agent cannot act while thinking and cannot think while reading or acting on information. In this work, we show that models can be unblocked by switching from instruction-tuning for sequential message formats to instruction-tuning for multiple, parallel streams of computation, splitting each role into a separate stream. Every forward pass of the language model then simultaneously reads from multiple input streams and generates tokens in multiple output streams, all of which causally depend on earlier timesteps. We argue that this data-driven change remedies a number of usability limitations as outlined above, improves model efficiency through parallelization, improves model security through better separation of concerns and can further improve model monitorability.",
+        "identifiers": [
+          "SemanticScholar:dd1c01f8c550921e78389c1f2c4e227db4c95562"
+        ],
+        "semantic_scholar_id": "dd1c01f8c550921e78389c1f2c4e227db4c95562",
+        "canonical_id": "arXiv:2605.12460",
+        "arxiv_id": "2605.12460",
+        "doi": "10.48550/arXiv.2605.12460",
+        "authors": [
+          "Gui-Nan Su",
+          "Yan-Wu Yang",
+          "Xueyan Li",
+          "Jonas Geiping"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 155,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.25469",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.25469",
+        "id:SemanticScholar:d15b280363a70487d01a287a28457be92d9725ac",
+        "id:arXiv:2605.25469",
+        "title:jacquant stefree quantizationaware training via learned jacobian surrogates",
+        "url:https://arxiv.org/abs/2605.25469"
+      ],
+      "record": {
+        "title": "JacQuant: STE-Free Quantization-Aware Training via Learned Jacobian Surrogates",
+        "source_url": "https://arxiv.org/abs/2605.25469",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization-aware training (QAT) is widely deployed but typically relies on the Straight-Through Estimator (STE), which passes gradients through non-differentiable quantizers by fiat. This often makes training brittle near bin boundaries and weakly aligned with the actual behavior of the low-precision model. We introduce JacQuant, a QAT framework that learns a lightweight surrogate of the model's local sensitivity to parameter changes and uses it to stabilize and accelerate training within standard variance-reduced optimizers. The surrogate is inexpensive (diagonal or block-diagonal), data-driven, and compatible with common weight and activation quantizers. On code-preserving training phases, we prove convergence for non-convex objectives and obtain linear rates under a PL condition, and we relate the learned sensitivity to end-to-end output fidelity via a simple calibration argument. Across LLM benchmarks at $\\leq 2$ bits, JacQuant consistently reaches higher accuracy than STE-based QAT, and the runtime analyses on various models show that the added cost remains negligible under practical group sizes. The method is drop-in and requires no changes to the forward quantizers; our empirical claims are scoped to ultra-low-bit LLM QAT.",
+        "identifiers": [
+          "SemanticScholar:d15b280363a70487d01a287a28457be92d9725ac"
+        ],
+        "semantic_scholar_id": "d15b280363a70487d01a287a28457be92d9725ac",
+        "canonical_id": "arXiv:2605.25469",
+        "arxiv_id": "2605.25469",
+        "doi": "10.48550/arXiv.2605.25469",
+        "authors": [
+          "Kai Yi",
+          "Vignesh Vivekraja",
+          "Harshit Khaitan",
+          "Steven Li"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.14403",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.14403",
+        "id:SemanticScholar:a4b1243baeccd0d4d9522ae929f96ce989c76f89",
+        "id:arXiv:2604.14403",
+        "title:a unified model and document representation for ondevice retrievalaugmented generation",
+        "url:https://arxiv.org/abs/2604.14403"
+      ],
+      "record": {
+        "title": "A Unified Model and Document Representation for On-Device Retrieval-Augmented Generation",
+        "source_url": "https://arxiv.org/abs/2604.14403",
+        "year": 2026,
+        "published": "2026-04-15",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Traditional Retrieval-Augmented Generation (RAG) approaches generally assume that retrieval and generation occur on powerful servers removed from the end user. While this reduces local hardware constraints, it introduces significant drawbacks: privacy concerns regarding data access, recurring maintenance and storage costs, increased latency, and the necessity of an internet connection. On-device RAG addresses these challenges by executing the entire pipeline locally, making it ideal for querying sensitive personal information such as financial documents, contact details, and medical history. However, on-device deployment necessitates a delicate balance between limited memory and disk space. Specifically, the context size provided to the generative model must be restricted to manage KV cache and attention memory usage, while the size of stored embeddings must be minimized to preserve disk space. In this work, we propose a unified model that compresses the RAG context and utilizes the same representations for retrieval. This approach minimizes disk utilization compared to using separate representations, while significantly reducing the context size required for generation. With an average of 1/10 of the context, our model matches the performance of a traditional RAG reader without increasing storage requirements compared to a multi-vector retrieval model. This approach represents the first model to unify retrieval and context compression using a shared model and representation. We believe this work will inspire further consolidation of distinct models to optimize on-device performance.",
+        "identifiers": [
+          "SemanticScholar:a4b1243baeccd0d4d9522ae929f96ce989c76f89"
+        ],
+        "semantic_scholar_id": "a4b1243baeccd0d4d9522ae929f96ce989c76f89",
+        "canonical_id": "arXiv:2604.14403",
+        "arxiv_id": "2604.14403",
+        "doi": "10.48550/arXiv.2604.14403",
+        "authors": [
+          "J. Killingback",
+          "Ofer Meshi",
+          "Henry Li",
+          "Hamed Zamani",
+          "Maryam Karimzadehgan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 182,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.25326",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770743.3803965",
+        "id:SemanticScholar:3c98dfe5ea50bf7ff2f4f2055fad507ccbfd9ac6",
+        "id:arXiv:2604.25326",
+        "title:ahasd asynchronous heterogeneous architecture for llm adaptive drafting speculative decoding on mobile devices",
+        "url:https://arxiv.org/abs/2604.25326"
+      ],
+      "record": {
+        "title": "AHASD: Asynchronous Heterogeneous Architecture for LLM Adaptive Drafting Speculative Decoding on Mobile Devices",
+        "source_url": "https://arxiv.org/abs/2604.25326",
+        "year": 2026,
+        "published": "2026-04-28",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding enhances the inference efficiency of large language models (LLMs) by generating drafts using a small draft language model (DLM) and verifying them in batches with a large target language model (TLM). However, adaptive drafting inference on a mobile single-NPU-PIM system faces idle overhead in traditional operator-level synchronous execution and wasted computation in asynchronous execution due to fluctuations in draft length. This paper introduces AHASD, a task-level asynchronous mobile NPU-PIM heterogeneous architecture for speculative decoding. Notably, AHASD achieves parallel drafting on the PIM and verification on a single NPU through task-level DLM-TLM decoupling and specifically, it incorporates Entropy-History-Aware Drafting Control and Time-Aware Pre-Verification Control to dynamically manage adaptive drafting algorithm execution and pre-verification timing, suppressing invalid drafting based on low-confidence drafts. Additionally, AHASD integrates Attention Algorithm Units and Gated Task Scheduling Units within LPDDR5-PIM to enable attention link localization and sub-microsecond task switching on the PIM side. Experimental results for different LLMs and adaptive drafting algorithms show that AHASD achieves up to 4.2$\\times$ in throughput and 5.6$\\times$ in energy efficiency improvements over a GPU-only baseline, and 1.5$\\times$ in throughput and 1.24$\\times$ in energy efficiency gains over the state-of-the-art GPU+PIM baseline, with hardware overhead below 3% of the DRAM area.",
+        "identifiers": [
+          "SemanticScholar:3c98dfe5ea50bf7ff2f4f2055fad507ccbfd9ac6"
+        ],
+        "semantic_scholar_id": "3c98dfe5ea50bf7ff2f4f2055fad507ccbfd9ac6",
+        "canonical_id": "arXiv:2604.25326",
+        "arxiv_id": "2604.25326",
+        "doi": "10.1145/3770743.3803965",
+        "authors": [
+          "Zirui Ma",
+          "Zhihua Fan",
+          "Wen-Xing Li",
+          "Haibin Wu",
+          "Fulin Zhang",
+          "Xiaochun Ye",
+          "Wen-Ming Li"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 169,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.15369",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvpr52734.2025.00882",
+        "id:SemanticScholar:aa3430baf7796b7154ab343d2637cf32bbfc8e61",
+        "id:arXiv:2503.15369",
+        "title:efficientllava generalizable autopruning for large visionlanguage models",
+        "url:https://arxiv.org/abs/2503.15369"
+      ],
+      "record": {
+        "title": "EfficientLLaVA: Generalizable Auto-Pruning for Large Vision-language Models",
+        "source_url": "https://arxiv.org/abs/2503.15369",
+        "year": 2025,
+        "published": "2025-03-19",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While multimodal large language models demonstrate strong performance in complex reasoning tasks, they pose significant challenges related to model complexity during deployment, especially for resource-limited devices. In this paper, we propose an automatic pruning method for large vision-language models to enhance the efficiency of multimodal reasoning. Conventional methods rely on the training data of the original model to select the proper pruning ratio for different network components. However, these methods are impractical for large vision-language models due to the unaffordable search costs caused by web-scale training corpus. In contrast, our approach only leverages a small number of samples to search for the desired pruning policy by maximizing its generalization ability on unknown training data while maintaining the model accuracy, which enables the achievement of an optimal trade-off between accuracy and efficiency for large visual language models. Specifically, we formulate the generalization gap of the pruning strategy using the structural risk minimization principle. Based on both task performance and generalization capability, we iteratively search for the optimal pruning policy within a given search space and optimize the vision projector to evolve the search space with higher upper bound of performance. We conduct extensive experiments on the ScienceQA, Vizwiz, MM-vet, and LLaVA-Bench datasets for the task of visual question answering. Using only 64 samples for pruning policy search, EfficientLLaVA achieves an accuracy of 83.05% on ScienceQA, along with a ×1.8 speedup compared to the dense LLaVA-v1.5-7B model. The code is available at: https://github.com/liangynTHU/EfficientLLaVA",
+        "identifiers": [
+          "SemanticScholar:aa3430baf7796b7154ab343d2637cf32bbfc8e61"
+        ],
+        "semantic_scholar_id": "aa3430baf7796b7154ab343d2637cf32bbfc8e61",
+        "canonical_id": "arXiv:2503.15369",
+        "arxiv_id": "2503.15369",
+        "doi": "10.1109/CVPR52734.2025.00882",
+        "authors": [
+          "Yi-Nan Liang",
+          "Ziwei Wang",
+          "Xiu-Wei Xu",
+          "Jie Zhou",
+          "Jiwen Lu"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 574,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.16440",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.16440",
+        "id:SemanticScholar:dc41b880b874f5564d92f53fabf184ae9e283221",
+        "id:arXiv:2603.16440",
+        "title:capabilityguided compression toward interpretabilityaware budget allocation for large language models",
+        "url:https://arxiv.org/abs/2603.16440"
+      ],
+      "record": {
+        "title": "Capability-Guided Compression: Toward Interpretability-Aware Budget Allocation for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2603.16440",
+        "year": 2026,
+        "published": "2026-03-17",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model compression has made substantial progress through pruning, quantization, and low-rank decomposition, yet a fundamental limitation persists across all existing methods: compression budgets are allocated without any representation of what individual model components functionally encode. We term this the capability-blind compression problem and argue it is a root cause of two well-documented failures -- the insensitivity of perplexity-based evaluation to reasoning capability loss, and the abrupt phase transitions in model performance recently characterized by Ma et al. (2026). We propose Capability-Guided Compression (CGC), a framework that addresses this by using Sparse Autoencoder (SAE)-derived capability density maps to allocate differential compression budgets across transformer components. Capability density is a formally defined scalar measure combining the feature breadth, activation entropy, and cross-input consistency of a component's SAE feature activation distribution. We prove theoretically that components with higher capability density exhibit lower structural redundancy and reach their individual phase transition points at lower compression ratios, providing the first pre-compression mechanism for component-level phase transition prediction. Experiments on GPT-2 Medium confirm that capability density is statistically independent of Wanda importance scores (Spearman rho = -0.054, n = 384 heads), establishing it as a genuinely novel compression signal orthogonal to all existing importance metrics. We report a negative result on PPL-based compression comparison and provide a principled diagnosis identifying GPT-2 Medium as an insufficient test bed for the full CGC hypothesis. The theoretical framework, density formalism, and orthogonality finding constitute a foundation for capability-aware compression research.",
+        "identifiers": [
+          "SemanticScholar:dc41b880b874f5564d92f53fabf184ae9e283221"
+        ],
+        "semantic_scholar_id": "dc41b880b874f5564d92f53fabf184ae9e283221",
+        "canonical_id": "arXiv:2603.16440",
+        "arxiv_id": "2603.16440",
+        "doi": "10.48550/arXiv.2603.16440",
+        "authors": [
+          "Rishaan Gupta"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 211,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.06052",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.06052",
+        "id:SemanticScholar:68a1b9016a1d420ac3312aed47fd601c693cffbb",
+        "id:arXiv:2510.06052",
+        "title:mixreasoning switching modes to think",
+        "url:https://arxiv.org/abs/2510.06052"
+      ],
+      "record": {
+        "title": "MixReasoning: Switching Modes to Think",
+        "source_url": "https://arxiv.org/abs/2510.06052",
+        "year": 2025,
+        "published": "2025-10-07",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning models enhance performance by tackling problems in a step-by-step manner, decomposing them into sub-problems and exploring long chains of thought before producing an answer. However, applying extended reasoning to every step introduces substantial redundancy, as sub-problems vary widely in difficulty and complexity: a small number of pivotal steps are genuinely challenging and decisive for the final answer, while many others only involve straightforward revisions or simple computations. Therefore, a natural idea is to endow reasoning models with the ability to adaptively respond to this variation, rather than treating all steps with the same level of elaboration. To this end, we propose MixReasoning, a framework that dynamically adjusts the depth of reasoning within a single response. The resulting chain of thought then becomes a mixture of detailed reasoning on difficult steps and concise inference on simpler ones. Experiments on GSM8K, MATH-500, and AIME show that MixReasoning shortens reasoning length and substantially improves efficiency without compromising accuracy.",
+        "identifiers": [
+          "SemanticScholar:68a1b9016a1d420ac3312aed47fd601c693cffbb"
+        ],
+        "semantic_scholar_id": "68a1b9016a1d420ac3312aed47fd601c693cffbb",
+        "canonical_id": "arXiv:2510.06052",
+        "arxiv_id": "2510.06052",
+        "doi": "10.48550/arXiv.2510.06052",
+        "authors": [
+          "Hai-Quan Lu",
+          "Gongfan Fang",
+          "Xinyin Ma",
+          "Qi Li",
+          "Xin-Chao Wang"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 372,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iiswc66894.2025.00019",
+      "identity_tokens": [
+        "id:DOI:10.1109/iiswc66894.2025.00019",
+        "id:SemanticScholar:b7c3841561f506d20c8c78d7245e9ae24c23954e",
+        "title:keeping up with large language models a holistic methodology of compute memory communication and cost modeling",
+        "url:https://doi.org/10.1109/IISWC66894.2025.00019"
+      ],
+      "record": {
+        "title": "Keeping up with Large Language Models: A Holistic Methodology of Compute, Memory, Communication, and Cost Modeling",
+        "source_url": "https://doi.org/10.1109/IISWC66894.2025.00019",
+        "year": 2025,
+        "published": "2025-10-12",
+        "venue": "IEEE International Symposium on Workload Characterization",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs), based on transformer architectures, have revolutionized numerous domains within artificial intelligence, science, and engineering due to their exceptional scalability and adaptability. However, the exponential growth in LLM size and complexity has outpaced advancements in compute capacity, memory bandwidth, network performance, and cost efficiency, posing significant challenges to their scalability on distributed systems. To address these limitations, alternative model architectures, optimization strategies, communication-aware network topologies, and novel system design approaches have been proposed in literature. This paper introduces a performance-cost modeling methodology for LLM training and inference that integrates state-of-the-art compute techniques with memory optimizations, and latest communication techniques. Building on an analytical performance model, our approach incorporates recent innovations such as the flash attention technique and mixture of experts models to address the memory bandwidth and compute bottlenecks. It also considers the impact of different network topologies and topology-specific communication algorithms with 5D parallellism. The framework also integrates a chiplet cost model. The proposed modeling methodology provides valuable insights to guide future compute system design and facilitates hardware-software co-development, in particular due to its ability to analyze performance-cost trade-offs for various system architectural configurations.",
+        "identifiers": [
+          "SemanticScholar:b7c3841561f506d20c8c78d7245e9ae24c23954e"
+        ],
+        "semantic_scholar_id": "b7c3841561f506d20c8c78d7245e9ae24c23954e",
+        "doi": "10.1109/IISWC66894.2025.00019",
+        "canonical_id": "DOI:10.1109/IISWC66894.2025.00019",
+        "authors": [
+          "Wenzhe Guo",
+          "Joyjit Kundu",
+          "Uras Tos",
+          "Weijiang Kong",
+          "G. Sisto",
+          "Timon Evenblij",
+          "M. Perumkunnil"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 367,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.11958",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.11958",
+        "id:SemanticScholar:75ffb9886366a91f0275c0e405024e51dc1b5eae",
+        "id:arXiv:2510.11958",
+        "title:direct multitoken decoding",
+        "url:https://arxiv.org/abs/2510.11958"
+      ],
+      "record": {
+        "title": "Direct Multi-Token Decoding",
+        "source_url": "https://arxiv.org/abs/2510.11958",
+        "year": 2025,
+        "published": "2025-10-13",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Decoder-only transformers have become the standard architecture for large language models (LLMs) due to their strong performance. Recent studies suggest that, in pre-trained LLMs, early, middle, and late layers may serve distinct roles: Early layers focus on understanding the input context, middle layers handle task-specific processing, and late layers convert abstract representations into output tokens. We hypothesize that once representations have been processed by the early and middle layers, the resulting hidden states may encapsulate sufficient information to support the generation of multiple tokens using only the late layers, eliminating the need to repeatedly traverse the early and middle layers. We refer to this inference paradigm as Direct Multi-Token Decoding (DMTD). Unlike speculative decoding, our method introduces no additional parameters, auxiliary routines, or post-generation verification. Despite being trained on a limited dataset, a fine-tuned DMTD Qwen3-4B model has already demonstrated promising results, achieving up to a 2x speedup with only minor performance loss. Moreover, as shown in our scaling analysis, its performance is expected to further improve with larger training datasets.",
+        "identifiers": [
+          "SemanticScholar:75ffb9886366a91f0275c0e405024e51dc1b5eae"
+        ],
+        "semantic_scholar_id": "75ffb9886366a91f0275c0e405024e51dc1b5eae",
+        "canonical_id": "arXiv:2510.11958",
+        "arxiv_id": "2510.11958",
+        "doi": "10.48550/arXiv.2510.11958",
+        "authors": [
+          "Xuan Luo",
+          "Weizhi Wang",
+          "Xifeng Yan"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 366,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:61d2e5574df2485e08961c603768d020fb487f98ffd168909ed643a7c15abf22",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

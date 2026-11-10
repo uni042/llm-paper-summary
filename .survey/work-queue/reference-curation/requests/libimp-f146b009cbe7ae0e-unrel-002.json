@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f146b009cbe7ae0e-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2503.14487",
+  "reason": "MoEと動的token選択を使うが対象は画像生成用Diffusion Transformerで、LLM推論・LLMサービング・KVキャッシュ等が最終適用先ではない。",
+  "title": "DiffMoE: Dynamic Token Selection for Scalable Diffusion Transformers",
+  "identity_tokens": [
+    "arXiv:2503.14487"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+    "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f146b009cbe7",
+  "source_precheck_request_id": null
+}

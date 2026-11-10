@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20ad1dea37bea059-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1704.04683",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1704.04683",
+    "identity_tokens": [
+      "arXiv:1704.04683"
+    ],
+    "reason": "英語試験から約28,000 passage・約100,000 questionを集めた読解ベンチマーク研究で、LLM推論の速度・メモリ・サービング方式を改善しない。",
+    "first_checked_at": "2026-10-04T12:52:28+00:00",
+    "last_checked_at": "2026-10-04T12:52:28+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+    ],
+    "title": "RACE: Large-scale ReAding Comprehension Dataset From Examinations"
+  },
+  "processed_at": "2026-10-04T12:52:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20ad1dea37be",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

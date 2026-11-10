@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aeaab6380f1d3cd3-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.13747",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.13747",
+    "identity_tokens": [
+      "arXiv:2606.13747"
+    ],
+    "reason": "Primary text uses LLMs to estimate hierarchical CPU-module power from source/RTL data. The predicted object is CPU power, not LLM inference power or efficiency; no LLM serving method is proposed.",
+    "first_checked_at": "2026-10-06T20:27:12+00:00",
+    "last_checked_at": "2026-10-06T20:27:12+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "BigPower: Hierarchical Source-Level Module Power Estimation for CPUs with Large Language Models"
+  },
+  "processed_at": "2026-10-06T20:27:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aeaab6380f1d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

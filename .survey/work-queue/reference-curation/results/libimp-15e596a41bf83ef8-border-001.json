@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15e596a41bf83ef8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.25140",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.25140",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2509.25140",
+      "arXiv:2509.25140"
+    ],
+    "reason": "ReasoningBankはLLMエージェントの成功・失敗軌跡から再利用可能な推論方針を抽出し、記憶検索と実行時の追加探索（MaTTS）でWeb閲覧・ソフトウェア開発タスクの成功率を高める。記憶の保存・検索は推論時の処理だが、中心的な貢献はエージェント能力・経験学習であり、KVキャッシュ管理、推論処理量、計算資源配置などのシステム効率を直接検証した研究ではない。",
+    "first_checked_at": "2026-10-12T10:58:03+00:00",
+    "last_checked_at": "2026-10-14T22:48:32+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
+  },
+  "processed_at": "2026-10-14T22:48:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15e596a41bf8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

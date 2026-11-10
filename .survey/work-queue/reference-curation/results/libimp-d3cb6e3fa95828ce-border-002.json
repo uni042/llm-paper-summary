@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d3cb6e3fa95828ce-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2407.05467",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2407.05467",
+    "identity_tokens": [
+      "arXiv:2407.05467"
+    ],
+    "reason": "arXiv一次要旨が中心的に説明するのは、IBMの大規模生成AIモデル開発・学習向けVelaとBlue Velaのクラウド／オンプレミスGPUインフラである。LLM基盤の資源管理という周辺技術として関連するが、推論時のサービング、KVキャッシュ、生成スループットやSLO最適化を要旨から直接確認できない。学習インフラ単独の報告であるためResearch収録は保留しborderline。",
+    "first_checked_at": "2026-10-27T20:47:51+00:00",
+    "last_checked_at": "2026-10-27T20:47:51+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-30.md",
+      "scheduled-chat-30 Research prescreen"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The infrastructure powering IBM's Gen AI model development"
+  },
+  "processed_at": "2026-10-27T20:47:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d3cb6e3fa958",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

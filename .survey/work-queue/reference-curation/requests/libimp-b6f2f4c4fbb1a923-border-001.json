@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b6f2f4c4fbb1a923-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2505.22582",
+  "reason": "一次要旨は新言語への継続的拡張を目的とし、層間の言語表現類似度から新規専門家数を配分して旧言語の忘却を抑えるLayerMoEを提案する。単回拡張で新規専門家数60%削減、継続拡張で33.3%削減を報告するが、主たる評価目的は言語拡張学習と既存言語能力の保持である。専門家数削減は推論メモリに接続し得るものの、一次要旨だけではサービングの速度・メモリ実測を主貢献として確認できないため、学習専用凍結範囲との境界としてborderlineとする。",
+  "title": "Less, but Better: Efficient Multilingual Expansion for LLMs via Layer-wise Mixture-of-Experts",
+  "identity_tokens": [
+    "arxiv:2505.22582"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b6f2f4c4fbb1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

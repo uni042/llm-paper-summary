@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca076e9459f6db35-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.24794",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.24794",
+    "identity_tokens": [
+      "SemanticScholar:627862a7c8a7099693b7f6f127095e9d24843af5",
+      "arXiv:2608.24794"
+    ],
+    "reason": "The abstract concerns an agentic search training framework, a neighboring lineage, but reports quality/hallucination rather than inference cost or system efficiency.",
+    "first_checked_at": "2026-10-13T04:24:22+00:00",
+    "last_checked_at": "2026-10-13T04:24:22+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback"
+  },
+  "processed_at": "2026-10-13T04:24:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca076e9459f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

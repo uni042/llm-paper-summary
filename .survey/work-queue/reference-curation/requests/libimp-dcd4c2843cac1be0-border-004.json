@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-dcd4c2843cac1be0-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1016/j.neucom.2026.133644",
+  "reason": "KV cachingとmemory/compute削減の機構は関連するが、キャッシュする対象は画像復元モデルのfeatureで、LLM token KV cacheとは区別が必要。",
+  "title": "UHD image dehazing via anDehazeFormer with atmospheric-aware KV cache",
+  "identity_tokens": [
+    "DOI:10.1016/j.neucom.2026.133644"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dcd4c2843cac",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

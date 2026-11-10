@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c404df822fef3fe2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1902.02192",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1902.02192",
+    "identity_tokens": [
+      "arXiv:1902.02192"
+    ],
+    "reason": "The paper learns non-monotonic word-generation orders for language modeling and translation but does not demonstrate parallel decoding or reduced inference cost/latency.",
+    "first_checked_at": "2026-10-07T09:59:48+00:00",
+    "last_checked_at": "2026-10-07T09:59:48+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md",
+      "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Non-Monotonic Sequential Text Generation"
+  },
+  "processed_at": "2026-10-07T09:59:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c404df822fef",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

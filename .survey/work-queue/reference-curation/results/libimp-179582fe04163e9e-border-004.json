@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-179582fe04163e9e-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.08239",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.08239",
+    "identity_tokens": [
+      "arXiv:2608.08239"
+    ],
+    "reason": "本文はmodel-switching router評価の妥当性を検証するcontrolled pilotであり、router自体の効率改善ではない。実験も限定されscope寄与が弱い。",
+    "first_checked_at": "2026-10-05T01:26:16+00:00",
+    "last_checked_at": "2026-10-05T01:26:16+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+      "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+    ],
+    "title": "The Replay Gap: Static Evaluation of Model Switching in LLM Agents Scores the Wrong World"
+  },
+  "processed_at": "2026-10-05T01:26:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-179582fe0416",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

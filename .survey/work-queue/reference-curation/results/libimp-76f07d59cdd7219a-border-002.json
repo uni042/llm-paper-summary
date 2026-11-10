@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-76f07d59cdd7219a-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.08269",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.08269",
+    "identity_tokens": [
+      "arXiv:2602.08269"
+    ],
+    "reason": "Potential accelerator relevance is broad; full-text retrieval failed and no LLM workload evaluation appears in the abstract.",
+    "first_checked_at": "2026-10-05T13:54:45+00:00",
+    "last_checked_at": "2026-10-05T13:54:45+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+    ],
+    "title": "Quantization-aware Photonic Homodyne computing for Accelerated Artificial Intelligence and Scientific Simulation"
+  },
+  "processed_at": "2026-10-05T13:54:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-76f07d59cdd7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

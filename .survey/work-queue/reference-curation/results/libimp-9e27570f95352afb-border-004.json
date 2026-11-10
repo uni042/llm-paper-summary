@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e27570f95352afb-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.10441",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.10441",
+    "identity_tokens": [
+      "arXiv:2607.10441"
+    ],
+    "reason": "novelty-gated KV memoryとSSM/full/window方式を比較。character-sequence、synthetic/long-log等の評価で一部利得はあるが全課題で優位でなく、LLM inference実測/一般化は不明瞭。",
+    "first_checked_at": "2026-10-05T10:28:49+00:00",
+    "last_checked_at": "2026-10-05T10:28:49+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+    ],
+    "title": "Context by Distinct Information: An Auditable Dirichlet-Process Working Memory for Long, Redundant Context Streams"
+  },
+  "processed_at": "2026-10-05T10:28:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e27570f9535",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,234 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-aa41ae9c0f94ebd4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-aa41ae9c0f94",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2406.13511",
+    "arXiv:2410.01518",
+    "arXiv:2410.20399",
+    "arXiv:2504.16083",
+    "arXiv:2508.09192"
+  ],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7d73eb480b8ccaa7d5afcb1b9be4b3fc312b398d",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-09-30T01:37:30.516774+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2406.13511",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2406.13511"
+    },
+    {
+      "requested_id": "arXiv:2410.01518",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2410.01518"
+    },
+    {
+      "requested_id": "arXiv:2410.20399",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.16083",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.09192",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ThunderKittens: Simple, Fast, and Adorable AI Kernels",
+      "source_url": "https://arxiv.org/abs/2410.20399",
+      "year": 2024,
+      "published": "2024-10-27",
+      "abstract": "The challenge of mapping AI architectures to GPU hardware is creating a critical bottleneck in AI progress. Despite substantial efforts, hand-written custom kernels fail to meet their theoretical performance thresholds, even on well-established operations like linear attention. The diverse hardware capabilities of GPUs might suggest that we need a wide variety of techniques to achieve high performance. However, our work explores whether a small number of key abstractions can drastically simplify the process. We present ThunderKittens (TK), a framework for writing performant AI kernels while remaining easy to use and maintain. Our abstractions map to the three levels of the GPU hierarchy: (1) at the warp-level, we provide 16x16 matrix tiles as basic data structures and PyTorch-like parallel compute operations over tiles, (2) at the thread-block level, we provide a template for overlapping asynchronous operations across parallel warps, and (3) at the grid-level, we provide support to help hide the block launch and tear-down, and memory costs. We show the value of TK by providing kernels that match or outperform prior kernels for a range of AI operations. We match CuBLAS and FlashAttention-3 on GEMM and attention inference performance and outperform the strongest baselines by $10-40\\%$ on attention backwards, $8\\times$ on state space models, and $14\\times$ on linear attention.",
+      "canonical_id": "arXiv:2410.20399",
+      "arxiv_id": "2410.20399",
+      "doi": "10.48550/arXiv.2410.20399",
+      "authors": [
+        "B. Spector",
+        "Simran Arora",
+        "Aaryan Singhal",
+        "Daniel Y. Fu",
+        "Christopher Ré"
+      ]
+    },
+    {
+      "title": "MMInference: Accelerating Pre-filling for Long-Context Visual Language Models via Modality-Aware Permutation Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2504.16083",
+      "year": 2025,
+      "published": "2025-04-22",
+      "abstract": "The integration of long-context capabilities with visual understanding unlocks unprecedented potential for Vision Language Models (VLMs). However, the quadratic attention complexity during the pre-filling phase remains a significant obstacle to real-world deployment. To overcome this limitation, we introduce MMInference (Multimodality Million tokens Inference), a dynamic sparse attention method that accelerates the prefilling stage for long-context multi-modal inputs. First, our analysis reveals that the temporal and spatial locality of video input leads to a unique sparse pattern, the Grid pattern. Simultaneously, VLMs exhibit markedly different sparse distributions across different modalities. We introduce a permutation-based method to leverage the unique Grid pattern and handle modality boundary issues. By offline search the optimal sparse patterns for each head, MMInference constructs the sparse distribution dynamically based on the input. We also provide optimized GPU kernels for efficient sparse computations. Notably, MMInference integrates seamlessly into existing VLM pipelines without any model modifications or fine-tuning. Experiments on multi-modal benchmarks-including Video QA, Captioning, VisionNIAH, and Mixed-Modality NIAH-with state-of-the-art long-context VLMs (LongVila, LlavaVideo, VideoChat-Flash, Qwen2.5-VL) show that MMInference accelerates the pre-filling stage by up to 8.3x at 1M tokens while maintaining accuracy. Our code is available at https://aka.ms/MMInference.",
+      "canonical_id": "arXiv:2504.16083",
+      "arxiv_id": "2504.16083",
+      "authors": [
+        "Yucheng Li",
+        "Huiqiang Jiang",
+        "Chengruidong Zhang",
+        "Qianhui Wu",
+        "Xufang Luo",
+        "Surin Ahn",
+        "Amir H. Abdi",
+        "Dongsheng Li",
+        "Jianfeng Gao",
+        "Yu-Qing Yang",
+        "Lili Qiu"
+      ]
+    },
+    {
+      "title": "Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing",
+      "source_url": "https://arxiv.org/abs/2508.09192",
+      "year": 2025,
+      "published": "2025-08-08",
+      "abstract": "Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to autoregressive (AR) LLMs for text generation, with the potential to decode multiple tokens in a single iteration. However, none of the existing open-source dLLMs have achieved superior inference speed over AR LLMs of similar size. This paper breaks this barrier based on a simple and effective strategy named discrete diffusion forcing (D2F). D2F equips dLLMs with two key capabilities: (1) block-wise autoregressive generation to enable KV cache utilization; (2) prediction of following tokens without requiring completion of prior blocks for inter-block parallel decoding. In this way, the vanilla dLLMs are refurbished into an AR-diffusion hybrid paradigm for efficient inference. D2F can be implemented with an asymmetric distillation process based on pre-trained dLLMs. We further propose a pipelined parallel decoding algorithm, which enables a trade-off between efficiency and efficacy. Empirically, D2F dLLMs achieve more than $\\mathbf{2.5\\times}$ inference speed than LLaMA3 and Qwen2.5 on GSM8K. Compared to vanilla dLLMs like LLaDA and Dream, the acceleration can be more than $\\mathbf{50\\times}$ while maintaining comparable output quality. The code is available at https://github.com/zhijie-group/Discrete-Diffusion-Forcing.",
+      "canonical_id": "arXiv:2508.09192",
+      "arxiv_id": "2508.09192",
+      "doi": "10.48550/arXiv.2508.09192",
+      "authors": [
+        "Xu Wang",
+        "Chenkai Xu",
+        "Yijie Jin",
+        "Jiachun Jin",
+        "Hao Zhang",
+        "Zhijie Deng"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2410.20399",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.20399",
+        "id:arXiv:2410.20399",
+        "title:thunderkittens simple fast and adorable ai kernels",
+        "url:https://arxiv.org/abs/2410.20399"
+      ],
+      "record": {
+        "title": "ThunderKittens: Simple, Fast, and Adorable AI Kernels",
+        "source_url": "https://arxiv.org/abs/2410.20399",
+        "year": 2024,
+        "published": "2024-10-27",
+        "abstract": "The challenge of mapping AI architectures to GPU hardware is creating a critical bottleneck in AI progress. Despite substantial efforts, hand-written custom kernels fail to meet their theoretical performance thresholds, even on well-established operations like linear attention. The diverse hardware capabilities of GPUs might suggest that we need a wide variety of techniques to achieve high performance. However, our work explores whether a small number of key abstractions can drastically simplify the process. We present ThunderKittens (TK), a framework for writing performant AI kernels while remaining easy to use and maintain. Our abstractions map to the three levels of the GPU hierarchy: (1) at the warp-level, we provide 16x16 matrix tiles as basic data structures and PyTorch-like parallel compute operations over tiles, (2) at the thread-block level, we provide a template for overlapping asynchronous operations across parallel warps, and (3) at the grid-level, we provide support to help hide the block launch and tear-down, and memory costs. We show the value of TK by providing kernels that match or outperform prior kernels for a range of AI operations. We match CuBLAS and FlashAttention-3 on GEMM and attention inference performance and outperform the strongest baselines by $10-40\\%$ on attention backwards, $8\\times$ on state space models, and $14\\times$ on linear attention.",
+        "canonical_id": "arXiv:2410.20399",
+        "arxiv_id": "2410.20399",
+        "doi": "10.48550/arXiv.2410.20399",
+        "authors": [
+          "B. Spector",
+          "Simran Arora",
+          "Aaryan Singhal",
+          "Daniel Y. Fu",
+          "Christopher Ré"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.16083",
+      "identity_tokens": [
+        "id:arXiv:2504.16083",
+        "title:mminference accelerating prefilling for longcontext visual language models via modalityaware permutation sparse attention",
+        "url:https://arxiv.org/abs/2504.16083"
+      ],
+      "record": {
+        "title": "MMInference: Accelerating Pre-filling for Long-Context Visual Language Models via Modality-Aware Permutation Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2504.16083",
+        "year": 2025,
+        "published": "2025-04-22",
+        "abstract": "The integration of long-context capabilities with visual understanding unlocks unprecedented potential for Vision Language Models (VLMs). However, the quadratic attention complexity during the pre-filling phase remains a significant obstacle to real-world deployment. To overcome this limitation, we introduce MMInference (Multimodality Million tokens Inference), a dynamic sparse attention method that accelerates the prefilling stage for long-context multi-modal inputs. First, our analysis reveals that the temporal and spatial locality of video input leads to a unique sparse pattern, the Grid pattern. Simultaneously, VLMs exhibit markedly different sparse distributions across different modalities. We introduce a permutation-based method to leverage the unique Grid pattern and handle modality boundary issues. By offline search the optimal sparse patterns for each head, MMInference constructs the sparse distribution dynamically based on the input. We also provide optimized GPU kernels for efficient sparse computations. Notably, MMInference integrates seamlessly into existing VLM pipelines without any model modifications or fine-tuning. Experiments on multi-modal benchmarks-including Video QA, Captioning, VisionNIAH, and Mixed-Modality NIAH-with state-of-the-art long-context VLMs (LongVila, LlavaVideo, VideoChat-Flash, Qwen2.5-VL) show that MMInference accelerates the pre-filling stage by up to 8.3x at 1M tokens while maintaining accuracy. Our code is available at https://aka.ms/MMInference.",
+        "canonical_id": "arXiv:2504.16083",
+        "arxiv_id": "2504.16083",
+        "authors": [
+          "Yucheng Li",
+          "Huiqiang Jiang",
+          "Chengruidong Zhang",
+          "Qianhui Wu",
+          "Xufang Luo",
+          "Surin Ahn",
+          "Amir H. Abdi",
+          "Dongsheng Li",
+          "Jianfeng Gao",
+          "Yu-Qing Yang",
+          "Lili Qiu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.09192",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.09192",
+        "id:arXiv:2508.09192",
+        "title:diffusion llms can do fasterthanar inference via discrete diffusion forcing",
+        "url:https://arxiv.org/abs/2508.09192"
+      ],
+      "record": {
+        "title": "Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing",
+        "source_url": "https://arxiv.org/abs/2508.09192",
+        "year": 2025,
+        "published": "2025-08-08",
+        "abstract": "Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to autoregressive (AR) LLMs for text generation, with the potential to decode multiple tokens in a single iteration. However, none of the existing open-source dLLMs have achieved superior inference speed over AR LLMs of similar size. This paper breaks this barrier based on a simple and effective strategy named discrete diffusion forcing (D2F). D2F equips dLLMs with two key capabilities: (1) block-wise autoregressive generation to enable KV cache utilization; (2) prediction of following tokens without requiring completion of prior blocks for inter-block parallel decoding. In this way, the vanilla dLLMs are refurbished into an AR-diffusion hybrid paradigm for efficient inference. D2F can be implemented with an asymmetric distillation process based on pre-trained dLLMs. We further propose a pipelined parallel decoding algorithm, which enables a trade-off between efficiency and efficacy. Empirically, D2F dLLMs achieve more than $\\mathbf{2.5\\times}$ inference speed than LLaMA3 and Qwen2.5 on GSM8K. Compared to vanilla dLLMs like LLaDA and Dream, the acceleration can be more than $\\mathbf{50\\times}$ while maintaining comparable output quality. The code is available at https://github.com/zhijie-group/Discrete-Diffusion-Forcing.",
+        "canonical_id": "arXiv:2508.09192",
+        "arxiv_id": "2508.09192",
+        "doi": "10.48550/arXiv.2508.09192",
+        "authors": [
+          "Xu Wang",
+          "Chenkai Xu",
+          "Yijie Jin",
+          "Jiachun Jin",
+          "Hao Zhang",
+          "Zhijie Deng"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:53842ceef514192fb8082f781c4c9cde19cfc4e9162e24a4c047f8c4b7f42425",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

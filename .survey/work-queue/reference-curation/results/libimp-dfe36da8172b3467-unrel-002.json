@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dfe36da8172b3467-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.13878",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.13878",
+    "identity_tokens": [
+      "arXiv:2609.13878"
+    ],
+    "reason": "一次要旨: Spatio-temporal traffic data are central to intelligent transportation systems, yet their heterogeneity poses significant challenges for large-scale modeling. Existing pre-trained models often rely on a homogeneous modeling paradigm to handle highly heterogeneous traffic data. This fundamental mismatch not only limits model generalization but also leads to computationally expensive and parameter-inefficient designs.",
+    "first_checked_at": "2026-10-05T06:51:07+00:00",
+    "last_checked_at": "2026-10-05T06:51:07+00:00",
+    "linked_from": [
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "A Multi-Resolution Multi-Domain Pre-Training Framework for Universal Traffic Forecasting"
+  },
+  "processed_at": "2026-10-05T06:51:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dfe36da8172b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

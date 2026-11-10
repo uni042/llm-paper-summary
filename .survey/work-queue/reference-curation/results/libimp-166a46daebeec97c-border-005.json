@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-166a46daebeec97c-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.19221",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.19221",
+    "identity_tokens": [
+      "arXiv:2511.19221"
+    ],
+    "reason": "Percept-WAM is a perception-enhanced world-action model for autonomous driving. It focuses on driving capability and robustness; a cited cached-knowledge serving paper does not establish an efficiency contribution here.",
+    "first_checked_at": "2026-10-06T13:34:29+00:00",
+    "last_checked_at": "2026-10-06T13:34:29+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Percept-WAM: Perception-Enhanced World-Awareness-Action Model for Robust End-to-End Autonomous Driving"
+  },
+  "processed_at": "2026-10-06T13:34:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-166a46daebee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

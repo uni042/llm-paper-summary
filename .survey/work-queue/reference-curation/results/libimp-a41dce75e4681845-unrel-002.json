@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a41dce75e4681845-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.01530",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.01530",
+    "identity_tokens": [
+      "arXiv:2608.01530"
+    ],
+    "reason": "Reliable decision-support in digital agriculture requires accurate predictions and well-calibrated uncertainty estimates, particularly for dense prediction tasks such as semantic segmentation. Ensemble methods provide strong uncertainty quantification, but their computational and memory demands limit practical use, while single-model approximations often trade off uncertainty quality for efficiency. We propose ST-LoRA, a parameter-efficient ensemble framework that builds diverse ensemble members from a single training trajectory by combining Low-Rank Adaptation (LoRA) with snapshot ensembling. Each member shares a frozen pretrained backbone and differs only in lightweight low-rank adapters, reducing trainable parameters to under 10% of the full model while preserving ensemble diversity. We evaluate across two agricultural datasets - GrowliFlower-L (cauliflower, open field) and BUP20 (sweet pepper, glasshouse) - using SegFormer and Mask2Former, covering in-distribution performance, calibration under distribution shift, and out-of-distribution detection. Ablations show feed-forward layers, not attention layers, are the critical LoRA target for dense prediction, contrary to the attention-only convention from language models. ST-LoRA matches or exceeds full-rank ensembles in segmentation accuracy and calibration across both datasets and architectures, while substantially reducing training time, inference latency, memory footprint, and storage requirements. Against efficient baselines - Snapshot Ensemble, MC Dropout, and Deep Deterministic Uncertainty - ST-LoRA consistently matches or outperforms them in image/pixel-level OoD detection, calibration stability under shift, and cross-seed variance, with far fewer parameters and lower compute. These results show LoRA-efficient e",
+    "first_checked_at": "2026-10-05T09:17:58+00:00",
+    "last_checked_at": "2026-10-05T09:17:58+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+    ],
+    "title": "ST-LoRA: Single Trajectory LoRA Ensemble for Uncertainty Aware Agricultural Segmentation"
+  },
+  "processed_at": "2026-10-05T09:17:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a41dce75e468",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

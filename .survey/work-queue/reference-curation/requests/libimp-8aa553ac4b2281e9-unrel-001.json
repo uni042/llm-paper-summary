@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-8aa553ac4b2281e9-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2302.05442",
+  "reason": "The primary abstract and reviewed sections focus on scaling and training a vision encoder, not LLM inference/serving or inference-time compression/efficiency. Its hardware and parallelization work supports large-scale training of ViT-22B; evaluation is on vision transfer tasks, so this is outside the stated scope.",
+  "title": "Scaling Vision Transformers to 22 Billion Parameters",
+  "identity_tokens": [
+    "id:arXiv:2302.05442",
+    "url:https://arxiv.org/abs/2302.05442"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md",
+    "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8aa553ac4b22",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b19aa19567f5aeae-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3770855.3818136",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3770855.3818136",
+    "identity_tokens": [
+      "DOI:10.1145/3770855.3818136"
+    ],
+    "reason": "Collaborative inference enables cost-effective deployment of large language models by partitioning layers across multiple participants and forwarding intermediate activations between participants in a pipeline, but these transmitted activations also create a new attack surface: a malicious participant can manipulate intermediate activations during inference. Prior work on collaborative inference attacks has largely focused on privacy leakage, leaving the backdoor threat insufficiently explored. Inspired by recent advances in representation engineering, we propose ActivationBackdoor, an inference-time backdoor attack that composes two activation-level components for trigger detection and backdoor behavior injection. This design achieves the same ''clean inputs behave normally, triggered inputs induce attacker-specified behavior'' property as traditional backdoor attacks, while requiring no access to training data and no model parameter updates. Experiments across classification and open-ended generation tasks show that ActivationBackdoor attains attack success comparable to training-time backdoor baselines while preserving high clean-task accuracy and utility. Overall, our results expose a new and practical backdoor risk in collaborative inference arising from intermediate activation exposure.",
+    "first_checked_at": "2026-10-05T08:55:09+00:00",
+    "last_checked_at": "2026-10-05T08:55:09+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md"
+    ],
+    "title": "ActivationBackdoor: Backdooring Large Language Models in Collaborative Inference via Intermediate Activations"
+  },
+  "processed_at": "2026-10-05T08:55:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b19aa19567f5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

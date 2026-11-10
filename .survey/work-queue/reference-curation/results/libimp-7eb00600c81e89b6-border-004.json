@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7eb00600c81e89b6-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.02643",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.02643",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.02643",
+      "arXiv:2402.02643"
+    ],
+    "reason": "LLMDBはベクトルDBの意味検索・キャッシュでLLM呼出しコストを下げるが、主貢献はDB診断・クエリ書換え・分析へのLLM適用であり、LLM推論runtimeそのものの最適化ではないため境界領域。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2502.08182-select-n-slo-aware-memory-offloading.md"
+    ],
+    "title": "LLM-Enhanced Data Management"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7eb00600c81e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

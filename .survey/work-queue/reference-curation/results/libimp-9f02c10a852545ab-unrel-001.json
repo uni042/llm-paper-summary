@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9f02c10a852545ab-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.31046",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.31046",
+    "identity_tokens": [
+      "arXiv:2606.31046"
+    ],
+    "reason": "OpenLife studies autonomous LLM-agent behavior under budgeted activity; it does not optimize model inference.",
+    "first_checked_at": "2026-10-05T11:34:43+00:00",
+    "last_checked_at": "2026-10-05T11:34:43+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+    ],
+    "title": "OpenLife: Toward Open-World Artificial Life with Autonomous LLM Agents"
+  },
+  "processed_at": "2026-10-05T11:34:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9f02c10a8525",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

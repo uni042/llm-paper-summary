@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f9497bcc43bee28f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.22325",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.22325",
+    "identity_tokens": [
+      "arXiv:2606.22325"
+    ],
+    "reason": "Primary abstract reviewed: Attention sinks, representation collapse, and norm stratification are treated as transformer-specific pathologies. We show they are not specific to attention: they are what content-based routing does under a fixed similarity metric. We give a reframing identity: softmax attention is Boltzmann-weighted aggregation over Euclidean distances with constant key norms, so its score om… This is a analysis of transformer representation/routing or retrieval-head mechanisms, not a system/algorithm contribution to inference efficiency.",
+    "first_checked_at": "2026-10-05T11:51:47+00:00",
+    "last_checked_at": "2026-10-05T11:51:47+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "title": "All Routes Lead to Collapse"
+  },
+  "processed_at": "2026-10-05T11:51:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f9497bcc43be",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c6f086b5d8428986-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.xjidi.2026.100521",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.xjidi.2026.100521",
+    "identity_tokens": [
+      "DOI:10.1016/j.xjidi.2026.100521"
+    ],
+    "reason": "Generalized pustular psoriasis (GPP) is a rare, chronic, systemic inflammatory disease characterized by unpredictable chronic symptoms and periods of flaring. Assessing GPP severity is important for defining treatment goals and evaluating treatment responses, yet the rarity of the disease and the subjectivity of manual evaluation complicate its standardization. To address this, we developed the automatic Generalized Pustular Psoriasis Physician Global Assessment (GPPGA), a digital imaging tool powered by artificial intelligence. On the basis of the validated GPPGA scoring system, this framework rapidly assesses GPP severity in clinical images using a neural network trained on annotated clinical images of GPP, with consistent performance across diverse sexes, ages, and skin tones. Using 2 datasets (V1 and V2, comprising 332 and 4296 images, respectively, with diverse demographics), automatic GPPGA achieved a Cohen's kappa of 0.74 for V1 and 0.82 for V2, whereas dermatologists achieved 0.79 and 0.80, respectively. The accuracy values for automatic GPPGA were 0.62 for V1 and 0.64 for V2 versus 0.70 and 0.65 for dermatologists, respectively. These results support its potential use for assessing lesion severity from images during healthcare visits. Automatic GPPGA offers a reproducible method that can address the subjectivity of manual evaluation and facilitate the standardization of GPP severity assessment.",
+    "first_checked_at": "2026-10-05T09:35:36+00:00",
+    "last_checked_at": "2026-10-05T09:35:36+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+    ],
+    "title": "Development and assessment of an artificial intelligence-based tool for scoring lesion severity in generalized pustular psoriasis clinical images."
+  },
+  "processed_at": "2026-10-05T09:35:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6f086b5d842",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-74aa3faa75950002-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.12320",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.12320",
+    "identity_tokens": [
+      "arXiv:2609.12320"
+    ],
+    "reason": "一次要旨: Traditional large language models (LLMs) are scoped to individual user sessions, limiting their knowledge to a single conversation and preventing them from learning user preferences that evolve over time. Existing agentic memory systems address this limitation but generally operate at the individual-user level, restricting the public knowledge that could be shared across users to improve downstream responses. We intr",
+    "first_checked_at": "2026-10-05T06:51:06+00:00",
+    "last_checked_at": "2026-10-05T06:51:06+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "AIM: A Privacy-Aware Interoperable Memory Framework for Multi-Agent Multi-User LLM Systems"
+  },
+  "processed_at": "2026-10-05T06:51:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-74aa3faa7595",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1509b1075ee91f38-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.05198",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.05198",
+    "identity_tokens": [
+      "arXiv:2609.05198"
+    ],
+    "reason": "On-Policy Distillation (OPD) has emerged as a widely adopted post-training paradigm for enhancing large language models in reasoning domains. However, the data-centric mechanisms in OPD remain relatively underexplored. This paper presents an empirical study of data efficiency and data selection in OPD. We begin by investigating an extreme setting: training OPD on only one example, namely 1-shot OPD. Surprisingly, we find that 1-shot OPD is consistently effective across all sa",
+    "first_checked_at": "2026-10-05T06:01:08+00:00",
+    "last_checked_at": "2026-10-05T06:01:08+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "What Matters in On-Policy Distillation? A Perspective on Data Efficiency and Data Selection"
+  },
+  "processed_at": "2026-10-05T06:01:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1509b1075ee9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e13bbda77e1e94d0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1909.08053",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1909.08053",
+    "identity_tokens": [
+      "arXiv:1909.08053"
+    ],
+    "reason": "Transformerを数百GPUへ分割して大規模モデルを学習するintra-layer model parallelismが主題で、主要評価もtraining scaling efficiency・学習済みモデル品質。推論runtime/serving最適化を最終目的としない。",
+    "first_checked_at": "2026-09-27T00:01:48+09:00",
+    "last_checked_at": "2026-10-05T22:23:07+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[3]"
+    ],
+    "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism"
+  },
+  "processed_at": "2026-10-05T22:23:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e13bbda77e1e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

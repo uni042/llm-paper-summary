@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f02c8c5ef8af45a4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2210.15541",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2210.15541",
+    "identity_tokens": [
+      "arXiv:2210.15541"
+    ],
+    "reason": "一次要旨によれば、各注意頭に混合所属の確率的ブロックモデルを割り当て、入力に応じて二部グラフをサンプリングして注意マスクを作る。選択した辺数に応じて順方向・逆方向計算費用を線形化するため疎注意の計算技術としては関連する。一方、主な実証はLRAとGLUEで、LLMの自己回帰復号・KVキャッシュ・実配信の評価は要旨に示されず、訓練時の離散サンプリングに対するstraight-through推定器が寄与の中心にもある。現在のLLM推論基盤サーベイで直ちにacceptする直接証拠が不足するためborderlineとする。",
+    "first_checked_at": "2026-10-20T19:45:38+00:00",
+    "last_checked_at": "2026-10-20T19:45:38+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Transformers meet Stochastic Block Models: Attention with Data-Adaptive Sparsity and Cost"
+  },
+  "processed_at": "2026-10-20T19:45:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f02c8c5ef8af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

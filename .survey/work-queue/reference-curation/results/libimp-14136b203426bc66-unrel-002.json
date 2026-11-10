@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-14136b203426bc66-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.06869",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.06869",
+    "identity_tokens": [
+      "arXiv:2609.06869"
+    ],
+    "reason": "本文はMambaを使った熱源条件付き3D bioheat simulationであり、物理場の温度予測が目的である。LLM推論効率との技術的接点はない。",
+    "first_checked_at": "2026-10-06T19:17:14+00:00",
+    "last_checked_at": "2026-10-06T19:17:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "PPIM: Pennes Physics-Informed Mamba for Heat-Source-Conditioned 3D Bioheat Simulation"
+  },
+  "processed_at": "2026-10-06T19:17:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-14136b203426",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

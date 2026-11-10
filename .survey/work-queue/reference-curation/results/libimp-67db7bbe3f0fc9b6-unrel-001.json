@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67db7bbe3f0fc9b6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1906.00091",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1906.00091",
+    "identity_tokens": [
+      "arXiv:1906.00091"
+    ],
+    "reason": "DLRMはcategorical feature向けembedding tableのmodel parallelismとfully-connected layerのdata parallelismを含む推薦model/benchmarkで、推薦推論のmemory・performanceも扱うが最終適用先はpersonalization/recommendationでありLLM推論systemではない。",
+    "first_checked_at": "2026-10-04T17:54:50+00:00",
+    "last_checked_at": "2026-10-04T17:54:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+    ],
+    "title": "Deep Learning Recommendation Model for Personalization and Recommendation Systems"
+  },
+  "processed_at": "2026-10-04T17:54:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67db7bbe3f0f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

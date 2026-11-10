@@ -1,0 +1,1063 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5432bfa425c7f9a6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5432bfa425c7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.inffus.2025.103774",
+    "DOI:10.1109/iccvw69036.2025.00594",
+    "arXiv:2302.08141",
+    "arXiv:2504.05346",
+    "arXiv:2506.03762",
+    "arXiv:2507.02620",
+    "arXiv:2508.09001",
+    "arXiv:2509.18763",
+    "arXiv:2512.05409",
+    "arXiv:2512.22695",
+    "arXiv:2601.21109"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "aabe066a6f98833169adeac2c1e2dc626dfeb289",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T00:27:00.185818+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.inffus.2025.103774",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iccvw69036.2025.00594",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2302.08141",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.05346",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.03762",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.02620",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.09001",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.18763",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.05409",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.22695",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.21109",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SQ-format: A Unified Sparse-Quantized Hardware-friendly Data Format for LLMs",
+      "source_url": "https://arxiv.org/abs/2512.05409",
+      "year": 2025,
+      "published": "2025-12-05",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) plays a crucial role in the democratization of large language models (LLMs). However, existing low-bit quantization and sparsification techniques are difficult to balance accuracy and efficiency due to the limited hardware support. For example, W4A8 can only achieve the same peak TOPS as W8A8 whereas the GPU-supported sparse data format (2:4 semi-structure sparse) is seldomly adopted due to the loss of accuracy. To bridge this gap, in this paper, we propose the Sparse-Quantized Format (SQ-format), which is a unified data format for quantization and sparsification potentially easily supported by new hardware and existing GPUs. SQ-format makes use of the fact that sparse matrix can be accelerated in high-precision, and low-precision matrix multiplication can also be accelerated accordingly. As such, SQ-format is proposed to achieve Pareto improvement between performance and throughput. This format is particularly suitable for activations with outlier inequality status and makes their static compression possible. We show the state-of-the-art PTQ performance with SQ-format, propose the hardware required to support it, and further offer the design exploration and insights for the next-generation AI accelerators.",
+      "identifiers": [
+        "SemanticScholar:d17e1ccbf14957612e9948f7dd4712a85472ef12"
+      ],
+      "semantic_scholar_id": "d17e1ccbf14957612e9948f7dd4712a85472ef12",
+      "canonical_id": "arXiv:2512.05409",
+      "arxiv_id": "2512.05409",
+      "doi": "10.48550/arXiv.2512.05409",
+      "authors": [
+        "Ruixuan Huang",
+        "Hao Zeng",
+        "Hantao Huang",
+        "Jinyuan Shi",
+        "Ming-Hui Yu",
+        "Ian En-Hsu Yen",
+        "Shuai Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 313,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ChunkWise LoRA: Adaptive Sequence Partitioning for Memory-Efficient Low-Rank Adaptation and Accelerated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2601.21109",
+      "year": 2025,
+      "published": "2025-12-17",
+      "venue": "International Symposium on Embedded Computing and System Design",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in low-rank adaptation (LoRA) have enabled efficient fine-tuning of large language models (LLMs) with minimal additional parameters. However, existing LoRA methods apply static rank configurations uniformly across all input tokens, ignoring variation in token complexity and computational requirements. In this work, we propose ChunkWise LoRA, a dynamic and adaptive approach that partitions sequences into variable-length chunks based on token complexity and assigns each chunk a tailored low-rank configuration. Our system introduces a runtime scheduler that estimates token difficulty, performs adaptive chunking, and selects per-chunk LoRA rank and scaling using a rank-ladder mechanism. To preserve output consistency, we further introduce a boundarysafe composition module and integrate policy-driven KV-cache strategies. Experiments on benchmark datasets such as Wikitext103 and SQuAD demonstrate that ChunkWise LoRA achieves up to $\\mathbf{3 4 \\%}$ lower latency and $\\mathbf{3 8 \\%}$ memory reduction compared to baseline LoRA, while maintaining or improving task performance metrics like BLEU, EM, and perplexity. The proposed framework remains fully compatible with existing transformer architectures and inference frameworks, providing a practical solution for real-world deployment of parameter-efficient LLMs.",
+      "identifiers": [
+        "SemanticScholar:386a426c8048102241c9c89f38eaa3cd76758b3e"
+      ],
+      "semantic_scholar_id": "386a426c8048102241c9c89f38eaa3cd76758b3e",
+      "canonical_id": "arXiv:2601.21109",
+      "arxiv_id": "2601.21109",
+      "doi": "10.1109/ISED67359.2025.11405311",
+      "authors": [
+        "Ketan Thakkar",
+        "M. Chatterjee",
+        "R. Balasubramanian",
+        "Achyuthan Jootoo",
+        "Rajendra Ugrani"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 301,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Modality Inflation: Energy Characterization and Optimization Opportunities for MLLM Inference",
+      "source_url": "https://arxiv.org/abs/2512.22695",
+      "year": 2025,
+      "published": "2025-12-27",
+      "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) are built on text-only LLMs by incorporating additional modalities, enabling multimodal understanding and a broader range of applications. However, these additions introduce a previously unexplored energy trade-off across modalities that remains poorly understood, as most prior work focuses on text-only models. In this paper, we examine modality inflation, a key source of inefficiency in which multimodal inputs increase inference workloads through extra encoding stages and expanded token sequences. We provide the first detailed, stage-level analysis of energy consumption in MLLM inference by breaking the pipeline into vision encoding, prefill, and decoding stages. Using four representative MLLMs evaluated on NVIDIA A100 GPU, we quantify the additional energy required for multimodal inference compared to text-only baselines, observing overheads ranging from 17% to 94% across models for identical inputs. Our results show that energy bottlenecks differ widely across model architectures, stemming either from compute-heavy vision encoders or from the downstream impact of large visual token sequences during prefill. By examining GPU power traces, we further uncover substantial GPU underutilization during multimodal execution and show that input complexity leads to markedly different energy scaling behaviors across models. Finally, we demonstrate that stage-wise dynamic voltage and frequency scaling (DVFS) is an effective optimization, allowing energy savings with only modest performance impact. Together, these findings offer practical insights and concrete guidance for designing more energy-efficient multimodal LLM serving systems.",
+      "identifiers": [
+        "SemanticScholar:48b8ea4594e6fdc626a51abe9687c9ddb0111373"
+      ],
+      "semantic_scholar_id": "48b8ea4594e6fdc626a51abe9687c9ddb0111373",
+      "canonical_id": "arXiv:2512.22695",
+      "arxiv_id": "2512.22695",
+      "doi": "10.1109/IPDPSW71298.2026.00035",
+      "authors": [
+        "Mona Moghadampanah",
+        "Adib Rezaei Shahmirzadi",
+        "Farhana Amin",
+        "D. Nikolopoulos"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 291,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Thanos: A Block-wise Pruning Algorithm for Efficient Large Language Model Compression",
+      "source_url": "https://arxiv.org/abs/2504.05346",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents Thanos, a novel weight-pruning algorithm designed to reduce the memory footprint and enhance the computational efficiency of large language models (LLMs) by removing redundant weights while maintaining accuracy. Thanos introduces a block-wise pruning strategy with adaptive masks that dynamically adjust to weight importance, enabling flexible sparsity patterns and structured formats, such as $n:m$ sparsity, optimized for hardware acceleration. Experimental evaluations demonstrate that Thanos achieves state-of-the-art performance in structured pruning and outperforms existing methods in unstructured pruning. By providing an efficient and adaptable approach to model compression, Thanos offers a practical solution for deploying large models in resource-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:d0656bdf977f2a82cf918ecd6a8cdd068f91a44b"
+      ],
+      "semantic_scholar_id": "d0656bdf977f2a82cf918ecd6a8cdd068f91a44b",
+      "canonical_id": "arXiv:2504.05346",
+      "arxiv_id": "2504.05346",
+      "doi": "10.48550/arXiv.2504.05346",
+      "authors": [
+        "Ivan D. Ilin",
+        "Peter Richtárik"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 556,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Auto-Parallelizing Large Models with Rhino: A Systematic Approach on Production AI Platform",
+      "source_url": "https://arxiv.org/abs/2302.08141",
+      "year": 2023,
+      "published": "2023-02-16",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Rhino, a system for accelerating tensor programs with automatic parallelization on AI platform for real production environment. It transforms a tensor program written for a single device into an equivalent distributed program that is capable of scaling up to thousands of devices with no user configuration. Rhino firstly works on a semantically independent intermediate representation of tensor programs, which facilitates its generalization to unprecedented applications. Additionally, it implements a task-oriented controller and a distributed runtime for optimal performance. Rhino explores on a complete and systematic parallelization strategy space that comprises all the paradigms commonly employed in deep learning (DL), in addition to strided partitioning and pipeline parallelism on non-linear models. Aiming to efficiently search for a near-optimal parallel execution plan, our analysis of production clusters reveals general heuristics to speed up the strategy search. On top of it, two optimization levels are designed to offer users flexible trade-offs between the search time and strategy quality. Our experiments demonstrate that Rhino can not only re-discover the expert-crafted strategies of classic, research and production DL models, but also identify novel parallelization strategies which surpass existing systems for novel models.",
+      "identifiers": [
+        "SemanticScholar:c72b859ff9a349f6e0f2021a4eb9542316509949"
+      ],
+      "semantic_scholar_id": "c72b859ff9a349f6e0f2021a4eb9542316509949",
+      "canonical_id": "arXiv:2302.08141",
+      "arxiv_id": "2302.08141",
+      "doi": "10.48550/arXiv.2302.08141",
+      "authors": [
+        "Shiwei Zhang",
+        "Lan-Song Diao",
+        "Siyu Wang",
+        "Zong-Yan Cao",
+        "Yiliang Gu",
+        "Chang Si",
+        "Ziji Shi",
+        "Zhen Zheng",
+        "Chuan Wu",
+        "W. Lin"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1336,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LiteRT-Optimized INT8 LLM for Raspberry Pi4 Deployment",
+      "source_url": "https://doi.org/10.1109/ICCVW69036.2025.00594",
+      "year": 2025,
+      "published": "2025-10-19",
+      "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated impressive capabilities across a wide range of natural language processing tasks. However, their high computational and memory requirements pose significant challenges for deployment on resource-constrained edge devices such as the Raspberry Pi. In this work, we investigate post-training quantization techniques to reduce the computational burden of LLMs while preserving their quality. We evaluate several LLMs under different precision settings and show that 8-bit quantization, especially when combined with runtime-level optimizations like LiteRT achieves up to 2× faster inference on Raspberry Pi, compared to framework-native formats, without relying on hardware-specific acceleration libraries (e.g., GPU, NNAPI, or EdgeTPU), and with negligible degradation in output quality. Our experiments highlight the practicality of lightweight LLM deployment on edge devices. These findings demonstrate the feasibility of real-time applications on low-power devices, enabling broader accessibility in edge environments. Our project page is available at https://rlghksdbs.github.io/EfficientLLM/.",
+      "identifiers": [
+        "SemanticScholar:16021abe30f947651b0f23d081724b5a186b0a5a"
+      ],
+      "semantic_scholar_id": "16021abe30f947651b0f23d081724b5a186b0a5a",
+      "doi": "10.1109/ICCVW69036.2025.00594",
+      "canonical_id": "DOI:10.1109/ICCVW69036.2025.00594",
+      "authors": [
+        "Kihwan Yoon",
+        "Hyeon-Cheol Moon",
+        "Aeri Kim",
+        "Sungjei Kim",
+        "Sang-Seol Lee",
+        "Sung-Joon Jang",
+        "Ganzorig Gankhuyag",
+        "Jinwoo Jeong"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 360,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AhaKV: Adaptive Holistic Attention-Driven KV Cache Eviction for Efficient Inference of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2506.03762",
+      "year": 2025,
+      "published": "2025-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have significantly advanced the field of Artificial Intelligence. However, their deployment is resource-intensive, not only due to the large number of model parameters but also because the (Key-Value) KV cache consumes a lot of memory during inference. While several works propose reducing the KV cache by evicting the unnecessary tokens, these approaches rely on accumulated attention score as eviction score to quantify the importance of the token. We identify the accumulated attention score is biased and it decreases with the position of the tokens in the mathematical expectation. As a result, the retained tokens concentrate on the initial positions, limiting model's access to global contextual information. To address this issue, we propose Adaptive holistic attention KV (AhaKV), it addresses the bias of the accumulated attention score by adaptively tuning the scale of softmax according the expectation of information entropy of attention scores. To make use of the holistic attention information in self-attention mechanism, AhaKV utilize the information of value vectors, which is overlooked in previous works, to refine the adaptive score. We show theoretically that our method is well suited for bias reduction. We deployed AhaKV on different models with a fixed cache budget. Experiments show that AhaKV successfully mitigates bias and retains crucial tokens across global context and achieve state-of-the-art results against other related work on several benchmark tasks.",
+      "identifiers": [
+        "SemanticScholar:a5377bb72dc7d81a378f30b2a7f8ecfe02bc32d7"
+      ],
+      "semantic_scholar_id": "a5377bb72dc7d81a378f30b2a7f8ecfe02bc32d7",
+      "canonical_id": "arXiv:2506.03762",
+      "arxiv_id": "2506.03762",
+      "doi": "10.48550/arXiv.2506.03762",
+      "authors": [
+        "Yifeng Gu",
+        "Zicong Jiang",
+        "Jian-Xiu Jin",
+        "K. Guo",
+        "Ziyang Zhang",
+        "Xiangming Xu"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 497,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlowSpec: Continuous Pipelined Speculative Decoding for Efficient Distributed LLM Inference",
+      "source_url": "https://arxiv.org/abs/2507.02620",
+      "year": 2025,
+      "published": "2025-07-03",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Distributed inference serves as a promising approach to enabling the inference of large language models (LLMs) at the network edge. It distributes the inference process to multiple devices to ensure that the LLMs can fit into the device memory. Recent pipeline-based approaches have the potential to parallelize communication and computation, which helps reduce inference latency. However, the benefit diminishes when the inference request at the network edge is sparse, where pipeline is typically at low utilization. To enable efficient distributed LLM inference at the edge, we propose \\textbf{FlowSpec}, a pipeline-parallel tree-based speculative decoding framework. FlowSpec incorporates three key mechanisms to improve decoding efficiency: 1) score-based step-wise verification prioritizes more important draft tokens to bring earlier accepted tokens; 2) efficient draft management to prune invalid tokens while maintaining correct causal relationship during verification; 3) dynamic draft expansion strategies to supply high-quality speculative inputs. These techniques work in concert to enhance both pipeline utilization and speculative efficiency. We evaluate FlowSpec on a real-world testbed with other baselines. Experimental results demonstrate that our proposed framework significantly improves inference speed across diverse models and configurations, achieving speedup ratios 1.37$\\times$-1.73$\\times$ compared to baselines. Our code is publicly available at \\href{https://github.com/Leosang-lx/FlowSpec#}{https://github.com/Leosang-lx/FlowSpec\\#}.",
+      "identifiers": [
+        "SemanticScholar:76c126c81f87f68b61c933916f6b0c6ca62c4a6e"
+      ],
+      "semantic_scholar_id": "76c126c81f87f68b61c933916f6b0c6ca62c4a6e",
+      "canonical_id": "arXiv:2507.02620",
+      "arxiv_id": "2507.02620",
+      "doi": "10.48550/arXiv.2507.02620",
+      "authors": [
+        "Xing Liu",
+        "Lizhuo Luo",
+        "Ming Tang",
+        "Chao Huang",
+        "Xu Chen"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 468,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Retrospective Sparse Attention for Efficient Long-Context Generation",
+      "source_url": "https://arxiv.org/abs/2508.09001",
+      "year": 2025,
+      "published": "2025-08-12",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are increasingly deployed in long-context tasks such as reasoning, code generation, and multi-turn dialogue. However, inference over extended contexts is bottlenecked by the Key-Value (KV) cache, whose memory footprint grows linearly with sequence length and dominates latency at each decoding step. While recent KV cache compression methods identify and load important few tokens, they focus predominantly on input contexts and fail to address the cumulative attention errors that arise during long decoding. In this paper, we introduce RetroAttention, a novel KV cache update technique that retrospectively revises past attention outputs using newly arrived KV entries from subsequent decoding steps. By maintaining a lightweight output cache, RetroAttention enables past queries to be efficiently supplemented with more contexts, while incurring minimal latency overhead. This breaks the fixed-attention-output paradigm and allows continual correction of prior approximations. Extensive experiments on long-generation benchmarks show that RetroAttention consistently outperforms state-of-the-art (SOTA) KV compression methods, increasing effective KV exposure by up to 1.6$\\times$ and accuracy by up to 21.9\\%.",
+      "identifiers": [
+        "SemanticScholar:e0c4975bdd78fceb935fb9f41914662660c68e9b"
+      ],
+      "semantic_scholar_id": "e0c4975bdd78fceb935fb9f41914662660c68e9b",
+      "canonical_id": "arXiv:2508.09001",
+      "arxiv_id": "2508.09001",
+      "doi": "10.48550/arXiv.2508.09001",
+      "authors": [
+        "S. Choi",
+        "Beomseok Kang",
+        "Dongwon Jo",
+        "Jae-Joon Kim"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 428,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GF-SVD: Global knowledge-infused singular value decomposition of large language models",
+      "source_url": "https://doi.org/10.1016/j.inffus.2025.103774",
+      "year": 2025,
+      "published": "2025-09-01",
+      "venue": "Information Fusion",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a43aa4ac3312f4d7dd6b12355d026ad9f176264d"
+      ],
+      "semantic_scholar_id": "a43aa4ac3312f4d7dd6b12355d026ad9f176264d",
+      "doi": "10.1016/j.inffus.2025.103774",
+      "canonical_id": "DOI:10.1016/j.inffus.2025.103774",
+      "authors": [
+        "Xiangxiang Gao",
+        "Weisheng Xie",
+        "Yuhan Lin",
+        "Chen Hang",
+        "Hong-Yan Han",
+        "Xiao-Long Xu",
+        "Bo Liu"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 408,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Bi-VLM: Pushing Ultra-Low Precision Post-Training Quantization Boundaries in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2509.18763",
+      "year": 2025,
+      "published": "2025-09-23",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We address the critical gap between the computational demands of vision-language models and the possible ultra-low-bit weight precision (bitwidth $\\leq2$ bits) we can use for higher efficiency. Our work is motivated by the substantial computational cost and memory requirements of VLMs, which restrict their applicability in hardware-constrained environments. We propose Bi-VLM, which separates model weights non-uniformly based on the Gaussian quantiles. Our formulation groups the model weights into outlier (salient) and multiple inlier (unsalient) subsets, ensuring that each subset contains a proportion of weights corresponding to its quantile in the distribution. We propose a saliency-aware hybrid quantization algorithm and use it to quantize weights by imposing different constraints on the scaler and binary matrices based on the saliency metric and compression objective. We have evaluated our approach on different VLMs. For the language model part of the VLM, our Bi-VLM outperforms the SOTA by 3%-47% on the visual question answering task in terms of four different benchmarks and three different models. For the overall VLM, our Bi-VLM outperforms the SOTA by 4%-45%. We also perform token pruning on the quantized models and observe that there is redundancy of image tokens 90% - 99% in the quantized models. This helps us to further prune the visual tokens to improve efficiency.",
+      "identifiers": [
+        "SemanticScholar:e2bed84a1fcf417418ae978afe7b91bae630fe86"
+      ],
+      "semantic_scholar_id": "e2bed84a1fcf417418ae978afe7b91bae630fe86",
+      "canonical_id": "arXiv:2509.18763",
+      "arxiv_id": "2509.18763",
+      "doi": "10.48550/arXiv.2509.18763",
+      "authors": [
+        "Xi-Jun Wang",
+        "Jun-Yun Huang",
+        "Rayyan Abdalla",
+        "Cheng-Yuan Zhang",
+        "Ruiqi Xian",
+        "Dinesh Manocha"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 386,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.05409",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.05409",
+        "id:SemanticScholar:d17e1ccbf14957612e9948f7dd4712a85472ef12",
+        "id:arXiv:2512.05409",
+        "title:sqformat a unified sparsequantized hardwarefriendly data format for llms",
+        "url:https://arxiv.org/abs/2512.05409"
+      ],
+      "record": {
+        "title": "SQ-format: A Unified Sparse-Quantized Hardware-friendly Data Format for LLMs",
+        "source_url": "https://arxiv.org/abs/2512.05409",
+        "year": 2025,
+        "published": "2025-12-05",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) plays a crucial role in the democratization of large language models (LLMs). However, existing low-bit quantization and sparsification techniques are difficult to balance accuracy and efficiency due to the limited hardware support. For example, W4A8 can only achieve the same peak TOPS as W8A8 whereas the GPU-supported sparse data format (2:4 semi-structure sparse) is seldomly adopted due to the loss of accuracy. To bridge this gap, in this paper, we propose the Sparse-Quantized Format (SQ-format), which is a unified data format for quantization and sparsification potentially easily supported by new hardware and existing GPUs. SQ-format makes use of the fact that sparse matrix can be accelerated in high-precision, and low-precision matrix multiplication can also be accelerated accordingly. As such, SQ-format is proposed to achieve Pareto improvement between performance and throughput. This format is particularly suitable for activations with outlier inequality status and makes their static compression possible. We show the state-of-the-art PTQ performance with SQ-format, propose the hardware required to support it, and further offer the design exploration and insights for the next-generation AI accelerators.",
+        "identifiers": [
+          "SemanticScholar:d17e1ccbf14957612e9948f7dd4712a85472ef12"
+        ],
+        "semantic_scholar_id": "d17e1ccbf14957612e9948f7dd4712a85472ef12",
+        "canonical_id": "arXiv:2512.05409",
+        "arxiv_id": "2512.05409",
+        "doi": "10.48550/arXiv.2512.05409",
+        "authors": [
+          "Ruixuan Huang",
+          "Hao Zeng",
+          "Hantao Huang",
+          "Jinyuan Shi",
+          "Ming-Hui Yu",
+          "Ian En-Hsu Yen",
+          "Shuai Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 313,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.21109",
+      "identity_tokens": [
+        "id:DOI:10.1109/ised67359.2025.11405311",
+        "id:SemanticScholar:386a426c8048102241c9c89f38eaa3cd76758b3e",
+        "id:arXiv:2601.21109",
+        "title:chunkwise lora adaptive sequence partitioning for memoryefficient lowrank adaptation and accelerated llm inference",
+        "url:https://arxiv.org/abs/2601.21109"
+      ],
+      "record": {
+        "title": "ChunkWise LoRA: Adaptive Sequence Partitioning for Memory-Efficient Low-Rank Adaptation and Accelerated LLM Inference",
+        "source_url": "https://arxiv.org/abs/2601.21109",
+        "year": 2025,
+        "published": "2025-12-17",
+        "venue": "International Symposium on Embedded Computing and System Design",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in low-rank adaptation (LoRA) have enabled efficient fine-tuning of large language models (LLMs) with minimal additional parameters. However, existing LoRA methods apply static rank configurations uniformly across all input tokens, ignoring variation in token complexity and computational requirements. In this work, we propose ChunkWise LoRA, a dynamic and adaptive approach that partitions sequences into variable-length chunks based on token complexity and assigns each chunk a tailored low-rank configuration. Our system introduces a runtime scheduler that estimates token difficulty, performs adaptive chunking, and selects per-chunk LoRA rank and scaling using a rank-ladder mechanism. To preserve output consistency, we further introduce a boundarysafe composition module and integrate policy-driven KV-cache strategies. Experiments on benchmark datasets such as Wikitext103 and SQuAD demonstrate that ChunkWise LoRA achieves up to $\\mathbf{3 4 \\%}$ lower latency and $\\mathbf{3 8 \\%}$ memory reduction compared to baseline LoRA, while maintaining or improving task performance metrics like BLEU, EM, and perplexity. The proposed framework remains fully compatible with existing transformer architectures and inference frameworks, providing a practical solution for real-world deployment of parameter-efficient LLMs.",
+        "identifiers": [
+          "SemanticScholar:386a426c8048102241c9c89f38eaa3cd76758b3e"
+        ],
+        "semantic_scholar_id": "386a426c8048102241c9c89f38eaa3cd76758b3e",
+        "canonical_id": "arXiv:2601.21109",
+        "arxiv_id": "2601.21109",
+        "doi": "10.1109/ISED67359.2025.11405311",
+        "authors": [
+          "Ketan Thakkar",
+          "M. Chatterjee",
+          "R. Balasubramanian",
+          "Achyuthan Jootoo",
+          "Rajendra Ugrani"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 301,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.22695",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdpsw71298.2026.00035",
+        "id:SemanticScholar:48b8ea4594e6fdc626a51abe9687c9ddb0111373",
+        "id:arXiv:2512.22695",
+        "title:modality inflation energy characterization and optimization opportunities for mllm inference",
+        "url:https://arxiv.org/abs/2512.22695"
+      ],
+      "record": {
+        "title": "Modality Inflation: Energy Characterization and Optimization Opportunities for MLLM Inference",
+        "source_url": "https://arxiv.org/abs/2512.22695",
+        "year": 2025,
+        "published": "2025-12-27",
+        "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) are built on text-only LLMs by incorporating additional modalities, enabling multimodal understanding and a broader range of applications. However, these additions introduce a previously unexplored energy trade-off across modalities that remains poorly understood, as most prior work focuses on text-only models. In this paper, we examine modality inflation, a key source of inefficiency in which multimodal inputs increase inference workloads through extra encoding stages and expanded token sequences. We provide the first detailed, stage-level analysis of energy consumption in MLLM inference by breaking the pipeline into vision encoding, prefill, and decoding stages. Using four representative MLLMs evaluated on NVIDIA A100 GPU, we quantify the additional energy required for multimodal inference compared to text-only baselines, observing overheads ranging from 17% to 94% across models for identical inputs. Our results show that energy bottlenecks differ widely across model architectures, stemming either from compute-heavy vision encoders or from the downstream impact of large visual token sequences during prefill. By examining GPU power traces, we further uncover substantial GPU underutilization during multimodal execution and show that input complexity leads to markedly different energy scaling behaviors across models. Finally, we demonstrate that stage-wise dynamic voltage and frequency scaling (DVFS) is an effective optimization, allowing energy savings with only modest performance impact. Together, these findings offer practical insights and concrete guidance for designing more energy-efficient multimodal LLM serving systems.",
+        "identifiers": [
+          "SemanticScholar:48b8ea4594e6fdc626a51abe9687c9ddb0111373"
+        ],
+        "semantic_scholar_id": "48b8ea4594e6fdc626a51abe9687c9ddb0111373",
+        "canonical_id": "arXiv:2512.22695",
+        "arxiv_id": "2512.22695",
+        "doi": "10.1109/IPDPSW71298.2026.00035",
+        "authors": [
+          "Mona Moghadampanah",
+          "Adib Rezaei Shahmirzadi",
+          "Farhana Amin",
+          "D. Nikolopoulos"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 291,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.05346",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.05346",
+        "id:SemanticScholar:d0656bdf977f2a82cf918ecd6a8cdd068f91a44b",
+        "id:arXiv:2504.05346",
+        "title:thanos a blockwise pruning algorithm for efficient large language model compression",
+        "url:https://arxiv.org/abs/2504.05346"
+      ],
+      "record": {
+        "title": "Thanos: A Block-wise Pruning Algorithm for Efficient Large Language Model Compression",
+        "source_url": "https://arxiv.org/abs/2504.05346",
+        "year": 2025,
+        "published": "2025-04-06",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper presents Thanos, a novel weight-pruning algorithm designed to reduce the memory footprint and enhance the computational efficiency of large language models (LLMs) by removing redundant weights while maintaining accuracy. Thanos introduces a block-wise pruning strategy with adaptive masks that dynamically adjust to weight importance, enabling flexible sparsity patterns and structured formats, such as $n:m$ sparsity, optimized for hardware acceleration. Experimental evaluations demonstrate that Thanos achieves state-of-the-art performance in structured pruning and outperforms existing methods in unstructured pruning. By providing an efficient and adaptable approach to model compression, Thanos offers a practical solution for deploying large models in resource-constrained environments.",
+        "identifiers": [
+          "SemanticScholar:d0656bdf977f2a82cf918ecd6a8cdd068f91a44b"
+        ],
+        "semantic_scholar_id": "d0656bdf977f2a82cf918ecd6a8cdd068f91a44b",
+        "canonical_id": "arXiv:2504.05346",
+        "arxiv_id": "2504.05346",
+        "doi": "10.48550/arXiv.2504.05346",
+        "authors": [
+          "Ivan D. Ilin",
+          "Peter Richtárik"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 556,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2302.08141",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2302.08141",
+        "id:SemanticScholar:c72b859ff9a349f6e0f2021a4eb9542316509949",
+        "id:arXiv:2302.08141",
+        "title:autoparallelizing large models with rhino a systematic approach on production ai platform",
+        "url:https://arxiv.org/abs/2302.08141"
+      ],
+      "record": {
+        "title": "Auto-Parallelizing Large Models with Rhino: A Systematic Approach on Production AI Platform",
+        "source_url": "https://arxiv.org/abs/2302.08141",
+        "year": 2023,
+        "published": "2023-02-16",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present Rhino, a system for accelerating tensor programs with automatic parallelization on AI platform for real production environment. It transforms a tensor program written for a single device into an equivalent distributed program that is capable of scaling up to thousands of devices with no user configuration. Rhino firstly works on a semantically independent intermediate representation of tensor programs, which facilitates its generalization to unprecedented applications. Additionally, it implements a task-oriented controller and a distributed runtime for optimal performance. Rhino explores on a complete and systematic parallelization strategy space that comprises all the paradigms commonly employed in deep learning (DL), in addition to strided partitioning and pipeline parallelism on non-linear models. Aiming to efficiently search for a near-optimal parallel execution plan, our analysis of production clusters reveals general heuristics to speed up the strategy search. On top of it, two optimization levels are designed to offer users flexible trade-offs between the search time and strategy quality. Our experiments demonstrate that Rhino can not only re-discover the expert-crafted strategies of classic, research and production DL models, but also identify novel parallelization strategies which surpass existing systems for novel models.",
+        "identifiers": [
+          "SemanticScholar:c72b859ff9a349f6e0f2021a4eb9542316509949"
+        ],
+        "semantic_scholar_id": "c72b859ff9a349f6e0f2021a4eb9542316509949",
+        "canonical_id": "arXiv:2302.08141",
+        "arxiv_id": "2302.08141",
+        "doi": "10.48550/arXiv.2302.08141",
+        "authors": [
+          "Shiwei Zhang",
+          "Lan-Song Diao",
+          "Siyu Wang",
+          "Zong-Yan Cao",
+          "Yiliang Gu",
+          "Chang Si",
+          "Ziji Shi",
+          "Zhen Zheng",
+          "Chuan Wu",
+          "W. Lin"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1336,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iccvw69036.2025.00594",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccvw69036.2025.00594",
+        "id:SemanticScholar:16021abe30f947651b0f23d081724b5a186b0a5a",
+        "title:litertoptimized int8 llm for raspberry pi4 deployment",
+        "url:https://doi.org/10.1109/ICCVW69036.2025.00594"
+      ],
+      "record": {
+        "title": "LiteRT-Optimized INT8 LLM for Raspberry Pi4 Deployment",
+        "source_url": "https://doi.org/10.1109/ICCVW69036.2025.00594",
+        "year": 2025,
+        "published": "2025-10-19",
+        "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated impressive capabilities across a wide range of natural language processing tasks. However, their high computational and memory requirements pose significant challenges for deployment on resource-constrained edge devices such as the Raspberry Pi. In this work, we investigate post-training quantization techniques to reduce the computational burden of LLMs while preserving their quality. We evaluate several LLMs under different precision settings and show that 8-bit quantization, especially when combined with runtime-level optimizations like LiteRT achieves up to 2× faster inference on Raspberry Pi, compared to framework-native formats, without relying on hardware-specific acceleration libraries (e.g., GPU, NNAPI, or EdgeTPU), and with negligible degradation in output quality. Our experiments highlight the practicality of lightweight LLM deployment on edge devices. These findings demonstrate the feasibility of real-time applications on low-power devices, enabling broader accessibility in edge environments. Our project page is available at https://rlghksdbs.github.io/EfficientLLM/.",
+        "identifiers": [
+          "SemanticScholar:16021abe30f947651b0f23d081724b5a186b0a5a"
+        ],
+        "semantic_scholar_id": "16021abe30f947651b0f23d081724b5a186b0a5a",
+        "doi": "10.1109/ICCVW69036.2025.00594",
+        "canonical_id": "DOI:10.1109/ICCVW69036.2025.00594",
+        "authors": [
+          "Kihwan Yoon",
+          "Hyeon-Cheol Moon",
+          "Aeri Kim",
+          "Sungjei Kim",
+          "Sang-Seol Lee",
+          "Sung-Joon Jang",
+          "Ganzorig Gankhuyag",
+          "Jinwoo Jeong"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 360,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.03762",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.03762",
+        "id:SemanticScholar:a5377bb72dc7d81a378f30b2a7f8ecfe02bc32d7",
+        "id:arXiv:2506.03762",
+        "title:ahakv adaptive holistic attentiondriven kv cache eviction for efficient inference of large language models",
+        "url:https://arxiv.org/abs/2506.03762"
+      ],
+      "record": {
+        "title": "AhaKV: Adaptive Holistic Attention-Driven KV Cache Eviction for Efficient Inference of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2506.03762",
+        "year": 2025,
+        "published": "2025-06-04",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have significantly advanced the field of Artificial Intelligence. However, their deployment is resource-intensive, not only due to the large number of model parameters but also because the (Key-Value) KV cache consumes a lot of memory during inference. While several works propose reducing the KV cache by evicting the unnecessary tokens, these approaches rely on accumulated attention score as eviction score to quantify the importance of the token. We identify the accumulated attention score is biased and it decreases with the position of the tokens in the mathematical expectation. As a result, the retained tokens concentrate on the initial positions, limiting model's access to global contextual information. To address this issue, we propose Adaptive holistic attention KV (AhaKV), it addresses the bias of the accumulated attention score by adaptively tuning the scale of softmax according the expectation of information entropy of attention scores. To make use of the holistic attention information in self-attention mechanism, AhaKV utilize the information of value vectors, which is overlooked in previous works, to refine the adaptive score. We show theoretically that our method is well suited for bias reduction. We deployed AhaKV on different models with a fixed cache budget. Experiments show that AhaKV successfully mitigates bias and retains crucial tokens across global context and achieve state-of-the-art results against other related work on several benchmark tasks.",
+        "identifiers": [
+          "SemanticScholar:a5377bb72dc7d81a378f30b2a7f8ecfe02bc32d7"
+        ],
+        "semantic_scholar_id": "a5377bb72dc7d81a378f30b2a7f8ecfe02bc32d7",
+        "canonical_id": "arXiv:2506.03762",
+        "arxiv_id": "2506.03762",
+        "doi": "10.48550/arXiv.2506.03762",
+        "authors": [
+          "Yifeng Gu",
+          "Zicong Jiang",
+          "Jian-Xiu Jin",
+          "K. Guo",
+          "Ziyang Zhang",
+          "Xiangming Xu"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 497,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.02620",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.02620",
+        "id:SemanticScholar:76c126c81f87f68b61c933916f6b0c6ca62c4a6e",
+        "id:arXiv:2507.02620",
+        "title:flowspec continuous pipelined speculative decoding for efficient distributed llm inference",
+        "url:https://arxiv.org/abs/2507.02620"
+      ],
+      "record": {
+        "title": "FlowSpec: Continuous Pipelined Speculative Decoding for Efficient Distributed LLM Inference",
+        "source_url": "https://arxiv.org/abs/2507.02620",
+        "year": 2025,
+        "published": "2025-07-03",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Distributed inference serves as a promising approach to enabling the inference of large language models (LLMs) at the network edge. It distributes the inference process to multiple devices to ensure that the LLMs can fit into the device memory. Recent pipeline-based approaches have the potential to parallelize communication and computation, which helps reduce inference latency. However, the benefit diminishes when the inference request at the network edge is sparse, where pipeline is typically at low utilization. To enable efficient distributed LLM inference at the edge, we propose \\textbf{FlowSpec}, a pipeline-parallel tree-based speculative decoding framework. FlowSpec incorporates three key mechanisms to improve decoding efficiency: 1) score-based step-wise verification prioritizes more important draft tokens to bring earlier accepted tokens; 2) efficient draft management to prune invalid tokens while maintaining correct causal relationship during verification; 3) dynamic draft expansion strategies to supply high-quality speculative inputs. These techniques work in concert to enhance both pipeline utilization and speculative efficiency. We evaluate FlowSpec on a real-world testbed with other baselines. Experimental results demonstrate that our proposed framework significantly improves inference speed across diverse models and configurations, achieving speedup ratios 1.37$\\times$-1.73$\\times$ compared to baselines. Our code is publicly available at \\href{https://github.com/Leosang-lx/FlowSpec#}{https://github.com/Leosang-lx/FlowSpec\\#}.",
+        "identifiers": [
+          "SemanticScholar:76c126c81f87f68b61c933916f6b0c6ca62c4a6e"
+        ],
+        "semantic_scholar_id": "76c126c81f87f68b61c933916f6b0c6ca62c4a6e",
+        "canonical_id": "arXiv:2507.02620",
+        "arxiv_id": "2507.02620",
+        "doi": "10.48550/arXiv.2507.02620",
+        "authors": [
+          "Xing Liu",
+          "Lizhuo Luo",
+          "Ming Tang",
+          "Chao Huang",
+          "Xu Chen"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 468,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.09001",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.09001",
+        "id:SemanticScholar:e0c4975bdd78fceb935fb9f41914662660c68e9b",
+        "id:arXiv:2508.09001",
+        "title:retrospective sparse attention for efficient longcontext generation",
+        "url:https://arxiv.org/abs/2508.09001"
+      ],
+      "record": {
+        "title": "Retrospective Sparse Attention for Efficient Long-Context Generation",
+        "source_url": "https://arxiv.org/abs/2508.09001",
+        "year": 2025,
+        "published": "2025-08-12",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) are increasingly deployed in long-context tasks such as reasoning, code generation, and multi-turn dialogue. However, inference over extended contexts is bottlenecked by the Key-Value (KV) cache, whose memory footprint grows linearly with sequence length and dominates latency at each decoding step. While recent KV cache compression methods identify and load important few tokens, they focus predominantly on input contexts and fail to address the cumulative attention errors that arise during long decoding. In this paper, we introduce RetroAttention, a novel KV cache update technique that retrospectively revises past attention outputs using newly arrived KV entries from subsequent decoding steps. By maintaining a lightweight output cache, RetroAttention enables past queries to be efficiently supplemented with more contexts, while incurring minimal latency overhead. This breaks the fixed-attention-output paradigm and allows continual correction of prior approximations. Extensive experiments on long-generation benchmarks show that RetroAttention consistently outperforms state-of-the-art (SOTA) KV compression methods, increasing effective KV exposure by up to 1.6$\\times$ and accuracy by up to 21.9\\%.",
+        "identifiers": [
+          "SemanticScholar:e0c4975bdd78fceb935fb9f41914662660c68e9b"
+        ],
+        "semantic_scholar_id": "e0c4975bdd78fceb935fb9f41914662660c68e9b",
+        "canonical_id": "arXiv:2508.09001",
+        "arxiv_id": "2508.09001",
+        "doi": "10.48550/arXiv.2508.09001",
+        "authors": [
+          "S. Choi",
+          "Beomseok Kang",
+          "Dongwon Jo",
+          "Jae-Joon Kim"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 428,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.inffus.2025.103774",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.inffus.2025.103774",
+        "id:SemanticScholar:a43aa4ac3312f4d7dd6b12355d026ad9f176264d",
+        "title:gfsvd global knowledgeinfused singular value decomposition of large language models",
+        "url:https://doi.org/10.1016/j.inffus.2025.103774"
+      ],
+      "record": {
+        "title": "GF-SVD: Global knowledge-infused singular value decomposition of large language models",
+        "source_url": "https://doi.org/10.1016/j.inffus.2025.103774",
+        "year": 2025,
+        "published": "2025-09-01",
+        "venue": "Information Fusion",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:a43aa4ac3312f4d7dd6b12355d026ad9f176264d"
+        ],
+        "semantic_scholar_id": "a43aa4ac3312f4d7dd6b12355d026ad9f176264d",
+        "doi": "10.1016/j.inffus.2025.103774",
+        "canonical_id": "DOI:10.1016/j.inffus.2025.103774",
+        "authors": [
+          "Xiangxiang Gao",
+          "Weisheng Xie",
+          "Yuhan Lin",
+          "Chen Hang",
+          "Hong-Yan Han",
+          "Xiao-Long Xu",
+          "Bo Liu"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 408,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.18763",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.18763",
+        "id:SemanticScholar:e2bed84a1fcf417418ae978afe7b91bae630fe86",
+        "id:arXiv:2509.18763",
+        "title:bivlm pushing ultralow precision posttraining quantization boundaries in visionlanguage models",
+        "url:https://arxiv.org/abs/2509.18763"
+      ],
+      "record": {
+        "title": "Bi-VLM: Pushing Ultra-Low Precision Post-Training Quantization Boundaries in Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2509.18763",
+        "year": 2025,
+        "published": "2025-09-23",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We address the critical gap between the computational demands of vision-language models and the possible ultra-low-bit weight precision (bitwidth $\\leq2$ bits) we can use for higher efficiency. Our work is motivated by the substantial computational cost and memory requirements of VLMs, which restrict their applicability in hardware-constrained environments. We propose Bi-VLM, which separates model weights non-uniformly based on the Gaussian quantiles. Our formulation groups the model weights into outlier (salient) and multiple inlier (unsalient) subsets, ensuring that each subset contains a proportion of weights corresponding to its quantile in the distribution. We propose a saliency-aware hybrid quantization algorithm and use it to quantize weights by imposing different constraints on the scaler and binary matrices based on the saliency metric and compression objective. We have evaluated our approach on different VLMs. For the language model part of the VLM, our Bi-VLM outperforms the SOTA by 3%-47% on the visual question answering task in terms of four different benchmarks and three different models. For the overall VLM, our Bi-VLM outperforms the SOTA by 4%-45%. We also perform token pruning on the quantized models and observe that there is redundancy of image tokens 90% - 99% in the quantized models. This helps us to further prune the visual tokens to improve efficiency.",
+        "identifiers": [
+          "SemanticScholar:e2bed84a1fcf417418ae978afe7b91bae630fe86"
+        ],
+        "semantic_scholar_id": "e2bed84a1fcf417418ae978afe7b91bae630fe86",
+        "canonical_id": "arXiv:2509.18763",
+        "arxiv_id": "2509.18763",
+        "doi": "10.48550/arXiv.2509.18763",
+        "authors": [
+          "Xi-Jun Wang",
+          "Jun-Yun Huang",
+          "Rayyan Abdalla",
+          "Cheng-Yuan Zhang",
+          "Ruiqi Xian",
+          "Dinesh Manocha"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 386,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:54edc97bef1a1b643eea29c01c4a5823e0a179a845c522414e6554d46593003e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

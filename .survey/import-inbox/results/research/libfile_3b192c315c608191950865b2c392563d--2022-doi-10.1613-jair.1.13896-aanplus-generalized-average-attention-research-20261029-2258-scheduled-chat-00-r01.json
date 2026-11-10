@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "8bfdc7715e143d9cf0449bd026267d83957ca1f4d299461d42ee53446924d8b4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_3b192c315c608191950865b2c392563d--2022-doi-10.1613-jair.1.13896-aanplus-generalized-average-attention-research-20261029-2258-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.1613/jair.1.13896",
+  "worker_completed_at": "2026-10-29T23:09:00+09:00",
+  "worker_run_key": "20261029-2258-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5110,
+    "body_paragraphs": 28,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 146,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 146 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 146 < 500"
+  ],
+  "processed_at": "2026-10-29T14:49:40+00:00"
+}

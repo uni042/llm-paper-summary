@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7ad51768c6fd5ad0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s11432-020-3245-7",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s11432-020-3245-7",
+    "identity_tokens": [
+      "DOI:10.1007/s11432-020-3245-7"
+    ],
+    "reason": "題名に明示された研究対象はRRAMベースのDNN推論アクセラレータ向けニューラルネットワーク構造探索であり、LLM・Transformerの推論、KVキャッシュ、MoE、生成サービングを対象にした方式ではない。タイトル段階で対象外と判断した。本文・要旨は未確認のため、個別の性能数値・手法詳細は推測しない。",
+    "first_checked_at": "2026-10-18T10:00:27+00:00",
+    "last_checked_at": "2026-10-18T10:00:27+00:00",
+    "linked_from": [],
+    "title": "NAS4RRAM: neural network architecture search for inference on RRAM-based accelerators"
+  },
+  "processed_at": "2026-10-18T10:00:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7ad51768c6fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

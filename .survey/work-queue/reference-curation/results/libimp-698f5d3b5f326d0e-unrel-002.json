@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-698f5d3b5f326d0e-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.13897",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.13897",
+    "identity_tokens": [
+      "arXiv:2310.13897"
+    ],
+    "reason": "一次要旨はTransformerの形式言語認識能力に関する理論研究で、システム効率が対象ではない。",
+    "first_checked_at": "2026-10-05T12:39:22+00:00",
+    "last_checked_at": "2026-10-05T12:39:22+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+    ],
+    "title": "Masked Hard-Attention Transformers Recognize Exactly the Star-Free Languages"
+  },
+  "processed_at": "2026-10-05T12:39:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-698f5d3b5f32",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

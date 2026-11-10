@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1f6cb3412067a9334950ec2fcfcfdb0e102a159c7b89571bccbaae42ef0c4f95",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_d9432e76dc408191ac9ed1af530fb63b--2025-2508.06084-adaptinfer-dynamic-text-vision-pruning-returned-repair-20261028-0400-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2508.06084",
+  "worker_completed_at": "2026-10-28T04:03:31+09:00",
+  "worker_run_key": "20261028-0400-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5036,
+    "body_paragraphs": 27,
+    "method_chars": 1271,
+    "method_paragraphs": 7,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-27T20:25:56+00:00"
+}

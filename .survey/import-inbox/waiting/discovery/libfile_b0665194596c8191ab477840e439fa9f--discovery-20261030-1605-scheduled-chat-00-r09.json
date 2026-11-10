@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1605-scheduled-chat-00/r09",
+  "reference_main_sha": "fba71cd998a03c8e42e30fa045e8f69c76827721",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.07724",
+      "identity_tokens": [
+        "arXiv:2607.07724"
+      ],
+      "title": "Uncertainty-gated selection for block-sparse attention",
+      "reason": "arXiv一次要旨はblock-sparse attentionのtop-k境界のスコア差が小さいQueryだけ選択ブロック数を倍増するvalue-of-information routerを提案。Questと併用してLongBench-v2でpaired recallを0.47から0.75へ改善し、128Kでdenseの0.62〜0.80倍のwall timeと報告。",
+      "source_url": "https://arxiv.org/abs/2607.07724",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 410
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.05871",
+      "identity_tokens": [
+        "arXiv:2506.05871"
+      ],
+      "title": "BestServe: Serving Strategies with Optimal Goodput in Collocation and Disaggregation Architectures",
+      "reason": "arXiv一次要旨はcollocated/disaggregated LLM servingのgoodputをroofline・CPU-GPU dispatchを使う軽量シミュレータで推定し、運用構成をランキングするBestServeを提案。標準CPUで数分で推定し、実測との誤差20%以内を報告。",
+      "source_url": "https://arxiv.org/abs/2506.05871",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 411
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.16875",
+      "identity_tokens": [
+        "arXiv:2509.16875"
+      ],
+      "title": "Towards Interpretable and Efficient Attention: Compressing All by Contracting a Few",
+      "reason": "arXiv一次要旨は少数の代表トークンへの収縮で線形計算量を目指すContract-and-Broadcast Self-Attentionを提案。主な実験は視覚タスクであり、自己回帰LLMの推論配信や実機レイテンシを直接評価しないため境界的。",
+      "source_url": "https://arxiv.org/abs/2509.16875",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 414
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.26940",
+      "identity_tokens": [
+        "arXiv:2604.26940"
+      ],
+      "title": "Select to Think: Unlocking SLM Potential with Local Sufficiency",
+      "reason": "arXiv一次要旨は小型モデルのtop-Kに大規模モデルが選ぶトークンが含まれる局所充足性を利用し、SLMの候補再ランキングへ蒸留するS2T-Localを提案。推論時に大規模モデルを呼ばずに推論精度を改善し、低コストのSLM配信に寄与。",
+      "source_url": "https://arxiv.org/abs/2604.26940",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 416
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.06185",
+      "identity_tokens": [
+        "arXiv:2605.06185"
+      ],
+      "title": "Event-Causal RAG: A Retrieval-Augmented Generation Framework for Long Video Reasoning in Complex Scenarios",
+      "reason": "arXiv一次要旨は長動画を音声・映像sentinelで意味的イベントへ分割し、状態-イベント-状態のグラフ記憶から関連部分を検索するEC-RAGを提案。長動画を全トークンとしてLLMに入力する負荷を避ける推論時の検索・文脈管理に関連。",
+      "source_url": "https://arxiv.org/abs/2605.06185",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 421
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.07632",
+      "identity_tokens": [
+        "arXiv:2606.07632"
+      ],
+      "title": "Evaluation of ML Resource Utilization Requires Model Life Cycle Assessment",
+      "reason": "arXiv一次要旨はAIの訓練・推論・ハードウェア製造を含むライフサイクル全体の環境影響評価を提唱するposition paper。LLM推論アルゴリズム、メモリ管理、カーネル、配信制御の具体的技術は扱わず、サーベイの技術スコープ外。",
+      "source_url": "https://arxiv.org/abs/2606.07632",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 422
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.37241",
+      "identity_tokens": [
+        "arXiv:2609.37241"
+      ],
+      "title": "Trident: Unifying Guarded Dispatch and Host Execution for PyTorch Triton Workloads",
+      "reason": "arXiv一次要旨はTritonカーネル呼出し時のPython・specialization guard・引数準備のhost側負荷をnative SCMへ統合するTridentを提案。短いGPUカーネルで支配的になりがちなCPU dispatch遅延を削減する実行基盤で、LLM推論カーネルへ関連。",
+      "source_url": "https://arxiv.org/abs/2609.37241",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 423
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.24847",
+      "identity_tokens": [
+        "arXiv:2609.24847"
+      ],
+      "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+      "reason": "arXiv一次要旨は投機的復号のdraft/verifyでGEMVとGEMMの計算特性が変わる問題に対し、tile内のsystolic/vectorモードとtile間並列度を切り替えるSPECTRAを提案。エッジLLMの投機的復号ハードウェアに直接関連。",
+      "source_url": "https://arxiv.org/abs/2609.24847",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 427
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.18916",
+      "identity_tokens": [
+        "arXiv:2609.18916"
+      ],
+      "title": "Higher-order pruning of experts in mixture-of-experts language models",
+      "reason": "arXiv一次要旨はMoE expertの相互作用を考慮する二階の枝刈り目的HOPEを提案。従来の独立expert評価を一般化し、最大122BのMoEで高枝刈り率の品質保持を改善。MoE推論のモデル容量削減に直接関連。",
+      "source_url": "https://arxiv.org/abs/2609.18916",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 428
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.22147",
+      "identity_tokens": [
+        "arXiv:2512.22147"
+      ],
+      "title": "GPU Kernel Optimization Beyond Full Builds: An LLM Framework with Minimal Executable Programs",
+      "reason": "arXiv一次要旨は巨大アプリの全ビルドを避け、GPUホットスポットをMinimal Executable Programとして抽出しLLMで反復最適化する枠組みを提案。GPUカーネル最適化に関連するが、主実験はHPCアプリでありLLM推論特化の実測ではないため境界的。",
+      "source_url": "https://arxiv.org/abs/2512.22147",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 429
+    }
+  ]
+}

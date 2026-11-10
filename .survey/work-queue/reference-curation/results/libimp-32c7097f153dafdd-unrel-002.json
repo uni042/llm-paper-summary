@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-32c7097f153dafdd-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.26256",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.26256",
+    "identity_tokens": [
+      "arXiv:2604.26256"
+    ],
+    "reason": "DORA is explicitly an asynchronous reinforcement-learning system for language-model training and post-training. Its system contributions concern rollout collection, learner updates, training scalability and training throughput; the primary evaluation does not target inference-time serving or decoding efficiency. It is excluded because the worklist's candidate scope covers inference.",
+    "first_checked_at": "2026-09-30T09:52:33+00:00",
+    "last_checked_at": "2026-10-03T16:01:59+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 429",
+      "workers/discovery-02/ready/20260927-u-wave10/manifest.json#candidate[5]"
+    ],
+    "title": "DORA: A Scalable Asynchronous Reinforcement Learning System for Language Model Training"
+  },
+  "processed_at": "2026-10-03T16:01:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-32c7097f153d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

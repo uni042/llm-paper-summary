@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2809162627ab0377-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.17123",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.17123",
+    "identity_tokens": [
+      "arXiv:2606.17123"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.17123. Abstract summary: In open large language model (LLM) ecosystems, models are frequently adapted across multiple domains and applications, forming multi-stage derivation chains. Consequently, tracking and verifying historical contributions is essential for model provenance and intellectual property protection. However, existing watermarking methods Out of scope: Model provenance watermarking/security.",
+    "first_checked_at": "2026-10-05T12:05:38+00:00",
+    "last_checked_at": "2026-10-05T12:05:38+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "LineageMark: Multi-user White-box Watermarking for Contribution Tracing in Model Derivation Chains"
+  },
+  "processed_at": "2026-10-05T12:05:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2809162627ab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ef279bc118916ec6-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.10154",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.10154",
+    "identity_tokens": [
+      "arXiv:2606.10154"
+    ],
+    "reason": "量子化checkpointの安全性を評価する監査研究であり、推論効率化手法ではない。",
+    "first_checked_at": "2026-10-05T03:57:01+00:00",
+    "last_checked_at": "2026-10-05T03:57:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+    ],
+    "title": "Quality Is Not a Safety Proxy Under Quantization"
+  },
+  "processed_at": "2026-10-05T03:57:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef279bc11891",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

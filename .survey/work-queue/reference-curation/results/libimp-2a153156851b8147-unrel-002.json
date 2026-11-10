@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2a153156851b8147-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.06493",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.06493",
+    "identity_tokens": [
+      "arXiv:2606.06493"
+    ],
+    "reason": "HANDOFF studies humanoid control and policy transfer; no LLM inference/serving efficiency method is evaluated.",
+    "first_checked_at": "2026-10-07T12:00:49+00:00",
+    "last_checked_at": "2026-10-07T12:00:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+    ],
+    "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers"
+  },
+  "processed_at": "2026-10-07T12:00:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2a153156851b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

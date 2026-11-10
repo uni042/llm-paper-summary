@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f3d512e4571af2d-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.06863",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.06863",
+    "identity_tokens": [
+      "SemanticScholar:74cee765655f559191c3222bc9fe63b31295d3d3",
+      "arXiv:2511.06863"
+    ],
+    "reason": "The work improves visual-token quantization/codebook utilization for generative models; compressed visual tokens may affect inference cost, but the abstract reports representation quality rather than measured LLM/runtime efficiency.",
+    "first_checked_at": "2026-10-14T14:34:38+00:00",
+    "last_checked_at": "2026-10-14T14:34:38+00:00",
+    "linked_from": [
+      "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VAEVQ: Enhancing Discrete Visual Tokenization through Variational Modeling"
+  },
+  "processed_at": "2026-10-14T14:34:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f3d512e4571",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

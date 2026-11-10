@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0958-scheduled-chat-00/r01",
+  "reference_main_sha": "289552474aa320e0664b5cfdf2e6087cc159fc0a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.25012",
+      "identity_tokens": [
+        "id:arXiv:2610.25012",
+        "id:DOI:10.48550/arXiv.2610.25012"
+      ],
+      "title": "Conjugate Compilation: Self-Improving Agentic Co-Compilation for Speculative Decoding",
+      "reason": "投機デコードのdraftとtargetを個別コンパイルするのではなく、両モデルを同じタイルに混在させるオペランド配置とGEMM・非GEMMの共置を探索する。LLMが共同コンパイル案を修正し、実測結果とコンパイラ診断をモンテカルロ木探索へ戻す。B300/RTX 5090の6構成で通常実行比の幾何平均1.37倍、interleaved kernelでは1.45倍のround高速化を報告。推論カーネル・投機デコードの直接的な実装最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.25012",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:02:52+09:00",
+      "last_checked_at": "2026-11-02T10:02:52+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.05106",
+      "identity_tokens": [
+        "id:arXiv:2610.05106",
+        "id:DOI:10.48550/arXiv.2610.05106"
+      ],
+      "title": "SharpDraft: Accelerating Long-Context Speculative Decoding with Cardinality-Aware Query Scaling",
+      "reason": "長文脈でsoftmaxの分母が増えると上位Keyの注意質量が薄まり、draft受理率が低下する問題に対し、Key集合の要素数を考慮してQueryを閉形式の係数でスケーリングする。学習不要でDFlash/PARD/EAGLE 3.1へ適用し、AIME-26・GPQA-Diamond・LongGenBench Diaryでtarget単独比2.59～3.19倍の幾何平均エンドツーエンド高速化を報告。推論時の投機受理率・速度を直接改善するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.05106",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:02:52+09:00",
+      "last_checked_at": "2026-11-02T10:02:52+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.21463",
+      "identity_tokens": [
+        "id:arXiv:2610.21463",
+        "id:DOI:10.48550/arXiv.2610.21463"
+      ],
+      "title": "Trajectory-Level Speculation with Semantic Verification for Tool-Using Agents",
+      "reason": "SpecAgentは弱いモデルが読み取り専用ツールを実行しながら複数stepを先行生成し、環境変更を伴う最初の操作は保留する。強いモデルはその軌跡を1回のprefillで意味検証し、妥当な最長prefixを確定して最初の拒否stepを修復する。τ²-Benchで強モデルの成功率から1ポイント以内に迫り、メモリトラフィックと所要時間を概ね半減。エージェント推論の実行プロトコル・高速化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.21463",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:02:52+09:00",
+      "last_checked_at": "2026-11-02T10:02:52+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.23528",
+      "identity_tokens": [
+        "id:arXiv:2603.23528",
+        "id:DOI:10.48550/arXiv.2603.23528"
+      ],
+      "title": "The Compression Paradox in LLM Inference: Provider-Dependent Energy Effects of Prompt Compression",
+      "reason": "3プロバイダ、5ベンチマーク、4圧縮率で28,421回のAPI試験を行い、プロンプト圧縮によるエネルギー代理指標と回答品質の変化を調べる。圧縮率0.7で全体pass率が26.0%から1.5%へ低下し、DeepSeekでは出力長が増大する条件も観測。推論効率評価として関連する一方、電力は直接計測でなくトークン数に基づく校正代理値で、実行ランタイムの新規最適化ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2603.23528",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:02:52+09:00",
+      "last_checked_at": "2026-11-02T10:02:52+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20224",
+      "identity_tokens": [
+        "id:arXiv:2603.20224",
+        "id:DOI:10.48550/arXiv.2603.20224"
+      ],
+      "title": "Beyond Test-Time Compute Strategies: Advocating Energy-per-Token in LLM Inference",
+      "reason": "小型モデルのCoT・多数決と大型モデルの精度・エネルギー関係をMMLUで比較し、同一ハードウェアでも入力・出力トークンの構成によってenergy/tokenが非線形に変わる点を論じる。推論深度制御とエネルギー認識ルーティングを提案するが、要旨は主に評価指標・方針の議論で、新しいサービング実装や定量的なシステム高速化の実証が中心ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2603.20224",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:02:52+09:00",
+      "last_checked_at": "2026-11-02T10:02:52+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17966",
+      "identity_tokens": [
+        "id:arXiv:2610.17966",
+        "id:DOI:10.48550/arXiv.2610.17966"
+      ],
+      "title": "BELT: BEhavior-Aligned Low-Rank KV Cache Compression with Learned Top-k Rank Allocation",
+      "reason": "BELTはKeyそのものの再構成誤差ではなく注意分布の一致を狙う低ランク目的関数を使い、微分可能なsoft selectionから配備時のhard selectionへ移る全層rank配分器で予算を守る。3種類のLLMでKVの低ランク圧縮最大70%、LongBenchで比較法を最大23.3ポイント上回り、量子化併用時はKV容量最大17.8倍削減、Tritonカーネルでdecode throughput最大3.3倍を報告。推論KV圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2610.17966",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:02:52+09:00",
+      "last_checked_at": "2026-11-02T10:02:52+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.28671",
+      "identity_tokens": [
+        "id:arXiv:2610.28671",
+        "id:DOI:10.48550/arXiv.2610.28671"
+      ],
+      "title": "Accelerating CPU Speculative Decoding via Unified Graph Execution and Transactional KV Isolation",
+      "reason": "SubTernaryはCPU投機デコードのdraft/target切替とKV rollbackのコストに対し、両グラフを同一メモリアリーナ・常駐スレッドプールで実行し、投機KVを固定scratchpadへ隔離してポインタをゼロコピーで戻す。AVX2 256bitの三値SIMDカーネルも評価し、ランタイム部分がスループット改善の35.0%、カーネル部分が6.0%を担うと分析。llama.cppの投機デコード比1.35倍、自己回帰比3.99倍を報告しaccept。",
+      "source_url": "https://arxiv.org/abs/2610.28671",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:02:52+09:00",
+      "last_checked_at": "2026-11-02T10:02:52+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39853",
+      "identity_tokens": [
+        "id:arXiv:2610.39853",
+        "id:DOI:10.48550/arXiv.2610.39853"
+      ],
+      "title": "KV Cache Quantization for Diffusion Language Models",
+      "reason": "拡散LLMではmask解除に伴い双方向表現が変化するため、再利用KVは量子化前から完全再計算と異なる。TRACEがprompt-answer対から実際のmask解除軌跡に近い校正状態を作り、dLLM-KVQが層別のK重要成分を高精度保持しVは低bit量子化する。LLaDA・DreamでGSM8K/HumanEval/MATH/MBPPを評価し、報告された2/4bitのprefix/dual cache設定で量子化手法中の平均最高点を得る。推論KVの直接最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.39853",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:02:52+09:00",
+      "last_checked_at": "2026-11-02T10:02:52+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.33719",
+      "identity_tokens": [
+        "id:arXiv:2610.33719",
+        "id:DOI:10.48550/arXiv.2610.33719"
+      ],
+      "title": "ZipFusion: Fusing Lossless KV Decompression with Attention for Efficient LLM Decoding",
+      "reason": "ZipFusionは可逆圧縮KVをGPUメモリで全展開せず、attentionカーネルのレジスタ内でbit演算により復元しながら消費する。圧縮で空いた容量を層間に再配分し、生成中の要求に必要なKV領域を先に確保する。FlashInfer実装をSGLangに統合し、H100でdecode attention約1.25倍、8K文脈のmodel decode throughput最大26.3%改善、最大batch時に他の可逆KV圧縮方式比最大2.76倍を報告。推論帯域・容量のシステム最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.33719",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:02:52+09:00",
+      "last_checked_at": "2026-11-02T10:02:52+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.13708",
+      "identity_tokens": [
+        "id:arXiv:2610.13708",
+        "id:DOI:10.48550/arXiv.2610.13708"
+      ],
+      "title": "Adaptive DHiSparse: Speculative Decoding over a Load-Adaptive KV Hierarchy",
+      "reason": "Adaptive DHiSparseはHiSparseのCPU側KV履歴と疎な取得を投機デコードへ拡張し、負荷に応じてGPUに残す追加履歴を増減する。DSpark/DFlash2の受理規則を維持し、draft KVのwindow-bounded ring、共有missing-row retrieval、層群間verification staging再利用を組み合わせる。GLM-5.3の100K文脈・同時128でDFlash2使用時793 output tokens/s/GPU、HiSparse比1.45倍を報告。KV階層管理と投機サービングに直接該当。",
+      "source_url": "https://arxiv.org/abs/2610.13708",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:02:52+09:00",
+      "last_checked_at": "2026-11-02T10:02:52+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

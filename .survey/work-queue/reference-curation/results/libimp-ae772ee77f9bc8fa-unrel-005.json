@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae772ee77f9bc8fa-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.26777",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.26777",
+    "identity_tokens": [
+      "arXiv:2609.26777"
+    ],
+    "reason": "SWE-Serve benchmarks agentic software-engineering production inference serving but the abstract presents a benchmark/evaluation rather than an inference optimization method or resource-saving system.",
+    "first_checked_at": "2026-10-05T05:54:04+00:00",
+    "last_checked_at": "2026-10-05T05:54:04+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+    ],
+    "title": "SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving"
+  },
+  "processed_at": "2026-10-05T05:54:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae772ee77f9b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

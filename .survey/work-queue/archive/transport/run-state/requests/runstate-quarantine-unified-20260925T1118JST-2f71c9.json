@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "runstate-quarantine-unified-20260925T1118JST-2f71c9",
+  "run_key": "scheduled-chat-00-20260925T105809JST-2f71c9",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-25T10:58:09+09:00",
+  "runtime_condition": "none",
+  "write_blocked_job": {
+    "job_id": "job-research-26539a1cc6234f61",
+    "claim_id": "claim-preload-dbfc952b1b29f272074370be",
+    "attempt_id": "attempt-preload-dbfc952b1b29f272074370be",
+    "reason": "platform_content_write_rejected_after_bundle_fallback",
+    "observed_error": "Record-slot update and quality_preflight_v1 fallback bundle were rejected by platform safety checks after full primary-source reading."
+  }
+}

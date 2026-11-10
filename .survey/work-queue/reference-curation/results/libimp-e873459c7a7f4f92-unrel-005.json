@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e873459c7a7f4f92-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.07470",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.07470",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2404.07470",
+      "arXiv:2404.07470"
+    ],
+    "reason": "継続学習で知識・技能を追加するJARe/DTKR方式が主貢献で、最終適用先はモデル更新・学習。推論高速化の対象外。",
+    "first_checked_at": "2026-10-03T13:23:14+00:00",
+    "last_checked_at": "2026-10-03T13:23:14+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Scalable Language Model with Generalized Continual Learning"
+  },
+  "processed_at": "2026-10-03T13:23:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e873459c7a7f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

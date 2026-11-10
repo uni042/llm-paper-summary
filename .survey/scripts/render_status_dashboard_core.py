@@ -1,0 +1,1390 @@
+#!/usr/bin/env python3
+"""Render STATUS.md from the direct-evidence collector with a counts-first layout."""
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+from typing import Any
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+import build_status_dashboard as evidence
+import forward_citation_state
+
+
+KINDS = ("research", "audit", "discovery")
+LABELS = {
+    "research": "Research",
+    "audit": "Audit",
+    "discovery": "Discovery",
+    "other": "Other/Unknown",
+}
+
+
+def _active_kind(row: dict[str, Any]) -> str:
+    kind = row["job"]["kind"]
+    return kind if kind in KINDS else "other"
+
+
+def _candidate_count(submissions: list[dict[str, Any]]) -> int:
+    count = 0
+    for submission in submissions:
+        payload = submission["payload"]
+        candidates = payload.get("candidates")
+        stats = payload.get("discovery_stats")
+        if isinstance(candidates, list):
+            count += len(candidates)
+        elif isinstance(stats, dict):
+            count += int(stats.get("candidate_count") or 0)
+    return count
+
+
+
+
+def _structured_reference_progress(repo_root: Path) -> dict[str, Any]:
+    """Recompute unified Discovery-candidate progress from current durable state.
+
+    The function name is retained for compatibility with older callers, but the
+    displayed metric is no longer limited to structured backward references.
+    It combines:
+    - collected papers (processed/accepted),
+    - nonterminal Research/Audit jobs (processed/accepted into Research),
+    - durable unrelated/borderline classifications, and
+    - the current deduplicated Discovery candidate surface built from both
+      structured backward references and forward-citation candidates.
+
+    Identity aliases are deduplicated with the same helper used by worker
+    worklists, so DOI/arXiv/title aliases are not intentionally double-counted.
+    """
+    try:
+        import build_worker_worklist
+        import citation_graph
+        import reference_pool
+
+        papers = citation_graph.load_records(repo_root)
+        paper_rows = [
+            {
+                "canonical_id": paper.canonical_id,
+                "identifiers": sorted(paper.identifiers),
+                "title": paper.meta.get("title"),
+                "source_url": paper.meta.get("source_url") or paper.meta.get("source"),
+            }
+            for paper in papers
+        ]
+
+        def ledger_rows(path: Path) -> list[dict[str, Any]]:
+            payload = evidence._load_json(path)
+            records = payload.get("records") if isinstance(payload, dict) else None
+            return [
+                dict(row, canonical_id=row.get("canonical_id") or key)
+                for key, row in (records.items() if isinstance(records, dict) else [])
+                if isinstance(row, dict)
+            ]
+
+        unrelated_rows = ledger_rows(
+            repo_root / reference_pool.DEFAULT_UNRELATED_LEDGER
+        )
+        borderline_rows = ledger_rows(
+            repo_root / reference_pool.DEFAULT_BORDERLINE_LEDGER
+        )
+
+        jobs = build_worker_worklist._jobs(repo_root)
+        terminal = {"completed", "rejected", "superseded", "blocked_permanent"}
+        research_rows = [
+            row
+            for row in jobs
+            if row.get("type") in {"research", "audit"}
+            and str(row.get("status") or "").strip().lower() not in terminal
+        ]
+
+        discovery_all, _ = build_worker_worklist._discovery_candidates(repo_root)
+        pending_rows = build_worker_worklist._exclude_reserved_identities(
+            discovery_all,
+            reserved_rows=research_rows,
+        )
+        seen: set[str] = set()
+
+        def count_new(rows: list[dict[str, Any]]) -> int:
+            count = 0
+            for row in rows:
+                tokens = build_worker_worklist._worklist_identity_tokens(row)
+                if not tokens:
+                    continue
+                duplicate = bool(seen.intersection(tokens))
+                seen.update(tokens)
+                if duplicate:
+                    continue
+                count += 1
+            return count
+
+        represented_count = count_new(paper_rows)
+        unrelated_count = count_new(unrelated_rows)
+        borderline_count = count_new(borderline_rows)
+        research_count = count_new(research_rows)
+        # Filter exactly the same unique, unprocessed identities counted in
+        # STATUS, not the larger worklist presentation pool. Otherwise a
+        # candidate already represented by a title/DOI alias inflates the
+        # prefilter denominator and makes the apparent reduction inconsistent.
+        unique_pending_rows: list[dict[str, Any]] = []
+        for row in pending_rows:
+            tokens = build_worker_worklist._worklist_identity_tokens(row)
+            if not tokens:
+                continue
+            duplicate = bool(seen.intersection(tokens))
+            seen.update(tokens)
+            if not duplicate:
+                unique_pending_rows.append(row)
+        pending_count = len(unique_pending_rows)
+
+        import discovery_relevance_prefilter
+        _worklist_rows, prefilter_metrics = discovery_relevance_prefilter.triage_worklist(
+            unique_pending_rows,
+            discovery_relevance_prefilter.load_policy(repo_root),
+            root=repo_root,
+        )
+        del _worklist_rows
+
+        processed_count = (
+            represented_count
+            + unrelated_count
+            + borderline_count
+            + research_count
+        )
+        total_count = processed_count + pending_count
+        backward_pool = reference_pool.build_reference_pool(repo_root)
+        forward_state = forward_citation_state.load(
+            repo_root / ".survey/work-queue/forward-citation-sweep.json", {}
+        )
+        forward_candidates = (
+            forward_state.get("candidates")
+            if isinstance(forward_state, dict)
+            else None
+        )
+        forward_pending = (
+            len(forward_candidates)
+            if isinstance(forward_candidates, dict)
+            else 0
+        )
+    except Exception as exc:
+        return {
+            "available": False,
+            "error": f"live Discovery-candidate recomputation failed: {type(exc).__name__}: {exc}",
+        }
+
+    return {
+        "available": True,
+        "source": "live_recompute",
+        "total": total_count,
+        "processed": processed_count,
+        "remaining": pending_count,
+        "represented": represented_count,
+        "research": research_count,
+        "unrelated": unrelated_count,
+        "borderline": borderline_count,
+        "backward_pending_raw": int(backward_pool.get("candidate_count") or 0),
+        "forward_pending_raw": forward_pending,
+        "combined_pending_before_research_exclusion": len(discovery_all),
+        "paper_count": len(papers),
+        "prefilter": prefilter_metrics,
+    }
+
+
+def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]:
+    lines = ["## 探索候補の処理状況", ""]
+    if progress.get("available") is not True:
+        lines.extend([
+            "- Discovery探索候補の進捗を再計算できませんでした。",
+            f"- 診断: {progress.get('error') or 'unknown error'}",
+            "",
+        ])
+        return lines
+
+    total = int(progress["total"])
+    processed = int(progress["processed"])
+    remaining = int(progress["remaining"])
+    ratio = (processed / total * 100.0) if total else 100.0
+    lines.extend([
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| 探索候補総数 | **{total}** |",
+        f"| 処理済み | **{processed}** |",
+        f"| 未処理Discovery候補 | **{remaining}** |",
+        f"| 収録済み | **{progress['represented']}** |",
+        f"| Research / Audit候補へ昇格済み | **{progress['research']}** |",
+        f"| 無関係として除外 | **{progress['unrelated']}** |",
+        f"| 微妙として除外 | **{progress['borderline']}** |",
+        "",
+        "### 探索候補の事前フィルタリング（可逆）",
+        "",
+        "| 判定段階 | 件数 |",
+        "|---|---:|",
+        f"| 未処理候補（フィルタ前） | **{remaining}** |",
+        f"| 機械規則による暫定隔離 | **{progress.get('prefilter', {}).get('rule_quarantine_count', 0)}** |",
+        f"| 拡張機械規則による追加隔離 | **{progress.get('prefilter', {}).get('expanded_rule_applied_count', 0)}** |",
+        f"| 機械規則通過後 | **{progress.get('prefilter', {}).get('quota_eligible_count', remaining)}** |",
+        f"| 系統内前方引用スコアによる選抜保留 | **{progress.get('prefilter', {}).get('quota_quarantine_count', 0)}** |",
+        f"| 暫定隔離合計 | **{progress.get('prefilter', {}).get('quarantine_count', 0)}** |",
+        f"| **読解可能候補（隔離後）** | **{progress.get('prefilter', {}).get('reviewable_count', remaining)}** |",
+        f"| 前方引用が同一系統で2本以上の候補 | **{progress.get('prefilter', {}).get('forward_lineage_2plus_count', 0)}** |",
+        f"| 前方引用が同一系統で3本以上の候補 | **{progress.get('prefilter', {}).get('forward_lineage_3plus_count', 0)}** |",
+        "",
+        f"- 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。",
+        f"- 可逆選抜: **{progress.get('prefilter', {}).get('quota_mode', 'off')}** / 機械規則通過候補から **{progress.get('prefilter', {}).get('quota_retain_percent', 100)}%** / 目標 **{progress.get('prefilter', {}).get('quota_target_count', remaining)}件**（監査復活枠なし）。",
+        "",
+        "### 拡張規則の判定と適用状況",
+        "",
+        f"- 拡張規則モード: **{progress.get('prefilter', {}).get('expanded_rule_mode', 'off')}**",
+        f"- 拡張規則に一致した候補: **{progress.get('prefilter', {}).get('expanded_rule_shadow_count', 0)}件**（基本規則との重複を除去）",
+        f"- 実際の追加隔離: **{progress.get('prefilter', {}).get('expanded_rule_applied_count', 0)}件**",
+        f"- 分野別内訳: **{progress.get('prefilter', {}).get('expanded_rule_reason_counts', {})}**",
+        "- 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の自動監査再投入は行わない。",
+        "",
+        f"- モード: 規則 **{progress.get('prefilter', {}).get('mode', 'off')}** / 教師あり分類器は撤去済み。",
+        "- 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。",
+        "",
+        f"- 消化率: **{ratio:.1f}%**",
+        f"- 現在の生在庫: 後方references **{progress['backward_pending_raw']}件** / "
+        f"前方引用 **{progress['forward_pending_raw']}件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。",
+        f"- 前方・後方を統合してidentity重複を除いた未処理面は **{progress['combined_pending_before_research_exclusion']}件**。"
+        f"そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。",
+        "- 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。"
+        "前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。",
+        "- STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。",
+        "",
+    ])
+    return lines
+
+
+REAUDIT_QUEUE_PATH = Path(".survey/repair-queue/under-16kb-reaudit.json")
+
+
+def _reaudit_queue_summary(repo_root: Path) -> dict[str, Any]:
+    """Count *pending entries*, never the queue's cached count or old STATUS.
+
+    The durable queue drops successfully re-audited papers; its current entries
+    are the source of truth for remaining work, but not for cumulative completions.
+    """
+    path = repo_root / REAUDIT_QUEUE_PATH
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        return {"available": False, "error": f"{type(exc).__name__}: {exc}"}
+    if not isinstance(payload, dict) or payload.get("queue_kind") != "under_16kb_semantic_reaudit":
+        return {"available": False, "error": "再監査キューの種類が不正"}
+    entries = payload.get("entries")
+    if not isinstance(entries, list):
+        return {"available": False, "error": "entriesが配列ではない"}
+
+    by_worker: dict[str, int] = {}
+    by_mechanical: dict[str, int] = {}
+    seen: set[str] = set()
+    for index, row in enumerate(entries):
+        if not isinstance(row, dict):
+            return {"available": False, "error": f"entries[{index}]が辞書ではない"}
+        paper_path = str(row.get("path") or "").strip()
+        if not paper_path.startswith("papers/") or paper_path in seen:
+            return {"available": False, "error": f"entries[{index}]のpathが重複または不正"}
+        if row.get("semantic_status") != "pending":
+            return {"available": False, "error": f"entries[{index}]がpendingではない"}
+        seen.add(paper_path)
+        worker = str(row.get("assigned_worker") or "未割当")
+        mechanical = str(row.get("mechanical_status") or "UNKNOWN").upper()
+        by_worker[worker] = by_worker.get(worker, 0) + 1
+        by_mechanical[mechanical] = by_mechanical.get(mechanical, 0) + 1
+
+    return {
+        "available": True,
+        "remaining": len(entries),
+        "by_worker": by_worker,
+        "by_mechanical": by_mechanical,
+        "generated_at": evidence._parse_dt(payload.get("generated_at")),
+        "queue_version": str(payload.get("queue_version") or "不明"),
+        "cached_count_mismatch": (
+            isinstance(payload.get("count"), int)
+            and payload["count"] != len(entries)
+        ),
+    }
+
+
+def _render_reaudit_queue(status: dict[str, Any]) -> list[str]:
+    lines = ["## 16KB未満論文サマリーの再監査", ""]
+    lines.append(
+        "- 集計元: [再監査リスト](.survey/repair-queue/under-16kb-reaudit.json) "
+        "の `entries`。リスト掲載中の論文だけを未完了として数えます。"
+    )
+    if status.get("available") is not True:
+        return lines + [
+            f"- **残件数を取得できません**: {status.get('error') or '不明なエラー'}",
+            "- キューが読めない場合、残件数を0件として表示しません。",
+            "",
+        ]
+
+    total = int(status["remaining"])
+    mechanical = status["by_mechanical"]
+    workers = status["by_worker"]
+    fail = mechanical.get("FAIL", 0)
+    pass_or_warn = mechanical.get("PASS", 0) + mechanical.get("WARN", 0)
+    unknown = total - fail - pass_or_warn
+    lines += [
+        "",
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| **再監査残件数** | **{total}** |",
+        f"| 機械検査未達（FAIL） | **{fail}** |",
+        f"| 機械検査適合・警告のみ（PASS/WARN） | **{pass_or_warn}** |",
+    ]
+    if unknown:
+        lines.append(f"| 機械検査状態不明 | **{unknown}** |")
+    for worker, label in (
+        ("scheduled-chat-00", ":00"),
+        ("scheduled-chat-30", ":30"),
+        ("scheduled-chat-45", ":45"),
+    ):
+        lines.append(f"| {label}ワーカー担当残 | **{workers.get(worker, 0)}** |")
+    unassigned = total - sum(
+        workers.get(worker, 0)
+        for worker in ("scheduled-chat-00", "scheduled-chat-30", "scheduled-chat-45")
+    )
+    if unassigned:
+        lines.append(f"| その他・未割当 | **{unassigned}** |")
+    stamp = status.get("generated_at")
+    updated = (
+        stamp.astimezone(evidence.JST).strftime("%Y-%m-%d %H:%M:%S JST")
+        if stamp else "不明"
+    )
+    lines += [
+        "",
+        f"- キュー最終生成: **{updated}** / 再監査版: `{status['queue_version']}`。",
+        "- 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。"
+        "合格した論文はキュー再生成時に除外されます。",
+        "- 残件数と担当別・機械検査別件数は `entries` から再計算し、"
+        "`count`・`worker_counts` の保存値は使いません。"
+        "累計完了件数・完了率は現在の待機リスト単独では算出できません。",
+    ]
+    if status["cached_count_mismatch"]:
+        lines.append("- **注意**: キューヘッダの `count` と `entries` 実数が一致しません。")
+    lines.append("")
+    return lines
+
+def _forward_citation_coverage(repo_root: Path) -> dict[str, Any]:
+    """Read the durable all-paper forward-citation sweep state without inference."""
+    path = repo_root / ".survey/work-queue/forward-citation-sweep.json"
+    payload = forward_citation_state.load(path, {})
+    if not isinstance(payload, dict) or payload.get("schema_version") != 1:
+        return {"available": False, "path": path}
+
+    seeds = payload.get("seeds")
+    if not isinstance(seeds, dict):
+        return {
+            "available": False,
+            "path": path,
+            "error": "forward-citation sweep state is missing seeds",
+        }
+
+    supported_rows = [
+        row for row in seeds.values()
+        if isinstance(row, dict) and row.get("supported") is True
+    ]
+    unsupported = sum(
+        1 for row in seeds.values()
+        if isinstance(row, dict) and row.get("supported") is not True
+    )
+    completed = sum(
+        1 for row in supported_rows
+        if row.get("last_completed_at")
+        or int(row.get("completed_cycles") or 0) > 0
+    )
+    in_progress = sum(
+        1 for row in supported_rows
+        if row.get("cycle_started_at")
+    )
+    never_started = sum(
+        1 for row in supported_rows
+        if not row.get("cycle_started_at")
+        and not row.get("last_completed_at")
+        and int(row.get("completed_cycles") or 0) <= 0
+    )
+    errors = sum(1 for row in supported_rows if row.get("last_error"))
+    return {
+        "available": True,
+        "path": path,
+        "updated_at": evidence._parse_dt(payload.get("updated_at")),
+        "paper_count": int(payload.get("paper_count") or len(seeds)),
+        "supported": len(supported_rows),
+        "unsupported": unsupported,
+        "completed": completed,
+        "in_progress": in_progress,
+        "never_started": never_started,
+        "due": int(payload.get("due_seed_count_before_run") or 0),
+        "candidate_count": int(payload.get("candidate_count") or 0),
+        "errors": errors,
+    }
+
+
+def _render_forward_citation_coverage(status: dict[str, Any]) -> list[str]:
+    lines = ["## 全収録論文の前方引用巡回", ""]
+    if status.get("available") is not True:
+        lines.extend([
+            "- .survey/work-queue/forward-citation-sweep.json はまだ生成されていません。",
+            "- 初回のcoverage workflow成功後、この節に全件巡回の直接証拠を表示します。",
+            "",
+        ])
+        return lines
+
+    supported = int(status.get("supported") or 0)
+    completed = int(status.get("completed") or 0)
+    ratio = (completed / supported * 100.0) if supported else 100.0
+    updated = status.get("updated_at")
+    updated_text = evidence._fmt_time(updated) if updated is not None else "—"
+    lines.extend([
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| 収録論文seed台帳 | **{status.get('paper_count', 0)}** |",
+        f"| provider巡回可能 | **{supported}** |",
+        f"| provider巡回不能 | **{status.get('unsupported', 0)}** |",
+        f"| 1周以上完了 | **{completed}** |",
+        f"| 巡回中 | **{status.get('in_progress', 0)}** |",
+        f"| 未巡回 | **{status.get('never_started', 0)}** |",
+        f"| 今回run開始時due | **{status.get('due', 0)}** |",
+        f"| 前方引用から保持中の未処理候補 | **{status.get('candidate_count', 0)}** |",
+        f"| エラー状態保持seed | **{status.get('errors', 0)}** |",
+        "",
+        f"- 初回カバレッジ完了率: **{ratio:.1f}%**",
+        f"- state最終更新: **{updated_text}**",
+        "- 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。",
+        "",
+    ])
+    return lines
+
+def _maintenance_status(repo_root: Path) -> dict[str, Any]:
+    """Read the maintenance workflow's durable canonical state."""
+    path = repo_root / ".survey/work-queue/maintenance-cycle.json"
+    payload = evidence._load_json(path)
+    if not payload:
+        return {"available": False, "path": path}
+    return {
+        "available": True,
+        "path": path,
+        "pending": payload.get("maintenance_pending"),
+        "completed_at": evidence._parse_dt(payload.get("last_maintenance_completed_at")),
+        "status": payload.get("last_maintenance_status"),
+        "consistency_status": payload.get("last_consistency_status"),
+        "health_status": payload.get("last_health_status"),
+        "health_errors": int(payload.get("last_health_errors") or 0),
+        "health_warnings": int(payload.get("last_health_warnings") or 0),
+        "metadata_status": payload.get("last_metadata_status"),
+        "metadata_incomplete": int(payload.get("last_metadata_incomplete") or 0),
+        "gc_deleted": int(payload.get("last_gc_deleted") or 0),
+        "queue_snapshot_repaired": payload.get("last_queue_snapshot_repaired"),
+        "index_repairs": int(payload.get("last_index_repairs") or 0),
+        "quality_regressions": int(payload.get("last_quality_regressions") or 0),
+    }
+
+
+def _render_maintenance_status(status: dict[str, Any], now: datetime) -> list[str]:
+    lines = ["## 日次メンテナンス状態", ""]
+    if status.get("available") is not True:
+        lines.extend([
+            "- `.survey/work-queue/maintenance-cycle.json` を読み取れません。",
+            "",
+        ])
+        return lines
+
+    completed_at = status.get("completed_at")
+    if completed_at is None:
+        completed_text = "—"
+    else:
+        completed_text = (
+            f"{evidence._fmt_time(completed_at)}（{evidence._fmt_age(now, completed_at)}）"
+        )
+    pending = status.get("pending")
+    pending_text = "true" if pending is True else "false" if pending is False else "—"
+    repaired = status.get("queue_snapshot_repaired")
+    repaired_text = "true" if repaired is True else "false" if repaired is False else "—"
+    lines.extend([
+        "| 指標 | 現在値 |",
+        "|---|---:|",
+        f"| maintenance pending | **{pending_text}** |",
+        f"| 最終maintenance完了 | **{completed_text}** |",
+        f"| 最終maintenance status | **{status.get('status') or '—'}** |",
+        f"| consistency | **{status.get('consistency_status') or '—'}** |",
+        f"| health | **{status.get('health_status') or '—'}** |",
+        f"| health errors / warnings | **{status.get('health_errors', 0)} / {status.get('health_warnings', 0)}** |",
+        f"| metadata | **{status.get('metadata_status') or '—'}** |",
+        f"| metadata incomplete | **{status.get('metadata_incomplete', 0)}** |",
+        f"| GC削除件数 | **{status.get('gc_deleted', 0)}** |",
+        f"| queue snapshot repaired | **{repaired_text}** |",
+        f"| index repairs | **{status.get('index_repairs', 0)}** |",
+        f"| quality regressions | **{status.get('quality_regressions', 0)}** |",
+        "",
+        "maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のjob/result件数から推定しません。",
+        "",
+    ])
+    return lines
+
+
+def _durable_candidate_backlog(jobs: dict[str, dict[str, Any]]) -> dict[str, int]:
+    """Count current research candidates only from durable job records.
+
+    The number of papers is only asserted for rows with a durable canonical_id.
+    Nonterminal research jobs without canonical_id are reported separately rather
+    than guessed to be distinct papers.
+    """
+    canonical_ids: set[str] = set()
+    nonterminal_jobs = 0
+    missing_canonical = 0
+
+    for job in jobs.values():
+        if job["kind"] != "research":
+            continue
+        payload = job["payload"]
+        status = str(payload.get("status") or "").strip().lower()
+        if status in evidence.TERMINAL_STATUSES:
+            continue
+
+        nonterminal_jobs += 1
+        canonical_id = str(payload.get("canonical_id") or "").strip()
+        if canonical_id:
+            canonical_ids.add(canonical_id.casefold())
+        else:
+            missing_canonical += 1
+
+    return {
+        "canonical_candidates": len(canonical_ids),
+        "missing_canonical": missing_canonical,
+        "nonterminal_jobs": nonterminal_jobs,
+    }
+
+
+def _source_url(payload: dict[str, Any]) -> str:
+    for key in ("url", "source_url", "paper_url", "primary_url", "arxiv_url", "pdf_url"):
+        value = payload.get(key)
+        if isinstance(value, str) and value.strip():
+            return value.strip()
+    source = payload.get("source")
+    if isinstance(source, dict):
+        for key in ("url", "source_url", "paper_url"):
+            value = source.get(key)
+            if isinstance(value, str) and value.strip():
+                return value.strip()
+    return ""
+
+
+def _is_moved_stub(path: Path) -> bool:
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            prefix = handle.read(256).lstrip()
+    except (OSError, UnicodeError):
+        return False
+    first_line = prefix.splitlines()[0].strip().casefold() if prefix else ""
+    return first_line in {"#moved", "# moved"} or first_line.startswith("# moved ")
+
+
+def _paper_markdown_files(repo_root: Path) -> list[Path]:
+    files: list[Path] = []
+    for area in ("inference", "training", "survey"):
+        root = repo_root / "papers" / area
+        if not root.is_dir():
+            continue
+        for path in root.rglob("*.md"):
+            name = path.name.casefold()
+            stem = path.stem.casefold()
+            if name == "readme.md" or stem == "comparison" or stem.startswith("comparison-"):
+                continue
+            if _is_moved_stub(path):
+                continue
+            files.append(path)
+    return sorted(files)
+
+
+def _discovery_round_identity(submission: dict[str, Any]) -> tuple[str, str] | None:
+    stats = submission["payload"].get("discovery_stats")
+    if not isinstance(stats, dict):
+        return None
+    run_key = str(stats.get("run_key") or "").strip()
+    round_id = str(stats.get("round") or "").strip()
+    if not run_key or not round_id:
+        return None
+    return run_key, round_id
+
+
+def _terminally_rejected_submission_paths(
+    repo_root: Path,
+    submissions: list[dict[str, Any]],
+    results: list[dict[str, Any]],
+) -> set[Path]:
+    """Return submissions whose exact attempt has a durable terminal rejection.
+
+    These immutable submissions remain useful failure history. They are not a
+    current queue-consistency anomaly once the processor has durably rejected
+    the exact attempt as non-retryable content validation. The same applies to
+    an exact non-retryable state/transport guard proving that a stale status-only
+    descriptor referenced a job that no longer exists; the immutable failure is
+    then the terminal historical record, not live queue work.
+    """
+    rejected: set[Path] = set()
+    for result in results:
+        payload = result["payload"]
+        if payload.get("ok") is not False:
+            continue
+        if payload.get("retryable") is not False:
+            continue
+
+        failure_class = str(payload.get("failure_class") or "").strip()
+        if failure_class not in {"content_validation", "state_or_transport_guard"}:
+            continue
+
+        submission = evidence._submission_for_result(repo_root, result, submissions)
+        if submission is None:
+            continue
+        result_attempt = str(payload.get("attempt_id") or "").strip()
+        submission_attempt = str(submission["payload"].get("attempt_id") or "").strip()
+        if not result_attempt or result_attempt != submission_attempt:
+            continue
+        if result["job_id"] != submission["job_id"]:
+            continue
+
+        if failure_class == "state_or_transport_guard":
+            job_id = str(submission["job_id"] or "").strip()
+            error = str(payload.get("error") or "").strip()
+            if not job_id or error != f"ValueError: unknown job_id: {job_id}":
+                continue
+
+        rejected.add(submission["path"])
+    return rejected
+
+
+def _direct_evidence_metrics(
+    repo_root: Path,
+    *,
+    jobs: dict[str, dict[str, Any]],
+    submissions: list[dict[str, Any]],
+    results: list[dict[str, Any]],
+    verified: list[dict[str, Any]],
+    verified_discovery: list[dict[str, Any]],
+    active: list[dict[str, Any]],
+    now: datetime,
+) -> dict[str, Any]:
+    nonterminal: list[tuple[str, dict[str, Any]]] = []
+    status_counts: dict[str, int] = {}
+    canonical_counts: dict[str, int] = {}
+    missing_canonical = 0
+    missing_title = 0
+    missing_source_url = 0
+
+    for job_id, job in jobs.items():
+        if job["kind"] != "research":
+            continue
+        payload = job["payload"]
+        status = str(payload.get("status") or "").strip().lower()
+        if status in evidence.TERMINAL_STATUSES:
+            continue
+        nonterminal.append((job_id, job))
+        status_key = status or "(未設定)"
+        status_counts[status_key] = status_counts.get(status_key, 0) + 1
+
+        canonical = str(payload.get("canonical_id") or "").strip()
+        if canonical:
+            key = canonical.casefold()
+            canonical_counts[key] = canonical_counts.get(key, 0) + 1
+        else:
+            missing_canonical += 1
+        if not str(payload.get("title") or "").strip():
+            missing_title += 1
+        if not _source_url(payload):
+            missing_source_url += 1
+
+    duplicate_groups = sum(count > 1 for count in canonical_counts.values())
+    duplicate_jobs = sum(max(0, count - 1) for count in canonical_counts.values())
+    active_research_ids = {
+        str(row["job_id"])
+        for row in active
+        if _active_kind(row) == "research"
+    }
+    unclaimed_jobs = sum(job_id not in active_research_ids for job_id, _ in nonterminal)
+
+    verified_research = [row for row in verified if row["kind"] == "research"]
+    cutoff_24h = now - timedelta(hours=24)
+    recent_research_24h = [
+        row for row in verified_research if cutoff_24h <= row["completed_at"] <= now
+    ]
+    last_research_completed_at = max(
+        (row["completed_at"] for row in verified_research if row["completed_at"] <= now),
+        default=None,
+    )
+    last_discovery_completed_at = max(
+        (
+            row["completed_at"]
+            for row in verified_discovery
+            if row["completed_at"] is not None and row["completed_at"] <= now
+        ),
+        default=None,
+    )
+
+    verified_submission_paths = {row["submission"]["path"] for row in verified}
+    verified_submission_paths.update(
+        row["submission"]["path"] for row in verified_discovery
+    )
+    unmatched_submissions = [
+        row for row in submissions if row["path"] not in verified_submission_paths
+    ]
+    unmatched_by_kind: dict[str, int] = {}
+    for row in unmatched_submissions:
+        kind = row["kind"] if row["kind"] in KINDS else "other"
+        unmatched_by_kind[kind] = unmatched_by_kind.get(kind, 0) + 1
+
+    verified_job_ids = {row["job_id"] for row in verified}
+    completed_without_verified = 0
+    completed_research_missing_paper_paths: set[Path] = set()
+    for job_id, job in jobs.items():
+        if job["kind"] not in {"research", "audit"}:
+            continue
+        payload = job["payload"]
+        status = str(payload.get("status") or "").strip().lower()
+        if status != "completed":
+            continue
+        if job_id not in verified_job_ids:
+            completed_without_verified += 1
+        if job["kind"] != "research":
+            continue
+        paper_value = payload.get("paper_path")
+        if not isinstance(paper_value, str) or not paper_value.strip():
+            continue
+        declared_paper = evidence._resolve_repo_path(repo_root, paper_value)
+        if declared_paper is None or not declared_paper.is_file():
+            completed_research_missing_paper_paths.add(job["path"])
+
+    terminally_rejected_submission_paths = _terminally_rejected_submission_paths(
+        repo_root,
+        submissions,
+        results,
+    )
+    orphan_submission_paths = {
+        row["path"]
+        for row in submissions
+        if (not row["job_id"] or row["job_id"] not in jobs)
+        and row["path"] not in terminally_rejected_submission_paths
+        and not (
+            row["kind"] == "discovery"
+            and _discovery_round_identity(row) is not None
+        )
+    }
+    success_results = [
+        row
+        for row in results
+        if row["payload"].get("ok") is True
+        and str(row["payload"].get("job_status") or "").strip().lower() == "completed"
+    ]
+    orphan_success_result_paths = {
+        row["path"]
+        for row in success_results
+        if not row["job_id"] or row["job_id"] not in jobs
+    }
+    success_result_without_submission_paths = {
+        row["path"]
+        for row in success_results
+        if evidence._submission_for_result(repo_root, row, submissions) is None
+    }
+    malformed_success_result_paths = (
+        orphan_success_result_paths | success_result_without_submission_paths
+    )
+    anomalous_record_paths = (
+        completed_research_missing_paper_paths
+        | orphan_submission_paths
+        | malformed_success_result_paths
+    )
+    consistency = {
+        "completed_without_verified": completed_without_verified,
+        "completed_research_missing_paper": len(completed_research_missing_paper_paths),
+        "orphan_submissions": len(orphan_submission_paths),
+        "orphan_success_results": len(orphan_success_result_paths),
+        "success_results_without_submission": len(success_result_without_submission_paths),
+    }
+    consistency_total = len(anomalous_record_paths)
+
+    return {
+        "candidate_papers": len(canonical_counts),
+        "nonterminal_jobs": len(nonterminal),
+        "unclaimed_jobs": unclaimed_jobs,
+        "status_counts": status_counts,
+        "duplicate_groups": duplicate_groups,
+        "duplicate_jobs": duplicate_jobs,
+        "missing_canonical": missing_canonical,
+        "missing_title": missing_title,
+        "missing_source_url": missing_source_url,
+        "paper_markdown_count": len(_paper_markdown_files(repo_root)),
+        "research_24h": len(recent_research_24h),
+        "last_research_completed_at": last_research_completed_at,
+        "last_discovery_completed_at": last_discovery_completed_at,
+        "unmatched_submissions": len(unmatched_submissions),
+        "unmatched_by_kind": unmatched_by_kind,
+        "consistency": consistency,
+        "consistency_total": consistency_total,
+    }
+
+
+def _render_top_metrics(metrics: dict[str, Any], now: datetime) -> list[str]:
+    last_research = metrics["last_research_completed_at"]
+    last_discovery = metrics["last_discovery_completed_at"]
+    research_text = evidence._fmt_time(last_research) if last_research is not None else "—"
+    discovery_text = evidence._fmt_time(last_discovery) if last_discovery is not None else "—"
+    return [
+        "## 重要指標",
+        "",
+        "すべて耐久保存された直接証拠から算出します。未claimは論文数ではなくResearch job数です。",
+        "",
+        "| 指標 | 現在値 |",
+        "|---|---:|",
+        f"| 収録候補論文数 | **{metrics['candidate_papers']}** |",
+        f"| 未claim Research job | **{metrics['unclaimed_jobs']}** |",
+        f"| 直近24hのResearch処理完了 | **{metrics['research_24h']}** |",
+        f"| 最終Research処理完了 | **{research_text}** |",
+        f"| 最終Discovery探索完了 | **{discovery_text}** |",
+        f"| 整合性異常 | **{metrics['consistency_total']}** |",
+        "",
+    ]
+
+
+def _render_direct_metric_details(metrics: dict[str, Any]) -> list[str]:
+    lines = [
+        "",
+        "## 耐久証拠の詳細集計",
+        "",
+        "### 未処理Research jobの状態内訳",
+        "",
+        "| status | 件数 |",
+        "|---|---:|",
+    ]
+    if metrics["status_counts"]:
+        for status, count in sorted(metrics["status_counts"].items()):
+            lines.append(f"| {status} | **{count}** |")
+    else:
+        lines.append("| （なし） | **0** |")
+
+    lines += [
+        "",
+        "### 候補の重複・識別情報欠損",
+        "",
+        "非終端Research jobだけを対象にしています。source URLは `url/source_url/paper_url/primary_url/arxiv_url/pdf_url/source.url` のいずれかで確認します。",
+        "",
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| 重複canonical_idグループ | **{metrics['duplicate_groups']}** |",
+        f"| 重複分のResearch job | **{metrics['duplicate_jobs']}** |",
+        f"| canonical_id欠損 | **{metrics['missing_canonical']}** |",
+        f"| title欠損 | **{metrics['missing_title']}** |",
+        f"| source URL欠損 | **{metrics['missing_source_url']}** |",
+        "",
+        "### 収録済み論文実体",
+        "",
+        "`papers/inference/**`、`papers/training/**`、`papers/survey/**` のMarkdown実体を数え、README、comparison系、Movedスタブを除外します。",
+        "",
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| inference/training/survey配下の論文Markdown実体 | **{metrics['paper_markdown_count']}** |",
+        "",
+        "### immutable submissionの未照合",
+        "",
+        "検証済み成功としてjob/result/submission（Researchはpaper実体も）を照合できないimmutable submissionを数えます。処理待ちや失敗済みも含み得るため、整合性異常とは別指標です。",
+        "",
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| 成功result未照合のimmutable submission | **{metrics['unmatched_submissions']}** |",
+    ]
+    for kind in (*KINDS, "other"):
+        count = metrics["unmatched_by_kind"].get(kind, 0)
+        if count:
+            lines.append(f"| └ {LABELS.get(kind, kind)} | **{count}** |")
+
+    consistency = metrics["consistency"]
+    lines += [
+        "",
+        "### 厳格検証が未成立のcompleted job",
+        "",
+        "completedでも、現行STATUSの厳格条件（job/result/submission、Researchはpaper実体まで）をすべて照合できないものです。過去形式や移行済み履歴を含み得るため、整合性異常とは断定しません。",
+        "",
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| completed Research/Audit jobで厳格検証未成立 | **{consistency['completed_without_verified']}** |",
+        "",
+        "### 整合性異常",
+        "",
+        "直接矛盾を確認できる耐久レコードだけを異常とします。`discovery_stats.run_key + round` を持つDiscovery submissionは耐久round記録として成立するため、対応jobがなくてもそれだけでは異常にしません。対応resultが同一attempt/job/submissionを指し、`content_validation` として `retryable=false` で終端却下済みのsubmissionも、失敗履歴として保持したまま現在の異常から除外します。下の検出条件は同じresultへ重複して該当し得るため、上段の異常件数と最下段の合計はレコードpathで重複排除します。",
+        "",
+        "| 検出項目 | 件数 |",
+        "|---|---:|",
+        f"| completed Research jobで指定paper実体なし | **{consistency['completed_research_missing_paper']}** |",
+        f"| 対応jobなしsubmission（有効Discovery round除外） | **{consistency['orphan_submissions']}** |",
+        f"| 対応jobなし成功result | **{consistency['orphan_success_results']}** |",
+        f"| 対応submissionなし成功result | **{consistency['success_results_without_submission']}** |",
+        f"| 異常レコード合計（重複排除） | **{metrics['consistency_total']}** |",
+        "",
+    ]
+    return lines
+
+
+def _axes(submissions: list[dict[str, Any]]) -> list[str]:
+    axes: list[str] = []
+    for submission in submissions:
+        stats = submission["payload"].get("discovery_stats")
+        if not isinstance(stats, dict):
+            continue
+        axis = str(stats.get("axis") or "")
+        if axis and axis not in axes:
+            axes.append(axis)
+    return axes
+
+
+def _durable_discovery_rounds(
+    submissions: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], int, int]:
+    """Return unique immutable round records and anomaly counts.
+
+    A round is proven only by a durable discovery submission containing both
+    ``discovery_stats.run_key`` and ``discovery_stats.round``. Aggregate state,
+    filenames, and result count are deliberately not used to infer round count.
+    """
+    rounds: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+    duplicate_identities = 0
+    missing_identities = 0
+
+    for submission in sorted(submissions, key=lambda row: str(row["path"])):
+        identity = _discovery_round_identity(submission)
+        if identity is None:
+            missing_identities += 1
+            continue
+        if identity in seen:
+            duplicate_identities += 1
+            continue
+        seen.add(identity)
+        rounds.append(submission)
+
+    return rounds, duplicate_identities, missing_identities
+
+
+def _render_active_row(repo_root: Path, row: dict[str, Any]) -> list[str]:
+    job_payload = row["job"]["payload"]
+    return [
+        f"- {evidence._label(job_payload, row['job_id'])} / worker `{row['worker_id']}`",
+        f"  - claim: **{evidence._fmt_time(row['claimed_at'])}** / "
+        f"heartbeat: **{evidence._fmt_time(row['heartbeat_at'])}** / "
+        f"lease expiry: **{evidence._fmt_time(row['expires_at'])}**",
+        f"  - evidence: `{evidence._rel(repo_root, row['claim_path'])}`",
+    ]
+
+
+def _render_discovery_evidence(repo_root: Path, row: dict[str, Any]) -> list[str]:
+    submission = row["submission"]
+    stamp = row["completed_at"] or row["run_time"]
+    candidates = _candidate_count([submission])
+    axes = _axes([submission])
+    lines = [
+        f"- **{evidence._fmt_time(stamp)}** job `{row['job_id']}` / 候補 **{candidates}件**",
+        f"  - result: `{evidence._rel(repo_root, row['result']['path'])}` (`ok=true`)",
+        f"  - submission: `{evidence._rel(repo_root, submission['path'])}`",
+    ]
+    if axes:
+        lines.append(f"  - 探索軸: {' / '.join(axes)}")
+    return lines
+
+
+def _render_discovery_round(
+    repo_root: Path,
+    submission: dict[str, Any],
+    verified_row: dict[str, Any] | None,
+) -> list[str]:
+    stats = submission["payload"].get("discovery_stats")
+    assert isinstance(stats, dict)
+    round_id = str(stats.get("round") or "").strip()
+    axis = str(stats.get("axis") or "").strip()
+    candidates = _candidate_count([submission])
+    lines = [
+        f"- round `{round_id}` / 候補 **{candidates}件**",
+        f"  - submission: `{evidence._rel(repo_root, submission['path'])}`",
+    ]
+    if axis:
+        lines.append(f"  - 探索軸: {axis}")
+    if verified_row is None:
+        lines.append("  - 個別result照合: なし（immutable round記録は確認済み）")
+    else:
+        lines.append(
+            f"  - 個別result照合: あり / "
+            f"`{evidence._rel(repo_root, verified_row['result']['path'])}` (`ok=true`)"
+        )
+    return lines
+
+
+def _render_latest_paper_kind(
+    repo_root: Path,
+    *,
+    kind: str,
+    paper_run_time: datetime | None,
+    paper_worker_id: str | None,
+    submissions: list[dict[str, Any]],
+    verified_by_submission: dict[Path, dict[str, Any]],
+    result_by_submission: dict[Path, dict[str, Any]],
+) -> list[str]:
+    label = LABELS[kind]
+    lines = [f"#### {label}（最新Research/Audit run）", ""]
+    selected = [row for row in submissions if row["kind"] == kind]
+    if paper_run_time is None:
+        lines.append("- worker時刻を復元できるimmutable submissionは確認できません。")
+        return lines
+
+    lines.append(
+        f"- 最新観測run: **{paper_run_time.astimezone(evidence.JST).strftime('%Y-%m-%d %H:%M JST')}**"
+        f" / worker `{paper_worker_id or '—'}`"
+    )
+    succeeded = [row for row in selected if row["path"] in verified_by_submission]
+    matched_non_success = [row for row in selected if row["path"] in result_by_submission and row["path"] not in verified_by_submission]
+    missing_result = [row for row in selected if row["path"] not in result_by_submission]
+    lines.append(f"- immutable submission: **{len(selected)}件** / 検証済み成功: **{len(succeeded)}件** / result照合済み非成功: **{len(matched_non_success)}件** / 個別result未照合: **{len(missing_result)}件**")
+    if not selected:
+        lines.append(f"- このrunに{label} submissionはありません。")
+        return lines
+
+    for submission in selected[:10]:
+        verified_row = verified_by_submission.get(submission["path"])
+        if verified_row is None:
+            matched_result = result_by_submission.get(submission["path"])
+            if matched_result is not None:
+                failure_class = str(matched_result["payload"].get("failure_class") or "non_success")
+                lines.append(f"- **result照合済み非成功** `{evidence._rel(repo_root, submission['path'])}` (job `{submission['job_id'] or '—'}`, failure_class `{failure_class}`)")
+                lines.append(f"  - result: `{evidence._rel(repo_root, matched_result['path'])}` (`ok={str(matched_result['payload'].get('ok')).lower()}`)")
+            else:
+                lines.append(f"- **個別result未照合** `{evidence._rel(repo_root, submission['path'])}` (job `{submission['job_id'] or '—'}`)")
+            continue
+        lines.append(
+            f"- **成功** {evidence._label(verified_row['job']['payload'], verified_row['job_id'])}"
+        )
+        lines.append(f"  - job: `{evidence._rel(repo_root, verified_row['job']['path'])}`")
+        lines.append(f"  - result: `{evidence._rel(repo_root, verified_row['result']['path'])}` (`ok=true`)")
+        lines.append(f"  - submission: `{evidence._rel(repo_root, submission['path'])}`")
+        if verified_row["paper"] is not None:
+            lines.append(f"  - paper: `{evidence._rel(repo_root, verified_row['paper'])}`")
+    return lines
+
+
+def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
+    now = now or datetime.now(timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    now = now.astimezone(timezone.utc)
+
+    jobs = evidence._collect_jobs(repo_root)
+    submissions = evidence._collect_submissions(repo_root)
+    results = evidence._collect_results(repo_root)
+    verified = evidence._verified_completions(repo_root, jobs, submissions, results)
+    verified_by_submission = evidence._verified_by_submission(verified)
+    result_by_submission: dict[Path, dict[str, Any]] = {}
+    for result in results:
+        submission = evidence._submission_for_result(repo_root, result, submissions)
+        if submission is not None:
+            result_by_submission[submission["path"]] = result
+    verified_discovery = evidence._verified_discovery_rows(repo_root, jobs, submissions, results)
+    active = evidence._active_claims(repo_root, jobs, now)
+    candidate_backlog = _durable_candidate_backlog(jobs)
+    reference_progress = _structured_reference_progress(repo_root)
+    forward_citation_coverage = _forward_citation_coverage(repo_root)
+    maintenance_status = _maintenance_status(repo_root)
+    direct_metrics = _direct_evidence_metrics(
+        repo_root,
+        jobs=jobs,
+        submissions=submissions,
+        results=results,
+        verified=verified,
+        verified_discovery=verified_discovery,
+        active=active,
+        now=now,
+    )
+
+    cutoff = now - timedelta(hours=evidence.RECENT_HOURS)
+    recent_verified = [row for row in verified if cutoff <= row["completed_at"] <= now]
+    recent_by_kind = {
+        kind: [row for row in recent_verified if row["kind"] == kind]
+        for kind in ("research", "audit")
+    }
+    recent_discovery = [
+        row
+        for row in verified_discovery
+        if row["completed_at"] is not None and cutoff <= row["completed_at"] <= now
+    ]
+
+    paper_run_time, paper_worker_id, latest_paper_submissions = evidence._latest_paper_run(submissions, now)
+    discovery_run_time, latest_discovery_submissions = evidence._latest_discovery_run(submissions, now)
+    discovery_verified_by_submission = {
+        row["submission"]["path"]: row for row in verified_discovery
+    }
+    latest_discovery_rounds, duplicate_round_submissions, missing_round_submissions = (
+        _durable_discovery_rounds(latest_discovery_submissions)
+    )
+
+    latest_by_kind: dict[str, list[dict[str, Any]]] = {
+        "research": [row for row in latest_paper_submissions if row["kind"] == "research"],
+        "audit": [row for row in latest_paper_submissions if row["kind"] == "audit"],
+        "discovery": latest_discovery_submissions,
+    }
+    latest_success = {
+        "research": sum(row["path"] in verified_by_submission for row in latest_by_kind["research"]),
+        "audit": sum(row["path"] in verified_by_submission for row in latest_by_kind["audit"]),
+        "discovery": sum(
+            row["path"] in discovery_verified_by_submission for row in latest_by_kind["discovery"]
+        ),
+    }
+
+    heartbeat_cutoff = now - timedelta(minutes=evidence.RECENT_HEARTBEAT_MINUTES)
+    active_by_kind: dict[str, list[dict[str, Any]]] = {
+        kind: [row for row in active if _active_kind(row) == kind]
+        for kind in (*KINDS, "other")
+    }
+    heartbeat_by_kind = {
+        kind: [
+            row
+            for row in rows
+            if row["heartbeat_at"] is not None and heartbeat_cutoff <= row["heartbeat_at"] <= now
+        ]
+        for kind, rows in active_by_kind.items()
+    }
+
+    recent_counts = {
+        "research": len(recent_by_kind["research"]),
+        "audit": len(recent_by_kind["audit"]),
+        "discovery": len(recent_discovery),
+        "other": 0,
+    }
+    latest_submission_counts = {
+        kind: len(latest_by_kind[kind]) for kind in KINDS
+    } | {"other": 0}
+    latest_success_counts = latest_success | {"other": 0}
+    latest_result_counts = {kind: sum(row["path"] in result_by_submission for row in latest_by_kind[kind]) for kind in KINDS} | {"other": 0}
+    latest_unverified_counts = {kind: latest_submission_counts[kind] - latest_result_counts[kind] for kind in (*KINDS, "other")}
+    candidate_count = _candidate_count(latest_discovery_submissions)
+
+    lines: list[str] = [
+        "# LLM論文サーベイ 稼働状況",
+        "",
+        f"> 自動生成: **{now.astimezone(evidence.JST).strftime('%Y-%m-%d %H:%M:%S JST')}**",
+        "",
+        "このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。",
+        "`run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。",
+        "",
+    ]
+    lines.extend(_render_top_metrics(direct_metrics, now))
+    lines.extend(_render_reaudit_queue(_reaudit_queue_summary(repo_root)))
+    lines += [
+        "## 現在の収録候補",
+        "",
+        "`jobs/*.json` に耐久保存された非終端Research jobだけを対象にし、論文数は `canonical_id` で一意に確認できるものだけを数えます。",
+        "",
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| canonical_id確認済みの一意な候補論文 | **{candidate_backlog['canonical_candidates']}** |",
+        f"| canonical_idなしの候補Research job | **{candidate_backlog['missing_canonical']}** |",
+        f"| 非終端Research job合計 | **{candidate_backlog['nonterminal_jobs']}** |",
+        "",
+        "`canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。",
+        "",
+        *_render_structured_reference_progress(reference_progress),
+        *_render_forward_citation_coverage(forward_citation_coverage),
+        *_render_maintenance_status(maintenance_status, now),
+        "## 件数サマリー",
+        "",
+        f"直近{evidence.RECENT_HOURS}時間、最新run、現在処理中を種類別に分けています。実体の証拠は下部にまとめています。",
+        "",
+        f"| 区分 | 直近{evidence.RECENT_HOURS}h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近{evidence.RECENT_HEARTBEAT_MINUTES}分heartbeat | 最新run候補 |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+
+    for kind in KINDS:
+        candidate_cell = f"**{candidate_count}**" if kind == "discovery" else "—"
+        lines.append(
+            f"| {LABELS[kind]} | **{recent_counts[kind]}** | **{latest_submission_counts[kind]}** | "
+            f"**{latest_success_counts[kind]}** | **{latest_unverified_counts[kind]}** | "
+            f"**{len(active_by_kind[kind])}** | **{len(heartbeat_by_kind[kind])}** | {candidate_cell} |"
+        )
+
+    if active_by_kind["other"]:
+        lines.append(
+            f"| {LABELS['other']} | **0** | **0** | **0** | **0** | "
+            f"**{len(active_by_kind['other'])}** | **{len(heartbeat_by_kind['other'])}** | — |"
+        )
+
+    total_recent = sum(recent_counts[kind] for kind in KINDS)
+    total_submissions = sum(latest_submission_counts[kind] for kind in KINDS)
+    total_success = sum(latest_success_counts[kind] for kind in KINDS)
+    total_unverified = sum(latest_unverified_counts[kind] for kind in KINDS)
+    total_active = len(active)
+    total_heartbeat = sum(len(rows) for rows in heartbeat_by_kind.values())
+    lines.append(
+        f"| 合計 | **{total_recent}** | **{total_submissions}** | **{total_success}** | "
+        f"**{total_unverified}** | **{total_active}** | **{total_heartbeat}** | **{candidate_count}** |"
+    )
+    if discovery_run_time is not None:
+        lines.append("")
+        lines.append(
+            f"- 最新Discovery runの耐久探索round: **{len(latest_discovery_rounds)}件** "
+            "（immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）"
+        )
+
+    lines += [
+        "",
+        "## 詳細証拠",
+        "",
+        f"### 直近{evidence.RECENT_HOURS}時間の検証済み完了",
+        "",
+        "### Research",
+        "",
+    ]
+    if recent_by_kind["research"]:
+        for row in recent_by_kind["research"][:10]:
+            lines.extend(evidence._render_verified_evidence(repo_root, row))
+    else:
+        lines.append("- 検証済み完了なし。")
+
+    lines += ["", "### Audit", ""]
+    if recent_by_kind["audit"]:
+        for row in recent_by_kind["audit"][:10]:
+            lines.extend(evidence._render_verified_evidence(repo_root, row))
+    else:
+        lines.append("- 検証済み完了なし。")
+
+    lines += ["", "### Discovery", ""]
+    if recent_discovery:
+        for row in recent_discovery[:10]:
+            lines.extend(_render_discovery_evidence(repo_root, row))
+    else:
+        lines.append("- 検証済み成功なし。")
+
+    lines += ["", "### 直近タスク", ""]
+    lines.extend(
+        _render_latest_paper_kind(
+            repo_root,
+            kind="research",
+            paper_run_time=paper_run_time,
+            paper_worker_id=paper_worker_id,
+            submissions=latest_paper_submissions,
+            verified_by_submission=verified_by_submission,
+            result_by_submission=result_by_submission,
+        )
+    )
+    lines += [""]
+    lines.extend(
+        _render_latest_paper_kind(
+            repo_root,
+            kind="audit",
+            paper_run_time=paper_run_time,
+            paper_worker_id=paper_worker_id,
+            submissions=latest_paper_submissions,
+            verified_by_submission=verified_by_submission,
+            result_by_submission=result_by_submission,
+        )
+    )
+
+    lines += ["", "#### Discovery（最新Discovery run）", ""]
+    if discovery_run_time is None:
+        lines.append("- `discovery_stats.run_key` を持つimmutable discovery submissionは確認できません。")
+    else:
+        discovery_succeeded = [
+            row
+            for row in latest_discovery_submissions
+            if row["path"] in discovery_verified_by_submission
+        ]
+        lines.append(
+            f"- 最新観測run: **{discovery_run_time.astimezone(evidence.JST).strftime('%Y-%m-%d %H:%M JST')}**"
+        )
+        lines.append(
+            f"- 耐久探索round: **{len(latest_discovery_rounds)}件** / "
+            f"immutable submission: **{len(latest_discovery_submissions)}件** / "
+            f"検証済み成功result: **{len(discovery_succeeded)}件** / "
+            f"個別result照合: **{len(discovery_succeeded)}件** / "
+            f"個別result未照合: **{len(latest_discovery_submissions) - len(discovery_succeeded)}件** / "
+            f"候補: **{candidate_count}件**"
+        )
+        if duplicate_round_submissions or missing_round_submissions:
+            lines.append(
+                f"- round識別子重複submission: **{duplicate_round_submissions}件** / "
+                f"round識別子なしsubmission: **{missing_round_submissions}件**"
+            )
+        axes = _axes(latest_discovery_rounds)
+        if axes:
+            lines.append(f"- 探索軸: {' / '.join(axes)}")
+        for submission in latest_discovery_rounds[:10]:
+            verified_row = discovery_verified_by_submission.get(submission["path"])
+            lines.extend(_render_discovery_round(repo_root, submission, verified_row))
+        if missing_round_submissions:
+            lines.append(
+                "- `discovery_stats.run_key + round` が揃わないsubmissionはround数へ推定加算しません。"
+            )
+
+    lines += ["", "### 現在処理中", ""]
+    for kind in (*KINDS, "other"):
+        if kind == "other" and not active_by_kind[kind]:
+            continue
+        lines += [f"#### {LABELS[kind]}", ""]
+        rows = active_by_kind[kind]
+        lines.append(
+            f"- 未失効かつ非terminal jobのclaim: **{len(rows)}件** / "
+            f"直近{evidence.RECENT_HEARTBEAT_MINUTES}分heartbeat: **{len(heartbeat_by_kind[kind])}件**"
+        )
+        if rows:
+            for row in rows[:10]:
+                lines.extend(_render_active_row(repo_root, row))
+        else:
+            lines.append("- 現在処理中と判定できる有効claimはありません。")
+        lines.append("")
+
+    lines += [
+        "> claimやheartbeatは **GitHubへ耐久保存された処理権・活動記録** です。"
+        "Scheduled Chatプロセスの生存そのものまでは証明しないため、そこは推測しません。",
+    ]
+    lines.extend(_render_direct_metric_details(direct_metrics))
+    lines += [
+        "### このSTATUSが採用する証拠",
+        "",
+        "- **重要指標**: 候補・未claim・24h収録・最終収録・整合性異常を、jobs/submissions/results/claims/paper実体から直接再計算します。",
+        "- **収録候補**: `jobs/*.json` の非終端Research jobだけを対象にし、`canonical_id` の一意数を候補論文数として数えます。`canonical_id` 欠損jobは別件数で表示し、論文数へ推定加算しません。",
+        "- **完了**: `jobs/*.json` と `results/**/*.json` と `submissions/**/*.json` のjob対応を照合します。",
+        "- **Research完了**: 上記に加えて、result/submission/jobが指すpaperファイルの実在を確認します。",
+        "- **Audit完了**: job/result/submissionの対応と成功状態を照合します。",
+        "- **論文実体数**: `papers/inference/**`、`papers/training/**`、`papers/survey/**` のMarkdown実体を数え、README/comparison系/Movedスタブを除外します。",
+        "- **immutable submission未照合**: 検証済み成功に結びつかないsubmission実体を数え、処理待ちや失敗済みを含み得るため整合性異常とは分離します。",
+        "- **completed未検証**: completedでも現行の厳格な照合条件が成立しないjobを別計上し、過去形式や移行履歴を含み得るため異常とは断定しません。",
+        "- **整合性異常**: completed Research jobが宣言したpaper実体の欠損、未解決の対応jobなしsubmission、対応jobなし成功result、対応submissionなし成功resultを直接検出し、レコードpathで重複排除します。`discovery_stats.run_key + round` が揃ったDiscovery submission、および同一attempt/job/submissionへ対応する `content_validation` の再試行不可終端却下resultがあるsubmissionは、対応job欠損だけでは現在の異常にしません。",
+        "- **Discovery round**: immutable discovery submissionの `discovery_stats.run_key + round` の一意組だけを数えます。result件数や`discovery-state.json`からround数を推定しません。",
+        "- **Discovery成功result**: discovery submission、`result.ok=true`、対応jobの`status=completed`を照合し、round実行証拠とは別の指標として表示します。",
+        "- **探索候補の処理状況**: 前方引用・後方referencesを区別せず、paper実体、非終端Research/Audit job、relevance台帳、現在のDiscovery候補面をidentityで統合してゼロベース再計算します。",
+        "- **日次メンテナンス**: `.survey/work-queue/maintenance-cycle.json` をmaintenance workflowの耐久正本として表示します。通常jobの件数からmaintenance状態を推定しません。",
+        "- **現在の作業**: lease未失効かつ対応jobが非terminalの`claims/*.json`だけを表示します。",
+        "- **不採用**: run-ledger、queue snapshot、discovery-state、旧STATUSの集計・推定値はSTATUSの根拠にしません。",
+        "",
+        "---",
+        "",
+        "証拠収集: `.survey/scripts/build_status_dashboard.py`",
+        "",
+        "表示生成: `.survey/scripts/render_status_dashboard.py`",
+        "",
+    ]
+    return "\n".join(lines)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repo-root", default=".")
+    parser.add_argument("--output", default="STATUS.md")
+    args = parser.parse_args()
+    repo_root = Path(args.repo_root).resolve()
+    output = Path(args.output)
+    if not output.is_absolute():
+        output = repo_root / output
+    output.write_text(build_dashboard(repo_root), encoding="utf-8")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

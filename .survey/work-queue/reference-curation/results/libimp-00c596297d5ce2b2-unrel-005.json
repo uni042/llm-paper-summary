@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-00c596297d5ce2b2-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3320060",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3320060",
+    "identity_tokens": [
+      "DOI:10.1145/3320060"
+    ],
+    "reason": "深層学習の学習並列化・分散訓練を体系化するサーベイで、LLM推論サービングを最終適用先としない。",
+    "first_checked_at": "2026-10-04T07:01:03+00:00",
+    "last_checked_at": "2026-10-04T07:01:03+00:00",
+    "linked_from": [],
+    "title": "Demystifying Parallel and Distributed Deep Learning"
+  },
+  "processed_at": "2026-10-04T07:01:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-00c596297d5c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

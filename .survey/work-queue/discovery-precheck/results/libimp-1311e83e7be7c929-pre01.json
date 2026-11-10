@@ -1,0 +1,1392 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1311e83e7be7c929-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1311e83e7be7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3712285.3759834",
+    "arXiv:2511.06516",
+    "arXiv:2511.15098",
+    "arXiv:2511.16595",
+    "arXiv:2511.16786",
+    "arXiv:2512.12615",
+    "arXiv:2512.23824",
+    "arXiv:2601.17367",
+    "arXiv:2602.07804",
+    "arXiv:2602.08722",
+    "arXiv:2604.07812",
+    "arXiv:2605.30571",
+    "arXiv:2606.03503",
+    "arXiv:2606.04980"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 14,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "b9d320f981397823d35f558993e240c46f8219d3",
+  "raw_search_result_count": 14,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 14,
+  "provider_progress": {
+    "requested_count": 14,
+    "status_counts": {
+      "allowed": 14,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T20:03:25.671503+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3712285.3759834",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.06516",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.15098",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.16595",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.16786",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.12615",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.23824",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.17367",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.07804",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.08722",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.07812",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.30571",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.03503",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.04980",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "You Had One Job: Per-Task Quantization Using LLMs' Hidden Representations",
+      "source_url": "https://arxiv.org/abs/2511.06516",
+      "year": 2025,
+      "published": "2025-11-09",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Many LLM applications require only narrow capabilities, yet standard post-training quantization (PTQ) methods allocate precision without considering the target task. This can waste bits on layers that are less relevant to the task signal while over-compressing layers that are critical for downstream behavior. We propose Task-Aware Quantization (TAQ), a training-free, weight-only mixed-precision PTQ framework that uses a small set of unlabeled task calibration prompts to allocate higher precision to task-relevant transformer layers under a fixed bit budget. TAQ estimates layer importance from hidden representations and output sensitivity, and we instantiate it with three scoring rules: TAQ-IS, based on activation information and stability; TAQ-KL, based on output-distribution sensitivity under a quantization-noise proxy; and TAQ-O, a label-informed oracle diagnostic for analyzing layer sensitivity. Across several benchmarks, TAQ outperforms task-agnostic baselines such in most settings, with especially strong gains in the accuracy--memory ratio. We further validate that these gains translate to real deployment behavior through hardware throughput and latency measurements, and analyze calibration robustness and residual-stream error propagation. Overall, TAQ turns mixed-precision PTQ from a model-centric compression step into a task-conditioned precision-allocation problem. A reference implementation is available at \\href{https://anonymous.4open.science/r/TAQ-9217/README.md}{\\includegraphics[height=1em]{imgs/github-mark.png}}.",
+      "identifiers": [
+        "SemanticScholar:0d3ba1da84d4560e9428013bc5944f646bddb444"
+      ],
+      "semantic_scholar_id": "0d3ba1da84d4560e9428013bc5944f646bddb444",
+      "canonical_id": "arXiv:2511.06516",
+      "arxiv_id": "2511.06516",
+      "doi": "10.48550/arXiv.2511.06516",
+      "authors": [
+        "Amit Levi",
+        "R. Lapid",
+        "Rom Himelstein",
+        "Yaniv Nemcovsky",
+        "Ravid Shwartz-Ziv",
+        "Avi Mendelson"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 338,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Towards Efficient LLM Inference via Collective and Adaptive Speculative Decoding",
+      "source_url": "https://doi.org/10.1145/3712285.3759834",
+      "year": 2025,
+      "published": "2025-11-15",
+      "venue": "International Conference on Software Composition",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have gained considerable attention for their remarkable performance across a wide range of tasks. However, efficient LLM inference remains challenging because of the autoregressive decoding process, which generates only one token at a time. Speculative decoding has been introduced to address the limitation by using small speculative models (SSMs) to speed up LLM inference. However, the low acceptance rate of SSMs and the high verification cost of LLM prohibit further performance improvement. In this paper, we present Smurfs, an LLM inference system designed to accelerate LLM inference through collective and adaptive speculative decoding. Smurfs adopts a majority-voted mechanism that harnesses multiple SSMs to collaboratively predict LLM outputs in multi-task scenarios, while avoiding high verification cost. It also decouples SSM speculation from LLM verification and uses a pipelined execution to hide the latency of SSM speculation. Additionally, Smurfs proposes a mechanism to dynamically determine the optimal speculation length of SSM at runtime, balancing the performance impact of accepted tokens and verification cost. The experimental results demonstrate the superiority of Smurfs in terms of inference throughput and latency compared to the state-of-the-art LLM inference systems.",
+      "identifiers": [
+        "SemanticScholar:5460d1d37af64f6bafd3a5a850fdc4204405093a"
+      ],
+      "semantic_scholar_id": "5460d1d37af64f6bafd3a5a850fdc4204405093a",
+      "doi": "10.1145/3712285.3759834",
+      "canonical_id": "DOI:10.1145/3712285.3759834",
+      "authors": [
+        "Siqi Wang",
+        "Hailong Yang",
+        "Xuezhu Wang",
+        "Tongxuan Liu",
+        "Peng-Bo Wang",
+        "Yufan Xu",
+        "Xuning Liang",
+        "Kejie Ma",
+        "Tianyu Feng",
+        "Xin You",
+        "Ruihao Gong",
+        "Rui Wang",
+        "Zhong-Zhi Luan",
+        "Yi Liu",
+        "De-Pei Qian"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 332,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TimeViper: A Hybrid Mamba-Transformer Vision-Language Model for Efficient Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2511.16595",
+      "year": 2025,
+      "published": "2025-11-20",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce TimeViper, a hybrid vision-language model designed to tackle challenges of long video understanding. Processing long videos demands both an efficient model architecture and an effective mechanism for handling extended temporal contexts. To this end, TimeViper adopts a hybrid Mamba-Transformer backbone that combines the efficiency of state-space models with the expressivity of attention mechanisms. Through this hybrid design, we reveal the vision-to-text information aggregation phenomenon, where information progressively flows from vision tokens to text tokens across increasing LLM depth, resulting in severe vision token redundancy. Motivated by this observation, we propose TransV, a token information transfer module that transfers and compresses vision tokens into instruction tokens while maintaining multimodal understanding capabilities. This design enables TimeViper to process hour-long videos exceeding 10,000 frames. Extensive experiments across multiple benchmarks demonstrate that TimeViper competes with state-of-the-art models while extending frame numbers. We further analyze attention behaviors of both Mamba and Transformer layers, offering new insights into hybrid model interpretability. This work represents an initial step towards developing, interpreting, and compressing hybrid Mamba-Transformer architectures.",
+      "identifiers": [
+        "SemanticScholar:1e3599f7c11d0129a2dc54bff827df1722714b14"
+      ],
+      "semantic_scholar_id": "1e3599f7c11d0129a2dc54bff827df1722714b14",
+      "canonical_id": "arXiv:2511.16595",
+      "arxiv_id": "2511.16595",
+      "doi": "10.48550/arXiv.2511.16595",
+      "authors": [
+        "Bo-Shen Xu",
+        "Zihan Xiao",
+        "Jia-Ze Li",
+        "Jian-Zhong Ju",
+        "Zhen-Bo Luo",
+        "Jian Luan",
+        "Qin Jin"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 327,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Revisiting Multimodal KV Cache Compression: A Frequency-Domain-Guided Outlier-KV-Aware Approach",
+      "source_url": "https://arxiv.org/abs/2511.16786",
+      "year": 2025,
+      "published": "2025-11-20",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models suffer from substantial inference overhead since multimodal KV Cache grows proportionally with the visual input length. Existing multimodal KV Cache compression methods mostly rely on attention score to reduce cache size, which makes them are incompatible with established efficient attention kernels (e.g., FlashAttention) and ignores the contribution of value vectors to the attention output. In this work, we revisit multimodal KV Cache compression from the perspective of the KV matrices'distribution. First, we observe that frequency-domain energy of multimodal KV matrices is predominantly concentrated in low-frequency and extract this principal energy via a low-pass filter. Further, we find that removing KV pairs that deviate substantially from this principal energy leads to a pronounced performance drop, which we define as Outlier KVs. Considering Outlier KVs are more likely to encode features critical for inference, we propose FlashCache, a frequency-domain-guided, Outlier-KV-aware KV Cache compression framework. First, we introduce an Outlier KV Recognition Module that models the principal component of multimodal KV matrices in the frequency domain and preferentially retains KV pairs that significantly deviate from it. Furthermore, Dynamic Budget Allocation Module is designed to adaptively determine the per-layer KV Cache size to retain more Outlier KVs. Experiments on multiple MLLMs and benchmarks demonstrate that FlashCache outperforms state-of-the-art multimoal KV compression methods, achieving up to 1.69 times faster decoding with 80% lower KV memory usage while maintaining task performance.",
+      "identifiers": [
+        "SemanticScholar:10550c9449acd184962736690543d0cd0493919b"
+      ],
+      "semantic_scholar_id": "10550c9449acd184962736690543d0cd0493919b",
+      "canonical_id": "arXiv:2511.16786",
+      "arxiv_id": "2511.16786",
+      "doi": "10.48550/arXiv.2511.16786",
+      "authors": [
+        "Yao-Xin Yang",
+        "Peng Ye",
+        "Xu-Dong Tan",
+        "Chongjun Tu",
+        "Maosen Zhao",
+        "Jia Hao",
+        "Tao Chen"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 327,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AlphaQ: Calibration-Free Bit Allocation for Mixture-of-Experts Quantization",
+      "source_url": "https://arxiv.org/abs/2606.04980",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) architectures scale model capacity through sparse expert activation, but their deployment remains memory-bound because all expert weights must reside in memory. Mixed-precision quantization can substantially reduce this footprint by assigning different bit-widths to different experts. Existing approaches, however, typically rely on calibration data to estimate expert importance and determine bit allocation. For frontier MoE LLMs, the original training data, and hence the true training distribution, is proprietary and inaccessible. As a result, calibration sets are inevitably imperfect surrogates, and this can misestimate expert utilization and lead to suboptimal bit allocation. Motivated by the substantial cross-expert quality variability observed in modern MoE models, and by the success of Heavy-Tailed Self-Regularization (HT-SR) theory at predicting neural network model quality without access to training or testing data, we propose AlphaQ, a calibration-free bit-allocation method for MoE quantization. AlphaQ draws on HT-SR theory and follows a simple principle: experts with more heavy-tailed weight spectra are typically better trained and hence should receive higher bit-widths, while experts with weaker heavy-tailed structure can be quantized more aggressively. AlphaQ operationalizes this principle by measuring expert-wise spectral heavy-tailedness and solving a budget-constrained optimization problem that minimizes total quantization error under a global bit-budget constraint. Across several MoE models, AlphaQ consistently outperforms calibration-based baselines under matched bit budgets. Notably, on Qwen1.5-MoE, AlphaQ achieves near full-precision accuracy with an average expert precision of only 3.5 bits, while delivering more than 4$\\times$ memory compression. Our code is available at https://github.com/Superone77/AlphaQ.",
+      "identifiers": [
+        "SemanticScholar:7e0f5e27b3e2bfcdcb724b75d23a957cbfa83427"
+      ],
+      "semantic_scholar_id": "7e0f5e27b3e2bfcdcb724b75d23a957cbfa83427",
+      "canonical_id": "arXiv:2606.04980",
+      "arxiv_id": "2606.04980",
+      "doi": "10.48550/arXiv.2606.04980",
+      "authors": [
+        "Wan-Qi Yang",
+        "Yue-Xiao Ma",
+        "A. Conzelmann",
+        "Xia-Wu Zheng",
+        "Michael W. Mahoney",
+        "T. Konstantin Rusch",
+        "Shi-Wei Liu"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 132,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Comprehensive Study on Visual Token Redundancy for Discrete Diffusion-Based Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2511.15098",
+      "year": 2025,
+      "published": "2025-11-19",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete diffusion-based multimodal large language models (dMLLMs) have emerged as a promising alternative to autoregressive MLLMs thanks to their advantages in parallel decoding and bidirectional context modeling, but most existing dMLLMs incur significant computational overhead during inference due to the full-sequence attention computation in each denoising step. Pioneering studies attempt to resolve this issue from a modality-agnostic perspective via key-value cache optimization or efficient sampling but most of them overlook modality-specific visual token redundancy. In this work, we conduct a comprehensive study on how visual token redundancy evolves with different dMLLM architectures and tasks and how visual token pruning affects dMLLM responses and efficiency. Specifically, our study reveals that visual redundancy emerges only in from-scratch dMLLMs while handling long-answer tasks. In addition, we validate that visual token pruning introduces non-negligible information loss in dMLLMs and only from-scratch dM-LLMs can recover the lost information progressively during late denoising steps. Furthermore, our study shows that layer-skipping is promising for accelerating AR-to-diffusion dMLLMs, whereas progressive or late-step pruning is more effective for from-scratch dMLLMs. Overall, this work offers a new perspective on efficiency optimization for dM-LLMs, greatly advancing their applicability across various multimodal understanding tasks.",
+      "identifiers": [
+        "SemanticScholar:1781c5967acd82e7016e7091a6a2f88c2bffae55"
+      ],
+      "semantic_scholar_id": "1781c5967acd82e7016e7091a6a2f88c2bffae55",
+      "canonical_id": "arXiv:2511.15098",
+      "arxiv_id": "2511.15098",
+      "doi": "10.1109/CVPRF71909.2026.00275",
+      "authors": [
+        "Duo Li",
+        "Zuhao Yang",
+        "Xiao-Qin Zhang",
+        "Ling Shao",
+        "Shi-Jian Lu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 328,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "gpu_ext: Extensible OS Policies for GPUs via eBPF",
+      "source_url": "https://arxiv.org/abs/2512.12615",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Performance in modern GPU-centric systems increasingly depends on resource management policies, including memory placement, scheduling, and observability. However, uniform policies typically yield suboptimal performance across diverse workloads. Existing approaches present a tradeoff: user-space runtimes provide programmability and flexibility but lack cross-tenant visibility and fine-grained control of hardware resources; meanwhile, modifications to the OS kernel introduce significant complexity and safety risks. To address this, we argue that the GPU driver and device layer should provide an extensible OS interface for policy enforcement. While the emerging eBPF technology shows potential, directly applying existing host-side eBPF is insufficient because they lack visibility and control into critical device-side events, and directly embedding policy code into GPU kernels could compromise safety and efficiency. We propose gpu_ext, an eBPF-based runtime that treats the GPU driver and device as a programmable OS subsystem. gpu_ext extends GPU drivers by exposing safe programmable hooks and introduces a device-side eBPF runtime capable of executing verified policy logic within GPU kernels, enabling coherent and transparent policies. Evaluation across realistic workloads including inference, training, and vector search demonstrates that gpu_ext improves throughput by up to 4.8x and reduces tail latency by up to 2x, incurring low overhead, without modifying or restarting applications",
+      "identifiers": [
+        "SemanticScholar:60d496724d1480d9a0bfa737e81a417493c19126"
+      ],
+      "semantic_scholar_id": "60d496724d1480d9a0bfa737e81a417493c19126",
+      "canonical_id": "arXiv:2512.12615",
+      "arxiv_id": "2512.12615",
+      "doi": "10.48550/arXiv.2512.12615",
+      "authors": [
+        "Yu-Sheng Zheng",
+        "Tong Yu",
+        "Yi-Wei Yang",
+        "Ming-Hui Jiang",
+        "Xiangyu Gao",
+        "Jian-Chang Su",
+        "Yan-Peng Hu",
+        "Wen-An Mao",
+        "Wei Zhang",
+        "Dan Williams",
+        "Andi Quinn"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 303,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MS-SSM: A Multi-Scale State Space Model for Efficient Sequence Modeling",
+      "source_url": "https://arxiv.org/abs/2512.23824",
+      "year": 2025,
+      "published": "2025-12-29",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State-space models (SSMs) have recently attention as an efficient alternative to computationally expensive attention-based models for sequence modeling. They rely on linear recurrences to integrate information over time, enabling fast inference, parallelizable training, and control over recurrence stability. However, traditional SSMs often suffer from limited effective memory, requiring larger state sizes for improved recall. Moreover, existing SSMs struggle to capture multi-scale dependencies, which are essential for modeling complex structures in time series, images, and natural language. This paper introduces a multi-scale SSM framework that addresses these limitations by representing sequence dynamics across multiple resolution and processing each resolution with specialized state-space dynamics. By capturing both fine-grained, high-frequency patterns and coarse, global trends, MS-SSM enhances memory efficiency and long-range modeling. We further introduce an input-dependent scale-mixer, enabling dynamic information fusion across resolutions. The proposed approach significantly improves sequence modeling, particularly in long-range and hierarchical tasks, while maintaining computational efficiency. Extensive experiments on benchmarks, including Long Range Arena, hierarchical reasoning, time series classification, and image recognition, demonstrate that MS-SSM consistently outperforms prior SSM-based models, highlighting the benefits of multi-resolution processing in state-space architectures.",
+      "identifiers": [
+        "SemanticScholar:5d9d7798a3cd111112242d8079e2d07f1efc5a8a"
+      ],
+      "semantic_scholar_id": "5d9d7798a3cd111112242d8079e2d07f1efc5a8a",
+      "canonical_id": "arXiv:2512.23824",
+      "arxiv_id": "2512.23824",
+      "doi": "10.48550/arXiv.2512.23824",
+      "authors": [
+        "Mahdi Karami",
+        "Ali Behrouz",
+        "Pei-Lin Zhong",
+        "Razvan Pascanu",
+        "V. Mirrokni"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 288,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Elastic Attention: Test-time Adaptive Sparsity Ratios for Efficient Transformers",
+      "source_url": "https://arxiv.org/abs/2601.17367",
+      "year": 2026,
+      "published": "2026-01-24",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic complexity of standard attention mechanisms poses a significant scalability bottleneck for large language models (LLMs) in long-context scenarios. While hybrid attention strategies that combine sparse and full attention within a single model offer a viable solution, they typically employ static computation ratios (i.e., fixed proportions of sparse versus full attention) and fail to adapt to the varying sparsity sensitivities of downstream tasks during inference. To address this issue, we propose Elastic Attention, which allows the model to dynamically adjust its overall sparsity based on the input. This is achieved by integrating a lightweight Attention Router into the existing pretrained model, which dynamically assigns each attention head to different computation modes. Within only 12 hours of training on 8xA800 GPUs, our method enables models to achieve both strong performance and efficient inference. Experiments across three long-context benchmarks on widely-used LLMs demonstrate the superiority of our method.",
+      "identifiers": [
+        "SemanticScholar:b7acb754d902bd3a5c950fb9a478c4a1f21dec6c"
+      ],
+      "semantic_scholar_id": "b7acb754d902bd3a5c950fb9a478c4a1f21dec6c",
+      "canonical_id": "arXiv:2601.17367",
+      "arxiv_id": "2601.17367",
+      "doi": "10.48550/arXiv.2601.17367",
+      "authors": [
+        "Zecheng Tang",
+        "Quantong Qiu",
+        "Yi Yang",
+        "Zhi Hong",
+        "Haiyan Xiang",
+        "Kebin Liu",
+        "Qing-Qing Dang",
+        "Jun-Tao Li",
+        "Min Zhang"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 262,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pruning as a Cooperative Game: Surrogate-Assisted Layer Contribution Estimation for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.07804",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While large language models (LLMs) demonstrate impressive performance across various tasks, their deployment in real-world scenarios is still constrained by high computational demands. Layer-wise pruning, a commonly employed strategy to mitigate inference costs, can partially address this challenge. However, existing approaches generally depend on static heuristic rules and fail to account for the interdependencies among layers, thereby limiting the effectiveness of the pruning process. To this end, this paper proposes a game-theoretic framework that formulates layer pruning as a cooperative game in which each layer acts as a player and model performance serves as the utility. As computing exact Shapley values is computationally infeasible for large language models (LLMs), we propose using a lightweight surrogate network to estimate layer-wise marginal contributions. This network can predict LLM performance for arbitrary layer combinations at a low computational cost. Additionally, we employ stratified Monte Carlo mask sampling to further reduce the cost of Sharpley value estimation. This approach captures inter-layer dependencies and dynamically identifies critical layers for pruning. Extensive experiments demonstrate the consistent superiority of our method in terms of perplexity and zero-shot accuracy, achieving more efficient and effective layer-wise pruning for large language models.",
+      "identifiers": [
+        "SemanticScholar:e9fa344321be864f4e4d36e377debd18f26d946c"
+      ],
+      "semantic_scholar_id": "e9fa344321be864f4e4d36e377debd18f26d946c",
+      "canonical_id": "arXiv:2602.07804",
+      "arxiv_id": "2602.07804",
+      "doi": "10.48550/arXiv.2602.07804",
+      "authors": [
+        "Xuan Ding",
+        "Pengyu Tong",
+        "Ran-Jie Duan",
+        "Yun-Jian Zhang",
+        "Rui Sun",
+        "Yao Zhu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QUOKA: Query-Oriented KV Selection For Efficient LLM Prefill",
+      "source_url": "https://arxiv.org/abs/2602.08722",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present QUOKA: Query-oriented KV selection for efficient attention, a training-free and hardware agnostic sparse attention algorithm for accelerating transformer inference under chunked prefill. While many queries focus on a smaller group of keys in the attention operator, we observe that queries with low cosine similarity with respect to the mean query interact more strongly with more keys and have the greatest contribution to final attention logits. By prioritizing these low cosine similarity queries, the behavior of full attention during the prefill stage can be closely approximated. QUOKA leverages this observation, accelerating attention by (1) first retaining a small set of representative queries and (2) then subselectin the keys most aligned with those queries. Through experiments on Needle-In-A-Haystack, LongBench, RULER, and Math500, we show that, while realizing a 3x reduction in time-to-first-token, 5x speedup in attention on Nvidia GPUs and up to nearly a 7x speedup on Intel Xeon CPUs, QUOKA achieves near-baseline accuracy, utilizing 88% fewer key-value pairs per attention evaluation.",
+      "identifiers": [
+        "SemanticScholar:c703d8ded12a5b92f1608ef6da2e51fcab0e3187"
+      ],
+      "semantic_scholar_id": "c703d8ded12a5b92f1608ef6da2e51fcab0e3187",
+      "canonical_id": "arXiv:2602.08722",
+      "arxiv_id": "2602.08722",
+      "doi": "10.48550/arXiv.2602.08722",
+      "authors": [
+        "Dalton Jones",
+        "Junyoung Park",
+        "Matthew J. Morse",
+        "Min-Gu Lee",
+        "Christopher Lott",
+        "Harper Langston"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 246,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HAWK: Head Importance-Aware Visual Token Pruning in Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2604.07812",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In multimodal large language models (MLLMs), the surge of visual tokens significantly increases the inference time and computational overhead, making them impractical for real-time or resource-constrained applications. Visual token pruning is a promising strategy for reducing the cost of MLLM inference by removing redundant visual tokens. Existing research usually assumes that all attention heads contribute equally to the visual interpretation. However, our study reveals that different heads may capture distinct visual semantics and inherently play distinct roles in visual processing. In light of this observation, we propose HAWK, a head importance-aware visual token pruning method that perceives the varying importance of attention heads in visual tasks to maximize the retention of crucial tokens. By leveraging head importance weights and text-guided attention to assess visual token significance, HAWK effectively retains task-relevant visual tokens while removing redundant ones. The proposed HAWK is entirely training-free and can be seamlessly applied to various MLLMs. Extensive experiments on multiple mainstream vision-language benchmarks demonstrate that HAWK achieves state-of-the-art accuracy. When applied to Qwen2.5-VL, HAWK retains 96.0% of the original accuracy after pruning 80.2% of the visual tokens. Additionally, it reduces end-to-end latency to 74.4% of the original and further decreases GPU memory usage across the tested models. The code is available at https://github.com/peppery77/HAWK.git.",
+      "identifiers": [
+        "SemanticScholar:3dde95b945f3fcb3b08abe6720c947b9277aa4ae"
+      ],
+      "semantic_scholar_id": "3dde95b945f3fcb3b08abe6720c947b9277aa4ae",
+      "canonical_id": "arXiv:2604.07812",
+      "arxiv_id": "2604.07812",
+      "doi": "10.48550/arXiv.2604.07812",
+      "authors": [
+        "Qi-Hui Zhu",
+        "Tao Zhang",
+        "Yucheng Wang",
+        "Zi-Jian Wen",
+        "Meng-Jie Zhang",
+        "Shuang Chen",
+        "Xiao-Bin Tan",
+        "Jian Yang",
+        "Yang Liu",
+        "Zhen-Hua Dong",
+        "Xianzhi Yu",
+        "Yi-Yu Pan"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 187,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Memory-Bound but Not Bandwidth-Limited: The Physical AI Inference Gap in Batch-1 LLM Decode",
+      "source_url": "https://arxiv.org/abs/2605.30571",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Physical AI systems, including robots, autonomous vehicles, embodied agents and edge copilots, often run a different inference workload from cloud LLM serving: single-stream, batch-1 autoregressive decode, where one robot, camera feed or user session waits on the next token. This workload is usually described as memory-bandwidth-bound. Each decode step streams model weights and the active KV cache, so latency should scale with peak HBM bandwidth. We show that this account is true but incomplete. We measure batch-1 decode for three 7 to 8B-class GQA transformers across four NVIDIA GPUs: H100 SXM5, A100-80GB SXM4, L40S and L4. We evaluate context lengths from 2048 to 16384, producing 44 valid cells under a controlled bf16 SDPA setup. The achieved fraction of peak HBM bandwidth falls as peak bandwidth rises. On the headline Qwen-2.5-7B ctx=2048 cell, an L4 reaches roughly 81 percent of its analytic memory floor, while an H100 reaches only 27 percent. Physical-AI decode is memory-dominated, but faster memory does not translate into proportional latency gains. We test the missing term with a CUDA Graphs A/B experiment. On H100 at ctx=2048, CUDA Graphs improves decode latency by 1.259x across N=10 fresh sessions, with a 95 percent bootstrap confidence interval of 1.253 to 1.267. On L4, the same intervention gives only 1.028x. This isolates a launch-side overhead that becomes visible on fast GPUs but remains mostly hidden on slower, bandwidth-bound GPUs. The deployment implication is that memory savings matter only when the runtime realises them. On L4, bf16 decode sits close to the memory floor, but common quantised paths do not recover the expected 4x weight-traffic reduction: bnb-nf4 reaches 59.36 ms/step and AutoAWQ+Marlin reaches 45.24 ms/step from a 62.32 ms bf16 baseline. GPTQ+ExLlamaV2, with Ada-tuned int4 kernels, reaches 17.36 ms/step.",
+      "identifiers": [
+        "SemanticScholar:5640c581c22aac610469dda4e61e01b71540ba9c"
+      ],
+      "semantic_scholar_id": "5640c581c22aac610469dda4e61e01b71540ba9c",
+      "canonical_id": "arXiv:2605.30571",
+      "arxiv_id": "2605.30571",
+      "doi": "10.48550/arXiv.2605.30571",
+      "authors": [
+        "J. Chen"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ThoughtFold: Folding Reasoning Chains via Introspective Preference Learning",
+      "source_url": "https://arxiv.org/abs/2606.03503",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) have achieved remarkable progress thanks to Reinforcement Learning with Verifiable Rewards (RLVR) on Chain-of-Thoughts (CoTs). However, since long CoTs naturally contain trial and errors and mainstream RLVR approaches choose outcome-correct CoT trajectories for memorization, the redundant explorations in long CoTs are inevitably reinforced, which results in the over-thinking issues of LRMs. Previous attempts to resolve this issue mainly give more advantage to shorter trajectories, yet their learning signals are still outcome-based and cannot reduce the memorization of redundant explorations in long CoTs. Therefore, we propose ThoughtFold, a framework that leverages fine-grained preference learning to mitigate redundant explorations for efficient reasoning. ThoughtFold employs an introspective strategy to identify redundancy within each correct trajectory, which yields a spectrum of candidate sub-trajectories. Leveraging this spectrum, we introduce a masked preference optimization objective that explicitly penalizes redundant explorations and encourages the model to directly bridge essential reasoning segments, effectively folding its reasoning chains into a more concise path. Extensive experiments show that ThoughtFold significantly enhances efficiency. It reduces the token usage of DeepSeek-R1-Distill-Qwen-7B by approximately 56% while maintaining state-of-the-art accuracy.",
+      "identifiers": [
+        "SemanticScholar:d477180af29b5183a1e410ba0579b843e9443a44"
+      ],
+      "semantic_scholar_id": "d477180af29b5183a1e410ba0579b843e9443a44",
+      "canonical_id": "arXiv:2606.03503",
+      "arxiv_id": "2606.03503",
+      "doi": "10.48550/arXiv.2606.03503",
+      "authors": [
+        "Ziyang Liu",
+        "Xueda Shen",
+        "Yuzhe Gu",
+        "Songyang Gao",
+        "Kui-Kun Liu",
+        "Guangran Cheng",
+        "Chengqi Lyu",
+        "Da-Hua Lin",
+        "Wen-Wei Zhang",
+        "Kai Chen"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 133,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.06516",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.06516",
+        "id:SemanticScholar:0d3ba1da84d4560e9428013bc5944f646bddb444",
+        "id:arXiv:2511.06516",
+        "title:you had one job pertask quantization using llms hidden representations",
+        "url:https://arxiv.org/abs/2511.06516"
+      ],
+      "record": {
+        "title": "You Had One Job: Per-Task Quantization Using LLMs' Hidden Representations",
+        "source_url": "https://arxiv.org/abs/2511.06516",
+        "year": 2025,
+        "published": "2025-11-09",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Many LLM applications require only narrow capabilities, yet standard post-training quantization (PTQ) methods allocate precision without considering the target task. This can waste bits on layers that are less relevant to the task signal while over-compressing layers that are critical for downstream behavior. We propose Task-Aware Quantization (TAQ), a training-free, weight-only mixed-precision PTQ framework that uses a small set of unlabeled task calibration prompts to allocate higher precision to task-relevant transformer layers under a fixed bit budget. TAQ estimates layer importance from hidden representations and output sensitivity, and we instantiate it with three scoring rules: TAQ-IS, based on activation information and stability; TAQ-KL, based on output-distribution sensitivity under a quantization-noise proxy; and TAQ-O, a label-informed oracle diagnostic for analyzing layer sensitivity. Across several benchmarks, TAQ outperforms task-agnostic baselines such in most settings, with especially strong gains in the accuracy--memory ratio. We further validate that these gains translate to real deployment behavior through hardware throughput and latency measurements, and analyze calibration robustness and residual-stream error propagation. Overall, TAQ turns mixed-precision PTQ from a model-centric compression step into a task-conditioned precision-allocation problem. A reference implementation is available at \\href{https://anonymous.4open.science/r/TAQ-9217/README.md}{\\includegraphics[height=1em]{imgs/github-mark.png}}.",
+        "identifiers": [
+          "SemanticScholar:0d3ba1da84d4560e9428013bc5944f646bddb444"
+        ],
+        "semantic_scholar_id": "0d3ba1da84d4560e9428013bc5944f646bddb444",
+        "canonical_id": "arXiv:2511.06516",
+        "arxiv_id": "2511.06516",
+        "doi": "10.48550/arXiv.2511.06516",
+        "authors": [
+          "Amit Levi",
+          "R. Lapid",
+          "Rom Himelstein",
+          "Yaniv Nemcovsky",
+          "Ravid Shwartz-Ziv",
+          "Avi Mendelson"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 338,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3712285.3759834",
+      "identity_tokens": [
+        "id:DOI:10.1145/3712285.3759834",
+        "id:SemanticScholar:5460d1d37af64f6bafd3a5a850fdc4204405093a",
+        "title:towards efficient llm inference via collective and adaptive speculative decoding",
+        "url:https://doi.org/10.1145/3712285.3759834"
+      ],
+      "record": {
+        "title": "Towards Efficient LLM Inference via Collective and Adaptive Speculative Decoding",
+        "source_url": "https://doi.org/10.1145/3712285.3759834",
+        "year": 2025,
+        "published": "2025-11-15",
+        "venue": "International Conference on Software Composition",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have gained considerable attention for their remarkable performance across a wide range of tasks. However, efficient LLM inference remains challenging because of the autoregressive decoding process, which generates only one token at a time. Speculative decoding has been introduced to address the limitation by using small speculative models (SSMs) to speed up LLM inference. However, the low acceptance rate of SSMs and the high verification cost of LLM prohibit further performance improvement. In this paper, we present Smurfs, an LLM inference system designed to accelerate LLM inference through collective and adaptive speculative decoding. Smurfs adopts a majority-voted mechanism that harnesses multiple SSMs to collaboratively predict LLM outputs in multi-task scenarios, while avoiding high verification cost. It also decouples SSM speculation from LLM verification and uses a pipelined execution to hide the latency of SSM speculation. Additionally, Smurfs proposes a mechanism to dynamically determine the optimal speculation length of SSM at runtime, balancing the performance impact of accepted tokens and verification cost. The experimental results demonstrate the superiority of Smurfs in terms of inference throughput and latency compared to the state-of-the-art LLM inference systems.",
+        "identifiers": [
+          "SemanticScholar:5460d1d37af64f6bafd3a5a850fdc4204405093a"
+        ],
+        "semantic_scholar_id": "5460d1d37af64f6bafd3a5a850fdc4204405093a",
+        "doi": "10.1145/3712285.3759834",
+        "canonical_id": "DOI:10.1145/3712285.3759834",
+        "authors": [
+          "Siqi Wang",
+          "Hailong Yang",
+          "Xuezhu Wang",
+          "Tongxuan Liu",
+          "Peng-Bo Wang",
+          "Yufan Xu",
+          "Xuning Liang",
+          "Kejie Ma",
+          "Tianyu Feng",
+          "Xin You",
+          "Ruihao Gong",
+          "Rui Wang",
+          "Zhong-Zhi Luan",
+          "Yi Liu",
+          "De-Pei Qian"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 332,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.16595",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.16595",
+        "id:SemanticScholar:1e3599f7c11d0129a2dc54bff827df1722714b14",
+        "id:arXiv:2511.16595",
+        "title:timeviper a hybrid mambatransformer visionlanguage model for efficient long video understanding",
+        "url:https://arxiv.org/abs/2511.16595"
+      ],
+      "record": {
+        "title": "TimeViper: A Hybrid Mamba-Transformer Vision-Language Model for Efficient Long Video Understanding",
+        "source_url": "https://arxiv.org/abs/2511.16595",
+        "year": 2025,
+        "published": "2025-11-20",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce TimeViper, a hybrid vision-language model designed to tackle challenges of long video understanding. Processing long videos demands both an efficient model architecture and an effective mechanism for handling extended temporal contexts. To this end, TimeViper adopts a hybrid Mamba-Transformer backbone that combines the efficiency of state-space models with the expressivity of attention mechanisms. Through this hybrid design, we reveal the vision-to-text information aggregation phenomenon, where information progressively flows from vision tokens to text tokens across increasing LLM depth, resulting in severe vision token redundancy. Motivated by this observation, we propose TransV, a token information transfer module that transfers and compresses vision tokens into instruction tokens while maintaining multimodal understanding capabilities. This design enables TimeViper to process hour-long videos exceeding 10,000 frames. Extensive experiments across multiple benchmarks demonstrate that TimeViper competes with state-of-the-art models while extending frame numbers. We further analyze attention behaviors of both Mamba and Transformer layers, offering new insights into hybrid model interpretability. This work represents an initial step towards developing, interpreting, and compressing hybrid Mamba-Transformer architectures.",
+        "identifiers": [
+          "SemanticScholar:1e3599f7c11d0129a2dc54bff827df1722714b14"
+        ],
+        "semantic_scholar_id": "1e3599f7c11d0129a2dc54bff827df1722714b14",
+        "canonical_id": "arXiv:2511.16595",
+        "arxiv_id": "2511.16595",
+        "doi": "10.48550/arXiv.2511.16595",
+        "authors": [
+          "Bo-Shen Xu",
+          "Zihan Xiao",
+          "Jia-Ze Li",
+          "Jian-Zhong Ju",
+          "Zhen-Bo Luo",
+          "Jian Luan",
+          "Qin Jin"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 327,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.16786",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.16786",
+        "id:SemanticScholar:10550c9449acd184962736690543d0cd0493919b",
+        "id:arXiv:2511.16786",
+        "title:revisiting multimodal kv cache compression a frequencydomainguided outlierkvaware approach",
+        "url:https://arxiv.org/abs/2511.16786"
+      ],
+      "record": {
+        "title": "Revisiting Multimodal KV Cache Compression: A Frequency-Domain-Guided Outlier-KV-Aware Approach",
+        "source_url": "https://arxiv.org/abs/2511.16786",
+        "year": 2025,
+        "published": "2025-11-20",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models suffer from substantial inference overhead since multimodal KV Cache grows proportionally with the visual input length. Existing multimodal KV Cache compression methods mostly rely on attention score to reduce cache size, which makes them are incompatible with established efficient attention kernels (e.g., FlashAttention) and ignores the contribution of value vectors to the attention output. In this work, we revisit multimodal KV Cache compression from the perspective of the KV matrices'distribution. First, we observe that frequency-domain energy of multimodal KV matrices is predominantly concentrated in low-frequency and extract this principal energy via a low-pass filter. Further, we find that removing KV pairs that deviate substantially from this principal energy leads to a pronounced performance drop, which we define as Outlier KVs. Considering Outlier KVs are more likely to encode features critical for inference, we propose FlashCache, a frequency-domain-guided, Outlier-KV-aware KV Cache compression framework. First, we introduce an Outlier KV Recognition Module that models the principal component of multimodal KV matrices in the frequency domain and preferentially retains KV pairs that significantly deviate from it. Furthermore, Dynamic Budget Allocation Module is designed to adaptively determine the per-layer KV Cache size to retain more Outlier KVs. Experiments on multiple MLLMs and benchmarks demonstrate that FlashCache outperforms state-of-the-art multimoal KV compression methods, achieving up to 1.69 times faster decoding with 80% lower KV memory usage while maintaining task performance.",
+        "identifiers": [
+          "SemanticScholar:10550c9449acd184962736690543d0cd0493919b"
+        ],
+        "semantic_scholar_id": "10550c9449acd184962736690543d0cd0493919b",
+        "canonical_id": "arXiv:2511.16786",
+        "arxiv_id": "2511.16786",
+        "doi": "10.48550/arXiv.2511.16786",
+        "authors": [
+          "Yao-Xin Yang",
+          "Peng Ye",
+          "Xu-Dong Tan",
+          "Chongjun Tu",
+          "Maosen Zhao",
+          "Jia Hao",
+          "Tao Chen"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 327,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04980",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.04980",
+        "id:SemanticScholar:7e0f5e27b3e2bfcdcb724b75d23a957cbfa83427",
+        "id:arXiv:2606.04980",
+        "title:alphaq calibrationfree bit allocation for mixtureofexperts quantization",
+        "url:https://arxiv.org/abs/2606.04980"
+      ],
+      "record": {
+        "title": "AlphaQ: Calibration-Free Bit Allocation for Mixture-of-Experts Quantization",
+        "source_url": "https://arxiv.org/abs/2606.04980",
+        "year": 2026,
+        "published": "2026-06-03",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) architectures scale model capacity through sparse expert activation, but their deployment remains memory-bound because all expert weights must reside in memory. Mixed-precision quantization can substantially reduce this footprint by assigning different bit-widths to different experts. Existing approaches, however, typically rely on calibration data to estimate expert importance and determine bit allocation. For frontier MoE LLMs, the original training data, and hence the true training distribution, is proprietary and inaccessible. As a result, calibration sets are inevitably imperfect surrogates, and this can misestimate expert utilization and lead to suboptimal bit allocation. Motivated by the substantial cross-expert quality variability observed in modern MoE models, and by the success of Heavy-Tailed Self-Regularization (HT-SR) theory at predicting neural network model quality without access to training or testing data, we propose AlphaQ, a calibration-free bit-allocation method for MoE quantization. AlphaQ draws on HT-SR theory and follows a simple principle: experts with more heavy-tailed weight spectra are typically better trained and hence should receive higher bit-widths, while experts with weaker heavy-tailed structure can be quantized more aggressively. AlphaQ operationalizes this principle by measuring expert-wise spectral heavy-tailedness and solving a budget-constrained optimization problem that minimizes total quantization error under a global bit-budget constraint. Across several MoE models, AlphaQ consistently outperforms calibration-based baselines under matched bit budgets. Notably, on Qwen1.5-MoE, AlphaQ achieves near full-precision accuracy with an average expert precision of only 3.5 bits, while delivering more than 4$\\times$ memory compression. Our code is available at https://github.com/Superone77/AlphaQ.",
+        "identifiers": [
+          "SemanticScholar:7e0f5e27b3e2bfcdcb724b75d23a957cbfa83427"
+        ],
+        "semantic_scholar_id": "7e0f5e27b3e2bfcdcb724b75d23a957cbfa83427",
+        "canonical_id": "arXiv:2606.04980",
+        "arxiv_id": "2606.04980",
+        "doi": "10.48550/arXiv.2606.04980",
+        "authors": [
+          "Wan-Qi Yang",
+          "Yue-Xiao Ma",
+          "A. Conzelmann",
+          "Xia-Wu Zheng",
+          "Michael W. Mahoney",
+          "T. Konstantin Rusch",
+          "Shi-Wei Liu"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 132,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.15098",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprf71909.2026.00275",
+        "id:SemanticScholar:1781c5967acd82e7016e7091a6a2f88c2bffae55",
+        "id:arXiv:2511.15098",
+        "title:a comprehensive study on visual token redundancy for discrete diffusionbased multimodal large language models",
+        "url:https://arxiv.org/abs/2511.15098"
+      ],
+      "record": {
+        "title": "A Comprehensive Study on Visual Token Redundancy for Discrete Diffusion-Based Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2511.15098",
+        "year": 2025,
+        "published": "2025-11-19",
+        "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Discrete diffusion-based multimodal large language models (dMLLMs) have emerged as a promising alternative to autoregressive MLLMs thanks to their advantages in parallel decoding and bidirectional context modeling, but most existing dMLLMs incur significant computational overhead during inference due to the full-sequence attention computation in each denoising step. Pioneering studies attempt to resolve this issue from a modality-agnostic perspective via key-value cache optimization or efficient sampling but most of them overlook modality-specific visual token redundancy. In this work, we conduct a comprehensive study on how visual token redundancy evolves with different dMLLM architectures and tasks and how visual token pruning affects dMLLM responses and efficiency. Specifically, our study reveals that visual redundancy emerges only in from-scratch dMLLMs while handling long-answer tasks. In addition, we validate that visual token pruning introduces non-negligible information loss in dMLLMs and only from-scratch dM-LLMs can recover the lost information progressively during late denoising steps. Furthermore, our study shows that layer-skipping is promising for accelerating AR-to-diffusion dMLLMs, whereas progressive or late-step pruning is more effective for from-scratch dMLLMs. Overall, this work offers a new perspective on efficiency optimization for dM-LLMs, greatly advancing their applicability across various multimodal understanding tasks.",
+        "identifiers": [
+          "SemanticScholar:1781c5967acd82e7016e7091a6a2f88c2bffae55"
+        ],
+        "semantic_scholar_id": "1781c5967acd82e7016e7091a6a2f88c2bffae55",
+        "canonical_id": "arXiv:2511.15098",
+        "arxiv_id": "2511.15098",
+        "doi": "10.1109/CVPRF71909.2026.00275",
+        "authors": [
+          "Duo Li",
+          "Zuhao Yang",
+          "Xiao-Qin Zhang",
+          "Ling Shao",
+          "Shi-Jian Lu"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 328,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.12615",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.12615",
+        "id:SemanticScholar:60d496724d1480d9a0bfa737e81a417493c19126",
+        "id:arXiv:2512.12615",
+        "title:gpu_ext extensible os policies for gpus via ebpf",
+        "url:https://arxiv.org/abs/2512.12615"
+      ],
+      "record": {
+        "title": "gpu_ext: Extensible OS Policies for GPUs via eBPF",
+        "source_url": "https://arxiv.org/abs/2512.12615",
+        "year": 2025,
+        "published": "2025-12-14",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Performance in modern GPU-centric systems increasingly depends on resource management policies, including memory placement, scheduling, and observability. However, uniform policies typically yield suboptimal performance across diverse workloads. Existing approaches present a tradeoff: user-space runtimes provide programmability and flexibility but lack cross-tenant visibility and fine-grained control of hardware resources; meanwhile, modifications to the OS kernel introduce significant complexity and safety risks. To address this, we argue that the GPU driver and device layer should provide an extensible OS interface for policy enforcement. While the emerging eBPF technology shows potential, directly applying existing host-side eBPF is insufficient because they lack visibility and control into critical device-side events, and directly embedding policy code into GPU kernels could compromise safety and efficiency. We propose gpu_ext, an eBPF-based runtime that treats the GPU driver and device as a programmable OS subsystem. gpu_ext extends GPU drivers by exposing safe programmable hooks and introduces a device-side eBPF runtime capable of executing verified policy logic within GPU kernels, enabling coherent and transparent policies. Evaluation across realistic workloads including inference, training, and vector search demonstrates that gpu_ext improves throughput by up to 4.8x and reduces tail latency by up to 2x, incurring low overhead, without modifying or restarting applications",
+        "identifiers": [
+          "SemanticScholar:60d496724d1480d9a0bfa737e81a417493c19126"
+        ],
+        "semantic_scholar_id": "60d496724d1480d9a0bfa737e81a417493c19126",
+        "canonical_id": "arXiv:2512.12615",
+        "arxiv_id": "2512.12615",
+        "doi": "10.48550/arXiv.2512.12615",
+        "authors": [
+          "Yu-Sheng Zheng",
+          "Tong Yu",
+          "Yi-Wei Yang",
+          "Ming-Hui Jiang",
+          "Xiangyu Gao",
+          "Jian-Chang Su",
+          "Yan-Peng Hu",
+          "Wen-An Mao",
+          "Wei Zhang",
+          "Dan Williams",
+          "Andi Quinn"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 303,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.23824",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.23824",
+        "id:SemanticScholar:5d9d7798a3cd111112242d8079e2d07f1efc5a8a",
+        "id:arXiv:2512.23824",
+        "title:msssm a multiscale state space model for efficient sequence modeling",
+        "url:https://arxiv.org/abs/2512.23824"
+      ],
+      "record": {
+        "title": "MS-SSM: A Multi-Scale State Space Model for Efficient Sequence Modeling",
+        "source_url": "https://arxiv.org/abs/2512.23824",
+        "year": 2025,
+        "published": "2025-12-29",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State-space models (SSMs) have recently attention as an efficient alternative to computationally expensive attention-based models for sequence modeling. They rely on linear recurrences to integrate information over time, enabling fast inference, parallelizable training, and control over recurrence stability. However, traditional SSMs often suffer from limited effective memory, requiring larger state sizes for improved recall. Moreover, existing SSMs struggle to capture multi-scale dependencies, which are essential for modeling complex structures in time series, images, and natural language. This paper introduces a multi-scale SSM framework that addresses these limitations by representing sequence dynamics across multiple resolution and processing each resolution with specialized state-space dynamics. By capturing both fine-grained, high-frequency patterns and coarse, global trends, MS-SSM enhances memory efficiency and long-range modeling. We further introduce an input-dependent scale-mixer, enabling dynamic information fusion across resolutions. The proposed approach significantly improves sequence modeling, particularly in long-range and hierarchical tasks, while maintaining computational efficiency. Extensive experiments on benchmarks, including Long Range Arena, hierarchical reasoning, time series classification, and image recognition, demonstrate that MS-SSM consistently outperforms prior SSM-based models, highlighting the benefits of multi-resolution processing in state-space architectures.",
+        "identifiers": [
+          "SemanticScholar:5d9d7798a3cd111112242d8079e2d07f1efc5a8a"
+        ],
+        "semantic_scholar_id": "5d9d7798a3cd111112242d8079e2d07f1efc5a8a",
+        "canonical_id": "arXiv:2512.23824",
+        "arxiv_id": "2512.23824",
+        "doi": "10.48550/arXiv.2512.23824",
+        "authors": [
+          "Mahdi Karami",
+          "Ali Behrouz",
+          "Pei-Lin Zhong",
+          "Razvan Pascanu",
+          "V. Mirrokni"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 288,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.17367",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.17367",
+        "id:SemanticScholar:b7acb754d902bd3a5c950fb9a478c4a1f21dec6c",
+        "id:arXiv:2601.17367",
+        "title:elastic attention testtime adaptive sparsity ratios for efficient transformers",
+        "url:https://arxiv.org/abs/2601.17367"
+      ],
+      "record": {
+        "title": "Elastic Attention: Test-time Adaptive Sparsity Ratios for Efficient Transformers",
+        "source_url": "https://arxiv.org/abs/2601.17367",
+        "year": 2026,
+        "published": "2026-01-24",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quadratic complexity of standard attention mechanisms poses a significant scalability bottleneck for large language models (LLMs) in long-context scenarios. While hybrid attention strategies that combine sparse and full attention within a single model offer a viable solution, they typically employ static computation ratios (i.e., fixed proportions of sparse versus full attention) and fail to adapt to the varying sparsity sensitivities of downstream tasks during inference. To address this issue, we propose Elastic Attention, which allows the model to dynamically adjust its overall sparsity based on the input. This is achieved by integrating a lightweight Attention Router into the existing pretrained model, which dynamically assigns each attention head to different computation modes. Within only 12 hours of training on 8xA800 GPUs, our method enables models to achieve both strong performance and efficient inference. Experiments across three long-context benchmarks on widely-used LLMs demonstrate the superiority of our method.",
+        "identifiers": [
+          "SemanticScholar:b7acb754d902bd3a5c950fb9a478c4a1f21dec6c"
+        ],
+        "semantic_scholar_id": "b7acb754d902bd3a5c950fb9a478c4a1f21dec6c",
+        "canonical_id": "arXiv:2601.17367",
+        "arxiv_id": "2601.17367",
+        "doi": "10.48550/arXiv.2601.17367",
+        "authors": [
+          "Zecheng Tang",
+          "Quantong Qiu",
+          "Yi Yang",
+          "Zhi Hong",
+          "Haiyan Xiang",
+          "Kebin Liu",
+          "Qing-Qing Dang",
+          "Jun-Tao Li",
+          "Min Zhang"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 262,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.07804",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.07804",
+        "id:SemanticScholar:e9fa344321be864f4e4d36e377debd18f26d946c",
+        "id:arXiv:2602.07804",
+        "title:pruning as a cooperative game surrogateassisted layer contribution estimation for large language models",
+        "url:https://arxiv.org/abs/2602.07804"
+      ],
+      "record": {
+        "title": "Pruning as a Cooperative Game: Surrogate-Assisted Layer Contribution Estimation for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2602.07804",
+        "year": 2026,
+        "published": "2026-02-08",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While large language models (LLMs) demonstrate impressive performance across various tasks, their deployment in real-world scenarios is still constrained by high computational demands. Layer-wise pruning, a commonly employed strategy to mitigate inference costs, can partially address this challenge. However, existing approaches generally depend on static heuristic rules and fail to account for the interdependencies among layers, thereby limiting the effectiveness of the pruning process. To this end, this paper proposes a game-theoretic framework that formulates layer pruning as a cooperative game in which each layer acts as a player and model performance serves as the utility. As computing exact Shapley values is computationally infeasible for large language models (LLMs), we propose using a lightweight surrogate network to estimate layer-wise marginal contributions. This network can predict LLM performance for arbitrary layer combinations at a low computational cost. Additionally, we employ stratified Monte Carlo mask sampling to further reduce the cost of Sharpley value estimation. This approach captures inter-layer dependencies and dynamically identifies critical layers for pruning. Extensive experiments demonstrate the consistent superiority of our method in terms of perplexity and zero-shot accuracy, achieving more efficient and effective layer-wise pruning for large language models.",
+        "identifiers": [
+          "SemanticScholar:e9fa344321be864f4e4d36e377debd18f26d946c"
+        ],
+        "semantic_scholar_id": "e9fa344321be864f4e4d36e377debd18f26d946c",
+        "canonical_id": "arXiv:2602.07804",
+        "arxiv_id": "2602.07804",
+        "doi": "10.48550/arXiv.2602.07804",
+        "authors": [
+          "Xuan Ding",
+          "Pengyu Tong",
+          "Ran-Jie Duan",
+          "Yun-Jian Zhang",
+          "Rui Sun",
+          "Yao Zhu"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 247,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.08722",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.08722",
+        "id:SemanticScholar:c703d8ded12a5b92f1608ef6da2e51fcab0e3187",
+        "id:arXiv:2602.08722",
+        "title:quoka queryoriented kv selection for efficient llm prefill",
+        "url:https://arxiv.org/abs/2602.08722"
+      ],
+      "record": {
+        "title": "QUOKA: Query-Oriented KV Selection For Efficient LLM Prefill",
+        "source_url": "https://arxiv.org/abs/2602.08722",
+        "year": 2026,
+        "published": "2026-02-09",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present QUOKA: Query-oriented KV selection for efficient attention, a training-free and hardware agnostic sparse attention algorithm for accelerating transformer inference under chunked prefill. While many queries focus on a smaller group of keys in the attention operator, we observe that queries with low cosine similarity with respect to the mean query interact more strongly with more keys and have the greatest contribution to final attention logits. By prioritizing these low cosine similarity queries, the behavior of full attention during the prefill stage can be closely approximated. QUOKA leverages this observation, accelerating attention by (1) first retaining a small set of representative queries and (2) then subselectin the keys most aligned with those queries. Through experiments on Needle-In-A-Haystack, LongBench, RULER, and Math500, we show that, while realizing a 3x reduction in time-to-first-token, 5x speedup in attention on Nvidia GPUs and up to nearly a 7x speedup on Intel Xeon CPUs, QUOKA achieves near-baseline accuracy, utilizing 88% fewer key-value pairs per attention evaluation.",
+        "identifiers": [
+          "SemanticScholar:c703d8ded12a5b92f1608ef6da2e51fcab0e3187"
+        ],
+        "semantic_scholar_id": "c703d8ded12a5b92f1608ef6da2e51fcab0e3187",
+        "canonical_id": "arXiv:2602.08722",
+        "arxiv_id": "2602.08722",
+        "doi": "10.48550/arXiv.2602.08722",
+        "authors": [
+          "Dalton Jones",
+          "Junyoung Park",
+          "Matthew J. Morse",
+          "Min-Gu Lee",
+          "Christopher Lott",
+          "Harper Langston"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 246,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.07812",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.07812",
+        "id:SemanticScholar:3dde95b945f3fcb3b08abe6720c947b9277aa4ae",
+        "id:arXiv:2604.07812",
+        "title:hawk head importanceaware visual token pruning in multimodal models",
+        "url:https://arxiv.org/abs/2604.07812"
+      ],
+      "record": {
+        "title": "HAWK: Head Importance-Aware Visual Token Pruning in Multimodal Models",
+        "source_url": "https://arxiv.org/abs/2604.07812",
+        "year": 2026,
+        "published": "2026-04-09",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In multimodal large language models (MLLMs), the surge of visual tokens significantly increases the inference time and computational overhead, making them impractical for real-time or resource-constrained applications. Visual token pruning is a promising strategy for reducing the cost of MLLM inference by removing redundant visual tokens. Existing research usually assumes that all attention heads contribute equally to the visual interpretation. However, our study reveals that different heads may capture distinct visual semantics and inherently play distinct roles in visual processing. In light of this observation, we propose HAWK, a head importance-aware visual token pruning method that perceives the varying importance of attention heads in visual tasks to maximize the retention of crucial tokens. By leveraging head importance weights and text-guided attention to assess visual token significance, HAWK effectively retains task-relevant visual tokens while removing redundant ones. The proposed HAWK is entirely training-free and can be seamlessly applied to various MLLMs. Extensive experiments on multiple mainstream vision-language benchmarks demonstrate that HAWK achieves state-of-the-art accuracy. When applied to Qwen2.5-VL, HAWK retains 96.0% of the original accuracy after pruning 80.2% of the visual tokens. Additionally, it reduces end-to-end latency to 74.4% of the original and further decreases GPU memory usage across the tested models. The code is available at https://github.com/peppery77/HAWK.git.",
+        "identifiers": [
+          "SemanticScholar:3dde95b945f3fcb3b08abe6720c947b9277aa4ae"
+        ],
+        "semantic_scholar_id": "3dde95b945f3fcb3b08abe6720c947b9277aa4ae",
+        "canonical_id": "arXiv:2604.07812",
+        "arxiv_id": "2604.07812",
+        "doi": "10.48550/arXiv.2604.07812",
+        "authors": [
+          "Qi-Hui Zhu",
+          "Tao Zhang",
+          "Yucheng Wang",
+          "Zi-Jian Wen",
+          "Meng-Jie Zhang",
+          "Shuang Chen",
+          "Xiao-Bin Tan",
+          "Jian Yang",
+          "Yang Liu",
+          "Zhen-Hua Dong",
+          "Xianzhi Yu",
+          "Yi-Yu Pan"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 187,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.30571",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.30571",
+        "id:SemanticScholar:5640c581c22aac610469dda4e61e01b71540ba9c",
+        "id:arXiv:2605.30571",
+        "title:memorybound but not bandwidthlimited the physical ai inference gap in batch1 llm decode",
+        "url:https://arxiv.org/abs/2605.30571"
+      ],
+      "record": {
+        "title": "Memory-Bound but Not Bandwidth-Limited: The Physical AI Inference Gap in Batch-1 LLM Decode",
+        "source_url": "https://arxiv.org/abs/2605.30571",
+        "year": 2026,
+        "published": "2026-05-28",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Physical AI systems, including robots, autonomous vehicles, embodied agents and edge copilots, often run a different inference workload from cloud LLM serving: single-stream, batch-1 autoregressive decode, where one robot, camera feed or user session waits on the next token. This workload is usually described as memory-bandwidth-bound. Each decode step streams model weights and the active KV cache, so latency should scale with peak HBM bandwidth. We show that this account is true but incomplete. We measure batch-1 decode for three 7 to 8B-class GQA transformers across four NVIDIA GPUs: H100 SXM5, A100-80GB SXM4, L40S and L4. We evaluate context lengths from 2048 to 16384, producing 44 valid cells under a controlled bf16 SDPA setup. The achieved fraction of peak HBM bandwidth falls as peak bandwidth rises. On the headline Qwen-2.5-7B ctx=2048 cell, an L4 reaches roughly 81 percent of its analytic memory floor, while an H100 reaches only 27 percent. Physical-AI decode is memory-dominated, but faster memory does not translate into proportional latency gains. We test the missing term with a CUDA Graphs A/B experiment. On H100 at ctx=2048, CUDA Graphs improves decode latency by 1.259x across N=10 fresh sessions, with a 95 percent bootstrap confidence interval of 1.253 to 1.267. On L4, the same intervention gives only 1.028x. This isolates a launch-side overhead that becomes visible on fast GPUs but remains mostly hidden on slower, bandwidth-bound GPUs. The deployment implication is that memory savings matter only when the runtime realises them. On L4, bf16 decode sits close to the memory floor, but common quantised paths do not recover the expected 4x weight-traffic reduction: bnb-nf4 reaches 59.36 ms/step and AutoAWQ+Marlin reaches 45.24 ms/step from a 62.32 ms bf16 baseline. GPTQ+ExLlamaV2, with Ada-tuned int4 kernels, reaches 17.36 ms/step.",
+        "identifiers": [
+          "SemanticScholar:5640c581c22aac610469dda4e61e01b71540ba9c"
+        ],
+        "semantic_scholar_id": "5640c581c22aac610469dda4e61e01b71540ba9c",
+        "canonical_id": "arXiv:2605.30571",
+        "arxiv_id": "2605.30571",
+        "doi": "10.48550/arXiv.2605.30571",
+        "authors": [
+          "J. Chen"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 138,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.03503",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.03503",
+        "id:SemanticScholar:d477180af29b5183a1e410ba0579b843e9443a44",
+        "id:arXiv:2606.03503",
+        "title:thoughtfold folding reasoning chains via introspective preference learning",
+        "url:https://arxiv.org/abs/2606.03503"
+      ],
+      "record": {
+        "title": "ThoughtFold: Folding Reasoning Chains via Introspective Preference Learning",
+        "source_url": "https://arxiv.org/abs/2606.03503",
+        "year": 2026,
+        "published": "2026-06-02",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) have achieved remarkable progress thanks to Reinforcement Learning with Verifiable Rewards (RLVR) on Chain-of-Thoughts (CoTs). However, since long CoTs naturally contain trial and errors and mainstream RLVR approaches choose outcome-correct CoT trajectories for memorization, the redundant explorations in long CoTs are inevitably reinforced, which results in the over-thinking issues of LRMs. Previous attempts to resolve this issue mainly give more advantage to shorter trajectories, yet their learning signals are still outcome-based and cannot reduce the memorization of redundant explorations in long CoTs. Therefore, we propose ThoughtFold, a framework that leverages fine-grained preference learning to mitigate redundant explorations for efficient reasoning. ThoughtFold employs an introspective strategy to identify redundancy within each correct trajectory, which yields a spectrum of candidate sub-trajectories. Leveraging this spectrum, we introduce a masked preference optimization objective that explicitly penalizes redundant explorations and encourages the model to directly bridge essential reasoning segments, effectively folding its reasoning chains into a more concise path. Extensive experiments show that ThoughtFold significantly enhances efficiency. It reduces the token usage of DeepSeek-R1-Distill-Qwen-7B by approximately 56% while maintaining state-of-the-art accuracy.",
+        "identifiers": [
+          "SemanticScholar:d477180af29b5183a1e410ba0579b843e9443a44"
+        ],
+        "semantic_scholar_id": "d477180af29b5183a1e410ba0579b843e9443a44",
+        "canonical_id": "arXiv:2606.03503",
+        "arxiv_id": "2606.03503",
+        "doi": "10.48550/arXiv.2606.03503",
+        "authors": [
+          "Ziyang Liu",
+          "Xueda Shen",
+          "Yuzhe Gu",
+          "Songyang Gao",
+          "Kui-Kun Liu",
+          "Guangran Cheng",
+          "Chengqi Lyu",
+          "Da-Hua Lin",
+          "Wen-Wei Zhang",
+          "Kai Chen"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 133,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:99c01300b26fdfcb4549064adfe61bb0ef3e8e9a0910a3a8663b173ead9db817",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

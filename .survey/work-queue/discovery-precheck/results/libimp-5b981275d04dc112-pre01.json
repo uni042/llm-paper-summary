@@ -1,0 +1,317 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5b981275d04dc112-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5b981275d04d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2026.findings-eacl.31",
+    "arXiv:2410.11305",
+    "arXiv:2502.19732"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7e778ee828e16698ae406782bcd6b3710b35b44f",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "acl_anthology_record",
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T15:18:06.405580+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2026.findings-eacl.31",
+      "status": "allowed",
+      "lookup_route": "acl_anthology_record"
+    },
+    {
+      "requested_id": "arXiv:2410.11305",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.19732",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
+      "source_url": "https://arxiv.org/abs/2410.11305",
+      "year": 2024,
+      "published": "2024-10-15",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is widely adopted to accelerate inference and reduce memory consumption in large language models (LLMs). While activation-weight joint quantization enables efficient low-precision decoding, it suffers from substantial performance degradation on multi-step reasoning tasks. We propose QSpec, a novel quantization paradigm that decouples efficiency from quality by integrating two complementary schemes via speculative decoding: low-precision joint quantization for fast drafting and high-precision weight-only quantization for accurate verification. QSpec reuses both weights and KV cache across stages, enabling near-zero-cost switching without retraining or auxiliary models. Compared to high-precision baselines, QSpec achieves up to 1.64x speedup without quality degradation, and outperforms state-of-the-art speculative decoding methods by up to 1.55x in batched settings. Furthermore, QSpec supports plug-and-play deployment and generalizes well across model scales, quantization methods, and workloads. These properties make QSpec a practical and scalable solution for high-fidelity quantized LLM serving under memory-constrained scenarios. Our code is available at https://github.com/hku-netexplo-lab/QSpec.",
+      "identifiers": [
+        "SemanticScholar:139aea58a13e615a7e466fe0c74273804372b746"
+      ],
+      "semantic_scholar_id": "139aea58a13e615a7e466fe0c74273804372b746",
+      "canonical_id": "arXiv:2410.11305",
+      "arxiv_id": "2410.11305",
+      "doi": "10.48550/arXiv.2410.11305",
+      "authors": [
+        "Juntao Zhao",
+        "Wenhao Lu",
+        "Sheng Wang",
+        "Ling-Peng Kong",
+        "Chuan Wu"
+      ],
+      "priority": 32,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 32,
+        "is_fresh": false,
+        "freshness_age_days": 718,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Speculative Decoding and Beyond: An In-Depth Survey of Techniques",
+      "source_url": "https://arxiv.org/abs/2502.19732",
+      "year": 2025,
+      "published": "2025-02-27",
+      "venue": "arXiv.org",
+      "citation_count": 27,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sequential dependencies present a fundamental bottleneck in deploying large-scale autoregressive models, particularly for real-time applications. While traditional optimization approaches like pruning and quantization often compromise model quality, recent advances in generation-refinement frameworks demonstrate that this trade-off can be significantly mitigated. This survey presents a comprehensive taxonomy of generation-refinement frameworks, analyzing methods across autoregressive sequence tasks. We categorize methods based on their generation strategies (from simple n-gram prediction to sophisticated draft models) and refinement mechanisms (including single-pass verification and iterative approaches). Through systematic analysis of both algorithmic innovations and system-level implementations, we examine deployment strategies across computing environments and explore applications spanning text, images, and speech generation. This systematic examination of both theoretical frameworks and practical implementations provides a foundation for future research in efficient autoregressive decoding.",
+      "identifiers": [
+        "SemanticScholar:adb0c91669f211d3e99590d8efb1a6d06aabf016"
+      ],
+      "semantic_scholar_id": "adb0c91669f211d3e99590d8efb1a6d06aabf016",
+      "canonical_id": "arXiv:2502.19732",
+      "arxiv_id": "2502.19732",
+      "doi": "10.48550/arXiv.2502.19732",
+      "authors": [
+        "Yunhai Hu",
+        "Zining Liu",
+        "Zhenyuan Dong",
+        "Tianfan Peng",
+        "Bradley McDanel",
+        "Sai-Qian Zhang"
+      ],
+      "priority": 27,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 27,
+        "citation_count": 27,
+        "total": 27,
+        "is_fresh": false,
+        "freshness_age_days": 583,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.findings-eacl.31",
+      "doi": "10.18653/v1/2026.findings-eacl.31",
+      "identifiers": [
+        "DOI:10.18653/v1/2026.findings-eacl.31"
+      ],
+      "title": "KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization",
+      "source_url": "https://aclanthology.org/2026.findings-eacl.31/",
+      "authors": [
+        "Mingbo Song",
+        "Heming Xia",
+        "Jun Zhang",
+        "Chak Tou Leong",
+        "Qiancheng Xu",
+        "Wenjie Li",
+        "Sujian Li (李素建)"
+      ],
+      "published": "2026/3",
+      "year": 2026,
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "freshness_age_days": 94,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2410.11305",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.11305",
+        "id:SemanticScholar:139aea58a13e615a7e466fe0c74273804372b746",
+        "id:arXiv:2410.11305",
+        "title:qspec speculative decoding with complementary quantization schemes",
+        "url:https://arxiv.org/abs/2410.11305"
+      ],
+      "record": {
+        "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
+        "source_url": "https://arxiv.org/abs/2410.11305",
+        "year": 2024,
+        "published": "2024-10-15",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 22,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization is widely adopted to accelerate inference and reduce memory consumption in large language models (LLMs). While activation-weight joint quantization enables efficient low-precision decoding, it suffers from substantial performance degradation on multi-step reasoning tasks. We propose QSpec, a novel quantization paradigm that decouples efficiency from quality by integrating two complementary schemes via speculative decoding: low-precision joint quantization for fast drafting and high-precision weight-only quantization for accurate verification. QSpec reuses both weights and KV cache across stages, enabling near-zero-cost switching without retraining or auxiliary models. Compared to high-precision baselines, QSpec achieves up to 1.64x speedup without quality degradation, and outperforms state-of-the-art speculative decoding methods by up to 1.55x in batched settings. Furthermore, QSpec supports plug-and-play deployment and generalizes well across model scales, quantization methods, and workloads. These properties make QSpec a practical and scalable solution for high-fidelity quantized LLM serving under memory-constrained scenarios. Our code is available at https://github.com/hku-netexplo-lab/QSpec.",
+        "identifiers": [
+          "SemanticScholar:139aea58a13e615a7e466fe0c74273804372b746"
+        ],
+        "semantic_scholar_id": "139aea58a13e615a7e466fe0c74273804372b746",
+        "canonical_id": "arXiv:2410.11305",
+        "arxiv_id": "2410.11305",
+        "doi": "10.48550/arXiv.2410.11305",
+        "authors": [
+          "Juntao Zhao",
+          "Wenhao Lu",
+          "Sheng Wang",
+          "Ling-Peng Kong",
+          "Chuan Wu"
+        ],
+        "priority": 32,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 22,
+          "citation_count": 22,
+          "total": 32,
+          "is_fresh": false,
+          "freshness_age_days": 718,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.19732",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.19732",
+        "id:SemanticScholar:adb0c91669f211d3e99590d8efb1a6d06aabf016",
+        "id:arXiv:2502.19732",
+        "title:speculative decoding and beyond an indepth survey of techniques",
+        "url:https://arxiv.org/abs/2502.19732"
+      ],
+      "record": {
+        "title": "Speculative Decoding and Beyond: An In-Depth Survey of Techniques",
+        "source_url": "https://arxiv.org/abs/2502.19732",
+        "year": 2025,
+        "published": "2025-02-27",
+        "venue": "arXiv.org",
+        "citation_count": 27,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sequential dependencies present a fundamental bottleneck in deploying large-scale autoregressive models, particularly for real-time applications. While traditional optimization approaches like pruning and quantization often compromise model quality, recent advances in generation-refinement frameworks demonstrate that this trade-off can be significantly mitigated. This survey presents a comprehensive taxonomy of generation-refinement frameworks, analyzing methods across autoregressive sequence tasks. We categorize methods based on their generation strategies (from simple n-gram prediction to sophisticated draft models) and refinement mechanisms (including single-pass verification and iterative approaches). Through systematic analysis of both algorithmic innovations and system-level implementations, we examine deployment strategies across computing environments and explore applications spanning text, images, and speech generation. This systematic examination of both theoretical frameworks and practical implementations provides a foundation for future research in efficient autoregressive decoding.",
+        "identifiers": [
+          "SemanticScholar:adb0c91669f211d3e99590d8efb1a6d06aabf016"
+        ],
+        "semantic_scholar_id": "adb0c91669f211d3e99590d8efb1a6d06aabf016",
+        "canonical_id": "arXiv:2502.19732",
+        "arxiv_id": "2502.19732",
+        "doi": "10.48550/arXiv.2502.19732",
+        "authors": [
+          "Yunhai Hu",
+          "Zining Liu",
+          "Zhenyuan Dong",
+          "Tianfan Peng",
+          "Bradley McDanel",
+          "Sai-Qian Zhang"
+        ],
+        "priority": 27,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 27,
+          "citation_count": 27,
+          "total": 27,
+          "is_fresh": false,
+          "freshness_age_days": 583,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.findings-eacl.31",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-eacl.31",
+        "title:knnssd enabling dynamic selfspeculative decoding via nearest neighbor layer set optimization",
+        "url:https://aclanthology.org/2026.findings-eacl.31"
+      ],
+      "record": {
+        "canonical_id": "DOI:10.18653/v1/2026.findings-eacl.31",
+        "doi": "10.18653/v1/2026.findings-eacl.31",
+        "identifiers": [
+          "DOI:10.18653/v1/2026.findings-eacl.31"
+        ],
+        "title": "KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization",
+        "source_url": "https://aclanthology.org/2026.findings-eacl.31/",
+        "authors": [
+          "Mingbo Song",
+          "Heming Xia",
+          "Jun Zhang",
+          "Chak Tou Leong",
+          "Qiancheng Xu",
+          "Wenjie Li",
+          "Sujian Li (李素建)"
+        ],
+        "published": "2026/3",
+        "year": 2026,
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "freshness_age_days": 94,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d01df7c5fea113c751c1289e330c2193ec464ce3e92c373649dd52080f213721",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

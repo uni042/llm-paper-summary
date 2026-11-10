@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e2ba15d2d905840-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/jlpea16020021",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/jlpea16020021",
+    "identity_tokens": [
+      "DOI:10.3390/jlpea16020021"
+    ],
+    "reason": "Survey of generic 3D integrated DNN accelerators; no LLM-specific inference contribution.",
+    "first_checked_at": "2026-10-05T11:59:54+00:00",
+    "last_checked_at": "2026-10-05T11:59:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md",
+      "papers/inference/99-other-inference-systems/2026-2601.19908-chime-chiplet-near-memory-mllm-inference.md"
+    ],
+    "title": "3D Integrated DNN Accelerators: Recent Trends and Future Prospects"
+  },
+  "processed_at": "2026-10-05T11:59:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e2ba15d2d90",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

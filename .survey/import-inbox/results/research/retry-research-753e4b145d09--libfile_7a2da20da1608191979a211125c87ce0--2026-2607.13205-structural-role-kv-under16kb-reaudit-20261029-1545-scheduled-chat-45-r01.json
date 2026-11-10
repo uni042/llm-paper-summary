@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2db64eac9d1e5b3655171d0eafc0ce84092740839a7503414f116bfc281037e0",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-753e4b145d09--libfile_7a2da20da1608191979a211125c87ce0--2026-2607.13205-structural-role-kv-under16kb-reaudit-20261029-1545-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2607.13205",
+  "worker_completed_at": "2026-10-29T15:52:30+09:00",
+  "worker_run_key": "20261029-1545-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5494,
+    "body_paragraphs": 28,
+    "method_chars": 1662,
+    "method_paragraphs": 8,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-29T08:41:24+00:00"
+}

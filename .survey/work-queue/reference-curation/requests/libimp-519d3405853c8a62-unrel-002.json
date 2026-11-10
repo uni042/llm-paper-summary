@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-519d3405853c8a62-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.217",
+  "reason": "future n-gram predictionとn-stream self-attentionで次の複数tokenを同時予測するが、目的はsequence-to-sequence事前学習を改善しsummarization/question generation品質を上げること。標準推論互換で、推論latency・throughput・memory削減を評価しないため対象外。",
+  "title": "ProphetNet: Predicting Future N-gram for Sequence-to-Sequence Pre-training",
+  "identity_tokens": [
+    "DOI:10.18653/v1/2020.findings-emnlp.217"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-519d3405853c",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

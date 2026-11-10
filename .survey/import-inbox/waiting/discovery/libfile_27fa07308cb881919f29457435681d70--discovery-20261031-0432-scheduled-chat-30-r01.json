@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0432-scheduled-chat-30/r01",
+  "reference_main_sha": "e95b472665d0aa27c176a9c0c12874e540a53cf6",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01655",
+      "identity_tokens": [
+        "arXiv:2608.01655"
+      ],
+      "title": "PrefixPlace: Provable Prefix Key-Value Placement for Large Language Model Serving under Heterogeneous Compute and Transfer Costs",
+      "reason": "PrefixPlaceはLLMサービングで再利用するprefix KVを複数ワーカーへ配置する最適化方式。需要、各GPUのメモリ制約、prefill再計算、他レプリカからのKV転送費用を使ってepochごとの配置を決め、局所更新を木上の動的計画法で解く。T4/L4/A100の実測費用を用い、RAG再生でvLLMの自動prefix cachingよりmaterialization費用削減を40.3%改善と報告。KV再利用と分散サービングの直接的なシステム寄与がある。",
+      "source_url": "https://arxiv.org/abs/2608.01655",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:35:00+09:00",
+      "last_checked_at": "2026-10-31T04:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 293,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.18486",
+      "identity_tokens": [
+        "arXiv:2608.18486"
+      ],
+      "title": "WhiteMatter: All-to-All Cross-Layer Connections via KV Source Mixing",
+      "reason": "WhiteMatterはTransformerの各層が過去トークンの異なる深さの表現を共有KVチャネルへ混合できるようにするアーキテクチャ。学習したmixerが参照層を選び、同容量条件の表現再利用とKVキャッシュ半減を目指す。最大1.3Bのモデルで半量KVの比較評価を行う一方、層間依存により学習とprefillが遅くなるためcyclic iterationを導入する。実運用サービング速度の確証は限定的だが、推論KV容量削減に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2608.18486",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:35:00+09:00",
+      "last_checked_at": "2026-10-31T04:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 317,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.02945",
+      "identity_tokens": [
+        "arXiv:2604.02945"
+      ],
+      "title": "MSAO: Adaptive Modality Sparsity-Aware Offloading with Edge-Cloud Collaboration for Efficient Multimodal LLM Inference",
+      "reason": "MSAOはマルチモーダルLLMのエッジ・クラウド分担を、空間・時間・モダリティの活性疎性をまとめたMAS指標と実時間システム状態で決める。confidenceに基づく投機実行で転送待ちを隠す。VQAv2とMMBenchでエンドツーエンド遅延30%削減、throughput 1.5〜2.3倍を報告しており、MLLMのオフロード・スケジューリングを直接最適化する。",
+      "source_url": "https://arxiv.org/abs/2604.02945",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:35:00+09:00",
+      "last_checked_at": "2026-10-31T04:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 320,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.11853",
+      "identity_tokens": [
+        "arXiv:2606.11853"
+      ],
+      "title": "Task-Aware Structured Memory for Dynamic Multi-modal In-Context Learning",
+      "reason": "TASMは長いマルチモーダルin-context learningで膨らむKVと入力トークンの費用に対し、task-vectorによる圧縮、二部グラフ照合に基づく意味保持token merging、Core MemoryとLatent Bankの階層化を組み合わせる。新しいqueryに応じて圧縮済み記憶から情報を再取得し、固定削除の情報損失を抑える。要旨は重い圧縮下の精度維持を報告し、入力・KVメモリ削減に直接関連するが実機速度の定量値は要旨では不明。",
+      "source_url": "https://arxiv.org/abs/2606.11853",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:35:00+09:00",
+      "last_checked_at": "2026-10-31T04:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 397,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04945",
+      "identity_tokens": [
+        "arXiv:2606.04945"
+      ],
+      "title": "STaR-Quant: State-Time Consistent Post-Training Quantization for Diffusion Large Language Models",
+      "reason": "STaR-Quantは拡散型言語モデルでmask済みと非mask tokenの活性分布が異なり、反復denoisingで量子化誤差が累積する問題を扱う。SGATでtoken状態別の活性変換を行い、TACで注意表現を軽量なblock-diagonal affine変換により補正する。FP16比最大1.69倍の高速化と3.14倍のメモリ削減を要旨で報告し、拡散LLMの低bit推論に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2606.04945",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:35:00+09:00",
+      "last_checked_at": "2026-10-31T04:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 483,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33226",
+      "identity_tokens": [
+        "arXiv:2609.33226"
+      ],
+      "title": "Beyond Memory Construction: Rethinking Memory Access for LLM-based Conversational Agents",
+      "reason": "Threaderは長期間の対話履歴をLLMで繰り返し要約する構築費用と情報損失を避け、元の会話を軽量な話題セグメントへ分割して多視点索引で検索する。要旨は回答精度・証拠再現率とmemory construction overheadの改善を報告するが、GPU推論エンジン、KV管理、トークン生成スループットの最適化ではなくエージェントの外部記憶検索が主題のためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.33226",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:35:00+09:00",
+      "last_checked_at": "2026-10-31T04:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 484,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22959",
+      "identity_tokens": [
+        "arXiv:2601.22959"
+      ],
+      "title": "Triage: Hierarchical Visual Budgeting for Efficient Video Reasoning in Vision-Language Models",
+      "reason": "Triageは動画VLMの冗長な視覚トークンを減らすため、まずフレームの変化と質問関連性で重要フレームを選び、次にcore tokenと多様性重視のcontext tokenへ予算を配分する。後段にはバッチ化した最大限界関連性（MMR）選択を用いる。学習不要の動画token圧縮として推論速度・メモリ改善を要旨で報告し、MLLMの入力圧縮へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2601.22959",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:35:00+09:00",
+      "last_checked_at": "2026-10-31T04:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 489,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.09721",
+      "identity_tokens": [
+        "arXiv:2609.09721"
+      ],
+      "title": "EFQ-Softmax: Exp-Free Quantization for Softmax",
+      "reason": "EFQ-Softmaxは低bit attentionのSoftmax確率生成で高精度expを計算してからFP4へ量子化する経路を置換する。各microscaling blockの最大値から指数スケールを選び、scoreを正規化してE2M1確率符号を直接生成し、PV分子とP1分母に共通使用する。A5ベクトル演算器で16K〜128Kのkernel vector-stage遅延平均40.33%削減を報告し、低bit推論カーネルに直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.09721",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:35:00+09:00",
+      "last_checked_at": "2026-10-31T04:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 492,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05927",
+      "identity_tokens": [
+        "arXiv:2605.05927"
+      ],
+      "title": "Minimizing Modality Gap from the Input Side: Your Speech LLM Can Be a Prosody-Aware Text LLM",
+      "reason": "TextPro-SLMはWhisperPro音声encoderのtext tokenと韻律埋め込みを言語モデルへ入力し、音声・テキスト間の表現差と韻律理解性能を改善する。要旨の評価は3B/7B音声モデルのmodality gapと理解性能が中心で、推論時間、メモリ、サービング、量子化等のシステム効率化への技術的寄与を示していないため対象外。",
+      "source_url": "https://arxiv.org/abs/2605.05927",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:35:00+09:00",
+      "last_checked_at": "2026-10-31T04:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 495,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.21020",
+      "identity_tokens": [
+        "arXiv:2504.21020"
+      ],
+      "title": "Context-Enhanced Contrastive Search for Improved LLM Text Generation",
+      "reason": "CECSは文脈重要度重み付け、多段contrastive search、適応temperatureを用いて長文生成の一貫性・多様性・関連性を改善する。要旨で比較するのはBLEU、ROUGE、意味類似度などの出力品質であり、推論コスト、生成速度、GPU実装の改善は示されない。復号の品質研究であって推論システム効率化の対象外。",
+      "source_url": "https://arxiv.org/abs/2504.21020",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:35:00+09:00",
+      "last_checked_at": "2026-10-31T04:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 498,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

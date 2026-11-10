@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2f1076f979ce3f69-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.20224",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.20224",
+    "identity_tokens": [
+      "arXiv:2405.20224"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2405.20224. Abstract summary: 3D Gaussian Splatting (3D-GS) has demonstrated exceptional capabilities in synthesizing novel views of 3D scenes. However, its training is heavily reliant on high-quality images and precise camera poses. Meeting these criteria can be challenging in non-ideal real-world conditions, where motion-blurred images frequently occur due Out of scope: Event-stream Gaussian splatting for vision.",
+    "first_checked_at": "2026-10-05T12:32:44+00:00",
+    "last_checked_at": "2026-10-05T12:32:44+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+    ],
+    "title": "Evagaussians: Event Stream Assisted Gaussian Splatting from Blurry Images"
+  },
+  "processed_at": "2026-10-05T12:32:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f1076f979ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

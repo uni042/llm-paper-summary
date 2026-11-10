@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d631d1407915a5e0-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.05872",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.05872",
+    "identity_tokens": [
+      "arXiv:2608.05872"
+    ],
+    "reason": "推論時のlayer routingと隣接するものの、本文で実証された効率改善はroute探索時間で推論費用の低下ではないためborderline。",
+    "first_checked_at": "2026-10-05T09:00:21+00:00",
+    "last_checked_at": "2026-10-05T09:00:21+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+      "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
+      "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+    ],
+    "title": "MACRO: Markov Chain Routing of Transformer Layers"
+  },
+  "processed_at": "2026-10-05T09:00:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d631d1407915",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

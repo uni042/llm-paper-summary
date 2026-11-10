@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-20f77a3a72a646a8-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.16312",
+  "reason": "One-to-many machine translation (MT) is computationally expensive for autoregressive (AR) systems, which suffer from linear latency scaling with both sequence length and the number of target languages. We explore how diffusion can enable multilingual translation with a discrete diffusion framework that refines all target languages in parallel, achieving sublinear latency scaling with the number of targets, and supports deployment as a single unified model to replace multiple independent systems. Conditioned on a continuous semantic anchor rather than source tokens, our framework supports zero-shot transfer to unseen source languages without retraining, maintaining approximately $75\\%$ of its supervised translation quality on zero-shot sources. We investigate the quality-latency frontier and find that with accelerated sampling, it achieves comparable supervised quality to AR baselines with a $2 \\times$ speedup and $11.9\\%$ better zero-shot BLEU. These results highlight the potential of joint multi-stream diffusion as a practical and flexible alternative for efficient one-to-many translation.",
+  "title": "Efficient One-to-Many Translation with Joint Multi-Stream Diffusion",
+  "identity_tokens": [
+    "arXiv:2609.16312"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+    "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20f77a3a72a6",
+  "source_precheck_request_id": null
+}

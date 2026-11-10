@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f4f2c9dcadc004e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.07343",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.07343",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2511.07343",
+      "arXiv:2511.07343"
+    ],
+    "reason": "The primary abstract focuses on speeding chunkwise training for test-time memorization (including a training speedup); it provides no concrete LLM inference, serving, or deployment-efficiency contribution.",
+    "first_checked_at": "2026-10-08T18:28:49+00:00",
+    "last_checked_at": "2026-10-08T18:28:49+00:00",
+    "linked_from": [],
+    "title": "TNT: Improving Chunkwise Training for Test-Time Memorization"
+  },
+  "processed_at": "2026-10-08T18:28:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f4f2c9dcadc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

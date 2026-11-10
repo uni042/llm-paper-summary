@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8bf76e6d756131d3-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.30954",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.30954",
+    "identity_tokens": [
+      "arXiv:2608.30954"
+    ],
+    "reason": "要旨はMSP430マイクロコントローラのclock-gating回路設計。",
+    "first_checked_at": "2026-10-05T07:48:23+00:00",
+    "last_checked_at": "2026-10-05T07:48:23+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2411.01016-moe-i2-compressing-mixture-of-experts-models-through-inter-expert-pruning-and-intra-expert-low-rank-decomposition.md"
+    ],
+    "title": "Clock-Gating Insertion Strategies on an Open-Source MSP430 Core: A Reproducible PPA Study and a Gate-Level Simulation Caveat"
+  },
+  "processed_at": "2026-10-05T07:48:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8bf76e6d7561",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

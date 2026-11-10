@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2e0f85e528fe8720-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.25097",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.25097",
+    "identity_tokens": [
+      "arXiv:2606.25097"
+    ],
+    "reason": "Full text evaluates whether speculative decoding changes safety behavior in a 48,072-sample temperature-zero screen. Outcomes concern safety invariance, not inference efficiency.",
+    "first_checked_at": "2026-10-05T11:49:09+00:00",
+    "last_checked_at": "2026-10-05T11:49:09+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2402.12374-sequoia-scalable-robust-and-hardware-aware-speculative-decoding.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+      "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+    ],
+    "title": "Speculative Decoding at Temperature Zero: A Scoped Safety-Invariance Screen with a 48,072-Sample Expansion"
+  },
+  "processed_at": "2026-10-05T11:49:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2e0f85e528fe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

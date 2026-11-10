@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-preload-47934e491851664368f66108",
+  "job_id": "job-research-cdc29bb5f1d5b9bc",
+  "claim_id": "claim-preload-47934e491851664368f66108",
+  "worker_id": "scheduled-chat-30",
+  "status": "blocked",
+  "reason": "Primary-source full text could not be obtained after materially distinct official/author publication routes were checked. Abstract/search snippets and third-party summaries were not used to synthesize the five-slot research record.",
+  "retrieval_evidence": [
+    "ACM DOI 10.1145/3789240.3828750 was identified as the publication route, but the DOI target/full paper body was not accessible in this environment.",
+    "The official ACM SIGCOMM 2026 NAIC workshop site confirmed the venue/program context but exposed no readable ARK full-text paper through the accessible page.",
+    "Exact-title and author/institution searches found bibliographic/abstract records but no materially distinct Georgia Tech or author-hosted primary full-text copy.",
+    "ResearchGate explicitly reported no full-text available and only offered a request-full-text flow."
+  ],
+  "blocked_at": "2026-09-24T13:35:00+00:00"
+}

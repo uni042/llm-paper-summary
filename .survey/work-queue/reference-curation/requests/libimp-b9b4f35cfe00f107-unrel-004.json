@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b9b4f35cfe00f107-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2512.06607",
+  "reason": "Inference-time unlearning adds two small auxiliary models; reported forward-pass count grows from 2N to 2(N+2n). The objective is look-ahead-bias removal, not efficiency, and no serving gain is shown.",
+  "title": "A Fast and Effective Solution to the Problem of Look-ahead Bias in LLMs",
+  "identity_tokens": [
+    "arXiv:2512.06607"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+    "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b9b4f35cfe00",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

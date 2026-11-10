@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-scheduled-chat-00-20260922T020044Z-6f31c2",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-2b08559ce4102c47",
+      "claim_id": "claim-d43c42e505abad5ae433f14f",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-d43c42e505abad5ae433f14f",
+      "claimed_at": "2026-09-22T02:01:16+00:00",
+      "expires_at": "2026-09-22T03:31:16+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-2b08559ce4102c47"
+      ],
+      "job": {
+        "job_id": "job-research-2b08559ce4102c47",
+        "type": "research",
+        "parent_job_id": "job-1132c15f96f87d90",
+        "priority": 99,
+        "canonical_id": "DOI:10.1145/3793230.3837769",
+        "arxiv_id": null,
+        "doi": "10.1145/3793230.3837769",
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems",
+        "source_url": "https://www.semanticscholar.org/paper/6db782df823d9da204a59180305aba81d47b3997",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-serving-systems.md",
+        "selection_reason": "KVLearn makes cache admission/retention cost-aware in disaggregated serving, jointly modeling reuse, recompute, network transfer and storage; reports up to 56% TTFT reduction and 53% less transfer volume.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T20:57:03+00:00",
+        "blocker": "Primary paper full text could not be safely obtained in this invocation. The official ACM DOI, SYSTOR 2026 program, and authors' official KVLearn repository were verified; the repository exposes implementation details and the publication abstract but not the full publication body, and fresh exact-title/DOI searches did not expose a materially distinct accessible official full-text copy. No five-slot record was synthesized from the abstract or implementation documentation.",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-952e8387f0051257c417d69b.json",
+        "blocked_attempts": 2,
+        "last_recorded_blocked_event": "2026-09-21T15:41:58+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-21T03:45:34+00:00",
+            "reason": "Primary paper full text could not be safely obtained in this invocation. The official ACM DOI and the authors' official KVLearn implementation repository were verified, but the repository contains code/README rather than the publication body, and exact-title searches did not expose an accessible official author-hosted paper copy. No five-slot record was synthesized from the abstract or implementation documentation."
+          },
+          {
+            "attempt": 2,
+            "blocked_at": "2026-09-21T15:41:58+00:00",
+            "reason": "Primary paper full text could not be safely obtained in this invocation. The official ACM DOI, SYSTOR 2026 program, and authors' official KVLearn repository were verified; the repository exposes implementation details and the publication abstract but not the full publication body, and fresh exact-title/DOI searches did not expose a materially distinct accessible official full-text copy. No five-slot record was synthesized from the abstract or implementation documentation."
+          }
+        ],
+        "last_blocked_at": "2026-09-21T15:41:58+00:00",
+        "retry_queued_at": "2026-09-21T22:48:29+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T02:01:16+00:00",
+  "checkpoint_released": 0
+}

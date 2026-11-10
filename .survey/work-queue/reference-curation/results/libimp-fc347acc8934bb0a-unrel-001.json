@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc347acc8934bb0a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.17412",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.17412",
+    "identity_tokens": [
+      "arXiv:2407.17412"
+    ],
+    "reason": "画像の視覚プロンプトを利用した構造的疎化が主題であり、対象は視覚モデルの構造選択。LLMの生成推論、KVキャッシュ、推論サービングやMoE実行の最適化を示すタイトルではない。",
+    "first_checked_at": "2026-10-27T17:49:43+00:00",
+    "last_checked_at": "2026-10-27T17:49:43+00:00",
+    "linked_from": [],
+    "title": "(PASS) Visual Prompt Locates Good Structure Sparsity through a Recurrent HyperNetwork"
+  },
+  "processed_at": "2026-10-27T17:49:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc347acc8934",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

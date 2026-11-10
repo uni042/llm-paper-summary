@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86353f37aa449381-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1007/3-540-49478-2_14",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1007/3-540-49478-2_14",
+    "identity_tokens": [
+      "DOI:10.1007/3-540-49478-2_14"
+    ],
+    "reason": "It directly targets MT throughput, but transfer from statistical retrieval translation to current LLM serving is uncertain.",
+    "first_checked_at": "2026-10-16T06:19:37+00:00",
+    "last_checked_at": "2026-10-16T06:19:37+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Fast document translation for cross-language information retrieval"
+  },
+  "processed_at": "2026-10-16T06:19:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86353f37aa44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

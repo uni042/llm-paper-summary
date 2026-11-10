@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261101-1957-scheduled-chat-00/r01",
+  "reference_main_sha": "4f39d80a4c4691438831f1c6a6f2be006ec0ce6f",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.03884",
+      "identity_tokens": [
+        "arXiv:2502.03884",
+        "DOI:10.48550/arXiv.2502.03884"
+      ],
+      "title": "Rank Also Matters: Hierarchical Configuration for Mixture of Adapter Experts in LLM Fine-Tuning",
+      "reason": "原著一次要旨はHILOを、LoRAアダプタを用いるMoEのファインチューニングで層ごとのexpert数とアダプタrankを調整し、学習可能パラメータ数を抑えつつ下流タスクの精度を改善する手法と説明する。生成推論の実行時間・サービング・KVキャッシュ・実行時メモリを改善する貢献は要旨に示されず、学習専用最適化の凍結範囲に該当する。",
+      "source_url": "https://arxiv.org/abs/2502.03884",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T20:02:02+09:00",
+      "last_checked_at": "2026-11-01T20:02:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 157,
+      "origin": "discovery_worklist_abstract_screen",
+      "worklist_identity": "arXiv:2502.03884"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.01251",
+      "identity_tokens": [
+        "arXiv:2403.01251",
+        "DOI:10.48550/arXiv.2403.01251"
+      ],
+      "title": "Accelerating Greedy Coordinate Gradient and General Prompt Optimization via Probe Sampling",
+      "reason": "原著一次要旨で、Probe samplingは小型draftモデルと対象LLMの予測類似度に基づいて敵対的プロンプト候補を間引き、GCGによる脱獄攻撃・AutoPrompt・APE・AutoDAN等のプロンプト最適化探索を高速化する方式と確認した。最大5.6倍という値も攻撃プロンプト探索の高速化であり、LLM生成推論のレイテンシ、サービング、KVキャッシュなどのシステム効率を改善する研究ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2403.01251",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T20:02:02+09:00",
+      "last_checked_at": "2026-11-01T20:02:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 335,
+      "origin": "discovery_worklist_abstract_screen",
+      "worklist_identity": "DOI:10.48550/arXiv.2403.01251",
+      "title_alias": "Accelerating Greedy Coordinate Gradient via Probe Sampling"
+    }
+  ]
+}

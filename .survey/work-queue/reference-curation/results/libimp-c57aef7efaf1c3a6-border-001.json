@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c57aef7efaf1c3a6-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.02650",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.02650",
+    "identity_tokens": [
+      "arXiv:2511.02650"
+    ],
+    "reason": "UniPruneBench compares ten visual-token compression methods across ten datasets and five LMMs. It is a benchmark rather than a new inference optimization, but can support validation of visual-token-pruning work.",
+    "first_checked_at": "2026-10-06T13:32:16+00:00",
+    "last_checked_at": "2026-10-06T13:32:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+      "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Can Visual Input Be Compressed? A Visual Token Compression Benchmark for Large Multimodal Models"
+  },
+  "processed_at": "2026-10-06T13:32:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c57aef7efaf1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

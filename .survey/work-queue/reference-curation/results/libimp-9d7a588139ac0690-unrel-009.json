@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d7a588139ac0690-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.11229",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.11229",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2502.11229",
+      "SemanticScholar:1f3c37b124e50c7d1b55d6f2cf0d79190e422c45",
+      "arXiv:2502.11229"
+    ],
+    "reason": "Hypergradient descent adapts learning rates for stochastic optimization; its contribution concerns training convergence.",
+    "first_checked_at": "2026-10-16T06:19:53+00:00",
+    "last_checked_at": "2026-10-16T06:19:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2406.16793-adam-mini-use-fewer-learning-rates-to-gain-more.md"
+    ],
+    "title": "Provable and Practical Online Learning Rate Adaptation with Hypergradient Descent"
+  },
+  "processed_at": "2026-10-16T06:19:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d7a588139ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

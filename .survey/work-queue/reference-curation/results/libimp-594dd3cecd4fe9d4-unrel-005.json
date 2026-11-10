@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-594dd3cecd4fe9d4-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3389/frsip.2026.1911510",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3389/frsip.2026.1911510",
+    "identity_tokens": [
+      "DOI:10.3389/frsip.2026.1911510"
+    ],
+    "reason": "TF-Mamba-DPHNet targets speech enhancement, not LLM inference.",
+    "first_checked_at": "2026-10-06T09:30:53+00:00",
+    "last_checked_at": "2026-10-06T09:30:53+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+    ],
+    "title": "TF-Mamba-DPHNet: a time-frequency state-space and dual-path interaction framework with hybrid cross-scale feature calibration for speech enhancement"
+  },
+  "processed_at": "2026-10-06T09:30:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-594dd3cecd4f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

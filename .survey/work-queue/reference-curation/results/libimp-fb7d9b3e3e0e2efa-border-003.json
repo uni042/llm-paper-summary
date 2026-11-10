@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fb7d9b3e3e0e2efa-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1507.06149",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1507.06149",
+    "identity_tokens": [
+      "arXiv:1507.06149"
+    ],
+    "reason": "The paper proposes parameter pruning and reports compression/accuracy on LeNet and AlexNet-like vision models, but does not evaluate Transformer/LLM inference or runtime savings.",
+    "first_checked_at": "2026-10-05T00:55:43+00:00",
+    "last_checked_at": "2026-10-05T00:55:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+    ],
+    "title": "Data-free Parameter Pruning for Deep Neural Networks"
+  },
+  "processed_at": "2026-10-05T00:55:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb7d9b3e3e0e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

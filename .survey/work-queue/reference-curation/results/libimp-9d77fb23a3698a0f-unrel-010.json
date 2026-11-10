@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d77fb23a3698a0f-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1809.08887",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1809.08887",
+    "identity_tokens": [
+      "DOI:10.18653/v1/d18-1425",
+      "arXiv:1809.08887"
+    ],
+    "reason": "10,181 questions、5,693 unique SQL queries、200 databasesからなるcross-domain text-to-SQL datasetを構築し、未知database schemaへのsemantic parsing汎化を評価するbenchmark研究で、LLM推論runtime・serving効率化を対象としない。",
+    "first_checked_at": "2026-10-04T13:03:15+00:00",
+    "last_checked_at": "2026-10-04T13:07:30+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md"
+    ],
+    "title": "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task"
+  },
+  "processed_at": "2026-10-04T13:07:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d77fb23a369",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

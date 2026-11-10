@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-4ac3d1e30ae29ddd-unrel-007",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2605.11005",
+  "reason": "DisagMoE is explicitly a MoE training system; its measured speedup is training efficiency, which the screening rules exclude absent an inference-system contribution.",
+  "title": "DisagMoE: Computation-Communication overlapped MoE Training via Disaggregated AF-Pipe Parallelism",
+  "identity_tokens": [
+    "arXiv:2605.11005"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+    "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+    "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+    "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+    "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+    "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+    "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+    "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+    "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md",
+    "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ac3d1e30ae2",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

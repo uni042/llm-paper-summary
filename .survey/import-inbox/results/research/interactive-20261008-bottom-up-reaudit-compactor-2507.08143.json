@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "f8cf6fdc57b7f39fac8b3d25c02f3a7044409febb4b74908991c1ec26bf3198e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-compactor-2507.08143.md",
+  "canonical_id": "arXiv:2507.08143",
+  "worker_completed_at": "2026-10-02T21:00:00+09:00",
+  "worker_run_key": "interactive-20261008-bottom-up-reaudit-compactor",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5324,
+    "body_paragraphs": 30,
+    "method_chars": 2352,
+    "method_paragraphs": 14,
+    "evaluation_chars": 1516,
+    "limitation_chars": 225,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2025-2507.08143-compactor-calibrated-query-agnostic-kv-cache-compression-with-approximat.md と 3 段落 / 679文字 (21.4%) が完全一致"
+  ],
+  "processed_at": "2026-10-07T22:05:09+00:00"
+}

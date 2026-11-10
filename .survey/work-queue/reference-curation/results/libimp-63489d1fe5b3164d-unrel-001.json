@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-63489d1fe5b3164d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.20166",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.20166",
+    "identity_tokens": [
+      "arXiv:2512.20166"
+    ],
+    "reason": "本文要旨はロボット操作の長期VLA方策・潜在行動表現を提案する。LLM推論基盤や推論効率最適化の研究ではない。",
+    "first_checked_at": "2026-10-07T10:48:21+00:00",
+    "last_checked_at": "2026-10-07T10:48:21+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "LoLA: Long Horizon Latent Action Learning for General Robot Manipulation"
+  },
+  "processed_at": "2026-10-07T10:48:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-63489d1fe5b3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

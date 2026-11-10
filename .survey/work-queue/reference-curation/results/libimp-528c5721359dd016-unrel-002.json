@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-528c5721359dd016-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.26490",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.26490",
+    "identity_tokens": [
+      "arXiv:2509.26490"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2509.26490. VitaBench contributes an interactive-agent benchmark without an inference-efficiency method.",
+    "first_checked_at": "2026-10-05T14:07:38+00:00",
+    "last_checked_at": "2026-10-05T14:07:38+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+    ],
+    "title": "VitaBench: Benchmarking LLM Agents with Versatile Interactive Tasks in Real-world Applications"
+  },
+  "processed_at": "2026-10-05T14:07:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-528c5721359d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

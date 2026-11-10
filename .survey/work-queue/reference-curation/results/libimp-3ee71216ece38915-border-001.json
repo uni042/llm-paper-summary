@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3ee71216ece38915-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.00615",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.00615",
+    "identity_tokens": [
+      "arXiv:2510.00615"
+    ],
+    "reason": "agentの観測・履歴を自然言語で圧縮してpeak tokenを26–54%削減するが、追加compressorによりwall-clock latencyが増える条件もある。agent memory効率には関連するがLLM runtime/serving system最適化が主目的ではないためborderline。",
+    "first_checked_at": "2026-10-05T22:23:01+00:00",
+    "last_checked_at": "2026-10-05T22:23:01+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ACON: Optimizing Context Compression for Long-horizon LLM Agents"
+  },
+  "processed_at": "2026-10-05T22:23:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3ee71216ece3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

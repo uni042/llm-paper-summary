@@ -1,0 +1,694 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5090af1fae9f6982-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5090af1fae9f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2509.23729",
+    "arXiv:2607.27735",
+    "arXiv:2608.03229",
+    "arXiv:2609.13804",
+    "arXiv:2609.26638",
+    "arXiv:2609.33746",
+    "arXiv:2609.33889"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "adc562db0d0ac2a642b6288851c26b6468446794",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T21:05:15.109009+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2509.23729",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.27735",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.03229",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.13804",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.26638",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33746",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33889",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.33889",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "At each step, decoding one sequence with a large language model rereads the projection weights, whose traffic is fixed, and the key-value (KV) cache, whose traffic grows with context. Activation sparsity trims the first term and KV-cache sparsity the second, yet their reported speedups are hard to compare because each depends on context length and on the dense attention kernel it is measured against. We derive a byte crossover, the context length at which the two savings are equal, together with ideal speedup bounds for each branch and for their composition, from model dimensions and keep ratios alone. We then time both branches and their composition from 2K to 128K tokens on two GPUs after a dense prefill of real text, with dense and sparse modes reading the cache through the same split-K attention kernel. The projection branch leads at short context and the KV branch at long context, with speedups that follow their byte bounds up to fixed kernel costs. Adding these costs, measured in separate sweeps, lets the byte account predict the measured crossings of three keep-ratio pairs, a second model, and a second GPU to within 4.1K tokens. Timing the dense baseline with masked instead of split-K attention inflates the apparent speedup of the same KV policy about fivefold. An attention-scored KV selection answers the same passkey and multi-key placements as dense decoding up to 127K tokens, whereas a KV window misses most of them. Under matched perplexity budgets, activation sparsity composed with this selection decodes 14 to 26% faster than the best single branch on both GPUs. Code is available at https://github.com/js-lee-AI/ByteCross.",
+      "identifiers": [
+        "SemanticScholar:771134c93b797889cac96cf314ed2d7c74de84d7"
+      ],
+      "semantic_scholar_id": "771134c93b797889cac96cf314ed2d7c74de84d7",
+      "canonical_id": "arXiv:2609.33889",
+      "arxiv_id": "2609.33889",
+      "authors": [
+        "Jungseob Lee",
+        "Seungyoon Lee",
+        "Seongtae Hong",
+        "Sugyeong Eo",
+        "Heuiseok Lim"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Sparse Glimpse of the Whole: Train-Free Self-Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2607.27735",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding alleviates the memory-bandwidth bottleneck in large language model inference, but its acceleration is jointly constrained by drafting overhead, token acceptance, and speculation length. We present a unified efficiency analysis showing that extending the speculation horizon can reduce rather than improve speedup when the marginal acceptance probability falls below the relative drafting cost. Guided by this analysis, we introduce SparseSpec-L, a training-free self-speculative decoding framework for long-context inference. SparseSpec-L generates lightweight drafts directly from the target model using a dynamically sparsified and recallable KV cache. It recycles per-head attention statistics produced during full-context verification as a no-extra-forward importance signal, allowing critical historical tokens to be recalled without permanently discarding the dense KV cache. An online entropy-based controller further selects the speculation length according to expected step-wise efficiency. Experiments across multiple long-context tasks and model scales show consistent end-to-end acceleration, with up to speedup over autoregressive decoding while preserving the target model's output distribution.",
+      "identifiers": [
+        "SemanticScholar:fe149c33cfdfcd36f2afe5fd1b8884a0d038583a"
+      ],
+      "semantic_scholar_id": "fe149c33cfdfcd36f2afe5fd1b8884a0d038583a",
+      "canonical_id": "arXiv:2607.27735",
+      "arxiv_id": "2607.27735",
+      "doi": "10.48550/arXiv.2607.27735",
+      "authors": [
+        "Yue Liu",
+        "Yuan Zeng",
+        "Min Lyu",
+        "Ruilin Liu",
+        "Yu Guo",
+        "Yin-Long Xu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 90,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Unified Lookup-Table Inference with Signed-Digit K/V Caches for Ternary LLMs",
+      "source_url": "https://arxiv.org/abs/2608.03229",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Ternary LLMs make their weight-dominated projections compact and efficient, but attention remains a mismatch: its K/V cache is created online and is typically processed by a separate higher-precision engine. Compressing this cache alone does not resolve the mismatch. To execute attention with the same lookup-table machinery as ternary projections, values accumulated in one reduction must retain a compatible representation and scale. This requirement also differs for keys and values during causal decoding, because newly generated values may belong to an unfinished cache block. This work develops a unified lookup-table inference approach for ternary LLMs. It stores runtime K/V states as scaled multi-plane signed digits organized around the reduction structure of attention. The resulting digit planes are consumed directly by activation-derived tables, avoiding dense K/V materialization between cache storage and attention computation. The design combines online K/V formation, bounded handling of incomplete value blocks, and a shared multi-stream datapath for Linear projections and attention. A constraint-guided search selects the representation and execution policy for a target quality--efficiency trade-off. Experiments on native and post-training ternary models validate the approach across cache capacity, model quality, and hardware efficiency.",
+      "identifiers": [
+        "SemanticScholar:424ec2a83a098cbd90c465ae67199a35e39976dd"
+      ],
+      "semantic_scholar_id": "424ec2a83a098cbd90c465ae67199a35e39976dd",
+      "canonical_id": "arXiv:2608.03229",
+      "arxiv_id": "2608.03229",
+      "authors": [
+        "Ziang Duan",
+        "Jia-Jun Wu",
+        "Ze-Tian Chen",
+        "Hao Song",
+        "Yan-Wen Deng",
+        "Zi-Xuan Shen",
+        "Nuobei Xie",
+        "Simon Wu",
+        "Bo-Lun Wang",
+        "Peng-Peng Zhou",
+        "Chao Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "StepPrune: Adaptive Sequential Visual Token Selection across Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.13804",
+      "year": 2026,
+      "published": "2026-09-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual prefixes account for a major portion of the per-layer computation in multimodal large language models (MLLMs), making visual-token pruning a direct approach to accelerating inference. Existing top-K methods typically evaluate tokens independently and apply a uniform budget to all inputs, overlooking both selection-dependent interactions and variations in visual complexity across samples. In contrast, we propose StepPrune, which formulates visual-token pruning as an adaptive sequential decision process. Conditioned on previously selected tokens and textual context, StepPrune progressively constructs the retained subset and automatically determines its size through a learned STOP action. During training, a variance-preserving noise gate provides a differentiable surrogate for the discrete selection process, whereas during inference, unselected tokens are physically removed before language-model prefill. A grouped selection mechanism further extends StepPrune to high-resolution inputs. Experiments across LLaVA-1.5, LLaVA-NeXT, Qwen2.5-VL, and InternVL3 show that StepPrune achieves the best average normalized performance retention across all evaluated pruning rates on LLaVA-1.5, Qwen2.5-VL, and InternVL3, while remaining competitive on the substantially longer AnyRes prefixes of LLaVA-NeXT. On LLaVA-1.5, StepPrune retains 94.6% of the full-prefix normalized performance while pruning 88.9% of the visual tokens. At a mean retained count of 64, StepPrune reduces prefill latency from 59.95 ms to 40.05 ms, corresponding to a 1.50x prefill speed-up.",
+      "identifiers": [
+        "SemanticScholar:5bfb8fe103a572b7c99bc439edac4068a9e987b6"
+      ],
+      "semantic_scholar_id": "5bfb8fe103a572b7c99bc439edac4068a9e987b6",
+      "canonical_id": "arXiv:2609.13804",
+      "arxiv_id": "2609.13804",
+      "authors": [
+        "Hang Zhang",
+        "Lan He",
+        "Min Yao",
+        "Lijian Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.26638",
+      "year": 2026,
+      "published": "2026-09-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive OCR vision-language models accurately convert document images into text and structured markup, but require one sequential decoding step per output token, limiting inference speed. Unlike open-ended text generation, OCR outputs are strongly grounded in the input image, making diffusion-based parallel generation promising. However, when several tokens are predicted in one diffusion step, each is predicted before the others are known. Committing them directly can therefore introduce errors. We therefore introduce GravityOCR, a parameter-shared AR-block-diffusion model jointly trained for parallel drafting and causal AR verification. Verifying drafts before commitment lets the model commit multiple output tokens per round without a separate drafting network. The causal AR path also enables GRPO with sequence- and structure-level OCR rewards, avoiding diffusion-trajectory likelihood estimation while updating the shared drafter parameters. On OmniDocBench v1.6, AR-path GRPO improves the Overall score from 94.92 to 95.16 without reducing diffusion drafting efficiency, while the final model remains close to the original GLM-OCR score of 95.48. In an SGLang serving deployment, GravityOCR commits an average of 9.7 output tokens per forward pass and achieves a $3.94\\times$ decode-only speedup on region crops and a $1.32\\times$ end-to-end page-processing speedup over AR decoding.",
+      "identifiers": [
+        "SemanticScholar:42cb858ef1c96a4950f14bcb89c8e127fc7c3194"
+      ],
+      "semantic_scholar_id": "42cb858ef1c96a4950f14bcb89c8e127fc7c3194",
+      "canonical_id": "arXiv:2609.26638",
+      "arxiv_id": "2609.26638",
+      "authors": [
+        "Dohyun Kim",
+        "Sung-Jun Han",
+        "Hyun-geun Kim",
+        "Yusik Kim",
+        "Jamin Shin",
+        "Paul Hongsuck Seo",
+        "Hongjoon Ahn"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PQ-HSA: Reusing Product-Quantized Scores for Hybrid Sparse-Approximate Attention",
+      "source_url": "https://arxiv.org/abs/2609.33746",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "At each decoding step a language model attends over the key-value (KV) cache of every earlier token, so at long context the attention call is bounded by memory bandwidth. Sparse attention reads only a subset of keys chosen by a cheap score estimate, and most methods give the unread tokens zero weight. The output then draws on only a small fraction of the KV cache, and accuracy drops at small budgets, most on tasks that aggregate information across the context. An inverted-file product-quantization (IVF-PQ) index over the cached keys computes an approximate score for every indexed token in order to rank them; after ranking, those scores approximate the attention logits of the tokens left out. PQ-HSA (hybrid sparse-approximate attention) attends the selected tokens with their original keys and values, and the unselected tokens, the background, enter the same softmax through those scores, summed per inverted list and multiplied by the list's mean value. At 128K and a 1-2% retrieval budget, PQ-HSA is more accurate than Quest and SnapKV on Llama-3.1-8B and Qwen3-30B-A3B and stays close to full attention in macro accuracy; with the same selector, the background term raises macro accuracy on the 8B model from 0.71 to 0.83. In the same 128K setting, inside vLLM on one NVIDIA H20, the decode attention call runs 1.6x faster than the FlashAttention-3 kernel; the speedup grows with context length, and a cost model fitted on 8B to 30B models gives the context length at which it begins. A vLLM plugin runs PQ-HSA on two engine versions without changes to the engine source; code is available at https://github.com/KunmingSHAO/pqhsa_release.",
+      "identifiers": [
+        "SemanticScholar:d6e7105ad5fd4f47bf4ba0c6e65452733ff82fa2"
+      ],
+      "semantic_scholar_id": "d6e7105ad5fd4f47bf4ba0c6e65452733ff82fa2",
+      "canonical_id": "arXiv:2609.33746",
+      "arxiv_id": "2609.33746",
+      "authors": [
+        "Kun-Ming Shao",
+        "Jie-Run Chen",
+        "Yan-Li Wang",
+        "Ruo-Yu Wang",
+        "Hao-Li Bai",
+        "Kwang-Ting Cheng",
+        "Chi-Ying Tsui"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LUQ: Layerwise Ultra-Low Bit Quantization for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2509.23729",
+      "year": 2025,
+      "published": "2025-09-28",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) with multimodal capabilities have revolutionized vision-language tasks, but their deployment often requires huge memory and computational resources. Post-training quantization (PTQ) has successfully compressed language models to as low as 1-bit precision, its effectiveness for multimodal LLMs (MLLMs) remains unexplored. In this paper, we present the first method for ultra-low-bit (<4-bit) quantization of MLLMs. Our analysis reveals that multimodal tokens and intermediate layer activations produced by them exhibit significantly higher entropy compared to text tokens, indicating greater functional complexity that makes MLLMs less tolerant to ultra-low bit quantization. However, this entropy varies significantly across layers, with some layers producing lower-entropy activation distributions that we empirically show can better tolerate ultra-low bit quantization. Existing PTQ methods optimize weight quantization within each layer but apply the same target precision uniformly, ignoring this variation in complexity across layers. Building on this insight, we propose LUQ: Layerwise Ultra-Low Bit Quantization, which characterizes each transformer layer's functional complexity via its output activation entropy and selectively applies ultra-low bit quantization to layers encoding simpler, more compressible functions. We also show that multimodal calibration (image and text tokens) boosts VQA performance in the ultra-low bit regime. Evaluated on LLaVA-1.5 and Qwen-2.5-VL across 9 VQA benchmarks, LUQ models use 40% and 31% less memory than their 4-bit counterparts while exhibiting less than 10% degradation on MME.",
+      "identifiers": [
+        "SemanticScholar:78a843a7bc1b13a3c83e27160bd8ecda0d5e8c3a"
+      ],
+      "semantic_scholar_id": "78a843a7bc1b13a3c83e27160bd8ecda0d5e8c3a",
+      "canonical_id": "arXiv:2509.23729",
+      "arxiv_id": "2509.23729",
+      "doi": "10.48550/arXiv.2509.23729",
+      "authors": [
+        "Shubhang Bhatnagar",
+        "Andy Xu",
+        "K. Tan",
+        "Narendra Ahuja"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 395,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.33889",
+      "identity_tokens": [
+        "id:SemanticScholar:771134c93b797889cac96cf314ed2d7c74de84d7",
+        "id:arXiv:2609.33889",
+        "title:where activation sparsity and kvcache sparsity cross in llm decoding",
+        "url:https://arxiv.org/abs/2609.33889"
+      ],
+      "record": {
+        "title": "Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2609.33889",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "At each step, decoding one sequence with a large language model rereads the projection weights, whose traffic is fixed, and the key-value (KV) cache, whose traffic grows with context. Activation sparsity trims the first term and KV-cache sparsity the second, yet their reported speedups are hard to compare because each depends on context length and on the dense attention kernel it is measured against. We derive a byte crossover, the context length at which the two savings are equal, together with ideal speedup bounds for each branch and for their composition, from model dimensions and keep ratios alone. We then time both branches and their composition from 2K to 128K tokens on two GPUs after a dense prefill of real text, with dense and sparse modes reading the cache through the same split-K attention kernel. The projection branch leads at short context and the KV branch at long context, with speedups that follow their byte bounds up to fixed kernel costs. Adding these costs, measured in separate sweeps, lets the byte account predict the measured crossings of three keep-ratio pairs, a second model, and a second GPU to within 4.1K tokens. Timing the dense baseline with masked instead of split-K attention inflates the apparent speedup of the same KV policy about fivefold. An attention-scored KV selection answers the same passkey and multi-key placements as dense decoding up to 127K tokens, whereas a KV window misses most of them. Under matched perplexity budgets, activation sparsity composed with this selection decodes 14 to 26% faster than the best single branch on both GPUs. Code is available at https://github.com/js-lee-AI/ByteCross.",
+        "identifiers": [
+          "SemanticScholar:771134c93b797889cac96cf314ed2d7c74de84d7"
+        ],
+        "semantic_scholar_id": "771134c93b797889cac96cf314ed2d7c74de84d7",
+        "canonical_id": "arXiv:2609.33889",
+        "arxiv_id": "2609.33889",
+        "authors": [
+          "Jungseob Lee",
+          "Seungyoon Lee",
+          "Seongtae Hong",
+          "Sugyeong Eo",
+          "Heuiseok Lim"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.27735",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.27735",
+        "id:SemanticScholar:fe149c33cfdfcd36f2afe5fd1b8884a0d038583a",
+        "id:arXiv:2607.27735",
+        "title:a sparse glimpse of the whole trainfree selfspeculative decoding",
+        "url:https://arxiv.org/abs/2607.27735"
+      ],
+      "record": {
+        "title": "A Sparse Glimpse of the Whole: Train-Free Self-Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2607.27735",
+        "year": 2026,
+        "published": "2026-07-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding alleviates the memory-bandwidth bottleneck in large language model inference, but its acceleration is jointly constrained by drafting overhead, token acceptance, and speculation length. We present a unified efficiency analysis showing that extending the speculation horizon can reduce rather than improve speedup when the marginal acceptance probability falls below the relative drafting cost. Guided by this analysis, we introduce SparseSpec-L, a training-free self-speculative decoding framework for long-context inference. SparseSpec-L generates lightweight drafts directly from the target model using a dynamically sparsified and recallable KV cache. It recycles per-head attention statistics produced during full-context verification as a no-extra-forward importance signal, allowing critical historical tokens to be recalled without permanently discarding the dense KV cache. An online entropy-based controller further selects the speculation length according to expected step-wise efficiency. Experiments across multiple long-context tasks and model scales show consistent end-to-end acceleration, with up to speedup over autoregressive decoding while preserving the target model's output distribution.",
+        "identifiers": [
+          "SemanticScholar:fe149c33cfdfcd36f2afe5fd1b8884a0d038583a"
+        ],
+        "semantic_scholar_id": "fe149c33cfdfcd36f2afe5fd1b8884a0d038583a",
+        "canonical_id": "arXiv:2607.27735",
+        "arxiv_id": "2607.27735",
+        "doi": "10.48550/arXiv.2607.27735",
+        "authors": [
+          "Yue Liu",
+          "Yuan Zeng",
+          "Min Lyu",
+          "Ruilin Liu",
+          "Yu Guo",
+          "Yin-Long Xu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 90,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.03229",
+      "identity_tokens": [
+        "id:SemanticScholar:424ec2a83a098cbd90c465ae67199a35e39976dd",
+        "id:arXiv:2608.03229",
+        "title:unified lookuptable inference with signeddigit kv caches for ternary llms",
+        "url:https://arxiv.org/abs/2608.03229"
+      ],
+      "record": {
+        "title": "Unified Lookup-Table Inference with Signed-Digit K/V Caches for Ternary LLMs",
+        "source_url": "https://arxiv.org/abs/2608.03229",
+        "year": 2026,
+        "published": "2026-08-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Ternary LLMs make their weight-dominated projections compact and efficient, but attention remains a mismatch: its K/V cache is created online and is typically processed by a separate higher-precision engine. Compressing this cache alone does not resolve the mismatch. To execute attention with the same lookup-table machinery as ternary projections, values accumulated in one reduction must retain a compatible representation and scale. This requirement also differs for keys and values during causal decoding, because newly generated values may belong to an unfinished cache block. This work develops a unified lookup-table inference approach for ternary LLMs. It stores runtime K/V states as scaled multi-plane signed digits organized around the reduction structure of attention. The resulting digit planes are consumed directly by activation-derived tables, avoiding dense K/V materialization between cache storage and attention computation. The design combines online K/V formation, bounded handling of incomplete value blocks, and a shared multi-stream datapath for Linear projections and attention. A constraint-guided search selects the representation and execution policy for a target quality--efficiency trade-off. Experiments on native and post-training ternary models validate the approach across cache capacity, model quality, and hardware efficiency.",
+        "identifiers": [
+          "SemanticScholar:424ec2a83a098cbd90c465ae67199a35e39976dd"
+        ],
+        "semantic_scholar_id": "424ec2a83a098cbd90c465ae67199a35e39976dd",
+        "canonical_id": "arXiv:2608.03229",
+        "arxiv_id": "2608.03229",
+        "authors": [
+          "Ziang Duan",
+          "Jia-Jun Wu",
+          "Ze-Tian Chen",
+          "Hao Song",
+          "Yan-Wen Deng",
+          "Zi-Xuan Shen",
+          "Nuobei Xie",
+          "Simon Wu",
+          "Bo-Lun Wang",
+          "Peng-Peng Zhou",
+          "Chao Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 85,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13804",
+      "identity_tokens": [
+        "id:SemanticScholar:5bfb8fe103a572b7c99bc439edac4068a9e987b6",
+        "id:arXiv:2609.13804",
+        "title:stepprune adaptive sequential visual token selection across multimodal large language models",
+        "url:https://arxiv.org/abs/2609.13804"
+      ],
+      "record": {
+        "title": "StepPrune: Adaptive Sequential Visual Token Selection across Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.13804",
+        "year": 2026,
+        "published": "2026-09-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual prefixes account for a major portion of the per-layer computation in multimodal large language models (MLLMs), making visual-token pruning a direct approach to accelerating inference. Existing top-K methods typically evaluate tokens independently and apply a uniform budget to all inputs, overlooking both selection-dependent interactions and variations in visual complexity across samples. In contrast, we propose StepPrune, which formulates visual-token pruning as an adaptive sequential decision process. Conditioned on previously selected tokens and textual context, StepPrune progressively constructs the retained subset and automatically determines its size through a learned STOP action. During training, a variance-preserving noise gate provides a differentiable surrogate for the discrete selection process, whereas during inference, unselected tokens are physically removed before language-model prefill. A grouped selection mechanism further extends StepPrune to high-resolution inputs. Experiments across LLaVA-1.5, LLaVA-NeXT, Qwen2.5-VL, and InternVL3 show that StepPrune achieves the best average normalized performance retention across all evaluated pruning rates on LLaVA-1.5, Qwen2.5-VL, and InternVL3, while remaining competitive on the substantially longer AnyRes prefixes of LLaVA-NeXT. On LLaVA-1.5, StepPrune retains 94.6% of the full-prefix normalized performance while pruning 88.9% of the visual tokens. At a mean retained count of 64, StepPrune reduces prefill latency from 59.95 ms to 40.05 ms, corresponding to a 1.50x prefill speed-up.",
+        "identifiers": [
+          "SemanticScholar:5bfb8fe103a572b7c99bc439edac4068a9e987b6"
+        ],
+        "semantic_scholar_id": "5bfb8fe103a572b7c99bc439edac4068a9e987b6",
+        "canonical_id": "arXiv:2609.13804",
+        "arxiv_id": "2609.13804",
+        "authors": [
+          "Hang Zhang",
+          "Lan He",
+          "Min Yao",
+          "Lijian Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26638",
+      "identity_tokens": [
+        "id:SemanticScholar:42cb858ef1c96a4950f14bcb89c8e127fc7c3194",
+        "id:arXiv:2609.26638",
+        "title:diffusion drafts ar verifies accelerating document ocr with selfspeculative decoding",
+        "url:https://arxiv.org/abs/2609.26638"
+      ],
+      "record": {
+        "title": "Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2609.26638",
+        "year": 2026,
+        "published": "2026-09-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive OCR vision-language models accurately convert document images into text and structured markup, but require one sequential decoding step per output token, limiting inference speed. Unlike open-ended text generation, OCR outputs are strongly grounded in the input image, making diffusion-based parallel generation promising. However, when several tokens are predicted in one diffusion step, each is predicted before the others are known. Committing them directly can therefore introduce errors. We therefore introduce GravityOCR, a parameter-shared AR-block-diffusion model jointly trained for parallel drafting and causal AR verification. Verifying drafts before commitment lets the model commit multiple output tokens per round without a separate drafting network. The causal AR path also enables GRPO with sequence- and structure-level OCR rewards, avoiding diffusion-trajectory likelihood estimation while updating the shared drafter parameters. On OmniDocBench v1.6, AR-path GRPO improves the Overall score from 94.92 to 95.16 without reducing diffusion drafting efficiency, while the final model remains close to the original GLM-OCR score of 95.48. In an SGLang serving deployment, GravityOCR commits an average of 9.7 output tokens per forward pass and achieves a $3.94\\times$ decode-only speedup on region crops and a $1.32\\times$ end-to-end page-processing speedup over AR decoding.",
+        "identifiers": [
+          "SemanticScholar:42cb858ef1c96a4950f14bcb89c8e127fc7c3194"
+        ],
+        "semantic_scholar_id": "42cb858ef1c96a4950f14bcb89c8e127fc7c3194",
+        "canonical_id": "arXiv:2609.26638",
+        "arxiv_id": "2609.26638",
+        "authors": [
+          "Dohyun Kim",
+          "Sung-Jun Han",
+          "Hyun-geun Kim",
+          "Yusik Kim",
+          "Jamin Shin",
+          "Paul Hongsuck Seo",
+          "Hongjoon Ahn"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33746",
+      "identity_tokens": [
+        "id:SemanticScholar:d6e7105ad5fd4f47bf4ba0c6e65452733ff82fa2",
+        "id:arXiv:2609.33746",
+        "title:pqhsa reusing productquantized scores for hybrid sparseapproximate attention",
+        "url:https://arxiv.org/abs/2609.33746"
+      ],
+      "record": {
+        "title": "PQ-HSA: Reusing Product-Quantized Scores for Hybrid Sparse-Approximate Attention",
+        "source_url": "https://arxiv.org/abs/2609.33746",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "At each decoding step a language model attends over the key-value (KV) cache of every earlier token, so at long context the attention call is bounded by memory bandwidth. Sparse attention reads only a subset of keys chosen by a cheap score estimate, and most methods give the unread tokens zero weight. The output then draws on only a small fraction of the KV cache, and accuracy drops at small budgets, most on tasks that aggregate information across the context. An inverted-file product-quantization (IVF-PQ) index over the cached keys computes an approximate score for every indexed token in order to rank them; after ranking, those scores approximate the attention logits of the tokens left out. PQ-HSA (hybrid sparse-approximate attention) attends the selected tokens with their original keys and values, and the unselected tokens, the background, enter the same softmax through those scores, summed per inverted list and multiplied by the list's mean value. At 128K and a 1-2% retrieval budget, PQ-HSA is more accurate than Quest and SnapKV on Llama-3.1-8B and Qwen3-30B-A3B and stays close to full attention in macro accuracy; with the same selector, the background term raises macro accuracy on the 8B model from 0.71 to 0.83. In the same 128K setting, inside vLLM on one NVIDIA H20, the decode attention call runs 1.6x faster than the FlashAttention-3 kernel; the speedup grows with context length, and a cost model fitted on 8B to 30B models gives the context length at which it begins. A vLLM plugin runs PQ-HSA on two engine versions without changes to the engine source; code is available at https://github.com/KunmingSHAO/pqhsa_release.",
+        "identifiers": [
+          "SemanticScholar:d6e7105ad5fd4f47bf4ba0c6e65452733ff82fa2"
+        ],
+        "semantic_scholar_id": "d6e7105ad5fd4f47bf4ba0c6e65452733ff82fa2",
+        "canonical_id": "arXiv:2609.33746",
+        "arxiv_id": "2609.33746",
+        "authors": [
+          "Kun-Ming Shao",
+          "Jie-Run Chen",
+          "Yan-Li Wang",
+          "Ruo-Yu Wang",
+          "Hao-Li Bai",
+          "Kwang-Ting Cheng",
+          "Chi-Ying Tsui"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.23729",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.23729",
+        "id:SemanticScholar:78a843a7bc1b13a3c83e27160bd8ecda0d5e8c3a",
+        "id:arXiv:2509.23729",
+        "title:luq layerwise ultralow bit quantization for multimodal large language models",
+        "url:https://arxiv.org/abs/2509.23729"
+      ],
+      "record": {
+        "title": "LUQ: Layerwise Ultra-Low Bit Quantization for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2509.23729",
+        "year": 2025,
+        "published": "2025-09-28",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) with multimodal capabilities have revolutionized vision-language tasks, but their deployment often requires huge memory and computational resources. Post-training quantization (PTQ) has successfully compressed language models to as low as 1-bit precision, its effectiveness for multimodal LLMs (MLLMs) remains unexplored. In this paper, we present the first method for ultra-low-bit (<4-bit) quantization of MLLMs. Our analysis reveals that multimodal tokens and intermediate layer activations produced by them exhibit significantly higher entropy compared to text tokens, indicating greater functional complexity that makes MLLMs less tolerant to ultra-low bit quantization. However, this entropy varies significantly across layers, with some layers producing lower-entropy activation distributions that we empirically show can better tolerate ultra-low bit quantization. Existing PTQ methods optimize weight quantization within each layer but apply the same target precision uniformly, ignoring this variation in complexity across layers. Building on this insight, we propose LUQ: Layerwise Ultra-Low Bit Quantization, which characterizes each transformer layer's functional complexity via its output activation entropy and selectively applies ultra-low bit quantization to layers encoding simpler, more compressible functions. We also show that multimodal calibration (image and text tokens) boosts VQA performance in the ultra-low bit regime. Evaluated on LLaVA-1.5 and Qwen-2.5-VL across 9 VQA benchmarks, LUQ models use 40% and 31% less memory than their 4-bit counterparts while exhibiting less than 10% degradation on MME.",
+        "identifiers": [
+          "SemanticScholar:78a843a7bc1b13a3c83e27160bd8ecda0d5e8c3a"
+        ],
+        "semantic_scholar_id": "78a843a7bc1b13a3c83e27160bd8ecda0d5e8c3a",
+        "canonical_id": "arXiv:2509.23729",
+        "arxiv_id": "2509.23729",
+        "doi": "10.48550/arXiv.2509.23729",
+        "authors": [
+          "Shubhang Bhatnagar",
+          "Andy Xu",
+          "K. Tan",
+          "Narendra Ahuja"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 395,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:27759e1f9451b91ea853c7731279514b80c5119ddb28fb3fd2c54c1df66927bc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

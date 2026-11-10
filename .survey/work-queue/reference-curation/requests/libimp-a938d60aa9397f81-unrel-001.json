@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a938d60aa9397f81-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.24202",
+  "reason": "Sparse attention reduces the quadratic cost of global self-attention while retaining strong empirical performance, but how its restricted interactions shape the evolution of token representations remains theoretically underexplored. Modeling tokens as particles on the unit sphere, we introduce opinion leader dynamics, a framework that identifies two mechanisms through which token groups converge internally while maintaining distinct limiting directions. In the explicit model, fixed representatives induce a potential that attracts tokens toward distinct local maxima. In the implicit model, disconnected interaction groups evolve toward separate consensus directions. We formulate both models as reverse Wasserstein gradient flows and establish exponential convergence under suitable conditions. We further connect these theoretical predictions to token evolution in frontier sparse-attention LLMs that motivate our framework. Across four benchmarks, Kimi-K3, MiniMax-M3, and DeepSeek-V4-Flash consistently exhibit clearer cluster separation and higher clustering scores than the dense-attention model GLM-4.7-Flash in projected token representations. These observations support the relevance of the predicted multiple-group structure to trained frontier LLMs, while finite-particle simulations illustrate the theoretical convergence behavior. Together, our results connect restricted token interactions to distinct group-level attractors, providing a dynamical account of how sparse attention can support alignment within groups while preserving separation between them.",
+  "title": "Opinion Leader Dynamics: How Sparse Attention Shapes Token Clustering",
+  "identity_tokens": [
+    "arXiv:2609.24202"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+    "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+    "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+    "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+    "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+    "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+    "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a938d60aa939",
+  "source_precheck_request_id": null
+}

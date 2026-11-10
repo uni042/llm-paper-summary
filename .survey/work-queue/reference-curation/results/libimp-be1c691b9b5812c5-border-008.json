@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-be1c691b9b5812c5-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.18653/v1/2024.naacl-industry.19",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.18653/v1/2024.naacl-industry.19",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2024.naacl-industry.19"
+    ],
+    "reason": "RAGでstructured output hallucinationを減らし、小型retrieverにより15.5B級model相当を3B級modelで狙えるresource benefitも示すが、主要目的は品質・generalizationでsystems efficiencyの厳密評価が中心でないため境界扱い。",
+    "first_checked_at": "2026-10-07T05:49:18+00:00",
+    "last_checked_at": "2026-10-07T05:49:18+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md",
+      "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Reducing hallucination in structured outputs via Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-10-07T05:49:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be1c691b9b58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

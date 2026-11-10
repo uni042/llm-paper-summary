@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5aac5296061da3be-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2411.18463",
+  "reason": "The peptide-binder pipeline generates amino-acid sequences and evaluates protein binding geometry, so its autoregressive sequence construction is biological design rather than token decoding for an LLM. Its forward citation from multi-token prediction is only a broad autoregression connection; it neither changes model inference nor reports serving resource gains.",
+  "title": "Hotspot-Driven Peptide Design via Multi-Fragment Autoregressive Extension",
+  "identity_tokens": [
+    "arXiv:2411.18463"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5aac5296061d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

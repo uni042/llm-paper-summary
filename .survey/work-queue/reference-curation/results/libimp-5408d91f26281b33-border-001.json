@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5408d91f26281b33-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.jii.2026.101190",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.jii.2026.101190",
+    "identity_tokens": [
+      "DOI:10.1016/j.jii.2026.101190"
+    ],
+    "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+    "first_checked_at": "2026-10-05T07:34:28+00:00",
+    "last_checked_at": "2026-10-05T07:34:28+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md"
+    ],
+    "title": "Enabling robust industrial information integration: An adaptive compressed federated learning framework for heterogeneous Industrial Internet of Things"
+  },
+  "processed_at": "2026-10-05T07:34:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5408d91f2628",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

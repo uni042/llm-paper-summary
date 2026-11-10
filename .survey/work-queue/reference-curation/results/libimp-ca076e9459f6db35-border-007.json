@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca076e9459f6db35-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.knosys.2026.116979",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.knosys.2026.116979",
+    "identity_tokens": [
+      "DOI:10.1016/j.knosys.2026.116979",
+      "SemanticScholar:e353320f2429f1aecf58f7528bae2577c6c9f0e8"
+    ],
+    "reason": "Search metadata exposes an efficiency claim for time-series forecasting, but the official ScienceDirect record returned a cache-miss error and its abstract could not be verified from a publisher source.",
+    "first_checked_at": "2026-10-13T04:24:21+00:00",
+    "last_checked_at": "2026-10-13T04:24:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Beyond static frequency decomposition: Dynamic time frequency mixing for time series forecasting"
+  },
+  "processed_at": "2026-10-13T04:24:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca076e9459f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

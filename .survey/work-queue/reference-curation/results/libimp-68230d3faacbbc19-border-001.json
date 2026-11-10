@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68230d3faacbbc19-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2206.04685",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2206.04685",
+    "identity_tokens": [
+      "arXiv:2206.04685"
+    ],
+    "reason": "深層ニューラルネットワークの早期終了位置を軽量予測器で事前推定し、残り層数に応じて動作電圧・周波数を調節する推論計算・電力最適化。一般DNNの省計算に技術的関連性はあるが、一次要旨では生成LLM、KVキャッシュ、LLMサービングに固有の評価を確認できない。",
+    "first_checked_at": "2026-10-19T09:51:18+00:00",
+    "last_checked_at": "2026-10-19T09:51:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Predictive Exit: Prediction of Fine-Grained Early Exits for Computation- and Energy-Efficient Inference"
+  },
+  "processed_at": "2026-10-19T09:51:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68230d3faacb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

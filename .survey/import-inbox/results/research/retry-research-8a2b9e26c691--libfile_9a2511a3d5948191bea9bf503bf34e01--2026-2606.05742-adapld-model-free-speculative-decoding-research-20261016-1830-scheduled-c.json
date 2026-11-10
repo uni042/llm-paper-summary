@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b154ddc36d68c3c287186fa011880321de9efec7a96552e6c5266d88dba64633",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8a2b9e26c691--libfile_9a2511a3d5948191bea9bf503bf34e01--2026-2606.05742-adapld-model-free-speculative-decoding-research-20261016-1830-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2606.05742",
+  "worker_completed_at": "2026-10-16T18:27:26+09:00",
+  "worker_run_key": "20261016-1830-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6677,
+    "body_paragraphs": 43,
+    "method_chars": 2356,
+    "method_paragraphs": 15,
+    "evaluation_chars": 157,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 157 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 157 < 500"
+  ],
+  "processed_at": "2026-10-16T15:41:53+00:00"
+}

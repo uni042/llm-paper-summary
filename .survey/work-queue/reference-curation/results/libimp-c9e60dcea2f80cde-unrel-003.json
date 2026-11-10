@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9e60dcea2f80cde-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.02544",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.02544",
+    "identity_tokens": [
+      "arXiv:2607.02544"
+    ],
+    "reason": "DiLoCo訓練の同期・スケジューリングを扱うAI基盤研究で、訓練時の効率・資源管理である。",
+    "first_checked_at": "2026-10-05T03:44:12+00:00",
+    "last_checked_at": "2026-10-05T03:44:12+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md"
+    ],
+    "title": "Not Every Sync Is Safe: Calibrated DiLoCo Scheduling for Shared AI Infrastructure"
+  },
+  "processed_at": "2026-10-05T03:44:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9e60dcea2f8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

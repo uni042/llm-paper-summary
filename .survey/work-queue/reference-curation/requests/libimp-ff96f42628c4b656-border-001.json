@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ff96f42628c4b656-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2512.06688",
+  "reason": "本文§2〜4で、暗黙の利用者嗜好を推論するデータセットと強化微調整、利用者履歴を最大2048トークンの可読な記憶M_iへ逐次更新する方式を確認。32k履歴に対して入力16分の1で選好質問の正答率を維持する利点はあるが、主目的・評価指標は個人化の回答正確性であり、KVキャッシュ、GPU演算、サービング配置や推論基盤の性能制御を提案していない。記憶の圧縮が入力トークン量を減らすため境界候補とする。",
+  "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory",
+  "identity_tokens": [
+    "arXiv:2512.06688",
+    "arxiv:2512.06688"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff96f42628c4",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

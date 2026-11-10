@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-84c0c8d3ffb07df7-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.19022",
+  "reason": "Despite the wide variety of existing Buy-`Til-You-Die (BTYD) models, nearly all rely upon the convenient assumption of transactions following a Poisson process. As modern customer bases grow larger and more diverse, a major gap in the marketing literature is BTYD models that can account for heterogeneity in timing patterns across millions of customers. This paper addresses that gap, introducing a family of models that assume transactions follow a Weibull renewal process and developing a highly scalable scheme for parameter estimation based on an amortized variational inference procedure. The proposed model fits to a proprietary dataset of 5 million online retail customers in 8 minutes which would take the current state-of-the-art an estimated 3-4 days. We show both theoretically and empirically that this dramatic improvement in computational performance comes with no appreciable change to either model interpretation or predictive performance. Beyond scalability, gradient-based variational inference also makes it easy to extend the model to covariates, which we illustrate on a public dataset of 4 million political donors during the 2020 US General election cycle. More generally, this paper demonstrates how to blend recent advances in approximate Bayesian inference and the tools of modern machine learning to dramatically improve the efficiency and expressivity of probabilistic models for customer base analysis.",
+  "title": "Scalable Amortized Variational Inference for Non-Poisson Buy-'Til-You-Die Models",
+  "identity_tokens": [
+    "arXiv:2608.19022"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-84c0c8d3ffb0",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260916T050500Z-discovery-specialist-1400-02",
+  "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-1dd6544d5f77b687",
+      "claim_id": "claim-ad4afba2a1cd0b175dc4bc13",
+      "worker_id": "scheduled-chat-discovery-specialist-20260916T1400JST",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-ad4afba2a1cd0b175dc4bc13",
+      "claimed_at": "2026-09-16T05:04:05+00:00",
+      "expires_at": "2026-09-16T06:34:05+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-1dd6544d5f77b687"
+      ],
+      "job": {
+        "job_id": "job-research-1dd6544d5f77b687",
+        "type": "research",
+        "parent_job_id": "job-05a77a2f3d886575",
+        "priority": 82,
+        "canonical_id": "arXiv:2606.11244",
+        "title": "SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving",
+        "source_url": "https://arxiv.org/abs/2606.11244",
+        "paper_path": "papers/inference/08-quantization-kernels/2026-2606.11244-spear-error-adaptive-low-bit-serving.md",
+        "selection_reason": "低bit量子化の精度回復をtoken gate、kernel fusion、SLO-aware schedulerまで共同設計するsystem。quantization executionとserving runtimeの交点として価値がある。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T04:04:28+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.novelty must explain the paper-specific idea | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | Japanese-first prose ratio is too low: 69.9% < 70% (Japanese=3127, Latin=1346)",
+        "validation_errors": [
+          "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+          "problem_method.novelty must explain the paper-specific idea",
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short",
+          "problem_method.components[4].description is too short",
+          "Japanese-first prose ratio is too low: 69.9% < 70% (Japanese=3127, Latin=1346)"
+        ],
+        "last_validation_failed_at": "2026-09-16T05:03:41+00:00"
+      },
+      "record_bank": "g",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-9c48ba51e4ed81ed5058eceb"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-9c48ba51e4ed81ed5058eceb.json"
+    }
+  ],
+  "processed_at": "2026-09-16T05:04:05+00:00",
+  "checkpoint_released": 0
+}

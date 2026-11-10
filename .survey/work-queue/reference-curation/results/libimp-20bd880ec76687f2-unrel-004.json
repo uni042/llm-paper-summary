@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20bd880ec76687f2-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.03596",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.03596",
+    "identity_tokens": [
+      "arXiv:2603.03596"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2603.03596. Abstract summary: Conventionally, memory in end-to-end robotic learning involves inputting a sequence of past observations into the learned policy. However, in complex multi-stage real-world tasks, the robot's memory must represent past events at multiple levels of granularity: from long-term memory that captures abstracted semantic concepts (e.g Out of scope: Robotic VLA embodied-memory architecture, no LLM serving efficiency result.",
+    "first_checked_at": "2026-10-05T12:30:32+00:00",
+    "last_checked_at": "2026-10-05T12:30:32+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "MEM: Multi-Scale Embodied Memory for Vision Language Action Models"
+  },
+  "processed_at": "2026-10-05T12:30:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20bd880ec766",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

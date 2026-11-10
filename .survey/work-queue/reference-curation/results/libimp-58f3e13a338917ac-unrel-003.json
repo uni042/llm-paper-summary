@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58f3e13a338917ac-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2308.03688",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2308.03688",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2308.03688",
+      "arXiv:2308.03688"
+    ],
+    "reason": "LLMエージェント能力を複数環境で評価するベンチマークが主貢献で、エージェント実行ランタイムの効率化を提案しない。",
+    "first_checked_at": "2026-09-27T10:28:09+09:00",
+    "last_checked_at": "2026-09-30T09:50:51+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 205"
+    ],
+    "title": "AgentBench: Evaluating LLMs as Agents"
+  },
+  "processed_at": "2026-09-30T09:50:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58f3e13a3389",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

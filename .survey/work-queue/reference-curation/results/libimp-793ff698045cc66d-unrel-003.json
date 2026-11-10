@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-793ff698045cc66d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3805622.3810825",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3805622.3810825",
+    "identity_tokens": [
+      "DOI:10.1145/3805622.3810825"
+    ],
+    "reason": "抄録はDiffusion Transformerによる画像・動画生成向けPTQ。低ビット化の効率貢献はあるが対象モデル群がLLMではなく生成DiT。",
+    "first_checked_at": "2026-10-05T02:32:47+00:00",
+    "last_checked_at": "2026-10-05T02:32:47+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+      "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "DapQ-DiT: Distribution-Aware Post-Training Quantization for Efficient Generative Tasks in Diffusion Transformers"
+  },
+  "processed_at": "2026-10-05T02:32:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-793ff698045c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

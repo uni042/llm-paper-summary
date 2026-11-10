@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d39648848c57363-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.12993",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.12993",
+    "identity_tokens": [
+      "arXiv:2608.12993"
+    ],
+    "reason": "一次要旨はdata-center battery/power provisioning theoryであり、LLM model inference optimizationではない。",
+    "first_checked_at": "2026-10-05T03:19:23+00:00",
+    "last_checked_at": "2026-10-05T03:19:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+    ],
+    "title": "A Theory of Probabilistic Power Provisioning for Data Centers with Distributed Energy Storage"
+  },
+  "processed_at": "2026-10-05T03:19:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d39648848c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

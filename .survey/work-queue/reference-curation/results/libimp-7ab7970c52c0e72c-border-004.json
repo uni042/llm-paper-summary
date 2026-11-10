@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7ab7970c52c0e72c-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.15810",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.15810",
+    "identity_tokens": [
+      "arXiv:2609.15810"
+    ],
+    "reason": "Low-bit attention is a direct compute/precision topic, but VC-Attention targets diffusion-transformer video generation rather than LLM inference.",
+    "first_checked_at": "2026-10-06T06:59:28+00:00",
+    "last_checked_at": "2026-10-06T06:59:28+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VC-Attention: Value Smoothing and Softmax Casting for Low-bit Attention"
+  },
+  "processed_at": "2026-10-06T06:59:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7ab7970c52c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

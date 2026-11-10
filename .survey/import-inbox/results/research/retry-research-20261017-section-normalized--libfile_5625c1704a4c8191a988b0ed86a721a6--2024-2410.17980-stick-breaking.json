@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "dfe883929beab6e70ee4a42dbb6c3c12f93b40da969772323a22775e24148d6c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-section-normalized--libfile_5625c1704a4c8191a988b0ed86a721a6--2024-2410.17980-stick-breaking.md",
+  "canonical_id": "arXiv:2410.17980",
+  "worker_completed_at": "2026-10-18T00:32:06+09:00",
+  "worker_run_key": "20261018-0030-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8362,
+    "body_paragraphs": 44,
+    "method_chars": 2916,
+    "method_paragraphs": 16,
+    "evaluation_chars": 2403,
+    "limitation_chars": 882,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2410.17980-scaling-stick-breaking-attention-an-efficient-implementation-and-in-dept.md と 30 段落 / 7109文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T16:17:22+00:00"
+}

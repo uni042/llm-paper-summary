@@ -1,0 +1,817 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-58f55e5519038fb4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-58f55e551903",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.01028",
+    "arXiv:2410.12513",
+    "arXiv:2504.09775",
+    "arXiv:2506.03206",
+    "arXiv:2509.25188",
+    "arXiv:2511.00576",
+    "arXiv:2604.09048",
+    "arXiv:2606.08048",
+    "arXiv:2607.10661",
+    "arXiv:2608.00881",
+    "arXiv:2608.06763",
+    "arXiv:2608.14797",
+    "arXiv:2609.25809",
+    "arXiv:2609.31093"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 14,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "42077da6468224cd1f2b687e0a8eec8ddf6a1eea",
+  "raw_search_result_count": 14,
+  "retrieval_duplicate_filtered_count": 6,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 14,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 6,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T12:26:19.606737+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.01028",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.12513",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2410.12513"
+    },
+    {
+      "requested_id": "arXiv:2504.09775",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "rejection_ledger",
+      "matched_token": "id:arXiv:2504.09775"
+    },
+    {
+      "requested_id": "arXiv:2506.03206",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2506.03206"
+    },
+    {
+      "requested_id": "arXiv:2509.25188",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:adc3a081078a9267221045e74a79b8c7b422cfb8"
+    },
+    {
+      "requested_id": "arXiv:2511.00576",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2511.00576"
+    },
+    {
+      "requested_id": "arXiv:2604.09048",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.08048",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.08048"
+    },
+    {
+      "requested_id": "arXiv:2607.10661",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.00881",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.06763",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.14797",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.25809",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.31093",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures",
+      "source_url": "https://arxiv.org/abs/2604.09048",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While the large energy consumption of Large Language Models (LLMs) is recognized by the community, system operators lack guidance for energy-efficient LLM inference deployments that leverage energy trade-offs of heterogeneous hardware due to a lack of energy-aware benchmarks and data. In this work we address this gap with Watt Counts: the largest open-access dataset of energy consumption of LLMs, with over 5,000 experiments for 50 LLMs across 10 NVIDIA Graphics Processing Units (GPUs) in batch and server scenarios along with a reproducible, open-source benchmark that enables community submissions to expand this dataset. Leveraging this dataset, we conduct a system-level study of LLM inference across heterogeneous GPU architectures and show that GPU selection is crucial for energy efficiency outcomes and that optimal hardware choices vary significantly across models and deployment scenarios, demonstrating the critical importance of hardware-aware deployment in heterogeneous LLM systems. Guided by our data and insights, we show that practitioners can reduce energy consumption by up to 70% in server scenarios with negligible impact on user experience, and by up to 20% in batch scenarios.",
+      "identifiers": [
+        "SemanticScholar:61437b6e1fb5791263f1d0994b530d8a2364f1df"
+      ],
+      "semantic_scholar_id": "61437b6e1fb5791263f1d0994b530d8a2364f1df",
+      "canonical_id": "arXiv:2604.09048",
+      "arxiv_id": "2604.09048",
+      "doi": "10.48550/arXiv.2604.09048",
+      "authors": [
+        "Mauricio Fadel Argerich",
+        "Jonathan Furst",
+        "M. Patiño-Martínez"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 187,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving",
+      "source_url": "https://arxiv.org/abs/2608.00881",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model agents increasingly act through stateful tools, yet model generation and environment execution remain serialized at every step. As decoding accelerates, tool execution becomes a growing bottleneck. Existing action- or observation-only speculation leaves much of this latency exposed: value is concentrated in a few slow calls, some outcomes emerge only through execution, and longer lookahead typically requires an increasingly unlikely chain of action predictions. We present AOSpec, a lossless framework that co-speculates actions and observations across the full agent-environment loop. Expected Value Decoding (EVD) directs observation speculation toward outcomes with the greatest expected latency benefit, optimizing expected time hidden rather than hit rate. For outcomes only execution can reveal, AOSpec launches latency-critical target actions in isolated forks that contain their effects, while Joint Action-State Verification (JASV) verifies both the action and its origin state against committed execution before reuse. JASV recasts long-horizon action dependency from full-chain prediction into target action-state verification, breaking the lookahead--accuracy tradeoff and unlocking long-range overlap without sacrificing serial semantics. Across Terminal-Bench serving settings spanning four harnesses, five actor models, and five serving speeds, AOSpec outperforms every practical baseline, reducing mean end-to-end latency by 11.8-32.5% and p99 latency by up to 42.8%. Its gains increase as decoding accelerates, and its observation model transfers from Terminal-Bench to SWE-bench Verified without retraining.",
+      "identifiers": [
+        "SemanticScholar:34d5a34307d51dcfdcf919297d2c8b93c972f13f"
+      ],
+      "semantic_scholar_id": "34d5a34307d51dcfdcf919297d2c8b93c972f13f",
+      "canonical_id": "arXiv:2608.00881",
+      "arxiv_id": "2608.00881",
+      "authors": [
+        "H. Chen",
+        "Jin-Nan Guo",
+        "Wayne Luk",
+        "Hong-Xiang Fan"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 74,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Tokens: A Survey on Decoding Methods for Large Language and Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2608.14797",
+      "year": 2026,
+      "published": "2026-06-17",
+      "venue": "SIGKDD Explorations",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) and large vision-language models (LVLMs) have demonstrated impressive generative capabilities, yet ensuring their outputs align with user intent is still challenging. While most existing approaches address this issue at the training stage, inference-time approaches like decoding methods offer a more efficient and scalable solution. Decoding methods control model generation by guiding token-level selection, performing sequencelevel generation, or generating tokens in parallel to accelerate the process. In this survey, we identify three emerging paradigms from recent works on decoding methods for LLMs and LVLMs, provide a systematic review of these methods, highlight ongoing challenges, and discuss potential future research directions. Our goal is to underscore the efficiency and effectiveness of decoding methods and offer a practical view of their applications. Paper lists and more resources on decoding methods for LLMs and LVLMs can be found at https://github.com/wang2226/Awesome-LLM-Decoding.",
+      "identifiers": [
+        "SemanticScholar:9127c7b31bcb4d798006291d1f972dbe2cd440cd"
+      ],
+      "semantic_scholar_id": "9127c7b31bcb4d798006291d1f972dbe2cd440cd",
+      "canonical_id": "arXiv:2608.14797",
+      "arxiv_id": "2608.14797",
+      "doi": "10.1145/3820356.3820357",
+      "authors": [
+        "Haoran Wang",
+        "Xiongxiao Xu",
+        "Philip S. Yu",
+        "Kai Shu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 119,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Unlocking Parallelism in Autoregressive Language Models via Speculative Decoding with Progressive Tree Drafting",
+      "source_url": "https://arxiv.org/abs/2607.10661",
+      "year": 2026,
+      "published": "2026-07-12",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding has significantly accelerated Large Language Model (LLM) inference by alleviating memory-bound bottlenecks. However, traditional speculative decoding typically relies on auxiliary draft modules, incurring significant training and communication overhead. Although recent methods attempt to generate drafts within the target model itself, they often fail to fully exploit its latent parallel capacity due to a lack of structural coordination. In this paper, we propose \\textbf{Progressive Tree Drafting (PTD)}, which employs a structured, guided parallel drafting strategy to harness the model's parallel potential. By coupling a progressive tree structure with a stepwise pruning mechanism, PTD actively guides the LLM to explore multiple semantic paths in a single forward pass, ensuring both draft diversity and coherence. Experiments demonstrate that PTD achieves up to $2\\times$ decoding speedup across various benchmarks while remaining training-free and model-agnostic. Our code is available at: https://github.com/MINE-USTC/PTD.",
+      "identifiers": [
+        "SemanticScholar:23898a3ec5aa5136f881c26c95a0e79183b0c441"
+      ],
+      "semantic_scholar_id": "23898a3ec5aa5136f881c26c95a0e79183b0c441",
+      "canonical_id": "arXiv:2607.10661",
+      "arxiv_id": "2607.10661",
+      "doi": "10.48550/arXiv.2607.10661",
+      "authors": [
+        "Zi-Peng Gao",
+        "Zhi Zheng",
+        "Qing-Rong Xia",
+        "Jun-Da Lin",
+        "Zi-Wei Zhao",
+        "Tong Xu",
+        "Zhefeng Wang",
+        "En-Hong Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 94,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Draft on the Fly: Adaptive Self-Speculative Decoding using Cosine Similarity",
+      "source_url": "https://arxiv.org/abs/2410.01028",
+      "year": 2024,
+      "published": "2024-10-01",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a simple on the fly method for faster inference of large language models. Unlike other (self-)speculative decoding techniques, our method does not require fine-tuning or black-box optimization to generate a fixed draft model, relying instead on simple rules to generate varying draft models adapted to the input context. We show empirically that our light-weight algorithm is competitive with the current SOTA for self-speculative decoding, while being a truly plug-and-play method.",
+      "identifiers": [
+        "SemanticScholar:d4e25f1a01580d7b1d3be2ca500fb6a03b2042b6"
+      ],
+      "semantic_scholar_id": "d4e25f1a01580d7b1d3be2ca500fb6a03b2042b6",
+      "canonical_id": "arXiv:2410.01028",
+      "arxiv_id": "2410.01028",
+      "doi": "10.48550/arXiv.2410.01028",
+      "authors": [
+        "Michael R. Metel",
+        "Peng Lu",
+        "Boxing Chen",
+        "Mehdi Rezagholizadeh",
+        "I. Kobyzev"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 743,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "CubicQuant: Parametric Non-Uniform Codebooks for High-Throughput LLM Inference with 1-8-Bit Weights",
+      "source_url": "https://arxiv.org/abs/2608.06763",
+      "year": 2026,
+      "published": "2026-08-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight quantization for large-language-model inference must balance adaptive reconstruction levels with representations regular enough for efficient GPU execution. Uniform integers constrain each group to a linear grid. Low-bit floating-point formats use a fixed exponent-mantissa structure, while learned codebooks gain flexibility at the cost of irregular decoding and additional metadata. We introduce CubicQuant, a parametric non-uniform scalar format that preserves a dense integer code stream while adapting reconstruction levels within each weight group. A monotonic cubic curve, specified by two shape parameters and one scale, maps uniformly spaced magnitude codes to non-uniform levels. The family spans 1-8-bit weight payloads, contains symmetric uniform integer quantization as an exact special case, and has effective width B + 64/G bits per weight for payload width B and group size G. We derive population distortion under Uniform, Gaussian, and Laplace distributions, formulate continuous and Dynamic-A8-carrier-aware fitting objectives, and describe direct packed-weight GPU execution. For finite groups of G=128 with 15,360 samples per distribution, W4 CubicQuant reduced reconstruction RMSE relative to optimally clipped four-bit uniform integer quantization by 3.90% on Uniform, 13.49% on Gaussian, and 28.14% on Laplace samples. Relative to the best enumerated four-bit finite floating-point format, the reductions were 3.90%, 9.44%, and 6.27%. Preliminary H200 kernel measurements show a workload-dependent crossover: model-dtype execution is faster for narrow GEMV, while Dynamic A8 becomes favorable as row count grows. The results establish the format's representational promise and direct executability; downstream model quality and cross-device end-to-end performance remain open evaluation questions.",
+      "identifiers": [
+        "SemanticScholar:51279fb5caaec6989f2acf25f71d11832e70bc38"
+      ],
+      "semantic_scholar_id": "51279fb5caaec6989f2acf25f71d11832e70bc38",
+      "canonical_id": "arXiv:2608.06763",
+      "arxiv_id": "2608.06763",
+      "authors": [
+        "Xu Gao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 68,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs",
+      "source_url": "https://arxiv.org/abs/2609.25809",
+      "year": 2026,
+      "published": "2026-09-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fine-grained mixture-of-experts (MoE) architectures have become a mainstream design for open-weight LLMs, with hundreds of experts and increasingly many selected per token. This shift makes dynamic expert pruning an attractive route to cheaper inference. Yet existing evidence comes largely from coarser architectures and likelihood-scored multiple-choice benchmarks, leaving three central questions open in the fine-grained regime: how redundant per-token expert selection is, how effectively existing pruning methods exploit that redundancy, and what governs a model's sensitivity to pruning. We fill this gap with a systematic empirical study of twelve fine-grained MoE checkpoints spanning nine architecture families, with a core suite of eleven benchmarks covering knowledge QA, mathematics, code generation, and general reasoning. We find that expert selection is far more redundant than the field's operating points assume: uniformly retaining about two thirds of the selected experts preserves 98.8% of unpruned performance on average, requiring only a one-integer change and delivering 1.2-1.7x measured speedup across two serving backends. This simple baseline leaves little room for dynamic allocation at conservative budgets: even the best published rules differ from it by under 1% at matched expert budgets. Their value emerges under aggressive pruning, where the best rules recover up to 3.0% over uniform truncation, with gains concentrated in the generative tasks that suffer the sharpest degradation. Sensitivity to aggressive pruning also depends on the model: larger and thinking models are more resilient, whereas multimodal models are more vulnerable. Together, these findings reveal how much expert computation fine-grained MoEs can dispense with, and establish when dynamic allocation earns its complexity, informing both practical deployment and future pruning methods.",
+      "identifiers": [
+        "SemanticScholar:52a4a506939d1fc107fc053d923c75d1f28a7a69"
+      ],
+      "semantic_scholar_id": "52a4a506939d1fc107fc053d923c75d1f28a7a69",
+      "canonical_id": "arXiv:2609.25809",
+      "arxiv_id": "2609.25809",
+      "authors": [
+        "Yuan-Teng Chen",
+        "Qi-Wei Lai",
+        "Tian-Qi Chen",
+        "Peisong Wang",
+        "Yuan-Tian Shao",
+        "Nan-Xin Zeng",
+        "Zhi-Lei Liu",
+        "Chuang-Yi Li",
+        "Jing Liu",
+        "Jian Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Block Sparse Attention with Log-Linear Complexity",
+      "source_url": "https://arxiv.org/abs/2609.31093",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling language models to long contexts is limited by the quadratic cost of self-attention. Block sparse attention offers an efficient alternative, but selecting the retained blocks remains a bottleneck. Conventional block selection requires scoring all query-block pairs and therefore remains quadratic in sequence length. To address this issue, we propose PISA, a block-sparse attention mechanism that employs a pyramid Top-$K$ selection strategy. The main idea is to gradually narrow down the candidates across different levels, making it more efficient to find the most relevant keys. Specifically, we construct a coarse-to-fine hierarchy of keys and perform selection from the coarsest level. At each level, LogSumExp scoring is applied to a bounded candidate set to select candidates for the next finer level, continuing until the finest level is reached. Through pooling, we construct $O(\\log N)$ levels of keys, yielding an overall complexity of $O(N\\log N)$, where $N$ denotes the sequence length. We develop hardware-aware Triton kernels for both training and inference, fusing hierarchical routing and LogSumExp scoring without materializing the query-key score matrix. We further evaluate our method on language modeling tasks. Compared with the baseline, our method achieves comparable performance on benchmarks such as commonsense reasoning while delivering better results on retrieval tasks.",
+      "identifiers": [
+        "SemanticScholar:66ef5af91d7b71eb9b4fb1fe749c021360c8d3c2"
+      ],
+      "semantic_scholar_id": "66ef5af91d7b71eb9b4fb1fe749c021360c8d3c2",
+      "canonical_id": "arXiv:2609.31093",
+      "arxiv_id": "2609.31093",
+      "authors": [
+        "Bo-Hao Tang",
+        "Zhen Qin",
+        "Yu-Qi Pan",
+        "Zheng Li",
+        "Peng-Fei Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.09048",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.09048",
+        "id:SemanticScholar:61437b6e1fb5791263f1d0994b530d8a2364f1df",
+        "id:arXiv:2604.09048",
+        "title:watt counts energyaware benchmark for sustainable llm inference on heterogeneous gpu architectures",
+        "url:https://arxiv.org/abs/2604.09048"
+      ],
+      "record": {
+        "title": "Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures",
+        "source_url": "https://arxiv.org/abs/2604.09048",
+        "year": 2026,
+        "published": "2026-04-10",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While the large energy consumption of Large Language Models (LLMs) is recognized by the community, system operators lack guidance for energy-efficient LLM inference deployments that leverage energy trade-offs of heterogeneous hardware due to a lack of energy-aware benchmarks and data. In this work we address this gap with Watt Counts: the largest open-access dataset of energy consumption of LLMs, with over 5,000 experiments for 50 LLMs across 10 NVIDIA Graphics Processing Units (GPUs) in batch and server scenarios along with a reproducible, open-source benchmark that enables community submissions to expand this dataset. Leveraging this dataset, we conduct a system-level study of LLM inference across heterogeneous GPU architectures and show that GPU selection is crucial for energy efficiency outcomes and that optimal hardware choices vary significantly across models and deployment scenarios, demonstrating the critical importance of hardware-aware deployment in heterogeneous LLM systems. Guided by our data and insights, we show that practitioners can reduce energy consumption by up to 70% in server scenarios with negligible impact on user experience, and by up to 20% in batch scenarios.",
+        "identifiers": [
+          "SemanticScholar:61437b6e1fb5791263f1d0994b530d8a2364f1df"
+        ],
+        "semantic_scholar_id": "61437b6e1fb5791263f1d0994b530d8a2364f1df",
+        "canonical_id": "arXiv:2604.09048",
+        "arxiv_id": "2604.09048",
+        "doi": "10.48550/arXiv.2604.09048",
+        "authors": [
+          "Mauricio Fadel Argerich",
+          "Jonathan Furst",
+          "M. Patiño-Martínez"
+        ],
+        "priority": 110,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 110,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 187,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00881",
+      "identity_tokens": [
+        "id:SemanticScholar:34d5a34307d51dcfdcf919297d2c8b93c972f13f",
+        "id:arXiv:2608.00881",
+        "title:aospec action and observation cospeculation for lowlatency agent serving",
+        "url:https://arxiv.org/abs/2608.00881"
+      ],
+      "record": {
+        "title": "AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving",
+        "source_url": "https://arxiv.org/abs/2608.00881",
+        "year": 2026,
+        "published": "2026-08-01",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model agents increasingly act through stateful tools, yet model generation and environment execution remain serialized at every step. As decoding accelerates, tool execution becomes a growing bottleneck. Existing action- or observation-only speculation leaves much of this latency exposed: value is concentrated in a few slow calls, some outcomes emerge only through execution, and longer lookahead typically requires an increasingly unlikely chain of action predictions. We present AOSpec, a lossless framework that co-speculates actions and observations across the full agent-environment loop. Expected Value Decoding (EVD) directs observation speculation toward outcomes with the greatest expected latency benefit, optimizing expected time hidden rather than hit rate. For outcomes only execution can reveal, AOSpec launches latency-critical target actions in isolated forks that contain their effects, while Joint Action-State Verification (JASV) verifies both the action and its origin state against committed execution before reuse. JASV recasts long-horizon action dependency from full-chain prediction into target action-state verification, breaking the lookahead--accuracy tradeoff and unlocking long-range overlap without sacrificing serial semantics. Across Terminal-Bench serving settings spanning four harnesses, five actor models, and five serving speeds, AOSpec outperforms every practical baseline, reducing mean end-to-end latency by 11.8-32.5% and p99 latency by up to 42.8%. Its gains increase as decoding accelerates, and its observation model transfers from Terminal-Bench to SWE-bench Verified without retraining.",
+        "identifiers": [
+          "SemanticScholar:34d5a34307d51dcfdcf919297d2c8b93c972f13f"
+        ],
+        "semantic_scholar_id": "34d5a34307d51dcfdcf919297d2c8b93c972f13f",
+        "canonical_id": "arXiv:2608.00881",
+        "arxiv_id": "2608.00881",
+        "authors": [
+          "H. Chen",
+          "Jin-Nan Guo",
+          "Wayne Luk",
+          "Hong-Xiang Fan"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 74,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.14797",
+      "identity_tokens": [
+        "id:DOI:10.1145/3820356.3820357",
+        "id:SemanticScholar:9127c7b31bcb4d798006291d1f972dbe2cd440cd",
+        "id:arXiv:2608.14797",
+        "title:beyond tokens a survey on decoding methods for large language and visionlanguage models",
+        "url:https://arxiv.org/abs/2608.14797"
+      ],
+      "record": {
+        "title": "Beyond Tokens: A Survey on Decoding Methods for Large Language and Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2608.14797",
+        "year": 2026,
+        "published": "2026-06-17",
+        "venue": "SIGKDD Explorations",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) and large vision-language models (LVLMs) have demonstrated impressive generative capabilities, yet ensuring their outputs align with user intent is still challenging. While most existing approaches address this issue at the training stage, inference-time approaches like decoding methods offer a more efficient and scalable solution. Decoding methods control model generation by guiding token-level selection, performing sequencelevel generation, or generating tokens in parallel to accelerate the process. In this survey, we identify three emerging paradigms from recent works on decoding methods for LLMs and LVLMs, provide a systematic review of these methods, highlight ongoing challenges, and discuss potential future research directions. Our goal is to underscore the efficiency and effectiveness of decoding methods and offer a practical view of their applications. Paper lists and more resources on decoding methods for LLMs and LVLMs can be found at https://github.com/wang2226/Awesome-LLM-Decoding.",
+        "identifiers": [
+          "SemanticScholar:9127c7b31bcb4d798006291d1f972dbe2cd440cd"
+        ],
+        "semantic_scholar_id": "9127c7b31bcb4d798006291d1f972dbe2cd440cd",
+        "canonical_id": "arXiv:2608.14797",
+        "arxiv_id": "2608.14797",
+        "doi": "10.1145/3820356.3820357",
+        "authors": [
+          "Haoran Wang",
+          "Xiongxiao Xu",
+          "Philip S. Yu",
+          "Kai Shu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 119,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.10661",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.10661",
+        "id:SemanticScholar:23898a3ec5aa5136f881c26c95a0e79183b0c441",
+        "id:arXiv:2607.10661",
+        "title:unlocking parallelism in autoregressive language models via speculative decoding with progressive tree drafting",
+        "url:https://arxiv.org/abs/2607.10661"
+      ],
+      "record": {
+        "title": "Unlocking Parallelism in Autoregressive Language Models via Speculative Decoding with Progressive Tree Drafting",
+        "source_url": "https://arxiv.org/abs/2607.10661",
+        "year": 2026,
+        "published": "2026-07-12",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding has significantly accelerated Large Language Model (LLM) inference by alleviating memory-bound bottlenecks. However, traditional speculative decoding typically relies on auxiliary draft modules, incurring significant training and communication overhead. Although recent methods attempt to generate drafts within the target model itself, they often fail to fully exploit its latent parallel capacity due to a lack of structural coordination. In this paper, we propose \\textbf{Progressive Tree Drafting (PTD)}, which employs a structured, guided parallel drafting strategy to harness the model's parallel potential. By coupling a progressive tree structure with a stepwise pruning mechanism, PTD actively guides the LLM to explore multiple semantic paths in a single forward pass, ensuring both draft diversity and coherence. Experiments demonstrate that PTD achieves up to $2\\times$ decoding speedup across various benchmarks while remaining training-free and model-agnostic. Our code is available at: https://github.com/MINE-USTC/PTD.",
+        "identifiers": [
+          "SemanticScholar:23898a3ec5aa5136f881c26c95a0e79183b0c441"
+        ],
+        "semantic_scholar_id": "23898a3ec5aa5136f881c26c95a0e79183b0c441",
+        "canonical_id": "arXiv:2607.10661",
+        "arxiv_id": "2607.10661",
+        "doi": "10.48550/arXiv.2607.10661",
+        "authors": [
+          "Zi-Peng Gao",
+          "Zhi Zheng",
+          "Qing-Rong Xia",
+          "Jun-Da Lin",
+          "Zi-Wei Zhao",
+          "Tong Xu",
+          "Zhefeng Wang",
+          "En-Hong Chen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 94,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.01028",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.01028",
+        "id:SemanticScholar:d4e25f1a01580d7b1d3be2ca500fb6a03b2042b6",
+        "id:arXiv:2410.01028",
+        "title:draft on the fly adaptive selfspeculative decoding using cosine similarity",
+        "url:https://arxiv.org/abs/2410.01028"
+      ],
+      "record": {
+        "title": "Draft on the Fly: Adaptive Self-Speculative Decoding using Cosine Similarity",
+        "source_url": "https://arxiv.org/abs/2410.01028",
+        "year": 2024,
+        "published": "2024-10-01",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present a simple on the fly method for faster inference of large language models. Unlike other (self-)speculative decoding techniques, our method does not require fine-tuning or black-box optimization to generate a fixed draft model, relying instead on simple rules to generate varying draft models adapted to the input context. We show empirically that our light-weight algorithm is competitive with the current SOTA for self-speculative decoding, while being a truly plug-and-play method.",
+        "identifiers": [
+          "SemanticScholar:d4e25f1a01580d7b1d3be2ca500fb6a03b2042b6"
+        ],
+        "semantic_scholar_id": "d4e25f1a01580d7b1d3be2ca500fb6a03b2042b6",
+        "canonical_id": "arXiv:2410.01028",
+        "arxiv_id": "2410.01028",
+        "doi": "10.48550/arXiv.2410.01028",
+        "authors": [
+          "Michael R. Metel",
+          "Peng Lu",
+          "Boxing Chen",
+          "Mehdi Rezagholizadeh",
+          "I. Kobyzev"
+        ],
+        "priority": 23,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 23,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 743,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.06763",
+      "identity_tokens": [
+        "id:SemanticScholar:51279fb5caaec6989f2acf25f71d11832e70bc38",
+        "id:arXiv:2608.06763",
+        "title:cubicquant parametric nonuniform codebooks for highthroughput llm inference with 18bit weights",
+        "url:https://arxiv.org/abs/2608.06763"
+      ],
+      "record": {
+        "title": "CubicQuant: Parametric Non-Uniform Codebooks for High-Throughput LLM Inference with 1-8-Bit Weights",
+        "source_url": "https://arxiv.org/abs/2608.06763",
+        "year": 2026,
+        "published": "2026-08-07",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Weight quantization for large-language-model inference must balance adaptive reconstruction levels with representations regular enough for efficient GPU execution. Uniform integers constrain each group to a linear grid. Low-bit floating-point formats use a fixed exponent-mantissa structure, while learned codebooks gain flexibility at the cost of irregular decoding and additional metadata. We introduce CubicQuant, a parametric non-uniform scalar format that preserves a dense integer code stream while adapting reconstruction levels within each weight group. A monotonic cubic curve, specified by two shape parameters and one scale, maps uniformly spaced magnitude codes to non-uniform levels. The family spans 1-8-bit weight payloads, contains symmetric uniform integer quantization as an exact special case, and has effective width B + 64/G bits per weight for payload width B and group size G. We derive population distortion under Uniform, Gaussian, and Laplace distributions, formulate continuous and Dynamic-A8-carrier-aware fitting objectives, and describe direct packed-weight GPU execution. For finite groups of G=128 with 15,360 samples per distribution, W4 CubicQuant reduced reconstruction RMSE relative to optimally clipped four-bit uniform integer quantization by 3.90% on Uniform, 13.49% on Gaussian, and 28.14% on Laplace samples. Relative to the best enumerated four-bit finite floating-point format, the reductions were 3.90%, 9.44%, and 6.27%. Preliminary H200 kernel measurements show a workload-dependent crossover: model-dtype execution is faster for narrow GEMV, while Dynamic A8 becomes favorable as row count grows. The results establish the format's representational promise and direct executability; downstream model quality and cross-device end-to-end performance remain open evaluation questions.",
+        "identifiers": [
+          "SemanticScholar:51279fb5caaec6989f2acf25f71d11832e70bc38"
+        ],
+        "semantic_scholar_id": "51279fb5caaec6989f2acf25f71d11832e70bc38",
+        "canonical_id": "arXiv:2608.06763",
+        "arxiv_id": "2608.06763",
+        "authors": [
+          "Xu Gao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 68,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.25809",
+      "identity_tokens": [
+        "id:SemanticScholar:52a4a506939d1fc107fc053d923c75d1f28a7a69",
+        "id:arXiv:2609.25809",
+        "title:you only need 23 of the chosen experts an empirical study of dynamic expert pruning in finegrained moe llms",
+        "url:https://arxiv.org/abs/2609.25809"
+      ],
+      "record": {
+        "title": "You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs",
+        "source_url": "https://arxiv.org/abs/2609.25809",
+        "year": 2026,
+        "published": "2026-09-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Fine-grained mixture-of-experts (MoE) architectures have become a mainstream design for open-weight LLMs, with hundreds of experts and increasingly many selected per token. This shift makes dynamic expert pruning an attractive route to cheaper inference. Yet existing evidence comes largely from coarser architectures and likelihood-scored multiple-choice benchmarks, leaving three central questions open in the fine-grained regime: how redundant per-token expert selection is, how effectively existing pruning methods exploit that redundancy, and what governs a model's sensitivity to pruning. We fill this gap with a systematic empirical study of twelve fine-grained MoE checkpoints spanning nine architecture families, with a core suite of eleven benchmarks covering knowledge QA, mathematics, code generation, and general reasoning. We find that expert selection is far more redundant than the field's operating points assume: uniformly retaining about two thirds of the selected experts preserves 98.8% of unpruned performance on average, requiring only a one-integer change and delivering 1.2-1.7x measured speedup across two serving backends. This simple baseline leaves little room for dynamic allocation at conservative budgets: even the best published rules differ from it by under 1% at matched expert budgets. Their value emerges under aggressive pruning, where the best rules recover up to 3.0% over uniform truncation, with gains concentrated in the generative tasks that suffer the sharpest degradation. Sensitivity to aggressive pruning also depends on the model: larger and thinking models are more resilient, whereas multimodal models are more vulnerable. Together, these findings reveal how much expert computation fine-grained MoEs can dispense with, and establish when dynamic allocation earns its complexity, informing both practical deployment and future pruning methods.",
+        "identifiers": [
+          "SemanticScholar:52a4a506939d1fc107fc053d923c75d1f28a7a69"
+        ],
+        "semantic_scholar_id": "52a4a506939d1fc107fc053d923c75d1f28a7a69",
+        "canonical_id": "arXiv:2609.25809",
+        "arxiv_id": "2609.25809",
+        "authors": [
+          "Yuan-Teng Chen",
+          "Qi-Wei Lai",
+          "Tian-Qi Chen",
+          "Peisong Wang",
+          "Yuan-Tian Shao",
+          "Nan-Xin Zeng",
+          "Zhi-Lei Liu",
+          "Chuang-Yi Li",
+          "Jing Liu",
+          "Jian Cheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31093",
+      "identity_tokens": [
+        "id:SemanticScholar:66ef5af91d7b71eb9b4fb1fe749c021360c8d3c2",
+        "id:arXiv:2609.31093",
+        "title:block sparse attention with loglinear complexity",
+        "url:https://arxiv.org/abs/2609.31093"
+      ],
+      "record": {
+        "title": "Block Sparse Attention with Log-Linear Complexity",
+        "source_url": "https://arxiv.org/abs/2609.31093",
+        "year": 2026,
+        "published": "2026-09-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling language models to long contexts is limited by the quadratic cost of self-attention. Block sparse attention offers an efficient alternative, but selecting the retained blocks remains a bottleneck. Conventional block selection requires scoring all query-block pairs and therefore remains quadratic in sequence length. To address this issue, we propose PISA, a block-sparse attention mechanism that employs a pyramid Top-$K$ selection strategy. The main idea is to gradually narrow down the candidates across different levels, making it more efficient to find the most relevant keys. Specifically, we construct a coarse-to-fine hierarchy of keys and perform selection from the coarsest level. At each level, LogSumExp scoring is applied to a bounded candidate set to select candidates for the next finer level, continuing until the finest level is reached. Through pooling, we construct $O(\\log N)$ levels of keys, yielding an overall complexity of $O(N\\log N)$, where $N$ denotes the sequence length. We develop hardware-aware Triton kernels for both training and inference, fusing hierarchical routing and LogSumExp scoring without materializing the query-key score matrix. We further evaluate our method on language modeling tasks. Compared with the baseline, our method achieves comparable performance on benchmarks such as commonsense reasoning while delivering better results on retrieval tasks.",
+        "identifiers": [
+          "SemanticScholar:66ef5af91d7b71eb9b4fb1fe749c021360c8d3c2"
+        ],
+        "semantic_scholar_id": "66ef5af91d7b71eb9b4fb1fe749c021360c8d3c2",
+        "canonical_id": "arXiv:2609.31093",
+        "arxiv_id": "2609.31093",
+        "authors": [
+          "Bo-Hao Tang",
+          "Zhen Qin",
+          "Yu-Qi Pan",
+          "Zheng Li",
+          "Peng-Fei Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9a1b85d51611f753c6886129039559066dd8678f6cb2cd13a74b6c8fa5b0b1e2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

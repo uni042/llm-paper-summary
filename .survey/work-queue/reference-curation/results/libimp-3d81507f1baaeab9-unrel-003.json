@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d81507f1baaeab9-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.06599",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.06599",
+    "identity_tokens": [
+      "arXiv:2601.06599"
+    ],
+    "reason": "表現解析・真偽識別の研究で、LLM推論の効率やservingの具体的改善ではない。",
+    "first_checked_at": "2026-10-07T10:40:07+00:00",
+    "last_checked_at": "2026-10-07T10:40:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+    ],
+    "title": "How Context Shapes Truth: Geometric Transformations of Statement-level Truth Representations in LLMs"
+  },
+  "processed_at": "2026-10-07T10:40:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d81507f1baa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

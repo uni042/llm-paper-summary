@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "cl-30-20260922T160100Z-4d9a2c-01",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-af2d156c40ee16cb",
+      "claim_id": "claim-7262c68496e8d7f0dbbc7456",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-7262c68496e8d7f0dbbc7456",
+      "claimed_at": "2026-09-22T15:59:39+00:00",
+      "expires_at": "2026-09-22T17:29:39+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-af2d156c40ee16cb"
+      ],
+      "job": {
+        "job_id": "job-research-af2d156c40ee16cb",
+        "type": "research",
+        "parent_job_id": "job-6b2608b80772325a",
+        "priority": 97,
+        "canonical_id": "DOI:10.1145/3789240.3830285",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "POSTER: Prediction-Enhanced Expert Prefetching and Eviction for MoE Offloading via PRED-MoE",
+        "source_url": "https://doi.org/10.1145/3789240.3830285",
+        "paper_path": "papers/inference/03-expert-prefetch/2026-pred-moe-prefetch-eviction.md",
+        "selection_reason": "軽量predictorでnear-future expert activationを予測し、prefetchとevictionを同じ確率推定で制御するMoE offloading手法。Qwen3-30B-A3BでTPOT改善を報告。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T11:55:36+00:00"
+      },
+      "record_bank": "f",
+      "record_bank_root": ".survey/work-queue/records/chat-record-f",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-f/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-f/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T15:59:39+00:00",
+  "checkpoint_released": 0
+}

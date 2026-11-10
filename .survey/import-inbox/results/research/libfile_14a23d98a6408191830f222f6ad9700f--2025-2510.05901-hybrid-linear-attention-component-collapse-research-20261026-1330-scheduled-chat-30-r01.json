@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "83c534dc103e062bd39bc2b6689cf3d4656ec1c63fd140d1f999a4d1fdbde6e8",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_14a23d98a6408191830f222f6ad9700f--2025-2510.05901-hybrid-linear-attention-component-collapse-research-20261026-1330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2510.05901",
+  "worker_completed_at": "2026-10-26T13:38:00+09:00",
+  "worker_run_key": "20261026-1330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5890,
+    "body_paragraphs": 33,
+    "method_chars": 2503,
+    "method_paragraphs": 13,
+    "evaluation_chars": 133,
+    "limitation_chars": 732,
+    "insufficiency_flags": [
+      "評価説明量 133 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 133 < 500"
+  ],
+  "processed_at": "2026-10-26T05:49:33+00:00"
+}

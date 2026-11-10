@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-bfebd71be222bd1a-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2605.00206",
+  "reason": "SST V2 adds per-layer latent state streams and extra forward passes per token; the 27B setup stores about 651 KB of state and uses two-pass parallel training. Co-training Gemma 3 27B on a small GSM8K-derived set reports +15.15 points on GPQA-Diamond vs matched fine-tuning; staged compute reaches 61.11% vs 51.01% at one iteration. Flat extra iterations regress accuracy, native halting is absent, and each iteration adds full-stack FLOPs; it targets reasoning quality, not lower inference cost.",
+  "title": "State Stream Transformer (SST) V2: Parallel Training of Nonlinear Recurrence for Latent Space Reasoning",
+  "identity_tokens": [
+    "arXiv:2605.00206"
+  ],
+  "linked_from": [
+    "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bfebd71be222",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

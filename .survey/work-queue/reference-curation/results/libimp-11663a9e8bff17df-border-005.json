@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11663a9e8bff17df-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.19198",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.19198",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.19198",
+      "arXiv:2603.19198"
+    ],
+    "reason": "指数重み付きpath signatureでMamba-2を包含するSSMを理論的に拡張し、並列scan可能性を証明する。評価は時系列分類・回帰・形式言語であり、生成LLMの実測速度・メモリ最適化は未確認。",
+    "first_checked_at": "2026-10-30T11:54:35+00:00",
+    "last_checked_at": "2026-10-30T11:54:35+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Extending SSMs with the Exponentially Weighted Signature"
+  },
+  "processed_at": "2026-10-30T11:54:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11663a9e8bff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

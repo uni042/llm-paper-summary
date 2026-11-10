@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5ebd6999af756a5f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.06704",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.06704",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2504.06704",
+      "arXiv:2504.06704"
+    ],
+    "reason": "一次論文§4では循環行列をFFTで乗算するO(N log N)の注意演算を提案するが、§5.1では自己回帰の因果制約を課すとO(N²)に戻ると明記する。表2でGPT-2 smallの因果言語モデルPPLは標準27.84に対しCAT 32.36と悪化し、実験対象もGPT-2 smallとTransformer-XLでありLLMサービングの実測はない。効率的注意機構として理論的な関連はあるが、現行のLLM自己回帰推論基盤へ直接適用できる高速化は未実証。",
+    "first_checked_at": "2026-10-23T14:51:40+00:00",
+    "last_checked_at": "2026-10-23T14:51:40+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CAT: Circular-Convolutional Attention for Sub-Quadratic Transformers"
+  },
+  "processed_at": "2026-10-23T14:51:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5ebd6999af75",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

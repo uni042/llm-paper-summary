@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c6820282018722f7-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2510.20111",
+  "reason": "原著arXivの一次要旨を確認。ZeROに基づくパラメータ・勾配・optimizer stateの階層的reshardingとall-gather/reduce-scatterの非同期化によって、Dense/MoEの大規模LLM訓練を高速化する。訓練時の通信・メモリ・optimizer state管理が主題であり、推論実行時のserving、decode、KV cache、expert placementの評価ではないため現行の推論系サーベイ対象外。",
+  "title": "AsyncHZP: Hierarchical ZeRO Parallelism with Asynchronous Scheduling for Scalable LLM Training",
+  "identity_tokens": [
+    "id:arXiv:2510.20111",
+    "id:DOI:10.48550/arXiv.2510.20111"
+  ],
+  "linked_from": [
+    "Training Offload / Memory Systems",
+    "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c68202820187",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

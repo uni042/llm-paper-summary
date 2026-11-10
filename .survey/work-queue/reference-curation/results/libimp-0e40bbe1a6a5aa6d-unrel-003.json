@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0e40bbe1a6a5aa6d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.09341",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.09341",
+    "identity_tokens": [
+      "arXiv:2602.09341"
+    ],
+    "reason": "一次要旨のAgentAuditorは複数LLMの推論木を監査・集約して回答品質を改善する研究で、推論コスト/serving効率化を主張していない。",
+    "first_checked_at": "2026-10-05T15:21:56+00:00",
+    "last_checked_at": "2026-10-05T15:21:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+    ],
+    "title": "Auditing Multi-Agent LLM Reasoning Trees Outperforms Majority Vote and LLM-as-Judge"
+  },
+  "processed_at": "2026-10-05T15:21:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0e40bbe1a6a5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

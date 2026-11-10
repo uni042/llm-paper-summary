@@ -1,0 +1,838 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b2876c3e02739b38-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b2876c3e0273",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.05265",
+    "arXiv:2610.06026",
+    "arXiv:2610.07121",
+    "arXiv:2610.09139",
+    "arXiv:2610.09202",
+    "arXiv:2610.13767",
+    "arXiv:2610.16368",
+    "arXiv:2610.24991",
+    "arXiv:2610.29545",
+    "arXiv:2610.34056"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "baf388b28f5080a9b008ac124e1c02f44d1dbaba",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 1,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-11-02T06:07:43.355071+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.05265",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.06026",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07121",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.09139",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.09202",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.13767",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.16368",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.24991",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_single",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "arXiv:2610.29545",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.34056",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Loopy: Low-Bit Quantization Framework for Looped Language Models",
+      "source_url": "https://arxiv.org/abs/2610.05265",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped language models provide a parameter-efficient way to scale iterative test-time computation by repeatedly executing a shared recurrent core. Post-training quantization (PTQ) can reduce the memory footprint and inference cost of looped language models, but errors introduced by a quantized shared core affect subsequent cores. Among PTQ methods, channel scaling and orthogonal rotations preserve the floating-point computation while producing representations with different quantization quality. We find that quantization configuration candidate rankings can change with recurrent depth, motivating configuration selection at the target deployment depth. However, evaluating every candidate over the full calibration set at this depth is costly. We therefore propose Loopy, a PTQ framework that formulates shared-core quantization through a recurrent-depth-aware objective, selecting shared low-bit representations by their final prediction loss at the target deployment depth. Channel scaling and orthogonal rotations parameterize the candidate representations. To approximately solve this selection problem efficiently, Loopy progressively allocates calibration windows to promising candidates while preserving complete target-depth execution, using only forward evaluations. Across eight settings, Loopy achieves the state-of-the-art results among different baselines. On Ouro-1.4B under W4A4, Loopy reduces LAMBADA perplexity by 36.5% relative to SpinQuant. Our code is available at https://github.com/Shameless0817/Loopy-review.git.",
+      "identifiers": [
+        "SemanticScholar:d93dd32bf7fb2f8a270cf6ad8939e4c07b072fd8"
+      ],
+      "semantic_scholar_id": "d93dd32bf7fb2f8a270cf6ad8939e4c07b072fd8",
+      "canonical_id": "arXiv:2610.05265",
+      "arxiv_id": "2610.05265",
+      "authors": [
+        "Ze-Yu Li",
+        "Yi-Pu Zhang",
+        "Jin-Tao Cheng",
+        "Xin Li",
+        "Wei Zhnag"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Differentiable Bit-Widths: Co-optimizing Pruning and Quantization via SVD for Ultra-Efficient LLM Compression",
+      "source_url": "https://arxiv.org/abs/2610.06026",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "SVD-based pruning and quantization have recently emerged as a promising strategy for the ultra-efficient compression of large language models. In these methods, compression is performed in two stages: components are first truncated, and the remaining ones are subsequently quantized. Although this decoupled pipeline benefits from both pruning and quantization, it requires separate optimization for each stage and fails to fully exploit their balance, which can lead to suboptimal performance under aggressive compression. To address this limitation, we propose a new LLM compression method that co-optimizes pruning and quantization in a unified framework. Our key idea is a differentiable method for learning component-wise bit-widths, allowing less important components to be assigned 0-bit precision and pruned away. Notably, our method performs favorably against two-stage baselines, even when subjected to extreme quantization settings ($1.61$ bits) designed for ultra-efficiency. Code: https://github.com/MMAI-Laboratory/DBW.",
+      "identifiers": [
+        "SemanticScholar:af79a3d9bbdf91f196c6f91f6ff86055d206262f"
+      ],
+      "semantic_scholar_id": "af79a3d9bbdf91f196c6f91f6ff86055d206262f",
+      "canonical_id": "arXiv:2610.06026",
+      "arxiv_id": "2610.06026",
+      "authors": [
+        "Hankyul Kang",
+        "Jongbin Ryu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SoloQ: Calibration-Free Quantization for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.07121",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models dLLMs) have emerged as a promising alternative to autoregressive language models through bidirectional diffusion-based token generation. However, their growing model sizes and high inference costs make efficient deployment challenging: full-sequence denoising repeatedly invokes compute-intensive forward passes, while block-diffusion models additionally introduce a memory-intensive KV-cache. Low-bit weight-activation quantization is therefore attractive, yet existing dLLM post-training quantization methods rely on calibration data despite activation distributions shifting across masking states and denoising steps. We present SoloQ, a calibration-free quantization framework that maps weights and activations into a normalized rotated basis with a predictable marginal distribution, enabling data-independent quantization. SoloQ combines a structured K-RPBH rotation with a lightweight rescaling correction for calibration-free quantization. Its predictable post-rotation distribution supports both distribution-matched codebooks and hardware-native NVFP4. For block-diffusion models, SoloQ further applies commit-time KV-cache quantization to compress persistent states without perturbing the actively denoised block. Across full-sequence dLLMs (LLaDA and Dream) and block-diffusion dLLMs(Fast-dLLM v2 and Nemotron-Labs-Diffusion), SoloQ retains accuracy under 4-bit quantization and outperforms calibration-based baselines on knowledge- and reasoning-intensive benchmarks. With NVFP4, SoloQ reduces peak memory by up to 2.61X and accelerates end-to-end inference by up to 2.24X.",
+      "identifiers": [
+        "SemanticScholar:d3a1529b8915cf2d355e8468b21a95dec1fd0bdf"
+      ],
+      "semantic_scholar_id": "d3a1529b8915cf2d355e8468b21a95dec1fd0bdf",
+      "canonical_id": "arXiv:2610.07121",
+      "arxiv_id": "2610.07121",
+      "authors": [
+        "Donghyun Lee",
+        "Arkapravo Ghosh",
+        "Varun Manjunath",
+        "Bumjoon Kyle Rhee",
+        "Hyunho Kook",
+        "Shi-Ting Xiao",
+        "Youngeun Kim",
+        "Priyadarshini Panda"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Breaking the Space Barrier and its Application to Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2610.09139",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language models are more and more often asked for structured output: JSON that follows a schema, or a tool call with typed arguments. A small machine, an automaton, enforces the format by forbidding the tokens that would break it. We observe that this machine has a rare property: from any of its states, each token leads along exactly one path. Graphs in which only a few paths join any two points are a classical object of complexity theory, and our theoretical result settles an open question about them: one can decide whether such a graph connects two points while verifying that it really has few paths, with very little memory. Precisely, the problem lies in the classes ReachUL, LOGDCFL, C=L and SC2, and needs only O(log2 n/ log log n) space, below the classical O(log2 n) of Savitch's theorem. The constructions behind the proofs become an inference engine: text the format forces is written without running the model, the mask is recomputed on the GPU without any table, recursive formats use a small stack, every output stays valid under a token limit, and independent fields are decoded in parallel and verified. On one 16 GB Apple M2 Pro with Qwen3.5-2B and 4B, against MLX with llguidance, the standard setup for this hardware, schema-constrained extraction finishes 1.2- 1.3x sooner with the same answers, a grammar costs 3 MB instead of up to 1.5 GB, one server holds sixteen grammars where tables run out of memory, and sixteen tool-calling agents finish 2.5x sooner.",
+      "identifiers": [
+        "SemanticScholar:c3a0a4ff845ac628f732b5eb789198fa310d1a7c"
+      ],
+      "semantic_scholar_id": "c3a0a4ff845ac628f732b5eb789198fa310d1a7c",
+      "canonical_id": "arXiv:2610.09139",
+      "arxiv_id": "2610.09139",
+      "authors": [
+        "A. Asadulaev"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Few Bits, One Law: Toward W2A4KV2",
+      "source_url": "https://arxiv.org/abs/2610.09202",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Extreme low-bit LLM compression is most challenging when weights, activations, and KV caches are quantized together: their distributions differ, and quantization errors interact throughout the network. We introduce CanonQ, a unified quantization-aware training framework that addresses these challenges by separating source canonicalization from task-aware adaptation. Fixed rotations and energy normalization map heterogeneous tensor sources to canonical coordinates, enabling frozen Gaussian-reference codebooks to be reused across layers and models. Joint training then adapts the network to the coupled errors of weight, activation, and cache quantization within a common scalar/vector interface. We bound frozen-codebook transfer error and local task loss, and derive an exact normalization-aware straight-through Jacobian that links quantization distortion to gradient bias. The strongest gains arise under joint W2A4KV2 compression: across LLaMA3-1B/3B/8B, CanonQ-Omni achieves up to 14.28x lower WikiText-2 perplexity and up to 57.9% higher mean zero-shot accuracy than prior state-of-the-art and representative quantization baselines. The benefits extend to Qwen3-1.7B, code generation, and mathematical reasoning: on instruction-tuned MobileLLM-Pro-1B at W2A16KV16, CanonQ achieves relative improvements of 41.7% in HumanEval pass@1 and 39.1% in GSM8K exact match over the strongest evaluated quantization baseline.",
+      "identifiers": [
+        "SemanticScholar:a57db6795e4740e1c844024f8ddf0cb585fcdd63"
+      ],
+      "semantic_scholar_id": "a57db6795e4740e1c844024f8ddf0cb585fcdd63",
+      "canonical_id": "arXiv:2610.09202",
+      "arxiv_id": "2610.09202",
+      "authors": [
+        "Kai Yi",
+        "Tarek Elgamal",
+        "Sruthikesh Surineni",
+        "Vignesh Vivekraja",
+        "Soumyadeep Ghosh",
+        "Steven Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs",
+      "source_url": "https://arxiv.org/abs/2610.13767",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit inference on accelerators with native 4-bit support requires quantizing both weights and activations to realize the full throughput gains these formats provide. While post-training weight quantization has been extensively studied, activation quantization remains considerably more challenging and typically requires calibration data. In this work, we introduce DUALQUANT, a dual-scale, calibration-free post-training quantization framework that directly minimizes the weight-reconstruction Mean Squared Error (MSE) and, as an immediate by-product, yields per-channel activation rescalings prior to activation quantization. Our key observation is that the scaling factors obtained by minimizing weight-reconstruction error provide effective activation rescalings, enabling competitive activation quantization without calibration data. We formulate DUALQUANT as a non-differentiable weight-reconstruction problem and develop an efficient solver based on variable splitting and block coordinate descent, where each subproblem admits a closed-form update. DUALQUANT provides a unified algorithm supporting a wide range of formats, including the full MX family and NVFP4. To our knowledge, DUALQUANT is the first dual-scaling method to formally support MX and NV block formats. Across Llama and Qwen models evaluated on WikiText-2, C4, and zero-shot downstream tasks, DUALQUANT matches or exceeds the accuracy of calibration-based SmoothQuant across most models and formats, and substantially outperforms calibration-free baselines, with large gains for MX and NV block formats. We validate these gains with a real packed W4A4 inference path for Llama-3.1-8B on an RTX 4090. The resulting implementation closely matches the accuracy of fake quantization while delivering up to 2.61x memory reduction and up to 2.46x throughput speedup over BF16.",
+      "identifiers": [
+        "SemanticScholar:d8f756392b3d17c3a917f43ceff551746d5572a8"
+      ],
+      "semantic_scholar_id": "d8f756392b3d17c3a917f43ceff551746d5572a8",
+      "canonical_id": "arXiv:2610.13767",
+      "arxiv_id": "2610.13767",
+      "authors": [
+        "Mahsa Salmani",
+        "Sayeh Sharify",
+        "Hesham Mostafa"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 24,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LoopQuant: Accurate and Efficient Post-Training Quantization for Looped Transformers",
+      "source_url": "https://arxiv.org/abs/2610.16368",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Language Models (LoopLMs) improve parameter efficiency by recursively reusing shared Transformer modules, yet their repeated computation over evolving recurrent states poses new challenges for low-bit deployment. Existing post-training quantization (PTQ) methods, largely designed for feed-forward Transformers, fail to account for cross-loop activation dynamics, heterogeneous loop sensitivity, and recursive error propagation, leading to substantial performance degradation at low precision. To address these challenges, we propose LoopQuant, a loop-aware PTQ framework for accurate and efficient low-bit quantization of LoopLMs. LoopQuant is built on three core components: 1) Cross-Loop Distribution Canonicalization (CLDC) learns a shared quantization-friendly representation across recurrent states while preserving parameter sharing; 2) Interaction-Aware Loop-wise Precision Allocation (ILPA) allocates activation precision under a fixed bit budget by modeling task-level loop sensitivity and cross-loop interactions; and 3) Loop-Conditioned Task Calibration (LCTC) further aligns quantized inference with the low-bit recursive trajectory through lightweight task-space calibration. Extensive experiments across LoopLM architectures demonstrate that LoopQuant consistently outperforms existing low-bit PTQ methods. On Ouro-2.6B, LoopQuant under W4A4 surpasses all W4A8 baselines in performance, while reducing model memory by 65.3% with only 3.4% additional storage overhead over naive INT4 and achieving a 1.7 times decoding speedup over BF16. These results demonstrate a strong balance among accuracy, compression, and inference efficiency, providing a practical and deployment-friendly solution for low-bit LoopLM inference. The code is available at [https://github.com/Kishon-zzx/LoopQuant].",
+      "identifiers": [
+        "SemanticScholar:0d3e2c75117b17ce7e634f26d88ff89cc68897e2"
+      ],
+      "semantic_scholar_id": "0d3e2c75117b17ce7e634f26d88ff89cc68897e2",
+      "canonical_id": "arXiv:2610.16368",
+      "arxiv_id": "2610.16368",
+      "authors": [
+        "Zhi-Xiong Zhao",
+        "Zu-Kang Xu",
+        "Xing Hu",
+        "Li-Feng Liu",
+        "Guang-Yu Sun",
+        "Da-Wei Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PACE: Periodic and Channel-Aligned Encoding of Four-Bit Recurrent States",
+      "source_url": "https://arxiv.org/abs/2610.29545",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear-attention language models keep their context in a recurrent state of fixed size, where an inference system stores one copy of this state for every sequence it decodes at the same time. Storing the state at lower precision therefore lets more sequences share an accelerator. Existing state quantizers round the state after every generated token and report that four bits lose accuracy unless the bit width is raised or the model is fine-tuned.\\par We introduce PACE, a post-hoc four-bit state quantizer. PACE rounds the state only once every few generated tokens, as chunked kernels already do once per chunk during prefill, and keeps the tokens generated in between in a small buffer. Rounding less often reduces the error that accumulates in the state. Additionally, we find that the large entries of the gated-delta state gather in columns, because some channels of the update written at each token remain large across many tokens. PACE therefore shares each quantization scale within one column. It also keeps the heads that retain rounding error longest at eight bits. On four hybrid models from 4B to 35B parameters, PACE with mixed four- and eight-bit heads is competitive with eight-bit DAMP on the three larger models at about two thirds of its memory, PACE with four-bit heads throughout scores higher than Q-Mamba at equal memory, and rounding every few tokens preserves the decoding speedup of the buffer.",
+      "identifiers": [
+        "SemanticScholar:08a21c66a3b898d9fff359c371edef5f84a9a51a"
+      ],
+      "semantic_scholar_id": "08a21c66a3b898d9fff359c371edef5f84a9a51a",
+      "canonical_id": "arXiv:2610.29545",
+      "arxiv_id": "2610.29545",
+      "authors": [
+        "Patrick Haller",
+        "Filipe Laitenberger",
+        "Alan Akbik"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "INTRA: Interleaved Non-contiguous Token spaRse Attention",
+      "source_url": "https://arxiv.org/abs/2610.34056",
+      "year": 2026,
+      "published": "2026-10-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers achieve strong performance across modalities but are bottlenecked by the quadratic cost of attention. Sparse attention can reduce this cost, but effective sparsity must preserve useful long-range communication and map well to GPU hardware. We introduce INTRA--Interleaved Non-contiguous Token spaRse Attention--a hardware-aware static sparse attention design based on a relay-communication view under Computational Query Set (CQS) constraints. Rather than directly covering all token-to-token interactions within each sparse layer, INTRA uses complementary sparse groups to provide short mediated communication paths across layers. Scatter forms relay groups that sample broadly across local neighborhoods, while Gather reconnects these groups in subsequent layers. Under a partition model, this structure guides CQS-compatible sparse patterns with global reachability. Our CQS-aware FlashAttention-style kernel computes structured indices at runtime, loads selected non-contiguous tokens, and packs them densely for computation. On an A100, INTRA achieves a $1.53\\times$ speedup in $2K$ FLUX.1-dev generation, with better measured image quality than evaluated CLEAR configurations after LoRA self-distillation. On LLaMA-3.1-8B, it improves long-context prefill efficiency with strong teacher-forced retrieval performance under matched LoRA adaptation. Attention-only benchmarks further show up to $8.4\\times$ and $10.4\\times$ speedups over MoBA and density-constrained NSA, respectively. Code is available at https://github.com/NovTi/INTRA.",
+      "identifiers": [
+        "SemanticScholar:3d2c1215d966570d57040bc8721ea61fc09519d7"
+      ],
+      "semantic_scholar_id": "3d2c1215d966570d57040bc8721ea61fc09519d7",
+      "canonical_id": "arXiv:2610.34056",
+      "arxiv_id": "2610.34056",
+      "authors": [
+        "Yuxuan Xia",
+        "Wenbo Lu",
+        "Shao-Yi Zheng",
+        "Sheng-Jie Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 8,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.05265",
+      "identity_tokens": [
+        "id:SemanticScholar:d93dd32bf7fb2f8a270cf6ad8939e4c07b072fd8",
+        "id:arXiv:2610.05265",
+        "title:loopy lowbit quantization framework for looped language models",
+        "url:https://arxiv.org/abs/2610.05265"
+      ],
+      "record": {
+        "title": "Loopy: Low-Bit Quantization Framework for Looped Language Models",
+        "source_url": "https://arxiv.org/abs/2610.05265",
+        "year": 2026,
+        "published": "2026-10-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped language models provide a parameter-efficient way to scale iterative test-time computation by repeatedly executing a shared recurrent core. Post-training quantization (PTQ) can reduce the memory footprint and inference cost of looped language models, but errors introduced by a quantized shared core affect subsequent cores. Among PTQ methods, channel scaling and orthogonal rotations preserve the floating-point computation while producing representations with different quantization quality. We find that quantization configuration candidate rankings can change with recurrent depth, motivating configuration selection at the target deployment depth. However, evaluating every candidate over the full calibration set at this depth is costly. We therefore propose Loopy, a PTQ framework that formulates shared-core quantization through a recurrent-depth-aware objective, selecting shared low-bit representations by their final prediction loss at the target deployment depth. Channel scaling and orthogonal rotations parameterize the candidate representations. To approximately solve this selection problem efficiently, Loopy progressively allocates calibration windows to promising candidates while preserving complete target-depth execution, using only forward evaluations. Across eight settings, Loopy achieves the state-of-the-art results among different baselines. On Ouro-1.4B under W4A4, Loopy reduces LAMBADA perplexity by 36.5% relative to SpinQuant. Our code is available at https://github.com/Shameless0817/Loopy-review.git.",
+        "identifiers": [
+          "SemanticScholar:d93dd32bf7fb2f8a270cf6ad8939e4c07b072fd8"
+        ],
+        "semantic_scholar_id": "d93dd32bf7fb2f8a270cf6ad8939e4c07b072fd8",
+        "canonical_id": "arXiv:2610.05265",
+        "arxiv_id": "2610.05265",
+        "authors": [
+          "Ze-Yu Li",
+          "Yi-Pu Zhang",
+          "Jin-Tao Cheng",
+          "Xin Li",
+          "Wei Zhnag"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 29,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.06026",
+      "identity_tokens": [
+        "id:SemanticScholar:af79a3d9bbdf91f196c6f91f6ff86055d206262f",
+        "id:arXiv:2610.06026",
+        "title:differentiable bitwidths cooptimizing pruning and quantization via svd for ultraefficient llm compression",
+        "url:https://arxiv.org/abs/2610.06026"
+      ],
+      "record": {
+        "title": "Differentiable Bit-Widths: Co-optimizing Pruning and Quantization via SVD for Ultra-Efficient LLM Compression",
+        "source_url": "https://arxiv.org/abs/2610.06026",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "SVD-based pruning and quantization have recently emerged as a promising strategy for the ultra-efficient compression of large language models. In these methods, compression is performed in two stages: components are first truncated, and the remaining ones are subsequently quantized. Although this decoupled pipeline benefits from both pruning and quantization, it requires separate optimization for each stage and fails to fully exploit their balance, which can lead to suboptimal performance under aggressive compression. To address this limitation, we propose a new LLM compression method that co-optimizes pruning and quantization in a unified framework. Our key idea is a differentiable method for learning component-wise bit-widths, allowing less important components to be assigned 0-bit precision and pruned away. Notably, our method performs favorably against two-stage baselines, even when subjected to extreme quantization settings ($1.61$ bits) designed for ultra-efficiency. Code: https://github.com/MMAI-Laboratory/DBW.",
+        "identifiers": [
+          "SemanticScholar:af79a3d9bbdf91f196c6f91f6ff86055d206262f"
+        ],
+        "semantic_scholar_id": "af79a3d9bbdf91f196c6f91f6ff86055d206262f",
+        "canonical_id": "arXiv:2610.06026",
+        "arxiv_id": "2610.06026",
+        "authors": [
+          "Hankyul Kang",
+          "Jongbin Ryu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.07121",
+      "identity_tokens": [
+        "id:SemanticScholar:d3a1529b8915cf2d355e8468b21a95dec1fd0bdf",
+        "id:arXiv:2610.07121",
+        "title:soloq calibrationfree quantization for diffusion language models",
+        "url:https://arxiv.org/abs/2610.07121"
+      ],
+      "record": {
+        "title": "SoloQ: Calibration-Free Quantization for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2610.07121",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models dLLMs) have emerged as a promising alternative to autoregressive language models through bidirectional diffusion-based token generation. However, their growing model sizes and high inference costs make efficient deployment challenging: full-sequence denoising repeatedly invokes compute-intensive forward passes, while block-diffusion models additionally introduce a memory-intensive KV-cache. Low-bit weight-activation quantization is therefore attractive, yet existing dLLM post-training quantization methods rely on calibration data despite activation distributions shifting across masking states and denoising steps. We present SoloQ, a calibration-free quantization framework that maps weights and activations into a normalized rotated basis with a predictable marginal distribution, enabling data-independent quantization. SoloQ combines a structured K-RPBH rotation with a lightweight rescaling correction for calibration-free quantization. Its predictable post-rotation distribution supports both distribution-matched codebooks and hardware-native NVFP4. For block-diffusion models, SoloQ further applies commit-time KV-cache quantization to compress persistent states without perturbing the actively denoised block. Across full-sequence dLLMs (LLaDA and Dream) and block-diffusion dLLMs(Fast-dLLM v2 and Nemotron-Labs-Diffusion), SoloQ retains accuracy under 4-bit quantization and outperforms calibration-based baselines on knowledge- and reasoning-intensive benchmarks. With NVFP4, SoloQ reduces peak memory by up to 2.61X and accelerates end-to-end inference by up to 2.24X.",
+        "identifiers": [
+          "SemanticScholar:d3a1529b8915cf2d355e8468b21a95dec1fd0bdf"
+        ],
+        "semantic_scholar_id": "d3a1529b8915cf2d355e8468b21a95dec1fd0bdf",
+        "canonical_id": "arXiv:2610.07121",
+        "arxiv_id": "2610.07121",
+        "authors": [
+          "Donghyun Lee",
+          "Arkapravo Ghosh",
+          "Varun Manjunath",
+          "Bumjoon Kyle Rhee",
+          "Hyunho Kook",
+          "Shi-Ting Xiao",
+          "Youngeun Kim",
+          "Priyadarshini Panda"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.09139",
+      "identity_tokens": [
+        "id:SemanticScholar:c3a0a4ff845ac628f732b5eb789198fa310d1a7c",
+        "id:arXiv:2610.09139",
+        "title:breaking the space barrier and its application to language model inference",
+        "url:https://arxiv.org/abs/2610.09139"
+      ],
+      "record": {
+        "title": "Breaking the Space Barrier and its Application to Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2610.09139",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Language models are more and more often asked for structured output: JSON that follows a schema, or a tool call with typed arguments. A small machine, an automaton, enforces the format by forbidding the tokens that would break it. We observe that this machine has a rare property: from any of its states, each token leads along exactly one path. Graphs in which only a few paths join any two points are a classical object of complexity theory, and our theoretical result settles an open question about them: one can decide whether such a graph connects two points while verifying that it really has few paths, with very little memory. Precisely, the problem lies in the classes ReachUL, LOGDCFL, C=L and SC2, and needs only O(log2 n/ log log n) space, below the classical O(log2 n) of Savitch's theorem. The constructions behind the proofs become an inference engine: text the format forces is written without running the model, the mask is recomputed on the GPU without any table, recursive formats use a small stack, every output stays valid under a token limit, and independent fields are decoded in parallel and verified. On one 16 GB Apple M2 Pro with Qwen3.5-2B and 4B, against MLX with llguidance, the standard setup for this hardware, schema-constrained extraction finishes 1.2- 1.3x sooner with the same answers, a grammar costs 3 MB instead of up to 1.5 GB, one server holds sixteen grammars where tables run out of memory, and sixteen tool-calling agents finish 2.5x sooner.",
+        "identifiers": [
+          "SemanticScholar:c3a0a4ff845ac628f732b5eb789198fa310d1a7c"
+        ],
+        "semantic_scholar_id": "c3a0a4ff845ac628f732b5eb789198fa310d1a7c",
+        "canonical_id": "arXiv:2610.09139",
+        "arxiv_id": "2610.09139",
+        "authors": [
+          "A. Asadulaev"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.09202",
+      "identity_tokens": [
+        "id:SemanticScholar:a57db6795e4740e1c844024f8ddf0cb585fcdd63",
+        "id:arXiv:2610.09202",
+        "title:few bits one law toward w2a4kv2",
+        "url:https://arxiv.org/abs/2610.09202"
+      ],
+      "record": {
+        "title": "Few Bits, One Law: Toward W2A4KV2",
+        "source_url": "https://arxiv.org/abs/2610.09202",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Extreme low-bit LLM compression is most challenging when weights, activations, and KV caches are quantized together: their distributions differ, and quantization errors interact throughout the network. We introduce CanonQ, a unified quantization-aware training framework that addresses these challenges by separating source canonicalization from task-aware adaptation. Fixed rotations and energy normalization map heterogeneous tensor sources to canonical coordinates, enabling frozen Gaussian-reference codebooks to be reused across layers and models. Joint training then adapts the network to the coupled errors of weight, activation, and cache quantization within a common scalar/vector interface. We bound frozen-codebook transfer error and local task loss, and derive an exact normalization-aware straight-through Jacobian that links quantization distortion to gradient bias. The strongest gains arise under joint W2A4KV2 compression: across LLaMA3-1B/3B/8B, CanonQ-Omni achieves up to 14.28x lower WikiText-2 perplexity and up to 57.9% higher mean zero-shot accuracy than prior state-of-the-art and representative quantization baselines. The benefits extend to Qwen3-1.7B, code generation, and mathematical reasoning: on instruction-tuned MobileLLM-Pro-1B at W2A16KV16, CanonQ achieves relative improvements of 41.7% in HumanEval pass@1 and 39.1% in GSM8K exact match over the strongest evaluated quantization baseline.",
+        "identifiers": [
+          "SemanticScholar:a57db6795e4740e1c844024f8ddf0cb585fcdd63"
+        ],
+        "semantic_scholar_id": "a57db6795e4740e1c844024f8ddf0cb585fcdd63",
+        "canonical_id": "arXiv:2610.09202",
+        "arxiv_id": "2610.09202",
+        "authors": [
+          "Kai Yi",
+          "Tarek Elgamal",
+          "Sruthikesh Surineni",
+          "Vignesh Vivekraja",
+          "Soumyadeep Ghosh",
+          "Steven Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.13767",
+      "identity_tokens": [
+        "id:SemanticScholar:d8f756392b3d17c3a917f43ceff551746d5572a8",
+        "id:arXiv:2610.13767",
+        "title:dualquant dualscale calibrationfree weightandactivation quantization for llms",
+        "url:https://arxiv.org/abs/2610.13767"
+      ],
+      "record": {
+        "title": "DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs",
+        "source_url": "https://arxiv.org/abs/2610.13767",
+        "year": 2026,
+        "published": "2026-10-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-bit inference on accelerators with native 4-bit support requires quantizing both weights and activations to realize the full throughput gains these formats provide. While post-training weight quantization has been extensively studied, activation quantization remains considerably more challenging and typically requires calibration data. In this work, we introduce DUALQUANT, a dual-scale, calibration-free post-training quantization framework that directly minimizes the weight-reconstruction Mean Squared Error (MSE) and, as an immediate by-product, yields per-channel activation rescalings prior to activation quantization. Our key observation is that the scaling factors obtained by minimizing weight-reconstruction error provide effective activation rescalings, enabling competitive activation quantization without calibration data. We formulate DUALQUANT as a non-differentiable weight-reconstruction problem and develop an efficient solver based on variable splitting and block coordinate descent, where each subproblem admits a closed-form update. DUALQUANT provides a unified algorithm supporting a wide range of formats, including the full MX family and NVFP4. To our knowledge, DUALQUANT is the first dual-scaling method to formally support MX and NV block formats. Across Llama and Qwen models evaluated on WikiText-2, C4, and zero-shot downstream tasks, DUALQUANT matches or exceeds the accuracy of calibration-based SmoothQuant across most models and formats, and substantially outperforms calibration-free baselines, with large gains for MX and NV block formats. We validate these gains with a real packed W4A4 inference path for Llama-3.1-8B on an RTX 4090. The resulting implementation closely matches the accuracy of fake quantization while delivering up to 2.61x memory reduction and up to 2.46x throughput speedup over BF16.",
+        "identifiers": [
+          "SemanticScholar:d8f756392b3d17c3a917f43ceff551746d5572a8"
+        ],
+        "semantic_scholar_id": "d8f756392b3d17c3a917f43ceff551746d5572a8",
+        "canonical_id": "arXiv:2610.13767",
+        "arxiv_id": "2610.13767",
+        "authors": [
+          "Mahsa Salmani",
+          "Sayeh Sharify",
+          "Hesham Mostafa"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 24,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.16368",
+      "identity_tokens": [
+        "id:SemanticScholar:0d3e2c75117b17ce7e634f26d88ff89cc68897e2",
+        "id:arXiv:2610.16368",
+        "title:loopquant accurate and efficient posttraining quantization for looped transformers",
+        "url:https://arxiv.org/abs/2610.16368"
+      ],
+      "record": {
+        "title": "LoopQuant: Accurate and Efficient Post-Training Quantization for Looped Transformers",
+        "source_url": "https://arxiv.org/abs/2610.16368",
+        "year": 2026,
+        "published": "2026-10-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped Language Models (LoopLMs) improve parameter efficiency by recursively reusing shared Transformer modules, yet their repeated computation over evolving recurrent states poses new challenges for low-bit deployment. Existing post-training quantization (PTQ) methods, largely designed for feed-forward Transformers, fail to account for cross-loop activation dynamics, heterogeneous loop sensitivity, and recursive error propagation, leading to substantial performance degradation at low precision. To address these challenges, we propose LoopQuant, a loop-aware PTQ framework for accurate and efficient low-bit quantization of LoopLMs. LoopQuant is built on three core components: 1) Cross-Loop Distribution Canonicalization (CLDC) learns a shared quantization-friendly representation across recurrent states while preserving parameter sharing; 2) Interaction-Aware Loop-wise Precision Allocation (ILPA) allocates activation precision under a fixed bit budget by modeling task-level loop sensitivity and cross-loop interactions; and 3) Loop-Conditioned Task Calibration (LCTC) further aligns quantized inference with the low-bit recursive trajectory through lightweight task-space calibration. Extensive experiments across LoopLM architectures demonstrate that LoopQuant consistently outperforms existing low-bit PTQ methods. On Ouro-2.6B, LoopQuant under W4A4 surpasses all W4A8 baselines in performance, while reducing model memory by 65.3% with only 3.4% additional storage overhead over naive INT4 and achieving a 1.7 times decoding speedup over BF16. These results demonstrate a strong balance among accuracy, compression, and inference efficiency, providing a practical and deployment-friendly solution for low-bit LoopLM inference. The code is available at [https://github.com/Kishon-zzx/LoopQuant].",
+        "identifiers": [
+          "SemanticScholar:0d3e2c75117b17ce7e634f26d88ff89cc68897e2"
+        ],
+        "semantic_scholar_id": "0d3e2c75117b17ce7e634f26d88ff89cc68897e2",
+        "canonical_id": "arXiv:2610.16368",
+        "arxiv_id": "2610.16368",
+        "authors": [
+          "Zhi-Xiong Zhao",
+          "Zu-Kang Xu",
+          "Xing Hu",
+          "Li-Feng Liu",
+          "Guang-Yu Sun",
+          "Da-Wei Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 21,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.29545",
+      "identity_tokens": [
+        "id:SemanticScholar:08a21c66a3b898d9fff359c371edef5f84a9a51a",
+        "id:arXiv:2610.29545",
+        "title:pace periodic and channelaligned encoding of fourbit recurrent states",
+        "url:https://arxiv.org/abs/2610.29545"
+      ],
+      "record": {
+        "title": "PACE: Periodic and Channel-Aligned Encoding of Four-Bit Recurrent States",
+        "source_url": "https://arxiv.org/abs/2610.29545",
+        "year": 2026,
+        "published": "2026-10-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear-attention language models keep their context in a recurrent state of fixed size, where an inference system stores one copy of this state for every sequence it decodes at the same time. Storing the state at lower precision therefore lets more sequences share an accelerator. Existing state quantizers round the state after every generated token and report that four bits lose accuracy unless the bit width is raised or the model is fine-tuned.\\par We introduce PACE, a post-hoc four-bit state quantizer. PACE rounds the state only once every few generated tokens, as chunked kernels already do once per chunk during prefill, and keeps the tokens generated in between in a small buffer. Rounding less often reduces the error that accumulates in the state. Additionally, we find that the large entries of the gated-delta state gather in columns, because some channels of the update written at each token remain large across many tokens. PACE therefore shares each quantization scale within one column. It also keeps the heads that retain rounding error longest at eight bits. On four hybrid models from 4B to 35B parameters, PACE with mixed four- and eight-bit heads is competitive with eight-bit DAMP on the three larger models at about two thirds of its memory, PACE with four-bit heads throughout scores higher than Q-Mamba at equal memory, and rounding every few tokens preserves the decoding speedup of the buffer.",
+        "identifiers": [
+          "SemanticScholar:08a21c66a3b898d9fff359c371edef5f84a9a51a"
+        ],
+        "semantic_scholar_id": "08a21c66a3b898d9fff359c371edef5f84a9a51a",
+        "canonical_id": "arXiv:2610.29545",
+        "arxiv_id": "2610.29545",
+        "authors": [
+          "Patrick Haller",
+          "Filipe Laitenberger",
+          "Alan Akbik"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 12,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.34056",
+      "identity_tokens": [
+        "id:SemanticScholar:3d2c1215d966570d57040bc8721ea61fc09519d7",
+        "id:arXiv:2610.34056",
+        "title:intra interleaved noncontiguous token sparse attention",
+        "url:https://arxiv.org/abs/2610.34056"
+      ],
+      "record": {
+        "title": "INTRA: Interleaved Non-contiguous Token spaRse Attention",
+        "source_url": "https://arxiv.org/abs/2610.34056",
+        "year": 2026,
+        "published": "2026-10-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers achieve strong performance across modalities but are bottlenecked by the quadratic cost of attention. Sparse attention can reduce this cost, but effective sparsity must preserve useful long-range communication and map well to GPU hardware. We introduce INTRA--Interleaved Non-contiguous Token spaRse Attention--a hardware-aware static sparse attention design based on a relay-communication view under Computational Query Set (CQS) constraints. Rather than directly covering all token-to-token interactions within each sparse layer, INTRA uses complementary sparse groups to provide short mediated communication paths across layers. Scatter forms relay groups that sample broadly across local neighborhoods, while Gather reconnects these groups in subsequent layers. Under a partition model, this structure guides CQS-compatible sparse patterns with global reachability. Our CQS-aware FlashAttention-style kernel computes structured indices at runtime, loads selected non-contiguous tokens, and packs them densely for computation. On an A100, INTRA achieves a $1.53\\times$ speedup in $2K$ FLUX.1-dev generation, with better measured image quality than evaluated CLEAR configurations after LoRA self-distillation. On LLaMA-3.1-8B, it improves long-context prefill efficiency with strong teacher-forced retrieval performance under matched LoRA adaptation. Attention-only benchmarks further show up to $8.4\\times$ and $10.4\\times$ speedups over MoBA and density-constrained NSA, respectively. Code is available at https://github.com/NovTi/INTRA.",
+        "identifiers": [
+          "SemanticScholar:3d2c1215d966570d57040bc8721ea61fc09519d7"
+        ],
+        "semantic_scholar_id": "3d2c1215d966570d57040bc8721ea61fc09519d7",
+        "canonical_id": "arXiv:2610.34056",
+        "arxiv_id": "2610.34056",
+        "authors": [
+          "Yuxuan Xia",
+          "Wenbo Lu",
+          "Shao-Yi Zheng",
+          "Sheng-Jie Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 8,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f0c8a41865676b915adcdcd1e552123a9eb5807f0390db8406e67cf82b0f9d68",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

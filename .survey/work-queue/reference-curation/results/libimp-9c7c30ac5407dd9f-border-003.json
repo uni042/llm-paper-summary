@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9c7c30ac5407dd9f-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.27886",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.27886",
+    "identity_tokens": [
+      "arXiv:2608.27886"
+    ],
+    "reason": "resource evaluationは有用だが、serving methodではなくsystem comparisonであり、構成差も交絡するためborderline。",
+    "first_checked_at": "2026-10-05T07:56:01+00:00",
+    "last_checked_at": "2026-10-05T07:56:01+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md"
+    ],
+    "title": "Resource Constraints and Performance in Agentic AI Systems"
+  },
+  "processed_at": "2026-10-05T07:56:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9c7c30ac5407",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

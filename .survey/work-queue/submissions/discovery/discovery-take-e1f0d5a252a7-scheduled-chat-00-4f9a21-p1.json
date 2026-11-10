@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408539",
+      "title": "AUM: Unleashing the Efficiency Potential of Shared Processors with Accelerator Units for LLM Serving",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408539",
+      "priority": 95,
+      "reason": "HPCA systems work on processor-integrated accelerator units for efficient LLM serving."
+    },
+    {
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408492",
+      "title": "ELORA: Efficient LoRA and KV Cache Management for Multi-LoRA LLM Serving",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408492",
+      "priority": 97,
+      "reason": "HPCA multi-LoRA serving system jointly managing adapter and KV-cache residency."
+    },
+    {
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408577",
+      "title": "LiLo: Harnessing the on-Chip Accelerators in Intel CPUs for Compressed LLM Inference Acceleration",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408577",
+      "priority": 96,
+      "reason": "HPCA compressed-LLM inference system exploiting CPU on-chip accelerators."
+    },
+    {
+      "canonical_id": "arXiv:2602.01469",
+      "arxiv_id": "2602.01469",
+      "title": "P-EAGLE: Parallel-Drafting EAGLE with Scalable Training",
+      "source_url": "https://arxiv.org/abs/2602.01469",
+      "priority": 91,
+      "reason": "Recent parallel-drafting speculative decoding work targeting lower generation latency for reasoning LLMs."
+    },
+    {
+      "canonical_id": "arXiv:2601.18999",
+      "arxiv_id": "2601.18999",
+      "title": "Randomization Boosts KV Caching, Learning Balances Query Load: A Joint Perspective",
+      "source_url": "https://arxiv.org/abs/2601.18999",
+      "priority": 91,
+      "reason": "Recent KV-cache policy work combining randomized eviction and learned load balancing under constrained cache memory."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "discovery-take-e1f0d5a252a7-scheduled-chat-00-4f9a21",
+    "result_path": ".survey/work-queue/discovery-precheck/results/discovery-take-e1f0d5a252a7-scheduled-chat-00-4f9a21.json",
+    "receipt": "sha256:20b6eeee24612c85aafbd68f36a53b405fc63de894fd3ffddbe64f6198b998ce"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T130004JST-4f9a21",
+    "round": "discovery-take-e1f0d5a252a7-scheduled-chat-00-4f9a21",
+    "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+    "candidate_count": 20,
+    "accepted_count": 7,
+    "round_submission_index": 1,
+    "round_submission_count": 2,
+    "citation_direction": "forward"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2c3efb6ce78ebae0-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2005.08700",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2005.08700",
+    "identity_tokens": [
+      "arXiv:2005.08700"
+    ],
+    "reason": "Primary text confirms Mask-CTC is a non-autoregressive speech-recognition decoder with iterative mask prediction and CTC. Parallel sequence decoding is adjacent to decoding-efficiency research, but its speech-recognition model and objective do not establish relevance to LLM inference systems. Keep borderline for possible cross-task decoding-method lineage review.",
+    "first_checked_at": "2026-10-07T09:04:16+00:00",
+    "last_checked_at": "2026-10-07T09:04:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mask CTC: Non-Autoregressive End-to-End ASR with CTC and Mask Predict"
+  },
+  "processed_at": "2026-10-07T09:04:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2c3efb6ce78e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

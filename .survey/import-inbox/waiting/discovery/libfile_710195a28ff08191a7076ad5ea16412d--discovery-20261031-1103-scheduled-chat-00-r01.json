@@ -1,0 +1,173 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1103-scheduled-chat-00/r01",
+  "reference_main_sha": "d20c9452987408640516def91a821d917cb352e4",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/HPCA61900.2025.00075",
+      "identity_tokens": [
+        "DOI:10.1109/HPCA61900.2025.00075"
+      ],
+      "title": "TB-STC: Transposable Block-wise N:M Structured Sparse Tensor Core",
+      "reason": "上海交通大学の著者原稿要旨では、転置可能なブロック単位N:M構造化疎性（TBSS）と対応するSparse Tensor Coreを提案。forward/backward間で転置可能な疎性パターンを用い、adaptive codecによる格納形式変換で帯域利用率1.47倍、I/O-aware schedulingで演算利用率1.57倍、平均EDP3.82倍改善を報告。OPT-6.7BとLlama2-7Bの精度損失を問題設定に含み、LLMを含む疎行列演算の直接的な実行基盤最適化。",
+      "source_url": "https://dai.sjtu.edu.cn/my_file/pdf/9e57c422-afd7-4078-b264-b32d3dfc9975.pdf",
+      "body_check": "primary_fulltext_abstract_and_introduction_checked; full_evaluation_not_audited",
+      "first_checked_at": "2026-10-31T11:08:16+09:00",
+      "last_checked_at": "2026-10-31T11:08:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 63,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11132534",
+      "identity_tokens": [
+        "DOI:10.1109/DAC63849.2025.11132534"
+      ],
+      "title": "LLMShare: Optimizing LLM Inference Serving with Hardware Architecture Exploration",
+      "reason": "香港中文大学の著者所属機関掲載要旨によると、prefillの演算律速とdecodeの帯域律速の差をモデル化するサービング性能・費用シミュレータとハードウェア設計空間探索を構築。両フェーズの需要に合う構成を選択し、従来のサービング構成比で費用13%削減、スループット4倍超と報告。LLM推論クラスタのハードウェア配備設計への直接貢献。",
+      "source_url": "https://research.cuhk.edu.hk/en/publications/llmshare-optimizing-llm-inference-serving-with-hardware-architect/",
+      "body_check": "primary_institutional_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T11:08:16+09:00",
+      "last_checked_at": "2026-10-31T11:08:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 76,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11132578",
+      "identity_tokens": [
+        "DOI:10.1109/DAC63849.2025.11132578"
+      ],
+      "title": "OutlierCIM: Outlier-Aware Digital CIM-Based LLM Accelerator with Hybrid-Strategy Quantization and Unified FP-INT Computation",
+      "reason": "DAC公式プログラムで著者・論文同定を確認。原著要旨の二次索引転載では、LLM活性値の少数の外れ値が低ビットCIM利用率と精度を阻害する問題に対し、外れ値を集約するtiling、混合量子化と再構成可能なdouble-bit CIM、FP-INT演算の量子化係数後処理を統合するOutlierCIMを提案。LLM推論の低ビット演算と存内計算の直接的な協調最適化。ただし出版社原文の直接取得は未了。",
+      "source_url": "https://doi.org/10.1109/DAC63849.2025.11132578",
+      "body_check": "original_abstract_reproduced_by_secondary_index; official_DAC_program_identity_verified; body_not_read",
+      "first_checked_at": "2026-10-31T11:08:16+09:00",
+      "last_checked_at": "2026-10-31T11:08:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 91,
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "source_limitations": "出版社一次要旨は直接未取得。原著要旨の転載を確認し公式書誌で同定。"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/CloudCom67567.2025.11331377",
+      "identity_tokens": [
+        "DOI:10.1109/CloudCom67567.2025.11331377"
+      ],
+      "title": "QER: Quantized Low-Rank Error Reconstructor for LLM Low-Bitwidth Quantization",
+      "reason": "IEEE出版社要旨によると、量子化ベース重みとFP精度LoRAのマージ時の精度不整合を解消するため、低ランク補正側も同一低ビット幅に合わせてdequantize/requantize不要の結合を実現。量子化誤差とoverflow誤差を学習対象に分解し、128サンプル・1 epochでLLaMA-1-7Bの4bit平均perplexityを10.97から9.45、平均精度を51.84%から54.85%へ改善。推論配備の重み圧縮に直接寄与。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11331377",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T11:08:16+09:00",
+      "last_checked_at": "2026-10-31T11:08:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 101,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/JSSC.2026.3663603",
+      "identity_tokens": [
+        "DOI:10.1109/JSSC.2026.3663603"
+      ],
+      "title": "Adelia: A 4-nm LLM Processing Unit With Streamlined Dataflow and Dual-Mode Parallelism for Maximizing Hardware Efficiency",
+      "reason": "KAIST著者所属機関の要旨では、prefill演算律速とdecode帯域律速の両立に向け、systolic parameter pathで重みとKVキャッシュをmulticastする行列・ベクトル演算器とRISC制御によるdual-mode parallelismを統合。Samsung 4nm試作でPhi-3-mini 512.6 token/s、LLaMA-30B 65.72 token/sを報告。LLM推論専用アクセラレータの直接的実装。",
+      "source_url": "https://pure.kaist.ac.kr/en/publications/adelia-a-4-nm-llm-processing-unit-with-streamlined-dataflow-and-d/",
+      "body_check": "primary_institutional_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T11:08:16+09:00",
+      "last_checked_at": "2026-10-31T11:08:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 134,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3830418.3843904",
+      "identity_tokens": [
+        "DOI:10.1145/3830418.3843904"
+      ],
+      "title": "Efficient GPU Multitasking with Morphable Kernels",
+      "reason": "SOSP論文一覧に掲載された原著要旨の転載と著者公式研究業績を照合。MorphXはカーネルを再起動せず実行中にSM資源を返却・再獲得できるmorphable kernelへコンパイル時変換し、in-place profilingで同居タスクの資源競合に適応。前景レイテンシ同等で背景スループット2.24倍を報告するGPU汎用実行基盤だが、原著要旨にLLM固有のサービング・デコード評価が示されないため境界的。",
+      "source_url": "https://doi.org/10.1145/3830418.3843904",
+      "body_check": "original_conference_abstract_reproduced_in_public_SOSP_paper_index; author_publications_crosschecked; body_not_read",
+      "first_checked_at": "2026-10-31T11:08:16+09:00",
+      "last_checked_at": "2026-10-31T11:08:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 148,
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "source_limitations": "出版社一次要旨は直接未取得。原著要旨の転載を確認し公式書誌で同定。"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TCCN.2026.3722837",
+      "identity_tokens": [
+        "DOI:10.1109/TCCN.2026.3722837"
+      ],
+      "title": "Workflow-Aware Expert Routing for Distributed LLM Serving Over the Edge-Cloud Continuum",
+      "reason": "King’s College Londonの著者所属機関要旨によると、edge-cloud分散LLMサービングをservice overlay上のworkflow-aware routingとして定式化。STEMのSTAR-PPOはSqueeze-and-Excitationによる軽量なgraph-free telemetry特徴抽出とentropy-regularized driftに応じた動的重み調整を行う。2000ノード評価でネットワーク転送費用96.8%削減、推論効率24.4%改善を報告。分散LLM実行の経路・配置最適化に直接該当。",
+      "source_url": "https://kclpure.kcl.ac.uk/portal/en/publications/workflow-aware-expert-routing-for-distributed-llm-serving-over-th/",
+      "body_check": "primary_institutional_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T11:08:16+09:00",
+      "last_checked_at": "2026-10-31T11:08:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 152,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CCWC67433.2026.11393769",
+      "identity_tokens": [
+        "DOI:10.1109/CCWC67433.2026.11393769"
+      ],
+      "title": "Large Language Model Deployment on Resource-Constrained Edge Devices: A Practitioner's Survey",
+      "reason": "IEEE出版社要旨では、モバイル・エッジ端末へのLLM配備に必要なソフトウェア最適化と専用ハードウェアを概観し、制約条件に応じた実務的な配備指針を整理するsurvey。推論メモリ・遅延・コストの論点には合致するが、新規の圧縮アルゴリズムや実行ランタイム、測定されたシステム改善を提案する原著研究ではないためborderline。",
+      "source_url": "https://ieeexplore.ieee.org/document/11393769/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T11:08:16+09:00",
+      "last_checked_at": "2026-10-31T11:08:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 153,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TC.2025.3626449",
+      "identity_tokens": [
+        "DOI:10.1109/TC.2025.3626449"
+      ],
+      "title": "MI-LLM: Multiplier-Free LLM Inference on Commodity Processing-in-Memory Hardware",
+      "reason": "著者の公式業績ページで論文同定を確認。原著要旨の二次索引転載では、commodity near-bank PIMの弱い演算性能・LUTのcache miss・PIM間通信を対象に、乗算を置換する学習済みlookup table、PIM-aware linear kernelの行列内外並べ替え、モデル分割を提案。GPU実装比でkernel throughput 9%、エネルギー効率11%改善を報告し、LLM推論実行基盤への直接貢献。ただしIEEE原文要旨の直接取得は未了。",
+      "source_url": "https://doi.org/10.1109/TC.2025.3626449",
+      "body_check": "original_abstract_reproduced_by_secondary_index; coauthor_publications_identity_verified; body_not_read",
+      "first_checked_at": "2026-10-31T11:08:16+09:00",
+      "last_checked_at": "2026-10-31T11:08:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 156,
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "source_limitations": "出版社一次要旨は直接未取得。原著要旨の転載を確認し公式書誌で同定。"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TVLSI.2026.3659893",
+      "identity_tokens": [
+        "DOI:10.1109/TVLSI.2026.3659893"
+      ],
+      "title": "Area- and Utilization-Efficient LLM Accelerator With Fused Speculative Decoding for Edge-Side Inference",
+      "reason": "IEEE出版社要旨によると、draftとverifyで計算特性が異なる投機的復号を一般行列積に統一するFSD-InferとFPGA向けFSD-Accを提案。weight sharingと融合処理でoff-chip accessを削減し、通常自己回帰比でGPU推論最大1.38倍高速化、ZCU102実装では既存edge LLMアクセラレータ比でTPS/kDSP 2.53倍、TPS/kLUT 5.90倍を報告。投機的復号専用ハードウェアへの直接的貢献。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11394827",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T11:08:16+09:00",
+      "last_checked_at": "2026-10-31T11:08:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 167,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

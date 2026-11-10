@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0fa2366e6cac1f58-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.19443",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.19443",
+    "identity_tokens": [
+      "arXiv:2411.19443"
+    ],
+    "reason": "要旨はiterative retrievalと回答品質の向上が主題。反復retrieveに追加推論負荷があると述べるが、その効率低減手法ではない。",
+    "first_checked_at": "2026-10-05T12:58:30+00:00",
+    "last_checked_at": "2026-10-05T12:58:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+    ],
+    "title": "Auto-RAG: Autonomous Retrieval-Augmented Generation for Large Language Models"
+  },
+  "processed_at": "2026-10-05T12:58:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0fa2366e6cac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

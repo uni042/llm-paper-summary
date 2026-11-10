@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Improving the Performance of LLM Inference: Understanding the Role of CUDA Graphs",
+      "source_url": "https://doi.org/10.1109/LANMAN69841.2026.11623563",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE Workshop on Local and Metropolitan Area Networks",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are widely deployed for supporting interactive conversations, text summarization, and coding agents. These applications impose stringent latency requirements on computation, communication, and I/O, where every microsecond counts. In these environments, the CPU-driven GPU kernel launches become a significant concern. A CUDA Graph reduces this overhead by consolidating multiple kernel launches into a single graph replay. Even though widely adopted for LLM inference frameworks, its effectiveness has primarily been examined under single-node, general machine learning workloads. Consequently, its performance implications for distributed LLM inference across nodes remain largely underexplored. In this work, we systematically evaluate the benefit of CUDA graphs on distributed LLM inference. We analyze performance across various model sizes, parallelism strategies, and intra- and inter-node links, utilizing workloads that range from static ones (prefill and decode-dominant) to real-world traffic (BurstGPT and ServeGen traces).",
+      "identifiers": [
+        "SemanticScholar:0116faea7b14f2371e53f5156dfe16d26d67d7dd"
+      ],
+      "semantic_scholar_id": "0116faea7b14f2371e53f5156dfe16d26d67d7dd",
+      "doi": "10.1109/LANMAN69841.2026.11623563",
+      "canonical_id": "DOI:10.1109/LANMAN69841.2026.11623563",
+      "authors": [
+        "Ângelo Franco",
+        "Isaias Noel Villanueva",
+        "Songyu Zhang",
+        "K. K. Ramakrishnan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE Xploreの正式LANMAN 2026要旨を確認。CPU主導のGPUカーネル起動オーバーヘッドをCUDA Graph replayで抑える手法について、モデルサイズ・並列化方式・ノード間リンク・prefill/decode構成・BurstGPT/ServeGenトレースを用いて分散LLM推論の効果を系統評価する。直接的なLLMサービング実行効率の研究。具体的な速度倍率は要旨に記載なし。",
+      "library_body_check": "primary_publisher_abstract_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "UniAttn: Reducing Inference Costs via Softmax Unification for Post-Training LLMs",
+      "source_url": "https://arxiv.org/abs/2502.00439",
+      "year": 2025,
+      "published": "2025-02-01",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training is essential for adapting Large Language Models (LLMs) to real-world applications. Deploying post-trained models faces significant challenges due to substantial memory overhead and noticeable inference latency. Existing work has identified significant redundancies in LLMs and proposed efficient architectures, namely intra-layer KV sharing and cross-layer KV sharing. However, these methods still result in high inference time overhead, remaining suboptimal for post-training pre-trained LLMs. In this paper, we identify that the \\texttt{Softmax} operation is a primary bottleneck for LLM inference and discover that it is actually highly redundant during post-training. We propose Softmax \\textbf{Uni}fication in \\textbf{Att}e\\textbf{n}tion (\\textbf{UniAttn}), a novel post-training method that unifies Softmax activations across transformer blocks to reduce LLM inference costs. Additionally, UniAttn adopts a linear projection to compensate for the errors induced by Softmax unification. Experiments show that UniAttn matches the performance of standard post-training while significantly reducing inference costs, outperforming existing efficient architectures during post-training.",
+      "identifiers": [
+        "SemanticScholar:35a008cf5ffaa0ebcc486f94bbf12ecf24e271f7"
+      ],
+      "semantic_scholar_id": "35a008cf5ffaa0ebcc486f94bbf12ecf24e271f7",
+      "canonical_id": "arXiv:2502.00439",
+      "arxiv_id": "2502.00439",
+      "doi": "10.48550/arXiv.2502.00439",
+      "authors": [
+        "Yizhe Xiong",
+        "Wei Huang",
+        "Xin Ye",
+        "Hui Chen",
+        "Zijia Lin",
+        "Hao-Ran Lian",
+        "Zhenpeng Su",
+        "Jun-Gong Han",
+        "Gui-Guang Ding"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 636,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨を確認。post-training済みLLMの複数Transformer blockでSoftmax活性の冗長性を見出し、Softmax Unificationと線形射影による誤差補償で計算・メモリ負担を削減。モデル品質を維持しつつ推論費用を減らすことを主目的とする。具体的な速度・メモリ倍率は著者要旨からは確定できない。",
+      "library_body_check": "primary_arxiv_abstract_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Distribution-aware Low-bitwidth Quantization for Large Language Models",
+      "source_url": "https://doi.org/10.63317/3mnfp3i37gy2",
+      "year": 2026,
+      "published": null,
+      "venue": "International Conference on Language Resources and Evaluation",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:283ff2d6a6cc7bdda3b30d4177ebb60c3ca4a60e"
+      ],
+      "semantic_scholar_id": "283ff2d6a6cc7bdda3b30d4177ebb60c3ca4a60e",
+      "doi": "10.63317/3mnfp3i37gy2",
+      "canonical_id": "DOI:10.63317/3mnfp3i37gy2",
+      "authors": [
+        "Bao Tan Duy Huynh",
+        "Takashi Tsunakawa",
+        "Masafumi Nishida"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ACL Anthologyの正式LREC 2026要旨を確認。2〜3bitのLLM重みPTQでKL分布整合に基づく校正、ノイズ置換による学習可能コードブック、統計類似性による層グルーピングを組み合わせる。追加fine-tuningなしで比較手法と競争力ある品質を報告。推論時の低bitメモリ削減に直結する量子化研究であり、具体的な速度倍率は要旨から未確認。",
+      "library_body_check": "primary_publisher_abstract_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-680b404f91f7",
+    "round": "libimp-680b404f91f764b9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-680b404f91f764b9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-680b404f91f764b9-pre01.json",
+    "receipt": "sha256:a032a172525403c6401cbe1bba4d5c57f2db33da0ddfad31d61f90a21fae4504"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-680b404f91f7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

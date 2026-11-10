@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a78911822dbdfda5-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.06713",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.06713",
+    "identity_tokens": [
+      "arXiv:2212.06713"
+    ],
+    "reason": "Structured PromptingはICL examplesを増やして能力を拡張する方式で、推論効率改善を主張しない。",
+    "first_checked_at": "2026-10-05T01:14:58+00:00",
+    "last_checked_at": "2026-10-05T01:14:58+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md",
+      "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+    ],
+    "title": "Structured Prompting: Scaling In-Context Learning to 1, 000 Examples"
+  },
+  "processed_at": "2026-10-05T01:14:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a78911822dbd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

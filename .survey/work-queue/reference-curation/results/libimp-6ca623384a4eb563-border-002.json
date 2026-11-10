@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6ca623384a4eb563-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.29734",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.29734",
+    "identity_tokens": [
+      "arXiv:2605.29734"
+    ],
+    "reason": "arXiv一次要旨はLLMを用いてGPU演算子のコードを自動生成・最適化する際、過去の最適化経験を粗粒度から細粒度へ階層的に記憶・検索するHTAMを提案。GPUカーネル改善と関連するが、主たる貢献はLLM支援コード探索であり、生成LLMの推論サービング性能を直接改善する方法ではないためborderline。",
+    "first_checked_at": "2026-10-30T07:20:26+00:00",
+    "last_checked_at": "2026-10-30T07:20:26+00:00",
+    "linked_from": [
+      "Hardware Accelerators",
+      "Kernel Optimization"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HTAM: Hierarchical Transition-Attended Memory for Operator Optimization"
+  },
+  "processed_at": "2026-10-30T07:20:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6ca623384a4e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

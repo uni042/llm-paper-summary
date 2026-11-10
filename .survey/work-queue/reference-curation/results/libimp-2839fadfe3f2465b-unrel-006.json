@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2839fadfe3f2465b-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2210.06707",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2210.06707",
+    "identity_tokens": [
+      "arXiv:2210.06707"
+    ],
+    "reason": "DeiTとSwinの視覚Transformerを低ビット化し、注意行列の情報歪みを補正するIRMと蒸留DGDでImageNet分類精度を改善する。量子化の最終適用先は視覚分類であり、LLM推論向け量子化ではない。",
+    "first_checked_at": "2026-10-07T21:38:03+00:00",
+    "last_checked_at": "2026-10-07T21:38:03+00:00",
+    "linked_from": [],
+    "title": "Q-ViT: Accurate and Fully Quantized Low-bit Vision Transformer"
+  },
+  "processed_at": "2026-10-07T21:38:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2839fadfe3f2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

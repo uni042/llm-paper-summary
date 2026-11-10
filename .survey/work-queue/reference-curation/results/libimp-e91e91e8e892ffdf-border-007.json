@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e91e91e8e892ffdf-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1712.06139",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1712.06139",
+    "identity_tokens": [
+      "arXiv:1712.06139"
+    ],
+    "reason": "汎用MLサービング基盤でLLM専用ではないが、配信システムの基礎として関連。",
+    "first_checked_at": "2026-09-29T23:39:46+00:00",
+    "last_checked_at": "2026-10-02T11:03:19+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "TensorFlow-Serving: Flexible, High-Performance ML Serving"
+  },
+  "processed_at": "2026-10-02T11:03:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e91e91e8e892",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

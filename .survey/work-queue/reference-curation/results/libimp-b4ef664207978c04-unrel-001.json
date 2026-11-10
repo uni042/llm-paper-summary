@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b4ef664207978c04-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2012.06153",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2012.06153",
+    "identity_tokens": [
+      "arXiv:2012.06153"
+    ],
+    "reason": "一次要旨を確認。遺伝的アルゴリズムで教師BERTと学生BERTの層対応を探索し、少量の蒸留データとGLUE評価を用いて学習後の学生モデル品質を改善する研究。大規模言語モデルの生成推論、サービング、KVキャッシュ、GPUカーネル、量子化実行等のシステム改善を直接扱わず、現行の学習単独最適化凍結範囲に属する。",
+    "first_checked_at": "2026-10-18T10:00:29+00:00",
+    "last_checked_at": "2026-10-18T10:00:29+00:00",
+    "linked_from": [],
+    "title": "Improving Task-Agnostic BERT Distillation with Layer Mapping Search"
+  },
+  "processed_at": "2026-10-18T10:00:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b4ef66420797",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

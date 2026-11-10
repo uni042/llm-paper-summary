@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e03eef61bb70c6d-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.07585",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.07585",
+    "identity_tokens": [
+      "arXiv:2403.07585"
+    ],
+    "reason": "The paper explicitly reviews communication optimization for distributed neural-network training; inference/serving is outside its stated scope.",
+    "first_checked_at": "2026-10-05T15:13:00+00:00",
+    "last_checked_at": "2026-10-05T15:13:00+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
+    ],
+    "title": "Communication Optimization for Distributed Training: Architecture, Advances, and Opportunities"
+  },
+  "processed_at": "2026-10-05T15:13:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e03eef61bb7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

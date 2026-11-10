@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8374dc5ee3ccf9a4-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.08443",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.08443",
+    "identity_tokens": [
+      "arXiv:2609.08443"
+    ],
+    "reason": "The abstract concerns long-sequence recommendation modeling and low-rank caching; it does not describe an LLM or LLM serving/inference method.",
+    "first_checked_at": "2026-10-05T07:01:07+00:00",
+    "last_checked_at": "2026-10-05T07:01:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching"
+  },
+  "processed_at": "2026-10-05T07:01:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8374dc5ee3cc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

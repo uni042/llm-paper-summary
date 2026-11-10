@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b99021be9fe615b1-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1911.11641",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1911.11641",
+    "identity_tokens": [
+      "DOI:10.1609/aaai.v34i05.6239",
+      "arXiv:1911.11641"
+    ],
+    "reason": "物理常識推論の質問応答ベンチマークPIQAを構築し、事前学習言語モデルの推論能力を評価するデータセット研究で、LLM推論基盤の効率化を提案しない。",
+    "first_checked_at": "2026-10-04T12:53:19+00:00",
+    "last_checked_at": "2026-10-04T12:54:17+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2608.15383-exactmoe-memory-efficient-w4a16-inference.md"
+    ],
+    "title": "PIQA: Reasoning about Physical Commonsense in Natural Language"
+  },
+  "processed_at": "2026-10-04T12:54:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b99021be9fe6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

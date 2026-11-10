@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae797fec34c660b0-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.13657",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.13657",
+    "identity_tokens": [
+      "arXiv:2503.13657"
+    ],
+    "reason": "複数LLMエージェントの実行traceを分析し14種のfailure mode taxonomyとMAST-Dataを構築する信頼性・評価研究。system designを扱うが、推論ランタイムの速度・メモリ・スループット最適化が主目的ではない。",
+    "first_checked_at": "2026-10-05T02:14:49+00:00",
+    "last_checked_at": "2026-10-05T02:59:44+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+    ],
+    "title": "Why Do Multi-Agent LLM Systems Fail?"
+  },
+  "processed_at": "2026-10-05T02:59:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae797fec34c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

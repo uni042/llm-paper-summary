@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3351135f5a67dad5-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34530",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34530",
+    "identity_tokens": [
+      "arXiv:2609.34530"
+    ],
+    "reason": "Survey of seismic-data denoising/foundation models; outside LLM inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T04:56:12+00:00",
+    "last_checked_at": "2026-10-05T04:56:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "A Review of Deep-learning-based Seismic Data Denoising and Its Promising Paradigm Shift to Foundation Models"
+  },
+  "processed_at": "2026-10-05T04:56:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3351135f5a67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

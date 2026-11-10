@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0d52b9b6175b6cbf-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.09410",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.09410",
+    "identity_tokens": [
+      "arXiv:2609.09410"
+    ],
+    "reason": "The abstract benchmarks agentic deep-research quality across web and SQL tools; it does not study model inference efficiency.",
+    "first_checked_at": "2026-10-05T07:03:37+00:00",
+    "last_checked_at": "2026-10-05T07:03:37+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "Benchmarking Hybrid Deep Research Across Database Querying and Web Search"
+  },
+  "processed_at": "2026-10-05T07:03:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0d52b9b6175b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

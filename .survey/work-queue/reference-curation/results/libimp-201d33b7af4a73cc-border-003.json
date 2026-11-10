@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-201d33b7af4a73cc-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.02913",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.02913",
+    "identity_tokens": [
+      "arXiv:2406.02913"
+    ],
+    "reason": "一次本文を確認したが、既存系統との接続または一般化可能なLLM推論効率効果が弱く、具体的な追加検証が必要なためborderlineに残す。 The zeroth-order extreme-sparsity method reduces trainable parameters/optimizer memory for LLM fine-tuning. Evaluation is training-focused; it does not demonstrate sparse inference kernels or serving gains, so the quantization/compression lineage fit is weak.",
+    "first_checked_at": "2026-10-06T16:47:57+00:00",
+    "last_checked_at": "2026-10-06T16:47:57+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+      "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity"
+  },
+  "processed_at": "2026-10-06T16:47:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-201d33b7af4a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

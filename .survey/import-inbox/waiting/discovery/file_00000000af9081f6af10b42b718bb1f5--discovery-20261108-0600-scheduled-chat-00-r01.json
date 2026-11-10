@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261108-0600-scheduled-chat-00/r01",
+  "reference_main_sha": "82c06f7576b5de000535f463a2c857798efc12f0",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.17255",
+      "identity_tokens": [
+        "arxiv:2506.17255"
+      ],
+      "title": "UltraSketchLLM: Saliency-Driven Sketching for Ultra-Low Bit LLM Compression",
+      "reason": "重みの重要度に応じたsketch割当と学習を組み合わせ、Llama-3.2-1Bを0.5 bit/weightまで圧縮。低ビット推論のメモリ削減に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2506.17255",
+      "body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 47"
+      ],
+      "worklist_rank": 47,
+      "first_checked_at": "2026-11-08T06:03:36+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.04635",
+      "identity_tokens": [
+        "arxiv:2610.04635"
+      ],
+      "title": "LatentIndex: Cross-Layer Sharing with Layer-Specific Selection for Sparse Attention",
+      "reason": "層間で連続latent索引キャッシュを共有しつつ層別のトークン選択を維持。4層共有で索引キャッシュ61.1%削減、8K～128Kで索引計算2.30～2.72倍高速化。",
+      "source_url": "https://arxiv.org/abs/2610.04635",
+      "body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 49"
+      ],
+      "worklist_rank": 49,
+      "first_checked_at": "2026-11-08T06:03:36+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.12422",
+      "identity_tokens": [
+        "arxiv:2607.12422"
+      ],
+      "title": "Accepted Prefixes Are Not All You Need: A Negative Result on PEFT-Based Block-Diffusion Drafting",
+      "reason": "LoRA型ドラフトと同一backbone検証器を用いる投機的復号の負の結果。Qwen3-0.6Bではドラフト実行コストが検証器並みで高速化せず、実効計算量の重要性を示す。",
+      "source_url": "https://arxiv.org/abs/2607.12422",
+      "body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 55"
+      ],
+      "worklist_rank": 55,
+      "first_checked_at": "2026-11-08T06:03:36+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.28418",
+      "identity_tokens": [
+        "arxiv:2607.28418"
+      ],
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "reason": "トークン別にattention headとFFN channelを動的剪定し、mask再配置とブロックスキップを組み合わせる。prefill/decodeのE2E速度をそれぞれ1.68/1.55倍と報告。",
+      "source_url": "https://arxiv.org/abs/2607.28418",
+      "body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 56"
+      ],
+      "worklist_rank": 56,
+      "first_checked_at": "2026-11-08T06:03:36+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.37538",
+      "identity_tokens": [
+        "arxiv:2609.37538"
+      ],
+      "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
+      "reason": "動的疎注意のKV offloadに対しHBM再利用判定とH2D転送分配を最適化。実運用トレースで出力トークン時間39%削減、スループット1.27倍。",
+      "source_url": "https://arxiv.org/abs/2609.37538",
+      "body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 57"
+      ],
+      "worklist_rank": 57,
+      "first_checked_at": "2026-11-08T06:03:36+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.11998",
+      "identity_tokens": [
+        "arxiv:2609.11998"
+      ],
+      "title": "Fixed State, Long Reach: What a Constant-Size Cache Buys Block Diffusion at Scale",
+      "reason": "block diffusionに対して状態空間モデルの定数サイズ状態を使う厳密キャッシュを提案。256K文脈でattention型キャッシュより単一streamで2.6倍のスループットを報告。",
+      "source_url": "https://arxiv.org/abs/2609.11998",
+      "body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 58"
+      ],
+      "worklist_rank": 58,
+      "first_checked_at": "2026-11-08T06:03:36+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34380",
+      "identity_tokens": [
+        "arxiv:2609.34380"
+      ],
+      "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+      "reason": "混雑時にモデルを低精度へ切替え、解放した重み領域をKVキャッシュに転用するvLLM実装。静的FP16比2.1～3.3倍の持続スループットを報告。",
+      "source_url": "https://arxiv.org/abs/2609.34380",
+      "body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 59"
+      ],
+      "worklist_rank": 59,
+      "first_checked_at": "2026-11-08T06:03:36+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.22863",
+      "identity_tokens": [
+        "arxiv:2610.22863"
+      ],
+      "title": "Understanding KV Residency in Production-Scale Agentic LLM Workloads",
+      "reason": "1.21億超の本番モデル呼出しからエージェントのKV保持需要を分析。LRUと多段精度保持、配置局所性の影響を定量化したシステム特性評価。",
+      "source_url": "https://arxiv.org/abs/2610.22863",
+      "body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 60"
+      ],
+      "worklist_rank": 60,
+      "first_checked_at": "2026-11-08T06:03:36+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32256",
+      "identity_tokens": [
+        "arxiv:2609.32256"
+      ],
+      "title": "LAM: Efficient Lossy Agent Memory Framework With A Retrieval-Score Error Bound",
+      "reason": "エージェント観測履歴をスコア誤差上界付きで重複削減し、prefix cacheを保持しながら圧縮を重ねる。600軌跡で観測トークン22.47%削減。",
+      "source_url": "https://arxiv.org/abs/2609.32256",
+      "body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 61"
+      ],
+      "worklist_rank": 61,
+      "first_checked_at": "2026-11-08T06:03:36+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.28044",
+      "identity_tokens": [
+        "arxiv:2608.28044"
+      ],
+      "title": "Characterization of Request and Token Energy Costs for LLM Inference Workloads on GPU Platforms",
+      "reason": "H100/H200でprefill固定費とdecodeの増分電力を測定し、トークン当たりエネルギーだけでは要求全体の消費電力を評価できないと示す。",
+      "source_url": "https://arxiv.org/abs/2608.28044",
+      "body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 62"
+      ],
+      "worklist_rank": 62,
+      "first_checked_at": "2026-11-08T06:03:36+09:00"
+    }
+  ],
+  "identity_deduplication": "distinct within this file; prior Library partial rank45 excluded; final cross-GitHub collision delegated to import inbox",
+  "source_scope": "arXiv primary abstracts; no claim of full-paper reading"
+}

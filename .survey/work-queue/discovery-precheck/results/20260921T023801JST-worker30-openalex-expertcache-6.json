@@ -1,0 +1,1113 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "worker30-20260921-023117-expertcache-6",
+  "collector_id": "worker30-openalex-expertcache",
+  "run_key": "2026-09-21T02:31:17+09:00-worker30",
+  "axis": "MoE expert cache offload prefetch",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=MoE%20expert%20cache%20offloading%20prefetch%20LLM%20inference&filter=from_publication_date:2025-01-01&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzc1MDg4MDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MTQ5ODczMzMzJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f55d851446ded42453f54617287539f57f31f4de",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 61,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T17:37:34.616911+00:00",
+  "results": [
+    {
+      "title": "From Concentration to Differentiation and Back: Routing Effective Rank in MoE Reasoning Cohorts",
+      "source_url": "https://arxiv.org/abs/2609.06403",
+      "year": 2026,
+      "published": "2026-09-06",
+      "canonical_id": "arXiv:2609.06403",
+      "arxiv_id": "2609.06403",
+      "authors": [
+        "Kang Chen",
+        "Sihan Zhao",
+        "Yixin Cao",
+        "Yu-Gang Jiang"
+      ]
+    },
+    {
+      "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+      "source_url": "https://arxiv.org/abs/2608.27046",
+      "year": 2026,
+      "published": "2026-08-27",
+      "canonical_id": "arXiv:2608.27046",
+      "arxiv_id": "2608.27046",
+      "authors": [
+        "Maciej Besta",
+        "Leonard Schmidt",
+        "Lara Nonino",
+        "Robert Gerstenberger",
+        "Pierre Pang",
+        "Patrik Okanovic",
+        "Ales Kubicek",
+        "Tiancheng Chen",
+        "B. Lipshitz",
+        "Torsten Hoefler"
+      ]
+    },
+    {
+      "title": "Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.24664",
+      "year": 2026,
+      "published": "2026-08-25",
+      "canonical_id": "arXiv:2608.24664",
+      "arxiv_id": "2608.24664",
+      "authors": [
+        "Sherry Xu",
+        "Marco Heddes",
+        "Jackson Peng",
+        "Tom Savell",
+        "Monica Tang",
+        "Prashant Ranjan",
+        "Jesse Benson",
+        "Ofer Dekel",
+        "Saurabh Dighe",
+        "Anupama Kurpad",
+        "Artour Levin",
+        "Matthew Mattina",
+        "George Petre",
+        "Cheng Tang",
+        "Yuan Yu",
+        "Li Zhang",
+        "Torsten Hoefler"
+      ]
+    },
+    {
+      "title": "Pipeline-Native Transformers: Co-Designing Model Architecture and CPU Inference for Bandwidth-Efficient Autoregressive Decode",
+      "source_url": "https://arxiv.org/abs/2608.23841",
+      "year": 2026,
+      "published": "2026-08-24",
+      "canonical_id": "arXiv:2608.23841",
+      "arxiv_id": "2608.23841",
+      "authors": [
+        "Tom Poperszky"
+      ]
+    },
+    {
+      "title": "Benchmarking Composable Compression Techniques in Mixture-of-Experts LLMs",
+      "source_url": "https://arxiv.org/abs/2608.21693",
+      "year": 2026,
+      "published": "2026-08-22",
+      "canonical_id": "arXiv:2608.21693",
+      "arxiv_id": "2608.21693",
+      "authors": [
+        "Afsara Benazir",
+        "Chen Chen",
+        "Rongxiao Qu",
+        "Jiabo Huang",
+        "Jingtao Li",
+        "Lingjuan Lyu"
+      ]
+    },
+    {
+      "title": "Predatory MoE: Serving Mixture-of-Experts with a Sequence-Local Expert Roster",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10741449/v1",
+      "year": 2026,
+      "published": "2026-08-19",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10741449/v1",
+      "doi": "10.21203/rs.3.rs-10741449/v1",
+      "authors": [
+        "ChaeWoo Son"
+      ]
+    },
+    {
+      "title": "Motif 3: Technical Report",
+      "source_url": "https://arxiv.org/abs/2608.09119",
+      "year": 2026,
+      "published": "2026-08-10",
+      "canonical_id": "arXiv:2608.09119",
+      "arxiv_id": "2608.09119",
+      "authors": [
+        "Junghwan Lim",
+        "Joon Son Chung",
+        "S. LEE",
+        "Wai Ting Cheung",
+        "Gihun Cho",
+        "Minsu Ha",
+        "Sangho Kang",
+        "Beomgyu Kim",
+        "Dongseok Kim",
+        "Jangwoong Kim",
+        "Taehyun Kim",
+        "Taewhan Kim",
+        "Jeesoo Lee",
+        "Jeongdoo Lee",
+        "Junhyeok Lee",
+        "Dongpin Oh",
+        "HyeYeon Cho",
+        "Dahye Choi",
+        "Jaeheui Her",
+        "Hanbin Jung",
+        "Changjin Kang",
+        "Minjae Kim",
+        "Youngrok Kim",
+        "Hyukjin Kweon",
+        "Hak-Bum Lee",
+        "Yeongjae Park",
+        "Bokki Ryu"
+      ]
+    },
+    {
+      "title": "RotaryQuant: Fitting 120B MoE Models on Consumer Hardware via Fused Compressed-Space Attention",
+      "source_url": "https://arxiv.org/abs/2608.08081",
+      "year": 2026,
+      "published": "2026-08-08",
+      "canonical_id": "arXiv:2608.08081",
+      "arxiv_id": "2608.08081",
+      "authors": [
+        "Anthony. Lui",
+        "Mohamed. Elsaied",
+        "N. P. Savani"
+      ]
+    },
+    {
+      "title": "Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.02341",
+      "year": 2026,
+      "published": "2026-08-03",
+      "canonical_id": "arXiv:2608.02341",
+      "arxiv_id": "2608.02341",
+      "authors": [
+        "L.L. Wang",
+        "Yuyang Du",
+        "Shiqi Xu",
+        "Soung Chang Liew"
+      ]
+    },
+    {
+      "title": "LongCat Sparse Attention: Taming the Lightning via Streaming-aware Hierarchical Cross-Layer Indexing",
+      "source_url": "https://arxiv.org/abs/2608.01662",
+      "year": 2026,
+      "published": "2026-08-03",
+      "canonical_id": "arXiv:2608.01662",
+      "arxiv_id": "2608.01662",
+      "authors": [
+        "Wen Zan",
+        "Jiaqi Zhang",
+        "Jianchao Tan",
+        "Hong Liu",
+        "Cunguang Wang",
+        "Xiang Lorraine Li",
+        "Duyue Ma",
+        "Guanyu Wu",
+        "Yifan Lu",
+        "Fengcun Li",
+        "Yerui Sun",
+        "Peng Pei",
+        "Yuchen Xie",
+        "Xunliang Cai"
+      ]
+    },
+    {
+      "title": "TrimMoE A communication aware and adaptive depth framework for distributed edge inference",
+      "source_url": "https://arxiv.org/abs/2608.00573",
+      "year": 2026,
+      "published": "2026-08-01",
+      "canonical_id": "arXiv:2608.00573",
+      "arxiv_id": "2608.00573",
+      "authors": [
+        "Ning Li",
+        "Shuting Bai",
+        "Xin Yuan",
+        "Wenchao Xu",
+        "Song Guo",
+        "Haijun Zhang"
+      ]
+    },
+    {
+      "title": "StrataCL: Fabric-Native Communication Library for Production Supernodes",
+      "source_url": "https://arxiv.org/abs/2607.26444",
+      "year": 2026,
+      "published": "2026-07-29",
+      "canonical_id": "arXiv:2607.26444",
+      "arxiv_id": "2607.26444",
+      "authors": [
+        "Tiancheng Hu",
+        "Jin Qin",
+        "Yuzheng Wang",
+        "Ke Liu",
+        "TangShengSheng Li",
+        "Sheng Wang",
+        "Zhongzhe Hu",
+        "Tianlun Hu",
+        "Wei Wang",
+        "Lijun Li",
+        "Jingbin Zhou",
+        "Xiaoming Bao",
+        "Hongwei Sun",
+        "Jieru Zhao",
+        "Huimin Cui",
+        "Tao Xie",
+        "Chenxi Wang"
+      ]
+    },
+    {
+      "title": "Kimi K3: Open Frontier Intelligence",
+      "source_url": "https://arxiv.org/abs/2607.24653",
+      "year": 2026,
+      "published": "2026-07-27",
+      "canonical_id": "arXiv:2607.24653",
+      "arxiv_id": "2607.24653",
+      "authors": [
+        "Kimi Team",
+        "Tongtong Bai",
+        "Yifan Bai",
+        "Yiping Bao",
+        "M. C.",
+        "Jianfeng Cai",
+        "Xinyuan Cai",
+        "Peizhou Cao",
+        "Yuxuan Cao",
+        "Ziwei Chai",
+        "Y. Charles",
+        "H. S. Che",
+        "Guanduo Chen",
+        "Guangyu Chen",
+        "Guanzheng Chen",
+        "Huarong Chen",
+        "Jia Chen",
+        "Jianlong Chen",
+        "Jun Chen",
+        "Kexin Chen",
+        "Peng Chen",
+        "Ruijue Chen",
+        "Wentao Chen",
+        "Xin Chen",
+        "Yang Chen",
+        "Yanru Chen",
+        "Yifei Chen",
+        "Yingjiang Chen",
+        "Yuankun Chen",
+        "Yujie Chen",
+        "Yutian Chen",
+        "Zhirong Chen",
+        "Dazhi Cheng",
+        "Yean Cheng",
+        "Jialei Cui",
+        "Jingbing Cui",
+        "Anqi Dai",
+        "Jiaqi Deng",
+        "Hao Ding",
+        "Rui Ding",
+        "Shaofeng Ding",
+        "Mengfan Dong",
+        "Mengnan Dong",
+        "Yuhao Dong",
+        "Yuxin Dong",
+        "Angang Du",
+        "Chenzhuang Du",
+        "Dikang Du",
+        "J. Du",
+        "Yulun Du",
+        "Yu Fan",
+        "Jing Feng",
+        "Qiulin Feng",
+        "Yichen Feng",
+        "Kelin Fu",
+        "Qiang Fu",
+        "高甫瑄",
+        "Hongcheng Gao",
+        "Jingyue Gao",
+        "Tong Gao",
+        "Weijia Gao",
+        "Shangyi Geng",
+        "Jie Gong",
+        "功 林戸",
+        "Shengao Gong",
+        "Xiaochen Gong",
+        "Qizheng Gu",
+        "Yicheng Gu",
+        "Shuhao Guan",
+        "Haiqing Guo",
+        "Shiqi Guo",
+        "Xiang Guo",
+        "Zhengyan Guo",
+        "Beixi Hao",
+        "Wenxin Hao",
+        "Xiaoru Hao",
+        "Dailan He",
+        "Haotian He",
+        "Lehan He",
+        "Qi He",
+        "Weiran He",
+        "Xinran He",
+        "Xinyi He",
+        "Yibo He",
+        "Yi He",
+        "Chao Hong",
+        "Tiange Hong",
+        "Hao Hu",
+        "Jiaxi Hu",
+        "Ruikun Hu",
+        "Weiming Hu",
+        "Yangyang Hu",
+        "Zhenxing Hu",
+        "Liang Hua",
+        "Jinbin Huang",
+        "Ke Huang",
+        "Ruiyuan Huang",
+        "Siying Huang",
+        "Weixiao Huang",
+        "Yan Huang"
+      ]
+    },
+    {
+      "title": "Beyond Independent Optimization: Compression, MoE Routing, and Quantization Interactions in Multimodal Edge Intelligence",
+      "source_url": "https://arxiv.org/abs/2607.20981",
+      "year": 2026,
+      "published": "2026-07-23",
+      "canonical_id": "arXiv:2607.20981",
+      "arxiv_id": "2607.20981",
+      "authors": [
+        "Jay Gor",
+        "Karm Dave",
+        "Akshita Abrol",
+        "Rajesh Gupta",
+        "Sudeep Tanwar",
+        "Zhengkui Wang"
+      ]
+    },
+    {
+      "title": "Beyond Storage: State as a Runtime Control Problem in Parallel and Distributed Systems",
+      "source_url": "https://arxiv.org/abs/2607.16836",
+      "year": 2026,
+      "published": "2026-07-18",
+      "canonical_id": "arXiv:2607.16836",
+      "arxiv_id": "2607.16836",
+      "authors": [
+        "Shuhao Zhang",
+        "H H Peng",
+        "Chun Ho",
+        "Yancan Mao",
+        "Yufeng Du",
+        "Liu S",
+        "Ruijie Qiu",
+        "Xiaofei Liao",
+        "Hai Jin"
+      ]
+    },
+    {
+      "title": "Current Status, Challenges, and Prospects for Machine Vision Empowered by Edge Intelligence",
+      "source_url": "https://doi.org/10.1016/j.eng.2026.07.017",
+      "year": 2026,
+      "published": "2026-07-01",
+      "canonical_id": "DOI:10.1016/j.eng.2026.07.017",
+      "doi": "10.1016/j.eng.2026.07.017",
+      "authors": [
+        "Bingrui Zhao",
+        "Yaonan Wang",
+        "Hui Zhang",
+        "Hai Wang",
+        "Kaiwen Tang",
+        "Xiangdong Liao",
+        "Yurong Chen",
+        "Xuesan Su",
+        "Ating Yin"
+      ]
+    },
+    {
+      "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02574",
+      "year": 2026,
+      "published": "2026-06-30",
+      "canonical_id": "arXiv:2607.02574",
+      "arxiv_id": "2607.02574",
+      "authors": [
+        "Jie Li",
+        "Tongyang Wang",
+        "Yong Chen"
+      ]
+    },
+    {
+      "title": "Exploring High-Bandwidth Flash for Modern LLM Inference: Opportunities and Challenges",
+      "source_url": "https://doi.org/10.1109/lca.2026.3705817",
+      "year": 2026,
+      "published": "2026-06-22",
+      "canonical_id": "arXiv:2608.13868",
+      "arxiv_id": "2608.13868",
+      "authors": [
+        "Dowon Son",
+        "Yonggon Park",
+        "Hyunuk Cho",
+        "Hyungkyu Ham",
+        "Onur Mutlu",
+        "Sungjin Lee",
+        "Gwangsun Kim",
+        "Jisung Park"
+      ]
+    },
+    {
+      "title": "BatchGen: An Architecture for Scalable and Efficient Batch Inference",
+      "source_url": "https://arxiv.org/abs/2606.21712",
+      "year": 2026,
+      "published": "2026-06-19",
+      "canonical_id": "arXiv:2606.21712",
+      "arxiv_id": "2606.21712",
+      "authors": [
+        "Tairan Xu",
+        "Leyang Xue",
+        "Zhan Lu",
+        "Jinfu Deng",
+        "Hongyang Xiao",
+        "Yu Jiang",
+        "C N He",
+        "Matej Šandor",
+        "Le Xu",
+        "Luo Mai"
+      ]
+    },
+    {
+      "title": "Tiara: A Programmable Line-Rate ISA for Remote Memory Access",
+      "source_url": "https://arxiv.org/abs/2606.13708",
+      "year": 2026,
+      "published": "2026-06-10",
+      "canonical_id": "arXiv:2606.13708",
+      "arxiv_id": "2606.13708",
+      "authors": [
+        "Bojie Li"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.06403",
+      "identity_tokens": [
+        "id:arXiv:2609.06403",
+        "title:from concentration to differentiation and back routing effective rank in moe reasoning cohorts",
+        "url:https://arxiv.org/abs/2609.06403"
+      ],
+      "record": {
+        "title": "From Concentration to Differentiation and Back: Routing Effective Rank in MoE Reasoning Cohorts",
+        "source_url": "https://arxiv.org/abs/2609.06403",
+        "year": 2026,
+        "published": "2026-09-06",
+        "canonical_id": "arXiv:2609.06403",
+        "arxiv_id": "2609.06403",
+        "authors": [
+          "Kang Chen",
+          "Sihan Zhao",
+          "Yixin Cao",
+          "Yu-Gang Jiang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.27046",
+      "identity_tokens": [
+        "id:arXiv:2608.27046",
+        "title:performance foundations of parallel distributed reasoning language models",
+        "url:https://arxiv.org/abs/2608.27046"
+      ],
+      "record": {
+        "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+        "source_url": "https://arxiv.org/abs/2608.27046",
+        "year": 2026,
+        "published": "2026-08-27",
+        "canonical_id": "arXiv:2608.27046",
+        "arxiv_id": "2608.27046",
+        "authors": [
+          "Maciej Besta",
+          "Leonard Schmidt",
+          "Lara Nonino",
+          "Robert Gerstenberger",
+          "Pierre Pang",
+          "Patrik Okanovic",
+          "Ales Kubicek",
+          "Tiancheng Chen",
+          "B. Lipshitz",
+          "Torsten Hoefler"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.24664",
+      "identity_tokens": [
+        "id:arXiv:2608.24664",
+        "title:maia 200 a software defined dataflow system for largescale ai acceleration",
+        "url:https://arxiv.org/abs/2608.24664"
+      ],
+      "record": {
+        "title": "Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration",
+        "source_url": "https://arxiv.org/abs/2608.24664",
+        "year": 2026,
+        "published": "2026-08-25",
+        "canonical_id": "arXiv:2608.24664",
+        "arxiv_id": "2608.24664",
+        "authors": [
+          "Sherry Xu",
+          "Marco Heddes",
+          "Jackson Peng",
+          "Tom Savell",
+          "Monica Tang",
+          "Prashant Ranjan",
+          "Jesse Benson",
+          "Ofer Dekel",
+          "Saurabh Dighe",
+          "Anupama Kurpad",
+          "Artour Levin",
+          "Matthew Mattina",
+          "George Petre",
+          "Cheng Tang",
+          "Yuan Yu",
+          "Li Zhang",
+          "Torsten Hoefler"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.23841",
+      "identity_tokens": [
+        "id:arXiv:2608.23841",
+        "title:pipelinenative transformers codesigning model architecture and cpu inference for bandwidthefficient autoregressive decode",
+        "url:https://arxiv.org/abs/2608.23841"
+      ],
+      "record": {
+        "title": "Pipeline-Native Transformers: Co-Designing Model Architecture and CPU Inference for Bandwidth-Efficient Autoregressive Decode",
+        "source_url": "https://arxiv.org/abs/2608.23841",
+        "year": 2026,
+        "published": "2026-08-24",
+        "canonical_id": "arXiv:2608.23841",
+        "arxiv_id": "2608.23841",
+        "authors": [
+          "Tom Poperszky"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21693",
+      "identity_tokens": [
+        "id:arXiv:2608.21693",
+        "title:benchmarking composable compression techniques in mixtureofexperts llms",
+        "url:https://arxiv.org/abs/2608.21693"
+      ],
+      "record": {
+        "title": "Benchmarking Composable Compression Techniques in Mixture-of-Experts LLMs",
+        "source_url": "https://arxiv.org/abs/2608.21693",
+        "year": 2026,
+        "published": "2026-08-22",
+        "canonical_id": "arXiv:2608.21693",
+        "arxiv_id": "2608.21693",
+        "authors": [
+          "Afsara Benazir",
+          "Chen Chen",
+          "Rongxiao Qu",
+          "Jiabo Huang",
+          "Jingtao Li",
+          "Lingjuan Lyu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10741449/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10741449/v1",
+        "title:predatory moe serving mixtureofexperts with a sequencelocal expert roster",
+        "url:https://doi.org/10.21203/rs.3.rs-10741449/v1"
+      ],
+      "record": {
+        "title": "Predatory MoE: Serving Mixture-of-Experts with a Sequence-Local Expert Roster",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10741449/v1",
+        "year": 2026,
+        "published": "2026-08-19",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10741449/v1",
+        "doi": "10.21203/rs.3.rs-10741449/v1",
+        "authors": [
+          "ChaeWoo Son"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09119",
+      "identity_tokens": [
+        "id:arXiv:2608.09119",
+        "title:motif 3 technical report",
+        "url:https://arxiv.org/abs/2608.09119"
+      ],
+      "record": {
+        "title": "Motif 3: Technical Report",
+        "source_url": "https://arxiv.org/abs/2608.09119",
+        "year": 2026,
+        "published": "2026-08-10",
+        "canonical_id": "arXiv:2608.09119",
+        "arxiv_id": "2608.09119",
+        "authors": [
+          "Junghwan Lim",
+          "Joon Son Chung",
+          "S. LEE",
+          "Wai Ting Cheung",
+          "Gihun Cho",
+          "Minsu Ha",
+          "Sangho Kang",
+          "Beomgyu Kim",
+          "Dongseok Kim",
+          "Jangwoong Kim",
+          "Taehyun Kim",
+          "Taewhan Kim",
+          "Jeesoo Lee",
+          "Jeongdoo Lee",
+          "Junhyeok Lee",
+          "Dongpin Oh",
+          "HyeYeon Cho",
+          "Dahye Choi",
+          "Jaeheui Her",
+          "Hanbin Jung",
+          "Changjin Kang",
+          "Minjae Kim",
+          "Youngrok Kim",
+          "Hyukjin Kweon",
+          "Hak-Bum Lee",
+          "Yeongjae Park",
+          "Bokki Ryu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08081",
+      "identity_tokens": [
+        "id:arXiv:2608.08081",
+        "title:rotaryquant fitting 120b moe models on consumer hardware via fused compressedspace attention",
+        "url:https://arxiv.org/abs/2608.08081"
+      ],
+      "record": {
+        "title": "RotaryQuant: Fitting 120B MoE Models on Consumer Hardware via Fused Compressed-Space Attention",
+        "source_url": "https://arxiv.org/abs/2608.08081",
+        "year": 2026,
+        "published": "2026-08-08",
+        "canonical_id": "arXiv:2608.08081",
+        "arxiv_id": "2608.08081",
+        "authors": [
+          "Anthony. Lui",
+          "Mohamed. Elsaied",
+          "N. P. Savani"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02341",
+      "identity_tokens": [
+        "id:arXiv:2608.02341",
+        "title:broadcast rate limits in wifi a forgotten bottleneck for collaborative edge llm inference",
+        "url:https://arxiv.org/abs/2608.02341"
+      ],
+      "record": {
+        "title": "Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference",
+        "source_url": "https://arxiv.org/abs/2608.02341",
+        "year": 2026,
+        "published": "2026-08-03",
+        "canonical_id": "arXiv:2608.02341",
+        "arxiv_id": "2608.02341",
+        "authors": [
+          "L.L. Wang",
+          "Yuyang Du",
+          "Shiqi Xu",
+          "Soung Chang Liew"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01662",
+      "identity_tokens": [
+        "id:arXiv:2608.01662",
+        "title:longcat sparse attention taming the lightning via streamingaware hierarchical crosslayer indexing",
+        "url:https://arxiv.org/abs/2608.01662"
+      ],
+      "record": {
+        "title": "LongCat Sparse Attention: Taming the Lightning via Streaming-aware Hierarchical Cross-Layer Indexing",
+        "source_url": "https://arxiv.org/abs/2608.01662",
+        "year": 2026,
+        "published": "2026-08-03",
+        "canonical_id": "arXiv:2608.01662",
+        "arxiv_id": "2608.01662",
+        "authors": [
+          "Wen Zan",
+          "Jiaqi Zhang",
+          "Jianchao Tan",
+          "Hong Liu",
+          "Cunguang Wang",
+          "Xiang Lorraine Li",
+          "Duyue Ma",
+          "Guanyu Wu",
+          "Yifan Lu",
+          "Fengcun Li",
+          "Yerui Sun",
+          "Peng Pei",
+          "Yuchen Xie",
+          "Xunliang Cai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00573",
+      "identity_tokens": [
+        "id:arXiv:2608.00573",
+        "title:trimmoe a communication aware and adaptive depth framework for distributed edge inference",
+        "url:https://arxiv.org/abs/2608.00573"
+      ],
+      "record": {
+        "title": "TrimMoE A communication aware and adaptive depth framework for distributed edge inference",
+        "source_url": "https://arxiv.org/abs/2608.00573",
+        "year": 2026,
+        "published": "2026-08-01",
+        "canonical_id": "arXiv:2608.00573",
+        "arxiv_id": "2608.00573",
+        "authors": [
+          "Ning Li",
+          "Shuting Bai",
+          "Xin Yuan",
+          "Wenchao Xu",
+          "Song Guo",
+          "Haijun Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.26444",
+      "identity_tokens": [
+        "id:arXiv:2607.26444",
+        "title:stratacl fabricnative communication library for production supernodes",
+        "url:https://arxiv.org/abs/2607.26444"
+      ],
+      "record": {
+        "title": "StrataCL: Fabric-Native Communication Library for Production Supernodes",
+        "source_url": "https://arxiv.org/abs/2607.26444",
+        "year": 2026,
+        "published": "2026-07-29",
+        "canonical_id": "arXiv:2607.26444",
+        "arxiv_id": "2607.26444",
+        "authors": [
+          "Tiancheng Hu",
+          "Jin Qin",
+          "Yuzheng Wang",
+          "Ke Liu",
+          "TangShengSheng Li",
+          "Sheng Wang",
+          "Zhongzhe Hu",
+          "Tianlun Hu",
+          "Wei Wang",
+          "Lijun Li",
+          "Jingbin Zhou",
+          "Xiaoming Bao",
+          "Hongwei Sun",
+          "Jieru Zhao",
+          "Huimin Cui",
+          "Tao Xie",
+          "Chenxi Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.24653",
+      "identity_tokens": [
+        "id:arXiv:2607.24653",
+        "title:kimi k3 open frontier intelligence",
+        "url:https://arxiv.org/abs/2607.24653"
+      ],
+      "record": {
+        "title": "Kimi K3: Open Frontier Intelligence",
+        "source_url": "https://arxiv.org/abs/2607.24653",
+        "year": 2026,
+        "published": "2026-07-27",
+        "canonical_id": "arXiv:2607.24653",
+        "arxiv_id": "2607.24653",
+        "authors": [
+          "Kimi Team",
+          "Tongtong Bai",
+          "Yifan Bai",
+          "Yiping Bao",
+          "M. C.",
+          "Jianfeng Cai",
+          "Xinyuan Cai",
+          "Peizhou Cao",
+          "Yuxuan Cao",
+          "Ziwei Chai",
+          "Y. Charles",
+          "H. S. Che",
+          "Guanduo Chen",
+          "Guangyu Chen",
+          "Guanzheng Chen",
+          "Huarong Chen",
+          "Jia Chen",
+          "Jianlong Chen",
+          "Jun Chen",
+          "Kexin Chen",
+          "Peng Chen",
+          "Ruijue Chen",
+          "Wentao Chen",
+          "Xin Chen",
+          "Yang Chen",
+          "Yanru Chen",
+          "Yifei Chen",
+          "Yingjiang Chen",
+          "Yuankun Chen",
+          "Yujie Chen",
+          "Yutian Chen",
+          "Zhirong Chen",
+          "Dazhi Cheng",
+          "Yean Cheng",
+          "Jialei Cui",
+          "Jingbing Cui",
+          "Anqi Dai",
+          "Jiaqi Deng",
+          "Hao Ding",
+          "Rui Ding",
+          "Shaofeng Ding",
+          "Mengfan Dong",
+          "Mengnan Dong",
+          "Yuhao Dong",
+          "Yuxin Dong",
+          "Angang Du",
+          "Chenzhuang Du",
+          "Dikang Du",
+          "J. Du",
+          "Yulun Du",
+          "Yu Fan",
+          "Jing Feng",
+          "Qiulin Feng",
+          "Yichen Feng",
+          "Kelin Fu",
+          "Qiang Fu",
+          "高甫瑄",
+          "Hongcheng Gao",
+          "Jingyue Gao",
+          "Tong Gao",
+          "Weijia Gao",
+          "Shangyi Geng",
+          "Jie Gong",
+          "功 林戸",
+          "Shengao Gong",
+          "Xiaochen Gong",
+          "Qizheng Gu",
+          "Yicheng Gu",
+          "Shuhao Guan",
+          "Haiqing Guo",
+          "Shiqi Guo",
+          "Xiang Guo",
+          "Zhengyan Guo",
+          "Beixi Hao",
+          "Wenxin Hao",
+          "Xiaoru Hao",
+          "Dailan He",
+          "Haotian He",
+          "Lehan He",
+          "Qi He",
+          "Weiran He",
+          "Xinran He",
+          "Xinyi He",
+          "Yibo He",
+          "Yi He",
+          "Chao Hong",
+          "Tiange Hong",
+          "Hao Hu",
+          "Jiaxi Hu",
+          "Ruikun Hu",
+          "Weiming Hu",
+          "Yangyang Hu",
+          "Zhenxing Hu",
+          "Liang Hua",
+          "Jinbin Huang",
+          "Ke Huang",
+          "Ruiyuan Huang",
+          "Siying Huang",
+          "Weixiao Huang",
+          "Yan Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.20981",
+      "identity_tokens": [
+        "id:arXiv:2607.20981",
+        "title:beyond independent optimization compression moe routing and quantization interactions in multimodal edge intelligence",
+        "url:https://arxiv.org/abs/2607.20981"
+      ],
+      "record": {
+        "title": "Beyond Independent Optimization: Compression, MoE Routing, and Quantization Interactions in Multimodal Edge Intelligence",
+        "source_url": "https://arxiv.org/abs/2607.20981",
+        "year": 2026,
+        "published": "2026-07-23",
+        "canonical_id": "arXiv:2607.20981",
+        "arxiv_id": "2607.20981",
+        "authors": [
+          "Jay Gor",
+          "Karm Dave",
+          "Akshita Abrol",
+          "Rajesh Gupta",
+          "Sudeep Tanwar",
+          "Zhengkui Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.16836",
+      "identity_tokens": [
+        "id:arXiv:2607.16836",
+        "title:beyond storage state as a runtime control problem in parallel and distributed systems",
+        "url:https://arxiv.org/abs/2607.16836"
+      ],
+      "record": {
+        "title": "Beyond Storage: State as a Runtime Control Problem in Parallel and Distributed Systems",
+        "source_url": "https://arxiv.org/abs/2607.16836",
+        "year": 2026,
+        "published": "2026-07-18",
+        "canonical_id": "arXiv:2607.16836",
+        "arxiv_id": "2607.16836",
+        "authors": [
+          "Shuhao Zhang",
+          "H H Peng",
+          "Chun Ho",
+          "Yancan Mao",
+          "Yufeng Du",
+          "Liu S",
+          "Ruijie Qiu",
+          "Xiaofei Liao",
+          "Hai Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.eng.2026.07.017",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.eng.2026.07.017",
+        "title:current status challenges and prospects for machine vision empowered by edge intelligence",
+        "url:https://doi.org/10.1016/j.eng.2026.07.017"
+      ],
+      "record": {
+        "title": "Current Status, Challenges, and Prospects for Machine Vision Empowered by Edge Intelligence",
+        "source_url": "https://doi.org/10.1016/j.eng.2026.07.017",
+        "year": 2026,
+        "published": "2026-07-01",
+        "canonical_id": "DOI:10.1016/j.eng.2026.07.017",
+        "doi": "10.1016/j.eng.2026.07.017",
+        "authors": [
+          "Bingrui Zhao",
+          "Yaonan Wang",
+          "Hui Zhang",
+          "Hai Wang",
+          "Kaiwen Tang",
+          "Xiangdong Liao",
+          "Yurong Chen",
+          "Xuesan Su",
+          "Ating Yin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02574",
+      "identity_tokens": [
+        "id:arXiv:2607.02574",
+        "title:from tensor buffer to distributed memory hierarchy a survey of kv cache management for llm serving",
+        "url:https://arxiv.org/abs/2607.02574"
+      ],
+      "record": {
+        "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2607.02574",
+        "year": 2026,
+        "published": "2026-06-30",
+        "canonical_id": "arXiv:2607.02574",
+        "arxiv_id": "2607.02574",
+        "authors": [
+          "Jie Li",
+          "Tongyang Wang",
+          "Yong Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.13868",
+      "identity_tokens": [
+        "id:DOI:10.1109/lca.2026.3705817",
+        "id:arXiv:2608.13868",
+        "title:exploring highbandwidth flash for modern llm inference opportunities and challenges",
+        "url:https://doi.org/10.1109/lca.2026.3705817"
+      ],
+      "record": {
+        "title": "Exploring High-Bandwidth Flash for Modern LLM Inference: Opportunities and Challenges",
+        "source_url": "https://doi.org/10.1109/lca.2026.3705817",
+        "year": 2026,
+        "published": "2026-06-22",
+        "canonical_id": "arXiv:2608.13868",
+        "arxiv_id": "2608.13868",
+        "authors": [
+          "Dowon Son",
+          "Yonggon Park",
+          "Hyunuk Cho",
+          "Hyungkyu Ham",
+          "Onur Mutlu",
+          "Sungjin Lee",
+          "Gwangsun Kim",
+          "Jisung Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.21712",
+      "identity_tokens": [
+        "id:arXiv:2606.21712",
+        "title:batchgen an architecture for scalable and efficient batch inference",
+        "url:https://arxiv.org/abs/2606.21712"
+      ],
+      "record": {
+        "title": "BatchGen: An Architecture for Scalable and Efficient Batch Inference",
+        "source_url": "https://arxiv.org/abs/2606.21712",
+        "year": 2026,
+        "published": "2026-06-19",
+        "canonical_id": "arXiv:2606.21712",
+        "arxiv_id": "2606.21712",
+        "authors": [
+          "Tairan Xu",
+          "Leyang Xue",
+          "Zhan Lu",
+          "Jinfu Deng",
+          "Hongyang Xiao",
+          "Yu Jiang",
+          "C N He",
+          "Matej Šandor",
+          "Le Xu",
+          "Luo Mai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.13708",
+      "identity_tokens": [
+        "id:arXiv:2606.13708",
+        "title:tiara a programmable linerate isa for remote memory access",
+        "url:https://arxiv.org/abs/2606.13708"
+      ],
+      "record": {
+        "title": "Tiara: A Programmable Line-Rate ISA for Remote Memory Access",
+        "source_url": "https://arxiv.org/abs/2606.13708",
+        "year": 2026,
+        "published": "2026-06-10",
+        "canonical_id": "arXiv:2606.13708",
+        "arxiv_id": "2606.13708",
+        "authors": [
+          "Bojie Li"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:89e4e477e582447901e85a324bef26e16783ab1d0cc53a833bdbbdce3e233317",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

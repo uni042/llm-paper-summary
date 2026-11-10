@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-7136b00409c03bf5-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2512.20330",
+  "reason": "The experiments concern multicontrast cardiac-MRI reconstruction (DualSpaceCMR/VQPrompt/Moero), not language-model inference. The authors report sparse MoE routing slows PyTorch throughput and wall-clock training; the paper does not propose an LLM-serving or inference optimization. The medical reconstruction application is distinct from the linked LLM-expert lineage.",
+  "title": "Branch Learning in MRI: More Data, More Models, More Training",
+  "identity_tokens": [
+    "arXiv:2512.20330"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7136b00409c0",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

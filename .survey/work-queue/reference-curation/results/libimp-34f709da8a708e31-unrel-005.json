@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-34f709da8a708e31-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1911.03894",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1911.03894",
+    "identity_tokens": [
+      "arXiv:1911.03894"
+    ],
+    "reason": "フランス語RoBERTa系モデルCamemBERTを事前学習し、POS tagging、dependency parsing、NER、NLI等で言語能力を評価するpretraining/model研究。推論システム効率化は対象外。",
+    "first_checked_at": "2026-10-04T17:57:47+00:00",
+    "last_checked_at": "2026-10-04T17:57:47+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "CamemBERT: a Tasty French Language Model"
+  },
+  "processed_at": "2026-10-04T17:57:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-34f709da8a70",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

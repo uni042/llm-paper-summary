@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-275ac12a64f645de-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:905159ec26b524ccd7fa42a1331bceac29016874",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:905159ec26b524ccd7fa42a1331bceac29016874",
+    "identity_tokens": [
+      "SemanticScholar:905159ec26b524ccd7fa42a1331bceac29016874",
+      "arXiv:2110.06206"
+    ],
+    "reason": "Its Atari and DeepMind Control Suite results target action prediction and long-sequence learning, rather than language-model inference efficiency.",
+    "first_checked_at": "2026-10-14T06:36:20+00:00",
+    "last_checked_at": "2026-10-14T06:36:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "StARformer: Transformer with State-Action-Reward Representations for Visual Reinforcement Learning"
+  },
+  "processed_at": "2026-10-14T06:36:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-275ac12a64f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

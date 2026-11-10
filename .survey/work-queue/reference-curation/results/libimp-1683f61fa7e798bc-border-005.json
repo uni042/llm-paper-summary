@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1683f61fa7e798bc-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.16033",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.16033",
+    "identity_tokens": [
+      "arXiv:2410.16033"
+    ],
+    "reason": "Compute-aware inference-time alignment is adjacent, but checked results support quality at equal compute rather than an inference-efficiency gain.",
+    "first_checked_at": "2026-10-05T12:32:42+00:00",
+    "last_checked_at": "2026-10-05T12:32:42+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2402.12374-sequoia-scalable-robust-and-hardware-aware-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2405.19715-specdec-boosting-speculative-decoding-via-adaptive-candidate-lengths.md"
+    ],
+    "title": "TreeBoN: Enhancing Inference-Time Alignment with Speculative Tree-Search and Best-of-N Sampling"
+  },
+  "processed_at": "2026-10-05T12:32:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1683f61fa7e7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

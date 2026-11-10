@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-315374c4cdf1215e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s10791-026-10470-w",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s10791-026-10470-w",
+    "identity_tokens": [
+      "DOI:10.1007/s10791-026-10470-w"
+    ],
+    "reason": "Tire surface defects are critical factors affecting driving safety, and traditional manual inspection methods suffer from low efficiency, strong subjectivity, and high missed detection rates. To alleviate these drawbacks, this study constructs an attention-enhanced Swin Transformer (AE-Swin Transformer) for automatic tire surface defect classification with acceptable precision. Firstly, a multi-scale convolutional attention module (MCAM) is embedded into the vanilla Swin Transformer to strengthen feature extraction capacity for tiny defect regions. Secondly, a cross-scale feature fusion module (FFM) is designed to aggregate low-level texture features and high-level semantic features, which helps distinguish defective areas from normal tire backgrounds. Validations are carried out on three public tire defect datasets, namely the TireNet Dataset, Tire Quality Inspection Dataset and Tire Texture Image Recognition Dataset. The proposed model reaches AP values of 97.8%, 96.5% and 95.4% on the three datasets respectively, which obtains 2.3–4.5% numerical improvements compared with several mainstream backbones including ResNet50, EfficientNet-B4 and the original Swin Transformer. The presented method can serve as an alternative solution for tire surface defect classification in automobile manufacturing, and possesses certain practical reference value for product quality control and driving risk reduction.",
+    "first_checked_at": "2026-10-05T08:19:05+00:00",
+    "last_checked_at": "2026-10-05T08:19:05+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "A novel attention-enhanced Swin Transformer for tire surface defect classification"
+  },
+  "processed_at": "2026-10-05T08:19:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-315374c4cdf1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

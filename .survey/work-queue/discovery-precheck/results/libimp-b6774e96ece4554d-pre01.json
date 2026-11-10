@@ -1,0 +1,873 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b6774e96ece4554d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b6774e96ece4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2025.acl-long.703",
+    "arXiv:2602.01744",
+    "arXiv:2606.14782",
+    "arXiv:2607.20757",
+    "arXiv:2609.33477",
+    "arXiv:2609.33768",
+    "arXiv:2609.37062",
+    "arXiv:2609.40118",
+    "arXiv:2610.28355"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9d72d7c4e5a1387b152dbdc4ed687dda007ccf2c",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-31T03:51:59.290761+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2025.acl-long.703",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.01744",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.14782",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.20757",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33477",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33768",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.37062",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.40118",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.28355",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Last But Not Least: Boundary Attention CalibratiON for Multimodal KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2606.14782",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) achieve strong vision-language reasoning but incur large KV caches and high decoding latency with long visual contexts. Existing compression methods rely on observation window attention for stable token importance estimation, yet this aggregation can dilute sparse critical evidence and discard answer-relevant tokens under aggressive compression. We identify last query attention as a complementary signal for recovering such evidence, though its irrelevant signals may introduce additional noise. We propose BACON, a plug-and-play method that calibrates observation window attention with last query evidence while suppressing noise through intra-layer coherence and inter-layer persistence. Across diverse benchmarks, models, budgets, and compression methods, BACON improves multimodal KV-cache compression by 7.5% on average under the most aggressive budget, with gains up to 30.9%.",
+      "identifiers": [
+        "SemanticScholar:a9ab65c0dd1e42707d83ec0363939579dd0b9086"
+      ],
+      "semantic_scholar_id": "a9ab65c0dd1e42707d83ec0363939579dd0b9086",
+      "canonical_id": "arXiv:2606.14782",
+      "arxiv_id": "2606.14782",
+      "doi": "10.48550/arXiv.2606.14782",
+      "authors": [
+        "Tian-Hao Chen",
+        "Yuheng Wu",
+        "Ke-Lu Yao",
+        "Xiao-Gang Xu",
+        "Xiao-Bin Hu",
+        "Dong-Man Lee"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Softmax Linear Attention: Reclaiming Global Competition",
+      "source_url": "https://arxiv.org/abs/2602.01744",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While linear attention reduces the quadratic complexity of standard Transformers to linear time, it often lags behind in expressivity due to the removal of softmax normalization. This omission eliminates \\emph{global competition}, a critical mechanism that enables models to sharply focus on relevant information amidst long-context noise. In this work, we propose \\textbf{Softmax Linear Attention (SLA)}, a framework designed to restore this competitive selection without sacrificing efficiency. By lifting the softmax operation from the token level to the head level, SLA leverages attention heads as coarse semantic slots, applying a competitive gating mechanism to dynamically select the most relevant subspaces. This reintroduces the ``winner-take-all''dynamics essential for precise retrieval and robust long-context understanding. Distinct from prior methods that focus on refining local kernel functions, SLA adopts a broader perspective by exploiting the higher-level multi-head aggregation structure. Extensive experiments demonstrate that SLA consistently enhances state-of-the-art linear baselines (RetNet, GLA, GDN) across language modeling and long-context benchmarks, particularly in challenging retrieval scenarios where it significantly boosts robustness against noise, validating its capability to restore precise focus while maintaining linear complexity.",
+      "identifiers": [
+        "SemanticScholar:ed091b29e1efc522c2a8a1844b5a0a56943ec237"
+      ],
+      "semantic_scholar_id": "ed091b29e1efc522c2a8a1844b5a0a56943ec237",
+      "canonical_id": "arXiv:2602.01744",
+      "arxiv_id": "2602.01744",
+      "doi": "10.48550/arXiv.2602.01744",
+      "authors": [
+        "Mingwei Xu",
+        "Xuan Lin",
+        "Xin Guo",
+        "Wan-Qing Xu",
+        "Wanyun Cui"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 271,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GaugeQuant: Online Learning of Quantization-Optimal Bases from LLM Symmetries",
+      "source_url": "https://arxiv.org/abs/2607.20757",
+      "year": 2026,
+      "published": "2026-07-22",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers are known to have internal continuous symmetries that leave outputs invariant, while modifying quantization. GaugeQuant leverages this in-training by introducing a LogSumExp term to the loss that breaks the symmetries, thus selecting a basis that minimizes activation outliers. A stop-gradient operator ensures that only rotation matrices are updated, yielding the language modeling objective completely unaltered. Our requires no specific calibration data, no quantization simulation, and adds negligible training overhead. With the LLaMA-2 7B model under W4A4 quantization with group size 128, perplexity drops from 8.22 to 6.73, competing with post-training methods that require frozen models and calibration datasets. Under W4A16, perplexity drops from 11.16 to 5.45. Code is available at https://github.com/MPedraBento/gauge-quant.",
+      "identifiers": [
+        "SemanticScholar:f80d2c39daf306de6a34b7d46a580fa2b74a1faa"
+      ],
+      "semantic_scholar_id": "f80d2c39daf306de6a34b7d46a580fa2b74a1faa",
+      "canonical_id": "arXiv:2607.20757",
+      "arxiv_id": "2607.20757",
+      "doi": "10.48550/arXiv.2607.20757",
+      "authors": [
+        "M. P. Bento",
+        "João Seabra"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 101,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond the Point Mass: Acceptance-Derived Weights and Distributional Losses for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.28355",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In speculative decoding, a lightweight draft model proposes tokens that the target model verifies in parallel, speeding up generation without changing the target distribution. D-PACE (Wu et al., 2026) trains such drafters with a loss that weights each position by its contribution to the expected accepted length. Both its weights and its cross-entropy (CE) loss use only the draft's probability of the recorded target token, treating the target as a point mass. Under rejection sampling, however, a sampled draft token is accepted with probability equal to the overlap of the draft and target distributions, one minus their total variation (TV). We derive D-PAL (Dynamic Position-wise Acceptance Loss) from the exact expected accepted length, using this overlap as the acceptance signal. This yields overlap-based position weights with log acceptance (LA) as the per-position loss, and the objective reduces to D-PACE for a point-mass target. Since the weights are detached, any per-position loss can replace LA in practice. We show that forward KL divergence and R\\'enyi divergence of order 1/2 match or exceed LA, and that R\\'enyi-1/2 provably bounds the true acceptance rate from above and below. Replacing CE with R\\'enyi-1/2 improves acceptance length under both D-PACE's weights and ours. On six benchmarks with a Qwen3-4B target, D-PAL raises mean acceptance length over D-PACE from 4.50 to 4.57 at T=0 and from 4.20 to 4.28 at T=1, and consistently achieves higher throughput at both temperatures.",
+      "identifiers": [
+        "SemanticScholar:0a9396a43370956ebadd897c5da2a6c9bee4fefe"
+      ],
+      "semantic_scholar_id": "0a9396a43370956ebadd897c5da2a6c9bee4fefe",
+      "canonical_id": "arXiv:2610.28355",
+      "arxiv_id": "2610.28355",
+      "authors": [
+        "Tian-Yu Wu",
+        "Zhuo-Hang Wang",
+        "Jonathan Geuter",
+        "Yu-Rong Yao",
+        "Wei-Fan Jiang",
+        "Cheng-Xi Zhang",
+        "Ju Li",
+        "Min-Lan Yu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ClusterAttn: KV Cache Compression under Intrinsic Attention Clustering",
+      "source_url": "https://doi.org/10.18653/v1/2025.acl-long.703",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention can effectively alleviate the significant demands on memory when large language models (LLMs) process long contexts. Existing methods typically apply the same sparse pattern across different attention heads and inputs. However, this uniform approach fails to capture the inherent diversity of attention patterns within LLMs — the intrinsic attention clustering. To address this, we pro-pose ClusterAttn, a training-free sparse attention method that provides an efficient prompt cache compression scheme under intrinsic attention clustering for efficient LLM inference. Our findings show that attention heads consistently focus on specific clusters of the prompt during decoding, a pattern detectable from an observation window at the prompt’s end. Clus-terAttn adaptively fits these clusters utilizing a density-based attention clustering algorithm, thus compressing the KV cache of the prompt. Evaluations on different models across various benchmarks demonstrate ClusterAttn’s superior compression rates and efficiency. By utilizing only 1024 tokens, it can reduce memory usage by 10%–65%, resulting in a latency reduction of 12%–23% and a throughput increase of 2.6–4.8 times, all with nearly no accuracy loss. Additionally, ClusterAttn can handle up to 128k context on a single A100-80GB GPU, outperforming existing methods.",
+      "identifiers": [
+        "SemanticScholar:75f8c6cff4e5e2179891ef7d281eca2609875eac"
+      ],
+      "semantic_scholar_id": "75f8c6cff4e5e2179891ef7d281eca2609875eac",
+      "doi": "10.18653/v1/2025.acl-long.703",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.703",
+      "authors": [
+        "Minwei Zhang",
+        "Hai-Feng Sun",
+        "Jing-Yu Wang",
+        "Shaolong Li",
+        "Wan-Yi Ning",
+        "Qi Qi",
+        "Zirui Zhuang",
+        "Jian-Xin Liao"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 487,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Just Let Linear States Forget the Distant Past: Prefix Caching via Suffix Replay for Hybrid LLMs",
+      "source_url": "https://arxiv.org/abs/2609.33477",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid LLMs interleave full-attention layers with linear-attention layers to reduce long-context inference cost, but this structure complicates prefix caching. Full-attention KV caches are token-addressable, whereas linear-attention layers maintain recurrent states that cannot be rolled back to arbitrary prefix boundaries. Existing systems materialize recurrent-state checkpoints, restricting prefix reuse to checkpoint-aligned positions. We present SuffixReplay, the first prefix caching system that lets hybrid LLMs reuse cached prefixes at every cache-supported page boundary without materializing recurrent-state checkpoints. Our key insight is to just let linear states forget the distant past. Modern linear-attention mechanisms use recurrent decay and gating to attenuate the influence of old inputs. Therefore, instead of checkpointing every prefix boundary, SuffixReplay approximates the state at a matched boundary by replaying only a recent suffix of the layer's input hidden states, which we retain as anchors. At the algorithmic level, SuffixReplay combines layer-wise and token-wise anchor sparsity with a bounded replay budget to control storage, computation, and quality. At the system level, it uses an independently managed anchor sidecar and a pipelined replay path to overlap anchor movement and state reconstruction with the native serving pipeline. We evaluate SuffixReplay on three hybrid LLMs: OLMo-Hybrid-7B, Qwen3.5-4B, and Qwen3.6-27B-FP8. Across these models, SuffixReplay retains 91.4-100% of full-prefill quality on average across LongBench and RULER, while using only 0.36-0.51x the amortized per-token storage of SGLang's default 8192-token checkpoint cache. Integrated into SGLang, SuffixReplay reduces median TTFT by 15-70% on branching workloads, sustains 2.3-4.3x SGLang's throughput when the working set exceeds HBM, and matches SGLang on high-hit continuation traffic.",
+      "identifiers": [
+        "SemanticScholar:f6fbfd531227293a9febf58313526d8d1f6380b7"
+      ],
+      "semantic_scholar_id": "f6fbfd531227293a9febf58313526d8d1f6380b7",
+      "canonical_id": "arXiv:2609.33477",
+      "arxiv_id": "2609.33477",
+      "authors": [
+        "Yi-Rui Liu",
+        "Ruo-Ling Qi",
+        "Xuan'er Wu",
+        "Yu-Xin Jin",
+        "Jian Chen",
+        "Peng-Hang Liu",
+        "Ya-Fei Huang",
+        "Jia-Wei Shao",
+        "Xue-Long Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DEALS: Decentralized Expertise-Aware Load Serving for Multi-Agent LLM Systems",
+      "source_url": "https://arxiv.org/abs/2609.33768",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent systems (MAS) have recently emerged as an effective approach for coordinating large language model (LLM)-based agents to solve complex tasks through structured interactions. In practice, MASs often handle a stream of heterogeneous and complex tasks, requiring agents to decompose each task and then self-organize and self-evolve to adapt to incoming tasks while sharing execution resources. However, most early approaches to MASs rely on centralized controllers or fixed coordination patterns, which can limit scalability or adaptability. In contrast, existing decentralized and dynamic MASs often require training dedicated routers or invoking LLMs for agent selection, resulting in substantial computational costs and coordination overhead. To address these challenges and enable efficient task-level self-organization and self-evolution for task- and workload-level collaboration, we propose Decentralized Expertise-Aware Load Serving (DEALS), a decentralized and low-complexity framework that enables agents to self-organize and dynamically route concurrent tasks for processing. Specifically, each agent maintains local queues of incoming tasks, and its router decides whether to process a task locally or forward it to a neighbor based on differences in backlog and success rate. Meanwhile, executors process independent tasks concurrently within and across agents, and partially solved tasks can be resumed by other agents. Experiments show that DEALS not only improves performance along multiple dimensions (e.g., answer accuracy and task throughput) in both homogeneous and heterogeneous agent pools, but also balances agent expertise and workload in a self-organized manner, enabling effective decentralized coordination.",
+      "identifiers": [
+        "SemanticScholar:c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b"
+      ],
+      "semantic_scholar_id": "c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b",
+      "canonical_id": "arXiv:2609.33768",
+      "arxiv_id": "2609.33768",
+      "authors": [
+        "Jing-Hang Huang",
+        "Wen-Bin Wang",
+        "Yan-Chuan Yin",
+        "Alvaro Velasquez",
+        "Jia Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "vSkipper: Translating Dynamic Layer Skipping into LLM Serving Gains",
+      "source_url": "https://arxiv.org/abs/2609.37062",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dynamic layer skipping reduces LLM computation by allowing each token to execute only a subset of the model's layers. However, existing skippers rely on specialized generation loops and do not integrate with modern serving engines. As a result, fewer executed layers do not necessarily translate into lower serving latency: FlexiDepth skips 8 of Llama-3-8B's 32 layers on average, yet its standard generation loop decodes 14.6--21.0% more slowly than the base model. We present vSkipper, a virtualization layer that makes dynamic layer skippers pluggable in serving engines while preserving continuous batching, fixed-shape batches, paged KV caching, and captured decode graphs. At each routed layer, vSkipper groups tokens by the skipper's decision and uses routed execution only when predicted to be profitable. We implement vSkipper in SGLang and evaluate the released FlexiDepth checkpoint against upstream SGLang under identical prompts, arrivals, output lengths, and launch settings. At the knee of upstream's load curve, vSkipper reduces mean end-to-end latency by 36.8% on GSM8K and 13.6% on BBH. Under saturation, it increases request throughput by 11.3% and 7.4%. Serving adds no statistically resolved quality loss beyond the checkpoint's own. Across synthetic skip policies, two Qwen3 skippers, and three GPUs, we demonstrate reuse without workload-specific tuning. To our knowledge, vSkipper is the first system to realize serving-efficiency gains from per-token interior layer skipping within a modern LLM serving engine. The code is open-sourced as an SGLang fork at https://github.com/AKafakA/sglang-vskipper/tree/vskipper-ref",
+      "identifiers": [
+        "SemanticScholar:639ef2217fa2ef14d2d9bc77749392d27d60b927"
+      ],
+      "semantic_scholar_id": "639ef2217fa2ef14d2d9bc77749392d27d60b927",
+      "canonical_id": "arXiv:2609.37062",
+      "arxiv_id": "2609.37062",
+      "authors": [
+        "Dao-Min Wei",
+        "Yavuz Ferhatosmanoglu",
+        "E. Kalyvianaki"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Persistent Context Graphs for Efficient Memory Compaction in LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.40118",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As LLM capabilities advance, agents are tackling increasingly complex tasks over longer horizons. Their growing interaction histories make memory compaction essential for staying within context windows and reducing prefill cost. Existing methods summarize the history or compress its KV cache, often adding model computation to preserve information for future requests. A new user request can change which history matters, but reassessing that history with the model requires re-encoding it if the KV cache has expired. Past attention provides signals of historical importance and dependencies between messages, while relevance to the current task must be assessed using the new user request. We introduce ReCAP, a memory compaction method that stores attention-derived importance scores and dependency links in a lightweight, persistent context graph. For each new request, ReCAP combines stored importance with relevance cues from the request and follows dependency links to select messages and their supporting context, without additional model calls for selection. Compared with Codex's default summarization-based compaction, ReCAP reduces estimated latency for compaction and cold restoration by approximately 95% on both Qwen3-Coder and gpt-oss. It also roughly halves the historical context per call on SWE-Together at comparable task quality and improves accuracy on the code tasks of Lost-in-Conversation over full history by 19.8 and 41.2 points.",
+      "identifiers": [
+        "SemanticScholar:dd403e44b44e9c56d1fbb9f580634fd7797d51e2"
+      ],
+      "semantic_scholar_id": "dd403e44b44e9c56d1fbb9f580634fd7797d51e2",
+      "canonical_id": "arXiv:2609.40118",
+      "arxiv_id": "2609.40118",
+      "authors": [
+        "Jing-Bo Yang",
+        "Kwei-Herng Lai",
+        "Xiao-Wen Wang",
+        "Zhao-Xuan Tan",
+        "Pei Zhou",
+        "Meng-Ting Wan",
+        "Y. Harari",
+        "E. Gabrilovich",
+        "Shi-Yu Chang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.14782",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.14782",
+        "id:SemanticScholar:a9ab65c0dd1e42707d83ec0363939579dd0b9086",
+        "id:arXiv:2606.14782",
+        "title:last but not least boundary attention calibration for multimodal kv cache compression",
+        "url:https://arxiv.org/abs/2606.14782"
+      ],
+      "record": {
+        "title": "Last But Not Least: Boundary Attention CalibratiON for Multimodal KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2606.14782",
+        "year": 2026,
+        "published": "2026-06-10",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) achieve strong vision-language reasoning but incur large KV caches and high decoding latency with long visual contexts. Existing compression methods rely on observation window attention for stable token importance estimation, yet this aggregation can dilute sparse critical evidence and discard answer-relevant tokens under aggressive compression. We identify last query attention as a complementary signal for recovering such evidence, though its irrelevant signals may introduce additional noise. We propose BACON, a plug-and-play method that calibrates observation window attention with last query evidence while suppressing noise through intra-layer coherence and inter-layer persistence. Across diverse benchmarks, models, budgets, and compression methods, BACON improves multimodal KV-cache compression by 7.5% on average under the most aggressive budget, with gains up to 30.9%.",
+        "identifiers": [
+          "SemanticScholar:a9ab65c0dd1e42707d83ec0363939579dd0b9086"
+        ],
+        "semantic_scholar_id": "a9ab65c0dd1e42707d83ec0363939579dd0b9086",
+        "canonical_id": "arXiv:2606.14782",
+        "arxiv_id": "2606.14782",
+        "doi": "10.48550/arXiv.2606.14782",
+        "authors": [
+          "Tian-Hao Chen",
+          "Yuheng Wu",
+          "Ke-Lu Yao",
+          "Xiao-Gang Xu",
+          "Xiao-Bin Hu",
+          "Dong-Man Lee"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 143,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.01744",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.01744",
+        "id:SemanticScholar:ed091b29e1efc522c2a8a1844b5a0a56943ec237",
+        "id:arXiv:2602.01744",
+        "title:softmax linear attention reclaiming global competition",
+        "url:https://arxiv.org/abs/2602.01744"
+      ],
+      "record": {
+        "title": "Softmax Linear Attention: Reclaiming Global Competition",
+        "source_url": "https://arxiv.org/abs/2602.01744",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While linear attention reduces the quadratic complexity of standard Transformers to linear time, it often lags behind in expressivity due to the removal of softmax normalization. This omission eliminates \\emph{global competition}, a critical mechanism that enables models to sharply focus on relevant information amidst long-context noise. In this work, we propose \\textbf{Softmax Linear Attention (SLA)}, a framework designed to restore this competitive selection without sacrificing efficiency. By lifting the softmax operation from the token level to the head level, SLA leverages attention heads as coarse semantic slots, applying a competitive gating mechanism to dynamically select the most relevant subspaces. This reintroduces the ``winner-take-all''dynamics essential for precise retrieval and robust long-context understanding. Distinct from prior methods that focus on refining local kernel functions, SLA adopts a broader perspective by exploiting the higher-level multi-head aggregation structure. Extensive experiments demonstrate that SLA consistently enhances state-of-the-art linear baselines (RetNet, GLA, GDN) across language modeling and long-context benchmarks, particularly in challenging retrieval scenarios where it significantly boosts robustness against noise, validating its capability to restore precise focus while maintaining linear complexity.",
+        "identifiers": [
+          "SemanticScholar:ed091b29e1efc522c2a8a1844b5a0a56943ec237"
+        ],
+        "semantic_scholar_id": "ed091b29e1efc522c2a8a1844b5a0a56943ec237",
+        "canonical_id": "arXiv:2602.01744",
+        "arxiv_id": "2602.01744",
+        "doi": "10.48550/arXiv.2602.01744",
+        "authors": [
+          "Mingwei Xu",
+          "Xuan Lin",
+          "Xin Guo",
+          "Wan-Qing Xu",
+          "Wanyun Cui"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 271,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.20757",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.20757",
+        "id:SemanticScholar:f80d2c39daf306de6a34b7d46a580fa2b74a1faa",
+        "id:arXiv:2607.20757",
+        "title:gaugequant online learning of quantizationoptimal bases from llm symmetries",
+        "url:https://arxiv.org/abs/2607.20757"
+      ],
+      "record": {
+        "title": "GaugeQuant: Online Learning of Quantization-Optimal Bases from LLM Symmetries",
+        "source_url": "https://arxiv.org/abs/2607.20757",
+        "year": 2026,
+        "published": "2026-07-22",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers are known to have internal continuous symmetries that leave outputs invariant, while modifying quantization. GaugeQuant leverages this in-training by introducing a LogSumExp term to the loss that breaks the symmetries, thus selecting a basis that minimizes activation outliers. A stop-gradient operator ensures that only rotation matrices are updated, yielding the language modeling objective completely unaltered. Our requires no specific calibration data, no quantization simulation, and adds negligible training overhead. With the LLaMA-2 7B model under W4A4 quantization with group size 128, perplexity drops from 8.22 to 6.73, competing with post-training methods that require frozen models and calibration datasets. Under W4A16, perplexity drops from 11.16 to 5.45. Code is available at https://github.com/MPedraBento/gauge-quant.",
+        "identifiers": [
+          "SemanticScholar:f80d2c39daf306de6a34b7d46a580fa2b74a1faa"
+        ],
+        "semantic_scholar_id": "f80d2c39daf306de6a34b7d46a580fa2b74a1faa",
+        "canonical_id": "arXiv:2607.20757",
+        "arxiv_id": "2607.20757",
+        "doi": "10.48550/arXiv.2607.20757",
+        "authors": [
+          "M. P. Bento",
+          "João Seabra"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 101,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.28355",
+      "identity_tokens": [
+        "id:SemanticScholar:0a9396a43370956ebadd897c5da2a6c9bee4fefe",
+        "id:arXiv:2610.28355",
+        "title:beyond the point mass acceptancederived weights and distributional losses for speculative decoding",
+        "url:https://arxiv.org/abs/2610.28355"
+      ],
+      "record": {
+        "title": "Beyond the Point Mass: Acceptance-Derived Weights and Distributional Losses for Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.28355",
+        "year": 2026,
+        "published": "2026-10-20",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In speculative decoding, a lightweight draft model proposes tokens that the target model verifies in parallel, speeding up generation without changing the target distribution. D-PACE (Wu et al., 2026) trains such drafters with a loss that weights each position by its contribution to the expected accepted length. Both its weights and its cross-entropy (CE) loss use only the draft's probability of the recorded target token, treating the target as a point mass. Under rejection sampling, however, a sampled draft token is accepted with probability equal to the overlap of the draft and target distributions, one minus their total variation (TV). We derive D-PAL (Dynamic Position-wise Acceptance Loss) from the exact expected accepted length, using this overlap as the acceptance signal. This yields overlap-based position weights with log acceptance (LA) as the per-position loss, and the objective reduces to D-PACE for a point-mass target. Since the weights are detached, any per-position loss can replace LA in practice. We show that forward KL divergence and R\\'enyi divergence of order 1/2 match or exceed LA, and that R\\'enyi-1/2 provably bounds the true acceptance rate from above and below. Replacing CE with R\\'enyi-1/2 improves acceptance length under both D-PACE's weights and ours. On six benchmarks with a Qwen3-4B target, D-PAL raises mean acceptance length over D-PACE from 4.50 to 4.57 at T=0 and from 4.20 to 4.28 at T=1, and consistently achieves higher throughput at both temperatures.",
+        "identifiers": [
+          "SemanticScholar:0a9396a43370956ebadd897c5da2a6c9bee4fefe"
+        ],
+        "semantic_scholar_id": "0a9396a43370956ebadd897c5da2a6c9bee4fefe",
+        "canonical_id": "arXiv:2610.28355",
+        "arxiv_id": "2610.28355",
+        "authors": [
+          "Tian-Yu Wu",
+          "Zhuo-Hang Wang",
+          "Jonathan Geuter",
+          "Yu-Rong Yao",
+          "Wei-Fan Jiang",
+          "Cheng-Xi Zhang",
+          "Ju Li",
+          "Min-Lan Yu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 11,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.acl-long.703",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.acl-long.703",
+        "id:SemanticScholar:75f8c6cff4e5e2179891ef7d281eca2609875eac",
+        "title:clusterattn kv cache compression under intrinsic attention clustering",
+        "url:https://doi.org/10.18653/v1/2025.acl-long.703"
+      ],
+      "record": {
+        "title": "ClusterAttn: KV Cache Compression under Intrinsic Attention Clustering",
+        "source_url": "https://doi.org/10.18653/v1/2025.acl-long.703",
+        "year": 2025,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse attention can effectively alleviate the significant demands on memory when large language models (LLMs) process long contexts. Existing methods typically apply the same sparse pattern across different attention heads and inputs. However, this uniform approach fails to capture the inherent diversity of attention patterns within LLMs — the intrinsic attention clustering. To address this, we pro-pose ClusterAttn, a training-free sparse attention method that provides an efficient prompt cache compression scheme under intrinsic attention clustering for efficient LLM inference. Our findings show that attention heads consistently focus on specific clusters of the prompt during decoding, a pattern detectable from an observation window at the prompt’s end. Clus-terAttn adaptively fits these clusters utilizing a density-based attention clustering algorithm, thus compressing the KV cache of the prompt. Evaluations on different models across various benchmarks demonstrate ClusterAttn’s superior compression rates and efficiency. By utilizing only 1024 tokens, it can reduce memory usage by 10%–65%, resulting in a latency reduction of 12%–23% and a throughput increase of 2.6–4.8 times, all with nearly no accuracy loss. Additionally, ClusterAttn can handle up to 128k context on a single A100-80GB GPU, outperforming existing methods.",
+        "identifiers": [
+          "SemanticScholar:75f8c6cff4e5e2179891ef7d281eca2609875eac"
+        ],
+        "semantic_scholar_id": "75f8c6cff4e5e2179891ef7d281eca2609875eac",
+        "doi": "10.18653/v1/2025.acl-long.703",
+        "canonical_id": "DOI:10.18653/v1/2025.acl-long.703",
+        "authors": [
+          "Minwei Zhang",
+          "Hai-Feng Sun",
+          "Jing-Yu Wang",
+          "Shaolong Li",
+          "Wan-Yi Ning",
+          "Qi Qi",
+          "Zirui Zhuang",
+          "Jian-Xin Liao"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 20,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 487,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33477",
+      "identity_tokens": [
+        "id:SemanticScholar:f6fbfd531227293a9febf58313526d8d1f6380b7",
+        "id:arXiv:2609.33477",
+        "title:just let linear states forget the distant past prefix caching via suffix replay for hybrid llms",
+        "url:https://arxiv.org/abs/2609.33477"
+      ],
+      "record": {
+        "title": "Just Let Linear States Forget the Distant Past: Prefix Caching via Suffix Replay for Hybrid LLMs",
+        "source_url": "https://arxiv.org/abs/2609.33477",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hybrid LLMs interleave full-attention layers with linear-attention layers to reduce long-context inference cost, but this structure complicates prefix caching. Full-attention KV caches are token-addressable, whereas linear-attention layers maintain recurrent states that cannot be rolled back to arbitrary prefix boundaries. Existing systems materialize recurrent-state checkpoints, restricting prefix reuse to checkpoint-aligned positions. We present SuffixReplay, the first prefix caching system that lets hybrid LLMs reuse cached prefixes at every cache-supported page boundary without materializing recurrent-state checkpoints. Our key insight is to just let linear states forget the distant past. Modern linear-attention mechanisms use recurrent decay and gating to attenuate the influence of old inputs. Therefore, instead of checkpointing every prefix boundary, SuffixReplay approximates the state at a matched boundary by replaying only a recent suffix of the layer's input hidden states, which we retain as anchors. At the algorithmic level, SuffixReplay combines layer-wise and token-wise anchor sparsity with a bounded replay budget to control storage, computation, and quality. At the system level, it uses an independently managed anchor sidecar and a pipelined replay path to overlap anchor movement and state reconstruction with the native serving pipeline. We evaluate SuffixReplay on three hybrid LLMs: OLMo-Hybrid-7B, Qwen3.5-4B, and Qwen3.6-27B-FP8. Across these models, SuffixReplay retains 91.4-100% of full-prefill quality on average across LongBench and RULER, while using only 0.36-0.51x the amortized per-token storage of SGLang's default 8192-token checkpoint cache. Integrated into SGLang, SuffixReplay reduces median TTFT by 15-70% on branching workloads, sustains 2.3-4.3x SGLang's throughput when the working set exceeds HBM, and matches SGLang on high-hit continuation traffic.",
+        "identifiers": [
+          "SemanticScholar:f6fbfd531227293a9febf58313526d8d1f6380b7"
+        ],
+        "semantic_scholar_id": "f6fbfd531227293a9febf58313526d8d1f6380b7",
+        "canonical_id": "arXiv:2609.33477",
+        "arxiv_id": "2609.33477",
+        "authors": [
+          "Yi-Rui Liu",
+          "Ruo-Ling Qi",
+          "Xuan'er Wu",
+          "Yu-Xin Jin",
+          "Jian Chen",
+          "Peng-Hang Liu",
+          "Ya-Fei Huang",
+          "Jia-Wei Shao",
+          "Xue-Long Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33768",
+      "identity_tokens": [
+        "id:SemanticScholar:c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b",
+        "id:arXiv:2609.33768",
+        "title:deals decentralized expertiseaware load serving for multiagent llm systems",
+        "url:https://arxiv.org/abs/2609.33768"
+      ],
+      "record": {
+        "title": "DEALS: Decentralized Expertise-Aware Load Serving for Multi-Agent LLM Systems",
+        "source_url": "https://arxiv.org/abs/2609.33768",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-agent systems (MAS) have recently emerged as an effective approach for coordinating large language model (LLM)-based agents to solve complex tasks through structured interactions. In practice, MASs often handle a stream of heterogeneous and complex tasks, requiring agents to decompose each task and then self-organize and self-evolve to adapt to incoming tasks while sharing execution resources. However, most early approaches to MASs rely on centralized controllers or fixed coordination patterns, which can limit scalability or adaptability. In contrast, existing decentralized and dynamic MASs often require training dedicated routers or invoking LLMs for agent selection, resulting in substantial computational costs and coordination overhead. To address these challenges and enable efficient task-level self-organization and self-evolution for task- and workload-level collaboration, we propose Decentralized Expertise-Aware Load Serving (DEALS), a decentralized and low-complexity framework that enables agents to self-organize and dynamically route concurrent tasks for processing. Specifically, each agent maintains local queues of incoming tasks, and its router decides whether to process a task locally or forward it to a neighbor based on differences in backlog and success rate. Meanwhile, executors process independent tasks concurrently within and across agents, and partially solved tasks can be resumed by other agents. Experiments show that DEALS not only improves performance along multiple dimensions (e.g., answer accuracy and task throughput) in both homogeneous and heterogeneous agent pools, but also balances agent expertise and workload in a self-organized manner, enabling effective decentralized coordination.",
+        "identifiers": [
+          "SemanticScholar:c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b"
+        ],
+        "semantic_scholar_id": "c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b",
+        "canonical_id": "arXiv:2609.33768",
+        "arxiv_id": "2609.33768",
+        "authors": [
+          "Jing-Hang Huang",
+          "Wen-Bin Wang",
+          "Yan-Chuan Yin",
+          "Alvaro Velasquez",
+          "Jia Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37062",
+      "identity_tokens": [
+        "id:SemanticScholar:639ef2217fa2ef14d2d9bc77749392d27d60b927",
+        "id:arXiv:2609.37062",
+        "title:vskipper translating dynamic layer skipping into llm serving gains",
+        "url:https://arxiv.org/abs/2609.37062"
+      ],
+      "record": {
+        "title": "vSkipper: Translating Dynamic Layer Skipping into LLM Serving Gains",
+        "source_url": "https://arxiv.org/abs/2609.37062",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Dynamic layer skipping reduces LLM computation by allowing each token to execute only a subset of the model's layers. However, existing skippers rely on specialized generation loops and do not integrate with modern serving engines. As a result, fewer executed layers do not necessarily translate into lower serving latency: FlexiDepth skips 8 of Llama-3-8B's 32 layers on average, yet its standard generation loop decodes 14.6--21.0% more slowly than the base model. We present vSkipper, a virtualization layer that makes dynamic layer skippers pluggable in serving engines while preserving continuous batching, fixed-shape batches, paged KV caching, and captured decode graphs. At each routed layer, vSkipper groups tokens by the skipper's decision and uses routed execution only when predicted to be profitable. We implement vSkipper in SGLang and evaluate the released FlexiDepth checkpoint against upstream SGLang under identical prompts, arrivals, output lengths, and launch settings. At the knee of upstream's load curve, vSkipper reduces mean end-to-end latency by 36.8% on GSM8K and 13.6% on BBH. Under saturation, it increases request throughput by 11.3% and 7.4%. Serving adds no statistically resolved quality loss beyond the checkpoint's own. Across synthetic skip policies, two Qwen3 skippers, and three GPUs, we demonstrate reuse without workload-specific tuning. To our knowledge, vSkipper is the first system to realize serving-efficiency gains from per-token interior layer skipping within a modern LLM serving engine. The code is open-sourced as an SGLang fork at https://github.com/AKafakA/sglang-vskipper/tree/vskipper-ref",
+        "identifiers": [
+          "SemanticScholar:639ef2217fa2ef14d2d9bc77749392d27d60b927"
+        ],
+        "semantic_scholar_id": "639ef2217fa2ef14d2d9bc77749392d27d60b927",
+        "canonical_id": "arXiv:2609.37062",
+        "arxiv_id": "2609.37062",
+        "authors": [
+          "Dao-Min Wei",
+          "Yavuz Ferhatosmanoglu",
+          "E. Kalyvianaki"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.40118",
+      "identity_tokens": [
+        "id:SemanticScholar:dd403e44b44e9c56d1fbb9f580634fd7797d51e2",
+        "id:arXiv:2609.40118",
+        "title:persistent context graphs for efficient memory compaction in llm agents",
+        "url:https://arxiv.org/abs/2609.40118"
+      ],
+      "record": {
+        "title": "Persistent Context Graphs for Efficient Memory Compaction in LLM Agents",
+        "source_url": "https://arxiv.org/abs/2609.40118",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As LLM capabilities advance, agents are tackling increasingly complex tasks over longer horizons. Their growing interaction histories make memory compaction essential for staying within context windows and reducing prefill cost. Existing methods summarize the history or compress its KV cache, often adding model computation to preserve information for future requests. A new user request can change which history matters, but reassessing that history with the model requires re-encoding it if the KV cache has expired. Past attention provides signals of historical importance and dependencies between messages, while relevance to the current task must be assessed using the new user request. We introduce ReCAP, a memory compaction method that stores attention-derived importance scores and dependency links in a lightweight, persistent context graph. For each new request, ReCAP combines stored importance with relevance cues from the request and follows dependency links to select messages and their supporting context, without additional model calls for selection. Compared with Codex's default summarization-based compaction, ReCAP reduces estimated latency for compaction and cold restoration by approximately 95% on both Qwen3-Coder and gpt-oss. It also roughly halves the historical context per call on SWE-Together at comparable task quality and improves accuracy on the code tasks of Lost-in-Conversation over full history by 19.8 and 41.2 points.",
+        "identifiers": [
+          "SemanticScholar:dd403e44b44e9c56d1fbb9f580634fd7797d51e2"
+        ],
+        "semantic_scholar_id": "dd403e44b44e9c56d1fbb9f580634fd7797d51e2",
+        "canonical_id": "arXiv:2609.40118",
+        "arxiv_id": "2609.40118",
+        "authors": [
+          "Jing-Bo Yang",
+          "Kwei-Herng Lai",
+          "Xiao-Wen Wang",
+          "Zhao-Xuan Tan",
+          "Pei Zhou",
+          "Meng-Ting Wan",
+          "Y. Harari",
+          "E. Gabrilovich",
+          "Shi-Yu Chang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b7dd1d7500bbaa5cfce843c87072ab49a16fef2d46a4b17bf759165232924be6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

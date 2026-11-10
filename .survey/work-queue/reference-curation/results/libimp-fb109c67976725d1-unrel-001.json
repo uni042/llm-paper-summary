@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fb109c67976725d1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.17749",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.17749",
+    "identity_tokens": [
+      "arXiv:2602.17749"
+    ],
+    "reason": "鯨類の反響定位クリック音を画像物体検出で識別する生物音響分類の研究で、LLM推論基盤と無関係。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+    "first_checked_at": "2026-10-29T20:46:33+00:00",
+    "last_checked_at": "2026-10-29T20:46:33+00:00",
+    "linked_from": [],
+    "title": "Detection and Classification of Cetacean Echolocation Clicks using Image-based Object Detection Methods applied to Advanced Wavelet-based Transformations"
+  },
+  "processed_at": "2026-10-29T20:46:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb109c679767",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

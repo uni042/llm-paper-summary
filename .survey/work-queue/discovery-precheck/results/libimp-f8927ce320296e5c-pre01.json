@@ -1,0 +1,107 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f8927ce320296e5c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f8927ce32029",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2305.01625"
+  ],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3167a1365944a62d2d81c5ebbb12ba97108b6a8d",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T10:59:35.351999+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2305.01625",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Unlimiformer: Long-Range Transformers with Unlimited Length Input",
+      "source_url": "https://arxiv.org/abs/2305.01625",
+      "year": 2023,
+      "published": "2023-05-02",
+      "abstract": "Since the proposal of transformers, these models have been limited to bounded input lengths, because of their need to attend to every token in the input. In this work, we propose Unlimiformer: a general approach that wraps any existing pretrained encoder-decoder transformer, and offloads the cross-attention computation to a single k-nearest-neighbor (kNN) index, while the returned kNN distances are the attention dot-product scores. This kNN index can be kept on either the GPU or CPU memory and queried in sub-linear time; this way, we can index practically unlimited input sequences, while every attention head in every decoder layer retrieves its top-k keys, instead of attending to every key. We evaluate Unlimiformer on several long-document and book-summarization benchmarks, showing that it can process even 500k token-long inputs from the BookSum dataset, without any input truncation at test time. We demonstrate that Unlimiformer improves pretrained models such as BART and Longformer by extending them to unlimited inputs without additional learned weights and without modifying their code. We make our code and models publicly available at https://github.com/abertsch72/unlimiformer .",
+      "canonical_id": "arXiv:2305.01625",
+      "arxiv_id": "2305.01625",
+      "doi": "10.48550/arXiv.2305.01625",
+      "authors": [
+        "Amanda Bertsch",
+        "Uri Alon",
+        "Graham Neubig",
+        "Matthew R. Gormley"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2305.01625",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2305.01625",
+        "id:arXiv:2305.01625",
+        "title:unlimiformer longrange transformers with unlimited length input",
+        "url:https://arxiv.org/abs/2305.01625"
+      ],
+      "record": {
+        "title": "Unlimiformer: Long-Range Transformers with Unlimited Length Input",
+        "source_url": "https://arxiv.org/abs/2305.01625",
+        "year": 2023,
+        "published": "2023-05-02",
+        "abstract": "Since the proposal of transformers, these models have been limited to bounded input lengths, because of their need to attend to every token in the input. In this work, we propose Unlimiformer: a general approach that wraps any existing pretrained encoder-decoder transformer, and offloads the cross-attention computation to a single k-nearest-neighbor (kNN) index, while the returned kNN distances are the attention dot-product scores. This kNN index can be kept on either the GPU or CPU memory and queried in sub-linear time; this way, we can index practically unlimited input sequences, while every attention head in every decoder layer retrieves its top-k keys, instead of attending to every key. We evaluate Unlimiformer on several long-document and book-summarization benchmarks, showing that it can process even 500k token-long inputs from the BookSum dataset, without any input truncation at test time. We demonstrate that Unlimiformer improves pretrained models such as BART and Longformer by extending them to unlimited inputs without additional learned weights and without modifying their code. We make our code and models publicly available at https://github.com/abertsch72/unlimiformer .",
+        "canonical_id": "arXiv:2305.01625",
+        "arxiv_id": "2305.01625",
+        "doi": "10.48550/arXiv.2305.01625",
+        "authors": [
+          "Amanda Bertsch",
+          "Uri Alon",
+          "Graham Neubig",
+          "Matthew R. Gormley"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:ea347a1a1913a977f00089ef8be0220bd4ebe36f6889bed5ba03b12e678c732e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

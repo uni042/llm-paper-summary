@@ -1,0 +1,681 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c9c239abf1f4d7cf-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c9c239abf1f4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/s11831-026-10598-4",
+    "DOI:10.1109/ispass69572.2026.00016",
+    "DOI:10.1145/3767295.3769364",
+    "arXiv:2604.20079",
+    "arXiv:2604.21335",
+    "arXiv:2604.24715",
+    "arXiv:2604.26469"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "83790c5cc8f0efacec95a3172d9e7e94a87d0e1b",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T22:58:09.408372+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/s11831-026-10598-4",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/ispass69572.2026.00016",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3767295.3769364",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.20079",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.21335",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.24715",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.26469",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Sub-Token Routing for KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2604.21335",
+      "year": 2026,
+      "published": "2026-04-23",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer inference often requires a large KV cache, especially for long-context language modeling and multimodal generation. Existing compression methods usually reduce cache cost by selecting, evicting, quantizing, or compressing cached tokens, or by reducing the visual-token sequence before language-model inference. We introduce sub-token routing, a KV-compression method that adds a finer control axis inside retained tokens. It splits each retained value vector into groups and keeps only selected groups, while leaving query and key states unchanged. The method is designed to work after token-level reduction. First, a token-reduction method determines which tokens are retained. Then, sub-token routing compresses the value states inside those retained tokens. Experiments under matched KV budgets show that adding sub-token routing improves token-level reduction performance in both LLM and VLM settings, including Quest on LLaMA-2-7B and Qwen2.5-7B, and FastV/VisionZip across LLaVA and Qwen-VL models. The gains are larger at smaller KV budgets, suggesting that value-group routing is especially useful when further token removal becomes costly. Overall, token-level reduction and sub-token routing provide complementary ways to reduce KV cost.",
+      "identifiers": [
+        "SemanticScholar:5194b2a3c45c7b1ebf956e3e53e39610bdbdaa30"
+      ],
+      "semantic_scholar_id": "5194b2a3c45c7b1ebf956e3e53e39610bdbdaa30",
+      "canonical_id": "arXiv:2604.21335",
+      "arxiv_id": "2604.21335",
+      "authors": [
+        "Wei Jiang",
+        "Wei Wang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 173,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "On the Quantization Robustness of Diffusion Language Models in Coding Benchmarks",
+      "source_url": "https://arxiv.org/abs/2604.20079",
+      "year": 2026,
+      "published": "2026-04-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Auto-regressive Large Language Models (LLMs) achieve strong performance on coding tasks, but incur high memory and inference costs. Diffusion-based language models (d-LLMs) offer bounded inference cost via iterative denoising, but their behavior under post-training quantization (PTQ) has been sparsely explored. We investigate the application and robustness of PTQ techniques, specifically GPTQ and a modified Hessian-Aware Quantization (HAWQ) algorithm, on a diffusion-based coding LLM (CoDA) and observe that these methods applied to CoDA exhibit greater robustness at low bitwidths compared to Qwen3-1.7B, its auto-regressive counterpart, under a standardized evaluation pipeline. We find that in our setup, CoDA exhibits greater robustness at low bitwidths (2-4 bits), with smaller accuracy degradation across HumanEval and MBPP benchmarks. Additionally, mixed-precision configurations derived from HAWQ provide smooth trade-offs across accuracy, latency, and memory. The results suggest that diffusion LLMs may offer advantages for efficient deployment due to more quantization-resilience.",
+      "identifiers": [
+        "SemanticScholar:2a9e8eb33785467d6e00b9d545e3d0f01b775bd3"
+      ],
+      "semantic_scholar_id": "2a9e8eb33785467d6e00b9d545e3d0f01b775bd3",
+      "canonical_id": "arXiv:2604.20079",
+      "arxiv_id": "2604.20079",
+      "doi": "10.48550/arXiv.2604.20079",
+      "authors": [
+        "A. Gupta",
+        "Gururaj Deshpande",
+        "Chandreyi Chakraborty"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HARMONI: Hierarchical ARchitecture MOdeling for LLMs with Near/In Memory Computing",
+      "source_url": "https://doi.org/10.1109/ISPASS69572.2026.00016",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference has emerged as a strongly memory-bound workload suitable for Processing-in-Memory (PIM) and Processing-near-Memory (PNM) architectures. Yet, most existing PIM-LLM evaluation frameworks are in-house, closed-source, or difficult to extend, and often fail to model end-to-end inference behavior or tensor-allocation and communication effects that critically shape performance. We introduce HARMONI, a fast, modular, memory-centric performance modeling framework designed specifically for hierarchical PIM/PNM architectures running LLM workloads. HARMONI captures the complete inference execution through a task-graph representation and supports user-defined tensor allocation with address-interleaving schemes. It models computation, communication, and queuing delays across logic nodes, enabling realistic mapping of inference kernels onto heterogeneous logic nodes. HARMONI outputs detailed, kernel-wise and resource-wise time and energy breakdowns, providing actionable visibility into architectural bottlenecks. Together, these capabilities make HARMONI a practical tool for rapidly evaluating PIM/PNM designs and DRAM standards (e.g., DDR4, DDR5, GDDR6), enabling systematic co-evaluation of inference workloads and memory-centric architecture designs.",
+      "identifiers": [
+        "SemanticScholar:5a837fb74b4235a9ec91bd56b1662dce9b05ac68"
+      ],
+      "semantic_scholar_id": "5a837fb74b4235a9ec91bd56b1662dce9b05ac68",
+      "doi": "10.1109/ISPASS69572.2026.00016",
+      "canonical_id": "DOI:10.1109/ISPASS69572.2026.00016",
+      "authors": [
+        "Khyati Kiyawat",
+        "Yasas Seneviratne",
+        "Zhen-Xing Fan",
+        "Morteza Baradaran",
+        "Kevin Skadron"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SAS: Sparse Attention Synthesizer for Efficient Language Model Inference",
+      "source_url": "https://doi.org/10.1145/3767295.3769364",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern large language models rely on attention mechanisms that attend to all tokens in a sequence, resulting in quadratic computational complexity that limits scalability. While sparse attention reduces compute and memory requirements by attending to only important tokens, implementing these techniques presents significant challenges due to the complexity of combining static and dynamic sparse patterns and optimizing key-value (KV) cache management. To address these challenges, we present SAS, a sparse attention synthesizer that automatically generates performant sparse attention kernels for large language model inference. SAS introduces a set of primitives that effectively encapsulate both static and dynamic sparse attention mechanisms, enabling users to compose complex attention patterns through logic operators and declarative functions. The system employs a geometric-based pattern analyzer to optimize for KV caching by determining minimal cache sizes and automatically generating cache management functions. Supporting both Nvidia GPU and AWS Trainium backends, SAS demonstrates significant performance improvements: 1.10–1.22× speedup for context encoding and 2.68–2.80× speedup for token generation over FlexAttention, a state-of-the-art flexible attention kernel synthesis tool, on GPUs, and 1.41–6.49× speedup for context encoding and 1.39–10.87× speedup for token generation over optimized dense attention on Trainium.",
+      "identifiers": [
+        "SemanticScholar:a71fe49f94d351c2d93b9cb0b25b58306fcb1423"
+      ],
+      "semantic_scholar_id": "a71fe49f94d351c2d93b9cb0b25b58306fcb1423",
+      "doi": "10.1145/3767295.3769364",
+      "canonical_id": "DOI:10.1145/3767295.3769364",
+      "authors": [
+        "Yuan Zhou",
+        "Shaojie Xiang",
+        "Lingfan Yu",
+        "Zhenyu Song",
+        "Charith Mendis",
+        "Yida Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Building Expert Small Models: A Comprehensive Survey of Model Compression, Knowledge Distillation, and Augmented Inference",
+      "source_url": "https://doi.org/10.1007/s11831-026-10598-4",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "Archives of Computational Methods in Engineering",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:ca50e7dc4c4202cd39466b3766a2505869809f67"
+      ],
+      "semantic_scholar_id": "ca50e7dc4c4202cd39466b3766a2505869809f67",
+      "doi": "10.1007/s11831-026-10598-4",
+      "canonical_id": "DOI:10.1007/s11831-026-10598-4",
+      "authors": [
+        "A. Gladys",
+        "R. Aishwarya",
+        "V. Vetriselvi",
+        "Samuel Daphne",
+        "P. Baskar",
+        "Arun Amaithi Rajan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
+      "source_url": "https://arxiv.org/abs/2604.24715",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid sequence models that combine efficient Transformer components with linear sequence modeling blocks are a promising alternative to pure Transformers, but most are still pretrained from scratch and therefore fail to reuse existing Transformer checkpoints. We study upcycling as a practical path to convert pretrained Transformer LLMs into hybrid architectures while preserving short-context quality and improving long-context capability. We call our solution \\emph{HyLo} (HYbrid LOng-context): a long-context upcycling recipe that combines architectural adaptation with efficient Transformer blocks, Multi-Head Latent Attention (MLA), and linear blocks (Mamba2 or Gated DeltaNet), together with staged long-context training and teacher-guided distillation for stable optimization. HyLo extends usable context length by up to $32\\times$ through efficient post-training and reduces KV-cache memory by more than $90\\%$, enabling up to 2M-token prefill and decoding in our \\texttt{vLLM} inference stack, while comparable Llama baselines run out of memory beyond 64K context. Across 1B- and 3B-scale settings (Llama- and Qwen-based variants), HyLo delivers consistently strong short- and long-context performance and significantly outperforms state-of-the-art upcycled hybrid baselines on long-context evaluations such as RULER. Notably, at similar scale, HyLo-Qwen-1.7B trained on only 10B tokens significantly outperforms JetNemotron (trained on 400B tokens) on GSM8K, Lm-Harness common sense reasoning and RULER-64K.",
+      "identifiers": [
+        "SemanticScholar:c95bf21e359d9c4b17119c0d36cee8de848733fd"
+      ],
+      "semantic_scholar_id": "c95bf21e359d9c4b17119c0d36cee8de848733fd",
+      "canonical_id": "arXiv:2604.24715",
+      "arxiv_id": "2604.24715",
+      "doi": "10.48550/arXiv.2604.24715",
+      "authors": [
+        "Parsa Ashrafi Fashi",
+        "Utkarsh Saxena",
+        "Mehdi Rezagholizadeh",
+        "A. Jafari",
+        "Akash Haridas",
+        "Mingyu Yang",
+        "Vansh Bhatia",
+        "Guihong Li",
+        "Vikram V. Appia",
+        "E. Barsoum"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "An Empirical Study of Speculative Decoding on Software Engineering Tasks",
+      "source_url": "https://arxiv.org/abs/2604.26469",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "Proceedings of the ACM on Software Engineering",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have become widely used for Software Engineering (SE) tasks, spanning from function-level code generation to complex repository-level workflows. However, the high latency of autoregressive inference remains a significant bottleneck, hindering their deployment in interactive environments. While Speculative Decoding (SD) offers a promising technique for lossless acceleration, prior research on long-context repository-level tasks and complex agentic interactions remains limited. To bridge this gap, we present a systematic empirical study to evaluate the effectiveness of SD in SE tasks. We benchmark a representative spectrum of strategies, encompassing both model-based and model-free methods, across generation, editing, and repair scenarios. Our empirical results show that SD provides clear acceleration potential for SE tasks, but its realized benefits jointly vary with model architecture and task scenario. Specifically, model-based approaches are well-suited for code generation, whereas model-free methods are better adapted to repository-level repair and editing scenarios. We further observe that the repetitiveness of SE tasks improves the performance of model-free methods, while complex agentic workflows can introduce repetitive failure modes that skew acceleration measurements. In contrast to natural language tasks, the higher predictability of SE tasks allows for more aggressive hyperparameter settings. Our findings provide practical guidance for selecting, configuring, and evaluating SD methods in SE scenarios.",
+      "identifiers": [
+        "SemanticScholar:88ea7de6ca271ba4655a951acb2365edf292f4cc"
+      ],
+      "semantic_scholar_id": "88ea7de6ca271ba4655a951acb2365edf292f4cc",
+      "canonical_id": "arXiv:2604.26469",
+      "arxiv_id": "2604.26469",
+      "doi": "10.1145/3832145",
+      "authors": [
+        "Yi-Jia Li",
+        "Junkai Chen",
+        "Xing Hu",
+        "Xin Xia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 167,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.21335",
+      "identity_tokens": [
+        "id:SemanticScholar:5194b2a3c45c7b1ebf956e3e53e39610bdbdaa30",
+        "id:arXiv:2604.21335",
+        "title:subtoken routing for kv cache compression",
+        "url:https://arxiv.org/abs/2604.21335"
+      ],
+      "record": {
+        "title": "Sub-Token Routing for KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2604.21335",
+        "year": 2026,
+        "published": "2026-04-23",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer inference often requires a large KV cache, especially for long-context language modeling and multimodal generation. Existing compression methods usually reduce cache cost by selecting, evicting, quantizing, or compressing cached tokens, or by reducing the visual-token sequence before language-model inference. We introduce sub-token routing, a KV-compression method that adds a finer control axis inside retained tokens. It splits each retained value vector into groups and keeps only selected groups, while leaving query and key states unchanged. The method is designed to work after token-level reduction. First, a token-reduction method determines which tokens are retained. Then, sub-token routing compresses the value states inside those retained tokens. Experiments under matched KV budgets show that adding sub-token routing improves token-level reduction performance in both LLM and VLM settings, including Quest on LLaMA-2-7B and Qwen2.5-7B, and FastV/VisionZip across LLaVA and Qwen-VL models. The gains are larger at smaller KV budgets, suggesting that value-group routing is especially useful when further token removal becomes costly. Overall, token-level reduction and sub-token routing provide complementary ways to reduce KV cost.",
+        "identifiers": [
+          "SemanticScholar:5194b2a3c45c7b1ebf956e3e53e39610bdbdaa30"
+        ],
+        "semantic_scholar_id": "5194b2a3c45c7b1ebf956e3e53e39610bdbdaa30",
+        "canonical_id": "arXiv:2604.21335",
+        "arxiv_id": "2604.21335",
+        "authors": [
+          "Wei Jiang",
+          "Wei Wang"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 173,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.20079",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.20079",
+        "id:SemanticScholar:2a9e8eb33785467d6e00b9d545e3d0f01b775bd3",
+        "id:arXiv:2604.20079",
+        "title:on the quantization robustness of diffusion language models in coding benchmarks",
+        "url:https://arxiv.org/abs/2604.20079"
+      ],
+      "record": {
+        "title": "On the Quantization Robustness of Diffusion Language Models in Coding Benchmarks",
+        "source_url": "https://arxiv.org/abs/2604.20079",
+        "year": 2026,
+        "published": "2026-04-22",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Auto-regressive Large Language Models (LLMs) achieve strong performance on coding tasks, but incur high memory and inference costs. Diffusion-based language models (d-LLMs) offer bounded inference cost via iterative denoising, but their behavior under post-training quantization (PTQ) has been sparsely explored. We investigate the application and robustness of PTQ techniques, specifically GPTQ and a modified Hessian-Aware Quantization (HAWQ) algorithm, on a diffusion-based coding LLM (CoDA) and observe that these methods applied to CoDA exhibit greater robustness at low bitwidths compared to Qwen3-1.7B, its auto-regressive counterpart, under a standardized evaluation pipeline. We find that in our setup, CoDA exhibits greater robustness at low bitwidths (2-4 bits), with smaller accuracy degradation across HumanEval and MBPP benchmarks. Additionally, mixed-precision configurations derived from HAWQ provide smooth trade-offs across accuracy, latency, and memory. The results suggest that diffusion LLMs may offer advantages for efficient deployment due to more quantization-resilience.",
+        "identifiers": [
+          "SemanticScholar:2a9e8eb33785467d6e00b9d545e3d0f01b775bd3"
+        ],
+        "semantic_scholar_id": "2a9e8eb33785467d6e00b9d545e3d0f01b775bd3",
+        "canonical_id": "arXiv:2604.20079",
+        "arxiv_id": "2604.20079",
+        "doi": "10.48550/arXiv.2604.20079",
+        "authors": [
+          "A. Gupta",
+          "Gururaj Deshpande",
+          "Chandreyi Chakraborty"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 174,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ispass69572.2026.00016",
+      "identity_tokens": [
+        "id:DOI:10.1109/ispass69572.2026.00016",
+        "id:SemanticScholar:5a837fb74b4235a9ec91bd56b1662dce9b05ac68",
+        "title:harmoni hierarchical architecture modeling for llms with nearin memory computing",
+        "url:https://doi.org/10.1109/ISPASS69572.2026.00016"
+      ],
+      "record": {
+        "title": "HARMONI: Hierarchical ARchitecture MOdeling for LLMs with Near/In Memory Computing",
+        "source_url": "https://doi.org/10.1109/ISPASS69572.2026.00016",
+        "year": 2026,
+        "published": "2026-04-26",
+        "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM inference has emerged as a strongly memory-bound workload suitable for Processing-in-Memory (PIM) and Processing-near-Memory (PNM) architectures. Yet, most existing PIM-LLM evaluation frameworks are in-house, closed-source, or difficult to extend, and often fail to model end-to-end inference behavior or tensor-allocation and communication effects that critically shape performance. We introduce HARMONI, a fast, modular, memory-centric performance modeling framework designed specifically for hierarchical PIM/PNM architectures running LLM workloads. HARMONI captures the complete inference execution through a task-graph representation and supports user-defined tensor allocation with address-interleaving schemes. It models computation, communication, and queuing delays across logic nodes, enabling realistic mapping of inference kernels onto heterogeneous logic nodes. HARMONI outputs detailed, kernel-wise and resource-wise time and energy breakdowns, providing actionable visibility into architectural bottlenecks. Together, these capabilities make HARMONI a practical tool for rapidly evaluating PIM/PNM designs and DRAM standards (e.g., DDR4, DDR5, GDDR6), enabling systematic co-evaluation of inference workloads and memory-centric architecture designs.",
+        "identifiers": [
+          "SemanticScholar:5a837fb74b4235a9ec91bd56b1662dce9b05ac68"
+        ],
+        "semantic_scholar_id": "5a837fb74b4235a9ec91bd56b1662dce9b05ac68",
+        "doi": "10.1109/ISPASS69572.2026.00016",
+        "canonical_id": "DOI:10.1109/ISPASS69572.2026.00016",
+        "authors": [
+          "Khyati Kiyawat",
+          "Yasas Seneviratne",
+          "Zhen-Xing Fan",
+          "Morteza Baradaran",
+          "Kevin Skadron"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3767295.3769364",
+      "identity_tokens": [
+        "id:DOI:10.1145/3767295.3769364",
+        "id:SemanticScholar:a71fe49f94d351c2d93b9cb0b25b58306fcb1423",
+        "title:sas sparse attention synthesizer for efficient language model inference",
+        "url:https://doi.org/10.1145/3767295.3769364"
+      ],
+      "record": {
+        "title": "SAS: Sparse Attention Synthesizer for Efficient Language Model Inference",
+        "source_url": "https://doi.org/10.1145/3767295.3769364",
+        "year": 2026,
+        "published": "2026-04-26",
+        "venue": "European Conference on Computer Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern large language models rely on attention mechanisms that attend to all tokens in a sequence, resulting in quadratic computational complexity that limits scalability. While sparse attention reduces compute and memory requirements by attending to only important tokens, implementing these techniques presents significant challenges due to the complexity of combining static and dynamic sparse patterns and optimizing key-value (KV) cache management. To address these challenges, we present SAS, a sparse attention synthesizer that automatically generates performant sparse attention kernels for large language model inference. SAS introduces a set of primitives that effectively encapsulate both static and dynamic sparse attention mechanisms, enabling users to compose complex attention patterns through logic operators and declarative functions. The system employs a geometric-based pattern analyzer to optimize for KV caching by determining minimal cache sizes and automatically generating cache management functions. Supporting both Nvidia GPU and AWS Trainium backends, SAS demonstrates significant performance improvements: 1.10–1.22× speedup for context encoding and 2.68–2.80× speedup for token generation over FlexAttention, a state-of-the-art flexible attention kernel synthesis tool, on GPUs, and 1.41–6.49× speedup for context encoding and 1.39–10.87× speedup for token generation over optimized dense attention on Trainium.",
+        "identifiers": [
+          "SemanticScholar:a71fe49f94d351c2d93b9cb0b25b58306fcb1423"
+        ],
+        "semantic_scholar_id": "a71fe49f94d351c2d93b9cb0b25b58306fcb1423",
+        "doi": "10.1145/3767295.3769364",
+        "canonical_id": "DOI:10.1145/3767295.3769364",
+        "authors": [
+          "Yuan Zhou",
+          "Shaojie Xiang",
+          "Lingfan Yu",
+          "Zhenyu Song",
+          "Charith Mendis",
+          "Yida Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11831-026-10598-4",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11831-026-10598-4",
+        "id:SemanticScholar:ca50e7dc4c4202cd39466b3766a2505869809f67",
+        "title:building expert small models a comprehensive survey of model compression knowledge distillation and augmented inference",
+        "url:https://doi.org/10.1007/s11831-026-10598-4"
+      ],
+      "record": {
+        "title": "Building Expert Small Models: A Comprehensive Survey of Model Compression, Knowledge Distillation, and Augmented Inference",
+        "source_url": "https://doi.org/10.1007/s11831-026-10598-4",
+        "year": 2026,
+        "published": "2026-04-27",
+        "venue": "Archives of Computational Methods in Engineering",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:ca50e7dc4c4202cd39466b3766a2505869809f67"
+        ],
+        "semantic_scholar_id": "ca50e7dc4c4202cd39466b3766a2505869809f67",
+        "doi": "10.1007/s11831-026-10598-4",
+        "canonical_id": "DOI:10.1007/s11831-026-10598-4",
+        "authors": [
+          "A. Gladys",
+          "R. Aishwarya",
+          "V. Vetriselvi",
+          "Samuel Daphne",
+          "P. Baskar",
+          "Arun Amaithi Rajan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 169,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.24715",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.24715",
+        "id:SemanticScholar:c95bf21e359d9c4b17119c0d36cee8de848733fd",
+        "id:arXiv:2604.24715",
+        "title:longcontext aware upcycling a new frontier for hybrid llm scaling",
+        "url:https://arxiv.org/abs/2604.24715"
+      ],
+      "record": {
+        "title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
+        "source_url": "https://arxiv.org/abs/2604.24715",
+        "year": 2026,
+        "published": "2026-04-27",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hybrid sequence models that combine efficient Transformer components with linear sequence modeling blocks are a promising alternative to pure Transformers, but most are still pretrained from scratch and therefore fail to reuse existing Transformer checkpoints. We study upcycling as a practical path to convert pretrained Transformer LLMs into hybrid architectures while preserving short-context quality and improving long-context capability. We call our solution \\emph{HyLo} (HYbrid LOng-context): a long-context upcycling recipe that combines architectural adaptation with efficient Transformer blocks, Multi-Head Latent Attention (MLA), and linear blocks (Mamba2 or Gated DeltaNet), together with staged long-context training and teacher-guided distillation for stable optimization. HyLo extends usable context length by up to $32\\times$ through efficient post-training and reduces KV-cache memory by more than $90\\%$, enabling up to 2M-token prefill and decoding in our \\texttt{vLLM} inference stack, while comparable Llama baselines run out of memory beyond 64K context. Across 1B- and 3B-scale settings (Llama- and Qwen-based variants), HyLo delivers consistently strong short- and long-context performance and significantly outperforms state-of-the-art upcycled hybrid baselines on long-context evaluations such as RULER. Notably, at similar scale, HyLo-Qwen-1.7B trained on only 10B tokens significantly outperforms JetNemotron (trained on 400B tokens) on GSM8K, Lm-Harness common sense reasoning and RULER-64K.",
+        "identifiers": [
+          "SemanticScholar:c95bf21e359d9c4b17119c0d36cee8de848733fd"
+        ],
+        "semantic_scholar_id": "c95bf21e359d9c4b17119c0d36cee8de848733fd",
+        "canonical_id": "arXiv:2604.24715",
+        "arxiv_id": "2604.24715",
+        "doi": "10.48550/arXiv.2604.24715",
+        "authors": [
+          "Parsa Ashrafi Fashi",
+          "Utkarsh Saxena",
+          "Mehdi Rezagholizadeh",
+          "A. Jafari",
+          "Akash Haridas",
+          "Mingyu Yang",
+          "Vansh Bhatia",
+          "Guihong Li",
+          "Vikram V. Appia",
+          "E. Barsoum"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 169,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.26469",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832145",
+        "id:SemanticScholar:88ea7de6ca271ba4655a951acb2365edf292f4cc",
+        "id:arXiv:2604.26469",
+        "title:an empirical study of speculative decoding on software engineering tasks",
+        "url:https://arxiv.org/abs/2604.26469"
+      ],
+      "record": {
+        "title": "An Empirical Study of Speculative Decoding on Software Engineering Tasks",
+        "source_url": "https://arxiv.org/abs/2604.26469",
+        "year": 2026,
+        "published": "2026-04-29",
+        "venue": "Proceedings of the ACM on Software Engineering",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have become widely used for Software Engineering (SE) tasks, spanning from function-level code generation to complex repository-level workflows. However, the high latency of autoregressive inference remains a significant bottleneck, hindering their deployment in interactive environments. While Speculative Decoding (SD) offers a promising technique for lossless acceleration, prior research on long-context repository-level tasks and complex agentic interactions remains limited. To bridge this gap, we present a systematic empirical study to evaluate the effectiveness of SD in SE tasks. We benchmark a representative spectrum of strategies, encompassing both model-based and model-free methods, across generation, editing, and repair scenarios. Our empirical results show that SD provides clear acceleration potential for SE tasks, but its realized benefits jointly vary with model architecture and task scenario. Specifically, model-based approaches are well-suited for code generation, whereas model-free methods are better adapted to repository-level repair and editing scenarios. We further observe that the repetitiveness of SE tasks improves the performance of model-free methods, while complex agentic workflows can introduce repetitive failure modes that skew acceleration measurements. In contrast to natural language tasks, the higher predictability of SE tasks allows for more aggressive hyperparameter settings. Our findings provide practical guidance for selecting, configuring, and evaluating SD methods in SE scenarios.",
+        "identifiers": [
+          "SemanticScholar:88ea7de6ca271ba4655a951acb2365edf292f4cc"
+        ],
+        "semantic_scholar_id": "88ea7de6ca271ba4655a951acb2365edf292f4cc",
+        "canonical_id": "arXiv:2604.26469",
+        "arxiv_id": "2604.26469",
+        "doi": "10.1145/3832145",
+        "authors": [
+          "Yi-Jia Li",
+          "Junkai Chen",
+          "Xing Hu",
+          "Xin Xia"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 167,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:fbd82fb40cf6855300054cdf8497356cbcb284cf5ec43098ede6e0f841365d36",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

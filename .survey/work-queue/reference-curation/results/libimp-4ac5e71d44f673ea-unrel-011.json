@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ac5e71d44f673ea-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.30400",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.30400",
+    "identity_tokens": [
+      "DOI:10.1016/j.xpro.2026.104533",
+      "PRIMARY:https://arxiv.org/abs/2605.30400v1",
+      "arXiv:2605.30400"
+    ],
+    "reason": "ChatGPT biomedical association generationのRAG・cross-model majority-voting評価protocolで、対象は医療情報の信頼性検証。inference system efficiencyを扱わない。",
+    "first_checked_at": "2026-10-11T07:45:41+00:00",
+    "last_checked_at": "2026-10-11T07:45:41+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Protocol for evaluating ChatGPT in biomedical association generation and verification using a RAG-enabled, cross-model majority voting workflow"
+  },
+  "processed_at": "2026-10-11T07:45:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ac5e71d44f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

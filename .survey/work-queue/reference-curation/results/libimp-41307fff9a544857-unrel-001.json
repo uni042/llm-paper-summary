@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-41307fff9a544857-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.04678",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.04678",
+    "identity_tokens": [
+      "arXiv:2512.04678",
+      "id:arXiv:2512.04678",
+      "url:https://arxiv.org/abs/2512.04678"
+    ],
+    "reason": "Reward Forcingは動画拡散生成で古いフレームを指数移動平均で要約するEMA-Sinkと、動きの報酬で蒸留を重み付けするRe-DMDを提案し、H100での動画生成速度を報告する。対象は動画拡散モデルの画質・動きと動画ストリーミングであり、言語モデルの自己回帰トークン推論、LLMサービングやKVキャッシュの実行基盤ではない。",
+    "first_checked_at": "2026-10-12T18:49:58+00:00",
+    "last_checked_at": "2026-10-14T22:48:33+00:00",
+    "linked_from": [],
+    "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation"
+  },
+  "processed_at": "2026-10-14T22:48:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-41307fff9a54",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

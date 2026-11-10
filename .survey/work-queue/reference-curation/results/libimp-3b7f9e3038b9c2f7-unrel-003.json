@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b7f9e3038b9c2f7-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.22943",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.22943",
+    "identity_tokens": [
+      "arXiv:2609.22943"
+    ],
+    "reason": "Efficient large language model (LLM) instruction tuning requires selecting response supervision with supporting prompt context. Existing methods typically value both sides separately, risking selection-state mismatch between valuation and retained training subsets. BRIDGE (Budgeted Response-Prompt Interaction via Directional Gradient-guided Efficient Token Selection) captures selection-conditioned token utility through a shared validation-directed interaction surrogate valuing each side under the other's retained state. Budgeted alternating selection coordinates retained subsets by aggregating precomputed interactions over the current opposite-side subset to update conditional scores. Structure-aware projection converts conditional response scores into coherent supervision spans. Across three model families, BRIDGE leads compared selection methods overall in mathematical reasoning, code generation, and instruction following. In mathematical reasoning, its advantage over independent selection grows with compression.",
+    "first_checked_at": "2026-10-05T06:17:39+00:00",
+    "last_checked_at": "2026-10-05T06:17:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+    ],
+    "title": "Token Utility Is Selection-Conditioned: Coupled Selection of Prompt Context and Response Supervision for Efficient Instruction Tuning"
+  },
+  "processed_at": "2026-10-05T06:17:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b7f9e3038b9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

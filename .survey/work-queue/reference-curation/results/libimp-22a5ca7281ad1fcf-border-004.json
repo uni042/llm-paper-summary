@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-22a5ca7281ad1fcf-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/jcc72984.2026.00067",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/jcc72984.2026.00067",
+    "identity_tokens": [
+      "DOI:10.1109/jcc72984.2026.00067"
+    ],
+    "reason": "semantic scheduling covers generic AI inference across multi-cloud domains; whether its evaluation includes LLM inference or advances this corpus scope is unclear from the abstract.",
+    "first_checked_at": "2026-10-05T11:27:16+00:00",
+    "last_checked_at": "2026-10-05T11:27:16+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md",
+      "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+    ],
+    "title": "Semantic-Aware Scheduling and Resource Allocation for AI Inference Services in Enterprise Multi-Cloud Systems"
+  },
+  "processed_at": "2026-10-05T11:27:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-22a5ca7281ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

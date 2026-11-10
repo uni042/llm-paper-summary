@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f44d15966037262-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.25140",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.25140",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2509.25140",
+      "arXiv:2509.25140"
+    ],
+    "reason": "一次要旨ではエージェントの成功・失敗経験から推論方略を抽出して外部メモリへ蓄え、推論時に検索・更新するReasoningBankとMaTTSを提案する。推論時メモリ利用には接点があるが、主眼はエージェントの課題達成能力と経験学習であり、LLM推論のメモリ階層・処理量・サービング性能の最適化は主題ではない。",
+    "first_checked_at": "2026-10-12T10:58:03+00:00",
+    "last_checked_at": "2026-10-13T06:45:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
+  },
+  "processed_at": "2026-10-13T06:45:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f44d1596603",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

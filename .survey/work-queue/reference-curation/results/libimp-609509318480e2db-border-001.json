@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-609509318480e2db-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2103.15358",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2103.15358",
+    "identity_tokens": [
+      "arXiv:2103.15358"
+    ],
+    "reason": "Vision Longformer has global tokens potentially usable for VL, but the paper evaluates visual encoding, not LLM decoder inference.",
+    "first_checked_at": "2026-10-06T23:27:26+00:00",
+    "last_checked_at": "2026-10-06T23:27:26+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Multi-Scale Vision Longformer: A New Vision Transformer for High-Resolution Image Encoding"
+  },
+  "processed_at": "2026-10-06T23:27:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-609509318480",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Plan, Verify and Fill: A Structured Parallel Decoding Approach for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2601.12247",
+      "year": 2026,
+      "published": "2026-01-18",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (DLMs) present a promising non-sequential paradigm for text generation, distinct from standard autoregressive (AR) approaches. However, current decoding strategies often adopt a reactive stance, underutilizing the global bidirectional context to dictate global trajectories. To address this, we propose Plan-Verify-Fill (PVF), a training-free paradigm that grounds planning via quantitative validation. PVF actively constructs a hierarchical skeleton by prioritizing high-leverage semantic anchors and employs a verification protocol to operationalize pragmatic structural stopping where further deliberation yields diminishing returns. Extensive evaluations on LLaDA-8B-Instruct and Dream-7B-Instruct demonstrate that PVF reduces the Number of Function Evaluations (NFE) by up to 65% compared to confidence-based parallel decoding across benchmark datasets, unlocking superior efficiency without compromising accuracy.",
+      "identifiers": [
+        "SemanticScholar:b8c0f3c3f9110a6510cf000361940b9cae01bc96"
+      ],
+      "semantic_scholar_id": "b8c0f3c3f9110a6510cf000361940b9cae01bc96",
+      "canonical_id": "arXiv:2601.12247",
+      "arxiv_id": "2601.12247",
+      "doi": "10.48550/arXiv.2601.12247",
+      "authors": [
+        "Miao Li",
+        "Han-Yang Jiang",
+        "Sikai Cheng",
+        "Heng-Yu Fu",
+        "Yu-Hang Cai",
+        "Bai-He Huang",
+        "Ting-Han Ye",
+        "Xuanzhou Chen",
+        "P. Van Hentenryck"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 285,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は拡散LMで意味的アンカーを階層計画し、検証後に未確定トークンを埋める学習不要のPVFを提案。LLaDA-8B・Dream-7Bでconfidence-based並列復号比NFE最大65%削減し品質維持と報告。拡散LLMの推論ステップ削減へ直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OmniFocus: Query-Guided Modality-Balanced Token Compression for Omni-Modal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.03050",
+      "year": 2026,
+      "published": "2026-07-03",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Omni modal large language models (OmniLLMs) have attracted wide attention for their ability to jointly process audio and video, but they generate large token sequences under audio-visual inputs, leading to substantial inference cost. Existing audio-visual token compression methods often rely on unimodal guidance, overlooking the temporal locality of query-relevant evidence in audio-visual inputs and implicitly assuming that the two modalities share a temporally aligned information density distribution. We propose \\textbf{OmniFocus}, a training-free query-guided token compression method for OmniLLMs that performs independent importance estimation for video and audio, enabling a modality-symmetric compression design that preserves modality-specific salient evidence while maintaining audio-visual alignment, thereby mitigating the modality bias issue that can arise from unimodal-guided compression. Experiments on the Qwen2.5-Omni model family across four audio-visual benchmarks show that OmniFocus maintains strong compressed performance at low token retention ratios and outperforms existing baselines on several major benchmark scores at 25\\% token retention. On DailyOmni with Qwen2.5-Omni-7B at 25\\% token retention, OmniFocus maintains 59.40 accuracy while delivering up to 1.38$\\times$ prefill speedup relative to the full-token baseline, highlighting a favorable practical accuracy-efficiency trade-off.",
+      "identifiers": [
+        "SemanticScholar:67f7e36c119d082eeb17ac3ca4003ab644ddc9ab"
+      ],
+      "semantic_scholar_id": "67f7e36c119d082eeb17ac3ca4003ab644ddc9ab",
+      "canonical_id": "arXiv:2607.03050",
+      "arxiv_id": "2607.03050",
+      "doi": "10.48550/arXiv.2607.03050",
+      "authors": [
+        "Shi-Jie Cao",
+        "Qingyu Zhang",
+        "Bo-Xi Yu",
+        "Yu-Zhong Zhang",
+        "Boxi Cao",
+        "Yaojie Lu",
+        "Hong-Yu Lin",
+        "Xian-Pei Han",
+        "Le Sun"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 119,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は音声・動画を処理するOmniLLMで、クエリ関連性を各モダリティ独立に見積もり、音声と動画の情報密度の違いを尊重する学習不要トークン圧縮OmniFocusを提案。Qwen2.5-Omniの4ベンチマークで保持率25%でも高い性能を維持。多モーダル推論時の入力トークン削減に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer?",
+      "source_url": "https://arxiv.org/abs/2605.27494",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern retrieval-augmented generation(RAG) deployments increasingly rely on caching to reduce token cost and time-to-first-token(TTFT). Prefix-level KV reuse is now standard in serving stacks such as vLLM, and chunk-level and position-independent reuse have been pushed further by recent systems(RAGCache, TurboRAG, CacheBlend, EPIC, ContextPilot, PCR, LMCache). Output-level semantic answer caches, by contrast, remain fragile: similar prompts can map to different correct answers, retrieved evidence drifts as the corpus is updated, and adversarial collision attacks have been shown to hijack cached responses. We argue that the right framing for cached answer reuse is not how to reuse faster but when reuse is safe. We propose GroundedCache, an evidence-validated cache router that admits a cached answer only when 4 cheap gates simultaneously hold: query similarity, retrieved-evidence overlap, source-version validity, and lexical (or judge-based) support of the cached answer by the freshly retrieved evidence. We build a six-regime workload that stress-tests cache safety rather than only hit rate, and introduce an operator-facing metric, the unsafe-served rate (USR), fraction of all queries that received a wrong cached answer. Across 2 datasets and 12,000 real-LLM generations(Qwen2.5-7B-Instruct on vLLM with Automatic Prefix Caching), GroundedCache drives USR to 0.0% on every HotpotQA regime(vs. 15-35% under naive caching) and to 1.5% on mtRAG document drift(vs. 51.5%), a 34x reduction on the design-point adversarial regime and 3-10x reductions across the other mtRAG regimes, while end-to-end p50 latency stays within 1.04-1.07x of a no-cache RAG baseline. A per-gate ablation isolates the lexical support gate as the load-bearing safety mechanism on both datasets, with the remaining gates providing defense-in-depth at near-zero cost. We release the implementation, workload, and evaluation harness.",
+      "identifiers": [
+        "SemanticScholar:919628398eba1f2a91772d69253fa4db73342c91"
+      ],
+      "semantic_scholar_id": "919628398eba1f2a91772d69253fa4db73342c91",
+      "canonical_id": "arXiv:2605.27494",
+      "arxiv_id": "2605.27494",
+      "doi": "10.48550/arXiv.2605.27494",
+      "authors": [
+        "Syed Huma Shah"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 157,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はRAGの回答キャッシュ再利用を類似度だけで決めず、検索証拠の重なり、文書版の有効性、回答根拠の支持など4ゲートで判定するGroundedCacheを提案。unsafe-served rateを導入し、再利用によるTTFTと誤回答のトレードオフを測定する。LLM配信キャッシュ制御に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PaDoc: Layout-Grounded Parallel Decoding for Document Parsing",
+      "source_url": "https://arxiv.org/abs/2608.06146",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "End-to-end document parsers provide a unified interface, but serialize page layouts and regional contents into one autoregressive sequence. This formulation forces independent regions onto a decoding path whose length grows with the total content, whereas crop-based two-stage parsers expose region-level parallelism at the cost of repeated visual prefills and fragmented page context. To retain full-page context while removing dependencies, we propose PaDoc, a layout-grounded parser that treats the predicted layout as a branching structure over a shared page representation. Under a region-sufficiency assumption, we derive a prefix-conditioned factorization in which the layout stream and regional content branches advance concurrently, reducing the decoding depth to the longest layout-content path. We realize this factorization within a single MLLM: packed variable-length ancestor attention preserves the visibility under standard next-token training, while masked parallel decoding creates branches that the evaluated vLLM backend serves as concurrent requests with cache-resident shared-prefix reuse. On OmniDocBench Full, PaDoc attains an Overall layout F1 of 91.1 and, among end-to-end parsers, a top-tier Overall score of 94.24 together with the best Text Edit (0.038) and Formula CDM (95.59). On a 384-page subset and one A800 GPU, it is the fastest end-to-end parser at five concurrency levels, improving valid-page throughput by 67.4-118% and reducing P95 latency by 39.2-54.9% relative to a same-backbone Sequential SFT baseline. Code is available at https://github.com/Longin-Yu/Padoc",
+      "identifiers": [
+        "SemanticScholar:385ad89b1980dfdc85ab494120bca1635d4131cb"
+      ],
+      "semantic_scholar_id": "385ad89b1980dfdc85ab494120bca1635d4131cb",
+      "canonical_id": "arXiv:2608.06146",
+      "arxiv_id": "2608.06146",
+      "authors": [
+        "Hao Yu",
+        "Jia-Bo Zhan",
+        "Kang Liu",
+        "Lin-Nan Zhao",
+        "Dongxu Yue",
+        "Rui Chen",
+        "Jinglin Wang",
+        "Chong Sun",
+        "Chen Li",
+        "Jing Lyu",
+        "Chun Yuan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はMLLM文書解析をページレイアウトと領域別内容の分岐として並列生成するPaDocを提案。vLLMで共通prefixのKVを再利用し、A800の384ページ評価で逐次SFT比valid-pageスループット67.4〜118%改善、P95遅延39.2〜54.9%削減。MLLM推論の並列デコードへ直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Q-Delta: Beyond Key-Value Associative State Evolution",
+      "source_url": "https://arxiv.org/abs/2606.08804",
+      "year": 2026,
+      "published": "2026-06-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention reformulates sequence modeling as recurrent state evolution, enabling efficient linear-time inference. Under the key-value associative paradigm, existing approaches restrict the role of the query to the readout operation, decoupling it from state evolution. We show that query-conditioned state readout induces a structured value prediction over accumulated memory that complements key-based retrieval. Based on this insight, we propose Q-Delta, a query-aware delta rule that integrates mixed key-query prediction errors into state evolution, enabling jointly corrective dynamics while preserving delta-rule efficiency. We establish stability guarantees for the resulting dynamics and derive a hardware-efficient chunkwise-parallel formulation with a custom Triton implementation. Empirical results demonstrate stable optimization, competitive throughput, and consistent improvements over strong baselines on language modeling and long-context retrieval tasks.",
+      "identifiers": [
+        "SemanticScholar:87cf40b41429ad4e2982e8a36042971ad77eae54"
+      ],
+      "semantic_scholar_id": "87cf40b41429ad4e2982e8a36042971ad77eae54",
+      "canonical_id": "arXiv:2606.08804",
+      "arxiv_id": "2606.08804",
+      "doi": "10.48550/arXiv.2606.08804",
+      "authors": [
+        "Sumin Park",
+        "Seojin Kim",
+        "Noseong Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は線形注意の行列状態更新へQuery側の予測誤差も組み込むQ-Deltaを提案。従来のKey-Value関連付けのみのdelta更新を拡張し、安定性の保証、チャンク並列化、Tritonカーネルを示す。長文脈検索精度と推論スループットを両立する再帰状態モデルに直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ee2a3d75d034",
+    "round": "libimp-ee2a3d75d0342b10-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ee2a3d75d0342b10-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ee2a3d75d0342b10-pre01.json",
+    "receipt": "sha256:cd284a6472f41ac9942a4b1f7bd5c49f7ede118e9710743aa31358e60bf38f5b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ee2a3d75d034",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

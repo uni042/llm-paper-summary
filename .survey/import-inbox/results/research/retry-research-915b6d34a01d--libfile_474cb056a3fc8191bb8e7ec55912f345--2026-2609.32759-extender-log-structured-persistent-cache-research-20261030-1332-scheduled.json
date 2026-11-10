@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "33a4c74ccdbcd3cd542ec53fccf465930cbc3d680bc048661188f0949738442f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-915b6d34a01d--libfile_474cb056a3fc8191bb8e7ec55912f345--2026-2609.32759-extender-log-structured-persistent-cache-research-20261030-1332-scheduled-chat-30-r02.md",
+  "canonical_id": "arXiv:2609.32759",
+  "worker_completed_at": "2026-10-30T14:02:00+09:00",
+  "worker_run_key": "20261030-1332-scheduled-chat-30/r02",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6918,
+    "body_paragraphs": 49,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1878,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-30T09:39:36+00:00"
+}

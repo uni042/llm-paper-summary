@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d66b91d4f89de0c6-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.22625",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.22625",
+    "identity_tokens": [
+      "arXiv:2511.22625"
+    ],
+    "reason": "ReasonEdit improves image-editing model reasoning using an MLLM encoder; the abstract describes image-editing quality, not LLM inference efficiency.",
+    "first_checked_at": "2026-10-05T14:45:34+00:00",
+    "last_checked_at": "2026-10-05T14:45:34+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+    ],
+    "title": "ReasonEdit: Towards Reasoning-Enhanced Image Editing Models"
+  },
+  "processed_at": "2026-10-05T14:45:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d66b91d4f89d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

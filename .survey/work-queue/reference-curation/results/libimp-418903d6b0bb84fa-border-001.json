@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-418903d6b0bb84fa-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.10560",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.10560",
+    "identity_tokens": [
+      "arXiv:2603.10560"
+    ],
+    "reason": "本文はPET/CT impression generation向けQwen2.5-7B LoRAモデルを評価し、cost/latency/privacyの利点を述べるが、比較は専門医療タスクのmodel choiceで、serving技法や一般的な推論効率改善を提示しない。",
+    "first_checked_at": "2026-10-06T21:07:24+00:00",
+    "last_checked_at": "2026-10-06T21:07:24+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PET-F2I: A Comprehensive Benchmark and Parameter-Efficient Fine-Tuning of LLMs for PET/CT Report Impression Generation"
+  },
+  "processed_at": "2026-10-06T21:07:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-418903d6b0bb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

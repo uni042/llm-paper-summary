@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9dbbd4ec6a0744e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2111.05754",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2111.05754",
+    "identity_tokens": [
+      "arXiv:2111.05754"
+    ],
+    "reason": "一次要旨はlanguage modelをsparseにpretrainする手法が中心で、効率化の主張はtraining/deployment可能性に関するもので推論serving評価がない。",
+    "first_checked_at": "2026-10-05T01:28:57+00:00",
+    "last_checked_at": "2026-10-05T01:28:57+00:00",
+    "linked_from": [
+      "papers/inference/06-moe-quantization-compression/2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md",
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+    ],
+    "title": "Prune Once for All: Sparse Pre-Trained Language Models"
+  },
+  "processed_at": "2026-10-05T01:28:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9dbbd4ec6a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-df316610afa5ed9f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.01805",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.01805",
+    "identity_tokens": [
+      "arXiv:2501.01805"
+    ],
+    "reason": "The primary abstract focuses on long-document summarization model training and gradient memory, not inference-time efficiency.",
+    "first_checked_at": "2026-10-05T15:28:32+00:00",
+    "last_checked_at": "2026-10-05T15:28:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+      "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+    ],
+    "title": "End-to-End Long Document Summarization using Gradient Caching"
+  },
+  "processed_at": "2026-10-05T15:28:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df316610afa5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

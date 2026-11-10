@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-218cccca3e453621-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/isqed69900.2026.11534770",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/isqed69900.2026.11534770",
+    "identity_tokens": [
+      "DOI:10.1109/isqed69900.2026.11534770"
+    ],
+    "reason": "要旨はYOLOv8系をedgeでmodel-hopする物体追跡手法で、LLMではない。",
+    "first_checked_at": "2026-10-05T22:59:31+00:00",
+    "last_checked_at": "2026-10-05T22:59:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+    ],
+    "title": "Uncertainty-Guided Adaptive Model Hopping for Efficient Object Tracking on Edge Devices"
+  },
+  "processed_at": "2026-10-05T22:59:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-218cccca3e45",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

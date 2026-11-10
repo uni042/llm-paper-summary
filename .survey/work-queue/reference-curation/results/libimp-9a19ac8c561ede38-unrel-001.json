@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9a19ac8c561ede38-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icws72778.2026.00116",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icws72778.2026.00116",
+    "identity_tokens": [
+      "DOI:10.1109/icws72778.2026.00116"
+    ],
+    "reason": "要旨の主対象はLLM/MoEの学習・fine-tuning・RL rolloutまたはtraining通信であり、inference-time optimization/servingではない。 Primary abstract: Federated learning (FL) is a promising paradigm for privacy-preserving fine-tuning of large language models (LLMs) on edge devices. However, the high computational and memory requirements of hosting LLMs prevent many resourceconstrained clients from participating, even with 4-bit quantization, leaving their private data underutilized and limiting federated m",
+    "first_checked_at": "2026-10-05T11:24:46+00:00",
+    "last_checked_at": "2026-10-05T11:24:46+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+    ],
+    "title": "FedAlloy: Dual-Channel Federated Learning Across Quantized and Heterogeneous Language Models"
+  },
+  "processed_at": "2026-10-05T11:24:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9a19ac8c561e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-288a5773e662cb2f-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.64898/2026.08.09.743676",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.64898/2026.08.09.743676",
+    "identity_tokens": [
+      "DOI:10.64898/2026.08.09.743676"
+    ],
+    "reason": "Abstract directly studies FP8 inference throughput, memory, and energy, but primary full text was inaccessible; domain fit is weak and detailed results remain unverified.",
+    "first_checked_at": "2026-10-05T08:35:27+00:00",
+    "last_checked_at": "2026-10-05T08:35:27+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "FP8 Inference in Genomic Foundation Models: Theoretical vs. Realized Speedups on GenomeOcean"
+  },
+  "processed_at": "2026-10-05T08:35:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-288a5773e662",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

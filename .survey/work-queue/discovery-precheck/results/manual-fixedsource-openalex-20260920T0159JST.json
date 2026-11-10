@@ -1,0 +1,488 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-fixedsource-openalex-20260920T0159JST",
+  "collector_id": "manual-fixedsource-openalex-20260920T0159JST",
+  "run_key": "2026-09-20T01:00:00+09:00",
+  "axis": "OpenAlex search: LLM inference serving KV cache",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=large%20language%20model%20inference%20serving%20KV%20cache&filter=from_publication_date:2025-01-01,to_publication_date:2026-09-20&sort=publication_date:desc",
+  "target_unseen": 10,
+  "page_size": 5,
+  "pages_fetched": 3,
+  "next_cursor": "IlsxNzg5MzQ0MDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MjEzMzcxNjIzJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e82645d43bb4975f573d3f6d57e39acd19249643",
+  "raw_search_result_count": 15,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 12,
+  "results": [
+    {
+      "title": "7 | 1 | 2026 Spinoza on Language",
+      "source_url": "https://doi.org/10.30687/jolma/2723-9640/2026/01",
+      "year": 2026,
+      "published": "2026-09-17",
+      "canonical_id": "DOI:10.30687/jolma/2723-9640/2026/01",
+      "doi": "10.30687/jolma/2723-9640/2026/01"
+    },
+    {
+      "title": "Cost efficient multimodal LLM deployment integrating tokenization economics MLOps and FinOps environments",
+      "source_url": "https://doi.org/10.1007/s10791-026-10449-7",
+      "year": 2026,
+      "published": "2026-09-17",
+      "canonical_id": "DOI:10.1007/s10791-026-10449-7",
+      "doi": "10.1007/s10791-026-10449-7",
+      "authors": [
+        "Anirudha Sahu",
+        "Anurag Singh",
+        "Snehasagar Sahu",
+        "Debani Prasad Mishra",
+        "Debani Prasad Mishra",
+        "Soubhagya Ranjan Mallick",
+        "Dibya Jyoti Mishra",
+        "Dibya Jyoti Mishra",
+        "Pramod K. Pandey"
+      ]
+    },
+    {
+      "title": "Beyond Efficiency: A Systematic Survey of Resource-Efficient Large Language Models",
+      "source_url": "https://doi.org/10.1145/3845797",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "arXiv:2401.00625",
+      "arxiv_id": "2401.00625",
+      "authors": [
+        "Guangji Bai",
+        "Zheng Chai",
+        "Ling Chen",
+        "Shiyu Wang",
+        "Jiaying Lu",
+        "Nan Zhang",
+        "Tingwei Shi",
+        "Ziyang Yu",
+        "Mengdan Zhu",
+        "Yifei Zhang",
+        "Xinyuan Song",
+        "Carl Yang",
+        "Yue Cheng",
+        "Liang Zhao"
+      ]
+    },
+    {
+      "title": "Survey on Verifiable Machine Learning",
+      "source_url": "https://doi.org/10.1145/3847111",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "DOI:10.1145/3847111",
+      "doi": "10.1145/3847111",
+      "authors": [
+        "He Lyu",
+        "Xikun Jiang",
+        "Boris Düdder",
+        "Yuya Sasaki"
+      ]
+    },
+    {
+      "title": "Early-Bird Decoding: Accelerating Diffusion LLMs with Learnable Block Sizes and Parallel Sampling",
+      "source_url": "https://arxiv.org/abs/2609.16450",
+      "year": 2026,
+      "published": "2026-09-15",
+      "canonical_id": "arXiv:2609.16450",
+      "arxiv_id": "2609.16450",
+      "authors": [
+        "Lixuan Wei",
+        "Wei Zhou",
+        "Jianwen Wu",
+        "Yipeng Shen",
+        "Meiling Wang",
+        "Haoran You"
+      ]
+    },
+    {
+      "title": "Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding",
+      "source_url": "https://doi.org/10.1007/978-3-032-38398-3_54",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2502.08363",
+      "arxiv_id": "2502.08363",
+      "authors": [
+        "Konstantin Berestizshevsky",
+        "Renzo Andri",
+        "Lukas Cavigelli"
+      ]
+    },
+    {
+      "title": "Optimizing Few-Shot Learning in Pruned Large Language Models with Task-Specific Prompts",
+      "source_url": "https://arrow.tudublin.ie/scschcomdis/289",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "DOI:10.21427/zs9c-0w38",
+      "doi": "10.21427/zs9c-0w38",
+      "authors": [
+        "Danyal Aftab"
+      ]
+    },
+    {
+      "title": "Uncertainty-aware Bayesian federated learning for low-resource neural machine translation at the edge",
+      "source_url": "https://doi.org/10.1038/s41598-026-71065-5",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "DOI:10.1038/s41598-026-71065-5",
+      "doi": "10.1038/s41598-026-71065-5",
+      "authors": [
+        "Na Yao",
+        "Xin Yang",
+        "Feng Xiao"
+      ]
+    },
+    {
+      "title": "Component-aware self-speculative decoding for hybrid language models: An architectural viability study",
+      "source_url": "https://doi.org/10.1016/j.compeleceng.2026.111505",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "DOI:10.1016/j.compeleceng.2026.111505",
+      "doi": "10.1016/j.compeleceng.2026.111505",
+      "authors": [
+        "Hector Borobia",
+        "Elies Seguí‐Mas",
+        "Guillermina Tormo‐Carbó"
+      ]
+    },
+    {
+      "title": "CIDERS: Cloud-Edge LLM Collaborative Learning via Accelerating Personalized Bilevel Optimization",
+      "source_url": "https://arxiv.org/abs/2609.15664",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15664",
+      "arxiv_id": "2609.15664",
+      "authors": [
+        "Victor H. Chen",
+        "Hairui Yu",
+        "Stella K. Chung",
+        "Hong Yan"
+      ]
+    },
+    {
+      "title": "The Router Within: Eliciting Native Skill Routing from a Frozen LLM",
+      "source_url": "https://arxiv.org/abs/2609.15982",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.15982",
+      "arxiv_id": "2609.15982",
+      "authors": [
+        "Ruishuo Chen",
+        "Xun Wang",
+        "Yu Chen",
+        "Zhuoran Li",
+        "Longbo Huang"
+      ]
+    },
+    {
+      "title": "GGUF-Metadata Prediction of Single-Sequence llama.cpp Throughput Across Three Systems",
+      "source_url": "https://arxiv.org/abs/2609.14864",
+      "year": 2026,
+      "published": "2026-09-14",
+      "canonical_id": "arXiv:2609.14864",
+      "arxiv_id": "2609.14864",
+      "authors": [
+        "Xinyu Qiu",
+        "许楚宏",
+        "Bo Su",
+        "Ziyao Chen",
+        "Ruiyang Xu",
+        "Shimeng Dai"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.30687/jolma/2723-9640/2026/01",
+      "identity_tokens": [
+        "id:DOI:10.30687/jolma/2723-9640/2026/01",
+        "title:7 1 2026 spinoza on language",
+        "url:https://doi.org/10.30687/jolma/2723-9640/2026/01"
+      ],
+      "record": {
+        "title": "7 | 1 | 2026 Spinoza on Language",
+        "source_url": "https://doi.org/10.30687/jolma/2723-9640/2026/01",
+        "year": 2026,
+        "published": "2026-09-17",
+        "canonical_id": "DOI:10.30687/jolma/2723-9640/2026/01",
+        "doi": "10.30687/jolma/2723-9640/2026/01"
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s10791-026-10449-7",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10791-026-10449-7",
+        "title:cost efficient multimodal llm deployment integrating tokenization economics mlops and finops environments",
+        "url:https://doi.org/10.1007/s10791-026-10449-7"
+      ],
+      "record": {
+        "title": "Cost efficient multimodal LLM deployment integrating tokenization economics MLOps and FinOps environments",
+        "source_url": "https://doi.org/10.1007/s10791-026-10449-7",
+        "year": 2026,
+        "published": "2026-09-17",
+        "canonical_id": "DOI:10.1007/s10791-026-10449-7",
+        "doi": "10.1007/s10791-026-10449-7",
+        "authors": [
+          "Anirudha Sahu",
+          "Anurag Singh",
+          "Snehasagar Sahu",
+          "Debani Prasad Mishra",
+          "Debani Prasad Mishra",
+          "Soubhagya Ranjan Mallick",
+          "Dibya Jyoti Mishra",
+          "Dibya Jyoti Mishra",
+          "Pramod K. Pandey"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.00625",
+      "identity_tokens": [
+        "id:DOI:10.1145/3845797",
+        "id:arXiv:2401.00625",
+        "title:beyond efficiency a systematic survey of resourceefficient large language models",
+        "url:https://doi.org/10.1145/3845797"
+      ],
+      "record": {
+        "title": "Beyond Efficiency: A Systematic Survey of Resource-Efficient Large Language Models",
+        "source_url": "https://doi.org/10.1145/3845797",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "arXiv:2401.00625",
+        "arxiv_id": "2401.00625",
+        "authors": [
+          "Guangji Bai",
+          "Zheng Chai",
+          "Ling Chen",
+          "Shiyu Wang",
+          "Jiaying Lu",
+          "Nan Zhang",
+          "Tingwei Shi",
+          "Ziyang Yu",
+          "Mengdan Zhu",
+          "Yifei Zhang",
+          "Xinyuan Song",
+          "Carl Yang",
+          "Yue Cheng",
+          "Liang Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3847111",
+      "identity_tokens": [
+        "id:DOI:10.1145/3847111",
+        "title:survey on verifiable machine learning",
+        "url:https://doi.org/10.1145/3847111"
+      ],
+      "record": {
+        "title": "Survey on Verifiable Machine Learning",
+        "source_url": "https://doi.org/10.1145/3847111",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "DOI:10.1145/3847111",
+        "doi": "10.1145/3847111",
+        "authors": [
+          "He Lyu",
+          "Xikun Jiang",
+          "Boris Düdder",
+          "Yuya Sasaki"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.16450",
+      "identity_tokens": [
+        "id:arXiv:2609.16450",
+        "title:earlybird decoding accelerating diffusion llms with learnable block sizes and parallel sampling",
+        "url:https://arxiv.org/abs/2609.16450"
+      ],
+      "record": {
+        "title": "Early-Bird Decoding: Accelerating Diffusion LLMs with Learnable Block Sizes and Parallel Sampling",
+        "source_url": "https://arxiv.org/abs/2609.16450",
+        "year": 2026,
+        "published": "2026-09-15",
+        "canonical_id": "arXiv:2609.16450",
+        "arxiv_id": "2609.16450",
+        "authors": [
+          "Lixuan Wei",
+          "Wei Zhou",
+          "Jianwen Wu",
+          "Yipeng Shen",
+          "Meiling Wang",
+          "Haoran You"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.08363",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-032-38398-3_54",
+        "id:arXiv:2502.08363",
+        "title:toptheta attention sparsifying transformers by compensated thresholding",
+        "url:https://doi.org/10.1007/978-3-032-38398-3_54"
+      ],
+      "record": {
+        "title": "Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding",
+        "source_url": "https://doi.org/10.1007/978-3-032-38398-3_54",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2502.08363",
+        "arxiv_id": "2502.08363",
+        "authors": [
+          "Konstantin Berestizshevsky",
+          "Renzo Andri",
+          "Lukas Cavigelli"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21427/zs9c-0w38",
+      "identity_tokens": [
+        "id:DOI:10.21427/zs9c-0w38",
+        "title:optimizing fewshot learning in pruned large language models with taskspecific prompts",
+        "url:https://arrow.tudublin.ie/scschcomdis/289"
+      ],
+      "record": {
+        "title": "Optimizing Few-Shot Learning in Pruned Large Language Models with Task-Specific Prompts",
+        "source_url": "https://arrow.tudublin.ie/scschcomdis/289",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "DOI:10.21427/zs9c-0w38",
+        "doi": "10.21427/zs9c-0w38",
+        "authors": [
+          "Danyal Aftab"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1038/s41598-026-71065-5",
+      "identity_tokens": [
+        "id:DOI:10.1038/s41598-026-71065-5",
+        "title:uncertaintyaware bayesian federated learning for lowresource neural machine translation at the edge",
+        "url:https://doi.org/10.1038/s41598-026-71065-5"
+      ],
+      "record": {
+        "title": "Uncertainty-aware Bayesian federated learning for low-resource neural machine translation at the edge",
+        "source_url": "https://doi.org/10.1038/s41598-026-71065-5",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "DOI:10.1038/s41598-026-71065-5",
+        "doi": "10.1038/s41598-026-71065-5",
+        "authors": [
+          "Na Yao",
+          "Xin Yang",
+          "Feng Xiao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.compeleceng.2026.111505",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.compeleceng.2026.111505",
+        "title:componentaware selfspeculative decoding for hybrid language models an architectural viability study",
+        "url:https://doi.org/10.1016/j.compeleceng.2026.111505"
+      ],
+      "record": {
+        "title": "Component-aware self-speculative decoding for hybrid language models: An architectural viability study",
+        "source_url": "https://doi.org/10.1016/j.compeleceng.2026.111505",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "DOI:10.1016/j.compeleceng.2026.111505",
+        "doi": "10.1016/j.compeleceng.2026.111505",
+        "authors": [
+          "Hector Borobia",
+          "Elies Seguí‐Mas",
+          "Guillermina Tormo‐Carbó"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15664",
+      "identity_tokens": [
+        "id:arXiv:2609.15664",
+        "title:ciders cloudedge llm collaborative learning via accelerating personalized bilevel optimization",
+        "url:https://arxiv.org/abs/2609.15664"
+      ],
+      "record": {
+        "title": "CIDERS: Cloud-Edge LLM Collaborative Learning via Accelerating Personalized Bilevel Optimization",
+        "source_url": "https://arxiv.org/abs/2609.15664",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15664",
+        "arxiv_id": "2609.15664",
+        "authors": [
+          "Victor H. Chen",
+          "Hairui Yu",
+          "Stella K. Chung",
+          "Hong Yan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15982",
+      "identity_tokens": [
+        "id:arXiv:2609.15982",
+        "title:the router within eliciting native skill routing from a frozen llm",
+        "url:https://arxiv.org/abs/2609.15982"
+      ],
+      "record": {
+        "title": "The Router Within: Eliciting Native Skill Routing from a Frozen LLM",
+        "source_url": "https://arxiv.org/abs/2609.15982",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.15982",
+        "arxiv_id": "2609.15982",
+        "authors": [
+          "Ruishuo Chen",
+          "Xun Wang",
+          "Yu Chen",
+          "Zhuoran Li",
+          "Longbo Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14864",
+      "identity_tokens": [
+        "id:arXiv:2609.14864",
+        "title:ggufmetadata prediction of singlesequence llamacpp throughput across three systems",
+        "url:https://arxiv.org/abs/2609.14864"
+      ],
+      "record": {
+        "title": "GGUF-Metadata Prediction of Single-Sequence llama.cpp Throughput Across Three Systems",
+        "source_url": "https://arxiv.org/abs/2609.14864",
+        "year": 2026,
+        "published": "2026-09-14",
+        "canonical_id": "arXiv:2609.14864",
+        "arxiv_id": "2609.14864",
+        "authors": [
+          "Xinyu Qiu",
+          "许楚宏",
+          "Bo Su",
+          "Ziyao Chen",
+          "Ruiyang Xu",
+          "Shimeng Dai"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:3b844956f08afc9f7f84b040743f5b78f6f27acc909e210e98da937c06f56dd2",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

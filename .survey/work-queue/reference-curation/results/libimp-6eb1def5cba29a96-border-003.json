@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6eb1def5cba29a96-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.18397",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.18397",
+    "identity_tokens": [
+      "arXiv:2602.18397"
+    ],
+    "reason": "VLA action-expert/robotics pipeline固有で、LLM text inference/servingではなく隣接scope。",
+    "first_checked_at": "2026-10-05T14:53:04+00:00",
+    "last_checked_at": "2026-10-05T14:53:04+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+      "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md",
+      "papers/inference/15-inference-simulation-emulation/2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md",
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md",
+      "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "How Fast Can I Run My VLA? Demystifying VLA Inference Performance with VLA-Perf"
+  },
+  "processed_at": "2026-10-05T14:53:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6eb1def5cba2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

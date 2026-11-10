@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da528c4ac5743f15-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.04113",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.04113",
+    "identity_tokens": [
+      "arXiv:2503.04113"
+    ],
+    "reason": "一次要旨は主観的な指示文を人間とLLMがどう解釈するかのalignment/behavior分析であり、inference runtimeの最適化ではない。",
+    "first_checked_at": "2026-10-06T18:11:24+00:00",
+    "last_checked_at": "2026-10-06T18:11:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+    ],
+    "title": "Uncovering Gaps in How Humans and LLMs Interpret Subjective Language"
+  },
+  "processed_at": "2026-10-06T18:11:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da528c4ac574",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

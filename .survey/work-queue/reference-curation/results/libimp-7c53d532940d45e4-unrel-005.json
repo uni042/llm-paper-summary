@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c53d532940d45e4-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.20285",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.20285",
+    "identity_tokens": [
+      "arXiv:2605.20285"
+    ],
+    "reason": "Introspective X Training conditions model training on rubric-derived feedback across pretraining and supervised fine-tuning. The contribution and evaluations concern training outcomes rather than inference-time efficiency or serving.",
+    "first_checked_at": "2026-10-06T20:36:03+00:00",
+    "last_checked_at": "2026-10-06T20:36:03+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "Introspective X Training: Feedback Conditioning Improves Scaling Across all LLM Training Stages"
+  },
+  "processed_at": "2026-10-06T20:36:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c53d532940d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

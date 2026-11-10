@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1407-scheduled-chat-00/r02",
+  "reference_main_sha": "62939ca2418e5cd94bb9d90a09f850dde21a88dc",
+  "record_count": 1,
+  "records": [
+    {
+      "canonical_id": "DOI:10.1109/CAIBDA65784.2025.11183354",
+      "identity_tokens": [
+        "DOI:10.1109/CAIBDA65784.2025.11183354"
+      ],
+      "title": "KV Cache Group Quantization Based on vLLM Inference Engine",
+      "classification": "accept",
+      "reason": "IEEE Computer Society公式掲載の原著要旨を確認。vLLMのKVキャッシュをグループ量子化して推論時メモリ消費を削減し、量子化・逆量子化の演算も最適化する手法。LLaMA2-7B、LLaMA3-8B、DeepSeek-R1-Distill-LLaMA3-8Bを評価し、複数リクエスト同時実行時に低い精度損失を保ちつつ最大18%の推論スループット改善を報告。LLMサービングのKVキャッシュ量子化と推論効率化を直接扱うためaccept。倍率は出版社abstractの条件に限定し、論文全文の評価表は未確認。",
+      "source_url": "https://www.computer.org/csdl/proceedings-article/caibda/2025/11183354/2aFKqZVJET6",
+      "body_check": "primary_ieee_computer_society_publisher_abstract_screen_only; body_not_read",
+      "linked_from": [
+        "WORKLIST-00.md rank 284; KV cache quantization / vLLM",
+        "Original Library discovery-20261031-1407-scheduled-chat-00-r02-partial.json; original_library_file_id=libfile_720d2210a7c88191aeb9fc3ce276bce1"
+      ],
+      "worklist_rank": 284,
+      "first_checked_at": "2026-10-31T14:10:55+09:00",
+      "last_checked_at": "2026-11-01T04:48:37+09:00",
+      "origin": "legacy_discovery_primary_abstract_revalidated_for_import",
+      "primary_source_verified_by": "scheduled-chat-45"
+    }
+  ]
+}

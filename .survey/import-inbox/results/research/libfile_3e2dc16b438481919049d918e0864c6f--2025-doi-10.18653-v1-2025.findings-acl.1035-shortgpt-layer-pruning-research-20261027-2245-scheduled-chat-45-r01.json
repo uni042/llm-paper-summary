@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "73e772884d6d66d48625f33f8af4f9e6f1f717c0aa7a54128715cf7b2e73fc4e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_3e2dc16b438481919049d918e0864c6f--2025-doi-10.18653-v1-2025.findings-acl.1035-shortgpt-layer-pruning-research-20261027-2245-scheduled-chat-45-r01.md",
+  "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1035",
+  "worker_completed_at": "2026-10-27T22:45:00+09:00",
+  "worker_run_key": "20261027-2245-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5673,
+    "body_paragraphs": 29,
+    "method_chars": 1283,
+    "method_paragraphs": 7,
+    "evaluation_chars": 197,
+    "limitation_chars": 841,
+    "insufficiency_flags": [
+      "評価説明量 197 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 197 < 500"
+  ],
+  "processed_at": "2026-10-27T15:21:35+00:00"
+}

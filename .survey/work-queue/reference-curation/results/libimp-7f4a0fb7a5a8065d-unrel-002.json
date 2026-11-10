@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f4a0fb7a5a8065d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.02819",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.02819",
+    "identity_tokens": [
+      "arXiv:2412.02819"
+    ],
+    "reason": "CNNSum provides a benchmark and quality analysis for LLM summarization of Chinese novels; it does not contribute an inference-serving or runtime-efficiency method.",
+    "first_checked_at": "2026-10-13T22:33:22+00:00",
+    "last_checked_at": "2026-10-13T22:33:22+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md",
+      "papers/inference/09-kernel-runtime-compilation/2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+      "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md",
+      "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+    ],
+    "title": "CNNSum: Exploring Long-Context Summarization with Large Language Models in Chinese Novels"
+  },
+  "processed_at": "2026-10-13T22:33:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f4a0fb7a5a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

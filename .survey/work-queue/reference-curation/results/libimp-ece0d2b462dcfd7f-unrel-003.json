@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ece0d2b462dcfd7f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.23919/date56975.2023.10137111",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.23919/date56975.2023.10137111",
+    "identity_tokens": [
+      "DOI:10.23919/date56975.2023.10137111"
+    ],
+    "reason": "Numerous network compression methods have been proposed to deploy deep neural networks in a resource-constrained embedded system. Among them, block-circulant matrix (BCM) compression is one of the promising hardware-friendly methods for both acceleration and compression. However, it has several limitations; (i) limited representation due to the structural characteristic of circulant matrix, (ii) limitation of the compression parameter, (iii) need to specialize the dataflow for BCM-compressed network accelerators. In this paper, rank-enhanced and highly-pruned block-circulant matrices compressi",
+    "first_checked_at": "2026-10-06T13:09:29+00:00",
+    "last_checked_at": "2026-10-06T13:09:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+    ],
+    "title": "FPGA-Based Accelerator for Rank-Enhanced and Highly-Pruned Block-Circulant Neural Networks"
+  },
+  "processed_at": "2026-10-06T13:09:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ece0d2b462dc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

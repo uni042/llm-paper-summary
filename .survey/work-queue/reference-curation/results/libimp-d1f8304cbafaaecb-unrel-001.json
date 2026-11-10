@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1f8304cbafaaecb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2011.00241",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2011.00241",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2011.00241",
+      "arXiv:2011.00241",
+      "title:methods for pruning deep neural networks"
+    ],
+    "reason": "原著要旨では150件以上の深層ニューラルネット枝刈り研究を重みの大きさ、クラスタリング、感度分析に分類し、AlexNet・ResNet・DenseNet・VGG等をImageNet/CIFAR10で比較する総説。LLM推論向け圧縮や実行時メモリ・サービング最適化の固有機構・評価は扱わないため、現在の推論システム専門サーベイの収録対象外。",
+    "first_checked_at": "2026-10-16T09:21:25+00:00",
+    "last_checked_at": "2026-10-20T08:45:51+00:00",
+    "linked_from": [],
+    "title": "Methods for Pruning Deep Neural Networks"
+  },
+  "processed_at": "2026-10-20T08:45:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1f8304cbafa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

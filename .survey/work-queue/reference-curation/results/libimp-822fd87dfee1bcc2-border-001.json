@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-822fd87dfee1bcc2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.15800",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.15800",
+    "identity_tokens": [
+      "arXiv:2603.15800"
+    ],
+    "reason": "The primary paper adds a retrieved self-reflective memory to multimodal safety prompts at inference time, but its reported objective is safety behavior and it does not establish an inference-cost, latency, memory, or serving improvement; relevance to inference optimization remains weak.",
+    "first_checked_at": "2026-10-07T13:59:16+00:00",
+    "last_checked_at": "2026-10-07T13:59:16+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Evolving Contextual Safety in Multi-Modal Large Language Models via Inference-Time Self-Reflective Memory"
+  },
+  "processed_at": "2026-10-07T13:59:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-822fd87dfee1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

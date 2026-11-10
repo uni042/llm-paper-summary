@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21678a0361e9db93-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.23816",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.23816",
+    "identity_tokens": [
+      "arXiv:2608.23816"
+    ],
+    "reason": "AQLoRA optimizes quantized LoRA fine-tuning, a training-time procedure excluded by the project scope.",
+    "first_checked_at": "2026-10-05T08:10:24+00:00",
+    "last_checked_at": "2026-10-05T08:10:24+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+    ],
+    "title": "AQLoRA: A Zero-Search Recipe for Fast Quantized LoRA Fine-Tuning"
+  },
+  "processed_at": "2026-10-05T08:10:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21678a0361e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

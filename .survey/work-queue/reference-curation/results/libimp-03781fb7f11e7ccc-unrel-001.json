@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-03781fb7f11e7ccc-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3389/fpls.2025.1564394",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3389/fpls.2025.1564394",
+    "identity_tokens": [
+      "DOI:10.3389/fpls.2025.1564394"
+    ],
+    "reason": "一次要旨は農業phenotyping用の文章生成システムで、LLM推論/servingの効率化を扱わない。",
+    "first_checked_at": "2026-10-05T15:25:13+00:00",
+    "last_checked_at": "2026-10-05T15:25:13+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+    ],
+    "title": "Deep learning-based text generation for plant phenotyping and precision agriculture"
+  },
+  "processed_at": "2026-10-05T15:25:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-03781fb7f11e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

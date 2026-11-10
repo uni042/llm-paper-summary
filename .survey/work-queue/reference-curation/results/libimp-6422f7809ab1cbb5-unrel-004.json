@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6422f7809ab1cbb5-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.00027",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.00027",
+    "identity_tokens": [
+      "arXiv:2608.00027"
+    ],
+    "reason": "一次要旨はMotif-Mamba sequence modeling qualityで推論速度/memory efficiencyを評価しない。",
+    "first_checked_at": "2026-10-05T10:22:33+00:00",
+    "last_checked_at": "2026-10-05T10:22:33+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "title": "Motif-Mamba: network motif improved mamba for long-range sequence modeling"
+  },
+  "processed_at": "2026-10-05T10:22:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6422f7809ab1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ddd5c70c58638c38-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.04037",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.04037",
+    "identity_tokens": [
+      "arXiv:2212.04037"
+    ],
+    "reason": "prompt templateの品質をperplexityで推定・選択するprompt engineering研究。推論時にmodelを使うが、latency・memory・throughput削減が目的ではない。",
+    "first_checked_at": "2026-10-05T16:07:17+00:00",
+    "last_checked_at": "2026-10-05T16:07:17+00:00",
+    "linked_from": [],
+    "title": "Demystifying Prompts in Language Models via Perplexity Estimation"
+  },
+  "processed_at": "2026-10-05T16:07:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ddd5c70c5863",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-216591da5903e861-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.14511",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.14511",
+    "identity_tokens": [
+      "arXiv:2608.14511"
+    ],
+    "reason": "Abstract in the exact input packet.",
+    "first_checked_at": "2026-10-06T09:41:49+00:00",
+    "last_checked_at": "2026-10-06T09:41:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+    ],
+    "title": "Learning-to-Transition for Large-scale and High-Order MIMO Detection"
+  },
+  "processed_at": "2026-10-06T09:41:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-216591da5903",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

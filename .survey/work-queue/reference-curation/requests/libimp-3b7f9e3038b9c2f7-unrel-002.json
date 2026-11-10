@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3b7f9e3038b9c2f7-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.22916",
+  "reason": "Generating text-rich images from prompts requires both textual fidelity and the coherent integration of text into the surrounding image. An explicit layout can provide structured guidance about what text should appear and where, but a well-formed plan alone does not guarantee that the renderer will realize it faithfully. Existing layout-based AR-diffusion systems typically optimize planning and rendering separately, preventing the planner's representations from being adapted jointly with image synthesis. We introduce DuetGen, an autonomous visual text generator built on DeepFusion, which jointly learns autoregressive planning and continuous diffusion rendering. DeepFusion conditions a diffusion transformer on the planner's prompt and bbox-content hidden states, allowing rendering supervision to shape the representations connecting textual plans with visual outputs. Its joint objective combines autoregressive plan supervision, text-region-weighted diffusion learning, and auxiliary coordinate supervision to maintain structured planning, emphasize text-bearing regions, and improve the spatial precision of planner representations. During inference, Phase-Aware Attention Modulation strengthens the correspondence between image regions and their matched coordinate and content states, facilitating region-specific execution of the generated plan. With a 2B planner and a 4B single-stream DiT, DuetGen achieves 0.8293 word accuracy on CVTG-2K and 0.938 accuracy on LongText-Bench, closely matching the substantially larger Qwen-Image on both benchmarks. These results demonstrate the value of jointly learned planning representations and region-specific rendering for autonomous visual text generation.",
+  "title": "Planning and Rendering in Concert: DeepFusion of Autoregressive Layouts and Diffusion for Visual Text Generation",
+  "identity_tokens": [
+    "arXiv:2609.22916"
+  ],
+  "linked_from": [
+    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b7f9e3038b9",
+  "source_precheck_request_id": null
+}

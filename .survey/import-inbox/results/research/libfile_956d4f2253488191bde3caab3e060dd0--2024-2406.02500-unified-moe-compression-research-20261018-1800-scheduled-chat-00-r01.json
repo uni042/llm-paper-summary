@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "6fdcb8319d378b592836993ed2b830a4477cc13bf5cf6c6023659e1001c2aac4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_956d4f2253488191bde3caab3e060dd0--2024-2406.02500-unified-moe-compression-research-20261018-1800-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2406.02500",
+  "worker_completed_at": "2026-10-18T18:03:45+09:00",
+  "worker_run_key": "20261018-1800-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8158,
+    "body_paragraphs": 42,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1828,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-18T11:50:18+00:00"
+}

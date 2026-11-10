@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e50a8755f4ae9f79-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.32722",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.32722",
+    "identity_tokens": [
+      "arXiv:2609.32722"
+    ],
+    "reason": "Scaling properties of same-family on-policy distillation are a training dynamics study; no inference-efficiency contribution is described.",
+    "first_checked_at": "2026-10-05T06:09:18+00:00",
+    "last_checked_at": "2026-10-05T06:09:18+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "Scaling Properties of Same-Family On-Policy Distillation"
+  },
+  "processed_at": "2026-10-05T06:09:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e50a8755f4ae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

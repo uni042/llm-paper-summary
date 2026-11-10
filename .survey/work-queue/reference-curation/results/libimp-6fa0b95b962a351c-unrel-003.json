@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6fa0b95b962a351c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.15211",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.15211",
+    "identity_tokens": [
+      "arXiv:2608.15211"
+    ],
+    "reason": "地球科学予測モデルの階層分散trainingとmemory orchestrationを扱う。",
+    "first_checked_at": "2026-10-05T08:30:20+00:00",
+    "last_checked_at": "2026-10-05T08:30:20+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "TERRA: A Hierarchical Parallel Training and Memory Orchestration Framework for High-Resolution AI-based Earth Modeling"
+  },
+  "processed_at": "2026-10-05T08:30:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6fa0b95b962a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

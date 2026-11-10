@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-62ffe033df7d0b1b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.27996",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.27996",
+    "identity_tokens": [
+      "arXiv:2609.27996"
+    ],
+    "reason": "Privacy-sensitive organizations may run large language models (LLMs) in restricted or air-gapped environments while exporting selected diagnostic artifacts. We show that a compromised runtime component can hide sensitive information in intermediate activations that are allowed to leave the restricted environment. An offline observer can recover this information with a simple linear decoder. The attack requires no model retraining or weight modification, no attacker-controlled egress, and no cont",
+    "first_checked_at": "2026-10-05T05:44:53+00:00",
+    "last_checked_at": "2026-10-05T05:44:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "Your Model Is Leaking: Covert Information Transfer through LLM Residual Streams"
+  },
+  "processed_at": "2026-10-05T05:44:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-62ffe033df7d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

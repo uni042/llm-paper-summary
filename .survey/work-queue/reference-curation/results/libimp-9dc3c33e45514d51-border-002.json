@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9dc3c33e45514d51-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.15514",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.15514",
+    "identity_tokens": [
+      "SemanticScholar:ac4103c097e74e90c5a49266907229db5913069d",
+      "arXiv:2605.15514"
+    ],
+    "reason": "The paper proves long-context RoPE failures and analyzes base scaling, informing positional-encoding design; it proposes no replacement mechanism or measured inference-efficiency improvement.",
+    "first_checked_at": "2026-10-13T09:35:44+00:00",
+    "last_checked_at": "2026-10-13T09:35:44+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/inference/99-other-inference-systems/2024-2312.04455-fortify-the-shortest-stave-in-attention-enhancing-context-awareness-of-l.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "RoPE Distinguishes Neither Positions Nor Tokens in Long Contexts, Provably"
+  },
+  "processed_at": "2026-10-13T09:35:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9dc3c33e4551",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

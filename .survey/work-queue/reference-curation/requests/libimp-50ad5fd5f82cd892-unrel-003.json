@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-50ad5fd5f82cd892-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.23495",
+  "reason": "Failures of high-resolution MLLMs are commonly attributed to a visual problem, motivating zooming, cropping, and related visual interventions to recover fine-grained evidence or suppress interference. Yet recent studies suggest that relevant visual evidence is already encoded in intermediate representations, indicating that visual-side improvements alone insufficient. This raises a natural question: does the remaining bottleneck lie in the text that guides visual search? We identify a previously overlooked linguistic bottleneck: questions formulated for answering do not necessarily specify the visual evidence required for localization. To address this mismatch, we introduce EviSpec, a training-free compiler that derives complementary evidence specifications while preserving the original question for final reasoning. We further validate it through matched-control experiments that isolate the roles of evidence specification and localization. With the search budget fixed, structured evidence specifications yield an 8.6% relative gain over generic requests. With evidence geometry matched, the evidence localized by EviSpec yields a 14.8% relative gain over random evidence. Together, these controls isolate the benefit of specifying what evidence to seek rather than merely expanding visual access. Across all five MLLMs, EviSpec consistently improves upon the corresponding baseline on each of the three benchmarks, yielding average relative gains of \\textbf{10.4%, 8.8%, and 12.4%} on V\\textsuperscript{*}Bench, HR-Bench-4K, and HR-Bench-8K, respectively. Beyond high-resolution reasoning, EviSpec also achieves state-of-the-art performance on VQA and hallucination-focused benchmarks.",
+  "title": "Pay More Attention To Text In High-Resolution MLLMs",
+  "identity_tokens": [
+    "arXiv:2609.23495"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-50ad5fd5f82c",
+  "source_precheck_request_id": null
+}

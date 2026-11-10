@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2d8bd0ea5ce71367-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.19670",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.19670",
+    "identity_tokens": [
+      "arXiv:2608.19670"
+    ],
+    "reason": "Compression deployment evaluation is adjacent, but the paper’s core is behavioral safety rather than efficiency.",
+    "first_checked_at": "2026-10-05T08:19:05+00:00",
+    "last_checked_at": "2026-10-05T08:19:05+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+      "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+      "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "The Asymmetric Harms of LLM Compression"
+  },
+  "processed_at": "2026-10-05T08:19:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d8bd0ea5ce7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

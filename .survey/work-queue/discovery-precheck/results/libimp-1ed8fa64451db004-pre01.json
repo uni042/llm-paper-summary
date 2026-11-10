@@ -1,0 +1,1321 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1ed8fa64451db004-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1ed8fa64451d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/sieds69358.2026.11540265",
+    "DOI:10.1145/3779212.3790240",
+    "arXiv:2511.02647",
+    "arXiv:2601.06562",
+    "arXiv:2602.00874",
+    "arXiv:2603.10353",
+    "arXiv:2604.23577",
+    "arXiv:2604.23996",
+    "arXiv:2605.01910",
+    "arXiv:2605.03109",
+    "arXiv:2605.08292",
+    "arXiv:2605.11093",
+    "arXiv:2605.20982",
+    "arXiv:2606.05158"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 14,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9d9f0647cbb3b7dbd9dd5f81230327f4e708d937",
+  "raw_search_result_count": 14,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 14,
+  "provider_progress": {
+    "requested_count": 14,
+    "status_counts": {
+      "allowed": 14,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T22:36:32.058599+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/sieds69358.2026.11540265",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3779212.3790240",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.02647",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.06562",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.00874",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.10353",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.23577",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.23996",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.01910",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.03109",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.08292",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.11093",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.20982",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.05158",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Federated Attention: A Distributed Paradigm for Collaborative LLM Inference over Edge Networks",
+      "source_url": "https://arxiv.org/abs/2511.02647",
+      "year": 2025,
+      "published": "2025-11-04",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are proliferating rapidly at the edge, delivering intelligent capabilities across diverse application scenarios. However, their practical deployment in collaborative scenarios confronts fundamental challenges: privacy vulnerabilities, communication overhead, and computational bottlenecks. To address these, we propose Federated Attention (FedAttn), which integrates the federated paradigm into the self-attention mechanism, creating a new distributed LLM inference framework that simultaneously achieves privacy protection, communication efficiency, and computational efficiency. FedAttn enables participants to perform local self-attention over their own token representations while periodically exchanging and aggregating Key-Value (KV) matrices across multiple Transformer blocks, collaboratively generating LLM responses without exposing private prompts. Further, we identify a structural duality between contextual representation refinement in FedAttn and parameter optimization in FL across private data, local computation, and global aggregation. This key insight provides a principled foundation for systematically porting federated optimization techniques to collaborative LLM inference. Building on this framework, we theoretically analyze how local self-attention computation within participants and heterogeneous token relevance among participants shape error propagation dynamics across Transformer blocks. Moreover, we characterize the fundamental trade-off between response quality and communication/computation efficiency, which is governed by the synchronization interval and the number of participants. Experimental results validate our theoretical analysis, and reveal significant optimization opportunities through sparse attention and adaptive KV aggregation, highlighting FedAttn's potential to deliver scalability and efficiency in real-world edge deployments.",
+      "identifiers": [
+        "SemanticScholar:2dd62bfe6e9055922e605bbcccc92ee0abdf17ff"
+      ],
+      "semantic_scholar_id": "2dd62bfe6e9055922e605bbcccc92ee0abdf17ff",
+      "canonical_id": "arXiv:2511.02647",
+      "arxiv_id": "2511.02647",
+      "doi": "10.48550/arXiv.2511.02647",
+      "authors": [
+        "Xiu-Mei Deng",
+        "Zehui Xiong",
+        "Bin-Bin Chen",
+        "Dong In Kim",
+        "M. Debbah",
+        "H. V. Poor"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 343,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mosaic: Unlocking Long-Context Inference for Diffusion LLMs via Global Memory Planning and Dynamic Peak Taming",
+      "source_url": "https://arxiv.org/abs/2601.06562",
+      "year": 2026,
+      "published": "2026-01-10",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based large language models (dLLMs) have emerged as a promising paradigm, utilizing simultaneous denoising to enable global planning and iterative refinement. While these capabilities are particularly advantageous for long-context generation, deploying such models faces a prohibitive memory capacity barrier stemming from severe system inefficiencies. We identify that existing inference systems are ill-suited for this paradigm: unlike autoregressive models constrained by the cumulative KV-cache, dLLMs are bottlenecked by transient activations recomputed at every step. Furthermore, general-purpose memory reuse mechanisms lack the global visibility to adapt to dLLMs'dynamic memory peaks, which toggle between logits and FFNs. To address these mismatches, we propose Mosaic, a memory-efficient inference system that shifts from local, static management to a global, dynamic paradigm. Mosaic integrates a mask-only logits kernel to eliminate redundancy, a lazy chunking optimizer driven by an online heuristic search to adaptively mitigate dynamic peaks, and a global memory manager to resolve fragmentation via virtual addressing. Extensive evaluations demonstrate that Mosaic achieves an average 2.71$\\times$ reduction in the memory peak-to-average ratio and increases the maximum inference sequence length supportable on identical hardware by 15.89-32.98$\\times$. This scalability is achieved without compromising accuracy and speed, and in fact reducing latency by 4.12%-23.26%.",
+      "identifiers": [
+        "SemanticScholar:28d1612b26e5e24af2647988e024fe3fb16420a4"
+      ],
+      "semantic_scholar_id": "28d1612b26e5e24af2647988e024fe3fb16420a4",
+      "canonical_id": "arXiv:2601.06562",
+      "arxiv_id": "2601.06562",
+      "doi": "10.48550/arXiv.2601.06562",
+      "authors": [
+        "Liang Zheng",
+        "Bowen Shi",
+        "Yi-Tao Hu",
+        "Jiawei Zhang",
+        "Ruo-Fan Li",
+        "Sheng Chen",
+        "Wenxin Li",
+        "Ke-Qiu Li"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 276,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation",
+      "source_url": "https://doi.org/10.1145/3779212.3790240",
+      "year": 2026,
+      "published": "2026-03-22",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern tensor program optimizers operate at two separate levels: graph-level optimizations (operator fusion, algebraic rewrites) and operator-level scheduling (tiling, parallelization). This separation prevents them from discovering cross-operator, tile-level optimizations that make hand-tuned kernels like FlashAttention effective. We present Trinity, the first tensor program optimizer that achieves scalable joint optimization through tile-level equality saturation. Our key insight is that optimal performance requires simultaneously optimizing three interdependent dimensions -- algebraic equivalence, memory I/O, and compute orchestration. To enable this, Trinity introduces a novel fine-grained IR that exposes all three axes as first-class, rewritable entities and applies equality saturation to perform scalable joint optimization. As a result, Trinity automatically discovers complex optimizations that require coordinated reasoning across all three dimensions. Across diverse Transformer variants, Trinity achieves up to 2.09× speedup over TensorRT and 2.35× over TorchInductor, both state-of-the-art production compilers.",
+      "identifiers": [
+        "SemanticScholar:50a5732d7ba2aa651c0ed611bffa6eecb29a549c"
+      ],
+      "semantic_scholar_id": "50a5732d7ba2aa651c0ed611bffa6eecb29a549c",
+      "doi": "10.1145/3779212.3790240",
+      "canonical_id": "DOI:10.1145/3779212.3790240",
+      "authors": [
+        "Jaehyeong Park",
+        "Youngchan Kim",
+        "Haechan An",
+        "G. Jeong",
+        "Jeehoon Kang",
+        "Dong-Su Han"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Sublinear Time Quantum Algorithm for Attention Approximation",
+      "source_url": "https://arxiv.org/abs/2602.00874",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Given the query, key and value matrices $Q, K, V\\in \\mathbb{R}^{n\\times d}$, the attention module is defined as $\\mathrm{Att}(Q, K, V)=D^{-1}AV$ where $A=\\exp(QK^\\top/\\sqrt{d})$ with $\\exp(\\cdot)$ applied entrywise, $D=\\mathrm{diag}(A{\\bf 1}_n)$. The attention module is the backbone of modern transformers and large language models, but explicitly forming the softmax matrix $D^{-1}A$ incurs $\\Omega(n^2)$ time, motivating numerous approximation schemes that reduce runtime to $\\widetilde O(nd)$ via sparsity or low-rank factorization. We propose a quantum data structure that approximates any row of $\\mathrm{Att}(Q, K, V)$ using only row queries to $Q, K, V$. Our algorithm preprocesses these matrices in $\\widetilde{O}\\left( \\epsilon^{-1} n^{0.5} \\left( s_\\lambda^{2.5} + s_\\lambda^{1.5} d + \\alpha^{0.5} d \\right) \\right)$ time, where $\\epsilon$ is the target accuracy, $s_\\lambda$ is the $\\lambda$-statistical dimension of the exponential kernel defined by $Q$ and $K$, and $\\alpha$ measures the row distortion of $V$ that is at most $d/{\\rm srank}(V)$, the stable rank of $V$. Each row query can be answered in $\\widetilde{O}(s_\\lambda^2 + s_\\lambda d)$ time. To our knowledge, this is the first quantum data structure that approximates rows of the attention matrix in sublinear time with respect to $n$. Our approach relies on a quantum Nystr\\\"om approximation of the exponential kernel, quantum multivariate mean estimation for computing $D$, and quantum leverage score sampling for the multiplication with $V$.",
+      "identifiers": [
+        "SemanticScholar:ab44bf224f89d27c8805d49865f54c31e046368a"
+      ],
+      "semantic_scholar_id": "ab44bf224f89d27c8805d49865f54c31e046368a",
+      "canonical_id": "arXiv:2602.00874",
+      "arxiv_id": "2602.00874",
+      "doi": "10.48550/arXiv.2602.00874",
+      "authors": [
+        "Zhao Song",
+        "Jianfei Xue",
+        "Jia-Hao Zhang",
+        "Li-Cheng Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 255,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RouteNLP: Closed-Loop LLM Routing with Conformal Cascading and Distillation Co-Optimization",
+      "source_url": "https://arxiv.org/abs/2604.23577",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving diverse NLP workloads with large language models is costly: at one enterprise partner, inference costs exceeded $200K/month despite over 70% of queries being routine tasks well within the capability of smaller models. We present RouteNLP, a closed-loop framework that routes queries across a tiered model portfolio to minimize cost while satisfying per-task quality constraints. The framework integrates three components: a difficulty-aware router with shared task-conditioned representations trained on preference data and quality signals; confidence-calibrated cascading that uses conformal prediction for distribution-free threshold initialization; and a distillation-routing co-optimization loop that clusters escalation failures, applies targeted knowledge distillation to cheaper models, and automatically retrains the router, yielding over twice the cost improvement of untargeted distillation. In an 8-week pilot deployment processing ~5K queries/day at an enterprise customer-service division, RouteNLP reduced inference costs by 58% while maintaining 91% response acceptance and reducing p99 latency from 1,847 ms to 387 ms. On a six-task benchmark spanning finance, customer service, and legal domains, the framework achieves 40-85% cost reduction while retaining 96-100% quality on structured tasks and 96-98% on generation tasks, with human evaluation confirming that 74.5% of routed generation outputs match or exceed frontier-model quality.",
+      "identifiers": [
+        "SemanticScholar:53e8551bf6c8f4c941bd765a6cb701c627e73f4d"
+      ],
+      "semantic_scholar_id": "53e8551bf6c8f4c941bd765a6cb701c627e73f4d",
+      "canonical_id": "arXiv:2604.23577",
+      "arxiv_id": "2604.23577",
+      "doi": "10.48550/arXiv.2604.23577",
+      "authors": [
+        "Dong Guo",
+        "Ji-Kun Wu",
+        "Siu-Ming Yiu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SMoES: Soft Modality-Guided Expert Specialization in MoE-VLMs",
+      "source_url": "https://arxiv.org/abs/2604.23996",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) has become a prevalent backbone for large vision-language models (VLMs), yet how modality-specific signals should guide expert routing remains under-explored. Existing routing strategies are either hand-crafted or modality-agnostic, relying on idealized priors that ignore the layer-dependent modality fusion patterns in MoE-VLMs and provide little guidance for expert specialization. We propose Soft Modality-guided Expert Specialization (SMoES), which consists of dynamic soft modality scores that capture layer-dependent fusion patterns, an expert binning mechanism aligned with expert-parallel deployment, and an inter-bin mutual information regularization that encourages coherent modality specialization. Our method leverages attention-based or Gaussian-statistics modality scores to optimize mutual information regularization. Experiments across four MoE-based VLMs and 16 benchmarks demonstrate improvement on both effectiveness and efficiency: 0.9% and 4.2% average gain on multimodal and language-only tasks, 56.1% reduction in EP communication overhead, and 12.3% throughput improvement under realistic deployment. These results validate that aligning routing with modality-aware expert specialization unlocks MoE-VLM capacity and efficiency.",
+      "identifiers": [
+        "SemanticScholar:62a22eb108e5dfa476461229e2afb8ff1e2a1163"
+      ],
+      "semantic_scholar_id": "62a22eb108e5dfa476461229e2afb8ff1e2a1163",
+      "canonical_id": "arXiv:2604.23996",
+      "arxiv_id": "2604.23996",
+      "doi": "10.48550/arXiv.2604.23996",
+      "authors": [
+        "Zi-Hao Bo",
+        "Ya-Qian Li",
+        "Anzhou Hou",
+        "Rinyoichi Takezoe",
+        "Er-Tao Zhao",
+        "Tianxiang Pan",
+        "Jiale Yan",
+        "Mo Guang",
+        "Kai-Wen Long"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hierarchical Mixture of Experts with Two-Stage Optimization",
+      "source_url": "https://arxiv.org/abs/2605.08292",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse Mixture-of-Experts (MoE) models scale capacity by routing each token to a small subset of experts. However, their routers exhibit a fundamental trade-off: strong load balancing can suppress expert specialization, while aggressive diversity often causes routing collapse. We propose Hi-MoE, a grouped MoE framework that decomposes routing control into two coupled levels: (i) inter-group balancing that enforces fair traffic across expert groups, and (ii) intra-group specialization that promotes complementary expert behaviors while preventing within-group collapse. Our analysis provides a principled explanation of how our hierarchical objectives reshape the router, thereby promoting stable specialization and mitigating collapse. We observe consistent improvements over recent sparse-routing and grouped-MoE baselines across NLP and vision benchmarks, and confirm robustness via scaling studies (model size, expert count) and targeted ablations. In large-scale pre-training on 58B tokens, Hi-MoE-7B achieves a 5.6% perplexity reduction and a 40% improvement in expert balance over OLMoE-7B across diverse evaluation domains.",
+      "identifiers": [
+        "SemanticScholar:d538af884b9b673b71abfcf7363ec307b68b7ca8"
+      ],
+      "semantic_scholar_id": "d538af884b9b673b71abfcf7363ec307b68b7ca8",
+      "canonical_id": "arXiv:2605.08292",
+      "arxiv_id": "2605.08292",
+      "doi": "10.1145/3770855.3817632",
+      "authors": [
+        "G. Molodtsov",
+        "A. Miasnikov",
+        "A. Beznosikov"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 158,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "S-HPLB: Efficient LLM Attention Serving via Sparsity-Aware Head Parallelism Load Balance",
+      "source_url": "https://arxiv.org/abs/2603.10353",
+      "year": 2026,
+      "published": "2026-03-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the increasing volumes of Large Language Models (LLMs) and the expanding context lengths, attention computation has become a key performance bottleneck in LLM serving. For fast attention computation, recent practices often parallelize the attention heads on multiple GPUs, and also widely adopt attention sparsification to reduce the computation amount -- which selectively computes a subset of attention pairs under a preset sparsity budget. In this paper, we notice that attention heads of an LLM model often exhibit heterogeneous-yet-stable sparsity elasticities, which motivates us to enforce head-adaptive sparsity budgets to attain better efficiency while preserving high inference quality. Yet, from the system aspect, with heterogeneous sparsity levels, attention computation time on different heads would be inconsistent, yielding cross-GPU resource bubbles under head-parallel deployment. To further minimize such bubbles, we propose a novel attention deployment strategy called Sparsity-aware Head-Parallel Load Balance (S-HPLB). Experiments on long-context benchmark show that, S-HPLB can achieve a $2.88\\times$ improvement in average attention computation latency without quality degradation.",
+      "identifiers": [
+        "SemanticScholar:a111ca99439d50833a7668458f62d3d34b7c4d95"
+      ],
+      "semantic_scholar_id": "a111ca99439d50833a7668458f62d3d34b7c4d95",
+      "canonical_id": "arXiv:2603.10353",
+      "arxiv_id": "2603.10353",
+      "doi": "10.48550/arXiv.2603.10353",
+      "authors": [
+        "Di Liu",
+        "Yifei Liu",
+        "Chen Chen",
+        "Zhi-Bin Yu",
+        "Xiaoyi Fan",
+        "Quan Chen",
+        "Min-Yi Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 216,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Parallelism Strategies and Concurrency Effects for Mixture-of-Experts Inference on GPU Systems",
+      "source_url": "https://doi.org/10.1109/SIEDS69358.2026.11540265",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "Systems and Information Engineering Design Symposium",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) architectures reduce inference cost by activating only a sparse subset of parameters per token. However, when these models exceed single-GPU memory, practitioners must distribute them across devices using tensor parallelism (TP), expert parallelism (EP), or a hybrid of both, and there is little empirical guidance on which strategy to choose. We present a controlled comparison of these strategies for MoE inference serving on NVIDIA A100 GPUs using vLLM. Across multiple models and workload settings, we find that EP achieves 85–102% of TP throughput depending on expert count, matching or exceeding TP for models with 60–64 experts, while naive TP+EP hybrid placement underperforms both alternatives. We also show that a diffusion-based MoE language model is substantially slower than its dense counterpart, highlighting the need for multi-GPU expert distribution in this emerging class. Overall, our results suggest that request concurrency has a larger impact on throughput than parallelism choice in many cases, and that EP is a strong default for large-expert MoE models.",
+      "identifiers": [
+        "SemanticScholar:194facd3a3e40fdf53e4e5e52205e83c4162224d"
+      ],
+      "semantic_scholar_id": "194facd3a3e40fdf53e4e5e52205e83c4162224d",
+      "doi": "10.1109/SIEDS69358.2026.11540265",
+      "canonical_id": "DOI:10.1109/SIEDS69358.2026.11540265",
+      "authors": [
+        "Ananya Hegde",
+        "Akshata Kumble",
+        "Ravi Gupta"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Stochastic Sparse Attention for Memory-Bound Inference",
+      "source_url": "https://arxiv.org/abs/2605.01910",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding becomes bandwidth-limited at long contexts, as generating each token requires reading all $n_k$ key and value vectors from KV cache. We present Stochastic Additive No-mulT Attention (SANTA), a method that sparsifies value-cache access by sampling $S \\ll n_k$ indices from the post-softmax distribution and aggregates only those value rows. This yields an unbiased estimator of the post-softmax value aggregation while replacing value-stage multiply-accumulates with gather-and-add. We introduce stratified and systematic sampling to design variance-reduced, GPU-friendly variants. Evaluated on Llama-3.1-8B-Instruct at 32k-token contexts, S$^2$ANTA matches baseline accuracy while achieving up to $1.5\\times$ decode-step attention-kernel speedup over FlashInfer and FlashDecoding on an NVIDIA RTX 6000 Ada. In batched long-context generation, these kernel gains translate to up to $1.25\\times$ end-to-end decode-latency speedup. Finally, we propose Bernoulli $qK^\\mathsf{T}$ sampling as a complementary technique to sparsify the score stage, reducing key-feature access through stochastic ternary queries. Both methods are complementary to upstream quantization, low-rank projection, KV-cache compression, and KV-cache selection methods. Together, they point toward sparse, multiplier-free, and energy-efficient inference. We open-source our kernels at: https://github.com/OPUSLab/SANTA.git",
+      "identifiers": [
+        "SemanticScholar:1400241723114c69f37991887536fc5a7d1025cf"
+      ],
+      "semantic_scholar_id": "1400241723114c69f37991887536fc5a7d1025cf",
+      "canonical_id": "arXiv:2605.01910",
+      "arxiv_id": "2605.01910",
+      "doi": "10.48550/arXiv.2605.01910",
+      "authors": [
+        "Kyle Lee",
+        "Corentin Delacour",
+        "Kevin Callahan-Coray",
+        "Kyle Jiang",
+        "Can Yaras",
+        "Samet Oymak",
+        "T. Srimani",
+        "K. Çamsari"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 163,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Gated Subspace Inference for Transformer Acceleration",
+      "source_url": "https://arxiv.org/abs/2605.03109",
+      "year": 2026,
+      "published": "2026-05-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A method is presented for accelerating inference in transformer language models by exploiting the low effective rank of the token activation manifold at each layer. The method decomposes each activation vector into a subspace component and a residual, computes the linear-layer output on the subspace component via a cached low-rank weight image at reduced memory bandwidth, and applies a per-token gate that determines whether the residual correction is computed or skipped. The gate ensures that the output distribution is preserved to within a controllable tolerance. Validation on three model families (GPT-2 124M, GPT-J 6B, OPT 6.7B) on AMD MI300X demonstrates effective speedups of 3.0x to 10.5x on linear-layer weight reads with perplexity ratios below 1.00 and top-1 token agreement above 98%. The method requires no retraining, no architectural modification, and no approximation of the attention mechanism. At the operating point (k = 256, {\\epsilon} = 0.05) on GPT-J 14 6B, the accelerated model produces character-for-character identical output to the baseline.",
+      "identifiers": [
+        "SemanticScholar:973fffa2c66a7b41721d901de067d7971a43b634"
+      ],
+      "semantic_scholar_id": "973fffa2c66a7b41721d901de067d7971a43b634",
+      "canonical_id": "arXiv:2605.03109",
+      "arxiv_id": "2605.03109",
+      "doi": "10.48550/arXiv.2605.03109",
+      "authors": [
+        "Stephen Thomas"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Enabling Performant and Flexible Model-Internal Observability for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.11093",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Today's inference-time workloads increasingly depend on timely access to a model's internal states. We present DMI-Lib, a high-speed deep model inspector that treats internal observability as a first-class systems primitive, decoupling it from the inference hot path via an asynchronous observability substrate built from Ring^2, a GPU-CPU memory abstraction for capturing and staging tensors, and a policy-controlled host backend that exports them. DMI-Lib enables the placement of observation points across a rich space of internal signals and diverse inference backends while preserving serving optimizations and adhering to tight GPU memory budgets. Our experiments demonstrate that DMI-Lib incurs only 0.4%--6.8% overhead in offline batch inference and an average of 6% in moderate online serving, reducing latency overhead by 2x-15x compared to existing baselines with similar observability features. DMI-Lib is open-sourced at https://github.com/ProjectDMX/DMI.",
+      "identifiers": [
+        "SemanticScholar:6bb13e882a1d75a735afe6be88862ed0e3d6a150"
+      ],
+      "semantic_scholar_id": "6bb13e882a1d75a735afe6be88862ed0e3d6a150",
+      "canonical_id": "arXiv:2605.11093",
+      "arxiv_id": "2605.11093",
+      "doi": "10.48550/arXiv.2605.11093",
+      "authors": [
+        "Nengneng Yu",
+        "Sixian Xiong",
+        "Yi-Bo Zhao",
+        "Wei Wang",
+        "Zaoxing Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Diagnosing Overhead in Dispatch Operations: Cross-architecture Observatory",
+      "source_url": "https://arxiv.org/abs/2605.20982",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AlltoAll dispatch is the dominant bottleneck of MoE expert parallelism, and the interconnect community has responded with four families of mitigations: predictive sample placement, adaptive expert relayout, hierarchical collectives, and EP-aware topology. All four rest on two assumptions about the workload: that routing imbalance is correctable by the system layer, and that the mock-token benchmarks evaluating them faithfully represent production routing. We introduce DODOCO to test both, instrumenting five open MoE checkpoints that span today's sequence-mixer designs (MHA, MLA, GQA, Gated DeltaNet and Mamba-2 SSM) under a factorial grid of six data conditions and a matched expert-parallelism scan on H100 clusters. Both assumptions fail. Scaling EP leaves per-expert load concentration essentially unchanged: the straggler is intrinsic to the routing decision the model makes, not to how its experts land on ranks. Mock tokens overestimate routing imbalance by up to a factor of 2.35, and the error is a level offset rather than a trend: it stays flat across a $32\\times$ batch-size sweep. Skewing the synthetic distribution toward realism (Zipf) widens the gap instead of closing it. A third pattern organizes the results: the architectures separate into a data-resilient band (MHA, Mamba-2), whose routing approaches uniform on real text, and a persistently concentrated band (MLA, GDN), with GQA intermediate. These bands, not the EP degree or the mock-data profile, are the right workload input to AlltoAll-aware interconnect and dispatch design.",
+      "identifiers": [
+        "SemanticScholar:bf54d63d502d6c0c58d823823d609b8981021ddc"
+      ],
+      "semantic_scholar_id": "bf54d63d502d6c0c58d823823d609b8981021ddc",
+      "canonical_id": "arXiv:2605.20982",
+      "arxiv_id": "2605.20982",
+      "doi": "10.48550/arXiv.2605.20982",
+      "authors": [
+        "Bole Ma",
+        "Jan Eitzinger",
+        "H. Köstler",
+        "G. Wellein"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Streaming Communication in Multi-Agent Reasoning",
+      "source_url": "https://arxiv.org/abs/2606.05158",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent reasoning systems adopt a\"generate-then-transfer\"paradigm that forces end-to-end latency to scale linearly with pipeline depth. We introduce StreamMA, a multi-agent reasoning system that streams each reasoning step to downstream agents as soon as it is generated, pipelining adjacent agents and thus reducing latency. Surprisingly, this pipelining also improves effectiveness: because multi-step reasoning quality is non-uniform and early steps are more reliable than later ones, working with these reliable early steps instead of the full chain prevents error-prone late steps from misleading downstream agents. We formalize both advantages with the first closed-form joint analysis of stream, serial, and single protocols, deriving the effectiveness ordering, speedup upper bound, and cost ratio. Across eight reasoning benchmarks spanning mathematics, science, and code, two frontier LLMs (Claude Opus 4.6 and GPT-5.4), and three topologies (Chain, Tree, Graph), StreamMA outperforms both baselines (avg. +7.3 pp, max +22.4 pp on HMMT 2026; Claude Opus 4.6-high). Beyond these contributions, we discover a\"step-level scaling law\": increasing per-agent steps consistently improves both effectiveness and efficiency, a new scaling dimension orthogonal to and composable with agent-count scaling.",
+      "identifiers": [
+        "SemanticScholar:002269ec7a44c187ebac889f3fbfb224e8a517d1"
+      ],
+      "semantic_scholar_id": "002269ec7a44c187ebac889f3fbfb224e8a517d1",
+      "canonical_id": "arXiv:2606.05158",
+      "arxiv_id": "2606.05158",
+      "doi": "10.48550/arXiv.2606.05158",
+      "authors": [
+        "Zhen Yang",
+        "Xiao-Gang Xu",
+        "Wen Wang",
+        "Cong Chen",
+        "Xander Xu",
+        "Ying-Cong Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 132,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.02647",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.02647",
+        "id:SemanticScholar:2dd62bfe6e9055922e605bbcccc92ee0abdf17ff",
+        "id:arXiv:2511.02647",
+        "title:federated attention a distributed paradigm for collaborative llm inference over edge networks",
+        "url:https://arxiv.org/abs/2511.02647"
+      ],
+      "record": {
+        "title": "Federated Attention: A Distributed Paradigm for Collaborative LLM Inference over Edge Networks",
+        "source_url": "https://arxiv.org/abs/2511.02647",
+        "year": 2025,
+        "published": "2025-11-04",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are proliferating rapidly at the edge, delivering intelligent capabilities across diverse application scenarios. However, their practical deployment in collaborative scenarios confronts fundamental challenges: privacy vulnerabilities, communication overhead, and computational bottlenecks. To address these, we propose Federated Attention (FedAttn), which integrates the federated paradigm into the self-attention mechanism, creating a new distributed LLM inference framework that simultaneously achieves privacy protection, communication efficiency, and computational efficiency. FedAttn enables participants to perform local self-attention over their own token representations while periodically exchanging and aggregating Key-Value (KV) matrices across multiple Transformer blocks, collaboratively generating LLM responses without exposing private prompts. Further, we identify a structural duality between contextual representation refinement in FedAttn and parameter optimization in FL across private data, local computation, and global aggregation. This key insight provides a principled foundation for systematically porting federated optimization techniques to collaborative LLM inference. Building on this framework, we theoretically analyze how local self-attention computation within participants and heterogeneous token relevance among participants shape error propagation dynamics across Transformer blocks. Moreover, we characterize the fundamental trade-off between response quality and communication/computation efficiency, which is governed by the synchronization interval and the number of participants. Experimental results validate our theoretical analysis, and reveal significant optimization opportunities through sparse attention and adaptive KV aggregation, highlighting FedAttn's potential to deliver scalability and efficiency in real-world edge deployments.",
+        "identifiers": [
+          "SemanticScholar:2dd62bfe6e9055922e605bbcccc92ee0abdf17ff"
+        ],
+        "semantic_scholar_id": "2dd62bfe6e9055922e605bbcccc92ee0abdf17ff",
+        "canonical_id": "arXiv:2511.02647",
+        "arxiv_id": "2511.02647",
+        "doi": "10.48550/arXiv.2511.02647",
+        "authors": [
+          "Xiu-Mei Deng",
+          "Zehui Xiong",
+          "Bin-Bin Chen",
+          "Dong In Kim",
+          "M. Debbah",
+          "H. V. Poor"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 343,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.06562",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.06562",
+        "id:SemanticScholar:28d1612b26e5e24af2647988e024fe3fb16420a4",
+        "id:arXiv:2601.06562",
+        "title:mosaic unlocking longcontext inference for diffusion llms via global memory planning and dynamic peak taming",
+        "url:https://arxiv.org/abs/2601.06562"
+      ],
+      "record": {
+        "title": "Mosaic: Unlocking Long-Context Inference for Diffusion LLMs via Global Memory Planning and Dynamic Peak Taming",
+        "source_url": "https://arxiv.org/abs/2601.06562",
+        "year": 2026,
+        "published": "2026-01-10",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion-based large language models (dLLMs) have emerged as a promising paradigm, utilizing simultaneous denoising to enable global planning and iterative refinement. While these capabilities are particularly advantageous for long-context generation, deploying such models faces a prohibitive memory capacity barrier stemming from severe system inefficiencies. We identify that existing inference systems are ill-suited for this paradigm: unlike autoregressive models constrained by the cumulative KV-cache, dLLMs are bottlenecked by transient activations recomputed at every step. Furthermore, general-purpose memory reuse mechanisms lack the global visibility to adapt to dLLMs'dynamic memory peaks, which toggle between logits and FFNs. To address these mismatches, we propose Mosaic, a memory-efficient inference system that shifts from local, static management to a global, dynamic paradigm. Mosaic integrates a mask-only logits kernel to eliminate redundancy, a lazy chunking optimizer driven by an online heuristic search to adaptively mitigate dynamic peaks, and a global memory manager to resolve fragmentation via virtual addressing. Extensive evaluations demonstrate that Mosaic achieves an average 2.71$\\times$ reduction in the memory peak-to-average ratio and increases the maximum inference sequence length supportable on identical hardware by 15.89-32.98$\\times$. This scalability is achieved without compromising accuracy and speed, and in fact reducing latency by 4.12%-23.26%.",
+        "identifiers": [
+          "SemanticScholar:28d1612b26e5e24af2647988e024fe3fb16420a4"
+        ],
+        "semantic_scholar_id": "28d1612b26e5e24af2647988e024fe3fb16420a4",
+        "canonical_id": "arXiv:2601.06562",
+        "arxiv_id": "2601.06562",
+        "doi": "10.48550/arXiv.2601.06562",
+        "authors": [
+          "Liang Zheng",
+          "Bowen Shi",
+          "Yi-Tao Hu",
+          "Jiawei Zhang",
+          "Ruo-Fan Li",
+          "Sheng Chen",
+          "Wenxin Li",
+          "Ke-Qiu Li"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 276,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3779212.3790240",
+      "identity_tokens": [
+        "id:DOI:10.1145/3779212.3790240",
+        "id:SemanticScholar:50a5732d7ba2aa651c0ed611bffa6eecb29a549c",
+        "title:trinity threedimensional tensor program optimization via tilelevel equality saturation",
+        "url:https://doi.org/10.1145/3779212.3790240"
+      ],
+      "record": {
+        "title": "Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation",
+        "source_url": "https://doi.org/10.1145/3779212.3790240",
+        "year": 2026,
+        "published": "2026-03-22",
+        "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern tensor program optimizers operate at two separate levels: graph-level optimizations (operator fusion, algebraic rewrites) and operator-level scheduling (tiling, parallelization). This separation prevents them from discovering cross-operator, tile-level optimizations that make hand-tuned kernels like FlashAttention effective. We present Trinity, the first tensor program optimizer that achieves scalable joint optimization through tile-level equality saturation. Our key insight is that optimal performance requires simultaneously optimizing three interdependent dimensions -- algebraic equivalence, memory I/O, and compute orchestration. To enable this, Trinity introduces a novel fine-grained IR that exposes all three axes as first-class, rewritable entities and applies equality saturation to perform scalable joint optimization. As a result, Trinity automatically discovers complex optimizations that require coordinated reasoning across all three dimensions. Across diverse Transformer variants, Trinity achieves up to 2.09× speedup over TensorRT and 2.35× over TorchInductor, both state-of-the-art production compilers.",
+        "identifiers": [
+          "SemanticScholar:50a5732d7ba2aa651c0ed611bffa6eecb29a549c"
+        ],
+        "semantic_scholar_id": "50a5732d7ba2aa651c0ed611bffa6eecb29a549c",
+        "doi": "10.1145/3779212.3790240",
+        "canonical_id": "DOI:10.1145/3779212.3790240",
+        "authors": [
+          "Jaehyeong Park",
+          "Youngchan Kim",
+          "Haechan An",
+          "G. Jeong",
+          "Jeehoon Kang",
+          "Dong-Su Han"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 205,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.00874",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.00874",
+        "id:SemanticScholar:ab44bf224f89d27c8805d49865f54c31e046368a",
+        "id:arXiv:2602.00874",
+        "title:sublinear time quantum algorithm for attention approximation",
+        "url:https://arxiv.org/abs/2602.00874"
+      ],
+      "record": {
+        "title": "Sublinear Time Quantum Algorithm for Attention Approximation",
+        "source_url": "https://arxiv.org/abs/2602.00874",
+        "year": 2026,
+        "published": "2026-01-31",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Given the query, key and value matrices $Q, K, V\\in \\mathbb{R}^{n\\times d}$, the attention module is defined as $\\mathrm{Att}(Q, K, V)=D^{-1}AV$ where $A=\\exp(QK^\\top/\\sqrt{d})$ with $\\exp(\\cdot)$ applied entrywise, $D=\\mathrm{diag}(A{\\bf 1}_n)$. The attention module is the backbone of modern transformers and large language models, but explicitly forming the softmax matrix $D^{-1}A$ incurs $\\Omega(n^2)$ time, motivating numerous approximation schemes that reduce runtime to $\\widetilde O(nd)$ via sparsity or low-rank factorization. We propose a quantum data structure that approximates any row of $\\mathrm{Att}(Q, K, V)$ using only row queries to $Q, K, V$. Our algorithm preprocesses these matrices in $\\widetilde{O}\\left( \\epsilon^{-1} n^{0.5} \\left( s_\\lambda^{2.5} + s_\\lambda^{1.5} d + \\alpha^{0.5} d \\right) \\right)$ time, where $\\epsilon$ is the target accuracy, $s_\\lambda$ is the $\\lambda$-statistical dimension of the exponential kernel defined by $Q$ and $K$, and $\\alpha$ measures the row distortion of $V$ that is at most $d/{\\rm srank}(V)$, the stable rank of $V$. Each row query can be answered in $\\widetilde{O}(s_\\lambda^2 + s_\\lambda d)$ time. To our knowledge, this is the first quantum data structure that approximates rows of the attention matrix in sublinear time with respect to $n$. Our approach relies on a quantum Nystr\\\"om approximation of the exponential kernel, quantum multivariate mean estimation for computing $D$, and quantum leverage score sampling for the multiplication with $V$.",
+        "identifiers": [
+          "SemanticScholar:ab44bf224f89d27c8805d49865f54c31e046368a"
+        ],
+        "semantic_scholar_id": "ab44bf224f89d27c8805d49865f54c31e046368a",
+        "canonical_id": "arXiv:2602.00874",
+        "arxiv_id": "2602.00874",
+        "doi": "10.48550/arXiv.2602.00874",
+        "authors": [
+          "Zhao Song",
+          "Jianfei Xue",
+          "Jia-Hao Zhang",
+          "Li-Cheng Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 255,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.23577",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.23577",
+        "id:SemanticScholar:53e8551bf6c8f4c941bd765a6cb701c627e73f4d",
+        "id:arXiv:2604.23577",
+        "title:routenlp closedloop llm routing with conformal cascading and distillation cooptimization",
+        "url:https://arxiv.org/abs/2604.23577"
+      ],
+      "record": {
+        "title": "RouteNLP: Closed-Loop LLM Routing with Conformal Cascading and Distillation Co-Optimization",
+        "source_url": "https://arxiv.org/abs/2604.23577",
+        "year": 2026,
+        "published": "2026-04-26",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serving diverse NLP workloads with large language models is costly: at one enterprise partner, inference costs exceeded $200K/month despite over 70% of queries being routine tasks well within the capability of smaller models. We present RouteNLP, a closed-loop framework that routes queries across a tiered model portfolio to minimize cost while satisfying per-task quality constraints. The framework integrates three components: a difficulty-aware router with shared task-conditioned representations trained on preference data and quality signals; confidence-calibrated cascading that uses conformal prediction for distribution-free threshold initialization; and a distillation-routing co-optimization loop that clusters escalation failures, applies targeted knowledge distillation to cheaper models, and automatically retrains the router, yielding over twice the cost improvement of untargeted distillation. In an 8-week pilot deployment processing ~5K queries/day at an enterprise customer-service division, RouteNLP reduced inference costs by 58% while maintaining 91% response acceptance and reducing p99 latency from 1,847 ms to 387 ms. On a six-task benchmark spanning finance, customer service, and legal domains, the framework achieves 40-85% cost reduction while retaining 96-100% quality on structured tasks and 96-98% on generation tasks, with human evaluation confirming that 74.5% of routed generation outputs match or exceed frontier-model quality.",
+        "identifiers": [
+          "SemanticScholar:53e8551bf6c8f4c941bd765a6cb701c627e73f4d"
+        ],
+        "semantic_scholar_id": "53e8551bf6c8f4c941bd765a6cb701c627e73f4d",
+        "canonical_id": "arXiv:2604.23577",
+        "arxiv_id": "2604.23577",
+        "doi": "10.48550/arXiv.2604.23577",
+        "authors": [
+          "Dong Guo",
+          "Ji-Kun Wu",
+          "Siu-Ming Yiu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.23996",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.23996",
+        "id:SemanticScholar:62a22eb108e5dfa476461229e2afb8ff1e2a1163",
+        "id:arXiv:2604.23996",
+        "title:smoes soft modalityguided expert specialization in moevlms",
+        "url:https://arxiv.org/abs/2604.23996"
+      ],
+      "record": {
+        "title": "SMoES: Soft Modality-Guided Expert Specialization in MoE-VLMs",
+        "source_url": "https://arxiv.org/abs/2604.23996",
+        "year": 2026,
+        "published": "2026-04-27",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) has become a prevalent backbone for large vision-language models (VLMs), yet how modality-specific signals should guide expert routing remains under-explored. Existing routing strategies are either hand-crafted or modality-agnostic, relying on idealized priors that ignore the layer-dependent modality fusion patterns in MoE-VLMs and provide little guidance for expert specialization. We propose Soft Modality-guided Expert Specialization (SMoES), which consists of dynamic soft modality scores that capture layer-dependent fusion patterns, an expert binning mechanism aligned with expert-parallel deployment, and an inter-bin mutual information regularization that encourages coherent modality specialization. Our method leverages attention-based or Gaussian-statistics modality scores to optimize mutual information regularization. Experiments across four MoE-based VLMs and 16 benchmarks demonstrate improvement on both effectiveness and efficiency: 0.9% and 4.2% average gain on multimodal and language-only tasks, 56.1% reduction in EP communication overhead, and 12.3% throughput improvement under realistic deployment. These results validate that aligning routing with modality-aware expert specialization unlocks MoE-VLM capacity and efficiency.",
+        "identifiers": [
+          "SemanticScholar:62a22eb108e5dfa476461229e2afb8ff1e2a1163"
+        ],
+        "semantic_scholar_id": "62a22eb108e5dfa476461229e2afb8ff1e2a1163",
+        "canonical_id": "arXiv:2604.23996",
+        "arxiv_id": "2604.23996",
+        "doi": "10.48550/arXiv.2604.23996",
+        "authors": [
+          "Zi-Hao Bo",
+          "Ya-Qian Li",
+          "Anzhou Hou",
+          "Rinyoichi Takezoe",
+          "Er-Tao Zhao",
+          "Tianxiang Pan",
+          "Jiale Yan",
+          "Mo Guang",
+          "Kai-Wen Long"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 169,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.08292",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770855.3817632",
+        "id:SemanticScholar:d538af884b9b673b71abfcf7363ec307b68b7ca8",
+        "id:arXiv:2605.08292",
+        "title:hierarchical mixture of experts with twostage optimization",
+        "url:https://arxiv.org/abs/2605.08292"
+      ],
+      "record": {
+        "title": "Hierarchical Mixture of Experts with Two-Stage Optimization",
+        "source_url": "https://arxiv.org/abs/2605.08292",
+        "year": 2026,
+        "published": "2026-05-08",
+        "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse Mixture-of-Experts (MoE) models scale capacity by routing each token to a small subset of experts. However, their routers exhibit a fundamental trade-off: strong load balancing can suppress expert specialization, while aggressive diversity often causes routing collapse. We propose Hi-MoE, a grouped MoE framework that decomposes routing control into two coupled levels: (i) inter-group balancing that enforces fair traffic across expert groups, and (ii) intra-group specialization that promotes complementary expert behaviors while preventing within-group collapse. Our analysis provides a principled explanation of how our hierarchical objectives reshape the router, thereby promoting stable specialization and mitigating collapse. We observe consistent improvements over recent sparse-routing and grouped-MoE baselines across NLP and vision benchmarks, and confirm robustness via scaling studies (model size, expert count) and targeted ablations. In large-scale pre-training on 58B tokens, Hi-MoE-7B achieves a 5.6% perplexity reduction and a 40% improvement in expert balance over OLMoE-7B across diverse evaluation domains.",
+        "identifiers": [
+          "SemanticScholar:d538af884b9b673b71abfcf7363ec307b68b7ca8"
+        ],
+        "semantic_scholar_id": "d538af884b9b673b71abfcf7363ec307b68b7ca8",
+        "canonical_id": "arXiv:2605.08292",
+        "arxiv_id": "2605.08292",
+        "doi": "10.1145/3770855.3817632",
+        "authors": [
+          "G. Molodtsov",
+          "A. Miasnikov",
+          "A. Beznosikov"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 158,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.10353",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.10353",
+        "id:SemanticScholar:a111ca99439d50833a7668458f62d3d34b7c4d95",
+        "id:arXiv:2603.10353",
+        "title:shplb efficient llm attention serving via sparsityaware head parallelism load balance",
+        "url:https://arxiv.org/abs/2603.10353"
+      ],
+      "record": {
+        "title": "S-HPLB: Efficient LLM Attention Serving via Sparsity-Aware Head Parallelism Load Balance",
+        "source_url": "https://arxiv.org/abs/2603.10353",
+        "year": 2026,
+        "published": "2026-03-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the increasing volumes of Large Language Models (LLMs) and the expanding context lengths, attention computation has become a key performance bottleneck in LLM serving. For fast attention computation, recent practices often parallelize the attention heads on multiple GPUs, and also widely adopt attention sparsification to reduce the computation amount -- which selectively computes a subset of attention pairs under a preset sparsity budget. In this paper, we notice that attention heads of an LLM model often exhibit heterogeneous-yet-stable sparsity elasticities, which motivates us to enforce head-adaptive sparsity budgets to attain better efficiency while preserving high inference quality. Yet, from the system aspect, with heterogeneous sparsity levels, attention computation time on different heads would be inconsistent, yielding cross-GPU resource bubbles under head-parallel deployment. To further minimize such bubbles, we propose a novel attention deployment strategy called Sparsity-aware Head-Parallel Load Balance (S-HPLB). Experiments on long-context benchmark show that, S-HPLB can achieve a $2.88\\times$ improvement in average attention computation latency without quality degradation.",
+        "identifiers": [
+          "SemanticScholar:a111ca99439d50833a7668458f62d3d34b7c4d95"
+        ],
+        "semantic_scholar_id": "a111ca99439d50833a7668458f62d3d34b7c4d95",
+        "canonical_id": "arXiv:2603.10353",
+        "arxiv_id": "2603.10353",
+        "doi": "10.48550/arXiv.2603.10353",
+        "authors": [
+          "Di Liu",
+          "Yifei Liu",
+          "Chen Chen",
+          "Zhi-Bin Yu",
+          "Xiaoyi Fan",
+          "Quan Chen",
+          "Min-Yi Guo"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 216,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/sieds69358.2026.11540265",
+      "identity_tokens": [
+        "id:DOI:10.1109/sieds69358.2026.11540265",
+        "id:SemanticScholar:194facd3a3e40fdf53e4e5e52205e83c4162224d",
+        "title:parallelism strategies and concurrency effects for mixtureofexperts inference on gpu systems",
+        "url:https://doi.org/10.1109/SIEDS69358.2026.11540265"
+      ],
+      "record": {
+        "title": "Parallelism Strategies and Concurrency Effects for Mixture-of-Experts Inference on GPU Systems",
+        "source_url": "https://doi.org/10.1109/SIEDS69358.2026.11540265",
+        "year": 2026,
+        "published": "2026-05-01",
+        "venue": "Systems and Information Engineering Design Symposium",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) architectures reduce inference cost by activating only a sparse subset of parameters per token. However, when these models exceed single-GPU memory, practitioners must distribute them across devices using tensor parallelism (TP), expert parallelism (EP), or a hybrid of both, and there is little empirical guidance on which strategy to choose. We present a controlled comparison of these strategies for MoE inference serving on NVIDIA A100 GPUs using vLLM. Across multiple models and workload settings, we find that EP achieves 85–102% of TP throughput depending on expert count, matching or exceeding TP for models with 60–64 experts, while naive TP+EP hybrid placement underperforms both alternatives. We also show that a diffusion-based MoE language model is substantially slower than its dense counterpart, highlighting the need for multi-GPU expert distribution in this emerging class. Overall, our results suggest that request concurrency has a larger impact on throughput than parallelism choice in many cases, and that EP is a strong default for large-expert MoE models.",
+        "identifiers": [
+          "SemanticScholar:194facd3a3e40fdf53e4e5e52205e83c4162224d"
+        ],
+        "semantic_scholar_id": "194facd3a3e40fdf53e4e5e52205e83c4162224d",
+        "doi": "10.1109/SIEDS69358.2026.11540265",
+        "canonical_id": "DOI:10.1109/SIEDS69358.2026.11540265",
+        "authors": [
+          "Ananya Hegde",
+          "Akshata Kumble",
+          "Ravi Gupta"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 165,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.01910",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.01910",
+        "id:SemanticScholar:1400241723114c69f37991887536fc5a7d1025cf",
+        "id:arXiv:2605.01910",
+        "title:stochastic sparse attention for memorybound inference",
+        "url:https://arxiv.org/abs/2605.01910"
+      ],
+      "record": {
+        "title": "Stochastic Sparse Attention for Memory-Bound Inference",
+        "source_url": "https://arxiv.org/abs/2605.01910",
+        "year": 2026,
+        "published": "2026-05-03",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive decoding becomes bandwidth-limited at long contexts, as generating each token requires reading all $n_k$ key and value vectors from KV cache. We present Stochastic Additive No-mulT Attention (SANTA), a method that sparsifies value-cache access by sampling $S \\ll n_k$ indices from the post-softmax distribution and aggregates only those value rows. This yields an unbiased estimator of the post-softmax value aggregation while replacing value-stage multiply-accumulates with gather-and-add. We introduce stratified and systematic sampling to design variance-reduced, GPU-friendly variants. Evaluated on Llama-3.1-8B-Instruct at 32k-token contexts, S$^2$ANTA matches baseline accuracy while achieving up to $1.5\\times$ decode-step attention-kernel speedup over FlashInfer and FlashDecoding on an NVIDIA RTX 6000 Ada. In batched long-context generation, these kernel gains translate to up to $1.25\\times$ end-to-end decode-latency speedup. Finally, we propose Bernoulli $qK^\\mathsf{T}$ sampling as a complementary technique to sparsify the score stage, reducing key-feature access through stochastic ternary queries. Both methods are complementary to upstream quantization, low-rank projection, KV-cache compression, and KV-cache selection methods. Together, they point toward sparse, multiplier-free, and energy-efficient inference. We open-source our kernels at: https://github.com/OPUSLab/SANTA.git",
+        "identifiers": [
+          "SemanticScholar:1400241723114c69f37991887536fc5a7d1025cf"
+        ],
+        "semantic_scholar_id": "1400241723114c69f37991887536fc5a7d1025cf",
+        "canonical_id": "arXiv:2605.01910",
+        "arxiv_id": "2605.01910",
+        "doi": "10.48550/arXiv.2605.01910",
+        "authors": [
+          "Kyle Lee",
+          "Corentin Delacour",
+          "Kevin Callahan-Coray",
+          "Kyle Jiang",
+          "Can Yaras",
+          "Samet Oymak",
+          "T. Srimani",
+          "K. Çamsari"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 163,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.03109",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.03109",
+        "id:SemanticScholar:973fffa2c66a7b41721d901de067d7971a43b634",
+        "id:arXiv:2605.03109",
+        "title:gated subspace inference for transformer acceleration",
+        "url:https://arxiv.org/abs/2605.03109"
+      ],
+      "record": {
+        "title": "Gated Subspace Inference for Transformer Acceleration",
+        "source_url": "https://arxiv.org/abs/2605.03109",
+        "year": 2026,
+        "published": "2026-05-04",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A method is presented for accelerating inference in transformer language models by exploiting the low effective rank of the token activation manifold at each layer. The method decomposes each activation vector into a subspace component and a residual, computes the linear-layer output on the subspace component via a cached low-rank weight image at reduced memory bandwidth, and applies a per-token gate that determines whether the residual correction is computed or skipped. The gate ensures that the output distribution is preserved to within a controllable tolerance. Validation on three model families (GPT-2 124M, GPT-J 6B, OPT 6.7B) on AMD MI300X demonstrates effective speedups of 3.0x to 10.5x on linear-layer weight reads with perplexity ratios below 1.00 and top-1 token agreement above 98%. The method requires no retraining, no architectural modification, and no approximation of the attention mechanism. At the operating point (k = 256, {\\epsilon} = 0.05) on GPT-J 14 6B, the accelerated model produces character-for-character identical output to the baseline.",
+        "identifiers": [
+          "SemanticScholar:973fffa2c66a7b41721d901de067d7971a43b634"
+        ],
+        "semantic_scholar_id": "973fffa2c66a7b41721d901de067d7971a43b634",
+        "canonical_id": "arXiv:2605.03109",
+        "arxiv_id": "2605.03109",
+        "doi": "10.48550/arXiv.2605.03109",
+        "authors": [
+          "Stephen Thomas"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 162,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11093",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.11093",
+        "id:SemanticScholar:6bb13e882a1d75a735afe6be88862ed0e3d6a150",
+        "id:arXiv:2605.11093",
+        "title:enabling performant and flexible modelinternal observability for llm inference",
+        "url:https://arxiv.org/abs/2605.11093"
+      ],
+      "record": {
+        "title": "Enabling Performant and Flexible Model-Internal Observability for LLM Inference",
+        "source_url": "https://arxiv.org/abs/2605.11093",
+        "year": 2026,
+        "published": "2026-05-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Today's inference-time workloads increasingly depend on timely access to a model's internal states. We present DMI-Lib, a high-speed deep model inspector that treats internal observability as a first-class systems primitive, decoupling it from the inference hot path via an asynchronous observability substrate built from Ring^2, a GPU-CPU memory abstraction for capturing and staging tensors, and a policy-controlled host backend that exports them. DMI-Lib enables the placement of observation points across a rich space of internal signals and diverse inference backends while preserving serving optimizations and adhering to tight GPU memory budgets. Our experiments demonstrate that DMI-Lib incurs only 0.4%--6.8% overhead in offline batch inference and an average of 6% in moderate online serving, reducing latency overhead by 2x-15x compared to existing baselines with similar observability features. DMI-Lib is open-sourced at https://github.com/ProjectDMX/DMI.",
+        "identifiers": [
+          "SemanticScholar:6bb13e882a1d75a735afe6be88862ed0e3d6a150"
+        ],
+        "semantic_scholar_id": "6bb13e882a1d75a735afe6be88862ed0e3d6a150",
+        "canonical_id": "arXiv:2605.11093",
+        "arxiv_id": "2605.11093",
+        "doi": "10.48550/arXiv.2605.11093",
+        "authors": [
+          "Nengneng Yu",
+          "Sixian Xiong",
+          "Yi-Bo Zhao",
+          "Wei Wang",
+          "Zaoxing Liu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 155,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.20982",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.20982",
+        "id:SemanticScholar:bf54d63d502d6c0c58d823823d609b8981021ddc",
+        "id:arXiv:2605.20982",
+        "title:diagnosing overhead in dispatch operations crossarchitecture observatory",
+        "url:https://arxiv.org/abs/2605.20982"
+      ],
+      "record": {
+        "title": "Diagnosing Overhead in Dispatch Operations: Cross-architecture Observatory",
+        "source_url": "https://arxiv.org/abs/2605.20982",
+        "year": 2026,
+        "published": "2026-05-20",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "AlltoAll dispatch is the dominant bottleneck of MoE expert parallelism, and the interconnect community has responded with four families of mitigations: predictive sample placement, adaptive expert relayout, hierarchical collectives, and EP-aware topology. All four rest on two assumptions about the workload: that routing imbalance is correctable by the system layer, and that the mock-token benchmarks evaluating them faithfully represent production routing. We introduce DODOCO to test both, instrumenting five open MoE checkpoints that span today's sequence-mixer designs (MHA, MLA, GQA, Gated DeltaNet and Mamba-2 SSM) under a factorial grid of six data conditions and a matched expert-parallelism scan on H100 clusters. Both assumptions fail. Scaling EP leaves per-expert load concentration essentially unchanged: the straggler is intrinsic to the routing decision the model makes, not to how its experts land on ranks. Mock tokens overestimate routing imbalance by up to a factor of 2.35, and the error is a level offset rather than a trend: it stays flat across a $32\\times$ batch-size sweep. Skewing the synthetic distribution toward realism (Zipf) widens the gap instead of closing it. A third pattern organizes the results: the architectures separate into a data-resilient band (MHA, Mamba-2), whose routing approaches uniform on real text, and a persistently concentrated band (MLA, GDN), with GQA intermediate. These bands, not the EP degree or the mock-data profile, are the right workload input to AlltoAll-aware interconnect and dispatch design.",
+        "identifiers": [
+          "SemanticScholar:bf54d63d502d6c0c58d823823d609b8981021ddc"
+        ],
+        "semantic_scholar_id": "bf54d63d502d6c0c58d823823d609b8981021ddc",
+        "canonical_id": "arXiv:2605.20982",
+        "arxiv_id": "2605.20982",
+        "doi": "10.48550/arXiv.2605.20982",
+        "authors": [
+          "Bole Ma",
+          "Jan Eitzinger",
+          "H. Köstler",
+          "G. Wellein"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 146,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.05158",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.05158",
+        "id:SemanticScholar:002269ec7a44c187ebac889f3fbfb224e8a517d1",
+        "id:arXiv:2606.05158",
+        "title:streaming communication in multiagent reasoning",
+        "url:https://arxiv.org/abs/2606.05158"
+      ],
+      "record": {
+        "title": "Streaming Communication in Multi-Agent Reasoning",
+        "source_url": "https://arxiv.org/abs/2606.05158",
+        "year": 2026,
+        "published": "2026-06-03",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-agent reasoning systems adopt a\"generate-then-transfer\"paradigm that forces end-to-end latency to scale linearly with pipeline depth. We introduce StreamMA, a multi-agent reasoning system that streams each reasoning step to downstream agents as soon as it is generated, pipelining adjacent agents and thus reducing latency. Surprisingly, this pipelining also improves effectiveness: because multi-step reasoning quality is non-uniform and early steps are more reliable than later ones, working with these reliable early steps instead of the full chain prevents error-prone late steps from misleading downstream agents. We formalize both advantages with the first closed-form joint analysis of stream, serial, and single protocols, deriving the effectiveness ordering, speedup upper bound, and cost ratio. Across eight reasoning benchmarks spanning mathematics, science, and code, two frontier LLMs (Claude Opus 4.6 and GPT-5.4), and three topologies (Chain, Tree, Graph), StreamMA outperforms both baselines (avg. +7.3 pp, max +22.4 pp on HMMT 2026; Claude Opus 4.6-high). Beyond these contributions, we discover a\"step-level scaling law\": increasing per-agent steps consistently improves both effectiveness and efficiency, a new scaling dimension orthogonal to and composable with agent-count scaling.",
+        "identifiers": [
+          "SemanticScholar:002269ec7a44c187ebac889f3fbfb224e8a517d1"
+        ],
+        "semantic_scholar_id": "002269ec7a44c187ebac889f3fbfb224e8a517d1",
+        "canonical_id": "arXiv:2606.05158",
+        "arxiv_id": "2606.05158",
+        "doi": "10.48550/arXiv.2606.05158",
+        "authors": [
+          "Zhen Yang",
+          "Xiao-Gang Xu",
+          "Wen Wang",
+          "Cong Chen",
+          "Xander Xu",
+          "Ying-Cong Chen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 132,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ac7abc775c34f221d727010e6bd09b21acbec1b29bc3d63d02b0727fa6fbcc1b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

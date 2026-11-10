@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The Structural Scalpel: Automated Contiguous Layer Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.23652",
+      "year": 2025,
+      "published": "2025-10-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although large language models (LLMs) have achieved revolutionary breakthroughs in many fields, their large model size and high computational cost pose significant challenges for practical deployment on resource-constrained edge devices. To this end, layer pruning has been proposed to reduce the computational overhead by directly removing redundant layers. However, existing layer pruning methods typically rely on hand-crafted metrics to evaluate and remove individual layers, while ignoring the dependencies between layers. This can disrupt the model's information flow and severely degrade performance. To address these issues, we propose CLP, a novel continuous layer pruning framework that introduces two key innovations: a differentiable concave gate algorithm that automatically identifies the best continuous layer segments for pruning via gradient-based optimization; and a cutoff endpoint tuning strategy that effectively restores model performance by fine-tuning only the layers adjacent to the pruned segments. Extensive experiments across multiple model architectures (including LLaMA2, LLaMA3 and Qwen) and sizes (from $7$B to $70$B parameters) show that CLP significantly outperforms existing state-of-the-art baselines. For example, at a pruning rate of $20\\%$, CLP achieves an average performance retention of $95.34\\%$ on LLaMA3-70B, outperforming baselines by $4.29\\%$-$30.52\\%$. Furthermore, CLP can be seamlessly combined with quantization to further compress the model with only a slight performance loss.",
+      "identifiers": [
+        "SemanticScholar:03417dd09981bcdc80b3de6cb3777493e3e49ed9"
+      ],
+      "semantic_scholar_id": "03417dd09981bcdc80b3de6cb3777493e3e49ed9",
+      "canonical_id": "arXiv:2510.23652",
+      "arxiv_id": "2510.23652",
+      "doi": "10.48550/arXiv.2510.23652",
+      "authors": [
+        "Yao Lu",
+        "Yu-Qi Li",
+        "Wen-Bin Xie",
+        "Shan-Qing Yu",
+        "Qi Xuan",
+        "Zhao-Wei Zhu",
+        "Shi-Ping Wen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 370,
+        "matched_prestigious_venue": null
+      },
+      "reason": "連続した層群を微分可能な凹ゲートで選んで除去し、切断境界の層だけを微調整するCLPを提案。LLaMA3-70Bの20%枝刈りで平均95.34%の品質を保持し、モデル計算量を減らす推論向け構造的圧縮研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "BitSkip: An Empirical Analysis of Quantization and Early Exit Composition",
+      "source_url": "https://arxiv.org/abs/2510.23766",
+      "year": 2025,
+      "published": "2025-10-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The pursuit of efficient Large Language Models (LLMs) has led to increasingly complex techniques like extreme quantization and dynamic routing. While individual benefits of these methods are well-documented, their compositional effects remain poorly understood. This paper introduces BitSkip, a hybrid architectural framework for systematically exploring these interactions. Counter-intuitively, our findings reveal that a simple 8-bit quantized model without Hadamard transform (BitSkip-V1) not only outperforms its more complex 4-bit and Hadamard-enhanced counterparts but also competes the full-precision baseline in quality (perplexity of 1.13 vs 1.19) . The introduction of Hadamard transforms, even at 8-bit precision, catastrophically degraded performance by over 37,000%, tracing fundamental training instability. Our BitSkip-V1 recipe demonstrates superior early-exit characteristics, with layer 18 providing optimal 32.5% speed gain for minimal 4% quality loss.",
+      "identifiers": [
+        "SemanticScholar:775fa5251e39dcad3d43437d582419eed55b7071"
+      ],
+      "semantic_scholar_id": "775fa5251e39dcad3d43437d582419eed55b7071",
+      "canonical_id": "arXiv:2510.23766",
+      "arxiv_id": "2510.23766",
+      "doi": "10.48550/arXiv.2510.23766",
+      "authors": [
+        "R. Bhuvaneswaran",
+        "Han-Dan Liu"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 368,
+        "matched_prestigious_venue": null
+      },
+      "reason": "量子化とearly exitを組み合わせたBitSkipを実験し、8ビット版が複雑な4ビット版を上回る条件やHadamard変換による不安定化を報告する。18層でのexitは品質損失約4%に対して速度32.5%改善とされ、推論時の量子化・適応計算の相互作用を直接評価する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f21ac32a6a1a",
+    "round": "libimp-f21ac32a6a1a217e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f21ac32a6a1a217e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f21ac32a6a1a217e-pre01.json",
+    "receipt": "sha256:1bd7d828cd80766cd598efa1de470b6fc1654ab0a56593a5186a45cd1260a9a0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f21ac32a6a1a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

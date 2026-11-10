@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd5d42b0c0bf984c-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2308.07633",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2308.07633",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2308.07633",
+      "arXiv:2308.07633"
+    ],
+    "reason": "量子化・枝刈り・蒸留等を体系化する圧縮サーベイで対象領域には近いが、新規一次システム研究ではない。",
+    "first_checked_at": "2026-09-27T10:28:09+09:00",
+    "last_checked_at": "2026-09-30T09:47:28+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 158"
+    ],
+    "title": "A Survey on Model Compression for Large Language Models"
+  },
+  "processed_at": "2026-09-30T09:47:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd5d42b0c0bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

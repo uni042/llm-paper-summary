@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8bf76e6d756131d3-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.31036",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.31036",
+    "identity_tokens": [
+      "arXiv:2608.31036"
+    ],
+    "reason": "要旨はLoRAの学習安定化・正規化手法。",
+    "first_checked_at": "2026-10-05T07:48:23+00:00",
+    "last_checked_at": "2026-10-05T07:48:23+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "Normalized Low-Rank Adaptation"
+  },
+  "processed_at": "2026-10-05T07:48:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8bf76e6d7561",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

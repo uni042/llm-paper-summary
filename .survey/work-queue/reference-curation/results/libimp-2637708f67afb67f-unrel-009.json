@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2637708f67afb67f-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1405.3866",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1405.3866",
+    "identity_tokens": [
+      "arXiv:1405.3866"
+    ],
+    "reason": "CNN convolution filterの低rank展開でCPU/GPU画像networkを高速化する研究。推論高速化自体は扱うが対象はCNN画像認識でありLLM/Transformer推論への最終適用・評価がない。",
+    "first_checked_at": "2026-10-04T21:37:52+00:00",
+    "last_checked_at": "2026-10-04T21:37:52+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+    ],
+    "title": "Speeding up Convolutional Neural Networks with Low Rank Expansions"
+  },
+  "processed_at": "2026-10-04T21:37:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2637708f67af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

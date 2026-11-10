@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1a7ce646ced62752-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.22501",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.22501",
+    "identity_tokens": [
+      "arXiv:2505.22501"
+    ],
+    "reason": "一次資料の要旨・本文が示す対象はLLM推論システムの計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの改善と技術的につながらない。EvolveSearch improves search-based question answering through iterative query/search evolution. Its reported gains concern answer quality; the method adds search/training complexity and does not demonstrate lower LLM inference cost or faster serving.",
+    "first_checked_at": "2026-10-06T16:24:41+00:00",
+    "last_checked_at": "2026-10-06T16:24:41+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+    ],
+    "title": "EvolveSearch: An Iterative Self-Evolving Search Agent"
+  },
+  "processed_at": "2026-10-06T16:24:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1a7ce646ced6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

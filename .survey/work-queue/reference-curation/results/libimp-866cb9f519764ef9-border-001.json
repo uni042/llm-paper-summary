@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-866cb9f519764ef9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.26425",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.26425",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2609.26425",
+      "arXiv:2609.26425"
+    ],
+    "reason": "一次要旨では、動画生成と世界モデルの時間的一貫性を守る2ビットKVキャッシュ量子化が中心。履歴クエリ感度と残差範囲による鍵クラスタリング（QSAC）、主クエリ部分空間での鍵誤差補償（PSAC）を組み合わせ、視覚生成モデルで最大6.20倍のKV容量圧縮を報告する。推論メモリ最適化の技術的接点は明確だが、検証先はCausal-Forcing等の動画・世界モデルであり、LLMの文章生成・サービングでの実測は要旨から確認できないため境界的とする。",
+    "first_checked_at": "2026-10-18T10:51:29+00:00",
+    "last_checked_at": "2026-10-19T11:26:31+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for Video World Models"
+  },
+  "processed_at": "2026-10-19T11:26:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-866cb9f51976",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

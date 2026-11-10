@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7da0d35fc8286d55-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2209.07484",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2209.07484",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2209.07484",
+      "SemanticScholar:ec139916edd6feb9b3cb3a0325ca96e21dbb0147",
+      "arXiv:2209.07484",
+      "ec139916edd6feb9b3cb3a0325ca96e21dbb0147"
+    ],
+    "reason": "Hydra Attention is evaluated for vision transformers on ImageNet; the abstract does not connect the technique to language-model inference or serving.",
+    "first_checked_at": "2026-10-13T19:24:39+00:00",
+    "last_checked_at": "2026-10-13T19:24:39+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "Hydra Attention: Efficient Attention with Many Heads"
+  },
+  "processed_at": "2026-10-13T19:24:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7da0d35fc828",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

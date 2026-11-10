@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-622266434fde12fa-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3711896.3736563",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3711896.3736563",
+    "identity_tokens": [
+      "DOI:10.1145/3711896.3736563"
+    ],
+    "reason": "The primary abstract suggests possible deployment/inference relevance, but the publisher full text could not be inspected; the survey’s actual efficiency coverage is unresolved.",
+    "first_checked_at": "2026-10-05T14:18:50+00:00",
+    "last_checked_at": "2026-10-05T14:18:50+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+      "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
+      "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+    ],
+    "title": "A Survey on Small Language Models in the Era of Large Language Models: Architecture, Capabilities, and Trustworthiness"
+  },
+  "processed_at": "2026-10-05T14:18:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-622266434fde",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

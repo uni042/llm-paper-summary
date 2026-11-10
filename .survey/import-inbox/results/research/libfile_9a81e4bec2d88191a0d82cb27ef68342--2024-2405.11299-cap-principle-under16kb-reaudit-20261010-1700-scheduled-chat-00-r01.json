@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "9fc497d7542c334c675fd92074626d470c2bf3d09d22d922d6b2a4ef2292a016",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9a81e4bec2d88191a0d82cb27ef68342--2024-2405.11299-cap-principle-under16kb-reaudit-20261010-1700-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2405.11299",
+  "worker_completed_at": "2026-10-10T18:03:40+09:00",
+  "worker_run_key": "20261010-1700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7115,
+    "body_paragraphs": 37,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 372,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-10T09:29:15+00:00"
+}

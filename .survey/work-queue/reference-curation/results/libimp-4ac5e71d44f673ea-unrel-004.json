@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ac5e71d44f673ea-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.14591",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.14591",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.14591",
+      "PRIMARY:https://arxiv.org/abs/2605.14591v2",
+      "arXiv:2605.14591"
+    ],
+    "reason": "Zero-Runは固定member/non-member集合を使う事後的な差分プライバシー監査で、主眼はmembership inferenceのdistribution-shift補正とprivacy evaluation。推論効率を改善しない。",
+    "first_checked_at": "2026-10-11T07:45:39+00:00",
+    "last_checked_at": "2026-10-11T07:45:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+    ],
+    "title": "Privacy Auditing with Zero (0) Training Run"
+  },
+  "processed_at": "2026-10-11T07:45:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ac5e71d44f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

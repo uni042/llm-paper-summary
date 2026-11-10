@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-64a86d8654550816-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1804.06028",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1804.06028",
+    "identity_tokens": [
+      "arXiv:1804.06028"
+    ],
+    "reason": "latent tree modelの構文解析能力を診断するprefix-arithmetic toy datasetを提案するbenchmark研究で、推論systems効率化を扱わない。",
+    "first_checked_at": "2026-10-07T05:41:33+00:00",
+    "last_checked_at": "2026-10-07T05:41:33+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2405.02842-iceformer.md"
+    ],
+    "title": "ListOps: A Diagnostic Dataset for Latent Tree Learning"
+  },
+  "processed_at": "2026-10-07T05:41:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-64a86d865455",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5fd5ff42582a55d8-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tpds.2026.3713365",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tpds.2026.3713365",
+    "identity_tokens": [
+      "DOI:10.1109/tpds.2026.3713365"
+    ],
+    "reason": "abstractはgeneric shared GPU-cluster virtualizationで、LLM-specific serving workload/evaluationが示されない。適用余地はあるがIEEE本文取得不可のため適合を確定できない。",
+    "first_checked_at": "2026-10-05T03:02:29+00:00",
+    "last_checked_at": "2026-10-05T03:02:29+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md"
+    ],
+    "title": "gPooling: An Elastic GPU Resource Management Framework for On-Demand Virtualization in Shared Accelerator Clusters"
+  },
+  "processed_at": "2026-10-05T03:02:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5fd5ff42582a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

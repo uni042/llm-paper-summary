@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a33ab0924051dc58-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.07909",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.07909",
+    "identity_tokens": [
+      "arXiv:2509.07909"
+    ],
+    "reason": "This is a position paper on using inverse problems to infer training scaling laws, not an inference/serving/compression technique.",
+    "first_checked_at": "2026-10-05T13:00:23+00:00",
+    "last_checked_at": "2026-10-05T13:00:23+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2502.15197-tetris-optimal-draft-token-selection-for-batch-speculative-decoding.md"
+    ],
+    "title": "Uncovering Scaling Laws for Large Language Models via Inverse Problems"
+  },
+  "processed_at": "2026-10-05T13:00:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a33ab0924051",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

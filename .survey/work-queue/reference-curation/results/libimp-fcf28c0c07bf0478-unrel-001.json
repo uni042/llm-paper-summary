@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fcf28c0c07bf0478-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.22132",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.22132",
+    "identity_tokens": [
+      "arXiv:2605.22132"
+    ],
+    "reason": "The method replaces attention heads to accelerate generic vision foundation models for image classification/segmentation; it is an independent vision application, not LLM inference.",
+    "first_checked_at": "2026-10-13T20:41:52+00:00",
+    "last_checked_at": "2026-10-13T20:41:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+      "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Accelerating Vision Foundation Models with Drop-in Depthwise Convolution"
+  },
+  "processed_at": "2026-10-13T20:41:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fcf28c0c07bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

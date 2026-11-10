@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a0753aaad4af0f7f-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:d1135ea508be501ec9cee6c7405d67908a671ba7",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:d1135ea508be501ec9cee6c7405d67908a671ba7",
+    "identity_tokens": [
+      "SemanticScholar:d1135ea508be501ec9cee6c7405d67908a671ba7",
+      "arXiv:2412.17246"
+    ],
+    "reason": "The input is a stable Semantic Scholar record, but the provider-to-primary-record crosswalk was not retrievable (ID searches/API were inaccessible). The current arXiv BLITZSCALE record is a plausible match, but title similarity alone does not establish identity; keep borderline pending crosswalk.",
+    "first_checked_at": "2026-10-13T23:41:30+00:00",
+    "last_checked_at": "2026-10-13T23:41:30+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2506.02634-kvcache-cache-in-the-wild-characterizing-and-optimizing-kvcache-cache-at.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+      "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": ": Fast and Live Large Model Autoscaling with O (1) Host Caching"
+  },
+  "processed_at": "2026-10-13T23:41:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0753aaad4af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

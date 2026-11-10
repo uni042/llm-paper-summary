@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-14b6fadb9a289a85-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.17298",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.17298",
+    "identity_tokens": [
+      "arXiv:2506.17298"
+    ],
+    "reason": "拡散型LLMによる並列生成でH100上737〜1109 token/sを報告するが、主貢献は新モデル系列と学習・品質報告で独立ランタイム手法ではない。",
+    "first_checked_at": "2026-09-27T12:58:27+09:00",
+    "last_checked_at": "2026-09-30T09:48:18+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Mercury: Ultra-Fast Language Models Based on Diffusion"
+  },
+  "processed_at": "2026-09-30T09:48:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-14b6fadb9a28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

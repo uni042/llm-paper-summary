@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "request_id": "rs-20260922T131820Z-00-5e",
+  "run_key": "scheduled-chat-00-20260922T125843Z-turn5",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-22T12:58:43+00:00",
+  "runtime_condition": "platform_context_limit",
+  "runtime_condition_confirmed": true,
+  "runtime_condition_attempts": 1,
+  "runtime_condition_detail": "failed_operation=continue primary-source PDF reading for arXiv:2602.11192 after line 436; last_successful_operation=primary arXiv PDF retrieval and partial read through MELINOE method/results section plus durable blocked descriptor/result; recovery_attempts=1 same-source continuation request; observed_error=web retrieval platform rejected further calls with 'Too many tokens / called web.run too many times'. The paper was blocked rather than reconstructed from a partial read."
+}

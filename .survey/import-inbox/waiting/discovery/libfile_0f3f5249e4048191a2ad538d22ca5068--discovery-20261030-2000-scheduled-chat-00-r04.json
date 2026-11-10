@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2000-scheduled-chat-00/r04",
+  "reference_main_sha": "88e742bd76c4c3980b9b708f7d3925a0c055e53f",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.38386",
+      "identity_tokens": [
+        "arXiv:2609.38386"
+      ],
+      "title": "Decode-Latency Feedback Prefill: A Model-Free Controller and Its Generalization Limits",
+      "reason": "vLLMのプリフィル分割長を、同時デコード中に観測したトークン間遅延でフィードバック制御するDLFP。A100上のQwen3-0.6BではP99トークン間遅延を平均27.7%減らす一方、TTFTのP99は34.8%増加し、8B・32Bや2GPUには一般化しないという負の結果も報告。",
+      "source_url": "https://arxiv.org/abs/2609.38386",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 111
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.11212",
+      "identity_tokens": [
+        "arXiv:2608.11212"
+      ],
+      "title": "Detecting a Route Flip Is Easier Than Knowing Whether to Fix It: Causal Route-Mediated Damage in Quantized Mixture-of-Experts",
+      "reason": "4ビットKVキャッシュ量子化の誤差がMoEのTop-kルーティングを変える影響を、反実仮想の4条件で分解する評価研究。OLMoEで経路変化由来の損失割合を約0.31と推定し、ルータ余裕度は経路変化の検出には有用だが有害な変化かどうかの判定には弱いと報告。量子化MoE推論の評価限界に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2608.11212",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 115
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32114",
+      "identity_tokens": [
+        "arXiv:2609.32114"
+      ],
+      "title": "Empowering Hybrid Attention Models on NPUs",
+      "reason": "ハイブリッド注意モデルの線形注意演算をエッジNPUで効率化するHA-NPU。ヘッド次元分割と演算融合、中間値の即時消費、レイアウト最適化によりメモリ転送を減らす。線形注意カーネル最大35.95倍、要求全体最大2.03倍高速化を報告し、推論ランタイムとハードウェア協調が主題。",
+      "source_url": "https://arxiv.org/abs/2609.32114",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 119
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.03825",
+      "identity_tokens": [
+        "arXiv:2606.03825"
+      ],
+      "title": "Dynamic Short Convolutions Improve Transformers",
+      "reason": "入力依存の短い畳み込みをQ/K/Vや各線形層へ追加し、言語モデルの表現力と学習時の計算効率を改善するアーキテクチャ研究。Tritonカーネルを用いるが要旨の主な定量評価は学習損失・スケーリング則・学習時実装であり、推論サービングの実測改善は確認できないため境界的。",
+      "source_url": "https://arxiv.org/abs/2606.03825",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 122
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.02159",
+      "identity_tokens": [
+        "arXiv:2602.02159"
+      ],
+      "title": "Focus-dLLM: Accelerating Long-Context Diffusion LLM Inference via Confidence-Guided Context Focusing",
+      "reason": "拡散型LLMの双方向注意で未復号位置が不明な問題に対し、前ステップのトークン信頼度から可視領域を予測し、attention sinkを保護しながら疎注意化する学習不要方式。32K文脈で29倍超の損失なし高速化を報告し、拡散推論カーネルに直接関係する。",
+      "source_url": "https://arxiv.org/abs/2602.02159",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 123
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.05069",
+      "identity_tokens": [
+        "arXiv:2510.05069"
+      ],
+      "title": "SwiReasoning: Switch-Thinking in Latent and Explicit for Pareto-Superior Reasoning LLMs",
+      "reason": "推論時に明示的CoTと潜在思考を、トークン分布のエントロピー傾向から推定するブロック単位の信頼度で切り替える学習不要方式。切替回数上限で過剰推論を抑え、制約予算下でトークン効率57～79%改善を報告。テスト時計算量の動的制御が中心。",
+      "source_url": "https://arxiv.org/abs/2510.05069",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 124
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.20397",
+      "identity_tokens": [
+        "arXiv:2608.20397"
+      ],
+      "title": "Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory",
+      "reason": "エージェントのツールスキーマを毎ターン全再符号化する負荷を、INT8の検索用バッファと圧縮シグネチャで削減。別経路のKV接合ではRoPE位相ずれを深さ適応再デコードで補修し、Apple Silicon上のQwen2.5-14BでTTFTを1.1～1.7倍改善する条件と逆効果条件を報告。",
+      "source_url": "https://arxiv.org/abs/2608.20397",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 128
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.18042",
+      "identity_tokens": [
+        "arXiv:2606.18042"
+      ],
+      "title": "Latency Prediction for LLM Inference on NPU Systems",
+      "reason": "非公開NPUの内部構造やコンパイラ最適化を知らなくても、バケットごとに二つのエンドツーエンド測定を行い入出力長別遅延を合成するLENSを提案。複数NPUベンダーとLLMで平均予測誤差2.15%を報告し、推論配置・バッチ・スケジューリング設計に直結する。",
+      "source_url": "https://arxiv.org/abs/2606.18042",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 130
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.03760",
+      "identity_tokens": [
+        "arXiv:2508.03760"
+      ],
+      "title": "FlashCommunication V2: Bit Splitting and Spike Reserving for Any Bit Communication",
+      "reason": "GPU間通信を任意ビット幅で扱うため、ビット分割と外れ値の浮動小数保持を組み合わせる。NVLinkとPCIeでAllReduce最大3.2倍、All2All最大2倍を報告し、分散LLMの学習・配備双方に用いる低ビット通信基盤で、MoE推論のエキスパート通信にも関連する。",
+      "source_url": "https://arxiv.org/abs/2508.03760",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 132
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.18269",
+      "identity_tokens": [
+        "arXiv:2510.18269"
+      ],
+      "title": "StreamingTOM: Streaming Token Compression for Efficient Video Understanding",
+      "reason": "ストリーミングVLMの視覚トークン増大に対し、隣接フレーム差と顕著性でプリフィル入力を減らす因果的トークン選択と、4ビットのオンライン記憶・関連グループ復元を組み合わせる。KVキャッシュ15.7倍圧縮、LiveVLM比TTFT2倍高速化を報告し、動画推論の継続メモリ管理が主題。",
+      "source_url": "https://arxiv.org/abs/2510.18269",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 135
+    }
+  ]
+}

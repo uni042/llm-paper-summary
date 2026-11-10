@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3cd176ca6340f75-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.27807",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.27807",
+    "identity_tokens": [
+      "arXiv:2606.27807"
+    ],
+    "reason": "原著要旨ではSpike-V（視覚符号器）、Spike-L（スパイク型マルチモーダル言語モデル）、Spike-A（行動制御器）を組み合わせ、ロボット航法・制御の省電力推論を狙う。トークン単位のイベント駆動疎性と推論エネルギー削減は効率化に関連するが、主目的はロボット向け新規VLAアーキテクチャとタスク性能であり、一般のLLMサービング、KV管理、推論カーネルの横断的改善は要旨に示されない。対象境界のため保留。",
+    "first_checked_at": "2026-10-13T21:31:18+00:00",
+    "last_checked_at": "2026-10-13T21:31:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "SpikeVLA: Vision-Language-Action Models with Spiking Neural Networks"
+  },
+  "processed_at": "2026-10-13T21:31:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3cd176ca634",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

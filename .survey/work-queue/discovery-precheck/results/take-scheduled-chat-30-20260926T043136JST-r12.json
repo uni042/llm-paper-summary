@@ -1,0 +1,836 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "take-scheduled-chat-30-20260926T043136JST-r12",
+  "collector_id": "direct-take-scheduled-chat-30-20260926T043136JST-r12",
+  "run_key": "scheduled-chat-30-20260926T043136JST-4f31c6",
+  "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "240",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "80e9516eab882f5bd974b44733b229284dfab312",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-25T19:35:52.690660+00:00",
+  "preload_id": "preload-561c765b08a24f1caf0f",
+  "preload_seed": false,
+  "preload_cache_used": true,
+  "preload_cached_pages_used": 1,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": "preload-561c765b08a24f1caf0f",
+  "results": [
+    {
+      "title": "A Cloud-Edge Collaborative System for Efficient LLM Fine-Tuning with Backbone Activation Caching",
+      "source_url": "https://www.semanticscholar.org/paper/4abc9f5da784ad039e4c25f5f65ce6d2c4fbd238",
+      "year": 2026,
+      "published": "2026-05-18",
+      "abstract": "Transformer models have become the foundation of modern artificial intelligence, particularly in Large Language Models (LLMs). To fully realize the potential of Cloud-Network Convergence (CNC), there is a critical need to deploy these models as pervasive AI edge services. However, fine-tuning LLMs on edge devices is hindered by high memory and computational demands. While Parameter-Efficient Fine-Tuning (PEFT) and side-network-based Memory-Efficient Fine-Tuning (MEFT) methods alleviate some resource burdens, current approaches still suffer from computational redundancy due to repeated backbone activation calculations, excessive memory usage from concurrent network storage, and suboptimal hardware utilization. To address these limitations, we propose Backbone Activation Cache and Side-network Acceleration (BAC-SA). BAC-SA decouples the fine-tuning process to enable pipelined activation caching to disk, eliminating redundant backbone computations and GPU memory usage. To maximize resource efficiency, BAC-SA further employs a CPU-GPU collaborative offloading strategy in the side-network fine-tuning stage. Experimental results demonstrate that, compared to G-DPSA, BAC-SA reduces memory overhead by up to 35.7% and training time by up to 27.6% on T5 models without compromising accuracy. These improvements indicate the strong practicality of BAC-SA in resource-constrained edge scenarios.",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571548",
+      "doi": "10.1109/INFOCOM59046.2026.11571548",
+      "authors": [
+        "Yu-Chu Chen",
+        "Ying-Chi Mao",
+        "Si Chen",
+        "Rongzhi Qi",
+        "Tian-Fu Pang",
+        "Zhen-Xiang Pan"
+      ]
+    },
+    {
+      "title": "Separating Intelligence from Inference: A Standard for Edge-Native AI Computing",
+      "source_url": "https://www.semanticscholar.org/paper/b54734bcc069ebcdb58df7ef830420dad2bef4ef",
+      "year": 2026,
+      "published": "2026-05-13",
+      "abstract": "The artificial intelligence industry has constructed a USD 300 billion centralized data center infrastructure to serve a workload, large language model inference, that does not architecturally require centralization. This paper articulates the central architectural inefficiency of contemporary AI infrastructure: the conflation of model training (irreducibly centralized, capital-intensive, one-time per model version) with model inference (parallelizable, latency-sensitive, recurring per query) on the same physical hardware. We propose the separation principle: intelligence is trained centrally and shipped as software; inference executes on hardware near the data source, at the edge. We quantify the energy implications at civilizational scale and show that a fully edge-resident inference architecture for one billion daily users saves approximately 19 TWh per year and 7.3 megatons of CO2 annually relative to current centralized practice. We specify two new device classes, the Personal AI Computer (PAC) and the Corporate AI Workstation (CAW), with concrete hardware tiers, memory bandwidth requirements, thermal envelopes, and software interfaces. We then describe a reference architectural stack of eight components addressing weight distribution, sovereignty-aware routing, thermal-adaptive quantization, multi-tenant resource management, federated network inference, cryptographic provenance, privacy-preserving telemetry, and distributed context window extension. Several components are the subject of pending United States patent applications by the first author and are presented here as candidate open architectural principles",
+      "canonical_id": "arXiv:2608.02608",
+      "arxiv_id": "2608.02608",
+      "authors": [
+        "Venkat Vinjam",
+        "Krishnaiah Narukulla"
+      ]
+    },
+    {
+      "title": "Training-Inference Consistent Segmented Execution for Long-Context LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/d1987f656a5b92a844115a88aed6f7aa20174250",
+      "year": 2026,
+      "published": "2026-05-12",
+      "abstract": "Transformer-based large language models face severe scalability challenges in long-context generation due to the computational and memory costs of full-context attention. Under practical computation and memory constraints, many inference-efficient long-context methods improve efficiency by adopting bounded-context or segment-level execution only during inference, while continuing to train models under full-context attention, resulting in a mismatch between training and inference execution and state-transition semantics. Based on this insight, we propose a training-inference consistent segment-level generation framework, in which training and inference follow the same segment-level forward execution semantics. During training, consistency with inference is enforced by restricting gradient propagation to KV states carried over from the immediately preceding segment, while permitting head-specific access to past KV states during the forward pass without involving them in gradient propagation. Across long-context benchmarks, our approach achieves performance comparable to full-context attention, while achieving competitive latency-memory trade-offs against strong inference-efficient baselines, and substantially improving scalability at very long context lengths (e.g., approximately 6x lower peak prefill memory at 128K compared to full-context attention with FlashAttention).",
+      "canonical_id": "arXiv:2605.11744",
+      "arxiv_id": "2605.11744",
+      "authors": [
+        "Xianpeng Shang",
+        "Jiang Li",
+        "Zehua Duo",
+        "Qi Cai",
+        "Xiangdong Su"
+      ]
+    },
+    {
+      "title": "GriNNder: Breaking the Memory Capacity Wall in Full-Graph GNN Training with Storage Offloading",
+      "source_url": "https://www.semanticscholar.org/paper/7c463ebe8dc37ee3a74d95023d59d4453cdb6c23",
+      "year": 2026,
+      "published": "2026-05-12",
+      "abstract": "Full-graph training of graph neural networks (GNNs) is widely used as it enables direct validation of algorithmic improvements by preserving complete neighborhood information. However, it typically requires multiple GPUs or servers, incurring substantial hardware and inter-device communication costs. While existing single-server methods reduce infrastructure requirements, they remain constrained by GPU and host memory capacity as graph sizes increase. To address this limitation, we introduce GriNNder, which is the first work to leverage storage devices to enable full-graph training even with limited memory. Because modern NVMe SSDs offer multi-terabyte capacities and bandwidths exceeding 10 GB/s, they provide an appealing option when memory resources are scarce. Yet, directly applying storage-based methods from other domains fails to address the unique access patterns and data dependencies in full-graph GNN training. GriNNder tackles these challenges by structured storage offloading (SSO), a framework that manages the GPU-host-storage hierarchy through coordinated cache, (re)gather, and bypass mechanisms. To realize the framework, we devise (i) a partition-wise caching strategy for host memory that exploits the observation on cross-partition dependencies, (ii) a regathering strategy for gradient computation that eliminates redundant storage operations, and (iii) a lightweight partitioning scheme that mitigates the memory requirements of existing graph partitioners. In experiments performed over various models and datasets, GriNNder achieves up to 9.78x speedup over state-of-the-art baselines and throughput comparable to distributed systems, enabling previously infeasible large-scale full-graph training even on a single GPU.",
+      "canonical_id": "arXiv:2605.11517",
+      "arxiv_id": "2605.11517",
+      "authors": [
+        "Jaeyong Song",
+        "Seong-Yeol Park",
+        "Hongsun Jang",
+        "Jaewon Jung",
+        "Hunseong Lim",
+        "Junguk Hong",
+        "Jin-Ho Lee"
+      ]
+    },
+    {
+      "title": "OOM-Free Alpamayo via CPU-GPU Memory Swapping for Vision-Language-Action Models",
+      "source_url": "https://www.semanticscholar.org/paper/68dda97eabca9fd8d0f46ff011678c133b5e54fd",
+      "year": 2026,
+      "published": "2026-05-12",
+      "abstract": "End-to-end Vision-Language-Action (VLA) models for autonomous driving unify perception, reasoning, and control in a single neural network and achieve strong driving performance. However, some VLA models require $20-60 ~\\text{GB}$ of GPU memory, which exceeds the memory capacity of commodity GPUs. We present a framework that enables memoryefficient VLA inference on VRAM-constrained GPUs through system-level optimization alone, without model modification. Our work proceeds in three stages: (1) Sequential Demand Layering reduces VRAM usage from model-level to layer-level granularity; (2) Pipelined Demand Layering hides parameter transfer time within layer execution time via transfer-compute overlap; and (3) a GPU-Resident Layer Decision Policy, informed by per-module residency benefit analysis, eliminates the residual transfer overhead that pipelining cannot hide. We further propose a performance prediction model that determines the optimal configuration-both the number and placement of resident layers-from a single profiling run with less than 1.3% prediction error across all configurations. When applied to NVIDIA's Alpamayo-R1-10B (21.52 GB) on an RTX 5070 Ti (16 GB), our framework achieves up to a $\\mathbf{3. 5 5} \\times$ speedup over conventional memory offloading methods while maintaining full BF16 precision.",
+      "canonical_id": "arXiv:2605.11678",
+      "arxiv_id": "2605.11678",
+      "authors": [
+        "Seung-Wook. Roh",
+        "H. Kim",
+        "Jong-Chan Kim"
+      ]
+    },
+    {
+      "title": "Position: LLM Inference Should Be Evaluated as Energy-to-Token Production",
+      "source_url": "https://www.semanticscholar.org/paper/ade6d0a5498d2a4b130c230b3318e71b4dd622de",
+      "year": 2026,
+      "published": "2026-05-12",
+      "abstract": "LLM inference is still evaluated mainly as a model or software problem: accuracy, latency, throughput, and hardware utilization. This is incomplete. At deployment scale, the relevant output is a quality-conditioned token produced under joint constraints from effective compute, delivered data-center power, cooling capacity, PUE, and utilization. We argue that the ML community should treat inference as \\emph{energy-to-token production}. We formalize this view with a dimensionally consistent Token Production Function in which token rate is bounded by both compute-per-token and energy-per-token ceilings. Listed API prices vary by over an order of magnitude across providers, but we use price dispersion only as directional motivation, not as causal evidence of marginal cost. The core physical question is instead: under fixed quality and service targets, when does the binding constraint move from theoretical peak compute toward delivered power, cooling, and operational efficiency? Under this framing, system optimizations -- latent KV-cache compression, sparse or heavily compressed attention, quantization, routing, and difficulty-adaptive reasoning -- are not merely local engineering tricks. They are energy-to-token levers because they reduce FLOPs/token, joules/token, memory traffic, or utilization losses under fixed $(q^{*},s^{*})$. We therefore call for inference papers and benchmarks to report Joules/token, active binding constraint, PUE-adjusted delivered power, and utilization-adjusted token output alongside accuracy and latency.",
+      "canonical_id": "arXiv:2605.11733",
+      "arxiv_id": "2605.11733",
+      "authors": [
+        "Xiang Liu",
+        "Shimiao Yuan",
+        "Zhenheng Tang",
+        "Peijie Dong",
+        "Kaiyong Zhao",
+        "Qiang Wang",
+        "Bo Li",
+        "Xiaowen Chu"
+      ]
+    },
+    {
+      "title": "ChunkFlow: Communication-Aware Chunked Prefetching for Layerwise Offloading in Distributed Diffusion Transformer Inference",
+      "source_url": "https://www.semanticscholar.org/paper/4fa68d05fa3840fdc36aefe50e1c50fd6b4606d7",
+      "year": 2026,
+      "published": "2026-05-11",
+      "abstract": "Layerwise offloading reduces the GPU memory footprint of large diffusion transformer (DiT) inference by prefetching upcoming layers from host memory, but its effectiveness hinges on hiding prefetch latency behind per-layer computation. This assumption breaks down when the per-GPU compute workload is small. Moreover, on PCIe-only nodes, prefetch and inter-GPU collective communications such as all-reduce and all-to-all contend on the shared PCIe path, exposing prefetch latency even when compute would otherwise hide it. We revisit layerwise offloading as a co-scheduling problem between prefetch and communication, guided by a first-order analytical model that predicts when prefetch can be hidden by computation. Building on this model, we design ChunkFlow, a communication-aware, chunk-granular offloading runtime that adaptively yields to collective communication and smoothly trades GPU memory for prefetch volume. On three representative diffusion transformers running on two H100 GPUs over PCIe with Ulysses sequence parallelism, ChunkFlow delivers up to 1.28x step-time speedup over SGLang's existing layerwise offloading, reduces peak GPU memory by up to 49% over the no-offload baseline at near-identical step time once the workload is large enough, and exposes a tunable memory-latency tradeoff that recovers near-zero step-time overhead in the small-workload regime.",
+      "canonical_id": "arXiv:2605.11335",
+      "arxiv_id": "2605.11335",
+      "authors": [
+        "Han Meng",
+        "Dan Liu",
+        "Dong Li"
+      ]
+    },
+    {
+      "title": "Different Prompts, Different Ranks: Prompt-aware Dynamic Rank Selection for SVD-based LLM Compression",
+      "source_url": "https://www.semanticscholar.org/paper/6ffeaa3862ab905f3f28cd9e53fb6eb6ab317f78",
+      "year": 2026,
+      "published": "2026-05-09",
+      "abstract": "Large language models (LLMs) have rapidly grown in scale, creating substantial memory and computational costs that hinder efficient deployment. Singular value decomposition (SVD) has emerged as an effective post-training compression technique, but existing SVD-based methods rely on static rank truncation, applying a fixed prefix of singular components to all inputs regardless of their diversity. We identify two limitations of this static design: the optimal rank varies across individual prompts, and the selected rank is sensitive to the choice of calibration set, leading to suboptimal performance across diverse inputs. To address these challenges, we propose $\\textbf{PARSE}$, a post-training framework for $\\textbf{P}$rompt-$\\textbf{A}$ware $\\textbf{R}$ank $\\textbf{S}$election as $\\textbf{E}$xperts in SVD-compressed LLMs. PARSE trains a linear router offline to perform prompt-aware rank selection, decoupling it from calibration information by supervising the router against dense-model outputs on a large-scale corpus. We further observe that rank-selection patterns are shared across semantically similar prompts and remain stable across decoding steps, allowing appropriate rank subsets to be served directly from a pattern cache at inference. Complemented by expert memory aggregation and kernel fusion for system-level efficiency, PARSE is orthogonal to existing SVD-based pipelines and consistently improves both model quality and inference efficiency. Integrated with four representative SVD-based methods, PARSE improves average task accuracy by up to 10% at a compression ratio of 0.6 on LLaMA-7B, and achieves up to 2.5 $\\times$ prefill and 2.4 $\\times$ decode speedup over native SVD execution.",
+      "canonical_id": "arXiv:2605.08568",
+      "arxiv_id": "2605.08568",
+      "authors": [
+        "He Zhu",
+        "Zhen-Dong Mi",
+        "G. Zhang",
+        "Shao-Syuan Huang"
+      ]
+    },
+    {
+      "title": "Reformulating KV Cache Eviction Problem for Long-Context LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/c0e8efe267d60ca99e874bd6a704537b2a2d9a14",
+      "year": 2026,
+      "published": "2026-05-08",
+      "abstract": "Large language models (LLMs) support long-context inference but suffer from substantial memory and runtime overhead due to Key-Value (KV) Cache growth. Existing KV Cache eviction methods primarily rely on local attention weights, neglecting the influence of value representations, output projection, and inter-head interactions. In this work, we reformulate KV Cache eviction from a conventional head-wise, weight-averaging approach into an output-aware, layer-wise matrix multiplication approximation problem. We introduce LaProx, a novel eviction strategy that explicitly models the multiplicative interaction between attention maps and projected value states to accurately quantify token contributions while accounting for inter-head dependencies. Building on this metric, we propose the first unified eviction strategy that assigns globally comparable importance scores to tokens, enabling model-wide selection instead of local, head-wise decisions. Experimental results across 19 datasets on long-context benchmarks LongBench and Needle-In-A-Haystack demonstrate that our approach maintains model performance with only 5\\% of the KV cache and consistently outperforms prior works across all configurations. Notably, our method achieves up to 2$\\times$ accuracy loss reduction under extreme compression scenarios compared to existing state-of-the-art baselines with minimal overhead.",
+      "canonical_id": "arXiv:2605.07234",
+      "arxiv_id": "2605.07234",
+      "authors": [
+        "Tho Mai",
+        "Joo-Young Kim"
+      ]
+    },
+    {
+      "title": "Nearly Optimal Attention Coresets",
+      "source_url": "https://www.semanticscholar.org/paper/ac88dcfe309b5b2d24cc08618f372cc2684f4f64",
+      "year": 2026,
+      "published": "2026-05-07",
+      "abstract": "We consider the problem of estimating the Attention mechanism in small space, and prove the existence of coresets for it of nearly optimal size. Specifically, we show that for any set of unit-norm keys and values $(K,V)$ in $\\mathbb{R}^d$, there exists a subset $(K',V')$ of size at most $O({\\sqrt{d} e^{\\rho+o(\\rho)}/\\varepsilon})$ such that \\[ \\left\\| \\operatorname{Attn}(q,K,V)- \\operatorname{Attn}(q,K',V') \\right\\| \\le \\varepsilon \\] simultaneously for all queries whose norm is bounded by $\\rho$. This outperforms the best known results for this problem. We also offer an improved lower bound showing that $\\varepsilon$-coresets must have size $\\Omega({\\sqrt{d} e^{\\rho}/\\epsilon})$.",
+      "canonical_id": "arXiv:2605.05602",
+      "arxiv_id": "2605.05602",
+      "authors": [
+        "Edo Liberty",
+        "Alexandr Andoni",
+        "Eldar Kleiner"
+      ]
+    },
+    {
+      "title": "WindowQuant: Mixed-Precision KV Cache Quantization Based on Window-Level Similarity for VLMs Inference Optimization",
+      "source_url": "https://www.semanticscholar.org/paper/963c27005714397c5e689b039dab58c85a9f8efa",
+      "year": 2026,
+      "published": "2026-05-04",
+      "abstract": "Recently, video language models (VLMs) have been applied in various fields. However, the visual token sequence of the VLM is too long, which may cause intolerant inference latency and GPU memory usage. Existing methods propose mixed-precision quantization to the key-value (KV) cache in VLMs based on token granularity, which is time-consuming in the search process and hardware inefficient during computation. This article introduces a novel approach called WindowQuant, which employs window-adaptive mixed-precision quantization to optimize the KV cache. WindowQuant consists of two modules: window-level quantization search and window-level KV cache computation. Window-level quantization search quickly determines the optimal bit-width configuration of the KV cache windows based on the similarity scores between the corresponding visual token windows and the text prompt, maintaining the model accuracy. Furthermore, window-level KV cache computation reorders the KV cache windows before quantization, avoiding the hardware inefficiency caused by mixed-precision quantization in inference computation. Extensive experiments demonstrate that WindowQuant outperforms state-of-the-art VLM models and KV cache quantization methods on various datasets.",
+      "canonical_id": "arXiv:2605.02262",
+      "arxiv_id": "2605.02262",
+      "authors": [
+        "Wei Tao",
+        "Xiaoyang Qu",
+        "Pei-Shuo Wang",
+        "Guo-Kuan Li",
+        "Jiguang Wan",
+        "Kai Lu",
+        "Jianzong Wang"
+      ]
+    },
+    {
+      "title": "MIDAS: A Dynamic Cross-GPU KV Cache Offloading Framework for LLM on GPU Cluster Systems",
+      "source_url": "https://www.semanticscholar.org/paper/0bcf8c095541bbe9140f6c713e9cdb3e921efb04",
+      "year": 2026,
+      "published": "2026-05-03",
+      "abstract": null,
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11461518",
+      "doi": "10.1109/icassp55912.2026.11461518",
+      "authors": [
+        "Zixiao Zhang",
+        "Chaonong Xu",
+        "Zhi-Bang Liu",
+        "Shaohui Zhi",
+        "Dan-Fei Ma",
+        "L. Yin",
+        "Chao Li"
+      ]
+    },
+    {
+      "title": "Compressing Kv Cache for Long-Context LLM Inference with Inter-Layer Attention Similarity",
+      "source_url": "https://www.semanticscholar.org/paper/a61b3dd2047c77bf43f1e3b66af137700b647a20",
+      "year": 2026,
+      "published": "2026-05-03",
+      "abstract": null,
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11464826",
+      "doi": "10.1109/icassp55912.2026.11464826",
+      "authors": [
+        "Da Ma",
+        "Lu Chen",
+        "Situo Zhang",
+        "Yuxun Miao",
+        "Su Zhu",
+        "Zhi Chen",
+        "Hongshen Xu",
+        "Hanqi Li",
+        "Shuai Fan",
+        "Lei Pan",
+        "Kai Yu"
+      ]
+    },
+    {
+      "title": "S\n 2\n VD: A Subspace-Aware SVD Method for Efficient LLM Compression",
+      "source_url": "https://www.semanticscholar.org/paper/7ef356c1e681d807ce6929874903af7bbcebaf2b",
+      "year": 2026,
+      "published": "2026-05-03",
+      "abstract": null,
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463557",
+      "doi": "10.1109/icassp55912.2026.11463557",
+      "authors": [
+        "Haozhe Zhou",
+        "Jiapeng Guan",
+        "Jie Zhang",
+        "Ran Wei",
+        "Xudong Zhao",
+        "Zhe Jiang",
+        "Xiangyang Ji"
+      ]
+    },
+    {
+      "title": "Large language model augmented framework with domain-specific knowledge integration for medical named entity recognition",
+      "source_url": "https://www.semanticscholar.org/paper/1cf22347fc9bec9b6f8c36a00d5ac507e2637f00",
+      "year": 2026,
+      "published": "2026-05-01",
+      "abstract": "Medical named entity recognition aims to recognize medical named entities and assign entity types from medical texts, which serves as the foundation for domain-specific applications. Although large language models (LLMs) and named entity recognition frameworks have presented impressive capabilities, they face challenges including domain specialization limitations, limited accessibility of medical knowledge resources, and lack of standardization. We propose a novel LLM augmented framework with domain-specific knowledge integration. It decomposes complex medical named entity recognition into recognition, refinement, and entity type identification. A medical LLM and a task-adaptive recognizer are employed to perform systematic medical named entity recognition. Subsequently, iterative refinement and standardization are conducted through the knowledge augmentation method to incorporate domain-specific knowledge and ensure consistency. We introduce an entity type identifier to effectively determine the entity type utilizing the unified contextual information. Extensive experiments are conducted on over 26,000 diverse samples from three benchmark datasets in the medical domain, which cover 16 entity types from medical encyclopedias, electronic health records, and question answering texts. Experimental results validate the effectiveness of the framework. It achieves average evaluation metrics of 78.24%, 95.89%, and 96.08% on the 3 benchmark datasets, respectively. The framework outperforms 12 representative baseline methods from general and medical domains by approximately 3%, which demonstrates enhanced performance in medical named entity recognition. As the initial effort to integrate domain-specific knowledge with the knowledge augmentation method for progressive medical named entity recognition, the framework provides an innovative approach to knowledge-intensive tasks.",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.109178",
+      "doi": "10.1016/j.neunet.2026.109178",
+      "authors": [
+        "Haochen Zou",
+        "Yongli Wang"
+      ]
+    },
+    {
+      "title": "CoQuant: Joint Weight-Activation Subspace Projection for Mixed-Precision LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/5c42df8174888754596a90f82b371ec6fac7abc4",
+      "year": 2026,
+      "published": "2026-04-29",
+      "abstract": "Post-training quantization (PTQ) has become an important technique for reducing the inference cost of Large Language Models (LLMs). While recent mixed-precision methods improve ultra-low bit quantization by preserving critical subspaces in high precision, they typically construct these subspaces relying solely on activation statistics. This ignores the fundamental nature of linear operations, where the output perturbation is jointly driven by both activation and weight quantization noise. In this paper, we propose CoQuant, a joint weight-activation subspace projection method. By theoretically modeling the expected output error, CoQuant formulates a closed-form weighted PCA solution that balances activation and weight covariances to select the optimal high-precision subspace. Extensive experiments on Llama-3.2 and Qwen2.5 models show that CoQuant consistently outperforms strong PTQ baselines in both WikiText perplexity and zero-shot common-sense reasoning accuracy. These results demonstrate that joint weight-activation subspace modeling provides a principled and effective direction for low-bit LLM quantization. The source code is available at https://github.com/Zachary5895/CoQuant.",
+      "canonical_id": "arXiv:2604.26378",
+      "arxiv_id": "2604.26378",
+      "authors": [
+        "Zhe Ding",
+        "Su Pan",
+        "Duowei Pan"
+      ]
+    },
+    {
+      "title": "Carbon-Taxed Transformers: A Green Compression Pipeline for Overgrown Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/2dbe5130935844d2fcc83bc8bbfbb7c08f5e8a78",
+      "year": 2026,
+      "published": "2026-04-28",
+      "abstract": "The accelerating adoption of Large Language Models (LLMs) in software engineering (SE) has brought with it a silent crisis: unsustainable computational cost. While these models demonstrate remarkable capabilities in different SE tasks, they are unmanageably large, slow to deploy, memory-intensive, and carbon-heavy. This reality threatens not only the scalability and accessibility of AI-powered SE, but also its long-term environmental sustainability. The research challenge is clear: we must go beyond accuracy and address efficiency and environmental cost as first-class design constraints. To meet this challenge, we introduce Carbon-Taxed Transformers (CTT), a systematic multi-architectural compression principled pipeline ordering inspired by economic carbon taxation principles. Drawing from the economic concept of carbon pricing, CTT operationalizes a computational carbon tax that penalizes architectural inefficiencies and rewards deployment-ready compression. We evaluate CTT across three core SE tasks: code clone detection, code summarization, and code generation, with models spanning encoder-only, encoder-decoder, and decoder-only architecture. Our results show that CTT delivers on inference: (1) up to 49× memory reduction, (2) time reduction up to 8-10× for clone detection, up to 3× for summarization, and 4–7× for generation, (3) up to 81% reduction in CO2 emissions and (4) CTT retains around 98% accuracy on clone detection, around 89% on summarization, and up to 91% (textual metrics) and 68% (pass@1) for generation. Two ablation studies show that pipeline ordering and individual component contributions are both essential, providing empirical justification for CTT’s design and effectiveness. This work establishes a viable path toward responsible AI in SE through aggressive yet performance-preserving compression.",
+      "canonical_id": "arXiv:2604.25903",
+      "arxiv_id": "2604.25903",
+      "authors": [
+        "A. Alam",
+        "Palash Ranjan Roy",
+        "C. Roy",
+        "Banani Roy",
+        "Kevin A. Schneider"
+      ]
+    },
+    {
+      "title": "A Heterogeneous Mapping of a Speech Neuroprosthesis Application",
+      "source_url": "https://www.semanticscholar.org/paper/a7d1ab8b66e03d8bb2272ea3dffe4f9797135bf7",
+      "year": 2026,
+      "published": "2026-04-26",
+      "abstract": "Heterogeneous processors that combine CPUs, GPUs, and NPUs have become an important response to dark silicon and rising workload demands. The high performance per watt potential of these platforms offers a path to lower the energy consumption of ML applications, which is critical for the sustainable growth of these workloads. However, realizing these benefits requires understanding how different phases of an application interact with the compute and memory behavior of each hardware component. In this work, we use a machine-learning-based speech neuroprosthesis application to demonstrate how heterogeneous hardware can be leveraged to improve end-to-end performance. We introduce techniques for reducing memory usage, scheduling data movement, and managing synchronization, which enable different stages of the application to execute efficiently across the NPU, GPU, and multi-threaded CPU. Our evaluation shows a clear divergence in hardware preferences when optimizing for latency versus throughput per watt, and highlights the role of interference when deploying the application in a pipeline-parallel manner. This work shows that understanding both the application structure and the underlying hardware is essential for effectively exploiting heterogeneity and offers guidance for designing sustainable heterogeneous application mappings.",
+      "canonical_id": "DOI:10.1109/ISPASS69572.2026.00030",
+      "doi": "10.1109/ISPASS69572.2026.00030",
+      "authors": [
+        "Iris Uwizeyimana",
+        "Oscar Sun",
+        "Natalie Enright Jerger"
+      ]
+    },
+    {
+      "title": "A Unified Inference Optimization Framework for Qwen3-VL-2B-Instruct",
+      "source_url": "https://www.semanticscholar.org/paper/7441c14702a3fa45350c417f99844e26cd572827",
+      "year": 2026,
+      "published": "2026-04-24",
+      "abstract": "Vision language models deliver strong multimodal reasoning ability, but their deployment remains difficult because visual prefill, autoregressive decoding, and model memory all introduce substantial inference cost. This paper presents a practical multi stage optimization pipeline for Qwen3 VL 2B Instruct. The method combines adaptive mixed precision post training quantization with Hessian trace based bit allocation, attention entropy guided visual token pruning inside the vision encoder, and decode phase acceleration through fused kernels, INT4 KV cache quantization, and speculative decoding. The pipeline preserves sensitive early visual layers at higher precision while compressing less critical components more aggressively. It requires only lightweight calibration and no full model fine tuning. Experiments show consistent gains in memory efficiency, time to first token, and decoding throughput with limited quality degradation.",
+      "canonical_id": "DOI:10.1109/EIBDCT69742.2026.11566699",
+      "doi": "10.1109/EIBDCT69742.2026.11566699",
+      "authors": [
+        "Quan Zhou"
+      ]
+    },
+    {
+      "title": "Predictive Self-Healing for Multi-Agent LLM Pipelines Using Model Predictive Control",
+      "source_url": "https://www.semanticscholar.org/paper/fc537b3003236ba8f99ce7e6833c02879a6550b7",
+      "year": 2026,
+      "published": "2026-04-19",
+      "abstract": "Multi-agent Large Language Model (LLM) systems are increasingly deployed for complex reasoning tasks, yet their reliability under dynamic conditions remains inadequately addressed. Existing fault tolerance mechanisms are predominantly reactive, responding to failures only after cascading effects have begun. This paper presents a predictive self-healing framework that applies Model Predictive Control (MPC) to multi-agent LLM orchestration. Our approach models the agent pipeline as a dynamical system, employs a Kalman filter for state estimation, and computes optimal control actions-including replica scaling, load redistribution, and circuit breaker activation-to maintain system stability proactively. Experimental evaluation on a threestage LLM pipeline demonstrates that our MPC-based controller achieves 96.8 % success rate under stress conditions, reduces P99 latency by 68 % compared to reactive approaches, and recovers from failures 73 % faster than Kubernetes Horizontal Pod Autoscaler. Energy analysis shows a 22 % reduction in GPUhours consumed, yielding proportional carbon footprint savings at scale. These results indicate that control-theoretic methods are a promising direction for reliable and energy-efficient multi-agent LLM deployment.",
+      "canonical_id": "DOI:10.1109/SusTech67720.2026.11536606",
+      "doi": "10.1109/SusTech67720.2026.11536606",
+      "authors": [
+        "Tejas Pravinbhai Patel",
+        "Amit Kumar Padhy",
+        "Sandeep Shivam",
+        "Viswanathan Ranganathan",
+        "Arun Kumar Elengovan",
+        "Deepak Kole"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/infocom59046.2026.11571548",
+      "identity_tokens": [
+        "id:DOI:10.1109/infocom59046.2026.11571548",
+        "title:a cloudedge collaborative system for efficient llm finetuning with backbone activation caching",
+        "url:https://www.semanticscholar.org/paper/4abc9f5da784ad039e4c25f5f65ce6d2c4fbd238"
+      ],
+      "record": {
+        "title": "A Cloud-Edge Collaborative System for Efficient LLM Fine-Tuning with Backbone Activation Caching",
+        "source_url": "https://www.semanticscholar.org/paper/4abc9f5da784ad039e4c25f5f65ce6d2c4fbd238",
+        "year": 2026,
+        "published": "2026-05-18",
+        "abstract": "Transformer models have become the foundation of modern artificial intelligence, particularly in Large Language Models (LLMs). To fully realize the potential of Cloud-Network Convergence (CNC), there is a critical need to deploy these models as pervasive AI edge services. However, fine-tuning LLMs on edge devices is hindered by high memory and computational demands. While Parameter-Efficient Fine-Tuning (PEFT) and side-network-based Memory-Efficient Fine-Tuning (MEFT) methods alleviate some resource burdens, current approaches still suffer from computational redundancy due to repeated backbone activation calculations, excessive memory usage from concurrent network storage, and suboptimal hardware utilization. To address these limitations, we propose Backbone Activation Cache and Side-network Acceleration (BAC-SA). BAC-SA decouples the fine-tuning process to enable pipelined activation caching to disk, eliminating redundant backbone computations and GPU memory usage. To maximize resource efficiency, BAC-SA further employs a CPU-GPU collaborative offloading strategy in the side-network fine-tuning stage. Experimental results demonstrate that, compared to G-DPSA, BAC-SA reduces memory overhead by up to 35.7% and training time by up to 27.6% on T5 models without compromising accuracy. These improvements indicate the strong practicality of BAC-SA in resource-constrained edge scenarios.",
+        "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571548",
+        "doi": "10.1109/INFOCOM59046.2026.11571548",
+        "authors": [
+          "Yu-Chu Chen",
+          "Ying-Chi Mao",
+          "Si Chen",
+          "Rongzhi Qi",
+          "Tian-Fu Pang",
+          "Zhen-Xiang Pan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02608",
+      "identity_tokens": [
+        "id:arXiv:2608.02608",
+        "title:separating intelligence from inference a standard for edgenative ai computing",
+        "url:https://www.semanticscholar.org/paper/b54734bcc069ebcdb58df7ef830420dad2bef4ef"
+      ],
+      "record": {
+        "title": "Separating Intelligence from Inference: A Standard for Edge-Native AI Computing",
+        "source_url": "https://www.semanticscholar.org/paper/b54734bcc069ebcdb58df7ef830420dad2bef4ef",
+        "year": 2026,
+        "published": "2026-05-13",
+        "abstract": "The artificial intelligence industry has constructed a USD 300 billion centralized data center infrastructure to serve a workload, large language model inference, that does not architecturally require centralization. This paper articulates the central architectural inefficiency of contemporary AI infrastructure: the conflation of model training (irreducibly centralized, capital-intensive, one-time per model version) with model inference (parallelizable, latency-sensitive, recurring per query) on the same physical hardware. We propose the separation principle: intelligence is trained centrally and shipped as software; inference executes on hardware near the data source, at the edge. We quantify the energy implications at civilizational scale and show that a fully edge-resident inference architecture for one billion daily users saves approximately 19 TWh per year and 7.3 megatons of CO2 annually relative to current centralized practice. We specify two new device classes, the Personal AI Computer (PAC) and the Corporate AI Workstation (CAW), with concrete hardware tiers, memory bandwidth requirements, thermal envelopes, and software interfaces. We then describe a reference architectural stack of eight components addressing weight distribution, sovereignty-aware routing, thermal-adaptive quantization, multi-tenant resource management, federated network inference, cryptographic provenance, privacy-preserving telemetry, and distributed context window extension. Several components are the subject of pending United States patent applications by the first author and are presented here as candidate open architectural principles",
+        "canonical_id": "arXiv:2608.02608",
+        "arxiv_id": "2608.02608",
+        "authors": [
+          "Venkat Vinjam",
+          "Krishnaiah Narukulla"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11744",
+      "identity_tokens": [
+        "id:arXiv:2605.11744",
+        "title:traininginference consistent segmented execution for longcontext llms",
+        "url:https://www.semanticscholar.org/paper/d1987f656a5b92a844115a88aed6f7aa20174250"
+      ],
+      "record": {
+        "title": "Training-Inference Consistent Segmented Execution for Long-Context LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/d1987f656a5b92a844115a88aed6f7aa20174250",
+        "year": 2026,
+        "published": "2026-05-12",
+        "abstract": "Transformer-based large language models face severe scalability challenges in long-context generation due to the computational and memory costs of full-context attention. Under practical computation and memory constraints, many inference-efficient long-context methods improve efficiency by adopting bounded-context or segment-level execution only during inference, while continuing to train models under full-context attention, resulting in a mismatch between training and inference execution and state-transition semantics. Based on this insight, we propose a training-inference consistent segment-level generation framework, in which training and inference follow the same segment-level forward execution semantics. During training, consistency with inference is enforced by restricting gradient propagation to KV states carried over from the immediately preceding segment, while permitting head-specific access to past KV states during the forward pass without involving them in gradient propagation. Across long-context benchmarks, our approach achieves performance comparable to full-context attention, while achieving competitive latency-memory trade-offs against strong inference-efficient baselines, and substantially improving scalability at very long context lengths (e.g., approximately 6x lower peak prefill memory at 128K compared to full-context attention with FlashAttention).",
+        "canonical_id": "arXiv:2605.11744",
+        "arxiv_id": "2605.11744",
+        "authors": [
+          "Xianpeng Shang",
+          "Jiang Li",
+          "Zehua Duo",
+          "Qi Cai",
+          "Xiangdong Su"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11517",
+      "identity_tokens": [
+        "id:arXiv:2605.11517",
+        "title:grinnder breaking the memory capacity wall in fullgraph gnn training with storage offloading",
+        "url:https://www.semanticscholar.org/paper/7c463ebe8dc37ee3a74d95023d59d4453cdb6c23"
+      ],
+      "record": {
+        "title": "GriNNder: Breaking the Memory Capacity Wall in Full-Graph GNN Training with Storage Offloading",
+        "source_url": "https://www.semanticscholar.org/paper/7c463ebe8dc37ee3a74d95023d59d4453cdb6c23",
+        "year": 2026,
+        "published": "2026-05-12",
+        "abstract": "Full-graph training of graph neural networks (GNNs) is widely used as it enables direct validation of algorithmic improvements by preserving complete neighborhood information. However, it typically requires multiple GPUs or servers, incurring substantial hardware and inter-device communication costs. While existing single-server methods reduce infrastructure requirements, they remain constrained by GPU and host memory capacity as graph sizes increase. To address this limitation, we introduce GriNNder, which is the first work to leverage storage devices to enable full-graph training even with limited memory. Because modern NVMe SSDs offer multi-terabyte capacities and bandwidths exceeding 10 GB/s, they provide an appealing option when memory resources are scarce. Yet, directly applying storage-based methods from other domains fails to address the unique access patterns and data dependencies in full-graph GNN training. GriNNder tackles these challenges by structured storage offloading (SSO), a framework that manages the GPU-host-storage hierarchy through coordinated cache, (re)gather, and bypass mechanisms. To realize the framework, we devise (i) a partition-wise caching strategy for host memory that exploits the observation on cross-partition dependencies, (ii) a regathering strategy for gradient computation that eliminates redundant storage operations, and (iii) a lightweight partitioning scheme that mitigates the memory requirements of existing graph partitioners. In experiments performed over various models and datasets, GriNNder achieves up to 9.78x speedup over state-of-the-art baselines and throughput comparable to distributed systems, enabling previously infeasible large-scale full-graph training even on a single GPU.",
+        "canonical_id": "arXiv:2605.11517",
+        "arxiv_id": "2605.11517",
+        "authors": [
+          "Jaeyong Song",
+          "Seong-Yeol Park",
+          "Hongsun Jang",
+          "Jaewon Jung",
+          "Hunseong Lim",
+          "Junguk Hong",
+          "Jin-Ho Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11678",
+      "identity_tokens": [
+        "id:arXiv:2605.11678",
+        "title:oomfree alpamayo via cpugpu memory swapping for visionlanguageaction models",
+        "url:https://www.semanticscholar.org/paper/68dda97eabca9fd8d0f46ff011678c133b5e54fd"
+      ],
+      "record": {
+        "title": "OOM-Free Alpamayo via CPU-GPU Memory Swapping for Vision-Language-Action Models",
+        "source_url": "https://www.semanticscholar.org/paper/68dda97eabca9fd8d0f46ff011678c133b5e54fd",
+        "year": 2026,
+        "published": "2026-05-12",
+        "abstract": "End-to-end Vision-Language-Action (VLA) models for autonomous driving unify perception, reasoning, and control in a single neural network and achieve strong driving performance. However, some VLA models require $20-60 ~\\text{GB}$ of GPU memory, which exceeds the memory capacity of commodity GPUs. We present a framework that enables memoryefficient VLA inference on VRAM-constrained GPUs through system-level optimization alone, without model modification. Our work proceeds in three stages: (1) Sequential Demand Layering reduces VRAM usage from model-level to layer-level granularity; (2) Pipelined Demand Layering hides parameter transfer time within layer execution time via transfer-compute overlap; and (3) a GPU-Resident Layer Decision Policy, informed by per-module residency benefit analysis, eliminates the residual transfer overhead that pipelining cannot hide. We further propose a performance prediction model that determines the optimal configuration-both the number and placement of resident layers-from a single profiling run with less than 1.3% prediction error across all configurations. When applied to NVIDIA's Alpamayo-R1-10B (21.52 GB) on an RTX 5070 Ti (16 GB), our framework achieves up to a $\\mathbf{3. 5 5} \\times$ speedup over conventional memory offloading methods while maintaining full BF16 precision.",
+        "canonical_id": "arXiv:2605.11678",
+        "arxiv_id": "2605.11678",
+        "authors": [
+          "Seung-Wook. Roh",
+          "H. Kim",
+          "Jong-Chan Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11733",
+      "identity_tokens": [
+        "id:arXiv:2605.11733",
+        "title:position llm inference should be evaluated as energytotoken production",
+        "url:https://www.semanticscholar.org/paper/ade6d0a5498d2a4b130c230b3318e71b4dd622de"
+      ],
+      "record": {
+        "title": "Position: LLM Inference Should Be Evaluated as Energy-to-Token Production",
+        "source_url": "https://www.semanticscholar.org/paper/ade6d0a5498d2a4b130c230b3318e71b4dd622de",
+        "year": 2026,
+        "published": "2026-05-12",
+        "abstract": "LLM inference is still evaluated mainly as a model or software problem: accuracy, latency, throughput, and hardware utilization. This is incomplete. At deployment scale, the relevant output is a quality-conditioned token produced under joint constraints from effective compute, delivered data-center power, cooling capacity, PUE, and utilization. We argue that the ML community should treat inference as \\emph{energy-to-token production}. We formalize this view with a dimensionally consistent Token Production Function in which token rate is bounded by both compute-per-token and energy-per-token ceilings. Listed API prices vary by over an order of magnitude across providers, but we use price dispersion only as directional motivation, not as causal evidence of marginal cost. The core physical question is instead: under fixed quality and service targets, when does the binding constraint move from theoretical peak compute toward delivered power, cooling, and operational efficiency? Under this framing, system optimizations -- latent KV-cache compression, sparse or heavily compressed attention, quantization, routing, and difficulty-adaptive reasoning -- are not merely local engineering tricks. They are energy-to-token levers because they reduce FLOPs/token, joules/token, memory traffic, or utilization losses under fixed $(q^{*},s^{*})$. We therefore call for inference papers and benchmarks to report Joules/token, active binding constraint, PUE-adjusted delivered power, and utilization-adjusted token output alongside accuracy and latency.",
+        "canonical_id": "arXiv:2605.11733",
+        "arxiv_id": "2605.11733",
+        "authors": [
+          "Xiang Liu",
+          "Shimiao Yuan",
+          "Zhenheng Tang",
+          "Peijie Dong",
+          "Kaiyong Zhao",
+          "Qiang Wang",
+          "Bo Li",
+          "Xiaowen Chu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11335",
+      "identity_tokens": [
+        "id:arXiv:2605.11335",
+        "title:chunkflow communicationaware chunked prefetching for layerwise offloading in distributed diffusion transformer inference",
+        "url:https://www.semanticscholar.org/paper/4fa68d05fa3840fdc36aefe50e1c50fd6b4606d7"
+      ],
+      "record": {
+        "title": "ChunkFlow: Communication-Aware Chunked Prefetching for Layerwise Offloading in Distributed Diffusion Transformer Inference",
+        "source_url": "https://www.semanticscholar.org/paper/4fa68d05fa3840fdc36aefe50e1c50fd6b4606d7",
+        "year": 2026,
+        "published": "2026-05-11",
+        "abstract": "Layerwise offloading reduces the GPU memory footprint of large diffusion transformer (DiT) inference by prefetching upcoming layers from host memory, but its effectiveness hinges on hiding prefetch latency behind per-layer computation. This assumption breaks down when the per-GPU compute workload is small. Moreover, on PCIe-only nodes, prefetch and inter-GPU collective communications such as all-reduce and all-to-all contend on the shared PCIe path, exposing prefetch latency even when compute would otherwise hide it. We revisit layerwise offloading as a co-scheduling problem between prefetch and communication, guided by a first-order analytical model that predicts when prefetch can be hidden by computation. Building on this model, we design ChunkFlow, a communication-aware, chunk-granular offloading runtime that adaptively yields to collective communication and smoothly trades GPU memory for prefetch volume. On three representative diffusion transformers running on two H100 GPUs over PCIe with Ulysses sequence parallelism, ChunkFlow delivers up to 1.28x step-time speedup over SGLang's existing layerwise offloading, reduces peak GPU memory by up to 49% over the no-offload baseline at near-identical step time once the workload is large enough, and exposes a tunable memory-latency tradeoff that recovers near-zero step-time overhead in the small-workload regime.",
+        "canonical_id": "arXiv:2605.11335",
+        "arxiv_id": "2605.11335",
+        "authors": [
+          "Han Meng",
+          "Dan Liu",
+          "Dong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.08568",
+      "identity_tokens": [
+        "id:arXiv:2605.08568",
+        "title:different prompts different ranks promptaware dynamic rank selection for svdbased llm compression",
+        "url:https://www.semanticscholar.org/paper/6ffeaa3862ab905f3f28cd9e53fb6eb6ab317f78"
+      ],
+      "record": {
+        "title": "Different Prompts, Different Ranks: Prompt-aware Dynamic Rank Selection for SVD-based LLM Compression",
+        "source_url": "https://www.semanticscholar.org/paper/6ffeaa3862ab905f3f28cd9e53fb6eb6ab317f78",
+        "year": 2026,
+        "published": "2026-05-09",
+        "abstract": "Large language models (LLMs) have rapidly grown in scale, creating substantial memory and computational costs that hinder efficient deployment. Singular value decomposition (SVD) has emerged as an effective post-training compression technique, but existing SVD-based methods rely on static rank truncation, applying a fixed prefix of singular components to all inputs regardless of their diversity. We identify two limitations of this static design: the optimal rank varies across individual prompts, and the selected rank is sensitive to the choice of calibration set, leading to suboptimal performance across diverse inputs. To address these challenges, we propose $\\textbf{PARSE}$, a post-training framework for $\\textbf{P}$rompt-$\\textbf{A}$ware $\\textbf{R}$ank $\\textbf{S}$election as $\\textbf{E}$xperts in SVD-compressed LLMs. PARSE trains a linear router offline to perform prompt-aware rank selection, decoupling it from calibration information by supervising the router against dense-model outputs on a large-scale corpus. We further observe that rank-selection patterns are shared across semantically similar prompts and remain stable across decoding steps, allowing appropriate rank subsets to be served directly from a pattern cache at inference. Complemented by expert memory aggregation and kernel fusion for system-level efficiency, PARSE is orthogonal to existing SVD-based pipelines and consistently improves both model quality and inference efficiency. Integrated with four representative SVD-based methods, PARSE improves average task accuracy by up to 10% at a compression ratio of 0.6 on LLaMA-7B, and achieves up to 2.5 $\\times$ prefill and 2.4 $\\times$ decode speedup over native SVD execution.",
+        "canonical_id": "arXiv:2605.08568",
+        "arxiv_id": "2605.08568",
+        "authors": [
+          "He Zhu",
+          "Zhen-Dong Mi",
+          "G. Zhang",
+          "Shao-Syuan Huang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.07234",
+      "identity_tokens": [
+        "id:arXiv:2605.07234",
+        "title:reformulating kv cache eviction problem for longcontext llm inference",
+        "url:https://www.semanticscholar.org/paper/c0e8efe267d60ca99e874bd6a704537b2a2d9a14"
+      ],
+      "record": {
+        "title": "Reformulating KV Cache Eviction Problem for Long-Context LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/c0e8efe267d60ca99e874bd6a704537b2a2d9a14",
+        "year": 2026,
+        "published": "2026-05-08",
+        "abstract": "Large language models (LLMs) support long-context inference but suffer from substantial memory and runtime overhead due to Key-Value (KV) Cache growth. Existing KV Cache eviction methods primarily rely on local attention weights, neglecting the influence of value representations, output projection, and inter-head interactions. In this work, we reformulate KV Cache eviction from a conventional head-wise, weight-averaging approach into an output-aware, layer-wise matrix multiplication approximation problem. We introduce LaProx, a novel eviction strategy that explicitly models the multiplicative interaction between attention maps and projected value states to accurately quantify token contributions while accounting for inter-head dependencies. Building on this metric, we propose the first unified eviction strategy that assigns globally comparable importance scores to tokens, enabling model-wide selection instead of local, head-wise decisions. Experimental results across 19 datasets on long-context benchmarks LongBench and Needle-In-A-Haystack demonstrate that our approach maintains model performance with only 5\\% of the KV cache and consistently outperforms prior works across all configurations. Notably, our method achieves up to 2$\\times$ accuracy loss reduction under extreme compression scenarios compared to existing state-of-the-art baselines with minimal overhead.",
+        "canonical_id": "arXiv:2605.07234",
+        "arxiv_id": "2605.07234",
+        "authors": [
+          "Tho Mai",
+          "Joo-Young Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.05602",
+      "identity_tokens": [
+        "id:arXiv:2605.05602",
+        "title:nearly optimal attention coresets",
+        "url:https://www.semanticscholar.org/paper/ac88dcfe309b5b2d24cc08618f372cc2684f4f64"
+      ],
+      "record": {
+        "title": "Nearly Optimal Attention Coresets",
+        "source_url": "https://www.semanticscholar.org/paper/ac88dcfe309b5b2d24cc08618f372cc2684f4f64",
+        "year": 2026,
+        "published": "2026-05-07",
+        "abstract": "We consider the problem of estimating the Attention mechanism in small space, and prove the existence of coresets for it of nearly optimal size. Specifically, we show that for any set of unit-norm keys and values $(K,V)$ in $\\mathbb{R}^d$, there exists a subset $(K',V')$ of size at most $O({\\sqrt{d} e^{\\rho+o(\\rho)}/\\varepsilon})$ such that \\[ \\left\\| \\operatorname{Attn}(q,K,V)- \\operatorname{Attn}(q,K',V') \\right\\| \\le \\varepsilon \\] simultaneously for all queries whose norm is bounded by $\\rho$. This outperforms the best known results for this problem. We also offer an improved lower bound showing that $\\varepsilon$-coresets must have size $\\Omega({\\sqrt{d} e^{\\rho}/\\epsilon})$.",
+        "canonical_id": "arXiv:2605.05602",
+        "arxiv_id": "2605.05602",
+        "authors": [
+          "Edo Liberty",
+          "Alexandr Andoni",
+          "Eldar Kleiner"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.02262",
+      "identity_tokens": [
+        "id:arXiv:2605.02262",
+        "title:windowquant mixedprecision kv cache quantization based on windowlevel similarity for vlms inference optimization",
+        "url:https://www.semanticscholar.org/paper/963c27005714397c5e689b039dab58c85a9f8efa"
+      ],
+      "record": {
+        "title": "WindowQuant: Mixed-Precision KV Cache Quantization Based on Window-Level Similarity for VLMs Inference Optimization",
+        "source_url": "https://www.semanticscholar.org/paper/963c27005714397c5e689b039dab58c85a9f8efa",
+        "year": 2026,
+        "published": "2026-05-04",
+        "abstract": "Recently, video language models (VLMs) have been applied in various fields. However, the visual token sequence of the VLM is too long, which may cause intolerant inference latency and GPU memory usage. Existing methods propose mixed-precision quantization to the key-value (KV) cache in VLMs based on token granularity, which is time-consuming in the search process and hardware inefficient during computation. This article introduces a novel approach called WindowQuant, which employs window-adaptive mixed-precision quantization to optimize the KV cache. WindowQuant consists of two modules: window-level quantization search and window-level KV cache computation. Window-level quantization search quickly determines the optimal bit-width configuration of the KV cache windows based on the similarity scores between the corresponding visual token windows and the text prompt, maintaining the model accuracy. Furthermore, window-level KV cache computation reorders the KV cache windows before quantization, avoiding the hardware inefficiency caused by mixed-precision quantization in inference computation. Extensive experiments demonstrate that WindowQuant outperforms state-of-the-art VLM models and KV cache quantization methods on various datasets.",
+        "canonical_id": "arXiv:2605.02262",
+        "arxiv_id": "2605.02262",
+        "authors": [
+          "Wei Tao",
+          "Xiaoyang Qu",
+          "Pei-Shuo Wang",
+          "Guo-Kuan Li",
+          "Jiguang Wan",
+          "Kai Lu",
+          "Jianzong Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp55912.2026.11461518",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11461518",
+        "title:midas a dynamic crossgpu kv cache offloading framework for llm on gpu cluster systems",
+        "url:https://www.semanticscholar.org/paper/0bcf8c095541bbe9140f6c713e9cdb3e921efb04"
+      ],
+      "record": {
+        "title": "MIDAS: A Dynamic Cross-GPU KV Cache Offloading Framework for LLM on GPU Cluster Systems",
+        "source_url": "https://www.semanticscholar.org/paper/0bcf8c095541bbe9140f6c713e9cdb3e921efb04",
+        "year": 2026,
+        "published": "2026-05-03",
+        "abstract": null,
+        "canonical_id": "DOI:10.1109/icassp55912.2026.11461518",
+        "doi": "10.1109/icassp55912.2026.11461518",
+        "authors": [
+          "Zixiao Zhang",
+          "Chaonong Xu",
+          "Zhi-Bang Liu",
+          "Shaohui Zhi",
+          "Dan-Fei Ma",
+          "L. Yin",
+          "Chao Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp55912.2026.11464826",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11464826",
+        "title:compressing kv cache for longcontext llm inference with interlayer attention similarity",
+        "url:https://www.semanticscholar.org/paper/a61b3dd2047c77bf43f1e3b66af137700b647a20"
+      ],
+      "record": {
+        "title": "Compressing Kv Cache for Long-Context LLM Inference with Inter-Layer Attention Similarity",
+        "source_url": "https://www.semanticscholar.org/paper/a61b3dd2047c77bf43f1e3b66af137700b647a20",
+        "year": 2026,
+        "published": "2026-05-03",
+        "abstract": null,
+        "canonical_id": "DOI:10.1109/icassp55912.2026.11464826",
+        "doi": "10.1109/icassp55912.2026.11464826",
+        "authors": [
+          "Da Ma",
+          "Lu Chen",
+          "Situo Zhang",
+          "Yuxun Miao",
+          "Su Zhu",
+          "Zhi Chen",
+          "Hongshen Xu",
+          "Hanqi Li",
+          "Shuai Fan",
+          "Lei Pan",
+          "Kai Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp55912.2026.11463557",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11463557",
+        "title:s 2 vd a subspaceaware svd method for efficient llm compression",
+        "url:https://www.semanticscholar.org/paper/7ef356c1e681d807ce6929874903af7bbcebaf2b"
+      ],
+      "record": {
+        "title": "S\n 2\n VD: A Subspace-Aware SVD Method for Efficient LLM Compression",
+        "source_url": "https://www.semanticscholar.org/paper/7ef356c1e681d807ce6929874903af7bbcebaf2b",
+        "year": 2026,
+        "published": "2026-05-03",
+        "abstract": null,
+        "canonical_id": "DOI:10.1109/icassp55912.2026.11463557",
+        "doi": "10.1109/icassp55912.2026.11463557",
+        "authors": [
+          "Haozhe Zhou",
+          "Jiapeng Guan",
+          "Jie Zhang",
+          "Ran Wei",
+          "Xudong Zhao",
+          "Zhe Jiang",
+          "Xiangyang Ji"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neunet.2026.109178",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neunet.2026.109178",
+        "title:large language model augmented framework with domainspecific knowledge integration for medical named entity recognition",
+        "url:https://www.semanticscholar.org/paper/1cf22347fc9bec9b6f8c36a00d5ac507e2637f00"
+      ],
+      "record": {
+        "title": "Large language model augmented framework with domain-specific knowledge integration for medical named entity recognition",
+        "source_url": "https://www.semanticscholar.org/paper/1cf22347fc9bec9b6f8c36a00d5ac507e2637f00",
+        "year": 2026,
+        "published": "2026-05-01",
+        "abstract": "Medical named entity recognition aims to recognize medical named entities and assign entity types from medical texts, which serves as the foundation for domain-specific applications. Although large language models (LLMs) and named entity recognition frameworks have presented impressive capabilities, they face challenges including domain specialization limitations, limited accessibility of medical knowledge resources, and lack of standardization. We propose a novel LLM augmented framework with domain-specific knowledge integration. It decomposes complex medical named entity recognition into recognition, refinement, and entity type identification. A medical LLM and a task-adaptive recognizer are employed to perform systematic medical named entity recognition. Subsequently, iterative refinement and standardization are conducted through the knowledge augmentation method to incorporate domain-specific knowledge and ensure consistency. We introduce an entity type identifier to effectively determine the entity type utilizing the unified contextual information. Extensive experiments are conducted on over 26,000 diverse samples from three benchmark datasets in the medical domain, which cover 16 entity types from medical encyclopedias, electronic health records, and question answering texts. Experimental results validate the effectiveness of the framework. It achieves average evaluation metrics of 78.24%, 95.89%, and 96.08% on the 3 benchmark datasets, respectively. The framework outperforms 12 representative baseline methods from general and medical domains by approximately 3%, which demonstrates enhanced performance in medical named entity recognition. As the initial effort to integrate domain-specific knowledge with the knowledge augmentation method for progressive medical named entity recognition, the framework provides an innovative approach to knowledge-intensive tasks.",
+        "canonical_id": "DOI:10.1016/j.neunet.2026.109178",
+        "doi": "10.1016/j.neunet.2026.109178",
+        "authors": [
+          "Haochen Zou",
+          "Yongli Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.26378",
+      "identity_tokens": [
+        "id:arXiv:2604.26378",
+        "title:coquant joint weightactivation subspace projection for mixedprecision llms",
+        "url:https://www.semanticscholar.org/paper/5c42df8174888754596a90f82b371ec6fac7abc4"
+      ],
+      "record": {
+        "title": "CoQuant: Joint Weight-Activation Subspace Projection for Mixed-Precision LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/5c42df8174888754596a90f82b371ec6fac7abc4",
+        "year": 2026,
+        "published": "2026-04-29",
+        "abstract": "Post-training quantization (PTQ) has become an important technique for reducing the inference cost of Large Language Models (LLMs). While recent mixed-precision methods improve ultra-low bit quantization by preserving critical subspaces in high precision, they typically construct these subspaces relying solely on activation statistics. This ignores the fundamental nature of linear operations, where the output perturbation is jointly driven by both activation and weight quantization noise. In this paper, we propose CoQuant, a joint weight-activation subspace projection method. By theoretically modeling the expected output error, CoQuant formulates a closed-form weighted PCA solution that balances activation and weight covariances to select the optimal high-precision subspace. Extensive experiments on Llama-3.2 and Qwen2.5 models show that CoQuant consistently outperforms strong PTQ baselines in both WikiText perplexity and zero-shot common-sense reasoning accuracy. These results demonstrate that joint weight-activation subspace modeling provides a principled and effective direction for low-bit LLM quantization. The source code is available at https://github.com/Zachary5895/CoQuant.",
+        "canonical_id": "arXiv:2604.26378",
+        "arxiv_id": "2604.26378",
+        "authors": [
+          "Zhe Ding",
+          "Su Pan",
+          "Duowei Pan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.25903",
+      "identity_tokens": [
+        "id:arXiv:2604.25903",
+        "title:carbontaxed transformers a green compression pipeline for overgrown language models",
+        "url:https://www.semanticscholar.org/paper/2dbe5130935844d2fcc83bc8bbfbb7c08f5e8a78"
+      ],
+      "record": {
+        "title": "Carbon-Taxed Transformers: A Green Compression Pipeline for Overgrown Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/2dbe5130935844d2fcc83bc8bbfbb7c08f5e8a78",
+        "year": 2026,
+        "published": "2026-04-28",
+        "abstract": "The accelerating adoption of Large Language Models (LLMs) in software engineering (SE) has brought with it a silent crisis: unsustainable computational cost. While these models demonstrate remarkable capabilities in different SE tasks, they are unmanageably large, slow to deploy, memory-intensive, and carbon-heavy. This reality threatens not only the scalability and accessibility of AI-powered SE, but also its long-term environmental sustainability. The research challenge is clear: we must go beyond accuracy and address efficiency and environmental cost as first-class design constraints. To meet this challenge, we introduce Carbon-Taxed Transformers (CTT), a systematic multi-architectural compression principled pipeline ordering inspired by economic carbon taxation principles. Drawing from the economic concept of carbon pricing, CTT operationalizes a computational carbon tax that penalizes architectural inefficiencies and rewards deployment-ready compression. We evaluate CTT across three core SE tasks: code clone detection, code summarization, and code generation, with models spanning encoder-only, encoder-decoder, and decoder-only architecture. Our results show that CTT delivers on inference: (1) up to 49× memory reduction, (2) time reduction up to 8-10× for clone detection, up to 3× for summarization, and 4–7× for generation, (3) up to 81% reduction in CO2 emissions and (4) CTT retains around 98% accuracy on clone detection, around 89% on summarization, and up to 91% (textual metrics) and 68% (pass@1) for generation. Two ablation studies show that pipeline ordering and individual component contributions are both essential, providing empirical justification for CTT’s design and effectiveness. This work establishes a viable path toward responsible AI in SE through aggressive yet performance-preserving compression.",
+        "canonical_id": "arXiv:2604.25903",
+        "arxiv_id": "2604.25903",
+        "authors": [
+          "A. Alam",
+          "Palash Ranjan Roy",
+          "C. Roy",
+          "Banani Roy",
+          "Kevin A. Schneider"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ispass69572.2026.00030",
+      "identity_tokens": [
+        "id:DOI:10.1109/ispass69572.2026.00030",
+        "title:a heterogeneous mapping of a speech neuroprosthesis application",
+        "url:https://www.semanticscholar.org/paper/a7d1ab8b66e03d8bb2272ea3dffe4f9797135bf7"
+      ],
+      "record": {
+        "title": "A Heterogeneous Mapping of a Speech Neuroprosthesis Application",
+        "source_url": "https://www.semanticscholar.org/paper/a7d1ab8b66e03d8bb2272ea3dffe4f9797135bf7",
+        "year": 2026,
+        "published": "2026-04-26",
+        "abstract": "Heterogeneous processors that combine CPUs, GPUs, and NPUs have become an important response to dark silicon and rising workload demands. The high performance per watt potential of these platforms offers a path to lower the energy consumption of ML applications, which is critical for the sustainable growth of these workloads. However, realizing these benefits requires understanding how different phases of an application interact with the compute and memory behavior of each hardware component. In this work, we use a machine-learning-based speech neuroprosthesis application to demonstrate how heterogeneous hardware can be leveraged to improve end-to-end performance. We introduce techniques for reducing memory usage, scheduling data movement, and managing synchronization, which enable different stages of the application to execute efficiently across the NPU, GPU, and multi-threaded CPU. Our evaluation shows a clear divergence in hardware preferences when optimizing for latency versus throughput per watt, and highlights the role of interference when deploying the application in a pipeline-parallel manner. This work shows that understanding both the application structure and the underlying hardware is essential for effectively exploiting heterogeneity and offers guidance for designing sustainable heterogeneous application mappings.",
+        "canonical_id": "DOI:10.1109/ISPASS69572.2026.00030",
+        "doi": "10.1109/ISPASS69572.2026.00030",
+        "authors": [
+          "Iris Uwizeyimana",
+          "Oscar Sun",
+          "Natalie Enright Jerger"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/eibdct69742.2026.11566699",
+      "identity_tokens": [
+        "id:DOI:10.1109/eibdct69742.2026.11566699",
+        "title:a unified inference optimization framework for qwen3vl2binstruct",
+        "url:https://www.semanticscholar.org/paper/7441c14702a3fa45350c417f99844e26cd572827"
+      ],
+      "record": {
+        "title": "A Unified Inference Optimization Framework for Qwen3-VL-2B-Instruct",
+        "source_url": "https://www.semanticscholar.org/paper/7441c14702a3fa45350c417f99844e26cd572827",
+        "year": 2026,
+        "published": "2026-04-24",
+        "abstract": "Vision language models deliver strong multimodal reasoning ability, but their deployment remains difficult because visual prefill, autoregressive decoding, and model memory all introduce substantial inference cost. This paper presents a practical multi stage optimization pipeline for Qwen3 VL 2B Instruct. The method combines adaptive mixed precision post training quantization with Hessian trace based bit allocation, attention entropy guided visual token pruning inside the vision encoder, and decode phase acceleration through fused kernels, INT4 KV cache quantization, and speculative decoding. The pipeline preserves sensitive early visual layers at higher precision while compressing less critical components more aggressively. It requires only lightweight calibration and no full model fine tuning. Experiments show consistent gains in memory efficiency, time to first token, and decoding throughput with limited quality degradation.",
+        "canonical_id": "DOI:10.1109/EIBDCT69742.2026.11566699",
+        "doi": "10.1109/EIBDCT69742.2026.11566699",
+        "authors": [
+          "Quan Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/sustech67720.2026.11536606",
+      "identity_tokens": [
+        "id:DOI:10.1109/sustech67720.2026.11536606",
+        "title:predictive selfhealing for multiagent llm pipelines using model predictive control",
+        "url:https://www.semanticscholar.org/paper/fc537b3003236ba8f99ce7e6833c02879a6550b7"
+      ],
+      "record": {
+        "title": "Predictive Self-Healing for Multi-Agent LLM Pipelines Using Model Predictive Control",
+        "source_url": "https://www.semanticscholar.org/paper/fc537b3003236ba8f99ce7e6833c02879a6550b7",
+        "year": 2026,
+        "published": "2026-04-19",
+        "abstract": "Multi-agent Large Language Model (LLM) systems are increasingly deployed for complex reasoning tasks, yet their reliability under dynamic conditions remains inadequately addressed. Existing fault tolerance mechanisms are predominantly reactive, responding to failures only after cascading effects have begun. This paper presents a predictive self-healing framework that applies Model Predictive Control (MPC) to multi-agent LLM orchestration. Our approach models the agent pipeline as a dynamical system, employs a Kalman filter for state estimation, and computes optimal control actions-including replica scaling, load redistribution, and circuit breaker activation-to maintain system stability proactively. Experimental evaluation on a threestage LLM pipeline demonstrates that our MPC-based controller achieves 96.8 % success rate under stress conditions, reduces P99 latency by 68 % compared to reactive approaches, and recovers from failures 73 % faster than Kubernetes Horizontal Pod Autoscaler. Energy analysis shows a 22 % reduction in GPUhours consumed, yielding proportional carbon footprint savings at scale. These results indicate that control-theoretic methods are a promising direction for reliable and energy-efficient multi-agent LLM deployment.",
+        "canonical_id": "DOI:10.1109/SusTech67720.2026.11536606",
+        "doi": "10.1109/SusTech67720.2026.11536606",
+        "authors": [
+          "Tejas Pravinbhai Patel",
+          "Amit Kumar Padhy",
+          "Sandeep Shivam",
+          "Viswanathan Ranganathan",
+          "Arun Kumar Elengovan",
+          "Deepak Kole"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:cc3e194a335e1f28693ba2cbe3c3e1f28d0d338dd19c3a3ee279380b7b3c5550",
+  "next_action": "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; the cached records were re-filtered against this run's current identity snapshot and any shortfall was topped up from the same fixed source. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

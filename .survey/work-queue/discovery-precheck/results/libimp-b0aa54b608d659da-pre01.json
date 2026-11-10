@@ -1,0 +1,1620 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b0aa54b608d659da-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b0aa54b608d6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.dcan.2026.03.010",
+    "arXiv:2512.11529",
+    "arXiv:2601.19320",
+    "arXiv:2603.15854",
+    "arXiv:2604.14889",
+    "arXiv:2604.15356",
+    "arXiv:2604.18471",
+    "arXiv:2604.23466",
+    "arXiv:2605.06366",
+    "arXiv:2605.06850",
+    "arXiv:2605.11605",
+    "arXiv:2605.16928",
+    "arXiv:2605.20683",
+    "arXiv:2605.25820",
+    "arXiv:2605.26339",
+    "arXiv:2606.04050",
+    "arXiv:2606.05742"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 17,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "03deed1484056d7402d063669d747c376afc6d8a",
+  "raw_search_result_count": 17,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 17,
+  "provider_progress": {
+    "requested_count": 17,
+    "status_counts": {
+      "allowed": 17,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T00:43:12.390646+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.dcan.2026.03.010",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.11529",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.19320",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.15854",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.14889",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.15356",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.18471",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.23466",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.06366",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.06850",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.11605",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.16928",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.20683",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.25820",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.26339",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.04050",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.05742",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Generative IoT: advancing IoT with generative AI and large language models",
+      "source_url": "https://doi.org/10.1016/j.dcan.2026.03.010",
+      "year": 2026,
+      "published": "2026-03-01",
+      "venue": "Digit. Commun. Networks",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:6af728ae1db7bd893f358850e47a990a248888e7"
+      ],
+      "semantic_scholar_id": "6af728ae1db7bd893f358850e47a990a248888e7",
+      "doi": "10.1016/j.dcan.2026.03.010",
+      "canonical_id": "DOI:10.1016/j.dcan.2026.03.010",
+      "authors": [
+        "F. Firouzi",
+        "Aritra Ray",
+        "Bahareh J. Farahani",
+        "M. Daneshmand",
+        "Jaeseung Song",
+        "Shaoen Wu",
+        "Krishnendu Chakrabarty"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Keep What Audio Cannot Say: Context-Preserving Token Pruning for Omni-LLMs",
+      "source_url": "https://arxiv.org/abs/2605.11605",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Omnimodal Large Language Models (Omni-LLMs) incur substantial computational overhead due to the large number of multimodal input tokens they process, making token reduction essential for real-world deployment. Existing Omni-LLM pruning methods typically reduce this cost by selecting tokens that are important for the current query or strongly aligned with cross-modal cues. However, such strategies can discard evidence that falls outside these criteria, even when needed for different questions or for understanding context beyond aligned audio-visual cues. To address this limitation, we reframe Omni-LLM token reduction as preserving broad audio-visual context while removing cross-modal redundancy. We propose ContextGuard, an inference-time token pruning framework built on this principle. ContextGuard predicts coarse visual semantics from audio and prunes video tokens whose coarse semantics are likely recoverable from audio, while retaining additional video tokens to preserve localized visual details that audio alone cannot specify. For further compression, our method merges temporally similar video tokens. The framework requires no downstream LLM fine-tuning and uses only an independently trained lightweight predictor. On Qwen2.5-Omni and Video-SALMONN2+ at 3B and 7B scales across six audio-visual benchmarks, ContextGuard outperforms prior inference-time pruning methods while pruning more tokens. Notably, on Qwen2.5-Omni 7B, ContextGuard achieves full-token-level performance on five of six benchmarks while pruning 55% of input tokens.",
+      "identifiers": [
+        "SemanticScholar:4076fd66a4c6961eae7463679629da3c402bfa3c"
+      ],
+      "semantic_scholar_id": "4076fd66a4c6961eae7463679629da3c402bfa3c",
+      "canonical_id": "arXiv:2605.11605",
+      "arxiv_id": "2605.11605",
+      "doi": "10.48550/arXiv.2605.11605",
+      "authors": [
+        "Chaeyoung Jung",
+        "Kyeongha Rho",
+        "Joon Son Chung"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Full Attention Strikes Back: Transferring Full Attention into Sparse within Hundred Training Steps",
+      "source_url": "https://arxiv.org/abs/2605.16928",
+      "year": 2026,
+      "published": "2026-05-16",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference in large language models is bottlenecked by the quadratic cost of full attention. Existing efficient alternatives often rely either on native sparse training or on heuristic token eviction, creating an undesirable trade-off among efficiency, training cost, and accuracy. In this work, we show that full-attention LLMs are already intrinsically sparse and can be transformed into highly sparse models with only minimal adaptation. Our approach is built on three observations: (1) only a small subset of attention heads truly requires full long-context processing; (2) long-range retrieval is governed primarily by a low-dimensional subspace, allowing relevant tokens to be retrieved efficiently with a 16-dimensional indexer; and (3) the useful token budget is strongly query-dependent, making dynamic top-$p$ selection more suitable than fixed top-$k$ sparsification. Based on these insights, we propose RTPurbo, which retains the full KV cache only for retrieval heads and introduces a lightweight token indexer for sparse attention. By exploiting the model's intrinsic sparsity, RTPurbo achieves sparsification with only a few hundred training steps. Experiments on long-context benchmarks and reasoning tasks show that RTPurbo preserves near-lossless accuracy while delivering substantial efficiency gains, including up to a 9.36$\\times$ prefill speedup at 1M context and about a 2.01$\\times$ decode speedup. These results suggest that strong sparse inference can be obtained from standard full-attention training without expensive native sparse pretraining.",
+      "identifiers": [
+        "SemanticScholar:85b94a543b8091ede2598962635b7f2f575b8b6c"
+      ],
+      "semantic_scholar_id": "85b94a543b8091ede2598962635b7f2f575b8b6c",
+      "canonical_id": "arXiv:2605.16928",
+      "arxiv_id": "2605.16928",
+      "doi": "10.48550/arXiv.2605.16928",
+      "authors": [
+        "Yanke Zhou",
+        "Yiduo Li",
+        "Han-Lin Tang",
+        "Mao-Hua Li",
+        "Kan Liu",
+        "Lan Tao",
+        "Lin Qu",
+        "Yuan Yao",
+        "Xiao-Xing Ma"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Layer-wise Token Compression for Efficient Document Reranking",
+      "source_url": "https://arxiv.org/abs/2605.20683",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based document cross-encoder rerankers are a central component of modern information retrieval systems. Despite their success, these models suffer from high computational costs due to processing long query-document sequences at inference time. A known approach to improve efficiency is token compression, which consists of aggregating groups of tokens together in the initial embedding layer, reducing the effective number of tokens and making the computation faster. While token compression has proven to be successful for bi-encoder retrievers, we empirically observed that this approach may be ineffective for cross-encoder rerankers. In this paper, we propose Layer-wise Token Compression (LTC), which applies adaptive token pooling at intermediate transformer layers. Through extensive ablation studies on MS MARCO passage and document ranking tasks, we demonstrate that compression at middle layers preserves ranking quality while increasing inference QPS by up to 25% for passage ranking and up to 116% for document ranking. We also extend LTC to listwise LLM rerankers and show that the same approach can be easily applied to long-context listwise reranking, where the QPS improvements are even greater. More surprisingly, when applying rerankers trained on short passages to long-document ranking tasks, models trained with compression outperform their uncompressed counterparts, suggesting that compression may act as a beneficial regularizer that encourages length-invariant representations.",
+      "identifiers": [
+        "SemanticScholar:03e8814aebd36523c521e60fba26c7e28acb1210"
+      ],
+      "semantic_scholar_id": "03e8814aebd36523c521e60fba26c7e28acb1210",
+      "canonical_id": "arXiv:2605.20683",
+      "arxiv_id": "2605.20683",
+      "doi": "10.1145/3805712.3809871",
+      "authors": [
+        "Shengyao Zhuang",
+        "Zhi-Chao Xu",
+        "Ivano Lauriola"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 147,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "xGR: Efficient Generative Recommendation Serving at Scale",
+      "source_url": "https://arxiv.org/abs/2512.11529",
+      "year": 2025,
+      "published": "2025-12-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recommendation system delivers substantial economic benefits by providing personalized predictions. Generative recommendation (GR) integrates LLMs to enhance the understanding of long user-item sequences. Despite employing attention-based architectures, GR's workload differs markedly from that of LLM serving. GR typically processes long prompt while producing short, fixed-length outputs, yet the computational cost of each decode phase is especially high due to the large beam width. Furthermore, since the beam search involves a vast item space, the sorting overhead becomes particularly time-consuming. We propose xGR, a GR-oriented serving system that meets strict low-latency requirements under high-concurrency scenarios. First, xGR unifies the processing of prefill and decode phases through staged computation and separated KV cache. Second, xGR enables early sorting termination and mask-based item filtering with data structure reuse. Third, xGR reconstructs the overall pipeline to exploit multi-level overlap and multi-stream parallelism. The experiments on real-world datasets demonstrate that xGR achieves at least 2.89x throughput compared to the state-of-the-art baseline under strict latency constraints.",
+      "identifiers": [
+        "SemanticScholar:1c0cd7b4d4c00fe69d17873cabd57711604e8f10"
+      ],
+      "semantic_scholar_id": "1c0cd7b4d4c00fe69d17873cabd57711604e8f10",
+      "canonical_id": "arXiv:2512.11529",
+      "arxiv_id": "2512.11529",
+      "doi": "10.48550/arXiv.2512.11529",
+      "authors": [
+        "Qingxiao Sun",
+        "Tongxuan Liu",
+        "Shen Zhang",
+        "Siyu Wu",
+        "Peijun Yang",
+        "Haotian Liang",
+        "Menxin Li",
+        "Xiaolong Ma",
+        "Zhiwei Liang",
+        "Zi-Yi Ren",
+        "Minchao Zhang",
+        "Yi-Fan Wang",
+        "Xinyu Liu",
+        "Ke Zhang",
+        "Hailong Yang",
+        "De-Pei Qian"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 306,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "StableQAT: Stable Quantization-Aware Training at Ultra-Low Bitwidths",
+      "source_url": "https://arxiv.org/abs/2601.19320",
+      "year": 2026,
+      "published": "2026-01-27",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization-aware training (QAT) is essential for deploying large models under strict memory and latency constraints, yet achieving stable and robust optimization at ultra-low bitwidths remains challenging. Common approaches based on the straight-through estimator (STE) or soft quantizers often suffer from gradient mismatch, instability, or high computational overhead. As such, we propose StableQAT, a unified and efficient QAT framework that stabilizes training in ultra low-bit settings via a novel, lightweight, and theoretically grounded surrogate for backpropagation derived from a discrete Fourier analysis of the rounding operator. StableQAT strictly generalizes STE as the latter arises as a special case of our more expressive surrogate family, yielding smooth, bounded, and inexpensive gradients that improve QAT training performance and stability across various hyperparameter choices. In experiments, StableQAT exhibits stable and efficient QAT at 2-4 bit regimes, demonstrating improved training stability, robustness, and superior performance with negligible training overhead against standard QAT techniques. Our code is available at https://github.com/microsoft/StableQAT.",
+      "identifiers": [
+        "SemanticScholar:d1aa56ca64c106bd7e2fafe7b3d822d4362e8a76"
+      ],
+      "semantic_scholar_id": "d1aa56ca64c106bd7e2fafe7b3d822d4362e8a76",
+      "canonical_id": "arXiv:2601.19320",
+      "arxiv_id": "2601.19320",
+      "doi": "10.48550/arXiv.2601.19320",
+      "authors": [
+        "Tianyi Chen",
+        "Sihan Chen",
+        "Xiaoyi Qu",
+        "Dan Zhao",
+        "Ruomei Yan",
+        "Jongwoo Ko",
+        "Luming Liang",
+        "Pashmina Cameron"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 260,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlashSampling: Fast and Memory-Efficient Exact Sampling",
+      "source_url": "https://arxiv.org/abs/2603.15854",
+      "year": 2026,
+      "published": "2026-03-16",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sampling from a categorical distribution is mathematically simple, but in large-vocabulary decoding, it often triggers extra memory traffic and extra kernels after the LM head. We present FlashSampling, an exact sampling primitive that fuses sampling into the LM-head matmul and never materializes the logits tensor in HBM. The method is simple: compute logits tile-by-tile on chip, add Gumbel noise, keep only one maximizer per row and per vocabulary tile, and finish with a small reduction over tiles. In tensor-parallel decoding, FlashSampling replaces the all-gather of logits with streaming peer-to-peer writes: This overlaps GPU-to-GPU communication with computation and HBM loads across up to 8 GPUs, with near-ideal scaling at large batch sizes. Our kernel is exact because $\\text{argmax}$ decomposes over partitions; grouped variants for online and tensor-parallel settings are exact by hierarchical factorization of the categorical distribution. FlashSampling demonstrates kernel-level speedups on decode workloads across 4 different datacenter GPUs (H100, H200, B200, B300), and in end-to-end vLLM experiments, it reduces time per output token by up to $10%$ on the models we test. These results show that exact sampling, with no approximation, can be integrated into the matmul itself, consolidating the bandwidth-bound sampling step in an efficient epilogue.",
+      "identifiers": [
+        "SemanticScholar:c5d83acefb00710e30d63660794b8855b59c03d9"
+      ],
+      "semantic_scholar_id": "c5d83acefb00710e30d63660794b8855b59c03d9",
+      "canonical_id": "arXiv:2603.15854",
+      "arxiv_id": "2603.15854",
+      "doi": "10.48550/arXiv.2603.15854",
+      "authors": [
+        "T. Ruiz",
+        "Zhen Qin",
+        "Yifan Zhang",
+        "Xu-Yang Shen",
+        "Yi-Ran Zhong",
+        "Meng Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Layer Collapse in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2605.06366",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) have recently emerged as competitive alternatives to autoregressive (AR) language models, yet differences in their activation dynamics remain poorly understood. We characterize these dynamics in LLaDA-8B and identify a striking layer-collapse property: a few early layers exhibit highly similar, collapsed activation patterns dominated by a single large super-outlier persisting over a long token range. Despite its apparent redundancy, this outlier is critical: pruning it causes outputs to degrade into repetitive random token loops. Paradoxically, layers in LLaDA contain more redundant representations overall, with redundancy most pronounced in earlier layers -- the reverse of AR models, where deeper layers grow redundant due to undertraining. Our analysis indicates that layer collapse in DLMs is not driven by undertraining but by overtraining: a dominant outlier becomes an indispensable information carrier while remaining representations collapse into redundant structure. These findings have strong practical implications, verified through controlled pre-training experiments. DLMs are surprisingly robust to compression: LLaDA under 3-bit GPTQ quantization drops only -1.8% on GSM8K, whereas Llama-3.1-8B drops -64.7%. Optimal sparsity allocation also reverses between families: at 50% average sparsity, allocating more to early layers in LLaDA yields +8.4% over the reverse strategy, while the same allocation costs Llama -8.4%. Our findings reveal that the DLM training objective fundamentally reshapes layer dynamics relative to AR models, with direct consequences for compression and deployment. Code: github.com/Conzel/super-outlier-dlm.",
+      "identifiers": [
+        "SemanticScholar:0f8579aa1d1444d7c83e437969423454e48aa4bf"
+      ],
+      "semantic_scholar_id": "0f8579aa1d1444d7c83e437969423454e48aa4bf",
+      "canonical_id": "arXiv:2605.06366",
+      "arxiv_id": "2605.06366",
+      "doi": "10.48550/arXiv.2605.06366",
+      "authors": [
+        "A. Conzelmann",
+        "Albert Catalan-Tatjer",
+        "Shi-Wei Liu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 160,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "How to Compress KV Cache in RL Post-Training? Shadow Mask Distillation for Memory-Efficient Alignment",
+      "source_url": "https://arxiv.org/abs/2605.06850",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reinforcement Learning (RL) has emerged as a crucial paradigm for unlocking the advanced reasoning capabilities of Large Language Models (LLMs), encompassing frameworks like RLHF and RLAIF. Regardless of the specific optimization algorithm (e.g., PPO, GRPO, or Online DPO), online RL inherently requires an exploratory trajectory generation (rollout) phase. However, for long-context reasoning tasks, this rollout phase imposes a severe ``memory wall''due to the exorbitant Key-Value (KV) cache footprint. While applying KV cache compression during rollouts mitigates this memory overhead, it induces a critical off-policy bias. Although modern KV compression is often nearly lossless during standard inference, even minuscule approximation errors are drastically amplified by the inherent instability of RL optimization. Specifically, the sampler generates responses under a sparse context, whereas the learner updates parameters using the full, dense context. Existing statistical solutions, such as importance reweighting, struggle to correct this magnified bias, suffering from high gradient variance and severe sample inefficiency.",
+      "identifiers": [
+        "SemanticScholar:e4f759bf51ef5982224b5a2aeb33733134da3208"
+      ],
+      "semantic_scholar_id": "e4f759bf51ef5982224b5a2aeb33733134da3208",
+      "canonical_id": "arXiv:2605.06850",
+      "arxiv_id": "2605.06850",
+      "doi": "10.48550/arXiv.2605.06850",
+      "authors": [
+        "Rui Zhu",
+        "Wei-Heng Bai",
+        "Qiu-Shi Wu",
+        "Yangshun Ren",
+        "Haixu Tang",
+        "Yu-Chun Liu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 160,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Visual-Redundancy-Controlled Parallel Decoding for Diffusion-Based Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2605.25820",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based multimodal large language models (dMLLMs) decode by iteratively predicting tokens at multiple masked positions in parallel. This turns each decoding step into a position-selection problem: the model must choose not only which predictions are reliable in isolation, but also which positions should be committed together as context for later decoding steps. Existing confidence-based decoding ranks masked positions independently and commits the top-K positions, largely ignoring whether the committed tokens provide complementary visual grounding. We identify a step-level limitation of this strategy in multimodal settings: high-confidence tokens selected in the same step can rely on overlapping visual grounding, introducing visual redundancy among the committed tokens and leaving less complementary visual grounding available for later decoding. To quantify this effect, we introduce the Visual Redundancy Index (VRI), which measures visual grounding overlap among tokens committed in parallel. To control this redundancy during decoding, we propose Visual-Redundancy-Controlled Decoding (VRCD), a training-free inference-time decoding method that uses token-to-image attention to prioritize visually complementary positions. Across diverse multimodal benchmarks, VRCD reduces visual redundancy and remaining-position entropy with modest runtime overhead. In longer decoding experiments, it also achieves relative accuracy gains of up to 18.8% on M^3CoT and 6.9% on MMBench over confidence-based decoding. Code is available at https://github.com/infiniteYuanyl/VRCD.",
+      "identifiers": [
+        "SemanticScholar:bc1dfaa2efb3fc0afec9c01e2fefc81aa82e60ae"
+      ],
+      "semantic_scholar_id": "bc1dfaa2efb3fc0afec9c01e2fefc81aa82e60ae",
+      "canonical_id": "arXiv:2605.25820",
+      "arxiv_id": "2605.25820",
+      "doi": "10.48550/arXiv.2605.25820",
+      "authors": [
+        "Yu-Lin Yuan",
+        "Hong-Shuo Zhao",
+        "Xiang-Ming Meng"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LiftQuant: Continuous Bit-Width LLM via Dimensional Lifting and Projection",
+      "source_url": "https://arxiv.org/abs/2606.04050",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing quantization methods are fundamentally limited by rigid, integer-based bit-widths (e.g., 2, 3-bit), resulting in a ``deployment gap\"where Large Language Models cannot be optimally fitted to specific memory budgets. To bridge this gap, we introduce LiftQuant, a novel framework that enables continuous bit-width control for true Pareto-optimal deployment. The core innovation is a ``lift-then-project\"mechanism which approximates low-dimensional weight vectors by projecting a simple 1-bit lattice from a higher-dimensional ``lifted\"space. Crucially, the effective bit-width is determined simply by the ratio of the lifted dimension to the original dimension, which allows the bit-width to be tuned quasi-continuous as the dimension is a flexible structural parameter. This projection generates a structured yet non-uniform codebook, capturing the expressive power of Vector Quantization (VQ). While beneficial over VQ, LiftQuant's decoding path relies solely on linear transformations and 1-bit uniform quantizers, retaining hardware-friendly nature. This flexibility is transformative: LiftQuant enables a 70B LLM to be compressed to 2.4 bits to precisely fit a 24GB GPU, where its performance significantly surpasses state-of-the-art 2-bit models fitted on the same device. Our code and ckpt is available at https://github.com/Heliulu/LiftQuant.",
+      "identifiers": [
+        "SemanticScholar:6bbe74cfd8af549e8a1e011609126dbdeab1b679"
+      ],
+      "semantic_scholar_id": "6bbe74cfd8af549e8a1e011609126dbdeab1b679",
+      "canonical_id": "arXiv:2606.04050",
+      "arxiv_id": "2606.04050",
+      "doi": "10.48550/arXiv.2606.04050",
+      "authors": [
+        "Liulu He",
+        "Xuanang Liu",
+        "Juntao Liu",
+        "Tao Feng",
+        "Ting-Yu Lu",
+        "Chunsheng Gan",
+        "Zhiyv Peng",
+        "Yuan Du",
+        "Huanrui Yang",
+        "Yi-Jiang Liu",
+        "Li Du"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 134,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Sequential KV Cache Compression via Probabilistic Language Tries: Beyond the Per-Vector Shannon Limit",
+      "source_url": "https://arxiv.org/abs/2604.15356",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work on KV cache quantization, culminating in TurboQuant, has approached the Shannon entropy limit for per-vector compression of transformer key-value caches. We observe that this limit applies to a strictly weaker problem than the one that actually matters: compressing the KV cache as a sequence. The tokens stored in a KV cache are not arbitrary floating-point data -- they are samples from the exact formal language the model was trained on, and the model is by construction a near-optimal predictor of that language. We introduce sequential KV compression, a two-layer architecture that exploits this structure. The first layer, probabilistic prefix deduplication, identifies semantically equivalent shared prefixes across sessions using the trie metric d_T(s, s') = -log_2 P_M(s ^ s') from Probabilistic Language Tries (PLTs). The second layer, predictive delta coding, stores only the residual of each new KV vector from the model's own prediction of it, achieving a per-token entropy bound of H(KV_{i+1} | KV_{<=i})<= H(token_{i+1} | token_{<=i}). We prove that at typical language model perplexity -- approximately 10-20 for fluent English text -- this bound is 3.3-4.3 bits on average per token position, compared to TurboQuant's 3 bits per vector component (with typical attention heads having 64-128 components). The theoretical compression ratio over TurboQuant is approximately 914,000x at the Shannon limit. Even at 1000x above the entropy floor -- a deliberately pessimistic worst-case overhead, two orders of magnitude above the 2-5x typical of practical source coders -- the ratio remains approximately 914x over TurboQuant, with compression improving rather than degrading as context length grows. The two layers are orthogonal and compose with existing per-vector quantization methods including TurboQuant.",
+      "identifiers": [
+        "SemanticScholar:0b228a0affeb383863f059a1168101e295085703"
+      ],
+      "semantic_scholar_id": "0b228a0affeb383863f059a1168101e295085703",
+      "canonical_id": "arXiv:2604.15356",
+      "arxiv_id": "2604.15356",
+      "doi": "10.48550/arXiv.2604.15356",
+      "authors": [
+        "Gregory Magarshak"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 187,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MemoSight: Unifying Context Compression and Multi Token Prediction for Reasoning Acceleration",
+      "source_url": "https://arxiv.org/abs/2604.14889",
+      "year": 2026,
+      "published": "2026-04-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While chain-of-thought (CoT) reasoning enables LLMs to solve challenging reasoning tasks, the linear growth of the KV cache leads to substantial memory and inference overhead. Existing approaches such as context compression and multi-token prediction (MTP) improve efficiency from two complementary directions by compressing historical tokens and generating future tokens in parallel. However, effectively combining them remains challenging due to their different training paradigms and architectural assumptions. In this work, we propose MemoSight (Memory-Foresight-Based Reasoning), a unified framework that integrates context compression and MTP to improve inference efficiency while preserving CoT performance. MemoSight adopts a shared minimalist design based on special tokens and token-specific positional layouts for both compression and parallel prediction. Experiments on four reasoning benchmarks show that, compared to the vanilla SFT baseline, MemoSight reduces KV cache usage by up to 66% and improves inference speed by 56%, while incurring less than a 3% drop in average reasoning accuracy, yielding a better efficiency-accuracy trade-off than existing CoT compression methods.",
+      "identifiers": [
+        "SemanticScholar:3e9c9475fbade0332ae99c4606c60a97ee6918b5"
+      ],
+      "semantic_scholar_id": "3e9c9475fbade0332ae99c4606c60a97ee6918b5",
+      "canonical_id": "arXiv:2604.14889",
+      "arxiv_id": "2604.14889",
+      "doi": "10.48550/arXiv.2604.14889",
+      "authors": [
+        "Xin-Yu Liu",
+        "Xin Liu",
+        "Bo Jin",
+        "Run-Song Zhao",
+        "Pengcheng Huang",
+        "Junhao Ruan",
+        "Bei Li",
+        "Chun-Yang Xiao",
+        "Chenglong Wang",
+        "Tong Xiao",
+        "Jing-Bo Zhu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 181,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NI Sampling: Accelerating Discrete Diffusion Sampling by Token Order Optimization",
+      "source_url": "https://arxiv.org/abs/2604.18471",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete diffusion language models (dLLMs) have recently emerged as a promising alternative to traditional autoregressive approaches, offering the flexibility to generate tokens in arbitrary orders and the potential of parallel decoding. However, existing heuristic sampling strategies remain inefficient: they choose only a small part of tokens to sample at each step, leaving substantial room for improvement. In this work, we study the problem of token sampling order optimization and demonstrate its significant potential for acceleration. Specifically, we find that fully leveraging correct predictions at each step can reduce the number of sampling iterations by an order of magnitude without compromising accuracy. Based on this, we propose Neural Indicator Sampling (NI Sampling), a general sampling order optimization framework that utilize a neural indicator to decide which tokens should be sampled at each step. We further propose a novel trajectory-preserving objective to train the indicator. Experiments on LLaDA and Dream models across multiple benchmarks show that our method achieves up to 14.3$\\times$ acceleration over full-step sampling with negligible performance drop, and consistently outperforms confidence threshold sampling in the accuracy-step trade-off. Code is available at https://github.com/imagination-research/NI-Sampling.",
+      "identifiers": [
+        "SemanticScholar:3e8e4c85c930fd09a9372576e7009baf37a2f45b"
+      ],
+      "semantic_scholar_id": "3e8e4c85c930fd09a9372576e7009baf37a2f45b",
+      "canonical_id": "arXiv:2604.18471",
+      "arxiv_id": "2604.18471",
+      "doi": "10.48550/arXiv.2604.18471",
+      "authors": [
+        "En-hao Liu",
+        "Xue-Fei Ning",
+        "Yu Wang",
+        "Zinan Lin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Evaluating CUDA Tile for AI Workloads on Hopper and Blackwell GPUs",
+      "source_url": "https://arxiv.org/abs/2604.23466",
+      "year": 2026,
+      "published": "2026-04-25",
+      "venue": "Annual International Computer Software and Applications Conference",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "NVIDIA's CUDA Tile (CuTile) introduces a Pythonbased, tile-centric abstraction for GPU kernel development that aims to simplify programming while retaining Tensor Core and Tensor Memory Accelerator (TMA) efficiency on modern GPUs. We present the first independent, cross-architecture evaluation of CuTile against established approaches - cuBLAS, Triton, WMMA, and raw SIMT - on three NVIDIA GPUs spanning Hopper and Blackwell: H100 NVL, B200, and RTX PRO 6000 Blackwell Server Edition. We benchmark representative AI workloads, including GEMM, fused multi-head attention, and end-to-end LLM inference in BF16/FP16 precision, to assess both performance and portability. Our results show that CuTile's effectiveness is strongly workload- and architecture-dependent. On datacenter-class Blackwell (B200), CuTile achieves up to 1,007 TFLOP/s for fused attention, outperforming FlashAttention- $\\mathbf{2}$ by $\\mathbf{2. 5} \\times$ while requiring only 60 lines of Python kernel code. For GEMM, CuTile reaches $\\mathbf{5 2 - 7 9 \\%}$ of cuBLAS performance in 22 lines of code (versus 123 for WMMA), making it a practical replacement for hand-written CUDA kernels but not yet for vendor-optimized libraries. However, the same CuTile attention kernel achieves only 53% of FlashAttention-2 throughput on RTX PRO 6000 (sm_120), exposing significant cross-architecture optimization gaps. In contrast, Triton sustains 62-101% of cuBLAS performance across all tested platforms without architecture-specific tuning, demonstrating substantially stronger portability.",
+      "identifiers": [
+        "SemanticScholar:e5e206392c1b94c7656cb6512b6dadc03971f236"
+      ],
+      "semantic_scholar_id": "e5e206392c1b94c7656cb6512b6dadc03971f236",
+      "canonical_id": "arXiv:2604.23466",
+      "arxiv_id": "2604.23466",
+      "doi": "10.1109/COMPSAC69091.2026.00026",
+      "authors": [
+        "Divakar Yadav",
+        "Tian Zhao",
+        "Deepak Kumar"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QAM-W: Joint 2D Codebook Quantization for LLM Weights via Hadamard Rotation and Activation-Aware Scaling",
+      "source_url": "https://arxiv.org/abs/2605.26339",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scalar post-training quantizers discard pairwise coordinate structure within weight rows. We introduce QAM-W (Quadrature Amplitude Modulation for Weights), a codec that recovers this structure: each row is L2-normalized, block-Hadamard rotated, paired into 2D coordinates, and quantized against a single Lloyd-Max codebook trained on the unit circular Gaussian, with activation-aware per-channel scaling. In a cross-model study spanning five LLMs from four families (1.1B--13B parameters) and eight quantized configurations, the activation-aware variant at $\\approx 5.5$ bpw stays within $\\pm 0.4\\%$ of BF16 WikiText-2 perplexity on every model, matching the SmoothQuant W8A8 quality envelope at $32\\%$ fewer weight bits. Joint 2D coding outperforms polar (amplitude $\\times$ phase) coding by 2--15~pp $\\Delta$PPL at equal bitrate, and paired KL against BF16 tracks $\\Delta$PPL\\% at Spearman $\\rho = 0.99$ across 37 (method, model) rows, consistent with a monotone composite bound from codec distortion to KL divergence. A 3.5~bpw variant is competitive on quantization-tolerant architectures. At strict 4~bpw, the rotated-codebook frontier method QTIP outperforms QAM-W; the contribution is the quality-preserving 5--6~bpw band.",
+      "identifiers": [
+        "SemanticScholar:2713d05c9d910606062bad4a6b3273b325717a49"
+      ],
+      "semantic_scholar_id": "2713d05c9d910606062bad4a6b3273b325717a49",
+      "canonical_id": "arXiv:2605.26339",
+      "arxiv_id": "2605.26339",
+      "doi": "10.48550/arXiv.2605.26339",
+      "authors": [
+        "Preetam Sharma",
+        "Kacper Dobek"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2606.05742",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates generation by verifying multiple drafted tokens in a single target-model forward pass, reducing sequential decoding iterations. Model-free variants avoid auxiliary draft models by reusing text and model states already available during generation, but their speedup depends on the reliability of the constructed drafts. We identify two limitations of existing reuse-based methods: lexically anchored retrieval has limited recall under surface-form variation, and deterministic span copying can be brittle when the retrieved context does not uniquely determine the continuation. We propose \\emph{AdaPLD}, a training-free method that adaptively improves both retrieval and draft construction. AdaPLD preserves high-precision lexical reuse while using semantic similarity to recover additional reuse opportunities when lexical matching fails. It further constructs branched reuse hypotheses to account for continuation uncertainty, rather than relying on a single copied span. Across diverse benchmarks, AdaPLD reduces target-model forward passes and achieves up to $3.10\\times$ decoding speedup.",
+      "identifiers": [
+        "SemanticScholar:ceeabff3898931913c2a54910490e62e8f344048"
+      ],
+      "semantic_scholar_id": "ceeabff3898931913c2a54910490e62e8f344048",
+      "canonical_id": "arXiv:2606.05742",
+      "arxiv_id": "2606.05742",
+      "doi": "10.48550/arXiv.2606.05742",
+      "authors": [
+        "Runheng Liu",
+        "Jincheng Xie",
+        "Wen Hu",
+        "Xing-Chen Xiao",
+        "Heyan Huang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 132,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.dcan.2026.03.010",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.dcan.2026.03.010",
+        "id:SemanticScholar:6af728ae1db7bd893f358850e47a990a248888e7",
+        "title:generative iot advancing iot with generative ai and large language models",
+        "url:https://doi.org/10.1016/j.dcan.2026.03.010"
+      ],
+      "record": {
+        "title": "Generative IoT: advancing IoT with generative AI and large language models",
+        "source_url": "https://doi.org/10.1016/j.dcan.2026.03.010",
+        "year": 2026,
+        "published": "2026-03-01",
+        "venue": "Digit. Commun. Networks",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:6af728ae1db7bd893f358850e47a990a248888e7"
+        ],
+        "semantic_scholar_id": "6af728ae1db7bd893f358850e47a990a248888e7",
+        "doi": "10.1016/j.dcan.2026.03.010",
+        "canonical_id": "DOI:10.1016/j.dcan.2026.03.010",
+        "authors": [
+          "F. Firouzi",
+          "Aritra Ray",
+          "Bahareh J. Farahani",
+          "M. Daneshmand",
+          "Jaeseung Song",
+          "Shaoen Wu",
+          "Krishnendu Chakrabarty"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 227,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11605",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.11605",
+        "id:SemanticScholar:4076fd66a4c6961eae7463679629da3c402bfa3c",
+        "id:arXiv:2605.11605",
+        "title:keep what audio cannot say contextpreserving token pruning for omnillms",
+        "url:https://arxiv.org/abs/2605.11605"
+      ],
+      "record": {
+        "title": "Keep What Audio Cannot Say: Context-Preserving Token Pruning for Omni-LLMs",
+        "source_url": "https://arxiv.org/abs/2605.11605",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Omnimodal Large Language Models (Omni-LLMs) incur substantial computational overhead due to the large number of multimodal input tokens they process, making token reduction essential for real-world deployment. Existing Omni-LLM pruning methods typically reduce this cost by selecting tokens that are important for the current query or strongly aligned with cross-modal cues. However, such strategies can discard evidence that falls outside these criteria, even when needed for different questions or for understanding context beyond aligned audio-visual cues. To address this limitation, we reframe Omni-LLM token reduction as preserving broad audio-visual context while removing cross-modal redundancy. We propose ContextGuard, an inference-time token pruning framework built on this principle. ContextGuard predicts coarse visual semantics from audio and prunes video tokens whose coarse semantics are likely recoverable from audio, while retaining additional video tokens to preserve localized visual details that audio alone cannot specify. For further compression, our method merges temporally similar video tokens. The framework requires no downstream LLM fine-tuning and uses only an independently trained lightweight predictor. On Qwen2.5-Omni and Video-SALMONN2+ at 3B and 7B scales across six audio-visual benchmarks, ContextGuard outperforms prior inference-time pruning methods while pruning more tokens. Notably, on Qwen2.5-Omni 7B, ContextGuard achieves full-token-level performance on five of six benchmarks while pruning 55% of input tokens.",
+        "identifiers": [
+          "SemanticScholar:4076fd66a4c6961eae7463679629da3c402bfa3c"
+        ],
+        "semantic_scholar_id": "4076fd66a4c6961eae7463679629da3c402bfa3c",
+        "canonical_id": "arXiv:2605.11605",
+        "arxiv_id": "2605.11605",
+        "doi": "10.48550/arXiv.2605.11605",
+        "authors": [
+          "Chaeyoung Jung",
+          "Kyeongha Rho",
+          "Joon Son Chung"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 155,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.16928",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.16928",
+        "id:SemanticScholar:85b94a543b8091ede2598962635b7f2f575b8b6c",
+        "id:arXiv:2605.16928",
+        "title:full attention strikes back transferring full attention into sparse within hundred training steps",
+        "url:https://arxiv.org/abs/2605.16928"
+      ],
+      "record": {
+        "title": "Full Attention Strikes Back: Transferring Full Attention into Sparse within Hundred Training Steps",
+        "source_url": "https://arxiv.org/abs/2605.16928",
+        "year": 2026,
+        "published": "2026-05-16",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context inference in large language models is bottlenecked by the quadratic cost of full attention. Existing efficient alternatives often rely either on native sparse training or on heuristic token eviction, creating an undesirable trade-off among efficiency, training cost, and accuracy. In this work, we show that full-attention LLMs are already intrinsically sparse and can be transformed into highly sparse models with only minimal adaptation. Our approach is built on three observations: (1) only a small subset of attention heads truly requires full long-context processing; (2) long-range retrieval is governed primarily by a low-dimensional subspace, allowing relevant tokens to be retrieved efficiently with a 16-dimensional indexer; and (3) the useful token budget is strongly query-dependent, making dynamic top-$p$ selection more suitable than fixed top-$k$ sparsification. Based on these insights, we propose RTPurbo, which retains the full KV cache only for retrieval heads and introduces a lightweight token indexer for sparse attention. By exploiting the model's intrinsic sparsity, RTPurbo achieves sparsification with only a few hundred training steps. Experiments on long-context benchmarks and reasoning tasks show that RTPurbo preserves near-lossless accuracy while delivering substantial efficiency gains, including up to a 9.36$\\times$ prefill speedup at 1M context and about a 2.01$\\times$ decode speedup. These results suggest that strong sparse inference can be obtained from standard full-attention training without expensive native sparse pretraining.",
+        "identifiers": [
+          "SemanticScholar:85b94a543b8091ede2598962635b7f2f575b8b6c"
+        ],
+        "semantic_scholar_id": "85b94a543b8091ede2598962635b7f2f575b8b6c",
+        "canonical_id": "arXiv:2605.16928",
+        "arxiv_id": "2605.16928",
+        "doi": "10.48550/arXiv.2605.16928",
+        "authors": [
+          "Yanke Zhou",
+          "Yiduo Li",
+          "Han-Lin Tang",
+          "Mao-Hua Li",
+          "Kan Liu",
+          "Lan Tao",
+          "Lin Qu",
+          "Yuan Yao",
+          "Xiao-Xing Ma"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 151,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.20683",
+      "identity_tokens": [
+        "id:DOI:10.1145/3805712.3809871",
+        "id:SemanticScholar:03e8814aebd36523c521e60fba26c7e28acb1210",
+        "id:arXiv:2605.20683",
+        "title:layerwise token compression for efficient document reranking",
+        "url:https://arxiv.org/abs/2605.20683"
+      ],
+      "record": {
+        "title": "Layer-wise Token Compression for Efficient Document Reranking",
+        "source_url": "https://arxiv.org/abs/2605.20683",
+        "year": 2026,
+        "published": "2026-05-20",
+        "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based document cross-encoder rerankers are a central component of modern information retrieval systems. Despite their success, these models suffer from high computational costs due to processing long query-document sequences at inference time. A known approach to improve efficiency is token compression, which consists of aggregating groups of tokens together in the initial embedding layer, reducing the effective number of tokens and making the computation faster. While token compression has proven to be successful for bi-encoder retrievers, we empirically observed that this approach may be ineffective for cross-encoder rerankers. In this paper, we propose Layer-wise Token Compression (LTC), which applies adaptive token pooling at intermediate transformer layers. Through extensive ablation studies on MS MARCO passage and document ranking tasks, we demonstrate that compression at middle layers preserves ranking quality while increasing inference QPS by up to 25% for passage ranking and up to 116% for document ranking. We also extend LTC to listwise LLM rerankers and show that the same approach can be easily applied to long-context listwise reranking, where the QPS improvements are even greater. More surprisingly, when applying rerankers trained on short passages to long-document ranking tasks, models trained with compression outperform their uncompressed counterparts, suggesting that compression may act as a beneficial regularizer that encourages length-invariant representations.",
+        "identifiers": [
+          "SemanticScholar:03e8814aebd36523c521e60fba26c7e28acb1210"
+        ],
+        "semantic_scholar_id": "03e8814aebd36523c521e60fba26c7e28acb1210",
+        "canonical_id": "arXiv:2605.20683",
+        "arxiv_id": "2605.20683",
+        "doi": "10.1145/3805712.3809871",
+        "authors": [
+          "Shengyao Zhuang",
+          "Zhi-Chao Xu",
+          "Ivano Lauriola"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 147,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.11529",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.11529",
+        "id:SemanticScholar:1c0cd7b4d4c00fe69d17873cabd57711604e8f10",
+        "id:arXiv:2512.11529",
+        "title:xgr efficient generative recommendation serving at scale",
+        "url:https://arxiv.org/abs/2512.11529"
+      ],
+      "record": {
+        "title": "xGR: Efficient Generative Recommendation Serving at Scale",
+        "source_url": "https://arxiv.org/abs/2512.11529",
+        "year": 2025,
+        "published": "2025-12-12",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recommendation system delivers substantial economic benefits by providing personalized predictions. Generative recommendation (GR) integrates LLMs to enhance the understanding of long user-item sequences. Despite employing attention-based architectures, GR's workload differs markedly from that of LLM serving. GR typically processes long prompt while producing short, fixed-length outputs, yet the computational cost of each decode phase is especially high due to the large beam width. Furthermore, since the beam search involves a vast item space, the sorting overhead becomes particularly time-consuming. We propose xGR, a GR-oriented serving system that meets strict low-latency requirements under high-concurrency scenarios. First, xGR unifies the processing of prefill and decode phases through staged computation and separated KV cache. Second, xGR enables early sorting termination and mask-based item filtering with data structure reuse. Third, xGR reconstructs the overall pipeline to exploit multi-level overlap and multi-stream parallelism. The experiments on real-world datasets demonstrate that xGR achieves at least 2.89x throughput compared to the state-of-the-art baseline under strict latency constraints.",
+        "identifiers": [
+          "SemanticScholar:1c0cd7b4d4c00fe69d17873cabd57711604e8f10"
+        ],
+        "semantic_scholar_id": "1c0cd7b4d4c00fe69d17873cabd57711604e8f10",
+        "canonical_id": "arXiv:2512.11529",
+        "arxiv_id": "2512.11529",
+        "doi": "10.48550/arXiv.2512.11529",
+        "authors": [
+          "Qingxiao Sun",
+          "Tongxuan Liu",
+          "Shen Zhang",
+          "Siyu Wu",
+          "Peijun Yang",
+          "Haotian Liang",
+          "Menxin Li",
+          "Xiaolong Ma",
+          "Zhiwei Liang",
+          "Zi-Yi Ren",
+          "Minchao Zhang",
+          "Yi-Fan Wang",
+          "Xinyu Liu",
+          "Ke Zhang",
+          "Hailong Yang",
+          "De-Pei Qian"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 306,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.19320",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.19320",
+        "id:SemanticScholar:d1aa56ca64c106bd7e2fafe7b3d822d4362e8a76",
+        "id:arXiv:2601.19320",
+        "title:stableqat stable quantizationaware training at ultralow bitwidths",
+        "url:https://arxiv.org/abs/2601.19320"
+      ],
+      "record": {
+        "title": "StableQAT: Stable Quantization-Aware Training at Ultra-Low Bitwidths",
+        "source_url": "https://arxiv.org/abs/2601.19320",
+        "year": 2026,
+        "published": "2026-01-27",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization-aware training (QAT) is essential for deploying large models under strict memory and latency constraints, yet achieving stable and robust optimization at ultra-low bitwidths remains challenging. Common approaches based on the straight-through estimator (STE) or soft quantizers often suffer from gradient mismatch, instability, or high computational overhead. As such, we propose StableQAT, a unified and efficient QAT framework that stabilizes training in ultra low-bit settings via a novel, lightweight, and theoretically grounded surrogate for backpropagation derived from a discrete Fourier analysis of the rounding operator. StableQAT strictly generalizes STE as the latter arises as a special case of our more expressive surrogate family, yielding smooth, bounded, and inexpensive gradients that improve QAT training performance and stability across various hyperparameter choices. In experiments, StableQAT exhibits stable and efficient QAT at 2-4 bit regimes, demonstrating improved training stability, robustness, and superior performance with negligible training overhead against standard QAT techniques. Our code is available at https://github.com/microsoft/StableQAT.",
+        "identifiers": [
+          "SemanticScholar:d1aa56ca64c106bd7e2fafe7b3d822d4362e8a76"
+        ],
+        "semantic_scholar_id": "d1aa56ca64c106bd7e2fafe7b3d822d4362e8a76",
+        "canonical_id": "arXiv:2601.19320",
+        "arxiv_id": "2601.19320",
+        "doi": "10.48550/arXiv.2601.19320",
+        "authors": [
+          "Tianyi Chen",
+          "Sihan Chen",
+          "Xiaoyi Qu",
+          "Dan Zhao",
+          "Ruomei Yan",
+          "Jongwoo Ko",
+          "Luming Liang",
+          "Pashmina Cameron"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 260,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.15854",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.15854",
+        "id:SemanticScholar:c5d83acefb00710e30d63660794b8855b59c03d9",
+        "id:arXiv:2603.15854",
+        "title:flashsampling fast and memoryefficient exact sampling",
+        "url:https://arxiv.org/abs/2603.15854"
+      ],
+      "record": {
+        "title": "FlashSampling: Fast and Memory-Efficient Exact Sampling",
+        "source_url": "https://arxiv.org/abs/2603.15854",
+        "year": 2026,
+        "published": "2026-03-16",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sampling from a categorical distribution is mathematically simple, but in large-vocabulary decoding, it often triggers extra memory traffic and extra kernels after the LM head. We present FlashSampling, an exact sampling primitive that fuses sampling into the LM-head matmul and never materializes the logits tensor in HBM. The method is simple: compute logits tile-by-tile on chip, add Gumbel noise, keep only one maximizer per row and per vocabulary tile, and finish with a small reduction over tiles. In tensor-parallel decoding, FlashSampling replaces the all-gather of logits with streaming peer-to-peer writes: This overlaps GPU-to-GPU communication with computation and HBM loads across up to 8 GPUs, with near-ideal scaling at large batch sizes. Our kernel is exact because $\\text{argmax}$ decomposes over partitions; grouped variants for online and tensor-parallel settings are exact by hierarchical factorization of the categorical distribution. FlashSampling demonstrates kernel-level speedups on decode workloads across 4 different datacenter GPUs (H100, H200, B200, B300), and in end-to-end vLLM experiments, it reduces time per output token by up to $10%$ on the models we test. These results show that exact sampling, with no approximation, can be integrated into the matmul itself, consolidating the bandwidth-bound sampling step in an efficient epilogue.",
+        "identifiers": [
+          "SemanticScholar:c5d83acefb00710e30d63660794b8855b59c03d9"
+        ],
+        "semantic_scholar_id": "c5d83acefb00710e30d63660794b8855b59c03d9",
+        "canonical_id": "arXiv:2603.15854",
+        "arxiv_id": "2603.15854",
+        "doi": "10.48550/arXiv.2603.15854",
+        "authors": [
+          "T. Ruiz",
+          "Zhen Qin",
+          "Yifan Zhang",
+          "Xu-Yang Shen",
+          "Yi-Ran Zhong",
+          "Meng Wang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 212,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.06366",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.06366",
+        "id:SemanticScholar:0f8579aa1d1444d7c83e437969423454e48aa4bf",
+        "id:arXiv:2605.06366",
+        "title:layer collapse in diffusion language models",
+        "url:https://arxiv.org/abs/2605.06366"
+      ],
+      "record": {
+        "title": "Layer Collapse in Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2605.06366",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models (DLMs) have recently emerged as competitive alternatives to autoregressive (AR) language models, yet differences in their activation dynamics remain poorly understood. We characterize these dynamics in LLaDA-8B and identify a striking layer-collapse property: a few early layers exhibit highly similar, collapsed activation patterns dominated by a single large super-outlier persisting over a long token range. Despite its apparent redundancy, this outlier is critical: pruning it causes outputs to degrade into repetitive random token loops. Paradoxically, layers in LLaDA contain more redundant representations overall, with redundancy most pronounced in earlier layers -- the reverse of AR models, where deeper layers grow redundant due to undertraining. Our analysis indicates that layer collapse in DLMs is not driven by undertraining but by overtraining: a dominant outlier becomes an indispensable information carrier while remaining representations collapse into redundant structure. These findings have strong practical implications, verified through controlled pre-training experiments. DLMs are surprisingly robust to compression: LLaDA under 3-bit GPTQ quantization drops only -1.8% on GSM8K, whereas Llama-3.1-8B drops -64.7%. Optimal sparsity allocation also reverses between families: at 50% average sparsity, allocating more to early layers in LLaDA yields +8.4% over the reverse strategy, while the same allocation costs Llama -8.4%. Our findings reveal that the DLM training objective fundamentally reshapes layer dynamics relative to AR models, with direct consequences for compression and deployment. Code: github.com/Conzel/super-outlier-dlm.",
+        "identifiers": [
+          "SemanticScholar:0f8579aa1d1444d7c83e437969423454e48aa4bf"
+        ],
+        "semantic_scholar_id": "0f8579aa1d1444d7c83e437969423454e48aa4bf",
+        "canonical_id": "arXiv:2605.06366",
+        "arxiv_id": "2605.06366",
+        "doi": "10.48550/arXiv.2605.06366",
+        "authors": [
+          "A. Conzelmann",
+          "Albert Catalan-Tatjer",
+          "Shi-Wei Liu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 160,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.06850",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.06850",
+        "id:SemanticScholar:e4f759bf51ef5982224b5a2aeb33733134da3208",
+        "id:arXiv:2605.06850",
+        "title:how to compress kv cache in rl posttraining shadow mask distillation for memoryefficient alignment",
+        "url:https://arxiv.org/abs/2605.06850"
+      ],
+      "record": {
+        "title": "How to Compress KV Cache in RL Post-Training? Shadow Mask Distillation for Memory-Efficient Alignment",
+        "source_url": "https://arxiv.org/abs/2605.06850",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reinforcement Learning (RL) has emerged as a crucial paradigm for unlocking the advanced reasoning capabilities of Large Language Models (LLMs), encompassing frameworks like RLHF and RLAIF. Regardless of the specific optimization algorithm (e.g., PPO, GRPO, or Online DPO), online RL inherently requires an exploratory trajectory generation (rollout) phase. However, for long-context reasoning tasks, this rollout phase imposes a severe ``memory wall''due to the exorbitant Key-Value (KV) cache footprint. While applying KV cache compression during rollouts mitigates this memory overhead, it induces a critical off-policy bias. Although modern KV compression is often nearly lossless during standard inference, even minuscule approximation errors are drastically amplified by the inherent instability of RL optimization. Specifically, the sampler generates responses under a sparse context, whereas the learner updates parameters using the full, dense context. Existing statistical solutions, such as importance reweighting, struggle to correct this magnified bias, suffering from high gradient variance and severe sample inefficiency.",
+        "identifiers": [
+          "SemanticScholar:e4f759bf51ef5982224b5a2aeb33733134da3208"
+        ],
+        "semantic_scholar_id": "e4f759bf51ef5982224b5a2aeb33733134da3208",
+        "canonical_id": "arXiv:2605.06850",
+        "arxiv_id": "2605.06850",
+        "doi": "10.48550/arXiv.2605.06850",
+        "authors": [
+          "Rui Zhu",
+          "Wei-Heng Bai",
+          "Qiu-Shi Wu",
+          "Yangshun Ren",
+          "Haixu Tang",
+          "Yu-Chun Liu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 160,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.25820",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.25820",
+        "id:SemanticScholar:bc1dfaa2efb3fc0afec9c01e2fefc81aa82e60ae",
+        "id:arXiv:2605.25820",
+        "title:visualredundancycontrolled parallel decoding for diffusionbased multimodal large language models",
+        "url:https://arxiv.org/abs/2605.25820"
+      ],
+      "record": {
+        "title": "Visual-Redundancy-Controlled Parallel Decoding for Diffusion-Based Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2605.25820",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion-based multimodal large language models (dMLLMs) decode by iteratively predicting tokens at multiple masked positions in parallel. This turns each decoding step into a position-selection problem: the model must choose not only which predictions are reliable in isolation, but also which positions should be committed together as context for later decoding steps. Existing confidence-based decoding ranks masked positions independently and commits the top-K positions, largely ignoring whether the committed tokens provide complementary visual grounding. We identify a step-level limitation of this strategy in multimodal settings: high-confidence tokens selected in the same step can rely on overlapping visual grounding, introducing visual redundancy among the committed tokens and leaving less complementary visual grounding available for later decoding. To quantify this effect, we introduce the Visual Redundancy Index (VRI), which measures visual grounding overlap among tokens committed in parallel. To control this redundancy during decoding, we propose Visual-Redundancy-Controlled Decoding (VRCD), a training-free inference-time decoding method that uses token-to-image attention to prioritize visually complementary positions. Across diverse multimodal benchmarks, VRCD reduces visual redundancy and remaining-position entropy with modest runtime overhead. In longer decoding experiments, it also achieves relative accuracy gains of up to 18.8% on M^3CoT and 6.9% on MMBench over confidence-based decoding. Code is available at https://github.com/infiniteYuanyl/VRCD.",
+        "identifiers": [
+          "SemanticScholar:bc1dfaa2efb3fc0afec9c01e2fefc81aa82e60ae"
+        ],
+        "semantic_scholar_id": "bc1dfaa2efb3fc0afec9c01e2fefc81aa82e60ae",
+        "canonical_id": "arXiv:2605.25820",
+        "arxiv_id": "2605.25820",
+        "doi": "10.48550/arXiv.2605.25820",
+        "authors": [
+          "Yu-Lin Yuan",
+          "Hong-Shuo Zhao",
+          "Xiang-Ming Meng"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04050",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.04050",
+        "id:SemanticScholar:6bbe74cfd8af549e8a1e011609126dbdeab1b679",
+        "id:arXiv:2606.04050",
+        "title:liftquant continuous bitwidth llm via dimensional lifting and projection",
+        "url:https://arxiv.org/abs/2606.04050"
+      ],
+      "record": {
+        "title": "LiftQuant: Continuous Bit-Width LLM via Dimensional Lifting and Projection",
+        "source_url": "https://arxiv.org/abs/2606.04050",
+        "year": 2026,
+        "published": "2026-06-02",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing quantization methods are fundamentally limited by rigid, integer-based bit-widths (e.g., 2, 3-bit), resulting in a ``deployment gap\"where Large Language Models cannot be optimally fitted to specific memory budgets. To bridge this gap, we introduce LiftQuant, a novel framework that enables continuous bit-width control for true Pareto-optimal deployment. The core innovation is a ``lift-then-project\"mechanism which approximates low-dimensional weight vectors by projecting a simple 1-bit lattice from a higher-dimensional ``lifted\"space. Crucially, the effective bit-width is determined simply by the ratio of the lifted dimension to the original dimension, which allows the bit-width to be tuned quasi-continuous as the dimension is a flexible structural parameter. This projection generates a structured yet non-uniform codebook, capturing the expressive power of Vector Quantization (VQ). While beneficial over VQ, LiftQuant's decoding path relies solely on linear transformations and 1-bit uniform quantizers, retaining hardware-friendly nature. This flexibility is transformative: LiftQuant enables a 70B LLM to be compressed to 2.4 bits to precisely fit a 24GB GPU, where its performance significantly surpasses state-of-the-art 2-bit models fitted on the same device. Our code and ckpt is available at https://github.com/Heliulu/LiftQuant.",
+        "identifiers": [
+          "SemanticScholar:6bbe74cfd8af549e8a1e011609126dbdeab1b679"
+        ],
+        "semantic_scholar_id": "6bbe74cfd8af549e8a1e011609126dbdeab1b679",
+        "canonical_id": "arXiv:2606.04050",
+        "arxiv_id": "2606.04050",
+        "doi": "10.48550/arXiv.2606.04050",
+        "authors": [
+          "Liulu He",
+          "Xuanang Liu",
+          "Juntao Liu",
+          "Tao Feng",
+          "Ting-Yu Lu",
+          "Chunsheng Gan",
+          "Zhiyv Peng",
+          "Yuan Du",
+          "Huanrui Yang",
+          "Yi-Jiang Liu",
+          "Li Du"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 134,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.15356",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.15356",
+        "id:SemanticScholar:0b228a0affeb383863f059a1168101e295085703",
+        "id:arXiv:2604.15356",
+        "title:sequential kv cache compression via probabilistic language tries beyond the pervector shannon limit",
+        "url:https://arxiv.org/abs/2604.15356"
+      ],
+      "record": {
+        "title": "Sequential KV Cache Compression via Probabilistic Language Tries: Beyond the Per-Vector Shannon Limit",
+        "source_url": "https://arxiv.org/abs/2604.15356",
+        "year": 2026,
+        "published": "2026-04-10",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent work on KV cache quantization, culminating in TurboQuant, has approached the Shannon entropy limit for per-vector compression of transformer key-value caches. We observe that this limit applies to a strictly weaker problem than the one that actually matters: compressing the KV cache as a sequence. The tokens stored in a KV cache are not arbitrary floating-point data -- they are samples from the exact formal language the model was trained on, and the model is by construction a near-optimal predictor of that language. We introduce sequential KV compression, a two-layer architecture that exploits this structure. The first layer, probabilistic prefix deduplication, identifies semantically equivalent shared prefixes across sessions using the trie metric d_T(s, s') = -log_2 P_M(s ^ s') from Probabilistic Language Tries (PLTs). The second layer, predictive delta coding, stores only the residual of each new KV vector from the model's own prediction of it, achieving a per-token entropy bound of H(KV_{i+1} | KV_{<=i})<= H(token_{i+1} | token_{<=i}). We prove that at typical language model perplexity -- approximately 10-20 for fluent English text -- this bound is 3.3-4.3 bits on average per token position, compared to TurboQuant's 3 bits per vector component (with typical attention heads having 64-128 components). The theoretical compression ratio over TurboQuant is approximately 914,000x at the Shannon limit. Even at 1000x above the entropy floor -- a deliberately pessimistic worst-case overhead, two orders of magnitude above the 2-5x typical of practical source coders -- the ratio remains approximately 914x over TurboQuant, with compression improving rather than degrading as context length grows. The two layers are orthogonal and compose with existing per-vector quantization methods including TurboQuant.",
+        "identifiers": [
+          "SemanticScholar:0b228a0affeb383863f059a1168101e295085703"
+        ],
+        "semantic_scholar_id": "0b228a0affeb383863f059a1168101e295085703",
+        "canonical_id": "arXiv:2604.15356",
+        "arxiv_id": "2604.15356",
+        "doi": "10.48550/arXiv.2604.15356",
+        "authors": [
+          "Gregory Magarshak"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 187,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.14889",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.14889",
+        "id:SemanticScholar:3e9c9475fbade0332ae99c4606c60a97ee6918b5",
+        "id:arXiv:2604.14889",
+        "title:memosight unifying context compression and multi token prediction for reasoning acceleration",
+        "url:https://arxiv.org/abs/2604.14889"
+      ],
+      "record": {
+        "title": "MemoSight: Unifying Context Compression and Multi Token Prediction for Reasoning Acceleration",
+        "source_url": "https://arxiv.org/abs/2604.14889",
+        "year": 2026,
+        "published": "2026-04-16",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While chain-of-thought (CoT) reasoning enables LLMs to solve challenging reasoning tasks, the linear growth of the KV cache leads to substantial memory and inference overhead. Existing approaches such as context compression and multi-token prediction (MTP) improve efficiency from two complementary directions by compressing historical tokens and generating future tokens in parallel. However, effectively combining them remains challenging due to their different training paradigms and architectural assumptions. In this work, we propose MemoSight (Memory-Foresight-Based Reasoning), a unified framework that integrates context compression and MTP to improve inference efficiency while preserving CoT performance. MemoSight adopts a shared minimalist design based on special tokens and token-specific positional layouts for both compression and parallel prediction. Experiments on four reasoning benchmarks show that, compared to the vanilla SFT baseline, MemoSight reduces KV cache usage by up to 66% and improves inference speed by 56%, while incurring less than a 3% drop in average reasoning accuracy, yielding a better efficiency-accuracy trade-off than existing CoT compression methods.",
+        "identifiers": [
+          "SemanticScholar:3e9c9475fbade0332ae99c4606c60a97ee6918b5"
+        ],
+        "semantic_scholar_id": "3e9c9475fbade0332ae99c4606c60a97ee6918b5",
+        "canonical_id": "arXiv:2604.14889",
+        "arxiv_id": "2604.14889",
+        "doi": "10.48550/arXiv.2604.14889",
+        "authors": [
+          "Xin-Yu Liu",
+          "Xin Liu",
+          "Bo Jin",
+          "Run-Song Zhao",
+          "Pengcheng Huang",
+          "Junhao Ruan",
+          "Bei Li",
+          "Chun-Yang Xiao",
+          "Chenglong Wang",
+          "Tong Xiao",
+          "Jing-Bo Zhu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 181,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.18471",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.18471",
+        "id:SemanticScholar:3e8e4c85c930fd09a9372576e7009baf37a2f45b",
+        "id:arXiv:2604.18471",
+        "title:ni sampling accelerating discrete diffusion sampling by token order optimization",
+        "url:https://arxiv.org/abs/2604.18471"
+      ],
+      "record": {
+        "title": "NI Sampling: Accelerating Discrete Diffusion Sampling by Token Order Optimization",
+        "source_url": "https://arxiv.org/abs/2604.18471",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Discrete diffusion language models (dLLMs) have recently emerged as a promising alternative to traditional autoregressive approaches, offering the flexibility to generate tokens in arbitrary orders and the potential of parallel decoding. However, existing heuristic sampling strategies remain inefficient: they choose only a small part of tokens to sample at each step, leaving substantial room for improvement. In this work, we study the problem of token sampling order optimization and demonstrate its significant potential for acceleration. Specifically, we find that fully leveraging correct predictions at each step can reduce the number of sampling iterations by an order of magnitude without compromising accuracy. Based on this, we propose Neural Indicator Sampling (NI Sampling), a general sampling order optimization framework that utilize a neural indicator to decide which tokens should be sampled at each step. We further propose a novel trajectory-preserving objective to train the indicator. Experiments on LLaDA and Dream models across multiple benchmarks show that our method achieves up to 14.3$\\times$ acceleration over full-step sampling with negligible performance drop, and consistently outperforms confidence threshold sampling in the accuracy-step trade-off. Code is available at https://github.com/imagination-research/NI-Sampling.",
+        "identifiers": [
+          "SemanticScholar:3e8e4c85c930fd09a9372576e7009baf37a2f45b"
+        ],
+        "semantic_scholar_id": "3e8e4c85c930fd09a9372576e7009baf37a2f45b",
+        "canonical_id": "arXiv:2604.18471",
+        "arxiv_id": "2604.18471",
+        "doi": "10.48550/arXiv.2604.18471",
+        "authors": [
+          "En-hao Liu",
+          "Xue-Fei Ning",
+          "Yu Wang",
+          "Zinan Lin"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 177,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.23466",
+      "identity_tokens": [
+        "id:DOI:10.1109/compsac69091.2026.00026",
+        "id:SemanticScholar:e5e206392c1b94c7656cb6512b6dadc03971f236",
+        "id:arXiv:2604.23466",
+        "title:evaluating cuda tile for ai workloads on hopper and blackwell gpus",
+        "url:https://arxiv.org/abs/2604.23466"
+      ],
+      "record": {
+        "title": "Evaluating CUDA Tile for AI Workloads on Hopper and Blackwell GPUs",
+        "source_url": "https://arxiv.org/abs/2604.23466",
+        "year": 2026,
+        "published": "2026-04-25",
+        "venue": "Annual International Computer Software and Applications Conference",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "NVIDIA's CUDA Tile (CuTile) introduces a Pythonbased, tile-centric abstraction for GPU kernel development that aims to simplify programming while retaining Tensor Core and Tensor Memory Accelerator (TMA) efficiency on modern GPUs. We present the first independent, cross-architecture evaluation of CuTile against established approaches - cuBLAS, Triton, WMMA, and raw SIMT - on three NVIDIA GPUs spanning Hopper and Blackwell: H100 NVL, B200, and RTX PRO 6000 Blackwell Server Edition. We benchmark representative AI workloads, including GEMM, fused multi-head attention, and end-to-end LLM inference in BF16/FP16 precision, to assess both performance and portability. Our results show that CuTile's effectiveness is strongly workload- and architecture-dependent. On datacenter-class Blackwell (B200), CuTile achieves up to 1,007 TFLOP/s for fused attention, outperforming FlashAttention- $\\mathbf{2}$ by $\\mathbf{2. 5} \\times$ while requiring only 60 lines of Python kernel code. For GEMM, CuTile reaches $\\mathbf{5 2 - 7 9 \\%}$ of cuBLAS performance in 22 lines of code (versus 123 for WMMA), making it a practical replacement for hand-written CUDA kernels but not yet for vendor-optimized libraries. However, the same CuTile attention kernel achieves only 53% of FlashAttention-2 throughput on RTX PRO 6000 (sm_120), exposing significant cross-architecture optimization gaps. In contrast, Triton sustains 62-101% of cuBLAS performance across all tested platforms without architecture-specific tuning, demonstrating substantially stronger portability.",
+        "identifiers": [
+          "SemanticScholar:e5e206392c1b94c7656cb6512b6dadc03971f236"
+        ],
+        "semantic_scholar_id": "e5e206392c1b94c7656cb6512b6dadc03971f236",
+        "canonical_id": "arXiv:2604.23466",
+        "arxiv_id": "2604.23466",
+        "doi": "10.1109/COMPSAC69091.2026.00026",
+        "authors": [
+          "Divakar Yadav",
+          "Tian Zhao",
+          "Deepak Kumar"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 172,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.26339",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.26339",
+        "id:SemanticScholar:2713d05c9d910606062bad4a6b3273b325717a49",
+        "id:arXiv:2605.26339",
+        "title:qamw joint 2d codebook quantization for llm weights via hadamard rotation and activationaware scaling",
+        "url:https://arxiv.org/abs/2605.26339"
+      ],
+      "record": {
+        "title": "QAM-W: Joint 2D Codebook Quantization for LLM Weights via Hadamard Rotation and Activation-Aware Scaling",
+        "source_url": "https://arxiv.org/abs/2605.26339",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scalar post-training quantizers discard pairwise coordinate structure within weight rows. We introduce QAM-W (Quadrature Amplitude Modulation for Weights), a codec that recovers this structure: each row is L2-normalized, block-Hadamard rotated, paired into 2D coordinates, and quantized against a single Lloyd-Max codebook trained on the unit circular Gaussian, with activation-aware per-channel scaling. In a cross-model study spanning five LLMs from four families (1.1B--13B parameters) and eight quantized configurations, the activation-aware variant at $\\approx 5.5$ bpw stays within $\\pm 0.4\\%$ of BF16 WikiText-2 perplexity on every model, matching the SmoothQuant W8A8 quality envelope at $32\\%$ fewer weight bits. Joint 2D coding outperforms polar (amplitude $\\times$ phase) coding by 2--15~pp $\\Delta$PPL at equal bitrate, and paired KL against BF16 tracks $\\Delta$PPL\\% at Spearman $\\rho = 0.99$ across 37 (method, model) rows, consistent with a monotone composite bound from codec distortion to KL divergence. A 3.5~bpw variant is competitive on quantization-tolerant architectures. At strict 4~bpw, the rotated-codebook frontier method QTIP outperforms QAM-W; the contribution is the quality-preserving 5--6~bpw band.",
+        "identifiers": [
+          "SemanticScholar:2713d05c9d910606062bad4a6b3273b325717a49"
+        ],
+        "semantic_scholar_id": "2713d05c9d910606062bad4a6b3273b325717a49",
+        "canonical_id": "arXiv:2605.26339",
+        "arxiv_id": "2605.26339",
+        "doi": "10.48550/arXiv.2605.26339",
+        "authors": [
+          "Preetam Sharma",
+          "Kacper Dobek"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.05742",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.05742",
+        "id:SemanticScholar:ceeabff3898931913c2a54910490e62e8f344048",
+        "id:arXiv:2606.05742",
+        "title:adapld adaptive retrieval and reuse for efficient modelfree speculative decoding",
+        "url:https://arxiv.org/abs/2606.05742"
+      ],
+      "record": {
+        "title": "AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2606.05742",
+        "year": 2026,
+        "published": "2026-06-04",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates generation by verifying multiple drafted tokens in a single target-model forward pass, reducing sequential decoding iterations. Model-free variants avoid auxiliary draft models by reusing text and model states already available during generation, but their speedup depends on the reliability of the constructed drafts. We identify two limitations of existing reuse-based methods: lexically anchored retrieval has limited recall under surface-form variation, and deterministic span copying can be brittle when the retrieved context does not uniquely determine the continuation. We propose \\emph{AdaPLD}, a training-free method that adaptively improves both retrieval and draft construction. AdaPLD preserves high-precision lexical reuse while using semantic similarity to recover additional reuse opportunities when lexical matching fails. It further constructs branched reuse hypotheses to account for continuation uncertainty, rather than relying on a single copied span. Across diverse benchmarks, AdaPLD reduces target-model forward passes and achieves up to $3.10\\times$ decoding speedup.",
+        "identifiers": [
+          "SemanticScholar:ceeabff3898931913c2a54910490e62e8f344048"
+        ],
+        "semantic_scholar_id": "ceeabff3898931913c2a54910490e62e8f344048",
+        "canonical_id": "arXiv:2606.05742",
+        "arxiv_id": "2606.05742",
+        "doi": "10.48550/arXiv.2606.05742",
+        "authors": [
+          "Runheng Liu",
+          "Jincheng Xie",
+          "Wen Hu",
+          "Xing-Chen Xiao",
+          "Heyan Huang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 132,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e1487f681ab28ff01dfa37e9446bc138428236b1d8eda79551dfb91c69c8712f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

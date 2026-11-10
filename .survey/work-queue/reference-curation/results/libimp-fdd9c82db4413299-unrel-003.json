@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fdd9c82db4413299-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.19384",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.19384",
+    "identity_tokens": [
+      "arXiv:2609.19384"
+    ],
+    "reason": "一次要旨: Scaling deep learning faces critical bottlenecks: data exhaustion, exponential training costs, and resource concentration. Model merging combines pre-trained checkpoints without gradient descent, offering orders-of-magnitude savings versus retraining. Combining independently trained vision models is difficult when their architectures and parameter shapes differ. Existing weight-space merging methods generally assume aligned, s",
+    "first_checked_at": "2026-10-05T06:36:04+00:00",
+    "last_checked_at": "2026-10-05T06:36:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Riemannian--Lorentz Fusion of Vision Transformers and State-Space Models"
+  },
+  "processed_at": "2026-10-05T06:36:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fdd9c82db441",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

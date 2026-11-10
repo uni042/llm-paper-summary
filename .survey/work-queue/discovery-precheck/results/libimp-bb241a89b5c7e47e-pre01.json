@@ -1,0 +1,197 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bb241a89b5c7e47e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bb241a89b5c7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2309.09507",
+    "arXiv:2309.16354",
+    "arXiv:2310.01382"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "075f2bde09a20b3fb0aa2107b97437c01b74e33f",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-10-02T10:55:32.091870+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2309.09507",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_single"
+    },
+    {
+      "requested_id": "arXiv:2309.16354",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_single"
+    },
+    {
+      "requested_id": "arXiv:2310.01382",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_single"
+    }
+  ],
+  "results": [
+    {
+      "title": "Pruning Large Language Models via Accuracy Predictor",
+      "source_url": "https://arxiv.org/abs/2309.09507",
+      "year": 2023,
+      "published": "2023-09-18",
+      "abstract": "Large language models(LLMs) containing tens of billions of parameters (or even more) have demonstrated impressive capabilities in various NLP tasks. However, substantial model size poses challenges to training, inference, and deployment so that it is necessary to compress the model. At present, most model compression for LLMs requires manual design of pruning features, which has problems such as complex optimization pipeline and difficulty in retaining the capabilities of certain parts of the model.Therefore, we propose a novel pruning approach: firstly, a training set of a certain number of architecture-accuracy pairs is established, and then a non-neural model is trained as an accuracy predictor. Using the accuracy predictor to further optimize the search space and search, the optimal model can be automatically selected. Experiments show that our proposed approach is effective and efficient. Compared with the baseline, the perplexity(PPL) on Wikitext2 and PTB dropped by 9.48% and 5,76% respectively, and the average accuracy of MMLU increased by 6.28%.",
+      "canonical_id": "arXiv:2309.09507",
+      "arxiv_id": "2309.09507",
+      "doi": "10.48550/arXiv.2309.09507",
+      "authors": [
+        "Yupeng Ji",
+        "Yibo Cao",
+        "Jiu-si Liu"
+      ]
+    },
+    {
+      "title": "Transformer-VQ: Linear-Time Transformers via Vector Quantization",
+      "source_url": "https://arxiv.org/abs/2309.16354",
+      "year": 2023,
+      "published": "2023-09-28",
+      "abstract": "We introduce Transformer-VQ, a decoder-only transformer computing softmax-based dense self-attention in linear time. Transformer-VQ's efficient attention is enabled by vector-quantized keys and a novel caching mechanism. In our large-scale experiments, Transformer-VQ is shown highly competitive in quality, obtaining 0.99 bpb on Enwik8, 26.6 ppl on PG-19, and 3.16 bpb on ImageNet64. In addition, the optimized implementation of Transformer-VQ is over 3x faster than a comparable quadratic-time transformer at sequence length 8k, is over 12x faster at 32k, and can scale to 131k with similar throughput. Code available: \\url{https://github.com/transformer-vq/transformer_vq}",
+      "canonical_id": "arXiv:2309.16354",
+      "arxiv_id": "2309.16354",
+      "doi": "10.48550/arXiv.2309.16354",
+      "authors": [
+        "Lucas D. Lingle"
+      ]
+    },
+    {
+      "title": "Compressing LLMs: The Truth is Rarely Pure and Never Simple",
+      "source_url": "https://arxiv.org/abs/2310.01382",
+      "year": 2023,
+      "published": "2023-10-02",
+      "abstract": "Despite their remarkable achievements, modern Large Language Models (LLMs) face exorbitant computational and memory footprints. Recently, several works have shown significant success in training-free and data-free compression (pruning and quantization) of LLMs that achieve 50 - 60% sparsity and reduce the bit width to 3 or 4 bits per weight, with negligible degradation of perplexity over the uncompressed baseline. As recent research efforts are focused on developing increasingly sophisticated compression methods, our work takes a step back and re-evaluates the effectiveness of existing SoTA compression methods, which rely on a fairly simple and widely questioned metric, perplexity (even for dense LLMs). We introduce Knowledge-Intensive Compressed LLM BenchmarK (LLM-KICK), a collection of carefully curated tasks to redefine the evaluation protocol for compressed LLMs, which have significant alignment with their dense counterparts and perplexity fail to capture subtle change in their true capabilities. LLM-KICK unveils many favorable merits and unfortunate plights of current SoTA compression methods: all pruning methods suffer significant performance degradation, sometimes at trivial sparsity ratios (e.g., 25-30%), and fail for N:M sparsity in knowledge-intensive tasks; current quantization methods are more successful than pruning; yet, pruned LLMs even at $\\geq 50$% sparsity are robust in-context retrieval and summarization systems; among others. LLM-KICK is designed to holistically access compressed LLMs' ability for language understanding, reasoning, generation, in-context retrieval, in-context summarization, etc. We hope our study can foster the development of better LLM compression methods. The reproduced codes are available at https://github.com/VITA-Group/llm-kick.",
+      "canonical_id": "arXiv:2310.01382",
+      "arxiv_id": "2310.01382",
+      "doi": "10.48550/arXiv.2310.01382",
+      "authors": [
+        "A. Jaiswal",
+        "Zhe Gan",
+        "Xianzhi Du",
+        "Bo-Wen Zhang",
+        "Zhangyang Wang",
+        "Yin-Fei Yang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2309.09507",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2309.09507",
+        "id:arXiv:2309.09507",
+        "title:pruning large language models via accuracy predictor",
+        "url:https://arxiv.org/abs/2309.09507"
+      ],
+      "record": {
+        "title": "Pruning Large Language Models via Accuracy Predictor",
+        "source_url": "https://arxiv.org/abs/2309.09507",
+        "year": 2023,
+        "published": "2023-09-18",
+        "abstract": "Large language models(LLMs) containing tens of billions of parameters (or even more) have demonstrated impressive capabilities in various NLP tasks. However, substantial model size poses challenges to training, inference, and deployment so that it is necessary to compress the model. At present, most model compression for LLMs requires manual design of pruning features, which has problems such as complex optimization pipeline and difficulty in retaining the capabilities of certain parts of the model.Therefore, we propose a novel pruning approach: firstly, a training set of a certain number of architecture-accuracy pairs is established, and then a non-neural model is trained as an accuracy predictor. Using the accuracy predictor to further optimize the search space and search, the optimal model can be automatically selected. Experiments show that our proposed approach is effective and efficient. Compared with the baseline, the perplexity(PPL) on Wikitext2 and PTB dropped by 9.48% and 5,76% respectively, and the average accuracy of MMLU increased by 6.28%.",
+        "canonical_id": "arXiv:2309.09507",
+        "arxiv_id": "2309.09507",
+        "doi": "10.48550/arXiv.2309.09507",
+        "authors": [
+          "Yupeng Ji",
+          "Yibo Cao",
+          "Jiu-si Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2309.16354",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2309.16354",
+        "id:arXiv:2309.16354",
+        "title:transformervq lineartime transformers via vector quantization",
+        "url:https://arxiv.org/abs/2309.16354"
+      ],
+      "record": {
+        "title": "Transformer-VQ: Linear-Time Transformers via Vector Quantization",
+        "source_url": "https://arxiv.org/abs/2309.16354",
+        "year": 2023,
+        "published": "2023-09-28",
+        "abstract": "We introduce Transformer-VQ, a decoder-only transformer computing softmax-based dense self-attention in linear time. Transformer-VQ's efficient attention is enabled by vector-quantized keys and a novel caching mechanism. In our large-scale experiments, Transformer-VQ is shown highly competitive in quality, obtaining 0.99 bpb on Enwik8, 26.6 ppl on PG-19, and 3.16 bpb on ImageNet64. In addition, the optimized implementation of Transformer-VQ is over 3x faster than a comparable quadratic-time transformer at sequence length 8k, is over 12x faster at 32k, and can scale to 131k with similar throughput. Code available: \\url{https://github.com/transformer-vq/transformer_vq}",
+        "canonical_id": "arXiv:2309.16354",
+        "arxiv_id": "2309.16354",
+        "doi": "10.48550/arXiv.2309.16354",
+        "authors": [
+          "Lucas D. Lingle"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.01382",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.01382",
+        "id:arXiv:2310.01382",
+        "title:compressing llms the truth is rarely pure and never simple",
+        "url:https://arxiv.org/abs/2310.01382"
+      ],
+      "record": {
+        "title": "Compressing LLMs: The Truth is Rarely Pure and Never Simple",
+        "source_url": "https://arxiv.org/abs/2310.01382",
+        "year": 2023,
+        "published": "2023-10-02",
+        "abstract": "Despite their remarkable achievements, modern Large Language Models (LLMs) face exorbitant computational and memory footprints. Recently, several works have shown significant success in training-free and data-free compression (pruning and quantization) of LLMs that achieve 50 - 60% sparsity and reduce the bit width to 3 or 4 bits per weight, with negligible degradation of perplexity over the uncompressed baseline. As recent research efforts are focused on developing increasingly sophisticated compression methods, our work takes a step back and re-evaluates the effectiveness of existing SoTA compression methods, which rely on a fairly simple and widely questioned metric, perplexity (even for dense LLMs). We introduce Knowledge-Intensive Compressed LLM BenchmarK (LLM-KICK), a collection of carefully curated tasks to redefine the evaluation protocol for compressed LLMs, which have significant alignment with their dense counterparts and perplexity fail to capture subtle change in their true capabilities. LLM-KICK unveils many favorable merits and unfortunate plights of current SoTA compression methods: all pruning methods suffer significant performance degradation, sometimes at trivial sparsity ratios (e.g., 25-30%), and fail for N:M sparsity in knowledge-intensive tasks; current quantization methods are more successful than pruning; yet, pruned LLMs even at $\\geq 50$% sparsity are robust in-context retrieval and summarization systems; among others. LLM-KICK is designed to holistically access compressed LLMs' ability for language understanding, reasoning, generation, in-context retrieval, in-context summarization, etc. We hope our study can foster the development of better LLM compression methods. The reproduced codes are available at https://github.com/VITA-Group/llm-kick.",
+        "canonical_id": "arXiv:2310.01382",
+        "arxiv_id": "2310.01382",
+        "doi": "10.48550/arXiv.2310.01382",
+        "authors": [
+          "A. Jaiswal",
+          "Zhe Gan",
+          "Xianzhi Du",
+          "Bo-Wen Zhang",
+          "Zhangyang Wang",
+          "Yin-Fei Yang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:62ec0bbfa77262820c57e570ff3ba4bc2e95124f2ccc275b14feab298d7746f7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

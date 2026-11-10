@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d49a1c0ea8866a40-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2104.08691",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2104.08691",
+    "identity_tokens": [
+      "arXiv:2104.08691"
+    ],
+    "reason": "凍結言語モデルに学習可能なsoft promptを付与するparameter-efficient tuningが主題で、推論サービング・KVキャッシュ・MoE推論・推論カーネル等の実行系最適化を扱わない。",
+    "first_checked_at": "2026-10-04T12:52:29+00:00",
+    "last_checked_at": "2026-10-04T13:03:15+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md"
+    ],
+    "title": "The Power of Scale for Parameter-Efficient Prompt Tuning"
+  },
+  "processed_at": "2026-10-04T13:03:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d49a1c0ea886",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

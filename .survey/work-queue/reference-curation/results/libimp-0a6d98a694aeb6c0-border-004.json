@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0a6d98a694aeb6c0-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tits.2025.3612879",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tits.2025.3612879",
+    "identity_tokens": [
+      "DOI:10.1109/tits.2025.3612879"
+    ],
+    "reason": "heterogeneous graph attentionのlineageとの技術接続が一次証拠から確認できずborderline。",
+    "first_checked_at": "2026-10-06T20:56:28+00:00",
+    "last_checked_at": "2026-10-06T20:56:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CENH: Co-Enhancement of Edges and Nodes in Heterogeneous Graph Attention for Pedestrian Crossing Intention Recognition"
+  },
+  "processed_at": "2026-10-06T20:56:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0a6d98a694ae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

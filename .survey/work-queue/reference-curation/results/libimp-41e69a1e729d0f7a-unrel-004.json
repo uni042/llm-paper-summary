@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-41e69a1e729d0f7a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.33463",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.33463",
+    "identity_tokens": [
+      "arXiv:2609.33463"
+    ],
+    "reason": "Token reweighting for SFT changes the training objective; the efficiency scope is inference/serving, not training-only method optimization.",
+    "first_checked_at": "2026-10-05T06:09:17+00:00",
+    "last_checked_at": "2026-10-05T06:09:17+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "Rethinking Token Reweighting for SFT: Suppress, Reverse, and Extrapolate Learned Features"
+  },
+  "processed_at": "2026-10-05T06:09:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-41e69a1e729d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

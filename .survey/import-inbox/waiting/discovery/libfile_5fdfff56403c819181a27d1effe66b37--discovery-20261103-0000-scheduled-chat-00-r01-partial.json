@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261103-0000-scheduled-chat-00/r01",
+  "reference_main_sha": "bf6bedc37d5637ff9470fd013814730e86187552",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.03067",
+      "identity_tokens": [
+        "arXiv:2601.03067"
+      ],
+      "title": "Joint Encoding of KV-Cache Blocks for Scalable LLM Serving",
+      "reason": "複数要求・入力チャンクの類似KVブロックを共有表現へjoint encodingし、標準キャッシュ構造を維持しながら容量を削減する方式。Poisson到着モデルのrate-distortion解析を行い、著者らは最大4.38倍のKV圧縮と、単一マシンのvLLM実験で約40%のtoken throughput改善を報告。長文脈・多要求のサービングに直接適用するKV管理最適化でありaccept。数値は一次要旨の著者報告で、本文の比較条件は今回未監査。",
+      "source_url": "https://arxiv.org/abs/2601.03067",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:09:50+09:00",
+      "last_checked_at": "2026-11-03T00:09:50+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.20326",
+      "identity_tokens": [
+        "arXiv:2601.20326"
+      ],
+      "title": "Beyond Speedup -- Utilizing KV Cache for Sampling and Reasoning",
+      "reason": "既に生成済みのKV cacheを軽量表現として再利用し、hidden stateの別途保存・再計算なしにChain-of-Embedding自己評価とfast/slow reasoning切替を行う。Qwen3-8BやDeepSeek-R1-Distil-Qwen-14Bで、著者らは精度低下を抑えながら生成token数を最大5.7倍削減と報告。推論時の追加生成・メモリ費用を直接削減する手法としてaccept。ただし5.7倍はtoken削減でありend-to-end latency倍率ではない。",
+      "source_url": "https://arxiv.org/abs/2601.20326",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:09:50+09:00",
+      "last_checked_at": "2026-11-03T00:09:50+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.08797",
+      "identity_tokens": [
+        "arXiv:2603.08797"
+      ],
+      "title": "Serving Compound Inference Systems on Datacenter GPUs",
+      "reason": "JigsawServeは複数MLモデルを連結したcompound inferenceのtask graphを対象に、モデル変種選択・GPU spatial partitioning・精度/遅延予算配分を共同最適化する。著者らは最大11.3倍のserviceable demand、評価シナリオでGPU資源43.3%使用・遅延SLO違反0.6%未満を報告。サービング資源管理の仕組みはLLMエージェントの複合推論にも参考となるが、主要評価はXR等の一般MLモデル群でありLLM生成の直接評価がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2603.08797",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:09:50+09:00",
+      "last_checked_at": "2026-11-03T00:09:50+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.17421",
+      "identity_tokens": [
+        "arXiv:2606.17421"
+      ],
+      "title": "Bifrost: Hybrid TEE-FHE Inference for Privacy-Preserving Transformer and LLM Serving",
+      "reason": "プライバシー保護LLMサービングで、CPU TEEに秘密・非線形演算・KV状態遷移を置き、線形層のみを暗号文のままCKKS/FHEでアクセラレータへ委譲する。Bifrost+はprefillをTEE内で処理してdecode側のみ暗号化経路へ送る。著者らはEuston方式に合わせた推定比較でGPT-2 1.5BとLLaMA3 8Bの遅延を約9.25/9.91倍改善、直接CKKS/FHE実験ではGPT-2 124MとQwen3 0.6BのTTFTを14.6〜53.4倍改善と報告。推定値と実測を区別し、暗号化推論特化のサービング高速化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2606.17421",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:09:50+09:00",
+      "last_checked_at": "2026-11-03T00:09:50+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    }
+  ]
+}

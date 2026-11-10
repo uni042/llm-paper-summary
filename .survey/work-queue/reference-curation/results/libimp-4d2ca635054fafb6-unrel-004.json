@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4d2ca635054fafb6-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/lca.2023.3333759",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/lca.2023.3333759",
+    "identity_tokens": [
+      "DOI:10.1109/lca.2023.3333759"
+    ],
+    "reason": "DRAM規格・メモリコントローラ・メモリシステム研究向けの汎用DRAMシミュレータ基盤で、LLM推論を最終適用先とする方式ではない。",
+    "first_checked_at": "2026-10-04T02:16:19+00:00",
+    "last_checked_at": "2026-10-04T02:16:19+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Ramulator 2.0: A Modern, Modular, and Extensible DRAM Simulator"
+  },
+  "processed_at": "2026-10-04T02:16:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4d2ca635054f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

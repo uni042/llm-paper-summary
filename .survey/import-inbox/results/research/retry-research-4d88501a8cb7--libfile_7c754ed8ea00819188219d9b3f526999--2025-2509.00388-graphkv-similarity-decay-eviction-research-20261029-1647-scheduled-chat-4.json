@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e8a16672a1ec782142058ee9720e4c88124ab31d2393a678ae01f9025842ac1e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4d88501a8cb7--libfile_7c754ed8ea00819188219d9b3f526999--2025-2509.00388-graphkv-similarity-decay-eviction-research-20261029-1647-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2509.00388",
+  "worker_completed_at": "2026-10-29T16:58:00+09:00",
+  "worker_run_key": "20261029-1647-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4996,
+    "body_paragraphs": 26,
+    "method_chars": 1322,
+    "method_paragraphs": 8,
+    "evaluation_chars": 432,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 432 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 432 < 500"
+  ],
+  "processed_at": "2026-10-29T09:12:11+00:00"
+}

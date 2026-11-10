@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "fdbfe5a1a453039924ac2e014f84f912842363d3bcf28e9e35be4448f78a97c5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1e47e05c4543--libfile_906cbb89876c8191a33d46e012daa2d5--2026-2606.01926-tractable-proposals-constrained-decoding-research-20261016-1430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2606.01926",
+  "worker_completed_at": "2026-10-16T14:30:00+09:00",
+  "worker_run_key": "20261016-1430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8289,
+    "body_paragraphs": 41,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1728,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-16T15:00:48+00:00"
+}

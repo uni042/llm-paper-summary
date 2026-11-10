@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8d47204e5d96db21-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.23566",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.23566",
+    "identity_tokens": [
+      "arXiv:2603.23566"
+    ],
+    "reason": "arXiv v2一次要旨はAscend NPU向けカーネルとホストtilingの双方を実機フィードバックで最適化するエージェントを提案。101個の一般AscendC演算子で平均1.21倍を報告するが、LLM推論固有のカーネルやモデルE2Eの実測が要旨にないため境界的。",
+    "first_checked_at": "2026-10-30T07:16:18+00:00",
+    "last_checked_at": "2026-10-30T07:16:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "AscendOptimizer: Episodic Agent for Ascend NPU Operator Optimization"
+  },
+  "processed_at": "2026-10-30T07:16:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8d47204e5d96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da30a40be7705f48-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s44515-026-00018-w",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s44515-026-00018-w",
+    "identity_tokens": [
+      "DOI:10.1007/s44515-026-00018-w"
+    ],
+    "reason": "The primary abstract is a small Korean-language accuracy/response case study comparing an on-device LLM with ChatGPT-4o; it does not claim inference cost, latency, memory, or serving optimization.",
+    "first_checked_at": "2026-10-05T08:13:18+00:00",
+    "last_checked_at": "2026-10-05T08:13:18+00:00",
+    "linked_from": [
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "Knowledge Accuracy and Response Characteristics of an On-Device Large Language Model in Building Environmental Engineering: a Preliminary Case Study of EXAONE 4.0 1.2B Using ChatGPT-4o as a Cloud Reference"
+  },
+  "processed_at": "2026-10-05T08:13:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da30a40be770",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

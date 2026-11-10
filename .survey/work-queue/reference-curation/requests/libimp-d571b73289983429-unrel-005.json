@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d571b73289983429-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1109/ICWS72778.2026.00114",
+  "reason": "要旨の主対象はLLM/MoEの学習・fine-tuning・RL rolloutまたはtraining通信であり、inference-time optimization/servingではない。 Primary abstract: As Large Language Models (LLMs) continue to scale, Mixture-of-Experts (MoE) has become an effective paradigm for improving model capacity through sparse activation. Serverless platforms provide an elastic and cost-effective alternative to expensive High-Performance Computing (HPC) clusters, but their cold starts, stateless execution, and bandwidthconstrained",
+  "title": "HeatMoE: A Heat-Aware Hybrid Architecture for Serverless Mixture-of-Experts Training",
+  "identity_tokens": [
+    "DOI:10.1109/ICWS72778.2026.00114"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14417-deepflow-serverless-llm-serving-at-scale.md",
+    "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d571b7328998",
+  "source_precheck_request_id": null
+}

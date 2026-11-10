@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+      "source_url": "https://arxiv.org/abs/2609.34380",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing LLM serving systems virtualize and optimize KV-cache memory, but treat model-weight memory as fixed throughout execution. Recent work on multi-precision model representations challenges this design by allowing a single stored model to support both full-accuracy and lower-precision execution, making the effective weight footprint runtime-dependent. This creates an opportunity under bursty workloads, where temporary spikes in KV-cache demand often determine throughput and SLO compliance. We present DPS, a dual-precision LLM serving system that turns weight memory into an elastic resource: under normal load, DPS serves the full-accuracy model; under KV pressure, it switches to a nested, lower-precision variant and repurposes unused weight memory for KV cache blocks. DPS is built on Semi-Unified Memory (SUM), which partitions the weight region into a persistent lower-precision sub-region and a shared region that alternates between residual weight tensors and KV-cache blocks, preserving compatibility with paged KV-cache management. We implement DPS on top of vLLM and evaluate it across both dense and MoE models and various production workload traces. Our results show that \\sysname improves sustained throughput by $2.1$--$3.3\\times$ and effective pass@1 by up to $+41$\\,pp over Static FP16, while preserving FP16-class accuracy.",
+      "identifiers": [
+        "SemanticScholar:0469b1d19d084c64cf860f19adf5523e166dff34"
+      ],
+      "semantic_scholar_id": "0469b1d19d084c64cf860f19adf5523e166dff34",
+      "canonical_id": "arXiv:2609.34380",
+      "arxiv_id": "2609.34380",
+      "authors": [
+        "Xuan Truong Nguyen",
+        "Tien-Son Pham",
+        "Tuan-Duc Chu",
+        "Wookeun Jung",
+        "Thanh Tuan Dao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は要求急増でKVが増える際、通常時の高精度重みを低精度の入れ子表現へ切替え、空いた重み領域をKVキャッシュへ転用するDPSを提案。重みメモリとKVメモリの動的配分を同時に扱うLLMサービング機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.37538",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dynamic sparse attention reduces long-context attention computation by selecting only a subset of tokens, but still requires access to the full KV cache, leaving serving memory-bound. Offloading the KV cache to host memory reduces device memory pressure but places H2D transfers on the decoding critical path. In DSA, substantial overlap in selected KV entries across decoding steps creates an opportunity for device-resident reuse. Exploiting this reuse efficiently, however, presents three critical challenges: costly matching of selected tokens against entries retained in the HBM buffer, uneven distribution of the remaining H2D transfers across accelerator cores, and retaining frequently accessed KV entries within limited HBM capacity. We present AVSG, an operator that addresses these challenges for DSA while preserving its exact token selections. AVSG uses vectorized hash matching to identify reusable HBM-buffer slots and reserve slots for entries requiring transfer, then evenly partitions these H2D transfers across accelerator cores. Lifetime-based buffer management retains frequently accessed KV entries in the device buffer across decoding steps, and shared slot reservations extend reuse across tokens within a multi-token prediction iteration. On a single NPU, vectorized hash matching is 2.80x faster than scalar dual-pointer matching, miss-only transfer raises effective H2D bandwidth by up to 34.44x over request-level assignment, and an 8K-entry buffer reaches a 94.83% hit rate on real requests. These gains translate into end-to-end improvement: on a serving stack processing a real-world production dataset, AVSG reduces time per output token by 39% and increases output throughput by 1.27x relative to the same KV offload layout without HBM-buffer reuse, demonstrating the benefit of efficient matching, balanced transfer, and effective HBM residency in production-scale serving.",
+      "identifiers": [
+        "SemanticScholar:8e552f5c548e5e246ee0aa0774cf62f4f7d9919e"
+      ],
+      "semantic_scholar_id": "8e552f5c548e5e246ee0aa0774cf62f4f7d9919e",
+      "canonical_id": "arXiv:2609.37538",
+      "arxiv_id": "2609.37538",
+      "authors": [
+        "Wen-Wei Kuang",
+        "Xiang-Yu Wang",
+        "Chong Wu",
+        "Jun Wang",
+        "Wei-Jie Zhang",
+        "Brian K. Chen",
+        "Long Lan",
+        "Ke-Pan Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は疎注意でも全KVのCPU→GPU転送がボトルネックになる問題に対し、HBM常駐KVとの照合、非均等H2D転送の分散、頻繁に使うKVの保持を統合するAVSG演算子を提案。長文脈サービングのKVオフロードとGPUメモリ階層最適化に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9b62b8af02f9",
+    "round": "libimp-9b62b8af02f9fa3d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9b62b8af02f9fa3d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9b62b8af02f9fa3d-pre01.json",
+    "receipt": "sha256:1c53069bc8b17a768ace55b43a4647577cf31f36f336fd40986edd5956749221"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9b62b8af02f9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

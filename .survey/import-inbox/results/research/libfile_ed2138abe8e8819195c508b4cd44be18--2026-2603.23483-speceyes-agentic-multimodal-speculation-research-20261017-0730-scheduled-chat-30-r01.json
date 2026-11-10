@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b57c1bece17b06edea4c9ad63c5b7727fd5673c628d775f60e34c5313b75df6c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ed2138abe8e8819195c508b4cd44be18--2026-2603.23483-speceyes-agentic-multimodal-speculation-research-20261017-0730-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2603.23483",
+  "worker_completed_at": "2026-10-17T08:00:00+09:00",
+  "worker_run_key": "20261017-0730-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6743,
+    "body_paragraphs": 40,
+    "method_chars": 2016,
+    "method_paragraphs": 11,
+    "evaluation_chars": 382,
+    "limitation_chars": 985,
+    "insufficiency_flags": [
+      "評価説明量 382 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 382 < 500"
+  ],
+  "processed_at": "2026-10-17T08:02:49+00:00"
+}

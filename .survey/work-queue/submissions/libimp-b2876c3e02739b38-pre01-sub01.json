@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Loopy: Low-Bit Quantization Framework for Looped Language Models",
+      "source_url": "https://arxiv.org/abs/2610.05265",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped language models provide a parameter-efficient way to scale iterative test-time computation by repeatedly executing a shared recurrent core. Post-training quantization (PTQ) can reduce the memory footprint and inference cost of looped language models, but errors introduced by a quantized shared core affect subsequent cores. Among PTQ methods, channel scaling and orthogonal rotations preserve the floating-point computation while producing representations with different quantization quality. We find that quantization configuration candidate rankings can change with recurrent depth, motivating configuration selection at the target deployment depth. However, evaluating every candidate over the full calibration set at this depth is costly. We therefore propose Loopy, a PTQ framework that formulates shared-core quantization through a recurrent-depth-aware objective, selecting shared low-bit representations by their final prediction loss at the target deployment depth. Channel scaling and orthogonal rotations parameterize the candidate representations. To approximately solve this selection problem efficiently, Loopy progressively allocates calibration windows to promising candidates while preserving complete target-depth execution, using only forward evaluations. Across eight settings, Loopy achieves the state-of-the-art results among different baselines. On Ouro-1.4B under W4A4, Loopy reduces LAMBADA perplexity by 36.5% relative to SpinQuant. Our code is available at https://github.com/Shameless0817/Loopy-review.git.",
+      "identifiers": [
+        "SemanticScholar:d93dd32bf7fb2f8a270cf6ad8939e4c07b072fd8"
+      ],
+      "semantic_scholar_id": "d93dd32bf7fb2f8a270cf6ad8939e4c07b072fd8",
+      "canonical_id": "arXiv:2610.05265",
+      "arxiv_id": "2610.05265",
+      "authors": [
+        "Ze-Yu Li",
+        "Yi-Pu Zhang",
+        "Jin-Tao Cheng",
+        "Xin Li",
+        "Wei Zhnag"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      },
+      "reason": "共有recurrent coreを繰り返すLoopLMでは量子化構成の優劣が反復深度で変化するため、target深度での最終予測損失を目的にchannel scaling・直交回転を選ぶLoopyを提案。候補へ校正windowを逐次配分して全深度forward評価を保つ。一次要旨はOuro-1.4BのW4A4でSpinQuant比LAMBADA perplexityを36.5%低減と報告。反復型LLMの推論時の重み・activation圧縮としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Differentiable Bit-Widths: Co-optimizing Pruning and Quantization via SVD for Ultra-Efficient LLM Compression",
+      "source_url": "https://arxiv.org/abs/2610.06026",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "SVD-based pruning and quantization have recently emerged as a promising strategy for the ultra-efficient compression of large language models. In these methods, compression is performed in two stages: components are first truncated, and the remaining ones are subsequently quantized. Although this decoupled pipeline benefits from both pruning and quantization, it requires separate optimization for each stage and fails to fully exploit their balance, which can lead to suboptimal performance under aggressive compression. To address this limitation, we propose a new LLM compression method that co-optimizes pruning and quantization in a unified framework. Our key idea is a differentiable method for learning component-wise bit-widths, allowing less important components to be assigned 0-bit precision and pruned away. Notably, our method performs favorably against two-stage baselines, even when subjected to extreme quantization settings ($1.61$ bits) designed for ultra-efficiency. Code: https://github.com/MMAI-Laboratory/DBW.",
+      "identifiers": [
+        "SemanticScholar:af79a3d9bbdf91f196c6f91f6ff86055d206262f"
+      ],
+      "semantic_scholar_id": "af79a3d9bbdf91f196c6f91f6ff86055d206262f",
+      "canonical_id": "arXiv:2610.06026",
+      "arxiv_id": "2610.06026",
+      "authors": [
+        "Hankyul Kang",
+        "Jongbin Ryu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SVD成分をまずpruneし残存成分を量子化する二段階法の最適化不足に対し、成分別bit幅を微分可能に学習し0-bitを削除とみなすことでrankとprecisionを同時に割り当てる。一次要旨は平均1.61bit相当の極端な圧縮でも二段階baselineより性能が良いと報告。LLM推論向け重み容量削減を目的とする圧縮方式でありaccept。ただし実機decode速度は要旨で未確認。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "SoloQ: Calibration-Free Quantization for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.07121",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models dLLMs) have emerged as a promising alternative to autoregressive language models through bidirectional diffusion-based token generation. However, their growing model sizes and high inference costs make efficient deployment challenging: full-sequence denoising repeatedly invokes compute-intensive forward passes, while block-diffusion models additionally introduce a memory-intensive KV-cache. Low-bit weight-activation quantization is therefore attractive, yet existing dLLM post-training quantization methods rely on calibration data despite activation distributions shifting across masking states and denoising steps. We present SoloQ, a calibration-free quantization framework that maps weights and activations into a normalized rotated basis with a predictable marginal distribution, enabling data-independent quantization. SoloQ combines a structured K-RPBH rotation with a lightweight rescaling correction for calibration-free quantization. Its predictable post-rotation distribution supports both distribution-matched codebooks and hardware-native NVFP4. For block-diffusion models, SoloQ further applies commit-time KV-cache quantization to compress persistent states without perturbing the actively denoised block. Across full-sequence dLLMs (LLaDA and Dream) and block-diffusion dLLMs(Fast-dLLM v2 and Nemotron-Labs-Diffusion), SoloQ retains accuracy under 4-bit quantization and outperforms calibration-based baselines on knowledge- and reasoning-intensive benchmarks. With NVFP4, SoloQ reduces peak memory by up to 2.61X and accelerates end-to-end inference by up to 2.24X.",
+      "identifiers": [
+        "SemanticScholar:d3a1529b8915cf2d355e8468b21a95dec1fd0bdf"
+      ],
+      "semantic_scholar_id": "d3a1529b8915cf2d355e8468b21a95dec1fd0bdf",
+      "canonical_id": "arXiv:2610.07121",
+      "arxiv_id": "2610.07121",
+      "authors": [
+        "Donghyun Lee",
+        "Arkapravo Ghosh",
+        "Varun Manjunath",
+        "Bumjoon Kyle Rhee",
+        "Hyunho Kook",
+        "Shi-Ting Xiao",
+        "Youngeun Kim",
+        "Priyadarshini Panda"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散LLMのdenoising stepとmask状態に応じたactivation分布変化へ対応するため、構造化K-RPBH回転とrescaleで重み・activationを校正データなしで量子化する。block diffusionでは確定時KVのみ量子化して処理中blockを保護。一次要旨はLLaDA/Dream/Fast-dLLM v2/Nemotron-Labs-Diffusionで4bit精度維持、NVFP4でピークメモリ最大2.61倍削減、end-to-end推論最大2.24倍高速化を報告。拡散LLMの推論圧縮としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Breaking the Space Barrier and its Application to Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2610.09139",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language models are more and more often asked for structured output: JSON that follows a schema, or a tool call with typed arguments. A small machine, an automaton, enforces the format by forbidding the tokens that would break it. We observe that this machine has a rare property: from any of its states, each token leads along exactly one path. Graphs in which only a few paths join any two points are a classical object of complexity theory, and our theoretical result settles an open question about them: one can decide whether such a graph connects two points while verifying that it really has few paths, with very little memory. Precisely, the problem lies in the classes ReachUL, LOGDCFL, C=L and SC2, and needs only O(log2 n/ log log n) space, below the classical O(log2 n) of Savitch's theorem. The constructions behind the proofs become an inference engine: text the format forces is written without running the model, the mask is recomputed on the GPU without any table, recursive formats use a small stack, every output stays valid under a token limit, and independent fields are decoded in parallel and verified. On one 16 GB Apple M2 Pro with Qwen3.5-2B and 4B, against MLX with llguidance, the standard setup for this hardware, schema-constrained extraction finishes 1.2- 1.3x sooner with the same answers, a grammar costs 3 MB instead of up to 1.5 GB, one server holds sixteen grammars where tables run out of memory, and sixteen tool-calling agents finish 2.5x sooner.",
+      "identifiers": [
+        "SemanticScholar:c3a0a4ff845ac628f732b5eb789198fa310d1a7c"
+      ],
+      "semantic_scholar_id": "c3a0a4ff845ac628f732b5eb789198fa310d1a7c",
+      "canonical_id": "arXiv:2610.09139",
+      "arxiv_id": "2610.09139",
+      "authors": [
+        "A. Asadulaev"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "JSON schema・型付きtool callを保証するautomatonの経路構造を利用し、固定形式部分をモデル実行なしで確定し、GPUでmaskをtableなし再計算、独立fieldを並列復号・検証する制約付き生成runtimeを構成。一次要旨はApple M2 ProのQwen3.5-2B/4BでMLX+llguidance比1.2～1.3倍の抽出速度、grammar memory 3MB対最大1.5GB、16 agent同時実行2.5倍高速を報告。推論時の制約デコードとメモリ削減に直接寄与するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Few Bits, One Law: Toward W2A4KV2",
+      "source_url": "https://arxiv.org/abs/2610.09202",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Extreme low-bit LLM compression is most challenging when weights, activations, and KV caches are quantized together: their distributions differ, and quantization errors interact throughout the network. We introduce CanonQ, a unified quantization-aware training framework that addresses these challenges by separating source canonicalization from task-aware adaptation. Fixed rotations and energy normalization map heterogeneous tensor sources to canonical coordinates, enabling frozen Gaussian-reference codebooks to be reused across layers and models. Joint training then adapts the network to the coupled errors of weight, activation, and cache quantization within a common scalar/vector interface. We bound frozen-codebook transfer error and local task loss, and derive an exact normalization-aware straight-through Jacobian that links quantization distortion to gradient bias. The strongest gains arise under joint W2A4KV2 compression: across LLaMA3-1B/3B/8B, CanonQ-Omni achieves up to 14.28x lower WikiText-2 perplexity and up to 57.9% higher mean zero-shot accuracy than prior state-of-the-art and representative quantization baselines. The benefits extend to Qwen3-1.7B, code generation, and mathematical reasoning: on instruction-tuned MobileLLM-Pro-1B at W2A16KV16, CanonQ achieves relative improvements of 41.7% in HumanEval pass@1 and 39.1% in GSM8K exact match over the strongest evaluated quantization baseline.",
+      "identifiers": [
+        "SemanticScholar:a57db6795e4740e1c844024f8ddf0cb585fcdd63"
+      ],
+      "semantic_scholar_id": "a57db6795e4740e1c844024f8ddf0cb585fcdd63",
+      "canonical_id": "arXiv:2610.09202",
+      "arxiv_id": "2610.09202",
+      "authors": [
+        "Kai Yi",
+        "Tarek Elgamal",
+        "Sruthikesh Surineni",
+        "Vignesh Vivekraja",
+        "Soumyadeep Ghosh",
+        "Steven Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "重み・activation・KVを同時に超低ビット化する際の異種分布と相互誤差に対し、回転とenergy正規化でtensorを共通座標へ移し、固定Gaussian codebookを共有してjoint QATで補正するCanonQを提案。一次要旨はLLaMA3 1B/3B/8BのW2A4KV2で既存方式比WikiText-2 perplexity最大14.28倍改善、zero-shot平均精度最大57.9%向上を報告。推論時の重み・活性・KV統合量子化に直接適用するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b2876c3e0273",
+    "round": "libimp-b2876c3e02739b38-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b2876c3e02739b38-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b2876c3e02739b38-pre01.json",
+    "receipt": "sha256:f0c8a41865676b915adcdcd1e552123a9eb5807f0390db8406e67cf82b0f9d68"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b2876c3e0273",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

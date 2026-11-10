@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-520eba713f57f11d-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.3115/v1/w14-3302",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.3115/v1/w14-3302",
+    "identity_tokens": [
+      "DOI:10.3115/v1/w14-3302"
+    ],
+    "reason": "The official ACL record identifies this item as workshop proceedings but provides no abstract for screening.",
+    "first_checked_at": "2026-10-05T00:17:55+00:00",
+    "last_checked_at": "2026-10-05T00:17:55+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2025-self-speculative-decoding-for-on-device-moe-acceleration.md"
+    ],
+    "title": "Findings of the 2014 Workshop on Statistical Machine Translation"
+  },
+  "processed_at": "2026-10-05T00:17:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-520eba713f57",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

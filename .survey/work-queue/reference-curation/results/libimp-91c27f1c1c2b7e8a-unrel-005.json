@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-91c27f1c1c2b7e8a-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.02356",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.02356",
+    "identity_tokens": [
+      "arXiv:2605.02356"
+    ],
+    "reason": "arXiv本文のIntroduction/Architecture/Experiments/Conclusionを確認。ZNOは離散時間系同定用の安定有理ニューラル演算子で、system-identification誤差を評価する。推論servingやLLMの実行効率を扱わない。",
+    "first_checked_at": "2026-10-06T20:45:20+00:00",
+    "last_checked_at": "2026-10-06T20:45:20+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "ZNO: Stable Rational Neural Operators in the Z-Domain for Discrete-Time Dynamics"
+  },
+  "processed_at": "2026-10-06T20:45:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-91c27f1c1c2b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

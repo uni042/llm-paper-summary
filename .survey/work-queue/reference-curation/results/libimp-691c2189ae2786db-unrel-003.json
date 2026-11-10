@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-691c2189ae2786db-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.01617",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.01617",
+    "identity_tokens": [
+      "arXiv:2508.01617"
+    ],
+    "reason": "一次要旨はbiomedical VLMのモデル能力・vision instruction tuningを主題とし、inference optimizationの提案や効率評価が中心ではない。",
+    "first_checked_at": "2026-10-05T15:25:17+00:00",
+    "last_checked_at": "2026-10-05T15:25:17+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "LLaDA-MedV: Exploring Large Language Diffusion Models for Biomedical Image Understanding"
+  },
+  "processed_at": "2026-10-05T15:25:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-691c2189ae27",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4c25002ab7f5309-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1609/aaai.v36i3.20222",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1609/aaai.v36i3.20222",
+    "identity_tokens": [
+      "DOI:10.1609/aaai.v36i3.20222"
+    ],
+    "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+    "first_checked_at": "2026-10-07T08:53:53+00:00",
+    "last_checked_at": "2026-10-07T08:53:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+      "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+    ],
+    "title": "Width & Depth Pruning for Vision Transformers"
+  },
+  "processed_at": "2026-10-07T08:53:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4c25002ab7f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0500-scheduled-chat-00/r01",
+  "reference_main_sha": "4db13e9a151818874c5307438761d0d29ce4fa90",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:fe7df672dd110fdae6d3b49e3e63db59075fba7a",
+      "identity_tokens": [
+        "SemanticScholar:fe7df672dd110fdae6d3b49e3e63db59075fba7a"
+      ],
+      "title": "Understanding and Optimizing KV-cache Management for Long-Context LLM Inference",
+      "reason": "Stony Brook UniversityのTechnical Report FSL-26-02（Amir Hossein Najafi Zadeh、2026年8月）は、長文脈LLMのKVキャッシュをGPU HBMからCPU DRAM・SSD等へ退避した後の復元と、GPUでのKV再計算の選択をI/O性能モデルで分析する。復元を要求のクリティカルパスと特定し、ストレージ経路とGPU再計算へ要求を比例分割して両経路の完了時刻を揃える方針を提示。1,764ハードウェア構成のモデル評価と6 GPUのキャッシュヒット率掃引において、常時復元・常時再計算よりSLO達成構成比が2～10倍になると要旨で報告。長文脈推論のKVキャッシュ管理・階層メモリ・SSDオフロードに直接関係するためaccept。ただし分割ポリシーはシミュレーション評価で、production-grade servingへの実装は将来課題。",
+      "source_url": "https://www.fsl.cs.stonybrook.edu/docs/llm/amir26kvcache-rpe.pdf",
+      "body_check": "primary_technical_report_abstract_and_introduction_review; complete_39_page_body_not_read; source=FSL-26-02, abstract pages 1-2 and introduction",
+      "first_checked_at": "2026-11-02T05:07:22+09:00",
+      "last_checked_at": "2026-11-02T05:07:22+09:00",
+      "linked_from": [],
+      "worklist_rank": 3,
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "publication_type": "university_technical_report",
+      "report_number": "FSL-26-02",
+      "authors": [
+        "Amir Hossein Najafi Zadeh"
+      ]
+    }
+  ]
+}

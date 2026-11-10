@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-872426663a93a4bb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.00991",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.00991",
+    "identity_tokens": [
+      "arXiv:2610.00991"
+    ],
+    "reason": "Adapter ThicketsはRLVR訓練budgetを複数LoRAへ分散し、majority-vote accuracyを改善する。本文は全methodで問題あたり160 completionを固定して比較している。 提案はtraining budget配分でありinference computeを減らさず、等しい160 sample予算でqualityを比較している。学習時のaccuracy改善だけで対象推論効率には該当しない。",
+    "first_checked_at": "2026-10-05T03:59:34+00:00",
+    "last_checked_at": "2026-10-05T03:59:34+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+    ],
+    "title": "Adapter Thickets: Splitting an RLVR Budget Beats Concentrating It"
+  },
+  "processed_at": "2026-10-05T03:59:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-872426663a93",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

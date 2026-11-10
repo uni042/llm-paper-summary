@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8fb0ed3a8b471ecf-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.10314",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.10314",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2203.10314",
+      "arXiv:2203.10314",
+      "id:arXiv:2203.10314",
+      "url:https://arxiv.org/abs/2203.10314"
+    ],
+    "reason": "原著要旨で、ボクセル内の点群を潜在コードを用いた二つの交差注意で集約し、KITTIとWaymoの3D物体検出を評価するVoxSeTと確認。対象は点群認識用の視覚バックボーンであり、LLMの生成・推論サービング・KVキャッシュ・推論カーネルの効率化ではない。",
+    "first_checked_at": "2026-10-11T14:41:43+00:00",
+    "last_checked_at": "2026-10-20T08:45:50+00:00",
+    "linked_from": [],
+    "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
+  },
+  "processed_at": "2026-10-20T08:45:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8fb0ed3a8b47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

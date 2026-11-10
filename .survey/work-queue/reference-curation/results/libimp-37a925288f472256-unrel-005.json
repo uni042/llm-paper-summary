@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-37a925288f472256-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.13556",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.13556",
+    "identity_tokens": [
+      "arXiv:2609.13556"
+    ],
+    "reason": "要旨はdomain jargon理解とLLM component reweightingを扱うと記述する（Large Language Models (LLMs) have shown remarkable proficiency on general-purpose tasks, yet their performance often degrades in highly-specialized technical domains. Moreover, little is known about how parametric knowledge of domain-specif）。LLM inference compute/memory/latency/throughput/cache/servingの具体的改善法・評価ではない。",
+    "first_checked_at": "2026-10-06T00:17:38+00:00",
+    "last_checked_at": "2026-10-06T00:17:38+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+    ],
+    "title": "Domain-Specific Jargon in Large Language Models: A Comparative Analysis between General-Purpose and Specialist Models"
+  },
+  "processed_at": "2026-10-06T00:17:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-37a925288f47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

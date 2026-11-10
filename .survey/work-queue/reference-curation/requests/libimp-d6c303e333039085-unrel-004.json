@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d6c303e333039085-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.15357",
+  "reason": "Diffusion models generate images through an iterative diffusion process, and recent studies have demonstrated that the intermediate feature maps produced during this process contain rich visual representations, leading to their adoption across a variety of downstream tasks. However, most existing approaches are limited to either using a single feature map at a specific timestep or aggregating feature maps across multiple timesteps. We observe that intermediate representations in the diffusion process form meaningful trajectories along the time axis. In particular, the representation of each spatial patch evolves progressively throughout the generative process, encoding semantics that are difficult to capture from static snapshots alone. This observation motivates the need to treat diffusion representations as temporally structured trajectories rather than static snapshots. To this end, we propose Diffusion Trajectory Modeling (DTM), a framework that interprets the temporal evolution of each spatial patch as a trajectory and leverages it for semantic correspondence. By effectively modeling patch-wise trajectories generated across multiple timesteps, DTM captures correspondence cues that prior methods are not designed to capture. We further demonstrate empirically that spatially corresponding patches form similar trajectory patterns throughout the diffusion process, suggesting that the temporal axis of diffusion carries semantic information. Experiments on SPair-71k, SPair-U and AP-10K show that DTM achieves strong performance, presenting a new perspective for exploiting diffusion representations from a trajectory-centric viewpoint.",
+  "title": "Diffusion Trajectory Modeling for Semantic Correspondence",
+  "identity_tokens": [
+    "arXiv:2609.15357"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d6c303e33303",
+  "source_precheck_request_id": null
+}

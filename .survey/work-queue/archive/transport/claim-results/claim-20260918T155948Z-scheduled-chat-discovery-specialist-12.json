@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T155948Z-scheduled-chat-discovery-specialist-12",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-07d26e029c945d64",
+      "claim_id": "claim-c3199f327d8e2f9e461a73e8",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-c3199f327d8e2f9e461a73e8",
+      "claimed_at": "2026-09-18T16:00:32+00:00",
+      "expires_at": "2026-09-18T17:30:32+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-07d26e029c945d64"
+      ],
+      "job": {
+        "job_id": "job-research-07d26e029c945d64",
+        "type": "research",
+        "parent_job_id": "job-fb6e71b1d7480608",
+        "priority": 94,
+        "canonical_id": "arXiv:2609.06172",
+        "title": "AutoUVM: Automated Prefetching Framework for LLMs under UVM Oversubscription",
+        "source_url": "https://arxiv.org/abs/2609.06172",
+        "paper_path": "papers/inference/05-offload-hierarchical-memory/2026-2609.06172-autouvm-automated-prefetching-uvm-oversubscription.md",
+        "selection_reason": "GPUメモリ超過時の統合仮想メモリ（Unified Virtual Memory; UVM）ページフォルトを、深層学習フレームワークのtensor-level access情報とruntime memory pressureに基づく自動prefetchで抑えるsystem。10 LLMでbaseline UVM比平均3.1倍、既存prefetcher比1.9倍を報告し、階層メモリ・prefetch重点テーマへ直接適合する。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-18T11:02:46+00:00",
+        "blocker": "一次資料全文を安全に取得できなかったため一時blocked。arXivの公式 abstract (https://arxiv.org/abs/2609.06172)、HTML full rendering (https://arxiv.org/html/2609.06172)、PDF (https://arxiv.org/pdf/2609.06172) の3経路を個別に試したが、この実行環境ではいずれも DisabledError で取得不能だった。著者所属研究室 MoCA Lab の公式Researchページでは同一論文が IEEE ICCD 2026 論文として掲載されていることを確認したが、同ページから本文全文は取得できなかった。検索索引・第三者解説では抄録や詳細説明を取得できたが、二次資料から未確認の科学的内容を補完することは禁止されているため5-slotは生成していない。次回はarXiv取得経路の復旧、ICCD公式公開版、または著者公式コピーを再試行する。",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-df013fdec9ead4452da41508.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-18T12:01:44+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-18T12:01:44+00:00",
+            "reason": "一次資料全文を安全に取得できなかったため一時blocked。arXivの公式 abstract (https://arxiv.org/abs/2609.06172)、HTML full rendering (https://arxiv.org/html/2609.06172)、PDF (https://arxiv.org/pdf/2609.06172) の3経路を個別に試したが、この実行環境ではいずれも DisabledError で取得不能だった。著者所属研究室 MoCA Lab の公式Researchページでは同一論文が IEEE ICCD 2026 論文として掲載されていることを確認したが、同ページから本文全文は取得できなかった。検索索引・第三者解説では抄録や詳細説明を取得できたが、二次資料から未確認の科学的内容を補完することは禁止されているため5-slotは生成していない。次回はarXiv取得経路の復旧、ICCD公式公開版、または著者公式コピーを再試行する。"
+          }
+        ],
+        "last_blocked_at": "2026-09-18T12:01:44+00:00",
+        "retry_queued_at": "2026-09-18T15:40:04+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T16:00:32+00:00",
+  "checkpoint_released": 0
+}

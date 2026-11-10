@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5b52e41fc727f352-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.11608",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.11608",
+    "identity_tokens": [
+      "arXiv:2605.11608"
+    ],
+    "reason": "PRISM estimates quality/risk drift in quantized, LoRA-adapted, and distilled LLM variants from a forward pass, including GPTQ evaluations. It is a model-variant audit/selection method rather than an inference-efficiency improvement; its quantization-family relation makes it a plausible but secondary systems-quality connection.",
+    "first_checked_at": "2026-10-06T20:40:32+00:00",
+    "last_checked_at": "2026-10-06T20:40:32+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PRISM: A Geometric Risk Bound for Decomposing Drift into Scale, Shape, and Head"
+  },
+  "processed_at": "2026-10-06T20:40:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b52e41fc727",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

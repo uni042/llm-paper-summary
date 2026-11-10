@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-efa06f9d994b52f7-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3676641.3715987",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3676641.3715987",
+    "identity_tokens": [
+      "DOI:10.1145/3676641.3715987"
+    ],
+    "reason": "CXL memoryは階層メモリ研究に関連する基盤技術だが、この論文自体は汎用CXL memoryのcharacterizationで、LLM推論への最終適用・評価がない。",
+    "first_checked_at": "2026-10-01T07:06:25+00:00",
+    "last_checked_at": "2026-10-01T07:06:25+00:00",
+    "linked_from": [],
+    "title": "Systematic CXL Memory Characterization and Performance Analysis at Scale"
+  },
+  "processed_at": "2026-10-01T07:06:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-efa06f9d994b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

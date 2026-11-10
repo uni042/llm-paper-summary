@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b4de4ffce0e6e7f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.00949",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.00949",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2505.00949",
+      "arXiv:2505.00949"
+    ],
+    "reason": "推論スループット・メモリ効率を強く意識したreasoning model群だが、主貢献はモデル設計・学習レシピも大きく、純粋な推論システム研究との境界。",
+    "first_checked_at": "2026-09-30T08:00:57+00:00",
+    "last_checked_at": "2026-10-02T08:18:21+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      ".survey/work-queue/worker-worklist-30.json",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+      "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+    ],
+    "title": "Llama-Nemotron: Efficient Reasoning Models"
+  },
+  "processed_at": "2026-10-02T08:18:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b4de4ffce0e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

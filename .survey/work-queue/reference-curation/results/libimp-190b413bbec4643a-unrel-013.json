@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-190b413bbec4643a-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2210.12924",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2210.12924",
+    "identity_tokens": [
+      "arXiv:2210.12924"
+    ],
+    "reason": "OLLA formulates tensor lifetime and placement optimization to reduce neural-network memory, but the abstract and conclusion frame the method around training models and its experiments measure training memory/runtime. Inference is mentioned in related work, not evaluated as OLLA's target. The main reported 30.4%/36.1% peak-memory reduction is for training workloads, so this is outside the inference-efficiency scope.",
+    "first_checked_at": "2026-10-03T14:28:52+00:00",
+    "last_checked_at": "2026-10-03T14:28:52+00:00",
+    "linked_from": [
+      "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[4]"
+    ],
+    "title": "OLLA: Optimizing the Lifetime and Location of Arrays to Reduce the Memory Usage of Neural Networks"
+  },
+  "processed_at": "2026-10-03T14:28:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-190b413bbec4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

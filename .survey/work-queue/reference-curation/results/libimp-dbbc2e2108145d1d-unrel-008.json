@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dbbc2e2108145d1d-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2006.15595",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2006.15595",
+    "identity_tokens": [
+      "arXiv:2006.15595"
+    ],
+    "reason": "TUPEでword correlationとpositional correlationを分離しBERT系pre-training/GLUE性能を改善するmodel architecture研究。推論runtime・memory・serving効率化を最終適用先としない。",
+    "first_checked_at": "2026-10-05T16:00:05+00:00",
+    "last_checked_at": "2026-10-05T16:34:23+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2022-2211.10017-who-says-elephants-can-t-run-bringing-large-scale-moe-models-into-cloud-.md"
+    ],
+    "title": "Rethinking Positional Encoding in Language Pre-training"
+  },
+  "processed_at": "2026-10-05T16:34:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dbbc2e210814",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

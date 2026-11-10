@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6fb737638aa008de-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.16281",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.16281",
+    "identity_tokens": [
+      "arXiv:2606.16281"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16281. Abstract summary: Masked Diffusion Language Models (MDLMs) have emerged as a distinct paradigm for sequence generation. As MDLMs become diverse in capabilities and knowledge coverage, an important question is how to combine their knowledge. Toward this, we first investigate the unique decoding dynamics of MDLMs. We find that successful generation Out of scope: Masked-diffusion ensemble targets output quality, not runtime efficiency.",
+    "first_checked_at": "2026-10-05T12:02:45+00:00",
+    "last_checked_at": "2026-10-05T12:02:45+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+    ],
+    "title": "Who Should Lead Decoding Now? Tracking Reliable Trajectories for Ensembling Masked Diffusion Language Models"
+  },
+  "processed_at": "2026-10-05T12:02:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6fb737638aa0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

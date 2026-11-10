@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c481c92d6869b110-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/n18-2002",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/n18-2002",
+    "identity_tokens": [
+      "DOI:10.18653/v1/n18-2002"
+    ],
+    "reason": "共参照解析システムの性別バイアスをWinogender schemasで測る公平性評価研究であり、LLM推論効率・サービング・メモリ・MoE・カーネル最適化とは無関係。",
+    "first_checked_at": "2026-09-30T09:02:37+00:00",
+    "last_checked_at": "2026-10-02T11:13:19+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-45.json",
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
+    ],
+    "title": "Gender Bias in Coreference Resolution"
+  },
+  "processed_at": "2026-10-02T11:13:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c481c92d6869",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

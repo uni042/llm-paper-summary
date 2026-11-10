@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abfe64847bbe23e4-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/sc.2014.21",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/sc.2014.21",
+    "identity_tokens": [
+      "DOI:10.1109/sc.2014.21"
+    ],
+    "reason": "DOI resolver/IEEE掲載先から一次abstract本文を取得できず、用途をtitleから推定しない。",
+    "first_checked_at": "2026-10-05T01:05:55+00:00",
+    "last_checked_at": "2026-10-05T01:05:55+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md"
+    ],
+    "title": "Scalable Kernel Fusion for Memory-Bound GPU Applications"
+  },
+  "processed_at": "2026-10-05T01:05:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abfe64847bbe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

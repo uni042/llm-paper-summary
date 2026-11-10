@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f5e6777e68afbc43-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.35433",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.35433",
+    "identity_tokens": [
+      "arXiv:2609.35433"
+    ],
+    "reason": "off-policy policy optimizationの勾配問題を扱う強化学習学習法である。",
+    "first_checked_at": "2026-10-05T05:01:48+00:00",
+    "last_checked_at": "2026-10-05T05:01:48+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "ReSPO: Reshaped Sequence Policy Optimization for Gradient Starvation in Off-Policy Learning"
+  },
+  "processed_at": "2026-10-05T05:01:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5e6777e68af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "runstate-scheduled-chat-30-20260925T103242JST-6c2e8a-runtime",
+  "run_key": "scheduled-chat-30-20260925T103242JST-6c2e8a",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-25T10:32:42+09:00",
+  "runtime_condition": "transport_unrecoverable",
+  "runtime_condition_confirmed": true,
+  "runtime_condition_attempts": 3,
+  "runtime_condition_detail": "GitHub read and run-state create succeeded. For foreground job-research-14b72fcf4a8168cf, the platform rejected (1) normal five-slot record update, (2) create-only quality_preflight_v1 fallback bundle, and (3) minimal status-only blocked immutable descriptor; a second status-only create retry was also rejected. No durable terminal write for this foreground is currently possible through the router-prescribed paths.",
+  "candidate_inventory_at_start": 353,
+  "work_mode_at_start": "research",
+  "research_discovery_threshold": 288,
+  "hot_dispatch_generated_at": "2026-09-25T01:28:54+00:00"
+}

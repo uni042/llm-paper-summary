@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eab834c1a6bf04d9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.32754",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.32754",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2609.32754",
+      "arXiv:2609.32754"
+    ],
+    "reason": "一次要旨では、長期エージェントの実行証拠と来歴を永続グラフに整理し、各判断に対して限られた文脈予算内の要求中心ビューを作る。GPT-5.6-lunaでの成功率44.5%→50.2%など、主な実証は長期タスクの意思決定品質改善である。文脈予算の制約と推論費用の分析はあるが、推論エンジン、KVキャッシュ、モデル実行時間、GPU使用量の改善を直接主目的として実証したとは要旨から断定できないため、サーベイ対象との境界的候補とする。",
+    "first_checked_at": "2026-10-14T11:53:39+00:00",
+    "last_checked_at": "2026-10-18T10:00:32+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md",
+      "papers/inference/99-other-inference-systems/2023-2306.07174-augmenting-language-models-with-long-term-memory.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Consistency Graph for Long-Horizon Agents"
+  },
+  "processed_at": "2026-10-18T10:00:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eab834c1a6bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

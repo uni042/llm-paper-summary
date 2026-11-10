@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0dcf45fffd0426a6-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1155/2022/4189781",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1155/2022/4189781",
+    "identity_tokens": [
+      "DOI:10.1155/2022/4189781"
+    ],
+    "reason": "U-Net系の医用画像segmentationを扱う研究で、最終適用先がmedical imagingでありLLM/Transformer推論システムではない。",
+    "first_checked_at": "2026-10-07T21:37:59+00:00",
+    "last_checked_at": "2026-10-07T21:37:59+00:00",
+    "linked_from": [],
+    "title": "U-Net-Based Medical Image Segmentation"
+  },
+  "processed_at": "2026-10-07T21:37:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0dcf45fffd04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

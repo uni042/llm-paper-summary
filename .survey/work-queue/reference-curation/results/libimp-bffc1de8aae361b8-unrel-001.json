@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bffc1de8aae361b8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.09075",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.09075",
+    "identity_tokens": [
+      "arXiv:2507.09075"
+    ],
+    "reason": "OpenCodeReasoning-II is a dataset and test-time scaling approach for code reasoning; the abstract reports dataset/quality scope, not reduced inference resources or serving cost.",
+    "first_checked_at": "2026-10-05T14:55:40+00:00",
+    "last_checked_at": "2026-10-05T14:55:40+00:00",
+    "linked_from": [
+      "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+    ],
+    "title": "OpenCodeReasoning-II: A Simple Test Time Scaling Approach via Self-Critique"
+  },
+  "processed_at": "2026-10-05T14:55:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bffc1de8aae3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

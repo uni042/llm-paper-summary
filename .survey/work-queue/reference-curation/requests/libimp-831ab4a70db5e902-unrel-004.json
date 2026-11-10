@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-831ab4a70db5e902-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.25077/jnte.v15n2.1350.2026",
+  "reason": "The rapid advancement of digital technology has transformed attendance systems in educational environments. Conventional manual attendance methods are vulnerable to manipulation, while fingerprint-based biometric systems often experience limitations due to certain physical conditions. Facial recognition has therefore emerged as a reliable and non-contact biometric solution for attendance verification. However, existing deep learning architectures such as the Vision Transformer (ViT) require substantial computational resources and memory during training. This study proposes the Vision Reformer (ViR) model to enhance the computational efficiency of the ViT architecture for facial recognition. The proposed approach integrates the memory-efficient attention mechanism of the Reformer architecture into the ViT framework to improve training efficiency while maintaining high recognition performance. Experiments were conducted using the Indonesian Muslim Student Face Dataset (IMSFD) with learning rates of  and . The experimental results show that the ViR model with a learning rate of  and  achieved the best performance, with accuracy of 94.63%, F1-score of 94.77%, precision of 95.89%, and recall of 94.63%, while requiring only 41.076 seconds of training time. In comparison, the ViT model achieved accuracy of 94.11% and required 82.368 seconds under the same configuration. Additionally, GPU memory analysis indicates that ViR reduces memory consumption by 78 MB and 39 MB at batch sizes of 16 and 32, respectively, while maintaining a stable and linear memory usage pattern. These results demonstrate that the proposed Vision Reformer model improves computational efficiency and memory utilization while maintaining competitive accuracy, making it a practical solution for facial recognition-based attendance systems in educational settings.",
+  "title": "Vision Reformer Model To Enhance Transformer Efficiency for Face Recognition",
+  "identity_tokens": [
+    "DOI:10.25077/jnte.v15n2.1350.2026"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+    "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-831ab4a70db5",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ccbeb4f5b8273e0b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.06215",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.06215",
+    "identity_tokens": [
+      "arXiv:2506.06215"
+    ],
+    "reason": "RPT revisits previously sampled tokens to reduce generation errors and improve quality; the paper describes it as often a better yet more expensive procedure than next-token sampling, so it does not establish an efficiency improvement.",
+    "first_checked_at": "2026-10-06T18:44:36+00:00",
+    "last_checked_at": "2026-10-06T18:44:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Corrector Sampling in Language Models"
+  },
+  "processed_at": "2026-10-06T18:44:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ccbeb4f5b827",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

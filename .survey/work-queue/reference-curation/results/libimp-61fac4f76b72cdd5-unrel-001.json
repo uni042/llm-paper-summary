@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-61fac4f76b72cdd5-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.20284",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.20284",
+    "identity_tokens": [
+      "arXiv:2603.20284"
+    ],
+    "reason": "因果Transformerの時空間KVキャッシュを、注意累積重みでの時間方向保持・ボクセル整列の空間圧縮・複数フレームのチャンク化で約10倍省メモリ化するが、最終対象はストリーミング3次元再構成（VGGT）であり、LLM推論・サービング・MoEではない。",
+    "first_checked_at": "2026-10-20T13:06:14+00:00",
+    "last_checked_at": "2026-10-20T13:06:14+00:00",
+    "linked_from": [],
+    "title": "STAC: Plug-and-Play Spatio-Temporal Aware Cache Compression for Streaming 3D Reconstruction"
+  },
+  "processed_at": "2026-10-20T13:06:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-61fac4f76b72",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

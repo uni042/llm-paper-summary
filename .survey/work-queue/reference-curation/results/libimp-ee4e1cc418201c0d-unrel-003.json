@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ee4e1cc418201c0d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.22786",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.22786",
+    "identity_tokens": [
+      "arXiv:2601.22786"
+    ],
+    "reason": "Reward-based learning about IIT-inspired consciousness in LLMs is not an inference efficiency method.",
+    "first_checked_at": "2026-10-06T11:11:33+00:00",
+    "last_checked_at": "2026-10-06T11:11:33+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+    ],
+    "title": "Toward IIT-Inspired Consciousness in LLMs: A Reward-Based Learning Framework"
+  },
+  "processed_at": "2026-10-06T11:11:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ee4e1cc41820",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

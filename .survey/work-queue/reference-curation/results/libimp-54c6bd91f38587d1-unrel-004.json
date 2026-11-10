@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54c6bd91f38587d1-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.28078",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.28078",
+    "identity_tokens": [
+      "arXiv:2608.28078"
+    ],
+    "reason": "vision dense predictionのmulti-task adaptationでLLMとは別領域。",
+    "first_checked_at": "2026-10-05T07:56:00+00:00",
+    "last_checked_at": "2026-10-05T07:56:00+00:00",
+    "linked_from": [
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "Task-State Adaptation with Prototype Memory for Multi-Task Dense Prediction"
+  },
+  "processed_at": "2026-10-05T07:56:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54c6bd91f385",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

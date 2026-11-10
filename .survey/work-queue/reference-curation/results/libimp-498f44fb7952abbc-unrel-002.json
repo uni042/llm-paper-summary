@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-498f44fb7952abbc-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.16261",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.16261",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2508.16261",
+      "SemanticScholar:b07ee4903dc59af8b4ab7925e9888d11c9dd7725",
+      "arXiv:2508.16261"
+    ],
+    "reason": "This is a survey/taxonomy of federated LLM tuning and model access, not a new measured system-efficiency method.",
+    "first_checked_at": "2026-10-13T01:58:16+00:00",
+    "last_checked_at": "2026-10-13T01:58:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.03844-on-the-effect-of-dropping-layers-of-pre-trained-transformer-models.md"
+    ],
+    "title": "On the Evolution of Federated Post-Training Large Language Models: A Model Accessibility View"
+  },
+  "processed_at": "2026-10-13T01:58:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-498f44fb7952",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

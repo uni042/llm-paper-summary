@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "scheduled-chat-00-20260923T080002Z-claim06",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "run_key": "scheduled-chat-00-20260923T080002Z",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-23T08:00:02+00:00",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-62c06a71da7d8bc0",
+      "claim_id": "claim-64f95f13e8bf245cb090a9d9",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-64f95f13e8bf245cb090a9d9",
+      "claimed_at": "2026-09-23T08:27:06+00:00",
+      "expires_at": "2026-09-23T09:57:06+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-62c06a71da7d8bc0"
+      ],
+      "job": {
+        "job_id": "job-research-62c06a71da7d8bc0",
+        "type": "research",
+        "parent_job_id": "job-4d9b4b9bf02ce43f",
+        "priority": 95,
+        "canonical_id": "arXiv:2601.13631",
+        "arxiv_id": "2601.13631",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management",
+        "source_url": "http://arxiv.org/abs/2601.13631",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2601.13631-contiguouskv-accelerating-llm-prefill-with-granularity-aligned-kv-cache-management.md",
+        "selection_reason": "KV-cache management system that aligns cache granularity to accelerate LLM prefill; directly relevant to serving memory layout and prefill efficiency.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T20:25:05+00:00"
+      },
+      "run_key": "scheduled-chat-00-20260923T080002Z",
+      "scheduled_slot": "00",
+      "actual_invocation_start": "2026-09-23T08:00:02+00:00",
+      "record_bank": "f",
+      "record_bank_root": ".survey/work-queue/records/chat-record-f",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-f/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-f/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-f/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-f/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-f/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-23T08:27:06+00:00",
+  "checkpoint_released": 0
+}

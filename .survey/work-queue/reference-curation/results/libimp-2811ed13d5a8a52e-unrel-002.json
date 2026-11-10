@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2811ed13d5a8a52e-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3664647.3681419",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3664647.3681419",
+    "identity_tokens": [
+      "DOI:10.1145/3664647.3681419"
+    ],
+    "reason": "畳み込みネットワークのchannel/spatial pruning手法で、LLMの推論効率を扱わない。",
+    "first_checked_at": "2026-10-05T13:16:04+00:00",
+    "last_checked_at": "2026-10-05T13:16:04+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+    ],
+    "title": "Adaptive Pruning of Channel Spatial Dependability in Convolutional Neural Networks"
+  },
+  "processed_at": "2026-10-05T13:16:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2811ed13d5a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

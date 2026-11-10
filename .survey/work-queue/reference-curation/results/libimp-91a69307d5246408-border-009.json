@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-91a69307d5246408-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/1964218.1964225",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/1964218.1964225",
+    "identity_tokens": [
+      "DOI:10.1145/1964218.1964225"
+    ],
+    "reason": "Structural Simulation Toolkit (SST)は大規模計算機アーキテクチャを構成要素で組み立て、並列離散事象シミュレーションする基盤。推論システムのsimulation/emulation研究へ利用可能だが、論文自体は汎用HPC/architecture simulatorでLLM推論を最終適用先としないためborderline。",
+    "first_checked_at": "2026-10-05T16:19:09+00:00",
+    "last_checked_at": "2026-10-05T16:19:09+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "The structural simulation toolkit"
+  },
+  "processed_at": "2026-10-05T16:19:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-91a69307d524",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

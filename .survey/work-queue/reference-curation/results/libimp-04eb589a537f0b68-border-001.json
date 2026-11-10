@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-04eb589a537f0b68-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.08289",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.08289",
+    "identity_tokens": [
+      "arXiv:2508.08289"
+    ],
+    "reason": "原著v3の§2–6では、線形Attention/DeltaNet/RetNetの状態更新を古典的条件づけ学習則に写像し、ブロッキング・消去・連想容量を理論と小型学習モデルの実験で検証する。状態容量が忠実再生では線形、識別ではほぼ二乗で伸びるという知見は長文脈効率的Attentionの設計に間接的に関係する。しかし提案PH-attentionは刺激別学習率を付与する機構で、主目的は連想学習現象の説明・予測であり、LLM推論スループット、KVキャッシュ、実機GPUカーネル、メモリ階層、サービング負荷の改善を実測していない。凍結中の学習・理論中心テーマに近いため通常Research収録は保留する。",
+    "first_checked_at": "2026-10-27T09:50:11+00:00",
+    "last_checked_at": "2026-10-27T09:50:11+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Attention as Conditioning: What Classical Learning Theory Predicts About Linear Transformers"
+  },
+  "processed_at": "2026-10-27T09:50:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-04eb589a537f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

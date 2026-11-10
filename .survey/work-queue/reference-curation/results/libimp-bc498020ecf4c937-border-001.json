@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc498020ecf4c937-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/iscait64916.2025.11010596",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/iscait64916.2025.11010596",
+    "identity_tokens": [
+      "DOI:10.1109/iscait64916.2025.11010596",
+      "SemanticScholar:c695092e82b1e050afb746bb684706d079a0a4ae"
+    ],
+    "reason": "The candidate's DOI/title are identified, but the registered publisher abstract could not be independently retrieved: Direct IEEE Xplore open returned: URL https://ieeexplore.ieee.org/document/11010596 is not accessible via this tool. Alternate /abstract/document/11010596 open returned Internal Error. Exact DOI search surfaced ResearchGate metadata but no publisher abstract section. Keep borderline pending primary-source evidence.",
+    "first_checked_at": "2026-10-14T11:53:39+00:00",
+    "last_checked_at": "2026-10-14T15:06:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md",
+      "papers/inference/99-other-inference-systems/2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Privacy-Preserving Floating-Point Operations: Optimizing Division in 2PC Frameworks"
+  },
+  "processed_at": "2026-10-14T15:06:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc498020ecf4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0757-scheduled-chat-00/r02",
+  "reference_main_sha": "59988a7b8251e7851fb1f8617d76831f0cb9da1a",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17531",
+      "identity_tokens": [
+        "id:arXiv:2610.17531",
+        "id:DOI:10.48550/arXiv.2610.17531"
+      ],
+      "title": "Towards Green AI: Evaluating Energy Efficiency for Quantized LLM Inference",
+      "reason": "University of Waterlooの修士論文原著はLlama2、Phi3.5、OLMo、Qwen2.5の複数モデルで、H100/A6000/A100/L4上の10種類のPTQ方式を比較し、入力・出力長、batch、精度、推論エネルギーを評価する。EETQやbitsandbytesの融合INT8 kernelは短文生成でFP32比最大4倍の省エネを報告する。LLM推論の実機性能・電力特性の直接計測としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.17531",
+      "body_check": "primary_abstract_and_introduction_screened; full_evaluation_not_audited",
+      "first_checked_at": "2026-11-02T08:06:31+09:00",
+      "last_checked_at": "2026-11-02T08:06:31+09:00",
+      "linked_from": [],
+      "origin": "discovery_recent_primary_source"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.05887",
+      "identity_tokens": [
+        "id:arXiv:2604.05887",
+        "id:DOI:10.48550/arXiv.2604.05887"
+      ],
+      "title": "HybridKV: Hybrid KV Cache Compression for Efficient Multimodal Large Language Model Inference",
+      "reason": "著者原著はMLLMのheadをprefillのtext-centric attention sparsityからstatic/dynamicに分類し、階層的KV予算配分の後、static headにはtext-prior pruning、dynamic headにはCPUオフロードしたchunk-wise retrievalを適用する。Qwen2.5-VL-7B等の画像・動画評価で最大7.9倍のKV圧縮と1.52倍のdecode高速化を報告する。直接的な推論メモリ最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2604.05887",
+      "body_check": "primary_abstract_and_introduction_screened; full_evaluation_not_audited",
+      "first_checked_at": "2026-11-02T08:06:31+09:00",
+      "last_checked_at": "2026-11-02T08:06:31+09:00",
+      "linked_from": [],
+      "origin": "discovery_recent_primary_source"
+    }
+  ]
+}

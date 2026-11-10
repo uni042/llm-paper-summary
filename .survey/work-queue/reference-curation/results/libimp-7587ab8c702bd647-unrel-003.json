@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7587ab8c702bd647-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s11263-019-01228-7",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s11263-019-01228-7",
+    "identity_tokens": [
+      "DOI:10.1007/s11263-019-01228-7",
+      "arXiv:1610.02391"
+    ],
+    "reason": "CNN等の判断根拠可視化が主目的で、推論ランタイムの速度・メモリ・配置最適化ではない。",
+    "first_checked_at": "2026-10-03T16:01:59+00:00",
+    "last_checked_at": "2026-10-03T16:01:59+00:00",
+    "linked_from": [
+      "worker-worklist-30"
+    ],
+    "title": "Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization"
+  },
+  "processed_at": "2026-10-03T16:01:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7587ab8c702b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

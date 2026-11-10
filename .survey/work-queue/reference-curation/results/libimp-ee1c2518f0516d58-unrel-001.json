@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ee1c2518f0516d58-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.08665",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.08665",
+    "identity_tokens": [
+      "arXiv:2601.08665",
+      "id:arXiv:2601.08665",
+      "url:https://arxiv.org/abs/2601.08665"
+    ],
+    "reason": "著者の一次要旨を確認。VLingNavはロボットの視覚言語ナビゲーションを対象に、必要時だけ推論を起動する適応的思考連鎖、過去の観測を保持する視覚補助言語記憶、Nav-AdaCoT-2.9Mによる学習を統合する。評価の中心は実環境への転移を含む移動・経路探索の成功性能であり、汎用LLMの復号、サービング、GPU実行、KVキャッシュの性能改善を直接評価していない。適応推論という接点はあるが、主題は身体化ナビゲーションモデルの能力向上であるため対象外。",
+    "first_checked_at": "2026-10-13T10:42:58+00:00",
+    "last_checked_at": "2026-10-18T03:52:47+00:00",
+    "linked_from": [],
+    "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory"
+  },
+  "processed_at": "2026-10-18T03:52:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ee1c2518f051",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

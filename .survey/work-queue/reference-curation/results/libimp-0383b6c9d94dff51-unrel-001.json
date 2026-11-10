@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0383b6c9d94dff51-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2206.03126",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2206.03126",
+    "identity_tokens": [
+      "arXiv:2206.03126"
+    ],
+    "reason": "Transformer初期化時のrank collapseがquery/key勾配消失とtrainingへ与える影響を理論解析し、residual scalingを議論する学習理論研究。推論runtime・serving効率化ではない。",
+    "first_checked_at": "2026-10-07T21:48:45+00:00",
+    "last_checked_at": "2026-10-07T21:48:45+00:00",
+    "linked_from": [],
+    "title": "Signal Propagation in Transformers: Theoretical Perspectives and the Role of Rank Collapse"
+  },
+  "processed_at": "2026-10-07T21:48:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0383b6c9d94d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

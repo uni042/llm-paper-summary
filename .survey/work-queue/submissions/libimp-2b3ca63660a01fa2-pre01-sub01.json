@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "VisReflect: Latent Visual Reflection for Fine-Grained Perception in Long Visual Context",
+      "source_url": "https://arxiv.org/abs/2606.30288",
+      "year": 2026,
+      "published": "2026-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision Language Models (LVLMs) have achieved remarkable success on vision-language tasks, yet fine-grained perception over high-resolution images and long-context videos remains challenging. As the number of visual tokens increases, the visual attention sink phenomenon becomes increasingly severe, causing irrelevant tokens to absorb a disproportionate amount of attention mass. Recent approaches attempt to mitigate this issue by explicitly predicting bounding boxes or temporal spans and re-encoding the cropped visual regions. Such methods depend on unreliable numeric localization in the discrete token space and incur significant computational overhead due to additional forward passes. In this work, we propose **VisReflect**, a simple yet effective framework that improves fine-grained perception in long visual contexts through latent visual reflection. Instead of decoding intermediate predictions into discrete tokens, the model generates continuous visual reflection that represents question-relevant visual features in the latent space. These reflections selectively emphasize salient regions or frames, guiding attention towards relevant visual tokens within a single forward pass. We conduct comprehensive evaluations on challenging high-resolution image benchmarks, including BLINK, V*, and HRBench-4K/8K, as well as video understanding benchmarks such as MVBench, VideoMME, and MLVU. Our method consistently improves over strong baselines, achieving gains of 4.1% on image benchmarks and 1.8% on video benchmarks. Compared with zooming-based methods, our model achieves comparable performance while reducing inference time by roughly 44% on video understanding.",
+      "identifiers": [
+        "SemanticScholar:238bd378e9d1b9880f71f37e6f59838d2ffd824e"
+      ],
+      "semantic_scholar_id": "238bd378e9d1b9880f71f37e6f59838d2ffd824e",
+      "canonical_id": "arXiv:2606.30288",
+      "arxiv_id": "2606.30288",
+      "doi": "10.48550/arXiv.2606.30288",
+      "authors": [
+        "Xiaoqian Shen",
+        "Mohamed Elhoseiny"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 123,
+        "matched_prestigious_venue": null
+      },
+      "reason": "高解像度画像・長尺動画の視覚attention sinkに対し、明示的な領域座標や再エンコードを使わず、連続潜在空間のvisual reflectionを単一forward passで生成して関連視覚トークンへ注意を誘導する。画像ベンチマーク平均4.1%、動画1.8%の品質改善を報告し、zooming系手法比で動画推論時間を約44%削減。マルチモーダル推論計算の直接的な削減。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2b3ca63660a0",
+    "round": "libimp-2b3ca63660a01fa2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2b3ca63660a01fa2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2b3ca63660a01fa2-pre01.json",
+    "receipt": "sha256:6b9723645631eb40bba613da0f40066af0eceef09add8aad5506f97910c16058"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2b3ca63660a0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

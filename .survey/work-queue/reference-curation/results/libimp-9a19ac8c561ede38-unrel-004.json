@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9a19ac8c561ede38-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icws72778.2026.00123",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icws72778.2026.00123",
+    "identity_tokens": [
+      "DOI:10.1109/icws72778.2026.00123"
+    ],
+    "reason": "要旨はservice orchestration/recommendation/fog placement/QoS predictionまたは一般transformer compressionで、LLM inference性能・serving最適化を評価していない。 Primary abstract: Fog application placement becomes significantly more challenging when applications are composed of AI services, whose resource demands vary with input characteristics and runtime contention. Existing approaches either rely on centralized coordination or assume static service demands that do not reflect modern AI workloads. In this work, we transform the fog",
+    "first_checked_at": "2026-10-05T11:24:46+00:00",
+    "last_checked_at": "2026-10-05T11:24:46+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+    ],
+    "title": "Fully Decentralized Mixture-Of-Experts-Based Placement of AI-Enabled Fog Applications"
+  },
+  "processed_at": "2026-10-05T11:24:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9a19ac8c561e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

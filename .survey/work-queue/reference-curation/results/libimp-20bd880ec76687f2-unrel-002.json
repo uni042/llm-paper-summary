@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20bd880ec76687f2-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.02657",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.02657",
+    "identity_tokens": [
+      "arXiv:2404.02657"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2404.02657. Abstract summary: Kullback-Leiber divergence has been widely used in Knowledge Distillation (KD) to compress Large Language Models (LLMs). Contrary to prior assertions that reverse Kullback-Leibler (RKL) divergence is mode-seeking and thus preferable over the mean-seeking forward Kullback-Leibler (FKL) divergence, this study empirically and theor Out of scope: Knowledge-distillation objective analysis/training, not inference runtime.",
+    "first_checked_at": "2026-10-05T12:30:32+00:00",
+    "last_checked_at": "2026-10-05T12:30:32+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+    ],
+    "title": "Rethinking Kullback-Leibler Divergence in Knowledge Distillation for Large Language Models"
+  },
+  "processed_at": "2026-10-05T12:30:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20bd880ec766",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-fa92fd63de95d435-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2505.06708",
+  "reason": "SDPA出力へhead-specific sigmoid gateを追加し、query-dependent sparse gatingでattention sinkを抑えlong-context extrapolationを改善するLLM attention研究。15B MoE/1.7B denseで大規模評価するが、主要評価は学習安定性・能力・長文脈性能で、推論latency/memory/serving効率を直接最適化・benchmarkするsystem研究ではないためborderline。",
+  "title": "Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free",
+  "identity_tokens": [
+    "arXiv:2505.06708"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa92fd63de95",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0e9427a3c1a0c18a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+    "identity_tokens": [
+      "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "semanticscholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "title:legoos-a-disseminated-distributed-os-for-hardware-resource-disaggregation"
+    ],
+    "reason": "OSDI 2018の一次要旨では、計算・メモリ・ストレージをネットワーク接続された独立資源へ分離し、各資源の監視機構を分散させるsplitkernelとLegoOSを提案する。遠隔メモリ管理と資源分離はLLMの階層メモリ・推論サービングに対する基盤的な関連性を持つが、論文の直接の評価対象は汎用OS・資源充填・故障率であり、LLM推論・KVキャッシュ・MoE・推論カーネルの性能を評価しない。無関係と切り捨てず境界候補に分類し、関連研究として必要な場合に参照する。",
+    "first_checked_at": "2026-10-12T09:45:36+00:00",
+    "last_checked_at": "2026-10-12T09:45:36+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
+  },
+  "processed_at": "2026-10-12T09:45:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0e9427a3c1a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

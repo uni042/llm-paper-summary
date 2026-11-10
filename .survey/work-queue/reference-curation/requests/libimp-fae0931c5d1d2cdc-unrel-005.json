@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-fae0931c5d1d2cdc-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.25683",
+  "reason": "要旨は「In modern agentic AI training, the system bottleneck is shifting from rollout to update. Emerging sampling strategies such as tree-structured and step-wise RL greatly increase training sample volume while incurring relatively low marginal rollout cost, causing the update phase to dominate the end-to-end execution time.」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+  "title": "psRL: Efficient Training for Agentic AI via Training-Time Prefix Sharing",
+  "identity_tokens": [
+    "arXiv:2608.25683"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+    "papers/inference/07-kv-cache-optimization-compression/2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md",
+    "papers/inference/07-kv-cache-optimization-compression/2025-2503.18292-jenga-heterogeneous-memory-management.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.13965-autellix-agent-program-serving.md",
+    "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fae0931c5d1d",
+  "source_precheck_request_id": null
+}

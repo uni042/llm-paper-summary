@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-76a8a369011284b7-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.12075",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.12075",
+    "identity_tokens": [
+      "arXiv:2609.12075"
+    ],
+    "reason": "本文で有効なserving最適化を確認したが、VLMとaction-diffusionを組み合わせたrobot-factory専用のsystems studyであり、一般LLM推論servingとの適合が弱い。VLA領域を対象へ含めるか判断するまでborderline。",
+    "first_checked_at": "2026-10-05T06:56:47+00:00",
+    "last_checked_at": "2026-10-05T06:56:47+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.02015-muxserve-flexible-spatial-temporal-multiplexing-for-multiple-llm-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md",
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "Efficient Vision-Language-Action Management and Serving for Robot Factories"
+  },
+  "processed_at": "2026-10-05T06:56:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-76a8a3690112",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

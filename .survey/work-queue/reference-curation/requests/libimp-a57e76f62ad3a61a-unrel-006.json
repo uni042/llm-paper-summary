@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a57e76f62ad3a61a-unrel-006",
+  "operation": "mark_unrelated",
+  "canonical_id": "OpenReview:EvDeiLv7qc",
+  "reason": "Parameter-efficient instruction-tuning work: it uses MoE-style adapters to reduce trainable parameters, but its final objective is fine-tuning efficiency rather than MoE inference routing, expert placement, offload, or serving.",
+  "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning",
+  "identity_tokens": [
+    "OpenReview:EvDeiLv7qc"
+  ],
+  "linked_from": [
+    "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
+    "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a57e76f62ad3",
+  "source_precheck_request_id": null
+}

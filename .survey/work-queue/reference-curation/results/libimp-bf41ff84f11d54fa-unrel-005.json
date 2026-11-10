@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bf41ff84f11d54fa-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.03099",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.03099",
+    "identity_tokens": [
+      "arXiv:2311.03099"
+    ],
+    "reason": "DAREはSFT delta parameterをdrop/rescaleして複数モデルをmergeするweight-merging手法。本文はタスク性能を評価するが、sparsified deltaはbase weightsへmergeされ、推論時の疎実行、model footprint、serving latencyの改善を実証していない。",
+    "first_checked_at": "2026-10-04T23:31:08+00:00",
+    "last_checked_at": "2026-10-05T00:58:25+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md"
+    ],
+    "title": "Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch"
+  },
+  "processed_at": "2026-10-05T00:58:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bf41ff84f11d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

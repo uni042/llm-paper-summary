@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30f50094396cc85a-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1307.2118",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1307.2118",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1307.2118",
+      "arXiv:1307.2118"
+    ],
+    "reason": "PAC-Bayes一般化理論、Occam bound、dropout boundを整理する学習理論チュートリアルで、推論システムとは無関係。",
+    "first_checked_at": "2026-10-03T15:20:46+00:00",
+    "last_checked_at": "2026-10-03T15:20:46+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+    ],
+    "title": "A PAC-Bayesian Tutorial with A Dropout Bound"
+  },
+  "processed_at": "2026-10-03T15:20:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30f50094396c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

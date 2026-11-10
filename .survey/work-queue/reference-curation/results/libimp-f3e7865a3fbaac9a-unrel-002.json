@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f3e7865a3fbaac9a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.07592",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.07592",
+    "identity_tokens": [
+      "arXiv:2406.07592"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2406.07592. Abstract summary: Recent sequence modeling approaches using selective state space sequence models, referred to as Mamba models, have seen a surge of interest. These models allow efficient processing of long sequences in linear time and are rapidly being adopted in a wide range of applications such as language modeling, demonstrating promising performance.  Out of scope: Mamba explainability algorithm; efficient Mamba is context, not the contribution.",
+    "first_checked_at": "2026-10-05T12:52:57+00:00",
+    "last_checked_at": "2026-10-05T12:52:57+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+    ],
+    "title": "MambaLRP: Explaining Selective State Space Sequence Models"
+  },
+  "processed_at": "2026-10-05T12:52:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f3e7865a3fba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

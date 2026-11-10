@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-52a34989c8ae780c3bc8d7f5",
+  "job_id": "job-research-85f2bc3e024d7c6c",
+  "claim_id": "claim-52a34989c8ae780c3bc8d7f5",
+  "worker_id": "scheduled-chat-llm-30",
+  "status": "blocked",
+  "reason": "Primary full text could not be safely obtained in this invocation after checking materially distinct official/publication routes. No five-slot scientific record was synthesized from abstracts or secondary snippets.",
+  "retrieval_evidence": [
+    "ACM/SIGCOMM DOI/publication route for DOI 10.1145/3789240.3829347 was identified via the official SIGCOMM 2026 proceedings listing, but accessible search/open results did not expose the paper full text.",
+    "Official SIGCOMM 2026 MOSAIC workshop page confirmed DynamoServe as Paper 3 but did not expose a retrievable full-text copy through the available route.",
+    "Coauthor Ryan Stutsman's official publication page confirmed the workshop paper and pages 2077-2082 but did not provide a retrievable full-text copy in the available page content.",
+    "ResearchGate explicitly reported no full-text available; secondary abstract/search snippets were not used as substitutes for full-text reading."
+  ],
+  "blocked_at": "2026-09-21T02:35:00Z"
+}

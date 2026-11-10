@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9eeddad4f30e7cda-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.18248",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.18248",
+    "identity_tokens": [
+      "arXiv:2609.18248"
+    ],
+    "reason": "一次要旨: An advanced retrieval-augmented generation pipeline is typically assembled from three or four independently operated systems: an approximate nearest-neighbour index, a full-text search engine, a graph database, and a relational document store. Each contributes its own deployment surface, configuration model, and failure modes, and the integration logic that binds them is written anew in every project. In this work, we present",
+    "first_checked_at": "2026-10-05T06:33:17+00:00",
+    "last_checked_at": "2026-10-05T06:33:17+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+    ],
+    "title": "Quanta: A Self-Contained Python Library for Hybrid Retrieval over Quantised Embeddings, Lexical Indexes, and Knowledge Graphs"
+  },
+  "processed_at": "2026-10-05T06:33:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9eeddad4f30e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

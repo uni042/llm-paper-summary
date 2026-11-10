@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0af2e267839ec504-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/978-90-481-9431-5",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/978-90-481-9431-5",
+    "identity_tokens": [
+      "DOI:10.1007/978-90-481-9431-5"
+    ],
+    "reason": "NANDフラッシュメモリのデバイス・回路・信頼性を扱う専門書で、LLM推論向けフラッシュ階層化の一次研究ではない。",
+    "first_checked_at": "2026-10-03T17:50:29+00:00",
+    "last_checked_at": "2026-10-03T17:50:29+00:00",
+    "linked_from": [
+      "worker-worklist-30"
+    ],
+    "title": "Inside NAND Flash Memories"
+  },
+  "processed_at": "2026-10-03T17:50:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0af2e267839e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

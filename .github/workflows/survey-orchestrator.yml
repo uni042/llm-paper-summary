@@ -1,0 +1,191 @@
+name: Survey orchestrator
+
+on:
+  # GitHub scheduled events are best-effort. Run off-minute and provide six
+  # independent chances per hour; the Library handoff push below is the durable
+  # event-driven fallback when scheduled delivery is delayed or dropped.
+  schedule:
+    - cron: '7/10 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.survey/scheduler/library-import-kick.json'
+      # Library uploads are the durable trigger. Cron/watchdog are recovery only.
+      - '.survey/import-inbox/pending/research/**'
+      - '.survey/import-inbox/pending/discovery/**'
+      - '.survey/import-inbox/waiting/discovery/**'
+      - '.github/workflows/survey-orchestrator.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+# Keep scheduler delivery independent from claim/import/background writer queues.
+# This job only dispatches idempotent/freshness-gated workers and never writes main.
+concurrency:
+  group: survey-orchestrator-main
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Dispatch current Library-first lanes
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          dispatch_if_idle() {
+            local workflow="$1"
+            local active
+            active="$(gh run list               --repo "${GITHUB_REPOSITORY}"               --workflow "$workflow"               --limit 20               --json status               --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
+            if [ "${active:-0}" -gt 0 ]; then
+              echo "${workflow}: already active (${active}); skip duplicate dispatch."
+              return 0
+            fi
+            echo "Dispatching ${workflow}"
+            gh api               --method POST               "repos/${GITHUB_REPOSITORY}/actions/workflows/${workflow}/dispatches"               -f ref=main
+          }
+
+          count_dir() {
+            local path="$1"
+            local payload error_file
+            error_file="$(mktemp)"
+            local attempt
+
+            # Never interpret transport/API failures as an empty inbox. A genuinely
+            # absent optional directory (HTTP 404) is the only allowed zero fallback.
+            for attempt in 1 2 3; do
+              if payload="$(gh api "repos/${GITHUB_REPOSITORY}/contents/${path}?ref=main" 2>"$error_file")"; then
+                rm -f "$error_file"
+                jq -er 'if type == "array" then length else error("unexpected inbox response") end' <<< "$payload"
+                return 0
+              fi
+              if grep -q '(HTTP 404)' "$error_file"; then
+                rm -f "$error_file"
+                printf '0\n'
+                return 0
+              fi
+              echo "Inbox lookup failed for ${path}, attempt ${attempt}/3: $(cat "$error_file")" >&2
+              if [ "$attempt" -lt 3 ]; then sleep $((attempt * 2)); fi
+            done
+
+            rm -f "$error_file"
+            echo "FATAL: Cannot determine inbox backlog for ${path}; refusing to report zero." >&2
+            return 1
+          }
+
+          # The import processor is comparatively heavy (checkout, Python setup,
+          # validation and bounded processing). Do not start it when its durable
+          # inbox is empty. A Library handoff push triggers this orchestrator
+          # immediately; the ten-minute schedule is only a missed-event recovery.
+          research_pending="$(count_dir .survey/import-inbox/pending/research)"
+          discovery_pending="$(count_dir .survey/import-inbox/pending/discovery)"
+          discovery_waiting="$(count_dir .survey/import-inbox/waiting/discovery)"
+          import_backlog=$((research_pending + discovery_pending + discovery_waiting))
+          echo "Library import backlog: research=${research_pending}, discovery_pending=${discovery_pending}, discovery_waiting=${discovery_waiting}"
+
+          # GitHub scheduled delivery is best-effort and may skip several nominal
+          # ten-minute ticks. Never infer elapsed time from GITHUB_RUN_NUMBER.
+          # Use the last durable state-changing commit as the clock instead.
+          path_is_stale() {
+            local path="$1"
+            local max_age_seconds="$2"
+            local updated_at updated_epoch now_epoch
+            updated_at="$(gh api \
+              "repos/${GITHUB_REPOSITORY}/commits?path=${path}&sha=main&per_page=1" \
+              --jq '.[0].commit.committer.date // empty' 2>/dev/null || true)"
+            if [ -z "$updated_at" ]; then
+              return 0
+            fi
+            updated_epoch="$(date -u -d "$updated_at" +%s 2>/dev/null || true)"
+            if [ -z "$updated_epoch" ]; then
+              return 0
+            fi
+            now_epoch="$(date -u +%s)"
+            [ $((now_epoch - updated_epoch)) -ge "$max_age_seconds" ]
+          }
+
+          # Empty-inbox recovery is useful but does not need to share the metadata
+          # cadence. Keep the legacy hourly-equivalent behavior only for this cheap
+          # recovery lane; real work starts immediately whenever backlog exists.
+          recovery_tick=0
+          if [ $((GITHUB_RUN_NUMBER % 6)) -eq 0 ]; then
+            recovery_tick=1
+          fi
+
+          # Preserve the uploader paths. Route each durable inbox to its own
+          # writer so a Discovery backfill never blocks Research/reaudit.
+          if [ "$research_pending" -gt 0 ] || [ "$recovery_tick" -eq 1 ]; then
+            dispatch_if_idle library-import.yml
+          else
+            echo 'Research import inbox is empty; skip Research processor.'
+          fi
+          if [ $((discovery_pending + discovery_waiting)) -gt 0 ]; then
+            dispatch_if_idle library-discovery-intake.yml
+          else
+            echo 'Library Discovery inbox is empty; skip Discovery intake.'
+          fi
+
+          metadata_max_age_seconds=3000
+          force_metadata=0
+          # An inbox handoff should dispatch import, not force unrelated metadata
+          # refreshes for every new paper. Only explicit kick/configuration pushes
+          # retain the old metadata bypass; watchdog ticks use freshness gates.
+          if [ "$GITHUB_EVENT_NAME" = "push" ] && jq -e '
+            [.commits[]? | (.added[]?, .modified[]?, .removed[]?)]
+            | any(. == ".survey/scheduler/library-import-kick.json"
+                  or . == ".github/workflows/survey-orchestrator.yml")
+          ' "$GITHUB_EVENT_PATH" >/dev/null; then
+            force_metadata=1
+          fi
+
+          if [ "$force_metadata" -eq 1 ] || path_is_stale ".survey/work-queue/forward-citation-sweep.json" "$metadata_max_age_seconds"; then
+            echo 'Forward-citation state is due by durable wall-clock age.'
+            dispatch_if_idle forward-citation-sweep.yml
+          else
+            echo 'Forward-citation state is still fresh; skip dispatch.'
+          fi
+
+          if [ "$force_metadata" -eq 1 ] || path_is_stale ".survey/work-queue/candidate-priority-cache.json" "$metadata_max_age_seconds"; then
+            echo 'Candidate-priority state is due by durable wall-clock age.'
+            dispatch_if_idle candidate-priority-refresh.yml
+          else
+            echo 'Candidate-priority state is still fresh; skip dispatch.'
+          fi
+
+          # Daily maintenance must not depend solely on GitHub's best-effort
+          # schedule delivery. After 09:00 JST, dispatch maintenance when today's
+          # successful/attempted maintenance completion is still absent, or when a
+          # durable maintenance request is explicitly pending.
+          maintenance_json="$(gh api \
+            "repos/${GITHUB_REPOSITORY}/contents/.survey/work-queue/maintenance-cycle.json?ref=main" \
+            --jq '.content' 2>/dev/null | base64 -d 2>/dev/null || true)"
+          maintenance_pending="$(jq -r '.maintenance_pending // false' <<< "$maintenance_json" 2>/dev/null || echo false)"
+          maintenance_last_completed="$(jq -r '.last_maintenance_completed_at // empty' <<< "$maintenance_json" 2>/dev/null || true)"
+          today_jst="$(TZ=Asia/Tokyo date +%F)"
+          hour_jst="$(TZ=Asia/Tokyo date +%H)"
+          last_maintenance_day_jst=""
+          if [ -n "$maintenance_last_completed" ]; then
+            last_maintenance_day_jst="$(TZ=Asia/Tokyo date -d "$maintenance_last_completed" +%F 2>/dev/null || true)"
+          fi
+
+          maintenance_due=0
+          if [ "$maintenance_pending" = "true" ]; then
+            maintenance_due=1
+            echo 'Maintenance request is pending.'
+          elif [ $((10#$hour_jst)) -ge 9 ] && [ "$last_maintenance_day_jst" != "$today_jst" ]; then
+            maintenance_due=1
+            echo "Daily maintenance missing for ${today_jst} JST; dispatch recovery."
+          fi
+
+          if [ "$maintenance_due" -eq 1 ]; then
+            dispatch_if_idle maintenance.yml
+          else
+            echo 'Daily maintenance is current; skip dispatch.'
+          fi
+

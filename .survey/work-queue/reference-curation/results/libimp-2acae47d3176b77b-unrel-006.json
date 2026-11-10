@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2acae47d3176b77b-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/te.2024.3467912",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/te.2024.3467912",
+    "identity_tokens": [
+      "DOI:10.1109/te.2024.3467912"
+    ],
+    "reason": "教育用MoodleBotをMoodle学習管理システムへ統合し、検索拡張による科目質問応答と学生の技術受容・学習支援効果を評価する教育工学研究。46人の学生参加と科目関連応答の正確率88%が主結果で、推論実行基盤やLLMサービングの性能最適化ではない。",
+    "first_checked_at": "2026-10-07T22:08:44+00:00",
+    "last_checked_at": "2026-10-07T22:08:44+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2601.21198-zipmoe-lossless-compression-cache-affinity-scheduling.md"
+    ],
+    "title": "An LLM-Driven Chatbot in Higher Education for Databases and Information Systems"
+  },
+  "processed_at": "2026-10-07T22:08:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2acae47d3176",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

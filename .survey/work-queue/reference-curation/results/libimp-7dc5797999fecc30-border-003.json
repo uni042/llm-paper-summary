@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7dc5797999fecc30-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.10416",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.10416",
+    "identity_tokens": [
+      "arXiv:2608.10416"
+    ],
+    "reason": "逆距離attentionをユークリッドから双曲・球面測地へ拡張し、検索回路分離・学習収束・effective rankの理論を提示。O(1) per-tokenを含む演算子と双曲メモリ圧縮を主張するが、要旨ではLLM実機の実行速度・メモリ・品質の統合比較を確認できないため、理論的な推論効率化候補として境界判定。",
+    "first_checked_at": "2026-10-30T19:08:14+00:00",
+    "last_checked_at": "2026-10-30T19:08:14+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Riemann GeoResolver: A Non-Euclidean Attention Framework from Euclidean Resolver to Hyperbolic-Spherical Geometry"
+  },
+  "processed_at": "2026-10-30T19:08:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7dc5797999fe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

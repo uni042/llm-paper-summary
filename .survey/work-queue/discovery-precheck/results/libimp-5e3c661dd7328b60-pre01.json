@@ -1,0 +1,158 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5e3c661dd7328b60-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5e3c661dd732",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2404.07904",
+    "arXiv:2404.08698"
+  ],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3167a1365944a62d2d81c5ebbb12ba97108b6a8d",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T11:00:03.715390+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2404.07904",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2404.08698",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "HGRN2: Gated Linear RNNs with State Expansion",
+      "source_url": "https://arxiv.org/abs/2404.07904",
+      "year": 2024,
+      "published": "2024-04-11",
+      "abstract": "Hierarchically gated linear RNN (HGRN, \\citealt{HGRN}) has demonstrated competitive training speed and performance in language modeling while offering efficient inference. However, the recurrent state size of HGRN remains relatively small, limiting its expressiveness. To address this issue, we introduce a simple outer product-based state expansion mechanism, which significantly enlarges the recurrent state size without introducing any additional parameters. This enhancement also provides a linear attention interpretation for HGRN2, enabling hardware-efficient training. Our extensive experiments verify the advantage of HGRN2 over HGRN consistently across different settings and competitive with other recurrent models.",
+      "canonical_id": "arXiv:2404.07904",
+      "arxiv_id": "2404.07904",
+      "doi": "10.48550/arXiv.2404.07904",
+      "authors": [
+        "Zhen Qin",
+        "Songlin Yang",
+        "Weixuan Sun",
+        "Xu-Yang Shen",
+        "Dong Li",
+        "Wei-Gao Sun",
+        "Yi-Ran Zhong"
+      ]
+    },
+    {
+      "title": "Lossless Acceleration of Large Language Model via Adaptive N-gram Parallel Decoding",
+      "source_url": "https://arxiv.org/abs/2404.08698",
+      "year": 2024,
+      "published": "2024-04-10",
+      "abstract": "While Large Language Models (LLMs) have shown remarkable abilities, they are hindered by significant resource consumption and considerable latency due to autoregressive processing. In this study, we introduce Adaptive N-gram Parallel Decoding (ANPD), an innovative and lossless approach that accelerates inference by allowing the simultaneous generation of multiple tokens. ANPD incorporates a two-stage approach: it begins with a rapid drafting phase that employs an N-gram module, which adapts based on the current interactive context, followed by a verification phase, during which the original LLM assesses and confirms the proposed tokens. Consequently, ANPD preserves the integrity of the LLM's original output while enhancing processing speed. We further leverage a multi-level architecture for the N-gram module to enhance the precision of the initial draft, consequently reducing inference latency. ANPD eliminates the need for retraining or extra GPU memory, making it an efficient and plug-and-play enhancement. In our experiments, models such as LLaMA and its fine-tuned variants have shown speed improvements up to 3.67x, validating the effectiveness of our proposed ANPD.",
+      "canonical_id": "arXiv:2404.08698",
+      "arxiv_id": "2404.08698",
+      "doi": "10.48550/arXiv.2404.08698",
+      "authors": [
+        "Jie Ou",
+        "Yueming Chen",
+        "Wen-Hong Tian"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2404.07904",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.07904",
+        "id:arXiv:2404.07904",
+        "title:hgrn2 gated linear rnns with state expansion",
+        "url:https://arxiv.org/abs/2404.07904"
+      ],
+      "record": {
+        "title": "HGRN2: Gated Linear RNNs with State Expansion",
+        "source_url": "https://arxiv.org/abs/2404.07904",
+        "year": 2024,
+        "published": "2024-04-11",
+        "abstract": "Hierarchically gated linear RNN (HGRN, \\citealt{HGRN}) has demonstrated competitive training speed and performance in language modeling while offering efficient inference. However, the recurrent state size of HGRN remains relatively small, limiting its expressiveness. To address this issue, we introduce a simple outer product-based state expansion mechanism, which significantly enlarges the recurrent state size without introducing any additional parameters. This enhancement also provides a linear attention interpretation for HGRN2, enabling hardware-efficient training. Our extensive experiments verify the advantage of HGRN2 over HGRN consistently across different settings and competitive with other recurrent models.",
+        "canonical_id": "arXiv:2404.07904",
+        "arxiv_id": "2404.07904",
+        "doi": "10.48550/arXiv.2404.07904",
+        "authors": [
+          "Zhen Qin",
+          "Songlin Yang",
+          "Weixuan Sun",
+          "Xu-Yang Shen",
+          "Dong Li",
+          "Wei-Gao Sun",
+          "Yi-Ran Zhong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.08698",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.08698",
+        "id:arXiv:2404.08698",
+        "title:lossless acceleration of large language model via adaptive ngram parallel decoding",
+        "url:https://arxiv.org/abs/2404.08698"
+      ],
+      "record": {
+        "title": "Lossless Acceleration of Large Language Model via Adaptive N-gram Parallel Decoding",
+        "source_url": "https://arxiv.org/abs/2404.08698",
+        "year": 2024,
+        "published": "2024-04-10",
+        "abstract": "While Large Language Models (LLMs) have shown remarkable abilities, they are hindered by significant resource consumption and considerable latency due to autoregressive processing. In this study, we introduce Adaptive N-gram Parallel Decoding (ANPD), an innovative and lossless approach that accelerates inference by allowing the simultaneous generation of multiple tokens. ANPD incorporates a two-stage approach: it begins with a rapid drafting phase that employs an N-gram module, which adapts based on the current interactive context, followed by a verification phase, during which the original LLM assesses and confirms the proposed tokens. Consequently, ANPD preserves the integrity of the LLM's original output while enhancing processing speed. We further leverage a multi-level architecture for the N-gram module to enhance the precision of the initial draft, consequently reducing inference latency. ANPD eliminates the need for retraining or extra GPU memory, making it an efficient and plug-and-play enhancement. In our experiments, models such as LLaMA and its fine-tuned variants have shown speed improvements up to 3.67x, validating the effectiveness of our proposed ANPD.",
+        "canonical_id": "arXiv:2404.08698",
+        "arxiv_id": "2404.08698",
+        "doi": "10.48550/arXiv.2404.08698",
+        "authors": [
+          "Jie Ou",
+          "Yueming Chen",
+          "Wen-Hong Tian"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:5c4c8ddf68672d404103c9dd49587bc4c440eba083dc51bd6776c62d2f6da74a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

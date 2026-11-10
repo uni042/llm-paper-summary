@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Characterization of Request and Token Energy Costs for LLM Inference Workloads on GPU Platforms",
+      "source_url": "https://arxiv.org/abs/2608.28044",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference serving is priced by tokens, but GPU energy is consumed over inference windows. This accounting mismatch makes token-normalized metrics incomplete, since average output-token energy can decrease even when total request energy increases. We characterize this behavior with a decomposed energy model: a fixed one-time prefill with a fixed generation setup cost, while each output-token generation step adds marginal step energy. We evaluate this LLM inference energy model on NVIDIA H100 and H200 GPUs across dense and mixture-of-experts (MoE) models, reporting both request energy and token energy as functions of model type (M), phase (P), batch size (B), context length (C), and output length (N). For Llama-3.2-1B on H200 at batch-16 and context-4K, increasing output length from 10 to 512 tokens reduces token energy from 7.46 to 0.72 J/token while total batched inference-window energy increases from 1.19 to 5.93 kJ. Batching also reduces token energy, but the gain is context-bounded: at 10 output tokens, the batch-16 to batch-1 gain falls from 6.31x at context-512 to 1.17x at context-4K. MoE models amplify this effect: sparse routing and fragmented expert execution increase fixed energy at low concurrency, while batching spreads that energy across more generated tokens and substantially narrows the dense-vs.-MoE token-energy gap. These results show that energy-aware serving should jointly optimize both request energy and token energy, rather than only reducing per-token energy cost.",
+      "identifiers": [
+        "SemanticScholar:aaf46dc87740c49088dedc2036ecaa4814de3791"
+      ],
+      "semantic_scholar_id": "aaf46dc87740c49088dedc2036ecaa4814de3791",
+      "canonical_id": "arXiv:2608.28044",
+      "arxiv_id": "2608.28044",
+      "authors": [
+        "P. Vellaisamy",
+        "Vanessa Lam",
+        "Shawn Blanton",
+        "J. Shen"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論のtoken当たりエネルギーが下がっても要求全体の電力量が増える計測上の落とし穴を、prefill固定費とdecode各ステップの限界費用へ分解して分析。H100/H200でモデル、バッチ、文脈長、出力長を変え、token正規化と要求単位の両指標を比較する。新規カーネルではないが推論サービングの省電力・容量設計に直接有用な実測研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "BFLA: Block-Filtered Long-Context Attention Mechanism",
+      "source_url": "https://arxiv.org/abs/2605.12193",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose Block-Filtered Long-Context Attention (BFLA), a training-free sparse prefill method that combines deterministic Lightning-style block indexing, query-tile sharing, and length-adaptive Ratio-$K$ selection with block-sparse execution. BFLA evaluates attention using the original Q/K/V, requires no retraining or per-model parameter retuning, and integrates with vLLM while preserving native decoding. For fixed Q/K/V, we bound local attention-output error in terms of the omitted attention mass, indexer-score distortion, retention budget, and query-tile sharing. Evaluations on Gemma4-E4B-IT, Qwen3.6-27B, Qwen3.8-27B, and Qwen3.8-Flash-Next across LongBench-v2, RULER, InfiniteBench, and Terminal Bench 2.1 show BFLA matches or even outperforms dense baselines. BFLA shows up to approximately $4\\times$ time-to-first-token and $3.72\\times$ end-to-end request speedups over the corresponding dense-prefill baselines. Comparisons with state-of-the-art FlashPrefill V2 and Qwen Sparse Attention also demonstrate that BFLA has better performance and efficiency trade-offs. These findings highlight the value of BFLA for the acceleration of long-context serving. Project website: https://github.com/Alicewithrabbit/BFLA.",
+      "identifiers": [
+        "SemanticScholar:7ad8414655ee444560a62378390cd60eafe97c80"
+      ],
+      "semantic_scholar_id": "7ad8414655ee444560a62378390cd60eafe97c80",
+      "canonical_id": "arXiv:2605.12193",
+      "arxiv_id": "2605.12193",
+      "authors": [
+        "Chong Wu",
+        "Brian K. Chen",
+        "Chu-Xu Song",
+        "She-Zheng Song",
+        "Zhenan Feng",
+        "Ren-Jie Xu",
+        "Hou-Wang Zhang",
+        "Jiawang Cao",
+        "Mao-Lin Che",
+        "Wen-Bo Zhu",
+        "Hong Yan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 171,
+        "matched_prestigious_venue": null
+      },
+      "reason": "再学習なしで長文脈prefillを疎化するBFLA。決定的なブロック索引、クエリタイル共有、長さ適応のRatio-K選択とblock-sparse実行を組み合わせ、vLLMへ統合しdecodeは通常経路を保持する。Gemma/Qwen系列の長文脈評価でTTFT最大約4倍、要求全体最大3.72倍の高速化を報告する直接的なサービング最適化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "SCVQ: Sparse-Compensated Vector Quantization for Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.403",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:61c4fa7825f5e261d1f98e38dded46b1b4d9c7ec"
+      ],
+      "semantic_scholar_id": "61c4fa7825f5e261d1f98e38dded46b1b4d9c7ec",
+      "doi": "10.18653/v1/2026.acl-long.403",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.403",
+      "authors": [
+        "Zixuan Zhou",
+        "Yu-Jun Diao",
+        "Zichen Kong",
+        "De-Hua Ma",
+        "Zhenbo Xu",
+        "Pei-Pei Li",
+        "Zhao-Feng He"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "低ビットのベクトル量子化でコードブック保存・索引検索の費用と精度劣化が大きい問題に対し、顕著性重み付きK-meansと、外れ値・重要重み・残差を一つの疎補償行列に統合するSCVQを提案。2bitのLLaMA-2-7BでWikiText-2 PPL 5.78、既存方式比end-to-end推論1.4倍を報告。ACL 2026公式要旨で確認。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models",
+      "source_url": "https://arxiv.org/abs/2602.06822",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large foundation models (LFMs) achieve strong performance through scaling, yet current structural pruning methods derive fixed pruning decisions during inference, overlooking sparsity patterns that emerge in the autoregressive token generation. In this paper, we propose POP (Partition-guided Online Pruning), an efficient online structural pruning framework that enables context-conditioned dynamic pruning with minimal computational overhead. POP partitions model channels into retained, candidate, and pruned regions, where prefilling defines a coarse pruning partition, and the decoding stage generates a fine-grained mask within the candidate region, avoiding full-channel re-evaluation. The coarse pruning partition preserves consistently important weights, while the fine-grained masking provides context-conditioned variation during decoding. Moreover, POP is a lightweight, plug-and-play method that requires no preprocessing, including offline calibration, retraining, or learning predictors. Extensive evaluations across diverse LFMs, including large language models (LLMs), mixture-of-experts models (MoEs), and vision-language models (VLMs), demonstrate that POP consistently delivers higher accuracy than existing pruning approaches while incurring smaller computational overhead and minimizing inference latency.",
+      "identifiers": [
+        "SemanticScholar:6adc07c64a98a11174b72e77714f6d4427a1e3a8"
+      ],
+      "semantic_scholar_id": "6adc07c64a98a11174b72e77714f6d4427a1e3a8",
+      "canonical_id": "arXiv:2602.06822",
+      "arxiv_id": "2602.06822",
+      "doi": "10.48550/arXiv.2602.06822",
+      "authors": [
+        "Yi Chen",
+        "Wonjin Shin",
+        "Shuhong Liu",
+        "Tho Mai",
+        "Jeongmo Lee",
+        "Chuan-Bo Hua",
+        "Kunlun Wang",
+        "Jun Liu",
+        "Jooyul Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 266,
+        "matched_prestigious_venue": null
+      },
+      "reason": "固定の構造枝刈りではトークン生成中に変わる活性パターンへ追従できない問題を扱う。prefillで保持・候補・削除の粗いチャネル領域を決め、decodeでは候補領域だけ文脈依存の細粒度マスクを更新するPOPを提案。追加校正・再学習なしでLLM/MoE/VLMの推論演算削減と遅延改善を狙う直接的なオンライン剪定方式。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "MiCo: Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.34330",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) have demonstrated impressive performance in multimodal understanding, but processing large numbers of visual tokens results in high computational costs. While many methods have been proposed to reduce the number of visual tokens, most of them rely on heuristics and are prone to discarding substantial visual information during pruning, leading to degradation in model performance. In this work, by using a semantic erasure model, we derive a general mutual information coverage objective from task log-loss and propose MiCo, a training-free two-stage pruning method. MiCo first uses visual signals to select a representative candidate pool before visual tokens enter the language model, then performs task-aware subset selection within it. At each stage, suitable observable proxies instantiate the derived objective as a monotone submodular coverage function, which MiCo greedily optimizes under the token budget. MiCo is evaluated on diverse MLLMs ranging from 7B to 13B parameters across a broad range of image and video benchmarks spanning general visual reasoning, fine-grained OCR and grounding, hallucination detection, and long-video understanding. MiCo consistently achieves the best performance across nearly all evaluated models under all pruning ratios. On LLaVA-NEXT-13B, MiCo uses only 5.6% visual tokens, retains 97.5% of baseline performance, and achieves a 3.8-fold inference speedup. Our experiments demonstrate the effectiveness of MiCo and our mutual information coverage objective for visual token pruning. Our code is available at https://github.com/MAX-7237/MiCo.",
+      "identifiers": [
+        "SemanticScholar:1a7cdbd5600103593b99b4f27b321a2b8c6c53cf"
+      ],
+      "semantic_scholar_id": "1a7cdbd5600103593b99b4f27b321a2b8c6c53cf",
+      "canonical_id": "arXiv:2609.34330",
+      "arxiv_id": "2609.34330",
+      "authors": [
+        "Ting-Hao Wang",
+        "Yi-Chen Guo",
+        "Qi-Zhe Zhang",
+        "Yuan Zhang",
+        "Wei-Min Ouyang",
+        "Rui Huang",
+        "Jia-Jun Cao",
+        "Si-Xiang Chen",
+        "Hao-Kai Jiang",
+        "Ji-Xin Wu",
+        "Zheng Lu",
+        "Bo-Fan Zhu",
+        "Ren-Yuan Li",
+        "Shang-Hang Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚トークンを経験的スコアだけで剪定すると必要な意味情報が消える問題に対し、意味消去モデルから相互情報量カバレッジ目的を導出する。言語モデル投入前の代表候補抽出とタスク依存部分集合選択の二段階で、劣モジュラ目的を予算内で貪欲最適化する学習不要のMLLM推論圧縮手法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-608ca969d07e",
+    "round": "libimp-608ca969d07e8496-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-608ca969d07e8496-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-608ca969d07e8496-pre01.json",
+    "receipt": "sha256:24ef7a10dd6242e876a7d65a3d33095ffb3c30bb839946846e9ed067343db6cc"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-608ca969d07e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

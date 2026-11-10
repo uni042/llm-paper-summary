@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d17a12fd04af90be-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2312.11750",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2312.11750",
+    "identity_tokens": [
+      "arXiv:2312.11750"
+    ],
+    "reason": "The HTML full-text endpoint returned an internal error; only the primary abstract was accessible. Keep borderline until primary full text can be reviewed.",
+    "first_checked_at": "2026-10-05T14:55:41+00:00",
+    "last_checked_at": "2026-10-05T14:55:41+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+      "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Heterogeneous Chiplet Architecture for Accelerating End-to-End Transformer Models"
+  },
+  "processed_at": "2026-10-05T14:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d17a12fd04af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

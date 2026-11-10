@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-28266788289528a1-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.14194",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.14194",
+    "identity_tokens": [
+      "arXiv:2501.14194"
+    ],
+    "reason": "ENTER uses event graphs for interpretable video question answering; the abstract emphasizes task reasoning and interpretation rather than runtime or system efficiency.",
+    "first_checked_at": "2026-10-14T04:12:33+00:00",
+    "last_checked_at": "2026-10-14T04:12:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md",
+      "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+    ],
+    "title": "ENTER: Event Based Interpretable Reasoning for VideoQA"
+  },
+  "processed_at": "2026-10-14T04:12:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-282667882895",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

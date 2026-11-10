@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T083600Z-scheduled-chat-30-7b3f91-ihslm-pf1",
+  "kind": "research",
+  "attempt_id": "attempt-e9383c5ed3b356c7078986c9",
+  "job_id": "job-research-69b42673d686f6f1",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-9b405eddeda4-ihs-lm-intra-batch-hybrid-scheduling-and-layer-migration-for-vlm-pipeline-inference-acceleration-on-edge-devices.md",
+  "expected_blob_sha": null,
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:19076b4bd16f31c2c108aa4d272f977040f51011bd5fea7457e11f956f59690d",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "f35b1fc005312a64710c7eb5aecc053e18028787"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "bcd37ede4cbb55174067503a5cbec77c2c1bc0c8"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "f639b98c658c7cf90167c44e051826d272ee5734"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "f059c3da13b37b949e1fccfcc1b939ab586a7067"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "88fd8168ff0ffc9a7ef4f402404db31f760f6b81"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-23T08:37:46+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-9b405eddeda4-ihs-lm-intra-batch-hybrid-scheduling-and-layer-migration-for-vlm-pipeline-inference-acceleration-on-edge-devices.md",
+    "status": "FAIL",
+    "file_bytes": 20322,
+    "prose_chars": 5971,
+    "paragraphs": 21,
+    "method_paragraphs": 8,
+    "method_components": 5,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7399963456970583,
+    "japanese_chars": 4050,
+    "latin_chars": 1423,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 74.0% < 警告基準 80.0%"
+    ]
+  }
+}

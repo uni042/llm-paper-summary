@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dce28c71cc61d8a5-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/iccd65941.2025.00044",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/iccd65941.2025.00044",
+    "identity_tokens": [
+      "DOI:10.1109/iccd65941.2025.00044"
+    ],
+    "reason": "DOI/title identity matches the candidate, and the IEEE Xplore route was attempted but unavailable. The primary abstract could not substantiate the proposed adaptive sparse KV-cache mechanism or its inference efficiency claims; secondary summaries are not used as substitutes.",
+    "first_checked_at": "2026-10-13T23:22:09+00:00",
+    "last_checked_at": "2026-10-13T23:22:09+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "DualSpar: A Dual-Granularity Memory Framework with Adaptive Sparsity for Efficient LLM Inference"
+  },
+  "processed_at": "2026-10-13T23:22:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dce28c71cc61",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

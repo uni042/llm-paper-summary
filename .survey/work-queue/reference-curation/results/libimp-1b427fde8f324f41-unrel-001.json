@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1b427fde8f324f41-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.22184",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.22184",
+    "identity_tokens": [
+      "arXiv:2503.22184"
+    ],
+    "reason": "本文の対象はコバルト・シリコンナノ散乱体の光学Tellegen効果で、非相反磁気電気結合の実験。MoEの専門家キャッシュやLLMサービングとは無関係。worklistの題名「MoECache」とarXiv IDの実際の論文が不一致。",
+    "first_checked_at": "2026-10-18T10:11:36+00:00",
+    "last_checked_at": "2026-10-18T10:11:36+00:00",
+    "linked_from": [],
+    "title": "Realization of the Tellegen Effect in Resonant Optical Metasurfaces"
+  },
+  "processed_at": "2026-10-18T10:11:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b427fde8f32",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-180fe514f4f41897-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.05228",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.05228",
+    "identity_tokens": [
+      "arXiv:2608.05228"
+    ],
+    "reason": "The\"decompose-then-verify\"paradigm for LLM factuality evaluation faces a fundamental trade-off: atomic facts, i.e., one sentence conveying one unit of information, often omit essential context, while broader statements lack the granularity needed for precise assessment. To address this, we introduce TriQua, a framework that flexibly models facts based on their complexity. Simple claims are extracted as standard triples, while complex claims are represented as hyperrelational facts by attaching auxiliary contextual qualifiers. This adaptive structure preserves the necessary context for accurate retrieval and verification without sacrificing atomicity. Furthermore, TriQua's verification process directly annotates concrete errors within specific triples and qualifiers, providing fine-grained explainability for error detection. Alongside the framework, we propose TriQuaScore to quantify the factuality of these structured fact units. Empirical evaluations show that TriQuaScore strongly aligns with human annotated factuality scores, TriQua achieves robust decomposition quality, and outperforms existing decomposition-based frameworks in evidence-based fact verification.",
+    "first_checked_at": "2026-10-05T09:05:33+00:00",
+    "last_checked_at": "2026-10-05T09:05:33+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "TriQua: Reconciling Granularity and Context in Factuality Evaluation"
+  },
+  "processed_at": "2026-10-05T09:05:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-180fe514f4f4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

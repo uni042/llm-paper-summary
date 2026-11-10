@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "auto11-00-20260923T045745Z-p3-preflight-01",
+  "kind": "research",
+  "attempt_id": "attempt-c702d1e87d96e29f00644312",
+  "job_id": "job-research-c9fd7d4e4bda09de",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.28042-translation-specialist-expert-pruning.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-00",
+  "run_key": "scheduled-chat-00-auto11-20260923T045745Z",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-23T04:57:45+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:7530d9b208557a97eba1679c67ac74a43e0e5f8d905b6f97def89ea3ea25bea3",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "13c2692c507eb2b5a25a5c77a93bf2761cad7821"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "38d20dc5bff0286e7c0c1087ddb65a629cb8435b"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "5feeea2df064a049f72f4699b230cfbe523268df"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "0564d618c511785cad7de9c67e79df7631e5c404"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "93d50065fafaf1c9109b653779f44225384136f6"
+    }
+  ],
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short"
+  ],
+  "checked_at": "2026-09-23T05:15:37+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

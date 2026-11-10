@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2340f219915d7d6b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.03159",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.03159",
+    "identity_tokens": [
+      "arXiv:2410.03159",
+      "id:arXiv:2410.03159",
+      "url:https://arxiv.org/abs/2410.03159"
+    ],
+    "reason": "WAVE improves time-series forecasting through a hybrid attention structure; the primary abstract does not establish an LLM or inference-system efficiency contribution.",
+    "first_checked_at": "2026-10-13T21:12:07+00:00",
+    "last_checked_at": "2026-10-13T21:12:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md",
+      "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+    ],
+    "title": "WAVE: Weighted Autoregressive Varying Gate for Time Series Forecasting"
+  },
+  "processed_at": "2026-10-13T21:12:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2340f219915d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

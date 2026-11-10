@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2f2e640969a9bba0-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.05080",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.05080",
+    "identity_tokens": [
+      "arXiv:2410.05080"
+    ],
+    "reason": "costを含むagent評価benchmarkとして周辺知識にはなるが、効率化手法を提案せず、主要貢献は科学agent能力評価であるためborderline。",
+    "first_checked_at": "2026-10-05T01:35:59+00:00",
+    "last_checked_at": "2026-10-05T01:35:59+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md"
+    ],
+    "title": "ScienceAgentBench: Toward Rigorous Assessment of Language Agents for Data-Driven Scientific Discovery"
+  },
+  "processed_at": "2026-10-05T01:35:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f2e640969a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

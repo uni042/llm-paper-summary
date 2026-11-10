@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f146b009cbe7ae0e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.00949",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.00949",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2505.00949",
+      "arXiv:2505.00949"
+    ],
+    "reason": "モデル報告の大部分は知識蒸留・継続事前学習・SFT/RLなどモデル構築だが、第一段でPuzzleによるhardware-aware NASとFFN fusionを用い、推論latency・memory・throughputを目的関数としてLlamaブロックを置換する明確な推論効率化要素がある。学習主体の凍結範囲との境界にあるためborderline。",
+    "first_checked_at": "2026-09-30T08:00:57+00:00",
+    "last_checked_at": "2026-09-30T14:04:48+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-30.json",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+      "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+    ],
+    "title": "Llama-Nemotron: Efficient Reasoning Models"
+  },
+  "processed_at": "2026-09-30T14:04:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f146b009cbe7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ec4ecadf4c396079-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.30882",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.30882",
+    "identity_tokens": [
+      "arXiv:2609.30882"
+    ],
+    "reason": "長尺YouTube transcriptのsummary/RAG/screeningをLLM分類に入力する圧縮影響研究で、accuracy harmを示すが、推論効率やcost/latencyを測らない。",
+    "first_checked_at": "2026-10-05T05:30:30+00:00",
+    "last_checked_at": "2026-10-05T05:30:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+    ],
+    "title": "Effects of Transcript Compression on LLM-based Medical Misinformation Detection in Japanese YouTube Videos"
+  },
+  "processed_at": "2026-10-05T05:30:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ec4ecadf4c39",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

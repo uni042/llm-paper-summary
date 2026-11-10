@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2210.12924",
+      "arxiv_id": "2210.12924",
+      "title": "OLLA: Optimizing the Lifetime and Location of Arrays to Reduce the Memory Usage of Neural Networks",
+      "source_url": "https://arxiv.org/abs/2210.12924",
+      "priority": 70,
+      "reason": "Memory lifetime and placement optimization is foundational to spilling and recomputation for large-model execution."
+    },
+    {
+      "canonical_id": "arXiv:2209.01188",
+      "arxiv_id": "2209.01188",
+      "title": "Petals: Collaborative Inference and Fine-tuning of Large Models",
+      "source_url": "https://arxiv.org/abs/2209.01188",
+      "priority": 70,
+      "reason": "Collaborative distributed inference of very large models is directly relevant to heterogeneous and distributed serving."
+    },
+    {
+      "canonical_id": "arXiv:2206.01861",
+      "arxiv_id": "2206.01861",
+      "title": "ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers",
+      "source_url": "https://arxiv.org/abs/2206.01861",
+      "priority": 68,
+      "reason": "Foundational low-bit transformer serving method relevant to memory and compute efficient inference."
+    },
+    {
+      "canonical_id": "arXiv:2101.06840",
+      "arxiv_id": "2101.06840",
+      "title": "ZeRO-Offload: Democratizing Billion-Scale Model Training",
+      "source_url": "https://arxiv.org/abs/2101.06840",
+      "priority": 65,
+      "reason": "Foundational CPU offload mechanism provides direct lineage context for hierarchical-memory systems."
+    },
+    {
+      "canonical_id": "DOI:10.1145/3373376.3378530",
+      "doi": "10.1145/3373376.3378530",
+      "title": "SwapAdvisor: Pushing Deep Learning Beyond the GPU Memory Limit via Smart Swapping",
+      "source_url": "https://doi.org/10.1145/3373376.3378530",
+      "priority": 70,
+      "reason": "Foundational CPU-GPU swapping system directly relevant to hierarchical-memory execution."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-6411b1c06a4e6c552c81b94c",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-6411b1c06a4e6c552c81b94c.json",
+    "receipt": "sha256:62054a62114e30079eaeb08afba0f7a00928b15ce10061dfb4b1327a13b1c1eb"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T070210+0900-run1",
+    "round": "frontier-6411b1c06a4e6c552c81b94c",
+    "axis": "backward references of FlexGen offload and hierarchical-memory LLM inference",
+    "candidate_count": 20,
+    "accepted_canonical_ids": [
+      "arXiv:2210.12924",
+      "arXiv:2209.01188",
+      "arXiv:2206.01861",
+      "arXiv:2101.06840",
+      "DOI:10.1145/3373376.3378530"
+    ],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "backward"
+  }
+}

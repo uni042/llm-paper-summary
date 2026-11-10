@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-56c4eef2cfbfa8c1-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2104.08663",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2104.08663",
+    "identity_tokens": [
+      "arXiv:2104.08663"
+    ],
+    "reason": "18データセットで情報検索モデルのゼロショット汎化を比較する評価ベンチマーク研究で、LLM推論ランタイムやサービング最適化を提案しない。",
+    "first_checked_at": "2026-10-04T15:53:59+00:00",
+    "last_checked_at": "2026-10-04T15:53:59+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2607.21927-ris-kernel-a-model-agnostic-architecture-for-long-context-llm-inference-.md"
+    ],
+    "title": "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models"
+  },
+  "processed_at": "2026-10-04T15:53:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-56c4eef2cfbf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

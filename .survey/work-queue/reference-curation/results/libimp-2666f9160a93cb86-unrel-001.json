@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2666f9160a93cb86-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1605.02688",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1605.02688",
+    "identity_tokens": [
+      "arXiv:1605.02688"
+    ],
+    "reason": "多次元配列の数式を定義・最適化・CPU/GPU実行するTheano compiler/frameworkの機能・性能をTorch7/TensorFlow等と比較する汎用数値計算software研究で、LLM推論runtimeを最終適用先としない。",
+    "first_checked_at": "2026-10-04T14:23:33+00:00",
+    "last_checked_at": "2026-10-04T14:31:28+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Theano: A Python framework for fast computation of mathematical expressions"
+  },
+  "processed_at": "2026-10-04T14:31:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2666f9160a93",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

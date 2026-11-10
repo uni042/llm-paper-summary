@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-096959ef501c2087-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.15043",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.15043",
+    "identity_tokens": [
+      "arXiv:2307.15043"
+    ],
+    "reason": "aligned LLMに対する自動adversarial suffix生成とjailbreak転移性を扱う安全性研究で、推論ランタイム、メモリ、カーネル、サービング最適化を提案しない。",
+    "first_checked_at": "2026-10-04T21:49:40+00:00",
+    "last_checked_at": "2026-10-04T21:51:06+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md"
+    ],
+    "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models"
+  },
+  "processed_at": "2026-10-04T21:51:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-096959ef501c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0fcab0a0caabbf36-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.18018",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.18018",
+    "identity_tokens": [
+      "arXiv:2605.18018"
+    ],
+    "reason": "Video-LLM relevance is topical, but it improves grounding through supervised alignment rather than the linked long-video compression/inference-efficiency mechanism.",
+    "first_checked_at": "2026-10-06T07:14:26+00:00",
+    "last_checked_at": "2026-10-06T07:14:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+    ],
+    "title": "See What I Mean: Aligning Vision and Language Representations for Video Fine-grained Object Understanding"
+  },
+  "processed_at": "2026-10-06T07:14:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0fcab0a0caab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

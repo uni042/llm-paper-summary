@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261103-0402-scheduled-chat-00/r01",
+  "reference_main_sha": "8b0702a18bbc4d353c368b78ee81c916ba45a714",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.33215",
+      "identity_tokens": [
+        "arXiv:2610.33215"
+      ],
+      "title": "Vision Token Pruning via Query-Vision Interaction Decomposition",
+      "reason": "QViDはTransformerのquery-key射影から生じるquery–vision相互作用行列の低ランク性を利用し、主要な潜在相互作用モードに沿って視覚tokenを訓練不要で選別する。画像・動画理解の同一token予算で既存のquery-aware pruningを上回ると著者らは報告。要旨にend-to-end遅延の数値はなく、token削減による計算効率化の候補として採択。",
+      "source_url": "https://arxiv.org/abs/2610.33215",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:08:13+09:00",
+      "last_checked_at": "2026-11-03T04:08:13+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36986",
+      "identity_tokens": [
+        "arXiv:2610.36986"
+      ],
+      "title": "LearnPrunerV2: Learnable Progressive Token Pruning for Vision-Language Models",
+      "reason": "各VLM層の軽量学習モジュールが視覚saliencyとshadow token由来のquery関連度を統合して重要度を推定。層ごとの冗長性の階段状変化に合わせ、Budget-Deterministic Pruningで固定token予算を設定し実行しやすくする。LLaVA-v1.5で視覚tokenを77.8%削り元性能の99.8%を保持と報告。訓練を要し、実測生成速度は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2610.36986",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:08:13+09:00",
+      "last_checked_at": "2026-11-03T04:08:13+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36671",
+      "identity_tokens": [
+        "arXiv:2610.36671"
+      ],
+      "title": "Look Only When Needed: Certificate-Guided Visual Routing for Efficient Diffusion VLMs",
+      "reason": "LOWNはdiffusion VLMの各denoising stepで画像条件付き予測と画像なし予測の一致を使い、画像token再処理を必要なstepだけに限定する。前回画像条件付き予測と一致したtokenは再利用可能と判定しunmask数も適応させる。LLaDA-Vで10 benchmark平均の品質99.6%を保持しdecode FLOPsを35.3%に削減と報告。FLOPs削減は実測end-to-end速度倍率ではない。",
+      "source_url": "https://arxiv.org/abs/2610.36671",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:08:13+09:00",
+      "last_checked_at": "2026-11-03T04:08:13+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31574",
+      "identity_tokens": [
+        "arXiv:2610.31574"
+      ],
+      "title": "Rethinking Sequence Compression with Test-time Regression",
+      "reason": "TTR-Compressorは入力tokenが定義する回帰問題をforwardで閉形式に解き、その係数を圧縮表現とする。回帰問題自体はend-to-end学習する。block-wise sparse attention用compressorとMLLMのvisual token mergerを評価し、後者で標準MLP mergerと同程度の性能を視覚token55.6%削減で実現と報告。推論時のtoken圧縮に直接関係するが遅延の定量値は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2610.31574",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:08:13+09:00",
+      "last_checked_at": "2026-11-03T04:08:13+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36940",
+      "identity_tokens": [
+        "arXiv:2610.36940"
+      ],
+      "title": "TDLM: Adaptive Temporal Integration for Diffusion Language Models",
+      "reason": "TDLMはmasked diffusion言語モデルで未解決位置が過去の隠れ表現へtemporal attentionし、繰り返すdenoising計算の情報を再利用する。frozen denoiserへ約0.84%の学習パラメータを追加し、LLaDA/Dreamで対応する元モデル比最大7.15倍の生成高速化と品質競争力を報告。比較条件の詳細は本文未監査。",
+      "source_url": "https://arxiv.org/abs/2610.36940",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:08:13+09:00",
+      "last_checked_at": "2026-11-03T04:08:13+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.32096",
+      "identity_tokens": [
+        "arXiv:2610.32096"
+      ],
+      "title": "DELA: Learning Controllable Edits for Diffusion Language Models",
+      "reason": "DELAはfrozen diffusion LMにInsert/Delete/Remask/Stopを選ぶ編集controllerを付加。KV cacheを再利用しやすいappend-only下書き段階と、非単調な全体修正段階に分ける。ただし主結果は数学・コード生成で最大5.5ポイントの品質改善であり、end-to-end推論速度や計算削減の定量評価が要旨にないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.32096",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:08:13+09:00",
+      "last_checked_at": "2026-11-03T04:08:13+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.32784",
+      "identity_tokens": [
+        "arXiv:2610.32784"
+      ],
+      "title": "Video-MemComp: Taylor-Guided Sensitivity-Aware Memory Management for Streaming Video Understanding",
+      "reason": "Video-MemCompはstreaming video MLLMで一次Taylor展開により局所近似誤差と層別感度を分離し、pre-RoPEでのtoken集約とattention保存バイアス、offline gradient/online entropyに基づく層別KV予算配分を行う。Qwen2.5-VL-3Bで精度62.3%→64.1%、KVメモリ90%超削減と報告。動画理解向けだがKV容量削減の直接的手法。",
+      "source_url": "https://arxiv.org/abs/2610.32784",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:08:13+09:00",
+      "last_checked_at": "2026-11-03T04:08:13+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31897",
+      "identity_tokens": [
+        "arXiv:2610.31897"
+      ],
+      "title": "Learning Structured Sparsity for Large Models: Bridging Model Compressibility and Efficient Inference",
+      "reason": "S-SALAADは重みと低rank・構造化sparse成分を同時学習し、複数メモリ予算で動作するelastic圧縮モデルを作る。非構造化sparseのindexingと不規則アクセスが速度向上を相殺する問題に対し、hardware-compatible patternとCPU/GPU専用kernelを組み合わせる。Llama2/Qwen3でPPL・メモリ・推論遅延のPareto改善を報告するが、要旨に具体倍率はない。",
+      "source_url": "https://arxiv.org/abs/2610.31897",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:08:13+09:00",
+      "last_checked_at": "2026-11-03T04:08:13+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.39467",
+      "identity_tokens": [
+        "arXiv:2610.39467"
+      ],
+      "title": "Calibrating Attention-Based Token Pruning for Efficient Multi-Image Synthesis in UMMs",
+      "reason": "CATPは画像合成用Unified Multimodal Modelのdenoisingで、conditioning branch間のpruning同期、Taylor補正attention metric、tiled online Softmaxに統合した高速score演算を提案。attention core最大2.09倍高速化と報告。ただし評価対象は画像生成UMMであり言語モデル推論への直接的な実証がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.39467",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:08:13+09:00",
+      "last_checked_at": "2026-11-03T04:08:13+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.34140",
+      "identity_tokens": [
+        "arXiv:2610.34140"
+      ],
+      "title": "Decoupled Prune-and-Reconstruct: Training on a Compact Core with Double-Layer Sparsification",
+      "reason": "一次要旨を読むと対象は大規模グラフ上のGNN node pruningとreconstructionであり、LLM/Transformerの推論効率化ではない。GraphSAGEとのall-node serving比較はあるが、LLMサーベイの直接対象外としてunrelated。タイトルのみで先行除外せず本文要旨の対象モデルを確認して判定。",
+      "source_url": "https://arxiv.org/abs/2610.34140",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:08:13+09:00",
+      "last_checked_at": "2026-11-03T04:08:13+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

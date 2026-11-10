@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3f9cfe2215694636-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.22101",
+  "reason": "Large language models can process increasingly long prompts, yet their ability to locate and use decisive evidence may degrade as irrelevant or confusable context is added. We formulate this phenomenon, which we call context poisoning, as extreme-value interference in attention: the decisive-evidence score is upper-bounded, while the maximum score among effective distractors grows with their number. Under a softmax retrieval abstraction, we derive a finite-sample upper bound showing that maintaining a fixed accuracy target above base rate requires the evidence margin to scale as $\\Omega(\\sqrt{\\log N})$, where N denotes the effective distractor count rather than necessarily the raw context length. The analysis connects long-context degradation to score aliasing, positional aliasing, and softmax dilution. Controlled experiments show that retrieval accuracy decreases as total context grows in the presence of embedded hard negatives, that the same-format condition produces the largest observed accuracy drop among the tested distractor constructions at fixed context length, and that retrieval gating can improve evidence use while its net benefit depends on preserving evidence recall. These results motivate evidence bottlenecks, alias-resistant representations, retrieve-then-reason architectures, verifier-mediated memory, and contrastive anti-poison training.",
+  "title": "Context Poisoning as Extreme-Value Attention Interference in Long-Context Language Models",
+  "identity_tokens": [
+    "arXiv:2609.22101"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+    "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+    "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f9cfe221569",
+  "source_precheck_request_id": null
+}

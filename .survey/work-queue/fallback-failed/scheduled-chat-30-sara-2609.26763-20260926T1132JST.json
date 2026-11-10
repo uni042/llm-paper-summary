@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "record_bundle_mode": "quality_preflight_v1",
+  "origin": "claimed_worker",
+  "kind": "research",
+  "job_id": "job-research-b4703f709f94f0db",
+  "claim_id": "claim-preload-e3c783451f51543124e1c029",
+  "worker_id": "scheduled-chat-30",
+  "attempt_id": "attempt-preload-e3c783451f51543124e1c029",
+  "depends_on_job_ids": [
+    "job-research-b4703f709f94f0db"
+  ],
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.26763-sara-slo-aware-resource-allocation-for-disaggregated-agentic-llm-services.md",
+  "run_key": "scheduled-chat-30-20260926T112835JST",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-26T11:28:35+09:00",
+  "self_review": {
+    "primary_source_read_to_end": true,
+    "no_unverified_inference": true,
+    "summary_and_list_summary_specific": true,
+    "headline_result_grounded": true,
+    "method_end_to_end_explained": true,
+    "evaluation_conditions_and_baselines_explicit": true,
+    "results_conditions_and_interpretation_explicit": true,
+    "limitations_and_positioning_specific": true
+  },
+  "writes": []
+}

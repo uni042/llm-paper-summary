@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r21",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TCOMM.2026.3686718",
+      "identity_tokens": [
+        "DOI:10.1109/TCOMM.2026.3686718"
+      ],
+      "title": "Edge Inference for Large Language Models With Pipeline Parallelism and Batching",
+      "reason": "IEEE出版社一次要旨によると、無線エッジGPU間でLLM層をパイプライン分割し、トークン生成につれて遅延が増える動的モデルの下でバッチと帯域を同時最適化する。異種GPU制約下で既存基準比最大42.1%の遅延削減をシミュレーションで報告する。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11493570",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:46:36+09:00",
+      "last_checked_at": "2026-10-30T20:46:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 192,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISIBER68248.2026.11469930",
+      "identity_tokens": [
+        "DOI:10.1109/ISIBER68248.2026.11469930"
+      ],
+      "title": "Optimizing LLM Inference with Language-Aware Multi-Bin Batching for Code Summarization",
+      "reason": "著者所属大学の一次要旨によると、コード言語分類器と生成長予測器を使い、言語特性ごとにbatch binを構成する。コード要約で4.67要求/秒、44.15トークン/秒、遅延2.12秒と報告するが、基準との差分率は要旨にないため絶対値として保持する。",
+      "source_url": "https://scholar.its.ac.id/en/publications/optimizing-llm-inference-with-language-aware-multi-bin-batching-f/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:46:36+09:00",
+      "last_checked_at": "2026-10-30T20:46:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 221,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.14722/ndss.2026.230035",
+      "identity_tokens": [
+        "DOI:10.14722/ndss.2026.230035"
+      ],
+      "title": "STIP: Three-Party Privacy-Preserving and Lossless Inference for Large Transformers in Production",
+      "reason": "NDSS公式一次論文は三者分離と準対称置換により秘密性を保ちながら、通常のLLM推論と同等の計算を実行するSTIPを提案。LLaMA2-7Bで31.7ms、70B実運用3か月で保護なし比12%の追加遅延を報告し、秘匿推論の効率評価に直接該当する。",
+      "source_url": "https://www.ndss-symposium.org/ndss-paper/stip-three-party-privacy-preserving-and-lossless-inference-for-large-transformers-in-production/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:46:36+09:00",
+      "last_checked_at": "2026-10-30T20:46:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 227,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408526",
+      "identity_tokens": [
+        "DOI:10.1109/HPCA68181.2026.11408526"
+      ],
+      "title": "Characterizing Cloud-Native LLM Inference at Bytedance and Exposing Optimization Challenges and Opportunities for Future AI Accelerators",
+      "reason": "IEEE出版社一次要旨によると、ByteDance Doubaoの実サービス負荷を分析し、命令・演算子・モデルの3階層からなるXPU-Perfを設計して4種のAIアクセラレータを比較する。LLM推論基盤の実負荷とハードウェア効率を直接評価するベンチマーク。",
+      "source_url": "https://ieeexplore.ieee.org/document/11408526/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:46:36+09:00",
+      "last_checked_at": "2026-10-30T20:46:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 248,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/SWC62898.2024.00208",
+      "identity_tokens": [
+        "DOI:10.1109/SWC62898.2024.00208"
+      ],
+      "title": "QMLFQ: A Quantization-based Queue Scheduling Framework for Efficient LLM Serving",
+      "reason": "IEEE出版社一次要旨によると、multi-level feedback queueの優先度調整と要求ごとの量子化レベル切替を組み合わせ、同時要求時のLLMジョブ完了時間を削減する。生成品質との交換条件の定量値は要旨にないため本文確認が必要。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/10924817",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:46:36+09:00",
+      "last_checked_at": "2026-10-30T20:46:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 259,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/BigData66926.2025.11402115",
+      "identity_tokens": [
+        "DOI:10.1109/BigData66926.2025.11402115"
+      ],
+      "title": "Degree-Based Scheduling and Memory Management for Large-Scale Exact Online GNN Inference",
+      "reason": "IEEE出版社一次要旨によると、グラフの入次数に応じたGNNバッチ構成・サブグラフ分割・CPU-GPU通信最適化で遅延89%減・スループット71%増を報告する。対象はグラフニューラルネットのオンライン推論で、生成LLMのKVやデコードではない。",
+      "source_url": "https://doi.org/10.1109/BigData66926.2025.11402115",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:46:36+09:00",
+      "last_checked_at": "2026-10-30T20:46:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 230,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/LCA.2022.3233832",
+      "identity_tokens": [
+        "DOI:10.1109/LCA.2022.3233832"
+      ],
+      "title": "HAMMER: Hardware-Friendly Approximate Computing for Self-Attention With Mean-Redistribution And Linearization",
+      "reason": "著者所属KAISTの一次要旨によると、注意スコアの平均再配分と線形化でself-attentionをハードウェア近似し、従来アクセラレータ比1.2～1.6倍の性能、1.2～1.5倍のエネルギー効率を報告する。汎用Transformer注意演算の研究で、生成LLM逐次decodeでの実測は要確認。",
+      "source_url": "https://pure.kaist.ac.kr/en/publications/hammer-hardware-friendly-approximate-computing-for-self-attention/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:46:36+09:00",
+      "last_checked_at": "2026-10-30T20:46:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 484,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TCCN.2026.3694872",
+      "identity_tokens": [
+        "DOI:10.1109/TCCN.2026.3694872"
+      ],
+      "title": "Efficient Edge Deployment of Mixture-of-Experts Models With Hybrid Expert Quantization",
+      "reason": "著者公開要旨によると、エッジGPUにMoE expertを要求特性に応じた異なるbit幅で配置し、要求割当と混合量子化をRLで同時最適化する。低遅延・高精度のMoEエッジ推論を直接対象とするが、出版社本文は未取得のため数値的優位は要旨の定性記述に留める。",
+      "source_url": "https://doi.org/10.1109/TCCN.2026.3694872",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:46:36+09:00",
+      "last_checked_at": "2026-10-30T20:46:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 243,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3774904.3792243",
+      "identity_tokens": [
+        "DOI:10.1145/3774904.3792243"
+      ],
+      "title": "ONE-PASS: Single Forward Pass Decoding for Listwise Reranking",
+      "reason": "ACM WWW2026の論文で、LLMのlistwise rerankingを逐次N-token生成せず、tree attentionによる候補部分集合の一括検証とMöbius inversionで一回のforwardへ近似する。候補の順列を組合せへ縮約し、LLM推論の逐次decode費用を直接削減する。",
+      "source_url": "https://doi.org/10.1145/3774904.3792243",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:46:36+09:00",
+      "last_checked_at": "2026-10-30T20:46:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 231,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/OJCS.2025.3580498",
+      "identity_tokens": [
+        "DOI:10.1109/OJCS.2025.3580498"
+      ],
+      "title": "LLMs on a Budget: System-Level Approaches to Power-Efficient and Scalable Fine-Tuning",
+      "reason": "著者公開のIEEE論文ではRTX4090でLoRA、checkpoint、operator fusion、power capを組み合わせ、微調整メモリ40%以上削減・電力33%減を報告する。対象はfine-tuning実行であり、生成LLM推論時の速度・メモリ削減ではない。",
+      "source_url": "https://doi.org/10.1109/OJCS.2025.3580498",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:46:36+09:00",
+      "last_checked_at": "2026-10-30T20:46:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 254,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

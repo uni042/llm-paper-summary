@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69954eee8cfec368-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.01538",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.01538",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2312.01538",
+      "arXiv:2312.01538"
+    ],
+    "reason": "arXiv v1 titleは候補と一致、v3で題名変更。同一ID/著者のgraph representation learningでありLLM推論システムへの具体的接続なし。",
+    "first_checked_at": "2026-10-10T03:54:13+00:00",
+    "last_checked_at": "2026-10-10T03:54:13+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+      "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Recurrent Distance-Encoding Neural Networks for Graph Representation Learning"
+  },
+  "processed_at": "2026-10-10T03:54:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69954eee8cfe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

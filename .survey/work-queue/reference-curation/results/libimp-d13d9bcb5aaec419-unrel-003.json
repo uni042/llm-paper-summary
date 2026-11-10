@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d13d9bcb5aaec419-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.07138",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.07138",
+    "identity_tokens": [
+      "arXiv:2406.07138"
+    ],
+    "reason": "CREAMでLLMのcontext lengthを拡張するfine-tuning手法。長文対応が主題で、推論コスト低減の根拠は要旨にない。",
+    "first_checked_at": "2026-10-05T14:42:31+00:00",
+    "last_checked_at": "2026-10-05T14:42:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+    ],
+    "title": "An Efficient Recipe for Long Context Extension via Middle-Focused Positional Encoding"
+  },
+  "processed_at": "2026-10-05T14:42:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d13d9bcb5aae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

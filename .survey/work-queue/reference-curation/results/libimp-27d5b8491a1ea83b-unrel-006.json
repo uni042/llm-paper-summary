@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27d5b8491a1ea83b-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2003.06713",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2003.06713",
+    "identity_tokens": [
+      "arXiv:2003.06713"
+    ],
+    "reason": "T5系seq2seq modelでrelevance labelを生成しdocument ranking品質を改善する情報検索研究。LLM serving/runtimeの速度・メモリ最適化を提案しない。",
+    "first_checked_at": "2026-10-04T21:30:25+00:00",
+    "last_checked_at": "2026-10-04T21:30:25+00:00",
+    "linked_from": [],
+    "title": "Document Ranking with a Pretrained Sequence-to-Sequence Model"
+  },
+  "processed_at": "2026-10-04T21:30:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27d5b8491a1e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

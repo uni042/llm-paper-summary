@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.24173",
+      "arxiv_id": "2608.24173",
+      "title": "SandwichQuant: Which Parameters Matter Before and After Quantization?",
+      "source_url": "https://arxiv.org/abs/2608.24173",
+      "priority": 88,
+      "priority_breakdown": {
+        "base": 53,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 88
+      },
+      "reason": "Recent low-bit quantization correction using normalization-affine adaptation before and after quantization."
+    },
+    {
+      "canonical_id": "arXiv:2608.24945",
+      "arxiv_id": "2608.24945",
+      "title": "FAMPWQ: Fisher Information-based Adaptive Mixed Precision Weight Quantization for Effective LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.24945",
+      "priority": 88,
+      "priority_breakdown": {
+        "base": 53,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 88
+      },
+      "reason": "Recent adaptive mixed-precision weight quantization for resource-constrained LLM inference."
+    },
+    {
+      "canonical_id": "arXiv:2608.15567",
+      "arxiv_id": "2608.15567",
+      "title": "SchurQuant: Groupwise Discrete Optimization for Layer-Wise LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2608.15567",
+      "priority": 88,
+      "priority_breakdown": {
+        "base": 53,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 88
+      },
+      "reason": "Recent 2-3 bit weight-only PTQ optimization with groupwise discrete refinement."
+    },
+    {
+      "canonical_id": "arXiv:2608.13966",
+      "arxiv_id": "2608.13966",
+      "title": "QUASAR: Lowering the Loss Floor of Quantization-Aware Training with Loss-Aware Reconstruction",
+      "source_url": "https://arxiv.org/abs/2608.13966",
+      "priority": 85,
+      "priority_breakdown": {
+        "base": 50,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 85
+      },
+      "reason": "Recent QAT method aimed at preserving quality at aggressive low precision."
+    },
+    {
+      "canonical_id": "arXiv:2608.11045",
+      "arxiv_id": "2608.11045",
+      "title": "ReRound: Reconstructive Rounding to Resolve Midpoint Ambiguity in Calibration-Free LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2608.11045",
+      "priority": 85,
+      "priority_breakdown": {
+        "base": 50,
+        "lineage": 20,
+        "recency": 15,
+        "venue": 0,
+        "total": 85
+      },
+      "reason": "Calibration-free post-training quantization addressing low-bit rounding error."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "frontier-b6fd264914da3919b6f130d0",
+    "result_path": ".survey/work-queue/discovery-precheck/results/frontier-b6fd264914da3919b6f130d0.json",
+    "receipt": "sha256:f77e5589681062a78f7091e1074dad5fea6961e36458bee2a102033b911f028b"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T070210+0900-run1",
+    "round": "frontier-b6fd264914da3919b6f130d0",
+    "axis": "forward citations of AWQ weight quantization and inference kernels retry",
+    "candidate_count": 20,
+    "duplicate_filtered_count": 0,
+    "accepted_canonical_ids": [
+      "arXiv:2608.24173",
+      "arXiv:2608.24945",
+      "arXiv:2608.15567",
+      "arXiv:2608.13966",
+      "arXiv:2608.11045"
+    ],
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}

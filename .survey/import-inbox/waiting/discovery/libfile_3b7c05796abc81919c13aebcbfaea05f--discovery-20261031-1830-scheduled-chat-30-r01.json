@@ -1,0 +1,81 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-1830-scheduled-chat-30/r01",
+  "reference_main_sha": "3e09948ad8c61c443776ef6159601379e3307733",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.12035",
+      "identity_tokens": [
+        "arXiv:2506.12035",
+        "DOI:10.48550/arXiv.2506.12035"
+      ],
+      "title": "MARché: Fast Masked Autoregressive Image Generation with Cache-Aware Attention",
+      "reason": "画像生成向けMasked Autoregressiveモデルで、活性トークンとキャッシュ済みトークンを分離したattention計算と、生成済みトークンへの注意スコアに基づく選択的KV再計算を組み合わせる。一次要旨は最大1.7倍の生成高速化と画像品質への小さい影響を報告するが、対象はOpenSora等のLLM推論ではなく画像生成MARである。KV再利用機構の転用可能性はある一方、LLMサービングでの実証はなく境界的と判定。",
+      "source_url": "https://arxiv.org/abs/2506.12035",
+      "body_check": "abstract_screen_only; body_not_read",
+      "linked_from": [
+        "WORKLIST-30.md rank 276; cache-aware attention / image generation"
+      ],
+      "worklist_rank": 276,
+      "first_checked_at": "2026-10-31T18:32:48+09:00",
+      "last_checked_at": "2026-10-31T18:32:48+09:00"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.15077",
+      "identity_tokens": [
+        "arXiv:2502.15077",
+        "DOI:10.48550/arXiv.2502.15077"
+      ],
+      "title": "Hardware-Friendly Static Quantization Method for Video Diffusion Transformers",
+      "reason": "OpenSoraの動画拡散Transformerを対象に、時間ステップ別の校正データ、重みのチャネル単位量子化、活性のテンソル単位量子化、smooth quantizationで静的PTQを行う。一次要旨はFP16や動的量子化ViDiT-Qに近い動画品質をCLIP/VQA指標で確認したと述べる。低資源AIプロセッサ向けの実行効率化技術だが、LLM重み・KVキャッシュ・トークン生成の直接評価がなく、推論システム系統への関連は間接的。",
+      "source_url": "https://arxiv.org/abs/2502.15077",
+      "body_check": "abstract_screen_only; body_not_read",
+      "linked_from": [
+        "WORKLIST-30.md rank 214; quantization / diffusion transformer"
+      ],
+      "worklist_rank": 214,
+      "first_checked_at": "2026-10-31T18:32:48+09:00",
+      "last_checked_at": "2026-10-31T18:32:48+09:00"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1088/2632-2153/addc33",
+      "identity_tokens": [
+        "DOI:10.1088/2632-2153/addc33"
+      ],
+      "title": "WEISS: Wasserstein efficient sampling strategy for LLMs in drug design",
+      "reason": "Wasserstein自己符号化器由来の連続潜在変数で条件付き自己回帰生成の多様性を改善する。出版社の一次要旨は分子生成・逆合成の実験でbeam search比25倍のトークンsampling速度を報告するが、目的は薬剤設計の多様な候補生成でありLLM推論サービング、GPUカーネル、KVメモリ等の最適化ではない。生成手順の一般性とNLPへの補足的評価があるため完全無関係とはせず境界扱い。",
+      "source_url": "https://doi.org/10.1088/2632-2153/addc33",
+      "body_check": "abstract_screen_only; body_not_read",
+      "linked_from": [
+        "WORKLIST-30.md rank 339; drug design / autoregressive sampling"
+      ],
+      "worklist_rank": 339,
+      "first_checked_at": "2026-10-31T18:32:48+09:00",
+      "last_checked_at": "2026-10-31T18:32:48+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.16136",
+      "identity_tokens": [
+        "arXiv:2512.16136",
+        "DOI:10.48550/arXiv.2512.16136"
+      ],
+      "title": "Lotus: Optimizing Disaggregated Transactions with Disaggregated Locks",
+      "reason": "分離メモリ上のOLTP分散トランザクションを対象に、データとロックの分離、計算ノード上のロック配置、lock-firstトランザクションプロトコルでRDMA atomic操作を削減する。一次要旨の性能評価は分散データベースのトランザクションthroughputとlatencyであり、LLM推論・KVキャッシュ・モデル配置への直接的な技術的貢献を評価していない。文中でLLM用分離メモリを関連事例として挙げても対象研究ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2512.16136",
+      "body_check": "abstract_screen_only; body_not_read",
+      "linked_from": [
+        "WORKLIST-30.md rank 500; OLTP distributed transactions / disaggregated memory"
+      ],
+      "worklist_rank": 500,
+      "first_checked_at": "2026-10-31T18:32:48+09:00",
+      "last_checked_at": "2026-10-31T18:32:48+09:00"
+    }
+  ]
+}

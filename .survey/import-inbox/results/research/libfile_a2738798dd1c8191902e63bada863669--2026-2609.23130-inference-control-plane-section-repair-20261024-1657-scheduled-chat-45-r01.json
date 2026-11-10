@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "700ac7b085a3fd08fc4877950bdbec8613472872a935038b0a19253af381fc1a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_a2738798dd1c8191902e63bada863669--2026-2609.23130-inference-control-plane-section-repair-20261024-1657-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2609.23130",
+  "worker_completed_at": "2026-10-24T16:53:53+09:00",
+  "worker_run_key": "20261024-1645-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3839,
+    "body_paragraphs": 20,
+    "method_chars": 1903,
+    "method_paragraphs": 9,
+    "evaluation_chars": 472,
+    "limitation_chars": 451,
+    "insufficiency_flags": [
+      "評価説明量 472 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 472 < 500"
+  ],
+  "processed_at": "2026-10-24T08:49:14+00:00"
+}

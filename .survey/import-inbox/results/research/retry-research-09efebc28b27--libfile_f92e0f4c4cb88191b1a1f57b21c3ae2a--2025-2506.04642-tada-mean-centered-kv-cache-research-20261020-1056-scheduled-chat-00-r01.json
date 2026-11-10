@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2510c741e04eafb77db3fbc552fb0bc01679127c849757bb9c2386c4009529ba",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-09efebc28b27--libfile_f92e0f4c4cb88191b1a1f57b21c3ae2a--2025-2506.04642-tada-mean-centered-kv-cache-research-20261020-1056-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2506.04642",
+  "worker_completed_at": "2026-10-20T11:05:39+09:00",
+  "worker_run_key": "20261020-1056-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4455,
+    "body_paragraphs": 24,
+    "method_chars": 1787,
+    "method_paragraphs": 10,
+    "evaluation_chars": 418,
+    "limitation_chars": 315,
+    "insufficiency_flags": [
+      "評価説明量 418 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 418 < 500"
+  ],
+  "processed_at": "2026-10-20T17:23:43+00:00"
+}

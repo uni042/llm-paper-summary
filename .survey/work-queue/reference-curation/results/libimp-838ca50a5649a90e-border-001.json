@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-838ca50a5649a90e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2204.04977",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2204.04977",
+    "identity_tokens": [
+      "arXiv:2204.04977"
+    ],
+    "reason": "重み減衰を改良した正則化で不要重みを選択的に縮小し、反復的な枝刈りで疎なニューラルネットを得る汎用圧縮研究。画像分類と自然言語生成を評価しており、圧縮という共通技術はあるが、LLM専用量子化・推論カーネル・サービング・実機推論の効率改善を主張する一次要旨ではないため境界扱い。",
+    "first_checked_at": "2026-10-23T08:42:57+00:00",
+    "last_checked_at": "2026-10-23T08:42:57+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Regularization-based Pruning of Irrelevant Weights in Deep Neural Architectures"
+  },
+  "processed_at": "2026-10-23T08:42:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-838ca50a5649",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

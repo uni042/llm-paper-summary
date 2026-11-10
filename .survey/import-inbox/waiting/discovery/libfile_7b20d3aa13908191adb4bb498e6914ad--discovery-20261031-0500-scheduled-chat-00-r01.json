@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0500-scheduled-chat-00/r01",
+  "reference_main_sha": "9b549d8a9d6426cca023726866319ed0466aab04",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.11683",
+      "identity_tokens": [
+        "arXiv:2602.11683"
+      ],
+      "title": "ThinkRouter: Efficient Reasoning via Routing Thinking between Latent and Discrete Spaces",
+      "reason": "一次arXiv要旨では、推論途中の確信度が低いときは離散トークンで思考し、それ以外は潜在表現で処理する推論時ルータThinkRouterを提案。STEM・コード推論で明示CoTや無作為切替と比較し、Pass@1平均19.70ポイント改善、生成長最大15.55%削減を報告。推論時の計算・生成長を直接制御する技術。",
+      "source_url": "https://arxiv.org/abs/2602.11683",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:02:32+09:00",
+      "last_checked_at": "2026-10-31T05:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 404,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.15736",
+      "identity_tokens": [
+        "arXiv:2607.15736"
+      ],
+      "title": "Better Starts, Better Ends: Bootstrapped Iterative Self-Reasoning Distillation for Compressed Reasoning",
+      "reason": "一次arXiv書誌・要旨に基づく。BIRDは短い正解推論列で事前SFTし、続いて簡潔な自己教師による逆KL蒸留を行う二段階の学習法。Qwen3-8BでMATH-500正答率86.2%から92.0%、平均応答長3,099から1,115トークンと報告するが、主貢献は学習時の推論列蒸留であり、推論ランタイム・サービングの直接最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2607.15736",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:02:32+09:00",
+      "last_checked_at": "2026-10-31T05:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 405,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.11593",
+      "identity_tokens": [
+        "arXiv:2608.11593"
+      ],
+      "title": "Luna-TTS Family Technical Report",
+      "reason": "arXiv一次要旨では音声コーデック言語モデルを拡散型生成へ転換し、リアルタイム版は32フレーム単位でブロック自己回帰・内部並列ノイズ除去とKVキャッシュを組み合わせる。ウォーム状態で初回ブロック41.6ms、エンドツーエンドRTF 0.0240を報告。生成推論高速化の実装要素はあるが、主対象は音声合成品質・音声モデルであり汎用LLMサービングへの寄与は限定的。",
+      "source_url": "https://arxiv.org/abs/2608.11593",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:02:32+09:00",
+      "last_checked_at": "2026-10-31T05:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 460,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.24065",
+      "identity_tokens": [
+        "arXiv:2503.24065"
+      ],
+      "title": "COSMO: Combination of Selective Memorization for Low-cost Vision-and-Language Navigation",
+      "reason": "arXiv一次要旨では視覚言語ナビゲーションに状態空間モジュールとTransformerを組み合わせ、Round Selective Scanと二流路のCross-modal Selective State Space Moduleで計算費を抑える。REVERIE・R2R・R2R-CEで評価するが、対象はロボットナビゲーション専用のモデル構造であり生成LLM推論システムとの直接的な接続は限定的。",
+      "source_url": "https://arxiv.org/abs/2503.24065",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:02:32+09:00",
+      "last_checked_at": "2026-10-31T05:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 463,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.03054",
+      "identity_tokens": [
+        "arXiv:2509.03054"
+      ],
+      "title": "Calibration and Transformation-Free Weight-Only LLMs Quantization via Dynamic Grouping",
+      "reason": "arXiv一次要旨のMSBは、グループ内分散を最小化する動的グルーピングによって校正データ・変換を不要にする重みのみの事後量子化方式。Llama 3.2 3Bの4bit・64要素ブロック設定でWikiText-2 PPL 8.43、全精度7.81、GPTQ既定設定12.23と報告。量子化自体はCPUソルバで行い、評価は低bitパックを用いないbfloat16実行であるため、実測推論高速化を主張していない点も区別する。",
+      "source_url": "https://arxiv.org/abs/2509.03054",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:02:32+09:00",
+      "last_checked_at": "2026-10-31T05:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 487,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.06884",
+      "identity_tokens": [
+        "arXiv:2506.06884"
+      ],
+      "title": "FREE: Fast and Robust Vision Language Models with Early Exits",
+      "reason": "arXiv一次要旨では、VLMの中間層にTransformerと分類器からなる早期終了器を置き、敵対的学習で最終層に近い表現を作るFREEを提案。入力ごとに推論深度を短縮し、同等程度の性能を維持して推論速度1.51倍超を報告する。推論時の条件付き計算量削減を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2506.06884",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:02:32+09:00",
+      "last_checked_at": "2026-10-31T05:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 489,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.22169",
+      "identity_tokens": [
+        "arXiv:2506.22169"
+      ],
+      "title": "MCFuser: High-Performance and Rapid Fusion of Memory-Bound Compute-Intensive Operators",
+      "reason": "arXiv一次要旨では、メモリ律速となった計算集約型演算列を高水準タイル式とDAG解析で融合し、解析的性能モデルとヒューリスティック探索でチューニングするMCFuserを提案。A100・RTX3080でAnsor等に対しカーネル最大5.9倍高速化、探索時間70倍超短縮を報告。LLM専用ではないがGPU推論カーネル融合・メモリ帯域最適化に直接応用可能な汎用基盤技術。",
+      "source_url": "https://arxiv.org/abs/2506.22169",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:02:32+09:00",
+      "last_checked_at": "2026-10-31T05:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 491,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.31066",
+      "identity_tokens": [
+        "arXiv:2608.31066"
+      ],
+      "title": "Every Token Leaves a Ripple in the Stream of Thought: Eliciting Model-Internal Token Saliency for Chain-of-Thought Compression",
+      "reason": "arXiv由来一次書誌・要旨では、MISTが推論トークンの内部残差流への寄与を除去時の必要性と単独付与時の十分性で測り、CoTを短縮する。4モデル・4推論ベンチマークで既存圧縮より良好と報告するが、圧縮列をモデル適応に使う設計が中心で、実運用の推論ランタイム短縮やKV削減の測定は要旨から確認できない。",
+      "source_url": "https://arxiv.org/abs/2608.31066",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:02:32+09:00",
+      "last_checked_at": "2026-10-31T05:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 492,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32564",
+      "identity_tokens": [
+        "arXiv:2609.32564"
+      ],
+      "title": "ProTTT: Learning to Learn Semantic User Memory with Test-Time Training",
+      "reason": "arXiv由来一次書誌・要旨では、ユーザー履歴を共有初期値からテスト時学習で小さなパラメータ記憶へ圧縮し、プロファイル教師で意味記憶を形成するProTTTを提案。全文履歴を文脈へ入れる方法より推論費用を抑えると報告するが、主目的は個人化の記憶学習であり、KVキャッシュや推論サービングの汎用実装技術とは区別する。",
+      "source_url": "https://arxiv.org/abs/2609.32564",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:02:32+09:00",
+      "last_checked_at": "2026-10-31T05:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 493,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.04032",
+      "identity_tokens": [
+        "arXiv:2402.04032"
+      ],
+      "title": "ProactivePIM: Accelerating Weight-Sharing Embedding Layer with PIM for Scalable Recommendation System",
+      "reason": "arXiv一次要旨では推薦システムの埋め込み表を圧縮したQR-trick・TT-RecのメモリアクセスをHBM内の二段PIMとSRAM先読みで高速化し、2.22倍・2.15倍の改善を報告する。対象は推薦モデルの埋め込み層で、LLM推論・注意・KV・サービングへの直接的貢献は要旨に示されない。",
+      "source_url": "https://arxiv.org/abs/2402.04032",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:02:32+09:00",
+      "last_checked_at": "2026-10-31T05:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 494,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

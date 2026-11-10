@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8539ec0ddfc9b0ee-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.14376",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.14376",
+    "identity_tokens": [
+      "arXiv:2503.14376"
+    ],
+    "reason": "対象はlinear RNN/xLSTMで、一般的LLM/Transformer servingの高速化ではない。対象scopeに近接する別model familyとして弱い。",
+    "first_checked_at": "2026-10-05T14:42:29+00:00",
+    "last_checked_at": "2026-10-05T14:42:29+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Tiled Flash Linear Attention: More Efficient Linear RNN and xLSTM Kernels"
+  },
+  "processed_at": "2026-10-05T14:42:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8539ec0ddfc9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

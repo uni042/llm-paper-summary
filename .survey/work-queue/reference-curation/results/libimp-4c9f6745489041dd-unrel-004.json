@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4c9f6745489041dd-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.02013",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.02013",
+    "identity_tokens": [
+      "arXiv:2502.02013"
+    ],
+    "reason": "中間layer表現のinformation/geometry/invarianceを分析し、embedding taskで最終layerより強い表現を示すrepresentation analysis研究。推論runtime・memory・serving効率化を提案しない。",
+    "first_checked_at": "2026-10-05T02:12:07+00:00",
+    "last_checked_at": "2026-10-05T16:03:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md"
+    ],
+    "title": "Layer by Layer: Uncovering Hidden Representations in Language Models"
+  },
+  "processed_at": "2026-10-05T16:03:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c9f67454890",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

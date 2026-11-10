@@ -1,0 +1,794 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "worker00-20260921-030203-forward-kvzip-02",
+  "collector_id": "worker00-forward-kvzip-r02",
+  "run_key": "2026-09-21T03:01:03+09:00-worker00",
+  "axis": "forward citations KVzip",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2505.23416/citations?fields=title,abstract,year,externalIds,url,venue,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8b3a0d4d7168a4edd31cbd82cb5a9080d1a4712f",
+  "raw_search_result_count": 79,
+  "retrieval_duplicate_filtered_count": 14,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T18:02:16.292021+00:00",
+  "results": [
+    {
+      "title": "Will My Assistant Remember My Allergy? What Personal LLM Assistants Forget When Conversation Memory Is Compressed",
+      "source_url": "https://www.semanticscholar.org/paper/8cb40e149d89b2d078171f32e5ff126837c63051",
+      "year": 2026,
+      "published": "2026-09-04",
+      "abstract": "Personal LLM assistants (health companions, elder-care agents, accessibility aides) are judged by what they remember about a person: a medication or an allergy mentioned in passing and needed days later. Privacy pushes them on-device, where a month of conversation can outgrow the model's own weights, so an eviction policy must decide what the cache forgets. Benchmarks report that eviction keeps such facts at a 20% budget, but they compress a prompt that already contains the user's future question, foresight no cache-reusing assistant has. Hide the question until after compression and the advantage vanishes: on PA-Bench, 100 assistant conversations we construct, an allergy mentioned in passing survives to the question that needs it 0--1% of the time, against 97% with full memory. The cause is the budget, not the scorer: none of the training-free policies we evaluate ranks the fact high enough, and the budget that would keep it is too large to bother compressing. A compressed cache is an inference-reuse mechanism, not a persistence layer: safety-critical facts need an auditable episodic store alongside it, and an interface that asks rather than invents.",
+      "canonical_id": "arXiv:2609.05767",
+      "arxiv_id": "2609.05767",
+      "authors": [
+        "Lichen Zhu",
+        "Yueqian Lin",
+        "Yi-Heng Wang",
+        "Yudong Liu",
+        "HaiHelenLi",
+        "Yi-Ran Chen"
+      ]
+    },
+    {
+      "title": "Compression-Aware Abstention: Teaching LLMs to Refuse When KV-Compression Masks Remove Answer Evidence",
+      "source_url": "https://www.semanticscholar.org/paper/63383807391450835f25514710e81b5c7b1d6e0e",
+      "year": 2026,
+      "published": "2026-08-30",
+      "abstract": "KV-cache compression reduces LLM inference memory by evicting context tokens, but when the evicted tokens contain answer-bearing evidence, the model may hallucinate instead of recognizing that the compressed context is insufficient. We address this failure from a behavioral perspective: to our knowledge, this is the first work to formulate compression-aware abstention as a learning problem, in which a model learns to answer when supporting evidence survives compression and abstain when it does not. We construct supervision from compressor survival masks and tight answer-bearing spans, labeling examples as Confident when evidence survives and Abstain when it is removed. A 10.1M-parameter LoRA adapter trained on ~2.6K MuSiQue 2-hop QA examples reduces base-model hallucinations by 97% under prompt-style truncation while preserving correct answering on evidence-retaining examples. Unlike prompt-only abstention baselines, which over-abstain on many answerable high-retention examples, the trained adapter learns a conditional policy. We also evaluate the method under actual compressed-cache decoding, where multi-compressor training yields a 6-22x relative lift over the unaided base on evidence-retaining examples. Controlled-deletion experiments show that the learned behavior is driven by evidence content rather than input length alone.",
+      "canonical_id": "arXiv:2608.29934",
+      "arxiv_id": "2608.29934",
+      "authors": [
+        "Mohammadali Khodabandehlou",
+        "Bhaskar Krishnamachari"
+      ]
+    },
+    {
+      "title": "SemKV: Semantic Mixed-Precision KV Cache Quantization Guided by the Quality Cliff for Long-Context LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/d3f7b7e4211810aede1fbf47e1b342071445dacb",
+      "year": 2026,
+      "published": "2026-08-28",
+      "abstract": "The key-value (KV) cache is the dominant memory bottleneck of long-context large language model (LLM) inference, growing linearly with context length. We show that uniform KV quantization on a fractional-bit grid does not degrade gracefully: under a prespecified multi-seed statistical protocol, Llama-3.1-8B-Instruct with an affine quantizer is statistically indistinguishable from FP16 KV down to 2.322 code bits/value and collapses at 2.0 bits - a quality cliff in (2.0, 2.322] that reappears in generation-time quantization and multi-turn dialogue and transfers to Mistral-7B. The cliff reframes importance-aware mixed precision: above it, eight model-internal importance indicators are statistically interchangeable, so the benefit of mixing is grid interpolation, reaching average precisions uniform quantization cannot realize. SemKV preserves every token, ranks tokens by a model-internal score, and assigns two adjacent above-cliff precisions, achieving a measured 6.0x storage reduction with no statistically detectable quality difference from full KV (n=900, three seeds), and outperforming FP16 token pruning granted a 1.5x larger memory budget. Replacing the affine base with a distortion-optimized quantizer (TurboQuant-MSE) lowers the cliff in every protocol tested, raising the no-detectable-loss operating point to 7.9x. The recipe: measure the cliff for the target deployment setting, then interpolate above it.",
+      "canonical_id": "arXiv:2608.28911",
+      "arxiv_id": "2608.28911",
+      "authors": [
+        "D. Lee",
+        "Do-Hyung Kim",
+        "Jae-Hong Kim"
+      ]
+    },
+    {
+      "title": "Trust the Mass: Forced Weights in KV-Cache Eviction",
+      "source_url": "https://www.semanticscholar.org/paper/6b23747eb31600d5bbb24377665e80ecc647c8c9",
+      "year": 2026,
+      "published": "2026-08-25",
+      "abstract": "Every deployed sparse-attention or KV-cache-eviction rule keeps a subset of the keys, discards the rest, and renormalizes the attention weights over the kept set. Enumerating the exact best subset under that constraint on $168{,}192$ attention rows from five models shows that keeping the largest weights is already near-optimal, since the best subset closes only a median $2$ to $5\\%$ of the remaining gap to full attention. If selection closes this little, published margins between eviction methods must come from elsewhere, so we measure the bytes each method holds. In the shared evaluation pipeline, the strongest query-agnostic methods hold the full cache because their per-head selections are stored as masks, and only ragged per-head storage frees that memory. Enforcing a nominal budget on one fixed selection costs $14$ to $62$ benchmark points. We trace an $87.6$-point retrieval margin to rankings computed while the question is visible. ContourKV, a training-free allocator built from the dropped-mass statistic, wins $93$ of $160$ paired comparisons against that state of the art and loses $22$ at the byte count of the budget-enforcing baselines, and it ties the strongest of them.",
+      "canonical_id": "arXiv:2608.25230",
+      "arxiv_id": "2608.25230",
+      "authors": [
+        "J. Shi",
+        "Jerry Gu"
+      ]
+    },
+    {
+      "title": "ImpactHO: Importance-Aware KV Cache Transfer for Multi-User Edge LLM Handover",
+      "source_url": "https://www.semanticscholar.org/paper/097f17d8a67c3e8eddcf5c37806f54426da54402",
+      "year": 2026,
+      "published": "2026-08-11",
+      "abstract": "Edge LLMs must preserve inference continuity when a user hands over between edge nodes, requiring key-value (KV) cache transfer to the target node. However, simultaneous handovers saturate the backhaul, preventing full cache delivery within the mobility-imposed transfer window. Rather than allocating bandwidth as if all cache entries were equally valuable, we order each user's KV cache by importance and transmit only its most informative fraction, turning token-level sparsity into communication savings. We cast the transfer as a multi-user backhaul allocation problem that maximizes average accuracy across users. Each user's partial-cache accuracy serves as its utility: a sigmoid that fits measurements on the RULER benchmark with $R^2>0.99$ across models and context lengths. Because importance ordering front-loads the high-value entries, the concave region of the accuracy curve spans nearly the entire cache. Our proposed allocator keeps served users within this region, making each per-slot allocation problem convex. The optimum is derived via a closed-form weighted water-filling solution that generalizes information-theoretic water-filling and enables online scheduling. The proposed allocator attains over 93.7% average accuracy in a 500ms transfer window, within 0.5pp of the full-cache ceiling, and reaches 98.2-99.5% of a clairvoyant upper bound.",
+      "canonical_id": "arXiv:2608.10545",
+      "arxiv_id": "2608.10545",
+      "authors": [
+        "Minwoo Kim",
+        "Soochang Song",
+        "Namyoon Lee",
+        "B. Jung",
+        "Yongjune Kim"
+      ]
+    },
+    {
+      "title": "KVDiagnosis: A Diagnostic Benchmark for KV-Cache Compression in Long-Context Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/96ad81950a7bd85cf93b4f4cf43ebe9316036a82",
+      "year": 2026,
+      "published": "2026-08-10",
+      "abstract": "KV-cache compression reduces long-context memory, but aggregate task scores reveal neither which correct executions fail nor why. We present KVDiagnosis, a diagnostic dataset and benchmark with three contributions. First, a 25-method taxonomy groups methods into five mechanism families and links them to eight verified implementations and their valid diagnostic measurements. Second, for every supported method setting, we evaluate all sources in each fixed split against a per-source FullCache control before selecting FullCache-correct/compressed-wrong (C-to-W) rows separately for each method-setting, so no compressor defines another's test set. Third, a common record format links paired outputs and run metadata to cache, likelihood, attention, and decoding measurements with explicit applicability states. On Qwen3-8B, four evidence-aware workloads yield 59 800 supported compressed runs over 2600 sources and 12 520 C-to-W rows. Under fixed diagnostic rules, 63.2% have low or partial measured/projected coverage. Only 19 rows (0.2%) combine high measured/projected coverage with strong likelihood drift; another 2,126 (17.0%) preserve structural position addressability, for which representation fidelity remains unknown, while showing the same drift. Against C-to-C success controls, all ten diagnostics separate failed from successful compression (stratified AUROC 0.684-0.871). Among 96 reproducible low-EAR failures, a controlled 4x evidence-attention boost repairs 29.2%, versus 6.3% under a count-matched sham intervention and 3.3% degradation on matched C-to-C controls. Code and data are available at https://github.com/ChosenQC/KVDiagnosis.",
+      "canonical_id": "arXiv:2608.09412",
+      "arxiv_id": "2608.09412",
+      "authors": [
+        "Chen Qiu",
+        "Ziwu Liu",
+        "Chao Fei",
+        "Guozhong Li",
+        "Panos Kalnis"
+      ]
+    },
+    {
+      "title": "TaskPress: Query-Agnostic KV Cache Compression via Task-Guided Pruning",
+      "source_url": "https://www.semanticscholar.org/paper/0aca25dd8923a980dacd73c37de6fa2569c18af9",
+      "year": 2026,
+      "published": "2026-08-04",
+      "abstract": "Long-context inference with large language models is constrained by the linear growth of the key-value cache to sequence length. While pruning offers mitigation, prevailing methods determine query-specific token importance that cannot be reused across unseen queries. In contrast, we introduce TaskPress, a framework for task-guided, query-agnostic KV cache eviction. Instead of optimizing the cache for a single query, TaskPress constructs a reusable memory representation conditioned on a high-level task guide. The guide functions as a meta-query during prefill to filter irrelevant tokens before downstream queries are issued. In addition, TaskPress leverages quantization scale factors as a zero-cost signal for detecting influential representation outliers, providing an efficient proxy for token importance. Experiments on conducted on various tasks with long context input demonstrate that TaskPress efficiently creates a compact, reusable cache across diverse queries.",
+      "canonical_id": "arXiv:2608.03276",
+      "arxiv_id": "2608.03276",
+      "authors": [
+        "Wonpyo Park",
+        "Seung-won Hwang"
+      ]
+    },
+    {
+      "title": "Does Accuracy Equal Evidence? Reasoning Faithfulness under KV Cache Compression",
+      "source_url": "https://www.semanticscholar.org/paper/d6c4a2f5ff33cad9f1e982117fde469a514f5549",
+      "year": 2026,
+      "published": "2026-08-03",
+      "abstract": "KV cache compression is commonly evaluated by final-answer accuracy, implicitly assuming that preserving the answer also preserves the reasoning that supports it. We test this assumption for large reasoning models and show that it can fail: under compression, correct answers and the validity of their visible supporting rationales can be preserved at different rates. We study this failure with a controlled fixed-trace replay protocol, which holds reasoning content fixed and isolates whether compression preserves usable information from an already available trace. We evaluate ten token-eviction KV compression methods and one quantization method on three models across mathematical reasoning, scientific QA, clinical calculation, and long-context retrieval. We measure final accuracy, answer-chain consistency, and perturbation faithfulness. Across tasks, token-eviction methods can preserve competitive final-answer accuracy while substantially degrading chain support or perturbation faithfulness. We call this the answer-evidence gap. A coverage-preserving quantization control is substantially less affected, suggesting that the failure is tied less to KV memory reduction itself than to losing access to parts of the reasoning trace. Code is available at https://github.com/famous-blue-raincoat/Safe_KV_Compress.",
+      "canonical_id": "arXiv:2608.01631",
+      "arxiv_id": "2608.01631",
+      "authors": [
+        "Meng-Ting Ai",
+        "Jingrui He",
+        "Yue Guo"
+      ]
+    },
+    {
+      "title": "RestoreKV: Recovering Full-Cache Behavior Under Aggressive Query-Agnostic KV Cache Eviction",
+      "source_url": "https://www.semanticscholar.org/paper/abb54b146a2ac536a1bdf359182051aa1db183dd",
+      "year": 2026,
+      "published": "2026-08-02",
+      "abstract": "Query-agnostic KV cache eviction compresses a context once and reuses the resulting cache for arbitrary future queries, but performance can collapse under tight budgets. Existing methods primarily improve which original KV pairs are retained. We introduce RestoreKV, which complements this selection-based formulation with learned restoration under the same total KV budget. Our key insight is that, although the information lost through eviction is context-specific, the mechanism for generating its compact complement can be shared across contexts. After context prefill, a few restore tokens attend to the full KV cache in a single LoRA-adapted pass, generating a compact, context-conditioned restore cache. The base importance scorer and eviction rule remain unchanged, and the adapters are disabled for all subsequent queries and decoding. RestoreKV is trained through parameter-efficient self-distillation from the frozen full-cache model, optimizing only $0.4\\%$ of the parameters and requiring no task-specific tuning. Across four backbones and four long-context benchmarks, RestoreKV substantially reduces compression-induced degradation. On Qwen3-4B, it improves 59 of 60 paired, budget-matched settings across five base eviction methods; at a $5\\%$ budget, it raises KVzip from $38.2$ to $73.2$ on RULER-4K. Applied to KVzip+, RestoreKV reaches $86.4$ RULER accuracy at $16\\times$ compression on the KVPress Benchmark, while adding less than $0.5\\%$ one-time cache-construction overhead in a 32K-context evaluation. Our project page is available at https://paper.pnu-cvsp.com/RestoreKV/",
+      "canonical_id": "arXiv:2608.01247",
+      "arxiv_id": "2608.01247",
+      "authors": [
+        "Changwoo Baek",
+        "Seung-Jun Shin",
+        "Kyeongbo Kong"
+      ]
+    },
+    {
+      "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+      "source_url": "https://www.semanticscholar.org/paper/19aeb49c24b9850b5353bb2cfc41ea63c5ada3bb",
+      "year": 2026,
+      "published": "2026-08-02",
+      "abstract": "LLM agents accumulate long trajectories of reasoning steps, tool calls, and environment feedback, making the KV cache a major inference bottleneck. KV cache compaction can reduce this cost, but most prior methods assume a static context where future queries are known or can be approximated offline. Agents instead require online compaction: new information must be compressed before future relevance is known, using proxy queries cheap enough for the inference path. We study online compaction across token eviction (TE) and attention matching (AM), adapting both to compact agent turns and comparing cheap proxy sources such as boundary, repeat-prefill, and delayed future-generation queries. Experiments on BrowseComp-Plus and WideSearch show that immediate compaction often hurts performance, whereas delaying compaction to use the agent's future queries recovers much of the gap. Moreover, TE is often more robust than AM under imperfect proxies. Across models at different scales, TE preserves most of the accuracy while reducing KV cache by 80%, and can improve throughput over the no compaction baseline. These results position proxy-query selection as a core design choice for practical online KV compaction.",
+      "canonical_id": "arXiv:2608.00902",
+      "arxiv_id": "2608.00902",
+      "authors": [
+        "Yujian Liu",
+        "Jiabao Ji",
+        "Li An",
+        "Rohit Jain",
+        "Gungor Polatkan",
+        "Siyu Zhu",
+        "Shiyu Chang"
+      ]
+    },
+    {
+      "title": "S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching",
+      "source_url": "https://www.semanticscholar.org/paper/d684f97649eaa7a789b97fcbd0e21fed8ec1f49d",
+      "year": 2026,
+      "published": "2026-08-01",
+      "abstract": "The growth of context window lengths in Large Language Models (LLMs) significantly enhances their long-context capabilities but incurs prohibitive memory costs due to the Key-Value (KV) cache. Although low-rank compression of KV cache is a promising remedy, existing methods face a dilemma: offline approaches depend on external calibration data, whereas online approaches incur substantial compute for full-prompt decomposition and reconstruction. In this paper, we propose S$^4$R, which builds low-rank subspaces from selectively sampled tokens and computes attention over a sparsely reconstructed KV representation. S$^4$R uses prompt-aware initialization to build initial key/value bases from a representative prompt subset, trading off calibration-data dependence against prefilling cost. Because fully reconstructing the cache at every decoding step is prohibitively expensive and hurts throughput, we further adopt sparse reconstruction to retain only informative positions during decoding. Extensive experiments on LongBench and RULER with Llama and Qwen model families show that S$^4$R achieves up to 5$\\times$ KV compression with near full-cache accuracy, combining the efficiency of fixed compression with the adaptability of prompt-dependent methods.",
+      "canonical_id": "arXiv:2608.00528",
+      "arxiv_id": "2608.00528",
+      "authors": [
+        "Jialong Han",
+        "You Wu",
+        "Kewei Tu"
+      ]
+    },
+    {
+      "title": "Back from the Future: Key-Value Cache Management by Counter-Causal Surprise",
+      "source_url": "https://www.semanticscholar.org/paper/ed2e612417ea52d4054e7f69bdedcab7eabee566",
+      "year": 2026,
+      "published": "2026-07-30",
+      "abstract": "Key-value (KV) cache management through compression and eviction strategies has emerged as an important research direction in recent years. Computational demands of large language models (LLMs) and their multi-modal variants during output generation can be partially alleviated by caching previous key and value calculations needed by subsequent scaled dot-product attention operations. However, this leads to another problem: the size of the resulting KV cache grows linearly with context length and quickly consumes all available GPU memory when either the prompt or the generated output are long. KV cache management periodically prunes entries from the cache thereby reducing its memory footprint while attempting to retain sufficient information for accurate generation. A by-product is faster inference speed. We propose a simple yet effective KV eviction scheme motivated by the insight that past tokens which can be well-predicted from more recent tokens are redundant and their associated keys and values can be removed from the cache. To score entries for eviction we run the model on the tokens in their original order, reusing the key and value representations already stored in the KV cache, and applying a counter-causal attention mask so that each position attends only to its future context. This is in-distribution, tied directly to the actual cache contents, and requires no additional training. To further reduce cost, we additionally propose a fast single-layer approximation that restricts the counter-causal pass to the last transformer layer, achieving a significant speedup per refresh cycle at marginal accuracy cost. We evaluate our strategy on various open-source LLMs and benchmark datasets showing competitive or improved performance over other state-of-the-art methods. Reference code is available at https://github.com/metacognitionai/counter_causal.",
+      "canonical_id": "arXiv:2607.27600",
+      "arxiv_id": "2607.27600",
+      "authors": [
+        "Stephen Gould",
+        "A. van den Hengel"
+      ]
+    },
+    {
+      "title": "LOCKS: Page-Local Compact Key Summaries for Efficient Long-Context Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/60a9a6d6e1b8bb681d8f61bb29dae92cc6f513bf",
+      "year": 2026,
+      "published": "2026-07-27",
+      "abstract": "Serving large language models at long context is bottlenecked by the key-value (KV) cache, which is read in full at every decode step. Attention keys are locally low-rank though globally high-rank: a fixed low-rank sketch shared across pages is provably blind to page-specific directions, while at the same summary size a page's own basis ranks pages and keeps carriers far better. LOCKS gives every page its own rank-$r$ spectral summary (resident, a tenth of the cache at $r{=}8$ and a twenty-fifth at $r{=}2$), reconstructs within-page logits, estimates each page's attention mass by log-sum-exp, and attends only the top pages; selection itself reads no candidate keys or values. Selecting on this summary alone stays within about a point of the full cache on long-document QA (LongBench-v1; Llama-3.1-8B), tracks the read-every-key exact-LSE oracle on retrieval-dense RULER down to the smallest budgets, and holds quality furthest into the small-budget regime on long-form reasoning (AIME26, MATH-500; Qwen3-4B), where selectors and eviction-based reasoning compressors both fall away. At a $2048$-token budget LOCKS matches FullKV aggregate quality at $100$K$+$ context (GLM-4-9B-Chat-1M) while attending about $2\\%$ of the tokens; since the summary is scanned in full each step, the per-step KV read falls by about $10$--$25\\times$ across that rank range, and this halves per-token decode latency ($2.0\\times$ at $1$M tokens on one H200 NVL, measured at $r{=}8$) against dense attention. LOCKS ships as a drop-in plugin for unmodified vLLM, with batched decode running in full CUDA graphs.",
+      "canonical_id": "arXiv:2607.24555",
+      "arxiv_id": "2607.24555",
+      "authors": [
+        "Junsung Hwang"
+      ]
+    },
+    {
+      "title": "Pixel Decodability Is Not a Compression Signal: Causally Evaluating Importance Proxies for Visual KV-Cache Eviction",
+      "source_url": "https://www.semanticscholar.org/paper/23b1989a1fc8921f8d32c91503a864db6b3daf46",
+      "year": 2026,
+      "published": "2026-07-27",
+      "abstract": "Vision-language models retain a substantial amount of pixel-decodable visual content in their visual key-value cache. We show, in our setting, that this retention is task-inert: across our preregistered tests, how much a unit retains never positively tracks whether the computation that answers the question causally relies on it. We measure retention with a learned pixel-inversion decoder and causal use with single-super-patch KV ablation, the teacher-forced drop in gold-answer log-probability, and relate the two within images under a preregistered, sign-calibrated, held-out design. Retention is decoupled from attention and, in a well-powered null, from causal utilization. Utilization is not inert to every proxy: attention weakly but significantly tracks it, the only signal we find that does and the design's positive control. We characterize pixel-decodable retention as an informational axis of the visual KV cache, orthogonal to the functional one. How much task-inert content a cache holds differs by architecture in our model pair: the encoder-free model retains 2.7 times more than the encoder-based one. The engineering consequence is a controlled negative result. At super-patch granularity, deconfounded pixel-decodable retention ranks KV eviction no better than random; at token granularity it acquires only a weak inverse-importance signal at larger budgets, dominated at every budget by attention magnitude. In our setting, pixel-decodable reconstructability is not a competitive KV-compression signal at any granularity we test.",
+      "canonical_id": "arXiv:2609.13012",
+      "arxiv_id": "2609.13012",
+      "authors": [
+        "Chen-Yu Zhou",
+        "Qi-Liang Jiang",
+        "Shu-Ning Wu",
+        "Xu Zhou"
+      ]
+    },
+    {
+      "title": "Coordinated Networking for On-Device Agent-Augmented Real-Time Communication",
+      "source_url": "https://www.semanticscholar.org/paper/79f7350482f7692b506a9a052558143b5f4653bb",
+      "year": 2026,
+      "published": "2026-07-24",
+      "abstract": "AI agents are enabling a new paradigm of agent-augmented real-time communication (RTC), where humans focus on high-level collaboration, while agents autonomously retrieve, analyze, and generate information in real time to support their interactions. These apps enable new experiences across various domains: for example, when corporate employees co-author a legal document, their agents can discuss and draft on their behalf, sparing them the burden of manually reviewing each other's work. As existing cloud-based agents suffer from privacy risks and unscalable server costs, on-device agent-augmented RTC offers a promising alternative. However, this on-device paradigm introduces a new networking challenge: contention between concurrent traffic flows generated by humans (for live video streaming) and agents (for sending context files for analysis). We design HFS, a framework to ensure both high live video quality and low agent response latency in agent-augmented RTC apps. We achieve the goal through an app-guided multi-flow transport approach, where a unified app-layer orchestrator jointly controls the sending rates of live video and agent context flows based on their heterogeneous app requirements. Our prototype built atop WebRTC and llama.cpp demonstrates that HAFS outperforms baselines, achieving 1.5x higher video quality while reducing agent response time by 31%.",
+      "canonical_id": "arXiv:2607.22854",
+      "arxiv_id": "2607.22854",
+      "authors": [
+        "Goodsol Lee",
+        "Juheon Yi",
+        "Jinglu Wang",
+        "Haowen Xu",
+        "S. Bahk",
+        "Yan Lu"
+      ]
+    },
+    {
+      "title": "MemDecay: Region-Aware KV Cache Eviction for Efficient LLM Agent Inference",
+      "source_url": "https://www.semanticscholar.org/paper/118f64d0b60e852473246718d9f9c0b167fdba32",
+      "year": 2026,
+      "published": "2026-07-12",
+      "abstract": "Large language model (LLM) agents accumulate heterogeneous context, including system instructions, plans, user turns, retrieved documents, tool outputs, and intermediate reasoning, whose key-value (KV) cache can become a major memory bottleneck. Existing eviction policies generally apply the same attention- or recency-based rule to every token, ignoring semantic structure already available to the agent orchestrator. We introduce MemDecay, a training-free, region-aware KV-cache eviction policy. MemDecay assigns tokens region-specific base priorities and decay rates, refreshes retention scores when tokens receive attention, and evicts the lowest-scoring pages under a fixed cache budget while allowing critical regions to be pinned. We also provide a procedure for calibrating decay rates from measured attention lifetimes. We evaluate MemDecay at approximately 450 and 1,700 token contexts using Qwen2.5-1.5B and 3B. Across all settings, attention lifetimes differ by an order of magnitude across regions: system-token half-lives range from 148 to 189 decoding steps, compared with 14 to 16 for scratchpad tokens. Pinning preserves system-region facts at full-cache accuracy in every setting, while no baseline preserves more than 13 of 24. Region-aware retention remains effective as context grows, whereas recency-based retention collapses. Accumulated-attention retention performs better on unpinned content, however, and ablations identify attention-score normalization as the main limitation of the current formulation. These results establish semantic prompt structure as a robust signal for KV-cache management while clarifying how it should be combined with attention-based importance.",
+      "canonical_id": "arXiv:2607.10582",
+      "arxiv_id": "2607.10582",
+      "authors": [
+        "Venkatesha Matam",
+        "Keonwoo Kim"
+      ]
+    },
+    {
+      "title": "How Query Visibility Changes KV-Cache Compression Rankings: A Matched-Budget Audit",
+      "source_url": "https://www.semanticscholar.org/paper/1e5242ca16ea8e55f3972e4db0c79ef779124794",
+      "year": 2026,
+      "published": "2026-07-11",
+      "abstract": "KV-cache compression methods are predominantly evaluated with the query appended to the context before compression -- a query-aware protocol. Yet the economic case for a compressed KV cache is reuse: compress a document once, answer many future questions against it. In that deployment, compression must happen query-agnostic -- before any question is seen. We present a matched-budget audit of six published compression methods against three trivial baselines on three open 7-9B models (144,300 paired evaluations on RULER-8192; 40,800 on LongBench; 50,000-resample paired bootstrap throughout). Everything is held fixed -- model, compression ratio, instances, decoding -- except the scoring rule. Three findings. (1) Query visibility changes the rankings: under the agnostic protocol, of the five audited methods that share a common attention backend, only KeyDiff beats a best-of-3 trivial baseline consistently (31 of 36 cells), and the most widely deployed method, SnapKV, loses to\"keep the start and the recent window\"on average (-0.066). (2) The per-method drop between the two protocols is ordered consistently with how visible the question is to each method's scoring signal, legible in its source code: from Delta=+0.198 for SnapKV (the question sits inside its 64-token observation window) down to Delta=+0.011 for KeyDiff (its score contains no query term at all).",
+      "canonical_id": "arXiv:2607.11942",
+      "arxiv_id": "2607.11942",
+      "authors": [
+        "Da-Ming Luo",
+        "C. Liang",
+        "Jun-Yu Xuan"
+      ]
+    },
+    {
+      "title": "PARTREP: Learning What to Repeat for Decoder-only LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/9b51afb5da71e1d07ad3af6936aeb4008c232a58",
+      "year": 2026,
+      "published": "2026-07-02",
+      "abstract": "While decoder-only LLMs excel at a vast array of natural language tasks, it suffers from an asymmetric information flow induced by causal attention: later tokens are richer in contextual grounding than earlier ones. A simple and effective remedy is prompt repetition -- just appending a second copy of prompt before generation can redistribute grounding across positions and improve reasoning performance. However, full repetition of the original prompt doubles the KV cache footprint and quadruples attention cost during prefill, making it impractical for long-context settings. We propose PartRep, a selective augmentation method that appends only the most informative tokens -- rather than the entire prompt. We use token-wise negative log-likelihood (NLL) as a selection signal, motivated by the hypothesis that less predictable tokens are less recoverable from surrounding context and therefore benefit more from late-position repetition. To avoid the heavy cost of a full forward pass for scoring, we train a lightweight gate that predicts high-NLL tokens from early-layer hidden states, enabling token selection during mid-prefill via early exit. Across eight benchmarks (including MMLU, GSM8K, and RULER) and three model families (Qwen2.5, Llama3.2, Gemma4), PartRep retains most of the gains of full repetition while using only 59.4\\% of its KV cache and 79.0\\% of its prefill FLOPs.",
+      "canonical_id": "arXiv:2607.01792",
+      "arxiv_id": "2607.01792",
+      "authors": [
+        "Andikawati P. Widjaja",
+        "Yongjun Kim",
+        "Hyounghun Kim",
+        "Jaeho Lee"
+      ]
+    },
+    {
+      "title": "Towards Fast and Effective Long Video Understanding of Multimodal Large Language Models via Adaptive Quasi-Gaussian Sampling",
+      "source_url": "https://www.semanticscholar.org/paper/048a997fdfb9fabdefd014c6c39017640b00a8aa",
+      "year": 2026,
+      "published": "2026-06-23",
+      "abstract": "Long video understanding remains a daunting challenge for Multimodal Large Language Models (MLLMs) due to the excessive computation and memory footprint. Thus, keyframe selection is often adopted to mitigate this shortcoming, which however still suffers from low flexibility and high noise due to its hard sampling principle. In this paper, we define video frame selection as a problem of Quasi-Gaussian Sampling, and propose an adaptive and training-free approach termed AdaQ. Inspired by the 3-$\\sigma$ rule of Gaussian distribution, the objective of AdaQ is to achieve the optimal 3-$\\sigma$ interval for different examples, i.e., a smaller 3-$\\sigma$ interval for the local query and a larger one for the global query, thereby facilitating robust and adaptive frame sampling. To validate AdaQ, we apply it to four MLLMs with three embedding models. The extensive experimental results not only show its obvious performance gains over the default MLLMs and the SOTA keyframe selection methods, e.g., helping Qwen3-VL-8B outperform GPT4o by 15.8% on average by using only 64 frames, but also confirm its superior robustness and high efficiency for long-video understanding, e.g., only 1 hyper-parameter needs to be set.",
+      "canonical_id": "arXiv:2606.24187",
+      "arxiv_id": "2606.24187",
+      "authors": [
+        "Kun Zhang",
+        "Chenxin Fang",
+        "Tao Chen",
+        "Baiyang Song",
+        "Yunhang Shen",
+        "Yiyi Zhou",
+        "Rongrong Ji"
+      ]
+    },
+    {
+      "title": "VLMCache: Efficient On-Device Vision-Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/1de573e13db6a2c30db4b5ccd93a0526d870d43e",
+      "year": 2026,
+      "published": "2026-06-20",
+      "abstract": "Vision Language Models (VLMs) are foundational for low-latency, privacy-preserving on-device AI in real-time applications like UI agents and VQA. The VLM prefilling phase, which processes the entire visual-textual input, faces the critical challenge of a long Time-to-First-Token (TTFT). One promising approach to reduce TTFT is to exploit the temporal locality by reusing block-level computations across consecutive frames. Unfortunately, current Transformer-based VLMs break the spatial invariance of CNNs and invalidate the strict-prefix KV-cache mechanism of decoder-only LLMs; in practice, even a single-pixel mismatch can prevent reuse. We present VLMCache, the first system to enable effective block-level visual caching and reuse for on-device VLM inference. The core idea is to disaggregate stable (background) and dynamic (foreground) visual blocks: stable blocks are encoded into the sequence as a reusable KV-cache prefix, while dynamic blocks are recomputed. To make this feasible, VLMCache introduces semantic disaggregation to robustly identify reusable visual blocks and an isolate-then-fuse strategy that restores the global attention interactions and positional coherence lost when foreground and background are separated. Across diverse VLMs and datasets, VLMCache delivers 1.4–3.8× speedup with <1% average accuracy loss, making low-latency VLM inference practical on resource-constrained devices.",
+      "canonical_id": "DOI:10.1145/3745756.3809243",
+      "doi": "10.1145/3745756.3809243",
+      "authors": [
+        "Yinyuan Zhang",
+        "Daliang Xu",
+        "Zhiyang Chen",
+        "Cheng-Hua Wang",
+        "Ying Zhang",
+        "Mengwei Xu",
+        "Gang Huang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.05767",
+      "identity_tokens": [
+        "id:arXiv:2609.05767",
+        "title:will my assistant remember my allergy what personal llm assistants forget when conversation memory is compressed",
+        "url:https://www.semanticscholar.org/paper/8cb40e149d89b2d078171f32e5ff126837c63051"
+      ],
+      "record": {
+        "title": "Will My Assistant Remember My Allergy? What Personal LLM Assistants Forget When Conversation Memory Is Compressed",
+        "source_url": "https://www.semanticscholar.org/paper/8cb40e149d89b2d078171f32e5ff126837c63051",
+        "year": 2026,
+        "published": "2026-09-04",
+        "abstract": "Personal LLM assistants (health companions, elder-care agents, accessibility aides) are judged by what they remember about a person: a medication or an allergy mentioned in passing and needed days later. Privacy pushes them on-device, where a month of conversation can outgrow the model's own weights, so an eviction policy must decide what the cache forgets. Benchmarks report that eviction keeps such facts at a 20% budget, but they compress a prompt that already contains the user's future question, foresight no cache-reusing assistant has. Hide the question until after compression and the advantage vanishes: on PA-Bench, 100 assistant conversations we construct, an allergy mentioned in passing survives to the question that needs it 0--1% of the time, against 97% with full memory. The cause is the budget, not the scorer: none of the training-free policies we evaluate ranks the fact high enough, and the budget that would keep it is too large to bother compressing. A compressed cache is an inference-reuse mechanism, not a persistence layer: safety-critical facts need an auditable episodic store alongside it, and an interface that asks rather than invents.",
+        "canonical_id": "arXiv:2609.05767",
+        "arxiv_id": "2609.05767",
+        "authors": [
+          "Lichen Zhu",
+          "Yueqian Lin",
+          "Yi-Heng Wang",
+          "Yudong Liu",
+          "HaiHelenLi",
+          "Yi-Ran Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.29934",
+      "identity_tokens": [
+        "id:arXiv:2608.29934",
+        "title:compressionaware abstention teaching llms to refuse when kvcompression masks remove answer evidence",
+        "url:https://www.semanticscholar.org/paper/63383807391450835f25514710e81b5c7b1d6e0e"
+      ],
+      "record": {
+        "title": "Compression-Aware Abstention: Teaching LLMs to Refuse When KV-Compression Masks Remove Answer Evidence",
+        "source_url": "https://www.semanticscholar.org/paper/63383807391450835f25514710e81b5c7b1d6e0e",
+        "year": 2026,
+        "published": "2026-08-30",
+        "abstract": "KV-cache compression reduces LLM inference memory by evicting context tokens, but when the evicted tokens contain answer-bearing evidence, the model may hallucinate instead of recognizing that the compressed context is insufficient. We address this failure from a behavioral perspective: to our knowledge, this is the first work to formulate compression-aware abstention as a learning problem, in which a model learns to answer when supporting evidence survives compression and abstain when it does not. We construct supervision from compressor survival masks and tight answer-bearing spans, labeling examples as Confident when evidence survives and Abstain when it is removed. A 10.1M-parameter LoRA adapter trained on ~2.6K MuSiQue 2-hop QA examples reduces base-model hallucinations by 97% under prompt-style truncation while preserving correct answering on evidence-retaining examples. Unlike prompt-only abstention baselines, which over-abstain on many answerable high-retention examples, the trained adapter learns a conditional policy. We also evaluate the method under actual compressed-cache decoding, where multi-compressor training yields a 6-22x relative lift over the unaided base on evidence-retaining examples. Controlled-deletion experiments show that the learned behavior is driven by evidence content rather than input length alone.",
+        "canonical_id": "arXiv:2608.29934",
+        "arxiv_id": "2608.29934",
+        "authors": [
+          "Mohammadali Khodabandehlou",
+          "Bhaskar Krishnamachari"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28911",
+      "identity_tokens": [
+        "id:arXiv:2608.28911",
+        "title:semkv semantic mixedprecision kv cache quantization guided by the quality cliff for longcontext llm inference",
+        "url:https://www.semanticscholar.org/paper/d3f7b7e4211810aede1fbf47e1b342071445dacb"
+      ],
+      "record": {
+        "title": "SemKV: Semantic Mixed-Precision KV Cache Quantization Guided by the Quality Cliff for Long-Context LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/d3f7b7e4211810aede1fbf47e1b342071445dacb",
+        "year": 2026,
+        "published": "2026-08-28",
+        "abstract": "The key-value (KV) cache is the dominant memory bottleneck of long-context large language model (LLM) inference, growing linearly with context length. We show that uniform KV quantization on a fractional-bit grid does not degrade gracefully: under a prespecified multi-seed statistical protocol, Llama-3.1-8B-Instruct with an affine quantizer is statistically indistinguishable from FP16 KV down to 2.322 code bits/value and collapses at 2.0 bits - a quality cliff in (2.0, 2.322] that reappears in generation-time quantization and multi-turn dialogue and transfers to Mistral-7B. The cliff reframes importance-aware mixed precision: above it, eight model-internal importance indicators are statistically interchangeable, so the benefit of mixing is grid interpolation, reaching average precisions uniform quantization cannot realize. SemKV preserves every token, ranks tokens by a model-internal score, and assigns two adjacent above-cliff precisions, achieving a measured 6.0x storage reduction with no statistically detectable quality difference from full KV (n=900, three seeds), and outperforming FP16 token pruning granted a 1.5x larger memory budget. Replacing the affine base with a distortion-optimized quantizer (TurboQuant-MSE) lowers the cliff in every protocol tested, raising the no-detectable-loss operating point to 7.9x. The recipe: measure the cliff for the target deployment setting, then interpolate above it.",
+        "canonical_id": "arXiv:2608.28911",
+        "arxiv_id": "2608.28911",
+        "authors": [
+          "D. Lee",
+          "Do-Hyung Kim",
+          "Jae-Hong Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25230",
+      "identity_tokens": [
+        "id:arXiv:2608.25230",
+        "title:trust the mass forced weights in kvcache eviction",
+        "url:https://www.semanticscholar.org/paper/6b23747eb31600d5bbb24377665e80ecc647c8c9"
+      ],
+      "record": {
+        "title": "Trust the Mass: Forced Weights in KV-Cache Eviction",
+        "source_url": "https://www.semanticscholar.org/paper/6b23747eb31600d5bbb24377665e80ecc647c8c9",
+        "year": 2026,
+        "published": "2026-08-25",
+        "abstract": "Every deployed sparse-attention or KV-cache-eviction rule keeps a subset of the keys, discards the rest, and renormalizes the attention weights over the kept set. Enumerating the exact best subset under that constraint on $168{,}192$ attention rows from five models shows that keeping the largest weights is already near-optimal, since the best subset closes only a median $2$ to $5\\%$ of the remaining gap to full attention. If selection closes this little, published margins between eviction methods must come from elsewhere, so we measure the bytes each method holds. In the shared evaluation pipeline, the strongest query-agnostic methods hold the full cache because their per-head selections are stored as masks, and only ragged per-head storage frees that memory. Enforcing a nominal budget on one fixed selection costs $14$ to $62$ benchmark points. We trace an $87.6$-point retrieval margin to rankings computed while the question is visible. ContourKV, a training-free allocator built from the dropped-mass statistic, wins $93$ of $160$ paired comparisons against that state of the art and loses $22$ at the byte count of the budget-enforcing baselines, and it ties the strongest of them.",
+        "canonical_id": "arXiv:2608.25230",
+        "arxiv_id": "2608.25230",
+        "authors": [
+          "J. Shi",
+          "Jerry Gu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.10545",
+      "identity_tokens": [
+        "id:arXiv:2608.10545",
+        "title:impactho importanceaware kv cache transfer for multiuser edge llm handover",
+        "url:https://www.semanticscholar.org/paper/097f17d8a67c3e8eddcf5c37806f54426da54402"
+      ],
+      "record": {
+        "title": "ImpactHO: Importance-Aware KV Cache Transfer for Multi-User Edge LLM Handover",
+        "source_url": "https://www.semanticscholar.org/paper/097f17d8a67c3e8eddcf5c37806f54426da54402",
+        "year": 2026,
+        "published": "2026-08-11",
+        "abstract": "Edge LLMs must preserve inference continuity when a user hands over between edge nodes, requiring key-value (KV) cache transfer to the target node. However, simultaneous handovers saturate the backhaul, preventing full cache delivery within the mobility-imposed transfer window. Rather than allocating bandwidth as if all cache entries were equally valuable, we order each user's KV cache by importance and transmit only its most informative fraction, turning token-level sparsity into communication savings. We cast the transfer as a multi-user backhaul allocation problem that maximizes average accuracy across users. Each user's partial-cache accuracy serves as its utility: a sigmoid that fits measurements on the RULER benchmark with $R^2>0.99$ across models and context lengths. Because importance ordering front-loads the high-value entries, the concave region of the accuracy curve spans nearly the entire cache. Our proposed allocator keeps served users within this region, making each per-slot allocation problem convex. The optimum is derived via a closed-form weighted water-filling solution that generalizes information-theoretic water-filling and enables online scheduling. The proposed allocator attains over 93.7% average accuracy in a 500ms transfer window, within 0.5pp of the full-cache ceiling, and reaches 98.2-99.5% of a clairvoyant upper bound.",
+        "canonical_id": "arXiv:2608.10545",
+        "arxiv_id": "2608.10545",
+        "authors": [
+          "Minwoo Kim",
+          "Soochang Song",
+          "Namyoon Lee",
+          "B. Jung",
+          "Yongjune Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09412",
+      "identity_tokens": [
+        "id:arXiv:2608.09412",
+        "title:kvdiagnosis a diagnostic benchmark for kvcache compression in longcontext language models",
+        "url:https://www.semanticscholar.org/paper/96ad81950a7bd85cf93b4f4cf43ebe9316036a82"
+      ],
+      "record": {
+        "title": "KVDiagnosis: A Diagnostic Benchmark for KV-Cache Compression in Long-Context Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/96ad81950a7bd85cf93b4f4cf43ebe9316036a82",
+        "year": 2026,
+        "published": "2026-08-10",
+        "abstract": "KV-cache compression reduces long-context memory, but aggregate task scores reveal neither which correct executions fail nor why. We present KVDiagnosis, a diagnostic dataset and benchmark with three contributions. First, a 25-method taxonomy groups methods into five mechanism families and links them to eight verified implementations and their valid diagnostic measurements. Second, for every supported method setting, we evaluate all sources in each fixed split against a per-source FullCache control before selecting FullCache-correct/compressed-wrong (C-to-W) rows separately for each method-setting, so no compressor defines another's test set. Third, a common record format links paired outputs and run metadata to cache, likelihood, attention, and decoding measurements with explicit applicability states. On Qwen3-8B, four evidence-aware workloads yield 59 800 supported compressed runs over 2600 sources and 12 520 C-to-W rows. Under fixed diagnostic rules, 63.2% have low or partial measured/projected coverage. Only 19 rows (0.2%) combine high measured/projected coverage with strong likelihood drift; another 2,126 (17.0%) preserve structural position addressability, for which representation fidelity remains unknown, while showing the same drift. Against C-to-C success controls, all ten diagnostics separate failed from successful compression (stratified AUROC 0.684-0.871). Among 96 reproducible low-EAR failures, a controlled 4x evidence-attention boost repairs 29.2%, versus 6.3% under a count-matched sham intervention and 3.3% degradation on matched C-to-C controls. Code and data are available at https://github.com/ChosenQC/KVDiagnosis.",
+        "canonical_id": "arXiv:2608.09412",
+        "arxiv_id": "2608.09412",
+        "authors": [
+          "Chen Qiu",
+          "Ziwu Liu",
+          "Chao Fei",
+          "Guozhong Li",
+          "Panos Kalnis"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.03276",
+      "identity_tokens": [
+        "id:arXiv:2608.03276",
+        "title:taskpress queryagnostic kv cache compression via taskguided pruning",
+        "url:https://www.semanticscholar.org/paper/0aca25dd8923a980dacd73c37de6fa2569c18af9"
+      ],
+      "record": {
+        "title": "TaskPress: Query-Agnostic KV Cache Compression via Task-Guided Pruning",
+        "source_url": "https://www.semanticscholar.org/paper/0aca25dd8923a980dacd73c37de6fa2569c18af9",
+        "year": 2026,
+        "published": "2026-08-04",
+        "abstract": "Long-context inference with large language models is constrained by the linear growth of the key-value cache to sequence length. While pruning offers mitigation, prevailing methods determine query-specific token importance that cannot be reused across unseen queries. In contrast, we introduce TaskPress, a framework for task-guided, query-agnostic KV cache eviction. Instead of optimizing the cache for a single query, TaskPress constructs a reusable memory representation conditioned on a high-level task guide. The guide functions as a meta-query during prefill to filter irrelevant tokens before downstream queries are issued. In addition, TaskPress leverages quantization scale factors as a zero-cost signal for detecting influential representation outliers, providing an efficient proxy for token importance. Experiments on conducted on various tasks with long context input demonstrate that TaskPress efficiently creates a compact, reusable cache across diverse queries.",
+        "canonical_id": "arXiv:2608.03276",
+        "arxiv_id": "2608.03276",
+        "authors": [
+          "Wonpyo Park",
+          "Seung-won Hwang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01631",
+      "identity_tokens": [
+        "id:arXiv:2608.01631",
+        "title:does accuracy equal evidence reasoning faithfulness under kv cache compression",
+        "url:https://www.semanticscholar.org/paper/d6c4a2f5ff33cad9f1e982117fde469a514f5549"
+      ],
+      "record": {
+        "title": "Does Accuracy Equal Evidence? Reasoning Faithfulness under KV Cache Compression",
+        "source_url": "https://www.semanticscholar.org/paper/d6c4a2f5ff33cad9f1e982117fde469a514f5549",
+        "year": 2026,
+        "published": "2026-08-03",
+        "abstract": "KV cache compression is commonly evaluated by final-answer accuracy, implicitly assuming that preserving the answer also preserves the reasoning that supports it. We test this assumption for large reasoning models and show that it can fail: under compression, correct answers and the validity of their visible supporting rationales can be preserved at different rates. We study this failure with a controlled fixed-trace replay protocol, which holds reasoning content fixed and isolates whether compression preserves usable information from an already available trace. We evaluate ten token-eviction KV compression methods and one quantization method on three models across mathematical reasoning, scientific QA, clinical calculation, and long-context retrieval. We measure final accuracy, answer-chain consistency, and perturbation faithfulness. Across tasks, token-eviction methods can preserve competitive final-answer accuracy while substantially degrading chain support or perturbation faithfulness. We call this the answer-evidence gap. A coverage-preserving quantization control is substantially less affected, suggesting that the failure is tied less to KV memory reduction itself than to losing access to parts of the reasoning trace. Code is available at https://github.com/famous-blue-raincoat/Safe_KV_Compress.",
+        "canonical_id": "arXiv:2608.01631",
+        "arxiv_id": "2608.01631",
+        "authors": [
+          "Meng-Ting Ai",
+          "Jingrui He",
+          "Yue Guo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01247",
+      "identity_tokens": [
+        "id:arXiv:2608.01247",
+        "title:restorekv recovering fullcache behavior under aggressive queryagnostic kv cache eviction",
+        "url:https://www.semanticscholar.org/paper/abb54b146a2ac536a1bdf359182051aa1db183dd"
+      ],
+      "record": {
+        "title": "RestoreKV: Recovering Full-Cache Behavior Under Aggressive Query-Agnostic KV Cache Eviction",
+        "source_url": "https://www.semanticscholar.org/paper/abb54b146a2ac536a1bdf359182051aa1db183dd",
+        "year": 2026,
+        "published": "2026-08-02",
+        "abstract": "Query-agnostic KV cache eviction compresses a context once and reuses the resulting cache for arbitrary future queries, but performance can collapse under tight budgets. Existing methods primarily improve which original KV pairs are retained. We introduce RestoreKV, which complements this selection-based formulation with learned restoration under the same total KV budget. Our key insight is that, although the information lost through eviction is context-specific, the mechanism for generating its compact complement can be shared across contexts. After context prefill, a few restore tokens attend to the full KV cache in a single LoRA-adapted pass, generating a compact, context-conditioned restore cache. The base importance scorer and eviction rule remain unchanged, and the adapters are disabled for all subsequent queries and decoding. RestoreKV is trained through parameter-efficient self-distillation from the frozen full-cache model, optimizing only $0.4\\%$ of the parameters and requiring no task-specific tuning. Across four backbones and four long-context benchmarks, RestoreKV substantially reduces compression-induced degradation. On Qwen3-4B, it improves 59 of 60 paired, budget-matched settings across five base eviction methods; at a $5\\%$ budget, it raises KVzip from $38.2$ to $73.2$ on RULER-4K. Applied to KVzip+, RestoreKV reaches $86.4$ RULER accuracy at $16\\times$ compression on the KVPress Benchmark, while adding less than $0.5\\%$ one-time cache-construction overhead in a 32K-context evaluation. Our project page is available at https://paper.pnu-cvsp.com/RestoreKV/",
+        "canonical_id": "arXiv:2608.01247",
+        "arxiv_id": "2608.01247",
+        "authors": [
+          "Changwoo Baek",
+          "Seung-Jun Shin",
+          "Kyeongbo Kong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00902",
+      "identity_tokens": [
+        "id:arXiv:2608.00902",
+        "title:practical online kv cache compaction for llm agents an empirical study",
+        "url:https://www.semanticscholar.org/paper/19aeb49c24b9850b5353bb2cfc41ea63c5ada3bb"
+      ],
+      "record": {
+        "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+        "source_url": "https://www.semanticscholar.org/paper/19aeb49c24b9850b5353bb2cfc41ea63c5ada3bb",
+        "year": 2026,
+        "published": "2026-08-02",
+        "abstract": "LLM agents accumulate long trajectories of reasoning steps, tool calls, and environment feedback, making the KV cache a major inference bottleneck. KV cache compaction can reduce this cost, but most prior methods assume a static context where future queries are known or can be approximated offline. Agents instead require online compaction: new information must be compressed before future relevance is known, using proxy queries cheap enough for the inference path. We study online compaction across token eviction (TE) and attention matching (AM), adapting both to compact agent turns and comparing cheap proxy sources such as boundary, repeat-prefill, and delayed future-generation queries. Experiments on BrowseComp-Plus and WideSearch show that immediate compaction often hurts performance, whereas delaying compaction to use the agent's future queries recovers much of the gap. Moreover, TE is often more robust than AM under imperfect proxies. Across models at different scales, TE preserves most of the accuracy while reducing KV cache by 80%, and can improve throughput over the no compaction baseline. These results position proxy-query selection as a core design choice for practical online KV compaction.",
+        "canonical_id": "arXiv:2608.00902",
+        "arxiv_id": "2608.00902",
+        "authors": [
+          "Yujian Liu",
+          "Jiabao Ji",
+          "Li An",
+          "Rohit Jain",
+          "Gungor Polatkan",
+          "Siyu Zhu",
+          "Shiyu Chang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00528",
+      "identity_tokens": [
+        "id:arXiv:2608.00528",
+        "title:s4r selective sampling subspaces and sparse reconstruction for compressed longcontext kv caching",
+        "url:https://www.semanticscholar.org/paper/d684f97649eaa7a789b97fcbd0e21fed8ec1f49d"
+      ],
+      "record": {
+        "title": "S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching",
+        "source_url": "https://www.semanticscholar.org/paper/d684f97649eaa7a789b97fcbd0e21fed8ec1f49d",
+        "year": 2026,
+        "published": "2026-08-01",
+        "abstract": "The growth of context window lengths in Large Language Models (LLMs) significantly enhances their long-context capabilities but incurs prohibitive memory costs due to the Key-Value (KV) cache. Although low-rank compression of KV cache is a promising remedy, existing methods face a dilemma: offline approaches depend on external calibration data, whereas online approaches incur substantial compute for full-prompt decomposition and reconstruction. In this paper, we propose S$^4$R, which builds low-rank subspaces from selectively sampled tokens and computes attention over a sparsely reconstructed KV representation. S$^4$R uses prompt-aware initialization to build initial key/value bases from a representative prompt subset, trading off calibration-data dependence against prefilling cost. Because fully reconstructing the cache at every decoding step is prohibitively expensive and hurts throughput, we further adopt sparse reconstruction to retain only informative positions during decoding. Extensive experiments on LongBench and RULER with Llama and Qwen model families show that S$^4$R achieves up to 5$\\times$ KV compression with near full-cache accuracy, combining the efficiency of fixed compression with the adaptability of prompt-dependent methods.",
+        "canonical_id": "arXiv:2608.00528",
+        "arxiv_id": "2608.00528",
+        "authors": [
+          "Jialong Han",
+          "You Wu",
+          "Kewei Tu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.27600",
+      "identity_tokens": [
+        "id:arXiv:2607.27600",
+        "title:back from the future keyvalue cache management by countercausal surprise",
+        "url:https://www.semanticscholar.org/paper/ed2e612417ea52d4054e7f69bdedcab7eabee566"
+      ],
+      "record": {
+        "title": "Back from the Future: Key-Value Cache Management by Counter-Causal Surprise",
+        "source_url": "https://www.semanticscholar.org/paper/ed2e612417ea52d4054e7f69bdedcab7eabee566",
+        "year": 2026,
+        "published": "2026-07-30",
+        "abstract": "Key-value (KV) cache management through compression and eviction strategies has emerged as an important research direction in recent years. Computational demands of large language models (LLMs) and their multi-modal variants during output generation can be partially alleviated by caching previous key and value calculations needed by subsequent scaled dot-product attention operations. However, this leads to another problem: the size of the resulting KV cache grows linearly with context length and quickly consumes all available GPU memory when either the prompt or the generated output are long. KV cache management periodically prunes entries from the cache thereby reducing its memory footprint while attempting to retain sufficient information for accurate generation. A by-product is faster inference speed. We propose a simple yet effective KV eviction scheme motivated by the insight that past tokens which can be well-predicted from more recent tokens are redundant and their associated keys and values can be removed from the cache. To score entries for eviction we run the model on the tokens in their original order, reusing the key and value representations already stored in the KV cache, and applying a counter-causal attention mask so that each position attends only to its future context. This is in-distribution, tied directly to the actual cache contents, and requires no additional training. To further reduce cost, we additionally propose a fast single-layer approximation that restricts the counter-causal pass to the last transformer layer, achieving a significant speedup per refresh cycle at marginal accuracy cost. We evaluate our strategy on various open-source LLMs and benchmark datasets showing competitive or improved performance over other state-of-the-art methods. Reference code is available at https://github.com/metacognitionai/counter_causal.",
+        "canonical_id": "arXiv:2607.27600",
+        "arxiv_id": "2607.27600",
+        "authors": [
+          "Stephen Gould",
+          "A. van den Hengel"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.24555",
+      "identity_tokens": [
+        "id:arXiv:2607.24555",
+        "title:locks pagelocal compact key summaries for efficient longcontext decoding",
+        "url:https://www.semanticscholar.org/paper/60a9a6d6e1b8bb681d8f61bb29dae92cc6f513bf"
+      ],
+      "record": {
+        "title": "LOCKS: Page-Local Compact Key Summaries for Efficient Long-Context Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/60a9a6d6e1b8bb681d8f61bb29dae92cc6f513bf",
+        "year": 2026,
+        "published": "2026-07-27",
+        "abstract": "Serving large language models at long context is bottlenecked by the key-value (KV) cache, which is read in full at every decode step. Attention keys are locally low-rank though globally high-rank: a fixed low-rank sketch shared across pages is provably blind to page-specific directions, while at the same summary size a page's own basis ranks pages and keeps carriers far better. LOCKS gives every page its own rank-$r$ spectral summary (resident, a tenth of the cache at $r{=}8$ and a twenty-fifth at $r{=}2$), reconstructs within-page logits, estimates each page's attention mass by log-sum-exp, and attends only the top pages; selection itself reads no candidate keys or values. Selecting on this summary alone stays within about a point of the full cache on long-document QA (LongBench-v1; Llama-3.1-8B), tracks the read-every-key exact-LSE oracle on retrieval-dense RULER down to the smallest budgets, and holds quality furthest into the small-budget regime on long-form reasoning (AIME26, MATH-500; Qwen3-4B), where selectors and eviction-based reasoning compressors both fall away. At a $2048$-token budget LOCKS matches FullKV aggregate quality at $100$K$+$ context (GLM-4-9B-Chat-1M) while attending about $2\\%$ of the tokens; since the summary is scanned in full each step, the per-step KV read falls by about $10$--$25\\times$ across that rank range, and this halves per-token decode latency ($2.0\\times$ at $1$M tokens on one H200 NVL, measured at $r{=}8$) against dense attention. LOCKS ships as a drop-in plugin for unmodified vLLM, with batched decode running in full CUDA graphs.",
+        "canonical_id": "arXiv:2607.24555",
+        "arxiv_id": "2607.24555",
+        "authors": [
+          "Junsung Hwang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13012",
+      "identity_tokens": [
+        "id:arXiv:2609.13012",
+        "title:pixel decodability is not a compression signal causally evaluating importance proxies for visual kvcache eviction",
+        "url:https://www.semanticscholar.org/paper/23b1989a1fc8921f8d32c91503a864db6b3daf46"
+      ],
+      "record": {
+        "title": "Pixel Decodability Is Not a Compression Signal: Causally Evaluating Importance Proxies for Visual KV-Cache Eviction",
+        "source_url": "https://www.semanticscholar.org/paper/23b1989a1fc8921f8d32c91503a864db6b3daf46",
+        "year": 2026,
+        "published": "2026-07-27",
+        "abstract": "Vision-language models retain a substantial amount of pixel-decodable visual content in their visual key-value cache. We show, in our setting, that this retention is task-inert: across our preregistered tests, how much a unit retains never positively tracks whether the computation that answers the question causally relies on it. We measure retention with a learned pixel-inversion decoder and causal use with single-super-patch KV ablation, the teacher-forced drop in gold-answer log-probability, and relate the two within images under a preregistered, sign-calibrated, held-out design. Retention is decoupled from attention and, in a well-powered null, from causal utilization. Utilization is not inert to every proxy: attention weakly but significantly tracks it, the only signal we find that does and the design's positive control. We characterize pixel-decodable retention as an informational axis of the visual KV cache, orthogonal to the functional one. How much task-inert content a cache holds differs by architecture in our model pair: the encoder-free model retains 2.7 times more than the encoder-based one. The engineering consequence is a controlled negative result. At super-patch granularity, deconfounded pixel-decodable retention ranks KV eviction no better than random; at token granularity it acquires only a weak inverse-importance signal at larger budgets, dominated at every budget by attention magnitude. In our setting, pixel-decodable reconstructability is not a competitive KV-compression signal at any granularity we test.",
+        "canonical_id": "arXiv:2609.13012",
+        "arxiv_id": "2609.13012",
+        "authors": [
+          "Chen-Yu Zhou",
+          "Qi-Liang Jiang",
+          "Shu-Ning Wu",
+          "Xu Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22854",
+      "identity_tokens": [
+        "id:arXiv:2607.22854",
+        "title:coordinated networking for ondevice agentaugmented realtime communication",
+        "url:https://www.semanticscholar.org/paper/79f7350482f7692b506a9a052558143b5f4653bb"
+      ],
+      "record": {
+        "title": "Coordinated Networking for On-Device Agent-Augmented Real-Time Communication",
+        "source_url": "https://www.semanticscholar.org/paper/79f7350482f7692b506a9a052558143b5f4653bb",
+        "year": 2026,
+        "published": "2026-07-24",
+        "abstract": "AI agents are enabling a new paradigm of agent-augmented real-time communication (RTC), where humans focus on high-level collaboration, while agents autonomously retrieve, analyze, and generate information in real time to support their interactions. These apps enable new experiences across various domains: for example, when corporate employees co-author a legal document, their agents can discuss and draft on their behalf, sparing them the burden of manually reviewing each other's work. As existing cloud-based agents suffer from privacy risks and unscalable server costs, on-device agent-augmented RTC offers a promising alternative. However, this on-device paradigm introduces a new networking challenge: contention between concurrent traffic flows generated by humans (for live video streaming) and agents (for sending context files for analysis). We design HFS, a framework to ensure both high live video quality and low agent response latency in agent-augmented RTC apps. We achieve the goal through an app-guided multi-flow transport approach, where a unified app-layer orchestrator jointly controls the sending rates of live video and agent context flows based on their heterogeneous app requirements. Our prototype built atop WebRTC and llama.cpp demonstrates that HAFS outperforms baselines, achieving 1.5x higher video quality while reducing agent response time by 31%.",
+        "canonical_id": "arXiv:2607.22854",
+        "arxiv_id": "2607.22854",
+        "authors": [
+          "Goodsol Lee",
+          "Juheon Yi",
+          "Jinglu Wang",
+          "Haowen Xu",
+          "S. Bahk",
+          "Yan Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.10582",
+      "identity_tokens": [
+        "id:arXiv:2607.10582",
+        "title:memdecay regionaware kv cache eviction for efficient llm agent inference",
+        "url:https://www.semanticscholar.org/paper/118f64d0b60e852473246718d9f9c0b167fdba32"
+      ],
+      "record": {
+        "title": "MemDecay: Region-Aware KV Cache Eviction for Efficient LLM Agent Inference",
+        "source_url": "https://www.semanticscholar.org/paper/118f64d0b60e852473246718d9f9c0b167fdba32",
+        "year": 2026,
+        "published": "2026-07-12",
+        "abstract": "Large language model (LLM) agents accumulate heterogeneous context, including system instructions, plans, user turns, retrieved documents, tool outputs, and intermediate reasoning, whose key-value (KV) cache can become a major memory bottleneck. Existing eviction policies generally apply the same attention- or recency-based rule to every token, ignoring semantic structure already available to the agent orchestrator. We introduce MemDecay, a training-free, region-aware KV-cache eviction policy. MemDecay assigns tokens region-specific base priorities and decay rates, refreshes retention scores when tokens receive attention, and evicts the lowest-scoring pages under a fixed cache budget while allowing critical regions to be pinned. We also provide a procedure for calibrating decay rates from measured attention lifetimes. We evaluate MemDecay at approximately 450 and 1,700 token contexts using Qwen2.5-1.5B and 3B. Across all settings, attention lifetimes differ by an order of magnitude across regions: system-token half-lives range from 148 to 189 decoding steps, compared with 14 to 16 for scratchpad tokens. Pinning preserves system-region facts at full-cache accuracy in every setting, while no baseline preserves more than 13 of 24. Region-aware retention remains effective as context grows, whereas recency-based retention collapses. Accumulated-attention retention performs better on unpinned content, however, and ablations identify attention-score normalization as the main limitation of the current formulation. These results establish semantic prompt structure as a robust signal for KV-cache management while clarifying how it should be combined with attention-based importance.",
+        "canonical_id": "arXiv:2607.10582",
+        "arxiv_id": "2607.10582",
+        "authors": [
+          "Venkatesha Matam",
+          "Keonwoo Kim"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.11942",
+      "identity_tokens": [
+        "id:arXiv:2607.11942",
+        "title:how query visibility changes kvcache compression rankings a matchedbudget audit",
+        "url:https://www.semanticscholar.org/paper/1e5242ca16ea8e55f3972e4db0c79ef779124794"
+      ],
+      "record": {
+        "title": "How Query Visibility Changes KV-Cache Compression Rankings: A Matched-Budget Audit",
+        "source_url": "https://www.semanticscholar.org/paper/1e5242ca16ea8e55f3972e4db0c79ef779124794",
+        "year": 2026,
+        "published": "2026-07-11",
+        "abstract": "KV-cache compression methods are predominantly evaluated with the query appended to the context before compression -- a query-aware protocol. Yet the economic case for a compressed KV cache is reuse: compress a document once, answer many future questions against it. In that deployment, compression must happen query-agnostic -- before any question is seen. We present a matched-budget audit of six published compression methods against three trivial baselines on three open 7-9B models (144,300 paired evaluations on RULER-8192; 40,800 on LongBench; 50,000-resample paired bootstrap throughout). Everything is held fixed -- model, compression ratio, instances, decoding -- except the scoring rule. Three findings. (1) Query visibility changes the rankings: under the agnostic protocol, of the five audited methods that share a common attention backend, only KeyDiff beats a best-of-3 trivial baseline consistently (31 of 36 cells), and the most widely deployed method, SnapKV, loses to\"keep the start and the recent window\"on average (-0.066). (2) The per-method drop between the two protocols is ordered consistently with how visible the question is to each method's scoring signal, legible in its source code: from Delta=+0.198 for SnapKV (the question sits inside its 64-token observation window) down to Delta=+0.011 for KeyDiff (its score contains no query term at all).",
+        "canonical_id": "arXiv:2607.11942",
+        "arxiv_id": "2607.11942",
+        "authors": [
+          "Da-Ming Luo",
+          "C. Liang",
+          "Jun-Yu Xuan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.01792",
+      "identity_tokens": [
+        "id:arXiv:2607.01792",
+        "title:partrep learning what to repeat for decoderonly llms",
+        "url:https://www.semanticscholar.org/paper/9b51afb5da71e1d07ad3af6936aeb4008c232a58"
+      ],
+      "record": {
+        "title": "PARTREP: Learning What to Repeat for Decoder-only LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/9b51afb5da71e1d07ad3af6936aeb4008c232a58",
+        "year": 2026,
+        "published": "2026-07-02",
+        "abstract": "While decoder-only LLMs excel at a vast array of natural language tasks, it suffers from an asymmetric information flow induced by causal attention: later tokens are richer in contextual grounding than earlier ones. A simple and effective remedy is prompt repetition -- just appending a second copy of prompt before generation can redistribute grounding across positions and improve reasoning performance. However, full repetition of the original prompt doubles the KV cache footprint and quadruples attention cost during prefill, making it impractical for long-context settings. We propose PartRep, a selective augmentation method that appends only the most informative tokens -- rather than the entire prompt. We use token-wise negative log-likelihood (NLL) as a selection signal, motivated by the hypothesis that less predictable tokens are less recoverable from surrounding context and therefore benefit more from late-position repetition. To avoid the heavy cost of a full forward pass for scoring, we train a lightweight gate that predicts high-NLL tokens from early-layer hidden states, enabling token selection during mid-prefill via early exit. Across eight benchmarks (including MMLU, GSM8K, and RULER) and three model families (Qwen2.5, Llama3.2, Gemma4), PartRep retains most of the gains of full repetition while using only 59.4\\% of its KV cache and 79.0\\% of its prefill FLOPs.",
+        "canonical_id": "arXiv:2607.01792",
+        "arxiv_id": "2607.01792",
+        "authors": [
+          "Andikawati P. Widjaja",
+          "Yongjun Kim",
+          "Hyounghun Kim",
+          "Jaeho Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.24187",
+      "identity_tokens": [
+        "id:arXiv:2606.24187",
+        "title:towards fast and effective long video understanding of multimodal large language models via adaptive quasigaussian sampling",
+        "url:https://www.semanticscholar.org/paper/048a997fdfb9fabdefd014c6c39017640b00a8aa"
+      ],
+      "record": {
+        "title": "Towards Fast and Effective Long Video Understanding of Multimodal Large Language Models via Adaptive Quasi-Gaussian Sampling",
+        "source_url": "https://www.semanticscholar.org/paper/048a997fdfb9fabdefd014c6c39017640b00a8aa",
+        "year": 2026,
+        "published": "2026-06-23",
+        "abstract": "Long video understanding remains a daunting challenge for Multimodal Large Language Models (MLLMs) due to the excessive computation and memory footprint. Thus, keyframe selection is often adopted to mitigate this shortcoming, which however still suffers from low flexibility and high noise due to its hard sampling principle. In this paper, we define video frame selection as a problem of Quasi-Gaussian Sampling, and propose an adaptive and training-free approach termed AdaQ. Inspired by the 3-$\\sigma$ rule of Gaussian distribution, the objective of AdaQ is to achieve the optimal 3-$\\sigma$ interval for different examples, i.e., a smaller 3-$\\sigma$ interval for the local query and a larger one for the global query, thereby facilitating robust and adaptive frame sampling. To validate AdaQ, we apply it to four MLLMs with three embedding models. The extensive experimental results not only show its obvious performance gains over the default MLLMs and the SOTA keyframe selection methods, e.g., helping Qwen3-VL-8B outperform GPT4o by 15.8% on average by using only 64 frames, but also confirm its superior robustness and high efficiency for long-video understanding, e.g., only 1 hyper-parameter needs to be set.",
+        "canonical_id": "arXiv:2606.24187",
+        "arxiv_id": "2606.24187",
+        "authors": [
+          "Kun Zhang",
+          "Chenxin Fang",
+          "Tao Chen",
+          "Baiyang Song",
+          "Yunhang Shen",
+          "Yiyi Zhou",
+          "Rongrong Ji"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3745756.3809243",
+      "identity_tokens": [
+        "id:DOI:10.1145/3745756.3809243",
+        "title:vlmcache efficient ondevice visionlanguage model inference",
+        "url:https://www.semanticscholar.org/paper/1de573e13db6a2c30db4b5ccd93a0526d870d43e"
+      ],
+      "record": {
+        "title": "VLMCache: Efficient On-Device Vision-Language Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/1de573e13db6a2c30db4b5ccd93a0526d870d43e",
+        "year": 2026,
+        "published": "2026-06-20",
+        "abstract": "Vision Language Models (VLMs) are foundational for low-latency, privacy-preserving on-device AI in real-time applications like UI agents and VQA. The VLM prefilling phase, which processes the entire visual-textual input, faces the critical challenge of a long Time-to-First-Token (TTFT). One promising approach to reduce TTFT is to exploit the temporal locality by reusing block-level computations across consecutive frames. Unfortunately, current Transformer-based VLMs break the spatial invariance of CNNs and invalidate the strict-prefix KV-cache mechanism of decoder-only LLMs; in practice, even a single-pixel mismatch can prevent reuse. We present VLMCache, the first system to enable effective block-level visual caching and reuse for on-device VLM inference. The core idea is to disaggregate stable (background) and dynamic (foreground) visual blocks: stable blocks are encoded into the sequence as a reusable KV-cache prefix, while dynamic blocks are recomputed. To make this feasible, VLMCache introduces semantic disaggregation to robustly identify reusable visual blocks and an isolate-then-fuse strategy that restores the global attention interactions and positional coherence lost when foreground and background are separated. Across diverse VLMs and datasets, VLMCache delivers 1.4–3.8× speedup with <1% average accuracy loss, making low-latency VLM inference practical on resource-constrained devices.",
+        "canonical_id": "DOI:10.1145/3745756.3809243",
+        "doi": "10.1145/3745756.3809243",
+        "authors": [
+          "Yinyuan Zhang",
+          "Daliang Xu",
+          "Zhiyang Chen",
+          "Cheng-Hua Wang",
+          "Ying Zhang",
+          "Mengwei Xu",
+          "Gang Huang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:8e8bd08dcc1a2538761309491d90afdc3ac4114b97b25ea3ce0216a2a924f953",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

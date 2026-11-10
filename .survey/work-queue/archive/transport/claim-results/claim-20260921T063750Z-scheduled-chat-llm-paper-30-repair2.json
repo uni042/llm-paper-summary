@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260921T063750Z-scheduled-chat-llm-paper-30-repair2",
+  "worker_id": "scheduled-chat-llm-paper-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-901c881ed2cc963f",
+      "claim_id": "claim-656236ce96424eaac8e4d26e",
+      "worker_id": "scheduled-chat-llm-paper-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-656236ce96424eaac8e4d26e",
+      "claimed_at": "2026-09-21T06:37:58+00:00",
+      "expires_at": "2026-09-21T08:07:58+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-901c881ed2cc963f"
+      ],
+      "job": {
+        "job_id": "job-research-901c881ed2cc963f",
+        "type": "research",
+        "parent_job_id": "job-5b45b987a6b3d98b",
+        "priority": 98,
+        "canonical_id": "arXiv:2608.26650",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Meta-Learning Where to Allocate Experts: Task-Conditioned Layer-Wise Compression for MoEs",
+        "source_url": "https://arxiv.org/abs/2608.26650",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md",
+        "selection_reason": "MetaNetはtask-conditioned support-set controllerで層ごとのexpert retention thresholdとrouting biasを予測し、固定kをタスク条件付きに変える。DeepSeek-MoE-16B-Chatで平均active expertsを40%削減しつつMMLUを同等以上に保つ設定を示し、Adaptive Expert Computationに直接対応する。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T10:19:13+00:00",
+        "blocker": "Primary-source full text could not be safely retrieved through materially distinct official routes in this attempt. The official arXiv abstract/metadata page was retrievable, while direct official arXiv HTML and PDF fetches both returned DisabledError. Search exposed third-party renderings only; workflow policy requires a primary-source full reading before producing the five-slot record.",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-a56fb97ebb61025c85c8af06.json",
+        "blocked_attempts": 2,
+        "last_recorded_blocked_event": "2026-09-20T13:39:58+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-20T10:33:46+00:00",
+            "reason": "The runtime could retrieve the arXiv abstract and third-party paper renderings, but not the primary arXiv full text through an official route. No conference/author/project official full-text copy was found in the checked routes. The workflow requires primary-source full reading, so no five-slot record was inferred from abstracts or third-party renderings."
+          },
+          {
+            "attempt": 2,
+            "blocked_at": "2026-09-20T13:39:58+00:00",
+            "reason": "Primary-source full text could not be safely retrieved through materially distinct official routes in this attempt. The official arXiv abstract/metadata page was retrievable, while direct official arXiv HTML and PDF fetches both returned DisabledError. Search exposed third-party renderings only; workflow policy requires a primary-source full reading before producing the five-slot record."
+          }
+        ],
+        "last_blocked_at": "2026-09-20T13:39:58+00:00",
+        "retry_queued_at": "2026-09-20T18:57:27+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism"
+        ],
+        "last_validation_failed_at": "2026-09-21T06:37:27+00:00"
+      },
+      "record_bank": "d",
+      "record_bank_recovery": "repair-required-latest-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-a0822fa7a59dd826fad3dfc3"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-a0822fa7a59dd826fad3dfc3.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record-d",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-d/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-d/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-d/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-d/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-d/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T06:37:58+00:00",
+  "checkpoint_released": 0
+}

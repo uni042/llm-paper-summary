@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "proposal_id": "lineage-proposal-23ce3e27e97b9e4155a7",
+  "source_submission": "work-queue/submissions/libimp-62c3f2083c337a6e-pre01-sub01.json",
+  "evaluated_at": "2026-10-23T14:20:57+00:00",
+  "slug_tail": "static-structured-pruning",
+  "title": "Static Structured Model Pruning",
+  "description": "事前学習済みdense Transformerから入力に依存しない固定のchannel/neuron、attention head、layerなどの構造単位を削除し、推論時のparameter・演算量を小さくする研究をまとめる。importance推定、mask学習、calibration、LoRA/fine-tuning/continued-pretraining/distillationによる削除後の回復工程を許容する。",
+  "distinctness_reason": "04 Conditional Computationはrequest/token依存のlayer数・処理token・終了位置の動的選択、16 Weight Quantization / Compressionは同じparameter topologyに対するbit幅・量子化・符号化表現を中心とする。本案は入力をまたいで不変な小型dense checkpointを作るため、実行制御および重み表現圧縮と対象機構が異なる。",
+  "boundary_rule": "推論時の主要ボトルネック削減を目的に、事前学習済みdense Transformerから固定のchannel/neuron、attention head、layerなどを物理削除し、requestごとに変わらない小型dense architectureを作る研究を含める。入力token依存のpruning/skip/early exit、unstructured/N:M/block weight sparsity、quantization/encodingだけ、MoE expertだけのpruning、model topologyを変えないkernel/compiler最適化は除く。",
+  "scope_includes": [
+    "固定channel/neuron/hidden-dimension pruning",
+    "固定attention-head pruning",
+    "固定layer/depth pruning",
+    "削除後modelを作るためのcalibration、mask learning、軽量な回復学習"
+  ],
+  "scope_excludes": [
+    "input/token依存のtoken pruning、layer skipping、early exit（04）",
+    "unstructured/N:M/block weight sparsity、weight quantization、encoding（16または別該当family）",
+    "MoE expert固有のpruning（02/06）",
+    "parameter topologyを変えないkernel/compiler最適化"
+  ],
+  "neighbor_lineages": [
+    "04-conditional-computation",
+    "16-weight-quantization-compression"
+  ],
+  "confidence": "high",
+  "supporting_papers": [
+    "arXiv:2305.11627",
+    "arXiv:2310.06694",
+    "arXiv:2310.05015",
+    "arXiv:2312.11983",
+    "arXiv:2403.03853"
+  ],
+  "verified_supporting_papers": [
+    "arXiv:2305.11627",
+    "arXiv:2310.06694",
+    "arXiv:2310.05015",
+    "arXiv:2312.11983",
+    "arXiv:2403.03853"
+  ],
+  "collected_supporting_papers": [
+    "arXiv:2305.11627",
+    "arXiv:2310.06694",
+    "arXiv:2310.05015",
+    "arXiv:2312.11983",
+    "arXiv:2403.03853"
+  ],
+  "status": "promoted",
+  "lineage": "21-static-structured-pruning",
+  "reasons": []
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T093500Z-scheduled-chat-llm-survey-turn9-04",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-3cf2e0a916913e29",
+      "claim_id": "claim-3e00451f32958b311cdc3f3c",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-3e00451f32958b311cdc3f3c",
+      "claimed_at": "2026-09-20T09:35:00+00:00",
+      "expires_at": "2026-09-20T11:05:00+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-3cf2e0a916913e29"
+      ],
+      "job": {
+        "job_id": "job-research-3cf2e0a916913e29",
+        "type": "research",
+        "parent_job_id": "job-d2dae5051aed34bf",
+        "priority": 93,
+        "canonical_id": "arXiv:2310.07177",
+        "arxiv_id": "2310.07177",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Online Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2310.07177",
+        "paper_path": "papers/inference/05-speculative-decoding/2023-2310.07177-online-speculative-decoding.md",
+        "selection_reason": "Speculative-decoding system that continuously adapts draft models to live query distributions to improve acceptance rates under workload shift.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T18:48:26+00:00",
+        "blocker": "Primary-source full-text reading could not be completed in this invocation because the web retrieval budget was exhausted after the job was claimed. No scientific 5-slot content was inferred or fabricated. Retrieval of arXiv:2310.07177 must be retried from the official arXiv HTML/PDF path on a later eligible attempt.",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-fbff7b50969572eba56c0514.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-20T03:18:49+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-20T03:18:49+00:00",
+            "reason": "Primary-source full-text reading could not be completed in this invocation because the web retrieval budget was exhausted after the job was claimed. No scientific 5-slot content was inferred or fabricated. Retrieval of arXiv:2310.07177 must be retried from the official arXiv HTML/PDF path on a later eligible attempt."
+          }
+        ],
+        "last_blocked_at": "2026-09-20T03:18:49+00:00",
+        "retry_queued_at": "2026-09-20T07:06:00+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T09:35:00+00:00",
+  "checkpoint_released": 0
+}

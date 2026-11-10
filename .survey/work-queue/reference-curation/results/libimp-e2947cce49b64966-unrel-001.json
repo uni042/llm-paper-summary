@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2947cce49b64966-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.48550/arxiv.2105.03824",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.48550/arxiv.2105.03824",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2105.03824",
+      "arXiv:2105.03824"
+    ],
+    "reason": "Fourier変換でself-attentionを置換しBERT系encoderの学習・実行を高速化するarchitecture研究だが、評価はencoder分類/Long Range Arena中心で、生成LLM推論runtime・servingを最終適用先としない。",
+    "first_checked_at": "2026-10-05T00:58:25+00:00",
+    "last_checked_at": "2026-10-05T16:24:19+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+    ],
+    "title": "FNet: Mixing Tokens with Fourier Transforms"
+  },
+  "processed_at": "2026-10-05T16:24:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2947cce49b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,875 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6730b68f100641cc-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6730b68f1006",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/access.2026.3677249",
+    "DOI:10.18653/v1/2025.findings-emnlp.716",
+    "arXiv:2510.26843",
+    "arXiv:2602.17681",
+    "arXiv:2603.04800",
+    "arXiv:2607.06519",
+    "arXiv:2607.25291",
+    "arXiv:2608.00528",
+    "arXiv:2608.27339"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "57628b65646340b1248cf796d93a4c985d5d6ae1",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-27T22:54:09.873747+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/access.2026.3677249",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-emnlp.716",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.26843",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.17681",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.04800",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.06519",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.25291",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.00528",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.27339",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2603.04800",
+      "year": 2026,
+      "published": "2026-03-05",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) with computational invariance for Large Language Models~(LLMs) have demonstrated remarkable advances, however, their application to Multimodal Large Language Models~(MLLMs) presents substantial challenges. In this paper, we analyze SmoothQuant as a case study and identify two critical issues: Smoothing Misalignment and Cross-Modal Computational Invariance. To address these issues, we propose Modality-Aware Smoothing Quantization (MASQuant), a novel framework that introduces (1) Modality-Aware Smoothing (MAS), which learns separate, modality-specific smoothing factors to prevent Smoothing Misalignment, and (2) Cross-Modal Compensation (CMC), which addresses Cross-modal Computational Invariance by using SVD whitening to transform multi-modal activation differences into low-rank forms, enabling unified quantization across modalities. MASQuant demonstrates stable quantization performance across both dual-modal and tri-modal MLLMs. Experimental results show that MASQuant is competitive among the state-of-the-art PTQ algorithms. Source code: https://github.com/alibaba/EfficientAI.",
+      "identifiers": [
+        "SemanticScholar:68c0aeb491a6764e02da77b164e030b34a996a76"
+      ],
+      "semantic_scholar_id": "68c0aeb491a6764e02da77b164e030b34a996a76",
+      "canonical_id": "arXiv:2603.04800",
+      "arxiv_id": "2603.04800",
+      "doi": "10.48550/arXiv.2603.04800",
+      "authors": [
+        "Lu-Lu Hu",
+        "Wenhua Xiao",
+        "Xin Chen",
+        "Xinhua Xu",
+        "Bo-Wen Xu",
+        "Kunrao Li",
+        "Yong-Liang Tao"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 236,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LATMiX: Learnable Affine Transformations for Microscaling Quantization of LLMs",
+      "source_url": "https://arxiv.org/abs/2602.17681",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is a widely used approach for reducing the memory and compute costs of large language models (LLMs). Recent studies have shown that applying invertible transformations to activations can significantly improve quantization robustness by reducing activation outliers; however, existing approaches are largely restricted to rotation or Hadamard-based transformations. Moreover, most studies focused primarily on traditional quantization schemes, whereas modern hardware increasingly supports the microscaling (MX) data format. Attempts to combine both showed severe performance degradation, leading prior work to introduce assumptions on the transformations. In this work, we take a complementary perspective. First, we provide a theoretical analysis of transformations under MX quantization by deriving a bound on the quantization error. Our analysis emphasizes the importance of accounting for both the activation distribution and the underlying quantization structure. Building on this analysis, we propose LATMiX, a method that generalizes outlier reduction to learnable invertible affine transformations optimized using standard deep learning tools. Experiments show consistent improvements in average accuracy for MX low-bit quantization over strong baselines on a wide range of zero-shot benchmarks, across multiple model sizes.",
+      "identifiers": [
+        "SemanticScholar:f984a250728333a327e02eec814d258a4aef5370"
+      ],
+      "semantic_scholar_id": "f984a250728333a327e02eec814d258a4aef5370",
+      "canonical_id": "arXiv:2602.17681",
+      "arxiv_id": "2602.17681",
+      "doi": "10.48550/arXiv.2602.17681",
+      "authors": [
+        "Ofir Gordon",
+        "Lior Dikstein",
+        "Arnon Netzer",
+        "Idan Achituve",
+        "H. Habi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 265,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2607.25291",
+      "year": 2026,
+      "published": "2026-07-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic cost of self-attention makes long-context inference prohibitively expensive, and proxy-based block-sparse attention has become a practical remedy. Existing methods typically rely on a proxy to predict a binary sparse mask and a kernel to consume this mask and perform sparse attention computation. Such an approach is effective under moderate budgets. However, as the budget tightens, the estimated proxy inevitably drops some salient blocks, while the kernel can only apply the sparse mask mechanically, leading to an evident drop in model accuracy. We propose CoSA, a two-stage training-free Sparse Attention under proxy-kernel CO-design, which couples a Kernel-Aware Proxy (KAP) with an Ordered-Skipping Kernel (OSK). In the first stage, the KAP selects blocks under a moderate budget and produces an ordered mask that prescribes the order in which KV pages are visited in the kernel inner loop. In the second stage, the OSK applies this mask and skips more blocks under a tightened budget given online-softmax statistics. Across mainstream LLM backbones and long-context benchmarks, CoSA attains higher accuracy at lower budgets. Impressively, CoSA achieves a 4.93$\\times$ attention speedup and reduces end-to-end Time-to-First-Token by 2.53$\\times$ under a context length of 128K with negligible performance degradation. Code is available at https://github.com/Tencent/AngelSlim.",
+      "identifiers": [
+        "SemanticScholar:341b697a1dbb74ef0be267b518ac81ccbc454bc1"
+      ],
+      "semantic_scholar_id": "341b697a1dbb74ef0be267b518ac81ccbc454bc1",
+      "canonical_id": "arXiv:2607.25291",
+      "arxiv_id": "2607.25291",
+      "doi": "10.48550/arXiv.2607.25291",
+      "authors": [
+        "Yufei Xue",
+        "Lin Niu",
+        "Hong Liu",
+        "Si-Ran Liu",
+        "Han-Yong Shao",
+        "Wei Liu",
+        "Guang-Hua Yu",
+        "Jian-Chen Zhu",
+        "Jun Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 91,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching",
+      "source_url": "https://arxiv.org/abs/2608.00528",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growth of context window lengths in Large Language Models (LLMs) significantly enhances their long-context capabilities but incurs prohibitive memory costs due to the Key-Value (KV) cache. Although low-rank compression of KV cache is a promising remedy, existing methods face a dilemma: offline approaches depend on external calibration data, whereas online approaches incur substantial compute for full-prompt decomposition and reconstruction. In this paper, we propose S$^4$R, which builds low-rank subspaces from selectively sampled tokens and computes attention over a sparsely reconstructed KV representation. S$^4$R uses prompt-aware initialization to build initial key/value bases from a representative prompt subset, trading off calibration-data dependence against prefilling cost. Because fully reconstructing the cache at every decoding step is prohibitively expensive and hurts throughput, we further adopt sparse reconstruction to retain only informative positions during decoding. Extensive experiments on LongBench and RULER with Llama and Qwen model families show that S$^4$R achieves up to 5$\\times$ KV compression with near full-cache accuracy, combining the efficiency of fixed compression with the adaptability of prompt-dependent methods.",
+      "identifiers": [
+        "SemanticScholar:d684f97649eaa7a789b97fcbd0e21fed8ec1f49d"
+      ],
+      "semantic_scholar_id": "d684f97649eaa7a789b97fcbd0e21fed8ec1f49d",
+      "canonical_id": "arXiv:2608.00528",
+      "arxiv_id": "2608.00528",
+      "authors": [
+        "Jialong Han",
+        "You Wu",
+        "Kewei Tu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Parallel Blindness: Information Floors and Model Gaps in Block Drafting",
+      "source_url": "https://arxiv.org/abs/2608.27339",
+      "year": 2026,
+      "published": "2026-08-27",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block drafters propose several tokens in one forward pass, before earlier target tokens are realised. Their rejection mixes two losses: missing within-block path information and imperfect modelling of observable information. Accepted length cannot distinguish them. We separate the two with an information floor, the minimum expected rejection at a specified conditioning order; rejection above this floor is the model gap. Measurements across four domains and four open-weight targets, plus floor estimates on a frontier API target, yield three findings. First, the all-parallel floor reaches $0.286$ at the final slot on Qwen3-4B, limiting even the best proposal to $71\\%$ per-slot acceptance. Second, one realised token removes $86$--$100\\%$ of this floor, a locality also recovered by an independent mutual-information analysis. Third, current drafters remain far above their floors: the final-slot model gap accounts for $43$--$64\\%$ of DFlash rejection and $85$--$92\\%$ of DSpark's oracle-conditioned rejection. Guided by this separation of short-range conditioning from proposal quality, we replace a context-independent predecessor correction with a prefix-attention head that reads committed context conditional on the predecessor. With supporting backbone components, the resulting Qwen3-4B drafter improves mean serving accepted length by $3.93\\%$ over the released DSpark checkpoint across nine tasks, without increasing the conditioning order. Code and data: https://github.com/tie-pilot-qxw/specfloor; drafter checkpoints: https://huggingface.co/TIE-Pilot/dspark-attnconv-block7-qwen3-4b.",
+      "identifiers": [
+        "SemanticScholar:3cf3cc0971b3753f5f8789e9091937a76fd9b9c1"
+      ],
+      "semantic_scholar_id": "3cf3cc0971b3753f5f8789e9091937a76fd9b9c1",
+      "canonical_id": "arXiv:2608.27339",
+      "arxiv_id": "2608.27339",
+      "authors": [
+        "Xin-Wei Qiang",
+        "Xiang Fang",
+        "Changli Chen",
+        "Zai-Feng Pan",
+        "Yue Guan",
+        "Yu-Fei Ding"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 61,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CAS-Spec: Cascade Adaptive Self-Speculative Decoding for On-the-Fly Lossless Inference Acceleration of LLMs",
+      "source_url": "https://arxiv.org/abs/2510.26843",
+      "year": 2025,
+      "published": "2025-10-30",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding has become a widely adopted as an effective technique for lossless inference acceleration when deploying large language models (LLMs). While on-the-fly self-speculative methods offer seamless integration and broad utility, they often fall short of the speed gains achieved by methods relying on specialized training. Cascading a hierarchy of draft models promises further acceleration and flexibility, but the high cost of training multiple models has limited its practical application. In this paper, we propose a novel Cascade Adaptive Self-Speculative Decoding (CAS-Spec) method which constructs speculative draft models by leveraging dynamically switchable inference acceleration (DSIA) strategies, including layer sparsity and activation quantization. Furthermore, traditional vertical and horizontal cascade algorithms are inefficient when applied to self-speculative decoding methods. We introduce a Dynamic Tree Cascade (DyTC) algorithm that adaptively routes the multi-level draft models and assigns the draft lengths, based on the heuristics of acceptance rates and latency prediction. Our CAS-Spec method achieves state-of-the-art acceleration compared to existing on-the-fly speculative decoding methods, with an average speedup from $1.1\\times$ to $2.3\\times$ over autoregressive decoding across various LLMs and datasets. DyTC improves the average speedup by $47$\\% and $48$\\% over cascade-based baseline and tree-based baseline algorithms, respectively. CAS-Spec can be easily integrated into most existing LLMs and holds promising potential for further acceleration as self-speculative decoding techniques continue to evolve.",
+      "identifiers": [
+        "SemanticScholar:ffe88b42b31e08608d9ec50abfdfbf416a92f1d5"
+      ],
+      "semantic_scholar_id": "ffe88b42b31e08608d9ec50abfdfbf416a92f1d5",
+      "canonical_id": "arXiv:2510.26843",
+      "arxiv_id": "2510.26843",
+      "doi": "10.48550/arXiv.2510.26843",
+      "authors": [
+        "Zhiyuan Ning",
+        "Jia-Wei Shao",
+        "Ruge Xu",
+        "Xin-Fei Guo",
+        "Jun Zhang",
+        "Chi Zhang",
+        "Xue-Long Li"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 362,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.716",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:104937b4a8920a3f4e17791184546410c18c7d14"
+      ],
+      "semantic_scholar_id": "104937b4a8920a3f4e17791184546410c18c7d14",
+      "doi": "10.18653/v1/2025.findings-emnlp.716",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.716",
+      "authors": [
+        "Yunhai Hu",
+        "Zining Liu",
+        "Zhenyuan Dong",
+        "Tianfan Peng",
+        "Bradley McDanel",
+        "Sai-Qian Zhang"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 483,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "FreqDepthKV: Frequency-Guided Depth Sharing for Robust KV Cache Compression in Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.06519",
+      "year": 2026,
+      "published": "2026-07-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM inference is increasingly limited by the memory and bandwidth cost of KV caches, yet aggressive compression can remove the layer-specific evidence needed for retrieval and multi-step reasoning. We introduce FreqDepthKV, an inference-time cache compression method that factorizes adjacent-layer KV states into shared low-frequency depth components and sparse high-frequency residuals. A lightweight online probe assigns attention heads to shared-depth, residual-depth, or exact cache modes according to their contribution to reconstruction-sensitive attention logits, allowing the compression policy to adapt to prompt structure without retraining. Across long-context question answering, needle retrieval, summarization, and code generation benchmarks, FreqDepthKV preserves task accuracy under substantially smaller cache budgets. With a 32k-token prefill window, FreqDepthKV reaches 58.3 Exact Match, 63.0 F1, 32.5 ROUGE-L, and 48.1 pass@1, closely matching full KV while outperforming prior compressed-cache methods. It also improves decoding throughput to 70.4 tokens/s, reduces TTFT to 2.06 seconds, and lowers peak KV memory to 6.2 GB, achieving a 3.9x effective compression ratio.",
+      "identifiers": [
+        "SemanticScholar:7753d8c9134c4ca8151e51f9aacedab9434b1f66"
+      ],
+      "semantic_scholar_id": "7753d8c9134c4ca8151e51f9aacedab9434b1f66",
+      "canonical_id": "arXiv:2607.06519",
+      "arxiv_id": "2607.06519",
+      "doi": "10.48550/arXiv.2607.06519",
+      "authors": [
+        "Anna Córdoba",
+        "Adam Puente Tercero",
+        "Nerea Angulo Hijo",
+        "Mar Linares Tercero",
+        "J. Barrientos",
+        "Ainhoa Miranda",
+        "Jesús Olivera"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 112,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Context-Aware Autoscaling for Cost-Efficient Large Language Model Inference With Prefix Cache Integration",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3677249",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although granular resource management has been made possible by the architectural shift to Prefill-Decode (PD) disaggregation in Large Language Model (LLM) serving, it is still difficult to maintain strict Service Level Objectives (SLOs) under bursty traffic. Modern autoscaling frameworks, like TokenScale, balance resources using fine-grained “velocity” metrics, but they have a significant drawback: cache blindness. These systems over-provision during spikes in high-locality traffic because they model instance throughput as a static hardware constant, which ignores the enormous effective throughput gains offered by prefix caching (e.g., RadixAttention). Furthermore, they often overlook the cost-efficiency opportunities inherent in heterogeneous GPU clusters. We present AdaptiveScale, a context-aware autoscaling framework that connects resource elasticity and memory locality. Three new mechanisms are suggested by AdaptiveScale: 1) Effective Token Velocity ( $V_{eff}$ ), a dynamic metric that incorporates real-time Radix-tree telemetry to amplify scaling logic based on context reuse; 2) Heterogeneity-Aware Tiered Scheduling, which optimizes convertible decoder selection by pinning cost-effective nodes (like L40S) to decoding while routing prefill bursts to compute-dense GPUs (like H100); and 3) Elastic State Preservation, a mechanism that uses RDMA to zero-copy offload KV-cache states during role-switching, thereby removing the latency penalties associated with cache eviction. AdaptiveScale was implemented on vLLM, and it was assessed using production traces from OpenAI and Azure. Our results demonstrate that AdaptiveScale reduces GPU operational costs by 28% compared to state-of-the-art velocity-based scalers in high-locality workloads, while consistently maintaining 99% SLO attainment.",
+      "identifiers": [
+        "SemanticScholar:62b577ec192e84f2bb2143ea1e43c23dc81bf3e3"
+      ],
+      "semantic_scholar_id": "62b577ec192e84f2bb2143ea1e43c23dc81bf3e3",
+      "doi": "10.1109/ACCESS.2026.3677249",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3677249",
+      "authors": [
+        "Seyed Hossein Ahmadpanah",
+        "A. Sahafi",
+        "S. Erfani"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 118,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.04800",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.04800",
+        "id:SemanticScholar:68c0aeb491a6764e02da77b164e030b34a996a76",
+        "id:arXiv:2603.04800",
+        "title:masquant modalityaware smoothing quantization for multimodal large language models",
+        "url:https://arxiv.org/abs/2603.04800"
+      ],
+      "record": {
+        "title": "MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2603.04800",
+        "year": 2026,
+        "published": "2026-03-05",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) with computational invariance for Large Language Models~(LLMs) have demonstrated remarkable advances, however, their application to Multimodal Large Language Models~(MLLMs) presents substantial challenges. In this paper, we analyze SmoothQuant as a case study and identify two critical issues: Smoothing Misalignment and Cross-Modal Computational Invariance. To address these issues, we propose Modality-Aware Smoothing Quantization (MASQuant), a novel framework that introduces (1) Modality-Aware Smoothing (MAS), which learns separate, modality-specific smoothing factors to prevent Smoothing Misalignment, and (2) Cross-Modal Compensation (CMC), which addresses Cross-modal Computational Invariance by using SVD whitening to transform multi-modal activation differences into low-rank forms, enabling unified quantization across modalities. MASQuant demonstrates stable quantization performance across both dual-modal and tri-modal MLLMs. Experimental results show that MASQuant is competitive among the state-of-the-art PTQ algorithms. Source code: https://github.com/alibaba/EfficientAI.",
+        "identifiers": [
+          "SemanticScholar:68c0aeb491a6764e02da77b164e030b34a996a76"
+        ],
+        "semantic_scholar_id": "68c0aeb491a6764e02da77b164e030b34a996a76",
+        "canonical_id": "arXiv:2603.04800",
+        "arxiv_id": "2603.04800",
+        "doi": "10.48550/arXiv.2603.04800",
+        "authors": [
+          "Lu-Lu Hu",
+          "Wenhua Xiao",
+          "Xin Chen",
+          "Xinhua Xu",
+          "Bo-Wen Xu",
+          "Kunrao Li",
+          "Yong-Liang Tao"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 236,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.17681",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.17681",
+        "id:SemanticScholar:f984a250728333a327e02eec814d258a4aef5370",
+        "id:arXiv:2602.17681",
+        "title:latmix learnable affine transformations for microscaling quantization of llms",
+        "url:https://arxiv.org/abs/2602.17681"
+      ],
+      "record": {
+        "title": "LATMiX: Learnable Affine Transformations for Microscaling Quantization of LLMs",
+        "source_url": "https://arxiv.org/abs/2602.17681",
+        "year": 2026,
+        "published": "2026-02-04",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) is a widely used approach for reducing the memory and compute costs of large language models (LLMs). Recent studies have shown that applying invertible transformations to activations can significantly improve quantization robustness by reducing activation outliers; however, existing approaches are largely restricted to rotation or Hadamard-based transformations. Moreover, most studies focused primarily on traditional quantization schemes, whereas modern hardware increasingly supports the microscaling (MX) data format. Attempts to combine both showed severe performance degradation, leading prior work to introduce assumptions on the transformations. In this work, we take a complementary perspective. First, we provide a theoretical analysis of transformations under MX quantization by deriving a bound on the quantization error. Our analysis emphasizes the importance of accounting for both the activation distribution and the underlying quantization structure. Building on this analysis, we propose LATMiX, a method that generalizes outlier reduction to learnable invertible affine transformations optimized using standard deep learning tools. Experiments show consistent improvements in average accuracy for MX low-bit quantization over strong baselines on a wide range of zero-shot benchmarks, across multiple model sizes.",
+        "identifiers": [
+          "SemanticScholar:f984a250728333a327e02eec814d258a4aef5370"
+        ],
+        "semantic_scholar_id": "f984a250728333a327e02eec814d258a4aef5370",
+        "canonical_id": "arXiv:2602.17681",
+        "arxiv_id": "2602.17681",
+        "doi": "10.48550/arXiv.2602.17681",
+        "authors": [
+          "Ofir Gordon",
+          "Lior Dikstein",
+          "Arnon Netzer",
+          "Idan Achituve",
+          "H. Habi"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 265,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.25291",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.25291",
+        "id:SemanticScholar:341b697a1dbb74ef0be267b518ac81ccbc454bc1",
+        "id:arXiv:2607.25291",
+        "title:cosa accelerating longcontext inference via proxykernel codesigned sparse attention",
+        "url:https://arxiv.org/abs/2607.25291"
+      ],
+      "record": {
+        "title": "CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2607.25291",
+        "year": 2026,
+        "published": "2026-07-28",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quadratic cost of self-attention makes long-context inference prohibitively expensive, and proxy-based block-sparse attention has become a practical remedy. Existing methods typically rely on a proxy to predict a binary sparse mask and a kernel to consume this mask and perform sparse attention computation. Such an approach is effective under moderate budgets. However, as the budget tightens, the estimated proxy inevitably drops some salient blocks, while the kernel can only apply the sparse mask mechanically, leading to an evident drop in model accuracy. We propose CoSA, a two-stage training-free Sparse Attention under proxy-kernel CO-design, which couples a Kernel-Aware Proxy (KAP) with an Ordered-Skipping Kernel (OSK). In the first stage, the KAP selects blocks under a moderate budget and produces an ordered mask that prescribes the order in which KV pages are visited in the kernel inner loop. In the second stage, the OSK applies this mask and skips more blocks under a tightened budget given online-softmax statistics. Across mainstream LLM backbones and long-context benchmarks, CoSA attains higher accuracy at lower budgets. Impressively, CoSA achieves a 4.93$\\times$ attention speedup and reduces end-to-end Time-to-First-Token by 2.53$\\times$ under a context length of 128K with negligible performance degradation. Code is available at https://github.com/Tencent/AngelSlim.",
+        "identifiers": [
+          "SemanticScholar:341b697a1dbb74ef0be267b518ac81ccbc454bc1"
+        ],
+        "semantic_scholar_id": "341b697a1dbb74ef0be267b518ac81ccbc454bc1",
+        "canonical_id": "arXiv:2607.25291",
+        "arxiv_id": "2607.25291",
+        "doi": "10.48550/arXiv.2607.25291",
+        "authors": [
+          "Yufei Xue",
+          "Lin Niu",
+          "Hong Liu",
+          "Si-Ran Liu",
+          "Han-Yong Shao",
+          "Wei Liu",
+          "Guang-Hua Yu",
+          "Jian-Chen Zhu",
+          "Jun Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 91,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00528",
+      "identity_tokens": [
+        "id:SemanticScholar:d684f97649eaa7a789b97fcbd0e21fed8ec1f49d",
+        "id:arXiv:2608.00528",
+        "title:s4r selective sampling subspaces and sparse reconstruction for compressed longcontext kv caching",
+        "url:https://arxiv.org/abs/2608.00528"
+      ],
+      "record": {
+        "title": "S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching",
+        "source_url": "https://arxiv.org/abs/2608.00528",
+        "year": 2026,
+        "published": "2026-08-01",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The growth of context window lengths in Large Language Models (LLMs) significantly enhances their long-context capabilities but incurs prohibitive memory costs due to the Key-Value (KV) cache. Although low-rank compression of KV cache is a promising remedy, existing methods face a dilemma: offline approaches depend on external calibration data, whereas online approaches incur substantial compute for full-prompt decomposition and reconstruction. In this paper, we propose S$^4$R, which builds low-rank subspaces from selectively sampled tokens and computes attention over a sparsely reconstructed KV representation. S$^4$R uses prompt-aware initialization to build initial key/value bases from a representative prompt subset, trading off calibration-data dependence against prefilling cost. Because fully reconstructing the cache at every decoding step is prohibitively expensive and hurts throughput, we further adopt sparse reconstruction to retain only informative positions during decoding. Extensive experiments on LongBench and RULER with Llama and Qwen model families show that S$^4$R achieves up to 5$\\times$ KV compression with near full-cache accuracy, combining the efficiency of fixed compression with the adaptability of prompt-dependent methods.",
+        "identifiers": [
+          "SemanticScholar:d684f97649eaa7a789b97fcbd0e21fed8ec1f49d"
+        ],
+        "semantic_scholar_id": "d684f97649eaa7a789b97fcbd0e21fed8ec1f49d",
+        "canonical_id": "arXiv:2608.00528",
+        "arxiv_id": "2608.00528",
+        "authors": [
+          "Jialong Han",
+          "You Wu",
+          "Kewei Tu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 87,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.27339",
+      "identity_tokens": [
+        "id:SemanticScholar:3cf3cc0971b3753f5f8789e9091937a76fd9b9c1",
+        "id:arXiv:2608.27339",
+        "title:beyond parallel blindness information floors and model gaps in block drafting",
+        "url:https://arxiv.org/abs/2608.27339"
+      ],
+      "record": {
+        "title": "Beyond Parallel Blindness: Information Floors and Model Gaps in Block Drafting",
+        "source_url": "https://arxiv.org/abs/2608.27339",
+        "year": 2026,
+        "published": "2026-08-27",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block drafters propose several tokens in one forward pass, before earlier target tokens are realised. Their rejection mixes two losses: missing within-block path information and imperfect modelling of observable information. Accepted length cannot distinguish them. We separate the two with an information floor, the minimum expected rejection at a specified conditioning order; rejection above this floor is the model gap. Measurements across four domains and four open-weight targets, plus floor estimates on a frontier API target, yield three findings. First, the all-parallel floor reaches $0.286$ at the final slot on Qwen3-4B, limiting even the best proposal to $71\\%$ per-slot acceptance. Second, one realised token removes $86$--$100\\%$ of this floor, a locality also recovered by an independent mutual-information analysis. Third, current drafters remain far above their floors: the final-slot model gap accounts for $43$--$64\\%$ of DFlash rejection and $85$--$92\\%$ of DSpark's oracle-conditioned rejection. Guided by this separation of short-range conditioning from proposal quality, we replace a context-independent predecessor correction with a prefix-attention head that reads committed context conditional on the predecessor. With supporting backbone components, the resulting Qwen3-4B drafter improves mean serving accepted length by $3.93\\%$ over the released DSpark checkpoint across nine tasks, without increasing the conditioning order. Code and data: https://github.com/tie-pilot-qxw/specfloor; drafter checkpoints: https://huggingface.co/TIE-Pilot/dspark-attnconv-block7-qwen3-4b.",
+        "identifiers": [
+          "SemanticScholar:3cf3cc0971b3753f5f8789e9091937a76fd9b9c1"
+        ],
+        "semantic_scholar_id": "3cf3cc0971b3753f5f8789e9091937a76fd9b9c1",
+        "canonical_id": "arXiv:2608.27339",
+        "arxiv_id": "2608.27339",
+        "authors": [
+          "Xin-Wei Qiang",
+          "Xiang Fang",
+          "Changli Chen",
+          "Zai-Feng Pan",
+          "Yue Guan",
+          "Yu-Fei Ding"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 61,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.26843",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.26843",
+        "id:SemanticScholar:ffe88b42b31e08608d9ec50abfdfbf416a92f1d5",
+        "id:arXiv:2510.26843",
+        "title:casspec cascade adaptive selfspeculative decoding for onthefly lossless inference acceleration of llms",
+        "url:https://arxiv.org/abs/2510.26843"
+      ],
+      "record": {
+        "title": "CAS-Spec: Cascade Adaptive Self-Speculative Decoding for On-the-Fly Lossless Inference Acceleration of LLMs",
+        "source_url": "https://arxiv.org/abs/2510.26843",
+        "year": 2025,
+        "published": "2025-10-30",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding has become a widely adopted as an effective technique for lossless inference acceleration when deploying large language models (LLMs). While on-the-fly self-speculative methods offer seamless integration and broad utility, they often fall short of the speed gains achieved by methods relying on specialized training. Cascading a hierarchy of draft models promises further acceleration and flexibility, but the high cost of training multiple models has limited its practical application. In this paper, we propose a novel Cascade Adaptive Self-Speculative Decoding (CAS-Spec) method which constructs speculative draft models by leveraging dynamically switchable inference acceleration (DSIA) strategies, including layer sparsity and activation quantization. Furthermore, traditional vertical and horizontal cascade algorithms are inefficient when applied to self-speculative decoding methods. We introduce a Dynamic Tree Cascade (DyTC) algorithm that adaptively routes the multi-level draft models and assigns the draft lengths, based on the heuristics of acceptance rates and latency prediction. Our CAS-Spec method achieves state-of-the-art acceleration compared to existing on-the-fly speculative decoding methods, with an average speedup from $1.1\\times$ to $2.3\\times$ over autoregressive decoding across various LLMs and datasets. DyTC improves the average speedup by $47$\\% and $48$\\% over cascade-based baseline and tree-based baseline algorithms, respectively. CAS-Spec can be easily integrated into most existing LLMs and holds promising potential for further acceleration as self-speculative decoding techniques continue to evolve.",
+        "identifiers": [
+          "SemanticScholar:ffe88b42b31e08608d9ec50abfdfbf416a92f1d5"
+        ],
+        "semantic_scholar_id": "ffe88b42b31e08608d9ec50abfdfbf416a92f1d5",
+        "canonical_id": "arXiv:2510.26843",
+        "arxiv_id": "2510.26843",
+        "doi": "10.48550/arXiv.2510.26843",
+        "authors": [
+          "Zhiyuan Ning",
+          "Jia-Wei Shao",
+          "Ruge Xu",
+          "Xin-Fei Guo",
+          "Jun Zhang",
+          "Chi Zhang",
+          "Xue-Long Li"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 362,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.findings-emnlp.716",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-emnlp.716",
+        "id:SemanticScholar:104937b4a8920a3f4e17791184546410c18c7d14",
+        "title:mitigating sequential dependencies a survey of algorithms and systems for generationrefinement frameworks in autoregressive models",
+        "url:https://doi.org/10.18653/v1/2025.findings-emnlp.716"
+      ],
+      "record": {
+        "title": "Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models",
+        "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.716",
+        "year": 2025,
+        "published": null,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:104937b4a8920a3f4e17791184546410c18c7d14"
+        ],
+        "semantic_scholar_id": "104937b4a8920a3f4e17791184546410c18c7d14",
+        "doi": "10.18653/v1/2025.findings-emnlp.716",
+        "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.716",
+        "authors": [
+          "Yunhai Hu",
+          "Zining Liu",
+          "Zhenyuan Dong",
+          "Tianfan Peng",
+          "Bradley McDanel",
+          "Sai-Qian Zhang"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 483,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.06519",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.06519",
+        "id:SemanticScholar:7753d8c9134c4ca8151e51f9aacedab9434b1f66",
+        "id:arXiv:2607.06519",
+        "title:freqdepthkv frequencyguided depth sharing for robust kv cache compression in longcontext llm inference",
+        "url:https://arxiv.org/abs/2607.06519"
+      ],
+      "record": {
+        "title": "FreqDepthKV: Frequency-Guided Depth Sharing for Robust KV Cache Compression in Long-Context LLM Inference",
+        "source_url": "https://arxiv.org/abs/2607.06519",
+        "year": 2026,
+        "published": "2026-07-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context LLM inference is increasingly limited by the memory and bandwidth cost of KV caches, yet aggressive compression can remove the layer-specific evidence needed for retrieval and multi-step reasoning. We introduce FreqDepthKV, an inference-time cache compression method that factorizes adjacent-layer KV states into shared low-frequency depth components and sparse high-frequency residuals. A lightweight online probe assigns attention heads to shared-depth, residual-depth, or exact cache modes according to their contribution to reconstruction-sensitive attention logits, allowing the compression policy to adapt to prompt structure without retraining. Across long-context question answering, needle retrieval, summarization, and code generation benchmarks, FreqDepthKV preserves task accuracy under substantially smaller cache budgets. With a 32k-token prefill window, FreqDepthKV reaches 58.3 Exact Match, 63.0 F1, 32.5 ROUGE-L, and 48.1 pass@1, closely matching full KV while outperforming prior compressed-cache methods. It also improves decoding throughput to 70.4 tokens/s, reduces TTFT to 2.06 seconds, and lowers peak KV memory to 6.2 GB, achieving a 3.9x effective compression ratio.",
+        "identifiers": [
+          "SemanticScholar:7753d8c9134c4ca8151e51f9aacedab9434b1f66"
+        ],
+        "semantic_scholar_id": "7753d8c9134c4ca8151e51f9aacedab9434b1f66",
+        "canonical_id": "arXiv:2607.06519",
+        "arxiv_id": "2607.06519",
+        "doi": "10.48550/arXiv.2607.06519",
+        "authors": [
+          "Anna Córdoba",
+          "Adam Puente Tercero",
+          "Nerea Angulo Hijo",
+          "Mar Linares Tercero",
+          "J. Barrientos",
+          "Ainhoa Miranda",
+          "Jesús Olivera"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 112,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/access.2026.3677249",
+      "identity_tokens": [
+        "id:DOI:10.1109/access.2026.3677249",
+        "id:SemanticScholar:62b577ec192e84f2bb2143ea1e43c23dc81bf3e3",
+        "title:contextaware autoscaling for costefficient large language model inference with prefix cache integration",
+        "url:https://doi.org/10.1109/ACCESS.2026.3677249"
+      ],
+      "record": {
+        "title": "Context-Aware Autoscaling for Cost-Efficient Large Language Model Inference With Prefix Cache Integration",
+        "source_url": "https://doi.org/10.1109/ACCESS.2026.3677249",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Access",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Although granular resource management has been made possible by the architectural shift to Prefill-Decode (PD) disaggregation in Large Language Model (LLM) serving, it is still difficult to maintain strict Service Level Objectives (SLOs) under bursty traffic. Modern autoscaling frameworks, like TokenScale, balance resources using fine-grained “velocity” metrics, but they have a significant drawback: cache blindness. These systems over-provision during spikes in high-locality traffic because they model instance throughput as a static hardware constant, which ignores the enormous effective throughput gains offered by prefix caching (e.g., RadixAttention). Furthermore, they often overlook the cost-efficiency opportunities inherent in heterogeneous GPU clusters. We present AdaptiveScale, a context-aware autoscaling framework that connects resource elasticity and memory locality. Three new mechanisms are suggested by AdaptiveScale: 1) Effective Token Velocity ( $V_{eff}$ ), a dynamic metric that incorporates real-time Radix-tree telemetry to amplify scaling logic based on context reuse; 2) Heterogeneity-Aware Tiered Scheduling, which optimizes convertible decoder selection by pinning cost-effective nodes (like L40S) to decoding while routing prefill bursts to compute-dense GPUs (like H100); and 3) Elastic State Preservation, a mechanism that uses RDMA to zero-copy offload KV-cache states during role-switching, thereby removing the latency penalties associated with cache eviction. AdaptiveScale was implemented on vLLM, and it was assessed using production traces from OpenAI and Azure. Our results demonstrate that AdaptiveScale reduces GPU operational costs by 28% compared to state-of-the-art velocity-based scalers in high-locality workloads, while consistently maintaining 99% SLO attainment.",
+        "identifiers": [
+          "SemanticScholar:62b577ec192e84f2bb2143ea1e43c23dc81bf3e3"
+        ],
+        "semantic_scholar_id": "62b577ec192e84f2bb2143ea1e43c23dc81bf3e3",
+        "doi": "10.1109/ACCESS.2026.3677249",
+        "canonical_id": "DOI:10.1109/ACCESS.2026.3677249",
+        "authors": [
+          "Seyed Hossein Ahmadpanah",
+          "A. Sahafi",
+          "S. Erfani"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 118,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:194330dd5db9bbaba421c2d9e36abf3b59b4c3de4bf30a71f18a2b7f93bc99eb",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

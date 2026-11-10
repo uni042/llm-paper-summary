@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fd1340daf9c36051-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.15965",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.15965",
+    "identity_tokens": [
+      "arXiv:2510.15965"
+    ],
+    "reason": "NeurIPS一次論文全文では、悪意ある敵対埋め込みを使い、LRMに「Wait」「But」などの継続トークンを繰り返させ、推論を生成上限まで引き延ばすバックドア攻撃を提案する。R1-LlamaのGSM8K 50例では上限の4,000 tokenを全例で生成し、平均時間を26.45秒から102.7秒へ増加させる。ただし貢献は推論時資源枯渇を狙うセキュリティ攻撃の実証で、serving/runtime効率を改善する方式ではない。推論資源・遅延への直接の関係はあるが、対象系統の改善手法ではないため微妙とする。",
+    "first_checked_at": "2026-10-22T22:02:01+00:00",
+    "last_checked_at": "2026-10-22T22:02:01+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "One Token Embedding Is Enough to Deadlock Your Large Reasoning Model"
+  },
+  "processed_at": "2026-10-22T22:02:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fd1340daf9c3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

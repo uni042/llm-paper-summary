@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-herald-50b11451-01",
+  "kind": "research",
+  "attempt_id": "attempt-50b11451c81409b86f90c5e0",
+  "job_id": "job-research-3b95bafdcf04b501",
+  "record_bank": "c",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:b6fbce149061afc37b57e5c7497edc1291ba2abf2a9d9c91d94e4cb78311da9c",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-c/metadata.json",
+      "blob_sha": "ac3615d0ff65c07355596de6d8d240822c2dd266"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-c/problem_method.json",
+      "blob_sha": "ad8c3e4cf15f1ff41d5210baea837393d9931588"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-c/evaluation.json",
+      "blob_sha": "79eb5be2d0b38a3a8c84b6c329d0cd1884923760"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-c/results.json",
+      "blob_sha": "6b8c309d5e2123d33d8cbcef2c72fc50f666d334"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-c/positioning.json",
+      "blob_sha": "4c6652dca224b7111fa4e7204c563aee23df06ba"
+    }
+  ],
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "problem_method.method_overview must explain the end-to-end mechanism"
+  ],
+  "checked_at": "2026-09-22T07:30:41+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

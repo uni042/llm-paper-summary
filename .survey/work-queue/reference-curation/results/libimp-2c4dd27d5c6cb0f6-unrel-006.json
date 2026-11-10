@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2c4dd27d5c6cb0f6-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.11691",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.11691",
+    "identity_tokens": [
+      "arXiv:2407.11691"
+    ],
+    "reason": "large multimodality modelの評価toolkitとbenchmark/leaderboardの再現性が主目的。distributed inferenceを評価処理として実装するが、推論サービング性能の最適化自体を研究対象としていない。",
+    "first_checked_at": "2026-10-06T14:22:01+00:00",
+    "last_checked_at": "2026-10-06T14:22:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+    ],
+    "title": "VLMEvalKit: An Open-Source ToolKit for Evaluating Large Multi-Modality Models"
+  },
+  "processed_at": "2026-10-06T14:22:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2c4dd27d5c6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

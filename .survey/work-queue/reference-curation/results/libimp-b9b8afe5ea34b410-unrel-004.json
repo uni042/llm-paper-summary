@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b9b8afe5ea34b410-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.02006",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.02006",
+    "identity_tokens": [
+      "arXiv:2609.02006"
+    ],
+    "reason": "Clone distillation is training-only; abstract states deployed inference FLOPs are unchanged.",
+    "first_checked_at": "2026-10-05T07:17:12+00:00",
+    "last_checked_at": "2026-10-05T07:17:12+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+    ],
+    "title": "Train What You Deploy: Closing the MLP Reachability Gap in Low-Rank Clone Distillation"
+  },
+  "processed_at": "2026-10-05T07:17:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b9b8afe5ea34",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

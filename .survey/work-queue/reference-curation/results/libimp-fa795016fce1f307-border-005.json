@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa795016fce1f307-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.14245",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.14245",
+    "identity_tokens": [
+      "arXiv:2502.14245"
+    ],
+    "reason": "一次本文を確認したが、既存系統との接続または一般化可能なLLM推論効率効果が弱く、具体的な追加検証が必要なためborderlineに残す。 ChainRAG progressively rewrites multi-hop questions and retrieves from a sentence graph. Its reported efficiency is for QA retrieval workflow; no inference memory, token, latency or throughput optimization for the linked prompt-compression lineage is established.",
+    "first_checked_at": "2026-10-06T16:48:05+00:00",
+    "last_checked_at": "2026-10-06T16:48:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mitigating Lost-in-Retrieval Problems in Retrieval Augmented Multi-Hop Question Answering"
+  },
+  "processed_at": "2026-10-06T16:48:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa795016fce1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

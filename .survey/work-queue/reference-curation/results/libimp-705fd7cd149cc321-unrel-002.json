@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-705fd7cd149cc321-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.00302",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.00302",
+    "identity_tokens": [
+      "arXiv:2607.00302"
+    ],
+    "reason": "一次要旨はMLLMへのtactile alignment learning/training。本文abstractもLLM inference overheadを増やさないと述べるが、inference optimizationを実施していない。",
+    "first_checked_at": "2026-10-05T10:46:36+00:00",
+    "last_checked_at": "2026-10-05T10:46:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+    ],
+    "title": "Wake up for Touch! Mask-isolated Tactile Alignment Learning in MLLMs"
+  },
+  "processed_at": "2026-10-05T10:46:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-705fd7cd149c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

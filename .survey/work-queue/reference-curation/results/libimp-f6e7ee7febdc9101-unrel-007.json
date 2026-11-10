@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6e7ee7febdc9101-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2201.07207",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2201.07207",
+    "identity_tokens": [
+      "arXiv:2201.07207"
+    ],
+    "reason": "uses language models to generate and ground plans for embodied agents; capability/robotics planning rather than inference systems.",
+    "first_checked_at": "2026-10-04T21:43:58+00:00",
+    "last_checked_at": "2026-10-04T21:43:58+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+    ],
+    "title": "Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents"
+  },
+  "processed_at": "2026-10-04T21:43:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6e7ee7febdc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

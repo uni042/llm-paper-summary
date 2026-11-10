@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-883dedf555daddbd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.23368",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.23368",
+    "identity_tokens": [
+      "arXiv:2602.23368"
+    ],
+    "reason": "一次要旨で比較するのは、エージェントに基本的なキーワード検索ツールを与えた質問応答と、ベクトルデータベースを使う検索拡張生成（RAG）の回答品質である。ベクトル索引の常時保持や更新コストを回避できるという運用上の効率性はあるが、GPUサービングの実行時間、KVキャッシュ、量子化、分散推論の実装を最適化する研究ではない。要旨はRAG品質指標の90%以上と述べるが、LLMの推論時間削減倍率を報告していないため境界的な関連と判定する。",
+    "first_checked_at": "2026-10-16T09:22:42+00:00",
+    "last_checked_at": "2026-10-16T09:22:42+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Keyword search is all you need: Achieving RAG-Level Performance without vector databases using agentic tool use"
+  },
+  "processed_at": "2026-10-16T09:22:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-883dedf555da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

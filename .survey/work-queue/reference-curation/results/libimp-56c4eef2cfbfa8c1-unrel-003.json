@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-56c4eef2cfbfa8c1-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2107.03006",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2107.03006",
+    "identity_tokens": [
+      "arXiv:2107.03006"
+    ],
+    "reason": "離散状態空間向け拡散生成モデルD3PMの定式化・学習・画像/文字生成品質が主題で、LLM推論システムの実行効率化を最終目的としない。",
+    "first_checked_at": "2026-10-04T15:53:59+00:00",
+    "last_checked_at": "2026-10-04T15:53:59+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2026-2606.02091-dflare.md"
+    ],
+    "title": "Structured Denoising Diffusion Models in Discrete State-Spaces"
+  },
+  "processed_at": "2026-10-04T15:53:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-56c4eef2cfbf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

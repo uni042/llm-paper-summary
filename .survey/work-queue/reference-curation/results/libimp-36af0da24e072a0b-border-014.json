@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36af0da24e072a0b-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2205.10350",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2205.10350",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2205.10350",
+      "arXiv:2205.10350"
+    ],
+    "reason": "並列draft/verifyによる生成高速化は投機的復号の先行技術だが、主対象は一般seq2seq/機械翻訳。",
+    "first_checked_at": "2026-09-27T09:01:29+09:00",
+    "last_checked_at": "2026-09-30T09:46:42+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "worker-worklist-30 discovery_review rank 309"
+    ],
+    "title": "Lossless Acceleration for Seq2seq Generation with Aggressive Decoding"
+  },
+  "processed_at": "2026-09-30T09:46:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36af0da24e07",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

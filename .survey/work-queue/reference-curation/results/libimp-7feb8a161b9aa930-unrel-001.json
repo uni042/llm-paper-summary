@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7feb8a161b9aa930-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.18421",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.18421",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.18421",
+      "arXiv:2403.18421"
+    ],
+    "reason": "題名が明示する主題は生物医学テキストで学習した基盤言語モデルの構築である。推論実行器・GPUメモリ階層・KVキャッシュ・MoEオフロード・サービングの効率化を主題とする論文ではなく、モデル学習と領域適用を扱うため、推論基盤サーベイの対象外とする。",
+    "first_checked_at": "2026-10-13T13:47:00+00:00",
+    "last_checked_at": "2026-10-21T15:27:50+00:00",
+    "linked_from": [],
+    "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
+  },
+  "processed_at": "2026-10-21T15:27:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7feb8a161b9a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

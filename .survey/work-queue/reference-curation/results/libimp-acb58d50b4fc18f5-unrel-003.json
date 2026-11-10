@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-acb58d50b4fc18f5-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.12571",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.12571",
+    "identity_tokens": [
+      "arXiv:2605.12571"
+    ],
+    "reason": "VideoSEAL decouples planning from answer authority for long-video evidence alignment. It improves accuracy and grounding but does not report lower compute, memory, latency, token use, or serving load.",
+    "first_checked_at": "2026-10-07T13:51:09+00:00",
+    "last_checked_at": "2026-10-07T13:51:09+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+    ],
+    "title": "VideoSEAL: Mitigating Evidence Misalignment in Agentic Long Video Understanding by Decoupling Answer Authority"
+  },
+  "processed_at": "2026-10-07T13:51:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-acb58d50b4fc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b0202280e2640885-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.04894",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.04894",
+    "identity_tokens": [
+      "arXiv:2604.04894"
+    ],
+    "reason": "一次資料の主対象は「Asymmetric Advantage Modulation Calibrates Entropy Dynamics in RLVR」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+    "first_checked_at": "2026-10-08T07:08:12+00:00",
+    "last_checked_at": "2026-10-08T07:08:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "Asymmetric Advantage Modulation Calibrates Entropy Dynamics in RLVR"
+  },
+  "processed_at": "2026-10-08T07:08:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b0202280e264",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

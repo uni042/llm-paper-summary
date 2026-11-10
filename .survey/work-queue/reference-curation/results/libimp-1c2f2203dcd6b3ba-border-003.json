@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1c2f2203dcd6b3ba-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.05030",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.05030",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.05030",
+      "arXiv:2604.05030"
+    ],
+    "reason": "PAM is a language model but reports 4x arithmetic overhead over matched Transformer and no efficiency improvement.",
+    "first_checked_at": "2026-10-09T02:14:25+00:00",
+    "last_checked_at": "2026-10-09T02:14:25+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Phase-Associative Memory: Sequence Modeling in Complex Hilbert Space"
+  },
+  "processed_at": "2026-10-09T02:14:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1c2f2203dcd6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

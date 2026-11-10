@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c4d2663115be4cc1-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1016/j.neunet.2026.109469",
+  "reason": "一次書誌・要旨（Neural Networks誌のPubMed登録）を確認。提案は対象ドメインの代表的な専門家を選択してロードし、量子化モデルによる準備段階と専門家切替を伴う微調整を省メモリ化する学習時の専門家選択・更新手順。約50%のメモリ節減は微調整時の指標であり、LLM生成推論時の専門家オフロード、KVキャッシュ、GPUサービング、デコード高速化を直接評価する論文ではないため本推論Researchの対象外。学習サーベイに別途収録するかは専用キューで判断。",
+  "title": "DR-EFT: Exploring and reloading domain-representative experts for the memory-constrained fine-tuning of MoE large models",
+  "identity_tokens": [
+    "doi:10.1016/j.neunet.2026.109469"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4d2663115be",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

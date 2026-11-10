@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aeeb98b29e403286-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.14786",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.14786",
+    "identity_tokens": [
+      "arXiv:2502.14786"
+    ],
+    "reason": "Vision-language encoder family offers model-size cost/performance choices, but its contribution/evaluation is vision representation/training rather than LLM serving; scope is adjacent and weak.",
+    "first_checked_at": "2026-10-05T01:59:05+00:00",
+    "last_checked_at": "2026-10-05T01:59:05+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md",
+      "papers/inference/99-other-inference-systems/2025-2505.19427-wina-weight-informed-neuron-activation-for-accelerating-large-language-m.md"
+    ],
+    "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features"
+  },
+  "processed_at": "2026-10-05T01:59:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aeeb98b29e40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

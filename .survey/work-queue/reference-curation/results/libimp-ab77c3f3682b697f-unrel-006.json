@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab77c3f3682b697f-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2005.11401",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2005.11401",
+    "identity_tokens": [
+      "arXiv:2005.11401"
+    ],
+    "reason": "RAGの基礎モデル・学習と知識集約タスク品質が主題で、現行の推論・配信システム最適化を直接扱わない。",
+    "first_checked_at": "2026-09-27T09:28:42+09:00",
+    "last_checked_at": "2026-09-30T09:50:07+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 272"
+    ],
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+  },
+  "processed_at": "2026-09-30T09:50:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab77c3f3682b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

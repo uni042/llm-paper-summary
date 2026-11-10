@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T021445Z-scheduled-chat-discovery-specialist-18",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-0e6ed88f587a40d2",
+      "claim_id": "claim-e55ee414ac2d0aef0a6fbcc3",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-e55ee414ac2d0aef0a6fbcc3",
+      "claimed_at": "2026-09-19T02:15:06+00:00",
+      "expires_at": "2026-09-19T03:45:06+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-0e6ed88f587a40d2"
+      ],
+      "job": {
+        "job_id": "job-research-0e6ed88f587a40d2",
+        "type": "research",
+        "parent_job_id": "job-5c8ea8ca705a9ecb",
+        "priority": 79,
+        "canonical_id": "arXiv:2402.01528",
+        "title": "Decoding Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2402.01528",
+        "paper_path": "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+        "selection_reason": "Large empirical study of speculative-decoding performance factors followed by hardware-efficient draft-model design; directly useful for system-level drafter selection and throughput optimization.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-17T06:03:27+00:00"
+      },
+      "record_bank": "d",
+      "record_bank_root": ".survey/work-queue/records/chat-record-d",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-d/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-d/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-d/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-d/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-d/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T02:15:06+00:00",
+  "checkpoint_released": 0
+}

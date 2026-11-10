@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-00c0454b734821e9-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:KnqiC0znVF",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:KnqiC0znVF",
+    "identity_tokens": [
+      "OpenReview:KnqiC0znVF"
+    ],
+    "reason": "LLaDAという拡散型言語モデルを事前学習・教師あり微調整して自己回帰型LLMに匹敵する能力を示すモデル研究で、推論効率化システムが主貢献ではない。",
+    "first_checked_at": "2026-10-01T22:26:28+00:00",
+    "last_checked_at": "2026-10-02T07:05:48+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
+      "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md"
+    ],
+    "title": "Large Language Diffusion Models"
+  },
+  "processed_at": "2026-10-02T07:05:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-00c0454b7348",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

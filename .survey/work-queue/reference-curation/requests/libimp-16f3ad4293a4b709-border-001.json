@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-16f3ad4293a4b709-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2605.12396",
+  "reason": "GPU集合通信の通信量を削減する基盤技術でありLLM分散推論の通信にも関連し得るが、原著の評価対象はQMCPack、CESM-ATM、ResNet-18/34の学習勾配、合成通信負荷である。論文の結論はLLMの分割並列や集合通信が多い推論への最適化を将来課題と明記する。LLM推論サービスの遅延、生成処理量、MoE通信などを実測した論文ではないため、現行の推論基盤サーベイでは境界領域として保留する。最大9.65倍という数値は科学データを含む圧縮通信の比較結果であり、LLM推論高速化倍率ではない。",
+  "title": "NCCLZ: Compression-Enabled GPU Collectives with Decoupled Quantization and Entropy Coding",
+  "identity_tokens": [
+    "arXiv:2605.12396",
+    "2605.12396",
+    "NCCLZ"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-16f3ad4293a4",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

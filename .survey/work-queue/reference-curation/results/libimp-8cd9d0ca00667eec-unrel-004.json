@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8cd9d0ca00667eec-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.02051",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.02051",
+    "identity_tokens": [
+      "arXiv:2312.02051"
+    ],
+    "reason": "Primary-source title/abstract identifies a dataset, benchmark, bias/evaluation study, application-domain model, training-only method, or non-LLM task without a concrete link to the defined LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving scope.",
+    "first_checked_at": "2026-10-06T03:59:09+00:00",
+    "last_checked_at": "2026-10-06T03:59:09+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+    ],
+    "title": "TimeChat: A Time-sensitive Multimodal Large Language Model for Long Video Understanding"
+  },
+  "processed_at": "2026-10-06T03:59:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8cd9d0ca0066",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

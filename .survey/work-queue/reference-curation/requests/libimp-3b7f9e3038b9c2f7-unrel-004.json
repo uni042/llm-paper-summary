@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3b7f9e3038b9c2f7-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.22991",
+  "reason": "Apple Silicon machines with large unified memory make it possible to hold large tensors on a desktop GPU. However, we found that PyTorch's Metal Performance Shaders (MPS) backend silently returns wrong results for batched matrix multiplication with more than $2^{32}$ elements. torch bmm, including its wrappers matmul and eager attention, returns relative errors above 1 without an exception or a warning in every PyTorch release tested (2.4.1 to 2.14.0). We sweep bmm over dtypes, memory layouts, shapes and batch sizes around $2^{31}$ and $2^{32}$ elements, and judge every result against a float64 computation on the CPU. Three rules account for every outcome on 2.14.0. When the output exceeds $2^{32}$ elements and an operand is a transposed view, the entire output is wrong and equals a computation that ignores that operand's strides. Otherwise, a view with at least $2^{31}$ elements raises an exception, and a contiguous input above $2^{32}$ elements makes exactly the batches beyond that point wrong, equal to a computation whose index wraps at $2^{32}$. A slightly larger problem can thus turn an explicit error into a silent failure. The rules extend to the backward pass, where a correct forward pass can return silently wrong gradients. A second machine with another chip, under two macOS versions, reproduces all 6156 results, including the wrong values, and the same sweeps on an NVIDIA A100 are correct in all 2530 runs. In a public sentiment classifier, one oversized batch corrupts a third of the outputs, which collapse onto one class. All findings come from observable behavior, without access to the backend's closed-source kernels; we release the harness, raw results and a guard that stops any MPS operation touching $2^{32}$ or more elements at jniimi/mps-silent-failures (https://github.com/jniimi/mps-silent-failures).",
+  "title": "Silent Failures Beyond the 32-Bit Index Range: A Differential Characterization of Large-Tensor Matrix Multiplication in PyTorch's MPS Backend",
+  "identity_tokens": [
+    "arXiv:2609.22991"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b7f9e3038b9",
+  "source_precheck_request_id": null
+}

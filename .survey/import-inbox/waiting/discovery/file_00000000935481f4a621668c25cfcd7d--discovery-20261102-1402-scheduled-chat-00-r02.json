@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1402-scheduled-chat-00/r02",
+  "reference_main_sha": "afab2f7def975f91b7e54f8737fc55697c6becbf",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24991",
+      "identity_tokens": [
+        "id:arXiv:2610.24991",
+        "id:DOI:10.48550/arXiv.2610.24991"
+      ],
+      "title": "Certified Sparse Attention via Perturbed Retrieval",
+      "reason": "長文脈decodeの疎attentionでqueryごとの誤差を制御するため、各key scoreへ独立Exp(1)摂動を加えattention重みに比例した抽出確率を実現し、Horvitz–Thompson推定と多段閾値の同時信頼区間で必要なKV読出し量を決める。一次要旨は16K～128K、3モデルで証明されたerror certificateの違反なし、CPU decodeでdense比1.1～1.4倍の高速化を報告。誤差保証付きKV選択と実際の推論処理を対象とするためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.24991",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:09:22+09:00",
+      "last_checked_at": "2026-11-02T14:09:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.34056",
+      "identity_tokens": [
+        "id:arXiv:2610.34056",
+        "id:DOI:10.48550/arXiv.2610.34056"
+      ],
+      "title": "INTRA: Interleaved Non-contiguous Token spaRse Attention",
+      "reason": "Scatter/Gatherの補完的な非連続token群を複数層で組み合わせ、局所sparse attentionでも長距離情報を中継する静的パターンINTRAを提案。CQS制約に合わせたFlashAttention型kernelが非連続indexを実行時に生成・密にpackする。一次要旨はLLaMA-3.1-8Bの長文脈prefill効率とteacher-forced retrievalの維持を示し、attention microbenchmarkでMoBA比最大8.4倍高速と報告。FLUX画像生成評価も含むがLLM prefill kernelにも直接適用されるためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.34056",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:09:22+09:00",
+      "last_checked_at": "2026-11-02T14:09:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.09139",
+      "identity_tokens": [
+        "id:arXiv:2610.09139",
+        "id:DOI:10.48550/arXiv.2610.09139"
+      ],
+      "title": "Breaking the Space Barrier and its Application to Language Model Inference",
+      "reason": "JSON schema・型付きtool callを保証するautomatonの経路構造を利用し、固定形式部分をモデル実行なしで確定し、GPUでmaskをtableなし再計算、独立fieldを並列復号・検証する制約付き生成runtimeを構成。一次要旨はApple M2 ProのQwen3.5-2B/4BでMLX+llguidance比1.2～1.3倍の抽出速度、grammar memory 3MB対最大1.5GB、16 agent同時実行2.5倍高速を報告。推論時の制約デコードとメモリ削減に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.09139",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:09:22+09:00",
+      "last_checked_at": "2026-11-02T14:09:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.09202",
+      "identity_tokens": [
+        "id:arXiv:2610.09202",
+        "id:DOI:10.48550/arXiv.2610.09202"
+      ],
+      "title": "Few Bits, One Law: Toward W2A4KV2",
+      "reason": "重み・activation・KVを同時に超低ビット化する際の異種分布と相互誤差に対し、回転とenergy正規化でtensorを共通座標へ移し、固定Gaussian codebookを共有してjoint QATで補正するCanonQを提案。一次要旨はLLaMA3 1B/3B/8BのW2A4KV2で既存方式比WikiText-2 perplexity最大14.28倍改善、zero-shot平均精度最大57.9%向上を報告。推論時の重み・活性・KV統合量子化に直接適用するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.09202",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:09:22+09:00",
+      "last_checked_at": "2026-11-02T14:09:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.06026",
+      "identity_tokens": [
+        "id:arXiv:2610.06026",
+        "id:DOI:10.48550/arXiv.2610.06026"
+      ],
+      "title": "Differentiable Bit-Widths: Co-optimizing Pruning and Quantization via SVD for Ultra-Efficient LLM Compression",
+      "reason": "SVD成分をまずpruneし残存成分を量子化する二段階法の最適化不足に対し、成分別bit幅を微分可能に学習し0-bitを削除とみなすことでrankとprecisionを同時に割り当てる。一次要旨は平均1.61bit相当の極端な圧縮でも二段階baselineより性能が良いと報告。LLM推論向け重み容量削減を目的とする圧縮方式でありaccept。ただし実機decode速度は要旨で未確認。",
+      "source_url": "https://arxiv.org/abs/2610.06026",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:09:22+09:00",
+      "last_checked_at": "2026-11-02T14:09:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.16368",
+      "identity_tokens": [
+        "id:arXiv:2610.16368",
+        "id:DOI:10.48550/arXiv.2610.16368"
+      ],
+      "title": "LoopQuant: Accurate and Efficient Post-Training Quantization for Looped Transformers",
+      "reason": "共有Transformer blockを繰返すLoopLMのactivation分布変化と量子化誤差の再帰増幅に対し、loop横断の分布正規化、loop別precision配分、task calibrationを組み合わせるPTQ方式。一次要旨はOuro-2.6BのW4A4でW4A8 baselineを上回り、BF16比model memory 65.3%削減とdecode 1.7倍高速化を報告。再帰型LLMの低ビット推論に直接適用するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.16368",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:09:22+09:00",
+      "last_checked_at": "2026-11-02T14:09:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07121",
+      "identity_tokens": [
+        "id:arXiv:2610.07121",
+        "id:DOI:10.48550/arXiv.2610.07121"
+      ],
+      "title": "SoloQ: Calibration-Free Quantization for Diffusion Language Models",
+      "reason": "拡散LLMのdenoising stepとmask状態に応じたactivation分布変化へ対応するため、構造化K-RPBH回転とrescaleで重み・activationを校正データなしで量子化する。block diffusionでは確定時KVのみ量子化して処理中blockを保護。一次要旨はLLaDA/Dream/Fast-dLLM v2/Nemotron-Labs-Diffusionで4bit精度維持、NVFP4でピークメモリ最大2.61倍削減、end-to-end推論最大2.24倍高速化を報告。拡散LLMの推論圧縮としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.07121",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:09:22+09:00",
+      "last_checked_at": "2026-11-02T14:09:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.13767",
+      "identity_tokens": [
+        "id:arXiv:2610.13767",
+        "id:DOI:10.48550/arXiv.2610.13767"
+      ],
+      "title": "DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs",
+      "reason": "weight再構成MSEを最小化する二重scaleを求めるとactivationのchannel別再scaleも得られる性質を利用し、calibration data不要でW4A4等へPTQするDUALQUANTを提案。MX/NVFP4 block formatを統一的に扱い、variable splittingとblock coordinate descentで解く。一次要旨はRTX4090のLlama-3.1-8B実packed W4A4推論でBF16比memory最大2.61倍削減、throughput最大2.46倍向上を報告。実装を伴う低ビットLLM推論としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.13767",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:09:22+09:00",
+      "last_checked_at": "2026-11-02T14:09:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.05265",
+      "identity_tokens": [
+        "id:arXiv:2610.05265",
+        "id:DOI:10.48550/arXiv.2610.05265"
+      ],
+      "title": "Loopy: Low-Bit Quantization Framework for Looped Language Models",
+      "reason": "共有recurrent coreを繰り返すLoopLMでは量子化構成の優劣が反復深度で変化するため、target深度での最終予測損失を目的にchannel scaling・直交回転を選ぶLoopyを提案。候補へ校正windowを逐次配分して全深度forward評価を保つ。一次要旨はOuro-1.4BのW4A4でSpinQuant比LAMBADA perplexityを36.5%低減と報告。反復型LLMの推論時の重み・activation圧縮としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.05265",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:09:22+09:00",
+      "last_checked_at": "2026-11-02T14:09:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.29545",
+      "identity_tokens": [
+        "id:arXiv:2610.29545",
+        "id:DOI:10.48550/arXiv.2610.29545"
+      ],
+      "title": "PACE: Periodic and Channel-Aligned Encoding of Four-Bit Recurrent States",
+      "reason": "線形attention型LLMがsequenceごとに保持する固定長recurrent stateを、毎tokenでなく数tokenおきに丸め、間のtokenを小bufferへ置くPACEを提案。更新値の大きいchannelに合わせて列単位scaleを共有し、誤差が残るheadのみ8bit保持する。一次要旨は4B～35Bのhybrid modelで4/8bit混合stateが8bit DAMPに近い精度を約2/3のmemoryで維持し、bufferを使ったdecode高速化も保持すると報告。推論stateの容量・速度最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.29545",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:09:22+09:00",
+      "last_checked_at": "2026-11-02T14:09:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0700-scheduled-chat-00/r01",
+  "reference_main_sha": "102d427e8e9aa2ef2014b4e3fd78a4baf37b7757",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:bcf4003639957f66421e086d2e21d97d310fb34c",
+      "identity_tokens": [
+        "semanticscholar:bcf4003639957f66421e086d2e21d97d310fb34c",
+        "title:performance evaluation of llm inference engines"
+      ],
+      "title": "Performance Evaluation of LLM Inference Engines",
+      "reason": "ゲッティンゲン大学のYining Liuによる2026年8月18日付の学位論文。一次資料の要旨で、vLLM、SGLang、llama.cppをA100搭載Slurmクラスタ上の隔離Apptainer環境で比較し、6モデル×3ワークロード×3並列度におけるTTFT、ITL、スループット、GPUメモリと負荷試験を評価していることを確認。中高並列時はvLLMがTTFTで優勢、長入力・高負荷時はSGLangがスループットで優勢、単一要求・小中規模では4-bit量子化したllama.cppが有利と報告する。新しいランタイムの提案ではないが、LLM推論エンジンの実機比較とサービング構成選択に直接貢献するためaccept。査読付き論文ではなく学位論文である点はResearchで明示する。",
+      "source_url": "https://hps.vi4io.org/_media/research/theses/yining_liu_performance_evaluation_of_llm_inference_engines.pdf",
+      "body_check": "abstract_screen_only; body_not_read; primary_university_thesis_pdf_abstract_verified",
+      "first_checked_at": "2026-11-02T07:04:47+09:00",
+      "last_checked_at": "2026-11-02T07:04:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 322
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.sysarc.2025.103548",
+      "identity_tokens": [
+        "doi:10.1016/j.sysarc.2025.103548",
+        "title:a new fixed-point simulation methodology for on-device ai based on large language models"
+      ],
+      "title": "A new fixed-point simulation methodology for on-device AI based on large language models",
+      "reason": "ElsevierのJournal of Systems Architecture Vol.168（2025年11月）に掲載された一次要旨を確認。LLaMA3-8B-Instructのオンデバイス推論を対象に、重み行列積だけでなくSoftMax、層正規化、活性化まで浮動小数点復元をなくす全整数固定小数点演算を設計する。計算グラフをrepeatable/one-to-one nodes（RON）へ分割し、整数部と小数部のビット幅を階層的に決める。MMLU精度をFP16/FP32基準と同等に保ち、Synopsys Design Compilerによる解析でハードウェア資源最大84.67%減、推論約16倍高速化を報告。これらは実機運用の計測値と同一視せず、設計ツール評価として扱う。推論向け量子化とハードウェア実行効率に直接貢献するためaccept。",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S1383762125002206",
+      "body_check": "abstract_screen_only; body_not_read; primary_publisher_abstract_verified",
+      "first_checked_at": "2026-11-02T07:04:47+09:00",
+      "last_checked_at": "2026-11-02T07:04:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 387
+    }
+  ]
+}

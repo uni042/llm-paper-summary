@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2402bfdfc8d2abe0-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.05525",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.05525",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.05525",
+      "arXiv:2403.05525"
+    ],
+    "reason": "real-world vision-language理解のためのデータtaxonomy、instruction tuning、hybrid vision encoder、VL pretraining strategyを組み合わせたVLM研究。hybrid encoderは高解像度画像を低overheadで処理するが、主目的・評価は視覚言語理解能力でありLLM推論基盤のruntime最適化ではない。",
+    "first_checked_at": "2026-10-05T15:43:14+00:00",
+    "last_checked_at": "2026-10-05T16:24:14+00:00",
+    "linked_from": [
+      "papers/inference/06-moe-quantization-compression/2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md"
+    ],
+    "title": "DeepSeek-VL: Towards Real-World Vision-Language Understanding"
+  },
+  "processed_at": "2026-10-05T16:24:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2402bfdfc8d2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

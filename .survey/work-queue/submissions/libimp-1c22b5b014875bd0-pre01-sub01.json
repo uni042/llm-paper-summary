@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Memex(RL): Scaling Long-Horizon LLM Agents via Indexed Experience Memory",
+      "source_url": "https://arxiv.org/abs/2603.04257",
+      "year": 2026,
+      "published": "2026-03-04",
+      "venue": "arXiv.org",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) agents are fundamentally bottlenecked by finite context windows on long-horizon tasks. As trajectories grow, retaining tool outputs and intermediate reasoning in-context quickly becomes infeasible: the working context becomes prohibitively long, eventually exceeds the context budget, and makes distant evidence harder to use even when it is still present. Existing solutions typically shorten context through truncation or running summaries, but these methods are fundamentally lossy because they compress or discard past evidence itself. We introduce Memex, an indexed experience memory mechanism that instead compresses context without discarding evidence. Memex maintains a compact working context consisting of concise structured summaries and stable indices, while storing full-fidelity underlying interactions in an external experience database under those indices. The agent can then decide when to dereference an index and recover the exact past evidence needed for the current subgoal. We optimize both write and read behaviors with our reinforcement learning framework MemexRL, using reward shaping tailored to indexed memory usage under a context budget, so the agent learns what to summarize, what to archive, how to index it, and when to retrieve it. This yields a substantially less lossy form of long-horizon memory than summary-only approaches. We further provide a theoretical analysis showing the potential of the Memex loop to preserve decision quality with bounded dereferencing while keeping effective in-context computation bounded as history grows. Empirically, on challenging long-horizon tasks, Memex agent trained with MemexRL improves task success while using a significantly smaller working context.",
+      "identifiers": [
+        "SemanticScholar:d1ed5cf8419f2e0d78a3511ae37596427e4efcbc"
+      ],
+      "semantic_scholar_id": "d1ed5cf8419f2e0d78a3511ae37596427e4efcbc",
+      "canonical_id": "arXiv:2603.04257",
+      "arxiv_id": "2603.04257",
+      "doi": "10.48550/arXiv.2603.04257",
+      "authors": [
+        "Zhenting Wang",
+        "Huan-Cheng Chen",
+        "Jia-Yun Wang",
+        "Wei Wei"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 240,
+        "matched_prestigious_venue": null
+      },
+      "reason": "完全な過去の相互作用を外部DBへ保存し、作業文脈には要約と安定した索引だけを残すMemexを提案。MemexRLで索引の作成・参照を学習し、長期エージェントで文脈計算量を有界に保ちながら成功率を改善する。LLM文脈メモリ削減と推論効率の直接的な技術的貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Not All Turns Are Equally Hard: Adaptive Thinking Budgets For Efficient Multi-Turn Reasoning",
+      "source_url": "https://arxiv.org/abs/2604.05164",
+      "year": 2026,
+      "published": "2026-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As LLM reasoning performance plateaus, improving inference-time compute efficiency is crucial to mitigate overthinking and long thinking traces even for simple queries. Prior approaches including length regularization, adaptive routing, and difficulty-based budget allocation primarily focus on single-turn settings and fail to address the sequential dependencies inherent in multi-turn reasoning. In this work, we formulate multi-turn reasoning as a sequential compute allocation problem and model it as a multi-objective Markov Decision Process. We propose TAB: Turn-Adaptive Budgets, a budget allocation policy trained via Group Relative Policy Optimization (GRPO) that learns to maximize task accuracy while respecting global per-problem token constraints. Consequently, TAB takes as input the conversation history and learns to adaptively allocate smaller budgets to easier turns and save appropriate number of tokens for the crucial harder reasoning steps. Our experiments on diverse agentic benchmarks demonstrate that TAB achieves a superior accuracy-cost tradeoff saving up to 35% tokens and reducing latency up to 30% while maintaining accuracy over static and off-the-shelf LLM budget baselines. Further, for systems where a plan of all turns is available apriori, we propose TAB All-SubQ, a budget allocation policy that budgets tokens based on the conversation history and entire plan saving up to 40% tokens over baselines.",
+      "identifiers": [
+        "SemanticScholar:7db85d18e24b955657f77051da3d81b482932a4f"
+      ],
+      "semantic_scholar_id": "7db85d18e24b955657f77051da3d81b482932a4f",
+      "canonical_id": "arXiv:2604.05164",
+      "arxiv_id": "2604.05164",
+      "doi": "10.48550/arXiv.2604.05164",
+      "authors": [
+        "Neharika Jali",
+        "Anupam Nayak",
+        "Gauri Joshi"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 207,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TABは複数ターンの推論を逐次的な計算予算配分問題として定式化し、GRPOで簡単なターンの思考トークンを節約して難しいターンへ回す。エージェント課題でトークン最大35%削減、遅延最大30%削減を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2410.10912",
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 52,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work on pruning large language models (LLMs) has shown that one can eliminate a large number of parameters without compromising performance, making pruning a promising strategy to reduce LLM model size. Existing LLM pruning strategies typically assign uniform pruning ratios across layers, limiting overall pruning ability; and recent work on layerwise pruning of LLMs is often based on heuristics that can easily lead to suboptimal performance. In this paper, we leverage Heavy-Tailed Self-Regularization (HT-SR) Theory, in particular the shape of empirical spectral densities (ESDs) of weight matrices, to design improved layerwise pruning ratios for LLMs. Our analysis reveals a wide variability in how well-trained, and thus relatedly how prunable, different layers of an LLM are. Based on this, we propose AlphaPruning, which uses shape metrics to allocate layerwise sparsity ratios in a more theoretically principled manner. AlphaPruning can be used in conjunction with multiple existing LLM pruning methods. Our empirical results show that AlphaPruning prunes LLaMA-7B to 80% sparsity while maintaining reasonable perplexity, marking a first in the literature on LLMs. We have open-sourced our code at https://github.com/haiquanlu/AlphaPruning.",
+      "identifiers": [
+        "SemanticScholar:46daae2a932aa02e307fd3317e9f3719c56d6010"
+      ],
+      "semantic_scholar_id": "46daae2a932aa02e307fd3317e9f3719c56d6010",
+      "canonical_id": "arXiv:2410.10912",
+      "arxiv_id": "2410.10912",
+      "doi": "10.48550/arXiv.2410.10912",
+      "authors": [
+        "Haiquan Lu",
+        "Ye-Fan Zhou",
+        "Shi-Wei Liu",
+        "Zhang-Yang Wang",
+        "Michael W. Mahoney",
+        "Yaoqing Yang"
+      ],
+      "priority": 62,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 52,
+        "citation_count": 52,
+        "total": 62,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 746,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "重み行列の経験スペクトル密度と重尾自己正則化理論から層ごとの枝刈り率を決める。均一な削除率に比べて重要層を保護し、LLaMA-7Bの80%疎性でも一定の困惑度を維持すると報告する。推論向けモデル圧縮の枝刈り率割当方式。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "NASH: A Simple Unified Framework of Structured Pruning for Accelerating Encoder-Decoder Language Models",
+      "source_url": "https://arxiv.org/abs/2310.10054",
+      "year": 2023,
+      "published": "2023-10-16",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning methods have proven effective in reducing the model size and accelerating inference speed in various network architectures such as Transformers. Despite the versatility of encoder-decoder models in numerous NLP tasks, the structured pruning methods on such models are relatively less explored compared to encoder-only models. In this study, we investigate the behavior of the structured pruning of the encoder-decoder models in the decoupled pruning perspective of the encoder and decoder component, respectively. Our findings highlight two insights: (1) the number of decoder layers is the dominant factor of inference speed, and (2) low sparsity in the pruned encoder network enhances generation quality. Motivated by these findings, we propose a simple and effective framework, NASH, that narrows the encoder and shortens the decoder networks of encoder-decoder models. Extensive experiments on diverse generation and inference tasks validate the effectiveness of our method in both speedup and output quality.",
+      "identifiers": [
+        "SemanticScholar:a192a832b0fd54ed4998342e86ae7b15ad940028"
+      ],
+      "semantic_scholar_id": "a192a832b0fd54ed4998342e86ae7b15ad940028",
+      "canonical_id": "arXiv:2310.10054",
+      "arxiv_id": "2310.10054",
+      "doi": "10.48550/arXiv.2310.10054",
+      "authors": [
+        "Jongwoo Ko",
+        "Seungjoon Park",
+        "Yujin Kim",
+        "Sumyeong Ahn",
+        "Du-seong Chang",
+        "Euijai Ahn",
+        "SeYoung Yun"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1110,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "encoderとdecoderの構造的枝刈りを分離し、生成速度に支配的なdecoder層を短縮しながらencoderを狭くする。生成品質と速度を比較したencoder-decoder言語モデルの推論向け構造的圧縮手法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "EdgeInfinite: A Memory-Efficient Infinite-Context Transformer for Edge Devices",
+      "source_url": "https://arxiv.org/abs/2503.22196",
+      "year": 2025,
+      "published": "2025-03-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) encounter challenges in processing long sequences on edge devices due to the quadratic complexity of attention mechanisms and growing memory demands from Key-Value (KV) cache. Existing KV cache optimizations struggle with irreversible token eviction in long-output tasks, while alternative sequence modeling architectures prove costly to adopt within established Transformer infrastructure. We present EdgeInfinite, a memory-efficient solution for infinite contexts that integrates compressed memory into Transformer-based LLMs through a trainable memory-gating module. This approach maintains full compatibility with standard Transformer architectures, requiring fine-tuning only a small part of parameters, and enables selective activation of the memory-gating module for long and short context task routing. The experimental result shows that EdgeInfinite achieves comparable performance to baseline Transformer-based LLM on long context benchmarks while optimizing memory consumption and time to first token.",
+      "identifiers": [
+        "SemanticScholar:300207a7cc2644859813dbc477bec1e90b90a41a"
+      ],
+      "semantic_scholar_id": "300207a7cc2644859813dbc477bec1e90b90a41a",
+      "canonical_id": "arXiv:2503.22196",
+      "arxiv_id": "2503.22196",
+      "doi": "10.48550/arXiv.2503.22196",
+      "authors": [
+        "Jiyu Chen",
+        "Shuang Peng",
+        "Daxiong Luo",
+        "Fan Yang",
+        "Renshou Wu",
+        "Fangyuan Li",
+        "Xiao-Xin Chen"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 581,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "標準Transformerに学習可能なメモリゲートと圧縮記憶を組み込み、長短文脈に応じてゲートを選択的に使う。既存のKV evictionと異なり長出力での情報欠落を避け、エッジLLMのメモリ占有とTTFTを改善する直接的な長文脈推論手法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1c22b5b01487",
+    "round": "libimp-1c22b5b014875bd0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1c22b5b014875bd0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1c22b5b014875bd0-pre01.json",
+    "receipt": "sha256:9f558ddcb5d4f1377563ad199e04959198bdc5baca7af97f8280a5833a0ab702"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1c22b5b01487",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

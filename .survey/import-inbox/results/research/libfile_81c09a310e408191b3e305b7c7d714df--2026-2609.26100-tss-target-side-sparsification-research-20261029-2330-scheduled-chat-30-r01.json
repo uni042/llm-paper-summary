@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "51cc59dea2a1b9e9bde5e56f96b00c80503aa03059924c9bf0ca9add10a834d9",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_81c09a310e408191b3e305b7c7d714df--2026-2609.26100-tss-target-side-sparsification-research-20261029-2330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.26100",
+  "worker_completed_at": "2026-10-29T23:30:00+09:00",
+  "worker_run_key": "20261029-2330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4826,
+    "body_paragraphs": 25,
+    "method_chars": 1335,
+    "method_paragraphs": 7,
+    "evaluation_chars": 438,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 438 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 438 < 500"
+  ],
+  "processed_at": "2026-10-29T14:53:12+00:00"
+}

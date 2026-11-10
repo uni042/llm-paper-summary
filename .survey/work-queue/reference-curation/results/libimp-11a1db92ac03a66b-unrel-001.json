@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11a1db92ac03a66b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2308.09687",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2308.09687",
+    "identity_tokens": [
+      "arXiv:2308.09687"
+    ],
+    "reason": "LLMの思考単位を任意グラフとして生成・集約・評価するプロンプティング／推論戦略研究で、品質とAPIコストは扱うが、モデル実行ランタイムの速度・KVメモリ・カーネル・サービング最適化を提案しない。",
+    "first_checked_at": "2026-10-04T09:52:02+00:00",
+    "last_checked_at": "2026-10-04T09:52:02+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+    ],
+    "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models"
+  },
+  "processed_at": "2026-10-04T09:52:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11a1db92ac03",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

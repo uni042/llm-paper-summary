@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b6e1732887140195-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.18454",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.18454",
+    "identity_tokens": [
+      "arXiv:2409.18454"
+    ],
+    "reason": "The paper evaluates long-context LLMs for enterprise multi-document understanding and summarization. It presents an application/integration study without a concrete inference-efficiency method.",
+    "first_checked_at": "2026-10-06T08:20:35+00:00",
+    "last_checked_at": "2026-10-06T08:20:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+    ],
+    "title": "Leveraging Long-Context Large Language Models for Multi-Document Understanding and Summarization in Enterprise Applications"
+  },
+  "processed_at": "2026-10-06T08:20:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b6e173288714",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

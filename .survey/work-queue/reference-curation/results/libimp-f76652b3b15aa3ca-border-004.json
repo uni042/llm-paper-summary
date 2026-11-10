@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f76652b3b15aa3ca-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.22546",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.22546",
+    "identity_tokens": [
+      "arXiv:2601.22546"
+    ],
+    "reason": "HOLOはLLMが生成初期に目的文のキーワードを捉える性質を利用し、短い生成ステップでキーワードを抽出した後、語彙制約付き並列テキスト生成で文章を完成させる。推論ステップ削減の可能性はあるが、一次要旨の主要評価は自動・人手品質指標であり、実測latencyや生成throughputの改善幅が示されないためborderline。",
+    "first_checked_at": "2026-10-30T20:07:32+00:00",
+    "last_checked_at": "2026-10-30T20:07:32+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Towards the Holographic Characteristic of LLMs for Efficient Short-text Generation"
+  },
+  "processed_at": "2026-10-30T20:07:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f76652b3b15a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

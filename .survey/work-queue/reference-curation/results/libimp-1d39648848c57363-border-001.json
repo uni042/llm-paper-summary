@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d39648848c57363-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.12703",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.12703",
+    "identity_tokens": [
+      "arXiv:2608.12703"
+    ],
+    "reason": "本文はASR特有のaudio-position driftとspeculative decoding costを比較し、training時AnchorDraftでend-to-end speed向上を報告。ただし一般LLMではなく音声認識用decoderに限定。 primary taskはASRで、音響encoder/positioning固有の設計。一般LLM decodingへの移植可能性は未検証。",
+    "first_checked_at": "2026-10-05T03:19:23+00:00",
+    "last_checked_at": "2026-10-05T03:19:23+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md"
+    ],
+    "title": "Alignment Drift in Single-Model Speculative Decoding for ASR: Mechanism, Correction, and Cost"
+  },
+  "processed_at": "2026-10-05T03:19:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d39648848c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

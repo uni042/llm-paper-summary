@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "620c4ba28cd489171bd93e4cfe45d320d05c3ff70fa74065f663a062a9bcaa1a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9fc1fba9cc7c8191abf70e005003eafd--2023-2307.02690-saicl-structured-attention-in-context-research-20261019-0201-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2307.02690",
+  "worker_completed_at": "2026-10-19T02:06:24+09:00",
+  "worker_run_key": "20261019-0201-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6009,
+    "body_paragraphs": 33,
+    "method_chars": 1695,
+    "method_paragraphs": 9,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-18T17:55:15+00:00"
+}

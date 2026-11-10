@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-26aea2b36f76d3cc-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.00157",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.00157",
+    "identity_tokens": [
+      "arXiv:2402.00157"
+    ],
+    "reason": "数学推論LLMの問題種別、dataset、解法、評価、課題を整理するsurvey。reasoning能力の体系化が目的で、推論runtime・token削減・memory・serving効率化の新規system方式を提案しない。",
+    "first_checked_at": "2026-10-05T15:55:18+00:00",
+    "last_checked_at": "2026-10-05T15:55:18+00:00",
+    "linked_from": [],
+    "title": "Large Language Models for Mathematical Reasoning: Progresses and Challenges"
+  },
+  "processed_at": "2026-10-05T15:55:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-26aea2b36f76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5f2a120dfc016e3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.01540",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.01540",
+    "identity_tokens": [
+      "arXiv:2512.01540"
+    ],
+    "reason": "FlashVGGT compresses descriptors for visual geometry attention and reports 10.1x speedup and 15.8x fewer FLOPs on 1,000 images, with lower memory. The result is 3D vision-specific and does not evaluate LLM inference.",
+    "first_checked_at": "2026-10-06T13:32:15+00:00",
+    "last_checked_at": "2026-10-06T13:32:15+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FlashVGGT: Efficient and Scalable Visual Geometry Transformers with Compressed Descriptor Attention"
+  },
+  "processed_at": "2026-10-06T13:32:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5f2a120dfc0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

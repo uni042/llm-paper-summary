@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-082f13560765c46a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.14249",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.14249",
+    "identity_tokens": [
+      "arXiv:2601.14249"
+    ],
+    "reason": "teacher/student reasoning trajectory選択によるdistillation data suitability研究で、学習専用。",
+    "first_checked_at": "2026-10-05T15:04:26+00:00",
+    "last_checked_at": "2026-10-05T15:04:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+    ],
+    "title": "Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment"
+  },
+  "processed_at": "2026-10-05T15:04:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-082f13560765",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

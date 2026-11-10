@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20260927-u-arxiv-2405-11143",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.11143",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.11143",
+    "identity_tokens": [
+      "arXiv:2405.11143"
+    ],
+    "reason": "Ray/vLLM/DeepSpeedを用いたRLHF/RLVR学習基盤で、主評価はtraining throughput。現行方針では学習高速化を除外。",
+    "first_checked_at": "2026-09-27T05:26:49+00:00",
+    "last_checked_at": "2026-09-27T05:26:49+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "OpenRLHF: An Easy-to-use, Scalable and High-performance RLHF Framework"
+  },
+  "processed_at": "2026-09-27T05:26:49+00:00",
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c450aa448f898fd9-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.27686",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.27686",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.27686",
+      "arXiv:2605.27686"
+    ],
+    "reason": "The primary abstract proposes a fixed-size recurrent 3D state mainly for long-horizon video/spatial reasoning. It notes KV-cache state growth and benchmarks language/image/video, but does not establish an LLM inference-efficiency benefit; retain as a weakly connected borderline.",
+    "first_checked_at": "2026-10-08T22:56:37+00:00",
+    "last_checked_at": "2026-10-08T22:56:37+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Tensor Memory: Fixed-Size Recurrent State for Long-Horizon Transformers"
+  },
+  "processed_at": "2026-10-08T22:56:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c450aa448f89",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

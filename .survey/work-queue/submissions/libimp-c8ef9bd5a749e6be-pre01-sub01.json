@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DynaTE: Accelerating Diffusion LLMs via Dynamic Token Execution",
+      "source_url": "https://arxiv.org/abs/2610.11284",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based LLMs (dLLMs) have recently emerged as a promising alternative to autoregressive (AR) LLMs by enabling bidirectional parallel refinement, alleviating the sequential decoding bottleneck of AR generation. However, their parallel iterative refinement mismatches AR accelerators optimized for sequential decoding and their discrete token generation differs from DiT accelerators designed for continuous denoising. Recent dLLM accelerators have explored workload-specific optimizations to reduce vocabulary processing overhead and redundant computation across denoising iterations. However, these approaches retain all tokens in parallel execution, despite varying token refinement utility and execution requirements. This paper presents DynaTE, a hardware--software co-design architecture that dynamically adapts accelerator execution to evolving token states during dLLM decoding. DynaTE first enables adaptive token execution by skipping low-utility token computation, while a dimension-reconfigurable PE array maintains high utilization under varying active-token patterns. Second, DynaTE exploits dynamic token dependencies through FLDD to refine a small number of locally dependent tokens within the current iteration, reducing the overall number of denoising iterations, while a Merge--Split--Merge dataflow hides the resulting serial overhead. Third, a streaming vocabulary engine interleaves multiple token streams from the LM head to accommodate irregular output variations caused by selective token computation and uneven vocabulary-selection demands. Evaluated on two representative dLLMs, DynaTE achieves 2.05--2.78$\\times$ speedup and 2.99--3.93$\\times$ higher energy efficiency over state-of-the-art dLLM accelerators, while delivering 2.55$\\times$ speedup and 6.07$\\times$ higher energy efficiency over Jetson AGX Orin.",
+      "identifiers": [
+        "SemanticScholar:2e5de7a367457df412471e5fba656879ed40abba"
+      ],
+      "semantic_scholar_id": "2e5de7a367457df412471e5fba656879ed40abba",
+      "canonical_id": "arXiv:2610.11284",
+      "arxiv_id": "2610.11284",
+      "authors": [
+        "Ming-Han Jiang",
+        "Jia-Yi Wang",
+        "Shuai-Ting Li",
+        "Hai-Bin Shen",
+        "Ke-Jie Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散LLMの反復decodeで更新価値の低いtoken計算を省き、稼働token数に合わせてPE arrayを再構成するhardware/software co-design。局所依存tokenの更新をFLDDで絞り、Merge-Split-Merge dataflowとstreaming vocabulary engineで不規則実行を吸収する。一次要旨は2種類のdLLMで既存accelerator比2.05～2.78倍高速・2.99～3.93倍energy効率と報告。拡散LLM推論acceleratorとしてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "SARATHI: Decoupled Data-Free Probing and Adaptive Reconstruction for Structured LLM Pruning",
+      "source_url": "https://arxiv.org/abs/2610.15514",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning reduces the inference cost of large language models (LLMs) by permanently removing neurons and weight rows, yielding dense, hardware-agnostic speedup. Existing post-training methods couple neuron selection and weight reconstruction through a shared calibration dataset, introducing domain bias and out-of-memory failures at high sparsity. We propose SARATHI, a framework that decouples these two stages. A data-free \\emph{NMF Residual Subspace Probe} scores neurons using intrinsic weight geometry, without accessing any calibration data, and carries a formal connection to Robust PCA. \\emph{Adaptive OBS} then reconstructs the pruned weights with a localized calibration batch, operating in $\\mathcal{O}(d^2)$ peak memory per layer and eliminating the global memory bottleneck of coupled methods. A \\emph{Bias Shift Compensation} step corrects systematic activation drift in post-LayerNorm architectures that would otherwise cause perplexity collapse at high sparsity. Experiments across six models from two architecture families (gated and non-gated FFN) at 15--40\\% sparsity show that SARATHI achieves competitive perplexity and matches or exceeds existing structured pruning baselines on zero-shot accuracy.",
+      "identifiers": [
+        "SemanticScholar:89478668b18a0f497d97481d599f5563d302408b"
+      ],
+      "semantic_scholar_id": "89478668b18a0f497d97481d599f5563d302408b",
+      "canonical_id": "arXiv:2610.15514",
+      "arxiv_id": "2610.15514",
+      "authors": [
+        "Sankar Behera",
+        "Dhruv Singh",
+        "Satyadev Ahlawat",
+        "Yamuna Prasad"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      },
+      "reason": "構造化LLM pruningでneuron選択と重み再構成が同一calibration setへ依存する問題に対し、重み幾何に基づくdata-free NMF残差部分空間probeで選択し、局所calibrationを用いるAdaptive OBSで重みを復元するSARATHIを提案。一次要旨はlayerあたりpeak O(d²) memory、6モデル・15～40% sparsityで既存法と同等以上のperplexity・zero-shot精度を報告。dense演算を保った推論計算・重量削減を狙うためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "TwinPrune: Density-Aware Two-Phase Token Pruning for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2610.17530",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose a unified spatial-density signal to score token importance for both inference phases: bipartite merge for prefill and KV eviction for decode, yielding measurable gains in each stage. To isolate the two phases, we split benchmarks by scoring logic. Prefill probes (MMBench, POPE, ScienceQA) evaluate only the first decoded token; their accuracy reflects prefill logits argmax before any decode KV eviction. Full-pipeline probes (TextVQA, DocVQA, MM-Vet) assess the complete generated sequence and capture both phases. We identify a critical evaluation pitfall: decode pruning claims validated solely on prefill probes measure prefill quality, not decode performance. Experiments show discarding all visual KV during decode barely affects prefill-probe accuracy but degrades TextVQA and MM-Vet drastically; this insensitivity stems from the scoring rule, not compression intensity. Evaluated on seven model variants (InternVL-3.5, Qwen3-VL, LLaVA-1.5) and three full-pipeline benchmarks, our method achieves a three-way Pareto frontier across compute, memory and accuracy. Density-based prefill compression maintains strong accuracy, scales linearly with visual token count, and delivers 100x faster token selection at high resolution. For decode, density top-k KV eviction consistently outperforms strong baselines H2O, SnapKV and StreamingLLM on TextVQA and MM-Vet across three retention ratios. At 0.125 keep ratio on TextVQA, it surpasses H2O by 9.6 points; InternVL-3.5 models (2B to 38B) maintain a 7 to 10 point advantage. Compression scales favorably with model size: every measured 8B to 38B model transition reduces accuracy loss instead of worsening it. We suggest MM-Vet or DocVQA as mandatory full-pipeline validation for any decode-phase claims. Our code is available at https://github.com/Kai-Liu001/TwinPrune",
+      "identifiers": [
+        "SemanticScholar:04ee178b04b33bbdb3250ed37b24a763f13924b5"
+      ],
+      "semantic_scholar_id": "04ee178b04b33bbdb3250ed37b24a763f13924b5",
+      "canonical_id": "arXiv:2610.17530",
+      "arxiv_id": "2610.17530",
+      "authors": [
+        "Kai Liu",
+        "An-Qi Li",
+        "Junxian Li",
+        "Zhi-Xin Wang",
+        "Zhi-Kai Chen",
+        "Ren-Jing Pei",
+        "Yu-Lun Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VLMのprefillでは視覚tokenのbipartite merge、decodeではKV evictionへ同一空間密度signalを使うTwinPruneを提案。prefillだけを評価するfirst-token課題ではdecode時KV除去の影響が測れないという評価上の落とし穴も検証する。一次要旨は高解像度token選択100倍高速、TextVQAで12.5% KV保持時にH2O比9.6点の精度向上を報告。VLM推論のprefill/decode両段階の圧縮としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "TIPS: A Tiny Inference-time Policy for Scaling in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.22099",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked diffusion language models expose an inference-time choice: which positions become visible after each denoising pass. Many existing decoding methods use hand-designed rules or require visibility to grow monotonically. We present a $\\textbf{T}$iny $\\textbf{I}$nference-time $\\textbf{P}$olicy for $\\textbf{S}$caling ($\\textbf{TIPS}$), an approximately $600$K-parameter controller that learns both unmasking and remasking while keeping the underlying language model frozen. TIPS uses visibility-aware confidence features and a shallow transformer to select which tokens should be visible, while a fixed schedule controls the expected visible fraction. We train the controller through supervised warmup followed by reinforcement learning from terminal correctness rewards. On GSM8K and MATH-500 with LLaDA-8B-Instruct, the full-canvas and two-block TIPS variants achieve $58.46\\%$ and $57.97\\%$ micro-averaged accuracy at a budget of $32$ decoder evaluations, exceeding the strongest baseline in our main comparison by $12.1$ and $11.6$ percentage points, respectively. Both variants are trained at a budget of $32$ evaluations and remain competitive at higher budgets without retraining. These results demonstrate that learning when to reveal and reconsider tokens can improve the accuracy-compute trade-off without updating the decoder backbone.",
+      "identifiers": [
+        "SemanticScholar:97da40b9ab8e1260e79da6ded9f45d80e474a82f"
+      ],
+      "semantic_scholar_id": "97da40b9ab8e1260e79da6ded9f45d80e474a82f",
+      "canonical_id": "arXiv:2610.22099",
+      "arxiv_id": "2610.22099",
+      "authors": [
+        "Ya-Shi Zhang",
+        "Jian Tang",
+        "Pierre-Andre Noel",
+        "Oleksiy Ostapenko"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散LLMの各denoising passで可視化・再maskする位置を、約600Kパラメータのcontrollerがconfidence特徴から決定するTIPSを提案。LLM本体を固定し、supervised warmupと最終正解報酬のRLでpolicyを学習する。一次要旨はLLaDA-8B-Instruct、32回のdecoder評価予算でGSM8K/MATH-500のmicro平均精度58.46/57.97%を報告。推論時計算予算と品質の制御を直接扱うためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Hierarchical and Query-Aware Visual Token Pruning for High-Resolution LVLMs",
+      "source_url": "https://arxiv.org/abs/2610.24102",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "High-resolution Large Vision-Language Models (LVLMs) preserve critical, fine-grained visual details by encoding a global thumbnail alongside multiple local crops. However, the resulting thousands of vision tokens introduce severe computational bottlenecks during Large Language Model (LLM) inference. Existing token pruning methods rely primarily on query-agnostic visual saliency, while current query-aware approaches either operate at a coarse crop-level resolution or compute token relevance too late, after vision tokens have already entered the heavy LLM layers. To address this, we propose a training-free, hierarchical token pruning framework that utilizes query guidance prior to executing any LLM blocks. Our top-down hierarchy first operates at the instance-level, dynamically scaling the vision token retention ratio of each sample based on its visual complexity. Next, at the crop-level, we distribute this sample budget across local crops using sentence-level cross-modal similarity. Finally, at the token-level, we exploit projected vision tokens alongside textual query token embeddings in the shared space to measure fine-grained alignment, applying a text-debiasing normalization to produce high-fidelity query scores. These query-guided budgets and scores are fused with local and global visual saliency metrics to select the most critical vision tokens. Extensive experiments on LLaVA-NeXT-7B demonstrate that our plug-and-play framework retains 98.0% and 94.8% of unpruned performance at 25% and 10% vision token retention, respectively. Notably, at 25% retention, our method delivers a 2.0x inference throughput speedup and even surpasses the unpruned baseline on POPE by 0.7 points.",
+      "identifiers": [
+        "SemanticScholar:ac2a2aaaa39ca83482e0129de7f1c5fd1089eb64"
+      ],
+      "semantic_scholar_id": "ac2a2aaaa39ca83482e0129de7f1c5fd1089eb64",
+      "canonical_id": "arXiv:2610.24102",
+      "arxiv_id": "2610.24102",
+      "authors": [
+        "Luther Wei",
+        "Ling Zou",
+        "Kang-Yang Huang",
+        "Yu-Syuan Xu",
+        "Wen-Huang Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      },
+      "reason": "高解像度LVLMのthumbnailと多数cropから生じる視覚tokenを、LLM block実行前にsample/crop/tokenの3階層でquery条件付き選択するtraining-free方式。画像複雑度で総予算を決め、cropごとの文・画像類似度とtokenのcross-modal alignmentを局所・大域saliencyと統合する。一次要旨はLLaVA-NeXT-7Bで25% token保持時に性能98.0%維持、推論throughput 2倍を報告。マルチモーダルLLMのprefill計算削減としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c8ef9bd5a749",
+    "round": "libimp-c8ef9bd5a749e6be-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c8ef9bd5a749e6be-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c8ef9bd5a749e6be-pre01.json",
+    "receipt": "sha256:c33553fe8a20c8a72c701ce5d59f522021f5ffeddea292f78c50b5297336af87"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c8ef9bd5a749",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

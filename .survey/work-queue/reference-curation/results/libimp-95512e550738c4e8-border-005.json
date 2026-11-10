@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95512e550738c4e8-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/mm.2026.3669122",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/mm.2026.3669122",
+    "identity_tokens": [
+      "DOI:10.1109/mm.2026.3669122"
+    ],
+    "reason": "IEEE DOI一次sourceを取得できなかった。表題からedge language-model acceleratorという直接関連の可能性が高いが、精度・演算・電力の主張を一次本文で確認できないためborderlineとして未解決を明示する。",
+    "first_checked_at": "2026-10-06T17:45:32+00:00",
+    "last_checked_at": "2026-10-06T17:45:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LogFlex: Flexible-Bit Log Arithmetic Accelerator for Language Models on Edge"
+  },
+  "processed_at": "2026-10-06T17:45:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95512e550738",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

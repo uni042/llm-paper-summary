@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-236e6e0ee6de3882-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.14318",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.14318",
+    "identity_tokens": [
+      "arXiv:2508.14318"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2508.14318. Abstract summary: Large Artificial Intelligence (AI) training workloads spanning several tens of thousands of GPUs present unique power management challenges. These arise due to the high variability in power consumption during the training. Given the synchronous nature of these jobs, during every iteration there is a computation-heavy phase, wher Out of scope: AI training datacenter power stabilization, training-only.",
+    "first_checked_at": "2026-10-05T12:32:43+00:00",
+    "last_checked_at": "2026-10-05T12:32:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+    ],
+    "title": "Power Stabilization for AI Training Datacenters"
+  },
+  "processed_at": "2026-10-05T12:32:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-236e6e0ee6de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T163800JST-scheduled-chat-30-041d58-03",
+  "kind": "research",
+  "attempt_id": "attempt-041d58979c001abd8a8d2892",
+  "job_id": "job-research-676eb3c59785d737",
+  "record_bank": "g",
+  "paper_path": "papers/training/02-distributed-heterogeneous-moe-training/2026-2606.19025-fomoe-federation-partial-expert-replication.md",
+  "expected_blob_sha": null,
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:9c8eb4c877315423d85f11a5f0c45bd0bad04e819021440baa4289bab672689b",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "0025588955b61d1f83e4eac77e38d6595ae53f9c"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "424472f2de1b65ff37e01018d6a68772a7347422"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "66cb3e0b3b7a1e8e09794709dd5b730df59607ce"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "d7ae23b35a37b2132462716c2e164a58e2c3f81e"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "bae988cb64045592ffd6513c1b287e81b96f5647"
+    }
+  ],
+  "validation_errors": [
+    "Japanese-first prose ratio is too low: 69.4% < 70% (Japanese=5728, Latin=2529)"
+  ],
+  "checked_at": "2026-09-23T07:37:00+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

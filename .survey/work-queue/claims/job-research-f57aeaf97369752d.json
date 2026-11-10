@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "claim_id": "claim-preload-e5d4444ca1efaaa8d487fdc6",
+  "job_id": "job-research-f57aeaf97369752d",
+  "worker_id": "shared-preload-pool",
+  "worker_kind": "work",
+  "attempt_id": "attempt-preload-e5d4444ca1efaaa8d487fdc6",
+  "claimed_at": "2026-09-25T02:23:56+00:00",
+  "preloaded_at": "2026-09-25T02:23:56+00:00",
+  "expires_at": "2026-10-04T04:13:22+00:00",
+  "kind": "research",
+  "depends_on_job_ids": [
+    "job-research-f57aeaf97369752d"
+  ],
+  "preload_pool": true,
+  "pool_order": 432,
+  "stock_bank": "q",
+  "stock_lane": "research",
+  "claim_source": "shared_preload_pool",
+  "previous_claim_id": "claim-preload-2aeb870b0c2c7dd7f85bc8e6",
+  "released": false,
+  "invalidated": false,
+  "heartbeat_at": "2026-10-03T16:13:22+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b2659ff72e5bf99c-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.25018",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.25018",
+    "identity_tokens": [
+      "arXiv:2609.25018"
+    ],
+    "reason": "OS development agent workflowとserving lineageの接続は弱く、LLM推論資源の計測/削減を示さない。",
+    "first_checked_at": "2026-10-06T01:38:38+00:00",
+    "last_checked_at": "2026-10-06T01:38:38+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OSFoundry: Building and Evolving Operating Systems with Specification-Guided Agents"
+  },
+  "processed_at": "2026-10-06T01:38:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b2659ff72e5b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

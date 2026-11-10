@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce851bdf3987f493-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.27829",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.27829",
+    "identity_tokens": [
+      "arXiv:2606.27829"
+    ],
+    "reason": "Primary abstract reviewed: Speculative decoding (SD) has emerged as a key solution to accelerate the inference of autoregressive models. However, in the field of image generation, it faces the challenge of low acceptance rates, and directly relaxing its criteria leads to degradation in image quality. In this paper, we propose a novel content-aware speculative decoding algorithm, termed CSD, which integrates an entropy-based probability relaxat… Out of scope: Autoregressive image-generation decoding, not LLM text inference.",
+    "first_checked_at": "2026-10-05T11:42:01+00:00",
+    "last_checked_at": "2026-10-05T11:42:01+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2411.00841-a-theoretical-perspective-for-speculative-decoding-algorithm.md"
+    ],
+    "title": "CSD: Content-aware Speculative Decoding for Efficient Image Generation"
+  },
+  "processed_at": "2026-10-05T11:42:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce851bdf3987",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

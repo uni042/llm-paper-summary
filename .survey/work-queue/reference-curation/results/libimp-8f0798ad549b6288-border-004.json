@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f0798ad549b6288-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.20470",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.20470",
+    "identity_tokens": [
+      "arXiv:2604.20470"
+    ],
+    "reason": "DynamicRad uses static-ratio/dynamic-threshold sparse attention and an offline semantic-motion router for video diffusion; HunyuanVideo/Wan2.1 results claim 1.7–2.5x inference speedup and >80% sparsity. This is adjacent long-context/sparse-attention evidence but limited to video diffusion and specific block sizes/hardware.",
+    "first_checked_at": "2026-10-06T16:09:54+00:00",
+    "last_checked_at": "2026-10-06T16:09:54+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DynamicRad: Content-Adaptive Sparse Attention for Long Video Diffusion"
+  },
+  "processed_at": "2026-10-06T16:09:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f0798ad549b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4e61ba24c7910cc5-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tia.2026.3689464",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tia.2026.3689464",
+    "identity_tokens": [
+      "DOI:10.1109/tia.2026.3689464"
+    ],
+    "reason": "Primary IEEE abstract concerns data-center grid flexibility/workload shedding, not LLM inference.",
+    "first_checked_at": "2026-10-05T03:12:16+00:00",
+    "last_checked_at": "2026-10-05T03:12:16+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md"
+    ],
+    "title": "Flexibility-Enhanced Operation of Internet Data Centers With Operator-User Collaboration: A Bilevel Stackelberg Game Approach"
+  },
+  "processed_at": "2026-10-05T03:12:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4e61ba24c791",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

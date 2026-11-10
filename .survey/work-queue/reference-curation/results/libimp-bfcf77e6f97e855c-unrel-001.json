@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bfcf77e6f97e855c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.18961",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.18961",
+    "identity_tokens": [
+      "arXiv:2607.18961"
+    ],
+    "reason": "一次要旨はLLM出力の文法分析とneurosymbolic liftingであり、効率の方法・評価ではない。",
+    "first_checked_at": "2026-10-05T10:09:48+00:00",
+    "last_checked_at": "2026-10-05T10:09:48+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "From Dependency to Compositionality: A Neurosymbolic Lifting of LLM Outputs via Combinatory Categorial Grammar"
+  },
+  "processed_at": "2026-10-05T10:09:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bfcf77e6f97e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

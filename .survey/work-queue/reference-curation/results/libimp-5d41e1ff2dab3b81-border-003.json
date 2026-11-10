@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5d41e1ff2dab3b81-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3822594",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3822594",
+    "identity_tokens": [
+      "DOI:10.1145/3822594"
+    ],
+    "reason": "ACM source is inaccessible; the title suggests CLIP low-bit prompting, but the linked quantization lineage warrants primary-text retrieval.",
+    "first_checked_at": "2026-10-06T19:55:11+00:00",
+    "last_checked_at": "2026-10-06T19:55:11+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "P4Q: Learning to Prompt for Quantization in Low-Bit CLIP"
+  },
+  "processed_at": "2026-10-06T19:55:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5d41e1ff2dab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

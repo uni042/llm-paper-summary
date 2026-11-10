@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a77f1f9e6f5b794a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34545",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34545",
+    "identity_tokens": [
+      "arXiv:2609.34545"
+    ],
+    "reason": "Studies self-probing agent-memory evolution; abstract gives no concrete inference-efficiency outcome.",
+    "first_checked_at": "2026-10-05T04:56:13+00:00",
+    "last_checked_at": "2026-10-05T04:56:13+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "Remember Before You're Asked: MemDream for Self-Probing Memory Evolution"
+  },
+  "processed_at": "2026-10-05T04:56:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a77f1f9e6f5b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

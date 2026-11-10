@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e6281caabeb99725-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:85fba50933400633e58ecc9aef35658e2389fcf0",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:85fba50933400633e58ecc9aef35658e2389fcf0",
+    "identity_tokens": [
+      "OpenReview:4nV383120k",
+      "SemanticScholar:85fba50933400633e58ecc9aef35658e2389fcf0"
+    ],
+    "reason": "著者公開OpenReview原著PDFのabstractを確認。圧縮後LLMの性能回復についてLoRA等PEFTと動的promptingをLlama/OPTで比較し、入力ごとの複数prompt選択により低い追加推論遅延で品質回復できると報告。推論時のコスト・圧縮性能に接点はあるが、主要指標は理解精度回復で、GPU throughput・KV削減等の直接的サービング最適化は限定的なためborderline。",
+    "first_checked_at": "2026-10-31T02:09:38+00:00",
+    "last_checked_at": "2026-10-31T02:09:38+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Simple LLM Compression Recovery Using Dynamic Prompting with Theoretical Analysis"
+  },
+  "processed_at": "2026-10-31T02:09:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e6281caabeb9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

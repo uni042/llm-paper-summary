@@ -1,0 +1,796 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5bca8d42b54df142-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5bca8d42b54d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3706418",
+    "arXiv:2405.21022",
+    "arXiv:2407.05690",
+    "arXiv:2410.01805",
+    "arXiv:2502.11018",
+    "arXiv:2507.01449",
+    "arXiv:2509.22134",
+    "arXiv:2510.01290",
+    "arXiv:2603.04956"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "beed28f8709df20ed30e118c0b1931f6e1cb1b6d",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T11:21:17.771533+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3706418",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.21022",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.05690",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.01805",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.11018",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.01449",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:logitspec accelerating retrievalbased speculative decoding via next next token speculation"
+    },
+    {
+      "requested_id": "arXiv:2509.22134",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.01290",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.04956",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "WaterSIC: information-theoretically (near) optimal linear layer quantization",
+      "source_url": "https://arxiv.org/abs/2603.04956",
+      "year": 2026,
+      "published": "2026-03-05",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper considers the problem of converting a given dense linear layer to low precision. The tradeoff between compressed length and output discrepancy is analyzed information theoretically (IT). It is shown that a popular GPTQ algorithm may have an arbitrarily large gap to the IT limit. To alleviate this problem, a novel algorithm, termed ``WaterSIC'', is proposed and is shown to be within a rate gap of 0.255 bits to the IT limit, uniformly over all possible covariance matrices of input activations. The key innovation of WaterSIC's is to allocate different quantization rates to different columns (in-features) of the weight matrix, mimicking the classical IT solution known as\"waterfilling\". Applying WaterSIC to the Llama and Qwen family of LLMs establishes new state-of-the-art performance for all quantization rates from 1 to 4 bits. Our code is available at https://github.com/egorlifar/watersic.",
+      "identifiers": [
+        "SemanticScholar:cac68b3517190983448f5f2da1e4b9423f687b1b"
+      ],
+      "semantic_scholar_id": "cac68b3517190983448f5f2da1e4b9423f687b1b",
+      "canonical_id": "arXiv:2603.04956",
+      "arxiv_id": "2603.04956",
+      "doi": "10.48550/arXiv.2603.04956",
+      "authors": [
+        "Egor Lifar",
+        "Semyon Savkin",
+        "Or Ordentlich",
+        "Yury Polyanskiy"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 223,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Resource-efficient Algorithms and Systems of Foundation Models: A Survey",
+      "source_url": "https://doi.org/10.1145/3706418",
+      "year": 2024,
+      "published": "2024-11-29",
+      "venue": "ACM Computing Surveys",
+      "citation_count": 59,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large foundation models, including large language models, vision transformers, diffusion, and large language model based multimodal models, are revolutionizing the entire machine learning lifecycle, from training to deployment. However, the substantial advancements in versatility and performance these models offer come at a significant cost in terms of hardware resources. To support the growth of these large models in a scalable and environmentally sustainable way, there has been a considerable focus on developing resource-efficient strategies. This survey delves into the critical importance of such research, examining both algorithmic and systemic aspects. It offers a comprehensive analysis and valuable insights gleaned from existing literature, encompassing a broad array of topics from cutting-edge model architectures and training/serving algorithms to practical system designs and implementations. The goal of this survey is to provide an overarching understanding of how current approaches are tackling the resource challenges posed by large foundation models and to potentially inspire future breakthroughs in this field.",
+      "identifiers": [
+        "SemanticScholar:9e194f150fd528d98341bea1e2f1109c2839a987"
+      ],
+      "semantic_scholar_id": "9e194f150fd528d98341bea1e2f1109c2839a987",
+      "doi": "10.1145/3706418",
+      "canonical_id": "DOI:10.1145/3706418",
+      "authors": [
+        "Meng-Wei Xu",
+        "Dongqi Cai",
+        "Wang-Song Yin",
+        "Shang-Guang Wang",
+        "Xin Jin",
+        "Xuazhe Liu"
+      ],
+      "priority": 59,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 59,
+        "citation_count": 59,
+        "total": 59,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 684,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GRIFFIN: Effective Token Alignment for Faster Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2502.11018",
+      "year": 2025,
+      "published": "2025-02-16",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates inference in large language models (LLMs) by generating multiple draft tokens simultaneously. However, existing methods often struggle with token misalignment between the training and decoding phases, limiting their performance. To address this, we propose GRIFFIN, a novel framework that incorporates a token-alignable training strategy and a token-alignable draft model to mitigate misalignment. The training strategy employs a loss masking mechanism to exclude highly misaligned tokens during training, preventing them from negatively impacting the draft model's optimization. The token-alignable draft model introduces input tokens to correct inconsistencies in generated features. Experiments on LLaMA, Vicuna, Qwen and Mixtral models demonstrate that GRIFFIN achieves an average acceptance length improvement of over 8% and a speedup ratio exceeding 7%, outperforming current speculative decoding state-of-the-art methods. Our code and GRIFFIN's draft models are released publicly in https://github.com/hsj576/GRIFFIN.",
+      "identifiers": [
+        "SemanticScholar:15edba4c3c66d5b9547485e0e838f578dc067a60"
+      ],
+      "semantic_scholar_id": "15edba4c3c66d5b9547485e0e838f578dc067a60",
+      "canonical_id": "arXiv:2502.11018",
+      "arxiv_id": "2502.11018",
+      "doi": "10.48550/arXiv.2502.11018",
+      "authors": [
+        "Shi-Jing Hu",
+        "Jingyang Li",
+        "Xing-Yu Xie",
+        "Zhi-Hui Lu",
+        "Kim-Chuan Toh",
+        "Pan Zhou"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 605,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "ThinKV: Thought-Adaptive KV Cache Compression for Efficient Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2510.01290",
+      "year": 2025,
+      "published": "2025-10-01",
+      "venue": "arXiv.org",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The long-output context generation of large reasoning models enables extended chain of thought (CoT) but also drives rapid growth of the key-value (KV) cache, quickly overwhelming GPU memory. To address this challenge, we propose ThinKV, a thought-adaptive KV cache compression framework. ThinKV is based on the observation that attention sparsity reveals distinct thought types with varying importance within the CoT. It applies a hybrid quantization-eviction strategy, assigning token precision by thought importance and progressively evicting tokens from less critical thoughts as reasoning trajectories evolve. Furthermore, to implement ThinKV, we design a kernel that extends PagedAttention to enable efficient reuse of evicted tokens'memory slots, eliminating compaction overheads. Extensive experiments on DeepSeek-R1-Distill, GPT-OSS, and NVIDIA AceReason across mathematics and coding benchmarks show that ThinKV achieves near-lossless accuracy with less than 5% of the original KV cache, while improving performance with up to 5.8x higher inference throughput over state-of-the-art baselines.",
+      "identifiers": [
+        "SemanticScholar:11c7a2701cdf3ad84e0c2f707c59fc4832f09fe5"
+      ],
+      "semantic_scholar_id": "11c7a2701cdf3ad84e0c2f707c59fc4832f09fe5",
+      "canonical_id": "arXiv:2510.01290",
+      "arxiv_id": "2510.01290",
+      "doi": "10.48550/arXiv.2510.01290",
+      "authors": [
+        "Akshat Ramachandran",
+        "Marina Neseem",
+        "Charbel Sakr",
+        "Rangharajan Venkatesan",
+        "Brucek Khailany",
+        "Tushar Krishna"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 378,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Locret: Enhancing Eviction in Long-Context LLM Inference with Trained Retaining Heads",
+      "source_url": "https://arxiv.org/abs/2410.01805",
+      "year": 2024,
+      "published": "2024-10-02",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 20,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling the input context length of a large language model (LLM) incurs a significant increase in computation cost and memory footprint to maintain the attention key-value (KV) cache. Existing KV cache compression methods suffer from inefficient compression strategies and limited memory reduction effects, making it difficult for LLMs to conduct long-context inference on consumer-grade devices, especially when inferring long-context stream input. Such obstacles prevent consumer-grade devices from supporting more complex applications, creating challenges for the democratization of LLMs. To overcome this, we propose Locret, the first framework to create an eviction policy compatible with chunked prefill. By evaluating the causal importance of KV cache units by learnable retaining heads, Locret enables precise eviction of cache units, facilitating efficient long-context inference. In our extensive empirical studies, Locret outperforms the recent popular and competitive approaches in terms of memory efficiency and generation quality -- Locret achieves up to 20x of KV cache compression ratio within less than 10% performance loss. Furthermore, Locret achieves 128K+ long-context inference on a single NVIDIA 4090 GPU without compromising generation quality and only costs<1 GPU hour of additional training.",
+      "identifiers": [
+        "SemanticScholar:cb92261c8ef307519d9a44bfc5d1023faae2e301"
+      ],
+      "semantic_scholar_id": "cb92261c8ef307519d9a44bfc5d1023faae2e301",
+      "canonical_id": "arXiv:2410.01805",
+      "arxiv_id": "2410.01805",
+      "doi": "10.48550/arXiv.2410.01805",
+      "authors": [
+        "Yu-Xiang Huang",
+        "Bin-Hang Yuan",
+        "Xu Han",
+        "Chao-Jun Xiao",
+        "Zhiyuan Liu"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 20,
+        "citation_count": 20,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 742,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pruning Large Language Models to Intra-module Low-rank Architecture with Transitional Activations",
+      "source_url": "https://arxiv.org/abs/2407.05690",
+      "year": 2024,
+      "published": "2024-07-08",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning fundamentally reduces computational and memory overheads of large language models (LLMs) and offers a feasible solution for end-side LLM deployment. Structurally pruned models remain dense and high-precision, highly compatible with further tuning and compression. However, as the coarse-grained structured pruning poses large damage to the highly interconnected model, achieving a high compression ratio for scaled-up LLMs remains a challenge. In this paper, we introduce a task-agnostic structured pruning approach coupled with a compact Transformer architecture design. The proposed approach, named TransAct, reduces transitional activations inside multi-head attention (MHA) and multi-layer perceptron (MLP) modules, while preserving the inter-module activations that are sensitive to perturbations. Hence, the LLM is pruned into an intra-module low-rank architecture, significantly reducing weights, KV Cache and attention computation. TransAct is implemented on the LLaMA model and evaluated on downstream benchmarks. Results verify the optimality of our approach at high compression with respect to both efficiency and performance. Further, ablation studies reveal the strength of activation-guided iterative pruning and provide experimental analysis on the redundancy of MHA and MLP modules.",
+      "identifiers": [
+        "SemanticScholar:c2d2dbb6b2d82308a7a354468574623a378c4cc0"
+      ],
+      "semantic_scholar_id": "c2d2dbb6b2d82308a7a354468574623a378c4cc0",
+      "canonical_id": "arXiv:2407.05690",
+      "arxiv_id": "2407.05690",
+      "doi": "10.48550/arXiv.2407.05690",
+      "authors": [
+        "Bo-Wen Shen",
+        "Zheng Lin",
+        "Da-Ren Zha",
+        "Wei Liu",
+        "Jian Luan",
+        "Bin Wang",
+        "Wei-Ping Wang"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 828,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "You Only Scan Once: Efficient Multi-dimension Sequential Modeling with LightNet",
+      "source_url": "https://arxiv.org/abs/2405.21022",
+      "year": 2024,
+      "published": "2024-05-31",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention mechanisms have gained prominence in causal language models due to their linear computational complexity and enhanced speed. However, the inherent decay mechanism in linear attention presents challenges when applied to multi-dimensional sequence modeling tasks, such as image processing and multi-modal learning. In these scenarios, the utilization of sequential scanning to establish a global receptive field necessitates multiple scans for multi-dimensional data, thereby leading to inefficiencies. This paper identifies the inefficiency caused by a multiplicative linear recurrence and proposes an efficient alternative additive linear recurrence to avoid the issue, as it can handle multi-dimensional data within a single scan. We further develop an efficient multi-dimensional sequential modeling framework called LightNet based on the new recurrence. Moreover, we present two new multi-dimensional linear relative positional encoding methods, MD-TPE and MD-LRPE to enhance the model's ability to discern positional information in multi-dimensional scenarios. Our empirical evaluations across various tasks, including image classification, image generation, bidirectional language modeling, and autoregressive language modeling, demonstrate the efficacy of LightNet, showcasing its potential as a versatile and efficient solution for multi-dimensional sequential modeling.",
+      "identifiers": [
+        "SemanticScholar:7f505660c595d6547e258de0a5978fc2d5fad925"
+      ],
+      "semantic_scholar_id": "7f505660c595d6547e258de0a5978fc2d5fad925",
+      "canonical_id": "arXiv:2405.21022",
+      "arxiv_id": "2405.21022",
+      "doi": "10.48550/arXiv.2405.21022",
+      "authors": [
+        "Zhen Qin",
+        "Yu-Xin Mao",
+        "Xu-Yang Shen",
+        "Dong Li",
+        "Jing Zhang",
+        "Yu-Chao Dai",
+        "Yi-Ran Zhong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 866,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Bridging Draft Policy Misalignment: Group Tree Optimization for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2509.22134",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by letting a lightweight draft model propose multiple tokens that the target model verifies in parallel. Yet existing training objectives optimize only a single greedy draft path, while decoding follows a tree policy that re-ranks and verifies multiple branches. This draft policy misalignment limits achievable speedups. We introduce Group Tree Optimization (GTO), which aligns training with the decoding-time tree policy through two components: (i) Draft Tree Reward, a sampling-free objective equal to the expected acceptance length of the draft tree under the target model, directly measuring decoding performance; (ii) Group-based Draft Policy Training, a stable optimization scheme that contrasts trees from the current and a frozen reference draft model, forming debiased group-standardized advantages and applying a PPO-style surrogate along the longest accepted sequence for robust updates. We further prove that increasing our Draft Tree Reward provably improves acceptance length and speedup. Across dialogue (MT-Bench), code (HumanEval), and math (GSM8K), and multiple LLMs (e.g., LLaMA-3.1-8B, LLaMA-3.3-70B, Vicuna-1.3-13B, DeepSeek-R1-Distill-LLaMA-8B, Qwen3-8B), GTO increases acceptance length by (7.4%) and yields an additional (7.7%) speedup over prior state-of-the-art EAGLE-3. By bridging draft policy misalignment, GTO offers a practical, general solution for efficient LLM inference. Code and draft models are available at https://github.com/hsj576/GTO.",
+      "identifiers": [
+        "SemanticScholar:df70eb92d38a1f8d12568bbe900671a0dfdeb26c"
+      ],
+      "semantic_scholar_id": "df70eb92d38a1f8d12568bbe900671a0dfdeb26c",
+      "canonical_id": "arXiv:2509.22134",
+      "arxiv_id": "2509.22134",
+      "doi": "10.48550/arXiv.2509.22134",
+      "authors": [
+        "Shi-Jing Hu",
+        "Jingyang Li",
+        "Zhi-Hui Lu",
+        "Pan Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 383,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.04956",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.04956",
+        "id:SemanticScholar:cac68b3517190983448f5f2da1e4b9423f687b1b",
+        "id:arXiv:2603.04956",
+        "title:watersic informationtheoretically near optimal linear layer quantization",
+        "url:https://arxiv.org/abs/2603.04956"
+      ],
+      "record": {
+        "title": "WaterSIC: information-theoretically (near) optimal linear layer quantization",
+        "source_url": "https://arxiv.org/abs/2603.04956",
+        "year": 2026,
+        "published": "2026-03-05",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper considers the problem of converting a given dense linear layer to low precision. The tradeoff between compressed length and output discrepancy is analyzed information theoretically (IT). It is shown that a popular GPTQ algorithm may have an arbitrarily large gap to the IT limit. To alleviate this problem, a novel algorithm, termed ``WaterSIC'', is proposed and is shown to be within a rate gap of 0.255 bits to the IT limit, uniformly over all possible covariance matrices of input activations. The key innovation of WaterSIC's is to allocate different quantization rates to different columns (in-features) of the weight matrix, mimicking the classical IT solution known as\"waterfilling\". Applying WaterSIC to the Llama and Qwen family of LLMs establishes new state-of-the-art performance for all quantization rates from 1 to 4 bits. Our code is available at https://github.com/egorlifar/watersic.",
+        "identifiers": [
+          "SemanticScholar:cac68b3517190983448f5f2da1e4b9423f687b1b"
+        ],
+        "semantic_scholar_id": "cac68b3517190983448f5f2da1e4b9423f687b1b",
+        "canonical_id": "arXiv:2603.04956",
+        "arxiv_id": "2603.04956",
+        "doi": "10.48550/arXiv.2603.04956",
+        "authors": [
+          "Egor Lifar",
+          "Semyon Savkin",
+          "Or Ordentlich",
+          "Yury Polyanskiy"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 223,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3706418",
+      "identity_tokens": [
+        "id:DOI:10.1145/3706418",
+        "id:SemanticScholar:9e194f150fd528d98341bea1e2f1109c2839a987",
+        "title:resourceefficient algorithms and systems of foundation models a survey",
+        "url:https://doi.org/10.1145/3706418"
+      ],
+      "record": {
+        "title": "Resource-efficient Algorithms and Systems of Foundation Models: A Survey",
+        "source_url": "https://doi.org/10.1145/3706418",
+        "year": 2024,
+        "published": "2024-11-29",
+        "venue": "ACM Computing Surveys",
+        "citation_count": 59,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large foundation models, including large language models, vision transformers, diffusion, and large language model based multimodal models, are revolutionizing the entire machine learning lifecycle, from training to deployment. However, the substantial advancements in versatility and performance these models offer come at a significant cost in terms of hardware resources. To support the growth of these large models in a scalable and environmentally sustainable way, there has been a considerable focus on developing resource-efficient strategies. This survey delves into the critical importance of such research, examining both algorithmic and systemic aspects. It offers a comprehensive analysis and valuable insights gleaned from existing literature, encompassing a broad array of topics from cutting-edge model architectures and training/serving algorithms to practical system designs and implementations. The goal of this survey is to provide an overarching understanding of how current approaches are tackling the resource challenges posed by large foundation models and to potentially inspire future breakthroughs in this field.",
+        "identifiers": [
+          "SemanticScholar:9e194f150fd528d98341bea1e2f1109c2839a987"
+        ],
+        "semantic_scholar_id": "9e194f150fd528d98341bea1e2f1109c2839a987",
+        "doi": "10.1145/3706418",
+        "canonical_id": "DOI:10.1145/3706418",
+        "authors": [
+          "Meng-Wei Xu",
+          "Dongqi Cai",
+          "Wang-Song Yin",
+          "Shang-Guang Wang",
+          "Xin Jin",
+          "Xuazhe Liu"
+        ],
+        "priority": 59,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 59,
+          "citation_count": 59,
+          "total": 59,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 684,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.11018",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.11018",
+        "id:SemanticScholar:15edba4c3c66d5b9547485e0e838f578dc067a60",
+        "id:arXiv:2502.11018",
+        "title:griffin effective token alignment for faster speculative decoding",
+        "url:https://arxiv.org/abs/2502.11018"
+      ],
+      "record": {
+        "title": "GRIFFIN: Effective Token Alignment for Faster Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2502.11018",
+        "year": 2025,
+        "published": "2025-02-16",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates inference in large language models (LLMs) by generating multiple draft tokens simultaneously. However, existing methods often struggle with token misalignment between the training and decoding phases, limiting their performance. To address this, we propose GRIFFIN, a novel framework that incorporates a token-alignable training strategy and a token-alignable draft model to mitigate misalignment. The training strategy employs a loss masking mechanism to exclude highly misaligned tokens during training, preventing them from negatively impacting the draft model's optimization. The token-alignable draft model introduces input tokens to correct inconsistencies in generated features. Experiments on LLaMA, Vicuna, Qwen and Mixtral models demonstrate that GRIFFIN achieves an average acceptance length improvement of over 8% and a speedup ratio exceeding 7%, outperforming current speculative decoding state-of-the-art methods. Our code and GRIFFIN's draft models are released publicly in https://github.com/hsj576/GRIFFIN.",
+        "identifiers": [
+          "SemanticScholar:15edba4c3c66d5b9547485e0e838f578dc067a60"
+        ],
+        "semantic_scholar_id": "15edba4c3c66d5b9547485e0e838f578dc067a60",
+        "canonical_id": "arXiv:2502.11018",
+        "arxiv_id": "2502.11018",
+        "doi": "10.48550/arXiv.2502.11018",
+        "authors": [
+          "Shi-Jing Hu",
+          "Jingyang Li",
+          "Xing-Yu Xie",
+          "Zhi-Hui Lu",
+          "Kim-Chuan Toh",
+          "Pan Zhou"
+        ],
+        "priority": 24,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 24,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 605,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.01290",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.01290",
+        "id:SemanticScholar:11c7a2701cdf3ad84e0c2f707c59fc4832f09fe5",
+        "id:arXiv:2510.01290",
+        "title:thinkv thoughtadaptive kv cache compression for efficient reasoning models",
+        "url:https://arxiv.org/abs/2510.01290"
+      ],
+      "record": {
+        "title": "ThinKV: Thought-Adaptive KV Cache Compression for Efficient Reasoning Models",
+        "source_url": "https://arxiv.org/abs/2510.01290",
+        "year": 2025,
+        "published": "2025-10-01",
+        "venue": "arXiv.org",
+        "citation_count": 22,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The long-output context generation of large reasoning models enables extended chain of thought (CoT) but also drives rapid growth of the key-value (KV) cache, quickly overwhelming GPU memory. To address this challenge, we propose ThinKV, a thought-adaptive KV cache compression framework. ThinKV is based on the observation that attention sparsity reveals distinct thought types with varying importance within the CoT. It applies a hybrid quantization-eviction strategy, assigning token precision by thought importance and progressively evicting tokens from less critical thoughts as reasoning trajectories evolve. Furthermore, to implement ThinKV, we design a kernel that extends PagedAttention to enable efficient reuse of evicted tokens'memory slots, eliminating compaction overheads. Extensive experiments on DeepSeek-R1-Distill, GPT-OSS, and NVIDIA AceReason across mathematics and coding benchmarks show that ThinKV achieves near-lossless accuracy with less than 5% of the original KV cache, while improving performance with up to 5.8x higher inference throughput over state-of-the-art baselines.",
+        "identifiers": [
+          "SemanticScholar:11c7a2701cdf3ad84e0c2f707c59fc4832f09fe5"
+        ],
+        "semantic_scholar_id": "11c7a2701cdf3ad84e0c2f707c59fc4832f09fe5",
+        "canonical_id": "arXiv:2510.01290",
+        "arxiv_id": "2510.01290",
+        "doi": "10.48550/arXiv.2510.01290",
+        "authors": [
+          "Akshat Ramachandran",
+          "Marina Neseem",
+          "Charbel Sakr",
+          "Rangharajan Venkatesan",
+          "Brucek Khailany",
+          "Tushar Krishna"
+        ],
+        "priority": 22,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 22,
+          "citation_count": 22,
+          "total": 22,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 378,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.01805",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.01805",
+        "id:SemanticScholar:cb92261c8ef307519d9a44bfc5d1023faae2e301",
+        "id:arXiv:2410.01805",
+        "title:locret enhancing eviction in longcontext llm inference with trained retaining heads",
+        "url:https://arxiv.org/abs/2410.01805"
+      ],
+      "record": {
+        "title": "Locret: Enhancing Eviction in Long-Context LLM Inference with Trained Retaining Heads",
+        "source_url": "https://arxiv.org/abs/2410.01805",
+        "year": 2024,
+        "published": "2024-10-02",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 20,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling the input context length of a large language model (LLM) incurs a significant increase in computation cost and memory footprint to maintain the attention key-value (KV) cache. Existing KV cache compression methods suffer from inefficient compression strategies and limited memory reduction effects, making it difficult for LLMs to conduct long-context inference on consumer-grade devices, especially when inferring long-context stream input. Such obstacles prevent consumer-grade devices from supporting more complex applications, creating challenges for the democratization of LLMs. To overcome this, we propose Locret, the first framework to create an eviction policy compatible with chunked prefill. By evaluating the causal importance of KV cache units by learnable retaining heads, Locret enables precise eviction of cache units, facilitating efficient long-context inference. In our extensive empirical studies, Locret outperforms the recent popular and competitive approaches in terms of memory efficiency and generation quality -- Locret achieves up to 20x of KV cache compression ratio within less than 10% performance loss. Furthermore, Locret achieves 128K+ long-context inference on a single NVIDIA 4090 GPU without compromising generation quality and only costs<1 GPU hour of additional training.",
+        "identifiers": [
+          "SemanticScholar:cb92261c8ef307519d9a44bfc5d1023faae2e301"
+        ],
+        "semantic_scholar_id": "cb92261c8ef307519d9a44bfc5d1023faae2e301",
+        "canonical_id": "arXiv:2410.01805",
+        "arxiv_id": "2410.01805",
+        "doi": "10.48550/arXiv.2410.01805",
+        "authors": [
+          "Yu-Xiang Huang",
+          "Bin-Hang Yuan",
+          "Xu Han",
+          "Chao-Jun Xiao",
+          "Zhiyuan Liu"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 20,
+          "citation_count": 20,
+          "total": 20,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 742,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.05690",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.05690",
+        "id:SemanticScholar:c2d2dbb6b2d82308a7a354468574623a378c4cc0",
+        "id:arXiv:2407.05690",
+        "title:pruning large language models to intramodule lowrank architecture with transitional activations",
+        "url:https://arxiv.org/abs/2407.05690"
+      ],
+      "record": {
+        "title": "Pruning Large Language Models to Intra-module Low-rank Architecture with Transitional Activations",
+        "source_url": "https://arxiv.org/abs/2407.05690",
+        "year": 2024,
+        "published": "2024-07-08",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Structured pruning fundamentally reduces computational and memory overheads of large language models (LLMs) and offers a feasible solution for end-side LLM deployment. Structurally pruned models remain dense and high-precision, highly compatible with further tuning and compression. However, as the coarse-grained structured pruning poses large damage to the highly interconnected model, achieving a high compression ratio for scaled-up LLMs remains a challenge. In this paper, we introduce a task-agnostic structured pruning approach coupled with a compact Transformer architecture design. The proposed approach, named TransAct, reduces transitional activations inside multi-head attention (MHA) and multi-layer perceptron (MLP) modules, while preserving the inter-module activations that are sensitive to perturbations. Hence, the LLM is pruned into an intra-module low-rank architecture, significantly reducing weights, KV Cache and attention computation. TransAct is implemented on the LLaMA model and evaluated on downstream benchmarks. Results verify the optimality of our approach at high compression with respect to both efficiency and performance. Further, ablation studies reveal the strength of activation-guided iterative pruning and provide experimental analysis on the redundancy of MHA and MLP modules.",
+        "identifiers": [
+          "SemanticScholar:c2d2dbb6b2d82308a7a354468574623a378c4cc0"
+        ],
+        "semantic_scholar_id": "c2d2dbb6b2d82308a7a354468574623a378c4cc0",
+        "canonical_id": "arXiv:2407.05690",
+        "arxiv_id": "2407.05690",
+        "doi": "10.48550/arXiv.2407.05690",
+        "authors": [
+          "Bo-Wen Shen",
+          "Zheng Lin",
+          "Da-Ren Zha",
+          "Wei Liu",
+          "Jian Luan",
+          "Bin Wang",
+          "Wei-Ping Wang"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 828,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.21022",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.21022",
+        "id:SemanticScholar:7f505660c595d6547e258de0a5978fc2d5fad925",
+        "id:arXiv:2405.21022",
+        "title:you only scan once efficient multidimension sequential modeling with lightnet",
+        "url:https://arxiv.org/abs/2405.21022"
+      ],
+      "record": {
+        "title": "You Only Scan Once: Efficient Multi-dimension Sequential Modeling with LightNet",
+        "source_url": "https://arxiv.org/abs/2405.21022",
+        "year": 2024,
+        "published": "2024-05-31",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention mechanisms have gained prominence in causal language models due to their linear computational complexity and enhanced speed. However, the inherent decay mechanism in linear attention presents challenges when applied to multi-dimensional sequence modeling tasks, such as image processing and multi-modal learning. In these scenarios, the utilization of sequential scanning to establish a global receptive field necessitates multiple scans for multi-dimensional data, thereby leading to inefficiencies. This paper identifies the inefficiency caused by a multiplicative linear recurrence and proposes an efficient alternative additive linear recurrence to avoid the issue, as it can handle multi-dimensional data within a single scan. We further develop an efficient multi-dimensional sequential modeling framework called LightNet based on the new recurrence. Moreover, we present two new multi-dimensional linear relative positional encoding methods, MD-TPE and MD-LRPE to enhance the model's ability to discern positional information in multi-dimensional scenarios. Our empirical evaluations across various tasks, including image classification, image generation, bidirectional language modeling, and autoregressive language modeling, demonstrate the efficacy of LightNet, showcasing its potential as a versatile and efficient solution for multi-dimensional sequential modeling.",
+        "identifiers": [
+          "SemanticScholar:7f505660c595d6547e258de0a5978fc2d5fad925"
+        ],
+        "semantic_scholar_id": "7f505660c595d6547e258de0a5978fc2d5fad925",
+        "canonical_id": "arXiv:2405.21022",
+        "arxiv_id": "2405.21022",
+        "doi": "10.48550/arXiv.2405.21022",
+        "authors": [
+          "Zhen Qin",
+          "Yu-Xin Mao",
+          "Xu-Yang Shen",
+          "Dong Li",
+          "Jing Zhang",
+          "Yu-Chao Dai",
+          "Yi-Ran Zhong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 866,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.22134",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.22134",
+        "id:SemanticScholar:df70eb92d38a1f8d12568bbe900671a0dfdeb26c",
+        "id:arXiv:2509.22134",
+        "title:bridging draft policy misalignment group tree optimization for speculative decoding",
+        "url:https://arxiv.org/abs/2509.22134"
+      ],
+      "record": {
+        "title": "Bridging Draft Policy Misalignment: Group Tree Optimization for Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2509.22134",
+        "year": 2025,
+        "published": "2025-09-26",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model (LLM) inference by letting a lightweight draft model propose multiple tokens that the target model verifies in parallel. Yet existing training objectives optimize only a single greedy draft path, while decoding follows a tree policy that re-ranks and verifies multiple branches. This draft policy misalignment limits achievable speedups. We introduce Group Tree Optimization (GTO), which aligns training with the decoding-time tree policy through two components: (i) Draft Tree Reward, a sampling-free objective equal to the expected acceptance length of the draft tree under the target model, directly measuring decoding performance; (ii) Group-based Draft Policy Training, a stable optimization scheme that contrasts trees from the current and a frozen reference draft model, forming debiased group-standardized advantages and applying a PPO-style surrogate along the longest accepted sequence for robust updates. We further prove that increasing our Draft Tree Reward provably improves acceptance length and speedup. Across dialogue (MT-Bench), code (HumanEval), and math (GSM8K), and multiple LLMs (e.g., LLaMA-3.1-8B, LLaMA-3.3-70B, Vicuna-1.3-13B, DeepSeek-R1-Distill-LLaMA-8B, Qwen3-8B), GTO increases acceptance length by (7.4%) and yields an additional (7.7%) speedup over prior state-of-the-art EAGLE-3. By bridging draft policy misalignment, GTO offers a practical, general solution for efficient LLM inference. Code and draft models are available at https://github.com/hsj576/GTO.",
+        "identifiers": [
+          "SemanticScholar:df70eb92d38a1f8d12568bbe900671a0dfdeb26c"
+        ],
+        "semantic_scholar_id": "df70eb92d38a1f8d12568bbe900671a0dfdeb26c",
+        "canonical_id": "arXiv:2509.22134",
+        "arxiv_id": "2509.22134",
+        "doi": "10.48550/arXiv.2509.22134",
+        "authors": [
+          "Shi-Jing Hu",
+          "Jingyang Li",
+          "Zhi-Hui Lu",
+          "Pan Zhou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 383,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:677c4befcabe702cbdb7f61a96704722a2ee728fab5511d60eb0b0610aef4ae2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "fd226e6fd519e12362b412996ad80fc616773ca9e601398b8a31724e45e887cf",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-68e37f6275e2--libfile_8ed922636938819194bc6f4502aa84d3--2026-2605.19775-understanding-inference-scaling-under16kb-reaudit-20261010-1100-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2605.19775",
+  "worker_completed_at": "2026-10-10T11:00:00+09:00",
+  "worker_run_key": "20261010-1100-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8674,
+    "body_paragraphs": 44,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 708,
+    "limitation_chars": 859,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-10T02:52:45+00:00"
+}

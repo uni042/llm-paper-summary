@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20dac0fc038a7309-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.24209",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.24209",
+    "identity_tokens": [
+      "arXiv:2608.24209"
+    ],
+    "reason": "要旨はaudio-visual multimodal LoRA fine-tuningを扱うと記述する（Inspired by human multi-modal perception, Audio-Visual Multi-Modal Learning (AVMML) integrates auditory and visual information to leverage complementary cross-modal cues, enabling more robust and comprehensive scene perception. Existing stu）。LLM inference compute/memory/latency/throughput/cache/servingの具体的改善法・評価ではない。",
+    "first_checked_at": "2026-10-06T00:17:36+00:00",
+    "last_checked_at": "2026-10-06T00:17:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "title": "Task-disentangled Low-Rank Adaptation for Versatile Audio-visual Multi-modal Learning Tasks within a Unified Framework"
+  },
+  "processed_at": "2026-10-06T00:17:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20dac0fc038a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

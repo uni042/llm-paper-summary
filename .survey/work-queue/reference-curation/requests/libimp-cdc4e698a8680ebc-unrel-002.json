@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-cdc4e698a8680ebc-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.18653/v1/2026.acl-long.1622",
+  "reason": "worklist rank155にはLoRAExitという推論早期終了論文と書かれていたが、指定DOIのACL Anthology公式PDFの実際の題名はKG-ViPであり、知識グラフとシーングラフを融合して視覚質問応答の正答性を改善する研究。GPU推論・KV・デコード・メモリ等の効率化ではないためcanonical identityの一次資料に基づきunrelated。worklistの題名は誤紐付けであり、LoRAExitのidentityとして扱わない。",
+  "title": "KG-ViP: Bridging Knowledge Grounding and Visual Perception in Multi-modal LLMs for Visual Question Answering",
+  "identity_tokens": [
+    "doi:10.18653/v1/2026.acl-long.1622"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cdc4e698a868",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

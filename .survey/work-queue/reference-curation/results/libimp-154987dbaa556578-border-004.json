@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-154987dbaa556578-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2006.06762",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2006.06762",
+    "identity_tokens": [
+      "arXiv:2006.06762"
+    ],
+    "reason": "階層的search space、evolutionary search、learned cost model、task schedulerでDNN tensor programを自動生成し、CPU/GPU実行を最大3.8x/2.6x/1.7x高速化するcompiler/runtime研究。推論kernel・runtimeの基礎として強く関連する一方、LLM/Transformerを最終適用先として評価していないためborderline。",
+    "first_checked_at": "2026-10-05T01:01:01+00:00",
+    "last_checked_at": "2026-10-05T15:38:21+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Ansor: Generating High-Performance Tensor Programs for Deep Learning"
+  },
+  "processed_at": "2026-10-05T15:38:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-154987dbaa55",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

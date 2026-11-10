@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2bb9fe7ef187dbb9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.15405",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.15405",
+    "identity_tokens": [
+      "arXiv:2606.15405"
+    ],
+    "reason": "The abstract concerns anticipatory memory for LLM agents and memory-task quality, without an inference-efficiency claim.",
+    "first_checked_at": "2026-10-05T03:54:51+00:00",
+    "last_checked_at": "2026-10-05T03:54:51+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+    ],
+    "title": "T-Mem: Memory That Anticipates, Not Archives"
+  },
+  "processed_at": "2026-10-05T03:54:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2bb9fe7ef187",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

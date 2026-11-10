@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-14f681c74691551e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.32642",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.32642",
+    "identity_tokens": [
+      "arXiv:2609.32642"
+    ],
+    "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+    "first_checked_at": "2026-10-05T05:25:33+00:00",
+    "last_checked_at": "2026-10-05T05:25:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+    ],
+    "title": "Ask Without Telling: Local SLMs Consult Cloud LLMs Without Revealing Task Intent"
+  },
+  "processed_at": "2026-10-05T05:25:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-14f681c74691",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

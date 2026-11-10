@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a68d87b247c88798-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.13601",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.13601",
+    "identity_tokens": [
+      "arXiv:2401.13601"
+    ],
+    "reason": "multimodal LLMのarchitecture、training、dataset、benchmarkを整理するsurveyで、推論runtime/serving効率化の新規方式を提案しない。",
+    "first_checked_at": "2026-10-05T02:14:50+00:00",
+    "last_checked_at": "2026-10-05T16:19:11+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2511.18314-anyexperts-on-demand-expert-allocation.md",
+      "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+      "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+    ],
+    "title": "MM-LLMs: Recent Advances in MultiModal Large Language Models"
+  },
+  "processed_at": "2026-10-05T16:19:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a68d87b247c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "ee5b25affe6a70a847f78ef107cf515b7f9ff9d0e6077335681f6b15d398c8e5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_e47568d139fc8191857e8a9e210117f4--2026-laco-layerwise-compensation-pruned-llm-research-20261013-1430-scheduled-chat-30-r01.md",
+  "canonical_id": "DOI:10.18653/v1/2026.acl-long.1342",
+  "worker_completed_at": "2026-10-13T14:37:30+09:00",
+  "worker_run_key": "20261013-1430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7421,
+    "body_paragraphs": 46,
+    "method_chars": 1614,
+    "method_paragraphs": 10,
+    "evaluation_chars": 420,
+    "limitation_chars": 616,
+    "insufficiency_flags": [
+      "評価説明量 420 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 420 < 500"
+  ],
+  "processed_at": "2026-10-13T13:19:33+00:00"
+}

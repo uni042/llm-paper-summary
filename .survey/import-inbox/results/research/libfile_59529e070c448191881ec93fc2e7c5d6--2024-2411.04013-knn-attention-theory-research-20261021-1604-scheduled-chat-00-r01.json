@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "d557f71c75294ad815a2a2d17d62dbc53c4559a2aebf90629e7c3aad2b5c2b1e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_59529e070c448191881ec93fc2e7c5d6--2024-2411.04013-knn-attention-theory-research-20261021-1604-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2411.04013",
+  "worker_completed_at": "2026-10-21T16:13:41+09:00",
+  "worker_run_key": "20261021-1604-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5782,
+    "body_paragraphs": 38,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 878,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-21T18:09:22+00:00"
+}

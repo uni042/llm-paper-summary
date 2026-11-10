@@ -1,0 +1,147 @@
+#!/usr/bin/env python3
+"""Canonical paper-taxonomy helpers shared by queue ingestion and derived indexes.
+
+Historical Inference lineage names are accepted only as compatibility aliases
+for stale jobs and references. Physical repository storage uses the canonical
+taxonomy, and new Discovery candidates are normalized before Research jobs are
+created so directory fragmentation does not grow again.
+"""
+from __future__ import annotations
+
+import json
+import re
+from pathlib import Path, PurePosixPath
+
+
+DEFAULT_INFERENCE_LINEAGE = "99-other-inference-systems"
+
+_BASE_CANONICAL_INFERENCE_LINEAGES = (
+    "01-offload-hierarchical-memory",
+    "02-adaptive-expert-computation-compression",
+    "03-expert-prefetch",
+    "04-conditional-computation",
+    "05-speculative-decoding-moe",
+    "06-moe-quantization-compression",
+    "07-kv-cache-optimization-compression",
+    "08-edge-on-device-llm-systems",
+    "10-kv-cache-offload-recomputation",
+    "11-llm-serving-scheduling-disaggregation",
+    DEFAULT_INFERENCE_LINEAGE,
+)
+
+PROMOTED_INFERENCE_LINEAGES_RELATIVE_PATH = Path(".survey/config/promoted-inference-lineages.json")
+_LINEAGE_SLUG_RE = re.compile(r"^(?:0[1-9]|[1-8][0-9]|9[0-8])-[a-z0-9]+(?:-[a-z0-9]+)*$")
+
+
+def _registry_path(repo_root: Path | None = None) -> Path:
+    if repo_root is not None:
+        return Path(repo_root).resolve() / PROMOTED_INFERENCE_LINEAGES_RELATIVE_PATH
+    return Path(__file__).resolve().parents[2] / PROMOTED_INFERENCE_LINEAGES_RELATIVE_PATH
+
+
+def promoted_inference_lineages(repo_root: Path | None = None) -> tuple[str, ...]:
+    path = _registry_path(repo_root)
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, UnicodeError):
+        return ()
+    rows = value.get("lineages") if isinstance(value, dict) else None
+    if not isinstance(rows, list):
+        return ()
+    out = []
+    seen = set(_BASE_CANONICAL_INFERENCE_LINEAGES)
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        slug = str(row.get("slug") or "").strip()
+        if not _LINEAGE_SLUG_RE.fullmatch(slug) or slug in seen:
+            continue
+        out.append(slug)
+        seen.add(slug)
+    return tuple(out)
+
+
+def canonical_inference_lineages(repo_root: Path | None = None) -> tuple[str, ...]:
+    return _BASE_CANONICAL_INFERENCE_LINEAGES + promoted_inference_lineages(repo_root)
+
+
+CANONICAL_INFERENCE_LINEAGES = canonical_inference_lineages()
+
+
+INFERENCE_LINEAGE_ALIASES = {
+    "02-cpu-offload": "01-offload-hierarchical-memory",
+    "02-memory-offload": "01-offload-hierarchical-memory",
+    "02-moe-expert-placement-caching": "01-offload-hierarchical-memory",
+    "02-moe-offload": "01-offload-hierarchical-memory",
+    "03-hierarchical-memory": "01-offload-hierarchical-memory",
+    "03-moe-expert-offload": "01-offload-hierarchical-memory",
+    "03-offload-hierarchical-memory": "01-offload-hierarchical-memory",
+    "04-cpu-ssd-offload": "01-offload-hierarchical-memory",
+    "04-moe-expert-offload-caching": "01-offload-hierarchical-memory",
+    "04-moe-offload-expert-cache": "01-offload-hierarchical-memory",
+    "04-moe-offload-routing": "01-offload-hierarchical-memory",
+    "04-offload-heterogeneous": "01-offload-hierarchical-memory",
+    "05-moe-expert-offload": "01-offload-hierarchical-memory",
+    "05-offload-hierarchical-memory": "01-offload-hierarchical-memory",
+    "06-expert-offloading": "01-offload-hierarchical-memory",
+    "06-moe-expert-offloading": "01-offload-hierarchical-memory",
+    "06-moe-inference-expert-offloading": "01-offload-hierarchical-memory",
+    "06-moe-inference-expert-placement-caching": "01-offload-hierarchical-memory",
+
+    "05-speculative-decoding": "05-speculative-decoding-moe",
+    "06-speculative-decoding": "05-speculative-decoding-moe",
+    "06-speculative-decoding-moe": "05-speculative-decoding-moe",
+    "07-speculative-decoding": "05-speculative-decoding-moe",
+    "08-speculative-decoding": "05-speculative-decoding-moe",
+
+    "03-kv-cache": "07-kv-cache-optimization-compression",
+    "04-kv-cache": "07-kv-cache-optimization-compression",
+    "05-kv-cache": "07-kv-cache-optimization-compression",
+    "05-kv-cache-compression-quantization": "07-kv-cache-optimization-compression",
+    "05-kv-cache-memory-management": "07-kv-cache-optimization-compression",
+    "06-kv-cache-memory": "07-kv-cache-optimization-compression",
+    "kv-cache": "07-kv-cache-optimization-compression",
+
+    "05-kv-cache-offloading": "10-kv-cache-offload-recomputation",
+
+    "04-kv-prefix-cache": "11-llm-serving-scheduling-disaggregation",
+    "06-serving-scheduling": "11-llm-serving-scheduling-disaggregation",
+    "scheduling": "11-llm-serving-scheduling-disaggregation",
+
+    # These historical topics do not match one canonical lineage precisely.
+    "02-hardware-accelerators": DEFAULT_INFERENCE_LINEAGE,
+    "02-moe-inference": DEFAULT_INFERENCE_LINEAGE,
+    "04-moe-parallelism-communication": "12-moe-parallelism-communication",
+    "05-memory-architecture-near-data": DEFAULT_INFERENCE_LINEAGE,
+    "05-moe": DEFAULT_INFERENCE_LINEAGE,
+    "05-pim-near-memory": "17-pim-near-data-acceleration",
+    "08-quantization-kernels": "16-weight-quantization-compression",
+    "05-quantization": "16-weight-quantization-compression",
+    "09-attention-kernel-serving-optimization": DEFAULT_INFERENCE_LINEAGE,
+    "09-kernel-runtime-compilation": DEFAULT_INFERENCE_LINEAGE,
+    "10-sparse-attention": "13-sparse-attention",
+    "12-benchmarking-modeling-emulation": DEFAULT_INFERENCE_LINEAGE,
+    "moe": DEFAULT_INFERENCE_LINEAGE,
+    "09-other-inference-systems": DEFAULT_INFERENCE_LINEAGE,
+    "12-agent-memory-runtime": "14-agentic-inference-serving-runtime",
+}
+
+
+def canonical_lineage(family: str, lineage: str, *, repo_root: Path | None = None) -> str:
+    """Return the stable user-facing lineage for one physical paper directory."""
+    name = str(lineage or "").strip()
+    if family != "inference":
+        return name
+    if name in canonical_inference_lineages(repo_root):
+        return name
+    return INFERENCE_LINEAGE_ALIASES.get(name, DEFAULT_INFERENCE_LINEAGE)
+
+
+def canonicalize_paper_path(value: str, *, repo_root: Path | None = None) -> str:
+    """Normalize only the lineage segment of an Inference paper path."""
+    path = PurePosixPath(str(value))
+    parts = list(path.parts)
+    if len(parts) >= 4 and tuple(parts[:2]) == ("papers", "inference"):
+        parts[2] = canonical_lineage("inference", parts[2], repo_root=repo_root)
+        return PurePosixPath(*parts).as_posix()
+    return path.as_posix()

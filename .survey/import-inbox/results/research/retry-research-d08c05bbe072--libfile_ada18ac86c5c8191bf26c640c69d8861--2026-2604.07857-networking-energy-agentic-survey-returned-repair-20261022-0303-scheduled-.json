@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "24e36f0ae888dbd3863dd94e122fa4a0f180795ab6496a667b7e689c2e9beacd",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d08c05bbe072--libfile_ada18ac86c5c8191bf26c640c69d8861--2026-2604.07857-networking-energy-agentic-survey-returned-repair-20261022-0303-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2604.07857",
+  "worker_completed_at": "2026-10-22T03:03:00+09:00",
+  "worker_run_key": "20261022-0303-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4888,
+    "body_paragraphs": 27,
+    "method_chars": 1751,
+    "method_paragraphs": 10,
+    "evaluation_chars": 587,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/14-agentic-inference-serving-runtime/2026-2604.07857-networking-aware-energy-efficiency-in-agentic-ai-inference-a-survey.md と 14 段落 / 2847文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-22T17:50:13+00:00"
+}

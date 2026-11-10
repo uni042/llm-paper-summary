@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-885209099169dc69-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2208.07120",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2208.07120",
+    "identity_tokens": [
+      "DOI:10.1145/3551349.3556964",
+      "arXiv:2208.07120",
+      "id:arXiv:2208.07120",
+      "url:https://arxiv.org/abs/2208.07120"
+    ],
+    "reason": "コード脆弱性予測・クローン検出向けCodeBERT/GraphCodeBERTの圧縮で推論遅延を削減するが、自己回帰型LLMの生成推論基盤・KVキャッシュ・サービングの改善ではない。モデル圧縮技術の間接的な関連に留まる。",
+    "first_checked_at": "2026-10-13T09:49:06+00:00",
+    "last_checked_at": "2026-10-19T06:48:02+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Compressing Pre-trained Models of Code into 3 MB"
+  },
+  "processed_at": "2026-10-19T06:48:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-885209099169",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

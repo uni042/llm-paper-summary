@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e4e5bc51855734c5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.06688",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.06688",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.06688",
+      "arXiv:2512.06688",
+      "id:arXiv:2512.06688",
+      "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d",
+      "url:https://arxiv.org/abs/2512.06688"
+    ],
+    "reason": "一次要旨では暗黙の利用者嗜好を学習する個人化ベンチマークとエージェント記憶が主題。2千トークンの記憶で3万2千トークンの会話履歴を置き換え、入力トークンを16分の1にするという推論費用に関連する効果がある一方、主要評価は個人化回答正答率（記憶方式55%）であり、KVキャッシュ、実行時配置、サービング遅延・スループットのシステム最適化を直接検証していないため境界とする。",
+    "first_checked_at": "2026-10-11T10:43:47+00:00",
+    "last_checked_at": "2026-10-17T05:06:14+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
+  },
+  "processed_at": "2026-10-17T05:06:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e4e5bc518557",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

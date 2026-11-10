@@ -1,0 +1,870 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0e4c60946f8b3c9f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0e4c60946f8b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2401.02938",
+    "arXiv:2506.12353",
+    "arXiv:2604.07658",
+    "arXiv:2607.02522",
+    "arXiv:2607.25818",
+    "arXiv:2609.10346",
+    "arXiv:2609.26484",
+    "arXiv:2609.28717",
+    "arXiv:2610.07659"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "fba71cd998a03c8e42e30fa045e8f69c76827721",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:05:43.142261+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2401.02938",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.12353",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.07658",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.02522",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.25818",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.10346",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.26484",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.28717",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07659",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Optimal Decay Spectra for Linear Recurrences",
+      "source_url": "https://arxiv.org/abs/2604.07658",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear recurrent models offer linear-time sequence processing but often suffer from suboptimal long-range memory. We trace this to the decay spectrum: for $N$ channels, random initialization collapses the minimum spectral gap to $O(N^{-2})$, yielding sub-exponential error $\\exp(-\\Omega(N/\\log N))$; linear spacing avoids collapse but degrades to $\\exp(-O(N/\\sqrt{T}))$, practically algebraic over long contexts. We introduce Position-Adaptive Spectral Tapering (PoST), an architecture-agnostic framework combining two mechanisms: (1) Spectral Reparameterization, which structurally enforces geometrically spaced log-decay rates, proven minimax optimal at rate $O(\\exp(-cN/\\log T))$; and (2) Position-Adaptive Scaling, the provably unique mechanism that eliminates the scale mismatch of static spectra (where only $N\\log t/\\log T$ of $N$ channels are effective at position $t$) by stretching the spectrum to the actual dependency range, sharpening the rate to $O(\\exp(-cN/\\log t))$. This scaling natively induces fractional invariance: the impulse response becomes scale-free, with channels interpolating between relative and absolute temporal coordinates. PoST integrates into any diagonal linear recurrence without overhead. We instantiate it across Mamba-2, RWKV-7, Gated DeltaNet, Gated Linear Attention, and RetNet. Pre-training at 180M-440M scales shows consistent zero-shot language modeling improvements, significant long-context retrieval gains for Mamba-2 (MQAR and NIAH), and competitive or improved performance across other architectures. Code: https://github.com/SiLifen/PoST.",
+      "identifiers": [
+        "SemanticScholar:372528760d0053f7edb32fd411c5d50b0938496a"
+      ],
+      "semantic_scholar_id": "372528760d0053f7edb32fd411c5d50b0938496a",
+      "canonical_id": "arXiv:2604.07658",
+      "arxiv_id": "2604.07658",
+      "doi": "10.48550/arXiv.2604.07658",
+      "authors": [
+        "Yang Cao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Token Importance to Conditional Removability: Rethinking Visual Token Pruning in Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.26484",
+      "year": 2026,
+      "published": "2026-09-22",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training-free visual-token pruning often uses token importance, redundancy, or related selection criteria as proxies for safe removal. We show that these signals alone do not fully characterize removability, which is conditioned on both representation depth and the surrounding deletion set. Controlled interventions demonstrate that removing the same tokens at different depths produces substantially different downstream perturbations, while changing only the deletion context at a fixed depth alters candidate marginals and pruning-boundary decisions. These findings show that token importance alone cannot determine when a token is safely removable or how its removability changes under joint deletion. Motivated by this perspective, we propose CoRePrune, a training-free two-stage framework. Progressive Perturbation-Aware Visual Pruning refreshes deletion effects as visual representations evolve, while Set-Conditioned Refinement reevaluates candidate rescue benefits under the current deletion set after visual--text interaction. Across five multimodal large language model backbones covering standard images, high-resolution inputs, and video, CoRePrune preserves performance under aggressive token budgets. On Qwen3.5, with a final budget of 128 visual tokens, it retains 90.3% of dense-model performance while reducing aggregate prefill time by 51.0%.",
+      "identifiers": [
+        "SemanticScholar:9866dc0b92f687bd6f4d2a11a357ab4114cb6c84"
+      ],
+      "semantic_scholar_id": "9866dc0b92f687bd6f4d2a11a357ab4114cb6c84",
+      "canonical_id": "arXiv:2609.26484",
+      "arxiv_id": "2609.26484",
+      "authors": [
+        "Sheng-Li He",
+        "Yong-Chao Liang",
+        "Rou-Meng He",
+        "Jun-Jie Zeng",
+        "Ji-Yuan He",
+        "Xin Fang",
+        "Can Wu",
+        "Li Zheng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast and Effective Weight Update for Pruned Large Language Models",
+      "source_url": "https://arxiv.org/abs/2401.02938",
+      "year": 2024,
+      "published": "2024-01-01",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning large language models (LLMs) is a challenging task due to their enormous size. The primary difficulty is fine-tuning the model after pruning, which is needed to recover the lost performance caused by dropping weights. Recent approaches have either ignored fine-tuning entirely, focusing on efficient pruning criteria, or attempted layer-wise weight updates, preserving the behavior of each layer. However, even layer-wise weight updates can be costly for LLMs, and previous works have resorted to various approximations. In our paper, we propose a fast and effective weight update algorithm for pruned layers based on the Alternating Direction Method of Multipliers (ADMM). We further extend it with a simple gradual pruning mask selection and achieve state-of-the-art pruning performance across a wide range of LLMs. Code is available at https://github.com/fmfi-compbio/admm-pruning.",
+      "identifiers": [
+        "SemanticScholar:6b4c299c26bdc9a81489121589b6ff70b9ebf403"
+      ],
+      "semantic_scholar_id": "6b4c299c26bdc9a81489121589b6ff70b9ebf403",
+      "canonical_id": "arXiv:2401.02938",
+      "arxiv_id": "2401.02938",
+      "authors": [
+        "V. Boza"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1033,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Reasoning Through Suppression of Self-Affirmation Reflections in Large Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2506.12353",
+      "year": 2025,
+      "published": "2025-06-14",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While recent advances in large reasoning models have demonstrated remarkable performance, efficient reasoning remains critical due to the rapid growth of output length. Existing optimization approaches highlights a tendency toward\"overthinking\", yet lack fine-grained analysis. In this work, we focus on Self-Affirmation Reflections: redundant reflective steps that affirm prior content and often occurs after the already correct reasoning steps. Observations of both original and optimized reasoning models reveal pervasive self-affirmation reflections. Notably, these reflections sometimes lead to longer outputs in optimized models than their original counterparts. Through detailed analysis, we uncover an intriguing pattern: compared to other reflections, the leading words (i.e., the first word of sentences) in self-affirmation reflections exhibit a distinct probability bias. Motivated by this insight, we can locate self-affirmation reflections and conduct a train-free experiment demonstrating that suppressing self-affirmation reflections reduces output length without degrading accuracy across multiple models (R1-Distill-Models, QwQ-32B, and Qwen3-32B). Furthermore, we also improve current train-based method by explicitly suppressing such reflections. In our experiments, we achieve length compression of 18.7\\% in train-free settings and 50.2\\% in train-based settings for R1-Distill-Qwen-1.5B. Moreover, our improvements are simple yet practical and can be directly applied to existing inference frameworks, such as vLLM. We believe that our findings will provide community insights for achieving more precise length compression and step-level efficient reasoning.",
+      "identifiers": [
+        "SemanticScholar:c39b542e2791539450a96778372e6d98909dc953"
+      ],
+      "semantic_scholar_id": "c39b542e2791539450a96778372e6d98909dc953",
+      "canonical_id": "arXiv:2506.12353",
+      "arxiv_id": "2506.12353",
+      "doi": "10.48550/arXiv.2506.12353",
+      "authors": [
+        "Kai-Yuan Liu",
+        "Chen Shen",
+        "Zhan-Wei Zhang",
+        "Jun-Jie Liu",
+        "Xiaosong Yuan",
+        "Jie-Ping Ye"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 503,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multi-Turn Distributed Inference with Mixture of Experts for 6G Edge-Cloud Networks",
+      "source_url": "https://arxiv.org/abs/2607.02522",
+      "year": 2026,
+      "published": "2026-05-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) architectures are increasingly deployed across 6G edge--cloud networks, where sparse activation reduces the computational footprint of each inference to only a fraction of the full expert set. However, MoE inference in edge-cloud networks creates a tension between KV state locality and elastic expert dispatch. KV state relocation incurs substantial transfer overhead, while expert computation benefits from spreading across the network to exploit available capacity. This tension is amplified in multi-turn inference, where each turn extends the KV state that must persist across the dialogue. To this end, we present StateFlow, a distributed inference policy that decouples persistent KV state from transient sparse computation. StateFlow pins KV state at a sticky serving site for cross-turn reuse and jointly optimizes expert dispatch and aggregation placement across the network. We further implement a real-world testbed with kernel-level network emulation and experimental results show that StateFlow sustains more than $2\\times$ higher stable dialogue concurrency than the distributed baseline solutions and reduces turn-level p95 latency under multi-turn inference by 53.0\\%.",
+      "identifiers": [
+        "SemanticScholar:26168fb84cf9ee678f0f1bdc1ed8978c41500f4c"
+      ],
+      "semantic_scholar_id": "26168fb84cf9ee678f0f1bdc1ed8978c41500f4c",
+      "canonical_id": "arXiv:2607.02522",
+      "arxiv_id": "2607.02522",
+      "doi": "10.48550/arXiv.2607.02522",
+      "authors": [
+        "Bo Liu",
+        "Hai-Yuan Li",
+        "Yuelin Liu",
+        "Yu-Lei Wu",
+        "Rasheed Hussain",
+        "Shadi Moazzeni",
+        "D. Simeonidou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SepPrune:A Separator-based Pruning Framework for Efficient Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.25818",
+      "year": 2026,
+      "published": "2026-07-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent multimodal large language models (MLLMs), such as Qwen2.5-VL and InternVL3, generate large numbers of vision tokens for high-resolution inputs, leading to substantial computational cost. Existing vision token pruning methods either depend on cross-modal attention and cannot prune before the prefill stage, or rely on diversity estimation with high computational overhead. We observe that attention scores from both vision and text tokens peak at modality separator tokens, suggesting that these separators bridge the two modalities. Based on this observation, we propose SepPrune, an efficient, training-free, plug-and-play pruning method that uses the separator token as a unified query to rank and select informative vision tokens. SepPrune reuses the LLM's built-in projection parameters and requires no architectural changes. Experiments on Qwen2.5-VL-7B show that SepPrune achieves state-of-the-art performance, retaining 96.3% of the original accuracy while removing 80.2% of vision tokens.",
+      "identifiers": [
+        "SemanticScholar:f0910f1c8dc4fe0348c933d63648864f4ea1bf53"
+      ],
+      "semantic_scholar_id": "f0910f1c8dc4fe0348c933d63648864f4ea1bf53",
+      "canonical_id": "arXiv:2607.25818",
+      "arxiv_id": "2607.25818",
+      "doi": "10.48550/arXiv.2607.25818",
+      "authors": [
+        "Yucheng Wang",
+        "Qi-Hui Zhu",
+        "Yang Liu",
+        "Xiaoyan Sun",
+        "Si-Ying Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 94,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond One-Size-Fits-All: Sample-Adaptive Strategy Routing for Vision Token Pruning in MLLMs",
+      "source_url": "https://arxiv.org/abs/2609.10346",
+      "year": 2026,
+      "published": "2026-09-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) process hundreds or thousands of visual tokens per image, incurring prohibitive inference costs. While existing vision token pruning methods mitigate this overhead, they implicitly assume that a single fixed pruning strategy can be applied uniformly across all inputs. Our analysis further reveals that ranking pruning methods by average benchmark accuracy conceals substantial sample-wise complementarity: although the average-best strategy excels overall, alternative strategies prove superior on a significant fraction of individual samples. To harness this diversity, we propose VIP-Router, a lightweight VIsion Pruning Router that adaptively selects the pruning strategy predicted to be best suited to each input at a specified pruning level. Conditioned on low-cost visual and textual features, VIP-Router identifies the most suitable candidate strategy while retaining full-token inference as an option when pruning is predicted to be unfavorable. Evaluated on a curated suite of pruning-sensitive visual perception benchmarks, VTC-Bench Group A, VIP-Router consistently outperforms the best fixed strategy baseline across all reduction ratios, achieving a 26.9% relative improvement in average accuracy, and a 22.0% relative increase in average utility after accounting for realized token cost. Crucially, VIP-Router operates in a plug-and-play manner without modifying underlying pruning algorithms or model weights, introducing trainable parameters equivalent to merely 0.017\\% of the backbone. Furthermore, VIP-Router proves effective across various MLLM backbones and yields consistent gains on unseen benchmarks, highlighting the potential of sample adaptive routing for visual token pruning.",
+      "identifiers": [
+        "SemanticScholar:fc84ef2817fe33c4b89860bee7572e290b7c104d"
+      ],
+      "semantic_scholar_id": "fc84ef2817fe33c4b89860bee7572e290b7c104d",
+      "canonical_id": "arXiv:2609.10346",
+      "arxiv_id": "2609.10346",
+      "authors": [
+        "Hai-Jin Liang",
+        "P. Zhou",
+        "Zheng-Lin Wan",
+        "Wei Wang",
+        "Yang You",
+        "Wang-Bo Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HeteroReason: Heterogeneous FPGA-GPU Acceleration for Disaggregated Speculative Reasoning",
+      "source_url": "https://arxiv.org/abs/2609.28717",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) have achieved state-of-the-art performance in reasoning tasks by utilizing Chain-of-Thought (CoT) reasoning. To achieve fast execution speed, speculative reasoning techniques adopt a lightweight draft model for candidate token generation followed by process reward models (PRMs) for verification and a strong target model for refinements. This paper identifies that the existing speculative reasoning paradigm follows a strictly forward-only reasoning trajectory, which lacks robustness and can lead to severe error propagation if early reasoning steps are suboptimal. Furthermore, executing these disparate inference schemes, including sequential drafting and parallel verification on homogeneous GPU platforms, can lead to severe resource underutilization. To address this, we propose HeteroReason, an algorithm-hardware co-designed heterogeneous FPGA-GPU inference paradigm specifically tailored for LRM speculative reasoning. At the algorithmic level, we introduce a backtracking-enhanced workflow that enables the system to recover from low-quality states and explore alternative reasoning trajectories, significantly improving reasoning robustness. At the system level, the draft model is offloaded to the FPGA while deploying the PRM and target models on GPUs. A specialized workflow is optimized to achieve prefill-decode disaggregation, which exploits shadow synchronization to overlap GPU-side refinements with FPGA-side token updates to effectively hide synchronization latency. To mitigate inherent sequential constraints, we propose a step-ahead speculation and refinement scheduling scheme, transitioning the system from a sequential execution scheme to a parallel pipeline. Experimental evaluations show an average 4.2% accuracy improvement, with 1.01x-1.42x latency speedups and 1.25x-1.57x improvements in energy efficiency compared to homogeneous GPU baselines.",
+      "identifiers": [
+        "SemanticScholar:a2a37012c58e68b5fa19fb6dd486c7fbe3a81d48"
+      ],
+      "semantic_scholar_id": "a2a37012c58e68b5fa19fb6dd486c7fbe3a81d48",
+      "canonical_id": "arXiv:2609.28717",
+      "arxiv_id": "2609.28717",
+      "authors": [
+        "Ze-Huan Zhang",
+        "Quan Deng",
+        "Zi-Bo Ren",
+        "H. Chen",
+        "Guo-Yu Li",
+        "Xu-Chun Hu",
+        "J. G. Coutinho",
+        "Ce Guo",
+        "W. Luk",
+        "Zhi-Qiang Que",
+        "Hong-Xiang Fan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DLoop: Looped Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.07659",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive generation in large language models. In each drafting stage, a lightweight draft model proposes tokens that the target model subsequently verifies. With increasingly capable draft models, we find that the target model frequently accepts all tokens produced in a drafting stage. A verification nevertheless follows each drafting stage, resulting in unnecessary target-model forward passes even when drafting could have continued. Adaptive draft length methods decide during decoding how many draft tokens precede a verification, but they raise the speedup only for autoregressive draft models. For a parallel draft model, drafting further requires target-model hidden states for draft tokens that have not been verified. We propose DLoop, a looped form of speculative decoding that adaptively performs multiple drafting stages before verification. DLoop continues drafting while the draft model remains confident and verifies all accumulated draft tokens together. Loop-aware training keeps the draft model reliable in the additional drafting stages by exposing it to its own hidden states for unverified draft tokens. By spending additional draft-model forward passes, DLoop reduces the number of target-model forward passes required for verification. Across diverse speculative decoding methods including EAGLE-3, DFlash, Domino, DSpark, and multi-token prediction modules, DLoop improves the wall-clock speedup by 5 to 41 percent while preserving lossless decoding. Code will be available at https://github.com/naver-ai/DLoop.",
+      "identifiers": [
+        "SemanticScholar:91706080538c3ae04b58a961c97a8aa48e1752d9"
+      ],
+      "semantic_scholar_id": "91706080538c3ae04b58a961c97a8aa48e1752d9",
+      "canonical_id": "arXiv:2610.07659",
+      "arxiv_id": "2610.07659",
+      "authors": [
+        "Geonmo Gu",
+        "Byeongho Heo",
+        "HeeJae Jun",
+        "Yoohoon Kang",
+        "Sang-Min Lee",
+        "Sangdoo Yun",
+        "Dongyoon Han"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 24,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.07658",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.07658",
+        "id:SemanticScholar:372528760d0053f7edb32fd411c5d50b0938496a",
+        "id:arXiv:2604.07658",
+        "title:optimal decay spectra for linear recurrences",
+        "url:https://arxiv.org/abs/2604.07658"
+      ],
+      "record": {
+        "title": "Optimal Decay Spectra for Linear Recurrences",
+        "source_url": "https://arxiv.org/abs/2604.07658",
+        "year": 2026,
+        "published": "2026-04-08",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear recurrent models offer linear-time sequence processing but often suffer from suboptimal long-range memory. We trace this to the decay spectrum: for $N$ channels, random initialization collapses the minimum spectral gap to $O(N^{-2})$, yielding sub-exponential error $\\exp(-\\Omega(N/\\log N))$; linear spacing avoids collapse but degrades to $\\exp(-O(N/\\sqrt{T}))$, practically algebraic over long contexts. We introduce Position-Adaptive Spectral Tapering (PoST), an architecture-agnostic framework combining two mechanisms: (1) Spectral Reparameterization, which structurally enforces geometrically spaced log-decay rates, proven minimax optimal at rate $O(\\exp(-cN/\\log T))$; and (2) Position-Adaptive Scaling, the provably unique mechanism that eliminates the scale mismatch of static spectra (where only $N\\log t/\\log T$ of $N$ channels are effective at position $t$) by stretching the spectrum to the actual dependency range, sharpening the rate to $O(\\exp(-cN/\\log t))$. This scaling natively induces fractional invariance: the impulse response becomes scale-free, with channels interpolating between relative and absolute temporal coordinates. PoST integrates into any diagonal linear recurrence without overhead. We instantiate it across Mamba-2, RWKV-7, Gated DeltaNet, Gated Linear Attention, and RetNet. Pre-training at 180M-440M scales shows consistent zero-shot language modeling improvements, significant long-context retrieval gains for Mamba-2 (MQAR and NIAH), and competitive or improved performance across other architectures. Code: https://github.com/SiLifen/PoST.",
+        "identifiers": [
+          "SemanticScholar:372528760d0053f7edb32fd411c5d50b0938496a"
+        ],
+        "semantic_scholar_id": "372528760d0053f7edb32fd411c5d50b0938496a",
+        "canonical_id": "arXiv:2604.07658",
+        "arxiv_id": "2604.07658",
+        "doi": "10.48550/arXiv.2604.07658",
+        "authors": [
+          "Yang Cao"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 205,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26484",
+      "identity_tokens": [
+        "id:SemanticScholar:9866dc0b92f687bd6f4d2a11a357ab4114cb6c84",
+        "id:arXiv:2609.26484",
+        "title:from token importance to conditional removability rethinking visual token pruning in multimodal large language models",
+        "url:https://arxiv.org/abs/2609.26484"
+      ],
+      "record": {
+        "title": "From Token Importance to Conditional Removability: Rethinking Visual Token Pruning in Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.26484",
+        "year": 2026,
+        "published": "2026-09-22",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Training-free visual-token pruning often uses token importance, redundancy, or related selection criteria as proxies for safe removal. We show that these signals alone do not fully characterize removability, which is conditioned on both representation depth and the surrounding deletion set. Controlled interventions demonstrate that removing the same tokens at different depths produces substantially different downstream perturbations, while changing only the deletion context at a fixed depth alters candidate marginals and pruning-boundary decisions. These findings show that token importance alone cannot determine when a token is safely removable or how its removability changes under joint deletion. Motivated by this perspective, we propose CoRePrune, a training-free two-stage framework. Progressive Perturbation-Aware Visual Pruning refreshes deletion effects as visual representations evolve, while Set-Conditioned Refinement reevaluates candidate rescue benefits under the current deletion set after visual--text interaction. Across five multimodal large language model backbones covering standard images, high-resolution inputs, and video, CoRePrune preserves performance under aggressive token budgets. On Qwen3.5, with a final budget of 128 visual tokens, it retains 90.3% of dense-model performance while reducing aggregate prefill time by 51.0%.",
+        "identifiers": [
+          "SemanticScholar:9866dc0b92f687bd6f4d2a11a357ab4114cb6c84"
+        ],
+        "semantic_scholar_id": "9866dc0b92f687bd6f4d2a11a357ab4114cb6c84",
+        "canonical_id": "arXiv:2609.26484",
+        "arxiv_id": "2609.26484",
+        "authors": [
+          "Sheng-Li He",
+          "Yong-Chao Liang",
+          "Rou-Meng He",
+          "Jun-Jie Zeng",
+          "Ji-Yuan He",
+          "Xin Fang",
+          "Can Wu",
+          "Li Zheng"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 38,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.02938",
+      "identity_tokens": [
+        "id:SemanticScholar:6b4c299c26bdc9a81489121589b6ff70b9ebf403",
+        "id:arXiv:2401.02938",
+        "title:fast and effective weight update for pruned large language models",
+        "url:https://arxiv.org/abs/2401.02938"
+      ],
+      "record": {
+        "title": "Fast and Effective Weight Update for Pruned Large Language Models",
+        "source_url": "https://arxiv.org/abs/2401.02938",
+        "year": 2024,
+        "published": "2024-01-01",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pruning large language models (LLMs) is a challenging task due to their enormous size. The primary difficulty is fine-tuning the model after pruning, which is needed to recover the lost performance caused by dropping weights. Recent approaches have either ignored fine-tuning entirely, focusing on efficient pruning criteria, or attempted layer-wise weight updates, preserving the behavior of each layer. However, even layer-wise weight updates can be costly for LLMs, and previous works have resorted to various approximations. In our paper, we propose a fast and effective weight update algorithm for pruned layers based on the Alternating Direction Method of Multipliers (ADMM). We further extend it with a simple gradual pruning mask selection and achieve state-of-the-art pruning performance across a wide range of LLMs. Code is available at https://github.com/fmfi-compbio/admm-pruning.",
+        "identifiers": [
+          "SemanticScholar:6b4c299c26bdc9a81489121589b6ff70b9ebf403"
+        ],
+        "semantic_scholar_id": "6b4c299c26bdc9a81489121589b6ff70b9ebf403",
+        "canonical_id": "arXiv:2401.02938",
+        "arxiv_id": "2401.02938",
+        "authors": [
+          "V. Boza"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1033,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.12353",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.12353",
+        "id:SemanticScholar:c39b542e2791539450a96778372e6d98909dc953",
+        "id:arXiv:2506.12353",
+        "title:efficient reasoning through suppression of selfaffirmation reflections in large reasoning models",
+        "url:https://arxiv.org/abs/2506.12353"
+      ],
+      "record": {
+        "title": "Efficient Reasoning Through Suppression of Self-Affirmation Reflections in Large Reasoning Models",
+        "source_url": "https://arxiv.org/abs/2506.12353",
+        "year": 2025,
+        "published": "2025-06-14",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While recent advances in large reasoning models have demonstrated remarkable performance, efficient reasoning remains critical due to the rapid growth of output length. Existing optimization approaches highlights a tendency toward\"overthinking\", yet lack fine-grained analysis. In this work, we focus on Self-Affirmation Reflections: redundant reflective steps that affirm prior content and often occurs after the already correct reasoning steps. Observations of both original and optimized reasoning models reveal pervasive self-affirmation reflections. Notably, these reflections sometimes lead to longer outputs in optimized models than their original counterparts. Through detailed analysis, we uncover an intriguing pattern: compared to other reflections, the leading words (i.e., the first word of sentences) in self-affirmation reflections exhibit a distinct probability bias. Motivated by this insight, we can locate self-affirmation reflections and conduct a train-free experiment demonstrating that suppressing self-affirmation reflections reduces output length without degrading accuracy across multiple models (R1-Distill-Models, QwQ-32B, and Qwen3-32B). Furthermore, we also improve current train-based method by explicitly suppressing such reflections. In our experiments, we achieve length compression of 18.7\\% in train-free settings and 50.2\\% in train-based settings for R1-Distill-Qwen-1.5B. Moreover, our improvements are simple yet practical and can be directly applied to existing inference frameworks, such as vLLM. We believe that our findings will provide community insights for achieving more precise length compression and step-level efficient reasoning.",
+        "identifiers": [
+          "SemanticScholar:c39b542e2791539450a96778372e6d98909dc953"
+        ],
+        "semantic_scholar_id": "c39b542e2791539450a96778372e6d98909dc953",
+        "canonical_id": "arXiv:2506.12353",
+        "arxiv_id": "2506.12353",
+        "doi": "10.48550/arXiv.2506.12353",
+        "authors": [
+          "Kai-Yuan Liu",
+          "Chen Shen",
+          "Zhan-Wei Zhang",
+          "Jun-Jie Liu",
+          "Xiaosong Yuan",
+          "Jie-Ping Ye"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 503,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02522",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.02522",
+        "id:SemanticScholar:26168fb84cf9ee678f0f1bdc1ed8978c41500f4c",
+        "id:arXiv:2607.02522",
+        "title:multiturn distributed inference with mixture of experts for 6g edgecloud networks",
+        "url:https://arxiv.org/abs/2607.02522"
+      ],
+      "record": {
+        "title": "Multi-Turn Distributed Inference with Mixture of Experts for 6G Edge-Cloud Networks",
+        "source_url": "https://arxiv.org/abs/2607.02522",
+        "year": 2026,
+        "published": "2026-05-06",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) architectures are increasingly deployed across 6G edge--cloud networks, where sparse activation reduces the computational footprint of each inference to only a fraction of the full expert set. However, MoE inference in edge-cloud networks creates a tension between KV state locality and elastic expert dispatch. KV state relocation incurs substantial transfer overhead, while expert computation benefits from spreading across the network to exploit available capacity. This tension is amplified in multi-turn inference, where each turn extends the KV state that must persist across the dialogue. To this end, we present StateFlow, a distributed inference policy that decouples persistent KV state from transient sparse computation. StateFlow pins KV state at a sticky serving site for cross-turn reuse and jointly optimizes expert dispatch and aggregation placement across the network. We further implement a real-world testbed with kernel-level network emulation and experimental results show that StateFlow sustains more than $2\\times$ higher stable dialogue concurrency than the distributed baseline solutions and reduces turn-level p95 latency under multi-turn inference by 53.0\\%.",
+        "identifiers": [
+          "SemanticScholar:26168fb84cf9ee678f0f1bdc1ed8978c41500f4c"
+        ],
+        "semantic_scholar_id": "26168fb84cf9ee678f0f1bdc1ed8978c41500f4c",
+        "canonical_id": "arXiv:2607.02522",
+        "arxiv_id": "2607.02522",
+        "doi": "10.48550/arXiv.2607.02522",
+        "authors": [
+          "Bo Liu",
+          "Hai-Yuan Li",
+          "Yuelin Liu",
+          "Yu-Lei Wu",
+          "Rasheed Hussain",
+          "Shadi Moazzeni",
+          "D. Simeonidou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 177,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.25818",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.25818",
+        "id:SemanticScholar:f0910f1c8dc4fe0348c933d63648864f4ea1bf53",
+        "id:arXiv:2607.25818",
+        "title:sepprunea separatorbased pruning framework for efficient multimodal large language models",
+        "url:https://arxiv.org/abs/2607.25818"
+      ],
+      "record": {
+        "title": "SepPrune:A Separator-based Pruning Framework for Efficient Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2607.25818",
+        "year": 2026,
+        "published": "2026-07-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent multimodal large language models (MLLMs), such as Qwen2.5-VL and InternVL3, generate large numbers of vision tokens for high-resolution inputs, leading to substantial computational cost. Existing vision token pruning methods either depend on cross-modal attention and cannot prune before the prefill stage, or rely on diversity estimation with high computational overhead. We observe that attention scores from both vision and text tokens peak at modality separator tokens, suggesting that these separators bridge the two modalities. Based on this observation, we propose SepPrune, an efficient, training-free, plug-and-play pruning method that uses the separator token as a unified query to rank and select informative vision tokens. SepPrune reuses the LLM's built-in projection parameters and requires no architectural changes. Experiments on Qwen2.5-VL-7B show that SepPrune achieves state-of-the-art performance, retaining 96.3% of the original accuracy while removing 80.2% of vision tokens.",
+        "identifiers": [
+          "SemanticScholar:f0910f1c8dc4fe0348c933d63648864f4ea1bf53"
+        ],
+        "semantic_scholar_id": "f0910f1c8dc4fe0348c933d63648864f4ea1bf53",
+        "canonical_id": "arXiv:2607.25818",
+        "arxiv_id": "2607.25818",
+        "doi": "10.48550/arXiv.2607.25818",
+        "authors": [
+          "Yucheng Wang",
+          "Qi-Hui Zhu",
+          "Yang Liu",
+          "Xiaoyan Sun",
+          "Si-Ying Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 94,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.10346",
+      "identity_tokens": [
+        "id:SemanticScholar:fc84ef2817fe33c4b89860bee7572e290b7c104d",
+        "id:arXiv:2609.10346",
+        "title:beyond onesizefitsall sampleadaptive strategy routing for vision token pruning in mllms",
+        "url:https://arxiv.org/abs/2609.10346"
+      ],
+      "record": {
+        "title": "Beyond One-Size-Fits-All: Sample-Adaptive Strategy Routing for Vision Token Pruning in MLLMs",
+        "source_url": "https://arxiv.org/abs/2609.10346",
+        "year": 2026,
+        "published": "2026-09-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) process hundreds or thousands of visual tokens per image, incurring prohibitive inference costs. While existing vision token pruning methods mitigate this overhead, they implicitly assume that a single fixed pruning strategy can be applied uniformly across all inputs. Our analysis further reveals that ranking pruning methods by average benchmark accuracy conceals substantial sample-wise complementarity: although the average-best strategy excels overall, alternative strategies prove superior on a significant fraction of individual samples. To harness this diversity, we propose VIP-Router, a lightweight VIsion Pruning Router that adaptively selects the pruning strategy predicted to be best suited to each input at a specified pruning level. Conditioned on low-cost visual and textual features, VIP-Router identifies the most suitable candidate strategy while retaining full-token inference as an option when pruning is predicted to be unfavorable. Evaluated on a curated suite of pruning-sensitive visual perception benchmarks, VTC-Bench Group A, VIP-Router consistently outperforms the best fixed strategy baseline across all reduction ratios, achieving a 26.9% relative improvement in average accuracy, and a 22.0% relative increase in average utility after accounting for realized token cost. Crucially, VIP-Router operates in a plug-and-play manner without modifying underlying pruning algorithms or model weights, introducing trainable parameters equivalent to merely 0.017\\% of the backbone. Furthermore, VIP-Router proves effective across various MLLM backbones and yields consistent gains on unseen benchmarks, highlighting the potential of sample adaptive routing for visual token pruning.",
+        "identifiers": [
+          "SemanticScholar:fc84ef2817fe33c4b89860bee7572e290b7c104d"
+        ],
+        "semantic_scholar_id": "fc84ef2817fe33c4b89860bee7572e290b7c104d",
+        "canonical_id": "arXiv:2609.10346",
+        "arxiv_id": "2609.10346",
+        "authors": [
+          "Hai-Jin Liang",
+          "P. Zhou",
+          "Zheng-Lin Wan",
+          "Wei Wang",
+          "Yang You",
+          "Wang-Bo Zhao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 51,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28717",
+      "identity_tokens": [
+        "id:SemanticScholar:a2a37012c58e68b5fa19fb6dd486c7fbe3a81d48",
+        "id:arXiv:2609.28717",
+        "title:heteroreason heterogeneous fpgagpu acceleration for disaggregated speculative reasoning",
+        "url:https://arxiv.org/abs/2609.28717"
+      ],
+      "record": {
+        "title": "HeteroReason: Heterogeneous FPGA-GPU Acceleration for Disaggregated Speculative Reasoning",
+        "source_url": "https://arxiv.org/abs/2609.28717",
+        "year": 2026,
+        "published": "2026-09-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) have achieved state-of-the-art performance in reasoning tasks by utilizing Chain-of-Thought (CoT) reasoning. To achieve fast execution speed, speculative reasoning techniques adopt a lightweight draft model for candidate token generation followed by process reward models (PRMs) for verification and a strong target model for refinements. This paper identifies that the existing speculative reasoning paradigm follows a strictly forward-only reasoning trajectory, which lacks robustness and can lead to severe error propagation if early reasoning steps are suboptimal. Furthermore, executing these disparate inference schemes, including sequential drafting and parallel verification on homogeneous GPU platforms, can lead to severe resource underutilization. To address this, we propose HeteroReason, an algorithm-hardware co-designed heterogeneous FPGA-GPU inference paradigm specifically tailored for LRM speculative reasoning. At the algorithmic level, we introduce a backtracking-enhanced workflow that enables the system to recover from low-quality states and explore alternative reasoning trajectories, significantly improving reasoning robustness. At the system level, the draft model is offloaded to the FPGA while deploying the PRM and target models on GPUs. A specialized workflow is optimized to achieve prefill-decode disaggregation, which exploits shadow synchronization to overlap GPU-side refinements with FPGA-side token updates to effectively hide synchronization latency. To mitigate inherent sequential constraints, we propose a step-ahead speculation and refinement scheduling scheme, transitioning the system from a sequential execution scheme to a parallel pipeline. Experimental evaluations show an average 4.2% accuracy improvement, with 1.01x-1.42x latency speedups and 1.25x-1.57x improvements in energy efficiency compared to homogeneous GPU baselines.",
+        "identifiers": [
+          "SemanticScholar:a2a37012c58e68b5fa19fb6dd486c7fbe3a81d48"
+        ],
+        "semantic_scholar_id": "a2a37012c58e68b5fa19fb6dd486c7fbe3a81d48",
+        "canonical_id": "arXiv:2609.28717",
+        "arxiv_id": "2609.28717",
+        "authors": [
+          "Ze-Huan Zhang",
+          "Quan Deng",
+          "Zi-Bo Ren",
+          "H. Chen",
+          "Guo-Yu Li",
+          "Xu-Chun Hu",
+          "J. G. Coutinho",
+          "Ce Guo",
+          "W. Luk",
+          "Zhi-Qiang Que",
+          "Hong-Xiang Fan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 37,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.07659",
+      "identity_tokens": [
+        "id:SemanticScholar:91706080538c3ae04b58a961c97a8aa48e1752d9",
+        "id:arXiv:2610.07659",
+        "title:dloop looped speculative decoding",
+        "url:https://arxiv.org/abs/2610.07659"
+      ],
+      "record": {
+        "title": "DLoop: Looped Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.07659",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive generation in large language models. In each drafting stage, a lightweight draft model proposes tokens that the target model subsequently verifies. With increasingly capable draft models, we find that the target model frequently accepts all tokens produced in a drafting stage. A verification nevertheless follows each drafting stage, resulting in unnecessary target-model forward passes even when drafting could have continued. Adaptive draft length methods decide during decoding how many draft tokens precede a verification, but they raise the speedup only for autoregressive draft models. For a parallel draft model, drafting further requires target-model hidden states for draft tokens that have not been verified. We propose DLoop, a looped form of speculative decoding that adaptively performs multiple drafting stages before verification. DLoop continues drafting while the draft model remains confident and verifies all accumulated draft tokens together. Loop-aware training keeps the draft model reliable in the additional drafting stages by exposing it to its own hidden states for unverified draft tokens. By spending additional draft-model forward passes, DLoop reduces the number of target-model forward passes required for verification. Across diverse speculative decoding methods including EAGLE-3, DFlash, Domino, DSpark, and multi-token prediction modules, DLoop improves the wall-clock speedup by 5 to 41 percent while preserving lossless decoding. Code will be available at https://github.com/naver-ai/DLoop.",
+        "identifiers": [
+          "SemanticScholar:91706080538c3ae04b58a961c97a8aa48e1752d9"
+        ],
+        "semantic_scholar_id": "91706080538c3ae04b58a961c97a8aa48e1752d9",
+        "canonical_id": "arXiv:2610.07659",
+        "arxiv_id": "2610.07659",
+        "authors": [
+          "Geonmo Gu",
+          "Byeongho Heo",
+          "HeeJae Jun",
+          "Yoohoon Kang",
+          "Sang-Min Lee",
+          "Sangdoo Yun",
+          "Dongyoon Han"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 24,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:fa85501e3e336759661f472fd38f7c4ea8f2d714fe4924a6b5b042ea752ee6a7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

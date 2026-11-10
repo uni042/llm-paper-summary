@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-97c678bb2fd96665-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.compmedimag.2026.102820",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.compmedimag.2026.102820",
+    "identity_tokens": [
+      "DOI:10.1016/j.compmedimag.2026.102820"
+    ],
+    "reason": "Medical-imaging state-space model, not LLM serving.",
+    "first_checked_at": "2026-10-05T07:17:12+00:00",
+    "last_checked_at": "2026-10-05T07:17:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "DARTS-searched feedback-augmented state space model for 3D pulmonary nodule classification."
+  },
+  "processed_at": "2026-10-05T07:17:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-97c678bb2fd9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

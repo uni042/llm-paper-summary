@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-9b6ff8d54de99615-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.25442",
+  "reason": "rollout生成器は推論を行うが、研究の中心はRL training pipelineでの更新重み転送と同期。通常のserving/inference効率とのscope fitが弱い。",
+  "title": "WeightBridge: An Efficient Weight Transfer Library for Reinforcement Learning",
+  "identity_tokens": [
+    "arXiv:2609.25442"
+  ],
+  "linked_from": [
+    "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md",
+    "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+    "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+    "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+    "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b6ff8d54de9",
+  "source_precheck_request_id": null
+}

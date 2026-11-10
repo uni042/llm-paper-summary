@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0ff6305b4ceb12e8-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.03301",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.03301",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2311.03301",
+      "arXiv:2311.03301"
+    ],
+    "reason": "LLaMA2を基盤に700B tokenで継続事前学習し、データ属性・data-centric scaling law・学習データ最適化を研究するモデル学習論文で凍結範囲。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2512.18425-moe-pathfinder-trajectory-pruning.md"
+    ],
+    "title": "Ziya2: Data-centric Learning is All LLMs Need"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0ff6305b4ceb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

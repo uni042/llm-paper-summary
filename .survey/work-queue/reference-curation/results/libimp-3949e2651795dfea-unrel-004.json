@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3949e2651795dfea-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3765611.3815063",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3765611.3815063",
+    "identity_tokens": [
+      "DOI:10.1145/3765611.3815063"
+    ],
+    "reason": "Primary abstract reviewed: Data centers (DCs) are becoming large, controllable electrical loads as AI-driven compute demand grows, while renewable-heavy power grids require reliable flexibility for balancing services. This paper experimentally evaluates, on operational DCs, the response-time feasibility of cross-DC workload migration for grid support, where response time is defined as the elapsed time fr… This is a data-center power-grid reliability/workload migration rather than LLM inference-system performance.",
+    "first_checked_at": "2026-10-05T11:51:45+00:00",
+    "last_checked_at": "2026-10-05T11:51:45+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+    ],
+    "title": "Inter-Data-Center Workload Migration for Grid-Interactive Balancing Services: A Field Demonstration"
+  },
+  "processed_at": "2026-10-05T11:51:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3949e2651795",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

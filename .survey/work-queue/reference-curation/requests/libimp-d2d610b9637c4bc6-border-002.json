@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d2d610b9637c4bc6-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2603.00578",
+  "reason": "Progressive Draft Adaptationは小型モデルに合う短い推論軌跡をSFTと二段階RLで学習させ、推論時のdraft/adaptive/step-by-step指示を使い分ける。一次要旨はMATH500で5668→986トークン、精度93.0%→90.6%と報告。生成費用削減は関連するが主要新規性はモデルの訓練・推論様式で、サービング/カーネル機構への寄与が薄いため境界。",
+  "title": "Draft-Thinking: Learning Efficient Reasoning in Long Chain-of-Thought LLMs",
+  "identity_tokens": [
+    "arXiv:2603.00578"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d2d610b9637c",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce0d2c2986c7a11e-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.iopt.2025.100003",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.iopt.2025.100003",
+    "identity_tokens": [
+      "DOI:10.1016/j.iopt.2025.100003",
+      "SemanticScholar:d0da8cde70565e3207cd1a72d6be6338ae9a60cb"
+    ],
+    "reason": "The survey includes inference-efficiency and deployability among constraints for optical image processing with VLMs, but its scope is optical-image applications and it does not isolate general LLM serving methods.",
+    "first_checked_at": "2026-10-14T12:00:28+00:00",
+    "last_checked_at": "2026-10-14T15:09:13+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Optical Image Processing and Applications Empowered by Vision-Language Models"
+  },
+  "processed_at": "2026-10-14T15:09:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce0d2c2986c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

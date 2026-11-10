@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f6f3e633257bf72-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2006.16362",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2006.16362",
+    "identity_tokens": [
+      "arXiv:2006.16362"
+    ],
+    "reason": "複数注意ヘッドで鍵・問い合わせ射影が冗長なことを分析し、共有射影とヘッド別混合で鍵・問い合わせ投影のパラメータを約4分の1に圧縮する。推論時の重み容量低減に接点はあるが、一次要旨の主評価は機械翻訳・言語理解・画像認識であり、LLMサービング、KVキャッシュ、実測推論遅延の改善を直接検証した研究ではないため境界判定。",
+    "first_checked_at": "2026-10-12T15:14:02+00:00",
+    "last_checked_at": "2026-10-12T18:50:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Multi-Head Attention: Collaborate Instead of Concatenate"
+  },
+  "processed_at": "2026-10-12T18:50:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f6f3e633257",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

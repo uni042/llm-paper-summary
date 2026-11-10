@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a90eba074a8b9bb-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.03615",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.03615",
+    "identity_tokens": [
+      "arXiv:2607.03615"
+    ],
+    "reason": "RAGで無関係文書を加えた場合のQA再現性・prompt/decoding設定の影響を検討する実験で、推論効率を改善する手法やserving機構を提案しない。",
+    "first_checked_at": "2026-10-05T03:49:52+00:00",
+    "last_checked_at": "2026-10-05T03:49:52+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "The Powerless Noise: How Experimental Settings Shape the Reported Power of Noise"
+  },
+  "processed_at": "2026-10-05T03:49:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a90eba074a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

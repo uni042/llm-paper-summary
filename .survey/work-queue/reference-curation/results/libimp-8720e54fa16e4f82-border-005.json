@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8720e54fa16e4f82-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1002/aisy.70438",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1002/aisy.70438",
+    "identity_tokens": [
+      "DOI:10.1002/aisy.70438"
+    ],
+    "reason": "一次出版社本文はferroelectric/spintronic deviceによるanalog in-memory computingのreviewで、機械学習向けVMMやspiking/reservoir computingを整理するがLLM評価・LLM serving計測はない。1-bit LLMとのハードウェア系譜に間接接点があるに留まる。",
+    "first_checked_at": "2026-10-06T10:21:24+00:00",
+    "last_checked_at": "2026-10-06T10:21:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Exploiting Ferroelectric and Spintronic Dynamics for Neural Network Computation"
+  },
+  "processed_at": "2026-10-06T10:21:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8720e54fa16e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

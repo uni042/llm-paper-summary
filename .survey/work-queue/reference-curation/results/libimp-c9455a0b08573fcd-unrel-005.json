@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9455a0b08573fcd-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.05592",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.05592",
+    "identity_tokens": [
+      "arXiv:2609.05592"
+    ],
+    "reason": "Full-duplex speech-model consistency/interaction quality, not efficiency.",
+    "first_checked_at": "2026-10-05T07:12:21+00:00",
+    "last_checked_at": "2026-10-05T07:12:21+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "What Did I Just Say? Self-Listening for Full-Duplex Speech Models"
+  },
+  "processed_at": "2026-10-05T07:12:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9455a0b0857",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

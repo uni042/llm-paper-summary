@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f44d15966037262-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.09906",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.09906",
+    "identity_tokens": [
+      "arXiv:2402.09906"
+    ],
+    "reason": "一次要旨では生成と埋込みを一つのGritLMに統合する学習方式を提案し、別々の検索・生成モデルを不要にすることで長文RAGの高速化（60%超）を報告する。ただし主な寄与はモデルの指示チューニングと能力統合であり、推論スケジューラ・KV管理・GPUカーネルなどの実行基盤の直接設計ではない。",
+    "first_checked_at": "2026-10-10T18:48:04+00:00",
+    "last_checked_at": "2026-10-13T06:45:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Generative Representational Instruction Tuning"
+  },
+  "processed_at": "2026-10-13T06:45:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f44d1596603",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

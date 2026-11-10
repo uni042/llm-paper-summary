@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30eedb649385ebfe-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.00830",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.00830",
+    "identity_tokens": [
+      "arXiv:2609.00830"
+    ],
+    "reason": "VLM visual attentionのfaithfulnessを調べる解釈可能性/評価研究で、推論cost最適化が主題でない。",
+    "first_checked_at": "2026-10-05T02:34:44+00:00",
+    "last_checked_at": "2026-10-05T02:34:44+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "title": "Visual Attention Faithfulness in Vision-Language Models is Heterogeneous"
+  },
+  "processed_at": "2026-10-05T02:34:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30eedb649385",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

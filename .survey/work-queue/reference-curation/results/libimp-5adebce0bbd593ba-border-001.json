@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5adebce0bbd593ba-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2307.16449",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2307.16449",
+    "identity_tokens": [
+      "arXiv:2307.16449"
+    ],
+    "reason": "長時間動画のマルチモーダルLLM理解で、短期・長期記憶と視覚トークンの圧縮により長い映像の計算量・メモリ量を抑える方式。推論時の入力トークン削減という関連機構がある一方、主たる評価と最終用途は動画理解の品質と専用ベンチマークであり、一般的なテキストLLMのKVキャッシュ・推論サービング最適化とは異なる。長文脈・マルチモーダル推論系統への採否は追加精読が必要。",
+    "first_checked_at": "2026-10-10T13:56:26+00:00",
+    "last_checked_at": "2026-10-10T13:56:26+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding"
+  },
+  "processed_at": "2026-10-10T13:56:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5adebce0bbd5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

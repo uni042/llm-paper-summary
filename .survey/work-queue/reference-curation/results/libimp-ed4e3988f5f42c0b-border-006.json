@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed4e3988f5f42c0b-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2302.05737",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2302.05737",
+    "identity_tokens": [
+      "arXiv:2302.05737"
+    ],
+    "reason": "離散diffusionのsamplingを再パラメータ化し、adaptive routingで少ない反復回数のtext generationを実現するため生成推論効率には関係する。一方、対象は現代的autoregressive LLM servingではなくdiffusion language generation algorithmが中心なのでborderline。",
+    "first_checked_at": "2026-10-07T04:52:15+00:00",
+    "last_checked_at": "2026-10-07T04:52:15+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Reparameterized Discrete Diffusion Model for Text Generation"
+  },
+  "processed_at": "2026-10-07T04:52:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed4e3988f5f4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

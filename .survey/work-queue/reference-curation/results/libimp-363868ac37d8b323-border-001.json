@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-363868ac37d8b323-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.08637",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.08637",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.08637",
+      "arXiv:2507.08637"
+    ],
+    "reason": "一次論文§3はHaarウェーブレットによる多重解像度分解、クエリ平均に依存する尺度ゲート、ReLU乱数特徴写像でO(n)の注意計算を提案するため、注意演算の低計算量化には技術的関連がある。しかし§4〜5の実験はIMDB感情分類、CIFAR画像分類、ListOps、ArXiv文書分類、ArXiv-128kの小型エンコーダ学習・分類であり、著者が掲げる81%の時間削減はArXiv分類の学習時間296秒対1554秒である。自己回帰LLMのprefill/decode、KVキャッシュ、実運用サービングの速度・品質は検証していない。推論専用サーベイの直接対象と断定する根拠が不足するため、学習用注意アーキテクチャとしてborderlineとする。",
+    "first_checked_at": "2026-10-26T22:48:36+00:00",
+    "last_checked_at": "2026-10-26T22:48:36+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Scaling Attention to Very Long Sequences in Linear Time with Wavelet-Enhanced Random Spectral Attention (WERSA)"
+  },
+  "processed_at": "2026-10-26T22:48:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-363868ac37d8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

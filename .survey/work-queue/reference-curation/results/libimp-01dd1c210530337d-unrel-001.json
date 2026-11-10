@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-01dd1c210530337d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1590/0102-311xen145025",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1590/0102-311xen145025",
+    "identity_tokens": [
+      "DOI:10.1590/0102-311xen145025"
+    ],
+    "reason": "ポルトガル語臨床ノートのLLM情報抽出ベンチマークであり、新規の推論効率化機構ではない。",
+    "first_checked_at": "2026-10-05T03:26:03+00:00",
+    "last_checked_at": "2026-10-05T03:26:03+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+    ],
+    "title": "Benchmarking large language models for clinical data extraction from Portuguese medical notes in a university hospital"
+  },
+  "processed_at": "2026-10-05T03:26:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-01dd1c210530",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

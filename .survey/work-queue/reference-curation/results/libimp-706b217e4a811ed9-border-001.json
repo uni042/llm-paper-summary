@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-706b217e4a811ed9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.00573",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.00573",
+    "identity_tokens": [
+      "arXiv:2603.00573",
+      "id:arXiv:2603.00573",
+      "url:https://arxiv.org/abs/2603.00573"
+    ],
+    "reason": "一次要旨では、低ランク適応の複数専門家を小さな核行列として表現し、トークンごとに選択した核専門家を軟結合して一つのLoRAモジュールを構成する。専門家数増大に対するパラメータ効率と適応性能の改善はMoE推論に隣接するが、主目的はパラメータ効率の良いタスク適応であり、サービングの実測速度・通信・KVメモリ効率への寄与は要旨から確定できないため境界的とする。",
+    "first_checked_at": "2026-10-13T10:41:39+00:00",
+    "last_checked_at": "2026-10-13T10:41:39+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging"
+  },
+  "processed_at": "2026-10-13T10:41:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-706b217e4a81",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

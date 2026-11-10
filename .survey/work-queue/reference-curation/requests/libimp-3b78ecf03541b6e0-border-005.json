@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3b78ecf03541b6e0-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2510.19307",
+  "reason": "RIL trains smaller VLM students to improve vision-language benchmark quality and states that inference runs at the original student speed without a think phase. This is a plausible multimodal deployment neighbor, retained as borderline: the paper does not measure memory/latency gains against an equal-quality baseline or modify an LLM decoding/serving algorithm, despite its speculative-decoding lineage link.",
+  "title": "Unified Reinforcement and Imitation Learning for Vision-Language Models",
+  "identity_tokens": [
+    "arXiv:2510.19307"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b78ecf03541",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

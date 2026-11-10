@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-80551f7a2498b473-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.02687",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.02687",
+    "identity_tokens": [
+      "arXiv:2212.02687"
+    ],
+    "reason": "一次arXiv要旨では、SegFormerやResNet-50等の画像モデルについて計算量、GPUでの畳み込み最適化、動的推論のエネルギーと精度の交換条件を分析する。SegFormerの28%省電力などは画像認識系の結果であり、LLMのトークン生成、注意KV管理、LLMサービングに対する方式・実測を扱っていない。一般的な動的実行の示唆はあるが現行サーベイの直接対象外。",
+    "first_checked_at": "2026-10-28T06:43:59+00:00",
+    "last_checked_at": "2026-10-28T06:43:59+00:00",
+    "linked_from": [],
+    "title": "Vision Transformer Computation and Resilience for Dynamic Inference"
+  },
+  "processed_at": "2026-10-28T06:44:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80551f7a2498",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

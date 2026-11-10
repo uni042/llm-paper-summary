@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a20968ca1301527d-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2209.10052",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2209.10052",
+    "identity_tokens": [
+      "arXiv:2209.10052"
+    ],
+    "reason": "既存の短文脈text-to-textモデルを長文脈へ適応させるため、pooling付きブロック注意とspanマスク事前学習、データ構成を検討する。長系列注意の計算構造に関係するが、主な評価は長文書QA・要約品質と学習レシピであり生成LLMサービング速度の直接検証ではないため境界扱い。",
+    "first_checked_at": "2026-10-30T10:54:08+00:00",
+    "last_checked_at": "2026-10-30T10:54:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Adapting Pretrained Text-to-Text Models for Long Text Sequences"
+  },
+  "processed_at": "2026-10-30T10:54:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a20968ca1301",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

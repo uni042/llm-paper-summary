@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "64b22c8eb99df953929de751b90e0424e8b9d7beb33a2b21b8526097760fb068",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_0ae474fe3acc8191953d80df85a232e4--2022-2107.00910-learned-token-pruning-research-20261013-0135-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2107.00910",
+  "worker_completed_at": "2026-10-13T01:38:00+09:00",
+  "worker_run_key": "20261013-0135-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5605,
+    "body_paragraphs": 30,
+    "method_chars": 1515,
+    "method_paragraphs": 7,
+    "evaluation_chars": 135,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 135 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 135 < 500"
+  ],
+  "processed_at": "2026-10-12T16:52:04+00:00"
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f3b60b4f99d043ee-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.02737",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.02737",
+    "identity_tokens": [
+      "arXiv:2502.02737"
+    ],
+    "reason": "SmolLM2 studies data-centric pretraining/training of small language models, not inference optimization.",
+    "first_checked_at": "2026-10-05T02:01:51+00:00",
+    "last_checked_at": "2026-10-05T02:01:51+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2602.05711-omnimoe-atomic-experts.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2608.30567-turingllm-dynamic-topk.md",
+      "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2511.08923-tidar-think-in-diffusion-talk-in-autoregression.md",
+      "papers/inference/08-edge-on-device-llm-systems/2026-2607.17415-transition-aware-backend-dispatch-for-edge-llm-inference.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2510.06126-lm-meter-unveiling-runtime-inference-latency-for-on-device-language-mode.md",
+      "papers/inference/16-weight-quantization-compression/2025-2509.16989-ptqtp-post-training-quantization-to-trit-planes-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2026-2605.20706-llamaweb.md",
+      "papers/inference/99-other-inference-systems/2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md"
+    ],
+    "title": "SmolLM2: When Smol Goes Big - Data-Centric Training of a Small Language Model"
+  },
+  "processed_at": "2026-10-05T02:01:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f3b60b4f99d0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

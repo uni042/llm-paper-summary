@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f21a50d58300d26-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1506.06724",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1506.06724",
+    "identity_tokens": [
+      "arXiv:1506.06724"
+    ],
+    "reason": "書籍と映画の対応付けが主題でLLMシステム最適化を扱わない。",
+    "first_checked_at": "2026-09-27T05:31:34+09:00",
+    "last_checked_at": "2026-09-30T09:49:12+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "worker-worklist-30 discovery_review rank 468"
+    ],
+    "title": "Aligning Books and Movies: Towards Story-like Visual Explanations by Watching Movies and Reading Books"
+  },
+  "processed_at": "2026-09-30T09:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f21a50d5830",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

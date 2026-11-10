@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d631d1407915a5e0-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.06025",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.06025",
+    "identity_tokens": [
+      "arXiv:2608.06025"
+    ],
+    "reason": "In simulation-in-the-loop decision-making systems, reinforcement learning (RL) inference is often constrained by simulator-side execution overhead, where workloads are highly dynamic and sensitive to runtime thread configurations. Existing multithreaded strategies struggle to match thread resources before or during execution, causing resource contention, scheduling overhead, and reduced throughput. Through empirical analysis, we identify the ratio of task execution time to scheduling time as the key factor determining the optimal thread count. Building on this insight, we propose AutoThread, a hybrid adaptive thread-tuning method for mitigating simulation bottlenecks in RL inference. AutoThread employs a Physics-Informed Neural Operator (PINO) as a thread-count predictor and incorporates a finite-source M/M/1 queueing model to constrain and guide prediction, enabling fast and accurate estimation under dynamic workloads. It further performs load-aware online fine-tuning to compensate for prediction errors and refine resource allocation. Experiments show that AutoThread improves average speedup by 18.4% over static strategies, achieves average throughput of 1.7× and 1.8× that of XGBoost and Reinforcer, respectively, and reduces execution time by up to 83.8% compared with state-of-the-art methods. Our code and dataset are publicly available at https://github.com/suchenjm/AutoThread.",
+    "first_checked_at": "2026-10-05T09:00:21+00:00",
+    "last_checked_at": "2026-10-05T09:00:21+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2508.19373-hap-hybrid-adaptive-parallelism-for-efficient-mixture-of-experts-inferen.md"
+    ],
+    "title": "Hybrid-Adaptive Thread Tuning to Mitigate Simulation Execution Bottlenecks in High-Performance Reinforcement Learning Inference"
+  },
+  "processed_at": "2026-10-05T09:00:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d631d1407915",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

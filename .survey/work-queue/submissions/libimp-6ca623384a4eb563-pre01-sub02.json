@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FlexQuant: Elastic Quantization Framework for Locally Hosted LLM on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2501.07139",
+      "year": 2025,
+      "published": "2025-01-13",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying LLMs on edge devices presents serious technical challenges. Memory elasticity is crucial for edge devices with unified memory, where memory is shared and fluctuates dynamically. Existing solutions suffer from either poor transition granularity or high storage costs. We propose FlexQuant, a novel elasticity framework that generates an ensemble of quantized models, providing an elastic hosting solution with 31x more deployment options, 15x granularity improvement, and 10x storage reduction compared to SoTA methods. FlexQuant works with most quantization methods and creates a family of trade-off options under various storage limits through our pruning method. It brings great performance and flexibility to the edge deployment of LLMs.",
+      "identifiers": [
+        "SemanticScholar:d3cf9ac3005b0e40a940aa3de218140cba864f2d"
+      ],
+      "semantic_scholar_id": "d3cf9ac3005b0e40a940aa3de218140cba864f2d",
+      "canonical_id": "arXiv:2501.07139",
+      "arxiv_id": "2501.07139",
+      "doi": "10.48550/arXiv.2501.07139",
+      "authors": [
+        "Yuji Chai",
+        "Mujin Kwen",
+        "David Brooks",
+        "Gu-Yeon Wei"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 655,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はメモリ共有型エッジ機器で使用可能メモリが変動する状況に対し、複数の量子化モデルを低ストレージ費用で準備し、モデル精度・容量を切替えるFlexQuantを提案。既存法比31倍の選択肢、15倍の粒度、10倍の保存量削減を報告し、端末LLM推論の配備効率に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6ca623384a4e",
+    "round": "libimp-6ca623384a4eb563-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6ca623384a4eb563-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6ca623384a4eb563-pre01.json",
+    "receipt": "sha256:d35b7f0fd9f744c2b184925843877aa736c5183667355d34baba55ebda59dc56"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6ca623384a4e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

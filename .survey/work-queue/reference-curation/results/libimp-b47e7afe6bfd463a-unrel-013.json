@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b47e7afe6bfd463a-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.05078",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.05078",
+    "identity_tokens": [
+      "arXiv:2603.05078"
+    ],
+    "reason": "MoRe is a feed-forward 4D scene-reconstruction model for monocular video; its efficiency claim is scoped to that visual reconstruction application, with no LLM/VLM system connection.",
+    "first_checked_at": "2026-10-13T08:53:56+00:00",
+    "last_checked_at": "2026-10-13T08:53:56+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+    ],
+    "title": "MoRe: Motion-aware Feed-forward 4D Reconstruction Transformer"
+  },
+  "processed_at": "2026-10-13T08:53:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b47e7afe6bfd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

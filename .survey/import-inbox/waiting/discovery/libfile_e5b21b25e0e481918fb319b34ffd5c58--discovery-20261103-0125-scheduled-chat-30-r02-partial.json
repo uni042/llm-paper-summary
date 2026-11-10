@@ -1,0 +1,101 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261103-0125-scheduled-chat-30/r02",
+  "reference_main_sha": "0319dfd76c0cf50d83db309ba01e9cd48d3ffb69",
+  "record_count": 5,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39999",
+      "identity_tokens": [
+        "arXiv:2610.39999"
+      ],
+      "title": "PhOSv1: Efficient Scaling of Model Sleeping on a Single Server for Autoscaling with GPU-Context Deduplication",
+      "reason": "vLLM/SGLangのmodel sleepingではモデルごとにGPU contextが残るため複数モデル常駐時にメモリ費用が線形増加する。PhOSv1は中央daemonへのAPI remotingでCUDA contextと共通kernel binaryをdedupし、従来sleep modeと同程度のscale-up時間を維持しつつGPU memoryを削減、複数モデルserving性能を改善。直接的なserving memory/scale-up最適化なのでaccept。abstractに定量倍率がないため実測値は捏造しない。",
+      "source_url": "https://arxiv.org/abs/2610.39999",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:32:36+09:00",
+      "last_checked_at": "2026-11-03T01:32:36+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.40477",
+      "identity_tokens": [
+        "arXiv:2610.40477"
+      ],
+      "title": "Can We Rely on Language Models to Orchestrate Services across the Edge-Cloud Continuum?",
+      "reason": "edge-cloudサービスの配置・診断・修復で言語モデルを使う39研究のsystematic review。LMに判断権限をどこまで与えるか、下流の制約検証と実行主体、実環境評価を5軸で整理。LMは解釈や候補提案を担い制約執行は別部品に残る傾向を報告。分散サービス運用の関連研究だが、LLM token生成のthroughputやKV cache最適化が主題ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.40477",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:32:36+09:00",
+      "last_checked_at": "2026-11-03T01:32:36+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.38196",
+      "identity_tokens": [
+        "arXiv:2610.38196"
+      ],
+      "title": "GearUp: DAG-aware Acceleration for Serverless Inference Serving via Slack-guided Pre-loading",
+      "reason": "serverless ML推論DAGで依存nodeのモデル重み・library・CUDA kernelロードを上流処理のslack時間に隠し、reuseとtraffic-adaptive keep-aliveを組み合わせる。L40S上の2 workflowでSMIless比median latency 64.5%/75.9%削減、eager preload比GPU/host memory allocation最大83.9%/94.6%削減。推論serving runtimeの技術として有用だが、実験対象は一般ML DAGでLLM decode固有ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.38196",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:32:36+09:00",
+      "last_checked_at": "2026-11-03T01:32:36+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39380",
+      "identity_tokens": [
+        "arXiv:2610.39380"
+      ],
+      "title": "Learning to Formulate: Agentic Hardware-Software Co-Design of AI Infrastructure through Progressive Optimization and Verification",
+      "reason": "FormulaicはLLM agentがハードウェアとソフトウェアの共同最適化問題を定式化し、数学solverと検証・計測で正しさを確認する。GB10でQwen3-8Bの完全layerがSGLang比1.075倍高速、Ventus GPUシミュレーションでQwen2.5-0.5Bの最悪cycleが参照比0.428へ減少（software-onlyは0.934）。LLM layer実行性能を直接評価するためaccept。ただし研究は独立した個別実験でありend-to-end servingでの改善は未実証。",
+      "source_url": "https://arxiv.org/abs/2610.39380",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:32:36+09:00",
+      "last_checked_at": "2026-11-03T01:32:36+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.39222",
+      "identity_tokens": [
+        "arXiv:2610.39222"
+      ],
+      "title": "When Does Heterogeneity Pay Off? Understanding GPU-WSE System Complementarity",
+      "reason": "GPUとwafer-scale engineの計算・メモリ・通信の違いを階層benchmarkと解析性能モデルで整理し、異種accelerator併用が有利になる条件と通信費用による逆効果を分析。LLM serving専用の測定・モデル・改善倍率はabstractに示されないが、異種AI acceleratorのシステム設計に隣接するためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.39222",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:32:36+09:00",
+      "last_checked_at": "2026-11-03T01:32:36+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

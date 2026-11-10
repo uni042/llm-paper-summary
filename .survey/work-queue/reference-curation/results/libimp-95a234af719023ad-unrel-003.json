@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95a234af719023ad-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s00366-026-02363-9",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s00366-026-02363-9",
+    "identity_tokens": [
+      "DOI:10.1007/s00366-026-02363-9"
+    ],
+    "reason": "The publisher abstract studies micro-crack-informed constitutive surrogates and brittle-material damage simulations; despite computational efficiency claims, it is unrelated to LLM inference.",
+    "first_checked_at": "2026-10-05T09:15:38+00:00",
+    "last_checked_at": "2026-10-05T09:15:38+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "A model-based neural network enhancement for micro-cracks informed damage modeling in brittle solids"
+  },
+  "processed_at": "2026-10-05T09:15:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95a234af7190",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

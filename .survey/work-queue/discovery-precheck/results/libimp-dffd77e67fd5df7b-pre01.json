@@ -1,0 +1,146 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-dffd77e67fd5df7b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-dffd77e67fd5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2005.08025"
+  ],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1848c9badd3d9e9772aa4dbf12ffb7cc281543eb",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T23:26:56.391541+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2005.08025",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "IntelliCode compose: code generation using transformer",
+      "source_url": "https://arxiv.org/abs/2005.08025",
+      "year": 2020,
+      "published": "2020-05-16",
+      "venue": "ESEC/SIGSOFT FSE",
+      "citation_count": 643,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In software development through integrated development environments (IDEs), code completion is one of the most widely used features. Nevertheless, majority of integrated development environments only support completion of methods and APIs, or arguments. In this paper, we introduce IntelliCode Compose – a general-purpose multilingual code completion tool which is capable of predicting sequences of code tokens of arbitrary types, generating up to entire lines of syntactically correct code. It leverages state-of-the-art generative transformer model trained on 1.2 billion lines of source code in Python, C#, JavaScript and TypeScript programming languages. IntelliCode Compose is deployed as a cloud-based web service. It makes use of client-side tree-based caching, efficient parallel implementation of the beam search decoder, and compute graph optimizations to meet edit-time completion suggestion requirements in the Visual Studio Code IDE and Azure Notebook. Our best model yields an average edit similarity of 86.7% and a perplexity of 1.82 for Python programming language.",
+      "identifiers": [
+        "SemanticScholar:a4c6cb385a90441061218f50abe2871d5e384a2e"
+      ],
+      "semantic_scholar_id": "a4c6cb385a90441061218f50abe2871d5e384a2e",
+      "canonical_id": "arXiv:2005.08025",
+      "arxiv_id": "2005.08025",
+      "doi": "10.1145/3368089.3417058",
+      "authors": [
+        "Alexey Svyatkovskiy",
+        "Shao-Kun Deng",
+        "Sheng-Yu Fu",
+        "Neel Sundaresan"
+      ],
+      "priority": 643,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 643,
+        "citation_count": 643,
+        "total": 643,
+        "is_fresh": false,
+        "freshness_age_days": 2332,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2005.08025",
+      "identity_tokens": [
+        "id:DOI:10.1145/3368089.3417058",
+        "id:SemanticScholar:a4c6cb385a90441061218f50abe2871d5e384a2e",
+        "id:arXiv:2005.08025",
+        "title:intellicode compose code generation using transformer",
+        "url:https://arxiv.org/abs/2005.08025"
+      ],
+      "record": {
+        "title": "IntelliCode compose: code generation using transformer",
+        "source_url": "https://arxiv.org/abs/2005.08025",
+        "year": 2020,
+        "published": "2020-05-16",
+        "venue": "ESEC/SIGSOFT FSE",
+        "citation_count": 643,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In software development through integrated development environments (IDEs), code completion is one of the most widely used features. Nevertheless, majority of integrated development environments only support completion of methods and APIs, or arguments. In this paper, we introduce IntelliCode Compose – a general-purpose multilingual code completion tool which is capable of predicting sequences of code tokens of arbitrary types, generating up to entire lines of syntactically correct code. It leverages state-of-the-art generative transformer model trained on 1.2 billion lines of source code in Python, C#, JavaScript and TypeScript programming languages. IntelliCode Compose is deployed as a cloud-based web service. It makes use of client-side tree-based caching, efficient parallel implementation of the beam search decoder, and compute graph optimizations to meet edit-time completion suggestion requirements in the Visual Studio Code IDE and Azure Notebook. Our best model yields an average edit similarity of 86.7% and a perplexity of 1.82 for Python programming language.",
+        "identifiers": [
+          "SemanticScholar:a4c6cb385a90441061218f50abe2871d5e384a2e"
+        ],
+        "semantic_scholar_id": "a4c6cb385a90441061218f50abe2871d5e384a2e",
+        "canonical_id": "arXiv:2005.08025",
+        "arxiv_id": "2005.08025",
+        "doi": "10.1145/3368089.3417058",
+        "authors": [
+          "Alexey Svyatkovskiy",
+          "Shao-Kun Deng",
+          "Sheng-Yu Fu",
+          "Neel Sundaresan"
+        ],
+        "priority": 643,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 643,
+          "citation_count": 643,
+          "total": 643,
+          "is_fresh": false,
+          "freshness_age_days": 2332,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e4711b9dd016635c591a02c40a6b5a520d9d651fe937906ce37bb4d26f515e63",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

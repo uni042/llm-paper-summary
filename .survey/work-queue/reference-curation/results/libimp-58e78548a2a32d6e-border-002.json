@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58e78548a2a32d6e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/bigdia71496.2026.11684612",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/bigdia71496.2026.11684612",
+    "identity_tokens": [
+      "DOI:10.1109/bigdia71496.2026.11684612"
+    ],
+    "reason": "関連可能性はあるが、一次本文の必要箇所を取得・確認できず、推測でfollowupへ進めないためborderlineに分類。",
+    "first_checked_at": "2026-10-05T09:35:35+00:00",
+    "last_checked_at": "2026-10-05T09:35:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+    ],
+    "title": "ReRead: Retrieval-Guided Efficient Reading for Long-Context Question Answering"
+  },
+  "processed_at": "2026-10-05T09:35:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58e78548a2a3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

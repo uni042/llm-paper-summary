@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cfdde8165f3e8331-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.19379",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.19379",
+    "identity_tokens": [
+      "arXiv:2606.19379"
+    ],
+    "reason": "Studies linear recoverability of transformer feed-forward blocks as a model-analysis measure, not an inference optimization.",
+    "first_checked_at": "2026-10-05T12:11:28+00:00",
+    "last_checked_at": "2026-10-05T12:11:28+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "How Linear Is a Transformer Feed-Forward Block? Per-Block Linear Recoverability Is Learned, Not Architectural"
+  },
+  "processed_at": "2026-10-05T12:11:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cfdde8165f3e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

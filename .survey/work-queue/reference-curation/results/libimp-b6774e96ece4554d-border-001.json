@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b6774e96ece4554d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.21860",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.21860",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2608.21860",
+      "arXiv:2608.21860"
+    ],
+    "reason": "推論連鎖を意味的に統合した木から短い優先経路を選び、DPOと教師あり損失で冗長な思考ステップを抑える学習データ生成・学習手法。一次要旨は推論ステップ長と計算負荷の削減、正確性維持または改善を報告する。一方で主たる技術貢献は学習時の思考経路最適化であり、推論ランタイムのKV管理、GPUカーネル、サービング・スケジューラへの直接貢献は確認できないため境界分類。",
+    "first_checked_at": "2026-10-31T03:44:21+00:00",
+    "last_checked_at": "2026-10-31T03:44:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ChainPrune: Evaluating and Reducing Redundancy in Long Chain-of-Thought Reasoning"
+  },
+  "processed_at": "2026-10-31T03:44:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b6774e96ece4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

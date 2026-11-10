@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T110900Z-scheduled-chat-discovery-hourly-next-10",
+  "worker_id": "scheduled-chat-discovery-hourly",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-5ce9880c62119377",
+      "claim_id": "claim-8c0b23180b0d626bedc629c2",
+      "worker_id": "scheduled-chat-discovery-hourly",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-8c0b23180b0d626bedc629c2",
+      "claimed_at": "2026-09-20T11:09:19+00:00",
+      "expires_at": "2026-09-20T12:39:19+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-5ce9880c62119377"
+      ],
+      "job": {
+        "job_id": "job-research-5ce9880c62119377",
+        "type": "research",
+        "parent_job_id": "job-aea330cec87e5b3c",
+        "priority": 99,
+        "canonical_id": "arXiv:2510.19366",
+        "arxiv_id": null,
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "MoE-Prism: Disentangling Monolithic Experts for Elastic MoE Services via Model-System Co-Designs",
+        "source_url": "https://arxiv.org/abs/2510.19366",
+        "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2025-2510.19366-moe-prism-elastic-services.md",
+        "selection_reason": "requestごとにtop-k budgetを変えるelastic MoE servingをmodel-system co-designで実現し、異なるquality-latency要求へ1 checkpointで適応する。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T10:54:04+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T11:09:19+00:00",
+  "checkpoint_released": 0
+}

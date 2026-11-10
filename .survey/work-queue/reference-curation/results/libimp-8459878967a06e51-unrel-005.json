@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8459878967a06e51-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.33717",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.33717",
+    "identity_tokens": [
+      "arXiv:2609.33717"
+    ],
+    "reason": "Self-designed agent evaluators and warm memory improve long-horizon task outcomes; abstract does not establish inference efficiency.",
+    "first_checked_at": "2026-10-05T05:14:50+00:00",
+    "last_checked_at": "2026-10-05T05:14:50+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "Self-Designed Evaluators and Warm Memory for Long-Horizon Agents"
+  },
+  "processed_at": "2026-10-05T05:14:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8459878967a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

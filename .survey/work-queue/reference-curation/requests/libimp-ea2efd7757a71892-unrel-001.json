@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ea2efd7757a71892-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2503.06287",
+  "reason": "The full text uses selected attention heads in frozen LVLMs to localize visual regions without fine-tuning or extra grounding modules. However, the transformer still runs its forward pass to produce those attention values; the paper’s contribution is grounding capability/quality, not reduction of the model’s inference FLOPs, token count or serving resources.",
+  "title": "Your Large Vision-Language Model Only Needs A Few Attention Heads For Visual Grounding",
+  "identity_tokens": [
+    "arXiv:2503.06287"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea2efd7757a7",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

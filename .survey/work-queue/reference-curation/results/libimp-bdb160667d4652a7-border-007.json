@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bdb160667d4652a7-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/cisce69494.2026.11504706",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/cisce69494.2026.11504706",
+    "identity_tokens": [
+      "DOI:10.1109/cisce69494.2026.11504706",
+      "SemanticScholar:6a8a4d1ce522550d205171640f92d2f9cdda0c91"
+    ],
+    "reason": "The DOI resolver route https://doi.org/10.1109/CISCE69494.2026.11504706 returned: Internal Error; URL is not accessible via the available retrieval tool. The primary abstract could not be retrieved, so no abstract-based relevance claim is made.",
+    "first_checked_at": "2026-10-13T06:31:15+00:00",
+    "last_checked_at": "2026-10-13T06:31:15+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Zero-Copy Proxy Tunneling via Linux Splice for Cloud Infrastructure"
+  },
+  "processed_at": "2026-10-13T06:31:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bdb160667d46",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

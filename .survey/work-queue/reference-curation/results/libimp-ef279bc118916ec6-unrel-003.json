@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ef279bc118916ec6-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.10199",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.10199",
+    "identity_tokens": [
+      "arXiv:2606.10199"
+    ],
+    "reason": "Insertion Language Modelの確率モデル・学習目的の定式化が主題で、要旨は推論効率またはservingの改善を報告していない。",
+    "first_checked_at": "2026-10-05T03:57:01+00:00",
+    "last_checked_at": "2026-10-05T03:57:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "A Continuous-Time Markov Chain Framework for Insertion Language Models"
+  },
+  "processed_at": "2026-10-05T03:57:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef279bc11891",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

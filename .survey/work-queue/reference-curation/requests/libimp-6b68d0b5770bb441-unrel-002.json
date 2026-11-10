@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6b68d0b5770bb441-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2607.02584",
+  "reason": "一次abstractはvideo generation用diffusion transformerのINT4 attention量子化であり、LLM推論の対象ではない。",
+  "title": "RotateAttention: RoPE-Aware Rotation and Range Rectification for INT4 Quantized Attention in Video Generation",
+  "identity_tokens": [
+    "arXiv:2607.02584"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2025-2505.18610-pm-kvq-progressive-mixed-precision-kv-cache-quantization-for-long-cot-llms.md",
+    "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+    "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+    "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+    "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+    "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+    "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6b68d0b5770b",
+  "source_precheck_request_id": null
+}

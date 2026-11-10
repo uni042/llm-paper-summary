@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4f4397ff26f6ab8fdde15f0c7cb14f43ef4b505b3dcaa1ea8a754a06b6122509",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c2ad09a24740--libfile_281dca8e97dc8191b2347fa2a4537e01--2025-2511.00141-floc-facility-location-visual-token-selection-research-20261030-0858-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2511.00141",
+  "worker_completed_at": "2026-10-30T08:58:30+09:00",
+  "worker_run_key": "20261030-0847-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4906,
+    "body_paragraphs": 27,
+    "method_chars": 1406,
+    "method_paragraphs": 8,
+    "evaluation_chars": 163,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 163 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 163 < 500"
+  ],
+  "processed_at": "2026-10-30T03:22:58+00:00"
+}

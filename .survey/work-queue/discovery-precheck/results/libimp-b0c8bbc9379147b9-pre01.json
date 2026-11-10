@@ -1,0 +1,190 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b0c8bbc9379147b9-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b0c8bbc93791",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2412.04964",
+    "arXiv:2504.11651",
+    "arXiv:2511.20639",
+    "arXiv:2603.06199",
+    "arXiv:2606.13126"
+  ],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6f98c93e6b88a28fb2be409bae5339632693cc88",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-02T06:59:48.554159+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2412.04964",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.11651",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2504.11651"
+    },
+    {
+      "requested_id": "arXiv:2511.20639",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2511.20639"
+    },
+    {
+      "requested_id": "arXiv:2603.06199",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.13126",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2606.13126"
+    }
+  ],
+  "results": [
+    {
+      "title": "Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2412.04964",
+      "year": 2024,
+      "published": "2024-12-06",
+      "abstract": "The ever-increasing sizes of large language models necessitate distributed solutions for fast inference that exploit multi-dimensional parallelism, where computational loads are split across various accelerators such as GPU clusters. However, this approach often introduces significant communication overhead, especially on devices with limited bandwidth. In this paper, we introduce Flash Communication, a novel low-bit compression technique designed to alleviate the tensor-parallelism communication bottleneck during inference. Our method substantially boosts intra-node communication speed by more than 3x and reduces the time-to-first-token by 2x, with nearly no sacrifice in model accuracy. Extensive experiments on various up-to-date LLMs demonstrate the effectiveness of our approach.",
+      "canonical_id": "arXiv:2412.04964",
+      "arxiv_id": "2412.04964",
+      "doi": "10.48550/arXiv.2412.04964",
+      "authors": [
+        "Qing-Yuan Li",
+        "Bo Zhang",
+        "Liang Ye",
+        "Yi-Fan Zhang",
+        "Wei Wu",
+        "Yerui Sun",
+        "Lin Ma",
+        "Yu-Chen Xie"
+      ]
+    },
+    {
+      "title": "FlashPrefill: Instantaneous Pattern Discovery and Thresholding for Ultra-Fast Long-Context Prefilling",
+      "source_url": "https://arxiv.org/abs/2603.06199",
+      "year": 2026,
+      "published": "2026-03-06",
+      "abstract": "Long-context modeling is a pivotal capability for Large Language Models, yet the quadratic complexity of attention remains a critical bottleneck, particularly during the compute-intensive prefilling phase. While various sparse attention mechanisms have been explored, they typically suffer from either significant search latency or insufficient sparsity. In this paper, we propose FlashPrefill, a framework enabling ultra-fast prefilling via instantaneous pattern discovery and thresholding. FlashPrefill leverages a fast block-searching technique to simultaneously locate dynamic vertical, slash, and block-sparse attention patterns. Crucially, it introduces a dynamic thresholding mechanism that bypasses the prohibitive overhead of sorting or accumulating attention scores while effectively eliminating the long-tail distribution to enhance sparsity. Extensive evaluations demonstrate that FlashPrefill achieves a substantial leap in efficiency, delivering an unprecedented 27.78x speedup on 256K sequences. Notably, unlike existing methods that incur efficiency degradation on shorter contexts, FlashPrefill maintains a 1.71x speedup even at a 4K context length, demonstrating its robustness and practical utility across varying sequence scales.",
+      "canonical_id": "arXiv:2603.06199",
+      "arxiv_id": "2603.06199",
+      "doi": "10.48550/arXiv.2603.06199",
+      "authors": [
+        "Qihang Fan",
+        "Huaibo Huang",
+        "Zhiying Wu",
+        "Juqiu Wang",
+        "Bingning Wang",
+        "Ran He"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2412.04964",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.04964",
+        "id:arXiv:2412.04964",
+        "title:flash communication reducing tensor parallelization bottleneck for fast large language model inference",
+        "url:https://arxiv.org/abs/2412.04964"
+      ],
+      "record": {
+        "title": "Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2412.04964",
+        "year": 2024,
+        "published": "2024-12-06",
+        "abstract": "The ever-increasing sizes of large language models necessitate distributed solutions for fast inference that exploit multi-dimensional parallelism, where computational loads are split across various accelerators such as GPU clusters. However, this approach often introduces significant communication overhead, especially on devices with limited bandwidth. In this paper, we introduce Flash Communication, a novel low-bit compression technique designed to alleviate the tensor-parallelism communication bottleneck during inference. Our method substantially boosts intra-node communication speed by more than 3x and reduces the time-to-first-token by 2x, with nearly no sacrifice in model accuracy. Extensive experiments on various up-to-date LLMs demonstrate the effectiveness of our approach.",
+        "canonical_id": "arXiv:2412.04964",
+        "arxiv_id": "2412.04964",
+        "doi": "10.48550/arXiv.2412.04964",
+        "authors": [
+          "Qing-Yuan Li",
+          "Bo Zhang",
+          "Liang Ye",
+          "Yi-Fan Zhang",
+          "Wei Wu",
+          "Yerui Sun",
+          "Lin Ma",
+          "Yu-Chen Xie"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.06199",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.06199",
+        "id:arXiv:2603.06199",
+        "title:flashprefill instantaneous pattern discovery and thresholding for ultrafast longcontext prefilling",
+        "url:https://arxiv.org/abs/2603.06199"
+      ],
+      "record": {
+        "title": "FlashPrefill: Instantaneous Pattern Discovery and Thresholding for Ultra-Fast Long-Context Prefilling",
+        "source_url": "https://arxiv.org/abs/2603.06199",
+        "year": 2026,
+        "published": "2026-03-06",
+        "abstract": "Long-context modeling is a pivotal capability for Large Language Models, yet the quadratic complexity of attention remains a critical bottleneck, particularly during the compute-intensive prefilling phase. While various sparse attention mechanisms have been explored, they typically suffer from either significant search latency or insufficient sparsity. In this paper, we propose FlashPrefill, a framework enabling ultra-fast prefilling via instantaneous pattern discovery and thresholding. FlashPrefill leverages a fast block-searching technique to simultaneously locate dynamic vertical, slash, and block-sparse attention patterns. Crucially, it introduces a dynamic thresholding mechanism that bypasses the prohibitive overhead of sorting or accumulating attention scores while effectively eliminating the long-tail distribution to enhance sparsity. Extensive evaluations demonstrate that FlashPrefill achieves a substantial leap in efficiency, delivering an unprecedented 27.78x speedup on 256K sequences. Notably, unlike existing methods that incur efficiency degradation on shorter contexts, FlashPrefill maintains a 1.71x speedup even at a 4K context length, demonstrating its robustness and practical utility across varying sequence scales.",
+        "canonical_id": "arXiv:2603.06199",
+        "arxiv_id": "2603.06199",
+        "doi": "10.48550/arXiv.2603.06199",
+        "authors": [
+          "Qihang Fan",
+          "Huaibo Huang",
+          "Zhiying Wu",
+          "Juqiu Wang",
+          "Bingning Wang",
+          "Ran He"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:76435b4d9ca68fa54c83ecc5fe272aad602ce4bd20e299d73c9349df77749314",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

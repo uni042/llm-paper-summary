@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-daaededa7a0293d7-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.01838",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.01838",
+    "identity_tokens": [
+      "arXiv:2606.01838"
+    ],
+    "reason": "The primary arXiv abstract describes a plausible layer-skipping method, but the submission is withdrawn and the primary record reports no PDF/full text, so method, evaluation, and limitations cannot be verified.",
+    "first_checked_at": "2026-10-05T22:17:59+00:00",
+    "last_checked_at": "2026-10-05T22:17:59+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LayerRoute: Input-Conditioned Adaptive Layer Skipping via LoRA Fine-Tuning for Agentic Language Models"
+  },
+  "processed_at": "2026-10-05T22:17:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-daaededa7a02",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

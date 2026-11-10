@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0077823f3ec87b2c-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.04476",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.04476",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.04476",
+      "SemanticScholar:43576f7b21b987a0d77fd3b0f7d10c9727aff8af",
+      "arXiv:2602.04476"
+    ],
+    "reason": "VaLR preserves visual information during multimodal reasoning with latent tokens and improves benchmark accuracy; the abstract reports no token, latency, or resource reduction.",
+    "first_checked_at": "2026-10-10T15:55:38+00:00",
+    "last_checked_at": "2026-10-10T15:55:38+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Vision-aligned Latent Reasoning for Multi-modal Large Language Model"
+  },
+  "processed_at": "2026-10-10T15:55:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0077823f3ec8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

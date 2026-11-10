@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1da50c55d8fca328-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2111.13587",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2111.13587",
+    "identity_tokens": [
+      "arXiv:2111.13587"
+    ],
+    "reason": "AFNO is linked to inference systems and has efficient token mixing, but its demonstrated results are vision segmentation, not language generation.",
+    "first_checked_at": "2026-10-06T23:27:24+00:00",
+    "last_checked_at": "2026-10-06T23:27:24+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Fourier Neural Operators: Efficient Token Mixers for Transformers"
+  },
+  "processed_at": "2026-10-06T23:27:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1da50c55d8fc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

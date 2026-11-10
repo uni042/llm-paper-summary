@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-381e84cac6faa382-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/978-981-96-0960-4_24",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/978-981-96-0960-4_24",
+    "identity_tokens": [
+      "DOI:10.1007/978-981-96-0960-4_24"
+    ],
+    "reason": "QR-DETR routes object queries through selected detection-transformer decoder layers, allowing other queries to exit early and preventing indiscriminate communication; the publisher abstract evaluates COCO detection mAP, without a concrete LLM inference connection.",
+    "first_checked_at": "2026-10-14T07:31:03+00:00",
+    "last_checked_at": "2026-10-14T07:31:03+00:00",
+    "linked_from": [],
+    "title": "QR-DETR: Query Routing for Detection Transformer"
+  },
+  "processed_at": "2026-10-14T07:31:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-381e84cac6fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

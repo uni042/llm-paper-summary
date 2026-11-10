@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a49adc3cd584adaa-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.06902",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.06902",
+    "identity_tokens": [
+      "DOI:10.1145/3694715.3695970",
+      "DOI:10.48550/arxiv.2312.06902",
+      "arXiv:2312.06902"
+    ],
+    "reason": "Perseusは大規模モデル学習のforward/backward計算へGPU周波数を割り当てて消費電力を減らす学習システムで、最終適用先が学習工程のため凍結範囲。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+    ],
+    "title": "Reducing Energy Bloat in Large Model Training"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a49adc3cd584",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

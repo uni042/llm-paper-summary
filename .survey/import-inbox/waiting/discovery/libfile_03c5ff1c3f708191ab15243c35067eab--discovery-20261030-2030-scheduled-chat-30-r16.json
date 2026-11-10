@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r16",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.23318",
+      "identity_tokens": [
+        "arXiv:2507.23318",
+        "DOI:10.48550/arXiv.2507.23318"
+      ],
+      "title": "FastDriveVLA: Efficient End-to-End Driving via Plug-and-Play Reconstruction-based Token Pruning",
+      "reason": "自動運転VLA向けに前景領域を保つMAE再構成型の視覚トークン枝刈りを提案し、nuScenesの計画性能を評価する。トークン削減機構はVLMへ転用可能だが、主対象は運転行動生成であり一般LLM推論の速度・KV改善は直接示されていない。",
+      "source_url": "https://arxiv.org/abs/2507.23318",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:42:21+09:00",
+      "last_checked_at": "2026-10-30T20:42:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 424,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06473",
+      "identity_tokens": [
+        "arXiv:2604.06473",
+        "DOI:10.48550/arXiv.2604.06473"
+      ],
+      "title": "MICA: Multivariate Infini Compressive Attention for Time Series Forecasting",
+      "reason": "多変量時系列予測でchannel間注意を線形化し、予測誤差を改善するMICAを提案。生成LLMのテキスト推論やKVサービングを対象とせず、時系列予測特化の研究。",
+      "source_url": "https://arxiv.org/abs/2604.06473",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:42:21+09:00",
+      "last_checked_at": "2026-10-30T20:42:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 425,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.12461",
+      "identity_tokens": [
+        "arXiv:2503.12461",
+        "DOI:10.48550/arXiv.2503.12461"
+      ],
+      "title": "MambaIC: State Space Models for High-Performance Learned Image Compression",
+      "reason": "Mamba/SSMを用いた画像圧縮のentropy modelingを改善する研究。評価は高解像度画像の符号化効率であり、LLM生成推論のモデル圧縮・速度改善ではない。",
+      "source_url": "https://arxiv.org/abs/2503.12461",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:42:21+09:00",
+      "last_checked_at": "2026-10-30T20:42:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 430,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39765",
+      "identity_tokens": [
+        "arXiv:2609.39765",
+        "DOI:10.48550/arXiv.2609.39765"
+      ],
+      "title": "MemCodex: Self-Programming Hierarchical Memory for Language Agents",
+      "reason": "要約・関係知識・再利用スキル・潜在記憶を実行可能な階層メモリプログラムとして組み合わせ、必要な証拠が揃った段階で探索を止めるMemCodexを提案。最良の適応記憶基準比で文脈トークン3.4倍削減、推論2.1倍高速化、タスク成功率10.1%改善を報告。",
+      "source_url": "https://arxiv.org/abs/2609.39765",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:42:21+09:00",
+      "last_checked_at": "2026-10-30T20:42:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 431,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.25176",
+      "identity_tokens": [
+        "arXiv:2509.25176",
+        "DOI:10.48550/arXiv.2509.25176"
+      ],
+      "title": "SIRI: Scaling Iterative Reinforcement Learning with Interleaved Compression",
+      "reason": "RL訓練でCoTの許容長を圧縮・拡張と交互に変え、冗長な思考を削りつつ探索能力を保つSIRIを提案。DeepSeek-R1-Distill-Qwen-1.5Bで3周期後にAIME24品質43.2%改善、生成トークン46.9%削減と報告する。",
+      "source_url": "https://arxiv.org/abs/2509.25176",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:42:21+09:00",
+      "last_checked_at": "2026-10-30T20:42:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 432,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.03928",
+      "identity_tokens": [
+        "arXiv:2601.03928",
+        "DOI:10.48550/arXiv.2601.03928"
+      ],
+      "title": "FocusUI: Efficient UI Grounding via Position-Preserving Visual Token Selection",
+      "reason": "GUI画面の指示関連パッチを選び、削除した連続トークンをPosPadマーカーで置換して座標情報を維持する。ScreenSpot-Proで7Bモデルの品質を保ちながら、視覚トークン30%保持時に推論最大1.44倍高速化・ピークGPUメモリ17%削減。",
+      "source_url": "https://arxiv.org/abs/2601.03928",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:42:21+09:00",
+      "last_checked_at": "2026-10-30T20:42:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 433,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.19178",
+      "identity_tokens": [
+        "arXiv:2601.19178",
+        "DOI:10.48550/arXiv.2601.19178"
+      ],
+      "title": "CollectiveKV: Decoupling and Sharing Collaborative Information in Sequential Recommendation",
+      "reason": "推薦システムのユーザー間でKVを共有し、履歴KVを元サイズ0.8%まで圧縮するが、評価は系列推薦モデルに限定される。生成LLMのKVキャッシュ共有・推論サービングへの直接評価はない。",
+      "source_url": "https://arxiv.org/abs/2601.19178",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:42:21+09:00",
+      "last_checked_at": "2026-10-30T20:42:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 435,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.19198",
+      "identity_tokens": [
+        "arXiv:2603.19198",
+        "DOI:10.48550/arXiv.2603.19198"
+      ],
+      "title": "Extending SSMs with the Exponentially Weighted Signature",
+      "reason": "指数重み付きpath signatureでMamba-2を包含するSSMを理論的に拡張し、並列scan可能性を証明する。評価は時系列分類・回帰・形式言語であり、生成LLMの実測速度・メモリ最適化は未確認。",
+      "source_url": "https://arxiv.org/abs/2603.19198",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:42:21+09:00",
+      "last_checked_at": "2026-10-30T20:42:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 436,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.19652",
+      "identity_tokens": [
+        "arXiv:2605.19652",
+        "DOI:10.48550/arXiv.2605.19652"
+      ],
+      "title": "Characterizing Real-World Bugs in Tile Programs for Automated Bug Detection",
+      "reason": "GPU tile言語のコンパイラコード生成バグ301件を分析し、shape/dtype/backend依存の誤計算・性能退行を分類する。LLM推論カーネルの検証基盤に間接的に有用だが、推論カーネル自体の高速化方式ではない。",
+      "source_url": "https://arxiv.org/abs/2605.19652",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:42:21+09:00",
+      "last_checked_at": "2026-10-30T20:42:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 437,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.06906",
+      "identity_tokens": [
+        "arXiv:2607.06906",
+        "DOI:10.48550/arXiv.2607.06906"
+      ],
+      "title": "The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI",
+      "reason": "同一モデル・同一22タスクでエージェントorchestration層だけを入れ替え、モデル非依存のtoken経済性を測定する。平均タスク費用41%減、中央値wall-clock44%減、トークン38%減を報告し、LLM推論オーケストレーションの実測効率に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2607.06906",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:42:21+09:00",
+      "last_checked_at": "2026-10-30T20:42:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 438,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

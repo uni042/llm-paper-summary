@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-61e465dab0b6b028-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.17535",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.17535",
+    "identity_tokens": [
+      "arXiv:2609.17535"
+    ],
+    "reason": "profiling frameworkでlatency/throughput/energyを比較するが、8M/6.6M級の小型backbone、fp32、実装サイズ差に基づく限定条件。一般的LLM-serving最適化や特定効率手法を主張するよりcomparative framework寄り。",
+    "first_checked_at": "2026-10-05T10:31:47+00:00",
+    "last_checked_at": "2026-10-05T10:31:47+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md",
+      "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+    ],
+    "title": "DANTINOX: A Unified Framework for Multi-Paradigm Language Modeling"
+  },
+  "processed_at": "2026-10-05T10:31:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-61e465dab0b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

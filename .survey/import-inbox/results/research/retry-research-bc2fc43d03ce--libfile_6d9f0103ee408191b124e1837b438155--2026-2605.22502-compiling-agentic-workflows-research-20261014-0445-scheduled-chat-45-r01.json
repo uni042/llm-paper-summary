@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "a73b53703b3aaeeaafe6812b632dd945d0cc84a5fafdf29e8807635c31c2954c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bc2fc43d03ce--libfile_6d9f0103ee408191b124e1837b438155--2026-2605.22502-compiling-agentic-workflows-research-20261014-0445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2605.22502",
+  "worker_completed_at": "2026-10-14T04:49:00+09:00",
+  "worker_run_key": "20261014-0445-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6554,
+    "body_paragraphs": 36,
+    "method_chars": 1251,
+    "method_paragraphs": 6,
+    "evaluation_chars": 2267,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/14-agentic-inference-serving-runtime/2026-2605.22502-compiling-agentic-workflows-into-llm-weights-near-frontier-quality-at-tw.md と 25 段落 / 5590文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T13:18:40+00:00"
+}

@@ -1,0 +1,862 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0135JST-worker30-forward-pagedattention-04",
+  "collector_id": "worker30-forward-pagedattention",
+  "run_key": "2026-09-21T01:31:26+09:00-worker30",
+  "axis": "forward citations from PagedAttention memory-management lineage",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2309.06180/citations?fields=title,abstract,year,authors,url,externalIds,publicationDate&limit=100&offset=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3fa26643ea8348b05abd5ac470597619fe1b0423",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 24,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T16:32:56.955068+00:00",
+  "results": [
+    {
+      "title": "BEAVER-EDGE: An LLM-orchestrated framework for edge AI lifecycle management automation",
+      "source_url": "https://www.semanticscholar.org/paper/82253f35d32618195526457cc1df43bb05b6b559",
+      "year": 2026,
+      "published": "2026-12-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.future.2026.108697",
+      "doi": "10.1016/j.future.2026.108697",
+      "authors": [
+        "Guanghan Wu",
+        "Roberto Morabito"
+      ]
+    },
+    {
+      "title": "Measuring the production of scientific human capital: New data, methods, and evidence on the U.S. scientific training ecosystem",
+      "source_url": "https://www.semanticscholar.org/paper/6c953726c183c43a693656a0e3334054a414071e",
+      "year": 2026,
+      "published": "2026-12-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.respol.2026.105605",
+      "doi": "10.1016/j.respol.2026.105605",
+      "authors": [
+        "Dror Shvadron",
+        "Han-Sen Zhang",
+        "L. Fleming",
+        "D. Gross"
+      ]
+    },
+    {
+      "title": "FairCache: Demystifying Cache-Induced Unfairness in Multi-Tenant Large Language Model Serving",
+      "source_url": "https://www.semanticscholar.org/paper/69e16a381bb1a483fb9a5e494bc895ad74bb412a",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": "Large language models (LLMs) increasingly rely on context caching to enhance serving efficiency. However, this optimization inadvertently compromises fairness in multi-tenant LLM serving systems. Existing fair schedulers, which account only for compute resources, are unable to handle the multi-dimensional resource demands introduced by context caching. We identify that tenants with high cache hit rates are perceived as having lower compute costs, leading schedulers to unfairly prioritize them over others. Furthermore, the first tenant to compute a shared prefix fully bears the prefill cost for shared prefixes, while subsequent consumers free-ride on the cached data without contributing to such prefill cost. Addressing such unfairness via rigid allocation strategies (e.g., static partitioning) overlooks workload heterogeneity, inevitably wasting host memory on low-reuse workloads. To address the challenges above, we introduce FairCache, the first system that achieves comprehensive resource fairness in multi-tenant LLM serving with context caching. FairCache unifies compute, memory, and I/O costs into a single scheduling metric, and redistributes the prefill cost of shared prefixes across all benefiting tenants to mitigate free-riding. For cache management, FairCache combines the max-min fair allocation with a lightweight reuse-value model that reclaims cold data without harming fairness. Extensive evaluations using a prototype implementation with diverse workloads demonstrate that FairCache effectively eliminates cache-induced unfairness while maintaining high serving efficiency. Theoretical analysis further establishes FairCache's fairness properties and Pareto-efficient cache utilization under bounded request costs, work-conserving operation, and deterministic tie-breaking.",
+      "canonical_id": "DOI:10.1109/TPDS.2026.3729988",
+      "doi": "10.1109/TPDS.2026.3729988",
+      "authors": [
+        "Zhuo-Yan Bai",
+        "Bin Gao",
+        "Fei Xu",
+        "Hanyu Zhao",
+        "Zhi Zhou",
+        "Weng-Fai Wong"
+      ]
+    },
+    {
+      "title": "A unified framework for early childhood image captioning via knowledge-grounded metrics and process-level reinforcement",
+      "source_url": "https://www.semanticscholar.org/paper/56c11a03341119511548a58a37e33c7987f02da6",
+      "year": 2026,
+      "published": "2026-11-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.engappai.2026.116162",
+      "doi": "10.1016/j.engappai.2026.116162",
+      "authors": [
+        "Zhen-Dong Wang",
+        "Zhi-Bin Gu",
+        "Zi-Qi Zhang",
+        "Zong-Yang Ma",
+        "Bing Li",
+        "Cheng Xu",
+        "Songyin Dai",
+        "Ying Wang",
+        "Hong-Zhe Liu"
+      ]
+    },
+    {
+      "title": "DDPT: Enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+      "source_url": "https://www.semanticscholar.org/paper/88d2953cebc2a350a5bb1e55fb9425a86c9f8917",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134297",
+      "doi": "10.1016/j.neucom.2026.134297",
+      "authors": [
+        "Ge Teng",
+        "Chen Shen",
+        "Wenxiao Wang",
+        "Sinan Fan",
+        "Liang Xie",
+        "Xiang Tian",
+        "Peng Chen",
+        "Xuesong Liu",
+        "Yaowu Chen",
+        "Jieping Ye"
+      ]
+    },
+    {
+      "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+      "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+      "doi": "10.1016/j.neucom.2026.134332",
+      "authors": [
+        "Jihyeon Kim",
+        "Hanyong Lee",
+        "Jaesung Lee"
+      ]
+    },
+    {
+      "title": "Profit-aware deployment of large language model-enabled inference chains in data centers",
+      "source_url": "https://www.semanticscholar.org/paper/f1ffab9416b4ed65c1b9d7f3bb9d13857714c211",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+      "doi": "10.1016/j.comnet.2026.112609",
+      "authors": [
+        "Yu-Qi Zhang",
+        "Hao-Chen Lv",
+        "Dan-Yang Zheng",
+        "Chen Yang",
+        "Huan-Lai Xing",
+        "Xiao-Jun Cao",
+        "Ji Xu",
+        "Fei Teng"
+      ]
+    },
+    {
+      "title": "Agentic active Asset Administration Shell for circular manufacturing",
+      "source_url": "https://www.semanticscholar.org/paper/b1c75831b0219e8ec1bae8ca6bd5fab8db800df3",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.jmsy.2026.07.011",
+      "doi": "10.1016/j.jmsy.2026.07.011",
+      "authors": [
+        "Jian-Zhang Li",
+        "Qian Ruan",
+        "Dachuan Shi",
+        "Matthias Schneider",
+        "Olga Meyer",
+        "Michael Oberle",
+        "Li Yi",
+        "Fei Tao"
+      ]
+    },
+    {
+      "title": "GACER-M: Granularity-Aware and Memory-Centric Coordination for Multi-Tenant Deep Learning",
+      "source_url": "https://www.semanticscholar.org/paper/e88883877777a39a174772c654a80a7cac2a31ae",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "Multi-tenant computing, which executes multiple neural networks on a single GPU, is essential for maximizing hardware utilization in both cloud and edge environments. However, effective co-location faces a fundamental trade-off between utilization and safety. On one hand, the diverse computing patterns of concurrent models lead to resource fragmentation, requiring fine-grained scheduling to improve throughput. On the other hand, modern workloads (especially Generative AI) introduce strict memory constraints: their dynamic memory growth requires rigid reservation to prevent Out-Of-Memory (OOM) crashes, often leaving valuable resources idle but inaccessible to other tenants. Existing solutions struggle to balance these two sides: static partitioning ensures safety but limits utilization, while aggressive fine-grained scheduling boosts speed but risks system instability. To address this, we propose <bold><italic>GACER-M</italic></bold>, a unified resource coordination framework that harmonizes fine-grained computing with strict memory governance. Unlike previous approaches that sacrifice speed for safety, <italic>GACER-M</italic> achieves the best of both worlds via a tiered strategy: (1) A granularity-aware spatial mechanism that minimizes computational residue via operator splitting, strictly regulated by a cost-benefit guardrail to prevent memory bloat; (2) A memory-driven temporal coordination technique that segments dynamic workloads to safely inject concurrent tasks into resource gaps. <italic>GACER-M</italic> consistently achieves <bold>1.35</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq1-3701443.gif\"/></alternatives></inline-formula><inline-formula><tex-math notation=\"LaTeX\">$\\sim$</tex-math><alternatives><mml:math><mml:mo>∼</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq2-3701443.gif\"/></alternatives></inline-formula><bold>1.67</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq3-3701443.gif\"/></alternatives></inline-formula> <bold>speedup</bold> in compute-bound scenarios compared to state-of-the-art works; furthermore, in memory-critical scenarios, it delivers <bold>1.33</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq4-3701443.gif\"/></alternatives></inline-formula> <bold>higher effective capacity</bold> and <bold>1.4</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq5-3701443.gif\"/></alternatives></inline-formula> <bold>aggregate throughput</bold> while ensuring strict memory safety.",
+      "canonical_id": "DOI:10.1109/TC.2026.3701443",
+      "doi": "10.1109/TC.2026.3701443",
+      "authors": [
+        "Yongbo Yu",
+        "Fuxun Yu",
+        "Jia-Qi Yang",
+        "Xiuzhen Cheng",
+        "Chenchen Liu",
+        "Xiang Chen"
+      ]
+    },
+    {
+      "title": "CALSI: Context-Aware Layer Skipping Inference for On-Device LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/b55f24c3e3257011b8dc6ea308c4f54242ab7e53",
+      "year": 2026,
+      "published": "2026-10-01",
+      "abstract": "The large language model (LLM) based on the Transformer architecture and its derived various applications have greatly changed people’s lives. Considering some concerns such as privacy and network conditions, deploying LLM on smart devices has gradually become a research focus. In order to reduce the huge computation and storage overhead of LLMs, many works have studied model compression technology to reduce the model computation and parameter amount, thereby reducing the inference latency. This paper analyzes the characteristics of the on-device LLM service, including small batch size and latency focus, etc. We find the inefficiency of existing model compression technologies and new optimization opportunities, i.e., allocating different layers for different input tokens based on the task QoS requirements. Then we propose CALSI, a context-aware layer skipping LLM inference system for on-device serving. In the offline profiling phase, we analyze the importance of different layers of the model to different tokens and train a lightweight gated predictor. Then, we map the latency QoS requirements of different tasks with the predictor threshold. During the online inference phase, we adaptively allocate the layers that need to be computed to the specific token and design a KV cache delayed computation management mechanism to solve the KV cache missing problem caused by layer skipping. Experiments on real devices show that CALSI can achieve up to 24.1% latency reduction. CALSI has good generalization ability on various models and datasets and is compatible with other existing complementary optimization techniques.",
+      "canonical_id": "DOI:10.1109/TMC.2026.3697502",
+      "doi": "10.1109/TMC.2026.3697502",
+      "authors": [
+        "Pu-Han Luo",
+        "Mu Yuan",
+        "Ning-Kang Zhang",
+        "Rui-Guang Zhong",
+        "Jun-Yang Zhang",
+        "Cheng-Chen Hu",
+        "Xiangyang Li"
+      ]
+    },
+    {
+      "title": "Exploring the Design Space of Isolation Mechanisms",
+      "source_url": "https://www.semanticscholar.org/paper/cd878d204874afc44db613e30597df1b823df743",
+      "year": 2026,
+      "published": "2026-09-28",
+      "abstract": "Processes, containers, and virtual machines (VMs) offer different trade-offs between performance, isolation, and resource sharing. Yet, they represent just three points in a vast design space. Developers repeatedly introduce ad-hoc isolation mechanisms to tune these trade-offs for specific deployments, but there is no systematic way to explore the design space and derive mechanisms that satisfy given security and performance goals. We introduce IsoSearch, a technique for exploring the isolation mechanism design space to find one that satisfies the goals and constraints of a specific deployment scenario. IsoSearch builds on OSmosis [4], our prior model of isolation, which represents protection domains, resources, and their relationships as a graph. A developer begins with a starting mechanism and its representation as an OSmosis graph and specifies both a set of functional constraints (e.g., these two protection domains must both be able to write to this file) and an optimization target (e.g., minimize the amount of memory shared between the two domains). IsoSearch then navigates the design space by applying valid graph transitions to generate candidate mechanisms, scores each mechanism, and selects the most promising ones for further exploration. The search terminates when all active candidates satisfy the constraints and goals or when score improvement plateaus. We demonstrate the efficacy of our approach through five case studies, ranging from resource privatization to protecting a database's private key.",
+      "canonical_id": "DOI:10.1145/3831586.3838145",
+      "doi": "10.1145/3831586.3838145",
+      "authors": [
+        "Sidhartha Agrawal",
+        "Shaurya Patel",
+        "Linh Pham",
+        "Arya Stevinson",
+        "Ilias Karimalis",
+        "Hugo Lefeuvre",
+        "Aastha Mehta",
+        "Reto Achermann",
+        "Margo I. Seltzer"
+      ]
+    },
+    {
+      "title": "IHS-LM: Intra-batch Hybrid Scheduling and Layer Migration for VLM Pipeline Inference Acceleration on Edge Devices",
+      "source_url": "https://www.semanticscholar.org/paper/a09dfff523af235e18d6bc69dbe28aa58ce880e4",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Vision-Language Models (VLMs) are increasingly deployed via distributed inference to perform visual perception and semantic reasoning tasks on edge devices. Pipeline parallelism is well-suited for collaborative edge inference, as it partitions models across devices with minimal communication between adjacent stages. However, pipeline-parallel inference on edge devices faces two challenges. First, prior intra-batch scheduling methods determine the prefill–decode token ratio without considering available KV cache capacity and token distribution, resulting in intra-batch workload imbalance. Second, static model partitioning methods assign layers to devices without accounting for dynamic bandwidth variations, leading to load imbalance across pipeline stages. These imbalances result in pipeline bubbles and increased inference latency. To address these challenges, we present IHS-LM, a low-latency pipeline-parallel inference framework for VLM serving on heterogeneous edge devices. Specifically, to alleviate intra-batch workload imbalance, IHS-LM introduces an Intra-Batch Hybrid Scheduling method (IHS), which dynamically adjusts the prefill–decode token ratio based on token distribution and available KV cache capacity. To mitigate load imbalance across stages, IHS-LM proposes a Bandwidth Aware Model Layer Migration method (BAMLM), which detects imbalance caused by dynamic bandwidth and resolves imbalance through fine-grained layer migration. We compare IHS-LM with existing pipeline-parallel inference methods in high-load and heterogeneous bandwidth settings. Experiments show that IHS-LM achieves the lowest inference latency, while preserving model accuracy.",
+      "canonical_id": "DOI:10.1145/3832810.3832886",
+      "doi": "10.1145/3832810.3832886",
+      "authors": [
+        "Yun Li",
+        "Tian-Fu Pang",
+        "Zhi-Yu Cai",
+        "Zhen-Xiang Pan",
+        "Ying-Chi Mao",
+        "Jie Wu"
+      ]
+    },
+    {
+      "title": "Cross-Layer Performance Analysis of Single-GPU Large Language Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/64b1253f0b492e5a855336514fc0457ad35219eb",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "The performance of single-GPU LLM inference is characterized by strong cross-layer interactions spanning model architecture, runtime scheduling, operator execution, and GPU microarchitecture. Unfortunately, a unified understanding of single-GPU LLM inference bottlenecks is still lacking due to two limitations: the lack of traceable cross-layer attribution and the static characterization of KV-cache usage. To this end, we present a cross-layer analysis approach for single-GPU LLM inference that jointly characterizes latency and memory behavior. However, this requires addressing two challenges: cross-layer attribution and dynamic KV-cache characterization. To address the two challenges, we employ four-layer joint profiling for cross-layer attribution and introduce a logical KV computation metric for dynamic KV-cache characterization, respectively. Finally, we systematically characterize representative dense and Mixture-of-Experts (MoE) models under diverse workloads on a single A100 GPU, identify key bottlenecks across inference phases and architectures, and reveal opportunities for further optimization.",
+      "canonical_id": "DOI:10.1145/3832810.3832894",
+      "doi": "10.1145/3832810.3832894",
+      "authors": [
+        "Zong-Xing Zhao",
+        "Xiaqing Li",
+        "Ze-Kai Meng",
+        "Zheng-Jun Fu",
+        "Qian Wang",
+        "Yan-Ling Zhang",
+        "Yidong Li"
+      ]
+    },
+    {
+      "title": "SSQT: A Hardware-Friendly Fusion Compression Framework of Structured Sparsification and Sensitivity-Driven Quantization for Large-Scale Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/0b010b82f5fb03e74943d7486f9ea2da1edb828e",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Large language models (LLMs) are often memory-bandwidth bound during autoregressive decoding, so reducing weight storage does not automatically produce parallel speedup when the compressed representation is irregular. We present SSQT, a post-training framework that jointly applies hardware-aligned structured sparsification, sensitivity-driven outlier preservation, and sparse-aligned low-bit group quantization. SSQT estimates parameter importance from calibration data with a diagonal empirical-Fisher approximation, avoiding construction of the full Hessian, and, in the default 4-bit configuration, stores fewer than 1% high-sensitivity weights on a separate FP16 residual path. The remaining weights are packed in regular attention blocks and contiguous feed-forward-network channel groups; quantization metadata is secondarily quantized and decoded inside the matrix-multiplication tile rather than by globally expanding the model to FP16. Experiments on Llama 2 and Falcon models report task quality, calibration cost, packed storage, latency regularity, cross-GPU results, and hardware counters. In the default 4-bit configuration, SSQT uses 24.3% of the FP16 model-memory footprint on Llama 2-13B, keeps the relative WikiText2 perplexity increase at 4.8%, and improves the per-sequence decoding rate by up to 2.33 × on the A100 tensor-parallel configuration. On Llama 2-13B, Tensor Core utilization rises from 28.7% to 62.4%, memory-bandwidth utilization falls from 92.3% to 41.8%, and pipeline stalls fall from 34.6% to 11.0%. These results show that compression and execution layout must be co-designed to convert model-size reduction into practical parallel inference acceleration.",
+      "canonical_id": "DOI:10.1145/3832810.3832814",
+      "doi": "10.1145/3832810.3832814",
+      "authors": [
+        "Qian-Sheng Song",
+        "Guolin Tang"
+      ]
+    },
+    {
+      "title": "AsymFlow: Enabling Long-Context LLM Serving via CPU-GPU Prefill-Decode Disaggregation",
+      "source_url": "https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Driven by cost and privacy constraints, many organizations deploy large language model (LLM) inference on local CPU-GPU servers. For long-context requests, the key-value (KV) cache grows linearly with sequence length and can rapidly exhaust GPU memory, reducing both the maximum supported context and request concurrency. Meanwhile, we observe that GPU utilization is high during the compute-heavy prefill phase but drops sharply during the memory-bound decode phase, where modern CPUs equipped with matrix units can achieve competitive attention throughput. We present AsymFlow, a prefill-decode disaggregated serving system that runs prefill on the GPU and decode on the CPU. AsymFlow (1) streams per-layer KV states through a shared-memory KV pool to overlap KV transfer with GPU prefill, (2) employs a task-aware online dispatcher that jointly accounts for pipeline queueing and KV capacity to prevent GPU OOM and idle bubbles, and (3) accelerates CPU decode attention with AMX. Implemented on SGLang and evaluated on a CPU-GPU platform, AsymFlow serves 32K-context workloads that can trigger OOM on a GPU-only baseline, improves throughput by 1.08–1.25 × over the GPU-only baseline, and by 1.32-2.49 × over a state-of-the-art KV-offloading method; the gains increase as GPU memory becomes tighter.",
+      "canonical_id": "DOI:10.1145/3832810.3832866",
+      "doi": "10.1145/3832810.3832866",
+      "authors": [
+        "Jun-Wen Zhang",
+        "Wei-Ling Yang",
+        "Jian-Bin Fang",
+        "En-Da Yu",
+        "De-Zun Dong"
+      ]
+    },
+    {
+      "title": "RPSC: Robust LLM Scheduling by Tolerating Prediction Inaccuracy and Mitigating Tail Latency",
+      "source_url": "https://www.semanticscholar.org/paper/d6928989c68496141ed1c5c207f742bc9cad96db",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "High-concurrency LLM serving requires inference systems to balance execution efficiency with stringent performance guarantees. While Shortest Remaining Processing Time (SRPT) is theoretically optimal for minimizing average job completion time, its practical application is hindered by the autoregressive nature of generative inference. Specifically, inherent length prediction inaccuracies trigger frequent, redundant preemptions, leading to excessive KV Cache swapping and recomputation penalty. Moreover, strict SRPT scheduling inherently sacrifices tail latency, failing to meet consistent SLOs. We first establish an analytical system model to characterize LLM inference through task execution states, compute and memory constraints, and preemption penalty, providing a theoretical foundation for analyzing performance trade-offs. Based on this foundation, we propose Resident Protection & Sojourn Compensation (RPSC), a robust scheduling algorithm designed to tolerate prediction inaccuracy and mitigate tail latency. RPSC introduces two synergistic mechanisms: (1) Resident Protection (RP), which shields running tasks from inaccuracy-driven preemptions to minimize redundant KV Cache swapping and recomputation overhead; and (2) Sojourn Compensation (SC), which dynamically reconciles the priority distribution based on sojourn time to prevent starvation and mitigate tail latency. Experimental results demonstrate that RPSC reduces redundant preemptions by 33.6% and improves P99 JCT by 20.3% compared to SRPT. Our work provides an efficient and robust solution for managing high-concurrency inference workloads in production environments.",
+      "canonical_id": "DOI:10.1145/3832810.3832840",
+      "doi": "10.1145/3832810.3832840",
+      "authors": [
+        "Guo-Sheng Xiao",
+        "Xuan Mo",
+        "Jia-Lun Li",
+        "Weigang Wu"
+      ]
+    },
+    {
+      "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+      "source_url": "https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+      "canonical_id": "DOI:10.1145/3832810.3832854",
+      "doi": "10.1145/3832810.3832854",
+      "authors": [
+        "Wen-Hao Sun",
+        "Pan-Pan Cui",
+        "Yiqi Liu",
+        "Wan-Yu Wang"
+      ]
+    },
+    {
+      "title": "CrossServe: Cross-Layer Scheduling for SLO Optimization in Multi-Tenant LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/43d9c475fecdcadc273a07d0d8ddd02d2c4e0aa4",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "The deployment of Large Language Models (LLMs) as multi-tenant cloud services is now widespread, but maintaining high Service Level Objective (SLO) attainment across diverse tenants remains challenging. Current serving systems focus on a single layer of the stack, either using iteration-level batching or coarse-grained instance-level routing. This approach causes significant SLO violations during bursty workloads and struggles to balance throughput with differentiated tenant priorities. The core issue lies in intra-instance schedulers lacking awareness of the global cluster state, while cluster-level routers do not account for fine-grained, per-iteration execution behavior within each GPU. We introduce CrossServe, a cross-layer scheduling framework that jointly optimizes request routing, adaptive micro-batching, and tenant-weighted preemption to maximize SLO attainment in multi-tenant LLM serving. CrossServe integrates three complementary layers: (1) an online, lightweight length classifier that separates requests to reduce Head-of-Line (HoL) blocking; (2) an SLO-aware adaptive micro-batching system that dynamically tunes prefill chunk sizes based on the real-time Time-Per-Output-Token (TPOT) slack of decoding requests; and (3) a global routing and preemption layer that distributes load across GPU instances while using tenant weights when reclaiming resources under overload. We evaluate CrossServe with BurstGPT-derived trace replay on a 32-GPU cluster. Compared with vLLM, Sarathi-Serve, and SOLA, CrossServe increases overall SLO attainment by 53, 29, and 14 percentage points respectively (from 42% to 95%, from 66% to 95%, and from 81% to 95%) while sustaining high throughput. In the ablation workload, removing global routing raises P99 TTFT from 185 ms to 410 ms; the full system therefore reduces this tail latency by 54.9% relative to that ablation and improves the observed throughput–SLO tradeoff.",
+      "canonical_id": "DOI:10.1145/3832810.3832859",
+      "doi": "10.1145/3832810.3832859",
+      "authors": [
+        "Jia-He Li",
+        "Jia-Bin Li"
+      ]
+    },
+    {
+      "title": "Heterogeneous SLO Guaranteed Multi-Resource-Aware Batching in LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/2ecd49d0fb5c5d53451ca6a9efde7b14fa32c650",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "In this paper, we study a mixed-prompt scenario—where both short and long prompts coexist—in an LLM inference serving system that supports diverse applications with heterogeneous iteration-time SLOs. To improve throughput for long prompts, prior work divides them into chunks and batches requests or chunks to meet the token budget to fully utilize GPU compute resource. Our measurement analysis shows that it fails to meet heterogeneous iteration-time SLOs or fully utilize both GPU compute and memory resources. Also, delayed KV cache release from processing multiple long prompts may reduce throughput. To address the limitations, based on our findings, we propose a heterogeneous SLO guaranteed Multi-Resource-aware batching system (MuRa). MuRa orders queued requests by SLOs, enabling it to prioritize tight-SLO requests and batch those with similar SLOs to improve throughput. It selectively chooses queued requests to maximize both compute and memory utilizations, and processes all chunks from one prompt before moving to the next to enable earlier KV cache release. Trace-driven real experiments demonstrate that MuRa achieves 1.42-11.21 × higher throughput, 1.43-13.71 × higher goodput, 37-90% higher SLO attainment, and 1.61-12.22 × lower response latency compared to the state-of-the-art approaches. It achieves performance near Oracle, which optimally maximizes goodput.",
+      "canonical_id": "DOI:10.1145/3832810.3832922",
+      "doi": "10.1145/3832810.3832922",
+      "authors": [
+        "Hai-Ying Shen",
+        "Tanmoy Sen",
+        "Yuxiong He"
+      ]
+    },
+    {
+      "title": "ReliefServe: Relieving GPU Pressure in Multi-Model Serving via Selective CPU Escape",
+      "source_url": "https://www.semanticscholar.org/paper/30f2fe44afe7a63e4a4e20c8f5083c129e09ae80",
+      "year": 2026,
+      "published": "2026-09-27",
+      "abstract": "Sharing GPUs among many deep learning models is crucial for cost-efficient inference, but bursty multi-model workloads can easily overwhelm GPU capacity, causing severe tail latency and SLO goodput drops. Existing solutions—whether traffic-aware scheduling or hardware-level resource partitioning—can only juggle contention inside the GPU pool and cannot relieve pressure when many models spike at once. We present ReliefServe, which leverages idle CPUs as interference relief paths to offload appropriate models from oversubscribed GPUs. The key is that migrating CPU-tolerant models to CPU during bursts can reduce overall GPU interference more than the local slowdown incurred, thus protecting performance-critical GPU models even with slower CPU execution. ReliefServe employs three mechanisms: (1) Escape Profiling, to identify viable offload candidates using each model’s CPU tolerance, GPU criticality, interference, and migration cost; (2) Pressure-Driven Escape Control, to monitor GPU pressure and trigger offload only if the projected interference reduction outweighs all costs; and (3) Relief-Oriented Cache Preparation, to proactively warm up high-value candidates in CPU memory for responsive migration. In a 12-server testbed with real workloads, ReliefServe reduces average inference latency by up to 27.05% and improves goodput by 39.74% under extreme burst conditions over state-of-the-art.",
+      "canonical_id": "DOI:10.1145/3832810.3832827",
+      "doi": "10.1145/3832810.3832827",
+      "authors": [
+        "Shi-Jie Peng",
+        "Yanying Lin",
+        "Chengzhi Lu",
+        "Shuai-Peng Wu",
+        "Cheng-Zhong Xu",
+        "Ke-Jiang Ye"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.future.2026.108697",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.future.2026.108697",
+        "title:beaveredge an llmorchestrated framework for edge ai lifecycle management automation",
+        "url:https://www.semanticscholar.org/paper/82253f35d32618195526457cc1df43bb05b6b559"
+      ],
+      "record": {
+        "title": "BEAVER-EDGE: An LLM-orchestrated framework for edge AI lifecycle management automation",
+        "source_url": "https://www.semanticscholar.org/paper/82253f35d32618195526457cc1df43bb05b6b559",
+        "year": 2026,
+        "published": "2026-12-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.future.2026.108697",
+        "doi": "10.1016/j.future.2026.108697",
+        "authors": [
+          "Guanghan Wu",
+          "Roberto Morabito"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.respol.2026.105605",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.respol.2026.105605",
+        "title:measuring the production of scientific human capital new data methods and evidence on the us scientific training ecosystem",
+        "url:https://www.semanticscholar.org/paper/6c953726c183c43a693656a0e3334054a414071e"
+      ],
+      "record": {
+        "title": "Measuring the production of scientific human capital: New data, methods, and evidence on the U.S. scientific training ecosystem",
+        "source_url": "https://www.semanticscholar.org/paper/6c953726c183c43a693656a0e3334054a414071e",
+        "year": 2026,
+        "published": "2026-12-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.respol.2026.105605",
+        "doi": "10.1016/j.respol.2026.105605",
+        "authors": [
+          "Dror Shvadron",
+          "Han-Sen Zhang",
+          "L. Fleming",
+          "D. Gross"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tpds.2026.3729988",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpds.2026.3729988",
+        "title:faircache demystifying cacheinduced unfairness in multitenant large language model serving",
+        "url:https://www.semanticscholar.org/paper/69e16a381bb1a483fb9a5e494bc895ad74bb412a"
+      ],
+      "record": {
+        "title": "FairCache: Demystifying Cache-Induced Unfairness in Multi-Tenant Large Language Model Serving",
+        "source_url": "https://www.semanticscholar.org/paper/69e16a381bb1a483fb9a5e494bc895ad74bb412a",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": "Large language models (LLMs) increasingly rely on context caching to enhance serving efficiency. However, this optimization inadvertently compromises fairness in multi-tenant LLM serving systems. Existing fair schedulers, which account only for compute resources, are unable to handle the multi-dimensional resource demands introduced by context caching. We identify that tenants with high cache hit rates are perceived as having lower compute costs, leading schedulers to unfairly prioritize them over others. Furthermore, the first tenant to compute a shared prefix fully bears the prefill cost for shared prefixes, while subsequent consumers free-ride on the cached data without contributing to such prefill cost. Addressing such unfairness via rigid allocation strategies (e.g., static partitioning) overlooks workload heterogeneity, inevitably wasting host memory on low-reuse workloads. To address the challenges above, we introduce FairCache, the first system that achieves comprehensive resource fairness in multi-tenant LLM serving with context caching. FairCache unifies compute, memory, and I/O costs into a single scheduling metric, and redistributes the prefill cost of shared prefixes across all benefiting tenants to mitigate free-riding. For cache management, FairCache combines the max-min fair allocation with a lightweight reuse-value model that reclaims cold data without harming fairness. Extensive evaluations using a prototype implementation with diverse workloads demonstrate that FairCache effectively eliminates cache-induced unfairness while maintaining high serving efficiency. Theoretical analysis further establishes FairCache's fairness properties and Pareto-efficient cache utilization under bounded request costs, work-conserving operation, and deterministic tie-breaking.",
+        "canonical_id": "DOI:10.1109/TPDS.2026.3729988",
+        "doi": "10.1109/TPDS.2026.3729988",
+        "authors": [
+          "Zhuo-Yan Bai",
+          "Bin Gao",
+          "Fei Xu",
+          "Hanyu Zhao",
+          "Zhi Zhou",
+          "Weng-Fai Wong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.engappai.2026.116162",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.engappai.2026.116162",
+        "title:a unified framework for early childhood image captioning via knowledgegrounded metrics and processlevel reinforcement",
+        "url:https://www.semanticscholar.org/paper/56c11a03341119511548a58a37e33c7987f02da6"
+      ],
+      "record": {
+        "title": "A unified framework for early childhood image captioning via knowledge-grounded metrics and process-level reinforcement",
+        "source_url": "https://www.semanticscholar.org/paper/56c11a03341119511548a58a37e33c7987f02da6",
+        "year": 2026,
+        "published": "2026-11-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.engappai.2026.116162",
+        "doi": "10.1016/j.engappai.2026.116162",
+        "authors": [
+          "Zhen-Dong Wang",
+          "Zhi-Bin Gu",
+          "Zi-Qi Zhang",
+          "Zong-Yang Ma",
+          "Bing Li",
+          "Cheng Xu",
+          "Songyin Dai",
+          "Ying Wang",
+          "Hong-Zhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134297",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134297",
+        "title:ddpt enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+        "url:https://www.semanticscholar.org/paper/88d2953cebc2a350a5bb1e55fb9425a86c9f8917"
+      ],
+      "record": {
+        "title": "DDPT: Enhancing complex reasoning in large language models via distillation and dynamic prompt tuning",
+        "source_url": "https://www.semanticscholar.org/paper/88d2953cebc2a350a5bb1e55fb9425a86c9f8917",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134297",
+        "doi": "10.1016/j.neucom.2026.134297",
+        "authors": [
+          "Ge Teng",
+          "Chen Shen",
+          "Wenxiao Wang",
+          "Sinan Fan",
+          "Liang Xie",
+          "Xiang Tian",
+          "Peng Chen",
+          "Xuesong Liu",
+          "Yaowu Chen",
+          "Jieping Ye"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134332",
+        "title:survey on joint compression and finetuning of large language models methods toolchains and open challenges under resource constraints",
+        "url:https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab"
+      ],
+      "record": {
+        "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints",
+        "source_url": "https://www.semanticscholar.org/paper/118a315fe00b4844b2cd81e948cdd819db7c1fab",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134332",
+        "doi": "10.1016/j.neucom.2026.134332",
+        "authors": [
+          "Jihyeon Kim",
+          "Hanyong Lee",
+          "Jaesung Lee"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.comnet.2026.112609",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.comnet.2026.112609",
+        "title:profitaware deployment of large language modelenabled inference chains in data centers",
+        "url:https://www.semanticscholar.org/paper/f1ffab9416b4ed65c1b9d7f3bb9d13857714c211"
+      ],
+      "record": {
+        "title": "Profit-aware deployment of large language model-enabled inference chains in data centers",
+        "source_url": "https://www.semanticscholar.org/paper/f1ffab9416b4ed65c1b9d7f3bb9d13857714c211",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+        "doi": "10.1016/j.comnet.2026.112609",
+        "authors": [
+          "Yu-Qi Zhang",
+          "Hao-Chen Lv",
+          "Dan-Yang Zheng",
+          "Chen Yang",
+          "Huan-Lai Xing",
+          "Xiao-Jun Cao",
+          "Ji Xu",
+          "Fei Teng"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.jmsy.2026.07.011",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.jmsy.2026.07.011",
+        "title:agentic active asset administration shell for circular manufacturing",
+        "url:https://www.semanticscholar.org/paper/b1c75831b0219e8ec1bae8ca6bd5fab8db800df3"
+      ],
+      "record": {
+        "title": "Agentic active Asset Administration Shell for circular manufacturing",
+        "source_url": "https://www.semanticscholar.org/paper/b1c75831b0219e8ec1bae8ca6bd5fab8db800df3",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.jmsy.2026.07.011",
+        "doi": "10.1016/j.jmsy.2026.07.011",
+        "authors": [
+          "Jian-Zhang Li",
+          "Qian Ruan",
+          "Dachuan Shi",
+          "Matthias Schneider",
+          "Olga Meyer",
+          "Michael Oberle",
+          "Li Yi",
+          "Fei Tao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tc.2026.3701443",
+      "identity_tokens": [
+        "id:DOI:10.1109/tc.2026.3701443",
+        "title:gacerm granularityaware and memorycentric coordination for multitenant deep learning",
+        "url:https://www.semanticscholar.org/paper/e88883877777a39a174772c654a80a7cac2a31ae"
+      ],
+      "record": {
+        "title": "GACER-M: Granularity-Aware and Memory-Centric Coordination for Multi-Tenant Deep Learning",
+        "source_url": "https://www.semanticscholar.org/paper/e88883877777a39a174772c654a80a7cac2a31ae",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "Multi-tenant computing, which executes multiple neural networks on a single GPU, is essential for maximizing hardware utilization in both cloud and edge environments. However, effective co-location faces a fundamental trade-off between utilization and safety. On one hand, the diverse computing patterns of concurrent models lead to resource fragmentation, requiring fine-grained scheduling to improve throughput. On the other hand, modern workloads (especially Generative AI) introduce strict memory constraints: their dynamic memory growth requires rigid reservation to prevent Out-Of-Memory (OOM) crashes, often leaving valuable resources idle but inaccessible to other tenants. Existing solutions struggle to balance these two sides: static partitioning ensures safety but limits utilization, while aggressive fine-grained scheduling boosts speed but risks system instability. To address this, we propose <bold><italic>GACER-M</italic></bold>, a unified resource coordination framework that harmonizes fine-grained computing with strict memory governance. Unlike previous approaches that sacrifice speed for safety, <italic>GACER-M</italic> achieves the best of both worlds via a tiered strategy: (1) A granularity-aware spatial mechanism that minimizes computational residue via operator splitting, strictly regulated by a cost-benefit guardrail to prevent memory bloat; (2) A memory-driven temporal coordination technique that segments dynamic workloads to safely inject concurrent tasks into resource gaps. <italic>GACER-M</italic> consistently achieves <bold>1.35</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq1-3701443.gif\"/></alternatives></inline-formula><inline-formula><tex-math notation=\"LaTeX\">$\\sim$</tex-math><alternatives><mml:math><mml:mo>∼</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq2-3701443.gif\"/></alternatives></inline-formula><bold>1.67</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq3-3701443.gif\"/></alternatives></inline-formula> <bold>speedup</bold> in compute-bound scenarios compared to state-of-the-art works; furthermore, in memory-critical scenarios, it delivers <bold>1.33</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq4-3701443.gif\"/></alternatives></inline-formula> <bold>higher effective capacity</bold> and <bold>1.4</bold><inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><inline-graphic xlink:href=\"chen-ieq5-3701443.gif\"/></alternatives></inline-formula> <bold>aggregate throughput</bold> while ensuring strict memory safety.",
+        "canonical_id": "DOI:10.1109/TC.2026.3701443",
+        "doi": "10.1109/TC.2026.3701443",
+        "authors": [
+          "Yongbo Yu",
+          "Fuxun Yu",
+          "Jia-Qi Yang",
+          "Xiuzhen Cheng",
+          "Chenchen Liu",
+          "Xiang Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tmc.2026.3697502",
+      "identity_tokens": [
+        "id:DOI:10.1109/tmc.2026.3697502",
+        "title:calsi contextaware layer skipping inference for ondevice llm serving",
+        "url:https://www.semanticscholar.org/paper/b55f24c3e3257011b8dc6ea308c4f54242ab7e53"
+      ],
+      "record": {
+        "title": "CALSI: Context-Aware Layer Skipping Inference for On-Device LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/b55f24c3e3257011b8dc6ea308c4f54242ab7e53",
+        "year": 2026,
+        "published": "2026-10-01",
+        "abstract": "The large language model (LLM) based on the Transformer architecture and its derived various applications have greatly changed people’s lives. Considering some concerns such as privacy and network conditions, deploying LLM on smart devices has gradually become a research focus. In order to reduce the huge computation and storage overhead of LLMs, many works have studied model compression technology to reduce the model computation and parameter amount, thereby reducing the inference latency. This paper analyzes the characteristics of the on-device LLM service, including small batch size and latency focus, etc. We find the inefficiency of existing model compression technologies and new optimization opportunities, i.e., allocating different layers for different input tokens based on the task QoS requirements. Then we propose CALSI, a context-aware layer skipping LLM inference system for on-device serving. In the offline profiling phase, we analyze the importance of different layers of the model to different tokens and train a lightweight gated predictor. Then, we map the latency QoS requirements of different tasks with the predictor threshold. During the online inference phase, we adaptively allocate the layers that need to be computed to the specific token and design a KV cache delayed computation management mechanism to solve the KV cache missing problem caused by layer skipping. Experiments on real devices show that CALSI can achieve up to 24.1% latency reduction. CALSI has good generalization ability on various models and datasets and is compatible with other existing complementary optimization techniques.",
+        "canonical_id": "DOI:10.1109/TMC.2026.3697502",
+        "doi": "10.1109/TMC.2026.3697502",
+        "authors": [
+          "Pu-Han Luo",
+          "Mu Yuan",
+          "Ning-Kang Zhang",
+          "Rui-Guang Zhong",
+          "Jun-Yang Zhang",
+          "Cheng-Chen Hu",
+          "Xiangyang Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3831586.3838145",
+      "identity_tokens": [
+        "id:DOI:10.1145/3831586.3838145",
+        "title:exploring the design space of isolation mechanisms",
+        "url:https://www.semanticscholar.org/paper/cd878d204874afc44db613e30597df1b823df743"
+      ],
+      "record": {
+        "title": "Exploring the Design Space of Isolation Mechanisms",
+        "source_url": "https://www.semanticscholar.org/paper/cd878d204874afc44db613e30597df1b823df743",
+        "year": 2026,
+        "published": "2026-09-28",
+        "abstract": "Processes, containers, and virtual machines (VMs) offer different trade-offs between performance, isolation, and resource sharing. Yet, they represent just three points in a vast design space. Developers repeatedly introduce ad-hoc isolation mechanisms to tune these trade-offs for specific deployments, but there is no systematic way to explore the design space and derive mechanisms that satisfy given security and performance goals. We introduce IsoSearch, a technique for exploring the isolation mechanism design space to find one that satisfies the goals and constraints of a specific deployment scenario. IsoSearch builds on OSmosis [4], our prior model of isolation, which represents protection domains, resources, and their relationships as a graph. A developer begins with a starting mechanism and its representation as an OSmosis graph and specifies both a set of functional constraints (e.g., these two protection domains must both be able to write to this file) and an optimization target (e.g., minimize the amount of memory shared between the two domains). IsoSearch then navigates the design space by applying valid graph transitions to generate candidate mechanisms, scores each mechanism, and selects the most promising ones for further exploration. The search terminates when all active candidates satisfy the constraints and goals or when score improvement plateaus. We demonstrate the efficacy of our approach through five case studies, ranging from resource privatization to protecting a database's private key.",
+        "canonical_id": "DOI:10.1145/3831586.3838145",
+        "doi": "10.1145/3831586.3838145",
+        "authors": [
+          "Sidhartha Agrawal",
+          "Shaurya Patel",
+          "Linh Pham",
+          "Arya Stevinson",
+          "Ilias Karimalis",
+          "Hugo Lefeuvre",
+          "Aastha Mehta",
+          "Reto Achermann",
+          "Margo I. Seltzer"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832886",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832886",
+        "title:ihslm intrabatch hybrid scheduling and layer migration for vlm pipeline inference acceleration on edge devices",
+        "url:https://www.semanticscholar.org/paper/a09dfff523af235e18d6bc69dbe28aa58ce880e4"
+      ],
+      "record": {
+        "title": "IHS-LM: Intra-batch Hybrid Scheduling and Layer Migration for VLM Pipeline Inference Acceleration on Edge Devices",
+        "source_url": "https://www.semanticscholar.org/paper/a09dfff523af235e18d6bc69dbe28aa58ce880e4",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Vision-Language Models (VLMs) are increasingly deployed via distributed inference to perform visual perception and semantic reasoning tasks on edge devices. Pipeline parallelism is well-suited for collaborative edge inference, as it partitions models across devices with minimal communication between adjacent stages. However, pipeline-parallel inference on edge devices faces two challenges. First, prior intra-batch scheduling methods determine the prefill–decode token ratio without considering available KV cache capacity and token distribution, resulting in intra-batch workload imbalance. Second, static model partitioning methods assign layers to devices without accounting for dynamic bandwidth variations, leading to load imbalance across pipeline stages. These imbalances result in pipeline bubbles and increased inference latency. To address these challenges, we present IHS-LM, a low-latency pipeline-parallel inference framework for VLM serving on heterogeneous edge devices. Specifically, to alleviate intra-batch workload imbalance, IHS-LM introduces an Intra-Batch Hybrid Scheduling method (IHS), which dynamically adjusts the prefill–decode token ratio based on token distribution and available KV cache capacity. To mitigate load imbalance across stages, IHS-LM proposes a Bandwidth Aware Model Layer Migration method (BAMLM), which detects imbalance caused by dynamic bandwidth and resolves imbalance through fine-grained layer migration. We compare IHS-LM with existing pipeline-parallel inference methods in high-load and heterogeneous bandwidth settings. Experiments show that IHS-LM achieves the lowest inference latency, while preserving model accuracy.",
+        "canonical_id": "DOI:10.1145/3832810.3832886",
+        "doi": "10.1145/3832810.3832886",
+        "authors": [
+          "Yun Li",
+          "Tian-Fu Pang",
+          "Zhi-Yu Cai",
+          "Zhen-Xiang Pan",
+          "Ying-Chi Mao",
+          "Jie Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832894",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832894",
+        "title:crosslayer performance analysis of singlegpu large language model inference",
+        "url:https://www.semanticscholar.org/paper/64b1253f0b492e5a855336514fc0457ad35219eb"
+      ],
+      "record": {
+        "title": "Cross-Layer Performance Analysis of Single-GPU Large Language Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/64b1253f0b492e5a855336514fc0457ad35219eb",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "The performance of single-GPU LLM inference is characterized by strong cross-layer interactions spanning model architecture, runtime scheduling, operator execution, and GPU microarchitecture. Unfortunately, a unified understanding of single-GPU LLM inference bottlenecks is still lacking due to two limitations: the lack of traceable cross-layer attribution and the static characterization of KV-cache usage. To this end, we present a cross-layer analysis approach for single-GPU LLM inference that jointly characterizes latency and memory behavior. However, this requires addressing two challenges: cross-layer attribution and dynamic KV-cache characterization. To address the two challenges, we employ four-layer joint profiling for cross-layer attribution and introduce a logical KV computation metric for dynamic KV-cache characterization, respectively. Finally, we systematically characterize representative dense and Mixture-of-Experts (MoE) models under diverse workloads on a single A100 GPU, identify key bottlenecks across inference phases and architectures, and reveal opportunities for further optimization.",
+        "canonical_id": "DOI:10.1145/3832810.3832894",
+        "doi": "10.1145/3832810.3832894",
+        "authors": [
+          "Zong-Xing Zhao",
+          "Xiaqing Li",
+          "Ze-Kai Meng",
+          "Zheng-Jun Fu",
+          "Qian Wang",
+          "Yan-Ling Zhang",
+          "Yidong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832814",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832814",
+        "title:ssqt a hardwarefriendly fusion compression framework of structured sparsification and sensitivitydriven quantization for largescale language models",
+        "url:https://www.semanticscholar.org/paper/0b010b82f5fb03e74943d7486f9ea2da1edb828e"
+      ],
+      "record": {
+        "title": "SSQT: A Hardware-Friendly Fusion Compression Framework of Structured Sparsification and Sensitivity-Driven Quantization for Large-Scale Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/0b010b82f5fb03e74943d7486f9ea2da1edb828e",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Large language models (LLMs) are often memory-bandwidth bound during autoregressive decoding, so reducing weight storage does not automatically produce parallel speedup when the compressed representation is irregular. We present SSQT, a post-training framework that jointly applies hardware-aligned structured sparsification, sensitivity-driven outlier preservation, and sparse-aligned low-bit group quantization. SSQT estimates parameter importance from calibration data with a diagonal empirical-Fisher approximation, avoiding construction of the full Hessian, and, in the default 4-bit configuration, stores fewer than 1% high-sensitivity weights on a separate FP16 residual path. The remaining weights are packed in regular attention blocks and contiguous feed-forward-network channel groups; quantization metadata is secondarily quantized and decoded inside the matrix-multiplication tile rather than by globally expanding the model to FP16. Experiments on Llama 2 and Falcon models report task quality, calibration cost, packed storage, latency regularity, cross-GPU results, and hardware counters. In the default 4-bit configuration, SSQT uses 24.3% of the FP16 model-memory footprint on Llama 2-13B, keeps the relative WikiText2 perplexity increase at 4.8%, and improves the per-sequence decoding rate by up to 2.33 × on the A100 tensor-parallel configuration. On Llama 2-13B, Tensor Core utilization rises from 28.7% to 62.4%, memory-bandwidth utilization falls from 92.3% to 41.8%, and pipeline stalls fall from 34.6% to 11.0%. These results show that compression and execution layout must be co-designed to convert model-size reduction into practical parallel inference acceleration.",
+        "canonical_id": "DOI:10.1145/3832810.3832814",
+        "doi": "10.1145/3832810.3832814",
+        "authors": [
+          "Qian-Sheng Song",
+          "Guolin Tang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832866",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832866",
+        "title:asymflow enabling longcontext llm serving via cpugpu prefilldecode disaggregation",
+        "url:https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9"
+      ],
+      "record": {
+        "title": "AsymFlow: Enabling Long-Context LLM Serving via CPU-GPU Prefill-Decode Disaggregation",
+        "source_url": "https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Driven by cost and privacy constraints, many organizations deploy large language model (LLM) inference on local CPU-GPU servers. For long-context requests, the key-value (KV) cache grows linearly with sequence length and can rapidly exhaust GPU memory, reducing both the maximum supported context and request concurrency. Meanwhile, we observe that GPU utilization is high during the compute-heavy prefill phase but drops sharply during the memory-bound decode phase, where modern CPUs equipped with matrix units can achieve competitive attention throughput. We present AsymFlow, a prefill-decode disaggregated serving system that runs prefill on the GPU and decode on the CPU. AsymFlow (1) streams per-layer KV states through a shared-memory KV pool to overlap KV transfer with GPU prefill, (2) employs a task-aware online dispatcher that jointly accounts for pipeline queueing and KV capacity to prevent GPU OOM and idle bubbles, and (3) accelerates CPU decode attention with AMX. Implemented on SGLang and evaluated on a CPU-GPU platform, AsymFlow serves 32K-context workloads that can trigger OOM on a GPU-only baseline, improves throughput by 1.08–1.25 × over the GPU-only baseline, and by 1.32-2.49 × over a state-of-the-art KV-offloading method; the gains increase as GPU memory becomes tighter.",
+        "canonical_id": "DOI:10.1145/3832810.3832866",
+        "doi": "10.1145/3832810.3832866",
+        "authors": [
+          "Jun-Wen Zhang",
+          "Wei-Ling Yang",
+          "Jian-Bin Fang",
+          "En-Da Yu",
+          "De-Zun Dong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832840",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832840",
+        "title:rpsc robust llm scheduling by tolerating prediction inaccuracy and mitigating tail latency",
+        "url:https://www.semanticscholar.org/paper/d6928989c68496141ed1c5c207f742bc9cad96db"
+      ],
+      "record": {
+        "title": "RPSC: Robust LLM Scheduling by Tolerating Prediction Inaccuracy and Mitigating Tail Latency",
+        "source_url": "https://www.semanticscholar.org/paper/d6928989c68496141ed1c5c207f742bc9cad96db",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "High-concurrency LLM serving requires inference systems to balance execution efficiency with stringent performance guarantees. While Shortest Remaining Processing Time (SRPT) is theoretically optimal for minimizing average job completion time, its practical application is hindered by the autoregressive nature of generative inference. Specifically, inherent length prediction inaccuracies trigger frequent, redundant preemptions, leading to excessive KV Cache swapping and recomputation penalty. Moreover, strict SRPT scheduling inherently sacrifices tail latency, failing to meet consistent SLOs. We first establish an analytical system model to characterize LLM inference through task execution states, compute and memory constraints, and preemption penalty, providing a theoretical foundation for analyzing performance trade-offs. Based on this foundation, we propose Resident Protection & Sojourn Compensation (RPSC), a robust scheduling algorithm designed to tolerate prediction inaccuracy and mitigate tail latency. RPSC introduces two synergistic mechanisms: (1) Resident Protection (RP), which shields running tasks from inaccuracy-driven preemptions to minimize redundant KV Cache swapping and recomputation overhead; and (2) Sojourn Compensation (SC), which dynamically reconciles the priority distribution based on sojourn time to prevent starvation and mitigate tail latency. Experimental results demonstrate that RPSC reduces redundant preemptions by 33.6% and improves P99 JCT by 20.3% compared to SRPT. Our work provides an efficient and robust solution for managing high-concurrency inference workloads in production environments.",
+        "canonical_id": "DOI:10.1145/3832810.3832840",
+        "doi": "10.1145/3832810.3832840",
+        "authors": [
+          "Guo-Sheng Xiao",
+          "Xuan Mo",
+          "Jia-Lun Li",
+          "Weigang Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832854",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832854",
+        "title:accesm packedtotal exact inference for cpu esm2 embedding",
+        "url:https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6"
+      ],
+      "record": {
+        "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding",
+        "source_url": "https://www.semanticscholar.org/paper/2d5863392ba0bdc1574da07353fbe9085a69e1a6",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Protein language models such as ESM2 are now common tools in biology, and a common task is to compute pooled embeddings for large sequence sets. In many labs, this workload runs on shared CPU servers rather than GPUs, making CPU inference an important systems problem. Existing CPU stacks are general-purpose: they are not built for repeated packed ESM2 embedding inference on variable-length queues, so they incur extra overhead on the FP32 path and waste work on padding. We present AccESM, a CPU runtime for this setting. AccESM treats packed-total requests as the execution unit and uses this same view to organize reusable state, segmented attention, fused RoPE, layout handling, prewarm, and scheduling while keeping approximation-free FP32 inference as the default path. On a dual-socket Xeon server, AccESM improves steady-state latency over torch.compile by 1.32 × at sequence length 512 and 1.50 × at sequence length 1024. On a fair mixed-length queue, it improves throughput by up to 3.52 ×. The backend contributes a 1.37 × advantage even under globally sorted input where padding waste is minimized for all backends; the remaining gain comes from the runtime staying stable under arrival order while torch.compile degrades from padding. Fixed-thread reruns on an Intel Core i9-14900K and an AMD EPYC 9684X further show that the gains are not unique to one host.",
+        "canonical_id": "DOI:10.1145/3832810.3832854",
+        "doi": "10.1145/3832810.3832854",
+        "authors": [
+          "Wen-Hao Sun",
+          "Pan-Pan Cui",
+          "Yiqi Liu",
+          "Wan-Yu Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832859",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832859",
+        "title:crossserve crosslayer scheduling for slo optimization in multitenant llm serving",
+        "url:https://www.semanticscholar.org/paper/43d9c475fecdcadc273a07d0d8ddd02d2c4e0aa4"
+      ],
+      "record": {
+        "title": "CrossServe: Cross-Layer Scheduling for SLO Optimization in Multi-Tenant LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/43d9c475fecdcadc273a07d0d8ddd02d2c4e0aa4",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "The deployment of Large Language Models (LLMs) as multi-tenant cloud services is now widespread, but maintaining high Service Level Objective (SLO) attainment across diverse tenants remains challenging. Current serving systems focus on a single layer of the stack, either using iteration-level batching or coarse-grained instance-level routing. This approach causes significant SLO violations during bursty workloads and struggles to balance throughput with differentiated tenant priorities. The core issue lies in intra-instance schedulers lacking awareness of the global cluster state, while cluster-level routers do not account for fine-grained, per-iteration execution behavior within each GPU. We introduce CrossServe, a cross-layer scheduling framework that jointly optimizes request routing, adaptive micro-batching, and tenant-weighted preemption to maximize SLO attainment in multi-tenant LLM serving. CrossServe integrates three complementary layers: (1) an online, lightweight length classifier that separates requests to reduce Head-of-Line (HoL) blocking; (2) an SLO-aware adaptive micro-batching system that dynamically tunes prefill chunk sizes based on the real-time Time-Per-Output-Token (TPOT) slack of decoding requests; and (3) a global routing and preemption layer that distributes load across GPU instances while using tenant weights when reclaiming resources under overload. We evaluate CrossServe with BurstGPT-derived trace replay on a 32-GPU cluster. Compared with vLLM, Sarathi-Serve, and SOLA, CrossServe increases overall SLO attainment by 53, 29, and 14 percentage points respectively (from 42% to 95%, from 66% to 95%, and from 81% to 95%) while sustaining high throughput. In the ablation workload, removing global routing raises P99 TTFT from 185 ms to 410 ms; the full system therefore reduces this tail latency by 54.9% relative to that ablation and improves the observed throughput–SLO tradeoff.",
+        "canonical_id": "DOI:10.1145/3832810.3832859",
+        "doi": "10.1145/3832810.3832859",
+        "authors": [
+          "Jia-He Li",
+          "Jia-Bin Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832922",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832922",
+        "title:heterogeneous slo guaranteed multiresourceaware batching in llm serving",
+        "url:https://www.semanticscholar.org/paper/2ecd49d0fb5c5d53451ca6a9efde7b14fa32c650"
+      ],
+      "record": {
+        "title": "Heterogeneous SLO Guaranteed Multi-Resource-Aware Batching in LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/2ecd49d0fb5c5d53451ca6a9efde7b14fa32c650",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "In this paper, we study a mixed-prompt scenario—where both short and long prompts coexist—in an LLM inference serving system that supports diverse applications with heterogeneous iteration-time SLOs. To improve throughput for long prompts, prior work divides them into chunks and batches requests or chunks to meet the token budget to fully utilize GPU compute resource. Our measurement analysis shows that it fails to meet heterogeneous iteration-time SLOs or fully utilize both GPU compute and memory resources. Also, delayed KV cache release from processing multiple long prompts may reduce throughput. To address the limitations, based on our findings, we propose a heterogeneous SLO guaranteed Multi-Resource-aware batching system (MuRa). MuRa orders queued requests by SLOs, enabling it to prioritize tight-SLO requests and batch those with similar SLOs to improve throughput. It selectively chooses queued requests to maximize both compute and memory utilizations, and processes all chunks from one prompt before moving to the next to enable earlier KV cache release. Trace-driven real experiments demonstrate that MuRa achieves 1.42-11.21 × higher throughput, 1.43-13.71 × higher goodput, 37-90% higher SLO attainment, and 1.61-12.22 × lower response latency compared to the state-of-the-art approaches. It achieves performance near Oracle, which optimally maximizes goodput.",
+        "canonical_id": "DOI:10.1145/3832810.3832922",
+        "doi": "10.1145/3832810.3832922",
+        "authors": [
+          "Hai-Ying Shen",
+          "Tanmoy Sen",
+          "Yuxiong He"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832810.3832827",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832810.3832827",
+        "title:reliefserve relieving gpu pressure in multimodel serving via selective cpu escape",
+        "url:https://www.semanticscholar.org/paper/30f2fe44afe7a63e4a4e20c8f5083c129e09ae80"
+      ],
+      "record": {
+        "title": "ReliefServe: Relieving GPU Pressure in Multi-Model Serving via Selective CPU Escape",
+        "source_url": "https://www.semanticscholar.org/paper/30f2fe44afe7a63e4a4e20c8f5083c129e09ae80",
+        "year": 2026,
+        "published": "2026-09-27",
+        "abstract": "Sharing GPUs among many deep learning models is crucial for cost-efficient inference, but bursty multi-model workloads can easily overwhelm GPU capacity, causing severe tail latency and SLO goodput drops. Existing solutions—whether traffic-aware scheduling or hardware-level resource partitioning—can only juggle contention inside the GPU pool and cannot relieve pressure when many models spike at once. We present ReliefServe, which leverages idle CPUs as interference relief paths to offload appropriate models from oversubscribed GPUs. The key is that migrating CPU-tolerant models to CPU during bursts can reduce overall GPU interference more than the local slowdown incurred, thus protecting performance-critical GPU models even with slower CPU execution. ReliefServe employs three mechanisms: (1) Escape Profiling, to identify viable offload candidates using each model’s CPU tolerance, GPU criticality, interference, and migration cost; (2) Pressure-Driven Escape Control, to monitor GPU pressure and trigger offload only if the projected interference reduction outweighs all costs; and (3) Relief-Oriented Cache Preparation, to proactively warm up high-value candidates in CPU memory for responsive migration. In a 12-server testbed with real workloads, ReliefServe reduces average inference latency by up to 27.05% and improves goodput by 39.74% under extreme burst conditions over state-of-the-art.",
+        "canonical_id": "DOI:10.1145/3832810.3832827",
+        "doi": "10.1145/3832810.3832827",
+        "authors": [
+          "Shi-Jie Peng",
+          "Yanying Lin",
+          "Chengzhi Lu",
+          "Shuai-Peng Wu",
+          "Cheng-Zhong Xu",
+          "Ke-Jiang Ye"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:1b6728970fc4571a4a8bea3d10a05cd087ae2e5b8cd8a8643f41c9f2fa820f6d",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

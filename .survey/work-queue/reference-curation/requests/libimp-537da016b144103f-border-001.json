@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-537da016b144103f-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2506.18145",
+  "reason": "MambaのConv/Gate/Out射影を共有ルータで疎な線形射影エキスパートに置換するモデル構造であり、各トークンで8専門家のうち1つだけを活性化する。論文は1.3B稼働/10B総パラメータ、SlimPajama 20Bトークンでの困惑度、Sambaの4K順伝播演算量4.74T対6.13T（約23%減）と訓練処理量を評価する。しかし実機の推論遅延・復号処理量・メモリ階層・専門家通信の評価は示さず、主目的はモデル表現力と事前学習時の疎拡張である。推論システムへの直接的な実証貢献が不足するためborderlineとする。",
+  "title": "Routing Mamba: Scaling State Space Models with Mixture-of-Experts Projection",
+  "identity_tokens": [
+    "arxiv:2506.18145",
+    "doi:10.48550/arxiv.2506.18145"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-537da016b144",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

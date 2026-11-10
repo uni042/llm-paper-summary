@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f18d6eb5ce52b41f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.21260",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.21260",
+    "identity_tokens": [
+      "arXiv:2605.21260"
+    ],
+    "reason": "一次本文はCoT reasoning riskをoracle-trajectory benefitとtrajectory-mismatch costへ分解し、stability条件で累積誤差のbounded/linear/exponential regimesを理論化する。実LLMでの計算削減methodやruntime評価はなく、test-time reasoning cost理論との概念的接点に留まる。",
+    "first_checked_at": "2026-10-06T10:31:47+00:00",
+    "last_checked_at": "2026-10-06T10:31:47+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On the Cost and Benefit of Chain of Thought: A Learning-Theoretic Perspective"
+  },
+  "processed_at": "2026-10-06T10:31:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f18d6eb5ce52",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

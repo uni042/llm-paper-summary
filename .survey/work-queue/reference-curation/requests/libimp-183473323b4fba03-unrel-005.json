@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-183473323b4fba03-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2506.02939",
+  "reason": "QKV activation圧縮の対象はLLM training memoryであり、abstractはtraining効率のみを扱う。",
+  "title": "QKV Projections Require a Fraction of Their Memory",
+  "identity_tokens": [
+    "arXiv:2506.02939",
+    "DOI:10.48550/arXiv.2506.02939"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+    "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+    "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+    "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+    "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+    "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+    "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-183473323b4f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

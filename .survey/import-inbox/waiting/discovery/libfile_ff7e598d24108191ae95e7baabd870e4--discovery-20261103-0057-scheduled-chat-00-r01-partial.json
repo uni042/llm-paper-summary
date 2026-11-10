@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261103-0057-scheduled-chat-00/r01",
+  "reference_main_sha": "d72d5f22a14a08a67250f269625062f336e7a8ea",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41073",
+      "identity_tokens": [
+        "arXiv:2610.41073"
+      ],
+      "title": "bf16 Rounding Silently Discards Most RL Policy Updates: A Hidden Training-Inference Mismatch and an Unbiased One-Line Fix",
+      "reason": "RL post-trainingでfp32 masterからbf16 rollout policyへ丸める際、Qwen3-1.7Bでは各stepで変更される配布重みが0.4〜0.5%にとどまり、policyが50〜150 step遅れると報告。Fair Castは確率的丸め/誤差帰還とserved-copy上のloss計算でこの乖離を抑える。推論エンジンを学習loop内で使う際の数値的一貫性に関連するが、主目的はRL学習品質であり、推論latency・throughput・GPUメモリの改善は示さないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41073",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:00:47+09:00",
+      "last_checked_at": "2026-11-03T01:00:47+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41525",
+      "identity_tokens": [
+        "arXiv:2610.41525"
+      ],
+      "title": "MemX: Memory-Aware Automatic Parallelism for Cross-Vendor Heterogeneous GPU Training",
+      "reason": "Megatron-LMの異種GPU学習を対象にiteration time、peak memory、GPU間メモリ不均衡を同時最適化する自動並列化。profilingとXGBoost予測で31,240構成を26.5秒で探索し、20GPU実測から40/60GPUへの拡張はsimulationと区別している。メモリ階層・heterogeneous GPU資源配置の手法は推論システムと隣接するが、実装・評価はtraining専用でLLM servingへの直接効果は未検証のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41525",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:00:47+09:00",
+      "last_checked_at": "2026-11-03T01:00:47+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41711",
+      "identity_tokens": [
+        "arXiv:2610.41711"
+      ],
+      "title": "Hierarchical Residuals: A Minimalist Decoupling of Residual Width from Compute Width",
+      "reason": "HiResはTransformerのblock内d次元計算とblock間D次元residual stateを分離し、境界でlearned read/write projectionを使用する。OLMoE-1B-7Bの500B token pretrainingでloss 0.0208改善、downstream accuracy +1.14pt、FLOPs効率1.30倍のfitted scaling lawを報告。モデル構造の計算幅・activation I/O削減は推論効率へ波及し得るが、要旨にdecode token/sやserving latency実測がなく学習評価が中心のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:00:47+09:00",
+      "last_checked_at": "2026-11-03T01:00:47+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

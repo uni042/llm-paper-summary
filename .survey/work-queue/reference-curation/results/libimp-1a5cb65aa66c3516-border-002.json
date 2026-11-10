@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1a5cb65aa66c3516-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.18357",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.18357",
+    "identity_tokens": [
+      "arXiv:2607.18357"
+    ],
+    "reason": "serving costに近接するが効率改善研究としてscope fitが弱いためborderline。",
+    "first_checked_at": "2026-10-05T10:11:49+00:00",
+    "last_checked_at": "2026-10-05T10:11:49+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "Decode-Time Grammars: Constrained LLM Generation over a Refinement Order of Grammar Fragments"
+  },
+  "processed_at": "2026-10-05T10:11:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1a5cb65aa66c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

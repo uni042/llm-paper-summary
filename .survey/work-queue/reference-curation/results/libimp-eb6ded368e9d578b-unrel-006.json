@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb6ded368e9d578b-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2109.00859",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2109.00859",
+    "identity_tokens": [
+      "arXiv:2109.00859"
+    ],
+    "reason": "identifier-aware pretrainingとbimodal generationでcode理解・生成品質を改善する事前学習研究。LLM推論runtime・memory・serving最適化を提案しない。",
+    "first_checked_at": "2026-10-04T21:43:57+00:00",
+    "last_checked_at": "2026-10-04T22:53:07+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
+    ],
+    "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation"
+  },
+  "processed_at": "2026-10-04T22:53:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb6ded368e9d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

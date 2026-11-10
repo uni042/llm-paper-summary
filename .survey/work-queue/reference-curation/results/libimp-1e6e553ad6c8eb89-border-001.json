@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e6e553ad6c8eb89-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tmc.2026.3668982",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tmc.2026.3668982",
+    "identity_tokens": [
+      "DOI:10.1109/tmc.2026.3668982"
+    ],
+    "reason": "要旨からは効率化との関係が強く示唆されるが、一次本文の取得に失敗し、Gen-AI対象モデル・機構・評価条件が確認できない。",
+    "first_checked_at": "2026-10-05T03:26:03+00:00",
+    "last_checked_at": "2026-10-05T03:26:03+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+    ],
+    "title": "Criticality-Aware Gen-AI Inference via Dynamic Step Control in Resource-Efficient Vehicular Computing"
+  },
+  "processed_at": "2026-10-05T03:26:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e6e553ad6c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

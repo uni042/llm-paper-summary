@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a49616f00dbff10f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.11655",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.11655",
+    "identity_tokens": [
+      "arXiv:2609.11655"
+    ],
+    "reason": "Primary abstract focuses on Muon optimizer stability during model training.",
+    "first_checked_at": "2026-10-05T03:08:04+00:00",
+    "last_checked_at": "2026-10-05T03:08:04+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training"
+  },
+  "processed_at": "2026-10-05T03:08:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a49616f00dbf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

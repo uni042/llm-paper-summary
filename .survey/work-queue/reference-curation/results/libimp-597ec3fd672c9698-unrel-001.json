@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-597ec3fd672c9698-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.24575",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.24575",
+    "identity_tokens": [
+      "arXiv:2505.24575"
+    ],
+    "reason": "NexusSum is a multi-agent narrative summarization framework assessed for summarization quality; the abstract reports no inference cost reduction.",
+    "first_checked_at": "2026-10-05T14:42:28+00:00",
+    "last_checked_at": "2026-10-05T14:42:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+    ],
+    "title": "NexusSum: Hierarchical LLM Agents for Long-Form Narrative Summarization"
+  },
+  "processed_at": "2026-10-05T14:42:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-597ec3fd672c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

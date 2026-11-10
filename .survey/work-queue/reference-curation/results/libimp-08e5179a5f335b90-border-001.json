@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-08e5179a5f335b90-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.02535",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.02535",
+    "identity_tokens": [
+      "arXiv:2601.02535"
+    ],
+    "reason": "ModeXは複数生成候補の意味類似度グラフを構築し、スペクトルクラスタリングで多数派に近い候補を選ぶ。追加の報酬モデルやLLM推論を必要とせず、Lite版は早期枝刈りで選択計算を削減するため推論費用に関連するが、主要対象は開放型生成の回答選択精度であり、GPUサービング、カーネル、キャッシュ最適化ではない。境界的として保留する。",
+    "first_checked_at": "2026-10-11T13:05:07+00:00",
+    "last_checked_at": "2026-10-12T17:43:49+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation"
+  },
+  "processed_at": "2026-10-12T17:43:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-08e5179a5f33",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

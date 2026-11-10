@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5acdcf23cf502e0f-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.iotcps.2026.04.002",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.iotcps.2026.04.002",
+    "identity_tokens": [
+      "DOI:10.1016/j.iotcps.2026.04.002"
+    ],
+    "reason": "The official publisher abstract route failed. The supplied title suggests a broad LLM-for-IoT review that may cover lightweight and edge deployment, but system-level inference relevance cannot be confirmed from the primary abstract.",
+    "first_checked_at": "2026-10-13T07:25:20+00:00",
+    "last_checked_at": "2026-10-13T07:25:20+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md",
+      "papers/inference/08-edge-on-device-llm-systems/2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md",
+      "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md",
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A review on LLMs for IoT ecosystem: State-of-the-art, lightweight models, use cases, key challenges, future directions"
+  },
+  "processed_at": "2026-10-13T07:25:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5acdcf23cf50",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-faa64d8c4a4982ef-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.07664",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.07664",
+    "identity_tokens": [
+      "arXiv:2310.07664"
+    ],
+    "reason": "題名は画像認識向けVision Transformerの注意パターンを高速化する研究であり、自己回帰LLMの推論・サービング、KVキャッシュ管理の実装を対象としていない。",
+    "first_checked_at": "2026-10-25T21:49:15+00:00",
+    "last_checked_at": "2026-10-25T21:49:15+00:00",
+    "linked_from": [],
+    "title": "Accelerating Vision Transformers Based on Heterogeneous Attention Patterns"
+  },
+  "processed_at": "2026-10-25T21:49:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-faa64d8c4a49",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

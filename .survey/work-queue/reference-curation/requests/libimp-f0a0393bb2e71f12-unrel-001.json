@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f0a0393bb2e71f12-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2605.08862",
+  "reason": "原著一次要旨が扱う最終目的はLLMの強化学習における同期ロールアウトの高速化である。データ並列ランク間の待ち時間に次の学習ロールアウトを先行生成し、投機的復号で利用して学習ステップの空転を減らす。要旨の1.8倍は学習ロールアウト処理量であり、推論サービングのオンライン要求処理、KVキャッシュ、モデル推論カーネル等への独立した寄与は要旨で確認できない。現行サーベイでは学習単独最適化が凍結対象のためunrelatedとする。",
+  "title": "BubbleSpec: Turning Long-Tail Bubbles into Speculative Rollout Drafts for Synchronous Reinforcement Learning",
+  "identity_tokens": [
+    "arxiv:2605.08862",
+    "doi:10.48550/arxiv.2605.08862"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f0a0393bb2e7",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

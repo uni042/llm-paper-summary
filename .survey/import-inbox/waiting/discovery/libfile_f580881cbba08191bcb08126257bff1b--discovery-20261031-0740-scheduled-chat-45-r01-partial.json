@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-0740-scheduled-chat-45/r01",
+  "reference_main_sha": "b2e7a0c64278b536ac77bc11749a0d17b3ac994f",
+  "round_status": "partial",
+  "target_count": 10,
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3805621.3807661",
+      "identity_tokens": [
+        "DOI:10.1145/3805621.3807661"
+      ],
+      "title": "Orbit: Efficient Agentic Inference using Priority Scheduling",
+      "reason": "著者公開のEuroMLSys 2026要旨を確認。エージェント型LLMの複数段階実行を、失敗可能性を無視するFCFSではなく軌跡情報で優先制御する。Orbit-stepは実行済みステップ数に反比例する優先度、Orbit-judgeは非同期LLM判定による正答見込みを利用。GAIA/Magentic-OneとGPT-OSS-120Bで、正答タスクの平均端点間遅延をvLLM FCFS比でそれぞれ11.2%、4.3%短縮。エージェント推論サービングのGPUスケジューリングへ直接貢献。",
+      "source_url": "https://rishisharma.netlify.app/publication/sharma-2026-orbit/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:40:36+09:00",
+      "last_checked_at": "2026-10-31T07:40:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 491,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TPAMI.2026.3723414",
+      "identity_tokens": [
+        "DOI:10.1109/TPAMI.2026.3723414"
+      ],
+      "title": "PolaFormer++: Polarity-Aware Linear Attention With Channel-Wise Spikiness",
+      "reason": "原著の公開要旨を収録したPubMed書誌を確認。極性分解で正負の類似性を扱い、チャネルごとの温度ベクトルを使うPaCS特徴写像で線形注意の鋭さを調整する。ただし主要評価は画像分類・検出・セグメンテーション・超解像・拡散生成・3D新規視点合成で、LLM推論サービングの実測貢献は要旨から確認できないため境界扱い。",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42606977/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:40:36+09:00",
+      "last_checked_at": "2026-10-31T07:40:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 492,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.22425",
+      "identity_tokens": [
+        "arXiv:2505.22425"
+      ],
+      "title": "Scaling Reasoning without Attention",
+      "reason": "arXiv一次要旨を確認。Mamba-2のstate-space duality層を使った自己注意不要の7B言語モデルと二段階の推論カリキュラムを提案し、自己注意と増大するKVキャッシュを使わず定量的に固定メモリ・定時間のトークン逐次更新を目指す。AIME24/25とLiveCodeBenchでGemma3-27B比の精度差も報告。推論アーキテクチャの計算・メモリ特性への直接貢献を確認。ただし実GPUでの端点間スループット優位は要旨に示されない。",
+      "source_url": "https://arxiv.org/abs/2505.22425",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:40:36+09:00",
+      "last_checked_at": "2026-10-31T07:40:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 494,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.10905",
+      "identity_tokens": [
+        "arXiv:2605.10905"
+      ],
+      "title": "TLX: Hardware-Native, Evolvable MIMW GPU Compiler for Large-scale Production Environments",
+      "reason": "arXiv原著の要旨・公開本文を確認。Triton拡張TLXはwarp group単位のMulti-Instruction Multi-Warpモデルで、異なるwarp群の役割分担、ローカルメモリ管理、非同期データ移動、クラスタ制御を明示する。生産環境の学習・推論カーネルでの導入と既存最適実装との競争力を報告。LLM固有の単一モデル改善ではないが、推論カーネル実装・GPUランタイムに直接関わる基盤技術。",
+      "source_url": "https://arxiv.org/abs/2605.10905",
+      "body_check": "primary_abstract_and_selected_body_screen",
+      "first_checked_at": "2026-10-31T07:40:36+09:00",
+      "last_checked_at": "2026-10-31T07:40:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 499,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.12500",
+      "identity_tokens": [
+        "arXiv:2511.12500"
+      ],
+      "title": "Iris: First-Class Multi-GPU Programming Experience in Triton",
+      "reason": "arXiv原著の要旨・本文を確認。IrisはPython/Triton内に対称メモリとタイル単位のGPU間通信を実装し、GEMMとAll-Scatterを単一ソースで重畳可能にする。8 GPU環境の通信マイクロベンチマークと複合GEMM通信でPyTorch/RCCL比最大1.79倍の高速化を報告。複数GPUでのLLM推論・エキスパート並列にも適用しうるGPU通信実行基盤だが、当該1.79倍はLLM全体の速度向上ではない。",
+      "source_url": "https://arxiv.org/abs/2511.12500",
+      "body_check": "primary_abstract_and_selected_body_screen",
+      "first_checked_at": "2026-10-31T07:40:36+09:00",
+      "last_checked_at": "2026-10-31T07:40:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

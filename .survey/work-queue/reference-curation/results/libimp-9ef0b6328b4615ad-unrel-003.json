@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9ef0b6328b4615ad-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.04630",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.04630",
+    "identity_tokens": [
+      "arXiv:2608.04630"
+    ],
+    "reason": "Acquiring channel state information (CSI) with manageable overhead has been essential to provide high-performance communication services, which is extremely challenging in the emerging sixth generation (6G) mobile network. Channel extrapolation has been proposed to infer complete CSI using a small portion of known CSI, its performance can be dramatically enhanced by artificial intelligence (AI). However, AI-driven channel extrapolation suffers from poor generalization across scenarios and high computational complexity, which is common in the broad research of AI and large language models. Inspired by the modular function of human brain, we propose a configurable AI-driven framework to achieve generalizable and computational efficient channel extrapolation from a modular perspective. We propose a three-stage framework, consisting of experts emergent, experts construction and experts selection. This framework assumes that CSI correlations can be captured by a small number of specialized functional modules (experts) that are activated differently across scenarios. Such modularity emerges in the experts emergent stage via pre-training using CSI data covering comprehensive scenarios. The neurons with similar weight-space patterns are grouped as experts in the experts construction stage. A lightweight gating function is added to control the routing of experts and is fine-tuned for each scenario in the experts selection stage. Simulation results demonstrate that the proposed three-stage framework reduce the channel extrapolation error and computational complexities dramatically by $1.1-19.1$ db and $38$ \\%, respectively. In addition, attributed to the proposed experts emergent and section modules, the proposed framework outperforms its counterpart mix-of-expert model dramatically in terms of channel extrapolation performance.",
+    "first_checked_at": "2026-10-05T09:02:42+00:00",
+    "last_checked_at": "2026-10-05T09:02:42+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+    ],
+    "title": "Generalizable and Computational Efficient Channel Extrapolation for 6G: A Configurable AI-Driven Framework Built from a Modular Perspective"
+  },
+  "processed_at": "2026-10-05T09:02:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ef0b6328b46",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

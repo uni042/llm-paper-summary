@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "request_id": "retire11-refresh-1b7941-20261025-52d4b3fd72",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2310.07188",
+  "title": "Adaptive Gating in Mixture-of-Experts based Language Models",
+  "reason": "一次本文の中心課題・評価はtrainingまたは一般model qualityであり、推論効率の直接機構・評価がない。 Paper-specific scope evidence: 混合専門家モデル（MoE）の学習時に、各トークンへ固定で2専門家を割り当てる代わりに、ルータの上位2専門家の確率差が閾値内なら2専門家、差が大きければ1専門家だけを割り当てる適応ゲート方式。上位1専門家の負荷分散制約と、2専門家が必要なトークンの比率を使うカリキュラム学習を組み合わせ、BERT、FSMT、BART、GPT-2、DialoGPTの6課題で学習時間を短縮しながら同程度の推論品質を維持する。原著の要旨では最大22.5%短縮とする一方、第4節の翻訳の記述には25.6%短縮とあり、数値が不一致である。実験は16専門家・閾値0.1を基本とし、実測利益の主対象は学習時間であって、既存MoEモデルを無学習で推論高速化する手法ではない。",
+  "identity_tokens": [
+    "id:arXiv:2310.07188"
+  ]
+}

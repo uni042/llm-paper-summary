@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2fe2f98b8aad4847-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.05225",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.05225",
+    "identity_tokens": [
+      "arXiv:2603.05225"
+    ],
+    "reason": "The paper is a broad AI+hardware vision roadmap, not a concrete LLM inference optimization. Its full text frames efficiency gains as long-term goals and action items rather than evaluated mechanisms.",
+    "first_checked_at": "2026-10-05T13:29:28+00:00",
+    "last_checked_at": "2026-10-05T13:29:28+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.18194-tract-rack-scale-cxl-shared-kv.md"
+    ],
+    "title": "AI+HW 2035: Shaping the Next Decade"
+  },
+  "processed_at": "2026-10-05T13:29:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2fe2f98b8aad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

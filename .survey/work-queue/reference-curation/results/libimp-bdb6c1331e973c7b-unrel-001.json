@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bdb6c1331e973c7b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.09473",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.09473",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.09473",
+      "arXiv:2601.09473"
+    ],
+    "reason": "一次要旨はモデルの統合演算子・統合順序・チェックポイントの選択を、モデル間の類似度特徴から予測する手法を扱う。LLMのモデル開発・チェックポイント合成を対象とし、オンライン推論の計算カーネル、サービング、メモリ階層、推論スケジューリング等の改善は要旨にない。現行サーベイの推論システム収録範囲から外れる。",
+    "first_checked_at": "2026-10-15T05:47:39+00:00",
+    "last_checked_at": "2026-10-15T05:47:39+00:00",
+    "linked_from": [],
+    "title": "SimMerge: Learning to Select Merge Operators from Similarity Signals"
+  },
+  "processed_at": "2026-10-15T05:47:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bdb6c1331e97",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

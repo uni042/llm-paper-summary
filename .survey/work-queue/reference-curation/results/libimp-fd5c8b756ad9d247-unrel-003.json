@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fd5c8b756ad9d247-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s41467-026-74209-3",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s41467-026-74209-3",
+    "identity_tokens": [
+      "DOI:10.1038/s41467-026-74209-3"
+    ],
+    "reason": "Protein abundance prediction from transcriptomics is a biological prediction task, not LLM inference.",
+    "first_checked_at": "2026-10-05T12:14:21+00:00",
+    "last_checked_at": "2026-10-05T12:14:21+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "T2Pdecoder enables protein-centric analyses from transcriptomic data"
+  },
+  "processed_at": "2026-10-05T12:14:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fd5c8b756ad9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

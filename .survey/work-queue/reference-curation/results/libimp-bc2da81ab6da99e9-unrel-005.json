@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc2da81ab6da99e9-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.09187",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.09187",
+    "identity_tokens": [
+      "arXiv:2608.09187"
+    ],
+    "reason": "The translation system report studies recoverability and output validation after API failures; its metrics concern correctness/recovery and tests, not reduced inference cost or latency.",
+    "first_checked_at": "2026-10-05T08:44:31+00:00",
+    "last_checked_at": "2026-10-05T08:44:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+      "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
+    ],
+    "title": "Failure-Aware Long-Form Translation: Design and Implementation of a Recoverable LLM Translation System"
+  },
+  "processed_at": "2026-10-05T08:44:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc2da81ab6da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

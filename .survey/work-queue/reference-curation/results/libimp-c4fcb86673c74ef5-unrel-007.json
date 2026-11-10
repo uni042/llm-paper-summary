@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4fcb86673c74ef5-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/micro.2016.7783721",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/micro.2016.7783721",
+    "identity_tokens": [
+      "DOI:10.1109/micro.2016.7783721"
+    ],
+    "reason": "GPU/CPU memoryを併用して大規模DNNを学習するactivation virtualizationが主題で、推論ではなくtraining memory管理を対象とする。",
+    "first_checked_at": "2026-10-04T05:27:33+00:00",
+    "last_checked_at": "2026-10-04T05:27:33+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
+    ],
+    "title": "vDNN: Virtualized deep neural networks for scalable, memory-efficient neural network design"
+  },
+  "processed_at": "2026-10-04T05:27:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4fcb86673c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

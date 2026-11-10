@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d13d9bcb5aaec419-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/micro61859.2024.00088",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/micro61859.2024.00088",
+    "identity_tokens": [
+      "DOI:10.1109/micro61859.2024.00088"
+    ],
+    "reason": "GPU uncoreのcovert/side-channelを調査するhardware security研究。LLM推論最適化ではない。",
+    "first_checked_at": "2026-10-05T14:42:31+00:00",
+    "last_checked_at": "2026-10-05T14:42:31+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md"
+    ],
+    "title": "Veiled Pathways: Investigating Covert and Side Channels Within GPU Uncore"
+  },
+  "processed_at": "2026-10-05T14:42:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d13d9bcb5aae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

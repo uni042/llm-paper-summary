@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b5c40194f40295a-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.17011",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.17011",
+    "identity_tokens": [
+      "SemanticScholar:88d45265e01b179314d3d2aa7c206087682e3efd",
+      "arXiv:2512.17011"
+    ],
+    "reason": "The paper slims and quantizes an equivariant jet-tagging transformer to save compute in particle-physics analysis; the hardware/model-compression connection is plausible, but the abstract does not establish transfer to LLM/VLM inference.",
+    "first_checked_at": "2026-10-13T09:35:40+00:00",
+    "last_checked_at": "2026-10-13T09:35:40+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md",
+      "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Economical Jet Taggers -- Equivariant, Slim, and Quantized"
+  },
+  "processed_at": "2026-10-13T09:35:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b5c40194f40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

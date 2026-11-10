@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.00413",
+      "arxiv_id": "2511.00413",
+      "title": "Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse",
+      "source_url": "https://arxiv.org/abs/2511.00413",
+      "priority": 89,
+      "reason": "Systems work exploiting shared-prefix reuse across branching agentic trajectories, directly relevant to KV/prefix-cache reuse."
+    },
+    {
+      "canonical_id": "SemanticScholar:e3397bfa8a64c83dc88c08dcfab676c8255d6a1b",
+      "title": "Reimagining LLM Inference Infrastructure with Memory-Centric KV Cache Servers",
+      "source_url": "https://www.semanticscholar.org/paper/e3397bfa8a64c83dc88c08dcfab676c8255d6a1b",
+      "priority": 94,
+      "reason": "Memory-centric KV-cache server architecture directly aligned with hierarchical/disaggregated inference memory systems."
+    },
+    {
+      "canonical_id": "SemanticScholar:8b1a63cf48c6e1614cf2e0be48b458f0b1157089",
+      "title": "KAIROX: Adaptive GPU–CPU Hybrid LLM Inference via Online Neuron Balancing",
+      "source_url": "https://www.semanticscholar.org/paper/8b1a63cf48c6e1614cf2e0be48b458f0b1157089",
+      "priority": 95,
+      "reason": "Adaptive GPU–CPU hybrid LLM inference directly relevant to CPU offload and heterogeneous-memory execution."
+    }
+  ],
+  "discovery_precheck": {
+    "request_id": "disc-take-scheduled-chat-00-a7d3c1-r10",
+    "result_path": ".survey/work-queue/discovery-precheck/results/disc-take-scheduled-chat-00-a7d3c1-r10.json",
+    "receipt": "sha256:c795c3b78cfde3a8ad605989c66f5b4cdf8b9c3a57a1f4158b5ee419fb4227f0"
+  },
+  "discovery_stats": {
+    "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
+    "round": "disc-take-scheduled-chat-00-a7d3c1-r10",
+    "axis": "forward citations of LMCache enterprise-scale KV cache layer",
+    "candidate_count": 16,
+    "accepted_count": 3,
+    "round_submission_index": 1,
+    "round_submission_count": 1,
+    "citation_direction": "forward"
+  }
+}

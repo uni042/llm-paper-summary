@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e55f4d78bc9fa01-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.16014",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.16014",
+    "identity_tokens": [
+      "arXiv:2404.16014"
+    ],
+    "reason": "一次要旨はinterpretability向けgated sparse autoencoderの辞書学習を扱い、LLM serving/inference最適化ではない。",
+    "first_checked_at": "2026-10-05T01:38:39+00:00",
+    "last_checked_at": "2026-10-05T01:38:39+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2507.08771-blockffn-towards-end-side-acceleration-friendly-mixture-of-experts.md"
+    ],
+    "title": "Improving Dictionary Learning with Gated Sparse Autoencoders"
+  },
+  "processed_at": "2026-10-05T01:38:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e55f4d78bc9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

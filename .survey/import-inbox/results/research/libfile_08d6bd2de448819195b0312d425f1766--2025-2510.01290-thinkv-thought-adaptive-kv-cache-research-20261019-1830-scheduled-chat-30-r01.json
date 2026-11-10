@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "d31de71e2435bcda148550d902173eb9ee24a1b993fa2e6c58470e92e9c6fcc7",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_08d6bd2de448819195b0312d425f1766--2025-2510.01290-thinkv-thought-adaptive-kv-cache-research-20261019-1830-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2510.01290",
+  "worker_completed_at": "2026-10-19T18:30:00+09:00",
+  "worker_run_key": "20261019-1830-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 9504,
+    "body_paragraphs": 48,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 773,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-19T11:30:54+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1c8a1c7a70074cfd4ce2037224fd94b87f7a8eb514a3c827f2a7066b685db532",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_e2afea3a96988191bd955c517b999db6--2026-2609.24298-kv-cobra-cooptimized-bit-rank-research-20261019-0700-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2609.24298",
+  "worker_completed_at": "2026-10-19T07:00:00+09:00",
+  "worker_run_key": "20261019-0700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5668,
+    "body_paragraphs": 36,
+    "method_chars": 2079,
+    "method_paragraphs": 15,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-18T22:50:56+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7a2327d3fa599ef-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.07870",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.07870",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2309.07870",
+      "arXiv:2309.07870"
+    ],
+    "reason": "自律言語エージェントを構築するアプリケーションフレームワークで、LLM推論サービングruntimeの効率化が主貢献ではない。",
+    "first_checked_at": "2026-10-02T10:54:03+00:00",
+    "last_checked_at": "2026-10-02T10:54:03+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.06948-kairos-multi-agent-serving.md"
+    ],
+    "title": "Agents: An Open-source Framework for Autonomous Language Agents"
+  },
+  "processed_at": "2026-10-02T10:54:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7a2327d3fa5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

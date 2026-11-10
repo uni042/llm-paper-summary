@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a3dbdae84234128c-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2604.17852",
+  "reason": "本文のLLM-Codecはspeech token LM向けcodec training objectiveでfuture-token headsを使うが、結論はcodec/LLM inference architectureを変えず、補助headsはdeployment時に捨てると記載する。speculative decoding lineageに関連し得る予測可能性の学習だがserving speedupを示さずborderline。",
+  "title": "LLM-Codec: Neural Audio Codec Meets Language Model Objectives",
+  "identity_tokens": [
+    "arXiv:2604.17852"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a3dbdae84234",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

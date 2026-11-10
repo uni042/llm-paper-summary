@@ -1,0 +1,910 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T053201JST-worker30-forward-moelightning-18",
+  "collector_id": "scheduled-worker30-forward-moelightning",
+  "run_key": "2026-09-21T05:32:01+09:00",
+  "axis": "forward citations of MoE-Lightning for offloaded MoE inference",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2411.11217/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5a224355c5cd2e19c646921f98a6c52e88a24733",
+  "raw_search_result_count": 99,
+  "retrieval_duplicate_filtered_count": 66,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 2,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T20:56:06.068978+00:00",
+  "results": [
+    {
+      "title": "BrownoutMoE: Structure-Aware Expert Grouping for Efficient and Accurate LLM Web-based Services",
+      "source_url": "https://www.semanticscholar.org/paper/f8b43d078a89a2622af43b6f1855dffcece37dbb",
+      "year": 2026,
+      "published": "2026-07-05",
+      "abstract": "Mixture-of-Experts (MoE) large language models (LLMs) are increasingly deployed in Web-facing services, where inference must be both accurate and responsive under bursty demand. Although MoE models improve parameter efficiency through sparse expert activation, efficient MoE inference remains challenging in practice. A major reason is the highly imbalanced expert access pattern during inference: a few hot experts process most routed tokens, while many cold experts are rarely activated, leaving GPU parallelism underutilized. Existing systems mainly optimize runtime execution, such as scheduling, communication overlap, and kernel fusion, but usually preserve the original expert organization and therefore do not address the structural inefficiency caused by fragmented expert usage. In this paper, we present \\textbf{BrownoutMoE}, a structure-aware optimization framework for efficient and accurate MoE inference services. Inspired by the brownout paradigm in service computing, BrownoutMoE reorganizes experts into groups to improve utilization and system efficiency while maintaining service quality. Specifically, we formulate layer-wise expert grouping as a learning problem and employ reinforcement learning to discover grouping strategies that minimize accuracy degradation. We further introduce a grouping-consistent distillation process to produce deployable models that are compatible with standard inference pipelines. Experimental results demonstrate that BrownoutMoE reduces accuracy degradation by up to 71.4% and improves throughput by up to 2.24x over baselines.",
+      "canonical_id": "arXiv:2607.04164",
+      "arxiv_id": "2607.04164",
+      "authors": [
+        "Yi Ding",
+        "Minxian Xu",
+        "Zheng-Xin Fang",
+        "Ke-Jiang Ye",
+        "Cheng-Zhong Xu"
+      ]
+    },
+    {
+      "title": "Agentic Mobile AI Systems: From Post-Hoc Optimization to Runtime-Elastic Realization",
+      "source_url": "https://www.semanticscholar.org/paper/9e852bee6c49b247db8bb5d1ecb585473ee6739b",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.inffus.2026.104630",
+      "doi": "10.1016/j.inffus.2026.104630",
+      "authors": [
+        "Sicong Liu",
+        "Wei-Ye Wu",
+        "Xiangrui Xu",
+        "Teng Li",
+        "Bowen Pang",
+        "Wentao Zhou",
+        "Bin Guo",
+        "Zhiwen Yu"
+      ]
+    },
+    {
+      "title": "MRAM-MoE: Efficient Inference of Mixture-of-Experts LLMs with MRAM Chiplet-based Accelerators",
+      "source_url": "https://www.semanticscholar.org/paper/8c15d874d9494fac3d3e97327831fdfe308e9a87",
+      "year": 2026,
+      "published": "2026-06-22",
+      "abstract": "Large language models (LLMs) require substantial compute and memory resources during inference, making memory bandwidth and capacity key bottlenecks. Mixture-of-Experts (MoE) architectures reduce computational cost through sparse expert activation but introduce challenges in storing and accessing large expert weights and Key–Value (KV) caches, demanding custom hardware accelerators for efficient inference. This work proposes MRAM-MOE, a MRAM chiplet-based architecture for accelerating MoE inference. The MRAM-MOE architecture uses variable retention banks of MRAM cells as stacked chiplets, as well as on-chip memory on SIMD compute dies. A comprehensive performance modeling framework analyzes the FLOPs, throughput, and latency of MoE operations across both prefill and decode phases for five representative models. Based on the analyzed latencies, the STT-MRAM thermal stability factor (Δ) is tuned to implement a multi-retention memory model optimized for MoE access patterns. Reliability, area, capacity, and read/write latency and energy are evaluated for the customized MRAM under process and temperature variations. Results illustrate a 66.7% reduction in dynamic power and 95.3% reduction in die area at 14 nm technology for the optimized STT-MRAM model (Δ = 27.3) compared to the conventional SRAM, while supporting two 1 GB stacked MRAM chiplets and two 70 MB on-chip MRAMs.",
+      "canonical_id": "DOI:10.1145/3787109.3815290",
+      "doi": "10.1145/3787109.3815290",
+      "authors": [
+        "Md Tanjimur Rahman",
+        "M. Asef",
+        "Mehdi Sadi"
+      ]
+    },
+    {
+      "title": "Efficient MoE Inference on Single Consumer-grade GPU with Dynamic Expert Caching",
+      "source_url": "https://www.semanticscholar.org/paper/4c3a06228ed83adb1000cafd501c8a6726178a2b",
+      "year": 2026,
+      "published": "2026-05-25",
+      "abstract": "The Mixture-of-Experts (MoE) architecture has demonstrated notable advantages by enabling model scaling without a proportional increase in computational cost. However, due to the large model size, deployment typically requires substantial memory resources that are often unavailable on consumer-grade devices. MoE offloading strategies have been proposed to address this. However, PCIe bandwidth constraints lead to noticeably slower inference during offloading. Several methods, such as expert caching, prefetching, and hybrid CPU/GPU inference, have been introduced to mitigate this issue. Yet, they still suffer from load imbalance across devices, low hardware utilization, and significant transfer latency, which become particularly severe when handling ultra-large models (e.g., ≥ 400B). To address these challenges, this paper proposes SMOE, a hybrid CPU/GPU inference framework for MoE LLMs based on dynamic expert caching, to improve inference efficiency and hardware utilization on consumer-grade devices. SMOE adopts specialized optimization strategies for the prefilling and decoding stages. For the prefilling, it employs an on-demand expert loading strategy optimized with pipeline techniques to schedule experts at runtime dynamically. For the decoding, it introduces a novel token-wise prefetch strategy that maximizes computation-communication overlap, enabling expert scheduling across CPU and GPU without incurring noticeable transfer delays. In addition, SMOE implements an efficient cache management strategy to make use of the limited GPU memory. Experimental evaluations on consumer-grade devices with ultra-large MoE models demonstrate that SMOE achieves a speedup of up to 8.68× over the baseline and 2.98× over the SOTA method in the prefilling stage, with the benefit increasing as the length grows. In the decoding stage, SMOE achieves up to 20.9% faster inference compared to the baseline, while other caching- and prefetching-based methods fail to handle ultra-large models such as 671B. These results show that SMOE achieves efficient inference acceleration for ultra-large MoE models on consumer-grade devices.",
+      "canonical_id": "DOI:10.1109/IPDPS65963.2026.00101",
+      "doi": "10.1109/IPDPS65963.2026.00101",
+      "authors": [
+        "Rui Zhang",
+        "Bo Yang",
+        "Rongji Wang",
+        "Xuemei Peng",
+        "Zeyi Wen"
+      ]
+    },
+    {
+      "title": "Understanding Inference Scaling for LLMS: Bottlenecks, Trade-Offs, and Performance Principles",
+      "source_url": "https://www.semanticscholar.org/paper/930b5019707807053d41976f1cb09512a8dd9b18",
+      "year": 2026,
+      "published": "2026-05-19",
+      "abstract": "The transition from standard generative AI to reasoning-centric architectures, exemplified by models capable of extensive Chain-of-Thought (CoT) processing, marks a fundamental paradigm shift in system requirements. Unlike traditional workloads dominated by compute-bound prefill, reasoning workloads generate long chains of reasoning tokens that shift inference into a Capacity-Bound regime. This paper presents a comprehensive system characterization, evaluating models ranging from 8B to 671B parameters on GPUs clusters. By systematically exploring the interplay between Data, Tensor, and Pipeline parallelism, we identify critical bottlenecks that defy standard scaling heuristics. Our analysis reveals that data parallelism is throughput efficient for small models but hits a capacity trap on reasoning workloads as KV-cache fragmentation forces early throttling resulting in sub-optimal compute utilization. Tensor parallelism unlocks stranded memory and delivers sublinear gains near the 32B crossover. At frontier scale, dense models (e.g., Llama-405B) are interconnect and memory-bandwidth bound and favor high-degree TP, while sparse Mixture-of-Experts (MoE) models (e.g., DeepSeek-R1) are limited by routing and synchronization latency and benefit from hybrid strategies. These insights provide a rigorous decision framework for navigating the reasoning cliff, establishing new architectural imperatives for the next generation of inference infrastructure.",
+      "canonical_id": "arXiv:2605.19775",
+      "arxiv_id": "2605.19775",
+      "authors": [
+        "Moiz Arif",
+        "Avinash Maurya",
+        "Sudharshan S. Vazhkudai",
+        "Bogdan Nicolae"
+      ]
+    },
+    {
+      "title": "ChunkFlow: Communication-Aware Chunked Prefetching for Layerwise Offloading in Distributed Diffusion Transformer Inference",
+      "source_url": "https://www.semanticscholar.org/paper/4fa68d05fa3840fdc36aefe50e1c50fd6b4606d7",
+      "year": 2026,
+      "published": "2026-05-11",
+      "abstract": "Layerwise offloading reduces the GPU memory footprint of large diffusion transformer (DiT) inference by prefetching upcoming layers from host memory, but its effectiveness hinges on hiding prefetch latency behind per-layer computation. This assumption breaks down when the per-GPU compute workload is small. Moreover, on PCIe-only nodes, prefetch and inter-GPU collective communications such as all-reduce and all-to-all contend on the shared PCIe path, exposing prefetch latency even when compute would otherwise hide it. We revisit layerwise offloading as a co-scheduling problem between prefetch and communication, guided by a first-order analytical model that predicts when prefetch can be hidden by computation. Building on this model, we design ChunkFlow, a communication-aware, chunk-granular offloading runtime that adaptively yields to collective communication and smoothly trades GPU memory for prefetch volume. On three representative diffusion transformers running on two H100 GPUs over PCIe with Ulysses sequence parallelism, ChunkFlow delivers up to 1.28x step-time speedup over SGLang's existing layerwise offloading, reduces peak GPU memory by up to 49% over the no-offload baseline at near-identical step time once the workload is large enough, and exposes a tunable memory-latency tradeoff that recovers near-zero step-time overhead in the small-workload regime.",
+      "canonical_id": "arXiv:2605.11335",
+      "arxiv_id": "2605.11335",
+      "authors": [
+        "Han Meng",
+        "Dan Liu",
+        "Dong Li"
+      ]
+    },
+    {
+      "title": "An Efficient Hybrid Sparse Attention with CPU-GPU Parallelism for Long-Context Inference",
+      "source_url": "https://www.semanticscholar.org/paper/9cac55c12807f6f69e8cf7a920947c6ffd9927c1",
+      "year": 2026,
+      "published": "2026-05-08",
+      "abstract": "Long-context inference increasingly operates over CPU-resident KV caches, either because decoding-time KV states exceed GPU memory capacity or because disaggregated prefill-decode systems place KV data in host memory. Although block-sparse attention reduces attention cost in this setting, sparsity alone is insufficient for end-to-end efficiency. GPU-only designs remain constrained by PCIe bandwidth and metadata memory overhead, while CPU-GPU hybrid designs still suffer from substantial GPU idle time and bottlenecks in CPU-side top-k selection and sparse attention computation. Fluxion is built on three key insights: output-aware KV budgeting, head-specific and granularity-aware sparse configuration, and cross-device coordinated execution for sparse attention over CPU-resident KV caches. Guided by these insights, Fluxion combines a lightweight head-property predictor, a granularity-budget selector, and a priority-based scheduler to jointly optimize budget allocation, sparse configuration, and CPU-GPU execution overlap. This co-design enables hybrid sparse attention to achieve both accuracy and system efficiency in long-context inference. Across 2 models, 3 benchmarks, and 40 tasks, Fluxion preserves quality well -- the worst average degradation is only -0.26 relative to FULL, while delivering 1.5$\\times$-3.7$\\times$ speedup over the strongest fixed sparse hybrid baseline, whose KV budget is only 0.05.",
+      "canonical_id": "arXiv:2605.07719",
+      "arxiv_id": "2605.07719",
+      "authors": [
+        "Feiyu Yao",
+        "Zhixiong Niu",
+        "Xiaqing Li",
+        "Yongqiang Xiong",
+        "Juan Fang",
+        "Qian Wang"
+      ]
+    },
+    {
+      "title": "M\\textsuperscript{4}Fuse: Lightweight State-Space MoE with a Cross-Scale Gating Bridge for Brain Tumor Segmentation",
+      "source_url": "https://www.semanticscholar.org/paper/7e73f1a4e6bcc23de5851da8a16ecb106df192dc",
+      "year": 2026,
+      "published": "2026-05-04",
+      "abstract": "Encoder-decoder imbalance and the reliance on large input volumes make many 3D brain tumor segmentation models both compute-heavy and brittle. We present M\\textsuperscript{4}Fuse, a lightweight network that prioritizes discriminative brain tumor cues over exhaustive appearance reconstruction. Our method balances encoder and decoder capacity and replaces depth expansion with a synergistic design: it propagates long-range context with linear complexity via a grouped state space mixer, denoises and aligns skip features using a cross-scale dual-stage gating bridge, and absorbs cross-site acquisition shifts with a sample-level mixture-of-experts. On the BraTS2019 and BraTS2021 benchmarks, M\\textsuperscript{4}Fuse outperforms other lightweight excellent methods in both parameter count and performance. Even at a challenging input resolution of \\(64\\times128\\times128\\) (half that of existing excellent models), M\\textsuperscript{4}Fuse reduces parameters by 62.63\\% and improves average performance by 0.09\\%. Ablations of key components validate the method's exceptional parameter-to-accuracy efficiency and robustness across diverse data centers.",
+      "canonical_id": "arXiv:2605.02444",
+      "arxiv_id": "2605.02444",
+      "authors": [
+        "Meihua Zhou",
+        "Xinyu Tong",
+        "Li Yang"
+      ]
+    },
+    {
+      "title": "FlexMoRE: A Flexible Mixture of Rank-heterogeneous Experts for Efficient Federatedly-trained Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/de3c5e35001c6e091090d6148dcc17ab27906572",
+      "year": 2026,
+      "published": "2026-02-09",
+      "abstract": "Recent advances in mixture-of-experts architectures have shown that individual experts models can be trained federatedly, i.e., in isolation from other experts by using a common base model to facilitate coordination. However, we hypothesize that full-sized experts may not be necessary for all domains and that instead low-rank adapters may be sufficient. Here, we introduce FlexMoRE, a Flexible Mixture of Rank-heterogenous Experts, which may be either full-sized experts or adapters of a suitable rank. We systematically investigate the trade-off between expert rank and downstream task performance by evaluating $6$ experts with ranks $2^0$ to $2^{14}$ resulting in experiments covering 150 mixtures (96 with 2 experts, 54 with 7 experts) that are evaluated across $120$ tasks. For our experiments, we build on FlexOlmo and turn its pre-trained experts into low-rank versions. Our regression analysis from expert rank to downstream task performance reveals that the best-performing rank is substantially higher for reasoning-heavy benchmarks than for knowledge-heavy benchmarks. These findings on rank sensitivity come with direct implications for memory efficiency: Using optimal ranks, FlexMoRE yields improved downstream task performance (average score $47.18$) compared to the baseline FlexOlmo-style mixture of full-sized experts (average score $45.46$) at less than one third the parameters ($10.75$B for FlexMoRE vs. $33.27$B for FlexOlmo). All code will be made available.",
+      "canonical_id": "arXiv:2602.08818",
+      "arxiv_id": "2602.08818",
+      "authors": [
+        "Annemette Brok Pirchert",
+        "Jacob Nielsen",
+        "M. H. From",
+        "Lukas Galke Poech",
+        "Peter Schneider-Kamp"
+      ]
+    },
+    {
+      "title": "Hummingbird: SLO-Oriented GPU Preemption at Microsecond-scale",
+      "source_url": "https://www.semanticscholar.org/paper/eca6abd2e22d5826177193acc5c779923f715014",
+      "year": 2026,
+      "published": "2026-01-07",
+      "abstract": "Existing GPU-sharing techniques, including spatial and temporal sharing, aim to improve utilization but face challenges in simultaneously ensuring SLO adherence and maximizing efficiency due to the lack of fine-grained task scheduling on closed-source GPUs. This paper presents Hummingbird, an SLO-oriented GPU scheduling system that overcomes these challenges by enabling microsecond-scale preemption on closed-source GPUs while effectively harvesting idle GPU time slices. Comprehensive evaluations across diverse GPU architectures reveal that Hummingbird improves the SLO attainment of high-priority tasks by 9.7x and 3.5x compared to the state-of-the-art spatial and temporal-sharing approaches. When compared to executing exclusively, the SLO attainment of the high-priority task, collocating with low-priority tasks on Hummingbird, only drops by less than 1%. Meanwhile, the throughput of the low-priority task outperforms the state-of-the-art temporal-sharing approaches by 2.4x. Hummingbird demonstrates significant effectiveness in ensuring the SLO while enhancing GPU utilization.",
+      "canonical_id": "arXiv:2601.04071",
+      "arxiv_id": "2601.04071",
+      "authors": [
+        "Tian-Cheng Hu",
+        "Chenxi Wang",
+        "Ting Cao",
+        "Jin Qin",
+        "Lei Chen",
+        "Xin-Yu Xiao",
+        "Jun-Hao Hu",
+        "Hong-Liang Tian",
+        "Shoumeng Yan",
+        "Huimin Cui",
+        "Quan Chen",
+        "Tao Xie"
+      ]
+    },
+    {
+      "title": "A systematic review and comparative analysis of deep learning models for Twitter/X-based traffic event detection",
+      "source_url": "https://www.semanticscholar.org/paper/e3e352fd11b70d1dd1ca3e95b6763ffc9511edc7",
+      "year": 2025,
+      "published": "2025-12-29",
+      "abstract": "ABSTRACT Traffic anomalies caused by accidents, sports events, and lane closures are spatiotemporal events that reduce free-flow speed, increase vehicular queues, and impair human mobility. Early detection may provide better route planning before traffic gets worse. Recent and ongoing research, as well as a review of transportation literature, have revealed three essential topics: big data, data mining and representation, and Deep Learning (DL). Furthermore, traffic studies have adopted DL to extract hidden features that efficiently infer human activities and interactions and detect the underlying relationships to generate useful fine-grained information. This paper reviews current research that adopts state-of-the-art DL in detecting traffic events from big data, specifically Twitter/X data. In addition, it investigates the detailed pipeline for developing a DL-based model using data from Twitter/X for traffic event detection (TED). The review is a timely addition that clarifies the roadmap of detecting traffic events from big social media data, which benefits transportation and DL community researchers.",
+      "canonical_id": "DOI:10.1080/17538947.2025.2604977",
+      "doi": "10.1080/17538947.2025.2604977",
+      "authors": [
+        "Danya Qutaishat",
+        "Songnian Li"
+      ]
+    },
+    {
+      "title": "Efficient MoE Inference with Fine-Grained Scheduling of Disaggregated Expert Parallelism",
+      "source_url": "https://www.semanticscholar.org/paper/d9a022a97fac83e3606ec78e72dab857451dcc28",
+      "year": 2025,
+      "published": "2025-12-25",
+      "abstract": "The mixture-of-experts (MoE) architecture scales model size with sublinear computational increase but suffers from memory-intensive inference due to KV caches and sparse expert activation. Recent disaggregated expert parallelism (DEP) distributes attention and experts to dedicated GPU groups but lacks support for shared experts and efficient task scheduling, limiting performance. We propose FinDEP, a fine-grained task scheduling algorithm for DEP that maximizes task overlap to improve MoE inference throughput. FinDEP introduces three innovations: 1) partitioning computation/communication into smaller tasks for fine-grained pipelining, 2) formulating a scheduling optimization supporting variable granularity and ordering, and 3) developing an efficient solver for this large search space. Experiments on four GPU systems with DeepSeek-V2 and Qwen3-MoE show FinDEP improves throughput by up to 1.61x over prior methods, achieving up to 1.24x speedup on a 32-GPU system.",
+      "canonical_id": "arXiv:2512.21487",
+      "arxiv_id": "2512.21487",
+      "authors": [
+        "Xinglin Pan",
+        "Shao-Huai Shi",
+        "Wen-Jing Lin",
+        "Yuxin Wang",
+        "Zhenheng Tang",
+        "Wei Wang",
+        "Xiaowen Chu"
+      ]
+    },
+    {
+      "title": "Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation",
+      "source_url": "https://www.semanticscholar.org/paper/f54fc89a4ac62696f568eb7e4d824dd0169fa23b",
+      "year": 2025,
+      "published": "2025-12-18",
+      "abstract": "Mixture-of-Experts (MoE) models scale capacity via sparse activation but stress memory and bandwidth. Offloading alleviates GPU memory by fetching experts on demand, yet token-level routing causes irregular transfers that make inference I/O-bound. Static uniform quantization reduces traffic but degrades accuracy under aggressive compression by ignoring expert heterogeneity. We present Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation, which performs router-guided precision restoration using precomputed low-rank compensators. At inference time, our method transfers compact low-rank factors with Top-n (n<k) experts per token and applies compensation to them, keeping others low-bit. Integrated with offloading on GPU and GPU-NDP systems, our method delivers a superior bandwidth-accuracy trade-off and improved throughput.",
+      "canonical_id": "arXiv:2512.17073",
+      "arxiv_id": "2512.17073",
+      "authors": [
+        "Zhenyu Liu",
+        "Yunzhen Liu",
+        "Zehao Fan",
+        "Garrett Gagnon",
+        "Yayue Hou",
+        "Nan Wu",
+        "Yangwook Kang",
+        "Liu Liu"
+      ]
+    },
+    {
+      "title": "Janus: Disaggregating Attention and Experts for Scalable MoE Inference",
+      "source_url": "https://www.semanticscholar.org/paper/a8785807d99e923a3a938ff52aafa1ce21dc1440",
+      "year": 2025,
+      "published": "2025-12-15",
+      "abstract": "Serving large Mixture-of-Experts (MoE) models is challenging because of their large memory footprints, heterogeneous resource demands, and highly dynamic inference workloads. Most existing MoE inference systems deploy the entire model as a monolithic unit, forcing attention and MoE layers to share the same resource configuration despite their different scaling behaviors and resource bottlenecks. Such coarse-grained provisioning leads to resource inefficiency and suboptimal performance. We present JANUS, a scalable and resource-efficient MoE inference system built around three key principles. First, JANUS disaggregates attention and MoE layers onto separate GPU worker pools, enabling independent resource provisioning for the two layer types, and uses an adaptive two-phase communication mechanism for low-latency data exchange. Second, because MoE-layer execution is often memory-bound and highly sensitive to activated-expert imbalance, JANUS introduces a lightweight, microsecond-scale activation scheduler that balances per-layer activated experts across MoE instances to reduce inference latency. Third, JANUS employs a fine-grained, SLO-aware resource scaling scheme that jointly selects attention resources, MoE resources, and expert placement to minimize GPU cost under token-level SLOs. Evaluation shows that JANUS improves per-GPU throughput by up to 4.7x over state-of-the-art MoE inference baselines while satisfying token-level latency SLOs.",
+      "canonical_id": "arXiv:2512.13525",
+      "arxiv_id": "2512.13525",
+      "authors": [
+        "Zhexiang Zhang",
+        "Ye Wang",
+        "Yu-Miao Zhao",
+        "Jia-Yu Xiao",
+        "Qian-Jing Yang",
+        "Xiangyu Wang",
+        "Jingzhe Jiang",
+        "Qi-Zhen Weng",
+        "Ruichuan Chen",
+        "Shao-Huai Shi",
+        "Yin Chen",
+        "Minchen Yu"
+      ]
+    },
+    {
+      "title": "Compression Error Sensitivity Analysis for Different Experts in MoE Model Inference",
+      "source_url": "https://www.semanticscholar.org/paper/e787cda9c04b46709a0378bf738802d56f131110",
+      "year": 2025,
+      "published": "2025-11-15",
+      "abstract": "With the widespread application of Mixture of Experts (MoE) reasoning models in the field of LLM learning, efficiently serving MoE models under limited GPU memory constraints has emerged as a significant challenge. Offloading the non-activated experts to main memory has been identified as an efficient approach to address such a problem, while it brings the challenges of transferring the expert between the GPU memory and main memory. We need to explore an efficient approach to compress the expert and analyze how the compression error affects the inference performance.To bridge this gap, we propose employing error-bounded lossy compression algorithms (such as SZ3 and CuSZp) to compress non-activated experts, thereby reducing data transfer overhead during MoE inference. We conduct extensive experiments across various benchmarks and present a comprehensive analysis of how compression-induced errors in different experts affect overall inference accuracy. The results indicate that experts in the shallow layers exhibit minimal degradation in inference accuracy when subjected to bounded errors. In contrast, errors in the middle-layer experts, which are central to model reasoning, significantly impair inference accuracy. Interestingly, introducing bounded errors in the deep-layer experts, which are mainly responsible for instruction following and output integration, can sometimes lead to improvements in inference accuracy.CCS Concepts• Computing methodologies → Intelligent agents.",
+      "canonical_id": "DOI:10.1145/3731599.3767377",
+      "doi": "10.1145/3731599.3767377",
+      "authors": [
+        "Songkai Ma",
+        "Zhao-Rui Zhang",
+        "Sheng Di",
+        "Benben Liu",
+        "Xiao-Dong Yu",
+        "Xiaoyi Lu",
+        "Dan Wang"
+      ]
+    },
+    {
+      "title": "Towards Efficient LLM Inference via Collective and Adaptive Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/5460d1d37af64f6bafd3a5a850fdc4204405093a",
+      "year": 2025,
+      "published": "2025-11-15",
+      "abstract": "Large language models (LLMs) have gained considerable attention for their remarkable performance across a wide range of tasks. However, efficient LLM inference remains challenging because of the autoregressive decoding process, which generates only one token at a time. Speculative decoding has been introduced to address the limitation by using small speculative models (SSMs) to speed up LLM inference. However, the low acceptance rate of SSMs and the high verification cost of LLM prohibit further performance improvement. In this paper, we present Smurfs, an LLM inference system designed to accelerate LLM inference through collective and adaptive speculative decoding. Smurfs adopts a majority-voted mechanism that harnesses multiple SSMs to collaboratively predict LLM outputs in multi-task scenarios, while avoiding high verification cost. It also decouples SSM speculation from LLM verification and uses a pipelined execution to hide the latency of SSM speculation. Additionally, Smurfs proposes a mechanism to dynamically determine the optimal speculation length of SSM at runtime, balancing the performance impact of accepted tokens and verification cost. The experimental results demonstrate the superiority of Smurfs in terms of inference throughput and latency compared to the state-of-the-art LLM inference systems.",
+      "canonical_id": "DOI:10.1145/3712285.3759834",
+      "doi": "10.1145/3712285.3759834",
+      "authors": [
+        "Siqi Wang",
+        "Hailong Yang",
+        "Xuezhu Wang",
+        "Tongxuan Liu",
+        "Pengbo Wang",
+        "Yufan Xu",
+        "Xuning Liang",
+        "Kejie Ma",
+        "Tianyu Feng",
+        "Xin You",
+        "Ruihao Gong",
+        "Rui Wang",
+        "Zhongzhi Luan",
+        "Yi Liu",
+        "Depei Qian"
+      ]
+    },
+    {
+      "title": "FlexiCache: Leveraging Temporal Stability of Attention Heads for Efficient KV Cache Management",
+      "source_url": "https://www.semanticscholar.org/paper/c153fc01ab25291ce2a81fc2d82afcddda52473e",
+      "year": 2025,
+      "published": "2025-11-02",
+      "abstract": "Large Language Model (LLM) serving is increasingly constrained by the growing size of the key-value (KV) cache, which scales with both context length and generation length. Prior work shows that attention is dominated by a small subset of critical tokens, yet existing systems struggle to exploit this efficiently without degrading accuracy, especially in long generation. We make a key observation: the temporal stability of these critical tokens varies significantly across KV heads: some heads consistently focus on the same tokens, while others shift frequently. Building on this insight, we introduce FlexiCache, a hierarchical KV-cache management system that leverages the temporal stability of KV heads to reduce GPU memory usage and computation overhead, while preserving model accuracy. FlexiCache classifies KV heads as stable or unstable: it retains all KV-cache pages from unstable heads in GPU memory, whereas for stable heads, it keeps only the top-K pages on the GPU and offloads the rest to host memory. By exploiting temporal stability, FlexiCache performs periodic reranking for stable heads to fetch newly promoted top pages. Implemented atop vLLM, FlexiCache reduces GPU memory footprint for long-context requests by up to 70%, improves offline serving throughput by 1.38-1.55x, and lowers online token latency by 1.6-2.1x, all while maintaining accuracy in long-context, long-generation scenarios.",
+      "canonical_id": "arXiv:2511.00868",
+      "arxiv_id": "2511.00868",
+      "authors": [
+        "Nazmul Takbir",
+        "Hamidreza Alikhani",
+        "Nikil D. Dutt",
+        "S. A. Jyothi"
+      ]
+    },
+    {
+      "title": "HybridEP: Scaling Expert Parallelism to Cross-Datacenter Scenario via Hybrid Expert/Data Transmission",
+      "source_url": "https://www.semanticscholar.org/paper/bad25ce28350cb2b14ccd5d6287a608a512eca08",
+      "year": 2025,
+      "published": "2025-10-22",
+      "abstract": "Mixture-of-Experts (MoE) has become a popular architecture for scaling large models. However, the rapidly growing scale outpaces model training on a single DC, driving a shift toward a more flexible, cross-DC training paradigm. Under this, Expert Parallelism (EP) of MoE faces significant scalability issues due to the limited cross-DC bandwidth. Specifically, existing EP optimizations attempt to overlap data communication and computation, which has little benefit in low-bandwidth scenarios due to a much longer data communication time. Therefore, the trends of cross-DC EP scaling is fast becoming a critical roadblock to the continued growth of MoE models. To address this, we propose HybridEP, a modeling-guided framework to optimize EP under constrained bandwidth. Our key idea is to dynamically transform the spatial placement of experts to reduce data communication traffic and frequency, thereby minimizing EP's communication overheads. However, it is non-trivial to find the optimal solution because it complicates the original communication pattern by mixing data and expert communication. We therefore build a stream-based model to determine the optimal transmission ratio. Guided by this, we incorporate two techniques: (1) domain-based partition to construct the mapping between hybrid patterns and specific communication topology at GPU level, and (2) parameter-efficient migration to further refine this topology by reducing expert transmission overhead and enlarging the domain size. Combining all these designs, HybridEP can be considered as a more general EP with better scalability. Experimental results show that HybridEP outperforms existing state-of-the-art MoE training systems by up to 5.6x under constrained bandwidth. We further compare HybridEP and EP on large-scale simulations. HybridEP achieves up to 1.45x speedup with 1k DCs under different bandwidths.",
+      "canonical_id": "arXiv:2510.19470",
+      "arxiv_id": "2510.19470",
+      "authors": [
+        "Wei-Hao Yang",
+        "Hao Huang",
+        "Donglei Wu",
+        "Ning Li",
+        "Yan-Qi Pan",
+        "Qiyang Zheng",
+        "Wen Xia",
+        "Shiyi Li",
+        "Qiang Wang"
+      ]
+    },
+    {
+      "title": "Patterns Behind Chaos: Forecasting Data Movement for Efficient Large-Scale Moe LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/6bd7aef6140671d6842fb1751307dea25a93b03b",
+      "year": 2025,
+      "published": "2025-10-07",
+      "abstract": "Large-scale Mixture of Experts (MoE) Large Language Models (LLMs) have recently become the frontier openweight models, achieving remarkable model capability similar to proprietary ones. But their random expert selection mechanism introduces significant data movement overhead that becomes the dominant bottleneck in multi-unit LLM serving systems. To understand the patterns underlying this data movement, we conduct comprehensive data-movement-centric profiling across four state-of-the-art large-scale MoE models released in 2025 (200B-1000B) using over 24,000 requests spanning diverse workloads. We perform systematic analysis from both temporal and spatial perspectives and distill six key insights to guide the design of diverse serving systems. We verify these insights on both future wafer-scale GPU architectures and existing GPU systems. On wafer-scale GPUs, lightweight architectural modifications guided by our insights yield a 6.6x average speedup across four 200B-1000B models. On existing GPU systems, our insights drive the design of a prefill-aware expert placement algorithm that achieves up to 1.25x speedup on MoE computation. Our work presents the first comprehensive data-centric analysis of large-scale MoE models together with a concrete design study applying the learned lessons. Our profiling traces are publicly available at https://huggingface.co/datasets/core12345/MoE_expert_selection_trace.",
+      "canonical_id": "arXiv:2510.05497",
+      "arxiv_id": "2510.05497",
+      "authors": [
+        "Zhongkai Yu",
+        "Yue Guan",
+        "Zihao Yu",
+        "Chenyang Zhou",
+        "Zheng-Ding Hu",
+        "Shuyi Pei",
+        "Yangwook Kang",
+        "Yufei Ding",
+        "Po-An Tsai"
+      ]
+    },
+    {
+      "title": "Energy use of AI inference, efficiency pathways, and test-time scaling",
+      "source_url": "https://www.semanticscholar.org/paper/596c24daff380f156fe080ff5232a9b318d3f7d2",
+      "year": 2025,
+      "published": "2025-09-24",
+      "abstract": "As AI inference scales to billions of queries, estimates of per-query energy use are increasingly important for capacity planning, efficiency interventions, and policy. Yet many public estimates assume non-production settings, leading to systematic overestimation. We introduce a bottom-up framework estimating inference energy from token throughput, node power, and overhead under large-scale deployment assumptions. For frontier-scale models (>200B parameters) on H100 nodes, we estimate a median energy of 0.31 Wh/query (IQR 0.16-0.60), indicating widely cited estimates are overstated by 4-20x. In test-time scaling scenarios 15x longer than typical queries, the median energy rises 13x to 3.91 Wh (IQR 2.15-7.05). Across models, serving systems, and hardware, we estimate 8-20x line-of-sight energy reductions. At datacenter scale, serving 1 billion queries/day requires 0.7 GWh; if 10% are long queries, demand rises to 1.7 GWh/day. With efficiency interventions, it falls to 0.8 GWh/day, mitigating the energy impact of test-time scaling.",
+      "canonical_id": "arXiv:2509.20241",
+      "arxiv_id": "2509.20241",
+      "authors": [
+        "Felipe Oviedo",
+        "Fiodar Kazhamiaka",
+        "Esha Choukse",
+        "Allen Kim",
+        "Amy Luers",
+        "Melanie Nakagawa",
+        "Ricardo Bianchini",
+        "J. L. Lavista Ferres"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.04164",
+      "identity_tokens": [
+        "id:arXiv:2607.04164",
+        "title:brownoutmoe structureaware expert grouping for efficient and accurate llm webbased services",
+        "url:https://www.semanticscholar.org/paper/f8b43d078a89a2622af43b6f1855dffcece37dbb"
+      ],
+      "record": {
+        "title": "BrownoutMoE: Structure-Aware Expert Grouping for Efficient and Accurate LLM Web-based Services",
+        "source_url": "https://www.semanticscholar.org/paper/f8b43d078a89a2622af43b6f1855dffcece37dbb",
+        "year": 2026,
+        "published": "2026-07-05",
+        "abstract": "Mixture-of-Experts (MoE) large language models (LLMs) are increasingly deployed in Web-facing services, where inference must be both accurate and responsive under bursty demand. Although MoE models improve parameter efficiency through sparse expert activation, efficient MoE inference remains challenging in practice. A major reason is the highly imbalanced expert access pattern during inference: a few hot experts process most routed tokens, while many cold experts are rarely activated, leaving GPU parallelism underutilized. Existing systems mainly optimize runtime execution, such as scheduling, communication overlap, and kernel fusion, but usually preserve the original expert organization and therefore do not address the structural inefficiency caused by fragmented expert usage. In this paper, we present \\textbf{BrownoutMoE}, a structure-aware optimization framework for efficient and accurate MoE inference services. Inspired by the brownout paradigm in service computing, BrownoutMoE reorganizes experts into groups to improve utilization and system efficiency while maintaining service quality. Specifically, we formulate layer-wise expert grouping as a learning problem and employ reinforcement learning to discover grouping strategies that minimize accuracy degradation. We further introduce a grouping-consistent distillation process to produce deployable models that are compatible with standard inference pipelines. Experimental results demonstrate that BrownoutMoE reduces accuracy degradation by up to 71.4% and improves throughput by up to 2.24x over baselines.",
+        "canonical_id": "arXiv:2607.04164",
+        "arxiv_id": "2607.04164",
+        "authors": [
+          "Yi Ding",
+          "Minxian Xu",
+          "Zheng-Xin Fang",
+          "Ke-Jiang Ye",
+          "Cheng-Zhong Xu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.inffus.2026.104630",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.inffus.2026.104630",
+        "title:agentic mobile ai systems from posthoc optimization to runtimeelastic realization",
+        "url:https://www.semanticscholar.org/paper/9e852bee6c49b247db8bb5d1ecb585473ee6739b"
+      ],
+      "record": {
+        "title": "Agentic Mobile AI Systems: From Post-Hoc Optimization to Runtime-Elastic Realization",
+        "source_url": "https://www.semanticscholar.org/paper/9e852bee6c49b247db8bb5d1ecb585473ee6739b",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.inffus.2026.104630",
+        "doi": "10.1016/j.inffus.2026.104630",
+        "authors": [
+          "Sicong Liu",
+          "Wei-Ye Wu",
+          "Xiangrui Xu",
+          "Teng Li",
+          "Bowen Pang",
+          "Wentao Zhou",
+          "Bin Guo",
+          "Zhiwen Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3787109.3815290",
+      "identity_tokens": [
+        "id:DOI:10.1145/3787109.3815290",
+        "title:mrammoe efficient inference of mixtureofexperts llms with mram chipletbased accelerators",
+        "url:https://www.semanticscholar.org/paper/8c15d874d9494fac3d3e97327831fdfe308e9a87"
+      ],
+      "record": {
+        "title": "MRAM-MoE: Efficient Inference of Mixture-of-Experts LLMs with MRAM Chiplet-based Accelerators",
+        "source_url": "https://www.semanticscholar.org/paper/8c15d874d9494fac3d3e97327831fdfe308e9a87",
+        "year": 2026,
+        "published": "2026-06-22",
+        "abstract": "Large language models (LLMs) require substantial compute and memory resources during inference, making memory bandwidth and capacity key bottlenecks. Mixture-of-Experts (MoE) architectures reduce computational cost through sparse expert activation but introduce challenges in storing and accessing large expert weights and Key–Value (KV) caches, demanding custom hardware accelerators for efficient inference. This work proposes MRAM-MOE, a MRAM chiplet-based architecture for accelerating MoE inference. The MRAM-MOE architecture uses variable retention banks of MRAM cells as stacked chiplets, as well as on-chip memory on SIMD compute dies. A comprehensive performance modeling framework analyzes the FLOPs, throughput, and latency of MoE operations across both prefill and decode phases for five representative models. Based on the analyzed latencies, the STT-MRAM thermal stability factor (Δ) is tuned to implement a multi-retention memory model optimized for MoE access patterns. Reliability, area, capacity, and read/write latency and energy are evaluated for the customized MRAM under process and temperature variations. Results illustrate a 66.7% reduction in dynamic power and 95.3% reduction in die area at 14 nm technology for the optimized STT-MRAM model (Δ = 27.3) compared to the conventional SRAM, while supporting two 1 GB stacked MRAM chiplets and two 70 MB on-chip MRAMs.",
+        "canonical_id": "DOI:10.1145/3787109.3815290",
+        "doi": "10.1145/3787109.3815290",
+        "authors": [
+          "Md Tanjimur Rahman",
+          "M. Asef",
+          "Mehdi Sadi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ipdps65963.2026.00101",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdps65963.2026.00101",
+        "title:efficient moe inference on single consumergrade gpu with dynamic expert caching",
+        "url:https://www.semanticscholar.org/paper/4c3a06228ed83adb1000cafd501c8a6726178a2b"
+      ],
+      "record": {
+        "title": "Efficient MoE Inference on Single Consumer-grade GPU with Dynamic Expert Caching",
+        "source_url": "https://www.semanticscholar.org/paper/4c3a06228ed83adb1000cafd501c8a6726178a2b",
+        "year": 2026,
+        "published": "2026-05-25",
+        "abstract": "The Mixture-of-Experts (MoE) architecture has demonstrated notable advantages by enabling model scaling without a proportional increase in computational cost. However, due to the large model size, deployment typically requires substantial memory resources that are often unavailable on consumer-grade devices. MoE offloading strategies have been proposed to address this. However, PCIe bandwidth constraints lead to noticeably slower inference during offloading. Several methods, such as expert caching, prefetching, and hybrid CPU/GPU inference, have been introduced to mitigate this issue. Yet, they still suffer from load imbalance across devices, low hardware utilization, and significant transfer latency, which become particularly severe when handling ultra-large models (e.g., ≥ 400B). To address these challenges, this paper proposes SMOE, a hybrid CPU/GPU inference framework for MoE LLMs based on dynamic expert caching, to improve inference efficiency and hardware utilization on consumer-grade devices. SMOE adopts specialized optimization strategies for the prefilling and decoding stages. For the prefilling, it employs an on-demand expert loading strategy optimized with pipeline techniques to schedule experts at runtime dynamically. For the decoding, it introduces a novel token-wise prefetch strategy that maximizes computation-communication overlap, enabling expert scheduling across CPU and GPU without incurring noticeable transfer delays. In addition, SMOE implements an efficient cache management strategy to make use of the limited GPU memory. Experimental evaluations on consumer-grade devices with ultra-large MoE models demonstrate that SMOE achieves a speedup of up to 8.68× over the baseline and 2.98× over the SOTA method in the prefilling stage, with the benefit increasing as the length grows. In the decoding stage, SMOE achieves up to 20.9% faster inference compared to the baseline, while other caching- and prefetching-based methods fail to handle ultra-large models such as 671B. These results show that SMOE achieves efficient inference acceleration for ultra-large MoE models on consumer-grade devices.",
+        "canonical_id": "DOI:10.1109/IPDPS65963.2026.00101",
+        "doi": "10.1109/IPDPS65963.2026.00101",
+        "authors": [
+          "Rui Zhang",
+          "Bo Yang",
+          "Rongji Wang",
+          "Xuemei Peng",
+          "Zeyi Wen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.19775",
+      "identity_tokens": [
+        "id:arXiv:2605.19775",
+        "title:understanding inference scaling for llms bottlenecks tradeoffs and performance principles",
+        "url:https://www.semanticscholar.org/paper/930b5019707807053d41976f1cb09512a8dd9b18"
+      ],
+      "record": {
+        "title": "Understanding Inference Scaling for LLMS: Bottlenecks, Trade-Offs, and Performance Principles",
+        "source_url": "https://www.semanticscholar.org/paper/930b5019707807053d41976f1cb09512a8dd9b18",
+        "year": 2026,
+        "published": "2026-05-19",
+        "abstract": "The transition from standard generative AI to reasoning-centric architectures, exemplified by models capable of extensive Chain-of-Thought (CoT) processing, marks a fundamental paradigm shift in system requirements. Unlike traditional workloads dominated by compute-bound prefill, reasoning workloads generate long chains of reasoning tokens that shift inference into a Capacity-Bound regime. This paper presents a comprehensive system characterization, evaluating models ranging from 8B to 671B parameters on GPUs clusters. By systematically exploring the interplay between Data, Tensor, and Pipeline parallelism, we identify critical bottlenecks that defy standard scaling heuristics. Our analysis reveals that data parallelism is throughput efficient for small models but hits a capacity trap on reasoning workloads as KV-cache fragmentation forces early throttling resulting in sub-optimal compute utilization. Tensor parallelism unlocks stranded memory and delivers sublinear gains near the 32B crossover. At frontier scale, dense models (e.g., Llama-405B) are interconnect and memory-bandwidth bound and favor high-degree TP, while sparse Mixture-of-Experts (MoE) models (e.g., DeepSeek-R1) are limited by routing and synchronization latency and benefit from hybrid strategies. These insights provide a rigorous decision framework for navigating the reasoning cliff, establishing new architectural imperatives for the next generation of inference infrastructure.",
+        "canonical_id": "arXiv:2605.19775",
+        "arxiv_id": "2605.19775",
+        "authors": [
+          "Moiz Arif",
+          "Avinash Maurya",
+          "Sudharshan S. Vazhkudai",
+          "Bogdan Nicolae"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11335",
+      "identity_tokens": [
+        "id:arXiv:2605.11335",
+        "title:chunkflow communicationaware chunked prefetching for layerwise offloading in distributed diffusion transformer inference",
+        "url:https://www.semanticscholar.org/paper/4fa68d05fa3840fdc36aefe50e1c50fd6b4606d7"
+      ],
+      "record": {
+        "title": "ChunkFlow: Communication-Aware Chunked Prefetching for Layerwise Offloading in Distributed Diffusion Transformer Inference",
+        "source_url": "https://www.semanticscholar.org/paper/4fa68d05fa3840fdc36aefe50e1c50fd6b4606d7",
+        "year": 2026,
+        "published": "2026-05-11",
+        "abstract": "Layerwise offloading reduces the GPU memory footprint of large diffusion transformer (DiT) inference by prefetching upcoming layers from host memory, but its effectiveness hinges on hiding prefetch latency behind per-layer computation. This assumption breaks down when the per-GPU compute workload is small. Moreover, on PCIe-only nodes, prefetch and inter-GPU collective communications such as all-reduce and all-to-all contend on the shared PCIe path, exposing prefetch latency even when compute would otherwise hide it. We revisit layerwise offloading as a co-scheduling problem between prefetch and communication, guided by a first-order analytical model that predicts when prefetch can be hidden by computation. Building on this model, we design ChunkFlow, a communication-aware, chunk-granular offloading runtime that adaptively yields to collective communication and smoothly trades GPU memory for prefetch volume. On three representative diffusion transformers running on two H100 GPUs over PCIe with Ulysses sequence parallelism, ChunkFlow delivers up to 1.28x step-time speedup over SGLang's existing layerwise offloading, reduces peak GPU memory by up to 49% over the no-offload baseline at near-identical step time once the workload is large enough, and exposes a tunable memory-latency tradeoff that recovers near-zero step-time overhead in the small-workload regime.",
+        "canonical_id": "arXiv:2605.11335",
+        "arxiv_id": "2605.11335",
+        "authors": [
+          "Han Meng",
+          "Dan Liu",
+          "Dong Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.07719",
+      "identity_tokens": [
+        "id:arXiv:2605.07719",
+        "title:an efficient hybrid sparse attention with cpugpu parallelism for longcontext inference",
+        "url:https://www.semanticscholar.org/paper/9cac55c12807f6f69e8cf7a920947c6ffd9927c1"
+      ],
+      "record": {
+        "title": "An Efficient Hybrid Sparse Attention with CPU-GPU Parallelism for Long-Context Inference",
+        "source_url": "https://www.semanticscholar.org/paper/9cac55c12807f6f69e8cf7a920947c6ffd9927c1",
+        "year": 2026,
+        "published": "2026-05-08",
+        "abstract": "Long-context inference increasingly operates over CPU-resident KV caches, either because decoding-time KV states exceed GPU memory capacity or because disaggregated prefill-decode systems place KV data in host memory. Although block-sparse attention reduces attention cost in this setting, sparsity alone is insufficient for end-to-end efficiency. GPU-only designs remain constrained by PCIe bandwidth and metadata memory overhead, while CPU-GPU hybrid designs still suffer from substantial GPU idle time and bottlenecks in CPU-side top-k selection and sparse attention computation. Fluxion is built on three key insights: output-aware KV budgeting, head-specific and granularity-aware sparse configuration, and cross-device coordinated execution for sparse attention over CPU-resident KV caches. Guided by these insights, Fluxion combines a lightweight head-property predictor, a granularity-budget selector, and a priority-based scheduler to jointly optimize budget allocation, sparse configuration, and CPU-GPU execution overlap. This co-design enables hybrid sparse attention to achieve both accuracy and system efficiency in long-context inference. Across 2 models, 3 benchmarks, and 40 tasks, Fluxion preserves quality well -- the worst average degradation is only -0.26 relative to FULL, while delivering 1.5$\\times$-3.7$\\times$ speedup over the strongest fixed sparse hybrid baseline, whose KV budget is only 0.05.",
+        "canonical_id": "arXiv:2605.07719",
+        "arxiv_id": "2605.07719",
+        "authors": [
+          "Feiyu Yao",
+          "Zhixiong Niu",
+          "Xiaqing Li",
+          "Yongqiang Xiong",
+          "Juan Fang",
+          "Qian Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.02444",
+      "identity_tokens": [
+        "id:arXiv:2605.02444",
+        "title:mtextsuperscript4fuse lightweight statespace moe with a crossscale gating bridge for brain tumor segmentation",
+        "url:https://www.semanticscholar.org/paper/7e73f1a4e6bcc23de5851da8a16ecb106df192dc"
+      ],
+      "record": {
+        "title": "M\\textsuperscript{4}Fuse: Lightweight State-Space MoE with a Cross-Scale Gating Bridge for Brain Tumor Segmentation",
+        "source_url": "https://www.semanticscholar.org/paper/7e73f1a4e6bcc23de5851da8a16ecb106df192dc",
+        "year": 2026,
+        "published": "2026-05-04",
+        "abstract": "Encoder-decoder imbalance and the reliance on large input volumes make many 3D brain tumor segmentation models both compute-heavy and brittle. We present M\\textsuperscript{4}Fuse, a lightweight network that prioritizes discriminative brain tumor cues over exhaustive appearance reconstruction. Our method balances encoder and decoder capacity and replaces depth expansion with a synergistic design: it propagates long-range context with linear complexity via a grouped state space mixer, denoises and aligns skip features using a cross-scale dual-stage gating bridge, and absorbs cross-site acquisition shifts with a sample-level mixture-of-experts. On the BraTS2019 and BraTS2021 benchmarks, M\\textsuperscript{4}Fuse outperforms other lightweight excellent methods in both parameter count and performance. Even at a challenging input resolution of \\(64\\times128\\times128\\) (half that of existing excellent models), M\\textsuperscript{4}Fuse reduces parameters by 62.63\\% and improves average performance by 0.09\\%. Ablations of key components validate the method's exceptional parameter-to-accuracy efficiency and robustness across diverse data centers.",
+        "canonical_id": "arXiv:2605.02444",
+        "arxiv_id": "2605.02444",
+        "authors": [
+          "Meihua Zhou",
+          "Xinyu Tong",
+          "Li Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.08818",
+      "identity_tokens": [
+        "id:arXiv:2602.08818",
+        "title:flexmore a flexible mixture of rankheterogeneous experts for efficient federatedlytrained large language models",
+        "url:https://www.semanticscholar.org/paper/de3c5e35001c6e091090d6148dcc17ab27906572"
+      ],
+      "record": {
+        "title": "FlexMoRE: A Flexible Mixture of Rank-heterogeneous Experts for Efficient Federatedly-trained Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/de3c5e35001c6e091090d6148dcc17ab27906572",
+        "year": 2026,
+        "published": "2026-02-09",
+        "abstract": "Recent advances in mixture-of-experts architectures have shown that individual experts models can be trained federatedly, i.e., in isolation from other experts by using a common base model to facilitate coordination. However, we hypothesize that full-sized experts may not be necessary for all domains and that instead low-rank adapters may be sufficient. Here, we introduce FlexMoRE, a Flexible Mixture of Rank-heterogenous Experts, which may be either full-sized experts or adapters of a suitable rank. We systematically investigate the trade-off between expert rank and downstream task performance by evaluating $6$ experts with ranks $2^0$ to $2^{14}$ resulting in experiments covering 150 mixtures (96 with 2 experts, 54 with 7 experts) that are evaluated across $120$ tasks. For our experiments, we build on FlexOlmo and turn its pre-trained experts into low-rank versions. Our regression analysis from expert rank to downstream task performance reveals that the best-performing rank is substantially higher for reasoning-heavy benchmarks than for knowledge-heavy benchmarks. These findings on rank sensitivity come with direct implications for memory efficiency: Using optimal ranks, FlexMoRE yields improved downstream task performance (average score $47.18$) compared to the baseline FlexOlmo-style mixture of full-sized experts (average score $45.46$) at less than one third the parameters ($10.75$B for FlexMoRE vs. $33.27$B for FlexOlmo). All code will be made available.",
+        "canonical_id": "arXiv:2602.08818",
+        "arxiv_id": "2602.08818",
+        "authors": [
+          "Annemette Brok Pirchert",
+          "Jacob Nielsen",
+          "M. H. From",
+          "Lukas Galke Poech",
+          "Peter Schneider-Kamp"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.04071",
+      "identity_tokens": [
+        "id:arXiv:2601.04071",
+        "title:hummingbird slooriented gpu preemption at microsecondscale",
+        "url:https://www.semanticscholar.org/paper/eca6abd2e22d5826177193acc5c779923f715014"
+      ],
+      "record": {
+        "title": "Hummingbird: SLO-Oriented GPU Preemption at Microsecond-scale",
+        "source_url": "https://www.semanticscholar.org/paper/eca6abd2e22d5826177193acc5c779923f715014",
+        "year": 2026,
+        "published": "2026-01-07",
+        "abstract": "Existing GPU-sharing techniques, including spatial and temporal sharing, aim to improve utilization but face challenges in simultaneously ensuring SLO adherence and maximizing efficiency due to the lack of fine-grained task scheduling on closed-source GPUs. This paper presents Hummingbird, an SLO-oriented GPU scheduling system that overcomes these challenges by enabling microsecond-scale preemption on closed-source GPUs while effectively harvesting idle GPU time slices. Comprehensive evaluations across diverse GPU architectures reveal that Hummingbird improves the SLO attainment of high-priority tasks by 9.7x and 3.5x compared to the state-of-the-art spatial and temporal-sharing approaches. When compared to executing exclusively, the SLO attainment of the high-priority task, collocating with low-priority tasks on Hummingbird, only drops by less than 1%. Meanwhile, the throughput of the low-priority task outperforms the state-of-the-art temporal-sharing approaches by 2.4x. Hummingbird demonstrates significant effectiveness in ensuring the SLO while enhancing GPU utilization.",
+        "canonical_id": "arXiv:2601.04071",
+        "arxiv_id": "2601.04071",
+        "authors": [
+          "Tian-Cheng Hu",
+          "Chenxi Wang",
+          "Ting Cao",
+          "Jin Qin",
+          "Lei Chen",
+          "Xin-Yu Xiao",
+          "Jun-Hao Hu",
+          "Hong-Liang Tian",
+          "Shoumeng Yan",
+          "Huimin Cui",
+          "Quan Chen",
+          "Tao Xie"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1080/17538947.2025.2604977",
+      "identity_tokens": [
+        "id:DOI:10.1080/17538947.2025.2604977",
+        "title:a systematic review and comparative analysis of deep learning models for twitterxbased traffic event detection",
+        "url:https://www.semanticscholar.org/paper/e3e352fd11b70d1dd1ca3e95b6763ffc9511edc7"
+      ],
+      "record": {
+        "title": "A systematic review and comparative analysis of deep learning models for Twitter/X-based traffic event detection",
+        "source_url": "https://www.semanticscholar.org/paper/e3e352fd11b70d1dd1ca3e95b6763ffc9511edc7",
+        "year": 2025,
+        "published": "2025-12-29",
+        "abstract": "ABSTRACT Traffic anomalies caused by accidents, sports events, and lane closures are spatiotemporal events that reduce free-flow speed, increase vehicular queues, and impair human mobility. Early detection may provide better route planning before traffic gets worse. Recent and ongoing research, as well as a review of transportation literature, have revealed three essential topics: big data, data mining and representation, and Deep Learning (DL). Furthermore, traffic studies have adopted DL to extract hidden features that efficiently infer human activities and interactions and detect the underlying relationships to generate useful fine-grained information. This paper reviews current research that adopts state-of-the-art DL in detecting traffic events from big data, specifically Twitter/X data. In addition, it investigates the detailed pipeline for developing a DL-based model using data from Twitter/X for traffic event detection (TED). The review is a timely addition that clarifies the roadmap of detecting traffic events from big social media data, which benefits transportation and DL community researchers.",
+        "canonical_id": "DOI:10.1080/17538947.2025.2604977",
+        "doi": "10.1080/17538947.2025.2604977",
+        "authors": [
+          "Danya Qutaishat",
+          "Songnian Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.21487",
+      "identity_tokens": [
+        "id:arXiv:2512.21487",
+        "title:efficient moe inference with finegrained scheduling of disaggregated expert parallelism",
+        "url:https://www.semanticscholar.org/paper/d9a022a97fac83e3606ec78e72dab857451dcc28"
+      ],
+      "record": {
+        "title": "Efficient MoE Inference with Fine-Grained Scheduling of Disaggregated Expert Parallelism",
+        "source_url": "https://www.semanticscholar.org/paper/d9a022a97fac83e3606ec78e72dab857451dcc28",
+        "year": 2025,
+        "published": "2025-12-25",
+        "abstract": "The mixture-of-experts (MoE) architecture scales model size with sublinear computational increase but suffers from memory-intensive inference due to KV caches and sparse expert activation. Recent disaggregated expert parallelism (DEP) distributes attention and experts to dedicated GPU groups but lacks support for shared experts and efficient task scheduling, limiting performance. We propose FinDEP, a fine-grained task scheduling algorithm for DEP that maximizes task overlap to improve MoE inference throughput. FinDEP introduces three innovations: 1) partitioning computation/communication into smaller tasks for fine-grained pipelining, 2) formulating a scheduling optimization supporting variable granularity and ordering, and 3) developing an efficient solver for this large search space. Experiments on four GPU systems with DeepSeek-V2 and Qwen3-MoE show FinDEP improves throughput by up to 1.61x over prior methods, achieving up to 1.24x speedup on a 32-GPU system.",
+        "canonical_id": "arXiv:2512.21487",
+        "arxiv_id": "2512.21487",
+        "authors": [
+          "Xinglin Pan",
+          "Shao-Huai Shi",
+          "Wen-Jing Lin",
+          "Yuxin Wang",
+          "Zhenheng Tang",
+          "Wei Wang",
+          "Xiaowen Chu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.17073",
+      "identity_tokens": [
+        "id:arXiv:2512.17073",
+        "title:bandwidthefficient adaptive mixtureofexperts via lowrank compensation",
+        "url:https://www.semanticscholar.org/paper/f54fc89a4ac62696f568eb7e4d824dd0169fa23b"
+      ],
+      "record": {
+        "title": "Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation",
+        "source_url": "https://www.semanticscholar.org/paper/f54fc89a4ac62696f568eb7e4d824dd0169fa23b",
+        "year": 2025,
+        "published": "2025-12-18",
+        "abstract": "Mixture-of-Experts (MoE) models scale capacity via sparse activation but stress memory and bandwidth. Offloading alleviates GPU memory by fetching experts on demand, yet token-level routing causes irregular transfers that make inference I/O-bound. Static uniform quantization reduces traffic but degrades accuracy under aggressive compression by ignoring expert heterogeneity. We present Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation, which performs router-guided precision restoration using precomputed low-rank compensators. At inference time, our method transfers compact low-rank factors with Top-n (n<k) experts per token and applies compensation to them, keeping others low-bit. Integrated with offloading on GPU and GPU-NDP systems, our method delivers a superior bandwidth-accuracy trade-off and improved throughput.",
+        "canonical_id": "arXiv:2512.17073",
+        "arxiv_id": "2512.17073",
+        "authors": [
+          "Zhenyu Liu",
+          "Yunzhen Liu",
+          "Zehao Fan",
+          "Garrett Gagnon",
+          "Yayue Hou",
+          "Nan Wu",
+          "Yangwook Kang",
+          "Liu Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.13525",
+      "identity_tokens": [
+        "id:arXiv:2512.13525",
+        "title:janus disaggregating attention and experts for scalable moe inference",
+        "url:https://www.semanticscholar.org/paper/a8785807d99e923a3a938ff52aafa1ce21dc1440"
+      ],
+      "record": {
+        "title": "Janus: Disaggregating Attention and Experts for Scalable MoE Inference",
+        "source_url": "https://www.semanticscholar.org/paper/a8785807d99e923a3a938ff52aafa1ce21dc1440",
+        "year": 2025,
+        "published": "2025-12-15",
+        "abstract": "Serving large Mixture-of-Experts (MoE) models is challenging because of their large memory footprints, heterogeneous resource demands, and highly dynamic inference workloads. Most existing MoE inference systems deploy the entire model as a monolithic unit, forcing attention and MoE layers to share the same resource configuration despite their different scaling behaviors and resource bottlenecks. Such coarse-grained provisioning leads to resource inefficiency and suboptimal performance. We present JANUS, a scalable and resource-efficient MoE inference system built around three key principles. First, JANUS disaggregates attention and MoE layers onto separate GPU worker pools, enabling independent resource provisioning for the two layer types, and uses an adaptive two-phase communication mechanism for low-latency data exchange. Second, because MoE-layer execution is often memory-bound and highly sensitive to activated-expert imbalance, JANUS introduces a lightweight, microsecond-scale activation scheduler that balances per-layer activated experts across MoE instances to reduce inference latency. Third, JANUS employs a fine-grained, SLO-aware resource scaling scheme that jointly selects attention resources, MoE resources, and expert placement to minimize GPU cost under token-level SLOs. Evaluation shows that JANUS improves per-GPU throughput by up to 4.7x over state-of-the-art MoE inference baselines while satisfying token-level latency SLOs.",
+        "canonical_id": "arXiv:2512.13525",
+        "arxiv_id": "2512.13525",
+        "authors": [
+          "Zhexiang Zhang",
+          "Ye Wang",
+          "Yu-Miao Zhao",
+          "Jia-Yu Xiao",
+          "Qian-Jing Yang",
+          "Xiangyu Wang",
+          "Jingzhe Jiang",
+          "Qi-Zhen Weng",
+          "Ruichuan Chen",
+          "Shao-Huai Shi",
+          "Yin Chen",
+          "Minchen Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3731599.3767377",
+      "identity_tokens": [
+        "id:DOI:10.1145/3731599.3767377",
+        "title:compression error sensitivity analysis for different experts in moe model inference",
+        "url:https://www.semanticscholar.org/paper/e787cda9c04b46709a0378bf738802d56f131110"
+      ],
+      "record": {
+        "title": "Compression Error Sensitivity Analysis for Different Experts in MoE Model Inference",
+        "source_url": "https://www.semanticscholar.org/paper/e787cda9c04b46709a0378bf738802d56f131110",
+        "year": 2025,
+        "published": "2025-11-15",
+        "abstract": "With the widespread application of Mixture of Experts (MoE) reasoning models in the field of LLM learning, efficiently serving MoE models under limited GPU memory constraints has emerged as a significant challenge. Offloading the non-activated experts to main memory has been identified as an efficient approach to address such a problem, while it brings the challenges of transferring the expert between the GPU memory and main memory. We need to explore an efficient approach to compress the expert and analyze how the compression error affects the inference performance.To bridge this gap, we propose employing error-bounded lossy compression algorithms (such as SZ3 and CuSZp) to compress non-activated experts, thereby reducing data transfer overhead during MoE inference. We conduct extensive experiments across various benchmarks and present a comprehensive analysis of how compression-induced errors in different experts affect overall inference accuracy. The results indicate that experts in the shallow layers exhibit minimal degradation in inference accuracy when subjected to bounded errors. In contrast, errors in the middle-layer experts, which are central to model reasoning, significantly impair inference accuracy. Interestingly, introducing bounded errors in the deep-layer experts, which are mainly responsible for instruction following and output integration, can sometimes lead to improvements in inference accuracy.CCS Concepts• Computing methodologies → Intelligent agents.",
+        "canonical_id": "DOI:10.1145/3731599.3767377",
+        "doi": "10.1145/3731599.3767377",
+        "authors": [
+          "Songkai Ma",
+          "Zhao-Rui Zhang",
+          "Sheng Di",
+          "Benben Liu",
+          "Xiao-Dong Yu",
+          "Xiaoyi Lu",
+          "Dan Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3712285.3759834",
+      "identity_tokens": [
+        "id:DOI:10.1145/3712285.3759834",
+        "title:towards efficient llm inference via collective and adaptive speculative decoding",
+        "url:https://www.semanticscholar.org/paper/5460d1d37af64f6bafd3a5a850fdc4204405093a"
+      ],
+      "record": {
+        "title": "Towards Efficient LLM Inference via Collective and Adaptive Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/5460d1d37af64f6bafd3a5a850fdc4204405093a",
+        "year": 2025,
+        "published": "2025-11-15",
+        "abstract": "Large language models (LLMs) have gained considerable attention for their remarkable performance across a wide range of tasks. However, efficient LLM inference remains challenging because of the autoregressive decoding process, which generates only one token at a time. Speculative decoding has been introduced to address the limitation by using small speculative models (SSMs) to speed up LLM inference. However, the low acceptance rate of SSMs and the high verification cost of LLM prohibit further performance improvement. In this paper, we present Smurfs, an LLM inference system designed to accelerate LLM inference through collective and adaptive speculative decoding. Smurfs adopts a majority-voted mechanism that harnesses multiple SSMs to collaboratively predict LLM outputs in multi-task scenarios, while avoiding high verification cost. It also decouples SSM speculation from LLM verification and uses a pipelined execution to hide the latency of SSM speculation. Additionally, Smurfs proposes a mechanism to dynamically determine the optimal speculation length of SSM at runtime, balancing the performance impact of accepted tokens and verification cost. The experimental results demonstrate the superiority of Smurfs in terms of inference throughput and latency compared to the state-of-the-art LLM inference systems.",
+        "canonical_id": "DOI:10.1145/3712285.3759834",
+        "doi": "10.1145/3712285.3759834",
+        "authors": [
+          "Siqi Wang",
+          "Hailong Yang",
+          "Xuezhu Wang",
+          "Tongxuan Liu",
+          "Pengbo Wang",
+          "Yufan Xu",
+          "Xuning Liang",
+          "Kejie Ma",
+          "Tianyu Feng",
+          "Xin You",
+          "Ruihao Gong",
+          "Rui Wang",
+          "Zhongzhi Luan",
+          "Yi Liu",
+          "Depei Qian"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.00868",
+      "identity_tokens": [
+        "id:arXiv:2511.00868",
+        "title:flexicache leveraging temporal stability of attention heads for efficient kv cache management",
+        "url:https://www.semanticscholar.org/paper/c153fc01ab25291ce2a81fc2d82afcddda52473e"
+      ],
+      "record": {
+        "title": "FlexiCache: Leveraging Temporal Stability of Attention Heads for Efficient KV Cache Management",
+        "source_url": "https://www.semanticscholar.org/paper/c153fc01ab25291ce2a81fc2d82afcddda52473e",
+        "year": 2025,
+        "published": "2025-11-02",
+        "abstract": "Large Language Model (LLM) serving is increasingly constrained by the growing size of the key-value (KV) cache, which scales with both context length and generation length. Prior work shows that attention is dominated by a small subset of critical tokens, yet existing systems struggle to exploit this efficiently without degrading accuracy, especially in long generation. We make a key observation: the temporal stability of these critical tokens varies significantly across KV heads: some heads consistently focus on the same tokens, while others shift frequently. Building on this insight, we introduce FlexiCache, a hierarchical KV-cache management system that leverages the temporal stability of KV heads to reduce GPU memory usage and computation overhead, while preserving model accuracy. FlexiCache classifies KV heads as stable or unstable: it retains all KV-cache pages from unstable heads in GPU memory, whereas for stable heads, it keeps only the top-K pages on the GPU and offloads the rest to host memory. By exploiting temporal stability, FlexiCache performs periodic reranking for stable heads to fetch newly promoted top pages. Implemented atop vLLM, FlexiCache reduces GPU memory footprint for long-context requests by up to 70%, improves offline serving throughput by 1.38-1.55x, and lowers online token latency by 1.6-2.1x, all while maintaining accuracy in long-context, long-generation scenarios.",
+        "canonical_id": "arXiv:2511.00868",
+        "arxiv_id": "2511.00868",
+        "authors": [
+          "Nazmul Takbir",
+          "Hamidreza Alikhani",
+          "Nikil D. Dutt",
+          "S. A. Jyothi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.19470",
+      "identity_tokens": [
+        "id:arXiv:2510.19470",
+        "title:hybridep scaling expert parallelism to crossdatacenter scenario via hybrid expertdata transmission",
+        "url:https://www.semanticscholar.org/paper/bad25ce28350cb2b14ccd5d6287a608a512eca08"
+      ],
+      "record": {
+        "title": "HybridEP: Scaling Expert Parallelism to Cross-Datacenter Scenario via Hybrid Expert/Data Transmission",
+        "source_url": "https://www.semanticscholar.org/paper/bad25ce28350cb2b14ccd5d6287a608a512eca08",
+        "year": 2025,
+        "published": "2025-10-22",
+        "abstract": "Mixture-of-Experts (MoE) has become a popular architecture for scaling large models. However, the rapidly growing scale outpaces model training on a single DC, driving a shift toward a more flexible, cross-DC training paradigm. Under this, Expert Parallelism (EP) of MoE faces significant scalability issues due to the limited cross-DC bandwidth. Specifically, existing EP optimizations attempt to overlap data communication and computation, which has little benefit in low-bandwidth scenarios due to a much longer data communication time. Therefore, the trends of cross-DC EP scaling is fast becoming a critical roadblock to the continued growth of MoE models. To address this, we propose HybridEP, a modeling-guided framework to optimize EP under constrained bandwidth. Our key idea is to dynamically transform the spatial placement of experts to reduce data communication traffic and frequency, thereby minimizing EP's communication overheads. However, it is non-trivial to find the optimal solution because it complicates the original communication pattern by mixing data and expert communication. We therefore build a stream-based model to determine the optimal transmission ratio. Guided by this, we incorporate two techniques: (1) domain-based partition to construct the mapping between hybrid patterns and specific communication topology at GPU level, and (2) parameter-efficient migration to further refine this topology by reducing expert transmission overhead and enlarging the domain size. Combining all these designs, HybridEP can be considered as a more general EP with better scalability. Experimental results show that HybridEP outperforms existing state-of-the-art MoE training systems by up to 5.6x under constrained bandwidth. We further compare HybridEP and EP on large-scale simulations. HybridEP achieves up to 1.45x speedup with 1k DCs under different bandwidths.",
+        "canonical_id": "arXiv:2510.19470",
+        "arxiv_id": "2510.19470",
+        "authors": [
+          "Wei-Hao Yang",
+          "Hao Huang",
+          "Donglei Wu",
+          "Ning Li",
+          "Yan-Qi Pan",
+          "Qiyang Zheng",
+          "Wen Xia",
+          "Shiyi Li",
+          "Qiang Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.05497",
+      "identity_tokens": [
+        "id:arXiv:2510.05497",
+        "title:patterns behind chaos forecasting data movement for efficient largescale moe llm inference",
+        "url:https://www.semanticscholar.org/paper/6bd7aef6140671d6842fb1751307dea25a93b03b"
+      ],
+      "record": {
+        "title": "Patterns Behind Chaos: Forecasting Data Movement for Efficient Large-Scale Moe LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/6bd7aef6140671d6842fb1751307dea25a93b03b",
+        "year": 2025,
+        "published": "2025-10-07",
+        "abstract": "Large-scale Mixture of Experts (MoE) Large Language Models (LLMs) have recently become the frontier openweight models, achieving remarkable model capability similar to proprietary ones. But their random expert selection mechanism introduces significant data movement overhead that becomes the dominant bottleneck in multi-unit LLM serving systems. To understand the patterns underlying this data movement, we conduct comprehensive data-movement-centric profiling across four state-of-the-art large-scale MoE models released in 2025 (200B-1000B) using over 24,000 requests spanning diverse workloads. We perform systematic analysis from both temporal and spatial perspectives and distill six key insights to guide the design of diverse serving systems. We verify these insights on both future wafer-scale GPU architectures and existing GPU systems. On wafer-scale GPUs, lightweight architectural modifications guided by our insights yield a 6.6x average speedup across four 200B-1000B models. On existing GPU systems, our insights drive the design of a prefill-aware expert placement algorithm that achieves up to 1.25x speedup on MoE computation. Our work presents the first comprehensive data-centric analysis of large-scale MoE models together with a concrete design study applying the learned lessons. Our profiling traces are publicly available at https://huggingface.co/datasets/core12345/MoE_expert_selection_trace.",
+        "canonical_id": "arXiv:2510.05497",
+        "arxiv_id": "2510.05497",
+        "authors": [
+          "Zhongkai Yu",
+          "Yue Guan",
+          "Zihao Yu",
+          "Chenyang Zhou",
+          "Zheng-Ding Hu",
+          "Shuyi Pei",
+          "Yangwook Kang",
+          "Yufei Ding",
+          "Po-An Tsai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.20241",
+      "identity_tokens": [
+        "id:arXiv:2509.20241",
+        "title:energy use of ai inference efficiency pathways and testtime scaling",
+        "url:https://www.semanticscholar.org/paper/596c24daff380f156fe080ff5232a9b318d3f7d2"
+      ],
+      "record": {
+        "title": "Energy use of AI inference, efficiency pathways, and test-time scaling",
+        "source_url": "https://www.semanticscholar.org/paper/596c24daff380f156fe080ff5232a9b318d3f7d2",
+        "year": 2025,
+        "published": "2025-09-24",
+        "abstract": "As AI inference scales to billions of queries, estimates of per-query energy use are increasingly important for capacity planning, efficiency interventions, and policy. Yet many public estimates assume non-production settings, leading to systematic overestimation. We introduce a bottom-up framework estimating inference energy from token throughput, node power, and overhead under large-scale deployment assumptions. For frontier-scale models (>200B parameters) on H100 nodes, we estimate a median energy of 0.31 Wh/query (IQR 0.16-0.60), indicating widely cited estimates are overstated by 4-20x. In test-time scaling scenarios 15x longer than typical queries, the median energy rises 13x to 3.91 Wh (IQR 2.15-7.05). Across models, serving systems, and hardware, we estimate 8-20x line-of-sight energy reductions. At datacenter scale, serving 1 billion queries/day requires 0.7 GWh; if 10% are long queries, demand rises to 1.7 GWh/day. With efficiency interventions, it falls to 0.8 GWh/day, mitigating the energy impact of test-time scaling.",
+        "canonical_id": "arXiv:2509.20241",
+        "arxiv_id": "2509.20241",
+        "authors": [
+          "Felipe Oviedo",
+          "Fiodar Kazhamiaka",
+          "Esha Choukse",
+          "Allen Kim",
+          "Amy Luers",
+          "Melanie Nakagawa",
+          "Ricardo Bianchini",
+          "J. L. Lavista Ferres"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:b7de00a755fa37394f8c0cd12d3d6f9abba4275c6499860a833e1597b35b8cd5",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

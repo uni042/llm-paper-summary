@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T094100Z-scheduled-chat-30-lamps-pf1",
+  "kind": "research",
+  "attempt_id": "attempt-54c192f36494effc75698854",
+  "job_id": "job-research-c7bef3f1698aa85a",
+  "record_bank": "f",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.18248-lamps.md",
+  "expected_blob_sha": null,
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:63dfc5e8db23a582ef07f0d0dcaeb8fcc27203a23ff0d15079f3458cf12388f8",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "34dd3e0894176a70079a2eb1ad9b40cff599e04d"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "0579fd7db5b58289b92a678d6523bd3dfa0f5dd5"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "c5bf0e314b7e73aec7d2fee97279459a01536a22"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "4f6ef36eb10637e36312a71ccc8628d36dd16975"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "24939ad861febd47793e12ed3919e91a86dd35f1"
+    }
+  ],
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "problem_method.method_overview must explain the end-to-end mechanism"
+  ],
+  "checked_at": "2026-09-23T09:39:36+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

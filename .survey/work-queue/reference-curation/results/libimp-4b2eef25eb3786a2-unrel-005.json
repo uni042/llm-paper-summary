@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4b2eef25eb3786a2-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.01739",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.01739",
+    "identity_tokens": [
+      "arXiv:2610.01739"
+    ],
+    "reason": "The primary text defines target distributions over physical/discrete configurations and evaluates lattice spin models, amortized sampling, and alloy phase diagrams; no language-model inference workload is studied.",
+    "first_checked_at": "2026-10-05T04:06:56+00:00",
+    "last_checked_at": "2026-10-05T04:06:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+      "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "Fixed-point neural samplers on discrete spaces"
+  },
+  "processed_at": "2026-10-05T04:06:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4b2eef25eb37",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

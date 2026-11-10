@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-56414007ae4fa078-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1007/s00521-026-12365-9",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1007/s00521-026-12365-9",
+    "identity_tokens": [
+      "DOI:10.1007/s00521-026-12365-9"
+    ],
+    "reason": "Packet contains no primary abstract. The DOI publisher page was attempted but inaccessible through the available retrieval path; scope and full-text claims could not be verified.",
+    "first_checked_at": "2026-10-05T04:33:29+00:00",
+    "last_checked_at": "2026-10-05T04:33:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "Decoding the Giants: a systematic taxonomy and empirical analysis of large language model architectures, training, and applications"
+  },
+  "processed_at": "2026-10-05T04:33:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-56414007ae4f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

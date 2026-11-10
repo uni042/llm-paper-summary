@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7b1bcaecf71680fbdda12d42bb4d9931443cfd5c549d504d00acde368d5645c8",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9b4e8c6c19ba--libfile_e4c28ade7ac0819192315362a0c350e8--2026-2607.18171-flashrt-multimodal-serving-agent-research-20261018-0700-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2607.18171",
+  "worker_completed_at": "2026-10-18T07:00:00+09:00",
+  "worker_run_key": "scheduled-chat-00/20261018-0700/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5759,
+    "body_paragraphs": 34,
+    "method_chars": 1968,
+    "method_paragraphs": 12,
+    "evaluation_chars": 0,
+    "limitation_chars": 740,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-18T14:20:51+00:00"
+}

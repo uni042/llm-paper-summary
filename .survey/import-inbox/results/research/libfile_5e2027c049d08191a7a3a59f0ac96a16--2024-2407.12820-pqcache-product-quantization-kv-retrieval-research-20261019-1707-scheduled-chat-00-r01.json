@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "f5fa6f959b721717a71fe64e60155c29131d504f77631f5888c2f6fc0282fda3",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_5e2027c049d08191a7a3a59f0ac96a16--2024-2407.12820-pqcache-product-quantization-kv-retrieval-research-20261019-1707-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.1145/3725338",
+  "worker_completed_at": "2026-10-19T17:07:00+09:00",
+  "worker_run_key": "20261019-1707-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5837,
+    "body_paragraphs": 29,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 91,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 91 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 91 < 500"
+  ],
+  "processed_at": "2026-10-19T12:46:39+00:00"
+}

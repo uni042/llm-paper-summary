@@ -1,0 +1,906 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0705JST-hourly00-forward-distserve-08",
+  "collector_id": "hourly00-20260921T0658JST-forward-distserve",
+  "run_key": "2026-09-21T06:58:37+09:00",
+  "axis": "forward citations of DistServe disaggregated prefill-decode LLM serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "100",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "838bc3cbf9941559509bc230ee00cbfeeccd5312",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 52,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 4,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T22:06:49.386892+00:00",
+  "results": [
+    {
+      "title": "Xronos: Heterogeneity-Aware Tensor Parallelism for Collaborative LLM Fine-Tuning on Edge CPUs",
+      "source_url": "https://www.semanticscholar.org/paper/56f9e49d68bddab2519028dec99a42a07074df83",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Collaborative fine-tuning on edge devices adapts large language models to domain-specific data while keeping each device's data local. State-of-the-art (SOTA) collaborative fine-tuning techniques are largely designed for GPU-based edge devices and rely on pipeline parallelism (PP). However, many edge platforms, including IoT gateways, smart-home hubs, and in-vehicle computers, are primarily CPU-based. This paper reports that PP is ineffective on CPU-based edge devices because the same CPU handles both model computation and communication, which causes severe CPU contention. Our analysis shows that this leads to 5.75$\\times$ higher computation stall ratios than on GPU devices on average. Tensor parallelism (TP) can alleviate this contention by separating computation and communication, but existing TP techniques assume homogeneous devices. On heterogeneous CPU edge devices, we find that this assumption causes faster workers to remain idle for up to 34% while waiting for slower devices at synchronization points. To address the limitations, we propose Xronos, a collaborative fine-tuning framework for heterogeneous CPU edge devices. Xronos uses TP as its execution backbone and combines lightweight profiling with heterogeneity-aware tensor partitioning to reduce the straggler bottleneck. Across diverse devices, models, and benchmark tasks, Xronos reduces fine-tuning time by 18% (TP) to 56% (PP) and the ratio of device idle time by $\\sim$5.9$\\times$ over SOTA techniques, while maintaining the accuracy.",
+      "canonical_id": "arXiv:2609.19909",
+      "arxiv_id": "2609.19909",
+      "authors": [
+        "Wonmi Choi",
+        "Sunjae Park",
+        "Dohyeok Kwon",
+        "Zhixiong Niu",
+        "Yeonho Yoo",
+        "Chuck Yoo",
+        "Gyeongsik Yang"
+      ]
+    },
+    {
+      "title": "Inference-Engine Fingerprinting Attacks are Practical: Exploring Model-Driven Environmental Discovery, Exploitation, and Escape",
+      "source_url": "https://www.semanticscholar.org/paper/650ac828135e0ba24e0eb5848a7c5cf47e1acd1e",
+      "year": 2026,
+      "published": "2026-09-17",
+      "abstract": "Frontier AI models are rapidly gaining the ability to exploit vulnerabilities in complex pieces of software. The risk is not theoretical, as evidenced by recent sandbox escapes performed by frontier models at OpenAI and Anthropic. Discussions of how to sandbox inference stack components often focus on components other than the inference engine itself (e.g., network proxies or code execution environments). However, the inference engine is an attractive target for a misaligned model. For example, if a model can trigger exploits in that engine merely by generating specially-crafted output tokens, the model can initiate a multi-step, to-the-bare-metal exploit chain in the engine, without relying on vulnerabilities in other components of the inference stack, and without assistance from externally-provided, maliciously-crafted input tokens. In this paper, we show that a misaligned model can perform inference engine fingerprinting to determine the specific engine (e.g., vLLM, SGLang) which executes the model. Once the engine has been fingerprinted, the model can leverage engine-specific exploits to take control of the engine using only carefully-selected output tokens. We provide concrete examples of model fingerprints in five popular engines, and demonstrate how realistic agentic harnesses allow a model to leverage those fingerprints to identify the local engine. We also describe a proof-of-concept, to-the-bare-metal exploit chain that originates from a fingerprinted (and subsequently compromised) inference engine. We conclude by discussing several ways that inference engines could be changed to make fingerprinting attacks more difficult.",
+      "canonical_id": "arXiv:2609.20614",
+      "arxiv_id": "2609.20614",
+      "authors": [
+        "Sarah Radway",
+        "Andrew Cheng",
+        "V. Reddi",
+        "James Mickens"
+      ]
+    },
+    {
+      "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+      "source_url": "https://www.semanticscholar.org/paper/b149ef384ff0618d6dbacee136f9743e42d2a455",
+      "year": 2026,
+      "published": "2026-09-14",
+      "abstract": "An MoE appliance for trillion-parameter models at low concurrency must host terabytes of weights on one node and serve prefill and decode with fixed resources. Combining operator analysis of two trillion-parameter MoE models, a measured expert routing trace, and agentic serving traces over multiple turns, we explore a design space spanning High-Bandwidth Flash (HBF) and DRAM configurations, bandwidth exposure, and near-data compute. We find that state bandwidth and HBF transport form two largely orthogonal knees and address two provisioning questions. Q1: Once weights move to HBF, what bandwidth-to-capacity ratio does DRAM require? With a 256-GB floor for the state tier, both models meet a $1.10\\times$ completion time target at ratios of only $1.4$--$4.0~\\mathrm{s}^{-1}$, roughly an order of magnitude below HBM3e's $33.3~\\mathrm{s}^{-1}$. Q2: As HBF internal bandwidth scales with capacity, must bandwidth to the host scale proportionally? Six HBF packages expose 384~GB/s per package to the host, 2.30~TB/s aggregate and 62.5\\% below the 6.14~TB/s full exposure reference, while more packages reduce required bandwidth per package at the same target.",
+      "canonical_id": "arXiv:2609.15636",
+      "arxiv_id": "2609.15636",
+      "authors": [
+        "Peng-Fei Xia",
+        "Tuo Hao",
+        "Sheng-Wei Li",
+        "Jin-Jing Chen",
+        "Shi-Ru Wei",
+        "Wen-Jun Zou",
+        "Rui Zhang",
+        "Hui Zang"
+      ]
+    },
+    {
+      "title": "Compute-Bounded Security Assurance - Coverage, Verification, and Response under Resource Constraints",
+      "source_url": "https://www.semanticscholar.org/paper/23f256d601bbd59eb8855849297b5a94d62dc9bd",
+      "year": 2026,
+      "published": "2026-09-07",
+      "abstract": "Additional inference compute can increase the number of correctly resolved security-assurance tasks, but repeated success, unique coverage, accepted evidence, and operational protection are different quantities. We develop a resource-constrained framework that separates them. For repeated conditionally independent attempts with latent success probability $\\Theta$, coverage is $C_n = 1 - E[(1-\\Theta)^n]$, and its limiting value is $1 - P(\\Theta = 0)$. Positive pairwise outcome correlation does not by itself imply a ceiling below one: we construct two models with the same mean success and pairwise correlation but different limiting coverage. We distinguish this result from the effective sample size used to estimate a mean, and show why finite-budget observations cannot generally identify an asymptotic support ceiling. We then connect coverage to fallible evidence checking, proper scoring of factual grounding, complete resource accounting, service capacity, and a response model that includes mitigation delay. A conceptual defensive architecture separates evidence analysis, adjudication, and operational authority. An evaluation protocol specifies held-out tasks, paired comparisons, negative cases, and uncertainty reporting. The contribution is a consistent theoretical synthesis and a set of counterexamples to invalid extrapolations, rather than an empirical scaling law. All numerical illustrations are analytic; no model-parity result, hardware benchmark, or general attacker-defender equilibrium is claimed.",
+      "canonical_id": "arXiv:2609.09229",
+      "arxiv_id": "2609.09229",
+      "authors": [
+        "VG Jithin",
+        "PS Ditto"
+      ]
+    },
+    {
+      "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+      "source_url": "https://www.semanticscholar.org/paper/fa21b8ff0a94101015ddb473b6d36129cb9a5bab",
+      "year": 2026,
+      "published": "2026-09-03",
+      "abstract": "Large language model (LLM) sustainability is increasingly a serving-systems problem, not only a training problem. In production, energy and carbon impact depend on more than model size: workload shape, batching, key-value (KV) cache reuse, prefill/decode placement, model and accelerator choice, power state, geographic carbon intensity, and service-level objectives (SLOs) all matter. Recent systems papers study many of these factors separately. This paper connects those results and asks a practical engineering question: what do they imply when the decision point is a distributed inference control plane such as llm-d? The contribution here is synthesis, not a new set of benchmark results. Reported performance, energy, carbon, and cost improvements remain the results of the cited papers and systems. I group the literature into recurring design patterns and use those patterns to sketch a Sustainable Inference Control Plane (SICP) for llm-d. The proposed control plane would consider latency, energy, carbon, cache reuse, serving cost, and quality when routing and scaling, while keeping TTFT/TPOT SLOs as hard constraints. I also outline an evaluation framework based on SLO-satisfied goodput per joule and per gram CO2e, together with a reproducible experimental plan. The main observation from connecting the literature is that sustainable LLM inference is unlikely to come from one\"green\"model or one accelerator; it is more naturally treated as a control problem across model, phase, cache, hardware, replica, region, and time.",
+      "canonical_id": "arXiv:2609.05565",
+      "arxiv_id": "2609.05565",
+      "authors": [
+        "Twinkll Sisodia"
+      ]
+    },
+    {
+      "title": "Co-Optimizing Request Scheduling and KV Caching for Edge LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/f25ba2c420a573830f2b4b2f30dd2fcc3adffeb2",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "Deploying large language models (LLMs) on edge nodes enables low-latency and privacy-preserving inference, but faces severe resource constraints under high-concurrence workloads. While existing inference systems leverage intranode key–value (KV) caching to improve efficiency, they largely neglect the unique complexities of multinode edge environments. Specifically, reactive KV cache eviction policies suffer from temporal uncertainty, often discarding reusable KV caches prematurely, while the tight coupling between request scheduling and cache placement often leads to myopic decisions that exacerbate load imbalance and resource contention. To address these challenges, we propose a dynamic block-level paradigm that treats KV blocks as the fundamental units for caching and scheduling, enabling dynamic sharing, generation, and eviction of arbitrary-length prefixes. We present complete modeling of the spatiotemporal coupling between scheduling and caching under block-level granularity, capturing intricate interactions overlooked by prior work. Based on this model, we design an online joint optimization algorithm, which applies to general edge LLM serving scenarios. The algorithm decouples spatiotemporal dependencies via randomized rounding over per-slot subproblems, achieving a balance between real-time responsiveness and long-term system efficiency. Theoretical analysis establishes high-probability near-optimality guarantees, and extensive experiments show that our method reduces the average time to first token (TTFT) by up to 54.02% over existing baselines.",
+      "canonical_id": "DOI:10.1109/JIOT.2026.3709703",
+      "doi": "10.1109/JIOT.2026.3709703",
+      "authors": [
+        "Xi-Shuo Li",
+        "Wei Jiao",
+        "Jun He",
+        "Shan Zhang"
+      ]
+    },
+    {
+      "title": "DuoPIM: RRAM–DRAM Hybrid PIM Acceleration for Flexible-Batch LLM Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/bccca75ef45fe933f099b3ff1fd54d7a8077b8c1",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "Transformer-based large language models (LLMs) primarily consist of weight-intensive fully connected (FC) layers and cache-dependent attention layers. While batching significantly enhances the throughput of FC layers, it paradoxically increases the cache demands of attention layers. This provides no performance benefit and creates substantial memory pressure. Consequently, existing graphics processing unit (GPU)-based LLM acceleration systems face throughput limitations from batch size constraints. Even when DRAM-based processing-in-memory (PIM) is employed to accelerate attention, the utilization remains extremely low under small batch sizes, which is unsuitable for low-batch scenarios. Fortunately, the emerging nonvolatile resistive random access memory (RRAM) technology offers batch size-insensitive acceleration for FC layers through highly parallel in situ computations by eliminating weight loading overhead. This insight leads us to propose a hybrid approach: RRAM for FC layers and DRAM PIM for attention layers to overcome batch size limitations. However, merely scaling existing RRAM architectures misaligned with LLMs’ computation and storage demands will result in prohibitive overheads. Meanwhile, existing DRAM-based PIMs suffer from poor resource utilization due to the computational pattern of attention layers. Implementing an effective scheduling strategy is equally crucial to harness the potential of the hybrid PIM system. To address these challenges, we present DuoPIM, a novel RRAM–DRAM hybrid PIM architecture optimized for LLM decoding. We introduce novel architectural innovations for both the RRAM and DRAM PIM components to address the challenges posed by LLMs. Specifically, we decouple RRAM’s storage and computing capabilities within a hierarchical architecture, implement minimal modifications to DRAM PIM to support online softmax, and devise dedicated strategies across multiple architectural levels to enhance overall resource utilization. Evaluations demonstrate DuoPIM’s ability to fully leverage computing capacity across various batch sizes.",
+      "canonical_id": "DOI:10.1109/TCAD.2025.3648674",
+      "doi": "10.1109/TCAD.2025.3648674",
+      "authors": [
+        "Xiao-Tian Sun",
+        "Xin-Yu Wang",
+        "Wanqian Li",
+        "Xueqi Li",
+        "Chun-Meng Dou",
+        "Yinhe Han",
+        "Xiaoming Chen"
+      ]
+    },
+    {
+      "title": "Towards socio-cyber-physical systems: a software perspective amid AI breakthroughs",
+      "source_url": "https://www.semanticscholar.org/paper/5df5085ab16bff06cbe419249515ec1563d5d459",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": "Software technology is undergoing a paradigm shift driven by two converging trends. First, the scope of software responsibility has expanded significantly: as “software-defined everything” becomes a reality, software has evolved into the integration core of sociocyber-physical systems (SCPSs). Second, the capabilities and development methods of software are being greatly enhanced by recent breakthroughs in artificial intelligence (AI). This article presents perspectives and observations on software engineering in this era of rapid progress. We aim to outline a set of foundational challenges in engineering SCPSs and highlight the need for innovative software solutions that extend beyond AI technologies alone. Specifically, we examine the need for a new paradigm that can address the complexities introduced by SCPSs, which challenge conventional paradigms through the blurring of system boundaries, continuous lifecycle evolution, and the embracing of inherent uncertainty. We highlight new engineering principles of socio-technical co-design, cyber-physical integration, and development-operation convergence, and a knowledge- and data-driven approach to taming uncertainty. Emerging proposals, including digital humanism, agentic SCPS, ubiquitous operating system, and continuous quality assurance, are discussed alongside possible extensions to existing technologies. We then outline key research directions for both runtime support and quality assurance. On the runtime side, we argue for a new generation of software infrastructure for SCPSs, including unified hardware abstractions, scalable and resilient runtime systems, AI-enabled system management, and human-centric operating system primitives. On the assurance side, we highlight the need for new approaches combining unified socio-cyber-physical modeling, specification of both technical and non-technical properties, data-driven simulation and testing, continuous verification, and runtime monitoring under uncertainty. Furthermore, we present specific challenges within key application domains, including intelligent vehicles, smart manufacturing, and smart cities. In doing so, we aim to stimulate discussion within the software engineering community and encourage support from industry and government to address the critical engineering and governance issues inherent to this new generation of systems.",
+      "canonical_id": "DOI:10.1007/s11432-026-5037-1",
+      "doi": "10.1007/s11432-026-5037-1",
+      "authors": [
+        "Assia Belbachir",
+        "M. Blake",
+        "Jin-Song Dong",
+        "S. Dustdar",
+        "Christof Ebert",
+        "C. Ghezzi",
+        "David Harel",
+        "S. Helal",
+        "Chun-Min Hu",
+        "Lin-Peng Huang",
+        "Hans-Arno Jacobsen",
+        "Chang-Jun Jiang",
+        "Zhi Jin",
+        "Jia-Lin Li",
+        "Xuanzhe Liu",
+        "Jian Lu",
+        "Xiao-Xing Ma",
+        "Assaf Marron",
+        "Hong Mei",
+        "B. Nuseibeh",
+        "Xin Peng",
+        "Yuanchun Shi",
+        "Huai-Min Wang",
+        "Ji Wang",
+        "Jian-Min Wang",
+        "Danny Weyns",
+        "James Woodcock",
+        "Tao Xie",
+        "H. Xu",
+        "Mengfei Yang",
+        "Jian-Wei Yin",
+        "Naijun Zhan"
+      ]
+    },
+    {
+      "title": "SmartBatchLLM: An efficient adaptive hybrid batching strategy for large language model serving",
+      "source_url": "https://www.semanticscholar.org/paper/eb3d10ca67246443721267dabddd9278c391051c",
+      "year": 2026,
+      "published": "2026-09-01",
+      "abstract": null,
+      "canonical_id": "DOI:10.1016/j.parco.2026.103216",
+      "doi": "10.1016/j.parco.2026.103216",
+      "authors": [
+        "Si-Yuan Sun",
+        "Zhao-Jia Wang",
+        "Han-Shuo Liu",
+        "Jie-Han Zhou"
+      ]
+    },
+    {
+      "title": "When Do Larger Batches Help Scale LLM Reinforcement Learning?",
+      "source_url": "https://www.semanticscholar.org/paper/0ca3516b4ef77e0ff0489c461373630c769fa3d2",
+      "year": 2026,
+      "published": "2026-08-29",
+      "abstract": "Larger batches reduce the variance of stochastic gradients per update and are therefore often expected to accelerate training. Yet whether this statistical benefit translates into lower wall-clock time-to-target remains unclear, because each update consumes more samples and may take longer to execute. We study this tradeoff in reinforcement learning for large language models. We separate its algorithmic and systems effects by comparing learning and execution along their natural axes. At the algorithmic level, we compare configurations at equal cumulative sample counts while retuning batch-dependent hyperparameters. Over a bounded range of batch sizes, this procedure yields an approximately batch-size-invariant family whose members follow similar sample-indexed learning trajectories. At the systems level, we exploit the computational asymmetry between rollout generation and training: autoregressive generation is often memory-bandwidth-bound at low concurrency, whereas training work scales approximately with the number of processed tokens. Combining these two views yields a direct decision rule: a larger-batch configuration reduces time-to-target only when its throughput gain exceeds its samples-to-target penalty. Experiments with GRPO and PPO support both sides of this decomposition. At the algorithmic level, square-root learning-rate scaling with Adam produces approximately batch-size-invariant learning curves over a bounded range of batch sizes. At the systems level, larger batches improve generation throughput by up to 2.29x on fixed hardware. In GRPO, combining higher throughput with learning-rate retuning reduces time-to-target by up to 29%, whereas increasing the batch without retuning is slower despite its higher throughput.",
+      "canonical_id": "arXiv:2608.29296",
+      "arxiv_id": "2608.29296",
+      "authors": [
+        "Ziniu Li",
+        "Jinbo Wang",
+        "Guan-Hua Huang",
+        "Fei-Yuan Zhang",
+        "Pengbo Li",
+        "Alex Chen"
+      ]
+    },
+    {
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "source_url": "https://www.semanticscholar.org/paper/43333e143a812704882fe15f812f58556e5c482b",
+      "year": 2026,
+      "published": "2026-08-28",
+      "abstract": "Large language models (LLMs) place unprecedented and still-growing demands on the hardware that trains and serves them. This review surveys the full landscape of AI hardware accelerators for LLMs, including general-purpose GPUs, custom ASICs such as TPUs, Trainium, Groq, and Cerebras, reconfigurable FPGAs, processing-in-memory and near-memory architectures, and emerging neuromorphic and photonic approaches across cloud and edge deployment. Using the transformer's computational structure and roofline analysis as a common framework, we show that the decisive constraint on LLM acceleration is not arithmetic but memory: the autoregressive decode phase is bandwidth-bound, the key-value cache can rival the model weights in size, and data movement dominates energy. Comparing platforms on compute, memory, energy, programmability, and scalability, we find that no single architecture is optimal across workloads: GPUs remain the flexible default and the workhorse of training; domain-specific ASICs win at scale for stable, high-volume workloads; processing-in-memory is the most promising near-term response to the memory wall, entering systems as a heterogeneous complement; and neuromorphic and photonic computing, while promising, are not yet production-ready at frontier scale. Future progress depends on hardware-algorithm co-design and heterogeneous, memory-centric systems: for large language models, the memory system has become the computer.",
+      "canonical_id": "arXiv:2608.28048",
+      "arxiv_id": "2608.28048",
+      "authors": [
+        "Siddharth Patel",
+        "Rohit Singh"
+      ]
+    },
+    {
+      "title": "Characterization of Request and Token Energy Costs for LLM Inference Workloads on GPU Platforms",
+      "source_url": "https://www.semanticscholar.org/paper/aaf46dc87740c49088dedc2036ecaa4814de3791",
+      "year": 2026,
+      "published": "2026-08-28",
+      "abstract": "Large language model (LLM) inference serving is priced by tokens, but GPU energy is consumed over inference windows. This accounting mismatch makes token-normalized metrics incomplete, since average output-token energy can decrease even when total request energy increases. We characterize this behavior with a decomposed energy model: a fixed one-time prefill with a fixed generation setup cost, while each output-token generation step adds marginal step energy. We evaluate this LLM inference energy model on NVIDIA H100 and H200 GPUs across dense and mixture-of-experts (MoE) models, reporting both request energy and token energy as functions of model type (M), phase (P), batch size (B), context length (C), and output length (N). For Llama-3.2-1B on H200 at batch-16 and context-4K, increasing output length from 10 to 512 tokens reduces token energy from 7.46 to 0.72 J/token while total batched inference-window energy increases from 1.19 to 5.93 kJ. Batching also reduces token energy, but the gain is context-bounded: at 10 output tokens, the batch-16 to batch-1 gain falls from 6.31x at context-512 to 1.17x at context-4K. MoE models amplify this effect: sparse routing and fragmented expert execution increase fixed energy at low concurrency, while batching spreads that energy across more generated tokens and substantially narrows the dense-vs.-MoE token-energy gap. These results show that energy-aware serving should jointly optimize both request energy and token energy, rather than only reducing per-token energy cost.",
+      "canonical_id": "arXiv:2608.28044",
+      "arxiv_id": "2608.28044",
+      "authors": [
+        "P. Vellaisamy",
+        "Vanessa Lam",
+        "Shawn Blanton",
+        "J. Shen"
+      ]
+    },
+    {
+      "title": "Goodput Maximization for Large Language Model Edge Inference: A Two-Phase Maskable PPO Approach",
+      "source_url": "https://www.semanticscholar.org/paper/028eaa5ede30fb036c8cf14bb602baede41f13b6",
+      "year": 2026,
+      "published": "2026-08-26",
+      "abstract": "This letter presents a novel two-phase maskable proximal policy optimization (TP-MPPO) algorithm, which maximizes the system goodput counting request throughput with strict service level objective (SLO) compliance for large language model (LLM) inference services in wireless edge networks. In the first phase of TP-MPPO, we optimize the task offloading decisions by MPPO with action masking mechanism, effectively avoiding exploring invalid actions and reducing the action space. In the second phase, closed-form solutions are derived for uplink bandwidth allocation; a greedy algorithm is designed for downlink bandwidth allocation to provide immediate rewards for the MPPO in the next round. The two stages alternate till convergence. Simulation results demonstrate that TP-MPPO can improve the system reward by 33.3%–87.5% compared to its benchmarks and achieve the highest goodput.",
+      "canonical_id": "arXiv:2608.25543",
+      "arxiv_id": "2608.25543",
+      "authors": [
+        "Xiaojing Chen",
+        "Qi Zhang",
+        "Wei Ni",
+        "Shunqing Zhang",
+        "Yanzan Sun"
+      ]
+    },
+    {
+      "title": "Hydra: Phase-Aware Workload Characterization of LLM Inference across Edge SoC Generations, Backends, and Quantization Levels",
+      "source_url": "https://www.semanticscholar.org/paper/61247ec0864a2c3fc0b9cbe68fb6e1495961a02b",
+      "year": 2026,
+      "published": "2026-08-25",
+      "abstract": "Edge LLM deployment is shaped by more than model size and precision: inference backend, hardware platform, memory traffic, and power management all affect latency and efficiency. We present Hydra, a common-schema, phase-aware workload characterization framework for LLM inference on edge SoCs. Hydra instruments HuggingFace Transformers and llama.cpp with a shared per-prompt timing schema and fuses those records with hardware telemetry, enabling a multi-dimensional characterization of performance, system-resource utilization, and efficiency across prefill and decode phases. Using Hydra, we evaluate three consecutive edge System-on-Chip (SoC) generations (AGX Xavier, AGX Orin, and AGX Thor), 13 instruction-tuned LLMs from seven families, five execution formats, and consider input/output-length sensitivity. The resulting artifact contains roughly 107K per-prompt records and is publicly released with Hydra. Our analysis shows that aggregate latency alone hides key deployment effects: backend structure changes where latency is introduced, quantization reduces memory traffic and energy but does not predict power monotonically, and SoC generation changes how utilization and efficiency should be interpreted. By connecting phase-level timing with system-resource utilization and efficiency metrics, Hydra enables reproducible, phase-aware characterization of edge LLM inference. Hydra's source code and the collected per-prompt trace corpus are available open-source at: https://github.com/amirtaherin/hydra",
+      "canonical_id": "arXiv:2608.25053",
+      "arxiv_id": "2608.25053",
+      "authors": [
+        "Amir Taherin",
+        "Sana Taghipour Anvari",
+        "Charles Amante",
+        "Yixian Chen",
+        "Ruben Noroian",
+        "Z. Feric",
+        "N. Agostini",
+        "Pu Zhao",
+        "José Cano",
+        "Bin Ren",
+        "Yan-Zhi Wang",
+        "David R. Kaeli"
+      ]
+    },
+    {
+      "title": "MentorPulse: Refreshing Cross-Model Latent Guidance for Long-Form Generation",
+      "source_url": "https://www.semanticscholar.org/paper/7e9a9e878f4d7dfd1d48e4755b7d108d017528ef",
+      "year": 2026,
+      "published": "2026-08-21",
+      "abstract": "Cross-model latent guidance lets a frozen large mentor encode an input once and a frozen small student generate from the resulting signal. Existing methods keep this signal fixed, assuming it stays useful as the output grows; we show this fails in long-form generation. On multi-turn instruction following, static guidance pushes a 4B student's constraint satisfaction 2.5 points below its no-guidance baseline; a training-free refresh every 16 tokens changes only the memory content and restores a 2.0-point gain over that baseline. We propose MentorPulse to keep guidance fresh at practical cost: it compresses mentor states into a capped slot memory, incrementally processes newly generated tokens, and updates the memory that the student reads through gated cross-attention without resetting the student's KV cache. Windowed Refresh Training exposes the bridge to prefix-conditioned memory. Across thirteen datasets, MentorPulse closes 52.2% of the mentor-student gap on macro average, outperforming C2C, T2T, and equal-budget LoRA, with the largest gains on long outputs. It performs best on all eleven mentor-student pairs from three model families, with margins that narrow as the capability gap grows, and a lightweight read-pattern check predicts the gain before deployment. Measured costs identify refresh intervals that dominate text guidance on long outputs.",
+      "canonical_id": "arXiv:2608.20927",
+      "arxiv_id": "2608.20927",
+      "authors": [
+        "Ziwu Liu",
+        "Guozhong Li",
+        "Chen Qiu",
+        "Wei-Yang Kong",
+        "Panos Kalnis"
+      ]
+    },
+    {
+      "title": "AI Infrastructure in Space: How Far Can We Go?",
+      "source_url": "https://www.semanticscholar.org/paper/f816cefd78a33d563dd269331564d2cdd072cea7",
+      "year": 2026,
+      "published": "2026-08-21",
+      "abstract": "Satellites are becoming programmable computing platforms capable of running increasingly demanding AI workloads. This shift raises a systems problem: how can AI services remain deployable, manageable, and recoverable after launch when compute capacity, connectivity, energy, and thermal headroom vary over orbital time? This paper develops a systems vision for AI infrastructure in space. We define it as the systems layer that manages AI capabilities across spacecraft, orbital networks, ground stations, and cloud backends, while treating orbital and physical state as part of the resource model. We synthesize relevant foundations from terrestrial AI infrastructure, satellite networking, and satellite edge computing, and examine the physical constraints that directly shape system design. We further ground this vision in three in-orbit case studies spanning the node, platform, and service levels. Telemetry from BUPT-1 satellite shows that usable compute capacity is bounded by thermal and energy envelopes. SateLight on BUPT-2 satellite reduces application-update transmission latency by 56.54% on average and up to 91.18%, with 100% update correctness. A stateful VLM serving case further shows that thermal interruptions make execution-state recovery a first-class systems problem. These observations motivate a research agenda for space-native resource management, lifecycle support, and sustained AI service across space and ground.",
+      "canonical_id": "arXiv:2608.21034",
+      "arxiv_id": "2608.21034",
+      "authors": [
+        "Qing Li",
+        "Qi-Yang Zhang",
+        "Daliang Xu",
+        "Tianze Huang",
+        "Ding-Ge Zhang",
+        "Yihao Zhao",
+        "Xiaolong Huang",
+        "Jin-Feng Wen",
+        "Xiameng Hu",
+        "Tao Qi",
+        "Mengwei Xu",
+        "Shang-Guang Wang",
+        "Xuazhe Liu"
+      ]
+    },
+    {
+      "title": "FleetSieve: Decision-Critical Profiling for SLO-Aware LLM Fleet Configuration",
+      "source_url": "https://www.semanticscholar.org/paper/fa41fc861a398c7598a8884ab0b6ea4c5ab8306c",
+      "year": 2026,
+      "published": "2026-08-20",
+      "abstract": "Choosing tensor-parallel (TP) degrees and replica counts for an LLM serving fleet is difficult because performance is not monotonic in TP and the feasible choice can change with load. Exhaustive profiling resolves this uncertainty, but measures many configurations that do not affect the final resource allocation. We present FleetSieve, which selects measurements according to their expected effect on a resource-coupled, SLO-aware fleet decision. FleetSieve models capacity and tail latency jointly, compares conservative and optimistic allocations, and stops when their remaining decision gap is below a specified tolerance. On a fixed H100 measurement grid for a 31B-parameter open-weight model, FleetSieve reaches the oracle aggregate decision using 22,200 GPU-seconds, 6.9% less than uniform random profiling in the fixed comparison. Across 200 random reveal orders, its mean saving over random profiling is 5.4% (95% bootstrap CI: 3.5-7.2%). The fixed-comparison saving is 21.5% for Chat, while FleetSieve does not use the fewest GPU-seconds for Code. Joint capacity and tail modeling also avoids selecting a configuration whose 46.4-second completion p99 violates a 30-second SLO. In a 16-GPU allocation, an incorrect sparse-profile decision loses up to 1.93 requests/s and 12.4 percentage points of max-min fulfillment. Boundary repeats and BurstGPT measurements support the observed load-dependent tail-latency mechanism.",
+      "canonical_id": "arXiv:2608.19659",
+      "arxiv_id": "2608.19659",
+      "authors": [
+        "Huang Cheng",
+        "Scott Zhang",
+        "Aubert Li"
+      ]
+    },
+    {
+      "title": "HYDRA: A Heterogeneous Chiplet DSE Framework for Serving Dynamic Hybrid LLM Workloads",
+      "source_url": "https://www.semanticscholar.org/paper/65435abac34942c78717b5d15b0a2e437e59b568",
+      "year": 2026,
+      "published": "2026-08-19",
+      "abstract": "Hybrid Transformer-Mamba large language models (LLMs) enhance long-context efficiency, but their heterogeneous computation and communication patterns complicate efficient hardware acceleration. Chiplet-based architectures offer a scalable solution by integrating specialized compute and memory units. However, the design space spanning static architectural configurations and dynamic runtime policies is prohibitively large to explore exhaustively. To address this challenge, we present HYDRA, a comprehensive design space exploration framework for hybrid LLM serving on heterogeneous chiplet systems. HYDRA jointly explores chiplet composition, placement, inter-chiplet bandwidth provisioning, dynamic batching, and runtime scheduling. It integrates communication-aware placement, dynamic batching, elastic task scheduling, and a fast Markov-based performance estimator that captures multi-tenant runtime dynamics for efficient and accurate exploration. Across all workloads, HYDRA delivers 1.55x the throughput and 43.7 percent lower time-to-first-token on average, with throughput gains reaching up to 2.3x compared to state-of-the-art baselines. These results highlight that co-designing architecture and runtime policies is critical for efficient large-scale LLM serving on heterogeneous chiplet systems.",
+      "canonical_id": "arXiv:2608.19395",
+      "arxiv_id": "2608.19395",
+      "authors": [
+        "Jiahao Lin",
+        "Alish Kanani",
+        "Sang-Won Lee",
+        "Jaehyun Park",
+        "U. Ogras"
+      ]
+    },
+    {
+      "title": "Decomposition Attacks Across Unlinkable Identities: Limits of Stateful Defenses for LLM Services",
+      "source_url": "https://www.semanticscholar.org/paper/bb1ba75a29e01b0f0f8c42a38bf948d04afd207e",
+      "year": 2026,
+      "published": "2026-08-18",
+      "abstract": "Most large language model services use stateless defenses, which judge only the current request, to refuse harmful tasks. Decomposition attacks exploit this limitation by splitting a harmful task into individually permissible requests and combining their answers. Defending against them therefore requires a stateful monitor that considers requests together. If it can group all requests for one attacker task, it can stop the attack. However, attackers can use unlinkable identities and combine answers elsewhere, leaving no reliable grouping signal. We ask whether decomposition attacks can still be stopped under this setting. For a fixed attack strategy without retries, we prove that the achievable security and utility tradeoff depends entirely on how benign requests for the same capabilities are grouped. Persistent, recognizable groups permit a useful defense; fresh, indistinguishable groups do not. When attackers can retry and learn from Allow/Block decisions, this useful operating point disappears: the feedback reveals what passes but not whether a block was correct. Experiments on 91 executable tasks and 11,393 capability-matched benign requests support these results. Under a 1% denial cap for these requests and a 0.5% cap for unrelated background traffic, all ten tested policies, including one privileged policy with an exact request-to-operation map, either fail to stop attacks or exceed the budget. On defense-unseen task families, attack success is at least 99% after one attempt and 100% after two. Effective defenses therefore require additional evidence or mechanisms tied to grouping, such as reliable identity linkage, costs for fresh identities, or control over answer use.",
+      "canonical_id": "arXiv:2608.17445",
+      "arxiv_id": "2608.17445",
+      "authors": [
+        "Bowen Sun",
+        "Zhengyue Zhao",
+        "Xiaogeng Liu",
+        "Yinzhi Cao",
+        "Chaowei Xiao"
+      ]
+    },
+    {
+      "title": "ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/713681b5ad435a87d94c6eb057a4b06f97a99c22",
+      "year": 2026,
+      "published": "2026-08-17",
+      "abstract": "Disaggregated LLM inference separates the prefill and decode phases across GPU pools, generating massive KV-cache transfers. Because these transfers last hundreds of milliseconds to seconds, they behave as mega elephant flows that dominate link bandwidth utilization. In this regime, stateless ECMP can perform poorly: hash collisions may overload one spine link while leaving others idle, stretching transfer times by seconds. Yet this same persistence makes coordination practical. Since these flows are long-lived, even lightweight one-to-all coordination can be amortized over their lifetime. We present ARK, a distributed elephant-flow path reservation mechanism. ARK coordinates senders to choose source ports whose hashes map concurrent flows onto distinct spines, without requiring switch changes or receiver-side packet reordering. Packet-level RDMA simulations show that ARK reduces mean and P95 FCT by up to 27.3% and 34.0% under moderate load, and further reduces mean TTFT by up to 12.9%.",
+      "canonical_id": "DOI:10.1145/3789240.3828750",
+      "doi": "10.1145/3789240.3828750",
+      "authors": [
+        "Hung-Chun Lin",
+        "Ting-Wei Hsu",
+        "Chung-En Ho",
+        "Ahmed Saeed"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.19909",
+      "identity_tokens": [
+        "id:arXiv:2609.19909",
+        "title:xronos heterogeneityaware tensor parallelism for collaborative llm finetuning on edge cpus",
+        "url:https://www.semanticscholar.org/paper/56f9e49d68bddab2519028dec99a42a07074df83"
+      ],
+      "record": {
+        "title": "Xronos: Heterogeneity-Aware Tensor Parallelism for Collaborative LLM Fine-Tuning on Edge CPUs",
+        "source_url": "https://www.semanticscholar.org/paper/56f9e49d68bddab2519028dec99a42a07074df83",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Collaborative fine-tuning on edge devices adapts large language models to domain-specific data while keeping each device's data local. State-of-the-art (SOTA) collaborative fine-tuning techniques are largely designed for GPU-based edge devices and rely on pipeline parallelism (PP). However, many edge platforms, including IoT gateways, smart-home hubs, and in-vehicle computers, are primarily CPU-based. This paper reports that PP is ineffective on CPU-based edge devices because the same CPU handles both model computation and communication, which causes severe CPU contention. Our analysis shows that this leads to 5.75$\\times$ higher computation stall ratios than on GPU devices on average. Tensor parallelism (TP) can alleviate this contention by separating computation and communication, but existing TP techniques assume homogeneous devices. On heterogeneous CPU edge devices, we find that this assumption causes faster workers to remain idle for up to 34% while waiting for slower devices at synchronization points. To address the limitations, we propose Xronos, a collaborative fine-tuning framework for heterogeneous CPU edge devices. Xronos uses TP as its execution backbone and combines lightweight profiling with heterogeneity-aware tensor partitioning to reduce the straggler bottleneck. Across diverse devices, models, and benchmark tasks, Xronos reduces fine-tuning time by 18% (TP) to 56% (PP) and the ratio of device idle time by $\\sim$5.9$\\times$ over SOTA techniques, while maintaining the accuracy.",
+        "canonical_id": "arXiv:2609.19909",
+        "arxiv_id": "2609.19909",
+        "authors": [
+          "Wonmi Choi",
+          "Sunjae Park",
+          "Dohyeok Kwon",
+          "Zhixiong Niu",
+          "Yeonho Yoo",
+          "Chuck Yoo",
+          "Gyeongsik Yang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.20614",
+      "identity_tokens": [
+        "id:arXiv:2609.20614",
+        "title:inferenceengine fingerprinting attacks are practical exploring modeldriven environmental discovery exploitation and escape",
+        "url:https://www.semanticscholar.org/paper/650ac828135e0ba24e0eb5848a7c5cf47e1acd1e"
+      ],
+      "record": {
+        "title": "Inference-Engine Fingerprinting Attacks are Practical: Exploring Model-Driven Environmental Discovery, Exploitation, and Escape",
+        "source_url": "https://www.semanticscholar.org/paper/650ac828135e0ba24e0eb5848a7c5cf47e1acd1e",
+        "year": 2026,
+        "published": "2026-09-17",
+        "abstract": "Frontier AI models are rapidly gaining the ability to exploit vulnerabilities in complex pieces of software. The risk is not theoretical, as evidenced by recent sandbox escapes performed by frontier models at OpenAI and Anthropic. Discussions of how to sandbox inference stack components often focus on components other than the inference engine itself (e.g., network proxies or code execution environments). However, the inference engine is an attractive target for a misaligned model. For example, if a model can trigger exploits in that engine merely by generating specially-crafted output tokens, the model can initiate a multi-step, to-the-bare-metal exploit chain in the engine, without relying on vulnerabilities in other components of the inference stack, and without assistance from externally-provided, maliciously-crafted input tokens. In this paper, we show that a misaligned model can perform inference engine fingerprinting to determine the specific engine (e.g., vLLM, SGLang) which executes the model. Once the engine has been fingerprinted, the model can leverage engine-specific exploits to take control of the engine using only carefully-selected output tokens. We provide concrete examples of model fingerprints in five popular engines, and demonstrate how realistic agentic harnesses allow a model to leverage those fingerprints to identify the local engine. We also describe a proof-of-concept, to-the-bare-metal exploit chain that originates from a fingerprinted (and subsequently compromised) inference engine. We conclude by discussing several ways that inference engines could be changed to make fingerprinting attacks more difficult.",
+        "canonical_id": "arXiv:2609.20614",
+        "arxiv_id": "2609.20614",
+        "authors": [
+          "Sarah Radway",
+          "Andrew Cheng",
+          "V. Reddi",
+          "James Mickens"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15636",
+      "identity_tokens": [
+        "id:arXiv:2609.15636",
+        "title:trillionparameter moe in a box decoupling memory provisioning with highbandwidth flash",
+        "url:https://www.semanticscholar.org/paper/b149ef384ff0618d6dbacee136f9743e42d2a455"
+      ],
+      "record": {
+        "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+        "source_url": "https://www.semanticscholar.org/paper/b149ef384ff0618d6dbacee136f9743e42d2a455",
+        "year": 2026,
+        "published": "2026-09-14",
+        "abstract": "An MoE appliance for trillion-parameter models at low concurrency must host terabytes of weights on one node and serve prefill and decode with fixed resources. Combining operator analysis of two trillion-parameter MoE models, a measured expert routing trace, and agentic serving traces over multiple turns, we explore a design space spanning High-Bandwidth Flash (HBF) and DRAM configurations, bandwidth exposure, and near-data compute. We find that state bandwidth and HBF transport form two largely orthogonal knees and address two provisioning questions. Q1: Once weights move to HBF, what bandwidth-to-capacity ratio does DRAM require? With a 256-GB floor for the state tier, both models meet a $1.10\\times$ completion time target at ratios of only $1.4$--$4.0~\\mathrm{s}^{-1}$, roughly an order of magnitude below HBM3e's $33.3~\\mathrm{s}^{-1}$. Q2: As HBF internal bandwidth scales with capacity, must bandwidth to the host scale proportionally? Six HBF packages expose 384~GB/s per package to the host, 2.30~TB/s aggregate and 62.5\\% below the 6.14~TB/s full exposure reference, while more packages reduce required bandwidth per package at the same target.",
+        "canonical_id": "arXiv:2609.15636",
+        "arxiv_id": "2609.15636",
+        "authors": [
+          "Peng-Fei Xia",
+          "Tuo Hao",
+          "Sheng-Wei Li",
+          "Jin-Jing Chen",
+          "Shi-Ru Wei",
+          "Wen-Jun Zou",
+          "Rui Zhang",
+          "Hui Zang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.09229",
+      "identity_tokens": [
+        "id:arXiv:2609.09229",
+        "title:computebounded security assurance coverage verification and response under resource constraints",
+        "url:https://www.semanticscholar.org/paper/23f256d601bbd59eb8855849297b5a94d62dc9bd"
+      ],
+      "record": {
+        "title": "Compute-Bounded Security Assurance - Coverage, Verification, and Response under Resource Constraints",
+        "source_url": "https://www.semanticscholar.org/paper/23f256d601bbd59eb8855849297b5a94d62dc9bd",
+        "year": 2026,
+        "published": "2026-09-07",
+        "abstract": "Additional inference compute can increase the number of correctly resolved security-assurance tasks, but repeated success, unique coverage, accepted evidence, and operational protection are different quantities. We develop a resource-constrained framework that separates them. For repeated conditionally independent attempts with latent success probability $\\Theta$, coverage is $C_n = 1 - E[(1-\\Theta)^n]$, and its limiting value is $1 - P(\\Theta = 0)$. Positive pairwise outcome correlation does not by itself imply a ceiling below one: we construct two models with the same mean success and pairwise correlation but different limiting coverage. We distinguish this result from the effective sample size used to estimate a mean, and show why finite-budget observations cannot generally identify an asymptotic support ceiling. We then connect coverage to fallible evidence checking, proper scoring of factual grounding, complete resource accounting, service capacity, and a response model that includes mitigation delay. A conceptual defensive architecture separates evidence analysis, adjudication, and operational authority. An evaluation protocol specifies held-out tasks, paired comparisons, negative cases, and uncertainty reporting. The contribution is a consistent theoretical synthesis and a set of counterexamples to invalid extrapolations, rather than an empirical scaling law. All numerical illustrations are analytic; no model-parity result, hardware benchmark, or general attacker-defender equilibrium is claimed.",
+        "canonical_id": "arXiv:2609.09229",
+        "arxiv_id": "2609.09229",
+        "authors": [
+          "VG Jithin",
+          "PS Ditto"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05565",
+      "identity_tokens": [
+        "id:arXiv:2609.05565",
+        "title:toward sustainable distributed llm inference a systems synthesis and research agenda for an energy carbon and cacheaware llmd control plane",
+        "url:https://www.semanticscholar.org/paper/fa21b8ff0a94101015ddb473b6d36129cb9a5bab"
+      ],
+      "record": {
+        "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+        "source_url": "https://www.semanticscholar.org/paper/fa21b8ff0a94101015ddb473b6d36129cb9a5bab",
+        "year": 2026,
+        "published": "2026-09-03",
+        "abstract": "Large language model (LLM) sustainability is increasingly a serving-systems problem, not only a training problem. In production, energy and carbon impact depend on more than model size: workload shape, batching, key-value (KV) cache reuse, prefill/decode placement, model and accelerator choice, power state, geographic carbon intensity, and service-level objectives (SLOs) all matter. Recent systems papers study many of these factors separately. This paper connects those results and asks a practical engineering question: what do they imply when the decision point is a distributed inference control plane such as llm-d? The contribution here is synthesis, not a new set of benchmark results. Reported performance, energy, carbon, and cost improvements remain the results of the cited papers and systems. I group the literature into recurring design patterns and use those patterns to sketch a Sustainable Inference Control Plane (SICP) for llm-d. The proposed control plane would consider latency, energy, carbon, cache reuse, serving cost, and quality when routing and scaling, while keeping TTFT/TPOT SLOs as hard constraints. I also outline an evaluation framework based on SLO-satisfied goodput per joule and per gram CO2e, together with a reproducible experimental plan. The main observation from connecting the literature is that sustainable LLM inference is unlikely to come from one\"green\"model or one accelerator; it is more naturally treated as a control problem across model, phase, cache, hardware, replica, region, and time.",
+        "canonical_id": "arXiv:2609.05565",
+        "arxiv_id": "2609.05565",
+        "authors": [
+          "Twinkll Sisodia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jiot.2026.3709703",
+      "identity_tokens": [
+        "id:DOI:10.1109/jiot.2026.3709703",
+        "title:cooptimizing request scheduling and kv caching for edge llm serving",
+        "url:https://www.semanticscholar.org/paper/f25ba2c420a573830f2b4b2f30dd2fcc3adffeb2"
+      ],
+      "record": {
+        "title": "Co-Optimizing Request Scheduling and KV Caching for Edge LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/f25ba2c420a573830f2b4b2f30dd2fcc3adffeb2",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "Deploying large language models (LLMs) on edge nodes enables low-latency and privacy-preserving inference, but faces severe resource constraints under high-concurrence workloads. While existing inference systems leverage intranode key–value (KV) caching to improve efficiency, they largely neglect the unique complexities of multinode edge environments. Specifically, reactive KV cache eviction policies suffer from temporal uncertainty, often discarding reusable KV caches prematurely, while the tight coupling between request scheduling and cache placement often leads to myopic decisions that exacerbate load imbalance and resource contention. To address these challenges, we propose a dynamic block-level paradigm that treats KV blocks as the fundamental units for caching and scheduling, enabling dynamic sharing, generation, and eviction of arbitrary-length prefixes. We present complete modeling of the spatiotemporal coupling between scheduling and caching under block-level granularity, capturing intricate interactions overlooked by prior work. Based on this model, we design an online joint optimization algorithm, which applies to general edge LLM serving scenarios. The algorithm decouples spatiotemporal dependencies via randomized rounding over per-slot subproblems, achieving a balance between real-time responsiveness and long-term system efficiency. Theoretical analysis establishes high-probability near-optimality guarantees, and extensive experiments show that our method reduces the average time to first token (TTFT) by up to 54.02% over existing baselines.",
+        "canonical_id": "DOI:10.1109/JIOT.2026.3709703",
+        "doi": "10.1109/JIOT.2026.3709703",
+        "authors": [
+          "Xi-Shuo Li",
+          "Wei Jiao",
+          "Jun He",
+          "Shan Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcad.2025.3648674",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2025.3648674",
+        "title:duopim rramdram hybrid pim acceleration for flexiblebatch llm decoding",
+        "url:https://www.semanticscholar.org/paper/bccca75ef45fe933f099b3ff1fd54d7a8077b8c1"
+      ],
+      "record": {
+        "title": "DuoPIM: RRAM–DRAM Hybrid PIM Acceleration for Flexible-Batch LLM Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/bccca75ef45fe933f099b3ff1fd54d7a8077b8c1",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "Transformer-based large language models (LLMs) primarily consist of weight-intensive fully connected (FC) layers and cache-dependent attention layers. While batching significantly enhances the throughput of FC layers, it paradoxically increases the cache demands of attention layers. This provides no performance benefit and creates substantial memory pressure. Consequently, existing graphics processing unit (GPU)-based LLM acceleration systems face throughput limitations from batch size constraints. Even when DRAM-based processing-in-memory (PIM) is employed to accelerate attention, the utilization remains extremely low under small batch sizes, which is unsuitable for low-batch scenarios. Fortunately, the emerging nonvolatile resistive random access memory (RRAM) technology offers batch size-insensitive acceleration for FC layers through highly parallel in situ computations by eliminating weight loading overhead. This insight leads us to propose a hybrid approach: RRAM for FC layers and DRAM PIM for attention layers to overcome batch size limitations. However, merely scaling existing RRAM architectures misaligned with LLMs’ computation and storage demands will result in prohibitive overheads. Meanwhile, existing DRAM-based PIMs suffer from poor resource utilization due to the computational pattern of attention layers. Implementing an effective scheduling strategy is equally crucial to harness the potential of the hybrid PIM system. To address these challenges, we present DuoPIM, a novel RRAM–DRAM hybrid PIM architecture optimized for LLM decoding. We introduce novel architectural innovations for both the RRAM and DRAM PIM components to address the challenges posed by LLMs. Specifically, we decouple RRAM’s storage and computing capabilities within a hierarchical architecture, implement minimal modifications to DRAM PIM to support online softmax, and devise dedicated strategies across multiple architectural levels to enhance overall resource utilization. Evaluations demonstrate DuoPIM’s ability to fully leverage computing capacity across various batch sizes.",
+        "canonical_id": "DOI:10.1109/TCAD.2025.3648674",
+        "doi": "10.1109/TCAD.2025.3648674",
+        "authors": [
+          "Xiao-Tian Sun",
+          "Xin-Yu Wang",
+          "Wanqian Li",
+          "Xueqi Li",
+          "Chun-Meng Dou",
+          "Yinhe Han",
+          "Xiaoming Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11432-026-5037-1",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11432-026-5037-1",
+        "title:towards sociocyberphysical systems a software perspective amid ai breakthroughs",
+        "url:https://www.semanticscholar.org/paper/5df5085ab16bff06cbe419249515ec1563d5d459"
+      ],
+      "record": {
+        "title": "Towards socio-cyber-physical systems: a software perspective amid AI breakthroughs",
+        "source_url": "https://www.semanticscholar.org/paper/5df5085ab16bff06cbe419249515ec1563d5d459",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": "Software technology is undergoing a paradigm shift driven by two converging trends. First, the scope of software responsibility has expanded significantly: as “software-defined everything” becomes a reality, software has evolved into the integration core of sociocyber-physical systems (SCPSs). Second, the capabilities and development methods of software are being greatly enhanced by recent breakthroughs in artificial intelligence (AI). This article presents perspectives and observations on software engineering in this era of rapid progress. We aim to outline a set of foundational challenges in engineering SCPSs and highlight the need for innovative software solutions that extend beyond AI technologies alone. Specifically, we examine the need for a new paradigm that can address the complexities introduced by SCPSs, which challenge conventional paradigms through the blurring of system boundaries, continuous lifecycle evolution, and the embracing of inherent uncertainty. We highlight new engineering principles of socio-technical co-design, cyber-physical integration, and development-operation convergence, and a knowledge- and data-driven approach to taming uncertainty. Emerging proposals, including digital humanism, agentic SCPS, ubiquitous operating system, and continuous quality assurance, are discussed alongside possible extensions to existing technologies. We then outline key research directions for both runtime support and quality assurance. On the runtime side, we argue for a new generation of software infrastructure for SCPSs, including unified hardware abstractions, scalable and resilient runtime systems, AI-enabled system management, and human-centric operating system primitives. On the assurance side, we highlight the need for new approaches combining unified socio-cyber-physical modeling, specification of both technical and non-technical properties, data-driven simulation and testing, continuous verification, and runtime monitoring under uncertainty. Furthermore, we present specific challenges within key application domains, including intelligent vehicles, smart manufacturing, and smart cities. In doing so, we aim to stimulate discussion within the software engineering community and encourage support from industry and government to address the critical engineering and governance issues inherent to this new generation of systems.",
+        "canonical_id": "DOI:10.1007/s11432-026-5037-1",
+        "doi": "10.1007/s11432-026-5037-1",
+        "authors": [
+          "Assia Belbachir",
+          "M. Blake",
+          "Jin-Song Dong",
+          "S. Dustdar",
+          "Christof Ebert",
+          "C. Ghezzi",
+          "David Harel",
+          "S. Helal",
+          "Chun-Min Hu",
+          "Lin-Peng Huang",
+          "Hans-Arno Jacobsen",
+          "Chang-Jun Jiang",
+          "Zhi Jin",
+          "Jia-Lin Li",
+          "Xuanzhe Liu",
+          "Jian Lu",
+          "Xiao-Xing Ma",
+          "Assaf Marron",
+          "Hong Mei",
+          "B. Nuseibeh",
+          "Xin Peng",
+          "Yuanchun Shi",
+          "Huai-Min Wang",
+          "Ji Wang",
+          "Jian-Min Wang",
+          "Danny Weyns",
+          "James Woodcock",
+          "Tao Xie",
+          "H. Xu",
+          "Mengfei Yang",
+          "Jian-Wei Yin",
+          "Naijun Zhan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.parco.2026.103216",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.parco.2026.103216",
+        "title:smartbatchllm an efficient adaptive hybrid batching strategy for large language model serving",
+        "url:https://www.semanticscholar.org/paper/eb3d10ca67246443721267dabddd9278c391051c"
+      ],
+      "record": {
+        "title": "SmartBatchLLM: An efficient adaptive hybrid batching strategy for large language model serving",
+        "source_url": "https://www.semanticscholar.org/paper/eb3d10ca67246443721267dabddd9278c391051c",
+        "year": 2026,
+        "published": "2026-09-01",
+        "abstract": null,
+        "canonical_id": "DOI:10.1016/j.parco.2026.103216",
+        "doi": "10.1016/j.parco.2026.103216",
+        "authors": [
+          "Si-Yuan Sun",
+          "Zhao-Jia Wang",
+          "Han-Shuo Liu",
+          "Jie-Han Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.29296",
+      "identity_tokens": [
+        "id:arXiv:2608.29296",
+        "title:when do larger batches help scale llm reinforcement learning",
+        "url:https://www.semanticscholar.org/paper/0ca3516b4ef77e0ff0489c461373630c769fa3d2"
+      ],
+      "record": {
+        "title": "When Do Larger Batches Help Scale LLM Reinforcement Learning?",
+        "source_url": "https://www.semanticscholar.org/paper/0ca3516b4ef77e0ff0489c461373630c769fa3d2",
+        "year": 2026,
+        "published": "2026-08-29",
+        "abstract": "Larger batches reduce the variance of stochastic gradients per update and are therefore often expected to accelerate training. Yet whether this statistical benefit translates into lower wall-clock time-to-target remains unclear, because each update consumes more samples and may take longer to execute. We study this tradeoff in reinforcement learning for large language models. We separate its algorithmic and systems effects by comparing learning and execution along their natural axes. At the algorithmic level, we compare configurations at equal cumulative sample counts while retuning batch-dependent hyperparameters. Over a bounded range of batch sizes, this procedure yields an approximately batch-size-invariant family whose members follow similar sample-indexed learning trajectories. At the systems level, we exploit the computational asymmetry between rollout generation and training: autoregressive generation is often memory-bandwidth-bound at low concurrency, whereas training work scales approximately with the number of processed tokens. Combining these two views yields a direct decision rule: a larger-batch configuration reduces time-to-target only when its throughput gain exceeds its samples-to-target penalty. Experiments with GRPO and PPO support both sides of this decomposition. At the algorithmic level, square-root learning-rate scaling with Adam produces approximately batch-size-invariant learning curves over a bounded range of batch sizes. At the systems level, larger batches improve generation throughput by up to 2.29x on fixed hardware. In GRPO, combining higher throughput with learning-rate retuning reduces time-to-target by up to 29%, whereas increasing the batch without retuning is slower despite its higher throughput.",
+        "canonical_id": "arXiv:2608.29296",
+        "arxiv_id": "2608.29296",
+        "authors": [
+          "Ziniu Li",
+          "Jinbo Wang",
+          "Guan-Hua Huang",
+          "Fei-Yuan Zhang",
+          "Pengbo Li",
+          "Alex Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28048",
+      "identity_tokens": [
+        "id:arXiv:2608.28048",
+        "title:ai hardware accelerators for large language models architectures and the memory wall",
+        "url:https://www.semanticscholar.org/paper/43333e143a812704882fe15f812f58556e5c482b"
+      ],
+      "record": {
+        "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+        "source_url": "https://www.semanticscholar.org/paper/43333e143a812704882fe15f812f58556e5c482b",
+        "year": 2026,
+        "published": "2026-08-28",
+        "abstract": "Large language models (LLMs) place unprecedented and still-growing demands on the hardware that trains and serves them. This review surveys the full landscape of AI hardware accelerators for LLMs, including general-purpose GPUs, custom ASICs such as TPUs, Trainium, Groq, and Cerebras, reconfigurable FPGAs, processing-in-memory and near-memory architectures, and emerging neuromorphic and photonic approaches across cloud and edge deployment. Using the transformer's computational structure and roofline analysis as a common framework, we show that the decisive constraint on LLM acceleration is not arithmetic but memory: the autoregressive decode phase is bandwidth-bound, the key-value cache can rival the model weights in size, and data movement dominates energy. Comparing platforms on compute, memory, energy, programmability, and scalability, we find that no single architecture is optimal across workloads: GPUs remain the flexible default and the workhorse of training; domain-specific ASICs win at scale for stable, high-volume workloads; processing-in-memory is the most promising near-term response to the memory wall, entering systems as a heterogeneous complement; and neuromorphic and photonic computing, while promising, are not yet production-ready at frontier scale. Future progress depends on hardware-algorithm co-design and heterogeneous, memory-centric systems: for large language models, the memory system has become the computer.",
+        "canonical_id": "arXiv:2608.28048",
+        "arxiv_id": "2608.28048",
+        "authors": [
+          "Siddharth Patel",
+          "Rohit Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28044",
+      "identity_tokens": [
+        "id:arXiv:2608.28044",
+        "title:characterization of request and token energy costs for llm inference workloads on gpu platforms",
+        "url:https://www.semanticscholar.org/paper/aaf46dc87740c49088dedc2036ecaa4814de3791"
+      ],
+      "record": {
+        "title": "Characterization of Request and Token Energy Costs for LLM Inference Workloads on GPU Platforms",
+        "source_url": "https://www.semanticscholar.org/paper/aaf46dc87740c49088dedc2036ecaa4814de3791",
+        "year": 2026,
+        "published": "2026-08-28",
+        "abstract": "Large language model (LLM) inference serving is priced by tokens, but GPU energy is consumed over inference windows. This accounting mismatch makes token-normalized metrics incomplete, since average output-token energy can decrease even when total request energy increases. We characterize this behavior with a decomposed energy model: a fixed one-time prefill with a fixed generation setup cost, while each output-token generation step adds marginal step energy. We evaluate this LLM inference energy model on NVIDIA H100 and H200 GPUs across dense and mixture-of-experts (MoE) models, reporting both request energy and token energy as functions of model type (M), phase (P), batch size (B), context length (C), and output length (N). For Llama-3.2-1B on H200 at batch-16 and context-4K, increasing output length from 10 to 512 tokens reduces token energy from 7.46 to 0.72 J/token while total batched inference-window energy increases from 1.19 to 5.93 kJ. Batching also reduces token energy, but the gain is context-bounded: at 10 output tokens, the batch-16 to batch-1 gain falls from 6.31x at context-512 to 1.17x at context-4K. MoE models amplify this effect: sparse routing and fragmented expert execution increase fixed energy at low concurrency, while batching spreads that energy across more generated tokens and substantially narrows the dense-vs.-MoE token-energy gap. These results show that energy-aware serving should jointly optimize both request energy and token energy, rather than only reducing per-token energy cost.",
+        "canonical_id": "arXiv:2608.28044",
+        "arxiv_id": "2608.28044",
+        "authors": [
+          "P. Vellaisamy",
+          "Vanessa Lam",
+          "Shawn Blanton",
+          "J. Shen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25543",
+      "identity_tokens": [
+        "id:arXiv:2608.25543",
+        "title:goodput maximization for large language model edge inference a twophase maskable ppo approach",
+        "url:https://www.semanticscholar.org/paper/028eaa5ede30fb036c8cf14bb602baede41f13b6"
+      ],
+      "record": {
+        "title": "Goodput Maximization for Large Language Model Edge Inference: A Two-Phase Maskable PPO Approach",
+        "source_url": "https://www.semanticscholar.org/paper/028eaa5ede30fb036c8cf14bb602baede41f13b6",
+        "year": 2026,
+        "published": "2026-08-26",
+        "abstract": "This letter presents a novel two-phase maskable proximal policy optimization (TP-MPPO) algorithm, which maximizes the system goodput counting request throughput with strict service level objective (SLO) compliance for large language model (LLM) inference services in wireless edge networks. In the first phase of TP-MPPO, we optimize the task offloading decisions by MPPO with action masking mechanism, effectively avoiding exploring invalid actions and reducing the action space. In the second phase, closed-form solutions are derived for uplink bandwidth allocation; a greedy algorithm is designed for downlink bandwidth allocation to provide immediate rewards for the MPPO in the next round. The two stages alternate till convergence. Simulation results demonstrate that TP-MPPO can improve the system reward by 33.3%–87.5% compared to its benchmarks and achieve the highest goodput.",
+        "canonical_id": "arXiv:2608.25543",
+        "arxiv_id": "2608.25543",
+        "authors": [
+          "Xiaojing Chen",
+          "Qi Zhang",
+          "Wei Ni",
+          "Shunqing Zhang",
+          "Yanzan Sun"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25053",
+      "identity_tokens": [
+        "id:arXiv:2608.25053",
+        "title:hydra phaseaware workload characterization of llm inference across edge soc generations backends and quantization levels",
+        "url:https://www.semanticscholar.org/paper/61247ec0864a2c3fc0b9cbe68fb6e1495961a02b"
+      ],
+      "record": {
+        "title": "Hydra: Phase-Aware Workload Characterization of LLM Inference across Edge SoC Generations, Backends, and Quantization Levels",
+        "source_url": "https://www.semanticscholar.org/paper/61247ec0864a2c3fc0b9cbe68fb6e1495961a02b",
+        "year": 2026,
+        "published": "2026-08-25",
+        "abstract": "Edge LLM deployment is shaped by more than model size and precision: inference backend, hardware platform, memory traffic, and power management all affect latency and efficiency. We present Hydra, a common-schema, phase-aware workload characterization framework for LLM inference on edge SoCs. Hydra instruments HuggingFace Transformers and llama.cpp with a shared per-prompt timing schema and fuses those records with hardware telemetry, enabling a multi-dimensional characterization of performance, system-resource utilization, and efficiency across prefill and decode phases. Using Hydra, we evaluate three consecutive edge System-on-Chip (SoC) generations (AGX Xavier, AGX Orin, and AGX Thor), 13 instruction-tuned LLMs from seven families, five execution formats, and consider input/output-length sensitivity. The resulting artifact contains roughly 107K per-prompt records and is publicly released with Hydra. Our analysis shows that aggregate latency alone hides key deployment effects: backend structure changes where latency is introduced, quantization reduces memory traffic and energy but does not predict power monotonically, and SoC generation changes how utilization and efficiency should be interpreted. By connecting phase-level timing with system-resource utilization and efficiency metrics, Hydra enables reproducible, phase-aware characterization of edge LLM inference. Hydra's source code and the collected per-prompt trace corpus are available open-source at: https://github.com/amirtaherin/hydra",
+        "canonical_id": "arXiv:2608.25053",
+        "arxiv_id": "2608.25053",
+        "authors": [
+          "Amir Taherin",
+          "Sana Taghipour Anvari",
+          "Charles Amante",
+          "Yixian Chen",
+          "Ruben Noroian",
+          "Z. Feric",
+          "N. Agostini",
+          "Pu Zhao",
+          "José Cano",
+          "Bin Ren",
+          "Yan-Zhi Wang",
+          "David R. Kaeli"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.20927",
+      "identity_tokens": [
+        "id:arXiv:2608.20927",
+        "title:mentorpulse refreshing crossmodel latent guidance for longform generation",
+        "url:https://www.semanticscholar.org/paper/7e9a9e878f4d7dfd1d48e4755b7d108d017528ef"
+      ],
+      "record": {
+        "title": "MentorPulse: Refreshing Cross-Model Latent Guidance for Long-Form Generation",
+        "source_url": "https://www.semanticscholar.org/paper/7e9a9e878f4d7dfd1d48e4755b7d108d017528ef",
+        "year": 2026,
+        "published": "2026-08-21",
+        "abstract": "Cross-model latent guidance lets a frozen large mentor encode an input once and a frozen small student generate from the resulting signal. Existing methods keep this signal fixed, assuming it stays useful as the output grows; we show this fails in long-form generation. On multi-turn instruction following, static guidance pushes a 4B student's constraint satisfaction 2.5 points below its no-guidance baseline; a training-free refresh every 16 tokens changes only the memory content and restores a 2.0-point gain over that baseline. We propose MentorPulse to keep guidance fresh at practical cost: it compresses mentor states into a capped slot memory, incrementally processes newly generated tokens, and updates the memory that the student reads through gated cross-attention without resetting the student's KV cache. Windowed Refresh Training exposes the bridge to prefix-conditioned memory. Across thirteen datasets, MentorPulse closes 52.2% of the mentor-student gap on macro average, outperforming C2C, T2T, and equal-budget LoRA, with the largest gains on long outputs. It performs best on all eleven mentor-student pairs from three model families, with margins that narrow as the capability gap grows, and a lightweight read-pattern check predicts the gain before deployment. Measured costs identify refresh intervals that dominate text guidance on long outputs.",
+        "canonical_id": "arXiv:2608.20927",
+        "arxiv_id": "2608.20927",
+        "authors": [
+          "Ziwu Liu",
+          "Guozhong Li",
+          "Chen Qiu",
+          "Wei-Yang Kong",
+          "Panos Kalnis"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21034",
+      "identity_tokens": [
+        "id:arXiv:2608.21034",
+        "title:ai infrastructure in space how far can we go",
+        "url:https://www.semanticscholar.org/paper/f816cefd78a33d563dd269331564d2cdd072cea7"
+      ],
+      "record": {
+        "title": "AI Infrastructure in Space: How Far Can We Go?",
+        "source_url": "https://www.semanticscholar.org/paper/f816cefd78a33d563dd269331564d2cdd072cea7",
+        "year": 2026,
+        "published": "2026-08-21",
+        "abstract": "Satellites are becoming programmable computing platforms capable of running increasingly demanding AI workloads. This shift raises a systems problem: how can AI services remain deployable, manageable, and recoverable after launch when compute capacity, connectivity, energy, and thermal headroom vary over orbital time? This paper develops a systems vision for AI infrastructure in space. We define it as the systems layer that manages AI capabilities across spacecraft, orbital networks, ground stations, and cloud backends, while treating orbital and physical state as part of the resource model. We synthesize relevant foundations from terrestrial AI infrastructure, satellite networking, and satellite edge computing, and examine the physical constraints that directly shape system design. We further ground this vision in three in-orbit case studies spanning the node, platform, and service levels. Telemetry from BUPT-1 satellite shows that usable compute capacity is bounded by thermal and energy envelopes. SateLight on BUPT-2 satellite reduces application-update transmission latency by 56.54% on average and up to 91.18%, with 100% update correctness. A stateful VLM serving case further shows that thermal interruptions make execution-state recovery a first-class systems problem. These observations motivate a research agenda for space-native resource management, lifecycle support, and sustained AI service across space and ground.",
+        "canonical_id": "arXiv:2608.21034",
+        "arxiv_id": "2608.21034",
+        "authors": [
+          "Qing Li",
+          "Qi-Yang Zhang",
+          "Daliang Xu",
+          "Tianze Huang",
+          "Ding-Ge Zhang",
+          "Yihao Zhao",
+          "Xiaolong Huang",
+          "Jin-Feng Wen",
+          "Xiameng Hu",
+          "Tao Qi",
+          "Mengwei Xu",
+          "Shang-Guang Wang",
+          "Xuazhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.19659",
+      "identity_tokens": [
+        "id:arXiv:2608.19659",
+        "title:fleetsieve decisioncritical profiling for sloaware llm fleet configuration",
+        "url:https://www.semanticscholar.org/paper/fa41fc861a398c7598a8884ab0b6ea4c5ab8306c"
+      ],
+      "record": {
+        "title": "FleetSieve: Decision-Critical Profiling for SLO-Aware LLM Fleet Configuration",
+        "source_url": "https://www.semanticscholar.org/paper/fa41fc861a398c7598a8884ab0b6ea4c5ab8306c",
+        "year": 2026,
+        "published": "2026-08-20",
+        "abstract": "Choosing tensor-parallel (TP) degrees and replica counts for an LLM serving fleet is difficult because performance is not monotonic in TP and the feasible choice can change with load. Exhaustive profiling resolves this uncertainty, but measures many configurations that do not affect the final resource allocation. We present FleetSieve, which selects measurements according to their expected effect on a resource-coupled, SLO-aware fleet decision. FleetSieve models capacity and tail latency jointly, compares conservative and optimistic allocations, and stops when their remaining decision gap is below a specified tolerance. On a fixed H100 measurement grid for a 31B-parameter open-weight model, FleetSieve reaches the oracle aggregate decision using 22,200 GPU-seconds, 6.9% less than uniform random profiling in the fixed comparison. Across 200 random reveal orders, its mean saving over random profiling is 5.4% (95% bootstrap CI: 3.5-7.2%). The fixed-comparison saving is 21.5% for Chat, while FleetSieve does not use the fewest GPU-seconds for Code. Joint capacity and tail modeling also avoids selecting a configuration whose 46.4-second completion p99 violates a 30-second SLO. In a 16-GPU allocation, an incorrect sparse-profile decision loses up to 1.93 requests/s and 12.4 percentage points of max-min fulfillment. Boundary repeats and BurstGPT measurements support the observed load-dependent tail-latency mechanism.",
+        "canonical_id": "arXiv:2608.19659",
+        "arxiv_id": "2608.19659",
+        "authors": [
+          "Huang Cheng",
+          "Scott Zhang",
+          "Aubert Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.19395",
+      "identity_tokens": [
+        "id:arXiv:2608.19395",
+        "title:hydra a heterogeneous chiplet dse framework for serving dynamic hybrid llm workloads",
+        "url:https://www.semanticscholar.org/paper/65435abac34942c78717b5d15b0a2e437e59b568"
+      ],
+      "record": {
+        "title": "HYDRA: A Heterogeneous Chiplet DSE Framework for Serving Dynamic Hybrid LLM Workloads",
+        "source_url": "https://www.semanticscholar.org/paper/65435abac34942c78717b5d15b0a2e437e59b568",
+        "year": 2026,
+        "published": "2026-08-19",
+        "abstract": "Hybrid Transformer-Mamba large language models (LLMs) enhance long-context efficiency, but their heterogeneous computation and communication patterns complicate efficient hardware acceleration. Chiplet-based architectures offer a scalable solution by integrating specialized compute and memory units. However, the design space spanning static architectural configurations and dynamic runtime policies is prohibitively large to explore exhaustively. To address this challenge, we present HYDRA, a comprehensive design space exploration framework for hybrid LLM serving on heterogeneous chiplet systems. HYDRA jointly explores chiplet composition, placement, inter-chiplet bandwidth provisioning, dynamic batching, and runtime scheduling. It integrates communication-aware placement, dynamic batching, elastic task scheduling, and a fast Markov-based performance estimator that captures multi-tenant runtime dynamics for efficient and accurate exploration. Across all workloads, HYDRA delivers 1.55x the throughput and 43.7 percent lower time-to-first-token on average, with throughput gains reaching up to 2.3x compared to state-of-the-art baselines. These results highlight that co-designing architecture and runtime policies is critical for efficient large-scale LLM serving on heterogeneous chiplet systems.",
+        "canonical_id": "arXiv:2608.19395",
+        "arxiv_id": "2608.19395",
+        "authors": [
+          "Jiahao Lin",
+          "Alish Kanani",
+          "Sang-Won Lee",
+          "Jaehyun Park",
+          "U. Ogras"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.17445",
+      "identity_tokens": [
+        "id:arXiv:2608.17445",
+        "title:decomposition attacks across unlinkable identities limits of stateful defenses for llm services",
+        "url:https://www.semanticscholar.org/paper/bb1ba75a29e01b0f0f8c42a38bf948d04afd207e"
+      ],
+      "record": {
+        "title": "Decomposition Attacks Across Unlinkable Identities: Limits of Stateful Defenses for LLM Services",
+        "source_url": "https://www.semanticscholar.org/paper/bb1ba75a29e01b0f0f8c42a38bf948d04afd207e",
+        "year": 2026,
+        "published": "2026-08-18",
+        "abstract": "Most large language model services use stateless defenses, which judge only the current request, to refuse harmful tasks. Decomposition attacks exploit this limitation by splitting a harmful task into individually permissible requests and combining their answers. Defending against them therefore requires a stateful monitor that considers requests together. If it can group all requests for one attacker task, it can stop the attack. However, attackers can use unlinkable identities and combine answers elsewhere, leaving no reliable grouping signal. We ask whether decomposition attacks can still be stopped under this setting. For a fixed attack strategy without retries, we prove that the achievable security and utility tradeoff depends entirely on how benign requests for the same capabilities are grouped. Persistent, recognizable groups permit a useful defense; fresh, indistinguishable groups do not. When attackers can retry and learn from Allow/Block decisions, this useful operating point disappears: the feedback reveals what passes but not whether a block was correct. Experiments on 91 executable tasks and 11,393 capability-matched benign requests support these results. Under a 1% denial cap for these requests and a 0.5% cap for unrelated background traffic, all ten tested policies, including one privileged policy with an exact request-to-operation map, either fail to stop attacks or exceed the budget. On defense-unseen task families, attack success is at least 99% after one attempt and 100% after two. Effective defenses therefore require additional evidence or mechanisms tied to grouping, such as reliable identity linkage, costs for fresh identities, or control over answer use.",
+        "canonical_id": "arXiv:2608.17445",
+        "arxiv_id": "2608.17445",
+        "authors": [
+          "Bowen Sun",
+          "Zhengyue Zhao",
+          "Xiaogeng Liu",
+          "Yinzhi Cao",
+          "Chaowei Xiao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3828750",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3828750",
+        "title:ark avoiding routing collisions for kv cache transfer in disaggregated llm inference",
+        "url:https://www.semanticscholar.org/paper/713681b5ad435a87d94c6eb057a4b06f97a99c22"
+      ],
+      "record": {
+        "title": "ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/713681b5ad435a87d94c6eb057a4b06f97a99c22",
+        "year": 2026,
+        "published": "2026-08-17",
+        "abstract": "Disaggregated LLM inference separates the prefill and decode phases across GPU pools, generating massive KV-cache transfers. Because these transfers last hundreds of milliseconds to seconds, they behave as mega elephant flows that dominate link bandwidth utilization. In this regime, stateless ECMP can perform poorly: hash collisions may overload one spine link while leaving others idle, stretching transfer times by seconds. Yet this same persistence makes coordination practical. Since these flows are long-lived, even lightweight one-to-all coordination can be amortized over their lifetime. We present ARK, a distributed elephant-flow path reservation mechanism. ARK coordinates senders to choose source ports whose hashes map concurrent flows onto distinct spines, without requiring switch changes or receiver-side packet reordering. Packet-level RDMA simulations show that ARK reduces mean and P95 FCT by up to 27.3% and 34.0% under moderate load, and further reduces mean TTFT by up to 12.9%.",
+        "canonical_id": "DOI:10.1145/3789240.3828750",
+        "doi": "10.1145/3789240.3828750",
+        "authors": [
+          "Hung-Chun Lin",
+          "Ting-Wei Hsu",
+          "Chung-En Ho",
+          "Ahmed Saeed"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:d0d35df57e48aae3a4165b57e54966b113d31b31b7312595f3a2909de141394b",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

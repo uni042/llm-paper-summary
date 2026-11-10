@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d11497b238bfe1c2-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.07236",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.07236",
+    "identity_tokens": [
+      "arXiv:2603.07236"
+    ],
+    "reason": "The abstract concerns a neural-memory framework for text-guided image editing, not LLM inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T13:27:15+00:00",
+    "last_checked_at": "2026-10-05T13:27:15+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "HY-WU (Part I): An Extensible Functional Neural Memory Framework and An Instantiation in Text-Guided Image Editing"
+  },
+  "processed_at": "2026-10-05T13:27:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d11497b238bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

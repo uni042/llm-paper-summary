@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c40af6cdaa49dd8a-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1906.01502",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1906.01502",
+    "identity_tokens": [
+      "arXiv:1906.01502"
+    ],
+    "reason": "M-BERTのzero-shot cross-lingual transferと多言語表現の性質・欠陥をprobing実験で分析する表現／能力研究で、推論runtime・serving効率化を対象としない。",
+    "first_checked_at": "2026-10-04T15:55:08+00:00",
+    "last_checked_at": "2026-10-04T15:55:08+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+    ],
+    "title": "How Multilingual is Multilingual BERT?"
+  },
+  "processed_at": "2026-10-04T15:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c40af6cdaa49",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

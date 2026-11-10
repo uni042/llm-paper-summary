@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8703cbbebf4d7155-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.12667",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.12667",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2505.12667",
+      "SemanticScholar:f3fbaceeff1aad6883b8ca20f43e031440467416",
+      "arXiv:2505.12667"
+    ],
+    "reason": "The contribution is watermarking and safety for generated video, rather than inference/runtime efficiency.",
+    "first_checked_at": "2026-10-13T01:58:23+00:00",
+    "last_checked_at": "2026-10-13T01:58:23+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Safe-Sora: Safe Text-to-Video Generation via Graphical Watermarking"
+  },
+  "processed_at": "2026-10-13T01:58:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8703cbbebf4d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

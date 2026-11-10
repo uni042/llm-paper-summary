@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d9645de449d02374-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2005.12592",
+  "reason": "Transformer encoderを用いた文法誤り訂正（GEC）のsequence tagging方式で、seq2seq GEC比最大10倍の推論速度を報告するが、最終適用先は文法訂正タスク専用モデルであり、LLM推論runtime・serving・memory最適化を目的としない。",
+  "title": "GECToR -- Grammatical Error Correction: Tag, Not Rewrite",
+  "identity_tokens": [
+    "arXiv:2005.12592"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d9645de449d0",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

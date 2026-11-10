@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e4f45526dd532596-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.02459",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.02459",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.02459",
+      "arXiv:2602.02459"
+    ],
+    "reason": "ICML 2026公式要旨は視覚言語推論の遅延をメタデータとしてロボットの行動生成に伝える非同期な意味推論・制御方式を提案し、実時間ロボット制御の遅延耐性を評価する。非同期推論遅延の扱いには接点があるが、最終適用先はロボットナビゲーションの方策制御で、LLMサービング基盤を直接改善するものではないため境界扱い。",
+    "first_checked_at": "2026-10-22T15:52:11+00:00",
+    "last_checked_at": "2026-10-22T15:52:11+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "TIC-VLA: A Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments"
+  },
+  "processed_at": "2026-10-22T15:52:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e4f45526dd53",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

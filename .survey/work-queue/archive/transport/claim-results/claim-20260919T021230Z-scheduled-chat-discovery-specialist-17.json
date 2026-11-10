@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T021230Z-scheduled-chat-discovery-specialist-17",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-c26aa10b960d27a4",
+      "claim_id": "claim-6ad53a550a3c7bedcb56aa8c",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-6ad53a550a3c7bedcb56aa8c",
+      "claimed_at": "2026-09-19T02:12:48+00:00",
+      "expires_at": "2026-09-19T03:42:48+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-c26aa10b960d27a4"
+      ],
+      "job": {
+        "job_id": "job-research-c26aa10b960d27a4",
+        "type": "research",
+        "parent_job_id": "job-f8c3bac1b0a89bad",
+        "priority": 79,
+        "canonical_id": "arXiv:2412.18934",
+        "title": "Dovetail: A CPU/GPU Heterogeneous Speculative Decoding for LLM inference",
+        "source_url": "https://arxiv.org/abs/2412.18934",
+        "paper_path": "papers/inference/08-speculative-decoding/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md",
+        "selection_reason": "draftをGPU、target verificationをCPUへ分担するheterogeneous speculative decodingでconsumer hardwareを活用。LLaMA2-Chat-7Bで3GB VRAM時5.86 token/s、CPU-only比約2.77xを報告し、CPU-GPU協調推論の隣接研究として価値がある。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T19:06:06+00:00"
+      },
+      "record_bank": "d",
+      "record_bank_root": ".survey/work-queue/records/chat-record-d",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-d/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-d/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-d/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-d/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-d/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T02:12:48+00:00",
+  "checkpoint_released": 0
+}

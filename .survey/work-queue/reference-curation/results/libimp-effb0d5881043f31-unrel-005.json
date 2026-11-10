@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-effb0d5881043f31-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.09648",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.09648",
+    "identity_tokens": [
+      "arXiv:2212.09648"
+    ],
+    "reason": "Indonesian NLP dataset/resource collection and benchmarks, not inference efficiency.",
+    "first_checked_at": "2026-10-06T06:09:52+00:00",
+    "last_checked_at": "2026-10-06T06:09:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+    ],
+    "title": "NusaCrowd: Open Source Initiative for Indonesian NLP Resources"
+  },
+  "processed_at": "2026-10-06T06:09:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-effb0d588104",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

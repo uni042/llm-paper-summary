@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-881fe77509f7b0b7-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1906.00532",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1906.00532",
+    "identity_tokens": [
+      "arXiv:1906.00532"
+    ],
+    "reason": "推論最適化は明確だが2019年のNMT base modelと特定Intel CPUの成果で、現行LLM servingへの適用根拠は限定的。",
+    "first_checked_at": "2026-10-05T01:33:17+00:00",
+    "last_checked_at": "2026-10-05T01:33:17+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08601-maestro-expert-pruning.md",
+      "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md",
+      "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+    ],
+    "title": "Efficient 8-Bit Quantization of Transformer Neural Machine Language Translation Model"
+  },
+  "processed_at": "2026-10-05T01:33:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-881fe77509f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

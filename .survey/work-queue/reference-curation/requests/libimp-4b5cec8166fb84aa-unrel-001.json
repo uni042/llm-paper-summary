@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-4b5cec8166fb84aa-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.07616",
+  "reason": "Vision transformers face significant computational overheads in high-resolution dense prediction due to the quadratic complexity of self-attention. Linear attention offers efficiency but sacrifices local context modeling. We propose \\textbf{HSMLA (Hierarchical Softmax Multi-scale Linear Attention)}, which combines ReLU-based linear attention for global context, selective softmax refinement for critical local features, and multi-scale token representations via depthwise convolutions. HSMLA achieves superior accuracy-efficiency trade-offs: up to $4.2\\times$ inference-time speedup across dense prediction tasks, $87.3%$ Dice with $3.2\\times$ speedup on CT organ segmentation, and $94.2%$ AUC with $4.1\\times$ speedup on pathology WSI.",
+  "title": "HSMLA: Hierarchical Softmax Multi-scale Linear Attention for Efficient Vision Transformers",
+  "identity_tokens": [
+    "arXiv:2608.07616"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+    "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+    "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+    "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+    "papers/inference/99-other-inference-systems/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md",
+    "papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4b5cec8166fb",
+  "source_precheck_request_id": null
+}

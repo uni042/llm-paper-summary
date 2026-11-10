@@ -1,0 +1,535 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-53164a7c13145a9a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-53164a7c1314",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/norcas66540.2025.11231309",
+    "DOI:10.3390/make5030045",
+    "arXiv:2411.15927",
+    "arXiv:2506.12537",
+    "arXiv:2510.11056"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "422a8e2e59fbcad383f16f00bb80371cfdbd08e9",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T00:52:40.564349+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/norcas66540.2025.11231309",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.3390/make5030045",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.15927",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.12537",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.11056",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Generative Prompt Internalization",
+      "source_url": "https://arxiv.org/abs/2411.15927",
+      "year": 2024,
+      "published": "2024-11-24",
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prompts used in recent large language model based applications are often fixed and lengthy, leading to significant computational overhead. To address this challenge, we propose Generative Prompt Internalization (GenPI), a lightweight method that employs a joint training approach. GenPI not only replicates the behavior of models with prompt inputs but also generates the content of the prompt along with reasons for why the model's behavior should change accordingly. We demonstrate that our approach effectively internalizes complex prompts across various agent-based application scenarios. For effective training without interactions with the dedicated environments, we introduce a data synthesis technique that autonomously collects conversational datasets by swapping the roles of the agent and environment. This method is especially useful in scenarios where only a predefined prompt is available without a corresponding training dataset. By internalizing complex prompts, Generative Prompt Internalization enables high performance and efficient inference without the need for explicit prompts.",
+      "identifiers": [
+        "SemanticScholar:9983bcece5f2230d2dc2f4009a6ec26cf24e9899"
+      ],
+      "semantic_scholar_id": "9983bcece5f2230d2dc2f4009a6ec26cf24e9899",
+      "canonical_id": "arXiv:2411.15927",
+      "arxiv_id": "2411.15927",
+      "doi": "10.18653/v1/2025.naacl-long.376",
+      "authors": [
+        "Haebin Shin",
+        "Lei Ji",
+        "Yeyun Gong",
+        "Sungdong Kim",
+        "Eunbi Choi",
+        "Minjoon Seo"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 688,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "From Reasoning LLMs to BERT: A Two-Stage Distillation Framework for Search Relevance",
+      "source_url": "https://arxiv.org/abs/2510.11056",
+      "year": 2025,
+      "published": "2025-10-13",
+      "venue": "The Web Conference",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Query-service relevance prediction in e-commerce search systems faces strict latency requirements that prevent the direct application of Large Language Models (LLMs). To bridge this gap, we propose a two-stage reasoning distillation framework to transfer reasoning capabilities from a powerful teacher LLM to a lightweight, deployment-friendly student model. In the first stage, we address the limitations of general-purpose LLMs by constructing a domain-adapted teacher model. This is achieved through a three-step process: domain-adaptive pre-training to inject platform knowledge, supervised fine-tuning to elicit reasoning skills, and preference optimization with a multi-dimensional reward model to ensure the generation of reliable and preference-aligned reasoning paths. This teacher can then automatically annotate massive query-service pairs from search logs with both relevance labels and reasoning chains. In the second stage, to address the challenges of architectural heterogeneity in standard distillation, we introduce Contrastive Reasoning Self-Distillation (CRSD). By modeling the behavior of the same student model under ''standard'' and ''reasoning-augmented'' inputs as a teacher-student relationship, CRSD enables the lightweight model to internalize the teacher's complex decision-making mechanisms without needing the explicit reasoning path at inference. Offline evaluations and online A/B testing in the Meituan search advertising system demonstrate that our framework achieves significant improvements across multiple metrics, validating its effectiveness and practical value.",
+      "identifiers": [
+        "SemanticScholar:e1769e9cfcd868a3e4824b4a49d3b8d5818bc256"
+      ],
+      "semantic_scholar_id": "e1769e9cfcd868a3e4824b4a49d3b8d5818bc256",
+      "canonical_id": "arXiv:2510.11056",
+      "arxiv_id": "2510.11056",
+      "doi": "10.1145/3774904.3792801",
+      "authors": [
+        "Runze Xia",
+        "Yu Ji",
+        "Yuxi Zhou",
+        "Hao-Dong Liu",
+        "Teng Zhang",
+        "Pi-Ji Li"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 365,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Prompt Design for Resource-Constrained Deployment of Local LLMs",
+      "source_url": "https://doi.org/10.1109/NorCAS66540.2025.11231309",
+      "year": 2025,
+      "published": "2025-10-28",
+      "venue": "IEEE Nordic Circuits and Systems Conference",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The local deployment of Large Language Models (LLMs) is essential for privacy and latency in several domains. However, it faces significant challenges in terms of memory, power, and inference speed, particularly in resource-constrained systems such as Internet of Things (IoT) and edge computing devices. Most existing studies emphasize compression and hardware tuning, while holistic system-level optimization remains incomplete, and the role of prompt design is still underexplored. This study introduces a structured evaluation of prompt engineering strategies designed to enhance resource efficiency and accuracy in local LLMs, applied across three textual analysis tasks: theme extraction, frequency analysis, and impact analysis. Four experimental conditions were compared: Baseline, System Prompt Only (SP), User Prompt Only (UP), and System+User Prompt ($S P+U P$). Using multiple LLMs ranging from 1 B to 70B parameters, we audited tokens generated, latency, VRAM usage, hallucination rates, and other structural errors. The results show that System Prompts alone substantially reduced computational overhead, whereas User Prompts improved accuracy and task alignment. Their combination yields comprehensive improvements, maximizing both efficiency and reliability. The proposed prompt design enabled smaller LLMs to rival larger ones in efficiency and accuracy, with LLaMA-3.2, 3B with SP+UP reducing VRAM by 96%, latency by 85%, and hallucinations by 83% when compared to the 70B with Baseline. Even LLaMA-3.2, 1B proved to be a viable option, especially when VRAM size is a critical factor.",
+      "identifiers": [
+        "SemanticScholar:dbbe4d38d1194a0b81733e843186d0105dcad14d"
+      ],
+      "semantic_scholar_id": "dbbe4d38d1194a0b81733e843186d0105dcad14d",
+      "doi": "10.1109/NorCAS66540.2025.11231309",
+      "canonical_id": "DOI:10.1109/NorCAS66540.2025.11231309",
+      "authors": [
+        "Aisvarya Adeseye",
+        "J. Isoaho",
+        "Seppo Virtanen",
+        "Mohammad Tahir"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 350,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "What Makes a Good Speech Tokenizer for LLM-Centric Speech Generation? A Systematic Study",
+      "source_url": "https://arxiv.org/abs/2506.12537",
+      "year": 2025,
+      "published": "2025-06-14",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speech-language models (SLMs) offer a promising path toward unifying speech and text understanding and generation. However, challenges remain in achieving effective cross-modal alignment and high-quality speech generation. In this work, we systematically investigate the role of speech tokenizer designs in LLM-centric SLMs, augmented by speech heads and speaker modeling.\nWe compare coupled, semi-decoupled, and fully decoupled speech tokenizers under a fair SLM framework and find that decoupled tokenization significantly improves alignment and synthesis quality. To address the information density mismatch between speech and text, we introduce multi-token prediction (MTP) into SLMs, enabling each hidden state to decode multiple speech tokens. This leads to up to 12× faster decoding and a substantial drop in word error rate (from 6.07 to 3.01). Furthermore, we propose a speaker-aware generation paradigm and introduce RoleTriviaQA, a large-scale role-playing knowledge QA benchmark with diverse speaker identities. Experiments demonstrate that our methods enhance both knowledge understanding and speaker consistency.",
+      "identifiers": [
+        "SemanticScholar:75b42a992a6be2b2f195103bea63905f676f02d0"
+      ],
+      "semantic_scholar_id": "75b42a992a6be2b2f195103bea63905f676f02d0",
+      "canonical_id": "arXiv:2506.12537",
+      "arxiv_id": "2506.12537",
+      "doi": "10.1609/aaai.v40i36.40318",
+      "authors": [
+        "Xiao-Ran Fan",
+        "Zhichao Sun",
+        "Yangfan Gao",
+        "Jingfei Xiong",
+        "Hang Yan",
+        "Yifei Cao",
+        "Jiajun Sun",
+        "Shuo Li",
+        "Zhi-Hao Zhang",
+        "Zhi-Heng Xi",
+        "Yuhao Zhou",
+        "Sen-Jie Jin",
+        "Changhao Jiang",
+        "Junjie Ye",
+        "Ming Zhang",
+        "Rui Zheng",
+        "Zhenhua Han",
+        "Yunke Zhang",
+        "Demei Yan",
+        "Shaokang Dong",
+        "Tao Ji",
+        "Tao Gui"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Latent Space Compression for Lightning-Fast Fine-Tuning and Inference of Transformer-Based Models",
+      "source_url": "https://doi.org/10.3390/make5030045",
+      "year": 2023,
+      "published": "2023-07-30",
+      "venue": "Machine Learning and Knowledge Extraction",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents a technique to reduce the number of parameters in a transformer-based encoder–decoder architecture by incorporating autoencoders. To discover the optimal compression, we trained different autoencoders on the embedding space (encoder’s output) of several pre-trained models. The experiments reveal that reducing the embedding size has the potential to dramatically decrease the GPU memory usage while speeding up the inference process. The proposed architecture was included in the BART model and tested for summarization, translation, and classification tasks. The summarization results show that a 60% decoder size reduction (from 96 M to 40 M parameters) will make the inference twice as fast and use less than half of GPU memory during fine-tuning process with only a 4.5% drop in R-1 score. The same trend is visible for translation and partially for classification tasks. Our approach reduces the GPU memory usage and processing time of large-scale sequence-to-sequence models for fine-tuning and inference. The implementation and checkpoints are available on GitHub.",
+      "identifiers": [
+        "SemanticScholar:7abed24ea2a0136e64ed001f872c1a2baf1b0315"
+      ],
+      "semantic_scholar_id": "7abed24ea2a0136e64ed001f872c1a2baf1b0315",
+      "doi": "10.3390/make5030045",
+      "canonical_id": "DOI:10.3390/make5030045",
+      "authors": [
+        "A. A. Falaki",
+        "R. Gras"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1171,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2411.15927",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.naacl-long.376",
+        "id:SemanticScholar:9983bcece5f2230d2dc2f4009a6ec26cf24e9899",
+        "id:arXiv:2411.15927",
+        "title:generative prompt internalization",
+        "url:https://arxiv.org/abs/2411.15927"
+      ],
+      "record": {
+        "title": "Generative Prompt Internalization",
+        "source_url": "https://arxiv.org/abs/2411.15927",
+        "year": 2024,
+        "published": "2024-11-24",
+        "venue": "North American Chapter of the Association for Computational Linguistics",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prompts used in recent large language model based applications are often fixed and lengthy, leading to significant computational overhead. To address this challenge, we propose Generative Prompt Internalization (GenPI), a lightweight method that employs a joint training approach. GenPI not only replicates the behavior of models with prompt inputs but also generates the content of the prompt along with reasons for why the model's behavior should change accordingly. We demonstrate that our approach effectively internalizes complex prompts across various agent-based application scenarios. For effective training without interactions with the dedicated environments, we introduce a data synthesis technique that autonomously collects conversational datasets by swapping the roles of the agent and environment. This method is especially useful in scenarios where only a predefined prompt is available without a corresponding training dataset. By internalizing complex prompts, Generative Prompt Internalization enables high performance and efficient inference without the need for explicit prompts.",
+        "identifiers": [
+          "SemanticScholar:9983bcece5f2230d2dc2f4009a6ec26cf24e9899"
+        ],
+        "semantic_scholar_id": "9983bcece5f2230d2dc2f4009a6ec26cf24e9899",
+        "canonical_id": "arXiv:2411.15927",
+        "arxiv_id": "2411.15927",
+        "doi": "10.18653/v1/2025.naacl-long.376",
+        "authors": [
+          "Haebin Shin",
+          "Lei Ji",
+          "Yeyun Gong",
+          "Sungdong Kim",
+          "Eunbi Choi",
+          "Minjoon Seo"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 688,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.11056",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774904.3792801",
+        "id:SemanticScholar:e1769e9cfcd868a3e4824b4a49d3b8d5818bc256",
+        "id:arXiv:2510.11056",
+        "title:from reasoning llms to bert a twostage distillation framework for search relevance",
+        "url:https://arxiv.org/abs/2510.11056"
+      ],
+      "record": {
+        "title": "From Reasoning LLMs to BERT: A Two-Stage Distillation Framework for Search Relevance",
+        "source_url": "https://arxiv.org/abs/2510.11056",
+        "year": 2025,
+        "published": "2025-10-13",
+        "venue": "The Web Conference",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Query-service relevance prediction in e-commerce search systems faces strict latency requirements that prevent the direct application of Large Language Models (LLMs). To bridge this gap, we propose a two-stage reasoning distillation framework to transfer reasoning capabilities from a powerful teacher LLM to a lightweight, deployment-friendly student model. In the first stage, we address the limitations of general-purpose LLMs by constructing a domain-adapted teacher model. This is achieved through a three-step process: domain-adaptive pre-training to inject platform knowledge, supervised fine-tuning to elicit reasoning skills, and preference optimization with a multi-dimensional reward model to ensure the generation of reliable and preference-aligned reasoning paths. This teacher can then automatically annotate massive query-service pairs from search logs with both relevance labels and reasoning chains. In the second stage, to address the challenges of architectural heterogeneity in standard distillation, we introduce Contrastive Reasoning Self-Distillation (CRSD). By modeling the behavior of the same student model under ''standard'' and ''reasoning-augmented'' inputs as a teacher-student relationship, CRSD enables the lightweight model to internalize the teacher's complex decision-making mechanisms without needing the explicit reasoning path at inference. Offline evaluations and online A/B testing in the Meituan search advertising system demonstrate that our framework achieves significant improvements across multiple metrics, validating its effectiveness and practical value.",
+        "identifiers": [
+          "SemanticScholar:e1769e9cfcd868a3e4824b4a49d3b8d5818bc256"
+        ],
+        "semantic_scholar_id": "e1769e9cfcd868a3e4824b4a49d3b8d5818bc256",
+        "canonical_id": "arXiv:2510.11056",
+        "arxiv_id": "2510.11056",
+        "doi": "10.1145/3774904.3792801",
+        "authors": [
+          "Runze Xia",
+          "Yu Ji",
+          "Yuxi Zhou",
+          "Hao-Dong Liu",
+          "Teng Zhang",
+          "Pi-Ji Li"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 365,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/norcas66540.2025.11231309",
+      "identity_tokens": [
+        "id:DOI:10.1109/norcas66540.2025.11231309",
+        "id:SemanticScholar:dbbe4d38d1194a0b81733e843186d0105dcad14d",
+        "title:efficient prompt design for resourceconstrained deployment of local llms",
+        "url:https://doi.org/10.1109/NorCAS66540.2025.11231309"
+      ],
+      "record": {
+        "title": "Efficient Prompt Design for Resource-Constrained Deployment of Local LLMs",
+        "source_url": "https://doi.org/10.1109/NorCAS66540.2025.11231309",
+        "year": 2025,
+        "published": "2025-10-28",
+        "venue": "IEEE Nordic Circuits and Systems Conference",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The local deployment of Large Language Models (LLMs) is essential for privacy and latency in several domains. However, it faces significant challenges in terms of memory, power, and inference speed, particularly in resource-constrained systems such as Internet of Things (IoT) and edge computing devices. Most existing studies emphasize compression and hardware tuning, while holistic system-level optimization remains incomplete, and the role of prompt design is still underexplored. This study introduces a structured evaluation of prompt engineering strategies designed to enhance resource efficiency and accuracy in local LLMs, applied across three textual analysis tasks: theme extraction, frequency analysis, and impact analysis. Four experimental conditions were compared: Baseline, System Prompt Only (SP), User Prompt Only (UP), and System+User Prompt ($S P+U P$). Using multiple LLMs ranging from 1 B to 70B parameters, we audited tokens generated, latency, VRAM usage, hallucination rates, and other structural errors. The results show that System Prompts alone substantially reduced computational overhead, whereas User Prompts improved accuracy and task alignment. Their combination yields comprehensive improvements, maximizing both efficiency and reliability. The proposed prompt design enabled smaller LLMs to rival larger ones in efficiency and accuracy, with LLaMA-3.2, 3B with SP+UP reducing VRAM by 96%, latency by 85%, and hallucinations by 83% when compared to the 70B with Baseline. Even LLaMA-3.2, 1B proved to be a viable option, especially when VRAM size is a critical factor.",
+        "identifiers": [
+          "SemanticScholar:dbbe4d38d1194a0b81733e843186d0105dcad14d"
+        ],
+        "semantic_scholar_id": "dbbe4d38d1194a0b81733e843186d0105dcad14d",
+        "doi": "10.1109/NorCAS66540.2025.11231309",
+        "canonical_id": "DOI:10.1109/NorCAS66540.2025.11231309",
+        "authors": [
+          "Aisvarya Adeseye",
+          "J. Isoaho",
+          "Seppo Virtanen",
+          "Mohammad Tahir"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 350,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.12537",
+      "identity_tokens": [
+        "id:DOI:10.1609/aaai.v40i36.40318",
+        "id:SemanticScholar:75b42a992a6be2b2f195103bea63905f676f02d0",
+        "id:arXiv:2506.12537",
+        "title:what makes a good speech tokenizer for llmcentric speech generation a systematic study",
+        "url:https://arxiv.org/abs/2506.12537"
+      ],
+      "record": {
+        "title": "What Makes a Good Speech Tokenizer for LLM-Centric Speech Generation? A Systematic Study",
+        "source_url": "https://arxiv.org/abs/2506.12537",
+        "year": 2025,
+        "published": "2025-06-14",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speech-language models (SLMs) offer a promising path toward unifying speech and text understanding and generation. However, challenges remain in achieving effective cross-modal alignment and high-quality speech generation. In this work, we systematically investigate the role of speech tokenizer designs in LLM-centric SLMs, augmented by speech heads and speaker modeling.\nWe compare coupled, semi-decoupled, and fully decoupled speech tokenizers under a fair SLM framework and find that decoupled tokenization significantly improves alignment and synthesis quality. To address the information density mismatch between speech and text, we introduce multi-token prediction (MTP) into SLMs, enabling each hidden state to decode multiple speech tokens. This leads to up to 12× faster decoding and a substantial drop in word error rate (from 6.07 to 3.01). Furthermore, we propose a speaker-aware generation paradigm and introduce RoleTriviaQA, a large-scale role-playing knowledge QA benchmark with diverse speaker identities. Experiments demonstrate that our methods enhance both knowledge understanding and speaker consistency.",
+        "identifiers": [
+          "SemanticScholar:75b42a992a6be2b2f195103bea63905f676f02d0"
+        ],
+        "semantic_scholar_id": "75b42a992a6be2b2f195103bea63905f676f02d0",
+        "canonical_id": "arXiv:2506.12537",
+        "arxiv_id": "2506.12537",
+        "doi": "10.1609/aaai.v40i36.40318",
+        "authors": [
+          "Xiao-Ran Fan",
+          "Zhichao Sun",
+          "Yangfan Gao",
+          "Jingfei Xiong",
+          "Hang Yan",
+          "Yifei Cao",
+          "Jiajun Sun",
+          "Shuo Li",
+          "Zhi-Hao Zhang",
+          "Zhi-Heng Xi",
+          "Yuhao Zhou",
+          "Sen-Jie Jin",
+          "Changhao Jiang",
+          "Junjie Ye",
+          "Ming Zhang",
+          "Rui Zheng",
+          "Zhenhua Han",
+          "Yunke Zhang",
+          "Demei Yan",
+          "Shaokang Dong",
+          "Tao Ji",
+          "Tao Gui"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 486,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/make5030045",
+      "identity_tokens": [
+        "id:DOI:10.3390/make5030045",
+        "id:SemanticScholar:7abed24ea2a0136e64ed001f872c1a2baf1b0315",
+        "title:efficient latent space compression for lightningfast finetuning and inference of transformerbased models",
+        "url:https://doi.org/10.3390/make5030045"
+      ],
+      "record": {
+        "title": "Efficient Latent Space Compression for Lightning-Fast Fine-Tuning and Inference of Transformer-Based Models",
+        "source_url": "https://doi.org/10.3390/make5030045",
+        "year": 2023,
+        "published": "2023-07-30",
+        "venue": "Machine Learning and Knowledge Extraction",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper presents a technique to reduce the number of parameters in a transformer-based encoder–decoder architecture by incorporating autoencoders. To discover the optimal compression, we trained different autoencoders on the embedding space (encoder’s output) of several pre-trained models. The experiments reveal that reducing the embedding size has the potential to dramatically decrease the GPU memory usage while speeding up the inference process. The proposed architecture was included in the BART model and tested for summarization, translation, and classification tasks. The summarization results show that a 60% decoder size reduction (from 96 M to 40 M parameters) will make the inference twice as fast and use less than half of GPU memory during fine-tuning process with only a 4.5% drop in R-1 score. The same trend is visible for translation and partially for classification tasks. Our approach reduces the GPU memory usage and processing time of large-scale sequence-to-sequence models for fine-tuning and inference. The implementation and checkpoints are available on GitHub.",
+        "identifiers": [
+          "SemanticScholar:7abed24ea2a0136e64ed001f872c1a2baf1b0315"
+        ],
+        "semantic_scholar_id": "7abed24ea2a0136e64ed001f872c1a2baf1b0315",
+        "doi": "10.3390/make5030045",
+        "canonical_id": "DOI:10.3390/make5030045",
+        "authors": [
+          "A. A. Falaki",
+          "R. Gras"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1171,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7364cf89529163014d7b6e9ea89f4bfbe9f0c0999313232d6aad87c56366f442",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d9645de449d02374-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.07697",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.07697",
+    "identity_tokens": [
+      "arXiv:2307.07697"
+    ],
+    "reason": "LLM agentがknowledge graphをbeam searchで探索してreasoning accuracy・traceabilityを改善する能力/knowledge integration研究。小型LLMで計算cost低減も述べるが、runtime・serving・memory管理方式のsystem評価ではない。",
+    "first_checked_at": "2026-10-05T16:24:19+00:00",
+    "last_checked_at": "2026-10-05T16:24:19+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+    ],
+    "title": "Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph"
+  },
+  "processed_at": "2026-10-05T16:24:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d9645de449d0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

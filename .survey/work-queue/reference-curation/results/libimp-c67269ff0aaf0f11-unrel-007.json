@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c67269ff0aaf0f11-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s42256-025-01165-w",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s42256-025-01165-w",
+    "identity_tokens": [
+      "DOI:10.1038/s42256-025-01165-w"
+    ],
+    "reason": "The publisher abstract describes XPert, a dual-branch transformer for predicting drug-induced cellular gene-expression changes and dose–time responses; its purpose is biological prediction, not inference-system efficiency.",
+    "first_checked_at": "2026-10-11T01:32:13+00:00",
+    "last_checked_at": "2026-10-11T01:32:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+    ],
+    "title": "Modelling drug-induced cellular perturbation responses with a biologically informed dual-branch transformer"
+  },
+  "processed_at": "2026-10-11T01:32:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c67269ff0aaf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

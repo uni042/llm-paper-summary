@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6c9f65cebb15718d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.09968",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.09968",
+    "identity_tokens": [
+      "arXiv:2605.09968"
+    ],
+    "reason": "学習状態の統合演算子Qと新証拠による拡張演算子Pの順序差を停止・再帰深度制御に利用する理論研究。第6節では再帰的言語モデルの推論反復回数を適応的に決める設計を扱い、推論計算予算との接点がある。一方、主要貢献は5領域に共通する収束・停止の数学的保証で、LLM推論エンジンのGPU実行速度、KVメモリ、実測レイテンシの改善は本論文単体では報告しない。伴走研究に実証を委ねるため境界的。",
+    "first_checked_at": "2026-10-18T10:00:26+00:00",
+    "last_checked_at": "2026-10-18T10:00:26+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Consolidation-Expansion Operator Mechanics: A Unified Framework for Adaptive Learning"
+  },
+  "processed_at": "2026-10-18T10:00:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6c9f65cebb15",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

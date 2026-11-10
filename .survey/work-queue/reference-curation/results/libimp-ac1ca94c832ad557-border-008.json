@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ac1ca94c832ad557-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/access.2025.3617879",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/access.2025.3617879",
+    "identity_tokens": [
+      "DOI:10.1109/access.2025.3617879"
+    ],
+    "reason": "The candidate title indicates pruning for environmental sound classification, but its primary abstract could not be retrieved. Primary URL: https://doi.org/10.1109/ACCESS.2025.3617879. Exact failure: URL https://doi.org/10.1109/ACCESS.2025.3617879 is not accessible via this tool; official IEEE Xplore search returned no results. source_unavailable; abstract_not_read; body_not_read.",
+    "first_checked_at": "2026-10-10T06:38:03+00:00",
+    "last_checked_at": "2026-10-10T06:38:03+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
+      "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Fine-Grained Pruning via Binary Search for Efficient Environmental Sound Classification"
+  },
+  "processed_at": "2026-10-10T06:38:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ac1ca94c832a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

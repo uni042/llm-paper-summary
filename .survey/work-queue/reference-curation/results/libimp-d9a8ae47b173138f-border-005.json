@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d9a8ae47b173138f-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.10426",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.10426",
+    "identity_tokens": [
+      "arXiv:2508.10426"
+    ],
+    "reason": "本文の実験はtraining/incentive designとBERT-base中心。serving/runtime性能の裏付けが弱く適合困難。",
+    "first_checked_at": "2026-10-05T14:02:00+00:00",
+    "last_checked_at": "2026-10-05T14:02:00+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+    ],
+    "title": "Computational Economics in Large Language Models: Exploring Model Behavior and Incentive Design under Resource Constraints"
+  },
+  "processed_at": "2026-10-05T14:02:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d9a8ae47b173",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

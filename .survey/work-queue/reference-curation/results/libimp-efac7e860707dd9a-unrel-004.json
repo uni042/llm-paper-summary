@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-efac7e860707dd9a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.03591",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.03591",
+    "identity_tokens": [
+      "arXiv:2610.03591"
+    ],
+    "reason": "自然災害のhazard analysisで科学ルートやツールを選ぶエージェントの研究であり、LLMの推論実装資源やdecode効率を改善しない。KV系統との関連は実証されない。",
+    "first_checked_at": "2026-10-06T18:49:05+00:00",
+    "last_checked_at": "2026-10-06T18:49:05+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+    ],
+    "title": "HazardWeaver: Scientific Route Selection for Hazard Analysis Agents"
+  },
+  "processed_at": "2026-10-06T18:49:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-efac7e860707",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

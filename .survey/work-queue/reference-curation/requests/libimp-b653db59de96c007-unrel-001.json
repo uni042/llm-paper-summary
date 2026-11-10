@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b653db59de96c007-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2512.12301",
+  "reason": "TwinFormer applies patching, top-k sparse attention, and GRU aggregation to long-sequence time-series forecasting. The paper reports linear sequence-length complexity and consumer-GPU forecasting, but the target is time-series prediction, not LLM inference or serving; the architectural analogy alone does not establish an LLM lineage match.",
+  "title": "TwinFormer: A Dual-Level Transformer for Long-Sequence Time-Series Forecasting",
+  "identity_tokens": [
+    "arXiv:2512.12301"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b653db59de96",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

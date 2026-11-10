@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1eccd4b4ea4be50f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.17879",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.17879",
+    "identity_tokens": [
+      "arXiv:2605.17879"
+    ],
+    "reason": "Guard detects slow/failing nodes during large-scale foundation-model pretraining and improves training FLOPs utilization; linked ZeRO lineage is plausible at training systems level but the work does not address inference serving.",
+    "first_checked_at": "2026-10-06T16:04:27+00:00",
+    "last_checked_at": "2026-10-06T16:04:27+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Guard: Scalable Straggler Detection and Node Health Management for Large-Scale Training"
+  },
+  "processed_at": "2026-10-06T16:04:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1eccd4b4ea4b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

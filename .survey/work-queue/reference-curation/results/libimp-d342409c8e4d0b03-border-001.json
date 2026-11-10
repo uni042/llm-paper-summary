@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d342409c8e4d0b03-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.28925",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.28925",
+    "identity_tokens": [
+      "arXiv:2606.28925"
+    ],
+    "reason": "LLM servingのrequest-level model routingや実際のinference workload削減システムではなく、タスク層のagent選択ベンチマーク。対象範囲との接続が間接的で、次工程へ進めるだけのserving寄与は確認できない。",
+    "first_checked_at": "2026-10-05T03:44:13+00:00",
+    "last_checked_at": "2026-10-05T03:44:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+    ],
+    "title": "Multi-Agent Routing as Set-Valued Prediction: A WildChat Benchmark and Cost-Aware Evaluation"
+  },
+  "processed_at": "2026-10-05T03:44:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d342409c8e4d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

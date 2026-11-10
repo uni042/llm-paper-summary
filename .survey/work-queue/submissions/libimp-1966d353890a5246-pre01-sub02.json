@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Athena: Efficient Block-Wise Post-Training Quantization for Large Language Models Using Second-Order Matrix Derivative Information",
+      "source_url": "https://arxiv.org/abs/2405.17470",
+      "year": 2024,
+      "published": "2024-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have significantly advanced natural language processing tasks such as machine translation, text generation, and sentiment analysis. However, their large size, often consisting of billions of parameters, poses challenges for storage, computation, and deployment, particularly in resource-constrained environments like mobile devices and edge computing platforms. Effective compression and quantization techniques are crucial for addressing these issues, reducing memory footprint and computational requirements without significantly compromising performance. Traditional methods that uniformly map parameters to compressed spaces fail to account for the uneven distribution of parameters, leading to substantial accuracy loss. In this work, we propose Athena, a novel algorithm for efficient block-wise post-training quantization of LLMs. Athena leverages Second-Order Matrix Derivative Information to guide the quantization process using the curvature information of the loss landscape. By grouping parameters by columns or rows and iteratively optimizing the quantization process, Athena updates the model parameters and Hessian matrix to achieve significant compression while maintaining high accuracy. This makes Athena a practical solution for deploying LLMs in various settings.",
+      "identifiers": [
+        "SemanticScholar:adaaeeeae5ed80f544b404f568a41baad0fe7860"
+      ],
+      "semantic_scholar_id": "adaaeeeae5ed80f544b404f568a41baad0fe7860",
+      "canonical_id": "arXiv:2405.17470",
+      "arxiv_id": "2405.17470",
+      "doi": "10.48550/arXiv.2405.17470",
+      "authors": [
+        "Yan-Shu Wang",
+        "Wen He",
+        "Tong Yang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 889,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は損失の二階行列微分情報を利用し、列・行ごとに重みをブロック化してHessianを更新しながら量子化するAthenaを提案。低ビット化による容量・計算負担の低減と精度維持を目的とするLLMの事後量子化研究であり、推論用モデル圧縮に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EGGS-PTP: An Expander-Graph Guided Structured Post-training Pruning Method for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2508.09471",
+      "year": 2025,
+      "published": "2025-08-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) become more widely adopted and scale up in size, the computational and memory challenges involved in deploying these massive foundation models have grown increasingly severe. This underscores the urgent need to develop more efficient model variants. Faced with this challenge, the present work introduces EGGS-PTP: an Expander-Graph Guided Structured Post-training Pruning method. The proposed approach leverages graph theory to guide the design of N:M structured pruning, effectively reducing model size and computational demands. By incorporating concepts from expander graphs, EGGS-PTP ensures information flow within the pruned network, preserving essential model functionality. Extensive numerical experiments demonstrate that EGGS-PTP not only achieves significant acceleration and memory savings due to structured sparsity but also outperforms existing structured pruning techniques in terms of accuracy across various LLMs.",
+      "identifiers": [
+        "SemanticScholar:89c9c7663ffdabcaee9b94a436628c91d43a69a9"
+      ],
+      "semantic_scholar_id": "89c9c7663ffdabcaee9b94a436628c91d43a69a9",
+      "canonical_id": "arXiv:2508.09471",
+      "arxiv_id": "2508.09471",
+      "doi": "10.48550/arXiv.2508.09471",
+      "authors": [
+        "Omar Bazarbachi",
+        "Zijun Sun",
+        "Yanning Shen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 443,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はexpander graphの情報伝達性を利用してN:M構造化枝刈りパターンを設計するEGGS-PTPを提案。複数LLMで従来の構造化枝刈りより精度を維持しつつ、メモリ削減と推論高速化を報告。N:M疎性に基づく実行効率へ直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AMS-QUANT: Adaptive Mantissa Sharing for Floating-point Quantization",
+      "source_url": "https://arxiv.org/abs/2510.16045",
+      "year": 2025,
+      "published": "2025-10-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities in various kinds of tasks, while the billion or even trillion parameters bring storage and efficiency bottlenecks for inference. Quantization, particularly floating-point quantization, is known to be capable of speeding up LLM inference by reducing memory footprint and data movement during the inference process. For the first time, we advance the floating-point quantization exploration from integer bitwidths to non-integer bit-widths, namely AMS-Quant, to further approach the quantization sweet spot. AMS-Quant incorporates two novel techniques to put it into effect: (1) it proposes Mantissa-bit Sharing, which groups k quantized weights and lets them share the least significant mantissa bit, allowing us to further approach the minimum quantization bit-width without accuracy loss. (2) It introduces Adaptive Searching, which employs an offline optimization strategy to minimize the accuracy degradation introduced by sharing. Moreover, AMS-Quant is also prototyped as efficient CUDA Linear kernels, which translates memory savings into wall-clock latency reduction by reducing memory access. Extensive experiments on large-scale datasets and models show that AMS-Quant can quantize the model to FP-5.33-e2m3 and FP4.25-e2m2, and significantly speed up the LLM decoding over FP16 inference (2.8x and 3.2x), with negligible accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:3062999bdea047ad616944fbfd5d656a9a110516"
+      ],
+      "semantic_scholar_id": "3062999bdea047ad616944fbfd5d656a9a110516",
+      "canonical_id": "arXiv:2510.16045",
+      "arxiv_id": "2510.16045",
+      "doi": "10.48550/arXiv.2510.16045",
+      "authors": [
+        "Meng-Tao Lv",
+        "Rui Zhu",
+        "Xinyu Wang",
+        "Yun Li"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 379,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は複数重みで仮数部の最下位ビットを共有し、非整数の実効ビット幅FP5.33・FP4.25を実現するAMS-Quantを提案。共有配置の探索とCUDA線形カーネルを実装し、FP16比でLLM decodeをそれぞれ2.8倍・3.2倍高速化と報告。低ビット表現と実機カーネルの両方に寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1966d353890a",
+    "round": "libimp-1966d353890a5246-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1966d353890a5246-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1966d353890a5246-pre01.json",
+    "receipt": "sha256:9dc19e68893596078bc05e34e6934aada19f41494b5d67f99da7e114afc0ddb0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1966d353890a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

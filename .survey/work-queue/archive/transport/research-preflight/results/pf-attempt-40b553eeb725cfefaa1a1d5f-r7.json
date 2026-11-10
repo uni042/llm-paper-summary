@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-attempt-40b553eeb725cfefaa1a1d5f-r7",
+  "kind": "research",
+  "attempt_id": "attempt-40b553eeb725cfefaa1a1d5f",
+  "job_id": "job-research-548d7e4cd563f6b8",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": true,
+  "repair_required": false,
+  "decision": "READY_FOR_SUBMISSION",
+  "descriptor_sha256": "sha256:dc6ec3685ef04d46878b73f4d4a7a1dfe6798c2eba7d883fb5945f6269f8f130",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "5eb6f6d9e816bd6bc7810ec6ad4fe18e27f85477"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "875a3a70ca9d21080c46e663a169a73fa2cbd85e"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "526215409ed381354121a5c8b23788d1d8a21f95"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "d17dd14dac67b420748bde8a5c92af08952d0541"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "b9889359b751e3c0c7e67b0f4bf9cc89f823453f"
+    }
+  ],
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md",
+    "status": "WARN",
+    "file_bytes": 20860,
+    "prose_chars": 5828,
+    "paragraphs": 26,
+    "method_paragraphs": 12,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7473666326877336,
+    "japanese_chars": 4399,
+    "latin_chars": 1487,
+    "bare_english_terms": [],
+    "failures": [],
+    "warnings": [
+      "日本語比率 74.7% < 警告基準 80.0%"
+    ]
+  },
+  "checked_at": "2026-09-22T10:18:21+00:00",
+  "next_action": "Create .survey/work-queue/completed-submission-requests/<attempt_id>.json and set preflight_result to this exact result path. Do not edit any record slot after this check; if a slot changes, run a new preflight first."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c612e979f41bdae7-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.12712",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.12712",
+    "identity_tokens": [
+      "arXiv:2303.12712"
+    ],
+    "reason": "GPT-4の数学・coding・vision・medicine等の広範な能力と限界を探索するcapability研究で、推論system最適化を提案しない。",
+    "first_checked_at": "2026-09-20T03:59:00+00:00",
+    "last_checked_at": "2026-10-04T21:40:32+00:00",
+    "linked_from": [
+      "papers/inference/06-serving-scheduling/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md",
+      "papers/inference/09-kernel-runtime-compilation/2026-2603.24595-model2kernel-safe-cuda-kernels.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+    ],
+    "title": "Sparks of Artificial General Intelligence: Early experiments with GPT-4"
+  },
+  "processed_at": "2026-10-04T21:40:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c612e979f41b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

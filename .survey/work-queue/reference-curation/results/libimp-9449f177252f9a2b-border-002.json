@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9449f177252f9a2b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.10665",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.10665",
+    "identity_tokens": [
+      "arXiv:2503.10665"
+    ],
+    "reason": "二次surveyかつ主対象はmultimodal vision-language modelsで、LLM inference servingを直接実装・測定した研究ではない。周辺技術の参考価値にとどまるためborderline。",
+    "first_checked_at": "2026-10-05T13:13:26+00:00",
+    "last_checked_at": "2026-10-05T13:13:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+    ],
+    "title": "Small Vision-Language Models: A Survey on Compact Architectures and Techniques"
+  },
+  "processed_at": "2026-10-05T13:13:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9449f177252f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

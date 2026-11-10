@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95e2147e392b5611-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2212.10511",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2212.10511",
+    "identity_tokens": [
+      "arXiv:2212.10511"
+    ],
+    "reason": "PopQAの事実知識問題でパラメータ内知識と検索拡張の正確さを比較し、実体の人気度に応じて検索を必要時だけ実行する適応検索を提案する。要旨には推論費用削減が明示されるため完全に無関係ではないが、主たる寄与は知識の正確さと検索の選択方策であり、LLMランタイムのKV管理、オフロード、GPU実行、サービング基盤の最適化を直接実装・評価したものとは確認できない。推論システム収録には境界的。",
+    "first_checked_at": "2026-10-11T02:51:20+00:00",
+    "last_checked_at": "2026-10-11T02:51:20+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories"
+  },
+  "processed_at": "2026-10-11T02:51:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95e2147e392b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

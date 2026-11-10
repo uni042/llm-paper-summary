@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T171900JST-scheduled-chat-00-b1a523-r3",
+  "kind": "research",
+  "attempt_id": "attempt-b1a52303c9877f76cd4ddc7e",
+  "job_id": "job-research-d69ddf3864beda69",
+  "record_bank": "f",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-98d01325c44c-janus-joint-prefill-decode-disaggregation-with-kv-cache-aware-multi-cloud-routing-for-edge-adjacent-llm-serving.md",
+  "expected_blob_sha": null,
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:0c69c08e5e841b7fb8c2b1b28c15a2b32f246bb2e268abff3407b708db04bda5",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "3e75fce7c151cd516d031c27e447d765a197f610"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "4823a1ef2d25cece2de80d04101a6e03b5e0b773"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "e91ef0cbafa148a38d7a351300a1531b7357b40f"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "d33239decb02a04e60c4057e75d43c881c2c7506"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "cfc2ddd14ee3d4c7ce5a1e0f9df63094b3f2fdb0"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#2 の段落数 1 < 2",
+    "手法構成要素#3 の段落数 1 < 2",
+    "手法構成要素#4 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2",
+    "手法構成要素#6 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-23T08:18:25+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/99-other-inference-systems/2026-98d01325c44c-janus-joint-prefill-decode-disaggregation-with-kv-cache-aware-multi-cloud-routing-for-edge-adjacent-llm-serving.md",
+    "status": "FAIL",
+    "file_bytes": 20634,
+    "prose_chars": 5592,
+    "paragraphs": 20,
+    "method_paragraphs": 6,
+    "method_components": 6,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7648422178641469,
+    "japanese_chars": 4290,
+    "latin_chars": 1319,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#2 の段落数 1 < 2",
+      "手法構成要素#3 の段落数 1 < 2",
+      "手法構成要素#4 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2",
+      "手法構成要素#6 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 76.5% < 警告基準 80.0%"
+    ]
+  }
+}

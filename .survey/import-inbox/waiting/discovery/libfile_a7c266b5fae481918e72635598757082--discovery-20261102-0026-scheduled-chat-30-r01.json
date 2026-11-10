@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261102-0026-scheduled-chat-30/r01",
+  "reference_main_sha": "c3f331fc3767b4b1b9633c1d849a180f16c80a13",
+  "record_count": 1,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3746027.3755526",
+      "identity_tokens": [
+        "DOI:10.1145/3746027.3755526"
+      ],
+      "title": "ASTER: Adaptive Dynamic Layer-Skipping for Efficient Transformer Inference via Markov Decision Process",
+      "reason": "ACM Multimedia 2025公式採択一覧で同一題名・著者を確認し、著者所属の上海期智研究院が2025-11-14に公開した研究成果概要を一次資料として照合。ASTERはTransformer推論でマルコフ決定過程による入力依存の層スキップを行い、Temporal Importance Difference Rewardに対応する逐次判断と学習可能なcognitive tokensを用いる知識蒸留補償で省略層の情報損失を抑える。研究機関はViT、DeiTだけでなくLLaMA、DistilBERTでも検証したと明記するため、画像専用の枝刈り論文ではなくLLM推論の条件付き計算にも直接適用される。よってaccept。DeiTでの理論3倍高速化時43.68%精度という数値は著者機関の報告値であり、LLM実機の速度倍率とは扱わない。出版社原著PDF/abstractはアクセス制限のため未直接閲覧、Research段階で原著全文とモデル別結果を再確認する。",
+      "source_url": "https://www.sqz.ac.cn/news-178",
+      "body_check": "author_affiliated_institution_primary_research_summary_screen_only; official_conference_title_and_authors_verified; publisher_abstract_and_full_body_not_directly_accessed",
+      "first_checked_at": "2026-11-02T00:30:48+09:00",
+      "last_checked_at": "2026-11-02T00:30:48+09:00",
+      "linked_from": [],
+      "worklist_rank": 367,
+      "origin": "discovery_worklist",
+      "source_type": "author_institution_primary_summary",
+      "publisher_doi_url": "https://doi.org/10.1145/3746027.3755526",
+      "official_conference_url": "https://acmmm2025.org/accepted-regular-papers/",
+      "primary_evidence_url": "https://www.sqz.ac.cn/news-178",
+      "primary_abstract_access": "unavailable; author-institution technical summary used instead"
+    }
+  ]
+}

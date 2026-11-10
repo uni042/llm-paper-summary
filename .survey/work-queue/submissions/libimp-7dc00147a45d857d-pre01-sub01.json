@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Anchoring the Cache: Mitigating Contextual Hallucination in KV-Compressed Long-Context Summarization",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1542",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-Value (KV) cache compression techniques have improved the efficiency of long-context summarization in Large Language Models (LLMs), but their impact on model hallucination remains underexplored. In this paper, we present the first systematic study of how KV cache compression affects hallucination in long-context summarization, demonstrating that aggressive compression can increase hal-lucination scores by up to 3.36× compared to the baseline. To mitigate this issue, we propose HalluKV, a decoding-phase strategy that selectively removes generated KV pairs from retrieval heads responsible for retrieving critical information from source context, thereby anchoring their attention on the pre-served source information. Our approach maintains computational efficiency while significantly reducing hallucination across multiple models and datasets, achieving up to 5.48 average point reductions on Llama-3-8B-Instruct, enabling more trustworthy long-context summarization 1 .",
+      "identifiers": [
+        "SemanticScholar:be48a5c491a88836550bea082b1121051e71f37a"
+      ],
+      "semantic_scholar_id": "be48a5c491a88836550bea082b1121051e71f37a",
+      "doi": "10.18653/v1/2026.acl-long.1542",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1542",
+      "authors": [
+        "Yu Fu",
+        "Chen Luo",
+        "Josef Valvoda",
+        "Xin Zhang",
+        "Xue-Jing Lei",
+        "Xiao Pan",
+        "Hui Liu",
+        "Yue Dong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 124,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL 2026の出版社一次要旨を確認。長文脈要約でKVキャッシュを強く圧縮すると幻覚スコアが最大3.36倍になる問題を分析し、HalluKVとして復号段階でretrieval headの生成済みKV対を選択的に除去することで元文書への注意を保持する具体的なKV管理機構を提案。Llama-3-8B-Instructで幻覚指標の平均最大5.48ポイント改善を報告。推論時KVキャッシュ管理への直接的な技術貢献があるためaccept。要旨に記載された数値のみを使用し、本文・詳細実験表は未検証。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_chat_discovery_worklist"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7dc00147a45d",
+    "round": "libimp-7dc00147a45d857d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7dc00147a45d857d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7dc00147a45d857d-pre01.json",
+    "receipt": "sha256:d332ef0b50e57c892b7d5fe11a63ea74c567bcf135fedb694824aa66a0dc193a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7dc00147a45d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0aa272ea9a64f75d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.26013",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.26013",
+    "identity_tokens": [
+      "arXiv:2608.26013"
+    ],
+    "reason": "要旨は「Multimodal instruction-following models require training data that is accurate, diverse, verifiable, and challenging. Existing synthesis pipelines typically follow a one-pass generate-and-filter paradigm, discarding feedback from failed samples, verifier outcomes, and target-model errors. We present VISA (Visual Instruction」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+    "first_checked_at": "2026-10-05T03:14:24+00:00",
+    "last_checked_at": "2026-10-05T03:14:24+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "VISA: Agentic Self-Evolving Data Synthesis for Multimodal Instruction Following"
+  },
+  "processed_at": "2026-10-05T03:14:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0aa272ea9a64",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

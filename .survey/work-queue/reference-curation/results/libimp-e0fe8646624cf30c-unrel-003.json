@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0fe8646624cf30c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:rygGQyrFvH",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:rygGQyrFvH",
+    "identity_tokens": [
+      "OpenReview:rygGQyrFvH",
+      "arXiv:1904.09751"
+    ],
+    "reason": "ニュークリアスサンプリング等を通じて言語生成の反復・退化と品質を扱う復号品質研究で、推論の速度・メモリ・サービング効率を改善する方式ではないため対象外。",
+    "first_checked_at": "2026-09-27T12:58:27+09:00",
+    "last_checked_at": "2026-09-30T01:46:01+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
+    ],
+    "title": "The Curious Case of Neural Text Degeneration"
+  },
+  "processed_at": "2026-09-30T01:46:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0fe8646624c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

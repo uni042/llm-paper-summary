@@ -1,0 +1,701 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-52edc47acd8ae3d4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-52edc47acd8a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/isca66397.2026.00174",
+    "DOI:10.1109/iscas56072.2025.11043916",
+    "arXiv:2405.13938",
+    "arXiv:2602.18846",
+    "arXiv:2603.10030",
+    "arXiv:2610.01560",
+    "arXiv:2610.19232"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8d8a2b05805feec9630c8cb1b6429240adfe08d7",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-10T10:58:01.694578+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00174",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iscas56072.2025.11043916",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.13938",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.18846",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.10030",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.01560",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.19232",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "AURAL: Adaptive Latent Reasoning with Joint Chunk for Speech Language Models",
+      "source_url": "https://arxiv.org/abs/2610.01560",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Model intelligence and fast response jointly shape the quality of interaction with speech language models, yet remain difficult to achieve together. Explicit chain-of-thought (CoT) improves reasoning and audio understanding, but generating intermediate reasoning tokens delays responses. Describing fine-grained acoustic cues further lengthens CoT and increases latency. Latent reasoning can reduce this overhead, yet existing methods often trail CoT and remain limited by single-path supervision and reasoning budgets that do not adapt to problem difficulty. We introduce AURAL, which models a distribution over multiple plausible reasoning continuations in latent space and jointly predicts chunks of future states to reduce sequential forward passes and reasoning latency. To provide initial supervision for latent reasoning, we construct AuralReason-683K: 683K bilingual speech utterances (about 1,000 hours) with concise CoT for emotion recognition, empathetic dialogue, and general reasoning. AURAL-RL then explores beyond these traces, rewarding concise reasoning that yields high-quality answers and adapting reasoning effort to each problem. Across two backbones, AURAL-RL achieves performance comparable to CoT-RL, with larger gains over the respective supervised checkpoints on most metrics. Analysis further shows that harder questions elicit more latent reasoning steps. On Qwen2.5-Omni, it reduces time to the first answer token by 11.8x, from 1.22 to 0.10 s, versus 0.05 s for direct answering.",
+      "identifiers": [
+        "SemanticScholar:7d8616b85607a0dced00976a49f8250432de9dcb"
+      ],
+      "semantic_scholar_id": "7d8616b85607a0dced00976a49f8250432de9dcb",
+      "canonical_id": "arXiv:2610.01560",
+      "arxiv_id": "2610.01560",
+      "authors": [
+        "Yu-Xiang Wang",
+        "Kun-Yu Feng",
+        "Yuan-Cheng Wang",
+        "Zihang Liu",
+        "Sheng-Bo Cai",
+        "Qin-Ke Ni",
+        "Wan Lin",
+        "Tao Feng",
+        "Ying Shen",
+        "Ming-Hao Hsu",
+        "Zhi-Xian Zhao",
+        "Li-Qiang Zhang",
+        "T.-K. Sun",
+        "Steve Yves",
+        "Zhi-Zheng Wu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DUET-VLM: Dual stage Unified Efficient Token reduction for VLM Training and Inference",
+      "source_url": "https://arxiv.org/abs/2602.18846",
+      "year": 2026,
+      "published": "2026-02-21",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) have achieved remarkable multimodal understanding and reasoning capabilities, yet remain computationally expensive due to dense visual tokenization. Existing efficiency approaches either merge redundant visual tokens or drop them progressively in language backbone, often trading accuracy for speed. In this work, we propose DUET-VLM, a versatile plug-and-play dual compression framework that consists of (a) vision-only redundancy aware compression of vision encoder's output into information-preserving tokens, followed by (b) layer-wise, salient text-guided dropping of visual tokens within the language backbone to progressively prune less informative tokens. This coordinated token management enables aggressive compression while retaining critical semantics. On LLaVA-1.5-7B, our approach maintains over 99% of baseline accuracy with 67% fewer tokens, and still retains>97% even at 89% reduction. With this dual-stage compression during training, it achieves 99.7% accuracy at 67% and 97.6% at 89%, surpassing prior SoTA visual token reduction methods across multiple benchmarks. When integrated into Video-LLaVA-7B, it even surpasses the baseline -- achieving>100% accuracy with a substantial 53.1% token reduction and retaining 97.6% accuracy under an extreme 93.4% setting. These results highlight end-to-end training with DUET-VLM, enabling robust adaptation to reduced visual (image/video) input without sacrificing accuracy, producing compact yet semantically rich representations within the same computational budget. Our code is available at https://github.com/AMD-AGI/DUET-VLM.",
+      "identifiers": [
+        "SemanticScholar:74e761e84ff67a06ee13533fb866ea0f429a29ed"
+      ],
+      "semantic_scholar_id": "74e761e84ff67a06ee13533fb866ea0f429a29ed",
+      "canonical_id": "arXiv:2602.18846",
+      "arxiv_id": "2602.18846",
+      "doi": "10.48550/arXiv.2602.18846",
+      "authors": [
+        "Aditya Singh",
+        "Hitesh Kandala",
+        "P. Brahma",
+        "Zi-Cheng Liu",
+        "E. Barsoum"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 262,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dynamic Scheduling for AI Accelerators via TISA",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00174",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern AI accelerators suffer from low utilization because static compile-time schedules cannot adapt to runtime variability or coordinate heterogeneous units effectively. This paper presents a semantics-aware dynamic tile scheduling framework that restores the missing runtime semantics required for adaptive execution. It co-designs three synergistic components, including a semantics-preserving compiler that maintains operator boundaries and dependency types through lowering, a tile-level instruction set (TISA) that encodes typed dependencies, resource intents, and tile-level memory ranges, and a conflictaware runtime scheduler that uses these semantics to dynamically reorder tiles, resolve contention, and overlap execution across tensor, vector, and DMA units. This design unifies software semantics and hardware scheduling, enabling cross-operator and cross-iteration parallelism beyond static approaches. Across ResNet50, BERT, GPT-J, and LLaMA2, our work achieves 1.52-1.92× speedups over the baseline, delivering 1.14-1.63× additional improvement over strong static tile-level pipeline scheduling; on FlashAttention-3 (head dim 128), it improves hardware utilization by 26.4% versus the state-of-the-art H100 implementation. Ablation studies further show that semantics preservation alone yields $1.2 \\times$ gains, confirming the independent value of restoring scheduling information to runtime.",
+      "identifiers": [
+        "SemanticScholar:2700eb792bfdeeee75f494260fbc581656d69006"
+      ],
+      "semantic_scholar_id": "2700eb792bfdeeee75f494260fbc581656d69006",
+      "doi": "10.1109/ISCA66397.2026.00174",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00174",
+      "authors": [
+        "Guanghui Song",
+        "Xiaoqiang Dan",
+        "Chengke Wang",
+        "Fei Liu",
+        "Wen-Yuan Lv",
+        "Zhongzhou Jiang",
+        "Jian-Jian Guan",
+        "Teng Lu",
+        "Lin Tao",
+        "Cheng Li",
+        "Weixing Pan",
+        "Wei Huang",
+        "Zirong Shen",
+        "Yi Yang",
+        "Hui Liu",
+        "Jie Zhao"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "The DMA Streaming Framework: Kernel-Level Buffer Orchestration for High-Performance AI Data Paths",
+      "source_url": "https://arxiv.org/abs/2603.10030",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI transport libraries move bytes efficiently, but they commonly assume that buffers are already correctly allocated, placed, shared, registered, and safe under completion and teardown pressure. This paper presents dmaplane, a Linux kernel module that makes this missing layer explicit as buffer orchestration. dmaplane exposes a stable kernel UAPI via /dev/dmaplane and composes ring-based command channels, DMA buffer lifecycle management, dma-buf export for cross-device sharing, a kernel-space RDMA engine, NUMA-aware allocation and verification, credit-based flow control, low-overhead observability, and GPU memory integration via PCIe BAR pinning. We evaluate orchestration sensitivity with measurements of NUMA cross-node penalties at DRAM scale, completion-safe flow control under sustained RDMA load, and GPU BAR mapping tiers versus cudaMemcpy. We also demonstrate end-to-end disaggregated inference by transferring KV-cache chunks between two machines using RDMA WRITE WITH IMMEDIATE and reconstructing tensor views on the receiver. RDMA measurements use Soft-RoCE; we distinguish measured results from provider-independent properties by construction.",
+      "identifiers": [
+        "SemanticScholar:b0e3beb2db225170a5c2fda79710e5d20238195d"
+      ],
+      "semantic_scholar_id": "b0e3beb2db225170a5c2fda79710e5d20238195d",
+      "canonical_id": "arXiv:2603.10030",
+      "arxiv_id": "2603.10030",
+      "doi": "10.48550/arXiv.2603.10030",
+      "authors": [
+        "Marco Graziano"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Spectral-MoE: Heterogeneous Per-Layer Expert Utilization in Dense-to-MoE Conversion",
+      "source_url": "https://arxiv.org/abs/2610.19232",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models impose substantial memory demands and arithmetic costs during inference. Dense-to-mixture-of-experts (MoE) conversion is a model optimization technique that aims to reduce these arithmetic costs. Dense-to-MoE conversion partitions pretrained feed-forward network (FFN) neurons into experts and selects a subset for each token. Leading methods fall into two categories: analytic methods produce a converted model quickly using heuristics, while learning methods produce a model much more slowly by optimizing via gradients. Both approaches, however, fix the same active expert count, or\"utilization,\"at every layer. We introduce Spectral-MoE, which learns to allocate a utilization budget heterogeneously across layers. Its name draws a metaphor between separating a dense FFN into experts and separating a light beam into its spectrum. Spectral-MoE consists of two distinct approaches: a static approach that uses a single per-layer scalar which is shared across tokens, and a dynamic approach which emits a per-token schedule. We demonstrate that both allocators improve performance over uniform on both the analytic-based and learning-based SOTA dense-to-MoE methods. At 25% FFN utilization, dynamic allocation reduces WikiText-2 perplexity relative to uniform by 1.04, 2.96, and 2.71 points on the learned base for Llama-2-7B, Llama-3-8B, and Qwen2.5-7B, respectively. The corresponding reductions on the analytic base are 2.45, 6.26, and 2.17 points. On the learned base, dynamic allocation improves six-task mean accuracy over uniform by an average of 1.5, 4.2, and 3.6 percentage points across the three models at FFN utilizations of 12.5%, 25%, and 50%, respectively. These results establish per-layer expert utilization as a novel optimization axis in dense-to-MoE conversion.",
+      "identifiers": [
+        "SemanticScholar:14fa858cdba951990cda677861a341af8d39dab7"
+      ],
+      "semantic_scholar_id": "14fa858cdba951990cda677861a341af8d39dab7",
+      "canonical_id": "arXiv:2610.19232",
+      "arxiv_id": "2610.19232",
+      "authors": [
+        "Zachary Broveak",
+        "Christian Kubicka",
+        "Thierry Tambe"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "eXmY: A Data Type and Technique for Arbitrary Bit Precision Quantization",
+      "source_url": "https://arxiv.org/abs/2405.13938",
+      "year": 2024,
+      "published": "2024-05-22",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "eXmY is a novel data type for quantization of ML models. It supports both arbitrary bit widths and arbitrary integer and floating point formats. For example, it seamlessly supports 3, 5, 6, 7, 9 bit formats. For a specific bit width, say 7, it defines all possible formats e.g. e0m6, e1m5, e2m4, e3m3, e4m2, e5m1 and e6m0. For non-power of two bit widths e.g. 5, 6, 7, we created a novel encoding and decoding scheme which achieves perfect compression, byte addressability and is amenable to sharding and vector processing. We implemented libraries for emulation, encoding and decoding tensors and checkpoints in C++, TensorFlow, JAX and PAX. For optimal performance, the codecs use SIMD instructions on CPUs and vector instructions on TPUs and GPUs. eXmY is also a technique and exploits the statistical distribution of exponents in tensors. It can be used to quantize weights, static and dynamic activations, gradients, master weights and optimizer state. It can reduce memory (CPU DRAM and accelerator HBM), network and disk storage and transfers. It can increase multi tenancy and accelerate compute. eXmY has been deployed in production for almost 2 years.",
+      "identifiers": [
+        "SemanticScholar:29573bcc2a626793ef97d39352c83af4aa7d83bd"
+      ],
+      "semantic_scholar_id": "29573bcc2a626793ef97d39352c83af4aa7d83bd",
+      "canonical_id": "arXiv:2405.13938",
+      "arxiv_id": "2405.13938",
+      "doi": "10.48550/arXiv.2405.13938",
+      "authors": [
+        "Aditya Agrawal",
+        "Matthew Hedlund",
+        "Blake A. Hechtman"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 902,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "XNC: XOR and NOT-Based Lossless Compression for Optimizing Unquantized Embedding Layers in Large Language Models",
+      "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043916",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although 4-bit quantized small LLMs have been proposed recently, many studies have retained FP16 precision for embedding layers, as they constitute a relatively small proportion of the overall model in existing LLMs and suffer from severe accuracy degradation when quantized. However, in quantized small LLMs, the embedding layer accounts for a substantial proportion of the total model parameters, necessitating its compression. Since embedding layers are sensitive to approximation, lossless compression is more desirable than lossy compression methods such as quantization. While existing lossless compression methods efficiently compress patterns such as zeros, narrow values, or frequently occurring values, embedding layers typically lack these patterns, making effective compression more challenging. In this paper, we propose XOR and NOT-based lossless compression (XNC), which applies XOR operations between adjacent 16-bit blocks and then performs a NOT operation on the result, effectively truncating the upper and lower bits to compress the embedding layer to 9-bit without any loss. The proposed method leverages XOR and NOT operations, enabling easy hardware implementation, with only four cycles required for compression and three cycles for decompression, ensuring efficient data compression without performance degradation. As a result, the proposed compression technique achieves an average compression ratio of 1.34× for the embedding layers of small LLMs without any loss, effectively reducing the model size of 4-bit quantized LLMs by an average of 9.91%. The code is available at https://github.com/IDSL-SeoulTech/XNC.",
+      "identifiers": [
+        "SemanticScholar:775173468308aa53dc154a46b0f7d938b36a86de"
+      ],
+      "semantic_scholar_id": "775173468308aa53dc154a46b0f7d938b36a86de",
+      "doi": "10.1109/ISCAS56072.2025.11043916",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043916",
+      "authors": [
+        "Junghyeok Lee",
+        "Jihoon Jang",
+        "H. Kim"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 534,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.01560",
+      "identity_tokens": [
+        "id:SemanticScholar:7d8616b85607a0dced00976a49f8250432de9dcb",
+        "id:arXiv:2610.01560",
+        "title:aural adaptive latent reasoning with joint chunk for speech language models",
+        "url:https://arxiv.org/abs/2610.01560"
+      ],
+      "record": {
+        "title": "AURAL: Adaptive Latent Reasoning with Joint Chunk for Speech Language Models",
+        "source_url": "https://arxiv.org/abs/2610.01560",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Model intelligence and fast response jointly shape the quality of interaction with speech language models, yet remain difficult to achieve together. Explicit chain-of-thought (CoT) improves reasoning and audio understanding, but generating intermediate reasoning tokens delays responses. Describing fine-grained acoustic cues further lengthens CoT and increases latency. Latent reasoning can reduce this overhead, yet existing methods often trail CoT and remain limited by single-path supervision and reasoning budgets that do not adapt to problem difficulty. We introduce AURAL, which models a distribution over multiple plausible reasoning continuations in latent space and jointly predicts chunks of future states to reduce sequential forward passes and reasoning latency. To provide initial supervision for latent reasoning, we construct AuralReason-683K: 683K bilingual speech utterances (about 1,000 hours) with concise CoT for emotion recognition, empathetic dialogue, and general reasoning. AURAL-RL then explores beyond these traces, rewarding concise reasoning that yields high-quality answers and adapting reasoning effort to each problem. Across two backbones, AURAL-RL achieves performance comparable to CoT-RL, with larger gains over the respective supervised checkpoints on most metrics. Analysis further shows that harder questions elicit more latent reasoning steps. On Qwen2.5-Omni, it reduces time to the first answer token by 11.8x, from 1.22 to 0.10 s, versus 0.05 s for direct answering.",
+        "identifiers": [
+          "SemanticScholar:7d8616b85607a0dced00976a49f8250432de9dcb"
+        ],
+        "semantic_scholar_id": "7d8616b85607a0dced00976a49f8250432de9dcb",
+        "canonical_id": "arXiv:2610.01560",
+        "arxiv_id": "2610.01560",
+        "authors": [
+          "Yu-Xiang Wang",
+          "Kun-Yu Feng",
+          "Yuan-Cheng Wang",
+          "Zihang Liu",
+          "Sheng-Bo Cai",
+          "Qin-Ke Ni",
+          "Wan Lin",
+          "Tao Feng",
+          "Ying Shen",
+          "Ming-Hao Hsu",
+          "Zhi-Xian Zhao",
+          "Li-Qiang Zhang",
+          "T.-K. Sun",
+          "Steve Yves",
+          "Zhi-Zheng Wu"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 40,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.18846",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.18846",
+        "id:SemanticScholar:74e761e84ff67a06ee13533fb866ea0f429a29ed",
+        "id:arXiv:2602.18846",
+        "title:duetvlm dual stage unified efficient token reduction for vlm training and inference",
+        "url:https://arxiv.org/abs/2602.18846"
+      ],
+      "record": {
+        "title": "DUET-VLM: Dual stage Unified Efficient Token reduction for VLM Training and Inference",
+        "source_url": "https://arxiv.org/abs/2602.18846",
+        "year": 2026,
+        "published": "2026-02-21",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language models (VLMs) have achieved remarkable multimodal understanding and reasoning capabilities, yet remain computationally expensive due to dense visual tokenization. Existing efficiency approaches either merge redundant visual tokens or drop them progressively in language backbone, often trading accuracy for speed. In this work, we propose DUET-VLM, a versatile plug-and-play dual compression framework that consists of (a) vision-only redundancy aware compression of vision encoder's output into information-preserving tokens, followed by (b) layer-wise, salient text-guided dropping of visual tokens within the language backbone to progressively prune less informative tokens. This coordinated token management enables aggressive compression while retaining critical semantics. On LLaVA-1.5-7B, our approach maintains over 99% of baseline accuracy with 67% fewer tokens, and still retains>97% even at 89% reduction. With this dual-stage compression during training, it achieves 99.7% accuracy at 67% and 97.6% at 89%, surpassing prior SoTA visual token reduction methods across multiple benchmarks. When integrated into Video-LLaVA-7B, it even surpasses the baseline -- achieving>100% accuracy with a substantial 53.1% token reduction and retaining 97.6% accuracy under an extreme 93.4% setting. These results highlight end-to-end training with DUET-VLM, enabling robust adaptation to reduced visual (image/video) input without sacrificing accuracy, producing compact yet semantically rich representations within the same computational budget. Our code is available at https://github.com/AMD-AGI/DUET-VLM.",
+        "identifiers": [
+          "SemanticScholar:74e761e84ff67a06ee13533fb866ea0f429a29ed"
+        ],
+        "semantic_scholar_id": "74e761e84ff67a06ee13533fb866ea0f429a29ed",
+        "canonical_id": "arXiv:2602.18846",
+        "arxiv_id": "2602.18846",
+        "doi": "10.48550/arXiv.2602.18846",
+        "authors": [
+          "Aditya Singh",
+          "Hitesh Kandala",
+          "P. Brahma",
+          "Zi-Cheng Liu",
+          "E. Barsoum"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 262,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00174",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00174",
+        "id:SemanticScholar:2700eb792bfdeeee75f494260fbc581656d69006",
+        "title:dynamic scheduling for ai accelerators via tisa",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00174"
+      ],
+      "record": {
+        "title": "Dynamic Scheduling for AI Accelerators via TISA",
+        "source_url": "https://doi.org/10.1109/ISCA66397.2026.00174",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern AI accelerators suffer from low utilization because static compile-time schedules cannot adapt to runtime variability or coordinate heterogeneous units effectively. This paper presents a semantics-aware dynamic tile scheduling framework that restores the missing runtime semantics required for adaptive execution. It co-designs three synergistic components, including a semantics-preserving compiler that maintains operator boundaries and dependency types through lowering, a tile-level instruction set (TISA) that encodes typed dependencies, resource intents, and tile-level memory ranges, and a conflictaware runtime scheduler that uses these semantics to dynamically reorder tiles, resolve contention, and overlap execution across tensor, vector, and DMA units. This design unifies software semantics and hardware scheduling, enabling cross-operator and cross-iteration parallelism beyond static approaches. Across ResNet50, BERT, GPT-J, and LLaMA2, our work achieves 1.52-1.92× speedups over the baseline, delivering 1.14-1.63× additional improvement over strong static tile-level pipeline scheduling; on FlashAttention-3 (head dim 128), it improves hardware utilization by 26.4% versus the state-of-the-art H100 implementation. Ablation studies further show that semantics preservation alone yields $1.2 \\times$ gains, confirming the independent value of restoring scheduling information to runtime.",
+        "identifiers": [
+          "SemanticScholar:2700eb792bfdeeee75f494260fbc581656d69006"
+        ],
+        "semantic_scholar_id": "2700eb792bfdeeee75f494260fbc581656d69006",
+        "doi": "10.1109/ISCA66397.2026.00174",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00174",
+        "authors": [
+          "Guanghui Song",
+          "Xiaoqiang Dan",
+          "Chengke Wang",
+          "Fei Liu",
+          "Wen-Yuan Lv",
+          "Zhongzhou Jiang",
+          "Jian-Jian Guan",
+          "Teng Lu",
+          "Lin Tao",
+          "Cheng Li",
+          "Weixing Pan",
+          "Wei Huang",
+          "Zirong Shen",
+          "Yi Yang",
+          "Hui Liu",
+          "Jie Zhao"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 162,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.10030",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.10030",
+        "id:SemanticScholar:b0e3beb2db225170a5c2fda79710e5d20238195d",
+        "id:arXiv:2603.10030",
+        "title:the dma streaming framework kernellevel buffer orchestration for highperformance ai data paths",
+        "url:https://arxiv.org/abs/2603.10030"
+      ],
+      "record": {
+        "title": "The DMA Streaming Framework: Kernel-Level Buffer Orchestration for High-Performance AI Data Paths",
+        "source_url": "https://arxiv.org/abs/2603.10030",
+        "year": 2026,
+        "published": "2026-02-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "AI transport libraries move bytes efficiently, but they commonly assume that buffers are already correctly allocated, placed, shared, registered, and safe under completion and teardown pressure. This paper presents dmaplane, a Linux kernel module that makes this missing layer explicit as buffer orchestration. dmaplane exposes a stable kernel UAPI via /dev/dmaplane and composes ring-based command channels, DMA buffer lifecycle management, dma-buf export for cross-device sharing, a kernel-space RDMA engine, NUMA-aware allocation and verification, credit-based flow control, low-overhead observability, and GPU memory integration via PCIe BAR pinning. We evaluate orchestration sensitivity with measurements of NUMA cross-node penalties at DRAM scale, completion-safe flow control under sustained RDMA load, and GPU BAR mapping tiers versus cudaMemcpy. We also demonstrate end-to-end disaggregated inference by transferring KV-cache chunks between two machines using RDMA WRITE WITH IMMEDIATE and reconstructing tensor views on the receiver. RDMA measurements use Soft-RoCE; we distinguish measured results from provider-independent properties by construction.",
+        "identifiers": [
+          "SemanticScholar:b0e3beb2db225170a5c2fda79710e5d20238195d"
+        ],
+        "semantic_scholar_id": "b0e3beb2db225170a5c2fda79710e5d20238195d",
+        "canonical_id": "arXiv:2603.10030",
+        "arxiv_id": "2603.10030",
+        "doi": "10.48550/arXiv.2603.10030",
+        "authors": [
+          "Marco Graziano"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 257,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.19232",
+      "identity_tokens": [
+        "id:SemanticScholar:14fa858cdba951990cda677861a341af8d39dab7",
+        "id:arXiv:2610.19232",
+        "title:spectralmoe heterogeneous perlayer expert utilization in densetomoe conversion",
+        "url:https://arxiv.org/abs/2610.19232"
+      ],
+      "record": {
+        "title": "Spectral-MoE: Heterogeneous Per-Layer Expert Utilization in Dense-to-MoE Conversion",
+        "source_url": "https://arxiv.org/abs/2610.19232",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models impose substantial memory demands and arithmetic costs during inference. Dense-to-mixture-of-experts (MoE) conversion is a model optimization technique that aims to reduce these arithmetic costs. Dense-to-MoE conversion partitions pretrained feed-forward network (FFN) neurons into experts and selects a subset for each token. Leading methods fall into two categories: analytic methods produce a converted model quickly using heuristics, while learning methods produce a model much more slowly by optimizing via gradients. Both approaches, however, fix the same active expert count, or\"utilization,\"at every layer. We introduce Spectral-MoE, which learns to allocate a utilization budget heterogeneously across layers. Its name draws a metaphor between separating a dense FFN into experts and separating a light beam into its spectrum. Spectral-MoE consists of two distinct approaches: a static approach that uses a single per-layer scalar which is shared across tokens, and a dynamic approach which emits a per-token schedule. We demonstrate that both allocators improve performance over uniform on both the analytic-based and learning-based SOTA dense-to-MoE methods. At 25% FFN utilization, dynamic allocation reduces WikiText-2 perplexity relative to uniform by 1.04, 2.96, and 2.71 points on the learned base for Llama-2-7B, Llama-3-8B, and Qwen2.5-7B, respectively. The corresponding reductions on the analytic base are 2.45, 6.26, and 2.17 points. On the learned base, dynamic allocation improves six-task mean accuracy over uniform by an average of 1.5, 4.2, and 3.6 percentage points across the three models at FFN utilizations of 12.5%, 25%, and 50%, respectively. These results establish per-layer expert utilization as a novel optimization axis in dense-to-MoE conversion.",
+        "identifiers": [
+          "SemanticScholar:14fa858cdba951990cda677861a341af8d39dab7"
+        ],
+        "semantic_scholar_id": "14fa858cdba951990cda677861a341af8d39dab7",
+        "canonical_id": "arXiv:2610.19232",
+        "arxiv_id": "2610.19232",
+        "authors": [
+          "Zachary Broveak",
+          "Christian Kubicka",
+          "Thierry Tambe"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.13938",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.13938",
+        "id:SemanticScholar:29573bcc2a626793ef97d39352c83af4aa7d83bd",
+        "id:arXiv:2405.13938",
+        "title:exmy a data type and technique for arbitrary bit precision quantization",
+        "url:https://arxiv.org/abs/2405.13938"
+      ],
+      "record": {
+        "title": "eXmY: A Data Type and Technique for Arbitrary Bit Precision Quantization",
+        "source_url": "https://arxiv.org/abs/2405.13938",
+        "year": 2024,
+        "published": "2024-05-22",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "eXmY is a novel data type for quantization of ML models. It supports both arbitrary bit widths and arbitrary integer and floating point formats. For example, it seamlessly supports 3, 5, 6, 7, 9 bit formats. For a specific bit width, say 7, it defines all possible formats e.g. e0m6, e1m5, e2m4, e3m3, e4m2, e5m1 and e6m0. For non-power of two bit widths e.g. 5, 6, 7, we created a novel encoding and decoding scheme which achieves perfect compression, byte addressability and is amenable to sharding and vector processing. We implemented libraries for emulation, encoding and decoding tensors and checkpoints in C++, TensorFlow, JAX and PAX. For optimal performance, the codecs use SIMD instructions on CPUs and vector instructions on TPUs and GPUs. eXmY is also a technique and exploits the statistical distribution of exponents in tensors. It can be used to quantize weights, static and dynamic activations, gradients, master weights and optimizer state. It can reduce memory (CPU DRAM and accelerator HBM), network and disk storage and transfers. It can increase multi tenancy and accelerate compute. eXmY has been deployed in production for almost 2 years.",
+        "identifiers": [
+          "SemanticScholar:29573bcc2a626793ef97d39352c83af4aa7d83bd"
+        ],
+        "semantic_scholar_id": "29573bcc2a626793ef97d39352c83af4aa7d83bd",
+        "canonical_id": "arXiv:2405.13938",
+        "arxiv_id": "2405.13938",
+        "doi": "10.48550/arXiv.2405.13938",
+        "authors": [
+          "Aditya Agrawal",
+          "Matthew Hedlund",
+          "Blake A. Hechtman"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 902,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iscas56072.2025.11043916",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas56072.2025.11043916",
+        "id:SemanticScholar:775173468308aa53dc154a46b0f7d938b36a86de",
+        "title:xnc xor and notbased lossless compression for optimizing unquantized embedding layers in large language models",
+        "url:https://doi.org/10.1109/ISCAS56072.2025.11043916"
+      ],
+      "record": {
+        "title": "XNC: XOR and NOT-Based Lossless Compression for Optimizing Unquantized Embedding Layers in Large Language Models",
+        "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043916",
+        "year": 2025,
+        "published": "2025-05-25",
+        "venue": "International Symposium on Circuits and Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Although 4-bit quantized small LLMs have been proposed recently, many studies have retained FP16 precision for embedding layers, as they constitute a relatively small proportion of the overall model in existing LLMs and suffer from severe accuracy degradation when quantized. However, in quantized small LLMs, the embedding layer accounts for a substantial proportion of the total model parameters, necessitating its compression. Since embedding layers are sensitive to approximation, lossless compression is more desirable than lossy compression methods such as quantization. While existing lossless compression methods efficiently compress patterns such as zeros, narrow values, or frequently occurring values, embedding layers typically lack these patterns, making effective compression more challenging. In this paper, we propose XOR and NOT-based lossless compression (XNC), which applies XOR operations between adjacent 16-bit blocks and then performs a NOT operation on the result, effectively truncating the upper and lower bits to compress the embedding layer to 9-bit without any loss. The proposed method leverages XOR and NOT operations, enabling easy hardware implementation, with only four cycles required for compression and three cycles for decompression, ensuring efficient data compression without performance degradation. As a result, the proposed compression technique achieves an average compression ratio of 1.34× for the embedding layers of small LLMs without any loss, effectively reducing the model size of 4-bit quantized LLMs by an average of 9.91%. The code is available at https://github.com/IDSL-SeoulTech/XNC.",
+        "identifiers": [
+          "SemanticScholar:775173468308aa53dc154a46b0f7d938b36a86de"
+        ],
+        "semantic_scholar_id": "775173468308aa53dc154a46b0f7d938b36a86de",
+        "doi": "10.1109/ISCAS56072.2025.11043916",
+        "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043916",
+        "authors": [
+          "Junghyeok Lee",
+          "Jihoon Jang",
+          "H. Kim"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 534,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7888021b6b8793893c14d4dd86b78215f977616b2efeec2852690d4469d9942f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-64a86d8654550816-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2106.05022",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2106.05022",
+    "identity_tokens": [
+      "DOI:10.1145/3469116.3470012",
+      "arXiv:2106.05022"
+    ],
+    "reason": "入力難度に応じてruntime計算深度を変えるearly-exitを、設計・学習・deployment・hardware/SLOまで体系化しBERT系NLP事例も含むため推論効率技術として強く関連する。一方、対象はLLMではなくDNN全般なのでborderline。",
+    "first_checked_at": "2026-10-07T05:41:33+00:00",
+    "last_checked_at": "2026-10-07T05:41:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+      "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Inference through Early-Exit Networks: Design, Challenges and Directions"
+  },
+  "processed_at": "2026-10-07T05:41:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-64a86d865455",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

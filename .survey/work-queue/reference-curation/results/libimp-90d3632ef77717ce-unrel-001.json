@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-90d3632ef77717ce-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.19814",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.19814",
+    "identity_tokens": [
+      "arXiv:2606.19814"
+    ],
+    "reason": "VS Code上で類似例を検索してコミットメッセージを生成する開発支援アプリケーションが対象。生成LLMの実行効率化ではない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+    "first_checked_at": "2026-10-29T20:46:25+00:00",
+    "last_checked_at": "2026-10-29T20:46:25+00:00",
+    "linked_from": [],
+    "title": "CoRaCommit: A VS Code Extension for Commit Message Generation with Exemplar Retrieval"
+  },
+  "processed_at": "2026-10-29T20:46:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90d3632ef777",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

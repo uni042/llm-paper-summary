@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b180754aa406f0ed-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.07226",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.07226",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2311.07226",
+      "arXiv:2311.07226"
+    ],
+    "reason": "LLMをロボットのperception・planning・control・interactionへ利用する応用サーベイで、LLM推論システム効率化を主題としない。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md"
+    ],
+    "title": "Large Language Models for Robotics: A Survey"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b180754aa406",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

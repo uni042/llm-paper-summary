@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e576f74e8a251ce0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.19905",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.19905",
+    "identity_tokens": [
+      "arXiv:2512.19905"
+    ],
+    "reason": "一次要旨では、ベイズ線形回帰と報酬加重サンプリングを用い、best-of-k推論時選択の一般化誤差、報酬の誤指定、サンプル数k、温度の関係を理論解析する。kを増やすと誤差が悪化する条件を示すが、GPU実行、KVキャッシュ、推論サービング、スケジューリング等のシステム実装を最適化する研究ではない。推論時計算量の選択に隣接する理論研究として境界候補とする。",
+    "first_checked_at": "2026-10-11T13:06:23+00:00",
+    "last_checked_at": "2026-10-11T13:06:23+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Demystifying LLM-as-a-Judge: Analytically Tractable Model for Inference-Time Scaling"
+  },
+  "processed_at": "2026-10-11T13:06:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e576f74e8a25",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

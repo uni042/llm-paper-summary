@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58f3e13a338917ac-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.04406",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.04406",
+    "identity_tokens": [
+      "arXiv:2310.04406"
+    ],
+    "reason": "エージェント推論・計画アルゴリズムが主題で配信ランタイムや資源管理を扱わない。",
+    "first_checked_at": "2026-09-27T06:31:09+09:00",
+    "last_checked_at": "2026-09-30T09:50:51+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 322"
+    ],
+    "title": "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models"
+  },
+  "processed_at": "2026-09-30T09:50:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58f3e13a3389",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

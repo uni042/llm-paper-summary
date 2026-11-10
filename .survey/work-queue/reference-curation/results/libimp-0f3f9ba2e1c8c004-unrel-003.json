@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f3f9ba2e1c8c004-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/ojcoms.2026.3680064",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/ojcoms.2026.3680064",
+    "identity_tokens": [
+      "DOI:10.1109/ojcoms.2026.3680064"
+    ],
+    "reason": "LLMとIoT統合全般のsurveyで、要旨が扱うのはIoT上のLLM利用/課題全般。inference-serving efficiencyの焦点がない。",
+    "first_checked_at": "2026-10-05T14:58:26+00:00",
+    "last_checked_at": "2026-10-05T14:58:26+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+      "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
+      "papers/inference/16-weight-quantization-compression/2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md"
+    ],
+    "title": "LLMs and IoT: A Comprehensive Survey on Large Language Models and the Internet of Things"
+  },
+  "processed_at": "2026-10-05T14:58:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f3f9ba2e1c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-552b7a5558b1a1df-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.00081",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.00081",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2412.00081",
+      "arXiv:2412.00081"
+    ],
+    "reason": "微調整済みモデルの重み差分を層別に特異値分解し、タスク干渉を抑えながらモデル統合・タスクベクトル圧縮を行う研究。要旨の主たる目的は学習後のモデル統合精度と重み表現の縮小であり、LLM実行時の重み量子化、サービング速度、メモリ階層、推論カーネルの性能改善は評価対象ではない。",
+    "first_checked_at": "2026-10-20T11:55:37+00:00",
+    "last_checked_at": "2026-10-23T15:08:41+00:00",
+    "linked_from": [],
+    "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
+  },
+  "processed_at": "2026-10-23T15:08:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-552b7a5558b1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-843e649f4ddc8241-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.3724/j.issn.2097-4981.jecc-2025-0385",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.3724/j.issn.2097-4981.jecc-2025-0385",
+    "identity_tokens": [
+      "DOI:10.3724/j.issn.2097-4981.jecc-2025-0385"
+    ],
+    "reason": "Crossref confirms The Climate Impact Paradox of Artificial                         Intelligence: Literature Review and Research Prospects (publisher: China Science Publishing & Media Ltd.). Its primary abstract could not be read after registered-publisher retrieval: https://www.sciengine.com/doi/10.3724/j.issn.2097-4981.JECC-2025-0385 => HTTP 200 with empty response body. No mechanism beyond the confirmed bibliographic title is asserted.",
+    "first_checked_at": "2026-10-14T07:32:28+00:00",
+    "last_checked_at": "2026-10-14T07:32:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "The Climate Impact Paradox of Artificial                         Intelligence: Literature Review and Research Prospects"
+  },
+  "processed_at": "2026-10-14T07:32:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-843e649f4ddc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

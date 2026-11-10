@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-cdc4e698a8680ebc-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2512.09647",
+  "reason": "worklist rank159の題名『Structured Attention Fine-Tuning for Efficient LLM Inference』は指定arXiv番号の一次PDFと一致しない。実際の論文はFermilabの加速器タイミング制御・時計同期を扱う『Time Served』（Evan Miltonほか）でありLLMと無関係。worklist題名に引きずられてLLM論文としてResearchを作らず、実在するcanonical identityをunrelatedとして記録。",
+  "title": "Time Served",
+  "identity_tokens": [
+    "arxiv:2512.09647"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cdc4e698a868",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

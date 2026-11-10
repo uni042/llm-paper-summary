@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d6bf0cbd1347fc6f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.24695",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.24695",
+    "identity_tokens": [
+      "arXiv:2512.24695"
+    ],
+    "reason": "一次要旨はNested Learningによる学習/architectureの見方を扱い、LLM serving効率の具体的手法を提示しない。",
+    "first_checked_at": "2026-10-05T01:28:58+00:00",
+    "last_checked_at": "2026-10-05T01:28:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+      "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+    ],
+    "title": "Nested Learning: The Illusion of Deep Learning Architectures"
+  },
+  "processed_at": "2026-10-05T01:28:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d6bf0cbd1347",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

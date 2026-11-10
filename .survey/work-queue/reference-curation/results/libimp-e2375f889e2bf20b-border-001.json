@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2375f889e2bf20b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1093/bioinformatics/btag080",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1093/bioinformatics/btag080",
+    "identity_tokens": [
+      "DOI:10.1093/bioinformatics/btag080"
+    ],
+    "reason": "不規則時系列下のgene-expression dynamics学習でLLM推論との関係は薄そうだが、指定Oxford一次資料を取得できず要旨と手法を直接検証できない。",
+    "first_checked_at": "2026-10-06T21:12:56+00:00",
+    "last_checked_at": "2026-10-06T21:12:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "scMix: learning temporal dynamics of gene expression under irregular time intervals"
+  },
+  "processed_at": "2026-10-06T21:12:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2375f889e2b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

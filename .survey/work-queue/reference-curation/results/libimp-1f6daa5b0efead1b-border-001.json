@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f6daa5b0efead1b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2203.07814",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2203.07814",
+    "identity_tokens": [
+      "DOI:10.1126/science.abq1158",
+      "SemanticScholar:5cbe278b65a81602a864184bbca37de91448a5f5",
+      "arXiv:2203.07814"
+    ],
+    "reason": "原著の一次要旨は、競技プログラミングでの正答率を上げるための大規模なプログラム候補生成、実行挙動に基づくフィルタリング、学習データ整備を主要貢献とし、Codeforcesでの順位を評価する。推論時の多数候補サンプリングには計算資源上の関心があるが、GPUカーネル、サービング遅延、メモリ階層、バッチ処理、実行時オフロード等を高速化するシステム方式を一次要旨からは確認できない。能力向上が主眼のため即収録ではなく境界的と判断。",
+    "first_checked_at": "2026-10-12T13:50:16+00:00",
+    "last_checked_at": "2026-10-12T13:50:16+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Competition-Level Code Generation with AlphaCode"
+  },
+  "processed_at": "2026-10-12T13:50:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f6daa5b0efe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

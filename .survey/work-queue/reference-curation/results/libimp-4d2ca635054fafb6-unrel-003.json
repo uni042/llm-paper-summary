@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4d2ca635054fafb6-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2109.05472",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2109.05472",
+    "identity_tokens": [
+      "arXiv:2109.05472"
+    ],
+    "reason": "コンピュータビジョンと自然言語処理を横断して深層学習推論の計算量・エネルギー消費の歴史的傾向を分析する研究で、LLM固有の推論方式・ランタイム最適化を提案しない。",
+    "first_checked_at": "2026-10-03T17:50:29+00:00",
+    "last_checked_at": "2026-10-04T02:16:19+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "worker-worklist-30"
+    ],
+    "title": "Compute and Energy Consumption Trends in Deep Learning Inference"
+  },
+  "processed_at": "2026-10-04T02:16:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4d2ca635054f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

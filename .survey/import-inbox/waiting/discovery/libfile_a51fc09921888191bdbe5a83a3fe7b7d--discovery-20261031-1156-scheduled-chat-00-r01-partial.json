@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1156-scheduled-chat-00/r01",
+  "reference_main_sha": "0f677ce8c8966dc4dc0d34dad600dd17d02be247",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/DAC56929.2023.10247993",
+      "identity_tokens": [
+        "DOI:10.1109/DAC56929.2023.10247993"
+      ],
+      "title": "Efficient Transformer Inference with Statically Structured Sparse Attention",
+      "reason": "NVIDIA Researchの著者公開一次要旨によると、注意行列を密な領域に分割する静的・構造化疎マスクで不要な注意演算を省き、エントロピーを意識した微調整と専用アクセラレータ拡張を組み合わせる。密な基準比でエネルギー56.6%減、性能58.9%向上、精度低下1%未満、面積増2.6%を報告。Transformer推論の演算・ハードウェア効率へ直接寄与するためaccept。生成LLM単体での評価は要旨から断定しない。",
+      "source_url": "https://doi.org/10.1109/DAC56929.2023.10247993",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T12:01:42+09:00",
+      "last_checked_at": "2026-10-31T12:01:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 321,
+      "primary_abstract_url": "https://research.nvidia.com/publication/2023-07_efficient-transformer-inference-statically-structured-sparse-attention"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.18627",
+      "identity_tokens": [
+        "arXiv:2502.18627",
+        "DOI:10.48550/arXiv.2502.18627"
+      ],
+      "title": "PacQ: A SIMT Microarchitecture for Efficient Dataflow in Hyper-asymmetric GEMMs",
+      "reason": "arXiv一次要旨で、weight-only量子化の低ビット整数重みと高精度浮動小数点活性のGEMMにおける展開・逆量子化の負担を特定。PacQはタイル単位の重みパッキングとデータフロー、複数整数重みを並列処理するFP-INT乗算器をSIMTマイクロアーキテクチャへ統合する。従来SIMTのweight-only量子化LLM負荷に対し最大1.99倍高速、EDP 81.4%減を報告し、推論ハードウェアへの直接的貢献がある。",
+      "source_url": "https://arxiv.org/abs/2502.18627",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T12:01:42+09:00",
+      "last_checked_at": "2026-10-31T12:01:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 351
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.20913",
+      "identity_tokens": [
+        "arXiv:2602.20913",
+        "DOI:10.48550/arXiv.2602.20913"
+      ],
+      "title": "LongVideo-R1: Smart Navigation for Low-cost Long Video Understanding",
+      "reason": "arXiv v2一次要旨では、長時間動画を全探索せず階層的な視覚要約から有益なクリップへ移動し、質問回答に十分な証拠が得られた時点で探索を停止する推論時ナビゲーションを提案。Qwen-3-8BをSFTとRLで適応し、動画QAの精度と計算費用のトレードオフを評価。汎用サービングではなく動画MLLM固有だが、実行時に処理クリップ数を抑える具体的な推論効率化機構があるためaccept。",
+      "source_url": "https://arxiv.org/abs/2602.20913",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T12:01:42+09:00",
+      "last_checked_at": "2026-10-31T12:01:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 500
+    }
+  ]
+}

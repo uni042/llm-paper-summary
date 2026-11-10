@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d437230d040ca895-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.07278",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.07278",
+    "identity_tokens": [
+      "arXiv:2501.07278"
+    ],
+    "reason": "Survey of lifelong learning in LLM-based agents, focused on continual learning and task performance rather than inference efficiency.",
+    "first_checked_at": "2026-10-05T12:21:59+00:00",
+    "last_checked_at": "2026-10-05T12:21:59+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+    ],
+    "title": "Lifelong Learning of Large Language Model Based Agents: A Roadmap"
+  },
+  "processed_at": "2026-10-05T12:21:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d437230d040c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

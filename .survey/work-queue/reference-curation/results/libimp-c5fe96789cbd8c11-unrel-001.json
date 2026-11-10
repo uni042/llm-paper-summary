@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5fe96789cbd8c11-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1365/s40702-026-01283-y",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1365/s40702-026-01283-y",
+    "identity_tokens": [
+      "DOI:10.1365/s40702-026-01283-y"
+    ],
+    "reason": "Conceptual agentic public-transit passenger-information framework; application architecture, not inference optimization.",
+    "first_checked_at": "2026-10-05T12:21:58+00:00",
+    "last_checked_at": "2026-10-05T12:21:58+00:00",
+    "linked_from": [
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "Agentenbasierte Fahrgastinformationssysteme für den ÖPNV"
+  },
+  "processed_at": "2026-10-05T12:21:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5fe96789cbd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

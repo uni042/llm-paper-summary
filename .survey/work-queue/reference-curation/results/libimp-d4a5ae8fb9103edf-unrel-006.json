@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d4a5ae8fb9103edf-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2304.12244",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2304.12244",
+    "identity_tokens": [
+      "arXiv:2304.12244"
+    ],
+    "reason": "Evol-Instructで複雑なinstruction dataを生成しLLaMAをfine-tuneしてinstruction-following能力を改善する学習/data生成研究。推論runtimeやserving効率化は対象外。",
+    "first_checked_at": "2026-10-04T17:56:13+00:00",
+    "last_checked_at": "2026-10-04T17:56:13+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.06262-on-the-efficacy-of-eviction-policy-for-key-value-constrained-generative-language-model-inference.md"
+    ],
+    "title": "WizardLM: Empowering Large Pre-Trained Language Models to Follow Complex Instructions"
+  },
+  "processed_at": "2026-10-04T17:56:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d4a5ae8fb910",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

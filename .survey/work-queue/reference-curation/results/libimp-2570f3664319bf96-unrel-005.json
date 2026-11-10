@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2570f3664319bf96-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.09045",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.09045",
+    "identity_tokens": [
+      "arXiv:2506.09045"
+    ],
+    "reason": "Video diffusion generation acceleration, not LLM inference.",
+    "first_checked_at": "2026-10-05T12:56:01+00:00",
+    "last_checked_at": "2026-10-05T12:56:01+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2508.16703-shadownpu-system-and-algorithm-co-design-for-npu-centric-on-device-llm-i.md"
+    ],
+    "title": "MagCache: Fast Video Generation with Magnitude-Aware Cache"
+  },
+  "processed_at": "2026-10-05T12:56:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2570f3664319",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

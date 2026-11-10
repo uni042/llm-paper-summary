@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Coarse Semantic Blocks for Efficient Training-Free Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2611.04313",
+      "year": 2026,
+      "published": "2026-11-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce a training-free sparse attention method that builds a prompt-specific key index to accelerate both prefill and decoding. The method clusters the keys into large semantic blocks that group tokens from noncontiguous positions. Each query position selects blocks by scoring their centroids and attends to the original keys and values within them. Queries that select the same block are processed together, so prefill stays fast even though each query chooses its own blocks. Large blocks make centroid scoring and this grouped processing cheap, so each query can attend to more tokens in the same time. Larger blocks with a larger token budget can thus be both faster and more accurate on long-context tasks than smaller blocks with a smaller budget. We evaluate two hybrid LLMs, Qwen3.5-4B and 35B-A3B, on one NVIDIA H200. Including the cost of building and using the index, whole-model wall-clock speedups over dense attention are 2.3-2.4x for prefill and 1.7-2.0x for decoding at 512K tokens, and 2.9-3.0x for prefill at 1M. The 35B-A3B model stays close to dense attention on five RULER tasks through 1M, on LongBench-v2 overall, and on MRCR through 256K. The 4B model loses accuracy mainly on multi-key retrieval, yet outperforms dense Qwen3.5-2B, whose latency is similar at 512K, on all three benchmarks.",
+      "identifiers": [
+        "SemanticScholar:4b9af297887004320d214444dcd90522d507e068"
+      ],
+      "semantic_scholar_id": "4b9af297887004320d214444dcd90522d507e068",
+      "canonical_id": "arXiv:2611.04313",
+      "arxiv_id": "2611.04313",
+      "authors": [
+        "Sosuke Kobayashi",
+        "Shoichiro Yamaguchi",
+        "Seiya Tokui"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      },
+      "reason": "非連続キーを意味的ブロックへクラスタ化し、重心により問い合わせごとの参照ブロックを選択する学習不要の疎注意。H200上のQwen3.5系列で512K時のprefill 2.3～2.4倍、decode 1.7～2.0倍という著者報告があり推論機構へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm",
+      "source_url": "https://arxiv.org/abs/2504.03717",
+      "year": 2025,
+      "published": "2025-03-29",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training Quantization (PTQ) has become a widely used technique for improving inference efficiency of large language models (LLMs). However, existing PTQ methods generally suffer from crucial limitations such as heavy calibration data requirements and inflexible choice of target number of bits. In this paper, we propose RaanA, a unified PTQ framework that overcomes these challenges by introducing two novel components: 1) RaBitQ-H, a variant of a randomized vector quantization method RaBitQ, designed for fast, accurate, and highly efficient quantization; and 2) AllocateBits, an algorithm that optimally allocates bit-widths across layers based on their quantization sensitivity. RaanA achieves competitive performance with state-of-the-art quantization methods while being extremely fast, requiring minimal calibration data, and enabling flexible bit allocation. Extensive experiments demonstrate RaanA's efficacy in balancing efficiency and accuracy. The code is publicly available at https://github.com/FFTYYY/RaanA .",
+      "identifiers": [
+        "SemanticScholar:89b9a9af122c7400e3fc9c9807c5576f10b9906c"
+      ],
+      "semantic_scholar_id": "89b9a9af122c7400e3fc9c9807c5576f10b9906c",
+      "canonical_id": "arXiv:2504.03717",
+      "arxiv_id": "2504.03717",
+      "doi": "10.48550/arXiv.2504.03717",
+      "authors": [
+        "Yong-Yi Yang",
+        "Jian-Yang Gao",
+        "Wei Hu"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 589,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RaBitQ由来の高速ベクトル量子化RaBitQ-Hと、層ごとの感度に基づくAllocateBitsのビット幅配分を統合する。少量校正データで可変ビット幅のLLM学習後量子化を行い、推論メモリと精度の両立を狙う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SalQ-VLM: Fine-Grained Saliency-Guided Quantization for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2508.03351",
+      "year": 2025,
+      "published": "2025-08-05",
+      "venue": null,
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities across diverse language tasks, motivating their extension to vision-language models (VLMs) for multimodal understanding. However, billion-parameter VLMs incur substantial memory and computational costs that hinder deployment in resource-constrained settings. Post-training quantization (PTQ) compresses models and accelerates inference without retraining, yet remains underexplored for VLMs. We identify two intrinsic VLM activation properties in PTQ: (1) visual over-representation, where vision tokens are excessive and often redundant, and (2) the modality gap separating text and vision tokens in the latent feature space. Prior methods largely overlook these properties, leading to quantization performance degradation. To address this mismatch, we propose SalQ-VLM, an importance-aware PTQ framework that prioritizes salient tokens and suppresses redundant vision tokens during calibration. We derive a gradient-driven importance factor that captures token-level importance variance and is theoretically grounded in the relationship among loss perturbation, activation errors, and output gradients. SalQ-VLM obtains this factor through a single lightweight block-wise gradient-caching pass and incorporates it into the layer-wise reconstruction objective. Because SalQ-VLM modifies only calibration, it adds no inference-time operations and remains compatible with existing high-performance kernels. Extensive evaluations across benchmarks and backbones show that SalQ-VLM consistently outperforms strong PTQ baselines, especially under ultra-low-bit quantization. Notably, it improves MME-RealWorld accuracy by 16.45% under INT2g128 quantization.",
+      "identifiers": [
+        "SemanticScholar:c456823b66367c9219c20c603fcf434bb6ca5f99"
+      ],
+      "semantic_scholar_id": "c456823b66367c9219c20c603fcf434bb6ca5f99",
+      "canonical_id": "arXiv:2508.03351",
+      "arxiv_id": "2508.03351",
+      "authors": [
+        "Yu-Fei Xue",
+        "Yu-Shi Huang",
+        "Lu Zhu",
+        "Jia-Wei Shao",
+        "Jun Zhang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 460,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚トークン冗長性とテキスト・視覚の表現差を考慮し、勾配由来の重要度を校正時の層別再構成へ導入するVLMの学習後量子化。推論時の追加演算なしに低ビット化精度を改善する圧縮技術である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-876c3ddc2108",
+    "round": "libimp-876c3ddc2108db65-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-876c3ddc2108db65-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-876c3ddc2108db65-pre01.json",
+    "receipt": "sha256:f48283e94916f82fc245d13e4ed8a1b31ef3490e4967b8931357cc315e1250a2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-876c3ddc2108",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

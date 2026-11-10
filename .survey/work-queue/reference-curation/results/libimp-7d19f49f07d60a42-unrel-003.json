@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d19f49f07d60a42-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.13883",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.13883",
+    "identity_tokens": [
+      "arXiv:2608.13883"
+    ],
+    "reason": "agent memory backendのマルチセッション成功率比較で、要旨自身がcost-matchedでないsystem comparisonと明記し、inference cost/efficiencyを測定していない。",
+    "first_checked_at": "2026-10-05T08:33:05+00:00",
+    "last_checked_at": "2026-10-05T08:33:05+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "MemoryLake on MemoryArena: A Matched Study of Agent Memory Backends"
+  },
+  "processed_at": "2026-10-05T08:33:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d19f49f07d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

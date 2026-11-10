@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-78e18b106b764f4c-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1093/nsr/nwaf039",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1093/nsr/nwaf039",
+    "identity_tokens": [
+      "DOI:10.1093/nsr/nwaf039",
+      "SemanticScholar:30cf9fe12911040804032a2a6dce00b54a1860fc"
+    ],
+    "reason": "A clinical glucose-monitoring transformer and its downstream predictive tasks are the focus; no model serving or resource-efficiency contribution is claimed.",
+    "first_checked_at": "2026-10-13T01:58:20+00:00",
+    "last_checked_at": "2026-10-13T01:58:20+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "A pretrained transformer model for decoding individual glucose dynamics from continuous glucose monitoring data"
+  },
+  "processed_at": "2026-10-13T01:58:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78e18b106b76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

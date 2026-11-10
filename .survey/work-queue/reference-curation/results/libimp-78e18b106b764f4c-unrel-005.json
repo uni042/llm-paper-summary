@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-78e18b106b764f4c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.21072",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.21072",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2505.21072",
+      "SemanticScholar:e50ef82f320bf6172619b6a09f4099a77edd451e",
+      "arXiv:2505.21072"
+    ],
+    "reason": "The paper contributes uncertainty estimation and hallucination detection for RAG quality; it reports no systems-efficiency improvement.",
+    "first_checked_at": "2026-10-13T01:58:19+00:00",
+    "last_checked_at": "2026-10-13T01:58:19+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+    ],
+    "title": "Faithfulness-Aware Uncertainty Quantification for Fact-Checking the Output of Retrieval Augmented Generation"
+  },
+  "processed_at": "2026-10-13T01:58:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78e18b106b76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

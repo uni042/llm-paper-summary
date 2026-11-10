@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d63b746a59721ee1-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.13668",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.13668",
+    "identity_tokens": [
+      "arXiv:2608.13668"
+    ],
+    "reason": "Linear attention keeps a state of fixed size. At long context, many stored items share this state, and interference between them degrades retrieval. Gated DeltaNet-2 (GDN-2), like every delta-rule model before it, derives its erase vector from the key of the current token. However, the interference in its reads is measured through the query, and the erase step cannot reach it. We introduce the Query-derived Erase Direction (QED). QED adds a second erase direction derived from the query and orthogonal to the key. In the fast-weight view, a key-directed delta edit cannot change the key-orthogonal part of a read. It uses the editable part to cancel old-state content measured along the query. It also improves retrieval at every length past the training window, and it about doubles the usable context length on S-NIAH-1.",
+    "first_checked_at": "2026-10-05T08:35:29+00:00",
+    "last_checked_at": "2026-10-05T08:35:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "The Query Knows What to Forget: A Second Erase Direction for Linear Attention"
+  },
+  "processed_at": "2026-10-05T08:35:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d63b746a5972",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

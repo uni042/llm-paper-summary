@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a6f757add2f618a9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2110.02037",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2110.02037",
+    "identity_tokens": [
+      "arXiv:2110.02037"
+    ],
+    "reason": "order-agnostic autoregressive/discrete diffusionを統合し、test timeにgeneration budgetへ合わせて並列生成step数を調整できる。text8で1000-step discrete diffusion相当を250 stepで達成するが、汎用離散生成modelが主対象で現代LLM serving/runtimeの直接評価ではないためborderline。",
+    "first_checked_at": "2026-10-05T16:03:30+00:00",
+    "last_checked_at": "2026-10-05T16:12:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+      "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Autoregressive Diffusion Models"
+  },
+  "processed_at": "2026-10-05T16:12:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a6f757add2f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

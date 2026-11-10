@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5eb52588c914c56e-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.10597",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.10597",
+    "identity_tokens": [
+      "arXiv:2604.10597"
+    ],
+    "reason": "arXiv本文はMamba-1.x selective-scan inferenceでruntime entropyによるchunk scheduleを検討し、serving workloadを評価する。測定結果ではentropy-adaptive variantsはいずれも最良static chunkを上回らず、fallbackでもstatic oracleより遅いと明記される。直接のinference-systems関連はあるが、改善として残せる実証結果がなく、弱い有効性のためborderline。",
+    "first_checked_at": "2026-10-06T20:51:07+00:00",
+    "last_checked_at": "2026-10-06T20:51:07+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "COREY: Entropy-Guided Runtime Chunk Scheduling for Selective Scan Kernels"
+  },
+  "processed_at": "2026-10-06T20:51:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5eb52588c914",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

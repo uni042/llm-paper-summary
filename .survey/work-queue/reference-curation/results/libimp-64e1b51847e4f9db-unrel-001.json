@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-64e1b51847e4f9db-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.17566",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.17566",
+    "identity_tokens": [
+      "arXiv:2606.17566"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.17566. Abstract summary: Video diffusion has quickly grown into a key generative serving workload, yet producing each clip demands many denoising iterations over large spatio-temporal latents, which puts low-latency inference out of reach on a single device. A denoising step is therefore typically distributed across multiple accelerators, and TPU sub-sl Out of scope: Video-diffusion TPU denoising optimizer, outside LLM inference.",
+    "first_checked_at": "2026-10-05T12:02:44+00:00",
+    "last_checked_at": "2026-10-05T12:02:44+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+    ],
+    "title": "AoiZora: Topology-Aware Auto-Parallel Optimization for Inference of Diffusion Transformers"
+  },
+  "processed_at": "2026-10-05T12:02:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-64e1b51847e4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

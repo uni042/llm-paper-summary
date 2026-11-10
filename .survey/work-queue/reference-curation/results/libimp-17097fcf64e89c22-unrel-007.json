@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17097fcf64e89c22-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.01653",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.01653",
+    "identity_tokens": [
+      "SemanticScholar:b0477479a155ab52f205228e6dac2feaec9702e6",
+      "arXiv:2608.01653",
+      "b0477479a155ab52f205228e6dac2feaec9702e6"
+    ],
+    "reason": "Quantizes models for learned image coding, an adjacent application outside LLM inference.",
+    "first_checked_at": "2026-10-05T09:11:22+00:00",
+    "last_checked_at": "2026-10-14T13:11:23+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "Hadamard-Domain Model Quantization for Learned Image Coding"
+  },
+  "processed_at": "2026-10-14T13:11:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17097fcf64e8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

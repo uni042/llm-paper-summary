@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-df09b1d3b79527ac-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1207.0580",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1207.0580",
+    "identity_tokens": [
+      "arXiv:1207.0580"
+    ],
+    "reason": "学習時にfeature detectorをランダムに省くdropoutで過学習と共適応を抑える学習正則化研究で、LLM推論実行系の効率化を扱わない。",
+    "first_checked_at": "2026-10-04T14:28:32+00:00",
+    "last_checked_at": "2026-10-04T14:28:32+00:00",
+    "linked_from": [],
+    "title": "Improving neural networks by preventing co-adaptation of feature detectors"
+  },
+  "processed_at": "2026-10-04T14:28:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df09b1d3b795",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d44e82ef68dcff6b-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.18969",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.18969",
+    "identity_tokens": [
+      "arXiv:2502.18969"
+    ],
+    "reason": "The survey reviews scaling-law methodology for foundation-model training decisions and reproducibility; it is linked to an inference-scaling paper but does not itself study inference-cost optimization in the reviewed text.",
+    "first_checked_at": "2026-10-06T08:00:03+00:00",
+    "last_checked_at": "2026-10-06T08:00:03+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "(Mis)Fitting: A Survey of Scaling Laws"
+  },
+  "processed_at": "2026-10-06T08:00:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d44e82ef68dc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29b2b030dcf4610d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.05511",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.05511",
+    "identity_tokens": [
+      "DOI:10.1109/cvpr52729.2023.00976",
+      "arXiv:2303.05511",
+      "id:arXiv:2303.05511",
+      "url:https://arxiv.org/abs/2303.05511"
+    ],
+    "reason": "GigaGANはStyleGANを大規模画像・文章対画像生成に拡張する生成器・識別器の設計研究で、要旨の0.13秒/512pxは画像生成モデルの推論速度である。LLMのトークン復号、KVキャッシュ、MoE、サービング基盤の機構を提案していないため対象外。",
+    "first_checked_at": "2026-10-11T08:49:39+00:00",
+    "last_checked_at": "2026-10-14T16:43:37+00:00",
+    "linked_from": [],
+    "title": "Scaling up GANs for Text-to-Image Synthesis"
+  },
+  "processed_at": "2026-10-14T16:43:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29b2b030dcf4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

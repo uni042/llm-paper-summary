@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7c763d4c5e2fafe-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.00081",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.00081",
+    "identity_tokens": [
+      "arXiv:2412.00081",
+      "id:arXiv:2412.00081",
+      "url:https://arxiv.org/abs/2412.00081"
+    ],
+    "reason": "一次要旨では、タスク別モデル差分の層行列を特異値分解し、特異ベクトルの干渉を測って複数タスクのモデル統合を改善する。TSV-Compressは差分表現を元の10%へ縮小して99%の精度を保持すると報告するが、目的はモデル統合時の干渉低減と差分圧縮であり、実行時LLM推論の速度・KVメモリ・サービング効率を検証する研究ではない。",
+    "first_checked_at": "2026-10-13T10:44:17+00:00",
+    "last_checked_at": "2026-10-13T10:44:17+00:00",
+    "linked_from": [],
+    "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
+  },
+  "processed_at": "2026-10-13T10:44:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7c763d4c5e2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

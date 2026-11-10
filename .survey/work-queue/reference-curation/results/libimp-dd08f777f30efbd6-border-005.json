@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd08f777f30efbd6-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.16508",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.16508",
+    "identity_tokens": [
+      "arXiv:2505.16508"
+    ],
+    "reason": "platform-level benchmarking/design insightsが主で、新規の推論最適化手法や再利用可能systemを提示しない。",
+    "first_checked_at": "2026-10-05T14:42:32+00:00",
+    "last_checked_at": "2026-10-05T14:42:32+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Edge-First Language Model Inference: Models, Metrics, and Tradeoffs"
+  },
+  "processed_at": "2026-10-05T14:42:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd08f777f30e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

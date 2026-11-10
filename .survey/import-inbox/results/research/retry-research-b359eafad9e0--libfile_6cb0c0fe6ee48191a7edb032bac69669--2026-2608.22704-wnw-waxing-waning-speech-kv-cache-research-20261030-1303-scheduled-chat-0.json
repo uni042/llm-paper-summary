@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "76a41a45912ee14101700ce8e020894fc2cc72ac757a4e9f7910143b0c276845",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b359eafad9e0--libfile_6cb0c0fe6ee48191a7edb032bac69669--2026-2608.22704-wnw-waxing-waning-speech-kv-cache-research-20261030-1303-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2608.22704",
+  "worker_completed_at": "2026-10-30T13:03:00+09:00",
+  "worker_run_key": "20261030-1303-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5552,
+    "body_paragraphs": 31,
+    "method_chars": 1305,
+    "method_paragraphs": 8,
+    "evaluation_chars": 175,
+    "limitation_chars": 526,
+    "insufficiency_flags": [
+      "評価説明量 175 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 175 < 500",
+    "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2608.22704-wnw-waxing-and-waning-kv-cache-for-long-form-speech-llms.md と 13 段落 / 2769文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-30T09:39:38+00:00"
+}

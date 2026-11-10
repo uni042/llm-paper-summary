@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8dc4ffa6d125a2f2-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.27229",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.27229",
+    "identity_tokens": [
+      "arXiv:2606.27229"
+    ],
+    "reason": "Primary abstract reviewed: Recurrent delta-rule models keep a fixed-size state matrix S (d_v x d_k) that compresses all past context. The state of the art (GDN-2) gates this update with element-wise matrix erase/write masks. This is powerful but has two defects. First, both gates are computed from the incoming token alone, making the model memory-blind: it decides what to erase without seeing what it has stored. Second, value-axis coupling in … Out of scope: CARVE abstract reports training speed only, not inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T11:44:26+00:00",
+    "last_checked_at": "2026-10-05T11:44:26+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "CARVE: Content-Aware Recurrent with Value Efficiency for Chunk-Parallel Linear Attention"
+  },
+  "processed_at": "2026-10-05T11:44:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8dc4ffa6d125",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

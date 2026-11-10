@@ -1,0 +1,822 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-9872e6112fa62de5-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-9872e6112fa6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2006.04862",
+    "arXiv:2506.10967",
+    "arXiv:2511.07396",
+    "arXiv:2511.18793",
+    "arXiv:2511.21103",
+    "arXiv:2602.08024",
+    "arXiv:2602.23699",
+    "arXiv:2605.27365"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2bf41a5a157f35e07d37f57a3b1988bf6095542d",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T19:28:34.739958+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2006.04862",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.10967",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.07396",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.18793",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.21103",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.08024",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.23699",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.27365",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding",
+      "source_url": "https://arxiv.org/abs/2605.27365",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) commonly formulate visual grounding and detection as a coordinate-token generation problem, serializing each 2D box into multiple 1D tokens that are learned and decoded largely independently. This token-by-token decoding mismatches the coupled structure of box geometry and creates a practical inference bottleneck due to strictly sequential generation. We introduce LocateAnything, a unified generative grounding and detection framework based on Parallel Box Decoding (PBD). By decoding geometric elements such as bounding boxes and points as atomic units in a single step, LocateAnything preserves intra-box geometric coherence and unlocks substantial parallelism. We show that PBD improves both decoding throughput and localization accuracy. We further develop a scalable data engine and curate LocateAnything-Data, a large-scale dataset with more than 138 million training samples, substantially increasing data diversity for high-precision localization. Extensive evaluations show that LocateAnything advances the speed-accuracy frontier, achieving significantly higher decoding throughput while improving high-IoU localization quality across diverse benchmarks. The results highlight the complementary benefits of Parallel Box Decoding and large-scale training data in enabling efficient and precise unified visual grounding and detection.",
+      "identifiers": [
+        "SemanticScholar:ae2fbe593787f8f3eea929d3c1a0e611c3997a07"
+      ],
+      "semantic_scholar_id": "ae2fbe593787f8f3eea929d3c1a0e611c3997a07",
+      "canonical_id": "arXiv:2605.27365",
+      "arxiv_id": "2605.27365",
+      "doi": "10.48550/arXiv.2605.27365",
+      "authors": [
+        "Shihao Wang",
+        "Shi-Long Liu",
+        "Yu Kuang",
+        "Xin-Yu Wei",
+        "Yang-Zhou Liu",
+        "Zhi-Qi Li",
+        "Yun-Ze Man",
+        "Guo Chen",
+        "A. Tao",
+        "Guilin Liu",
+        "Jan Kautz",
+        "Lei Zhang",
+        "Zhiding Yu"
+      ],
+      "priority": 126,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 126,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit",
+      "source_url": "https://arxiv.org/abs/2602.23699",
+      "year": 2026,
+      "published": "2026-02-27",
+      "venue": "arXiv.org",
+      "citation_count": 23,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic computational cost of processing vision tokens in Multimodal Large Language Models (MLLMs) hinders their widespread adoption. While progressive vision token pruning offers a promising solution, current methods misinterpret shallow layer functions and use rigid schedules, which fail to unlock the full efficiency potential. To address these issues, we propose HiDrop, a framework that aligns token pruning with the true hierarchical function of MLLM layers. HiDrop features two key innovations: (1) Late Injection, which bypasses passive shallow layers to introduce visual tokens exactly where active fusion begins; and (2) Concave Pyramid Pruning with an Early Exit mechanism to dynamically adjust pruning rates across middle and deep layers. This process is optimized via an inter-layer similarity measure and a differentiable top-k operator. To ensure practical efficiency, HiDrop further incorporates persistent positional encoding, FlashAttention-compatible token selection, and parallel decoupling of vision computation to eliminate hidden overhead associated with dynamic token reduction. Extensive experiments show that HiDrop compresses about 90% visual tokens while matching the original performance and accelerating training by 1.72 times. Our work not only sets a new state-of-the-art for efficient MLLM training and inference but also provides valuable insights into the hierarchical nature of multimodal fusion. The code is released at https://github.com/EIT-NLP/HiDrop.",
+      "identifiers": [
+        "SemanticScholar:32b229563458ab668ebe838372501ce890dae936"
+      ],
+      "semantic_scholar_id": "32b229563458ab668ebe838372501ce890dae936",
+      "canonical_id": "arXiv:2602.23699",
+      "arxiv_id": "2602.23699",
+      "doi": "10.48550/arXiv.2602.23699",
+      "authors": [
+        "Hao Wu",
+        "Ying-Qi Fan",
+        "Jinyang Dai",
+        "Jun-Long Tong",
+        "Yun-Pu Ma",
+        "Xiao-Yu Shen"
+      ],
+      "priority": 123,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 23,
+        "citation_count": 23,
+        "total": 123,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 228,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Bits to Rounds: Parallel Decoding with Exploration for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2511.21103",
+      "year": 2025,
+      "published": "2025-11-26",
+      "venue": "arXiv.org",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (DLMs) have recently emerged as a strong alternative to autoregressive language models (LMs). DLMs offer comparable accuracy with faster inference speed via parallel decoding. However, standard DLM decoding strategies relying on high-confidence tokens encounter an inherent information-theoretic bottleneck that restricts decoding progress and ultimately slows generation. We demonstrate both theoretically and empirically that prioritizing high-confidence tokens is inherently inefficient. High-probability tokens carry negligible information and strictly relying on them limits the effective progress made in each decoding round. We prove that the number of decoding rounds must grow linearly with the sample's total information (negative log-likelihood) and inversely with the per-round information budget, establishing a bits-to-rounds principle. We also propose Explore-Then-Exploit (ETE), a training-free decoding strategy that maximizes information throughput and decoding efficiency. ETE combines cross-block decoding with targeted exploration of high-uncertainty tokens to reshape the conditional distribution and trigger cascades of confident predictions. Experiments verify our theoretical bounds and demonstrate that ETE consistently reduces the required number of decoding rounds compared to confidence-only baselines without compromising generation quality.",
+      "identifiers": [
+        "SemanticScholar:513e0c794e3a6f7eee576bbed5e1e73e3be80573"
+      ],
+      "semantic_scholar_id": "513e0c794e3a6f7eee576bbed5e1e73e3be80573",
+      "canonical_id": "arXiv:2511.21103",
+      "arxiv_id": "2511.21103",
+      "doi": "10.48550/arXiv.2511.21103",
+      "authors": [
+        "Heng-Yu Fu",
+        "Baihe Huang",
+        "Virginia Adams",
+        "Charles Wang",
+        "V. Srinivasan",
+        "Jiantao Jiao"
+      ],
+      "priority": 122,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 122,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 321,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "$O(n)$ Connections are Expressive Enough: Universal Approximability of Sparse Transformers",
+      "source_url": "https://arxiv.org/abs/2006.04862",
+      "year": 2020,
+      "published": "2020-06-08",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 111,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer networks use pairwise attention to compute contextual embeddings of inputs, and have redefined the state of the art in many NLP tasks. However, these models suffer from quadratic computational cost in the input sequence length $n$ to compute attention in each layer. This has prompted recent research into faster attention models, with a predominant approach involving sparsifying the connections in the attention layers. While empirically promising for long sequences, fundamental questions remain unanswered: Can sparse transformers approximate any arbitrary sequence-to-sequence function, similar to their dense counterparts? How does the sparsity pattern and the sparsity level affect their performance? In this paper, we address these questions and provide a unifying framework that captures existing sparse attention models. Our analysis proposes sufficient conditions under which we prove that a sparse attention model can universally approximate any sequence-to-sequence function. Surprisingly, our results show the existence of models with only $O(n)$ connections per attention layer that can approximate the same function class as the dense model with $n^2$ connections. Lastly, we present experiments comparing different patterns/levels of sparsity on standard NLP tasks.",
+      "identifiers": [
+        "SemanticScholar:40ca4fcfffa7ca9aa9b7ff06ecf3cd0436712d78"
+      ],
+      "semantic_scholar_id": "40ca4fcfffa7ca9aa9b7ff06ecf3cd0436712d78",
+      "canonical_id": "arXiv:2006.04862",
+      "arxiv_id": "2006.04862",
+      "authors": [
+        "Chulhee Yun",
+        "Yin-Wen Chang",
+        "Srinadh Bhojanapalli",
+        "A. Rawat",
+        "Sashank J. Reddi",
+        "Sanjiv Kumar"
+      ],
+      "priority": 121,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 111,
+        "citation_count": 111,
+        "total": 121,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2318,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "NEZHA: A Zero-sacrifice and Hyperspeed Decoding Architecture for Generative Recommendations",
+      "source_url": "https://arxiv.org/abs/2511.18793",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": "The Web Conference",
+      "citation_count": 21,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Generative Recommendation (GR), powered by Large Language Models (LLMs), represents a promising new paradigm for industrial recommender systems. However, their practical application is severely hindered by high inference latency, making them infeasible for high-throughput, real-time services and limiting their overall business impact. While Speculative Decoding (SD) has been proposed to accelerate the autoregressive generation process, existing implementations introduce new bottlenecks: they typically require separate draft models and model-based verifiers, which require additional training and increase latency overhead. In this paper, we address these challenges with NEZHA, a novel architecture that achieves hyperspeed decoding for GR systems without sacrificing recommendation quality. Specifically, NEZHA integrates a nimble autoregressive draft head directly into the primary model, enabling efficient self-drafting. This design, combined with a specialized input prompt structure, preserves the integrity of sequence-to-sequence generation. Furthermore, to tackle the critical problem of hallucination—a major source of performance degradation—we introduce an efficient, model-free verifier based on a hash set. We demonstrate the effectiveness of NEZHA through extensive experiments on public datasets and have successfully deployed the system on Taobao since October 2025, achieving 1.2% business improvement, translating to billion-level advertising revenue and serving hundreds of millions of daily active users. The code is available at https://github.com/Applied-Machine-Learning- Lab/WWW2026_NEZHA.",
+      "identifiers": [
+        "SemanticScholar:2daa1fc5b1a6ec780b951131c92f907446860e90"
+      ],
+      "semantic_scholar_id": "2daa1fc5b1a6ec780b951131c92f907446860e90",
+      "canonical_id": "arXiv:2511.18793",
+      "arxiv_id": "2511.18793",
+      "doi": "10.1145/3774904.3792797",
+      "authors": [
+        "Yejing Wang",
+        "Shengyu Zhou",
+        "Jinyu Lu",
+        "Zi-Wei Liu",
+        "Langming Liu",
+        "Mao-Lin Wang",
+        "Wen-Lin Zhang",
+        "Feng Li",
+        "Wenbo Su",
+        "Peng-Jie Wang",
+        "Jian Xu",
+        "Xiang-Yu Zhao"
+      ],
+      "priority": 121,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 21,
+        "citation_count": 21,
+        "total": 121,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 323,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Attention or Similarity: Maximizing Conditional Diversity for Token Pruning in MLLMs",
+      "source_url": "https://arxiv.org/abs/2506.10967",
+      "year": 2025,
+      "published": "2025-06-12",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 110,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In multimodal large language models (MLLMs), the length of input visual tokens is often significantly greater than that of their textual counterparts, leading to a high inference cost. Many works aim to address this issue by removing redundant visual tokens. However, current approaches either rely on attention-based pruning, which retains numerous duplicate tokens, or use similarity-based pruning, overlooking the instruction relevance, consequently causing suboptimal performance. In this paper, we go beyond attention or similarity by proposing a novel visual token pruning method named CDPruner, which maximizes the conditional diversity of retained tokens. We first define the conditional similarity between visual tokens conditioned on the instruction, and then reformulate the token pruning problem with determinantal point process (DPP) to maximize the conditional diversity of the selected subset. The proposed CDPruner is training-free and model-agnostic, allowing easy application to various MLLMs. Extensive experiments across diverse MLLMs show that CDPruner establishes new state-of-the-art on various vision-language benchmarks. By maximizing conditional diversity through DPP, the selected subset better represents the input images while closely adhering to user instructions, thereby preserving strong performance even with high reduction ratios. When applied to LLaVA, CDPruner reduces FLOPs by 95\\% and CUDA latency by 78\\%, while maintaining 94\\% of the original accuracy. Our code is available at https://github.com/Theia-4869/CDPruner.",
+      "identifiers": [
+        "SemanticScholar:3b23dd0634e7de523598df0a907a5bf558eb9c88"
+      ],
+      "semantic_scholar_id": "3b23dd0634e7de523598df0a907a5bf558eb9c88",
+      "canonical_id": "arXiv:2506.10967",
+      "arxiv_id": "2506.10967",
+      "doi": "10.48550/arXiv.2506.10967",
+      "authors": [
+        "Qi-Zhe Zhang",
+        "Meng-Zhen Liu",
+        "Li-Chen Li",
+        "Ming Lu",
+        "Yuan Zhang",
+        "Junwen Pan",
+        "Qi She",
+        "Shang-Hang Zhang"
+      ],
+      "priority": 120,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 110,
+        "citation_count": 110,
+        "total": 120,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 488,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging",
+      "source_url": "https://arxiv.org/abs/2602.08024",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": "arXiv.org",
+      "citation_count": 20,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although Video Large Language Models (VLLMs) have shown remarkable capabilities in video understanding, they are required to process high volumes of visual tokens, causing significant computational inefficiency. Existing VLLMs acceleration frameworks usually compress spatial and temporal redundancy independently, which overlooks the spatiotemporal relationships, thereby leading to suboptimal spatiotemporal compression. The highly correlated visual features are likely to change in spatial position, scale, orientation, and other attributes over time due to the dynamic nature of video. Building on this insight, we introduce FlashVID, a training-free inference acceleration framework for VLLMs. Specifically, FlashVID utilizes Attention and Diversity-based Token Selection (ADTS) to select the most representative tokens for basic video representation, then applies Tree-based Spatiotemporal Token Merging (TSTM) for fine-grained spatiotemporal redundancy elimination. Extensive experiments conducted on three representative VLLMs across five video understanding benchmarks demonstrate the effectiveness and generalization of our method. Notably, by retaining only 10% of visual tokens, FlashVID preserves 99.1% of the performance of LLaVA-OneVision. Consequently, FlashVID can serve as a training-free and plug-and-play module for extending long video frames, which enables a 10x increase in video frame input to Qwen2.5-VL, resulting in a relative improvement of 8.6% within the same computational budget. Code is available at https://github.com/Fanziyang-v/FlashVID.",
+      "identifiers": [
+        "SemanticScholar:017bde5eb3aa3d3ffe50dfcc97bd648220884f97"
+      ],
+      "semantic_scholar_id": "017bde5eb3aa3d3ffe50dfcc97bd648220884f97",
+      "canonical_id": "arXiv:2602.08024",
+      "arxiv_id": "2602.08024",
+      "doi": "10.48550/arXiv.2602.08024",
+      "authors": [
+        "Ziyang Fan",
+        "Ke Chen",
+        "Ruilong Xing",
+        "Yu-Lin Li",
+        "Li Jiang",
+        "Zhuo-Tao Tian"
+      ],
+      "priority": 120,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 20,
+        "citation_count": 20,
+        "total": 120,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "C3PO: Optimized Large Language Model Cascades with Probabilistic Cost Constraints for Reasoning",
+      "source_url": "https://arxiv.org/abs/2511.07396",
+      "year": 2025,
+      "published": "2025-11-10",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved impressive results on complex reasoning tasks, but their high inference cost remains a major barrier to real-world deployment. A promising solution is to use cascaded inference, where small, cheap models handle easy queries, and only the hardest examples are escalated to more powerful models. However, existing cascade methods typically rely on supervised training with labeled data, offer no theoretical generalization guarantees, and provide limited control over test-time computational cost. We introduce C3PO (Cost Controlled Cascaded Prediction Optimization), a self-supervised framework for optimizing LLM cascades under probabilistic cost constraints. By focusing on minimizing regret with respect to the most powerful model (MPM), C3PO avoids the need for labeled data by constructing a cascade using only unlabeled model outputs. It leverages conformal prediction to bound the probability that inference cost exceeds a user-specified budget. We provide theoretical guarantees on both cost control and generalization error, and show that our optimization procedure is effective even with small calibration sets. Empirically, C3PO achieves state-of-the-art performance across a diverse set of reasoning benchmarks including GSM8K, MATH-500, BigBench-Hard and AIME, outperforming strong LLM cascading baselines in both accuracy and cost-efficiency. Our results demonstrate that principled, label-free cascade optimization can enable scalable LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:c42e3975bd4ac0cf3c98bee718de14d79464d908"
+      ],
+      "semantic_scholar_id": "c42e3975bd4ac0cf3c98bee718de14d79464d908",
+      "canonical_id": "arXiv:2511.07396",
+      "arxiv_id": "2511.07396",
+      "doi": "10.48550/arXiv.2511.07396",
+      "authors": [
+        "Antonios Valkanas",
+        "Soumyasundar Pal",
+        "P. Rumiantsev",
+        "Yingxue Zhang",
+        "Mark Coates"
+      ],
+      "priority": 120,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 120,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 337,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.27365",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.27365",
+        "id:SemanticScholar:ae2fbe593787f8f3eea929d3c1a0e611c3997a07",
+        "id:arXiv:2605.27365",
+        "title:locateanything fast and highquality visionlanguage grounding with parallel box decoding",
+        "url:https://arxiv.org/abs/2605.27365"
+      ],
+      "record": {
+        "title": "LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding",
+        "source_url": "https://arxiv.org/abs/2605.27365",
+        "year": 2026,
+        "published": "2026-05-26",
+        "venue": "arXiv.org",
+        "citation_count": 26,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language models (VLMs) commonly formulate visual grounding and detection as a coordinate-token generation problem, serializing each 2D box into multiple 1D tokens that are learned and decoded largely independently. This token-by-token decoding mismatches the coupled structure of box geometry and creates a practical inference bottleneck due to strictly sequential generation. We introduce LocateAnything, a unified generative grounding and detection framework based on Parallel Box Decoding (PBD). By decoding geometric elements such as bounding boxes and points as atomic units in a single step, LocateAnything preserves intra-box geometric coherence and unlocks substantial parallelism. We show that PBD improves both decoding throughput and localization accuracy. We further develop a scalable data engine and curate LocateAnything-Data, a large-scale dataset with more than 138 million training samples, substantially increasing data diversity for high-precision localization. Extensive evaluations show that LocateAnything advances the speed-accuracy frontier, achieving significantly higher decoding throughput while improving high-IoU localization quality across diverse benchmarks. The results highlight the complementary benefits of Parallel Box Decoding and large-scale training data in enabling efficient and precise unified visual grounding and detection.",
+        "identifiers": [
+          "SemanticScholar:ae2fbe593787f8f3eea929d3c1a0e611c3997a07"
+        ],
+        "semantic_scholar_id": "ae2fbe593787f8f3eea929d3c1a0e611c3997a07",
+        "canonical_id": "arXiv:2605.27365",
+        "arxiv_id": "2605.27365",
+        "doi": "10.48550/arXiv.2605.27365",
+        "authors": [
+          "Shihao Wang",
+          "Shi-Long Liu",
+          "Yu Kuang",
+          "Xin-Yu Wei",
+          "Yang-Zhou Liu",
+          "Zhi-Qi Li",
+          "Yun-Ze Man",
+          "Guo Chen",
+          "A. Tao",
+          "Guilin Liu",
+          "Jan Kautz",
+          "Lei Zhang",
+          "Zhiding Yu"
+        ],
+        "priority": 126,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 26,
+          "citation_count": 26,
+          "total": 126,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.23699",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.23699",
+        "id:SemanticScholar:32b229563458ab668ebe838372501ce890dae936",
+        "id:arXiv:2602.23699",
+        "title:hidrop hierarchical vision token reduction in mllms via late injection concave pyramid pruning and early exit",
+        "url:https://arxiv.org/abs/2602.23699"
+      ],
+      "record": {
+        "title": "HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit",
+        "source_url": "https://arxiv.org/abs/2602.23699",
+        "year": 2026,
+        "published": "2026-02-27",
+        "venue": "arXiv.org",
+        "citation_count": 23,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quadratic computational cost of processing vision tokens in Multimodal Large Language Models (MLLMs) hinders their widespread adoption. While progressive vision token pruning offers a promising solution, current methods misinterpret shallow layer functions and use rigid schedules, which fail to unlock the full efficiency potential. To address these issues, we propose HiDrop, a framework that aligns token pruning with the true hierarchical function of MLLM layers. HiDrop features two key innovations: (1) Late Injection, which bypasses passive shallow layers to introduce visual tokens exactly where active fusion begins; and (2) Concave Pyramid Pruning with an Early Exit mechanism to dynamically adjust pruning rates across middle and deep layers. This process is optimized via an inter-layer similarity measure and a differentiable top-k operator. To ensure practical efficiency, HiDrop further incorporates persistent positional encoding, FlashAttention-compatible token selection, and parallel decoupling of vision computation to eliminate hidden overhead associated with dynamic token reduction. Extensive experiments show that HiDrop compresses about 90% visual tokens while matching the original performance and accelerating training by 1.72 times. Our work not only sets a new state-of-the-art for efficient MLLM training and inference but also provides valuable insights into the hierarchical nature of multimodal fusion. The code is released at https://github.com/EIT-NLP/HiDrop.",
+        "identifiers": [
+          "SemanticScholar:32b229563458ab668ebe838372501ce890dae936"
+        ],
+        "semantic_scholar_id": "32b229563458ab668ebe838372501ce890dae936",
+        "canonical_id": "arXiv:2602.23699",
+        "arxiv_id": "2602.23699",
+        "doi": "10.48550/arXiv.2602.23699",
+        "authors": [
+          "Hao Wu",
+          "Ying-Qi Fan",
+          "Jinyang Dai",
+          "Jun-Long Tong",
+          "Yun-Pu Ma",
+          "Xiao-Yu Shen"
+        ],
+        "priority": 123,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 23,
+          "citation_count": 23,
+          "total": 123,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 228,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.21103",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.21103",
+        "id:SemanticScholar:513e0c794e3a6f7eee576bbed5e1e73e3be80573",
+        "id:arXiv:2511.21103",
+        "title:from bits to rounds parallel decoding with exploration for diffusion language models",
+        "url:https://arxiv.org/abs/2511.21103"
+      ],
+      "record": {
+        "title": "From Bits to Rounds: Parallel Decoding with Exploration for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2511.21103",
+        "year": 2025,
+        "published": "2025-11-26",
+        "venue": "arXiv.org",
+        "citation_count": 22,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Language Models (DLMs) have recently emerged as a strong alternative to autoregressive language models (LMs). DLMs offer comparable accuracy with faster inference speed via parallel decoding. However, standard DLM decoding strategies relying on high-confidence tokens encounter an inherent information-theoretic bottleneck that restricts decoding progress and ultimately slows generation. We demonstrate both theoretically and empirically that prioritizing high-confidence tokens is inherently inefficient. High-probability tokens carry negligible information and strictly relying on them limits the effective progress made in each decoding round. We prove that the number of decoding rounds must grow linearly with the sample's total information (negative log-likelihood) and inversely with the per-round information budget, establishing a bits-to-rounds principle. We also propose Explore-Then-Exploit (ETE), a training-free decoding strategy that maximizes information throughput and decoding efficiency. ETE combines cross-block decoding with targeted exploration of high-uncertainty tokens to reshape the conditional distribution and trigger cascades of confident predictions. Experiments verify our theoretical bounds and demonstrate that ETE consistently reduces the required number of decoding rounds compared to confidence-only baselines without compromising generation quality.",
+        "identifiers": [
+          "SemanticScholar:513e0c794e3a6f7eee576bbed5e1e73e3be80573"
+        ],
+        "semantic_scholar_id": "513e0c794e3a6f7eee576bbed5e1e73e3be80573",
+        "canonical_id": "arXiv:2511.21103",
+        "arxiv_id": "2511.21103",
+        "doi": "10.48550/arXiv.2511.21103",
+        "authors": [
+          "Heng-Yu Fu",
+          "Baihe Huang",
+          "Virginia Adams",
+          "Charles Wang",
+          "V. Srinivasan",
+          "Jiantao Jiao"
+        ],
+        "priority": 122,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 22,
+          "citation_count": 22,
+          "total": 122,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 321,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2006.04862",
+      "identity_tokens": [
+        "id:SemanticScholar:40ca4fcfffa7ca9aa9b7ff06ecf3cd0436712d78",
+        "id:arXiv:2006.04862",
+        "title:on connections are expressive enough universal approximability of sparse transformers",
+        "url:https://arxiv.org/abs/2006.04862"
+      ],
+      "record": {
+        "title": "$O(n)$ Connections are Expressive Enough: Universal Approximability of Sparse Transformers",
+        "source_url": "https://arxiv.org/abs/2006.04862",
+        "year": 2020,
+        "published": "2020-06-08",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 111,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer networks use pairwise attention to compute contextual embeddings of inputs, and have redefined the state of the art in many NLP tasks. However, these models suffer from quadratic computational cost in the input sequence length $n$ to compute attention in each layer. This has prompted recent research into faster attention models, with a predominant approach involving sparsifying the connections in the attention layers. While empirically promising for long sequences, fundamental questions remain unanswered: Can sparse transformers approximate any arbitrary sequence-to-sequence function, similar to their dense counterparts? How does the sparsity pattern and the sparsity level affect their performance? In this paper, we address these questions and provide a unifying framework that captures existing sparse attention models. Our analysis proposes sufficient conditions under which we prove that a sparse attention model can universally approximate any sequence-to-sequence function. Surprisingly, our results show the existence of models with only $O(n)$ connections per attention layer that can approximate the same function class as the dense model with $n^2$ connections. Lastly, we present experiments comparing different patterns/levels of sparsity on standard NLP tasks.",
+        "identifiers": [
+          "SemanticScholar:40ca4fcfffa7ca9aa9b7ff06ecf3cd0436712d78"
+        ],
+        "semantic_scholar_id": "40ca4fcfffa7ca9aa9b7ff06ecf3cd0436712d78",
+        "canonical_id": "arXiv:2006.04862",
+        "arxiv_id": "2006.04862",
+        "authors": [
+          "Chulhee Yun",
+          "Yin-Wen Chang",
+          "Srinadh Bhojanapalli",
+          "A. Rawat",
+          "Sashank J. Reddi",
+          "Sanjiv Kumar"
+        ],
+        "priority": 121,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 111,
+          "citation_count": 111,
+          "total": 121,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2318,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.18793",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774904.3792797",
+        "id:SemanticScholar:2daa1fc5b1a6ec780b951131c92f907446860e90",
+        "id:arXiv:2511.18793",
+        "title:nezha a zerosacrifice and hyperspeed decoding architecture for generative recommendations",
+        "url:https://arxiv.org/abs/2511.18793"
+      ],
+      "record": {
+        "title": "NEZHA: A Zero-sacrifice and Hyperspeed Decoding Architecture for Generative Recommendations",
+        "source_url": "https://arxiv.org/abs/2511.18793",
+        "year": 2025,
+        "published": "2025-11-24",
+        "venue": "The Web Conference",
+        "citation_count": 21,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Generative Recommendation (GR), powered by Large Language Models (LLMs), represents a promising new paradigm for industrial recommender systems. However, their practical application is severely hindered by high inference latency, making them infeasible for high-throughput, real-time services and limiting their overall business impact. While Speculative Decoding (SD) has been proposed to accelerate the autoregressive generation process, existing implementations introduce new bottlenecks: they typically require separate draft models and model-based verifiers, which require additional training and increase latency overhead. In this paper, we address these challenges with NEZHA, a novel architecture that achieves hyperspeed decoding for GR systems without sacrificing recommendation quality. Specifically, NEZHA integrates a nimble autoregressive draft head directly into the primary model, enabling efficient self-drafting. This design, combined with a specialized input prompt structure, preserves the integrity of sequence-to-sequence generation. Furthermore, to tackle the critical problem of hallucination—a major source of performance degradation—we introduce an efficient, model-free verifier based on a hash set. We demonstrate the effectiveness of NEZHA through extensive experiments on public datasets and have successfully deployed the system on Taobao since October 2025, achieving 1.2% business improvement, translating to billion-level advertising revenue and serving hundreds of millions of daily active users. The code is available at https://github.com/Applied-Machine-Learning- Lab/WWW2026_NEZHA.",
+        "identifiers": [
+          "SemanticScholar:2daa1fc5b1a6ec780b951131c92f907446860e90"
+        ],
+        "semantic_scholar_id": "2daa1fc5b1a6ec780b951131c92f907446860e90",
+        "canonical_id": "arXiv:2511.18793",
+        "arxiv_id": "2511.18793",
+        "doi": "10.1145/3774904.3792797",
+        "authors": [
+          "Yejing Wang",
+          "Shengyu Zhou",
+          "Jinyu Lu",
+          "Zi-Wei Liu",
+          "Langming Liu",
+          "Mao-Lin Wang",
+          "Wen-Lin Zhang",
+          "Feng Li",
+          "Wenbo Su",
+          "Peng-Jie Wang",
+          "Jian Xu",
+          "Xiang-Yu Zhao"
+        ],
+        "priority": 121,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 21,
+          "citation_count": 21,
+          "total": 121,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 323,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.10967",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.10967",
+        "id:SemanticScholar:3b23dd0634e7de523598df0a907a5bf558eb9c88",
+        "id:arXiv:2506.10967",
+        "title:beyond attention or similarity maximizing conditional diversity for token pruning in mllms",
+        "url:https://arxiv.org/abs/2506.10967"
+      ],
+      "record": {
+        "title": "Beyond Attention or Similarity: Maximizing Conditional Diversity for Token Pruning in MLLMs",
+        "source_url": "https://arxiv.org/abs/2506.10967",
+        "year": 2025,
+        "published": "2025-06-12",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 110,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In multimodal large language models (MLLMs), the length of input visual tokens is often significantly greater than that of their textual counterparts, leading to a high inference cost. Many works aim to address this issue by removing redundant visual tokens. However, current approaches either rely on attention-based pruning, which retains numerous duplicate tokens, or use similarity-based pruning, overlooking the instruction relevance, consequently causing suboptimal performance. In this paper, we go beyond attention or similarity by proposing a novel visual token pruning method named CDPruner, which maximizes the conditional diversity of retained tokens. We first define the conditional similarity between visual tokens conditioned on the instruction, and then reformulate the token pruning problem with determinantal point process (DPP) to maximize the conditional diversity of the selected subset. The proposed CDPruner is training-free and model-agnostic, allowing easy application to various MLLMs. Extensive experiments across diverse MLLMs show that CDPruner establishes new state-of-the-art on various vision-language benchmarks. By maximizing conditional diversity through DPP, the selected subset better represents the input images while closely adhering to user instructions, thereby preserving strong performance even with high reduction ratios. When applied to LLaVA, CDPruner reduces FLOPs by 95\\% and CUDA latency by 78\\%, while maintaining 94\\% of the original accuracy. Our code is available at https://github.com/Theia-4869/CDPruner.",
+        "identifiers": [
+          "SemanticScholar:3b23dd0634e7de523598df0a907a5bf558eb9c88"
+        ],
+        "semantic_scholar_id": "3b23dd0634e7de523598df0a907a5bf558eb9c88",
+        "canonical_id": "arXiv:2506.10967",
+        "arxiv_id": "2506.10967",
+        "doi": "10.48550/arXiv.2506.10967",
+        "authors": [
+          "Qi-Zhe Zhang",
+          "Meng-Zhen Liu",
+          "Li-Chen Li",
+          "Ming Lu",
+          "Yuan Zhang",
+          "Junwen Pan",
+          "Qi She",
+          "Shang-Hang Zhang"
+        ],
+        "priority": 120,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 110,
+          "citation_count": 110,
+          "total": 120,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 488,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.08024",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.08024",
+        "id:SemanticScholar:017bde5eb3aa3d3ffe50dfcc97bd648220884f97",
+        "id:arXiv:2602.08024",
+        "title:flashvid efficient video large language models via trainingfree treebased spatiotemporal token merging",
+        "url:https://arxiv.org/abs/2602.08024"
+      ],
+      "record": {
+        "title": "FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging",
+        "source_url": "https://arxiv.org/abs/2602.08024",
+        "year": 2026,
+        "published": "2026-02-08",
+        "venue": "arXiv.org",
+        "citation_count": 20,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Although Video Large Language Models (VLLMs) have shown remarkable capabilities in video understanding, they are required to process high volumes of visual tokens, causing significant computational inefficiency. Existing VLLMs acceleration frameworks usually compress spatial and temporal redundancy independently, which overlooks the spatiotemporal relationships, thereby leading to suboptimal spatiotemporal compression. The highly correlated visual features are likely to change in spatial position, scale, orientation, and other attributes over time due to the dynamic nature of video. Building on this insight, we introduce FlashVID, a training-free inference acceleration framework for VLLMs. Specifically, FlashVID utilizes Attention and Diversity-based Token Selection (ADTS) to select the most representative tokens for basic video representation, then applies Tree-based Spatiotemporal Token Merging (TSTM) for fine-grained spatiotemporal redundancy elimination. Extensive experiments conducted on three representative VLLMs across five video understanding benchmarks demonstrate the effectiveness and generalization of our method. Notably, by retaining only 10% of visual tokens, FlashVID preserves 99.1% of the performance of LLaVA-OneVision. Consequently, FlashVID can serve as a training-free and plug-and-play module for extending long video frames, which enables a 10x increase in video frame input to Qwen2.5-VL, resulting in a relative improvement of 8.6% within the same computational budget. Code is available at https://github.com/Fanziyang-v/FlashVID.",
+        "identifiers": [
+          "SemanticScholar:017bde5eb3aa3d3ffe50dfcc97bd648220884f97"
+        ],
+        "semantic_scholar_id": "017bde5eb3aa3d3ffe50dfcc97bd648220884f97",
+        "canonical_id": "arXiv:2602.08024",
+        "arxiv_id": "2602.08024",
+        "doi": "10.48550/arXiv.2602.08024",
+        "authors": [
+          "Ziyang Fan",
+          "Ke Chen",
+          "Ruilong Xing",
+          "Yu-Lin Li",
+          "Li Jiang",
+          "Zhuo-Tao Tian"
+        ],
+        "priority": 120,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 20,
+          "citation_count": 20,
+          "total": 120,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 247,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.07396",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.07396",
+        "id:SemanticScholar:c42e3975bd4ac0cf3c98bee718de14d79464d908",
+        "id:arXiv:2511.07396",
+        "title:c3po optimized large language model cascades with probabilistic cost constraints for reasoning",
+        "url:https://arxiv.org/abs/2511.07396"
+      ],
+      "record": {
+        "title": "C3PO: Optimized Large Language Model Cascades with Probabilistic Cost Constraints for Reasoning",
+        "source_url": "https://arxiv.org/abs/2511.07396",
+        "year": 2025,
+        "published": "2025-11-10",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have achieved impressive results on complex reasoning tasks, but their high inference cost remains a major barrier to real-world deployment. A promising solution is to use cascaded inference, where small, cheap models handle easy queries, and only the hardest examples are escalated to more powerful models. However, existing cascade methods typically rely on supervised training with labeled data, offer no theoretical generalization guarantees, and provide limited control over test-time computational cost. We introduce C3PO (Cost Controlled Cascaded Prediction Optimization), a self-supervised framework for optimizing LLM cascades under probabilistic cost constraints. By focusing on minimizing regret with respect to the most powerful model (MPM), C3PO avoids the need for labeled data by constructing a cascade using only unlabeled model outputs. It leverages conformal prediction to bound the probability that inference cost exceeds a user-specified budget. We provide theoretical guarantees on both cost control and generalization error, and show that our optimization procedure is effective even with small calibration sets. Empirically, C3PO achieves state-of-the-art performance across a diverse set of reasoning benchmarks including GSM8K, MATH-500, BigBench-Hard and AIME, outperforming strong LLM cascading baselines in both accuracy and cost-efficiency. Our results demonstrate that principled, label-free cascade optimization can enable scalable LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:c42e3975bd4ac0cf3c98bee718de14d79464d908"
+        ],
+        "semantic_scholar_id": "c42e3975bd4ac0cf3c98bee718de14d79464d908",
+        "canonical_id": "arXiv:2511.07396",
+        "arxiv_id": "2511.07396",
+        "doi": "10.48550/arXiv.2511.07396",
+        "authors": [
+          "Antonios Valkanas",
+          "Soumyasundar Pal",
+          "P. Rumiantsev",
+          "Yingxue Zhang",
+          "Mark Coates"
+        ],
+        "priority": 120,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 120,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 337,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8c7d1d08689e57a618e32ad5135e0264ee5a07e2eca0466e679ef187fd41990c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

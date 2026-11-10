@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-eb3bc5896e3f8241-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.31449/inf.v50i14.10934",
+  "reason": "Large Language Models (LLMs) achieve state-of-the-art performance across natural language processingtasks but remain computationally intensive, limiting their deployment in browser-based environments.This study investigates the feasibility of real-time transformer inference entirely within web browsers usingWebGPU acceleration. We propose a lightweight BERT-inspired architecture optimized for GPUparallelmatrix operations through TensorFlow.js with the WebGPU backend. The model is evaluated ona 4,000-sample IMDB sentiment classification dataset and achieves 65–70% classification accuracy withper-sample inference latency of 8–9 ms in Google Chrome using an NVIDIA T400 GPU (4 GB VRAM).Batch inference throughput reaches approximately 6,600 inferences per minute, while GPU utilization remainsstable between 26–77%. Compared to CPU-based TensorFlow.js execution, WebGPU significantlyreduces inference latency and enables fully client-side training and inference without server dependencies.Although accuracy is lower than full-scale BERT benchmarks, the results demonstrate that simplified transformerarchitectures can operate efficiently in browser environments under resource constraints. This workestablishes a practical framework for deploying real-time edge NLP applications using open web standardsand GPU acceleration.",
+  "title": "A Lightweight BERT-Variant Optimized for WebGPU-Based Real-TimeInference in Web Browsers",
+  "identity_tokens": [
+    "DOI:10.31449/inf.v50i14.10934"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+    "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+    "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+    "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+    "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md",
+    "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb3bc5896e3f",
+  "source_precheck_request_id": null
+}

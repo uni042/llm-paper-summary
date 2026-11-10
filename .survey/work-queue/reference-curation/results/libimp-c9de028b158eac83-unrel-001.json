@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9de028b158eac83-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.02303",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.02303",
+    "identity_tokens": [
+      "arXiv:2511.02303"
+    ],
+    "reason": "一次資料の要旨はマルチエージェント推論の協調性・報酬設計を扱い、推論計算量や serving 効率を削減する方法を示していない。",
+    "first_checked_at": "2026-10-07T10:20:40+00:00",
+    "last_checked_at": "2026-10-07T10:20:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "title": "Unlocking the Power of Multi-Agent LLM for Reasoning: From Lazy Agents to Deliberation"
+  },
+  "processed_at": "2026-10-07T10:20:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9de028b158e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

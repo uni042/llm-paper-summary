@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b43fc96b3b2888a2-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.05299",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.05299",
+    "identity_tokens": [
+      "arXiv:2504.05299"
+    ],
+    "reason": "mobile/edge deploymentを目的にVLMのarchitecture・tokenizationを小型化し、SmolVLM-256Mは推論時GPU memory 1GB未満、2.2B版もより大きなVLMに匹敵する性能を示す。推論resource効率へ直接関係するが、新規runtime/kernel/serving方式よりmodel設計・data curationが主貢献のためborderline。",
+    "first_checked_at": "2026-10-05T15:38:29+00:00",
+    "last_checked_at": "2026-10-05T15:38:29+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "SmolVLM: Redefining small and efficient multimodal models"
+  },
+  "processed_at": "2026-10-05T15:38:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b43fc96b3b28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ffff801a47a7efdd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.08782",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.08782",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.08782",
+      "arXiv:2604.08782"
+    ],
+    "reason": "複数ターン会話の履歴を少数例推論のCondenserと軽量Deciderで非同期圧縮し、10ターンで入力トークンを最大72%削減すると一次要旨が報告する。入力長削減による遅延・費用低減との接点はあるが、主たる寄与は会話情報の保持と応答精度の改善であり、KVキャッシュやサービングのGPUスケジューラ・メモリ階層を直接最適化する機構ではないため境界扱い。",
+    "first_checked_at": "2026-10-22T16:49:12+00:00",
+    "last_checked_at": "2026-10-22T16:49:12+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "MT-OSC: Path for LLMs that Get Lost in Multi-Turn Conversation"
+  },
+  "processed_at": "2026-10-22T16:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ffff801a47a7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

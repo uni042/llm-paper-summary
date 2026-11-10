@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75f5d23910303ce2-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2111.05754",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2111.05754",
+    "identity_tokens": [
+      "arXiv:2111.05754"
+    ],
+    "reason": "weight pruningとdistillationを統合して疎なBERT系pretrained modelを作り、下流taskへsparsityを維持したまま転移し、8-bit量子化も併用してBERT-Large encoderで40倍compressionを達成する。deployment効率化へ直結するが、主要方式がtraining-time pruning/distillationでLLM生成推論のruntime評価が弱いためborderline。",
+    "first_checked_at": "2026-10-05T16:29:35+00:00",
+    "last_checked_at": "2026-10-05T16:29:35+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Prune Once for All: Sparse Pre-Trained Language Models"
+  },
+  "processed_at": "2026-10-05T16:29:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75f5d2391030",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

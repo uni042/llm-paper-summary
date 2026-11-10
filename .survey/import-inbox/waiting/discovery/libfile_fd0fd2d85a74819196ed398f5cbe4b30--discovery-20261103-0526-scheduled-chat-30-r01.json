@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261103-0526-scheduled-chat-30/r01",
+  "reference_main_sha": "26bac123d632f0b7db23a6836a42a149a0334271",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31768",
+      "identity_tokens": [
+        "arXiv:2610.31768"
+      ],
+      "title": "Efficient Omni-modal Large Language Model Inference via Per-Query Modality Selection",
+      "reason": "Qwen2.5-OmniとQwen3-Omniを対象に、クエリごとに入力モダリティを選び、精度とトークン・レイテンシ・費用のトレードオフを最適化する。WorldSenseでQwen2.5-Omniの全モダリティ入力と同等以上の精度を保ちつつ、入力token約41%、遅延約39%、費用約61%と報告。推論時に不要なモダリティを省く直接的な実行コスト削減なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2610.31768",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.35955",
+      "identity_tokens": [
+        "arXiv:2610.35955"
+      ],
+      "title": "ResCom: Activation Residual Compensation for Large Language Model Quantization",
+      "reason": "低bitの重み・活性量子化で失われる丸め残差を、勾配学習を要しない低rank補正で回復する。Llama-3-8B W4A4のWikiText-2 perplexity 7.708→7.147、MMLU +2.89ポイント、GSM8K 23.96→36.16%。FP32評価では4K prefillが2.25%増えるが、コンパクト保存実装はFP16比ピークメモリ27.7%削減。推論向け量子化品質と容量の改善が直接対象でaccept。",
+      "source_url": "https://arxiv.org/abs/2610.35955",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.37019",
+      "identity_tokens": [
+        "arXiv:2610.37019"
+      ],
+      "title": "V-LUMEN: Visual Lookup Memory for Embedding Scaling in Vision-Language Models",
+      "reason": "凍結したQwen3-VL-2Bの視覚特徴をコードブックで離散化し、空間ハッシュ・テキスト条件付き関連性による外部lookup記憶をprefillで融合する。容量をパラメータ演算量でなく保存容量に移す設計で、5ベンチマークの品質向上を報告。lookupはprefillで1回でありtoken当たり計算は増やさないが、LLM推論速度・メモリ・エネルギーの定量改善はabstractにないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.37019",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.33368",
+      "identity_tokens": [
+        "arXiv:2610.33368"
+      ],
+      "title": "Multiple Importance Sampling for Guided Speculative Inference",
+      "reason": "複数の小型LLMが提案する推論ステップを大型LLMとprocess reward modelで検証するGuided Speculative Inferenceを、多重重要度サンプリングの重み付けで拡張する。KL乖離と期待報酬の境界を導出し、単一drafterと同じ総サンプル数でpass-at-Nの競争力を示す。推論時の候補選択だが高速化や計算削減の直接実測がなく、品質・理論が主目的なのでborderline。",
+      "source_url": "https://arxiv.org/abs/2610.33368",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.36901",
+      "identity_tokens": [
+        "arXiv:2610.36901"
+      ],
+      "title": "HiLo-RD: Cross-Budget Self-Distillation for Masked Diffusion Language Models",
+      "reason": "masked diffusion LMで大きな生成予算の中間表現を小予算へ蒸留し、早期commitによる推論誤りを抑える。GSM8K精度が9.4ポイント向上し、平均可読長が約25%短縮と報告。低予算decodeへの品質転移は効率と関連するが、実行時のdecode latency・throughputの改善実測ではなく事後学習が中心のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.36901",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.35303",
+      "identity_tokens": [
+        "arXiv:2610.35303"
+      ],
+      "title": "InterQ-RL: Interaction-Aware Correction of Execution Mismatch in Quantized Agentic RL",
+      "reason": "agent RLの長いrolloutでW8A8-KV8量子化実行器と学習器の方策乖離を、状態到達履歴を使うprefix補正で修正する。4B〜30Bのdense/MoEで追加model forwardなしにBF16と0.7ポイント以内の最終性能を報告。量子化rolloutのKV/生成費用低減に関係するが、主目的はRL学習品質の補正であり通常のLLMサービング高速化の実証ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.35303",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.31778",
+      "identity_tokens": [
+        "arXiv:2610.31778"
+      ],
+      "title": "Benchmarks Are Surprisingly Compaction-Friendly",
+      "reason": "長期agentのコンテキスト圧縮5方式をOpenCodeと3つの長期ベンチマークで比較。100万token文脈の2モデルでは圧縮閾値が課題性能にほぼ影響せず、一部方式は最大20ポイントの性能低下、制約指示が圧縮で脱落する危険を示す。推論文脈メモリ管理の品質評価として参考になるが、KV容量・実行遅延の直接最適化を提案しないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.31778",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32581",
+      "identity_tokens": [
+        "arXiv:2610.32581"
+      ],
+      "title": "From Parameter Rebasin to Functional Transfer Across Heterogeneous Transformers",
+      "reason": "異なる幅・深さのTransformer間でfine-tuning効果をactivation変化のProcrustes整列とridge回帰により転移するAriadneを提案。対象はモデル更新・転移構築時の計算とメモリ削減で、実運用LLM推論の高速化、量子化、サービング、メモリ管理を直接扱わないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.32581",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.36849",
+      "identity_tokens": [
+        "arXiv:2610.36849"
+      ],
+      "title": "When All Rollouts Fail: Policy-Compatible Joint Decoding for Hard-Problem Reasoning",
+      "reason": "RLVRで全rolloutが失敗したときにexpertデータを方策互換のjoint decodingで学習軌跡へ変換するPICOを提案。目的と評価はRLの学習信号・推論精度向上であり、LLM推論システムの速度・メモリ・スケジューリング最適化は対象外なのでunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.36849",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.36794",
+      "identity_tokens": [
+        "arXiv:2610.36794"
+      ],
+      "title": "Select-TTT: Query-Conditioned Selective Fast Weight Updates for In-Place Test-Time Training",
+      "reason": "LLMのIn-Place TTTで全chunkに同じ重みで書き込む問題を、凍結output headから得るquery関連性でchunk別fast-weight更新率を調整する。新規パラメータなしで長文QAの品質を改善しcontext-parallel計算を維持。長文脈の推論時状態管理に関係するが、速度・メモリ削減の実測やシステム最適化は主題ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.36794",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

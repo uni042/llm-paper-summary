@@ -1,0 +1,626 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-97be7be746319a4a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-97be7be74631",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3719027.3765150",
+    "DOI:10.14722/ndss.2025.230057",
+    "DOI:10.56553/popets-2024-0107",
+    "arXiv:2307.12533",
+    "arXiv:2404.03384",
+    "arXiv:2602.05384"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ea42b7be1d54bc46f492089d48a43d878ef6f95b",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T17:07:47.501573+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3719027.3765150",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.14722/ndss.2025.230057",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.56553/popets-2024-0107",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2307.12533",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2404.03384",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.05384",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LongVLM: Efficient Long Video Understanding via Large Language Models",
+      "source_url": "https://arxiv.org/abs/2404.03384",
+      "year": 2024,
+      "published": "2024-04-04",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 182,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Empowered by Large Language Models (LLMs), recent advancements in Video-based LLMs (VideoLLMs) have driven progress in various video understanding tasks. These models encode video representations through pooling or query aggregation over a vast number of visual tokens, making computational and memory costs affordable. Despite successfully providing an overall comprehension of video content, existing VideoLLMs still face challenges in achieving detailed understanding due to overlooking local information in long-term videos. To tackle this challenge, we introduce LongVLM, a simple yet powerful VideoLLM for long video understanding, building upon the observation that long videos often consist of sequential key events, complex actions, and camera movements. Our approach proposes to decompose long videos into multiple short-term segments and encode local features for each segment via a hierarchical token merging module. These features are concatenated in temporal order to maintain the storyline across sequential short-term segments. Additionally, we propose to integrate global semantics into each local feature to enhance context understanding. In this way, we encode video representations that incorporate both local and global information, enabling the LLM to generate comprehensive responses for long-term videos. Experimental results on the VideoChatGPT benchmark and zero-shot video question-answering datasets demonstrate the superior capabilities of our model over the previous state-of-the-art methods. Qualitative examples show that our model produces more precise responses for long video understanding. Code is available at https://github.com/ziplab/LongVLM.",
+      "identifiers": [
+        "SemanticScholar:c7453d3e481cd419ec103af45aed2a76ac4d55e3"
+      ],
+      "semantic_scholar_id": "c7453d3e481cd419ec103af45aed2a76ac4d55e3",
+      "canonical_id": "arXiv:2404.03384",
+      "arxiv_id": "2404.03384",
+      "doi": "10.48550/arXiv.2404.03384",
+      "authors": [
+        "Yuetian Weng",
+        "Mingfei Han",
+        "Haoyu He",
+        "Xiaojun Chang",
+        "Bo-Han Zhuang"
+      ],
+      "priority": 182,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 182,
+        "citation_count": 182,
+        "total": 182,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 922,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "THOR: Secure Transformer Inference with Homomorphic Encryption",
+      "source_url": "https://doi.org/10.1145/3719027.3765150",
+      "year": 2025,
+      "published": "2025-11-19",
+      "venue": "IACR Cryptology ePrint Archive",
+      "citation_count": 80,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models are increasingly deployed in cloud environments, privacy concerns have become a significant issue. To address this challenge, we present THOR, a non-interactive framework for secure transformer inference using homomorphic encryption. We first propose efficient matrix multiplication algorithms based on diagonal-major encoding and compact ciphertext packing. We extend these basic algorithms to support plaintext-ciphertext matrix multiplication (PC-MM) using parallel submatrix computation and ciphertext-ciphertext multiplication (CC-MM) with a baby-step giant-step strategy. We also design efficient evaluation strategies for non-linear functions such as softmax, LayerNorm, GELU, and Tanh, by integrating advanced approximation techniques with adaptive iterative methods. Our matrix multiplication algorithms outperform state-of-the-art methods, achieving up to 5.3X speedup in PC-MM for ℝ 768 X 768 X ℝ768X128 over BOLT (Pang et al., IEEE S&P 2024) and 9.7X in CC-MM for 12X (ℝ64X128 X ℝ128X128) over Powerformer (Park et al., Preprint). THOR enables secure inference on the BERT-base model with 128 tokens in 10 minutes on a single GPU, while maintaining comparable accuracy on GLUE tasks.",
+      "identifiers": [
+        "SemanticScholar:a4f853b56b21110695c5efd4943dbd1ec7bef998"
+      ],
+      "semantic_scholar_id": "a4f853b56b21110695c5efd4943dbd1ec7bef998",
+      "doi": "10.1145/3719027.3765150",
+      "canonical_id": "DOI:10.1145/3719027.3765150",
+      "authors": [
+        "Jungho Moon",
+        "D. Yoo",
+        "Xiaoqian Jiang",
+        "Miran Kim"
+      ],
+      "priority": 180,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 80,
+        "citation_count": 80,
+        "total": 180,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 328,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BumbleBee: Secure Two-party Inference Framework for Large Transformers",
+      "source_url": "https://doi.org/10.14722/ndss.2025.230057",
+      "year": 2023,
+      "published": null,
+      "venue": "IACR Cryptology ePrint Archive",
+      "citation_count": 152,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "—Large transformer-based models have realized state-of-the-art performance on lots of real-world tasks such as natural language processing and computer vision. However, with the increasing sensitivity of the data and tasks they handle, privacy has become a major concern during model deployment. In this work, we focus on private inference in two-party settings, where one party holds private inputs and the other holds the model. We introduce BumbleBee , a fast and communication-friendly two-party private transformer inference system. Our contributions are three-fold: First, we propose optimized protocols for matrix multiplication, which significantly reduce communication costs by 80% – 90% compared to previous techniques. Secondly, we develop a methodology for constructing efficient protocols tailored to the non-linear activation functions employed in transformer models. The proposed activation protocols have realized a significant enhancement in processing speed, alongside a remarkable reduction in communication costs by 80% – 95% compared with two prior methods. Lastly, we have performed extensive benchmarks on five transformer models. BumbleBee demonstrates its capability by evaluating the LLaMA-7B model, generating one token in approximately 8 minutes using CPUs. Our results further reveal that BumbleBee outperforms Iron (NeurIPS22) by over an order of magnitude and is three times faster than BOLT (Oakland24) with one-tenth communication.",
+      "identifiers": [
+        "SemanticScholar:6a128a8b9078469dfd28dcfee1b9fdce54e6c31d"
+      ],
+      "semantic_scholar_id": "6a128a8b9078469dfd28dcfee1b9fdce54e6c31d",
+      "doi": "10.14722/ndss.2025.230057",
+      "canonical_id": "DOI:10.14722/ndss.2025.230057",
+      "authors": [
+        "Wen-jie Lu",
+        "Zhicong Huang",
+        "Zhen Gu",
+        "Jing-Yu Li",
+        "Jian Liu",
+        "Kui Ren",
+        "Cheng Hong",
+        "Tao Wei",
+        "Wen-Guang Chen"
+      ],
+      "priority": 152,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 152,
+        "citation_count": 152,
+        "total": 152,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1200,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SIGMA: Secure GPT Inference with Function Secret Sharing",
+      "source_url": "https://doi.org/10.56553/popets-2024-0107",
+      "year": 2024,
+      "published": "2024-10-01",
+      "venue": "IACR Cryptology ePrint Archive",
+      "citation_count": 146,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Secure 2-party computation (2PC) enables secure inference that offers protection for both proprietary machine learning (ML) models and sensitive inputs to them. However, the existing secure inference solutions suffer from high latency and communication overheads, particularly for transformers. Function secret sharing (FSS) is a recent paradigm for obtaining efficient 2PC protocols with a preprocessing phase. We provide Sigma, the first end-to-end system for secure transformer inference based on FSS. By constructing new FSS-based protocols for complex machine learning functionalities, such as Softmax, GeLU and SiLU, and also accelerating their computation on GPUs, Sigma improves the latency of secure inference of transformers by 11 - 19x over the state-of-the-art that uses preprocessing and GPUs. We present the first secure inference of generative pre-trained transformer (GPT) models. In particular, Sigma executes Meta's Llama2 (available on HuggingFace) with 13 billion parameters in 44 seconds and GPT2 in 1.6 seconds",
+      "identifiers": [
+        "SemanticScholar:8d8e8f5cfdd68691043f2ff97e155715f8b70fbe"
+      ],
+      "semantic_scholar_id": "8d8e8f5cfdd68691043f2ff97e155715f8b70fbe",
+      "doi": "10.56553/popets-2024-0107",
+      "canonical_id": "DOI:10.56553/popets-2024-0107",
+      "authors": [
+        "Kanav Gupta",
+        "Neha Jawalkar",
+        "Ananta Mukherjee",
+        "Nishanth Chandran",
+        "Divya Gupta",
+        "A. Panwar",
+        "Rahul Sharma"
+      ],
+      "priority": 146,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 146,
+        "citation_count": 146,
+        "total": 146,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 742,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PUMA: Secure Inference of LLaMA-7B in Five Minutes",
+      "source_url": "https://arxiv.org/abs/2307.12533",
+      "year": 2023,
+      "published": "2023-07-24",
+      "venue": "Security and Safety",
+      "citation_count": 129,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models (e.g., Bert and GPT) have shown their dominance in machine learning tasks. Many cloud companies have begun to provide services based on Transformer models, examples include translation and text-speech conversion. However, such a service inevitably requires access to the client’s data, which might contain sensitive information. Theoretically, running the services under secure multi-party computation (MPC) could protect clients’ privacy. However, current MPC frameworks are still limited in terms of model performance, efficiency, deployment, and functionality, especially when facing complex Transformer models. To this end, we propose an MPC framework Puma to enable secure and efficient Transformer model inference. We first design high-quality approximations for the bottleneck functions in Transformers such as GELU and Softmax, reducing about 20% − 76% computation and communication costs than state-of-the-art works without performance drop. Then, we provide concrete instantiations for secure Embedding and LayerNorm. These implementations produce correct results and integrate compatible system architectures of\ncleartext Transformer models. Finally, we conducted extensive experiments on six popular benchmarks: text classification/generation/summarization/translation, audio-to-text, and image-to-text. Results show that Puma can finish most tasks in several minutes, with comparable model performance (e.g., accuracy) as cleartext, and even evaluate LLaMA-7B in less than 5 minutes to generate 1 token.",
+      "identifiers": [
+        "SemanticScholar:5d74e5fe624aa81c94a6ecf74436fce214ebd0b2"
+      ],
+      "semantic_scholar_id": "5d74e5fe624aa81c94a6ecf74436fce214ebd0b2",
+      "canonical_id": "arXiv:2307.12533",
+      "arxiv_id": "2307.12533",
+      "doi": "10.1051/sands/2025014",
+      "authors": [
+        "Ye Dong",
+        "Wen-jie Lu",
+        "Yancheng Zheng",
+        "Haoqi Wu",
+        "Derun Zhao",
+        "Jin Tan",
+        "Zhicong Huang",
+        "Cheng Hong",
+        "Tao Wei",
+        "Wen-Guang Chen"
+      ],
+      "priority": 129,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 129,
+        "citation_count": 129,
+        "total": 129,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1177,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dolphin-v2: Universal Document Parsing via Scalable Anchor Prompting",
+      "source_url": "https://arxiv.org/abs/2602.05384",
+      "year": 2026,
+      "published": "2026-02-05",
+      "venue": "arXiv.org",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Document parsing has garnered widespread attention as vision-language models (VLMs) advance OCR capabilities. However, the field remains fragmented across dozens of specialized models with varying strengths, forcing users to navigate complex model selection and limiting system scalability. Moreover, existing two-stage approaches depend on axis-aligned bounding boxes for layout detection, failing to handle distorted or photographed documents effectively. To this end, we present Dolphin-v2, a two-stage document image parsing model that substantially improves upon the original Dolphin. In the first stage, Dolphin-v2 jointly performs document type classification (digital-born versus photographed) alongside layout analysis. For digital-born documents, it conducts finer-grained element detection with reading order prediction. In the second stage, we employ a hybrid parsing strategy: photographed documents are parsed holistically as complete pages to handle geometric distortions, while digital-born documents undergo element-wise parallel parsing guided by the detected layout anchors, enabling efficient content extraction. Compared with the original Dolphin, Dolphin-v2 introduces several crucial enhancements: (1) robust parsing of photographed documents via holistic page-level understanding, (2) finer-grained element detection (21 categories) with semantic attribute extraction such as author information and document metadata, and (3) code block recognition with indentation preservation, which existing systems typically lack. Comprehensive evaluations are conducted on DocPTBench, OmniDocBench, and our self-constructed RealDoc-160 benchmark. The results demonstrate substantial improvements: +14.78 points overall on the challenging OmniDocBench and 91% error reduction on photographed documents, while maintaining efficient inference through parallel processing.",
+      "identifiers": [
+        "SemanticScholar:75b2ddfc516c5cd70cea5b0067a4a98e6099d219"
+      ],
+      "semantic_scholar_id": "75b2ddfc516c5cd70cea5b0067a4a98e6099d219",
+      "canonical_id": "arXiv:2602.05384",
+      "arxiv_id": "2602.05384",
+      "doi": "10.48550/arXiv.2602.05384",
+      "authors": [
+        "Hao Feng",
+        "Wei Shi",
+        "Ke-Ke Zhang",
+        "Xiang Fei",
+        "Lei Liao",
+        "Dingkang Yang",
+        "Yong-Kun Du",
+        "Xuecheng Wu",
+        "Jingqun Tang",
+        "Yang Liu",
+        "Hong Chen",
+        "Can Huang"
+      ],
+      "priority": 122,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 122,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 250,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2404.03384",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.03384",
+        "id:SemanticScholar:c7453d3e481cd419ec103af45aed2a76ac4d55e3",
+        "id:arXiv:2404.03384",
+        "title:longvlm efficient long video understanding via large language models",
+        "url:https://arxiv.org/abs/2404.03384"
+      ],
+      "record": {
+        "title": "LongVLM: Efficient Long Video Understanding via Large Language Models",
+        "source_url": "https://arxiv.org/abs/2404.03384",
+        "year": 2024,
+        "published": "2024-04-04",
+        "venue": "European Conference on Computer Vision",
+        "citation_count": 182,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Empowered by Large Language Models (LLMs), recent advancements in Video-based LLMs (VideoLLMs) have driven progress in various video understanding tasks. These models encode video representations through pooling or query aggregation over a vast number of visual tokens, making computational and memory costs affordable. Despite successfully providing an overall comprehension of video content, existing VideoLLMs still face challenges in achieving detailed understanding due to overlooking local information in long-term videos. To tackle this challenge, we introduce LongVLM, a simple yet powerful VideoLLM for long video understanding, building upon the observation that long videos often consist of sequential key events, complex actions, and camera movements. Our approach proposes to decompose long videos into multiple short-term segments and encode local features for each segment via a hierarchical token merging module. These features are concatenated in temporal order to maintain the storyline across sequential short-term segments. Additionally, we propose to integrate global semantics into each local feature to enhance context understanding. In this way, we encode video representations that incorporate both local and global information, enabling the LLM to generate comprehensive responses for long-term videos. Experimental results on the VideoChatGPT benchmark and zero-shot video question-answering datasets demonstrate the superior capabilities of our model over the previous state-of-the-art methods. Qualitative examples show that our model produces more precise responses for long video understanding. Code is available at https://github.com/ziplab/LongVLM.",
+        "identifiers": [
+          "SemanticScholar:c7453d3e481cd419ec103af45aed2a76ac4d55e3"
+        ],
+        "semantic_scholar_id": "c7453d3e481cd419ec103af45aed2a76ac4d55e3",
+        "canonical_id": "arXiv:2404.03384",
+        "arxiv_id": "2404.03384",
+        "doi": "10.48550/arXiv.2404.03384",
+        "authors": [
+          "Yuetian Weng",
+          "Mingfei Han",
+          "Haoyu He",
+          "Xiaojun Chang",
+          "Bo-Han Zhuang"
+        ],
+        "priority": 182,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 182,
+          "citation_count": 182,
+          "total": 182,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 922,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3719027.3765150",
+      "identity_tokens": [
+        "id:DOI:10.1145/3719027.3765150",
+        "id:SemanticScholar:a4f853b56b21110695c5efd4943dbd1ec7bef998",
+        "title:thor secure transformer inference with homomorphic encryption",
+        "url:https://doi.org/10.1145/3719027.3765150"
+      ],
+      "record": {
+        "title": "THOR: Secure Transformer Inference with Homomorphic Encryption",
+        "source_url": "https://doi.org/10.1145/3719027.3765150",
+        "year": 2025,
+        "published": "2025-11-19",
+        "venue": "IACR Cryptology ePrint Archive",
+        "citation_count": 80,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models are increasingly deployed in cloud environments, privacy concerns have become a significant issue. To address this challenge, we present THOR, a non-interactive framework for secure transformer inference using homomorphic encryption. We first propose efficient matrix multiplication algorithms based on diagonal-major encoding and compact ciphertext packing. We extend these basic algorithms to support plaintext-ciphertext matrix multiplication (PC-MM) using parallel submatrix computation and ciphertext-ciphertext multiplication (CC-MM) with a baby-step giant-step strategy. We also design efficient evaluation strategies for non-linear functions such as softmax, LayerNorm, GELU, and Tanh, by integrating advanced approximation techniques with adaptive iterative methods. Our matrix multiplication algorithms outperform state-of-the-art methods, achieving up to 5.3X speedup in PC-MM for ℝ 768 X 768 X ℝ768X128 over BOLT (Pang et al., IEEE S&P 2024) and 9.7X in CC-MM for 12X (ℝ64X128 X ℝ128X128) over Powerformer (Park et al., Preprint). THOR enables secure inference on the BERT-base model with 128 tokens in 10 minutes on a single GPU, while maintaining comparable accuracy on GLUE tasks.",
+        "identifiers": [
+          "SemanticScholar:a4f853b56b21110695c5efd4943dbd1ec7bef998"
+        ],
+        "semantic_scholar_id": "a4f853b56b21110695c5efd4943dbd1ec7bef998",
+        "doi": "10.1145/3719027.3765150",
+        "canonical_id": "DOI:10.1145/3719027.3765150",
+        "authors": [
+          "Jungho Moon",
+          "D. Yoo",
+          "Xiaoqian Jiang",
+          "Miran Kim"
+        ],
+        "priority": 180,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 80,
+          "citation_count": 80,
+          "total": 180,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 328,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.14722/ndss.2025.230057",
+      "identity_tokens": [
+        "id:DOI:10.14722/ndss.2025.230057",
+        "id:SemanticScholar:6a128a8b9078469dfd28dcfee1b9fdce54e6c31d",
+        "title:bumblebee secure twoparty inference framework for large transformers",
+        "url:https://doi.org/10.14722/ndss.2025.230057"
+      ],
+      "record": {
+        "title": "BumbleBee: Secure Two-party Inference Framework for Large Transformers",
+        "source_url": "https://doi.org/10.14722/ndss.2025.230057",
+        "year": 2023,
+        "published": null,
+        "venue": "IACR Cryptology ePrint Archive",
+        "citation_count": 152,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "—Large transformer-based models have realized state-of-the-art performance on lots of real-world tasks such as natural language processing and computer vision. However, with the increasing sensitivity of the data and tasks they handle, privacy has become a major concern during model deployment. In this work, we focus on private inference in two-party settings, where one party holds private inputs and the other holds the model. We introduce BumbleBee , a fast and communication-friendly two-party private transformer inference system. Our contributions are three-fold: First, we propose optimized protocols for matrix multiplication, which significantly reduce communication costs by 80% – 90% compared to previous techniques. Secondly, we develop a methodology for constructing efficient protocols tailored to the non-linear activation functions employed in transformer models. The proposed activation protocols have realized a significant enhancement in processing speed, alongside a remarkable reduction in communication costs by 80% – 95% compared with two prior methods. Lastly, we have performed extensive benchmarks on five transformer models. BumbleBee demonstrates its capability by evaluating the LLaMA-7B model, generating one token in approximately 8 minutes using CPUs. Our results further reveal that BumbleBee outperforms Iron (NeurIPS22) by over an order of magnitude and is three times faster than BOLT (Oakland24) with one-tenth communication.",
+        "identifiers": [
+          "SemanticScholar:6a128a8b9078469dfd28dcfee1b9fdce54e6c31d"
+        ],
+        "semantic_scholar_id": "6a128a8b9078469dfd28dcfee1b9fdce54e6c31d",
+        "doi": "10.14722/ndss.2025.230057",
+        "canonical_id": "DOI:10.14722/ndss.2025.230057",
+        "authors": [
+          "Wen-jie Lu",
+          "Zhicong Huang",
+          "Zhen Gu",
+          "Jing-Yu Li",
+          "Jian Liu",
+          "Kui Ren",
+          "Cheng Hong",
+          "Tao Wei",
+          "Wen-Guang Chen"
+        ],
+        "priority": 152,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 152,
+          "citation_count": 152,
+          "total": 152,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1200,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.56553/popets-2024-0107",
+      "identity_tokens": [
+        "id:DOI:10.56553/popets-2024-0107",
+        "id:SemanticScholar:8d8e8f5cfdd68691043f2ff97e155715f8b70fbe",
+        "title:sigma secure gpt inference with function secret sharing",
+        "url:https://doi.org/10.56553/popets-2024-0107"
+      ],
+      "record": {
+        "title": "SIGMA: Secure GPT Inference with Function Secret Sharing",
+        "source_url": "https://doi.org/10.56553/popets-2024-0107",
+        "year": 2024,
+        "published": "2024-10-01",
+        "venue": "IACR Cryptology ePrint Archive",
+        "citation_count": 146,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Secure 2-party computation (2PC) enables secure inference that offers protection for both proprietary machine learning (ML) models and sensitive inputs to them. However, the existing secure inference solutions suffer from high latency and communication overheads, particularly for transformers. Function secret sharing (FSS) is a recent paradigm for obtaining efficient 2PC protocols with a preprocessing phase. We provide Sigma, the first end-to-end system for secure transformer inference based on FSS. By constructing new FSS-based protocols for complex machine learning functionalities, such as Softmax, GeLU and SiLU, and also accelerating their computation on GPUs, Sigma improves the latency of secure inference of transformers by 11 - 19x over the state-of-the-art that uses preprocessing and GPUs. We present the first secure inference of generative pre-trained transformer (GPT) models. In particular, Sigma executes Meta's Llama2 (available on HuggingFace) with 13 billion parameters in 44 seconds and GPT2 in 1.6 seconds",
+        "identifiers": [
+          "SemanticScholar:8d8e8f5cfdd68691043f2ff97e155715f8b70fbe"
+        ],
+        "semantic_scholar_id": "8d8e8f5cfdd68691043f2ff97e155715f8b70fbe",
+        "doi": "10.56553/popets-2024-0107",
+        "canonical_id": "DOI:10.56553/popets-2024-0107",
+        "authors": [
+          "Kanav Gupta",
+          "Neha Jawalkar",
+          "Ananta Mukherjee",
+          "Nishanth Chandran",
+          "Divya Gupta",
+          "A. Panwar",
+          "Rahul Sharma"
+        ],
+        "priority": 146,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 146,
+          "citation_count": 146,
+          "total": 146,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 742,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2307.12533",
+      "identity_tokens": [
+        "id:DOI:10.1051/sands/2025014",
+        "id:SemanticScholar:5d74e5fe624aa81c94a6ecf74436fce214ebd0b2",
+        "id:arXiv:2307.12533",
+        "title:puma secure inference of llama7b in five minutes",
+        "url:https://arxiv.org/abs/2307.12533"
+      ],
+      "record": {
+        "title": "PUMA: Secure Inference of LLaMA-7B in Five Minutes",
+        "source_url": "https://arxiv.org/abs/2307.12533",
+        "year": 2023,
+        "published": "2023-07-24",
+        "venue": "Security and Safety",
+        "citation_count": 129,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer models (e.g., Bert and GPT) have shown their dominance in machine learning tasks. Many cloud companies have begun to provide services based on Transformer models, examples include translation and text-speech conversion. However, such a service inevitably requires access to the client’s data, which might contain sensitive information. Theoretically, running the services under secure multi-party computation (MPC) could protect clients’ privacy. However, current MPC frameworks are still limited in terms of model performance, efficiency, deployment, and functionality, especially when facing complex Transformer models. To this end, we propose an MPC framework Puma to enable secure and efficient Transformer model inference. We first design high-quality approximations for the bottleneck functions in Transformers such as GELU and Softmax, reducing about 20% − 76% computation and communication costs than state-of-the-art works without performance drop. Then, we provide concrete instantiations for secure Embedding and LayerNorm. These implementations produce correct results and integrate compatible system architectures of\ncleartext Transformer models. Finally, we conducted extensive experiments on six popular benchmarks: text classification/generation/summarization/translation, audio-to-text, and image-to-text. Results show that Puma can finish most tasks in several minutes, with comparable model performance (e.g., accuracy) as cleartext, and even evaluate LLaMA-7B in less than 5 minutes to generate 1 token.",
+        "identifiers": [
+          "SemanticScholar:5d74e5fe624aa81c94a6ecf74436fce214ebd0b2"
+        ],
+        "semantic_scholar_id": "5d74e5fe624aa81c94a6ecf74436fce214ebd0b2",
+        "canonical_id": "arXiv:2307.12533",
+        "arxiv_id": "2307.12533",
+        "doi": "10.1051/sands/2025014",
+        "authors": [
+          "Ye Dong",
+          "Wen-jie Lu",
+          "Yancheng Zheng",
+          "Haoqi Wu",
+          "Derun Zhao",
+          "Jin Tan",
+          "Zhicong Huang",
+          "Cheng Hong",
+          "Tao Wei",
+          "Wen-Guang Chen"
+        ],
+        "priority": 129,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 129,
+          "citation_count": 129,
+          "total": 129,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1177,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.05384",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.05384",
+        "id:SemanticScholar:75b2ddfc516c5cd70cea5b0067a4a98e6099d219",
+        "id:arXiv:2602.05384",
+        "title:dolphinv2 universal document parsing via scalable anchor prompting",
+        "url:https://arxiv.org/abs/2602.05384"
+      ],
+      "record": {
+        "title": "Dolphin-v2: Universal Document Parsing via Scalable Anchor Prompting",
+        "source_url": "https://arxiv.org/abs/2602.05384",
+        "year": 2026,
+        "published": "2026-02-05",
+        "venue": "arXiv.org",
+        "citation_count": 22,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Document parsing has garnered widespread attention as vision-language models (VLMs) advance OCR capabilities. However, the field remains fragmented across dozens of specialized models with varying strengths, forcing users to navigate complex model selection and limiting system scalability. Moreover, existing two-stage approaches depend on axis-aligned bounding boxes for layout detection, failing to handle distorted or photographed documents effectively. To this end, we present Dolphin-v2, a two-stage document image parsing model that substantially improves upon the original Dolphin. In the first stage, Dolphin-v2 jointly performs document type classification (digital-born versus photographed) alongside layout analysis. For digital-born documents, it conducts finer-grained element detection with reading order prediction. In the second stage, we employ a hybrid parsing strategy: photographed documents are parsed holistically as complete pages to handle geometric distortions, while digital-born documents undergo element-wise parallel parsing guided by the detected layout anchors, enabling efficient content extraction. Compared with the original Dolphin, Dolphin-v2 introduces several crucial enhancements: (1) robust parsing of photographed documents via holistic page-level understanding, (2) finer-grained element detection (21 categories) with semantic attribute extraction such as author information and document metadata, and (3) code block recognition with indentation preservation, which existing systems typically lack. Comprehensive evaluations are conducted on DocPTBench, OmniDocBench, and our self-constructed RealDoc-160 benchmark. The results demonstrate substantial improvements: +14.78 points overall on the challenging OmniDocBench and 91% error reduction on photographed documents, while maintaining efficient inference through parallel processing.",
+        "identifiers": [
+          "SemanticScholar:75b2ddfc516c5cd70cea5b0067a4a98e6099d219"
+        ],
+        "semantic_scholar_id": "75b2ddfc516c5cd70cea5b0067a4a98e6099d219",
+        "canonical_id": "arXiv:2602.05384",
+        "arxiv_id": "2602.05384",
+        "doi": "10.48550/arXiv.2602.05384",
+        "authors": [
+          "Hao Feng",
+          "Wei Shi",
+          "Ke-Ke Zhang",
+          "Xiang Fei",
+          "Lei Liao",
+          "Dingkang Yang",
+          "Yong-Kun Du",
+          "Xuecheng Wu",
+          "Jingqun Tang",
+          "Yang Liu",
+          "Hong Chen",
+          "Can Huang"
+        ],
+        "priority": 122,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 22,
+          "citation_count": 22,
+          "total": 122,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 250,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:cbb734a199f6db37cad7c78b30fabc1366d921165bb54fd79d354379db4596fa",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

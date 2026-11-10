@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-fb31346038b964f8-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2607.22562",
+  "reason": "LLMエージェントの長期記憶を、意味的重要性・エンティティ情報・利用履歴・重複・時間経過による生存スコアで保持・削除する方式。LoCoMoとLongMemEval-sで比較し、Qwen2.5-7Bのmulti-hopで最良baseline比+9.65 F1を報告。メモリ保持量や検索効率には関係するが、主眼はエージェントの回答品質・記憶管理で、GPU/KVメモリや推論ランタイムの直接最適化ではない。",
+  "title": "SF-AMS: Strategic Forgetting for Structured Memory in LLM Agent",
+  "identity_tokens": [
+    "arXiv:2607.22562"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb31346038b9",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-00e9ceb62afaf5b1-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2410.20399",
+  "reason": "attention/GEMM/linear-attention等の高速GPU kernelはLLM推論へ直接利用できるが、主対象は汎用AI kernel programming frameworkで推論専用ではないためborderline。",
+  "title": "ThunderKittens: Simple, Fast, and Adorable AI Kernels",
+  "identity_tokens": [
+    "arXiv:2410.20399",
+    "DOI:10.48550/arXiv.2410.20399"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2026-2609.00363-deterministic-llm-inference-gpu-kernels-int8.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-00e9ceb62afa",
+  "source_precheck_request_id": null
+}

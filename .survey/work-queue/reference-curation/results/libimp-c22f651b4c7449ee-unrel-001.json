@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c22f651b4c7449ee-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.01172",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.01172",
+    "identity_tokens": [
+      "arXiv:2610.01172"
+    ],
+    "reason": "Learning-rate scaling and optimizer behavior for hybrid Transformer-SSM training; no inference/serving method or measurement.",
+    "first_checked_at": "2026-10-05T04:02:20+00:00",
+    "last_checked_at": "2026-10-05T04:02:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+    ],
+    "title": "Learning Rate Transfer for Hybrid Transformer-SSM Architectures"
+  },
+  "processed_at": "2026-10-05T04:02:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c22f651b4c74",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

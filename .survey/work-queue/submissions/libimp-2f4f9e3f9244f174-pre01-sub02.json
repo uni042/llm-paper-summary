@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory",
+      "source_url": "https://arxiv.org/abs/2608.20397",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic large language models (LLMs) on the Model Context Protocol (MCP) re-encode verbose tool schemas every turn, so prefill - quadratic in sequence length - dominates time-to-first-token (TTFT) as the tool registry grows. Nexus's primary lever is to decouple routing from the schema-prefill cost: an INT8 semantic lookaside buffer (SLB) with a calibrated cross-encoder margin gate selects tools by retrieval, and arguments are generated over a compressed textual signature (median 19 tokens) rather than over spliced key/value (KV) cache. This path is depth-independent: routing accuracy stays near 89% as the registry scales to 250 tools - where a concatenate-all-schemas baseline overflows the context window entirely - and it reaches a first-argument token 1.66x sooner than a full-schema re-prefill at a ~80% main-context token saving. As a secondary, bounded lever we transplant a compiled schema KV block directly into the live context. This is fundamentally limited by rotary position embedding (RoPE) phase drift: an anchored splice is output-exact, but off-anchor placement corrupts attention, so beyond a threshold P=256 Nexus repairs the seam with a depth-adaptive suffix redecode that escalates to a full re-prefill. The resulting never-regress property is a guarantee on output fidelity (top-1 agreement, D_KL approx. 0) - not on latency, which can dip to 0.98x before converging to parity - alongside a 1.1-1.7x TTFT speedup at moderate depth that narrows to parity at deep context. Two negative results bound the design: the off-anchor RoPE fidelity boundary, and the failure of a reference-free drift gate to predict drift (Spearman rho = 0.193). All measurements are from one model tuple (Qwen2.5-14B-Instruct Q4_K_M) on Apple-silicon unified memory; the qualitative boundaries generalize, while the quantitative envelope is tuple-specific.",
+      "identifiers": [
+        "SemanticScholar:717587f9a25592c8bec90af38876f7f439a82a21"
+      ],
+      "semantic_scholar_id": "717587f9a25592c8bec90af38876f7f439a82a21",
+      "canonical_id": "arXiv:2608.20397",
+      "arxiv_id": "2608.20397",
+      "authors": [
+        "Mustafa Arslan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エージェントのツールスキーマを毎ターン全再符号化する負荷を、INT8の検索用バッファと圧縮シグネチャで削減。別経路のKV接合ではRoPE位相ずれを深さ適応再デコードで補修し、Apple Silicon上のQwen2.5-14BでTTFTを1.1～1.7倍改善する条件と逆効果条件を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Empowering Hybrid Attention Models on NPUs",
+      "source_url": "https://arxiv.org/abs/2609.32114",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid attention models have emerged as a crucial architecture for Large Language Models (LLMs) (e.g., the Qwen3.5 and Kimi series). Their memory and computational efficiency make them highly attractive for on-device inference, forming a promising synergy with edge Neural Processing Units (NPUs). However, naive execution of these hybrid models on edge NPUs fails to deliver these benefits, often bottlenecking the prefill stage due to severe memory-system inefficiencies and architectural mismatches within the linear attention (LA) layers. We present HA-NPU, the first system to enable efficient hybrid attention LLM inference on edge NPUs without modifying the underlying algorithms. HA-NPU enhances execution efficiency by reorganizing the dataflow of the LA components across three levels: (1) At the core level, it partitions workloads by the head dimension and fuses dependent operators, eliminating cross-core global memory accesses; (2) At the operator level, it reorders execution to consume intermediate tensors immediately, drastically minimizing local-buffer pressure; (3) At the tensor level, it employs dataflow-aware layout planning to minimize transformation overhead between matrix and vector processing units. Compared to competitive baselines, HA-NPU achieves up to 35.95$\\times$ LA kernel speedup and 36.14$\\times$ energy reduction, delivering up to 2.03$\\times$ faster end-to-end request latency. The source code will be made publicly available at https://github.com/yinyuanzhang/HA-NPU",
+      "identifiers": [
+        "SemanticScholar:23a9d414dc4f3482940a91394118782d1ef6a152"
+      ],
+      "semantic_scholar_id": "23a9d414dc4f3482940a91394118782d1ef6a152",
+      "canonical_id": "arXiv:2609.32114",
+      "arxiv_id": "2609.32114",
+      "authors": [
+        "Yin-Yuan Zhang",
+        "Da-Liang Xu",
+        "Xiao-Long Huang",
+        "Wang-Song Yin",
+        "Yun Ma",
+        "Meng-Wei Xu",
+        "Gang Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ハイブリッド注意モデルの線形注意演算をエッジNPUで効率化するHA-NPU。ヘッド次元分割と演算融合、中間値の即時消費、レイアウト最適化によりメモリ転送を減らす。線形注意カーネル最大35.95倍、要求全体最大2.03倍高速化を報告し、推論ランタイムとハードウェア協調が主題。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Decode-Latency Feedback Prefill: A Model-Free Controller and Its Generalization Limits",
+      "source_url": "https://arxiv.org/abs/2609.38386",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Concurrent autoregressive inference creates a fundamental interference problem: prefilling a newly arrived long prompt can delay tokens for requests that are already decoding. Fixed prefill chunks reduce this interference, but the best chunk size depends on the model, hardware, load, and latency objective. We introduce Decode-Latency Feedback Prefill (DLFP), a model-free controller that changes only prefill work that overlaps active decodes. After a guarded scheduling cycle, DLFP uses the observed interval as proportional feedback to resize the next prefill chunk; isolated prefills remain unrestricted. We implement DLFP in vLLM and evaluate it with open-loop Poisson arrivals, exact token accounting, raw request traces, and NVIDIA telemetry. On Qwen3-0.6B in BF16 on one A100 80 GB GPU, three paired 100-request trials reduce P99 inter-token latency by 24.8%, 30.1%, and 28.2% (mean 27.7%, paired 95% confidence interval 21.0% to 34.3%) with exact output agreement, no failures, and unchanged SLO compliance. The benefit is not free: mean P99 time to first token increases 34.8% while remaining inside the declared SLO. Crucially, the mechanism does not generalize to Qwen3-8B, Qwen3-32B, or a two-GPU tensor-parallel configuration. We trace the failure to an asynchronous scheduler-call interval that is only a proxy for completed GPU iteration time. This negative result defines the boundary of the contribution and motivates a completion-timed controller for concurrent CPU and on-device inference. We do not claim mobile-device performance; the present work is a reproducible proof-of-concept and generalization study.",
+      "identifiers": [
+        "SemanticScholar:4819aec328da16cb1394b0d8e31c06cd8354409e"
+      ],
+      "semantic_scholar_id": "4819aec328da16cb1394b0d8e31c06cd8354409e",
+      "canonical_id": "arXiv:2609.38386",
+      "arxiv_id": "2609.38386",
+      "authors": [
+        "Gaurav Agarwal",
+        "Ashish Garg",
+        "Isha Singhal"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      },
+      "reason": "vLLMのプリフィル分割長を、同時デコード中に観測したトークン間遅延でフィードバック制御するDLFP。A100上のQwen3-0.6BではP99トークン間遅延を平均27.7%減らす一方、TTFTのP99は34.8%増加し、8B・32Bや2GPUには一般化しないという負の結果も報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FlashCommunication V2: Bit Splitting and Spike Reserving for Any Bit Communication",
+      "source_url": "https://arxiv.org/abs/2508.03760",
+      "year": 2025,
+      "published": "2025-08-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Nowadays, communication bottlenecks have emerged as a critical challenge in the distributed training and deployment of large language models (LLMs). This paper introduces FlashCommunication V2, a novel communication paradigm enabling efficient cross-GPU transmission at arbitrary bit widths. Its core innovations lie in the proposed bit splitting and spike reserving techniques, which address the challenges of low-bit quantization. Bit splitting decomposes irregular bit widths into basic units, ensuring compatibility with hardware capabilities and thus enabling transmission at any bit width. Spike reserving, on the other hand, retains numerical outliers (i.e., minima and maxima) as floating-point numbers, which shrinks the dynamic numerical range and pushes the quantization limits to 2-bit with acceptable losses. FlashCommunication V2 significantly enhances the flexibility and resource utilization of communication systems. Through meticulous software-hardware co-design, it delivers robust performance and reduced overhead across both NVLink-based and PCIe-based architectures, achieving a maximum 3.2$\\times$ speedup in AllReduce and 2$\\times$ in All2All communication.",
+      "identifiers": [
+        "SemanticScholar:1a4947b830efa340ee7093a7771d7f7d27d86579"
+      ],
+      "semantic_scholar_id": "1a4947b830efa340ee7093a7771d7f7d27d86579",
+      "canonical_id": "arXiv:2508.03760",
+      "arxiv_id": "2508.03760",
+      "doi": "10.48550/arXiv.2508.03760",
+      "authors": [
+        "Qing-Yuan Li",
+        "Bo Zhang",
+        "Hui Kang",
+        "Tianhao Xu",
+        "Yu-Lei Qian",
+        "Yu-Chen Xie",
+        "Lin Ma"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 452,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GPU間通信を任意ビット幅で扱うため、ビット分割と外れ値の浮動小数保持を組み合わせる。NVLinkとPCIeでAllReduce最大3.2倍、All2All最大2倍を報告し、分散LLMの学習・配備双方に用いる低ビット通信基盤で、MoE推論のエキスパート通信にも関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2f4f9e3f9244",
+    "round": "libimp-2f4f9e3f9244f174-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2f4f9e3f9244f174-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2f4f9e3f9244f174-pre01.json",
+    "receipt": "sha256:4211ce0e20005b44e88cb144b8e99effc32daeb60191e746956adcc2a32e72e8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2f4f9e3f9244",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

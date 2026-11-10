@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "bd0a9470bc3b44ede9fb8d5b84299a9f3d97e9157b4cbe8613a2efd9a37c5572",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4c7d1830cd11--libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2511.19676",
+  "worker_completed_at": "2026-10-14T18:00:00+09:00",
+  "worker_run_key": "20261014-1800-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5070,
+    "body_paragraphs": 28,
+    "method_chars": 1426,
+    "method_paragraphs": 9,
+    "evaluation_chars": 1543,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.19676-interlace-interleaved-layer-pruning-and-efficient-adaptation-in-large-vi.md と 18 段落 / 3803文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:39:16+00:00"
+}

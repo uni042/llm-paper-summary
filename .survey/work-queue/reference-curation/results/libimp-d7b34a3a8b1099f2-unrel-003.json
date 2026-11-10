@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7b34a3a8b1099f2-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.01643",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.01643",
+    "identity_tokens": [
+      "arXiv:2512.01643"
+    ],
+    "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+    "first_checked_at": "2026-10-06T04:59:48+00:00",
+    "last_checked_at": "2026-10-06T04:59:48+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+      "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+    ],
+    "title": "ViT3: Unlocking Test-Time Training in Vision"
+  },
+  "processed_at": "2026-10-06T04:59:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7b34a3a8b10",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

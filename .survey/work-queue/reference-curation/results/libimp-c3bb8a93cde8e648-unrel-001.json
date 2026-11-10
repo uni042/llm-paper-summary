@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c3bb8a93cde8e648-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.14730",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.14730",
+    "identity_tokens": [
+      "arXiv:2405.14730"
+    ],
+    "reason": "worklistの題名は再識別（Re-Identification）に使う埋め込み表現の圧縮を研究対象としており、LLMの生成推論、KVキャッシュ、推論サービング、MoE実行、推論カーネル等を最終適用先とする記述がない。再識別アプリケーション向けの埋め込み圧縮であることが題名で明示されるため、現在のLLM推論システムサーベイの対象外と判定した。abstract・本文は未確認であり、今後一次資料でLLM推論への実質的な寄与が見つかれば再判定可能。",
+    "first_checked_at": "2026-10-27T09:50:16+00:00",
+    "last_checked_at": "2026-10-27T09:50:16+00:00",
+    "linked_from": [],
+    "title": "Embedding Compression for Efficient Re-Identification"
+  },
+  "processed_at": "2026-10-27T09:50:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c3bb8a93cde8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

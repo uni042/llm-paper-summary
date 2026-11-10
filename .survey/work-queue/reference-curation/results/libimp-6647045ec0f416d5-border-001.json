@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6647045ec0f416d5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2006.16362",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2006.16362",
+    "identity_tokens": [
+      "arXiv:2006.16362"
+    ],
+    "reason": "一次要旨は、複数注意ヘッドのキー・クエリ投影の冗長性を減らす共有射影のモデル構造を提案し、投影パラメータを4分の1に削減しつつ同等の精度と速度を維持すると述べる。推論ランタイム、KV管理、GPUカーネル、分散実行等のシステム機構は要旨から確認できず、主な貢献はモデルアーキテクチャと学習済み重みの再パラメータ化にあるため、現行サーベイでは境界的とする。",
+    "first_checked_at": "2026-10-12T15:14:02+00:00",
+    "last_checked_at": "2026-10-12T15:14:02+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Multi-Head Attention: Collaborate Instead of Concatenate"
+  },
+  "processed_at": "2026-10-12T15:14:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6647045ec0f4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

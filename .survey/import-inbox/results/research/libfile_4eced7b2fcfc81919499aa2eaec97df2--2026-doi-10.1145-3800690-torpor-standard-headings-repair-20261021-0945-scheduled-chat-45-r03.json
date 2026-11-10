@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "0ad874fb5224255263212c32ac5d7a13763cbf06efd5540e9df86359559efd50",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_4eced7b2fcfc81919499aa2eaec97df2--2026-doi-10.1145-3800690-torpor-standard-headings-repair-20261021-0945-scheduled-chat-45-r03.md",
+  "canonical_id": "DOI:10.1145/3800690",
+  "worker_completed_at": "2026-10-21T10:07:11+09:00",
+  "worker_run_key": "20261021-0945-scheduled-chat-45/r03",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7419,
+    "body_paragraphs": 36,
+    "method_chars": 2963,
+    "method_paragraphs": 16,
+    "evaluation_chars": 1193,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2026-7ca899e20e0a-enabling-low-latency-gpu-efficient-serverless-inference-with-model-swapp.md と 29 段落 / 6552文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T17:25:00+00:00"
+}

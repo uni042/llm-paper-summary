@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1938c08017206969-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.28127",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.28127",
+    "identity_tokens": [
+      "arXiv:2606.28127"
+    ],
+    "reason": "Primary abstract reviewed: The AI community has framed the relationship between large language models (LLMs) and world models as a dichotomy: LLMs predict tokens; world models simulate reality. Yann LeCun argues in 2022 that reaching general intelligence requires abandoning autoregressive token prediction in favour of latent-space architectures. This framing is unnecessarily binary. Two claims will be defended. First, LLMs are a degenerate spe… Out of scope: Conceptual world-model discussion without an inference-efficiency method or evaluation.",
+    "first_checked_at": "2026-10-05T11:42:00+00:00",
+    "last_checked_at": "2026-10-05T11:42:00+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "From Tokens to States: LLMs as a Special Case of World Models and the Continuous Path Beyond"
+  },
+  "processed_at": "2026-10-05T11:42:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1938c0801720",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

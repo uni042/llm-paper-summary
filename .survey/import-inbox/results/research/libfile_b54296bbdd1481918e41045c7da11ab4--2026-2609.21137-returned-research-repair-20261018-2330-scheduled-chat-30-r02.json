@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7b4391e9fc820255ce04a70119df4e8f9c0c2597b0227bafc1732ec70a67b86e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_b54296bbdd1481918e41045c7da11ab4--2026-2609.21137-returned-research-repair-20261018-2330-scheduled-chat-30-r02.md",
+  "canonical_id": "arXiv:2609.21137",
+  "worker_completed_at": "2026-10-18T23:34:03+09:00",
+  "worker_run_key": "20261018-2330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7679,
+    "body_paragraphs": 42,
+    "method_chars": 2423,
+    "method_paragraphs": 14,
+    "evaluation_chars": 2452,
+    "limitation_chars": 696,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2609.21137-a-multi-engine-dataflow-for-moe-decoding-on-aws-tranium.md と 24 段落 / 5598文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-18T15:54:47+00:00"
+}

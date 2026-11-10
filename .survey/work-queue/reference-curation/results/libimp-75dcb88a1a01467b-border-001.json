@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75dcb88a1a01467b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.19537",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.19537",
+    "identity_tokens": [
+      "arXiv:2606.19537"
+    ],
+    "reason": "collective inferenceの形式理論が主題。O(diam²)は線形Gaussianモデルの理論コストで、通常のLLM serving比較や実測最適化でない。",
+    "first_checked_at": "2026-10-05T02:57:04+00:00",
+    "last_checked_at": "2026-10-05T02:57:04+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+    ],
+    "title": "Mesh Inference: A Formal Model of Collective Inference Without a Center"
+  },
+  "processed_at": "2026-10-05T02:57:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75dcb88a1a01",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "lib-20260928-unrelated-arxiv-2508-00083",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.00083",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.00083",
+    "identity_tokens": [
+      "arXiv:2508.00083"
+    ],
+    "reason": "code generation agentのsurveyで推論systems効率の新規手法を提示しない。",
+    "first_checked_at": "2026-09-27T21:22:11+00:00",
+    "last_checked_at": "2026-09-27T21:22:11+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "A Survey on Code Generation with LLM-based Agents"
+  },
+  "processed_at": "2026-09-27T21:22:11+00:00",
+  "worker_id": "survey-github-import",
+  "run_key": "library-import-20260928",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

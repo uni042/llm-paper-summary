@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dc42ed0ea43b7558-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2104.08682",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2104.08682",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2104.08682",
+      "arXiv:2104.08682"
+    ],
+    "reason": "BERTを資源制約下へ配備するため20倍のweight/FLOPs圧縮を狙うため推論圧縮に近いが、中心的な新規性はpre-train/fine-tune/pruning間の知識移送を利用するknowledge-aware sparse pruning学習手順で、実測serving runtime評価は主題でないため境界扱い。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "worker-worklist-30 rank 446"
+    ],
+    "title": "Rethinking Network Pruning -- under the Pre-train and Fine-tune Paradigm"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dc42ed0ea43b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

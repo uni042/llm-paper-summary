@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "lib-20260928-borderline-arxiv-2508-14444",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.14444",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.14444",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2508.14444",
+      "arXiv:2508.14444"
+    ],
+    "reason": "推論スループットの実測はあるが、主貢献はモデル設計・学習レシピ・モデル公開で、基盤研究としての比重が境界的である。",
+    "first_checked_at": "2026-09-27T21:24:11+00:00",
+    "last_checked_at": "2026-09-27T21:24:11+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-30.json#rank-496"
+    ],
+    "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model"
+  },
+  "processed_at": "2026-09-27T21:24:11+00:00",
+  "worker_id": "survey-github-import",
+  "run_key": "library-import-20260928",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

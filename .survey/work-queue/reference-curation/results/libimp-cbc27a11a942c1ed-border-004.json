@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cbc27a11a942c1ed-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3746027.3755305",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3746027.3755305",
+    "identity_tokens": [
+      "DOI:10.1145/3746027.3755305",
+      "PRIMARY:https://doi.org/10.1145/3746027.3755305"
+    ],
+    "reason": "The candidate DOI and title are retained, but the ACM primary URL `https://dl.acm.org/doi/10.1145/3746027.3755305` returned `(403) Forbidden`; no primary abstract was retrievable.",
+    "first_checked_at": "2026-10-10T08:16:46+00:00",
+    "last_checked_at": "2026-10-10T08:16:46+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "BOLT: Fewer Tokens but More Performance Retention for Efficient Vision-Language Models Inference"
+  },
+  "processed_at": "2026-10-10T08:16:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cbc27a11a942",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

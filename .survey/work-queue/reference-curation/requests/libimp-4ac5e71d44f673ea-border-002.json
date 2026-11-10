@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-4ac5e71d44f673ea-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1109/LES.2025.3595439",
+  "reason": "題名はCNN向けearly-exitとselective predictionの組み合わせを示す。adaptive inferenceとの接点はあるが、題名だけではLLM推論基盤・servingとの接続を確定できず、一次要旨も取得できなかったためborderlineとする。 Primary abstract retrieval evidence: official publisher URL https://ieeexplore.ieee.org/document/11111706; Crossref REST metadata resolved the DOI to IEEE and the exact registered title, and links this DOI to the exact IEEE Xplore record URL. Browser attempt at https://ieeexplore.ieee.org/document/11111706 on 2026-10-11T04:42:52Z: Browser retrieval returned the IEEE Xplore JavaScript/robot-check interstitial; no abstract was exposed.",
+  "title": "Combining Early Exit and Selective Prediction for Convolutional Neural Networks",
+  "identity_tokens": [
+    "doi:10.1109/les.2025.3595439",
+    "PRIMARY:https://ieeexplore.ieee.org/document/11111706"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ac5e71d44f6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

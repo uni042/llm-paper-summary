@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d2fd4ed74b142f6d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.17087",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.17087",
+    "identity_tokens": [
+      "arXiv:2608.17087"
+    ],
+    "reason": "線形時相論理の代数的微分意味論・評価エンジンを扱い、LLM推論/serving効率への寄与は要旨にない。",
+    "first_checked_at": "2026-10-05T08:27:46+00:00",
+    "last_checked_at": "2026-10-05T08:27:46+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+    ],
+    "title": "Backward through Time, Algebraically"
+  },
+  "processed_at": "2026-10-05T08:27:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d2fd4ed74b14",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

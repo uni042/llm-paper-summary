@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260917T061300JST-scheduled-chat-normal",
+  "worker_id": "scheduled-chat-normal-20260917T061300JST",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-5bed14c683ee7a49",
+      "claim_id": "claim-7ec1d1e19aea8ef2d1f6362f",
+      "worker_id": "scheduled-chat-normal-20260917T061300JST",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-7ec1d1e19aea8ef2d1f6362f",
+      "claimed_at": "2026-09-16T23:28:37+00:00",
+      "expires_at": "2026-09-17T00:58:37+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-5bed14c683ee7a49"
+      ],
+      "job": {
+        "job_id": "job-research-5bed14c683ee7a49",
+        "type": "research",
+        "parent_job_id": "job-390a2ff0c6f51a4c",
+        "priority": 88,
+        "canonical_id": "arXiv:2505.05950",
+        "title": "FloE: On-the-Fly MoE Inference",
+        "source_url": "https://arxiv.org/abs/2505.05950",
+        "paper_path": "papers/inference/05-moe-expert-offload/2025-2505.05950-floe-on-the-fly-moe-inference.md",
+        "selection_reason": "offloaded MoE expert内部の冗長性を圧縮してPCIe転送量を減らし、Mixtral-8x7Bでexpert当たり9.3x圧縮、11GB VRAMでの実行、DeepSpeed-MII比48.7x高速化を報告。expert offloadのdata movement削減として直接的な価値が高い。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T19:03:45+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-16T23:28:37+00:00",
+  "checkpoint_released": 0
+}

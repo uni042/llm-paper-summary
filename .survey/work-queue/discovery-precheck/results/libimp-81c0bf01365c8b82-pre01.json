@@ -1,0 +1,692 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-81c0bf01365c8b82-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-81c0bf01365c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/hpca68181.2026.11408526",
+    "DOI:10.1109/isiber68248.2026.11469930",
+    "DOI:10.1109/swc62898.2024.00208",
+    "DOI:10.1109/tccn.2026.3694872",
+    "DOI:10.1109/tcomm.2026.3686718",
+    "DOI:10.1145/3774904.3792243",
+    "DOI:10.14722/ndss.2026.230035"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f62375f526e53e338a3ea74e689a900c4d224731",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T13:04:48.277990+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/hpca68181.2026.11408526",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/isiber68248.2026.11469930",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/swc62898.2024.00208",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tccn.2026.3694872",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tcomm.2026.3686718",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3774904.3792243",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.14722/ndss.2026.230035",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Characterizing Cloud-Native LLM Inference at Bytedance and Exposing Optimization Challenges and Opportunities for Future AI Accelerators",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408526",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As a major provider of LLM inference services, ByteDance has continuously explored diverse accelerator options to meet the rapidly growing inference demands of various heterogeneous LLM scenarios with higher cost-effectiveness, thereby enabling LLMs to serve more people worldwide. However, during this process, we have found that the complexity and opacity of cloud scenarios and corresponding cloud accelerators make it difficult for academia and many innovative chip startups to fully understand the real demands and challenges of these scenarios, which in turn severely restricts innovation and application potential in this field. To bridge this gap, we first present and analyze the data and characteristics of the ByteDance Doubao LLM app across multiple dimensions, helping the community understand real-world cloud scenarios, and detail the challenges and opportunities we have identified. Second, we propose and plan to open-source our multi-level evaluation framework, XPU-Perf, which includes benchmarks spanning instructions, operators, and models. This framework improves interpretability and trustworthiness, and helps promising new accelerator architectures gain wider adoption and development. Finally, we present comparative results of four typical accelerators, summarize their shortcomings and challenges, conduct in-depth analysis, and highlight numerous architectural and scheduling innovation opportunities we have observed.",
+      "identifiers": [
+        "SemanticScholar:78e7e76af18c2b4ffdb1b0dece52e1defbc2cd5e"
+      ],
+      "semantic_scholar_id": "78e7e76af18c2b4ffdb1b0dece52e1defbc2cd5e",
+      "doi": "10.1109/HPCA68181.2026.11408526",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408526",
+      "authors": [
+        "Jing-Wei Cai",
+        "De-Hao Kong",
+        "Han-Tao Huang",
+        "Zishang Jiang",
+        "Zi-Xuan Ma",
+        "Qing-Yu Guo",
+        "Zhen-Xing Zhang",
+        "Guiming Shi",
+        "Mingyu Gao",
+        "Kai-Sheng Ma",
+        "Ming-Hui Yu"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 272,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      }
+    },
+    {
+      "title": "Optimizing LLM Inference with Language-Aware Multi-Bin Batching for Code Summarization",
+      "source_url": "https://doi.org/10.1109/ISIBER68248.2026.11469930",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "2026 International Seminar on Intelligent Business and Edge-Computing Research (ISIBER)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) continues to grow in scale. Larger model scale increases computational demands and creates challenges in maintaining low latency and high throughput. These challenges become even more complex in code summarization because input varies across programming languages. In this case, the generation length and inference performance are influenced not only by the input size but also by the semantic context of the codes. However, existing batching methods do not consider these contextual factors. This work proposes a language-aware multi-bin batching strategy that optimizes inference based on both predicted generation length and programming-language features. The generation length predictor is implemented using random forest model and support vector machine model is used as the language classifier. The proposed method consistently provides higher throughput, reaching 4.67 requests per second and 44.15 tokens per second, and achieves lower latency at 2.12 seconds. Additionally, it delivers better resource utilization in terms of CPU and GPU usage compared to single inference, static batching, and standard multi-bin batching.",
+      "identifiers": [
+        "SemanticScholar:27088088e6610abb97b8e8cee8ab94fe40c49c78"
+      ],
+      "semantic_scholar_id": "27088088e6610abb97b8e8cee8ab94fe40c49c78",
+      "doi": "10.1109/ISIBER68248.2026.11469930",
+      "canonical_id": "DOI:10.1109/ISIBER68248.2026.11469930",
+      "authors": [
+        "I. M. S. Putra",
+        "R. Sarno",
+        "Kurnia Cahya Febryanto",
+        "K. Sungkono",
+        "Achmad Fahmi",
+        "Sri Andreani Utomo",
+        "F. Taufany",
+        "Arif Abdullah Sagran"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 246,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ONE-PASS: Single Forward Pass Decoding for Listwise Reranking",
+      "source_url": "https://doi.org/10.1145/3774904.3792243",
+      "year": 2026,
+      "published": "2026-04-12",
+      "venue": "The Web Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have been widely adopted in ranking systems, specifically for reranking tasks. Despite the effectiveness, the auto-regressive decoding of LLMs leads to inference latency due to the memory-bandwidth-bound. To alleviate this bottleneck, prior studies have explored single token decoding as an approximation, but they suffer from performance degradation at the tail positions of ranking. In this paper, we propose a Single Forward Pass (SFP)-based method to pre-verify multiple rankings using tree attention, approximating auto-regressive decoding by relevant sub-rankings at each step. However, verifying all possible ranking permutations will lead to factorial-level token computation (N!), making it intractable within SFP. To this end, we first reduce item ranking permutations to combinations (2N), based on the empirical observation that the LLM's next-item generation is less sensitive to the exact ordering of preceding items. Furthermore, we divide the full ranking into K sub-rankings and aggregate their individual probabilities, which further decreases the verification space to 2⌈N/K⌉ • K << 2N. However, naïvely aggregating sub-ranking probabilities leads to inaccurate estimates in listwise ranking. To overcome this, we introduce a Möbius inversion model that explicitly decompose the individual contribution of subsets within a complete lattice, as verified by tree attention. Then, we learn their higher-order effects with a hierarchical self-attention model to reconstruct the full ranking probability. Experiments on both information retrieval and recommendation tasks show the effectiveness of our proposed method.",
+      "identifiers": [
+        "SemanticScholar:f3123decb924d920c9fabddb5c5530e98c68132e"
+      ],
+      "semantic_scholar_id": "f3123decb924d920c9fabddb5c5530e98c68132e",
+      "doi": "10.1145/3774904.3792243",
+      "canonical_id": "DOI:10.1145/3774904.3792243",
+      "authors": [
+        "Ying-Peng Du",
+        "Zhu Sun",
+        "Tian-Jun Wei",
+        "Jie M. Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 201,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Edge Deployment of Mixture-of-Experts Models With Hybrid Expert Quantization",
+      "source_url": "https://doi.org/10.1109/TCCN.2026.3694872",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Transactions on Cognitive Communications and Networking",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models (LLMs) directly at the edge offers significant benefits in reducing inference latency and enhancing privacy protection. However, this approach presents critical technical challenges due to the limited hardware resources available at the edge. In this paper, we explore the deployment of the Mixture-of-Experts (MoE) model, a popular LLM architecture, using weight quantization in a typical edge environment with multiple edge servers. Existing methods that uniformly quantize MoE models do not account for the varying importance of different experts or the dynamic nature of edge requests. To address these issues, we propose a hybrid expert quantization strategy, where each edge server quantizes experts to different bit-widths based on the pReferences of received requests. Furthermore, we implement a comprehensive system optimization that jointly considers expert quantization and request assignment, aiming to achieve high-precision and low-latency inference services. To manage the complex, coupled optimization challenges, we design a reinforcement learning (RL)-based algorithm. To overcome the slow convergence typical of traditional RL, we pre-train the policy network using a system simulator that generates heuristic solutions, thus accelerating the learning process. Extensive experimental results on real datasets demonstrate that our approach significantly outperforms existing methods.",
+      "identifiers": [
+        "SemanticScholar:3c712f8c9cacd0965786f1755d22d23eed1cbf68"
+      ],
+      "semantic_scholar_id": "3c712f8c9cacd0965786f1755d22d23eed1cbf68",
+      "doi": "10.1109/TCCN.2026.3694872",
+      "canonical_id": "DOI:10.1109/TCCN.2026.3694872",
+      "authors": [
+        "Tao Liu",
+        "Qi-Peng Xie",
+        "Zhao-Yang Han",
+        "Wei-Zheng Wang",
+        "Sheng-Li Pan",
+        "Xiang Zhang",
+        "Chun-Hua Su",
+        "Kai-Shun Wu"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "STIP: Three-Party Privacy-Preserving and Lossless Inference for Large Transformers in Production",
+      "source_url": "https://doi.org/10.14722/ndss.2026.230035",
+      "year": 2026,
+      "published": null,
+      "venue": "Network and Distributed System Security Symposium",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "—The privacy of model parameters and user data is crucial for Transformer-based cloud services, such as online chatbots. While recent advances in secure multi-party computation and homomorphic encryption provide strong cryptographic guarantees, their computational overhead makes them infeasible for real-time inference with large-scale Transformer models. In this work, we propose a practical alternative that balances privacy and efficiency in real-world deployments. We introduce a three-party threat model involving a model developer, a cloud model server, and a data owner, capturing the trust assumptions and deployment conditions of practical AI services. Within this framework, we design a semi-symmetric permutation-based protection mechanism and present STIP, the first three-party privacy-preserving inference system for large Transformers de-ployable on commodity hardware. STIP formally bounds privacy leakage while preserving lossless inference accuracy. To further safeguard model parameters, STIP integrates trusted execution environments to resist model extraction and fine-tuning attacks. We evaluate STIP on six representative Transformer model families, including models with up to 70 billion parameters, under three deployment settings. STIP’s efficiency is comparable to unprotected full-cloud inference, for example, STIP achieves 31.7 ms latency on LLaMA2-7B model. STIP also shows effective resistance to various attacks against user data and model parameters. STIP has been deployed in a production environment on our proprietary 70B model. In a three-month online test, STIP brings only 12% additional latency and no",
+      "identifiers": [
+        "SemanticScholar:d0d9c53fdb42deb82e0dd3af4c874ded2c68f0d0"
+      ],
+      "semantic_scholar_id": "d0d9c53fdb42deb82e0dd3af4c874ded2c68f0d0",
+      "doi": "10.14722/ndss.2026.230035",
+      "canonical_id": "DOI:10.14722/ndss.2026.230035",
+      "authors": [
+        "Mu Yuan",
+        "Lan Zhang",
+        "Yi-Hang Cheng",
+        "Miao-Hui Song",
+        "Guoliang Xing",
+        "Xiang-yang Li"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Edge Inference for Large Language Models With Pipeline Parallelism and Batching",
+      "source_url": "https://doi.org/10.1109/TCOMM.2026.3686718",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Transactions on Communications",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Edge computing enables distributed inference for computation-intensive applications. However, the autoregressive nature and large model size of large language models (LLMs) pose challenges for their deployment in wireless edge networks. Existing edge inference methods mainly assume an equivalent delay for each token generation step, which fails to capture the dynamic computational and memory overhead incurred during the decoding process. This paper proposes a latency-sensitive wireless edge inference framework for LLMs, where tasks are grouped into multiple batches and processed in parallel by partitioning the LLM into multiple pipeline stages across heterogeneous edge GPUs. An accurate latency model is established, where the latency of each token generation step increases during the autoregressive generation process. Based on this model, the end-to-end inference latency is minimized, which is formulated as a joint optimization problem of bandwidth allocation, model partitioning, and batch scheduling subject to heterogeneous GPU memory constraints. To solve this NP-hard problem with coupled variables, we develop a polynomial-time alternating optimization algorithm that iteratively optimizes model partitioning and batch scheduling via dynamic programming. The closed-form solutions of wireless bandwidth allocation are derived. Extensive simulations show that our approach reduces latency by up to 42.1% versus state-of-the-art baselines across diverse edge scenarios.",
+      "identifiers": [
+        "SemanticScholar:99e8306d0823bccd84014994a3360afe0f9eb5b7"
+      ],
+      "semantic_scholar_id": "99e8306d0823bccd84014994a3360afe0f9eb5b7",
+      "doi": "10.1109/TCOMM.2026.3686718",
+      "canonical_id": "DOI:10.1109/TCOMM.2026.3686718",
+      "authors": [
+        "Jie Jiang",
+        "Zhi-Xiong Chen",
+        "Hyundung Shin",
+        "Arumgam Nallanathan"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QMLFQ: A Quantization-based Queue Scheduling Framework for Efficient LLM Serving",
+      "source_url": "https://doi.org/10.1109/SWC62898.2024.00208",
+      "year": 2024,
+      "published": "2024-12-02",
+      "venue": "2024 IEEE Smart World Congress (SWC)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fueled by advancements in Large Language Models (LLMs), applications like ChatGPT have ushered in a transformative era for AI-powered interactions. However, the computational demands of LLMs, characterized by their massive parameter size and intricate computations, pose a significant challenge to its model serving. Under high concurrency or resource-constrained scenarios, LLM service systems can experience substantial latency and potential crashes, jeopardizing user experience and system stability. To address this challenge, this paper presents a novel LLM serving framework that leverages dynamic queue scheduling and quantization switching to alleviate computational bottlenecks and reduce response latency. Specifically, we propose an enhanced scheduling algorithm based on the Multi-level Feedback Queue (MLFQ) that dynamically switches between various quantized-level models and prioritizes requests, thereby improving LLM inference parallelism and reducing job completion time (JCT) as well. Through extensive experiments conducted on open-source datasets, we demonstrate that our proposed approach effectively reduces JCTs compared to other leading baselines. This improvement in JCT ultimately leads to enhanced quality of service (QoS) for LLM-based applications.",
+      "identifiers": [
+        "SemanticScholar:a1ad5cafb8928b982722810cb5674d6b906e6292"
+      ],
+      "semantic_scholar_id": "a1ad5cafb8928b982722810cb5674d6b906e6292",
+      "doi": "10.1109/SWC62898.2024.00208",
+      "canonical_id": "DOI:10.1109/SWC62898.2024.00208",
+      "authors": [
+        "Jia-Lin Wu",
+        "Hao Dai",
+        "Jiashu Wu",
+        "Wenming Jin",
+        "Yang Wang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 697,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/hpca68181.2026.11408526",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpca68181.2026.11408526",
+        "id:SemanticScholar:78e7e76af18c2b4ffdb1b0dece52e1defbc2cd5e",
+        "title:characterizing cloudnative llm inference at bytedance and exposing optimization challenges and opportunities for future ai accelerators",
+        "url:https://doi.org/10.1109/HPCA68181.2026.11408526"
+      ],
+      "record": {
+        "title": "Characterizing Cloud-Native LLM Inference at Bytedance and Exposing Optimization Challenges and Opportunities for Future AI Accelerators",
+        "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408526",
+        "year": 2026,
+        "published": "2026-01-31",
+        "venue": "International Symposium on High-Performance Computer Architecture",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As a major provider of LLM inference services, ByteDance has continuously explored diverse accelerator options to meet the rapidly growing inference demands of various heterogeneous LLM scenarios with higher cost-effectiveness, thereby enabling LLMs to serve more people worldwide. However, during this process, we have found that the complexity and opacity of cloud scenarios and corresponding cloud accelerators make it difficult for academia and many innovative chip startups to fully understand the real demands and challenges of these scenarios, which in turn severely restricts innovation and application potential in this field. To bridge this gap, we first present and analyze the data and characteristics of the ByteDance Doubao LLM app across multiple dimensions, helping the community understand real-world cloud scenarios, and detail the challenges and opportunities we have identified. Second, we propose and plan to open-source our multi-level evaluation framework, XPU-Perf, which includes benchmarks spanning instructions, operators, and models. This framework improves interpretability and trustworthiness, and helps promising new accelerator architectures gain wider adoption and development. Finally, we present comparative results of four typical accelerators, summarize their shortcomings and challenges, conduct in-depth analysis, and highlight numerous architectural and scheduling innovation opportunities we have observed.",
+        "identifiers": [
+          "SemanticScholar:78e7e76af18c2b4ffdb1b0dece52e1defbc2cd5e"
+        ],
+        "semantic_scholar_id": "78e7e76af18c2b4ffdb1b0dece52e1defbc2cd5e",
+        "doi": "10.1109/HPCA68181.2026.11408526",
+        "canonical_id": "DOI:10.1109/HPCA68181.2026.11408526",
+        "authors": [
+          "Jing-Wei Cai",
+          "De-Hao Kong",
+          "Han-Tao Huang",
+          "Zishang Jiang",
+          "Zi-Xuan Ma",
+          "Qing-Yu Guo",
+          "Zhen-Xing Zhang",
+          "Guiming Shi",
+          "Mingyu Gao",
+          "Kai-Sheng Ma",
+          "Ming-Hui Yu"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 272,
+          "matched_prestigious_venue": "High-Performance Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/isiber68248.2026.11469930",
+      "identity_tokens": [
+        "id:DOI:10.1109/isiber68248.2026.11469930",
+        "id:SemanticScholar:27088088e6610abb97b8e8cee8ab94fe40c49c78",
+        "title:optimizing llm inference with languageaware multibin batching for code summarization",
+        "url:https://doi.org/10.1109/ISIBER68248.2026.11469930"
+      ],
+      "record": {
+        "title": "Optimizing LLM Inference with Language-Aware Multi-Bin Batching for Code Summarization",
+        "source_url": "https://doi.org/10.1109/ISIBER68248.2026.11469930",
+        "year": 2026,
+        "published": "2026-02-26",
+        "venue": "2026 International Seminar on Intelligent Business and Edge-Computing Research (ISIBER)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM) continues to grow in scale. Larger model scale increases computational demands and creates challenges in maintaining low latency and high throughput. These challenges become even more complex in code summarization because input varies across programming languages. In this case, the generation length and inference performance are influenced not only by the input size but also by the semantic context of the codes. However, existing batching methods do not consider these contextual factors. This work proposes a language-aware multi-bin batching strategy that optimizes inference based on both predicted generation length and programming-language features. The generation length predictor is implemented using random forest model and support vector machine model is used as the language classifier. The proposed method consistently provides higher throughput, reaching 4.67 requests per second and 44.15 tokens per second, and achieves lower latency at 2.12 seconds. Additionally, it delivers better resource utilization in terms of CPU and GPU usage compared to single inference, static batching, and standard multi-bin batching.",
+        "identifiers": [
+          "SemanticScholar:27088088e6610abb97b8e8cee8ab94fe40c49c78"
+        ],
+        "semantic_scholar_id": "27088088e6610abb97b8e8cee8ab94fe40c49c78",
+        "doi": "10.1109/ISIBER68248.2026.11469930",
+        "canonical_id": "DOI:10.1109/ISIBER68248.2026.11469930",
+        "authors": [
+          "I. M. S. Putra",
+          "R. Sarno",
+          "Kurnia Cahya Febryanto",
+          "K. Sungkono",
+          "Achmad Fahmi",
+          "Sri Andreani Utomo",
+          "F. Taufany",
+          "Arif Abdullah Sagran"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 246,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3774904.3792243",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774904.3792243",
+        "id:SemanticScholar:f3123decb924d920c9fabddb5c5530e98c68132e",
+        "title:onepass single forward pass decoding for listwise reranking",
+        "url:https://doi.org/10.1145/3774904.3792243"
+      ],
+      "record": {
+        "title": "ONE-PASS: Single Forward Pass Decoding for Listwise Reranking",
+        "source_url": "https://doi.org/10.1145/3774904.3792243",
+        "year": 2026,
+        "published": "2026-04-12",
+        "venue": "The Web Conference",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have been widely adopted in ranking systems, specifically for reranking tasks. Despite the effectiveness, the auto-regressive decoding of LLMs leads to inference latency due to the memory-bandwidth-bound. To alleviate this bottleneck, prior studies have explored single token decoding as an approximation, but they suffer from performance degradation at the tail positions of ranking. In this paper, we propose a Single Forward Pass (SFP)-based method to pre-verify multiple rankings using tree attention, approximating auto-regressive decoding by relevant sub-rankings at each step. However, verifying all possible ranking permutations will lead to factorial-level token computation (N!), making it intractable within SFP. To this end, we first reduce item ranking permutations to combinations (2N), based on the empirical observation that the LLM's next-item generation is less sensitive to the exact ordering of preceding items. Furthermore, we divide the full ranking into K sub-rankings and aggregate their individual probabilities, which further decreases the verification space to 2⌈N/K⌉ • K << 2N. However, naïvely aggregating sub-ranking probabilities leads to inaccurate estimates in listwise ranking. To overcome this, we introduce a Möbius inversion model that explicitly decompose the individual contribution of subsets within a complete lattice, as verified by tree attention. Then, we learn their higher-order effects with a hierarchical self-attention model to reconstruct the full ranking probability. Experiments on both information retrieval and recommendation tasks show the effectiveness of our proposed method.",
+        "identifiers": [
+          "SemanticScholar:f3123decb924d920c9fabddb5c5530e98c68132e"
+        ],
+        "semantic_scholar_id": "f3123decb924d920c9fabddb5c5530e98c68132e",
+        "doi": "10.1145/3774904.3792243",
+        "canonical_id": "DOI:10.1145/3774904.3792243",
+        "authors": [
+          "Ying-Peng Du",
+          "Zhu Sun",
+          "Tian-Jun Wei",
+          "Jie M. Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 201,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tccn.2026.3694872",
+      "identity_tokens": [
+        "id:DOI:10.1109/tccn.2026.3694872",
+        "id:SemanticScholar:3c712f8c9cacd0965786f1755d22d23eed1cbf68",
+        "title:efficient edge deployment of mixtureofexperts models with hybrid expert quantization",
+        "url:https://doi.org/10.1109/TCCN.2026.3694872"
+      ],
+      "record": {
+        "title": "Efficient Edge Deployment of Mixture-of-Experts Models With Hybrid Expert Quantization",
+        "source_url": "https://doi.org/10.1109/TCCN.2026.3694872",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Transactions on Cognitive Communications and Networking",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying large language models (LLMs) directly at the edge offers significant benefits in reducing inference latency and enhancing privacy protection. However, this approach presents critical technical challenges due to the limited hardware resources available at the edge. In this paper, we explore the deployment of the Mixture-of-Experts (MoE) model, a popular LLM architecture, using weight quantization in a typical edge environment with multiple edge servers. Existing methods that uniformly quantize MoE models do not account for the varying importance of different experts or the dynamic nature of edge requests. To address these issues, we propose a hybrid expert quantization strategy, where each edge server quantizes experts to different bit-widths based on the pReferences of received requests. Furthermore, we implement a comprehensive system optimization that jointly considers expert quantization and request assignment, aiming to achieve high-precision and low-latency inference services. To manage the complex, coupled optimization challenges, we design a reinforcement learning (RL)-based algorithm. To overcome the slow convergence typical of traditional RL, we pre-train the policy network using a system simulator that generates heuristic solutions, thus accelerating the learning process. Extensive experimental results on real datasets demonstrate that our approach significantly outperforms existing methods.",
+        "identifiers": [
+          "SemanticScholar:3c712f8c9cacd0965786f1755d22d23eed1cbf68"
+        ],
+        "semantic_scholar_id": "3c712f8c9cacd0965786f1755d22d23eed1cbf68",
+        "doi": "10.1109/TCCN.2026.3694872",
+        "canonical_id": "DOI:10.1109/TCCN.2026.3694872",
+        "authors": [
+          "Tao Liu",
+          "Qi-Peng Xie",
+          "Zhao-Yang Han",
+          "Wei-Zheng Wang",
+          "Sheng-Li Pan",
+          "Xiang Zhang",
+          "Chun-Hua Su",
+          "Kai-Shun Wu"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 121,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.14722/ndss.2026.230035",
+      "identity_tokens": [
+        "id:DOI:10.14722/ndss.2026.230035",
+        "id:SemanticScholar:d0d9c53fdb42deb82e0dd3af4c874ded2c68f0d0",
+        "title:stip threeparty privacypreserving and lossless inference for large transformers in production",
+        "url:https://doi.org/10.14722/ndss.2026.230035"
+      ],
+      "record": {
+        "title": "STIP: Three-Party Privacy-Preserving and Lossless Inference for Large Transformers in Production",
+        "source_url": "https://doi.org/10.14722/ndss.2026.230035",
+        "year": 2026,
+        "published": null,
+        "venue": "Network and Distributed System Security Symposium",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "—The privacy of model parameters and user data is crucial for Transformer-based cloud services, such as online chatbots. While recent advances in secure multi-party computation and homomorphic encryption provide strong cryptographic guarantees, their computational overhead makes them infeasible for real-time inference with large-scale Transformer models. In this work, we propose a practical alternative that balances privacy and efficiency in real-world deployments. We introduce a three-party threat model involving a model developer, a cloud model server, and a data owner, capturing the trust assumptions and deployment conditions of practical AI services. Within this framework, we design a semi-symmetric permutation-based protection mechanism and present STIP, the first three-party privacy-preserving inference system for large Transformers de-ployable on commodity hardware. STIP formally bounds privacy leakage while preserving lossless inference accuracy. To further safeguard model parameters, STIP integrates trusted execution environments to resist model extraction and fine-tuning attacks. We evaluate STIP on six representative Transformer model families, including models with up to 70 billion parameters, under three deployment settings. STIP’s efficiency is comparable to unprotected full-cloud inference, for example, STIP achieves 31.7 ms latency on LLaMA2-7B model. STIP also shows effective resistance to various attacks against user data and model parameters. STIP has been deployed in a production environment on our proprietary 70B model. In a three-month online test, STIP brings only 12% additional latency and no",
+        "identifiers": [
+          "SemanticScholar:d0d9c53fdb42deb82e0dd3af4c874ded2c68f0d0"
+        ],
+        "semantic_scholar_id": "d0d9c53fdb42deb82e0dd3af4c874ded2c68f0d0",
+        "doi": "10.14722/ndss.2026.230035",
+        "canonical_id": "DOI:10.14722/ndss.2026.230035",
+        "authors": [
+          "Mu Yuan",
+          "Lan Zhang",
+          "Yi-Hang Cheng",
+          "Miao-Hui Song",
+          "Guoliang Xing",
+          "Xiang-yang Li"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 121,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcomm.2026.3686718",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcomm.2026.3686718",
+        "id:SemanticScholar:99e8306d0823bccd84014994a3360afe0f9eb5b7",
+        "title:edge inference for large language models with pipeline parallelism and batching",
+        "url:https://doi.org/10.1109/TCOMM.2026.3686718"
+      ],
+      "record": {
+        "title": "Edge Inference for Large Language Models With Pipeline Parallelism and Batching",
+        "source_url": "https://doi.org/10.1109/TCOMM.2026.3686718",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Transactions on Communications",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Edge computing enables distributed inference for computation-intensive applications. However, the autoregressive nature and large model size of large language models (LLMs) pose challenges for their deployment in wireless edge networks. Existing edge inference methods mainly assume an equivalent delay for each token generation step, which fails to capture the dynamic computational and memory overhead incurred during the decoding process. This paper proposes a latency-sensitive wireless edge inference framework for LLMs, where tasks are grouped into multiple batches and processed in parallel by partitioning the LLM into multiple pipeline stages across heterogeneous edge GPUs. An accurate latency model is established, where the latency of each token generation step increases during the autoregressive generation process. Based on this model, the end-to-end inference latency is minimized, which is formulated as a joint optimization problem of bandwidth allocation, model partitioning, and batch scheduling subject to heterogeneous GPU memory constraints. To solve this NP-hard problem with coupled variables, we develop a polynomial-time alternating optimization algorithm that iteratively optimizes model partitioning and batch scheduling via dynamic programming. The closed-form solutions of wireless bandwidth allocation are derived. Extensive simulations show that our approach reduces latency by up to 42.1% versus state-of-the-art baselines across diverse edge scenarios.",
+        "identifiers": [
+          "SemanticScholar:99e8306d0823bccd84014994a3360afe0f9eb5b7"
+        ],
+        "semantic_scholar_id": "99e8306d0823bccd84014994a3360afe0f9eb5b7",
+        "doi": "10.1109/TCOMM.2026.3686718",
+        "canonical_id": "DOI:10.1109/TCOMM.2026.3686718",
+        "authors": [
+          "Jie Jiang",
+          "Zhi-Xiong Chen",
+          "Hyundung Shin",
+          "Arumgam Nallanathan"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 121,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/swc62898.2024.00208",
+      "identity_tokens": [
+        "id:DOI:10.1109/swc62898.2024.00208",
+        "id:SemanticScholar:a1ad5cafb8928b982722810cb5674d6b906e6292",
+        "title:qmlfq a quantizationbased queue scheduling framework for efficient llm serving",
+        "url:https://doi.org/10.1109/SWC62898.2024.00208"
+      ],
+      "record": {
+        "title": "QMLFQ: A Quantization-based Queue Scheduling Framework for Efficient LLM Serving",
+        "source_url": "https://doi.org/10.1109/SWC62898.2024.00208",
+        "year": 2024,
+        "published": "2024-12-02",
+        "venue": "2024 IEEE Smart World Congress (SWC)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Fueled by advancements in Large Language Models (LLMs), applications like ChatGPT have ushered in a transformative era for AI-powered interactions. However, the computational demands of LLMs, characterized by their massive parameter size and intricate computations, pose a significant challenge to its model serving. Under high concurrency or resource-constrained scenarios, LLM service systems can experience substantial latency and potential crashes, jeopardizing user experience and system stability. To address this challenge, this paper presents a novel LLM serving framework that leverages dynamic queue scheduling and quantization switching to alleviate computational bottlenecks and reduce response latency. Specifically, we propose an enhanced scheduling algorithm based on the Multi-level Feedback Queue (MLFQ) that dynamically switches between various quantized-level models and prioritizes requests, thereby improving LLM inference parallelism and reducing job completion time (JCT) as well. Through extensive experiments conducted on open-source datasets, we demonstrate that our proposed approach effectively reduces JCTs compared to other leading baselines. This improvement in JCT ultimately leads to enhanced quality of service (QoS) for LLM-based applications.",
+        "identifiers": [
+          "SemanticScholar:a1ad5cafb8928b982722810cb5674d6b906e6292"
+        ],
+        "semantic_scholar_id": "a1ad5cafb8928b982722810cb5674d6b906e6292",
+        "doi": "10.1109/SWC62898.2024.00208",
+        "canonical_id": "DOI:10.1109/SWC62898.2024.00208",
+        "authors": [
+          "Jia-Lin Wu",
+          "Hao Dai",
+          "Jiashu Wu",
+          "Wenming Jin",
+          "Yang Wang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 697,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4748a8bce25ab3aa16cc9b158a88117a083f28d2c0be8faf16625e9c64ca08a3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

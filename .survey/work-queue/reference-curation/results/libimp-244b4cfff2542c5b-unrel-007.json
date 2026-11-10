@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-244b4cfff2542c5b-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s12599-023-00834-7",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s12599-023-00834-7",
+    "identity_tokens": [
+      "DOI:10.1007/s12599-023-00834-7"
+    ],
+    "reason": "生成AIを社会技術システムとして概念化し、モデル・応用・限界と情報システム研究課題を整理する概説で、推論効率化の方式論ではない。",
+    "first_checked_at": "2026-10-03T16:32:28+00:00",
+    "last_checked_at": "2026-10-03T16:32:28+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Generative AI"
+  },
+  "processed_at": "2026-10-03T16:32:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-244b4cfff254",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

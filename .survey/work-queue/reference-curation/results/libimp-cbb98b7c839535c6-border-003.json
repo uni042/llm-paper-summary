@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cbb98b7c839535c6-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2204.13767",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2204.13767",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2204.13767",
+      "arXiv:2204.13767"
+    ],
+    "reason": "Triformerはpatch attentionと三角形の階層構造で多変量時系列ForecastingのAttention計算量を線形化し、系列推論効率に関係する。ただし対象はセンサー時系列予測であり、LLMやLLM推論ランタイムでの有効性は示さないため、効率化手法としての接点に限りがあり微妙とする。",
+    "first_checked_at": "2026-10-22T17:25:22+00:00",
+    "last_checked_at": "2026-10-22T17:25:22+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting–Full Version"
+  },
+  "processed_at": "2026-10-22T17:25:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cbb98b7c8395",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

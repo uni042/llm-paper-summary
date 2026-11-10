@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7da0d35fc8286d55-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.08723",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.08723",
+    "identity_tokens": [
+      "SemanticScholar:d5b03307924cca0d808d8db33d79cd26c4be946c",
+      "arXiv:2511.08723",
+      "d5b03307924cca0d808d8db33d79cd26c4be946c"
+    ],
+    "reason": "ParaS2S studies speech-to-speech style alignment and response quality; its reported result is quality improvement, not serving efficiency.",
+    "first_checked_at": "2026-10-13T19:24:39+00:00",
+    "last_checked_at": "2026-10-13T19:24:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+      "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+      "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+    ],
+    "title": "ParaS2S: Benchmarking and Aligning Spoken Language Models for Paralinguistic-aware Speech-to-Speech Interaction"
+  },
+  "processed_at": "2026-10-13T19:24:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7da0d35fc828",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

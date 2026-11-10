@@ -1,0 +1,1452 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b69f0d560ecabb8e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b69f0d560eca",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/iccv51701.2025.01904",
+    "DOI:10.1145/3771288",
+    "SemanticScholar:ec3e633777367826e9f8e4300c09dc5bb3dd5315",
+    "arXiv:2406.05276",
+    "arXiv:2501.06417",
+    "arXiv:2504.01281",
+    "arXiv:2504.04514",
+    "arXiv:2504.06323",
+    "arXiv:2508.19087",
+    "arXiv:2509.19228",
+    "arXiv:2509.23967",
+    "arXiv:2509.25188",
+    "arXiv:2509.26226",
+    "arXiv:2510.04476",
+    "arXiv:2510.13797"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 15,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "41bbce5dca86791bde9985198df6014fa075bc89",
+  "raw_search_result_count": 15,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 15,
+  "provider_progress": {
+    "requested_count": 15,
+    "status_counts": {
+      "allowed": 15,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T00:06:15.393172+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/iccv51701.2025.01904",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3771288",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:ec3e633777367826e9f8e4300c09dc5bb3dd5315",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2406.05276",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.06417",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.01281",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.04514",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.06323",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.19087",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.19228",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.23967",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.25188",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.26226",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.04476",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.13797",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Learning to Parallel: Accelerating Diffusion Large Language Models via Learnable Parallel Decoding",
+      "source_url": "https://arxiv.org/abs/2509.25188",
+      "year": 2025,
+      "published": "2025-09-29",
+      "venue": null,
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding in large language models (LLMs) requires $\\mathcal{O}(n)$ sequential steps for $n$ tokens, fundamentally limiting inference throughput. Recent diffusion-based LLMs (dLLMs) enable parallel token generation through iterative denoising. However, current parallel decoding strategies rely on fixed, input-agnostic heuristics (e.g., confidence thresholds), which fail to adapt to input-specific characteristics, resulting in suboptimal speed-quality trade-offs across diverse NLP tasks. In this work, we explore a more flexible and dynamic approach to parallel decoding. We propose Learning to Parallel Decode (Learn2PD), a framework that trains a lightweight and adaptive filter model to predict, for each token position, whether the current prediction matches the final output. This learned filter approximates an oracle parallel decoding strategy that unmasks tokens only when correctly predicted. Importantly, the filter model is learned in a post-training manner, requiring only a small amount of computation to optimize it (minute-level GPU time). Additionally, we introduce End-of-Text Prediction (EoTP) to detect decoding completion at the end of sequence, avoiding redundant decoding of padding tokens. Experiments on the LLaDA benchmark demonstrate that our method achieves up to 22.58$\\times$ speedup without any performance drop, and up to 57.51$\\times$ when combined with KV-Cache.",
+      "identifiers": [
+        "SemanticScholar:adc3a081078a9267221045e74a79b8c7b422cfb8"
+      ],
+      "semantic_scholar_id": "adc3a081078a9267221045e74a79b8c7b422cfb8",
+      "canonical_id": "arXiv:2509.25188",
+      "arxiv_id": "2509.25188",
+      "authors": [
+        "Wen-Rui Bao",
+        "Zhiben Chen",
+        "Dan Xu",
+        "Yuzhang Shang"
+      ],
+      "priority": 26,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 26,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 380,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Unified Framework for Speculative Decoding with Multiple Drafters as a Bandit",
+      "source_url": "https://www.semanticscholar.org/paper/ec3e633777367826e9f8e4300c09dc5bb3dd5315",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:ec3e633777367826e9f8e4300c09dc5bb3dd5315"
+      ],
+      "semantic_scholar_id": "ec3e633777367826e9f8e4300c09dc5bb3dd5315",
+      "canonical_id": "SemanticScholar:ec3e633777367826e9f8e4300c09dc5bb3dd5315",
+      "authors": [
+        "Taehyeon Kim",
+        "Hojung Jung",
+        "SeYoung Yun"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VTrans: Accelerating Transformer Compression with Variational Information Bottleneck based Pruning",
+      "source_url": "https://arxiv.org/abs/2406.05276",
+      "year": 2024,
+      "published": "2024-06-07",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In recent years, there has been a growing emphasis on compressing large pre-trained transformer models for resource-constrained devices. However, traditional pruning methods often leave the embedding layer untouched, leading to model over-parameterization. Additionally, they require extensive compression time with large datasets to maintain performance in pruned models. To address these challenges, we propose VTrans, an iterative pruning framework guided by the Variational Information Bottleneck (VIB) principle. Our method compresses all structural components, including embeddings, attention heads, and layers using VIB-trained masks. This approach retains only essential weights in each layer, ensuring compliance with specified model size or computational constraints. Notably, our method achieves upto 70% more compression than prior state-of-the-art approaches, both task-agnostic and task-specific. We further propose faster variants of our method: Fast-VTrans utilizing only 3% of the data and Faster-VTrans, a time efficient alternative that involves exclusive finetuning of VIB masks, accelerating compression by upto 25 times with minimal performance loss compared to previous methods. Extensive experiments on BERT, ROBERTa, and GPT-2 models substantiate the efficacy of our method. Moreover, our method demonstrates scalability in compressing large models such as LLaMA-2-7B, achieving superior performance compared to previous pruning methods. Additionally, we use attention-based probing to qualitatively assess model redundancy and interpret the efficiency of our approach. Notably, our method considers heads with high attention to special and current tokens in un-pruned model as foremost candidates for pruning while retained heads are observed to attend more to task-critical keywords.",
+      "identifiers": [
+        "SemanticScholar:305838befdb58fb54bdfdbdc0e72ef995bfaa577"
+      ],
+      "semantic_scholar_id": "305838befdb58fb54bdfdbdc0e72ef995bfaa577",
+      "canonical_id": "arXiv:2406.05276",
+      "arxiv_id": "2406.05276",
+      "doi": "10.48550/arXiv.2406.05276",
+      "authors": [
+        "Oshin Dutta",
+        "Ritvik Gupta",
+        "Sumeet Agarwal"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 859,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DiscQuant: A Quantization Method for Neural Networks Inspired by Discrepancy Theory",
+      "source_url": "https://arxiv.org/abs/2501.06417",
+      "year": 2025,
+      "published": "2025-01-11",
+      "venue": "Annual Conference Computational Learning Theory",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantizing the weights of a neural network has two steps: (1) Finding a good low bit-complexity representation for weights (which we call the quantization grid) and (2) Rounding the original weights to values in the quantization grid. In this paper, we study the problem of rounding optimally given any quantization grid. The simplest and most commonly used way to round is Round-to-Nearest (RTN). By rounding in a data-dependent way instead, one can improve the quality of the quantized model significantly. We study the rounding problem from the lens of \\emph{discrepancy theory}, which studies how well we can round a continuous solution to a discrete solution without affecting solution quality too much. We prove that given $m=\\mathrm{poly}(1/\\epsilon)$ samples from the data distribution, we can round all but $O(m)$ model weights such that the expected approximation error of the quantized model on the true data distribution is $\\le \\epsilon$ as long as the space of gradients of the original model is approximately low rank (which we empirically validate). Our proof, which is algorithmic, inspired a simple and practical rounding algorithm called \\emph{DiscQuant}. In our experiments, we demonstrate that DiscQuant significantly improves over the prior state-of-the-art rounding method called GPTQ and the baseline RTN over a range of benchmarks on Phi3mini-3.8B and Llama3.1-8B. For example, rounding Phi3mini-3.8B to a fixed quantization grid with 3.25 bits per parameter using DiscQuant gets 64\\% accuracy on the GSM8k dataset, whereas GPTQ achieves 54\\% and RTN achieves 31\\% (the original model achieves 84\\%). We make our code available at https://github.com/jerry-chee/DiscQuant.",
+      "identifiers": [
+        "SemanticScholar:644a68b1ef93e183ed6e54622f7741bde7848930"
+      ],
+      "semantic_scholar_id": "644a68b1ef93e183ed6e54622f7741bde7848930",
+      "canonical_id": "arXiv:2501.06417",
+      "arxiv_id": "2501.06417",
+      "doi": "10.48550/arXiv.2501.06417",
+      "authors": [
+        "Jerry Chee",
+        "A. Backurs",
+        "R. Heck",
+        "Li Zhang",
+        "Janardhan Kulkarni",
+        "T. Rothvoss",
+        "Sivakanth Gopi"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 641,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scaling Test-Time Inference with Policy-Optimized, Dynamic Retrieval-Augmented Generation via KV Caching and Decoding",
+      "source_url": "https://arxiv.org/abs/2504.01281",
+      "year": 2025,
+      "published": "2025-04-02",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a comprehensive framework for enhancing Retrieval-Augmented Generation (RAG) systems through dynamic retrieval strategies and reinforcement fine-tuning. This approach significantly improves large language models on knowledge-intensive tasks, including opendomain question answering and complex reasoning. Our framework integrates two complementary techniques: Policy-Optimized RetrievalAugmented Generation (PORAG), which optimizes the use of retrieved information, and Adaptive Token-Layer Attention Scoring (ATLAS), which dynamically determines retrieval timing and content based on contextual needs. Together, these techniques enhance both the utilization and relevance of retrieved content, improving factual accuracy and response quality. Designed as a lightweight solution compatible with any Transformer-based LLM without requiring additional training, our framework excels in knowledge-intensive tasks, boosting output accuracy in RAG settings. We further propose CRITIC, a novel method to selectively compress key-value caches by token importance, mitigating memory bottlenecks in long-context applications. The framework also incorporates test-time scaling techniques to dynamically balance reasoning depth and computational resources, alongside optimized decoding strategies for faster inference. Experiments on benchmark datasets show that our framework reduces hallucinations, strengthens domain-specific reasoning, and achieves significant efficiency and scalability gains over traditional RAG systems. This integrated approach advances the development of robust, efficient, and scalable RAG systems across diverse applications.",
+      "identifiers": [
+        "SemanticScholar:2befc232dbd6117358313da0f7079854bf16c509"
+      ],
+      "semantic_scholar_id": "2befc232dbd6117358313da0f7079854bf16c509",
+      "canonical_id": "arXiv:2504.01281",
+      "arxiv_id": "2504.01281",
+      "doi": "10.48550/arXiv.2504.01281",
+      "authors": [
+        "Sakhinana Sagar Srinivas",
+        "Akash Das",
+        "Shivam Gupta",
+        "Venkataramana Runkana"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 560,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Saliency-driven Dynamic Token Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2504.04514",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite the recent success of large language models (LLMs), LLMs are particularly challenging in long-sequence inference scenarios due to the quadratic computational complexity of the attention mechanism. Inspired by the interpretability theory of feature attribution in neural network models, we observe that not all tokens have the same contribution. Based on this observation, we propose a novel token pruning framework, namely Saliency-driven Dynamic Token Pruning (SDTP), to gradually and dynamically prune redundant tokens based on the input context. Specifically, a lightweight saliency-driven prediction module is designed to estimate the importance score of each token with its hidden state, which is added to different layers of the LLM to hierarchically prune redundant tokens. Furthermore, a ranking-based optimization strategy is proposed to minimize the ranking divergence of the saliency score and the predicted importance score. Extensive experiments have shown that our framework is generalizable to various models and datasets. By hierarchically pruning 65\\% of the input tokens, our method greatly reduces 33\\% $\\sim$ 47\\% FLOPs and achieves speedup up to 1.75$\\times$ during inference, while maintaining comparable performance. We further demonstrate that SDTP can be combined with KV cache compression method for further compression.",
+      "identifiers": [
+        "SemanticScholar:07cae77b1aae2e30b9b761dab74f0dc203aada20"
+      ],
+      "semantic_scholar_id": "07cae77b1aae2e30b9b761dab74f0dc203aada20",
+      "canonical_id": "arXiv:2504.04514",
+      "arxiv_id": "2504.04514",
+      "doi": "10.48550/arXiv.2504.04514",
+      "authors": [
+        "Y. Tao",
+        "Ye-Hui Tang",
+        "Yun Wang",
+        "Mingjian Zhu",
+        "Hailin Hu",
+        "Yun-He Wang"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 556,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mosaic: Composite Projection Pruning for Resource-efficient LLMs",
+      "source_url": "https://arxiv.org/abs/2504.06323",
+      "year": 2025,
+      "published": "2025-04-08",
+      "venue": "Future generations computer systems",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Extensive compute and memory requirements limit the deployment of large language models (LLMs) on any hardware. Compression methods, such as pruning, can reduce model size, which in turn reduces resource requirements. State-of-the-art pruning is based on coarse-grained methods. They are time-consuming and inherently remove critical model parameters, adversely impacting the quality of the pruned model. This paper introduces projection pruning, a novel fine-grained method for pruning LLMs. In addition, LLM projection pruning is enhanced by a new approach we refer to as composite projection pruning - the synergistic combination of unstructured pruning that retains accuracy and structured pruning that reduces model size. We develop Mosaic, a novel system to create and deploy pruned LLMs using composite projection pruning. Mosaic is evaluated using a range of performance and quality metrics on multiple hardware platforms, LLMs, and datasets. Mosaic is 7.19x faster in producing models than existing approaches. Mosaic models achieve up to 84.2% lower perplexity and 31.4% higher accuracy than models obtained from coarse-grained pruning. Up to 67% faster inference and 68% lower GPU memory use is noted for Mosaic models. Mosaic is available for public use from https://github.com/blessonvar/Mosaic",
+      "identifiers": [
+        "SemanticScholar:b1920dc923e0c1c18e32e10c9b0c3412a881096b"
+      ],
+      "semantic_scholar_id": "b1920dc923e0c1c18e32e10c9b0c3412a881096b",
+      "canonical_id": "arXiv:2504.06323",
+      "arxiv_id": "2504.06323",
+      "doi": "10.1016/j.future.2025.108056",
+      "authors": [
+        "Bailey J. Eccles",
+        "Leon Wong",
+        "Blesson Varghese"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 554,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ZipVL: Accelerating Vision-Language Models Through Dynamic Token Sparsity",
+      "source_url": "https://doi.org/10.1109/ICCV51701.2025.01904",
+      "year": 2025,
+      "published": "2025-10-19",
+      "venue": "IEEE International Conference on Computer Vision",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:ed8a97ae1948c8d2e00184a3c8cc86b6cdab81d3"
+      ],
+      "semantic_scholar_id": "ed8a97ae1948c8d2e00184a3c8cc86b6cdab81d3",
+      "doi": "10.1109/ICCV51701.2025.01904",
+      "canonical_id": "DOI:10.1109/ICCV51701.2025.01904",
+      "authors": [
+        "Ye-Fei He",
+        "Feng Chen",
+        "Jing Liu",
+        "Wen-Qi Shao",
+        "Hong Zhou",
+        "Kai-Peng Zhang",
+        "Bo-Han Zhuang"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 360,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "APT-LLM: Exploiting Arbitrary-Precision Tensor Core Computing for LLM Acceleration",
+      "source_url": "https://arxiv.org/abs/2508.19087",
+      "year": 2025,
+      "published": "2025-08-26",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have revolutionized AI applications, yet their enormous computational demands severely limit deployment and real-time performance. Quantization methods can help reduce computational costs; however, attaining the extreme efficiency associated with ultralow-bit quantized LLMs at arbitrary precision presents challenges on GPUs. This is primarily due to the limited support for GPU tensor cores (TCs), inefficient memory management, and inflexible kernel optimizations. To tackle these challenges, we propose a comprehensive acceleration scheme for arbitrary-precision LLMs, namely APT-LLM. First, we introduce a novel data format, bipolar-INT, which allows for efficient and lossless conversion with signed INT, while also being more conducive to parallel computation. We also develop a matrix multiplication (MatMul) method allowing for arbitrary precision by dismantling and reassembling matrices at the bit level. This method provides flexible precision and optimizes the utilization of GPU TCs. In addition, we propose a memory management system focused on data recovery, which strategically employs fast shared memory to substantially increase kernel execution speed and reduce memory access latency. Finally, we develop a kernel mapping method that dynamically selects the optimal configurable hyperparameters of kernels for varying matrix sizes, enabling optimal performance across different LLM architectures and precision settings. In LLM inference, APT-LLM achieves up to a <inline-formula> <tex-math notation=\"LaTeX\">$3.99\\times $ </tex-math></inline-formula> speedup compared to FP16 baselines and a <inline-formula> <tex-math notation=\"LaTeX\">$2.16\\times $ </tex-math></inline-formula> speedup over NVIDIA CUTLASS INT4 acceleration on RTX 3090. On RTX 4090 and H800, APT-LLM achieves up to <inline-formula> <tex-math notation=\"LaTeX\">$2.44\\times $ </tex-math></inline-formula> speedup over FP16 and <inline-formula> <tex-math notation=\"LaTeX\">$1.65\\times $ </tex-math></inline-formula> speedup over CUTLASS integer baselines.",
+      "identifiers": [
+        "SemanticScholar:d4bc80c2fc471f3b554d2f2c66c7f284c429d964"
+      ],
+      "semantic_scholar_id": "d4bc80c2fc471f3b554d2f2c66c7f284c429d964",
+      "canonical_id": "arXiv:2508.19087",
+      "arxiv_id": "2508.19087",
+      "doi": "10.1109/TCAD.2025.3604321",
+      "authors": [
+        "Shao-Bo Ma",
+        "Chao Fang",
+        "Haikuo Shao",
+        "Zhong-Feng Wang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 414,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CompLLM: Compression for Long Context Q&A",
+      "source_url": "https://arxiv.org/abs/2509.19228",
+      "year": 2025,
+      "published": "2025-09-23",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) face significant computational challenges when processing long contexts due to the quadratic complexity of self-attention. While soft context compression methods, which map input text to smaller latent representations, have shown promise, their real-world adoption is limited. Existing techniques typically compress the context as a single unit, which leads to quadratic compression complexity and an inability to reuse computations across queries with overlapping contexts. In this work, we introduce CompLLM, a soft compression technique designed for practical deployment. Instead of processing the context holistically, CompLLM divides it into segments and compresses each one independently. This simple design choice yields three critical properties: efficiency, as the compression step scales linearly with the context length; scalability, enabling models trained on short sequences (e.g., 1k tokens) to generalize to contexts of 100k tokens; and reusability, allowing compressed segments to be cached and reused across different queries. Our experiments show that with a 2x compression rate, at high context lengths CompLLM speeds up Time To First Token (TTFT) by up to 4x and reduces the KV cache size by 50%. Furthermore, CompLLM achieves performance comparable to that obtained with the uncompressed context, and even surpasses it on very long sequences, demonstrating its effectiveness and practical utility.",
+      "identifiers": [
+        "SemanticScholar:f8a12ef911d05c7a65beea3ac6de474f00e9d8e6"
+      ],
+      "semantic_scholar_id": "f8a12ef911d05c7a65beea3ac6de474f00e9d8e6",
+      "canonical_id": "arXiv:2509.19228",
+      "arxiv_id": "2509.19228",
+      "doi": "10.48550/arXiv.2509.19228",
+      "authors": [
+        "G. Berton",
+        "Jayakrishnan Unnikrishnan",
+        "S. Tran",
+        "Mubarak Shah"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 386,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HiPO: Hybrid Policy Optimization for Dynamic Reasoning in LLMs",
+      "source_url": "https://arxiv.org/abs/2509.23967",
+      "year": 2025,
+      "published": "2025-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) increasingly rely on Chain-of-Thought (CoT) reasoning to improve accuracy on complex tasks. However, always generating lengthy reasoning traces is inefficient, leading to excessive token usage and higher inference costs. This paper introduces the Hybrid Policy Optimization (i.e., HiPO), a framework for adaptive reasoning control that enables LLMs to selectively decide when to engage in detailed reasoning (Think-on) and when to respond directly (Think-off). Specifically, HiPO combines a hybrid data pipelineproviding paired Think-on and Think-off responseswith a hybrid reinforcement learning reward system that balances accuracy and efficiency while avoiding over-reliance on detailed reasoning. Experiments across mathematics and coding benchmarks demonstrate that HiPO can substantially reduce token length while maintaining or improving accuracy. Finally, we hope HiPO a can be a principled approach for efficient adaptive reasoning, advancing the deployment of reasoning-oriented LLMs in real-world, resource-sensitive settings.",
+      "identifiers": [
+        "SemanticScholar:232f1332c85b96a06d59442260d81728a6fabcba"
+      ],
+      "semantic_scholar_id": "232f1332c85b96a06d59442260d81728a6fabcba",
+      "canonical_id": "arXiv:2509.23967",
+      "arxiv_id": "2509.23967",
+      "doi": "10.48550/arXiv.2509.23967",
+      "authors": [
+        "Ken Deng",
+        "Zi-Zheng Zhan",
+        "Wen Xiang",
+        "Wen-Ya Zhu",
+        "Tianhao Peng",
+        "Xin-Ping Lei",
+        "Wei-Hao Li",
+        "Jing-Xuan Xu",
+        "Kun Wu",
+        "Yi-Fan Yao",
+        "Hao-Yang Huang",
+        "Huaixi Tang",
+        "Ke-Peng Lei",
+        "Zhiyi Lai",
+        "Song-Wei Yu",
+        "Zong-Xian Feng",
+        "Zuchen Gao",
+        "Wei-Hao Xie",
+        "Chen-Chen Zhang",
+        "Ya-Nan Wu",
+        "Yuan-Xing Zhang",
+        "Lecheng Huang",
+        "Yuqun Zhang",
+        "Jie Liu",
+        "Zhao-Xiang Zhang",
+        "Hao-Tian Zhang",
+        "Bin Chen",
+        "Jia-Heng Liu"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 381,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Thinking-Free Policy Initialization Makes Distilled Reasoning Models More Effective and Efficient Reasoners",
+      "source_url": "https://arxiv.org/abs/2509.26226",
+      "year": 2025,
+      "published": "2025-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reinforcement Learning with Verifiable Reward (RLVR) effectively solves complex tasks but demands extremely long context lengths during training, leading to substantial computational costs. While multi-stage training can partially mitigate this, starting with overly short contexts often causes irreversible performance degradation, ultimately failing to reduce overall training compute significantly. In this paper, we introduce **T**hinking-**F**ree **P**olicy **I**nitialization (**TFPI**), a simple yet effective adaptation to RLVR that bridges long Chain-of-Thought (CoT) distillation and standard RLVR. TFPI employs a simple *ThinkFree* operation, explicitly discarding the thinking content via a direct ** append, to reduce token usage during inference. Training with *ThinkFree*-adapted inputs improves performance and lowers token consumption, even in the original slow-thinking mode. Extensive experiments across various benchmarks have shown that TFPI accelerates RL convergence, achieves a higher performance ceiling, and yields more token-efficient reasoning models without specialized rewards or complex training designs. With TFPI only, we train a 4B model to reach 89.0% accuracy on AIME24 and 65.5% on LiveCodeBench using less than 4K H20 hours.",
+      "identifiers": [
+        "SemanticScholar:8c8d74daa222061151dcf0bcdc7dbc2764951590"
+      ],
+      "semantic_scholar_id": "8c8d74daa222061151dcf0bcdc7dbc2764951590",
+      "canonical_id": "arXiv:2509.26226",
+      "arxiv_id": "2509.26226",
+      "doi": "10.48550/arXiv.2509.26226",
+      "authors": [
+        "Xin Xu",
+        "AI Cliveb",
+        "Kai Yang",
+        "Tian-Hao Chen",
+        "Yang Wang",
+        "Sai-Yong Yang",
+        "Can Yang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 379,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Compressed Convolutional Attention: Efficient Attention in a Compressed Latent Space",
+      "source_url": "https://arxiv.org/abs/2510.04476",
+      "year": 2025,
+      "published": "2025-10-06",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-headed Attention's (MHA) quadratic compute and linearly growing KV-cache make long-context transformers expensive to train and serve. Prior works such as Grouped Query Attention (GQA) and Multi-Latent Attention (MLA) shrink the cache, speeding decode, but leave compute, which determines prefill and training speed, largely unchanged. We introduce Compressed Convolutional Attention (CCA), a novel attention method which down-projects queries, keys, and values and performs the entire attention operation inside the shared latent space. This simple design dramatically cuts parameters, KV-cache, and FLOPs all at once by the desired compression factor. Because CCA is orthogonal to head-sharing, we combine the two to form Compressed Convolutional Grouped Query Attention (CCGQA), which further tightens the compute-bandwidth Pareto frontier so that users can tune compression toward either FLOP or memory limits without sacrificing quality. Experiments show that CCGQA consistently outperforms both GQA and MLA at equal KV-cache compression on dense and MoE models. Additionally, we show that CCGQA outperforms all other attention methods on MoE models with half the KV-cache of GQA and MLA, achieving an 8x KV-cache compression with no drop in performance compared to standard MHA. CCA and CCGQA also dramatically reduce the FLOP cost of attention which leads to substantially faster training and prefill than existing methods. On H100 GPUs, our fused CCA/CCGQA kernel reduces prefill latency by about 1.7x at a sequence length of 16k relative to MHA, and accelerates backward by about 1.3x.",
+      "identifiers": [
+        "SemanticScholar:a916b6e0a90e135865958fe3d7be0a9156432dcd"
+      ],
+      "semantic_scholar_id": "a916b6e0a90e135865958fe3d7be0a9156432dcd",
+      "canonical_id": "arXiv:2510.04476",
+      "arxiv_id": "2510.04476",
+      "doi": "10.48550/arXiv.2510.04476",
+      "authors": [
+        "Tomas Figliolia",
+        "Nick Alonso",
+        "Rishi Iyer",
+        "Quentin Anthony",
+        "Beren Millidge"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 373,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Breadcrumbs Reasoning: Memory-Efficient Reasoning with Compression Beacons",
+      "source_url": "https://arxiv.org/abs/2510.13797",
+      "year": 2025,
+      "published": "2025-10-15",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The scalability of large language models for long-context reasoning is severely constrained by the linear growth of their Transformer key-value cache, which incurs significant memory and computational costs. We posit that as a model generates reasoning tokens, the informational value of past generated tokens diminishes, creating an opportunity for compression. In this work, we propose to periodically compress the generation KV cache with a learned, special-purpose token and evict compressed entries. We train the model to perform this compression via a modified joint distillation and reinforcement learning (RL) framework. Our training method minimizes overhead over the conventional RL process, as it leverages RL outputs for distillation. Empirically, our method achieves a superior memory-accuracy Pareto frontier compared to both the model without cache compression and training-free compression techniques.",
+      "identifiers": [
+        "SemanticScholar:191850cb4179e0e2e369db0df7cc45d7023f707f"
+      ],
+      "semantic_scholar_id": "191850cb4179e0e2e369db0df7cc45d7023f707f",
+      "canonical_id": "arXiv:2510.13797",
+      "arxiv_id": "2510.13797",
+      "doi": "10.48550/arXiv.2510.13797",
+      "authors": [
+        "Giovanni Monea",
+        "Yair Feldman",
+        "Shankar Padmanabhan",
+        "Kianté Brantley",
+        "Yoav Artzi"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 364,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CD-LLM: A Heterogeneous Multi-FPGA System for Batched Decoding of 70B+ LLMs Using a Compute-Dedicated Architecture",
+      "source_url": "https://doi.org/10.1145/3771288",
+      "year": 2025,
+      "published": "2025-10-22",
+      "venue": "ACM Transactions on Reconfigurable Technology and Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) with 70 billion or more parameters are increasingly being deployed in cloud-based Model-as-a-Service (MaaS) scenarios. To meet the demands of such deployments, MaaS providers require batched LLM decoding systems that can deliver high System Throughput (STP) while minimizing Total Cost of Ownership (TCO). However, existing FPGA-based solutions predominantly focus on small-batch or single-batch inference, which fails to meet the computational requirements of batched LLM decoding, resulting in performance gaps of up to 7.96 \\(\\times\\) . Moreover, the low utilization of multi-head attention operations in batched decoding scenarios, e.g., only 3.72% on A100 GPUs, further constrains throughput and inflates TCO. To address these challenges, this article introduces CD-LLM, a heterogeneous multi-FPGA system designed for efficient batched decoding of LLMs with 70B+ parameters, built upon a Compute-Dedicated architecture. First, we propose a memory-aligned mixed-precision quantization engine to reduce workload. By employing importance-aware quantization, we compress Llama-3.1-70B to an effective 3.45-bit representation and achieve 72.33% bandwidth utilization through memory-aligned data packing. Second, we present a compute-dedicated FPGA architecture that maximizes peak performance by leveraging FPGA-specific resources such as DSPs, BRAMs, and LUTs. The compute-dedicated architecture enables CD-LLM to reach a peak performance of 59.90 TOPS at 600 MHz on U250 FPGA. At last, we introduce a heterogeneous master-slave multi-FPGA system to achieve higher utilization. By pipelining attention and linear layer computations across master and slave FPGAs, CD-LLM achieves utilization rates of 83.08% for linear layers and 68.30% for attention layers. CD-LLM is designed with a heterogeneous multi-FPGA architecture, with an HBM-enabled FPGA as the master accelerator and eight DDR-based FPGAs as slave accelerators. When deployed for inference on the Llama-3.1-70B model with a batch size of 256, CD-LLM achieves a throughput of 2,721.79 tokens/s. This represents a 6.11 \\(\\times\\) improvement in STP and a 4.71 \\(\\times\\) reduction in TCO compared to an eight-card RTX3090 GPU system. Furthermore, CD-LLM substantially outperforms the state-of-the-art eight-card FPGA accelerator FlightLLM, delivering 16.15 \\(\\times\\) higher STP and 14.56 \\(\\times\\) lower TCO.",
+      "identifiers": [
+        "SemanticScholar:1ea540b3588c738e1ea7fa1e57f03729abb5db1b"
+      ],
+      "semantic_scholar_id": "1ea540b3588c738e1ea7fa1e57f03729abb5db1b",
+      "doi": "10.1145/3771288",
+      "canonical_id": "DOI:10.1145/3771288",
+      "authors": [
+        "Wenheng Ma",
+        "Xinhao Yang",
+        "Shulin Zeng",
+        "Teng-Xuan Liu",
+        "Li-Bo Shen",
+        "Hong-Yi Wang",
+        "Shi-Yao Li",
+        "Ke Hong",
+        "Zhen-Hua Zhu",
+        "Xue-Fei Ning",
+        "Tsung-Yi Ho",
+        "Guohao Dai",
+        "Yu Wang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 357,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2509.25188",
+      "identity_tokens": [
+        "id:SemanticScholar:adc3a081078a9267221045e74a79b8c7b422cfb8",
+        "id:arXiv:2509.25188",
+        "title:learning to parallel accelerating diffusion large language models via learnable parallel decoding",
+        "url:https://arxiv.org/abs/2509.25188"
+      ],
+      "record": {
+        "title": "Learning to Parallel: Accelerating Diffusion Large Language Models via Learnable Parallel Decoding",
+        "source_url": "https://arxiv.org/abs/2509.25188",
+        "year": 2025,
+        "published": "2025-09-29",
+        "venue": null,
+        "citation_count": 26,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive decoding in large language models (LLMs) requires $\\mathcal{O}(n)$ sequential steps for $n$ tokens, fundamentally limiting inference throughput. Recent diffusion-based LLMs (dLLMs) enable parallel token generation through iterative denoising. However, current parallel decoding strategies rely on fixed, input-agnostic heuristics (e.g., confidence thresholds), which fail to adapt to input-specific characteristics, resulting in suboptimal speed-quality trade-offs across diverse NLP tasks. In this work, we explore a more flexible and dynamic approach to parallel decoding. We propose Learning to Parallel Decode (Learn2PD), a framework that trains a lightweight and adaptive filter model to predict, for each token position, whether the current prediction matches the final output. This learned filter approximates an oracle parallel decoding strategy that unmasks tokens only when correctly predicted. Importantly, the filter model is learned in a post-training manner, requiring only a small amount of computation to optimize it (minute-level GPU time). Additionally, we introduce End-of-Text Prediction (EoTP) to detect decoding completion at the end of sequence, avoiding redundant decoding of padding tokens. Experiments on the LLaDA benchmark demonstrate that our method achieves up to 22.58$\\times$ speedup without any performance drop, and up to 57.51$\\times$ when combined with KV-Cache.",
+        "identifiers": [
+          "SemanticScholar:adc3a081078a9267221045e74a79b8c7b422cfb8"
+        ],
+        "semantic_scholar_id": "adc3a081078a9267221045e74a79b8c7b422cfb8",
+        "canonical_id": "arXiv:2509.25188",
+        "arxiv_id": "2509.25188",
+        "authors": [
+          "Wen-Rui Bao",
+          "Zhiben Chen",
+          "Dan Xu",
+          "Yuzhang Shang"
+        ],
+        "priority": 26,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 26,
+          "citation_count": 26,
+          "total": 26,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 380,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:ec3e633777367826e9f8e4300c09dc5bb3dd5315",
+      "identity_tokens": [
+        "id:SemanticScholar:ec3e633777367826e9f8e4300c09dc5bb3dd5315",
+        "title:a unified framework for speculative decoding with multiple drafters as a bandit",
+        "url:https://www.semanticscholar.org/paper/ec3e633777367826e9f8e4300c09dc5bb3dd5315"
+      ],
+      "record": {
+        "title": "A Unified Framework for Speculative Decoding with Multiple Drafters as a Bandit",
+        "source_url": "https://www.semanticscholar.org/paper/ec3e633777367826e9f8e4300c09dc5bb3dd5315",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:ec3e633777367826e9f8e4300c09dc5bb3dd5315"
+        ],
+        "semantic_scholar_id": "ec3e633777367826e9f8e4300c09dc5bb3dd5315",
+        "canonical_id": "SemanticScholar:ec3e633777367826e9f8e4300c09dc5bb3dd5315",
+        "authors": [
+          "Taehyeon Kim",
+          "Hojung Jung",
+          "SeYoung Yun"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.05276",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2406.05276",
+        "id:SemanticScholar:305838befdb58fb54bdfdbdc0e72ef995bfaa577",
+        "id:arXiv:2406.05276",
+        "title:vtrans accelerating transformer compression with variational information bottleneck based pruning",
+        "url:https://arxiv.org/abs/2406.05276"
+      ],
+      "record": {
+        "title": "VTrans: Accelerating Transformer Compression with Variational Information Bottleneck based Pruning",
+        "source_url": "https://arxiv.org/abs/2406.05276",
+        "year": 2024,
+        "published": "2024-06-07",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In recent years, there has been a growing emphasis on compressing large pre-trained transformer models for resource-constrained devices. However, traditional pruning methods often leave the embedding layer untouched, leading to model over-parameterization. Additionally, they require extensive compression time with large datasets to maintain performance in pruned models. To address these challenges, we propose VTrans, an iterative pruning framework guided by the Variational Information Bottleneck (VIB) principle. Our method compresses all structural components, including embeddings, attention heads, and layers using VIB-trained masks. This approach retains only essential weights in each layer, ensuring compliance with specified model size or computational constraints. Notably, our method achieves upto 70% more compression than prior state-of-the-art approaches, both task-agnostic and task-specific. We further propose faster variants of our method: Fast-VTrans utilizing only 3% of the data and Faster-VTrans, a time efficient alternative that involves exclusive finetuning of VIB masks, accelerating compression by upto 25 times with minimal performance loss compared to previous methods. Extensive experiments on BERT, ROBERTa, and GPT-2 models substantiate the efficacy of our method. Moreover, our method demonstrates scalability in compressing large models such as LLaMA-2-7B, achieving superior performance compared to previous pruning methods. Additionally, we use attention-based probing to qualitatively assess model redundancy and interpret the efficiency of our approach. Notably, our method considers heads with high attention to special and current tokens in un-pruned model as foremost candidates for pruning while retained heads are observed to attend more to task-critical keywords.",
+        "identifiers": [
+          "SemanticScholar:305838befdb58fb54bdfdbdc0e72ef995bfaa577"
+        ],
+        "semantic_scholar_id": "305838befdb58fb54bdfdbdc0e72ef995bfaa577",
+        "canonical_id": "arXiv:2406.05276",
+        "arxiv_id": "2406.05276",
+        "doi": "10.48550/arXiv.2406.05276",
+        "authors": [
+          "Oshin Dutta",
+          "Ritvik Gupta",
+          "Sumeet Agarwal"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 859,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.06417",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.06417",
+        "id:SemanticScholar:644a68b1ef93e183ed6e54622f7741bde7848930",
+        "id:arXiv:2501.06417",
+        "title:discquant a quantization method for neural networks inspired by discrepancy theory",
+        "url:https://arxiv.org/abs/2501.06417"
+      ],
+      "record": {
+        "title": "DiscQuant: A Quantization Method for Neural Networks Inspired by Discrepancy Theory",
+        "source_url": "https://arxiv.org/abs/2501.06417",
+        "year": 2025,
+        "published": "2025-01-11",
+        "venue": "Annual Conference Computational Learning Theory",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantizing the weights of a neural network has two steps: (1) Finding a good low bit-complexity representation for weights (which we call the quantization grid) and (2) Rounding the original weights to values in the quantization grid. In this paper, we study the problem of rounding optimally given any quantization grid. The simplest and most commonly used way to round is Round-to-Nearest (RTN). By rounding in a data-dependent way instead, one can improve the quality of the quantized model significantly. We study the rounding problem from the lens of \\emph{discrepancy theory}, which studies how well we can round a continuous solution to a discrete solution without affecting solution quality too much. We prove that given $m=\\mathrm{poly}(1/\\epsilon)$ samples from the data distribution, we can round all but $O(m)$ model weights such that the expected approximation error of the quantized model on the true data distribution is $\\le \\epsilon$ as long as the space of gradients of the original model is approximately low rank (which we empirically validate). Our proof, which is algorithmic, inspired a simple and practical rounding algorithm called \\emph{DiscQuant}. In our experiments, we demonstrate that DiscQuant significantly improves over the prior state-of-the-art rounding method called GPTQ and the baseline RTN over a range of benchmarks on Phi3mini-3.8B and Llama3.1-8B. For example, rounding Phi3mini-3.8B to a fixed quantization grid with 3.25 bits per parameter using DiscQuant gets 64\\% accuracy on the GSM8k dataset, whereas GPTQ achieves 54\\% and RTN achieves 31\\% (the original model achieves 84\\%). We make our code available at https://github.com/jerry-chee/DiscQuant.",
+        "identifiers": [
+          "SemanticScholar:644a68b1ef93e183ed6e54622f7741bde7848930"
+        ],
+        "semantic_scholar_id": "644a68b1ef93e183ed6e54622f7741bde7848930",
+        "canonical_id": "arXiv:2501.06417",
+        "arxiv_id": "2501.06417",
+        "doi": "10.48550/arXiv.2501.06417",
+        "authors": [
+          "Jerry Chee",
+          "A. Backurs",
+          "R. Heck",
+          "Li Zhang",
+          "Janardhan Kulkarni",
+          "T. Rothvoss",
+          "Sivakanth Gopi"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 641,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.01281",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.01281",
+        "id:SemanticScholar:2befc232dbd6117358313da0f7079854bf16c509",
+        "id:arXiv:2504.01281",
+        "title:scaling testtime inference with policyoptimized dynamic retrievalaugmented generation via kv caching and decoding",
+        "url:https://arxiv.org/abs/2504.01281"
+      ],
+      "record": {
+        "title": "Scaling Test-Time Inference with Policy-Optimized, Dynamic Retrieval-Augmented Generation via KV Caching and Decoding",
+        "source_url": "https://arxiv.org/abs/2504.01281",
+        "year": 2025,
+        "published": "2025-04-02",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present a comprehensive framework for enhancing Retrieval-Augmented Generation (RAG) systems through dynamic retrieval strategies and reinforcement fine-tuning. This approach significantly improves large language models on knowledge-intensive tasks, including opendomain question answering and complex reasoning. Our framework integrates two complementary techniques: Policy-Optimized RetrievalAugmented Generation (PORAG), which optimizes the use of retrieved information, and Adaptive Token-Layer Attention Scoring (ATLAS), which dynamically determines retrieval timing and content based on contextual needs. Together, these techniques enhance both the utilization and relevance of retrieved content, improving factual accuracy and response quality. Designed as a lightweight solution compatible with any Transformer-based LLM without requiring additional training, our framework excels in knowledge-intensive tasks, boosting output accuracy in RAG settings. We further propose CRITIC, a novel method to selectively compress key-value caches by token importance, mitigating memory bottlenecks in long-context applications. The framework also incorporates test-time scaling techniques to dynamically balance reasoning depth and computational resources, alongside optimized decoding strategies for faster inference. Experiments on benchmark datasets show that our framework reduces hallucinations, strengthens domain-specific reasoning, and achieves significant efficiency and scalability gains over traditional RAG systems. This integrated approach advances the development of robust, efficient, and scalable RAG systems across diverse applications.",
+        "identifiers": [
+          "SemanticScholar:2befc232dbd6117358313da0f7079854bf16c509"
+        ],
+        "semantic_scholar_id": "2befc232dbd6117358313da0f7079854bf16c509",
+        "canonical_id": "arXiv:2504.01281",
+        "arxiv_id": "2504.01281",
+        "doi": "10.48550/arXiv.2504.01281",
+        "authors": [
+          "Sakhinana Sagar Srinivas",
+          "Akash Das",
+          "Shivam Gupta",
+          "Venkataramana Runkana"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 560,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.04514",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.04514",
+        "id:SemanticScholar:07cae77b1aae2e30b9b761dab74f0dc203aada20",
+        "id:arXiv:2504.04514",
+        "title:saliencydriven dynamic token pruning for large language models",
+        "url:https://arxiv.org/abs/2504.04514"
+      ],
+      "record": {
+        "title": "Saliency-driven Dynamic Token Pruning for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2504.04514",
+        "year": 2025,
+        "published": "2025-04-06",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite the recent success of large language models (LLMs), LLMs are particularly challenging in long-sequence inference scenarios due to the quadratic computational complexity of the attention mechanism. Inspired by the interpretability theory of feature attribution in neural network models, we observe that not all tokens have the same contribution. Based on this observation, we propose a novel token pruning framework, namely Saliency-driven Dynamic Token Pruning (SDTP), to gradually and dynamically prune redundant tokens based on the input context. Specifically, a lightweight saliency-driven prediction module is designed to estimate the importance score of each token with its hidden state, which is added to different layers of the LLM to hierarchically prune redundant tokens. Furthermore, a ranking-based optimization strategy is proposed to minimize the ranking divergence of the saliency score and the predicted importance score. Extensive experiments have shown that our framework is generalizable to various models and datasets. By hierarchically pruning 65\\% of the input tokens, our method greatly reduces 33\\% $\\sim$ 47\\% FLOPs and achieves speedup up to 1.75$\\times$ during inference, while maintaining comparable performance. We further demonstrate that SDTP can be combined with KV cache compression method for further compression.",
+        "identifiers": [
+          "SemanticScholar:07cae77b1aae2e30b9b761dab74f0dc203aada20"
+        ],
+        "semantic_scholar_id": "07cae77b1aae2e30b9b761dab74f0dc203aada20",
+        "canonical_id": "arXiv:2504.04514",
+        "arxiv_id": "2504.04514",
+        "doi": "10.48550/arXiv.2504.04514",
+        "authors": [
+          "Y. Tao",
+          "Ye-Hui Tang",
+          "Yun Wang",
+          "Mingjian Zhu",
+          "Hailin Hu",
+          "Yun-He Wang"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 556,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.06323",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.future.2025.108056",
+        "id:SemanticScholar:b1920dc923e0c1c18e32e10c9b0c3412a881096b",
+        "id:arXiv:2504.06323",
+        "title:mosaic composite projection pruning for resourceefficient llms",
+        "url:https://arxiv.org/abs/2504.06323"
+      ],
+      "record": {
+        "title": "Mosaic: Composite Projection Pruning for Resource-efficient LLMs",
+        "source_url": "https://arxiv.org/abs/2504.06323",
+        "year": 2025,
+        "published": "2025-04-08",
+        "venue": "Future generations computer systems",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Extensive compute and memory requirements limit the deployment of large language models (LLMs) on any hardware. Compression methods, such as pruning, can reduce model size, which in turn reduces resource requirements. State-of-the-art pruning is based on coarse-grained methods. They are time-consuming and inherently remove critical model parameters, adversely impacting the quality of the pruned model. This paper introduces projection pruning, a novel fine-grained method for pruning LLMs. In addition, LLM projection pruning is enhanced by a new approach we refer to as composite projection pruning - the synergistic combination of unstructured pruning that retains accuracy and structured pruning that reduces model size. We develop Mosaic, a novel system to create and deploy pruned LLMs using composite projection pruning. Mosaic is evaluated using a range of performance and quality metrics on multiple hardware platforms, LLMs, and datasets. Mosaic is 7.19x faster in producing models than existing approaches. Mosaic models achieve up to 84.2% lower perplexity and 31.4% higher accuracy than models obtained from coarse-grained pruning. Up to 67% faster inference and 68% lower GPU memory use is noted for Mosaic models. Mosaic is available for public use from https://github.com/blessonvar/Mosaic",
+        "identifiers": [
+          "SemanticScholar:b1920dc923e0c1c18e32e10c9b0c3412a881096b"
+        ],
+        "semantic_scholar_id": "b1920dc923e0c1c18e32e10c9b0c3412a881096b",
+        "canonical_id": "arXiv:2504.06323",
+        "arxiv_id": "2504.06323",
+        "doi": "10.1016/j.future.2025.108056",
+        "authors": [
+          "Bailey J. Eccles",
+          "Leon Wong",
+          "Blesson Varghese"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 554,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iccv51701.2025.01904",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccv51701.2025.01904",
+        "id:SemanticScholar:ed8a97ae1948c8d2e00184a3c8cc86b6cdab81d3",
+        "title:zipvl accelerating visionlanguage models through dynamic token sparsity",
+        "url:https://doi.org/10.1109/ICCV51701.2025.01904"
+      ],
+      "record": {
+        "title": "ZipVL: Accelerating Vision-Language Models Through Dynamic Token Sparsity",
+        "source_url": "https://doi.org/10.1109/ICCV51701.2025.01904",
+        "year": 2025,
+        "published": "2025-10-19",
+        "venue": "IEEE International Conference on Computer Vision",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:ed8a97ae1948c8d2e00184a3c8cc86b6cdab81d3"
+        ],
+        "semantic_scholar_id": "ed8a97ae1948c8d2e00184a3c8cc86b6cdab81d3",
+        "doi": "10.1109/ICCV51701.2025.01904",
+        "canonical_id": "DOI:10.1109/ICCV51701.2025.01904",
+        "authors": [
+          "Ye-Fei He",
+          "Feng Chen",
+          "Jing Liu",
+          "Wen-Qi Shao",
+          "Hong Zhou",
+          "Kai-Peng Zhang",
+          "Bo-Han Zhuang"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 360,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.19087",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2025.3604321",
+        "id:SemanticScholar:d4bc80c2fc471f3b554d2f2c66c7f284c429d964",
+        "id:arXiv:2508.19087",
+        "title:aptllm exploiting arbitraryprecision tensor core computing for llm acceleration",
+        "url:https://arxiv.org/abs/2508.19087"
+      ],
+      "record": {
+        "title": "APT-LLM: Exploiting Arbitrary-Precision Tensor Core Computing for LLM Acceleration",
+        "source_url": "https://arxiv.org/abs/2508.19087",
+        "year": 2025,
+        "published": "2025-08-26",
+        "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have revolutionized AI applications, yet their enormous computational demands severely limit deployment and real-time performance. Quantization methods can help reduce computational costs; however, attaining the extreme efficiency associated with ultralow-bit quantized LLMs at arbitrary precision presents challenges on GPUs. This is primarily due to the limited support for GPU tensor cores (TCs), inefficient memory management, and inflexible kernel optimizations. To tackle these challenges, we propose a comprehensive acceleration scheme for arbitrary-precision LLMs, namely APT-LLM. First, we introduce a novel data format, bipolar-INT, which allows for efficient and lossless conversion with signed INT, while also being more conducive to parallel computation. We also develop a matrix multiplication (MatMul) method allowing for arbitrary precision by dismantling and reassembling matrices at the bit level. This method provides flexible precision and optimizes the utilization of GPU TCs. In addition, we propose a memory management system focused on data recovery, which strategically employs fast shared memory to substantially increase kernel execution speed and reduce memory access latency. Finally, we develop a kernel mapping method that dynamically selects the optimal configurable hyperparameters of kernels for varying matrix sizes, enabling optimal performance across different LLM architectures and precision settings. In LLM inference, APT-LLM achieves up to a <inline-formula> <tex-math notation=\"LaTeX\">$3.99\\times $ </tex-math></inline-formula> speedup compared to FP16 baselines and a <inline-formula> <tex-math notation=\"LaTeX\">$2.16\\times $ </tex-math></inline-formula> speedup over NVIDIA CUTLASS INT4 acceleration on RTX 3090. On RTX 4090 and H800, APT-LLM achieves up to <inline-formula> <tex-math notation=\"LaTeX\">$2.44\\times $ </tex-math></inline-formula> speedup over FP16 and <inline-formula> <tex-math notation=\"LaTeX\">$1.65\\times $ </tex-math></inline-formula> speedup over CUTLASS integer baselines.",
+        "identifiers": [
+          "SemanticScholar:d4bc80c2fc471f3b554d2f2c66c7f284c429d964"
+        ],
+        "semantic_scholar_id": "d4bc80c2fc471f3b554d2f2c66c7f284c429d964",
+        "canonical_id": "arXiv:2508.19087",
+        "arxiv_id": "2508.19087",
+        "doi": "10.1109/TCAD.2025.3604321",
+        "authors": [
+          "Shao-Bo Ma",
+          "Chao Fang",
+          "Haikuo Shao",
+          "Zhong-Feng Wang"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 414,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.19228",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.19228",
+        "id:SemanticScholar:f8a12ef911d05c7a65beea3ac6de474f00e9d8e6",
+        "id:arXiv:2509.19228",
+        "title:compllm compression for long context qa",
+        "url:https://arxiv.org/abs/2509.19228"
+      ],
+      "record": {
+        "title": "CompLLM: Compression for Long Context Q&A",
+        "source_url": "https://arxiv.org/abs/2509.19228",
+        "year": 2025,
+        "published": "2025-09-23",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) face significant computational challenges when processing long contexts due to the quadratic complexity of self-attention. While soft context compression methods, which map input text to smaller latent representations, have shown promise, their real-world adoption is limited. Existing techniques typically compress the context as a single unit, which leads to quadratic compression complexity and an inability to reuse computations across queries with overlapping contexts. In this work, we introduce CompLLM, a soft compression technique designed for practical deployment. Instead of processing the context holistically, CompLLM divides it into segments and compresses each one independently. This simple design choice yields three critical properties: efficiency, as the compression step scales linearly with the context length; scalability, enabling models trained on short sequences (e.g., 1k tokens) to generalize to contexts of 100k tokens; and reusability, allowing compressed segments to be cached and reused across different queries. Our experiments show that with a 2x compression rate, at high context lengths CompLLM speeds up Time To First Token (TTFT) by up to 4x and reduces the KV cache size by 50%. Furthermore, CompLLM achieves performance comparable to that obtained with the uncompressed context, and even surpasses it on very long sequences, demonstrating its effectiveness and practical utility.",
+        "identifiers": [
+          "SemanticScholar:f8a12ef911d05c7a65beea3ac6de474f00e9d8e6"
+        ],
+        "semantic_scholar_id": "f8a12ef911d05c7a65beea3ac6de474f00e9d8e6",
+        "canonical_id": "arXiv:2509.19228",
+        "arxiv_id": "2509.19228",
+        "doi": "10.48550/arXiv.2509.19228",
+        "authors": [
+          "G. Berton",
+          "Jayakrishnan Unnikrishnan",
+          "S. Tran",
+          "Mubarak Shah"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 386,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.23967",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.23967",
+        "id:SemanticScholar:232f1332c85b96a06d59442260d81728a6fabcba",
+        "id:arXiv:2509.23967",
+        "title:hipo hybrid policy optimization for dynamic reasoning in llms",
+        "url:https://arxiv.org/abs/2509.23967"
+      ],
+      "record": {
+        "title": "HiPO: Hybrid Policy Optimization for Dynamic Reasoning in LLMs",
+        "source_url": "https://arxiv.org/abs/2509.23967",
+        "year": 2025,
+        "published": "2025-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) increasingly rely on Chain-of-Thought (CoT) reasoning to improve accuracy on complex tasks. However, always generating lengthy reasoning traces is inefficient, leading to excessive token usage and higher inference costs. This paper introduces the Hybrid Policy Optimization (i.e., HiPO), a framework for adaptive reasoning control that enables LLMs to selectively decide when to engage in detailed reasoning (Think-on) and when to respond directly (Think-off). Specifically, HiPO combines a hybrid data pipelineproviding paired Think-on and Think-off responseswith a hybrid reinforcement learning reward system that balances accuracy and efficiency while avoiding over-reliance on detailed reasoning. Experiments across mathematics and coding benchmarks demonstrate that HiPO can substantially reduce token length while maintaining or improving accuracy. Finally, we hope HiPO a can be a principled approach for efficient adaptive reasoning, advancing the deployment of reasoning-oriented LLMs in real-world, resource-sensitive settings.",
+        "identifiers": [
+          "SemanticScholar:232f1332c85b96a06d59442260d81728a6fabcba"
+        ],
+        "semantic_scholar_id": "232f1332c85b96a06d59442260d81728a6fabcba",
+        "canonical_id": "arXiv:2509.23967",
+        "arxiv_id": "2509.23967",
+        "doi": "10.48550/arXiv.2509.23967",
+        "authors": [
+          "Ken Deng",
+          "Zi-Zheng Zhan",
+          "Wen Xiang",
+          "Wen-Ya Zhu",
+          "Tianhao Peng",
+          "Xin-Ping Lei",
+          "Wei-Hao Li",
+          "Jing-Xuan Xu",
+          "Kun Wu",
+          "Yi-Fan Yao",
+          "Hao-Yang Huang",
+          "Huaixi Tang",
+          "Ke-Peng Lei",
+          "Zhiyi Lai",
+          "Song-Wei Yu",
+          "Zong-Xian Feng",
+          "Zuchen Gao",
+          "Wei-Hao Xie",
+          "Chen-Chen Zhang",
+          "Ya-Nan Wu",
+          "Yuan-Xing Zhang",
+          "Lecheng Huang",
+          "Yuqun Zhang",
+          "Jie Liu",
+          "Zhao-Xiang Zhang",
+          "Hao-Tian Zhang",
+          "Bin Chen",
+          "Jia-Heng Liu"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 381,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.26226",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.26226",
+        "id:SemanticScholar:8c8d74daa222061151dcf0bcdc7dbc2764951590",
+        "id:arXiv:2509.26226",
+        "title:thinkingfree policy initialization makes distilled reasoning models more effective and efficient reasoners",
+        "url:https://arxiv.org/abs/2509.26226"
+      ],
+      "record": {
+        "title": "Thinking-Free Policy Initialization Makes Distilled Reasoning Models More Effective and Efficient Reasoners",
+        "source_url": "https://arxiv.org/abs/2509.26226",
+        "year": 2025,
+        "published": "2025-09-30",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reinforcement Learning with Verifiable Reward (RLVR) effectively solves complex tasks but demands extremely long context lengths during training, leading to substantial computational costs. While multi-stage training can partially mitigate this, starting with overly short contexts often causes irreversible performance degradation, ultimately failing to reduce overall training compute significantly. In this paper, we introduce **T**hinking-**F**ree **P**olicy **I**nitialization (**TFPI**), a simple yet effective adaptation to RLVR that bridges long Chain-of-Thought (CoT) distillation and standard RLVR. TFPI employs a simple *ThinkFree* operation, explicitly discarding the thinking content via a direct ** append, to reduce token usage during inference. Training with *ThinkFree*-adapted inputs improves performance and lowers token consumption, even in the original slow-thinking mode. Extensive experiments across various benchmarks have shown that TFPI accelerates RL convergence, achieves a higher performance ceiling, and yields more token-efficient reasoning models without specialized rewards or complex training designs. With TFPI only, we train a 4B model to reach 89.0% accuracy on AIME24 and 65.5% on LiveCodeBench using less than 4K H20 hours.",
+        "identifiers": [
+          "SemanticScholar:8c8d74daa222061151dcf0bcdc7dbc2764951590"
+        ],
+        "semantic_scholar_id": "8c8d74daa222061151dcf0bcdc7dbc2764951590",
+        "canonical_id": "arXiv:2509.26226",
+        "arxiv_id": "2509.26226",
+        "doi": "10.48550/arXiv.2509.26226",
+        "authors": [
+          "Xin Xu",
+          "AI Cliveb",
+          "Kai Yang",
+          "Tian-Hao Chen",
+          "Yang Wang",
+          "Sai-Yong Yang",
+          "Can Yang"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 379,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.04476",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.04476",
+        "id:SemanticScholar:a916b6e0a90e135865958fe3d7be0a9156432dcd",
+        "id:arXiv:2510.04476",
+        "title:compressed convolutional attention efficient attention in a compressed latent space",
+        "url:https://arxiv.org/abs/2510.04476"
+      ],
+      "record": {
+        "title": "Compressed Convolutional Attention: Efficient Attention in a Compressed Latent Space",
+        "source_url": "https://arxiv.org/abs/2510.04476",
+        "year": 2025,
+        "published": "2025-10-06",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-headed Attention's (MHA) quadratic compute and linearly growing KV-cache make long-context transformers expensive to train and serve. Prior works such as Grouped Query Attention (GQA) and Multi-Latent Attention (MLA) shrink the cache, speeding decode, but leave compute, which determines prefill and training speed, largely unchanged. We introduce Compressed Convolutional Attention (CCA), a novel attention method which down-projects queries, keys, and values and performs the entire attention operation inside the shared latent space. This simple design dramatically cuts parameters, KV-cache, and FLOPs all at once by the desired compression factor. Because CCA is orthogonal to head-sharing, we combine the two to form Compressed Convolutional Grouped Query Attention (CCGQA), which further tightens the compute-bandwidth Pareto frontier so that users can tune compression toward either FLOP or memory limits without sacrificing quality. Experiments show that CCGQA consistently outperforms both GQA and MLA at equal KV-cache compression on dense and MoE models. Additionally, we show that CCGQA outperforms all other attention methods on MoE models with half the KV-cache of GQA and MLA, achieving an 8x KV-cache compression with no drop in performance compared to standard MHA. CCA and CCGQA also dramatically reduce the FLOP cost of attention which leads to substantially faster training and prefill than existing methods. On H100 GPUs, our fused CCA/CCGQA kernel reduces prefill latency by about 1.7x at a sequence length of 16k relative to MHA, and accelerates backward by about 1.3x.",
+        "identifiers": [
+          "SemanticScholar:a916b6e0a90e135865958fe3d7be0a9156432dcd"
+        ],
+        "semantic_scholar_id": "a916b6e0a90e135865958fe3d7be0a9156432dcd",
+        "canonical_id": "arXiv:2510.04476",
+        "arxiv_id": "2510.04476",
+        "doi": "10.48550/arXiv.2510.04476",
+        "authors": [
+          "Tomas Figliolia",
+          "Nick Alonso",
+          "Rishi Iyer",
+          "Quentin Anthony",
+          "Beren Millidge"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 373,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.13797",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.13797",
+        "id:SemanticScholar:191850cb4179e0e2e369db0df7cc45d7023f707f",
+        "id:arXiv:2510.13797",
+        "title:breadcrumbs reasoning memoryefficient reasoning with compression beacons",
+        "url:https://arxiv.org/abs/2510.13797"
+      ],
+      "record": {
+        "title": "Breadcrumbs Reasoning: Memory-Efficient Reasoning with Compression Beacons",
+        "source_url": "https://arxiv.org/abs/2510.13797",
+        "year": 2025,
+        "published": "2025-10-15",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The scalability of large language models for long-context reasoning is severely constrained by the linear growth of their Transformer key-value cache, which incurs significant memory and computational costs. We posit that as a model generates reasoning tokens, the informational value of past generated tokens diminishes, creating an opportunity for compression. In this work, we propose to periodically compress the generation KV cache with a learned, special-purpose token and evict compressed entries. We train the model to perform this compression via a modified joint distillation and reinforcement learning (RL) framework. Our training method minimizes overhead over the conventional RL process, as it leverages RL outputs for distillation. Empirically, our method achieves a superior memory-accuracy Pareto frontier compared to both the model without cache compression and training-free compression techniques.",
+        "identifiers": [
+          "SemanticScholar:191850cb4179e0e2e369db0df7cc45d7023f707f"
+        ],
+        "semantic_scholar_id": "191850cb4179e0e2e369db0df7cc45d7023f707f",
+        "canonical_id": "arXiv:2510.13797",
+        "arxiv_id": "2510.13797",
+        "doi": "10.48550/arXiv.2510.13797",
+        "authors": [
+          "Giovanni Monea",
+          "Yair Feldman",
+          "Shankar Padmanabhan",
+          "Kianté Brantley",
+          "Yoav Artzi"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 364,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3771288",
+      "identity_tokens": [
+        "id:DOI:10.1145/3771288",
+        "id:SemanticScholar:1ea540b3588c738e1ea7fa1e57f03729abb5db1b",
+        "title:cdllm a heterogeneous multifpga system for batched decoding of 70b llms using a computededicated architecture",
+        "url:https://doi.org/10.1145/3771288"
+      ],
+      "record": {
+        "title": "CD-LLM: A Heterogeneous Multi-FPGA System for Batched Decoding of 70B+ LLMs Using a Compute-Dedicated Architecture",
+        "source_url": "https://doi.org/10.1145/3771288",
+        "year": 2025,
+        "published": "2025-10-22",
+        "venue": "ACM Transactions on Reconfigurable Technology and Systems",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) with 70 billion or more parameters are increasingly being deployed in cloud-based Model-as-a-Service (MaaS) scenarios. To meet the demands of such deployments, MaaS providers require batched LLM decoding systems that can deliver high System Throughput (STP) while minimizing Total Cost of Ownership (TCO). However, existing FPGA-based solutions predominantly focus on small-batch or single-batch inference, which fails to meet the computational requirements of batched LLM decoding, resulting in performance gaps of up to 7.96 \\(\\times\\) . Moreover, the low utilization of multi-head attention operations in batched decoding scenarios, e.g., only 3.72% on A100 GPUs, further constrains throughput and inflates TCO. To address these challenges, this article introduces CD-LLM, a heterogeneous multi-FPGA system designed for efficient batched decoding of LLMs with 70B+ parameters, built upon a Compute-Dedicated architecture. First, we propose a memory-aligned mixed-precision quantization engine to reduce workload. By employing importance-aware quantization, we compress Llama-3.1-70B to an effective 3.45-bit representation and achieve 72.33% bandwidth utilization through memory-aligned data packing. Second, we present a compute-dedicated FPGA architecture that maximizes peak performance by leveraging FPGA-specific resources such as DSPs, BRAMs, and LUTs. The compute-dedicated architecture enables CD-LLM to reach a peak performance of 59.90 TOPS at 600 MHz on U250 FPGA. At last, we introduce a heterogeneous master-slave multi-FPGA system to achieve higher utilization. By pipelining attention and linear layer computations across master and slave FPGAs, CD-LLM achieves utilization rates of 83.08% for linear layers and 68.30% for attention layers. CD-LLM is designed with a heterogeneous multi-FPGA architecture, with an HBM-enabled FPGA as the master accelerator and eight DDR-based FPGAs as slave accelerators. When deployed for inference on the Llama-3.1-70B model with a batch size of 256, CD-LLM achieves a throughput of 2,721.79 tokens/s. This represents a 6.11 \\(\\times\\) improvement in STP and a 4.71 \\(\\times\\) reduction in TCO compared to an eight-card RTX3090 GPU system. Furthermore, CD-LLM substantially outperforms the state-of-the-art eight-card FPGA accelerator FlightLLM, delivering 16.15 \\(\\times\\) higher STP and 14.56 \\(\\times\\) lower TCO.",
+        "identifiers": [
+          "SemanticScholar:1ea540b3588c738e1ea7fa1e57f03729abb5db1b"
+        ],
+        "semantic_scholar_id": "1ea540b3588c738e1ea7fa1e57f03729abb5db1b",
+        "doi": "10.1145/3771288",
+        "canonical_id": "DOI:10.1145/3771288",
+        "authors": [
+          "Wenheng Ma",
+          "Xinhao Yang",
+          "Shulin Zeng",
+          "Teng-Xuan Liu",
+          "Li-Bo Shen",
+          "Hong-Yi Wang",
+          "Shi-Yao Li",
+          "Ke Hong",
+          "Zhen-Hua Zhu",
+          "Xue-Fei Ning",
+          "Tsung-Yi Ho",
+          "Guohao Dai",
+          "Yu Wang"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 357,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:14ff83d250c141166e05088b2f23b4c48021531fffec0e618aca30da463b69ce",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

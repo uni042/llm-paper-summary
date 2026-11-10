@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-015dddfd0caf85e1-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.09334",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.09334",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.09334",
+      "arXiv:2507.09334"
+    ],
+    "reason": "arXiv著者要旨を確認。3D MLLMのobject-centric視覚トークン冗長性に対し、Global Attention PredictionとSample-Adaptive Pruningで入力ごとの削減率を選択する。推論時トークン削減の直接手法だが、評価対象は3Dシーン理解に特化し、一般のLLMサービングへの適用やend-to-end遅延倍率は要旨から未確認のためborderline。",
+    "first_checked_at": "2026-10-30T22:07:48+00:00",
+    "last_checked_at": "2026-10-30T22:07:48+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Fast3D: Accelerating 3D Multi-modal Large Language Models for Efficient 3D Scene Understanding"
+  },
+  "processed_at": "2026-10-30T22:07:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-015dddfd0caf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

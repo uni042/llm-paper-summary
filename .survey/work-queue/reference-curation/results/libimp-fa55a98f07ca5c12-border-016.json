@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa55a98f07ca5c12-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3734866",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3734866",
+    "identity_tokens": [
+      "DOI:10.1145/3734866"
+    ],
+    "reason": "The ACM DOI page returned 403 and no primary abstract was retrieved. The title suggests runtime ML precision measurement/testing, but its system-efficiency relevance remains uncertain.",
+    "first_checked_at": "2026-10-14T03:51:07+00:00",
+    "last_checked_at": "2026-10-14T03:51:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FuMi: A Runtime Fuzz-based Machine Learning Precision Measurement and Testing Framework"
+  },
+  "processed_at": "2026-10-14T03:51:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa55a98f07ca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

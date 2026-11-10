@@ -1,0 +1,110 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261102-0729-scheduled-chat-30/r01",
+  "reference_main_sha": "6c86118ea5d0164c03087ac20c921f4f7c8e00d8",
+  "record_count": 6,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.10254",
+      "identity_tokens": [
+        "arxiv:2410.10254",
+        "semanticscholar:a50373538368bcbd0b35bd9a7487f36526a25d75",
+        "title:low rank linearization of large language models",
+        "title:lolcats on low rank linearizing of large language models"
+      ],
+      "title": "LoLCATs: On Low-Rank Linearizing of Large Language Models",
+      "reason": "worklistの「Low-rank Linearization of Large Language Models」はICML 2024ワークショップのLOLCAT初期版。一次PDFでsoftmax注意の出力を模倣するattention transferとLoRA調整、Llama 3 8B/Mistral 7Bへの線形注意変換を確認。著者・方式が一致する拡張版arXiv:2410.10254（ICLR 2025）は70B/405Bまで線形化を拡張しており、同じ研究系列の版を別canonicalとして重複登録しないようarXiv版へ正規化した。LLMの定数メモリ復号と長文脈推論効率へ直接関係するためaccept。初期版と拡張版の厳密な統合判定はimport inboxで再確認する。",
+      "source_url": "https://arxiv.org/abs/2410.10254",
+      "body_check": "primary_openreview_workshop_pdf_and_arxiv_abstract_verified; full_research_review_not_performed",
+      "first_checked_at": "2026-11-02T07:36:49+09:00",
+      "last_checked_at": "2026-11-02T07:36:49+09:00",
+      "linked_from": [],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e545797fd29206a6b77f26fa89f17401f5f365b5",
+      "identity_tokens": [
+        "semanticscholar:e545797fd29206a6b77f26fa89f17401f5f365b5",
+        "title:zipact zipping interaction history into a compact state for efficient llm agents"
+      ],
+      "title": "ZipAct: Zipping Interaction History into a Compact State for Efficient LLM Agents",
+      "reason": "TMLR向け一次PDFを確認。エージェントの全履歴を毎ターン再投入する代わりにGoal/World/Constraintの構造化状態を更新し、bounded-state仮定下で累積トークン量をO(T²)からO(T)へ抑える。ALFWorld等でトークン消費60.8〜67.6%減を報告する。LLM呼び出しの入力トークン削減は推論費用に関係する一方、KVキャッシュ実装、カーネル、サービング実行系の直接最適化ではなく、エージェントの文脈管理が主題のためborderline。",
+      "source_url": "https://openreview.net/pdf?id=ZssIalqqrz",
+      "body_check": "primary_openreview_pdf_abstract_and_selected_body_verified; full_research_review_not_performed",
+      "first_checked_at": "2026-11-02T07:36:49+09:00",
+      "last_checked_at": "2026-11-02T07:36:49+09:00",
+      "linked_from": [],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.00025",
+      "identity_tokens": [
+        "arxiv:2312.00025",
+        "semanticscholar:a44462bf27c68cf1265dcef4400d2e7e5d9e46f6",
+        "title:secure transformer inference protocol"
+      ],
+      "title": "Secure Transformer Inference Protocol (STIP)",
+      "reason": "一次arXiv abstractを確認。STIPは2者間秘匿Transformer推論の暗号計算負荷を問題とし、3者脅威モデルと半対称置換保護を提案、モデル精度損失なしに既存2者プロトコルより大幅な効率向上を報告する。推論プロトコルの実行効率には関連するが、対象は汎用Transformerサービスであり、大規模自己回帰LLMのサービング性能・KV管理・GPUカーネルの直接評価が要旨から確認できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2312.00025",
+      "body_check": "primary_arxiv_abstract_verified; body_not_read",
+      "first_checked_at": "2026-11-02T07:36:49+09:00",
+      "last_checked_at": "2026-11-02T07:36:49+09:00",
+      "linked_from": [],
+      "worklist_rank": 79
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21465",
+      "identity_tokens": [
+        "arxiv:2603.21465",
+        "title:drtriton large scale synthetic data driven reinforcement learning for triton kernel generation"
+      ],
+      "title": "DRTriton: Large-Scale Synthetic Data Driven Reinforcement Learning for Triton Kernel Generation",
+      "reason": "一次arXiv abstractを確認。PyTorch参照実装をTriton/CUDAカーネルへ変換するLLMを、合成データと強化学習で訓練し、KernelBench上の生成カーネル性能を評価する研究。高速なカーネルを生成するAIの訓練が主題であり、既存LLMの推論サービング・推論実行カーネルを直接高速化する研究ではないためunrelated。worklistの題名は原著のDrivenが抜けているため一次資料表記に修正。",
+      "source_url": "https://arxiv.org/abs/2603.21465",
+      "body_check": "primary_arxiv_abstract_verified; body_not_read",
+      "first_checked_at": "2026-11-02T07:36:49+09:00",
+      "last_checked_at": "2026-11-02T07:36:49+09:00",
+      "linked_from": [],
+      "worklist_rank": 197
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1062",
+      "identity_tokens": [
+        "doi:10.18653/v1/2026.findings-acl.1062",
+        "title:lightmoe task aware expert availability management for memory efficient moe llm inference"
+      ],
+      "title": "LightMoE: Task-Aware Expert Availability Management for Memory-Efficient MoE-LLM Inference",
+      "reason": "ACL Anthologyの正式一次abstractを確認。端末常駐するエキスパートの頻度認識初期化、欠損エキスパートの類似性に基づくリダイレクト、タスク単位の粗粒度エキスパート交換により、エッジMoE推論でI/Oを抑えつつ精度を改善する。静的枝刈り比平均4.3ポイント、動的スワップ比2.4ポイントの精度改善を報告。LLM推論のエキスパート常駐・交換管理へ直接寄与するためaccept。GitHub既収録arXiv:2603.12645の「LightMoE: Reducing Mixture-of-Experts Redundancy through Expert Replacing」は著者・正式タイトル・手法が異なる別論文であり、名前だけで統合しない。",
+      "source_url": "https://aclanthology.org/2026.findings-acl.1062/",
+      "body_check": "primary_acl_anthology_abstract_verified; body_not_read",
+      "first_checked_at": "2026-11-02T07:36:49+09:00",
+      "last_checked_at": "2026-11-02T07:36:49+09:00",
+      "linked_from": [],
+      "worklist_rank": 236
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:54983a66dc8bc15af89890bc9e1a63e056594179",
+      "identity_tokens": [
+        "semanticscholar:54983a66dc8bc15af89890bc9e1a63e056594179",
+        "title:composite slice transformer an efficient transformer with composition of multi scale multi range attentions"
+      ],
+      "title": "Composite Slice Transformer: An Efficient Transformer with Composition of Multi-Scale Multi-Range Attentions",
+      "reason": "ICLR 2023の正式一次PDFを確認。CSTは固定長スライス内の局所注意とスライス集約後の大域注意を逐次合成し、計算量O(NL+N²/L²)を達成する。Long Range Arenaで標準Transformerより平均6.9ポイント高精度、WikiText-103自己回帰言語モデルでも評価する。ただし現代の数十億パラメータLLMサービングや実際のKVキャッシュ管理の検証は主眼ではなく、効率的Transformerアーキテクチャ研究としてborderline。",
+      "source_url": "https://openreview.net/pdf?id=nWTzIsgrYNN",
+      "body_check": "primary_iclr_openreview_pdf_abstract_and_selected_body_verified; full_research_review_not_performed",
+      "first_checked_at": "2026-11-02T07:36:49+09:00",
+      "last_checked_at": "2026-11-02T07:36:49+09:00",
+      "linked_from": [],
+      "worklist_rank": 238
+    }
+  ]
+}

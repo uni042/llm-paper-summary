@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a0260679bc257d27-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.00176",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.00176",
+    "identity_tokens": [
+      "arXiv:2311.00176"
+    ],
+    "reason": "chip design向けにdomain-adaptive tokenization、continued pretraining、instruction alignment、retrieval adaptationを行い、chatbot・EDA script生成・bug要約性能を改善するdomain adaptation研究。推論runtime・memory・serving最適化ではないためunrelated。",
+    "first_checked_at": "2026-10-05T15:43:21+00:00",
+    "last_checked_at": "2026-10-05T15:43:21+00:00",
+    "linked_from": [],
+    "title": "ChipNeMo: Domain-Adapted LLMs for Chip Design"
+  },
+  "processed_at": "2026-10-05T15:43:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0260679bc25",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

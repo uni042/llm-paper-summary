@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "852544ab6229abf32d95ea72e43993feb6008d14266ff855f5d8ce55db3f9d34",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_1f14cf9384048191babededbf5044ed5--2026-2601.17367-elastic-attention-originality-returned-repair-20261021-2000-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2601.17367",
+  "worker_completed_at": "2026-10-21T20:03:18+09:00",
+  "worker_run_key": "20261021-2000-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6569,
+    "body_paragraphs": 33,
+    "method_chars": 1989,
+    "method_paragraphs": 10,
+    "evaluation_chars": 2164,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2026-2601.17367-elastic-attention-test-time-adaptive-sparsity-ratios-for-efficient-trans.md と 21 段落 / 4872文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T16:32:13+00:00"
+}

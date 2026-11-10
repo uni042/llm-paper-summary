@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4665387b01a9a07-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.08913",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.08913",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2203.08913",
+      "arXiv:2203.08913"
+    ],
+    "reason": "test-time retrieval memoryで言語モデルの長距離情報/品質を改善する研究。要旨上の主題は効率化でなく記憶能力の拡張。",
+    "first_checked_at": "2026-10-05T02:12:08+00:00",
+    "last_checked_at": "2026-10-05T02:12:08+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2603.05353-infoflow-kv-information-flow-aware-kv-recomputation-for-long-context.md",
+      "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+      "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md",
+      "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md",
+      "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md",
+      "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+    ],
+    "title": "Memorizing Transformers"
+  },
+  "processed_at": "2026-10-05T02:12:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4665387b01a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

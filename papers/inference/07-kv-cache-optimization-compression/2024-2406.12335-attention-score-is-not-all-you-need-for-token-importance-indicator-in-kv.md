@@ -1,0 +1,202 @@
+---
+last_audited: '2026-10-08'
+under16kb_reaudit_target_path: papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md
+under16kb_reaudit_source_git_blob_sha: '0da5573b6b098807fb382a1392efb613e76c3b4c'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+worker_run_key: 'interactive-20261008-bottom-up-reaudit-r3-vatp-2406.12335'
+worker_completed_at: '2026-10-08T10:13:00+09:00'
+canonical_id: arXiv:2406.12335
+arxiv_id: '2406.12335'
+title: 'Attention Score is not All You Need for Token Importance Indicator in KV Cache Reduction: Value Also Matters'
+summary: VATPは、KVキャッシュのトークン削減で注意重みだけを重要度に使うと、値ベクトルの大きさが不均一であるため実際の注意出力への寄与を取り違える問題を扱う。既存のH2OやScissorhandsが作る注意ベーススコアに値ベクトルのL1ノルムを乗じ、最初の少数トークンを保護しながら重要度の低いKVを削除する。LLaMA2-7B-chatとVicuna-v1.5-7B-16kのLongBench 16タスク、50% KV予算で、元の注意スコア方式を12〜14タスクで上回った。Scissorhands統合ではA6000上でフルKV比1.53倍（50%予算）、2.08倍（25%予算）の生成スループットを得る一方、H2O版はFlashAttention非互換、GQAへ直接適用できない制約を持つ。
+list_summary: 注意スコアに値ベクトルのL1ノルムを組み込み、実際の注意出力寄与に近い重要度でKVトークンを削減する後付け型キャッシュ枝刈り。
+authors:
+- Zhiyu Guo
+- Hidetaka Kamigaito
+- Taro Watanabe
+published: 2024-06-18
+publication: arXiv
+publication_type: Preprint
+lineage: 07-kv-cache-optimization-compression
+topics:
+- KVキャッシュ
+- トークン枝刈り
+- 長文脈
+- 疎注意
+hardware_evaluation: NVIDIA A6000（スループット評価）
+source: https://arxiv.org/abs/2406.12335
+sources:
+- https://arxiv.org/abs/2406.12335
+last_checked: 2026-09-29
+arxiv_categories:
+  primary: cs.CL
+  cross_list:
+  - cs.LG
+publication_status: arXiv preprint
+code: null
+implementation: 論文ではNVIDIA A6000（スループット評価）による提案手法の実装・評価を報告。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-not-confirmed
+references:
+- canonical_id: arXiv:2404.11018
+  arxiv_id: '2404.11018'
+- canonical_id: arXiv:2305.13245
+  doi: 10.18653/v1/2023.emnlp-main.298
+- canonical_id: arXiv:2308.14508
+  arxiv_id: '2308.14508'
+- canonical_id: OpenReview:7Ttk3RzDeu
+  openreview_id: 7Ttk3RzDeu
+- canonical_id: DOI:10.18653/v1/w19-4828
+  doi: 10.18653/v1/w19-4828
+- canonical_id: arXiv:2205.14135
+- canonical_id: OpenReview:dXiGWqBoxaD
+  openreview_id: dXiGWqBoxaD
+- canonical_id: DOI:10.18653/v1/n19-1423
+  doi: 10.18653/v1/n19-1423
+- canonical_id: arXiv:2406.11430
+  arxiv_id: '2406.11430'
+- canonical_id: arXiv:2310.01801
+  openreview_id: uNrFpDPMyo
+- canonical_id: DOI:10.18653/v1/2022.acl-long.502
+  doi: 10.18653/v1/2022.acl-long.502
+- canonical_id: DOI:10.18653/v1/2020.emnlp-main.574
+  doi: 10.18653/v1/2020.emnlp-main.574
+- canonical_id: arXiv:2305.17118
+  openreview_id: JZfg6wGi6g
+- canonical_id: arXiv:2403.05530
+  arxiv_id: '2403.05530'
+- canonical_id: arXiv:2402.06262
+  arxiv_id: '2402.06262'
+- canonical_id: OpenReview:1ayU4fMqme
+  openreview_id: 1ayU4fMqme
+- canonical_id: OpenReview:PxoFut3dWW
+  openreview_id: PxoFut3dWW
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: DOI:10.18653/v1/d19-1002
+  doi: 10.18653/v1/d19-1002
+- canonical_id: arXiv:2309.17453
+  openreview_id: NG7sS51zVF
+- canonical_id: arXiv:2405.15793
+  arxiv_id: '2405.15793'
+- canonical_id: arXiv:2306.14048
+  openreview_id: RkRrPp7GKO
+- canonical_id: DOI:10.18653/v1/2022.acl-long.330
+  doi: 10.18653/v1/2022.acl-long.330
+- canonical_id: arXiv:2306.05685
+  arxiv_id: '2306.05685'
+references_checked_at: '2026-10-03'
+references_source: arxiv-html-reference-section
+references_total: 29
+audit_version: 0
+---
+
+# Attention Score is not All You Need for Token Importance Indicator in KV Cache Reduction: Value Also Matters
+
+> 注意スコアに値ベクトルのL1ノルムを組み込み、実際の注意出力寄与に近い重要度でKVトークンを削減する後付け型キャッシュ枝刈り。
+
+## 書誌情報
+- canonical identity: `arXiv:2406.12335`
+- 著者: Zhiyu Guo, Hidetaka Kamigaito, Taro Watanabe
+- 一次資料: https://arxiv.org/abs/2406.12335
+
+## 概要
+
+長文脈推論では各層が過去トークンのキーと値をKVキャッシュへ保存するため、系列長に比例してGPUメモリが増える。H2OやScissorhandsのような枝刈り方式は、過去の注意スコアが大きいトークンを重要とみなし、低スコアのKVを削除する。しかし注意出力は「注意重み×値ベクトル」の和であり、値ベクトルの大きさがトークン間で均一でなければ、注意重みだけでは出力への寄与を表せない。
+
+論文は実モデルの値ベクトルノルムが強く不均一であることを観測し、値認識トークン枝刈り（Value-Aware Token Pruning; VATP）を提案する。基本形は既存枝刈り方式が作るトークンkのスコア `S_t^k` に値ベクトル `v_k` のL1ノルムを掛け、`I_t^k = S_t^k ||v_k||_1` として順位付けする。新しい予測器を学習するのではなく、H2OやScissorhandsの重要度指標を差し替える後付け拡張である。
+
+LLaMA2-7B-chatとVicuna-v1.5-7B-16kをLongBench 16タスクで評価し、主設定の50% KV予算ではVATP版が元方式を12〜14タスクで上回る。FlashAttentionと組み合わせられるScissorhands版では、A6000上でフルKVに対して50%予算で1.53倍、25%予算で2.08倍の生成スループットを報告する。一方H2Oは累積注意スコアのため完全な注意行列を必要としFlashAttentionと両立しにくく、Grouped-Query Attention（GQA）にもそのまま適用できない。
+
+## 問題設定
+
+自己注意の出力は、各過去トークンの値ベクトルを注意確率で重み付けした和である。従来のKV枝刈りは注意確率だけを保持優先度として使うため、「高い注意を受けるが値の大きさが小さいトークン」と「注意はやや低いが大きな値を持つトークン」を正しく比較できない。
+
+論文の観測では値ベクトルのノルムはトークン間・層間で一様ではない。特に注意シンク（attention sink）と呼ばれる先頭付近のトークンは大きな注意重みを集めても、値ノルムが小さい場合がある。注意重みだけを累積すると、この種のトークンがキャッシュ予算を占有し、実際の注意出力へより強く寄与する別トークンを落とす可能性がある。
+
+したがってVATPの目的は、枝刈りアルゴリズム全体を作り直すことではなく、「重要度の観測量」を注意出力の構造に合わせて修正することである。既存方式のキャッシュ更新規則や予算は維持し、値ノルムという追加情報だけで選択順位を変える。
+
+## 手法
+
+### 値認識重要度
+
+デコード時刻t、過去トークンkに対し、基礎方式が計算する注意由来スコアを `S_t^k` とする。VATPはこれに `||v_k||_1` を乗じる。値ベクトルはKVキャッシュへ既に保存されているため、新たなモデル推論や学習済み予測器は不要である。
+
+この積は厳密な将来寄与を予測するものではないが、注意出力の各項が「重み×値」で構成されることを反映する。値ノルムが小さいトークンは注意スコアが高くても順位が下がり、逆に大きな値を持つトークンは同程度の注意なら残りやすくなる。
+
+### H2OとScissorhandsへの組込み
+
+H2Oでは累積注意スコアをheavy-hitter判定に使うため、そのスコアへ値ノルムを組み込む。Scissorhandsでは過去の注意から将来重要度を推定して残すトークンを決めるため、同じく選択指標をVATPへ置き換える。論文は「H2O w/ VATP」「Scissorhands w/ VATP」として、異なる既存枝刈りに同じ指標が有効かを比較する。
+
+このモジュール性が重要で、VATP自体はKVの配置機構やGPUカーネルを新規設計しない。基礎方式が持つ更新周期、キャッシュ予算、recent-token保護などはそのまま利用するため、速度特性は基礎方式に強く依存する。
+
+### 先頭トークンの保護
+
+値ノルムを掛けると、注意シンクの一部は重要度が低く評価される。しかし先頭トークンをすべて除くと注意分布の安定性を損なう可能性があるため、論文は最初のFトークンを無条件に保持する。実験では概ね20〜40トークンの保護を用いる。
+
+この処理は「注意シンクは不要」という主張ではない。値ノルムで過大評価を弱めつつ、モデルが学習時に依存した先頭位置の役割を完全には壊さないための安全策である。Fを増やせば保護は強くなるが、同じKV予算で動的に選べる枠は減る。
+
+### 追加費用
+
+値ノルムはトークンごとに一度計算して保持できる。論文は追加メモリをKVキャッシュのおよそ `1/(2 d_head)` と見積もり、7Bモデルの `d_head=128` では小さいとする。生成スループットとピークメモリも、同じ基礎枝刈り方式にVATPを加えた場合には大きな差がない。
+
+ただし高速化そのものはVATPのスコア計算から生まれるのではなく、KV予算を削減する基礎方式と注意実装から生じる。VATPの主目的は同じ予算で品質を改善することであり、速度結果は「より良い選択指標を低オーバーヘッドで追加できる」ことの確認として読む必要がある。
+
+## 評価条件
+
+| 項目 | 条件 |
+|---|---|
+| モデル | LLaMA2-7B-chat、Vicuna-v1.5-7B-16k |
+| ベンチマーク | LongBench 16タスク |
+| 基礎方式 | H2O、Scissorhands |
+| 主KV予算 | フルキャッシュの50% |
+| 感度 | 20〜80%程度の削減率を比較 |
+| スループット | NVIDIA A6000、FlashAttention互換Scissorhands構成 |
+| 品質指標 | LongBench各タスク既定指標 |
+| 比較軸 | 基礎方式単独 vs 同方式+VATP、フルKV |
+
+## 主要結果
+
+| 条件 | 結果 | 解釈 |
+|---|---:|---|
+| LLaMA2-7B-chat、50%予算、H2O | VATP版が16タスク中12で元H2Oを上回る | 値ノルム追加が累積注意だけの順位を改善 |
+| 同、Scissorhands | 16タスク中13で元方式を上回る | 別の注意履歴型枝刈りにも有効 |
+| Vicuna-v1.5-7B-16k | VATP版が基礎方式を12〜14タスクで上回る | モデルを変えても傾向が維持 |
+| 削減率20〜80% | Scissorhands+VATPがほぼ全予算で優位 | 強い枝刈りほど重要度指標の差が効く |
+| A6000、Scissorhands+VATP、50% KV予算 | フルKV比1.53×スループット | 品質改善用指標を入れても疎化の速度利得を維持 |
+| 同、25% KV予算 | フルKV比2.08× | より強い削減で計算・メモリ量が低下 |
+
+L1ノルム以外のノルムも比較され、L1が採用されている。VATPを加えたこと自体による生成スループット・ピークメモリの増分は小さく、主要な差は同じKV予算で残すトークンの質に現れる。
+
+### 値ベクトルの大きさを考慮する意義を測る
+
+既存の鍵・値キャッシュ削減では、過去の注意スコアが大きかったトークンを今後も重要とみなして残す方法が多い。しかし注意の重みが大きくても、それに掛ける値ベクトルが小さければ最終出力への寄与は小さい。一方、注意スコアが中程度でも値ベクトルが大きいと出力に影響し得る。VATPは値の大きさを重要度へ組み込み、同じメモリ予算の中で捨てるトークンの選び方を変える。したがって既存のH2OやScissorhandsを完全に置き換える新しいシステムではなく、選択スコアを改良する追加要素として評価される。
+
+LongBenchの十六課題で、LLaMA2-7B-chatと保持予算五十パーセントの条件では、VATP版が元のH2Oに対して十二課題、Scissorhandsに対して十三課題で上回った。Vicuna系モデルでも十二〜十四課題で優位だった。ただし全課題で勝ったわけではなく、値の大きさだけでは意味的に重要な箇所を常に正しく把握できない。文脈依存で必要になるトークンや、注意重みの相殺などを考えると、品質効果にはタスク差がある。
+
+速度実験ではA6000とScissorhands互換実装を使い、保持率五十パーセントで全保持比一・五三倍、二十五パーセントで二・〇八倍の処理量を報告している。この倍率はキャッシュを減らした実行系全体の効果を含むため、値ノルムを計算すること自体で二倍速くなった意味ではない。H2O側は累積注意の収集に完全な注意行列が必要になる条件があり、高速なFlashAttentionとの両立に制約が残る。選択スコアの改善と効率的な注意カーネルでの実装可能性を分けて評価する必要がある。
+
+## 既存研究との差
+
+H2Oは累積注意スコア、Scissorhandsは過去注意パターンを中心に重要トークンを決める。VATPはそれらの更新機構を置き換えず、値ベクトルの大きさを重要度へ追加する。そのため新しいキャッシュ管理基盤というより、既存の注意スコア型枝刈りに挿入できる指標改善である。
+
+SnapKVなどプロンプト圧縮系が観測窓やクラスタリングでKVを選ぶのに対し、本論文の焦点は「注意スコアだけをtoken importanceとみなしてよいか」という評価量そのものにある。速度最適化カーネルを主貢献とせず、品質を保つ選択基準を改善する点が異なる。
+
+## 限界
+
+H2O版は累積注意スコアを得るため完全な注意行列を実体化する必要があり、メモリ効率の高いFlashAttentionと直接両立しない。したがって実用的な高速化評価ではScissorhands側が中心になる。
+
+基礎方式と同様、GQAでは複数query headが少数のKV headを共有するため、head単位のtoken pruningをそのまま適用できない。GQAとVATPの統合は論文時点の未解決課題である。
+
+評価モデルは7B級2種であり、70B級や異なる注意構造へ同じ品質改善が成立するかは未評価である。また値ノルムは出力寄与の上界的な代理量であり、方向や他トークンとの相殺まで捉えるものではない。
+
+## 一次資料
+- arXiv:2406.12335 — Attention Score is not All You Need for Token Importance Indicator in KV Cache Reduction: Value Also Matters
+- https://arxiv.org/abs/2406.12335
+
+## 修正・監査履歴
+- 2026-09-29: `scheduled-chat-00` が一次資料本文・評価・制約を確認し、値認識重要度、先頭保護、基礎方式との関係、FlashAttention/GQA制約まで現行品質ガイドに基づき新規作成。

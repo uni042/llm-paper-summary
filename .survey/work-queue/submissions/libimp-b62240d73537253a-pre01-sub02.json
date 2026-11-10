@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "E8 Lattice Key Quantization for Low-Bit KV-Cache Compression",
+      "source_url": "https://arxiv.org/abs/2610.15384",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Compressing the key-value (KV) cache is essential for serving long-context large language models (LLMs) under memory constraints. While current scalar quantization methods achieve significant compression, they typically face a quality-fidelity trade-off, either suffering from performance instability at 2-bit precision or necessitating 3-bit keys to maintain model quality. In this work, we demonstrate that a uniform low-bit k2v2 configuration (2-bit keys and 2-bit values) can preserve near-baseline quality by using vector quantization (VQ) based on the $E_8$ lattice for KV keys. We show that structured VQ exploits correlations across adjacent dimensions to achieve signal-to-quantization-noise ratios (SQNR) higher than those of independent scalar quantization at the same key payload rate. To ensure practical utility, we adapt a table-based asymmetric scoring algorithm that avoids explicit codebook dequantization during attention computation and preserves decode-throughput parity with scalar baselines. Across five LLM families, our $E_8$ k2v2 approach yields \\textasciitilde$6\\times$ KV compression, roughly 20\\% smaller than scalar k3v2 (3-bit keys and 2-bit values), while retaining near-baseline long-context perplexity. In our full-suite perplexity evaluation, $E_8$ improves over scalar k3v2 in 80\\% of model--dataset--context settings. These results indicate that $E_8$ lattice VQ improves quality per byte while keeping throughput at parity, suggesting that structured key quantization is a useful primitive for KV-compression stacks. Overall, our work provides a low-overhead primitive for expanding the quality-memory frontier in long-context LLM inference.",
+      "identifiers": [
+        "SemanticScholar:ba28503406e91c5e4bc5f78e18d179d9d7927f43"
+      ],
+      "semantic_scholar_id": "ba28503406e91c5e4bc5f78e18d179d9d7927f43",
+      "canonical_id": "arXiv:2610.15384",
+      "arxiv_id": "2610.15384",
+      "authors": [
+        "Sasho Nedelkoski",
+        "Alexander Acker",
+        "Soeren Becker",
+        "Dominik Scheinert",
+        "O. Kao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      },
+      "reason": "E8格子によるベクトル量子化でKeyの隣接次元相関を利用し、2bit K/2bit Vの均一構成でも低bitの品質を維持する。table-based非対称score計算によりattention時のcodebook全展開を避け、scalar baselineと同等のdecode throughputを維持。5種類のLLMでKV約6倍圧縮、scalar k3v2比約20%小さく、perplexity評価の80%の条件でk3v2より良好と報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "SparPR: Runtime KV-Cache Recovery for Resource-Constrained LLM Inference on Consumer Hardware",
+      "source_url": "https://arxiv.org/abs/2610.18140",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Running large language models (LLMs) on consumer hardware is bottlenecked by the key-value (KV) cache, which grows with every decoded token and quickly exhausts the memory and bandwidth of a single consumer GPU. We present SparPR (Sparse Partial Recomputation), a runtime KV-cache recovery mechanism that does not modify model weights and requires no offline training. SparPR couples three online decisions: Query-Aware key-block selection scores historical blocks against the current query; dynamic budget control estimates per-block copy and recompute costs to decide how many blocks to retain; and on-demand local recomputation with cost-aware fallback merges retained blocks into continuous spans and switches between sparse recomputation and full recovery according to a runtime cost comparison. Implemented on FlexGen/FlexLLMGen, SparPR is evaluated on a single consumer laptop (RTX 3070 Ti 8GB, Ryzen 9 6900HX, 16GB RAM). It cuts end-to-end latency by 31%, 52%, and 63% at 1k, 2k, and 4k prompt tokens respectively, with 1.4x-2.7x higher throughput, and completes an 8k-token workload in 44 minutes where the FlexGen baseline times out. Under a fixed cache budget, SparPR retains a Needle Accuracy that stays well above StreamingLLM and H2O at every keep ratio, and ablation studies confirm that the three mechanisms act jointly.",
+      "identifiers": [
+        "SemanticScholar:efaf86496032cfe43bc740f898da5e68d399d6d3"
+      ],
+      "semantic_scholar_id": "efaf86496032cfe43bc740f898da5e68d399d6d3",
+      "canonical_id": "arXiv:2610.18140",
+      "arxiv_id": "2610.18140",
+      "authors": [
+        "Jie Deng",
+        "Ke-Ming Hu",
+        "Yang-He Liu",
+        "Liang Feng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SparPRは消費者向け単一GPUのKV容量・転送帯域不足に対し、query依存のKey block選択、転送と再計算のコスト比較に基づく動的保持予算、連続span単位の部分再計算を組み合わせる。FlexGen/FlexLLMGenへ実装しRTX 3070 Ti 8GBで1K/2K/4K promptのend-to-end遅延を31/52/63%短縮、throughput1.4～2.7倍を報告。学習不要の実行時KV復元方式としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Double KV Cache Optimization on Apple Silicon: Block-FP4, Radial Quantization, and Fused Metal Kernels",
+      "source_url": "https://arxiv.org/abs/2610.33076",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-value (KV) cache capacity and memory traffic are primary bottlenecks in long-context autoregressive inference. We evaluate five cache paths on an Apple Silicon M5 Max using MLX: a native bf16 baseline, block-scaled E2M1 FP4, a Python reference implementing radial quantization with a QJL-style residual, sequential FP4-to-Polar composition, and a fused Metal Polar kernel. On Apple Silicon M5 Max, fused Metal PolarQuant achieves 46.8 tok/s at 3,456 B/token - 3.64x compression versus the bf16 baseline and 1.84x faster than the Python Polar reference (25.4 tok/s), while slightly outperforming block-FP4 (41.5 tok/s at 3.62x compression). Sequential composition of FP4 and Polar (Double Optimization) yields no additive benefit: 4,241 B/token at 15.1 tok/s, worse than FP4 alone on both axes. The fused path establishes that radial coding can be competitive when packing, rotation, and reconstruction are placed in one device kernel, but this result does not extend to longer contexts. At 32K and above, all compressed variants collapse to 1.5-14 tok/s because the current attention path repeatedly reconstructs the full cache, retaining cumulative O(N^2) decode work. At 64K, the Metal variant runs out of memory when a 33.5 GB allocation exceeds MLX's 22.6 GB Metal buffer limit. Fused scaled dot-product attention operating directly on compressed KV, together with chunked pre-allocation, is required for long-context viability. These results separate representation-level compression from kernel and allocator effects and identify the conditions under which low-bit KV caching helps on unified memory hardware.",
+      "identifiers": [
+        "SemanticScholar:c34d8891611f43591b356934c4a43c2600b7d58d"
+      ],
+      "semantic_scholar_id": "c34d8891611f43591b356934c4a43c2600b7d58d",
+      "canonical_id": "arXiv:2610.33076",
+      "arxiv_id": "2610.33076",
+      "authors": [
+        "Ibrokhimsho Abduchaborov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Apple M5 Max/MLXでKVのblock FP4、radial quantization、両者の直列結合、Metal融合kernelを比較する。Metal PolarQuantは46.8tok/s・3456B/tokenでbf16比3.64倍圧縮、Python参照実装比1.84倍高速化。一方、直列FP4+Polarは15.1tok/sへ悪化し、32K以上では全方式がKV全展開の累積O(N²)仕事により失速する。実装と失敗条件を明確にした端末推論性能評価としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "RIFT: KV Cache Compression for Draft Models with Complementary Compressibility Training",
+      "source_url": "https://arxiv.org/abs/2610.31098",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding is a popular decode acceleration method. As such, it is particularly relevant to long-output generation, which requires an increasingly large KV cache. KV cache compression offers a way to constrain costs in long-context drafting. However, compression methods that focus on prefill information can lose relevance as the output length grows. We term this phenomenon decode staleness and show that it degrades draft model accuracy under selection-based KV cache compression. We introduce RIFT, a family of selection-based KV cache compression strategies that balance prefill information and recent generated tokens. We show that refreshing the KV cache selection during token generation significantly improves the drafter's quality at the cost of additional decode latency. To alleviate the refresh costs, we propose an adaptive KV refresh strategy that reduces the number of score calculations while retaining the drafter's quality. We further demonstrate how a compressibility-driven drafter training phase, based on sparse attention masks, can improve the drafter's quality under a compressed KV cache. Combined with compressibility training, RIFT enables Qwen3.5-4B, drafting for Qwen3.5-122B, to retain over 98% of its full-cache acceptance length on 32K-token inputs, 4K-token outputs, and an 8K-token KV cache budget.",
+      "identifiers": [
+        "SemanticScholar:0a93836720a92ea3ea1e153094cb85c3fcf73666"
+      ],
+      "semantic_scholar_id": "0a93836720a92ea3ea1e153094cb85c3fcf73666",
+      "canonical_id": "arXiv:2610.31098",
+      "arxiv_id": "2610.31098",
+      "authors": [
+        "Dor Tsur",
+        "Maor Ashkenazi",
+        "Maximilian Golub",
+        "Peter N. Hicks",
+        "Yaniv Galron",
+        "T. Abramovich",
+        "Yoav Miron",
+        "Tiyasa Mitra",
+        "B. Rouhani",
+        "Ran Zilberstein"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RIFTは投機draftの長文生成で、prefill時に選んだKVが出力伸長とともに古くなるdecode stalenessを分析し、最近生成tokenとprompt情報を両立するKV選択・適応的refreshを導入する。sparse attention maskを使うdrafter学習も組み合わせ、Qwen3.5-4BがQwen3.5-122Bのdraftを行う32K入力/4K出力/8K KV予算で、full-cache受理長の98%超を維持。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b62240d73537",
+    "round": "libimp-b62240d73537253a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b62240d73537253a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b62240d73537253a-pre01.json",
+    "receipt": "sha256:a3f0cbebf12ad527292c864e0f2ae182aa210efdf926bdbe6f3800e03f44066f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b62240d73537",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce8cc41bd01bc83e-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.19113",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.19113",
+    "identity_tokens": [
+      "arXiv:2406.19113"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2406.19113. MegIS accelerates metagenomic sequence search, outside LLM inference.",
+    "first_checked_at": "2026-10-05T14:13:43+00:00",
+    "last_checked_at": "2026-10-05T14:13:43+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+    ],
+    "title": "MegIS: High-Performance, Energy-Efficient, and Low-Cost Metagenomic Analysis with In-Storage Processing"
+  },
+  "processed_at": "2026-10-05T14:13:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce8cc41bd01b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

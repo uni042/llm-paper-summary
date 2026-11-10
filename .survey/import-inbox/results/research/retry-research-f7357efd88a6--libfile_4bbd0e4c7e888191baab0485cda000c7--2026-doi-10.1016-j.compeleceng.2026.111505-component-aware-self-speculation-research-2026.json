@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2b1913fb860490acdb9961b1578cb5aa429d7dff4f67811ebea290e8a6590cdf",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f7357efd88a6--libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-20261030-1430-scheduled-chat-45-r01.md",
+  "canonical_id": "DOI:10.1016/j.compeleceng.2026.111505",
+  "worker_completed_at": "2026-10-30T14:26:00+09:00",
+  "worker_run_key": "20261030-1408-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3614,
+    "body_paragraphs": 19,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 780,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-30T10:36:50+00:00"
+}

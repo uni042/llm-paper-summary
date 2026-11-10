@@ -1,0 +1,188 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1530-scheduled-chat-30/r06",
+  "reference_main_sha": "0ff1d41771eec8ce05901d1254d9bb38fd49b7a7",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2602.22175",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2602.22175",
+        "arXiv:2602.22175"
+      ],
+      "title": "DySCO: Dynamic Attention-Scaling Decoding for Long-Context LMs",
+      "reason": "arXiv一次要旨は検索に強い注意ヘッドから関連トークンを特定し、デコード中に注意重みを増幅して長文脈の回答品質を改善するDYSCOを提案。生成推論アルゴリズムに関連するが、主眼は長文脈推論精度であり、推論計算・メモリ・速度削減の主張が中心ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2602.22175",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:03+09:00",
+      "last_checked_at": "2026-10-30T15:39:03+09:00",
+      "linked_from": [
+        "Long-context Inference"
+      ],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.33477",
+      "identity_tokens": [
+        "arXiv:2609.33477"
+      ],
+      "title": "Just Let Linear States Forget the Distant Past: Prefix Caching via Suffix Replay for Hybrid LLMs",
+      "reason": "arXiv著者要旨はlinear attentionと全域注意を組み合わせたハイブリッドLLMで、再帰状態のcheckpoint整列制約を回避し、ページ境界ごとにprefixを再利用できるSuffixReplayを提案。prefixキャッシュ再利用とprefill削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.33477",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:03+09:00",
+      "last_checked_at": "2026-10-30T15:39:03+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 74
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.34650",
+      "identity_tokens": [
+        "arXiv:2609.34650"
+      ],
+      "title": "When Can Attention Heads Be Statically Defined?",
+      "reason": "arXiv一次要旨は学習中の注意パターン分散が小さいヘッドを固定パターンへ置換するSelective Attention Freezingを提案。注意計算の一部を省く融合カーネルを設計するが、主要な定量比較は学習トークン予算と訓練速度であり、生成LLMサービングのdecode高速化が中心ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.34650",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:03+09:00",
+      "last_checked_at": "2026-10-30T15:39:03+09:00",
+      "linked_from": [
+        "Sparse Attention",
+        "Hardware Accelerators"
+      ],
+      "worklist_rank": 75
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.08506",
+      "identity_tokens": [
+        "arXiv:2608.08506"
+      ],
+      "title": "Understanding Calibration and Truncation Error Propagation in Training-Free Low-Rank Compression for LLMs",
+      "reason": "arXiv著者要旨はLLMの学習不要低ランク圧縮で、校正データの残差誤差が層を越えて蓄積する問題と、圧縮後に層重要度の順位が変わる問題を分析し補正する。配備時のパラメータ削減と品質維持に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2608.08506",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:03+09:00",
+      "last_checked_at": "2026-10-30T15:39:03+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "Low-rank Compression"
+      ],
+      "worklist_rank": 77
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.27692",
+      "identity_tokens": [
+        "arXiv:2607.27692"
+      ],
+      "title": "Recall Before You Rank: Similarity-Guided Top-K Reuse for Efficient Long-Context Attention",
+      "reason": "arXiv著者要旨はTop-K疎注意で全KVとの照合・Top-K選択が毎回必要になるボトルネックを、類似クエリ間で過去の検索結果を再利用するReTopKで削減する。長文脈decodeの疎注意選択コストを直接改善する研究。",
+      "source_url": "https://arxiv.org/abs/2607.27692",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:03+09:00",
+      "last_checked_at": "2026-10-30T15:39:03+09:00",
+      "linked_from": [
+        "Sparse Attention",
+        "KV Cache Optimization / Compression"
+      ],
+      "worklist_rank": 78
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.10944",
+      "identity_tokens": [
+        "arXiv:2606.10944"
+      ],
+      "title": "Express Language Modeling",
+      "reason": "arXiv著者要旨は非因果注意の近似を保証付き因果近似へ変換するExpressを提案し、I/Oを考慮したTriton実装でFlashAttention-2比の速度改善、長文脈prefill、KV圧縮、メモリ制約decodeへの適用を報告。LLM推論計算・メモリ最適化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2606.10944",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:03+09:00",
+      "last_checked_at": "2026-10-30T15:39:03+09:00",
+      "linked_from": [
+        "Sparse Attention",
+        "Hardware Accelerators"
+      ],
+      "worklist_rank": 79
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.02947",
+      "identity_tokens": [
+        "arXiv:2608.02947"
+      ],
+      "title": "ATFlash: Per-RoPE-Wavelength Attention Windows for Compute/Memory-Efficient LLM Inference",
+      "reason": "arXiv著者要旨はRoPE周波数対ごとの波長から距離窓を定義し、遠距離で識別できないQK内積成分を削減するATFlashを提案。低周波対を通じて遠距離キーを残しつつ注意計算を削減するため、長文脈推論効率に直接該当。",
+      "source_url": "https://arxiv.org/abs/2608.02947",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:03+09:00",
+      "last_checked_at": "2026-10-30T15:39:03+09:00",
+      "linked_from": [
+        "Sparse Attention",
+        "Long-context Inference"
+      ],
+      "worklist_rank": 80
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.13862",
+      "identity_tokens": [
+        "arXiv:2606.13862"
+      ],
+      "title": "SuperThoughts: Reasoning Tokens in Superposition",
+      "reason": "arXiv著者要旨は連続するCoTトークン2個を一つの潜在表現にまとめ、軽量なMulti-Token Predictionで1反復あたり2トークンを復号するSuperThoughtsを提案。Qwen2.5-Math系列で推論時の生成スループット向上を直接狙う。",
+      "source_url": "https://arxiv.org/abs/2606.13862",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:03+09:00",
+      "last_checked_at": "2026-10-30T15:39:03+09:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "Inference / Parallel and Non-Autoregressive Decoding"
+      ],
+      "worklist_rank": 81
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.15371",
+      "identity_tokens": [
+        "arXiv:2508.15371"
+      ],
+      "title": "Confidence-Modulated Speculative Decoding for Large Language Models",
+      "reason": "arXiv著者要旨はドラフトモデルのエントロピーとマージンから不確実性を推定し、投機的生成長を反復ごとに動的調整することで巻戻し回数と資源浪費を減らす。LLMの投機的復号の実行効率が直接の対象。",
+      "source_url": "https://arxiv.org/abs/2508.15371",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:03+09:00",
+      "last_checked_at": "2026-10-30T15:39:03+09:00",
+      "linked_from": [
+        "Speculative Decoding"
+      ],
+      "worklist_rank": 82
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.23961",
+      "identity_tokens": [
+        "arXiv:2606.23961"
+      ],
+      "title": "Forget Without Compromise: Nexus Sampling for Streaming KV-Cache Eviction Under Fixed Budgets",
+      "reason": "arXiv著者要旨は連続ストリーミング推論で固定KV予算を守る際、単発の注意スコアによる不可逆なトークン削除を避けるため、注意グラフ上のNexus探索と重み付きリザーバサンプリングを組み合わせる。LLMの固定予算KV削除に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2606.23961",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:03+09:00",
+      "last_checked_at": "2026-10-30T15:39:03+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression"
+      ],
+      "worklist_rank": 83
+    }
+  ]
+}

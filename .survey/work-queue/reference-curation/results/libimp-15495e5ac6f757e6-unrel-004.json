@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15495e5ac6f757e6-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.12083",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.12083",
+    "identity_tokens": [
+      "arXiv:2504.12083"
+    ],
+    "reason": "The primary abstract proposes a preference-optimization/self-alignment training method for video-language models and reports alignment quality, not inference efficiency.",
+    "first_checked_at": "2026-10-05T15:28:25+00:00",
+    "last_checked_at": "2026-10-05T15:28:25+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "Self-alignment of Large Video Language Models with Refined Regularized Preference Optimization"
+  },
+  "processed_at": "2026-10-05T15:28:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15495e5ac6f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

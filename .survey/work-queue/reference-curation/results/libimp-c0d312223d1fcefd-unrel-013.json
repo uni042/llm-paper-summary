@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0d312223d1fcefd-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.04121",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.04121",
+    "identity_tokens": [
+      "arXiv:2408.04121"
+    ],
+    "reason": "Official arXiv page identifies RadPert, a rule-based radiology-label extraction system; this is clinical classification methodology, not LLM runtime efficiency.",
+    "first_checked_at": "2026-10-16T05:16:24+00:00",
+    "last_checked_at": "2026-10-16T05:16:24+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "title": "Can Rule-Based Insights Enhance LLMs for Radiology Report Classification? Introducing the RadPrompt Methodology."
+  },
+  "processed_at": "2026-10-16T05:16:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0d312223d1f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

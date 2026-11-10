@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d722f204ab797601-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2109.10852",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2109.10852",
+    "identity_tokens": [
+      "arXiv:2109.10852"
+    ],
+    "reason": "object detectionを画像条件付きtoken sequence生成として定式化し、COCOで検出精度を評価するcomputer vision/modeling研究。LLM推論system効率化を最終適用先としない。",
+    "first_checked_at": "2026-10-05T01:03:26+00:00",
+    "last_checked_at": "2026-10-05T15:48:51+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "Pix2seq: A Language Modeling Framework for Object Detection"
+  },
+  "processed_at": "2026-10-05T15:48:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d722f204ab79",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-56b12dc3a1103796-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.15734",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.15734",
+    "identity_tokens": [
+      "arXiv:2606.15734"
+    ],
+    "reason": "Post-deployment adaptation relevance but no demonstrated inference-efficiency gain.",
+    "first_checked_at": "2026-10-05T12:08:36+00:00",
+    "last_checked_at": "2026-10-05T12:08:36+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+    ],
+    "title": "Retrievable Gradients: Continual Post-Training Without Cumulative Weight Drift"
+  },
+  "processed_at": "2026-10-05T12:08:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-56b12dc3a110",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

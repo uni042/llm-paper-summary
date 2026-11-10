@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d45ce944c2ba3062-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3820016",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3820016",
+    "identity_tokens": [
+      "DOI:10.1145/3820016"
+    ],
+    "reason": "Primary abstract reviewed: Image denoising is fundamental to Monte Carlo rendering. Recently, real-time path-traced applications have become viable, relying heavily on efficient denoising. Modern denoisers are often based on neural networks, most commonly variants of the U-Net architecture. While tooling for development and training of custom neural networks is well established in Python, existing deployment and interop strategies typically rely on external inference frameworks, incur host synchronizat [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+    "first_checked_at": "2026-10-05T11:40:02+00:00",
+    "last_checked_at": "2026-10-05T11:40:02+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "Optimizing Vulkan Dispatch Schedules for Real-Time U-Net Denoising"
+  },
+  "processed_at": "2026-10-05T11:40:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d45ce944c2ba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

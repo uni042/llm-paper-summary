@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc76ad9c5bdfb520-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.10158",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.10158",
+    "identity_tokens": [
+      "arXiv:2303.10158"
+    ],
+    "reason": "arXiv要旨はtraining data、inference data、data maintenanceを含む一般data-centric AI surveyである。",
+    "first_checked_at": "2026-10-05T01:03:26+00:00",
+    "last_checked_at": "2026-10-05T01:03:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+    ],
+    "title": "Data-centric Artificial Intelligence: A Survey"
+  },
+  "processed_at": "2026-10-05T01:03:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc76ad9c5bdf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

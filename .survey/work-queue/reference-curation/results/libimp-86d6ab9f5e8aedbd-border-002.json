@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86d6ab9f5e8aedbd-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.14871",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.14871",
+    "identity_tokens": [
+      "arXiv:2505.14871"
+    ],
+    "reason": "The compression mechanism is relevant, but the primary reported quality at the shown 0.6 ratio is sharply degraded and requires LoRA recovery; practical fit remains weak.",
+    "first_checked_at": "2026-10-05T15:33:56+00:00",
+    "last_checked_at": "2026-10-05T15:33:56+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Saten: Sparse Augmented Tensor Networks for Post-Training Compression of Large Language Models"
+  },
+  "processed_at": "2026-10-05T15:33:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86d6ab9f5e8a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

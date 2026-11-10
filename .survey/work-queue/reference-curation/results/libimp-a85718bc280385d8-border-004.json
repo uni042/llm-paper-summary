@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a85718bc280385d8-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2208.00483",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2208.00483",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2208.00483",
+      "arXiv:2208.00483"
+    ],
+    "reason": "枝刈り・蒸留・動的推論・量子化を連結した際の順序依存性と効果の累積性を分析し、単独の効率化手法の効果から複合効果を推定する。実務的に参考になるが、古い汎用NLP Transformerが主対象で生成LLM推論サービングへの直接検証は要確認。",
+    "first_checked_at": "2026-10-30T11:54:51+00:00",
+    "last_checked_at": "2026-10-30T11:54:51+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Building an Efficiency Pipeline: Commutativity and Cumulativeness of Efficiency Operators for Transformers"
+  },
+  "processed_at": "2026-10-30T11:54:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a85718bc2803",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2334-scheduled-chat-30/r01",
+  "reference_main_sha": "c8092faa6258df5ace8418aa0cd94fe7ec132aef",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.11284",
+      "identity_tokens": [
+        "arXiv:2404.11284"
+      ],
+      "title": "Revisiting Main Memory-Based Covert and Side Channel Attacks in the Context of Processing-in-Memory",
+      "reason": "一次要旨のIMPACTはPIMのDRAM行バッファ競合を使った秘密通信・情報漏洩攻撃であり、8.2/14.8Mb/sの通信速度とサイドチャネルを評価する。LLM推論のメモリ階層・カーネル高速化ではなくセキュリティ攻撃が主目的で、生成モデルでの推論効率評価もない。",
+      "source_url": "https://arxiv.org/abs/2404.11284",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:38:11+09:00",
+      "last_checked_at": "2026-10-30T23:38:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 84,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.04048",
+      "identity_tokens": [
+        "arXiv:2606.04048"
+      ],
+      "title": "Unlocking Feature Learning in Gated Delta Networks at Scale",
+      "reason": "Gated Delta Network向け最大更新パラメータ化のスケーリング則を理論導出し、AdamW/SGDの事前学習でモデル幅間の学習率転移を検証する。一次要旨の貢献は学習安定性とハイパーパラメータ調整であり、LLMの推論実行・メモリ削減・サービングの改善は示さないため学習専用の凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2606.04048",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:38:11+09:00",
+      "last_checked_at": "2026-10-30T23:38:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 85,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.17291",
+      "identity_tokens": [
+        "arXiv:2508.17291"
+      ],
+      "title": "Meta-R1: Empowering Large Reasoning Models with Metacognition",
+      "reason": "Meta-R1は推論過程を対象レベルとメタレベルへ分け、事前計画・オンライン調整・適応的早期停止で生成時の思考トークンを削減する。一次要旨では従来比でトークン使用量を15.7～32.7%へ減らし、最大14.8%の効率改善を報告。実行時の計算予算削減に直接関係するが、数値は著者報告として保持。",
+      "source_url": "https://arxiv.org/abs/2508.17291",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:38:11+09:00",
+      "last_checked_at": "2026-10-30T23:38:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 86,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.00188",
+      "identity_tokens": [
+        "arXiv:2603.00188"
+      ],
+      "title": "ST-Lite: Training-Free KV Cache Compression with Spatio-Trajectory Guidance for Long-Horizon GUI Agents",
+      "reason": "ST-LiteはGUIエージェントのフレーム重複・小さなUI要素・層間注意分布を利用し、軌跡意味ゲート、要素中心の空間顕著性、層ごとの平坦なKV予算を組み合わせる。一次要旨ではKVを5分の1へ圧縮した条件で最大2.35倍のデコード高速化を報告し、生成VLM推論のKVメモリ効率へ直接寄与。",
+      "source_url": "https://arxiv.org/abs/2603.00188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:38:11+09:00",
+      "last_checked_at": "2026-10-30T23:38:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 87,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.06731",
+      "identity_tokens": [
+        "arXiv:2603.06731"
+      ],
+      "title": "PolyBlocks: A Compiler Infrastructure for AI Chips and Programming Frameworks",
+      "reason": "PolyBlocksはMLIRパスを組み合わせ、ループタイリング、融合、オンチップscratchpad、行列演算器配置、注意層融合を自動コード生成する。PyTorch/JAXのGPU JITとTorchInductor/XLA比較はあるが、一次要旨で生成LLM固有のモデル・KV・デコード実測が示されない。推論カーネル技術との接点は強い一方、直接収録の証拠は限定的。",
+      "source_url": "https://arxiv.org/abs/2603.06731",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:38:11+09:00",
+      "last_checked_at": "2026-10-30T23:38:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 109,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.13361",
+      "identity_tokens": [
+        "arXiv:2606.13361"
+      ],
+      "title": "Can I Buy Your KV Cache?",
+      "reason": "同一文書のprefillで作ったKVを出版社側が一度計算してプロバイダ側で再利用する提案。一次要旨はQwen3-4Bで再利用計算がprefillより9～50倍安価で、24/24のgreedy tokenが一致したと報告。一方、KVをネットワーク配送すると転送料が利得を打ち消すため、プロバイダ内キャッシュ配置が重要という具体的な推論サービング設計を検討する。",
+      "source_url": "https://arxiv.org/abs/2606.13361",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:38:11+09:00",
+      "last_checked_at": "2026-10-30T23:38:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 142,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.19481",
+      "identity_tokens": [
+        "arXiv:2505.19481"
+      ],
+      "title": "Win Fast or Lose Slow: Balancing Speed and Accuracy in Latency-Sensitive Decisions of LLMs",
+      "reason": "リアルタイムのLLMエージェントにおける遅延と意思決定品質の交換関係をHFTBenchとStreetFighterで測定し、FPXが時間制約に応じてモデル規模と量子化レベルを動的選択する。一次要旨ではゲーム勝率最大80%向上、取引日次収益最大26.52%向上を報告。一般的TPSではなくタスク報酬を評価した推論時モデル選択方式。",
+      "source_url": "https://arxiv.org/abs/2505.19481",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:38:11+09:00",
+      "last_checked_at": "2026-10-30T23:38:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 145,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.12266",
+      "identity_tokens": [
+        "arXiv:2607.12266"
+      ],
+      "title": "Saturation Makes Quantization Error Additive: A Coverage Model with a Certificate",
+      "reason": "混合精度重み・活性量子化で層集合の損失を集合関数として分析し、4bit設定で損失分散の85～93%を層単独効果が説明すると報告。飽和型coverageモデルで低ビット精度配分を設計し、30B～355Bのモデルを同一メモリ予算で比較する。LLM推論向け量子化精度の割当機構に直接寄与。",
+      "source_url": "https://arxiv.org/abs/2607.12266",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:38:11+09:00",
+      "last_checked_at": "2026-10-30T23:38:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 151,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15892",
+      "identity_tokens": [
+        "arXiv:2601.15892"
+      ],
+      "title": "Stable-DiffCoder: Pushing the Frontier of Code Diffusion Large Language Model",
+      "reason": "Stable-DiffCoderはSeed-Coder構造とデータを利用したコード拡散言語モデルで、block diffusion継続事前学習、ウォームアップ、ノイズスケジュール、教師あり微調整を改善しコード生成品質を評価する。一次要旨の主貢献は学習方法とモデル能力であり、推論カーネルや生成速度の定量的高速化を示していない。",
+      "source_url": "https://arxiv.org/abs/2601.15892",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:38:11+09:00",
+      "last_checked_at": "2026-10-30T23:38:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 162,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.00886",
+      "identity_tokens": [
+        "arXiv:2604.00886"
+      ],
+      "title": "PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding",
+      "reason": "PixelPruneは文書・GUI画像で同一ピクセルパッチの重複を予測符号化で検出し、ViTエンコーダ前に視覚パッチを削除する。学習不要でViTと後段LLMの双方の演算を減らし、一次要旨では文書・GUIベンチマークで最大4.2倍の推論高速化を報告。画像入力VLMのエンドツーエンド実行効率に直接関連。",
+      "source_url": "https://arxiv.org/abs/2604.00886",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:38:11+09:00",
+      "last_checked_at": "2026-10-30T23:38:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 167,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

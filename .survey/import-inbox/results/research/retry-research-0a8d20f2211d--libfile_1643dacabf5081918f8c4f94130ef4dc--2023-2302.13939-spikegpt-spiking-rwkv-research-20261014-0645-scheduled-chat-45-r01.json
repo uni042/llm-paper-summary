@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "67923f875a87d695d23a36d73b913d8458b3b07a93c87f66f07f73a4b948334d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0a8d20f2211d--libfile_1643dacabf5081918f8c4f94130ef4dc--2023-2302.13939-spikegpt-spiking-rwkv-research-20261014-0645-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2302.13939",
+  "worker_completed_at": "2026-10-14T07:00:00+09:00",
+  "worker_run_key": "20261014-0645-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7069,
+    "body_paragraphs": 46,
+    "method_chars": 1830,
+    "method_paragraphs": 11,
+    "evaluation_chars": 2173,
+    "limitation_chars": 630,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2302.13939-spikegpt-generative-pre-trained-language-model-with-spiking-neural-netwo.md と 16 段落 / 3603文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-13T23:09:07+00:00"
+}

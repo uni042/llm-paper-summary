@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-180fe514f4f41897-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.05240",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.05240",
+    "identity_tokens": [
+      "arXiv:2608.05240"
+    ],
+    "reason": "推論時量子化を扱うが、本文の主張は現行GPU serving accelerationではなく、仮想的な量子readoutでの再構成risk優位。実用推論効率への適合が弱いためborderline。",
+    "first_checked_at": "2026-10-05T09:05:32+00:00",
+    "last_checked_at": "2026-10-05T09:05:32+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+      "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+      "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+      "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+    ],
+    "title": "One Qubit Can Beat One Bit: Quantum Advantage for Post-Training Quantization"
+  },
+  "processed_at": "2026-10-05T09:05:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-180fe514f4f4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

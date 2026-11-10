@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "chatgpt-20260928-arxiv-2502-12110-borderline",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.12110",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.12110",
+    "identity_tokens": [
+      "arXiv:2502.12110"
+    ],
+    "reason": "主貢献はエージェント長期記憶の構造化・リンク生成・検索品質改善であり、現行サーベイの中心であるLLM推論実行効率、サービング、メモリ階層、通信、量子化、投機的復号などへの直接的なシステム効率寄与が弱い。",
+    "first_checked_at": "2026-09-27T17:15:51+00:00",
+    "last_checked_at": "2026-09-27T17:15:51+00:00",
+    "linked_from": [
+      "/LLM-paper-summary-library-first/research/2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+    ],
+    "title": "A-MEM: Agentic Memory for LLM Agents"
+  },
+  "processed_at": "2026-09-27T17:15:51+00:00",
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

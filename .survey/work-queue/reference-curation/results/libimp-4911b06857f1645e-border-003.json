@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4911b06857f1645e-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.05546",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.05546",
+    "identity_tokens": [
+      "arXiv:2604.05546"
+    ],
+    "reason": "This survey systematically organizes LVLM inference bottlenecks and techniques across encoding, prefill, decode and system levels. It is a useful systems taxonomy but is a survey rather than a novel LLM serving method and focuses on multimodal vision-language workloads.",
+    "first_checked_at": "2026-10-06T03:38:35+00:00",
+    "last_checked_at": "2026-10-06T03:38:35+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2026-2605.20104-draft-less-retrieve-more-hybrid-tree-construction-for-speculative-decoding.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2502.03805-criticalkv-optimizing-kv-cache-eviction-from-an-output-perturbation-perspective.md",
+      "papers/inference/99-other-inference-systems/2026-2601.05524-double-breaking-the-acceleration-limit-via-double-retrieval-speculative-.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Inference for Large Vision-Language Models: Bottlenecks, Techniques, and Prospects"
+  },
+  "processed_at": "2026-10-06T03:38:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4911b06857f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

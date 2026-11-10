@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-608ca969d07e8496-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.06938",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.06938",
+    "identity_tokens": [
+      "arXiv:2603.06938"
+    ],
+    "reason": "SSMのトークンミキサへMoEを適用すると専門家ごとに再帰状態が増える問題に対し、専門家をパラメータ空間で混合し一つの状態軌道だけ更新するSwimbaを提案。推論計算の構造には関連するが、要旨ではベースラインより実時間遅延・処理量がわずかに悪化するため、明確な推論高速化成果としては扱わず境界分類。",
+    "first_checked_at": "2026-10-30T10:54:05+00:00",
+    "last_checked_at": "2026-10-30T10:54:05+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Swimba: Switch Mamba Model Scales State Space Models"
+  },
+  "processed_at": "2026-10-30T10:54:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-608ca969d07e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

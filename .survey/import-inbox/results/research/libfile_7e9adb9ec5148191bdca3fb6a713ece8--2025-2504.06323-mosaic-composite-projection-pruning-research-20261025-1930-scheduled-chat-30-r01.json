@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "031933041d8c14471dbb9ac71b222606f2d9873bf5d427ad98f5ee3f5bae920d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_7e9adb9ec5148191bdca3fb6a713ece8--2025-2504.06323-mosaic-composite-projection-pruning-research-20261025-1930-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2504.06323",
+  "worker_completed_at": "2026-10-25T19:36:01+09:00",
+  "worker_run_key": "20261025-1930-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6606,
+    "body_paragraphs": 39,
+    "method_chars": 1611,
+    "method_paragraphs": 8,
+    "evaluation_chars": 123,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 123 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 123 < 500"
+  ],
+  "processed_at": "2026-10-25T10:50:11+00:00"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261103-0526-scheduled-chat-30/r02",
+  "reference_main_sha": "26bac123d632f0b7db23a6836a42a149a0334271",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.39876",
+      "identity_tokens": [
+        "arXiv:2610.39876"
+      ],
+      "title": "Turing LLM Post-Training: Calibrated Distillation and Efficient Dynamic-MoE Execution",
+      "reason": "複数MoE専門家を統合するcalibrated on-policy distillationと、容量制約付きdispatch・routing replay・非同期rollout/学習重畳を組み合わせる。Turing-20B-A2BでPPU構成の統合step時間398.7秒→139.3秒（2.86倍）。計測対象はpost-trainingの統合処理であり、通常サービング推論の速度ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.39876",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.40345",
+      "identity_tokens": [
+        "arXiv:2610.40345"
+      ],
+      "title": "A Unified Hessian-Guided Framework for Post-Training Quantization",
+      "reason": "LLMの重み・活性の低bit量子化で、量子化範囲・線形変換・重み丸めをFisher近似に基づくHessian-guided出力感度目的で共同最適化する。channel-wise/block-wise設定で既存変換・丸め方式より高精度と報告。推論時の重み・活性容量と計算費用削減を目的とする量子化手法でaccept。ただしabstractには実測token/sや数値化した削減率はない。",
+      "source_url": "https://arxiv.org/abs/2610.40345",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.40325",
+      "identity_tokens": [
+        "arXiv:2610.40325"
+      ],
+      "title": "How to Loop Your Transformer: Loop Scaling, Specialization, and Parallel Inference",
+      "reason": "重み共有loop Transformerの品質・モデルサイズ・訓練FLOPs・autoregressive decodeを比較し、loop数に比例するdecode遅延を軽減するParallel Loop Transformerを検証。前token状態と現token埋込を別々に正規化して結合する改良で品質を回復。最大1B・32 loopsの検証で推論効率に直接関係するためaccept。abstractには定量decode高速化率がない。",
+      "source_url": "https://arxiv.org/abs/2610.40325",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:26:12+09:00",
+      "last_checked_at": "2026-11-03T05:26:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}

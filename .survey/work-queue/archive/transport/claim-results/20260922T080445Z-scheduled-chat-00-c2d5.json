@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "20260922T080445Z-scheduled-chat-00-c2d5",
+  "worker_id": "scheduled-chat-00",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-10bf8d55e9caa5c4",
+      "claim_id": "claim-59dc9473086573b3d534c617",
+      "worker_id": "scheduled-chat-00",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-59dc9473086573b3d534c617",
+      "claimed_at": "2026-09-22T08:05:06+00:00",
+      "expires_at": "2026-09-22T09:35:06+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-10bf8d55e9caa5c4"
+      ],
+      "job": {
+        "job_id": "job-research-10bf8d55e9caa5c4",
+        "type": "research",
+        "parent_job_id": "job-12aaf1e50ad88d56",
+        "priority": 98,
+        "canonical_id": "arXiv:2605.07719",
+        "arxiv_id": "2605.07719",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "An Efficient Hybrid Sparse Attention with CPU-GPU Parallelism for Long-Context Inference",
+        "source_url": "https://www.semanticscholar.org/paper/9cac55c12807f6f69e8cf7a920947c6ffd9927c1",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2605.07719-an-efficient-hybrid-sparse-attention-with-cpu-gpu-parallelism-for-long-context-inference.md",
+        "selection_reason": "Fluxion co-designs sparse attention over CPU-resident KV cache with output-aware budgeting and CPU/GPU scheduling; reports 1.5x–3.7x speedup with small quality degradation.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T20:57:11+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T08:05:06+00:00",
+  "checkpoint_released": 0
+}

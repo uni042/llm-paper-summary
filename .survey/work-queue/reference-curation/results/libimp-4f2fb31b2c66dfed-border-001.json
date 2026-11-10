@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4f2fb31b2c66dfed-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.12051",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.12051",
+    "identity_tokens": [
+      "arXiv:2502.12051"
+    ],
+    "reason": "It is secondary and cross-domain, not a focused inference method or serving measurement.",
+    "first_checked_at": "2026-10-05T13:08:14+00:00",
+    "last_checked_at": "2026-10-05T13:08:14+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md"
+    ],
+    "title": "How to Upscale Neural Networks with Scaling Law? A Survey and Practical Guidelines"
+  },
+  "processed_at": "2026-10-05T13:08:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4f2fb31b2c66",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

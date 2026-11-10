@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1938c08017206969-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.27981",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.27981",
+    "identity_tokens": [
+      "arXiv:2606.27981"
+    ],
+    "reason": "Primary abstract reviewed: We introduce a new, contextual, multilingual dataset called ToxiREX: Toxic REasoning in ConteXt. The dataset consists of threads of Reddit comments and structured characterizations of what the comments imply, following a systematic toxic reasoning schema developed in a previous paper. Using the schema allows us to capture and explain implicit and context-dependent toxicity, while supporting mappings to existing toxic… Out of scope: Toxic-reasoning dataset and capability benchmark, not runtime optimization.",
+    "first_checked_at": "2026-10-05T11:42:00+00:00",
+    "last_checked_at": "2026-10-05T11:42:00+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "ToxiREX: A Dataset on Toxic REasoning in ConteXt"
+  },
+  "processed_at": "2026-10-05T11:42:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1938c0801720",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261102-0847-scheduled-chat-45/r01",
+  "reference_main_sha": "6a7fb17fc5f7c8088f11a2071eff04ef0184b5e0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICDCSW72724.2026.00038",
+      "identity_tokens": [
+        "id:DOI:10.1109/ICDCSW72724.2026.00038"
+      ],
+      "title": "Fleet-Level Optimization for Heterogeneous Device Provisioning in ML Model Deployments",
+      "reason": "Carnegie Mellon University著者原著（HotEthics 2026配布版）は、LLM推論の入力長と実行時間の相関を利用して異種・旧世代計算機へ要求を配分するサーバーフリート設計を定式化する。デバイス種別ごとの構成比・台数を決定変数とし、推論要求の入力長分布と遅延SLOの分位点から線形制約を構築、金銭・炭素・水などの重み付き費用を線形計画で最小化する。LLM推論インフラの配置最適化へ直接貢献するためaccept。ただし決定論的な入力長―実行時間対応と固定需要を仮定した予備的理論モデルであり、実機評価や運用時の需要変動は未検証。",
+      "source_url": "https://hotethics.github.io/papers/2026-papers/hotethics26-final84.pdf",
+      "body_check": "primary_fulltext_screened; preliminary_cost_model; no_empirical_evaluation_reported",
+      "first_checked_at": "2026-11-02T08:50:00+09:00",
+      "last_checked_at": "2026-11-02T08:50:00+09:00",
+      "linked_from": [],
+      "origin": "discovery_worklist_primary_fulltext_screen",
+      "worklist_rank": 500,
+      "linked_from_count_observed": 0,
+      "bibliographic_url": "https://doi.org/10.1109/ICDCSW72724.2026.00038"
+    }
+  ]
+}

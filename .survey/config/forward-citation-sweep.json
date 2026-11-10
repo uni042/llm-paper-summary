@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "policy_name": "forward-citation-coverage-v1",
+  "schedule_hours": 1,
+  "max_seeds_per_run": 30,
+  "max_pages_per_seed_per_run": 2,
+  "page_size": 100,
+  "request_spacing_seconds": 2,
+  "cadence": [
+    {
+      "max_paper_age_days": 180,
+      "rescan_days": 7
+    },
+    {
+      "max_paper_age_days": 730,
+      "rescan_days": 30
+    },
+    {
+      "max_paper_age_days": null,
+      "rescan_days": 90
+    }
+  ],
+  "max_provider_errors_per_run": 3,
+  "rate_limit_retries_per_request": 3
+}

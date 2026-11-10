@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c1b421bfbcf57fef-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/globecom59602.2025.11431685",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/globecom59602.2025.11431685",
+    "identity_tokens": [
+      "DOI:10.1109/globecom59602.2025.11431685"
+    ],
+    "reason": "要旨はLLM推論時の効率化、既存推論系統の具体的延長、またはLLM serving改善を示さず、主題は別領域・別目的の研究である。",
+    "first_checked_at": "2026-10-06T02:48:22+00:00",
+    "last_checked_at": "2026-10-06T02:48:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+    ],
+    "title": "Early-Exit Strategies for Dynamic Graph CNNs to Accelerate Inference of Point Clouds"
+  },
+  "processed_at": "2026-10-06T02:48:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c1b421bfbcf5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

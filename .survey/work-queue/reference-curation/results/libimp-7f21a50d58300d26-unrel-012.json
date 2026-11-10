@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f21a50d58300d26-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1707.06209",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1707.06209",
+    "identity_tokens": [
+      "arXiv:1707.06209"
+    ],
+    "reason": "SciQデータセット構築手法が主題で、推論システムとは無関係。",
+    "first_checked_at": "2026-09-27T09:01:29+09:00",
+    "last_checked_at": "2026-09-30T09:49:12+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Crowdsourcing Multiple Choice Science Questions"
+  },
+  "processed_at": "2026-09-30T09:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f21a50d5830",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

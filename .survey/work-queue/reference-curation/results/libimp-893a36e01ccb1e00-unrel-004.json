@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-893a36e01ccb1e00-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.01455",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.01455",
+    "identity_tokens": [
+      "arXiv:2607.01455"
+    ],
+    "reason": "一次abstractはembedding optimizer/Token Geometryの最適化で、training時のparameter learningを扱い、推論時の計算・memory削減ではない。",
+    "first_checked_at": "2026-10-05T10:46:37+00:00",
+    "last_checked_at": "2026-10-05T10:46:37+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Token Geometry"
+  },
+  "processed_at": "2026-10-05T10:46:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-893a36e01ccb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

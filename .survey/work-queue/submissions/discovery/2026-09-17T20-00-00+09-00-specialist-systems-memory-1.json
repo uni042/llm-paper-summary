@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.24506",
+      "title": "CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation",
+      "source_url": "https://arxiv.org/abs/2606.24506",
+      "paper_path": "papers/inference/05-moe/2026-2606.24506-crosspool-efficient-multi-llm-serving-for-cold-moe-models-through-kv-cache-and-weight-disaggregation.md",
+      "priority": 94,
+      "reason": "Cold MoE servingでFFN weightsとKV cacheを別GPU memory poolへ分離し、KV-cache planner/virtualizer、layer-wise pipeline scheduler、persistent kernelsを組み合わせる。P99 TBTを最大10.4x改善と報告しており、MoE・KV cache・disaggregated servingの重点テーマに直接該当する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/02-kv-cache/2026-2607.16892-robust-kv-cache-management-for-llm-serving-under-output-token-length-uncertainty.md",
+      "priority": 90,
+      "reason": "出力長不確実性の下でGPU parallelism、KV reservation、heterogeneous serving group routing、prefix cachingを分布ロバスト最適化で共同設計する。production trace評価でfixed-quantile reservation比最大56%のcost削減を報告し、KV cache schedulingの新規性が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.19289",
+      "title": "Speculating Experts Accelerates Inference for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2603.19289",
+      "paper_path": "papers/inference/05-moe/2026-2603.19289-speculating-experts-accelerates-inference-for-mixture-of-experts.md",
+      "priority": 92,
+      "reason": "memory-constrained MoE inferenceで内部表現から将来expertを予測しCPU-GPU expert transferを計算とoverlapするprefetch方式。optimized inference engineでon-demand expert loading比TPOT最大14%削減を報告し、expert offload/prefetchの重点系統に直接該当する。"
+    }
+  ],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-17T20:00:00+09:00",
+    "round": "specialist-systems-memory-1",
+    "axis": "LLM inference memory・KV cache・MoE expert offload/prefetch",
+    "query_summary": "arXivを対象にLLM inference、KV cache、SSD/NVMe、memory serving、MoE expert cache/placement/prefetchを横断検索し、GitHub default branchの既存収録をcanonical arXiv IDで事前照合した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "disaggregated prefill/decode servingとCXL/PIM/near-storage inferenceの未走査集合",
+    "empty_round_reason": null,
+    "search_windows": [
+      {
+        "topic": "llm-inference-memory-moe",
+        "source": "arxiv-web-search",
+        "date_range": "2026-03..2026-09",
+        "category": "systems-inference",
+        "citation_direction": "none",
+        "query_family": "kv-cache-offload-moe-prefetch",
+        "raw_result_count": 8,
+        "unseen_result_count": 3,
+        "duplicate_filtered_count": 0,
+        "rejection_filtered_count": 0,
+        "candidate_evaluation_count": 3,
+        "candidate_accepted_count": 3,
+        "position": "web-search-batch-1"
+      }
+    ]
+  }
+}

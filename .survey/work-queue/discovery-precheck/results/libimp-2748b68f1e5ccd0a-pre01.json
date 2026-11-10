@@ -1,0 +1,91 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2748b68f1e5ccd0a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2748b68f1e5c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3769102.3770614",
+    "DOI:10.18653/v1/2023.emnlp-main.907",
+    "DOI:10.18653/v1/2025.acl-long.671",
+    "arXiv:2601.12904"
+  ],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6b8f7135e80b483a5419ef3717dfe0e90eb74d11",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 0,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 0,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 1,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "acl_anthology_record",
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T18:34:32.991620+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3769102.3770614",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_single",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2023.emnlp-main.907",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "acl_anthology_record",
+      "filter_reason": "identity_token",
+      "matched_token": "title:merging experts into one improving computational efficiency of mixture of experts"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.acl-long.671",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "acl_anthology_record",
+      "filter_reason": "identity_token",
+      "matched_token": "title:stun structuredthenunstructured pruning for scalable moe pruning"
+    },
+    {
+      "requested_id": "arXiv:2601.12904",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2601.12904"
+    }
+  ],
+  "results": [],
+  "allowed_records": [],
+  "receipt": "sha256:cf2e1c4d21fef8870ec047b3fe11da701a305db35f8e17bd036ceae1438c0026",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

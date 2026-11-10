@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e78eb2e460307ef4-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.02076",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.02076",
+    "identity_tokens": [
+      "arXiv:2409.02076"
+    ],
+    "reason": "長文脈からの長文生成能力を測る評価ベンチマークで、推論システム効率化は主貢献ではない。",
+    "first_checked_at": "2026-09-27T12:58:27+09:00",
+    "last_checked_at": "2026-09-30T09:51:41+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "LongGenBench: Benchmarking Long-Form Generation in Long Context LLMs"
+  },
+  "processed_at": "2026-09-30T09:51:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e78eb2e46030",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

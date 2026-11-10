@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2cb9ce2fd3579dc2-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.05827",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.05827",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.05827",
+      "arXiv:2602.05827"
+    ],
+    "reason": "疎な動画生成によって視覚言語ナビゲーションを改善するロボティクス・ナビゲーション研究であり、LLM推論システムの最適化ではない。",
+    "first_checked_at": "2026-10-16T09:27:34+00:00",
+    "last_checked_at": "2026-10-19T22:42:58+00:00",
+    "linked_from": [],
+    "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation"
+  },
+  "processed_at": "2026-10-19T22:42:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2cb9ce2fd357",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

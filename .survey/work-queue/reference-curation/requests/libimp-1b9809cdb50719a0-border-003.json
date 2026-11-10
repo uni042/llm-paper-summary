@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1b9809cdb50719a0-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.20588",
+  "reason": "MLP neuronとattention headを共通のimportance scaleでrankし、既存Transformerを再学習なしで計算予算に応じてelasticに削減する。一次要旨は27のvision/text encoderで最大60% sparsity、ViT-B/16のGPU throughput最大1.80倍を報告。モデル圧縮・推論速度への適用はあるが主評価はencoderとvisionで自回帰LLM生成の実測がないためborderline。",
+  "title": "Your Transformer Is Secretly Elastic",
+  "identity_tokens": [
+    "id:arXiv:2610.20588",
+    "id:DOI:10.48550/arXiv.2610.20588"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b9809cdb507",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

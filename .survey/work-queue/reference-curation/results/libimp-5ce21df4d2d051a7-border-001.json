@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5ce21df4d2d051a7-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.35760",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.35760",
+    "identity_tokens": [
+      "arXiv:2609.35760"
+    ],
+    "reason": "一次要旨はagent実行のtoken budget予測を主題とする。LLM runtime costとの接点はあるが、serving/inference efficiency改善を直接示すものではない。",
+    "first_checked_at": "2026-10-10T00:00:40+00:00",
+    "last_checked_at": "2026-10-10T00:00:40+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.08509-ssjf.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.01035-embedding-based-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.11812-predicting-llm-output-length-via-entropy-guided-representations.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22206-chimera-latency-performance-aware-multi-agent-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.00499-scheduling-llm-inference-with-uncertainty-aware-output-length-prediction.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.25899-pythia-predictability-driven-agent-native-serving.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution"
+  },
+  "processed_at": "2026-10-10T00:00:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5ce21df4d2d0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

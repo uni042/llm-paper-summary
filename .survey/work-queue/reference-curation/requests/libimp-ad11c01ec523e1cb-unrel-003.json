@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ad11c01ec523e1cb-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1109/ICCVBIC71195.2026.11688292",
+  "reason": "The growing use of abstractive text summarization in news, scientific literature, and multi-document analysis has increased the need for summaries that contain factual information supported by their sources. Recent Transformer-based summarization models generate fluent and coherent summaries, but they often include hallucinated information, particularly in long and multi-document settings. Existing factuality-guided frameworks improve consistency using verification and refinement techniques, but most approaches rely on static pipelines and limited reasoning capabilities. In this work, we propose a Hierarchical Reasoning and Evidence-Guided Agentic Framework (HREAF) for factual text summarization. The framework retrieves supporting evidence, analyzes relationships among facts, generates summaries using fact planning, verifies factual correctness, and improves uncertain content through iterative refinement. Unlike earlier methods, the framework identifies uncertain parts of the summary and improves them using supporting evidence through multiple refinement steps. Experimental evaluation on the CNN/DailyMail, WikiSum, Multi-News, and DUC datasets demonstrates remarkable improvements in factual-consistency metrics, with FactCC scores of $\\text{0. 9 4}, \\text{0. 9 2}, \\text{0. 9 3}, \\text{0. 9 1}$, compared to strong baseline models. It also maintains competitive ROUGE performance with an R-L score of 43.6 on the CNN/DailyMail dataset. Ablation results demonstrate that iterative refinement is the most influential component, improving FactCC by 0.15, while hierarchical reasoning increases factual consistency by 0.07.",
+  "title": "Hierarchical Reasoning and Evidence-Guided Agentic Framework for Factual Text Summarization",
+  "identity_tokens": [
+    "DOI:10.1109/ICCVBIC71195.2026.11688292"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad11c01ec523",
+  "source_precheck_request_id": null
+}

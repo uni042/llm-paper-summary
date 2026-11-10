@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-94cbb3f9aafba542-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3729218",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3729218",
+    "identity_tokens": [
+      "DOI:10.1145/3729218"
+    ],
+    "reason": "Primary source https://doi.org/10.1145/3729218 attempted: ACM DOI page returned Internal Error. No primary abstract could be checked.",
+    "first_checked_at": "2026-10-05T01:44:59+00:00",
+    "last_checked_at": "2026-10-05T01:44:59+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+      "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+    ],
+    "title": "A Survey of Reasoning with Foundation Models: Concepts, Methodologies, and Outlook"
+  },
+  "processed_at": "2026-10-05T01:44:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-94cbb3f9aafb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-325979ebca885f56-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.04646",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.04646",
+    "identity_tokens": [
+      "arXiv:2609.04646"
+    ],
+    "reason": "Diffusion-transformer image-generation distillation; non-LLM task.",
+    "first_checked_at": "2026-10-05T07:12:20+00:00",
+    "last_checked_at": "2026-10-05T07:12:20+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+    ],
+    "title": "Importance-Aware Low-Rank Distillation of Diffusion Transformers"
+  },
+  "processed_at": "2026-10-05T07:12:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-325979ebca88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

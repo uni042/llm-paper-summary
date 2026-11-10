@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260920T025540Z-scheduled-chat-llm-survey-11f",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-06ec3586821ff3bb",
+      "claim_id": "claim-31c2c5e14daaa2ebda862c39",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-31c2c5e14daaa2ebda862c39",
+      "claimed_at": "2026-09-20T02:55:54+00:00",
+      "expires_at": "2026-09-20T04:25:54+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-06ec3586821ff3bb"
+      ],
+      "job": {
+        "job_id": "job-research-06ec3586821ff3bb",
+        "type": "research",
+        "parent_job_id": "job-d2dae5051aed34bf",
+        "priority": 94,
+        "canonical_id": "arXiv:2309.08168",
+        "arxiv_id": "2309.08168",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2309.08168",
+        "paper_path": "papers/inference/05-speculative-decoding/2023-2309.08168-draft-verify.md",
+        "selection_reason": "Foundational self-speculative decoding approach that drafts by selectively skipping layers and verifies with the original model without extra draft-model memory.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T18:48:26+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-20T02:55:54+00:00",
+  "checkpoint_released": 0
+}

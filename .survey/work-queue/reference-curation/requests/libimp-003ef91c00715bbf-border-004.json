@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-003ef91c00715bbf-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2602.23795",
+  "reason": "GRAIL performs post-hoc blockwise linear reconstruction to compensate accuracy loss after structured network compression without labeled-data finetuning; the paper evaluates generic vision/network compression settings. It does not test LLMs or decode-time serving, so transfer to the linked weight-compression lineage is plausible but unresolved.",
+  "title": "GRAIL: Post-hoc Compensation by Linear Reconstruction for Compressed Networks",
+  "identity_tokens": [
+    "arXiv:2602.23795"
+  ],
+  "linked_from": [
+    "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-003ef91c0071",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

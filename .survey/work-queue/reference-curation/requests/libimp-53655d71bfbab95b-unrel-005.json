@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-53655d71bfbab95b-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2512.04040",
+  "reason": "圧縮KV memoryやFP8等で14B video world modelを16FPS化するが、最終workloadはinteractive video diffusion/world generationでありLLM/言語モデル推論ではない。",
+  "title": "RELIC: Interactive Video World Model with Long-Horizon Memory",
+  "identity_tokens": [
+    "arXiv:2512.04040"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+    "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-53655d71bfba",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1c1213df3db802d0-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.01617",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.01617",
+    "identity_tokens": [
+      "arXiv:2510.01617"
+    ],
+    "reason": "Although LLM inference latency is measured, results show little latency gain and the framework is an accuracy-oriented multi-agent topology method; efficiency relevance is weak.",
+    "first_checked_at": "2026-10-05T14:39:47+00:00",
+    "last_checked_at": "2026-10-05T14:39:47+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AMAS: Adaptively Determining Communication Topology for LLM-based Multi-Agent System"
+  },
+  "processed_at": "2026-10-05T14:39:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1c1213df3db8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

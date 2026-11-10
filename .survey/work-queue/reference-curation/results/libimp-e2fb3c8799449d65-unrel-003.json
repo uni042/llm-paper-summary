@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2fb3c8799449d65-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.15731",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.15731",
+    "identity_tokens": [
+      "arXiv:2510.15731"
+    ],
+    "reason": "This is an analysis of attention sinks in masked diffusion language models, not an inference optimization method for LLM serving.",
+    "first_checked_at": "2026-10-05T14:42:33+00:00",
+    "last_checked_at": "2026-10-05T14:42:33+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+      "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+    ],
+    "title": "Attention Sinks in Diffusion Language Models"
+  },
+  "processed_at": "2026-10-05T14:42:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2fb3c879944",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

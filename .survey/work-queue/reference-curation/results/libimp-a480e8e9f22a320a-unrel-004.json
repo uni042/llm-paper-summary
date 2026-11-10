@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a480e8e9f22a320a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.02875",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.02875",
+    "identity_tokens": [
+      "arXiv:2601.02875"
+    ],
+    "reason": "The report evaluates LLMs as general data compressors, including text, code, and byte sequences, and reports adjusted compression rates. The LLM is being used as the compressor; the work does not reduce LLM inference cost or improve LLM serving.",
+    "first_checked_at": "2026-10-06T16:19:13+00:00",
+    "last_checked_at": "2026-10-06T16:19:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+    ],
+    "title": "Revisiting Data Compression with Language Modeling"
+  },
+  "processed_at": "2026-10-06T16:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a480e8e9f22a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

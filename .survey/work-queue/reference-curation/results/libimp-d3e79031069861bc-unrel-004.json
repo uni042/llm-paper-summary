@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d3e79031069861bc-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.07372",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.07372",
+    "identity_tokens": [
+      "arXiv:2609.07372"
+    ],
+    "reason": "一次要旨: In this study, we implement a low-rank approximation of Moment Tensor Potential (MTP) based on the tensor train (TT) decomposition. The implemented tensor-factorized MTP (TFMTP) and the original MTP model are actively trained via a MaxVol-based algorithm during molecular dynamics simulations of a four-component molten salt mixture, LiF-NaF-KF (FLiNaK), and geometry optimizations of a five-component equiatomic MoNbTaWV random alloy. We demonstrate that under a 1.5-fold compression, TFMTP requires two times fewer configurations for fitting than the original MTP model, while maintaining an indistinguishable level of accuracy. These actively trained MTP and TFMTP models are further used to evaluate the density and viscosity of FLiNaK at temperatures ranging from 600 to 1200 K, as well as the elastic constants and bulk modulus of the MoNbTaWV alloy at zero temperature. For both atomic systems, the differences in physical properties predicted by MTP and TFMTP are negligible.",
+    "first_checked_at": "2026-10-05T07:06:26+00:00",
+    "last_checked_at": "2026-10-05T07:06:26+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+    ],
+    "title": "Low-rank approximation of Moment Tensor Potential enables reducing training set size without loss of accuracy"
+  },
+  "processed_at": "2026-10-05T07:06:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d3e790310698",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

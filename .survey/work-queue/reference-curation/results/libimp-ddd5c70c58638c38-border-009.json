@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ddd5c70c58638c38-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3085572",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3085572",
+    "identity_tokens": [
+      "DOI:10.1145/3085572"
+    ],
+    "reason": "HBM/NVM等を含むoff-chip memory interconnectのpower/performanceをmodel化し、channel topologyの再設計で性能・電力を改善するmemory-system研究。LLM階層メモリ設計に強く関連するがLLM推論専用評価がないためborderline。",
+    "first_checked_at": "2026-10-05T16:07:16+00:00",
+    "last_checked_at": "2026-10-05T16:07:16+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CACTI 7: New Tools for Interconnect Exploration in Innovative Off-Chip Memories"
+  },
+  "processed_at": "2026-10-05T16:07:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ddd5c70c5863",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

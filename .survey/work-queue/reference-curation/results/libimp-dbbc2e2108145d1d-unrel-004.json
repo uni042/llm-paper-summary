@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dbbc2e2108145d1d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s12525-023-00680-1",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s12525-023-00680-1",
+    "identity_tokens": [
+      "DOI:10.1007/s12525-023-00680-1"
+    ],
+    "reason": "生成AIの基礎概念、生成性・variance、価値連鎖、応用、bias/hallucination/misuse等を整理する概説論文。LLM推論runtime・memory・servingの新規最適化方式を提案しない。",
+    "first_checked_at": "2026-10-05T16:34:22+00:00",
+    "last_checked_at": "2026-10-05T16:34:22+00:00",
+    "linked_from": [
+      "papers/survey/llm-serving-systems/2026-2608.03036-llm-serving-in-the-wild.md"
+    ],
+    "title": "Generative artificial intelligence"
+  },
+  "processed_at": "2026-10-05T16:34:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dbbc2e210814",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

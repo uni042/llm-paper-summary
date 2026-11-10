@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "pf-88d2aa5426361490-01",
+  "kind": "research",
+  "attempt_id": "attempt-88d2aa5426361490104919b5",
+  "job_id": "job-research-3611857c9c7fea67",
+  "record_bank": "f",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:512f578920ca5bfcbe01f6f77c1a87c5f1a6e93056baeda2a4292c5ce7912d43",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-f/metadata.json",
+      "blob_sha": "88ac0b91c9b8952c552a4f323326acd18fc133f7"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-f/problem_method.json",
+      "blob_sha": "0383e647db003f5c408263f703d3c3803137b0a7"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-f/evaluation.json",
+      "blob_sha": "9b8efea693ca256cf72309ee0f8f080a09bacb18"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-f/results.json",
+      "blob_sha": "ec003492b9619928ab03e792b9f9f591de0bba21"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-f/positioning.json",
+      "blob_sha": "b600dcb1d466aa48134bb8e774c1898cac2fad39"
+    }
+  ],
+  "validation_errors": [
+    "metadata.references[0] must be an object",
+    "Japanese-first prose ratio is too low: 46.6% < 70% (Japanese=3692, Latin=4224)"
+  ],
+  "checked_at": "2026-09-22T22:08:25+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

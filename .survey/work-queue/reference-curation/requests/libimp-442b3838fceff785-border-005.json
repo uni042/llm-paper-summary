@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-442b3838fceff785-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2607.25157",
+  "reason": "一次本文§4.10 Inference Efficiency（Table 6）を確認。GPT-2 Medium、256 tokensでは8-step diffusion 1,800 tok/sだがPPL 35.4、32-stepは450 tok/s/PPL 28.7でKV-cached ARの1,120 tok/s/PPL 28.9より遅い。本文自ら「unconditional speed advantageではない」と限定。推論効率の比較資料として近接するが、主貢献はARからdiffusionへのattention adaptationであり対象手法としての寄与は弱い。",
+  "title": "PreDiff-LM: Pretrained Discrete Masked Diffusion Language Modeling with Hybrid Attention",
+  "identity_tokens": [
+    "arXiv:2607.25157"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+    "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-442b3838fcef",
+  "source_precheck_request_id": null
+}

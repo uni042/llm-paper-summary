@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca39570483ecec2c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1806.10779",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1806.10779",
+    "identity_tokens": [
+      "arXiv:1806.10779"
+    ],
+    "reason": "一次要旨はswitchable normalizationによる画像CNNの学習/正規化手法を扱い、LLM推論とは対象が異なる。",
+    "first_checked_at": "2026-10-05T01:52:17+00:00",
+    "last_checked_at": "2026-10-05T01:52:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+    ],
+    "title": "Differentiable Learning-to-Normalize via Switchable Normalization"
+  },
+  "processed_at": "2026-10-05T01:52:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca39570483ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

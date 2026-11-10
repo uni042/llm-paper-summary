@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b43fc96b3b2888a2-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3241539.3241559",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3241539.3241559",
+    "identity_tokens": [
+      "DOI:10.1145/3241539.3241559",
+      "arXiv:1810.10090"
+    ],
+    "reason": "mobile vision向け複数DNNをnested modelとして共有し、runtime resourceに応じaccuracy/resource trade-offを選択するon-device framework。2.0x frame rate・1.7x energy reductionを示すが、対象はCNN/mobile visionでLLM/Transformer推論ではない。",
+    "first_checked_at": "2026-10-05T15:38:30+00:00",
+    "last_checked_at": "2026-10-05T15:38:30+00:00",
+    "linked_from": [],
+    "title": "NestDNN: Resource-Aware Multi-Tenant On-Device Deep Learning for Continuous Mobile Vision"
+  },
+  "processed_at": "2026-10-05T15:38:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b43fc96b3b28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

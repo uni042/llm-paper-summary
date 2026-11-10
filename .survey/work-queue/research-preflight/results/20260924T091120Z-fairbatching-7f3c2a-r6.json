@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260924T091120Z-fairbatching-7f3c2a-r6",
+  "kind": "research",
+  "attempt_id": "attempt-preload-71270ce404475002d20ce60c",
+  "job_id": "job-research-45a223ad00555581",
+  "record_bank": "x",
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2510.14392-fairbatching-fairness-aware-batch-formation-for-llm-inference.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-00",
+  "run_key": "scheduled-chat-00-20260924T085958Z-7f3c2a",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-24T08:59:58+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:bba164b7500a5d7e9a499be8d6bafc7823e731cd2839fe677d6e232ca9a38597",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-x/metadata.json",
+      "blob_sha": "3831509196fcbb3efb0d4c95848dadb05cd76dce"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-x/problem_method.json",
+      "blob_sha": "5f2953e1a21310ad55f53963e40e42ba9e9d9d39"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-x/evaluation.json",
+      "blob_sha": "c4875f9011b1a45f3288f041762c1359529983d3"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-x/results.json",
+      "blob_sha": "e5174b46a64d8a72c2e7c2b79046214adfe01720"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-x/positioning.json",
+      "blob_sha": "1b5e2a88b32e6506a09187dc6b08008cbd97026b"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.novelty must explain the paper-specific idea",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "Japanese-first prose ratio is too low: 67.4% < 70% (Japanese=3255, Latin=1575)"
+  ],
+  "checked_at": "2026-09-24T09:10:38+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

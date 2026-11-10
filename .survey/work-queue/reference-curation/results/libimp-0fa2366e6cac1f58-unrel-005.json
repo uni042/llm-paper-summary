@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0fa2366e6cac1f58-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.21996",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.21996",
+    "identity_tokens": [
+      "arXiv:2505.21996"
+    ],
+    "reason": "interactive video world modelの一貫性・retrievalが主題で、LLM serving/inference効率ではない。",
+    "first_checked_at": "2026-10-05T12:58:30+00:00",
+    "last_checked_at": "2026-10-05T12:58:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+    ],
+    "title": "Learning World Models for Interactive Video Generation"
+  },
+  "processed_at": "2026-10-05T12:58:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0fa2366e6cac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

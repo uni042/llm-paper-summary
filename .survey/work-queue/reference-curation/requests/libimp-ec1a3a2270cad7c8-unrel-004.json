@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ec1a3a2270cad7c8-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.15242",
+  "reason": "Environmental, Social, and Governance (ESG) reporting is critical for corporate accountability, with Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) offering strong potential to automate KPI extraction. However, open-source LLM performance in domain-specific ESG tasks remains insufficiently understood. This paper evaluates open-source LLMs in ESG contexts using a structured framework and evaluation resource based on 498 real-world ESG reports from EU-listed companies (2010-2024). We evaluate seven open-source models (2B to 30B parameters) -- glm-4.7-flash, nemotron-3-nano:4b, qwen3:4b-instruct, gemma3:4b, gemma4:e4b, gemma4:e2b, and ministral-3:8b -- using 100 persona-based synthetic QA pairs covering ESG information needs. System performance is assessed via RAGAS metrics, including contextual recall, precision, relevance, faithfulness, answer relevancy, and factual correctness. Results show notable performance variations across architectures. Retrieval performance is strong across models (context recall around 0.58-0.61, context precision around 0.78-0.81, context relevance 0.965-0.985). Generation diverges most on faithfulness (0.607-0.822) and least on answer relevancy (0.760-0.881): glm-4.7-flash leads in faithfulness (0.822), qwen3 in factual correctness (0.449), and ministral-3 in answer relevancy (0.881). Low overall factual correctness (0.387-0.449) highlights the need for domain-specific fine-tuning. This work provides data-driven guidance for deploying open-source models in ESG reporting.",
+  "title": "Empirical Evaluation of Open-Source Large Language Models for Retrieval-Augmented Generation in ESG Domain",
+  "identity_tokens": [
+    "arXiv:2609.15242"
+  ],
+  "linked_from": [
+    "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ec1a3a2270ca",
+  "source_precheck_request_id": null
+}

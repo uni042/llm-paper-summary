@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c08e11daa6699a29-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1080/10447318.2025.2607553",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1080/10447318.2025.2607553",
+    "identity_tokens": [
+      "DOI:10.1080/10447318.2025.2607553"
+    ],
+    "reason": "Review of prompt design, robustness, and human–AI workflows; no inference, serving, compression, or model resource-efficiency study.",
+    "first_checked_at": "2026-10-05T15:31:28+00:00",
+    "last_checked_at": "2026-10-05T15:31:28+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md"
+    ],
+    "title": "A Review of Prompt Engineering Techniques for Large Language Models"
+  },
+  "processed_at": "2026-10-05T15:31:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c08e11daa669",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

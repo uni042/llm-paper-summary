@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e63b5cccf63295bb-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:1911.00172",
+  "reason": "事前学習LMの予測とk近傍検索分布を推論時に補間し、外部datastoreを明示的memoryとして使う。推論時retrieval機構に直結するが、主目的はperplexity・domain adaptationでruntime効率化ではないため境界扱い。",
+  "title": "Generalization through Memorization: Nearest Neighbor Language Models",
+  "identity_tokens": [
+    "arXiv:1911.00172"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e63b5cccf632",
+  "source_precheck_request_id": null
+}

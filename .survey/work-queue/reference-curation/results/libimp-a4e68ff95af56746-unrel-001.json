@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a4e68ff95af56746-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.04036",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.04036",
+    "identity_tokens": [
+      "arXiv:2412.04036"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2412.04036. Abstract summary: Social interactions are fundamental to human life. The recent emergence of large language models (LLMs)-based virtual assistants has demonstrated their potential to revolutionize human interactions and lifestyles. However, existing assistive systems mainly provide reactive services to individual users, rather than offering in-situ assista Out of scope: AR social-assistance application focuses on perception/in-situ interaction, not inference efficiency.",
+    "first_checked_at": "2026-10-05T12:45:10+00:00",
+    "last_checked_at": "2026-10-05T12:45:10+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md"
+    ],
+    "title": "SocialMind: LLM-based Proactive AR Social Assistive System with Human-like Perception for In-situ Live Interactions"
+  },
+  "processed_at": "2026-10-05T12:45:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a4e68ff95af5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

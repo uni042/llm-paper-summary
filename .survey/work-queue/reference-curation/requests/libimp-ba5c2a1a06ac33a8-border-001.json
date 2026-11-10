@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ba5c2a1a06ac33a8-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2604.08782",
+  "reason": "背景で対話履歴を逐次要約し、Deciderで適用を選ぶことで長い会話の入力トークン数と推論レイテンシを抑えるLLM向け手法である。10ターン会話で履歴トークンを最大72%削減し、13種のLLMで評価する点は推論効率に直接接点がある。一方、貢献は会話履歴の圧縮・対話品質にあり、配信スケジューリング、KV管理、GPUカーネルや汎用サービング基盤は扱わない。レイテンシ改善もトークン数からの推定で、基盤性能の直接計測ではないため境界扱いとする。",
+  "title": "MT-OSC: Path for LLMs that Get Lost in Multi-Turn Conversation",
+  "identity_tokens": [
+    "arXiv:2604.08782",
+    "DOI:10.48550/arXiv.2604.08782"
+  ],
+  "linked_from": [
+    ".survey/work-queue/WORKLIST-45.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ba5c2a1a06ac",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

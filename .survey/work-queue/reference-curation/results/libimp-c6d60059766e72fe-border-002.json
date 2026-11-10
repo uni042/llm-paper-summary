@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c6d60059766e72fe-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.10386",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.10386",
+    "identity_tokens": [
+      "arXiv:2404.10386"
+    ],
+    "reason": "一次本文§3.4では一般ML workloadのI/Oをsurveyし、推論例もBERTのonline/offline data handlingを説明するに留まる。LLM-serving固有の方式や評価ではなく、対象範囲に対する関連性が弱い。",
+    "first_checked_at": "2026-10-05T15:04:31+00:00",
+    "last_checked_at": "2026-10-05T15:04:31+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "I/O in Machine Learning Applications on HPC Systems: A 360-degree Survey"
+  },
+  "processed_at": "2026-10-05T15:04:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6d60059766e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

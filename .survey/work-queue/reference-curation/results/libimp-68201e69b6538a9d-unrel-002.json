@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68201e69b6538a9d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.24337",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.24337",
+    "identity_tokens": [
+      "arXiv:2609.24337"
+    ],
+    "reason": "While Mamba-based models have shown strong potential for long sequence modeling, adapting them to vision is challenging due to the requirement of local neighborhood correlations and multi-directional spatial contexts for visual understanding. In this paper, we present LiAuto-MindViT, a novel hybrid vision backbone that synergizes the strengths of CNNs, Mamba, and Transformers. The core of our design is the Adaptive Bidirectional Mamba (ABM), which eliminates the directional bias of unidirectional SSMs through bidirectional selective scanning with learnable alpha blending, enabling content-adaptive directional fusion without the overhead of exhaustive multi-path routing. To further accelerate inference, we propose a deployment-friendly Reparameterized ConvSE (RepConvSE) module that leverages structural reparameterization to reduce latency and memory access overhead. Extensive experiments demonstrate that LiAuto-MindViT achieves state-of-the-art performance on image classification, object detection, and semantic segmentation while enabling efficient inference through reparameterization.",
+    "first_checked_at": "2026-10-05T05:58:49+00:00",
+    "last_checked_at": "2026-10-05T05:58:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "LiAuto-MindViT: A Hybrid Vision Backbone with Adaptive Bidirectional Mamba"
+  },
+  "processed_at": "2026-10-05T05:58:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68201e69b653",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

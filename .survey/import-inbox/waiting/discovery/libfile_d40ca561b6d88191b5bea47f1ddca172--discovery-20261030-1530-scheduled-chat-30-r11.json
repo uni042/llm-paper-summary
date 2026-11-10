@@ -1,0 +1,189 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1530-scheduled-chat-30/r11",
+  "reference_main_sha": "0ff1d41771eec8ce05901d1254d9bb38fd49b7a7",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.12018",
+      "identity_tokens": [
+        "arXiv:2406.12018"
+      ],
+      "title": "CItruS: Chunked Instruction-aware State Eviction for Long Sequence Modeling",
+      "reason": "arXiv一次要旨はKV削除でPPLを維持しても下流タスクに必要な情報を落とすinformation neglectを指摘し、命令に応じた注意選好を取り込むチャンク単位状態削除CItruSを提案。長文脈LLMのKVメモリ削減と品質維持に直接関連。",
+      "source_url": "https://arxiv.org/abs/2406.12018",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:42:50+09:00",
+      "last_checked_at": "2026-10-30T15:42:50+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression"
+      ],
+      "worklist_rank": 148
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.38823",
+      "identity_tokens": [
+        "arXiv:2609.38823"
+      ],
+      "title": "DecoMoE: Decoupling Visual Propagation and Expert Computation for Efficient Multimodal MoE Inference",
+      "reason": "arXiv著者要旨はマルチモーダルMoEで視覚トークンの伝播深度とテキスト側エキスパート選択の冗長性を分離し、二次元の構造化圧縮を行うDecoMoEを提案。視覚トークンとMoE専門家の計算削減を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2609.38823",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:42:50+09:00",
+      "last_checked_at": "2026-10-30T15:42:50+09:00",
+      "linked_from": [
+        "MoE Inference",
+        "Multimodal LLM Inference"
+      ],
+      "worklist_rank": 149
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.09029",
+      "identity_tokens": [
+        "arXiv:2607.09029"
+      ],
+      "title": "MOSAIC: Adaptive Inter-layer Composition for Efficient Heterogeneous Vision-Language Models",
+      "reason": "arXiv著者要旨はVLMの層構成を固定の同質Transformerから、線形注意などを含む異種機構のハードウェア依存最適配置へ変換するMOSAICを提案。推論遅延・計算資源と品質を多目的に最適化するため直接関連。",
+      "source_url": "https://arxiv.org/abs/2607.09029",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:42:50+09:00",
+      "last_checked_at": "2026-10-30T15:42:50+09:00",
+      "linked_from": [
+        "Multimodal LLM Inference",
+        "Hardware Accelerators"
+      ],
+      "worklist_rank": 150
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.23587",
+      "identity_tokens": [
+        "arXiv:2609.23587"
+      ],
+      "title": "On the Efficiency-Safety Dilemma in Large Reasoning Models",
+      "reason": "arXiv一次要旨は推論モデルの量子化・枝刈りがjailbreak耐性と推論能力に与える影響を調査し、安全性が上がったように見える結果の一部が推論能力劣化に由来することを分析。効率化手法の副作用を扱うが、新しい推論高速化方式の提案ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.23587",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:42:50+09:00",
+      "last_checked_at": "2026-10-30T15:42:50+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "Reasoning LLM Inference"
+      ],
+      "worklist_rank": 152
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.12056",
+      "identity_tokens": [
+        "arXiv:2605.12056"
+      ],
+      "title": "OmniRefine: Alignment-Aware Cooperative Compression for Efficient Omnimodal Large Language Models",
+      "reason": "arXiv著者要旨は音声・動画の対応関係を壊さずにトークンを削減する学習不要の二段階OmniRefineを提案。長い動画と高密度音声入力でOmni-LLM推論コストを減らす直接的なマルチモーダル圧縮研究。",
+      "source_url": "https://arxiv.org/abs/2605.12056",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:42:50+09:00",
+      "last_checked_at": "2026-10-30T15:42:50+09:00",
+      "linked_from": [
+        "Multimodal LLM Inference",
+        "Token Pruning"
+      ],
+      "worklist_rank": 154
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.15816",
+      "identity_tokens": [
+        "arXiv:2505.15816"
+      ],
+      "title": "Streamline Without Sacrifice - Squeeze out Computation Redundancy in LMM",
+      "reason": "arXiv一次要旨は視覚トークン自体を削除せず、デコーダ内で視覚トークンに対するself-attentionやFFNの不要計算を減らすProxyVを提案。LMM推論の視覚関連演算の冗長性削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2505.15816",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:42:50+09:00",
+      "last_checked_at": "2026-10-30T15:42:50+09:00",
+      "linked_from": [
+        "Multimodal LLM Inference",
+        "Token Pruning"
+      ],
+      "worklist_rank": 156
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.33503",
+      "identity_tokens": [
+        "arXiv:2609.33503"
+      ],
+      "title": "RelaxKV: Recomputation Guided by the Query with Sparse Context Attention for Efficient KV Cache Reuse",
+      "reason": "arXiv一次要旨はRAGで独立チャンクKVを再利用した際に欠けるチャンク間相互作用を、修復対象と再計算文脈の双方を質問に応じて選ぶRelaxKVで補う。再計算量とKV再利用を最適化するLLMサービング研究。",
+      "source_url": "https://arxiv.org/abs/2609.33503",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:42:50+09:00",
+      "last_checked_at": "2026-10-30T15:42:50+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "RAG Inference"
+      ],
+      "worklist_rank": 157
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.13915",
+      "identity_tokens": [
+        "arXiv:2605.13915"
+      ],
+      "title": "Multi-Scale Dequant: Eliminating Dequantization Bottleneck via Activation Decomposition for Efficient LLM Inference",
+      "reason": "arXiv一次要旨はAscend NPUなどで低ビット重みのBF16復元がGEMMより重いボトルネックに対し、活性を複数の低精度成分へ分解して重み/KVの逆量子化を計算のクリティカルパスから除くMSDを提案。LLM低ビット推論カーネルに直接関連。",
+      "source_url": "https://arxiv.org/abs/2605.13915",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:42:50+09:00",
+      "last_checked_at": "2026-10-30T15:42:50+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "Hardware Accelerators"
+      ],
+      "worklist_rank": 158
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.19870",
+      "identity_tokens": [
+        "arXiv:2602.19870"
+      ],
+      "title": "ApET: Approximation-Error Guided Token Compression for Efficient VLMs",
+      "reason": "arXiv一次要旨は視覚トークンの注意スコア依存削除が位置バイアスやFlashAttention非互換を招く問題に対し、近似誤差に基づく視覚トークン圧縮ApETを提案。VLMの推論計算削減と効率的注意カーネルの両立に直接関連。",
+      "source_url": "https://arxiv.org/abs/2602.19870",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:42:50+09:00",
+      "last_checked_at": "2026-10-30T15:42:50+09:00",
+      "linked_from": [
+        "Multimodal LLM Inference",
+        "Token Pruning"
+      ],
+      "worklist_rank": 159
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.31779",
+      "identity_tokens": [
+        "arXiv:2606.31779"
+      ],
+      "title": "Bridging the Gap Between Latent and Explicit Reasoning with Looped Transformers",
+      "reason": "arXiv一次要旨は逐次トークン生成が必要な明示CoTの代わりに、Looped Transformerの再帰深度で潜在推論を進める方式を検討。1B以上での潜在CoT品質の課題を改善し、推論時のトークン生成費用削減につながるアーキテクチャ研究。",
+      "source_url": "https://arxiv.org/abs/2606.31779",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:42:50+09:00",
+      "last_checked_at": "2026-10-30T15:42:50+09:00",
+      "linked_from": [
+        "Reasoning LLM Inference",
+        "Alternative Language Model Architectures"
+      ],
+      "worklist_rank": 160
+    }
+  ]
+}

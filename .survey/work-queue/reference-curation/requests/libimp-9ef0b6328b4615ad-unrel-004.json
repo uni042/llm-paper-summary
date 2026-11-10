@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-9ef0b6328b4615ad-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.04695",
+  "reason": "Federated adaptation of time-series foundation models (TSFMs) is attractive for building energy forecasting because meter data are private, distributed, and highly non-IID. However, a single parameter-sharing strategy is unlikely to serve all pretrained TSFMs or building clients: fully shared adapters can suppress building-specific temporal behavior, while fully local adaptation discards cross-building transfer. We propose a personalized federated sparse adaptation framework with a heterogeneous temporal mixture-of-experts (MoE) adapter placed after the pretrained TSFM representation. A sequence-level router maps each 168-hour context window to a top-$k$ subset of experts specialized for periodicity, long-range interactions, local variation, trend-residual structure, and multi-resolution behavior. We compare global FL, local training, and personalized FL variants with globally shared or client-private expert banks. Across 50 buildings and three TSFM backbones, personalization consistently outperforms Global FL-MoE and Local MoE, while the best sparse-adaptation strategy varies by backbone and metric. Routing behavior further reveals client-level expert specialization, expert concentration, and near-uniform routing across backbones, showing that federated TSFM adaptation should be both client-aware and backbone-aware.",
+  "title": "Personalized Federated Sparse Adaptation of Time-Series Foundation Models",
+  "identity_tokens": [
+    "arXiv:2608.04695"
+  ],
+  "linked_from": [
+    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ef0b6328b46",
+  "source_precheck_request_id": null
+}

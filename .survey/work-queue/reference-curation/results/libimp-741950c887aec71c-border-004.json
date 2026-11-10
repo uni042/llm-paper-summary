@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-741950c887aec71c-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.18002",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.18002",
+    "identity_tokens": [
+      "arXiv:2503.18002"
+    ],
+    "reason": "Loihi 2 throughput/energy figures are explicitly preliminary estimates from an unoptimized mapping; the 370M model requires 31 chips, so evidence is not robust for a deployable inference comparison.",
+    "first_checked_at": "2026-10-05T15:31:24+00:00",
+    "last_checked_at": "2026-10-05T15:31:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Neuromorphic Principles for Efficient Large Language Models on Intel Loihi 2"
+  },
+  "processed_at": "2026-10-05T15:31:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-741950c887ae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

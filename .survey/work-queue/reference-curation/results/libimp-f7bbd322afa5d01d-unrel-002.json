@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7bbd322afa5d01d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1002/cpe.70884",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1002/cpe.70884",
+    "identity_tokens": [
+      "DOI:10.1002/cpe.70884"
+    ],
+    "reason": "Financial statement fraud schemes are becoming increasingly sophisticated, posing significant challenges to global capital markets and necessitating more advanced detection methods. Existing multimodal financial statement fraud detection (FSFD) methods still face several challenges, including insufficient utilization of financial information, inter‐modal conflicts, and limited decision interpretability. To address these issues, we propose an innovative multimodal evidence learning (MEL) framework. The framework introduces Dempster–Shafer evidence theory into FSFD for the first time and formulates the belief Jaccard (BJ) divergence as its core measure. The MEL framework takes financial and textual modalities as inputs and comprises two stages: evidence learning and evidence fusion. During the evidence learning stage, we decompose the financial modality into three sub‐modalities based on financial statement structure. A disagreement‐aware module based on BJ divergence is designed to quantify model disagreements within each financial sub‐modality, thereby enhancing the utilization of complex financial information. For the textual modality, we make the first attempt to integrate FinGPT with Grad‐CAM to generate textual evidence and token‐level interpretability results from MD&A disclosures. During the evidence fusion stage, the conflict‐aware module further uses BJ divergence to suppress irreconcilable conflicts between modalities and derive the final decision through dynamically weighted fusion. Experiments demonstrate that the MEL framework achieves stable and consistent performance across multiple metrics, including accuracy, fraud precision, and MCC. Furthermore, the MEL framework provides traceable interpretability results, supporting its potential application in high‐",
+    "first_checked_at": "2026-10-05T09:18:00+00:00",
+    "last_checked_at": "2026-10-05T09:18:00+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "A Multimodal Evidence Learning Framework Enhanced by Aware Modules for Financial Statement Fraud Detection"
+  },
+  "processed_at": "2026-10-05T09:18:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7bbd322afa5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "0618c6f5e0aad4c828c0013e6f4d3322910e0bda9455b14125a4e3bcc90d544c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_0f02ce1cb784819189c73a39cce0e09e--2025-2505.08620-resource-efficient-language-models-ptq-survey-20261027-0955-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2505.08620",
+  "worker_completed_at": "2026-10-27T09:57:43+09:00",
+  "worker_run_key": "20261027-0955-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7557,
+    "body_paragraphs": 35,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 630,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-27T01:46:10+00:00"
+}

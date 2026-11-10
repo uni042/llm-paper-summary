@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed2bfb45dc03dec9-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1705.05249",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1705.05249",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1705.05249",
+      "arXiv:1705.05249"
+    ],
+    "reason": "OpenCL向け汎用BLASライブラリと自動チューニングの研究で、LLM固有の推論カーネル/runtime研究ではない。",
+    "first_checked_at": "2026-10-03T10:59:05+00:00",
+    "last_checked_at": "2026-10-03T10:59:05+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "CLBlast: A Tuned OpenCL BLAS Library"
+  },
+  "processed_at": "2026-10-03T10:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed2bfb45dc03",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

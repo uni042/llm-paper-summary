@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9589cc586acb893f-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.asoc.2026.114567",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.asoc.2026.114567",
+    "identity_tokens": [
+      "DOI:10.1016/j.asoc.2026.114567",
+      "SemanticScholar:adbd4ed8ff7597b6553b1fa9ef13190437592792"
+    ],
+    "reason": "The DOI and title resolve to Elsevier's ScienceDirect record for Applied Soft Computing 190 (March 2026), article 114567, but the publisher page returned HTTP 403 in retrieval and exposed no abstract. With only bibliographic metadata available, the sequence-recommendation model's relevance to LLM inference efficiency cannot be established.",
+    "first_checked_at": "2026-10-13T02:49:12+00:00",
+    "last_checked_at": "2026-10-13T02:49:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.19427-griffin-mixing-gated-linear-recurrences-with-local-attention-for-efficie.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BiSGR-Att: A sequence recommendation model based on bidirectional simplified gated recurrent network with linear attention"
+  },
+  "processed_at": "2026-10-13T02:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9589cc586acb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

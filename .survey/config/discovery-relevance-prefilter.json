@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "policy_name": "mechanical-rules-then-forward-lineage-percent-v2-no-audit",
+  "enabled": true,
+  "mode": "quarantine",
+  "allow_canonical_ids": [],
+  "expanded_rules": {
+    "enabled": true,
+    "mode": "quarantine",
+    "note": "Active mechanical application-domain filter with system-mechanism rescues."
+  },
+  "relevance_quota": {
+    "enabled": true,
+    "mode": "quarantine",
+    "retain_percent": 5,
+    "min_candidates": 100,
+    "selection": "same-lineage-forward-citation-count-then-topic-then-priority",
+    "note": "5% of candidates remaining AFTER mechanical quarantine; change retain_percent (1..100) freely. No automatic audit revival; all source records remain untouched."
+  }
+}

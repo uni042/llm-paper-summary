@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-88044d0a4e08fd19-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.07915",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.07915",
+    "identity_tokens": [
+      "arXiv:2309.07915"
+    ],
+    "reason": "複数画像・テキストを組み合わせたmulti-modal in-context learning能力を高めるモデル/学習研究で、推論token・memory・latency削減を主貢献としない。",
+    "first_checked_at": "2026-10-07T05:41:37+00:00",
+    "last_checked_at": "2026-10-07T05:41:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+    ],
+    "title": "MMICL: Empowering Vision-language Model with Multi-Modal In-Context Learning"
+  },
+  "processed_at": "2026-10-07T05:41:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-88044d0a4e08",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

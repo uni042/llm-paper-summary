@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5ffcb246023f81b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.14243",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.14243",
+    "identity_tokens": [
+      "arXiv:2601.14243"
+    ],
+    "reason": "FP8 inference executionを含むが、目的と評価はRL training rolloutの安定・高速化で、deployment inference optimizationではない。",
+    "first_checked_at": "2026-10-07T10:40:17+00:00",
+    "last_checked_at": "2026-10-07T10:40:17+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "Jet-RL: Enabling On-Policy FP8 Reinforcement Learning with Unified Training and Rollout Precision Flow"
+  },
+  "processed_at": "2026-10-07T10:40:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5ffcb246023",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

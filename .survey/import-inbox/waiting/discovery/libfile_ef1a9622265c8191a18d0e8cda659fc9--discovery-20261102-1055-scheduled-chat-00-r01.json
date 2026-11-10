@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1055-scheduled-chat-00/r01",
+  "reference_main_sha": "d419e27f3bf777650d1b4cf5ca7f7b3509c78f17",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.25012",
+      "identity_tokens": [
+        "id:arXiv:2610.25012",
+        "id:DOI:10.48550/arXiv.2610.25012"
+      ],
+      "title": "Conjugate Compilation: Self-Improving Agentic Co-Compilation for Speculative Decoding",
+      "reason": "投機的デコードのdraftとtargetを別々にコンパイルする方式では、両モデルを同時実行した際のGPU資源競合を最適化できない。両モデルのGEMMと非GEMM演算を共通タイルに交互配置し、実行時間を測りながらLLMエージェントとモンテカルロ木探索でコンパイル計画を改良する。B300とRTX 5090の6構成で従来実行比の幾何平均1.37倍、interleaved kernel導入時1.45倍のround速度向上を報告しており、推論カーネルへの直接的な技術貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.25012",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T11:00:22+09:00",
+      "last_checked_at": "2026-11-02T11:00:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.13325",
+      "identity_tokens": [
+        "id:arXiv:2610.13325",
+        "id:DOI:10.48550/arXiv.2610.13325"
+      ],
+      "title": "Taking Tokenization off the Host for Agentic LLM Serving",
+      "reason": "エージェントの長文脈再送ではprefix cacheによりprefillが短縮される一方、CPUで全入力を再トークン化する処理がTTFTのボトルネックになる。GraphTokは事前分割、BPEマージ、token ID組立てを単一の再生可能なCUDA graphで実行し、短入力のみCPUへ振り分ける。vLLMでcached prefix時の平均TTFTを2.1～2.4倍改善し、121k-token要求のDynamo frontend処理能力を518 requests/sと報告するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.13325",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T11:00:22+09:00",
+      "last_checked_at": "2026-11-02T11:00:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24179",
+      "identity_tokens": [
+        "id:arXiv:2610.24179",
+        "id:DOI:10.48550/arXiv.2610.24179"
+      ],
+      "title": "KVCompass: A Discovery Plane for Internet-Scale Prefix Cache Sharing in LLM Serving",
+      "reason": "地理的に分散したLLMサーバーでは、同じprefixのKV cacheが別リージョンにあっても所在を発見できず、prefillが重複する。KVCompassはKVのidentityと配置先を分離した発見インデックスを設け、可変長prefix照合と負荷・ネットワーク距離を併せて実行先を選択する。64 workerシミュレーションと3大陸14 worker実機でP99 TTFTを比較方式より1.3～14倍短縮したと報告し、分散KV再利用の実装に直結するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.24179",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T11:00:22+09:00",
+      "last_checked_at": "2026-11-02T11:00:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.38809",
+      "identity_tokens": [
+        "id:arXiv:2610.38809",
+        "id:DOI:10.48550/arXiv.2610.38809"
+      ],
+      "title": "Causal Attention on CPU: A Cache-Aware and Load-Balanced Scheduling Kernel for Prefill",
+      "reason": "複数エージェントの長文脈prefillをCPUへ逃がす場合、既存CPU attentionは階層キャッシュの活用とスレッド分配が不十分である。CACPUは複数階層のcache blockingとカーネル内部のtask dispatchを組み合わせた因果注意計算を実装する。PyTorch SDPA、FlexAttention、SGLang attentionに対し最大2.01倍のカーネル高速化、SGLang統合時にLlama-3.1-8BのTTFT最大1.74倍短縮を報告するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.38809",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T11:00:22+09:00",
+      "last_checked_at": "2026-11-02T11:00:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.30779",
+      "identity_tokens": [
+        "id:arXiv:2610.30779",
+        "id:DOI:10.48550/arXiv.2610.30779"
+      ],
+      "title": "ProQuant: Preserving Expert Quality over Quantity in Ultra-Low-Bit Quantization of Mixture-of-Experts Models",
+      "reason": "MoEの厳しい重みビット予算ではexpertごとの量子化誤差とrouterの経路変動が生成品質を損なう。ProQuantはPoPでexpert pruningと混合精度ビット割当を同時最適化し、RoCoでRMSNormの等価変換を使ってexpert入力を調整しrouting driftを抑える。推論用MoEのweight-only post-training quantizationとしてモデル格納量と生成品質の両立に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.30779",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T11:00:22+09:00",
+      "last_checked_at": "2026-11-02T11:00:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.20353",
+      "identity_tokens": [
+        "id:arXiv:2610.20353",
+        "id:DOI:10.48550/arXiv.2610.20353"
+      ],
+      "title": "Beyond Expert Rankings: Contrast Calibration for Mixed-Precision MoE Quantization",
+      "reason": "MoE混合精度量子化ではexpertの重要度順位だけでは誤差重みの絶対的な強さを決められない。NatScaleは勾配ベース重要度を情報理論的なcontrast目標にpower変換で較正し、expertのgate/up/down構成別出力誤差と重みスペクトルなどを組み合わせて容量制約下の精度を選ぶ。3モデル・9条件で5方式よりnative-to-quantized KL divergenceとtop-token一致が良好と報告し、MoE推論量子化の技術貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.20353",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T11:00:22+09:00",
+      "last_checked_at": "2026-11-02T11:00:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.34717",
+      "identity_tokens": [
+        "id:arXiv:2610.34717",
+        "id:DOI:10.48550/arXiv.2610.34717"
+      ],
+      "title": "VLA-HWBench: Where the Time Goes When VLA Models Run on Edge Hardware",
+      "reason": "ロボット向けVLA推論の実際の遅延要因を18モデル、Jetson AGX ThorとRyzen AI Max+ PRO 395、7段階の処理分解で測定する。行動生成方式による遅延差はJetsonで82倍、AMDで157倍に達し、4-bit重みとkernel fusionで特定2モデルをPyTorch torch.compile比2.6～2.9倍高速化したと報告する。VLA固有の評価だが推論カーネル・量子化・エッジハードウェアの定量分析に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.34717",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T11:00:22+09:00",
+      "last_checked_at": "2026-11-02T11:00:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.38968",
+      "identity_tokens": [
+        "id:arXiv:2610.38968",
+        "id:DOI:10.48550/arXiv.2610.38968"
+      ],
+      "title": "TableTune: Measured, Self-Correcting Draft-Length Tables for Dynamic Speculative Decoding",
+      "reason": "vLLMの投機デコードはbatch sizeごとのdraft長を手書き表で与えるが、実トラフィックの受理率や負荷変化で最適値が変わる。TableTuneはvLLMの実際の実行経路でbatch sizeとdraft長を測定してthroughput最大化表を構築し、受理率を監視するpluginが稼働中に表を再学習する。H100の5 draft設定中4設定で最良固定長の94%以上のthroughputを達成し、誤設定から最大58%改善したと報告するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.38968",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T11:00:22+09:00",
+      "last_checked_at": "2026-11-02T11:00:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37307",
+      "identity_tokens": [
+        "id:arXiv:2610.37307",
+        "id:DOI:10.48550/arXiv.2610.37307"
+      ],
+      "title": "EdgePace: Deadline- and Freshness-Aware LLM Scheduling on Unified-Memory Platforms",
+      "reason": "統合メモリのエッジ端末ではLLM推論がセンサ処理と帯域を競合し、観測処理のdeadlineとLLM応答のfreshnessが損なわれる。EdgePaceはprefill/decode中に安全な中断点を置き、前景処理の帯域需要・deadline余裕・出力鮮度を見て推論を調停する。OnePlus 13と3種類のJetsonでdeadline missを24.1～96.1%削減しつつLLM throughputの64.9～98.5%を維持したためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.37307",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T11:00:22+09:00",
+      "last_checked_at": "2026-11-02T11:00:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39853",
+      "identity_tokens": [
+        "id:arXiv:2610.39853",
+        "id:DOI:10.48550/arXiv.2610.39853"
+      ],
+      "title": "KV Cache Quantization for Diffusion Language Models",
+      "reason": "拡散言語モデルではmasked tokenの開示により双方向attentionのKV状態がdenoisingステップ間で変化し、量子化以前からcache再利用誤差が存在する。TRACEはprompt-answerから開示軌跡を再構成して較正状態を作り、dLLM-KVQはlayerごとに重要なK-cacheを高精度に保ちVを低ビット化する。LLaDAとDreamで4-bit/2-bitのprefix/dual cache設定を比較し、量子化方式中の平均スコア最良を報告するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.39853",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T11:00:22+09:00",
+      "last_checked_at": "2026-11-02T11:00:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

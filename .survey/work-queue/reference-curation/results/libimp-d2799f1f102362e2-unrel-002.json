@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d2799f1f102362e2-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tcsvt.2025.3615166",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tcsvt.2025.3615166",
+    "identity_tokens": [
+      "DOI:10.1109/tcsvt.2025.3615166"
+    ],
+    "reason": "Dual-Net is a hyperspectral anomaly-detection network; its vision-task contribution is outside LLM inference/serving/compression.",
+    "first_checked_at": "2026-10-05T13:35:18+00:00",
+    "last_checked_at": "2026-10-05T13:35:18+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+    ],
+    "title": "Dual-Net: Dual Visual Spectral Affinity Monitoring Network for Hyperspectral Anomaly Detection"
+  },
+  "processed_at": "2026-10-05T13:35:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d2799f1f1023",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

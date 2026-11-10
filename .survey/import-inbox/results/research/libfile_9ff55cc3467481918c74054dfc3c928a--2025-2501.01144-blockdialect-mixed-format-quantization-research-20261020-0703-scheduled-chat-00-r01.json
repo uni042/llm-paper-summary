@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c6786dc3ca443f4d6216e1d4c9e06676000a0c5752fa162cf968842ad209d86d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9ff55cc3467481918c74054dfc3c928a--2025-2501.01144-blockdialect-mixed-format-quantization-research-20261020-0703-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2501.01144",
+  "worker_completed_at": "2026-10-20T07:08:00+09:00",
+  "worker_run_key": "20261020-0703-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6741,
+    "body_paragraphs": 34,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 193,
+    "limitation_chars": 588,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 193 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 193 < 500"
+  ],
+  "processed_at": "2026-10-19T23:54:34+00:00"
+}

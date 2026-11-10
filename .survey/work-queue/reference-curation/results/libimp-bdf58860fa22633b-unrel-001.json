@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bdf58860fa22633b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.16411",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.16411",
+    "identity_tokens": [
+      "arXiv:2405.16411"
+    ],
+    "reason": "tensor attentionのbackward gradientを高速化するtraining algorithm/theoryで、training専用。",
+    "first_checked_at": "2026-10-05T14:18:52+00:00",
+    "last_checked_at": "2026-10-05T14:18:52+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+    ],
+    "title": "Training Tensor Attention Efficiently: From Cubic to Almost Linear Time"
+  },
+  "processed_at": "2026-10-05T14:18:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bdf58860fa22",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

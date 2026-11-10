@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0200-scheduled-chat-00/r10",
+  "reference_main_sha": "bfbf4444d3e126ebc965c380558cb94e575463ae",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.06502",
+      "identity_tokens": [
+        "arXiv:2509.06502"
+      ],
+      "title": "FireRedChat: A Pluggable, Full-Duplex Voice Interaction System with Cascaded and Semi-Cascaded Implementations",
+      "reason": "arXiv一次要旨は音声エージェントの割込み・ターン終了判定をstreaming pVADと意味的end-of-turn検出で制御し、カスケード型・半カスケード型をフルデュプレックス化するFireRedChatを提案。音声LLMの応答開始遅延と割込み制御を実測する推論サービングシステム研究。",
+      "source_url": "https://arxiv.org/abs/2509.06502",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:58+09:00",
+      "last_checked_at": "2026-10-31T02:09:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 477,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.10446",
+      "identity_tokens": [
+        "arXiv:2506.10446"
+      ],
+      "title": "Fast on the Easy, Deep on the Hard: Efficient Reasoning via Powered Length Penalty",
+      "reason": "arXiv一次要旨は難易度の異なる数学推論課題へ同じ長さ罰則を適用すると効率と精度が悪化する問題に対し、報酬関数を分けて出力長の冪罰則を導入。GSM8K/MATH500で思考長を短縮し、難しいAIME2024では正答率を改善する推論トークン配分方式。",
+      "source_url": "https://arxiv.org/abs/2506.10446",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:58+09:00",
+      "last_checked_at": "2026-10-31T02:09:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 478,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.27419",
+      "identity_tokens": [
+        "arXiv:2510.27419"
+      ],
+      "title": "DeepCompress: A Dual Reward Strategy for Dynamically Exploring and Compressing Reasoning Chains",
+      "reason": "arXiv一次要旨はモデルの現在の能力に対して問題をSimple/Hardへ動的分類し、簡単な問題はCoTを短縮、難しい問題は探索を促進する二重長さ報酬を用いるDeepCompressを提案。推論モデルの精度と生成トークン効率を同時に改善する適応的な思考計算量制御。",
+      "source_url": "https://arxiv.org/abs/2510.27419",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:58+09:00",
+      "last_checked_at": "2026-10-31T02:09:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 480,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.13890",
+      "identity_tokens": [
+        "arXiv:2609.13890"
+      ],
+      "title": "Learning How Much to Collaborate: Difficulty-Aware Topology Selection for Multi-Agent Code Generation",
+      "reason": "arXiv一次要旨はコード生成における5種類のエージェント通信トポロジーを課題難易度ごとの成功確率とトークン費用から選択するDATSを提案。常時階層型の40%の費用でpass@1 77.7%対73.6%と報告し、マルチエージェント推論の通信・生成コストを直接最適化する。",
+      "source_url": "https://arxiv.org/abs/2609.13890",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:58+09:00",
+      "last_checked_at": "2026-10-31T02:09:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 482,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.30644",
+      "identity_tokens": [
+        "arXiv:2610.30644"
+      ],
+      "title": "Speculative Acceptance Does Not Decay with Position: A Full-Length Diagnostic on Long Chain-of-Thought with Independent Drafts",
+      "reason": "arXiv一次要旨はMATH-500の全500問、約178万回の検証で、独立した同系統・異系統ドラフトの投機的復号受理率をCoT生成位置別に測定。長いCoTでも位置だけでは受理率が下がらず、反省語など高エントロピーな決定点に拒否が集中する負の結果を示し、投機的復号の最適化対象を特定する。",
+      "source_url": "https://arxiv.org/abs/2610.30644",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:58+09:00",
+      "last_checked_at": "2026-10-31T02:09:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 483,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.14781",
+      "identity_tokens": [
+        "arXiv:2503.14781"
+      ],
+      "title": "Fake Runs, Real Fixes -- Analyzing xPU Performance Through Simulation",
+      "reason": "arXiv一次要旨は本番LLM推論のアクセラレータ実行トレースをマイクロアーキテクチャシミュレータで再生し、機械語レベルのボトルネックを解析するxPU-Sharkを提案。実際のLLM負荷で通信collective最大15%、トークン生成遅延最大4.1%改善につなげた推論基盤の性能分析。",
+      "source_url": "https://arxiv.org/abs/2503.14781",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:58+09:00",
+      "last_checked_at": "2026-10-31T02:09:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 487,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09683",
+      "identity_tokens": [
+        "arXiv:2607.09683"
+      ],
+      "title": "Ablation, Statistical Inference, and Validation for KV-Cache Compression",
+      "reason": "arXiv一次要旨はTurbo-QuantとSpectralQuantのKVキャッシュ圧縮を統計的検証で比較し、重い裾のデータでは固有基底方式が共分散不安定性に弱いとする。対象は直接的にKV圧縮だが、要旨が自己申告でabstract of abstractと記し評価設定や具体的数値に乏しいため、一次全文確認まで保留。",
+      "source_url": "https://arxiv.org/abs/2607.09683",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:58+09:00",
+      "last_checked_at": "2026-10-31T02:09:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 488,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.09514",
+      "identity_tokens": [
+        "arXiv:2606.09514"
+      ],
+      "title": "BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference",
+      "reason": "arXiv一次要旨は指定計算予算内で実行するTransformer層を軽量Decision Moduleがtop-k選択し、先頭層KVキャッシュと最新トークン表現で復号中にも再ルーティングするBuddyを提案。Llama/Qwenで厳密予算制御と品質計算量Paretoを両立する直接的な推論層スキップ方式。",
+      "source_url": "https://arxiv.org/abs/2606.09514",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:58+09:00",
+      "last_checked_at": "2026-10-31T02:09:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 494,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2311.01305",
+      "identity_tokens": [
+        "arXiv:2311.01305"
+      ],
+      "title": "AWEQ: Post-Training Quantization with Activation-Weight Equalization for Large Language Models",
+      "reason": "arXiv一次要旨は活性の量子化困難性をチャネル均等化で重み側へ移し、量子化バイアスを補正するAWEQを提案。追加学習なしで超低ビット・W8A8量子化の品質と実行効率を改善し、LLaMA/OPTで既存PTQ法を上回ると報告する推論向けモデル圧縮技術。",
+      "source_url": "https://arxiv.org/abs/2311.01305",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:58+09:00",
+      "last_checked_at": "2026-10-31T02:09:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 495,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.10444",
+      "identity_tokens": [
+        "arXiv:2603.10444"
+      ],
+      "title": "The Curse and Blessing of Mean Bias in FP4-Quantized LLM Training",
+      "reason": "arXiv一次要旨はFP4学習で活性外れ値が平均方向のランク1バイアスに由来することを示し、平均成分を分離してからNVFP4量子化するAverisを提案。低ビット量子化実装に関連するが、主目的・評価は学習時の損失と学習オーバーヘッドであり推論復号の改善は未検証のため保留。",
+      "source_url": "https://arxiv.org/abs/2603.10444",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:58+09:00",
+      "last_checked_at": "2026-10-31T02:09:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

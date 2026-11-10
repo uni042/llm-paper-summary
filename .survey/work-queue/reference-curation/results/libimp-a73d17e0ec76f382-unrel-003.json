@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a73d17e0ec76f382-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.13117",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.13117",
+    "identity_tokens": [
+      "arXiv:2510.13117"
+    ],
+    "reason": "Masked diffusion language modelsのreasoning能力・計算特性を評価する研究で、推論効率化手法を提案していない。",
+    "first_checked_at": "2026-10-05T13:02:46+00:00",
+    "last_checked_at": "2026-10-05T13:02:46+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+    ],
+    "title": "On the Reasoning Abilities of Masked Diffusion Language Models"
+  },
+  "processed_at": "2026-10-05T13:02:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a73d17e0ec76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

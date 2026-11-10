@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r12",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.06324",
+      "identity_tokens": [
+        "arXiv:2609.06324"
+      ],
+      "title": "A Ticket from Marginals to Joints: Coupled-Noise Distillation for One-Step Block Generation in Diffusion Language Models",
+      "reason": "拡散言語モデルで位置ごとの周辺分布を一括サンプルすると整合しないトークン列になり再修正が必要な問題に対し、ノイズ別に整合するブロックへ写像するCONDORを提案。winner-take-all教師信号と自己蒸留で1回のforwardによるブロック生成を目指す。小規模TinyStoriesの実証が中心で大規模推論速度は要検証だが、生成ステップ削減の直接的な方式。",
+      "source_url": "https://arxiv.org/abs/2609.06324",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:42:34+09:00",
+      "last_checked_at": "2026-10-30T19:42:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 153,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22787",
+      "identity_tokens": [
+        "arXiv:2601.22787"
+      ],
+      "title": "Float8@2bits: Entropy Coding Enables Data-Free Model Compression",
+      "reason": "校正データなしで極低ビットにするとモデルが崩壊する問題に対し、数値表現精度と保存ビット費用をエントロピー符号で分離するEntQuantを提案。70B級モデルを10分未満で圧縮し、推論時の小さなオーバーヘッドで低容量化を狙う。LLM推論向け重み圧縮・メモリ削減に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2601.22787",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:42:34+09:00",
+      "last_checked_at": "2026-10-30T19:42:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 154,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.13002",
+      "identity_tokens": [
+        "arXiv:2505.13002"
+      ],
+      "title": "PIM-malloc: A Fast and Scalable Dynamic Memory Allocator for Processing-In-Memory (PIM) Architectures",
+      "reason": "汎用PIMデバイスでの動的メモリ割当器を設計し、PIM実機のmalloc処理を高速化する研究。一次要旨の評価は一般的なPIMワークロードとメモリ割当性能であり、LLM推論・KVキャッシュ・MoEやLLMサービングへの具体的適用は示されないため対象外。",
+      "source_url": "https://arxiv.org/abs/2505.13002",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:42:34+09:00",
+      "last_checked_at": "2026-10-30T19:42:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 155,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.14149",
+      "identity_tokens": [
+        "arXiv:2308.14149"
+      ],
+      "title": "Examining User-Friendly and Open-Sourced Large GPT Models: A Survey on Language, Multimodal, and Scientific GPT Models",
+      "reason": "オープンで扱いやすいGPT系モデルの種類、能力、展開容易性、科学・マルチモーダル応用を広く整理するサーベイ。軽量化と展開の話題は含むが、特定のLLM推論システム最適化、KV管理、GPUカーネル、サービング実測を中心とする文献ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2308.14149",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:42:34+09:00",
+      "last_checked_at": "2026-10-30T19:42:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 156,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.24477",
+      "identity_tokens": [
+        "arXiv:2606.24477"
+      ],
+      "title": "video-SALMONN-R³: Learning to ReWatch, ReAsk, and ReAnswer for Efficient Video Understanding",
+      "reason": "動画LLMで低解像度・低フレーム率の粗い初回視聴から必要区間だけ高精細に再視聴するR3を提案。再質問と再回答を強化学習で獲得し、動画QAの品質と計算費用を改善する。視覚入力の推論費用削減に関係するが、主要な貢献は動画QAの再視聴方策・能力学習であり汎用サービング機構ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2606.24477",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:42:34+09:00",
+      "last_checked_at": "2026-10-30T19:42:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 157,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.07479",
+      "identity_tokens": [
+        "arXiv:2504.07479"
+      ],
+      "title": "UniCAIM: A Unified CAM/CIM Architecture with Static-Dynamic KV Cache Pruning for Efficient Long-Context LLM Inference",
+      "reason": "FeFETを用いたCAM/CIM融合アクセラレータで、類似度近似による動的KV選択、累積類似度による静的KV剪定、選択KV上の正確な注意計算を同一ハードウェアで実行するUniCAIMを提案。長文脈LLMのKVメモリ・帯域・エネルギー削減を狙う直接的なPIM推論アーキテクチャ。",
+      "source_url": "https://arxiv.org/abs/2504.07479",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:42:34+09:00",
+      "last_checked_at": "2026-10-30T19:42:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 158,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.08607",
+      "identity_tokens": [
+        "arXiv:2602.08607"
+      ],
+      "title": "VocalNet-MDM: Accelerating Streaming Speech LLM via Self-Distilled Masked Diffusion Modeling",
+      "reason": "ストリーミング音声LLMの逐次自己回帰生成をmasked diffusionへ置き換え、ブロック単位マスキングと反復自己蒸留で推論反復回数を削減するVocalNet-MDM。AR基準比decode 3.7〜10倍高速化、初回音声chunk遅延34%減を報告する低遅延音声LLMデコード研究。",
+      "source_url": "https://arxiv.org/abs/2602.08607",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:42:34+09:00",
+      "last_checked_at": "2026-10-30T19:42:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 160,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.23167",
+      "identity_tokens": [
+        "arXiv:2608.23167"
+      ],
+      "title": "Accelerating Diffusion Language Models via Structured Suffix Modeling",
+      "reason": "拡散LLMの各denoisingステップで全suffixトークンを参照する費用を、local/middle/tailの役割別に保持数を変える構造化suffixで削減する。前ステップの結果を次ステップのsuffix表現へ再利用し、既存の並列decodeやKV方式と併用可能な学習不要の推論高速化。",
+      "source_url": "https://arxiv.org/abs/2608.23167",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:42:34+09:00",
+      "last_checked_at": "2026-10-30T19:42:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 161,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.25385",
+      "identity_tokens": [
+        "arXiv:2603.25385"
+      ],
+      "title": "GlowQ: Group-Shared LOw-Rank Approximation for Quantized LLMs",
+      "reason": "低ビットLLMの精度回復に各層独立の低ランク補償を付けるとレイテンシとメモリが増える問題に対し、入力共有グループで右因子を共通化し必要箇所だけ復元するGlowQ/GlowQ-Sを提案。選択型ではTTFB平均23.4%減・スループット37.4%増を報告。",
+      "source_url": "https://arxiv.org/abs/2603.25385",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:42:34+09:00",
+      "last_checked_at": "2026-10-30T19:42:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 163,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.10640",
+      "identity_tokens": [
+        "arXiv:2607.10640"
+      ],
+      "title": "Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models",
+      "reason": "視覚トークン剪定で空間被覆と情報多様性が失われる問題に対し、kNNグラフ上のスペクトル熱流による重要度場、空間分割の予算配分、破棄トークンをcoresetへ集約するSpecFlowを提案。LLaVA-1.5で視覚トークン88.9%削減時に元性能95.6%を保持と報告。",
+      "source_url": "https://arxiv.org/abs/2607.10640",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:42:34+09:00",
+      "last_checked_at": "2026-10-30T19:42:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 165,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}

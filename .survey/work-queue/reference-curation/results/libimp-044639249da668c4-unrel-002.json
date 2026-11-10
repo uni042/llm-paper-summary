@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-044639249da668c4-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.15594",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.15594",
+    "identity_tokens": [
+      "arXiv:2411.15594"
+    ],
+    "reason": "LLMを評価器として用いる信頼性・bias・benchmarkのsurveyで、推論system効率化ではない。",
+    "first_checked_at": "2026-10-05T02:14:49+00:00",
+    "last_checked_at": "2026-10-05T16:03:27+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2510.26913-flowmesh-a-service-fabric-for-composable-llm-workflows.md"
+    ],
+    "title": "A Survey on LLM-as-a-Judge"
+  },
+  "processed_at": "2026-10-05T16:03:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-044639249da6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

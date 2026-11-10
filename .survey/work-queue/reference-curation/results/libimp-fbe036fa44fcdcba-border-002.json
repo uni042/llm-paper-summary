@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fbe036fa44fcdcba-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1007/s10791-026-10021-3",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1007/s10791-026-10021-3",
+    "identity_tokens": [
+      "DOI:10.1007/s10791-026-10021-3",
+      "SemanticScholar:99b75e3c5f37419d8deb641f0a07221f95cc1afe"
+    ],
+    "reason": "The publisher abstract reviews compression, NAS, distillation and lightweight Transformer designs for edge intelligence under resource constraints, but is broad and not LLM-specific.",
+    "first_checked_at": "2026-10-13T05:18:16+00:00",
+    "last_checked_at": "2026-10-13T05:18:16+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A comprehensive review of lightweight deep learning models for edge computing with future directions"
+  },
+  "processed_at": "2026-10-13T05:18:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbe036fa44fc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

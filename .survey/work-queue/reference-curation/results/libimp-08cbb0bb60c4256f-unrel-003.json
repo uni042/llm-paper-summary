@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-08cbb0bb60c4256f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2012.15613",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2012.15613",
+    "identity_tokens": [
+      "arXiv:2012.15613"
+    ],
+    "reason": "9言語・5下流taskでmultilingual/monolingual pretrained modelとtokenizerを制御比較し、monolingual tokenizerがtask性能へ与える影響を分析する表現学習研究。推論runtime効率化ではない。",
+    "first_checked_at": "2026-10-05T16:12:47+00:00",
+    "last_checked_at": "2026-10-05T16:43:44+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2507.08045-krul-dynamic-cross-layer-kv-restoration.md"
+    ],
+    "title": "How Good is Your Tokenizer? On the Monolingual Performance of Multilingual Language Models"
+  },
+  "processed_at": "2026-10-05T16:43:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-08cbb0bb60c4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

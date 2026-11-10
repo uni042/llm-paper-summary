@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b1429dd2b80a677c18c5486f7fde91f9e479af90a33d98350527b5d746e59f04",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-96ea3890ff11--0-libfile_3d435b9d53cc8191a0508eebd5c6bd2f--start-snapshot-20261024.md",
+  "canonical_id": "arXiv:2509.15940",
+  "worker_completed_at": "2026-10-23T11:02:44+09:00",
+  "worker_run_key": "20261023-1100-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6292,
+    "body_paragraphs": 34,
+    "method_chars": 1591,
+    "method_paragraphs": 9,
+    "evaluation_chars": 1637,
+    "limitation_chars": 613,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2509.15940-efficient-pre-training-of-llms-via-topology-aware-communication-alignmen.md と 20 段落 / 4516文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T22:08:25+00:00"
+}

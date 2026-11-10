@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9cc47c8432fd983-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.knosys.2026.116820",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.knosys.2026.116820",
+    "identity_tokens": [
+      "DOI:10.1016/j.knosys.2026.116820"
+    ],
+    "reason": "題名・要旨および既存系統リンクの文脈を確認し、LLM推論効率または関連する推論系統への具体的な技術貢献がないと判断。",
+    "first_checked_at": "2026-10-06T15:50:56+00:00",
+    "last_checked_at": "2026-10-06T15:50:56+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+    ],
+    "title": "DEMONet: Underwater acoustic target recognition based on multi-expert network and cross-temporal variational autoencoder"
+  },
+  "processed_at": "2026-10-06T15:50:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9cc47c8432f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

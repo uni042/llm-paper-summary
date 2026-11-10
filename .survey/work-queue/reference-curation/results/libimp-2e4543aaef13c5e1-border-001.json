@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2e4543aaef13c5e1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.02775",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.02775",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.02775",
+      "arXiv:2606.02775"
+    ],
+    "reason": "固定4,224 byteの状態と行動価値ゲートでOpenVLA-OFTロボット方策のメモリ増加・書込みを抑え、KV cacheとも比較するため推論時メモリとの接点は強い。一方、対象は長時間・単一系列のロボット制御と帯域制約のある端末で、著者自身もデータセンター推論とは異なる運用領域としている。一般のLLM配信系統からは限定的なため微妙に分類する。",
+    "first_checked_at": "2026-10-22T16:59:00+00:00",
+    "last_checked_at": "2026-10-22T16:59:00+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AURA: Action-Gated Memory for Robot Policies at Constant VRAM"
+  },
+  "processed_at": "2026-10-22T16:59:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2e4543aaef13",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

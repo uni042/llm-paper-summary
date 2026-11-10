@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0383b6c9d94dff51-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.08034",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.08034",
+    "identity_tokens": [
+      "arXiv:2310.08034"
+    ],
+    "reason": "LLMとtoolを自動運転の意思決定・自然言語personalizationへ適用するdomain application研究。HighwayEnvでdriving qualityを評価し、LLM推論基盤の効率化は扱わない。",
+    "first_checked_at": "2026-10-07T21:48:46+00:00",
+    "last_checked_at": "2026-10-07T21:48:46+00:00",
+    "linked_from": [],
+    "title": "Receive, Reason, and React: Drive as You Say, With Large Language Models in Autonomous Vehicles"
+  },
+  "processed_at": "2026-10-07T21:48:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0383b6c9d94d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

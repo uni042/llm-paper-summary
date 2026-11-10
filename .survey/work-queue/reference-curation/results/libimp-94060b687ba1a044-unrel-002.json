@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-94060b687ba1a044-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tnnls.2012.2200299",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tnnls.2012.2200299",
+    "identity_tokens": [
+      "DOI:10.1109/tnnls.2012.2200299"
+    ],
+    "reason": "混合専門家モデルの歴史・統計的定式化・学習を振り返る基礎サーベイで、現代LLMのMoE推論通信・offload・serving最適化を直接対象としない。",
+    "first_checked_at": "2026-10-04T14:25:40+00:00",
+    "last_checked_at": "2026-10-04T14:25:40+00:00",
+    "linked_from": [],
+    "title": "Twenty Years of Mixture of Experts"
+  },
+  "processed_at": "2026-10-04T14:25:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-94060b687ba1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

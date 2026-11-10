@@ -1,0 +1,146 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f49bea70a06fbd9e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f49bea70a06f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1609/aaai.v36i10.21354"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f8fa9814aca27b9d7cec891e17d85b347d6044c0",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T00:18:51.266165+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1609/aaai.v36i10.21354",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Selecting Optimal Context Sentences for Event-Event Relation Extraction",
+      "source_url": "https://doi.org/10.1609/aaai.v36i10.21354",
+      "year": 2022,
+      "published": "2022-06-28",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 61,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Understanding events entails recognizing the structural and temporal orders between event mentions to build event structures/graphs for input documents. To achieve this goal, our work addresses the problems of subevent relation extraction (SRE) and temporal event relation extraction (TRE) that aim to predict subevent and temporal relations between two given event mentions/triggers in texts. Recent state-of-the-art methods for such problems have employed transformer-based language models (e.g., BERT) to induce effective contextual representations for input event mention pairs. However, a major limitation of existing transformer-based models for SRE and TRE is that they can only encode input texts of limited length (i.e., up to 512 sub-tokens in BERT), thus unable to effectively capture important context sentences that are farther away in the documents. In this work, we introduce a novel method to better model document-level context with important context sentences for event-event relation extraction. Our method seeks to identify the most important context sentences for a given entity mention pair in a document and pack them into shorter documents to be consume entirely by transformer-based language models for representation learning. The REINFORCE algorithm is employed to train models where novel reward functions are presented to capture model performance, and context-based and knowledge-based similarity between sentences for our problem. Extensive experiments demonstrate the effectiveness of the proposed method with state-of-the-art performance on benchmark datasets.",
+      "identifiers": [
+        "SemanticScholar:caf084d6f1f46f1aad60691efbb1b9bb0a77d257"
+      ],
+      "semantic_scholar_id": "caf084d6f1f46f1aad60691efbb1b9bb0a77d257",
+      "doi": "10.1609/aaai.v36i10.21354",
+      "canonical_id": "DOI:10.1609/aaai.v36i10.21354",
+      "authors": [
+        "Hieu Man",
+        "Nghia Trung Ngo",
+        "L. Van",
+        "Thien Huu Nguyen"
+      ],
+      "priority": 61,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 61,
+        "citation_count": 61,
+        "total": 61,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1568,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1609/aaai.v36i10.21354",
+      "identity_tokens": [
+        "id:DOI:10.1609/aaai.v36i10.21354",
+        "id:SemanticScholar:caf084d6f1f46f1aad60691efbb1b9bb0a77d257",
+        "title:selecting optimal context sentences for eventevent relation extraction",
+        "url:https://doi.org/10.1609/aaai.v36i10.21354"
+      ],
+      "record": {
+        "title": "Selecting Optimal Context Sentences for Event-Event Relation Extraction",
+        "source_url": "https://doi.org/10.1609/aaai.v36i10.21354",
+        "year": 2022,
+        "published": "2022-06-28",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 61,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Understanding events entails recognizing the structural and temporal orders between event mentions to build event structures/graphs for input documents. To achieve this goal, our work addresses the problems of subevent relation extraction (SRE) and temporal event relation extraction (TRE) that aim to predict subevent and temporal relations between two given event mentions/triggers in texts. Recent state-of-the-art methods for such problems have employed transformer-based language models (e.g., BERT) to induce effective contextual representations for input event mention pairs. However, a major limitation of existing transformer-based models for SRE and TRE is that they can only encode input texts of limited length (i.e., up to 512 sub-tokens in BERT), thus unable to effectively capture important context sentences that are farther away in the documents. In this work, we introduce a novel method to better model document-level context with important context sentences for event-event relation extraction. Our method seeks to identify the most important context sentences for a given entity mention pair in a document and pack them into shorter documents to be consume entirely by transformer-based language models for representation learning. The REINFORCE algorithm is employed to train models where novel reward functions are presented to capture model performance, and context-based and knowledge-based similarity between sentences for our problem. Extensive experiments demonstrate the effectiveness of the proposed method with state-of-the-art performance on benchmark datasets.",
+        "identifiers": [
+          "SemanticScholar:caf084d6f1f46f1aad60691efbb1b9bb0a77d257"
+        ],
+        "semantic_scholar_id": "caf084d6f1f46f1aad60691efbb1b9bb0a77d257",
+        "doi": "10.1609/aaai.v36i10.21354",
+        "canonical_id": "DOI:10.1609/aaai.v36i10.21354",
+        "authors": [
+          "Hieu Man",
+          "Nghia Trung Ngo",
+          "L. Van",
+          "Thien Huu Nguyen"
+        ],
+        "priority": 61,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 61,
+          "citation_count": 61,
+          "total": 61,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1568,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:3669d774898964019f5a5120fad0a7e7267766cefacf6af5bc5adbc52e18ef1d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

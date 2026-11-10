@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6a526f339ec638a9-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1903.00161",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1903.00161",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1903.00161",
+      "arXiv:1903.00161"
+    ],
+    "reason": "離散推論を要求する読解ベンチマークで、システム効率化を扱わない。",
+    "first_checked_at": "2026-09-27T13:32:58+09:00",
+    "last_checked_at": "2026-09-30T09:49:12+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review tail-to-head"
+    ],
+    "title": "DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs"
+  },
+  "processed_at": "2026-09-30T09:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6a526f339ec6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

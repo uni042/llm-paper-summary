@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9f5ae05968097d0-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/mm.2023.3256796",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/mm.2023.3256796",
+    "identity_tokens": [
+      "DOI:10.1109/mm.2023.3256796"
+    ],
+    "reason": "一次IEEE DOIページを開いたが、対象論文の要旨本文を取得できなかった。一次資料の内容は推測しない。",
+    "first_checked_at": "2026-10-05T01:36:00+00:00",
+    "last_checked_at": "2026-10-05T01:36:00+00:00",
+    "linked_from": [
+      "papers/inference/03-expert-prefetch/2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md",
+      "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md"
+    ],
+    "title": "NVIDIA Hopper H100 GPU: Scaling Performance"
+  },
+  "processed_at": "2026-10-05T01:36:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9f5ae059680",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

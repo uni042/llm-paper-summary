@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260919T162846Z-scheduled-chat-llm-survey-20260920-0130",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-7353bc1b63a704fc",
+      "claim_id": "claim-d22f06504ab5d2e1d4cebc14",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-d22f06504ab5d2e1d4cebc14",
+      "claimed_at": "2026-09-19T16:29:15+00:00",
+      "expires_at": "2026-09-19T17:59:15+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-7353bc1b63a704fc"
+      ],
+      "job": {
+        "job_id": "job-research-7353bc1b63a704fc",
+        "type": "research",
+        "parent_job_id": "job-c665f7764fe4adc2",
+        "priority": 80,
+        "canonical_id": "arXiv:2604.18655",
+        "title": "Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM",
+        "source_url": "https://arxiv.org/abs/2604.18655",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2604.18655-ondevice-multilora-runtime.md",
+        "selection_reason": "Hardware-aware on-device inference framework evaluated on Galaxy S24/S25 Qualcomm platforms; combines runtime LoRA switching without recompilation, multi-stream decoding, self-speculative decoding and INT4, reporting 4-6x overall memory/latency improvements across 9 languages and 8 tasks.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-19T13:06:58+00:00",
+        "blocker": "Primary-source full-text retrieval could not be started safely because the web retrieval subsystem had already emitted an explicit approximately-zero-calls-remaining platform-limit signal in this invocation. No scientific content was inferred from the queue selection reason.",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-50cee29d6acc38369f1897e6.json",
+        "blocked_attempts": 1,
+        "last_recorded_blocked_event": "2026-09-19T14:42:54+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-19T14:42:54+00:00",
+            "reason": "Primary-source full-text retrieval could not be started safely because the web retrieval subsystem had already emitted an explicit approximately-zero-calls-remaining platform-limit signal in this invocation. No scientific content was inferred from the queue selection reason."
+          }
+        ],
+        "last_blocked_at": "2026-09-19T14:42:54+00:00",
+        "retry_queued_at": "2026-09-19T16:05:56+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-19T16:29:15+00:00",
+  "checkpoint_released": 0
+}

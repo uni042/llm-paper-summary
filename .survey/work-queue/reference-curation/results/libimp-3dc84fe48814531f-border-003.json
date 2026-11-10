@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3dc84fe48814531f-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/itc-asia71864.2026.11710945",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/itc-asia71864.2026.11710945",
+    "identity_tokens": [
+      "DOI:10.1109/itc-asia71864.2026.11710945"
+    ],
+    "reason": "No primary abstract is in the packet. Direct DOI and IEEE Xplore article retrieval attempts were inaccessible; no secondary-source description was used.",
+    "first_checked_at": "2026-10-05T08:22:00+00:00",
+    "last_checked_at": "2026-10-05T08:22:00+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+      "papers/inference/01-offload-hierarchical-memory/2025-2508.06978-ssd-moe-offloading-energy-efficiency.md",
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "Energy Modeling and Spatiotemporal Characterization of Offloaded LLM Inference"
+  },
+  "processed_at": "2026-10-05T08:22:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3dc84fe48814",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

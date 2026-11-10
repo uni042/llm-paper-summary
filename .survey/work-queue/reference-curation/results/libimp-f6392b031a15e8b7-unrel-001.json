@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6392b031a15e8b7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2005.12592",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2005.12592",
+    "identity_tokens": [
+      "arXiv:2005.12592"
+    ],
+    "reason": "Transformer encoderによるtoken taggingで文法誤り訂正を高速化しseq2seq比最大10倍の推論速度を示すが、最終適用先は特定NLPタスクのGECであり、LLM推論runtime/servingの汎用最適化ではない。",
+    "first_checked_at": "2026-10-05T16:24:18+00:00",
+    "last_checked_at": "2026-10-05T16:43:48+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md"
+    ],
+    "title": "GECToR -- Grammatical Error Correction: Tag, Not Rewrite"
+  },
+  "processed_at": "2026-10-05T16:43:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6392b031a15",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

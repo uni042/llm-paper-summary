@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3389948bd3d86c72-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.12961",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.12961",
+    "identity_tokens": [
+      "arXiv:2409.12961"
+    ],
+    "reason": "可変解像度の視覚符号化器OryxViTと1〜16倍の動的視覚トークン圧縮を提案し、長い動画・画像・3D理解の精度を重視するマルチモーダルモデル。入力トークン削減にはシステム関連性があるが、主たる評価は視覚理解性能でLLMサービング基盤の性能評価ではない。",
+    "first_checked_at": "2026-10-10T21:46:56+00:00",
+    "last_checked_at": "2026-10-13T21:31:11+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution"
+  },
+  "processed_at": "2026-10-13T21:31:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3389948bd3d8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

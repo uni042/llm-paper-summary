@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-db20bb07ba9ae5ee-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.02945",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.02945",
+    "identity_tokens": [
+      "arXiv:2404.02945"
+    ],
+    "reason": "極小の特定タスク・MCU向けencoder系モデルの実装であり、生成型LLM/servingへ一般化できる証拠が弱い。",
+    "first_checked_at": "2026-10-05T14:39:51+00:00",
+    "last_checked_at": "2026-10-05T14:39:51+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Optimizing the Deployment of Tiny Transformers on Low-Power MCUs"
+  },
+  "processed_at": "2026-10-05T14:39:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db20bb07ba9a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

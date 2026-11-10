@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-28aea63ba27bd553-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.17342",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.17342",
+    "identity_tokens": [
+      "arXiv:2606.17342"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.17342. Abstract summary: Visual textures -- spatially homogeneous image regions containing repeated elements (e.g. a field of grass, the bark of a tree) -- are ubiquitous in visual scenes and provide important cues for recognizing and analyzing materials and objects. A number of existing texture models extract essential statistics from a single texture Out of scope: Visual texture generation.",
+    "first_checked_at": "2026-10-05T12:05:38+00:00",
+    "last_checked_at": "2026-10-05T12:05:38+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Learning a Maximum Entropy Model for Visual Textures using Diffusion"
+  },
+  "processed_at": "2026-10-05T12:05:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-28aea63ba27b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

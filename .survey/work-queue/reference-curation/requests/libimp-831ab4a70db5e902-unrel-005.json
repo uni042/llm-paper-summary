@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-831ab4a70db5e902-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.3390/rs18152494",
+  "reason": "Hyperspectral image (HSI) clustering assigns unlabeled pixels to land-cover groups by jointly exploiting spectral and spatial observations. Existing Vision Transformer-based deep clustering captures global dependencies through self-attention. However, the quadratic computational complexity of self-attention restricts practical applications in large HSI scenes. Furthermore, illumination variation and topographic shading shift spectral amplitude of co-class pixels toward divergent directions in feature space, enlarging intra-class distances and reducing inter-class separability in learned embeddings. To address the above limitations, we propose a self-supervised Spatial–Frequency Interaction and Amplitude–Phase Decoupling framework, termed SFI-APD, which integrates a High-Order Spatial–Frequency Interaction Module (HSFIM), a Frequency Feature Attention Block (FFAB), and a Frequency-Domain Vision Transformer (FreqViT) into a unified architecture. Specifically, HSFIM couples local convolutions with Fourier filtering to extract enriched spectral–spatial representations. FFAB then decouples amplitude and phase components to suppress brightness variations, yielding illumination-robust embeddings. Finally, FreqViT performs attention modulation across spectral channels, reducing token aggregation complexity from O(N2D) to O(NDlogN). On the Indian Pines, Salinas, Pavia University, and Yangzhou datasets, SFI-APD achieves OAs of 57.47%, 79.38%, 54.57%, and 64.11%, respectively, outperforming state-of-the-art self-supervised methods for large HSIs.",
+  "title": "Self-Supervised Hyperspectral Image Clustering via Spatial–Frequency Interaction and Amplitude–Phase Decoupling",
+  "identity_tokens": [
+    "DOI:10.3390/rs18152494"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-831ab4a70db5",
+  "source_precheck_request_id": null
+}

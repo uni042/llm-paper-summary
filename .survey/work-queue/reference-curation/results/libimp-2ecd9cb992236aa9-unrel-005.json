@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2ecd9cb992236aa9-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3832810.3832855",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3832810.3832855",
+    "identity_tokens": [
+      "DOI:10.1145/3832810.3832855"
+    ],
+    "reason": "Intel AMX上のGNN推論におけるSpMM/GeMM融合。LLM推論ではない。",
+    "first_checked_at": "2026-10-05T05:17:11+00:00",
+    "last_checked_at": "2026-10-05T05:17:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "TFS: Tile-Aware SpMM–GeMM Fusion for Accelerating GNN Inference on Intel AMX"
+  },
+  "processed_at": "2026-10-05T05:17:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2ecd9cb99223",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

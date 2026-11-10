@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-50b8e73c4f915724-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.06096",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.06096",
+    "identity_tokens": [
+      "arXiv:2606.06096"
+    ],
+    "reason": "OrderGrad develops policy-gradient estimators for order-statistic objectives and evaluates LLM math-reasoning pass@k. It changes training objectives for tail/best-of-K outcomes; no direct inference-compute or serving-cost reduction is established.",
+    "first_checked_at": "2026-10-06T06:19:54+00:00",
+    "last_checked_at": "2026-10-06T06:19:54+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OrderGrad: Optimizing Beyond the Mean with Order-Statistic Policy Gradient Estimation"
+  },
+  "processed_at": "2026-10-06T06:19:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-50b8e73c4f91",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

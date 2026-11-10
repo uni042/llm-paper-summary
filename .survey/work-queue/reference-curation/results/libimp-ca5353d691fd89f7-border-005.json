@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca5353d691fd89f7-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.08766",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.08766",
+    "identity_tokens": [
+      "arXiv:2607.08766"
+    ],
+    "reason": "OPSD-V post-trains few-step autoregressive video generators with cache-aware teacher supervision; it preserves the same sampler, number of denoising steps, and inference KV-cache path. Quality improves without extra inference work, but it does not itself reduce inference cost.",
+    "first_checked_at": "2026-10-06T13:32:17+00:00",
+    "last_checked_at": "2026-10-06T13:32:17+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OPSD-V: On-Policy Self-Distillation for Post-Training Few-Step Autoregressive Video Generators"
+  },
+  "processed_at": "2026-10-06T13:32:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca5353d691fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

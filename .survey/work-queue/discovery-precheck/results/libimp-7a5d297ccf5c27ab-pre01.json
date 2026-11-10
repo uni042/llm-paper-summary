@@ -1,0 +1,1315 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7a5d297ccf5c27ab-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7a5d297ccf5c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.ipm.2026.104889",
+    "SemanticScholar:48cb1122456a29d5f6de3436c1950c6ad752cc45",
+    "SemanticScholar:e4fa860569597ca90c415e43c3ee4be3c401eb75",
+    "arXiv:2201.03327",
+    "arXiv:2305.15033",
+    "arXiv:2308.00108",
+    "arXiv:2501.19324",
+    "arXiv:2502.19008",
+    "arXiv:2505.22179",
+    "arXiv:2507.09071",
+    "arXiv:2509.01083",
+    "arXiv:2510.11234",
+    "arXiv:2510.26527",
+    "arXiv:2510.27258",
+    "arXiv:2606.26744"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 15,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5e1f97f1581a5b6ac67807a379b63362ae1b07fe",
+  "raw_search_result_count": 15,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 14,
+  "provider_progress": {
+    "requested_count": 15,
+    "status_counts": {
+      "allowed": 14,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T01:04:09.165244+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.ipm.2026.104889",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:48cb1122456a29d5f6de3436c1950c6ad752cc45",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:e4fa860569597ca90c415e43c3ee4be3c401eb75",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2201.03327",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2305.15033",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2308.00108",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.19324",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.19008",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.22179",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.09071",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.01083",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.11234",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.26527",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2510.26527"
+    },
+    {
+      "requested_id": "arXiv:2510.27258",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.26744",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Reward-Guided Speculative Decoding for Efficient LLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2501.19324",
+      "year": 2025,
+      "published": "2025-01-31",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 120,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce Reward-Guided Speculative Decoding (RSD), a novel framework aimed at improving the efficiency of inference in large language models (LLMs). RSD synergistically combines a lightweight draft model with a more powerful target model, incorporating a controlled bias to prioritize high-reward outputs, in contrast to existing speculative decoding methods that enforce strict unbiasedness. RSD employs a process reward model to evaluate intermediate decoding steps and dynamically decide whether to invoke the target model, optimizing the trade-off between computational cost and output quality. We theoretically demonstrate that a threshold-based mixture strategy achieves an optimal balance between resource utilization and performance. Extensive evaluations on challenging reasoning benchmarks, including Olympiad-level tasks, show that RSD delivers significant efficiency gains against decoding with the target model only (up to 4.4x fewer FLOPs), while achieving significant better accuracy than parallel decoding method on average (up to +3.5). These results highlight RSD as a robust and cost-effective approach for deploying LLMs in resource-intensive scenarios. The code is available at https://github.com/BaohaoLiao/RSD.",
+      "identifiers": [
+        "SemanticScholar:7099d7a8ee2c95ecbe0e32f6b40ffa65857fcdfe"
+      ],
+      "semantic_scholar_id": "7099d7a8ee2c95ecbe0e32f6b40ffa65857fcdfe",
+      "canonical_id": "arXiv:2501.19324",
+      "arxiv_id": "2501.19324",
+      "doi": "10.48550/arXiv.2501.19324",
+      "authors": [
+        "Baohao Liao",
+        "Yuhui Xu",
+        "Hanze Dong",
+        "Jun-Nan Li",
+        "C. Monz",
+        "S. Savarese",
+        "Doyen Sahoo",
+        "Caiming Xiong"
+      ],
+      "priority": 130,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 120,
+        "citation_count": 120,
+        "total": 130,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 621,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "SmartTrim: Adaptive Tokens and Attention Pruning for Efficient Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2305.15033",
+      "year": 2023,
+      "published": "2023-05-24",
+      "venue": "International Conference on Language Resources and Evaluation",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite achieving remarkable performance on various vision-language tasks, Transformer-based Vision-Language Models (VLMs) suffer from redundancy in inputs and parameters, significantly hampering their efficiency in real-world applications. Moreover, the degree of redundancy in token representations and model parameters, such as attention heads, varies significantly for different inputs. In light of the challenges, we propose SmartTrim, an adaptive acceleration framework for VLMs, which adjusts the computational overhead per instance. Specifically, we integrate lightweight modules into the original backbone to identify and prune redundant token representations and attention heads within each layer. Furthermore, we devise a self-distillation strategy to enhance the consistency between the predictions of the pruned model and its fully-capacity counterpart. Experimental results across various vision-language tasks consistently demonstrate that SmartTrim accelerates the original model by 2-3 times with minimal performance degradation, highlighting the effectiveness and efficiency compared to previous approaches. Code will be available at https://github.com/kugwzk/SmartTrim.",
+      "identifiers": [
+        "SemanticScholar:0f510bbf5f831a9d026d613e1680da8fc5a7a283"
+      ],
+      "semantic_scholar_id": "0f510bbf5f831a9d026d613e1680da8fc5a7a283",
+      "canonical_id": "arXiv:2305.15033",
+      "arxiv_id": "2305.15033",
+      "doi": "10.63317/23hifgwadz5j",
+      "authors": [
+        "Zekun Wang",
+        "Jing-Chang Chen",
+        "Wangchunshu Zhou",
+        "Haichao Zhu",
+        "Jia-Feng Liang",
+        "Liping Shan",
+        "Ming Liu",
+        "Dongliang Xu",
+        "Qing Yang",
+        "Bing Qin"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1239,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HyperDFlash: Hyper-Connection-Aligned Block Speculative Decoding with Gated Residual Reduction",
+      "source_url": "https://arxiv.org/abs/2606.26744",
+      "year": 2026,
+      "published": "2026-06-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present HyperDFlash, a block-parallel speculative decoding framework tailored to DeepSeek-V4's Hyper-Connections (HC). Despite the strong performance of DeepSeek-V4's native Multi-Token Prediction (MTP) module on initial token drafting, its draft accuracy degrades sharply at later positions, as error accumulation from unverified intermediate tokens harms draft acceptance rates. Although the original DFlash method supports efficient one-pass block drafting, it cannot be seamlessly adapted to the HC paradigm, since DeepSeek-V4's multi-path residual stream induces inherent feature misalignment with conventional drafting designs. To resolve this architectural mismatch, we propose two dedicated, model-aligned optimizations for HC residual streams. First, we adopt pre-collapse residual states as the exclusive conditioning signal, preserving complete multi-path structural information and better aligning the drafter with the target's native prediction pathway. Second, we replace the heavy generic linear compressor with a lightweight gated residual reducer, whose parameters are directly inherited from the target model's built-in hc_head module. This design yields input-aware path aggregation with three orders of magnitude fewer parameters while maintaining precise architectural alignment. We further enhance model training via a targeted KL distillation loss applied to the LM-head, regularizing predictions against the target distribution to improve early draft quality. Extensive experiments across math reasoning, code synthesis, and conversational benchmarks demonstrate that HyperDFlash consistently outperforms both the native MTP baseline and vanilla DFlash adaptation, achieving substantial gains in average accepted draft length and decoding speedup. These results validate HC alignment, gated reduction, and targeted distillation for high-performance speculative decoding.",
+      "identifiers": [
+        "SemanticScholar:736a7811222e76a160aafcb440555ece4b57f0c9"
+      ],
+      "semantic_scholar_id": "736a7811222e76a160aafcb440555ece4b57f0c9",
+      "canonical_id": "arXiv:2606.26744",
+      "arxiv_id": "2606.26744",
+      "doi": "10.48550/arXiv.2606.26744",
+      "authors": [
+        "Luxi Lin",
+        "Shuang Peng",
+        "Ruiyang Ma",
+        "Junhao Hua",
+        "Shuwei Fan",
+        "Zhen Qin",
+        "Qiang Wang",
+        "Hongjian Sun",
+        "Fangmin Chen",
+        "Songwei Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 111,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Latency Adjustable Transformer Encoder for Language Understanding",
+      "source_url": "https://arxiv.org/abs/2201.03327",
+      "year": 2022,
+      "published": "2022-01-10",
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Adjusting the latency, power, and accuracy of natural language understanding models is a desirable objective of an efficient architecture. This article proposes an efficient Transformer architecture that adjusts the inference computational cost adaptively with a desired inference latency speedup. In the fine-tuning phase, the proposed method detects less important hidden sequence elements (word-vectors) and eliminates them in each encoder layer using a proposed attention context contribution (ACC) metric. After the fine-tuning phase, with the novel offline-tuning property, the inference latency of the model can be adjusted in a wide range of inference speedup selections without any further training. Extensive experiments reveal that most word-vectors in higher Transformer layers contribute less to subsequent layers, allowing their removal to improve inference latency. Experimental results on various language understanding, text generation, and instruction tuning tasks and benchmarks demonstrate the approach’s effectiveness across diverse datasets, with minimal impact on the input’s global context. The technique improves the time-to-first-token (TTFT) of Llama3 by up to $2.9\\times $ , with a minor performance drop. The suggested approach posits that in large language models (LLMs), although the complete network is necessary for training, it can be truncated during the fine-tuning phase.",
+      "identifiers": [
+        "SemanticScholar:35712a8389a964447e80d0a195ab145175d7236d"
+      ],
+      "semantic_scholar_id": "35712a8389a964447e80d0a195ab145175d7236d",
+      "canonical_id": "arXiv:2201.03327",
+      "arxiv_id": "2201.03327",
+      "doi": "10.1109/TNNLS.2025.3539727",
+      "authors": [
+        "Sajjad Kachuee",
+        "M. Sharifkhani"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1738,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Binary Neural Networks for Large Language Model: A Survey",
+      "source_url": "https://arxiv.org/abs/2502.19008",
+      "year": 2025,
+      "published": "2025-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have wide applications in the field of natural language processing(NLP), such as GPT-4 and Llama. However, with the exponential growth of model parameter sizes, LLMs bring significant resource overheads. Low-bit quantization, as a key technique, reduces memory usage and computational demands by decreasing the bit-width of model parameters, activations, and gradients. Previous quantization methods for LLMs have largely employed Post-Training Quantization (PTQ) and Quantization-Aware Training (QAT). PTQ does not require any retraining of the original model, while QAT involves optimizing precision during training to achieve the best quantization parameters. The BitNet team proposed a radically different approach, where quantization is performed from the start of model training, utilizing low-precision binary weights during the training process. This approach has led to the emergence of many binary quantization techniques for large language models. This paper provides a comprehensive review of these binary quantization techniques. Specifically, we will introduce binary quantization techniques in deep neural networks and further explore their application to LLMs, reviewing their various contributions, implementations, and applications.",
+      "identifiers": [
+        "SemanticScholar:2109873d8d34f23d67adac59c2f66e24dff5aaab"
+      ],
+      "semantic_scholar_id": "2109873d8d34f23d67adac59c2f66e24dff5aaab",
+      "canonical_id": "arXiv:2502.19008",
+      "arxiv_id": "2502.19008",
+      "doi": "10.48550/arXiv.2502.19008",
+      "authors": [
+        "Lian Liu",
+        "Zhitong Zheng",
+        "Cong Wang",
+        "Tian-Huang Su",
+        "Zhenyu Yang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 595,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Speculative Decoding Meets Quantization: Compatibility Evaluation and Hierarchical Framework Design",
+      "source_url": "https://arxiv.org/abs/2505.22179",
+      "year": 2025,
+      "published": "2025-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding and quantization effectively accelerate memory-bound inference of large language models. Speculative decoding mitigates the memory bandwidth bottleneck by verifying multiple tokens within a single forward pass, which increases computational effort. Quantization achieves this optimization by compressing weights and activations into lower bit-widths and also reduces computations via low-bit matrix multiplications. To further leverage their strengths, we investigate the integration of these two techniques. Surprisingly, experiments applying the advanced speculative decoding method EAGLE-2 to various quantized models reveal that the memory benefits from 4-bit weight quantization are diminished by the computational load from speculative decoding. Specifically, verifying a tree-style draft incurs significantly more time overhead than a single-token forward pass on 4-bit weight quantized models. This finding led to our new speculative decoding design: a hierarchical framework that employs a small model as an intermediate stage to turn tree-style drafts into sequence drafts, leveraging the memory access benefits of the target quantized model. Experimental results show that our hierarchical approach achieves a 2.78$\\times$ speedup across various tasks for the 4-bit weight Llama-3-70B model on an A100 GPU, outperforming EAGLE-2 by 1.31$\\times$. Code available at https://github.com/AI9Stars/SpecMQuant.",
+      "identifiers": [
+        "SemanticScholar:00493d94a9f5571875475bef1d44e304991b7cdc"
+      ],
+      "semantic_scholar_id": "00493d94a9f5571875475bef1d44e304991b7cdc",
+      "canonical_id": "arXiv:2505.22179",
+      "arxiv_id": "2505.22179",
+      "doi": "10.48550/arXiv.2505.22179",
+      "authors": [
+        "Yudi Zhang",
+        "Weilin Zhao",
+        "Xu Han",
+        "Tiejun Zhao",
+        "Wang Xu",
+        "Hai-Long Cao",
+        "Cong-Hui Zhu"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 504,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Higher-order Linear Attention",
+      "source_url": "https://arxiv.org/abs/2510.27258",
+      "year": 2025,
+      "published": "2025-10-31",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic cost of scaled dot-product attention is a central obstacle to scaling autoregressive language models to long contexts. Linear-time attention and State Space Models (SSMs) provide scalable alternatives but are typically restricted to first-order or kernel-based approximations, which can limit expressivity. We introduce Higher-order Linear Attention (HLA), a causal, streaming mechanism that realizes higher interactions via compact prefix sufficient statistics. In the second-order case, HLA maintains a constant-size state and computes per-token outputs in linear time without materializing any $n \\times n$ matrices. We give closed-form streaming identities, a strictly causal masked variant using two additional summaries, and a chunk-parallel training scheme based on associative scans that reproduces the activations of a serial recurrence exactly. We further outline extensions to third and higher orders. Collectively, these results position HLA as a principled, scalable building block that combines attention-like, data-dependent mixing with the efficiency of modern recurrent architectures.",
+      "identifiers": [
+        "SemanticScholar:7058995c387bd2d1f3c7e6437c2967e03e25620f"
+      ],
+      "semantic_scholar_id": "7058995c387bd2d1f3c7e6437c2967e03e25620f",
+      "canonical_id": "arXiv:2510.27258",
+      "arxiv_id": "2510.27258",
+      "doi": "10.48550/arXiv.2510.27258",
+      "authors": [
+        "Yifan Zhang",
+        "Zhen Qin",
+        "Quan-Quan Gu"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 348,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Learned Preﬁx Caching for Efﬁcient LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/e4fa860569597ca90c415e43c3ee4be3c401eb75",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e4fa860569597ca90c415e43c3ee4be3c401eb75"
+      ],
+      "semantic_scholar_id": "e4fa860569597ca90c415e43c3ee4be3c401eb75",
+      "canonical_id": "SemanticScholar:e4fa860569597ca90c415e43c3ee4be3c401eb75",
+      "authors": [
+        "Dongsheng Yang",
+        "Austin T. Li",
+        "Kai Li",
+        "Wyatt Lloyd"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DPBERT: Efficient Inference for BERT based on Dynamic Planning",
+      "source_url": "https://arxiv.org/abs/2308.00108",
+      "year": 2023,
+      "published": "2023-07-26",
+      "venue": "European Conference on Artificial Intelligence",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale pre-trained language models such as BERT have contributed significantly to the development of NLP. However, those models require large computational resources, making it difficult to be applied to mobile devices where computing power is limited. In this paper we aim to address the weakness of existing input-adaptive inference methods which fail to take full advantage of the structure of BERT. We propose Dynamic Planning in BERT, a novel fine-tuning strategy that can accelerate the inference process of BERT through selecting a subsequence of transformer layers list of backbone as a computational path for an input sample. To do this, our approach adds a planning module to the original BERT model to determine whether a layer is included or bypassed during inference. Experimental results on the GLUE benchmark exhibit that our method reduces latency to 75\\% while maintaining 98\\% accuracy, yielding a better accuracy-speed trade-off compared to state-of-the-art input-adaptive methods.",
+      "identifiers": [
+        "SemanticScholar:12e40de47de0f2b5702d8b94b9b1ae2069bcb576"
+      ],
+      "semantic_scholar_id": "12e40de47de0f2b5702d8b94b9b1ae2069bcb576",
+      "canonical_id": "arXiv:2308.00108",
+      "arxiv_id": "2308.00108",
+      "doi": "10.48550/arXiv.2308.00108",
+      "authors": [
+        "Weixin Wu",
+        "Han-Kui Zhuo"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1176,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DSDE: Dynamic Speculative Decoding with KLD Stability for Real-World Serving",
+      "source_url": "https://arxiv.org/abs/2509.01083",
+      "year": 2025,
+      "published": "2025-09-01",
+      "venue": "BigData Congress [Services Society]",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference, but its reliance on a fixed speculation length is suboptimal in large-batch serving environments with diverse requests. This paper explores a new direction for dynamic adaptation by investigating a novel class of post-hoc, diagnostic signals. We propose Dynamic Speculative Decoding Engine (DSDE), a training-free framework built on two primary components: (1) a predictive signal based on the variance of the Kullback-Leibler (KLD) divergence, which diagnoses the generation's regional stability, and (2) an adaptive speculation length cap to mitigate the straggler problem in per-sequence decoding. Experiments demonstrate the potential of using KLD-based stability signals for dynamic adaptation. An algorithm guided by these signals achieves end-to-end latency competitive with leading baselines and exhibits notable robustness across diverse workloads. This robustness is particularly valuable in challenging low-acceptancerate regimes, where the proposed signal maintains its diagnostic utility. Collectively, these findings validate post-hoc signals as a valuable component for building more robust and intelligent LLM inference systems, and highlight a promising direction for future research on dynamic speculation length adaptation.",
+      "identifiers": [
+        "SemanticScholar:53dffa01bace0389de77366b21173cf22644e04d"
+      ],
+      "semantic_scholar_id": "53dffa01bace0389de77366b21173cf22644e04d",
+      "canonical_id": "arXiv:2509.01083",
+      "arxiv_id": "2509.01083",
+      "doi": "10.1109/BigData66926.2025.11400767",
+      "authors": [
+        "Mingyu Yang",
+        "Jae-Young Choi",
+        "Kihyo Moon",
+        "Minsung Jang",
+        "Eunjoo Jeon"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 408,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LiteKV: A KV cache compression method for efficient inference on resource-constrained devices",
+      "source_url": "https://doi.org/10.1016/j.ipm.2026.104889",
+      "year": 2026,
+      "published": null,
+      "venue": "Information Processing & Management",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a90a6258a2d9387c45378eb3489a2088dbe6ed0e"
+      ],
+      "semantic_scholar_id": "a90a6258a2d9387c45378eb3489a2088dbe6ed0e",
+      "doi": "10.1016/j.ipm.2026.104889",
+      "canonical_id": "DOI:10.1016/j.ipm.2026.104889",
+      "authors": [
+        "Zhi-Peng Zhang",
+        "Dmitry Ilvovsky"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 105,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "S YSTEMATIZING I NFERENCE P LACEMENT FOR D EEP L EARNING ACROSS E DGE AND C LOUD P LATFORMS : A M ULTI -O BJECTIVE O PTIMIZATION P ERSPECTIVE",
+      "source_url": "https://www.semanticscholar.org/paper/48cb1122456a29d5f6de3436c1950c6ad752cc45",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:48cb1122456a29d5f6de3436c1950c6ad752cc45"
+      ],
+      "semantic_scholar_id": "48cb1122456a29d5f6de3436c1950c6ad752cc45",
+      "canonical_id": "SemanticScholar:48cb1122456a29d5f6de3436c1950c6ad752cc45",
+      "authors": [
+        "Z. Hang",
+        "I. Atta"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BlindSight: Harnessing Sparsity for Efficient Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2507.09071",
+      "year": 2025,
+      "published": "2025-07-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models (VLMs) enable joint processing of text and images. However, incorporating vision data significantly increases the prompt length, resulting in a longer time to first token (TTFT). This bottleneck can be alleviated by leveraging the inherent sparsity in the attention computation. Analyzing these attention patterns in VLMs when processing a series of images, we observe the absence of inter-image attention in a substantial portion of layers. Based on this, we propose BlindSight: an approach to optimize multi-image VLM inference using an input-template-aware attention sparsity mask with no runtime overhead. We utilize a dataset to derive a prompt-agnostic categorization for attention heads: Dense, Sink, Intra-Image, and Intra-Image+Sink. We develop a Triton-based GPU kernel to leverage this sparsity. BlindSight achieves a 1.8-3.2x speedup in the attention computation (prompt length 36K-300K). BlindSight generalizes across VLMs (Qwen2-VL, Qwen2.5-VL, Gemma 3), with only a 0.78% absolute accuracy degradation on average on multi-image comprehension benchmarks. Finally, we advocate for the design of efficient VLMs that combine BlindSight-inspired sparse and dense layers.",
+      "identifiers": [
+        "SemanticScholar:76e77749a33ebf37f89eb0b083bcd89745f9ea85"
+      ],
+      "semantic_scholar_id": "76e77749a33ebf37f89eb0b083bcd89745f9ea85",
+      "canonical_id": "arXiv:2507.09071",
+      "arxiv_id": "2507.09071",
+      "authors": [
+        "Tharun Adithya Srikrishnan",
+        "Deval Shah",
+        "Timothy Hein",
+        "A. Hasssan",
+        "Stephen Youn",
+        "Steven K. Reinhardt"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 460,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Neural Weight Compression for Language Models",
+      "source_url": "https://arxiv.org/abs/2510.11234",
+      "year": 2025,
+      "published": "2025-10-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient compression of language model weights is increasingly critical as model scale and deployment grow. Yet, most existing methods rely on handcrafted transforms and heuristics, reflecting the limited understanding of weights as a data modality. To move beyond this paradigm, we formulate weight compression as neural codec learning and propose Neural Weight Compression (NWC), a framework for training neural codecs on pretrained weight datasets. NWC addresses challenges intrinsic to weight compression, including tensor heterogeneity and the mismatch between reconstruction losses and downstream performance. Experiments show that NWC achieves highly competitive accuracy-compression tradeoffs, with particularly strong results in the 4-6 bit regime, without relying on rigid handcrafted components such as the Hadamard transform. These gains extend to across diverse architectures, e.g., vision encoders. Our analysis highlights the roles of entropy-constrained quantization and learned transforms in adapting compression to weight data and downstream tasks.",
+      "identifiers": [
+        "SemanticScholar:ab13e89ac4501a221797bafede6c90c055b3f8a6"
+      ],
+      "semantic_scholar_id": "ab13e89ac4501a221797bafede6c90c055b3f8a6",
+      "canonical_id": "arXiv:2510.11234",
+      "arxiv_id": "2510.11234",
+      "doi": "10.48550/arXiv.2510.11234",
+      "authors": [
+        "Jegwang Ryu",
+        "Minkyu Kim",
+        "Seung-Jun Shin",
+        "Hee-Min Choi",
+        "Dokwan Oh",
+        "Jaeho Lee"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 366,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2501.19324",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.19324",
+        "id:SemanticScholar:7099d7a8ee2c95ecbe0e32f6b40ffa65857fcdfe",
+        "id:arXiv:2501.19324",
+        "title:rewardguided speculative decoding for efficient llm reasoning",
+        "url:https://arxiv.org/abs/2501.19324"
+      ],
+      "record": {
+        "title": "Reward-Guided Speculative Decoding for Efficient LLM Reasoning",
+        "source_url": "https://arxiv.org/abs/2501.19324",
+        "year": 2025,
+        "published": "2025-01-31",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 120,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce Reward-Guided Speculative Decoding (RSD), a novel framework aimed at improving the efficiency of inference in large language models (LLMs). RSD synergistically combines a lightweight draft model with a more powerful target model, incorporating a controlled bias to prioritize high-reward outputs, in contrast to existing speculative decoding methods that enforce strict unbiasedness. RSD employs a process reward model to evaluate intermediate decoding steps and dynamically decide whether to invoke the target model, optimizing the trade-off between computational cost and output quality. We theoretically demonstrate that a threshold-based mixture strategy achieves an optimal balance between resource utilization and performance. Extensive evaluations on challenging reasoning benchmarks, including Olympiad-level tasks, show that RSD delivers significant efficiency gains against decoding with the target model only (up to 4.4x fewer FLOPs), while achieving significant better accuracy than parallel decoding method on average (up to +3.5). These results highlight RSD as a robust and cost-effective approach for deploying LLMs in resource-intensive scenarios. The code is available at https://github.com/BaohaoLiao/RSD.",
+        "identifiers": [
+          "SemanticScholar:7099d7a8ee2c95ecbe0e32f6b40ffa65857fcdfe"
+        ],
+        "semantic_scholar_id": "7099d7a8ee2c95ecbe0e32f6b40ffa65857fcdfe",
+        "canonical_id": "arXiv:2501.19324",
+        "arxiv_id": "2501.19324",
+        "doi": "10.48550/arXiv.2501.19324",
+        "authors": [
+          "Baohao Liao",
+          "Yuhui Xu",
+          "Hanze Dong",
+          "Jun-Nan Li",
+          "C. Monz",
+          "S. Savarese",
+          "Doyen Sahoo",
+          "Caiming Xiong"
+        ],
+        "priority": 130,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 120,
+          "citation_count": 120,
+          "total": 130,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 621,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2305.15033",
+      "identity_tokens": [
+        "id:DOI:10.63317/23hifgwadz5j",
+        "id:SemanticScholar:0f510bbf5f831a9d026d613e1680da8fc5a7a283",
+        "id:arXiv:2305.15033",
+        "title:smarttrim adaptive tokens and attention pruning for efficient visionlanguage models",
+        "url:https://arxiv.org/abs/2305.15033"
+      ],
+      "record": {
+        "title": "SmartTrim: Adaptive Tokens and Attention Pruning for Efficient Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2305.15033",
+        "year": 2023,
+        "published": "2023-05-24",
+        "venue": "International Conference on Language Resources and Evaluation",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite achieving remarkable performance on various vision-language tasks, Transformer-based Vision-Language Models (VLMs) suffer from redundancy in inputs and parameters, significantly hampering their efficiency in real-world applications. Moreover, the degree of redundancy in token representations and model parameters, such as attention heads, varies significantly for different inputs. In light of the challenges, we propose SmartTrim, an adaptive acceleration framework for VLMs, which adjusts the computational overhead per instance. Specifically, we integrate lightweight modules into the original backbone to identify and prune redundant token representations and attention heads within each layer. Furthermore, we devise a self-distillation strategy to enhance the consistency between the predictions of the pruned model and its fully-capacity counterpart. Experimental results across various vision-language tasks consistently demonstrate that SmartTrim accelerates the original model by 2-3 times with minimal performance degradation, highlighting the effectiveness and efficiency compared to previous approaches. Code will be available at https://github.com/kugwzk/SmartTrim.",
+        "identifiers": [
+          "SemanticScholar:0f510bbf5f831a9d026d613e1680da8fc5a7a283"
+        ],
+        "semantic_scholar_id": "0f510bbf5f831a9d026d613e1680da8fc5a7a283",
+        "canonical_id": "arXiv:2305.15033",
+        "arxiv_id": "2305.15033",
+        "doi": "10.63317/23hifgwadz5j",
+        "authors": [
+          "Zekun Wang",
+          "Jing-Chang Chen",
+          "Wangchunshu Zhou",
+          "Haichao Zhu",
+          "Jia-Feng Liang",
+          "Liping Shan",
+          "Ming Liu",
+          "Dongliang Xu",
+          "Qing Yang",
+          "Bing Qin"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1239,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.26744",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.26744",
+        "id:SemanticScholar:736a7811222e76a160aafcb440555ece4b57f0c9",
+        "id:arXiv:2606.26744",
+        "title:hyperdflash hyperconnectionaligned block speculative decoding with gated residual reduction",
+        "url:https://arxiv.org/abs/2606.26744"
+      ],
+      "record": {
+        "title": "HyperDFlash: Hyper-Connection-Aligned Block Speculative Decoding with Gated Residual Reduction",
+        "source_url": "https://arxiv.org/abs/2606.26744",
+        "year": 2026,
+        "published": "2026-06-25",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present HyperDFlash, a block-parallel speculative decoding framework tailored to DeepSeek-V4's Hyper-Connections (HC). Despite the strong performance of DeepSeek-V4's native Multi-Token Prediction (MTP) module on initial token drafting, its draft accuracy degrades sharply at later positions, as error accumulation from unverified intermediate tokens harms draft acceptance rates. Although the original DFlash method supports efficient one-pass block drafting, it cannot be seamlessly adapted to the HC paradigm, since DeepSeek-V4's multi-path residual stream induces inherent feature misalignment with conventional drafting designs. To resolve this architectural mismatch, we propose two dedicated, model-aligned optimizations for HC residual streams. First, we adopt pre-collapse residual states as the exclusive conditioning signal, preserving complete multi-path structural information and better aligning the drafter with the target's native prediction pathway. Second, we replace the heavy generic linear compressor with a lightweight gated residual reducer, whose parameters are directly inherited from the target model's built-in hc_head module. This design yields input-aware path aggregation with three orders of magnitude fewer parameters while maintaining precise architectural alignment. We further enhance model training via a targeted KL distillation loss applied to the LM-head, regularizing predictions against the target distribution to improve early draft quality. Extensive experiments across math reasoning, code synthesis, and conversational benchmarks demonstrate that HyperDFlash consistently outperforms both the native MTP baseline and vanilla DFlash adaptation, achieving substantial gains in average accepted draft length and decoding speedup. These results validate HC alignment, gated reduction, and targeted distillation for high-performance speculative decoding.",
+        "identifiers": [
+          "SemanticScholar:736a7811222e76a160aafcb440555ece4b57f0c9"
+        ],
+        "semantic_scholar_id": "736a7811222e76a160aafcb440555ece4b57f0c9",
+        "canonical_id": "arXiv:2606.26744",
+        "arxiv_id": "2606.26744",
+        "doi": "10.48550/arXiv.2606.26744",
+        "authors": [
+          "Luxi Lin",
+          "Shuang Peng",
+          "Ruiyang Ma",
+          "Junhao Hua",
+          "Shuwei Fan",
+          "Zhen Qin",
+          "Qiang Wang",
+          "Hongjian Sun",
+          "Fangmin Chen",
+          "Songwei Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 111,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2201.03327",
+      "identity_tokens": [
+        "id:DOI:10.1109/tnnls.2025.3539727",
+        "id:SemanticScholar:35712a8389a964447e80d0a195ab145175d7236d",
+        "id:arXiv:2201.03327",
+        "title:latency adjustable transformer encoder for language understanding",
+        "url:https://arxiv.org/abs/2201.03327"
+      ],
+      "record": {
+        "title": "Latency Adjustable Transformer Encoder for Language Understanding",
+        "source_url": "https://arxiv.org/abs/2201.03327",
+        "year": 2022,
+        "published": "2022-01-10",
+        "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Adjusting the latency, power, and accuracy of natural language understanding models is a desirable objective of an efficient architecture. This article proposes an efficient Transformer architecture that adjusts the inference computational cost adaptively with a desired inference latency speedup. In the fine-tuning phase, the proposed method detects less important hidden sequence elements (word-vectors) and eliminates them in each encoder layer using a proposed attention context contribution (ACC) metric. After the fine-tuning phase, with the novel offline-tuning property, the inference latency of the model can be adjusted in a wide range of inference speedup selections without any further training. Extensive experiments reveal that most word-vectors in higher Transformer layers contribute less to subsequent layers, allowing their removal to improve inference latency. Experimental results on various language understanding, text generation, and instruction tuning tasks and benchmarks demonstrate the approach’s effectiveness across diverse datasets, with minimal impact on the input’s global context. The technique improves the time-to-first-token (TTFT) of Llama3 by up to $2.9\\times $ , with a minor performance drop. The suggested approach posits that in large language models (LLMs), although the complete network is necessary for training, it can be truncated during the fine-tuning phase.",
+        "identifiers": [
+          "SemanticScholar:35712a8389a964447e80d0a195ab145175d7236d"
+        ],
+        "semantic_scholar_id": "35712a8389a964447e80d0a195ab145175d7236d",
+        "canonical_id": "arXiv:2201.03327",
+        "arxiv_id": "2201.03327",
+        "doi": "10.1109/TNNLS.2025.3539727",
+        "authors": [
+          "Sajjad Kachuee",
+          "M. Sharifkhani"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1738,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.19008",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.19008",
+        "id:SemanticScholar:2109873d8d34f23d67adac59c2f66e24dff5aaab",
+        "id:arXiv:2502.19008",
+        "title:binary neural networks for large language model a survey",
+        "url:https://arxiv.org/abs/2502.19008"
+      ],
+      "record": {
+        "title": "Binary Neural Networks for Large Language Model: A Survey",
+        "source_url": "https://arxiv.org/abs/2502.19008",
+        "year": 2025,
+        "published": "2025-02-26",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have wide applications in the field of natural language processing(NLP), such as GPT-4 and Llama. However, with the exponential growth of model parameter sizes, LLMs bring significant resource overheads. Low-bit quantization, as a key technique, reduces memory usage and computational demands by decreasing the bit-width of model parameters, activations, and gradients. Previous quantization methods for LLMs have largely employed Post-Training Quantization (PTQ) and Quantization-Aware Training (QAT). PTQ does not require any retraining of the original model, while QAT involves optimizing precision during training to achieve the best quantization parameters. The BitNet team proposed a radically different approach, where quantization is performed from the start of model training, utilizing low-precision binary weights during the training process. This approach has led to the emergence of many binary quantization techniques for large language models. This paper provides a comprehensive review of these binary quantization techniques. Specifically, we will introduce binary quantization techniques in deep neural networks and further explore their application to LLMs, reviewing their various contributions, implementations, and applications.",
+        "identifiers": [
+          "SemanticScholar:2109873d8d34f23d67adac59c2f66e24dff5aaab"
+        ],
+        "semantic_scholar_id": "2109873d8d34f23d67adac59c2f66e24dff5aaab",
+        "canonical_id": "arXiv:2502.19008",
+        "arxiv_id": "2502.19008",
+        "doi": "10.48550/arXiv.2502.19008",
+        "authors": [
+          "Lian Liu",
+          "Zhitong Zheng",
+          "Cong Wang",
+          "Tian-Huang Su",
+          "Zhenyu Yang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 595,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.22179",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.22179",
+        "id:SemanticScholar:00493d94a9f5571875475bef1d44e304991b7cdc",
+        "id:arXiv:2505.22179",
+        "title:speculative decoding meets quantization compatibility evaluation and hierarchical framework design",
+        "url:https://arxiv.org/abs/2505.22179"
+      ],
+      "record": {
+        "title": "Speculative Decoding Meets Quantization: Compatibility Evaluation and Hierarchical Framework Design",
+        "source_url": "https://arxiv.org/abs/2505.22179",
+        "year": 2025,
+        "published": "2025-05-28",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding and quantization effectively accelerate memory-bound inference of large language models. Speculative decoding mitigates the memory bandwidth bottleneck by verifying multiple tokens within a single forward pass, which increases computational effort. Quantization achieves this optimization by compressing weights and activations into lower bit-widths and also reduces computations via low-bit matrix multiplications. To further leverage their strengths, we investigate the integration of these two techniques. Surprisingly, experiments applying the advanced speculative decoding method EAGLE-2 to various quantized models reveal that the memory benefits from 4-bit weight quantization are diminished by the computational load from speculative decoding. Specifically, verifying a tree-style draft incurs significantly more time overhead than a single-token forward pass on 4-bit weight quantized models. This finding led to our new speculative decoding design: a hierarchical framework that employs a small model as an intermediate stage to turn tree-style drafts into sequence drafts, leveraging the memory access benefits of the target quantized model. Experimental results show that our hierarchical approach achieves a 2.78$\\times$ speedup across various tasks for the 4-bit weight Llama-3-70B model on an A100 GPU, outperforming EAGLE-2 by 1.31$\\times$. Code available at https://github.com/AI9Stars/SpecMQuant.",
+        "identifiers": [
+          "SemanticScholar:00493d94a9f5571875475bef1d44e304991b7cdc"
+        ],
+        "semantic_scholar_id": "00493d94a9f5571875475bef1d44e304991b7cdc",
+        "canonical_id": "arXiv:2505.22179",
+        "arxiv_id": "2505.22179",
+        "doi": "10.48550/arXiv.2505.22179",
+        "authors": [
+          "Yudi Zhang",
+          "Weilin Zhao",
+          "Xu Han",
+          "Tiejun Zhao",
+          "Wang Xu",
+          "Hai-Long Cao",
+          "Cong-Hui Zhu"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 504,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.27258",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.27258",
+        "id:SemanticScholar:7058995c387bd2d1f3c7e6437c2967e03e25620f",
+        "id:arXiv:2510.27258",
+        "title:higherorder linear attention",
+        "url:https://arxiv.org/abs/2510.27258"
+      ],
+      "record": {
+        "title": "Higher-order Linear Attention",
+        "source_url": "https://arxiv.org/abs/2510.27258",
+        "year": 2025,
+        "published": "2025-10-31",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quadratic cost of scaled dot-product attention is a central obstacle to scaling autoregressive language models to long contexts. Linear-time attention and State Space Models (SSMs) provide scalable alternatives but are typically restricted to first-order or kernel-based approximations, which can limit expressivity. We introduce Higher-order Linear Attention (HLA), a causal, streaming mechanism that realizes higher interactions via compact prefix sufficient statistics. In the second-order case, HLA maintains a constant-size state and computes per-token outputs in linear time without materializing any $n \\times n$ matrices. We give closed-form streaming identities, a strictly causal masked variant using two additional summaries, and a chunk-parallel training scheme based on associative scans that reproduces the activations of a serial recurrence exactly. We further outline extensions to third and higher orders. Collectively, these results position HLA as a principled, scalable building block that combines attention-like, data-dependent mixing with the efficiency of modern recurrent architectures.",
+        "identifiers": [
+          "SemanticScholar:7058995c387bd2d1f3c7e6437c2967e03e25620f"
+        ],
+        "semantic_scholar_id": "7058995c387bd2d1f3c7e6437c2967e03e25620f",
+        "canonical_id": "arXiv:2510.27258",
+        "arxiv_id": "2510.27258",
+        "doi": "10.48550/arXiv.2510.27258",
+        "authors": [
+          "Yifan Zhang",
+          "Zhen Qin",
+          "Quan-Quan Gu"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 348,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:e4fa860569597ca90c415e43c3ee4be3c401eb75",
+      "identity_tokens": [
+        "id:SemanticScholar:e4fa860569597ca90c415e43c3ee4be3c401eb75",
+        "title:learned prefix caching for efficient llm inference",
+        "url:https://www.semanticscholar.org/paper/e4fa860569597ca90c415e43c3ee4be3c401eb75"
+      ],
+      "record": {
+        "title": "Learned Preﬁx Caching for Efﬁcient LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/e4fa860569597ca90c415e43c3ee4be3c401eb75",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:e4fa860569597ca90c415e43c3ee4be3c401eb75"
+        ],
+        "semantic_scholar_id": "e4fa860569597ca90c415e43c3ee4be3c401eb75",
+        "canonical_id": "SemanticScholar:e4fa860569597ca90c415e43c3ee4be3c401eb75",
+        "authors": [
+          "Dongsheng Yang",
+          "Austin T. Li",
+          "Kai Li",
+          "Wyatt Lloyd"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2308.00108",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2308.00108",
+        "id:SemanticScholar:12e40de47de0f2b5702d8b94b9b1ae2069bcb576",
+        "id:arXiv:2308.00108",
+        "title:dpbert efficient inference for bert based on dynamic planning",
+        "url:https://arxiv.org/abs/2308.00108"
+      ],
+      "record": {
+        "title": "DPBERT: Efficient Inference for BERT based on Dynamic Planning",
+        "source_url": "https://arxiv.org/abs/2308.00108",
+        "year": 2023,
+        "published": "2023-07-26",
+        "venue": "European Conference on Artificial Intelligence",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large-scale pre-trained language models such as BERT have contributed significantly to the development of NLP. However, those models require large computational resources, making it difficult to be applied to mobile devices where computing power is limited. In this paper we aim to address the weakness of existing input-adaptive inference methods which fail to take full advantage of the structure of BERT. We propose Dynamic Planning in BERT, a novel fine-tuning strategy that can accelerate the inference process of BERT through selecting a subsequence of transformer layers list of backbone as a computational path for an input sample. To do this, our approach adds a planning module to the original BERT model to determine whether a layer is included or bypassed during inference. Experimental results on the GLUE benchmark exhibit that our method reduces latency to 75\\% while maintaining 98\\% accuracy, yielding a better accuracy-speed trade-off compared to state-of-the-art input-adaptive methods.",
+        "identifiers": [
+          "SemanticScholar:12e40de47de0f2b5702d8b94b9b1ae2069bcb576"
+        ],
+        "semantic_scholar_id": "12e40de47de0f2b5702d8b94b9b1ae2069bcb576",
+        "canonical_id": "arXiv:2308.00108",
+        "arxiv_id": "2308.00108",
+        "doi": "10.48550/arXiv.2308.00108",
+        "authors": [
+          "Weixin Wu",
+          "Han-Kui Zhuo"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1176,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.01083",
+      "identity_tokens": [
+        "id:DOI:10.1109/bigdata66926.2025.11400767",
+        "id:SemanticScholar:53dffa01bace0389de77366b21173cf22644e04d",
+        "id:arXiv:2509.01083",
+        "title:dsde dynamic speculative decoding with kld stability for realworld serving",
+        "url:https://arxiv.org/abs/2509.01083"
+      ],
+      "record": {
+        "title": "DSDE: Dynamic Speculative Decoding with KLD Stability for Real-World Serving",
+        "source_url": "https://arxiv.org/abs/2509.01083",
+        "year": 2025,
+        "published": "2025-09-01",
+        "venue": "BigData Congress [Services Society]",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model inference, but its reliance on a fixed speculation length is suboptimal in large-batch serving environments with diverse requests. This paper explores a new direction for dynamic adaptation by investigating a novel class of post-hoc, diagnostic signals. We propose Dynamic Speculative Decoding Engine (DSDE), a training-free framework built on two primary components: (1) a predictive signal based on the variance of the Kullback-Leibler (KLD) divergence, which diagnoses the generation's regional stability, and (2) an adaptive speculation length cap to mitigate the straggler problem in per-sequence decoding. Experiments demonstrate the potential of using KLD-based stability signals for dynamic adaptation. An algorithm guided by these signals achieves end-to-end latency competitive with leading baselines and exhibits notable robustness across diverse workloads. This robustness is particularly valuable in challenging low-acceptancerate regimes, where the proposed signal maintains its diagnostic utility. Collectively, these findings validate post-hoc signals as a valuable component for building more robust and intelligent LLM inference systems, and highlight a promising direction for future research on dynamic speculation length adaptation.",
+        "identifiers": [
+          "SemanticScholar:53dffa01bace0389de77366b21173cf22644e04d"
+        ],
+        "semantic_scholar_id": "53dffa01bace0389de77366b21173cf22644e04d",
+        "canonical_id": "arXiv:2509.01083",
+        "arxiv_id": "2509.01083",
+        "doi": "10.1109/BigData66926.2025.11400767",
+        "authors": [
+          "Mingyu Yang",
+          "Jae-Young Choi",
+          "Kihyo Moon",
+          "Minsung Jang",
+          "Eunjoo Jeon"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 408,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.ipm.2026.104889",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.ipm.2026.104889",
+        "id:SemanticScholar:a90a6258a2d9387c45378eb3489a2088dbe6ed0e",
+        "title:litekv a kv cache compression method for efficient inference on resourceconstrained devices",
+        "url:https://doi.org/10.1016/j.ipm.2026.104889"
+      ],
+      "record": {
+        "title": "LiteKV: A KV cache compression method for efficient inference on resource-constrained devices",
+        "source_url": "https://doi.org/10.1016/j.ipm.2026.104889",
+        "year": 2026,
+        "published": null,
+        "venue": "Information Processing & Management",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:a90a6258a2d9387c45378eb3489a2088dbe6ed0e"
+        ],
+        "semantic_scholar_id": "a90a6258a2d9387c45378eb3489a2088dbe6ed0e",
+        "doi": "10.1016/j.ipm.2026.104889",
+        "canonical_id": "DOI:10.1016/j.ipm.2026.104889",
+        "authors": [
+          "Zhi-Peng Zhang",
+          "Dmitry Ilvovsky"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 105,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:48cb1122456a29d5f6de3436c1950c6ad752cc45",
+      "identity_tokens": [
+        "id:SemanticScholar:48cb1122456a29d5f6de3436c1950c6ad752cc45",
+        "title:s ystematizing i nference p lacement for d eep l earning across e dge and c loud p latforms a m ulti o bjective o ptimization p erspective",
+        "url:https://www.semanticscholar.org/paper/48cb1122456a29d5f6de3436c1950c6ad752cc45"
+      ],
+      "record": {
+        "title": "S YSTEMATIZING I NFERENCE P LACEMENT FOR D EEP L EARNING ACROSS E DGE AND C LOUD P LATFORMS : A M ULTI -O BJECTIVE O PTIMIZATION P ERSPECTIVE",
+        "source_url": "https://www.semanticscholar.org/paper/48cb1122456a29d5f6de3436c1950c6ad752cc45",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:48cb1122456a29d5f6de3436c1950c6ad752cc45"
+        ],
+        "semantic_scholar_id": "48cb1122456a29d5f6de3436c1950c6ad752cc45",
+        "canonical_id": "SemanticScholar:48cb1122456a29d5f6de3436c1950c6ad752cc45",
+        "authors": [
+          "Z. Hang",
+          "I. Atta"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.09071",
+      "identity_tokens": [
+        "id:SemanticScholar:76e77749a33ebf37f89eb0b083bcd89745f9ea85",
+        "id:arXiv:2507.09071",
+        "title:blindsight harnessing sparsity for efficient visionlanguage models",
+        "url:https://arxiv.org/abs/2507.09071"
+      ],
+      "record": {
+        "title": "BlindSight: Harnessing Sparsity for Efficient Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2507.09071",
+        "year": 2025,
+        "published": "2025-07-11",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large vision-language models (VLMs) enable joint processing of text and images. However, incorporating vision data significantly increases the prompt length, resulting in a longer time to first token (TTFT). This bottleneck can be alleviated by leveraging the inherent sparsity in the attention computation. Analyzing these attention patterns in VLMs when processing a series of images, we observe the absence of inter-image attention in a substantial portion of layers. Based on this, we propose BlindSight: an approach to optimize multi-image VLM inference using an input-template-aware attention sparsity mask with no runtime overhead. We utilize a dataset to derive a prompt-agnostic categorization for attention heads: Dense, Sink, Intra-Image, and Intra-Image+Sink. We develop a Triton-based GPU kernel to leverage this sparsity. BlindSight achieves a 1.8-3.2x speedup in the attention computation (prompt length 36K-300K). BlindSight generalizes across VLMs (Qwen2-VL, Qwen2.5-VL, Gemma 3), with only a 0.78% absolute accuracy degradation on average on multi-image comprehension benchmarks. Finally, we advocate for the design of efficient VLMs that combine BlindSight-inspired sparse and dense layers.",
+        "identifiers": [
+          "SemanticScholar:76e77749a33ebf37f89eb0b083bcd89745f9ea85"
+        ],
+        "semantic_scholar_id": "76e77749a33ebf37f89eb0b083bcd89745f9ea85",
+        "canonical_id": "arXiv:2507.09071",
+        "arxiv_id": "2507.09071",
+        "authors": [
+          "Tharun Adithya Srikrishnan",
+          "Deval Shah",
+          "Timothy Hein",
+          "A. Hasssan",
+          "Stephen Youn",
+          "Steven K. Reinhardt"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 460,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.11234",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.11234",
+        "id:SemanticScholar:ab13e89ac4501a221797bafede6c90c055b3f8a6",
+        "id:arXiv:2510.11234",
+        "title:neural weight compression for language models",
+        "url:https://arxiv.org/abs/2510.11234"
+      ],
+      "record": {
+        "title": "Neural Weight Compression for Language Models",
+        "source_url": "https://arxiv.org/abs/2510.11234",
+        "year": 2025,
+        "published": "2025-10-13",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient compression of language model weights is increasingly critical as model scale and deployment grow. Yet, most existing methods rely on handcrafted transforms and heuristics, reflecting the limited understanding of weights as a data modality. To move beyond this paradigm, we formulate weight compression as neural codec learning and propose Neural Weight Compression (NWC), a framework for training neural codecs on pretrained weight datasets. NWC addresses challenges intrinsic to weight compression, including tensor heterogeneity and the mismatch between reconstruction losses and downstream performance. Experiments show that NWC achieves highly competitive accuracy-compression tradeoffs, with particularly strong results in the 4-6 bit regime, without relying on rigid handcrafted components such as the Hadamard transform. These gains extend to across diverse architectures, e.g., vision encoders. Our analysis highlights the roles of entropy-constrained quantization and learned transforms in adapting compression to weight data and downstream tasks.",
+        "identifiers": [
+          "SemanticScholar:ab13e89ac4501a221797bafede6c90c055b3f8a6"
+        ],
+        "semantic_scholar_id": "ab13e89ac4501a221797bafede6c90c055b3f8a6",
+        "canonical_id": "arXiv:2510.11234",
+        "arxiv_id": "2510.11234",
+        "doi": "10.48550/arXiv.2510.11234",
+        "authors": [
+          "Jegwang Ryu",
+          "Minkyu Kim",
+          "Seung-Jun Shin",
+          "Hee-Min Choi",
+          "Dokwan Oh",
+          "Jaeho Lee"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 366,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f719e9bac149a151e478bb89e779e7f45ddbd4e7c9dbea89704b18c7da55d8f9",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

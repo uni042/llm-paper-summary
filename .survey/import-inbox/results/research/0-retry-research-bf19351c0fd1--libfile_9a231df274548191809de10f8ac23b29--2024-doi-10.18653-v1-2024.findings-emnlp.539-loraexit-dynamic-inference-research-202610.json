@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "133fa801f1824a6c40ad9e9c0c5c5cfbea27767112420230a27de5ebd88e9940",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/0-retry-research-bf19351c0fd1--libfile_9a231df274548191809de10f8ac23b29--2024-doi-10.18653-v1-2024.findings-emnlp.539-loraexit-dynamic-inference-research-20261023-0500-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.539",
+  "worker_completed_at": "2026-10-23T05:00:00+09:00",
+  "worker_run_key": "20261023-0500-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4068,
+    "body_paragraphs": 22,
+    "method_chars": 1289,
+    "method_paragraphs": 8,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-24T19:43:15+00:00"
+}

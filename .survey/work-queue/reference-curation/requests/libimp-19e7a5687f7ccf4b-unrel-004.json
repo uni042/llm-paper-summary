@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-19e7a5687f7ccf4b-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2410.01699",
+  "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.01699. Abstract summary: The current large auto-regressive models can generate high-quality, high-resolution images, but these models require hundreds or even thousands of steps of next-token prediction during inference, resulting in substantial time consumption. In existing studies, Jacobi decoding, an iterative parallel decoding algorithm, has been us Out of scope: Autoregressive text-to-image generation is a visual-generation workload, not LLM inference.",
+  "title": "Accelerating Auto-regressive Text-to-Image Generation with Training-free Speculative Jacobi Decoding",
+  "identity_tokens": [
+    "arXiv:2410.01699"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+    "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+    "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
+    "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-19e7a5687f7c",
+  "source_precheck_request_id": null
+}

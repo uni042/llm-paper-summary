@@ -1,0 +1,174 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1006-scheduled-chat-00/r03",
+  "reference_main_sha": "0522eb616eb21eb0aa9ae8540f181f2ce5464fc0",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+      "identity_tokens": [
+        "SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+        "DOI:10.5555/3692070.3694679"
+      ],
+      "title": "BiE: Bi-Exponent Block Floating-Point for Large Language Models Quantization",
+      "reason": "ICML 2024 PMLR公式一次abstractを確認。LLMの低ビット量子化における外れ値分布とハードウェア効率の問題に対し、2つの指数を共有するBi-Exponent Block Floating Point (BiE)の数値形式と量子化フローを提案。複数LLMの精度とハードウェア適合性を評価しており、量子化推論の直接研究としてaccept。要旨にない速度倍率は断定しない。",
+      "source_url": "https://proceedings.mlr.press/v235/zou24d.html",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:15:13+09:00",
+      "last_checked_at": "2026-10-31T10:15:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 216,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:85fba50933400633e58ecc9aef35658e2389fcf0",
+      "identity_tokens": [
+        "SemanticScholar:85fba50933400633e58ecc9aef35658e2389fcf0",
+        "OpenReview:4nV383120k"
+      ],
+      "title": "Simple LLM Compression Recovery Using Dynamic Prompting with Theoretical Analysis",
+      "reason": "著者公開OpenReview原著PDFのabstractを確認。圧縮後LLMの性能回復についてLoRA等PEFTと動的promptingをLlama/OPTで比較し、入力ごとの複数prompt選択により低い追加推論遅延で品質回復できると報告。推論時のコスト・圧縮性能に接点はあるが、主要指標は理解精度回復で、GPU throughput・KV削減等の直接的サービング最適化は限定的なためborderline。",
+      "source_url": "https://openreview.net/pdf?id=4nV383120k",
+      "body_check": "primary_openreview_pdf_abstract_screen; body_not_fully_read",
+      "first_checked_at": "2026-10-31T10:15:13+09:00",
+      "last_checked_at": "2026-10-31T10:15:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 217,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20484",
+      "identity_tokens": [
+        "arXiv:2607.20484"
+      ],
+      "title": "The Devil is in the Spectrum: Mitigating Representation Collapse in LLMs via Topologically Regularized Side-Path",
+      "reason": "ICML 2026 PMLR公式一次abstractを確認。長文でのattention sink・局所注意に伴うrepresentation collapseをスペクトル解析し、parameter-free Triangular Boxと軽量ゲートのTRSP side-pathでNoLiMaの8倍文脈外挿精度を83%維持する。長文能力・表現安定性の改善が中心で、実推論の計算量・TTFT・メモリ削減の定量評価は要旨にないためborderline。",
+      "source_url": "https://proceedings.mlr.press/v306/tao26b.html",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:15:13+09:00",
+      "last_checked_at": "2026-10-31T10:15:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 235,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32961",
+      "identity_tokens": [
+        "arXiv:2609.32961"
+      ],
+      "title": "Beyond Token Savings: A Systematic Study of Context Compression in LLM Agents",
+      "reason": "arXiv一次要旨を確認。SWE-bench VerifiedとTerminal-Benchで3モデル・約3.5万agent runsを使い、何を・いつ・どの程度圧縮するかを分離して成功率、token数、E2E latency、推定コストを評価。QwenのTerminal-Benchではtokenを約1/3に削っても処理時間が20–80%長くなる場合がある。トークン削減と実行コストの乖離を示す直接的システム測定としてaccept。",
+      "source_url": "https://arxiv.org/abs/2609.32961",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:15:13+09:00",
+      "last_checked_at": "2026-10-31T10:15:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 245,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/085713-5740",
+      "identity_tokens": [
+        "DOI:10.52202/085713-5740"
+      ],
+      "title": "SmartCache: Context-aware Semantic Cache for Efficient Multi-turn LLM Inference",
+      "reason": "NeurIPS 2025公式一次abstractを確認。会話文脈に依存したSemantic Forestとattentionによるtopic-shift検出、cross-session KV共有・semantic-aware evictionを統合するLLMサービングキャッシュ。CoQA/SQuADでprefix caching比KV使用量最大59.1%削減、TTFT最大78.0%削減と報告。サービング効率を直接評価するためaccept。",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/fb74b63d225f846e6032bf3e3ab0f4ec-Abstract-Conference.html",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:15:13+09:00",
+      "last_checked_at": "2026-10-31T10:15:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 266,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.14993",
+      "identity_tokens": [
+        "arXiv:2409.14993",
+        "DOI:10.1109/TCSVT.2025.3635224"
+      ],
+      "title": "Multi-modal Generative AI: Multi-modal LLMs, Diffusions, and the Unification",
+      "reason": "arXiv一次要旨を確認。マルチモーダルLLM、diffusion、AR/diffusion統合、dense/MoE構成とデータセットを総覧するsurvey。推論・生成の方式比較には間接的に関連するが、LLM serving最適化・カーネル・低遅延化の一次実験はないためborderline。worklist表題と正式表題を正規化。",
+      "source_url": "https://arxiv.org/abs/2409.14993",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:15:13+09:00",
+      "last_checked_at": "2026-10-31T10:15:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 276,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.01705",
+      "identity_tokens": [
+        "arXiv:2306.01705",
+        "DOI:10.1145/3580305.3599520"
+      ],
+      "title": "The Information Pathways Hypothesis: Transformers are Dynamic Self-Ensembles",
+      "reason": "arXiv一次要旨を確認。Transformer内の情報経路をstochastically subsampled self-attentionで学習時に間引き、training時attentionのメモリ・計算量を4–8倍削減する学習・正則化手法。推論時のLLMデコード・サービング削減を直接検証していない学習専用研究のためunrelated。",
+      "source_url": "https://arxiv.org/abs/2306.01705",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:15:13+09:00",
+      "last_checked_at": "2026-10-31T10:15:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 277,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.05760",
+      "identity_tokens": [
+        "arXiv:2609.05760"
+      ],
+      "title": "RAGMark: A Comprehensive Framework for Benchmarking Retrieval-Augmented Generation Systems",
+      "reason": "著者公式公開abstractとarXiv由来一次要旨を確認。RAGのretriever・vector DB・reranker・compression・generatorを分離計測するベンチマーク基盤で、latency、TTFT、GPU利用率、メモリ、電力、回答品質を多GPUで比較。reranking+compressionの組合せでprefill・KV探索の費用が低減し、エネルギー最大66%削減を報告。LLM servingシステム評価に直接寄与するためaccept。",
+      "source_url": "https://amirtaherin.github.io/publications/feric2026ragmark/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:15:13+09:00",
+      "last_checked_at": "2026-10-31T10:15:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 284,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.05282",
+      "identity_tokens": [
+        "arXiv:2508.05282"
+      ],
+      "title": "Not All Errors Are Created Equal: ASCoT Addresses Late-Stage Fragility in Efficient LLM Reasoning",
+      "reason": "arXiv一次要旨を確認。ASCoTは推論過程の冗長ステップをsemantic pruningで圧縮し、後半の高リスクstepをadaptive verification managerで選択して自己修正する。GSM8K/MATH-500のLLaMA-3.1-8Bでtoken使用量を21–30%削減し精度低下を1.8%未満に抑えたと報告。推論時token予算の直接最適化のためaccept。",
+      "source_url": "https://arxiv.org/abs/2508.05282",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:15:13+09:00",
+      "last_checked_at": "2026-10-31T10:15:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 298,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TAI.2025.3563144",
+      "identity_tokens": [
+        "DOI:10.1109/TAI.2025.3563144"
+      ],
+      "title": "Efficient Transformer Inference Through Hybrid Dynamic Pruning",
+      "reason": "著者所属Khalifa Universityの一次研究成果abstractを確認。attentionのhead/block sparsityと近似を組み合わせるHybrid Dynamic Pruningおよびedge/server向け専用コプロセッサHDPAを設計し、複数Transformerでattention演算の遅延・energy・throughputを比較。生成LLMのデコード/サービング専用評価が要旨で確認できないためborderline。",
+      "source_url": "https://khazna.ku.ac.ae/en/publications/efficient-transformer-inference-through-hybrid-dynamic-pruning/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:15:13+09:00",
+      "last_checked_at": "2026-10-31T10:15:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 322,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

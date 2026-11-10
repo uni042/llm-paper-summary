@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2d5173a7f31ffabb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2204.13767",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2204.13767",
+    "identity_tokens": [
+      "arXiv:2204.13767"
+    ],
+    "reason": "題名が多変量時系列予測のための三角形注意機構を対象としており、生成型LLMの推論基盤、モデルサービング、KVキャッシュ、量子化、MoE推論ではないことが明白なため、本文読解前のタイトル先行除外とする。Researchの5件ノルマには算入しない。",
+    "first_checked_at": "2026-10-11T02:48:44+00:00",
+    "last_checked_at": "2026-10-11T02:48:44+00:00",
+    "linked_from": [],
+    "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version"
+  },
+  "processed_at": "2026-10-11T02:48:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d5173a7f31f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

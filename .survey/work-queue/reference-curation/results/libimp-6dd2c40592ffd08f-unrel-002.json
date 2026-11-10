@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6dd2c40592ffd08f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.06941",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.06941",
+    "identity_tokens": [
+      "arXiv:2506.06941"
+    ],
+    "reason": "推論モデルの問題複雑度に対する正答率・reasoning trace・計算挙動の限界を分析する能力評価研究で、推論サービング、メモリ、カーネル、スケジューリング等のシステム効率化を提案しない。",
+    "first_checked_at": "2026-10-06T20:50:56+00:00",
+    "last_checked_at": "2026-10-06T21:42:47+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+    ],
+    "title": "The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity"
+  },
+  "processed_at": "2026-10-06T21:42:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6dd2c40592ff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

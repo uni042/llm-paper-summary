@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c8210a2ccc140de0-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.00131",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.00131",
+    "identity_tokens": [
+      "arXiv:2412.00131"
+    ],
+    "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+    "first_checked_at": "2026-10-06T03:08:47+00:00",
+    "last_checked_at": "2026-10-06T03:08:47+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+    ],
+    "title": "Open-Sora Plan: Open-Source Large Video Generation Model"
+  },
+  "processed_at": "2026-10-06T03:08:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c8210a2ccc14",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

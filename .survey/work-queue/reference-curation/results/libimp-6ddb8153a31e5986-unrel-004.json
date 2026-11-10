@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6ddb8153a31e5986-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.29621",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.29621",
+    "identity_tokens": [
+      "arXiv:2607.29621"
+    ],
+    "reason": "The paper proposes concept extraction for CNN time-series classification; it is unrelated to LLM inference.",
+    "first_checked_at": "2026-10-05T09:44:44+00:00",
+    "last_checked_at": "2026-10-05T09:44:44+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "CENDRe: Concept Extraction with Natural Domain Representations"
+  },
+  "processed_at": "2026-10-05T09:44:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6ddb8153a31e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

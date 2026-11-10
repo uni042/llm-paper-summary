@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8592f2df4745f9a5-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.38830",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.38830",
+    "identity_tokens": [
+      "arXiv:2609.38830"
+    ],
+    "reason": "Sparse-attention work is a privacy-leakage/security attack study, not an inference optimization.",
+    "first_checked_at": "2026-10-05T04:21:07+00:00",
+    "last_checked_at": "2026-10-05T04:21:07+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+      "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+      "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "SparLeak: Privacy Leakage from Sparse Attention in LLM Inference on Shared GPUs"
+  },
+  "processed_at": "2026-10-05T04:21:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8592f2df4745",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

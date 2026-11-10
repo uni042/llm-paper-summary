@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "preflight-c1740060-02",
+  "kind": "research",
+  "attempt_id": "attempt-c1740060a24d308914998762",
+  "job_id": "job-research-c92e15d6ba5edb8d",
+  "record_bank": "g",
+  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2604.06542-global-perspective-moe-pruning.md",
+  "expected_blob_sha": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:31b20ce1e7176d32bb587727cbfaa76a76fe00e31491f4178eed641aad5a917e",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "ba11967216c6f9550f67ced0da7530bebcb2f0a8"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "3a39b3726a0dc3c52d5e8466d228a31999f6b284"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "c45f45fee47398c49d48b22ce1ebd87262485313"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "7df967f8f3327af7f185448da6d785bd9c259fd1"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "aee62c8c9460bee80d1910c9e3d410f28a68cdaa"
+    }
+  ],
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism"
+  ],
+  "checked_at": "2026-09-22T19:43:01+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

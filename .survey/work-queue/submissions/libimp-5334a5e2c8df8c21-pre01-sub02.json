@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Vesta: Queueing-Aware LLM Scheduling for Real-World Workloads",
+      "source_url": "https://arxiv.org/abs/2610.14686",
+      "year": 2026,
+      "published": "2026-10-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic applications generate multi-turn sequences of LLM requests, with each new turn extending the context accumulated from prior interactions and tool calls. Prefix caching reuses the KV cache of earlier turns and avoids redundant prefill, but routing every turn to its cache-affine instance can create severe local queues while capacity remains idle elsewhere. Remote KV cache access relaxes this tension, yet migrating execution adds transfer work and is harmful when the cluster is already congested. Thus, deciding where to execute a request requires reasoning jointly about cache locality, queueing, and the current operating point of the cluster. We present Vesta, a queueing-aware scheduler for distributed agentic LLM serving. Vesta assigns each session a stable holder for its authoritative KV cache while independently selecting an executor for every request. Grounded in classical queueing theory, its objective accounts for backlog, reusable prefixes, KV cache transfer, and the queueing externality of additional service demand; it migrates execution to recover idle capacity when beneficial and favors placements that add the least prefill and transfer work as congestion rises. Vesta also migrates reusable prefixes across length buckets to avoid cold starts. On real-world agentic workloads, Vesta improves throughput by 14.0\\% and reduces mean TTFT by 57.8\\% over the state-of-the-art scheduler in a PD-colocated deployment. In PD-disaggregated deployments, it reduces mean TTFT by up to 18.1\\% and P99 TTFT by up to 29.0\\% at matched throughput.",
+      "identifiers": [
+        "SemanticScholar:813bb84aa254e8f8c44475faef8fce2f28ead93a"
+      ],
+      "semantic_scholar_id": "813bb84aa254e8f8c44475faef8fce2f28ead93a",
+      "canonical_id": "arXiv:2610.14686",
+      "arxiv_id": "2610.14686",
+      "authors": [
+        "Lan-Cheng Zou",
+        "Bo-Wen Li",
+        "Wei Mao",
+        "Wen-Bin Ye",
+        "Lecheng Li",
+        "Kai Liu",
+        "Chao Deng",
+        "Jian-Chen Zhu",
+        "Bei Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KVキャッシュの保持ノードと要求実行ノードを分離し、待ち行列負荷・prefix再利用・KV転送費用を同時に最適化する。実運用エージェント負荷でスループット14.0%改善、平均TTFT57.8%削減を報告。",
+      "library_body_check": "primary_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SLEM: Spectrum-Aware Latent Expert Merging",
+      "source_url": "https://arxiv.org/abs/2610.16484",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models scale model capacity efficiently by activating only a small subset of experts for each input, while still requiring all parameters to be stored in memory, resulting in substantial memory overhead. Expert merging techniques have recently emerged as a promising compression paradigm that reduces this overhead by consolidating multiple experts into a smaller set. However, existing approaches have two key limitations: (i) direct convex interpolation in parameter space is not generally guaranteed to yield meaningful interpolation of expert functions; and (ii) estimating expert similarity or merging coefficients often relies on calibration data, introducing dependence on the calibration distribution. To address these limitations, we propose Spectrum-Aware Latent Expert Merging (SLEM), a calibration-free expert merging framework that occurs in a structured latent representation of expert weights using a VAE. SLEM groups experts within and across layers based on latent similarities and derives merging coefficients from expert weight spectra. It then performs geometry-aware latent interpolation and decodes the resulting representations into merged expert weights. Compared with existing expert merging methods, SLEM achieves comparable or better performance on general knowledge benchmarks and higher average performance on generation benchmarks involving mathematical reasoning and code generation.",
+      "identifiers": [
+        "SemanticScholar:41473440614c580ab73a9ffb079fe088537cb4cc"
+      ],
+      "semantic_scholar_id": "41473440614c580ab73a9ffb079fe088537cb4cc",
+      "canonical_id": "arXiv:2610.16484",
+      "arxiv_id": "2610.16484",
+      "authors": [
+        "Dohyeon Kim",
+        "Bedionita Soro",
+        "Bruno Andreis",
+        "Sung Ju Hwang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoEの専門家重みをVAE潜在空間で表現し、重みスペクトルに基づき校正データなしで専門家を統合する。常駐パラメータのメモリ削減と性能維持を狙う。",
+      "library_body_check": "primary_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ConfluxServe: Reconciling Resource Utilization and Parallelism Efficiency across Prefill and Decode in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.37810",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefill and decode are complementary in resource usage, but often divergent in parallelism preferences. Executing the two phases separately preserves their preferred parallelism but leaves complementary resources underutilized, while co-batching improves utilization but often requires a uniform parallel configuration that hurts execution efficiency. To resolve this utilization-efficiency dilemma, we propose Conflux Parallelism (XP), a parallel execution abstraction that co-executes prefill and decode with different parallelism within the same batch. Conflux Parallelism exploits operator-level Transformer structure to construct a heterogeneous execution path with different batching and parallelism strategies across operators, combining the best of co-batching and phase-specific execution. Building on Conflux Parallelism, we design ConfluxServe, an SLO-aware serving system that maximizes cluster goodput under TTFT and TBT constraints. Evaluation on production workloads shows that ConfluxServe improves serving goodput by 1.26-1.62x over the strongest baselines.",
+      "identifiers": [
+        "SemanticScholar:bdb3d841f9531475eac4f56b4109df300cccf69e"
+      ],
+      "semantic_scholar_id": "bdb3d841f9531475eac4f56b4109df300cccf69e",
+      "canonical_id": "arXiv:2610.37810",
+      "arxiv_id": "2610.37810",
+      "authors": [
+        "Wen-Hao Chen",
+        "Hong Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      },
+      "reason": "prefillとdecodeを同一バッチ内で演算子別の異なる並列化方式で共存させ、TTFT/TBT制約下でgoodputを最大化する。生産負荷で最強ベースライン比1.26〜1.62倍と一次要旨で報告。",
+      "library_body_check": "primary_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5334a5e2c8df",
+    "round": "libimp-5334a5e2c8df8c21-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5334a5e2c8df8c21-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5334a5e2c8df8c21-pre01.json",
+    "receipt": "sha256:ec6bebb847f38a9ffe4c0e648fb92aad76272a734e1429df8f3fb2590ddf1a8e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5334a5e2c8df",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

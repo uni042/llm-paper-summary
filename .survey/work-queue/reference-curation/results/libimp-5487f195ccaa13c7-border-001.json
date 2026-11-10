@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5487f195ccaa13c7-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.10299",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.10299",
+    "identity_tokens": [
+      "arXiv:2405.10299"
+    ],
+    "reason": "The benchmark is directly relevant to inference hardware trade-offs, but detailed methodology, validation, and limitations remain unverified because the primary paper body could not be read.",
+    "first_checked_at": "2026-10-05T14:49:21+00:00",
+    "last_checked_at": "2026-10-05T14:49:21+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md",
+      "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HW-GPT-Bench: Hardware-Aware Architecture Benchmark for Language Models"
+  },
+  "processed_at": "2026-10-05T14:49:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5487f195ccaa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

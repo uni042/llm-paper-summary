@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2583b340f271ce58-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1709.01686",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1709.01686",
+    "identity_tokens": [
+      "arXiv:1709.01686"
+    ],
+    "reason": "early-exitで推論時間を削減するが、LeNet/AlexNet/ResNetとMNIST/CIFAR10を対象とする一般/CNN推論研究で、LLM/Transformer推論を最終適用先としない。",
+    "first_checked_at": "2026-10-04T15:53:59+00:00",
+    "last_checked_at": "2026-10-04T15:55:08+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
+    ],
+    "title": "BranchyNet: Fast inference via early exiting from deep neural networks"
+  },
+  "processed_at": "2026-10-04T15:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2583b340f271",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-216591da5903e861-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.14774",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.14774",
+    "identity_tokens": [
+      "arXiv:2608.14774"
+    ],
+    "reason": "The p-Spin Glass model uses ternary internal projections and implicit gradients, reporting 8x compression for selected internal parameters and bounded activation memory, with language-token and byte-stream experiments. It does not report LLM serving latency/throughput or establish end-to-end deployment gains; recurrent sequence-model transfer remains uncertain.",
+    "first_checked_at": "2026-10-06T09:41:48+00:00",
+    "last_checked_at": "2026-10-06T09:41:48+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "p-Spin Glass Network Efficient Single-Batch Continual Learning"
+  },
+  "processed_at": "2026-10-06T09:41:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-216591da5903",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ec9b94ffad817ae6-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3779212.3790187",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3779212.3790187",
+    "identity_tokens": [
+      "DOI:10.1145/3779212.3790187"
+    ],
+    "reason": "The ACM primary full-text PDF endpoint was inaccessible; only institutional primary abstract/metadata were available, so method and evaluation could not be reviewed.",
+    "first_checked_at": "2026-10-06T05:54:04+00:00",
+    "last_checked_at": "2026-10-06T05:54:04+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md",
+      "papers/inference/16-weight-quantization-compression/2026-2610.01265-rapidmoe-exploiting-cross-asymmetry-via-adaptive-residual-offloading-for.md",
+      "papers/inference/99-other-inference-systems/2026-2609.14507-physically-partitioned-kvcache-format-for-cpu-gpu-load-balancing-in-moe-inference.md",
+      "papers/inference/99-other-inference-systems/2609.14643.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading"
+  },
+  "processed_at": "2026-10-06T05:54:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ec9b94ffad81",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

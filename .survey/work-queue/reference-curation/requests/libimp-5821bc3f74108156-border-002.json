@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5821bc3f74108156-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2512.23448",
+  "reason": "DSC approximates context-dependent adapter weights using a shared sparse basis and claims O(Md) parameter and O(Kd) memory-traffic scaling versus retrieving independent LoRA experts. On a single T4 it reports language-model/perplexity comparisons and reduced routing latency penalties relative to MoE. It is an adaptation/training method, with no decode-time serving results.",
+  "title": "Dynamic Subspace Composition: Efficient Adaptation via Contractive Basis Expansion",
+  "identity_tokens": [
+    "arXiv:2512.23448"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5821bc3f7410",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

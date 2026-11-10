@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-942f0c6481710b7b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.01023",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.01023",
+    "identity_tokens": [
+      "arXiv:2609.01023"
+    ],
+    "reason": "AKRASIA is an inference-time backdoor/security attack; its goal is stealthy malicious behavior, not efficiency.",
+    "first_checked_at": "2026-10-05T07:30:12+00:00",
+    "last_checked_at": "2026-10-05T07:30:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+    ],
+    "title": "AKRASIA: Stealthy Backdoor Attack on Reasoning-based Code LLMs"
+  },
+  "processed_at": "2026-10-05T07:30:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-942f0c648171",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

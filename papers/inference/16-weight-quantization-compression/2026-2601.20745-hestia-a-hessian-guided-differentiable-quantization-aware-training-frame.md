@@ -1,0 +1,219 @@
+---
+canonical_id: arXiv:2601.20745
+arxiv_id: '2601.20745'
+arxiv_categories:
+  primary: cs.LG
+  cross_list: []
+title: 'HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs'
+authors:
+- Guoan Wang
+- Feiyu Wang
+- Zongwei Lv
+- Yikun Zong
+- Tong Yang
+published: '2026-01-28'
+publication: arXiv:2601.20745v1
+publication_type: preprint
+publication_status: preprint
+source: https://arxiv.org/pdf/2601.20745v1
+sources:
+- https://arxiv.org/pdf/2601.20745v1
+- https://arxiv.org/abs/2601.20745
+- https://github.com/hestia2026/Hestia
+summary: HESTIAはLLMの三値重み量子化QATにおける初期の硬い丸め・STEによる勾配不一致を、温度付きsoftmaxの連続緩和とHessian trace感度に応じたテンソル別アニーリングで緩和する学習法。Llama-3.2-1B/3Bを10BトークンでQATし、5つのゼロショット課題平均でTequilaの0.519/0.576に対して0.547/0.601を達成。BF16基準0.558/0.636にはなお届かず、3BのWinoGrandeはTequila
+  0.627に対して0.622と悪化する。group size128の寄与とHessianスケジュールの寄与は分離して評価され、Hessian追加の平均改善は1Bで+1.30%、3Bで+0.33%に留まる。推論速度や実効VRAM節約のエンドツーエンド実測はなく、量子化済みモデルの学習品質を改善する研究。
+list_summary: 三値QATを温度付き連続緩和とHessian感度別アニーリングで安定化。Llama3.2-1B/3B平均0.547/0.601対Tequila0.519/0.576、実機推論速度は未評価。
+lineage: 04-quantization
+code: https://github.com/hestia2026/Hestia
+implementation: PyTorch QAT実装。Llama-3.2-1B/3Bの線形層をgroup size128で三値化し、Hutch++によるオフラインHessian trace近似と10BトークンのUltra-FineWebでのQATを行う。活性や一部非線形層は全精度のまま。
+implementation_status: official-code-reported-in-primary-paper
+last_checked: '2026-10-29'
+worker_id: scheduled-chat-30
+worker_completed_at: '2026-10-29T17:34:00+09:00'
+worker_run_key: 20261029-1730-scheduled-chat-30/r01
+reference_main_sha: e392833b9c0064b74d2a59030335f5c2c5e05d22
+quality_self_review_passed: true
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+under16kb_reaudit_target_path: papers/inference/16-weight-quantization-compression/2026-2601.20745-hestia-a-hessian-guided-differentiable-quantization-aware-training-frame.md
+under16kb_reaudit_source_git_blob_sha: f201bddc3994bc683f215dee16928af2bfaa86a0
+under16kb_reaudit_source_sha256: bcd75ce8e66edcc3a87b2f53cad9da296bdb066dd217da097ba6e92dde7614ee
+under16kb_reaudit_version: 2026-10-07-v1
+under16kb_reaudit_passed: true
+last_audited: '2026-10-29'
+audit_version: 1
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:1308.3432
+  arxiv_id: '1308.3432'
+- canonical_id: arXiv:2307.13304
+  arxiv_id: '2307.13304'
+- canonical_id: arXiv:2406.07177
+  arxiv_id: '2406.07177'
+- canonical_id: arXiv:1803.05457
+  arxiv_id: '1803.05457'
+- canonical_id: arXiv:2509.22935
+  arxiv_id: '2509.22935'
+- canonical_id: arXiv:1902.08153
+  arxiv_id: '1902.08153'
+- canonical_id: arXiv:2509.23809
+  arxiv_id: '2509.23809'
+- canonical_id: arXiv:2407.12327
+  arxiv_id: '2407.12327'
+- canonical_id: arXiv:2510.08757
+  arxiv_id: '2510.08757'
+- canonical_id: arXiv:1605.04711
+  arxiv_id: '1605.04711'
+- canonical_id: arXiv:2306.00978
+  arxiv_id: '2306.00978'
+- canonical_id: arXiv:2305.17888
+  arxiv_id: '2305.17888'
+- canonical_id: arXiv:2502.02631
+  arxiv_id: '2502.02631'
+- canonical_id: arXiv:2402.17764
+  arxiv_id: '2402.17764'
+- canonical_id: arXiv:2405.14852
+  arxiv_id: '2405.14852'
+- canonical_id: arXiv:2510.18784
+  arxiv_id: '2510.18784'
+- canonical_id: arXiv:2402.04396
+  arxiv_id: '2402.04396'
+- canonical_id: arXiv:2512.02901
+  arxiv_id: '2512.02901'
+- canonical_id: arXiv:2508.05571
+  arxiv_id: '2508.05571'
+- canonical_id: arXiv:2501.17116
+  arxiv_id: '2501.17116'
+- canonical_id: arXiv:2505.05427
+  arxiv_id: '2505.05427'
+- canonical_id: arXiv:2211.10438
+  arxiv_id: '2211.10438'
+- canonical_id: arXiv:2412.04787
+  arxiv_id: '2412.04787'
+- canonical_id: arXiv:2505.09388
+  arxiv_id: '2505.09388'
+- canonical_id: arXiv:1905.07830
+  arxiv_id: '1905.07830'
+- canonical_id: DOI:10.1137/1.9781611976496.16
+  doi: 10.1137/1.9781611976496.16
+references_checked_at: '2026-10-29'
+references_source: arxiv-html-reference-section
+references_total: 39
+---
+
+# HESTIA：Hessian感度で三値QATの硬化速度を調整する
+
+## 概要
+
+重みを{-1,0,+1}の三値に制限する1.58ビット級の量子化は、重み保存量や乗算器への要求を減らせる可能性がある。一方、学習開始直後から丸めによって三値化すると、実数の潜在重みが小さく更新されても量子化後の値が変わらない「dead zone」が生じる。標準的なQuantization-Aware Training（QAT）では非微分の丸めをStraight-Through Estimator（STE）で近似して逆伝播するが、前向きの離散変化と後向きの連続勾配が一致しないため、低ビットでの最適化が停滞しやすい。
+
+HESTIAは、最初から硬い三値丸めを使うのではなく、三値候補へのsoftmax確率の期待値として重みを連続的に近似し、温度を徐々に下げて最終的に三値へ近づける。さらにテンソルごとのHessian trace（損失曲面の曲率の代理指標）をオフラインで近似し、曲率が大きい敏感なテンソルほど高い温度を長く保つ。学習序盤の勾配流を確保しつつ、学習終盤は実際の三値推論に対応する重みへ硬化する。
+
+Llama-3.2-1B/3Bの5つのゼロショット課題平均は、Tequila QATの0.519/0.576からHESTIAの0.547/0.601へ改善した。ただしBF16基準は0.558/0.636で、元の精度を完全に回復したわけではない。重要なのは、HESTIAは**量子化済みモデルの学習方法**であり、既存BF16モデルをその場で低ビット変換するPTQや、GPU生成速度を直接高速化する推論カーネルではない点である。
+
+## 問題設定
+
+量子化後の重みを W_hat=γ×clip(round(W/γ),−1,+1) とする。γは重みの平均絶対値を基に計算したスケールで、原著では逆伝播時に固定値として扱う。丸め後の値が変化する境界は±0.5γ付近にあり、潜在重みWが小さく更新されても境界を越えなければ量子化後の重みは変わらない。STEはこの丸めの導関数を恒等写像のように扱うが、学習器が想定する勾配と実際の前向き計算の感度に差が生じる。
+
+問題は、硬い三値制約を最終的に守りながら、学習序盤に有効な探索経路を確保することである。三値QATでは表現できる重み状態が非常に少ないため、学習初期に境界の片側へ固定されると、後から有用な状態へ移るのが難しい。加えてTransformerの各線形層は量子化誤差への感度が異なる。全テンソルへ同じ温度減衰を適用すると、敏感な層が早く硬化し過ぎる可能性がある。
+
+## 手法
+
+### 1. Softmaxで三値割当を連続緩和する
+
+潜在重みwに対し、三値候補q∈{-1,0,+1}への割当確率を、正規化距離の二乗に基づく温度τのsoftmaxで定義する。式7の重みは π_τ(q|w)∝exp(−(w/γ−q)^2/τ) であり、実効的な緩和重みは w_tilde=γΣ_q qπ_τ(q|w) となる。τが高いと複数候補が連続的に混合し、潜在重みの小さな変化も前向きの重みに反映される。τ→0で最も近い三値候補へ収束する。
+
+この連続緩和はSTEと異なり、有限温度では割当確率の導関数を明示的に計算できる。論文はJacobianを導出し、温度が下がるにつれて境界付近に勾配が集中する性質を解析する。ただし温度をゼロへ近づける過程で数値的な急峻さは増えるため、温度の減衰方法と学習の進み方を合わせる必要がある。
+
+### 2. 圧縮圧力pで実数重みから徐々に移行する
+
+学習初期から緩和重みだけを使うと、表現力を急に失う可能性がある。そこで実際の前向き重みを W_eff(t)=(1−p_t)W+p_t H(W;τ_t) とし、p_tを0から1へ線形に増やす圧縮段階を設ける。p_t=0では実数重みの学習に近く、p_t=1で緩和三値表現だけになる。
+
+圧縮段階の終了後、温度τをcosine scheduleで減衰させるアニーリング段階に入る。これは「実数重みから三値近似へ責任を移すタイミング」と「三値候補への割当をどれだけ硬くするか」を別の制御変数として扱う設計である。学習終了時には通常の硬い三値量子化演算を適用して推論重みを作る。
+
+### 3. Hutch++によるHessian trace感度推定
+
+各線形テンソルW_iのHessian全体を直接形成するのは巨大なLLMでは非現実的である。HESTIAはHutch++を使い、Hessian-vector積と低ランク部分空間・残差の確率的トレース推定からh_i≈Tr(H_i)を得る。テンソル間で値のスケールが大きく異なるため、log h_iを標準化し、sigmoidで感度スコアs_iへ写す。高いs_iは離散化誤差に敏感なテンソルを表す代理指標となる。
+
+この感度推定はQATの前に一度実施し、学習中は固定する。したがって各学習ステップでHessianを計算し直す方式ではないが、オフラインの前計算費用が必要である。Hessian traceは曲率の代理量であり、最終的な量子化損失やタスク精度を完全に予測するものではない。
+
+### 4. テンソル別の温度アニーリング
+
+全テンソルに共通の基本温度τ_base(t)をcosine減衰で作り、テンソルiの温度を τ_i(t)=τ_base(t)×exp(αs_i) とする。感度s_iが高いほど温度が高くなり、硬い三値割当へ移る速度が相対的に遅くなる。感度の低い層は早く三値に近づき、敏感な層は連続緩和の探索余地を長く保つ。
+
+この方法はHessianに応じて層ごとにビット幅を変えるmixed-precisionではない。最終的にはすべての対象線形層を同じ三値コードブックで表現し、学習中の「いつ硬くするか」だけを変える。実装はPyTorch/AdamWで、オフラインHutch++、初期温度の較正、圧縮圧力の増加、温度の減衰、最後の硬量子化という手順を踏む。
+
+## 評価条件
+
+| 観点 | 内容 |
+|---|---|
+| 基盤モデル | Llama-3.2-1B、Llama-3.2-3Bの公開事前学習済み重みから開始 |
+| QATデータ | Ultra-FineWeb 10Bトークン、系列長1,024 |
+| 量子化 | weight-only三値、group size=128、Transformer線形層を対象、活性などは全精度 |
+| 比較対象 | Tequila、AbsMean、TWN、LSQ、SEQ、DLT、INT2、BF16等 |
+| 評価 | ARC-Easy、ARC-Challenge、HellaSwag、PIQA、WinoGrande、lm-evaluation-harness |
+| 評価回数 | 自方式の各数値は5回の平均、比較方式の一部は既報論文から引用 |
+| 別系統検証 | Qwen2.5-0.5BのFairy2i量子化へHessianスケジュールを適用 |
+
+この評価は重み精度の低下に対するタスク正答率の比較である。モデルの総VRAM占有量、量子化重みを使う専用GPUカーネル、トークン生成速度、消費電力を同条件で測ったエンドツーエンド推論ベンチマークではない。1.58ビットという呼称は三値コードブックの理論的情報量に由来し、実際の保存形式ではスケールやメタデータ、整列が別に必要となる。
+
+## 評価結果
+
+### ゼロショット平均（原著表1）
+
+| 方式 | 1B・5課題平均 | 3B・5課題平均 |
+|---|---:|---:|
+| BF16 | 0.558 | 0.636 |
+| Tequila | 0.519 | 0.576 |
+| INT2 | 0.491 | 0.549 |
+| HESTIA | **0.547** | **0.601** |
+
+Tequila比の改善は1Bで+0.028（相対約5.39%）、3Bで+0.025（相対約4.34%）である。論文要旨の「5.39%、4.34%改善」は絶対パーセントポイントではなく、基準スコアに対する相対改善率と解釈できる。BF16との差は1Bで−0.011、3Bで−0.035であり、三値化の損失は残る。
+
+1BではARC-ChallengeがTequila 0.305からHESTIA 0.350へ、PIQAが0.710から0.726へ改善する。一方、HellaSwagはTequila 0.391から0.418、WinoGrandeは0.542から0.577であり、課題によって改善幅が異なる。3BのARC-ChallengeはTequila 0.346からHESTIA 0.393へ改善するが、WinoGrandeはTequila 0.627に対してHESTIA 0.622と小幅に悪化する。原著本文の「全5課題で改善」という記述は表1のWinoGrande 3Bと一致しないため、表の値を優先する。
+
+### グループ量子化とHessian感度の寄与（原著表4）
+
+| 条件 | 1B平均 | 3B平均 |
+|---|---:|---:|
+| Hessianなし・per-tensor | 0.537 | 0.597 |
+| Hessianなし・group size128 | 0.540 | 0.599 |
+| HESTIA・group size128 | **0.547** | **0.601** |
+
+per-tensorからgroup size128への変更だけで1Bは+0.003、3Bは+0.002改善する。さらにHessian別スケジュールを加えた寄与は1Bで+0.007（相対約1.30%）、3Bで+0.002（相対約0.33%）である。Tequila比の全改善をHessian推定だけの効果と解釈してはいけない。連続緩和・圧縮圧力・group量子化・感度別アニーリングを組み合わせた全体の改善である。
+
+### 他の三値学習レシピとの比較
+
+原著表2では、1BのHESTIA 0.547（10Bトークン）に対して、BitNet 1.3Bは0.483（100Bトークン）、Spectra 1.1Bは0.489（100Bトークン）と報告する。ただしパラメータ数、訓練データ、アーキテクチャ、学習レシピが異なるため、10B対100Bの数字だけで学習効率の優劣を厳密に定量化できない。最も公平な比較は同じLlama-3.2の出発点と10Bトークンを揃えたTequila等との表1比較である。
+
+Qwen2.5-0.5BのFairy2i系へ適用した表3では、5課題平均がFairy2i 0.471からFairy2i-H 0.474へ改善するが、差は0.003と小さい。個別にはARC-Challengeが0.238から0.236、PIQAが0.678から0.670へ悪化する。複素数表現の量子化でも一部の効果は確認できるものの、全課題で改善する普遍的な保証はない。
+
+## 既存研究との差
+
+BitNet b1.58などは三値重みの効率的なモデル表現を実証したが、学習初期からの硬い量子化では勾配不一致が問題になる。Tequilaはdead zoneを緩和する別の更新機構を使う。HESTIAは勾配の事後補正ではなく、前向きの量子化演算そのものを連続緩和し、最終的な硬い三値化へ移行する経路を設計する。
+
+HAWQやQuIP#のようなHessian感度の利用は、層別のビット割当や量子化誤差の削減を目的にすることが多い。HESTIAはビット幅を固定したまま、曲率の高い層が硬化するタイミングを遅らせるために感度を利用する。これは低ビット推論用の重みを作るための訓練最適化であり、ランタイムのKV圧縮や推論スケジューリングとは直接の技術対象が異なる。
+
+## 限界
+
+モデル規模は1Bと3Bが中心であり、7B以上の大規模LLMやMoEへの一般化は未実証である。10BトークンのQAT、Hessian traceのオフライン推定、初期温度の最適化という追加学習・較正費用が必要で、既存モデルを数分で低ビット化するPTQではない。学習の計算・電力費用と、推論時の容量・速度の節約を総合した損益分岐は示されていない。
+
+実機の三値専用推論カーネルによる速度・VRAM測定はなく、1.58ビット相当の理論的符号長が実際のGPUメモリ量や生成速度へそのまま反映されるとは限らない。活性は全精度で、線形層以外にも高精度成分が残る。表1の比較数値には既報値の引用が含まれ、すべての方式を完全同一環境で再学習した直接比較とは限らない。3B WinoGrandeやFairy2iの一部課題では負の結果があり、平均値の改善だけで汎用能力の全面的な回復を主張できない。
+
+## 一次資料
+
+- [HESTIA原著PDF](https://arxiv.org/pdf/2601.20745v1)：§3（緩和・圧縮圧力・Hessianスケジュール）、§4（理論）、§5・表1～4（実験）を照合。
+- [arXiv書誌](https://arxiv.org/abs/2601.20745)：論文識別子・初稿。
+- [論文記載の公式コード](https://github.com/hestia2026/Hestia)：原著AbstractにURL明記。リポジトリの動作検証は未実施。
+
+## 2026-10-29 意味品質再監査：原著v1との照合補遺
+
+本節は既存の三値量子化解説に対する独立再監査であり、対象はarXiv:2601.20745v1の§3、§5、表1〜4、付録Bである。学習段階の連続緩和と推論時の硬い三値化を混同しないため、式(10)の圧縮圧力と式(14)以降の温度スケジュールを別々に検査した。圧縮圧力は実数重みと緩和重みの混合比を変え、温度は各三値候補のsoftmax割当の鋭さを変える。Hutch++は事前にテンソル別Hessian traceを近似し、その後のQAT中は感度を固定するため、推論時にHessianを計算する機構ではない。
+
+原著表4では、1Bのgroup size128・Hessianなしの平均0.540に対してHESTIAは0.547、3Bでは0.599に対して0.601である。相対改善はそれぞれ約1.30%と0.33%にとどまり、Tequila比の総改善率5.39%／4.34%のすべてをHessian感度の効果に帰属できない。3BのARC-ChallengeはHessianなし0.402に対してHESTIA 0.393と悪化し、1BのHellaSwagも0.422から0.418へ下がる。したがって「Hessianを入れれば全課題が改善する」という主張は表4からは成立しない。
+
+表1の3B WinoGrandeではTequila 0.627に対してHESTIA 0.622であり、本文§5.2の「五つのベンチマークすべて改善」との記述は不一致である。再監査では表の値を優先した。また、比較手法の数値の一部は原著の既報値を引用しており、全方式を同一GPU・同一乱数seedで再学習した直接比較ではない。重み三値化の精度指標と、GPU上での実効メモリ・生成速度・消費電力を分ける必要がある。後者のエンドツーエンド測定は原著にない。
+
+原著の§5.1によれば、Llama-3.2-1B/3Bの事前学習済みモデルをUltra-FineWeb 10Bトークン、系列長1024でQATし、Transformerのattention/MLP線形層をgroup size128で三値化、活性と非対象成分は全精度のままである。初期温度の較正とHutch++事前推定には追加費用があり、既存のBF16モデルへ即時適用できる学習不要PTQとは異なる。表3のQwen2.5-0.5BではFairy2i平均0.471→0.474だがARC-Challenge 0.238→0.236、PIQA 0.678→0.670の負の結果も保持した。
+
+**監査結論**：手法、条件、表1〜4の主要数値、負の結果、追加学習費用と未測定の推論速度が対応し、意味品質PASS。GitHub後段の受入・固定source照合は未実施。一次全文：https://arxiv.org/html/2601.20745v1

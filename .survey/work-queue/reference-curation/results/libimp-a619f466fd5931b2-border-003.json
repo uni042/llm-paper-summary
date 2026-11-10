@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a619f466fd5931b2-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/248156.248171",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/248156.248171",
+    "identity_tokens": [
+      "DOI:10.1145/248156.248171"
+    ],
+    "reason": "The official ACM DOI page returned HTTP 403, so its primary abstract could not be retrieved.",
+    "first_checked_at": "2026-10-05T00:48:09+00:00",
+    "last_checked_at": "2026-10-05T00:48:09+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md"
+    ],
+    "title": "Start-time fair queueing: a scheduling algorithm for integrated services packet switching networks"
+  },
+  "processed_at": "2026-10-05T00:48:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a619f466fd59",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

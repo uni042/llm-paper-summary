@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79e88901ac361f86-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.08665",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.08665",
+    "identity_tokens": [
+      "arXiv:2601.08665",
+      "id:arXiv:2601.08665",
+      "url:https://arxiv.org/abs/2601.08665"
+    ],
+    "reason": "一次要旨の主題は視覚言語行動モデルのロボット航法、適応的思考、視覚補助言語記憶、航法成功率である。必要時だけ思考を起動する設計は計算量に間接的に関係するが、LLM推論基盤のカーネル・メモリ・サービング性能の独立したシステム改善を検証しないため対象外。",
+    "first_checked_at": "2026-10-13T10:42:58+00:00",
+    "last_checked_at": "2026-10-19T16:50:38+00:00",
+    "linked_from": [],
+    "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory"
+  },
+  "processed_at": "2026-10-19T16:50:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79e88901ac36",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cfdde8165f3e8331-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.11897",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.11897",
+    "identity_tokens": [
+      "arXiv:2607.11897"
+    ],
+    "reason": "Full text gives theory/toy evidence only and explicitly leaves fair throughput and large-scale LM experiments to future work, so runtime benefit cannot be confirmed.",
+    "first_checked_at": "2026-10-05T12:11:27+00:00",
+    "last_checked_at": "2026-10-05T12:11:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Semidirect Fourier Delta Attention: Phase-Controlled Delta Memory with Constructive Chunk-WY Kernels"
+  },
+  "processed_at": "2026-10-05T12:11:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cfdde8165f3e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-efd926032ea747d8-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.13544",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.13544",
+    "identity_tokens": [
+      "arXiv:2609.13544"
+    ],
+    "reason": "一次要旨: Deep neural networks (DNNs) are widely adopted in various fields, driving an emerging trend in developing software stacks associated with DNN training systems. For example, many codes have been ported across different frameworks or developed to leverage the computing power of GPUs or domain-specific accelerators. However, validating a kernel implementation in DNN training is time-consuming and generally requires mass",
+    "first_checked_at": "2026-10-05T06:54:06+00:00",
+    "last_checked_at": "2026-10-05T06:54:06+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "PEAT: Pseudo-Error Assessment for GPU Kernel Validation in DNN Training"
+  },
+  "processed_at": "2026-10-05T06:54:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-efd926032ea7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

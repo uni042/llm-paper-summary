@@ -1,0 +1,684 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-feca65a0b064b686-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-feca65a0b064",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2311.01305",
+    "arXiv:2510.09535",
+    "arXiv:2605.14310",
+    "arXiv:2606.09514",
+    "arXiv:2610.04635",
+    "arXiv:2610.06686",
+    "arXiv:2610.06927"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "b680d715e06401e3845c0d3d85d257d9de5c632f",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T16:02:24.403191+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2311.01305",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.09535",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.14310",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.09514",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.04635",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.06686",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.06927",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CoRDS: Coreset-based Representative and Diverse Selection for Streaming Video Understanding",
+      "source_url": "https://arxiv.org/abs/2605.14310",
+      "year": 2026,
+      "published": "2026-05-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming video understanding with large vision-language models (VLMs) requires a compact memory that can support future reasoning over an ever-growing visual history. A common solution is to compress the key-value (KV) cache, but existing streaming methods typically rely on local token-wise heuristics, such as recency, temporal redundancy, or saliency, which do not explicitly optimize whether the retained cache is representative of the accumulated history. We propose to view KV-cache compression as a coreset selection problem: rather than scoring tokens independently for retention, we select a small subset that covers the geometry of the accumulated visual cache. Our method operates in a joint KV representation and introduces a bicriteria objective that balances coverage in key and value spaces, preserving both retrieval structure and output-relevant information. To encourage a more diverse retained subset, we further introduce an orthogonality-driven diversity criterion that favors candidates contributing new directions beyond the current selection, and connect this criterion to log-determinant subset selection. Across four open-source VLMs and five long-video and streaming-video benchmarks, our method improves over heuristic streaming compression baselines under a fixed cache budget. These results highlight that representative coreset selection offers a more effective principle, than token-wise pruning, for memory-constrained streaming video understanding.",
+      "identifiers": [
+        "SemanticScholar:a12f0dbf0e3aa283dcaff96e26a9b5cf46594ea5"
+      ],
+      "semantic_scholar_id": "a12f0dbf0e3aa283dcaff96e26a9b5cf46594ea5",
+      "canonical_id": "arXiv:2605.14310",
+      "arxiv_id": "2605.14310",
+      "doi": "10.48550/arXiv.2605.14310",
+      "authors": [
+        "Ailar Mahdizadeh",
+        "Puria Azadi",
+        "Mu-Chen Li",
+        "Xiangteng He",
+        "Leonid Sigal"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2606.09514",
+      "year": 2026,
+      "published": "2026-06-08",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) incur high inference cost due to their depth and parameter scale. Depth pruning can reduce latency by skipping redundant Transformer blocks, but existing methods (i) provide limited control under user-specific compute budgets and (ii) typically fix the routing path, failing to adapt as the context grows during decoding. We propose Buddy, a budget-driven dynamic depth routing framework. Buddy uses a lightweight Decision Module to score intermediate layers conditioned on the input and deterministically executes the top-k layers to satisfy a given budget. To support decode-time adaptation, Buddy reuses the first-layer KV cache as a low-overhead global context source and pools it together with the newest token representation before each routing decision. When no explicit budget is provided, an optional Budget Predictor estimates an input-dependent compute level to balance quality and efficiency. Experiments on Llama-family and Qwen models show that Buddy is competitive with strong static pruning baselines and often improves the accuracy-compute trade-off, while uniquely supporting strict budget control, decode-time rerouting, and multiple budgets within a single trained model.",
+      "identifiers": [
+        "SemanticScholar:ee3ec26f905b0d30a53b01fb82e6903765e396e0"
+      ],
+      "semantic_scholar_id": "ee3ec26f905b0d30a53b01fb82e6903765e396e0",
+      "canonical_id": "arXiv:2606.09514",
+      "arxiv_id": "2606.09514",
+      "doi": "10.48550/arXiv.2606.09514",
+      "authors": [
+        "Yu-Hua Zhou",
+        "Shaoqi Yu",
+        "Shi-Chao Weng",
+        "Chang-Hai Zhou",
+        "Ming Yin",
+        "Fei Yang",
+        "Ai-Min Pan"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 144,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LatentIndex: Cross-Layer Sharing with Layer-Specific Selection for Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2610.04635",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention reduces core-attention computation, but its indexers still incur repeated selection work and per-layer key-cache storage. Reusing selected indices across layers reduces this overhead but constrains multiple layers to the same token set. We introduce LatentIndex, which extends the latent-sharing principle of Multi-head Latent Attention across indexer layers. Each layer group constructs a shared latent cache from its first layer's hidden states, while layer-specific scoring enables independent token selection. Absorbing key decoders into queries enables direct scoring of the shared cache without reconstructing historical per-layer keys. We develop training-free calibration and investigate a training-aware instantiation of this principle. To balance quality and computation, a hierarchical selection (HS) variant lets followers independently refine a shared candidate set proposed by the anchor. With four-layer sharing, LatentIndex reduces logical indexer-cache storage by 61.1% on DeepSeek-V3.2. Across DeepSeek-V3.2 and GLM-5, training-free LatentIndex improves head-wise attention-mass recall over IndexCache by up to 3.28 percentage points while maintaining RULER and LongBench performance close to native DSA. HS further achieves 2.30-2.72 times decode indexer speedups over DSA across 8K-128K contexts, retaining most of LatentIndex's recall. LatentIndex offers a new perspective on cross-layer indexing: sharing continuous representations rather than discrete selections enables efficient reuse while preserving layer-specific token selection.",
+      "identifiers": [
+        "SemanticScholar:23fd98ed144ceaaa93e2e72be7a41cc3f0b24b63"
+      ],
+      "semantic_scholar_id": "23fd98ed144ceaaa93e2e72be7a41cc3f0b24b63",
+      "canonical_id": "arXiv:2610.04635",
+      "arxiv_id": "2610.04635",
+      "authors": [
+        "Zhao-Hui Wang",
+        "Zhi-Xin Pan",
+        "Fan-Xu Meng",
+        "Mu-Han Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AttSVD:Prompt-Adaptive Low-Rank KV Cache Compression via Attention-Guided SVD",
+      "source_url": "https://arxiv.org/abs/2610.06927",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache of autoregressive transformers grows linearly with context length and dominates memory at long context. Most training-free remedies evict low-importance tokens, an irreversible choice along the sequence axis. We instead keep every token and store it more cheaply along the\"feature\"axis. We therefore propose AttSVD, a new\"interpretable\"low-rank compression whose basis is derived from each prompt's own attention geometry: an online, per-prompt truncated SVD that keeps only the directions attention actually reads, cutting persistent per-head KV memory in proportion to the retained rank. We propose two decode-time caching strategies, accumulating and streaming, for short and long generation regimes. Furthermore, we propose two refinements that make compression adaptive. A per-matrix energy rule sizes the logit space and the attention mass independently. An attention-aware basis truncates only in the spaces attention actually reads, preserving both the attention logits and the attention output. The same factors also provide free, per-head interpretability insights into the effective rank and the geometry attention consumes. Across multiple models, on both an agentic benchmark and the full LongBench suite AttSVD stays on par with the dense cache while using up to 50% of the KV-cache memory.",
+      "identifiers": [
+        "SemanticScholar:df5b82211f4b447b2335e3daace6e4b55f7a4da3"
+      ],
+      "semantic_scholar_id": "df5b82211f4b447b2335e3daace6e4b55f7a4da3",
+      "canonical_id": "arXiv:2610.06927",
+      "arxiv_id": "2610.06927",
+      "authors": [
+        "Sara Abdali",
+        "Jongwoo Ko",
+        "Pashmina Cameron"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OVAL: Output-Aware Local Page Bases for KV Cache Retrieval",
+      "source_url": "https://arxiv.org/abs/2610.06686",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long context inference with large language models becomes increasingly expensive as attention must operate over an ever growing KV cache. Page sparse attention reduces this cost by representing each KV page compactly and retrieving only a subset for each query. Existing retrieval methods are designed to estimate attention scores or page relevance, but their objectives do not directly account for how approximation errors affect the resulting value weighted attention output. We introduce \\method{}, an output aware page encoding derived from the joint structure of keys and values while preserving the key information needed for accurate retrieval. \\method{} is training free and requires no additional value dependent statistics at inference time. Once constructed, its stored representation has the same size and decode time scoring cost as a key only spectral representation. Across long reasoning, long context understanding, and long generation benchmarks, \\method{} consistently improves over the key only spectral baseline and performs competitively with recent KV cache compression and retrieval methods. On long reasoning benchmarks, it achieves strong avg@\\(k\\) performance across model benchmark pairs, while matching or surpassing leading baselines on several long context understanding and generation settings with modest decoding overhead. Code is available at \\url{https://github.com/Ashkan13776/oval-kv}.",
+      "identifiers": [
+        "SemanticScholar:16b45397fe68d21ef5fb95e1cdb731e689e31253"
+      ],
+      "semantic_scholar_id": "16b45397fe68d21ef5fb95e1cdb731e689e31253",
+      "canonical_id": "arXiv:2610.06686",
+      "arxiv_id": "2610.06686",
+      "authors": [
+        "Ashkan Shahbazi",
+        "Chayne Thrash",
+        "Soheil Kolouri"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AWEQ: Post-Training Quantization with Activation-Weight Equalization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2311.01305",
+      "year": 2023,
+      "published": "2023-11-02",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models(LLMs) exhibit excellent performance across a variety of tasks, but they come with significant computational and storage costs. Quantizing these models is an effective way to alleviate this issue. However, existing methods struggle to strike a balance between model accuracy and hardware efficiency. This is where we introduce AWEQ, a post-training method that requires no additional training overhead. AWEQ excels in both ultra-low-bit quantization and 8-bit weight and activation (W8A8) quantization. There is an observation that weight quantization is less challenging than activation quantization. AWEQ transfers the difficulty of activation quantization to weights using channel equalization, achieving a balance between the quantization difficulties of both, and thereby maximizing performance. We have further refined the equalization method to mitigate quantization bias error, ensuring the robustness of the model. Extensive experiments on popular models such as LLaMA and OPT demonstrate that AWEQ outperforms all existing post-training quantization methods for large models.",
+      "identifiers": [
+        "SemanticScholar:4cf7de6c10f871ef9bc4cde15b4417299da18b00"
+      ],
+      "semantic_scholar_id": "4cf7de6c10f871ef9bc4cde15b4417299da18b00",
+      "canonical_id": "arXiv:2311.01305",
+      "arxiv_id": "2311.01305",
+      "doi": "10.48550/arXiv.2311.01305",
+      "authors": [
+        "Baisong Li",
+        "Xing-Wang Wang",
+        "Hai-Xiao Xu"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1093,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mitigating Overthinking through Reasoning Shaping",
+      "source_url": "https://arxiv.org/abs/2510.09535",
+      "year": 2025,
+      "published": "2025-10-10",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) boosted by Reinforcement Learning from Verifier Reward (RLVR) have shown great power in problem solving, yet they often cause overthinking: excessive, meandering reasoning that inflates computational cost. Prior designs of penalization in RLVR manage to reduce token consumption while often harming model performance, which arises from the oversimplicity of token-level supervision. In this paper, we argue that the granularity of supervision plays a crucial role in balancing efficiency and accuracy, and propose Group Relative Segment Penalization (GRSP), a step-level method to regularize reasoning. Since preliminary analyses show that reasoning segments are strongly correlated with token consumption and model performance, we design a length-aware weighting mechanism across segment clusters. Extensive experiments demonstrate that GRSP achieves superior token efficiency without heavily compromising accuracy, especially the advantages with harder problems. Moreover, GRSP stabilizes RL training and scales effectively across model sizes.",
+      "identifiers": [
+        "SemanticScholar:383c3924b498a16ab2f690e58d6f616cd70a5787"
+      ],
+      "semantic_scholar_id": "383c3924b498a16ab2f690e58d6f616cd70a5787",
+      "canonical_id": "arXiv:2510.09535",
+      "arxiv_id": "2510.09535",
+      "doi": "10.48550/arXiv.2510.09535",
+      "authors": [
+        "Feifan Song",
+        "Shaohang Wei",
+        "Bofei Gao",
+        "Ye-Jie Wang",
+        "Wen Luo",
+        "Wei Li",
+        "Lin-Li Yao",
+        "Weimin Xiong",
+        "Liang Chen",
+        "Tianyu Liu",
+        "Hou-Feng Wang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 385,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.14310",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.14310",
+        "id:SemanticScholar:a12f0dbf0e3aa283dcaff96e26a9b5cf46594ea5",
+        "id:arXiv:2605.14310",
+        "title:cords coresetbased representative and diverse selection for streaming video understanding",
+        "url:https://arxiv.org/abs/2605.14310"
+      ],
+      "record": {
+        "title": "CoRDS: Coreset-based Representative and Diverse Selection for Streaming Video Understanding",
+        "source_url": "https://arxiv.org/abs/2605.14310",
+        "year": 2026,
+        "published": "2026-05-14",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Streaming video understanding with large vision-language models (VLMs) requires a compact memory that can support future reasoning over an ever-growing visual history. A common solution is to compress the key-value (KV) cache, but existing streaming methods typically rely on local token-wise heuristics, such as recency, temporal redundancy, or saliency, which do not explicitly optimize whether the retained cache is representative of the accumulated history. We propose to view KV-cache compression as a coreset selection problem: rather than scoring tokens independently for retention, we select a small subset that covers the geometry of the accumulated visual cache. Our method operates in a joint KV representation and introduces a bicriteria objective that balances coverage in key and value spaces, preserving both retrieval structure and output-relevant information. To encourage a more diverse retained subset, we further introduce an orthogonality-driven diversity criterion that favors candidates contributing new directions beyond the current selection, and connect this criterion to log-determinant subset selection. Across four open-source VLMs and five long-video and streaming-video benchmarks, our method improves over heuristic streaming compression baselines under a fixed cache budget. These results highlight that representative coreset selection offers a more effective principle, than token-wise pruning, for memory-constrained streaming video understanding.",
+        "identifiers": [
+          "SemanticScholar:a12f0dbf0e3aa283dcaff96e26a9b5cf46594ea5"
+        ],
+        "semantic_scholar_id": "a12f0dbf0e3aa283dcaff96e26a9b5cf46594ea5",
+        "canonical_id": "arXiv:2605.14310",
+        "arxiv_id": "2605.14310",
+        "doi": "10.48550/arXiv.2605.14310",
+        "authors": [
+          "Ailar Mahdizadeh",
+          "Puria Azadi",
+          "Mu-Chen Li",
+          "Xiangteng He",
+          "Leonid Sigal"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 169,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.09514",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.09514",
+        "id:SemanticScholar:ee3ec26f905b0d30a53b01fb82e6903765e396e0",
+        "id:arXiv:2606.09514",
+        "title:buddy budgetdriven dynamic depth routing for adaptive large language model inference",
+        "url:https://arxiv.org/abs/2606.09514"
+      ],
+      "record": {
+        "title": "BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2606.09514",
+        "year": 2026,
+        "published": "2026-06-08",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) incur high inference cost due to their depth and parameter scale. Depth pruning can reduce latency by skipping redundant Transformer blocks, but existing methods (i) provide limited control under user-specific compute budgets and (ii) typically fix the routing path, failing to adapt as the context grows during decoding. We propose Buddy, a budget-driven dynamic depth routing framework. Buddy uses a lightweight Decision Module to score intermediate layers conditioned on the input and deterministically executes the top-k layers to satisfy a given budget. To support decode-time adaptation, Buddy reuses the first-layer KV cache as a low-overhead global context source and pools it together with the newest token representation before each routing decision. When no explicit budget is provided, an optional Budget Predictor estimates an input-dependent compute level to balance quality and efficiency. Experiments on Llama-family and Qwen models show that Buddy is competitive with strong static pruning baselines and often improves the accuracy-compute trade-off, while uniquely supporting strict budget control, decode-time rerouting, and multiple budgets within a single trained model.",
+        "identifiers": [
+          "SemanticScholar:ee3ec26f905b0d30a53b01fb82e6903765e396e0"
+        ],
+        "semantic_scholar_id": "ee3ec26f905b0d30a53b01fb82e6903765e396e0",
+        "canonical_id": "arXiv:2606.09514",
+        "arxiv_id": "2606.09514",
+        "doi": "10.48550/arXiv.2606.09514",
+        "authors": [
+          "Yu-Hua Zhou",
+          "Shaoqi Yu",
+          "Shi-Chao Weng",
+          "Chang-Hai Zhou",
+          "Ming Yin",
+          "Fei Yang",
+          "Ai-Min Pan"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 144,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.04635",
+      "identity_tokens": [
+        "id:SemanticScholar:23fd98ed144ceaaa93e2e72be7a41cc3f0b24b63",
+        "id:arXiv:2610.04635",
+        "title:latentindex crosslayer sharing with layerspecific selection for sparse attention",
+        "url:https://arxiv.org/abs/2610.04635"
+      ],
+      "record": {
+        "title": "LatentIndex: Cross-Layer Sharing with Layer-Specific Selection for Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2610.04635",
+        "year": 2026,
+        "published": "2026-10-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse attention reduces core-attention computation, but its indexers still incur repeated selection work and per-layer key-cache storage. Reusing selected indices across layers reduces this overhead but constrains multiple layers to the same token set. We introduce LatentIndex, which extends the latent-sharing principle of Multi-head Latent Attention across indexer layers. Each layer group constructs a shared latent cache from its first layer's hidden states, while layer-specific scoring enables independent token selection. Absorbing key decoders into queries enables direct scoring of the shared cache without reconstructing historical per-layer keys. We develop training-free calibration and investigate a training-aware instantiation of this principle. To balance quality and computation, a hierarchical selection (HS) variant lets followers independently refine a shared candidate set proposed by the anchor. With four-layer sharing, LatentIndex reduces logical indexer-cache storage by 61.1% on DeepSeek-V3.2. Across DeepSeek-V3.2 and GLM-5, training-free LatentIndex improves head-wise attention-mass recall over IndexCache by up to 3.28 percentage points while maintaining RULER and LongBench performance close to native DSA. HS further achieves 2.30-2.72 times decode indexer speedups over DSA across 8K-128K contexts, retaining most of LatentIndex's recall. LatentIndex offers a new perspective on cross-layer indexing: sharing continuous representations rather than discrete selections enables efficient reuse while preserving layer-specific token selection.",
+        "identifiers": [
+          "SemanticScholar:23fd98ed144ceaaa93e2e72be7a41cc3f0b24b63"
+        ],
+        "semantic_scholar_id": "23fd98ed144ceaaa93e2e72be7a41cc3f0b24b63",
+        "canonical_id": "arXiv:2610.04635",
+        "arxiv_id": "2610.04635",
+        "authors": [
+          "Zhao-Hui Wang",
+          "Zhi-Xin Pan",
+          "Fan-Xu Meng",
+          "Mu-Han Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.06927",
+      "identity_tokens": [
+        "id:SemanticScholar:df5b82211f4b447b2335e3daace6e4b55f7a4da3",
+        "id:arXiv:2610.06927",
+        "title:attsvdpromptadaptive lowrank kv cache compression via attentionguided svd",
+        "url:https://arxiv.org/abs/2610.06927"
+      ],
+      "record": {
+        "title": "AttSVD:Prompt-Adaptive Low-Rank KV Cache Compression via Attention-Guided SVD",
+        "source_url": "https://arxiv.org/abs/2610.06927",
+        "year": 2026,
+        "published": "2026-10-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The key-value (KV) cache of autoregressive transformers grows linearly with context length and dominates memory at long context. Most training-free remedies evict low-importance tokens, an irreversible choice along the sequence axis. We instead keep every token and store it more cheaply along the\"feature\"axis. We therefore propose AttSVD, a new\"interpretable\"low-rank compression whose basis is derived from each prompt's own attention geometry: an online, per-prompt truncated SVD that keeps only the directions attention actually reads, cutting persistent per-head KV memory in proportion to the retained rank. We propose two decode-time caching strategies, accumulating and streaming, for short and long generation regimes. Furthermore, we propose two refinements that make compression adaptive. A per-matrix energy rule sizes the logit space and the attention mass independently. An attention-aware basis truncates only in the spaces attention actually reads, preserving both the attention logits and the attention output. The same factors also provide free, per-head interpretability insights into the effective rank and the geometry attention consumes. Across multiple models, on both an agentic benchmark and the full LongBench suite AttSVD stays on par with the dense cache while using up to 50% of the KV-cache memory.",
+        "identifiers": [
+          "SemanticScholar:df5b82211f4b447b2335e3daace6e4b55f7a4da3"
+        ],
+        "semantic_scholar_id": "df5b82211f4b447b2335e3daace6e4b55f7a4da3",
+        "canonical_id": "arXiv:2610.06927",
+        "arxiv_id": "2610.06927",
+        "authors": [
+          "Sara Abdali",
+          "Jongwoo Ko",
+          "Pashmina Cameron"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.06686",
+      "identity_tokens": [
+        "id:SemanticScholar:16b45397fe68d21ef5fb95e1cdb731e689e31253",
+        "id:arXiv:2610.06686",
+        "title:oval outputaware local page bases for kv cache retrieval",
+        "url:https://arxiv.org/abs/2610.06686"
+      ],
+      "record": {
+        "title": "OVAL: Output-Aware Local Page Bases for KV Cache Retrieval",
+        "source_url": "https://arxiv.org/abs/2610.06686",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long context inference with large language models becomes increasingly expensive as attention must operate over an ever growing KV cache. Page sparse attention reduces this cost by representing each KV page compactly and retrieving only a subset for each query. Existing retrieval methods are designed to estimate attention scores or page relevance, but their objectives do not directly account for how approximation errors affect the resulting value weighted attention output. We introduce \\method{}, an output aware page encoding derived from the joint structure of keys and values while preserving the key information needed for accurate retrieval. \\method{} is training free and requires no additional value dependent statistics at inference time. Once constructed, its stored representation has the same size and decode time scoring cost as a key only spectral representation. Across long reasoning, long context understanding, and long generation benchmarks, \\method{} consistently improves over the key only spectral baseline and performs competitively with recent KV cache compression and retrieval methods. On long reasoning benchmarks, it achieves strong avg@\\(k\\) performance across model benchmark pairs, while matching or surpassing leading baselines on several long context understanding and generation settings with modest decoding overhead. Code is available at \\url{https://github.com/Ashkan13776/oval-kv}.",
+        "identifiers": [
+          "SemanticScholar:16b45397fe68d21ef5fb95e1cdb731e689e31253"
+        ],
+        "semantic_scholar_id": "16b45397fe68d21ef5fb95e1cdb731e689e31253",
+        "canonical_id": "arXiv:2610.06686",
+        "arxiv_id": "2610.06686",
+        "authors": [
+          "Ashkan Shahbazi",
+          "Chayne Thrash",
+          "Soheil Kolouri"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 25,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2311.01305",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2311.01305",
+        "id:SemanticScholar:4cf7de6c10f871ef9bc4cde15b4417299da18b00",
+        "id:arXiv:2311.01305",
+        "title:aweq posttraining quantization with activationweight equalization for large language models",
+        "url:https://arxiv.org/abs/2311.01305"
+      ],
+      "record": {
+        "title": "AWEQ: Post-Training Quantization with Activation-Weight Equalization for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2311.01305",
+        "year": 2023,
+        "published": "2023-11-02",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models(LLMs) exhibit excellent performance across a variety of tasks, but they come with significant computational and storage costs. Quantizing these models is an effective way to alleviate this issue. However, existing methods struggle to strike a balance between model accuracy and hardware efficiency. This is where we introduce AWEQ, a post-training method that requires no additional training overhead. AWEQ excels in both ultra-low-bit quantization and 8-bit weight and activation (W8A8) quantization. There is an observation that weight quantization is less challenging than activation quantization. AWEQ transfers the difficulty of activation quantization to weights using channel equalization, achieving a balance between the quantization difficulties of both, and thereby maximizing performance. We have further refined the equalization method to mitigate quantization bias error, ensuring the robustness of the model. Extensive experiments on popular models such as LLaMA and OPT demonstrate that AWEQ outperforms all existing post-training quantization methods for large models.",
+        "identifiers": [
+          "SemanticScholar:4cf7de6c10f871ef9bc4cde15b4417299da18b00"
+        ],
+        "semantic_scholar_id": "4cf7de6c10f871ef9bc4cde15b4417299da18b00",
+        "canonical_id": "arXiv:2311.01305",
+        "arxiv_id": "2311.01305",
+        "doi": "10.48550/arXiv.2311.01305",
+        "authors": [
+          "Baisong Li",
+          "Xing-Wang Wang",
+          "Hai-Xiao Xu"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1093,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.09535",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.09535",
+        "id:SemanticScholar:383c3924b498a16ab2f690e58d6f616cd70a5787",
+        "id:arXiv:2510.09535",
+        "title:mitigating overthinking through reasoning shaping",
+        "url:https://arxiv.org/abs/2510.09535"
+      ],
+      "record": {
+        "title": "Mitigating Overthinking through Reasoning Shaping",
+        "source_url": "https://arxiv.org/abs/2510.09535",
+        "year": 2025,
+        "published": "2025-10-10",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs) boosted by Reinforcement Learning from Verifier Reward (RLVR) have shown great power in problem solving, yet they often cause overthinking: excessive, meandering reasoning that inflates computational cost. Prior designs of penalization in RLVR manage to reduce token consumption while often harming model performance, which arises from the oversimplicity of token-level supervision. In this paper, we argue that the granularity of supervision plays a crucial role in balancing efficiency and accuracy, and propose Group Relative Segment Penalization (GRSP), a step-level method to regularize reasoning. Since preliminary analyses show that reasoning segments are strongly correlated with token consumption and model performance, we design a length-aware weighting mechanism across segment clusters. Extensive experiments demonstrate that GRSP achieves superior token efficiency without heavily compromising accuracy, especially the advantages with harder problems. Moreover, GRSP stabilizes RL training and scales effectively across model sizes.",
+        "identifiers": [
+          "SemanticScholar:383c3924b498a16ab2f690e58d6f616cd70a5787"
+        ],
+        "semantic_scholar_id": "383c3924b498a16ab2f690e58d6f616cd70a5787",
+        "canonical_id": "arXiv:2510.09535",
+        "arxiv_id": "2510.09535",
+        "doi": "10.48550/arXiv.2510.09535",
+        "authors": [
+          "Feifan Song",
+          "Shaohang Wei",
+          "Bofei Gao",
+          "Ye-Jie Wang",
+          "Wen Luo",
+          "Wei Li",
+          "Lin-Li Yao",
+          "Weimin Xiong",
+          "Liang Chen",
+          "Tianyu Liu",
+          "Hou-Feng Wang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 385,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c9716717261e70c48bfd5c9d36373bf38e4a8bcffb367977ce773df792d7f0d7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2503778b5990d4ba-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1912.10077",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1912.10077",
+    "identity_tokens": [
+      "arXiv:1912.10077"
+    ],
+    "reason": "Transformerがcontinuous sequence-to-sequence functionのuniversal approximatorであることを理論証明しself-attention/FFNの表現力を分析する理論研究。推論system効率化を最終適用先としない。",
+    "first_checked_at": "2026-10-05T01:03:25+00:00",
+    "last_checked_at": "2026-10-05T02:52:35+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Are Transformers universal approximators of sequence-to-sequence functions?"
+  },
+  "processed_at": "2026-10-05T02:52:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2503778b5990",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

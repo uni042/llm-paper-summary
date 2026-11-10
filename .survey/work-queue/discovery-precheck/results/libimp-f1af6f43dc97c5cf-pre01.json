@@ -1,0 +1,98 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f1af6f43dc97c5cf-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f1af6f43dc97",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "OpenReview:ulCAPXYXfa",
+    "arXiv:2305.16300",
+    "arXiv:2306.11695",
+    "arXiv:2402.04617",
+    "arXiv:2407.11550"
+  ],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "73dc877731b17ce456a291dc97d1efdee57a3a0a",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 4,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 0,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 0,
+      "filtered_by_snapshot": 4,
+      "provider_unresolved": 0,
+      "provider_error": 1,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "openreview_notes",
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T18:49:46.777140+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "OpenReview:ulCAPXYXfa",
+      "status": "provider_error",
+      "lookup_route": "openreview_notes",
+      "error": "explicit identifier lookup failed: HTTP Error 403: Forbidden"
+    },
+    {
+      "requested_id": "arXiv:2305.16300",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2305.16300"
+    },
+    {
+      "requested_id": "arXiv:2306.11695",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2306.11695"
+    },
+    {
+      "requested_id": "arXiv:2402.04617",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2402.04617"
+    },
+    {
+      "requested_id": "arXiv:2407.11550",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2407.11550"
+    }
+  ],
+  "results": [],
+  "allowed_records": [],
+  "receipt": "sha256:30706fb1e781034ab22952c50ee6d4ef7b888e11841ade219e5b27dd154d2644",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da30a40be7705f48-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.22242",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.22242",
+    "identity_tokens": [
+      "arXiv:2608.22242"
+    ],
+    "reason": "Fuxi-Climate is a climate-science reasoning model evaluated for domain capability; the abstract gives no LLM inference-efficiency contribution.",
+    "first_checked_at": "2026-10-05T08:13:18+00:00",
+    "last_checked_at": "2026-10-05T08:13:18+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Unfolding the Interdisciplinary Complexities of Climate Science: Fuxi-Climate Foundational Model"
+  },
+  "processed_at": "2026-10-05T08:13:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da30a40be770",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-843e649f4ddc8241-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1911.03897",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1911.03897",
+    "identity_tokens": [
+      "arXiv:1911.03897"
+    ],
+    "reason": "Two-Headed Monster uses two symmetric encoders and a decoder with crossed co-attention to improve machine-translation BLEU; no serving, latency, memory or inference-system optimization is established.",
+    "first_checked_at": "2026-10-14T07:32:28+00:00",
+    "last_checked_at": "2026-10-14T07:32:28+00:00",
+    "linked_from": [],
+    "title": "Two-Headed Monster And Crossed Co-Attention Networks"
+  },
+  "processed_at": "2026-10-14T07:32:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-843e649f4ddc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

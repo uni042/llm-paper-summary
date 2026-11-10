@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa2e8f6819d0d2be-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.12855",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.12855",
+    "identity_tokens": [
+      "arXiv:2609.12855"
+    ],
+    "reason": "一次要旨: Decoder-only text-to-speech (TTS) models scale efficiently but remain prone to content hallucinations that arise from weak text-speech alignment during autoregressive generation. We find that robustness is governed by a non-monotone relation to the sharpness of the alignment-bearing attention heads: a moderate degree is best, whereas over-sharpening is no better than the unaligned backbone and even less robust. Guide",
+    "first_checked_at": "2026-10-05T06:54:07+00:00",
+    "last_checked_at": "2026-10-05T06:54:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "AlignDPO: Preference-Gated Alignment for Reducing Hallucination in Decoder-Only TTS"
+  },
+  "processed_at": "2026-10-05T06:54:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa2e8f6819d0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

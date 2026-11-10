@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9060e9b0e8ed5bc2-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/301453.301486",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/301453.301486",
+    "identity_tokens": [
+      "DOI:10.1145/301453.301486"
+    ],
+    "reason": "一次ACM DOIページ https://doi.org/10.1145/301453.301486 は403 Forbiddenで、primary abstractを取得できなかった。",
+    "first_checked_at": "2026-10-05T01:56:23+00:00",
+    "last_checked_at": "2026-10-05T01:56:23+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2506.02634-kvcache-cache-in-the-wild-characterizing-and-optimizing-kvcache-cache-at.md"
+    ],
+    "title": "EELRU: simple and effective adaptive page replacement"
+  },
+  "processed_at": "2026-10-05T01:56:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9060e9b0e8ed",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

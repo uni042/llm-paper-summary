@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1eccd4b4ea4be50f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.18346",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.18346",
+    "identity_tokens": [
+      "arXiv:2605.18346"
+    ],
+    "reason": "Focused Forcing is training-free per-frame/head KV compression for autoregressive video diffusion, reporting up to 1.48x acceleration and quality gains. It is strongly adjacent to KV-cache eviction, but evidence is video diffusion only and limitations request validation across other architectures/deployments.",
+    "first_checked_at": "2026-10-06T16:04:28+00:00",
+    "last_checked_at": "2026-10-06T16:04:28+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Focused Forcing: Content-Aware Per-Frame KV Selection for Efficient Autoregressive Video Diffusion"
+  },
+  "processed_at": "2026-10-06T16:04:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1eccd4b4ea4b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

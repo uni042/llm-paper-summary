@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Last But Not Least: Boundary Attention CalibratiON for Multimodal KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2606.14782",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) achieve strong vision-language reasoning but incur large KV caches and high decoding latency with long visual contexts. Existing compression methods rely on observation window attention for stable token importance estimation, yet this aggregation can dilute sparse critical evidence and discard answer-relevant tokens under aggressive compression. We identify last query attention as a complementary signal for recovering such evidence, though its irrelevant signals may introduce additional noise. We propose BACON, a plug-and-play method that calibrates observation window attention with last query evidence while suppressing noise through intra-layer coherence and inter-layer persistence. Across diverse benchmarks, models, budgets, and compression methods, BACON improves multimodal KV-cache compression by 7.5% on average under the most aggressive budget, with gains up to 30.9%.",
+      "identifiers": [
+        "SemanticScholar:a9ab65c0dd1e42707d83ec0363939579dd0b9086"
+      ],
+      "semantic_scholar_id": "a9ab65c0dd1e42707d83ec0363939579dd0b9086",
+      "canonical_id": "arXiv:2606.14782",
+      "arxiv_id": "2606.14782",
+      "doi": "10.48550/arXiv.2606.14782",
+      "authors": [
+        "Tian-Hao Chen",
+        "Yuheng Wu",
+        "Ke-Lu Yao",
+        "Xiao-Gang Xu",
+        "Xiao-Bin Hu",
+        "Dong-Man Lee"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      },
+      "reason": "動画・画像を含むMLLMのKV削減で観測窓平均注意だけでは少数の重要証拠が消える問題を扱う。最終クエリ注意を補助信号として用い、層内一貫性と層間持続性でノイズを抑えるBACONを提案。厳しい保持予算で平均7.5%、最大30.9%の性能改善を報告する、マルチモーダルKVキャッシュの直接的な選択手法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "Softmax Linear Attention: Reclaiming Global Competition",
+      "source_url": "https://arxiv.org/abs/2602.01744",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While linear attention reduces the quadratic complexity of standard Transformers to linear time, it often lags behind in expressivity due to the removal of softmax normalization. This omission eliminates \\emph{global competition}, a critical mechanism that enables models to sharply focus on relevant information amidst long-context noise. In this work, we propose \\textbf{Softmax Linear Attention (SLA)}, a framework designed to restore this competitive selection without sacrificing efficiency. By lifting the softmax operation from the token level to the head level, SLA leverages attention heads as coarse semantic slots, applying a competitive gating mechanism to dynamically select the most relevant subspaces. This reintroduces the ``winner-take-all''dynamics essential for precise retrieval and robust long-context understanding. Distinct from prior methods that focus on refining local kernel functions, SLA adopts a broader perspective by exploiting the higher-level multi-head aggregation structure. Extensive experiments demonstrate that SLA consistently enhances state-of-the-art linear baselines (RetNet, GLA, GDN) across language modeling and long-context benchmarks, particularly in challenging retrieval scenarios where it significantly boosts robustness against noise, validating its capability to restore precise focus while maintaining linear complexity.",
+      "identifiers": [
+        "SemanticScholar:ed091b29e1efc522c2a8a1844b5a0a56943ec237"
+      ],
+      "semantic_scholar_id": "ed091b29e1efc522c2a8a1844b5a0a56943ec237",
+      "canonical_id": "arXiv:2602.01744",
+      "arxiv_id": "2602.01744",
+      "doi": "10.48550/arXiv.2602.01744",
+      "authors": [
+        "Mingwei Xu",
+        "Xuan Lin",
+        "Xin Guo",
+        "Wan-Qing Xu",
+        "Wanyun Cui"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": null
+      },
+      "reason": "線形注意がsoftmax正規化を省くことで長文脈の選択性を失う問題に対し、トークン単位でなく注意ヘッド単位の競合ゲートを導入するSoftmax Linear Attentionを提案。RetNet・GLA・GDN等の線形基準に対し、線形計算量を維持しながら検索耐性を改善する。新しい低計算量注意アーキテクチャとして関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "High-Throughput Non-uniformly Quantized 3-bit LLM Inference",
+      "source_url": "https://doi.org/10.1145/3774934.3786423",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Large Language Models (LLMs) are widely adopted, their massive parameter size constrains practical deployment. A common solution is clustering-based non-uniform quantization, which effectively compresses models to as low as 3 bits per weight while preserving high accuracy. However, instead of accelerating memory-bound LLM inference, the memory reduction paradoxically often causes a significant slowdown due to dequantization overhead and GPU underutilization. To address the issue, we propose Quantix, a framework designed to convert memory savings into inference speedups. Quantix applies two key optimizations: (1) a hardware-aligned bit shuffling scheme for efficient data access, and (2) a fused dequantization-multiplication pipeline that effectively maps workloads on both CUDA and Tensor Cores. Quantix enables high-throughput batched inference, delivering average kernel-level speedups of 4.82× over FP16 cuBLAS and end-to-end speedups of up to 11.46× over state-of-the-art quantization methods on NVIDIA L40 GPUs.",
+      "identifiers": [
+        "SemanticScholar:38157aeab07c39c0679a2e13c4bb1a069c0115eb"
+      ],
+      "semantic_scholar_id": "38157aeab07c39c0679a2e13c4bb1a069c0115eb",
+      "doi": "10.1145/3774934.3786423",
+      "canonical_id": "DOI:10.1145/3774934.3786423",
+      "authors": [
+        "Yuang Chen",
+        "Wen-Qi Zeng",
+        "Jeffrey Xu Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 275,
+        "matched_prestigious_venue": null
+      },
+      "reason": "非一様3ビット量子化ではモデル容量を削減しても逆量子化とGPU低利用率で推論が遅くなる問題を扱うQuantix。ハードウェア整合ビット並べ替えと逆量子化・積和の融合パイプラインをCUDA/Tensor Coreへ実装し、L40でカーネル平均4.82倍、既存量子化方式比のend-to-end最大11.46倍を報告。PPoPP 2026公式プログラムの一次要旨で確認。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "GreenScheduler: Coordinated Two-Tier Energy Optimization for Disaggregated LLM Serving",
+      "source_url": "https://doi.org/10.65405/cn221159",
+      "year": 2026,
+      "published": "2026-03-01",
+      "venue": "مجلة العلوم الشاملة",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) inference has become a dominant consumer of en- ergy in modern AI data centers, often accounting for over 90% of total operational power [1].Recent architectural shifts toward prefill/decode disaggregation have improved perfor- mance but created complex energy optimization challenges. This paper introduces Green- Scheduler, a novel two-tier framework designed to jointly optimize GPU placement and Dynamic Voltage and Frequency Scaling (DVFS) in disaggregated environments. Tier 1 performs coarse-grained (minute-scale) phase-aware provisioning using predictive work- load modeling, while Tier 2 executes fine-grained (millisecond-scale) frequency control. For the compute-bound prefill stage, GreenScheduler employs Model Predictive Control (MPC) to manage queue dynamics; for the memory-bound decode stage, it utilizes a lightweight slack-aware adaptation mechanism. Evaluations using production Azure traces \n[2] on an H100 cluster demonstrate that GreenScheduler achieves significant energy reduc- tion in both decode and prefill pools compared to performance-optimized baselines like DistServe [3], while strictly maintaining Time to First Token (TTFT) and Time Per Output Token (TPOT) Service-Level Objectives (SLOs).",
+      "identifiers": [
+        "SemanticScholar:2dd8ee54b1240817f924fca3261bb94f28680137"
+      ],
+      "semantic_scholar_id": "2dd8ee54b1240817f924fca3261bb94f28680137",
+      "doi": "10.65405/cn221159",
+      "canonical_id": "DOI:10.65405/cn221159",
+      "authors": [
+        "Waled Milad Abulgasem Alashheb",
+        "Mabruka Khlifa Ali Karkeb",
+        "Sabria AbdulGader Ali Elmusrati",
+        "Sumia Abdussalam Milad Elagtel"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 243,
+        "matched_prestigious_venue": null
+      },
+      "reason": "prefill/decode分離環境でGPU配置とDVFSを時間スケールの異なる二層で協調制御するGreenSchedulerを提案。分単位の予測プロビジョニングと、prefillのMPC・decodeのslack対応周波数制御を組み合わせる。出版社要旨はAzureトレースによるH100評価とSLO維持下の省電力を述べるが、詳細数値や独立再現は要旨だけでは検証不能でありResearch昇格時に厳密な確認が必要。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "PreFT: Prefill-only finetuning for efficient inference",
+      "source_url": "https://arxiv.org/abs/2605.14217",
+      "year": 2026,
+      "published": "2026-05-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models can now be personalised efficiently at scale using parameter efficient finetuning methods (PEFTs), but serving user-specific PEFTs harms throughput, even with specialised kernels and memory management techniques. This is because, theoretically and empirically, a mismatch exists between prefill (processing a large number of tokens at once) and decode (generating a single token autoregressively): the latter has far lower throughput when serving multiple adapters. Rather than optimising performance relative to parameter count, for efficient multi-adapter serving, we instead ought to optimise performance relative to serving throughput. We therefore propose PreFT (Prefill-only Finetuning), wherein we only apply the adapter to prefill tokens and discard it afterwards. PreFT significantly increases throughput with minimal effect on performance. We develop and release an efficient implementation of two prefill-only PEFTs, LoRA and ReFT, on the vLLM inference engine. We first show that serving multi-user PreFTs is more efficient than traditional PEFTs ($1.9\\times$ the throughput when serving $512$ adapters on Llama 3.1 70B). Then, we compare the performance of prefill-only vs. all-token adapters on a variety of supervised finetuning and reinforcement learning tasks with LMs at varying scales. On SFT, we observe that the evaluation loss of PreFTs is higher than PEFTs, but can be compensated by increasing rank with nearly no reduction in throughput. On RL, we consistently find that PreFTs approach parity with standard PEFTs. Together, this work validates prefill-only adaptation of LLMs as a more favourable accuracy-throughput tradeoff than existing PEFTs for personalised serving.",
+      "identifiers": [
+        "SemanticScholar:81b03ecdb8139339f5882e55433d78610934b5fe"
+      ],
+      "semantic_scholar_id": "81b03ecdb8139339f5882e55433d78610934b5fe",
+      "canonical_id": "arXiv:2605.14217",
+      "arxiv_id": "2605.14217",
+      "doi": "10.48550/arXiv.2605.14217",
+      "authors": [
+        "Andrew Lanpouthakoun",
+        "Aryaman Arora",
+        "Zheng-Xuan Wu",
+        "Dhruv B. Pai",
+        "Benjamin Keigwin",
+        "Daniel Jurafsky",
+        "Christopher Potts"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ユーザー別LoRA/ReFTを全トークンへ適用すると多アダプタdecodeが遅くなる問題に対し、アダプタをprefill時だけ適用しdecodeでは外すPreFTを提案。vLLM実装でLlama 3.1 70B・512アダプタ時に従来PEFTの1.9倍の処理量を報告。学習方式を含むが主目的は多アダプタ推論の実スループット改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5b47e44b7ada",
+    "round": "libimp-5b47e44b7ada0650-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5b47e44b7ada0650-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5b47e44b7ada0650-pre01.json",
+    "receipt": "sha256:09b7b93ef6da4d6c6fa84d7eaf7a691c95c90694d3ea6f1b3060836ddfbb5eb3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5b47e44b7ada",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

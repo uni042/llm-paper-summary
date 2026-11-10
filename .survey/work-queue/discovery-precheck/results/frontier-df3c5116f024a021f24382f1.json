@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": false,
+  "request_id": "frontier-df3c5116f024a021f24382f1",
+  "collector_id": "direct-frontier-df3c5116f024a021f24382f1",
+  "run_key": "run-scheduled-chat-00-20260925T090214Z-3",
+  "axis": "preload-backward-structured-references",
+  "preload_id": "preload-c51923d0db2aba51e4cb",
+  "error": "ValueError: Discovery preload is not assigned to a valid dual-purpose bank",
+  "evaluation_allowed": false,
+  "decision": "FIX_REQUEST",
+  "next_action": "Create a NEW schema-v3 precheck request with one fixed provider search source_url/API query. Do not supply hand-picked records and do not emulate pagination by changing the query.",
+  "recovery_steps": [
+    "Keep the failed request unchanged.",
+    "Use schema_version=3.",
+    "Provide provider, source_url, collector_id, run_key, axis, and optional target_unseen/page_size.",
+    "The source_url must identify one fixed result set; the precheck will fetch page 1, page 2, and later pages itself.",
+    "If that result set is exhausted below target_unseen, accept the smaller buffer and start a separate Discovery round for a different query/axis."
+  ]
+}

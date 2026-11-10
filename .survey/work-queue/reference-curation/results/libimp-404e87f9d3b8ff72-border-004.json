@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-404e87f9d3b8ff72-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3748522.3779794",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3748522.3779794",
+    "identity_tokens": [
+      "DOI:10.1145/3748522.3779794"
+    ],
+    "reason": "LLM multi-user inference scheduling/HBM-PIM contentionを直接扱う題名・要旨で関連するが、出版社本文/著者全文が取得できず、手法・測定値を一次全文で確認できない。",
+    "first_checked_at": "2026-10-06T11:01:27+00:00",
+    "last_checked_at": "2026-10-06T11:01:27+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Multi-User Scheduling for Large Language Model Inference on HBM-Based Processing-in-Memory Accelerators"
+  },
+  "processed_at": "2026-10-06T11:01:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-404e87f9d3b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

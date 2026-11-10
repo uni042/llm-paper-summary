@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58b36fce53c25d46-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.07361",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.07361",
+    "identity_tokens": [
+      "arXiv:2509.07361"
+    ],
+    "reason": "Spiking neural networks offer a promising path toward energy-efficient, brain-like associative memory. This paper introduces Word2Spike, a novel rate coding mechanism that combines continuous word embeddings and neuromorphic architectures. We develop a one-to-one mapping that converts multi-dimensional word vectors into spike-based attractor states using Poisson processes. Using BitNet b1.58 quantization, we maintain 97% semantic similarity of continuous embeddings on SimLex-999 while achieving 100% reconstruction accuracy on 10,000 words from OpenAI's text-embedding-3-large. We preserve analo",
+    "first_checked_at": "2026-10-06T13:04:51+00:00",
+    "last_checked_at": "2026-10-06T13:04:51+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+    ],
+    "title": "Word2Spike: Poisson Rate Coding for Associative Memories and Neuromorphic Algorithms"
+  },
+  "processed_at": "2026-10-06T13:04:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58b36fce53c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

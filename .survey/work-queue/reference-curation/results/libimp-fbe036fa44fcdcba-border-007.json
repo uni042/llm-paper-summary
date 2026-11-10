@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fbe036fa44fcdcba-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.21185",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.21185",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.21185",
+      "SemanticScholar:46b330ea722acdb5bf824842257ded7f5d244bee",
+      "arXiv:2602.21185"
+    ],
+    "reason": "The abstract for The Diffusion Duality, Chapter II: Ψ-Samplers and Efficient Curriculum has an adjacent or weak systems-efficiency connection, but does not establish a clear contribution to LLM inference or serving efficiency.",
+    "first_checked_at": "2026-10-13T05:18:17+00:00",
+    "last_checked_at": "2026-10-13T05:18:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Diffusion Duality, Chapter II: Ψ-Samplers and Efficient Curriculum"
+  },
+  "processed_at": "2026-10-13T05:18:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbe036fa44fc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

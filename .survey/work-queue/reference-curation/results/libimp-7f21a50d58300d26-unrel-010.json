@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f21a50d58300d26-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1702.03118",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1702.03118",
+    "identity_tokens": [
+      "arXiv:1702.03118"
+    ],
+    "reason": "強化学習向け活性化関数が主題でLLMシステム最適化を扱わない。",
+    "first_checked_at": "2026-09-27T05:31:34+09:00",
+    "last_checked_at": "2026-09-30T09:49:12+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "worker-worklist-30 discovery_review rank 469"
+    ],
+    "title": "Sigmoid-Weighted Linear Units for Neural Network Function Approximation in Reinforcement Learning"
+  },
+  "processed_at": "2026-09-30T09:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f21a50d5830",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

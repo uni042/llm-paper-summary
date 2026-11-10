@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9120f8dcb76fa15d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.17144",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.17144",
+    "identity_tokens": [
+      "arXiv:2602.17144"
+    ],
+    "reason": "PiCCE studies learning-to-defer model quality and expert selection, not LLM serving/inference efficiency.",
+    "first_checked_at": "2026-10-05T13:41:35+00:00",
+    "last_checked_at": "2026-10-05T13:41:35+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+    ],
+    "title": "When More Experts Hurt: Underfitting in Multi-Expert Learning to Defer"
+  },
+  "processed_at": "2026-10-05T13:41:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9120f8dcb76f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

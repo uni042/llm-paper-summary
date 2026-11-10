@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct",
+      "source_url": "https://arxiv.org/abs/2601.14277",
+      "year": 2026,
+      "published": "2026-01-11",
+      "venue": "arXiv.org",
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is a practical technique for making large language models easier to deploy by reducing the precision used to store and operate on model weights. This can lower memory use and improve runtime feasibility on constrained hardware, which is especially relevant for users running models locally. Quantization in llama.cpp enables large language models to run on commodity hardware, but available formats are often evaluated inconsistently, making it hard to choose among schemes. We present a unified empirical study of the llama.cpp quantization on a single modern model, Llama-3.1-8B-Instruct (FP16, GGUF), covering 3-8 bit K-quant and legacy formats. We evaluate downstream task performance across standard reasoning, knowledge, instruction-following, and truthfulness benchmarks, and also measure perplexity and CPU throughput (prefill/decoding) alongside model size, compression, and quantization time. Ultimately, this work is a practical guide for choosing a llama.cpp quantization scheme, helping readers make informed, context-aware decisions for their intended use and resource budget.",
+      "identifiers": [
+        "SemanticScholar:62fd0a40a4bbff14c554a9804c6d39f28c4cd1bb"
+      ],
+      "semantic_scholar_id": "62fd0a40a4bbff14c554a9804c6d39f28c4cd1bb",
+      "canonical_id": "arXiv:2601.14277",
+      "arxiv_id": "2601.14277",
+      "doi": "10.48550/arXiv.2601.14277",
+      "authors": [
+        "Uygar Kurt"
+      ],
+      "priority": 118,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 118,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 292,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はLlama-3.1-8B-Instructを同一条件でllama.cpp GGUFの3〜8bit K-quant・legacy形式へ量子化し、PPL・CPU prefill/decodeスループット・サイズ・量子化時間・複数タスク品質を統一比較。ローカルLLM推論の形式選択に直接使える実測サーベイ。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels",
+      "source_url": "https://arxiv.org/abs/2605.05023",
+      "year": 2026,
+      "published": "2026-05-06",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient CUDA implementations of attention mechanisms are critical to modern deep learning systems, yet supporting diverse and evolving attention variants remains challenging. Existing frameworks and compilers trade performance for flexibility, while expert-written kernels achieve high efficiency but are difficult to adapt. Recent work explores large language models (LLMs) for GPU kernel generation, but prior studies report unstable correctness and significant performance gaps for complex operators such as attention. We present CuBridge, an LLM-based framework that adapts expert-written attention kernels through a structured lift-transfer-lower workflow. CuBridge starts from expert-written CUDA attention kernels and lifts them into an executable intermediate representation that makes execution orchestration explicit while abstracting low-level CUDA syntax. Given a user-provided PyTorch specification, CuBridge generates and verifies a target IR program, then reconstructs optimized CUDA code via reference-guided lowering. Across diverse attention variants and GPU platforms, CuBridge consistently produces correct kernels and substantially outperforms general frameworks, compiler-based approaches, and prior LLM-based methods.",
+      "identifiers": [
+        "SemanticScholar:89c891ca4dfded59bb90cc1f15bb06d36e767543"
+      ],
+      "semantic_scholar_id": "89c891ca4dfded59bb90cc1f15bb06d36e767543",
+      "canonical_id": "arXiv:2605.05023",
+      "arxiv_id": "2605.05023",
+      "doi": "10.18653/v1/2026.acl-long.500",
+      "authors": [
+        "Xing-Chen Ma",
+        "Yang-Jie Zhou",
+        "Wu Sun",
+        "Zi-Han Liu",
+        "Jingwen Leng",
+        "Yun Lin",
+        "Shixuan Sun",
+        "Min-Yi Guo",
+        "Jingyao Dong"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv一次要旨は専門家実装のCUDA注意カーネルを実行可能IRに持ち上げ、PyTorch仕様から検証・移植して高速CUDAへ復元するCuBridgeを提案。注意変種とGPUプラットフォームで正しさと性能を評価し、一般コンパイラや従来LLM生成カーネルより優位と報告。推論注意カーネル生成の直接的な実装貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
+      "source_url": "https://arxiv.org/abs/2603.16219",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Realizing personalized intelligence faces a core dilemma: sending user history to centralized large language models raises privacy concerns, while on-device small language models lack the reasoning capacity required for high-quality generation. Our pilot study shows that purely local enhancements remain insufficient to reliably bridge this gap. We therefore propose SpecSteer, an asymmetric collaborative inference framework that synergizes private on-device context with cloud-scale reasoning. SpecSteer casts collaboration as Bayesian knowledge fusion and repurposes speculative decoding as a distributed alignment protocol, yielding a Draft--Verify--Recover pipeline: the on-device model drafts personalized sequences; the cloud validates via a ratio-based mechanism that decouples reasoning verification from private context, filtering logical flaws without accessing raw user context; upon rejection, a steering recovery injects local intent during correction. Experiments demonstrate that SpecSteer successfully closes the reasoning gap and achieves superior personalized generation performance, while delivering a 2.36x speedup over standard baselines.",
+      "identifiers": [
+        "SemanticScholar:a28c38cf9bce60e38d30b8044212d1cc9cbe396d"
+      ],
+      "semantic_scholar_id": "a28c38cf9bce60e38d30b8044212d1cc9cbe396d",
+      "canonical_id": "arXiv:2603.16219",
+      "arxiv_id": "2603.16219",
+      "doi": "10.48550/arXiv.2603.16219",
+      "authors": [
+        "Hang Lv",
+        "Sheng Liang",
+        "Hao Wang",
+        "Yong-Yue Zhang",
+        "Hongchao Gu",
+        "Wei Guo",
+        "De-Fu Lian",
+        "Yong Liu",
+        "En-Hong Chen"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は端末にある私的文脈をクラウドへ送らず、端末ドラフトとクラウド検証をDraft–Verify–Recoverとして組み合わせるSpecSteerを提案。分散投機的復号で推論品質とプライバシーを両立し、標準ベースライン比2.36倍高速化を報告。端末・クラウド協調LLM推論に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LatentLLM: Activation-Aware Transform to Multi-Head Latent Attention",
+      "source_url": "https://doi.org/10.1609/aaai.v40i27.39425",
+      "year": 2026,
+      "published": "2026-03-14",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern foundation models such as large language models (LLMs) require a massive amount of computational and memory resources. We propose a new framework to convert such LLMs into a reduced-dimension latent structure. Our method extends a local activation-aware tensor decomposition to a global attention-aware joint tensor decomposition. Our framework can significantly improve the model accuracy over the existing model compression methods when reducing the latent dimension to realize computationally/memory-efficient LLMs. We show the benefit on several benchmark including multi-modal reasoning tasks.",
+      "identifiers": [
+        "SemanticScholar:4796adda0ddc0dc7c8ceeccf8240a777bd9b0677"
+      ],
+      "semantic_scholar_id": "4796adda0ddc0dc7c8ceeccf8240a777bd9b0677",
+      "doi": "10.1609/aaai.v40i27.39425",
+      "canonical_id": "DOI:10.1609/aaai.v40i27.39425",
+      "authors": [
+        "T. Koike-Akino",
+        "Xiangyu Chen",
+        "Jing Liu",
+        "Ye Wang",
+        "Pu Wang",
+        "Matthew Brand"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 230,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AAAI出版社公式要旨は活性に応じた局所テンソル分解を注意全体の結合分解へ拡張し、LLMを低次元潜在構造へ変換するLatentLLMを提案。計算量・メモリ削減と圧縮時の品質維持を目的とし、マルチモーダル推論も評価。推論用構造圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EventSTU: Event-Guided Efficient Spatio-Temporal Understanding for Video Large Language Models",
+      "source_url": "https://arxiv.org/abs/2511.18920",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video large language models have demonstrated strong video understanding capabilities but suffer from high inference costs due to the massive number of tokens in long videos. Inspired by event-based vision, we propose an event-guided, training-free framework for efficient spatio-temporal understanding, named EventSTU. In the temporal domain, we design a coarse-to-fine keyframe sampling algorithm that exploits the change-triggered property of event cameras to eliminate redundant frames. In the spatial domain, we design an adaptive token pruning algorithm that leverages the visual saliency of events as a zero-cost prior to guide spatial reduction. From a holistic spatio-temporal perspective, we further integrate question relevance from keyframe sampling to adaptively allocate token pruning budgets. To facilitate evaluation, we construct EventBench, the first event-inclusive, human-annotated multimodal benchmark that covers diverse real-world scenarios. Beyond physical event cameras, EventSTU also supports general video understanding using simulated events. Comprehensive experiments show that EventSTU achieves 3.01x FLOPs reduction and 3.10x prefilling speedup over the strongest baseline while still improving performance.",
+      "identifiers": [
+        "SemanticScholar:4395804472e3fa9db05fc9d6ce992e1d512fd838"
+      ],
+      "semantic_scholar_id": "4395804472e3fa9db05fc9d6ce992e1d512fd838",
+      "canonical_id": "arXiv:2511.18920",
+      "arxiv_id": "2511.18920",
+      "doi": "10.48550/arXiv.2511.18920",
+      "authors": [
+        "Wenhao Xu",
+        "Xin Dong",
+        "Yue Li",
+        "Hao-Yuan Shi",
+        "Zhi-Wei Xiong"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 340,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は動画の変化イベントに基づく粗密キーフレーム選択と、イベント顕著性・質問関連性による視覚トークン削減を組み合わせるEventSTUを提案。動画LLMでFLOPs最大3.01倍削減、prefill最大3.10倍高速化を報告し、長動画推論の時間・空間両方の計算削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e7d11c05b23f",
+    "round": "libimp-e7d11c05b23f5ce7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e7d11c05b23f5ce7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e7d11c05b23f5ce7-pre01.json",
+    "receipt": "sha256:c00fed0726d86d9e295842ee4460c4d52bef74542c06e5b2a5e0a29cbcf4fa70"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e7d11c05b23f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

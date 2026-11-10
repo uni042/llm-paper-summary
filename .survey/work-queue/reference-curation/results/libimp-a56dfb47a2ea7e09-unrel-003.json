@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a56dfb47a2ea7e09-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.09229",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.09229",
+    "identity_tokens": [
+      "arXiv:2609.09229"
+    ],
+    "reason": "一次要旨: Additional inference compute can increase the number of correctly resolved security-assurance tasks, but repeated success, unique coverage, accepted evidence, and operational protection are different quantities. We develop a resource-constrained framework that separates them. For repeated conditionally independent attempts with latent success probability $\\Theta$, coverage is $C_n = 1 - E[(1-\\Theta)^n]$, and its limiting value is $1 - P(\\Theta = 0)$. Positive pairwise outcome correlation does not by itself imply a ceiling below one: we construct two models with the same mean success and pairwise correlation but different limiting coverage. We distinguish this result from the effective sample size used to estimate a mean, and show why finite-budget observations cannot generally identify an asymptotic support ceiling. We then connect coverage to fallible evidence checking, proper scoring of factual grounding, complete resource accounting, service capacity, and a response model that includes mitigation delay. A conceptual defensive architecture separates evidence analysis, adjudication, and operational authority. An evaluation protocol specifies held-out tasks, paired comparisons, negative cases, and uncertainty reporting. The contribution is a consistent theoretical synthesis and a set of counterexamples to invalid extrapolations, rather than an empirical scaling law. All numerical illustrations are analytic; no model-parity result, hardware benchmark, or general attacker-defender equilibrium is claimed.",
+    "first_checked_at": "2026-10-05T07:06:26+00:00",
+    "last_checked_at": "2026-10-05T07:06:26+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md"
+    ],
+    "title": "Compute-Bounded Security Assurance - Coverage, Verification, and Response under Resource Constraints"
+  },
+  "processed_at": "2026-10-05T07:06:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a56dfb47a2ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

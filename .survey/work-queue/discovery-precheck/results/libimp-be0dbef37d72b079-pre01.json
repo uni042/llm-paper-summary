@@ -1,0 +1,257 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-be0dbef37d72b079-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-be0dbef37d72",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3830418.3843867",
+    "arXiv:2411.15024"
+  ],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "da0dbc4084fadb0c1020ec064c732231392cb3dd",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T05:21:19.124735+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3830418.3843867",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.15024",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DyCoke : Dynamic Compression of Tokens for Fast Video Large Language Models",
+      "source_url": "https://arxiv.org/abs/2411.15024",
+      "year": 2024,
+      "published": "2024-11-22",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 111,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video large language models (VLLMs) have significantly advanced recently in processing complex video content. Yet, their inference efficiency remains constrained because of the high computational cost stemming from the thousands of visual tokens generated from the video inputs. We empirically observe that, unlike single image inputs, VLLMs typically attend visual tokens from different frames at different decoding iterations. This makes a one-shot pruning strategy prone to removing important tokens by mistake. Motivated by this, we present DyCoke, a training-free token compression method to optimize token representation and accelerate VLLMs. DyCoke incorporates a plug-and-play temporal compression module to minimize temporal redundancy by merging redundant tokens across frames and applying dynamic KV cache reduction to prune spatially redundant tokens selectively. It ensures high-quality inference by dynamically retaining the critical tokens at each decoding step. Extensive experimental results demonstrate that DyCoke can outperform the prior SoTA counterparts, achieving 1.5× inference speedup, and 1.4× memory reduction against the baseline VLLM, while still improving the performance, with no training.",
+      "identifiers": [
+        "SemanticScholar:449df67152b7368b45126a675af53632e157ee87"
+      ],
+      "semantic_scholar_id": "449df67152b7368b45126a675af53632e157ee87",
+      "canonical_id": "arXiv:2411.15024",
+      "arxiv_id": "2411.15024",
+      "doi": "10.1109/CVPR52734.2025.01769",
+      "authors": [
+        "Keda Tao",
+        "Can Qin",
+        "Haoxuan You",
+        "Yang Sui",
+        "Huan Wang"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 111,
+        "citation_count": 111,
+        "total": 111,
+        "is_fresh": false,
+        "freshness_age_days": 681,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Janus: Multi-LLM Serving at Production Scale",
+      "source_url": "https://doi.org/10.1145/3830418.3843867",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "Proceedings of the ACM SIGOPS 32nd Symposium on Operating Systems Principles",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Production LLM serving multiplexes hundreds of heterogeneous models on shared clusters, exposing three challenges that existing systems fail to address simultaneously: unpredictable bursts, power-law application popularity, and heterogeneous yet complementary resource demands. We present Janus, a Service-Engine co-designed multi-model serving system built around dual-timescale scheduling. At the Service layer, a Model Scheduler driven by a Performance Oracle combines vector bin-packing every 30 seconds for steady-state colocation with elastic scaling every 0.5 seconds. A new LST-IMH Request Scheduler maximizes SLO attainment with a proven 2-approximation guarantee. At the Engine layer, xTensor virtualizes HBM, while a three-state model lifecycle and device-to-device (D2D) fork enable elastic multi-model colocation and sub-second burst scale-out. We deploy Janus on a 768-device production cluster serving 62 applications and 45.6 M requests/day, and evaluate it with a 603 K-request open-loop replay sampled from that production day. Janus maintains 0.97-1.0 SLO attainment, versus 0.80-0.92 for the strongest baseline, while using 13,440 device-hours/day, 27% less than static Serverless-LLM. Janus is available as open source at https://github.com/Janus2026/Janus.",
+      "identifiers": [
+        "SemanticScholar:c040555f24174a4f6cb2162fcb33835e6c4cf022"
+      ],
+      "semantic_scholar_id": "c040555f24174a4f6cb2162fcb33835e6c4cf022",
+      "doi": "10.1145/3830418.3843867",
+      "canonical_id": "DOI:10.1145/3830418.3843867",
+      "authors": [
+        "Tian-Bao Zhou",
+        "Yi Wang",
+        "Yu Zhou",
+        "Zi-Rui Liu",
+        "Zhi-Ming Wang",
+        "Ye-Bo Peng",
+        "Yong-Fu Wang",
+        "Yi Zhang",
+        "Jin-Run Yin",
+        "Ke-Meng Tian",
+        "Fang-Cheng Fu",
+        "Tong-Xuan Liu",
+        "Tao Peng",
+        "Tong Yang",
+        "Bin Cui",
+        "Xupeng Miao",
+        "Ke Zhang"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 110,
+        "is_fresh": true,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": "Symposium on Operating Systems Principles"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2411.15024",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvpr52734.2025.01769",
+        "id:SemanticScholar:449df67152b7368b45126a675af53632e157ee87",
+        "id:arXiv:2411.15024",
+        "title:dycoke dynamic compression of tokens for fast video large language models",
+        "url:https://arxiv.org/abs/2411.15024"
+      ],
+      "record": {
+        "title": "DyCoke : Dynamic Compression of Tokens for Fast Video Large Language Models",
+        "source_url": "https://arxiv.org/abs/2411.15024",
+        "year": 2024,
+        "published": "2024-11-22",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 111,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video large language models (VLLMs) have significantly advanced recently in processing complex video content. Yet, their inference efficiency remains constrained because of the high computational cost stemming from the thousands of visual tokens generated from the video inputs. We empirically observe that, unlike single image inputs, VLLMs typically attend visual tokens from different frames at different decoding iterations. This makes a one-shot pruning strategy prone to removing important tokens by mistake. Motivated by this, we present DyCoke, a training-free token compression method to optimize token representation and accelerate VLLMs. DyCoke incorporates a plug-and-play temporal compression module to minimize temporal redundancy by merging redundant tokens across frames and applying dynamic KV cache reduction to prune spatially redundant tokens selectively. It ensures high-quality inference by dynamically retaining the critical tokens at each decoding step. Extensive experimental results demonstrate that DyCoke can outperform the prior SoTA counterparts, achieving 1.5× inference speedup, and 1.4× memory reduction against the baseline VLLM, while still improving the performance, with no training.",
+        "identifiers": [
+          "SemanticScholar:449df67152b7368b45126a675af53632e157ee87"
+        ],
+        "semantic_scholar_id": "449df67152b7368b45126a675af53632e157ee87",
+        "canonical_id": "arXiv:2411.15024",
+        "arxiv_id": "2411.15024",
+        "doi": "10.1109/CVPR52734.2025.01769",
+        "authors": [
+          "Keda Tao",
+          "Can Qin",
+          "Haoxuan You",
+          "Yang Sui",
+          "Huan Wang"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 111,
+          "citation_count": 111,
+          "total": 111,
+          "is_fresh": false,
+          "freshness_age_days": 681,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3830418.3843867",
+      "identity_tokens": [
+        "id:DOI:10.1145/3830418.3843867",
+        "id:SemanticScholar:c040555f24174a4f6cb2162fcb33835e6c4cf022",
+        "title:janus multillm serving at production scale",
+        "url:https://doi.org/10.1145/3830418.3843867"
+      ],
+      "record": {
+        "title": "Janus: Multi-LLM Serving at Production Scale",
+        "source_url": "https://doi.org/10.1145/3830418.3843867",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "Proceedings of the ACM SIGOPS 32nd Symposium on Operating Systems Principles",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Production LLM serving multiplexes hundreds of heterogeneous models on shared clusters, exposing three challenges that existing systems fail to address simultaneously: unpredictable bursts, power-law application popularity, and heterogeneous yet complementary resource demands. We present Janus, a Service-Engine co-designed multi-model serving system built around dual-timescale scheduling. At the Service layer, a Model Scheduler driven by a Performance Oracle combines vector bin-packing every 30 seconds for steady-state colocation with elastic scaling every 0.5 seconds. A new LST-IMH Request Scheduler maximizes SLO attainment with a proven 2-approximation guarantee. At the Engine layer, xTensor virtualizes HBM, while a three-state model lifecycle and device-to-device (D2D) fork enable elastic multi-model colocation and sub-second burst scale-out. We deploy Janus on a 768-device production cluster serving 62 applications and 45.6 M requests/day, and evaluate it with a 603 K-request open-loop replay sampled from that production day. Janus maintains 0.97-1.0 SLO attainment, versus 0.80-0.92 for the strongest baseline, while using 13,440 device-hours/day, 27% less than static Serverless-LLM. Janus is available as open source at https://github.com/Janus2026/Janus.",
+        "identifiers": [
+          "SemanticScholar:c040555f24174a4f6cb2162fcb33835e6c4cf022"
+        ],
+        "semantic_scholar_id": "c040555f24174a4f6cb2162fcb33835e6c4cf022",
+        "doi": "10.1145/3830418.3843867",
+        "canonical_id": "DOI:10.1145/3830418.3843867",
+        "authors": [
+          "Tian-Bao Zhou",
+          "Yi Wang",
+          "Yu Zhou",
+          "Zi-Rui Liu",
+          "Zhi-Ming Wang",
+          "Ye-Bo Peng",
+          "Yong-Fu Wang",
+          "Yi Zhang",
+          "Jin-Run Yin",
+          "Ke-Meng Tian",
+          "Fang-Cheng Fu",
+          "Tong-Xuan Liu",
+          "Tao Peng",
+          "Tong Yang",
+          "Bin Cui",
+          "Xupeng Miao",
+          "Ke Zhang"
+        ],
+        "priority": 110,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 110,
+          "is_fresh": true,
+          "freshness_age_days": 6,
+          "matched_prestigious_venue": "Symposium on Operating Systems Principles"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:074ef1ea88c75510eb3b1878f53f92480ea5b790dcd8e5abb8dc4d96e34359fc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

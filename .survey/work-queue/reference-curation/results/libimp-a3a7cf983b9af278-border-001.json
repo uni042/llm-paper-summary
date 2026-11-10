@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a3a7cf983b9af278-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.neucom.2026.134854",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.neucom.2026.134854",
+    "identity_tokens": [
+      "DOI:10.1016/j.neucom.2026.134854"
+    ],
+    "reason": "一次要旨で、字幕中心の動画質問応答に対し時間窓の特定、個別マルチモーダル知識グラフの構築、質問条件付き証拠部分グラフ検索、証拠監査、制御付き生成を行うと確認。検索証拠を予算内へ圧縮する点は入力削減に関連するが、主評価対象は動画QAの忠実性であり、汎用LLM推論エンジン・KVキャッシュ・サービング・GPUカーネルの直接改善を示していないため境界的として保留。",
+    "first_checked_at": "2026-10-13T20:46:53+00:00",
+    "last_checked_at": "2026-10-13T20:53:01+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "MKG-attention: Budget-aware multimodal graph retrieval for faithful video question answering"
+  },
+  "processed_at": "2026-10-13T20:53:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a3a7cf983b9a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

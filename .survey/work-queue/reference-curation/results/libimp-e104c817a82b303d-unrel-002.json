@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e104c817a82b303d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.05680",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.05680",
+    "identity_tokens": [
+      "arXiv:2501.05680"
+    ],
+    "reason": "The linked sparse-attention theme does not translate into an LLM inference result in this paper.",
+    "first_checked_at": "2026-10-06T17:15:15+00:00",
+    "last_checked_at": "2026-10-06T17:15:15+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+    ],
+    "title": "EXION: Exploiting Inter-and Intra-Iteration Output Sparsity for Diffusion Models"
+  },
+  "processed_at": "2026-10-06T17:15:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e104c817a82b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

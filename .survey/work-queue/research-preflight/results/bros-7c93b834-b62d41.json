@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "bros-7c93b834-b62d41",
+  "kind": "research",
+  "attempt_id": "attempt-preload-7c93b83402e32e5d2b5890a8",
+  "job_id": "job-research-042e5712bf1b426e",
+  "record_bank": "ae",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-7eea80f9c804-bros-efficient-llm-serving-on-hybrid-real-time-and-best-effort-requests.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260924T223221JST-b62d41",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T13:32:21+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:d076e07f1815d3aed8bc1ae24c3907b2f858a557010fd276ca9261407af13ee4",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-ae/metadata.json",
+      "blob_sha": "32cb63172fcb7e08de13059d8470e6ed7cce6803"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-ae/problem_method.json",
+      "blob_sha": "4557fbc308c4096c4af5b79af5920603bc2f4edd"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-ae/evaluation.json",
+      "blob_sha": "0af4712017b810a45fb4f0ba6b5516e8d910d341"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-ae/results.json",
+      "blob_sha": "dea5b653d04abdfadb2515e659be4cc031d6ff17"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-ae/positioning.json",
+      "blob_sha": "08f23893cbdcb98278212cbc36a18a3702dfeee1"
+    }
+  ],
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short"
+  ],
+  "checked_at": "2026-09-24T13:39:35+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

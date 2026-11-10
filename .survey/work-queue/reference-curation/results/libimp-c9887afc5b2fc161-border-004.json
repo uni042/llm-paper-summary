@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9887afc5b2fc161-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.15707",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.15707",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2411.15707",
+      "arXiv:2411.15707"
+    ],
+    "reason": "二者間秘匿Transformer推論で行列積とGELU/Softmaxの近似を高速化し、BERTのend-to-end推論で2.7～4.7倍改善する。秘匿推論技術として関連するが、評価は主にBERT識別推論であり生成LLMの逐次復号・KV管理は対象外。",
+    "first_checked_at": "2026-10-30T11:54:53+00:00",
+    "last_checked_at": "2026-10-30T11:54:53+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Nimbus: Secure and Efficient Two-Party Inference for Transformers"
+  },
+  "processed_at": "2026-10-30T11:54:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9887afc5b2f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a75853e78568ada3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.12603",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.12603",
+    "identity_tokens": [
+      "arXiv:2510.12603"
+    ],
+    "reason": "IVT-LRは視覚特徴と前段の隠れ状態を潜在推論ステップへ交互に渡し、明示的な中間推論文を生成しないことで推論を短縮する。M3CoT・ScienceQAで精度向上と5倍超の速度向上を報告するが、主要寄与はマルチモーダル推論モデルと段階的訓練であり、汎用LLMサービングやKV管理のシステム方式ではない。速度面の直接接点があるため無関係とは断定せず境界扱い。",
+    "first_checked_at": "2026-10-23T08:42:59+00:00",
+    "last_checked_at": "2026-10-23T08:42:59+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space"
+  },
+  "processed_at": "2026-10-23T08:42:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a75853e78568",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

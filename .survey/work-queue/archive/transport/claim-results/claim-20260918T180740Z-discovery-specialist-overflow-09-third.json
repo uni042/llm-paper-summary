@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T180740Z-discovery-specialist-overflow-09-third",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-51ff641061ba8ecf",
+      "claim_id": "claim-bc5a8fd4186a7939c0b7b5f9",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-bc5a8fd4186a7939c0b7b5f9",
+      "claimed_at": "2026-09-18T18:07:52+00:00",
+      "expires_at": "2026-09-18T19:37:52+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-51ff641061ba8ecf"
+      ],
+      "job": {
+        "job_id": "job-research-51ff641061ba8ecf",
+        "type": "research",
+        "parent_job_id": "job-142163cff9fb23f9",
+        "priority": 82,
+        "canonical_id": "arXiv:2606.05511",
+        "title": "RH+: Row-Hit-Optimized Scheduling for PIM-based LLM Inference",
+        "source_url": "https://arxiv.org/abs/2606.05511",
+        "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2606.05511-rh-plus-pim-row-hit-scheduling.md",
+        "selection_reason": "PIM decodeのDRAM row cycle律速を分析し、row-hit維持stride schedulingで大幅speedupを示す。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-18T02:08:06+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T18:07:52+00:00",
+  "checkpoint_released": 0
+}

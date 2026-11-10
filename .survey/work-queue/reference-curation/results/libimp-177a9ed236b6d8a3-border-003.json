@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-177a9ed236b6d8a3-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2103.12731",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2103.12731",
+    "identity_tokens": [
+      "arXiv:2103.12731"
+    ],
+    "reason": "Borderline transfer candidate: local attention could inform long-context causal attention, but the source’s image-specific positional/window setup and visual-only benchmarks do not show language-model quality or serving gains.",
+    "first_checked_at": "2026-10-06T23:37:10+00:00",
+    "last_checked_at": "2026-10-06T23:37:10+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Scaling Local Self-Attention for Parameter Efficient Visual Backbones"
+  },
+  "processed_at": "2026-10-06T23:37:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-177a9ed236b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

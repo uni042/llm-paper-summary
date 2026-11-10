@@ -1,0 +1,972 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T015829JST-worker00-openalex-pd-13",
+  "collector_id": "worker00-openalex-prefill-decode",
+  "run_key": "2026-09-21T01:58:29+09:00-worker00",
+  "axis": "prefill-decode disaggregation KV transfer and serving",
+  "provider": "openalex",
+  "source_url": "https://api.openalex.org/works?search=LLM%20prefill%20decode%20disaggregation%20KV%20transfer%20serving&filter=from_publication_date:2025-01-01,to_publication_date:2026-09-21&sort=publication_date:desc&per-page=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": "IlsxNzgxODI3MjAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c3MTY1ODE2NzkxJ10i",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9575c09d81be98d12377e63cc1657a6658bd7441",
+  "raw_search_result_count": 100,
+  "retrieval_duplicate_filtered_count": 59,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T17:12:05.542217+00:00",
+  "results": [
+    {
+      "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+      "source_url": "https://arxiv.org/abs/2609.12550",
+      "year": 2026,
+      "published": "2026-09-11",
+      "canonical_id": "arXiv:2609.12550",
+      "arxiv_id": "2609.12550",
+      "authors": [
+        "Zhenghong Huang",
+        "Hongfan Wu",
+        "Jiheng Zhang"
+      ]
+    },
+    {
+      "title": "Efficient Vision-Language-Action Management and Serving for Robot Factories",
+      "source_url": "https://arxiv.org/abs/2609.12075",
+      "year": 2026,
+      "published": "2026-09-10",
+      "canonical_id": "arXiv:2609.12075",
+      "arxiv_id": "2609.12075",
+      "authors": [
+        "Dionysios Adamopoulos",
+        "Nattapol Chanpaisit",
+        "Basel Fakhri",
+        "Christina Giannoula"
+      ]
+    },
+    {
+      "title": "How Portable Are LLM-Serving Scheduler Rankings Across Workloads, Operating Regions, and Metrics?",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-10935389/v1",
+      "year": 2026,
+      "published": "2026-09-08",
+      "canonical_id": "DOI:10.21203/rs.3.rs-10935389/v1",
+      "doi": "10.21203/rs.3.rs-10935389/v1",
+      "authors": [
+        "Soroush Vahidi"
+      ]
+    },
+    {
+      "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+      "source_url": "https://arxiv.org/abs/2609.05565",
+      "year": 2026,
+      "published": "2026-09-03",
+      "canonical_id": "arXiv:2609.05565",
+      "arxiv_id": "2609.05565",
+      "authors": [
+        "Twinkll Sisodia"
+      ]
+    },
+    {
+      "title": "SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/568",
+      "year": 2026,
+      "published": "2026-09-01",
+      "canonical_id": "DOI:10.24963/ijcai.2026/568",
+      "doi": "10.24963/ijcai.2026/568",
+      "authors": [
+        "Wei Xiao",
+        "Xuefeng Huang",
+        "Weijia Shi",
+        "Baokang Zhao"
+      ]
+    },
+    {
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "source_url": "https://arxiv.org/abs/2608.28048",
+      "year": 2026,
+      "published": "2026-08-28",
+      "canonical_id": "arXiv:2608.28048",
+      "arxiv_id": "2608.28048",
+      "authors": [
+        "Siddharth Patel",
+        "Rohit Singh"
+      ]
+    },
+    {
+      "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+      "source_url": "https://arxiv.org/abs/2608.27046",
+      "year": 2026,
+      "published": "2026-08-27",
+      "canonical_id": "arXiv:2608.27046",
+      "arxiv_id": "2608.27046",
+      "authors": [
+        "Maciej Besta",
+        "Leonard Schmidt",
+        "Lara Nonino",
+        "Robert Gerstenberger",
+        "Pierre Pang",
+        "Patrik Okanovic",
+        "Ales Kubicek",
+        "Tiancheng Chen",
+        "B. Lipshitz",
+        "Torsten Hoefler"
+      ]
+    },
+    {
+      "title": "Simthesizer: An Agent-Driven Simulation Framework for LLM Serving Systems",
+      "source_url": "https://arxiv.org/abs/2608.24650",
+      "year": 2026,
+      "published": "2026-08-25",
+      "canonical_id": "arXiv:2608.24650",
+      "arxiv_id": "2608.24650",
+      "authors": [
+        "Wonung Kim",
+        "Hyunmin Choi",
+        "Minsu Kim",
+        "Jaehong Cho",
+        "Yeong Wook Kim",
+        "Jongse Park"
+      ]
+    },
+    {
+      "title": "The Price of Order in Disaggregated Inference",
+      "source_url": "https://arxiv.org/abs/2606.17081",
+      "year": 2026,
+      "published": "2026-08-24",
+      "canonical_id": "arXiv:2606.17081",
+      "arxiv_id": "2606.17081",
+      "authors": [
+        "Athos Georgiou"
+      ]
+    },
+    {
+      "title": "Architecting the Next Generation of Asynchronous, Distributed GPUs for the AI Era",
+      "source_url": "https://arxiv.org/abs/2608.22602",
+      "year": 2026,
+      "published": "2026-08-23",
+      "canonical_id": "arXiv:2608.22602",
+      "arxiv_id": "2608.22602",
+      "authors": [
+        "Junrui Pan",
+        "Weili An",
+        "Cesar Avalos Baddouh",
+        "Christin David Bose",
+        "Ni Kang",
+        "Aaron Barnes",
+        "Ahmad Alawneh",
+        "Fangjia Shen",
+        "Yechen Liu",
+        "Anusuya Nallathambi",
+        "Atthin Chandrashekar",
+        "Timothy G. Rogers"
+      ]
+    },
+    {
+      "title": "MentorPulse: Refreshing Cross-Model Latent Guidance for Long-Form Generation",
+      "source_url": "https://arxiv.org/abs/2608.20927",
+      "year": 2026,
+      "published": "2026-08-21",
+      "canonical_id": "arXiv:2608.20927",
+      "arxiv_id": "2608.20927",
+      "authors": [
+        "Ziwu Liu",
+        "Guozhong Li",
+        "Chen Qiu",
+        "Weiyang Kong",
+        "Panos Kalnis"
+      ]
+    },
+    {
+      "title": "AI Infrastructure in Space: How Far Can We Go?",
+      "source_url": "https://arxiv.org/abs/2608.21034",
+      "year": 2026,
+      "published": "2026-08-21",
+      "canonical_id": "arXiv:2608.21034",
+      "arxiv_id": "2608.21034",
+      "authors": [
+        "Qing Li",
+        "Qiyang Zhang",
+        "Daliang Xu",
+        "Tianze Huang",
+        "Dingge Zhang",
+        "Yihao Zhao",
+        "Xiaolong Huang",
+        "Jinfeng Wen",
+        "Xiameng Hu",
+        "Tao Qi",
+        "Mengwei Xu",
+        "Shangguang Wang",
+        "Xuanzhe Liu"
+      ]
+    },
+    {
+      "title": "When Does Distributed AI Inference Need More Wide-Area Bandwidth? A Co-Design Evaluation of Optical, Packet, and Software Levers",
+      "source_url": "https://arxiv.org/abs/2608.14967",
+      "year": 2026,
+      "published": "2026-08-15",
+      "canonical_id": "arXiv:2608.14967",
+      "arxiv_id": "2608.14967",
+      "authors": [
+        "Prasanna C"
+      ]
+    },
+    {
+      "title": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training",
+      "source_url": "https://arxiv.org/abs/2608.14498",
+      "year": 2026,
+      "published": "2026-08-14",
+      "canonical_id": "arXiv:2608.14498",
+      "arxiv_id": "2608.14498",
+      "authors": [
+        "Hanfeng Lu",
+        "Tianyu Feng",
+        "Suyi Li",
+        "Yuheng Zhao",
+        "Wei Gao",
+        "Shaopan Xiong",
+        "Ju Huang",
+        "Siran Yang",
+        "Jiamang Wang",
+        "Lin Qu",
+        "Wei Wang"
+      ]
+    },
+    {
+      "title": "Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving",
+      "source_url": "https://doi.org/10.4108/eetiot.13349",
+      "year": 2026,
+      "published": "2026-08-12",
+      "canonical_id": "DOI:10.4108/eetiot.13349",
+      "doi": "10.4108/eetiot.13349",
+      "authors": [
+        "K. B. Aruna",
+        "V. Kaliraj",
+        "I. Sudha",
+        "V. Sureka"
+      ]
+    },
+    {
+      "title": "Macaron-V1: Towards Open Continual Learning with Self-Improvement and Mixture-of-LoRA",
+      "source_url": "https://arxiv.org/abs/2608.09819",
+      "year": 2026,
+      "published": "2026-08-10",
+      "canonical_id": "arXiv:2608.09819",
+      "arxiv_id": "2608.09819",
+      "authors": [
+        "Mind Lab",
+        ":",
+        "Vin Bo",
+        "Asher Cai",
+        "Jingwei Cao",
+        "Song Cao",
+        "Vic Cao",
+        "Amelia Chen",
+        "A. L. Chen",
+        "Kaijie Chen",
+        "Cleon Cheng",
+        "Steven Chiang",
+        "Kaixuan Fan",
+        "Hera Feng",
+        "Huan Feng",
+        "Arthur Fu",
+        "Aaron Guan",
+        "Jun Gao",
+        "Pyke Han",
+        "Ori Hong",
+        "Ori Hong",
+        "Hailee Hou",
+        "Charles Huang",
+        "Charles Huang",
+        "Nora Jiang",
+        "Yuyi Jiang",
+        "Yuyi Jiang",
+        "Qiuyu Jin",
+        "Fancy Kong",
+        "Kuss Koo",
+        "Andrew Lei",
+        "Jaron Lee",
+        "Dawn Li",
+        "Lucian Li",
+        "Ray Li",
+        "Ricardo Li",
+        "Smith Li",
+        "Theo Li",
+        "Allen Lin",
+        "Elliot Lin",
+        "Fan Lin",
+        "Elliot Lin",
+        "Kairus Liu",
+        "Chen Ling",
+        "Logan Liu",
+        "Neo Liu",
+        "Xiang Liu",
+        "Yuxin Lu",
+        "Xiang Liu",
+        "Yuxin Lu",
+        "Maeve Luo",
+        "PONY MA",
+        "Guian Qiu",
+        "Cole Qiao",
+        "Sentry",
+        "Vince Qu",
+        "Sentry",
+        "Zhuoran Shen",
+        "Niko Song",
+        "Vincent Wang",
+        "Bo Wu",
+        "Rio Yang",
+        "Schacter Yang",
+        "Evelyn Ye",
+        "Fiona Ye",
+        "Ina Ye",
+        "Regis Ye",
+        "Josh Ying",
+        "Atlas Zeng",
+        "Danney Zeng",
+        "Sueky Zhang",
+        "Anya Zhang",
+        "Di Zhang",
+        "Mia Zhang",
+        "Sueky Zhang",
+        "Xuening Zhang",
+        "Wei Zhao",
+        "Ada Zhou",
+        "Adrian Zhou",
+        "Yuhua Zhou",
+        "Juno Zhu",
+        "Murphy Zhuang",
+        "Mindverse Team"
+      ]
+    },
+    {
+      "title": "EasyBalance: Cross-Layer Load Balancing in Distributed MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.07964",
+      "year": 2026,
+      "published": "2026-08-08",
+      "canonical_id": "arXiv:2608.07964",
+      "arxiv_id": "2608.07964",
+      "authors": [
+        "Yize Wu",
+        "Ke Gao",
+        "Ling Li",
+        "Yanjun Wu"
+      ]
+    },
+    {
+      "title": "RAC: Reference-Aware Activation Compression for Communication-Efficient Split LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.04991",
+      "year": 2026,
+      "published": "2026-08-05",
+      "canonical_id": "arXiv:2608.04991",
+      "arxiv_id": "2608.04991",
+      "authors": [
+        "G. J. Yang",
+        "Mingxi Zhao",
+        "Haopeng Li",
+        "Z. Wang",
+        "Sheng Chen",
+        "Yitao Hu",
+        "Keqiu Li"
+      ]
+    },
+    {
+      "title": "AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation",
+      "source_url": "https://arxiv.org/abs/2608.04502",
+      "year": 2026,
+      "published": "2026-08-05",
+      "canonical_id": "arXiv:2608.04502",
+      "arxiv_id": "2608.04502",
+      "authors": [
+        "Chengyu Qiu",
+        "Xiao Fu",
+        "Fengcun Li",
+        "Yulei Qian",
+        "Yuchen Xie",
+        "Xunliang Cai",
+        "Yingdi Shan",
+        "Yongwei Wu",
+        "Mingxing Zhang"
+      ]
+    },
+    {
+      "title": "RAG-Stack: Co-Optimizing RAG Serving Performance and Quality",
+      "source_url": "https://arxiv.org/abs/2608.03487",
+      "year": 2026,
+      "published": "2026-08-04",
+      "canonical_id": "arXiv:2608.03487",
+      "arxiv_id": "2608.03487",
+      "authors": [
+        "Haiqiang Zhang",
+        "Yuanqing Lei",
+        "Wanting Li",
+        "Tao Zhang",
+        "Wenqi Jiang"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.12550",
+      "identity_tokens": [
+        "id:arXiv:2609.12550",
+        "title:qualityconstrained routing over a fixed pool of quantized mixtureofexperts instances",
+        "url:https://arxiv.org/abs/2609.12550"
+      ],
+      "record": {
+        "title": "Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances",
+        "source_url": "https://arxiv.org/abs/2609.12550",
+        "year": 2026,
+        "published": "2026-09-11",
+        "canonical_id": "arXiv:2609.12550",
+        "arxiv_id": "2609.12550",
+        "authors": [
+          "Zhenghong Huang",
+          "Hongfan Wu",
+          "Jiheng Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.12075",
+      "identity_tokens": [
+        "id:arXiv:2609.12075",
+        "title:efficient visionlanguageaction management and serving for robot factories",
+        "url:https://arxiv.org/abs/2609.12075"
+      ],
+      "record": {
+        "title": "Efficient Vision-Language-Action Management and Serving for Robot Factories",
+        "source_url": "https://arxiv.org/abs/2609.12075",
+        "year": 2026,
+        "published": "2026-09-10",
+        "canonical_id": "arXiv:2609.12075",
+        "arxiv_id": "2609.12075",
+        "authors": [
+          "Dionysios Adamopoulos",
+          "Nattapol Chanpaisit",
+          "Basel Fakhri",
+          "Christina Giannoula"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21203/rs.3.rs-10935389/v1",
+      "identity_tokens": [
+        "id:DOI:10.21203/rs.3.rs-10935389/v1",
+        "title:how portable are llmserving scheduler rankings across workloads operating regions and metrics",
+        "url:https://doi.org/10.21203/rs.3.rs-10935389/v1"
+      ],
+      "record": {
+        "title": "How Portable Are LLM-Serving Scheduler Rankings Across Workloads, Operating Regions, and Metrics?",
+        "source_url": "https://doi.org/10.21203/rs.3.rs-10935389/v1",
+        "year": 2026,
+        "published": "2026-09-08",
+        "canonical_id": "DOI:10.21203/rs.3.rs-10935389/v1",
+        "doi": "10.21203/rs.3.rs-10935389/v1",
+        "authors": [
+          "Soroush Vahidi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05565",
+      "identity_tokens": [
+        "id:arXiv:2609.05565",
+        "title:toward sustainable distributed llm inference a systems synthesis and research agenda for an energy carbon and cacheaware llmd control plane",
+        "url:https://arxiv.org/abs/2609.05565"
+      ],
+      "record": {
+        "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+        "source_url": "https://arxiv.org/abs/2609.05565",
+        "year": 2026,
+        "published": "2026-09-03",
+        "canonical_id": "arXiv:2609.05565",
+        "arxiv_id": "2609.05565",
+        "authors": [
+          "Twinkll Sisodia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.24963/ijcai.2026/568",
+      "identity_tokens": [
+        "id:DOI:10.24963/ijcai.2026/568",
+        "title:splitscaling adaptive scaling for disaggregated llm serving against traffic bursts via drl",
+        "url:https://doi.org/10.24963/ijcai.2026/568"
+      ],
+      "record": {
+        "title": "SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL",
+        "source_url": "https://doi.org/10.24963/ijcai.2026/568",
+        "year": 2026,
+        "published": "2026-09-01",
+        "canonical_id": "DOI:10.24963/ijcai.2026/568",
+        "doi": "10.24963/ijcai.2026/568",
+        "authors": [
+          "Wei Xiao",
+          "Xuefeng Huang",
+          "Weijia Shi",
+          "Baokang Zhao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28048",
+      "identity_tokens": [
+        "id:arXiv:2608.28048",
+        "title:ai hardware accelerators for large language models architectures and the memory wall",
+        "url:https://arxiv.org/abs/2608.28048"
+      ],
+      "record": {
+        "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+        "source_url": "https://arxiv.org/abs/2608.28048",
+        "year": 2026,
+        "published": "2026-08-28",
+        "canonical_id": "arXiv:2608.28048",
+        "arxiv_id": "2608.28048",
+        "authors": [
+          "Siddharth Patel",
+          "Rohit Singh"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.27046",
+      "identity_tokens": [
+        "id:arXiv:2608.27046",
+        "title:performance foundations of parallel distributed reasoning language models",
+        "url:https://arxiv.org/abs/2608.27046"
+      ],
+      "record": {
+        "title": "Performance Foundations of Parallel & Distributed Reasoning Language Models",
+        "source_url": "https://arxiv.org/abs/2608.27046",
+        "year": 2026,
+        "published": "2026-08-27",
+        "canonical_id": "arXiv:2608.27046",
+        "arxiv_id": "2608.27046",
+        "authors": [
+          "Maciej Besta",
+          "Leonard Schmidt",
+          "Lara Nonino",
+          "Robert Gerstenberger",
+          "Pierre Pang",
+          "Patrik Okanovic",
+          "Ales Kubicek",
+          "Tiancheng Chen",
+          "B. Lipshitz",
+          "Torsten Hoefler"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.24650",
+      "identity_tokens": [
+        "id:arXiv:2608.24650",
+        "title:simthesizer an agentdriven simulation framework for llm serving systems",
+        "url:https://arxiv.org/abs/2608.24650"
+      ],
+      "record": {
+        "title": "Simthesizer: An Agent-Driven Simulation Framework for LLM Serving Systems",
+        "source_url": "https://arxiv.org/abs/2608.24650",
+        "year": 2026,
+        "published": "2026-08-25",
+        "canonical_id": "arXiv:2608.24650",
+        "arxiv_id": "2608.24650",
+        "authors": [
+          "Wonung Kim",
+          "Hyunmin Choi",
+          "Minsu Kim",
+          "Jaehong Cho",
+          "Yeong Wook Kim",
+          "Jongse Park"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.17081",
+      "identity_tokens": [
+        "id:arXiv:2606.17081",
+        "title:the price of order in disaggregated inference",
+        "url:https://arxiv.org/abs/2606.17081"
+      ],
+      "record": {
+        "title": "The Price of Order in Disaggregated Inference",
+        "source_url": "https://arxiv.org/abs/2606.17081",
+        "year": 2026,
+        "published": "2026-08-24",
+        "canonical_id": "arXiv:2606.17081",
+        "arxiv_id": "2606.17081",
+        "authors": [
+          "Athos Georgiou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.22602",
+      "identity_tokens": [
+        "id:arXiv:2608.22602",
+        "title:architecting the next generation of asynchronous distributed gpus for the ai era",
+        "url:https://arxiv.org/abs/2608.22602"
+      ],
+      "record": {
+        "title": "Architecting the Next Generation of Asynchronous, Distributed GPUs for the AI Era",
+        "source_url": "https://arxiv.org/abs/2608.22602",
+        "year": 2026,
+        "published": "2026-08-23",
+        "canonical_id": "arXiv:2608.22602",
+        "arxiv_id": "2608.22602",
+        "authors": [
+          "Junrui Pan",
+          "Weili An",
+          "Cesar Avalos Baddouh",
+          "Christin David Bose",
+          "Ni Kang",
+          "Aaron Barnes",
+          "Ahmad Alawneh",
+          "Fangjia Shen",
+          "Yechen Liu",
+          "Anusuya Nallathambi",
+          "Atthin Chandrashekar",
+          "Timothy G. Rogers"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.20927",
+      "identity_tokens": [
+        "id:arXiv:2608.20927",
+        "title:mentorpulse refreshing crossmodel latent guidance for longform generation",
+        "url:https://arxiv.org/abs/2608.20927"
+      ],
+      "record": {
+        "title": "MentorPulse: Refreshing Cross-Model Latent Guidance for Long-Form Generation",
+        "source_url": "https://arxiv.org/abs/2608.20927",
+        "year": 2026,
+        "published": "2026-08-21",
+        "canonical_id": "arXiv:2608.20927",
+        "arxiv_id": "2608.20927",
+        "authors": [
+          "Ziwu Liu",
+          "Guozhong Li",
+          "Chen Qiu",
+          "Weiyang Kong",
+          "Panos Kalnis"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21034",
+      "identity_tokens": [
+        "id:arXiv:2608.21034",
+        "title:ai infrastructure in space how far can we go",
+        "url:https://arxiv.org/abs/2608.21034"
+      ],
+      "record": {
+        "title": "AI Infrastructure in Space: How Far Can We Go?",
+        "source_url": "https://arxiv.org/abs/2608.21034",
+        "year": 2026,
+        "published": "2026-08-21",
+        "canonical_id": "arXiv:2608.21034",
+        "arxiv_id": "2608.21034",
+        "authors": [
+          "Qing Li",
+          "Qiyang Zhang",
+          "Daliang Xu",
+          "Tianze Huang",
+          "Dingge Zhang",
+          "Yihao Zhao",
+          "Xiaolong Huang",
+          "Jinfeng Wen",
+          "Xiameng Hu",
+          "Tao Qi",
+          "Mengwei Xu",
+          "Shangguang Wang",
+          "Xuanzhe Liu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.14967",
+      "identity_tokens": [
+        "id:arXiv:2608.14967",
+        "title:when does distributed ai inference need more widearea bandwidth a codesign evaluation of optical packet and software levers",
+        "url:https://arxiv.org/abs/2608.14967"
+      ],
+      "record": {
+        "title": "When Does Distributed AI Inference Need More Wide-Area Bandwidth? A Co-Design Evaluation of Optical, Packet, and Software Levers",
+        "source_url": "https://arxiv.org/abs/2608.14967",
+        "year": 2026,
+        "published": "2026-08-15",
+        "canonical_id": "arXiv:2608.14967",
+        "arxiv_id": "2608.14967",
+        "authors": [
+          "Prasanna C"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.14498",
+      "identity_tokens": [
+        "id:arXiv:2608.14498",
+        "title:rollplex crossphase gpu spatial sharing for vision language model posttraining",
+        "url:https://arxiv.org/abs/2608.14498"
+      ],
+      "record": {
+        "title": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training",
+        "source_url": "https://arxiv.org/abs/2608.14498",
+        "year": 2026,
+        "published": "2026-08-14",
+        "canonical_id": "arXiv:2608.14498",
+        "arxiv_id": "2608.14498",
+        "authors": [
+          "Hanfeng Lu",
+          "Tianyu Feng",
+          "Suyi Li",
+          "Yuheng Zhao",
+          "Wei Gao",
+          "Shaopan Xiong",
+          "Ju Huang",
+          "Siran Yang",
+          "Jiamang Wang",
+          "Lin Qu",
+          "Wei Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.4108/eetiot.13349",
+      "identity_tokens": [
+        "id:DOI:10.4108/eetiot.13349",
+        "title:janus joint prefilldecode disaggregation with kvcacheaware multicloud routing for edgeadjacent llm serving",
+        "url:https://doi.org/10.4108/eetiot.13349"
+      ],
+      "record": {
+        "title": "Janus: Joint Prefill/Decode Disaggregation with KV-Cache-Aware Multi-Cloud Routing for Edge-Adjacent LLM Serving",
+        "source_url": "https://doi.org/10.4108/eetiot.13349",
+        "year": 2026,
+        "published": "2026-08-12",
+        "canonical_id": "DOI:10.4108/eetiot.13349",
+        "doi": "10.4108/eetiot.13349",
+        "authors": [
+          "K. B. Aruna",
+          "V. Kaliraj",
+          "I. Sudha",
+          "V. Sureka"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09819",
+      "identity_tokens": [
+        "id:arXiv:2608.09819",
+        "title:macaronv1 towards open continual learning with selfimprovement and mixtureoflora",
+        "url:https://arxiv.org/abs/2608.09819"
+      ],
+      "record": {
+        "title": "Macaron-V1: Towards Open Continual Learning with Self-Improvement and Mixture-of-LoRA",
+        "source_url": "https://arxiv.org/abs/2608.09819",
+        "year": 2026,
+        "published": "2026-08-10",
+        "canonical_id": "arXiv:2608.09819",
+        "arxiv_id": "2608.09819",
+        "authors": [
+          "Mind Lab",
+          ":",
+          "Vin Bo",
+          "Asher Cai",
+          "Jingwei Cao",
+          "Song Cao",
+          "Vic Cao",
+          "Amelia Chen",
+          "A. L. Chen",
+          "Kaijie Chen",
+          "Cleon Cheng",
+          "Steven Chiang",
+          "Kaixuan Fan",
+          "Hera Feng",
+          "Huan Feng",
+          "Arthur Fu",
+          "Aaron Guan",
+          "Jun Gao",
+          "Pyke Han",
+          "Ori Hong",
+          "Ori Hong",
+          "Hailee Hou",
+          "Charles Huang",
+          "Charles Huang",
+          "Nora Jiang",
+          "Yuyi Jiang",
+          "Yuyi Jiang",
+          "Qiuyu Jin",
+          "Fancy Kong",
+          "Kuss Koo",
+          "Andrew Lei",
+          "Jaron Lee",
+          "Dawn Li",
+          "Lucian Li",
+          "Ray Li",
+          "Ricardo Li",
+          "Smith Li",
+          "Theo Li",
+          "Allen Lin",
+          "Elliot Lin",
+          "Fan Lin",
+          "Elliot Lin",
+          "Kairus Liu",
+          "Chen Ling",
+          "Logan Liu",
+          "Neo Liu",
+          "Xiang Liu",
+          "Yuxin Lu",
+          "Xiang Liu",
+          "Yuxin Lu",
+          "Maeve Luo",
+          "PONY MA",
+          "Guian Qiu",
+          "Cole Qiao",
+          "Sentry",
+          "Vince Qu",
+          "Sentry",
+          "Zhuoran Shen",
+          "Niko Song",
+          "Vincent Wang",
+          "Bo Wu",
+          "Rio Yang",
+          "Schacter Yang",
+          "Evelyn Ye",
+          "Fiona Ye",
+          "Ina Ye",
+          "Regis Ye",
+          "Josh Ying",
+          "Atlas Zeng",
+          "Danney Zeng",
+          "Sueky Zhang",
+          "Anya Zhang",
+          "Di Zhang",
+          "Mia Zhang",
+          "Sueky Zhang",
+          "Xuening Zhang",
+          "Wei Zhao",
+          "Ada Zhou",
+          "Adrian Zhou",
+          "Yuhua Zhou",
+          "Juno Zhu",
+          "Murphy Zhuang",
+          "Mindverse Team"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.07964",
+      "identity_tokens": [
+        "id:arXiv:2608.07964",
+        "title:easybalance crosslayer load balancing in distributed moe inference",
+        "url:https://arxiv.org/abs/2608.07964"
+      ],
+      "record": {
+        "title": "EasyBalance: Cross-Layer Load Balancing in Distributed MoE Inference",
+        "source_url": "https://arxiv.org/abs/2608.07964",
+        "year": 2026,
+        "published": "2026-08-08",
+        "canonical_id": "arXiv:2608.07964",
+        "arxiv_id": "2608.07964",
+        "authors": [
+          "Yize Wu",
+          "Ke Gao",
+          "Ling Li",
+          "Yanjun Wu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.04991",
+      "identity_tokens": [
+        "id:arXiv:2608.04991",
+        "title:rac referenceaware activation compression for communicationefficient split llm inference",
+        "url:https://arxiv.org/abs/2608.04991"
+      ],
+      "record": {
+        "title": "RAC: Reference-Aware Activation Compression for Communication-Efficient Split LLM Inference",
+        "source_url": "https://arxiv.org/abs/2608.04991",
+        "year": 2026,
+        "published": "2026-08-05",
+        "canonical_id": "arXiv:2608.04991",
+        "arxiv_id": "2608.04991",
+        "authors": [
+          "G. J. Yang",
+          "Mingxi Zhao",
+          "Haopeng Li",
+          "Z. Wang",
+          "Sheng Chen",
+          "Yitao Hu",
+          "Keqiu Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.04502",
+      "identity_tokens": [
+        "id:arXiv:2608.04502",
+        "title:afdledger deployment provisioning for attentionffn disaggregation",
+        "url:https://arxiv.org/abs/2608.04502"
+      ],
+      "record": {
+        "title": "AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation",
+        "source_url": "https://arxiv.org/abs/2608.04502",
+        "year": 2026,
+        "published": "2026-08-05",
+        "canonical_id": "arXiv:2608.04502",
+        "arxiv_id": "2608.04502",
+        "authors": [
+          "Chengyu Qiu",
+          "Xiao Fu",
+          "Fengcun Li",
+          "Yulei Qian",
+          "Yuchen Xie",
+          "Xunliang Cai",
+          "Yingdi Shan",
+          "Yongwei Wu",
+          "Mingxing Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.03487",
+      "identity_tokens": [
+        "id:arXiv:2608.03487",
+        "title:ragstack cooptimizing rag serving performance and quality",
+        "url:https://arxiv.org/abs/2608.03487"
+      ],
+      "record": {
+        "title": "RAG-Stack: Co-Optimizing RAG Serving Performance and Quality",
+        "source_url": "https://arxiv.org/abs/2608.03487",
+        "year": 2026,
+        "published": "2026-08-04",
+        "canonical_id": "arXiv:2608.03487",
+        "arxiv_id": "2608.03487",
+        "authors": [
+          "Haiqiang Zhang",
+          "Yuanqing Lei",
+          "Wanting Li",
+          "Tao Zhang",
+          "Wenqi Jiang"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:ee0bfa97e5dd95ad7ea97dc88bbaf2fca7bfb38bc6e6975b0044a13b23b6a045",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

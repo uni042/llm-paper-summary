@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36c14ec7cd7154b0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.02050",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.02050",
+    "identity_tokens": [
+      "arXiv:2602.02050"
+    ],
+    "reason": "一次要旨で、ツール実行前後のエントロピー減少を報酬信号とする強化学習によってエージェントの不要なツール呼出しを削減する研究と確認。72.07%の呼出し削減は学習済み方策の振る舞いの改善であり、推論ランタイムの計算グラフ、GPUスケジューラ、KVキャッシュ、モデル圧縮の新方式を示さない。学習・エージェント行動最適化のため対象外。",
+    "first_checked_at": "2026-10-17T03:54:25+00:00",
+    "last_checked_at": "2026-10-17T03:54:25+00:00",
+    "linked_from": [],
+    "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents"
+  },
+  "processed_at": "2026-10-17T03:54:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36c14ec7cd71",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-cd08186948b1ca00-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.03123",
+  "reason": "FORESIGHTは共有重み・入力encoder・KV cacheを持つ2つのSiamese LLM streamで、片方が動画を処理する間にもう片方が未来の知覚対象と計算密度を予測し、再学習なしにonline計算経路を変更する。Qwen3-VL-8BでStreamingBench等の品質改善を報告するが、要旨に実測レイテンシ削減やGPU計算量の削減率はなく効率改善の定量性が不足する。",
+  "title": "Foresight: planning future perception in streaming VLMs without retraining",
+  "identity_tokens": [
+    "arXiv:2610.03123"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd08186948b1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

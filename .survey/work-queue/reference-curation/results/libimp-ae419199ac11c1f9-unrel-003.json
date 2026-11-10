@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae419199ac11c1f9-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.16620",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.16620",
+    "identity_tokens": [
+      "arXiv:2608.16620"
+    ],
+    "reason": "Primary abstract reports post-training of an agentic tool-use model but no inference-efficiency/serving contribution.",
+    "first_checked_at": "2026-10-05T08:27:46+00:00",
+    "last_checked_at": "2026-10-05T08:27:46+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "Palmyra x6 Technical Report: An Agentic, Tool-Use Model Post-Trained via Anchored Supervised Fine-Tuning"
+  },
+  "processed_at": "2026-10-05T08:27:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae419199ac11",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

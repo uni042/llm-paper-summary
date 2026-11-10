@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-513a00817feed331-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.19167",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.19167",
+    "identity_tokens": [
+      "arXiv:2609.19167"
+    ],
+    "reason": "As AI systems evolve into personalized digital companions, a central capability is reasoning over a user's long-term personal history: not merely storing past events, but tracking longitudinal experiences and evolving preferences. Progress here is bottlenecked by evaluation, existing long-term memory benchmarks are largely synthetic and text-only, they overlook the visual records that anchor everyday human memory, lack the authentic and causally connected longitudinal data that real personalization demands, and consequently remain confined to shallow factual recall. We introduce ReaLMem (Real-world Long-term Multimodal Memory), the first benchmark built from authentic multi-year personal visual archives, paired with first-person subjective annotations. ReaLMem evaluates models across three cognitive tiers of increasing difficulty: factual recall, persona inference, and predictive personalization. We further propose ChronoProfiler, a temporal-weighting profiling module that computes temporal stability scores for user attributes and applies them as a salience prior, resolving conflicts among temporally inconsistent preferences and helping models compound multiple co-active preferences in complex personalized decisions. Extensive evaluation of frontier multimodal large language models (MLLMs) and memory systems on ReaLMem reveals predictive personalization as a consistent ceiling, exposes clear performance gaps and bottlenecks between MLLMs and memory systems, and shows that high-quality, temporally informed representations substantially improve personalization. Together, ReaLMem and ChronoProfiler provide an authentic testbed and a simple, effective mechanism for long-term personalization, laying a foundation for future research on lifelong AI companions.",
+    "first_checked_at": "2026-10-05T06:54:05+00:00",
+    "last_checked_at": "2026-10-05T06:54:05+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "To Memories and Beyond: From Remembering to Knowing You across Long-Term Multimodal Personal Archives"
+  },
+  "processed_at": "2026-10-05T06:54:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-513a00817fee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

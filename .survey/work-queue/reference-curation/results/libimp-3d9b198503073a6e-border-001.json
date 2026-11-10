@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d9b198503073a6e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.comnet.2026.112609",
+    "identity_tokens": [
+      "DOI:10.1016/j.comnet.2026.112609"
+    ],
+    "reason": "題名と出版社の一次資料ページのIntroductionは、LLMを複数のGPUサーバ上の推論チェーンへ分割配置し、KV-cacheを含む資源制約下で同時実行可能数と通信費を合わせて扱う研究と示しており、LLM inference serving / deployment の対象範囲に強く関係する。一方、本文の手法・評価節および論文自身の限界を確認できていないため、適合を確定せずborderlineとする。",
+    "first_checked_at": "2026-10-04T05:54:09+00:00",
+    "last_checked_at": "2026-10-04T05:54:09+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Profit-aware deployment of large language model-enabled inference chains in data centers"
+  },
+  "processed_at": "2026-10-04T05:54:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d9b19850307",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

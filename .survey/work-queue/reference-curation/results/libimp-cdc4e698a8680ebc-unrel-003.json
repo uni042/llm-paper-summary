@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cdc4e698a8680ebc-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.09647",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.09647",
+    "identity_tokens": [
+      "arXiv:2512.09647"
+    ],
+    "reason": "worklist rank159の題名『Structured Attention Fine-Tuning for Efficient LLM Inference』は指定arXiv番号の一次PDFと一致しない。実際の論文はFermilabの加速器タイミング制御・時計同期を扱う『Time Served』（Evan Miltonほか）でありLLMと無関係。worklist題名に引きずられてLLM論文としてResearchを作らず、実在するcanonical identityをunrelatedとして記録。",
+    "first_checked_at": "2026-10-18T16:44:51+00:00",
+    "last_checked_at": "2026-10-18T16:44:51+00:00",
+    "linked_from": [],
+    "title": "Time Served"
+  },
+  "processed_at": "2026-10-18T16:44:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cdc4e698a868",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f35a75325a7c230-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.14778/3749646.3749724",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.14778/3749646.3749724",
+    "identity_tokens": [
+      "DOI:10.14778/3749646.3749724"
+    ],
+    "reason": "RAG用途にも使えるvector database研究だが、主対象はHNSW/pgvectorのSSD I/Oと索引配置であり、LLM推論・KV・LLM servingそのものではない。",
+    "first_checked_at": "2026-10-02T23:09:34+00:00",
+    "last_checked_at": "2026-10-02T23:09:34+00:00",
+    "linked_from": [],
+    "title": "Turbocharging Vector Databases Using Modern SSDs"
+  },
+  "processed_at": "2026-10-02T23:09:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f35a75325a7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

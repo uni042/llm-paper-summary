@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-db2ee2256a19c066-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.08153",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.08153",
+    "identity_tokens": [
+      "arXiv:2503.08153"
+    ],
+    "reason": "physics-aware text-to-video quality/model designでefficiency techniqueでない。",
+    "first_checked_at": "2026-10-05T03:02:30+00:00",
+    "last_checked_at": "2026-10-05T03:02:30+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+    ],
+    "title": "WISA: World Simulator Assistant for Physics-Aware Text-to-Video Generation"
+  },
+  "processed_at": "2026-10-05T03:02:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db2ee2256a19",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

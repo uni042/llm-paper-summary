@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e50be2c6290d363e2c741e7a532864d5aba6929dc9c3b6d3c23a43b1f3cf19d5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_531ec7f330248191bf24ee852eae23b4--2025-2510.04147-self-speculative-decoding-dllm-research-20261019-1345-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2510.04147",
+  "worker_completed_at": "2026-10-19T14:02:00+09:00",
+  "worker_run_key": "20261019-1345-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7346,
+    "body_paragraphs": 43,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 542,
+    "limitation_chars": 596,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-19T12:35:55+00:00"
+}

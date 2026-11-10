@@ -1,0 +1,872 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-abe42debcf0089e6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-abe42debcf00",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2504.03717",
+    "arXiv:2605.05699",
+    "arXiv:2605.19260",
+    "arXiv:2605.30842",
+    "arXiv:2606.15682",
+    "arXiv:2606.21848",
+    "arXiv:2607.19368",
+    "arXiv:2607.27591",
+    "arXiv:2610.21808"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "b680d715e06401e3845c0d3d85d257d9de5c632f",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T16:02:26.727482+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2504.03717",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.05699",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.19260",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.30842",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.15682",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.21848",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.19368",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.27591",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.21808",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CoMem: Context Management with A Decoupled Long-Context Model",
+      "source_url": "https://arxiv.org/abs/2605.30842",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Context management enables agentic models to solve long-horizon tasks through iterative summarization of previous interaction histories. However, this process typically incurs substantial decoding overhead for the extra summarization tokens, which significantly affect the end-to-end response latency at deployment. In this paper, we introduce CoMem, a novel framework that decouples memory management from the primary agent workflow, enabling these processes to execute in parallel. We propose a $k$-step-off asynchronous pipeline that overlaps the memory model's summarization with the agent's inference, effectively masking the latency of context processing. To ensure robustness under this asynchronous setting, we introduce a reward-driven training strategy that aligns the memory model to capture sufficient statistics for the agent's decision-making. Theoretical analysis confirms that CoMem offers a superior efficiency-effectiveness trade-off compared to coupled architectures. Our extensive experimental results on SWE-Bench-Verified show that CoMem provides 1.4x latency improvements upon vanilla long-context solutions while preserving most of the performance. Furthermore, we demonstrate that these latency gains scale favorably with increased system throughput, offering a modular path forward for the independent optimization of agent reasoning and memory compression.",
+      "identifiers": [
+        "SemanticScholar:e52381f8429203107fac01d2b5a8dcb0493a9c41"
+      ],
+      "semantic_scholar_id": "e52381f8429203107fac01d2b5a8dcb0493a9c41",
+      "canonical_id": "arXiv:2605.30842",
+      "arxiv_id": "2605.30842",
+      "doi": "10.48550/arXiv.2605.30842",
+      "authors": [
+        "Yu-Wei Zhang",
+        "Chengyu Dong",
+        "Shuo-Wei Jin",
+        "Chang-Long Yu",
+        "Hejie Cui",
+        "Hong-Ye Jin",
+        "Xinyang Zhang",
+        "Hamed Bonab",
+        "Colin Lockard",
+        "Jianshu Chen",
+        "Zhen-Yu Shi",
+        "Jingbo Shang",
+        "Xian Li",
+        "Bing Yin"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Floating-Point Quantization-Aware Training",
+      "source_url": "https://arxiv.org/abs/2606.15682",
+      "year": 2026,
+      "published": "2026-06-14",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) achieve strong problem-solving through long chain-of-thought, but their deployment is constrained by the high cost of full-precision inference and growing KV cache footprints. Microscaled FP4 formats enable efficient FP4 deployment; however, fully quantizing weights, activations, and KV caches (W4A4KV4) causes severe reasoning degradation that existing PTQ and QAT fail to recover. We identify that FP4 failures concentrate on low-entropy tokens--precise symbolic commitments such as digits and operators--where quantization noise inflates sampling errors that cascade through reasoning traces. Based on this insight, we propose ReQAT, a reasoning-centric FP4 training framework with three components: (i) Trace-Aligned QAT (TAQ), which revisits identical reasoning traces to focus updates on critical low-entropy decisions; (ii) Selective Entropy Minimization (SEM), which reinforces confidence at low-entropy positions; and (iii) Q-FIT, a quantization-friendly initialization that jointly calibrates RoPE-consistent KV cache transformations to stabilize QAT. Under the same training budget, ReQAT not only recovers but surpasses BF16 fine-tuning accuracy, while delivering up to 3.9x throughput speedup on NVIDIA DGX Spark and 3.1x on B200.",
+      "identifiers": [
+        "SemanticScholar:9eff71af6c3553cc9c03bd817b43d59e4e65ba2b"
+      ],
+      "semantic_scholar_id": "9eff71af6c3553cc9c03bd817b43d59e4e65ba2b",
+      "canonical_id": "arXiv:2606.15682",
+      "arxiv_id": "2606.15682",
+      "doi": "10.48550/arXiv.2606.15682",
+      "authors": [
+        "Janghwan Lee",
+        "Sihwa Lee",
+        "Jinseok Kim",
+        "Yongjik Kim",
+        "Jieun Lim",
+        "Jinwook Oh",
+        "Jungwook Choi"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "When Quantization Is Free: An int4 KV Cache That Outruns fp16 on Apple Silicon",
+      "source_url": "https://arxiv.org/abs/2605.05699",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache quantization is framed as a quality--latency trade-off. We show it is \\emph{inverted} on Apple Silicon's unified memory: a single fused Metal kernel (sign-randomized FFT $+$ per-channel $\\lambda$ $+$ per-group abs-max $+$ int4 nibble pack), exposed as a HuggingFace \\texttt{Cache} subclass, runs \\emph{faster than fp16} across $256$--$4096$-token prefixes on Gemma-3 1B ($-3$ to $-8\\%$ ms/tok) and at short context on Qwen2.5-1.5B ($-0.7$ to $-2.6\\%$ through $1$K), with $3\\times$ persistent memory compression and quality preserved ($\\dPPL = 0.000$ Qwen short-prompt; $+3.6$ hook $\\dPPL$ Gemma). The kernel's $\\sim\\!25$\\,ns/vec overhead is below the bandwidth savings from $3\\times$ compression. The fused kernel also closes Qwen's 4-bit per-token catastrophe ($\\dPPL = +7975 \\to +638.6$, $12.5\\times$ reduction) at $182$\\,GFLOPS / $D{=}128$. Supporting findings: $\\SRFT$ and $\\SRHT$ are statistically indistinguishable for KV quality (we pick $\\SRFT$ for mixed-radix and matrix-multiply alignment); a learned-rotation ablation surfaces a regularization role for the fixed random SRFT base (learning $R+\\lambda$ without SRFT lowers calibration MSE $84.9\\%$ vs $50.3\\%$ but yields worse PPL); Householder rotations at $k{=}d/2$ reflectors are effectively lossless at $d{=}256$.",
+      "identifiers": [
+        "SemanticScholar:06ac06a648b9f5accd03247abf69de808ee28775"
+      ],
+      "semantic_scholar_id": "06ac06a648b9f5accd03247abf69de808ee28775",
+      "canonical_id": "arXiv:2605.05699",
+      "arxiv_id": "2605.05699",
+      "doi": "10.48550/arXiv.2605.05699",
+      "authors": [
+        "Mohamed Amine Bergach"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AQuaUI: Visual Token Reduction for GUI Agents with Adaptive Quadtrees",
+      "source_url": "https://arxiv.org/abs/2605.19260",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Multimodal Models (LMMs) have recently emerged as promising backbones for GUI-agent models, where high-resolution GUI screenshots are introduced to the prompts at each iteration step. However, these screenshots exhibit highly non-uniform spatial information density: large regions may carry little information and are visually homogeneous, while key text and icons may require high visual fidelity. Existing approaches to this problem either require additional training or rely on attention-based token compression, ignoring the structured layout and spatial redundancy of GUI screenshots. To fill the gap, this paper proposes AquaUI, a training-free inference-time token reduction method for GUI agent models that utilizes the non-uniform information density in screenshots. AQuaUI constructs an adaptive quadtree on each screenshot input and keeps one representative merged token per leaf of the quadtree. AQuaUI preserves the spatial positions of retained tokens throughout the pipeline to ensure that all position-encoding stages remain consistent. To further improve temporal consistency across multi-step GUI interactions, we propose a conditional quadtree algorithm that leverages the continuity between consecutive screenshots within a single request. Specifically, it refines the current quadtree using previous quadtrees as references, helping preserve fine-grained regions across static or mildly shifted GUI states. We implement AQuaUI on state-of-the-art GUI agent models and conduct experiments on standard grounding and navigational benchmarks. AQuaUI consistently shows improved accuracy-efficiency trade-offs over prior baselines. Notably, on GUI-Owl-1.5-32B-Instruct, AQuaUI achieves up to 13.22% speedup and 29.52% fewer visual tokens while retaining 99.06% of full-token performance, suggesting that the spatial redundancy of GUI screenshots can be exploited at inference without retraining.",
+      "identifiers": [
+        "SemanticScholar:4103399a4c055be18ed26cefce6b4bfbbb7c6992"
+      ],
+      "semantic_scholar_id": "4103399a4c055be18ed26cefce6b4bfbbb7c6992",
+      "canonical_id": "arXiv:2605.19260",
+      "arxiv_id": "2605.19260",
+      "doi": "10.48550/arXiv.2605.19260",
+      "authors": [
+        "Yuankai Li",
+        "Ting-Hui Zhu",
+        "Ha-Min Son",
+        "Zhe Zhao",
+        "Xin Liu",
+        "Mu-Hao Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 164,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Prox: Training-Free FFN Activation Sparsity via Approximate Intermediate-Channel Salience in LLMs",
+      "source_url": "https://arxiv.org/abs/2607.27591",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Feed-forward networks (FFNs) dominate memory traffic and computation in large language model (LLM) inference, making them a primary target for activation sparsification. However, existing training-free methods suffer substantial model-quality degradation at high sparsity due to limitations in their channel-selection strategies. We observe that the SwiGLU intermediate state provides a highly effective channel-selection signal, but obtaining it requires costly dense computation. To address this, we present \\emph{Prox}, a two-stage training-free framework for sparse SwiGLU FFNs. Prox hinges on the key insight: sparse execution requires only the channel mask induced by the intermediate state, which can be constructed from the magnitude ranking of its entries rather than their exact values. Specifically, Stage 1 uses input sparsity and quantized proxy weights to construct a shared mask; Stage 2 computes the selected channels exactly, enabling sparse execution of all three projections. Across ten LLMs from six model families, Prox outperforms training-free baselines at all sparsity levels, achieves up to a $1.99\\times$ end-to-end decoding speedup at 70\\% FFN sparsity, and is compatible with quantization and sparse attention.",
+      "identifiers": [
+        "SemanticScholar:444deb2112acc6802700ab2452a30591c46e5fea"
+      ],
+      "semantic_scholar_id": "444deb2112acc6802700ab2452a30591c46e5fea",
+      "canonical_id": "arXiv:2607.27591",
+      "arxiv_id": "2607.27591",
+      "doi": "10.48550/arXiv.2607.27591",
+      "authors": [
+        "Jinyi Liu",
+        "Wei Chen",
+        "Pengyu Chen",
+        "Xin Yuan",
+        "Minghe Bai",
+        "Guo-Quan Wu",
+        "Jun Wei"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 92,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Spectral-LSH: Sub-Quadratic Prompt Compression via Krylov-Projected Locality-Sensitive Hashing",
+      "source_url": "https://arxiv.org/abs/2607.19368",
+      "year": 2026,
+      "published": "2026-06-12",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-prompt inference remains expensive because prefill attention scales quadratically with sequence length. We propose Spectral-LSH, a training-free prompt compression method that operates before the prompt enters the language model. Spectral-LSH approximates the dominant components of an implicit attention-kernel operator using a Krylov subspace method together with random features, avoiding explicit $O(N^2)$ attention-kernel materialization. It then applies SimHash in the resulting attention eigenspace to group similar tokens and aggregate them into macro-tokens with causal positional assignments. We evaluate Mistral-7B-Instruct-v0.3, Qwen2.5-7B-Instruct, and Qwen2.5-14B-Instruct on C4. Our experiments reveal a compression-ratio phase transition. Below $\\rho = 4 \\times$, local token redundancy is low enough that lightweight chunking typically provides the best latency--quality trade-off. Above $\\rho = 8 \\times$, the spectral path preserves quality that chunking loses. At $\\rho = 16 \\times$, Qwen2.5-7B (adaptive) reduces the PPL ratio from 353.409 to 196.963, while Qwen2.5-14B (adaptive) reduces it from 9.533 to 3.427. On a small long-context structured stress test containing JSON-like, code-like, and table-like inputs, local LSH also improves every metric over chunking at $8 \\times$. The adaptive backend captures both regimes by using the chunk path at low compression and spectral clustering at high compression, although chunking remains the fastest backend in total latency.",
+      "identifiers": [
+        "SemanticScholar:77f02a68cd3a806a778fa81d35da3ea90c87e99a"
+      ],
+      "semantic_scholar_id": "77f02a68cd3a806a778fa81d35da3ea90c87e99a",
+      "canonical_id": "arXiv:2607.19368",
+      "arxiv_id": "2607.19368",
+      "doi": "10.48550/arXiv.2607.19368",
+      "authors": [
+        "Ali Mahdavi",
+        "Azadeh Zamanifar",
+        "Amirfarhad Farhadi",
+        "Omid Kashefi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers",
+      "source_url": "https://arxiv.org/abs/2606.21848",
+      "year": 2026,
+      "published": "2026-06-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer architectures form the foundation of modern natural language processing, yet the Key-Value (KV) cache introduces substantial memory and bandwidth overhead during long-context generation, increasingly bottlenecking large-scale deployment. We propose Keyless Attention, a novel attention mechanism that replaces the conventional key projection with a dedicated value-space routing projection, eliminating key representations from the attention computation entirely and yielding a Value-Only Cache that reduces KV-cache memory by 50% while improving decode throughput. Experiments across multiple models and architectures demonstrate that Keyless Attention achieves comparable perplexity and downstream task performance to standard QKV attention, while consistently reducing KV-cache memory by 50%. Furthermore, Keyless Attention exhibits slower validation loss degradation after the best epoch, indicating improved robustness against overfitting. Ablation studies confirm that the dedicated value-space routing projection is critical, with Keyless Attention outperforming KV-sharing methods that eliminate the key cache without replacing its routing role. Experiments in the pretraining regime further confirm the viability of Keyless Attention in industrial settings.",
+      "identifiers": [
+        "SemanticScholar:935ca66fc96f37f77103a1a73a19c886572db4fe"
+      ],
+      "semantic_scholar_id": "935ca66fc96f37f77103a1a73a19c886572db4fe",
+      "canonical_id": "arXiv:2606.21848",
+      "arxiv_id": "2606.21848",
+      "doi": "10.48550/arXiv.2606.21848",
+      "authors": [
+        "Xin Gao",
+        "Xing Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 132,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RoleQ: Role-Aligned Scales for Converting Language Models to Ternary",
+      "source_url": "https://arxiv.org/abs/2610.21808",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight quantization below four bits shrinks memory and bandwidth at a perplexity that looks acceptable, but often at the cost of factual knowledge and task accuracy. Ternary weights have mostly been obtained by training from scratch or long fine-tuning. We introduce RoleQ, a quantization framework that places scales by the functional roles of Transformer units rather than by the layout of the weight matrix, as conventional formats do. Vectors that read from the residual stream take one scale per output unit; those that write to it, one per input unit. The rule is structural, needs no search, calibration or stored state, and holds on integer and ternary grids. In a rotated basis it matches a per-layer axis search at half the solver work, and at ternary it cuts perplexity by up to half against layout-based placement in two families at every size from 0.6B to 14B, where per-row scales leave MMLU at chance. Our lightweight post-training pipeline converts an existing checkpoint to 1.59 bits per weight in a few GPU-hours, a fraction of the cost of learned ternarization, and leads every post-training ternary method at matched or lower memory-resident bits on perplexity, zero-shot accuracy and MMLU, most widely on knowledge. A sparse second ternary plane placed by a per-unit Fisher saliency keeps the matmul multiplication-free and recovers what ternary loses first: at 8B, a fraction of a bit returns about half the MMLU that conversion costs, well ahead of random or Hessian-based placement at equal bits.",
+      "identifiers": [
+        "SemanticScholar:836d2198eb090b4982018d0fc012f05ba0b31353"
+      ],
+      "semantic_scholar_id": "836d2198eb090b4982018d0fc012f05ba0b31353",
+      "canonical_id": "arXiv:2610.21808",
+      "arxiv_id": "2610.21808",
+      "authors": [
+        "Johannes Knittel",
+        "Alec Helbling",
+        "Hanspeter Pfister"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 15,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm",
+      "source_url": "https://arxiv.org/abs/2504.03717",
+      "year": 2025,
+      "published": "2025-03-29",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training Quantization (PTQ) has become a widely used technique for improving inference efficiency of large language models (LLMs). However, existing PTQ methods generally suffer from crucial limitations such as heavy calibration data requirements and inflexible choice of target number of bits. In this paper, we propose RaanA, a unified PTQ framework that overcomes these challenges by introducing two novel components: 1) RaBitQ-H, a variant of a randomized vector quantization method RaBitQ, designed for fast, accurate, and highly efficient quantization; and 2) AllocateBits, an algorithm that optimally allocates bit-widths across layers based on their quantization sensitivity. RaanA achieves competitive performance with state-of-the-art quantization methods while being extremely fast, requiring minimal calibration data, and enabling flexible bit allocation. Extensive experiments demonstrate RaanA's efficacy in balancing efficiency and accuracy. The code is publicly available at https://github.com/FFTYYY/RaanA .",
+      "identifiers": [
+        "SemanticScholar:89b9a9af122c7400e3fc9c9807c5576f10b9906c"
+      ],
+      "semantic_scholar_id": "89b9a9af122c7400e3fc9c9807c5576f10b9906c",
+      "canonical_id": "arXiv:2504.03717",
+      "arxiv_id": "2504.03717",
+      "doi": "10.48550/arXiv.2504.03717",
+      "authors": [
+        "Yong-Yi Yang",
+        "Jian-Yang Gao",
+        "Wei Hu"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 580,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.30842",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.30842",
+        "id:SemanticScholar:e52381f8429203107fac01d2b5a8dcb0493a9c41",
+        "id:arXiv:2605.30842",
+        "title:comem context management with a decoupled longcontext model",
+        "url:https://arxiv.org/abs/2605.30842"
+      ],
+      "record": {
+        "title": "CoMem: Context Management with A Decoupled Long-Context Model",
+        "source_url": "https://arxiv.org/abs/2605.30842",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Context management enables agentic models to solve long-horizon tasks through iterative summarization of previous interaction histories. However, this process typically incurs substantial decoding overhead for the extra summarization tokens, which significantly affect the end-to-end response latency at deployment. In this paper, we introduce CoMem, a novel framework that decouples memory management from the primary agent workflow, enabling these processes to execute in parallel. We propose a $k$-step-off asynchronous pipeline that overlaps the memory model's summarization with the agent's inference, effectively masking the latency of context processing. To ensure robustness under this asynchronous setting, we introduce a reward-driven training strategy that aligns the memory model to capture sufficient statistics for the agent's decision-making. Theoretical analysis confirms that CoMem offers a superior efficiency-effectiveness trade-off compared to coupled architectures. Our extensive experimental results on SWE-Bench-Verified show that CoMem provides 1.4x latency improvements upon vanilla long-context solutions while preserving most of the performance. Furthermore, we demonstrate that these latency gains scale favorably with increased system throughput, offering a modular path forward for the independent optimization of agent reasoning and memory compression.",
+        "identifiers": [
+          "SemanticScholar:e52381f8429203107fac01d2b5a8dcb0493a9c41"
+        ],
+        "semantic_scholar_id": "e52381f8429203107fac01d2b5a8dcb0493a9c41",
+        "canonical_id": "arXiv:2605.30842",
+        "arxiv_id": "2605.30842",
+        "doi": "10.48550/arXiv.2605.30842",
+        "authors": [
+          "Yu-Wei Zhang",
+          "Chengyu Dong",
+          "Shuo-Wei Jin",
+          "Chang-Long Yu",
+          "Hejie Cui",
+          "Hong-Ye Jin",
+          "Xinyang Zhang",
+          "Hamed Bonab",
+          "Colin Lockard",
+          "Jianshu Chen",
+          "Zhen-Yu Shi",
+          "Jingbo Shang",
+          "Xian Li",
+          "Bing Yin"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 154,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.15682",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.15682",
+        "id:SemanticScholar:9eff71af6c3553cc9c03bd817b43d59e4e65ba2b",
+        "id:arXiv:2606.15682",
+        "title:reqat achieving fullprecision reasoning accuracy with 4bit floatingpoint quantizationaware training",
+        "url:https://arxiv.org/abs/2606.15682"
+      ],
+      "record": {
+        "title": "ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Floating-Point Quantization-Aware Training",
+        "source_url": "https://arxiv.org/abs/2606.15682",
+        "year": 2026,
+        "published": "2026-06-14",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) achieve strong problem-solving through long chain-of-thought, but their deployment is constrained by the high cost of full-precision inference and growing KV cache footprints. Microscaled FP4 formats enable efficient FP4 deployment; however, fully quantizing weights, activations, and KV caches (W4A4KV4) causes severe reasoning degradation that existing PTQ and QAT fail to recover. We identify that FP4 failures concentrate on low-entropy tokens--precise symbolic commitments such as digits and operators--where quantization noise inflates sampling errors that cascade through reasoning traces. Based on this insight, we propose ReQAT, a reasoning-centric FP4 training framework with three components: (i) Trace-Aligned QAT (TAQ), which revisits identical reasoning traces to focus updates on critical low-entropy decisions; (ii) Selective Entropy Minimization (SEM), which reinforces confidence at low-entropy positions; and (iii) Q-FIT, a quantization-friendly initialization that jointly calibrates RoPE-consistent KV cache transformations to stabilize QAT. Under the same training budget, ReQAT not only recovers but surpasses BF16 fine-tuning accuracy, while delivering up to 3.9x throughput speedup on NVIDIA DGX Spark and 3.1x on B200.",
+        "identifiers": [
+          "SemanticScholar:9eff71af6c3553cc9c03bd817b43d59e4e65ba2b"
+        ],
+        "semantic_scholar_id": "9eff71af6c3553cc9c03bd817b43d59e4e65ba2b",
+        "canonical_id": "arXiv:2606.15682",
+        "arxiv_id": "2606.15682",
+        "doi": "10.48550/arXiv.2606.15682",
+        "authors": [
+          "Janghwan Lee",
+          "Sihwa Lee",
+          "Jinseok Kim",
+          "Yongjik Kim",
+          "Jieun Lim",
+          "Jinwook Oh",
+          "Jungwook Choi"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 138,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.05699",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.05699",
+        "id:SemanticScholar:06ac06a648b9f5accd03247abf69de808ee28775",
+        "id:arXiv:2605.05699",
+        "title:when quantization is free an int4 kv cache that outruns fp16 on apple silicon",
+        "url:https://arxiv.org/abs/2605.05699"
+      ],
+      "record": {
+        "title": "When Quantization Is Free: An int4 KV Cache That Outruns fp16 on Apple Silicon",
+        "source_url": "https://arxiv.org/abs/2605.05699",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV-cache quantization is framed as a quality--latency trade-off. We show it is \\emph{inverted} on Apple Silicon's unified memory: a single fused Metal kernel (sign-randomized FFT $+$ per-channel $\\lambda$ $+$ per-group abs-max $+$ int4 nibble pack), exposed as a HuggingFace \\texttt{Cache} subclass, runs \\emph{faster than fp16} across $256$--$4096$-token prefixes on Gemma-3 1B ($-3$ to $-8\\%$ ms/tok) and at short context on Qwen2.5-1.5B ($-0.7$ to $-2.6\\%$ through $1$K), with $3\\times$ persistent memory compression and quality preserved ($\\dPPL = 0.000$ Qwen short-prompt; $+3.6$ hook $\\dPPL$ Gemma). The kernel's $\\sim\\!25$\\,ns/vec overhead is below the bandwidth savings from $3\\times$ compression. The fused kernel also closes Qwen's 4-bit per-token catastrophe ($\\dPPL = +7975 \\to +638.6$, $12.5\\times$ reduction) at $182$\\,GFLOPS / $D{=}128$. Supporting findings: $\\SRFT$ and $\\SRHT$ are statistically indistinguishable for KV quality (we pick $\\SRFT$ for mixed-radix and matrix-multiply alignment); a learned-rotation ablation surfaces a regularization role for the fixed random SRFT base (learning $R+\\lambda$ without SRFT lowers calibration MSE $84.9\\%$ vs $50.3\\%$ but yields worse PPL); Householder rotations at $k{=}d/2$ reflectors are effectively lossless at $d{=}256$.",
+        "identifiers": [
+          "SemanticScholar:06ac06a648b9f5accd03247abf69de808ee28775"
+        ],
+        "semantic_scholar_id": "06ac06a648b9f5accd03247abf69de808ee28775",
+        "canonical_id": "arXiv:2605.05699",
+        "arxiv_id": "2605.05699",
+        "doi": "10.48550/arXiv.2605.05699",
+        "authors": [
+          "Mohamed Amine Bergach"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 176,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.19260",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.19260",
+        "id:SemanticScholar:4103399a4c055be18ed26cefce6b4bfbbb7c6992",
+        "id:arXiv:2605.19260",
+        "title:aquaui visual token reduction for gui agents with adaptive quadtrees",
+        "url:https://arxiv.org/abs/2605.19260"
+      ],
+      "record": {
+        "title": "AQuaUI: Visual Token Reduction for GUI Agents with Adaptive Quadtrees",
+        "source_url": "https://arxiv.org/abs/2605.19260",
+        "year": 2026,
+        "published": "2026-05-19",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Multimodal Models (LMMs) have recently emerged as promising backbones for GUI-agent models, where high-resolution GUI screenshots are introduced to the prompts at each iteration step. However, these screenshots exhibit highly non-uniform spatial information density: large regions may carry little information and are visually homogeneous, while key text and icons may require high visual fidelity. Existing approaches to this problem either require additional training or rely on attention-based token compression, ignoring the structured layout and spatial redundancy of GUI screenshots. To fill the gap, this paper proposes AquaUI, a training-free inference-time token reduction method for GUI agent models that utilizes the non-uniform information density in screenshots. AQuaUI constructs an adaptive quadtree on each screenshot input and keeps one representative merged token per leaf of the quadtree. AQuaUI preserves the spatial positions of retained tokens throughout the pipeline to ensure that all position-encoding stages remain consistent. To further improve temporal consistency across multi-step GUI interactions, we propose a conditional quadtree algorithm that leverages the continuity between consecutive screenshots within a single request. Specifically, it refines the current quadtree using previous quadtrees as references, helping preserve fine-grained regions across static or mildly shifted GUI states. We implement AQuaUI on state-of-the-art GUI agent models and conduct experiments on standard grounding and navigational benchmarks. AQuaUI consistently shows improved accuracy-efficiency trade-offs over prior baselines. Notably, on GUI-Owl-1.5-32B-Instruct, AQuaUI achieves up to 13.22% speedup and 29.52% fewer visual tokens while retaining 99.06% of full-token performance, suggesting that the spatial redundancy of GUI screenshots can be exploited at inference without retraining.",
+        "identifiers": [
+          "SemanticScholar:4103399a4c055be18ed26cefce6b4bfbbb7c6992"
+        ],
+        "semantic_scholar_id": "4103399a4c055be18ed26cefce6b4bfbbb7c6992",
+        "canonical_id": "arXiv:2605.19260",
+        "arxiv_id": "2605.19260",
+        "doi": "10.48550/arXiv.2605.19260",
+        "authors": [
+          "Yuankai Li",
+          "Ting-Hui Zhu",
+          "Ha-Min Son",
+          "Zhe Zhao",
+          "Xin Liu",
+          "Mu-Hao Chen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 164,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.27591",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.27591",
+        "id:SemanticScholar:444deb2112acc6802700ab2452a30591c46e5fea",
+        "id:arXiv:2607.27591",
+        "title:prox trainingfree ffn activation sparsity via approximate intermediatechannel salience in llms",
+        "url:https://arxiv.org/abs/2607.27591"
+      ],
+      "record": {
+        "title": "Prox: Training-Free FFN Activation Sparsity via Approximate Intermediate-Channel Salience in LLMs",
+        "source_url": "https://arxiv.org/abs/2607.27591",
+        "year": 2026,
+        "published": "2026-07-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Feed-forward networks (FFNs) dominate memory traffic and computation in large language model (LLM) inference, making them a primary target for activation sparsification. However, existing training-free methods suffer substantial model-quality degradation at high sparsity due to limitations in their channel-selection strategies. We observe that the SwiGLU intermediate state provides a highly effective channel-selection signal, but obtaining it requires costly dense computation. To address this, we present \\emph{Prox}, a two-stage training-free framework for sparse SwiGLU FFNs. Prox hinges on the key insight: sparse execution requires only the channel mask induced by the intermediate state, which can be constructed from the magnitude ranking of its entries rather than their exact values. Specifically, Stage 1 uses input sparsity and quantized proxy weights to construct a shared mask; Stage 2 computes the selected channels exactly, enabling sparse execution of all three projections. Across ten LLMs from six model families, Prox outperforms training-free baselines at all sparsity levels, achieves up to a $1.99\\times$ end-to-end decoding speedup at 70\\% FFN sparsity, and is compatible with quantization and sparse attention.",
+        "identifiers": [
+          "SemanticScholar:444deb2112acc6802700ab2452a30591c46e5fea"
+        ],
+        "semantic_scholar_id": "444deb2112acc6802700ab2452a30591c46e5fea",
+        "canonical_id": "arXiv:2607.27591",
+        "arxiv_id": "2607.27591",
+        "doi": "10.48550/arXiv.2607.27591",
+        "authors": [
+          "Jinyi Liu",
+          "Wei Chen",
+          "Pengyu Chen",
+          "Xin Yuan",
+          "Minghe Bai",
+          "Guo-Quan Wu",
+          "Jun Wei"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 92,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.19368",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.19368",
+        "id:SemanticScholar:77f02a68cd3a806a778fa81d35da3ea90c87e99a",
+        "id:arXiv:2607.19368",
+        "title:spectrallsh subquadratic prompt compression via krylovprojected localitysensitive hashing",
+        "url:https://arxiv.org/abs/2607.19368"
+      ],
+      "record": {
+        "title": "Spectral-LSH: Sub-Quadratic Prompt Compression via Krylov-Projected Locality-Sensitive Hashing",
+        "source_url": "https://arxiv.org/abs/2607.19368",
+        "year": 2026,
+        "published": "2026-06-12",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-prompt inference remains expensive because prefill attention scales quadratically with sequence length. We propose Spectral-LSH, a training-free prompt compression method that operates before the prompt enters the language model. Spectral-LSH approximates the dominant components of an implicit attention-kernel operator using a Krylov subspace method together with random features, avoiding explicit $O(N^2)$ attention-kernel materialization. It then applies SimHash in the resulting attention eigenspace to group similar tokens and aggregate them into macro-tokens with causal positional assignments. We evaluate Mistral-7B-Instruct-v0.3, Qwen2.5-7B-Instruct, and Qwen2.5-14B-Instruct on C4. Our experiments reveal a compression-ratio phase transition. Below $\\rho = 4 \\times$, local token redundancy is low enough that lightweight chunking typically provides the best latency--quality trade-off. Above $\\rho = 8 \\times$, the spectral path preserves quality that chunking loses. At $\\rho = 16 \\times$, Qwen2.5-7B (adaptive) reduces the PPL ratio from 353.409 to 196.963, while Qwen2.5-14B (adaptive) reduces it from 9.533 to 3.427. On a small long-context structured stress test containing JSON-like, code-like, and table-like inputs, local LSH also improves every metric over chunking at $8 \\times$. The adaptive backend captures both regimes by using the chunk path at low compression and spectral clustering at high compression, although chunking remains the fastest backend in total latency.",
+        "identifiers": [
+          "SemanticScholar:77f02a68cd3a806a778fa81d35da3ea90c87e99a"
+        ],
+        "semantic_scholar_id": "77f02a68cd3a806a778fa81d35da3ea90c87e99a",
+        "canonical_id": "arXiv:2607.19368",
+        "arxiv_id": "2607.19368",
+        "doi": "10.48550/arXiv.2607.19368",
+        "authors": [
+          "Ali Mahdavi",
+          "Azadeh Zamanifar",
+          "Amirfarhad Farhadi",
+          "Omid Kashefi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.21848",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.21848",
+        "id:SemanticScholar:935ca66fc96f37f77103a1a73a19c886572db4fe",
+        "id:arXiv:2606.21848",
+        "title:keyless attention valuespace routing and valueonly caching for efficient transformers",
+        "url:https://arxiv.org/abs/2606.21848"
+      ],
+      "record": {
+        "title": "Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers",
+        "source_url": "https://arxiv.org/abs/2606.21848",
+        "year": 2026,
+        "published": "2026-06-20",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer architectures form the foundation of modern natural language processing, yet the Key-Value (KV) cache introduces substantial memory and bandwidth overhead during long-context generation, increasingly bottlenecking large-scale deployment. We propose Keyless Attention, a novel attention mechanism that replaces the conventional key projection with a dedicated value-space routing projection, eliminating key representations from the attention computation entirely and yielding a Value-Only Cache that reduces KV-cache memory by 50% while improving decode throughput. Experiments across multiple models and architectures demonstrate that Keyless Attention achieves comparable perplexity and downstream task performance to standard QKV attention, while consistently reducing KV-cache memory by 50%. Furthermore, Keyless Attention exhibits slower validation loss degradation after the best epoch, indicating improved robustness against overfitting. Ablation studies confirm that the dedicated value-space routing projection is critical, with Keyless Attention outperforming KV-sharing methods that eliminate the key cache without replacing its routing role. Experiments in the pretraining regime further confirm the viability of Keyless Attention in industrial settings.",
+        "identifiers": [
+          "SemanticScholar:935ca66fc96f37f77103a1a73a19c886572db4fe"
+        ],
+        "semantic_scholar_id": "935ca66fc96f37f77103a1a73a19c886572db4fe",
+        "canonical_id": "arXiv:2606.21848",
+        "arxiv_id": "2606.21848",
+        "doi": "10.48550/arXiv.2606.21848",
+        "authors": [
+          "Xin Gao",
+          "Xing Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 132,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.21808",
+      "identity_tokens": [
+        "id:SemanticScholar:836d2198eb090b4982018d0fc012f05ba0b31353",
+        "id:arXiv:2610.21808",
+        "title:roleq rolealigned scales for converting language models to ternary",
+        "url:https://arxiv.org/abs/2610.21808"
+      ],
+      "record": {
+        "title": "RoleQ: Role-Aligned Scales for Converting Language Models to Ternary",
+        "source_url": "https://arxiv.org/abs/2610.21808",
+        "year": 2026,
+        "published": "2026-10-15",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Weight quantization below four bits shrinks memory and bandwidth at a perplexity that looks acceptable, but often at the cost of factual knowledge and task accuracy. Ternary weights have mostly been obtained by training from scratch or long fine-tuning. We introduce RoleQ, a quantization framework that places scales by the functional roles of Transformer units rather than by the layout of the weight matrix, as conventional formats do. Vectors that read from the residual stream take one scale per output unit; those that write to it, one per input unit. The rule is structural, needs no search, calibration or stored state, and holds on integer and ternary grids. In a rotated basis it matches a per-layer axis search at half the solver work, and at ternary it cuts perplexity by up to half against layout-based placement in two families at every size from 0.6B to 14B, where per-row scales leave MMLU at chance. Our lightweight post-training pipeline converts an existing checkpoint to 1.59 bits per weight in a few GPU-hours, a fraction of the cost of learned ternarization, and leads every post-training ternary method at matched or lower memory-resident bits on perplexity, zero-shot accuracy and MMLU, most widely on knowledge. A sparse second ternary plane placed by a per-unit Fisher saliency keeps the matmul multiplication-free and recovers what ternary loses first: at 8B, a fraction of a bit returns about half the MMLU that conversion costs, well ahead of random or Hessian-based placement at equal bits.",
+        "identifiers": [
+          "SemanticScholar:836d2198eb090b4982018d0fc012f05ba0b31353"
+        ],
+        "semantic_scholar_id": "836d2198eb090b4982018d0fc012f05ba0b31353",
+        "canonical_id": "arXiv:2610.21808",
+        "arxiv_id": "2610.21808",
+        "authors": [
+          "Johannes Knittel",
+          "Alec Helbling",
+          "Hanspeter Pfister"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 15,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.03717",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.03717",
+        "id:SemanticScholar:89b9a9af122c7400e3fc9c9807c5576f10b9906c",
+        "id:arXiv:2504.03717",
+        "title:raana a fast flexible and dataefficient posttraining quantization algorithm",
+        "url:https://arxiv.org/abs/2504.03717"
+      ],
+      "record": {
+        "title": "RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm",
+        "source_url": "https://arxiv.org/abs/2504.03717",
+        "year": 2025,
+        "published": "2025-03-29",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training Quantization (PTQ) has become a widely used technique for improving inference efficiency of large language models (LLMs). However, existing PTQ methods generally suffer from crucial limitations such as heavy calibration data requirements and inflexible choice of target number of bits. In this paper, we propose RaanA, a unified PTQ framework that overcomes these challenges by introducing two novel components: 1) RaBitQ-H, a variant of a randomized vector quantization method RaBitQ, designed for fast, accurate, and highly efficient quantization; and 2) AllocateBits, an algorithm that optimally allocates bit-widths across layers based on their quantization sensitivity. RaanA achieves competitive performance with state-of-the-art quantization methods while being extremely fast, requiring minimal calibration data, and enabling flexible bit allocation. Extensive experiments demonstrate RaanA's efficacy in balancing efficiency and accuracy. The code is publicly available at https://github.com/FFTYYY/RaanA .",
+        "identifiers": [
+          "SemanticScholar:89b9a9af122c7400e3fc9c9807c5576f10b9906c"
+        ],
+        "semantic_scholar_id": "89b9a9af122c7400e3fc9c9807c5576f10b9906c",
+        "canonical_id": "arXiv:2504.03717",
+        "arxiv_id": "2504.03717",
+        "doi": "10.48550/arXiv.2504.03717",
+        "authors": [
+          "Yong-Yi Yang",
+          "Jian-Yang Gao",
+          "Wei Hu"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 580,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2ef982a7c1a6672dcd6278fb7a5fa173f427f632545b100bcfe32b1f3546e80b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

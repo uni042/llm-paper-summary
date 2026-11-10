@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2d962e90f6b69807-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2008.05000",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2008.05000",
+    "identity_tokens": [
+      "arXiv:2008.05000",
+      "id:arXiv:2008.05000",
+      "url:https://arxiv.org/abs/2008.05000"
+    ],
+    "reason": "一次要旨では、グラフニューラルネットワークの頂点次数に依存する量子化誤差へ対処する量子化考慮学習を提案し、六つのグラフデータセットとCPU上のINT8推論を評価している。低精度推論自体は一般技術だが、対象はGNN特有のグラフ演算で、LLMの重み量子化・KVキャッシュ・生成推論やサービングへの適用を示さないためunrelatedとする。",
+    "first_checked_at": "2026-10-11T07:45:44+00:00",
+    "last_checked_at": "2026-10-13T09:49:07+00:00",
+    "linked_from": [],
+    "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks"
+  },
+  "processed_at": "2026-10-13T09:49:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d962e90f6b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

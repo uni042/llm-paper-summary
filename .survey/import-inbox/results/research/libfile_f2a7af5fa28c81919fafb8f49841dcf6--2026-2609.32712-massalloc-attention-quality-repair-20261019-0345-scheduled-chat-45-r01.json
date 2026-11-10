@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "73a0982b72abfa80b2eafbb27406a1535ce85db5f3d5365a896e4651fc36342c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_f2a7af5fa28c81919fafb8f49841dcf6--2026-2609.32712-massalloc-attention-quality-repair-20261019-0345-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2609.32712",
+  "worker_completed_at": "2026-10-19T04:01:00+09:00",
+  "worker_run_key": "20261019-0345-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2846,
+    "body_paragraphs": 15,
+    "method_chars": 1293,
+    "method_paragraphs": 8,
+    "evaluation_chars": 444,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 444 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 444 < 500"
+  ],
+  "processed_at": "2026-10-19T15:01:24+00:00"
+}

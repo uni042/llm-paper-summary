@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-94d66983931fb4d8-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.3390/technologies12060081",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.3390/technologies12060081",
+    "identity_tokens": [
+      "DOI:10.3390/technologies12060081"
+    ],
+    "reason": "候補packetに記載された一次資料URLを取得経路で開いたが、一次要旨を確認できなかった。検索snippetや題名から内容を推測せず、候補由来のID/title/URLのみ保持。",
+    "first_checked_at": "2026-10-05T01:50:05+00:00",
+    "last_checked_at": "2026-10-05T01:50:05+00:00",
+    "linked_from": [
+      "papers/survey/llm-serving-systems/2026-2608.03036-llm-serving-in-the-wild.md"
+    ],
+    "title": "A Survey of Machine Learning in Edge Computing: Techniques, Frameworks, Applications, Issues, and Research Directions"
+  },
+  "processed_at": "2026-10-05T01:50:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-94d66983931f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa3fc7d004d5edb8-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.18653/v1/n19-4009",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.18653/v1/n19-4009",
+    "identity_tokens": [
+      "DOI:10.18653/v1/n19-4009",
+      "arXiv:1904.01038"
+    ],
+    "reason": "PyTorchベースの系列モデリング基盤で分散学習に加えGPU上の混合精度推論も支援するが、論文の中心は翻訳・要約・言語モデル等の研究開発ツールキット全体であり、現代LLM推論サービングの特定ボトルネックを解く研究ではない。基盤史として関連するため境界扱い。",
+    "first_checked_at": "2026-09-30T09:07:48+00:00",
+    "last_checked_at": "2026-09-30T09:07:48+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md",
+      "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
+    ],
+    "title": "fairseq: A Fast, Extensible Toolkit for Sequence Modeling"
+  },
+  "processed_at": "2026-09-30T09:07:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa3fc7d004d5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

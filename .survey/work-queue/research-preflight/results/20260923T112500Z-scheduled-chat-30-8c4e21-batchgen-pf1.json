@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260923T112500Z-scheduled-chat-30-8c4e21-batchgen-pf1",
+  "kind": "research",
+  "attempt_id": "attempt-04e285682c3e9ed7b0782532",
+  "job_id": "job-research-ded5355ef64410a7",
+  "record_bank": "g",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.21712-batchgen-an-architecture-for-scalable-and-efficient-batch-inference.md",
+  "expected_blob_sha": null,
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:0fa8b9b1fee4b9b8425dbfd001dfef833f8d00dc6cc76cb43162db6c1f4903d3",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-g/metadata.json",
+      "blob_sha": "44f1d4c43e05bd809713bfdca157ce97b9dacace"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-g/problem_method.json",
+      "blob_sha": "b5eee80e7d504da06c158981c928b40ea39b08be"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-g/evaluation.json",
+      "blob_sha": "877971349748a5689bdc8b00c44ec8f557a62296"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-g/results.json",
+      "blob_sha": "6e43c37985cae3b2e3b9d0b6cc8d4c4ffd962c07"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-g/positioning.json",
+      "blob_sha": "0befd419961b169593197f0ab57325f4cc68b5c3"
+    }
+  ],
+  "validation_errors": [
+    "Japanese-first prose ratio is too low: 56.2% < 70% (Japanese=2986, Latin=2330)"
+  ],
+  "checked_at": "2026-09-23T10:55:06+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

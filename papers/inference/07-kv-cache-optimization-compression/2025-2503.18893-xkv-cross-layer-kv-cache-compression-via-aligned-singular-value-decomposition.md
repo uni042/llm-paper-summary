@@ -1,0 +1,245 @@
+---
+canonical_id: arXiv:2503.18893
+arxiv_id: '2503.18893'
+title: 'xKV: Cross-Layer KV-Cache Compression via Aligned Singular Vector Extraction'
+summary: 長文脈のKVキャッシュは系列長と層数に比例して増え、既存層間共有は再学習や弱いトークン類似仮定を必要とする。 中心化カーネル整合で層間の特異部分空間を確認し、隣接層を共同因子分解して共有低ランク基底を作る。復号時には必要部分だけを選択的に再構成する。 Llama-3.1やQwen2.5で最大8倍のKV圧縮を品質維持で実現し、選択的再構成併用で完全注意比最大4.23倍のエンドツーエンド高速化を報告する。
+list_summary: 層間で支配的な特異ベクトルが整列する性質を利用して複数層のKVキャッシュを共有低ランク部分空間へ圧縮し、最大8倍圧縮と選択的再構成による最大4.23倍のエンドツーエンド高速化を示す。
+source: https://arxiv.org/abs/2503.18893
+sources:
+- https://arxiv.org/abs/2503.18893
+last_checked: 2026-09-27
+authors:
+- Chang, Chi-Chih
+- Lin, Wei-Cheng
+- Lin, Chien-Yu
+- Chiang, Hung-Yueh
+- Akhauri, Yash
+- Dai, Xilai
+- Jiang, Huiqiang
+- Li, Yucheng
+- Ceze, Luis
+- Wu, Kai-Chiang
+- Abdelfattah, Mohamed S.
+published: '2025-03-24'
+arxiv_categories:
+  primary: cs.CL
+  cross_list: []
+publication: arXiv
+publication_type: プレプリント
+publication_status: arXiv preprint
+code: https://github.com/abdelfattah-lab/xKV
+implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
+implementation_status: official-code-available
+last_audited: '2026-10-08'
+audit_version: 2
+references:
+- canonical_id: arXiv:2406.16635
+  arxiv_id: '2406.16635'
+- canonical_id: arXiv:2503.07518
+  arxiv_id: '2503.07518'
+- canonical_id: arXiv:2405.12981
+  openreview_id: M2UzLRoqic
+- canonical_id: arXiv:2406.02069
+  arxiv_id: '2406.02069'
+- canonical_id: OpenReview:LWMS4pk2vK
+  openreview_id: LWMS4pk2vK
+- canonical_id: arXiv:2501.04052
+  arxiv_id: '2501.04052'
+- canonical_id: arXiv:2401.06066
+  arxiv_id: '2401.06066'
+- canonical_id: arXiv:2501.12948
+  arxiv_id: '2501.12948'
+  doi: 10.48550/arxiv.2501.12948
+- canonical_id: OpenReview:A1ztozypga
+  openreview_id: A1ztozypga
+- canonical_id: arXiv:2405.08944
+  arxiv_id: '2405.08944'
+- canonical_id: arXiv:2310.01801
+  openreview_id: uNrFpDPMyo
+- canonical_id: arXiv:2403.17887
+  arxiv_id: '2403.17887'
+- canonical_id: arXiv:2401.18079
+  arxiv_id: '2401.18079'
+- canonical_id: arXiv:2404.06654
+  arxiv_id: '2404.06654'
+- canonical_id: arXiv:2407.02490
+  arxiv_id: '2407.02490'
+- canonical_id: DOI:10.1007/b98835
+  doi: 10.1007/b98835
+- canonical_id: arXiv:2505.23416
+  openreview_id: JFygzwx8SJ
+- canonical_id: arXiv:2412.19442
+  arxiv_id: '2412.19442'
+- canonical_id: arXiv:1906.12085
+  arxiv_id: '1906.12085'
+- canonical_id: arXiv:2412.10319
+  openreview_id: gkUyYcY1W9
+- canonical_id: arXiv:2404.14469
+  openreview_id: poE54GOq2l
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+  arxiv_id: '2405.04434'
+- canonical_id: OpenReview:sgVOjDqUMT
+  openreview_id: sgVOjDqUMT
+- canonical_id: arXiv:2402.02750
+  arxiv_id: '2402.02750'
+- canonical_id: arXiv:2508.10925
+  arxiv_id: '2508.10925'
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+  doi: 10.48550/arxiv.2303.08774
+- canonical_id: arXiv:2408.05646
+  doi: 10.18653/v1/2024.findings-emnlp.899
+- canonical_id: DOI:10.1145/325165.325242
+  doi: 10.1145/325165.325242
+- canonical_id: arXiv:2410.21465
+  arxiv_id: '2410.21465'
+- canonical_id: arXiv:2405.05254
+  openreview_id: 25Ioxw576r
+- canonical_id: arXiv:2406.10774
+- canonical_id: arXiv:2403.05530
+  arxiv_id: '2403.05530'
+- canonical_id: arXiv:2510.26692
+  arxiv_id: '2510.26692'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2309.17453
+  openreview_id: NG7sS51zVF
+- canonical_id: arXiv:2505.09388
+  arxiv_id: '2505.09388'
+- canonical_id: arXiv:2501.15383
+  arxiv_id: '2501.15383'
+- canonical_id: arXiv:2312.05821
+- canonical_id: arXiv:2410.03111
+  arxiv_id: '2410.03111'
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2310.19102
+  arxiv_id: '2310.19102'
+references_checked_at: '2026-10-03'
+references_source: arxiv-html-reference-section
+references_total: 55
+under16kb_reaudit_target_path: papers/inference/07-kv-cache-optimization-compression/2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md
+under16kb_reaudit_source_git_blob_sha: 'fa584b78fcb2843c824d72f1b68472610367cb04'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+worker_run_key: 'interactive-20261008-bottom-up-reaudit-xkv'
+worker_completed_at: '2026-10-08T07:27:27+09:00'
+
+---
+
+# xKV: Cross-Layer KV-Cache Compression via Aligned Singular Vector Extraction
+
+> xKVは、隣接層のキー・バリュー（Key-Value; KV）キャッシュをトークンごとに直接似ているとみなすのではなく、複数層が共有する支配的な特異ベクトルをまとめて抽出する。プリフィル時に複数層を横連結して共有低ランク基底へ因子分解し、デコード時はクエリに重要なトークンだけを選択的に再構成する。Llama-3.1、Qwen2.5/Qwen3、DeepSeek系で最大8倍のKV圧縮を3%以内の精度低下で実現し、選択的再構成を組み合わせると完全注意比で最大4.23倍のエンドツーエンド高速化を報告する。
+
+## 概要
+
+長文脈推論では、各層・各トークンについて保持するKVキャッシュが系列長と層数に比例して増える。量子化やトークン削除は層内の冗長性を減らすが、別々の層が似た部分空間を持つという「層間冗長性」は残る。Cross-Layer AttentionやYOCOはKVを層間共有できるが、モデル構造を変えて事前学習する必要がある。MiniCacheは学習済みモデルへ後付けできるものの、隣接層のトークンベクトル同士のコサイン類似度へ依存する。
+
+xKVの観察は、個々のトークンベクトルは層間であまり似ていなくても、KV行列全体の主要な特異部分空間はかなり揃っているという点である。著者らは中心化カーネル整合（Centered Kernel Alignment; CKA）でこの性質を測り、複数層を同時に特異値分解（Singular Value Decomposition; SVD）すれば、一つの共有トークン基底と層固有の再構成行列へ分解できると示す。
+
+圧縮だけならデコード時に全トークンを毎層再構成する費用が新しいボトルネックになる。そこでxKV-SRは注意の疎性を使い、現在のクエリに重要なトークン行だけを再構成する。これにより「メモリを減らした代わりに再構成演算が増える」問題を抑え、容量削減を実スループットへ接続する。
+
+## 問題設定
+
+KV圧縮には三つの異なる軸がある。量子化は各KV要素のビット数を減らし、トークン削除は保持する時刻数を減らし、低ランク近似は特徴次元を圧縮する。多くの方式は各層を独立に扱うため、層数に比例して似た低ランク基底を別々に保存する。
+
+既存の層間方式では、学習時からKV共有構造を持たせる方法は既存モデルへ後付けしにくい。一方、トークンごとの類似度に基づいて隣接層を混ぜる方法は、実測すると対応するトークンベクトルのコサイン類似度が十分高くない層があり、強く圧縮すると品質が落ちる。
+
+xKVは「ベクトル値そのものが似る必要はないが、トークン間幾何を張る主要基底が似ていれば共有できる」と問題を置き換える。CKAが高い層群では、複数層をまとめた行列に必要な相対ランクが下がるため、層別SVDより同じ情報量を少ない基底で保持できる。
+
+## 手法
+
+### 1. CKAで層間の共有可能性を確認する
+
+Llama-3.1-8B-InstructのRULER Needle-in-a-Haystack系KVを解析すると、隣接層のトークン単位コサイン類似度は必ずしも高くない一方、CKAではブロック状に高い類似度が現れる。CKAは個々のベクトル対応より、Gram行列で表現される全体幾何の一致を測る。
+
+高いCKAは主要な左特異ベクトルが整列していることを示す。複数層のKVを横方向に連結したとき、95%の累積固有値を説明するのに必要な相対ランクは、まとめる層数を増やすほど低下する。これが層間共同圧縮の根拠になる。
+
+### 2. 複数層を一つの共有基底へ因子分解する
+
+モデルの層を連続する窓幅Wでグループ化し、同一グループのKV行列を特徴方向へ横連結する。これをランクrのSVDで因子分解し、トークン方向の共有基底Aと、各層・各KVヘッド固有の再構成行列Bへ分ける。
+
+通常ならW層分でO(WLd)のKVを保存するところを、共有基底O(Lr)と層別係数O(Wrd)へ変える。rがdより十分小さくW>1なら、文脈長Lに比例する大きな部分を層間共有できる。
+
+既定実装では層グループ窓W=4を用い、PyTorchの低ランクSVDをプリフィル中にオンライン実行する。128K文脈でこの分解はプリフィル時間の約3.9%という追加費用と報告されるため、完全に無料な事後変換ではないが、長文デコードで償却可能な範囲を狙っている。
+
+### 3. デコード時は選択したトークンだけ再構成する
+
+共有基底から各層のKVを完全再構成すると、各デコードステップで系列長Lに比例する行列積が必要になり、KVメモリ削減が計算ボトルネックへ置き換わる。xKV-SRは近似注意で重要なトークン集合をヘッドごとに選び、その行だけA×Bで復元する。
+
+選択数を系列長より十分小さく固定できれば、再構成費用の系列長依存を弱められる。ここで重要なのは、トークン選択がヘッドごとに異なるため、再構成行列も対応するヘッド固有の列を使う点である。
+
+### 4. 圧縮率・再構成・CPUオフロードを組み合わせる
+
+論文は両方のK/Vを圧縮するxKV、両方を選択再構成するxKV-SR、キーだけ圧縮し値をCPUへオフロードするxK-SRを区別する。GPUメモリ予算に応じて、純粋な圧縮とオフロードを使い分けられる。
+
+したがってxKVは単一の固定構成ではなく、「層間共有で容量を減らす」部分と「注意疎性で復元量を減らす」部分を分離した設計である。
+
+## 評価
+
+### 評価条件
+
+| 項目 | 設定 |
+|---|---|
+| 主モデル | Llama-3.1-8B-Instruct、Qwen2.5-7B-Instruct-1M、Qwen3-4B-Instruct-2507 |
+| 追加モデル | DeepSeek-Coder-V2-Lite-Instructの多頭潜在注意（Multi-Head Latent Attention; MLA）構成 |
+| 主ベンチマーク | RULER、Needle-in-a-Haystack、LongBench |
+| 主文脈長 | RULER表では64Kを基準に圧縮率を算出 |
+| 比較 | StreamingLLM、PyramidKV、SnapKV、KIVI、Single-SVD、Quest、ShadowKV、MiniCache |
+| 実装 | torch.svd_lowrank、既定の層間窓W=4。新規生成トークンは比較方式共通で非圧縮 |
+| 指標 | KV圧縮率、長文精度、注意遅延、生成スループット、プリフィル分解オーバーヘッド |
+
+### 主な結果
+
+| 観点 | 結果 | 解釈 |
+|---|---|---|
+| KV容量 | 最大8倍圧縮、長文精度低下3%以内 | 層間共有基底が高圧縮でも有効 |
+| 既存層間法比 | 状態によって従来法より最大6.8倍高い圧縮率かつ精度+2.7点 | トークン類似度より特異部分空間共有が強い |
+| MLA互換性 | DeepSeek-Coder-V2系コード課題で3倍圧縮、性能低下なし | GQAだけに限定されない |
+| 注意遅延 | 最大3.6倍短縮 | 選択再構成とより大きなバッチが実時間に効く |
+| エンドツーエンド | 完全注意比最大4.23倍、同程度精度の代表ベースラインより最大30%高スループット | 容量削減が実際の生成速度へ変換された条件 |
+| オンラインSVD | 128Kプリフィル時間の約3.9% | 圧縮準備には追加費用がある |
+
+最大8倍は「全条件で無損失」を意味しない。論文自身が3%以内の精度低下という条件を付けており、ランクを下げすぎれば復元誤差は増える。また選択再構成は重要トークン選択の近似に依存する。
+
+### 圧縮容量と実行時の復元費用を分けた検証（再監査補足）
+
+xKVは、隣接する複数層のキー・値表現に近い特異ベクトルが現れる性質を利用して、層ごとのキャッシュを共通の低ランク表現へ射影する。個々の層を独立に圧縮すると似た方向を繰り返し保存してしまうが、層の間で基底を共有すればその重複を避けられる。一方、すべての層を同じ基底に押し込むと固有の方向まで失われる可能性があるため、どの層を一つの窓にまとめるかが品質と圧縮率を左右する。論文の既定例は四層のまとまりである。
+
+著者らが報告する最大八倍のKVキャッシュ圧縮は、長文脈課題での精度低下を三％以内に抑えた条件である。保持する特異ベクトルのランクをさらに小さくすれば容量は減るが、元の注意結果からの誤差も増えるので、どんな予算でも八倍無損失に圧縮できるという意味ではない。多頭潜在注意構造のDeepSeek-Coder-V2-Liteにも対応し、コード課題で三倍圧縮した条件が示される。これらはキー・値の表現が異なる複数系列に対応できる可能性を示すが、すべてのモデルで同じ圧縮率になるわけではない。
+
+効率評価では、注目するトークンだけを再構成する仕組みを取り入れ、注意処理の遅延を最大三・六分の一に減らす。完全な注意を用いる構成との比較では最大四・二三倍のエンドツーエンド速度が報告され、同じ程度の精度を達成する有力比較方式より最大三〇％高い生成処理量が得られる。一方、初期計算で低ランク分解を行うため、長さ十二万八千トークンのプリフィル時間に対して約三・九％の追加費用がある。この費用はキャッシュ再利用回数が少ない短い会話ほど相対的に大きくなる。事前の分解費用、注意部分の高速化、要求全体の処理量は異なる指標として比較すべきである。一次資料arXiv:2503.18893とICML 2026採録後の公式評価実装を参照した。
+
+## 既存研究との差
+
+Cross-Layer AttentionやYOCOはモデル構造を変えて層間KV共有を学習する。xKVは学習済みモデルをそのまま使い、プリフィル時のKVへSVDを適用するため再学習を要求しない。
+
+MiniCacheは隣接層の対応トークンを直接混ぜるが、xKVはトークン値ではなく支配的な部分空間を共有する。Single-SVDは各層を別々に低ランク化するのに対し、xKVは複数層へ同一のトークン基底を一度だけ保存する。
+
+ShadowKVやQuestとの関係では、xKV-SRが低ランク圧縮とクエリ依存トークン選択を結合する。つまり層方向の冗長性と時系列方向の注意疎性を別々に利用する。
+
+## 限界・実装状況
+
+- プリフィル時にSVDが必要で、128Kで約3.9%の追加時間がある。短い生成ではこの費用を償却しにくい。
+- 圧縮率を上げるほど低ランク近似誤差が増える。8倍という上限値を任意のモデル・課題へ固定適用できない。
+- 選択再構成は近似注意による重要トークン集合に依存し、選択ミスは品質低下へつながる。
+- 実速度は圧縮によって増やせるバッチサイズ、GPUメモリ容量、再構成カーネルの効率に依存する。
+- 公式実装は https://github.com/abdelfattah-lab/xKV で公開されている。
+
+## 一般的な実装上の含意
+
+KVの層間冗長性を見るとき、対応トークンのコサイン類似度だけで「共有できない」と判断しない方がよい。部分空間の整列はベクトル値の直接一致より強い場合があり、共有基底を作れる可能性がある。
+
+一方、圧縮後に毎ステップ全量復元する設計は長文で逆効果になり得る。低ランク圧縮は「保存量」と「復元する行数」を一緒に設計して初めてエンドツーエンド高速化へつながる。
+
+## 一次資料
+
+- arXiv: https://arxiv.org/abs/2503.18893
+- 公式コード: https://github.com/abdelfattah-lab/xKV
+
+## 修正履歴
+
+- 2026-09-28: 現行品質ガイドに合わせ、CKAによる層間特異部分空間の発見、Cross-Layer Factorization、選択的再構成、xK-SRまでを入力→処理→出力で説明。RULER/LongBench、比較法、8倍圧縮、4.23倍エンドツーエンド速度、128Kで約3.9%のSVDオーバーヘッドなど評価・負の条件を追加した。
+
+- 2026-10-08: 16KB未満再監査で一次資料・比較条件・品質と速度の交換条件を本文へ増補。

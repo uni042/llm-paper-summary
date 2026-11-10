@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fe0a0c0da1e24fbb-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "OpenReview:d7KBjmI3GmQ",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "OpenReview:d7KBjmI3GmQ",
+    "identity_tokens": [
+      "OpenReview:d7KBjmI3GmQ"
+    ],
+    "reason": "7. **MMLU** — `OpenReview:d7KBjmI3GmQ` ([OpenReview](https://openreview.net/forum?id=d7KBjmI3GmQ); [arXiv:2009.03300](https://arxiv.org/abs/2009.03300)). Capability benchmark only.",
+    "first_checked_at": "2026-09-30T09:52:34+00:00",
+    "last_checked_at": "2026-09-30T09:52:34+00:00",
+    "linked_from": [],
+    "title": "MMLU"
+  },
+  "processed_at": "2026-09-30T09:52:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fe0a0c0da1e2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

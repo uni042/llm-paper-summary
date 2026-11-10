@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f646cd2b3669acce-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.26348",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.26348",
+    "identity_tokens": [
+      "arXiv:2603.26348"
+    ],
+    "reason": "一次資料の要旨を確認。Multimodal Large Language Models (MLLMs) achieve strong multimodal reasoning performance, yet we identify a recurring failure mode in long-form generation: as outputs grow longer, models progressively drift away from image evidence and fall back on textual priors, resulting in ungrounded reasoning and hallucinations. Interestingly, Based on attention analysis, we find that MLLMs have a latent capability for late-stag",
+    "first_checked_at": "2026-10-06T21:00:58+00:00",
+    "last_checked_at": "2026-10-06T21:00:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+    ],
+    "title": "Reflect to Inform: Boosting Multimodal Reasoning via Information-Gain-Driven Verification"
+  },
+  "processed_at": "2026-10-06T21:00:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f646cd2b3669",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

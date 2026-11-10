@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36e291e86d735e42-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.21249",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.21249",
+    "identity_tokens": [
+      "arXiv:2606.21249"
+    ],
+    "reason": "Primary abstract reviewed: Retrieval heads, attention heads that copy information from earlier context to the current position, have been proposed as the mechanistic substrate for long-context recall. Rotary position embeddings (RoPE) rotate queries and keys by frequencies decaying with a base hyperparameter theta, and a natural hypothesis is that this rotation either prevents retrieval heads from formin… This is a analysis of transformer representation/routing or retrieval-head mechanisms, not a system/algorithm contribution to inference efficiency.",
+    "first_checked_at": "2026-10-05T11:54:28+00:00",
+    "last_checked_at": "2026-10-05T11:54:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+    ],
+    "title": "Does RoPE Prevent or Degrade Retrieval Heads? A Mechanistic Analysis Across Model Families"
+  },
+  "processed_at": "2026-10-05T11:54:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36e291e86d73",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7b06682731695dda-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.03982",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.03982",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2303.03982",
+      "arXiv:2303.03982"
+    ],
+    "reason": "S4状態空間系列モデルの隠れ状態初期化・リセットを並列化し、部分観測環境の強化学習と連続制御メタ学習へ適用する研究。要旨に推論速度の比較はあるが、対象は強化学習エージェントの環境応答であり、LLM生成・LLMサービング・GPU推論基盤の実装改善ではない。",
+    "first_checked_at": "2026-10-23T15:08:41+00:00",
+    "last_checked_at": "2026-10-23T15:08:41+00:00",
+    "linked_from": [],
+    "title": "Structured State Space Models for In-Context Reinforcement Learning"
+  },
+  "processed_at": "2026-10-23T15:08:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7b0668273169",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

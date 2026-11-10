@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d9e02f1c6b6b15d1-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.21391",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.21391",
+    "identity_tokens": [
+      "arXiv:2609.21391"
+    ],
+    "reason": "一次要旨: Neural Radiance Fields (NeRF) have attracted extensive attention in recent years due to their strong capability for high-quality 3D reconstruction and novel view synthesis from multi-view images. Existing methods usually rely on high-quality sharp inputs, while real-world image acquisition is highly susceptible to blur degradation, which severely affects the",
+    "first_checked_at": "2026-10-05T06:20:29+00:00",
+    "last_checked_at": "2026-10-05T06:20:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "WS-NeRF: A Mamba-Driven World-State-Aware Adaptive Deblurring Neural Radiance Field"
+  },
+  "processed_at": "2026-10-05T06:20:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d9e02f1c6b6b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

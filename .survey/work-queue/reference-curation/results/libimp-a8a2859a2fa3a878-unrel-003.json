@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8a2859a2fa3a878-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1910.05316",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1910.05316",
+    "identity_tokens": [
+      "arXiv:1910.05316"
+    ],
+    "reason": "端末・edge間のDNN分割とearly exitで一般DNN推論を低遅延化する研究。LLM以前の一般DNN/CNN edge inferenceが対象で、LLM推論systemへの適用・評価がない。",
+    "first_checked_at": "2026-10-04T23:24:23+00:00",
+    "last_checked_at": "2026-10-04T23:31:08+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md"
+    ],
+    "title": "Edge AI: On-Demand Accelerating Deep Neural Network Inference via Edge Computing"
+  },
+  "processed_at": "2026-10-04T23:31:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8a2859a2fa3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

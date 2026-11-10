@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e501ac4b64a6ead2-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.17559/tv-20240906001971",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.17559/tv-20240906001971",
+    "identity_tokens": [
+      "DOI:10.17559/tv-20240906001971"
+    ],
+    "reason": "GPT-2のセルビア語転移学習とタスク精度が中心で、効率は将来課題として言及されるのみ。",
+    "first_checked_at": "2026-10-05T08:33:07+00:00",
+    "last_checked_at": "2026-10-05T08:33:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "Harnessing Advanced Transfer Learning Techniques in GPT-2 for Real-World Multilingual Applications"
+  },
+  "processed_at": "2026-10-05T08:33:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e501ac4b64a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

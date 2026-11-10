@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b2f6c2ad247488dd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.22347",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.22347",
+    "identity_tokens": [
+      "arXiv:2610.22347",
+      "id:DOI:10.48550/arXiv.2610.22347",
+      "id:arXiv:2610.22347"
+    ],
+    "reason": "少数stepの自己回帰動画生成器で、中間denoise推定が十分なtokenを早期確定し残りのdenoiseを省略するSpeculative Forcingを提案。一次要旨はLongLiveやLingbot-Worldの動画・world生成でfps改善を評価するが、対象は映像生成器のdenoisingであり、LLMのtoken復号・サービング・KV圧縮の改善を検証していないため現行LLM推論サーベイ対象外。",
+    "first_checked_at": "2026-11-02T05:57:30+00:00",
+    "last_checked_at": "2026-11-02T05:57:30+00:00",
+    "linked_from": [],
+    "title": "Speculative Forcing for Efficient Autoregressive Video Generation"
+  },
+  "processed_at": "2026-11-02T05:57:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b2f6c2ad2474",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

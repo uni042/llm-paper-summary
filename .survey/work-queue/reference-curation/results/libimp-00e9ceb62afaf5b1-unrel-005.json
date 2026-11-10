@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-00e9ceb62afaf5b1-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.02309",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.02309",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2305.02309",
+      "arXiv:2305.02309"
+    ],
+    "reason": "program synthesis向けLLMのarchitecture・学習法・infilling sampling・data mixtureを統合する学習研究で、最終適用先が推論高速化ではないため凍結範囲として対象外。",
+    "first_checked_at": "2026-09-30T02:28:00+00:00",
+    "last_checked_at": "2026-09-30T09:02:37+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.21889-efim-infilling-kv-cache-reuse.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+      "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+    ],
+    "title": "CodeGen2: Lessons for Training LLMs on Programming and Natural Languages"
+  },
+  "processed_at": "2026-09-30T09:02:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-00e9ceb62afa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

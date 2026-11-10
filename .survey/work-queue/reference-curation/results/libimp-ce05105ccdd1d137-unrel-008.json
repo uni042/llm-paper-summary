@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce05105ccdd1d137-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.engstruct.2025.119695",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.engstruct.2025.119695",
+    "identity_tokens": [
+      "DOI:10.1016/j.engstruct.2025.119695",
+      "SemanticScholar:62ce6c78a2508d9c2e7e3ca44dd8c8484d2219fb"
+    ],
+    "reason": "自然石を使う石積み壁の配置をhierarchical filtering、combinatorial optimization、discrete convolutionで高速計算する建設計画研究で、対象は推論システム効率ではない。",
+    "first_checked_at": "2026-10-14T15:09:17+00:00",
+    "last_checked_at": "2026-10-16T06:20:02+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Geometric planning for masonry wall construction with natural stones using discrete convolution"
+  },
+  "processed_at": "2026-10-16T06:20:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce05105ccdd1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

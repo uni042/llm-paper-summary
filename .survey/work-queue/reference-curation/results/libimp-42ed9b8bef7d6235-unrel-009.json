@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-42ed9b8bef7d6235-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.05242",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.05242",
+    "identity_tokens": [
+      "arXiv:2601.05242"
+    ],
+    "reason": "複数rewardを用いるLLM強化学習でGRPOの正規化崩壊を改善するpolicy optimization手法であり、学習安定性・alignment性能が主目的で推論効率化ではない。",
+    "first_checked_at": "2026-10-06T20:56:32+00:00",
+    "last_checked_at": "2026-10-06T20:56:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+    ],
+    "title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization"
+  },
+  "processed_at": "2026-10-06T20:56:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-42ed9b8bef7d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

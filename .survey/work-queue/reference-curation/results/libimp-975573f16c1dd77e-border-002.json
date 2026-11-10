@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-975573f16c1dd77e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1007/s10994-025-06859-1",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1007/s10994-025-06859-1",
+    "identity_tokens": [
+      "DOI:10.1007/s10994-025-06859-1"
+    ],
+    "reason": "Packet has no primary abstract and publisher primary abstract/full text could not be retrieved. Third-party snippets were not used.",
+    "first_checked_at": "2026-10-05T13:19:02+00:00",
+    "last_checked_at": "2026-10-05T13:19:02+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+    ],
+    "title": "EchoRAG: a framework for enhancing language models with graph-RAG and in-context learning"
+  },
+  "processed_at": "2026-10-05T13:19:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-975573f16c1d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

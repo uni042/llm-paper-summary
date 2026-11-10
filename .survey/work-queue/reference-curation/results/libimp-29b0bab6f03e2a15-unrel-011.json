@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29b0bab6f03e2a15-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.19473",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.19473",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.19473",
+      "arXiv:2402.19473"
+    ],
+    "reason": "RAG手法全般を整理するサーベイで、実行効率・配信基盤の新規一次研究ではない。",
+    "first_checked_at": "2026-09-27T13:32:58+09:00",
+    "last_checked_at": "2026-09-30T09:51:41+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review tail-to-head"
+    ],
+    "title": "Retrieval-Augmented Generation for AI-Generated Content: A Survey"
+  },
+  "processed_at": "2026-09-30T09:51:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29b0bab6f03e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e67f26371e100ae4-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.10499",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.10499",
+    "identity_tokens": [
+      "arXiv:2504.10499"
+    ],
+    "reason": "The survey covers graph-based RAG design and functionality, without an inference-efficiency contribution in the abstract.",
+    "first_checked_at": "2026-10-05T14:18:54+00:00",
+    "last_checked_at": "2026-10-05T14:18:54+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md"
+    ],
+    "title": "Graph-Based Approaches and Functionalities in Retrieval-Augmented Generation: A Comprehensive Survey"
+  },
+  "processed_at": "2026-10-05T14:18:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e67f26371e10",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

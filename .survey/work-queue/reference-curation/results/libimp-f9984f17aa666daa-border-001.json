@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f9984f17aa666daa-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.08646",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.08646",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2412.08646",
+      "arXiv:2412.08646"
+    ],
+    "reason": "デコードの各ステップで新しい動画フレームの文脈を取り込み、cross-attentionと並列3D-RoPEでストリーミング対話の鮮度を保つ。リアルタイムLMMシステムに関連するが、一次要旨で具体的な速度・メモリ削減値は示されず、主指標は動画理解品質。",
+    "first_checked_at": "2026-10-30T11:54:57+00:00",
+    "last_checked_at": "2026-10-30T11:54:57+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "StreamChat: Chatting with Streaming Video"
+  },
+  "processed_at": "2026-10-30T11:54:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f9984f17aa66",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f892eac944c3ca8f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.29362",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.29362",
+    "identity_tokens": [
+      "arXiv:2608.29362"
+    ],
+    "reason": "要旨は「Sparse computations are fundamental to scientific computing, graph analytics, and machine learning, yet their performance is highly sensitive to the diverse sparsity and patterns. This is because cache reuse, memory coalescing, and load balancing depend critically on the sparsity patterns. This work gives the first known」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+    "first_checked_at": "2026-10-05T03:12:17+00:00",
+    "last_checked_at": "2026-10-05T03:12:17+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+    ],
+    "title": "Spectral Analysis for Sparse Matrix Computation: Insights and Potential"
+  },
+  "processed_at": "2026-10-05T03:12:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f892eac944c3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

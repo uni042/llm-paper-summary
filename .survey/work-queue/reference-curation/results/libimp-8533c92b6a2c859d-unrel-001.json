@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8533c92b6a2c859d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.20463",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.20463",
+    "identity_tokens": [
+      "arXiv:2609.20463"
+    ],
+    "reason": "Streaming target speaker extraction must maintain a representation of whom to extract while the target may fall silent, be masked by interference, or drift acoustically away from enrollment. Existing systems typically hold this state as a stored embedding updated by hand-designed rules. Across 22 configurations, including confidence-gated and oracle-activity-gated updates, we show that this family lies on a stability-plasticity frontier: even perfect target-activity information cannot combine robustness to target absence with adaptation to enrollment-mixture mismatch. We therefore meta-train speaker-state dynamics through the closed streaming loop, exposing the updater to its own contaminated evidence. Our proposed 41k-parameter anchored fast-weights (AFW) memory moves beyond the measured heuristic frontier, gaining 3.0 dB over the best heuristic under severe mismatch while staying within 0.9 dB of static enrollment after 30 s of absence, at under 5% runtime overhead. A gated recurrent unit (GRU) control confirms that the gain is not AFW-specific, while AFW is smaller and more interpretable: under severe mismatch, its write residual grows and aligns with the target rather than the interferer. Code is publicly available at https://github.com/ym2976/anchor-fast-weight.",
+    "first_checked_at": "2026-10-05T06:26:37+00:00",
+    "last_checked_at": "2026-10-05T06:26:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Beyond the Stability--Plasticity Frontier in Streaming Target Speaker Extraction"
+  },
+  "processed_at": "2026-10-05T06:26:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8533c92b6a2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

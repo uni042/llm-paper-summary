@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b3a0b33bedac154-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2205.10505",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2205.10505",
+    "identity_tokens": [
+      "arXiv:2205.10505"
+    ],
+    "reason": "Transformerのconfigurationとtraining objectiveを理論・実験的に比較する学習研究。",
+    "first_checked_at": "2026-10-05T15:01:21+00:00",
+    "last_checked_at": "2026-10-05T15:01:21+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md"
+    ],
+    "title": "A Study on Transformer Configuration and Training Objective"
+  },
+  "processed_at": "2026-10-05T15:01:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b3a0b33beda",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

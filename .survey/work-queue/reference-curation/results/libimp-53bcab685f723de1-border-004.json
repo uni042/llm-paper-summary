@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-53bcab685f723de1-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.18592",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.18592",
+    "identity_tokens": [
+      "arXiv:2608.18592"
+    ],
+    "reason": "The paper analyzes slow-mode dynamics in Mamba and Transformer blocks and reports similar long-memory spectra. It is an architecture-dynamics analysis, not an inference optimization or cost/quality method; relevance is limited to the SSM/Transformer lineage.",
+    "first_checked_at": "2026-10-06T09:41:50+00:00",
+    "last_checked_at": "2026-10-06T09:41:50+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Infrared Universality of Collective Dynamics across Transformer and State-Space Architectures"
+  },
+  "processed_at": "2026-10-06T09:41:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-53bcab685f72",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

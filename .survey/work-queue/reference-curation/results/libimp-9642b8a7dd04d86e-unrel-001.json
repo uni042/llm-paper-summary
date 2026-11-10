@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9642b8a7dd04d86e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.12435",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.12435",
+    "identity_tokens": [
+      "arXiv:2609.12435"
+    ],
+    "reason": "一次要旨は治療後glioma腫瘍状態のlongitudinal forecastingで選択的データ同化を行う臨床予測研究であり、LLM inference効率ではない。",
+    "first_checked_at": "2026-10-06T19:12:39+00:00",
+    "last_checked_at": "2026-10-06T19:12:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Observation-Anchored Selective Assimilation for Longitudinal Tumor-State Proxy Forecasting in Post-Treatment Glioma"
+  },
+  "processed_at": "2026-10-06T19:12:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9642b8a7dd04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

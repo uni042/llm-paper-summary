@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5ec67ab11dbcfb81-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.00509",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.00509",
+    "identity_tokens": [
+      "arXiv:2409.00509"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2409.00509. Primary abstract concerns long-context generalization training, not inference or serving optimization.",
+    "first_checked_at": "2026-10-05T14:24:58+00:00",
+    "last_checked_at": "2026-10-05T14:29:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+    ],
+    "title": "LongRecipe: Recipe for Efficient Long Context Generalization in Large Language Models"
+  },
+  "processed_at": "2026-10-05T14:29:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5ec67ab11dbc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

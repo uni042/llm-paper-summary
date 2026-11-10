@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0032-scheduled-chat-30/r01",
+  "reference_main_sha": "41316ab7d0faa07b664b1d03afd404f7b8a996a8",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.20492",
+      "identity_tokens": [
+        "arXiv:2603.20492"
+      ],
+      "title": "AE-LLM: Adaptive Efficiency Optimization for Large Language Models",
+      "reason": "arXiv一次要旨。15モデル（0.5B〜70B）と10タスクで、注意機構、MoE、量子化等の効率化技術をハードウェア・精度・遅延・メモリ・電力制約に合わせて自動選択・組合せする多目的探索を提案。推論配置における効率化構成選択が直接の対象であり、静的構成に対して平均2.8倍の効率指標改善を報告する。",
+      "source_url": "https://arxiv.org/abs/2603.20492",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:36:07+09:00",
+      "last_checked_at": "2026-10-31T00:36:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 270,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.02581",
+      "identity_tokens": [
+        "arXiv:2502.02581"
+      ],
+      "title": "Themis: Efficient Sparse Model Training Through Fully Sharded Sparse Data Parallelism",
+      "reason": "arXiv一次要旨。FSSDPでMoE学習時のexpert偏りに対する毎iterationの負荷分散、異種シャーディング、再配置通信の削減を実現し、学習システム比1.26〜2.42倍の高速化を報告する。対象はMoEの分散学習であり、凍結済みの学習専用高速化領域に属する。生成時のMoE推論サービングや復号性能は要旨で示されない。",
+      "source_url": "https://arxiv.org/abs/2502.02581",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:36:07+09:00",
+      "last_checked_at": "2026-10-31T00:36:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 271,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.11120",
+      "identity_tokens": [
+        "arXiv:2506.11120"
+      ],
+      "title": "SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models",
+      "reason": "arXiv一次要旨。one-hot教師ラベルによる勾配情報不足を補うため、枝刈り段階で元モデルの出力分布を用いる自己蒸留損失を導入し、注意層より低感度とするMLP部分を重点的に枝刈りする。生成LLMのパラメータ圧縮と推論配置コスト削減を直接狙い、zero-shot品質を比較するため、推論向け構造化圧縮の収録対象とする。",
+      "source_url": "https://arxiv.org/abs/2506.11120",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:36:07+09:00",
+      "last_checked_at": "2026-10-31T00:36:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 282,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18131",
+      "identity_tokens": [
+        "arXiv:2604.18131"
+      ],
+      "title": "Training LLM Agents for Spontaneous, Reward-Free Self-Evolution via World Knowledge Exploration",
+      "reason": "arXiv一次要旨。エージェントが未知環境の知識を自発的に探索・要約する能力を、学習時の結果ベース報酬で獲得する方式。WebVoyager/WebWalkerのタスク成功率や適応性能を評価するが、LLM推論カーネル、サービング、メモリ、トークン・遅延・計算量削減のシステム技術は提案していない。能力向上を主目的とするため対象外。",
+      "source_url": "https://arxiv.org/abs/2604.18131",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:36:07+09:00",
+      "last_checked_at": "2026-10-31T00:36:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 283,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.05678",
+      "identity_tokens": [
+        "arXiv:2406.05678"
+      ],
+      "title": "SinkLoRA: Enhanced Efficiency and Chat Capabilities for Long-Context Large Language Models",
+      "reason": "arXiv一次要旨。長文脈のSFTを目的にshifted sparse attentionのセグメント再配置とsink tokenを使うSF-Attnを提案し、full attentionのPPL改善の92%に達すると報告。推論時のH2O KV圧縮適用にも言及するが、主な新規性はLoRA微調整時の注意構成で、独立した生成時サービング・KV管理の改善は要旨だけでは十分に切り分けられないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2406.05678",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:36:07+09:00",
+      "last_checked_at": "2026-10-31T00:36:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 284,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.20466",
+      "identity_tokens": [
+        "arXiv:2607.20466"
+      ],
+      "title": "JAXBench: Benchmarking Autonomous TPU Kernel Optimization",
+      "reason": "arXiv一次要旨。TPU v6e向けにLlama-3.1、DeepSeek-V3、Mixtral、Mamba-2等の実運用演算17種とKernelBench由来33種を集めた50件のJAXカーネル最適化ベンチマークを提案。paged/ragged attention等のLLM推論演算を含み、Pallas自動生成・正確性・XLA比geomean速度を測定する。推論カーネル実装評価に直接資する。",
+      "source_url": "https://arxiv.org/abs/2607.20466",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:36:07+09:00",
+      "last_checked_at": "2026-10-31T00:36:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 285,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.16214",
+      "identity_tokens": [
+        "arXiv:2504.16214"
+      ],
+      "title": "Hexcute: A Compiler Framework for Automating Layout Synthesis in GPU Programs",
+      "reason": "arXiv一次要旨。GPU tensor layoutを制約充足と型推論で自動合成し、GEMM・Attention・混合型MoE演算でTriton/CUTLASS等と比較。混合型MoE演算はTriton比平均6.46倍、vLLMのDeepSeek-R1-AWQ推論では最大2.60倍のエンドツーエンド改善を報告しており、LLM推論カーネル・コンパイラの直接的な高速化研究。",
+      "source_url": "https://arxiv.org/abs/2504.16214",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:36:07+09:00",
+      "last_checked_at": "2026-10-31T00:36:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 286,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.06527",
+      "identity_tokens": [
+        "arXiv:2602.06527"
+      ],
+      "title": "HyPER: Bridging Exploration and Exploitation for Scalable LLM Reasoning with Hypothesis Path Expansion and Reduction",
+      "reason": "arXiv一次要旨。MoE推論時の複数CoT経路に対し、固定計算予算のもとで仮説プールの探索・活用を動的に配分する学習不要オンライン制御を提案。token-level refinementと信頼度・長さを用いる集約により、4つのMoE推論モデルで正解率8〜10%改善とトークン使用量25〜40%削減を報告し、生成時計算予算の直接最適化に該当する。",
+      "source_url": "https://arxiv.org/abs/2602.06527",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:36:07+09:00",
+      "last_checked_at": "2026-10-31T00:36:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 287,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.23027",
+      "identity_tokens": [
+        "arXiv:2601.23027"
+      ],
+      "title": "Divide-and-Conquer CoT: RL for Reducing Latency via Parallel Reasoning",
+      "reason": "arXiv一次要旨。LLMが推論を独立部分問題に分解して並列workerへ委譲する構造をSFTと多段RLで学習させ、推論時の最長依存経路長を短縮する。DeepScaleR-1.5B-Previewを基にAIME 2024等で正解率を概ね維持しつつcritical-path長35〜40%減を報告する。学習を手段としているが最終寄与は並列推論のレイテンシ短縮である。壁時計時間と理論経路長は区別が必要。",
+      "source_url": "https://arxiv.org/abs/2601.23027",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:36:07+09:00",
+      "last_checked_at": "2026-10-31T00:36:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 289,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.24004",
+      "identity_tokens": [
+        "arXiv:2608.24004"
+      ],
+      "title": "AgentSpec: Speculative Decoding for Batch Inference of LLM Agents",
+      "reason": "arXiv一次要旨。大バッチのagent推論で投機的復号の受理率低下と動的token予算の遊休を特定し、agentワークフローの意味区間に限定したstructure-isolated draftingと冗長性を考慮した予算配分を提案。vLLMで4モデル系列・5ワークロードを評価しており、バッチLLM推論の直接的な復号高速化技術。",
+      "source_url": "https://arxiv.org/abs/2608.24004",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:36:07+09:00",
+      "last_checked_at": "2026-10-31T00:36:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 297,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

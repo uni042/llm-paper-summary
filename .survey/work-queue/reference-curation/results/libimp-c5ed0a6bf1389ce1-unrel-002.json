@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5ed0a6bf1389ce1-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.compbiolchem.2026.109217",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.compbiolchem.2026.109217",
+    "identity_tokens": [
+      "DOI:10.1016/j.compbiolchem.2026.109217"
+    ],
+    "reason": "Primary abstract reviewed: Bioinformatics has become a crucial discipline that connects biology and computational analysis, extracting meaningful insights from complex biological datasets. Traditional bioinformatics approaches, which rely on statistical models and manual analysis, are often inadequate for handling such complexity. The integration of artificial intelligence (AI) and machine learning (ML) has revolutionized bioinformatics by pro… Out of scope: Bioinformatics review on molecular docking/genomics, not LLM runtime.",
+    "first_checked_at": "2026-10-05T11:40:01+00:00",
+    "last_checked_at": "2026-10-05T11:40:01+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Role of Artificial Intelligence in bioinformatics: Revolutionizing molecular docking and DNA tokenization"
+  },
+  "processed_at": "2026-10-05T11:40:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5ed0a6bf138",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

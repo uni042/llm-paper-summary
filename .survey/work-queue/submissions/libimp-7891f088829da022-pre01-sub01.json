@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Diffusion Language Models: An Experimental Analysis",
+      "source_url": "https://arxiv.org/abs/2606.19475",
+      "year": 2026,
+      "published": "2026-06-17",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have revolutionized language modeling through autoregressive generation, enabling strong performance across a wide range of tasks. Recently, Diffusion Language Models (DLMs) have emerged as an alternative paradigm that generates text through iterative denoising rather than next-token prediction, allowing parallel refinement of entire sequences. While numerous diffusion-based architectures have been proposed, differences in evaluation protocols, datasets, inference budgets, and generation hyperparameters make it difficult to compare their capabilities and understand the trade-offs they offer. In this work, we present a systematic experimental analysis of modern DLMs. Specifically, we evaluate eight state-of-the-art DLMs across eight benchmarks spanning reasoning, coding, translation, knowledge, and structured problem solving, while explicitly considering both generation quality and computational efficiency. Beyond downstream evaluation, we analyze the impact of key inference-time factors, including denoising steps, context length, block size, and parallel unmasking strategies, and complement large-scale experiments with controlled comparisons of smaller models trained under identical conditions. Our analysis highlights the strengths and limitations of diffusion-based language modeling across different tasks, architectures, and inference budgets. We show that the behavior of DLMs is strongly influenced by generation-time design choices, leading to distinct trade-offs between performance and computational efficiency. Overall, our study provides practical insights into the capabilities and deployment characteristics of contemporary DLMs.",
+      "identifiers": [
+        "SemanticScholar:350610ebd5ac10d2eb49ef110b8a71bbfa4f1176"
+      ],
+      "semantic_scholar_id": "350610ebd5ac10d2eb49ef110b8a71bbfa4f1176",
+      "canonical_id": "arXiv:2606.19475",
+      "arxiv_id": "2606.19475",
+      "doi": "10.48550/arXiv.2606.19475",
+      "authors": [
+        "Thomas Bertolani",
+        "Davide Bucciarelli",
+        "Leonardo Zini",
+        "M. Cornia",
+        "L. Baraldi"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は8種類の拡散LMを8ベンチマークで比較し、denoising回数、文脈長、block長、並列unmaskingなどの推論設定が品質・計算量へ与える影響を評価する。拡散LLMの推論効率評価プロトコルとトレードオフに直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "BAPS: A Fine-Grained Low-Precision Scheme for Softmax in Attention via Block-Aware Precision reScaling",
+      "source_url": "https://arxiv.org/abs/2602.02071",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the performance gains from accelerating quantized matrix multiplication plateau, the softmax operation becomes the critical bottleneck in Transformer inference. This bottleneck stems from two hardware limitations: (1) limited data bandwidth between matrix and vector compute cores, and (2) the significant area cost of high-precision (FP32/16) exponentiation units (EXP2). To address these issues, we introduce a novel low-precision workflow that employs a specific 8-bit floating-point format (HiF8) and block-aware precision rescaling for softmax. Crucially, our algorithmic innovations make low-precision softmax feasible without the significant model accuracy loss that hampers direct low-precision approaches. Specifically, our design (i) halves the required data movement bandwidth by enabling matrix multiplication outputs constrained to 8-bit, and (ii) substantially reduces the EXP2 unit area by computing exponentiations in low (8-bit) precision. Extensive evaluation on language models and multi-modal models confirms the validity of our method. By alleviating the vector computation bottleneck, our work paves the way for doubling end-to-end inference throughput without increasing chip area, and offers a concrete co-design path for future low-precision hardware and software.",
+      "identifiers": [
+        "SemanticScholar:120a22cf3c0cf76a157b8bac8575100c1137df4c"
+      ],
+      "semantic_scholar_id": "120a22cf3c0cf76a157b8bac8575100c1137df4c",
+      "canonical_id": "arXiv:2602.02071",
+      "arxiv_id": "2602.02071",
+      "doi": "10.48550/arXiv.2602.02071",
+      "authors": [
+        "Zi Ye",
+        "Xiao-Yu He",
+        "Maoyuan Song",
+        "Guoliang Qiu",
+        "Chao Liao",
+        "Chen Wu",
+        "Yong-Gang Sun",
+        "Zhichun Li",
+        "Xiaoru Xie",
+        "Yuanyong Luo",
+        "Hu Liu",
+        "Pin-Yan Lu",
+        "Heng Liao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は量子化行列積後のsoftmaxが帯域・指数演算の律速になる問題に対し、HiF8とブロック別精度再スケーリングを用いるBAPSを提案。行列演算出力を8ビットへ抑え帯域を半減し、EXP2の面積も削減。LLM推論向け注意カーネル・ハードウェア協調設計に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LEAP: Learning Efficient Action Proposals For LLM Agents",
+      "source_url": "https://arxiv.org/abs/2610.02670",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents are known to be slow in rollouts. An agent completes a task one step at a time. At each step, it reasons and then chooses an action to execute. The next step and action cannot start until the previous one has finished. Speculative decoding accelerates the rollouts at the reason phase by drafting and verifying the inference tokens. Recent works have also started to apply similar ideas at the action phase. These works use off-the-shelf models, usually large, to draft action proposals for target model to verify. Large drafters match the target more often but take longer to propose, while small off-the-shelf models are fast but rarely make the same decision as the target. We ask a more general question: what determines the end-to-end speedup of action speculation? To answer it, we develop a latency framework for the speculative round. The framework compares what a round gains with what it costs. The gain depends on how well the drafter predicts the target and on how many steps the task can take before it ends. The cost comes from drafting, from waiting for target verification and from executing tools. Guided by the framework, we introduce LEAP (Learning Efficient Action Proposals) which keeps the drafter small and makes it accurate by training it on the target actions sequences. With a small 0.6B model, LEAP agrees with the target on most decisions and makes agents up to 60% faster in end-to-end wall clock time, with no systematic change in task success. Across various datasets, target models and draft models, the framework accounts for most of the measured speedups. We also show the draft model can be online trained with no prior trace collection and match the performance of offline training, making LEAP practical to deploy in the real world.",
+      "identifiers": [
+        "SemanticScholar:184160685886844f1117646c884d1b2a8a1c3028"
+      ],
+      "semantic_scholar_id": "184160685886844f1117646c884d1b2a8a1c3028",
+      "canonical_id": "arXiv:2610.02670",
+      "arxiv_id": "2610.02670",
+      "authors": [
+        "Zhen Xu",
+        "Qizheng Zhang",
+        "Gerry Wan",
+        "Shang Zhu",
+        "Ce Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はエージェントの推論トークンだけでなく次のツール操作を小型draftモデルで先行提案するLEAPを提案。提案・検証・ツール実行の各遅延と受理率を含むend-to-end速度モデルで投機的アクションの利得を設計し、agentic推論遅延へ直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Kwai Summary Attention V2 Technical Report",
+      "source_url": "https://arxiv.org/abs/2610.18654",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Summary-token architectures such as Kwai Summary Attention (KSA) compress distant context into learnable Summary token per chunk, and hybrid variants interleave these layers with full attention to retain exact access to the original text. In such hybrid KSA-Full architecture, the interleaving inserted summary tokens are served as a streaming flow role across different layers. Although effective, however, it also introduce some bottlenecks: (1) the different layers summary compression chunk must be same, therefore hard to reach a flexible KV Cache compression, e.g., different layer set different summary compression chunk window. (2) in the full-attention layers, the summary token introduced additional computation cost, but such layer ignore them and still pay quadratic prefilling, therefore unfriendly to the computation side. Motivated by them, we developed the KSA V2, which not only achieves a more flexible KV cache memory compression but also reduces the computation cost in Full attention layer. Specifically, we found that the summary tokens can serve two roles: the KV memory and sparse indexer.",
+      "identifiers": [
+        "SemanticScholar:080346240c7b231648f4dbda920301ca3fb7a3d0"
+      ],
+      "semantic_scholar_id": "080346240c7b231648f4dbda920301ca3fb7a3d0",
+      "canonical_id": "arXiv:2610.18654",
+      "arxiv_id": "2610.18654",
+      "authors": [
+        "OneRec Team",
+        "Chenglong Chu",
+        "Guo-Hong Mu",
+        "Guo-Wang Zhang",
+        "Hao Peng",
+        "Hui Wang",
+        "Jian Liang",
+        "Jiang-Xia Cao",
+        "Jiao Ou",
+        "Jia-Xin Deng",
+        "Lu Ren",
+        "Mu-Hao Wei",
+        "Rui-Ming Tang",
+        "Tian-Le Xu",
+        "Wen-Wu Ou",
+        "Xing-Mei Wang",
+        "Zhi-Xin Ling",
+        "Zhi-Yuan Liang",
+        "Zi-Qi Wang",
+        "Chao Ma",
+        "Hai-Xiao Gao",
+        "Kuo Cai",
+        "Ren-Pu Liu",
+        "Ruo-Chen Yang",
+        "Wen-Long Xu",
+        "Xin-Qi Jin",
+        "Yan Sun",
+        "Yi-Fan Wang",
+        "Ying-Zhi He",
+        "Yi-Yu Wang",
+        "Yu-Sen Huo",
+        "Zhao-Jie Liu",
+        "Zi-Han Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はKSAのchunk単位summary tokenを層別に柔軟な圧縮窓へ拡張し、full-attention層でsummaryを疎な索引として利用するKSA V2を提案。KVメモリ削減とprefill計算量削減を同時に狙う長文脈LLM注意方式。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7891f088829d",
+    "round": "libimp-7891f088829da022-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7891f088829da022-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7891f088829da022-pre01.json",
+    "receipt": "sha256:9455e9ec846d0e4a28dae2642da1f9da26621946a1fb8a5bc05ee36d918abb7a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7891f088829d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

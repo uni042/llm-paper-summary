@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-170439ce2cbed246-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icvrv67992.2025.00054",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icvrv67992.2025.00054",
+    "identity_tokens": [
+      "DOI:10.1109/icvrv67992.2025.00054"
+    ],
+    "reason": "Whole-slide image classification framework is a medical vision application.",
+    "first_checked_at": "2026-10-06T11:14:12+00:00",
+    "last_checked_at": "2026-10-06T11:14:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+    ],
+    "title": "Dual-Resolution Multiple Instance Learning Framework with Enhanced Instance Discrimination for Whole Slide Image Classification"
+  },
+  "processed_at": "2026-10-06T11:14:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-170439ce2cbe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

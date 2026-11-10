@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a27878adada6e51c-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.24593",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.24593",
+    "identity_tokens": [
+      "arXiv:2505.24593"
+    ],
+    "reason": "MoE attribution論文のlayer efficiencyはperformance gain指標で、runtime efficiencyとは異なる。",
+    "first_checked_at": "2026-10-05T15:22:00+00:00",
+    "last_checked_at": "2026-10-05T15:22:00+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Decoding Knowledge Attribution in Mixture-of-Experts: A Framework of Basic-Refinement Collaboration and Efficiency Analysis"
+  },
+  "processed_at": "2026-10-05T15:22:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a27878adada6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

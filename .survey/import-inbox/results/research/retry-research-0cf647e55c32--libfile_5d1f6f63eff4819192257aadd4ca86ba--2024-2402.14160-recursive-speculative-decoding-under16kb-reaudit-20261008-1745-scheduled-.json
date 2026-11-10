@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "a276046c621ed1d7a5690b8ef5d7793ae4db6b5c9164ff1cc750abb101b75d60",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0cf647e55c32--libfile_5d1f6f63eff4819192257aadd4ca86ba--2024-2402.14160-recursive-speculative-decoding-under16kb-reaudit-20261008-1745-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2402.14160",
+  "worker_completed_at": "2026-10-08T17:48:24+09:00",
+  "worker_run_key": "20261008-1745-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5541,
+    "body_paragraphs": 29,
+    "method_chars": 1730,
+    "method_paragraphs": 9,
+    "evaluation_chars": 162,
+    "limitation_chars": 728,
+    "insufficiency_flags": [
+      "評価説明量 162 < 500"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 162 < 500"
+  ],
+  "processed_at": "2026-10-08T13:34:45+00:00"
+}

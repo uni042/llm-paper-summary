@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5bbd2cd91643c86d-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2006.01112",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2006.01112",
+    "identity_tokens": [
+      "arXiv:2006.01112"
+    ],
+    "reason": "一次本文§3–5はbounded-context Markov Transformer/cascaded decodingでO(MK²logL) parallel generationを構成し、5つのMT datasetでspeed/quality tradeoffを示す。2020年の翻訳専用研究で現行LLM serving測定がなく関係は弱い。",
+    "first_checked_at": "2026-10-05T22:59:33+00:00",
+    "last_checked_at": "2026-10-05T22:59:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Cascaded Text Generation with Markov Transformers"
+  },
+  "processed_at": "2026-10-05T22:59:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5bbd2cd91643",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

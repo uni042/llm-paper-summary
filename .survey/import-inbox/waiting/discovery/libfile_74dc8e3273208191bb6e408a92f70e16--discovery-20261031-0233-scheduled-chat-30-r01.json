@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0233-scheduled-chat-30/r01",
+  "reference_main_sha": "60afd16624f4f1435a21e795ef399f73ef2a5a7d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.19704",
+      "identity_tokens": [
+        "arXiv:2607.19704"
+      ],
+      "title": "Efficient Clustering with Quality Guardrails for LLM-based Recommender Systems at Industry Scale",
+      "reason": "3800万顧客をMini-batch K-Meansで粗く分割し、埋め込み類似度の下限と属性一致を満たす代表を選ぶ二段階クラスタリング。代表のみLLMを実行することで下流のLLM費用・時間を50分の1にした実運用を報告。LLM呼出回数の削減に直接効くが、推論エンジンや汎用サービングの技術ではなく推薦業務向け前処理が主対象のため境界判定。",
+      "source_url": "https://arxiv.org/abs/2607.19704",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:37:11+09:00",
+      "last_checked_at": "2026-10-31T02:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 451,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19091",
+      "identity_tokens": [
+        "arXiv:2602.19091"
+      ],
+      "title": "CREM: Compression-Driven Representation Enhancement for Multimodal Retrieval and Comprehension",
+      "reason": "学習可能なchorus tokenと圧縮対応注意によりマルチモーダル埋め込み表現を改善し、対照学習と生成学習を両立する研究。MMEB検索精度と理解能力が主評価であり、トークン圧縮という名称でも推論時の計算量・KV・メモリ削減を目的とするシステム最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2602.19091",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:37:11+09:00",
+      "last_checked_at": "2026-10-31T02:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 453,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.14549",
+      "identity_tokens": [
+        "arXiv:2601.14549"
+      ],
+      "title": "QMC: Efficient SLM Edge Inference via Outlier-Aware Quantization and Emergent Memories Co-Design",
+      "reason": "小規模言語モデルの重みを外れ値と非外れ値に分け、非外れ値を多値ReRAM、精度に敏感な外れ値を高精度MRAMに配置する学習不要の量子化・異種メモリ協調設計。FP16比でメモリ6.3〜7.3倍、転送7.6倍、エネルギー11.7倍、遅延12.5倍の削減を報告し、エッジ推論のメモリ・実行効率に直接寄与。",
+      "source_url": "https://arxiv.org/abs/2601.14549",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:37:11+09:00",
+      "last_checked_at": "2026-10-31T02:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 454,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.19645",
+      "identity_tokens": [
+        "arXiv:2605.19645"
+      ],
+      "title": "K-Quantization and its Impact on Output Performance",
+      "reason": "8つのLLMでGGUF系K量子化を含む2〜8bitの量子化段階をMMLU-Pro、CRUXEval、MuSRなどで比較し、低ビット化の品質影響とモデル規模依存を検証。Q2_Kで許容可能な場合と大幅劣化する場合を区別しており、推論用重み圧縮の実装選択に直結する定量評価。",
+      "source_url": "https://arxiv.org/abs/2605.19645",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:37:11+09:00",
+      "last_checked_at": "2026-10-31T02:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 457,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.01544",
+      "identity_tokens": [
+        "arXiv:2606.01544"
+      ],
+      "title": "CRePE: Convolution-aware Relative Importance in Post-training Pruning with Efficient Search",
+      "reason": "行・列方向のみを見るRIAの重み重要度に2次元近傍と適応係数を追加する学習後枝刈りCRePEを提案。係数のPPL探索を約11時間から代理指標PHOで約20分へ短縮し、チャネル置換や不均一疎性割当との併用も確認。LLM重み圧縮と導入前探索コストを直接削減する。",
+      "source_url": "https://arxiv.org/abs/2606.01544",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:37:11+09:00",
+      "last_checked_at": "2026-10-31T02:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 458,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.26690",
+      "identity_tokens": [
+        "arXiv:2510.26690"
+      ],
+      "title": "LoRAQuant: Mixed-Precision Quantization of LoRA to Ultra-Low Bits",
+      "reason": "同時に多数読み込むLoRAアダプタのメモリ費用に対し、SVD再パラメータ化で重要な行・列へ情報を集中し、高重要部分のみ高精度、残りを超低ビットで量子化する。LLaMA 2 7B/13BとMistral 7Bの数学・コード・要約で品質を確認し、推論サービング時の複数アダプタ常駐費用を削減する技術。",
+      "source_url": "https://arxiv.org/abs/2510.26690",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:37:11+09:00",
+      "last_checked_at": "2026-10-31T02:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 459,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.28873",
+      "identity_tokens": [
+        "arXiv:2605.28873"
+      ],
+      "title": "Pre-Registering the Detectable Effect: A Paired-MDE Budget for 4-bit Quantization Benchmarks, with a Pilot Audit",
+      "reason": "FP16とNF4の対応あり二値正誤の不一致率ρdと評価件数mから最小検出可能効果を見積もる事前登録用の統計設計ノート。4モデル・4ベンチマークの小規模pilotでは量子化差が仮定ρd=0.10でのMDE以下、MMLUのprompt形式差2〜10ポイントが量子化差を上回る。量子化評価の信頼性には有用だが、新たな推論圧縮方式や実行効率化の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2605.28873",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:37:11+09:00",
+      "last_checked_at": "2026-10-31T02:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 463,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21797",
+      "identity_tokens": [
+        "arXiv:2601.21797"
+      ],
+      "title": "Enhancing Conversational Agents via Task-Oriented Adversarial Memory Adaptation",
+      "reason": "対話履歴から挑戦者が質問を生成し、評価者の誤答分析を受けて適応者が記憶内容と構築方針を更新するAMA。LoCoMoで対話記憶の質問応答品質を評価する。記憶管理には関連するが、主処理はオフラインのタスク適応・精度改善であり、KVキャッシュや推論時メモリ帯域の削減を直接実証していない。",
+      "source_url": "https://arxiv.org/abs/2601.21797",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:37:11+09:00",
+      "last_checked_at": "2026-10-31T02:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 465,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.13990",
+      "identity_tokens": [
+        "arXiv:2610.13990"
+      ],
+      "title": "DoSA: Dots Sparse Attention",
+      "reason": "疎attentionのTop-K候補を全headで完全採点せず、seed集合の下限と正負寄与の上界から安全に棄却できる候補を証明し、選択結果を厳密に維持するDoSA。GPU IndexerをSGLang比最大2.74倍、LiteTopK比1.69倍、GLM-5.2/DeepSeek-V3.2のTTFTを最大1.94倍/1.50倍高速化と報告。",
+      "source_url": "https://arxiv.org/abs/2610.13990",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:37:11+09:00",
+      "last_checked_at": "2026-10-31T02:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 467,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.06540",
+      "identity_tokens": [
+        "arXiv:2607.06540"
+      ],
+      "title": "Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs",
+      "reason": "Lychee-FDは音響と意味の深層勾配衝突を緩和するため深層パラメータを分離し、意味整合チャネルで全二重音声モデルの知識劣化を防ぐ。Spoken QAとFullDuplexBench 1.5の改善が主目的で、推論効率を維持したとするが実行高速化・メモリ削減が主たる貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2607.06540",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:37:11+09:00",
+      "last_checked_at": "2026-10-31T02:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 468,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

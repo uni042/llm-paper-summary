@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6f79edf5b5197edd-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.00373",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.00373",
+    "identity_tokens": [
+      "arXiv:2610.00373"
+    ],
+    "reason": "Attention head ablationによる因果主張の統計的妥当性を評価する方法論で、LLM実行効率を改善しない。",
+    "first_checked_at": "2026-10-05T23:50:03+00:00",
+    "last_checked_at": "2026-10-05T23:50:03+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+    ],
+    "title": "When Do Attention-Head Ablations Support Causal Claims? Projection-Level Confounds, Floor Effects, and Matched Controls"
+  },
+  "processed_at": "2026-10-05T23:50:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6f79edf5b519",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-12c277fc4f5ebe2a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.18122",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.18122",
+    "identity_tokens": [
+      "arXiv:2512.18122"
+    ],
+    "reason": "arXiv一次要旨はPDFからMarkdownへ直接変換するデコーダモデルで、PDFと生成文のn-gram重複を利用するCopy Lookup Decodingによりドラフトを作り、逐次トークン生成を削減する。推論高速化に関係するが、用途はPDF変換専用で汎用LLMサービングの性能評価ではないためborderline。",
+    "first_checked_at": "2026-10-30T07:20:20+00:00",
+    "last_checked_at": "2026-10-30T07:20:20+00:00",
+    "linked_from": [
+      "Document Processing",
+      "Speculative Decoding"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accelerating End-to-End PDF to Markdown Conversion Through Assisted Generation"
+  },
+  "processed_at": "2026-10-30T07:20:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-12c277fc4f5e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

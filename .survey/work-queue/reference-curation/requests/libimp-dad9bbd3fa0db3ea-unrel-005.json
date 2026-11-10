@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-dad9bbd3fa0db3ea-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.06721",
+  "reason": "一次要旨: AI companions are envisioned as always-on assistants that support users in daily life. With this regard, we introduce BuddyVQA, a benchmark for companion-style question answering (QA) on egocentric streaming video. BuddyVQA contains 21.6K questions linked to 6K highlight moments across 1,012 long, egocentric videos. It features two key characteristics that are common in daily first-person QA assistance but are largely overlooked in existing VideoQA benchmarks: ego-deictic expressions and interactively chained questions (e.g.,\"Where is it?\",\"How to get there?\"). These require models to infer a user's in-situation intent by resolving visual pronouns in the context of egocentric visual and QA contents, with both grounded in a long-form streaming setting. To tackle the challenges, we propose MyBuddy, a companion-style QA assistant that highlights a multimodal chain-of-thought reasoning mechanism to infer the final answer based on the historical QA and visual content. An additional question filter and multi-level memory are designed to facilitate efficient QA and visual information retrieval under streaming QA settings. Experiments show that MyBuddy significantly enhances the performance of foundation models on BuddyVQA. Moreover, these gains generalize to other streaming and common video QA benchmarks, demonstrating the applicability and effectiveness of our approach. Our code and dataset are available at https://github.com/QHUni/BuddyVQA",
+  "title": "Companion-style QA Assistance in Ego-Vision",
+  "identity_tokens": [
+    "arXiv:2609.06721"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dad9bbd3fa0d",
+  "source_precheck_request_id": null
+}

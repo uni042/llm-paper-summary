@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260918T222200Z-scheduled-chat-discovery-0700-09",
+  "worker_id": "scheduled-chat-discovery-20260919T0700JST",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-b3520b6ffb18fc43",
+      "claim_id": "claim-59bd34d06f011611b0132598",
+      "worker_id": "scheduled-chat-discovery-20260919T0700JST",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-59bd34d06f011611b0132598",
+      "claimed_at": "2026-09-18T22:19:26+00:00",
+      "expires_at": "2026-09-18T23:49:26+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-b3520b6ffb18fc43"
+      ],
+      "job": {
+        "job_id": "job-research-b3520b6ffb18fc43",
+        "type": "research",
+        "parent_job_id": "job-390a2ff0c6f51a4c",
+        "priority": 80,
+        "canonical_id": "arXiv:2503.08467",
+        "title": "Accelerating MoE Model Inference with Expert Sharding",
+        "source_url": "https://arxiv.org/abs/2503.08467",
+        "paper_path": "papers/inference/05-moe-expert-offload/2025-2503.08467-moe-expert-sharding.md",
+        "selection_reason": "expert matrixをrow/column方向に分解してrouting skewによるGPU間load imbalanceを抑え、kernel fusionと組み合わせてDeepSpeed比最大6.4x TTFT改善を報告。offloadではないがexpert placement/sharding系統の重要な隣接研究。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T19:03:45+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
+        "validation_errors": [
+          "problem_method.method_overview must explain the end-to-end mechanism"
+        ],
+        "last_validation_failed_at": "2026-09-18T22:18:41+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-792a11fa4fd24a27f2b17f5c"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-792a11fa4fd24a27f2b17f5c.json",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-18T22:19:26+00:00",
+  "checkpoint_released": 0
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-be4a0c717caccc8a-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.53469/jtpes.2024.04(02).08",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.53469/jtpes.2024.04(02).08",
+    "identity_tokens": [
+      "DOI:10.53469/jtpes.2024.04(02).08"
+    ],
+    "reason": "出版社の一次要旨ではFalcon-7B chatbotに16-bit full quantizationを用いるとするが、本文PDFの取得がcache missで失敗し、量子化形式・baseline・推論メモリ/latency・品質測定を検証できない。offload/hierarchical-memory系統との関連候補としてborderlineに残す。",
+    "first_checked_at": "2026-10-06T17:45:37+00:00",
+    "last_checked_at": "2026-10-06T17:45:37+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Enhancing E-commerce Chatbots with Falcon-7B and 16-bit Full Quantization"
+  },
+  "processed_at": "2026-10-06T17:45:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be4a0c717cac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

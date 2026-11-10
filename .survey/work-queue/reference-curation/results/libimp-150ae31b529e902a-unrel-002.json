@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-150ae31b529e902a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s10586-026-05939-8",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s10586-026-05939-8",
+    "identity_tokens": [
+      "DOI:10.1007/s10586-026-05939-8"
+    ],
+    "reason": "Publisher title and abstract identify hierarchical federated learning for IoT intrusion detection. The LLM is used in a cyber-detection application; no inference optimization or serving method is indicated.",
+    "first_checked_at": "2026-10-06T13:41:05+00:00",
+    "last_checked_at": "2026-10-06T13:41:05+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "Lightweight large language model based hierarchical federated learning for B5G enabled IoT intrusion detection networks"
+  },
+  "processed_at": "2026-10-06T13:41:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-150ae31b529e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

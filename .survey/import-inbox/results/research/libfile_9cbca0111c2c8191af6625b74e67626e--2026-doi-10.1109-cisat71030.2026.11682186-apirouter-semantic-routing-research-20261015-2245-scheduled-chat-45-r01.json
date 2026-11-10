@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "0de04570463e70986528707d01afb8980cb4b92aa1a5d399f964aebf72125664",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9cbca0111c2c8191af6625b74e67626e--2026-doi-10.1109-cisat71030.2026.11682186-apirouter-semantic-routing-research-20261015-2245-scheduled-chat-45-r01.md",
+  "canonical_id": "DOI:10.1109/CISAT71030.2026.11682186",
+  "worker_completed_at": "2026-10-15T22:55:39+09:00",
+  "worker_run_key": "20261015-2245-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5522,
+    "body_paragraphs": 29,
+    "method_chars": 1646,
+    "method_paragraphs": 8,
+    "evaluation_chars": 196,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 196 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 196 < 500"
+  ],
+  "processed_at": "2026-10-16T12:32:16+00:00"
+}

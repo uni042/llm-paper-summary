@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1b360738eff79b04-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2205.03436",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2205.03436",
+    "identity_tokens": [
+      "arXiv:2205.03436"
+    ],
+    "reason": "mobile device向け軽量vision transformerで画像認識効率を改善するが、最終workloadはcomputer visionでLLM推論systemsではない。",
+    "first_checked_at": "2026-10-07T05:41:30+00:00",
+    "last_checked_at": "2026-10-07T05:41:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+    ],
+    "title": "EdgeViTs: Competing Light-weight CNNs on Mobile Devices with Vision Transformers"
+  },
+  "processed_at": "2026-10-07T05:41:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b360738eff7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

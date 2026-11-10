@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7020378d7741c9cb-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.14256",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.14256",
+    "identity_tokens": [
+      "arXiv:2505.14256"
+    ],
+    "reason": "BLOOMz-7Bへ疎なMoE層を加える構造はLLMの専門家計算と関係するが、論文の主目的は中国語中心の65言語翻訳品質であり、実験はBLEU、データ量、学習条件を中心に報告する。8基のA100で学習した記述はあるものの、密モデルに対する推論時間・トークン毎の演算量・メモリ・サービングスループットの定量比較を提示しない。疎MoE構造の参考にはなるが、LLM推論効率化の定量エビデンスとしては弱く、Research優先候補から外してborderlineとする。",
+    "first_checked_at": "2026-10-28T18:50:02+00:00",
+    "last_checked_at": "2026-10-28T18:50:02+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FuxiMT: Sparsifying Large Language Models for Chinese-Centric Multilingual Machine Translation"
+  },
+  "processed_at": "2026-10-28T18:50:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7020378d7741",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

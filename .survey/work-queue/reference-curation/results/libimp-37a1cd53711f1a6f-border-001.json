@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-37a1cd53711f1a6f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2403.19591",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2403.19591",
+    "identity_tokens": [
+      "arXiv:2403.19591"
+    ],
+    "reason": "The hardware evidence is for generic/lightweight Transformers and semantic segmentation, not LLM inference benchmarks or generation-serving performance; scope fit is borderline.",
+    "first_checked_at": "2026-10-05T15:10:29+00:00",
+    "last_checked_at": "2026-10-05T15:10:29+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Genetic Quantization-Aware Approximation for Non-Linear Operations in Transformers"
+  },
+  "processed_at": "2026-10-05T15:10:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-37a1cd53711f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d57c839110ce88df-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.14992",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.14992",
+    "identity_tokens": [
+      "arXiv:2305.14992"
+    ],
+    "reason": "LLMを世界モデルと推論agentの双方として用い、モンテカルロ木探索（Monte Carlo Tree Search; MCTS）で推論経路を探索するRAPを提案する推論能力研究。計画・数学・論理推論の精度向上が目的で、推論ランタイムやサービング効率化ではない。",
+    "first_checked_at": "2026-10-04T18:55:17+00:00",
+    "last_checked_at": "2026-10-04T18:55:17+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md"
+    ],
+    "title": "Reasoning with Language Model is Planning with World Model"
+  },
+  "processed_at": "2026-10-04T18:55:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d57c839110ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

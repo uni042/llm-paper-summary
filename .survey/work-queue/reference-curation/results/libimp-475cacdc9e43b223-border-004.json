@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-475cacdc9e43b223-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.22319",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.22319",
+    "identity_tokens": [
+      "arXiv:2607.22319"
+    ],
+    "reason": "cost-efficient RAGのsurveyとして隣接するが、独自評価がなく新規効率証拠を判定できないためborderline。",
+    "first_checked_at": "2026-10-05T10:01:02+00:00",
+    "last_checked_at": "2026-10-05T10:01:02+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md",
+      "papers/inference/99-other-inference-systems/2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md"
+    ],
+    "title": "Towards Trustworthy and Cost-Efficient Data Integration: From Naïve RAG to Agentic RAG"
+  },
+  "processed_at": "2026-10-05T10:01:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-475cacdc9e43",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

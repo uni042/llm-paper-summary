@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c35b757c410ec4b-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2112.00114",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2112.00114",
+    "identity_tokens": [
+      "arXiv:2112.00114"
+    ],
+    "reason": "中間計算をscratchpadとして生成するようTransformerを学習し、多段計算・program executionの正解率を改善するreasoning/training研究。追加token生成を利用する能力向上が目的で、推論runtimeの高速化ではない。",
+    "first_checked_at": "2026-10-04T19:49:58+00:00",
+    "last_checked_at": "2026-10-04T19:49:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md"
+    ],
+    "title": "Show Your Work: Scratchpads for Intermediate Computation with Language Models"
+  },
+  "processed_at": "2026-10-04T19:49:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c35b757c410",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

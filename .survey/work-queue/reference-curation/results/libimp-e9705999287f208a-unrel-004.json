@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9705999287f208a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1910.05316",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1910.05316",
+    "identity_tokens": [
+      "arXiv:1910.05316"
+    ],
+    "reason": "arXiv要旨はDNNのdevice-edge協調推論を分割・early-exitで低遅延化するEdgentを提案し、Raspberry Pi/PCで評価する。",
+    "first_checked_at": "2026-10-04T23:24:23+00:00",
+    "last_checked_at": "2026-10-05T00:58:26+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md"
+    ],
+    "title": "Edge AI: On-Demand Accelerating Deep Neural Network Inference via Edge Computing"
+  },
+  "processed_at": "2026-10-05T00:58:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9705999287f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

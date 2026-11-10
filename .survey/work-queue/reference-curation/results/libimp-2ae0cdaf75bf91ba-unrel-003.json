@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2ae0cdaf75bf91ba-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3832234",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3832234",
+    "identity_tokens": [
+      "DOI:10.1145/3832234"
+    ],
+    "reason": "Code editing strategy selection evaluates agent productivity/quality, not inference cost/serving.",
+    "first_checked_at": "2026-10-05T04:18:35+00:00",
+    "last_checked_at": "2026-10-05T04:18:35+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+    ],
+    "title": "No One-Size-Fits-All: Adaptive Code Editing with Feature-Based Strategy Selection"
+  },
+  "processed_at": "2026-10-05T04:18:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2ae0cdaf75bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

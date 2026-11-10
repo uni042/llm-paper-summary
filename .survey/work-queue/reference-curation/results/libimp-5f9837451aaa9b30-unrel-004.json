@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f9837451aaa9b30-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.04199",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.04199",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2024.findings-emnlp.48",
+      "arXiv:2410.04199"
+    ],
+    "reason": "長い一括応答におけるLLMの生成品質劣化を測るベンチマークであり、推論ランタイムの速度・メモリ・サービングを改善する新規方式ではないため対象外。",
+    "first_checked_at": "2026-09-30T01:46:01+00:00",
+    "last_checked_at": "2026-09-30T01:46:01+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md"
+    ],
+    "title": "LongGenBench: Long-context Generation Benchmark"
+  },
+  "processed_at": "2026-09-30T01:46:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f9837451aaa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "8791ea46c8865963c25885adfb76bb89693efd3c2d5e46d22ef3cd1e7dc2a46b",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_355224e8ba508191b9130a77dc30f7aa--2026-2606.01019-hybrid-verified-decoding-research-20261024-0556-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2606.01019",
+  "worker_completed_at": "2026-10-24T06:01:00+09:00",
+  "worker_run_key": "20261024-0556-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5042,
+    "body_paragraphs": 24,
+    "method_chars": 1554,
+    "method_paragraphs": 8,
+    "evaluation_chars": 1397,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2026-2606.01019-hybrid-verified-decoding-learning-to-allocate-verification-in-speculativ.md と 16 段落 / 3870文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T15:03:12+00:00"
+}

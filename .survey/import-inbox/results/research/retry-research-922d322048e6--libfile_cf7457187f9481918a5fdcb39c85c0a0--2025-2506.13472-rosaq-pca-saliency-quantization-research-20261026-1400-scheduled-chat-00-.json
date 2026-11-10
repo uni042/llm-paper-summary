@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "9c5883f6db34102e4d2157a2f8a0b8a6006f2d9f088a290deec04752cbde6f22",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-922d322048e6--libfile_cf7457187f9481918a5fdcb39c85c0a0--2025-2506.13472-rosaq-pca-saliency-quantization-research-20261026-1400-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2506.13472",
+  "worker_completed_at": "2026-10-26T14:00:00+09:00",
+  "worker_run_key": "20261026-1400-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2986,
+    "body_paragraphs": 17,
+    "method_chars": 1265,
+    "method_paragraphs": 8,
+    "evaluation_chars": 223,
+    "limitation_chars": 369,
+    "insufficiency_flags": [
+      "評価説明量 223 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 223 < 500"
+  ],
+  "processed_at": "2026-10-26T07:08:44+00:00"
+}

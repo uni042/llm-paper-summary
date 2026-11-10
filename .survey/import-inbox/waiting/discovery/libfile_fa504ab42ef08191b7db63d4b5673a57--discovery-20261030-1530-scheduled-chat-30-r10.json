@@ -1,0 +1,189 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1530-scheduled-chat-30/r10",
+  "reference_main_sha": "0ff1d41771eec8ce05901d1254d9bb38fd49b7a7",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.18122",
+      "identity_tokens": [
+        "arXiv:2512.18122"
+      ],
+      "title": "Accelerating End-to-End PDF to Markdown Conversion Through Assisted Generation",
+      "reason": "arXiv一次要旨はPDFからMarkdownへ直接変換するデコーダモデルで、PDFと生成文のn-gram重複を利用するCopy Lookup Decodingによりドラフトを作り、逐次トークン生成を削減する。推論高速化に関係するが、用途はPDF変換専用で汎用LLMサービングの性能評価ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2512.18122",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:41:36+09:00",
+      "last_checked_at": "2026-10-30T15:41:36+09:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "Document Processing"
+      ],
+      "worklist_rank": 132
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.04833",
+      "identity_tokens": [
+        "arXiv:2409.04833"
+      ],
+      "title": "Achieving Peak Performance for Large Language Models: A Systematic Review",
+      "reason": "arXiv一次要旨はLLMの微調整、学習時間削減、計算・メモリコスト低減を横断的に扱うシステマティックレビュー。LLM効率の背景資料にはなるが、生成推論の高速化・KV管理・サービングの独立した方法論が中心ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2409.04833",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:41:36+09:00",
+      "last_checked_at": "2026-10-30T15:41:36+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "Training Efficiency"
+      ],
+      "worklist_rank": 137
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.02367",
+      "identity_tokens": [
+        "arXiv:2604.02367"
+      ],
+      "title": "Evaluating Small Language Models for Front-Door Routing: A Harmonized Benchmark and Synthetic-Traffic Experiment",
+      "reason": "arXiv一次要旨はLLM APIへの要求を品質・コスト・遅延の制約に合わせてモデル選択するfront-door routerを、1〜4Bの小型モデルで低遅延に実装する可能性を検証。要求ルーティングの追加計算費用とサービス品質の両立を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2604.02367",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:41:36+09:00",
+      "last_checked_at": "2026-10-30T15:41:36+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 139
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.38166",
+      "identity_tokens": [
+        "arXiv:2609.38166"
+      ],
+      "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+      "reason": "arXiv一次要旨はGated DeltaNetやKimi Delta Attentionの再帰状態を低ビット化すると誤差が累積する問題に対し、学習不要の8ビット状態量子化LeapQuantを提案。長文脈LLM推論の状態メモリI/O削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.38166",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:41:36+09:00",
+      "last_checked_at": "2026-10-30T15:41:36+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 140
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.05475",
+      "identity_tokens": [
+        "arXiv:2607.05475"
+      ],
+      "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+      "reason": "arXiv一次要旨はllama.cppやGENIEを含む5フレームワークとCPU/GPU/NPUの3バックエンドでモバイルLLM推論を測定するPowerBenchを提案。スループットとバックエンド別消費エネルギーを分析し、端末推論のハードウェア効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2607.05475",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:41:36+09:00",
+      "last_checked_at": "2026-10-30T15:41:36+09:00",
+      "linked_from": [
+        "Edge LLM Inference",
+        "Hardware Accelerators"
+      ],
+      "worklist_rank": 141
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.07911",
+      "identity_tokens": [
+        "arXiv:2310.07911"
+      ],
+      "title": "Pit One Against Many: Leveraging Attention-head Embeddings for Parameter-efficient Multi-head Attention",
+      "reason": "arXiv一次要旨はMHAでヘッドごとに投影重みを持つ代わりに一つの共有投影行列とヘッド埋込みを使うMHE注意を提案。注意モジュールのパラメータ・メモリ量を減らし、予測品質を保つモデル圧縮に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2310.07911",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:41:36+09:00",
+      "last_checked_at": "2026-10-30T15:41:36+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "Sparse Attention"
+      ],
+      "worklist_rank": 142
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.02011",
+      "identity_tokens": [
+        "arXiv:2606.02011"
+      ],
+      "title": "Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery",
+      "reason": "arXiv一次要旨はQwen3推論モデルを2ビット化すると生成トークン数が増大し、単一トークン処理が速くても総時間が短縮しない失敗を分析。ループや未完了推論を抑える回復策を提案し、低ビット推論の実効速度と品質に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2606.02011",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:41:36+09:00",
+      "last_checked_at": "2026-10-30T15:41:36+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "Reasoning LLM Inference"
+      ],
+      "worklist_rank": 144
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.22107",
+      "identity_tokens": [
+        "arXiv:2505.22107"
+      ],
+      "title": "Curse of High Dimensionality Issue in Transformer for Long-context Modeling",
+      "reason": "arXiv一次要旨は長文脈Transformerで多くのトークンへ均等な計算を費やす冗長性を理論分析し、注意疎性に基づく関連トークン選択を検討。長文脈注意計算の効率化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2505.22107",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:41:36+09:00",
+      "last_checked_at": "2026-10-30T15:41:36+09:00",
+      "linked_from": [
+        "Sparse Attention",
+        "Long-context Inference"
+      ],
+      "worklist_rank": 145
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.23225",
+      "identity_tokens": [
+        "arXiv:2506.23225"
+      ],
+      "title": "Masked Gated Linear Unit",
+      "reason": "arXiv一次要旨はLLMのGLUがgateとvalueの二つの重み行列を読むメモリ帯域負荷に対し、共有重み行列と学習可能なバイナリmaskによるMoEG、融合カーネルを提案。FFNのメモリ転送削減と推論実装効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2506.23225",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:41:36+09:00",
+      "last_checked_at": "2026-10-30T15:41:36+09:00",
+      "linked_from": [
+        "Hardware Accelerators",
+        "Model Compression"
+      ],
+      "worklist_rank": 146
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.22586",
+      "identity_tokens": [
+        "arXiv:2607.22586"
+      ],
+      "title": "MM-ShiftKV: Decode-Aware Prefill-Stage KV Selection for Multimodal Large Language Models",
+      "reason": "arXiv一次要旨はMLLMでprefill時の注意統計がdecode時の重要度を代表しない問題を分析し、decodeを意識したprefill段階のKV選択MM-ShiftKVを提案。視覚トークンのKV削減と長文脈生成品質の両立に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2607.22586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:41:36+09:00",
+      "last_checked_at": "2026-10-30T15:41:36+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "Multimodal LLM Inference"
+      ],
+      "worklist_rank": 147
+    }
+  ]
+}

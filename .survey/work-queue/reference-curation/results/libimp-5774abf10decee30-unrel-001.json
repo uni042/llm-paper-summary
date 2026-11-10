@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5774abf10decee30-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1704.04497",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1704.04497",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1704.04497",
+      "arXiv:1704.04497"
+    ],
+    "reason": "動画VQAの時空間推論データセットとdual-LSTMモデルが主題で、LLM推論基盤の効率化ではない。",
+    "first_checked_at": "2026-10-03T15:16:50+00:00",
+    "last_checked_at": "2026-10-03T15:16:50+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+    ],
+    "title": "TGIF-QA: Toward Spatio-Temporal Reasoning in Visual Question Answering"
+  },
+  "processed_at": "2026-10-03T15:16:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5774abf10dec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

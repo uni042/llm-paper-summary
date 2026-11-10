@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-fdce898881e3c981-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1016/j.neucom.2026.134265",
+  "reason": "一次本文はSparse CLIP-MoEの視覚teacherとCLIP zero-shot point-cloud recognitionを扱う。精度を主評価とし、生成LLMの推論serving効率は評価しないため対象範囲は弱いが、VLM/MoE計算効率との隣接性を踏まえborderlineに残す。",
+  "title": "CoTeach-CLIP: Cross-modal collaborative teachers for zero-shot point cloud recognition",
+  "identity_tokens": [
+    "DOI:10.1016/j.neucom.2026.134265"
+  ],
+  "linked_from": [
+    "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+    "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fdce898881e3",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

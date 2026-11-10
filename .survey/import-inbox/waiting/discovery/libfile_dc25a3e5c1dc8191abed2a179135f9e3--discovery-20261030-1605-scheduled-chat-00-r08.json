@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1605-scheduled-chat-00/r08",
+  "reference_main_sha": "fba71cd998a03c8e42e30fa045e8f69c76827721",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34861",
+      "identity_tokens": [
+        "arXiv:2609.34861"
+      ],
+      "title": "When Text Matters: Design Principles for Visual Token Pruning in Vision-Language Model",
+      "reason": "arXiv一次要旨はVLMの視覚トークンを早期は画像特徴で選び、デコーダ中間層でテキストへの注意を使って再選択する学習不要方式を提案。テキスト誘導を早く使いすぎると必要な視覚領域を失う問題を解消し、3モデル・8ベンチマークで精度と圧縮効率を改善。",
+      "source_url": "https://arxiv.org/abs/2609.34861",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 390
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.25068",
+      "identity_tokens": [
+        "arXiv:2608.25068"
+      ],
+      "title": "SHIFT-LLM: Distribution Shift Correction in Depth-Pruned LLMs",
+      "reason": "arXiv一次要旨は層削除で後段の隠れ状態分布がずれる問題に対し、削除位置へ低ランクの線形残差補正器LRAを挿入するSHIFT-LLMを提案。少数の校正データによる最小二乗で補正し、削除した注意・FFNの重い計算を復元せずに精度を改善。推論用深さ枝刈りへ直接関連。",
+      "source_url": "https://arxiv.org/abs/2608.25068",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 395
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.23648",
+      "identity_tokens": [
+        "arXiv:2505.23648"
+      ],
+      "title": "Continuous Chain of Thought Enables Parallel Exploration and Reasoning",
+      "reason": "arXiv一次要旨は連続値トークンのCoT2で複数の離散推論経路を並列追跡する理論と学習法を提案。並列性が推論効率へ与える可能性を示すが、主たる寄与は表現力・論理推論の理論と学習法であり実機サービングの速度改善は主題でないため境界的。",
+      "source_url": "https://arxiv.org/abs/2505.23648",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 397
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.24204",
+      "identity_tokens": [
+        "arXiv:2608.24204"
+      ],
+      "title": "WiCi: Wireless GPU Computing Infrastructure",
+      "reason": "arXiv一次要旨はモバイル端末からWiFi経由で近傍のサーバ級GPUを利用するWiCiを提案。端末側で推論アプリを動かしつつGPU演算を無線オフロードし、エッジLLM推論の性能・費用・移動性を扱う。GPU分離実行の推論基盤に直接関連。",
+      "source_url": "https://arxiv.org/abs/2608.24204",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 399
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.15991",
+      "identity_tokens": [
+        "arXiv:2402.15991"
+      ],
+      "title": "C3: Confidence Calibration Model Cascade for Inference-Efficient Cross-Lingual Natural Language Understanding",
+      "reason": "arXiv一次要旨は多言語NLU分類で小型モデルの過信を校正し、入力に応じて大きなモデルへ委譲するC3カスケードを提案。推論計算の削減に関連するが、主対象は分類系mPLMであり生成LLMサービングへの直接実証はないため境界的。",
+      "source_url": "https://arxiv.org/abs/2402.15991",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 400
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.02340",
+      "identity_tokens": [
+        "arXiv:2604.02340"
+      ],
+      "title": "Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models",
+      "reason": "arXiv一次要旨はmasked diffusion LMの復号ステップごとに小型・大型モデルを切り替えるmodel schedulingを提案。初期と末期のdenoisingは小型モデル置換に強く、FLOPs最大17%削減と困惑度の小さな劣化を報告。拡散LM推論時の計算量削減に直接関連。",
+      "source_url": "https://arxiv.org/abs/2604.02340",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 402
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.03739",
+      "identity_tokens": [
+        "arXiv:2505.03739"
+      ],
+      "title": "VITA-Audio: Fast Interleaved Cross-Modal Token Generation for Efficient Large Speech-Language Model",
+      "reason": "arXiv一次要旨は軽量MCTPモジュールで一度のforwardから複数の音声トークンを生成するVITA-Audioを提案。初回forwardで音声出力を可能にし、ストリーミング音声のfirst-audio遅延を短縮。リアルタイム音声LLMの生成効率に直接関連。",
+      "source_url": "https://arxiv.org/abs/2505.03739",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 403
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.05087",
+      "identity_tokens": [
+        "arXiv:2603.05087"
+      ],
+      "title": "PromptTuner: SLO-Aware Elastic System for LLM Prompt Tuning",
+      "reason": "arXiv一次要旨はPrompt-Tuning-as-a-ServiceのSLOと費用を改善するPrompt Bank・Workload Schedulerを持つPromptTunerを提案。INFless比SLO違反4.0倍削減、ElasticFlow比7.9倍削減と報告するが、主対象はprompt tuning学習サービスでありLLM生成推論配信ではないため境界的。",
+      "source_url": "https://arxiv.org/abs/2603.05087",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 405
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.06330",
+      "identity_tokens": [
+        "arXiv:2604.06330"
+      ],
+      "title": "STDec: Spatio-Temporal Stability Guided Decoding for dLLMs",
+      "reason": "arXiv一次要旨は拡散LMで近隣の確定トークンと過去ステップの予測安定性を用いてトークン別unmask閾値を動的調整するSTDecを提案。学習不要でcache型高速化とも併用可能。拡散LLMの復号ステップ選択と品質・効率に直接関連。",
+      "source_url": "https://arxiv.org/abs/2604.06330",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 408
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.17020",
+      "identity_tokens": [
+        "arXiv:2505.17020"
+      ],
+      "title": "CrossLMM: Decoupling Long Video Sequences from LMMs via Dual Cross-Attention Mechanisms",
+      "reason": "arXiv一次要旨は長動画の視覚トークン数がLMMの二乗計算を増やす問題に対し、視覚エンコーダのpoolingと視覚間cross-attentionでトークン数を削減するCrossLMMを提案。細部情報を保持しつつ長動画推論の計算量を減らす。",
+      "source_url": "https://arxiv.org/abs/2505.17020",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 409
+    }
+  ]
+}

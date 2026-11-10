@@ -1,0 +1,1275 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0b5c40194f40295a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0b5c40194f40",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.adhoc.2025.104080",
+    "DOI:10.1016/j.ress.2025.111891",
+    "arXiv:2511.06029",
+    "arXiv:2512.01457",
+    "arXiv:2512.10931",
+    "arXiv:2601.11641",
+    "arXiv:2601.19026",
+    "arXiv:2601.22362",
+    "arXiv:2602.00471",
+    "arXiv:2602.02704",
+    "arXiv:2602.03152",
+    "arXiv:2605.28051",
+    "arXiv:2606.02569"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4bf78d002f1245529024cd9f3be665e9c1ac27e6",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 13,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T09:40:02.666096+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.adhoc.2025.104080",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1016/j.ress.2025.111891",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.06029",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.01457",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.10931",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.11641",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.19026",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.22362",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.00471",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02704",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.03152",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.28051",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.02569",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Pirate-GPT: A locally deployed large language model framework for reliable offline anti-piracy decision support and knowledge retrieval in maritime operations",
+      "source_url": "https://doi.org/10.1016/j.ress.2025.111891",
+      "year": 2025,
+      "published": "2025-11-01",
+      "venue": "Reliability Engineering & System Safety",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:74dbdf52e0cf3b50a981db5e8a6ceb22a9d7da75"
+      ],
+      "semantic_scholar_id": "74dbdf52e0cf3b50a981db5e8a6ceb22a9d7da75",
+      "doi": "10.1016/j.ress.2025.111891",
+      "canonical_id": "DOI:10.1016/j.ress.2025.111891",
+      "authors": [
+        "Xi-Liang Liu",
+        "Jinghong Hu",
+        "Qiang Mei",
+        "Shaohua Wang"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 346,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Lethe: Layer- and Time-Adaptive KV Cache Pruning for Reasoning-Intensive LLM Serving",
+      "source_url": "https://arxiv.org/abs/2511.06029",
+      "year": 2025,
+      "published": "2025-11-08",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Generative reasoning with large language models (LLMs) often involves long decoding sequences, leading to substantial memory and latency overheads from accumulating key-value (KV) caches. While existing KV compression methods primarily focus on reducing prefill memory from long input sequences, they fall short in addressing the dynamic and layer-sensitive nature of long-form generation, which is central to reasoning tasks. We propose Lethe, a dynamic KV cache management framework that introduces adaptivity along both the spatial and temporal dimensions of decoding. Along the spatial dimension, Lethe performs layerwise sparsity-aware allocation, assigning token pruning budgets to each transformer layer based on estimated attention redundancy. Along the temporal dimension, Lethe conducts multi-round token pruning during generation, driven by a Recency-Aware Selective Retention (RASR) mechanism. RASR extends traditional recency-based heuristics by also considering token relevance derived from evolving attention patterns, enabling informed decisions about which tokens to retain or evict. Empirical results demonstrate that Lethe achieves a favorable balance between efficiency and generation quality across diverse models and tasks, increases throughput by up to 2.56×.",
+      "identifiers": [
+        "SemanticScholar:ce7628e9428ec7a94005d237f06a814c45a5f9ee"
+      ],
+      "semantic_scholar_id": "ce7628e9428ec7a94005d237f06a814c45a5f9ee",
+      "canonical_id": "arXiv:2511.06029",
+      "arxiv_id": "2511.06029",
+      "doi": "10.48550/arXiv.2511.06029",
+      "authors": [
+        "Hui Zeng",
+        "Daming Zhao",
+        "Pengfei Yang",
+        "Wenxuan Hou",
+        "Tian-Yang Zheng",
+        "Hui Li",
+        "Wei Ji",
+        "Ji-Dong Zhai"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 339,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Zero-Overhead Introspection for Adaptive Test-Time Compute",
+      "source_url": "https://arxiv.org/abs/2512.01457",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models excel at reasoning but lack key aspects of introspection, including anticipating their own success and the computation required to achieve it. Humans use real-time introspection to decide how much effort to invest, when to make multiple attempts, when to stop, and when to signal success or failure. Without this, LLMs struggle to make intelligent meta-cognition decisions. Test-time scaling methods like Best-of-N drive up cost and latency by using a fixed budget of samples regardless of the marginal benefit of each one at any point in generation, and the absence of confidence signals can mislead people, prevent appropriate escalation to better tools, and undermine trustworthiness. Learned verifiers or reward models can provide confidence estimates, but do not enable adaptive inference and add substantial cost by requiring extra models or forward passes. We present ZIP-RC, which equips models with zero-overhead introspective predictions of reward and cost. At every token, ZIP-RC reuses reserved or unused logits in the same forward pass as next-token prediction to output a joint distribution over final reward and remaining length -- no extra models, architecture change, or inference overhead. This full joint distribution is used to compute a sampling utility which is the linear combination of the expected maximum reward, total compute, and latency of set of samples if generated to completion. During inference, we maximize this utility with meta-actions that determine which prefix of tokens to continue or initiate sampling from. On mixed-difficulty mathematical benchmarks, ZIP-RC improves accuracy by up to 12% over majority voting at equal or lower average cost, and traces smooth Pareto frontiers between quality, compute, and latency. By providing real-time reward-cost introspection, ZIP-RC enables adaptive, efficient reasoning.",
+      "identifiers": [
+        "SemanticScholar:e25aac46f0b96ef8578139750f2b5ff33036de4f"
+      ],
+      "semantic_scholar_id": "e25aac46f0b96ef8578139750f2b5ff33036de4f",
+      "canonical_id": "arXiv:2512.01457",
+      "arxiv_id": "2512.01457",
+      "doi": "10.48550/arXiv.2512.01457",
+      "authors": [
+        "Rohin Manvi",
+        "Joey Hong",
+        "T. Seyde",
+        "Maxime Labonne",
+        "Mathias Lechner",
+        "Sergey Levine"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 316,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Asynchronous Reasoning: Training-Free Interactive Thinking LLMs",
+      "source_url": "https://arxiv.org/abs/2512.10931",
+      "year": 2025,
+      "published": "2025-12-11",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Many state-of-the-art LLMs are trained to think before giving their answer. Reasoning can greatly improve language model capabilities, but it also makes them less interactive: given a new input, a model must stop thinking before it can respond. Real-world use cases such as voice-based or embodied assistants require an LLM agent to respond and adapt to additional information in real time, which is incompatible with sequential interactions. In contrast, humans can listen, think, and act asynchronously: we begin thinking about the problem while reading it and continue thinking while formulating the answer. In this work, we augment LLMs capable of reasoning to operate in a similar way without additional training. Our method uses the properties of positional embeddings to enable LLMs built for sequential generation to simultaneously think, listen, and write outputs. We evaluate our approach on math, commonsense, and safety reasoning: it allows models to generate accurate thinking-augmented answers while reducing time to first non-thinking token from minutes to ${\\le}$ 5s and the overall delays by up to $12{\\times}$.",
+      "identifiers": [
+        "SemanticScholar:12cafa7401f66459d4ad6894472242ac00abac69"
+      ],
+      "semantic_scholar_id": "12cafa7401f66459d4ad6894472242ac00abac69",
+      "canonical_id": "arXiv:2512.10931",
+      "arxiv_id": "2512.10931",
+      "doi": "10.48550/arXiv.2512.10931",
+      "authors": [
+        "George Yakushev",
+        "Nataliia Babina",
+        "Masoud Vahid Dastgerdi",
+        "V. Zhdanovskiy",
+        "Denis Kuznedelev",
+        "Alina Shutova",
+        "Max Ryabinin"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 306,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mixture of Distributions Matters: Dynamic Sparse Attention for Efficient Video Diffusion Transformers",
+      "source_url": "https://arxiv.org/abs/2601.11641",
+      "year": 2026,
+      "published": "2026-01-14",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Diffusion Transformers (DiTs) have achieved notable progress in video generation, this long-sequence generation task remains constrained by the quadratic complexity inherent to self-attention mechanisms, creating significant barriers to practical deployment. Although sparse attention methods attempt to address this challenge, existing approaches either rely on oversimplified static patterns or require computationally expensive sampling operations to achieve dynamic sparsity, resulting in inaccurate pattern predictions and degraded generation quality. To overcome these limitations, we propose a \\underline{\\textbf{M}}ixture-\\underline{\\textbf{O}}f-\\underline{\\textbf{D}}istribution \\textbf{DiT} (\\textbf{MOD-DiT}), a novel sampling-free dynamic attention framework that accurately models evolving attention patterns through a two-stage process. First, MOD-DiT leverages prior information from early denoising steps and adopts a {distributed mixing approach} to model an efficient linear approximation model, which is then used to predict mask patterns for a specific denoising interval. Second, an online block masking strategy dynamically applies these predicted masks while maintaining historical sparsity information, eliminating the need for repetitive sampling operations. Extensive evaluations demonstrate consistent acceleration and quality improvements across multiple benchmarks and model architectures, validating MOD-DiT's effectiveness for efficient, high-quality video generation while overcoming the computational limitations of traditional sparse attention approaches.",
+      "identifiers": [
+        "SemanticScholar:ed179ddc4a0594c7a3a3e9799e9a31715bea89b4"
+      ],
+      "semantic_scholar_id": "ed179ddc4a0594c7a3a3e9799e9a31715bea89b4",
+      "canonical_id": "arXiv:2601.11641",
+      "arxiv_id": "2601.11641",
+      "doi": "10.48550/arXiv.2601.11641",
+      "authors": [
+        "Yu-Xi Liu",
+        "Yipeng Hu",
+        "Zekun Zhang",
+        "Kunze Jiang",
+        "Kun Yuan"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 272,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Is Finer Better? The Limits of Microscaling Formats in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2601.19026",
+      "year": 2026,
+      "published": "2026-01-26",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Microscaling data formats leverage per-block tensor quantization to enable aggressive model compression with limited loss in accuracy. Unlocking their potential for efficient training and inference necessitates hardware-friendly implementations that handle matrix multiplications in a native format and adopt efficient error-mitigation strategies. Herein, we report the emergence of a surprising behavior associated with microscaling quantization, whereas the output of a quantized model degrades as block size is decreased below a given threshold. This behavior clashes with the expectation that a smaller block size should allow for a better representation of the tensor elements. We investigate this phenomenon both experimentally and theoretically, decoupling the sources of quantization error behind it. Experimentally, we analyze the distributions of several Large Language Models and identify the conditions driving the anomalous behavior. Theoretically, we lay down a framework showing remarkable agreement with experimental data from pretrained model distributions and ideal ones. Overall, we show that the anomaly is driven by the interplay between narrow tensor distributions and the limited dynamic range of the quantized scales. Based on these insights, we propose the use of FP8 unsigned E5M3 (UE5M3) as a novel hardware-friendly format for the scales in FP4 microscaling data types. We demonstrate that UE5M3 achieves comparable performance to the conventional FP8 unsigned E4M3 scales while obviating the need of global scaling operations on weights and activations.",
+      "identifiers": [
+        "SemanticScholar:a58a780ca4b94255c68aa60b167aace477a202f5"
+      ],
+      "semantic_scholar_id": "a58a780ca4b94255c68aa60b167aace477a202f5",
+      "canonical_id": "arXiv:2601.19026",
+      "arxiv_id": "2601.19026",
+      "doi": "10.48550/arXiv.2601.19026",
+      "authors": [
+        "A. Fasoli",
+        "Monodeep Kar",
+        "Chi-Chun Liu",
+        "Swagath Venkataramani",
+        "Vijayalakshmi Srinivasan",
+        "L. Chang",
+        "Naigang Wang"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 260,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Understanding Efficiency: Quantization, Batching, and Serving Strategies in LLM Energy Use",
+      "source_url": "https://arxiv.org/abs/2601.22362",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are increasingly deployed in production, contributing towards shifting the burden in terms of computational resources and energy demands from training to inference. While prior work has examined the energy cost of inference per prompt or per token, we highlight how \\emph{system-level design choices} - such as numerical precision, batching strategy, and request scheduling - can lead to orders-of-magnitude differences in energy consumption for the same model. We perform a detailed empirical study of LLM inference energy and latency on NVIDIA H100 GPUs, analyzing the impact of quantization, batch size, and serving configuration (e.g., with Hugging Face's Text Generation Inference server). Our results reveal that lower-precision formats only yield energy gains in compute-bound regimes; that batching improves energy efficiency, especially in memory-bound phases like decoding; and that structured request timing (arrival shaping) can reduce per-request energy by up to 100 times. We argue that sustainable LLM deployment depends not only on model internals, but also on the orchestration of the serving stack. Our findings motivate phase-aware energy profiling and system-level optimizations for greener AI services.",
+      "identifiers": [
+        "SemanticScholar:c46a05f0791416638f0c488c08447b031c104bc7"
+      ],
+      "semantic_scholar_id": "c46a05f0791416638f0c488c08447b031c104bc7",
+      "canonical_id": "arXiv:2601.22362",
+      "arxiv_id": "2601.22362",
+      "doi": "10.48550/arXiv.2601.22362",
+      "authors": [
+        "Julien Delavande",
+        "Régis Pierrard",
+        "Sasha Luccioni"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dual Latent Memory for Visual Multi-agent System",
+      "source_url": "https://arxiv.org/abs/2602.00471",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Visual Multi-Agent Systems (VMAS) promise to enhance comprehensive abilities through inter-agent collaboration, empirical evidence reveals a counter-intuitive\"scaling wall\": increasing agent turns often degrades performance while exponentially inflating token costs. We attribute this failure to the information bottleneck inherent in text-centric communication, where converting perceptual and thinking trajectories into discrete natural language inevitably induces semantic loss. To this end, we propose \\textbf{L}$\\mathbf{^{2}}$\\textbf{-VMAS}, a novel model-agnostic framework that enables inter-agent collaboration with dual latent memories. Furthermore, we decouple the perception and thinking while dynamically synthesizing dual latent memories. Additionally, we introduce an entropy-driven proactive triggering that replaces passive information transmission with efficient, on-demand memory access. Extensive experiments among backbones, sizes, and multi-agent structures demonstrate that our method effectively breaks the\"scaling wall\"with superb scalability, improving average accuracy by 2.7-5.4% while reducing token usage by 21.3-44.8%.",
+      "identifiers": [
+        "SemanticScholar:697d676a5093c388ef75ceeab2df2e59b36d180c"
+      ],
+      "semantic_scholar_id": "697d676a5093c388ef75ceeab2df2e59b36d180c",
+      "canonical_id": "arXiv:2602.00471",
+      "arxiv_id": "2602.00471",
+      "doi": "10.48550/arXiv.2602.00471",
+      "authors": [
+        "Xin-Lei Yu",
+        "Cheng-Ming Xu",
+        "Zhangquan Chen",
+        "Bo Yin",
+        "Cheng Yang",
+        "Yongbo He",
+        "Yihao Hu",
+        "Jiang-Ning Zhang",
+        "Cheng Tan",
+        "Xiaobin Hu",
+        "Shui-Cheng Yan"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 255,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Collaborative deployment of Large AI Models on the edge: A microservice approach to heterogeneous training and quantized inference",
+      "source_url": "https://doi.org/10.1016/j.adhoc.2025.104080",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "Ad hoc networks",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:ac6fbd1db39bdc6631fe4c41e44008e2f2b104ce"
+      ],
+      "semantic_scholar_id": "ac6fbd1db39bdc6631fe4c41e44008e2f2b104ce",
+      "doi": "10.1016/j.adhoc.2025.104080",
+      "canonical_id": "DOI:10.1016/j.adhoc.2025.104080",
+      "authors": [
+        "Seyed Hossein Ahmadpanah",
+        "Meghdad Mirabi",
+        "Sanaz Sobhanloo",
+        "Pania Afsharfarnia",
+        "Donya Fallah",
+        "Mobina Bayati"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "InfMem: Learning System-2 Memory Control for Long-Context Agent",
+      "source_url": "https://arxiv.org/abs/2602.02704",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning over ultra-long documents requires synthesizing sparse evidence scattered across distant segments under strict memory constraints. While streaming agents enable scalable processing, their passive memory update strategy often fails to preserve low-salience bridging evidence required for multi-hop reasoning. We propose InfMem, a control-centric agent that instantiates System-2-style control via a PreThink-Retrieve-Write protocol. InfMem actively monitors evidence sufficiency, performs targeted in-document retrieval, and applies evidence-aware joint compression to update a bounded memory. To ensure reliable control, we introduce a practical SFT-to-RL training recipe that aligns retrieval, writing, and stopping decisions with end-task correctness. On ultra-long QA benchmarks ranging from 32k to 1M tokens, InfMem consistently outperforms MemAgent across backbones. Specifically, InfMem improves average absolute accuracy by 10.17, 11.84, and 8.23 points on Qwen3-1.7B, Qwen3-4B, and Qwen2.5-7B, respectively, while reducing inference time by 3.9x on average and by up to 5.1x through adaptive early stopping. Code is available at https://github.com/UCMP13753/InfMem.",
+      "identifiers": [
+        "SemanticScholar:f80a415e25e8960eaf14fe8e86dce8a111fc121d"
+      ],
+      "semantic_scholar_id": "f80a415e25e8960eaf14fe8e86dce8a111fc121d",
+      "canonical_id": "arXiv:2602.02704",
+      "arxiv_id": "2602.02704",
+      "doi": "10.48550/arXiv.2602.02704",
+      "authors": [
+        "Xin-Yu Wang",
+        "Ming-Ze Li",
+        "Peng Lu",
+        "Xiao-Wen Chang",
+        "Li-Feng Shang",
+        "Jinping Li",
+        "Fei Mi",
+        "Prasanna Parthasarathi",
+        "Yu-Fei Cui"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FASA: Frequency-aware Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2602.03152",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of Large Language Models (LLMs) faces a critical bottleneck when handling lengthy inputs: the prohibitive memory footprint of the Key Value (KV) cache. To address this bottleneck, the token pruning paradigm leverages attention sparsity to selectively retain a small, critical subset of tokens. However, existing approaches fall short, with static methods risking irreversible information loss and dynamic strategies employing heuristics that insufficiently capture the query-dependent nature of token importance. We propose FASA, a novel framework that achieves query-aware token eviction by dynamically predicting token importance. FASA stems from a novel insight into RoPE: the discovery of functional sparsity at the frequency-chunk (FC) level. Our key finding is that a small, identifiable subset of\"dominant\"FCs consistently exhibits high contextual agreement with the full attention head. This provides a robust and computationally free proxy for identifying salient tokens. Building on this insight, FASA first identifies a critical set of tokens using dominant FCs, and then performs focused attention computation solely on this pruned subset. Across a spectrum of long-context tasks, from sequence modeling to complex CoT reasoning, FASA consistently outperforms all token-eviction baselines and achieves near-oracle accuracy, demonstrating remarkable robustness even under constraint budgets. Notably, on LongBench-V1, FASA reaches nearly 100\\% of full-KV performance when only keeping 256 tokens, and achieves 2.56$\\times$ speedup using just 18.9\\% of the cache on AIME24.",
+      "identifiers": [
+        "SemanticScholar:c6083bfe175e042d979323cb0dfa5eff63aa8b81"
+      ],
+      "semantic_scholar_id": "c6083bfe175e042d979323cb0dfa5eff63aa8b81",
+      "canonical_id": "arXiv:2602.03152",
+      "arxiv_id": "2602.03152",
+      "doi": "10.48550/arXiv.2602.03152",
+      "authors": [
+        "Yifei Wang",
+        "Yue-Qi Wang",
+        "Zhenrui Yue",
+        "Hui-Min Zeng",
+        "Yong Wang",
+        "Ismini Lourentzou",
+        "Zheng-Zhong Tu",
+        "Xiangxiang Chu",
+        "Julian J. McAuley"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Surrogate Gradients: Fully Differentiable Token Pruning for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2605.28051",
+      "year": 2026,
+      "published": "2026-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning reduces the computational cost of Vision-Language Models (VLMs) by removing redundant visual tokens. Existing methods typically rely on Gumbel-Softmax to approximate discrete selection during training. However, the optimization is driven by surrogate gradients rather than the true selection process, leading to unreliable learning of token importance. In this paper, we propose DiffPrune, which reformulates pruning as continuous control of token information instead of discrete selection learning. Specifically, we introduce an Information Throttler that modulates each token using variance-preserving noise conditioned on importance scores, where higher scores induce less information suppression during training. This design directly operates on token representations, naturally providing a fully differentiable optimization path for learning token importance. At inference, tokens are removed via hard thresholding on the learned scores. Across ten VLM benchmarks, DiffPrune retains 96.5% of full-model accuracy while accelerating LLM prefill by 2.85x, with only 0.69 ms of inference overhead.",
+      "identifiers": [
+        "SemanticScholar:5865585d29f0c9c83b717729ec3f82edc705bed4"
+      ],
+      "semantic_scholar_id": "5865585d29f0c9c83b717729ec3f82edc705bed4",
+      "canonical_id": "arXiv:2605.28051",
+      "arxiv_id": "2605.28051",
+      "doi": "10.48550/arXiv.2605.28051",
+      "authors": [
+        "Lan He",
+        "Min Yao",
+        "S. Young",
+        "Lijian Xu"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 139,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AdaCodec: A Predictive Visual Code for Video MLLMs",
+      "source_url": "https://arxiv.org/abs/2606.02569",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video is temporally redundant: adjacent frames usually share most objects, background, and layout. Yet existing video multimodal large language models (video MLLMs) usually encode each sampled frame as an independent RGB image, causing visual tokens to repeat content already present in earlier frames. This suggests a more direct video interface: send a full reference frame only when the scene cannot be predicted well from prior context, and otherwise transmit a compact description of inter-frame changes. We call this interface a \\emph{predictive visual code}, and instantiate it for video MLLMs as \\textbf{AdaCodec}. AdaCodec spends full visual tokens on a reference frame only when its conditional predictive cost is high; otherwise, it encodes inter-frame changes, including motion and prediction residuals, as compact P-tokens. Across all eleven benchmarks, AdaCodec improves over the Qwen3-VL-8B per-frame RGB baseline at a matched visual-token budget. Even at $1/7$ the budget, AdaCodec with 32k tokens surpasses the 224k baseline on all long-video benchmarks; on five general-video benchmarks, it raises the average score while substantially cutting time-to-first-token from 9.26s to 1.62s.",
+      "identifiers": [
+        "SemanticScholar:6c2da997959e501ee9a97573a34471829786e6ce"
+      ],
+      "semantic_scholar_id": "6c2da997959e501ee9a97573a34471829786e6ce",
+      "canonical_id": "arXiv:2606.02569",
+      "arxiv_id": "2606.02569",
+      "doi": "10.48550/arXiv.2606.02569",
+      "authors": [
+        "Hao-Wen Hou",
+        "Zheng-Ting Huang",
+        "Zhe-Ming Liang",
+        "Qing-Yi Si",
+        "Cheng-Lin Li",
+        "Shuai Dong",
+        "Kele Shao",
+        "Ruilin Li",
+        "Dian-Yi Wang",
+        "Nan Duan",
+        "Jia-Qi Wang"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 134,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.ress.2025.111891",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.ress.2025.111891",
+        "id:SemanticScholar:74dbdf52e0cf3b50a981db5e8a6ceb22a9d7da75",
+        "title:pirategpt a locally deployed large language model framework for reliable offline antipiracy decision support and knowledge retrieval in maritime operations",
+        "url:https://doi.org/10.1016/j.ress.2025.111891"
+      ],
+      "record": {
+        "title": "Pirate-GPT: A locally deployed large language model framework for reliable offline anti-piracy decision support and knowledge retrieval in maritime operations",
+        "source_url": "https://doi.org/10.1016/j.ress.2025.111891",
+        "year": 2025,
+        "published": "2025-11-01",
+        "venue": "Reliability Engineering & System Safety",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:74dbdf52e0cf3b50a981db5e8a6ceb22a9d7da75"
+        ],
+        "semantic_scholar_id": "74dbdf52e0cf3b50a981db5e8a6ceb22a9d7da75",
+        "doi": "10.1016/j.ress.2025.111891",
+        "canonical_id": "DOI:10.1016/j.ress.2025.111891",
+        "authors": [
+          "Xi-Liang Liu",
+          "Jinghong Hu",
+          "Qiang Mei",
+          "Shaohua Wang"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 346,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.06029",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.06029",
+        "id:SemanticScholar:ce7628e9428ec7a94005d237f06a814c45a5f9ee",
+        "id:arXiv:2511.06029",
+        "title:lethe layer and timeadaptive kv cache pruning for reasoningintensive llm serving",
+        "url:https://arxiv.org/abs/2511.06029"
+      ],
+      "record": {
+        "title": "Lethe: Layer- and Time-Adaptive KV Cache Pruning for Reasoning-Intensive LLM Serving",
+        "source_url": "https://arxiv.org/abs/2511.06029",
+        "year": 2025,
+        "published": "2025-11-08",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Generative reasoning with large language models (LLMs) often involves long decoding sequences, leading to substantial memory and latency overheads from accumulating key-value (KV) caches. While existing KV compression methods primarily focus on reducing prefill memory from long input sequences, they fall short in addressing the dynamic and layer-sensitive nature of long-form generation, which is central to reasoning tasks. We propose Lethe, a dynamic KV cache management framework that introduces adaptivity along both the spatial and temporal dimensions of decoding. Along the spatial dimension, Lethe performs layerwise sparsity-aware allocation, assigning token pruning budgets to each transformer layer based on estimated attention redundancy. Along the temporal dimension, Lethe conducts multi-round token pruning during generation, driven by a Recency-Aware Selective Retention (RASR) mechanism. RASR extends traditional recency-based heuristics by also considering token relevance derived from evolving attention patterns, enabling informed decisions about which tokens to retain or evict. Empirical results demonstrate that Lethe achieves a favorable balance between efficiency and generation quality across diverse models and tasks, increases throughput by up to 2.56×.",
+        "identifiers": [
+          "SemanticScholar:ce7628e9428ec7a94005d237f06a814c45a5f9ee"
+        ],
+        "semantic_scholar_id": "ce7628e9428ec7a94005d237f06a814c45a5f9ee",
+        "canonical_id": "arXiv:2511.06029",
+        "arxiv_id": "2511.06029",
+        "doi": "10.48550/arXiv.2511.06029",
+        "authors": [
+          "Hui Zeng",
+          "Daming Zhao",
+          "Pengfei Yang",
+          "Wenxuan Hou",
+          "Tian-Yang Zheng",
+          "Hui Li",
+          "Wei Ji",
+          "Ji-Dong Zhai"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 339,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.01457",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.01457",
+        "id:SemanticScholar:e25aac46f0b96ef8578139750f2b5ff33036de4f",
+        "id:arXiv:2512.01457",
+        "title:zerooverhead introspection for adaptive testtime compute",
+        "url:https://arxiv.org/abs/2512.01457"
+      ],
+      "record": {
+        "title": "Zero-Overhead Introspection for Adaptive Test-Time Compute",
+        "source_url": "https://arxiv.org/abs/2512.01457",
+        "year": 2025,
+        "published": "2025-12-01",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models excel at reasoning but lack key aspects of introspection, including anticipating their own success and the computation required to achieve it. Humans use real-time introspection to decide how much effort to invest, when to make multiple attempts, when to stop, and when to signal success or failure. Without this, LLMs struggle to make intelligent meta-cognition decisions. Test-time scaling methods like Best-of-N drive up cost and latency by using a fixed budget of samples regardless of the marginal benefit of each one at any point in generation, and the absence of confidence signals can mislead people, prevent appropriate escalation to better tools, and undermine trustworthiness. Learned verifiers or reward models can provide confidence estimates, but do not enable adaptive inference and add substantial cost by requiring extra models or forward passes. We present ZIP-RC, which equips models with zero-overhead introspective predictions of reward and cost. At every token, ZIP-RC reuses reserved or unused logits in the same forward pass as next-token prediction to output a joint distribution over final reward and remaining length -- no extra models, architecture change, or inference overhead. This full joint distribution is used to compute a sampling utility which is the linear combination of the expected maximum reward, total compute, and latency of set of samples if generated to completion. During inference, we maximize this utility with meta-actions that determine which prefix of tokens to continue or initiate sampling from. On mixed-difficulty mathematical benchmarks, ZIP-RC improves accuracy by up to 12% over majority voting at equal or lower average cost, and traces smooth Pareto frontiers between quality, compute, and latency. By providing real-time reward-cost introspection, ZIP-RC enables adaptive, efficient reasoning.",
+        "identifiers": [
+          "SemanticScholar:e25aac46f0b96ef8578139750f2b5ff33036de4f"
+        ],
+        "semantic_scholar_id": "e25aac46f0b96ef8578139750f2b5ff33036de4f",
+        "canonical_id": "arXiv:2512.01457",
+        "arxiv_id": "2512.01457",
+        "doi": "10.48550/arXiv.2512.01457",
+        "authors": [
+          "Rohin Manvi",
+          "Joey Hong",
+          "T. Seyde",
+          "Maxime Labonne",
+          "Mathias Lechner",
+          "Sergey Levine"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 316,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.10931",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.10931",
+        "id:SemanticScholar:12cafa7401f66459d4ad6894472242ac00abac69",
+        "id:arXiv:2512.10931",
+        "title:asynchronous reasoning trainingfree interactive thinking llms",
+        "url:https://arxiv.org/abs/2512.10931"
+      ],
+      "record": {
+        "title": "Asynchronous Reasoning: Training-Free Interactive Thinking LLMs",
+        "source_url": "https://arxiv.org/abs/2512.10931",
+        "year": 2025,
+        "published": "2025-12-11",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Many state-of-the-art LLMs are trained to think before giving their answer. Reasoning can greatly improve language model capabilities, but it also makes them less interactive: given a new input, a model must stop thinking before it can respond. Real-world use cases such as voice-based or embodied assistants require an LLM agent to respond and adapt to additional information in real time, which is incompatible with sequential interactions. In contrast, humans can listen, think, and act asynchronously: we begin thinking about the problem while reading it and continue thinking while formulating the answer. In this work, we augment LLMs capable of reasoning to operate in a similar way without additional training. Our method uses the properties of positional embeddings to enable LLMs built for sequential generation to simultaneously think, listen, and write outputs. We evaluate our approach on math, commonsense, and safety reasoning: it allows models to generate accurate thinking-augmented answers while reducing time to first non-thinking token from minutes to ${\\le}$ 5s and the overall delays by up to $12{\\times}$.",
+        "identifiers": [
+          "SemanticScholar:12cafa7401f66459d4ad6894472242ac00abac69"
+        ],
+        "semantic_scholar_id": "12cafa7401f66459d4ad6894472242ac00abac69",
+        "canonical_id": "arXiv:2512.10931",
+        "arxiv_id": "2512.10931",
+        "doi": "10.48550/arXiv.2512.10931",
+        "authors": [
+          "George Yakushev",
+          "Nataliia Babina",
+          "Masoud Vahid Dastgerdi",
+          "V. Zhdanovskiy",
+          "Denis Kuznedelev",
+          "Alina Shutova",
+          "Max Ryabinin"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 306,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.11641",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.11641",
+        "id:SemanticScholar:ed179ddc4a0594c7a3a3e9799e9a31715bea89b4",
+        "id:arXiv:2601.11641",
+        "title:mixture of distributions matters dynamic sparse attention for efficient video diffusion transformers",
+        "url:https://arxiv.org/abs/2601.11641"
+      ],
+      "record": {
+        "title": "Mixture of Distributions Matters: Dynamic Sparse Attention for Efficient Video Diffusion Transformers",
+        "source_url": "https://arxiv.org/abs/2601.11641",
+        "year": 2026,
+        "published": "2026-01-14",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Diffusion Transformers (DiTs) have achieved notable progress in video generation, this long-sequence generation task remains constrained by the quadratic complexity inherent to self-attention mechanisms, creating significant barriers to practical deployment. Although sparse attention methods attempt to address this challenge, existing approaches either rely on oversimplified static patterns or require computationally expensive sampling operations to achieve dynamic sparsity, resulting in inaccurate pattern predictions and degraded generation quality. To overcome these limitations, we propose a \\underline{\\textbf{M}}ixture-\\underline{\\textbf{O}}f-\\underline{\\textbf{D}}istribution \\textbf{DiT} (\\textbf{MOD-DiT}), a novel sampling-free dynamic attention framework that accurately models evolving attention patterns through a two-stage process. First, MOD-DiT leverages prior information from early denoising steps and adopts a {distributed mixing approach} to model an efficient linear approximation model, which is then used to predict mask patterns for a specific denoising interval. Second, an online block masking strategy dynamically applies these predicted masks while maintaining historical sparsity information, eliminating the need for repetitive sampling operations. Extensive evaluations demonstrate consistent acceleration and quality improvements across multiple benchmarks and model architectures, validating MOD-DiT's effectiveness for efficient, high-quality video generation while overcoming the computational limitations of traditional sparse attention approaches.",
+        "identifiers": [
+          "SemanticScholar:ed179ddc4a0594c7a3a3e9799e9a31715bea89b4"
+        ],
+        "semantic_scholar_id": "ed179ddc4a0594c7a3a3e9799e9a31715bea89b4",
+        "canonical_id": "arXiv:2601.11641",
+        "arxiv_id": "2601.11641",
+        "doi": "10.48550/arXiv.2601.11641",
+        "authors": [
+          "Yu-Xi Liu",
+          "Yipeng Hu",
+          "Zekun Zhang",
+          "Kunze Jiang",
+          "Kun Yuan"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 272,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.19026",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.19026",
+        "id:SemanticScholar:a58a780ca4b94255c68aa60b167aace477a202f5",
+        "id:arXiv:2601.19026",
+        "title:is finer better the limits of microscaling formats in large language models",
+        "url:https://arxiv.org/abs/2601.19026"
+      ],
+      "record": {
+        "title": "Is Finer Better? The Limits of Microscaling Formats in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2601.19026",
+        "year": 2026,
+        "published": "2026-01-26",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Microscaling data formats leverage per-block tensor quantization to enable aggressive model compression with limited loss in accuracy. Unlocking their potential for efficient training and inference necessitates hardware-friendly implementations that handle matrix multiplications in a native format and adopt efficient error-mitigation strategies. Herein, we report the emergence of a surprising behavior associated with microscaling quantization, whereas the output of a quantized model degrades as block size is decreased below a given threshold. This behavior clashes with the expectation that a smaller block size should allow for a better representation of the tensor elements. We investigate this phenomenon both experimentally and theoretically, decoupling the sources of quantization error behind it. Experimentally, we analyze the distributions of several Large Language Models and identify the conditions driving the anomalous behavior. Theoretically, we lay down a framework showing remarkable agreement with experimental data from pretrained model distributions and ideal ones. Overall, we show that the anomaly is driven by the interplay between narrow tensor distributions and the limited dynamic range of the quantized scales. Based on these insights, we propose the use of FP8 unsigned E5M3 (UE5M3) as a novel hardware-friendly format for the scales in FP4 microscaling data types. We demonstrate that UE5M3 achieves comparable performance to the conventional FP8 unsigned E4M3 scales while obviating the need of global scaling operations on weights and activations.",
+        "identifiers": [
+          "SemanticScholar:a58a780ca4b94255c68aa60b167aace477a202f5"
+        ],
+        "semantic_scholar_id": "a58a780ca4b94255c68aa60b167aace477a202f5",
+        "canonical_id": "arXiv:2601.19026",
+        "arxiv_id": "2601.19026",
+        "doi": "10.48550/arXiv.2601.19026",
+        "authors": [
+          "A. Fasoli",
+          "Monodeep Kar",
+          "Chi-Chun Liu",
+          "Swagath Venkataramani",
+          "Vijayalakshmi Srinivasan",
+          "L. Chang",
+          "Naigang Wang"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 260,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.22362",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.22362",
+        "id:SemanticScholar:c46a05f0791416638f0c488c08447b031c104bc7",
+        "id:arXiv:2601.22362",
+        "title:understanding efficiency quantization batching and serving strategies in llm energy use",
+        "url:https://arxiv.org/abs/2601.22362"
+      ],
+      "record": {
+        "title": "Understanding Efficiency: Quantization, Batching, and Serving Strategies in LLM Energy Use",
+        "source_url": "https://arxiv.org/abs/2601.22362",
+        "year": 2026,
+        "published": "2026-01-29",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) are increasingly deployed in production, contributing towards shifting the burden in terms of computational resources and energy demands from training to inference. While prior work has examined the energy cost of inference per prompt or per token, we highlight how \\emph{system-level design choices} - such as numerical precision, batching strategy, and request scheduling - can lead to orders-of-magnitude differences in energy consumption for the same model. We perform a detailed empirical study of LLM inference energy and latency on NVIDIA H100 GPUs, analyzing the impact of quantization, batch size, and serving configuration (e.g., with Hugging Face's Text Generation Inference server). Our results reveal that lower-precision formats only yield energy gains in compute-bound regimes; that batching improves energy efficiency, especially in memory-bound phases like decoding; and that structured request timing (arrival shaping) can reduce per-request energy by up to 100 times. We argue that sustainable LLM deployment depends not only on model internals, but also on the orchestration of the serving stack. Our findings motivate phase-aware energy profiling and system-level optimizations for greener AI services.",
+        "identifiers": [
+          "SemanticScholar:c46a05f0791416638f0c488c08447b031c104bc7"
+        ],
+        "semantic_scholar_id": "c46a05f0791416638f0c488c08447b031c104bc7",
+        "canonical_id": "arXiv:2601.22362",
+        "arxiv_id": "2601.22362",
+        "doi": "10.48550/arXiv.2601.22362",
+        "authors": [
+          "Julien Delavande",
+          "Régis Pierrard",
+          "Sasha Luccioni"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 257,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.00471",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.00471",
+        "id:SemanticScholar:697d676a5093c388ef75ceeab2df2e59b36d180c",
+        "id:arXiv:2602.00471",
+        "title:dual latent memory for visual multiagent system",
+        "url:https://arxiv.org/abs/2602.00471"
+      ],
+      "record": {
+        "title": "Dual Latent Memory for Visual Multi-agent System",
+        "source_url": "https://arxiv.org/abs/2602.00471",
+        "year": 2026,
+        "published": "2026-01-31",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Visual Multi-Agent Systems (VMAS) promise to enhance comprehensive abilities through inter-agent collaboration, empirical evidence reveals a counter-intuitive\"scaling wall\": increasing agent turns often degrades performance while exponentially inflating token costs. We attribute this failure to the information bottleneck inherent in text-centric communication, where converting perceptual and thinking trajectories into discrete natural language inevitably induces semantic loss. To this end, we propose \\textbf{L}$\\mathbf{^{2}}$\\textbf{-VMAS}, a novel model-agnostic framework that enables inter-agent collaboration with dual latent memories. Furthermore, we decouple the perception and thinking while dynamically synthesizing dual latent memories. Additionally, we introduce an entropy-driven proactive triggering that replaces passive information transmission with efficient, on-demand memory access. Extensive experiments among backbones, sizes, and multi-agent structures demonstrate that our method effectively breaks the\"scaling wall\"with superb scalability, improving average accuracy by 2.7-5.4% while reducing token usage by 21.3-44.8%.",
+        "identifiers": [
+          "SemanticScholar:697d676a5093c388ef75ceeab2df2e59b36d180c"
+        ],
+        "semantic_scholar_id": "697d676a5093c388ef75ceeab2df2e59b36d180c",
+        "canonical_id": "arXiv:2602.00471",
+        "arxiv_id": "2602.00471",
+        "doi": "10.48550/arXiv.2602.00471",
+        "authors": [
+          "Xin-Lei Yu",
+          "Cheng-Ming Xu",
+          "Zhangquan Chen",
+          "Bo Yin",
+          "Cheng Yang",
+          "Yongbo He",
+          "Yihao Hu",
+          "Jiang-Ning Zhang",
+          "Cheng Tan",
+          "Xiaobin Hu",
+          "Shui-Cheng Yan"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 255,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.adhoc.2025.104080",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.adhoc.2025.104080",
+        "id:SemanticScholar:ac6fbd1db39bdc6631fe4c41e44008e2f2b104ce",
+        "title:collaborative deployment of large ai models on the edge a microservice approach to heterogeneous training and quantized inference",
+        "url:https://doi.org/10.1016/j.adhoc.2025.104080"
+      ],
+      "record": {
+        "title": "Collaborative deployment of Large AI Models on the edge: A microservice approach to heterogeneous training and quantized inference",
+        "source_url": "https://doi.org/10.1016/j.adhoc.2025.104080",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "Ad hoc networks",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:ac6fbd1db39bdc6631fe4c41e44008e2f2b104ce"
+        ],
+        "semantic_scholar_id": "ac6fbd1db39bdc6631fe4c41e44008e2f2b104ce",
+        "doi": "10.1016/j.adhoc.2025.104080",
+        "canonical_id": "DOI:10.1016/j.adhoc.2025.104080",
+        "authors": [
+          "Seyed Hossein Ahmadpanah",
+          "Meghdad Mirabi",
+          "Sanaz Sobhanloo",
+          "Pania Afsharfarnia",
+          "Donya Fallah",
+          "Mobina Bayati"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 254,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.02704",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02704",
+        "id:SemanticScholar:f80a415e25e8960eaf14fe8e86dce8a111fc121d",
+        "id:arXiv:2602.02704",
+        "title:infmem learning system2 memory control for longcontext agent",
+        "url:https://arxiv.org/abs/2602.02704"
+      ],
+      "record": {
+        "title": "InfMem: Learning System-2 Memory Control for Long-Context Agent",
+        "source_url": "https://arxiv.org/abs/2602.02704",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning over ultra-long documents requires synthesizing sparse evidence scattered across distant segments under strict memory constraints. While streaming agents enable scalable processing, their passive memory update strategy often fails to preserve low-salience bridging evidence required for multi-hop reasoning. We propose InfMem, a control-centric agent that instantiates System-2-style control via a PreThink-Retrieve-Write protocol. InfMem actively monitors evidence sufficiency, performs targeted in-document retrieval, and applies evidence-aware joint compression to update a bounded memory. To ensure reliable control, we introduce a practical SFT-to-RL training recipe that aligns retrieval, writing, and stopping decisions with end-task correctness. On ultra-long QA benchmarks ranging from 32k to 1M tokens, InfMem consistently outperforms MemAgent across backbones. Specifically, InfMem improves average absolute accuracy by 10.17, 11.84, and 8.23 points on Qwen3-1.7B, Qwen3-4B, and Qwen2.5-7B, respectively, while reducing inference time by 3.9x on average and by up to 5.1x through adaptive early stopping. Code is available at https://github.com/UCMP13753/InfMem.",
+        "identifiers": [
+          "SemanticScholar:f80a415e25e8960eaf14fe8e86dce8a111fc121d"
+        ],
+        "semantic_scholar_id": "f80a415e25e8960eaf14fe8e86dce8a111fc121d",
+        "canonical_id": "arXiv:2602.02704",
+        "arxiv_id": "2602.02704",
+        "doi": "10.48550/arXiv.2602.02704",
+        "authors": [
+          "Xin-Yu Wang",
+          "Ming-Ze Li",
+          "Peng Lu",
+          "Xiao-Wen Chang",
+          "Li-Feng Shang",
+          "Jinping Li",
+          "Fei Mi",
+          "Prasanna Parthasarathi",
+          "Yu-Fei Cui"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 253,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.03152",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.03152",
+        "id:SemanticScholar:c6083bfe175e042d979323cb0dfa5eff63aa8b81",
+        "id:arXiv:2602.03152",
+        "title:fasa frequencyaware sparse attention",
+        "url:https://arxiv.org/abs/2602.03152"
+      ],
+      "record": {
+        "title": "FASA: Frequency-aware Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2602.03152",
+        "year": 2026,
+        "published": "2026-02-03",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of Large Language Models (LLMs) faces a critical bottleneck when handling lengthy inputs: the prohibitive memory footprint of the Key Value (KV) cache. To address this bottleneck, the token pruning paradigm leverages attention sparsity to selectively retain a small, critical subset of tokens. However, existing approaches fall short, with static methods risking irreversible information loss and dynamic strategies employing heuristics that insufficiently capture the query-dependent nature of token importance. We propose FASA, a novel framework that achieves query-aware token eviction by dynamically predicting token importance. FASA stems from a novel insight into RoPE: the discovery of functional sparsity at the frequency-chunk (FC) level. Our key finding is that a small, identifiable subset of\"dominant\"FCs consistently exhibits high contextual agreement with the full attention head. This provides a robust and computationally free proxy for identifying salient tokens. Building on this insight, FASA first identifies a critical set of tokens using dominant FCs, and then performs focused attention computation solely on this pruned subset. Across a spectrum of long-context tasks, from sequence modeling to complex CoT reasoning, FASA consistently outperforms all token-eviction baselines and achieves near-oracle accuracy, demonstrating remarkable robustness even under constraint budgets. Notably, on LongBench-V1, FASA reaches nearly 100\\% of full-KV performance when only keeping 256 tokens, and achieves 2.56$\\times$ speedup using just 18.9\\% of the cache on AIME24.",
+        "identifiers": [
+          "SemanticScholar:c6083bfe175e042d979323cb0dfa5eff63aa8b81"
+        ],
+        "semantic_scholar_id": "c6083bfe175e042d979323cb0dfa5eff63aa8b81",
+        "canonical_id": "arXiv:2602.03152",
+        "arxiv_id": "2602.03152",
+        "doi": "10.48550/arXiv.2602.03152",
+        "authors": [
+          "Yifei Wang",
+          "Yue-Qi Wang",
+          "Zhenrui Yue",
+          "Hui-Min Zeng",
+          "Yong Wang",
+          "Ismini Lourentzou",
+          "Zheng-Zhong Tu",
+          "Xiangxiang Chu",
+          "Julian J. McAuley"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 252,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.28051",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.28051",
+        "id:SemanticScholar:5865585d29f0c9c83b717729ec3f82edc705bed4",
+        "id:arXiv:2605.28051",
+        "title:beyond surrogate gradients fully differentiable token pruning for visionlanguage models",
+        "url:https://arxiv.org/abs/2605.28051"
+      ],
+      "record": {
+        "title": "Beyond Surrogate Gradients: Fully Differentiable Token Pruning for Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2605.28051",
+        "year": 2026,
+        "published": "2026-05-27",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual token pruning reduces the computational cost of Vision-Language Models (VLMs) by removing redundant visual tokens. Existing methods typically rely on Gumbel-Softmax to approximate discrete selection during training. However, the optimization is driven by surrogate gradients rather than the true selection process, leading to unreliable learning of token importance. In this paper, we propose DiffPrune, which reformulates pruning as continuous control of token information instead of discrete selection learning. Specifically, we introduce an Information Throttler that modulates each token using variance-preserving noise conditioned on importance scores, where higher scores induce less information suppression during training. This design directly operates on token representations, naturally providing a fully differentiable optimization path for learning token importance. At inference, tokens are removed via hard thresholding on the learned scores. Across ten VLM benchmarks, DiffPrune retains 96.5% of full-model accuracy while accelerating LLM prefill by 2.85x, with only 0.69 ms of inference overhead.",
+        "identifiers": [
+          "SemanticScholar:5865585d29f0c9c83b717729ec3f82edc705bed4"
+        ],
+        "semantic_scholar_id": "5865585d29f0c9c83b717729ec3f82edc705bed4",
+        "canonical_id": "arXiv:2605.28051",
+        "arxiv_id": "2605.28051",
+        "doi": "10.48550/arXiv.2605.28051",
+        "authors": [
+          "Lan He",
+          "Min Yao",
+          "S. Young",
+          "Lijian Xu"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 139,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.02569",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.02569",
+        "id:SemanticScholar:6c2da997959e501ee9a97573a34471829786e6ce",
+        "id:arXiv:2606.02569",
+        "title:adacodec a predictive visual code for video mllms",
+        "url:https://arxiv.org/abs/2606.02569"
+      ],
+      "record": {
+        "title": "AdaCodec: A Predictive Visual Code for Video MLLMs",
+        "source_url": "https://arxiv.org/abs/2606.02569",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video is temporally redundant: adjacent frames usually share most objects, background, and layout. Yet existing video multimodal large language models (video MLLMs) usually encode each sampled frame as an independent RGB image, causing visual tokens to repeat content already present in earlier frames. This suggests a more direct video interface: send a full reference frame only when the scene cannot be predicted well from prior context, and otherwise transmit a compact description of inter-frame changes. We call this interface a \\emph{predictive visual code}, and instantiate it for video MLLMs as \\textbf{AdaCodec}. AdaCodec spends full visual tokens on a reference frame only when its conditional predictive cost is high; otherwise, it encodes inter-frame changes, including motion and prediction residuals, as compact P-tokens. Across all eleven benchmarks, AdaCodec improves over the Qwen3-VL-8B per-frame RGB baseline at a matched visual-token budget. Even at $1/7$ the budget, AdaCodec with 32k tokens surpasses the 224k baseline on all long-video benchmarks; on five general-video benchmarks, it raises the average score while substantially cutting time-to-first-token from 9.26s to 1.62s.",
+        "identifiers": [
+          "SemanticScholar:6c2da997959e501ee9a97573a34471829786e6ce"
+        ],
+        "semantic_scholar_id": "6c2da997959e501ee9a97573a34471829786e6ce",
+        "canonical_id": "arXiv:2606.02569",
+        "arxiv_id": "2606.02569",
+        "doi": "10.48550/arXiv.2606.02569",
+        "authors": [
+          "Hao-Wen Hou",
+          "Zheng-Ting Huang",
+          "Zhe-Ming Liang",
+          "Qing-Yi Si",
+          "Cheng-Lin Li",
+          "Shuai Dong",
+          "Kele Shao",
+          "Ruilin Li",
+          "Dian-Yi Wang",
+          "Nan Duan",
+          "Jia-Qi Wang"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 134,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:316435c2691c981568153dfe6a89cf2711239f2dc14857663f054b3b2bc93a90",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

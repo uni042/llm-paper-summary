@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f1189f54f423610-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2308.14149",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2308.14149",
+    "identity_tokens": [
+      "arXiv:2308.14149"
+    ],
+    "reason": "オープンで扱いやすいGPT系モデルの種類、能力、展開容易性、科学・マルチモーダル応用を広く整理するサーベイ。軽量化と展開の話題は含むが、特定のLLM推論システム最適化、KV管理、GPUカーネル、サービング実測を中心とする文献ではないため境界扱い。",
+    "first_checked_at": "2026-10-30T10:54:04+00:00",
+    "last_checked_at": "2026-10-30T10:54:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Examining User-Friendly and Open-Sourced Large GPT Models: A Survey on Language, Multimodal, and Scientific GPT Models"
+  },
+  "processed_at": "2026-10-30T10:54:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f1189f54f42",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

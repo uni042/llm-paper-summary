@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab4a1cc684058d05-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/math13172698",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/math13172698",
+    "identity_tokens": [
+      "DOI:10.3390/math13172698"
+    ],
+    "reason": "This study examines the semantic dynamics and thematic shifts in artificial intelligence (AI) ethics over time, addressing a notable gap in longitudinal research within the field. In light of the rapid evolution of AI technologies and their associated ethical risks and societal impacts, the research integrates the theory of chance discovery with the KeyGraph algorithm to conduct topic detection through a keyword network built through iterative semantic exploration. ChatGPT is employed for semantic interpretation, enhancing both the accuracy and comprehensiveness of the detected topics. Guided",
+    "first_checked_at": "2026-10-06T13:09:23+00:00",
+    "last_checked_at": "2026-10-06T13:09:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+    ],
+    "title": "Using KeyGraph and ChatGPT to Detect and Track Topics Related to AI Ethics in Media Outlets"
+  },
+  "processed_at": "2026-10-06T13:09:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab4a1cc68405",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

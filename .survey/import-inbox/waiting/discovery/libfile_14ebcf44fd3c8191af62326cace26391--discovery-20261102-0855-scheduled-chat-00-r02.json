@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0855-scheduled-chat-00/r02",
+  "reference_main_sha": "2e6165d8492a62e3317901512a9adc0d8e0c4cac",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.29527",
+      "identity_tokens": [
+        "id:arXiv:2610.29527",
+        "id:DOI:10.48550/arXiv.2610.29527"
+      ],
+      "title": "RCSD: Reinforcement and Continual Learning for Domain-Specific Speculative Decoding",
+      "reason": "投機復号のdraft学習をtargetの全確率分布への蒸留から、実際の受理長を増やす目的へ転換する。投機推論中に観測される受理/棄却系列から暗黙の選好対を作り、targetと一致したtokenを誤って罰しないmasked lossで継続学習する。arXiv一次登録要旨はHASS比で平均受理長35%改善、実用ワークロードでend-to-end推論1.35倍高速化を報告。学習手法だが最終目的と実測は投機復号の推論高速化なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2610.29527",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:01:32+09:00",
+      "last_checked_at": "2026-11-02T09:01:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.14571",
+      "identity_tokens": [
+        "id:arXiv:2610.14571",
+        "id:DOI:10.48550/arXiv.2610.14571"
+      ],
+      "title": "Dissecting the Carbon-SLO Tension in Geo-Distributed LLM Serving",
+      "reason": "地理分散LLMサービングで炭素強度の低い拠点へ要求を振り分ける際、連続バッチ処理と待ち行列がTTFT/TPOTのSLOを制約する問題を扱う。実GPUの電力・遅延測定で較正したシミュレータ上でgreedy、ILP、反復ILP、facility MILPのスケジューラを比較。著者要旨では3モデル・MLPerf SLOの条件でMILPがround-robin比最大60%排出削減、平均SLO違反3%と報告。省エネとサービングSLOの直接的なスケジューリング研究としてaccept。ただし実拠点運用での削減実績ではない。",
+      "source_url": "https://arxiv.org/abs/2610.14571",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:01:32+09:00",
+      "last_checked_at": "2026-11-02T09:01:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.33923",
+      "identity_tokens": [
+        "id:arXiv:2610.33923",
+        "id:DOI:10.48550/arXiv.2610.33923"
+      ],
+      "title": "Queuing for Inference: Dynamic Memory Footprints and Costly Preemption",
+      "reason": "Transformer推論で要求のKVメモリが時間とともに増え、preemption時のcache退避/復元が追加費用となることを明示した待ち行列モデルを構築する。従来M/G/1で平均応答時間を最小化するGittins-indexでもpreemption過多になり得ると示し、短い要求を優先しつつ閾値でpreemptionを制限するMulti-Level-Priority-Threshold (MLPT)を提案する。著者要旨は平均応答時間の解析と閾値最適化の経験則を示すが具体的な実機speedupは主張していない。推論メモリ制約下のスケジューリング理論としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.33923",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:01:32+09:00",
+      "last_checked_at": "2026-11-02T09:01:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24365",
+      "identity_tokens": [
+        "id:arXiv:2610.24365",
+        "id:DOI:10.48550/arXiv.2610.24365"
+      ],
+      "title": "FlashMap: Flow Map Speculative Decoding",
+      "reason": "並列draftのblock diffusion方式は候補token間の依存を無視しがちという問題に対し、targetのhidden stateに条件づけた連続flow mapのdrafterで候補ブロックを1 forwardで生成する。Qwen3-8Bを使った著者要旨の比較ではDFlash相当のbaselineより平均speedupが7%高く、最大6.1倍のlossless accelerationを報告。投機復号の受理効率とドラフト計算の高速化に直結するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.24365",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:01:32+09:00",
+      "last_checked_at": "2026-11-02T09:01:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.23787",
+      "identity_tokens": [
+        "id:arXiv:2610.23787",
+        "id:DOI:10.48550/arXiv.2610.23787"
+      ],
+      "title": "DLite: History-free Speculative Decoding for Agentic AI",
+      "reason": "長い対話履歴を持つagentic workloadではdraftモデルの受理長が最大80%悪化し、draft側KV保持も重い。DLiteはtargetモデルの文脈hidden stateを直接再利用し、長期履歴を明示保持せず局所的に候補を予測する。ブロック内依存を軽量逐次headで補い、二段階学習を用いる。著者要旨は受理長2～6、DSpark比最大70%改善を報告。長文脈agentの投機復号高速化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.23787",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:01:32+09:00",
+      "last_checked_at": "2026-11-02T09:01:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17689",
+      "identity_tokens": [
+        "id:arXiv:2610.17689",
+        "id:DOI:10.48550/arXiv.2610.17689"
+      ],
+      "title": "Stable Token-level Scheduling for Serverless LLM Inference",
+      "reason": "サーバレスLLM推論のprefill要求流入が既存decodeのITLを乱す問題に対し、ITL・queue depth・ワークロードの実行時feedbackでtoken windowを閉ループ調整し、batch単位でなくtoken単位のadmissionを制御するToken Window Pacing (TWP)を提案する。chunked prefillと併用し、著者要旨はServerlessLLM比最大45%、従来scheduler比最大58%のthroughput向上とp99遅延変動低減を報告。LLM serving runtimeの直接的なスケジューリング貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.17689",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:01:32+09:00",
+      "last_checked_at": "2026-11-02T09:01:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.01250",
+      "identity_tokens": [
+        "id:arXiv:2608.01250",
+        "id:DOI:10.48550/arXiv.2608.01250"
+      ],
+      "title": "Smoothing the Ramp, Not the Peak: Scheduling-Induced Power Dynamics of LLM Inference and Their Grid-Scale Consequences",
+      "reason": "既存のchunked prefillがLLM推論GPUのピーク電力を下げるのではなく電力変化率（ramp rate）を平滑化することを実電力トレースから測定し、負荷とreserve procurementへの影響をモデル化する。著者要旨では高負荷で高速ランプ対応予備力の必要量を推定24%削減、2GPUのdense 14Bで約36%削減と報告。推論スケジューリングのエネルギー特性として関連するが、新規のLLM推論高速化アルゴリズム自体の提案ではなく電力系統の影響分析が中心のためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.01250",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:01:32+09:00",
+      "last_checked_at": "2026-11-02T09:01:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.38210",
+      "identity_tokens": [
+        "id:arXiv:2610.38210",
+        "id:DOI:10.48550/arXiv.2610.38210"
+      ],
+      "title": "GAAC: Lossless KV Compression for Bandwidth-Efficient LLM Inference on Personal Devices",
+      "reason": "BF16 KVの指数分布の冗長性を利用し、channelごとに較正したbase-plus-offset符号をgroup単位で可変長選択してKV値をbit-exactに圧縮する。fused attention kernelがKV tileを逐次復元し、全キャッシュの展開を回避する。著者要旨は5モデルでBF16 KVを1.405～1.407倍に可逆圧縮、DGX Sparkの64K contextでdecode attention1.19～1.27倍、サービング集約throughput13～29%改善を報告。個人向けGPUのKVメモリと帯域削減の直接的な実装研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.38210",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:01:32+09:00",
+      "last_checked_at": "2026-11-02T09:01:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37989",
+      "identity_tokens": [
+        "id:arXiv:2610.37989",
+        "id:DOI:10.48550/arXiv.2610.37989"
+      ],
+      "title": "GAUSS: A Workload-Aware Analytical and Monte-Carlo Simulator for LLM Inference Serving",
+      "reason": "prefillとdecodeの異なる処理時間、continuous batching、確率的到着、待ち行列を組み合わせ、TTFT/TBTの分布と持続可能な到着率を予測するサービング性能モデルを提案する。フェーズ別の較正遅延曲面、Lindley再帰によるqueueing、ensemble Monte-Carloを用い、単一トレース再生では過小評価しやすいtail latencyと未配備構成の容量計画を扱う。一次要旨に数値の実測精度・速度向上は記載されないが、LLMサービング容量設計・SLO予測の直接的手法としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.37989",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:01:32+09:00",
+      "last_checked_at": "2026-11-02T09:01:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37432",
+      "identity_tokens": [
+        "id:arXiv:2610.37432",
+        "id:DOI:10.48550/arXiv.2610.37432"
+      ],
+      "title": "Request-Adaptive Execution for Efficient Hybrid LLM Inference",
+      "reason": "Attention/SSM混合モデルの層構成を全要求で固定する代わりに、prefillで要求ごとのゲートを決め、decode中は選択構成を固定するMorphを提案する。要求間で層選択が異なってもselective batchingで効率を維持し、hybrid-aware context cacheで正しいprefix reuseを可能にする。著者要旨は6データセットで品質/効率のtradeoff改善と、静的hybrid baseline比最大3.87倍のサービングthroughputを報告。条件付き計算とruntimeの協調設計としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.37432",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:01:32+09:00",
+      "last_checked_at": "2026-11-02T09:01:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

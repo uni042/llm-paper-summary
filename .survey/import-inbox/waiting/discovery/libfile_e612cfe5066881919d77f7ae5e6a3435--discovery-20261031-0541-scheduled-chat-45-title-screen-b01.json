@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-0541-scheduled-chat-45/title-screen-b01",
+  "reference_main_sha": "17ca70749ca670ef661aa513abc1552e05acdf13",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICEAAI68945.2026.11442452",
+      "identity_tokens": [
+        "DOI:10.1109/ICEAAI68945.2026.11442452"
+      ],
+      "title": "Full-Network Post-Training Quantization for DETR with Integerized Nonlinear Operators and Scale Optimization",
+      "reason": "タイトルに明示される対象は物体検出器DETRの全ネットワーク量子化であり、LLM推論・サービングやLLMの圧縮を対象とした研究ではない。一次要旨・本文は未読のため、DETR以外の適用性能については判断していない。",
+      "source_url": "https://doi.org/10.1109/ICEAAI68945.2026.11442452",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T05:50:08+09:00",
+      "last_checked_at": "2026-10-31T05:50:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 488,
+      "origin": "discovery_worklist_title_sweep"
+    }
+  ]
+}

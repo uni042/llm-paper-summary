@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6e0b39d17fb8ec59-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1205.2618",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1205.2618",
+    "identity_tokens": [
+      "arXiv:1205.2618"
+    ],
+    "reason": "implicit feedbackからpersonalized item rankingを学習するBPR-Optと確率的勾配法を提案する推薦学習研究で、LLM推論の実行効率化を対象としない。",
+    "first_checked_at": "2026-10-04T12:58:18+00:00",
+    "last_checked_at": "2026-10-04T12:58:18+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md"
+    ],
+    "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback"
+  },
+  "processed_at": "2026-10-04T12:58:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6e0b39d17fb8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

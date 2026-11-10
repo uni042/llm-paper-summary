@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-094a092827d9e8da-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.24466",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.24466",
+    "identity_tokens": [
+      "arXiv:2608.24466"
+    ],
+    "reason": "一次要旨はfact-checking article generation quality/citation validationでserving efficiencyではない。",
+    "first_checked_at": "2026-10-05T10:22:32+00:00",
+    "last_checked_at": "2026-10-05T10:22:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "UTS at CheckThat! 2026: Cite-Frame Engineering for Generated Fact-Checking Articles"
+  },
+  "processed_at": "2026-10-05T10:22:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-094a092827d9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

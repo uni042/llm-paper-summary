@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-286fc4d2a8d98d9c-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2210.03858",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2210.03858",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2210.03858",
+      "arXiv:2210.03858"
+    ],
+    "reason": "量子化モデルの省メモリ配備へつながるが、主貢献は量子化を利用したパラメータ効率の高い適応・微調整で学習側との境界にある。",
+    "first_checked_at": "2026-09-30T09:07:47+00:00",
+    "last_checked_at": "2026-10-02T19:21:28+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      ".survey/work-queue/worker-worklist-30.json"
+    ],
+    "title": "AlphaTuning: Quantization-Aware Parameter-Efficient Adaptation of Large-Scale Pre-Trained Language Models"
+  },
+  "processed_at": "2026-10-02T19:21:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-286fc4d2a8d9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

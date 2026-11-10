@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f62720604b1f0234-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.13773",
+  "reason": "Neural networks are increasingly deployed in high-stakes applications with growing privacy leakage concerns. We show that this privacy leakage can occur even in the absence of representation imbalances that lead to traditional dataset biases. This poses significant privacy risks when deploying models that process sensitive attributes. In this context, we propose CutClean, a privacy-aware pruning method that allows to reduce privacy information flow through the network, while increasing its sparsity. Our approach employs auxiliary linear privacy heads placed at each network's block to quantify information leakage, and further applies increasing levels of sparsity to remove the private attribute leakage, measured in terms of the accuracy of the privacy head attached to the last block. Experiments on synthetic and real-world datasets demonstrate that our approach effectively minimizes private information flow while achieving high sparsity rates and preserving classification target accuracy.",
+  "title": "CutClean: Neural Network Pruning for Privacy-Preserving Inference",
+  "identity_tokens": [
+    "arXiv:2608.13773"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f62720604b1f",
+  "source_precheck_request_id": null
+}

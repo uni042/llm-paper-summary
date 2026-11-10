@@ -1,0 +1,943 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260924T070008Z-scheduled-chat-00-a3f91c-take1",
+  "collector_id": "direct-20260924T070008Z-scheduled-chat-00-a3f91c-take1",
+  "run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
+  "axis": "backward references of DistServe disaggregated prefill-decode LLM serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/references?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 20,
+  "pages_fetched": 1,
+  "next_cursor": "40",
+  "target_reached": true,
+  "provider_exhausted": false,
+  "max_pages_reached": false,
+  "stop_reason": "TARGET_REACHED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8ded2adde3044c052815db0fcb94ed3cc8978fd0",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-24T07:01:26.955275+00:00",
+  "preload_id": "preload-711f4ea295ec7a7fdcd5",
+  "preload_seed": false,
+  "preload_cache_used": true,
+  "preload_cached_pages_used": 1,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": "preload-711f4ea295ec7a7fdcd5",
+  "results": [
+    {
+      "title": "Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling",
+      "source_url": "https://www.semanticscholar.org/paper/71de9b9cb83dcf53a86c7a3cb3ff7b36b3917978",
+      "year": 2023,
+      "published": "2023-10-23",
+      "abstract": "The Sia scheduler efficiently assigns heterogeneous deep learning (DL) cluster resources to elastic resource-adaptive jobs. Although some recent schedulers address one aspect or another (e.g., heterogeneity or resource-adaptivity), none addresses all and most scale poorly to large clusters and/or heavy workloads even without the full complexity of the combined scheduling problem. Sia introduces a new scheduling formulation that can scale to the search-space sizes and intentionally match jobs and their configurations to GPU types and counts, while adapting to changes in cluster load and job mix over time. Sia also introduces a low-profiling-overhead approach to bootstrapping (for each new job) throughput models used to evaluate possible resource assignments, and it is the first cluster scheduler to support elastic scaling of hybrid parallel jobs. Extensive evaluations show that Sia outperforms state-of-the-art schedulers. For example, even on relatively small 44- to 64-GPU clusters with a mix of three GPU types, Sia reduces average job completion time (JCT) by 30--93%, 99th percentile JCT and makespan by 28--95%, and GPU hours used by 12--55% for workloads derived from 3 real-world environments. Additional experiments demonstrate that Sia scales to at least 2000-GPU clusters, provides improved fairness, and is not over-sensitive to scheduler parameter settings.",
+      "canonical_id": "DOI:10.1145/3600006.3613175",
+      "doi": "10.1145/3600006.3613175",
+      "authors": [
+        "Suhas Jayaram Subramanya",
+        "Daiyaan Arfeen",
+        "Shouxu Lin",
+        "Aurick Qiao",
+        "Zhihao Jia",
+        "G. Ganger"
+      ]
+    },
+    {
+      "title": "Mira: A Program-Behavior-Guided Far Memory System",
+      "source_url": "https://www.semanticscholar.org/paper/fc5ea4ae774f7933b721fef7f0d296a2487f8f4e",
+      "year": 2023,
+      "published": "2023-10-23",
+      "abstract": "Far memory, where memory accesses are non-local, has become more popular in recent years as a solution to expand memory size and avoid memory stranding. Prior far memory systems have taken two approaches: transparently swap memory pages between local and far memory, and utilizing new programming models to explicitly move fine-grained data between local and far memory. The former requires no program changes but comes with performance penalty. The latter has potentially better performance but requires significant program changes. We propose a new far-memory approach by automatically inferring program behavior and efficiently utilizing it to improve application performance. With this idea, we build Mira. Mira utilizes program analysis results, profiled execution information, and system environments together to guide code compilation and system configurations for far memory. Our evaluation shows that Mira outperforms prior swap-based and programming-model-based systems by up to 18 times.",
+      "canonical_id": "DOI:10.1145/3600006.3613157",
+      "doi": "10.1145/3600006.3613157",
+      "authors": [
+        "Zhiyuan Guo",
+        "Zi-Jian He",
+        "Yiying Zhang"
+      ]
+    },
+    {
+      "title": "Code Llama: Open Foundation Models for Code",
+      "source_url": "https://www.semanticscholar.org/paper/0b0debb710366cdff461938c80763eace1651af6",
+      "year": 2023,
+      "published": "2023-08-24",
+      "abstract": "We release Code Llama, a family of large language models for code based on Llama 2 providing state-of-the-art performance among open models, infilling capabilities, support for large input contexts, and zero-shot instruction following ability for programming tasks. We provide multiple flavors to cover a wide range of applications: foundation models (Code Llama), Python specializations (Code Llama - Python), and instruction-following models (Code Llama - Instruct) with 7B, 13B, 34B and 70B parameters each. All models are trained on sequences of 16k tokens and show improvements on inputs with up to 100k tokens. 7B, 13B and 70B Code Llama and Code Llama - Instruct variants support infilling based on surrounding content. Code Llama reaches state-of-the-art performance among open models on several code benchmarks, with scores of up to 67% and 65% on HumanEval and MBPP, respectively. Notably, Code Llama - Python 7B outperforms Llama 2 70B on HumanEval and MBPP, and all our models outperform every other publicly available model on MultiPL-E. We release Code Llama under a permissive license that allows for both research and commercial use.",
+      "canonical_id": "arXiv:2308.12950",
+      "arxiv_id": "2308.12950",
+      "authors": [
+        "Baptiste Rozière",
+        "Jonas Gehring",
+        "Fabian Gloeckle",
+        "Sten Sootla",
+        "Itai Gat",
+        "Xiaoqing Tan",
+        "Yossi Adi",
+        "Jingyu Liu",
+        "Tal Remez",
+        "J. Rapin",
+        "Artyom Kozhevnikov",
+        "I. Evtimov",
+        "Joanna Bitton",
+        "Manish P Bhatt",
+        "Cristian Canton Ferrer",
+        "Aaron Grattafiori",
+        "Wenhan Xiong",
+        "Alexandre Défossez",
+        "Jade Copet",
+        "Faisal Azhar",
+        "Hugo Touvron",
+        "Louis Martin",
+        "Nicolas Usunier",
+        "Thomas Scialom",
+        "Gabriel Synnaeve"
+      ]
+    },
+    {
+      "title": "Make It Real: An End-to-End Implementation of A Physically Disaggregated Data Center",
+      "source_url": "https://www.semanticscholar.org/paper/fb43a0b07a2e749a889e0f3733e48f555a4f1857",
+      "year": 2023,
+      "published": "2023-06-26",
+      "abstract": "Resource disaggregation is an approach to separate different hardware resources into independent pools in a data center, so that these pools can be easily managed and their resources can be allocated in a tight but unbounded way. The past decade has seen research and practices in realizing the resource-disaggregation idea on regular servers. We advocate for a physically disaggregated data center, where disaggregated resource pools consist of hardware devices, not servers. Physical disaggregation could unlock another level of benefits in resource disaggregation, including further improved cost saving, easier maintenance and scaling, and more customization. This paper presents our efforts in building an end-to-end physically disaggregated data center, including the design and implementation of disaggregated hardware devices, networking systems for connecting these devices, operating systems for orchestrating them, and porting of traditional and cloud-computing applications to this physically disaggregated platform.",
+      "canonical_id": "DOI:10.1145/3606557.3606559",
+      "doi": "10.1145/3606557.3606559",
+      "authors": [
+        "Yiying Zhang"
+      ]
+    },
+    {
+      "title": "HotGPT: How to Make Software Documentation More Useful with a Large Language Model?",
+      "source_url": "https://www.semanticscholar.org/paper/7ab73c5dee3bd89f2fa73e7ae96e8bbd66539895",
+      "year": 2023,
+      "published": "2023-06-22",
+      "abstract": "It is well known that valuable information is contained in the natural language components of software systems, like comments and manual, and such information can be used to improve system performance and reliability. Past research has attempted to extract such information through task-specific machine learning models and tool chains. Here, we investigate a general, one-model-fit-all solution through a state-of-the-art large language model (e.g., the GPT series). Our investigation covers three representative tasks: extracting locking rules from comments, synthesizing exception predicates from comments, and identifying performance-related configurations; it reveals challenges and opportunities in applying large language models to system maintenance tasks.",
+      "canonical_id": "DOI:10.1145/3593856.3595910",
+      "doi": "10.1145/3593856.3595910",
+      "authors": [
+        "Yiming Su",
+        "Chengcheng Wan",
+        "Utsav Sethi",
+        "Shan Lu",
+        "M. Musuvathi",
+        "Suman Nath"
+      ]
+    },
+    {
+      "title": "Evaluating Large Language Models Trained on Code",
+      "source_url": "https://www.semanticscholar.org/paper/acbdbf49f9bc3f151b93d9ca9a06009f4f6eb269",
+      "year": 2021,
+      "published": "2021-07-07",
+      "abstract": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.",
+      "canonical_id": "arXiv:2107.03374",
+      "arxiv_id": "2107.03374",
+      "authors": [
+        "Mark Chen",
+        "Jerry Tworek",
+        "Heewoo Jun",
+        "Qiming Yuan",
+        "Henrique Pondé",
+        "Jared Kaplan",
+        "Harrison Edwards",
+        "Yura Burda",
+        "Nicholas Joseph",
+        "Greg Brockman",
+        "Alex Ray",
+        "Raul Puri",
+        "Gretchen Krueger",
+        "Michael Petrov",
+        "H. Khlaaf",
+        "G. Sastry",
+        "Pamela Mishkin",
+        "Brooke Chan",
+        "Scott Gray",
+        "Nick Ryder",
+        "Mikhail Pavlov",
+        "Alethea Power",
+        "Lukasz Kaiser",
+        "Mo Bavarian",
+        "Clemens S. Winter",
+        "P. Tillet",
+        "F. Such",
+        "D. Cummings",
+        "Matthias Plappert",
+        "Fotios Chantzis",
+        "Elizabeth Barnes",
+        "Ariel Herbert-Voss",
+        "W. Guss",
+        "Alex Nichol",
+        "Igor Babuschkin",
+        "S. Balaji",
+        "Shantanu Jain",
+        "A. Carr",
+        "Jan Leike",
+        "Josh Achiam",
+        "Vedant Misra",
+        "Evan Morikawa",
+        "Alec Radford",
+        "M. Knight",
+        "Miles Brundage",
+        "M. Murati",
+        "Katie Mayer",
+        "Peter Welinder",
+        "Bob McGrew",
+        "Dario Amodei",
+        "Sam McCandlish",
+        "I. Sutskever",
+        "Wojciech Zaremba"
+      ]
+    },
+    {
+      "title": "TurboTransformers: an efficient GPU serving system for transformer models",
+      "source_url": "https://www.semanticscholar.org/paper/0c775d7ed34fb4690b4291490778649ae75c48d2",
+      "year": 2020,
+      "published": "2020-10-09",
+      "abstract": "The transformer is the most critical algorithm innovation of the Nature Language Processing (NLP) field in recent years. Unlike the Recurrent Neural Network (RNN) models, transformers are able to process on dimensions of sequence lengths in parallel, therefore leads to better accuracy on long sequences. However, efficient deployments of them for online services in data centers equipped with GPUs are not easy. First, more computation introduced by transformer structures makes it more challenging to meet the latency and throughput constraints of serving. Second, NLP tasks take in sentences of variable length. The variability of input dimensions brings a severe problem to efficient memory management and serving optimization. To solve the above challenges, this paper designed a transformer serving system called TurboTransformers, which consists of a computing runtime and a serving framework. Three innovative features make it stand out from other similar works. An efficient parallel algorithm is proposed for GPU-based batch reduction operations, like Softmax and LayerNorm, which are major hot spots besides BLAS routines. A memory allocation algorithm, which better balances the memory footprint and allocation/free efficiency, is designed for variable-length input situations. A serving framework equipped with a new batch scheduler using dynamic programming achieves the optimal throughput on variable-length requests. The system can achieve the state-of-the-art transformer model serving performance on GPU platforms and can be seamlessly integrated into your PyTorch code with a few lines of code.",
+      "canonical_id": "arXiv:2010.05680",
+      "arxiv_id": "2010.05680",
+      "authors": [
+        "Jiarui Fang",
+        "Yang Yu",
+        "Chen-liang Zhao",
+        "Jie Zhou"
+      ]
+    },
+    {
+      "title": "Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning",
+      "source_url": "https://www.semanticscholar.org/paper/2adcdc9e9e81147499e1372f992d25ac6265fb29",
+      "year": 2020,
+      "published": "2020-08-27",
+      "abstract": "Pollux improves scheduling performance in deep learning (DL) clusters by adaptively co-optimizing inter-dependent factors both at the per-job level and at the cluster-wide level. Most existing schedulers will assign each job a number of resources requested by the user, which can allow jobs to use those resources inefficiently. Some recent schedulers choose job resources for users, but do so without awareness of how DL training can be re-optimized to better utilize those resources. \nPollux simultaneously considers both aspects. By observing each job during training, Pollux models how their goodput (system throughput combined with statistical efficiency) would change by adding or removing resources. Leveraging these models, Pollux dynamically (re-)assigns resources to maximize cluster-wide goodput, while continually optimizing each DL job to better utilize those resources. \nIn experiments with real DL training jobs and with trace-driven simulations, Pollux reduces average job completion time by 25%-50% relative to state-of-the-art DL schedulers, even when all jobs are submitted with ideal resource and training configurations. Based on the observation that the statistical efficiency of DL training can change over time, we also show that Pollux can reduce the cost of training large models in cloud environments by 25%.",
+      "canonical_id": "arXiv:2008.12260",
+      "arxiv_id": "2008.12260",
+      "authors": [
+        "Aurick Qiao",
+        "Willie Neiswanger",
+        "Qirong Ho",
+        "Hao Zhang",
+        "G. Ganger",
+        "Eric P. Xing"
+      ]
+    },
+    {
+      "title": "Serving DNNs like Clockwork: Performance Predictability from the Bottom Up",
+      "source_url": "https://www.semanticscholar.org/paper/c52ad09fac69f320e53f4e167bca9fc668434dce",
+      "year": 2020,
+      "published": "2020-06-01",
+      "abstract": "Machine learning inference is becoming a core building block for interactive web applications. As a result, the underlying model serving systems on which these applications depend must consistently meet low latency targets. Existing model serving architectures use well-known reactive techniques to alleviate common-case sources of latency, but cannot effectively curtail tail latency caused by unpredictable execution times. Yet the underlying execution times are not fundamentally unpredictable-on the contrary we observe that inference using Deep Neural Network (DNN) models has deterministic performance. Here, starting with the predictable execution times of individual DNN inferences, we adopt a principled design methodology to successively build a fully distributed model serving system that achieves predictable end-to-end performance. We evaluate our implementation, Clockwork, using production trace workloads, and show that Clockwork can support thousands of models while simultaneously meeting 100 ms latency targets for 99.997% of requests. We further demonstrate that Clockwork exploits predictable execution times to achieve tight request-level service-level objectives (SLOs) as well as a high degree of request-level performance isolation.",
+      "canonical_id": "arXiv:2006.02464",
+      "arxiv_id": "2006.02464",
+      "authors": [
+        "A. Gujarati",
+        "Reza Karimi",
+        "Safya Alzayat",
+        "Wei Hao",
+        "Antoine Kaufmann",
+        "Ymir Vigfusson",
+        "Jonathan Mace"
+      ]
+    },
+    {
+      "title": "FT-CNN: Algorithm-Based Fault Tolerance for Convolutional Neural Networks",
+      "source_url": "https://www.semanticscholar.org/paper/de573320ad3947af18cb6d52e85d43a7727ed81c",
+      "year": 2020,
+      "published": "2020-03-27",
+      "abstract": "Convolutional neural networks (CNNs) are becoming more and more important for solving challenging and critical problems in many fields. CNN inference applications have been deployed in safety-critical systems, which may suffer from soft errors caused by high-energy particles, high temperature, or abnormal voltage. Of critical importance is ensuring the stability of the CNN inference process against soft errors. Traditional fault tolerance methods are not suitable for CNN inference because error-correcting code is unable to protect computational components, instruction duplication techniques incur high overhead, and existing algorithm-based fault tolerance (ABFT) techniques cannot protect all convolution implementations. In this article, we focus on how to protect the CNN inference process against soft errors as efficiently as possible, with the following three contributions. (1) We propose several systematic ABFT schemes based on checksum techniques and analyze their fault protection ability and runtime thoroughly. Unlike traditional ABFT based on matrix-matrix multiplication, our schemes support any convolution implementations. (2) We design a novel workflow integrating all the proposed schemes to obtain a high detection/correction ability with limited total runtime overhead. (3) We perform our evaluation using ImageNet with well-known CNN models including AlexNet, VGG-19, ResNet-18, and YOLOv2. Experimental results demonstrate that our implementation can handle soft errors with very limited runtime overhead (4%<inline-formula><tex-math notation=\"LaTeX\">$\\sim$</tex-math><alternatives><mml:math><mml:mo>∼</mml:mo></mml:math><inline-graphic xlink:href=\"zhao-ieq1-3043449.gif\"/></alternatives></inline-formula>8% in both error-free and error-injected situations).",
+      "canonical_id": "arXiv:2003.12203",
+      "arxiv_id": "2003.12203",
+      "authors": [
+        "Kai Zhao",
+        "Sheng Di",
+        "Sihuan Li",
+        "Xin Liang",
+        "Yujia Zhai",
+        "Jieyang Chen",
+        "Kaiming Ouyang",
+        "F. Cappello",
+        "Zizhong Chen"
+      ]
+    },
+    {
+      "title": "PipeDream: generalized pipeline parallelism for DNN training",
+      "source_url": "https://www.semanticscholar.org/paper/3fd7c9ba742dd2b435afa75217847e5087e2f2a8",
+      "year": 2019,
+      "published": "2019-10-27",
+      "abstract": "DNN training is extremely time-consuming, necessitating efficient multi-accelerator parallelization. Current approaches to parallelizing training primarily use intra-batch parallelization, where a single iteration of training is split over the available workers, but suffer from diminishing returns at higher worker counts. We present PipeDream, a system that adds inter-batch pipelining to intra-batch parallelism to further improve parallel training throughput, helping to better overlap computation with communication and reduce the amount of communication when possible. Unlike traditional pipelining, DNN training is bi-directional, where a forward pass through the computation graph is followed by a backward pass that uses state and intermediate data computed during the forward pass. Naïve pipelining can thus result in mismatches in state versions used in the forward and backward passes, or excessive pipeline flushes and lower hardware efficiency. To address these challenges, PipeDream versions model parameters for numerically correct gradient computations, and schedules forward and backward passes of different minibatches concurrently on different workers with minimal pipeline stalls. PipeDream also automatically partitions DNN layers among workers to balance work and minimize communication. Extensive experimentation with a range of DNN tasks, models, and hardware configurations shows that PipeDream trains models to high accuracy up to 5.3X faster than commonly used intra-batch parallelism techniques.",
+      "canonical_id": "DOI:10.1145/3341301.3359646",
+      "doi": "10.1145/3341301.3359646",
+      "authors": [
+        "D. Narayanan",
+        "A. Harlap",
+        "Amar Phanishayee",
+        "Vivek Seshadri",
+        "Nikhil R. Devanur",
+        "G. Ganger",
+        "Phillip B. Gibbons",
+        "M. Zaharia"
+      ]
+    },
+    {
+      "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism",
+      "source_url": "https://www.semanticscholar.org/paper/d79a26226393f687ddbc375e32055b40b8ad8d38",
+      "year": 2018,
+      "published": "2018-11-16",
+      "abstract": null,
+      "canonical_id": "SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
+      "authors": [
+        "Yanping Huang",
+        "Yonglong Cheng",
+        "Dehao Chen",
+        "HyoukJoong Lee",
+        "Jiquan Ngiam",
+        "Quoc V. Le",
+        "Z. Chen"
+      ]
+    },
+    {
+      "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation",
+      "source_url": "https://www.semanticscholar.org/paper/7945684818786fcb32cf92bace2566d7d6bc8945",
+      "year": 2018,
+      "published": "2018-10-08",
+      "abstract": null,
+      "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "authors": [
+        "Yizhou Shan",
+        "Yutong Huang",
+        "Yilun Chen",
+        "Yiying Zhang"
+      ]
+    },
+    {
+      "title": "Ray: A Distributed Framework for Emerging AI Applications",
+      "source_url": "https://www.semanticscholar.org/paper/f83a207712fd4cf41aded79e9e6c4345ba879128",
+      "year": 2017,
+      "published": "2017-12-16",
+      "abstract": "The next generation of AI applications will continuously interact with the environment and learn from these interactions. These applications impose new and demanding systems requirements, both in terms of performance and flexibility. In this paper, we consider these requirements and present Ray---a distributed system to address them. Ray implements a dynamic task graph computation model that supports both the task-parallel and the actor programming models. To meet the performance requirements of AI applications, we propose an architecture that logically centralizes the system's control state using a sharded storage system and a novel bottom-up distributed scheduler. In our experiments, we demonstrate sub-millisecond remote task latencies and linear throughput scaling beyond 1.8 million tasks per second. We empirically validate that Ray speeds up challenging benchmarks and serves as both a natural and performant fit for an emerging class of reinforcement learning applications and algorithms.",
+      "canonical_id": "arXiv:1712.05889",
+      "arxiv_id": "1712.05889",
+      "authors": [
+        "Philipp Moritz",
+        "Robert Nishihara",
+        "Stephanie Wang",
+        "Alexey Tumanov",
+        "Richard Liaw",
+        "Eric Liang",
+        "William Paul",
+        "Michael I. Jordan",
+        "Ion Stoica"
+      ]
+    },
+    {
+      "title": "Attention is All you Need",
+      "source_url": "https://www.semanticscholar.org/paper/204e3073870fae3d05bcbc2f6a8e263d9b72e776",
+      "year": 2017,
+      "published": "2017-06-12",
+      "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.",
+      "canonical_id": "arXiv:1706.03762",
+      "arxiv_id": "1706.03762",
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Lukasz Kaiser",
+        "I. Polosukhin"
+      ]
+    },
+    {
+      "title": "SHEPHERD: Serving DNNs in the Wild",
+      "source_url": "https://www.semanticscholar.org/paper/2eace6acf43e28cc19876b9983d1c64c54c14c1d",
+      "year": 2023,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "SemanticScholar:2eace6acf43e28cc19876b9983d1c64c54c14c1d",
+      "authors": [
+        "Hong Zhang",
+        "Yupeng Tang",
+        "Anurag Khandelwal",
+        "Ion Stoica"
+      ]
+    },
+    {
+      "title": "A case for disaggregation of ML data processing",
+      "source_url": "https://www.semanticscholar.org/paper/51ebd5fde1c445ac9df3ed30c594702f7d2740a0",
+      "year": 2022,
+      "published": null,
+      "abstract": null,
+      "canonical_id": "DOI:10.48550/arXiv.2210.14826",
+      "doi": "10.48550/arXiv.2210.14826",
+      "authors": [
+        "Andrew Audibert",
+        "Yang Chen",
+        "Dan Graur",
+        "A. Klimovic",
+        "Jiří Šimša",
+        "C. A. Thekkath"
+      ]
+    },
+    {
+      "title": "Triton inference server: An optimized cloud and edge inferencing solution",
+      "source_url": null,
+      "year": 2019,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "NVIDIA Corporation",
+      "source_url": null,
+      "year": 2019,
+      "published": null,
+      "abstract": null
+    },
+    {
+      "title": "Fundamentals of queueing theory , volume 399",
+      "source_url": null,
+      "year": 2018,
+      "published": null,
+      "abstract": null
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3600006.3613175",
+      "identity_tokens": [
+        "id:DOI:10.1145/3600006.3613175",
+        "title:sia heterogeneityaware goodputoptimized mlcluster scheduling",
+        "url:https://www.semanticscholar.org/paper/71de9b9cb83dcf53a86c7a3cb3ff7b36b3917978"
+      ],
+      "record": {
+        "title": "Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling",
+        "source_url": "https://www.semanticscholar.org/paper/71de9b9cb83dcf53a86c7a3cb3ff7b36b3917978",
+        "year": 2023,
+        "published": "2023-10-23",
+        "abstract": "The Sia scheduler efficiently assigns heterogeneous deep learning (DL) cluster resources to elastic resource-adaptive jobs. Although some recent schedulers address one aspect or another (e.g., heterogeneity or resource-adaptivity), none addresses all and most scale poorly to large clusters and/or heavy workloads even without the full complexity of the combined scheduling problem. Sia introduces a new scheduling formulation that can scale to the search-space sizes and intentionally match jobs and their configurations to GPU types and counts, while adapting to changes in cluster load and job mix over time. Sia also introduces a low-profiling-overhead approach to bootstrapping (for each new job) throughput models used to evaluate possible resource assignments, and it is the first cluster scheduler to support elastic scaling of hybrid parallel jobs. Extensive evaluations show that Sia outperforms state-of-the-art schedulers. For example, even on relatively small 44- to 64-GPU clusters with a mix of three GPU types, Sia reduces average job completion time (JCT) by 30--93%, 99th percentile JCT and makespan by 28--95%, and GPU hours used by 12--55% for workloads derived from 3 real-world environments. Additional experiments demonstrate that Sia scales to at least 2000-GPU clusters, provides improved fairness, and is not over-sensitive to scheduler parameter settings.",
+        "canonical_id": "DOI:10.1145/3600006.3613175",
+        "doi": "10.1145/3600006.3613175",
+        "authors": [
+          "Suhas Jayaram Subramanya",
+          "Daiyaan Arfeen",
+          "Shouxu Lin",
+          "Aurick Qiao",
+          "Zhihao Jia",
+          "G. Ganger"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3600006.3613157",
+      "identity_tokens": [
+        "id:DOI:10.1145/3600006.3613157",
+        "title:mira a programbehaviorguided far memory system",
+        "url:https://www.semanticscholar.org/paper/fc5ea4ae774f7933b721fef7f0d296a2487f8f4e"
+      ],
+      "record": {
+        "title": "Mira: A Program-Behavior-Guided Far Memory System",
+        "source_url": "https://www.semanticscholar.org/paper/fc5ea4ae774f7933b721fef7f0d296a2487f8f4e",
+        "year": 2023,
+        "published": "2023-10-23",
+        "abstract": "Far memory, where memory accesses are non-local, has become more popular in recent years as a solution to expand memory size and avoid memory stranding. Prior far memory systems have taken two approaches: transparently swap memory pages between local and far memory, and utilizing new programming models to explicitly move fine-grained data between local and far memory. The former requires no program changes but comes with performance penalty. The latter has potentially better performance but requires significant program changes. We propose a new far-memory approach by automatically inferring program behavior and efficiently utilizing it to improve application performance. With this idea, we build Mira. Mira utilizes program analysis results, profiled execution information, and system environments together to guide code compilation and system configurations for far memory. Our evaluation shows that Mira outperforms prior swap-based and programming-model-based systems by up to 18 times.",
+        "canonical_id": "DOI:10.1145/3600006.3613157",
+        "doi": "10.1145/3600006.3613157",
+        "authors": [
+          "Zhiyuan Guo",
+          "Zi-Jian He",
+          "Yiying Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2308.12950",
+      "identity_tokens": [
+        "id:arXiv:2308.12950",
+        "title:code llama open foundation models for code",
+        "url:https://www.semanticscholar.org/paper/0b0debb710366cdff461938c80763eace1651af6"
+      ],
+      "record": {
+        "title": "Code Llama: Open Foundation Models for Code",
+        "source_url": "https://www.semanticscholar.org/paper/0b0debb710366cdff461938c80763eace1651af6",
+        "year": 2023,
+        "published": "2023-08-24",
+        "abstract": "We release Code Llama, a family of large language models for code based on Llama 2 providing state-of-the-art performance among open models, infilling capabilities, support for large input contexts, and zero-shot instruction following ability for programming tasks. We provide multiple flavors to cover a wide range of applications: foundation models (Code Llama), Python specializations (Code Llama - Python), and instruction-following models (Code Llama - Instruct) with 7B, 13B, 34B and 70B parameters each. All models are trained on sequences of 16k tokens and show improvements on inputs with up to 100k tokens. 7B, 13B and 70B Code Llama and Code Llama - Instruct variants support infilling based on surrounding content. Code Llama reaches state-of-the-art performance among open models on several code benchmarks, with scores of up to 67% and 65% on HumanEval and MBPP, respectively. Notably, Code Llama - Python 7B outperforms Llama 2 70B on HumanEval and MBPP, and all our models outperform every other publicly available model on MultiPL-E. We release Code Llama under a permissive license that allows for both research and commercial use.",
+        "canonical_id": "arXiv:2308.12950",
+        "arxiv_id": "2308.12950",
+        "authors": [
+          "Baptiste Rozière",
+          "Jonas Gehring",
+          "Fabian Gloeckle",
+          "Sten Sootla",
+          "Itai Gat",
+          "Xiaoqing Tan",
+          "Yossi Adi",
+          "Jingyu Liu",
+          "Tal Remez",
+          "J. Rapin",
+          "Artyom Kozhevnikov",
+          "I. Evtimov",
+          "Joanna Bitton",
+          "Manish P Bhatt",
+          "Cristian Canton Ferrer",
+          "Aaron Grattafiori",
+          "Wenhan Xiong",
+          "Alexandre Défossez",
+          "Jade Copet",
+          "Faisal Azhar",
+          "Hugo Touvron",
+          "Louis Martin",
+          "Nicolas Usunier",
+          "Thomas Scialom",
+          "Gabriel Synnaeve"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3606557.3606559",
+      "identity_tokens": [
+        "id:DOI:10.1145/3606557.3606559",
+        "title:make it real an endtoend implementation of a physically disaggregated data center",
+        "url:https://www.semanticscholar.org/paper/fb43a0b07a2e749a889e0f3733e48f555a4f1857"
+      ],
+      "record": {
+        "title": "Make It Real: An End-to-End Implementation of A Physically Disaggregated Data Center",
+        "source_url": "https://www.semanticscholar.org/paper/fb43a0b07a2e749a889e0f3733e48f555a4f1857",
+        "year": 2023,
+        "published": "2023-06-26",
+        "abstract": "Resource disaggregation is an approach to separate different hardware resources into independent pools in a data center, so that these pools can be easily managed and their resources can be allocated in a tight but unbounded way. The past decade has seen research and practices in realizing the resource-disaggregation idea on regular servers. We advocate for a physically disaggregated data center, where disaggregated resource pools consist of hardware devices, not servers. Physical disaggregation could unlock another level of benefits in resource disaggregation, including further improved cost saving, easier maintenance and scaling, and more customization. This paper presents our efforts in building an end-to-end physically disaggregated data center, including the design and implementation of disaggregated hardware devices, networking systems for connecting these devices, operating systems for orchestrating them, and porting of traditional and cloud-computing applications to this physically disaggregated platform.",
+        "canonical_id": "DOI:10.1145/3606557.3606559",
+        "doi": "10.1145/3606557.3606559",
+        "authors": [
+          "Yiying Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3593856.3595910",
+      "identity_tokens": [
+        "id:DOI:10.1145/3593856.3595910",
+        "title:hotgpt how to make software documentation more useful with a large language model",
+        "url:https://www.semanticscholar.org/paper/7ab73c5dee3bd89f2fa73e7ae96e8bbd66539895"
+      ],
+      "record": {
+        "title": "HotGPT: How to Make Software Documentation More Useful with a Large Language Model?",
+        "source_url": "https://www.semanticscholar.org/paper/7ab73c5dee3bd89f2fa73e7ae96e8bbd66539895",
+        "year": 2023,
+        "published": "2023-06-22",
+        "abstract": "It is well known that valuable information is contained in the natural language components of software systems, like comments and manual, and such information can be used to improve system performance and reliability. Past research has attempted to extract such information through task-specific machine learning models and tool chains. Here, we investigate a general, one-model-fit-all solution through a state-of-the-art large language model (e.g., the GPT series). Our investigation covers three representative tasks: extracting locking rules from comments, synthesizing exception predicates from comments, and identifying performance-related configurations; it reveals challenges and opportunities in applying large language models to system maintenance tasks.",
+        "canonical_id": "DOI:10.1145/3593856.3595910",
+        "doi": "10.1145/3593856.3595910",
+        "authors": [
+          "Yiming Su",
+          "Chengcheng Wan",
+          "Utsav Sethi",
+          "Shan Lu",
+          "M. Musuvathi",
+          "Suman Nath"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2107.03374",
+      "identity_tokens": [
+        "id:arXiv:2107.03374",
+        "title:evaluating large language models trained on code",
+        "url:https://www.semanticscholar.org/paper/acbdbf49f9bc3f151b93d9ca9a06009f4f6eb269"
+      ],
+      "record": {
+        "title": "Evaluating Large Language Models Trained on Code",
+        "source_url": "https://www.semanticscholar.org/paper/acbdbf49f9bc3f151b93d9ca9a06009f4f6eb269",
+        "year": 2021,
+        "published": "2021-07-07",
+        "abstract": "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub, and study its Python code-writing capabilities. A distinct production version of Codex powers GitHub Copilot. On HumanEval, a new evaluation set we release to measure functional correctness for synthesizing programs from docstrings, our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions to difficult prompts. Using this method, we solve 70.2% of our problems with 100 samples per problem. Careful investigation of our model reveals its limitations, including difficulty with docstrings describing long chains of operations and with binding operations to variables. Finally, we discuss the potential broader impacts of deploying powerful code generation technologies, covering safety, security, and economics.",
+        "canonical_id": "arXiv:2107.03374",
+        "arxiv_id": "2107.03374",
+        "authors": [
+          "Mark Chen",
+          "Jerry Tworek",
+          "Heewoo Jun",
+          "Qiming Yuan",
+          "Henrique Pondé",
+          "Jared Kaplan",
+          "Harrison Edwards",
+          "Yura Burda",
+          "Nicholas Joseph",
+          "Greg Brockman",
+          "Alex Ray",
+          "Raul Puri",
+          "Gretchen Krueger",
+          "Michael Petrov",
+          "H. Khlaaf",
+          "G. Sastry",
+          "Pamela Mishkin",
+          "Brooke Chan",
+          "Scott Gray",
+          "Nick Ryder",
+          "Mikhail Pavlov",
+          "Alethea Power",
+          "Lukasz Kaiser",
+          "Mo Bavarian",
+          "Clemens S. Winter",
+          "P. Tillet",
+          "F. Such",
+          "D. Cummings",
+          "Matthias Plappert",
+          "Fotios Chantzis",
+          "Elizabeth Barnes",
+          "Ariel Herbert-Voss",
+          "W. Guss",
+          "Alex Nichol",
+          "Igor Babuschkin",
+          "S. Balaji",
+          "Shantanu Jain",
+          "A. Carr",
+          "Jan Leike",
+          "Josh Achiam",
+          "Vedant Misra",
+          "Evan Morikawa",
+          "Alec Radford",
+          "M. Knight",
+          "Miles Brundage",
+          "M. Murati",
+          "Katie Mayer",
+          "Peter Welinder",
+          "Bob McGrew",
+          "Dario Amodei",
+          "Sam McCandlish",
+          "I. Sutskever",
+          "Wojciech Zaremba"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2010.05680",
+      "identity_tokens": [
+        "id:arXiv:2010.05680",
+        "title:turbotransformers an efficient gpu serving system for transformer models",
+        "url:https://www.semanticscholar.org/paper/0c775d7ed34fb4690b4291490778649ae75c48d2"
+      ],
+      "record": {
+        "title": "TurboTransformers: an efficient GPU serving system for transformer models",
+        "source_url": "https://www.semanticscholar.org/paper/0c775d7ed34fb4690b4291490778649ae75c48d2",
+        "year": 2020,
+        "published": "2020-10-09",
+        "abstract": "The transformer is the most critical algorithm innovation of the Nature Language Processing (NLP) field in recent years. Unlike the Recurrent Neural Network (RNN) models, transformers are able to process on dimensions of sequence lengths in parallel, therefore leads to better accuracy on long sequences. However, efficient deployments of them for online services in data centers equipped with GPUs are not easy. First, more computation introduced by transformer structures makes it more challenging to meet the latency and throughput constraints of serving. Second, NLP tasks take in sentences of variable length. The variability of input dimensions brings a severe problem to efficient memory management and serving optimization. To solve the above challenges, this paper designed a transformer serving system called TurboTransformers, which consists of a computing runtime and a serving framework. Three innovative features make it stand out from other similar works. An efficient parallel algorithm is proposed for GPU-based batch reduction operations, like Softmax and LayerNorm, which are major hot spots besides BLAS routines. A memory allocation algorithm, which better balances the memory footprint and allocation/free efficiency, is designed for variable-length input situations. A serving framework equipped with a new batch scheduler using dynamic programming achieves the optimal throughput on variable-length requests. The system can achieve the state-of-the-art transformer model serving performance on GPU platforms and can be seamlessly integrated into your PyTorch code with a few lines of code.",
+        "canonical_id": "arXiv:2010.05680",
+        "arxiv_id": "2010.05680",
+        "authors": [
+          "Jiarui Fang",
+          "Yang Yu",
+          "Chen-liang Zhao",
+          "Jie Zhou"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2008.12260",
+      "identity_tokens": [
+        "id:arXiv:2008.12260",
+        "title:pollux coadaptive cluster scheduling for goodputoptimized deep learning",
+        "url:https://www.semanticscholar.org/paper/2adcdc9e9e81147499e1372f992d25ac6265fb29"
+      ],
+      "record": {
+        "title": "Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning",
+        "source_url": "https://www.semanticscholar.org/paper/2adcdc9e9e81147499e1372f992d25ac6265fb29",
+        "year": 2020,
+        "published": "2020-08-27",
+        "abstract": "Pollux improves scheduling performance in deep learning (DL) clusters by adaptively co-optimizing inter-dependent factors both at the per-job level and at the cluster-wide level. Most existing schedulers will assign each job a number of resources requested by the user, which can allow jobs to use those resources inefficiently. Some recent schedulers choose job resources for users, but do so without awareness of how DL training can be re-optimized to better utilize those resources. \nPollux simultaneously considers both aspects. By observing each job during training, Pollux models how their goodput (system throughput combined with statistical efficiency) would change by adding or removing resources. Leveraging these models, Pollux dynamically (re-)assigns resources to maximize cluster-wide goodput, while continually optimizing each DL job to better utilize those resources. \nIn experiments with real DL training jobs and with trace-driven simulations, Pollux reduces average job completion time by 25%-50% relative to state-of-the-art DL schedulers, even when all jobs are submitted with ideal resource and training configurations. Based on the observation that the statistical efficiency of DL training can change over time, we also show that Pollux can reduce the cost of training large models in cloud environments by 25%.",
+        "canonical_id": "arXiv:2008.12260",
+        "arxiv_id": "2008.12260",
+        "authors": [
+          "Aurick Qiao",
+          "Willie Neiswanger",
+          "Qirong Ho",
+          "Hao Zhang",
+          "G. Ganger",
+          "Eric P. Xing"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2006.02464",
+      "identity_tokens": [
+        "id:arXiv:2006.02464",
+        "title:serving dnns like clockwork performance predictability from the bottom up",
+        "url:https://www.semanticscholar.org/paper/c52ad09fac69f320e53f4e167bca9fc668434dce"
+      ],
+      "record": {
+        "title": "Serving DNNs like Clockwork: Performance Predictability from the Bottom Up",
+        "source_url": "https://www.semanticscholar.org/paper/c52ad09fac69f320e53f4e167bca9fc668434dce",
+        "year": 2020,
+        "published": "2020-06-01",
+        "abstract": "Machine learning inference is becoming a core building block for interactive web applications. As a result, the underlying model serving systems on which these applications depend must consistently meet low latency targets. Existing model serving architectures use well-known reactive techniques to alleviate common-case sources of latency, but cannot effectively curtail tail latency caused by unpredictable execution times. Yet the underlying execution times are not fundamentally unpredictable-on the contrary we observe that inference using Deep Neural Network (DNN) models has deterministic performance. Here, starting with the predictable execution times of individual DNN inferences, we adopt a principled design methodology to successively build a fully distributed model serving system that achieves predictable end-to-end performance. We evaluate our implementation, Clockwork, using production trace workloads, and show that Clockwork can support thousands of models while simultaneously meeting 100 ms latency targets for 99.997% of requests. We further demonstrate that Clockwork exploits predictable execution times to achieve tight request-level service-level objectives (SLOs) as well as a high degree of request-level performance isolation.",
+        "canonical_id": "arXiv:2006.02464",
+        "arxiv_id": "2006.02464",
+        "authors": [
+          "A. Gujarati",
+          "Reza Karimi",
+          "Safya Alzayat",
+          "Wei Hao",
+          "Antoine Kaufmann",
+          "Ymir Vigfusson",
+          "Jonathan Mace"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2003.12203",
+      "identity_tokens": [
+        "id:arXiv:2003.12203",
+        "title:ftcnn algorithmbased fault tolerance for convolutional neural networks",
+        "url:https://www.semanticscholar.org/paper/de573320ad3947af18cb6d52e85d43a7727ed81c"
+      ],
+      "record": {
+        "title": "FT-CNN: Algorithm-Based Fault Tolerance for Convolutional Neural Networks",
+        "source_url": "https://www.semanticscholar.org/paper/de573320ad3947af18cb6d52e85d43a7727ed81c",
+        "year": 2020,
+        "published": "2020-03-27",
+        "abstract": "Convolutional neural networks (CNNs) are becoming more and more important for solving challenging and critical problems in many fields. CNN inference applications have been deployed in safety-critical systems, which may suffer from soft errors caused by high-energy particles, high temperature, or abnormal voltage. Of critical importance is ensuring the stability of the CNN inference process against soft errors. Traditional fault tolerance methods are not suitable for CNN inference because error-correcting code is unable to protect computational components, instruction duplication techniques incur high overhead, and existing algorithm-based fault tolerance (ABFT) techniques cannot protect all convolution implementations. In this article, we focus on how to protect the CNN inference process against soft errors as efficiently as possible, with the following three contributions. (1) We propose several systematic ABFT schemes based on checksum techniques and analyze their fault protection ability and runtime thoroughly. Unlike traditional ABFT based on matrix-matrix multiplication, our schemes support any convolution implementations. (2) We design a novel workflow integrating all the proposed schemes to obtain a high detection/correction ability with limited total runtime overhead. (3) We perform our evaluation using ImageNet with well-known CNN models including AlexNet, VGG-19, ResNet-18, and YOLOv2. Experimental results demonstrate that our implementation can handle soft errors with very limited runtime overhead (4%<inline-formula><tex-math notation=\"LaTeX\">$\\sim$</tex-math><alternatives><mml:math><mml:mo>∼</mml:mo></mml:math><inline-graphic xlink:href=\"zhao-ieq1-3043449.gif\"/></alternatives></inline-formula>8% in both error-free and error-injected situations).",
+        "canonical_id": "arXiv:2003.12203",
+        "arxiv_id": "2003.12203",
+        "authors": [
+          "Kai Zhao",
+          "Sheng Di",
+          "Sihuan Li",
+          "Xin Liang",
+          "Yujia Zhai",
+          "Jieyang Chen",
+          "Kaiming Ouyang",
+          "F. Cappello",
+          "Zizhong Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3341301.3359646",
+      "identity_tokens": [
+        "id:DOI:10.1145/3341301.3359646",
+        "title:pipedream generalized pipeline parallelism for dnn training",
+        "url:https://www.semanticscholar.org/paper/3fd7c9ba742dd2b435afa75217847e5087e2f2a8"
+      ],
+      "record": {
+        "title": "PipeDream: generalized pipeline parallelism for DNN training",
+        "source_url": "https://www.semanticscholar.org/paper/3fd7c9ba742dd2b435afa75217847e5087e2f2a8",
+        "year": 2019,
+        "published": "2019-10-27",
+        "abstract": "DNN training is extremely time-consuming, necessitating efficient multi-accelerator parallelization. Current approaches to parallelizing training primarily use intra-batch parallelization, where a single iteration of training is split over the available workers, but suffer from diminishing returns at higher worker counts. We present PipeDream, a system that adds inter-batch pipelining to intra-batch parallelism to further improve parallel training throughput, helping to better overlap computation with communication and reduce the amount of communication when possible. Unlike traditional pipelining, DNN training is bi-directional, where a forward pass through the computation graph is followed by a backward pass that uses state and intermediate data computed during the forward pass. Naïve pipelining can thus result in mismatches in state versions used in the forward and backward passes, or excessive pipeline flushes and lower hardware efficiency. To address these challenges, PipeDream versions model parameters for numerically correct gradient computations, and schedules forward and backward passes of different minibatches concurrently on different workers with minimal pipeline stalls. PipeDream also automatically partitions DNN layers among workers to balance work and minimize communication. Extensive experimentation with a range of DNN tasks, models, and hardware configurations shows that PipeDream trains models to high accuracy up to 5.3X faster than commonly used intra-batch parallelism techniques.",
+        "canonical_id": "DOI:10.1145/3341301.3359646",
+        "doi": "10.1145/3341301.3359646",
+        "authors": [
+          "D. Narayanan",
+          "A. Harlap",
+          "Amar Phanishayee",
+          "Vivek Seshadri",
+          "Nikhil R. Devanur",
+          "G. Ganger",
+          "Phillip B. Gibbons",
+          "M. Zaharia"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
+      "identity_tokens": [
+        "id:SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
+        "title:gpipe efficient training of giant neural networks using pipeline parallelism",
+        "url:https://www.semanticscholar.org/paper/d79a26226393f687ddbc375e32055b40b8ad8d38"
+      ],
+      "record": {
+        "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism",
+        "source_url": "https://www.semanticscholar.org/paper/d79a26226393f687ddbc375e32055b40b8ad8d38",
+        "year": 2018,
+        "published": "2018-11-16",
+        "abstract": null,
+        "canonical_id": "SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
+        "authors": [
+          "Yanping Huang",
+          "Yonglong Cheng",
+          "Dehao Chen",
+          "HyoukJoong Lee",
+          "Jiquan Ngiam",
+          "Quoc V. Le",
+          "Z. Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "identity_tokens": [
+        "id:SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+        "title:legoos a disseminated distributed os for hardware resource disaggregation",
+        "url:https://www.semanticscholar.org/paper/7945684818786fcb32cf92bace2566d7d6bc8945"
+      ],
+      "record": {
+        "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation",
+        "source_url": "https://www.semanticscholar.org/paper/7945684818786fcb32cf92bace2566d7d6bc8945",
+        "year": 2018,
+        "published": "2018-10-08",
+        "abstract": null,
+        "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+        "authors": [
+          "Yizhou Shan",
+          "Yutong Huang",
+          "Yilun Chen",
+          "Yiying Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1712.05889",
+      "identity_tokens": [
+        "id:arXiv:1712.05889",
+        "title:ray a distributed framework for emerging ai applications",
+        "url:https://www.semanticscholar.org/paper/f83a207712fd4cf41aded79e9e6c4345ba879128"
+      ],
+      "record": {
+        "title": "Ray: A Distributed Framework for Emerging AI Applications",
+        "source_url": "https://www.semanticscholar.org/paper/f83a207712fd4cf41aded79e9e6c4345ba879128",
+        "year": 2017,
+        "published": "2017-12-16",
+        "abstract": "The next generation of AI applications will continuously interact with the environment and learn from these interactions. These applications impose new and demanding systems requirements, both in terms of performance and flexibility. In this paper, we consider these requirements and present Ray---a distributed system to address them. Ray implements a dynamic task graph computation model that supports both the task-parallel and the actor programming models. To meet the performance requirements of AI applications, we propose an architecture that logically centralizes the system's control state using a sharded storage system and a novel bottom-up distributed scheduler. In our experiments, we demonstrate sub-millisecond remote task latencies and linear throughput scaling beyond 1.8 million tasks per second. We empirically validate that Ray speeds up challenging benchmarks and serves as both a natural and performant fit for an emerging class of reinforcement learning applications and algorithms.",
+        "canonical_id": "arXiv:1712.05889",
+        "arxiv_id": "1712.05889",
+        "authors": [
+          "Philipp Moritz",
+          "Robert Nishihara",
+          "Stephanie Wang",
+          "Alexey Tumanov",
+          "Richard Liaw",
+          "Eric Liang",
+          "William Paul",
+          "Michael I. Jordan",
+          "Ion Stoica"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1706.03762",
+      "identity_tokens": [
+        "id:arXiv:1706.03762",
+        "title:attention is all you need",
+        "url:https://www.semanticscholar.org/paper/204e3073870fae3d05bcbc2f6a8e263d9b72e776"
+      ],
+      "record": {
+        "title": "Attention is All you Need",
+        "source_url": "https://www.semanticscholar.org/paper/204e3073870fae3d05bcbc2f6a8e263d9b72e776",
+        "year": 2017,
+        "published": "2017-06-12",
+        "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.",
+        "canonical_id": "arXiv:1706.03762",
+        "arxiv_id": "1706.03762",
+        "authors": [
+          "Ashish Vaswani",
+          "Noam Shazeer",
+          "Niki Parmar",
+          "Jakob Uszkoreit",
+          "Llion Jones",
+          "Aidan N. Gomez",
+          "Lukasz Kaiser",
+          "I. Polosukhin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:2eace6acf43e28cc19876b9983d1c64c54c14c1d",
+      "identity_tokens": [
+        "id:SemanticScholar:2eace6acf43e28cc19876b9983d1c64c54c14c1d",
+        "title:shepherd serving dnns in the wild",
+        "url:https://www.semanticscholar.org/paper/2eace6acf43e28cc19876b9983d1c64c54c14c1d"
+      ],
+      "record": {
+        "title": "SHEPHERD: Serving DNNs in the Wild",
+        "source_url": "https://www.semanticscholar.org/paper/2eace6acf43e28cc19876b9983d1c64c54c14c1d",
+        "year": 2023,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "SemanticScholar:2eace6acf43e28cc19876b9983d1c64c54c14c1d",
+        "authors": [
+          "Hong Zhang",
+          "Yupeng Tang",
+          "Anurag Khandelwal",
+          "Ion Stoica"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.48550/arxiv.2210.14826",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2210.14826",
+        "id:arXiv:2210.14826",
+        "title:a case for disaggregation of ml data processing",
+        "url:https://www.semanticscholar.org/paper/51ebd5fde1c445ac9df3ed30c594702f7d2740a0"
+      ],
+      "record": {
+        "title": "A case for disaggregation of ML data processing",
+        "source_url": "https://www.semanticscholar.org/paper/51ebd5fde1c445ac9df3ed30c594702f7d2740a0",
+        "year": 2022,
+        "published": null,
+        "abstract": null,
+        "canonical_id": "DOI:10.48550/arXiv.2210.14826",
+        "doi": "10.48550/arXiv.2210.14826",
+        "authors": [
+          "Andrew Audibert",
+          "Yang Chen",
+          "Dan Graur",
+          "A. Klimovic",
+          "Jiří Šimša",
+          "C. A. Thekkath"
+        ]
+      }
+    },
+    {
+      "primary_identity": "title:triton inference server an optimized cloud and edge inferencing solution",
+      "identity_tokens": [
+        "title:triton inference server an optimized cloud and edge inferencing solution"
+      ],
+      "record": {
+        "title": "Triton inference server: An optimized cloud and edge inferencing solution",
+        "source_url": null,
+        "year": 2019,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:nvidia corporation",
+      "identity_tokens": [
+        "title:nvidia corporation"
+      ],
+      "record": {
+        "title": "NVIDIA Corporation",
+        "source_url": null,
+        "year": 2019,
+        "published": null,
+        "abstract": null
+      }
+    },
+    {
+      "primary_identity": "title:fundamentals of queueing theory volume 399",
+      "identity_tokens": [
+        "title:fundamentals of queueing theory volume 399"
+      ],
+      "record": {
+        "title": "Fundamentals of queueing theory , volume 399",
+        "source_url": null,
+        "year": 2018,
+        "published": null,
+        "abstract": null
+      }
+    }
+  ],
+  "receipt": "sha256:ee2017e84b9243086ba1560d3d5a9c6454a3b35d839cfe69af02864c93f8e230",
+  "next_action": "Candidate evaluation is allowed. A Discovery preload supplied the first provider window; the cached records were re-filtered against this run's current identity snapshot and any shortfall was topped up from the same fixed source. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

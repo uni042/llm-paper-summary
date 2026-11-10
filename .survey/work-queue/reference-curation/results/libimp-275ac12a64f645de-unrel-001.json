@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-275ac12a64f645de-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.04519",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.04519",
+    "identity_tokens": [
+      "arXiv:2310.04519"
+    ],
+    "reason": "The pruning is an interpretability preprocessing step and is stated not to affect inference behavior.",
+    "first_checked_at": "2026-10-14T06:36:17+00:00",
+    "last_checked_at": "2026-10-14T06:36:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+      "papers/inference/99-other-inference-systems/2021-2102.08124-accelerated-sparse-neural-training-a-provable-and-efficient-method-to-fi.md",
+      "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+    ],
+    "title": "SPADE: Sparsity-Guided Debugging for Deep Neural Networks"
+  },
+  "processed_at": "2026-10-14T06:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-275ac12a64f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

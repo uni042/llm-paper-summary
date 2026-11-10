@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-8c38c343636297fa-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2602.02454",
+  "reason": "World-Gymnast uses temporal KV caching to avoid recomputing full history and reports 10x lower rollout time for 20 parallel 40-frame trajectories. This is robot world-model training throughput, not LLM serving; investigate whether the cache technique transfers.",
+  "title": "World-Gymnast: Training Robots with Reinforcement Learning in a World Model",
+  "identity_tokens": [
+    "arXiv:2602.02454"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8c38c3436362",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b9e30f7dd1cfb174-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/siu71813.2026.11636828",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/siu71813.2026.11636828",
+    "identity_tokens": [
+      "DOI:10.1109/siu71813.2026.11636828"
+    ],
+    "reason": "Topic is directly relevant, but quantization setup, results and limits cannot be checked from the abstract alone.",
+    "first_checked_at": "2026-10-05T11:29:40+00:00",
+    "last_checked_at": "2026-10-05T11:29:40+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.04643-qaq-quality-adaptive-quantization-for-llm-kv-cache.md"
+    ],
+    "title": "LLM Inference Performance Optimization in Limited-Resource Environments"
+  },
+  "processed_at": "2026-10-05T11:29:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b9e30f7dd1cf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

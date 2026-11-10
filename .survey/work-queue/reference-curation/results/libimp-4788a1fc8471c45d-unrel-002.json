@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4788a1fc8471c45d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.08527",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.08527",
+    "identity_tokens": [
+      "arXiv:2410.08527"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.08527. Abstract summary: Precise estimation of downstream performance in large language models (LLMs) prior to training is essential for guiding their development process. Scaling laws analysis utilizes the statistics of a series of significantly smaller sampling language models (LMs) to predict the performance of the target LLM. For downstream performance predic Out of scope: Scaling laws predict downstream performance before training; model-development planning, not inference.",
+    "first_checked_at": "2026-10-05T12:45:08+00:00",
+    "last_checked_at": "2026-10-05T12:45:08+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md"
+    ],
+    "title": "Scaling Laws for Predicting Downstream Performance in LLMs"
+  },
+  "processed_at": "2026-10-05T12:45:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4788a1fc8471",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

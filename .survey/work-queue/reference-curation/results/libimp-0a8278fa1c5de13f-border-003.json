@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0a8278fa1c5de13f-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.11751",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.11751",
+    "identity_tokens": [
+      "arXiv:2503.11751"
+    ],
+    "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 reWordBench evaluates reward-model robustness under transformed inputs and proposes robustness improvements. Its experiments measure reward robustness rather than model routing, serving, or inference-cost gains; the generic inference-systems lineage is weak after full-text review.",
+    "first_checked_at": "2026-10-06T16:56:00+00:00",
+    "last_checked_at": "2026-10-06T16:56:00+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "reWordBench: Benchmarking and Improving the Robustness of Reward Models with Transformed Inputs"
+  },
+  "processed_at": "2026-10-06T16:56:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0a8278fa1c5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

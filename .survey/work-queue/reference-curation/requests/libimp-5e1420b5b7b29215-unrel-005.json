@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5e1420b5b7b29215-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.3390/electronics15184114",
+  "reason": "Multivariate time series forecasting requires modeling both hierarchical temporal dynamics and complex inter-variable dependencies, a dual requirement that often degrades predictive performance and incurs high computational costs in standard Transformer architectures. Unlike current channel-independent models that ignore vital cross-variable synergies, or dense-attention frameworks that suffer from quadratic computational noise, our approach extracts structurally sparse dependencies. To address these specific limitations, this study introduces the FCA-Transformer. The proposed framework integrates a Feature Pyramid Network (FPN) to isolate macroscopic trends from high-frequency localized fluctuations via hierarchical downsampling. Concurrently, a structured Transformer-based Cross-Attention (TCA) mechanism employs Dimensional Segmentation with Weighting (DSW) and a Two-Stage Attention (TSA) layer to map topological variable interactions, effectively extracting robust cross-variable pathways and mitigating distributional noise. Extensive empirical evaluations across three real-world multivariate benchmarks (ETTh1, Electricity, and Exchange Rate) demonstrate that the FCA-Transformer achieves an average reduction of up to 4.39% in MSE and 5.11% in MAE compared to leading baselines. These findings indicate that the proposed architecture successfully reconciles multi-scale feature extraction with lightweight dependency modeling, enhancing structural generalization and providing a scalable framework for real-time temporal analysis in complex industrial environments.",
+  "title": "FCA-Transformer: A Feature Pyramid Time Series Forecasting Model Driven by Cross-Attention Mechanism",
+  "identity_tokens": [
+    "DOI:10.3390/electronics15184114"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+    "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5e1420b5b7b2",
+  "source_precheck_request_id": null
+}

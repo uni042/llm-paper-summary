@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-780cceb76da14d03-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.11356",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.11356",
+    "identity_tokens": [
+      "arXiv:2607.11356"
+    ],
+    "reason": "一次要旨はindustrial vision model inference framework比較でlanguage model servingではない。",
+    "first_checked_at": "2026-10-05T10:26:01+00:00",
+    "last_checked_at": "2026-10-05T10:26:01+00:00",
+    "linked_from": [
+      "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+    ],
+    "title": "Benchmarking Edge Inference Strategies for Deep Learning Models in Industrial Machine Vision"
+  },
+  "processed_at": "2026-10-05T10:26:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-780cceb76da1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

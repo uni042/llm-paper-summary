@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e5d2064606cfb173-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3745756.3809201",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3745756.3809201",
+    "identity_tokens": [
+      "DOI:10.1145/3745756.3809201"
+    ],
+    "reason": "carbon-aware edge ML system designの実演はvision visitor detectionであり、LLM serving/推論最適化ではない。",
+    "first_checked_at": "2026-10-05T02:45:28+00:00",
+    "last_checked_at": "2026-10-05T02:45:28+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md"
+    ],
+    "title": "A Greener Edge: A Framework on Carbon-aware Edge ML System Design"
+  },
+  "processed_at": "2026-10-05T02:45:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e5d2064606cf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

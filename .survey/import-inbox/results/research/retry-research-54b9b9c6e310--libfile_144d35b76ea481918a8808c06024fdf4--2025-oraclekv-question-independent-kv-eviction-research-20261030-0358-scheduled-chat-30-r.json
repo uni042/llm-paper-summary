@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "dc3d31577796d8b7527a80b9c1a93f997a9c25e806601ebccfd6b23d94b97e33",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-54b9b9c6e310--libfile_144d35b76ea481918a8808c06024fdf4--2025-oraclekv-question-independent-kv-eviction-research-20261030-0358-scheduled-chat-30-r01.md",
+  "canonical_id": "SemanticScholar:285c703584d797e71885a6cf3ce87864bbba8ab9",
+  "worker_completed_at": "2026-10-30T04:12:00+09:00",
+  "worker_run_key": "20261030-0358-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6035,
+    "body_paragraphs": 35,
+    "method_chars": 1193,
+    "method_paragraphs": 7,
+    "evaluation_chars": 142,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 142 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 142 < 500"
+  ],
+  "processed_at": "2026-10-30T02:41:53+00:00"
+}

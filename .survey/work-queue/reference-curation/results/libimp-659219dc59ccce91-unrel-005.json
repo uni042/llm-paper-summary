@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-659219dc59ccce91-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.10720",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.10720",
+    "identity_tokens": [
+      "arXiv:2511.10720"
+    ],
+    "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+    "first_checked_at": "2026-10-06T04:59:45+00:00",
+    "last_checked_at": "2026-10-06T04:59:45+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md"
+    ],
+    "title": "PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization"
+  },
+  "processed_at": "2026-10-06T04:59:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-659219dc59cc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7bbd322afa5d01d-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s00521-026-12346-y",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s00521-026-12346-y",
+    "identity_tokens": [
+      "DOI:10.1007/s00521-026-12346-y"
+    ],
+    "reason": "Accurate prediction of Type 2 and Gestational Diabetes is critical for timely intervention, personalized treatment, and effective disease management. The main purpose of this study is to develop a robust diabetes prediction framework capable of handling heterogeneous and imbalanced clinical data while improving minority-class detection. An enhanced Mixture of Experts (MoE) framework for diabetes prediction is proposed to improve classification performance under class imbalance conditions. The model employs a sparse gating mechanism that activates only the top-K most relevant experts for each sample, enabling efficient expert specialization and better generalization across diverse patient subgroups. To address expert workload imbalance, an innovative auxiliary loss based on the Gini index is introduced, which promotes balanced expert utilization with lower computational complexity than traditional coefficient-of-variation-based losses. Furthermore, an asymmetric focal loss is incorporated to mitigate class imbalance by reducing the dominance of negative samples during training and improving recall for diabetic cases. Experimental evaluations on two publicly available datasets for Type 2 and Gestational Diabetes show that the proposed MoE framework consistently outperforms conventional machine learning methods in terms of F1-score, recall, and precision–recall balance. These results show that the proposed framework improves diabetes prediction performance and provides a reliable tool for clinical decision support in imbalanced medical datasets.",
+    "first_checked_at": "2026-10-05T09:18:01+00:00",
+    "last_checked_at": "2026-10-05T09:18:01+00:00",
+    "linked_from": [
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "A mixture of experts approach for enhanced diabetes detection"
+  },
+  "processed_at": "2026-10-05T09:18:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7bbd322afa5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

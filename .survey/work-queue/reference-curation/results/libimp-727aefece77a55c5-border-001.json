@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-727aefece77a55c5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.11243",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.11243",
+    "identity_tokens": [
+      "arXiv:2602.11243"
+    ],
+    "reason": "StructMemEvalは取引台帳、TODO、木構造などの記憶構造をエージェントが形成できるかを評価する。長期記憶フレームワークの機能には関係するが、KV圧縮・メモリ階層配置・サービング遅延の最適化が主題ではないため境界候補。",
+    "first_checked_at": "2026-10-28T21:47:43+00:00",
+    "last_checked_at": "2026-10-28T21:47:43+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Evaluating Memory Structure in LLM Agents"
+  },
+  "processed_at": "2026-10-28T21:47:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-727aefece77a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

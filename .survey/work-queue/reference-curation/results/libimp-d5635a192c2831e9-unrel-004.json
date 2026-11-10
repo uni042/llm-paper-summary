@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5635a192c2831e9-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.18400",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.18400",
+    "identity_tokens": [
+      "arXiv:2606.18400"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.18400. Abstract summary: Large foundation models deployed on third-party and shared accelerator infrastructure face a practical risk of model exfiltration that existing defenses do not fully address. In common serving deployments, model providers control the VM or bare-metal serving stack but not the surrounding hardware substrate. The host to GPU inter Out of scope: GPU memory-layout obfuscation for model-exfiltration defense.",
+    "first_checked_at": "2026-10-05T12:02:46+00:00",
+    "last_checked_at": "2026-10-05T12:02:46+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md"
+    ],
+    "title": "CloakLM: Obfuscating GPU Memory Layout to Mitigate Model Ex-filtration for Serving"
+  },
+  "processed_at": "2026-10-05T12:02:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5635a192c28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

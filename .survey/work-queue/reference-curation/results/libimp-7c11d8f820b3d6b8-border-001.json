@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c11d8f820b3d6b8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.04678",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.04678",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.04678",
+      "arXiv:2512.04678"
+    ],
+    "reason": "一次要旨は動画拡散モデルのストリーミング生成でsliding-window注意とEMA-Sinkによる固定長トークン更新を使い、単一H100で23.1FPSの動画生成を報告する。状態維持・注意窓の制御は推論メモリ研究に接するが、主対象は動画生成拡散モデルと学習蒸留であり自己回帰LLMのKVキャッシュ/サービング改善は直接評価されない。",
+    "first_checked_at": "2026-10-22T15:36:18+00:00",
+    "last_checked_at": "2026-10-22T15:36:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation"
+  },
+  "processed_at": "2026-10-22T15:36:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c11d8f820b3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

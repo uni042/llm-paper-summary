@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2ff7504eb0ab3966-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.02277",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.02277",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2310.02277",
+      "arXiv:2310.02277"
+    ],
+    "reason": "LLM pruningの限界を実証する圧縮関連研究だが、新しい推論高速化手法よりも小振幅重み削除が難しいタスクの知識を不可逆に損なうという分析が主貢献。",
+    "first_checked_at": "2026-10-03T11:02:04+00:00",
+    "last_checked_at": "2026-10-03T11:02:04+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md"
+    ],
+    "title": "Junk DNA Hypothesis: Pruning Small Pre-Trained Weights Irreversibly and Monotonically Impairs \"Difficult\" Downstream Tasks in LLMs"
+  },
+  "processed_at": "2026-10-03T11:02:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2ff7504eb0ab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1993a8ea7e4fce53-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.3390/make8090269",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.3390/make8090269",
+    "identity_tokens": [
+      "DOI:10.3390/make8090269"
+    ],
+    "reason": "The packet provides a primary abstract describing decoder KV-head localization/pruning and inference memory/throughput measurements, but official MDPI HTML/PDF endpoints were inaccessible (429 / URL inaccessible); full-text method, evaluation scope, and caveats remain unverified.",
+    "first_checked_at": "2026-10-05T07:14:47+00:00",
+    "last_checked_at": "2026-10-05T07:14:47+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "STRATA-HeadQuotient: Functional Localization of One Quarter of Global KV Heads with Typed Predicate-Graph Computation at 8192-Token Context"
+  },
+  "processed_at": "2026-10-05T07:14:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1993a8ea7e4f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

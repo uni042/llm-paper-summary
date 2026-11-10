@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f719df3f9acf117-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.29067",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.29067",
+    "identity_tokens": [
+      "arXiv:2609.29067"
+    ],
+    "reason": "Tile-based programming models, such as Triton and cuTile, aim to simplify high-performance kernel development, but their practical performance, tuning behavior, and usability remain difficult to compare systematically. We present TileBench, a controlled benchmark for evaluating Triton and cuTile on NVIDIA B200 GPUs under matched operator semantics and comparable implementation structures. TileBench contains 45 operators covering diverse AI-kernel patterns and memory/computation behaviors. Each task provides a PyTor",
+    "first_checked_at": "2026-10-05T05:38:57+00:00",
+    "last_checked_at": "2026-10-05T05:38:57+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "TileBench: A Controlled Benchmark for Performance Evaluation and Bottleneck Diagnosis of Tile-Based Programming Models"
+  },
+  "processed_at": "2026-10-05T05:38:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f719df3f9ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

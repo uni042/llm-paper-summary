@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e025a4e5957ee17b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.03355",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.03355",
+    "identity_tokens": [
+      "arXiv:2410.03355"
+    ],
+    "reason": "一次要旨は画像生成の視覚的自己回帰モデルを高速化する研究で、言語モデル推論対象ではない。",
+    "first_checked_at": "2026-10-05T12:39:24+00:00",
+    "last_checked_at": "2026-10-05T12:39:24+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md"
+    ],
+    "title": "LANTERN: Accelerating Visual Autoregressive Models with Relaxed Speculative Decoding"
+  },
+  "processed_at": "2026-10-05T12:39:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e025a4e5957e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

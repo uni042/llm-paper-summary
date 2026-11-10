@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-81bd55b6a675dd2b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.14690",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.14690",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.14690",
+      "arXiv:2604.14690",
+      "title:switching efficiency a novel framework for dissecting ai data center network efficiency"
+    ],
+    "reason": "arXiv一次要旨を確認。対象はLLMの学習時All-to-All通信を含むAIデータセンタのネットワークスイッチ効率であり、計算に寄与するデータ量をスイッチ容量で割った指標をData Efficiency、Routing Efficiency、Port Utilizationへ分解する。3D-TorusとRail-Optimizedネットワーク、MoE学習トラフィックを比較するネットワーク計測枠組みで、LLM推論・サービング、decode/prefill、KVキャッシュ、推論カーネルの性能改善を直接評価・提案していない。現行サーベイの推論最終適用先が確認できないためunrelatedとする。",
+    "first_checked_at": "2026-10-27T22:45:59+00:00",
+    "last_checked_at": "2026-10-27T22:45:59+00:00",
+    "linked_from": [],
+    "title": "Switching Efficiency: A Novel Framework for Dissecting AI Data Center Network Efficiency"
+  },
+  "processed_at": "2026-10-27T22:46:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-81bd55b6a675",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

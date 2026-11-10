@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4766f46ec6649edb-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3789240.3829200",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3789240.3829200",
+    "identity_tokens": [
+      "DOI:10.1145/3789240.3829200"
+    ],
+    "reason": "No body-level method, evaluation conditions, or limitations could be verified, so it cannot be advanced from the abstract alone.",
+    "first_checked_at": "2026-10-05T03:21:46+00:00",
+    "last_checked_at": "2026-10-05T03:21:46+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
+      "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
+    ],
+    "title": "Connex: Endpoint Mobility Primitives for Dynamic LLM Serving"
+  },
+  "processed_at": "2026-10-05T03:21:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4766f46ec664",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

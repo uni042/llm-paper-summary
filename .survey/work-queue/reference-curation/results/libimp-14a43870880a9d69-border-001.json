@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-14a43870880a9d69-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.24110",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.24110",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.24110",
+      "arXiv:2604.24110"
+    ],
+    "reason": "一次要旨では、4エージェントの教育支援サービスITASでGemini 2.5 Flash/Vertex AIの3料金・処理量階層を、同時利用者最大50人・3000超の要求で測定する。遅延、同時実行、容量飽和と費用の実測はLLMサービング評価に近いが、対象は教育アプリの既存APIプラン選択であり、汎用サービングの新しいスケジューラやカーネル、キャッシュ制御を提案していない。直接的な基盤技術貢献が薄いため境界扱い。",
+    "first_checked_at": "2026-10-06T14:21:58+00:00",
+    "last_checked_at": "2026-10-23T15:07:09+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Latency and Cost of Multi-Agent Intelligent Tutoring at Scale"
+  },
+  "processed_at": "2026-10-23T15:07:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-14a43870880a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

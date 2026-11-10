@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1a2aa53568a3738a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1907.09190",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1907.09190",
+    "identity_tokens": [
+      "DOI:10.18653/v1/p19-1346",
+      "arXiv:1907.09190"
+    ],
+    "reason": "long-form question answering dataset/modeling benchmarkを構築するNLP task研究で、LLM inference systemの速度・メモリ・サービングを最適化しない。",
+    "first_checked_at": "2026-10-04T21:54:26+00:00",
+    "last_checked_at": "2026-10-04T21:54:26+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.13510-intelligent-router-for-llm-workloads-improving-performance-through-workload-aware-routing.md"
+    ],
+    "title": "ELI5: Long Form Question Answering"
+  },
+  "processed_at": "2026-10-04T21:54:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1a2aa53568a3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

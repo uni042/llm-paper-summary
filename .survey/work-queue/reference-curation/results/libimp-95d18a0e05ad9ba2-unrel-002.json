@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95d18a0e05ad9ba2-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.15186",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.15186",
+    "identity_tokens": [
+      "arXiv:2407.15186"
+    ],
+    "reason": "With the development of the Large Language Models (LLMs), a large range of LLM-based Text-to-SQL(Text2SQL) methods have emerged. This survey provides a comprehensive review of LLM-based Text2SQL studies. We first enumerate classic benchmarks and evaluation metrics. For the two mainstream methods, prompt engineering and finetuning, we introduce a comprehensive taxonomy and offer practical insights into each subcategory. We present an overall analysis of the above methods and various models evaluated on well-known datasets and extract some characteristics. Finally, we discuss the challenges and future directions in this field.",
+    "first_checked_at": "2026-10-06T13:16:35+00:00",
+    "last_checked_at": "2026-10-06T13:16:35+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+    ],
+    "title": "A Survey on Employing Large Language Models for Text-to-SQL Tasks"
+  },
+  "processed_at": "2026-10-06T13:16:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95d18a0e05ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-1132-scheduled-chat-30/r01",
+  "reference_main_sha": "1ac236c6af38a9fedcae20d15d32d8d7c0092f7d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.25792",
+      "identity_tokens": [
+        "arXiv:2607.25792",
+        "DOI:10.48550/arXiv.2607.25792"
+      ],
+      "title": "The Model in the Middle: Toward AI-Native Real-Time Communication",
+      "reason": "全二重の音声・映像対話において、モデルを状態を持つ通信処理中継点と捉え、Confluxでネットワーク状態に応じた推論スケジューリング、実行状況に応じた転送優先度、再生バッファ制御を段階横断で協調させる。一次要旨は通信品質劣化時の応答遅延と再生期限順守の初期改善を報告。推論サービングの実行時スケジューラに直接関係するためaccept。ただし著者は構築途上と明記しており、成熟した実運用性能や定量的倍率は要旨から確定できない。",
+      "source_url": "https://arxiv.org/abs/2607.25792",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T11:37:11+09:00",
+      "last_checked_at": "2026-10-31T11:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 205,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.29437",
+      "identity_tokens": [
+        "arXiv:2603.29437",
+        "DOI:10.48550/arXiv.2603.29437"
+      ],
+      "title": "SeGPruner: Semantic-Geometric Visual Token Pruner for 3D Question Answering",
+      "reason": "多視点画像から3D QAを行うVLMで、Saliency-aware Token Selectorが質問に関係する物体の重要視覚トークンを保持し、Geometry-aware Token Diversifierが3D幾何距離を使って空間的に分散したトークンを補完する。ScanQA/OpenEQAの一次要旨は視覚トークン予算91%減、推論遅延86%減と報告。入力トークン圧縮がLLM推論時の計算・遅延を直接削減するためaccept。3D QAの多視点設定に限定した報告であり一般的なLLM推論全体への倍率ではない。",
+      "source_url": "https://arxiv.org/abs/2603.29437",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T11:37:11+09:00",
+      "last_checked_at": "2026-10-31T11:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32057",
+      "identity_tokens": [
+        "arXiv:2610.32057",
+        "DOI:10.48550/arXiv.2610.32057"
+      ],
+      "title": "HyScale: Scaling Long-Context Training for Learned Sparse Attention",
+      "reason": "一次要旨では、HyTopKによる学習時のtop-k選択表の非実体化と、forward時の選択結果を再計算時に再利用するselection replayを提案。GLM-5.1の100万トークン学習を512基のH20 GPUでMegatron-LM比2.07倍高速化したという報告は学習処理であり、推論時の実行・サービング最適化の直接的な評価はない。現行の推論中心スコープではunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.32057",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T11:37:11+09:00",
+      "last_checked_at": "2026-10-31T11:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 498,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3734498",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3734498"
+      ],
+      "title": "PRESAGE: Uncertainty-Aware Predictive Elastic Scheduling for Cloud Analytics and GenAI Inference",
+      "reason": "IEEE出版社一次要旨で、時系列基盤モデルを多変量クラウド負荷へ適応させ、過去の類似時系列検索とconformalized quantilesを組み合わせた確率予測を、費用・SLO制約付きの不確実性考慮RLスケジューラに渡す。GenAIのprefill/decode資源を分けて割当て、Azure LLM推論トレース、vLLM実行環境、8-GPU Kubernetes試験環境を評価に含む。予測だけでなく実行時サービングの資源制御に直接貢献するためaccept。要旨の「最大28% CRPS改善」は予測精度であり推論レイテンシ改善と混同しない。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11694384/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T11:38:13+09:00",
+      "last_checked_at": "2026-10-31T11:38:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 218,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.3390/electronics15143179",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15143179"
+      ],
+      "title": "Runtime-Controlled Evaluation of Speculative Decoding Methods",
+      "reason": "出版社の一次要旨で、SpecLLMは投機的復号8方式を共通スケジューラ、バッチング、KVキャッシュ、CUDA Graph、バックエンドの条件下で比較するプラグイン式評価基盤を提案。採用トークン数τと相対ステップ費用cを分離し、throughput倍率S=τ/cで分析。バッチサイズとオンライン負荷で方式の順位が変わり、長い採用長が必ずしも低遅延に直結しないことを確認。推論実行基盤とベンチマークの直接研究としてaccept。ただし異なるランタイム間の普遍的な公平性を保証するものではない。",
+      "source_url": "https://www.mdpi.com/2079-9292/15/14/3179",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T11:38:13+09:00",
+      "last_checked_at": "2026-10-31T11:38:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 232,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

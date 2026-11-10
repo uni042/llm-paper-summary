@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11663a9e8bff17df-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.19178",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.19178",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.19178",
+      "arXiv:2601.19178"
+    ],
+    "reason": "推薦システムのユーザー間でKVを共有し、履歴KVを元サイズ0.8%まで圧縮するが、評価は系列推薦モデルに限定される。生成LLMのKVキャッシュ共有・推論サービングへの直接評価はない。",
+    "first_checked_at": "2026-10-30T11:54:37+00:00",
+    "last_checked_at": "2026-10-30T11:54:37+00:00",
+    "linked_from": [],
+    "title": "CollectiveKV: Decoupling and Sharing Collaborative Information in Sequential Recommendation"
+  },
+  "processed_at": "2026-10-30T11:54:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11663a9e8bff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

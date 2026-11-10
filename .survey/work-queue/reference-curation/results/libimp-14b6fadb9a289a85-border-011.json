@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-14b6fadb9a289a85-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.04786",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.04786",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.04786",
+      "arXiv:2507.04786"
+    ],
+    "reason": "NCCL通信プロトコルの実測解析は分散LLM通信最適化の基盤価値が高いが、LLM専用の新規推論システム手法ではない。",
+    "first_checked_at": "2026-09-27T08:02:37+09:00",
+    "last_checked_at": "2026-09-30T09:48:18+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Demystifying NCCL: An In-depth Analysis of GPU Communication Protocols and Algorithms"
+  },
+  "processed_at": "2026-09-30T09:48:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-14b6fadb9a28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54435e82ea9ebf5d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.00940",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.00940",
+    "identity_tokens": [
+      "arXiv:2610.00940"
+    ],
+    "reason": "推論時reasoningの質を改善するmulti-path planning法だが、要旨に同品質での推論compute・latency・memory削減の主張がない。",
+    "first_checked_at": "2026-10-05T03:59:33+00:00",
+    "last_checked_at": "2026-10-05T03:59:33+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "title": "ReHoPER: Receding-Horizon Planning for Enhanced Reasoning"
+  },
+  "processed_at": "2026-10-05T03:59:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54435e82ea9e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

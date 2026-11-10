@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e511c9030b59b35b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.26111",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.26111",
+    "identity_tokens": [
+      "arXiv:2605.26111"
+    ],
+    "reason": "subject-driven image generationでmultimodal capacityを高める研究で、token/computation削減の方式ではない。",
+    "first_checked_at": "2026-10-06T10:31:47+00:00",
+    "last_checked_at": "2026-10-06T10:31:47+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+    ],
+    "title": "Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation"
+  },
+  "processed_at": "2026-10-06T10:31:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e511c9030b59",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

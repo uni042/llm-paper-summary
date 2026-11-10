@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-72beaaf43ee85b9f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.03012",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.03012",
+    "identity_tokens": [
+      "arXiv:2607.03012"
+    ],
+    "reason": "The primary abstract reduces video-diffusion attention latency for text-to-video generation, outside LLM inference scope.",
+    "first_checked_at": "2026-10-05T02:41:37+00:00",
+    "last_checked_at": "2026-10-05T02:41:37+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+      "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+      "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+      "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+      "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+      "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "HyperVAttention: Efficient Sparse Attention with Spatio-Temporal Clustering for Video Diffusion"
+  },
+  "processed_at": "2026-10-05T02:41:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-72beaaf43ee8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

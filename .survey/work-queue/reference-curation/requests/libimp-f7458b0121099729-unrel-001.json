@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f7458b0121099729-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2406.18109",
+  "reason": "原著はLegionランタイム上のcuPyNumeric・Legate Sparse等の科学計算プログラムで、分散タスクとGPUカーネルを実行時に融合するDiffuseを提案する。評価対象は疎線形ソルバ・物理シミュレーション等で、128GPUの平均1.86倍は一般的な科学計算の高速化である。LLM推論・サービング・KVキャッシュ・MoE・LLM用カーネルへの最終適用や性能評価を示さないため、現行LLMシステムサーベイの収録対象外とする。",
+  "title": "Composing Distributed Computations Through Task and Kernel Fusion",
+  "identity_tokens": [
+    "arxiv:2406.18109",
+    "doi:10.1145/3669940.3707216"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7458b012109",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

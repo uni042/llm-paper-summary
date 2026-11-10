@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Messages, Not Tokens: Grounded Coresets for Faithful VLM Compression",
+      "source_url": "https://arxiv.org/abs/2608.02134",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern vision language models (VLMs) turn high-resolution images into long sequences of visual tokens. Every token traverses the language decoder and persists in its prompt KV cache, inflating inference cost and motivating aggressive visual compression. Existing score-based methods assign each token an independent importance score and retain the Top-K. However, text queries consume collective, signed attention messages from the visual population, not isolated patches. Consequently, equally sized Top-K sets can repeatedly cover one salient region, omit sparse but complementary evidence and discard information carried by the removed population. We therefore formulate faithful visual compression as constructing a compact coreset for decoder messages, and introduce our training-free Grounded Message Coreset Pruning (GMC) which jointly allocates support across query-grounded, appearance, and coordinate-aware evidence, then transports discarded states into selected representatives at their original multimodal positions before physical compaction and native attention resume. This decomposes faithful compression into two coupled components, including selecting carriers that cover the required message modes and realizing the signed population message on those carriers. We further derive bounds connecting their errors to signed-message distortion, visual innovation, and candidate-margin stability. Experiments across multiple VLM families and diverse benchmarks demonstrate strong performance, with GMC-H2 retaining 97.78% Full-relative mean capability on Qwen2.5-VL-7B using 80.2% fewer visual tokens, while GMC-L16 reaches 100.36%. Controlled interventions verify that collective support and population realization jointly drive these gains.",
+      "identifiers": [
+        "SemanticScholar:fb535f4eb54f579ff0de8567829c8f644201bcac"
+      ],
+      "semantic_scholar_id": "fb535f4eb54f579ff0de8567829c8f644201bcac",
+      "canonical_id": "arXiv:2608.02134",
+      "arxiv_id": "2608.02134",
+      "authors": [
+        "Long Qian",
+        "Jia-Qi Wei",
+        "Bing-Ke Zhu",
+        "Ying-Ying Chen",
+        "Jin-Qiao Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GMCは視覚トークン単体のTop-K重要度ではなく、テキストqueryが消費する符号付きattention messageの集団を保持するcoresetを選ぶ。query-grounded、外観、座標情報で代表トークンを選び、破棄トークンの状態を代表へ移してから物理的に縮約する。Qwen2.5-VL-7Bでは要旨上、視覚トークン80.2%削減時にFull相対平均能力97.78%を維持し、デコーダのKV負荷を減らす。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "title": "A Tight Linear Deterministic Competitive Ratio for Fully Online KV-Cache Scheduling",
+      "source_url": "https://arxiv.org/abs/2608.16944",
+      "year": 2026,
+      "published": "2026-08-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Jaillet et al. introduced a fully online model for batching nonpreemptive LLM requests under a growing KV-cache memory constraint. For total end-to-end latency they proved that every deterministic algorithm has competitive ratio Omega(sqrt(n)), while the elementary sequential upper bound is n. We close this gap. Let R_det(n,M) be the optimal deterministic ratio for exactly n requests at memory M, and let R_det(n)=sup_M R_det(n,M). For every n>= 2 we prove (n-1)/12<= R_det(n)<= n, so R_det(n)=Theta(n). The lower bound releases one memory-filling long request, observes its deterministic start time, and then releases n-1 wide one-token requests halfway through the long run. No short request can overlap the long one, whereas a hindsight schedule runs the two groups in the opposite order when useful. The hard instance uses the explicit fixed memory M=2(n-1)n. The upper bound is achieved by a uniform causal serial policy. The exact model, causality argument, both comparator branches, and quantifier order are machine-checked in Lean 4. Exact finite controls and replay commands accompany the proof.",
+      "identifiers": [
+        "SemanticScholar:18883bd8883127f637569e8b05964ca6690c4ea0"
+      ],
+      "semantic_scholar_id": "18883bd8883127f637569e8b05964ca6690c4ea0",
+      "canonical_id": "arXiv:2608.16944",
+      "arxiv_id": "2608.16944",
+      "authors": [
+        "Ian D'Ambrosio"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 77,
+        "matched_prestigious_venue": null
+      },
+      "reason": "増大するKVキャッシュのメモリ制約下で、到着するLLM要求を非プリエンプティブにバッチ処理する完全オンラインスケジューリングの理論。決定的アルゴリズムの最良競争比がTheta(n)であることを上下界(n-1)/12とnで示し、長い要求と短い要求の到着順を利用した下界をLean 4で機械検証する。実機の高速化実験ではないが、LLMサービングのオンライン最悪時保証を直接扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "title": "Multi-Access Speculative Inference: Uplink or Downlink?",
+      "source_url": "https://arxiv.org/abs/2608.29618",
+      "year": 2026,
+      "published": "2026-08-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-access speculative inference (Multi-SPIN) extends SPIN to multi-device edge networks to accelerate cooperative token generation. It allows on-device small language models (SLMs) to autoregressively draft multiple tokens for individual generation tasks, while an edge-server large language model (LLM) verifies them in parallel. The major communication overhead arises when a drafted token is rejected by the server, in which case sampling the correction token requires access to both the SLM-output draft distribution and the LLM-output target distribution over the full token vocabulary. Existing designs typically perform correction at the server by uploading the draft distribution, but transmitting a vocabulary-wide distribution creates a critical uplink (UL) bottleneck. Alternatively, the correction can be performed at the device by downloading the target distribution, leveraging the high transmission rates available on the downlink (DL). Motivated by this insight, we introduce communication-mode selection as a new design dimension for Multi-SPIN. Specifically, each device can adaptively switch between the UL and DL modes to balance the UL bottleneck against the shared DL resource constraint, thereby relieving the overall communication burden. We formulate a sum-token-goodput maximization problem that jointly accounts for mode selection, draft-length control, and power allocation. For mode selection, we reveal a simple optimal structure that enables efficient search over the number of UL devices, with the corresponding transmit powers optimized accordingly. For draft-length control, we develop a greedy-search algorithm that adapts device-specific draft lengths to heterogeneous computation and communication capabilities. Experimental results on Qwen2.5 and DeepSeek-R1 model pairs demonstrate that the proposed framework significantly improves token goodput.",
+      "identifiers": [
+        "SemanticScholar:391b21be7c82e82f04ad77d1fd525a8081d2c832"
+      ],
+      "semantic_scholar_id": "391b21be7c82e82f04ad77d1fd525a8081d2c832",
+      "canonical_id": "arXiv:2608.29618",
+      "arxiv_id": "2608.29618",
+      "authors": [
+        "Changrui Cai",
+        "Kaibin Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 61,
+        "matched_prestigious_venue": null
+      },
+      "reason": "端末SLMが投機トークンを生成し、エッジLLMが並列検証するMulti-SPINの通信設計。棄却時の補正には語彙全体の確率分布が必要で、端末からdraft分布を上り送信する方式と、serverのtarget分布を下り送信する方式を端末ごとに切替える。ドラフト長・送信電力・UL/DL選択を共同最適化し、端末協調LLM推論の通信ボトルネックを直接扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3f10db6149cb",
+    "round": "libimp-3f10db6149cb5f7d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3f10db6149cb5f7d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3f10db6149cb5f7d-pre01.json",
+    "receipt": "sha256:b442dbd4b07543c42568b566716546c75b4d8aaef5ac18936e6f83cb39aca7b8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3f10db6149cb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

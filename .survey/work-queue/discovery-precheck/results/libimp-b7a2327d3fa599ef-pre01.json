@@ -1,0 +1,170 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b7a2327d3fa599ef-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b7a2327d3fa5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2310.03003",
+    "arXiv:2310.04836"
+  ],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "075f2bde09a20b3fb0aa2107b97437c01b74e33f",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-02T10:54:42.477676+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2310.03003",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.04836",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2310.03003",
+      "year": 2023,
+      "published": "2023-09-25",
+      "abstract": "Large language models (LLMs) have exploded in popularity due to their new generative capabilities that go far beyond prior state-of-the-art. These technologies are increasingly being leveraged in various domains such as law, finance, and medicine. However, these models carry significant computational challenges, especially the compute and energy costs required for inference. Inference energy costs already receive less attention than the energy costs of training LLMs-despite how often these large models are called on to conduct inference in reality (e.g., ChatGPT). As these state-of-the-art LLMs see increasing usage and deployment in various domains, a better understanding of their resource utilization is crucial for cost-savings, scaling performance, efficient hardware usage, and optimal inference strategies. In this paper, we describe experiments conducted to study the computational and energy utilization of inference with LLMs. We benchmark and conduct a preliminary analysis of the inference performance and inference energy costs of different sizes of LLaMA-a recent state-of-the-art LLM-developed by Meta AI on two generations of popular GPUs (NVIDIA V100 & A100) and two datasets (Alpaca and GSM8K) to reflect the diverse set of tasks/benchmarks for LLMs in research and practice. We present the results of multi-node, multi-GPU inference using model sharding across up to 32 GPUs. To our knowledge, our work is the one of the first to study LLM inference performance from the perspective of computational and energy resources at this scale.",
+      "canonical_id": "arXiv:2310.03003",
+      "arxiv_id": "2310.03003",
+      "doi": "10.1109/HPEC58863.2023.10363447",
+      "authors": [
+        "S. Samsi",
+        "Dan Zhao",
+        "Joseph McDonald",
+        "Baolin Li",
+        "Adam Michaleas",
+        "Michael Jones",
+        "W. Bergeron",
+        "J. Kepner",
+        "Devesh Tiwari",
+        "V. Gadepally"
+      ]
+    },
+    {
+      "title": "Dual Grained Quantization: Efficient Fine-Grained Quantization for LLM",
+      "source_url": "https://arxiv.org/abs/2310.04836",
+      "year": 2023,
+      "published": "2023-10-07",
+      "abstract": "Large Language Models (LLMs) pose significant hardware challenges related to memory requirements and computational ability. There are two mainstream quantization schemes for LLMs: coarse-grained ($\\textit{e.g.,}$ channel-wise) quantization and fine-grained ($\\textit{e.g.,}$ group-wise) quantization. Fine-grained quantization has smaller quantization loss, consequently achieving superior performance. However, when applied to weight-activation quantization, it disrupts continuous integer matrix multiplication, leading to inefficient inference. In this paper, we introduce Dual Grained Quantization (DGQ), a novel A8W4 quantization for LLM that maintains superior performance while ensuring fast inference speed. DSQ dequantizes the fine-grained INT4 weight into coarse-grained INT8 representation and preform matrix multiplication using INT8 kernels. Besides, we develop a two-phase grid search algorithm to simplify the determination of fine-grained and coarse-grained quantization scales. We also devise a percentile clipping schema for smoothing the activation outliers without the need for complex optimization techniques. Experimental results demonstrate that DGQ consistently outperforms prior methods across various LLM architectures and a wide range of tasks. Remarkably, by our implemented efficient CUTLASS kernel, we achieve $\\textbf{1.12}$ $\\times$ memory reduction and $\\textbf{3.24}$ $\\times$ speed gains comparing A16W4 implementation. These advancements enable efficient deployment of A8W4 LLMs for real-world applications.",
+      "canonical_id": "arXiv:2310.04836",
+      "arxiv_id": "2310.04836",
+      "doi": "10.48550/arXiv.2310.04836",
+      "authors": [
+        "Luo-Ming Zhang",
+        "Wen Fei",
+        "Weijia Wu",
+        "Ye-Fei He",
+        "Zhenyu Lou",
+        "Hong Zhou"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2310.03003",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpec58863.2023.10363447",
+        "id:arXiv:2310.03003",
+        "title:from words to watts benchmarking the energy costs of large language model inference",
+        "url:https://arxiv.org/abs/2310.03003"
+      ],
+      "record": {
+        "title": "From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2310.03003",
+        "year": 2023,
+        "published": "2023-09-25",
+        "abstract": "Large language models (LLMs) have exploded in popularity due to their new generative capabilities that go far beyond prior state-of-the-art. These technologies are increasingly being leveraged in various domains such as law, finance, and medicine. However, these models carry significant computational challenges, especially the compute and energy costs required for inference. Inference energy costs already receive less attention than the energy costs of training LLMs-despite how often these large models are called on to conduct inference in reality (e.g., ChatGPT). As these state-of-the-art LLMs see increasing usage and deployment in various domains, a better understanding of their resource utilization is crucial for cost-savings, scaling performance, efficient hardware usage, and optimal inference strategies. In this paper, we describe experiments conducted to study the computational and energy utilization of inference with LLMs. We benchmark and conduct a preliminary analysis of the inference performance and inference energy costs of different sizes of LLaMA-a recent state-of-the-art LLM-developed by Meta AI on two generations of popular GPUs (NVIDIA V100 & A100) and two datasets (Alpaca and GSM8K) to reflect the diverse set of tasks/benchmarks for LLMs in research and practice. We present the results of multi-node, multi-GPU inference using model sharding across up to 32 GPUs. To our knowledge, our work is the one of the first to study LLM inference performance from the perspective of computational and energy resources at this scale.",
+        "canonical_id": "arXiv:2310.03003",
+        "arxiv_id": "2310.03003",
+        "doi": "10.1109/HPEC58863.2023.10363447",
+        "authors": [
+          "S. Samsi",
+          "Dan Zhao",
+          "Joseph McDonald",
+          "Baolin Li",
+          "Adam Michaleas",
+          "Michael Jones",
+          "W. Bergeron",
+          "J. Kepner",
+          "Devesh Tiwari",
+          "V. Gadepally"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.04836",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.04836",
+        "id:arXiv:2310.04836",
+        "title:dual grained quantization efficient finegrained quantization for llm",
+        "url:https://arxiv.org/abs/2310.04836"
+      ],
+      "record": {
+        "title": "Dual Grained Quantization: Efficient Fine-Grained Quantization for LLM",
+        "source_url": "https://arxiv.org/abs/2310.04836",
+        "year": 2023,
+        "published": "2023-10-07",
+        "abstract": "Large Language Models (LLMs) pose significant hardware challenges related to memory requirements and computational ability. There are two mainstream quantization schemes for LLMs: coarse-grained ($\\textit{e.g.,}$ channel-wise) quantization and fine-grained ($\\textit{e.g.,}$ group-wise) quantization. Fine-grained quantization has smaller quantization loss, consequently achieving superior performance. However, when applied to weight-activation quantization, it disrupts continuous integer matrix multiplication, leading to inefficient inference. In this paper, we introduce Dual Grained Quantization (DGQ), a novel A8W4 quantization for LLM that maintains superior performance while ensuring fast inference speed. DSQ dequantizes the fine-grained INT4 weight into coarse-grained INT8 representation and preform matrix multiplication using INT8 kernels. Besides, we develop a two-phase grid search algorithm to simplify the determination of fine-grained and coarse-grained quantization scales. We also devise a percentile clipping schema for smoothing the activation outliers without the need for complex optimization techniques. Experimental results demonstrate that DGQ consistently outperforms prior methods across various LLM architectures and a wide range of tasks. Remarkably, by our implemented efficient CUTLASS kernel, we achieve $\\textbf{1.12}$ $\\times$ memory reduction and $\\textbf{3.24}$ $\\times$ speed gains comparing A16W4 implementation. These advancements enable efficient deployment of A8W4 LLMs for real-world applications.",
+        "canonical_id": "arXiv:2310.04836",
+        "arxiv_id": "2310.04836",
+        "doi": "10.48550/arXiv.2310.04836",
+        "authors": [
+          "Luo-Ming Zhang",
+          "Wen Fei",
+          "Weijia Wu",
+          "Ye-Fei He",
+          "Zhenyu Lou",
+          "Hong Zhou"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:454e42ec3686a3342a4c0ed4111386dd47ee291c7706758daee41aa365003c91",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

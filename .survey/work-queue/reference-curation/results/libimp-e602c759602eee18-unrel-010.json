@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e602c759602eee18-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.09834",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.09834",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.09834",
+      "SemanticScholar:c698e0aada2154f15305de0da54bcc8755b3e8a7",
+      "arXiv:2507.09834",
+      "c698e0aada2154f15305de0da54bcc8755b3e8a7"
+    ],
+    "reason": "Develops audio language modeling and representation for generation, not LLM inference infrastructure.",
+    "first_checked_at": "2026-10-14T13:11:28+00:00",
+    "last_checked_at": "2026-10-14T13:11:28+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+    ],
+    "title": "Generative Audio Language Modeling with Continuous-valued Tokens and Masked Next-Token Prediction"
+  },
+  "processed_at": "2026-10-14T13:11:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e602c759602e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7fa56f25adb550d9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2108.00573",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2108.00573",
+    "identity_tokens": [
+      "arXiv:2108.00573"
+    ],
+    "reason": "multi-hop QA benchmark/data constructionが主題で、LLM推論runtime・memory・serving最適化ではない。",
+    "first_checked_at": "2026-10-04T21:30:25+00:00",
+    "last_checked_at": "2026-10-04T21:30:25+00:00",
+    "linked_from": [],
+    "title": "MuSiQue: Multihop Questions via Single-hop Question Composition"
+  },
+  "processed_at": "2026-10-04T21:30:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7fa56f25adb5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

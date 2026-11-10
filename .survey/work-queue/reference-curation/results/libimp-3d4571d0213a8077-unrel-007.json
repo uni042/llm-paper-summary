@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d4571d0213a8077-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3669900",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3669900",
+    "identity_tokens": [
+      "DOI:10.1145/3669900"
+    ],
+    "reason": "CXL 1.0/2.0/3.0の一貫性・メモリ意味論、メモリ容量拡張、資源共有、アクセラレータ接続を概説する汎用ハードウェア相互接続サーベイ。LLM推論のKVキャッシュ移動や特定モデルの実行方式・評価を主題とせず、推論サーベイの背景技術にとどまる。",
+    "first_checked_at": "2026-10-07T21:38:06+00:00",
+    "last_checked_at": "2026-10-07T21:38:06+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2605.24022-cachetune-adaptive-kv-reuse.md"
+    ],
+    "title": "An Introduction to the Compute Express Link (CXL) Interconnect"
+  },
+  "processed_at": "2026-10-07T21:38:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d4571d0213a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

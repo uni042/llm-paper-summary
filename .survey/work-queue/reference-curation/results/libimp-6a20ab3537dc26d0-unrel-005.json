@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6a20ab3537dc26d0-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.14320",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.14320",
+    "identity_tokens": [
+      "arXiv:2609.14320"
+    ],
+    "reason": "Recently, linear attention layers have been increasingly adopted to replace softmax attention at scale for long-context modeling. However, existing context extension approaches typically apply continued pretraining directly without modifying these layers, overlooking the spectral properties of linear attention state dynamics. In this work, we study long-context extension of Gated DeltaNet (GDN) from a spectral perspective of transition matrix and identify two essential factors governing long-range information retrieval: (1) a sufficiently broad slow spectral band aligned with the target dependency length, and (2) the preservation of fast-decaying modes for state clearing and context switching. Based on this observation, we propose SpectralShift, a spectral reparameterization approach for long-context continual pretraining of GDNs. Specifically, SpectralShift reparameterizes the alpha projections initialization to reshape the decay spectrum by enhancing slow propagation capacity, and further introduces a learning-rate scaling for alpha projections to facilitate long-context training. Experiments show that SpectralShift consistently improves long-context capabilities over training, providing an effective and efficient solution for extending context windows of linear attention models. The code has been open-sourced at https://github.com/RUCAIBox/GDN-SpectralShift.",
+    "first_checked_at": "2026-10-05T06:47:42+00:00",
+    "last_checked_at": "2026-10-05T06:47:42+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "SpectralShift: Effective Context Window Extension of Gated DeltaNet via Spectral Reparameterization"
+  },
+  "processed_at": "2026-10-05T06:47:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6a20ab3537dc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

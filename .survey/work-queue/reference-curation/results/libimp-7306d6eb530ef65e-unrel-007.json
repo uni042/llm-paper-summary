@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7306d6eb530ef65e-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.17049",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.17049",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2311.17049",
+      "arXiv:2311.17049"
+    ],
+    "reason": "一次要旨は携帯端末向け画像・テキスト表現モデルの学習データ強化と分類・検索時の遅延精度トレードオフを扱う。効率改善はあるが対象はCLIP系視覚エンコーダであり、LLM生成推論基盤やサービングの直接的な技術貢献ではない。",
+    "first_checked_at": "2026-10-12T10:58:05+00:00",
+    "last_checked_at": "2026-10-12T21:38:02+00:00",
+    "linked_from": [],
+    "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
+  },
+  "processed_at": "2026-10-12T21:38:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7306d6eb530e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

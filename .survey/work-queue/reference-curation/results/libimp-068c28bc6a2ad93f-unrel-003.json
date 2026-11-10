@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-068c28bc6a2ad93f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.08970",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.08970",
+    "identity_tokens": [
+      "arXiv:2410.08970"
+    ],
+    "reason": "NoVo uses attention-head norms for inference-only factuality voting and reports accuracy gains; it does not establish reduced latency, compute, memory, or serving cost.",
+    "first_checked_at": "2026-10-05T15:01:18+00:00",
+    "last_checked_at": "2026-10-05T15:01:18+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md"
+    ],
+    "title": "NoVo: Norm Voting off Hallucinations with Attention Heads in Large Language Models"
+  },
+  "processed_at": "2026-10-05T15:01:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-068c28bc6a2a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96713f01f2926dec-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.28609",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.28609",
+    "identity_tokens": [
+      "arXiv:2608.28609"
+    ],
+    "reason": "LLM context/memoryの間接接続はあるが、効率改善との関連が弱く評価指標も異なる。",
+    "first_checked_at": "2026-10-06T01:38:37+00:00",
+    "last_checked_at": "2026-10-06T01:38:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Parametric Multimodal User Memory: Storing What Captions Cannot Carry"
+  },
+  "processed_at": "2026-10-06T01:38:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96713f01f292",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

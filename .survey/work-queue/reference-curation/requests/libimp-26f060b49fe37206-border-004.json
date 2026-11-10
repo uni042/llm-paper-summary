@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-26f060b49fe37206-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1145/3307650.3322237",
+  "reason": "fully-digital PIMでfloating-point CNN training/testingをmemory内実行しdata movementを削減する。testingでもGPU比324.8倍speedup等を報告しPIM推論hardwareの基礎として関連するが、対象はCNN/ImageNetでLLM/Transformer推論専用ではないためborderline。",
+  "title": "FloatPIM: In-Memory Acceleration of Deep Neural Network Training with High Precision",
+  "identity_tokens": [
+    "DOI:10.1145/3307650.3322237"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-26f060b49fe3",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

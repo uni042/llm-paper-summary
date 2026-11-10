@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2d0f4c355a609408-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.14519",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.14519",
+    "identity_tokens": [
+      "arXiv:2504.14519"
+    ],
+    "reason": "SlimPipe optimizes activation memory/pipeline bubbles for long-context LLM training, not inference.",
+    "first_checked_at": "2026-10-05T15:33:55+00:00",
+    "last_checked_at": "2026-10-05T15:33:55+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+      "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+    ],
+    "title": "SlimPipe: Memory-Thrifty and Efficient Pipeline Parallelism for Long-Context LLM Training"
+  },
+  "processed_at": "2026-10-05T15:33:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d0f4c355a60",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

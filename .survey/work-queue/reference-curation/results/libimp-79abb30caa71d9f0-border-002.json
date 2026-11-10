@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79abb30caa71d9f0-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.12250",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.12250",
+    "identity_tokens": [
+      "arXiv:2405.12250"
+    ],
+    "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 The study finds near-linear relationships between selected Transformer decoder blocks and tests deleting or approximating some blocks with limited loss changes. It suggests a possible model-compute reduction, but provides no direct serving latency/throughput or memory evaluation, so it remains a borderline efficiency lead.",
+    "first_checked_at": "2026-10-06T16:56:06+00:00",
+    "last_checked_at": "2026-10-06T16:56:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Your Transformer is Secretly Linear"
+  },
+  "processed_at": "2026-10-06T16:56:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79abb30caa71",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

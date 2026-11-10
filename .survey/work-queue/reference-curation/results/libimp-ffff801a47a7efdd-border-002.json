@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ffff801a47a7efdd-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.05650",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.05650",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2511.05650",
+      "arXiv:2511.05650"
+    ],
+    "reason": "一次要旨で、整列前の基盤モデルと整列済みモデルをトークン単位で切り替えるBACoのルータを提案し、不確実性と語の意味役割を用いて多様性と品質の両立を図る。推論時のモデル選択機構という接点はあるが、主要指標は多様性・品質の13指標であり、処理量・GPUメモリ・遅延・計算節約の実装上の貢献が中心ではないため境界扱い。",
+    "first_checked_at": "2026-10-22T16:49:12+00:00",
+    "last_checked_at": "2026-10-22T16:49:12+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Optimizing Diversity and Quality through Base-Aligned Model Collaboration"
+  },
+  "processed_at": "2026-10-22T16:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ffff801a47a7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

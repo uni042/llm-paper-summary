@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-1132-scheduled-chat-30/title-screen-b01",
+  "reference_main_sha": "1ac236c6af38a9fedcae20d15d32d8d7c0092f7d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.02492",
+      "identity_tokens": [
+        "arXiv:2109.02492",
+        "DOI:10.48550/arXiv.2109.02492"
+      ],
+      "title": "DialogLM: Pre-trained Model for Long Dialogue Understanding and Summarization",
+      "reason": "題名が長い対話の理解・要約に向けた事前学習モデルの開発を明示しており、推論サービング、メモリ管理、カーネル、量子化、推論高速化の技術貢献を示さない。タイトルのみの先行除外であり、本文や要旨を確認したとは扱わない。",
+      "source_url": "https://arxiv.org/abs/2109.02492",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T11:37:11+09:00",
+      "last_checked_at": "2026-10-31T11:37:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 499,
+      "origin": "discovery_worklist_title_sweep"
+    }
+  ]
+}

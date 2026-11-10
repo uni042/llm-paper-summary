@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-24177ba15c6c060d-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.03182",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.03182",
+    "identity_tokens": [
+      "arXiv:2602.03182"
+    ],
+    "reason": "LSGQuant applies layer-sensitivity-guided quantization and mixed-precision refinement to one-step diffusion video-super-resolution DiTs. It reports quality near full precision and gains over other quantizers, but is task-specific diffusion generation rather than LLM quantization/serving; transfer to the linked learned-rotation LLM quantization family is uncertain.",
+    "first_checked_at": "2026-10-06T16:14:28+00:00",
+    "last_checked_at": "2026-10-06T16:14:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LSGQuant: Layer-Sensitivity Guided Quantization for One-Step Diffusion Real-World Video Super-Resolution"
+  },
+  "processed_at": "2026-10-06T16:14:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-24177ba15c6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

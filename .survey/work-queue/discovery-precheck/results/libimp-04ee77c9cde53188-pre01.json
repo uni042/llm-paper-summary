@@ -1,0 +1,697 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-04ee77c9cde53188-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-04ee77c9cde5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.neucom.2026.134854",
+    "arXiv:2607.04179",
+    "arXiv:2607.10438",
+    "arXiv:2607.22711",
+    "arXiv:2608.05604",
+    "arXiv:2608.07088",
+    "arXiv:2608.10430"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "100eddaf718c8de05a279ede47e1d5b120b91864",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-12T22:22:40.335651+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.neucom.2026.134854",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.04179",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.10438",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.22711",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.05604",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.07088",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.10430",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CritiqueDriveVLM: From Verifier-Guided Reinforcement Learning to Latent Thought Distillation for Autonomous Driving",
+      "source_url": "https://arxiv.org/abs/2607.04179",
+      "year": 2026,
+      "published": "2026-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "End-to-end Vision-Language Models (VLMs) show immense potential in autonomous driving. However, standard Supervised Fine-Tuning (SFT) often suffers from reasoning hallucinations and conservative biases. While traditional tool-augmented frameworks and Chain-of-Thought (CoT) approaches mitigate these issues, they incur exorbitant token consumption and unacceptable latency, rendering real-time deployment impractical. To resolve this reliability-efficiency trade-off, we propose CritiqueDriveVLM, a novel unified three-stage framework internalizing reasoning directly into the VLM. First, we introduce Critique-Driven Multi-Turn Reinforcement Learning (RL) guided by a multi-dimensional verifier. By providing granular scalar feedback and a multi-turn penalty, we force the policy to internalize logical deduction, cultivating a robust System-2 Teacher that achieves high accuracy without fragile external tools. Subsequently, we propose Latent Thought Distillation to overcome the latency bottleneck. By aligning the Student's latent representations with the Teacher's fully converged reasoning states, we compress deep logical capabilities into a fast, CoT-free System-1 Student. Extensive experiments on the widely-used DriveLMM-01 benchmark demonstrate remarkable improvements. Compared to the base model, our tool-free Teacher significantly boosts Multiple Choice Quality (MCQ) from 55.54% to a state-of-the-art 76.54%. Crucially, our distilled Student preserves competitive reasoning depth while drastically minimizing generation length to an average of merely 28 tokens. This slashes inference latency by 88% (from 3482 ms to 416 ms), paving a highly robust pathway for low-latency autonomous driving.Our source code is available at https://github.com/MICLAB-BUPT/CritiqueDriveVLM.",
+      "identifiers": [
+        "SemanticScholar:617d6c36b2eff092f77d9e70e065c6f16f447b9c"
+      ],
+      "semantic_scholar_id": "617d6c36b2eff092f77d9e70e065c6f16f447b9c",
+      "canonical_id": "arXiv:2607.04179",
+      "arxiv_id": "2607.04179",
+      "doi": "10.48550/arXiv.2607.04179",
+      "authors": [
+        "Zhao-Hong Liu",
+        "Hao Ye",
+        "Xian-Lin Zhang",
+        "Meng-Shi Qi"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 99,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Large Language Model Enhanced Differentiable Trajectory Planning for IoT-Enabled Autonomous Driving",
+      "source_url": "https://arxiv.org/abs/2607.10438",
+      "year": 2026,
+      "published": "2026-07-11",
+      "venue": "IEEE Internet of Things Journal",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autonomous driving planning is a key component of IoT-enabled intelligent transportation systems, requiring vehicles to generate safe, efficient, and executable trajectories in complex urban environments from multisource contextual information. While imitation learning (IL) has shown promise on large-scale datasets, IL-based planners still suffer from limited coverage of complex long-tail interactions, weak consistency with downstream constrained refinement, and insufficient use of high-level scene semantics under real-time constraints. To address these issues, this article proposes a large language model (LLM) enhanced differentiable trajectory planning framework for IoT-enabled autonomous driving. Specifically, we introduce a surrounding agent centric data augmentation strategy to reorganize surrounding agent trajectories as additional planning supervision, thereby improving the training distribution without collecting additional raw data. We further design a complexity-aware asynchronous LLM-based semantic enhancement module to extract scene-related high-level semantic features with controlled online overhead. In addition, a differentiable optimization module is incorporated to refine generated trajectories with explicit residual penalties while backpropagating optimization gradients to the upstream planner. Experiments show that the proposed method achieves the best overall scores of 83.63 and 78.29 on the nuPlan closed-loop nonreactive and reactive Hard20 benchmarks, respectively, and CARLA-ROS tests further verify its online deployment and real time closed-loop execution capability.",
+      "identifiers": [
+        "SemanticScholar:565ac2c3fb93a8b6fd21e0cd8d4fc3543f195829"
+      ],
+      "semantic_scholar_id": "565ac2c3fb93a8b6fd21e0cd8d4fc3543f195829",
+      "canonical_id": "arXiv:2607.10438",
+      "arxiv_id": "2607.10438",
+      "doi": "10.1109/JIOT.2026.3711819",
+      "authors": [
+        "Shihao Zhang",
+        "Jing Yang",
+        "Zi-Yu Song",
+        "Zheng Lin",
+        "Sunil Prajapat",
+        "Zhaochen Xia",
+        "H. Ghayvat",
+        "Hai-Tao Ding",
+        "L. Y. Por",
+        "Ashok Kumar Das"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 93,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CORVUS: Context Optimization and Reduction Via Underlying Synchronization for LLM Coding Agents",
+      "source_url": "https://arxiv.org/abs/2607.22711",
+      "year": 2026,
+      "published": "2026-07-20",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM coding agents operate by constructing trajectories that accumulate reasoning, tool calls, and results to enable multi-step decision-making. However, the conventional append-only trajectory architecture found in practice tightly couples file-read actions with their observations, capturing snapshots that become permanently fixed in the chronological history. As files change through agent edits or concurrent human modifications, these snapshots become stale, causing reasoning errors and causing agents to redundantly re-read files, with each re-read appending yet another copy to the trajectory. To mitigate this, we propose CORVUS, a novel trajectory architecture that decouples file-read actions from their observations by maintaining a synchronized registry of relevant files and injecting only their current contents at each reasoning cycle. This structural change produces significantly lighter-weight trajectories that remain synchronized with the actual codebase state by construction, eliminating redundant file copies and stale snapshots that bloat conventional trajectories. We evaluated CORVUS on SWE- POLYBENCH_VERIFIED and SWE-BENCH PRO across four LLMs, achieving 9-50% reduction in average input tokens per task, 15-32% shorter final prompts, and up to 37% fewer reasoning cycles while maintaining comparable pass rates.",
+      "identifiers": [
+        "SemanticScholar:8a5e35d6b16b22faa55021dff11b7b98e88fb69c"
+      ],
+      "semantic_scholar_id": "8a5e35d6b16b22faa55021dff11b7b98e88fb69c",
+      "canonical_id": "arXiv:2607.22711",
+      "arxiv_id": "2607.22711",
+      "doi": "10.48550/arXiv.2607.22711",
+      "authors": [
+        "Ming-Wei Zheng",
+        "David OBrien",
+        "Siwei Cui",
+        "Pardis Pashakhanloo",
+        "Rajdeep Mukherjee",
+        "Myeongsoo Kim",
+        "Sachit Kuhar"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 84,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MKG-attention: Budget-aware multimodal graph retrieval for faithful video question answering",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134854",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": "Neurocomputing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:573deac0c049f284bdf519377d2744061d306d39"
+      ],
+      "semantic_scholar_id": "573deac0c049f284bdf519377d2744061d306d39",
+      "doi": "10.1016/j.neucom.2026.134854",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134854",
+      "authors": [
+        "Asad Khan",
+        "Zafar Ali",
+        "Guilin Qi",
+        "Kaibalya Prasad Bhuyan",
+        "P. Kefalas"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 72,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+      "source_url": "https://arxiv.org/abs/2608.05604",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) increasingly act as agents whose procedural knowledge is stored in reusable skill packages and loaded at inference time. As skill libraries grow, a central challenge is to expose the smallest sufficient executable context under a limited context budget. Existing systems struggle to reuse routines below the whole-skill level, preserve procedural contracts during compression, keep compressed routines executable and expandable, and update the compressed library as skills evolve. These challenges reveal a unit mismatch: skills are retrieved as packages, compressed as text, and converted into execution graphs only after retrieval, whereas reliable reuse requires a contract-bearing procedural unit. We propose SkillZip, an execution-aware procedural abstraction framework that performs contract-preserving compression over section-level graphs. SkillZip rewrites recurring contract-valid motifs into reversible ported macros while preserving boundary signatures, dependency closure, verifier reachability, and source-level expansion. At inference time, it hydrates a compact, dependency-closed context and expands macros only when required. ReZip further integrates new skills and revises risky macros using execution evidence. Comprehensive experiments1 on technical and embodied agent benchmarks show SkillZip consistently outperforms the strongest baseline by up to 12.2 points, while achieving a 3.46x compression ratio with 99.2% dependency preservation and 98.7% verifier reachability. Scaling analyses further confirm robust retrieval across skill libraries ranging from 200 to 100K skills.",
+      "identifiers": [
+        "SemanticScholar:bc385adeaecf7990d86e32ff193411c137ce84af"
+      ],
+      "semantic_scholar_id": "bc385adeaecf7990d86e32ff193411c137ce84af",
+      "canonical_id": "arXiv:2608.05604",
+      "arxiv_id": "2608.05604",
+      "authors": [
+        "Xingyu Tan",
+        "Xiao-Yang Wang",
+        "Qing Liu",
+        "Xi-Wei Xu",
+        "Xin Yuan",
+        "Liming Zhu",
+        "Wen-Jie Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 67,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RoRA: Role-Oriented Regional Allocation for Visual Token Pruning in MLLMs",
+      "source_url": "https://arxiv.org/abs/2608.07088",
+      "year": 2026,
+      "published": "2026-08-07",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) encode images as long visual token sequences, making prefilling and KV-cache storage expensive. Existing training-free pruning methods select tokens by importance, diversity, or spatial coverage, but treat retained tokens as interchangeable and do not explicitly track which object-related regions are already covered. We present RoRA, a training-free framework that casts visual token pruning as role-oriented regional evidence allocation. Given a fixed budget, RoRA partitions tokens into a protected semantic core, complementary context, and fine-grained detail. It first calibrates text-conditioned attention with a positional prior and a prompt-calibrated object prior, then builds Attention-Anchored Regions (AARs) from high-confidence anchors as lightweight proxies for covered object support. Context is explored mainly outside AARs, while a small AAR-guided budget restores local detail; pairwise similarity is used only for context-stage redundancy filtering. Under matched budgets, RoRA consistently outperforms strong training-free baselines across LLaVA and Qwen-VL families, retaining most of the unpruned accuracy even at aggressive pruning ratios, e.g., 96.5% of full performance at 88.9% pruning on LLaVA-1.5, and improving over D2Pruner by about 5% on Qwen3-VL at 75-90% pruning. At a 66.7% pruning ratio, RoRA requires only 0.7 ms for token selection and reduces end-to-end inference time by 24.6%, corresponding to a 1.33x speedup over unpruned inference on an NVIDIA H800.",
+      "identifiers": [
+        "SemanticScholar:caaf13295985b750d83758b600a723f44ed4a4fc"
+      ],
+      "semantic_scholar_id": "caaf13295985b750d83758b600a723f44ed4a4fc",
+      "canonical_id": "arXiv:2608.07088",
+      "arxiv_id": "2608.07088",
+      "authors": [
+        "Qiyanhui Lu",
+        "Han Wu",
+        "Rong-Jia Xu",
+        "Tingzhang Luo",
+        "Cheng Fan",
+        "Xing-Hao Chen",
+        "Min-Jing Dong",
+        "Ju-Feng Yang",
+        "Jian-Yuan Guo"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 66,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Actionable Hallucination Detection: Translating Latent Uncertainty into Agentic Critique",
+      "source_url": "https://arxiv.org/abs/2608.10430",
+      "year": 2026,
+      "published": "2026-08-11",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) deployed as AI agents frequently exhibit user specification-grounding failures, executing hallucinated, undesired actions to force a resolution rather than expressing uncertainty. Existing detection methods fail to provide actionable, real-time correction as they either do not localize the hallucinations, or incur prohibitive inference latency. We introduce the Latent Critic, a lightweight low-rank adapter (LoRA) that operates concurrently with a frozen base LLM's generation to actively restructure the transformer's residual stream---amplifying latent grounding signals and translating them into localized, natural language feedback within a single sequence. By refining the base model's native uncertainty signals, this manipulation of the latent space enables reliable, granular detection without the overhead of secondary inference loops. Mechanistic analysis via activation patching and layer-wise probing shows that this rank-invariant behavior restructures pre-existing uncertainty geometry into a linearly separable representation that transfers more reliably than base model representations alone. Using tool-calling as an instantiation of granular hallucinations, we validate the detection and downstream improvements enabled by the Latent Critic architecture across Qwen and Llama-based models. Demonstrating superior real-time efficacy, our approach significantly outperforms equivalent-scale fine-tuned external detectors, semantic entropy baselines, and passive internal probes in isolating hallucinations, achieving 0.966 AUROC and>80% accuracy in localization (e.g., ungrounded: date). When deployed in a closed-loop ReAct environment, the Critic acts as a negligible latency guardrail, intercepting hallucinations before execution to prevent undesired actions while simultaneously leveraging this specific localized feedback to enable efficient agent self-correction.",
+      "identifiers": [
+        "SemanticScholar:6c3a12cc9a82f3cda50c4f19ecc8fe1880219f98"
+      ],
+      "semantic_scholar_id": "6c3a12cc9a82f3cda50c4f19ecc8fe1880219f98",
+      "canonical_id": "arXiv:2608.10430",
+      "arxiv_id": "2608.10430",
+      "authors": [
+        "S. Vijayvargiya",
+        "R. Lokesh"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 62,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.04179",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.04179",
+        "id:SemanticScholar:617d6c36b2eff092f77d9e70e065c6f16f447b9c",
+        "id:arXiv:2607.04179",
+        "title:critiquedrivevlm from verifierguided reinforcement learning to latent thought distillation for autonomous driving",
+        "url:https://arxiv.org/abs/2607.04179"
+      ],
+      "record": {
+        "title": "CritiqueDriveVLM: From Verifier-Guided Reinforcement Learning to Latent Thought Distillation for Autonomous Driving",
+        "source_url": "https://arxiv.org/abs/2607.04179",
+        "year": 2026,
+        "published": "2026-07-05",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "End-to-end Vision-Language Models (VLMs) show immense potential in autonomous driving. However, standard Supervised Fine-Tuning (SFT) often suffers from reasoning hallucinations and conservative biases. While traditional tool-augmented frameworks and Chain-of-Thought (CoT) approaches mitigate these issues, they incur exorbitant token consumption and unacceptable latency, rendering real-time deployment impractical. To resolve this reliability-efficiency trade-off, we propose CritiqueDriveVLM, a novel unified three-stage framework internalizing reasoning directly into the VLM. First, we introduce Critique-Driven Multi-Turn Reinforcement Learning (RL) guided by a multi-dimensional verifier. By providing granular scalar feedback and a multi-turn penalty, we force the policy to internalize logical deduction, cultivating a robust System-2 Teacher that achieves high accuracy without fragile external tools. Subsequently, we propose Latent Thought Distillation to overcome the latency bottleneck. By aligning the Student's latent representations with the Teacher's fully converged reasoning states, we compress deep logical capabilities into a fast, CoT-free System-1 Student. Extensive experiments on the widely-used DriveLMM-01 benchmark demonstrate remarkable improvements. Compared to the base model, our tool-free Teacher significantly boosts Multiple Choice Quality (MCQ) from 55.54% to a state-of-the-art 76.54%. Crucially, our distilled Student preserves competitive reasoning depth while drastically minimizing generation length to an average of merely 28 tokens. This slashes inference latency by 88% (from 3482 ms to 416 ms), paving a highly robust pathway for low-latency autonomous driving.Our source code is available at https://github.com/MICLAB-BUPT/CritiqueDriveVLM.",
+        "identifiers": [
+          "SemanticScholar:617d6c36b2eff092f77d9e70e065c6f16f447b9c"
+        ],
+        "semantic_scholar_id": "617d6c36b2eff092f77d9e70e065c6f16f447b9c",
+        "canonical_id": "arXiv:2607.04179",
+        "arxiv_id": "2607.04179",
+        "doi": "10.48550/arXiv.2607.04179",
+        "authors": [
+          "Zhao-Hong Liu",
+          "Hao Ye",
+          "Xian-Lin Zhang",
+          "Meng-Shi Qi"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 99,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.10438",
+      "identity_tokens": [
+        "id:DOI:10.1109/jiot.2026.3711819",
+        "id:SemanticScholar:565ac2c3fb93a8b6fd21e0cd8d4fc3543f195829",
+        "id:arXiv:2607.10438",
+        "title:large language model enhanced differentiable trajectory planning for iotenabled autonomous driving",
+        "url:https://arxiv.org/abs/2607.10438"
+      ],
+      "record": {
+        "title": "Large Language Model Enhanced Differentiable Trajectory Planning for IoT-Enabled Autonomous Driving",
+        "source_url": "https://arxiv.org/abs/2607.10438",
+        "year": 2026,
+        "published": "2026-07-11",
+        "venue": "IEEE Internet of Things Journal",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autonomous driving planning is a key component of IoT-enabled intelligent transportation systems, requiring vehicles to generate safe, efficient, and executable trajectories in complex urban environments from multisource contextual information. While imitation learning (IL) has shown promise on large-scale datasets, IL-based planners still suffer from limited coverage of complex long-tail interactions, weak consistency with downstream constrained refinement, and insufficient use of high-level scene semantics under real-time constraints. To address these issues, this article proposes a large language model (LLM) enhanced differentiable trajectory planning framework for IoT-enabled autonomous driving. Specifically, we introduce a surrounding agent centric data augmentation strategy to reorganize surrounding agent trajectories as additional planning supervision, thereby improving the training distribution without collecting additional raw data. We further design a complexity-aware asynchronous LLM-based semantic enhancement module to extract scene-related high-level semantic features with controlled online overhead. In addition, a differentiable optimization module is incorporated to refine generated trajectories with explicit residual penalties while backpropagating optimization gradients to the upstream planner. Experiments show that the proposed method achieves the best overall scores of 83.63 and 78.29 on the nuPlan closed-loop nonreactive and reactive Hard20 benchmarks, respectively, and CARLA-ROS tests further verify its online deployment and real time closed-loop execution capability.",
+        "identifiers": [
+          "SemanticScholar:565ac2c3fb93a8b6fd21e0cd8d4fc3543f195829"
+        ],
+        "semantic_scholar_id": "565ac2c3fb93a8b6fd21e0cd8d4fc3543f195829",
+        "canonical_id": "arXiv:2607.10438",
+        "arxiv_id": "2607.10438",
+        "doi": "10.1109/JIOT.2026.3711819",
+        "authors": [
+          "Shihao Zhang",
+          "Jing Yang",
+          "Zi-Yu Song",
+          "Zheng Lin",
+          "Sunil Prajapat",
+          "Zhaochen Xia",
+          "H. Ghayvat",
+          "Hai-Tao Ding",
+          "L. Y. Por",
+          "Ashok Kumar Das"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 93,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22711",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.22711",
+        "id:SemanticScholar:8a5e35d6b16b22faa55021dff11b7b98e88fb69c",
+        "id:arXiv:2607.22711",
+        "title:corvus context optimization and reduction via underlying synchronization for llm coding agents",
+        "url:https://arxiv.org/abs/2607.22711"
+      ],
+      "record": {
+        "title": "CORVUS: Context Optimization and Reduction Via Underlying Synchronization for LLM Coding Agents",
+        "source_url": "https://arxiv.org/abs/2607.22711",
+        "year": 2026,
+        "published": "2026-07-20",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM coding agents operate by constructing trajectories that accumulate reasoning, tool calls, and results to enable multi-step decision-making. However, the conventional append-only trajectory architecture found in practice tightly couples file-read actions with their observations, capturing snapshots that become permanently fixed in the chronological history. As files change through agent edits or concurrent human modifications, these snapshots become stale, causing reasoning errors and causing agents to redundantly re-read files, with each re-read appending yet another copy to the trajectory. To mitigate this, we propose CORVUS, a novel trajectory architecture that decouples file-read actions from their observations by maintaining a synchronized registry of relevant files and injecting only their current contents at each reasoning cycle. This structural change produces significantly lighter-weight trajectories that remain synchronized with the actual codebase state by construction, eliminating redundant file copies and stale snapshots that bloat conventional trajectories. We evaluated CORVUS on SWE- POLYBENCH_VERIFIED and SWE-BENCH PRO across four LLMs, achieving 9-50% reduction in average input tokens per task, 15-32% shorter final prompts, and up to 37% fewer reasoning cycles while maintaining comparable pass rates.",
+        "identifiers": [
+          "SemanticScholar:8a5e35d6b16b22faa55021dff11b7b98e88fb69c"
+        ],
+        "semantic_scholar_id": "8a5e35d6b16b22faa55021dff11b7b98e88fb69c",
+        "canonical_id": "arXiv:2607.22711",
+        "arxiv_id": "2607.22711",
+        "doi": "10.48550/arXiv.2607.22711",
+        "authors": [
+          "Ming-Wei Zheng",
+          "David OBrien",
+          "Siwei Cui",
+          "Pardis Pashakhanloo",
+          "Rajdeep Mukherjee",
+          "Myeongsoo Kim",
+          "Sachit Kuhar"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 84,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neucom.2026.134854",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.134854",
+        "id:SemanticScholar:573deac0c049f284bdf519377d2744061d306d39",
+        "title:mkgattention budgetaware multimodal graph retrieval for faithful video question answering",
+        "url:https://doi.org/10.1016/j.neucom.2026.134854"
+      ],
+      "record": {
+        "title": "MKG-attention: Budget-aware multimodal graph retrieval for faithful video question answering",
+        "source_url": "https://doi.org/10.1016/j.neucom.2026.134854",
+        "year": 2026,
+        "published": "2026-08-01",
+        "venue": "Neurocomputing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:573deac0c049f284bdf519377d2744061d306d39"
+        ],
+        "semantic_scholar_id": "573deac0c049f284bdf519377d2744061d306d39",
+        "doi": "10.1016/j.neucom.2026.134854",
+        "canonical_id": "DOI:10.1016/j.neucom.2026.134854",
+        "authors": [
+          "Asad Khan",
+          "Zafar Ali",
+          "Guilin Qi",
+          "Kaibalya Prasad Bhuyan",
+          "P. Kefalas"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 72,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.05604",
+      "identity_tokens": [
+        "id:SemanticScholar:bc385adeaecf7990d86e32ff193411c137ce84af",
+        "id:arXiv:2608.05604",
+        "title:skillzip contractpreserving graph compression for scalable agent skill libraries",
+        "url:https://arxiv.org/abs/2608.05604"
+      ],
+      "record": {
+        "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+        "source_url": "https://arxiv.org/abs/2608.05604",
+        "year": 2026,
+        "published": "2026-08-06",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) increasingly act as agents whose procedural knowledge is stored in reusable skill packages and loaded at inference time. As skill libraries grow, a central challenge is to expose the smallest sufficient executable context under a limited context budget. Existing systems struggle to reuse routines below the whole-skill level, preserve procedural contracts during compression, keep compressed routines executable and expandable, and update the compressed library as skills evolve. These challenges reveal a unit mismatch: skills are retrieved as packages, compressed as text, and converted into execution graphs only after retrieval, whereas reliable reuse requires a contract-bearing procedural unit. We propose SkillZip, an execution-aware procedural abstraction framework that performs contract-preserving compression over section-level graphs. SkillZip rewrites recurring contract-valid motifs into reversible ported macros while preserving boundary signatures, dependency closure, verifier reachability, and source-level expansion. At inference time, it hydrates a compact, dependency-closed context and expands macros only when required. ReZip further integrates new skills and revises risky macros using execution evidence. Comprehensive experiments1 on technical and embodied agent benchmarks show SkillZip consistently outperforms the strongest baseline by up to 12.2 points, while achieving a 3.46x compression ratio with 99.2% dependency preservation and 98.7% verifier reachability. Scaling analyses further confirm robust retrieval across skill libraries ranging from 200 to 100K skills.",
+        "identifiers": [
+          "SemanticScholar:bc385adeaecf7990d86e32ff193411c137ce84af"
+        ],
+        "semantic_scholar_id": "bc385adeaecf7990d86e32ff193411c137ce84af",
+        "canonical_id": "arXiv:2608.05604",
+        "arxiv_id": "2608.05604",
+        "authors": [
+          "Xingyu Tan",
+          "Xiao-Yang Wang",
+          "Qing Liu",
+          "Xi-Wei Xu",
+          "Xin Yuan",
+          "Liming Zhu",
+          "Wen-Jie Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 67,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.07088",
+      "identity_tokens": [
+        "id:SemanticScholar:caaf13295985b750d83758b600a723f44ed4a4fc",
+        "id:arXiv:2608.07088",
+        "title:rora roleoriented regional allocation for visual token pruning in mllms",
+        "url:https://arxiv.org/abs/2608.07088"
+      ],
+      "record": {
+        "title": "RoRA: Role-Oriented Regional Allocation for Visual Token Pruning in MLLMs",
+        "source_url": "https://arxiv.org/abs/2608.07088",
+        "year": 2026,
+        "published": "2026-08-07",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) encode images as long visual token sequences, making prefilling and KV-cache storage expensive. Existing training-free pruning methods select tokens by importance, diversity, or spatial coverage, but treat retained tokens as interchangeable and do not explicitly track which object-related regions are already covered. We present RoRA, a training-free framework that casts visual token pruning as role-oriented regional evidence allocation. Given a fixed budget, RoRA partitions tokens into a protected semantic core, complementary context, and fine-grained detail. It first calibrates text-conditioned attention with a positional prior and a prompt-calibrated object prior, then builds Attention-Anchored Regions (AARs) from high-confidence anchors as lightweight proxies for covered object support. Context is explored mainly outside AARs, while a small AAR-guided budget restores local detail; pairwise similarity is used only for context-stage redundancy filtering. Under matched budgets, RoRA consistently outperforms strong training-free baselines across LLaVA and Qwen-VL families, retaining most of the unpruned accuracy even at aggressive pruning ratios, e.g., 96.5% of full performance at 88.9% pruning on LLaVA-1.5, and improving over D2Pruner by about 5% on Qwen3-VL at 75-90% pruning. At a 66.7% pruning ratio, RoRA requires only 0.7 ms for token selection and reduces end-to-end inference time by 24.6%, corresponding to a 1.33x speedup over unpruned inference on an NVIDIA H800.",
+        "identifiers": [
+          "SemanticScholar:caaf13295985b750d83758b600a723f44ed4a4fc"
+        ],
+        "semantic_scholar_id": "caaf13295985b750d83758b600a723f44ed4a4fc",
+        "canonical_id": "arXiv:2608.07088",
+        "arxiv_id": "2608.07088",
+        "authors": [
+          "Qiyanhui Lu",
+          "Han Wu",
+          "Rong-Jia Xu",
+          "Tingzhang Luo",
+          "Cheng Fan",
+          "Xing-Hao Chen",
+          "Min-Jing Dong",
+          "Ju-Feng Yang",
+          "Jian-Yuan Guo"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 66,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.10430",
+      "identity_tokens": [
+        "id:SemanticScholar:6c3a12cc9a82f3cda50c4f19ecc8fe1880219f98",
+        "id:arXiv:2608.10430",
+        "title:actionable hallucination detection translating latent uncertainty into agentic critique",
+        "url:https://arxiv.org/abs/2608.10430"
+      ],
+      "record": {
+        "title": "Actionable Hallucination Detection: Translating Latent Uncertainty into Agentic Critique",
+        "source_url": "https://arxiv.org/abs/2608.10430",
+        "year": 2026,
+        "published": "2026-08-11",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) deployed as AI agents frequently exhibit user specification-grounding failures, executing hallucinated, undesired actions to force a resolution rather than expressing uncertainty. Existing detection methods fail to provide actionable, real-time correction as they either do not localize the hallucinations, or incur prohibitive inference latency. We introduce the Latent Critic, a lightweight low-rank adapter (LoRA) that operates concurrently with a frozen base LLM's generation to actively restructure the transformer's residual stream---amplifying latent grounding signals and translating them into localized, natural language feedback within a single sequence. By refining the base model's native uncertainty signals, this manipulation of the latent space enables reliable, granular detection without the overhead of secondary inference loops. Mechanistic analysis via activation patching and layer-wise probing shows that this rank-invariant behavior restructures pre-existing uncertainty geometry into a linearly separable representation that transfers more reliably than base model representations alone. Using tool-calling as an instantiation of granular hallucinations, we validate the detection and downstream improvements enabled by the Latent Critic architecture across Qwen and Llama-based models. Demonstrating superior real-time efficacy, our approach significantly outperforms equivalent-scale fine-tuned external detectors, semantic entropy baselines, and passive internal probes in isolating hallucinations, achieving 0.966 AUROC and>80% accuracy in localization (e.g., ungrounded: date). When deployed in a closed-loop ReAct environment, the Critic acts as a negligible latency guardrail, intercepting hallucinations before execution to prevent undesired actions while simultaneously leveraging this specific localized feedback to enable efficient agent self-correction.",
+        "identifiers": [
+          "SemanticScholar:6c3a12cc9a82f3cda50c4f19ecc8fe1880219f98"
+        ],
+        "semantic_scholar_id": "6c3a12cc9a82f3cda50c4f19ecc8fe1880219f98",
+        "canonical_id": "arXiv:2608.10430",
+        "arxiv_id": "2608.10430",
+        "authors": [
+          "S. Vijayvargiya",
+          "R. Lokesh"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 62,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:314bdca5553fd24b6938ab11b1e377d3e8bb11a15093132d78006aa82d43cde3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

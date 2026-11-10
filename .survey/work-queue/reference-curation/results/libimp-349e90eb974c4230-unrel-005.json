@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-349e90eb974c4230-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.27307",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.27307",
+    "identity_tokens": [
+      "arXiv:2609.27307"
+    ],
+    "reason": "GUI agentのon-policy self-distillation学習とtask successが主題で、inference compute/token/latency改善を示さない。",
+    "first_checked_at": "2026-10-05T23:59:18+00:00",
+    "last_checked_at": "2026-10-05T23:59:18+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md"
+    ],
+    "title": "Learn How to Act from Your Own Interactions: On-Policy Self-Distillation for GUI Agents"
+  },
+  "processed_at": "2026-10-05T23:59:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-349e90eb974c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

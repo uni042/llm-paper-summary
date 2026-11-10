@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261101-1458-scheduled-chat-00/r01",
+  "reference_main_sha": "ee44aeb3e0224e23e63bec161a2a835f622b0db5",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.05916",
+      "identity_tokens": [
+        "arXiv:2609.05916",
+        "DOI:10.48550/arXiv.2609.05916"
+      ],
+      "title": "STAR-Pro: Stage-Wise Token Adaptive Reduction with Progressive Refinement for Efficient Large Vision-Language Models",
+      "reason": "arXiv原著の一次要旨（研究論文メタデータ索引で取得）では、STAR-Proは大規模視覚言語モデルの推論時に生じる大量の視覚トークン計算を削減する学習不要の二段階手法。Adaptive Stageはpivoted QRにより視覚特徴空間を広く覆う候補集合を予算超過で選び、Progressive Stageはデコーダ層ごとに変わるテキスト→視覚注意に基づき生存トークン集合を段階的に絞る。7種類のLVLMと18の画像・動画ベンチマークで検証し、LLaVA-Video-7Bでは視覚トークン90.5%削減、基準性能の92.7%保持、実測推論速度2.24倍を報告。推論計算量・遅延の直接最適化と測定があり、LLM/VLM推論効率サーベイに該当するためaccept。本文は未読であり、要旨以外の詳細条件は未検証。",
+      "source_url": "https://arxiv.org/abs/2609.05916",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T15:02:10+09:00",
+      "last_checked_at": "2026-11-01T15:02:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 424,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

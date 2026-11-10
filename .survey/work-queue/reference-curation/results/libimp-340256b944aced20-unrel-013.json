@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-340256b944aced20-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.10209",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.10209",
+    "identity_tokens": [
+      "arXiv:2306.10209"
+    ],
+    "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 量子化・階層通信等でZeRO系大規模学習のcollective communication量を削減する直接的な分散学習システム研究。",
+    "first_checked_at": "2026-09-30T09:50:51+00:00",
+    "last_checked_at": "2026-09-30T09:50:51+00:00",
+    "linked_from": [
+      "worker-worklist-30 discovery_review rank 238"
+    ],
+    "title": "ZeRO++: Extremely Efficient Collective Communication for Giant Model Training"
+  },
+  "processed_at": "2026-09-30T09:50:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-340256b944ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

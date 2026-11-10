@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-197a05113438ddf5-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.18363",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.18363",
+    "identity_tokens": [
+      "arXiv:2606.18363"
+    ],
+    "reason": "一次本文の軌跡生成・SFT/RL学習・実機評価を確認。Guavaは4B VLMのembodied agent能力を少数trajectoryから学習するharnessで、本文は成功率/generalizationを評価し、推論コスト・serving効率の改善を示さない。serving lineageは弱い。",
+    "first_checked_at": "2026-10-05T21:28:40+00:00",
+    "last_checked_at": "2026-10-05T21:28:40+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Guava: Distilling Frontier VLMs into a Compact Agent through a Robotic Manipulation Harness"
+  },
+  "processed_at": "2026-10-05T21:28:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-197a05113438",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

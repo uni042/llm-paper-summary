@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8308a8a8e318a99e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.02535",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.02535",
+    "identity_tokens": [
+      "arXiv:2601.02535"
+    ],
+    "reason": "複数の生成候補を類似度グラフとスペクトルクラスタリングでまとめ、外部の評価モデルなしに代表解を選ぶ。軽量版は途中で候補経路を間引き、追加生成費用を抑える。推論時計算配分には接するが、GPUカーネルやサービング基盤の改善が主目的ではなく、出力選択品質が中心のため境界候補。",
+    "first_checked_at": "2026-10-11T13:05:07+00:00",
+    "last_checked_at": "2026-10-13T21:31:14+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation"
+  },
+  "processed_at": "2026-10-13T21:31:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8308a8a8e318",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

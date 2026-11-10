@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f0a7192ea3388f04-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.25467",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.25467",
+    "identity_tokens": [
+      "arXiv:2607.25467"
+    ],
+    "reason": "将来utilityに基づくvisual KV memory評価は関連するが、bounded auditで新たな効率化/eviction方法を示しておらず、実serving寄与が確定しない。",
+    "first_checked_at": "2026-10-05T03:31:01+00:00",
+    "last_checked_at": "2026-10-05T03:31:01+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2408.03675-nacl-a-general-and-effective-kv-cache-eviction-framework-for-llms.md"
+    ],
+    "title": "Seen, Said, or Forgotten? A Causal Audit of Visual KV Memory Across Dialog Turns"
+  },
+  "processed_at": "2026-10-05T03:31:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f0a7192ea338",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

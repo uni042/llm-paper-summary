@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2f2659e52dc1b8b0-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.17913",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.17913",
+    "identity_tokens": [
+      "arXiv:2511.17913"
+    ],
+    "reason": "一次本文を確認した結果、LLM推論の計算・メモリ・遅延・スループット・KV cache・量子化・offload・servingに対する具体的な改善や強い既存系統接続はない。",
+    "first_checked_at": "2026-10-06T15:50:50+00:00",
+    "last_checked_at": "2026-10-06T15:50:50+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+    ],
+    "title": "Token-Controlled Re-ranking for Sequential Recommendation via LLMs"
+  },
+  "processed_at": "2026-10-06T15:50:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f2659e52dc1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

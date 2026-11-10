@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cdefd68bab4ea1e7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.03527",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.03527",
+    "identity_tokens": [
+      "arXiv:2608.03527"
+    ],
+    "reason": "A search-rubric-trained document reranker is evaluated on retrieval/ranking quality for deep-research agents. This is a learned search component, not an attention kernel or serving-efficiency method.",
+    "first_checked_at": "2026-10-06T14:15:29+00:00",
+    "last_checked_at": "2026-10-06T14:15:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Training Documents Reranker with Search Rubrics for Deep Research Agent"
+  },
+  "processed_at": "2026-10-06T14:15:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cdefd68bab4e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

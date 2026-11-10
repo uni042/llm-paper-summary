@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-16ffa76728cb587a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.24133",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.24133",
+    "identity_tokens": [
+      "arXiv:2606.24133"
+    ],
+    "reason": "LLM pre-training data schedulerであり、serving/inferenceではなく学習時データ構成が主題。",
+    "first_checked_at": "2026-10-06T02:28:50+00:00",
+    "last_checked_at": "2026-10-06T02:28:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "title": "Holistic Data Scheduler for LLM Pre-training via Multi-Objective Reinforcement Learning"
+  },
+  "processed_at": "2026-10-06T02:28:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-16ffa76728cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

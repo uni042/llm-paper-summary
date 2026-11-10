@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1aa1908ba0682a30-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.19873",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.19873",
+    "identity_tokens": [
+      "arXiv:2603.19873"
+    ],
+    "reason": "要旨はEarth-observation vision transformerのfine-tuning前層選択/剪定。対象は画像モデル。",
+    "first_checked_at": "2026-10-05T22:59:29+00:00",
+    "last_checked_at": "2026-10-05T22:59:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+    ],
+    "title": "SIMPLER: Efficient Foundation Model Adaptation via Similarity-Guided Layer Pruning for Earth Observation"
+  },
+  "processed_at": "2026-10-05T22:59:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1aa1908ba068",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

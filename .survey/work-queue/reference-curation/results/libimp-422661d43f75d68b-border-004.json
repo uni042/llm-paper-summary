@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-422661d43f75d68b-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.09567",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.09567",
+    "identity_tokens": [
+      "arXiv:2503.09567"
+    ],
+    "reason": "一次本文はLong-CoT推論時スケーリングと推論高速化・KV cache/token圧縮・推論長制御を広く扱うが、研究サーベイであり、LLM inference/serving効率に絞った新規機構や再現可能な比較を提示しない。範囲に隣接する一方、個別の効率手法論文より対象との距離があり、borderlineとした。",
+    "first_checked_at": "2026-10-05T02:12:07+00:00",
+    "last_checked_at": "2026-10-05T02:12:07+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.13326-thinking-short-and-right-over-thinking-long-serving-llm-reasoning-effici.md",
+      "papers/inference/17-pim-near-data-acceleration/2025-2512.03608-kvnand-dram-free-in-flash-computing.md",
+      "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+    ],
+    "title": "Towards Reasoning Era: A Survey of Long Chain-of-Thought for Reasoning Large Language Models"
+  },
+  "processed_at": "2026-10-05T02:12:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-422661d43f75",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "lib-20260928-borderline-arxiv-2501-12948",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.12948",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.12948",
+    "identity_tokens": [
+      "DOI:10.1038/s41586-025-09422-z",
+      "arXiv:2501.12948"
+    ],
+    "reason": "主貢献は強化学習による推論能力・モデル設計であり、インフラ記述はあるが推論システム最適化として独立評価されていないため境界的とする。",
+    "first_checked_at": "2026-09-27T21:48:56+00:00",
+    "last_checked_at": "2026-09-27T21:48:56+00:00",
+    "linked_from": [
+      "LLM-paper-summary-library-first legacy MD-only Discovery"
+    ],
+    "title": "DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning"
+  },
+  "processed_at": "2026-09-27T21:48:56+00:00",
+  "worker_id": "survey-github-import",
+  "run_key": "library-import-20260928-cleanup",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30d0800b87079530-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2006.03236",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2006.03236",
+    "identity_tokens": [
+      "arXiv:2006.03236"
+    ],
+    "reason": "2020年NeurIPSの系列圧縮型Transformer。著者要旨では系列全体を一つの表現へ集約する分類・読解等に向けて中間層のトークン長を短縮し、必要に応じ復元用デコーダを使う。LLMの自己回帰生成時KVキャッシュ、モデルサービング、推論基盤の実装・評価ではないため、歴史的な系列圧縮手法として関連はあるが現在の収録範囲では微妙。",
+    "first_checked_at": "2026-10-11T02:50:02+00:00",
+    "last_checked_at": "2026-10-11T02:50:02+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing"
+  },
+  "processed_at": "2026-10-11T02:50:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30d0800b8707",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

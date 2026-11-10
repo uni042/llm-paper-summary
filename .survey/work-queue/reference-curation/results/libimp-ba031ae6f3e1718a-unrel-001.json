@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ba031ae6f3e1718a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2010.03633",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2010.03633",
+    "identity_tokens": [
+      "arXiv:2010.03633"
+    ],
+    "reason": "一次要旨はsimplicial complex上のgraph neural networkと欠損データ補完であり、LLM inference対象外。",
+    "first_checked_at": "2026-10-05T01:54:14+00:00",
+    "last_checked_at": "2026-10-05T01:54:14+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2605.13997-hodgecover-topological-compression.md"
+    ],
+    "title": "Simplicial Neural Networks"
+  },
+  "processed_at": "2026-10-05T01:54:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ba031ae6f3e1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ccdc64d759ddbb54-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/lra.2025.3643327",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/lra.2025.3643327",
+    "identity_tokens": [
+      "DOI:10.1109/lra.2025.3643327"
+    ],
+    "reason": "一次要旨は視覚・慣性センサ融合によるvisual-inertial odometryである。ロボット状態推定でありLLM inference optimizationではない。",
+    "first_checked_at": "2026-10-08T07:08:15+00:00",
+    "last_checked_at": "2026-10-08T07:08:15+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+    ],
+    "title": "SS-VIO: A Novel Cross Modal State Space Visual Inertial Odometry"
+  },
+  "processed_at": "2026-10-08T07:08:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ccdc64d759dd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

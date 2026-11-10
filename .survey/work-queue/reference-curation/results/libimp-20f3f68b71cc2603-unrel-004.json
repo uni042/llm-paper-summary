@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20f3f68b71cc2603-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.31382",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.31382",
+    "identity_tokens": [
+      "arXiv:2606.31382"
+    ],
+    "reason": "VLA adaptationでpruning耐性/robot task qualityを調べる研究。LLM inference optimization対象ではない。",
+    "first_checked_at": "2026-10-05T02:43:17+00:00",
+    "last_checked_at": "2026-10-05T02:43:17+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+    ],
+    "title": "Revisiting Parameter Redundancy in Vision-Language-Action Models: Insights from VLM-to-VLA Adaptation"
+  },
+  "processed_at": "2026-10-05T02:43:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20f3f68b71cc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

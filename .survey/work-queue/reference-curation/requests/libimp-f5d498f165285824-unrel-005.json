@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f5d498f165285824-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.10579",
+  "reason": "Although existing instruction data selection methods have introduced various metrics, the inherent complexity of real-world datasets makes it impractical for any single metric to generalize across all scenarios. Developers are thus often forced to manually inspect data and craft heuristic rules for each new application---a tedious and error-prone process. In this paper, we propose a paradigm shift from manual configuration to automated orchestration via the Instruction Data Selection Agent (DataMaster), which interprets user intent and autonomously composes optimal selection strategies. By allowing users to specify data needs through natural language descriptions, DataMaster simplifies data curation and removes the burden of manual strategy design. Extensive experiments across the math, medical, and code domains show that DataMaster outperforms static baselines in most settings and surpasses full-pool training in a substantial number of cases. The implementation of DataMaster and the scripts needed to reproduce the reported pipeline are publicly available at https://github.com/nju-websoft/DataMaster.",
+  "title": "Agentic Instruction Data Selection: Let DataMaster Interpret Your Intent",
+  "identity_tokens": [
+    "arXiv:2608.10579"
+  ],
+  "linked_from": [
+    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5d498f16528",
+  "source_precheck_request_id": null
+}

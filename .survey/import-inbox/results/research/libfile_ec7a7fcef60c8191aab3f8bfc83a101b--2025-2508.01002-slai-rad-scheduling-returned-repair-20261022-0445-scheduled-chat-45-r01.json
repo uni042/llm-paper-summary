@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "be78f84ff59643450484ee69bf5ffad399a35549950e09c578fffd6a41a7cd4a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ec7a7fcef60c8191aab3f8bfc83a101b--2025-2508.01002-slai-rad-scheduling-returned-repair-20261022-0445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2508.01002",
+  "worker_completed_at": "2026-10-22T04:52:00+09:00",
+  "worker_run_key": "20261022-0445-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6696,
+    "body_paragraphs": 36,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 144,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 144 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 144 < 500"
+  ],
+  "processed_at": "2026-10-22T00:36:16+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7515b221d6458c8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.00413",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.00413",
+    "identity_tokens": [
+      "arXiv:2511.00413"
+    ],
+    "reason": "一次要旨は、ツール呼出しなどで分岐したエージェント軌跡の共有接頭辞をDFSで直列化し、順伝播・逆伝播の重複を削減する学習処理を提案する。密モデルとMoEの教師あり微調整・強化学習で最大6.2倍の学習高速化を報告するが、推論サービング、実行時キャッシュ、GPU推論カーネルへの具体的な最終適用は一次要旨で確認できない。現行サーベイでは学習単独高速化が凍結範囲のためResearch対象にせず、技術的関連性がある境界候補として保存する。",
+    "first_checked_at": "2026-10-11T14:27:36+00:00",
+    "last_checked_at": "2026-10-11T14:27:36+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse"
+  },
+  "processed_at": "2026-10-11T14:27:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7515b221d64",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

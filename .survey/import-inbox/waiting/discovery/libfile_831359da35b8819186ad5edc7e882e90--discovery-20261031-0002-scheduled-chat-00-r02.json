@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0002-scheduled-chat-00/r02",
+  "reference_main_sha": "67e9465d6a63dbfa3a71a8b8c1eb1142de42713c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.04132",
+      "identity_tokens": [
+        "arXiv:2608.04132"
+      ],
+      "title": "RUTA: Principled Visual Token Allocation via Rate-Utility Optimization",
+      "reason": "arXiv一次要旨。画像とクエリごとに保持する視覚トークン数と内容を同時最適化し、Bernoulliゲートと意味・空間近傍の集約でpre-LLMのトークン数を削減。LLaVA-NeXT-7Bで2.0%の視覚トークンに対し性能88.2%、Qwen3-VL-8Bで4.2%に対し94.4%保持と報告。マルチモーダルLLM推論のprefill効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2608.04132",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:15:00+09:00",
+      "last_checked_at": "2026-10-31T00:15:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 295,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.20275",
+      "identity_tokens": [
+        "arXiv:2603.20275"
+      ],
+      "title": "Understanding Pruning Regimes in Vision-Language Models Through Domain-Aware Layer Selection",
+      "reason": "arXiv一次要旨。数学・一般VLM入力で各decoder層の入出力活性類似度を測定し、領域別に削除候補層を順位付けする構造的深さ枝刈り。低・中・高の削減率で有効な選択規則が異なることを2種類のVLMと数学・一般マルチモーダル評価で検証。VLM推論計算量を減らす圧縮手法に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2603.20275",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:15:00+09:00",
+      "last_checked_at": "2026-10-31T00:15:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 305,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.21352",
+      "identity_tokens": [
+        "arXiv:2410.21352"
+      ],
+      "title": "LLMCBench: Benchmarking Large Language Model Compression for Efficient Deployment",
+      "reason": "arXiv一次要旨。LLM圧縮手法の比較が限定的なモデル・データ・指標に依存する問題に対し、実配備要件を基に複数の評価トラックと指標を整備し、主流圧縮アルゴリズムを横断評価するベンチマーク。量子化・圧縮の実配備判断に必要な品質・効率比較に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2410.21352",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:15:00+09:00",
+      "last_checked_at": "2026-10-31T00:15:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 306,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.05454",
+      "identity_tokens": [
+        "arXiv:2603.05454"
+      ],
+      "title": "Beyond Scattered Acceptance: Fast and Coherent Inference for DLMs via Longest Stable Prefixes",
+      "reason": "arXiv一次要旨。拡散LLMで離散位置の確定がKVキャッシュを断片化する問題に対し、連続した左端安定prefixを一括確定するLSPスケジューラを提案。LLaDA-8BとDream-7Bの数学・コード・多言語タスクで最大3.4倍高速化し品質を維持・微改善と報告。拡散LLM復号とキャッシュ局所性の直接的最適化である。",
+      "source_url": "https://arxiv.org/abs/2603.05454",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:15:00+09:00",
+      "last_checked_at": "2026-10-31T00:15:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 312,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.02821",
+      "identity_tokens": [
+        "arXiv:2605.02821"
+      ],
+      "title": "When Is the Same Model Not the Same Service? A Measurement Study of Hosted Open-Weight LLM APIs",
+      "reason": "arXiv一次要旨。公開重みモデルの同名APIでも提供者、モデル版、文脈容量、価格、遅延、スループット、信頼性が異なることを2025年第4四半期のログ・互換性試験・連続測定で分析。実測条件下のルーティング反実仮想でQwen3-32Bコスト37.8%減、DeepSeek-V3.2平均スループット約90%増を報告。LLMサービングの実測・経路最適化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2605.02821",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:15:00+09:00",
+      "last_checked_at": "2026-10-31T00:15:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 314,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.24605",
+      "identity_tokens": [
+        "arXiv:2510.24605"
+      ],
+      "title": "Diffusion LLM with Native Variable Generation Lengths: Let [EOS] Lead the Way",
+      "reason": "arXiv一次要旨。拡散LLMの固定生成長制約に対しEOSを明示的に学習し、双方向注意と並列性を維持しつつブロック拡散で可変長生成するdLLM-Varを提案。標準ベンチマークで従来dLLM推論比30.1倍、自己回帰Qwen/Llama比2.4倍と報告し、拡散LLMの推論時間・生成長制御に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2510.24605",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:15:00+09:00",
+      "last_checked_at": "2026-10-31T00:15:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 315,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.21862",
+      "identity_tokens": [
+        "arXiv:2603.21862"
+      ],
+      "title": "Holistic Scaling Laws for Optimal Mixture-of-Experts Architecture Optimization",
+      "reason": "arXiv一次要旨。MoEのトークン当たりFLOPs、活性パラメータ、総パラメータを独立制約として扱い、二段階探索へ分解して670超のMoEモデルから最適構成のスケーリング則を導く。活性重み・メモリという推論設計上の関連はあるが、主評価は学習compute予算に対するアーキテクチャ探索であり、実際の推論遅延・スループット比較は要旨にないためborderline。",
+      "source_url": "https://arxiv.org/abs/2603.21862",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:15:00+09:00",
+      "last_checked_at": "2026-10-31T00:15:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 332,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.15464",
+      "identity_tokens": [
+        "arXiv:2604.15464"
+      ],
+      "title": "Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU",
+      "reason": "arXiv一次要旨。TPU上の不規則なKVページと可変長要求を扱うPallas/Mosaic注意カーネル。細粒度tiling、KV更新とattentionの融合、decode/prefill/mixed別コンパイルによりTPU7xでdecodeメモリ帯域利用率最大86%、prefill MFU最大73%と報告。vLLM・SGLang向けTPUバックエンドに統合した推論実装研究。",
+      "source_url": "https://arxiv.org/abs/2604.15464",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:15:00+09:00",
+      "last_checked_at": "2026-10-31T00:15:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 333,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.35394",
+      "identity_tokens": [
+        "arXiv:2609.35394"
+      ],
+      "title": "Rethinking Visual Token Compression for Video Large Language Models: A Simple Yet Strong Baseline",
+      "reason": "arXiv一次要旨。学習不要のSimpleClusterが動画フレーム間の位置を考慮した特徴クラスタリングと平均代表値で視覚トークンを圧縮。3種類のVideo LLM、4ベンチマークで低保持率1%を含め比較し、元特徴分布の全域被覆が精度維持に重要と分析。動画LLMの視覚トークン数とprefillコストの削減に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2609.35394",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:15:00+09:00",
+      "last_checked_at": "2026-10-31T00:15:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 336,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.15954",
+      "identity_tokens": [
+        "arXiv:2603.15954"
+      ],
+      "title": "MobileLLM-Flash: Latency-Guided On-Device LLM Design for Industry Scale Deployment",
+      "reason": "arXiv一次要旨。モバイルCPUの実測遅延を用いたhardware-in-the-loopアーキテクチャ探索とattention skippingを組み合わせ、標準モバイルランタイムに載る350M/650M/1.4Bモデルを設計。最大8k文脈でモバイルCPU上のprefill最大1.8倍、decode最大1.6倍高速化と報告し、端末内LLM推論効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2603.15954",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:15:00+09:00",
+      "last_checked_at": "2026-10-31T00:15:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 338,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

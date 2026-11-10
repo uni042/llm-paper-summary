@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "73da6b4b0d2c7bb9a39e8ccb6f2bdf3ff420e49263cb3a995b1fca12390b6de4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_bf0a2dc5f6ec81918e45d1fa5c0d2721--2026-2601.23180-trispec-proxy-verification-returned-repair-20261023-1000-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2601.23180",
+  "worker_completed_at": "2026-10-23T10:00:34+09:00",
+  "worker_run_key": "20261023-1000-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6438,
+    "body_paragraphs": 33,
+    "method_chars": 1478,
+    "method_paragraphs": 7,
+    "evaluation_chars": 159,
+    "limitation_chars": 739,
+    "insufficiency_flags": [
+      "評価説明量 159 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 159 < 500"
+  ],
+  "processed_at": "2026-10-23T01:53:18+00:00"
+}

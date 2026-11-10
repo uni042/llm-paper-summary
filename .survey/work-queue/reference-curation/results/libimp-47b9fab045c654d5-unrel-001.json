@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-47b9fab045c654d5-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.12526",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.12526",
+    "identity_tokens": [
+      "arXiv:2408.12526",
+      "id:arXiv:2408.12526",
+      "url:https://arxiv.org/abs/2408.12526"
+    ],
+    "reason": "一次要旨で扱うのはBERT系の識別モデルを浅い複数studentへ蒸留するオンライン検索・テキストマイニング向けGPU推論。生成LLMの自己回帰decode、KV管理、推論サービングのボトルネックを扱わず、対象サーベイの中心である生成LLM推論高速化の直接研究ではない。worklistのEfficient GPU InferenceとarXiv書誌のLow-latency GPU Inferenceの表題差を記録。",
+    "first_checked_at": "2026-10-30T03:53:35+00:00",
+    "last_checked_at": "2026-10-30T03:53:35+00:00",
+    "linked_from": [],
+    "title": "Exploiting Student Parallelism for Low-latency GPU Inference of BERT-like Models in Online Services"
+  },
+  "processed_at": "2026-10-30T03:53:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-47b9fab045c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

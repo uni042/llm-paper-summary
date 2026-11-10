@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ba03c7b28e3fb24-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2209.05433",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2209.05433",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2209.05433",
+      "arXiv:2209.05433"
+    ],
+    "reason": "E4M3/E5M2の8-bit浮動小数点形式はLLM推論量子化・Tensor Core実行へ直接利用される基盤技術だが、論文自体は深層学習全般の訓練・推論を対象としLLM専用ではない。",
+    "first_checked_at": "2026-10-02T10:58:57+00:00",
+    "last_checked_at": "2026-10-02T10:58:57+00:00",
+    "linked_from": [],
+    "title": "FP8 Formats for Deep Learning"
+  },
+  "processed_at": "2026-10-02T10:58:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ba03c7b28e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

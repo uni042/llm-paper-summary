@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f62720604b1f0234-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.11618",
+  "reason": "Diffusion-based generative video compression has emerged as a promising paradigm to improve perceptual quality, where latent frames are required to be encoded efficiently while serving as denoising conditions. However, existing methods neither carefully design reference and quality structures during latent coding nor account for the impact of frame-level quality variation on denoising procedure, which limits coding efficiency and aggravates artifact propagation during generative reconstruction. In this paper, we propose GVCHR, Generative Video Compression based on Hierarchical Referencing. The key idea is to organize latent frames hierarchically, where the selected high-quality references benefit both latent coding and generative reconstruction. In latent coding, GVCHR couples a hierarchical reference structure with a hierarchical quality structure, assigning more bits to lower-layer frames that are reused more frequently as references. Built on this design, we introduce Hierarchical Temporal Context Mining to exploits complementary short- and long-term temporal context for effective latent coding. In generative reconstruction, the coding-side hierarchy is incorporated into a Hierarchical Attentive Adapter which is attached to a video diffusion transformer. This adapter uses hierarchical attention to restrict each latent frame to attend only to the same- or lower-layer references, thereby reducing artifact propagation during denoising. Experiments validate GVCHR on multiple benchmarks. Compared with the previous state-of-the-art method, GVCHR achieves 50.5% and 54.0% BD-rate gains in terms of LPIPS and DISTS, respectively, while also delivering clearly improved visual quality.",
+  "title": "Generative Video Compression Based on Hierarchical Referencing",
+  "identity_tokens": [
+    "arXiv:2608.11618"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f62720604b1f",
+  "source_precheck_request_id": null
+}

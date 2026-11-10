@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7da9cb74010ebbbb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2020.acl-main.92",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2020.acl-main.92",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2020.acl-main.92"
+    ],
+    "reason": "ASDivという数学文章題データセットの構築・評価が主題で、LLM推論システム最適化ではない。",
+    "first_checked_at": "2026-10-02T07:00:17+00:00",
+    "last_checked_at": "2026-10-02T07:00:17+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-45.json"
+    ],
+    "title": "A Diverse Corpus for Evaluating and Developing English Math Word Problem Solvers"
+  },
+  "processed_at": "2026-10-02T07:00:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7da9cb74010e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

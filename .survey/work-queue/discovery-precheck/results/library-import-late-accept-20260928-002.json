@@ -1,0 +1,1124 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "library-import-late-accept-20260928-002",
+  "collector_id": "survey-github-import",
+  "run_key": "library-import-20260928-late",
+  "axis": "explicit-library-late-accept",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3768628",
+    "DOI:10.1145/3711896.3737413",
+    "arXiv:2603.11504",
+    "arXiv:2601.17111",
+    "arXiv:2512.09277",
+    "arXiv:2511.08923",
+    "arXiv:2510.27656",
+    "arXiv:2510.25602",
+    "arXiv:2510.15312",
+    "arXiv:2510.02613",
+    "arXiv:2509.11815",
+    "arXiv:2508.15919",
+    "arXiv:2507.11941",
+    "arXiv:2507.08143",
+    "arXiv:2507.00605",
+    "arXiv:2506.10470",
+    "arXiv:2505.23072",
+    "arXiv:2505.19427",
+    "arXiv:2405.19325",
+    "arXiv:2403.00835",
+    "arXiv:2401.04658",
+    "arXiv:2310.06201"
+  ],
+  "target_unseen": 22,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "360bb42e0764b639cd8a8d743a3cc0a44d06fc8b",
+  "raw_search_result_count": 22,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 20,
+  "provider_progress": {
+    "requested_count": 22,
+    "status_counts": {
+      "allowed": 20,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-09-27T21:48:03.918567+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3768628",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2404.12457"
+    },
+    {
+      "requested_id": "DOI:10.1145/3711896.3737413",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2401.17644"
+    },
+    {
+      "requested_id": "arXiv:2603.11504",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.17111",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.09277",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.08923",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.27656",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.25602",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.15312",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.02613",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.11815",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.15919",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.11941",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.08143",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.00605",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.10470",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.23072",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.19427",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.19325",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2403.00835",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2401.04658",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.06201",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LongFlow: Efficient KV Cache Compression for Reasoning M",
+      "source_url": "https://arxiv.org/abs/2603.11504",
+      "year": 2026,
+      "published": "2026-03-12",
+      "abstract": "Recent reasoning models such as OpenAI-o1 and DeepSeek-R1 have shown strong performance on complex tasks including mathematical reasoning and code generation. However, this performance gain comes with substantially longer output sequences, leading to significantly increased deployment costs. In particular, long outputs require large KV caches, resulting in high memory consumption and severe bandwidth pressure during attention computation. Most existing KV cache optimization methods are designed for long-input, short-output scenarios and are ineffective for the long-output setting of reasoning models. Moreover, importance estimation in prior work is computationally expensive and becomes prohibitive when continuous re-evaluation is required during long generation. To address these challenges, we propose LongFlow, a KV cache compression method with an efficient importance estimation metric derived from an intermediate result of attention computation using only the current query. This design introduces negligible computational overhead and requires no auxiliary storage. We further develop a custom kernel that fuses FlashAttention, importance estimation, and token eviction into a single optimized operator, improving system-level efficiency. Experiments show that LongFlow achieves up to an 11.8 times throughput improvement with 80% KV cache compression with minimal impact on model accuracy.",
+      "canonical_id": "arXiv:2603.11504",
+      "arxiv_id": "2603.11504",
+      "doi": "10.48550/arXiv.2603.11504",
+      "authors": [
+        "Yi Su",
+        "Zhenxu Tian",
+        "Dan Qiao",
+        "Yuechi Zhou",
+        "Jun-Tao Li",
+        "Min Zhang"
+      ]
+    },
+    {
+      "title": "Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2601.17111",
+      "year": 2026,
+      "published": "2026-01-23",
+      "abstract": "Mixture-of-Experts (MoE) models are typically pre-trained with explicit load-balancing constraints to ensure statistically balanced expert routing. Despite this, we observe that even well-trained MoE models exhibit significantly imbalanced routing. This behavior is arguably natural-and even desirable - as imbalanced routing allows models to concentrate domain-specific knowledge within a subset of experts. Expert parallelism (EP) is designed to scale MoE models by distributing experts across multiple devices, but with a less-discussed assumption of balanced routing. Under extreme imbalance, EP can funnel a disproportionate number of tokens to a small number of experts, leading to compute- and memory-bound failures on overloaded devices during post-training or inference, where explicit load balancing is often inapplicable. We propose Least-Loaded Expert Parallelism (LLEP), a novel EP algorithm that dynamically reroutes excess tokens and associated expert parameters from overloaded devices to underutilized ones. This ensures that all devices complete their workloads within the minimum collective latency while respecting memory constraints. Across different model scales, LLEP achieves up to 5x speedup and 4x reduction in peak memory usage compared to standard EP. This enables faster and higher-throughput post-training and inference, with ~1.9x faster for gpt-oss-120b. We support our method with extensive theoretical analysis and comprehensive empirical evaluations, including ablation studies. These results illuminate key trade-offs and enable a principled framework for hardware-specific hyper-parameter tuning to achieve optimal performance.",
+      "canonical_id": "arXiv:2601.17111",
+      "arxiv_id": "2601.17111",
+      "doi": "10.48550/arXiv.2601.17111",
+      "authors": [
+        "Xuan-Phi Nguyen",
+        "Shrey Pandit",
+        "Austin Xu",
+        "Caiming Xiong",
+        "Shafiq Joty"
+      ]
+    },
+    {
+      "title": "Efficient MoE Serving in the Memory-Bound Regime: Balance Activated Experts, Not Tokens",
+      "source_url": "https://arxiv.org/abs/2512.09277",
+      "year": 2025,
+      "published": "2025-12-10",
+      "abstract": "Expert Parallelism (EP) permits Mixture of Experts (MoE) models to scale beyond a single GPU. To address load imbalance across GPUs in EP, existing approaches aim to balance the number of tokens each GPU processes. Surprisingly, we find that this objective degrades performance rather than improving it when processing is memory-bound - a common occurrence in MoE serving, especially in the decode phase. Our analysis reveals that balancing the number of tokens processed per GPU increases the number of activated experts, exacerbating memory pressure in the memory-bound regime. We propose Minimum Expert Token ROuting, a novel token-routing algorithm for high-performance expert-parallel MoE serving in the memory-bound regime that balances the number of activated experts per GPU rather than token counts. METRO achieves near-optimal routing quality with minimal computational overhead by jointly optimizing algorithmic efficiency and leveraging the GPU's parallel processing power. To guarantee routing quality, METRO also employs a novel allGather scheme to gather global top-k knowledge, which has minimal overhead compared to conventional allToAll. Our evaluation of METRO against EPLB on both real systems (vLLM over 8 A100 GPUs) and a proprietary simulator (8-16 B200 GPUs) shows that METRO reduces decode latency by 11 - 22%, and total token throughput by 3 - 21% for Qwen3 and DeepSeek-V3 serving, where prefill and decode phases are co-deployed. In addition, by trading latency headroom for throughput, METRO improves decode throughput by up to 4.11x over EPLB at a fixed decode SLO.",
+      "canonical_id": "arXiv:2512.09277",
+      "arxiv_id": "2512.09277",
+      "doi": "10.48550/arXiv.2512.09277",
+      "authors": [
+        "Yanpeng Yu",
+        "Haiyue Ma",
+        "Krish Agarwal",
+        "Nicolai Oswald",
+        "Qi-Jing Huang",
+        "Hugo Linsenmaier",
+        "Chun-Hui Mei",
+        "Ritchie Zhao",
+        "Ritika Borkar",
+        "B. Rouhani",
+        "David Nellans",
+        "Ronny Krashinsky",
+        "Anurag Khandelwal"
+      ]
+    },
+    {
+      "title": "TiDAR: Think in Diffusion, Talk in Autoregression",
+      "source_url": "https://arxiv.org/abs/2511.08923",
+      "year": 2025,
+      "published": "2025-11-12",
+      "abstract": "Diffusion language models hold the promise of fast parallel generation, while autoregressive (AR) models typically excel in quality due to their causal structure aligning naturally with language modeling. This raises a fundamental question: can we achieve a synergy with high throughput, higher GPU utilization, and AR level quality? Existing methods fail to effectively balance these two aspects, either prioritizing AR using a weaker model for sequential drafting (speculative decoding), leading to lower drafting efficiency, or using some form of left-to-right (AR-like) decoding logic for diffusion, which still suffers from quality degradation and forfeits its potential parallelizability. We introduce TiDAR, a sequence-level hybrid architecture that drafts tokens (Thinking) in Diffusion and samples final outputs (Talking) AutoRegressively - all within a single forward pass using specially designed structured attention masks. This design exploits the free GPU compute density, achieving a strong balance between drafting and verification capacity. Moreover, TiDAR is designed to be serving-friendly (low overhead) as a standalone model. We extensively evaluate TiDAR against AR models, speculative decoding, and diffusion variants across generative and likelihood tasks at 1.5B and 8B scales. Thanks to the parallel drafting and sampling as well as exact KV cache support, TiDAR outperforms speculative decoding in measured throughput and surpasses diffusion models like Dream and Llada in both efficiency and quality. Most notably, TiDAR is the first architecture to close the quality gap with AR models while delivering 4.71x to 5.91x more tokens per second.",
+      "canonical_id": "arXiv:2511.08923",
+      "arxiv_id": "2511.08923",
+      "doi": "10.48550/arXiv.2511.08923",
+      "authors": [
+        "Jingyu Liu",
+        "Xin Dong",
+        "Zhi-Fan Ye",
+        "Rishabh Mehta",
+        "Yonggan Fu",
+        "Vartika Singh",
+        "Jan Kautz",
+        "Ce Zhang",
+        "Pavlo Molchanov"
+      ]
+    },
+    {
+      "title": "fabric-lib: RDMA Point-to-Point Communication for LLM Systems",
+      "source_url": "https://arxiv.org/abs/2510.27656",
+      "year": 2025,
+      "published": "2025-10-31",
+      "abstract": "Emerging Large Language Model (LLM) system patterns, such as disaggregated inference, Mixture-of-Experts (MoE) routing, and asynchronous reinforcement fine-tuning, require flexible point-to-point communication beyond simple collectives. Existing implementations are locked to specific Network Interface Controllers (NICs), hindering integration into inference engines and portability across hardware providers. We present fabric-lib, which bridges the functionality of common NICs to expose a uniform interface. fabric-lib exposes one-sided WriteImm operations with a ImmCounter primitive for completion notification, without ordering assumptions of network transport, transparently managing multiple NICs per GPU. We demonstrate peak throughput of 400 Gbps on both NVIDIA ConnectX-7 and AWS Elastic Fabric Adapter (EFA). We showcase fabric-lib through three production systems: (1) KvCache transfer for disaggregated inference with dynamic scaling, (2) RL weight updates achieving 1.3 seconds for trillion-parameter models, and (3) MoE dispatch/combine implementation exceeding DeepEP decode latency on ConnectX-7, with the first viable latencies on EFA. We demonstrate that our portable point-to-point communication complements collectives while avoiding lock-in. fabric-lib is open-sourced at https://github.com/perplexityai/pplx-garden/",
+      "canonical_id": "arXiv:2510.27656",
+      "arxiv_id": "2510.27656",
+      "authors": [
+        "N. Licker",
+        "K. Hu",
+        "V. Zaytsev",
+        "Lequn Chen"
+      ]
+    },
+    {
+      "title": "INT v.s. FP: A Comprehensive Study of Fine-Grained Low-bit Quantization Formats",
+      "source_url": "https://arxiv.org/abs/2510.25602",
+      "year": 2025,
+      "published": "2025-10-29",
+      "abstract": "Modern AI hardware, such as Nvidia's Blackwell architecture, is increasingly embracing low-precision floating-point (FP) formats to handle the pervasive activation outliers in Large Language Models (LLMs). Despite this industry trend, a unified comparison of FP and integer (INT) quantization across varying granularities has been missing, leaving algorithm and hardware co-design without clear guidance. This paper fills that gap by systematically investigating the trade-offs between FP and INT formats. We reveal a critical performance crossover: while FP excels in coarse-grained quantization, the comparison at fine-grained (block-wise) levels is more nuanced. Our comprehensive comparison demonstrates that for popular 8-bit fine-grained formats (e.g., MX with block size 32), MXINT8 is superior to its FP counterpart in both algorithmic accuracy and hardware efficiency. However, for 4-bit formats, FP (e.g., MXFP4, NVFP4) often holds an accuracy advantage , though we show that NVINT4 can surpass NVFP4 when outlier-mitigation techniques like Hadamard rotation are applied. We also introduce a symmetric clipping method that resolves gradient bias in fine-grained low-bit INT training, enabling nearly lossless performance for MXINT8 training. These findings challenge the current hardware trajectory, demonstrating that a one-size-fits-all FP approach is suboptimal and advocating that fine-grained INT formats, particularly MXINT8, offer a better balance of accuracy, power, and efficiency for future AI accelerators.",
+      "canonical_id": "arXiv:2510.25602",
+      "arxiv_id": "2510.25602",
+      "doi": "10.48550/arXiv.2510.25602",
+      "authors": [
+        "Mengzhao Chen",
+        "Meng Wu",
+        "Hui Jin",
+        "Zhihang Yuan",
+        "Jing Liu",
+        "Chaoyi Zhang",
+        "Yunshui Li",
+        "Jie Huang",
+        "Jin Ma",
+        "Ze-Yue Xue",
+        "Zhi-Heng Liu",
+        "Xingyan Bin",
+        "Ping Luo"
+      ]
+    },
+    {
+      "title": "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution",
+      "source_url": "https://arxiv.org/abs/2510.15312",
+      "year": 2025,
+      "published": "2025-10-17",
+      "abstract": "Performing Retrieval-Augmented Generation (RAG) directly on mobile devices is promising for data privacy and responsiveness but is hindered by the architectural constraints of mobile NPUs. Specifically, current hardware struggles with the variable workloads intrinsic to RAG: the transition between processing extensive contexts and generating tokens incurs significant overhead due to static graph constraints, while the memory-bound generation phase leaves computational resources underutilized. In this work, we propose a holistic acceleration framework sd.npu, designed to maximize NPU efficiency for on-device RAG ecosystem. To address the latency caused by NPU graph switching during phase transitions, we introduce a pipelined execution strategy. This approach masks the overhead of model reconfiguration by parallelizing the loading of decoding graphs with the computation of partitioned context chunks (chunked prefill), thereby ensuring continuous execution flow. Furthermore, to mitigate low hardware utilization during the decoding phase, we develop an NPU-centric speculative decoding mechanism. By calibrating generation distributions and extending draft sequences, our method effectively converts idle NPU cycles into valid token throughput. Experiments on commercial smartphones show that our framework significantly outperforms existing baselines, delivering 1.06$\\times$--3.81$\\times$ speedups and 1.07$\\times$--4.71$\\times$ energy savings across various RAG tasks.",
+      "canonical_id": "arXiv:2510.15312",
+      "arxiv_id": "2510.15312",
+      "doi": "10.48550/arXiv.2510.15312",
+      "authors": [
+        "Zhi-Yang Chen",
+        "Daliang Xu",
+        "Haiyang Shen",
+        "Mengwei Xu",
+        "Shangguang Wang",
+        "Yun Ma"
+      ]
+    },
+    {
+      "title": "ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2510.02613",
+      "year": 2025,
+      "published": "2025-10-02",
+      "abstract": "Mixture-of-Experts (MoE) models promise efficient scaling of large language models (LLMs) by activating only a small subset of experts per token, but their parallelized inference pipelines make elastic serving challenging. Existing strategies fall short: horizontal scaling provisions entire replicas of the current configuration, often tens to hundreds of accelerators, leading to coarse granularity, long provisioning delays, and costly overprovisioning. Vertical scaling offers finer adjustments but typically requires instance restarts, incurring downtime. These limitations make current approaches ill-suited for the bursty, short-lived traffic patterns common in cloud deployments. We present ElasticMoE, an elastic scaling framework for MoE LLMs that achieves fine-grained, low-latency, and zero-downtime scaling. ElasticMoE decouples inference execution from memory operations, enabling scaling steps to proceed concurrently with serving. An HBM Management Module (HMM) reuses weights and KV caches via zero-copy remapping, while high-bandwidth peer-to-peer transfers bring newly added accelerators online without interrupting service. A virtual memory based expert redistribution mechanism migrates MoE experts without costly buffer reallocations, reducing peak memory usage during expert parallelism reconfiguration. Our evaluation on Ascend NPUs with three popular MoE LLMs shows that ElasticMoE achieves up to 9x lower scale-up latency, up to 2x better throughput during scaling, and significantly improves SLO attainment compared to baselines. By enabling fine-grained, concurrent scaling with minimal disruption, ElasticMoE advances the practicality of deploying massive MoE LLMs in dynamic cloud environments.",
+      "canonical_id": "arXiv:2510.02613",
+      "arxiv_id": "2510.02613",
+      "doi": "10.48550/arXiv.2510.02613",
+      "authors": [
+        "Gursimran Singh",
+        "T. Yu",
+        "Haley Li",
+        "Cheng Chen",
+        "Hanieh Sadri",
+        "Qintao Zhang",
+        "Yu Zhang",
+        "Ying Xiong",
+        "Yong Zhang",
+        "Zhe-Nan Fan"
+      ]
+    },
+    {
+      "title": "SpecVLM: Fast Speculative Decoding in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2509.11815",
+      "year": 2025,
+      "published": "2025-09-15",
+      "abstract": "Speculative decoding is a powerful way to accelerate autoregressive large language models (LLMs), but directly porting it to vision-language models (VLMs) faces unique systems constraints: the prefill stage is dominated by visual tokens whose count scales with image resolution and video length, inflating both compute and memory, especially the key-value (KV) cache. We study speculative decoding for VLMs and introduce SpecVLM, a practical system that (1) establishes a strong EAGLE-2-style baseline, EagleVLM, delivering 1.5--2.3x end-to-end speedups over full autoregressive inference, and (2) further accelerates VLM inference with an elastic visual compressor that adaptively selects among pruning, pooling, convolution, and resampler primitives to balance FLOPs/parameters and accuracy per input. To avoid costly offline distillation corpora, we propose an online-logit distillation protocol that trains the draft model with on-the-fly teacher logits and penultimate features using a combined cross-entropy and Smooth L1 objective, eliminating storage and preprocessing while remaining compute-efficient. This protocol reveals a training-time scaling effect: longer online training monotonically increases the draft model's average accepted length, improving speculative efficiency. Empirically, SpecVLM achieves additional acceleration, culminating in 2.5--2.9x end-to-end speedups within 5 epochs across LLaVA and MMMU, consistently over resolutions and task difficulties, while preserving the target model's output distribution (lossless decoding). Our code is available at https://github.com/haiduo/SpecVLM.",
+      "canonical_id": "arXiv:2509.11815",
+      "arxiv_id": "2509.11815",
+      "doi": "10.48550/arXiv.2509.11815",
+      "authors": [
+        "Hai-Duo Huang",
+        "Fuwei Yang",
+        "Zhenhua Liu",
+        "Xuan-Wu Yin",
+        "Dong Li",
+        "Peng-Ju Ren",
+        "E. Barsoum"
+      ]
+    },
+    {
+      "title": "HFX: Joint Design of Algorithms and Systems for Multi-SLO Serving and Fast Scaling",
+      "source_url": "https://arxiv.org/abs/2508.15919",
+      "year": 2025,
+      "published": "2025-08-21",
+      "abstract": "Large language model (LLM) serving faces the dual challenge of meeting strict user-specific service-level objectives (SLOs) while minimizing computational cost under dynamic, multi-task workloads. Existing approaches either rely on static scheduling policies or focus on single-task settings, limiting their applicability in real-world deployments with heterogeneous requests, variable prompt lengths, and elastic scaling requirements. We present HFX, a production LLM serving system that jointly optimizes request scheduling and elastic scaling across model replicas to satisfy diverse SLOs. HFX introduces a \\textbf{scheduler} that performs proactive budget estimation and prioritization to ensure SLO compliance for both new and in-flight requests. HFX also integrates a \\textbf{scaler} that supports fast device-to-device (D2D) weight transfer, reducing cold-start latency. Additionally, the system supports both colocated and disaggregated prefill/decode deployments, enabling adaptation to diverse workload patterns and cloud environments. Through extensive experiments on multi-task workloads, we demonstrate consistently higher SLO attainment, lower end-to-end latency, and lower NPU usage cost by up to 4.44$\\times$, 65.82\\%, and 49.81\\%, respectively, compared to state-of-the-art systems. Our results highlight the effectiveness of SLO-aware scheduling and scaling in practical LLM serving, providing a robust framework for cost-efficient and SLO-compliant deployments.",
+      "canonical_id": "arXiv:2508.15919",
+      "arxiv_id": "2508.15919",
+      "authors": [
+        "Zahra Yousefijamarani",
+        "Xing-Lu Wang",
+        "Qian Wang",
+        "Morgan Lindsay Heisler",
+        "Taha Shabani",
+        "N. Gholipour",
+        "Parham Yassini",
+        "Hong Chang",
+        "Kang Chen",
+        "Qiantao Zhang",
+        "Xiao-Long Bai",
+        "Jian-Nan Wang",
+        "Ying Xiong",
+        "Yong Zhang",
+        "Zhe-Nan Fan"
+      ]
+    },
+    {
+      "title": "BlockBPE: Parallel BPE Tokenization",
+      "source_url": "https://arxiv.org/abs/2507.11941",
+      "year": 2025,
+      "published": "2025-07-16",
+      "abstract": "Tokenization is a critical preprocessing step in large language model pipelines, yet widely-used implementations remain CPU-bound and suboptimal for batch inference workflows on GPU. We present BlockBPE, a parallel GPU implementation of byte-pair encoding (BPE) that achieves near linear-time complexity under realistic assumptions and is optimized for high-throughput, batch inference. Unlike existing Rust-based tokenizers such as HuggingFace Tokenizers or OpenAI's tiktoken-whose runtimes are dominated by Regex pre-tokenization and exhibit $O(n \\log n)$ runtime-BlockBPE eliminates the Regex pre-tokenization which leads to small loss in generation quality, but enables highly parallelized token merges within thread blocks, reducing overall complexity to $O(nd)$ where $d \\ll n$. On high-batch inference workloads, BlockBPE achieves up to 2x higher throughput than tiktoken and 2.5x over HuggingFace Tokenizers.",
+      "canonical_id": "arXiv:2507.11941",
+      "arxiv_id": "2507.11941",
+      "doi": "10.48550/arXiv.2507.11941",
+      "authors": [
+        "Amos You"
+      ]
+    },
+    {
+      "title": "Compactor: Calibrated Query-Agnostic KV Cache Compression with Approximate Leverage Scores",
+      "source_url": "https://arxiv.org/abs/2507.08143",
+      "year": 2025,
+      "published": "2025-07-10",
+      "abstract": "Modern Large Language Models (LLMs) are increasingly trained to support very large context windows. We present Compactor, a training-free, query-agnostic KV compression strategy that uses approximate leverage scores to determine token importance. We show that Compactor can achieve the same performance as competing methods while retaining 20% fewer tokens in both synthetic and real-world context tasks, while being more task-robust. We further introduce a procedure for context-calibrated compression: inferring the maximum compression a given context supports before significant performance loss. Using context-calibrated compression, we show that Compactor achieves full KV performance on Longbench while reducing the KV memory burden by 68%, on average. To demonstrate the efficacy and generalizability of our approach, we apply Compactor to 27 synthetic and real-world tasks from RULER and Longbench, with models from both the Qwen 2.5 and Llama 3.1 families. Finally, we release compactor-vllm, an inference engine and suite of optimized Triton kernels designed to efficiently support the sparse, non-contiguous memory access patterns inherent to compressed KV caches. This work demonstrates that Compactor offers a practical, high-performance solution for alleviating the memory bottleneck in modern LLM deployment.",
+      "canonical_id": "arXiv:2507.08143",
+      "arxiv_id": "2507.08143",
+      "doi": "10.48550/arXiv.2507.08143",
+      "authors": [
+        "Vivek Chari",
+        "Benjamin Van Durme"
+      ]
+    },
+    {
+      "title": "Quantize-Sample-and-Verify: LLM Acceleration via Adaptive Edge-Cloud Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2507.00605",
+      "year": 2025,
+      "published": "2025-07-01",
+      "abstract": "In edge-cloud speculative decoding (SD), edge devices equipped with small language models (SLMs) generate draft tokens that are verified by large language models (LLMs) in the cloud. A key bottleneck in such systems is the limited communication bandwidth between edge and cloud, which necessitates quantization of the information transmitted about generated tokens. In this work, we introduce a novel quantize-sample (Q-S) strategy that provably preserves the output distribution of the cloud-based model, ensuring that the verified tokens match the distribution of those that would have been generated directly by the LLM. We develop a throughput model for edge-cloud SD that explicitly accounts for communication latency. Leveraging this model, we propose an adaptive mechanism that optimizes token throughput by dynamically adjusting the draft length and quantization precision in response to both semantic uncertainty and channel conditions. Simulations demonstrate that the proposed Q-S approach significantly improves decoding efficiency in realistic edge-cloud deployment scenarios.",
+      "canonical_id": "arXiv:2507.00605",
+      "arxiv_id": "2507.00605",
+      "doi": "10.1109/LCOMM.2026.3651580",
+      "authors": [
+        "Guangyi Zhang",
+        "Yun-Long Cai",
+        "Guan-Ding Yu",
+        "P. Popovski",
+        "Osvaldo Simeone"
+      ]
+    },
+    {
+      "title": "TD-Pipe: Temporally-Disaggregated Pipeline Parallelism Architecture for High-Throughput LLM Inference",
+      "source_url": "https://arxiv.org/abs/2506.10470",
+      "year": 2025,
+      "published": "2025-06-12",
+      "abstract": "As the model size continuously increases, pipeline parallelism shows great promise in throughput-oriented LLM inference due to its low demand on communications. However, imbalanced pipeline workloads and complex data dependencies in the prefill and decode phases result in massive pipeline bubbles and further severe performance reduction. To better exploit the pipeline parallelism for high-throughput LLM inference, we propose TD-Pipe, with the key idea lies in the temporally-disaggregated pipeline parallelism architecture. Specifically, this architecture disaggregates the prefill and decode phases in the temporal dimension, so as to eliminate pipeline bubbles caused by the phase switching. TD-Pipe identifies potential issues of exploiting the novel architecture and provides solutions. First, a hierarchy-controller structure is used to better coordinate devices in pipeline parallelism by decoupling the scheduling from execution. Second, the AI-based greedy prefill approach aggressively performs more prefills by predicting the output length and simulating the memory usage. Third, the inter-batch work stealing approach dynamically balances decode phase workloads between different batches to reduce bubbles. Forth, the spatial-temporal intensity comparison approach determines the optimal switch from decode to prefill by comparing the performance drop from reduced computational intensity with that from phase switching bubbles. Extensive experiments show that TD-Pipe effectively increases the throughput of LLM inference by up to 1.91 × over the existing tensor parallel approach and 2.73 × over the existing pipeline parallel approach on GPU nodes with only PCIe interconnection.",
+      "canonical_id": "arXiv:2506.10470",
+      "arxiv_id": "2506.10470",
+      "doi": "10.1145/3754598.3754621",
+      "authors": [
+        "Hongbin Zhang",
+        "Taosheng Wei",
+        "Zhen-Yi Zheng",
+        "Jiangsu Du",
+        "Zhi-Guang Chen",
+        "Yu-Tong Lu"
+      ]
+    },
+    {
+      "title": "Speeding up Model Loading with Fastsafetensors",
+      "source_url": "https://arxiv.org/abs/2505.23072",
+      "year": 2025,
+      "published": "2025-05-29",
+      "abstract": "The rapid increases in model parameter sizes introduces new challenges in pre-trained model loading. Currently, machine learning code often deserializes each parameter as a tensor object in host memory before copying it to device memory. We found that this approach underutilized storage throughput and significantly slowed down loading large models with a widely-used model file formats, safetensors. In this work, we present fastsafetensors, a Python library designed to optimize the deserialization of tensors in safetensors files. Our approach first copies groups of on-disk parameters to device memory, where they are directly instantiated as tensor objects. This design enables further optimization in low-level I/O and high-level tensor preprocessing, including parallelized copying, peer-to-peer DMA, and GPU offloading. Experimental results show performance improvements of 4.8x to 7.5x in loading models such as Llama (7, 13, and 70 billion parameters), Falcon (40 billion parameters), and the Bloom (176 billion parameters).",
+      "canonical_id": "arXiv:2505.23072",
+      "arxiv_id": "2505.23072",
+      "doi": "10.1109/CLOUD67622.2025.00026",
+      "authors": [
+        "Takeshi Yoshimura",
+        "Tatsuhiro Chiba",
+        "Manish Sethi",
+        "Daniel G. Waddington",
+        "S. Sundararaman"
+      ]
+    },
+    {
+      "title": "WINA: Weight Informed Neuron Activation for Accelerating Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2505.19427",
+      "year": 2025,
+      "published": "2025-05-26",
+      "abstract": "The growing computational demands of large language models (LLMs) make efficient inference and activation strategies increasingly critical. While recent approaches, such as Mixture-of-Experts (MoE), leverage selective activation but require specialized training, training-free sparse activation methods offer broader applicability and superior resource efficiency through their plug-and-play design. However, many existing methods rely solely on hidden state magnitudes to determine activation, resulting in high approximation errors and suboptimal inference accuracy. To address these limitations, we propose WINA (Weight Informed Neuron Activation), a novel, simple, and training-free sparse activation framework that jointly considers hidden state magnitudes and the column-wise $\\ell_2$-norms of weight matrices. We show that this leads to a sparsification strategy that obtains optimal approximation error bounds with theoretical guarantees tighter than existing techniques. Empirically, WINA also outperforms state-of-the-art methods (e.g., TEAL) by up to $2.94\\%$ in average performance at the same sparsity levels, across a diverse set of LLM architectures and datasets. These results position WINA as a new performance frontier for training-free sparse activation in LLM inference, advancing training-free sparse activation methods and setting a robust baseline for efficient inference. The source code is available at https://github.com/microsoft/wina.",
+      "canonical_id": "arXiv:2505.19427",
+      "arxiv_id": "2505.19427",
+      "doi": "10.48550/arXiv.2505.19427",
+      "authors": [
+        "Sihan Chen",
+        "Dan Zhao",
+        "Jongwoo Ko",
+        "Colby R. Banbury",
+        "Huiping Zhuang",
+        "Luming Liang",
+        "Pashmina Cameron",
+        "Tianyi Chen"
+      ]
+    },
+    {
+      "title": "Nearest Neighbor Speculative Decoding for LLM Generation and Attribution",
+      "source_url": "https://arxiv.org/abs/2405.19325",
+      "year": 2024,
+      "published": "2024-05-29",
+      "abstract": "Large language models (LLMs) often hallucinate and lack the ability to provide attribution for their generations. Semi-parametric LMs, such as kNN-LM, approach these limitations by refining the output of an LM for a given prompt using its nearest neighbor matches in a non-parametric data store. However, these models often exhibit slow inference speeds and produce non-fluent texts. In this paper, we introduce Nearest Neighbor Speculative Decoding (NEST), a novel semi-parametric language modeling approach that is capable of incorporating real-world text spans of arbitrary length into the LM generations and providing attribution to their sources. NEST performs token-level retrieval at each inference step to compute a semi-parametric mixture distribution and identify promising span continuations in a corpus. It then uses an approximate speculative decoding procedure that accepts a prefix of the retrieved span or generates a new token. NEST significantly enhances the generation quality and attribution rate of the base LM across a variety of knowledge-intensive tasks, surpassing the conventional kNN-LM method and performing competitively with in-context retrieval augmentation. In addition, NEST substantially improves the generation speed, achieving a 1.8x speedup in inference time when applied to Llama-2-Chat 70B. Code will be released at https://github.com/facebookresearch/NEST/tree/main.",
+      "canonical_id": "arXiv:2405.19325",
+      "arxiv_id": "2405.19325",
+      "doi": "10.48550/arXiv.2405.19325",
+      "authors": [
+        "Minghan Li",
+        "Xilun Chen",
+        "Ari Holtzman",
+        "Beidi Chen",
+        "Jimmy Lin",
+        "Wen-tau Yih",
+        "X. Lin"
+      ]
+    },
+    {
+      "title": "CLLMs: Consistency Large Language Models",
+      "source_url": "https://arxiv.org/abs/2403.00835",
+      "year": 2024,
+      "published": "2024-02-28",
+      "abstract": "Parallel decoding methods such as Jacobi decoding show promise for more efficient LLM inference as it breaks the sequential nature of the LLM decoding process and transforms it into parallelizable computation. However, in practice, it achieves little speedup compared to traditional autoregressive (AR) decoding, primarily because Jacobi decoding seldom accurately predicts more than one token in a single fixed-point iteration step. To address this, we develop a new approach aimed at realizing fast convergence from any state to the fixed point on a Jacobi trajectory. This is accomplished by refining the target LLM to consistently predict the fixed point given any state as input. Extensive experiments demonstrate the effectiveness of our method, showing 2.4$\\times$ to 3.4$\\times$ improvements in generation speed while preserving generation quality across both domain-specific and open-domain benchmarks.",
+      "canonical_id": "arXiv:2403.00835",
+      "arxiv_id": "2403.00835",
+      "doi": "10.48550/arXiv.2403.00835",
+      "authors": [
+        "Siqi Kou",
+        "Lanxiang Hu",
+        "Zhe He",
+        "Zhijie Deng",
+        "Hao Zhang"
+      ]
+    },
+    {
+      "title": "Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2401.04658",
+      "year": 2024,
+      "published": "2024-01-09",
+      "abstract": "Linear attention is an efficient attention mechanism that has recently emerged as a promising alternative to conventional softmax attention. With its ability to process tokens in linear computational complexities, linear attention, in theory, can handle sequences of unlimited length without sacrificing speed, i.e., maintaining a constant training speed for various sequence lengths with a fixed memory consumption. However, due to the issue with cumulative summation (cumsum), current linear attention algorithms cannot demonstrate their theoretical advantage in a causal setting. In this paper, we present Lightning Attention-2, the first linear attention implementation that enables linear attention to realize its theoretical computational benefits. To achieve this, we leverage the thought of tiling, separately handling the intra-block and inter-block components in linear attention calculation. Specifically, we utilize the conventional attention computation mechanism for the intra-blocks and apply linear attention kernel tricks for the inter-blocks. A tiling technique is adopted through both forward and backward procedures to take full advantage of the GPU hardware. We implement our algorithm in Triton to make it IO-aware and hardware-friendly. Various experiments are conducted on different model sizes and sequence lengths. Lightning Attention-2 retains consistent training and inference speed regardless of input sequence length and is significantly faster than other attention mechanisms. The source code is available at https://github.com/OpenNLPLab/lightning-attention.",
+      "canonical_id": "arXiv:2401.04658",
+      "arxiv_id": "2401.04658",
+      "doi": "10.48550/arXiv.2401.04658",
+      "authors": [
+        "Zhen Qin",
+        "Wei-Gao Sun",
+        "Dong Li",
+        "Xuyang Shen",
+        "Weixuan Sun",
+        "Yi-Ran Zhong"
+      ]
+    },
+    {
+      "title": "Compressing Context to Enhance Inference Efficiency of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2310.06201",
+      "year": 2023,
+      "published": "2023-10-09",
+      "abstract": "Large language models (LLMs) achieved remarkable performance across various tasks. However, they face challenges in managing long documents and extended conversations, due to significantly increased computational requirements, both in memory and inference time, and potential context truncation when the input exceeds the LLM's fixed context length. This paper proposes a method called Selective Context that enhances the inference efficiency of LLMs by identifying and pruning redundancy in the input context to make the input more compact. We test our approach using common data sources requiring long context processing: arXiv papers, news articles, and long conversations, on tasks of summarisation, question answering, and response generation. Experimental results show that Selective Context significantly reduces memory cost and decreases generation latency while maintaining comparable performance compared to that achieved when full context is used. Specifically, we achieve a 50\\% reduction in context cost, resulting in a 36\\% reduction in inference memory usage and a 32\\% reduction in inference time, while observing only a minor drop of .023 in BERTscore and .038 in faithfulness on four downstream applications, indicating that our method strikes a good balance between efficiency and performance.",
+      "canonical_id": "arXiv:2310.06201",
+      "arxiv_id": "2310.06201",
+      "doi": "10.48550/arXiv.2310.06201",
+      "authors": [
+        "Yucheng Li",
+        "Bo Dong",
+        "Chenghua Lin",
+        "Frank Guerin"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.11504",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.11504",
+        "id:arXiv:2603.11504",
+        "title:longflow efficient kv cache compression for reasoning m",
+        "url:https://arxiv.org/abs/2603.11504"
+      ],
+      "record": {
+        "title": "LongFlow: Efficient KV Cache Compression for Reasoning M",
+        "source_url": "https://arxiv.org/abs/2603.11504",
+        "year": 2026,
+        "published": "2026-03-12",
+        "abstract": "Recent reasoning models such as OpenAI-o1 and DeepSeek-R1 have shown strong performance on complex tasks including mathematical reasoning and code generation. However, this performance gain comes with substantially longer output sequences, leading to significantly increased deployment costs. In particular, long outputs require large KV caches, resulting in high memory consumption and severe bandwidth pressure during attention computation. Most existing KV cache optimization methods are designed for long-input, short-output scenarios and are ineffective for the long-output setting of reasoning models. Moreover, importance estimation in prior work is computationally expensive and becomes prohibitive when continuous re-evaluation is required during long generation. To address these challenges, we propose LongFlow, a KV cache compression method with an efficient importance estimation metric derived from an intermediate result of attention computation using only the current query. This design introduces negligible computational overhead and requires no auxiliary storage. We further develop a custom kernel that fuses FlashAttention, importance estimation, and token eviction into a single optimized operator, improving system-level efficiency. Experiments show that LongFlow achieves up to an 11.8 times throughput improvement with 80% KV cache compression with minimal impact on model accuracy.",
+        "canonical_id": "arXiv:2603.11504",
+        "arxiv_id": "2603.11504",
+        "doi": "10.48550/arXiv.2603.11504",
+        "authors": [
+          "Yi Su",
+          "Zhenxu Tian",
+          "Dan Qiao",
+          "Yuechi Zhou",
+          "Jun-Tao Li",
+          "Min Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.17111",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.17111",
+        "id:arXiv:2601.17111",
+        "title:leastloaded expert parallelism load balancing an imbalanced mixtureofexperts",
+        "url:https://arxiv.org/abs/2601.17111"
+      ],
+      "record": {
+        "title": "Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts",
+        "source_url": "https://arxiv.org/abs/2601.17111",
+        "year": 2026,
+        "published": "2026-01-23",
+        "abstract": "Mixture-of-Experts (MoE) models are typically pre-trained with explicit load-balancing constraints to ensure statistically balanced expert routing. Despite this, we observe that even well-trained MoE models exhibit significantly imbalanced routing. This behavior is arguably natural-and even desirable - as imbalanced routing allows models to concentrate domain-specific knowledge within a subset of experts. Expert parallelism (EP) is designed to scale MoE models by distributing experts across multiple devices, but with a less-discussed assumption of balanced routing. Under extreme imbalance, EP can funnel a disproportionate number of tokens to a small number of experts, leading to compute- and memory-bound failures on overloaded devices during post-training or inference, where explicit load balancing is often inapplicable. We propose Least-Loaded Expert Parallelism (LLEP), a novel EP algorithm that dynamically reroutes excess tokens and associated expert parameters from overloaded devices to underutilized ones. This ensures that all devices complete their workloads within the minimum collective latency while respecting memory constraints. Across different model scales, LLEP achieves up to 5x speedup and 4x reduction in peak memory usage compared to standard EP. This enables faster and higher-throughput post-training and inference, with ~1.9x faster for gpt-oss-120b. We support our method with extensive theoretical analysis and comprehensive empirical evaluations, including ablation studies. These results illuminate key trade-offs and enable a principled framework for hardware-specific hyper-parameter tuning to achieve optimal performance.",
+        "canonical_id": "arXiv:2601.17111",
+        "arxiv_id": "2601.17111",
+        "doi": "10.48550/arXiv.2601.17111",
+        "authors": [
+          "Xuan-Phi Nguyen",
+          "Shrey Pandit",
+          "Austin Xu",
+          "Caiming Xiong",
+          "Shafiq Joty"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.09277",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.09277",
+        "id:arXiv:2512.09277",
+        "title:efficient moe serving in the memorybound regime balance activated experts not tokens",
+        "url:https://arxiv.org/abs/2512.09277"
+      ],
+      "record": {
+        "title": "Efficient MoE Serving in the Memory-Bound Regime: Balance Activated Experts, Not Tokens",
+        "source_url": "https://arxiv.org/abs/2512.09277",
+        "year": 2025,
+        "published": "2025-12-10",
+        "abstract": "Expert Parallelism (EP) permits Mixture of Experts (MoE) models to scale beyond a single GPU. To address load imbalance across GPUs in EP, existing approaches aim to balance the number of tokens each GPU processes. Surprisingly, we find that this objective degrades performance rather than improving it when processing is memory-bound - a common occurrence in MoE serving, especially in the decode phase. Our analysis reveals that balancing the number of tokens processed per GPU increases the number of activated experts, exacerbating memory pressure in the memory-bound regime. We propose Minimum Expert Token ROuting, a novel token-routing algorithm for high-performance expert-parallel MoE serving in the memory-bound regime that balances the number of activated experts per GPU rather than token counts. METRO achieves near-optimal routing quality with minimal computational overhead by jointly optimizing algorithmic efficiency and leveraging the GPU's parallel processing power. To guarantee routing quality, METRO also employs a novel allGather scheme to gather global top-k knowledge, which has minimal overhead compared to conventional allToAll. Our evaluation of METRO against EPLB on both real systems (vLLM over 8 A100 GPUs) and a proprietary simulator (8-16 B200 GPUs) shows that METRO reduces decode latency by 11 - 22%, and total token throughput by 3 - 21% for Qwen3 and DeepSeek-V3 serving, where prefill and decode phases are co-deployed. In addition, by trading latency headroom for throughput, METRO improves decode throughput by up to 4.11x over EPLB at a fixed decode SLO.",
+        "canonical_id": "arXiv:2512.09277",
+        "arxiv_id": "2512.09277",
+        "doi": "10.48550/arXiv.2512.09277",
+        "authors": [
+          "Yanpeng Yu",
+          "Haiyue Ma",
+          "Krish Agarwal",
+          "Nicolai Oswald",
+          "Qi-Jing Huang",
+          "Hugo Linsenmaier",
+          "Chun-Hui Mei",
+          "Ritchie Zhao",
+          "Ritika Borkar",
+          "B. Rouhani",
+          "David Nellans",
+          "Ronny Krashinsky",
+          "Anurag Khandelwal"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.08923",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.08923",
+        "id:arXiv:2511.08923",
+        "title:tidar think in diffusion talk in autoregression",
+        "url:https://arxiv.org/abs/2511.08923"
+      ],
+      "record": {
+        "title": "TiDAR: Think in Diffusion, Talk in Autoregression",
+        "source_url": "https://arxiv.org/abs/2511.08923",
+        "year": 2025,
+        "published": "2025-11-12",
+        "abstract": "Diffusion language models hold the promise of fast parallel generation, while autoregressive (AR) models typically excel in quality due to their causal structure aligning naturally with language modeling. This raises a fundamental question: can we achieve a synergy with high throughput, higher GPU utilization, and AR level quality? Existing methods fail to effectively balance these two aspects, either prioritizing AR using a weaker model for sequential drafting (speculative decoding), leading to lower drafting efficiency, or using some form of left-to-right (AR-like) decoding logic for diffusion, which still suffers from quality degradation and forfeits its potential parallelizability. We introduce TiDAR, a sequence-level hybrid architecture that drafts tokens (Thinking) in Diffusion and samples final outputs (Talking) AutoRegressively - all within a single forward pass using specially designed structured attention masks. This design exploits the free GPU compute density, achieving a strong balance between drafting and verification capacity. Moreover, TiDAR is designed to be serving-friendly (low overhead) as a standalone model. We extensively evaluate TiDAR against AR models, speculative decoding, and diffusion variants across generative and likelihood tasks at 1.5B and 8B scales. Thanks to the parallel drafting and sampling as well as exact KV cache support, TiDAR outperforms speculative decoding in measured throughput and surpasses diffusion models like Dream and Llada in both efficiency and quality. Most notably, TiDAR is the first architecture to close the quality gap with AR models while delivering 4.71x to 5.91x more tokens per second.",
+        "canonical_id": "arXiv:2511.08923",
+        "arxiv_id": "2511.08923",
+        "doi": "10.48550/arXiv.2511.08923",
+        "authors": [
+          "Jingyu Liu",
+          "Xin Dong",
+          "Zhi-Fan Ye",
+          "Rishabh Mehta",
+          "Yonggan Fu",
+          "Vartika Singh",
+          "Jan Kautz",
+          "Ce Zhang",
+          "Pavlo Molchanov"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.27656",
+      "identity_tokens": [
+        "id:arXiv:2510.27656",
+        "title:fabriclib rdma pointtopoint communication for llm systems",
+        "url:https://arxiv.org/abs/2510.27656"
+      ],
+      "record": {
+        "title": "fabric-lib: RDMA Point-to-Point Communication for LLM Systems",
+        "source_url": "https://arxiv.org/abs/2510.27656",
+        "year": 2025,
+        "published": "2025-10-31",
+        "abstract": "Emerging Large Language Model (LLM) system patterns, such as disaggregated inference, Mixture-of-Experts (MoE) routing, and asynchronous reinforcement fine-tuning, require flexible point-to-point communication beyond simple collectives. Existing implementations are locked to specific Network Interface Controllers (NICs), hindering integration into inference engines and portability across hardware providers. We present fabric-lib, which bridges the functionality of common NICs to expose a uniform interface. fabric-lib exposes one-sided WriteImm operations with a ImmCounter primitive for completion notification, without ordering assumptions of network transport, transparently managing multiple NICs per GPU. We demonstrate peak throughput of 400 Gbps on both NVIDIA ConnectX-7 and AWS Elastic Fabric Adapter (EFA). We showcase fabric-lib through three production systems: (1) KvCache transfer for disaggregated inference with dynamic scaling, (2) RL weight updates achieving 1.3 seconds for trillion-parameter models, and (3) MoE dispatch/combine implementation exceeding DeepEP decode latency on ConnectX-7, with the first viable latencies on EFA. We demonstrate that our portable point-to-point communication complements collectives while avoiding lock-in. fabric-lib is open-sourced at https://github.com/perplexityai/pplx-garden/",
+        "canonical_id": "arXiv:2510.27656",
+        "arxiv_id": "2510.27656",
+        "authors": [
+          "N. Licker",
+          "K. Hu",
+          "V. Zaytsev",
+          "Lequn Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.25602",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.25602",
+        "id:arXiv:2510.25602",
+        "title:int vs fp a comprehensive study of finegrained lowbit quantization formats",
+        "url:https://arxiv.org/abs/2510.25602"
+      ],
+      "record": {
+        "title": "INT v.s. FP: A Comprehensive Study of Fine-Grained Low-bit Quantization Formats",
+        "source_url": "https://arxiv.org/abs/2510.25602",
+        "year": 2025,
+        "published": "2025-10-29",
+        "abstract": "Modern AI hardware, such as Nvidia's Blackwell architecture, is increasingly embracing low-precision floating-point (FP) formats to handle the pervasive activation outliers in Large Language Models (LLMs). Despite this industry trend, a unified comparison of FP and integer (INT) quantization across varying granularities has been missing, leaving algorithm and hardware co-design without clear guidance. This paper fills that gap by systematically investigating the trade-offs between FP and INT formats. We reveal a critical performance crossover: while FP excels in coarse-grained quantization, the comparison at fine-grained (block-wise) levels is more nuanced. Our comprehensive comparison demonstrates that for popular 8-bit fine-grained formats (e.g., MX with block size 32), MXINT8 is superior to its FP counterpart in both algorithmic accuracy and hardware efficiency. However, for 4-bit formats, FP (e.g., MXFP4, NVFP4) often holds an accuracy advantage , though we show that NVINT4 can surpass NVFP4 when outlier-mitigation techniques like Hadamard rotation are applied. We also introduce a symmetric clipping method that resolves gradient bias in fine-grained low-bit INT training, enabling nearly lossless performance for MXINT8 training. These findings challenge the current hardware trajectory, demonstrating that a one-size-fits-all FP approach is suboptimal and advocating that fine-grained INT formats, particularly MXINT8, offer a better balance of accuracy, power, and efficiency for future AI accelerators.",
+        "canonical_id": "arXiv:2510.25602",
+        "arxiv_id": "2510.25602",
+        "doi": "10.48550/arXiv.2510.25602",
+        "authors": [
+          "Mengzhao Chen",
+          "Meng Wu",
+          "Hui Jin",
+          "Zhihang Yuan",
+          "Jing Liu",
+          "Chaoyi Zhang",
+          "Yunshui Li",
+          "Jie Huang",
+          "Jin Ma",
+          "Ze-Yue Xue",
+          "Zhi-Heng Liu",
+          "Xingyan Bin",
+          "Ping Luo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.15312",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.15312",
+        "id:arXiv:2510.15312",
+        "title:accelerating mobile language model via speculative decoding and npucoordinated execution",
+        "url:https://arxiv.org/abs/2510.15312"
+      ],
+      "record": {
+        "title": "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution",
+        "source_url": "https://arxiv.org/abs/2510.15312",
+        "year": 2025,
+        "published": "2025-10-17",
+        "abstract": "Performing Retrieval-Augmented Generation (RAG) directly on mobile devices is promising for data privacy and responsiveness but is hindered by the architectural constraints of mobile NPUs. Specifically, current hardware struggles with the variable workloads intrinsic to RAG: the transition between processing extensive contexts and generating tokens incurs significant overhead due to static graph constraints, while the memory-bound generation phase leaves computational resources underutilized. In this work, we propose a holistic acceleration framework sd.npu, designed to maximize NPU efficiency for on-device RAG ecosystem. To address the latency caused by NPU graph switching during phase transitions, we introduce a pipelined execution strategy. This approach masks the overhead of model reconfiguration by parallelizing the loading of decoding graphs with the computation of partitioned context chunks (chunked prefill), thereby ensuring continuous execution flow. Furthermore, to mitigate low hardware utilization during the decoding phase, we develop an NPU-centric speculative decoding mechanism. By calibrating generation distributions and extending draft sequences, our method effectively converts idle NPU cycles into valid token throughput. Experiments on commercial smartphones show that our framework significantly outperforms existing baselines, delivering 1.06$\\times$--3.81$\\times$ speedups and 1.07$\\times$--4.71$\\times$ energy savings across various RAG tasks.",
+        "canonical_id": "arXiv:2510.15312",
+        "arxiv_id": "2510.15312",
+        "doi": "10.48550/arXiv.2510.15312",
+        "authors": [
+          "Zhi-Yang Chen",
+          "Daliang Xu",
+          "Haiyang Shen",
+          "Mengwei Xu",
+          "Shangguang Wang",
+          "Yun Ma"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.02613",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.02613",
+        "id:arXiv:2510.02613",
+        "title:elasticmoe an efficient auto scaling method for mixtureofexperts models",
+        "url:https://arxiv.org/abs/2510.02613"
+      ],
+      "record": {
+        "title": "ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models",
+        "source_url": "https://arxiv.org/abs/2510.02613",
+        "year": 2025,
+        "published": "2025-10-02",
+        "abstract": "Mixture-of-Experts (MoE) models promise efficient scaling of large language models (LLMs) by activating only a small subset of experts per token, but their parallelized inference pipelines make elastic serving challenging. Existing strategies fall short: horizontal scaling provisions entire replicas of the current configuration, often tens to hundreds of accelerators, leading to coarse granularity, long provisioning delays, and costly overprovisioning. Vertical scaling offers finer adjustments but typically requires instance restarts, incurring downtime. These limitations make current approaches ill-suited for the bursty, short-lived traffic patterns common in cloud deployments. We present ElasticMoE, an elastic scaling framework for MoE LLMs that achieves fine-grained, low-latency, and zero-downtime scaling. ElasticMoE decouples inference execution from memory operations, enabling scaling steps to proceed concurrently with serving. An HBM Management Module (HMM) reuses weights and KV caches via zero-copy remapping, while high-bandwidth peer-to-peer transfers bring newly added accelerators online without interrupting service. A virtual memory based expert redistribution mechanism migrates MoE experts without costly buffer reallocations, reducing peak memory usage during expert parallelism reconfiguration. Our evaluation on Ascend NPUs with three popular MoE LLMs shows that ElasticMoE achieves up to 9x lower scale-up latency, up to 2x better throughput during scaling, and significantly improves SLO attainment compared to baselines. By enabling fine-grained, concurrent scaling with minimal disruption, ElasticMoE advances the practicality of deploying massive MoE LLMs in dynamic cloud environments.",
+        "canonical_id": "arXiv:2510.02613",
+        "arxiv_id": "2510.02613",
+        "doi": "10.48550/arXiv.2510.02613",
+        "authors": [
+          "Gursimran Singh",
+          "T. Yu",
+          "Haley Li",
+          "Cheng Chen",
+          "Hanieh Sadri",
+          "Qintao Zhang",
+          "Yu Zhang",
+          "Ying Xiong",
+          "Yong Zhang",
+          "Zhe-Nan Fan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.11815",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.11815",
+        "id:arXiv:2509.11815",
+        "title:specvlm fast speculative decoding in visionlanguage models",
+        "url:https://arxiv.org/abs/2509.11815"
+      ],
+      "record": {
+        "title": "SpecVLM: Fast Speculative Decoding in Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2509.11815",
+        "year": 2025,
+        "published": "2025-09-15",
+        "abstract": "Speculative decoding is a powerful way to accelerate autoregressive large language models (LLMs), but directly porting it to vision-language models (VLMs) faces unique systems constraints: the prefill stage is dominated by visual tokens whose count scales with image resolution and video length, inflating both compute and memory, especially the key-value (KV) cache. We study speculative decoding for VLMs and introduce SpecVLM, a practical system that (1) establishes a strong EAGLE-2-style baseline, EagleVLM, delivering 1.5--2.3x end-to-end speedups over full autoregressive inference, and (2) further accelerates VLM inference with an elastic visual compressor that adaptively selects among pruning, pooling, convolution, and resampler primitives to balance FLOPs/parameters and accuracy per input. To avoid costly offline distillation corpora, we propose an online-logit distillation protocol that trains the draft model with on-the-fly teacher logits and penultimate features using a combined cross-entropy and Smooth L1 objective, eliminating storage and preprocessing while remaining compute-efficient. This protocol reveals a training-time scaling effect: longer online training monotonically increases the draft model's average accepted length, improving speculative efficiency. Empirically, SpecVLM achieves additional acceleration, culminating in 2.5--2.9x end-to-end speedups within 5 epochs across LLaVA and MMMU, consistently over resolutions and task difficulties, while preserving the target model's output distribution (lossless decoding). Our code is available at https://github.com/haiduo/SpecVLM.",
+        "canonical_id": "arXiv:2509.11815",
+        "arxiv_id": "2509.11815",
+        "doi": "10.48550/arXiv.2509.11815",
+        "authors": [
+          "Hai-Duo Huang",
+          "Fuwei Yang",
+          "Zhenhua Liu",
+          "Xuan-Wu Yin",
+          "Dong Li",
+          "Peng-Ju Ren",
+          "E. Barsoum"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.15919",
+      "identity_tokens": [
+        "id:arXiv:2508.15919",
+        "title:hfx joint design of algorithms and systems for multislo serving and fast scaling",
+        "url:https://arxiv.org/abs/2508.15919"
+      ],
+      "record": {
+        "title": "HFX: Joint Design of Algorithms and Systems for Multi-SLO Serving and Fast Scaling",
+        "source_url": "https://arxiv.org/abs/2508.15919",
+        "year": 2025,
+        "published": "2025-08-21",
+        "abstract": "Large language model (LLM) serving faces the dual challenge of meeting strict user-specific service-level objectives (SLOs) while minimizing computational cost under dynamic, multi-task workloads. Existing approaches either rely on static scheduling policies or focus on single-task settings, limiting their applicability in real-world deployments with heterogeneous requests, variable prompt lengths, and elastic scaling requirements. We present HFX, a production LLM serving system that jointly optimizes request scheduling and elastic scaling across model replicas to satisfy diverse SLOs. HFX introduces a \\textbf{scheduler} that performs proactive budget estimation and prioritization to ensure SLO compliance for both new and in-flight requests. HFX also integrates a \\textbf{scaler} that supports fast device-to-device (D2D) weight transfer, reducing cold-start latency. Additionally, the system supports both colocated and disaggregated prefill/decode deployments, enabling adaptation to diverse workload patterns and cloud environments. Through extensive experiments on multi-task workloads, we demonstrate consistently higher SLO attainment, lower end-to-end latency, and lower NPU usage cost by up to 4.44$\\times$, 65.82\\%, and 49.81\\%, respectively, compared to state-of-the-art systems. Our results highlight the effectiveness of SLO-aware scheduling and scaling in practical LLM serving, providing a robust framework for cost-efficient and SLO-compliant deployments.",
+        "canonical_id": "arXiv:2508.15919",
+        "arxiv_id": "2508.15919",
+        "authors": [
+          "Zahra Yousefijamarani",
+          "Xing-Lu Wang",
+          "Qian Wang",
+          "Morgan Lindsay Heisler",
+          "Taha Shabani",
+          "N. Gholipour",
+          "Parham Yassini",
+          "Hong Chang",
+          "Kang Chen",
+          "Qiantao Zhang",
+          "Xiao-Long Bai",
+          "Jian-Nan Wang",
+          "Ying Xiong",
+          "Yong Zhang",
+          "Zhe-Nan Fan"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.11941",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.11941",
+        "id:arXiv:2507.11941",
+        "title:blockbpe parallel bpe tokenization",
+        "url:https://arxiv.org/abs/2507.11941"
+      ],
+      "record": {
+        "title": "BlockBPE: Parallel BPE Tokenization",
+        "source_url": "https://arxiv.org/abs/2507.11941",
+        "year": 2025,
+        "published": "2025-07-16",
+        "abstract": "Tokenization is a critical preprocessing step in large language model pipelines, yet widely-used implementations remain CPU-bound and suboptimal for batch inference workflows on GPU. We present BlockBPE, a parallel GPU implementation of byte-pair encoding (BPE) that achieves near linear-time complexity under realistic assumptions and is optimized for high-throughput, batch inference. Unlike existing Rust-based tokenizers such as HuggingFace Tokenizers or OpenAI's tiktoken-whose runtimes are dominated by Regex pre-tokenization and exhibit $O(n \\log n)$ runtime-BlockBPE eliminates the Regex pre-tokenization which leads to small loss in generation quality, but enables highly parallelized token merges within thread blocks, reducing overall complexity to $O(nd)$ where $d \\ll n$. On high-batch inference workloads, BlockBPE achieves up to 2x higher throughput than tiktoken and 2.5x over HuggingFace Tokenizers.",
+        "canonical_id": "arXiv:2507.11941",
+        "arxiv_id": "2507.11941",
+        "doi": "10.48550/arXiv.2507.11941",
+        "authors": [
+          "Amos You"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.08143",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.08143",
+        "id:arXiv:2507.08143",
+        "title:compactor calibrated queryagnostic kv cache compression with approximate leverage scores",
+        "url:https://arxiv.org/abs/2507.08143"
+      ],
+      "record": {
+        "title": "Compactor: Calibrated Query-Agnostic KV Cache Compression with Approximate Leverage Scores",
+        "source_url": "https://arxiv.org/abs/2507.08143",
+        "year": 2025,
+        "published": "2025-07-10",
+        "abstract": "Modern Large Language Models (LLMs) are increasingly trained to support very large context windows. We present Compactor, a training-free, query-agnostic KV compression strategy that uses approximate leverage scores to determine token importance. We show that Compactor can achieve the same performance as competing methods while retaining 20% fewer tokens in both synthetic and real-world context tasks, while being more task-robust. We further introduce a procedure for context-calibrated compression: inferring the maximum compression a given context supports before significant performance loss. Using context-calibrated compression, we show that Compactor achieves full KV performance on Longbench while reducing the KV memory burden by 68%, on average. To demonstrate the efficacy and generalizability of our approach, we apply Compactor to 27 synthetic and real-world tasks from RULER and Longbench, with models from both the Qwen 2.5 and Llama 3.1 families. Finally, we release compactor-vllm, an inference engine and suite of optimized Triton kernels designed to efficiently support the sparse, non-contiguous memory access patterns inherent to compressed KV caches. This work demonstrates that Compactor offers a practical, high-performance solution for alleviating the memory bottleneck in modern LLM deployment.",
+        "canonical_id": "arXiv:2507.08143",
+        "arxiv_id": "2507.08143",
+        "doi": "10.48550/arXiv.2507.08143",
+        "authors": [
+          "Vivek Chari",
+          "Benjamin Van Durme"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.00605",
+      "identity_tokens": [
+        "id:DOI:10.1109/lcomm.2026.3651580",
+        "id:arXiv:2507.00605",
+        "title:quantizesampleandverify llm acceleration via adaptive edgecloud speculative decoding",
+        "url:https://arxiv.org/abs/2507.00605"
+      ],
+      "record": {
+        "title": "Quantize-Sample-and-Verify: LLM Acceleration via Adaptive Edge-Cloud Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2507.00605",
+        "year": 2025,
+        "published": "2025-07-01",
+        "abstract": "In edge-cloud speculative decoding (SD), edge devices equipped with small language models (SLMs) generate draft tokens that are verified by large language models (LLMs) in the cloud. A key bottleneck in such systems is the limited communication bandwidth between edge and cloud, which necessitates quantization of the information transmitted about generated tokens. In this work, we introduce a novel quantize-sample (Q-S) strategy that provably preserves the output distribution of the cloud-based model, ensuring that the verified tokens match the distribution of those that would have been generated directly by the LLM. We develop a throughput model for edge-cloud SD that explicitly accounts for communication latency. Leveraging this model, we propose an adaptive mechanism that optimizes token throughput by dynamically adjusting the draft length and quantization precision in response to both semantic uncertainty and channel conditions. Simulations demonstrate that the proposed Q-S approach significantly improves decoding efficiency in realistic edge-cloud deployment scenarios.",
+        "canonical_id": "arXiv:2507.00605",
+        "arxiv_id": "2507.00605",
+        "doi": "10.1109/LCOMM.2026.3651580",
+        "authors": [
+          "Guangyi Zhang",
+          "Yun-Long Cai",
+          "Guan-Ding Yu",
+          "P. Popovski",
+          "Osvaldo Simeone"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.10470",
+      "identity_tokens": [
+        "id:DOI:10.1145/3754598.3754621",
+        "id:arXiv:2506.10470",
+        "title:tdpipe temporallydisaggregated pipeline parallelism architecture for highthroughput llm inference",
+        "url:https://arxiv.org/abs/2506.10470"
+      ],
+      "record": {
+        "title": "TD-Pipe: Temporally-Disaggregated Pipeline Parallelism Architecture for High-Throughput LLM Inference",
+        "source_url": "https://arxiv.org/abs/2506.10470",
+        "year": 2025,
+        "published": "2025-06-12",
+        "abstract": "As the model size continuously increases, pipeline parallelism shows great promise in throughput-oriented LLM inference due to its low demand on communications. However, imbalanced pipeline workloads and complex data dependencies in the prefill and decode phases result in massive pipeline bubbles and further severe performance reduction. To better exploit the pipeline parallelism for high-throughput LLM inference, we propose TD-Pipe, with the key idea lies in the temporally-disaggregated pipeline parallelism architecture. Specifically, this architecture disaggregates the prefill and decode phases in the temporal dimension, so as to eliminate pipeline bubbles caused by the phase switching. TD-Pipe identifies potential issues of exploiting the novel architecture and provides solutions. First, a hierarchy-controller structure is used to better coordinate devices in pipeline parallelism by decoupling the scheduling from execution. Second, the AI-based greedy prefill approach aggressively performs more prefills by predicting the output length and simulating the memory usage. Third, the inter-batch work stealing approach dynamically balances decode phase workloads between different batches to reduce bubbles. Forth, the spatial-temporal intensity comparison approach determines the optimal switch from decode to prefill by comparing the performance drop from reduced computational intensity with that from phase switching bubbles. Extensive experiments show that TD-Pipe effectively increases the throughput of LLM inference by up to 1.91 × over the existing tensor parallel approach and 2.73 × over the existing pipeline parallel approach on GPU nodes with only PCIe interconnection.",
+        "canonical_id": "arXiv:2506.10470",
+        "arxiv_id": "2506.10470",
+        "doi": "10.1145/3754598.3754621",
+        "authors": [
+          "Hongbin Zhang",
+          "Taosheng Wei",
+          "Zhen-Yi Zheng",
+          "Jiangsu Du",
+          "Zhi-Guang Chen",
+          "Yu-Tong Lu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.23072",
+      "identity_tokens": [
+        "id:DOI:10.1109/cloud67622.2025.00026",
+        "id:arXiv:2505.23072",
+        "title:speeding up model loading with fastsafetensors",
+        "url:https://arxiv.org/abs/2505.23072"
+      ],
+      "record": {
+        "title": "Speeding up Model Loading with Fastsafetensors",
+        "source_url": "https://arxiv.org/abs/2505.23072",
+        "year": 2025,
+        "published": "2025-05-29",
+        "abstract": "The rapid increases in model parameter sizes introduces new challenges in pre-trained model loading. Currently, machine learning code often deserializes each parameter as a tensor object in host memory before copying it to device memory. We found that this approach underutilized storage throughput and significantly slowed down loading large models with a widely-used model file formats, safetensors. In this work, we present fastsafetensors, a Python library designed to optimize the deserialization of tensors in safetensors files. Our approach first copies groups of on-disk parameters to device memory, where they are directly instantiated as tensor objects. This design enables further optimization in low-level I/O and high-level tensor preprocessing, including parallelized copying, peer-to-peer DMA, and GPU offloading. Experimental results show performance improvements of 4.8x to 7.5x in loading models such as Llama (7, 13, and 70 billion parameters), Falcon (40 billion parameters), and the Bloom (176 billion parameters).",
+        "canonical_id": "arXiv:2505.23072",
+        "arxiv_id": "2505.23072",
+        "doi": "10.1109/CLOUD67622.2025.00026",
+        "authors": [
+          "Takeshi Yoshimura",
+          "Tatsuhiro Chiba",
+          "Manish Sethi",
+          "Daniel G. Waddington",
+          "S. Sundararaman"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.19427",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.19427",
+        "id:arXiv:2505.19427",
+        "title:wina weight informed neuron activation for accelerating large language model inference",
+        "url:https://arxiv.org/abs/2505.19427"
+      ],
+      "record": {
+        "title": "WINA: Weight Informed Neuron Activation for Accelerating Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2505.19427",
+        "year": 2025,
+        "published": "2025-05-26",
+        "abstract": "The growing computational demands of large language models (LLMs) make efficient inference and activation strategies increasingly critical. While recent approaches, such as Mixture-of-Experts (MoE), leverage selective activation but require specialized training, training-free sparse activation methods offer broader applicability and superior resource efficiency through their plug-and-play design. However, many existing methods rely solely on hidden state magnitudes to determine activation, resulting in high approximation errors and suboptimal inference accuracy. To address these limitations, we propose WINA (Weight Informed Neuron Activation), a novel, simple, and training-free sparse activation framework that jointly considers hidden state magnitudes and the column-wise $\\ell_2$-norms of weight matrices. We show that this leads to a sparsification strategy that obtains optimal approximation error bounds with theoretical guarantees tighter than existing techniques. Empirically, WINA also outperforms state-of-the-art methods (e.g., TEAL) by up to $2.94\\%$ in average performance at the same sparsity levels, across a diverse set of LLM architectures and datasets. These results position WINA as a new performance frontier for training-free sparse activation in LLM inference, advancing training-free sparse activation methods and setting a robust baseline for efficient inference. The source code is available at https://github.com/microsoft/wina.",
+        "canonical_id": "arXiv:2505.19427",
+        "arxiv_id": "2505.19427",
+        "doi": "10.48550/arXiv.2505.19427",
+        "authors": [
+          "Sihan Chen",
+          "Dan Zhao",
+          "Jongwoo Ko",
+          "Colby R. Banbury",
+          "Huiping Zhuang",
+          "Luming Liang",
+          "Pashmina Cameron",
+          "Tianyi Chen"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.19325",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.19325",
+        "id:arXiv:2405.19325",
+        "title:nearest neighbor speculative decoding for llm generation and attribution",
+        "url:https://arxiv.org/abs/2405.19325"
+      ],
+      "record": {
+        "title": "Nearest Neighbor Speculative Decoding for LLM Generation and Attribution",
+        "source_url": "https://arxiv.org/abs/2405.19325",
+        "year": 2024,
+        "published": "2024-05-29",
+        "abstract": "Large language models (LLMs) often hallucinate and lack the ability to provide attribution for their generations. Semi-parametric LMs, such as kNN-LM, approach these limitations by refining the output of an LM for a given prompt using its nearest neighbor matches in a non-parametric data store. However, these models often exhibit slow inference speeds and produce non-fluent texts. In this paper, we introduce Nearest Neighbor Speculative Decoding (NEST), a novel semi-parametric language modeling approach that is capable of incorporating real-world text spans of arbitrary length into the LM generations and providing attribution to their sources. NEST performs token-level retrieval at each inference step to compute a semi-parametric mixture distribution and identify promising span continuations in a corpus. It then uses an approximate speculative decoding procedure that accepts a prefix of the retrieved span or generates a new token. NEST significantly enhances the generation quality and attribution rate of the base LM across a variety of knowledge-intensive tasks, surpassing the conventional kNN-LM method and performing competitively with in-context retrieval augmentation. In addition, NEST substantially improves the generation speed, achieving a 1.8x speedup in inference time when applied to Llama-2-Chat 70B. Code will be released at https://github.com/facebookresearch/NEST/tree/main.",
+        "canonical_id": "arXiv:2405.19325",
+        "arxiv_id": "2405.19325",
+        "doi": "10.48550/arXiv.2405.19325",
+        "authors": [
+          "Minghan Li",
+          "Xilun Chen",
+          "Ari Holtzman",
+          "Beidi Chen",
+          "Jimmy Lin",
+          "Wen-tau Yih",
+          "X. Lin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.00835",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2403.00835",
+        "id:arXiv:2403.00835",
+        "title:cllms consistency large language models",
+        "url:https://arxiv.org/abs/2403.00835"
+      ],
+      "record": {
+        "title": "CLLMs: Consistency Large Language Models",
+        "source_url": "https://arxiv.org/abs/2403.00835",
+        "year": 2024,
+        "published": "2024-02-28",
+        "abstract": "Parallel decoding methods such as Jacobi decoding show promise for more efficient LLM inference as it breaks the sequential nature of the LLM decoding process and transforms it into parallelizable computation. However, in practice, it achieves little speedup compared to traditional autoregressive (AR) decoding, primarily because Jacobi decoding seldom accurately predicts more than one token in a single fixed-point iteration step. To address this, we develop a new approach aimed at realizing fast convergence from any state to the fixed point on a Jacobi trajectory. This is accomplished by refining the target LLM to consistently predict the fixed point given any state as input. Extensive experiments demonstrate the effectiveness of our method, showing 2.4$\\times$ to 3.4$\\times$ improvements in generation speed while preserving generation quality across both domain-specific and open-domain benchmarks.",
+        "canonical_id": "arXiv:2403.00835",
+        "arxiv_id": "2403.00835",
+        "doi": "10.48550/arXiv.2403.00835",
+        "authors": [
+          "Siqi Kou",
+          "Lanxiang Hu",
+          "Zhe He",
+          "Zhijie Deng",
+          "Hao Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.04658",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2401.04658",
+        "id:arXiv:2401.04658",
+        "title:lightning attention2 a free lunch for handling unlimited sequence lengths in large language models",
+        "url:https://arxiv.org/abs/2401.04658"
+      ],
+      "record": {
+        "title": "Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2401.04658",
+        "year": 2024,
+        "published": "2024-01-09",
+        "abstract": "Linear attention is an efficient attention mechanism that has recently emerged as a promising alternative to conventional softmax attention. With its ability to process tokens in linear computational complexities, linear attention, in theory, can handle sequences of unlimited length without sacrificing speed, i.e., maintaining a constant training speed for various sequence lengths with a fixed memory consumption. However, due to the issue with cumulative summation (cumsum), current linear attention algorithms cannot demonstrate their theoretical advantage in a causal setting. In this paper, we present Lightning Attention-2, the first linear attention implementation that enables linear attention to realize its theoretical computational benefits. To achieve this, we leverage the thought of tiling, separately handling the intra-block and inter-block components in linear attention calculation. Specifically, we utilize the conventional attention computation mechanism for the intra-blocks and apply linear attention kernel tricks for the inter-blocks. A tiling technique is adopted through both forward and backward procedures to take full advantage of the GPU hardware. We implement our algorithm in Triton to make it IO-aware and hardware-friendly. Various experiments are conducted on different model sizes and sequence lengths. Lightning Attention-2 retains consistent training and inference speed regardless of input sequence length and is significantly faster than other attention mechanisms. The source code is available at https://github.com/OpenNLPLab/lightning-attention.",
+        "canonical_id": "arXiv:2401.04658",
+        "arxiv_id": "2401.04658",
+        "doi": "10.48550/arXiv.2401.04658",
+        "authors": [
+          "Zhen Qin",
+          "Wei-Gao Sun",
+          "Dong Li",
+          "Xuyang Shen",
+          "Weixuan Sun",
+          "Yi-Ran Zhong"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.06201",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.06201",
+        "id:arXiv:2310.06201",
+        "title:compressing context to enhance inference efficiency of large language models",
+        "url:https://arxiv.org/abs/2310.06201"
+      ],
+      "record": {
+        "title": "Compressing Context to Enhance Inference Efficiency of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2310.06201",
+        "year": 2023,
+        "published": "2023-10-09",
+        "abstract": "Large language models (LLMs) achieved remarkable performance across various tasks. However, they face challenges in managing long documents and extended conversations, due to significantly increased computational requirements, both in memory and inference time, and potential context truncation when the input exceeds the LLM's fixed context length. This paper proposes a method called Selective Context that enhances the inference efficiency of LLMs by identifying and pruning redundancy in the input context to make the input more compact. We test our approach using common data sources requiring long context processing: arXiv papers, news articles, and long conversations, on tasks of summarisation, question answering, and response generation. Experimental results show that Selective Context significantly reduces memory cost and decreases generation latency while maintaining comparable performance compared to that achieved when full context is used. Specifically, we achieve a 50\\% reduction in context cost, resulting in a 36\\% reduction in inference memory usage and a 32\\% reduction in inference time, while observing only a minor drop of .023 in BERTscore and .038 in faithfulness on four downstream applications, indicating that our method strikes a good balance between efficiency and performance.",
+        "canonical_id": "arXiv:2310.06201",
+        "arxiv_id": "2310.06201",
+        "doi": "10.48550/arXiv.2310.06201",
+        "authors": [
+          "Yucheng Li",
+          "Bo Dong",
+          "Chenghua Lin",
+          "Frank Guerin"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:b0a7ee39453a3295a330eae5c9acd64e432021875575f2313f16886993b96950",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

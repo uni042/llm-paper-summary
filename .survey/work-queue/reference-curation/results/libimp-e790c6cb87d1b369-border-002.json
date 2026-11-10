@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e790c6cb87d1b369-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.hcc.2025.100300",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.hcc.2025.100300",
+    "identity_tokens": [
+      "DOI:10.1016/j.hcc.2025.100300",
+      "SemanticScholar:186b33f6f093c18dae11ad3d6aa6d9d0305992c3"
+    ],
+    "reason": "Identity is verified from DOI/title. The official publisher abstract was not retrieved: the Elsevier DOI page returned HTTP 403 and the publisher PDF/search snippet exposed only a partial abstract, insufficient for screening. Kept borderline pending a complete primary abstract.",
+    "first_checked_at": "2026-10-13T16:56:15+00:00",
+    "last_checked_at": "2026-10-13T16:56:15+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On protecting the data privacy of Large Language Models (LLMs) and LLM agents: A literature review"
+  },
+  "processed_at": "2026-10-13T16:56:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e790c6cb87d1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

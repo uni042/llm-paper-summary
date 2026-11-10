@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cb66d87375c8c9e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.14991",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.14991",
+    "identity_tokens": [
+      "arXiv:2307.14991"
+    ],
+    "reason": "LLMで複数言語コードの変更を翻訳するsoftware engineering taskで、推論runtime効率を扱わない。",
+    "first_checked_at": "2026-10-05T14:04:52+00:00",
+    "last_checked_at": "2026-10-05T14:04:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+    ],
+    "title": "Multilingual Code Co-evolution using Large Language Models"
+  },
+  "processed_at": "2026-10-05T14:04:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cb66d87375c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

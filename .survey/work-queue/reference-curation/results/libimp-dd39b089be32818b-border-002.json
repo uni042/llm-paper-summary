@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd39b089be32818b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.29667",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.29667",
+    "identity_tokens": [
+      "arXiv:2608.29667"
+    ],
+    "reason": "量子化とdeploymentは関連するが、中心は量子化aware trainingで推論時効率化から距離がありborderline。",
+    "first_checked_at": "2026-10-05T07:53:36+00:00",
+    "last_checked_at": "2026-10-05T07:53:36+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2506.18879-commvq-commutative-vector-quantization-for-kv-cache-compression.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "A Target-Centric Survey of Quantization-Aware Training"
+  },
+  "processed_at": "2026-10-05T07:53:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd39b089be32",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

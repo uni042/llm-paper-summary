@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-473ebf5457b7236c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2302.11382",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2302.11382",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2302.11382",
+      "arXiv:2302.11382"
+    ],
+    "reason": "LLMとの対話を改善するprompt engineeringパターン集であり、推論システムの速度・メモリ・サービング機構を提案しない。",
+    "first_checked_at": "2026-09-30T02:28:00+00:00",
+    "last_checked_at": "2026-10-01T22:26:28+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
+    ],
+    "title": "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT"
+  },
+  "processed_at": "2026-10-01T22:26:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-473ebf5457b7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

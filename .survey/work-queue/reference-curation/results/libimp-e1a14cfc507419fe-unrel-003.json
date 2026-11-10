@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e1a14cfc507419fe-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.10145",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.10145",
+    "identity_tokens": [
+      "arXiv:2603.10145"
+    ],
+    "reason": "対象は学習時のLM head expressivity/gradientで、inference efficiencyや servingではない。",
+    "first_checked_at": "2026-10-07T10:48:27+00:00",
+    "last_checked_at": "2026-10-07T10:48:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Lost in Backpropagation: The LM Head is a Gradient Bottleneck"
+  },
+  "processed_at": "2026-10-07T10:48:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e1a14cfc5074",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0958-scheduled-chat-00/r07",
+  "reference_main_sha": "289552474aa320e0664b5cfdf2e6087cc159fc0a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.04537",
+      "identity_tokens": [
+        "id:arXiv:2610.04537",
+        "id:DOI:10.48550/arXiv.2610.04537"
+      ],
+      "title": "PhaseGate: Phase-Aware CPU Retrieval Scheduling for On-Device LLMs on Unified Memory",
+      "reason": "PhaseGateはApple M4等の統合メモリ端末でCPU検索とGPU LLM推論が競合する際、prefillとdecodeで別々の検索同時実行上限を設定する。検索4 workerではdecode P95遅延が60～61%悪化する一方prefillは約6%の悪化であることを計測。phase-awareな4/1 worker制御により、LLMのP95を無検索基準1.25倍以内に抑えつつ、固定制御比検索throughput2倍を報告。",
+      "source_url": "https://arxiv.org/abs/2610.04537",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:09:32+09:00",
+      "last_checked_at": "2026-11-02T10:09:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.04753",
+      "identity_tokens": [
+        "id:arXiv:2610.04753",
+        "id:DOI:10.48550/arXiv.2610.04753"
+      ],
+      "title": "More Value per Key: Asymmetric Sparse Attention for Faster LLM Decoding",
+      "reason": "SAGAはsparse attentionでvalue乗算が軽くなる一方query-key計算が支配的になる点に着目し、Key headを減らしValue headを多く保つ非対称GQAを提案する。近似top-N注意と組み合わせ、最大1.5Bモデルで長文脈decodeがfull attention GQA比2倍超のend-to-end高速化を報告。事前学習済みモデルからのfine-tune変換法も示す。",
+      "source_url": "https://arxiv.org/abs/2610.04753",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:09:32+09:00",
+      "last_checked_at": "2026-11-02T10:09:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.28576",
+      "identity_tokens": [
+        "id:arXiv:2610.28576",
+        "id:DOI:10.48550/arXiv.2610.28576"
+      ],
+      "title": "The Token-Energy Law of LLM Decode: Active Bytes and Realized Time Account for Joules per Token",
+      "reason": "Token-Energy Lawはdecode出力当たりのGPU-board energyを、batchで共有される重みbyte、要求ごとに増えるKV byte、実測decode時間の線形式で説明する。Hopper/Blackwellの3モデルとHopper 2GPU tensor parallelで検証し、固定係数・観測時間を使った未使用条件の平均エネルギー予測誤差が最大3.73%と報告。推論性能・電力の定量モデルとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.28576",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:09:32+09:00",
+      "last_checked_at": "2026-11-02T10:09:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.15366",
+      "identity_tokens": [
+        "id:arXiv:2610.15366",
+        "id:DOI:10.48550/arXiv.2610.15366"
+      ],
+      "title": "Compositional Performance Modeling of LLM Inference Clusters with Hierarchical KV Caching",
+      "reason": "prefill/decodeの局所サービス時間と共有資源・階層KV利用可能性を分離する離散イベントシミュレータを提案し、1P-1Dで校正した計算・転送モデルを3P-1Dへ再利用する。SGLang/Qwen3-8B・32BでQA平均要求遅延誤差1.34%、coding session6.36%、CPU simulationは実replayより平均15.33倍高速と報告。推論クラスタ設計評価の直接的な基盤としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.15366",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:09:32+09:00",
+      "last_checked_at": "2026-11-02T10:09:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.18014",
+      "identity_tokens": [
+        "id:arXiv:2610.18014",
+        "id:DOI:10.48550/arXiv.2610.18014"
+      ],
+      "title": "LatentRemedy: Efficient Remedy For Non-Prefix KV Cache Reuse in Multi-Agent Systems",
+      "reason": "LatentRemedyは異なるタスクのagent間でnon-prefix KVを直接再利用すると品質が最大90%低下する問題に対し、targetのprefix最終hidden stateから少数のtask条件付きlatent tokenを生成し、再利用KVの後ろへ挿入する。full-prefill蒸留で小型MLPを学習し、共有blockを再計算せずに従来補正法より品質を回復し、TTFTは直接再利用に近いと報告。",
+      "source_url": "https://arxiv.org/abs/2610.18014",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:09:32+09:00",
+      "last_checked_at": "2026-11-02T10:09:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.13060",
+      "identity_tokens": [
+        "id:arXiv:2610.13060",
+        "id:DOI:10.48550/arXiv.2610.13060"
+      ],
+      "title": "KV-Repurpose: A Testbed for Evaluating Non-Prefix KV-Cache Reuse",
+      "reason": "KV-RepurposeはvLLM上でprefix以外の文書segment KV再利用を試験するため、segment-aware scheduling、prompt構成、容量制御、監視を一体化する。Zipf型RAG負荷で20%の要求が固定prefixを共有する条件、30GB cacheではsegment再利用hit率63.9%に対しprefix cache3.3%、1TBのprefix cacheでも17.9%と報告。cross-document推論での品質限界も示す。",
+      "source_url": "https://arxiv.org/abs/2610.13060",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:09:32+09:00",
+      "last_checked_at": "2026-11-02T10:09:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.40039",
+      "identity_tokens": [
+        "id:arXiv:2610.40039",
+        "id:DOI:10.48550/arXiv.2610.40039"
+      ],
+      "title": "How Far Are We From On-Device VLM Inference? A Measurement Study on Edge NPUs",
+      "reason": "6 VLM、3種類の実edge NPU、10 multimodalベンチマークでアプリ遅延・熱挙動からkernelまで計測し、softmax支配やtensor再配置コストでlinear attentionの理論速度改善が消える条件、CPU/NPUの優劣がattention形状に依存する点を示す。新規最適化kernelではないが端末推論ランタイム・ハードウェアの定量比較としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.40039",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:09:32+09:00",
+      "last_checked_at": "2026-11-02T10:09:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36564",
+      "identity_tokens": [
+        "id:arXiv:2610.36564",
+        "id:DOI:10.48550/arXiv.2610.36564"
+      ],
+      "title": "DeepInfer-Mac: Running a 750B-Class MoE on a 24 GB Laptop",
+      "reason": "DeepInfer-Macは750B級DeepSeek-V4.1-Flashを24GB統合メモリMacBook Airで動かすため、338GiBの低bit重みをSSDへ置き、7.6GiBの常駐重みと必要時のexpert/Engram行ロードを組み合わせる。GPU buffer直読みと次層prefetchでdecode 0.21～0.72tok/sを実測し、prefetchで21.0%のthroughput改善を報告。低速ながらCPU/GPU/SSD階層推論の直接的な実装評価としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.36564",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:09:32+09:00",
+      "last_checked_at": "2026-11-02T10:09:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07940",
+      "identity_tokens": [
+        "id:arXiv:2610.07940",
+        "id:DOI:10.48550/arXiv.2610.07940"
+      ],
+      "title": "Hybrid Latent Attention for Looped Language Models",
+      "reason": "Hybrid Latent Attentionは層をT回再利用するlooped LLMのKVがT倍になる問題に対し、直近W tokenは正確なKV、古いtokenは各loopから直接参照できる共有latentとして保持する。Ouro 1.4B/2.6B・T=4でcache/token10.7倍削減、同時sequence数4.0～8.8倍、16K文脈のdecode throughput最大7.4倍、元の精度97%以上を報告。",
+      "source_url": "https://arxiv.org/abs/2610.07940",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:09:32+09:00",
+      "last_checked_at": "2026-11-02T10:09:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.17901",
+      "identity_tokens": [
+        "id:arXiv:2610.17901",
+        "id:DOI:10.48550/arXiv.2610.17901"
+      ],
+      "title": "FlashMask-3: Efficient and Expressive Mask-Aware Distributed Attention",
+      "reason": "FlashMask-3はHopperのTMA/WGMMA・warp specializationに対応したstructured mask-aware attention kernelと、mask境界ベクトルの通信不要な分割・疎性対応load balancingを組み合わせる。H100単体の達成TFLOPsやcontext parallelのthroughputを改善するが、主要なend-to-end実証は128H100上の118B-A14B MoEの学習であり、推論decodeの評価は中心ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.17901",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:09:32+09:00",
+      "last_checked_at": "2026-11-02T10:09:32+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

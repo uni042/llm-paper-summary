@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d025e0fce110d6d0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.02312",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.02312",
+    "identity_tokens": [
+      "arXiv:2510.02312"
+    ],
+    "reason": "一次arXiv書誌・要旨では教師の圧縮KVキャッシュ表現を連続潜在トークンへ自己蒸留するKaVaを提案し、自然言語CoTの冗長性を抑えつつ潜在推論の精度を改善する。KVを学習信号として使うが、主貢献は学習時の推論蒸留であり実運用KVキャッシュ管理やデコード高速化の測定は要旨で確認できない。",
+    "first_checked_at": "2026-10-30T21:08:01+00:00",
+    "last_checked_at": "2026-10-30T21:08:01+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "KaVa: Latent Reasoning via Compressed KV-Cache Distillation"
+  },
+  "processed_at": "2026-10-30T21:08:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d025e0fce110",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

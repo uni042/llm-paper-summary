@@ -1,0 +1,151 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1c1a1718afad18c6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1c1a1718afad",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2312.11983"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ee46a489e7b45da164c52d08ffbaed07c66a6419",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-07T04:53:31.628511+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2312.11983",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Fluctuation-based Adaptive Structured Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2312.11983",
+      "year": 2023,
+      "published": "2023-12-19",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 174,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Network Pruning is a promising way to address the huge computing resource demands of the deployment and inference of Large Language Models (LLMs). Retraining-free is important for LLMs' pruning methods. However, almost all of the existing retraining-free pruning approaches for LLMs focus on unstructured pruning, which requires specific hardware support for acceleration. In this paper, we propose a novel retraining-free structured pruning framework for LLMs, named FLAP (FLuctuation-based Adaptive\nStructured Pruning). It is hardware-friendly by effectively reducing storage and enhancing inference speed. For effective structured pruning of LLMs, we highlight three critical elements that demand the utmost attention: formulating structured importance metrics, adaptively searching the global compressed model, and implementing compensation mechanisms to mitigate performance loss. First, FLAP determines whether the output feature map is easily recoverable when a column of weight is removed, based on the fluctuation pruning metric. Then it standardizes the importance scores to adaptively determine the global compressed model structure. At last, FLAP adds additional bias terms to recover the output feature maps using the baseline values. We thoroughly evaluate our approach on a variety of language benchmarks. Without any retraining, our method significantly outperforms the state-of-the-art methods, including LLM-Pruner and the extension of Wanda in structured pruning. The code is released at https://github.com/CASIA-IVA-Lab/FLAP.",
+      "identifiers": [
+        "SemanticScholar:9ea8001d6eb52d14134ceede7f88b1d8fa8db41f"
+      ],
+      "semantic_scholar_id": "9ea8001d6eb52d14134ceede7f88b1d8fa8db41f",
+      "canonical_id": "arXiv:2312.11983",
+      "arxiv_id": "2312.11983",
+      "doi": "10.48550/arXiv.2312.11983",
+      "authors": [
+        "Yongqi An",
+        "Xu Zhao",
+        "Tao Yu",
+        "Ming Tang",
+        "Jin-Qiao Wang"
+      ],
+      "priority": 174,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 174,
+        "citation_count": 174,
+        "total": 174,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1023,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2312.11983",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2312.11983",
+        "id:SemanticScholar:9ea8001d6eb52d14134ceede7f88b1d8fa8db41f",
+        "id:arXiv:2312.11983",
+        "title:fluctuationbased adaptive structured pruning for large language models",
+        "url:https://arxiv.org/abs/2312.11983"
+      ],
+      "record": {
+        "title": "Fluctuation-based Adaptive Structured Pruning for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2312.11983",
+        "year": 2023,
+        "published": "2023-12-19",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 174,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Network Pruning is a promising way to address the huge computing resource demands of the deployment and inference of Large Language Models (LLMs). Retraining-free is important for LLMs' pruning methods. However, almost all of the existing retraining-free pruning approaches for LLMs focus on unstructured pruning, which requires specific hardware support for acceleration. In this paper, we propose a novel retraining-free structured pruning framework for LLMs, named FLAP (FLuctuation-based Adaptive\nStructured Pruning). It is hardware-friendly by effectively reducing storage and enhancing inference speed. For effective structured pruning of LLMs, we highlight three critical elements that demand the utmost attention: formulating structured importance metrics, adaptively searching the global compressed model, and implementing compensation mechanisms to mitigate performance loss. First, FLAP determines whether the output feature map is easily recoverable when a column of weight is removed, based on the fluctuation pruning metric. Then it standardizes the importance scores to adaptively determine the global compressed model structure. At last, FLAP adds additional bias terms to recover the output feature maps using the baseline values. We thoroughly evaluate our approach on a variety of language benchmarks. Without any retraining, our method significantly outperforms the state-of-the-art methods, including LLM-Pruner and the extension of Wanda in structured pruning. The code is released at https://github.com/CASIA-IVA-Lab/FLAP.",
+        "identifiers": [
+          "SemanticScholar:9ea8001d6eb52d14134ceede7f88b1d8fa8db41f"
+        ],
+        "semantic_scholar_id": "9ea8001d6eb52d14134ceede7f88b1d8fa8db41f",
+        "canonical_id": "arXiv:2312.11983",
+        "arxiv_id": "2312.11983",
+        "doi": "10.48550/arXiv.2312.11983",
+        "authors": [
+          "Yongqi An",
+          "Xu Zhao",
+          "Tao Yu",
+          "Ming Tang",
+          "Jin-Qiao Wang"
+        ],
+        "priority": 174,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 174,
+          "citation_count": 174,
+          "total": 174,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1023,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:120c58bcc2654451347e2a792fb79440a7f3cc0eb6febce1ffb4786f0bb8e2d0",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9705999287f208a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1909.07606",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1909.07606",
+    "identity_tokens": [
+      "arXiv:1909.07606",
+      "id:arXiv:1909.07606",
+      "url:https://arxiv.org/abs/1909.07606"
+    ],
+    "reason": "arXiv要旨はknowledge graphをBERT表現へ注入する言語タスク手法と12 NLP課題の性能を扱う。",
+    "first_checked_at": "2026-10-04T22:47:25+00:00",
+    "last_checked_at": "2026-10-05T00:58:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+    ],
+    "title": "K-BERT: Enabling Language Representation with Knowledge Graph"
+  },
+  "processed_at": "2026-10-05T00:58:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9705999287f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

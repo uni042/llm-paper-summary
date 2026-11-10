@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1500-scheduled-chat-00/r04",
+  "reference_main_sha": "2961ce802c7c010bf18836afa636780b500c3e8b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.06822",
+      "identity_tokens": [
+        "arXiv:2602.06822"
+      ],
+      "title": "POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models",
+      "reason": "arXiv一次要旨はprefillでチャネルを保持・候補・削除に分割し、decodeで候補チャネルだけを文脈依存に再判定するオンライン構造的枝刈りPOPを提案。オフライン較正・追加学習なしでLLM、MoE、VLMを評価し、推論レイテンシーを抑えつつ精度を維持。推論実行時の動的計算削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2602.06822",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:09:46+09:00",
+      "last_checked_at": "2026-10-30T15:09:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 67
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.27298",
+      "identity_tokens": [
+        "arXiv:2609.27298"
+      ],
+      "title": "StateComp: Learning When to Compress History in Long Horizon Agents",
+      "reason": "arXiv一次要旨は長期エージェント履歴について、現在状態に応じて安全に要約可能な過去イベントをKEEP/READYとして予測し、連続区間を圧縮するStateCompを提案。WorkBuddyBenchでエージェント・要約トークンを52.27%削減しタスク性能を維持。エージェント推論の文脈管理とコスト削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.27298",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:09:46+09:00",
+      "last_checked_at": "2026-10-30T15:09:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 68
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.06938",
+      "identity_tokens": [
+        "arXiv:2603.06938"
+      ],
+      "title": "Swimba: Switch Mamba Model Scales State Space Models",
+      "reason": "arXiv一次要旨はMoEをSSMに導入する際、専門家ごとの状態軌跡を増やさずパラメータ空間で混合して再帰状態更新を1回に保つSwimbaを提案。リアルタイム推論のスループット・遅延を測定し、同FLOPs条件で品質はやや改善するが実時間遅延とスループットは小幅悪化する負の結果も報告。再帰型推論計算の構造効率に直接該当。",
+      "source_url": "https://arxiv.org/abs/2603.06938",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:09:46+09:00",
+      "last_checked_at": "2026-10-30T15:09:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 70
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32256",
+      "identity_tokens": [
+        "arXiv:2609.32256"
+      ],
+      "title": "LAM: Efficient Lossy Agent Memory Framework With A Retrieval-Score Error Bound",
+      "reason": "arXiv一次要旨はエージェント履歴の重複除去に検索スコア摂動の上限を付け、KV接頭辞を保持したまま推論と圧縮を重畳するLAMを提案。600軌跡で観測トークン22.47%削減、gold-patch証拠99.984%保持を報告。推論前圧縮の速度予測71.4〜91.6倍は固定削除集合でのスケジューリング比較であり、規則自体の高速化とは区別する。",
+      "source_url": "https://arxiv.org/abs/2609.32256",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:09:46+09:00",
+      "last_checked_at": "2026-10-30T15:09:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.11368",
+      "identity_tokens": [
+        "arXiv:2607.11368"
+      ],
+      "title": "Decomposing Runtime, Kernel, and Quantization Speedups via a Matched FP16 Intermediate: A Hardware-Conditioned Case Study on Four NVIDIA RTX A5000 GPUs",
+      "reason": "arXiv一次要旨は同一4×RTX A5000上で量子化カーネル、ランタイム変更、GPU分割を統制したFP16中間構成を設け、E2E最大2.58倍のうちランタイム寄与が対数尺度で約2/3と分解。4GPU分割が2倍に届かない主因を同期調整と特定し、推論性能比較の測定設計に直接該当。",
+      "source_url": "https://arxiv.org/abs/2607.11368",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:09:46+09:00",
+      "last_checked_at": "2026-10-30T15:09:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.09657",
+      "identity_tokens": [
+        "arXiv:2503.09657"
+      ],
+      "title": "Týr-the-Pruner: Structural Pruning LLMs via Global Sparsity Distribution Optimization",
+      "reason": "arXiv最新版の題名は「Structural Pruning LLMs via Global Sparsity Distribution Optimization」でworklistの旧題と表記が異なるが同一arXiv identity。層間依存を考慮したsupernet構築と漸進的探索でLLM全体の枝刈り率を配分し、Llama-3.1-70Bのパラメータ50%削除時に密モデル性能97%維持を報告。推論用モデル圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2503.09657",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:09:46+09:00",
+      "last_checked_at": "2026-10-30T15:09:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 74
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.19358",
+      "identity_tokens": [
+        "arXiv:2607.19358"
+      ],
+      "title": "LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning",
+      "reason": "arXiv v2要旨は線形注意の長距離記憶とLightning Indexerによる動的疎注意を学習済みゲートで融合し、長いCoTの二乗注意コストを抑制。DeepSeek蒸留Qwenで16K文脈のeager-mode平均サンプル遅延を23.9%削減し長文脈推論品質を維持と報告。推論時の長文脈注意高速化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2607.19358",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:09:46+09:00",
+      "last_checked_at": "2026-10-30T15:09:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 75
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.18002",
+      "identity_tokens": [
+        "arXiv:2604.18002"
+      ],
+      "title": "Neural Garbage Collection: Learning to Forget while Learning to Reason",
+      "reason": "arXiv一次要旨は推論トークンとKVキャッシュ削除判断を離散行動として共同学習し、モデル自身がCoT中に不要KVを破棄するNeural Garbage Collectionを提案。手作業の退避基準を使わず成果報酬だけで学習し、推論中のKVメモリ使用を制御。KVキャッシュ削減と推論計算に直接該当。",
+      "source_url": "https://arxiv.org/abs/2604.18002",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:09:46+09:00",
+      "last_checked_at": "2026-10-30T15:09:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 76
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.08730",
+      "identity_tokens": [
+        "arXiv:2608.08730"
+      ],
+      "title": "Dispatch Overhead, Not Kernel Quality: The Performance Bottleneck in Single-Stream WebGPU LLM Inference",
+      "reason": "arXiv v3要旨はバッチ1・単一ストリームのWebGPU推論で、同期を混同しない逐次ディスパッチ計測と融合実験により演算器性能よりディスパッチ回数がボトルネックと示す。ブラウザ・エッジのLLM推論エンジンでディスパッチ削減を優先すべきとの直接的な実測知見。",
+      "source_url": "https://arxiv.org/abs/2608.08730",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:09:46+09:00",
+      "last_checked_at": "2026-10-30T15:09:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 77
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.15160",
+      "identity_tokens": [
+        "arXiv:2609.15160"
+      ],
+      "title": "T-LoopFormer: Token-Level Elastic-Depth Looped Transformers with Dynamic Routing",
+      "reason": "arXiv最新版ではworklistの「for Latent Reasoning」等の副題が変更されているが同一identity。各トークンが隠れ状態に基づき再帰深さを選択するtoken-choice routingと、ループ段階ごとに独立KVを保持するrecursion-wise cacheを提案。言語モデリングとゼロショット推論でdecode遅延の改善を報告し、動的計算配分に直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.15160",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:09:46+09:00",
+      "last_checked_at": "2026-10-30T15:09:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 78
+    }
+  ]
+}

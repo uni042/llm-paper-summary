@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4d6426a97171ad3f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.10296",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.10296",
+    "identity_tokens": [
+      "arXiv:2608.10296"
+    ],
+    "reason": "The abstract studies architectural choices for long-context extension and reports training cost/quality; it does not present an inference-time efficiency method.",
+    "first_checked_at": "2026-10-05T03:21:47+00:00",
+    "last_checked_at": "2026-10-05T03:21:47+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Cracks in the Foundation: Seemingly Minor Architectural Choices Impact Long Context Extension"
+  },
+  "processed_at": "2026-10-05T03:21:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4d6426a97171",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

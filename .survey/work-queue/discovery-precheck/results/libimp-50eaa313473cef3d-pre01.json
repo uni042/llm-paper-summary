@@ -1,0 +1,1427 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-50eaa313473cef3d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-50eaa313473c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2310.15724",
+    "arXiv:2410.04211",
+    "arXiv:2502.19662",
+    "arXiv:2503.11108",
+    "arXiv:2504.16379",
+    "arXiv:2504.16397",
+    "arXiv:2505.18451",
+    "arXiv:2505.19529",
+    "arXiv:2506.12038",
+    "arXiv:2510.07739",
+    "arXiv:2512.07090",
+    "arXiv:2603.16092",
+    "arXiv:2604.14419",
+    "arXiv:2604.26821",
+    "arXiv:2605.16366",
+    "arXiv:2607.21692"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 16,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "78e6bfaad36d2af3632f91038403e1a4e305640f",
+  "raw_search_result_count": 16,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 15,
+  "provider_progress": {
+    "requested_count": 16,
+    "status_counts": {
+      "allowed": 15,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T09:49:25.351136+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2310.15724",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.04211",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.19662",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.11108",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.16379",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.16397",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.18451",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.19529",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.12038",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.07739",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.07090",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.16092",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.14419",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.26821",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.16366",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.21692",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2607.21692"
+    }
+  ],
+  "results": [
+    {
+      "title": "Equifinality in Mixture of Experts: Routing Topology Does Not Determine Language Modeling Quality",
+      "source_url": "https://arxiv.org/abs/2604.14419",
+      "year": 2026,
+      "published": "2026-04-15",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse Mixture-of-Experts (MoE) architectures employ increasingly sophisticated routing mechanisms -- learned routers, multi-hop trajectories, token-dependent gating. We ask: does routing topology actually determine language modeling quality? We build a geometric MoE (ST-MoE) using cosine-similarity routing against learned centroids in a low-dimensional space ($d_{space} = 64$), requiring 80% fewer routing parameters than standard linear routers. Through 62 controlled experiments on WikiText-103 at 76--84M parameters trained to convergence (50K steps, 1.64B tokens), we find that routing topology does not determine asymptotic perplexity (PPL): five cosine-routing variants are statistically equivalent within a 1-PPL margin (Two One-Sided Tests [TOST], $p<0.05$ for all 10 pairwise comparisons; 15 runs across 3 seeds, observed range 33.93--34.72). The finding extends to hash, random-fixed, and top-1 routing (single-seed; graceful 1.1--2.2 PPL degradation) and replicates on OpenWebText (0.03 PPL gap, 6 runs, 3 seeds each). A standard linear router with 5.3$\\times$ more routing parameters reaches PPL 32.76, but iso-parameter cosine routing closes 67% of this gap -- the true mechanism advantage is $\\sim$1.2%. The mechanistic explanation is convergent redundancy: multi-hop updates are collinear ($\\cos(\\Delta h_0, \\Delta h_1) = 0.805$), implementing magnitude amplification rather than compositional reasoning; a single learnable scalar replicates multi-hop performance. As a practical payoff, zero-shot relative-norm halting saves 25% of MoE FLOPs at +0.12% PPL. Expert-level specialization and causal controllability -- which coexist with topology-level equifinality -- are explored in a companion paper.",
+      "identifiers": [
+        "SemanticScholar:c248caa1cba90a1e9f73d28da9b6f282f136cf70"
+      ],
+      "semantic_scholar_id": "c248caa1cba90a1e9f73d28da9b6f282f136cf70",
+      "canonical_id": "arXiv:2604.14419",
+      "arxiv_id": "2604.14419",
+      "doi": "10.48550/arXiv.2604.14419",
+      "authors": [
+        "Ivan Ternovtsii",
+        "Y. Bilak"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 182,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Parallel In-Context Learning for Large Vision Language Models",
+      "source_url": "https://arxiv.org/abs/2603.16092",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models (LVLMs) employ multi-modal in-context learning (MM-ICL) to adapt to new tasks by lever-aging demonstration examples. While increasing the number of demonstrations boosts performance, they incur significant inference latency due to the quadratic computational cost of Transformer attention with respect to the context length. To address this trade-off, we propose Parallel In-Context Learning (Parallel-ICL), a plug-and-play inference algorithm. Parallel-ICL partitions the long demonstration context into multiple shorter, manageable chunks. It processes these chunks in parallel and integrates their predictions at the logit level, using a weighted Product-of-Experts (PoE) ensemble to approximate the full-context output. Guided by ensemble learning theory, we introduce principled strategies for Parallel-ICL: (i) clustering-based context chunking to maximize inter-chunk diversity and (ii) similarity-based context compilation to weight predictions by query relevance. Extensive experiments on VQA, image captioning, and classification benchmarks demonstrate that Parallel-ICL achieves performance comparable to full-context MM-ICL, while significantly improving inference speed. Our work offers an effective solution to the accuracy-efficiency trade-off in MM-ICL, enabling dynamic task adaptation with substantially reduced inference overhead.",
+      "identifiers": [
+        "SemanticScholar:e69a0f3d2df2319f6a0206fb265a6dc984cd2945"
+      ],
+      "semantic_scholar_id": "e69a0f3d2df2319f6a0206fb265a6dc984cd2945",
+      "canonical_id": "arXiv:2603.16092",
+      "arxiv_id": "2603.16092",
+      "doi": "10.1109/CVPRF71909.2026.00557",
+      "authors": [
+        "Shin'ya Yamaguchi",
+        "Daiki Chijiwa",
+        "T. Sakao",
+        "Taku Hasegawa"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 211,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Variator: Accelerating Pre-trained Models with Plug-and-Play Compression Modules",
+      "source_url": "https://arxiv.org/abs/2310.15724",
+      "year": 2023,
+      "published": "2023-10-24",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained language models (PLMs) have achieved remarkable results on NLP tasks but at the expense of huge parameter sizes and the consequent computational costs. In this paper, we propose Variator, a parameter-efficient acceleration method that enhances computational efficiency through plug-and-play compression plugins. Compression plugins are designed to reduce the sequence length via compressing multiple hidden vectors into one and trained with original PLMs frozen. Different from traditional model acceleration methods, which compress PLMs to smaller sizes, Variator offers two distinct advantages: (1) In real-world applications, the plug-and-play nature of our compression plugins enables dynamic selection of different compression plugins with varying acceleration ratios based on the current workload. (2) The compression plugin comprises a few compact neural network layers with minimal parameters, significantly saving storage and memory overhead, particularly in scenarios with a growing number of tasks. We validate the effectiveness of Variator on seven datasets. Experimental results show that Variator can save 53% computational costs using only 0.9% additional parameters with a performance drop of less than 2%. Moreover, when the model scales to billions of parameters, Variator matches the strong performance of uncompressed PLMs.",
+      "identifiers": [
+        "SemanticScholar:77c8be28d6f7486230d4ecb5198623c4cd1badc3"
+      ],
+      "semantic_scholar_id": "77c8be28d6f7486230d4ecb5198623c4cd1badc3",
+      "canonical_id": "arXiv:2310.15724",
+      "arxiv_id": "2310.15724",
+      "doi": "10.48550/arXiv.2310.15724",
+      "authors": [
+        "Chao-Jun Xiao",
+        "Yuqi Luo",
+        "Wen-Bin Zhang",
+        "Pengle Zhang",
+        "Xu Han",
+        "Yankai Lin",
+        "Zhengyan Zhang",
+        "Ruo-Bing Xie",
+        "Zhiyuan Liu",
+        "Maosong Sun",
+        "Jie Zhou"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1086,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "SplitReason: Learning To Offload Reasoning",
+      "source_url": "https://arxiv.org/abs/2504.16379",
+      "year": 2025,
+      "published": "2025-04-23",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning in large language models (LLMs) tends to produce substantially longer token generation sequences than simpler language modeling tasks. This extended generation length reflects the multi-step, compositional nature of reasoning and is often correlated with higher solution accuracy. From an efficiency perspective, longer token generation exacerbates the inherently sequential and memory-bound decoding phase of LLMs. However, not all parts of this expensive reasoning process are equally difficult to generate. We leverage this observation by offloading only the most challenging parts of the reasoning process to a larger, more capable model, while performing most of the generation with a smaller, more efficient model; furthermore, we teach the smaller model to identify these difficult segments and independently trigger offloading when needed. To enable this behavior, we annotate difficult segments across 18k reasoning traces from the OpenR1-Math-220k chain-of-thought (CoT) dataset. We then apply supervised fine-tuning (SFT) and reinforcement learning fine-tuning (RLFT) to a 1.5B-parameter reasoning model, training it to learn to offload the most challenging parts of its own reasoning process to a larger model. This approach improves AIME24 reasoning accuracy by 24% and 28.3% while offloading 1.35% and 5% of the generated tokens respectively. We open-source our SplitReason model, data, code and logs.",
+      "identifiers": [
+        "SemanticScholar:24394794918f262940a45c44324e1af43dc29c36"
+      ],
+      "semantic_scholar_id": "24394794918f262940a45c44324e1af43dc29c36",
+      "canonical_id": "arXiv:2504.16379",
+      "arxiv_id": "2504.16379",
+      "doi": "10.48550/arXiv.2504.16379",
+      "authors": [
+        "Yash Akhauri",
+        "Anthony Fei",
+        "Chi-Chih Chang",
+        "Ahmed Abouelhamayed",
+        "Yue-Ying Li",
+        "Mohamed S. Abdelfattah"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 539,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MeSH: Memory-as-State-Highways for Recursive Transformers",
+      "source_url": "https://arxiv.org/abs/2510.07739",
+      "year": 2025,
+      "published": "2025-10-09",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recursive transformers reuse parameters and iterate over hidden states multiple times, decoupling compute depth from parameter depth. However, under matched compute, recursive models with fewer parameters often lag behind non-recursive counterparts. By probing hidden states, we trace this performance gap to two primary bottlenecks: undifferentiated computation, where the core is forced to adopt a similar computational pattern at every iteration, and information overload, where long-lived and transient information must coexist in a single hidden state. To address the issues, we introduce a Memory-as-State-Highways (MeSH) scheme, which externalizes state management into an explicit memory buffer and employs lightweight routers to dynamically diversify computation across iterations. Probing visualizations confirm that MeSH successfully resolves the pathologies by inducing functional specialization across iterations. On the Pythia suite (160M-6.9B), MeSH-enhanced recursive transformers consistently improve over recursive baselines and outperforms its larger non-recursive counterpart at the 1.4B scale, improving average downstream accuracy by +1.06% with 33% fewer non-embedding parameters. Our analysis establishes MeSH as a scalable and principled architecture for building stronger recursive models. Our code is available at https://github.com/LivingFutureLab/MeSH/ .",
+      "identifiers": [
+        "SemanticScholar:1fe94818c7f4a8a4df6c0cef8d44ace2edaa7734"
+      ],
+      "semantic_scholar_id": "1fe94818c7f4a8a4df6c0cef8d44ace2edaa7734",
+      "canonical_id": "arXiv:2510.07739",
+      "arxiv_id": "2510.07739",
+      "doi": "10.48550/arXiv.2510.07739",
+      "authors": [
+        "Chengting Yu",
+        "Xiaobo Shu",
+        "Ya-Dao Wang",
+        "Yi-Zhe Zhang",
+        "Haoyi Wu",
+        "Ji-Aang Li",
+        "Rujiao Long",
+        "Ziheng Chen",
+        "Yu-Chi Xu",
+        "Wenbo Su",
+        "Bo Zheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 370,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Leveraging KV Similarity for Online Structured Pruning in LLMs",
+      "source_url": "https://arxiv.org/abs/2512.07090",
+      "year": 2025,
+      "published": "2025-12-08",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning has emerged as a promising direction for accelerating large language model (LLM) inference, yet existing approaches often suffer from instability because they rely on offline calibration data that may not generalize across inputs. In this work, we introduce Token Filtering, a lightweight online structured pruning technique that makes pruning decisions directly during inference without any calibration data. The key idea is to measure token redundancy via joint key-value similarity and skip redundant attention computations, thereby reducing inference cost while preserving critical information. To further enhance stability, we design a variance-aware fusion strategy that adaptively weights key and value similarity across heads, ensuring that informative tokens are retained even under high pruning ratios. This design introduces no additional memory overhead and provides a more reliable criterion for token importance. Extensive experiments on LLaMA-2 (7B/13B), LLaMA-3 (8B), and Mistral (7B) demonstrate that Token Filtering consistently outperforms prior structured pruning methods, preserving accuracy on commonsense reasoning benchmarks and maintaining strong performance on challenging tasks such as MMLU, even with 50% pruning.",
+      "identifiers": [
+        "SemanticScholar:92f4ded297fb413f09bf98ff0a6495c7a644011f"
+      ],
+      "semantic_scholar_id": "92f4ded297fb413f09bf98ff0a6495c7a644011f",
+      "canonical_id": "arXiv:2512.07090",
+      "arxiv_id": "2512.07090",
+      "doi": "10.48550/arXiv.2512.07090",
+      "authors": [
+        "Jungmin Lee",
+        "Gwangeun Byeon",
+        "Yulhwa Kim",
+        "Seokin Hong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 310,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Exploring the Efficiency of 3D-Stacked AI Chip Architecture for LLM Inference with Voxel",
+      "source_url": "https://arxiv.org/abs/2604.26821",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To overcome the well-known memory bottleneck of AI chips, 3D-stacked architectures that employ advanced packaging technology with high-density through-silicon vias (TSVs) pins have proven to be a promising solution. The 3D-stacked AI chip enables ultra-high memory bandwidth between compute and memory by stacking numerous DRAM banks atop many AI cores in a distributed manner. However, it is not easy to explore the efficiency of the 3D-stacked AI chip, due to its unique distributed nature. And we need to carefully consider multiple intertwined factors that range from upper-level computing paradigm to machine learning (ML) compiler optimizations, and to the underlying hardware architecture. In this paper, we develop VOXEL, a fast and compiler-aware end-to-end simulation framework to facilitate exploring the efficiency of 3D-stacked AI chips for large language model (LLM) inference. VOXEL enables the software/hardware co-exploration by employing a programming interface that allows ML compilers to customize the model execution plans. After validating the results of VOXEL with an emulator on real silicon, we thoroughly examine the impact and correlation of different aspects of 3D-stacked AI chips, including state-of-the-art compute paradigms, tile-to-core mapping, tensor-to-bank mapping, NoC topologies and link bandwidth, DRAM bank bandwidth, per-core SRAM capacity, and energy/thermal constraints. Our findings disclose that the end-to-end efficiency of a 3D stacked AI chip not only is determined by the cooperative function of these factors, but also significantly depends on the mappings from tiles to AI core and DRAM banks. We report our findings in the paper, expecting that they will shed light on the development of 3D-stacked AI chip ecosystem. We open source VOXEL for public research.",
+      "identifiers": [
+        "SemanticScholar:b81a3e588e5c1e64a60e49a3cffc41129e06f8cf"
+      ],
+      "semantic_scholar_id": "b81a3e588e5c1e64a60e49a3cffc41129e06f8cf",
+      "canonical_id": "arXiv:2604.26821",
+      "arxiv_id": "2604.26821",
+      "doi": "10.48550/arXiv.2604.26821",
+      "authors": [
+        "Yi-Qi Liu",
+        "Noelle Crawford",
+        "Michael Wang",
+        "Ji-Long Xue",
+        "Jian Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 168,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fre-Res: Frequency-Residual Video Token Compression for Efficient Video MLLMs",
+      "source_url": "https://arxiv.org/abs/2605.16366",
+      "year": 2026,
+      "published": "2026-05-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video MLLMs face a persistent tension between spatial fidelity and temporal coverage: preserving fine-grained visual details requires many spatial tokens, while capturing short-lived events requires dense temporal sampling. We propose \\textbf{Fre-Res}, a budget-adaptive dual-track video-token compression framework that separates these two forms of evidence. Fre-Res preserves sparse high-fidelity spatial anchors and represents dense temporal evolution through compact residual-frequency tokens. Specifically, it applies temporal 1D-DCT to inter-frame residual trajectories in vision-latent space, where we observe strong low-frequency concentration. To align frequency-domain dynamics with native visual embeddings, Fre-Res introduces a Spatial-Guided Absorber that injects temporal residual information into spatially corresponding anchor tokens. Across fine-grained short-video and long-video reasoning benchmarks, Fre-Res achieves a favorable accuracy--efficiency trade-off, matching or approaching full-token performance while substantially reducing visual-token length. Extensive ablations further show that temporal-frequency residuals preserve causal transition cues, while spatial anchors remain essential for fine-grained object and layout reasoning.",
+      "identifiers": [
+        "SemanticScholar:e2c2b8b0980d67dcb624e13ff7c753f7052c0a9f"
+      ],
+      "semantic_scholar_id": "e2c2b8b0980d67dcb624e13ff7c753f7052c0a9f",
+      "canonical_id": "arXiv:2605.16366",
+      "arxiv_id": "2605.16366",
+      "doi": "10.48550/arXiv.2605.16366",
+      "authors": [
+        "Yigui Feng",
+        "Qing-Lin Wang",
+        "Yang Liu",
+        "Jie Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 157,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HALO: Hardware-aware quantization with low critical-path-delay weights for LLM acceleration",
+      "source_url": "https://arxiv.org/abs/2502.19662",
+      "year": 2025,
+      "published": "2025-02-27",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is critical for efficiently deploying large language models (LLMs). Yet conventional methods remain hardware-agnostic, limited to bit-width constraints, and do not account for intrinsic circuit characteristics such as the timing behaviors and energy profiles of Multiply-Accumulate (MAC) units. This disconnect from circuit-level behavior limits the ability to exploit available timing margins and energy-saving opportunities, reducing the overall efficiency of deployment on modern accelerators. To address these limitations, we propose HALO, a versatile framework for Hardware-Aware Post-Training Quantization (PTQ). Unlike traditional methods, HALO explicitly incorporates detailed hardware characteristics, including critical-path timing and power consumption, into its quantization approach. HALO strategically selects weights with low critical-path-delays enabling higher operational frequencies and dynamic frequency scaling without disrupting the architecture's dataflow. Remarkably, HALO achieves these improvements with only a few dynamic voltage and frequency scaling (DVFS) adjustments, ensuring simplicity and practicality in deployment. Additionally, by reducing switching activity within the MAC units, HALO effectively lowers energy consumption. Evaluations on accelerators such as Tensor Processing Units (TPUs) and Graphics Processing Units (GPUs) demonstrate that HALO significantly enhances inference efficiency, achieving average performance improvements of 270% and energy savings of 51% over baseline quantization methods, all with minimal impact on accuracy.",
+      "identifiers": [
+        "SemanticScholar:f795eb308a2bc4d154e42d37202947e0fa58ba5c"
+      ],
+      "semantic_scholar_id": "f795eb308a2bc4d154e42d37202947e0fa58ba5c",
+      "canonical_id": "arXiv:2502.19662",
+      "arxiv_id": "2502.19662",
+      "doi": "10.48550/arXiv.2502.19662",
+      "authors": [
+        "Rohan Juneja",
+        "Shivam Aggarwal",
+        "Safeen Huda",
+        "Tulika Mitra",
+        "L. Peh"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 594,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Compass: SLO-aware Query Planner for Compound AI Serving at Scale",
+      "source_url": "https://arxiv.org/abs/2504.16397",
+      "year": 2025,
+      "published": "2025-04-23",
+      "venue": "Proceedings of the VLDB Endowment",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rise of compound AI serving that integrates multiple operators in a pipeline enables end-user applications such as generative AI-powered meeting companions, autonomous driving, and immersive gaming. These workloads span diverse deployment spaces, from cloud-only queries to edge-assisted ones across infrastructure tiers, often including both within an application. Achieving high service goodput—i.e., meeting service level objectives (SLOs) for pipeline latency, accuracy, and costs—requires joint planning of operators' placement, configuration, and resource allocation. However, diverse SLOs, varying runtime environments (e.g., heterogeneous device speeds), and a large volume of queries competing for shared infrastructure explode the planning space, making real-time serving and cost-efficient deployment intractable with existing advances.\n This paper presents Compass, the first SLO-aware query planner that optimizes large-scale compound AI workloads across diverse deployment spaces. Compass decomposes the many-query, multi-SLO planning problem into tractable subproblems while preserving global decision quality, exploiting plan similarities within and across queries to slash the search steps. It further improves per-step efficiency with a plan profiler that performs selective profiling to achieve high-fidelity performance estimates at a fraction of the profiling cost. At runtime, Compass performs query-plan bipartite matching to maximize SLO goodput under resource contentions. Real-world evaluations show that Compass improves service good-put by 2.4–5.1×, reduces deployment costs by 3.8–4.5×, and accelerates planning by 4.2–10.5×, achieving service responsiveness within seconds and near-optimal decision quality.",
+      "identifiers": [
+        "SemanticScholar:016f15f3f048bd743aee3aad0c0c20c0c06b6821"
+      ],
+      "semantic_scholar_id": "016f15f3f048bd743aee3aad0c0c20c0c06b6821",
+      "canonical_id": "arXiv:2504.16397",
+      "arxiv_id": "2504.16397",
+      "doi": "10.14778/3819518.3819524",
+      "authors": [
+        "Ban-Ruo Liu",
+        "Wei Lin",
+        "Ming-Hao Fang",
+        "Yi-Hang Jiang",
+        "Fan Lai"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 539,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Time and Memory Trade-off of KV-Cache Compression in Tensor Transformer Decoding",
+      "source_url": "https://arxiv.org/abs/2503.11108",
+      "year": 2025,
+      "published": "2025-03-14",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache in the tensor version of transformers presents a significant bottleneck during inference. While previous work analyzes the fundamental space complexity barriers in standard attention mechanisms [Haris and Onak, 2025], our work generalizes the space complexity barriers result to tensor attention version. Our theoretical contributions rely on a reduction from communication complexity and deduce the memory lower bound for tensor-structured attention mechanisms when $d = \\Omega(\\log n)$. Furthermore, we introduce two types of tensor attention cache and present a trade-off between time and memory for two scenarios. Overall, our work provides a theoretical foundation for us to understand the time-memory tradeoff of KV-Cache compression in tensor attention decoding and offers more perspectives in developing more memory-efficient tensor attention Transformer architectures.",
+      "identifiers": [
+        "SemanticScholar:181af20b484189bd5cfccde2e4c8c75842f1d0ca"
+      ],
+      "semantic_scholar_id": "181af20b484189bd5cfccde2e4c8c75842f1d0ca",
+      "canonical_id": "arXiv:2503.11108",
+      "arxiv_id": "2503.11108",
+      "doi": "10.48550/arXiv.2503.11108",
+      "authors": [
+        "Yifang Chen",
+        "Xiao-Yu Li",
+        "Ying-Yu Liang",
+        "Zhenmei Shi",
+        "Zhao Song",
+        "Yu Tian"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 579,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "μ-MoE: Test-Time Pruning as Micro-Grained Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2505.18451",
+      "year": 2025,
+      "published": "2025-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To tackle the huge computational demand of large foundation models, activation-aware compression techniques without retraining have been introduced. However, since these rely on calibration data, domain shift may arise for unknown downstream tasks. With a computationally efficient calibration, activation-aware pruning can be executed for every prompt adaptively, yet achieving reduced complexity at inference. We formulate it as a mixture of micro-experts, called $\\mu$-MoE. Several experiments demonstrate that $\\mu$-MoE can dynamically adapt to task/prompt-dependent structured sparsity on the fly.",
+      "identifiers": [
+        "SemanticScholar:713addbb682f281ba042394e233e4b0b0440f28b"
+      ],
+      "semantic_scholar_id": "713addbb682f281ba042394e233e4b0b0440f28b",
+      "canonical_id": "arXiv:2505.18451",
+      "arxiv_id": "2505.18451",
+      "doi": "10.48550/arXiv.2505.18451",
+      "authors": [
+        "T. Koike-Akino",
+        "Jing Liu",
+        "Ye Wang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LCD: Advancing Extreme Low-Bit Clustering for Large Language Models via Knowledge Distillation",
+      "source_url": "https://arxiv.org/abs/2506.12038",
+      "year": 2025,
+      "published": "2025-05-23",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved significant progress in natural language processing but face challenges in deployment due to high memory and computational requirements. Weight quantization is a common approach to address these issues, yet achieving effective low-bit compression remains challenging. This paper presents LCD, which unifies the learning of clustering-based quantization within a knowledge distillation framework. Using carefully designed optimization techniques, LCD preserves LLM performance even at ultra-low bit widths of 2-3 bits. Additionally, LCD compresses activations through smoothing and accelerates inference with a LUT-based design. Experimental results show that LCD outperforms existing methods and delivers up to a 6.2x speedup in inference. Notably, LCD is shown to be more cost-effective, making it a practical solution for real-world applications.",
+      "identifiers": [
+        "SemanticScholar:e29c9ae93796d5bffd5ea75033ad4d7e55635fc1"
+      ],
+      "semantic_scholar_id": "e29c9ae93796d5bffd5ea75033ad4d7e55635fc1",
+      "canonical_id": "arXiv:2506.12038",
+      "arxiv_id": "2506.12038",
+      "doi": "10.48550/arXiv.2506.12038",
+      "authors": [
+        "Fang-Xin Liu",
+        "Ning Yang",
+        "Junping Zhao",
+        "Tao Yang",
+        "Haibing Guan",
+        "Li Jiang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 509,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Small Language Models: Architectures, Techniques, Evaluation, Problems and Future Adaptation",
+      "source_url": "https://arxiv.org/abs/2505.19529",
+      "year": 2025,
+      "published": "2025-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Small Language Models (SLMs) have gained substantial attention due to their ability to execute diverse language tasks successfully while using fewer computer resources. These models are particularly ideal for deployment in limited environments, such as mobile devices, on-device processing, and edge systems. In this study, we present a complete assessment of SLMs, focussing on their design frameworks, training approaches, and techniques for lowering model size and complexity. We offer a novel classification system to organize the optimization approaches applied for SLMs, encompassing strategies like pruning, quantization, and model compression. Furthermore, we assemble SLM's studies of evaluation suite with some existing datasets, establishing a rigorous platform for measuring SLM capabilities. Alongside this, we discuss the important difficulties that remain unresolved in this sector, including trade-offs between efficiency and performance, and we suggest directions for future study. We anticipate this study to serve as a beneficial guide for researchers and practitioners who aim to construct compact, efficient, and high-performing language models.",
+      "identifiers": [
+        "SemanticScholar:ac529f215dbb892fea27077626fce93a0a1e5572"
+      ],
+      "semantic_scholar_id": "ac529f215dbb892fea27077626fce93a0a1e5572",
+      "canonical_id": "arXiv:2505.19529",
+      "arxiv_id": "2505.19529",
+      "doi": "10.48550/arXiv.2505.19529",
+      "authors": [
+        "Tanjil Hasan Sakib",
+        "Md. Tanzib Hosain",
+        "M. Morol"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Correlation-Aware Select and Merge Attention for Efficient Fine-Tuning and Context Length Extension",
+      "source_url": "https://arxiv.org/abs/2410.04211",
+      "year": 2024,
+      "published": "2024-10-05",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modeling long sequences is crucial for various large-scale models; however, extending existing architectures to handle longer sequences presents significant technical and resource challenges. In this paper, we propose an efficient and flexible attention architecture that enables the extension of context lengths in large language models with reduced computational resources and fine-tuning time compared to other excellent methods. Specifically, we introduce correlation-aware selection and merging mechanisms to facilitate efficient sparse attention. In addition, we also propose a novel data augmentation technique involving positional encodings to enhance generalization to unseen positions. The results are as follows: First, using a single A100, we achieve fine-tuning on Llama2-7B with a sequence length of 32K, which is more efficient than other methods that rely on subsets for regression. Second, we present a comprehensive method for extending context lengths across the pre-training, fine-tuning, and inference phases. During pre-training, our attention mechanism partially breaks translation invariance during token selection, so we apply positional encodings only to the selected tokens. This approach achieves relatively high performance and significant extrapolation capabilities. For fine-tuning, we introduce Cyclic, Randomly Truncated, and Dynamically Growing NTK Positional Embedding (CRD NTK). This design allows fine-tuning with a sequence length of only 16K, enabling models such as Llama2-7B and Mistral-7B to perform inference with context lengths of up to 1M or even arbitrary lengths. Our method achieves 100\\% accuracy on the passkey task with a context length of 4M and maintains stable perplexity at a 1M context length. This represents at least a 64-fold reduction in resource requirements compared to traditional full-attention mechanisms, while still achieving competitive performance.",
+      "identifiers": [
+        "SemanticScholar:a7d218c8b312799b8cee7c277259ea8aa82d0f62"
+      ],
+      "semantic_scholar_id": "a7d218c8b312799b8cee7c277259ea8aa82d0f62",
+      "canonical_id": "arXiv:2410.04211",
+      "arxiv_id": "2410.04211",
+      "doi": "10.48550/arXiv.2410.04211",
+      "authors": [
+        "Ning Wang",
+        "Ze-Kun Li",
+        "T. Bai",
+        "Guoqi Li"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 739,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.14419",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.14419",
+        "id:SemanticScholar:c248caa1cba90a1e9f73d28da9b6f282f136cf70",
+        "id:arXiv:2604.14419",
+        "title:equifinality in mixture of experts routing topology does not determine language modeling quality",
+        "url:https://arxiv.org/abs/2604.14419"
+      ],
+      "record": {
+        "title": "Equifinality in Mixture of Experts: Routing Topology Does Not Determine Language Modeling Quality",
+        "source_url": "https://arxiv.org/abs/2604.14419",
+        "year": 2026,
+        "published": "2026-04-15",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse Mixture-of-Experts (MoE) architectures employ increasingly sophisticated routing mechanisms -- learned routers, multi-hop trajectories, token-dependent gating. We ask: does routing topology actually determine language modeling quality? We build a geometric MoE (ST-MoE) using cosine-similarity routing against learned centroids in a low-dimensional space ($d_{space} = 64$), requiring 80% fewer routing parameters than standard linear routers. Through 62 controlled experiments on WikiText-103 at 76--84M parameters trained to convergence (50K steps, 1.64B tokens), we find that routing topology does not determine asymptotic perplexity (PPL): five cosine-routing variants are statistically equivalent within a 1-PPL margin (Two One-Sided Tests [TOST], $p<0.05$ for all 10 pairwise comparisons; 15 runs across 3 seeds, observed range 33.93--34.72). The finding extends to hash, random-fixed, and top-1 routing (single-seed; graceful 1.1--2.2 PPL degradation) and replicates on OpenWebText (0.03 PPL gap, 6 runs, 3 seeds each). A standard linear router with 5.3$\\times$ more routing parameters reaches PPL 32.76, but iso-parameter cosine routing closes 67% of this gap -- the true mechanism advantage is $\\sim$1.2%. The mechanistic explanation is convergent redundancy: multi-hop updates are collinear ($\\cos(\\Delta h_0, \\Delta h_1) = 0.805$), implementing magnitude amplification rather than compositional reasoning; a single learnable scalar replicates multi-hop performance. As a practical payoff, zero-shot relative-norm halting saves 25% of MoE FLOPs at +0.12% PPL. Expert-level specialization and causal controllability -- which coexist with topology-level equifinality -- are explored in a companion paper.",
+        "identifiers": [
+          "SemanticScholar:c248caa1cba90a1e9f73d28da9b6f282f136cf70"
+        ],
+        "semantic_scholar_id": "c248caa1cba90a1e9f73d28da9b6f282f136cf70",
+        "canonical_id": "arXiv:2604.14419",
+        "arxiv_id": "2604.14419",
+        "doi": "10.48550/arXiv.2604.14419",
+        "authors": [
+          "Ivan Ternovtsii",
+          "Y. Bilak"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 182,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.16092",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprf71909.2026.00557",
+        "id:SemanticScholar:e69a0f3d2df2319f6a0206fb265a6dc984cd2945",
+        "id:arXiv:2603.16092",
+        "title:parallel incontext learning for large vision language models",
+        "url:https://arxiv.org/abs/2603.16092"
+      ],
+      "record": {
+        "title": "Parallel In-Context Learning for Large Vision Language Models",
+        "source_url": "https://arxiv.org/abs/2603.16092",
+        "year": 2026,
+        "published": "2026-03-17",
+        "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large vision-language models (LVLMs) employ multi-modal in-context learning (MM-ICL) to adapt to new tasks by lever-aging demonstration examples. While increasing the number of demonstrations boosts performance, they incur significant inference latency due to the quadratic computational cost of Transformer attention with respect to the context length. To address this trade-off, we propose Parallel In-Context Learning (Parallel-ICL), a plug-and-play inference algorithm. Parallel-ICL partitions the long demonstration context into multiple shorter, manageable chunks. It processes these chunks in parallel and integrates their predictions at the logit level, using a weighted Product-of-Experts (PoE) ensemble to approximate the full-context output. Guided by ensemble learning theory, we introduce principled strategies for Parallel-ICL: (i) clustering-based context chunking to maximize inter-chunk diversity and (ii) similarity-based context compilation to weight predictions by query relevance. Extensive experiments on VQA, image captioning, and classification benchmarks demonstrate that Parallel-ICL achieves performance comparable to full-context MM-ICL, while significantly improving inference speed. Our work offers an effective solution to the accuracy-efficiency trade-off in MM-ICL, enabling dynamic task adaptation with substantially reduced inference overhead.",
+        "identifiers": [
+          "SemanticScholar:e69a0f3d2df2319f6a0206fb265a6dc984cd2945"
+        ],
+        "semantic_scholar_id": "e69a0f3d2df2319f6a0206fb265a6dc984cd2945",
+        "canonical_id": "arXiv:2603.16092",
+        "arxiv_id": "2603.16092",
+        "doi": "10.1109/CVPRF71909.2026.00557",
+        "authors": [
+          "Shin'ya Yamaguchi",
+          "Daiki Chijiwa",
+          "T. Sakao",
+          "Taku Hasegawa"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 211,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.15724",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.15724",
+        "id:SemanticScholar:77c8be28d6f7486230d4ecb5198623c4cd1badc3",
+        "id:arXiv:2310.15724",
+        "title:variator accelerating pretrained models with plugandplay compression modules",
+        "url:https://arxiv.org/abs/2310.15724"
+      ],
+      "record": {
+        "title": "Variator: Accelerating Pre-trained Models with Plug-and-Play Compression Modules",
+        "source_url": "https://arxiv.org/abs/2310.15724",
+        "year": 2023,
+        "published": "2023-10-24",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pre-trained language models (PLMs) have achieved remarkable results on NLP tasks but at the expense of huge parameter sizes and the consequent computational costs. In this paper, we propose Variator, a parameter-efficient acceleration method that enhances computational efficiency through plug-and-play compression plugins. Compression plugins are designed to reduce the sequence length via compressing multiple hidden vectors into one and trained with original PLMs frozen. Different from traditional model acceleration methods, which compress PLMs to smaller sizes, Variator offers two distinct advantages: (1) In real-world applications, the plug-and-play nature of our compression plugins enables dynamic selection of different compression plugins with varying acceleration ratios based on the current workload. (2) The compression plugin comprises a few compact neural network layers with minimal parameters, significantly saving storage and memory overhead, particularly in scenarios with a growing number of tasks. We validate the effectiveness of Variator on seven datasets. Experimental results show that Variator can save 53% computational costs using only 0.9% additional parameters with a performance drop of less than 2%. Moreover, when the model scales to billions of parameters, Variator matches the strong performance of uncompressed PLMs.",
+        "identifiers": [
+          "SemanticScholar:77c8be28d6f7486230d4ecb5198623c4cd1badc3"
+        ],
+        "semantic_scholar_id": "77c8be28d6f7486230d4ecb5198623c4cd1badc3",
+        "canonical_id": "arXiv:2310.15724",
+        "arxiv_id": "2310.15724",
+        "doi": "10.48550/arXiv.2310.15724",
+        "authors": [
+          "Chao-Jun Xiao",
+          "Yuqi Luo",
+          "Wen-Bin Zhang",
+          "Pengle Zhang",
+          "Xu Han",
+          "Yankai Lin",
+          "Zhengyan Zhang",
+          "Ruo-Bing Xie",
+          "Zhiyuan Liu",
+          "Maosong Sun",
+          "Jie Zhou"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1086,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.16379",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.16379",
+        "id:SemanticScholar:24394794918f262940a45c44324e1af43dc29c36",
+        "id:arXiv:2504.16379",
+        "title:splitreason learning to offload reasoning",
+        "url:https://arxiv.org/abs/2504.16379"
+      ],
+      "record": {
+        "title": "SplitReason: Learning To Offload Reasoning",
+        "source_url": "https://arxiv.org/abs/2504.16379",
+        "year": 2025,
+        "published": "2025-04-23",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning in large language models (LLMs) tends to produce substantially longer token generation sequences than simpler language modeling tasks. This extended generation length reflects the multi-step, compositional nature of reasoning and is often correlated with higher solution accuracy. From an efficiency perspective, longer token generation exacerbates the inherently sequential and memory-bound decoding phase of LLMs. However, not all parts of this expensive reasoning process are equally difficult to generate. We leverage this observation by offloading only the most challenging parts of the reasoning process to a larger, more capable model, while performing most of the generation with a smaller, more efficient model; furthermore, we teach the smaller model to identify these difficult segments and independently trigger offloading when needed. To enable this behavior, we annotate difficult segments across 18k reasoning traces from the OpenR1-Math-220k chain-of-thought (CoT) dataset. We then apply supervised fine-tuning (SFT) and reinforcement learning fine-tuning (RLFT) to a 1.5B-parameter reasoning model, training it to learn to offload the most challenging parts of its own reasoning process to a larger model. This approach improves AIME24 reasoning accuracy by 24% and 28.3% while offloading 1.35% and 5% of the generated tokens respectively. We open-source our SplitReason model, data, code and logs.",
+        "identifiers": [
+          "SemanticScholar:24394794918f262940a45c44324e1af43dc29c36"
+        ],
+        "semantic_scholar_id": "24394794918f262940a45c44324e1af43dc29c36",
+        "canonical_id": "arXiv:2504.16379",
+        "arxiv_id": "2504.16379",
+        "doi": "10.48550/arXiv.2504.16379",
+        "authors": [
+          "Yash Akhauri",
+          "Anthony Fei",
+          "Chi-Chih Chang",
+          "Ahmed Abouelhamayed",
+          "Yue-Ying Li",
+          "Mohamed S. Abdelfattah"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 539,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.07739",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.07739",
+        "id:SemanticScholar:1fe94818c7f4a8a4df6c0cef8d44ace2edaa7734",
+        "id:arXiv:2510.07739",
+        "title:mesh memoryasstatehighways for recursive transformers",
+        "url:https://arxiv.org/abs/2510.07739"
+      ],
+      "record": {
+        "title": "MeSH: Memory-as-State-Highways for Recursive Transformers",
+        "source_url": "https://arxiv.org/abs/2510.07739",
+        "year": 2025,
+        "published": "2025-10-09",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recursive transformers reuse parameters and iterate over hidden states multiple times, decoupling compute depth from parameter depth. However, under matched compute, recursive models with fewer parameters often lag behind non-recursive counterparts. By probing hidden states, we trace this performance gap to two primary bottlenecks: undifferentiated computation, where the core is forced to adopt a similar computational pattern at every iteration, and information overload, where long-lived and transient information must coexist in a single hidden state. To address the issues, we introduce a Memory-as-State-Highways (MeSH) scheme, which externalizes state management into an explicit memory buffer and employs lightweight routers to dynamically diversify computation across iterations. Probing visualizations confirm that MeSH successfully resolves the pathologies by inducing functional specialization across iterations. On the Pythia suite (160M-6.9B), MeSH-enhanced recursive transformers consistently improve over recursive baselines and outperforms its larger non-recursive counterpart at the 1.4B scale, improving average downstream accuracy by +1.06% with 33% fewer non-embedding parameters. Our analysis establishes MeSH as a scalable and principled architecture for building stronger recursive models. Our code is available at https://github.com/LivingFutureLab/MeSH/ .",
+        "identifiers": [
+          "SemanticScholar:1fe94818c7f4a8a4df6c0cef8d44ace2edaa7734"
+        ],
+        "semantic_scholar_id": "1fe94818c7f4a8a4df6c0cef8d44ace2edaa7734",
+        "canonical_id": "arXiv:2510.07739",
+        "arxiv_id": "2510.07739",
+        "doi": "10.48550/arXiv.2510.07739",
+        "authors": [
+          "Chengting Yu",
+          "Xiaobo Shu",
+          "Ya-Dao Wang",
+          "Yi-Zhe Zhang",
+          "Haoyi Wu",
+          "Ji-Aang Li",
+          "Rujiao Long",
+          "Ziheng Chen",
+          "Yu-Chi Xu",
+          "Wenbo Su",
+          "Bo Zheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 370,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.07090",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.07090",
+        "id:SemanticScholar:92f4ded297fb413f09bf98ff0a6495c7a644011f",
+        "id:arXiv:2512.07090",
+        "title:leveraging kv similarity for online structured pruning in llms",
+        "url:https://arxiv.org/abs/2512.07090"
+      ],
+      "record": {
+        "title": "Leveraging KV Similarity for Online Structured Pruning in LLMs",
+        "source_url": "https://arxiv.org/abs/2512.07090",
+        "year": 2025,
+        "published": "2025-12-08",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pruning has emerged as a promising direction for accelerating large language model (LLM) inference, yet existing approaches often suffer from instability because they rely on offline calibration data that may not generalize across inputs. In this work, we introduce Token Filtering, a lightweight online structured pruning technique that makes pruning decisions directly during inference without any calibration data. The key idea is to measure token redundancy via joint key-value similarity and skip redundant attention computations, thereby reducing inference cost while preserving critical information. To further enhance stability, we design a variance-aware fusion strategy that adaptively weights key and value similarity across heads, ensuring that informative tokens are retained even under high pruning ratios. This design introduces no additional memory overhead and provides a more reliable criterion for token importance. Extensive experiments on LLaMA-2 (7B/13B), LLaMA-3 (8B), and Mistral (7B) demonstrate that Token Filtering consistently outperforms prior structured pruning methods, preserving accuracy on commonsense reasoning benchmarks and maintaining strong performance on challenging tasks such as MMLU, even with 50% pruning.",
+        "identifiers": [
+          "SemanticScholar:92f4ded297fb413f09bf98ff0a6495c7a644011f"
+        ],
+        "semantic_scholar_id": "92f4ded297fb413f09bf98ff0a6495c7a644011f",
+        "canonical_id": "arXiv:2512.07090",
+        "arxiv_id": "2512.07090",
+        "doi": "10.48550/arXiv.2512.07090",
+        "authors": [
+          "Jungmin Lee",
+          "Gwangeun Byeon",
+          "Yulhwa Kim",
+          "Seokin Hong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 310,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.26821",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.26821",
+        "id:SemanticScholar:b81a3e588e5c1e64a60e49a3cffc41129e06f8cf",
+        "id:arXiv:2604.26821",
+        "title:exploring the efficiency of 3dstacked ai chip architecture for llm inference with voxel",
+        "url:https://arxiv.org/abs/2604.26821"
+      ],
+      "record": {
+        "title": "Exploring the Efficiency of 3D-Stacked AI Chip Architecture for LLM Inference with Voxel",
+        "source_url": "https://arxiv.org/abs/2604.26821",
+        "year": 2026,
+        "published": "2026-04-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "To overcome the well-known memory bottleneck of AI chips, 3D-stacked architectures that employ advanced packaging technology with high-density through-silicon vias (TSVs) pins have proven to be a promising solution. The 3D-stacked AI chip enables ultra-high memory bandwidth between compute and memory by stacking numerous DRAM banks atop many AI cores in a distributed manner. However, it is not easy to explore the efficiency of the 3D-stacked AI chip, due to its unique distributed nature. And we need to carefully consider multiple intertwined factors that range from upper-level computing paradigm to machine learning (ML) compiler optimizations, and to the underlying hardware architecture. In this paper, we develop VOXEL, a fast and compiler-aware end-to-end simulation framework to facilitate exploring the efficiency of 3D-stacked AI chips for large language model (LLM) inference. VOXEL enables the software/hardware co-exploration by employing a programming interface that allows ML compilers to customize the model execution plans. After validating the results of VOXEL with an emulator on real silicon, we thoroughly examine the impact and correlation of different aspects of 3D-stacked AI chips, including state-of-the-art compute paradigms, tile-to-core mapping, tensor-to-bank mapping, NoC topologies and link bandwidth, DRAM bank bandwidth, per-core SRAM capacity, and energy/thermal constraints. Our findings disclose that the end-to-end efficiency of a 3D stacked AI chip not only is determined by the cooperative function of these factors, but also significantly depends on the mappings from tiles to AI core and DRAM banks. We report our findings in the paper, expecting that they will shed light on the development of 3D-stacked AI chip ecosystem. We open source VOXEL for public research.",
+        "identifiers": [
+          "SemanticScholar:b81a3e588e5c1e64a60e49a3cffc41129e06f8cf"
+        ],
+        "semantic_scholar_id": "b81a3e588e5c1e64a60e49a3cffc41129e06f8cf",
+        "canonical_id": "arXiv:2604.26821",
+        "arxiv_id": "2604.26821",
+        "doi": "10.48550/arXiv.2604.26821",
+        "authors": [
+          "Yi-Qi Liu",
+          "Noelle Crawford",
+          "Michael Wang",
+          "Ji-Long Xue",
+          "Jian Huang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 168,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.16366",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.16366",
+        "id:SemanticScholar:e2c2b8b0980d67dcb624e13ff7c753f7052c0a9f",
+        "id:arXiv:2605.16366",
+        "title:freres frequencyresidual video token compression for efficient video mllms",
+        "url:https://arxiv.org/abs/2605.16366"
+      ],
+      "record": {
+        "title": "Fre-Res: Frequency-Residual Video Token Compression for Efficient Video MLLMs",
+        "source_url": "https://arxiv.org/abs/2605.16366",
+        "year": 2026,
+        "published": "2026-05-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video MLLMs face a persistent tension between spatial fidelity and temporal coverage: preserving fine-grained visual details requires many spatial tokens, while capturing short-lived events requires dense temporal sampling. We propose \\textbf{Fre-Res}, a budget-adaptive dual-track video-token compression framework that separates these two forms of evidence. Fre-Res preserves sparse high-fidelity spatial anchors and represents dense temporal evolution through compact residual-frequency tokens. Specifically, it applies temporal 1D-DCT to inter-frame residual trajectories in vision-latent space, where we observe strong low-frequency concentration. To align frequency-domain dynamics with native visual embeddings, Fre-Res introduces a Spatial-Guided Absorber that injects temporal residual information into spatially corresponding anchor tokens. Across fine-grained short-video and long-video reasoning benchmarks, Fre-Res achieves a favorable accuracy--efficiency trade-off, matching or approaching full-token performance while substantially reducing visual-token length. Extensive ablations further show that temporal-frequency residuals preserve causal transition cues, while spatial anchors remain essential for fine-grained object and layout reasoning.",
+        "identifiers": [
+          "SemanticScholar:e2c2b8b0980d67dcb624e13ff7c753f7052c0a9f"
+        ],
+        "semantic_scholar_id": "e2c2b8b0980d67dcb624e13ff7c753f7052c0a9f",
+        "canonical_id": "arXiv:2605.16366",
+        "arxiv_id": "2605.16366",
+        "doi": "10.48550/arXiv.2605.16366",
+        "authors": [
+          "Yigui Feng",
+          "Qing-Lin Wang",
+          "Yang Liu",
+          "Jie Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 157,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.19662",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.19662",
+        "id:SemanticScholar:f795eb308a2bc4d154e42d37202947e0fa58ba5c",
+        "id:arXiv:2502.19662",
+        "title:halo hardwareaware quantization with low criticalpathdelay weights for llm acceleration",
+        "url:https://arxiv.org/abs/2502.19662"
+      ],
+      "record": {
+        "title": "HALO: Hardware-aware quantization with low critical-path-delay weights for LLM acceleration",
+        "source_url": "https://arxiv.org/abs/2502.19662",
+        "year": 2025,
+        "published": "2025-02-27",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization is critical for efficiently deploying large language models (LLMs). Yet conventional methods remain hardware-agnostic, limited to bit-width constraints, and do not account for intrinsic circuit characteristics such as the timing behaviors and energy profiles of Multiply-Accumulate (MAC) units. This disconnect from circuit-level behavior limits the ability to exploit available timing margins and energy-saving opportunities, reducing the overall efficiency of deployment on modern accelerators. To address these limitations, we propose HALO, a versatile framework for Hardware-Aware Post-Training Quantization (PTQ). Unlike traditional methods, HALO explicitly incorporates detailed hardware characteristics, including critical-path timing and power consumption, into its quantization approach. HALO strategically selects weights with low critical-path-delays enabling higher operational frequencies and dynamic frequency scaling without disrupting the architecture's dataflow. Remarkably, HALO achieves these improvements with only a few dynamic voltage and frequency scaling (DVFS) adjustments, ensuring simplicity and practicality in deployment. Additionally, by reducing switching activity within the MAC units, HALO effectively lowers energy consumption. Evaluations on accelerators such as Tensor Processing Units (TPUs) and Graphics Processing Units (GPUs) demonstrate that HALO significantly enhances inference efficiency, achieving average performance improvements of 270% and energy savings of 51% over baseline quantization methods, all with minimal impact on accuracy.",
+        "identifiers": [
+          "SemanticScholar:f795eb308a2bc4d154e42d37202947e0fa58ba5c"
+        ],
+        "semantic_scholar_id": "f795eb308a2bc4d154e42d37202947e0fa58ba5c",
+        "canonical_id": "arXiv:2502.19662",
+        "arxiv_id": "2502.19662",
+        "doi": "10.48550/arXiv.2502.19662",
+        "authors": [
+          "Rohan Juneja",
+          "Shivam Aggarwal",
+          "Safeen Huda",
+          "Tulika Mitra",
+          "L. Peh"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 594,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.16397",
+      "identity_tokens": [
+        "id:DOI:10.14778/3819518.3819524",
+        "id:SemanticScholar:016f15f3f048bd743aee3aad0c0c20c0c06b6821",
+        "id:arXiv:2504.16397",
+        "title:compass sloaware query planner for compound ai serving at scale",
+        "url:https://arxiv.org/abs/2504.16397"
+      ],
+      "record": {
+        "title": "Compass: SLO-aware Query Planner for Compound AI Serving at Scale",
+        "source_url": "https://arxiv.org/abs/2504.16397",
+        "year": 2025,
+        "published": "2025-04-23",
+        "venue": "Proceedings of the VLDB Endowment",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rise of compound AI serving that integrates multiple operators in a pipeline enables end-user applications such as generative AI-powered meeting companions, autonomous driving, and immersive gaming. These workloads span diverse deployment spaces, from cloud-only queries to edge-assisted ones across infrastructure tiers, often including both within an application. Achieving high service goodput—i.e., meeting service level objectives (SLOs) for pipeline latency, accuracy, and costs—requires joint planning of operators' placement, configuration, and resource allocation. However, diverse SLOs, varying runtime environments (e.g., heterogeneous device speeds), and a large volume of queries competing for shared infrastructure explode the planning space, making real-time serving and cost-efficient deployment intractable with existing advances.\n This paper presents Compass, the first SLO-aware query planner that optimizes large-scale compound AI workloads across diverse deployment spaces. Compass decomposes the many-query, multi-SLO planning problem into tractable subproblems while preserving global decision quality, exploiting plan similarities within and across queries to slash the search steps. It further improves per-step efficiency with a plan profiler that performs selective profiling to achieve high-fidelity performance estimates at a fraction of the profiling cost. At runtime, Compass performs query-plan bipartite matching to maximize SLO goodput under resource contentions. Real-world evaluations show that Compass improves service good-put by 2.4–5.1×, reduces deployment costs by 3.8–4.5×, and accelerates planning by 4.2–10.5×, achieving service responsiveness within seconds and near-optimal decision quality.",
+        "identifiers": [
+          "SemanticScholar:016f15f3f048bd743aee3aad0c0c20c0c06b6821"
+        ],
+        "semantic_scholar_id": "016f15f3f048bd743aee3aad0c0c20c0c06b6821",
+        "canonical_id": "arXiv:2504.16397",
+        "arxiv_id": "2504.16397",
+        "doi": "10.14778/3819518.3819524",
+        "authors": [
+          "Ban-Ruo Liu",
+          "Wei Lin",
+          "Ming-Hao Fang",
+          "Yi-Hang Jiang",
+          "Fan Lai"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 539,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.11108",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.11108",
+        "id:SemanticScholar:181af20b484189bd5cfccde2e4c8c75842f1d0ca",
+        "id:arXiv:2503.11108",
+        "title:time and memory tradeoff of kvcache compression in tensor transformer decoding",
+        "url:https://arxiv.org/abs/2503.11108"
+      ],
+      "record": {
+        "title": "Time and Memory Trade-off of KV-Cache Compression in Tensor Transformer Decoding",
+        "source_url": "https://arxiv.org/abs/2503.11108",
+        "year": 2025,
+        "published": "2025-03-14",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The key-value (KV) cache in the tensor version of transformers presents a significant bottleneck during inference. While previous work analyzes the fundamental space complexity barriers in standard attention mechanisms [Haris and Onak, 2025], our work generalizes the space complexity barriers result to tensor attention version. Our theoretical contributions rely on a reduction from communication complexity and deduce the memory lower bound for tensor-structured attention mechanisms when $d = \\Omega(\\log n)$. Furthermore, we introduce two types of tensor attention cache and present a trade-off between time and memory for two scenarios. Overall, our work provides a theoretical foundation for us to understand the time-memory tradeoff of KV-Cache compression in tensor attention decoding and offers more perspectives in developing more memory-efficient tensor attention Transformer architectures.",
+        "identifiers": [
+          "SemanticScholar:181af20b484189bd5cfccde2e4c8c75842f1d0ca"
+        ],
+        "semantic_scholar_id": "181af20b484189bd5cfccde2e4c8c75842f1d0ca",
+        "canonical_id": "arXiv:2503.11108",
+        "arxiv_id": "2503.11108",
+        "doi": "10.48550/arXiv.2503.11108",
+        "authors": [
+          "Yifang Chen",
+          "Xiao-Yu Li",
+          "Ying-Yu Liang",
+          "Zhenmei Shi",
+          "Zhao Song",
+          "Yu Tian"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 579,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.18451",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.18451",
+        "id:SemanticScholar:713addbb682f281ba042394e233e4b0b0440f28b",
+        "id:arXiv:2505.18451",
+        "title:μmoe testtime pruning as micrograined mixtureofexperts",
+        "url:https://arxiv.org/abs/2505.18451"
+      ],
+      "record": {
+        "title": "μ-MoE: Test-Time Pruning as Micro-Grained Mixture-of-Experts",
+        "source_url": "https://arxiv.org/abs/2505.18451",
+        "year": 2025,
+        "published": "2025-05-24",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "To tackle the huge computational demand of large foundation models, activation-aware compression techniques without retraining have been introduced. However, since these rely on calibration data, domain shift may arise for unknown downstream tasks. With a computationally efficient calibration, activation-aware pruning can be executed for every prompt adaptively, yet achieving reduced complexity at inference. We formulate it as a mixture of micro-experts, called $\\mu$-MoE. Several experiments demonstrate that $\\mu$-MoE can dynamically adapt to task/prompt-dependent structured sparsity on the fly.",
+        "identifiers": [
+          "SemanticScholar:713addbb682f281ba042394e233e4b0b0440f28b"
+        ],
+        "semantic_scholar_id": "713addbb682f281ba042394e233e4b0b0440f28b",
+        "canonical_id": "arXiv:2505.18451",
+        "arxiv_id": "2505.18451",
+        "doi": "10.48550/arXiv.2505.18451",
+        "authors": [
+          "T. Koike-Akino",
+          "Jing Liu",
+          "Ye Wang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 508,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.12038",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.12038",
+        "id:SemanticScholar:e29c9ae93796d5bffd5ea75033ad4d7e55635fc1",
+        "id:arXiv:2506.12038",
+        "title:lcd advancing extreme lowbit clustering for large language models via knowledge distillation",
+        "url:https://arxiv.org/abs/2506.12038"
+      ],
+      "record": {
+        "title": "LCD: Advancing Extreme Low-Bit Clustering for Large Language Models via Knowledge Distillation",
+        "source_url": "https://arxiv.org/abs/2506.12038",
+        "year": 2025,
+        "published": "2025-05-23",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have achieved significant progress in natural language processing but face challenges in deployment due to high memory and computational requirements. Weight quantization is a common approach to address these issues, yet achieving effective low-bit compression remains challenging. This paper presents LCD, which unifies the learning of clustering-based quantization within a knowledge distillation framework. Using carefully designed optimization techniques, LCD preserves LLM performance even at ultra-low bit widths of 2-3 bits. Additionally, LCD compresses activations through smoothing and accelerates inference with a LUT-based design. Experimental results show that LCD outperforms existing methods and delivers up to a 6.2x speedup in inference. Notably, LCD is shown to be more cost-effective, making it a practical solution for real-world applications.",
+        "identifiers": [
+          "SemanticScholar:e29c9ae93796d5bffd5ea75033ad4d7e55635fc1"
+        ],
+        "semantic_scholar_id": "e29c9ae93796d5bffd5ea75033ad4d7e55635fc1",
+        "canonical_id": "arXiv:2506.12038",
+        "arxiv_id": "2506.12038",
+        "doi": "10.48550/arXiv.2506.12038",
+        "authors": [
+          "Fang-Xin Liu",
+          "Ning Yang",
+          "Junping Zhao",
+          "Tao Yang",
+          "Haibing Guan",
+          "Li Jiang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 509,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.19529",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.19529",
+        "id:SemanticScholar:ac529f215dbb892fea27077626fce93a0a1e5572",
+        "id:arXiv:2505.19529",
+        "title:small language models architectures techniques evaluation problems and future adaptation",
+        "url:https://arxiv.org/abs/2505.19529"
+      ],
+      "record": {
+        "title": "Small Language Models: Architectures, Techniques, Evaluation, Problems and Future Adaptation",
+        "source_url": "https://arxiv.org/abs/2505.19529",
+        "year": 2025,
+        "published": "2025-05-26",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Small Language Models (SLMs) have gained substantial attention due to their ability to execute diverse language tasks successfully while using fewer computer resources. These models are particularly ideal for deployment in limited environments, such as mobile devices, on-device processing, and edge systems. In this study, we present a complete assessment of SLMs, focussing on their design frameworks, training approaches, and techniques for lowering model size and complexity. We offer a novel classification system to organize the optimization approaches applied for SLMs, encompassing strategies like pruning, quantization, and model compression. Furthermore, we assemble SLM's studies of evaluation suite with some existing datasets, establishing a rigorous platform for measuring SLM capabilities. Alongside this, we discuss the important difficulties that remain unresolved in this sector, including trade-offs between efficiency and performance, and we suggest directions for future study. We anticipate this study to serve as a beneficial guide for researchers and practitioners who aim to construct compact, efficient, and high-performing language models.",
+        "identifiers": [
+          "SemanticScholar:ac529f215dbb892fea27077626fce93a0a1e5572"
+        ],
+        "semantic_scholar_id": "ac529f215dbb892fea27077626fce93a0a1e5572",
+        "canonical_id": "arXiv:2505.19529",
+        "arxiv_id": "2505.19529",
+        "doi": "10.48550/arXiv.2505.19529",
+        "authors": [
+          "Tanjil Hasan Sakib",
+          "Md. Tanzib Hosain",
+          "M. Morol"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 506,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.04211",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.04211",
+        "id:SemanticScholar:a7d218c8b312799b8cee7c277259ea8aa82d0f62",
+        "id:arXiv:2410.04211",
+        "title:correlationaware select and merge attention for efficient finetuning and context length extension",
+        "url:https://arxiv.org/abs/2410.04211"
+      ],
+      "record": {
+        "title": "Correlation-Aware Select and Merge Attention for Efficient Fine-Tuning and Context Length Extension",
+        "source_url": "https://arxiv.org/abs/2410.04211",
+        "year": 2024,
+        "published": "2024-10-05",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modeling long sequences is crucial for various large-scale models; however, extending existing architectures to handle longer sequences presents significant technical and resource challenges. In this paper, we propose an efficient and flexible attention architecture that enables the extension of context lengths in large language models with reduced computational resources and fine-tuning time compared to other excellent methods. Specifically, we introduce correlation-aware selection and merging mechanisms to facilitate efficient sparse attention. In addition, we also propose a novel data augmentation technique involving positional encodings to enhance generalization to unseen positions. The results are as follows: First, using a single A100, we achieve fine-tuning on Llama2-7B with a sequence length of 32K, which is more efficient than other methods that rely on subsets for regression. Second, we present a comprehensive method for extending context lengths across the pre-training, fine-tuning, and inference phases. During pre-training, our attention mechanism partially breaks translation invariance during token selection, so we apply positional encodings only to the selected tokens. This approach achieves relatively high performance and significant extrapolation capabilities. For fine-tuning, we introduce Cyclic, Randomly Truncated, and Dynamically Growing NTK Positional Embedding (CRD NTK). This design allows fine-tuning with a sequence length of only 16K, enabling models such as Llama2-7B and Mistral-7B to perform inference with context lengths of up to 1M or even arbitrary lengths. Our method achieves 100\\% accuracy on the passkey task with a context length of 4M and maintains stable perplexity at a 1M context length. This represents at least a 64-fold reduction in resource requirements compared to traditional full-attention mechanisms, while still achieving competitive performance.",
+        "identifiers": [
+          "SemanticScholar:a7d218c8b312799b8cee7c277259ea8aa82d0f62"
+        ],
+        "semantic_scholar_id": "a7d218c8b312799b8cee7c277259ea8aa82d0f62",
+        "canonical_id": "arXiv:2410.04211",
+        "arxiv_id": "2410.04211",
+        "doi": "10.48550/arXiv.2410.04211",
+        "authors": [
+          "Ning Wang",
+          "Ze-Kun Li",
+          "T. Bai",
+          "Guoqi Li"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 739,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:00e607ae76b796a6aec551fdb4e2edf6842859b6d05c63c49b2d370799c3b80b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

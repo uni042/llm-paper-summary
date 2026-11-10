@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0d0bd38efec6f57f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.13317",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.13317",
+    "identity_tokens": [
+      "arXiv:2608.13317"
+    ],
+    "reason": "一次要旨はLLM multi-agent latent communicationのhidden-state alignmentとタスク精度を扱い、効率指標や推論資源削減の主張はない。",
+    "first_checked_at": "2026-10-05T01:28:57+00:00",
+    "last_checked_at": "2026-10-05T01:28:57+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+    ],
+    "title": "StateBridge: Training-free Hidden-state Alignment for Latent Communication in LLM Multi-Agent Systems"
+  },
+  "processed_at": "2026-10-05T01:28:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0d0bd38efec6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

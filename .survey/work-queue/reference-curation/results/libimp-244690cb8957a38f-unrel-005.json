@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-244690cb8957a38f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2304.15010",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2304.15010",
+    "identity_tokens": [
+      "arXiv:2304.15010"
+    ],
+    "reason": "14Mの学習可能parameterによるparameter-efficient visual instruction tuningが主題。本文では推論時にcaption expertを用いてvisual contextを作る構成を説明するが、追加expertによるinference cost削減の測定はなく、parameter効率はtraining側の主張。",
+    "first_checked_at": "2026-10-05T00:58:25+00:00",
+    "last_checked_at": "2026-10-05T00:58:25+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md"
+    ],
+    "title": "LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model"
+  },
+  "processed_at": "2026-10-05T00:58:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-244690cb8957",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

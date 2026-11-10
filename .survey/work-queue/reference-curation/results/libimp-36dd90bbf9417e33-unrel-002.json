@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36dd90bbf9417e33-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.23472",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.23472",
+    "identity_tokens": [
+      "arXiv:2509.23472"
+    ],
+    "reason": "activation compressionの対象はparameter-efficient fine-tuning時のメモリ。training手法で推論serving対象外。",
+    "first_checked_at": "2026-10-05T13:57:27+00:00",
+    "last_checked_at": "2026-10-05T13:57:27+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+    ],
+    "title": "Memory-Efficient Fine-Tuning via Low-Rank Activation Compression"
+  },
+  "processed_at": "2026-10-05T13:57:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36dd90bbf941",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

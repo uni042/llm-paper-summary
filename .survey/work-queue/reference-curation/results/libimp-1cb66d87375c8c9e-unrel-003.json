@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cb66d87375c8c9e-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.02792",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.02792",
+    "identity_tokens": [
+      "arXiv:2512.02792"
+    ],
+    "reason": "composed video retrievalのmultimodal query理解・retrieval精度が主題である。",
+    "first_checked_at": "2026-10-05T14:04:51+00:00",
+    "last_checked_at": "2026-10-05T14:04:51+00:00",
+    "linked_from": [
+      "papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md",
+      "papers/inference/06-moe-quantization-compression/2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md"
+    ],
+    "title": "HUD: Hierarchical Uncertainty-Aware Disambiguation Network for Composed Video Retrieval"
+  },
+  "processed_at": "2026-10-05T14:04:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cb66d87375c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff1f701cf8e5ba78-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tpami.2026.3707616",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tpami.2026.3707616",
+    "identity_tokens": [
+      "DOI:10.1109/tpami.2026.3707616"
+    ],
+    "reason": "マルチモーダルLLMのLoRA適応方法であり、要旨で扱う効率は訓練・適応で、推論時の効率化ではない。",
+    "first_checked_at": "2026-10-05T03:44:14+00:00",
+    "last_checked_at": "2026-10-05T03:44:14+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+    ],
+    "title": "LoRASculpt: Harmonious Low-Rank Adaptation for Multimodal Large Language Models"
+  },
+  "processed_at": "2026-10-05T03:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff1f701cf8e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

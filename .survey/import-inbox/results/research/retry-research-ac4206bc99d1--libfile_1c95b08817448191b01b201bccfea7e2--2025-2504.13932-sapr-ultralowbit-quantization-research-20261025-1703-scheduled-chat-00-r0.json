@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "972b809499b91f2a4d5f5e46d7dd27dda2741ef2a626f3ed4bd14af02b855608",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ac4206bc99d1--libfile_1c95b08817448191b01b201bccfea7e2--2025-2504.13932-sapr-ultralowbit-quantization-research-20261025-1703-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2504.13932",
+  "worker_completed_at": "2026-10-25T17:19:00+09:00",
+  "worker_run_key": "20261025-1703-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5279,
+    "body_paragraphs": 27,
+    "method_chars": 1486,
+    "method_paragraphs": 9,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-25T11:26:25+00:00"
+}

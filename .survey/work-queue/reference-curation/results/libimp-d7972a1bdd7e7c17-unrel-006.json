@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7972a1bdd7e7c17-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.10436",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.10436",
+    "identity_tokens": [
+      "arXiv:2310.10436"
+    ],
+    "reason": "LLM agentにperception/memoryを持たせて家計・企業の意思決定とmacroeconomic simulationの現実性を改善する応用研究で、agent inference serving/runtime効率化を目的としない。",
+    "first_checked_at": "2026-10-07T05:49:22+00:00",
+    "last_checked_at": "2026-10-07T05:49:22+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md"
+    ],
+    "title": "EconAgent: Large Language Model-Empowered Agents for Simulating Macroeconomic Activities"
+  },
+  "processed_at": "2026-10-07T05:49:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7972a1bdd7e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

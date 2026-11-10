@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-99ae2e67a76e196e-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2410.18926",
+  "reason": "本文のLoRANNはRAG向けANN/vector database retrievalのquery latencyとmemoryを改善し、8-bit RRRを評価する。一方、改善対象はembedding検索/indexでLLM本体の生成・attention推論ではないため、RAG servingの隣接基盤としてborderlineに残す。",
+  "title": "LoRANN: Low-Rank Matrix Factorization for Approximate Nearest Neighbor Search",
+  "identity_tokens": [
+    "arXiv:2410.18926"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99ae2e67a76e",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

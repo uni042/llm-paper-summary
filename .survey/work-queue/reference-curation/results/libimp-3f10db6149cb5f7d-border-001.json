@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f10db6149cb5f7d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2311.14114",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2311.14114",
+    "identity_tokens": [
+      "arXiv:2311.14114"
+    ],
+    "reason": "一次要旨では、推論時の整数演算を模したノイズを学習中に注入し、重み・活性のチャネル別混合ビット幅を選ぶSONIQを提案。CNNとTransformerで最大16倍・7倍の圧縮、CPUでINT8比最大7.3倍の高速化を報告する。ただしLLMを対象にした評価や生成時のKV・デコード挙動は要旨から確認できず、汎用低精度推論として関連するもののLLM固有性は限定的。",
+    "first_checked_at": "2026-10-30T12:54:34+00:00",
+    "last_checked_at": "2026-10-30T12:54:34+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "SONIQ: System-Optimized Noise-Injected Ultra-Low-Precision Quantization with Full-Precision Parity"
+  },
+  "processed_at": "2026-10-30T12:54:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f10db6149cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

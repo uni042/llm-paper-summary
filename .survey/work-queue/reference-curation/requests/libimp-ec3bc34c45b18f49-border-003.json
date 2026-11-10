@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ec3bc34c45b18f49-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1145/3800690",
+  "reason": "Torporはホストメモリにモデルを保持して要求到着時にGPUへ切り替え、非同期API転送、GPU実行時共有、パイプライン化、干渉を考慮したスケジューリングでGPU推論を提供する。著者所属機関の原著要旨では4GPUノードで数百の推論関数を共有し、GPU調達費を利用者70%、事業者65%削減したと報告する。推論提供基盤として強い関連性がある一方、一次要旨の対象は一般的な機械学習推論であり、LLM生成・KVキャッシュ・トークン遅延への固有評価を確認できないため、全文で対象モデルを検証するまで境界的。",
+  "title": "Enabling Low-Latency, GPU-Efficient Serverless Inference with Model Swapping",
+  "identity_tokens": [
+    "DOI:10.1145/3800690"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ec3bc34c45b1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

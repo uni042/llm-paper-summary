@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4b2408a7179b24f4-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/bigdata62323.2024.10825662",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/bigdata62323.2024.10825662",
+    "identity_tokens": [
+      "DOI:10.1109/bigdata62323.2024.10825662"
+    ],
+    "reason": "LLM serving時の電力分析は対象に近いが、本文未確認で測定内容・再現性・改善可能性を判断できないためborderline。",
+    "first_checked_at": "2026-10-05T13:35:16+00:00",
+    "last_checked_at": "2026-10-05T13:35:16+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md",
+      "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+    ],
+    "title": "An Empirical Study on the Power Consumption of LLMs with Different GPU Platforms"
+  },
+  "processed_at": "2026-10-05T13:35:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4b2408a7179b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

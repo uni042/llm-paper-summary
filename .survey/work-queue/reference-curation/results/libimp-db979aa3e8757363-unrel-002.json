@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-db979aa3e8757363-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.05095",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.05095",
+    "identity_tokens": [
+      "arXiv:2607.05095"
+    ],
+    "reason": "FAST targets temporal graph neural network training and its sampling/I/O/computation pipeline, outside LLM inference/serving scope.",
+    "first_checked_at": "2026-10-05T10:38:48+00:00",
+    "last_checked_at": "2026-10-05T10:38:48+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+    ],
+    "title": "FAST: A Holistic Framework for Optimizing Memory-I/O, Computation, and Sampling in Temporal GNN Training"
+  },
+  "processed_at": "2026-10-05T10:38:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db979aa3e875",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

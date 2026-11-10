@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7dc772f946cbb45d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.09022",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.09022",
+    "identity_tokens": [
+      "arXiv:2506.09022"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.09022. Abstract summary: Multiple Instance Learning (MIL) is a cornerstone approach in computational pathology (CPath) for generating clinically meaningful slide-level embeddings from gigapixel tissue images. However, MIL often struggles with small, weakly supervised clinical datasets. In contrast to fields such as NLP and conventional computer vision, where tran Out of scope: Pathology multiple-instance-learning transfer, not LLM inference.",
+    "first_checked_at": "2026-10-05T12:49:58+00:00",
+    "last_checked_at": "2026-10-05T12:49:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+    ],
+    "title": "Do Multiple Instance Learning Models Transfer?"
+  },
+  "processed_at": "2026-10-05T12:49:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7dc772f946cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

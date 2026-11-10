@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b39831bf176d8bb7-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.19790",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.19790",
+    "identity_tokens": [
+      "arXiv:2604.19790"
+    ],
+    "reason": "PrecisionDiff detects behavioral divergence between FP/BF and quantized precisions and localizes sensitive layers, but its purpose is safety differential testing, not a compression/latency optimization. The precision findings are relevant to quantized-inference validation but do not establish an efficiency gain, so retain as borderline.",
+    "first_checked_at": "2026-10-07T13:51:10+00:00",
+    "last_checked_at": "2026-10-07T13:51:10+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hidden Reliability Risks in Large Language Models: Systematic Identification of Precision-Induced Output Disagreements"
+  },
+  "processed_at": "2026-10-07T13:51:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b39831bf176d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

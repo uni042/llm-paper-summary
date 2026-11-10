@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "repair-l2kv-6b239632cba886a9b742dc0e-6",
+  "kind": "research",
+  "attempt_id": "attempt-preload-6b239632cba886a9b742dc0e",
+  "job_id": "job-research-12d29ccbbefd4d02",
+  "record_bank": "k",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-00",
+  "run_key": "scheduled-chat-00-20260925T105809JST-2f71c9",
+  "scheduled_slot": "00",
+  "actual_invocation_start": "2026-09-25T01:58:09+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "rendered_paper_quality",
+  "descriptor_sha256": "sha256:bca9e8da2049669a639e779044b2a7d8e97244f2d4710e9e6be4964ec9b35a5b",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-k/metadata.json",
+      "blob_sha": "8abd7453634475a544442a2f3f9d1d584f2742a3"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-k/problem_method.json",
+      "blob_sha": "a83f923a1a65c7166d4ff12b74719cf5d5e1b9e6"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-k/evaluation.json",
+      "blob_sha": "9dd5a5be372d4eeb069de6dda088eafe413f2527"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-k/results.json",
+      "blob_sha": "f9770bfb12ae3ef6d1d41615a4476cf60e6e5e8e"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-k/positioning.json",
+      "blob_sha": "989a6b4ebf1a724373c9007044da4a3c9e6b8d98"
+    }
+  ],
+  "validation_errors": [
+    "手法構成要素#1 の段落数 1 < 2",
+    "手法構成要素#5 の段落数 1 < 2"
+  ],
+  "checked_at": "2026-09-25T02:13:10+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt.",
+  "quality": {
+    "path": "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+    "status": "FAIL",
+    "file_bytes": 15855,
+    "prose_chars": 4200,
+    "paragraphs": 21,
+    "method_paragraphs": 8,
+    "method_components": 5,
+    "method_detection": "explicit",
+    "japanese_ratio": 0.7186366932559826,
+    "japanese_chars": 2973,
+    "latin_chars": 1164,
+    "bare_english_terms": [],
+    "failures": [
+      "手法構成要素#1 の段落数 1 < 2",
+      "手法構成要素#5 の段落数 1 < 2"
+    ],
+    "warnings": [
+      "日本語比率 71.9% < 警告基準 80.0%"
+    ]
+  }
+}

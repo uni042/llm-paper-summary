@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e4269d7dff185d6c-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2109.08668",
+  "reason": "Transformer TensorFlow programのprimitiveを探索してsquared ReLUとQ/K/V後のdepthwise convolutionを持つPrimer architectureを発見し、language modelingのcompute効率を改善する。ただし一次資料のheadline評価はtraining cost（500Mで4倍削減、1.9Bで同等one-shot性能へ1/3 training compute）が中心で、推論latency・memoryの直接評価が弱いためborderline。",
+  "title": "Primer: Searching for Efficient Transformers for Language Modeling",
+  "identity_tokens": [
+    "arXiv:2109.08668"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e4269d7dff18",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-97b244d65f46e779-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.06341",
+  "reason": "attention compressionテーマには近いが、新規結果は圧縮後のrepresentation rank挙動であり推論効率・性能tradeoffを測らず、小型モデルに限定。既存手法/servingへの関連は薄いためborderlineへ回す。",
+  "title": "Linear Algebra Foundations of Efficient Attention: A Phase Reversal in Rank Collapse Under SVD Compression",
+  "identity_tokens": [
+    "arXiv:2609.06341"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2408.05646-eigen-attention-attention-in-low-rank-space-for-kv-cache-compression.md",
+    "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+    "papers/inference/13-sparse-attention/2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md",
+    "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-97b244d65f46",
+  "source_precheck_request_id": null
+}

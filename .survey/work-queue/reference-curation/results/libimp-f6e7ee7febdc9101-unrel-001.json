@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6e7ee7febdc9101-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2204.06125",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2204.06125",
+    "identity_tokens": [
+      "arXiv:2204.06125"
+    ],
+    "reason": "text-conditioned image generation via CLIP latents and diffusion/autoregressive priors; final application is image generation, not LLM inference systems.",
+    "first_checked_at": "2026-10-04T20:53:45+00:00",
+    "last_checked_at": "2026-10-04T21:43:57+00:00",
+    "linked_from": [
+      "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md"
+    ],
+    "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents"
+  },
+  "processed_at": "2026-10-04T21:43:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6e7ee7febdc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

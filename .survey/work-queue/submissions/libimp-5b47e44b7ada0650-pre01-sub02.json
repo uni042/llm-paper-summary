@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CASD: E NHANCING G ENERATION A CCURACY VIA C ONTEXT -A WARE S PECULATIVE D ECODING",
+      "source_url": "https://www.semanticscholar.org/paper/e4b5968f3d63d0ae23b583fbec6b5a456e650996",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e4b5968f3d63d0ae23b583fbec6b5a456e650996"
+      ],
+      "semantic_scholar_id": "e4b5968f3d63d0ae23b583fbec6b5a456e650996",
+      "canonical_id": "SemanticScholar:e4b5968f3d63d0ae23b583fbec6b5a456e650996",
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長文脈の入力からトークン単位の候補を直接検索する文脈認識型の投機的復号CASD。追加ドラフトモデルや学習を不要とし、LongBenchの8課題で平均生成スコア+3.3、平均受理長3.10、約1.99倍の生成速度を報告。OpenReviewの2025年ICLR審査用原稿を一次資料として確認。略称CASDには別のContract-Aware論文があるため混同しない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5b47e44b7ada",
+    "round": "libimp-5b47e44b7ada0650-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5b47e44b7ada0650-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5b47e44b7ada0650-pre01.json",
+    "receipt": "sha256:09b7b93ef6da4d6c6fa84d7eaf7a691c95c90694d3ea6f1b3060836ddfbb5eb3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5b47e44b7ada",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

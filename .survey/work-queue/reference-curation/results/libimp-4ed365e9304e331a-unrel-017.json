@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ed365e9304e331a-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1308.3432",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1308.3432",
+    "identity_tokens": [
+      "arXiv:1308.3432"
+    ],
+    "reason": "9. **Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation** — `arXiv:1308.3432` ([paper](https://arxiv.org/abs/1308.3432)). Historical stochastic-gate learning method; not an LLM systems contribution.",
+    "first_checked_at": "2026-09-27T00:01:48+09:00",
+    "last_checked_at": "2026-09-30T09:49:12+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation"
+  },
+  "processed_at": "2026-09-30T09:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ed365e9304e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

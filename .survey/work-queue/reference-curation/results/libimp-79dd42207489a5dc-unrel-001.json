@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79dd42207489a5dc-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.07814",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.07814",
+    "identity_tokens": [
+      "DOI:10.1126/science.abq1158",
+      "arXiv:2203.07814"
+    ],
+    "reason": "競技プログラミング問題を解くためのコード生成モデル、候補プログラムの大量サンプリング、実行結果による絞り込みが主題。評価はCodeforcesの問題解決率・競技順位であり、LLM推論基盤、GPUメモリ階層、オフロード、サービングスケジューラの改善ではない。",
+    "first_checked_at": "2026-10-06T12:12:54+00:00",
+    "last_checked_at": "2026-10-11T14:41:43+00:00",
+    "linked_from": [],
+    "title": "Competition-Level Code Generation with AlphaCode"
+  },
+  "processed_at": "2026-10-11T14:41:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79dd42207489",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

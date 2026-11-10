@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a6f3ab62f78f0b9e-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.14856",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.14856",
+    "identity_tokens": [
+      "arXiv:2512.14856"
+    ],
+    "reason": "T5Gemma 2 is an encoder-decoder multimodal model with long-context support and 270M/1B/4B checkpoints, but body focuses on model adaptation and capability benchmarks rather than measured inference memory/latency or a serving optimization.",
+    "first_checked_at": "2026-10-07T09:39:26+00:00",
+    "last_checked_at": "2026-10-07T09:39:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "T5Gemma 2: Seeing, Reading, and Understanding Longer"
+  },
+  "processed_at": "2026-10-07T09:39:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a6f3ab62f78f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

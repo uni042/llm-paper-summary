@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261103-0303-scheduled-chat-00/r01",
+  "reference_main_sha": "9c04f89cabce36de644ffed714fea6355ab95d69",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.03198",
+      "identity_tokens": [
+        "arXiv:2610.03198",
+        "https://arxiv.org/abs/2610.03198"
+      ],
+      "title": "KV²: A Self-Refining KV Cache",
+      "reason": "複数の後続質問で再利用する長文脈KVキャッシュを対象に、軽量proxy scoreで情報量の高い文脈トークンを選び、その一部だけを再構成queryとして使って最終的なKV削除スコアを計算する二段階方式。全プロンプト再処理を省き、RULER 16KのKV予算2%では次善方式より平均スコアが40ポイント超高いと一次論文が報告する。推論時のKV圧縮・キャッシュ再利用に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.03198",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T03:12:37+09:00",
+      "last_checked_at": "2026-11-03T03:12:37+09:00",
+      "linked_from": [],
+      "origin": "supplemental_arxiv_primary_discovery",
+      "worklist_rank": null
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.29544",
+      "identity_tokens": [
+        "arXiv:2610.29544",
+        "https://arxiv.org/abs/2610.29544"
+      ],
+      "title": "RISK-KV: Quality-Aware Selective KV Cache Reconstruction for Distributed LLM Inference",
+      "reason": "分散LLM推論での要求移行・中断復旧に際し、保持した前後層の正確なKVをアンカーにridge回帰で欠損層の注意入力を予測し、元モデルのKV射影行列を折り込んで履歴KVを再構成する。実際の再構成によるNLL増分を品質リスクとして層群を選別。3モデルの試験で履歴KVを18.2〜33.3%省略しperplexity変化0.5%未満、512トークンのローカル復旧で全token replay比1.51〜3.31倍高速と報告。ただし実ネットワーク越し移行は未評価。KV転送・復旧の直接的な推論システム技術としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.29544",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T03:12:37+09:00",
+      "last_checked_at": "2026-11-03T03:12:37+09:00",
+      "linked_from": [],
+      "origin": "supplemental_arxiv_primary_discovery",
+      "worklist_rank": null
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.14475",
+      "identity_tokens": [
+        "arXiv:2610.14475",
+        "https://arxiv.org/abs/2610.14475"
+      ],
+      "title": "EdgeLLM-Nano: Auditing Polar-Guided Key-Cache Compression and Consistency-Anchored Pruning on a 33.6 MB On-Device Language Model",
+      "reason": "8.39Mパラメータ・33.6MBの極小decoderモデルとRaspberry Pi 5を使い、圧縮KVを実際に読みながらtoken単位の損失差を測るLCDFを提案。極座標系のK圧縮が同等bit数の単純RTNより劣り、測定した圧縮方式がFP16よりtoken当たりのエネルギー効率で劣る負の結果も示す。KV圧縮の評価方法は関連する一方、対象モデルが通常の大規模LLMより著しく小さく、一般的なLLMサービングへの性能外挿はできないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.14475",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T03:12:37+09:00",
+      "last_checked_at": "2026-11-03T03:12:37+09:00",
+      "linked_from": [],
+      "origin": "supplemental_arxiv_primary_discovery",
+      "worklist_rank": null
+    }
+  ]
+}

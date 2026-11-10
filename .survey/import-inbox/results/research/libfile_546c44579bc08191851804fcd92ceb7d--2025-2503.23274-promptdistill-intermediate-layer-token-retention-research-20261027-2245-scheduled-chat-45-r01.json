@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "277d9598d4cb6f7686fb4672a7fc68c65af662666b62f768d066f8dac378f1b9",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_546c44579bc08191851804fcd92ceb7d--2025-2503.23274-promptdistill-intermediate-layer-token-retention-research-20261027-2245-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2503.23274",
+  "worker_completed_at": "2026-10-27T22:45:00+09:00",
+  "worker_run_key": "20261027-2245-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5521,
+    "body_paragraphs": 31,
+    "method_chars": 1440,
+    "method_paragraphs": 8,
+    "evaluation_chars": 166,
+    "limitation_chars": 726,
+    "insufficiency_flags": [
+      "評価説明量 166 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 166 < 500"
+  ],
+  "processed_at": "2026-10-27T15:45:39+00:00"
+}

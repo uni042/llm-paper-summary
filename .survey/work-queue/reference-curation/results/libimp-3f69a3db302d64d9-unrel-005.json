@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f69a3db302d64d9-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.14852",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.14852",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.14852",
+      "arXiv:2402.14852"
+    ],
+    "reason": "GPT系モデルのコード生成能力をHumanEvalで評価するbenchmark/分析で、推論効率化・サービングは扱わない。",
+    "first_checked_at": "2026-10-03T06:04:49+00:00",
+    "last_checked_at": "2026-10-03T06:04:49+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md"
+    ],
+    "title": "HumanEval on Latest GPT Models -- 2024"
+  },
+  "processed_at": "2026-10-03T06:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f69a3db302d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

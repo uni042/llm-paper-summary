@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-16febf58274da3cc-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.03086",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.03086",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.03086",
+      "SemanticScholar:f135cdbccdde09c213de0da32c79c3b3fbebeccc",
+      "arXiv:2512.03086"
+    ],
+    "reason": "The compiler/runtime-feedback pipeline generates code-translation training data and improves model correctness; runtime feedback is used for dataset construction, not serving optimization.",
+    "first_checked_at": "2026-10-10T15:03:36+00:00",
+    "last_checked_at": "2026-10-10T15:03:36+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Beyond Code Pairs: Dialogue-Based Data Generation for LLM Code Translation"
+  },
+  "processed_at": "2026-10-10T15:03:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-16febf58274d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

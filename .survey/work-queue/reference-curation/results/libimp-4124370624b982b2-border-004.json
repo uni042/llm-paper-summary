@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4124370624b982b2-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3812836.3814998",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3812836.3814998",
+    "identity_tokens": [
+      "DOI:10.1145/3812836.3814998"
+    ],
+    "reason": "primary full paperへ到達できず、benchmark手順、対象モデル・load、system measurement詳細を確認できなかった。DOI direct openはtoolでaccess不可、exact-title検索でも一次ACM本文を取得できず。abstractだけで本文読了扱いにしない。",
+    "first_checked_at": "2026-10-05T03:47:24+00:00",
+    "last_checked_at": "2026-10-05T03:47:24+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+      "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md",
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "Edge-LLM-Bench: Characterising LLM Inference on Raspberry Pi 5 with Hailo-10H NPU Acceleration"
+  },
+  "processed_at": "2026-10-05T03:47:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4124370624b9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

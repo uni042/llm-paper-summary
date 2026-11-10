@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "operation": "research_quality_preflight",
+  "request_id": "20260924T181040Z-compkv-7c41a2",
+  "kind": "research",
+  "attempt_id": "attempt-preload-7567c60b834735ea01f92a82",
+  "job_id": "job-research-7ecc4d7949c81534",
+  "record_bank": "k",
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md",
+  "expected_blob_sha": null,
+  "worker_id": "scheduled-chat-30",
+  "run_key": "scheduled-chat-30-20260924T175541Z-7c41a2",
+  "scheduled_slot": "30",
+  "actual_invocation_start": "2026-09-24T17:55:41+00:00",
+  "ok": true,
+  "preflight_passed": false,
+  "repair_required": true,
+  "decision": "REPAIR_BEFORE_SUBMISSION",
+  "stage": "structured_record",
+  "descriptor_sha256": "sha256:069fae1beb397133a150cf78c15977e9df22da454ee47a2f2e1cf091ee04f49a",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record-k/metadata.json",
+      "blob_sha": "ecceddb280bdb6051859cdb919fced39d5fec21c"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record-k/problem_method.json",
+      "blob_sha": "0200acbc80f694a860a022e5c1bed3ecb8ef3ac1"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record-k/evaluation.json",
+      "blob_sha": "e46b92ffa0bbd1d937092bc6b64728c17467bea9"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record-k/results.json",
+      "blob_sha": "ff483cac8534352a21c49df6910465803ed1c5af"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record-k/positioning.json",
+      "blob_sha": "9f8a05de99254d64440035f995817a2d1a949677"
+    }
+  ],
+  "validation_errors": [
+    "Japanese-first prose ratio is too low: 69.9% < 70% (Japanese=4306, Latin=1854)"
+  ],
+  "checked_at": "2026-09-24T09:11:04+00:00",
+  "next_action": "Do not create a completed-submission request. Repair only the affected record slots from primary-source evidence, repeat the worker self-review, then create a NEW research-preflight request_id for the same attempt."
+}

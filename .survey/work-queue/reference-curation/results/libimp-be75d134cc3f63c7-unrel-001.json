@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-be75d134cc3f63c7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2208.01062",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2208.01062",
+    "identity_tokens": [
+      "arXiv:2208.01062"
+    ],
+    "reason": "重要な注意カーネル研究だが、既にサーベイの基礎文献として広く表現済みとみなし新規Discovery候補には回さない。",
+    "first_checked_at": "2026-10-02T07:00:18+00:00",
+    "last_checked_at": "2026-10-02T07:00:18+00:00",
+    "linked_from": [],
+    "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+  },
+  "processed_at": "2026-10-02T07:00:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be75d134cc3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

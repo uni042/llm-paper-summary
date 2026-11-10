@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29fa0465a7f851e4-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.06794",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.06794",
+    "identity_tokens": [
+      "arXiv:2503.06794"
+    ],
+    "reason": "The title is a large empirical study of hidden instability in vision-language models, a robustness/reliability analysis rather than inference-efficiency work.",
+    "first_checked_at": "2026-10-10T09:21:19+00:00",
+    "last_checked_at": "2026-10-10T09:21:19+00:00",
+    "linked_from": [],
+    "title": "Does Acceleration Cause Hidden Instability in Vision Language Models? Uncovering Instance-Level Divergence Through a Large-Scale Empirical Study"
+  },
+  "processed_at": "2026-10-10T09:21:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29fa0465a7f8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

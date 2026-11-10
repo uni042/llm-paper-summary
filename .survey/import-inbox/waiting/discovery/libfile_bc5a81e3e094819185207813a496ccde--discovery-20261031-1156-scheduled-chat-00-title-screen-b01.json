@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1156-scheduled-chat-00/title-screen-b01",
+  "reference_main_sha": "0f677ce8c8966dc4dc0d34dad600dd17d02be247",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.16325",
+      "identity_tokens": [
+        "arXiv:2510.16325",
+        "DOI:10.48550/arXiv.2510.16325"
+      ],
+      "title": "UltraImageGen: Efficient Ultra-High-Resolution Image Generation with Hierarchical Local Attention",
+      "reason": "タイトルで研究対象が超高解像度の画像生成であることが明示され、LLM/MLLMの推論・サービングではなく画像生成モデルの階層的局所注意高速化を主題とするため、現在のLLM推論システムサーベイの範囲外。要旨と本文は未確認。",
+      "source_url": "https://arxiv.org/abs/2510.16325",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T12:01:42+09:00",
+      "last_checked_at": "2026-10-31T12:01:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 379,
+      "origin": "discovery_worklist_title_sweep"
+    }
+  ]
+}

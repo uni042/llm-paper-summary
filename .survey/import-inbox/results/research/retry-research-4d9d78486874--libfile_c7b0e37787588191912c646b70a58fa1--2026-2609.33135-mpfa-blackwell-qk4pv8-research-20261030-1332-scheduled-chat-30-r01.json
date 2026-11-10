@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e2ab5435939821964dc7afd47a2446567d40c29b503038485fde843f42c60060",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4d9d78486874--libfile_c7b0e37787588191912c646b70a58fa1--2026-2609.33135-mpfa-blackwell-qk4pv8-research-20261030-1332-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.33135",
+  "worker_completed_at": "2026-10-30T14:02:00+09:00",
+  "worker_run_key": "20261030-1332-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 9994,
+    "body_paragraphs": 55,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 689,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-30T09:39:29+00:00"
+}

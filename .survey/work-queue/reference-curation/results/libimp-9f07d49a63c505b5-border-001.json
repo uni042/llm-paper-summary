@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9f07d49a63c505b5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.01146",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.01146",
+    "identity_tokens": [
+      "arXiv:2505.01146"
+    ],
+    "reason": "biomedical RAG surveyはnaive/advanced/modular architectureを分類し、retrieval/re-ranking/agentic workflowのlatencyを扱う。本文はcross-encoder遅延やmodular RAGの遅延増を比較する。 医療RAGに特化したsurveyで、LLM inference/servingの一般的最適化法が中心でない。latency値は複数別論文/architectureからの整理で同一条件比較でない。",
+    "first_checked_at": "2026-10-05T14:58:29+00:00",
+    "last_checked_at": "2026-10-05T14:58:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Retrieval-Augmented Generation in Biomedicine: A Survey of Technologies, Datasets, and Clinical Applications"
+  },
+  "processed_at": "2026-10-05T14:58:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9f07d49a63c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

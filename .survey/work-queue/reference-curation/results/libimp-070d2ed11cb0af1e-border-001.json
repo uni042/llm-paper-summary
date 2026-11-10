@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-070d2ed11cb0af1e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.09487",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.09487",
+    "identity_tokens": [
+      "arXiv:2512.09487",
+      "id:arXiv:2512.09487",
+      "url:https://arxiv.org/abs/2512.09487"
+    ],
+    "reason": "一次要旨では、テキストとグラフの検索を一つの生成方策で制御し、推論中にいつ推論・検索・回答するかを強化学習で最適化する。グラフ検索の高い費用を避ける二段階学習により不要な検索を減らす設計は推論時の外部検索費用に関連するが、主評価は5つの質問応答課題でのRAG品質であり、GPUサービング・KVキャッシュ・生成カーネルの実測最適化は要旨から確認できないため境界的とする。",
+    "first_checked_at": "2026-10-11T13:05:05+00:00",
+    "last_checked_at": "2026-10-13T10:41:38+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning"
+  },
+  "processed_at": "2026-10-13T10:41:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-070d2ed11cb0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

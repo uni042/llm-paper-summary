@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cfe0fce859641c01-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.00656",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.00656",
+    "identity_tokens": [
+      "arXiv:2404.00656"
+    ],
+    "reason": "dual speech encoder、prompt-aware LoRA、two-stage curriculumでspeech LLMのASR/ST/SV/ER/CoT能力を改善するtraining/architecture研究。推論runtime・memory・serving効率化を主題としない。",
+    "first_checked_at": "2026-10-07T05:49:20+00:00",
+    "last_checked_at": "2026-10-07T05:49:20+00:00",
+    "linked_from": [],
+    "title": "WavLLM: Towards Robust and Adaptive Speech Large Language Model"
+  },
+  "processed_at": "2026-10-07T05:49:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cfe0fce85964",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

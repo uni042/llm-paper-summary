@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Reasoning Compression with Mixed-Policy Distillation",
+      "source_url": "https://arxiv.org/abs/2605.08776",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning-centric large language models (LLMs) achieve strong performance by generating intermediate reasoning trajectories, but often incur excessive token usage and high inference-time decoding cost. We observe that, when solving the same problems, larger reasoning models can often produce more concise traces, whereas smaller reasoning models tend to generate longer and more redundant trajectories. This is especially problematic in real-world deployment, where memory, latency, and serving-cost constraints often favor smaller models. Our observations suggest that reasoning compression can be transferred from large models to small ones rather than enforced through explicit length constraints. Based on this insight, we propose Mixed-Policy Distillation (MPD), a reasoning compression framework that transfers concise reasoning behavior from a larger-sized teacher to a smaller student by distilling teacher-compressed student trajectories. Unlike on-policy distillation, which aligns the student with teacher distributions over verbose student trajectories, or off-policy distillation, which relies on teacher-generated trajectories and may suffer from distribution mismatch, MPD combines the strengths of both. Given a student-sampled trajectory, the teacher rewrites it into a more concise reasoning trace, and the student is trained via KL-based alignment on the compressed trajectory. This preserves student-policy exploration while injecting teacher-guided compression. Experiments on Qwen3-1.7B show that MPD reduces token usage by up to 27.1% while improving performance across multiple reasoning benchmarks, demonstrating an effective approach to efficient small-model reasoning.",
+      "identifiers": [
+        "SemanticScholar:67b750e7baab2dd5976ef39e4ea6cd5b0e897761"
+      ],
+      "semantic_scholar_id": "67b750e7baab2dd5976ef39e4ea6cd5b0e897761",
+      "canonical_id": "arXiv:2605.08776",
+      "arxiv_id": "2605.08776",
+      "doi": "10.48550/arXiv.2605.08776",
+      "authors": [
+        "Haneul Yang",
+        "Mingyan Wu",
+        "Bailan He",
+        "Ze-Yu Cao",
+        "Si-Kuan Yan",
+        "K. Lin",
+        "Zifeng Ding"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": null
+      },
+      "reason": "大規模教師が小型モデルの長い推論軌跡を簡潔に書き直し、その短縮軌跡へ学生をKL整合させるMixed-Policy Distillationを提案する。Qwen3-1.7Bの推論トークン数を最大27.1%削減しつつ複数推論ベンチマークで品質を改善。学習段階の蒸留だが、運用時の生成トークン予算を直接削減する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "GPU-Tile-Sim: A Tile-Centric GPU Simulation Framework for LLM Hardware-Software Co-Design",
+      "source_url": "https://arxiv.org/abs/2607.11262",
+      "year": 2026,
+      "published": "2026-07-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern LLM (large language model) workloads increasingly rely on optimized GPU kernels through hardware-software co-design. These kernels achieve high-performance through fine-grained dependency scheduling and computation-memory overlap. As such, they incur new challenges on existing GPU performance models. Instruction-driven simulators are costly to adapt to evolving architectures, while analytical models are too coarse to capture kernels'characteristics. We propose GPU-Tile-Sim, a tile-centric GPU simulation framework for LLM hardware-software co-design. The key insight is that modern LLM kernel performance is governed less by individual instruction latency than by the dependency structure that controls execution order and overlap. Accordingly, GTSim represents kernel execution as a warp-level tile graph whose nodes capture tile-level operations and whose edges encode data and ordering constraints. Using this representation, we design an automatic tile-graph frontend and a graph-driven simulation backend. We evaluate GTSim on representative GEMM, attention, and end-to-end LLM inference workloads. On A100 and H100 across both conventional and highly optimized kernels, GTSim achieves high performance-modeling accuracy (MAPE, Mean Absolute Percentage Error, 1.22%--8.71%). We further extend GTSim to Blackwell with preliminary validation, and demonstrate its effectiveness in analyzing software and architectural design choices.",
+      "identifiers": [
+        "SemanticScholar:b20c720a634db3cfb6f1c9120e3e2ac4a544c501"
+      ],
+      "semantic_scholar_id": "b20c720a634db3cfb6f1c9120e3e2ac4a544c501",
+      "canonical_id": "arXiv:2607.11262",
+      "arxiv_id": "2607.11262",
+      "doi": "10.48550/arXiv.2607.11262",
+      "authors": [
+        "Yitong Ding",
+        "Jiawei Huang",
+        "Renyang Guan",
+        "Yang-Jie Zhou",
+        "Zi-Han Liu",
+        "Yu Feng",
+        "Shixuan Sun",
+        "Mingyi Guo",
+        "Jingwen Leng",
+        "Jian Weng"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 109,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM向けGPUカーネルをwarp単位のtile依存グラフとして表現し、命令単位シミュレーションより低費用で計算とメモリの重なりをモデル化する。A100/H100のGEMM・attention・LLM推論でMAPE 1.22～8.71%と報告し、推論カーネル・ハードウェア共同設計の性能評価に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "SALMONN-duo: Adaptive Dual-System Coordination for Full-Duplex Voice Agents",
+      "source_url": "https://arxiv.org/abs/2609.34247",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Full-duplex speech large language models (LLMs) enable low-latency, natural voice interaction. However, real-world agents must also use tools and perform deliberative reasoning-operations whose variable latency and computational cost conflict with the stringent timing requirements of real-time conversation. To reconcile these demands, we propose SALMONN-duo, an adaptive dual-system voice agent inspired by dual-process theories of cognition. SALMONN-duo separates real-time interaction from deliberative computation by pairing an always-on, fast-thinking full-duplex speech LLM (system 1) with a powerful asynchronous slow-thinking LLM agent (system 2). Beyond handling real-time interaction, system 1 learns when to answer directly and when to delegate, remaining responsive during backend execution and seamlessly integrating returned information into the ongoing dialogue without exposing tool traces or losing conversational context. Evaluations on single-turn spoken question answering (QA) and multi-turn conversations demonstrate that adaptive delegation substantially improves accuracy on knowledge-intensive and multi-hop reasoning questions, while knowledge-boundary-aware training avoids unnecessary system 2 invocations. On a customized version of $\\tau$-Voice, SALMONN-duo further demonstrates its ability to complete environment-grounded, policy-constrained tasks through multi-turn interactions in realistic business scenarios. Finally, cost-aware reinforcement learning further enhances the trade-off between task performance and backend usage across the QA and conversation tasks, while improving task success and response safety on $\\tau$-Voice with an acceptable increase in the delegation rate.",
+      "identifiers": [
+        "SemanticScholar:86753a6315476acc48c49af6120930b04d6c6a0e"
+      ],
+      "semantic_scholar_id": "86753a6315476acc48c49af6120930b04d6c6a0e",
+      "canonical_id": "arXiv:2609.34247",
+      "arxiv_id": "2609.34247",
+      "authors": [
+        "Wen-Yi Yu",
+        "Si-Yin Wang",
+        "T. Chiba",
+        "Xian-Zhao Chen",
+        "Xiao-Hai Tian",
+        "Jun Zhang",
+        "Lu Lu",
+        "Chao Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "低遅延の常時稼働音声LLMと、非同期で重い推論・ツール処理を担うLLMを分離し、知識境界を使って委譲の要否を学習する。リアルタイム対話を止めずにバックエンド計算を重ね、cost-aware RLで委譲率と成功率を調整する。LLM推論の非同期分離と動的計算割当が直接の設計対象。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Why 1 + 1 < 1 in Visual Token Pruning: Beyond Naive Integration via Multi-Objective Balanced Covering",
+      "source_url": "https://arxiv.org/abs/2505.10118",
+      "year": 2025,
+      "published": "2025-05-15",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing visual token pruning methods target prompt alignment and visual preservation with static strategies, overlooking the varying relative importance of these objectives across tasks, which leads to inconsistent performance. To address this, we derive the first closed-form error bound for visual token pruning based on the Hausdorff distance, uniformly characterizing the contributions of both objectives. Moreover, leveraging $\\epsilon$-covering theory, we reveal an intrinsic trade-off between these objectives and quantify their optimal attainment levels under a fixed budget. To practically handle this trade-off, we propose Multi-Objective Balanced Covering (MoB), which reformulates visual token pruning as a bi-objective covering problem. In this framework, the attainment trade-off reduces to budget allocation via greedy radius trading. MoB offers a provable performance bound and linear scalability with respect to the number of input visual tokens, enabling adaptation to challenging pruning scenarios. Extensive experiments show that MoB preserves 96.4% of performance for LLaVA-1.5-7B using only 11.1% of the original visual tokens and accelerates LLaVA-Next-7B by 1.3-1.5$\\times$ with negligible performance loss. Additionally, evaluations on Qwen2-VL and Video-LLaVA confirm that MoB integrates seamlessly into advanced MLLMs and diverse vision-language tasks.",
+      "identifiers": [
+        "SemanticScholar:120be9d1bbb78c1d9bc990d2e8f0710a7ba93919"
+      ],
+      "semantic_scholar_id": "120be9d1bbb78c1d9bc990d2e8f0710a7ba93919",
+      "canonical_id": "arXiv:2505.10118",
+      "arxiv_id": "2505.10118",
+      "doi": "10.48550/arXiv.2505.10118",
+      "authors": [
+        "Yangfu Li",
+        "Hong-Jian Zhan",
+        "Tianyi Chen",
+        "Qi Liu",
+        "Yu-Jie Xiong",
+        "Yue Lu"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 533,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "視覚トークン削減でプロンプト整合性と視覚情報保存を同時に最適化するMoBを提案し、Hausdorff距離の誤差上界とgreedy radius tradingで予算配分する。LLaVA-1.5-7Bでは11.1%の視覚トークンで96.4%の品質を保ち、LLaVA-NeXT-7Bで1.3～1.5倍の高速化を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "When Does Better Acceptance Pay? A Controlled Study of Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.24993",
+      "year": 2026,
+      "published": "2026-10-18",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The throughput gains of speculative decoding depend on the trade-off between acceptance length and execution latency. We ask when additional acceptance is worth the cost of obtaining it. We establish a comparison protocol spanning training, inference, and evaluation, remeasuring released checkpoints and retraining six drafter recipes on shared target-generated data across ten benchmarks and two target models. Alignment changes the picture: gaps that appear large in published comparisons shrink substantially under shared training and inference conditions. This narrowing motivates two deeper questions: how is acceptance improved at different costs, and when do these gains improve throughput? We find that acceptance can be improved through nearly free objective and context changes or more expensive token-to-token conditioning, which pays off most clearly under sampled drafting. DCore illustrates the former route as a strong baseline with little additional measured drafting overhead. The payoff is conditional: task uncertainty and serving conditions affect acceptance returns, execution costs, and the preferred drafter and budget. These findings inform future drafter design and deployment choices.",
+      "identifiers": [
+        "SemanticScholar:58c3c560d13b71c58ad5d5640ba9a1734eab0bb1"
+      ],
+      "semantic_scholar_id": "58c3c560d13b71c58ad5d5640ba9a1734eab0bb1",
+      "canonical_id": "arXiv:2610.24993",
+      "arxiv_id": "2610.24993",
+      "authors": [
+        "Yong-Chao Long",
+        "Chun-Rui Zheng",
+        "Yuxuan Zhou",
+        "G. Nie",
+        "Tian-Chi Ma",
+        "Chao Pang",
+        "Shuo-Huan Wang",
+        "Yu-Chen Ding",
+        "Xian-Bin Wen",
+        "Dian-Hai Yu",
+        "Jun-Yuan Shang",
+        "Yu-Xi Zhou",
+        "Shen-Da Hong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投機的復号で受理長が伸びてもドラフト生成費用を上回らなければスループットが改善しない点を、6種類のドラフタ・10ベンチマーク・2ターゲットモデルで共通条件比較する。公開チェックポイントと同一データ再学習を区別し、DCoreなど低オーバーヘッド設計と同時要求数に応じた最適予算を評価する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-44c4dc65f44b",
+    "round": "libimp-44c4dc65f44bb637-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-44c4dc65f44bb637-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-44c4dc65f44bb637-pre01.json",
+    "receipt": "sha256:e80335b33c5b0e53177698fd29f9ed62495a0af26a0a4a5145664482c1365daa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-44c4dc65f44b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,1001 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import json
+from datetime import date, datetime, timezone
+from types import SimpleNamespace
+from unittest import mock
+import os
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+SCRIPTS = REPO_ROOT / ".survey" / "scripts"
+if str(SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS))
+
+import process_library_import_inbox as inbox
+
+
+class LibraryImportInboxTests(unittest.TestCase):
+    def test_reaudit_priority_has_separate_bounded_quota(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            ordinary_a = root / "a-ordinary.md"
+            ordinary_b = root / "b-ordinary.md"
+            reaud_a = root / "y-reaudit.md"
+            reaud_b = root / "z-reaudit.md"
+            ordinary_a.write_text("---\ntitle: Ordinary\n---\n", encoding="utf-8")
+            ordinary_b.write_text(
+                "---\ntitle: Ordinary\n---\nunder16kb_reaudit_target_path: papers/fake.md\n",
+                encoding="utf-8",
+            )
+            reaud_a.write_text(
+                "---\nunder16kb_reaudit_target_path: papers/a.md\n---\n",
+                encoding="utf-8",
+            )
+            reaud_b.write_text(
+                "---\nunder16kb_reaudit_target_path: papers/b.md\n---\n",
+                encoding="utf-8",
+            )
+            sources = [reaud_b, ordinary_b, reaud_a, ordinary_a]
+            self.assertTrue(inbox.is_reaudit_research_source(reaud_a))
+            self.assertFalse(inbox.is_reaudit_research_source(ordinary_b))
+            self.assertEqual(
+                inbox.select_research_sources(sources, max_items=1, max_reaudit=2),
+                [reaud_a, reaud_b, ordinary_a],
+            )
+            self.assertEqual(
+                inbox.select_research_sources(sources, max_items=1, max_reaudit=1),
+                [reaud_a, ordinary_a],
+            )
+            self.assertEqual(
+                inbox.select_research_sources(sources, max_items=0, max_reaudit=1),
+                [reaud_a],
+            )
+            self.assertEqual(
+                inbox.select_research_sources(sources, max_items=1, max_reaudit=None),
+                [ordinary_a],
+            )
+            with self.assertRaises(ValueError):
+                inbox.select_research_sources(sources, max_items=1, max_reaudit=-1)
+
+    def test_unquoted_yaml_dates_are_strings_not_datetime_objects(self) -> None:
+        raw = """---
+published: 2024-10-17
+last_checked: 2026-10-08
+worker_completed_at: 2026-10-08T16:49:14+09:00
+under16kb_reaudit_passed: true
+audit_version: 2
+references:
+  - checked_at: 2026-10-07
+---
+# Example
+"""
+        meta = inbox.parse_frontmatter(raw)
+        self.assertEqual(meta["published"], "2024-10-17")
+        self.assertEqual(meta["last_checked"], "2026-10-08")
+        self.assertEqual(meta["worker_completed_at"], "2026-10-08T16:49:14+09:00")
+        self.assertEqual(meta["references"][0]["checked_at"], "2026-10-07")
+        self.assertIs(meta["under16kb_reaudit_passed"], True)
+        self.assertEqual(meta["audit_version"], 2)
+
+    def test_receipt_serializes_legacy_nested_date_metadata(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "receipt.json"
+            inbox.replace_json(
+                path,
+                {
+                    "worker_completed_at": datetime(2026, 10, 8, 16, 49, tzinfo=timezone.utc),
+                    "nested": [{"checked_at": date(2026, 10, 8)}],
+                },
+            )
+            recorded = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(recorded["worker_completed_at"], "2026-10-08T16:49:00+00:00")
+            self.assertEqual(recorded["nested"], [{"checked_at": "2026-10-08"}])
+            self.assertRaises(TypeError, inbox.receipt_json, {"unrelated": object()})
+
+    def test_research_quality_block_with_unquoted_timestamp_completes(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            source = root / ".survey/import-inbox/pending/research/lighttransfer.md"
+            source.parent.mkdir(parents=True)
+            source.write_text(
+                """---
+canonical_id: arXiv:2410.13846
+published: 2024-10-17
+worker_completed_at: 2026-10-08T16:49:14+09:00
+worker_run_key: 20261008-1645-scheduled-chat-45/r01-partial
+---
+# Example
+""",
+                encoding="utf-8",
+            )
+            audit = SimpleNamespace(
+                status="FAIL",
+                failures=["insufficient evaluation evidence"],
+                warnings=[],
+                japanese_ratio=1.0,
+            )
+            try:
+                os.chdir(root)
+                with (
+                    mock.patch.object(inbox, "research_metadata_failures", return_value=[]),
+                    mock.patch.object(inbox.paper_quality_gate, "inspect_rendered_paper", return_value=audit),
+                ):
+                    self.assertEqual(inbox.process_research(root, 1), (0, 1))
+                receipt = root / ".survey/import-inbox/results/research/lighttransfer.json"
+                result = json.loads(receipt.read_text(encoding="utf-8"))
+                self.assertEqual(result["status"], "blocked_quality")
+                self.assertEqual(result["worker_completed_at"], "2026-10-08T16:49:14+09:00")
+                self.assertTrue(
+                    (root / ".survey/import-inbox/blocked/research/lighttransfer.md").exists()
+                )
+                self.assertFalse(source.exists())
+            finally:
+                os.chdir(original_cwd)
+
+    def test_failed_receipt_write_does_not_mask_error_with_second_move(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            source = root / ".survey/import-inbox/pending/research/paper.md"
+            source.parent.mkdir(parents=True)
+            source.write_text("""---
+worker_completed_at: 2026-10-08T16:49:14+09:00
+---
+""", encoding="utf-8")
+            try:
+                os.chdir(root)
+                with (
+                    mock.patch.object(inbox, "research_metadata_failures", return_value=["missing"]),
+                    mock.patch.object(inbox, "replace_json", side_effect=OSError("simulated receipt failure")),
+                    self.assertRaisesRegex(RuntimeError, "original error: OSError: simulated receipt failure") as caught,
+                ):
+                    inbox.process_research(root, 1)
+                self.assertIsInstance(caught.exception.__cause__, OSError)
+                self.assertTrue(
+                    (root / ".survey/import-inbox/blocked/research/paper.md").is_file()
+                )
+            finally:
+                os.chdir(original_cwd)
+
+    def test_reaudit_source_git_blob_sha_legacy_migration(self) -> None:
+        import hashlib
+        for payload in (b"", b"sample contents\n", "日本語のテスト".encode("utf-8")):
+            with self.subTest(payload=payload):
+                git_hash = inbox.under16_reaudit.git_blob_sha(payload)
+                legacy_header = f"blob {len(payload)}".encode("ascii") + bytes((92, 48))
+                legacy_hash = hashlib.sha1(legacy_header + payload).hexdigest()
+                self.assertNotEqual(git_hash, legacy_hash)
+                self.assertEqual(
+                    inbox.verify_reaudit_blob_sha(payload, git_hash), (True, False)
+                )
+                self.assertEqual(
+                    inbox.verify_reaudit_blob_sha(payload, legacy_hash), (True, True)
+                )
+                self.assertEqual(
+                    inbox.verify_reaudit_blob_sha(payload + b"x", git_hash), (False, False)
+                )
+                self.assertEqual(
+                    inbox.verify_reaudit_blob_sha(payload + b"x", legacy_hash), (False, False)
+                )
+
+    def test_research_metadata_gate_rejects_incomplete_frontmatter(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            source = root / ".survey/import-inbox/pending/research/paper.md"
+            source.parent.mkdir(parents=True)
+            source.write_text(
+                """---
+canonical_id: arXiv:2609.99999
+title: Incomplete
+summary: 不足メタデータの検査用。
+list_summary: 不足メタデータの検査用。
+source: https://arxiv.org/abs/2609.99999
+worker_completed_at: '2026-10-03T16:00:00+09:00'
+worker_run_key: 20261003-1600-scheduled-chat-00
+---
+# Incomplete
+""",
+                encoding="utf-8",
+            )
+            meta = inbox.parse_frontmatter(source.read_text(encoding="utf-8"))
+            failures = inbox.research_metadata_failures(source, meta, root)
+            self.assertIn("authors", failures)
+            self.assertIn("published", failures)
+            self.assertIn("publication", failures)
+            self.assertIn("publication_type", failures)
+            self.assertIn("publication_status", failures)
+            self.assertIn("sources", failures)
+            self.assertIn("implementation", failures)
+            self.assertIn("code", failures)
+            self.assertIn("last_checked", failures)
+            self.assertIn("arxiv_id", failures)
+            self.assertIn("arxiv_categories.primary", failures)
+            self.assertIn("arxiv_categories.cross_list", failures)
+
+    def test_research_metadata_gate_rejects_invalid_published_format(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            source = root / ".survey/import-inbox/pending/research/paper.md"
+            source.parent.mkdir(parents=True)
+            source.write_text(
+                """---
+canonical_id: DOI:10.1000/example
+title: Example
+summary: 完成原稿。
+list_summary: 完成原稿の一文要約。
+authors:
+- Example Author
+published: '2026'
+publication: Example Venue
+publication_type: 査読付き学術論文
+publication_status: Published
+source: https://doi.org/10.1000/example
+sources:
+- https://doi.org/10.1000/example
+implementation: 論文中で実装・評価済み。
+code: null
+last_checked: '2026-10-03'
+worker_completed_at: '2026-10-03T16:00:00+09:00'
+worker_run_key: 20261003-1600-scheduled-chat-00
+---
+# Example
+""",
+                encoding="utf-8",
+            )
+            meta = inbox.parse_frontmatter(source.read_text(encoding="utf-8"))
+            failures = inbox.research_metadata_failures(source, meta, root)
+            self.assertIn("published:format", failures)
+
+    def test_research_metadata_gate_accepts_complete_library_frontmatter(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            source = root / ".survey/import-inbox/pending/research/paper.md"
+            source.parent.mkdir(parents=True)
+            source.write_text(
+                """---
+canonical_id: arXiv:2609.99999
+arxiv_id: '2609.99999'
+arxiv_categories:
+  primary: cs.LG
+  cross_list: []
+title: Complete
+summary: 必須メタデータが揃ったResearch原稿。
+list_summary: 必須メタデータが揃ったResearch原稿を取り込み前に検証する。
+authors:
+- Example Author
+published: '2026-09-01'
+publication: arXiv
+publication_type: プレプリント
+publication_status: arXiv preprint
+source: https://arxiv.org/abs/2609.99999
+sources:
+- https://arxiv.org/abs/2609.99999
+implementation: 論文中で実装・評価済み。公式コードURLは確認できない。
+code: null
+last_checked: '2026-10-03'
+worker_completed_at: '2026-10-03T16:00:00+09:00'
+worker_run_key: 20261003-1600-scheduled-chat-00
+---
+# Complete
+""",
+                encoding="utf-8",
+            )
+            meta = inbox.parse_frontmatter(source.read_text(encoding="utf-8"))
+            self.assertEqual(inbox.research_metadata_failures(source, meta, root), [])
+
+    def test_research_import_adds_structural_audit_placeholders_without_claiming_audit(self) -> None:
+        raw = """---
+canonical_id: arXiv:2609.99999
+title: Complete
+last_checked: '2026-10-03'
+---
+# Complete
+"""
+        meta = inbox.parse_frontmatter(raw)
+        normalized_raw, normalized_meta = inbox.normalize_research_audit_metadata(raw, meta)
+        self.assertIsNone(normalized_meta["last_audited"])
+        self.assertEqual(normalized_meta["audit_version"], 0)
+        self.assertIn("last_audited: null", normalized_raw)
+        self.assertIn("audit_version: 0", normalized_raw)
+
+        unchanged_raw, unchanged_meta = inbox.normalize_research_audit_metadata(
+            normalized_raw, normalized_meta
+        )
+        self.assertEqual(unchanged_raw, normalized_raw)
+        self.assertEqual(unchanged_meta, normalized_meta)
+
+    def test_library_research_japanese_normalizer_repairs_generic_terms(self) -> None:
+        raw = """---
+canonical_id: DOI:10.1000/example
+title: Example
+list_summary: "cache and memory model for serving"
+---
+# Example
+
+This cache stores model state in memory for serving.
+URL https://example.com/cache and `cache` code must remain unchanged.
+"""
+        normalized, changed = inbox.normalize_library_research_japanese(raw)
+        self.assertTrue(changed)
+        self.assertIn("キャッシュ", normalized)
+        self.assertIn("メモリ", normalized)
+        self.assertIn("モデル", normalized)
+        self.assertIn("推論提供", normalized)
+        self.assertIn("https://example.com/cache", normalized)
+        self.assertIn("`cache`", normalized)
+
+    def test_repo_relative_accepts_relative_and_absolute_paths(self) -> None:
+        repo_root = Path("/tmp/example-repo").resolve()
+        rel = Path(".survey/import-inbox/pending/research/paper.md")
+        absolute = repo_root / rel
+
+        self.assertEqual(
+            inbox.repo_relative(rel, repo_root),
+            ".survey/import-inbox/pending/research/paper.md",
+        )
+        self.assertEqual(
+            inbox.repo_relative(absolute, repo_root),
+            ".survey/import-inbox/pending/research/paper.md",
+        )
+
+    def test_returned_research_queue_tracks_latest_quality_outcome(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            results = root / ".survey/import-inbox/results/research"
+            blocked = root / ".survey/import-inbox/blocked/research"
+            results.mkdir(parents=True)
+            blocked.mkdir(parents=True)
+
+            paper = blocked / "paper.md"
+            paper.write_text(
+                """---
+canonical_id: arXiv:2609.12345
+title: Returned Paper
+source: https://arxiv.org/abs/2609.12345
+---
+# Returned Paper
+""",
+                encoding="utf-8",
+            )
+
+            (results / "first.json").write_text(
+                json.dumps(
+                    {
+                        "status": "blocked_quality",
+                        "canonical_id": "arXiv:2609.12345",
+                        "blocked_path": ".survey/import-inbox/blocked/research/paper.md",
+                        "processed_at": "2026-10-07T09:00:00+00:00",
+                        "failures": ["説明不足トリガー: 手法説明量 100 < 700"],
+                        "quality_metrics": {"method_chars": 100},
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            queue = inbox.sync_returned_research_queue(root)
+            self.assertEqual(queue["count"], 1)
+            entry = queue["entries"][0]
+            self.assertEqual(entry["title"], "Returned Paper")
+            self.assertEqual(entry["return_count"], 1)
+            self.assertIn(entry["assigned_worker"], inbox.REPAIR_WORKERS)
+
+            (results / "second.json").write_text(
+                json.dumps(
+                    {
+                        "status": "imported",
+                        "canonical_id": "arXiv:2609.12345",
+                        "processed_at": "2026-10-07T10:00:00+00:00",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            queue = inbox.sync_returned_research_queue(root)
+            self.assertEqual(queue["count"], 0)
+            persisted = json.loads(
+                (root / ".survey/repair-queue/returned-research.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            self.assertEqual(persisted["entries"], [])
+
+    def test_returned_research_queue_skips_only_proven_published_duplicates(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            published = root / "papers/inference/05-speculative-decoding-moe/existing.md"
+            published.parent.mkdir(parents=True)
+            published.write_text(
+                "---\ncanonical_id: arXiv:2605.29707\n---\n# Already published\n",
+                encoding="utf-8",
+            )
+            results = root / ".survey/import-inbox/results/research"
+            results.mkdir(parents=True)
+            receipt = results / "blocked.json"
+            base = {
+                "status": "blocked_quality",
+                "canonical_id": "arXiv:2605.29707",
+                "processed_at": "2026-10-07T09:00:00+00:00",
+                "failures": [
+                    "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/existing.md と 8 段落 / 1887文字 (100.0%) が完全一致"
+                ],
+            }
+            receipt.write_text(json.dumps(base, ensure_ascii=False), encoding="utf-8")
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 0)
+
+            # Identity mismatch does not suppress a real repair.
+            published.write_text(
+                "---\ncanonical_id: arXiv:2600.00001\n---\n# Unrelated\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+
+            # Existing identity alone does not suppress non-duplicate quality failures.
+            published.write_text(
+                "---\ncanonical_id: arXiv:2605.29707\n---\n# Already published\n",
+                encoding="utf-8",
+            )
+            base["failures"] = ["日本語比率 48.4% < 70%"]
+            receipt.write_text(json.dumps(base, ensure_ascii=False), encoding="utf-8")
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+
+    def test_returned_research_queue_follows_only_verified_moved_papers(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            old = root / "papers/inference/99-other-inference-systems/old.md"
+            current = root / "papers/inference/16-weight-quantization-compression/new.md"
+            old.parent.mkdir(parents=True)
+            current.parent.mkdir(parents=True)
+            moved_path = current.relative_to(root).as_posix()
+            old.write_text(
+                f"# Moved\n\nThis paper record moved to {moved_path}.\n",
+                encoding="utf-8",
+            )
+            current.write_text(
+                "---\ncanonical_id: arXiv:2608.21952\n---\n# Published\n",
+                encoding="utf-8",
+            )
+            results = root / ".survey/import-inbox/results/research"
+            results.mkdir(parents=True)
+            receipt = results / "blocked.json"
+            payload = {
+                "status": "blocked_quality",
+                "canonical_id": "arXiv:2608.21952",
+                "processed_at": "2026-10-07T09:00:00+00:00",
+                "failures": [
+                    "長文定型文の再利用を検出: "
+                    "papers/inference/99-other-inference-systems/old.md "
+                    "と 16 段落 / 3794文字 (100.0%) が完全一致"
+                ],
+            }
+            receipt.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 0)
+
+            # The destination must be the same canonical paper.
+            current.write_text(
+                "---\ncanonical_id: arXiv:2608.00001\n---\n# Other\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+
+            # A redirect alone must not silence a different quality failure.
+            current.write_text(
+                "---\ncanonical_id: arXiv:2608.21952\n---\n# Published\n",
+                encoding="utf-8",
+            )
+            payload["failures"] = ["説明不足トリガー: 手法説明量 100 < 700"]
+            receipt.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+
+            # Unknown redirect formats never qualify as proven duplicates.
+            payload["failures"] = [
+                "長文定型文の再利用を検出: "
+                "papers/inference/99-other-inference-systems/old.md "
+                "と 16 段落 / 3794文字 (100.0%) が完全一致"
+            ]
+            receipt.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+            old.write_text("# Moved\nFollow elsewhere\n", encoding="utf-8")
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+
+    def test_returned_research_queue_is_idempotent_when_entries_do_not_change(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            results = root / ".survey/import-inbox/results/research"
+            results.mkdir(parents=True)
+            (results / "return.json").write_text(
+                json.dumps(
+                    {
+                        "status": "blocked_quality",
+                        "canonical_id": "arXiv:2609.11111",
+                        "processed_at": "2026-10-07T09:00:00+00:00",
+                        "failures": ["説明不足"],
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            first = inbox.sync_returned_research_queue(root)
+            queue_path = root / ".survey/repair-queue/returned-research.json"
+            first_bytes = queue_path.read_bytes()
+            second = inbox.sync_returned_research_queue(root)
+            self.assertEqual(first, second)
+            self.assertEqual(first_bytes, queue_path.read_bytes())
+
+    def test_returned_research_queue_assignment_is_stable(self) -> None:
+        canonical_id = "DOI:10.1000/stable-owner"
+        first = inbox.repair_owner(canonical_id)
+        second = inbox.repair_owner(canonical_id)
+        self.assertEqual(first, second)
+        self.assertIn(first, inbox.REPAIR_WORKERS)
+
+    def test_returned_research_queue_counts_repeat_returns(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            results = root / ".survey/import-inbox/results/research"
+            results.mkdir(parents=True)
+            for index, ts in enumerate(
+                ["2026-10-07T09:00:00+00:00", "2026-10-07T10:00:00+00:00"],
+                1,
+            ):
+                (results / f"return-{index}.json").write_text(
+                    json.dumps(
+                        {
+                            "status": "blocked_quality",
+                            "canonical_id": "arXiv:2609.54321",
+                            "processed_at": ts,
+                            "failures": [f"return {index}"],
+                        }
+                    ),
+                    encoding="utf-8",
+                )
+            queue = inbox.sync_returned_research_queue(root)
+            self.assertEqual(queue["count"], 1)
+            self.assertEqual(queue["entries"][0]["return_count"], 2)
+            self.assertEqual(queue["entries"][0]["failures"], ["return 2"])
+
+    def test_requeues_discovery_blocked_only_by_precheck_provenance(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            try:
+                os.chdir(root)
+                blocked = root / ".survey/import-inbox/blocked/discovery/source.json"
+                blocked.parent.mkdir(parents=True)
+                blocked_payload = {
+                    "schema_version": 2,
+                    "artifact_type": "discovery_run",
+                    "worker_id": "scheduled-chat-00",
+                    "run_key": "20261002T120000JST-scheduled-chat-00",
+                    "record_count": 1,
+                    "records": [
+                        {
+                            "classification": "accept",
+                            "canonical_id": "arXiv:2609.00001",
+                            "reason": "test",
+                        }
+                    ],
+                }
+                blocked.write_text(
+                    json.dumps(blocked_payload, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8",
+                )
+
+                failure_id = "libimp-deadbeef-pre01-sub01"
+                queue_result = root / f".survey/work-queue/results/{failure_id}.json"
+                queue_result.parent.mkdir(parents=True)
+                queue_result.write_text(
+                    json.dumps(
+                        {
+                            "ok": False,
+                            "retryable": True,
+                            "error_code": "discovery_precheck_required",
+                        },
+                        indent=2,
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+
+                import_result = root / ".survey/import-inbox/results/discovery/source.json"
+                import_result.parent.mkdir(parents=True)
+                import_result.write_text(
+                    json.dumps(
+                        {
+                            "status": "blocked_downstream",
+                            "retained_payload": ".survey/import-inbox/blocked/discovery/source.json",
+                            "failures": [failure_id],
+                        },
+                        indent=2,
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+
+                self.assertEqual(
+                    inbox.recover_retryable_precheck_provenance_blocks(root), 1
+                )
+                retry_files = list(
+                    (root / ".survey/import-inbox/pending/discovery").glob(
+                        "retry-precheck-*--source.json"
+                    )
+                )
+                self.assertEqual(len(retry_files), 1)
+                self.assertEqual(retry_files[0].read_bytes(), blocked.read_bytes())
+                self.assertEqual(
+                    inbox.recover_retryable_precheck_provenance_blocks(root), 0
+                )
+            finally:
+                os.chdir(original_cwd)
+
+    def test_requeues_historical_provider_only_discovery_block_once(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            try:
+                os.chdir(root)
+                blocked = root / ".survey/import-inbox/blocked/discovery/source.json"
+                blocked.parent.mkdir(parents=True)
+                blocked_payload = {
+                    "schema_version": 2,
+                    "artifact_type": "discovery_run",
+                    "worker_id": "scheduled-chat-00",
+                    "run_key": "20261002T120000JST-scheduled-chat-00",
+                    "record_count": 2,
+                    "records": [
+                        {
+                            "classification": "accept",
+                            "canonical_id": "OpenReview:abcdefghij",
+                            "identity_tokens": ["OpenReview:abcdefghij"],
+                            "reason": "provider gap",
+                        },
+                        {
+                            "classification": "unrelated",
+                            "canonical_id": "arXiv:2609.00002",
+                            "reason": "irrelevant",
+                        },
+                    ],
+                }
+                blocked.write_text(
+                    json.dumps(blocked_payload, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8",
+                )
+                result = root / ".survey/import-inbox/results/discovery/source.json"
+                result.parent.mkdir(parents=True)
+                result.write_text(
+                    json.dumps(
+                        {
+                            "status": "blocked_downstream",
+                            "retained_payload": ".survey/import-inbox/blocked/discovery/source.json",
+                            "failures": ["OpenReview:abcdefghij"],
+                        },
+                        indent=2,
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+
+                self.assertEqual(inbox.recover_candidate_provider_gap_blocks(root), 1)
+                retries = list(
+                    (root / ".survey/import-inbox/pending/discovery").glob(
+                        "retry-provider-gap-*--source.json"
+                    )
+                )
+                self.assertEqual(len(retries), 1)
+                self.assertEqual(retries[0].read_bytes(), blocked.read_bytes())
+                self.assertEqual(inbox.recover_candidate_provider_gap_blocks(root), 0)
+            finally:
+                os.chdir(original_cwd)
+
+    def test_preferred_candidate_id_uses_stable_alias_before_openreview(self) -> None:
+        record = {
+            "canonical_id": "OpenReview:abcdefghij",
+            "identity_tokens": [
+                "OpenReview:abcdefghij",
+                "arXiv:2402.15220",
+                "DOI:10.18653/v1/2024.acl-long.623",
+            ],
+        }
+        self.assertEqual(inbox.preferred_candidate_id(record), "arXiv:2402.15220")
+
+    def test_provider_gap_alias_is_requeued_as_reduced_retry(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            try:
+                os.chdir(root)
+                blocked = root / ".survey/import-inbox/blocked/discovery-provider/gap.json"
+                blocked.parent.mkdir(parents=True)
+                payload = {
+                    "schema_version": 2,
+                    "artifact_type": "discovery_run",
+                    "worker_id": "scheduled-chat-00",
+                    "run_key": "provider-gap-parent::provider-gap",
+                    "provider_gap_ids": ["OpenReview:abcdefghij"],
+                    "record_count": 1,
+                    "records": [
+                        {
+                            "classification": "accept",
+                            "canonical_id": "OpenReview:abcdefghij",
+                            "identity_tokens": [
+                                "OpenReview:abcdefghij",
+                                "arXiv:2402.15220",
+                            ],
+                            "reason": "provider gap",
+                        }
+                    ],
+                }
+                blocked.write_text(
+                    json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8",
+                )
+
+                self.assertEqual(inbox.recover_provider_gap_alias_blocks(root), 1)
+                retries = list(
+                    (root / ".survey/import-inbox/pending/discovery").glob(
+                        "retry-provider-alias-*--gap.json"
+                    )
+                )
+                self.assertEqual(len(retries), 1)
+                retry = json.loads(retries[0].read_text(encoding="utf-8"))
+                self.assertEqual(retry["record_count"], 1)
+                self.assertEqual(
+                    inbox.preferred_candidate_id(retry["records"][0]),
+                    "arXiv:2402.15220",
+                )
+                self.assertEqual(inbox.recover_provider_gap_alias_blocks(root), 0)
+            finally:
+                os.chdir(original_cwd)
+
+    def test_borderline_reconsideration_metadata_reaches_relevance_request(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            record = {
+                "classification": "borderline",
+                "canonical_id": "arXiv:2609.12345",
+                "identity_tokens": ["arXiv:2609.12345"],
+                "reason": "still borderline after reconsideration",
+                "origin": "borderline_reconsideration",
+                "borderline_recheck_count_before": 2,
+            }
+            waiting, failures = inbox.create_relevance_requests(root, "recheck-token", [record])
+            self.assertEqual(failures, [])
+            self.assertEqual(len(waiting), 1)
+            request_path = root / inbox.RELEVANCE_REQUESTS / f"{waiting[0]}.json"
+            request = json.loads(request_path.read_text(encoding="utf-8"))
+            self.assertTrue(request["reconsidered_from_borderline"])
+
+    def test_borderline_reconsideration_accept_precheck_and_success_clear_old_borderline(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            token = "reconsider-accept-token"
+            identity = "arXiv:2609.54321"
+            record = {
+                "classification": "accept",
+                "canonical_id": identity,
+                "identity_tokens": [identity],
+                "reason": "now strong enough for Research",
+                "origin": "borderline_reconsideration",
+                "borderline_recheck_count_before": 1,
+            }
+            borderline_path = root / inbox.reference_relevance_ledger.DEFAULT_BORDERLINE_LEDGER
+            inbox.reference_relevance_ledger.mark_borderline(
+                borderline_path,
+                canonical_id=identity,
+                reason="older borderline decision",
+                identity_tokens=[identity],
+            )
+
+            request_id = inbox.candidate_request_id(token, 1)
+            precheck_result = root / inbox.PRECHECK_RESULTS / f"{request_id}.json"
+            precheck_result.parent.mkdir(parents=True)
+            precheck_result.write_text(json.dumps({
+                "ok": True,
+                "evaluation_allowed": True,
+                "candidate_statuses": [{"requested_id": identity, "status": "allowed"}],
+                "allowed_records": [{
+                    "record": {
+                        "canonical_id": identity,
+                        "arxiv_id": "2609.54321",
+                        "title": "Reconsidered paper",
+                        "source_url": "https://arxiv.org/abs/2609.54321",
+                    }
+                }],
+                "receipt": "sha256:test-reconsider",
+            }), encoding="utf-8")
+
+            submission_id = f"{request_id}-sub01"
+            queue_result = root / inbox.DISCOVERY_RESULTS / f"{submission_id}.json"
+            queue_result.parent.mkdir(parents=True)
+            queue_result.write_text(json.dumps({"ok": True, "research_jobs_added": 1}), encoding="utf-8")
+
+            waiting, sub_waiting, failures, gaps, counts = inbox.create_accept_pipeline(
+                root, token, [record]
+            )
+            self.assertEqual(waiting, [])
+            self.assertEqual(sub_waiting, [])
+            self.assertEqual(failures, [])
+            self.assertEqual(gaps, [])
+            self.assertEqual(counts["submitted"], 1)
+
+            request = json.loads(
+                (root / inbox.PRECHECK_REQUESTS / f"{request_id}.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(request["reconsider_identifiers"], [identity])
+            submission = json.loads(
+                (root / inbox.DISCOVERY_SUBMISSIONS / f"{submission_id}.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(submission["candidates"][0]["origin"], "borderline_reconsideration")
+            ledger = json.loads(borderline_path.read_text(encoding="utf-8"))
+            self.assertNotIn(identity, ledger["records"])
+
+    def test_provider_error_is_candidate_gap_not_whole_run_failure(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            try:
+                os.chdir(root)
+                token = "provider-gap-test"
+                record = {
+                    "classification": "accept",
+                    "canonical_id": "OpenReview:abcdefghij",
+                    "identity_tokens": ["OpenReview:abcdefghij"],
+                    "reason": "provider gap",
+                }
+                request_id = inbox.candidate_request_id(token, 1)
+                result_path = root / inbox.PRECHECK_RESULTS / f"{request_id}.json"
+                result_path.parent.mkdir(parents=True)
+                result_path.write_text(
+                    json.dumps(
+                        {
+                            "ok": True,
+                            "evaluation_allowed": True,
+                            "candidate_statuses": [
+                                {
+                                    "requested_id": "OpenReview:abcdefghij",
+                                    "status": "provider_error",
+                                    "lookup_route": "openreview_notes",
+                                    "error": "HTTP Error 403: Forbidden",
+                                }
+                            ],
+                            "allowed_records": [],
+                            "receipt": "sha256:test",
+                        },
+                        indent=2,
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+
+                waiting, submission_waiting, failures, gaps, counts = (
+                    inbox.create_accept_pipeline(root, token, [record])
+                )
+                self.assertEqual(waiting, [])
+                self.assertEqual(submission_waiting, [])
+                self.assertEqual(failures, [])
+                self.assertEqual(gaps, ["OpenReview:abcdefghij"])
+                self.assertEqual(counts["submitted"], 0)
+
+                source = root / ".survey/import-inbox/waiting/discovery/source.json"
+                source.parent.mkdir(parents=True)
+                payload = {
+                    "schema_version": 2,
+                    "artifact_type": "discovery_run",
+                    "worker_id": "scheduled-chat-00",
+                    "run_key": "provider-gap-parent",
+                    "record_count": 1,
+                    "records": [record],
+                }
+                source.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+                gap_path = inbox.retain_provider_gap_payload(
+                    root, source, payload, gaps
+                )
+                self.assertIsNotNone(gap_path)
+                retained = json.loads((root / gap_path).read_text(encoding="utf-8"))
+                self.assertEqual(retained["record_count"], 1)
+                self.assertEqual(retained["provider_gap_ids"], gaps)
+            finally:
+                os.chdir(original_cwd)
+
+    def test_oversized_discovery_run_is_retained_and_split_by_record_count(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            try:
+                os.chdir(root)
+                waiting = root / ".survey/import-inbox/waiting/discovery"
+                waiting.mkdir(parents=True)
+                source = waiting / "discovery-large.json"
+
+                records = [
+                    {
+                        "classification": "accept",
+                        "canonical_id": f"arXiv:2609.{index:05d}",
+                        "reason": f"record {index}",
+                    }
+                    for index in range(40)
+                ]
+                payload = {
+                    "schema_version": 2,
+                    "artifact_type": "discovery_run",
+                    "worker_id": "scheduled-chat-00",
+                    "run_key": "scheduled-chat-00-test-large",
+                    "record_count": len(records),
+                    "records": records,
+                }
+                original_bytes = (
+                    json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+                ).encode("utf-8")
+                source.write_bytes(original_bytes)
+
+                self.assertEqual(inbox.split_oversized_discovery_sources(20), 1)
+
+                retained = (
+                    root
+                    / ".survey/import-inbox/retained/discovery-source/discovery-large.json"
+                )
+                self.assertEqual(retained.read_bytes(), original_bytes)
+
+                chunks = sorted(waiting.glob("discovery-large--chunk-*.json"))
+                self.assertEqual(len(chunks), 2)
+                parsed = [json.loads(path.read_text(encoding="utf-8")) for path in chunks]
+                self.assertEqual([item["record_count"] for item in parsed], [20, 20])
+                self.assertTrue(
+                    all(
+                        item["parent_run_key"] == "scheduled-chat-00-test-large"
+                        for item in parsed
+                    )
+                )
+                selected = inbox.select_discovery_sources(20)
+                self.assertEqual(len(selected), 1)
+                self.assertEqual(selected[0].name, chunks[0].name)
+                self.assertEqual(
+                    len(inbox.discovery_records(inbox.read_json(selected[0]))),
+                    20,
+                )
+            finally:
+                os.chdir(original_cwd)
+
+
+    def test_merge_library_reason_preserves_only_matched_dict_lineage_proposal(self) -> None:
+        provider = {"canonical_id": "arXiv:2607.24306", "reason": "provider"}
+        proposal = {"slug": "diffusion-llm-decoding", "confidence": "high"}
+
+        merged = inbox.merge_library_reason(
+            provider,
+            [{
+                "canonical_id": "arXiv:2607.24306",
+                "reason": "library evidence",
+                "lineage_proposal": proposal,
+            }],
+        )
+        self.assertEqual(merged.get("lineage_proposal"), proposal)
+
+        unmatched = inbox.merge_library_reason(
+            provider,
+            [{"canonical_id": "arXiv:2607.99999", "lineage_proposal": proposal}],
+        )
+        self.assertNotIn("lineage_proposal", unmatched)
+
+        same_title_different_stable_ids = inbox.merge_library_reason(
+            {"canonical_id": "arXiv:2607.24306", "title": "Shared title"},
+            [{
+                "canonical_id": "arXiv:2607.99999",
+                "title": "Shared title",
+                "lineage_proposal": proposal,
+            }],
+        )
+        self.assertNotIn("lineage_proposal", same_title_different_stable_ids)
+
+        malformed = inbox.merge_library_reason(
+            provider,
+            [{"canonical_id": "arXiv:2607.24306", "lineage_proposal": "invalid"}],
+        )
+        self.assertNotIn("lineage_proposal", malformed)
+
+
+if __name__ == "__main__":
+    unittest.main()

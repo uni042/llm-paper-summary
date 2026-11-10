@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "ffa2dfe8287381da1a086f960600e4a992f9e654c0ed64f4a3bb86657636fb44",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9ca9a7d732b5--libfile_b8f59870ba5c81918a6d7ab9c045c4d6--2026-2602.23699-hidrop-hierarchical-vision-token-reduction-research-20261014-0530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2602.23699",
+  "worker_completed_at": "2026-10-14T05:32:50+09:00",
+  "worker_run_key": "20261014-0530-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7135,
+    "body_paragraphs": 40,
+    "method_chars": 2067,
+    "method_paragraphs": 11,
+    "evaluation_chars": 1965,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md と 21 段落 / 4386文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T13:08:16+00:00"
+}

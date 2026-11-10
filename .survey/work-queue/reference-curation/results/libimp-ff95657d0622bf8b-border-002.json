@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff95657d0622bf8b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.01956",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.01956",
+    "identity_tokens": [
+      "arXiv:2602.01956"
+    ],
+    "reason": "小型draft群のJensen-Shannon分散とtargetとの差のKLでLLMの認識論的不確実性を低コスト推定し、OSDとデータ多様化で誤差を抑える。一次本文Table 5ではdraftの分割構成によるRMSEの差を示し、GSM8Kで最大37%の推定誤差改善を報告。推論費用削減に接点はあるが中心は信頼性・不確実性推定で、LLM serving最適化の直接性は限定的。",
+    "first_checked_at": "2026-10-30T13:55:17+00:00",
+    "last_checked_at": "2026-10-30T13:55:17+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Epistemic Uncertainty Estimation for Large Language Models via Knowledge Distillation"
+  },
+  "processed_at": "2026-10-30T13:55:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff95657d0622",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

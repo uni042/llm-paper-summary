@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261101-1000-scheduled-chat-00/title-screen-b01",
+  "reference_main_sha": "38a5ca2a31a9553e245032dad888d08ffd561ece",
+  "record_count": 2,
+  "title_screen_only": true,
+  "counts_toward_discovery_round": false,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.11165",
+      "identity_tokens": [
+        "arXiv:2505.11165",
+        "DOI:10.48550/arXiv.2505.11165"
+      ],
+      "title": "Maximizing Asynchronicity in Event-based Neural Networks",
+      "reason": "タイトルで研究対象がイベントベース神経ネットワークの非同期性最大化であり、LLM生成推論の実行・サービング最適化ではないと明白。一次書誌で題名・識別子を照合したが、タイトル先行除外なので通常10件ノルマに算入しない。",
+      "source_url": "https://arxiv.org/abs/2505.11165",
+      "body_check": "title_screen_only; primary_bibliography_confirmed; not_counted_toward_10",
+      "first_checked_at": "2026-11-01T10:02:06+09:00",
+      "last_checked_at": "2026-11-01T10:02:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 492,
+      "origin": "discovery_worklist",
+      "source_type": "arxiv_primary"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:6be9b34dbb51fecb84021b2a711ac183f372f7b5",
+      "identity_tokens": [
+        "SemanticScholar:6be9b34dbb51fecb84021b2a711ac183f372f7b5",
+        "ETSI:GR ENI 051 V4.1.1"
+      ],
+      "title": "Experiential Networked Intelligence (ENI); Study on AI Agents based Next-generation Network Slicing",
+      "reason": "タイトルから対象は6GコアネットワークのAIエージェントによるネットワークスライシングの標準化調査であり、LLM生成推論の高速化・省メモリ化・サービング基盤の性能評価ではない。ETSIの公式刊行情報で資料種別がGROUP REPORTと確認できた。タイトル先行除外なので通常10件ノルマに算入しない。",
+      "source_url": "https://www.semanticscholar.org/paper/6be9b34dbb51fecb84021b2a711ac183f372f7b5",
+      "primary_source_url": "https://www.etsi.org/deliver/etsi_gr/ENI/001_099/051/04.01.01_60/gr_ENI051v040101p.pdf",
+      "body_check": "title_screen_only; official_etsi_bibliography_confirmed; not_counted_toward_10",
+      "first_checked_at": "2026-11-01T10:02:06+09:00",
+      "last_checked_at": "2026-11-01T10:02:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist",
+      "source_type": "etsi_primary"
+    }
+  ]
+}

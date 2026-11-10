@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-610db74d8be527bf-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.20096",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.20096",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.20096",
+      "arXiv:2507.20096"
+    ],
+    "reason": "L1距離の絶対差・加算でQK内積を置き換え、SciQ/StoryCloze/HellaSwag/BoolQ、TCGA/METABRIC/VDJdb、CIFAR-10で精度を比較する汎用Transformerの注意機構研究。LLMサービングや実GPU生成速度、実消費電力の測定はなく、長文LLM推論の実装最適化との直接性が弱い。一方で演算器の省電力化・注意カーネル設計との技術的接点があるためunrelatedではなくborderline。",
+    "first_checked_at": "2026-10-26T06:44:26+00:00",
+    "last_checked_at": "2026-10-26T06:44:26+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Ecotransformer: Attention without Multiplication"
+  },
+  "processed_at": "2026-10-26T06:44:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-610db74d8be5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

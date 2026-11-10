@@ -1,0 +1,45 @@
+{
+  "formal_precheck_ready_at": "2026-09-24T22:48:18.996461+00:00",
+  "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/worker-45-20260925T074628-discovery-r1.json",
+  "frontier_target": 3,
+  "frontier_work_available": true,
+  "ok": true,
+  "operation": "direct_take_discovery",
+  "preload_id": "preload-6afb7c7695a9ec39477e",
+  "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-6afb7c7695a9ec39477e.json",
+  "processed_at": "2026-09-24T22:48:10+00:00",
+  "receipt": "sha256:b5ccd131b05d302bc3c7e886eac66e8e5e90367181c0ec92ab2fd846f3e6bdb5",
+  "request_id": "worker-45-20260925T074628-discovery-r1",
+  "reserved_frontier": [
+    {
+      "axis": "forward citations of Sequoia hardware-aware speculative decoding",
+      "citation_direction": "forward",
+      "discovery_bank": "n",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record-n/discovery-preload.json",
+      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-b50490ce627bde2920ecb27b.json",
+      "preload_id": "preload-8bbe27c0bb9464cc7d0e",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-8bbe27c0bb9464cc7d0e.json",
+      "request_id": "frontier-b50490ce627bde2920ecb27b",
+      "submission_allowed": false,
+      "work_start_allowed": true
+    },
+    {
+      "axis": "forward citations of LMCache enterprise-scale KV cache layer",
+      "citation_direction": "forward",
+      "discovery_bank": "j",
+      "discovery_slot_path": ".survey/work-queue/records/chat-record-j/discovery-preload.json",
+      "formal_precheck_result_path": ".survey/work-queue/discovery-precheck/results/frontier-de370ec63b64f8dcd9891837.json",
+      "preload_id": "preload-b7579dc93e27b3937764",
+      "preload_result_path": ".survey/work-queue/discovery-precheck/results/preload-b7579dc93e27b3937764.json",
+      "request_id": "frontier-de370ec63b64f8dcd9891837",
+      "submission_allowed": false,
+      "work_start_allowed": true
+    }
+  ],
+  "run_key": "worker-45-20260925T074628",
+  "schema_version": 1,
+  "status": "ready_for_submission",
+  "submission_allowed": true,
+  "work_start_allowed": true,
+  "worker_id": "worker-45"
+}

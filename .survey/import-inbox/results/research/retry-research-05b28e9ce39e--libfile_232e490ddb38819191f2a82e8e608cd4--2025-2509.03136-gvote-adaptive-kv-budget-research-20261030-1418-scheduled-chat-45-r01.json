@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "aa50bf104366882093cabe6517504ec702dea213bd84eba7722260c692a5dd47",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-05b28e9ce39e--libfile_232e490ddb38819191f2a82e8e608cd4--2025-2509.03136-gvote-adaptive-kv-budget-research-20261030-1418-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2509.03136",
+  "worker_completed_at": "2026-10-30T14:20:00+09:00",
+  "worker_run_key": "20261030-1408-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3146,
+    "body_paragraphs": 16,
+    "method_chars": 995,
+    "method_paragraphs": 4,
+    "evaluation_chars": 310,
+    "limitation_chars": 736,
+    "insufficiency_flags": [
+      "評価説明量 310 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 310 < 500"
+  ],
+  "processed_at": "2026-10-30T08:36:56+00:00"
+}

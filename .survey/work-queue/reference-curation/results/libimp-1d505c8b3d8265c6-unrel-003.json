@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d505c8b3d8265c6-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3770855.3819038",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3770855.3819038",
+    "identity_tokens": [
+      "DOI:10.1145/3770855.3819038"
+    ],
+    "reason": "Large language model agents have shown strong promise for clinical decision support over electronic health records (EHR), yet current approaches treat tasks in isolation and lack capacities for self-evolution through accumulated experience. We propose U-EHR, a Unified EHR Agent with Retrospective Memory Evolution that enables continuous capability improvement through closed-loop experiential learning. U-EHR introduces three tightly integrated mechanisms: (1) Step-Level Trajectory Scoring evaluates each action in an execution trajectory along relevance, progress, and correctness dimensions, providing fine-grained credit assignment that distinguishes effective behaviors from detrimental ones within the same trajectory. (2) Dual-Polarity Memory Extraction transforms these quality signals into structured experiential knowledge by distilling both positive patterns worth emulating and negative lessons to avoid. (3) UCB-Guided Memory Retrieval formulates memory selection as a multi-armed bandit problem grounded in the Upper Confidence Bound principle, strategically selecting the most relevant memories from a growing knowledge base while exploring underutilized entries to prevent stagnation. As execution outcomes feed back to refine memory quality estimates and retrieval statistics, the three components form a self-reinforcing evolution cycle that continuously improves the agent's behavioral knowledge without external supervision. Extensive experiments on both the public MIMIC benchmark and our newly introduced Chinese clinical benchmark CN-EHR across diverse clinical tasks demonstrate that U-EHR consistently surpasses existing methods in accuracy and efficiency, with sustained performance gains as experience accumulates, validating the effectiveness of the proposed self-evolution paradigm. Notably, U-EHR exhibits strong cross-lingual generalizability on CN-EHR, suggesting that the learned experiential knowledge transfers across diverse healthcare environments.",
+    "first_checked_at": "2026-10-05T08:55:08+00:00",
+    "last_checked_at": "2026-10-05T08:55:08+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md"
+    ],
+    "title": "U-EHR: A Self-Evolving EHR Agent with Step-Level Credit Assignment and UCB-Guided Memory Retrieval"
+  },
+  "processed_at": "2026-10-05T08:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d505c8b3d82",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

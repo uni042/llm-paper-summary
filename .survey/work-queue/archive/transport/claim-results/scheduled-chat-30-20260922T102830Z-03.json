@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "scheduled-chat-30-20260922T102830Z-03",
+  "worker_id": "scheduled-chat-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-331c2ec4acba72cc",
+      "claim_id": "claim-ff95dca6078ea45cc8614166",
+      "worker_id": "scheduled-chat-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-ff95dca6078ea45cc8614166",
+      "claimed_at": "2026-09-22T01:31:17+00:00",
+      "expires_at": "2026-09-22T03:01:17+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-331c2ec4acba72cc"
+      ],
+      "job": {
+        "job_id": "job-research-331c2ec4acba72cc",
+        "type": "research",
+        "parent_job_id": "job-99746c3421d040c0",
+        "priority": 99,
+        "canonical_id": "DOI:10.1145/3832810.3832866",
+        "arxiv_id": null,
+        "doi": "10.1145/3832810.3832866",
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "AsymFlow: Enabling Long-Context LLM Serving via CPU-GPU Prefill-Decode Disaggregation",
+        "source_url": "https://www.semanticscholar.org/paper/50318e12c7f8b36202899a69346fd9920a2e73a9",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-c24278db090c-asymflow-enabling-long-context-llm-serving-via-cpu-gpu-prefill-decode-disaggregation.md",
+        "selection_reason": "Recent CPU-GPU prefill/decode disaggregated LLM serving system with shared-memory KV streaming and AMX decode; directly relevant to hierarchical memory, KV offload, and heterogeneous serving.",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T20:36:10+00:00",
+        "blocker": "Primary full text could not be safely obtained in this invocation. The DOI 10.1145/3832810.3832866 identifies an ICPP 2026 paper whose ACM online-publication date is 2026-09-28, later than this run. Fresh title search did not surface an arXiv or author-hosted identical manuscript; available search evidence was bibliographic/citation context only. No five-slot record was synthesized without the full primary source.",
+        "status_submission": ".survey/work-queue/submissions/research/attempt-d8fd170cc9e97c3ecb3eb146.json",
+        "blocked_attempts": 2,
+        "last_recorded_blocked_event": "2026-09-21T14:40:48+00:00",
+        "block_history": [
+          {
+            "attempt": 1,
+            "blocked_at": "2026-09-21T03:14:52+00:00",
+            "reason": "The web retrieval subsystem explicitly reported approximately one call remaining immediately before this claim was assigned. A repository-quality Research record requires reading the primary source in full and materially distinct retrieval attempts when necessary. Starting those retrievals under the explicit run-local limit would risk an incomplete or inferred five-slot record, so this attempt is durably blocked for a later run with fresh retrieval capacity."
+          },
+          {
+            "attempt": 2,
+            "blocked_at": "2026-09-21T14:40:48+00:00",
+            "reason": "Primary full text could not be safely obtained in this invocation. The DOI 10.1145/3832810.3832866 identifies an ICPP 2026 paper whose ACM online-publication date is 2026-09-28, later than this run. Fresh title search did not surface an arXiv or author-hosted identical manuscript; available search evidence was bibliographic/citation context only. No five-slot record was synthesized without the full primary source."
+          }
+        ],
+        "last_blocked_at": "2026-09-21T14:40:48+00:00",
+        "retry_queued_at": "2026-09-21T22:48:29+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-22T01:31:17+00:00",
+  "checkpoint_released": 0
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7a6613afe474bcf-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.21109",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.21109",
+    "identity_tokens": [
+      "arXiv:2609.21109"
+    ],
+    "reason": "LLMをedgeで実行する事例として関連はあるが、効率改善の主張を支える同一条件baselineと汎用性が不足し、対象scopeへの寄与が弱い。",
+    "first_checked_at": "2026-10-05T06:29:32+00:00",
+    "last_checked_at": "2026-10-05T06:29:32+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+    ],
+    "title": "Talk to Me, Jarvis: An Open-Source Edge-Deployable Voice Assistant Framework for Autonomous Racecars"
+  },
+  "processed_at": "2026-10-05T06:29:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7a6613afe47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

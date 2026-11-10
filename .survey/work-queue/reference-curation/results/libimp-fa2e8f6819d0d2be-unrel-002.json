@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa2e8f6819d0d2be-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.12815",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.12815",
+    "identity_tokens": [
+      "arXiv:2609.12815"
+    ],
+    "reason": "一次要旨: We present BEAST, the first-ever Bayesian Swin Transformer for atmospheric forecasting on 0.25$^\\circ$ global resolution able to accurately quantify both aleatoric and epistemic uncertainty. To overcome the associated computational bottlenecks, we devise an orthogonal 4D-parallelization scheme that introduces a unique domain-tensor-parallelism strategy and a novel uncertainty parallel method, enabling us to fully lev",
+    "first_checked_at": "2026-10-05T06:54:06+00:00",
+    "last_checked_at": "2026-10-05T06:54:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling"
+  },
+  "processed_at": "2026-10-05T06:54:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa2e8f6819d0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

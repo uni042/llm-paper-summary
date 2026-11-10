@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b6ff8d54de99615-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.24763",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.24763",
+    "identity_tokens": [
+      "arXiv:2609.24763"
+    ],
+    "reason": "Recent years have witnessed a growing interest in AI-aided Kalman filters. While emerging methodologies, such as KalmanNet, were shown to facilitate tracking in partially known state-space models, they are not directly applicable when the underlying dynamics is unknown. To overcome this limitation, we extend the KalmanNet philosophy to the unknown-dynamics regime by developing blind Kalman filtering frameworks that learn both the predictor and the correction gain from data, assuming that the state-evolution function and the noise statistics are both unavailable. To this end, we first introduce a task-aware neural Kalman filtering framework, Blind-KalmanNet, which carries the learning principle of the Kalman gain into the prediction step through a two-head neural architecture that jointly learns a state-dependent linear surrogate and the Kalman gain from data. Building on this formulation, we then develop our main framework, Koopman-aided Blind-KalmanNet, which incorporates Koopman operator theory to lift the unknown dynamics into a latent space where the state evolves linearly. The lifted linear predictor integrates seamlessly into the Blind-KalmanNet structure: the pre-trained deep Koopman network serves as a globally structured predictor, augmented by the task-aware residual surrogate and the learned Kalman gain inherited from Blind-KalmanNet. Extensive experiments demonstrate that the proposed frameworks achieve competitive performance against baselines, with Koopman-aided Blind-KalmanNet attaining the best accuracy across all considered settings.",
+    "first_checked_at": "2026-10-05T05:58:50+00:00",
+    "last_checked_at": "2026-10-05T05:58:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Neural Kalman Filtering for Unknown Dynamics: Task-Aware Learning with a Koopman Backbone"
+  },
+  "processed_at": "2026-10-05T05:58:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b6ff8d54de9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

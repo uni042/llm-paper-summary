@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f801af651d7f0c49-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.09894",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.09894",
+    "identity_tokens": [
+      "arXiv:2610.09894",
+      "id:DOI:10.48550/arXiv.2610.09894",
+      "id:arXiv:2610.09894"
+    ],
+    "reason": "database queryのpredicateとmetadataから推論前にTransformer FFN sliceを選ぶQCATSを提案し、offline expert構築、query単位routing、CPU/GPU非同期pipelineとbatchingを組み合わせる。一次要旨はBERT-base/Qwen-0.6Bの4予測query workloadでlatency最大4.42倍削減と報告。推論runtimeに関係するが対象はDB内predictive queryで自回帰LLM servingではないためborderline。",
+    "first_checked_at": "2026-11-02T05:57:35+00:00",
+    "last_checked_at": "2026-11-02T05:57:35+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "QCATS: Query Context-Aware Transformer Slicing for Efficient Predictive Query Processing"
+  },
+  "processed_at": "2026-11-02T05:57:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f801af651d7f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

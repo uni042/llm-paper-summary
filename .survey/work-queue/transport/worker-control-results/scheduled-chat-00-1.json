@@ -1,0 +1,20 @@
+{
+  "control_digest": "sha256:61dba4a5cd28067b48a4d93ad0374157dcc4904d270c27bddaab337212209d99",
+  "next_action": "CONTINUE_NEXT_RESEARCH_AUDIT",
+  "ok": true,
+  "result_path": ".survey/work-queue/transport/worker-control-results/scheduled-chat-00-1.json",
+  "schema_version": 1,
+  "seq": 1,
+  "status": "quarantined",
+  "worker_id": "scheduled-chat-00",
+  "write_blocked_job": {
+    "applied": true,
+    "attempt_id": "attempt-preload-e27d122fcb2a2458ba4b4d4b",
+    "claim_id": "claim-preload-e27d122fcb2a2458ba4b4d4b",
+    "job_id": "job-research-5ff6e259f414e2ab",
+    "retry_not_before": "2026-10-02T23:59:49+00:00",
+    "source_reason": null,
+    "status": "blocked",
+    "transport_reason": "platform_content_write_rejected_after_bundle_fallback"
+  }
+}

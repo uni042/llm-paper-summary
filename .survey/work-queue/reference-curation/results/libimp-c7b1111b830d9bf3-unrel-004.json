@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c7b1111b830d9bf3-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.24294",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.24294",
+    "identity_tokens": [
+      "arXiv:2609.24294"
+    ],
+    "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+    "first_checked_at": "2026-10-05T23:59:22+00:00",
+    "last_checked_at": "2026-10-05T23:59:22+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.17172-cccl-compression-coupled-collective-communication.md"
+    ],
+    "title": "Toward GPU-Resident Climate Models: A Feasibility Study on Lossy Compression for the Spherical Harmonic Transform's Communication Bottleneck"
+  },
+  "processed_at": "2026-10-05T23:59:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c7b1111b830d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

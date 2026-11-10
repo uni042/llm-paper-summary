@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6a20ab3537dc26d0-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.64898/2026.09.08.750216",
+  "reason": "The range of peptides a human leukocyte antigen (HLA) binds and displays modulates immune response and therefore underpins vaccine design, neoantigen discovery, autoimmunity, transplantation, and hypersensitivity reactions. Modern predictors of peptide–HLA (pMHC) binding and presentation are remarkably accurate, but they are black boxes; their internal computations are opaque and post-hoc explanatory methods lack guarantees of attribution. Here we introduce LAtent Motif INteraction Aggregation (LAMINA), an architecture whose prediction is, by construction, interpretable and attributable. LAMINA embeds every gapless subsequence of the HLA pseudosequence and of the candidate peptide as a learned “soft” motif, scores every HLA–peptide-motif pair, and lastly aggregates those scores to produce a prediction. Despite having only 4.7 million parameters and training in about ten hours on a single desktop workstation, LAMINA matches or exceeds state-of-the-art predictors on held-out binding-affinity regression and is competitive on rank correlation. Strikingly, the model states correlate with interaction energies and other structural metrics in structurally characterized pMHC complexes, despite training exclusively on sequence data alone.",
+  "title": "An interpretable peptide–HLA model emergently learns binding energetics and structure",
+  "identity_tokens": [
+    "DOI:10.64898/2026.09.08.750216"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6a20ab3537dc",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "339320ea58009601690b25c97c1fee2d45a23c4459cc9e2070300c238ef1a446",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0ef39f144fac--libfile_df2165d25fec819194b4a7f84fa6e21f--2026-2601.21096-magellan-compiler-heuristic-evolution-research-20261018-0700-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2601.21096",
+  "worker_completed_at": "2026-10-18T07:00:00+09:00",
+  "worker_run_key": "scheduled-chat-00/20261018-0700/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5012,
+    "body_paragraphs": 30,
+    "method_chars": 1480,
+    "method_paragraphs": 9,
+    "evaluation_chars": 411,
+    "limitation_chars": 633,
+    "insufficiency_flags": [
+      "評価説明量 411 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 411 < 500"
+  ],
+  "processed_at": "2026-10-18T13:47:41+00:00"
+}

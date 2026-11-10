@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e6449ab941199d9-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.28529",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.28529",
+    "identity_tokens": [
+      "arXiv:2607.28529"
+    ],
+    "reason": "The paper improves secure-code metrics through expert co-decoding but reports no serving speedup; the added expert’s decode cost is unmeasured.",
+    "first_checked_at": "2026-10-06T19:55:13+00:00",
+    "last_checked_at": "2026-10-06T19:55:13+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CoGate: Confidence-Gated Co-Decoding for Secure Code Generation"
+  },
+  "processed_at": "2026-10-06T19:55:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e6449ab9411",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

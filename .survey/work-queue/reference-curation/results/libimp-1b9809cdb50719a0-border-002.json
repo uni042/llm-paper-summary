@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1b9809cdb50719a0-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.22146",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.22146",
+    "identity_tokens": [
+      "arXiv:2610.22146",
+      "id:DOI:10.48550/arXiv.2610.22146",
+      "id:arXiv:2610.22146"
+    ],
+    "reason": "VLAの各robot stepでtask-to-vision attentionと重要度分布のinverse-Simpson指標から視覚token予算を動的調整するFastVLAを提案。一次要旨はLLM backbone FLOPs35～59%削減、action latency9～32%短縮、実robotで20%短縮を報告。視覚token圧縮は参考になるが主対象がrobot control loopでLLM推論servingへの直接評価がないためborderline。",
+    "first_checked_at": "2026-11-02T05:57:21+00:00",
+    "last_checked_at": "2026-11-02T05:57:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "FastVLA: Task-Conditioned and Temporally Adaptive Visual Token Compression for Efficient Vision-Language-Action Models"
+  },
+  "processed_at": "2026-11-02T05:57:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b9809cdb507",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

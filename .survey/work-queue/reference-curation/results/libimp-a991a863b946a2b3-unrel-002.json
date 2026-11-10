@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a991a863b946a2b3-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.00025",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.00025",
+    "identity_tokens": [
+      "arXiv:2403.00025"
+    ],
+    "reason": "arXiv一次要旨では画像・文章・動画・分子を含む深層生成モデルの汎用性、信頼性、普及を阻む未解決課題を俯瞰し、研究課題を提案する。LLMの推論実行時資源やサービング機構を設計・評価する研究ではないため、対象外。",
+    "first_checked_at": "2026-10-31T00:43:42+00:00",
+    "last_checked_at": "2026-10-31T00:43:42+00:00",
+    "linked_from": [],
+    "title": "On the Challenges and Opportunities in Generative AI"
+  },
+  "processed_at": "2026-10-31T00:43:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a991a863b946",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

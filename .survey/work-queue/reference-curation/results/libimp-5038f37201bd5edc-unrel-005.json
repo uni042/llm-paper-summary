@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5038f37201bd5edc-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.12299",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.12299",
+    "identity_tokens": [
+      "arXiv:2609.12299"
+    ],
+    "reason": "一次要旨: GPU developers and automated optimizers need performance evidence for semantic code regions--such as neural-network operator implementations and pipeline stages--but this evidence is fragmented across profiling tools. Answering a region-level question can require manually constructing probes and program variants, isolating interfering measurements, and mapping evidence to regions and execution contexts. We present Ar",
+    "first_checked_at": "2026-10-05T06:51:06+00:00",
+    "last_checked_at": "2026-10-05T06:51:06+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md"
+    ],
+    "title": "Argus: Orchestrating Cross-Layer GPU Performance Measurements around Semantic Regions"
+  },
+  "processed_at": "2026-10-05T06:51:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5038f37201bd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

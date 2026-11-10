@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-8f038682340a6e60-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2601.04823",
+  "reason": "DR-LoRA dynamically allocates LoRA ranks to experts during MoE fine-tuning and evaluates training/adaptation quality. The intervention is a parameter-efficient training method; it does not change inference execution, memory, or serving latency.",
+  "title": "DR-LoRA: Dynamic Rank LoRA for Fine-Tuning Mixture-of-Experts Models",
+  "identity_tokens": [
+    "arXiv:2601.04823"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f038682340a",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

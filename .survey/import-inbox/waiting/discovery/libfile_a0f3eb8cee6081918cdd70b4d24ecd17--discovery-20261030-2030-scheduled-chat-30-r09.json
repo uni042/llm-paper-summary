@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r09",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.22854",
+      "identity_tokens": [
+        "arXiv:2607.22854",
+        "DOI:10.48550/arXiv.2607.22854"
+      ],
+      "title": "Coordinated Networking for On-Device Agent-Augmented Real-Time Communication",
+      "reason": "端末上のllama.cppエージェントとライブ動画の通信競合を、アプリ層で帯域を統合制御するHAFSで緩和する。WebRTC試作で映像品質1.5倍、エージェント応答時間31%削減を報告し、オンデバイスLLMシステムの通信・遅延最適化に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2607.22854",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:19+09:00",
+      "last_checked_at": "2026-10-30T20:37:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 305,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.03317",
+      "identity_tokens": [
+        "arXiv:2412.03317",
+        "DOI:10.48550/arXiv.2412.03317"
+      ],
+      "title": "FlashAttention on a Napkin: A Diagrammatic Approach to Deep Learning IO-Awareness",
+      "reason": "GPUの階層的資源とIO転送を図式化し、FlashAttention型のtilingやstreamingを手順化する理論的な最適化方法論。LLM注意カーネルの設計に有用だが、一次要旨で新規実装の実測推論高速化を直接示していない。",
+      "source_url": "https://arxiv.org/abs/2412.03317",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:19+09:00",
+      "last_checked_at": "2026-10-30T20:37:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 307,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02587",
+      "identity_tokens": [
+        "arXiv:2508.02587",
+        "DOI:10.48550/arXiv.2508.02587"
+      ],
+      "title": "Parameter-Efficient Routed Fine-Tuning: Mixture-of-Experts Demands Mixture of Adaptation Modules",
+      "reason": "MoEモデルのPEFTアダプタへルーティングを導入して常識・数学課題の微調整精度を改善する。主対象は訓練・適応効率であり、LLM生成推論のサービング・KV・トークン計算量削減は一次要旨にない。arXiv管理者が別論文との文章重複を注記しているため取り込み時は書誌確認も必要。",
+      "source_url": "https://arxiv.org/abs/2508.02587",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:19+09:00",
+      "last_checked_at": "2026-10-30T20:37:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 308,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.26039",
+      "identity_tokens": [
+        "arXiv:2604.26039",
+        "DOI:10.48550/arXiv.2604.26039"
+      ],
+      "title": "RaMP: Runtime-Aware Megakernel Polymorphism for Mixture-of-Experts",
+      "reason": "実行時のexpert分布ヒストグラムとbatch sizeを使ってMoE megakernel構成を動的に選ぶ。vLLMサービングでTriton比1.30倍、DeepGEMM比1.41倍、FlashInfer CUTLASS比1.13倍のend-to-end改善を報告する。",
+      "source_url": "https://arxiv.org/abs/2604.26039",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:19+09:00",
+      "last_checked_at": "2026-10-30T20:37:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 310,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.23410",
+      "identity_tokens": [
+        "arXiv:2509.23410",
+        "DOI:10.48550/arXiv.2509.23410"
+      ],
+      "title": "PATCH: Learnable Tile-level Hybrid Sparsity for LLMs",
+      "reason": "重みtileを密行列または2:4疎行列として学習マスクで選び、0～50%の連続的な疎性率を実現する。LLaMA-2-7B/A6000で密モデル比end-to-end 1.18～1.38倍高速化し、MaskLLMより精度0.37～2.96%改善と報告。",
+      "source_url": "https://arxiv.org/abs/2509.23410",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:19+09:00",
+      "last_checked_at": "2026-10-30T20:37:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 313,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.19322",
+      "identity_tokens": [
+        "arXiv:2605.19322",
+        "DOI:10.48550/arXiv.2605.19322"
+      ],
+      "title": "DynaTok: Temporally Adaptive and Positional Bias-Aware Token Compression for Video-LLMs",
+      "reason": "動画LLMで時間的な新規性に応じてフレームごとのトークン予算を変え、空間的重複と位置バイアスを補正する訓練不要の圧縮。MVBench等4ベンチマークでトークン90%削減時に元精度95%超を保持する。",
+      "source_url": "https://arxiv.org/abs/2605.19322",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:19+09:00",
+      "last_checked_at": "2026-10-30T20:37:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 314,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.01004",
+      "identity_tokens": [
+        "arXiv:2609.01004",
+        "DOI:10.48550/arXiv.2609.01004"
+      ],
+      "title": "SinkPruner: Sink-Free Visual Token Pruning for Multimodal Large Language Models",
+      "reason": "特徴ノルムが異常に大きい視覚トークンを冗長なsinkとして除き、その後テキスト関連度で重要トークンを残す。89%削減でLLaVA-1.5の元性能96.5%、Qwen2.5-VLの91.8%を保持する訓練不要のMLLM推論圧縮法。",
+      "source_url": "https://arxiv.org/abs/2609.01004",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:19+09:00",
+      "last_checked_at": "2026-10-30T20:37:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 315,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.33977",
+      "identity_tokens": [
+        "arXiv:2609.33977",
+        "DOI:10.48550/arXiv.2609.33977"
+      ],
+      "title": "GroupMask: Layer-Adaptive Group-wise Sparsity for Semi-Structured LLM Pruning",
+      "reason": "重みをgroup単位で削除し、軽量hypernetworkとGumbel-Sigmoidで層別の疎性率を最適化する。LLaMA-2-7Bの50%疎性でWikiText-2 PPLを均一割当10.02から8.30へ改善し、ゼロショット平均精度0.455から0.496へ改善する。",
+      "source_url": "https://arxiv.org/abs/2609.33977",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:19+09:00",
+      "last_checked_at": "2026-10-30T20:37:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 318,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.12355",
+      "identity_tokens": [
+        "arXiv:2506.12355",
+        "DOI:10.48550/arXiv.2506.12355"
+      ],
+      "title": "QiMeng-Attention: SOTA Attention Operator is generated by SOTA Attention Algorithm",
+      "reason": "LLMが注意演算の高水準最適化とGPU低水準実装を分離して生成するLLM-TLと二段階翻訳を提案する。A100/RTX8000/T4で人手実装との比較を行い、通常のLLM生成コード比最大35.16倍の注意演算高速化を報告するカーネル自動生成研究。",
+      "source_url": "https://arxiv.org/abs/2506.12355",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:19+09:00",
+      "last_checked_at": "2026-10-30T20:37:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 321,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.05300",
+      "identity_tokens": [
+        "arXiv:2506.05300",
+        "DOI:10.48550/arXiv.2506.05300"
+      ],
+      "title": "Power Law Guided Dynamic Sifting for Efficient Attention",
+      "reason": "SiftAttentionは注意スコアの上位quantileが生成ステップに沿ってべき乗則に従う観察を利用し、top-kを要しない動的閾値でVベクトルのHBM読出しを減らす。LLM推論のメモリ帯域削減と品質維持を直接評価する近似注意手法。",
+      "source_url": "https://arxiv.org/abs/2506.05300",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:19+09:00",
+      "last_checked_at": "2026-10-30T20:37:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 322,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

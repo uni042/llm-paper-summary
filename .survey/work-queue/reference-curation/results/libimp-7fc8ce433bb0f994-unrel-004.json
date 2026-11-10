@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7fc8ce433bb0f994-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.26164",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.26164",
+    "identity_tokens": [
+      "arXiv:2607.26164"
+    ],
+    "reason": "要旨はIR molecular structure elucidationのdata fusion/contrastive alignmentで、LLM inference効率対象外。",
+    "first_checked_at": "2026-10-05T09:53:07+00:00",
+    "last_checked_at": "2026-10-05T09:53:07+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+    ],
+    "title": "Data Fusion and Contrastive Alignment for Unconstrained IR Molecular Structure Elucidation"
+  },
+  "processed_at": "2026-10-05T09:53:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7fc8ce433bb0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

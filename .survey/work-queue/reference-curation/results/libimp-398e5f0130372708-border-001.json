@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-398e5f0130372708-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.00020",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.00020",
+    "identity_tokens": [
+      "arXiv:2506.00020"
+    ],
+    "reason": "The performance evidence is architecture/synthesis-style estimation and scaled comparisons rather than a measured deployed system; LLM evaluation is limited. Hardware feasibility and current serving benefit remain unclear.",
+    "first_checked_at": "2026-10-05T15:07:41+00:00",
+    "last_checked_at": "2026-10-05T15:07:41+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hybrid SLC-MLC RRAM Mixed-Signal Processing-in-Memory Architecture for Transformer Acceleration via Gradient Redistribution"
+  },
+  "processed_at": "2026-10-05T15:07:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-398e5f013037",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

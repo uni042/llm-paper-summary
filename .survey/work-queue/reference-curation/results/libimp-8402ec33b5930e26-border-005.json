@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8402ec33b5930e26-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/access.2024.3501358",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/access.2024.3501358",
+    "identity_tokens": [
+      "DOI:10.1109/access.2024.3501358"
+    ],
+    "reason": "対象範囲との接点は明白だが、一次本文を取得できず、inference効率の具体的整理・比較内容を評価できないためborderline。",
+    "first_checked_at": "2026-10-05T14:13:41+00:00",
+    "last_checked_at": "2026-10-05T14:13:41+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md",
+      "papers/inference/99-other-inference-systems/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md"
+    ],
+    "title": "Efficient LLMs Training and Inference: An Introduction"
+  },
+  "processed_at": "2026-10-05T14:13:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8402ec33b593",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

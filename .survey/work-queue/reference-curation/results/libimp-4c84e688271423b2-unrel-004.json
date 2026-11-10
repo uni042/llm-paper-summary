@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4c84e688271423b2-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.396",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.396",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.findings-emnlp.396"
+    ],
+    "reason": "一次要旨はLLMとMoEを使った臨床試験アウトカム予測という応用研究であり、LLM推論自体のserving最適化が寄与ではない。",
+    "first_checked_at": "2026-10-05T15:21:58+00:00",
+    "last_checked_at": "2026-10-05T15:21:58+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md"
+    ],
+    "title": "LIFTED: Multimodal Clinical Trial Outcome Prediction via Large Language Models and Mixture-of-Experts"
+  },
+  "processed_at": "2026-10-05T15:21:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c84e6882714",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

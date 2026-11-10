@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1077b0895d760109-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.14167",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.14167",
+    "identity_tokens": [
+      "arXiv:2305.14167"
+    ],
+    "reason": "LLMとopen-vocabulary detectorを組み合わせ、自然言語要求から対象物を推論して検出するreasoning-based object detection研究。最終評価・適用先はcomputer vision/roboticsで、LLM推論runtime・serving効率化ではない。",
+    "first_checked_at": "2026-10-07T01:53:53+00:00",
+    "last_checked_at": "2026-10-07T01:53:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+    ],
+    "title": "DetGPT: Detect What You Need via Reasoning"
+  },
+  "processed_at": "2026-10-07T01:53:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1077b0895d76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

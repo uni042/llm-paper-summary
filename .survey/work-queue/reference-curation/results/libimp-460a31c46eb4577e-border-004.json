@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-460a31c46eb4577e-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.21046",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.21046",
+    "identity_tokens": [
+      "arXiv:2508.21046"
+    ],
+    "reason": "Efficiency gains are concrete, but the evaluated architecture/workload is task-specific VLA robotics, leaving transfer to general LLM inference uncertain.",
+    "first_checked_at": "2026-10-05T12:24:52+00:00",
+    "last_checked_at": "2026-10-05T12:24:52+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md",
+      "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md"
+    ],
+    "title": "CogVLA: Cognition-Aligned Vision-Language-Action Model via Instruction-Driven Routing & Sparsification"
+  },
+  "processed_at": "2026-10-05T12:24:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-460a31c46eb4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

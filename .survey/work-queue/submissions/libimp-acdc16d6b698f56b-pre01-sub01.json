@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Characterization of Request and Token Energy Costs for LLM Inference Workloads on GPU Platforms",
+      "source_url": "https://arxiv.org/abs/2608.28044",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": "IEEE International Symposium on Workload Characterization",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference serving is priced by tokens, but GPU energy is consumed over inference windows. This accounting mismatch makes token-normalized metrics incomplete, since average output-token energy can decrease even when total request energy increases. We characterize this behavior with a decomposed energy model: a fixed one-time prefill with a fixed generation setup cost, while each output-token generation step adds marginal step energy. We evaluate this LLM inference energy model on NVIDIA H100 and H200 GPUs across dense and mixture-of-experts (MoE) models, reporting both request energy and token energy as functions of model type (M), phase (P), batch size (B), context length (C), and output length (N). For Llama-3.2-1B on H200 at batch-16 and context-4K, increasing output length from 10 to 512 tokens reduces token energy from 7.46 to 0.72 J/token while total batched inference-window energy increases from 1.19 to 5.93 kJ. Batching also reduces token energy, but the gain is context-bounded: at 10 output tokens, the batch-16 to batch-1 gain falls from 6.31× at context-512 to 1.17× at context-4K. MoE models amplify this effect: sparse routing and fragmented expert execution increase fixed energy at low concurrency, while batching spreads that energy across more generated tokens and substantially narrows the dense-vs.-MoE token-energy gap. These results show that energy-aware serving should jointly optimize both request energy and token energy, rather than only reducing per-token energy cost.",
+      "identifiers": [
+        "SemanticScholar:aaf46dc87740c49088dedc2036ecaa4814de3791"
+      ],
+      "semantic_scholar_id": "aaf46dc87740c49088dedc2036ecaa4814de3791",
+      "canonical_id": "arXiv:2608.28044",
+      "arxiv_id": "2608.28044",
+      "doi": "10.1109/IISWC71020.2026.00027",
+      "authors": [
+        "Prabhu Vellaisamy",
+        "Vanessa Lam",
+        "Shawn Blanton",
+        "J. Shen"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 71,
+        "matched_prestigious_venue": null
+      },
+      "reason": "H100/H200でprefill固定費とdecodeの増分電力を測定し、トークン当たりエネルギーだけでは要求全体の消費電力を評価できないと示す。",
+      "library_body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "source_url": "https://arxiv.org/abs/2607.28418",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning is a promising approach for improving the efficiency of large language models (LLMs). Static structured pruning is hardware-friendly, but its input-agnostic computation allocation often degrades model quality at high sparsity. Dynamic pruning adapts computation to individual tokens, but coarse-grained layer-level routing limits allocation flexibility, and finer-grained decisions introduce irregular execution that can offset computational savings. To address these challenges, we present WIDE, the first end-to-end differentiable framework that combines token-wise structured dynamic width pruning with GPU kernel co-design for both prefill and decoding. WIDE uses differentiable routers to select GQA-aligned query-head groups and GPU-tile-aligned FFN-channel groups for each token. To execute these decisions efficiently, it reorders routing masks to cluster active tokens within each group, enabling hardware-agnostic block-level skipping and architecture-aware skipping of inactive loads and tensor-core operations. Experiments on the Llama3 and Qwen3 families demonstrate improved quality retention over representative static and dynamic pruning methods. At 50\\% target routing sparsity, WIDE improves Llama3.1-8B average zero-shot accuracy by up to 20.26 points over the strongest dynamic-depth baseline under calibration-only settings, while retaining 97.6\\%/88.2\\% of dense Qwen3-14B likelihood/generation performance after LoRA tuning. Separate latency benchmarks demonstrate end-to-end speedups of up to $1.68\\times$ for prefill and $1.55\\times$ for decoding over the dense baseline. These results demonstrate that pruning--kernel co-design pushes the frontier of token-wise dynamic structured pruning, combining improved quality retention with practical acceleration across both prefill and decoding. Our code is avaliable at \\url{https://github.com/EIT-NLP/LLM-Pruning/tree/main/WIDE}.",
+      "identifiers": [
+        "SemanticScholar:4adf2d6eb97d6758d97e8e9d2e064be694778bb7"
+      ],
+      "semantic_scholar_id": "4adf2d6eb97d6758d97e8e9d2e064be694778bb7",
+      "canonical_id": "arXiv:2607.28418",
+      "arxiv_id": "2607.28418",
+      "doi": "10.48550/arXiv.2607.28418",
+      "authors": [
+        "Hao-Zhe Hu",
+        "Hao Wu",
+        "Pei-Ran Yin",
+        "Chao Han",
+        "Yun-Pu Ma",
+        "Xiao-Yu Shen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": null
+      },
+      "reason": "トークン別にattention headとFFN channelを動的剪定し、mask再配置とブロックスキップを組み合わせる。prefill/decodeのE2E速度をそれぞれ1.68/1.55倍と報告。",
+      "library_body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fixed State, Long Reach: What a Constant-Size Cache Buys Block Diffusion at Scale",
+      "source_url": "https://arxiv.org/abs/2609.11998",
+      "year": 2026,
+      "published": "2026-09-09",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models decode tokens in parallel, but their bidirectional denoiser rules out the naive key--value (KV) cache behind fast autoregressive inference. Block diffusion restores caching by decoding block-by-block, and the block caches deployed on it so far are tied to attention: O(L)in memory and, if used as training-free retrofits, only an approximation of the model's computation. Both constraints can be overcome: sequence mixers that summarize finalized blocks into a reusable state support block caching, and the corresponding block-causal training objective makes the cache exact. We study this recipe at scale, pretraining three 3B block-diffusion denoisers (attention, mamba, and hybrid) on 300B tokens under one single-frontier objective and decoding all three through a single cached interface. Only the state-space cache is O(1) in sequence length: its memory and per-step latency stay constant at any context length, while an attention cache remains O(L). At 256k tokens (where attention has grown to 82GB and 29 ms/step), the Mamba cache delivers 4.3x lower latency, 11x less memory, and 2.6x higher single-stream throughput; and because that footprint is constant it scales with batch as well, reaching 14x the aggregate throughput, where attention cannot run beyond a single stream. The same linear-state bias lets the Mamba and hybrid backbones keep retrieving out to 8-16x their training length, whereas attention's retrieval collapses at 2x, at no measured quality cost.",
+      "identifiers": [
+        "SemanticScholar:02170270f29824b43f84582160ea8d29db91b05c"
+      ],
+      "semantic_scholar_id": "02170270f29824b43f84582160ea8d29db91b05c",
+      "canonical_id": "arXiv:2609.11998",
+      "arxiv_id": "2609.11998",
+      "authors": [
+        "Vaibhav Singh",
+        "Pierre-André Noël",
+        "Torsten Scholak",
+        "Eugene Belilovsky",
+        "Oleksiy Ostapenko"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      },
+      "reason": "block diffusionに対して状態空間モデルの定数サイズ状態を使う厳密キャッシュを提案。256K文脈でattention型キャッシュより単一streamで2.6倍のスループットを報告。",
+      "library_body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.37538",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dynamic sparse attention reduces long-context attention computation by selecting only a subset of tokens, but still requires access to the full KV cache, leaving serving memory-bound. Offloading the KV cache to host memory reduces device memory pressure but places H2D transfers on the decoding critical path. In DSA, substantial overlap in selected KV entries across decoding steps creates an opportunity for device-resident reuse. Exploiting this reuse efficiently, however, presents three critical challenges: costly matching of selected tokens against entries retained in the HBM buffer, uneven distribution of the remaining H2D transfers across accelerator cores, and retaining frequently accessed KV entries within limited HBM capacity. We present AVSG, an operator that addresses these challenges for DSA while preserving its exact token selections. AVSG uses vectorized hash matching to identify reusable HBM-buffer slots and reserve slots for entries requiring transfer, then evenly partitions these H2D transfers across accelerator cores. Lifetime-based buffer management retains frequently accessed KV entries in the device buffer across decoding steps, and shared slot reservations extend reuse across tokens within a multi-token prediction iteration. On a single NPU, vectorized hash matching is 2.80x faster than scalar dual-pointer matching, miss-only transfer raises effective H2D bandwidth by up to 34.44x over request-level assignment, and an 8K-entry buffer reaches a 94.83% hit rate on real requests. These gains translate into end-to-end improvement: on a serving stack processing a real-world production dataset, AVSG reduces time per output token by 39% and increases output throughput by 1.27x relative to the same KV offload layout without HBM-buffer reuse. The code of AVSG is released at https://gitcode.com/cann/cann-recipes-infer.",
+      "identifiers": [
+        "SemanticScholar:8e552f5c548e5e246ee0aa0774cf62f4f7d9919e"
+      ],
+      "semantic_scholar_id": "8e552f5c548e5e246ee0aa0774cf62f4f7d9919e",
+      "canonical_id": "arXiv:2609.37538",
+      "arxiv_id": "2609.37538",
+      "authors": [
+        "Wen-Wei Kuang",
+        "Xiang-Yu Wang",
+        "Chong Wu",
+        "Jun Wang",
+        "Wei-Jie Zhang",
+        "Brian K. Chen",
+        "Long Lan",
+        "Ke-Pan Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      },
+      "reason": "動的疎注意のKV offloadに対しHBM再利用判定とH2D転送分配を最適化。実運用トレースで出力トークン時間39%削減、スループット1.27倍。",
+      "library_body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Accepted Prefixes Are Not All You Need: A Negative Result on PEFT-Based Block-Diffusion Drafting",
+      "source_url": "https://arxiv.org/abs/2607.12422",
+      "year": 2026,
+      "published": "2026-07-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive language model inference by using a cheap drafter to propose multiple future tokens and a target model to verify them. A common design goal is therefore to improve draft quality while reducing auxiliary parameters and systems overhead. We study a negative result for this direction through PEFT-BD, a same-backbone speculative decoding method in which a LoRA-like adapter acts as a block-diffusion drafter for an autoregressive verifier. PEFT-BD is motivated by several attractive properties: it avoids tokenizer mismatch, avoids loading a separate draft model, adds only a small number of trainable parameters, and uses a BD3LM-style denoising objective to propose a block of tokens in parallel. Despite these advantages, PEFT-BD does not yield a practical speedup in our Qwen3-0.6B experiments. Although the method obtains nontrivial accepted prefixes, profiling shows that each speculative step requires an adapter-enabled full-backbone draft pass followed by an adapter-disabled full-backbone verification pass. Thus, the drafter is parameter-efficient but not compute-efficient. Our results isolate a simple but important condition for successful speculative decoding: the drafter must be substantially cheaper to execute than the verifier. Longer accepted prefixes alone cannot compensate when draft computation remains verifier-scale.",
+      "identifiers": [
+        "SemanticScholar:38ca8558f610cea88b42a1d8e943eef9dcb75157"
+      ],
+      "semantic_scholar_id": "38ca8558f610cea88b42a1d8e943eef9dcb75157",
+      "canonical_id": "arXiv:2607.12422",
+      "arxiv_id": "2607.12422",
+      "doi": "10.48550/arXiv.2607.12422",
+      "authors": [
+        "Abdurrahman Javat",
+        "A. Kazakov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 116,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LoRA型ドラフトと同一backbone検証器を用いる投機的復号の負の結果。Qwen3-0.6Bではドラフト実行コストが検証器並みで高速化せず、実効計算量の重要性を示す。",
+      "library_body_check": "primary_arxiv_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-acdc16d6b698",
+    "round": "libimp-acdc16d6b698f56b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-acdc16d6b698f56b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-acdc16d6b698f56b-pre01.json",
+    "receipt": "sha256:51af5cad51d67809fe039bbed156954b0583d573cdb7c5720ff306ce0d187eaa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-acdc16d6b698",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

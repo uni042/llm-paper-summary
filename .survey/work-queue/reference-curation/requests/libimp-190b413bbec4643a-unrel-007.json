@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-190b413bbec4643a-unrel-007",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2101.06840",
+  "reason": "ZeRO-Offload places optimizer states and computation on CPU to make billion-parameter DNN training feasible with a single GPU. The paper's stated goal and measured speedups concern model training and training throughput; it does not optimize LLM inference or serving. Excluded under the workflow's training-process-only rule.",
+  "title": "ZeRO-Offload: Democratizing Billion-Scale Model Training",
+  "identity_tokens": [
+    "arXiv:2101.06840"
+  ],
+  "linked_from": [
+    "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[0]"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-190b413bbec4",
+  "source_precheck_request_id": null
+}

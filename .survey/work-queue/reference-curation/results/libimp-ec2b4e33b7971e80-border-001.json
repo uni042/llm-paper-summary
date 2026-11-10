@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ec2b4e33b7971e80-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+    "identity_tokens": [
+      "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+      "semanticscholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7"
+    ],
+    "reason": "NeurIPS 2020公式要旨は長文BERTの計算量・メモリ増大を、重要文抽出と再読による入力選択で抑え、元テキスト長に依存しないメモリ使用量を報告する。長文脈の計算削減には技術的接点があるが、抽出的BERTの質問応答・分類を主対象とし、自己回帰LLMのKVキャッシュ管理やサービングを扱わないため保留。",
+    "first_checked_at": "2026-10-11T10:43:45+00:00",
+    "last_checked_at": "2026-10-22T15:52:12+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CogLTX: Applying BERT to Long Texts"
+  },
+  "processed_at": "2026-10-22T15:52:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ec2b4e33b797",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

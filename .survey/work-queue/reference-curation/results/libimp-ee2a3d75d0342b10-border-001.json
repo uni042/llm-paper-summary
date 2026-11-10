@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ee2a3d75d0342b10-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.25311",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.25311",
+    "identity_tokens": [
+      "arXiv:2608.25311"
+    ],
+    "reason": "arXiv一次要旨は拡散LMの初回生成を途中prefixで切り、残りを再生成したときの一貫性から正誤を検証するPDCを提案。同一計算予算の独立再生成より推論品質を改善するが、目的はtest-time verificationであり単位生成のレイテンシやメモリ削減が主題ではないため境界的。",
+    "first_checked_at": "2026-10-30T07:22:42+00:00",
+    "last_checked_at": "2026-10-30T07:22:42+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Prefix-Denoising Consistency: Test-Time Verification for Diffusion Language Models"
+  },
+  "processed_at": "2026-10-30T07:22:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ee2a3d75d034",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

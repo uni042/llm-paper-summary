@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6952387f000144f9-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.19139",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.19139",
+    "identity_tokens": [
+      "arXiv:2607.19139"
+    ],
+    "reason": "The paper studies text-to-image diffusion transformers and denoising/attention pruning; the LLM-based text encoder is only conditioning context, not the object of LLM serving optimization.",
+    "first_checked_at": "2026-10-05T03:33:36+00:00",
+    "last_checked_at": "2026-10-05T03:33:36+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md",
+      "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+      "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+      "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md"
+    ],
+    "title": "Text Template Tokens Are Implicit Semantic Registers in Diffusion Transformers"
+  },
+  "processed_at": "2026-10-05T03:33:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6952387f0001",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2809162627ab0377-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.17168",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.17168",
+    "identity_tokens": [
+      "arXiv:2606.17168"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.17168. Abstract summary: When LLM weights are open or fine-tuning is available through an API, suppressing hazardous knowledge and tendencies is not enough: removal has to be deep enough that an adversary cannot restore it. Existing unlearning is shallow by this standard: fine-tuning or a handful of in-context examples brings the behaviour back, and it Out of scope: LLM unlearning/security.",
+    "first_checked_at": "2026-10-05T12:05:38+00:00",
+    "last_checked_at": "2026-10-05T12:05:38+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "RepSelect: Robust LLM Unlearning via Representation Selectivity"
+  },
+  "processed_at": "2026-10-05T12:05:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2809162627ab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

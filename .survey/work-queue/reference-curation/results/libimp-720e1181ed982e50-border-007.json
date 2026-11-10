@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-720e1181ed982e50-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.3390/s26041116",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.3390/s26041116",
+    "identity_tokens": [
+      "DOI:10.3390/s26041116",
+      "SemanticScholar:6021fe2fab6e18f59993ff7d2c515ee09c0dc53d"
+    ],
+    "reason": "The official MDPI article reviews federated LLM systems for Industry 4.0 and discusses computation/communication overhead, edge constraints, and deployment strategies. It is relevant systems context, but as a survey it does not establish a specific new efficiency method or measured inference improvement.",
+    "first_checked_at": "2026-10-13T16:56:09+00:00",
+    "last_checked_at": "2026-10-13T16:56:09+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2023-2309.04255-llmcad-fast-and-scalable-on-device-large-language-model-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Review of Federated Large Language Models for Industry 4.0"
+  },
+  "processed_at": "2026-10-13T16:56:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-720e1181ed98",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

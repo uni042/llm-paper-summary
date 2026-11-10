@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a8e9efd81f7f062-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.16694",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.16694",
+    "identity_tokens": [
+      "arXiv:2606.16694"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16694. Abstract summary: Transformers perform computations through many successive attention and feedforward blocks, allowing them to learn complex correlations between a large collection of coupled variables. When does stacking successive attention-feedforward computations over many layers provide a computational advantage over a single transformer blo Out of scope: Adaptive-depth ICL theory without runtime efficiency evaluation.",
+    "first_checked_at": "2026-10-05T12:05:39+00:00",
+    "last_checked_at": "2026-10-05T12:05:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "When Does Depth Matter For In-Context Learning? Adaptive Inference in Deep Transformers"
+  },
+  "processed_at": "2026-10-05T12:05:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a8e9efd81f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

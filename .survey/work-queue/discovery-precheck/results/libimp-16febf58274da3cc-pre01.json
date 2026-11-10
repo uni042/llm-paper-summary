@@ -1,0 +1,553 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-16febf58274da3cc-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-16febf58274d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2511.21285",
+    "arXiv:2512.09487",
+    "arXiv:2512.24617",
+    "arXiv:2601.10011",
+    "arXiv:2601.18496"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "cd4273099f0a880d0549d453d3fba2977d64503b",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T15:05:50.731354+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2511.21285",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.09487",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.24617",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.10011",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.18496",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space",
+      "source_url": "https://arxiv.org/abs/2512.24617",
+      "year": 2025,
+      "published": "2025-12-31",
+      "venue": "arXiv.org",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) apply uniform computation to all tokens, despite language exhibiting highly non-uniform information density. This token-uniform regime wastes capacity on locally predictable spans while under-allocating computation to semantically critical transitions. We propose $\\textbf{Dynamic Large Concept Models (DLCM)}$, a hierarchical language modeling framework that learns semantic boundaries from latent representations and shifts computation from tokens to a compressed concept space where reasoning is more efficient. DLCM discovers variable-length concepts end-to-end without relying on predefined linguistic units. Hierarchical compression fundamentally changes scaling behavior. We introduce the first $\\textbf{compression-aware scaling law}$, which disentangles token-level capacity, concept-level reasoning capacity, and compression ratio, enabling principled compute allocation under fixed FLOPs. To stably train this heterogeneous architecture, we further develop a $\\textbf{decoupled $\\mu$P parametrization}$ that supports zero-shot hyperparameter transfer across widths and compression regimes. At a practical setting ($R=4$, corresponding to an average of four tokens per concept), DLCM reallocates roughly one-third of inference compute into a higher-capacity reasoning backbone, achieving a $\\textbf{+2.69$\\%$ average improvement}$ across 12 zero-shot benchmarks under matched inference FLOPs.",
+      "identifiers": [
+        "SemanticScholar:69de80854fcafbd28294f45825aef29e79c5e620"
+      ],
+      "semantic_scholar_id": "69de80854fcafbd28294f45825aef29e79c5e620",
+      "canonical_id": "arXiv:2512.24617",
+      "arxiv_id": "2512.24617",
+      "doi": "10.48550/arXiv.2512.24617",
+      "authors": [
+        "Xing-Wei Qu",
+        "Shaowen Wang",
+        "Zihao Huang",
+        "Kai Hua",
+        "Fan Yin",
+        "Ruiming Zhu",
+        "Jundong Zhou",
+        "Qi-Yang Min",
+        "Zihao Wang",
+        "Yizhi Li",
+        "Tianyu Zhang",
+        "He Xing",
+        "Zheng Zhang",
+        "Yuxuan Song",
+        "Tianyu Zheng",
+        "Zhiyuan Zeng",
+        "Cheng-Hua Lin",
+        "Ge Zhang",
+        "Wen-Hao Huang"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 283,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark",
+      "source_url": "https://arxiv.org/abs/2511.21285",
+      "year": 2025,
+      "published": "2025-11-26",
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite the state-of-the-art performance of Large Language Models (LLMs) achieved on many tasks, their massive scale often leads to high computational and environmental costs, limiting their accessibility. Parameter-Efficient Fine-Tuning (PEFT) methods address this challenge by reducing the number of trainable parameters while maintaining strong downstream performance. Despite the advances in PEFT methods, current evaluations remain limited (in terms of evaluated models and datasets) and difficult to reproduce. To bridge this gap, we introduce PEFT-Bench, a unified end-to-end benchmark for evaluating diverse PEFT methods on autoregressive LLMs. We demonstrate its usage across 27 NLP datasets and 7 PEFT methods. To account for different PEFT training and inference factors, we also introduce the PEFT Soft Cost Penalties (PSCP) metric, which takes trainable parameters, inference speed, and training memory usage into account.",
+      "identifiers": [
+        "SemanticScholar:6c8f97f0dbfb37423ddb90075107aba860353d6d"
+      ],
+      "semantic_scholar_id": "6c8f97f0dbfb37423ddb90075107aba860353d6d",
+      "canonical_id": "arXiv:2511.21285",
+      "arxiv_id": "2511.21285",
+      "doi": "10.18653/v1/2026.eacl-long.140",
+      "authors": [
+        "Róbert Belanec",
+        "Branislav Pecher",
+        "I. Srba",
+        "Maria Bielikova"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 318,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2512.09487",
+      "year": 2025,
+      "published": "2025-12-10",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-Augmented Generation (RAG) integrates non-parametric knowledge into Large Language Models (LLMs), typically from unstructured texts and structured graphs. While recent progress has advanced text-based RAG to multi-turn reasoning through Reinforcement Learning (RL), extending these advances to hybrid retrieval introduces additional challenges. Existing graph-based or hybrid systems typically depend on fixed or handcrafted retrieval pipelines, lacking the ability to integrate supplementary evidence as reasoning unfolds. Besides, while graph evidence provides relational structures crucial for multi-hop reasoning, it is substantially more expensive to retrieve. To address these limitations, we introduce \\model{}, an RL-based framework that enables LLMs to perform multi-turn and adaptive graph-text hybrid RAG. \\model{} jointly optimizes the entire generation process via RL, allowing the model to learn when to reason, what to retrieve from either texts or graphs, and when to produce final answers, all within a unified generation policy. To guide this learning process, we design a two-stage training framework that accounts for both task outcome and retrieval efficiency, enabling the model to exploit hybrid evidence while avoiding unnecessary retrieval overhead. Experimental results across five question answering benchmarks demonstrate that \\model{} significantly outperforms existing RAG baselines, highlighting the benefits of end-to-end RL in supporting adaptive and efficient retrieval for complex reasoning.",
+      "identifiers": [
+        "SemanticScholar:49c40859de5459bc49624c325514e67233f30d39"
+      ],
+      "semantic_scholar_id": "49c40859de5459bc49624c325514e67233f30d39",
+      "canonical_id": "arXiv:2512.09487",
+      "arxiv_id": "2512.09487",
+      "doi": "10.48550/arXiv.2512.09487",
+      "authors": [
+        "Yu-Can Guo",
+        "Miao Su",
+        "Saiping Guan",
+        "Zi-Hao Sun",
+        "Xiao-Long Jin",
+        "Jia-Feng Guo",
+        "Xue-Qi Cheng"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 304,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL",
+      "source_url": "https://arxiv.org/abs/2601.10011",
+      "year": 2026,
+      "published": "2026-01-15",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing NL2SQL systems face two critical limitations: (1) they rely on in-context learning with only correct examples, overlooking the rich signal in historical error-fix pairs that could guide more robust self-correction; and (2) test-time scaling approaches often decompose questions arbitrarily, producing near-identical SQL candidates across runs and diminishing ensemble gains. Moreover, these methods suffer from a stark accuracy-efficiency trade-off: high performance demands excessive computation, while fast variants compromise quality. We present Memo-SQL, a training-free framework that addresses these issues through two simple ideas: structured decomposition and experience-aware self-correction. Instead of leaving decomposition to chance, we apply three clear strategies, entity-wise, hierarchical, and atomic sequential, to encourage diverse reasoning. For correction, we build a dynamic memory of both successful queries and historical error-fix pairs, and use retrieval-augmented prompting to bring relevant examples into context at inference time, no fine-tuning or external APIs required. On BIRD, Memo-SQL achieves 68.5% execution accuracy, setting a new state of the art among open, zero-fine-tuning methods, while using over 10 times fewer resources than prior TTS approaches.",
+      "identifiers": [
+        "SemanticScholar:9275f6f44153a0d3a592ac5ac6b521ba2f4a1ea4"
+      ],
+      "semantic_scholar_id": "9275f6f44153a0d3a592ac5ac6b521ba2f4a1ea4",
+      "canonical_id": "arXiv:2601.10011",
+      "arxiv_id": "2601.10011",
+      "doi": "10.48550/arXiv.2601.10011",
+      "authors": [
+        "Ze-Rui Yang",
+        "Weichuan Wang",
+        "Yanwei Xu",
+        "Lin-Qi Song",
+        "Y. Matsuda",
+        "Wei Han",
+        "Bo Bai"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 268,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference",
+      "source_url": "https://arxiv.org/abs/2601.18496",
+      "year": 2026,
+      "published": "2026-01-26",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Medical reasoning models remain constrained by parametric knowledge and are thus susceptible to forgetting and hallucinations. DeepResearch (DR) models ground outputs in verifiable evidence from tools and perform strongly in general domains, but their direct transfer to medical field yields relatively limited gains. We attribute this to two gaps: task characteristic and tool-use scaling. Medical questions require evidence interpretation in a knowledge-intensive clinical context; while general DR models can retrieve information, they often lack clinical-context reasoning and thus\"find it but fail to use it,\"leaving performance limited by medical abilities. Moreover, in medical scenarios, blindly scaling tool-call can inject noisy context, derailing sensitive medical reasoning and prompting repetitive evidence-seeking along incorrect paths. Therefore, we propose DeepMed. For data, we deploy a multi-hop med-search QA synthesis method supporting the model to apply the DR paradigm in medical contexts. For training, we introduce a difficulty-aware turn-penalty to suppress excessive tool-call growth. For inference, we bring a monitor to help validate hypotheses within a controlled number of steps and avoid context rot. Overall, on seven medical benchmarks, DeepMed improves its base model by 9.79\\% on average and outperforms larger medical reasoning and DR models.",
+      "identifiers": [
+        "SemanticScholar:651de358537e09001f21efd2c800c7f7631167b6"
+      ],
+      "semantic_scholar_id": "651de358537e09001f21efd2c800c7f7631167b6",
+      "canonical_id": "arXiv:2601.18496",
+      "arxiv_id": "2601.18496",
+      "doi": "10.48550/arXiv.2601.18496",
+      "authors": [
+        "Zi-Han Wang",
+        "Hao Wang",
+        "Shi Feng",
+        "Xiaocui Yang",
+        "Da-Ling Wang",
+        "Yi-Qun Zhang",
+        "Jing-Hao Lin",
+        "Haihua Yang",
+        "Xiao-Zhong Ji"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.24617",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.24617",
+        "id:SemanticScholar:69de80854fcafbd28294f45825aef29e79c5e620",
+        "id:arXiv:2512.24617",
+        "title:dynamic large concept models latent reasoning in an adaptive semantic space",
+        "url:https://arxiv.org/abs/2512.24617"
+      ],
+      "record": {
+        "title": "Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space",
+        "source_url": "https://arxiv.org/abs/2512.24617",
+        "year": 2025,
+        "published": "2025-12-31",
+        "venue": "arXiv.org",
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) apply uniform computation to all tokens, despite language exhibiting highly non-uniform information density. This token-uniform regime wastes capacity on locally predictable spans while under-allocating computation to semantically critical transitions. We propose $\\textbf{Dynamic Large Concept Models (DLCM)}$, a hierarchical language modeling framework that learns semantic boundaries from latent representations and shifts computation from tokens to a compressed concept space where reasoning is more efficient. DLCM discovers variable-length concepts end-to-end without relying on predefined linguistic units. Hierarchical compression fundamentally changes scaling behavior. We introduce the first $\\textbf{compression-aware scaling law}$, which disentangles token-level capacity, concept-level reasoning capacity, and compression ratio, enabling principled compute allocation under fixed FLOPs. To stably train this heterogeneous architecture, we further develop a $\\textbf{decoupled $\\mu$P parametrization}$ that supports zero-shot hyperparameter transfer across widths and compression regimes. At a practical setting ($R=4$, corresponding to an average of four tokens per concept), DLCM reallocates roughly one-third of inference compute into a higher-capacity reasoning backbone, achieving a $\\textbf{+2.69$\\%$ average improvement}$ across 12 zero-shot benchmarks under matched inference FLOPs.",
+        "identifiers": [
+          "SemanticScholar:69de80854fcafbd28294f45825aef29e79c5e620"
+        ],
+        "semantic_scholar_id": "69de80854fcafbd28294f45825aef29e79c5e620",
+        "canonical_id": "arXiv:2512.24617",
+        "arxiv_id": "2512.24617",
+        "doi": "10.48550/arXiv.2512.24617",
+        "authors": [
+          "Xing-Wei Qu",
+          "Shaowen Wang",
+          "Zihao Huang",
+          "Kai Hua",
+          "Fan Yin",
+          "Ruiming Zhu",
+          "Jundong Zhou",
+          "Qi-Yang Min",
+          "Zihao Wang",
+          "Yizhi Li",
+          "Tianyu Zhang",
+          "He Xing",
+          "Zheng Zhang",
+          "Yuxuan Song",
+          "Tianyu Zheng",
+          "Zhiyuan Zeng",
+          "Cheng-Hua Lin",
+          "Ge Zhang",
+          "Wen-Hao Huang"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 283,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.21285",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.eacl-long.140",
+        "id:SemanticScholar:6c8f97f0dbfb37423ddb90075107aba860353d6d",
+        "id:arXiv:2511.21285",
+        "title:peftbench a parameterefficient finetuning methods benchmark",
+        "url:https://arxiv.org/abs/2511.21285"
+      ],
+      "record": {
+        "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark",
+        "source_url": "https://arxiv.org/abs/2511.21285",
+        "year": 2025,
+        "published": "2025-11-26",
+        "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite the state-of-the-art performance of Large Language Models (LLMs) achieved on many tasks, their massive scale often leads to high computational and environmental costs, limiting their accessibility. Parameter-Efficient Fine-Tuning (PEFT) methods address this challenge by reducing the number of trainable parameters while maintaining strong downstream performance. Despite the advances in PEFT methods, current evaluations remain limited (in terms of evaluated models and datasets) and difficult to reproduce. To bridge this gap, we introduce PEFT-Bench, a unified end-to-end benchmark for evaluating diverse PEFT methods on autoregressive LLMs. We demonstrate its usage across 27 NLP datasets and 7 PEFT methods. To account for different PEFT training and inference factors, we also introduce the PEFT Soft Cost Penalties (PSCP) metric, which takes trainable parameters, inference speed, and training memory usage into account.",
+        "identifiers": [
+          "SemanticScholar:6c8f97f0dbfb37423ddb90075107aba860353d6d"
+        ],
+        "semantic_scholar_id": "6c8f97f0dbfb37423ddb90075107aba860353d6d",
+        "canonical_id": "arXiv:2511.21285",
+        "arxiv_id": "2511.21285",
+        "doi": "10.18653/v1/2026.eacl-long.140",
+        "authors": [
+          "Róbert Belanec",
+          "Branislav Pecher",
+          "I. Srba",
+          "Maria Bielikova"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 318,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.09487",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.09487",
+        "id:SemanticScholar:49c40859de5459bc49624c325514e67233f30d39",
+        "id:arXiv:2512.09487",
+        "title:routerag efficient retrievalaugmented generation from text and graph via reinforcement learning",
+        "url:https://arxiv.org/abs/2512.09487"
+      ],
+      "record": {
+        "title": "RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2512.09487",
+        "year": 2025,
+        "published": "2025-12-10",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-Augmented Generation (RAG) integrates non-parametric knowledge into Large Language Models (LLMs), typically from unstructured texts and structured graphs. While recent progress has advanced text-based RAG to multi-turn reasoning through Reinforcement Learning (RL), extending these advances to hybrid retrieval introduces additional challenges. Existing graph-based or hybrid systems typically depend on fixed or handcrafted retrieval pipelines, lacking the ability to integrate supplementary evidence as reasoning unfolds. Besides, while graph evidence provides relational structures crucial for multi-hop reasoning, it is substantially more expensive to retrieve. To address these limitations, we introduce \\model{}, an RL-based framework that enables LLMs to perform multi-turn and adaptive graph-text hybrid RAG. \\model{} jointly optimizes the entire generation process via RL, allowing the model to learn when to reason, what to retrieve from either texts or graphs, and when to produce final answers, all within a unified generation policy. To guide this learning process, we design a two-stage training framework that accounts for both task outcome and retrieval efficiency, enabling the model to exploit hybrid evidence while avoiding unnecessary retrieval overhead. Experimental results across five question answering benchmarks demonstrate that \\model{} significantly outperforms existing RAG baselines, highlighting the benefits of end-to-end RL in supporting adaptive and efficient retrieval for complex reasoning.",
+        "identifiers": [
+          "SemanticScholar:49c40859de5459bc49624c325514e67233f30d39"
+        ],
+        "semantic_scholar_id": "49c40859de5459bc49624c325514e67233f30d39",
+        "canonical_id": "arXiv:2512.09487",
+        "arxiv_id": "2512.09487",
+        "doi": "10.48550/arXiv.2512.09487",
+        "authors": [
+          "Yu-Can Guo",
+          "Miao Su",
+          "Saiping Guan",
+          "Zi-Hao Sun",
+          "Xiao-Long Jin",
+          "Jia-Feng Guo",
+          "Xue-Qi Cheng"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 304,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.10011",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.10011",
+        "id:SemanticScholar:9275f6f44153a0d3a592ac5ac6b521ba2f4a1ea4",
+        "id:arXiv:2601.10011",
+        "title:memosql structured decomposition and experiencedriven selfcorrection for trainingfree nl2sql",
+        "url:https://arxiv.org/abs/2601.10011"
+      ],
+      "record": {
+        "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL",
+        "source_url": "https://arxiv.org/abs/2601.10011",
+        "year": 2026,
+        "published": "2026-01-15",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing NL2SQL systems face two critical limitations: (1) they rely on in-context learning with only correct examples, overlooking the rich signal in historical error-fix pairs that could guide more robust self-correction; and (2) test-time scaling approaches often decompose questions arbitrarily, producing near-identical SQL candidates across runs and diminishing ensemble gains. Moreover, these methods suffer from a stark accuracy-efficiency trade-off: high performance demands excessive computation, while fast variants compromise quality. We present Memo-SQL, a training-free framework that addresses these issues through two simple ideas: structured decomposition and experience-aware self-correction. Instead of leaving decomposition to chance, we apply three clear strategies, entity-wise, hierarchical, and atomic sequential, to encourage diverse reasoning. For correction, we build a dynamic memory of both successful queries and historical error-fix pairs, and use retrieval-augmented prompting to bring relevant examples into context at inference time, no fine-tuning or external APIs required. On BIRD, Memo-SQL achieves 68.5% execution accuracy, setting a new state of the art among open, zero-fine-tuning methods, while using over 10 times fewer resources than prior TTS approaches.",
+        "identifiers": [
+          "SemanticScholar:9275f6f44153a0d3a592ac5ac6b521ba2f4a1ea4"
+        ],
+        "semantic_scholar_id": "9275f6f44153a0d3a592ac5ac6b521ba2f4a1ea4",
+        "canonical_id": "arXiv:2601.10011",
+        "arxiv_id": "2601.10011",
+        "doi": "10.48550/arXiv.2601.10011",
+        "authors": [
+          "Ze-Rui Yang",
+          "Weichuan Wang",
+          "Yanwei Xu",
+          "Lin-Qi Song",
+          "Y. Matsuda",
+          "Wei Han",
+          "Bo Bai"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 268,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.18496",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.18496",
+        "id:SemanticScholar:651de358537e09001f21efd2c800c7f7631167b6",
+        "id:arXiv:2601.18496",
+        "title:deepmed building a medical deepresearch agent via multihop medsearch data and turncontrolled agentic training inference",
+        "url:https://arxiv.org/abs/2601.18496"
+      ],
+      "record": {
+        "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference",
+        "source_url": "https://arxiv.org/abs/2601.18496",
+        "year": 2026,
+        "published": "2026-01-26",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Medical reasoning models remain constrained by parametric knowledge and are thus susceptible to forgetting and hallucinations. DeepResearch (DR) models ground outputs in verifiable evidence from tools and perform strongly in general domains, but their direct transfer to medical field yields relatively limited gains. We attribute this to two gaps: task characteristic and tool-use scaling. Medical questions require evidence interpretation in a knowledge-intensive clinical context; while general DR models can retrieve information, they often lack clinical-context reasoning and thus\"find it but fail to use it,\"leaving performance limited by medical abilities. Moreover, in medical scenarios, blindly scaling tool-call can inject noisy context, derailing sensitive medical reasoning and prompting repetitive evidence-seeking along incorrect paths. Therefore, we propose DeepMed. For data, we deploy a multi-hop med-search QA synthesis method supporting the model to apply the DR paradigm in medical contexts. For training, we introduce a difficulty-aware turn-penalty to suppress excessive tool-call growth. For inference, we bring a monitor to help validate hypotheses within a controlled number of steps and avoid context rot. Overall, on seven medical benchmarks, DeepMed improves its base model by 9.79\\% on average and outperforms larger medical reasoning and DR models.",
+        "identifiers": [
+          "SemanticScholar:651de358537e09001f21efd2c800c7f7631167b6"
+        ],
+        "semantic_scholar_id": "651de358537e09001f21efd2c800c7f7631167b6",
+        "canonical_id": "arXiv:2601.18496",
+        "arxiv_id": "2601.18496",
+        "doi": "10.48550/arXiv.2601.18496",
+        "authors": [
+          "Zi-Han Wang",
+          "Hao Wang",
+          "Shi Feng",
+          "Xiaocui Yang",
+          "Da-Ling Wang",
+          "Yi-Qun Zhang",
+          "Jing-Hao Lin",
+          "Haihua Yang",
+          "Xiao-Zhong Ji"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 257,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6c0c00bb0932046f84f8949005eb0b841c8f7e460ef866dae547c2b0e1f603d8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-22812f16de79a957-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s42979-025-04160-5",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s42979-025-04160-5",
+    "identity_tokens": [
+      "DOI:10.1007/s42979-025-04160-5"
+    ],
+    "reason": "Semantic search is crucial in fields such as medicine, research, and data search, where adapting search systems to user needs is a challenge. This study proposes optimizing document representations using an agent-based approach that incorporates contextual embeddings of document titles, passages, and user queries. We evaluate eleven document representation strategies that combine embeddings of document title, document passages and relevant user queries using weighted linear combinations, averaging, and clustering. Each document is modeled as an agent, that uses aforementioned strategies to opt",
+    "first_checked_at": "2026-10-06T13:09:20+00:00",
+    "last_checked_at": "2026-10-06T13:09:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+    ],
+    "title": "Agent-Based Optimization of Document Representations in Semantic Search"
+  },
+  "processed_at": "2026-10-06T13:09:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-22812f16de79",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9df7bb4832544bf-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2302.04542",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2302.04542",
+    "identity_tokens": [
+      "arXiv:2302.04542"
+    ],
+    "reason": "効率的attentionという基礎接点はあるが、本文のlanguage experimentsは従来のTransformer task中心でLLM-scale serving relevanceが弱いためborderline。",
+    "first_checked_at": "2026-10-05T14:16:15+00:00",
+    "last_checked_at": "2026-10-05T14:16:15+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+    ],
+    "title": "Efficient Attention via Control Variates"
+  },
+  "processed_at": "2026-10-05T14:16:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9df7bb48325",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

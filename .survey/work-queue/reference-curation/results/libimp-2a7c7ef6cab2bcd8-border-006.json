@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2a7c7ef6cab2bcd8-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/cloud53861.2021.00022",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/cloud53861.2021.00022",
+    "identity_tokens": [
+      "DOI:10.1109/cloud53861.2021.00022",
+      "SemanticScholar:a9b4082225da33ed9a91e474b3255ef77811bd1e"
+    ],
+    "reason": "The official IEEE CLOUD 2021 program and IEEE Xplore document 9582161 route corroborate the title/venue; Xplore returned a JavaScript robot-verification page, leaving the primary abstract unread.",
+    "first_checked_at": "2026-10-13T01:21:53+00:00",
+    "last_checked_at": "2026-10-13T01:21:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+      "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ChatCache: A Hierarchical Semantic Redundancy Cache System for Conversational Services at Edge"
+  },
+  "processed_at": "2026-10-13T01:21:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2a7c7ef6cab2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

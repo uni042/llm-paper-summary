@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-236e6e0ee6de3882-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tase.2025.3612154",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tase.2025.3612154",
+    "identity_tokens": [
+      "DOI:10.1109/tase.2025.3612154"
+    ],
+    "reason": "Primary abstract reviewed at https://doi.org/10.1109/TASE.2025.3612154. Abstract summary: Given the rapid emergence and applications of Multi-Modal Large Language Models (MM-LLMs) across various scientific fields, insights regarding their applicability in agriculture are still only partially explored. This paper conducts an in-depth review of MM-LLMs in agriculture, focusing on understanding how MM-LLMs can be develo Out of scope: Agriculture multimodal LLM survey/application, not inference-system optimization.",
+    "first_checked_at": "2026-10-05T12:32:43+00:00",
+    "last_checked_at": "2026-10-05T12:32:43+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md"
+    ],
+    "title": "Multi-Modal LLMs in Agriculture: A Comprehensive Review"
+  },
+  "processed_at": "2026-10-05T12:32:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-236e6e0ee6de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

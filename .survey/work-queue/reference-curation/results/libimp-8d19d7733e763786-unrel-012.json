@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8d19d7733e763786-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.20426",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.20426",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2026.acl-long.1824",
+      "SemanticScholar:ec2d5078637a19ed0c25bd4442629eb7be9d3914",
+      "arXiv:2607.20426"
+    ],
+    "reason": "Title focuses on MoE decoding to mitigate hallucinations, a reliability/quality objective rather than system efficiency; title-only exclusion. Official arXiv title omits a typographic space; the supplied input title is retained for input matching.",
+    "first_checked_at": "2026-10-13T06:32:30+00:00",
+    "last_checked_at": "2026-10-13T06:32:30+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md"
+    ],
+    "title": "Knowledge Injection Exists in MoE? Exploring Expert-Aware Contrast Decoding in MoE for Mitigating LLMs'Hallucinations"
+  },
+  "processed_at": "2026-10-13T06:32:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8d19d7733e76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

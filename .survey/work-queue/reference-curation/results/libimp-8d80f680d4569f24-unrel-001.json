@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8d80f680d4569f24-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.20786",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.20786",
+    "identity_tokens": [
+      "arXiv:2606.20786"
+    ],
+    "reason": "Processing-in-DRAMのsecurity benefits/challengesを扱うhardware security survey/overviewで、LLM inferenceを対象にしていない。",
+    "first_checked_at": "2026-10-05T02:49:32+00:00",
+    "last_checked_at": "2026-10-05T02:49:32+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+      "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+      "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
+      "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+    ],
+    "title": "Memory-Centric Computing: Security Benefits and Challenges of Processing-in-DRAM"
+  },
+  "processed_at": "2026-10-05T02:49:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8d80f680d456",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

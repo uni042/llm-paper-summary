@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-380162f2057431eb-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s00799-026-00445-z",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s00799-026-00445-z",
+    "identity_tokens": [
+      "DOI:10.1007/s00799-026-00445-z"
+    ],
+    "reason": "会話検索の明確化質問用PEFTとprompt engineeringを比較するfine-tuning研究で、推論時の計算/メモリ/latency効率は扱わない。",
+    "first_checked_at": "2026-10-06T10:21:22+00:00",
+    "last_checked_at": "2026-10-06T10:21:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+    ],
+    "title": "From “people also ask” to clarifying questions for conversational search using parameter-efficient fine-tuning and prompt engineering"
+  },
+  "processed_at": "2026-10-06T10:21:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-380162f20574",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

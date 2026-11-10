@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8d37a36ef5c2d418-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.20558",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.20558",
+    "identity_tokens": [
+      "arXiv:2310.20558"
+    ],
+    "reason": "encoder-only BERTの分類タスクに限定され、autoregressive LLMの生成・servingではないため適用範囲が弱い。",
+    "first_checked_at": "2026-10-05T14:39:49+00:00",
+    "last_checked_at": "2026-10-05T14:39:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Breaking the Token Barrier: Chunking and Convolution for Efficient Long Text Classification with BERT"
+  },
+  "processed_at": "2026-10-05T14:39:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8d37a36ef5c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

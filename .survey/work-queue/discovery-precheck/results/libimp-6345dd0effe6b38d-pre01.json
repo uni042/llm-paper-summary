@@ -1,0 +1,1226 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6345dd0effe6b38d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6345dd0effe6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.future.2026.108646",
+    "arXiv:2410.09675",
+    "arXiv:2502.08910",
+    "arXiv:2505.11271",
+    "arXiv:2506.06579",
+    "arXiv:2508.00904",
+    "arXiv:2509.21081",
+    "arXiv:2510.02361",
+    "arXiv:2511.06010",
+    "arXiv:2605.02888",
+    "arXiv:2605.12001",
+    "arXiv:2607.20457",
+    "arXiv:2609.21704"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d83fe50e3fc98ad82eab51b270a69a804b1ebb33",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 13,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T08:33:10.810942+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.future.2026.108646",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.09675",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.08910",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.11271",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.06579",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.00904",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.21081",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.02361",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.06010",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.02888",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.12001",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.20457",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.21704",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CR^2: Cost-Aware Risk-Controlled Routing for Wireless Device-Edge LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.12001",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) move from centralized clouds to mobile edge environments, efficient serving must balance latency, energy consumption, and accuracy under constrained device-edge resources. Query-level routing between lightweight on-device models and stronger edge models provides a flexible mechanism to navigate this trade-off. However, existing routers are designed for centralized cloud settings and optimize token-level costs, failing to capture the dynamic latency and energy overheads in wireless edge deployments. In this paper, we formulate mobile edge LLM routing as a deployment-constrained, cost-aware decision problem, and propose CR^2, a two-stage device-edge routing framework. CR^2 decouples a lightweight on-device margin gate from an edge-side utility selector for deferred queries. The margin gate operates on frozen query embeddings and a user-specified cost weight to predict whether local execution is utility-optimal relative to the best edge alternative under the target operating point. We further introduce a conformal risk control (CRC) calibration procedure that maps each operating point to an acceptance threshold, enabling explicit control of the marginal false-acceptance risk under the full-information utility reference. Experiments on the routing task show that CR^2 closely matches a full-information reference router using only device-side signals before deferral. Compared with strong query-level baselines, CR^2 consistently improves the deployable accuracy-cost Pareto frontier and reduces normalized deployment cost by up to 16.9% at matched accuracy.",
+      "identifiers": [
+        "SemanticScholar:5cc95e77fcc3100a5b202d1a5e42bd51ea03d7d3"
+      ],
+      "semantic_scholar_id": "5cc95e77fcc3100a5b202d1a5e42bd51ea03d7d3",
+      "canonical_id": "arXiv:2605.12001",
+      "arxiv_id": "2605.12001",
+      "doi": "10.48550/arXiv.2605.12001",
+      "authors": [
+        "Nan Xue",
+        "Shengkang Chen",
+        "Zhi-Yong Chen",
+        "Jiangchao Yao",
+        "Yaping Sun",
+        "Zixia Hu",
+        "Mei-Xia Tao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HALO: A heterogeneous accelerator for low-latency and energy-efficient edge LLM inference",
+      "source_url": "https://doi.org/10.1016/j.future.2026.108646",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "Future generations computer systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:8adef927b8cb1ef9b02ddc7433a2ccb9c31eaeff"
+      ],
+      "semantic_scholar_id": "8adef927b8cb1ef9b02ddc7433a2ccb9c31eaeff",
+      "doi": "10.1016/j.future.2026.108646",
+      "canonical_id": "DOI:10.1016/j.future.2026.108646",
+      "authors": [
+        "Kunming Zhang",
+        "Zhihua Fan",
+        "Yan-Huan Liu",
+        "Lexin Wang",
+        "Yu-Qun Liu",
+        "Haibin Wu",
+        "Xiaochun Ye",
+        "Wen-Ming Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Forecasting LLM Inference Performance via Hardware-Agnostic Analytical Modeling",
+      "source_url": "https://arxiv.org/abs/2508.00904",
+      "year": 2025,
+      "published": "2025-07-29",
+      "venue": "arXiv.org",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have been increasingly deployed as local agents on personal devices with CPUs, NPUs and integrated GPUs. However, forecasting inference performance on devices with such heterogeneity remains challenging due to the dynamic compute and memory demands. Existing approaches rely on GPU benchmarking or machine learning-based latency predictors, which are often hardware-specific and lack generalizability. To this end, we introduce LIFE, a lightweight and modular analytical framework that is comprised of modular analytical model of operators, configurable to characterize LLM inference workloads in a hardware and dataset-agnostic manner. LIFE characterizes the influence of software and model optimizations, such as quantization, KV cache compression, LoRA adapters, chunked prefill, different attentions, and operator fusion, on performance metrics such as time-to-first-token (TTFT), time-per-output-token (TPOT) and tokens-per-second (TPS). LIFE enables performance forecasting using only hardware specifications, such as TOPS and memory bandwidth, without requiring extensive dataset benchmarking. We validate LIFE's forecasting with inference on AMD Ryzen CPUs, NPUs, iGPUs and NVIDIA V100 GPUs, with Llama2-7B variants, demonstrating the utility of LIFE in forecasting LLM performance through lens of system efficiency to enable efficient LLM deployment across different hardware platforms.",
+      "identifiers": [
+        "SemanticScholar:1903115dad39b7903d2341ac7b01d17681d01c49"
+      ],
+      "semantic_scholar_id": "1903115dad39b7903d2341ac7b01d17681d01c49",
+      "canonical_id": "arXiv:2508.00904",
+      "arxiv_id": "2508.00904",
+      "doi": "10.48550/arXiv.2508.00904",
+      "authors": [
+        "Rajeev Patwari",
+        "Ashish Sirasao",
+        "Devleena Das"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 442,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Towards Efficient Multi-LLM Inference: Characterization and Analysis of LLM Routing and Hierarchical Techniques",
+      "source_url": "https://arxiv.org/abs/2506.06579",
+      "year": 2025,
+      "published": "2025-06-06",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent progress in Language Models (LMs) has dramatically advanced the field of natural language processing (NLP), excelling at tasks like text generation, summarization, and question answering. However, their inference remains computationally expensive and energy intensive, especially in settings with limited hardware, power, or bandwidth. This makes it difficult to deploy LMs in mobile, edge, or cost sensitive environments. To address these challenges, recent approaches have introduced multi LLM intelligent model selection strategies that dynamically allocate computational resources based on query complexity -- using lightweight models for simpler queries and escalating to larger models only when necessary. This survey explores two complementary strategies for efficient LLM inference: (i) routing, which selects the most suitable model based on the query, and (ii) cascading or hierarchical inference (HI), which escalates queries through a sequence of models until a confident response is found. Both approaches aim to reduce computation by using lightweight models for simpler tasks while offloading only when needed. We provide a comparative analysis of these techniques across key performance metrics, discuss benchmarking efforts, and outline open challenges. Finally, we outline future research directions to enable faster response times, adaptive model selection based on task complexity, and scalable deployment across heterogeneous environments, making LLM based systems more efficient and accessible for real world applications.",
+      "identifiers": [
+        "SemanticScholar:3bbafaace2b2343695c90d38903b9fbdd7fadf17"
+      ],
+      "semantic_scholar_id": "3bbafaace2b2343695c90d38903b9fbdd7fadf17",
+      "canonical_id": "arXiv:2506.06579",
+      "arxiv_id": "2506.06579",
+      "doi": "10.48550/arXiv.2506.06579",
+      "authors": [
+        "Adarsh Prasad Behera",
+        "J. Champati",
+        "Roberto Morabito",
+        "Sasu Tarkoma",
+        "J. Gross"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 495,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "InfiniteHiP: Extending Language Model Context Up to 3 Million Tokens on a Single GPU",
+      "source_url": "https://arxiv.org/abs/2502.08910",
+      "year": 2025,
+      "published": "2025-02-13",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In modern large language models (LLMs), handling very long context lengths presents significant challenges as it causes slower inference speeds and increased memory costs. Additionally, most existing pre-trained LLMs fail to generalize beyond their original training sequence lengths. To enable efficient and practical long-context utilization, we introduce InfiniteHiP, a novel, and practical LLM inference framework that accelerates processing by dynamically eliminating irrelevant context tokens through a modular hierarchical token pruning algorithm. Our method also allows generalization to longer sequences by selectively applying various RoPE adjustment methods according to the internal attention patterns within LLMs. Furthermore, we offload the key-value cache to host memory during inference, significantly reducing GPU memory pressure. As a result, InfiniteHiP enables the processing of up to 3 million tokens on a single L40s 48GB GPU -- 3x larger -- without any permanent loss of context information. Our framework achieves an 18.95x speedup in attention decoding for a 1 million token context without requiring additional training. We implement our method in the SGLang framework and demonstrate its effectiveness and practicality through extensive evaluations.",
+      "identifiers": [
+        "SemanticScholar:3610debc26235a43ee50d4fb3e2b5bd8209f7fd0"
+      ],
+      "semantic_scholar_id": "3610debc26235a43ee50d4fb3e2b5bd8209f7fd0",
+      "canonical_id": "arXiv:2502.08910",
+      "arxiv_id": "2502.08910",
+      "doi": "10.48550/arXiv.2502.08910",
+      "authors": [
+        "Heejun Lee",
+        "Geon Park",
+        "J. Suh",
+        "Sung Ju Hwang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 608,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SpecQuant – Speculative Decoding with Multi-Parent Quantization for Adaptive LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.21704",
+      "year": 2026,
+      "published": "2026-03-01",
+      "venue": "2026 Fifth International Conference on Power, Control and Computing Technologies (ICPC2T)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Running large language models (LLMs) locally continues to be limited by restrictions of compute and memory on consumer hardware. The popular acceleration technologies, such as quantization, speculative decoding, and adaptive inferencing, offer substantial speed boosts but usually necessitate retraining, per architecture tuning, or draft models. SpecQuant is a trainingfree framework, that combines speculative decoding with multiparent quantization to perform adaptive, efficient inference of LLMs. SpecQuant derives multiple quantized variants (INT4, FP8, FP16) from a shared base model, and dynamically routes queries based on predicted complexity; lightweight variants are used for simple or factual tasks, and full-precision models are used for complex reasoning tasks or long-context inputs. The shared-weight design of SpecQuant ensures sufficient token acceptance for speculative decoding without compatibility issues using separate draft parent models. We evaluate SpecQuant on Qwen2.5 based models on the MMLU, AlpacaEval, and GSM8K datasets, or benchmarks, demonstrating 35-43% speedups without degrading accuracy greater than 2%, substantial within the LLM community. SpecQuant enables practical on-device LLM deployment across diverse hardware without special infrastructure or expertise.",
+      "identifiers": [
+        "SemanticScholar:f3ab6786ff2ecddb91d4e33d61fae1dace762501"
+      ],
+      "semantic_scholar_id": "f3ab6786ff2ecddb91d4e33d61fae1dace762501",
+      "canonical_id": "arXiv:2609.21704",
+      "arxiv_id": "2609.21704",
+      "doi": "10.1109/ICPC2T68221.2026.11646348",
+      "authors": [
+        "Harish Kb",
+        "Jagadeeswaran M",
+        "Pradheep P",
+        "Yuvanesh S",
+        "Sivakumar T"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+      "source_url": "https://arxiv.org/abs/2605.02888",
+      "year": 2026,
+      "published": "2026-05-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a small draft model to propose candidate tokens that a larger target model verifies. A critical hyperparameter in this process is the speculation length $\\gamma$, which determines how many tokens the draft model proposes per step. Nearly all existing systems use a fixed $\\gamma$ (typically 4), yet empirical evidence suggests that the optimal value varies across task types and, crucially, depends on the compression level applied to the target model. In this paper, we present SpecKV, a lightweight adaptive controller that selects $\\gamma$ per speculation step using signals extracted from the draft model itself. We profile speculative decoding across 4 task categories, 4 speculation lengths, and 3 compression levels (FP16, INT8, NF4), collecting 5,112 step-level records with per-step acceptance rates, draft entropy, and draft confidence. We demonstrate that the optimal $\\gamma$ shifts across compression regimes and that draft model confidence and entropy are strong predictors of acceptance rate (correlation $\\approx$ 0.56). SpecKV uses a small MLP trained on these signals to maximize expected tokens per speculation step, achieving a 56.0% improvement over the fixed-$\\gamma=4$ baseline with only 0.34 ms overhead per decision (<0.5% of step time). The improvement is statistically significant (p<0.001, paired bootstrap test). We release all profiling data, trained models, and notebooks as open-source artifacts.",
+      "identifiers": [
+        "SemanticScholar:a46f2d6c9bfc5e9e2a93cab70c95d5ccec9eee9a"
+      ],
+      "semantic_scholar_id": "a46f2d6c9bfc5e9e2a93cab70c95d5ccec9eee9a",
+      "canonical_id": "arXiv:2605.02888",
+      "arxiv_id": "2605.02888",
+      "doi": "10.48550/arXiv.2605.02888",
+      "authors": [
+        "Shikhar Shukla"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 163,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dropping the Anchor: Statistical Context Summarization for Distributed Systems via Pulsar Attention",
+      "source_url": "https://arxiv.org/abs/2607.20457",
+      "year": 2026,
+      "published": "2026-05-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference with large language models (LLMs) on long sequences is computationally expensive due to the quadratic complexity of self-attention. Distributed blockwise methods such as Star Attention reduce this cost by sharding context across hosts, but rely on prepending a static, content-blind copy of the first block to every host. We propose Pulsar Attention, which replaces the static anchor with two lightweight, content-aware components: a small attention-sink prefix that stabilizes softmax, and compact cross-block summaries built via a Max-IDF heuristic that selects chunks containing globally rare tokens. This reduces the Phase 1 per-GPU FLOPs by up to 3.3x over Star Attention while retaining an identical KV cache footprint. On RULER with Llama-3.1-8B-Instruct, Pulsar Attention outperforms Star Attention at sequence lengths up to 128K tokens and remains competitive with dense attention across most tasks, with task-dependent absolute gains of up to 4.7% over the dense baseline.",
+      "identifiers": [
+        "SemanticScholar:5906636198b7b50eb94e2d26dedd89f5cb79df84"
+      ],
+      "semantic_scholar_id": "5906636198b7b50eb94e2d26dedd89f5cb79df84",
+      "canonical_id": "arXiv:2607.20457",
+      "arxiv_id": "2607.20457",
+      "doi": "10.48550/arXiv.2607.20457",
+      "authors": [
+        "Aryan Sood",
+        "Shantanu Acharya"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 153,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Semantic Caching of Contextual Summaries for Efficient Question-Answering with Language Models",
+      "source_url": "https://arxiv.org/abs/2505.11271",
+      "year": 2025,
+      "published": "2025-05-16",
+      "venue": "International Conference on Computer Communications and Networks",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are increasingly deployed across edge and cloud platforms for real-time question-answering (QA) and retrieval-augmented generation (RAG). Processing lengthy contexts in such distributed systems incurs high computational, memory, and bandwidth cost. We introduce a semantic caching approach that differs from existing KV-cache techniques: rather than caching low-level key-value tensors (which require model-internal access), we cache textual intermediate summaries compatible with black-box LLM APIs. Unlike prior semantic caching that stores end-to-end query-answer pairs, we target intermediate stages in multi-step RAG workflows, enabling reuse across semantically related queries. The method reduces redundant computation by 50-60% while preserving answer quality on NaturalQuestions, TriviaQA, and a synthetic ArXiv dataset, balancing cost and quality for real-time AI assistants in cloud and edge deployments.",
+      "identifiers": [
+        "SemanticScholar:5241902a96e4f2512883163f96987c3142be0d23"
+      ],
+      "semantic_scholar_id": "5241902a96e4f2512883163f96987c3142be0d23",
+      "canonical_id": "arXiv:2505.11271",
+      "arxiv_id": "2505.11271",
+      "doi": "10.1109/ICCCN69946.2026.11662998",
+      "authors": [
+        "Camille Couturier",
+        "Spyros Mastorakis",
+        "Haiying Shen",
+        "Saravan Rajmohan",
+        "Victor Rühle"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 516,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "COrAL: Order-Agnostic Language Modeling for Efficient Iterative Refinement",
+      "source_url": "https://arxiv.org/abs/2410.09675",
+      "year": 2024,
+      "published": "2024-10-12",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Iterative refinement has emerged as an effective paradigm for enhancing the capabilities of large language models (LLMs) on complex tasks. However, existing approaches typically implement iterative refinement at the application or prompting level, relying on autoregressive (AR) modeling. The sequential token generation in AR models can lead to high inference latency. To overcome these challenges, we propose Context-Wise Order-Agnostic Language Modeling (COrAL), which incorporates iterative refinement directly into the LLM architecture while maintaining computational efficiency. Our approach models multiple token dependencies within manageable context windows, enabling the model to perform iterative refinement internally during the generation process. Leveraging the order-agnostic nature of COrAL, we introduce sliding blockwise order-agnostic decoding, which performs multi-token forward prediction and backward reconstruction within context windows. This allows the model to iteratively refine its outputs in parallel in the sliding block, effectively capturing diverse dependencies without the high inference cost of sequential generation. Empirical evaluations on reasoning tasks demonstrate that COrAL improves performance and inference speed, respectively, achieving absolute accuracy gains of $4.6\\%$ on GSM8K and $4.0\\%$ on LogiQA, along with inference speedups of up to $3.9\\times$ over next-token baselines. Preliminary results on code generation indicate a drop in pass rates due to inconsistencies in order-agnostic outputs, highlighting the inherent quality--speed trade-off. Our code is publicly available at https://github.com/YuxiXie/COrAL.",
+      "identifiers": [
+        "SemanticScholar:b3b8e8dcd58d69204a222ca21df3f13b558d2f61"
+      ],
+      "semantic_scholar_id": "b3b8e8dcd58d69204a222ca21df3f13b558d2f61",
+      "canonical_id": "arXiv:2410.09675",
+      "arxiv_id": "2410.09675",
+      "doi": "10.48550/arXiv.2410.09675",
+      "authors": [
+        "Yuxi Xie",
+        "Anirudh Goyal",
+        "Xiao-Bao Wu",
+        "Xun-Jian Yin",
+        "Xiao Xu",
+        "Min-Yen Kan",
+        "Liangming Pan",
+        "William Yang Wang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 732,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MoSKA: Mixture of Shared KV Attention for Efficient Long-Sequence LLM Inference",
+      "source_url": "https://arxiv.org/abs/2511.06010",
+      "year": 2025,
+      "published": "2025-07-01",
+      "venue": "IEEE computer architecture letters",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The escalating context length in Large Language Models (LLMs) creates a severe performance bottleneck around the Key-Value (KV) cache, whose memory-bound nature leads to significant GPU under-utilization. This paper introduces Mixture of Shared KV Attention (MoSKA), an architecture that addresses this challenge by exploiting the heterogeneity of context data. It differentiates between per-request unique and massively reused shared sequences. The core of MoSKA is a novel Shared KV Attention mechanism that transforms the attention on shared data from a series of memory-bound GEMV operations into a single, compute-bound GEMM by batching concurrent requests. This is supported by an MoE-inspired sparse attention strategy that prunes the search space and a tailored Disaggregated Infrastructure that specializes hardware for unique and shared data. This comprehensive approach demonstrates a throughput increase of up to 538.7 × over baselines in workloads with high context sharing, offering a clear architectural path toward scalable LLM inference",
+      "identifiers": [
+        "SemanticScholar:3914821856ed3a34617223f9506e4b9c5b14076d"
+      ],
+      "semantic_scholar_id": "3914821856ed3a34617223f9506e4b9c5b14076d",
+      "canonical_id": "arXiv:2511.06010",
+      "arxiv_id": "2511.06010",
+      "doi": "10.1109/LCA.2025.3627539",
+      "authors": [
+        "Myunghyun Rhee",
+        "Sookyung Choi",
+        "Euiseok Kim",
+        "Joonseop Sim",
+        "Youngpyo Joo",
+        "Hoshik Kim"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 470,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TyphoonMLA: A Mixed Naive-Absorb MLA Kernel For Shared Prefix",
+      "source_url": "https://arxiv.org/abs/2509.21081",
+      "year": 2025,
+      "published": "2025-09-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-Head Latent Attention (MLA) is a recent attention mechanism adopted in state-of-the-art LLMs such as DeepSeek-v3 and Kimi K2. Thanks to its novel formulation, MLA allows two functionally equivalent but computationally distinct kernel implementations: naive and absorb. While the naive kernels (e.g., FlashAttention) are typically preferred in training and prefill for their computational efficiency, existing decoding kernels (e.g., FlashMLA) rely on the absorb method to minimize HBM bandwidth usage. However, the compute-bound nature of the absorb implementations prohibits performance benefits from data reuse opportunities in attention calculations, such as shared prefixes. In this work, we introduce TyphoonMLA, a hybrid approach that combines naive and absorb formulations to harness the strengths of both. TyphoonMLA effectively leverages the shared prefix by applying the naive formulation to the compute-bound parts of attention calculations, while reducing the bandwidth requirements for non-shared parts by using the absorb formulation. As a result, TyphoonMLA improves the throughput of attention calculations in MLA architectures by up to 3x and 3.24x on NPU and GPUs, with only a 3% overhead in HBM size.",
+      "identifiers": [
+        "SemanticScholar:4e3403cfa117f6f4b44292b5d9942872904e9bb7"
+      ],
+      "semantic_scholar_id": "4e3403cfa117f6f4b44292b5d9942872904e9bb7",
+      "canonical_id": "arXiv:2509.21081",
+      "arxiv_id": "2509.21081",
+      "doi": "10.48550/arXiv.2509.21081",
+      "authors": [
+        "Ahmet Caner Yüzügüler",
+        "Ahmet Çelik",
+        "Jiawei Zhuang",
+        "Lukas Cavigelli"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 384,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ChunkLLM: A Lightweight Pluggable Framework for Accelerating LLMs Inference",
+      "source_url": "https://arxiv.org/abs/2510.02361",
+      "year": 2025,
+      "published": "2025-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large models excel in natural language processing and computer vision, but face severe computational inefficiencies due to the self-attention's quadratic complexity with input tokens. Recently, researchers have proposed a series of methods based on block selection and compression to alleviate this problem, but they either have issues with semantic incompleteness or poor training-inference efficiency. To comprehensively address these challenges, we propose ChunkLLM, a lightweight and pluggable training framework. Specifically, we introduce two components: QK Adapter (Q-Adapter and K-Adapter) and Chunk Adapter. The former is attached to each Transformer layer, serving dual purposes of feature compression and chunk attention acquisition. The latter operates at the bottommost layer of the model, functioning to detect chunk boundaries by leveraging contextual semantic information. During the training phase, the parameters of the backbone remain frozen, with only the QK Adapter and Chunk Adapter undergoing training. Notably, we design an attention distillation method for training the QK Adapter, which enhances the recall rate of key chunks. During the inference phase, chunk selection is triggered exclusively when the current token is detected as a chunk boundary, thereby accelerating model inference. Experimental evaluations are conducted on a diverse set of long-text and short-text benchmark datasets spanning multiple tasks. ChunkLLM not only attains comparable performance on short-text benchmarks but also maintains 98.64% of the performance on long-context benchmarks while preserving a 48.58% key-value cache retention rate. Particularly, ChunkLLM attains a maximum speedup of 4.48x in comparison to the vanilla Transformer in the processing of 120K long texts.",
+      "identifiers": [
+        "SemanticScholar:237fd4c91fb34ebdb6ed8bbab1ec9b49ad4aac82"
+      ],
+      "semantic_scholar_id": "237fd4c91fb34ebdb6ed8bbab1ec9b49ad4aac82",
+      "canonical_id": "arXiv:2510.02361",
+      "arxiv_id": "2510.02361",
+      "doi": "10.48550/arXiv.2510.02361",
+      "authors": [
+        "Haojie Ouyang",
+        "Jian-Wei Lv",
+        "Lei Ren",
+        "Chen Wei",
+        "Xiaojie Wang",
+        "Fangxiang Feng"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 381,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.12001",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.12001",
+        "id:SemanticScholar:5cc95e77fcc3100a5b202d1a5e42bd51ea03d7d3",
+        "id:arXiv:2605.12001",
+        "title:cr2 costaware riskcontrolled routing for wireless deviceedge llm inference",
+        "url:https://arxiv.org/abs/2605.12001"
+      ],
+      "record": {
+        "title": "CR^2: Cost-Aware Risk-Controlled Routing for Wireless Device-Edge LLM Inference",
+        "source_url": "https://arxiv.org/abs/2605.12001",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) move from centralized clouds to mobile edge environments, efficient serving must balance latency, energy consumption, and accuracy under constrained device-edge resources. Query-level routing between lightweight on-device models and stronger edge models provides a flexible mechanism to navigate this trade-off. However, existing routers are designed for centralized cloud settings and optimize token-level costs, failing to capture the dynamic latency and energy overheads in wireless edge deployments. In this paper, we formulate mobile edge LLM routing as a deployment-constrained, cost-aware decision problem, and propose CR^2, a two-stage device-edge routing framework. CR^2 decouples a lightweight on-device margin gate from an edge-side utility selector for deferred queries. The margin gate operates on frozen query embeddings and a user-specified cost weight to predict whether local execution is utility-optimal relative to the best edge alternative under the target operating point. We further introduce a conformal risk control (CRC) calibration procedure that maps each operating point to an acceptance threshold, enabling explicit control of the marginal false-acceptance risk under the full-information utility reference. Experiments on the routing task show that CR^2 closely matches a full-information reference router using only device-side signals before deferral. Compared with strong query-level baselines, CR^2 consistently improves the deployable accuracy-cost Pareto frontier and reduces normalized deployment cost by up to 16.9% at matched accuracy.",
+        "identifiers": [
+          "SemanticScholar:5cc95e77fcc3100a5b202d1a5e42bd51ea03d7d3"
+        ],
+        "semantic_scholar_id": "5cc95e77fcc3100a5b202d1a5e42bd51ea03d7d3",
+        "canonical_id": "arXiv:2605.12001",
+        "arxiv_id": "2605.12001",
+        "doi": "10.48550/arXiv.2605.12001",
+        "authors": [
+          "Nan Xue",
+          "Shengkang Chen",
+          "Zhi-Yong Chen",
+          "Jiangchao Yao",
+          "Yaping Sun",
+          "Zixia Hu",
+          "Mei-Xia Tao"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 155,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.future.2026.108646",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.future.2026.108646",
+        "id:SemanticScholar:8adef927b8cb1ef9b02ddc7433a2ccb9c31eaeff",
+        "title:halo a heterogeneous accelerator for lowlatency and energyefficient edge llm inference",
+        "url:https://doi.org/10.1016/j.future.2026.108646"
+      ],
+      "record": {
+        "title": "HALO: A heterogeneous accelerator for low-latency and energy-efficient edge LLM inference",
+        "source_url": "https://doi.org/10.1016/j.future.2026.108646",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "Future generations computer systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:8adef927b8cb1ef9b02ddc7433a2ccb9c31eaeff"
+        ],
+        "semantic_scholar_id": "8adef927b8cb1ef9b02ddc7433a2ccb9c31eaeff",
+        "doi": "10.1016/j.future.2026.108646",
+        "canonical_id": "DOI:10.1016/j.future.2026.108646",
+        "authors": [
+          "Kunming Zhang",
+          "Zhihua Fan",
+          "Yan-Huan Liu",
+          "Lexin Wang",
+          "Yu-Qun Liu",
+          "Haibin Wu",
+          "Xiaochun Ye",
+          "Wen-Ming Li"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 135,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.00904",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.00904",
+        "id:SemanticScholar:1903115dad39b7903d2341ac7b01d17681d01c49",
+        "id:arXiv:2508.00904",
+        "title:forecasting llm inference performance via hardwareagnostic analytical modeling",
+        "url:https://arxiv.org/abs/2508.00904"
+      ],
+      "record": {
+        "title": "Forecasting LLM Inference Performance via Hardware-Agnostic Analytical Modeling",
+        "source_url": "https://arxiv.org/abs/2508.00904",
+        "year": 2025,
+        "published": "2025-07-29",
+        "venue": "arXiv.org",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have been increasingly deployed as local agents on personal devices with CPUs, NPUs and integrated GPUs. However, forecasting inference performance on devices with such heterogeneity remains challenging due to the dynamic compute and memory demands. Existing approaches rely on GPU benchmarking or machine learning-based latency predictors, which are often hardware-specific and lack generalizability. To this end, we introduce LIFE, a lightweight and modular analytical framework that is comprised of modular analytical model of operators, configurable to characterize LLM inference workloads in a hardware and dataset-agnostic manner. LIFE characterizes the influence of software and model optimizations, such as quantization, KV cache compression, LoRA adapters, chunked prefill, different attentions, and operator fusion, on performance metrics such as time-to-first-token (TTFT), time-per-output-token (TPOT) and tokens-per-second (TPS). LIFE enables performance forecasting using only hardware specifications, such as TOPS and memory bandwidth, without requiring extensive dataset benchmarking. We validate LIFE's forecasting with inference on AMD Ryzen CPUs, NPUs, iGPUs and NVIDIA V100 GPUs, with Llama2-7B variants, demonstrating the utility of LIFE in forecasting LLM performance through lens of system efficiency to enable efficient LLM deployment across different hardware platforms.",
+        "identifiers": [
+          "SemanticScholar:1903115dad39b7903d2341ac7b01d17681d01c49"
+        ],
+        "semantic_scholar_id": "1903115dad39b7903d2341ac7b01d17681d01c49",
+        "canonical_id": "arXiv:2508.00904",
+        "arxiv_id": "2508.00904",
+        "doi": "10.48550/arXiv.2508.00904",
+        "authors": [
+          "Rajeev Patwari",
+          "Ashish Sirasao",
+          "Devleena Das"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 442,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.06579",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.06579",
+        "id:SemanticScholar:3bbafaace2b2343695c90d38903b9fbdd7fadf17",
+        "id:arXiv:2506.06579",
+        "title:towards efficient multillm inference characterization and analysis of llm routing and hierarchical techniques",
+        "url:https://arxiv.org/abs/2506.06579"
+      ],
+      "record": {
+        "title": "Towards Efficient Multi-LLM Inference: Characterization and Analysis of LLM Routing and Hierarchical Techniques",
+        "source_url": "https://arxiv.org/abs/2506.06579",
+        "year": 2025,
+        "published": "2025-06-06",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent progress in Language Models (LMs) has dramatically advanced the field of natural language processing (NLP), excelling at tasks like text generation, summarization, and question answering. However, their inference remains computationally expensive and energy intensive, especially in settings with limited hardware, power, or bandwidth. This makes it difficult to deploy LMs in mobile, edge, or cost sensitive environments. To address these challenges, recent approaches have introduced multi LLM intelligent model selection strategies that dynamically allocate computational resources based on query complexity -- using lightweight models for simpler queries and escalating to larger models only when necessary. This survey explores two complementary strategies for efficient LLM inference: (i) routing, which selects the most suitable model based on the query, and (ii) cascading or hierarchical inference (HI), which escalates queries through a sequence of models until a confident response is found. Both approaches aim to reduce computation by using lightweight models for simpler tasks while offloading only when needed. We provide a comparative analysis of these techniques across key performance metrics, discuss benchmarking efforts, and outline open challenges. Finally, we outline future research directions to enable faster response times, adaptive model selection based on task complexity, and scalable deployment across heterogeneous environments, making LLM based systems more efficient and accessible for real world applications.",
+        "identifiers": [
+          "SemanticScholar:3bbafaace2b2343695c90d38903b9fbdd7fadf17"
+        ],
+        "semantic_scholar_id": "3bbafaace2b2343695c90d38903b9fbdd7fadf17",
+        "canonical_id": "arXiv:2506.06579",
+        "arxiv_id": "2506.06579",
+        "doi": "10.48550/arXiv.2506.06579",
+        "authors": [
+          "Adarsh Prasad Behera",
+          "J. Champati",
+          "Roberto Morabito",
+          "Sasu Tarkoma",
+          "J. Gross"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 495,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.08910",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.08910",
+        "id:SemanticScholar:3610debc26235a43ee50d4fb3e2b5bd8209f7fd0",
+        "id:arXiv:2502.08910",
+        "title:infinitehip extending language model context up to 3 million tokens on a single gpu",
+        "url:https://arxiv.org/abs/2502.08910"
+      ],
+      "record": {
+        "title": "InfiniteHiP: Extending Language Model Context Up to 3 Million Tokens on a Single GPU",
+        "source_url": "https://arxiv.org/abs/2502.08910",
+        "year": 2025,
+        "published": "2025-02-13",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In modern large language models (LLMs), handling very long context lengths presents significant challenges as it causes slower inference speeds and increased memory costs. Additionally, most existing pre-trained LLMs fail to generalize beyond their original training sequence lengths. To enable efficient and practical long-context utilization, we introduce InfiniteHiP, a novel, and practical LLM inference framework that accelerates processing by dynamically eliminating irrelevant context tokens through a modular hierarchical token pruning algorithm. Our method also allows generalization to longer sequences by selectively applying various RoPE adjustment methods according to the internal attention patterns within LLMs. Furthermore, we offload the key-value cache to host memory during inference, significantly reducing GPU memory pressure. As a result, InfiniteHiP enables the processing of up to 3 million tokens on a single L40s 48GB GPU -- 3x larger -- without any permanent loss of context information. Our framework achieves an 18.95x speedup in attention decoding for a 1 million token context without requiring additional training. We implement our method in the SGLang framework and demonstrate its effectiveness and practicality through extensive evaluations.",
+        "identifiers": [
+          "SemanticScholar:3610debc26235a43ee50d4fb3e2b5bd8209f7fd0"
+        ],
+        "semantic_scholar_id": "3610debc26235a43ee50d4fb3e2b5bd8209f7fd0",
+        "canonical_id": "arXiv:2502.08910",
+        "arxiv_id": "2502.08910",
+        "doi": "10.48550/arXiv.2502.08910",
+        "authors": [
+          "Heejun Lee",
+          "Geon Park",
+          "J. Suh",
+          "Sung Ju Hwang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 608,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.21704",
+      "identity_tokens": [
+        "id:DOI:10.1109/icpc2t68221.2026.11646348",
+        "id:SemanticScholar:f3ab6786ff2ecddb91d4e33d61fae1dace762501",
+        "id:arXiv:2609.21704",
+        "title:specquant speculative decoding with multiparent quantization for adaptive llm inference",
+        "url:https://arxiv.org/abs/2609.21704"
+      ],
+      "record": {
+        "title": "SpecQuant – Speculative Decoding with Multi-Parent Quantization for Adaptive LLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.21704",
+        "year": 2026,
+        "published": "2026-03-01",
+        "venue": "2026 Fifth International Conference on Power, Control and Computing Technologies (ICPC2T)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Running large language models (LLMs) locally continues to be limited by restrictions of compute and memory on consumer hardware. The popular acceleration technologies, such as quantization, speculative decoding, and adaptive inferencing, offer substantial speed boosts but usually necessitate retraining, per architecture tuning, or draft models. SpecQuant is a trainingfree framework, that combines speculative decoding with multiparent quantization to perform adaptive, efficient inference of LLMs. SpecQuant derives multiple quantized variants (INT4, FP8, FP16) from a shared base model, and dynamically routes queries based on predicted complexity; lightweight variants are used for simple or factual tasks, and full-precision models are used for complex reasoning tasks or long-context inputs. The shared-weight design of SpecQuant ensures sufficient token acceptance for speculative decoding without compatibility issues using separate draft parent models. We evaluate SpecQuant on Qwen2.5 based models on the MMLU, AlpacaEval, and GSM8K datasets, or benchmarks, demonstrating 35-43% speedups without degrading accuracy greater than 2%, substantial within the LLM community. SpecQuant enables practical on-device LLM deployment across diverse hardware without special infrastructure or expertise.",
+        "identifiers": [
+          "SemanticScholar:f3ab6786ff2ecddb91d4e33d61fae1dace762501"
+        ],
+        "semantic_scholar_id": "f3ab6786ff2ecddb91d4e33d61fae1dace762501",
+        "canonical_id": "arXiv:2609.21704",
+        "arxiv_id": "2609.21704",
+        "doi": "10.1109/ICPC2T68221.2026.11646348",
+        "authors": [
+          "Harish Kb",
+          "Jagadeeswaran M",
+          "Pradheep P",
+          "Yuvanesh S",
+          "Sivakumar T"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 227,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.02888",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.02888",
+        "id:SemanticScholar:a46f2d6c9bfc5e9e2a93cab70c95d5ccec9eee9a",
+        "id:arXiv:2605.02888",
+        "title:speckv adaptive speculative decoding with compressionaware gamma selection",
+        "url:https://arxiv.org/abs/2605.02888"
+      ],
+      "record": {
+        "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+        "source_url": "https://arxiv.org/abs/2605.02888",
+        "year": 2026,
+        "published": "2026-05-04",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a small draft model to propose candidate tokens that a larger target model verifies. A critical hyperparameter in this process is the speculation length $\\gamma$, which determines how many tokens the draft model proposes per step. Nearly all existing systems use a fixed $\\gamma$ (typically 4), yet empirical evidence suggests that the optimal value varies across task types and, crucially, depends on the compression level applied to the target model. In this paper, we present SpecKV, a lightweight adaptive controller that selects $\\gamma$ per speculation step using signals extracted from the draft model itself. We profile speculative decoding across 4 task categories, 4 speculation lengths, and 3 compression levels (FP16, INT8, NF4), collecting 5,112 step-level records with per-step acceptance rates, draft entropy, and draft confidence. We demonstrate that the optimal $\\gamma$ shifts across compression regimes and that draft model confidence and entropy are strong predictors of acceptance rate (correlation $\\approx$ 0.56). SpecKV uses a small MLP trained on these signals to maximize expected tokens per speculation step, achieving a 56.0% improvement over the fixed-$\\gamma=4$ baseline with only 0.34 ms overhead per decision (<0.5% of step time). The improvement is statistically significant (p<0.001, paired bootstrap test). We release all profiling data, trained models, and notebooks as open-source artifacts.",
+        "identifiers": [
+          "SemanticScholar:a46f2d6c9bfc5e9e2a93cab70c95d5ccec9eee9a"
+        ],
+        "semantic_scholar_id": "a46f2d6c9bfc5e9e2a93cab70c95d5ccec9eee9a",
+        "canonical_id": "arXiv:2605.02888",
+        "arxiv_id": "2605.02888",
+        "doi": "10.48550/arXiv.2605.02888",
+        "authors": [
+          "Shikhar Shukla"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 163,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.20457",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.20457",
+        "id:SemanticScholar:5906636198b7b50eb94e2d26dedd89f5cb79df84",
+        "id:arXiv:2607.20457",
+        "title:dropping the anchor statistical context summarization for distributed systems via pulsar attention",
+        "url:https://arxiv.org/abs/2607.20457"
+      ],
+      "record": {
+        "title": "Dropping the Anchor: Statistical Context Summarization for Distributed Systems via Pulsar Attention",
+        "source_url": "https://arxiv.org/abs/2607.20457",
+        "year": 2026,
+        "published": "2026-05-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Inference with large language models (LLMs) on long sequences is computationally expensive due to the quadratic complexity of self-attention. Distributed blockwise methods such as Star Attention reduce this cost by sharding context across hosts, but rely on prepending a static, content-blind copy of the first block to every host. We propose Pulsar Attention, which replaces the static anchor with two lightweight, content-aware components: a small attention-sink prefix that stabilizes softmax, and compact cross-block summaries built via a Max-IDF heuristic that selects chunks containing globally rare tokens. This reduces the Phase 1 per-GPU FLOPs by up to 3.3x over Star Attention while retaining an identical KV cache footprint. On RULER with Llama-3.1-8B-Instruct, Pulsar Attention outperforms Star Attention at sequence lengths up to 128K tokens and remains competitive with dense attention across most tasks, with task-dependent absolute gains of up to 4.7% over the dense baseline.",
+        "identifiers": [
+          "SemanticScholar:5906636198b7b50eb94e2d26dedd89f5cb79df84"
+        ],
+        "semantic_scholar_id": "5906636198b7b50eb94e2d26dedd89f5cb79df84",
+        "canonical_id": "arXiv:2607.20457",
+        "arxiv_id": "2607.20457",
+        "doi": "10.48550/arXiv.2607.20457",
+        "authors": [
+          "Aryan Sood",
+          "Shantanu Acharya"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 153,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.11271",
+      "identity_tokens": [
+        "id:DOI:10.1109/icccn69946.2026.11662998",
+        "id:SemanticScholar:5241902a96e4f2512883163f96987c3142be0d23",
+        "id:arXiv:2505.11271",
+        "title:semantic caching of contextual summaries for efficient questionanswering with language models",
+        "url:https://arxiv.org/abs/2505.11271"
+      ],
+      "record": {
+        "title": "Semantic Caching of Contextual Summaries for Efficient Question-Answering with Language Models",
+        "source_url": "https://arxiv.org/abs/2505.11271",
+        "year": 2025,
+        "published": "2025-05-16",
+        "venue": "International Conference on Computer Communications and Networks",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) are increasingly deployed across edge and cloud platforms for real-time question-answering (QA) and retrieval-augmented generation (RAG). Processing lengthy contexts in such distributed systems incurs high computational, memory, and bandwidth cost. We introduce a semantic caching approach that differs from existing KV-cache techniques: rather than caching low-level key-value tensors (which require model-internal access), we cache textual intermediate summaries compatible with black-box LLM APIs. Unlike prior semantic caching that stores end-to-end query-answer pairs, we target intermediate stages in multi-step RAG workflows, enabling reuse across semantically related queries. The method reduces redundant computation by 50-60% while preserving answer quality on NaturalQuestions, TriviaQA, and a synthetic ArXiv dataset, balancing cost and quality for real-time AI assistants in cloud and edge deployments.",
+        "identifiers": [
+          "SemanticScholar:5241902a96e4f2512883163f96987c3142be0d23"
+        ],
+        "semantic_scholar_id": "5241902a96e4f2512883163f96987c3142be0d23",
+        "canonical_id": "arXiv:2505.11271",
+        "arxiv_id": "2505.11271",
+        "doi": "10.1109/ICCCN69946.2026.11662998",
+        "authors": [
+          "Camille Couturier",
+          "Spyros Mastorakis",
+          "Haiying Shen",
+          "Saravan Rajmohan",
+          "Victor Rühle"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 516,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.09675",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.09675",
+        "id:SemanticScholar:b3b8e8dcd58d69204a222ca21df3f13b558d2f61",
+        "id:arXiv:2410.09675",
+        "title:coral orderagnostic language modeling for efficient iterative refinement",
+        "url:https://arxiv.org/abs/2410.09675"
+      ],
+      "record": {
+        "title": "COrAL: Order-Agnostic Language Modeling for Efficient Iterative Refinement",
+        "source_url": "https://arxiv.org/abs/2410.09675",
+        "year": 2024,
+        "published": "2024-10-12",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Iterative refinement has emerged as an effective paradigm for enhancing the capabilities of large language models (LLMs) on complex tasks. However, existing approaches typically implement iterative refinement at the application or prompting level, relying on autoregressive (AR) modeling. The sequential token generation in AR models can lead to high inference latency. To overcome these challenges, we propose Context-Wise Order-Agnostic Language Modeling (COrAL), which incorporates iterative refinement directly into the LLM architecture while maintaining computational efficiency. Our approach models multiple token dependencies within manageable context windows, enabling the model to perform iterative refinement internally during the generation process. Leveraging the order-agnostic nature of COrAL, we introduce sliding blockwise order-agnostic decoding, which performs multi-token forward prediction and backward reconstruction within context windows. This allows the model to iteratively refine its outputs in parallel in the sliding block, effectively capturing diverse dependencies without the high inference cost of sequential generation. Empirical evaluations on reasoning tasks demonstrate that COrAL improves performance and inference speed, respectively, achieving absolute accuracy gains of $4.6\\%$ on GSM8K and $4.0\\%$ on LogiQA, along with inference speedups of up to $3.9\\times$ over next-token baselines. Preliminary results on code generation indicate a drop in pass rates due to inconsistencies in order-agnostic outputs, highlighting the inherent quality--speed trade-off. Our code is publicly available at https://github.com/YuxiXie/COrAL.",
+        "identifiers": [
+          "SemanticScholar:b3b8e8dcd58d69204a222ca21df3f13b558d2f61"
+        ],
+        "semantic_scholar_id": "b3b8e8dcd58d69204a222ca21df3f13b558d2f61",
+        "canonical_id": "arXiv:2410.09675",
+        "arxiv_id": "2410.09675",
+        "doi": "10.48550/arXiv.2410.09675",
+        "authors": [
+          "Yuxi Xie",
+          "Anirudh Goyal",
+          "Xiao-Bao Wu",
+          "Xun-Jian Yin",
+          "Xiao Xu",
+          "Min-Yen Kan",
+          "Liangming Pan",
+          "William Yang Wang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 732,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.06010",
+      "identity_tokens": [
+        "id:DOI:10.1109/lca.2025.3627539",
+        "id:SemanticScholar:3914821856ed3a34617223f9506e4b9c5b14076d",
+        "id:arXiv:2511.06010",
+        "title:moska mixture of shared kv attention for efficient longsequence llm inference",
+        "url:https://arxiv.org/abs/2511.06010"
+      ],
+      "record": {
+        "title": "MoSKA: Mixture of Shared KV Attention for Efficient Long-Sequence LLM Inference",
+        "source_url": "https://arxiv.org/abs/2511.06010",
+        "year": 2025,
+        "published": "2025-07-01",
+        "venue": "IEEE computer architecture letters",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The escalating context length in Large Language Models (LLMs) creates a severe performance bottleneck around the Key-Value (KV) cache, whose memory-bound nature leads to significant GPU under-utilization. This paper introduces Mixture of Shared KV Attention (MoSKA), an architecture that addresses this challenge by exploiting the heterogeneity of context data. It differentiates between per-request unique and massively reused shared sequences. The core of MoSKA is a novel Shared KV Attention mechanism that transforms the attention on shared data from a series of memory-bound GEMV operations into a single, compute-bound GEMM by batching concurrent requests. This is supported by an MoE-inspired sparse attention strategy that prunes the search space and a tailored Disaggregated Infrastructure that specializes hardware for unique and shared data. This comprehensive approach demonstrates a throughput increase of up to 538.7 × over baselines in workloads with high context sharing, offering a clear architectural path toward scalable LLM inference",
+        "identifiers": [
+          "SemanticScholar:3914821856ed3a34617223f9506e4b9c5b14076d"
+        ],
+        "semantic_scholar_id": "3914821856ed3a34617223f9506e4b9c5b14076d",
+        "canonical_id": "arXiv:2511.06010",
+        "arxiv_id": "2511.06010",
+        "doi": "10.1109/LCA.2025.3627539",
+        "authors": [
+          "Myunghyun Rhee",
+          "Sookyung Choi",
+          "Euiseok Kim",
+          "Joonseop Sim",
+          "Youngpyo Joo",
+          "Hoshik Kim"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 470,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.21081",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.21081",
+        "id:SemanticScholar:4e3403cfa117f6f4b44292b5d9942872904e9bb7",
+        "id:arXiv:2509.21081",
+        "title:typhoonmla a mixed naiveabsorb mla kernel for shared prefix",
+        "url:https://arxiv.org/abs/2509.21081"
+      ],
+      "record": {
+        "title": "TyphoonMLA: A Mixed Naive-Absorb MLA Kernel For Shared Prefix",
+        "source_url": "https://arxiv.org/abs/2509.21081",
+        "year": 2025,
+        "published": "2025-09-25",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-Head Latent Attention (MLA) is a recent attention mechanism adopted in state-of-the-art LLMs such as DeepSeek-v3 and Kimi K2. Thanks to its novel formulation, MLA allows two functionally equivalent but computationally distinct kernel implementations: naive and absorb. While the naive kernels (e.g., FlashAttention) are typically preferred in training and prefill for their computational efficiency, existing decoding kernels (e.g., FlashMLA) rely on the absorb method to minimize HBM bandwidth usage. However, the compute-bound nature of the absorb implementations prohibits performance benefits from data reuse opportunities in attention calculations, such as shared prefixes. In this work, we introduce TyphoonMLA, a hybrid approach that combines naive and absorb formulations to harness the strengths of both. TyphoonMLA effectively leverages the shared prefix by applying the naive formulation to the compute-bound parts of attention calculations, while reducing the bandwidth requirements for non-shared parts by using the absorb formulation. As a result, TyphoonMLA improves the throughput of attention calculations in MLA architectures by up to 3x and 3.24x on NPU and GPUs, with only a 3% overhead in HBM size.",
+        "identifiers": [
+          "SemanticScholar:4e3403cfa117f6f4b44292b5d9942872904e9bb7"
+        ],
+        "semantic_scholar_id": "4e3403cfa117f6f4b44292b5d9942872904e9bb7",
+        "canonical_id": "arXiv:2509.21081",
+        "arxiv_id": "2509.21081",
+        "doi": "10.48550/arXiv.2509.21081",
+        "authors": [
+          "Ahmet Caner Yüzügüler",
+          "Ahmet Çelik",
+          "Jiawei Zhuang",
+          "Lukas Cavigelli"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 384,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.02361",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.02361",
+        "id:SemanticScholar:237fd4c91fb34ebdb6ed8bbab1ec9b49ad4aac82",
+        "id:arXiv:2510.02361",
+        "title:chunkllm a lightweight pluggable framework for accelerating llms inference",
+        "url:https://arxiv.org/abs/2510.02361"
+      ],
+      "record": {
+        "title": "ChunkLLM: A Lightweight Pluggable Framework for Accelerating LLMs Inference",
+        "source_url": "https://arxiv.org/abs/2510.02361",
+        "year": 2025,
+        "published": "2025-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based large models excel in natural language processing and computer vision, but face severe computational inefficiencies due to the self-attention's quadratic complexity with input tokens. Recently, researchers have proposed a series of methods based on block selection and compression to alleviate this problem, but they either have issues with semantic incompleteness or poor training-inference efficiency. To comprehensively address these challenges, we propose ChunkLLM, a lightweight and pluggable training framework. Specifically, we introduce two components: QK Adapter (Q-Adapter and K-Adapter) and Chunk Adapter. The former is attached to each Transformer layer, serving dual purposes of feature compression and chunk attention acquisition. The latter operates at the bottommost layer of the model, functioning to detect chunk boundaries by leveraging contextual semantic information. During the training phase, the parameters of the backbone remain frozen, with only the QK Adapter and Chunk Adapter undergoing training. Notably, we design an attention distillation method for training the QK Adapter, which enhances the recall rate of key chunks. During the inference phase, chunk selection is triggered exclusively when the current token is detected as a chunk boundary, thereby accelerating model inference. Experimental evaluations are conducted on a diverse set of long-text and short-text benchmark datasets spanning multiple tasks. ChunkLLM not only attains comparable performance on short-text benchmarks but also maintains 98.64% of the performance on long-context benchmarks while preserving a 48.58% key-value cache retention rate. Particularly, ChunkLLM attains a maximum speedup of 4.48x in comparison to the vanilla Transformer in the processing of 120K long texts.",
+        "identifiers": [
+          "SemanticScholar:237fd4c91fb34ebdb6ed8bbab1ec9b49ad4aac82"
+        ],
+        "semantic_scholar_id": "237fd4c91fb34ebdb6ed8bbab1ec9b49ad4aac82",
+        "canonical_id": "arXiv:2510.02361",
+        "arxiv_id": "2510.02361",
+        "doi": "10.48550/arXiv.2510.02361",
+        "authors": [
+          "Haojie Ouyang",
+          "Jian-Wei Lv",
+          "Lei Ren",
+          "Chen Wei",
+          "Xiaojie Wang",
+          "Fangxiang Feng"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 381,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9ec9ec6a81a0682142af69f98dcb25e7cd99dfdacf4b37b79ba275e4e079d548",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

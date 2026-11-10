@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-24f46fbba20e4560-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2011.00241",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2011.00241",
+    "identity_tokens": [
+      "arXiv:2011.00241",
+      "title:methods for pruning deep neural networks"
+    ],
+    "reason": "本文は150超の既発表研究を整理した一般深層ニューラルネットワークの剪定総説で、中心対象はAlexNet、ResNet、VGG、DenseNet等の畳み込み画像分類モデル。ImageNet/CIFAR-10の分類精度と圧縮率の比較が主眼で、LLM・Transformerの推論サービング、KVキャッシュ、MoE、生成速度、GPUカーネル最適化への固有技術貢献・直接評価がないため現行LLM推論サーベイの対象外と判定。",
+    "first_checked_at": "2026-10-16T09:21:25+00:00",
+    "last_checked_at": "2026-10-16T09:21:25+00:00",
+    "linked_from": [],
+    "title": "Methods for Pruning Deep Neural Networks"
+  },
+  "processed_at": "2026-10-16T09:21:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-24f46fbba20e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

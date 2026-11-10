@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0dcf45fffd0426a6-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/d18-1477",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/d18-1477",
+    "identity_tokens": [
+      "DOI:10.18653/v1/d18-1477",
+      "DOI:10.48550/arxiv.1709.02755",
+      "arXiv:1709.02755"
+    ],
+    "reason": "再帰ネットワークのSRUを提案し学習・系列モデル計算を並列化する古典的architecture研究で、現行のLLM推論・サービング基盤を最終対象としない。",
+    "first_checked_at": "2026-10-03T15:16:50+00:00",
+    "last_checked_at": "2026-10-07T21:37:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Simple Recurrent Units for Highly Parallelizable Recurrence"
+  },
+  "processed_at": "2026-10-07T21:37:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0dcf45fffd04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

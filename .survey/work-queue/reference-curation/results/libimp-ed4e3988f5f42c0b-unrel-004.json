@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed4e3988f5f42c0b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.15556",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.15556",
+    "identity_tokens": [
+      "arXiv:2405.15556"
+    ],
+    "reason": "retrieval corruption攻撃に対するcertifiable robustnessが主目的で、isolate-then-aggregateと安全な応答集約を提案するsecurity/robustness研究。推論runtime・memory・throughput効率化を主要目的としない。",
+    "first_checked_at": "2026-10-07T04:52:16+00:00",
+    "last_checked_at": "2026-10-07T04:52:16+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md"
+    ],
+    "title": "Certifiably Robust RAG against Retrieval Corruption"
+  },
+  "processed_at": "2026-10-07T04:52:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed4e3988f5f4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

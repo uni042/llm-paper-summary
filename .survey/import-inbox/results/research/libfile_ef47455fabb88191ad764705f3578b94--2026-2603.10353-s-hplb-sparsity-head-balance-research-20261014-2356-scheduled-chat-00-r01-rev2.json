@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "3d92a25275eef30c360adfb15a4c8309813d528cdd7dbb096ab8bd17c5bf6936",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ef47455fabb88191ad764705f3578b94--2026-2603.10353-s-hplb-sparsity-head-balance-research-20261014-2356-scheduled-chat-00-r01-rev2.md",
+  "canonical_id": "arXiv:2603.10353",
+  "worker_completed_at": "2026-10-15T00:04:51+09:00",
+  "worker_run_key": "20261014-2356-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5245,
+    "body_paragraphs": 28,
+    "method_chars": 1528,
+    "method_paragraphs": 8,
+    "evaluation_chars": 128,
+    "limitation_chars": 699,
+    "insufficiency_flags": [
+      "評価説明量 128 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 128 < 500"
+  ],
+  "processed_at": "2026-10-14T15:48:10+00:00"
+}

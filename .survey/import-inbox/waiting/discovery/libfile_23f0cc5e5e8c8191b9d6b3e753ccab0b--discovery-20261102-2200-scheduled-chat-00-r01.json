@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-2200-scheduled-chat-00/r01",
+  "reference_main_sha": "d89bb8b8f78df007f72980015082cb445716244d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.23058",
+      "identity_tokens": [
+        "arXiv:2609.23058"
+      ],
+      "title": "LazyAgent: Demand-Driven Materialization and Physical Optimization of Agentic Programs",
+      "reason": "LLM agentの実行グラフに対し、readyなステップを直ちに実行するのではなく、現在の要求に必要なステップ集合をモデル呼出しなしで導出して実行する需要駆動ランタイム。154件の本番workflow・303要求でeager方式がCPUの62.2%を不要処理へ費やすことを測定し、LazyAgentは本番workflowのCPUを42.0%削減、LangGraphアプリの費用を24.0%削減したと報告。agent実行時のスケジューリング・計算省略を直接最適化するためaccept。",
+      "source_url": "https://arxiv.org/abs/2609.23058",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T22:00:41+09:00",
+      "last_checked_at": "2026-11-02T22:00:41+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_duplicate_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.33375",
+      "identity_tokens": [
+        "arXiv:2610.33375"
+      ],
+      "title": "AgentOrch: How Close Can Global Orchestration Come to Step-by-Step Interaction?",
+      "reason": "LLMを各ステップで再呼出しする方式と、実行前に全workflowを生成して後続のLLM呼出しを減らすGlobal orchestrationを、650件の企業SOP・3220実行変種で比較。増分workflow構築はGlobalの正解率を平均9.98ポイント改善し、実行フィードバックを使った修正も有効。推論呼出し削減という実行効率に関連するが、主成果はエージェント計画精度のベンチマークで、GPU/serving実装の改善や定量的速度比較は一次要旨にないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.33375",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T22:00:41+09:00",
+      "last_checked_at": "2026-11-02T22:00:41+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_duplicate_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37826",
+      "identity_tokens": [
+        "arXiv:2610.37826"
+      ],
+      "title": "DeFT-RAG: Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers",
+      "reason": "multi-hop RAGのサブ質問を自己完結形式にして依存関係追跡をルールベースQA表へ移し、二値判断を小型decision modelに委譲。意味が同じサブ質問のQAペアを跨質問でキャッシュ再利用する。1000件のMuSiQue質問で23.1%のサブ質問がキャッシュから解決され、LLM呼出しを12.9%削減しつつ精度低下なしと報告。生成モデル呼出し削減とRAGの計算再利用へ直接貢献するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.37826",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T22:00:41+09:00",
+      "last_checked_at": "2026-11-02T22:00:41+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_duplicate_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41079",
+      "identity_tokens": [
+        "arXiv:2610.41079"
+      ],
+      "title": "EDU-Jev Training System-One Decision Models for Education",
+      "reason": "教育採点の固定選択肢判断を生成LLMの自己回帰テキスト生成から、選択肢markerをpointer headで直接スコアリングするsingle-pass decision modelへ置換する。0.8B/2B/4Bを評価し、2BモデルはH100単体で約150 decision/sと報告。用途は教育だが、テキスト生成・パースを省略する非自己回帰型推論機構と実測処理能力が示されるため、軽量LLM decision inferenceの技術としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.41079",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T22:00:41+09:00",
+      "last_checked_at": "2026-11-02T22:00:41+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_duplicate_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41147",
+      "identity_tokens": [
+        "arXiv:2610.41147"
+      ],
+      "title": "HyperRepair: Recovering Forgotten General Capabilities of Fine-Tuned Language Models",
+      "reason": "LoRA等でfine-tuneした言語モデルの一般能力低下を、activation fingerprintからhypernetworkが生成するRepairing Side Netとprompt条件付きgateで推論時に補正。2モデル系列・12適応データセットで基盤モデルの一般スコア93.4%、適応領域スコア99.5%を保持と報告。追加学習不要の推論時補正ではあるが、推論速度・メモリ削減の技術ではなく能力回復が主目的で、side netの追加実行コストも要旨では未定量化のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41147",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T22:00:41+09:00",
+      "last_checked_at": "2026-11-02T22:00:41+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_duplicate_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41482",
+      "identity_tokens": [
+        "arXiv:2610.41482"
+      ],
+      "title": "KEEPER: Learning Control-Sufficient Textual Memory for Long-Horizon LLM Agents",
+      "reason": "長期LLM agentの再帰的テキストメモリで誤った記述が後続更新にも残るself-consistency biasを測定。情報内容と更新感度の軸で4種類の補助学習目標を比較し、報酬関連予測がオフラインRL前後で高いタスク性能を示す。agentメモリの保持・更新という実行時状態管理に隣接するが、KV cache、メモリ容量、推論時間の削減は要旨に示されないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41482",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T22:00:41+09:00",
+      "last_checked_at": "2026-11-02T22:00:41+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_duplicate_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40966",
+      "identity_tokens": [
+        "arXiv:2610.40966"
+      ],
+      "title": "Better Retrievers, Worse Labels: How Incomplete Relevance Judgments Distort Abstention Evaluation in Conversational RAG",
+      "reason": "会話RAGベンチマークの正解文書ラベルが欠落すると、より強いretrieverほど回答可能な文脈を誤って回答不能と判定する評価バイアスを分析。RECORの4 retrieverとQwen3 reader等で、no-gold文脈の28〜72%が回答を含み得ると示す。主要貢献は回答拒否評価ラベルの妥当性であり、LLM推論カーネル・キャッシュ・serving・実行効率の改善技術ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.40966",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T22:00:41+09:00",
+      "last_checked_at": "2026-11-02T22:00:41+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_duplicate_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.40906",
+      "identity_tokens": [
+        "arXiv:2610.40906"
+      ],
+      "title": "Does Recursive Knowledge Construction Help Agents Verify Consensus Claims in Science?",
+      "reason": "科学的主張の合意判定で、証拠をLLMの文脈内に積む代わりに外部の構造化evidence stateへ永続化するProClaimを評価。718件の専門家ラベル付き主張で、外部状態と学習済み停止judgeが正確性に寄与すると報告。長期agentの文脈外状態保持・停止制御という推論実行設計に関係するが、トークン量・レイテンシ・メモリ使用量の削減は一次要旨で示されず、検証精度が主目的のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.40906",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T22:00:41+09:00",
+      "last_checked_at": "2026-11-02T22:00:41+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_duplicate_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40917",
+      "identity_tokens": [
+        "arXiv:2610.40917"
+      ],
+      "title": "Towards Portable Specification of the Agent Harness",
+      "reason": "LLM agentのharnessを8つの機能要素へ分解し、実行時にどのモデルと構成を使ったかを記録する移植可能な仕様を提案。harness差による評価スコア変動や攻撃面の記録・監査が目的で、推論スケジューリング、GPU実行、KV、圧縮、モデル呼出しコスト削減の新規技術や実測は一次要旨にないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.40917",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T22:00:41+09:00",
+      "last_checked_at": "2026-11-02T22:00:41+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_duplicate_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.40901",
+      "identity_tokens": [
+        "arXiv:2610.40901"
+      ],
+      "title": "TSFLab: A Self-Improving Agent-Agnostic Workbench for Time Series Forecasting Research",
+      "reason": "時系列予測の論文再現・ベンチマーク・新手法開発を支援する共有ツールと資源を持つagent workbench。複数のcoding agent基盤との比較で、完了タスク当たりfresh tokensを11〜66%削減し、手法開発の所要時間を9.2〜68.8%削減したと報告。agent実行のトークン効率に定量的関連はあるが、特定分野の研究workflow設計が主眼で、一般的LLM serving実装やdecode効率の直接改善ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.40901",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T22:00:41+09:00",
+      "last_checked_at": "2026-11-02T22:00:41+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_duplicate_screen"
+    }
+  ]
+}

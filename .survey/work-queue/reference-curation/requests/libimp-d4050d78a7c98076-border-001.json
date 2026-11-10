@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d4050d78a7c98076-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1016/j.asoc.2025.114398",
+  "reason": "linked DeeBERT early-exit lineageとの接点を確認するためprimary sourceを調べた。取得できたabstractとindexed excerptsでは対象は運転者画像認識用CNNで、LLM/Transformer inferenceへの直接適用は見えない。一方、ScienceDirect full textが取得できず、linked lineageとの方法的接続や適用限界を全文で確認できないためborderlineとする。",
+  "title": "Attention distillation for low-cost driver behavior recognition",
+  "identity_tokens": [
+    "DOI:10.1016/j.asoc.2025.114398"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d4050d78a7c9",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

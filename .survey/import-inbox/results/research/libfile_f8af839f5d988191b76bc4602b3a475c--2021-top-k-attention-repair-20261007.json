@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4449960c2bee8dd80b17aba80d58eebc63dbaeab3a449d8a7c72b613b45d5aa8",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_f8af839f5d988191b76bc4602b3a475c--2021-top-k-attention-repair-20261007.md",
+  "canonical_id": "DOI:10.18653/v1/2021.sustainlp-1.5",
+  "worker_completed_at": "2026-10-07T20:31:57+09:00",
+  "worker_run_key": "20261007-2031-scheduled-chat-30/repair-r02",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2928,
+    "body_paragraphs": 21,
+    "method_chars": 997,
+    "method_paragraphs": 8,
+    "evaluation_chars": 430,
+    "limitation_chars": 421,
+    "insufficiency_flags": [
+      "評価説明量 430 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 430 < 500"
+  ],
+  "processed_at": "2026-10-07T13:56:02+00:00"
+}

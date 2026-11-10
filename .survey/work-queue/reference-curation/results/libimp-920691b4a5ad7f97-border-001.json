@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-920691b4a5ad7f97-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.25336",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.25336",
+    "identity_tokens": [
+      "arXiv:2608.25336"
+    ],
+    "reason": "The paper is primarily a provenance and reliability protocol for statistical reporting; inference-efficiency evidence is a secondary cost analysis.",
+    "first_checked_at": "2026-10-05T08:02:44+00:00",
+    "last_checked_at": "2026-10-05T08:02:44+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Provenance Before Prose: Claim-Locked Reporting for Statistical Text Generation"
+  },
+  "processed_at": "2026-10-05T08:02:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-920691b4a5ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

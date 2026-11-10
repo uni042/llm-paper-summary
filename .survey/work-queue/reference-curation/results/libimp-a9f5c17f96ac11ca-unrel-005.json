@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9f5c17f96ac11ca-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2205.11916",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2205.11916",
+    "identity_tokens": [
+      "DOI:10.52202/068431-1613",
+      "arXiv:2205.11916"
+    ],
+    "reason": "「Let's think step by step」によるZero-shot-CoTでreasoning accuracyを改善するprompting研究。追加reasoning tokenを生成する能力誘導であり推論runtime効率化ではない。",
+    "first_checked_at": "2026-10-04T13:05:22+00:00",
+    "last_checked_at": "2026-10-04T19:48:51+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md",
+      "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
+    ],
+    "title": "Large Language Models are Zero-Shot Reasoners"
+  },
+  "processed_at": "2026-10-04T19:48:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9f5c17f96ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2739b2754ce63ec-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.19697",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.19697",
+    "identity_tokens": [
+      "arXiv:2506.19697",
+      "id:arXiv:2506.19697",
+      "url:https://arxiv.org/abs/2506.19697"
+    ],
+    "reason": "OSPはMuon最適化、単一スケールRMSNorm、学習可能な埋込み射影により学習中の活性外れ値発生を抑え、完成モデルの4ビット量子化後品質を改善する。推論向け低ビット化に関連するが主要技術は事前学習レシピであり、既存モデルの推論ランタイム・事後圧縮への直接適用がないためborderline。",
+    "first_checked_at": "2026-10-28T20:55:30+00:00",
+    "last_checked_at": "2026-10-28T20:55:30+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Outlier-Safe Pre-Training for Robust 4-Bit Quantization of Large Language Models"
+  },
+  "processed_at": "2026-10-28T20:55:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2739b2754ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

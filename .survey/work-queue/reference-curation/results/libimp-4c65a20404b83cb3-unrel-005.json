@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4c65a20404b83cb3-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.10947",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.10947",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2305.10947",
+      "arXiv:2305.10947"
+    ],
+    "reason": "汎用ニューラルネットワークの16bit学習とFP32との精度・計算速度比較を行う。低精度計算の背景としては有用だが、主対象は訓練であり生成LLMの推論高速化・KV・サービングへの直接評価はない。",
+    "first_checked_at": "2026-10-30T11:54:44+00:00",
+    "last_checked_at": "2026-10-30T11:54:44+00:00",
+    "linked_from": [],
+    "title": "Revisiting 16-bit Neural Network Training: A Practical Approach for Resource-Limited Learning"
+  },
+  "processed_at": "2026-10-30T11:54:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c65a20404b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

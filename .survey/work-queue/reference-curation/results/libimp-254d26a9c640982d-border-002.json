@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-254d26a9c640982d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.23606",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.23606",
+    "identity_tokens": [
+      "arXiv:2505.23606"
+    ],
+    "reason": "There are concrete gains, but they are for specialized short multimodal caption/VQA generation and do not establish general LLM serving gains.",
+    "first_checked_at": "2026-10-05T12:49:56+00:00",
+    "last_checked_at": "2026-10-05T12:49:56+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md"
+    ],
+    "title": "Muddit: Liberating Generation Beyond Text-to-Image with a Unified Discrete Diffusion Model"
+  },
+  "processed_at": "2026-10-05T12:49:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-254d26a9c640",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

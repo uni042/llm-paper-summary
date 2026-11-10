@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6f71a02220644722-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2104.02726",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2104.02726",
+    "identity_tokens": [
+      "arXiv:2104.02726"
+    ],
+    "reason": "The title is a general survey of creativity and machine learning, with no indicated inference-system efficiency focus.",
+    "first_checked_at": "2026-10-10T08:36:04+00:00",
+    "last_checked_at": "2026-10-10T08:36:04+00:00",
+    "linked_from": [],
+    "title": "Creativity and Machine Learning: A Survey"
+  },
+  "processed_at": "2026-10-10T08:36:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6f71a0222064",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

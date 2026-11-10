@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-66be87659e79f9cd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.12598",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.12598",
+    "identity_tokens": [
+      "arXiv:2601.12598",
+      "id:arXiv:2601.12598",
+      "url:https://arxiv.org/abs/2601.12598"
+    ],
+    "reason": "The paper analyzes gating/selectivity and introduces an efficient synthetic benchmark, but the abstract does not establish an inference-speed, serving-memory, or deployment improvement; retain as adjacent sequence-model systems evidence.",
+    "first_checked_at": "2026-10-13T20:57:40+00:00",
+    "last_checked_at": "2026-10-13T20:57:40+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2402.19427-griffin-mixing-gated-linear-recurrences-with-local-attention-for-efficie.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+      "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Dissecting Linear Recurrent Models: How Different Gating Strategies Drive Selectivity and Generalization"
+  },
+  "processed_at": "2026-10-13T20:57:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-66be87659e79",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

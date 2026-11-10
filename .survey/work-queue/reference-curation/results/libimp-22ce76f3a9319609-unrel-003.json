@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-22ce76f3a9319609-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.15879",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.15879",
+    "identity_tokens": [
+      "arXiv:2607.15879"
+    ],
+    "reason": "DECODEM extracts data from corporate documents; the abstract describes task extraction accuracy, not LLM inference efficiency.",
+    "first_checked_at": "2026-10-05T10:17:52+00:00",
+    "last_checked_at": "2026-10-05T10:17:52+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "DECODEM: Data Extraction from Corporate Organizational Documents via Enhanced Methods"
+  },
+  "processed_at": "2026-10-05T10:17:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-22ce76f3a931",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

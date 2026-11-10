@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-98c8523b7d6ad750-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.20283",
+  "reason": "Modern segmenters often fail after the expensive computation has already been done: a useful mask is present among the model's query-conditioned candidates, but the deployed selection rule does not expose it. We study this output-selection bottleneck in frozen DETR-family models. A ground-truth-only oracle first shows substantial hidden headroom in already-computed mask proposals. This raises a simple question: How can we better use the masks a segmenter has already computed but does not expose? We then ask whether that headroom can be recovered without adding queries, generating new masks, rerunning the backbone, or updating weights. HYDRA is a small selector trained only on cached frozen outputs. At inference time, it scores the cached candidates against an explicit keep-baseline option and acts only when a held-out calibrated margin indicates the selected candidate is sufficiently better. Trained on training-split caches and calibrated on held-out data, HYDRA improves Mask2Former, MaskDINO, and OneFormer by up to +7.41 dataset mIoU points on ADE20k and COCO, and improves SAM 3 by +9.4 class-macro prompt-IoU points on average across eight domains while preserving useful predictions through calibration. Paired LoRA controls show that lightweight weight adaptation does not remove the bottleneck: exposed predictions are often flat or worse, while routing over the adapted candidates still recovers accuracy. Finally, we connect the effect to query specialization under bipartite matching and verify it in a controlled TinyDETR study. These results show that frozen segmenters should be evaluated not only by the masks they expose, but also by the useful candidates they suppress.",
+  "title": "Queries Knew More Than We Thought: Uncovering Latent Knowledge in Segmentation Models",
+  "identity_tokens": [
+    "arXiv:2609.20283"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98c8523b7d6a",
+  "source_precheck_request_id": null
+}

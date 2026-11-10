@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260917T010300Z-scheduled-chat-discovery-specialist-02",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-120be1bd98c2839e",
+      "claim_id": "claim-69ebbec8615956de0cb92f95",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-69ebbec8615956de0cb92f95",
+      "claimed_at": "2026-09-17T01:02:24+00:00",
+      "expires_at": "2026-09-17T03:00:21+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-120be1bd98c2839e"
+      ],
+      "job": {
+        "job_id": "job-research-120be1bd98c2839e",
+        "type": "research",
+        "parent_job_id": "job-c862ad2804181f57",
+        "priority": 89,
+        "canonical_id": "arXiv:2507.06608",
+        "title": "Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving",
+        "source_url": "https://arxiv.org/abs/2507.06608",
+        "paper_path": "papers/inference/06-serving-scheduling/2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md",
+        "selection_reason": "prefill/decodeを単一GPU内でproactiveに分離し、latency cost model・SM partitioning・phase-specific schedulerで最大2.2x throughput、20x TTFT改善を報告。PD設計空間の重要なintra-GPU系統。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T21:08:01+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_root": ".survey/work-queue/records/chat-record",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record/results.json",
+        "positioning": ".survey/work-queue/records/chat-record/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-17T01:02:24+00:00",
+  "checkpoint_released": 0,
+  "heartbeat_at": "2026-09-17T01:30:21+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-155ab11cd70f6c81-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2607.18541",
+  "reason": "This paper analyzes GPU LZ77 lossless decompression. It attributes throughput to average match length and adjusts the encoder minimum-match-length to improve compression ratio and the decode kernel; measurements are H100/device-resident generic data. It explicitly excludes entropy/host transfer timing and is not LLM weights, activations, KV cache, or serving compression. The corrupted lineage text does not establish a technical bridge.",
+  "title": "What Governs Decode Throughput in Absolute-Offset GPU LZ77? A Work-Granularity Mechanism and an Encode-Time Min-Match-Length Lever",
+  "identity_tokens": [
+    "arXiv:2607.18541"
+  ],
+  "linked_from": [
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.24832-optimus-elastic-decoding-diffusion-llm-serving.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-155ab11cd70f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

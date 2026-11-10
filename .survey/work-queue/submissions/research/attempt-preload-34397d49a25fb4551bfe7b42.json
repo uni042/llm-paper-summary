@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-preload-34397d49a25fb4551bfe7b42",
+  "job_id": "job-research-ffc621e973881a5d",
+  "claim_id": "claim-preload-34397d49a25fb4551bfe7b42",
+  "worker_id": "scheduled-chat-30",
+  "status": "blocked",
+  "reason": "Primary full text was not obtainable after checking the IEEE DOI route, bibliographic/unpaywalled routes, and author/institution routes. Secondary summaries/snippets were not used to synthesize a five-slot research record.",
+  "retrieval_evidence": [
+    "IEEE INFOCOM DOI 10.1109/INFOCOM59046.2026.11571717 and the official conference bibliographic identity were verified, but an accessible full paper body was not exposed.",
+    "DBLP/researchr records confirmed the 10-page INFOCOM 2026 paper and offered DOI/unpaywalled navigation, but no readable primary full text was returned.",
+    "ResearchGate explicitly reported no full-text available and only a request-full-text flow.",
+    "Author/institution searches for Tao Ren, Yiming Yao, Zheyuan Hu, Jianwei Niu and Beihang University confirmed the publication but did not surface an author-hosted primary PDF or preprint."
+  ],
+  "blocked_at": "2026-09-24T13:39:10+00:00"
+}

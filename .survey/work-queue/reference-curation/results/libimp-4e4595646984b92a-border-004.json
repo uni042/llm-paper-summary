@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4e4595646984b92a-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/compsac69091.2026.00139",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/compsac69091.2026.00139",
+    "identity_tokens": [
+      "DOI:10.1109/compsac69091.2026.00139"
+    ],
+    "reason": "The IEEE primary DOI route was inaccessible via the available web reader; GPU partitioning configuration, workload details, statistical variation and quality results could not be checked.",
+    "first_checked_at": "2026-10-05T11:01:41+00:00",
+    "last_checked_at": "2026-10-05T11:01:41+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+    ],
+    "title": "Performance Characterization of LLM Inference under Limited GPU Resources"
+  },
+  "processed_at": "2026-10-05T11:01:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4e4595646984",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

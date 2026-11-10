@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9aaa4231700d8d6f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.iot.2026.102020",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.iot.2026.102020",
+    "identity_tokens": [
+      "DOI:10.1016/j.iot.2026.102020"
+    ],
+    "reason": "Survey abstractはon-device small language modelのarchitecture/optimization/deploymentを扱うため候補性はあるが、publisher full text取得不能でscope適合・具体的内容を確認できない。",
+    "first_checked_at": "2026-10-05T03:49:52+00:00",
+    "last_checked_at": "2026-10-05T03:49:52+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+      "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+      "papers/inference/08-edge-on-device-llm-systems/2025-2509.23324-scaling-llm-test-time-compute-with-mobile-npu-on-smartphones.md",
+      "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2510.06126-lm-meter-unveiling-runtime-inference-latency-for-on-device-language-mode.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "Small language models for on-device IoT intelligence: A survey on architectures, optimization, and deployment"
+  },
+  "processed_at": "2026-10-05T03:49:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9aaa4231700d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18ffc9031000ecb1-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1404.5997",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1404.5997",
+    "identity_tokens": [
+      "arXiv:1404.5997"
+    ],
+    "reason": "複数GPUへCNN学習を並列化するtraining system研究で、最終適用先がニューラルネットワーク学習そのもの。LLM/Transformer推論への適用・評価はない。",
+    "first_checked_at": "2026-10-04T21:43:58+00:00",
+    "last_checked_at": "2026-10-04T21:49:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
+      "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+    ],
+    "title": "One weird trick for parallelizing convolutional neural networks"
+  },
+  "processed_at": "2026-10-04T21:49:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18ffc9031000",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

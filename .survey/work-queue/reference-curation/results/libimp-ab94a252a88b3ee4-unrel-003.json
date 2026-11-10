@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab94a252a88b3ee4-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.19091",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.19091",
+    "identity_tokens": [
+      "arXiv:2605.19091"
+    ],
+    "reason": "Chess-specific transformer; mention of memory-efficient kernels is compatibility with existing kernels, not a new LLM inference optimization.",
+    "first_checked_at": "2026-10-07T11:00:09+00:00",
+    "last_checked_at": "2026-10-07T11:00:09+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "Chessformer: A Unified Architecture for Chess Modeling"
+  },
+  "processed_at": "2026-10-07T11:00:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab94a252a88b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

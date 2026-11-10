@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3ad956131829caa5-border-006",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.37778",
+  "reason": "投機復号のdiffusion drafterがブロック内の先行tokenを見ずに予測するため、verifier条件付き教師分布との不一致が生じる。MDraftは同じcontextから複数draft blockを生成し、各prefixでのverifier分布を統合してdistillationし受理長を改善する。推論時のdraft構造・手順は変更しないため直接のserving最適化ではなく、学習側から投機復号の効率を間接改善する研究としてborderline。",
+  "title": "Multi-Draft On-Policy Distillation for Diffusion Drafters",
+  "identity_tokens": [
+    "arXiv:2610.37778"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3ad956131829",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

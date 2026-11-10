@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2583b340f271ce58-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1709.00103",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1709.00103",
+    "identity_tokens": [
+      "arXiv:1709.00103"
+    ],
+    "reason": "自然言語からSQLを生成するモデルと強化学習・WikiSQLデータセットが主題で、LLM推論runtime効率化ではない。",
+    "first_checked_at": "2026-10-04T15:53:59+00:00",
+    "last_checked_at": "2026-10-04T15:55:08+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.15919-hfx-joint-design-of-algorithms-and-systems-for-multi-slo-serving-and-fas.md"
+    ],
+    "title": "Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning"
+  },
+  "processed_at": "2026-10-04T15:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2583b340f271",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

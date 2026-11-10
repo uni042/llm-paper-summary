@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dbc8250aa8e5a407-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.12142/ztetj.202402003",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.12142/ztetj.202402003",
+    "identity_tokens": [
+      "DOI:10.12142/ztetj.202402003",
+      "id:DOI:10.12142/ZTETJ.202402003",
+      "id:SemanticScholar:990cca64e27b0c29c80ae4aa6920db01913cc92f"
+    ],
+    "reason": "出版元ZTE Technology Journalの2024年4月号公式原著（英語abstractと中国語本文）を確認。LLMの技術進化を「推論効率」と「モデル能力」の二経路に分け、前者では分散推論・演算最適化・メモリアクセス・量子化、後者ではMoE・SSM等のモデル構造を概観する。LLM推論システムの方法を広く紹介する点は関連するが、推論サービングの特定手法や独自の実測改善を中心とした研究ではなく、広範なアルゴリズム概説なのでborderline。worklistのSemanticScholar identityを出版社が明示するDOIへ正規化した。",
+    "first_checked_at": "2026-11-02T05:57:33+00:00",
+    "last_checked_at": "2026-11-02T05:57:33+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "LLM Serving / Scheduling / Disaggregation",
+      "Weight Quantization / Compression",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Review of Evolution of Large Language Model Algorithms"
+  },
+  "processed_at": "2026-11-02T05:57:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dbc8250aa8e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

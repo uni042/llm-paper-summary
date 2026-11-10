@@ -1,0 +1,531 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2642c90107f29a06-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2642c90107f2",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2501.14312",
+    "arXiv:2504.14893",
+    "arXiv:2505.10259",
+    "arXiv:2505.24133",
+    "arXiv:2506.11309",
+    "arXiv:2508.04462",
+    "arXiv:2508.13231",
+    "arXiv:2509.00579",
+    "arXiv:2509.03377",
+    "arXiv:2509.17863",
+    "arXiv:2510.06175",
+    "arXiv:2510.09665",
+    "arXiv:2510.10302",
+    "arXiv:2511.11733",
+    "arXiv:2511.14510",
+    "arXiv:2512.16391",
+    "arXiv:2601.04719",
+    "arXiv:2601.19278",
+    "arXiv:2602.23200",
+    "arXiv:2603.17435"
+  ],
+  "target_unseen": 20,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6c5e5be454119a163073f74892d68b0d367b1481",
+  "raw_search_result_count": 20,
+  "retrieval_duplicate_filtered_count": 13,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 20,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 13,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-02T11:06:39.432430+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2501.14312",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2501.14312"
+    },
+    {
+      "requested_id": "arXiv:2504.14893",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2504.14893"
+    },
+    {
+      "requested_id": "arXiv:2505.10259",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2505.10259"
+    },
+    {
+      "requested_id": "arXiv:2505.24133",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.11309",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2506.11309"
+    },
+    {
+      "requested_id": "arXiv:2508.04462",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.13231",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2508.13231"
+    },
+    {
+      "requested_id": "arXiv:2509.00579",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.03377",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2509.03377"
+    },
+    {
+      "requested_id": "arXiv:2509.17863",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2509.17863"
+    },
+    {
+      "requested_id": "arXiv:2510.06175",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.09665",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2510.09665"
+    },
+    {
+      "requested_id": "arXiv:2510.10302",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2510.10302"
+    },
+    {
+      "requested_id": "arXiv:2511.11733",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.14510",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2511.14510"
+    },
+    {
+      "requested_id": "arXiv:2512.16391",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2512.16391"
+    },
+    {
+      "requested_id": "arXiv:2601.04719",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.19278",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.19278"
+    },
+    {
+      "requested_id": "arXiv:2602.23200",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.17435",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3779212.3790250"
+    }
+  ],
+  "results": [
+    {
+      "title": "R-KV: Redundancy-aware KV Cache Compression for Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2505.24133",
+      "year": 2025,
+      "published": "2025-05-30",
+      "abstract": "Reasoning models have demonstrated impressive performance in self-reflection and chain-of-thought reasoning. However, they often produce excessively long outputs, leading to prohibitively large key-value (KV) caches during inference. While chain-of-thought inference significantly improves performance on complex reasoning tasks, it can also lead to reasoning failures when deployed with existing KV cache compression approaches. To address this, we propose Redundancy-aware KV Cache Compression for Reasoning models (R-KV), a novel method specifically targeting redundant tokens in reasoning models. Our method preserves nearly 100% of the full KV cache performance using only 10% of the KV cache, substantially outperforming existing KV cache baselines, which reaches only 60% of the performance. Remarkably, R-KV even achieves 105% of full KV cache performance with 16% of the KV cache. This KV-cache reduction also leads to a 90% memory saving and a 6.6× throughput over standard chain-of-thought reasoning inference. Experimental results show that R-KV consistently outperforms existing KV cache compression baselines across two mathematical reasoning datasets.",
+      "canonical_id": "arXiv:2505.24133",
+      "arxiv_id": "2505.24133",
+      "doi": "10.52202/085713-2038",
+      "authors": [
+        "Zefan Cai",
+        "Wen Xiao",
+        "Hanshi Sun",
+        "Cheng Luo",
+        "Yi-Kai Zhang",
+        "Ke Wan",
+        "Yucheng Li",
+        "Yeyang Zhou",
+        "Li-Wen Chang",
+        "Jiuxiang Gu",
+        "Zhen Dong",
+        "Anima Anandkumar",
+        "Abedelkadir Asi",
+        "Jun-Jie Hu"
+      ]
+    },
+    {
+      "title": "CARD: A cache-assisted parallel speculative decoding framework via query-and-correct paradigm for accelerating LLM inference",
+      "source_url": "https://arxiv.org/abs/2508.04462",
+      "year": 2025,
+      "published": "2025-08-06",
+      "abstract": "Speculative decoding (SD), where a draft model provides multiple candidate tokens for the target model to verify in parallel, has demonstrated significant potential for accelerating LLM inference. Yet, existing SD approaches adhere to a strict draft-then-verify paradigm, enforcing a sequential process that hampers performance and constrains the draft model's capacity. Moreover, rejecting a token in the candidate sequence invalidates all subsequent tokens, leading to wasted computation during drafting. To overcome these limitations, we propose a cache-assisted parallel speculative decoding framework called CARD, which employs a novel query-and-correct paradigm. Our approach decouples drafting from verification: the draft model populates a shared cache with candidate tokens, while the target model concurrently refines the draft's trajectory. This enables inference at near-draft-speed, effectively leveraging the draft model's efficiency without additional fine-tuning. Experimental results show that CARD significantly outperforms existing state-of-the-art methods, achieving up to a 4.83x acceleration over vanilla autoregressive decoding, with no fine-tuning required for either models.",
+      "canonical_id": "arXiv:2508.04462",
+      "arxiv_id": "2508.04462",
+      "doi": "10.1016/j.hcc.2026.100420",
+      "authors": [
+        "En-Yu Zhou",
+        "Run-Jie Ding",
+        "Kai Sheng",
+        "Hao Chen",
+        "Xin He"
+      ]
+    },
+    {
+      "title": "KVComp: A High-Performance, LLM-Aware, Lossy Compression Framework for KV Cache",
+      "source_url": "https://arxiv.org/abs/2509.00579",
+      "year": 2025,
+      "published": "2025-08-30",
+      "abstract": "Transformer-based large language models (LLMs) demonstrate impressive potential in various practical applications. However, long context inference poses a significant challenge due to the enormous memory requirements of the key-value (KV) cache, which can scale to multiple gigabytes as sequence length and batch size increase. In this paper, we present KVComp, a generic and efficient KV cache management framework optimized for long-text generation that synergistically works with both latency-critical and throughput-critical inference systems. KVComp employs novel lossy compression techniques specifically designed for KV cache data characteristics, featuring careful co-design of compression algorithms and system architecture. Our approach maintains compatibility with the growing nature of KV cache while preserving high computational efficiency. Experimental results show that KVComp achieves on average 47\\% and up to 83\\% higher memory reduction rate compared to existing methods with little/no model accuracy degradation. Furthermore, KVComp achieves extremely high execution throughput, effectively reducing decompression overhead and, in some cases, even accelerating the matrix-vector multiplication operation and outperform cuBLAS-based attention kernels with less data movement.",
+      "canonical_id": "arXiv:2509.00579",
+      "arxiv_id": "2509.00579",
+      "doi": "10.48550/arXiv.2509.00579",
+      "authors": [
+        "Bo Jiang",
+        "Taolue Yang",
+        "You-Yuan Liu",
+        "Cheng-Ming Zhang",
+        "Xubin He",
+        "Sian Jin"
+      ]
+    },
+    {
+      "title": "VecInfer: Efficient LLM Inference with Low-Bit KV Cache via Outlier-Suppressed Vector Quantization",
+      "source_url": "https://arxiv.org/abs/2510.06175",
+      "year": 2025,
+      "published": "2025-10-07",
+      "abstract": "The Key-Value (KV) cache introduces substantial memory overhead during large language model (LLM) inference. Although existing vector quantization (VQ) methods reduce KV cache usage and provide flexible representational capacity across bit-widths, they suffer severe performance degradation at ultra-low bit-widths due to key cache outliers that hinder effective codebook utilization. To address this challenge, we propose VecInfer, a novel VQ method for aggressive KV cache compression while enabling efficient inference. By applying smooth and Hadamard transformations, VecInfer suppresses outliers in the key cache, enabling the codebook to comprehensively cover the original data distribution and thereby reducing quantization difficulty. To facilitate efficient deployment, we design an optimized CUDA kernel that fuses computation with dequantization to minimize memory access overhead. Extensive evaluations demonstrate that VecInfer consistently outperforms existing quantization baselines across both long-context understanding and mathematical reasoning tasks. With only 2-bit quantization, VecInfer achieves performance comparable to full precision, while delivering up to $\\mathbf{2.7\\times}$ speedup in large-batch self-attention computation and $\\mathbf{8.3\\times}$ reduction in single-batch end-to-end latency on Llama-3.1-8B with a 196k sequence length.",
+      "canonical_id": "arXiv:2510.06175",
+      "arxiv_id": "2510.06175",
+      "doi": "10.48550/arXiv.2510.06175",
+      "authors": [
+        "Ding-Yu Yao",
+        "Chenxu Yang",
+        "Zhengyang Tong",
+        "Zheng Lin",
+        "Wei Liu",
+        "Jian Luan",
+        "Weiping Wang"
+      ]
+    },
+    {
+      "title": "Speculative Decoding in Decentralized LLM Inference: Turning Communication Latency into Computation Throughput",
+      "source_url": "https://arxiv.org/abs/2511.11733",
+      "year": 2025,
+      "published": "2025-11-13",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a lightweight draft model to propose tokens that are later verified by a stronger target model. While effective in centralized systems, its behavior in decentralized settings, where network latency often dominates compute, remains under-characterized. We present Decentralized Speculative Decoding (DSD), a plug-and-play framework for decentralized inference that turns communication delay into useful computation by verifying multiple candidate tokens in parallel across distributed nodes. We further introduce an adaptive speculative verification strategy that adjusts acceptance thresholds by token-level semantic importance, delivering an additional 15% to 20% end-to-end speedup without retraining. In theory, DSD reduces cross-node communication cost by approximately (N-1)t1(k-1)/k, where t1 is per-link latency and k is the average number of tokens accepted per round. In practice, DSD achieves up to 2.56x speedup on HumanEval and 2.59x on GSM8K, surpassing the Eagle3 baseline while preserving accuracy. These results show that adapting speculative decoding for decentralized execution provides a system-level optimization that converts network stalls into throughput, enabling faster distributed LLM inference with no model retraining or architectural changes.",
+      "canonical_id": "arXiv:2511.11733",
+      "arxiv_id": "2511.11733",
+      "doi": "10.48550/arXiv.2511.11733",
+      "authors": [
+        "Jing-Wei Song",
+        "Wanyi Chen",
+        "Xin-Yuan Song",
+        "Max",
+        "Chris Tong",
+        "Gufeng Chen",
+        "Tianyi Zhao",
+        "Eric Yang",
+        "Bill Shi",
+        "Lynn Ai"
+      ]
+    },
+    {
+      "title": "GPU-Accelerated INT8 Quantization for KV Cache Compression in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2601.04719",
+      "year": 2026,
+      "published": "2026-01-08",
+      "abstract": "The key-value (KV) cache in large language models presents a significant memory bottleneck during inference, growing linearly with sequence length and often exceeding the memory footprint of model weights themselves. We implement and evaluate GPU-accelerated INT8 quantization for KV cache compression, achieving 4$\\times$ memory reduction with minimal accuracy degradation. We develop four CUDA kernel variants -- naive, tiled, coarsened, and vectorized -- and benchmark them across realistic workload sizes up to 1 billion elements. Our vectorized kernel achieves up to 1,694$\\times$ speedup over CPU baselines while maintaining reconstruction error below 0.004 and attention score error below 0.1 even for 8K-dimensional heads. These results demonstrate that INT8 quantization provides a practical approach for reducing memory pressure in LLM inference with negligible computational overhead (6--58ms) and minimal impact on downstream model behavior",
+      "canonical_id": "arXiv:2601.04719",
+      "arxiv_id": "2601.04719",
+      "doi": "10.48550/arXiv.2601.04719",
+      "authors": [
+        "Maanas Taneja",
+        "Purab Shingvi"
+      ]
+    },
+    {
+      "title": "InnerQ: Hardware-aware Tuning-free Quantization of KV Cache for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.23200",
+      "year": 2026,
+      "published": "2026-02-26",
+      "abstract": "When transformer-based language models are deployed for text generation, most of the inference time is spent in the decoding stage, where output tokens are generated sequentially. Reducing the hardware cost of each decoding step is therefore critical for efficient long-context generation. A major bottleneck is the key-value (KV) cache, whose size grows with sequence length and often dominates the model's memory footprint. Prior work has proposed quantization methods to compress the KV cache while minimizing its loss of precision. We present InnerQ, a hardware-aware KV cache quantization scheme that reduces decode latency without compromising evaluation performance. InnerQ performs group-wise quantization by grouping cache matrices along their inner dimension. This grouping strategy aligns dequantization with vector-matrix multiplication and increases data reuse across GPU compute units. As a result, InnerQ reduces memory access and accelerates dequantization, achieving an average $1.3\\times$ speedup over prior KV cache quantization methods and $2.7\\times$ over the non-quantized baseline. To maintain fidelity under aggressive compression, InnerQ incorporates three techniques: (i) hybrid quantization, which chooses symmetric or asymmetric quantization for each group based on local statistics; (ii) high-precision windows for both recent tokens and attention sink tokens to mitigate outlier leakage; and (iii) per-channel normalization of the key cache, computed once during prefill and folded into the model parameters to eliminate runtime overhead. Beyond reducing latency, experiments on Llama and Mistral models show that InnerQ also improves few-shot evaluation scores relative to prior KV cache quantization methods.",
+      "canonical_id": "arXiv:2602.23200",
+      "arxiv_id": "2602.23200",
+      "doi": "10.48550/arXiv.2602.23200",
+      "authors": [
+        "Sayed Mohammadreza Tayaranian Hosseini",
+        "Amir Ardakani",
+        "Warren J. Gross"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2505.24133",
+      "identity_tokens": [
+        "id:DOI:10.52202/085713-2038",
+        "id:arXiv:2505.24133",
+        "title:rkv redundancyaware kv cache compression for reasoning models",
+        "url:https://arxiv.org/abs/2505.24133"
+      ],
+      "record": {
+        "title": "R-KV: Redundancy-aware KV Cache Compression for Reasoning Models",
+        "source_url": "https://arxiv.org/abs/2505.24133",
+        "year": 2025,
+        "published": "2025-05-30",
+        "abstract": "Reasoning models have demonstrated impressive performance in self-reflection and chain-of-thought reasoning. However, they often produce excessively long outputs, leading to prohibitively large key-value (KV) caches during inference. While chain-of-thought inference significantly improves performance on complex reasoning tasks, it can also lead to reasoning failures when deployed with existing KV cache compression approaches. To address this, we propose Redundancy-aware KV Cache Compression for Reasoning models (R-KV), a novel method specifically targeting redundant tokens in reasoning models. Our method preserves nearly 100% of the full KV cache performance using only 10% of the KV cache, substantially outperforming existing KV cache baselines, which reaches only 60% of the performance. Remarkably, R-KV even achieves 105% of full KV cache performance with 16% of the KV cache. This KV-cache reduction also leads to a 90% memory saving and a 6.6× throughput over standard chain-of-thought reasoning inference. Experimental results show that R-KV consistently outperforms existing KV cache compression baselines across two mathematical reasoning datasets.",
+        "canonical_id": "arXiv:2505.24133",
+        "arxiv_id": "2505.24133",
+        "doi": "10.52202/085713-2038",
+        "authors": [
+          "Zefan Cai",
+          "Wen Xiao",
+          "Hanshi Sun",
+          "Cheng Luo",
+          "Yi-Kai Zhang",
+          "Ke Wan",
+          "Yucheng Li",
+          "Yeyang Zhou",
+          "Li-Wen Chang",
+          "Jiuxiang Gu",
+          "Zhen Dong",
+          "Anima Anandkumar",
+          "Abedelkadir Asi",
+          "Jun-Jie Hu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.04462",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.hcc.2026.100420",
+        "id:arXiv:2508.04462",
+        "title:card a cacheassisted parallel speculative decoding framework via queryandcorrect paradigm for accelerating llm inference",
+        "url:https://arxiv.org/abs/2508.04462"
+      ],
+      "record": {
+        "title": "CARD: A cache-assisted parallel speculative decoding framework via query-and-correct paradigm for accelerating LLM inference",
+        "source_url": "https://arxiv.org/abs/2508.04462",
+        "year": 2025,
+        "published": "2025-08-06",
+        "abstract": "Speculative decoding (SD), where a draft model provides multiple candidate tokens for the target model to verify in parallel, has demonstrated significant potential for accelerating LLM inference. Yet, existing SD approaches adhere to a strict draft-then-verify paradigm, enforcing a sequential process that hampers performance and constrains the draft model's capacity. Moreover, rejecting a token in the candidate sequence invalidates all subsequent tokens, leading to wasted computation during drafting. To overcome these limitations, we propose a cache-assisted parallel speculative decoding framework called CARD, which employs a novel query-and-correct paradigm. Our approach decouples drafting from verification: the draft model populates a shared cache with candidate tokens, while the target model concurrently refines the draft's trajectory. This enables inference at near-draft-speed, effectively leveraging the draft model's efficiency without additional fine-tuning. Experimental results show that CARD significantly outperforms existing state-of-the-art methods, achieving up to a 4.83x acceleration over vanilla autoregressive decoding, with no fine-tuning required for either models.",
+        "canonical_id": "arXiv:2508.04462",
+        "arxiv_id": "2508.04462",
+        "doi": "10.1016/j.hcc.2026.100420",
+        "authors": [
+          "En-Yu Zhou",
+          "Run-Jie Ding",
+          "Kai Sheng",
+          "Hao Chen",
+          "Xin He"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.00579",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.00579",
+        "id:arXiv:2509.00579",
+        "title:kvcomp a highperformance llmaware lossy compression framework for kv cache",
+        "url:https://arxiv.org/abs/2509.00579"
+      ],
+      "record": {
+        "title": "KVComp: A High-Performance, LLM-Aware, Lossy Compression Framework for KV Cache",
+        "source_url": "https://arxiv.org/abs/2509.00579",
+        "year": 2025,
+        "published": "2025-08-30",
+        "abstract": "Transformer-based large language models (LLMs) demonstrate impressive potential in various practical applications. However, long context inference poses a significant challenge due to the enormous memory requirements of the key-value (KV) cache, which can scale to multiple gigabytes as sequence length and batch size increase. In this paper, we present KVComp, a generic and efficient KV cache management framework optimized for long-text generation that synergistically works with both latency-critical and throughput-critical inference systems. KVComp employs novel lossy compression techniques specifically designed for KV cache data characteristics, featuring careful co-design of compression algorithms and system architecture. Our approach maintains compatibility with the growing nature of KV cache while preserving high computational efficiency. Experimental results show that KVComp achieves on average 47\\% and up to 83\\% higher memory reduction rate compared to existing methods with little/no model accuracy degradation. Furthermore, KVComp achieves extremely high execution throughput, effectively reducing decompression overhead and, in some cases, even accelerating the matrix-vector multiplication operation and outperform cuBLAS-based attention kernels with less data movement.",
+        "canonical_id": "arXiv:2509.00579",
+        "arxiv_id": "2509.00579",
+        "doi": "10.48550/arXiv.2509.00579",
+        "authors": [
+          "Bo Jiang",
+          "Taolue Yang",
+          "You-Yuan Liu",
+          "Cheng-Ming Zhang",
+          "Xubin He",
+          "Sian Jin"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.06175",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.06175",
+        "id:arXiv:2510.06175",
+        "title:vecinfer efficient llm inference with lowbit kv cache via outliersuppressed vector quantization",
+        "url:https://arxiv.org/abs/2510.06175"
+      ],
+      "record": {
+        "title": "VecInfer: Efficient LLM Inference with Low-Bit KV Cache via Outlier-Suppressed Vector Quantization",
+        "source_url": "https://arxiv.org/abs/2510.06175",
+        "year": 2025,
+        "published": "2025-10-07",
+        "abstract": "The Key-Value (KV) cache introduces substantial memory overhead during large language model (LLM) inference. Although existing vector quantization (VQ) methods reduce KV cache usage and provide flexible representational capacity across bit-widths, they suffer severe performance degradation at ultra-low bit-widths due to key cache outliers that hinder effective codebook utilization. To address this challenge, we propose VecInfer, a novel VQ method for aggressive KV cache compression while enabling efficient inference. By applying smooth and Hadamard transformations, VecInfer suppresses outliers in the key cache, enabling the codebook to comprehensively cover the original data distribution and thereby reducing quantization difficulty. To facilitate efficient deployment, we design an optimized CUDA kernel that fuses computation with dequantization to minimize memory access overhead. Extensive evaluations demonstrate that VecInfer consistently outperforms existing quantization baselines across both long-context understanding and mathematical reasoning tasks. With only 2-bit quantization, VecInfer achieves performance comparable to full precision, while delivering up to $\\mathbf{2.7\\times}$ speedup in large-batch self-attention computation and $\\mathbf{8.3\\times}$ reduction in single-batch end-to-end latency on Llama-3.1-8B with a 196k sequence length.",
+        "canonical_id": "arXiv:2510.06175",
+        "arxiv_id": "2510.06175",
+        "doi": "10.48550/arXiv.2510.06175",
+        "authors": [
+          "Ding-Yu Yao",
+          "Chenxu Yang",
+          "Zhengyang Tong",
+          "Zheng Lin",
+          "Wei Liu",
+          "Jian Luan",
+          "Weiping Wang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.11733",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.11733",
+        "id:arXiv:2511.11733",
+        "title:speculative decoding in decentralized llm inference turning communication latency into computation throughput",
+        "url:https://arxiv.org/abs/2511.11733"
+      ],
+      "record": {
+        "title": "Speculative Decoding in Decentralized LLM Inference: Turning Communication Latency into Computation Throughput",
+        "source_url": "https://arxiv.org/abs/2511.11733",
+        "year": 2025,
+        "published": "2025-11-13",
+        "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a lightweight draft model to propose tokens that are later verified by a stronger target model. While effective in centralized systems, its behavior in decentralized settings, where network latency often dominates compute, remains under-characterized. We present Decentralized Speculative Decoding (DSD), a plug-and-play framework for decentralized inference that turns communication delay into useful computation by verifying multiple candidate tokens in parallel across distributed nodes. We further introduce an adaptive speculative verification strategy that adjusts acceptance thresholds by token-level semantic importance, delivering an additional 15% to 20% end-to-end speedup without retraining. In theory, DSD reduces cross-node communication cost by approximately (N-1)t1(k-1)/k, where t1 is per-link latency and k is the average number of tokens accepted per round. In practice, DSD achieves up to 2.56x speedup on HumanEval and 2.59x on GSM8K, surpassing the Eagle3 baseline while preserving accuracy. These results show that adapting speculative decoding for decentralized execution provides a system-level optimization that converts network stalls into throughput, enabling faster distributed LLM inference with no model retraining or architectural changes.",
+        "canonical_id": "arXiv:2511.11733",
+        "arxiv_id": "2511.11733",
+        "doi": "10.48550/arXiv.2511.11733",
+        "authors": [
+          "Jing-Wei Song",
+          "Wanyi Chen",
+          "Xin-Yuan Song",
+          "Max",
+          "Chris Tong",
+          "Gufeng Chen",
+          "Tianyi Zhao",
+          "Eric Yang",
+          "Bill Shi",
+          "Lynn Ai"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.04719",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.04719",
+        "id:arXiv:2601.04719",
+        "title:gpuaccelerated int8 quantization for kv cache compression in large language models",
+        "url:https://arxiv.org/abs/2601.04719"
+      ],
+      "record": {
+        "title": "GPU-Accelerated INT8 Quantization for KV Cache Compression in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2601.04719",
+        "year": 2026,
+        "published": "2026-01-08",
+        "abstract": "The key-value (KV) cache in large language models presents a significant memory bottleneck during inference, growing linearly with sequence length and often exceeding the memory footprint of model weights themselves. We implement and evaluate GPU-accelerated INT8 quantization for KV cache compression, achieving 4$\\times$ memory reduction with minimal accuracy degradation. We develop four CUDA kernel variants -- naive, tiled, coarsened, and vectorized -- and benchmark them across realistic workload sizes up to 1 billion elements. Our vectorized kernel achieves up to 1,694$\\times$ speedup over CPU baselines while maintaining reconstruction error below 0.004 and attention score error below 0.1 even for 8K-dimensional heads. These results demonstrate that INT8 quantization provides a practical approach for reducing memory pressure in LLM inference with negligible computational overhead (6--58ms) and minimal impact on downstream model behavior",
+        "canonical_id": "arXiv:2601.04719",
+        "arxiv_id": "2601.04719",
+        "doi": "10.48550/arXiv.2601.04719",
+        "authors": [
+          "Maanas Taneja",
+          "Purab Shingvi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.23200",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.23200",
+        "id:arXiv:2602.23200",
+        "title:innerq hardwareaware tuningfree quantization of kv cache for large language models",
+        "url:https://arxiv.org/abs/2602.23200"
+      ],
+      "record": {
+        "title": "InnerQ: Hardware-aware Tuning-free Quantization of KV Cache for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2602.23200",
+        "year": 2026,
+        "published": "2026-02-26",
+        "abstract": "When transformer-based language models are deployed for text generation, most of the inference time is spent in the decoding stage, where output tokens are generated sequentially. Reducing the hardware cost of each decoding step is therefore critical for efficient long-context generation. A major bottleneck is the key-value (KV) cache, whose size grows with sequence length and often dominates the model's memory footprint. Prior work has proposed quantization methods to compress the KV cache while minimizing its loss of precision. We present InnerQ, a hardware-aware KV cache quantization scheme that reduces decode latency without compromising evaluation performance. InnerQ performs group-wise quantization by grouping cache matrices along their inner dimension. This grouping strategy aligns dequantization with vector-matrix multiplication and increases data reuse across GPU compute units. As a result, InnerQ reduces memory access and accelerates dequantization, achieving an average $1.3\\times$ speedup over prior KV cache quantization methods and $2.7\\times$ over the non-quantized baseline. To maintain fidelity under aggressive compression, InnerQ incorporates three techniques: (i) hybrid quantization, which chooses symmetric or asymmetric quantization for each group based on local statistics; (ii) high-precision windows for both recent tokens and attention sink tokens to mitigate outlier leakage; and (iii) per-channel normalization of the key cache, computed once during prefill and folded into the model parameters to eliminate runtime overhead. Beyond reducing latency, experiments on Llama and Mistral models show that InnerQ also improves few-shot evaluation scores relative to prior KV cache quantization methods.",
+        "canonical_id": "arXiv:2602.23200",
+        "arxiv_id": "2602.23200",
+        "doi": "10.48550/arXiv.2602.23200",
+        "authors": [
+          "Sayed Mohammadreza Tayaranian Hosseini",
+          "Amir Ardakani",
+          "Warren J. Gross"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:11456632ec6eac08492e40598e820efa09df912bb4b9f8eb9b5b891723ff511a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

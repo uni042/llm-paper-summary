@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "GenSched: Phase-Aware Generative Scheduling for LLM Inference in Heterogeneous Edge Networks",
+      "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571651",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "IEEE Conference on Computer Communications",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLM) on heterogeneous edge networks presents unique scheduling challenges due to the phase heterogeneity of inference workloads and dynamic resource constraints. Unlike traditional tasks with static resource footprints, LLM inference comprises compute-intensive prefill and memory-bandwidth-intensive decode phases, each exhibiting distinct hardware affinities. We propose GENSCHED, a generative scheduling framework that formulates phase-aware resource allocation as it learns the conditional distribution of feasible solutions. The framework combines a Mamba-based temporal encoder with a hybrid diffusion policy for joint server selection and resource allocation, augmented by feasibility projection to enforce strict Key-Value cache limits. Experiments on simulated heterogeneous edge clusters show that GENSCHED outperforms production baselines in both deadline compliance and Service Level Agreement satisfaction, with advantages increasing as the problem scales.",
+      "identifiers": [
+        "SemanticScholar:f65eb2c7f26ffe92a6ea3531693f0ee14ea078d3"
+      ],
+      "semantic_scholar_id": "f65eb2c7f26ffe92a6ea3531693f0ee14ea078d3",
+      "doi": "10.1109/INFOCOM59046.2026.11571651",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571651",
+      "authors": [
+        "Heng-Li Jin",
+        "Shuo Li",
+        "Mark A. Gregory"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE出版社一次要旨によると、prefillとdecodeの資源親和性を分け、Mamba時系列エンコーダと拡散方策でサーバ・資源割当を生成する。KV上限制約を満たす投影を組み込み、模擬エッジ群でdeadlineとSLA達成率を改善する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "DeepServe: Hierarchical Model Placement and Dynamic Batching for Cost-Efficient Multi-Tenant LLM Inference at Scale",
+      "source_url": "https://doi.org/10.1109/SoutheastCon63549.2026.11476566",
+      "year": 2026,
+      "published": "2026-02-20",
+      "venue": "SoutheastCon",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) inference serving at scale presents critical challenges in multi-tenant cloud environments, where organizations must balance conflicting objectives of cost efficiency, response latency, and resource utilization across heterogeneous GPU infrastructure. Current serving systems employ static model placement strategies and homogeneous batching policies, resulting in $40 - 60 \\%$ GPU underutilization and $3-5 \\times$ cost inefficiency for variable workloads. We present DeepServe, a hierarchical model placement framework with dynamic batching that optimizes cost per served token across five GPU tiers (A100-80GB, A100-40GB, V100, L4, T4) and four model scales (7B-175B parameters). Our system integrates three key innovations: (1) Memoryaware hierarchical placement algorithm achieving 82% GPU utilization through optimal model-to-GPU assignment based on memory footprint and throughput profiles, (2) Adaptive continuous batching with SLA-aware scheduling attaining $3.8 \\times$ throughput improvement over sequential processing while maintaining P95 latency under 2.5 seconds, and (3) Multi-objective cost optimizer reducing inference cost by 47% compared to static provisioning through heterogeneous GPU selection. Evaluation on production-representative workloads with 50,000 requests demonstrates: P50 latency of 890 ms, P95 latency of $2.31 ~\\mathrm{s}, 79 \\%$ average GPU utilization, and $0.0012 cost per 1000 tokens-matching vLLM throughput benchmarks while achieving 47% cost reduction versus naive A100-only deployment.",
+      "identifiers": [
+        "SemanticScholar:6b1f9ccf53a1c4b6101f7c2ece735a0e887192cc"
+      ],
+      "semantic_scholar_id": "6b1f9ccf53a1c4b6101f7c2ece735a0e887192cc",
+      "doi": "10.1109/SoutheastCon63549.2026.11476566",
+      "canonical_id": "DOI:10.1109/SoutheastCon63549.2026.11476566",
+      "authors": [
+        "Tejas Pravinbhai Patel",
+        "P. Agarwal"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      },
+      "reason": "論文要旨によると、A100/V100/L4/T4など5 GPU階層と7B～175Bのモデルを組み合わせ、メモリを考慮した配置とSLA対応連続バッチでコストを最小化する。50,000要求の模擬負荷でA100固定配置比コスト47%減、P95 2.31秒を報告する。出版社一次要旨の全文は未取得であるため定量値は要再照合。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "DenseSSM: State Space Models with Dense Hidden Connection for Efficient Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2025.naacl-long.467",
+      "year": 2025,
+      "published": null,
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) face a significant challenge due to the excessive computational and memory requirements of the commonly used Transformer architecture. While state space model (SSM) is a new type of foundational network architecture offering lower computational complexity, their performance has yet to fully rival that of Transformers. This paper introduces DenseSSM, a novel approach to enhance the flow of hidden information be-tween layers in SSMs. By selectively integrating shallow-layer hidden states into deeper layers, DenseSSM retains fine-grained information crucial for the final output. This incremental improvement maintains the training parallelizability and inference efficiency of SSMs while significantly boosting performance. The proposed method is broadly applicable to various SSM types, including Ret-Net and Mamba, and DenseSSM achieves significant performance improvements on public benchmarks, demonstrating its effectiveness and versatility.",
+      "identifiers": [
+        "SemanticScholar:b40f634c19ca59c8b8da641f898c2b41b9936f88"
+      ],
+      "semantic_scholar_id": "b40f634c19ca59c8b8da641f898c2b41b9936f88",
+      "doi": "10.18653/v1/2025.naacl-long.467",
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.467",
+      "authors": [
+        "Wei He",
+        "Kai Han",
+        "Ye-Hui Tang",
+        "Cheng-Cheng Wang",
+        "Yujie Yang",
+        "Tian-Yu Guo",
+        "Yun-He Wang"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL Anthology一次要旨によると、浅いSSM層の隠れ状態を選択的に深層へ加算し、RetNet/Mambaの線形計算効率を保ちながら品質を改善する。効率的な言語モデルアーキテクチャの直接的な技術貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Beyond Fixed-Length Calibration for Post-Training Compression of LLMs",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.1054",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:f18067fdbd76221fb4aa33a26c88978a1571aecc"
+      ],
+      "semantic_scholar_id": "f18067fdbd76221fb4aa33a26c88978a1571aecc",
+      "doi": "10.18653/v1/2025.findings-emnlp.1054",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1054",
+      "authors": [
+        "Jaehoon Oh",
+        "Dokwan Oh"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "ACL Anthology一次要旨は、PTQ/枝刈りの校正系列長と正規化後の先頭トークン活性の特異性を分析し、sequence axis maskによるstate-aware length calibrationを提案。再学習なしのLLM圧縮品質を改善する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Energy Cost Modelling for Optimizing Large Language Model Inference on Hardware Accelerators",
+      "source_url": "https://doi.org/10.1109/SOCC62300.2024.10737844",
+      "year": 2024,
+      "published": "2024-09-16",
+      "venue": "ACM Symposium on Cloud Computing",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rise of Large Language Models (LLMs) has significantly escalated the demand for efficient LLM inference, primarily fulfilled through cloud-based GPU computing. This approach, while effective, is associated with high energy consumption resulting in large operating expenses and considerable carbon footprints. In the meantime, growing privacy concerns advocate for inference on edge devices, which are constrained by a limited battery capacity. Both cloud and edge scenarios necessitate energy-efficient LLM inference strategies.This paper addresses the urgent need for energy-efficient inference by proposing an open-source framework designed to model LLM workloads on dedicated accelerators. Our framework facilitates early identification of energy bottlenecks through rapid modeling of the execution efficiency of a wide range of LLMs on diverse hardware architectures. Key innovations include a PyTorch-based generalized LLM template to easily generate custom workload graphs, extensions of the ZigZag design space exploration framework and techniques to significantly speed up simulation time at a negligible loss of accuracy. Using a representative hardware architecture, we conduct three case studies to reveal critical energy bottlenecks in Llama2-7B inference, revealing that 1) memory-bound computing in the decode stage is detrimental not only for the latency, but also for the energy cost; 2) aggressive weight-only quantization can reduce the energy cost by 4.6 × and shift the bottleneck from weight fetching to the attention mechanism; 3) in edge scenarios, the relative energy cost of the prefill stage is more significant, encouraging efforts to optimize both prefill and decode stage. Our framework is available open-source at github.com/KULeuven-MICAS/zigzag-llm.",
+      "identifiers": [
+        "SemanticScholar:a69f3736cab11e0bfd42915d83e35f0eb1e48244"
+      ],
+      "semantic_scholar_id": "a69f3736cab11e0bfd42915d83e35f0eb1e48244",
+      "doi": "10.1109/SOCC62300.2024.10737844",
+      "canonical_id": "DOI:10.1109/SOCC62300.2024.10737844",
+      "authors": [
+        "Robin Geens",
+        "Man Shi",
+        "Arne Symons",
+        "Chao Fang",
+        "Marian Verhelst"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 774,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論をZigZag設計空間探索へ写像し、GPU/専用アクセラレータの計算・メモリのエネルギーを高速に推定する。Llama2-7Bでdecodeの重み読出し支配と、重み量子化によるエネルギー最大4.6倍削減をモデル化した推論評価基盤。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0cd8cc8bfe34",
+    "round": "libimp-0cd8cc8bfe34333b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0cd8cc8bfe34333b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0cd8cc8bfe34333b-pre01.json",
+    "receipt": "sha256:134c763c7b9a07d61012675c0b13e5a9b689e27b84f496abe0a8b82ca4aea3c4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0cd8cc8bfe34",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

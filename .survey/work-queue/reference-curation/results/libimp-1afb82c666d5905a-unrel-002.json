@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1afb82c666d5905a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1704.04861",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1704.04861",
+    "identity_tokens": [
+      "arXiv:1704.04861"
+    ],
+    "reason": "depthwise separable convolutionと幅・解像度係数でモバイル画像認識の遅延・精度を調整する軽量CNN研究。効率化は扱うが対象は画像認識で、LLM推論システムではない。",
+    "first_checked_at": "2026-10-04T14:31:28+00:00",
+    "last_checked_at": "2026-10-04T14:31:28+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.14256-zipcache.md",
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md"
+    ],
+    "title": "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications"
+  },
+  "processed_at": "2026-10-04T14:31:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1afb82c666d5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

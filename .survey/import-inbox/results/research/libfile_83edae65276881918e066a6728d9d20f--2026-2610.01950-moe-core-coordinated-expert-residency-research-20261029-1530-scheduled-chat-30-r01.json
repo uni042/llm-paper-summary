@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "172fee0665c9e96a8be60c93c25826cace6456d1e09db0af315083c751853dc5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_83edae65276881918e066a6728d9d20f--2026-2610.01950-moe-core-coordinated-expert-residency-research-20261029-1530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2610.01950",
+  "worker_completed_at": "2026-10-29T15:30:30+09:00",
+  "worker_run_key": "20261029-1530-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6174,
+    "body_paragraphs": 30,
+    "method_chars": 2193,
+    "method_paragraphs": 12,
+    "evaluation_chars": 461,
+    "limitation_chars": 573,
+    "insufficiency_flags": [
+      "評価説明量 461 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 461 < 500"
+  ],
+  "processed_at": "2026-10-29T07:06:05+00:00"
+}

@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0233-scheduled-chat-30/r04",
+  "reference_main_sha": "60afd16624f4f1435a21e795ef399f73ef2a5a7d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.29350",
+      "identity_tokens": [
+        "arXiv:2606.29350"
+      ],
+      "title": "Fast Enough to Act: Spatio-Temporal Visual Token Merging for Low-Latency Robotic VLMs and VLAs",
+      "reason": "ST-Mergeは動画・高解像度画像の視覚tokenを3次元時空間座標による並列マッチングと加重集約で統合し、位置符号を重心に合わせて再補正する学習不要の視覚エンコーダ最適化。Qwen2.5-VLの動画QAで約2倍の推論高速化と約1%の精度低下、π0.5 VLAで1024²解像度時に8.3倍高速化・成功率維持を報告。",
+      "source_url": "https://arxiv.org/abs/2606.29350",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:45:24+09:00",
+      "last_checked_at": "2026-10-31T02:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 395,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/079017-1030",
+      "identity_tokens": [
+        "DOI:10.52202/079017-1030"
+      ],
+      "title": "Where does In-context Learning Happen in Large Language Models?",
+      "reason": "NeurIPS 2024一次要旨はGPTNeo、BLOOM、StarCoder、Llama3.1などの層別context-maskingでタスク認識が中間層までに成立し、後段の例示文へのattentionが不要になる場合を検証。5-shotの文脈で約45%の計算削減を報告し、長いICL promptの層別attention省略という推論効率化に直結。",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/3979818cdc7bc8dbeec87170c11ee340-Abstract-Conference.html",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:45:24+09:00",
+      "last_checked_at": "2026-10-31T02:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 400,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.23539",
+      "identity_tokens": [
+        "arXiv:2507.23539"
+      ],
+      "title": "Improved Algorithms for Kernel Matrix-Vector Multiplication Under Sparsity Assumptions",
+      "reason": "Gaussian kernel行列Kとベクトルの積を、行列要素総和がnに線形比例する疎性仮定のもとでnに関して劣二乗時間・次元dに線形時間で近似するアルゴリズム。一次要旨はLLMのfast attention計算で仮定を実験検証したとする。LLM専用実装ではないがattention計算削減に直接つながる基盤アルゴリズム。",
+      "source_url": "https://arxiv.org/abs/2507.23539",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:45:24+09:00",
+      "last_checked_at": "2026-10-31T02:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 405,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.06567",
+      "identity_tokens": [
+        "arXiv:2502.06567"
+      ],
+      "title": "Membership Inference Risks in Quantized Models: A Theoretical and Empirical Study",
+      "reason": "量子化後のモデルに対するmembership inference securityを漸近解析し、PTQのプライバシー脆弱性を比較する指標を提案。量子化による推論コスト削減と安全性のトレードオフに関連するが、実験対象は合成データ・創薬など一般MLで、LLM推論性能やサービング技術の実証はない。",
+      "source_url": "https://arxiv.org/abs/2502.06567",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:45:24+09:00",
+      "last_checked_at": "2026-10-31T02:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 411,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.30553",
+      "identity_tokens": [
+        "arXiv:2606.30553"
+      ],
+      "title": "COSM: A Cooperative Scheduling Framework for Concurrent PIM and CPU Execution on Mobile Devices",
+      "reason": "スマートフォン上でPIMとCPUが共有DRAMを同時利用するときのbank衝突とバス競合を避けるため、CPUアクセスを阻害しないPIM制御インターフェースとidle-window-awareスケジューラを提案。LLMとモバイルアプリの同時実行評価でPIM throughput最大2.8倍、CPU性能低下2%未満を報告。エッジLLMのメモリ実行効率に直結。",
+      "source_url": "https://arxiv.org/abs/2606.30553",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:45:24+09:00",
+      "last_checked_at": "2026-10-31T02:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 412,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.22276",
+      "identity_tokens": [
+        "arXiv:2603.22276"
+      ],
+      "title": "Scaling DoRA: High-Rank Adaptation via Factored Norms and Fused Kernels",
+      "reason": "高rank DoRAでBAの密行列を明示生成して行ノルムを求める問題を、base/cross/Gram項に分解してO(dout*r+r²)の中間量で計算。さらに4カーネルのDoRA合成をTriton単一カーネルへ融合し、8〜32B VLMで推論1.5〜2.0倍、勾配1.5〜1.9倍、peak VRAM最大7GB削減を報告。推論・アダプタ実装効率に直接該当。",
+      "source_url": "https://arxiv.org/abs/2603.22276",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:45:24+09:00",
+      "last_checked_at": "2026-10-31T02:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 415,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.02670",
+      "identity_tokens": [
+        "arXiv:2405.02670"
+      ],
+      "title": "From Generalization Analysis to Optimization Designs for State Space Models",
+      "reason": "状態空間モデルのデータ依存汎化境界を解析し、初期化スケーリングと学習正則化によって時系列入力の出力安定性・汎化を改善する研究。主目的はSSMの学習アルゴリズムと理論であり、LLMの推論速度・KV/状態圧縮・実行時資源最適化は評価していない。",
+      "source_url": "https://arxiv.org/abs/2405.02670",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:45:24+09:00",
+      "last_checked_at": "2026-10-31T02:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 418,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.09558",
+      "identity_tokens": [
+        "arXiv:2505.09558"
+      ],
+      "title": "WavReward: Spoken Dialogue Models With Generalist Reward Evaluators",
+      "reason": "音声対話のIQ/EQ評価に向けたrewardモデルとChatReward-30Kの構築、音声対話品質の評価改善が主題。要旨はQwen2.5-Omniに対する評価精度の向上を示すが、音声LLM推論の計算削減やサービング効率化の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2505.09558",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:45:24+09:00",
+      "last_checked_at": "2026-10-31T02:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 419,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.06136",
+      "identity_tokens": [
+        "arXiv:2407.06136"
+      ],
+      "title": "Mamba-FSCIL: Dynamic Adaptation with Selective State Space Model for Few-Shot Class-Incremental Learning",
+      "reason": "Mambaを用いて画像のfew-shot class-incremental learningにおける旧クラス保持と新クラス適応を両立する二重SSM projectorと選択的scanを提案。miniImageNet/CIFAR-100/CUB-200の分類精度が中心で、LLM推論・サービング最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2407.06136",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:45:24+09:00",
+      "last_checked_at": "2026-10-31T02:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 420,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18842",
+      "identity_tokens": [
+        "arXiv:2604.18842"
+      ],
+      "title": "Multi-Domain Learning with Global Expert Mapping",
+      "reason": "画像モデルの複数データセット学習で、MoE expertへのドメイン割当を線形計画と階層丸めで決め、希少ドメインの表現を改善するGEM-DINO。評価は画像ドメイン汎化とfew-shot適応で、LLM推論時のMoE routing高速化・負荷分散は主題ではない。",
+      "source_url": "https://arxiv.org/abs/2604.18842",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:45:24+09:00",
+      "last_checked_at": "2026-10-31T02:45:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 423,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

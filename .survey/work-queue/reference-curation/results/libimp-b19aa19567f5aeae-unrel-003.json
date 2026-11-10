@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b19aa19567f5aeae-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3770855.3818155",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3770855.3818155",
+    "identity_tokens": [
+      "DOI:10.1145/3770855.3818155"
+    ],
+    "reason": "Vision language models face a fundamental geometry trade-off: Euclidean representations excel at instance-level discrimination, while hyperbolic representations naturally encode semantic hierarchies. Hybrid training is challenging because one geometry may dominate early, leaving the other under-trained failure mode we term geometry dominance. We introduce Adaptive Geometry Routing (AGR), a framework that addresses this via a novel four-phase training curriculum : (1) Isolation hyperbolic-only training stabilizes hierarchical structure; (2) Shadow router learns mixing patterns using only hyperbolic signals; (3) Soft Launch Euclidean scores gradually become visible; (4) Adaptive full dual-geometry routing. This phased coordination of router activation (?) and Euclidean visibility (?) prevents early dominance while enabling data-driven geometry selection. Built on a shared backbone with lightweight LoRA-adapted heads and bounded residual corrections, AGR discovers that hyperbolic geometry is preferred by default (85% weight), with routing adapting semantically abstract queries route more hyperbolic, attribute-rich queries shift toward Euclidean. On ViT-B, AGR achieves 38.8% COCO T2I R@5 (+6.5pp over MERU), 64.7% Flickr30K I2T R@5 (+11.3pp), and 32.6% ImageNet accuracy (+9.3pp), demonstrating that phased curriculum training enables stable hybrid geometry learning for vision-language understanding.",
+    "first_checked_at": "2026-10-05T08:55:09+00:00",
+    "last_checked_at": "2026-10-05T08:55:09+00:00",
+    "linked_from": [
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "Adaptive Geometry Routing for Vision-Language Understanding"
+  },
+  "processed_at": "2026-10-05T08:55:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b19aa19567f5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r14",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.24156",
+      "identity_tokens": [
+        "arXiv:2606.24156"
+      ],
+      "title": "Accelerating Multimodal Large Language Models with Prior-Corrected Token Reduction",
+      "reason": "MLLMの視覚注意スコアが命令に無関係な事前選好へ偏り、重要な質問依存トークンを剪定する問題に対し、null tokenで一回のforward中に事前注意と質問条件付き注意を分離するPriorTRを提案。学習不要の視覚トークン削減でMLLMの精度・推論費用の交換条件を改善する。",
+      "source_url": "https://arxiv.org/abs/2606.24156",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:45+09:00",
+      "last_checked_at": "2026-10-30T19:43:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 179,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.08644",
+      "identity_tokens": [
+        "arXiv:2402.08644"
+      ],
+      "title": "Tandem Transformers for Inference Efficient LLMs",
+      "reason": "小さい自己回帰モデルに大きいブロック処理モデルの表現を参照させるTandem Transformerを提案。小モデルの草案品質を高めつつ大モデルが複数トークンをまとめて検証し、PaLM2系列で同等品質のモデル比1.16倍の速度改善、SPEED投機的復号内でも追加1.14倍を報告。推論アーキテクチャと投機的復号に直接関連。",
+      "source_url": "https://arxiv.org/abs/2402.08644",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:45+09:00",
+      "last_checked_at": "2026-10-30T19:43:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 180,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.16067",
+      "identity_tokens": [
+        "arXiv:2606.16067"
+      ],
+      "title": "Stepwise Token Selection for Efficient Multimodal Large Language Models",
+      "reason": "視覚トークンを独立スコアで固定数選ぶ代わりに、既選択集合を条件に次のトークンと終了時点を順次決定する選択器を学習する。LLaVA/Qwen2.5-VLで88.9%の視覚トークン削減時に元精度94.6%を維持し、prefill遅延1.88倍高速化と報告。MLLM入力トークン選択の直接的な推論効率化。",
+      "source_url": "https://arxiv.org/abs/2606.16067",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:43:45+09:00",
+      "last_checked_at": "2026-10-30T19:43:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 182,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}

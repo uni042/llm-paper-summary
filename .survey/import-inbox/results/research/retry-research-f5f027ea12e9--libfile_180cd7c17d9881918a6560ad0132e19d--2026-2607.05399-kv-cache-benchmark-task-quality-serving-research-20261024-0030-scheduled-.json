@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4ebea05dc12af729147a7f7508583b6ce0fb80f99458ac83e90eaffb3ac18f87",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f5f027ea12e9--libfile_180cd7c17d9881918a6560ad0132e19d--2026-2607.05399-kv-cache-benchmark-task-quality-serving-research-20261024-0030-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2607.05399",
+  "worker_completed_at": "2026-10-24T00:30:46+09:00",
+  "worker_run_key": "20261024-0030-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5117,
+    "body_paragraphs": 25,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1167,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2607.05399-benchmarking-kv-cache-optimizations-across-task-quality-and-system-perfo.md と 16 段落 / 3738文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-23T17:46:49+00:00"
+}

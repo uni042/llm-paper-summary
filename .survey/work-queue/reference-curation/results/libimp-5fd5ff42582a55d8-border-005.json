@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5fd5ff42582a55d8-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.40098",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.40098",
+    "identity_tokens": [
+      "arXiv:2609.40098"
+    ],
+    "reason": "arXiv abstractはLLM inference latency-aware pricing theory。主成果はtiered pricing/profitでruntime/serving optimizationではなく、scope寄与不明。arXiv HTML full text取得は失敗。",
+    "first_checked_at": "2026-10-05T03:02:29+00:00",
+    "last_checked_at": "2026-10-05T03:02:29+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md"
+    ],
+    "title": "Pricing Time, Not Just Tokens: Latency-Aware Mechanism Design for LLM Inference"
+  },
+  "processed_at": "2026-10-05T03:02:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5fd5ff42582a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6cff7a95aacfe681-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2304.13712",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2304.13712",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2304.13712",
+      "arXiv:2304.13712"
+    ],
+    "reason": "LLMのモデル・データ・下流NLP用途・実務上の制約を横断整理する一般サーベイで、推論システム最適化の専門サーベイではない。",
+    "first_checked_at": "2026-10-03T13:20:50+00:00",
+    "last_checked_at": "2026-10-03T13:20:50+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+    ],
+    "title": "Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond"
+  },
+  "processed_at": "2026-10-03T13:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6cff7a95aacf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

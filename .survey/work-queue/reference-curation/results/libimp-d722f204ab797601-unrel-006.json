@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d722f204ab797601-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.10631",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.10631",
+    "identity_tokens": [
+      "arXiv:2310.10631"
+    ],
+    "reason": "Code Llamaを数学corpus Proof-Pile-2で継続事前学習し、MATH、tool use、formal theorem proving性能を改善する数学特化LLM研究。主貢献はmodel/data/trainingで、推論system効率化ではない。",
+    "first_checked_at": "2026-10-05T01:03:26+00:00",
+    "last_checked_at": "2026-10-05T15:48:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+    ],
+    "title": "Llemma: An Open Language Model For Mathematics"
+  },
+  "processed_at": "2026-10-05T15:48:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d722f204ab79",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

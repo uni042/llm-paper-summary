@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6c42147d0854419b-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.01341",
+  "reason": "Programmable-payment protocols such as x402 enable per-request micropayments, but they do not determine which payable service an autonomous agent should buy under a finite wallet. We formulate this buyer-side problem as agent-native payment decision-making: contextual provider selection under wallet pressure, chosen-only paid feedback, and changing market conditions. We propose 402Pilot, a protocol-agnostic buyer-side decision layer between autonomous agents and payment execution that implements purchasing policies for selecting among payable providers. We instantiate it with PA-DCT, a payment-aware discounted contextual Thompson-sampling policy that adapts purchasing decisions under wallet pressure while learning from post-payment feedback. To evaluate buyer-side payment policies, we introduce 402Pilot-Bench, a frozen-replay benchmark spanning 823 tasks, five heterogeneous provider pipelines, and three market regimes, each evaluated over 30 paired seeds. PA-DCT achieves the strongest fixed-wallet adaptive trade-off among non-oracle policies: it maintains competitive service quality while spending only 39 to 43 percent of the wallet and reallocates spending as market conditions change. It attains the best non-oracle PA-gap/T under the price shock and the best mean and worst-case ranks across the nine scenario-metric combinations of quality, ROI, and PA-gap/T. Comparisons with learning baselines and component ablations further support the effectiveness and design of the proposed decision policy. These results suggest that programmable payment must be complemented by buyer-side decision-making capable of learning service value and adapting purchasing decisions accordingly.",
+  "title": "402Pilot: An x402 Decision Layer for Autonomous Agent Micropayments",
+  "identity_tokens": [
+    "arXiv:2608.01341"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+    "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6c42147d0854",
+  "source_precheck_request_id": null
+}

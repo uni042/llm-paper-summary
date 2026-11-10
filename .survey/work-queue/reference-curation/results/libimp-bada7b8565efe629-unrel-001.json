@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bada7b8565efe629-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.12640",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.12640",
+    "identity_tokens": [
+      "DOI:10.5194/isprs-annals-xi-2-2026-225-2026",
+      "PRIMARY:https://arxiv.org/abs/2605.12640v2",
+      "arXiv:2605.12640"
+    ],
+    "reason": "MambaPanopticはvision-Mamba SSMをpanoptic segmentationへ適用するcomputer-vision model。線形計算量/parameterの利点はtask-specific vision architecture内でありLLM servingとの接続なし。",
+    "first_checked_at": "2026-10-11T19:34:58+00:00",
+    "last_checked_at": "2026-10-11T19:34:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "MambaPanoptic: A Vision Mamba-based Structured State Space Framework for Panoptic Segmentation"
+  },
+  "processed_at": "2026-10-11T19:34:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bada7b8565ef",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

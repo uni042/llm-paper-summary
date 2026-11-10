@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d631d1407915a5e0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.05735",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.05735",
+    "identity_tokens": [
+      "arXiv:2608.05735"
+    ],
+    "reason": "Time-varying cloud workloads often cause resource under-utilization during off-peak periods and resource contention during peak periods. Existing prediction-then-optimization (PTO) frameworks suffer from two-stage decoupling, hindering the balance among violation rate, user satisfaction, and resource utilization. We formulate heterogeneous job scheduling as a multi-objective combinatorial optimization problem (MOCOP) under uncertain constraints and propose a closed-loop decision-focused learning (CL-DFL) framework for cloud orchestration. CL-DFL integrates a Multivariate Time-series Graph Neural Network (MTGNN)-based spatio-temporal predictor with a zeroth-order decision-focused learning (DFL) mechanism based on the tree-structured Parzen estimator (TPE). This integration establishes an end-to-end (E2E) feedback pathway between resource perception and scheduling decisions. Furthermore, we develop the GNeuro-PLS strategy by incorporating group relative policy optimization (GRPO) into cooperative local search to improve robustness under heterogeneous workloads. Extensive experiments on four real-world datasets demonstrate that CL-DFL achieves superior trade-offs among violation rate, user satisfaction, and resource utilization. It effectively controls overload risks under regular workloads and maintains resilience under highly saturated scenarios compared with state-of-the-art baselines.",
+    "first_checked_at": "2026-10-05T09:00:21+00:00",
+    "last_checked_at": "2026-10-05T09:00:21+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md"
+    ],
+    "title": "Closed-Loop Decision-Focused Learning for User-Aware Cloud Orchestration under Uncertainty"
+  },
+  "processed_at": "2026-10-05T09:00:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d631d1407915",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

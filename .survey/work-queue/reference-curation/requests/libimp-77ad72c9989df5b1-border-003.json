@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-77ad72c9989df5b1-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:1909.00015",
+  "reason": "softmaxを学習可能なalpha-entmaxへ置換し、headごとにcontext-dependentな厳密ゼロattentionを学習するため機構上はsparse attentionに近い。一方、論文の主要評価はmachine translationの精度・interpretability・head diversityで、実際の推論FLOPs/latency/memory削減を実装評価していないため現行の推論システム収録対象としては境界的。",
+  "title": "Adaptively Sparse Transformers",
+  "identity_tokens": [
+    "arXiv:1909.00015"
+  ],
+  "linked_from": [
+    "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-77ad72c9989d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

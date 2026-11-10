@@ -1,0 +1,156 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a49adc3cd584adaa-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a49adc3cd584",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2312.09193",
+    "arXiv:2312.12682"
+  ],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "076e48215212df370a7dc7589914cfc9fa7db66f",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-03T06:06:06.835262+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2312.09193",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2312.12682",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Fast Sampling via Discrete Non-Markov Diffusion Models with Predetermined Transition Time",
+      "source_url": "https://arxiv.org/abs/2312.09193",
+      "year": 2023,
+      "published": "2023-12-14",
+      "abstract": "Discrete diffusion models have emerged as powerful tools for high-quality data generation. Despite their success in discrete spaces, such as text generation tasks, the acceleration of discrete diffusion models remains under-explored. In this paper, we propose discrete non-Markov diffusion models (DNDM), which naturally induce the predetermined transition time set. This enables a training-free sampling algorithm that significantly reduces the number of function evaluations (i.e., calls to the neural network), making the sampling process much faster. Furthermore, we study the transition from finite to infinite step sampling, offering new insights into bridging the gap between discrete and continuous-time processes for discrete diffusion models. Extensive experiments on natural language generation and machine translation tasks demonstrate the superior performance of our method in terms of both generation speed and sample quality compared to existing methods for discrete diffusion models.",
+      "canonical_id": "arXiv:2312.09193",
+      "arxiv_id": "2312.09193",
+      "doi": "10.52202/079017-3393",
+      "authors": [
+        "Zixiang Chen",
+        "Huizhuo Yuan",
+        "Yongqian Li",
+        "Y. Kou",
+        "Junkai Zhang",
+        "Quanquan Gu"
+      ]
+    },
+    {
+      "title": "Mini-GPTs: Efficient Large Language Models through Contextual Pruning",
+      "source_url": "https://arxiv.org/abs/2312.12682",
+      "year": 2023,
+      "published": "2023-12-20",
+      "abstract": "In AI research, the optimization of Large Language Models (LLMs) remains a significant challenge, crucial for advancing the field's practical applications and sustainability. Building upon the foundational work of Professor Song Han's lab at MIT, this paper introduces a novel approach in developing Mini-GPTs via contextual pruning. Our methodology strategically prunes the computational architecture of traditional LLMs, like Phi-1.5, focusing on retaining core functionalities while drastically reducing model sizes. We employ the technique across diverse and complex datasets, including US law, Medical Q&A, Skyrim dialogue, English-Taiwanese translation, and Economics articles. The results underscore the efficiency and effectiveness of contextual pruning, not merely as a theoretical concept but as a practical tool in developing domain-specific, resource-efficient LLMs. Contextual pruning is a promising method for building domain-specific LLMs, and this research is a building block towards future development with more hardware compute, refined fine-tuning, and quantization.",
+      "canonical_id": "arXiv:2312.12682",
+      "arxiv_id": "2312.12682",
+      "doi": "10.48550/arXiv.2312.12682",
+      "authors": [
+        "Tim Valicenti",
+        "Justice Vidal",
+        "Ritik Patnaik"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2312.09193",
+      "identity_tokens": [
+        "id:DOI:10.52202/079017-3393",
+        "id:arXiv:2312.09193",
+        "title:fast sampling via discrete nonmarkov diffusion models with predetermined transition time",
+        "url:https://arxiv.org/abs/2312.09193"
+      ],
+      "record": {
+        "title": "Fast Sampling via Discrete Non-Markov Diffusion Models with Predetermined Transition Time",
+        "source_url": "https://arxiv.org/abs/2312.09193",
+        "year": 2023,
+        "published": "2023-12-14",
+        "abstract": "Discrete diffusion models have emerged as powerful tools for high-quality data generation. Despite their success in discrete spaces, such as text generation tasks, the acceleration of discrete diffusion models remains under-explored. In this paper, we propose discrete non-Markov diffusion models (DNDM), which naturally induce the predetermined transition time set. This enables a training-free sampling algorithm that significantly reduces the number of function evaluations (i.e., calls to the neural network), making the sampling process much faster. Furthermore, we study the transition from finite to infinite step sampling, offering new insights into bridging the gap between discrete and continuous-time processes for discrete diffusion models. Extensive experiments on natural language generation and machine translation tasks demonstrate the superior performance of our method in terms of both generation speed and sample quality compared to existing methods for discrete diffusion models.",
+        "canonical_id": "arXiv:2312.09193",
+        "arxiv_id": "2312.09193",
+        "doi": "10.52202/079017-3393",
+        "authors": [
+          "Zixiang Chen",
+          "Huizhuo Yuan",
+          "Yongqian Li",
+          "Y. Kou",
+          "Junkai Zhang",
+          "Quanquan Gu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2312.12682",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2312.12682",
+        "id:arXiv:2312.12682",
+        "title:minigpts efficient large language models through contextual pruning",
+        "url:https://arxiv.org/abs/2312.12682"
+      ],
+      "record": {
+        "title": "Mini-GPTs: Efficient Large Language Models through Contextual Pruning",
+        "source_url": "https://arxiv.org/abs/2312.12682",
+        "year": 2023,
+        "published": "2023-12-20",
+        "abstract": "In AI research, the optimization of Large Language Models (LLMs) remains a significant challenge, crucial for advancing the field's practical applications and sustainability. Building upon the foundational work of Professor Song Han's lab at MIT, this paper introduces a novel approach in developing Mini-GPTs via contextual pruning. Our methodology strategically prunes the computational architecture of traditional LLMs, like Phi-1.5, focusing on retaining core functionalities while drastically reducing model sizes. We employ the technique across diverse and complex datasets, including US law, Medical Q&A, Skyrim dialogue, English-Taiwanese translation, and Economics articles. The results underscore the efficiency and effectiveness of contextual pruning, not merely as a theoretical concept but as a practical tool in developing domain-specific, resource-efficient LLMs. Contextual pruning is a promising method for building domain-specific LLMs, and this research is a building block towards future development with more hardware compute, refined fine-tuning, and quantization.",
+        "canonical_id": "arXiv:2312.12682",
+        "arxiv_id": "2312.12682",
+        "doi": "10.48550/arXiv.2312.12682",
+        "authors": [
+          "Tim Valicenti",
+          "Justice Vidal",
+          "Ritik Patnaik"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:296dbc54e150515299d5539913ceaebae2dbdddb16e31abe23d8acf7f2b184ab",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

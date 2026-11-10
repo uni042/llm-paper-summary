@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4984e8424ffedd66-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.23250",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.23250",
+    "identity_tokens": [
+      "arXiv:2607.23250"
+    ],
+    "reason": "Long-context LLM trainingのattention workload balancingであり、学習専用効率化は対象外。",
+    "first_checked_at": "2026-10-05T03:33:35+00:00",
+    "last_checked_at": "2026-10-05T03:33:35+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+    ],
+    "title": "Libra: Taming Attention Workload Skew in Long-Context LLM Training with Bounded Sequence Pool"
+  },
+  "processed_at": "2026-10-05T03:33:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4984e8424ffe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

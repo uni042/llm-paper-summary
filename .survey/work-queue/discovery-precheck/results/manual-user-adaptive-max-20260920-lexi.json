@@ -1,0 +1,156 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "manual-user-adaptive-max-20260920-lexi",
+  "collector_id": "manual-user-adaptive-max-lexi",
+  "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
+  "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2509.02753 (layer-adaptive active experts)",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2509.02753/citations",
+  "target_unseen": 50,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6b8c89cdd8d4c71d9facda9b599bf3bc145681ef",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T10:34:52.876054+00:00",
+  "results": [
+    {
+      "title": "Hybrid Deep Architectures in Contrastive Latent Space: Performance Analysis of VAE-MLP, VAE-MoTE, and VAE-GAT for IoT Botnet Detection",
+      "source_url": "https://www.semanticscholar.org/paper/eecd9f02829d23bc94daf629e4a6ee6e58e55c48",
+      "year": 2026,
+      "published": "2026-05-12",
+      "abstract": "The rapid proliferation of Internet of Things (IoT) devices has significantly expanded the attack surface of modern networks leading to a surge in IoT-based botnet attacks. Detecting such attacks remains challenging due to the high dimensionality and heterogeneity of IoT network traffic. This study proposes and evaluates three hybrid deep learning architectures for IoT botnet detection that combine representation learning with supervised classification: VAE-encoder-MLP, VAE-encoder-GAT, and VAE-encoder-MoTE. A Variational Autoencoder is initially trained to learn a compact latent representation of the high-dimensional traffic features. Subsequently, the pretrained VAE-encoder component is employed to project the data into a lower-dimensional embedding space. These embeddings are then used to train three different downstream classifiers: a multilayer perceptron (MLP), a graph attention network (GAT), and a mixture of tiny experts (MoTE) model. To further enhance representation discriminability, supervised contrastive learning is incorporated to encourage intra-class compactness and inter-class separability. The proposed architectures are evaluated on two widely studied benchmark datasets—the CICIoT2022 and N-BaIoT dataset—under both binary and multiclass classification settings. Experimental results demonstrate that all three models achieve near-perfect performance in binary attack detection, with accuracy exceeding 99.8%. In the more challenging multiclass scenario, the VAE-encoder-MLP model achieves the best overall performance, reaching accuracies of 98.55% on CICIoT2022 and 99.75% on N-BaIoT. These findings provide insights into the design of efficient and scalable deep learning architectures for IoT intrusion detection.",
+      "canonical_id": "DOI:10.3390/iot7020041",
+      "doi": "10.3390/iot7020041",
+      "authors": [
+        "Hassan Wasswa",
+        "Timothy Lynar"
+      ]
+    },
+    {
+      "title": "TDMoE: Tail-probability-based Dynamic-k MoE",
+      "source_url": "https://www.semanticscholar.org/paper/58e45c707aa24e8c3fc56cac6e694e8f0bf9c63c",
+      "year": 2026,
+      "published": "2026-05-08",
+      "abstract": "Mixture-of-Experts (MoE) large language models typically rely on fixed top-k routing that activates the same number of experts for every token at every layer, which ignores token-wise and layer-wise heterogeneity and can waste computation on easy inputs while under-allocating capacity to harder ones. Existing dynamic routing approaches either depend on predefined heuristics with hand-tuned hyperparameters to switch routing behaviors based on input features, or introduce new routing modules that often require reinforcement learning because expert selection involves discrete sampling. To address these limitations, we propose Tail-probability-based Dynamic-k MoE (TDMoE), a dynamic routing framework that enables stable and efficient optimization through a fully differentiable end-to-end training strategy. TDMoE introduces a lightweight module KPpredictor to predict the number of experts to activate for each token at each layer, after which the router performs expert selection conditioned on the predicted expert count. During training, we replace discrete top-k sampling with a tail-probability-based soft routing scheme, and during inference we retain standard hard top-k routing for efficiency. We further incorporate auxiliary regularization objectives that control overall expert utilization and sharpen the expert-count distribution toward decisive hard routing. We evaluate TDMoE by fine-tuning on multiple reasoning benchmarks and comparing against a Dynamic-MoE baseline using the OpenCompass evaluation toolkit.",
+      "canonical_id": "DOI:10.1109/ICAISISAS68969.2026.11567792",
+      "doi": "10.1109/ICAISISAS68969.2026.11567792",
+      "authors": [
+        "Yuxuan Chen",
+        "Zhiwei Zhang"
+      ]
+    },
+    {
+      "title": "Patterns Behind Chaos: Forecasting Data Movement for Efficient Large-Scale Moe LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/6bd7aef6140671d6842fb1751307dea25a93b03b",
+      "year": 2025,
+      "published": "2025-10-07",
+      "abstract": "Large-scale Mixture of Experts (MoE) Large Language Models (LLMs) have recently become the frontier openweight models, achieving remarkable model capability similar to proprietary ones. But their random expert selection mechanism introduces significant data movement overhead that becomes the dominant bottleneck in multi-unit LLM serving systems. To understand the patterns underlying this data movement, we conduct comprehensive data-movement-centric profiling across four state-of-the-art large-scale MoE models released in 2025 (200B-1000B) using over 24,000 requests spanning diverse workloads. We perform systematic analysis from both temporal and spatial perspectives and distill six key insights to guide the design of diverse serving systems. We verify these insights on both future wafer-scale GPU architectures and existing GPU systems. On wafer-scale GPUs, lightweight architectural modifications guided by our insights yield a 6.6x average speedup across four 200B-1000B models. On existing GPU systems, our insights drive the design of a prefill-aware expert placement algorithm that achieves up to 1.25x speedup on MoE computation. Our work presents the first comprehensive data-centric analysis of large-scale MoE models together with a concrete design study applying the learned lessons. Our profiling traces are publicly available at https://huggingface.co/datasets/core12345/MoE_expert_selection_trace.",
+      "canonical_id": "arXiv:2510.05497",
+      "arxiv_id": "2510.05497",
+      "authors": [
+        "Zhongkai Yu",
+        "Yue Guan",
+        "Zihao Yu",
+        "Chenyang Zhou",
+        "Zheng-Ding Hu",
+        "Shuyi Pei",
+        "Yangwook Kang",
+        "Yufei Ding",
+        "Po-An Tsai"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.3390/iot7020041",
+      "identity_tokens": [
+        "id:DOI:10.3390/iot7020041",
+        "title:hybrid deep architectures in contrastive latent space performance analysis of vaemlp vaemote and vaegat for iot botnet detection",
+        "url:https://www.semanticscholar.org/paper/eecd9f02829d23bc94daf629e4a6ee6e58e55c48"
+      ],
+      "record": {
+        "title": "Hybrid Deep Architectures in Contrastive Latent Space: Performance Analysis of VAE-MLP, VAE-MoTE, and VAE-GAT for IoT Botnet Detection",
+        "source_url": "https://www.semanticscholar.org/paper/eecd9f02829d23bc94daf629e4a6ee6e58e55c48",
+        "year": 2026,
+        "published": "2026-05-12",
+        "abstract": "The rapid proliferation of Internet of Things (IoT) devices has significantly expanded the attack surface of modern networks leading to a surge in IoT-based botnet attacks. Detecting such attacks remains challenging due to the high dimensionality and heterogeneity of IoT network traffic. This study proposes and evaluates three hybrid deep learning architectures for IoT botnet detection that combine representation learning with supervised classification: VAE-encoder-MLP, VAE-encoder-GAT, and VAE-encoder-MoTE. A Variational Autoencoder is initially trained to learn a compact latent representation of the high-dimensional traffic features. Subsequently, the pretrained VAE-encoder component is employed to project the data into a lower-dimensional embedding space. These embeddings are then used to train three different downstream classifiers: a multilayer perceptron (MLP), a graph attention network (GAT), and a mixture of tiny experts (MoTE) model. To further enhance representation discriminability, supervised contrastive learning is incorporated to encourage intra-class compactness and inter-class separability. The proposed architectures are evaluated on two widely studied benchmark datasets—the CICIoT2022 and N-BaIoT dataset—under both binary and multiclass classification settings. Experimental results demonstrate that all three models achieve near-perfect performance in binary attack detection, with accuracy exceeding 99.8%. In the more challenging multiclass scenario, the VAE-encoder-MLP model achieves the best overall performance, reaching accuracies of 98.55% on CICIoT2022 and 99.75% on N-BaIoT. These findings provide insights into the design of efficient and scalable deep learning architectures for IoT intrusion detection.",
+        "canonical_id": "DOI:10.3390/iot7020041",
+        "doi": "10.3390/iot7020041",
+        "authors": [
+          "Hassan Wasswa",
+          "Timothy Lynar"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icaisisas68969.2026.11567792",
+      "identity_tokens": [
+        "id:DOI:10.1109/icaisisas68969.2026.11567792",
+        "title:tdmoe tailprobabilitybased dynamick moe",
+        "url:https://www.semanticscholar.org/paper/58e45c707aa24e8c3fc56cac6e694e8f0bf9c63c"
+      ],
+      "record": {
+        "title": "TDMoE: Tail-probability-based Dynamic-k MoE",
+        "source_url": "https://www.semanticscholar.org/paper/58e45c707aa24e8c3fc56cac6e694e8f0bf9c63c",
+        "year": 2026,
+        "published": "2026-05-08",
+        "abstract": "Mixture-of-Experts (MoE) large language models typically rely on fixed top-k routing that activates the same number of experts for every token at every layer, which ignores token-wise and layer-wise heterogeneity and can waste computation on easy inputs while under-allocating capacity to harder ones. Existing dynamic routing approaches either depend on predefined heuristics with hand-tuned hyperparameters to switch routing behaviors based on input features, or introduce new routing modules that often require reinforcement learning because expert selection involves discrete sampling. To address these limitations, we propose Tail-probability-based Dynamic-k MoE (TDMoE), a dynamic routing framework that enables stable and efficient optimization through a fully differentiable end-to-end training strategy. TDMoE introduces a lightweight module KPpredictor to predict the number of experts to activate for each token at each layer, after which the router performs expert selection conditioned on the predicted expert count. During training, we replace discrete top-k sampling with a tail-probability-based soft routing scheme, and during inference we retain standard hard top-k routing for efficiency. We further incorporate auxiliary regularization objectives that control overall expert utilization and sharpen the expert-count distribution toward decisive hard routing. We evaluate TDMoE by fine-tuning on multiple reasoning benchmarks and comparing against a Dynamic-MoE baseline using the OpenCompass evaluation toolkit.",
+        "canonical_id": "DOI:10.1109/ICAISISAS68969.2026.11567792",
+        "doi": "10.1109/ICAISISAS68969.2026.11567792",
+        "authors": [
+          "Yuxuan Chen",
+          "Zhiwei Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.05497",
+      "identity_tokens": [
+        "id:arXiv:2510.05497",
+        "title:patterns behind chaos forecasting data movement for efficient largescale moe llm inference",
+        "url:https://www.semanticscholar.org/paper/6bd7aef6140671d6842fb1751307dea25a93b03b"
+      ],
+      "record": {
+        "title": "Patterns Behind Chaos: Forecasting Data Movement for Efficient Large-Scale Moe LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/6bd7aef6140671d6842fb1751307dea25a93b03b",
+        "year": 2025,
+        "published": "2025-10-07",
+        "abstract": "Large-scale Mixture of Experts (MoE) Large Language Models (LLMs) have recently become the frontier openweight models, achieving remarkable model capability similar to proprietary ones. But their random expert selection mechanism introduces significant data movement overhead that becomes the dominant bottleneck in multi-unit LLM serving systems. To understand the patterns underlying this data movement, we conduct comprehensive data-movement-centric profiling across four state-of-the-art large-scale MoE models released in 2025 (200B-1000B) using over 24,000 requests spanning diverse workloads. We perform systematic analysis from both temporal and spatial perspectives and distill six key insights to guide the design of diverse serving systems. We verify these insights on both future wafer-scale GPU architectures and existing GPU systems. On wafer-scale GPUs, lightweight architectural modifications guided by our insights yield a 6.6x average speedup across four 200B-1000B models. On existing GPU systems, our insights drive the design of a prefill-aware expert placement algorithm that achieves up to 1.25x speedup on MoE computation. Our work presents the first comprehensive data-centric analysis of large-scale MoE models together with a concrete design study applying the learned lessons. Our profiling traces are publicly available at https://huggingface.co/datasets/core12345/MoE_expert_selection_trace.",
+        "canonical_id": "arXiv:2510.05497",
+        "arxiv_id": "2510.05497",
+        "authors": [
+          "Zhongkai Yu",
+          "Yue Guan",
+          "Zihao Yu",
+          "Chenyang Zhou",
+          "Zheng-Ding Hu",
+          "Shuyi Pei",
+          "Yangwook Kang",
+          "Yufei Ding",
+          "Po-An Tsai"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:07925584b566e737bfc275ddc9a36f5eac94dbd710fe663f4fa050502dbd034b",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

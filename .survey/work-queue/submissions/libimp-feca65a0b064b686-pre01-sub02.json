@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AWEQ: Post-Training Quantization with Activation-Weight Equalization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2311.01305",
+      "year": 2023,
+      "published": "2023-11-02",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models(LLMs) exhibit excellent performance across a variety of tasks, but they come with significant computational and storage costs. Quantizing these models is an effective way to alleviate this issue. However, existing methods struggle to strike a balance between model accuracy and hardware efficiency. This is where we introduce AWEQ, a post-training method that requires no additional training overhead. AWEQ excels in both ultra-low-bit quantization and 8-bit weight and activation (W8A8) quantization. There is an observation that weight quantization is less challenging than activation quantization. AWEQ transfers the difficulty of activation quantization to weights using channel equalization, achieving a balance between the quantization difficulties of both, and thereby maximizing performance. We have further refined the equalization method to mitigate quantization bias error, ensuring the robustness of the model. Extensive experiments on popular models such as LLaMA and OPT demonstrate that AWEQ outperforms all existing post-training quantization methods for large models.",
+      "identifiers": [
+        "SemanticScholar:4cf7de6c10f871ef9bc4cde15b4417299da18b00"
+      ],
+      "semantic_scholar_id": "4cf7de6c10f871ef9bc4cde15b4417299da18b00",
+      "canonical_id": "arXiv:2311.01305",
+      "arxiv_id": "2311.01305",
+      "doi": "10.48550/arXiv.2311.01305",
+      "authors": [
+        "Baisong Li",
+        "Xing-Wang Wang",
+        "Hai-Xiao Xu"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1093,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。重みと活性化の量子化難易度の差をchannel equalizationで再配分し、量子化biasを補正するtraining-free PTQ手法。LLaMA/OPTでW8A8と極低ビット設定の品質を比較し、LLMの実行時低ビット化・メモリ削減に直接関係する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Mitigating Overthinking through Reasoning Shaping",
+      "source_url": "https://arxiv.org/abs/2510.09535",
+      "year": 2025,
+      "published": "2025-10-10",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) boosted by Reinforcement Learning from Verifier Reward (RLVR) have shown great power in problem solving, yet they often cause overthinking: excessive, meandering reasoning that inflates computational cost. Prior designs of penalization in RLVR manage to reduce token consumption while often harming model performance, which arises from the oversimplicity of token-level supervision. In this paper, we argue that the granularity of supervision plays a crucial role in balancing efficiency and accuracy, and propose Group Relative Segment Penalization (GRSP), a step-level method to regularize reasoning. Since preliminary analyses show that reasoning segments are strongly correlated with token consumption and model performance, we design a length-aware weighting mechanism across segment clusters. Extensive experiments demonstrate that GRSP achieves superior token efficiency without heavily compromising accuracy, especially the advantages with harder problems. Moreover, GRSP stabilizes RL training and scales effectively across model sizes.",
+      "identifiers": [
+        "SemanticScholar:383c3924b498a16ab2f690e58d6f616cd70a5787"
+      ],
+      "semantic_scholar_id": "383c3924b498a16ab2f690e58d6f616cd70a5787",
+      "canonical_id": "arXiv:2510.09535",
+      "arxiv_id": "2510.09535",
+      "doi": "10.48550/arXiv.2510.09535",
+      "authors": [
+        "Feifan Song",
+        "Shaohang Wei",
+        "Bofei Gao",
+        "Ye-Jie Wang",
+        "Wen Luo",
+        "Wei Li",
+        "Lin-Li Yao",
+        "Weimin Xiong",
+        "Liang Chen",
+        "Tianyu Liu",
+        "Hou-Feng Wang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 385,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。CoTの冗長な長さを減らすため、token単位ではなくreasoning segment単位のGroup Relative Segment Penalizationと長さ感応の重み付けを用いてRLVRを調整する。推論時の生成tokenを減らし正解率低下を抑えることを主目的とし、LLMのtest-time compute効率化に直接関連する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-feca65a0b064",
+    "round": "libimp-feca65a0b064b686-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-feca65a0b064b686-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-feca65a0b064b686-pre01.json",
+    "receipt": "sha256:c9716717261e70c48bfd5c9d36373bf38e4a8bcffb367977ce773df792d7f0d7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-feca65a0b064",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

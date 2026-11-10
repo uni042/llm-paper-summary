@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1509b1075ee91f38-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.11612",
+  "reason": "The Muon optimizer incurs a significant overhead cost due to its cubic-time Newton-Schulz orthogonalization step. When weights are sharded, communication overhead compounds this computational cost, eroding the benefits of Muon in many settings. We present Dion3, a revision of Muon that targets this overhead at every level of the stack. Our Gram Newton-Schulz algorithm reduces the FLOP cost of orthogonalization, our CuteDSL kernels accelerate it by exploiting symmetry, and our",
+  "title": "Dion3: Full-Stack Orthogonal Updates",
+  "identity_tokens": [
+    "arXiv:2608.11612"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1509b1075ee9",
+  "source_precheck_request_id": null
+}

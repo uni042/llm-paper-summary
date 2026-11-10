@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b123a65bdcd7befb-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.30427",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.30427",
+    "identity_tokens": [
+      "arXiv:2608.30427"
+    ],
+    "reason": "本文の主要効率 evidence はspeculative decodeのper-cycle committed-token数であり、チェックした範囲で一般的なserving stackのwall-clock latency/throughput測定を確認できない。運用効率への結び付きがproxy依存のためborderline。",
+    "first_checked_at": "2026-10-05T07:45:46+00:00",
+    "last_checked_at": "2026-10-05T07:45:46+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+      "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md"
+    ],
+    "title": "Ceiling-Clipped Acceptance Histograms Indicate Stranded Speed-up in Block-Diffusion Speculative Decoding"
+  },
+  "processed_at": "2026-10-05T07:45:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b123a65bdcd7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

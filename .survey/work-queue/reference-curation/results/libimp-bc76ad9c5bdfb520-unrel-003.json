@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc76ad9c5bdfb520-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.02713",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.02713",
+    "identity_tokens": [
+      "arXiv:2410.02713"
+    ],
+    "reason": "arXiv要旨はsynthetic video instruction datasetとLLaVA-Videoのinstruction tuningを提案しvideo benchmark性能を評価する。",
+    "first_checked_at": "2026-10-05T01:03:26+00:00",
+    "last_checked_at": "2026-10-05T01:03:26+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.26498-rps-serve-modality-aware-scheduling.md",
+      "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md"
+    ],
+    "title": "LLaVA-Video: Video Instruction Tuning With Synthetic Data"
+  },
+  "processed_at": "2026-10-05T01:03:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc76ad9c5bdf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

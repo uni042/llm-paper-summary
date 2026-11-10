@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cbf41d19ec04b1a1-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.14708",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.14708",
+    "identity_tokens": [
+      "arXiv:2412.14708"
+    ],
+    "reason": "一次要旨はセンサー、通信、室内自動化を統合するAI-driven smart spacesのsurvey。LLMは応用例の一つで、LLMモデル推論やservingの具体的効率改善は本題でない。",
+    "first_checked_at": "2026-10-06T17:55:09+00:00",
+    "last_checked_at": "2026-10-06T17:55:09+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+    ],
+    "title": "Creation of AI-driven smart spaces for enhanced indoor environments - A survey"
+  },
+  "processed_at": "2026-10-06T17:55:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cbf41d19ec04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

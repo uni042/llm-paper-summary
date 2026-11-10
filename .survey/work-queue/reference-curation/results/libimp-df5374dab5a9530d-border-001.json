@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-df5374dab5a9530d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2107.00175",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2107.00175",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2107.00175",
+      "arXiv:2107.00175"
+    ],
+    "reason": "ALBERT-large（24層）の文章分類に対し、各層の予測分布の正規化エントロピーと、過去8層の予測確率の単調変化を使って早期終了を決める推論時の計算削減研究。GLUE・AG-news・IMDBで単一2080 Ti、バッチ1の分類推論を評価し、ALBERT比2～10倍の速度改善を報告する。LLM推論の条件付き計算に技術的な関係はあるが、評価は双方向エンコーダの分類であり、自己回帰生成・KVキャッシュ・多要求サービングへの直接的な適用や速度改善を実証していないため、現行サーベイでは境界候補とする。",
+    "first_checked_at": "2026-10-15T09:45:43+00:00",
+    "last_checked_at": "2026-10-15T09:45:43+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Elbert: Fast Albert with Confidence-Window Based Early Exit"
+  },
+  "processed_at": "2026-10-15T09:45:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df5374dab5a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

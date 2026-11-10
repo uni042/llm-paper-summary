@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c1f628138aa45584-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2602.06204",
+  "reason": "The paper studies learning-rate scaling and transfer between LoRA ranks and full fine-tuning. It reports training-time memory differences (including full fine-tuning over 2x LoRA memory), but no inference-time optimization; this is outside the project’s inference-only target.",
+  "title": "Learning Rate Scaling across LoRA Ranks and Transfer to Full Finetuning",
+  "identity_tokens": [
+    "arXiv:2602.06204"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c1f628138aa4",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

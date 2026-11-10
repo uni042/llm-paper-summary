@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-275ac12a64f645de-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.19255",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.19255",
+    "identity_tokens": [
+      "arXiv:2603.19255"
+    ],
+    "reason": "It trains for output-length compliance without inference-efficiency or inference-time compute claims.",
+    "first_checked_at": "2026-10-14T06:36:17+00:00",
+    "last_checked_at": "2026-10-14T06:36:17+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+    ],
+    "title": "LARFT: Closing the Cognition-Action Gap for Length Instruction Following in Large Language Models"
+  },
+  "processed_at": "2026-10-14T06:36:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-275ac12a64f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

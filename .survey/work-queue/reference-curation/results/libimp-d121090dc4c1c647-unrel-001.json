@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d121090dc4c1c647-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1002/inf2.70191",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1002/inf2.70191",
+    "identity_tokens": [
+      "DOI:10.1002/inf2.70191"
+    ],
+    "reason": "The relentless demand for faster, smaller and more energy‐efficient integrated circuits has pushed the semiconductor industry to the performance, power and area (PPA) wall, where interconnect delay and energy dissipation dominate system efficiency. While 2.5D and TSV‐based 3D integration offer partial relief, they suffer from long interconnects, thermal hotspots and reliability concerns. Monolithic 3D integration (M3DI) provides a transformative TSV‐free paradigm, enabling nanoscale vertical interconnects between front‐end‐of‐line logic and back‐end‐of‐line memory tiers, thereby maximizing PPA efficiency and reducing latency. Here we demonstrate M3DI of two‐dimensional (2D) electronics, integrating single‐crystalline MoS\n 2\n field‐effect transistors with nanocrystalline WS\n 2\n memristors in a vertically stacked 1T1R architecture. These atomically thin devices are BEOL‐compatible and scalable, offering uniform threshold and Ion/Ioff distributions for logic, and stable filamentary switching with narrow SET/RESET variability for memory. The resulting arrays achieve ultra‐dense integration, reproducible operation and low‐latency performance within a compact footprint. Beyond binary switching, the M3DI‐1T1R chip exhibits synaptic functionalities including multistate non‐volatile memory, spike‐timing‐dependent plasticity and array‐level uniformity, essential for neuromorphic and AI hardware. This work establishes 2D‐material‐based M3DI as a compelling foundation for next‐generation intelligent and energy‐efficient computing systems beyond CMOS scaling and von Neumann architectures.\n \n \n \n \n image",
+    "first_checked_at": "2026-10-05T06:23:12+00:00",
+    "last_checked_at": "2026-10-05T06:23:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+    ],
+    "title": "<scp>3D</scp>\n                    integration of\n                    <scp>2D</scp>\n                    electronics for\n                    <scp>AI</scp>\n                    hardware"
+  },
+  "processed_at": "2026-10-05T06:23:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d121090dc4c1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

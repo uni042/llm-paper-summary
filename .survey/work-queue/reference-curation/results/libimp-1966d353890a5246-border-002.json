@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1966d353890a5246-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.09347",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.09347",
+    "identity_tokens": [
+      "arXiv:2406.09347"
+    ],
+    "reason": "arXiv一次要旨はTransformerとRNNのindex lookup、近傍探索、Dyck言語等の表現能力と必要隠れ状態幅を理論比較する。固定状態のRNNで特定検索を行うには線形サイズが必要な一方、Transformerは対数幅で実現可能と示す。効率的再帰アーキテクチャの限界理解には有用だが、LLMサービングの実測や推論システム設計は主題でない。",
+    "first_checked_at": "2026-10-30T07:22:26+00:00",
+    "last_checked_at": "2026-10-30T07:22:26+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Separations in the Representational Capabilities of Transformers and Recurrent Architectures"
+  },
+  "processed_at": "2026-10-30T07:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1966d353890a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

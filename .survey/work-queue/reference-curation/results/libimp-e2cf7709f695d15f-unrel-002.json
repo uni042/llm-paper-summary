@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2cf7709f695d15f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s44443-026-00915-z",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s44443-026-00915-z",
+    "identity_tokens": [
+      "DOI:10.1007/s44443-026-00915-z"
+    ],
+    "reason": "The legal NER system and risk score address workflow outcomes, not model-serving efficiency.",
+    "first_checked_at": "2026-10-16T06:20:04+00:00",
+    "last_checked_at": "2026-10-16T06:20:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2008.02496-convbert-improving-bert-with-span-based-dynamic-convolution.md"
+    ],
+    "title": "A workflow-oriented and risk-aware system for Turkish legal named entity recognition: integrating transformer-based models with legal knowledge graphs"
+  },
+  "processed_at": "2026-10-16T06:20:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2cf7709f695",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

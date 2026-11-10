@@ -1,0 +1,173 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261030-1440-scheduled-chat-45-discovery/r01",
+  "reference_main_sha": "7aafbd1f5bac546b2ed3b0b50821379fcfee8f2c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/085713-1869",
+      "identity_tokens": [
+        "DOI:10.52202/085713-1869"
+      ],
+      "title": "SeerAttention: Self-distilled Attention Gating for Efficient Long-context Prefilling",
+      "reason": "NeurIPS 2025の著者所属機関による一次要旨を確認。系列方向にプールしたQ/Kから学習可能なゲートで重要な注意ブロックを選択し、ブロック疎FlashAttentionカーネルで長文脈prefillの計算と遅延を削減する。自己蒸留でゲートのみを追加学習する推論向け疎注意方式であり、推論システム最適化へ直接寄与する。",
+      "source_url": "https://www.microsoft.com/en-us/research/publication/seerattention-self-distilled-attention-gating-for-efficient-long-context-prefilling/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T14:47:57+09:00",
+      "last_checked_at": "2026-10-30T14:47:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 2,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.00516",
+      "identity_tokens": [
+        "arXiv:2606.00516"
+      ],
+      "title": "Threshold-Based Exclusive Batching for LLM Inference",
+      "reason": "著者一次要旨ではprefill/decode混合バッチと排他的バッチの損益分岐をGPUメモリ帯域・モデル規模・トークン構成から導出する。H200ではdecode比80%超、RTX PRO 6000では20%超で混合の限界が現れ、EB+が負荷変動に応じ方式を切替える。推論サービングのスケジューリングへ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2606.00516",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T14:47:57+09:00",
+      "last_checked_at": "2026-10-30T14:47:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 4,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20776",
+      "identity_tokens": [
+        "arXiv:2505.20776"
+      ],
+      "title": "SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences",
+      "reason": "著者一次要旨を確認。長文脈でドラフトの受理率と速度が悪化する問題に対し、対象モデルの注意スコアを使うCross-model Retrievalでドラフト側KVを選別し、FlashAttentionとHybrid Tree Attentionでprefill/検証を加速する。16K長文書要約と長文推論で速度向上を報告する、投機的復号の直接的な実行時最適化。",
+      "source_url": "https://arxiv.org/abs/2505.20776",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T14:47:57+09:00",
+      "last_checked_at": "2026-10-30T14:47:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 5,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3788089",
+      "identity_tokens": [
+        "DOI:10.1145/3788089",
+        "arXiv:2604.09611"
+      ],
+      "title": "Characterizing Performance–Energy Trade-offs of Large Language Models in Multi-Request Workflows",
+      "reason": "著者の一次arXiv要旨を確認。逐次要約、対話、エージェント、複合ワークフローの4種をNVIDIA A100上のvLLMとParrotで測り、バッチサイズ、GPU電力制限、出力長が処理能力・遅延・CPU/GPU/DRAMエネルギーに与える差を実測する。依存関係を持つ複数要求の推論サービング性能・電力の直接的な計測研究。",
+      "source_url": "https://arxiv.org/abs/2604.09611",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T14:47:57+09:00",
+      "last_checked_at": "2026-10-30T14:47:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 8,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.61784/adsj03036",
+      "identity_tokens": [
+        "DOI:10.61784/adsj03036"
+      ],
+      "title": "TEAS: TOKEN- AND ENERGY-AWARE AUTOSCALING FOR COST-EFFICIENT LLM SERVING",
+      "reason": "出版社一次要旨を確認。要求数ではなくprefill/decode重み付き実効トークンで負荷を計測し、GPUレプリカ起動遅延を見越した予測、バースト対応余裕率、再起動エネルギーを考慮した非対称ヒステリシスで台数を制御する。Azure由来トレースを用いたクラスタシミュレーションでSLO達成率と費用を評価する推論サービングの直接的な制御研究。worklistのDOI末尾adsj3036は出版社表示adsj03036と不一致のため、出版社正本の識別子へ訂正した。",
+      "source_url": "https://upsjournals.com/adsj/article/view/2740",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T14:47:57+09:00",
+      "last_checked_at": "2026-10-30T14:47:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 9,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.15075",
+      "identity_tokens": [
+        "arXiv:2502.15075",
+        "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a"
+      ],
+      "title": "Quantize What Counts: More for Keys, Less for Values",
+      "reason": "著者一次arXiv要旨で、Key投影のスペクトル/FrobeniusノルムがValueより大きい傾向を解析し、同一KVメモリ予算でKey側へ高ビットを割り当てる理論と混合精度量子化の実験を提示することを確認。例としてKey 4bit/Value 2bitを比較する推論時KVキャッシュ圧縮の直接研究。worklistの旧題名「Bit Allocation Insights Informed by Spectral Gaps...」は現在のarXiv表示題名「More for Keys, Less for Values」と異なるため、同一arXiv IDで版同一性を保持し題名を更新した。",
+      "source_url": "https://arxiv.org/abs/2502.15075",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T14:47:57+09:00",
+      "last_checked_at": "2026-10-30T14:47:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 10,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.16336",
+      "identity_tokens": [
+        "arXiv:2608.16336"
+      ],
+      "title": "Beyond Binary Priorities: Multi-Tier SLA Scheduling for Large Language Model Serving",
+      "reason": "著者一次要旨ではLlumnixの高/通常2階層優先度を任意階層へ拡張し、階層別余裕量、dispatch順序、レプリカ移動をVidurシミュレータへ実装する。1〜10優先度、複数分布を比較し4階層の費用対遅延の良さと10階層でのtail維持を評価する。LLM推論サービングのSLO対応スケジューリングに直接関係する。",
+      "source_url": "https://arxiv.org/abs/2608.16336",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T14:47:57+09:00",
+      "last_checked_at": "2026-10-30T14:47:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 12,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.02026",
+      "identity_tokens": [
+        "arXiv:2409.02026"
+      ],
+      "title": "Foundations of Large Language Model Compression -- Part 1: Weight Quantization",
+      "reason": "著者一次要旨では凸最適化に基づくLLM重み量子化の理論を構築し、目標モデル容量を指定して学習後に圧縮するCVXQを提案する。数百Bパラメータまで拡張可能と主張し公式実装も提示する。推論デバイスのメモリ容量・重み圧縮という直接的な推論実装課題に寄与する。",
+      "source_url": "https://arxiv.org/abs/2409.02026",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T14:47:57+09:00",
+      "last_checked_at": "2026-10-30T14:47:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 13,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.21633",
+      "identity_tokens": [
+        "arXiv:2606.21633",
+        "SemanticScholar:fb29d656d566fbe5233da200c10a57d9c6ead944"
+      ],
+      "title": "HERALD: High-Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval",
+      "reason": "著者一次要旨を確認。ブロック拡散LLMではKV選別を各ブロックで1回行い複数のdenoiseステップで再利用できる点を使い、CPU上の単一MASK代表クエリで全KVを走査し、次ブロックの疎KVをGPUへ二重バッファ転送する。CPU選別とGPU生成を重畳し、5% KV予算で品質をほぼ維持して最大2.28倍のdecode throughputを報告する、CPU/GPU協調オフロードの直接研究。",
+      "source_url": "https://arxiv.org/abs/2606.21633",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T14:47:57+09:00",
+      "last_checked_at": "2026-10-30T14:47:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 14,
+      "origin": "discovery_worklist_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/s13042-025-02952-y",
+      "identity_tokens": [
+        "DOI:10.1007/s13042-025-02952-y"
+      ],
+      "title": "A training-inference consistent framework for early exiting in language models with parallel decoding",
+      "reason": "出版社Springerの一次要旨を確認。ConsistentEEは全中間分類器へ正解を要求する訓練目的と、推論では一つの正解出口で十分という条件の不一致を、強化学習型出口ポリシーと難度推定用Memory Layerで改善する。層スキップ時のKVキャッシュ近似誤差へ並列復号で対処し、言語理解・生成の効率を評価する。推論の早期終了・KV状態管理へ直接寄与する。",
+      "source_url": "https://link.springer.com/article/10.1007/s13042-025-02952-y",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T14:47:57+09:00",
+      "last_checked_at": "2026-10-30T14:47:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 15,
+      "origin": "discovery_worklist_abstract_review"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b3ea97fec157ef6d8e7d3ffb5991cb242d84b410fa818e7709637a51c8e4dfe1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_79239703c6288191a68888e1eeab837c--2024-2407.06204-moe-survey.md",
+  "canonical_id": "arXiv:2407.06204",
+  "worker_completed_at": "2026-10-07T16:57:10+09:00",
+  "worker_run_key": "20261007-1657-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 1592,
+    "body_paragraphs": 11,
+    "method_chars": 470,
+    "method_paragraphs": 3,
+    "evaluation_chars": 212,
+    "limitation_chars": 136,
+    "insufficiency_flags": [
+      "本文説明量 1592 < 2200",
+      "手法説明量 470 < 700",
+      "評価説明量 212 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 本文説明量 1592 < 2200",
+    "説明不足トリガー: 手法説明量 470 < 700",
+    "説明不足トリガー: 評価説明量 212 < 500"
+  ],
+  "processed_at": "2026-10-08T10:57:07+00:00"
+}

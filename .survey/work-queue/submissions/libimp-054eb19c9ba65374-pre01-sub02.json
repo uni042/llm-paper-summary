@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Optimization Strategies for Enhancing Resource Efficiency in Transformers & Large Language Models",
+      "source_url": "https://arxiv.org/abs/2502.00046",
+      "year": 2025,
+      "published": "2025-01-16",
+      "venue": "International Conference on Performance Engineering",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Advancements in Natural Language Processing are heavily reliant on Transformer architectures, whose improvements come at substantial resource costs due to ever-growing model sizes. This study explores optimization techniques, including quantization, knowledge distillation, and pruning, focusing on energy and computational efficiency while retaining performance. Among standalone methods, 4-Bit quantization significantly reduces energy use with minimal accuracy loss. Hybrid approaches, like NVIDIA's Minitron approach combining KD and structured pruning, further demonstrate promising trade-offs between size reduction and accuracy retention. A novel optimization framework is introduced, offering a flexible framework for comparing various methods. Through the investigation of these compression methods, we provide valuable insights for developing more sustainable and efficient LLMs, shining a light on the often-ignored concern of energy efficiency.",
+      "identifiers": [
+        "SemanticScholar:ce68fb6929a08d7c29d0ec9a17b42b10f33b733a"
+      ],
+      "semantic_scholar_id": "ce68fb6929a08d7c29d0ec9a17b42b10f33b733a",
+      "canonical_id": "arXiv:2502.00046",
+      "arxiv_id": "2502.00046",
+      "doi": "10.1145/3676151.3719379",
+      "authors": [
+        "T. Wallace",
+        "Naser Ezzati-jivan",
+        "Beatrice Ombuki-Berman"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 653,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次本文は量子化、知識蒸留、注意ヘッド・構造化枝刈りとその組合せをGPT-2/OPT系モデルで実験し、perplexity、エネルギー、計算速度のトレードオフを評価する。4-bit量子化と複合圧縮の効率比較および選択用の評価式が主題で、LLM推論時の資源削減を直接扱う。新しい単一カーネルやサービング方式ではなく比較実験研究である。",
+      "library_body_check": "arXiv一次要旨・導入・貢献節を確認。",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "title": "Enabling Efﬁcient GPU Communication over Multiple NICs with FuseLink",
+      "source_url": "https://www.semanticscholar.org/paper/b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033"
+      ],
+      "semantic_scholar_id": "b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "canonical_id": "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "authors": [
+        "Zheng-Hang Ren",
+        "Yuxuan Li",
+        "Zi-Long Wang",
+        "Xinyang Huang",
+        "Wen-Xue Li",
+        "Kai-Qiang Xu",
+        "Xu-Dong Liao",
+        "Yijun Sun",
+        "Bowen Liu",
+        "Han Tian",
+        "Junxue Zhang",
+        "Mingfei Wang",
+        "Zhi-Zhen Zhong",
+        "Gu-Yue Liu",
+        "Ying Zhang",
+        "Kai Chen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "UC Berkeley公式技術報告一次要旨は、入力長とGPU特性に応じて分散LLM推論の分割方式を実行時に切り替える方式を提案。L4/A100とLlama 2でPareto最適な分割戦略を探索し、初回トークンまでの時間最大40%削減、遅延最大18%削減を報告。GPU間通信・計算・メモリの調整が直接の推論最適化である。",
+      "library_body_check": "UC Berkeley公式技術報告の一次要旨・書誌を確認。査読会議論文ではなく学位技術報告。",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "title": "Adaptive Pruning for Large Language Models with Structural Importance Awareness",
+      "source_url": "https://arxiv.org/abs/2412.15127",
+      "year": 2024,
+      "published": "2024-12-19",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The recent advancements in large language models (LLMs) have significantly improved language understanding and generation capabilities. However, it is difficult to deploy LLMs on resource-constrained edge devices due to their high computational and storage resource demands. To address this issue, we propose a novel LLM model pruning method, namely structurally-aware adaptive pruning (SAAP), to significantly reduce the computational and memory costs while maintaining model performance. We first define an adaptive importance fusion metric to evaluate the importance of all coupled structures in LLMs by considering their homoscedastic uncertainty. Then, we rank the importance of all modules to determine the specific layers that should be pruned to meet particular performance requirements. Furthermore, we develop a new group fine-tuning strategy to improve the inference efficiency of LLMs. Finally, we evaluate the proposed SAAP method on multiple LLMs across two common tasks, i.e., zero-shot classification and text generation. Experimental results show that our SAAP method outperforms several state-of-the-art baseline methods, achieving 2.17%, 2.37%, and 2.39% accuracy gains on LLaMA-7B, Vicuna-7B, and LLaMA-13B. Additionally, SAAP improves the token generation speed by 5%, showcasing its practical advantages in resource-constrained scenarios.",
+      "identifiers": [
+        "SemanticScholar:ad8f3df4ae56cff9c12aa81392a584f461561542"
+      ],
+      "semantic_scholar_id": "ad8f3df4ae56cff9c12aa81392a584f461561542",
+      "canonical_id": "arXiv:2412.15127",
+      "arxiv_id": "2412.15127",
+      "doi": "10.48550/arXiv.2412.15127",
+      "authors": [
+        "Hao-Tian Zheng",
+        "Jinke Ren",
+        "Yushan Sun",
+        "Rui-Chen Zhang",
+        "Wenbo Zhang",
+        "Zhen Li",
+        "D. Niyato",
+        "Shu-Guang Cui",
+        "Ya-Tong Han"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 681,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者公開arXiv一次要旨は、構造的重要度の適応融合とグループ単位の微調整を組み合わせ、LLaMA/Vicuna系の枝刈り後の品質を保ちつつ推論計算・メモリを削減するSAAPを提案。IEEE IoT Journal掲載版の同題名・著者を確認したが、arXiv v1と掲載版では評価数値・方法の説明に版差があるため、掲載版固有の改善率はこの分類では断定しない。",
+      "library_body_check": "arXiv著者一次要旨を確認。正式版DOIとの書誌同一性は確認、正式版全文未取得・版差あり。",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_source_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-054eb19c9ba6",
+    "round": "libimp-054eb19c9ba65374-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-054eb19c9ba65374-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-054eb19c9ba65374-pre01.json",
+    "receipt": "sha256:a4a9841cd83a88750a31ee613565e2d5b84fe78149aa4bb029aafb170a56f8d1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-054eb19c9ba6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

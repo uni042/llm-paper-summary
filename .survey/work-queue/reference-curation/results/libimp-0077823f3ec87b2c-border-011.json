@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0077823f3ec87b2c-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.01672",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.01672",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.01672",
+      "SemanticScholar:e4fc9f881b73a2f5e19b2b96510685bff4c23d12",
+      "arXiv:2602.01672"
+    ],
+    "reason": "DeepControl regulates whether retrieval continues and how much evidence detail enters context, plausibly limiting redundant search and context overhead; the abstract reports effectiveness but no concrete retrieval-cost or latency reduction.",
+    "first_checked_at": "2026-10-10T15:55:34+00:00",
+    "last_checked_at": "2026-10-10T15:55:34+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Information Control for Search-Augmented LLM Reasoning"
+  },
+  "processed_at": "2026-10-10T15:55:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0077823f3ec8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

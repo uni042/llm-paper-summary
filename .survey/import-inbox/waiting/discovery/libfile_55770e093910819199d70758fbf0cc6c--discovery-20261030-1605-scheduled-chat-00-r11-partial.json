@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1605-scheduled-chat-00/r11",
+  "round_status": "partial",
+  "reference_main_sha": "fba71cd998a03c8e42e30fa045e8f69c76827721",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02670",
+      "identity_tokens": [
+        "arXiv:2610.02670"
+      ],
+      "title": "LEAP: Learning Efficient Action Proposals For LLM Agents",
+      "reason": "arXiv一次要旨はエージェントの推論トークンだけでなく次のツール操作を小型draftモデルで先行提案するLEAPを提案。提案・検証・ツール実行の各遅延と受理率を含むend-to-end速度モデルで投機的アクションの利得を設計し、agentic推論遅延へ直接関連。",
+      "source_url": "https://arxiv.org/abs/2610.02670",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 451
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.02071",
+      "identity_tokens": [
+        "arXiv:2602.02071"
+      ],
+      "title": "BAPS: A Fine-Grained Low-Precision Scheme for Softmax in Attention via Block-Aware Precision reScaling",
+      "reason": "arXiv一次要旨は量子化行列積後のsoftmaxが帯域・指数演算の律速になる問題に対し、HiF8とブロック別精度再スケーリングを用いるBAPSを提案。行列演算出力を8ビットへ抑え帯域を半減し、EXP2の面積も削減。LLM推論向け注意カーネル・ハードウェア協調設計に直接関連。",
+      "source_url": "https://arxiv.org/abs/2602.02071",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.18654",
+      "identity_tokens": [
+        "arXiv:2610.18654"
+      ],
+      "title": "Kwai Summary Attention V2 Technical Report",
+      "reason": "arXiv一次要旨はKSAのchunk単位summary tokenを層別に柔軟な圧縮窓へ拡張し、full-attention層でsummaryを疎な索引として利用するKSA V2を提案。KVメモリ削減とprefill計算量削減を同時に狙う長文脈LLM注意方式。",
+      "source_url": "https://arxiv.org/abs/2610.18654",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.19475",
+      "identity_tokens": [
+        "arXiv:2606.19475"
+      ],
+      "title": "Diffusion Language Models: An Experimental Analysis",
+      "reason": "arXiv一次要旨は8種類の拡散LMを8ベンチマークで比較し、denoising回数、文脈長、block長、並列unmaskingなどの推論設定が品質・計算量へ与える影響を評価する。拡散LLMの推論効率評価プロトコルとトレードオフに直接関連。",
+      "source_url": "https://arxiv.org/abs/2606.19475",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 456
+    }
+  ]
+}

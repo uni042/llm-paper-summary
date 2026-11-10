@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c330b81bccbae02d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3731569.3764839",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3731569.3764839",
+    "identity_tokens": [
+      "DOI:10.1145/3731569.3764839"
+    ],
+    "reason": "異種・地理分散GPUでの機械学習学習を自動構成するシステムで、最終適用先がtraining。",
+    "first_checked_at": "2026-10-02T07:00:17+00:00",
+    "last_checked_at": "2026-10-02T08:18:22+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-45.json"
+    ],
+    "title": "Sailor: Automating Distributed Training over Dynamic, Heterogeneous, and Geo-distributed Clusters"
+  },
+  "processed_at": "2026-10-02T08:18:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c330b81bccba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

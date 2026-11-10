@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a769a91ac1837bc-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.03507",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.03507",
+    "identity_tokens": [
+      "arXiv:2403.03507"
+    ],
+    "reason": "LLMの勾配を低rank部分空間へ射影してoptimizer stateと学習memoryを削減する学習専用方式であり、最終適用先が推論ではない。",
+    "first_checked_at": "2026-10-04T05:27:33+00:00",
+    "last_checked_at": "2026-10-04T05:52:54+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
+      "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md"
+    ],
+    "title": "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection"
+  },
+  "processed_at": "2026-10-04T05:52:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a769a91ac18",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

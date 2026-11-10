@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c40af6cdaa49dd8a-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2002.10957",
+  "reason": "大規模Transformerのonline servingにおけるlatency/capacity制約を明示し、teacher最終層のattention distributionとvalue-relationをstudentへ蒸留して50%のTransformer parameter/computationで99%以上のSQuAD/GLUE精度を保持する圧縮法。推論資源削減への適用は明確だが、主機構はBERT系の学習時knowledge distillationで現代の生成LLM推論systemそのものではないためborderline。",
+  "title": "MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-Trained Transformers",
+  "identity_tokens": [
+    "arXiv:2002.10957"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+    "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c40af6cdaa49",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b094e9140818a050-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.03272",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.03272",
+    "identity_tokens": [
+      "arXiv:2510.03272"
+    ],
+    "reason": "The primary text is a theoretical/locality architecture study, not an inference-efficiency method; the attention lineage link is too indirect.",
+    "first_checked_at": "2026-10-06T13:04:55+00:00",
+    "last_checked_at": "2026-10-06T13:04:55+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+    ],
+    "title": "Where to Add PDE Diffusion in Transformers"
+  },
+  "processed_at": "2026-10-06T13:04:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b094e9140818",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

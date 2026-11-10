@@ -1,0 +1,891 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-726aaffcb56c5d23-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-726aaffcb56c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2406.12018",
+    "arXiv:2505.15816",
+    "arXiv:2602.19870",
+    "arXiv:2605.12056",
+    "arXiv:2605.13915",
+    "arXiv:2606.31779",
+    "arXiv:2607.09029",
+    "arXiv:2609.33503",
+    "arXiv:2609.38823"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:25.875237+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2406.12018",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.15816",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.19870",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.12056",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.13915",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.31779",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.09029",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33503",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.38823",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ApET: Approximation-Error Guided Token Compression for Efficient VLMs",
+      "source_url": "https://arxiv.org/abs/2602.19870",
+      "year": 2026,
+      "published": "2026-02-23",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent Vision-Language Models (VLMs) have demonstrated remarkable multimodal understanding capabilities, yet the redundant visual tokens incur prohibitive computational overhead and degrade inference efficiency. Prior studies typically relies on [CLS] attention or text-vision cross-attention to identify and discard redundant visual tokens. Despite promising results, such solutions are prone to introduce positional bias and, more critically, are incompatible with efficient attention kernels such as FlashAttention, limiting their practical deployment for VLM acceleration. In this paper, we step away from attention dependencies and revisit visual token compression from an information-theoretic perspective, aiming to maximally preserve visual information without any attention involvement. We present ApET, an Approximation-Error guided Token compression framework. ApET first reconstructs the original visual tokens with a small set of basis tokens via linear approximation, then leverages the approximation error to identify and drop the least informative tokens. Extensive experiments across multiple VLMs and benchmarks demonstrate that ApET retains 95.2% of the original performance on image-understanding tasks and even attains 100.4% on video-understanding tasks, while compressing the token budgets by 88.9% and 87.5%, respectively. Thanks to its attention-free design, ApET seamlessly integrates with FlashAttention, enabling further inference acceleration and making VLM deployment more practical. Code is available at https://github.com/MaQianKun0/ApET.",
+      "identifiers": [
+        "SemanticScholar:10edff9c9044cccef655de3d0656adab8d0501f5"
+      ],
+      "semantic_scholar_id": "10edff9c9044cccef655de3d0656adab8d0501f5",
+      "canonical_id": "arXiv:2602.19870",
+      "arxiv_id": "2602.19870",
+      "doi": "10.48550/arXiv.2602.19870",
+      "authors": [
+        "Qian-Kun Ma",
+        "Ziya Zhang",
+        "Hao-Fei Wang",
+        "Jie Chen",
+        "Zhen-Feng Song",
+        "Hai-Rong Zheng"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 249,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Bridging the Gap Between Latent and Explicit Reasoning with Looped Transformers",
+      "source_url": "https://arxiv.org/abs/2606.31779",
+      "year": 2026,
+      "published": "2026-06-30",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language models typically reason via explicit chain-of-thought (CoT), generating intermediate steps token-by-token. Latent CoT offers an alternative: it performs multi-step reasoning in the model's hidden states, replacing decoded tokens with continuous representations for greater efficiency. However, existing latent CoT methods underperform explicit CoT beyond 1B parameters, and the gap widens with scale. Looped, or recurrent-depth, Transformers, which reuse their weights to increase computation depth without adding parameters, are a natural fit for latent reasoning. We therefore ask whether looped Transformers can bridge this gap. We answer affirmatively with a simple recipe: a looped padded Transformer that processes K latent blocks in parallel for R iterations, with a cross-entropy loss on each latent position's gold CoT-step token, similar to explicit CoT supervision. We instantiate it as LOTUS (Looped Transformers with parallel supervision on latents). LOTUS is, to our knowledge, the first latent-CoT method to bridge the gap to explicit CoT at the 3B scale, while cutting thought-phase latency by 2.5x-6.9x from compact math expressions to natural language. Projecting LOTUS's post-loop latents through the base LM head recovers the gold reasoning steps and even surfaces alternative valid intermediate steps, evidence that its latent space is interpretable and CoT-aligned. Ablations confirm that both the looped backbone and the parallel supervision on gold CoT tokens are essential. Code is available at https://github.com/yingfan-bot/lotus.",
+      "identifiers": [
+        "SemanticScholar:b566953a944b91226fa19622493ae6368dfb6c34"
+      ],
+      "semantic_scholar_id": "b566953a944b91226fa19622493ae6368dfb6c34",
+      "canonical_id": "arXiv:2606.31779",
+      "arxiv_id": "2606.31779",
+      "doi": "10.48550/arXiv.2606.31779",
+      "authors": [
+        "Ying Fan",
+        "Anej Svete",
+        "Kangwook Lee"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OmniRefine: Alignment-Aware Cooperative Compression for Efficient Omnimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2605.12056",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Omnimodal large language models (Omni-LLMs) show strong capability in audio-video understanding, but their practical deployment remains limited by high inference cost of long video streams and dense audio sequences. Despite recent progress, existing compression methods for Omni-LLMs typically rely on fixed or native compression units, which can disrupt cross-modal correspondence and the complementary information required for audio-video reasoning, making it difficult to improve inference efficiency while stably preserving performance. To address this, we propose OmniRefine, a training-free two-stage framework for efficient audio-visual token compression in Omni-LLMs. First, Correspondence-Preserving Chunk Refinement refines native chunk boundaries into cross-modally aligned compression units through frame-audio similarity and dynamic programming. Second, Modality-Aware Cooperative Compression jointly compresses video and audio tokens within each refined unit to reduce redundancy while preserving critical evidence. Extensive experiments show that OmniRefine achieves a better efficiency-performance trade-off than strong baselines and maintains stable performance under lower compression ratios. On WorldSense, it still reaches 46.7% accuracy at a 44% token retention ratio, nearly matching the full-token baseline. The code and interface will be released to facilitate further research.",
+      "identifiers": [
+        "SemanticScholar:c4a173ff90378ab2521b74a96e732a74368e221f"
+      ],
+      "semantic_scholar_id": "c4a173ff90378ab2521b74a96e732a74368e221f",
+      "canonical_id": "arXiv:2605.12056",
+      "arxiv_id": "2605.12056",
+      "doi": "10.48550/arXiv.2605.12056",
+      "authors": [
+        "Yu-Chen Deng",
+        "Zi-Dang Cai",
+        "Hai-Tao Zheng",
+        "Jie Wang",
+        "Fei-Diao Yang",
+        "Yu-Xing Han"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 171,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multi-Scale Dequant: Eliminating Dequantization Bottleneck via Activation Decomposition for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.13915",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is essential for efficient large language model (LLM) inference, yet the dequantization step-converting low-bit weights back to high-precision for matrix multiplication has become a critical bottleneck on modern AI accelerators. On architectures with decoupled compute units (e.g., Ascend NPUs), dequantization operations can consume more cycles than the matrix multiplication itself, leaving the high-throughput tensor cores underutilized. This paper presents Multi-Scale Dequant (MSD), a quantization framework that removes weight/KV dequantization from the GEMM critical path. Instead of lifting low-bit weights to BF16 precision, MSD decomposes high-precision BF16 activations into multiple low-precision components, each of which can be multiplied directly with quantized weights via native hardware-accelerated GEMM. This approach shifts the computational paradigm from precision conversion to multi-scale approximation, avoiding INT8-to-BF16 weight conversion before GEMM. We instantiate MSD for two weight formats and derive tight error bounds for each. For INT8 weights (W4A16), two-pass INT8 decomposition achieves near 16 effective bits. For MXFP4 weights (W4A16), two-pass MXFP4 decomposition yields near 6.6 effective bits with error bound 1/64 per block surpassing single-pass MXFP8(5.24 bits) while maintaining the same effective GEMM compute time. We further derive closed-form latency and HBM traffic models showing that MSD avoids the Vector-Cube pipeline stall caused by dequantization and reduces KV cache HBM traffic by up to 2.5 times in attention. Numerical simulations on matrix multiplication and Flash Attention kernels confirm that MSD does not degrade accuracy compared to dequantization baselines, and in many settings achieves lower L2 error.",
+      "identifiers": [
+        "SemanticScholar:dd943538948e50accb16ae88de3bb2a2a36585cd"
+      ],
+      "semantic_scholar_id": "dd943538948e50accb16ae88de3bb2a2a36585cd",
+      "canonical_id": "arXiv:2605.13915",
+      "arxiv_id": "2605.13915",
+      "doi": "10.48550/arXiv.2605.13915",
+      "authors": [
+        "Ling-Chao Zheng",
+        "Yu-Wei Fan",
+        "Jun Li",
+        "Cheng Hu",
+        "Qichen Liao",
+        "Jun-Yi Fan",
+        "Ruimin Shi",
+        "Fangzheng Miao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CItruS: Chunked Instruction-aware State Eviction for Long Sequence Modeling",
+      "source_url": "https://arxiv.org/abs/2406.12018",
+      "year": 2024,
+      "published": "2024-06-17",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long sequence modeling has gained broad interest as large language models (LLMs) continue to advance. Recent research has identified that a large portion of hidden states within the key-value caches of Transformer models can be discarded (also termed evicted) withoutaffecting the perplexity performance in generating long sequences. However, we show that these methods, despite preserving perplexity performance, often drop information that is important for solving downstream tasks, a problem which we call information neglect. To address this issue, we introduce Chunked Instruction-aware State Eviction (CItruS), a novel modeling technique that integrates the attention preferences useful for a downstream task into the eviction process of hidden states. In addition, we design a method for chunked sequence processing to further improve efficiency. Our training-free method exhibits superior performance on long sequence comprehension and retrieval tasks over several strong baselines under the same memory budget, while preserving language modeling perplexity. The code and data have been released at https://github.com/ybai-nlp/CItruS.",
+      "identifiers": [
+        "SemanticScholar:50c1ac57e25b82387898c9d7ce25e6a6e181d6c5"
+      ],
+      "semantic_scholar_id": "50c1ac57e25b82387898c9d7ce25e6a6e181d6c5",
+      "canonical_id": "arXiv:2406.12018",
+      "arxiv_id": "2406.12018",
+      "doi": "10.48550/arXiv.2406.12018",
+      "authors": [
+        "Yu Bai",
+        "Xiyuan Zou",
+        "He-Yan Huang",
+        "Sanxing Chen",
+        "Marc-Antoine Rondeau",
+        "Yang Gao",
+        "J. Cheung"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 865,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Streamline Without Sacrifice - Squeeze out Computation Redundancy in LMM",
+      "source_url": "https://arxiv.org/abs/2505.15816",
+      "year": 2025,
+      "published": "2025-05-21",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large multimodal models excel in multimodal tasks but face significant computational challenges due to excessive computation on visual tokens. Unlike token reduction methods that focus on token-level redundancy, we identify and study the computation-level redundancy on vision tokens to ensure no information loss. Our key insight is that vision tokens from the pretrained vision encoder do not necessarily require all the heavy operations (e.g., self-attention, FFNs) in decoder-only LMMs and could be processed more lightly with proper designs. We designed a series of experiments to discover and progressively squeeze out the vision-related computation redundancy. Based on our findings, we propose ProxyV, a novel approach that utilizes proxy vision tokens to alleviate the computational burden on original vision tokens. ProxyV enhances efficiency without compromising performance and can even yield notable performance gains in scenarios with more moderate efficiency improvements. Furthermore, the flexibility of ProxyV is demonstrated through its combination with token reduction methods to boost efficiency further. The code will be made public at this https://github.com/penghao-wu/ProxyV URL.",
+      "identifiers": [
+        "SemanticScholar:33b802ec36e29a6d211d33c39b5f93548475bb6b"
+      ],
+      "semantic_scholar_id": "33b802ec36e29a6d211d33c39b5f93548475bb6b",
+      "canonical_id": "arXiv:2505.15816",
+      "arxiv_id": "2505.15816",
+      "doi": "10.48550/arXiv.2505.15816",
+      "authors": [
+        "Peng-Hao Wu",
+        "Le-Wei Lu",
+        "Zi-Wei Liu"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 527,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "MOSAIC: Adaptive Inter-layer Composition for Efficient Heterogeneous Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2607.09029",
+      "year": 2026,
+      "published": "2026-07-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have achieved success using homogeneous Transformers to process multimedia data. Recent studies show that heterogeneous structures interleaving efficient mechanisms, like linear attention, improve both performance and inference latency over homogeneous designs. However, these efforts rely on handcrafted static mixing patterns, which are sub-optimal and difficult to adapt to specific hardware. To bridge this gap, we propose Multi-Objective Search for Adaptive Inter-layer Composition (MOSAIC), a hardware-aware search method that automatically transforms homogeneous models into optimized heterogeneous architectures. MOSAIC integrates diverse efficiency mechanisms--including linear, sparse, and low-rank operators--into a unified search space. By formulating the selection as a multi-objective Mixed Integer Programming (MIP) problem, our method identifies optimal configurations that maximize downstream performance under strict hardware latency constraints. To mitigate performance degradation from structural transitions, we introduce a two-stage parameter recovery process: global off-policy distillation to stabilize internal representations, followed by a dual-teacher on-policy distillation leveraging a 235B oracle for knowledge expansion and the original 4B teacher for distributional stability. We validate MOSAIC through MOSAIC-4B, derived from Qwen3-VL-4B-Instruct. Results demonstrate that MOSAIC-4B matches the baseline's performance across multiple benchmarks while requiring less than 2% of the original training cost. Furthermore, it substantially improves inference efficiency, achieving 1.76x prefilling and 2.54x decoding speedups.",
+      "identifiers": [
+        "SemanticScholar:b89f557ced301b77e446777ff0a09c20793c2159"
+      ],
+      "semantic_scholar_id": "b89f557ced301b77e446777ff0a09c20793c2159",
+      "canonical_id": "arXiv:2607.09029",
+      "arxiv_id": "2607.09029",
+      "doi": "10.48550/arXiv.2607.09029",
+      "authors": [
+        "Yun-Cheng Yang",
+        "Feiyang Ye",
+        "Shixian Luo",
+        "Yinna Zhu",
+        "Lianlei Shan",
+        "Wangcai Zhao",
+        "Kuo Zhang",
+        "Yan Chen",
+        "Yong Wu",
+        "Yan Xie"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 112,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RelaxKV: Recomputation Guided by the Query with Sparse Context Attention for Efficient KV Cache Reuse",
+      "source_url": "https://arxiv.org/abs/2609.33503",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cross-request KV caching reduces the prefill cost of Retrieval-Augmented Generation (RAG), but conventional prefix caching severely limits cache reuse across requests. Position-Independent Caching (PIC) removes this constraint by reusing independent chunks, but their KV states miss cross-chunk interactions. Existing methods selectively recompute token states to recover these missing interactions, but primarily allocate the recomputation budget to selecting which states to recompute, while fixing the recomputation context to the full causal prefix. We introduce RelaxKV, which formulates selective cache repair as a joint allocation problem over repair targets and recomputation context. Guided by the user query, RelaxKV identifies layer-specific repair targets and restricts their recomputation to a query-relevant context, reducing attention computation. Across four decoder models, RelaxKV at a 15% anchor ratio improves aggregate LongBench performance over ProphetKV on all models. On Qwen3-14B, RelaxKV provides a stronger quality-TTFT trade-off than ProphetKV across a 5%-30% anchor-ratio sweep, and achieves the best selective results on RULER-MV and LV-Eval at 16K and 32K context lengths. Controlled ablations further demonstrate the importance of recomputation context selection.",
+      "identifiers": [
+        "SemanticScholar:6a9f70dc86220d287b1b6298b1af8f0428695604"
+      ],
+      "semantic_scholar_id": "6a9f70dc86220d287b1b6298b1af8f0428695604",
+      "canonical_id": "arXiv:2609.33503",
+      "arxiv_id": "2609.33503",
+      "authors": [
+        "Ruo-Ling Qi",
+        "Yi-Rui Liu",
+        "Xuan'er Wu",
+        "Yu-Xin Jin",
+        "Jian Chen",
+        "Jia-Yu Qin",
+        "Yin Chen",
+        "Jia-Wei Shao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DecoMoE: Decoupling Visual Propagation and Expert Computation for Efficient Multimodal MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.38823",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal mixture-of-experts (MoE) models combine sparse expert activation with visual-language capabilities, yet their inference remains costly because long visual-token sequences repeatedly incur attention, routing, dispatch, and expert-MLP computation. Existing methods typically compress either the token or expert dimension, leaving redundancy along the other. Our analysis reveals two complementary regularities: the depth required for visual propagation varies across inputs, while text-token routing exhibits concentrated and recurrent expert-importance patterns. Based on these observations, we propose DecoMoE, a two-dimensional structured compression framework that decouples visual propagation from expert computation. The Sample-Adaptive Visual Boundary (SAVB) predicts an input-dependent visual-exit layer at which the visual-token block is removed. The Routing-Calibrated Expert Prefix (RCEP) reorders experts offline using text-token routed mass and, from this predicted exit layer onward, retains at each MoE layer the shortest contiguous prefix covering a target routed-mass fraction. We evaluate DecoMoE on Qwen3-VL-MoE and InternVL3.5-30B-A3B across six benchmarks. On Qwen3-VL-MoE, DecoMoE retains 97.91% of dense-baseline performance while reducing computation from 27.06 to 16.73 TFLOPs and latency from 0.44 to 0.26 seconds, yielding a 1.69x speedup. Code will be available at https://github.com/ShawnTan86/DecoMoE.",
+      "identifiers": [
+        "SemanticScholar:fddce2f1e2b0fed60fd726b384a7d4ed576269ce"
+      ],
+      "semantic_scholar_id": "fddce2f1e2b0fed60fd726b384a7d4ed576269ce",
+      "canonical_id": "arXiv:2609.38823",
+      "arxiv_id": "2609.38823",
+      "authors": [
+        "Xu-Dong Tan",
+        "Peng Ye",
+        "Ming Xie",
+        "Chen-Yu Huang",
+        "Yao-Xin Yang",
+        "Jiayuan Fan",
+        "Tao Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.19870",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.19870",
+        "id:SemanticScholar:10edff9c9044cccef655de3d0656adab8d0501f5",
+        "id:arXiv:2602.19870",
+        "title:apet approximationerror guided token compression for efficient vlms",
+        "url:https://arxiv.org/abs/2602.19870"
+      ],
+      "record": {
+        "title": "ApET: Approximation-Error Guided Token Compression for Efficient VLMs",
+        "source_url": "https://arxiv.org/abs/2602.19870",
+        "year": 2026,
+        "published": "2026-02-23",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent Vision-Language Models (VLMs) have demonstrated remarkable multimodal understanding capabilities, yet the redundant visual tokens incur prohibitive computational overhead and degrade inference efficiency. Prior studies typically relies on [CLS] attention or text-vision cross-attention to identify and discard redundant visual tokens. Despite promising results, such solutions are prone to introduce positional bias and, more critically, are incompatible with efficient attention kernels such as FlashAttention, limiting their practical deployment for VLM acceleration. In this paper, we step away from attention dependencies and revisit visual token compression from an information-theoretic perspective, aiming to maximally preserve visual information without any attention involvement. We present ApET, an Approximation-Error guided Token compression framework. ApET first reconstructs the original visual tokens with a small set of basis tokens via linear approximation, then leverages the approximation error to identify and drop the least informative tokens. Extensive experiments across multiple VLMs and benchmarks demonstrate that ApET retains 95.2% of the original performance on image-understanding tasks and even attains 100.4% on video-understanding tasks, while compressing the token budgets by 88.9% and 87.5%, respectively. Thanks to its attention-free design, ApET seamlessly integrates with FlashAttention, enabling further inference acceleration and making VLM deployment more practical. Code is available at https://github.com/MaQianKun0/ApET.",
+        "identifiers": [
+          "SemanticScholar:10edff9c9044cccef655de3d0656adab8d0501f5"
+        ],
+        "semantic_scholar_id": "10edff9c9044cccef655de3d0656adab8d0501f5",
+        "canonical_id": "arXiv:2602.19870",
+        "arxiv_id": "2602.19870",
+        "doi": "10.48550/arXiv.2602.19870",
+        "authors": [
+          "Qian-Kun Ma",
+          "Ziya Zhang",
+          "Hao-Fei Wang",
+          "Jie Chen",
+          "Zhen-Feng Song",
+          "Hai-Rong Zheng"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 249,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.31779",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.31779",
+        "id:SemanticScholar:b566953a944b91226fa19622493ae6368dfb6c34",
+        "id:arXiv:2606.31779",
+        "title:bridging the gap between latent and explicit reasoning with looped transformers",
+        "url:https://arxiv.org/abs/2606.31779"
+      ],
+      "record": {
+        "title": "Bridging the Gap Between Latent and Explicit Reasoning with Looped Transformers",
+        "source_url": "https://arxiv.org/abs/2606.31779",
+        "year": 2026,
+        "published": "2026-06-30",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Language models typically reason via explicit chain-of-thought (CoT), generating intermediate steps token-by-token. Latent CoT offers an alternative: it performs multi-step reasoning in the model's hidden states, replacing decoded tokens with continuous representations for greater efficiency. However, existing latent CoT methods underperform explicit CoT beyond 1B parameters, and the gap widens with scale. Looped, or recurrent-depth, Transformers, which reuse their weights to increase computation depth without adding parameters, are a natural fit for latent reasoning. We therefore ask whether looped Transformers can bridge this gap. We answer affirmatively with a simple recipe: a looped padded Transformer that processes K latent blocks in parallel for R iterations, with a cross-entropy loss on each latent position's gold CoT-step token, similar to explicit CoT supervision. We instantiate it as LOTUS (Looped Transformers with parallel supervision on latents). LOTUS is, to our knowledge, the first latent-CoT method to bridge the gap to explicit CoT at the 3B scale, while cutting thought-phase latency by 2.5x-6.9x from compact math expressions to natural language. Projecting LOTUS's post-loop latents through the base LM head recovers the gold reasoning steps and even surfaces alternative valid intermediate steps, evidence that its latent space is interpretable and CoT-aligned. Ablations confirm that both the looped backbone and the parallel supervision on gold CoT tokens are essential. Code is available at https://github.com/yingfan-bot/lotus.",
+        "identifiers": [
+          "SemanticScholar:b566953a944b91226fa19622493ae6368dfb6c34"
+        ],
+        "semantic_scholar_id": "b566953a944b91226fa19622493ae6368dfb6c34",
+        "canonical_id": "arXiv:2606.31779",
+        "arxiv_id": "2606.31779",
+        "doi": "10.48550/arXiv.2606.31779",
+        "authors": [
+          "Ying Fan",
+          "Anej Svete",
+          "Kangwook Lee"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 122,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.12056",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.12056",
+        "id:SemanticScholar:c4a173ff90378ab2521b74a96e732a74368e221f",
+        "id:arXiv:2605.12056",
+        "title:omnirefine alignmentaware cooperative compression for efficient omnimodal large language models",
+        "url:https://arxiv.org/abs/2605.12056"
+      ],
+      "record": {
+        "title": "OmniRefine: Alignment-Aware Cooperative Compression for Efficient Omnimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2605.12056",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Omnimodal large language models (Omni-LLMs) show strong capability in audio-video understanding, but their practical deployment remains limited by high inference cost of long video streams and dense audio sequences. Despite recent progress, existing compression methods for Omni-LLMs typically rely on fixed or native compression units, which can disrupt cross-modal correspondence and the complementary information required for audio-video reasoning, making it difficult to improve inference efficiency while stably preserving performance. To address this, we propose OmniRefine, a training-free two-stage framework for efficient audio-visual token compression in Omni-LLMs. First, Correspondence-Preserving Chunk Refinement refines native chunk boundaries into cross-modally aligned compression units through frame-audio similarity and dynamic programming. Second, Modality-Aware Cooperative Compression jointly compresses video and audio tokens within each refined unit to reduce redundancy while preserving critical evidence. Extensive experiments show that OmniRefine achieves a better efficiency-performance trade-off than strong baselines and maintains stable performance under lower compression ratios. On WorldSense, it still reaches 46.7% accuracy at a 44% token retention ratio, nearly matching the full-token baseline. The code and interface will be released to facilitate further research.",
+        "identifiers": [
+          "SemanticScholar:c4a173ff90378ab2521b74a96e732a74368e221f"
+        ],
+        "semantic_scholar_id": "c4a173ff90378ab2521b74a96e732a74368e221f",
+        "canonical_id": "arXiv:2605.12056",
+        "arxiv_id": "2605.12056",
+        "doi": "10.48550/arXiv.2605.12056",
+        "authors": [
+          "Yu-Chen Deng",
+          "Zi-Dang Cai",
+          "Hai-Tao Zheng",
+          "Jie Wang",
+          "Fei-Diao Yang",
+          "Yu-Xing Han"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 171,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.13915",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.13915",
+        "id:SemanticScholar:dd943538948e50accb16ae88de3bb2a2a36585cd",
+        "id:arXiv:2605.13915",
+        "title:multiscale dequant eliminating dequantization bottleneck via activation decomposition for efficient llm inference",
+        "url:https://arxiv.org/abs/2605.13915"
+      ],
+      "record": {
+        "title": "Multi-Scale Dequant: Eliminating Dequantization Bottleneck via Activation Decomposition for Efficient LLM Inference",
+        "source_url": "https://arxiv.org/abs/2605.13915",
+        "year": 2026,
+        "published": "2026-05-13",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization is essential for efficient large language model (LLM) inference, yet the dequantization step-converting low-bit weights back to high-precision for matrix multiplication has become a critical bottleneck on modern AI accelerators. On architectures with decoupled compute units (e.g., Ascend NPUs), dequantization operations can consume more cycles than the matrix multiplication itself, leaving the high-throughput tensor cores underutilized. This paper presents Multi-Scale Dequant (MSD), a quantization framework that removes weight/KV dequantization from the GEMM critical path. Instead of lifting low-bit weights to BF16 precision, MSD decomposes high-precision BF16 activations into multiple low-precision components, each of which can be multiplied directly with quantized weights via native hardware-accelerated GEMM. This approach shifts the computational paradigm from precision conversion to multi-scale approximation, avoiding INT8-to-BF16 weight conversion before GEMM. We instantiate MSD for two weight formats and derive tight error bounds for each. For INT8 weights (W4A16), two-pass INT8 decomposition achieves near 16 effective bits. For MXFP4 weights (W4A16), two-pass MXFP4 decomposition yields near 6.6 effective bits with error bound 1/64 per block surpassing single-pass MXFP8(5.24 bits) while maintaining the same effective GEMM compute time. We further derive closed-form latency and HBM traffic models showing that MSD avoids the Vector-Cube pipeline stall caused by dequantization and reduces KV cache HBM traffic by up to 2.5 times in attention. Numerical simulations on matrix multiplication and Flash Attention kernels confirm that MSD does not degrade accuracy compared to dequantization baselines, and in many settings achieves lower L2 error.",
+        "identifiers": [
+          "SemanticScholar:dd943538948e50accb16ae88de3bb2a2a36585cd"
+        ],
+        "semantic_scholar_id": "dd943538948e50accb16ae88de3bb2a2a36585cd",
+        "canonical_id": "arXiv:2605.13915",
+        "arxiv_id": "2605.13915",
+        "doi": "10.48550/arXiv.2605.13915",
+        "authors": [
+          "Ling-Chao Zheng",
+          "Yu-Wei Fan",
+          "Jun Li",
+          "Cheng Hu",
+          "Qichen Liao",
+          "Jun-Yi Fan",
+          "Ruimin Shi",
+          "Fangzheng Miao"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.12018",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2406.12018",
+        "id:SemanticScholar:50c1ac57e25b82387898c9d7ce25e6a6e181d6c5",
+        "id:arXiv:2406.12018",
+        "title:citrus chunked instructionaware state eviction for long sequence modeling",
+        "url:https://arxiv.org/abs/2406.12018"
+      ],
+      "record": {
+        "title": "CItruS: Chunked Instruction-aware State Eviction for Long Sequence Modeling",
+        "source_url": "https://arxiv.org/abs/2406.12018",
+        "year": 2024,
+        "published": "2024-06-17",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long sequence modeling has gained broad interest as large language models (LLMs) continue to advance. Recent research has identified that a large portion of hidden states within the key-value caches of Transformer models can be discarded (also termed evicted) withoutaffecting the perplexity performance in generating long sequences. However, we show that these methods, despite preserving perplexity performance, often drop information that is important for solving downstream tasks, a problem which we call information neglect. To address this issue, we introduce Chunked Instruction-aware State Eviction (CItruS), a novel modeling technique that integrates the attention preferences useful for a downstream task into the eviction process of hidden states. In addition, we design a method for chunked sequence processing to further improve efficiency. Our training-free method exhibits superior performance on long sequence comprehension and retrieval tasks over several strong baselines under the same memory budget, while preserving language modeling perplexity. The code and data have been released at https://github.com/ybai-nlp/CItruS.",
+        "identifiers": [
+          "SemanticScholar:50c1ac57e25b82387898c9d7ce25e6a6e181d6c5"
+        ],
+        "semantic_scholar_id": "50c1ac57e25b82387898c9d7ce25e6a6e181d6c5",
+        "canonical_id": "arXiv:2406.12018",
+        "arxiv_id": "2406.12018",
+        "doi": "10.48550/arXiv.2406.12018",
+        "authors": [
+          "Yu Bai",
+          "Xiyuan Zou",
+          "He-Yan Huang",
+          "Sanxing Chen",
+          "Marc-Antoine Rondeau",
+          "Yang Gao",
+          "J. Cheung"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 865,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.15816",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.15816",
+        "id:SemanticScholar:33b802ec36e29a6d211d33c39b5f93548475bb6b",
+        "id:arXiv:2505.15816",
+        "title:streamline without sacrifice squeeze out computation redundancy in lmm",
+        "url:https://arxiv.org/abs/2505.15816"
+      ],
+      "record": {
+        "title": "Streamline Without Sacrifice - Squeeze out Computation Redundancy in LMM",
+        "source_url": "https://arxiv.org/abs/2505.15816",
+        "year": 2025,
+        "published": "2025-05-21",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large multimodal models excel in multimodal tasks but face significant computational challenges due to excessive computation on visual tokens. Unlike token reduction methods that focus on token-level redundancy, we identify and study the computation-level redundancy on vision tokens to ensure no information loss. Our key insight is that vision tokens from the pretrained vision encoder do not necessarily require all the heavy operations (e.g., self-attention, FFNs) in decoder-only LMMs and could be processed more lightly with proper designs. We designed a series of experiments to discover and progressively squeeze out the vision-related computation redundancy. Based on our findings, we propose ProxyV, a novel approach that utilizes proxy vision tokens to alleviate the computational burden on original vision tokens. ProxyV enhances efficiency without compromising performance and can even yield notable performance gains in scenarios with more moderate efficiency improvements. Furthermore, the flexibility of ProxyV is demonstrated through its combination with token reduction methods to boost efficiency further. The code will be made public at this https://github.com/penghao-wu/ProxyV URL.",
+        "identifiers": [
+          "SemanticScholar:33b802ec36e29a6d211d33c39b5f93548475bb6b"
+        ],
+        "semantic_scholar_id": "33b802ec36e29a6d211d33c39b5f93548475bb6b",
+        "canonical_id": "arXiv:2505.15816",
+        "arxiv_id": "2505.15816",
+        "doi": "10.48550/arXiv.2505.15816",
+        "authors": [
+          "Peng-Hao Wu",
+          "Le-Wei Lu",
+          "Zi-Wei Liu"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 527,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.09029",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.09029",
+        "id:SemanticScholar:b89f557ced301b77e446777ff0a09c20793c2159",
+        "id:arXiv:2607.09029",
+        "title:mosaic adaptive interlayer composition for efficient heterogeneous visionlanguage models",
+        "url:https://arxiv.org/abs/2607.09029"
+      ],
+      "record": {
+        "title": "MOSAIC: Adaptive Inter-layer Composition for Efficient Heterogeneous Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2607.09029",
+        "year": 2026,
+        "published": "2026-07-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) have achieved success using homogeneous Transformers to process multimedia data. Recent studies show that heterogeneous structures interleaving efficient mechanisms, like linear attention, improve both performance and inference latency over homogeneous designs. However, these efforts rely on handcrafted static mixing patterns, which are sub-optimal and difficult to adapt to specific hardware. To bridge this gap, we propose Multi-Objective Search for Adaptive Inter-layer Composition (MOSAIC), a hardware-aware search method that automatically transforms homogeneous models into optimized heterogeneous architectures. MOSAIC integrates diverse efficiency mechanisms--including linear, sparse, and low-rank operators--into a unified search space. By formulating the selection as a multi-objective Mixed Integer Programming (MIP) problem, our method identifies optimal configurations that maximize downstream performance under strict hardware latency constraints. To mitigate performance degradation from structural transitions, we introduce a two-stage parameter recovery process: global off-policy distillation to stabilize internal representations, followed by a dual-teacher on-policy distillation leveraging a 235B oracle for knowledge expansion and the original 4B teacher for distributional stability. We validate MOSAIC through MOSAIC-4B, derived from Qwen3-VL-4B-Instruct. Results demonstrate that MOSAIC-4B matches the baseline's performance across multiple benchmarks while requiring less than 2% of the original training cost. Furthermore, it substantially improves inference efficiency, achieving 1.76x prefilling and 2.54x decoding speedups.",
+        "identifiers": [
+          "SemanticScholar:b89f557ced301b77e446777ff0a09c20793c2159"
+        ],
+        "semantic_scholar_id": "b89f557ced301b77e446777ff0a09c20793c2159",
+        "canonical_id": "arXiv:2607.09029",
+        "arxiv_id": "2607.09029",
+        "doi": "10.48550/arXiv.2607.09029",
+        "authors": [
+          "Yun-Cheng Yang",
+          "Feiyang Ye",
+          "Shixian Luo",
+          "Yinna Zhu",
+          "Lianlei Shan",
+          "Wangcai Zhao",
+          "Kuo Zhang",
+          "Yan Chen",
+          "Yong Wu",
+          "Yan Xie"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 112,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33503",
+      "identity_tokens": [
+        "id:SemanticScholar:6a9f70dc86220d287b1b6298b1af8f0428695604",
+        "id:arXiv:2609.33503",
+        "title:relaxkv recomputation guided by the query with sparse context attention for efficient kv cache reuse",
+        "url:https://arxiv.org/abs/2609.33503"
+      ],
+      "record": {
+        "title": "RelaxKV: Recomputation Guided by the Query with Sparse Context Attention for Efficient KV Cache Reuse",
+        "source_url": "https://arxiv.org/abs/2609.33503",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Cross-request KV caching reduces the prefill cost of Retrieval-Augmented Generation (RAG), but conventional prefix caching severely limits cache reuse across requests. Position-Independent Caching (PIC) removes this constraint by reusing independent chunks, but their KV states miss cross-chunk interactions. Existing methods selectively recompute token states to recover these missing interactions, but primarily allocate the recomputation budget to selecting which states to recompute, while fixing the recomputation context to the full causal prefix. We introduce RelaxKV, which formulates selective cache repair as a joint allocation problem over repair targets and recomputation context. Guided by the user query, RelaxKV identifies layer-specific repair targets and restricts their recomputation to a query-relevant context, reducing attention computation. Across four decoder models, RelaxKV at a 15% anchor ratio improves aggregate LongBench performance over ProphetKV on all models. On Qwen3-14B, RelaxKV provides a stronger quality-TTFT trade-off than ProphetKV across a 5%-30% anchor-ratio sweep, and achieves the best selective results on RULER-MV and LV-Eval at 16K and 32K context lengths. Controlled ablations further demonstrate the importance of recomputation context selection.",
+        "identifiers": [
+          "SemanticScholar:6a9f70dc86220d287b1b6298b1af8f0428695604"
+        ],
+        "semantic_scholar_id": "6a9f70dc86220d287b1b6298b1af8f0428695604",
+        "canonical_id": "arXiv:2609.33503",
+        "arxiv_id": "2609.33503",
+        "authors": [
+          "Ruo-Ling Qi",
+          "Yi-Rui Liu",
+          "Xuan'er Wu",
+          "Yu-Xin Jin",
+          "Jian Chen",
+          "Jia-Yu Qin",
+          "Yin Chen",
+          "Jia-Wei Shao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 33,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38823",
+      "identity_tokens": [
+        "id:SemanticScholar:fddce2f1e2b0fed60fd726b384a7d4ed576269ce",
+        "id:arXiv:2609.38823",
+        "title:decomoe decoupling visual propagation and expert computation for efficient multimodal moe inference",
+        "url:https://arxiv.org/abs/2609.38823"
+      ],
+      "record": {
+        "title": "DecoMoE: Decoupling Visual Propagation and Expert Computation for Efficient Multimodal MoE Inference",
+        "source_url": "https://arxiv.org/abs/2609.38823",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal mixture-of-experts (MoE) models combine sparse expert activation with visual-language capabilities, yet their inference remains costly because long visual-token sequences repeatedly incur attention, routing, dispatch, and expert-MLP computation. Existing methods typically compress either the token or expert dimension, leaving redundancy along the other. Our analysis reveals two complementary regularities: the depth required for visual propagation varies across inputs, while text-token routing exhibits concentrated and recurrent expert-importance patterns. Based on these observations, we propose DecoMoE, a two-dimensional structured compression framework that decouples visual propagation from expert computation. The Sample-Adaptive Visual Boundary (SAVB) predicts an input-dependent visual-exit layer at which the visual-token block is removed. The Routing-Calibrated Expert Prefix (RCEP) reorders experts offline using text-token routed mass and, from this predicted exit layer onward, retains at each MoE layer the shortest contiguous prefix covering a target routed-mass fraction. We evaluate DecoMoE on Qwen3-VL-MoE and InternVL3.5-30B-A3B across six benchmarks. On Qwen3-VL-MoE, DecoMoE retains 97.91% of dense-baseline performance while reducing computation from 27.06 to 16.73 TFLOPs and latency from 0.44 to 0.26 seconds, yielding a 1.69x speedup. Code will be available at https://github.com/ShawnTan86/DecoMoE.",
+        "identifiers": [
+          "SemanticScholar:fddce2f1e2b0fed60fd726b384a7d4ed576269ce"
+        ],
+        "semantic_scholar_id": "fddce2f1e2b0fed60fd726b384a7d4ed576269ce",
+        "canonical_id": "arXiv:2609.38823",
+        "arxiv_id": "2609.38823",
+        "authors": [
+          "Xu-Dong Tan",
+          "Peng Ye",
+          "Ming Xie",
+          "Chen-Yu Huang",
+          "Yao-Xin Yang",
+          "Jiayuan Fan",
+          "Tao Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5916c77c1e9511240ef0d878db519c5ee4ebbb90b68156ac93366760f270f4f1",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

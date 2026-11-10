@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa6a33676667520b-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2006.15595",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2006.15595",
+    "identity_tokens": [
+      "arXiv:2006.15595"
+    ],
+    "reason": "BERT型事前学習の位置符号化問題を分析し、word/position correlationを分離するTUPEを提案するmodel architecture/capability研究。GLUE性能が主要評価で、推論runtime・memory・serving効率化を扱わない。",
+    "first_checked_at": "2026-10-05T16:00:05+00:00",
+    "last_checked_at": "2026-10-05T16:00:05+00:00",
+    "linked_from": [],
+    "title": "Rethinking Positional Encoding in Language Pre-training"
+  },
+  "processed_at": "2026-10-05T16:00:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa6a33676667",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-14d5c156e3241f71-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.00624",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.00624",
+    "identity_tokens": [
+      "arXiv:2505.00624"
+    ],
+    "reason": "The resulting models may reduce inference cost through pruning, but the abstract emphasizes domain accuracy and finetuning and does not establish runtime or serving efficiency.",
+    "first_checked_at": "2026-10-14T02:15:14+00:00",
+    "last_checked_at": "2026-10-14T02:15:14+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+      "papers/inference/99-other-inference-systems/2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
+      "papers/inference/99-other-inference-systems/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FineScope: SAE-guided Data Selection Enables Domain Specific LLM Pruning and Finetuning"
+  },
+  "processed_at": "2026-10-14T02:15:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-14d5c156e324",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

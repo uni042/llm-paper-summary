@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260916T213000Z-scheduled-chat-normal-20260917T063000",
+  "worker_id": "scheduled-chat-normal-20260917T063000",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-98e8633cce3c47f1",
+      "claim_id": "claim-d97ee4e96b13d333e721d48c",
+      "worker_id": "scheduled-chat-normal-20260917T063000",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-d97ee4e96b13d333e721d48c",
+      "claimed_at": "2026-09-16T21:31:30+00:00",
+      "expires_at": "2026-09-16T23:01:30+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-98e8633cce3c47f1"
+      ],
+      "job": {
+        "job_id": "job-research-98e8633cce3c47f1",
+        "type": "research",
+        "parent_job_id": "job-5cd9a5af133e1001",
+        "priority": 92,
+        "canonical_id": "arXiv:2609.16491",
+        "title": "PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic Serving",
+        "source_url": "https://arxiv.org/abs/2609.16491",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2609.16491-pipeswift-pipeline-parallel-agentic-serving.md",
+        "selection_reason": "Agentic LLM servingでjob completion timeを目的にprefill/decode schedulingとpipeline parallelismを再設計するsystem研究。64 H800・360B+ MoEモデルでSGLang wide-EP比最大1.45x、vLLM PP2比2.33x、PD-disaggregated構成比1.54xのJCT改善を報告し、serving runtime・parallelism・scheduling系統への新規性と実測価値が高い。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-16T21:04:53+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_root": ".survey/work-queue/records/chat-record-b",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-b/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-b/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-b/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-b/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-b/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-16T21:31:30+00:00",
+  "checkpoint_released": 0
+}

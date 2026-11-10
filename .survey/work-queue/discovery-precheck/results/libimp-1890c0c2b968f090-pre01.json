@@ -1,0 +1,859 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1890c0c2b968f090-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1890c0c2b968",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.15640",
+    "arXiv:2610.18143",
+    "arXiv:2610.20503",
+    "arXiv:2610.21594",
+    "arXiv:2610.22579",
+    "arXiv:2610.23503",
+    "arXiv:2610.25431",
+    "arXiv:2610.26849",
+    "arXiv:2610.28620",
+    "arXiv:2610.30868"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "baf388b28f5080a9b008ac124e1c02f44d1dbaba",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 1,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-11-02T06:08:14.037854+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.15640",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.18143",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.20503",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.21594",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.22579",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.23503",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.25431",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_single",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "arXiv:2610.26849",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.28620",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.30868",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LoopAhead: Speculating Ahead for Faster Decoding in Looped Language Models",
+      "source_url": "https://arxiv.org/abs/2610.21594",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Transformers improve parameter efficiency by repeatedly applying the same Transformer layers. However, generating each token still involves sequential computation and repeated access to model weights, leading to high decoding latency. Recent pipelined self-speculative decoding methods reduce this delay by drafting tokens from early-loop predictions and asynchronously advancing tokens at different recurrent depths in the same batch, but they do not fully exploit early-loop features for longer lookahead and still spend computation verifying incorrect speculative branches. We introduce \\method, a speculative decoding framework for looped transformers that enables earlier drafting of future tokens and assigns complementary roles to different recurrent depths. A lightweight lookahead drafter (LAD) predicts multiple future tokens with early-loop states, and deeper-loop feedback helps decide which draft branches to continue and which to pause, while the full-depth model makes the final token decisions. LoopAhead achieves up to 7.82x decoding speedup over autoregressive decoding while preserving the target model's output distribution.",
+      "identifiers": [
+        "SemanticScholar:e0cdfa1ee16bdfb1bad129a5ce97b3003c7df751"
+      ],
+      "semantic_scholar_id": "e0cdfa1ee16bdfb1bad129a5ce97b3003c7df751",
+      "canonical_id": "arXiv:2610.21594",
+      "arxiv_id": "2610.21594",
+      "authors": [
+        "Zi-Xuan Liu",
+        "Nan Xue",
+        "Rui Bao",
+        "Yu-Hang Xu",
+        "Xiao-Feng Cao",
+        "Jiangchao Yao",
+        "Zhi-Yong Chen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HBFSim: A Simulator for Exploring HBF in Memory Hierarchies for LLMs",
+      "source_url": "https://arxiv.org/abs/2610.23503",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "High Bandwidth Flash (HBF) has recently emerged as a promising technology that provides terabyte-scale accelerator-local capacity at bandwidths approaching HBM, with a potential cost-per-bit advantage over HBM. However, its NAND foundation brings long latency, out-of-place updates, and finite write endurance directly into the accelerator memory hierarchy, making its effects on performance and lifetime difficult to predict. To study this emerging design space, we present HBFSim, an LLM-aware event-driven simulator for heterogeneous HBM+HBF memory systems that preserves application-level memory semantics while modeling flash-internal behavior. HBFSim models HBM, HBF with host-managed flash translation, and conventional capacity tiers in one simulation driven by a calibrated serving frontend. Using HBFSim, we study decoding of Llama-3.1-70B and Qwen3-235B-A22B under three workloads that differ in their input and output lengths. HBF serves data that does not fit in HBM 11.0--19.0$\\times$ faster than host DRAM; HBM is better used to hold the running sequences'KV cache than as a cache for HBF; and at a published peak load of Llama-3.1-70B, HBF lasts 2.0 to 6.9 years, in proportion to the stacks that share the KV writes. The artifact is available at https://github.com/FlashLabAE/HBFSim and will track public HBF device data as it becomes available.",
+      "identifiers": [
+        "SemanticScholar:821fb25f05d7e7c9f52227050e0f8737207d4b51"
+      ],
+      "semantic_scholar_id": "821fb25f05d7e7c9f52227050e0f8737207d4b51",
+      "canonical_id": "arXiv:2610.23503",
+      "arxiv_id": "2610.23503",
+      "doi": "10.1145/3848591.3856870",
+      "authors": [
+        "Jin-Heng Li",
+        "Guo-Sheng Wang",
+        "Hong-Chao Du",
+        "Shang-Yu Wu",
+        "Qiao Li",
+        "Chun Jason Xue"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Context-Aware Precision Scheduling for Small Language Models",
+      "source_url": "https://arxiv.org/abs/2610.15640",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Small language models (SLMs) used as on-device agents must balance accuracy and latency as their context grows. Mixed precision helps manage this tradeoff by assigning different precisions to weight tensors according to their size and sensitivity. However, these choices depend on the operating conditions, so a configuration selected for a short context may no longer provide the best tradeoff at a longer one. We calibrate a timing model from measurements at different precisions and context lengths, and combine it with tensor sensitivities to choose configurations under a latency or accuracy budget. We argue that fewer bits do not always mean faster execution, so our predictor estimates latency from calibrated execution costs rather than weight bytes alone. Under a latency budget, reading the larger key-value (KV) cache leaves less time for weight operations, leading the allocator to select lower precisions. This gives a schedule of tensor changes that can be prepared before execution. Our runtime follows the schedule while retaining the session's KV cache. We evaluate executed schedules on a laptop GPU, including a longer-context schedule with three weight formats and a tool-use benchmark measuring full response time and correctness. Under an accuracy budget, measured error from a quantized KV cache determines the budget left for weights. The allocator can raise or lower weight precision as this estimate changes. These experiments show where context-aware precision helps and where accuracy recovery remains limited.",
+      "identifiers": [
+        "SemanticScholar:ffb7efa1ab732b872ad430767a91c67d1a73d136"
+      ],
+      "semantic_scholar_id": "ffb7efa1ab732b872ad430767a91c67d1a73d136",
+      "canonical_id": "arXiv:2610.15640",
+      "arxiv_id": "2610.15640",
+      "authors": [
+        "Mukund Athmaram",
+        "Manoj Rao",
+        "Liang Ma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.18143",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefix reuse improves LLM inference by sharing the KV cache of common prompt prefixes. This helps only if the scheduler can execute a matched branch in the current worker round. Schedulers assume that a matched prefix is ready, which holds for full attention but fails for hybrid LLMs. There, a branch (the consumer) may need recurrent state that another branch (the producer) is still computing in the same round. The native scheduler stops its waiting-queue scan at this blocked consumer, and the resulting head-of-line blocking creates \\emph{execution bubbles}: idle batch slots that independent work could fill. We introduce RadixFlow, which decouples prefix matching from state readiness. Its state-ready traversal turns a global scan barrier into a local wait: only the consumer is blocked until the next round, while feasible independent branches keep filling the batch under the native state check. On five hybrid models, RadixFlow lowers mean latency by 3\\% to 24\\% and worker rounds by 11\\% to 44\\% at almost unchanged reuse. On the larger Qwen3.5 models, ablations show that most of the gain comes from traversal, which adds little on a full-attention control. Heavier rounds limit how much of this saving reaches latency.",
+      "identifiers": [
+        "SemanticScholar:8c79cfb1892914e97379cdab87d58e5cae3d9efd"
+      ],
+      "semantic_scholar_id": "8c79cfb1892914e97379cdab87d58e5cae3d9efd",
+      "canonical_id": "arXiv:2610.18143",
+      "arxiv_id": "2610.18143",
+      "authors": [
+        "Hui-Hao Jing",
+        "Wen-Bin Hu",
+        "Shao-Jin Chen",
+        "Hao-Chen Shi",
+        "Haoyu Huang",
+        "Si-Rui Zhang",
+        "Yuxuan Liu",
+        "Zhong-Wei Xie",
+        "Hao-Ran Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ReaDy: Recurrent States as Dynamic Context for Speculative Drafting in Hybrid Linear Attention Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.20503",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive generation by drafting multiple tokens per step, yet feature-based drafters rely on target hidden features whose contextual emphasis may not align with the needs of subsequent draft positions. Hybrid linear attention (HLA) models maintain compact recurrent states that accumulate historical associations, offering an efficient source of complementary context for speculative drafting. We introduce ReaDy, the first speculative decoding method, to the best of our knowledge, to leverage HLA recurrent states for position-specific context retrieval during drafting. ReaDy equips each draft position with a learned query to retrieve supplementary context directly from the target's committed recurrent states. A lightweight state reader integrates this context into draft representations through residual updates, while low-rank state reads and fused operators keep additional computation and I/O overhead low. Building on DSpark's parallel backbone and sequential prediction head, ReaDy employs a lightweight two-stage adaptation strategy, with reader capacity, state sources, and residual placement examined through ablation studies. Across seven benchmarks spanning mathematics, code generation, and dialogue, ReaDy achieves an average $3.16\\times$ decoding speedup over autoregressive decoding with Qwen3.8-27B on a single NVIDIA B200 GPU. It outperforms DSpark on every benchmark, improving throughput by 7.97% and acceptance length by 8.50% on average. Our code is available at https://github.com/StartLuxLabs/ReaDy.",
+      "identifiers": [
+        "SemanticScholar:d728a44420cdc27a3e6a791ca9296ed80d49261f"
+      ],
+      "semantic_scholar_id": "d728a44420cdc27a3e6a791ca9296ed80d49261f",
+      "canonical_id": "arXiv:2610.20503",
+      "arxiv_id": "2610.20503",
+      "authors": [
+        "Bo Sun",
+        "Zun-Hai Su",
+        "Xia-Lie Zhuang",
+        "Jian-Jing Li",
+        "Ngai Wong",
+        "Chuan-Wei Kuo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MemLLM: End-to-end In-Storage Acceleration of On-device Retrieval-Augmented Generation using Precomputed KV Caches",
+      "source_url": "https://arxiv.org/abs/2610.22579",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation (RAG) on edge devices enables personalized large language model (LLM) inference while preserving privacy. However, RAG's inherent length asymmetry makes the prefill phase the dominant bottleneck. While precomputing the KV caches offline alleviates the prefill cost on server systems, the multi-gigabyte caches over the narrow interconnect create a severe I/O wall for on-device systems. To mitigate this, we propose MemLLM, an end-to-end in-storage processing (ISP) architecture that executes the complete attention pipeline based on precomputed KV caches within the SSD. MemLLM utilizes per-channel accelerators to fully utilize the aggregated NAND channel bandwidth and accelerates all KV cache-related computations on the storage-side to minimize PCIe transfers. To efficiently handle the sparse updates required by RAG, MemLLM introduces a fused recomputation-query kernel paired with a hardware-based filter logic to halve the NAND read volume and eliminate write-back penalties. Furthermore, MemLLM's global SRAM-based stateful reduction engine enables a completely DRAM-less dataflow, thereby removing the internal memory bottlenecks and bounding the PCIe egress to an $O(1)$ footprint. A full-stack software stack allows asynchronous, zero-copy transfers from the ISP to the host and provides transparent execution within modern ML frameworks. Evaluated across eight real-world RAG datasets and six on-device LLM models, MemLLM achieves an average end-to-end speedup of 4.06$\\times$ over the GPU baseline.",
+      "identifiers": [
+        "SemanticScholar:b0f09a47b3c472bfc29be392373707a25e0224df"
+      ],
+      "semantic_scholar_id": "b0f09a47b3c472bfc29be392373707a25e0224df",
+      "canonical_id": "arXiv:2610.22579",
+      "arxiv_id": "2610.22579",
+      "authors": [
+        "Seung-Kwan Kang",
+        "Hyungseok Ko",
+        "Heemin Kim",
+        "Myoungsoo Jung"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SARP: An On-SSD Index for KVCache with Fast Prefix Matching and Recovery",
+      "source_url": "https://arxiv.org/abs/2610.26849",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Distributed LLM serving relies on a global index to locate reusable key-value cache (KVCache) blocks through prefix matching. Losing the index after a crash or restart forces affected requests to recompute existing KVCache on GPUs. Persisting the index restores access after a failure. Existing persistent indexes face a tension between prefix-matching performance and recovery time. A snapshot-backed in-memory index supports fast prefix matching, but rebuilding the full index delays recovery. An on-SSD index avoids this rebuild, but adds storage accesses to prefix matching. Our core insight is that extending a matched prefix over a short span typically requires distinguishing only a few token sequences, suggesting that sparse in-memory routing state may suffice. Prefix matching also accesses block metadata in sequence order, allowing metadata for consecutive blocks to be retrieved together. We present SARP (Sparse Adaptive Routing and Packing), an on-SSD KVCache index for fast recovery and prefix matching. SARP groups consecutive block IDs and metadata into segments to amortize storage accesses across multiple blocks. A compact in-memory routing directory identifies candidate segments using entries at selected block positions. SARP limits segment retrievals and uses compact filters to prioritize candidates with longer potential matches. After retrieval, SARP verifies block IDs against the query and reuses only KVCache blocks covered by the verified prefix. After a restart, SARP restores the sparse routing directory from a snapshot. Across four multi-turn chat and agentic workloads, SARP recovers 8.0x to 77.5x faster than the in-memory index baselines and delivers 1.15x to 66.6x the request throughput of the on-SSD index baselines, while reusing only 0.0030% to 0.029% fewer tokens than exact prefix matching.",
+      "identifiers": [
+        "SemanticScholar:e8351ce1f36dce814bbb394ff3ca8c7e43ecbf15"
+      ],
+      "semantic_scholar_id": "e8351ce1f36dce814bbb394ff3ca8c7e43ecbf15",
+      "canonical_id": "arXiv:2610.26849",
+      "arxiv_id": "2610.26849",
+      "authors": [
+        "Jun Kong",
+        "Qi Lin",
+        "Zhi-Chao Cao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 14,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Weight Placement Is Not Enough: Synchronization in Multi-Node CPU Decoding of Ternary LLMs",
+      "source_url": "https://arxiv.org/abs/2610.28620",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Ternary LLMs read only a few gigabytes per decoded token, yet on dual-socket servers with four NUMA nodes the fastest ternary runtime we found uses less than half of the memory bandwidth. Placing each weight on the node of the thread that reads it is necessary but not enough: in a decode engine with node-local weights that reuses ik_llama's kernels, threads on two generations of Xeon servers still spend 20-48% of each token waiting at synchronization points. Per-thread barrier traces show that most of the wait is for the slowest threads of each node; the barriers'own latency (microseconds each, but up to 12% of the token for the smallest model) and serial per-node work are smaller parts. On identical kernels, a Megatron-style column split beats a row-owned split without cross-node reductions in every configuration we measured, and isolating the number of barriers shows that most of its gain comes from its threads waiting less for each other and for their node leaders, and only a minority from having fewer barriers. Where decoding is DRAM-bound, the resulting engine is 1.5-2.1x faster than ik_llama with all cores and 1.5-1.9x faster than ik_llama at its fastest thread count (3.2x and 2.8x for a small model that runs from the L3 cache), at the same accuracy and with less energy per token.",
+      "identifiers": [
+        "SemanticScholar:e0d8bbc78240909b8138cdc8adc82ec4b7feb00b"
+      ],
+      "semantic_scholar_id": "e0d8bbc78240909b8138cdc8adc82ec4b7feb00b",
+      "canonical_id": "arXiv:2610.28620",
+      "arxiv_id": "2610.28620",
+      "authors": [
+        "Run-Guo Li",
+        "De-Zhen Lu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "uGDS: A User-Space Development Kit for High-Performance GPU Direct Storage",
+      "source_url": "https://arxiv.org/abs/2610.30868",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Data-intensive GPU applications increasingly rely on NVMe SSDs to extend GPU memory. NVIDIA GPU Direct Storage (GDS) enables direct SSD-GPU transfers via PCIe peer-to-peer DMA, eliminating host staging. However, GDS retains three key limitations: (1) its control path traverses the kernel for every I/O request, introducing software overhead; (2) its stream-ordered path imposes strict total ordering even when workloads only require batch-level ordering; and (3) its closed-source user-space engine hinders diagnosis and custom scheduling. We present uGDS, https://github.com/ScaleX-IO/uGDS, an open-source user-space GPU Direct Storage library built on four principles: user-space control, unified cross-vendor abstraction, workload-aware scheduling, and end-to-end transparency. The host CPU manages the entire NVMe command lifecycle in user space, while payloads move via PCIe P2P DMA without consuming GPU compute. A minimal kernel module is used only for one-time privileged setup. uGDS partitions hardware queues between synchronous and batch traffic, enforces DMA-safe buffer lifetimes, and provides cuFile-compatible synchronous, batched, and stream-ordered APIs with polling or interrupt completion on both NVIDIA CUDA and AMD HIP. Evaluated on an A100 with a Samsung 990 PRO, uGDS achieves up to 12.12x GDS's batch-read bandwidth and 30.69x its batch-write bandwidth (8- and 4-KiB requests, batch size 128), and reduces 4-KiB synchronous write latency by 84.1% with two threads. Its stream-ordered path sustains 5.49 GiB/s on a single stream, where GDS retains only 40.8% of its synchronous bandwidth. In LMCache, uGDS reduces median time-to-first-token (TTFT) by up to 62.7% and raises serving goodput by 2.63x. On AMD, uGDS achieves up to 1.19x hipFile's synchronous-write bandwidth.",
+      "identifiers": [
+        "SemanticScholar:58f3005d2a7d3729411afe3e93ee2437c6aeb59d"
+      ],
+      "semantic_scholar_id": "58f3005d2a7d3729411afe3e93ee2437c6aeb59d",
+      "canonical_id": "arXiv:2610.30868",
+      "arxiv_id": "2610.30868",
+      "authors": [
+        "Jin-Tiao Wei",
+        "Guan-Yi Chen",
+        "Qi Chen",
+        "Chu-Yu Zhang",
+        "Zhen-Hui Zhou",
+        "Chu-Tian Wang",
+        "Jian Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.21594",
+      "identity_tokens": [
+        "id:SemanticScholar:e0cdfa1ee16bdfb1bad129a5ce97b3003c7df751",
+        "id:arXiv:2610.21594",
+        "title:loopahead speculating ahead for faster decoding in looped language models",
+        "url:https://arxiv.org/abs/2610.21594"
+      ],
+      "record": {
+        "title": "LoopAhead: Speculating Ahead for Faster Decoding in Looped Language Models",
+        "source_url": "https://arxiv.org/abs/2610.21594",
+        "year": 2026,
+        "published": "2026-10-15",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped Transformers improve parameter efficiency by repeatedly applying the same Transformer layers. However, generating each token still involves sequential computation and repeated access to model weights, leading to high decoding latency. Recent pipelined self-speculative decoding methods reduce this delay by drafting tokens from early-loop predictions and asynchronously advancing tokens at different recurrent depths in the same batch, but they do not fully exploit early-loop features for longer lookahead and still spend computation verifying incorrect speculative branches. We introduce \\method, a speculative decoding framework for looped transformers that enables earlier drafting of future tokens and assigns complementary roles to different recurrent depths. A lightweight lookahead drafter (LAD) predicts multiple future tokens with early-loop states, and deeper-loop feedback helps decide which draft branches to continue and which to pause, while the full-depth model makes the final token decisions. LoopAhead achieves up to 7.82x decoding speedup over autoregressive decoding while preserving the target model's output distribution.",
+        "identifiers": [
+          "SemanticScholar:e0cdfa1ee16bdfb1bad129a5ce97b3003c7df751"
+        ],
+        "semantic_scholar_id": "e0cdfa1ee16bdfb1bad129a5ce97b3003c7df751",
+        "canonical_id": "arXiv:2610.21594",
+        "arxiv_id": "2610.21594",
+        "authors": [
+          "Zi-Xuan Liu",
+          "Nan Xue",
+          "Rui Bao",
+          "Yu-Hang Xu",
+          "Xiao-Feng Cao",
+          "Jiangchao Yao",
+          "Zhi-Yong Chen"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 18,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.23503",
+      "identity_tokens": [
+        "id:DOI:10.1145/3848591.3856870",
+        "id:SemanticScholar:821fb25f05d7e7c9f52227050e0f8737207d4b51",
+        "id:arXiv:2610.23503",
+        "title:hbfsim a simulator for exploring hbf in memory hierarchies for llms",
+        "url:https://arxiv.org/abs/2610.23503"
+      ],
+      "record": {
+        "title": "HBFSim: A Simulator for Exploring HBF in Memory Hierarchies for LLMs",
+        "source_url": "https://arxiv.org/abs/2610.23503",
+        "year": 2026,
+        "published": "2026-10-16",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "High Bandwidth Flash (HBF) has recently emerged as a promising technology that provides terabyte-scale accelerator-local capacity at bandwidths approaching HBM, with a potential cost-per-bit advantage over HBM. However, its NAND foundation brings long latency, out-of-place updates, and finite write endurance directly into the accelerator memory hierarchy, making its effects on performance and lifetime difficult to predict. To study this emerging design space, we present HBFSim, an LLM-aware event-driven simulator for heterogeneous HBM+HBF memory systems that preserves application-level memory semantics while modeling flash-internal behavior. HBFSim models HBM, HBF with host-managed flash translation, and conventional capacity tiers in one simulation driven by a calibrated serving frontend. Using HBFSim, we study decoding of Llama-3.1-70B and Qwen3-235B-A22B under three workloads that differ in their input and output lengths. HBF serves data that does not fit in HBM 11.0--19.0$\\times$ faster than host DRAM; HBM is better used to hold the running sequences'KV cache than as a cache for HBF; and at a published peak load of Llama-3.1-70B, HBF lasts 2.0 to 6.9 years, in proportion to the stacks that share the KV writes. The artifact is available at https://github.com/FlashLabAE/HBFSim and will track public HBF device data as it becomes available.",
+        "identifiers": [
+          "SemanticScholar:821fb25f05d7e7c9f52227050e0f8737207d4b51"
+        ],
+        "semantic_scholar_id": "821fb25f05d7e7c9f52227050e0f8737207d4b51",
+        "canonical_id": "arXiv:2610.23503",
+        "arxiv_id": "2610.23503",
+        "doi": "10.1145/3848591.3856870",
+        "authors": [
+          "Jin-Heng Li",
+          "Guo-Sheng Wang",
+          "Hong-Chao Du",
+          "Shang-Yu Wu",
+          "Qiao Li",
+          "Chun Jason Xue"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 17,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.15640",
+      "identity_tokens": [
+        "id:SemanticScholar:ffb7efa1ab732b872ad430767a91c67d1a73d136",
+        "id:arXiv:2610.15640",
+        "title:contextaware precision scheduling for small language models",
+        "url:https://arxiv.org/abs/2610.15640"
+      ],
+      "record": {
+        "title": "Context-Aware Precision Scheduling for Small Language Models",
+        "source_url": "https://arxiv.org/abs/2610.15640",
+        "year": 2026,
+        "published": "2026-10-11",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Small language models (SLMs) used as on-device agents must balance accuracy and latency as their context grows. Mixed precision helps manage this tradeoff by assigning different precisions to weight tensors according to their size and sensitivity. However, these choices depend on the operating conditions, so a configuration selected for a short context may no longer provide the best tradeoff at a longer one. We calibrate a timing model from measurements at different precisions and context lengths, and combine it with tensor sensitivities to choose configurations under a latency or accuracy budget. We argue that fewer bits do not always mean faster execution, so our predictor estimates latency from calibrated execution costs rather than weight bytes alone. Under a latency budget, reading the larger key-value (KV) cache leaves less time for weight operations, leading the allocator to select lower precisions. This gives a schedule of tensor changes that can be prepared before execution. Our runtime follows the schedule while retaining the session's KV cache. We evaluate executed schedules on a laptop GPU, including a longer-context schedule with three weight formats and a tool-use benchmark measuring full response time and correctness. Under an accuracy budget, measured error from a quantized KV cache determines the budget left for weights. The allocator can raise or lower weight precision as this estimate changes. These experiments show where context-aware precision helps and where accuracy recovery remains limited.",
+        "identifiers": [
+          "SemanticScholar:ffb7efa1ab732b872ad430767a91c67d1a73d136"
+        ],
+        "semantic_scholar_id": "ffb7efa1ab732b872ad430767a91c67d1a73d136",
+        "canonical_id": "arXiv:2610.15640",
+        "arxiv_id": "2610.15640",
+        "authors": [
+          "Mukund Athmaram",
+          "Manoj Rao",
+          "Liang Ma"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.18143",
+      "identity_tokens": [
+        "id:SemanticScholar:8c79cfb1892914e97379cdab87d58e5cae3d9efd",
+        "id:arXiv:2610.18143",
+        "title:radixflow filling execution bubbles in prefixcached hybrid llm serving",
+        "url:https://arxiv.org/abs/2610.18143"
+      ],
+      "record": {
+        "title": "RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.18143",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prefix reuse improves LLM inference by sharing the KV cache of common prompt prefixes. This helps only if the scheduler can execute a matched branch in the current worker round. Schedulers assume that a matched prefix is ready, which holds for full attention but fails for hybrid LLMs. There, a branch (the consumer) may need recurrent state that another branch (the producer) is still computing in the same round. The native scheduler stops its waiting-queue scan at this blocked consumer, and the resulting head-of-line blocking creates \\emph{execution bubbles}: idle batch slots that independent work could fill. We introduce RadixFlow, which decouples prefix matching from state readiness. Its state-ready traversal turns a global scan barrier into a local wait: only the consumer is blocked until the next round, while feasible independent branches keep filling the batch under the native state check. On five hybrid models, RadixFlow lowers mean latency by 3\\% to 24\\% and worker rounds by 11\\% to 44\\% at almost unchanged reuse. On the larger Qwen3.5 models, ablations show that most of the gain comes from traversal, which adds little on a full-attention control. Heavier rounds limit how much of this saving reaches latency.",
+        "identifiers": [
+          "SemanticScholar:8c79cfb1892914e97379cdab87d58e5cae3d9efd"
+        ],
+        "semantic_scholar_id": "8c79cfb1892914e97379cdab87d58e5cae3d9efd",
+        "canonical_id": "arXiv:2610.18143",
+        "arxiv_id": "2610.18143",
+        "authors": [
+          "Hui-Hao Jing",
+          "Wen-Bin Hu",
+          "Shao-Jin Chen",
+          "Hao-Chen Shi",
+          "Haoyu Huang",
+          "Si-Rui Zhang",
+          "Yuxuan Liu",
+          "Zhong-Wei Xie",
+          "Hao-Ran Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.20503",
+      "identity_tokens": [
+        "id:SemanticScholar:d728a44420cdc27a3e6a791ca9296ed80d49261f",
+        "id:arXiv:2610.20503",
+        "title:ready recurrent states as dynamic context for speculative drafting in hybrid linear attention large language models",
+        "url:https://arxiv.org/abs/2610.20503"
+      ],
+      "record": {
+        "title": "ReaDy: Recurrent States as Dynamic Context for Speculative Drafting in Hybrid Linear Attention Large Language Models",
+        "source_url": "https://arxiv.org/abs/2610.20503",
+        "year": 2026,
+        "published": "2026-10-14",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive generation by drafting multiple tokens per step, yet feature-based drafters rely on target hidden features whose contextual emphasis may not align with the needs of subsequent draft positions. Hybrid linear attention (HLA) models maintain compact recurrent states that accumulate historical associations, offering an efficient source of complementary context for speculative drafting. We introduce ReaDy, the first speculative decoding method, to the best of our knowledge, to leverage HLA recurrent states for position-specific context retrieval during drafting. ReaDy equips each draft position with a learned query to retrieve supplementary context directly from the target's committed recurrent states. A lightweight state reader integrates this context into draft representations through residual updates, while low-rank state reads and fused operators keep additional computation and I/O overhead low. Building on DSpark's parallel backbone and sequential prediction head, ReaDy employs a lightweight two-stage adaptation strategy, with reader capacity, state sources, and residual placement examined through ablation studies. Across seven benchmarks spanning mathematics, code generation, and dialogue, ReaDy achieves an average $3.16\\times$ decoding speedup over autoregressive decoding with Qwen3.8-27B on a single NVIDIA B200 GPU. It outperforms DSpark on every benchmark, improving throughput by 7.97% and acceptance length by 8.50% on average. Our code is available at https://github.com/StartLuxLabs/ReaDy.",
+        "identifiers": [
+          "SemanticScholar:d728a44420cdc27a3e6a791ca9296ed80d49261f"
+        ],
+        "semantic_scholar_id": "d728a44420cdc27a3e6a791ca9296ed80d49261f",
+        "canonical_id": "arXiv:2610.20503",
+        "arxiv_id": "2610.20503",
+        "authors": [
+          "Bo Sun",
+          "Zun-Hai Su",
+          "Xia-Lie Zhuang",
+          "Jian-Jing Li",
+          "Ngai Wong",
+          "Chuan-Wei Kuo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.22579",
+      "identity_tokens": [
+        "id:SemanticScholar:b0f09a47b3c472bfc29be392373707a25e0224df",
+        "id:arXiv:2610.22579",
+        "title:memllm endtoend instorage acceleration of ondevice retrievalaugmented generation using precomputed kv caches",
+        "url:https://arxiv.org/abs/2610.22579"
+      ],
+      "record": {
+        "title": "MemLLM: End-to-end In-Storage Acceleration of On-device Retrieval-Augmented Generation using Precomputed KV Caches",
+        "source_url": "https://arxiv.org/abs/2610.22579",
+        "year": 2026,
+        "published": "2026-10-15",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-augmented generation (RAG) on edge devices enables personalized large language model (LLM) inference while preserving privacy. However, RAG's inherent length asymmetry makes the prefill phase the dominant bottleneck. While precomputing the KV caches offline alleviates the prefill cost on server systems, the multi-gigabyte caches over the narrow interconnect create a severe I/O wall for on-device systems. To mitigate this, we propose MemLLM, an end-to-end in-storage processing (ISP) architecture that executes the complete attention pipeline based on precomputed KV caches within the SSD. MemLLM utilizes per-channel accelerators to fully utilize the aggregated NAND channel bandwidth and accelerates all KV cache-related computations on the storage-side to minimize PCIe transfers. To efficiently handle the sparse updates required by RAG, MemLLM introduces a fused recomputation-query kernel paired with a hardware-based filter logic to halve the NAND read volume and eliminate write-back penalties. Furthermore, MemLLM's global SRAM-based stateful reduction engine enables a completely DRAM-less dataflow, thereby removing the internal memory bottlenecks and bounding the PCIe egress to an $O(1)$ footprint. A full-stack software stack allows asynchronous, zero-copy transfers from the ISP to the host and provides transparent execution within modern ML frameworks. Evaluated across eight real-world RAG datasets and six on-device LLM models, MemLLM achieves an average end-to-end speedup of 4.06$\\times$ over the GPU baseline.",
+        "identifiers": [
+          "SemanticScholar:b0f09a47b3c472bfc29be392373707a25e0224df"
+        ],
+        "semantic_scholar_id": "b0f09a47b3c472bfc29be392373707a25e0224df",
+        "canonical_id": "arXiv:2610.22579",
+        "arxiv_id": "2610.22579",
+        "authors": [
+          "Seung-Kwan Kang",
+          "Hyungseok Ko",
+          "Heemin Kim",
+          "Myoungsoo Jung"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 18,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.26849",
+      "identity_tokens": [
+        "id:SemanticScholar:e8351ce1f36dce814bbb394ff3ca8c7e43ecbf15",
+        "id:arXiv:2610.26849",
+        "title:sarp an onssd index for kvcache with fast prefix matching and recovery",
+        "url:https://arxiv.org/abs/2610.26849"
+      ],
+      "record": {
+        "title": "SARP: An On-SSD Index for KVCache with Fast Prefix Matching and Recovery",
+        "source_url": "https://arxiv.org/abs/2610.26849",
+        "year": 2026,
+        "published": "2026-10-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Distributed LLM serving relies on a global index to locate reusable key-value cache (KVCache) blocks through prefix matching. Losing the index after a crash or restart forces affected requests to recompute existing KVCache on GPUs. Persisting the index restores access after a failure. Existing persistent indexes face a tension between prefix-matching performance and recovery time. A snapshot-backed in-memory index supports fast prefix matching, but rebuilding the full index delays recovery. An on-SSD index avoids this rebuild, but adds storage accesses to prefix matching. Our core insight is that extending a matched prefix over a short span typically requires distinguishing only a few token sequences, suggesting that sparse in-memory routing state may suffice. Prefix matching also accesses block metadata in sequence order, allowing metadata for consecutive blocks to be retrieved together. We present SARP (Sparse Adaptive Routing and Packing), an on-SSD KVCache index for fast recovery and prefix matching. SARP groups consecutive block IDs and metadata into segments to amortize storage accesses across multiple blocks. A compact in-memory routing directory identifies candidate segments using entries at selected block positions. SARP limits segment retrievals and uses compact filters to prioritize candidates with longer potential matches. After retrieval, SARP verifies block IDs against the query and reuses only KVCache blocks covered by the verified prefix. After a restart, SARP restores the sparse routing directory from a snapshot. Across four multi-turn chat and agentic workloads, SARP recovers 8.0x to 77.5x faster than the in-memory index baselines and delivers 1.15x to 66.6x the request throughput of the on-SSD index baselines, while reusing only 0.0030% to 0.029% fewer tokens than exact prefix matching.",
+        "identifiers": [
+          "SemanticScholar:e8351ce1f36dce814bbb394ff3ca8c7e43ecbf15"
+        ],
+        "semantic_scholar_id": "e8351ce1f36dce814bbb394ff3ca8c7e43ecbf15",
+        "canonical_id": "arXiv:2610.26849",
+        "arxiv_id": "2610.26849",
+        "authors": [
+          "Jun Kong",
+          "Qi Lin",
+          "Zhi-Chao Cao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 14,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.28620",
+      "identity_tokens": [
+        "id:SemanticScholar:e0d8bbc78240909b8138cdc8adc82ec4b7feb00b",
+        "id:arXiv:2610.28620",
+        "title:weight placement is not enough synchronization in multinode cpu decoding of ternary llms",
+        "url:https://arxiv.org/abs/2610.28620"
+      ],
+      "record": {
+        "title": "Weight Placement Is Not Enough: Synchronization in Multi-Node CPU Decoding of Ternary LLMs",
+        "source_url": "https://arxiv.org/abs/2610.28620",
+        "year": 2026,
+        "published": "2026-10-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Ternary LLMs read only a few gigabytes per decoded token, yet on dual-socket servers with four NUMA nodes the fastest ternary runtime we found uses less than half of the memory bandwidth. Placing each weight on the node of the thread that reads it is necessary but not enough: in a decode engine with node-local weights that reuses ik_llama's kernels, threads on two generations of Xeon servers still spend 20-48% of each token waiting at synchronization points. Per-thread barrier traces show that most of the wait is for the slowest threads of each node; the barriers'own latency (microseconds each, but up to 12% of the token for the smallest model) and serial per-node work are smaller parts. On identical kernels, a Megatron-style column split beats a row-owned split without cross-node reductions in every configuration we measured, and isolating the number of barriers shows that most of its gain comes from its threads waiting less for each other and for their node leaders, and only a minority from having fewer barriers. Where decoding is DRAM-bound, the resulting engine is 1.5-2.1x faster than ik_llama with all cores and 1.5-1.9x faster than ik_llama at its fastest thread count (3.2x and 2.8x for a small model that runs from the L3 cache), at the same accuracy and with less energy per token.",
+        "identifiers": [
+          "SemanticScholar:e0d8bbc78240909b8138cdc8adc82ec4b7feb00b"
+        ],
+        "semantic_scholar_id": "e0d8bbc78240909b8138cdc8adc82ec4b7feb00b",
+        "canonical_id": "arXiv:2610.28620",
+        "arxiv_id": "2610.28620",
+        "authors": [
+          "Run-Guo Li",
+          "De-Zhen Lu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 13,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.30868",
+      "identity_tokens": [
+        "id:SemanticScholar:58f3005d2a7d3729411afe3e93ee2437c6aeb59d",
+        "id:arXiv:2610.30868",
+        "title:ugds a userspace development kit for highperformance gpu direct storage",
+        "url:https://arxiv.org/abs/2610.30868"
+      ],
+      "record": {
+        "title": "uGDS: A User-Space Development Kit for High-Performance GPU Direct Storage",
+        "source_url": "https://arxiv.org/abs/2610.30868",
+        "year": 2026,
+        "published": "2026-10-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Data-intensive GPU applications increasingly rely on NVMe SSDs to extend GPU memory. NVIDIA GPU Direct Storage (GDS) enables direct SSD-GPU transfers via PCIe peer-to-peer DMA, eliminating host staging. However, GDS retains three key limitations: (1) its control path traverses the kernel for every I/O request, introducing software overhead; (2) its stream-ordered path imposes strict total ordering even when workloads only require batch-level ordering; and (3) its closed-source user-space engine hinders diagnosis and custom scheduling. We present uGDS, https://github.com/ScaleX-IO/uGDS, an open-source user-space GPU Direct Storage library built on four principles: user-space control, unified cross-vendor abstraction, workload-aware scheduling, and end-to-end transparency. The host CPU manages the entire NVMe command lifecycle in user space, while payloads move via PCIe P2P DMA without consuming GPU compute. A minimal kernel module is used only for one-time privileged setup. uGDS partitions hardware queues between synchronous and batch traffic, enforces DMA-safe buffer lifetimes, and provides cuFile-compatible synchronous, batched, and stream-ordered APIs with polling or interrupt completion on both NVIDIA CUDA and AMD HIP. Evaluated on an A100 with a Samsung 990 PRO, uGDS achieves up to 12.12x GDS's batch-read bandwidth and 30.69x its batch-write bandwidth (8- and 4-KiB requests, batch size 128), and reduces 4-KiB synchronous write latency by 84.1% with two threads. Its stream-ordered path sustains 5.49 GiB/s on a single stream, where GDS retains only 40.8% of its synchronous bandwidth. In LMCache, uGDS reduces median time-to-first-token (TTFT) by up to 62.7% and raises serving goodput by 2.63x. On AMD, uGDS achieves up to 1.19x hipFile's synchronous-write bandwidth.",
+        "identifiers": [
+          "SemanticScholar:58f3005d2a7d3729411afe3e93ee2437c6aeb59d"
+        ],
+        "semantic_scholar_id": "58f3005d2a7d3729411afe3e93ee2437c6aeb59d",
+        "canonical_id": "arXiv:2610.30868",
+        "arxiv_id": "2610.30868",
+        "authors": [
+          "Jin-Tiao Wei",
+          "Guan-Yi Chen",
+          "Qi Chen",
+          "Chu-Yu Zhang",
+          "Zhen-Hui Zhou",
+          "Chu-Tian Wang",
+          "Jian Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 11,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b0fc4dad1b74fb1d848ce87f3a63ef21ba8649ddfcb4d5358fdf89ae756d6951",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb6ded368e9d578b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2204.01691",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2204.01691",
+    "identity_tokens": [
+      "arXiv:2204.01691"
+    ],
+    "reason": "大規模言語モデルの高レベル指示とロボットのaffordance value functionを組み合わせて実世界robot planningを行う研究。最終適用先はroboticsで、LLM serving/runtime効率化を扱わない。",
+    "first_checked_at": "2026-10-04T21:42:14+00:00",
+    "last_checked_at": "2026-10-04T22:53:06+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md",
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "Do As I Can, Not As I Say: Grounding Language in Robotic Affordances"
+  },
+  "processed_at": "2026-10-04T22:53:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb6ded368e9d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

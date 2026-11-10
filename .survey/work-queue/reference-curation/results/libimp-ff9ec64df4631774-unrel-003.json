@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff9ec64df4631774-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.06011",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.06011",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2212.06011",
+      "SemanticScholar:6bb1cfbe5156936d3217274b9ffa8a443f4ee0b4",
+      "arXiv:2212.06011"
+    ],
+    "reason": "The paper gives a neural-ODE interpretation of transformer layers; it is theoretical analysis without a concrete runtime optimization.",
+    "first_checked_at": "2026-10-16T06:20:12+00:00",
+    "last_checked_at": "2026-10-16T06:20:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+    ],
+    "title": "A Neural ODE Interpretation of Transformer Layers"
+  },
+  "processed_at": "2026-10-16T06:20:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff9ec64df463",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

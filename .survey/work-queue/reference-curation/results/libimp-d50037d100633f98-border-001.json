@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d50037d100633f98-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.04993",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.04993",
+    "identity_tokens": [
+      "arXiv:2509.04993"
+    ],
+    "reason": "一次要旨では6Gネットワークの端末・エッジ間で、グローバルエージェントと複数サブエージェントがタスク分解、並列ツール呼出し、オフロードを行う。エッジ資源配置・並列実行は推論システムに隣接するが、評価は都市安全ガバナンスのエージェント計画・タスク実行であり、LLM内部のKV管理、モデル並列化、推論サーバのスケジューラを直接最適化する研究とは断定できないため微妙に分類する。",
+    "first_checked_at": "2026-10-25T13:47:40+00:00",
+    "last_checked_at": "2026-10-25T13:47:40+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "LLM Enabled Multi-Agent System for 6G Networks: Framework and Method of Dual-Loop Edge-Terminal Collaboration"
+  },
+  "processed_at": "2026-10-25T13:47:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d50037d10063",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

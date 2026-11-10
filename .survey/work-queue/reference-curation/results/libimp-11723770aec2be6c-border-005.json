@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11723770aec2be6c-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.10040",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.10040",
+    "identity_tokens": [
+      "arXiv:2606.10040"
+    ],
+    "reason": "一次本文の方法・実験・限界を確認。これはLLMではなくvideo-action diffusion型World-Action Modelで、低解像度未来・compact expert・非対称denoisingによりロボット制御の実時間を短縮する。LLM推論へ直接適用できる根拠はなく、関連はTransformer推論効率の隣接領域に限られる。",
+    "first_checked_at": "2026-10-05T21:28:39+00:00",
+    "last_checked_at": "2026-10-05T21:28:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient-WAM: A 1B-Parameter World-Action Model with Low-Cost Future Imagination"
+  },
+  "processed_at": "2026-10-05T21:28:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11723770aec2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

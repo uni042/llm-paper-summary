@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9cc47c8432fd983-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.25655",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.25655",
+    "identity_tokens": [
+      "arXiv:2609.25655"
+    ],
+    "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+    "first_checked_at": "2026-10-06T15:50:56+00:00",
+    "last_checked_at": "2026-10-06T15:50:56+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From Experts to Sub-experts: Fine-grained Parameter-Efficient Fine-Tuning for MoE LLMs"
+  },
+  "processed_at": "2026-10-06T15:50:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9cc47c8432f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,321 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7d9cbbdcd8fb6585-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7d9cbbdcd8fb",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.00888",
+    "arXiv:2610.00983",
+    "arXiv:2610.01108"
+  ],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9353f600652e70106fdbaed85394f1f4cb4b4398",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T05:50:08.635862+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.00888",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.00983",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.01108",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Match the Distribution, Not the Compute: Post-Training Multi-Token Prediction Heads",
+      "source_url": "https://arxiv.org/abs/2610.00888",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-token prediction (MTP) improves the throughput of autoregressive generation by enabling the language model to draft multiple next tokens per forward pass, while a verification step over draft tokens ensures that token distribution of the backbone is preserved. Every open MTP-family release (MiMo-7B, DeepSeek-V3, Qwen3) trains its heads jointly with the backbone over the full pretraining run of tens of trillions of tokens, thus setting the drafter quality at pretraining time. We ask whether a lightweight post-training pass on target-generated chain-of-thought is enough to reach the same expected throughput speedup on a frozen reasoning model, and study how a serving-time system built on such a checkpoint can be optimized. We present three findings. 1) On a frozen Qwen3-8B with $K{=}3$ chained MTP heads, we show that a post-training recipe with plain cross-entropy on $\\approx\\!2.5$B tokens reaches or exceeds the expected speedup of jointly trained MiMo-7B on math, coding and knowledge benchmarks. Our post-training recipe utilizes $10^3$-$10^4\\times$ less MTP-training tokens as compared with joint pre-training of MiMO-7B MTP baseline. 2) We propose a chain-aware relaxation of draft token verification rule that allows a bounded drift from backbone language model token distribution. We show that this relaxation lifts expected speedups by $+12$ to $+16\\%$ per benchmark while preserving task accuracy. 3) We propose an adaptive controller that dynamically chooses the number of MTP heads to be engaged at inference time and demonstrate recovery of upto $11$--$14\\%$ loss in speedup using fixed maximum MTP draft length.",
+      "identifiers": [
+        "SemanticScholar:2a572870af817f283bece43d35cf8fe21ed27701"
+      ],
+      "semantic_scholar_id": "2a572870af817f283bece43d35cf8fe21ed27701",
+      "canonical_id": "arXiv:2610.00888",
+      "arxiv_id": "2610.00888",
+      "authors": [
+        "Prachi Badarayani",
+        "Aidan Jay",
+        "Cheng-Hui Zhou",
+        "Dayquan Julienne",
+        "Yuan Gao",
+        "Tian-Wei Chen",
+        "George Zerveas",
+        "Ishmam Zabir",
+        "Xi-Ren Zhou",
+        "Chris Quirk",
+        "Xia Song"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Devil Is in the Reconstruction Loss Scale: Rethinking Optimization in LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2610.00983",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) methods typically use sequential quantization that partitions a pre-trained LLM into a series of units (e.g., transformer blocks), with one unit quantized at each stage. State-of-the-art PTQ methods are predominantly learning-based, optimizing auxiliary quantization parameters (e.g., scaling factors, rotation matrices, clipping thresholds, and adapters) via gradient descent to minimize a reconstruction loss. A common practice is to use mean squared error (MSE) as the reconstruction loss function, yet its induced optimization behavior remains largely unexplored. In this work, we take a holistic view of sequential quantization and systematically investigate how optimization evolves from the first quantization stage to the last, aiming for a deep understanding of optimization in learning-based PTQ schemes. Through extensive empirical studies spanning representative learning-based PTQ methods, LLM families, model scales, architectures, quantization settings and various tasks, we consistently uncover Optimization Imbalance: reconstruction loss magnitudes vary dramatically across stages, accompanied by highly uneven gradient magnitudes and parameter updates under MSE. We term the cross-stage range of loss magnitudes the reconstruction loss scale, and reveal that MSE translates the unexpectedly large reconstruction loss scale into highly uneven gradient magnitudes, which in turn lead to uneven optimization strength across quantization stages. This finding suggests a general principle for improving learning-based PTQ: optimization strength across stages should be decoupled from the reconstruction loss scale. Theoretically, we show that root mean squared error (RMSE) variants defined at the sample, channel, token, and element levels naturally realize this principle through implicit gradient normalization, outperforming MSE significantly as a drop-in replacement.",
+      "identifiers": [
+        "SemanticScholar:7f38969db72ab1dfb0156aa3902e05e0ab074a59"
+      ],
+      "semantic_scholar_id": "7f38969db72ab1dfb0156aa3902e05e0ab074a59",
+      "canonical_id": "arXiv:2610.00983",
+      "arxiv_id": "2610.00983",
+      "authors": [
+        "Chao Li",
+        "Shi-Geng Wang",
+        "An-Bang Yao"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines",
+      "source_url": "https://arxiv.org/abs/2610.01108",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-based speculative decoding (SD) drafts tokens by copying continuations from existing text, which suits coding agents that repeatedly reproduce code, logs, and earlier attempts. Yet existing methods fall short in agent pipelines: much of the reusable text is missing from their corpora or stored in a form that differs from what the agent emits, and their draft lengths ignore that accept length varies across agents and drifts over turns. We present AgSpec, a framework that supplies the corpus and draft-length policies that existing retrieval engines lack in coding-agent pipelines. AgSpec retrieves from session, workspace, and global corpora, retaining the ongoing session trajectory and indexing opened files in the agent's emission format. It bounds each agent's draft length with an offline-profiled cap and adapts the length online from verification feedback. On two repository-level multi-agent coding benchmarks, AgSpec outperforms five retrieval-based drafters and EAGLE-3 in most evaluated settings, raising generation throughput over autoregressive decoding up to 4.37$\\times$ at batch size 1 and 4.76$\\times$ at batch size 16. AgSpec also remains effective on benchmarks without a repository or a multi-agent pipeline, showing that its gains generalize to coding agents broadly.",
+      "identifiers": [
+        "SemanticScholar:90f533447ff0d2da22af3c25053eb0d95bf41d79"
+      ],
+      "semantic_scholar_id": "90f533447ff0d2da22af3c25053eb0d95bf41d79",
+      "canonical_id": "arXiv:2610.01108",
+      "arxiv_id": "2610.01108",
+      "authors": [
+        "Sumin Lee",
+        "Sukmin Cho",
+        "Suengjae Lim",
+        "Youngjin Kwon"
+      ],
+      "priority": 100,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 100,
+        "is_fresh": true,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.00888",
+      "identity_tokens": [
+        "id:SemanticScholar:2a572870af817f283bece43d35cf8fe21ed27701",
+        "id:arXiv:2610.00888",
+        "title:match the distribution not the compute posttraining multitoken prediction heads",
+        "url:https://arxiv.org/abs/2610.00888"
+      ],
+      "record": {
+        "title": "Match the Distribution, Not the Compute: Post-Training Multi-Token Prediction Heads",
+        "source_url": "https://arxiv.org/abs/2610.00888",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-token prediction (MTP) improves the throughput of autoregressive generation by enabling the language model to draft multiple next tokens per forward pass, while a verification step over draft tokens ensures that token distribution of the backbone is preserved. Every open MTP-family release (MiMo-7B, DeepSeek-V3, Qwen3) trains its heads jointly with the backbone over the full pretraining run of tens of trillions of tokens, thus setting the drafter quality at pretraining time. We ask whether a lightweight post-training pass on target-generated chain-of-thought is enough to reach the same expected throughput speedup on a frozen reasoning model, and study how a serving-time system built on such a checkpoint can be optimized. We present three findings. 1) On a frozen Qwen3-8B with $K{=}3$ chained MTP heads, we show that a post-training recipe with plain cross-entropy on $\\approx\\!2.5$B tokens reaches or exceeds the expected speedup of jointly trained MiMo-7B on math, coding and knowledge benchmarks. Our post-training recipe utilizes $10^3$-$10^4\\times$ less MTP-training tokens as compared with joint pre-training of MiMO-7B MTP baseline. 2) We propose a chain-aware relaxation of draft token verification rule that allows a bounded drift from backbone language model token distribution. We show that this relaxation lifts expected speedups by $+12$ to $+16\\%$ per benchmark while preserving task accuracy. 3) We propose an adaptive controller that dynamically chooses the number of MTP heads to be engaged at inference time and demonstrate recovery of upto $11$--$14\\%$ loss in speedup using fixed maximum MTP draft length.",
+        "identifiers": [
+          "SemanticScholar:2a572870af817f283bece43d35cf8fe21ed27701"
+        ],
+        "semantic_scholar_id": "2a572870af817f283bece43d35cf8fe21ed27701",
+        "canonical_id": "arXiv:2610.00888",
+        "arxiv_id": "2610.00888",
+        "authors": [
+          "Prachi Badarayani",
+          "Aidan Jay",
+          "Cheng-Hui Zhou",
+          "Dayquan Julienne",
+          "Yuan Gao",
+          "Tian-Wei Chen",
+          "George Zerveas",
+          "Ishmam Zabir",
+          "Xi-Ren Zhou",
+          "Chris Quirk",
+          "Xia Song"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 3,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00983",
+      "identity_tokens": [
+        "id:SemanticScholar:7f38969db72ab1dfb0156aa3902e05e0ab074a59",
+        "id:arXiv:2610.00983",
+        "title:the devil is in the reconstruction loss scale rethinking optimization in llm quantization",
+        "url:https://arxiv.org/abs/2610.00983"
+      ],
+      "record": {
+        "title": "The Devil Is in the Reconstruction Loss Scale: Rethinking Optimization in LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2610.00983",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) methods typically use sequential quantization that partitions a pre-trained LLM into a series of units (e.g., transformer blocks), with one unit quantized at each stage. State-of-the-art PTQ methods are predominantly learning-based, optimizing auxiliary quantization parameters (e.g., scaling factors, rotation matrices, clipping thresholds, and adapters) via gradient descent to minimize a reconstruction loss. A common practice is to use mean squared error (MSE) as the reconstruction loss function, yet its induced optimization behavior remains largely unexplored. In this work, we take a holistic view of sequential quantization and systematically investigate how optimization evolves from the first quantization stage to the last, aiming for a deep understanding of optimization in learning-based PTQ schemes. Through extensive empirical studies spanning representative learning-based PTQ methods, LLM families, model scales, architectures, quantization settings and various tasks, we consistently uncover Optimization Imbalance: reconstruction loss magnitudes vary dramatically across stages, accompanied by highly uneven gradient magnitudes and parameter updates under MSE. We term the cross-stage range of loss magnitudes the reconstruction loss scale, and reveal that MSE translates the unexpectedly large reconstruction loss scale into highly uneven gradient magnitudes, which in turn lead to uneven optimization strength across quantization stages. This finding suggests a general principle for improving learning-based PTQ: optimization strength across stages should be decoupled from the reconstruction loss scale. Theoretically, we show that root mean squared error (RMSE) variants defined at the sample, channel, token, and element levels naturally realize this principle through implicit gradient normalization, outperforming MSE significantly as a drop-in replacement.",
+        "identifiers": [
+          "SemanticScholar:7f38969db72ab1dfb0156aa3902e05e0ab074a59"
+        ],
+        "semantic_scholar_id": "7f38969db72ab1dfb0156aa3902e05e0ab074a59",
+        "canonical_id": "arXiv:2610.00983",
+        "arxiv_id": "2610.00983",
+        "authors": [
+          "Chao Li",
+          "Shi-Geng Wang",
+          "An-Bang Yao"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 3,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.01108",
+      "identity_tokens": [
+        "id:SemanticScholar:90f533447ff0d2da22af3c25053eb0d95bf41d79",
+        "id:arXiv:2610.01108",
+        "title:agspec pushing the limits of retrievalbased speculative decoding in coding agent pipelines",
+        "url:https://arxiv.org/abs/2610.01108"
+      ],
+      "record": {
+        "title": "AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines",
+        "source_url": "https://arxiv.org/abs/2610.01108",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-based speculative decoding (SD) drafts tokens by copying continuations from existing text, which suits coding agents that repeatedly reproduce code, logs, and earlier attempts. Yet existing methods fall short in agent pipelines: much of the reusable text is missing from their corpora or stored in a form that differs from what the agent emits, and their draft lengths ignore that accept length varies across agents and drifts over turns. We present AgSpec, a framework that supplies the corpus and draft-length policies that existing retrieval engines lack in coding-agent pipelines. AgSpec retrieves from session, workspace, and global corpora, retaining the ongoing session trajectory and indexing opened files in the agent's emission format. It bounds each agent's draft length with an offline-profiled cap and adapts the length online from verification feedback. On two repository-level multi-agent coding benchmarks, AgSpec outperforms five retrieval-based drafters and EAGLE-3 in most evaluated settings, raising generation throughput over autoregressive decoding up to 4.37$\\times$ at batch size 1 and 4.76$\\times$ at batch size 16. AgSpec also remains effective on benchmarks without a repository or a multi-agent pipeline, showing that its gains generalize to coding agents broadly.",
+        "identifiers": [
+          "SemanticScholar:90f533447ff0d2da22af3c25053eb0d95bf41d79"
+        ],
+        "semantic_scholar_id": "90f533447ff0d2da22af3c25053eb0d95bf41d79",
+        "canonical_id": "arXiv:2610.01108",
+        "arxiv_id": "2610.01108",
+        "authors": [
+          "Sumin Lee",
+          "Sukmin Cho",
+          "Suengjae Lim",
+          "Youngjin Kwon"
+        ],
+        "priority": 100,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 100,
+          "is_fresh": true,
+          "freshness_age_days": 3,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a6311356928a54d5cfc7fe78435eeec192d62e2501bcc5cf644fdff0b5aef1de",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

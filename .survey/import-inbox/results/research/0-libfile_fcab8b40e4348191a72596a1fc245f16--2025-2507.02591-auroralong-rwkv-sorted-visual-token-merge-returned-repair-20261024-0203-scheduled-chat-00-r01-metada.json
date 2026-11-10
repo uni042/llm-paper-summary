@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2c41a4bf32da93324bbea0d9bb576409659703a89253d7fad11e7b5802b3eb2e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/0-libfile_fcab8b40e4348191a72596a1fc245f16--2025-2507.02591-auroralong-rwkv-sorted-visual-token-merge-returned-repair-20261024-0203-scheduled-chat-00-r01-metadata-corrected-section-normalized-20261024-0345-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2507.02591",
+  "worker_completed_at": "2026-10-24T03:50:37+09:00",
+  "worker_run_key": "20261024-0345-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4862,
+    "body_paragraphs": 22,
+    "method_chars": 1532,
+    "method_paragraphs": 7,
+    "evaluation_chars": 1039,
+    "limitation_chars": 614,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2507.02591-auroralong-bringing-rnns-back-to-efficient-open-ended-video-understandin.md と 19 段落 / 4536文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T19:06:59+00:00"
+}

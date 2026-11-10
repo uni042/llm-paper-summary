@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2100-scheduled-chat-00/r03",
+  "reference_main_sha": "e0467d1c8e9b0a95a23d70d32f2216cf00b5219c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.29873",
+      "identity_tokens": [
+        "arXiv:2605.29873"
+      ],
+      "title": "Moment-KV: Momentum-Based Decode-Time KV Cache Compression for Long Generation",
+      "reason": "長文生成ではprefillの重要文脈を保持し、decode段階のKVのみ圧縮するMoment-KVを提案。各トークンの注意重みを時間減衰付きで累積するmomentum状態として扱い、短い局所的な注意ピークと持続的に参照される重要トークンを区別する。一次要旨では長文生成の忠実度を2.3〜3.2%改善しつつdecode遅延を維持すると報告。LLMのKVメモリ削減に直接関連。",
+      "source_url": "https://arxiv.org/abs/2605.29873",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 220,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.30574",
+      "identity_tokens": [
+        "arXiv:2605.30574"
+      ],
+      "title": "Probing the Prompt KV Cache: Where It Becomes Dispensable",
+      "reason": "promptのKVをdecode中にいつ・どの層で置換できるかを、層の境界とdecodeステップを変えるsplice介入で測定する。上層のprompt KVを中立的なuser内容を持つchat template scaffoldのKVへ置換すると精度が回復する一方、同じslotをゼロ化すると崩壊する。Qwen3・Gemma3・Llama3で再現したと一次要旨にある。圧縮可能性を構造と内容に分けるLLM KV管理の実証分析。",
+      "source_url": "https://arxiv.org/abs/2605.30574",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 221,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.11080",
+      "identity_tokens": [
+        "arXiv:2604.11080"
+      ],
+      "title": "ReSpinQuant: Efficient Layer-Wise LLM Quantization via Subspace Residual Rotation Approximation",
+      "reason": "回転ベースのLLM PTQで、global rotationは重みへ融合できるが層別表現力が不足し、layer-wise rotationは精度が良い一方オンライン回転が推論負荷になる問題を解く。ReSpinQuantは残差部分空間の回転近似とbasis整合で層別変換をオフライン融合し、W4A4/W3A3で層別方式の精度に近づけながら推論追加費用を抑える。LLM低ビット推論に直接関係。",
+      "source_url": "https://arxiv.org/abs/2604.11080",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 222,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.02132",
+      "identity_tokens": [
+        "arXiv:2511.02132"
+      ],
+      "title": "Optimizing Attention on GPUs by Exploiting GPU Architectural NUMA Effects",
+      "reason": "MI300Xなど複数chipletを持つGPUでは、attention headとメモリの配置がNUMA帯域・遅延に影響する。Swizzled Head-first MappingはheadをGPU NUMA domainへ対応付けてchiplet内のL2再利用を高める。一次要旨では従来のattention scheduling比で最大50%の性能向上とL2 hit率80〜97%を報告。MHAカーネルとGPUメモリ階層の推論最適化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2511.02132",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 230,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.12208",
+      "identity_tokens": [
+        "arXiv:2603.12208"
+      ],
+      "title": "ForensicZip: More Tokens are Better but Not Necessary in Forensic Vision-Language Models",
+      "reason": "偽造検出用MLLMで、通常の意味的に目立つ領域だけを残す視覚トークン削減が、背景の高周波異常や時間的不連続を落とす問題に着目。Birth-Death最適輸送と高周波priorを組み合わせて偽造証拠を残すtraining-free圧縮を提案。一次要旨では10%トークン保持で2.97倍高速化・FLOPs90%以上削減。領域特化だがVLM推論時トークン圧縮に明確な寄与。",
+      "source_url": "https://arxiv.org/abs/2603.12208",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 233,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.06564",
+      "identity_tokens": [
+        "arXiv:2608.06564"
+      ],
+      "title": "Which Decisions Low-Bit Quantization Breaks, and How to Predict Them",
+      "reason": "16言語モデル・8系列の2/3/4ビット量子化で、tool callや選択肢のfirst-token決定marginがm′≈cm+bで縮小し、特定の決定が反転する傾向を測定。BFCL・GSM系で量子化方式ごとの差も評価する。低ビットLLM配備の品質限界を理解する上で有用だが、圧縮カーネルやメモリ・遅延を改善する新方式そのものではないため、関連性は境界的。",
+      "source_url": "https://arxiv.org/abs/2608.06564",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 234,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.18846",
+      "identity_tokens": [
+        "arXiv:2602.18846"
+      ],
+      "title": "DUET-VLM: Dual stage Unified Efficient Token reduction for VLM Training and Inference",
+      "reason": "DUET-VLMはvision encoder出力の冗長性を削る第1段と、言語backbone各層でテキスト条件付きに視覚トークンを削る第2段を組み合わせる。LLaVA-1.5-7Bで67%削減時に基準精度99%以上、89%削減時にも97%以上を維持したと一次要旨にある。Video-LLaVA-7Bにも適用し、学習・推論の両方でVLM計算量を削減する直接的な方式。",
+      "source_url": "https://arxiv.org/abs/2602.18846",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 235,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.16423",
+      "identity_tokens": [
+        "arXiv:2605.16423"
+      ],
+      "title": "Nonlinear Bipolar Compensation: Handling Outliers in Post-Training Quantization",
+      "reason": "量子化後に軽量な補償層を付加する方式で、線形補償の外れ値感度を非線形補償とBipolar Logarithmic Transformationで抑える。量子化入力と誤差を変換空間へ写し、その空間で線形補償を実施する。一次要旨は各種モデルで効率・頑健性を主張するが、LLM固有のモデル・推論速度・メモリ測定は明示されず、汎用PTQとして境界的。",
+      "source_url": "https://arxiv.org/abs/2605.16423",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 236,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.13938",
+      "identity_tokens": [
+        "arXiv:2405.13938"
+      ],
+      "title": "eXmY: A Data Type and Technique for Arbitrary Bit Precision Quantization",
+      "reason": "3/5/6/7/9ビットなど任意ビット幅の指数・仮数構成を許すeXmYデータ形式を提案。非2冪幅でもbyte-addressableな符号化とSIMD・GPU/TPU vector処理を実装し、重み・活性・optimizer状態等の保存・転送を圧縮する。一次要旨は製品利用も述べるが、特定LLMのdecodeやKVキャッシュ評価は確認できず、一般的な量子化基盤技術として境界的。",
+      "source_url": "https://arxiv.org/abs/2405.13938",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 237,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00815",
+      "identity_tokens": [
+        "arXiv:2610.00815"
+      ],
+      "title": "SafeDepth: Safety-Aware Token-Level Adaptive Computation",
+      "reason": "token・層・prefill/decode段階に応じてTransformerの一部層をskipする計算節約で、安全性が損なわれる問題を測定する。SafeDepthはrouterとskip-path adapterを凍結backboneに追加し、危険応答に関わる計算を残しつつ他を省略する。Llama-3-8B-Instructで全層推論より計算量を減らし、複数の安全性ベンチマークでFlexiDepthより改善と一次要旨にある。推論時の条件付き計算に直接関連。",
+      "source_url": "https://arxiv.org/abs/2610.00815",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 240,
+      "origin": "discovery_worklist_abstract"
+    }
+  ]
+}

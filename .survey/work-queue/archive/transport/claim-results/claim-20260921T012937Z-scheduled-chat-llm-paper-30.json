@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260921T012937Z-scheduled-chat-llm-paper-30",
+  "worker_id": "scheduled-chat-llm-paper-30",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-b47f649340a3fc18",
+      "claim_id": "claim-a412546d473a63a041f2ba8d",
+      "worker_id": "scheduled-chat-llm-paper-30",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-a412546d473a63a041f2ba8d",
+      "claimed_at": "2026-09-21T01:30:23+00:00",
+      "expires_at": "2026-09-21T03:00:23+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-b47f649340a3fc18"
+      ],
+      "job": {
+        "job_id": "job-research-b47f649340a3fc18",
+        "type": "research",
+        "parent_job_id": "job-1849ac829790a8ce",
+        "priority": 100,
+        "canonical_id": "arXiv:2608.30386",
+        "arxiv_id": "2608.30386",
+        "doi": null,
+        "openreview_id": null,
+        "identifiers": [],
+        "title": "DASC: Decay-Aware State Compression for Hybrid Linear-Attention Serving",
+        "source_url": "https://www.semanticscholar.org/paper/70c8d0d5c06d8f56f6d03ad78e489e4a38a2a1a2",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2608.30386-dasc-decay-aware-state-compression-for-hybrid-linear-attention-serving.md",
+        "selection_reason": "KDA/GDNのretention horizonを利用してpersistent recurrent-state checkpointをragged圧縮しTP rank間もbalance。2.63倍圧縮でmean TTFT 42.6%削減、input throughput 68.4%向上。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-20T22:17:31+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_root": ".survey/work-queue/records/chat-record-c",
+      "record_slot_paths": {
+        "metadata": ".survey/work-queue/records/chat-record-c/metadata.json",
+        "problem_method": ".survey/work-queue/records/chat-record-c/problem_method.json",
+        "evaluation": ".survey/work-queue/records/chat-record-c/evaluation.json",
+        "results": ".survey/work-queue/records/chat-record-c/results.json",
+        "positioning": ".survey/work-queue/records/chat-record-c/positioning.json"
+      }
+    }
+  ],
+  "processed_at": "2026-09-21T01:30:23+00:00",
+  "checkpoint_released": 0
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "fb2ae6396bf2898c5ccc94eadd44c1b2e6f9bbcfac6054d0f23cd8cb7e9dfcef",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-094662ea8556--libfile_a7729c606868819199ca4d03ff09d0bd--2025-2504.15302-ragdoll-single-gpu-rag-offloading-research-20261023-1430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2504.15302",
+  "worker_completed_at": "2026-10-23T14:33:55+09:00",
+  "worker_run_key": "20261023-1430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7868,
+    "body_paragraphs": 46,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 193,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 193 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 193 < 500"
+  ],
+  "processed_at": "2026-10-23T17:21:11+00:00"
+}

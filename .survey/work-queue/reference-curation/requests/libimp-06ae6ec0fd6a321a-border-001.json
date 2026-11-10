@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-06ae6ec0fd6a321a-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.18653/v1/D19-1633",
+  "reason": "EMNLP-IJCNLP 2019の一次要旨は、機械翻訳用の条件付きマスク言語モデルで全目標語を並列予測し、信頼度の低い語を反復的に再マスク・再生成する復号方式を提案する。固定反復回数で非自己回帰翻訳のBLEUを改善し逐次Transformerより高速とするため、並列復号の基礎研究として推論計算と関連する。ただし対象は翻訳用エンコーダ・デコーダであり、現代の自己回帰LLMサービング、KVキャッシュ、推論基盤の実測改善を直接評価していない。LLM推論サーベイの中心対象と断定せずborderlineとする。",
+  "title": "Mask-Predict: Parallel Decoding of Conditional Masked Language Models",
+  "identity_tokens": [
+    "DOI:10.18653/v1/D19-1633",
+    "arXiv:1904.09324"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-06ae6ec0fd6a",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

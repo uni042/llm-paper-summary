@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f9ec5aca71878f5-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.07491",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.07491",
+    "identity_tokens": [
+      "arXiv:2504.07491"
+    ],
+    "reason": "2.8B active parameterのMoE VLM、128K context、MoonViT、long-thinking variantを提示するmodel technical report。効率的VLMを標榜するが主要貢献・評価はmultimodal reasoning/agent/vision-language能力で、推論runtime・serving・memory最適化のsystem方式を提案しない。",
+    "first_checked_at": "2026-10-05T16:34:20+00:00",
+    "last_checked_at": "2026-10-05T16:34:20+00:00",
+    "linked_from": [],
+    "title": "Kimi-VL Technical Report"
+  },
+  "processed_at": "2026-10-05T16:34:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f9ec5aca718",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

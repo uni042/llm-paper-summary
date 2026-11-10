@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e79498a06740e47-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.38806",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.38806",
+    "identity_tokens": [
+      "arXiv:2609.38806"
+    ],
+    "reason": "Potentially relevant alternative inference interface, but demonstrated contribution is task quality on constrained structured problems and the authors explicitly do not claim a speed/cost gain. Keep borderline rather than infer efficiency from the inference-time search method.",
+    "first_checked_at": "2026-10-05T04:21:07+00:00",
+    "last_checked_at": "2026-10-05T04:21:07+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+      "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+    ],
+    "title": "Blackboard Intelligence Can Surpass Autoregressive on Globally Constrained Problems"
+  },
+  "processed_at": "2026-10-05T04:21:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e79498a0674",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

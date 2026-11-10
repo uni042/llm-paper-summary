@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce0d2c2986c7a11e-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.21051",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.21051",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2509.21051",
+      "SemanticScholar:9fabaa4bc84991bbdc2cde5c5a3cbefa8f5e7967",
+      "arXiv:2509.21051"
+    ],
+    "reason": "ManyIFEval and StyleMBPP are benchmarks and regression models for instruction-following capability evaluation; evaluation economy is not an LLM inference-system contribution.",
+    "first_checked_at": "2026-10-14T12:00:32+00:00",
+    "last_checked_at": "2026-10-14T15:09:16+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "When Instructions Multiply: Measuring and Estimating LLM Capabilities of Multiple Instructions Following"
+  },
+  "processed_at": "2026-10-14T15:09:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce0d2c2986c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

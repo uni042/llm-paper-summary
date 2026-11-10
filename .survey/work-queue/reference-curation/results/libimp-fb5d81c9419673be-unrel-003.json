@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fb5d81c9419673be-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.07982",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.07982",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2506.07982",
+      "arXiv:2506.07982"
+    ],
+    "reason": "τ²-Bench is a benchmark for evaluating conversational agents that coordinate with users in shared tool environments. Its primary contribution and experiments concern task/environment design and agent reasoning/communication performance; the paper does not propose or evaluate LLM inference, serving, decoding, or inference-time compression optimizations. It is outside this inference-efficiency collection.",
+    "first_checked_at": "2026-09-29T23:39:46+00:00",
+    "last_checked_at": "2026-10-03T14:28:53+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json",
+      "workers/discovery-02/ready/20260927-u-wave11/manifest.json#candidate[6]"
+    ],
+    "title": "τ²-Bench: Evaluating Conversational Agents in a Dual-Control Environment"
+  },
+  "processed_at": "2026-10-03T14:28:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb5d81c94196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

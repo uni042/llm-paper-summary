@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4777fac9f6d4f104-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.03533",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.03533",
+    "identity_tokens": [
+      "arXiv:2310.03533"
+    ],
+    "reason": "LLMをcoding、design、requirements、repair、refactoring、documentation等へ適用するsoftware engineering survey。効率的LLM-based SEへの言及はあるが、推論runtime・serving最適化の新規方式・実装評価を提案しない。",
+    "first_checked_at": "2026-10-05T00:50:54+00:00",
+    "last_checked_at": "2026-10-05T16:47:49+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2410.17375-amusd-asynchronous-multi-device-speculative-decoding-for-llm-acceleratio.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
+      "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md"
+    ],
+    "title": "Large Language Models for Software Engineering: Survey and Open Problems"
+  },
+  "processed_at": "2026-10-05T16:47:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4777fac9f6d4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

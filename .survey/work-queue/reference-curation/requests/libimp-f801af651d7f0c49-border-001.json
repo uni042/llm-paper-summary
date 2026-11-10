@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f801af651d7f0c49-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.24328",
+  "reason": "CPU/GPU initiated RDMAを通信library非依存でoperation単位に追跡するSigmaTraceを提案。一次要旨はNCCL 128GPUで1.3% overhead、RCCL 1024GPUで2%未満、MoE inferenceでnode間traffic 2.13倍の偏りを検出したと報告。MoE推論通信の分析に有用だが主要成果は汎用RDMA profilingでLLM固有のschedulerやthroughput改善を提示していないためborderline。",
+  "title": "SigmaTrace: Library-Agnostic Observability for CPU/GPU-Initiated RDMA Communication",
+  "identity_tokens": [
+    "id:arXiv:2610.24328",
+    "id:DOI:10.48550/arXiv.2610.24328"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f801af651d7f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-bf41ff84f11d54fa-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:1801.10198",
+  "reason": "decoder生成でlocal attentionとstride-3 convolutionによるmemory-compressed attentionを用い、長い入力（最大約11,000 tokens）で要約品質を評価する。ただし対象は2018年のWikipedia summarizationで、LLM servingの遅延・メモリ・スループット評価はなく、現行LLMへの転用可能性は本文から確定しないためborderline。",
+  "title": "Generating Wikipedia by Summarizing Long Sequences",
+  "identity_tokens": [
+    "arXiv:1801.10198"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+    "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bf41ff84f11d",
+  "source_precheck_request_id": null
+}

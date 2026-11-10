@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8393276a3467f622-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icassp55912.2026.11464073",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icassp55912.2026.11464073",
+    "identity_tokens": [
+      "DOI:10.1109/icassp55912.2026.11464073",
+      "SemanticScholar:f46bd143c3a92921b20aaf3dffdf8638a68d9ed4"
+    ],
+    "reason": "IEEE Xplore returned a three-line shell without abstract. LLM compression is on-topic by title, but method/evidence are unavailable. Failed publisher retrieval: https://ieeexplore.ieee.org/document/11464073 returned three-line shell without abstract; conference listing had metadata only.",
+    "first_checked_at": "2026-10-14T09:45:48+00:00",
+    "last_checked_at": "2026-10-14T09:45:48+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+      "papers/inference/99-other-inference-systems/2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md",
+      "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Dynamic Fusion for Large Language Models Compression"
+  },
+  "processed_at": "2026-10-14T09:45:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8393276a3467",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

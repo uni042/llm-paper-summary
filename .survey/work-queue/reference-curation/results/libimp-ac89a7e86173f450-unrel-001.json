@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ac89a7e86173f450-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2023.findings-acl.426",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2023.findings-acl.426",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2023.findings-acl.426"
+    ],
+    "reason": "ACL Anthologyの一次要旨は圧縮器を用いる低資源text classification methodを扱う。LLM inference/servingの効率化ではない。",
+    "first_checked_at": "2026-10-05T01:47:38+00:00",
+    "last_checked_at": "2026-10-05T01:47:38+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+    ],
+    "title": "\"Low-Resource\" Text Classification: A Parameter-Free Classification Method with Compressors"
+  },
+  "processed_at": "2026-10-05T01:47:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ac89a7e86173",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

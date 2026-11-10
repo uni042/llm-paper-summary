@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e14185422669d40a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.02110",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.02110",
+    "identity_tokens": [
+      "arXiv:2608.02110"
+    ],
+    "reason": "IACM-RL focuses on tool-intent robustness and training trajectories for agent API execution, not model-serving efficiency.",
+    "first_checked_at": "2026-10-05T09:13:50+00:00",
+    "last_checked_at": "2026-10-05T09:13:50+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "IACM-RL: Intent-Aware Context Management and Reinforcement Learning for Complex Tool Invocation under Dynamic Intent Fluctuations"
+  },
+  "processed_at": "2026-10-05T09:13:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e14185422669",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

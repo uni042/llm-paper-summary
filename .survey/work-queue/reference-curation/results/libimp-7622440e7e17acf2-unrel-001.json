@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7622440e7e17acf2-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1912.01703",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1912.01703",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1912.01703",
+      "arXiv:1912.01703"
+    ],
+    "reason": "PyTorch全体の命令型・Pythonic API、autograd、runtime、GPU対応を設計・評価する汎用機械学習フレームワーク論文で、LLM/Transformer推論のサービング、KVキャッシュ、推論カーネル、推論向け圧縮を最終適用先としない。",
+    "first_checked_at": "2026-10-04T14:32:42+00:00",
+    "last_checked_at": "2026-10-04T14:32:42+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md"
+    ],
+    "title": "PyTorch: An Imperative Style, High-Performance Deep Learning Library"
+  },
+  "processed_at": "2026-10-04T14:32:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7622440e7e17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

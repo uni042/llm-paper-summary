@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-7f37dbbf1fcc0bcb540d428a",
+  "job_id": "job-research-1ae2d7d06d592402",
+  "claim_id": "claim-7f37dbbf1fcc0bcb540d428a",
+  "worker_id": "scheduled-chat-30",
+  "status": "blocked",
+  "reason": "Primary full text could not be safely retrieved in this run. The authoritative IEEE Xplore record for DOI:10.1109/TPDS.2026.3729988 exposes the abstract and bibliographic metadata, but manuscript-body access failed in this environment. The authors' official ECNU page confirms the TPDS paper and links the official icloud-ecnu/FairCache source repository; that repository provides the implementation and system overview but not the complete paper text. No five-slot research record was reconstructed from the abstract, README, or third-party copies.",
+  "blocked_at": "2026-09-23T08:35:00Z",
+  "retrieval_evidence": [
+    "IEEE Xplore document 11676094 / DOI 10.1109/TPDS.2026.3729988 exposed abstract and publication metadata, while full manuscript retrieval was unavailable in this environment.",
+    "Fei Xu's official ECNU publication page confirms FairCache as an IEEE TPDS 2026 paper and links the authors' official source-code repository.",
+    "The official icloud-ecnu/FairCache repository exposes implementation code and a README overview, but no complete primary manuscript was available there."
+  ]
+}

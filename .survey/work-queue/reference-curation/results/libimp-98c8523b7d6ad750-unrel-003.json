@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98c8523b7d6ad750-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.14648",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.14648",
+    "identity_tokens": [
+      "arXiv:2608.14648"
+    ],
+    "reason": "In this study, we revisit three widely used techniques in vector search and utilize them to optimize vector embedding indexing through clustering: dimensionality reduction, quantization, and dimension pruning. We propose an indexing pipeline in which these techniques are applied before clustering, and we focus on how they affect storage footprint, clustering time, and the quality of the resulting centroids for vector search tasks. Our results reveal that using full-precision vectors for clustering is excessive, as even 1-bit codes can achieve near-optimal clustering quality (within 1% of ideal) while reducing storage requirements by 60x and delivering attractive performance gains (Figure 1). We open-source our implementations at https://github.com/cwida/SuperKMeans.",
+    "first_checked_at": "2026-10-05T09:47:43+00:00",
+    "last_checked_at": "2026-10-05T09:47:43+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+    ],
+    "title": "Stop Indexing at Full Precision: Revisiting Clustering for Vector Embeddings"
+  },
+  "processed_at": "2026-10-05T09:47:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98c8523b7d6a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

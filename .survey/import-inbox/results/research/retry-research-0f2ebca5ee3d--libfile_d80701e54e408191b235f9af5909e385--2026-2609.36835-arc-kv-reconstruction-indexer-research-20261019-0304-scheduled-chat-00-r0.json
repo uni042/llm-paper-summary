@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "ce424ab8dd7c0c3488bb84d2017b2a92ffb9d1bffe36e56103a16b0b21edf569",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0f2ebca5ee3d--libfile_d80701e54e408191b235f9af5909e385--2026-2609.36835-arc-kv-reconstruction-indexer-research-20261019-0304-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2609.36835",
+  "worker_completed_at": "2026-10-19T03:04:00+09:00",
+  "worker_run_key": "20261019-0304-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2772,
+    "body_paragraphs": 14,
+    "method_chars": 1233,
+    "method_paragraphs": 7,
+    "evaluation_chars": 411,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 411 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 411 < 500"
+  ],
+  "processed_at": "2026-10-19T15:12:30+00:00"
+}

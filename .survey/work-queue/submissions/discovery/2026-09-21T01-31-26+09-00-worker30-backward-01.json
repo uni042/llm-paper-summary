@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "operation": "submit_discovery_round",
+  "precheck_result_path": ".survey/work-queue/discovery-precheck/results/20260921T0133JST-worker30-backward-01.json",
+  "precheck_receipt": "sha256:76a1fb7f9def15e1e997a1771a9f919c2608a6711e0cfb7a6f197964c4af1139",
+  "candidates": [],
+  "rejected_candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-21T01:31:26+09:00-worker30",
+    "round": "backward-citation-01",
+    "axis": "backward citation graph across structured repository references",
+    "query_summary": "正規schema-v3 precheckで構造化referencesをページ送りし、既収録・既候補・既却下を除外した未評価集合を取得。今回の軽量評価では新規投入を見送り、引用山の進捗を耐久保存する。",
+    "candidate_count": 0,
+    "duplicate_filtered_count": 21,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "forward citationへ進む",
+    "empty_round_reason": "no_candidate_selected_after_quality_screen"
+  }
+}

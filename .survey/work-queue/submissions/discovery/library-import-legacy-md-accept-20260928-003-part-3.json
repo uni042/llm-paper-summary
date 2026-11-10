@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory",
+      "source_url": "https://arxiv.org/abs/2504.19413",
+      "year": 2025,
+      "published": "2025-04-28",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable prowess in generating contextually coherent responses, yet their fixed context windows pose fundamental challenges for maintaining consistency over prolonged multi-session dialogues. We introduce Mem0, a scalable memory-centric architecture that addresses this issue by dynamically extracting, consolidating, and retrieving salient information from ongoing conversations. Building on this foundation, we further propose an enhanced variant that leverages graph-based memory representations to capture complex relational structures among conversational elements. Through comprehensive evaluations on LOCOMO benchmark, we systematically compare our approaches against six baseline categories: (i) established memory-augmented systems, (ii) retrieval-augmented generation (RAG) with varying chunk sizes and k-values, (iii) a full-context approach that processes the entire conversation history, (iv) an open-source memory solution, (v) a proprietary model system, and (vi) a dedicated memory management platform. Empirical results show that our methods consistently outperform all existing memory systems across four question categories: single-hop, temporal, multi-hop, and open-domain. Notably, Mem0 achieves 26% relative improvements in the LLM-as-a-Judge metric over OpenAI, while Mem0 with graph memory achieves around 2% higher overall score than the base configuration. Beyond accuracy gains, we also markedly reduce computational overhead compared to full-context method. In particular, Mem0 attains a 91% lower p95 latency and saves more than 90% token cost, offering a compelling balance between advanced reasoning capabilities and practical deployment constraints. Our findings highlight critical role of structured, persistent memory mechanisms for long-term conversational coherence, paving the way for more reliable and efficient LLM-driven AI agents.",
+      "canonical_id": "arXiv:2504.19413",
+      "arxiv_id": "2504.19413",
+      "doi": "10.48550/arXiv.2504.19413",
+      "authors": [
+        "P. Chhikara",
+        "Dev Khant",
+        "Saket Aryan",
+        "Taranjeet Singh",
+        "Deshraj Yadav"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2411.17651",
+      "year": 2024,
+      "published": "2024-11-26",
+      "abstract": "Efficiently serving Large Language Models (LLMs) requires selecting an optimal parallel execution plan, balancing computation, memory, and communication overhead. However, determining the best strategy is challenging due to varying parallelism techniques (data, pipeline, tensor) and workload characteristics (e.g., compute-intensive tasks with long prompts vs. memory-intensive tasks with long generation). We propose APEX, an LLM serving system simulator that efficiently identifies optimal parallel execution plans by considering key factors of LLM serving systems, such as memory usage, batching behavior, etc. APEX performs dynamism-aware simulation to model iteration-level batching, and leverages LLMs' repetitive structure to reduce design space, scaling efficiently to trillion-scale models. APEX abstracts the key components of LLM serving systems, including the model, batching module, quantization formats, and device clusters, enabling the simulator to be general and extensible. Simulating on a CPU, APEX evaluates execution plans for various device clusters, covering diverse LLMs and workloads. APEX finds plans up to 3.37x faster than heuristics, and also plans that reduce energy consumption by up to 45% compared to latency-optimal plans. APEX performs comprehensive evaluations, reporting key system metrics like time per output token and time to first token, which can help service providers meet SLOs. APEX identifies an optimal plan within 15 minutes on a CPU, making it 71x faster and 1234x more cost-effective than cloud-based GPU deployment. APEX can be accessed at https://github.com/microsoft/apex_plus",
+      "canonical_id": "arXiv:2411.17651",
+      "arxiv_id": "2411.17651",
+      "doi": "10.1016/j.jpdc.2026.105350",
+      "authors": [
+        "Yi-Chien Lin",
+        "Woosuk Kwon",
+        "Ronald Pineda",
+        "Fanny Nina Paravecino"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "Keep the Cost Down: A Review on Methods to Optimize LLM' s KV-Cache Consumption",
+      "source_url": "https://arxiv.org/abs/2407.18003",
+      "year": 2024,
+      "published": "2024-07-25",
+      "abstract": "Large Language Models (LLMs), epitomized by ChatGPT's release in late 2022, have revolutionized various industries with their advanced language comprehension. However, their efficiency is challenged by the Transformer architecture's struggle with handling long texts. KV Cache has emerged as a pivotal solution to this issue, converting the time complexity of token generation from quadratic to linear, albeit with increased GPU memory overhead proportional to conversation length. With the development of the LLM community and academia, various KV Cache compression methods have been proposed. In this review, we dissect the various properties of KV Cache and elaborate on various methods currently used to optimize the KV Cache space usage of LLMs. These methods span the pre-training phase, deployment phase, and inference phase, and we summarize the commonalities and differences among these methods. Additionally, we list some metrics for evaluating the long-text capabilities of large language models, from both efficiency and capability perspectives. Our review thus sheds light on the evolving landscape of LLM optimization, offering insights into future advancements in this dynamic field. Links to the papers mentioned in this review can be found in our Github Repo https://github.com/zcli-charlie/Awesome-KV-Cache.",
+      "canonical_id": "arXiv:2407.18003",
+      "arxiv_id": "2407.18003",
+      "doi": "10.48550/arXiv.2407.18003",
+      "authors": [
+        "Luo-He Shi",
+        "Hongyi Zhang",
+        "Yao Yao",
+        "Z. Li",
+        "Hai Zhao"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2310.04564",
+      "year": 2023,
+      "published": "2023-10-06",
+      "abstract": "Large Language Models (LLMs) with billions of parameters have drastically transformed AI applications. However, their demanding computation during inference has raised significant challenges for deployment on resource-constrained devices. Despite recent trends favoring alternative activation functions such as GELU or SiLU, known for increased computation, this study strongly advocates for reinstating ReLU activation in LLMs. We demonstrate that using the ReLU activation function has a negligible impact on convergence and performance while significantly reducing computation and weight transfer. This reduction is particularly valuable during the memory-bound inference step, where efficiency is paramount. Exploring sparsity patterns in ReLU-based LLMs, we unveil the reutilization of activated neurons for generating new tokens and leveraging these insights, we propose practical strategies to substantially reduce LLM inference computation up to three times, using ReLU activations with minimal performance trade-offs.",
+      "canonical_id": "arXiv:2310.04564",
+      "arxiv_id": "2310.04564",
+      "doi": "10.48550/arXiv.2310.04564",
+      "authors": [
+        "Iman Mirzadeh",
+        "Keivan Alizadeh-Vahid",
+        "Sachin Mehta",
+        "C. C. D. Mundo",
+        "Oncel Tuzel",
+        "Golnoosh Samei",
+        "Mohammad Rastegari",
+        "Mehrdad Farajtabar"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    },
+    {
+      "title": "Marconi: Prefix Caching for the Era of Hybrid LLMs",
+      "source_url": "https://arxiv.org/abs/2411.19379",
+      "year": 2024,
+      "published": "2024-11-28",
+      "abstract": "Hybrid models that combine the language modeling capabilities of Attention layers with the efficiency of Recurrent layers (e.g., State Space Models) have gained traction in practically supporting long contexts in Large Language Model serving. Yet, the unique properties of these models complicate the usage of complementary efficiency optimizations such as prefix caching that skip redundant computations across requests. Most notably, their use of in-place state updates for recurrent layers precludes rolling back cache entries for partial sequence overlaps, and instead mandates only exact-match cache hits; the effect is a deluge of (large) cache entries per sequence, most of which yield minimal reuse opportunities. We present Marconi, the first system that supports efficient prefix caching with Hybrid LLMs. Key to Marconi are its novel admission and eviction policies that more judiciously assess potential cache entries based not only on recency, but also on (1) forecasts of their reuse likelihood across a taxonomy of different hit scenarios, and (2) the compute savings that hits deliver relative to memory footprints. Across diverse workloads and Hybrid models, Marconi achieves up to 34.4$\\times$ higher token hit rates (71.1% or 617 ms lower TTFT) compared to state-of-the-art prefix caching systems.",
+      "canonical_id": "arXiv:2411.19379",
+      "arxiv_id": "2411.19379",
+      "doi": "10.48550/arXiv.2411.19379",
+      "authors": [
+        "Rui Pan",
+        "Zhuang Wang",
+        "Zhen Jia",
+        "Can Karakus",
+        "L. Zancato",
+        "Tri Dao",
+        "Ravi Netravali",
+        "Yida Wang"
+      ],
+      "reason": "Libraryで一次資料確認済みのaccept成果。現行スコープでも推論システムまたは推論時の計算・メモリ効率へ直接寄与すると再確認した。",
+      "priority": 50
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20260928-legacy-md",
+    "round": "library-import-legacy-md-accept-20260928-003",
+    "axis": "explicit-library-legacy-md-accept",
+    "trigger": "explicit_user_request",
+    "query_summary": "旧Library Discovery MDから現行スコープで有効なaccept成果を正規Research候補へ取り込む。",
+    "candidate_count": 33,
+    "round_submission_index": 3,
+    "round_submission_count": 7
+  },
+  "discovery_precheck": {
+    "request_id": "library-import-legacy-md-accept-20260928-003",
+    "result_path": ".survey/work-queue/discovery-precheck/results/library-import-legacy-md-accept-20260928-003.json",
+    "receipt": "sha256:9b017d7a2639a46cf84be70b8e680a69d91ce55685a778e209d14bc3093b2dd8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20260928-legacy-md",
+    "summary": "Library上の旧Discovery成果を現行スコープへ再仕分けし、有効なaccept成果をGitHubへ反映する。"
+  }
+}

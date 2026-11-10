@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7d8d7c12b88ae38-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2202.04200",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2202.04200",
+    "identity_tokens": [
+      "arXiv:2202.04200"
+    ],
+    "reason": "parallel/iterative image-token generation accelerates image synthesis, but the final application is image generation rather than LLM inference.",
+    "first_checked_at": "2026-10-04T17:54:51+00:00",
+    "last_checked_at": "2026-10-04T17:54:51+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md"
+    ],
+    "title": "MaskGIT: Masked Generative Image Transformer"
+  },
+  "processed_at": "2026-10-04T17:54:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7d8d7c12b88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

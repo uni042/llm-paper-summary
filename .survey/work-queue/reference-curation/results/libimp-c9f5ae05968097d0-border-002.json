@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9f5ae05968097d0-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.suscom.2023.100857",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.suscom.2023.100857",
+    "identity_tokens": [
+      "DOI:10.1016/j.suscom.2023.100857"
+    ],
+    "reason": "一次要旨から一般DL inferenceのenergy trendを扱う点は分かるが本文・評価条件を取得できず、LLM固有かも確認できないため推測を避けborderline。",
+    "first_checked_at": "2026-10-05T01:36:00+00:00",
+    "last_checked_at": "2026-10-05T01:36:00+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.12241-rapid-power-aware-dynamic-reallocation.md"
+    ],
+    "title": "Compute and Energy Consumption Trends in Deep Learning Inference"
+  },
+  "processed_at": "2026-10-05T01:36:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9f5ae059680",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

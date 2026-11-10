@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-efcdfebd54672739-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.30147",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.30147",
+    "identity_tokens": [
+      "arXiv:2606.30147"
+    ],
+    "reason": "Primary abstract reviewed: Recent progress in Text-to-Image generation benefits from large-scale Text-Image pairs. However, the scarcity of Text-LiDAR pairs often causes over-smoothed scenes and limited controllability. In this paper, we rethink the limitations of Text-LiDAR generation task, focusing on alleviating insufficient training priors and constructing controllable Text-LiDAR data. We propose a \\textbf{T}ext-\\textbf{to}-\\textbf{L}iDAR \\textbf{D}iffusion \\textbf{M}odel for LiDAR scene generation [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+    "first_checked_at": "2026-10-05T11:37:34+00:00",
+    "last_checked_at": "2026-10-05T11:37:34+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "T2LDM++: A Self-Conditioned Representation Guided Diffusion Model for Realistic Text-to-LiDAR Scene Generation"
+  },
+  "processed_at": "2026-10-05T11:37:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-efcdfebd5467",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,391 @@
+name: Library import processor
+
+on:
+  # User/App uploads automatically start intake; GITHUB_TOKEN self-dispatches.
+  push:
+    branches: [main]
+    paths:
+      - '.survey/import-inbox/pending/research/**'
+      # Reconcile returned Research queue when its importer logic changes.
+      - '.survey/scripts/process_library_import_inbox.py'
+      - '.github/workflows/library-import.yml'
+  workflow_dispatch:
+    inputs:
+      drain_generation:
+        description: 'Bounded self-drain generation; normally omitted'
+        required: false
+        default: '0'
+        type: string
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: library-import-main
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: '.survey/scripts/requirements.txt'
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+
+      - name: Validate Library import code
+        run: |
+          python -m py_compile \
+            .survey/scripts/process_library_import_inbox.py \
+            .survey/scripts/refresh_under16kb_reaudit_queue.py \
+            .survey/scripts/cleanup_import_inbox.py \
+            .survey/scripts/process_discovery_precheck_batch.py \
+            .survey/scripts/process_reference_relevance_requests.py \
+            .survey/scripts/queue_worker.py \
+            .survey/scripts/render_status_dashboard.py
+          # The full regression suites run in repository-tests.yml on code changes.
+          # Retain syntax checks and all per-record quality/provenance gates here.
+
+      - name: Process bounded Library import work
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-library-import[bot]'
+          git config user.email 'survey-library-import[bot]@users.noreply.github.com'
+
+          sync_main() {
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
+          }
+
+          publish() {
+            local message="$1"
+            shift
+            git add -A -- "$@"
+            if git diff --cached --quiet; then
+              return 0
+            fi
+            git commit -m "$message"
+
+            # Re-audit queue regeneration belongs to the final refresh stage.
+            # Defensive cleanup for a stale derived edit left by a stage;
+            # never discard unrelated unstaged changes silently.
+            if ! git diff --quiet -- .survey/repair-queue/under-16kb-reaudit.json; then
+              git restore --worktree -- .survey/repair-queue/under-16kb-reaudit.json
+            fi
+            if ! git diff --quiet; then
+              echo 'Unstaged files remain after Library checkpoint commit:' >&2
+              git diff --name-only >&2
+              return 1
+            fi
+
+            # The bounded computation can take long enough for unrelated
+            # workflows to advance main. First try to preserve the completed
+            # work by rebasing it onto the latest main; only ask the outer
+            # stage to recompute when the actual payload conflicts.
+            for publish_attempt in 1 2 3 4 5; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                return 1
+              fi
+              if git push origin HEAD:main; then
+                return 0
+              fi
+              echo "Library publish race after rebase on attempt ${publish_attempt}; refetching."
+              sleep $((publish_attempt * 2))
+            done
+            return 1
+          }
+
+          # Stage 1: when Discovery is backed up, prioritize intake while
+          # retaining five slots for independent semantic re-audit work.
+          reaudit_quota=20
+          if compgen -G '.survey/import-inbox/pending/discovery/*.json' > /dev/null ||
+             compgen -G '.survey/import-inbox/waiting/discovery/*.json' > /dev/null; then
+            reaudit_quota=5
+          fi
+          echo "Discovery intake: 240 records/pass; semantic re-audit quota=${reaudit_quota}"
+          stage1_ok=0
+          for attempt in $(seq 1 6); do
+            sync_main
+            python .survey/scripts/cleanup_import_inbox.py --repo-root . --skip-discovery
+            python .survey/scripts/process_library_import_inbox.py \
+              --repo-root . \
+              --skip-discovery \
+              --max-research 5 \
+              --max-reaudit "$reaudit_quota" \
+              --defer-reaudit-queue-refresh \
+              --max-discovery-records 240
+            # Re-audit hashes are regenerated against current main in the final
+            # stage. Computing them here leaves an unstaged derived-file edit,
+            # making the checkpoint rebase fail on every retry.
+            # Build STATUS once after downstream acceptance, rather than
+            # recounting the entire identity pool in this initial checkpoint.
+            if publish \
+              'library-import: checkpoint bounded intake' \
+              .survey/import-inbox \
+              .survey/repair-queue/returned-research.json \
+              .survey/work-queue/discovery-precheck \
+              .survey/work-queue/reference-curation \
+              .survey/work-queue/jobs \
+              .survey/work-queue/next-jobs.json \
+              .survey/work-queue/state.json \
+              .survey/survey-state \
+              papers \
+              README.md \
+              STATUS.md; then
+              stage1_ok=1
+              break
+            fi
+            echo "Library intake push race on attempt ${attempt}; recomputing from latest main."
+          done
+          [ "$stage1_ok" -eq 1 ] || {
+            echo 'Library intake checkpoint failed.' >&2
+            exit 1
+          }
+
+          # Research/legacy submissions remain in this lane. Library Discovery
+          # submissions are exclusively owned by library-discovery-intake.yml.
+          stage4_ok=0
+          for attempt in $(seq 1 4); do
+            sync_main
+            python .survey/scripts/queue_worker.py \
+              --root .survey \
+              --max-submissions 64 \
+              --exclude-library-discovery
+
+            if publish \
+              'library-import: process bounded submissions' \
+              .survey/work-queue \
+              .survey/survey-state \
+              papers \
+              README.md \
+              STATUS.md; then
+              stage4_ok=1
+              break
+            fi
+            echo "Library submission push race on attempt ${attempt}; recomputing."
+          done
+          [ "$stage4_ok" -eq 1 ] || {
+            echo 'Library submission processing failed.' >&2
+            exit 1
+          }
+
+          # Stage 5: terminalize completed chunks and refresh STATUS.
+          stage5_ok=0
+          for attempt in $(seq 1 4); do
+            sync_main
+            python .survey/scripts/process_library_import_inbox.py \
+              --repo-root . \
+              --skip-discovery \
+              --max-research 0 \
+              --max-discovery-records 240
+            python .survey/scripts/render_status_dashboard.py \
+              --repo-root . \
+              --output STATUS.md
+
+            if publish \
+              'library-import: settle bounded work and refresh STATUS' \
+              .survey/import-inbox \
+              .survey/repair-queue/returned-research.json \
+              .survey/work-queue \
+              .survey/survey-state \
+              papers \
+              README.md \
+              STATUS.md; then
+              stage5_ok=1
+              break
+            fi
+            echo "Library settle push race on attempt ${attempt}; recomputing."
+          done
+          [ "$stage5_ok" -eq 1 ] || {
+            echo 'Library settle failed.' >&2
+            exit 1
+          }
+
+          # Stage 5 already rendered STATUS against its queue snapshot.
+          # Preserve the counted queue blob ID to avoid a second full recount
+          # on Discovery-only imports that do not change the re-audit queue.
+          reaudit_queue_at_status="$(git rev-parse 'HEAD:.survey/repair-queue/under-16kb-reaudit.json' 2>/dev/null || true)"
+
+          # The under-16KB re-audit queue embeds hashes of current paper bytes.
+          # Never publish it through publish(), because publish() may rebase a
+          # derived JSON snapshot across concurrent paper writes. Recompute from
+          # the latest main and, on a push race, discard and regenerate.
+          reaudit_ok=0
+          for attempt in $(seq 1 5); do
+            sync_main
+            python .survey/scripts/refresh_under16kb_reaudit_queue.py \
+              --repo-root . \
+              --apply
+            git add .survey/repair-queue/under-16kb-reaudit.json
+            if git diff --cached --quiet; then
+              reaudit_ok=1
+              break
+            fi
+            git commit -m 'library-import: refresh under-16KB re-audit queue'
+            if git push origin HEAD:main; then
+              reaudit_ok=1
+              break
+            fi
+            echo "Under-16KB queue push race on attempt ${attempt}; regenerating."
+          done
+          [ "$reaudit_ok" -eq 1 ] || {
+            echo 'Under-16KB re-audit queue refresh failed.' >&2
+            exit 1
+          }
+
+          # Re-render STATUS only if the final authoritative queue differs
+          # from what Stage 5 counted. Unchanged Discovery-only imports must
+          # not pay for the expensive full recount a second time.
+          sync_main
+          reaudit_queue_after_refresh="$(git rev-parse 'HEAD:.survey/repair-queue/under-16kb-reaudit.json' 2>/dev/null || true)"
+          if [ "$reaudit_queue_at_status" = "$reaudit_queue_after_refresh" ]; then
+            echo 'Re-audit queue unchanged since Stage-5 STATUS render; skip duplicate full dashboard recount.'
+          else
+            # GITHUB_TOKEN pushes do not trigger status-dashboard.yml.
+            # When the queue actually changed, bring STATUS into sync.
+            status_after_reaudit_ok=0
+            for attempt in $(seq 1 5); do
+              sync_main
+              python .survey/scripts/render_status_dashboard.py \
+                --repo-root . \
+                --output STATUS.md
+              git add STATUS.md
+              if git diff --cached --quiet; then
+                status_after_reaudit_ok=1
+                break
+              fi
+              git commit -m 'library-import: sync STATUS after re-audit refresh'
+              if git push origin HEAD:main; then
+                status_after_reaudit_ok=1
+                break
+              fi
+              echo "Post-re-audit STATUS push race on attempt ${attempt}; regenerating."
+            done
+            if [ "$status_after_reaudit_ok" -ne 1 ]; then
+              echo 'STATUS refresh after under-16KB queue publication did not publish after five attempts.' >&2
+              active_status_runs="$(gh run list \
+                --repo "${GITHUB_REPOSITORY}" \
+                --workflow status-dashboard.yml \
+                --limit 20 \
+                --json status \
+                --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
+              if [ "${active_status_runs:-0}" -eq 0 ]; then
+                echo 'Dispatching the dedicated status dashboard as a non-blocking fallback.'
+                gh workflow run status-dashboard.yml --repo "${GITHUB_REPOSITORY}" --ref main
+              else
+                echo "A status dashboard run is already active (${active_status_runs}); import results remain durable."
+              fi
+            fi
+          fi
+
+          if [ "${relevance_rc:-0}" -ne 0 ]; then
+            echo 'Some relevance requests remain retryable; durable progress was preserved.' >&2
+          fi
+
+          # GITHUB_TOKEN pushes do not chain-trigger downstream workflows.
+          # Compare the durable citation audit with the current paper inventory and
+          # explicitly hand off to citation backfill whenever newly imported papers
+          # have made the audit stale or incomplete.
+          sync_main
+          citation_backfill_due="$(python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          sys.path.insert(0, str(Path('.survey/scripts').resolve()))
+          import citation_graph
+
+          root = Path('.').resolve()
+          paper_count = len(citation_graph.load_records(root))
+          report_path = root / '.survey/reports/citation-coverage-latest.json'
+          try:
+              report = json.loads(report_path.read_text(encoding='utf-8'))
+          except (FileNotFoundError, json.JSONDecodeError):
+              print('true')
+              raise SystemExit(0)
+
+          summary = report.get('summary') or {}
+          audited_total = int(summary.get('total') or 0)
+          incomplete = int(summary.get('incomplete') or 0)
+          print('true' if audited_total != paper_count or incomplete > 0 else 'false')
+          PY
+          )"
+
+          if [ "$citation_backfill_due" = 'true' ]; then
+            active_citation_runs="$(gh run list \
+              --repo "${GITHUB_REPOSITORY}" \
+              --workflow citation-graph-backfill.yml \
+              --limit 20 \
+              --json status \
+              --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
+            if [ "${active_citation_runs:-0}" -eq 0 ]; then
+              echo 'Citation audit is stale or incomplete after Library import; dispatching citation backfill.'
+              gh workflow run citation-graph-backfill.yml \
+                --repo "${GITHUB_REPOSITORY}" \
+                --ref main
+            else
+              echo "Citation audit needs refresh, but citation backfill is already active (${active_citation_runs} run(s))."
+            fi
+          else
+            echo 'Citation audit already covers the current paper inventory.'
+          fi
+
+          # Continue draining without relying on GitHub scheduled-event delivery.
+          # Each run remains bounded and queues at most one successor.
+          sync_main
+
+          count_files() {
+            local dir="$1"
+            local pattern="$2"
+            if [ ! -d "$dir" ]; then
+              printf '0\n'
+              return 0
+            fi
+            find "$dir" -maxdepth 1 -type f -name "$pattern" -print | wc -l
+          }
+
+          research_backlog=$(count_files .survey/import-inbox/pending/research '*.md')
+          discovery_pending=$(count_files .survey/import-inbox/pending/discovery '*.json')
+          discovery_waiting=$(count_files .survey/import-inbox/waiting/discovery '*.json')
+          backlog_total=$research_backlog
+
+          generation="${{ github.event.inputs.drain_generation || '0' }}"
+          if ! [[ "$generation" =~ ^[0-9]+$ ]]; then
+            generation=0
+          fi
+
+          echo "Library backlog after this run: research=${research_backlog}, discovery_pending=${discovery_pending}, discovery_waiting=${discovery_waiting}, generation=${generation}"
+
+          # Independent Research self-drain; Discovery uses its own lane.
+          if [ "$research_backlog" -gt 0 ] && [ "$generation" -lt 96 ]; then
+            next_generation=$((generation + 1))
+            echo "Queueing Library continuation ${next_generation} (Research-only lane)."
+            GH_TOKEN="${{ github.token }}" gh workflow run library-import.yml \
+              --repo "${GITHUB_REPOSITORY}" \
+              --ref main \
+              -f drain_generation="${next_generation}"
+          elif [ "$backlog_total" -gt 0 ] && [ "$generation" -ge 96 ]; then
+            echo "Backlog remains after bounded generation cap; next user upload or kick resumes it." >&2
+          elif [ "$backlog_total" -gt 0 ]; then
+            echo 'No Research backlog remains; Discovery is handled by its dedicated intake.'
+          else
+            echo 'Library import backlog is drained.'
+          fi

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c993c334c2fa3d6f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.09212",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.09212",
+    "identity_tokens": [
+      "arXiv:2306.09212"
+    ],
+    "reason": "Abstract introduces CMMLU as a Chinese language-understanding benchmark; it does not address inference efficiency or serving.",
+    "first_checked_at": "2026-10-05T00:55:43+00:00",
+    "last_checked_at": "2026-10-05T00:55:43+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2603.19172-dymoe-dynamic-expert-orchestration-with-mixed-precision-quantization-for.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2508.05257-mobe-mixture-of-basis-experts.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08738-slimqwen-pruning-distillation.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2608.30567-turingllm-dynamic-topk.md",
+      "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+    ],
+    "title": "CMMLU: Measuring massive multitask language understanding in Chinese"
+  },
+  "processed_at": "2026-10-05T00:55:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c993c334c2fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-608ca969d07e8496-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.17286",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.17286",
+    "identity_tokens": [
+      "arXiv:2604.17286"
+    ],
+    "reason": "DepthVARは高解像度画像を生成する視覚自己回帰モデルに対し、トークン別に計算深度を割り当てる。要旨の実験対象は画像生成のVARであり、テキストLLM・VLMによる言語推論、KVキャッシュ、LLMサービングの実証はない。Transformer計算削減という共通性だけでは対象系統へ採用できない。",
+    "first_checked_at": "2026-10-30T10:54:05+00:00",
+    "last_checked_at": "2026-10-30T10:54:05+00:00",
+    "linked_from": [],
+    "title": "Depth Adaptive Efficient Visual Autoregressive Modeling"
+  },
+  "processed_at": "2026-10-30T10:54:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-608ca969d07e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

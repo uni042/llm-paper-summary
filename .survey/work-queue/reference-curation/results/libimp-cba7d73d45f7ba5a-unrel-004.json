@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cba7d73d45f7ba5a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.03601",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.03601",
+    "identity_tokens": [
+      "arXiv:2307.03601"
+    ],
+    "reason": "GPT4RoI instruction-tunes an LLM for region-of-interest visual understanding; capability/tuning work.",
+    "first_checked_at": "2026-10-05T02:01:51+00:00",
+    "last_checked_at": "2026-10-05T02:01:51+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+    ],
+    "title": "GPT4RoI: Instruction Tuning Large Language Model on Region-of-Interest"
+  },
+  "processed_at": "2026-10-05T02:01:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cba7d73d45f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

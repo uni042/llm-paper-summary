@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5acdcf23cf502e0f-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.11581",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.11581",
+    "identity_tokens": [
+      "arXiv:2604.11581"
+    ],
+    "reason": "The abstract studies statistical measurement error in LLM annotation and benchmark pipelines; evaluation rigor is its contribution, not systems performance or efficiency.",
+    "first_checked_at": "2026-10-13T07:25:22+00:00",
+    "last_checked_at": "2026-10-13T07:25:22+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+    ],
+    "title": "Hidden Measurement Error in LLM Pipelines Distorts Annotation, Evaluation, and Benchmarking"
+  },
+  "processed_at": "2026-10-13T07:25:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5acdcf23cf50",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

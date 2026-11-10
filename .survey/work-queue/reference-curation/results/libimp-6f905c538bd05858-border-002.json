@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6f905c538bd05858-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.16964",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.16964",
+    "identity_tokens": [
+      "arXiv:2511.16964"
+    ],
+    "reason": "arXiv v2一次要旨はLLMエージェント群がPyTorch演算のコード最適化を行う際の探索・修正戦略を比較し、H100のKernelBenchでEager比平均2.88倍、torch.compile比1.85倍を報告。推論カーネル開発には関連するが、一般ML演算の評価でありLLMモデルE2Eの直接実測が要旨にないため境界的。",
+    "first_checked_at": "2026-10-30T07:16:17+00:00",
+    "last_checked_at": "2026-10-30T07:16:17+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Optimizing PyTorch Inference with LLM-Based Multi-Agent Systems"
+  },
+  "processed_at": "2026-10-30T07:16:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6f905c538bd0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

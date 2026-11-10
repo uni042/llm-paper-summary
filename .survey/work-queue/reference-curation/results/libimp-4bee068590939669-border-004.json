@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4bee068590939669-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.23806",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.23806",
+    "identity_tokens": [
+      "arXiv:2607.23806"
+    ],
+    "reason": "効率効果の測定はあるが、対象は既に解決・検証された反復可能問題であり、一次本文で方式のarchitecture/algorithm/configurationを非公開としているため、研究可能な推論機構を判断・追跡できない。",
+    "first_checked_at": "2026-10-05T03:33:35+00:00",
+    "last_checked_at": "2026-10-05T03:33:35+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md"
+    ],
+    "title": "A Frozen 12B Beats Frontier Models on Verified Work: 100% Accuracy, 0 Tokens, Bit-Exact, Forever"
+  },
+  "processed_at": "2026-10-05T03:33:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4bee06859093",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

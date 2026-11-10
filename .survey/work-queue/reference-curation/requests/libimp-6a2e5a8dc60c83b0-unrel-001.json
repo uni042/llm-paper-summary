@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6a2e5a8dc60c83b0-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.24456",
+  "reason": "一次要旨を確認。Conduitは分散強化学習における経験バッファの取り込み・階層配置・配信を独立した経験データプレーン（EDP）として公開し、CPU/GPU階層の帯域を考慮した配置と学習反復に対する遅延認識スケジューリングを行う。RLlib上で経験経路遅延最大97%、学習反復遅延最大38%削減を報告するが、最終目的は強化学習の学習実行系であり、LLM生成時のサービング、KVキャッシュ、推論速度の実証はない。学習単独最適化は現在凍結中のため対象外。",
+  "title": "Conduit: An Experience Data Plane for Distributed Reinforcement Learning",
+  "identity_tokens": [
+    "arxiv:2609.24456",
+    "doi:10.48550/arxiv.2609.24456"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6a2e5a8dc60c",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

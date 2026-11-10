@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5e1420b5b7b29215-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/app16189003",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/app16189003",
+    "identity_tokens": [
+      "DOI:10.3390/app16189003"
+    ],
+    "reason": "This study proposes EQAS (Empowered Question-Answering System), a hybrid framework designed to support context-aware question-answering and intelligent feedback generation in domain-specific knowledge environments. EQAS integrates fine-tuned transformer-based models, instruction-guided large language models, domain-specific knowledge graphs, and LangChain-based vector retrieval to improve contextual relevance, response quality, and feedback consistency. To evaluate the proposed framework, a benchmark dataset consisting of 10,000 real-world question–answer pairs was constructed from authentic user interactions and domain-related information resources. Experimental evaluation across established transformer-based architectures and recent instruction-tuned large language models showed that the Llama-3.3-70B-Instruct baseline achieved the highest standalone QA performance (F1: 77.42; EM: 44.60), while the EQAS transformer-based configuration achieved an F1 score of 75.48 and an Exact Match score of 41.80. A controlled ablation analysis using Llama-3.3-70B-Instruct as the fixed QA backbone further showed that incorporating knowledge graph enhancement increased the F1 score from 77.42 to 79.93 and the Exact Match score from 44.60 to 46.82, corresponding to absolute improvements of 2.51 and 2.22 points, respectively. A complementary human-centered evaluation of 1000 generative responses by three NLP researchers yielded an overall quality score of 4.34/5 across correctness, clarity, sufficiency, and helpfulness, with an overall Krippendorff’s α of 0.80. Furthermore, the framework provides context-sensitive explanatory feedback that can support user understanding and knowledge acquisition during information-seeking interactions. The findings suggest that EQAS offers a scalable solution for intelligent question-answering, feedback support, and knowledge assistance in complex information environments. The proposed framework highlights the potential of combining large language models with structured knowledge representations to support context-aware question-answering and explanatory feedback generation in domain-specific information environments.",
+    "first_checked_at": "2026-10-05T06:56:46+00:00",
+    "last_checked_at": "2026-10-05T06:56:46+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "A Knowledge Graph-Augmented Large Language Model Framework for Context-Aware Question-Answering and Intelligent Feedback Generation"
+  },
+  "processed_at": "2026-10-05T06:56:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5e1420b5b7b2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e38e8bbb719299872f14000b735e0222dcc5db571f61bc4088fbd17c0660ffdc",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_3f13e3c142e48191b266632ee5551dec--2024-2409.01141-duplex-logic-pim-moe-gqa-research-20261030-1700-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.1109/MICRO61859.2024.00105",
+  "worker_completed_at": "2026-10-30T17:00:00+09:00",
+  "worker_run_key": "20261030-1700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5017,
+    "body_paragraphs": 22,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 759,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-30T08:53:11+00:00"
+}

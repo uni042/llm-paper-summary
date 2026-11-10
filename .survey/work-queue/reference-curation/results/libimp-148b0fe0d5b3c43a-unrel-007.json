@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-148b0fe0d5b3c43a-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.17177",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.17177",
+    "identity_tokens": [
+      "arXiv:2402.17177"
+    ],
+    "reason": "Soraとtext-to-video生成モデルの背景、関連技術、応用、限界、安全性を整理するreview。LLM推論runtime・serving最適化の新規方式・実装評価を提案しない。",
+    "first_checked_at": "2026-10-05T00:53:14+00:00",
+    "last_checked_at": "2026-10-05T16:12:47+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md"
+    ],
+    "title": "Sora: A Review on Background, Technology, Limitations, and Opportunities of Large Vision Models"
+  },
+  "processed_at": "2026-10-05T16:12:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-148b0fe0d5b3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

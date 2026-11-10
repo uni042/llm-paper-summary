@@ -1,0 +1,426 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "20260921T0606JST-hourly00-forward-moeinfinity-03",
+  "collector_id": "hourly00-20260921T0559JST-forward-moeinfinity",
+  "run_key": "2026-09-21T05:58:48+09:00",
+  "axis": "forward citations of MoE-Infinity offloading-efficient MoE serving",
+  "provider": "semantic_scholar",
+  "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.14361/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
+  "target_unseen": 20,
+  "page_size": 100,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "PROVIDER_EXHAUSTED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "28766a216ef65f012c81a19ddbb2da51f3af8944",
+  "raw_search_result_count": 43,
+  "retrieval_duplicate_filtered_count": 34,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "intra_batch_alias_duplicate_filtered_count": 0,
+  "cross_page_duplicate_filtered_count": 0,
+  "cross_page_alias_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": null,
+  "progress_observed_at": "2026-09-20T21:07:16.075699+00:00",
+  "results": [
+    {
+      "title": "Reproducible Evaluation of MoE Expert Caching: Replay Semantics, Workload Contamination, and Operating Regimes",
+      "source_url": "https://www.semanticscholar.org/paper/8abae3f1c93672ce7d4ed1b8df6216260ca5a2eb",
+      "year": 2026,
+      "published": "2026-08-08",
+      "abstract": "Mixture-of-Experts (MoE) models have outgrown accelerator memory, and offloading expert weights to host memory is now standard. This makes expert cache management an attractive lever: a policy that raised the hit rate would cut expert traffic per token. Evaluating that is a measurement problem, and we find the measurement fragile. With a trace-driven, event-atomic simulator over three MoE models (40, 64, 128 experts), we isolate three evaluation axes that change conclusions, not just numbers. Replay semantics: under a fused-event traffic contract, an inconsistent per-access replay inflates recency-based policies by 27-29% while leaving frequency-based and static ones within 4%, inverting the policy ranking. Workload contamination: probe sets using one instruction template per category produce verbatim-identical generation prefixes; a matched-pair rendering intervention moves the measured early-window effect by 19.4-31.9 points and reverses which workloads look most cache-friendly. Operating regimes: normalized miss fractions do not transfer across models, so the per-step expert union relative to per-layer capacity must be reported -- yet permuting only the temporal order of an identical event stream moves the offline-optimal gap from 44.9% to 30.8%, so it is not sufficient. Corrected, a stable gap to the offline optimum remains (44.2-45.9% over 13 frozen workload compositions). A forced-admission oracle attributes 84.3-96.6% of it to knowing which resident expert is used furthest in the future. A causal next-use predictor, used as an eviction rule, recovers -11.4% of the gap; it picks an optimal victim 3.4% of the time, against 2.4% for a random resident block and 20.6-22.1% for LRU and LFRU. Our position is narrow: in our evaluated settings a large offline-optimal gap substantially overstates the gains recovered by representative lightweight causal mechanisms.",
+      "canonical_id": "arXiv:2608.07911",
+      "arxiv_id": "2608.07911",
+      "authors": [
+        "Yu Zhang"
+      ]
+    },
+    {
+      "title": "Towards Efficient and Reliable On-Device Multi-Agent Systems: Challenges, Technologies and Explorations",
+      "source_url": "https://www.semanticscholar.org/paper/6b7fe9189df482320578bffea03b382d9220ecda",
+      "year": 2026,
+      "published": "2026-07-01",
+      "abstract": "On-device multi-agent systems (MASs) have attracted increasing attention for their potential to minimize response latency, protect user privacy, and maintain service availability. However, stringent hardware resource constraints pose significant challenges to achieving efficient and reliable autonomous execution. This paper investigates the key challenges and technologies for efficient and reliable on-device MASs, and explores a joint optimization framework tailored for resourceconstrained devices. First, we present a systematic three-layer architecture for on-device MASs, consisting of the multi-agent layer, the model layer, and the device layer. Then, we provide a comprehensive analysis of challenges and representative techniques for enhancing the efficiency and reliability across the three layers. Finally, as a preliminary exploration toward cross-layer optimization, we propose a framework combining MoE-based parameter offloading with real-time validation, demonstrating the feasibility of simultaneously improving MASs' efficiency and reliability on resource-constrained devices. Experimental results show that the proposed framework significantly reduces the memory usage and improves task success rates of on-device MASs, paving the way for more efficient and reliable on-device MASs.",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00157",
+      "doi": "10.1109/ICWS72778.2026.00157",
+      "authors": [
+        "Yanjun Shu",
+        "Wei-Ye Yan",
+        "Zhuang-Yu Ma",
+        "Jian Yang",
+        "Yan-Ming Jiang",
+        "Min Li",
+        "Tian-Yu Luo",
+        "De-Cheng Zuo"
+      ]
+    },
+    {
+      "title": "Does Mixture-of-Experts Actually Help Inference on Consumer and Edge Hardware? An Empirical Study",
+      "source_url": "https://www.semanticscholar.org/paper/9f8855cff6ae8181f51525549502bfd94eac2572",
+      "year": 2026,
+      "published": "2026-06-19",
+      "abstract": "Mixture-of-Experts (MoE) language models are often described as ideal for resource-constrained inference. Each token activates only a small subset of experts, so the per-token compute cost, in floating-point operations (FLOPs), resembles that of a much smaller dense model. Whether that FLOP advantage survives in practice is far less clear. We ask whether MoE models actually run faster and cheaper than comparable dense models on consumer-grade and edge hardware. We benchmark OLMoE-1B-7B (1.3 B active of 6.9 B total) against three dense baselines on an Apple M2 Pro and an NVIDIA Jetson Orin Nano 8 GB through llama$.$cpp, measuring throughput, memory, and on-device energy. The answer is device-dependent: OLMoE's active-parameter advantage is only partly realised on the laptop (~10% behind the same-active Llama-3.2-1B) and erodes on the edge device (~31% behind, at 2.1$\\times$ the energy per token, with peak memory at the 8 GB ceiling). Patching llama$.$cpp to time the decode graph node-by-node shows routing accounts for under 9% of MoE-block compute on the cleaner edge backend, so the gap reflects total-parameter memory footprint, expert dispatch, and KV-cache pressure rather than routing. The implication is that on bandwidth-bound edge hardware, inference cost tracks total parameters, not active ones, and sparse activation does not buy back what the device is constrained on. These findings are bounded to one MoE model at this parameter scale and two devices, and we release the full measurement harness and per-run data.",
+      "canonical_id": "arXiv:2606.21428",
+      "arxiv_id": "2606.21428",
+      "authors": [
+        "Alfarizy Alfarizy",
+        "H. Nguyen",
+        "René Richard",
+        "R. Razavi-Far",
+        "Hung Cao"
+      ]
+    },
+    {
+      "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+      "source_url": "https://www.semanticscholar.org/paper/32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd",
+      "year": 2026,
+      "published": "2026-05-07",
+      "abstract": "Large-scale vision-language mixture-of-experts (VL-MoE) models provide strong multimodal capability, but efficient deployment on memory-constrained platforms remains difficult. Existing MoE offloading systems are largely designed for text-centric workloads and become much less effective for visual-heavy inputs, where large numbers of visual tokens induce broader and less predictable expert accesses. We present VisMMoE, a VL-MoE offloading system built on a single systems insight: pruning redundant visual tokens can improve offloading not only by reducing computation, but also by reshaping expert demand. We refer to this effect as \\textit{visual-expert affinity}: token pruning makes expert accesses more concentrated within layers and more stable across layers, producing a smaller and more predictable expert working set. Guided by this insight, VisMMoE combines affinity-aware token compression, lookahead expert prediction, and cache/pipeline orchestration to improve expert locality and prefetch effectiveness under tight memory budgets. We implement VisMMoE on multiple frameworks and evaluate it on representative VL-MoE models and benchmarks. VisMMoE improves end-to-end inference performance by up to 2.68x and 1.61x, respectively, over strong baselines for today's VL-MoE deployments while maintaining competitive accuracy.",
+      "canonical_id": "arXiv:2605.05899",
+      "arxiv_id": "2605.05899",
+      "authors": [
+        "Cheng Xu",
+        "Xiaofeng Hou",
+        "Jiacheng Liu",
+        "Chao Li"
+      ]
+    },
+    {
+      "title": "Janus: Disaggregating Attention and Experts for Scalable MoE Inference",
+      "source_url": "https://www.semanticscholar.org/paper/a8785807d99e923a3a938ff52aafa1ce21dc1440",
+      "year": 2025,
+      "published": "2025-12-15",
+      "abstract": "Serving large Mixture-of-Experts (MoE) models is challenging because of their large memory footprints, heterogeneous resource demands, and highly dynamic inference workloads. Most existing MoE inference systems deploy the entire model as a monolithic unit, forcing attention and MoE layers to share the same resource configuration despite their different scaling behaviors and resource bottlenecks. Such coarse-grained provisioning leads to resource inefficiency and suboptimal performance. We present JANUS, a scalable and resource-efficient MoE inference system built around three key principles. First, JANUS disaggregates attention and MoE layers onto separate GPU worker pools, enabling independent resource provisioning for the two layer types, and uses an adaptive two-phase communication mechanism for low-latency data exchange. Second, because MoE-layer execution is often memory-bound and highly sensitive to activated-expert imbalance, JANUS introduces a lightweight, microsecond-scale activation scheduler that balances per-layer activated experts across MoE instances to reduce inference latency. Third, JANUS employs a fine-grained, SLO-aware resource scaling scheme that jointly selects attention resources, MoE resources, and expert placement to minimize GPU cost under token-level SLOs. Evaluation shows that JANUS improves per-GPU throughput by up to 4.7x over state-of-the-art MoE inference baselines while satisfying token-level latency SLOs.",
+      "canonical_id": "arXiv:2512.13525",
+      "arxiv_id": "2512.13525",
+      "authors": [
+        "Zhexiang Zhang",
+        "Ye Wang",
+        "Yu-Miao Zhao",
+        "Jia-Yu Xiao",
+        "Qian-Jing Yang",
+        "Xiangyu Wang",
+        "Jingzhe Jiang",
+        "Qi-Zhen Weng",
+        "Ruichuan Chen",
+        "Shao-Huai Shi",
+        "Yin Chen",
+        "Minchen Yu"
+      ]
+    },
+    {
+      "title": "Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference",
+      "source_url": "https://www.semanticscholar.org/paper/0790f66f56948017b66b4ee10279e35d641d9ba9",
+      "year": 2024,
+      "published": "2024-11-27",
+      "abstract": "Mixture of Experts (MoE) LLMs have recently gained attention for their ability to enhance performance by selectively engaging specialized subnetworks or\"experts\"for each input. However, deploying MoEs on memory-constrained devices remains challenging, particularly when generating tokens sequentially with a batch size of one, as opposed to typical high-throughput settings involving long sequences or large batches. In this work, we optimize MoE on memory-constrained devices where only a subset of expert weights fit in DRAM. We introduce a novel cache-aware routing strategy that leverages expert reuse during token generation to improve cache locality. We evaluate our approach on language modeling, MMLU, and GSM8K benchmarks and present on-device results demonstrating 2$\\times$ speedups on mobile devices, offering a flexible, training-free solution to extend MoE's applicability across real-world applications.",
+      "canonical_id": "arXiv:2412.00099",
+      "arxiv_id": "2412.00099",
+      "authors": [
+        "Andrii Skliar",
+        "T. V. Rozendaal",
+        "Romain Lepert",
+        "Todor Boinovski",
+        "M. V. Baalen",
+        "Markus Nagel",
+        "Paul N. Whatmough",
+        "B. Bejnordi"
+      ]
+    },
+    {
+      "title": "Hiding Communication Cost in Distributed LLM Training via Micro-batch Co-execution",
+      "source_url": "https://www.semanticscholar.org/paper/f6392c92856915f6c135e0d357e85a4e098193bf",
+      "year": 2024,
+      "published": "2024-11-24",
+      "abstract": "The growth of Large Language Models (LLMs) has necessitated large-scale distributed training. Highly optimized frameworks, however, still suffer significant losses in Model FLOPS utilization (often below 50%) due to large communication volumes. Meanwhile, our comprehensive profiling shows that the computation- and communication-intensive operators overlap well. This paper introduces DHelix, a novel micro-structure that dramatically improves the efficiency of LLM training inspired by the DNA structure. Central to DHelix's design is Strand Interleaving (SI), which views the continuous stream of training micro-batches through a GPU as two strands. DHelix juxtaposes the forward and backward passes of the two strands and performs a systematic optimization for an SI plan that co-schedules the operators from the opposite strands, enabled by operator-level overlap profiling results and a dynamic-programming based search algorithm. Meanwhile, DHelix enables the two strands to share model states and space for activation data, effectively accommodating two micro-batches with under 3% extra memory space. Dhelix seamlessly integrates with all forms of existing data/model parallelism, the most challenging being pipeline parallelism, thanks to its unique model folding design that results in a W-shaped pipeline. We evaluate DHelix training with the popular Llama and GPT dense models, plus the Phi Mixture of Expert (MoE) model, across 3 GPU clusters (A40, A800, and H100). Results show that it achieves 12-40% (up to 58% MFU) and 2-29% (up to 71% MFU) improvement on the 64-A40 and 64-A800 clusters, respectively, significantly outperforming state-of-the-art methods. On the H100 cluster, though the faster network reduces DHelix's profit margin, it makes cross-node tensor parallelism promising, a practice currently prohibitive due to communication costs.",
+      "canonical_id": "arXiv:2411.15871",
+      "arxiv_id": "2411.15871",
+      "authors": [
+        "Haiquan Wang",
+        "Chaoyi Ruan",
+        "Jia He",
+        "Jiaqi Ruan",
+        "Chengjie Tang",
+        "Xiaosong Ma",
+        "Cheng Li"
+      ]
+    },
+    {
+      "title": "LightMoE: Task-Aware Expert Availability Management for Memory-Efficient MoE-LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/8e9bf0985767d060d6ece470c708b918a05ed904",
+      "year": 2026,
+      "published": null,
+      "abstract": ",",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1062",
+      "doi": "10.18653/v1/2026.findings-acl.1062",
+      "authors": [
+        "Pu-Han Luo",
+        "Yunhao Yao",
+        "Junyang Wang",
+        "Jun-Yang Zhang",
+        "Xiang-Yang Li"
+      ]
+    },
+    {
+      "title": "Efficient Edge Deployment of Mixture-of-Experts Models With Hybrid Expert Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/3c712f8c9cacd0965786f1755d22d23eed1cbf68",
+      "year": 2026,
+      "published": null,
+      "abstract": "Deploying large language models (LLMs) directly at the edge offers significant benefits in reducing inference latency and enhancing privacy protection. However, this approach presents critical technical challenges due to the limited hardware resources available at the edge. In this paper, we explore the deployment of the Mixture-of-Experts (MoE) model, a popular LLM architecture, using weight quantization in a typical edge environment with multiple edge servers. Existing methods that uniformly quantize MoE models do not account for the varying importance of different experts or the dynamic nature of edge requests. To address these issues, we propose a hybrid expert quantization strategy, where each edge server quantizes experts to different bit-widths based on the pReferences of received requests. Furthermore, we implement a comprehensive system optimization that jointly considers expert quantization and request assignment, aiming to achieve high-precision and low-latency inference services. To manage the complex, coupled optimization challenges, we design a reinforcement learning (RL)-based algorithm. To overcome the slow convergence typical of traditional RL, we pre-train the policy network using a system simulator that generates heuristic solutions, thus accelerating the learning process. Extensive experimental results on real datasets demonstrate that our approach significantly outperforms existing methods.",
+      "canonical_id": "DOI:10.1109/TCCN.2026.3694872",
+      "doi": "10.1109/TCCN.2026.3694872",
+      "authors": [
+        "Tao Liu",
+        "Qipeng Xie",
+        "Zhaoyang Han",
+        "Wei-Zheng Wang",
+        "Sheng-Li Pan",
+        "Xiang Zhang",
+        "Chun-Hua Su",
+        "Kai-Shun Wu"
+      ]
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.07911",
+      "identity_tokens": [
+        "id:arXiv:2608.07911",
+        "title:reproducible evaluation of moe expert caching replay semantics workload contamination and operating regimes",
+        "url:https://www.semanticscholar.org/paper/8abae3f1c93672ce7d4ed1b8df6216260ca5a2eb"
+      ],
+      "record": {
+        "title": "Reproducible Evaluation of MoE Expert Caching: Replay Semantics, Workload Contamination, and Operating Regimes",
+        "source_url": "https://www.semanticscholar.org/paper/8abae3f1c93672ce7d4ed1b8df6216260ca5a2eb",
+        "year": 2026,
+        "published": "2026-08-08",
+        "abstract": "Mixture-of-Experts (MoE) models have outgrown accelerator memory, and offloading expert weights to host memory is now standard. This makes expert cache management an attractive lever: a policy that raised the hit rate would cut expert traffic per token. Evaluating that is a measurement problem, and we find the measurement fragile. With a trace-driven, event-atomic simulator over three MoE models (40, 64, 128 experts), we isolate three evaluation axes that change conclusions, not just numbers. Replay semantics: under a fused-event traffic contract, an inconsistent per-access replay inflates recency-based policies by 27-29% while leaving frequency-based and static ones within 4%, inverting the policy ranking. Workload contamination: probe sets using one instruction template per category produce verbatim-identical generation prefixes; a matched-pair rendering intervention moves the measured early-window effect by 19.4-31.9 points and reverses which workloads look most cache-friendly. Operating regimes: normalized miss fractions do not transfer across models, so the per-step expert union relative to per-layer capacity must be reported -- yet permuting only the temporal order of an identical event stream moves the offline-optimal gap from 44.9% to 30.8%, so it is not sufficient. Corrected, a stable gap to the offline optimum remains (44.2-45.9% over 13 frozen workload compositions). A forced-admission oracle attributes 84.3-96.6% of it to knowing which resident expert is used furthest in the future. A causal next-use predictor, used as an eviction rule, recovers -11.4% of the gap; it picks an optimal victim 3.4% of the time, against 2.4% for a random resident block and 20.6-22.1% for LRU and LFRU. Our position is narrow: in our evaluated settings a large offline-optimal gap substantially overstates the gains recovered by representative lightweight causal mechanisms.",
+        "canonical_id": "arXiv:2608.07911",
+        "arxiv_id": "2608.07911",
+        "authors": [
+          "Yu Zhang"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icws72778.2026.00157",
+      "identity_tokens": [
+        "id:DOI:10.1109/icws72778.2026.00157",
+        "title:towards efficient and reliable ondevice multiagent systems challenges technologies and explorations",
+        "url:https://www.semanticscholar.org/paper/6b7fe9189df482320578bffea03b382d9220ecda"
+      ],
+      "record": {
+        "title": "Towards Efficient and Reliable On-Device Multi-Agent Systems: Challenges, Technologies and Explorations",
+        "source_url": "https://www.semanticscholar.org/paper/6b7fe9189df482320578bffea03b382d9220ecda",
+        "year": 2026,
+        "published": "2026-07-01",
+        "abstract": "On-device multi-agent systems (MASs) have attracted increasing attention for their potential to minimize response latency, protect user privacy, and maintain service availability. However, stringent hardware resource constraints pose significant challenges to achieving efficient and reliable autonomous execution. This paper investigates the key challenges and technologies for efficient and reliable on-device MASs, and explores a joint optimization framework tailored for resourceconstrained devices. First, we present a systematic three-layer architecture for on-device MASs, consisting of the multi-agent layer, the model layer, and the device layer. Then, we provide a comprehensive analysis of challenges and representative techniques for enhancing the efficiency and reliability across the three layers. Finally, as a preliminary exploration toward cross-layer optimization, we propose a framework combining MoE-based parameter offloading with real-time validation, demonstrating the feasibility of simultaneously improving MASs' efficiency and reliability on resource-constrained devices. Experimental results show that the proposed framework significantly reduces the memory usage and improves task success rates of on-device MASs, paving the way for more efficient and reliable on-device MASs.",
+        "canonical_id": "DOI:10.1109/ICWS72778.2026.00157",
+        "doi": "10.1109/ICWS72778.2026.00157",
+        "authors": [
+          "Yanjun Shu",
+          "Wei-Ye Yan",
+          "Zhuang-Yu Ma",
+          "Jian Yang",
+          "Yan-Ming Jiang",
+          "Min Li",
+          "Tian-Yu Luo",
+          "De-Cheng Zuo"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.21428",
+      "identity_tokens": [
+        "id:arXiv:2606.21428",
+        "title:does mixtureofexperts actually help inference on consumer and edge hardware an empirical study",
+        "url:https://www.semanticscholar.org/paper/9f8855cff6ae8181f51525549502bfd94eac2572"
+      ],
+      "record": {
+        "title": "Does Mixture-of-Experts Actually Help Inference on Consumer and Edge Hardware? An Empirical Study",
+        "source_url": "https://www.semanticscholar.org/paper/9f8855cff6ae8181f51525549502bfd94eac2572",
+        "year": 2026,
+        "published": "2026-06-19",
+        "abstract": "Mixture-of-Experts (MoE) language models are often described as ideal for resource-constrained inference. Each token activates only a small subset of experts, so the per-token compute cost, in floating-point operations (FLOPs), resembles that of a much smaller dense model. Whether that FLOP advantage survives in practice is far less clear. We ask whether MoE models actually run faster and cheaper than comparable dense models on consumer-grade and edge hardware. We benchmark OLMoE-1B-7B (1.3 B active of 6.9 B total) against three dense baselines on an Apple M2 Pro and an NVIDIA Jetson Orin Nano 8 GB through llama$.$cpp, measuring throughput, memory, and on-device energy. The answer is device-dependent: OLMoE's active-parameter advantage is only partly realised on the laptop (~10% behind the same-active Llama-3.2-1B) and erodes on the edge device (~31% behind, at 2.1$\\times$ the energy per token, with peak memory at the 8 GB ceiling). Patching llama$.$cpp to time the decode graph node-by-node shows routing accounts for under 9% of MoE-block compute on the cleaner edge backend, so the gap reflects total-parameter memory footprint, expert dispatch, and KV-cache pressure rather than routing. The implication is that on bandwidth-bound edge hardware, inference cost tracks total parameters, not active ones, and sparse activation does not buy back what the device is constrained on. These findings are bounded to one MoE model at this parameter scale and two devices, and we release the full measurement harness and per-run data.",
+        "canonical_id": "arXiv:2606.21428",
+        "arxiv_id": "2606.21428",
+        "authors": [
+          "Alfarizy Alfarizy",
+          "H. Nguyen",
+          "René Richard",
+          "R. Razavi-Far",
+          "Hung Cao"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.05899",
+      "identity_tokens": [
+        "id:arXiv:2605.05899",
+        "title:vismmoe exploiting visualexpert affinity for efficient visuallanguage moe offloading",
+        "url:https://www.semanticscholar.org/paper/32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd"
+      ],
+      "record": {
+        "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+        "source_url": "https://www.semanticscholar.org/paper/32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd",
+        "year": 2026,
+        "published": "2026-05-07",
+        "abstract": "Large-scale vision-language mixture-of-experts (VL-MoE) models provide strong multimodal capability, but efficient deployment on memory-constrained platforms remains difficult. Existing MoE offloading systems are largely designed for text-centric workloads and become much less effective for visual-heavy inputs, where large numbers of visual tokens induce broader and less predictable expert accesses. We present VisMMoE, a VL-MoE offloading system built on a single systems insight: pruning redundant visual tokens can improve offloading not only by reducing computation, but also by reshaping expert demand. We refer to this effect as \\textit{visual-expert affinity}: token pruning makes expert accesses more concentrated within layers and more stable across layers, producing a smaller and more predictable expert working set. Guided by this insight, VisMMoE combines affinity-aware token compression, lookahead expert prediction, and cache/pipeline orchestration to improve expert locality and prefetch effectiveness under tight memory budgets. We implement VisMMoE on multiple frameworks and evaluate it on representative VL-MoE models and benchmarks. VisMMoE improves end-to-end inference performance by up to 2.68x and 1.61x, respectively, over strong baselines for today's VL-MoE deployments while maintaining competitive accuracy.",
+        "canonical_id": "arXiv:2605.05899",
+        "arxiv_id": "2605.05899",
+        "authors": [
+          "Cheng Xu",
+          "Xiaofeng Hou",
+          "Jiacheng Liu",
+          "Chao Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.13525",
+      "identity_tokens": [
+        "id:arXiv:2512.13525",
+        "title:janus disaggregating attention and experts for scalable moe inference",
+        "url:https://www.semanticscholar.org/paper/a8785807d99e923a3a938ff52aafa1ce21dc1440"
+      ],
+      "record": {
+        "title": "Janus: Disaggregating Attention and Experts for Scalable MoE Inference",
+        "source_url": "https://www.semanticscholar.org/paper/a8785807d99e923a3a938ff52aafa1ce21dc1440",
+        "year": 2025,
+        "published": "2025-12-15",
+        "abstract": "Serving large Mixture-of-Experts (MoE) models is challenging because of their large memory footprints, heterogeneous resource demands, and highly dynamic inference workloads. Most existing MoE inference systems deploy the entire model as a monolithic unit, forcing attention and MoE layers to share the same resource configuration despite their different scaling behaviors and resource bottlenecks. Such coarse-grained provisioning leads to resource inefficiency and suboptimal performance. We present JANUS, a scalable and resource-efficient MoE inference system built around three key principles. First, JANUS disaggregates attention and MoE layers onto separate GPU worker pools, enabling independent resource provisioning for the two layer types, and uses an adaptive two-phase communication mechanism for low-latency data exchange. Second, because MoE-layer execution is often memory-bound and highly sensitive to activated-expert imbalance, JANUS introduces a lightweight, microsecond-scale activation scheduler that balances per-layer activated experts across MoE instances to reduce inference latency. Third, JANUS employs a fine-grained, SLO-aware resource scaling scheme that jointly selects attention resources, MoE resources, and expert placement to minimize GPU cost under token-level SLOs. Evaluation shows that JANUS improves per-GPU throughput by up to 4.7x over state-of-the-art MoE inference baselines while satisfying token-level latency SLOs.",
+        "canonical_id": "arXiv:2512.13525",
+        "arxiv_id": "2512.13525",
+        "authors": [
+          "Zhexiang Zhang",
+          "Ye Wang",
+          "Yu-Miao Zhao",
+          "Jia-Yu Xiao",
+          "Qian-Jing Yang",
+          "Xiangyu Wang",
+          "Jingzhe Jiang",
+          "Qi-Zhen Weng",
+          "Ruichuan Chen",
+          "Shao-Huai Shi",
+          "Yin Chen",
+          "Minchen Yu"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.00099",
+      "identity_tokens": [
+        "id:arXiv:2412.00099",
+        "title:mixture of cacheconditional experts for efficient mobile device inference",
+        "url:https://www.semanticscholar.org/paper/0790f66f56948017b66b4ee10279e35d641d9ba9"
+      ],
+      "record": {
+        "title": "Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference",
+        "source_url": "https://www.semanticscholar.org/paper/0790f66f56948017b66b4ee10279e35d641d9ba9",
+        "year": 2024,
+        "published": "2024-11-27",
+        "abstract": "Mixture of Experts (MoE) LLMs have recently gained attention for their ability to enhance performance by selectively engaging specialized subnetworks or\"experts\"for each input. However, deploying MoEs on memory-constrained devices remains challenging, particularly when generating tokens sequentially with a batch size of one, as opposed to typical high-throughput settings involving long sequences or large batches. In this work, we optimize MoE on memory-constrained devices where only a subset of expert weights fit in DRAM. We introduce a novel cache-aware routing strategy that leverages expert reuse during token generation to improve cache locality. We evaluate our approach on language modeling, MMLU, and GSM8K benchmarks and present on-device results demonstrating 2$\\times$ speedups on mobile devices, offering a flexible, training-free solution to extend MoE's applicability across real-world applications.",
+        "canonical_id": "arXiv:2412.00099",
+        "arxiv_id": "2412.00099",
+        "authors": [
+          "Andrii Skliar",
+          "T. V. Rozendaal",
+          "Romain Lepert",
+          "Todor Boinovski",
+          "M. V. Baalen",
+          "Markus Nagel",
+          "Paul N. Whatmough",
+          "B. Bejnordi"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.15871",
+      "identity_tokens": [
+        "id:arXiv:2411.15871",
+        "title:hiding communication cost in distributed llm training via microbatch coexecution",
+        "url:https://www.semanticscholar.org/paper/f6392c92856915f6c135e0d357e85a4e098193bf"
+      ],
+      "record": {
+        "title": "Hiding Communication Cost in Distributed LLM Training via Micro-batch Co-execution",
+        "source_url": "https://www.semanticscholar.org/paper/f6392c92856915f6c135e0d357e85a4e098193bf",
+        "year": 2024,
+        "published": "2024-11-24",
+        "abstract": "The growth of Large Language Models (LLMs) has necessitated large-scale distributed training. Highly optimized frameworks, however, still suffer significant losses in Model FLOPS utilization (often below 50%) due to large communication volumes. Meanwhile, our comprehensive profiling shows that the computation- and communication-intensive operators overlap well. This paper introduces DHelix, a novel micro-structure that dramatically improves the efficiency of LLM training inspired by the DNA structure. Central to DHelix's design is Strand Interleaving (SI), which views the continuous stream of training micro-batches through a GPU as two strands. DHelix juxtaposes the forward and backward passes of the two strands and performs a systematic optimization for an SI plan that co-schedules the operators from the opposite strands, enabled by operator-level overlap profiling results and a dynamic-programming based search algorithm. Meanwhile, DHelix enables the two strands to share model states and space for activation data, effectively accommodating two micro-batches with under 3% extra memory space. Dhelix seamlessly integrates with all forms of existing data/model parallelism, the most challenging being pipeline parallelism, thanks to its unique model folding design that results in a W-shaped pipeline. We evaluate DHelix training with the popular Llama and GPT dense models, plus the Phi Mixture of Expert (MoE) model, across 3 GPU clusters (A40, A800, and H100). Results show that it achieves 12-40% (up to 58% MFU) and 2-29% (up to 71% MFU) improvement on the 64-A40 and 64-A800 clusters, respectively, significantly outperforming state-of-the-art methods. On the H100 cluster, though the faster network reduces DHelix's profit margin, it makes cross-node tensor parallelism promising, a practice currently prohibitive due to communication costs.",
+        "canonical_id": "arXiv:2411.15871",
+        "arxiv_id": "2411.15871",
+        "authors": [
+          "Haiquan Wang",
+          "Chaoyi Ruan",
+          "Jia He",
+          "Jiaqi Ruan",
+          "Chengjie Tang",
+          "Xiaosong Ma",
+          "Cheng Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.findings-acl.1062",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.1062",
+        "title:lightmoe taskaware expert availability management for memoryefficient moellm inference",
+        "url:https://www.semanticscholar.org/paper/8e9bf0985767d060d6ece470c708b918a05ed904"
+      ],
+      "record": {
+        "title": "LightMoE: Task-Aware Expert Availability Management for Memory-Efficient MoE-LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/8e9bf0985767d060d6ece470c708b918a05ed904",
+        "year": 2026,
+        "published": null,
+        "abstract": ",",
+        "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1062",
+        "doi": "10.18653/v1/2026.findings-acl.1062",
+        "authors": [
+          "Pu-Han Luo",
+          "Yunhao Yao",
+          "Junyang Wang",
+          "Jun-Yang Zhang",
+          "Xiang-Yang Li"
+        ]
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tccn.2026.3694872",
+      "identity_tokens": [
+        "id:DOI:10.1109/tccn.2026.3694872",
+        "title:efficient edge deployment of mixtureofexperts models with hybrid expert quantization",
+        "url:https://www.semanticscholar.org/paper/3c712f8c9cacd0965786f1755d22d23eed1cbf68"
+      ],
+      "record": {
+        "title": "Efficient Edge Deployment of Mixture-of-Experts Models With Hybrid Expert Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/3c712f8c9cacd0965786f1755d22d23eed1cbf68",
+        "year": 2026,
+        "published": null,
+        "abstract": "Deploying large language models (LLMs) directly at the edge offers significant benefits in reducing inference latency and enhancing privacy protection. However, this approach presents critical technical challenges due to the limited hardware resources available at the edge. In this paper, we explore the deployment of the Mixture-of-Experts (MoE) model, a popular LLM architecture, using weight quantization in a typical edge environment with multiple edge servers. Existing methods that uniformly quantize MoE models do not account for the varying importance of different experts or the dynamic nature of edge requests. To address these issues, we propose a hybrid expert quantization strategy, where each edge server quantizes experts to different bit-widths based on the pReferences of received requests. Furthermore, we implement a comprehensive system optimization that jointly considers expert quantization and request assignment, aiming to achieve high-precision and low-latency inference services. To manage the complex, coupled optimization challenges, we design a reinforcement learning (RL)-based algorithm. To overcome the slow convergence typical of traditional RL, we pre-train the policy network using a system simulator that generates heuristic solutions, thus accelerating the learning process. Extensive experimental results on real datasets demonstrate that our approach significantly outperforms existing methods.",
+        "canonical_id": "DOI:10.1109/TCCN.2026.3694872",
+        "doi": "10.1109/TCCN.2026.3694872",
+        "authors": [
+          "Tao Liu",
+          "Qipeng Xie",
+          "Zhaoyang Han",
+          "Wei-Zheng Wang",
+          "Sheng-Li Pan",
+          "Xiang Zhang",
+          "Chun-Hua Su",
+          "Kai-Shun Wu"
+        ]
+      }
+    }
+  ],
+  "receipt": "sha256:7e45e7d54026c585b05b2876a6ca8c4a5b987263ea53937c4b39f0d93458c431",
+  "next_action": "Candidate evaluation is allowed. The precheck itself already followed page/cursor pagination within the single fixed source_url result set. Evaluate only results[] and reference this result_path/receipt from submit_discovery_round."
+}

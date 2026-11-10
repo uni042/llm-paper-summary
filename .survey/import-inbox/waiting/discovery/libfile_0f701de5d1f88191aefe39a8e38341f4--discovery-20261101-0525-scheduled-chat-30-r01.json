@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261101-0525-scheduled-chat-30/r01",
+  "reference_main_sha": "30ffa15e3675af4d603ea482bc055efceb5761de",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.19533",
+      "identity_tokens": [
+        "arXiv:2305.19533",
+        "DOI:10.48550/arXiv.2305.19533"
+      ],
+      "title": "Lightening-Transformer: A Dynamically-operated Optically-interconnected Photonic Transformer Accelerator",
+      "reason": "arXivの同一IDの現行v3一次要旨を確認。worklistの旧題名DOTAから改題された同著者の光学Transformerアクセラレータ研究。干渉型光学ベクトル内積エンジンのcrossbarからなる動的光学テンソルコアと光インターコネクトを設計し、Transformerの動的・全範囲行列積を高速化する。一次要旨は従来の光学アクセラレータ比でエネルギー消費を2.6倍超、遅延を12倍超削減したと報告し、LLMも対象ワークロードとして明示する。推論アクセラレータの実行効率に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2305.19533",
+      "body_check": "primary_arxiv_v3_abstract_screen_only; body_not_read",
+      "linked_from": [
+        "WORKLIST-30.md rank 318",
+        "DOI:10.48550/arXiv.2305.19533"
+      ],
+      "worklist_rank": 318,
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "first_checked_at": "2026-11-01T05:29:38+09:00",
+      "last_checked_at": "2026-11-01T05:29:38+09:00"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCAD.2024.3513265",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2024.3513265"
+      ],
+      "title": "Vision Transformer Acceleration via a Versatile Attention Optimization Framework",
+      "reason": "著者所属の香港中文大学が公開する原著要旨を確認。ViTの入力解像度に応じて線形射影とself-attentionの双方が律速となる問題に対し、SpQuantで重みのoffline疎化、入力のonline疎化、注意確率の精度選択を行い、SQArchで疎行列積・混合精度のシストリック配列を設計する。Transformer演算カーネルへの転用可能性はあるが、要旨での対象は画像用ViTでありLLM推論・サービングへの実測適用を確認できないためborderline。",
+      "source_url": "https://research.cuhk.edu.hk/en/publications/vision-transformer-acceleration-via-a-versatile-attention-optimiz/",
+      "body_check": "primary_author_institutional_abstract_screen_only; body_not_read",
+      "linked_from": [
+        "WORKLIST-30.md rank 287"
+      ],
+      "worklist_rank": 287,
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "first_checked_at": "2026-11-01T05:29:38+09:00",
+      "last_checked_at": "2026-11-01T05:29:38+09:00"
+    }
+  ]
+}

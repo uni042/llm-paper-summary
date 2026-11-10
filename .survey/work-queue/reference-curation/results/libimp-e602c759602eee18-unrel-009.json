@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e602c759602eee18-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.01139",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.01139",
+    "identity_tokens": [
+      "3d0d6f995ed261b4a91260dcda5a7d01eed77fc7",
+      "DOI:10.48550/arxiv.2606.01139",
+      "SemanticScholar:3d0d6f995ed261b4a91260dcda5a7d01eed77fc7",
+      "arXiv:2606.01139"
+    ],
+    "reason": "Improves LLM-authored agent skills and task outcomes, not inference systems.",
+    "first_checked_at": "2026-10-14T13:11:28+00:00",
+    "last_checked_at": "2026-10-14T13:11:28+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+      "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md",
+      "papers/inference/99-other-inference-systems/2026-2601.02553-simplemem-efficient-lifelong-memory-for-llm-agents.md"
+    ],
+    "title": "SkillRevise: Improving LLM-Authored Agent Skills via Trace-Conditioned Skill Revision"
+  },
+  "processed_at": "2026-10-14T13:11:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e602c759602e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

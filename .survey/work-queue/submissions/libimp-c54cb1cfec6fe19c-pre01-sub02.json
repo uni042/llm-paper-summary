@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LIMOPro: Reasoning Refinement for Efficient and Effective Test-time Scaling",
+      "source_url": "https://arxiv.org/abs/2505.19187",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable reasoning capabilities through test-time scaling approaches, particularly when fine-tuned with chain-of-thought (CoT) data distilled from more powerful large reasoning models (LRMs). However, these reasoning chains often contain verbose elements that mirror human problem-solving, categorized as progressive reasoning (the essential solution development path) and functional elements (verification processes, alternative solution approaches, and error corrections). While progressive reasoning is crucial, the functional elements significantly increase computational demands during test-time inference. We introduce PIR (Perplexity-based Importance Refinement), a principled framework that quantitatively evaluates the importance of each reasoning step based on its impact on answer prediction confidence. PIR systematically identifies and selectively prunes only low-importance functional steps while preserving progressive reasoning components, creating optimized training data that maintains the integrity of the core solution path while reducing verbosity. Models fine-tuned on PIR-optimized data exhibit superior test-time scaling properties, generating more concise reasoning chains while achieving improved accuracy (+0.9\\% to +6.6\\%) with significantly reduced token usage (-3\\% to -41\\%) across challenging reasoning benchmarks (AIME, AMC, and GPQA Diamond). Our approach demonstrates strong generalizability across different model sizes, data sources, and token budgets, offering a practical solution for deploying reasoning-capable LLMs in scenarios where efficient test-time scaling, response time, and computational efficiency are valuable constraints.",
+      "identifiers": [
+        "SemanticScholar:533b7ae1e2313c0d98a1265a59ec7b1a14b8c03d"
+      ],
+      "semantic_scholar_id": "533b7ae1e2313c0d98a1265a59ec7b1a14b8c03d",
+      "canonical_id": "arXiv:2505.19187",
+      "arxiv_id": "2505.19187",
+      "doi": "10.48550/arXiv.2505.19187",
+      "authors": [
+        "Yang Xiao",
+        "Jiashuo Wang",
+        "Rui-Feng Yuan",
+        "Chun-Pu Xu",
+        "Kaishuai Xu",
+        "Wen-Jie Li",
+        "Peng-Fei Liu"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 523,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "arXiv一次要旨は推論トレースを解法の本筋と検証・寄道に分け、各ステップが答えの予測確信度へ与える影響から不要な機能的推論ステップを削るPIRを提案。精製したCoTデータで微調整したモデルは数学・科学課題で正答率0.9〜6.6%改善、生成トークン3〜41%削減を報告する推論計算効率化。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Reconsidering Overthinking: Penalizing Internal and External Redundancy in CoT Reasoning",
+      "source_url": "https://arxiv.org/abs/2508.02178",
+      "year": 2025,
+      "published": "2025-08-04",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) often exhibit overthinking, producing verbose Chain-of-Thought (CoT) traces that increase inference cost and obscure the underlying reasoning process. Existing CoT compression methods mainly rely on global length rewards, which conflate necessary intermediate reasoning with redundant text and may therefore compromise reasoning fidelity. This paper revisits overthinking from a semantic-efficiency perspective and decomposes CoT redundancy into two distinct forms: internal redundancy, defined as informational stagnation before the first correct answer, and external redundancy, defined as superfluous continuation after the first correct answer. Based on this decomposition, we propose a dual-penalty reinforcement learning framework that separately optimizes reasoning progress and termination behavior. Specifically, a sliding-window semantic similarity metric penalizes low-progress reasoning segments, while a normalized external-redundancy metric discourages post-answer continuation. Experiments on GSM8K, MATH500, and AIME24 across different model scales show that our method reduces average reasoning length by 41.3% on the 1.5B model and 40.1% on the 7B model, while preserving competitive accuracy and achieving the best overall accuracy-efficiency score among evaluated baselines. The learned compression behavior further transfers to out-of-domain reasoning tasks, including GPQA and LiveCodeBench. More importantly, our analysis reveals a clear asymmetry between the two redundancy types: external redundancy can be largely removed with little performance loss, whereas internal redundancy compression follows a sensitive accuracy-efficiency trade-off. These results suggest that effective CoT compression should optimize semantic efficiency rather than sequence length alone, offering a principled route toward more concise, efficient, and interpretable LRMs.",
+      "identifiers": [
+        "SemanticScholar:867c73a93cbbe8ce373586b2d5c4c67baafb98c3"
+      ],
+      "semantic_scholar_id": "867c73a93cbbe8ce373586b2d5c4c67baafb98c3",
+      "canonical_id": "arXiv:2508.02178",
+      "arxiv_id": "2508.02178",
+      "doi": "10.48550/arXiv.2508.02178",
+      "authors": [
+        "Tai-Hang Zhen",
+        "Jialiang Hong",
+        "Kai Chen",
+        "Guang Yang",
+        "Jun-Lan Feng",
+        "Wen-Peng Zhu",
+        "Jing Huo",
+        "Yang Gao",
+        "De-Peng Wang",
+        "Haitao Wan",
+        "Xi Yang",
+        "Fan-Yu Meng",
+        "Yu-Yao Zhang",
+        "Ji Qi",
+        "Xiang-Yu Zhou"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 452,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は最初の正答前に進捗の乏しい内部冗長性と正答後の不要継続という外部冗長性を区別し、滑動窓の意味類似度と正答後長さを別々に罰するRL方式を提案。1.5B/7Bモデルで推論長約40%削減し、外部冗長性は精度損失を抑えて削れると報告する生成トークン効率化。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "ThinkDial: An Open Recipe for Controlling Reasoning Effort in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2508.18773",
+      "year": 2025,
+      "published": "2025-08-26",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) with chain-of-thought reasoning have demonstrated remarkable problem-solving capabilities, but controlling their computational effort remains a significant challenge for practical deployment. Recent proprietary systems like OpenAI's gpt-oss series have introduced discrete operational modes for intuitive reasoning control, but the open-source community has largely failed to achieve such capabilities. In this paper, we introduce ThinkDial, the first open-recipe end-to-end framework that successfully implements gpt-oss-style controllable reasoning through discrete operational modes. Our system enables seamless switching between three distinct reasoning regimes: High mode (full reasoning capability), Medium mode (50 percent token reduction with<10 percent performance degradation), and Low mode (75 percent token reduction with<15 percent performance degradation). We achieve this through an end-to-end training paradigm that integrates budget-mode control throughout the entire pipeline: budget-mode supervised fine-tuning that embeds controllable reasoning capabilities directly into the learning process, and two-phase budget-aware reinforcement learning with adaptive reward shaping. Extensive experiments demonstrate that ThinkDial achieves target compression-performance trade-offs with clear response length reductions while maintaining performance thresholds. The framework also exhibits strong generalization capabilities on out-of-distribution tasks.",
+      "identifiers": [
+        "SemanticScholar:76e3ee7f4e95c4247eccd2ecf7ec124081d58bc8"
+      ],
+      "semantic_scholar_id": "76e3ee7f4e95c4247eccd2ecf7ec124081d58bc8",
+      "canonical_id": "arXiv:2508.18773",
+      "arxiv_id": "2508.18773",
+      "doi": "10.48550/arXiv.2508.18773",
+      "authors": [
+        "Qianyu He",
+        "Siyu Yuan",
+        "Xuefeng Li",
+        "Ming-Xuan Wang",
+        "Jiang-Jie Chen"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 430,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は推論モデルのHigh/Medium/Lowの離散的思考モードを、予算条件付きSFTと段階的RLで実現するThinkDialを提案。Mediumで推論トークン50%削減・性能劣化10%未満、Lowで75%削減・劣化15%未満と報告し、実行時の思考予算を直接制御する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Optimal Stopping vs Best-of-N for Inference Time Optimization",
+      "source_url": "https://arxiv.org/abs/2510.01394",
+      "year": 2025,
+      "published": "2025-10-01",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) generation often requires balancing output quality against inference cost, especially when using multiple generations. We introduce a new framework for inference-time optimization based on the classical Pandora's Box problem. Viewing each generation as opening a costly\"box\"with random reward, we develop algorithms that decide when to stop generating without knowing the underlying reward distribution. Our first contribution is a UCB-style Pandora's Box algorithm, which achieves performance that is provably close to Weitzman's algorithm, the optimal strategy when the distribution is known. We further adapt this method to practical LLM settings by addressing reward scaling across prompts via a Bradley-Terry inspired transformation. This leads to an adaptive inference-time optimization method that normalizes rewards and learns stopping thresholds on the fly. Experiments on the AlpacaFarm and HH-RLHF datasets, using multiple LLM-reward model pairs, show that our adaptive strategy can obtain the same performance as non-adaptive Best-of-N sampling while requiring 15-35 percent fewer generations on average. Our results establish a principled bridge between optimal stopping theory and inference-time scaling, providing both theoretical performance bounds and practical efficiency gains for LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:f424beba20f4aecf24dc3225806cb8712bccf380"
+      ],
+      "semantic_scholar_id": "f424beba20f4aecf24dc3225806cb8712bccf380",
+      "canonical_id": "arXiv:2510.01394",
+      "arxiv_id": "2510.01394",
+      "doi": "10.48550/arXiv.2510.01394",
+      "authors": [
+        "Y. Kalayci",
+        "Vinod Raman",
+        "S. Dughmi"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 394,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は複数LLM生成の報酬を未知分布の有料サンプルと見なすPandoraの箱問題に定式化し、UCB型の適応停止規則とプロンプト間報酬較正を提案。AlpacaFarm/HH-RLHFで固定Best-of-Nと同等の性能を平均15〜35%少ない生成回数で達成し、推論時サンプリング費用を直接削減する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c54cb1cfec6f",
+    "round": "libimp-c54cb1cfec6fe19c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c54cb1cfec6fe19c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c54cb1cfec6fe19c-pre01.json",
+    "receipt": "sha256:dfd9f40a5357f92017beadca746e4aa25f888c81a60c3bc6d9788b5020084675"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c54cb1cfec6f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

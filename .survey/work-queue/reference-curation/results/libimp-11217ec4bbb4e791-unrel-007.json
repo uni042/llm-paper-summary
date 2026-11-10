@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11217ec4bbb4e791-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/bf02295996",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/bf02295996",
+    "identity_tokens": [
+      "DOI:10.1007/bf02295996"
+    ],
+    "reason": "対応のある比率差の有意性検定を導く古典的統計研究で、LLM推論とは無関係。",
+    "first_checked_at": "2026-10-03T16:01:58+00:00",
+    "last_checked_at": "2026-10-03T16:01:58+00:00",
+    "linked_from": [
+      "worker-worklist-45"
+    ],
+    "title": "Note on the sampling error of the difference between correlated proportions or percentages"
+  },
+  "processed_at": "2026-10-03T16:01:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11217ec4bbb4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

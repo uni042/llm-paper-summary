@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b5712296ac74f7f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.15319",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.15319",
+    "identity_tokens": [
+      "arXiv:2606.15319"
+    ],
+    "reason": "The system manages streaming video-generation resources and quality, not language-model inference/serving.",
+    "first_checked_at": "2026-10-05T03:54:51+00:00",
+    "last_checked_at": "2026-10-05T03:54:51+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "Adaptive Resource Management and Quality Control for Streaming Video Generation"
+  },
+  "processed_at": "2026-10-05T03:54:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b5712296ac7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

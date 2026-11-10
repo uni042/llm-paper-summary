@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1669eae5e827daaf-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.24801",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.24801",
+    "identity_tokens": [
+      "arXiv:2607.24801"
+    ],
+    "reason": "Routing is adjacent to inference cost control, but the full text does not establish a concrete end-to-end serving-efficiency contribution or cost-quality savings for a deployed cascade.",
+    "first_checked_at": "2026-10-05T10:38:46+00:00",
+    "last_checked_at": "2026-10-05T10:38:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Influence of Prompt Engineering on Small Language Models for Guarded Query Routing"
+  },
+  "processed_at": "2026-10-05T10:38:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1669eae5e827",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-625af9cfd5dcf1b3-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.05904",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.05904",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2404.05904",
+      "SemanticScholar:786f8f73415f3d67312427743ccd2d5016479496",
+      "arXiv:2404.05904"
+    ],
+    "reason": "The leaderboard measures LLM hallucination behavior; it is a quality benchmark rather than a runtime-efficiency contribution.",
+    "first_checked_at": "2026-10-16T06:19:27+00:00",
+    "last_checked_at": "2026-10-16T06:19:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+    ],
+    "title": "The Hallucinations Leaderboard - An Open Effort to Measure Hallucinations in Large Language Models"
+  },
+  "processed_at": "2026-10-16T06:19:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-625af9cfd5dc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

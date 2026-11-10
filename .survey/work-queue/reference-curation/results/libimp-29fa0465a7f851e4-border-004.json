@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29fa0465a7f851e4-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.16898",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.16898",
+    "identity_tokens": [
+      "PRIMARY:https://arxiv.org/abs/2404.16898",
+      "arXiv:2404.16898"
+    ],
+    "reason": "The paper studies parameterizing asymmetric ranges for quantization-aware training and reports quantization-stability effects; its abstract is training-focused and does not show an inference-kernel or serving optimization.",
+    "first_checked_at": "2026-10-10T09:21:18+00:00",
+    "last_checked_at": "2026-10-10T09:21:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "How to Parameterize Asymmetric Quantization Ranges for Quantization-Aware Training"
+  },
+  "processed_at": "2026-10-10T09:21:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29fa0465a7f8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

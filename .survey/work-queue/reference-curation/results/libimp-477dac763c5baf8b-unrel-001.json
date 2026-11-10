@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-477dac763c5baf8b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.12079",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.12079",
+    "identity_tokens": [
+      "arXiv:2405.12079"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2405.12079. Primary abstract describes GPU process checkpoint/restore for fault tolerance, migration, and serverless cold starts; it is GPU infrastructure rather than an LLM inference optimization.",
+    "first_checked_at": "2026-10-05T14:37:29+00:00",
+    "last_checked_at": "2026-10-05T14:37:29+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md"
+    ],
+    "title": "PhoenixOS: Concurrent OS-level GPU Checkpoint and Restore with Validated Speculation"
+  },
+  "processed_at": "2026-10-05T14:37:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-477dac763c5b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

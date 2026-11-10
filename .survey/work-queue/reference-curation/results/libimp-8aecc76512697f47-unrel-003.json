@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8aecc76512697f47-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.16790",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.16790",
+    "identity_tokens": [
+      "arXiv:2404.16790"
+    ],
+    "reason": "一次要旨はMLLMのtext-rich visual comprehension benchmark。",
+    "first_checked_at": "2026-10-05T01:31:06+00:00",
+    "last_checked_at": "2026-10-05T01:31:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md"
+    ],
+    "title": "SEED-Bench-2-Plus: Benchmarking Multimodal Large Language Models with Text-Rich Visual Comprehension"
+  },
+  "processed_at": "2026-10-05T01:31:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8aecc7651269",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

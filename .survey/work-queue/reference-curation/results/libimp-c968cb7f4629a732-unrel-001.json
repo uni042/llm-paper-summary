@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c968cb7f4629a732-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.08970",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.08970",
+    "identity_tokens": [
+      "arXiv:2606.08970"
+    ],
+    "reason": "Full text says the router’s objective is answer-selection accuracy; it explicitly disregards cost and latency because hardware comparisons are unreliable. Evaluation measures selection accuracy/EM, not efficiency.",
+    "first_checked_at": "2026-10-05T12:19:32+00:00",
+    "last_checked_at": "2026-10-05T12:19:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+    ],
+    "title": "An Effective Router for Vision-Language Model Selection"
+  },
+  "processed_at": "2026-10-05T12:19:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c968cb7f4629",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

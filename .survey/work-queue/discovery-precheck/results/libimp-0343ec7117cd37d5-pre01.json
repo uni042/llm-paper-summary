@@ -1,0 +1,157 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0343ec7117cd37d5-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0343ec7117cd",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2603.15569"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "972b03a83bd679c9e1ca31cfba5efca1f84a5562",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-07T21:59:54.094196+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2603.15569",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Mamba-3: Improved Sequence Modeling using State Space Principles",
+      "source_url": "https://arxiv.org/abs/2603.15569",
+      "year": 2026,
+      "published": "2026-03-16",
+      "venue": "arXiv.org",
+      "citation_count": 102,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling inference-time compute has emerged as an important driver of LLM performance, making inference efficiency a central focus of model design alongside model quality. While the current Transformer-based models deliver strong model quality, their quadratic compute and linear memory make inference expensive. This has spurred the development of sub-quadratic models with reduced linear compute and constant memory requirements. However, many recent linear models trade off model quality and capability for algorithmic efficiency, failing on tasks such as state tracking. Moreover, their theoretically linear inference remains hardware-inefficient in practice. Guided by an inference-first perspective, we introduce three core methodological improvements inspired by the state space model (SSM) viewpoint of linear models. We combine: (1) a more expressive recurrence derived from SSM discretization, (2) a complex-valued state update rule that enables richer state tracking, and (3) a multi-input, multi-output (MIMO) formulation for better model performance without increasing decode latency. Together with architectural refinements, our Mamba-3 model achieves significant gains across retrieval, state-tracking, and downstream language modeling tasks. At the 1.5B scale, Mamba-3 improves average downstream accuracy by 0.6 percentage points compared to the next best model (Gated DeltaNet), with Mamba-3's MIMO variant further improving accuracy by another 1.2 points for a total 1.8 point gain. Across state-size experiments, Mamba-3 achieves comparable perplexity to Mamba-2 despite using half of its predecessor's state size. Our evaluations demonstrate Mamba-3's ability to advance the performance-efficiency Pareto frontier.",
+      "identifiers": [
+        "SemanticScholar:02cbf7c87d721ca17b3416d2360350092a21c2c8"
+      ],
+      "semantic_scholar_id": "02cbf7c87d721ca17b3416d2360350092a21c2c8",
+      "canonical_id": "arXiv:2603.15569",
+      "arxiv_id": "2603.15569",
+      "doi": "10.48550/arXiv.2603.15569",
+      "authors": [
+        "Aakash Lahoti",
+        "Kevin Y. Li",
+        "Berlin Chen",
+        "Caitlin Wang",
+        "Aviv Bick",
+        "J. Kolter",
+        "Tri Dao",
+        "Albert Gu"
+      ],
+      "priority": 202,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 102,
+        "citation_count": 102,
+        "total": 202,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.15569",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.15569",
+        "id:SemanticScholar:02cbf7c87d721ca17b3416d2360350092a21c2c8",
+        "id:arXiv:2603.15569",
+        "title:mamba3 improved sequence modeling using state space principles",
+        "url:https://arxiv.org/abs/2603.15569"
+      ],
+      "record": {
+        "title": "Mamba-3: Improved Sequence Modeling using State Space Principles",
+        "source_url": "https://arxiv.org/abs/2603.15569",
+        "year": 2026,
+        "published": "2026-03-16",
+        "venue": "arXiv.org",
+        "citation_count": 102,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling inference-time compute has emerged as an important driver of LLM performance, making inference efficiency a central focus of model design alongside model quality. While the current Transformer-based models deliver strong model quality, their quadratic compute and linear memory make inference expensive. This has spurred the development of sub-quadratic models with reduced linear compute and constant memory requirements. However, many recent linear models trade off model quality and capability for algorithmic efficiency, failing on tasks such as state tracking. Moreover, their theoretically linear inference remains hardware-inefficient in practice. Guided by an inference-first perspective, we introduce three core methodological improvements inspired by the state space model (SSM) viewpoint of linear models. We combine: (1) a more expressive recurrence derived from SSM discretization, (2) a complex-valued state update rule that enables richer state tracking, and (3) a multi-input, multi-output (MIMO) formulation for better model performance without increasing decode latency. Together with architectural refinements, our Mamba-3 model achieves significant gains across retrieval, state-tracking, and downstream language modeling tasks. At the 1.5B scale, Mamba-3 improves average downstream accuracy by 0.6 percentage points compared to the next best model (Gated DeltaNet), with Mamba-3's MIMO variant further improving accuracy by another 1.2 points for a total 1.8 point gain. Across state-size experiments, Mamba-3 achieves comparable perplexity to Mamba-2 despite using half of its predecessor's state size. Our evaluations demonstrate Mamba-3's ability to advance the performance-efficiency Pareto frontier.",
+        "identifiers": [
+          "SemanticScholar:02cbf7c87d721ca17b3416d2360350092a21c2c8"
+        ],
+        "semantic_scholar_id": "02cbf7c87d721ca17b3416d2360350092a21c2c8",
+        "canonical_id": "arXiv:2603.15569",
+        "arxiv_id": "2603.15569",
+        "doi": "10.48550/arXiv.2603.15569",
+        "authors": [
+          "Aakash Lahoti",
+          "Kevin Y. Li",
+          "Berlin Chen",
+          "Caitlin Wang",
+          "Aviv Bick",
+          "J. Kolter",
+          "Tri Dao",
+          "Albert Gu"
+        ],
+        "priority": 202,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 102,
+          "citation_count": 102,
+          "total": 202,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 205,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:bdd859ae13e331a38c12b3027fbe14d096c8a6377a5c613938ca2645ef4e31bd",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4d5a4eec0412494-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.04265",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.04265",
+    "identity_tokens": [
+      "arXiv:2510.04265"
+    ],
+    "reason": "LLM評価指標Pass@kの統計的不確実性を扱う評価法。推論計算資源の削減・serving効率化を提案しない。",
+    "first_checked_at": "2026-10-05T15:13:02+00:00",
+    "last_checked_at": "2026-10-05T15:13:02+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.03917-coupled-quantization.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md",
+      "papers/inference/99-other-inference-systems/2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md"
+    ],
+    "title": "Don't Pass@k: A Bayesian Framework for Large Language Model Evaluation"
+  },
+  "processed_at": "2026-10-05T15:13:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4d5a4eec041",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "717d9c5789ca1a04db69c1a4373ce8f0b4ec5eb2d820be8dd804307820fd7d29",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bb72bc107c0a--libfile_f9d4255b5dfc8191a1fac446505bf996--2026-2604.23466-cuda-tile-method-returned-repair-20261018-0000-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2604.23466",
+  "worker_completed_at": "2026-10-18T00:05:00+09:00",
+  "worker_run_key": "20261018-0000-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6456,
+    "body_paragraphs": 31,
+    "method_chars": 1568,
+    "method_paragraphs": 5,
+    "evaluation_chars": 0,
+    "limitation_chars": 383,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500",
+    "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2604.23466-evaluating-cuda-tile-for-ai-workloads-on-hopper-and-blackwell-gpus.md と 23 段落 / 6074文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T17:23:49+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-286da79cc87ed3d7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.05815",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.05815",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2406.05815",
+      "arXiv:2406.05815"
+    ],
+    "reason": "GSSCはグラフ構造データ向けのstate-space convolutionで、グラフTransformerの計算負荷や長距離依存を扱い、グラフベンチマーク上の表現力・精度を評価する。対象はノード関係のグラフ学習であり、LLMの系列生成、言語モデル推論、serving効率への具体的接続が一次要旨にないため無関係とする。",
+    "first_checked_at": "2026-10-22T17:37:55+00:00",
+    "last_checked_at": "2026-10-22T17:37:55+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "title": "What Can We Learn from State Space Models for Machine Learning on Graphs?"
+  },
+  "processed_at": "2026-10-22T17:37:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-286da79cc87e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

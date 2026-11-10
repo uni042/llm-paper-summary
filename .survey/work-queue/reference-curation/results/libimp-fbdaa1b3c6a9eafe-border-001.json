@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fbdaa1b3c6a9eafe-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.32802",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.32802",
+    "identity_tokens": [
+      "arXiv:2609.32802"
+    ],
+    "reason": "障害時pipeline復旧の比較。正常時の分解系は直接1 callより確実に良くならず、re-groundingは+0.394 retentionに+59.8 token/item。pipelineコストと接点はあるが主題は障害復旧精度で、効率改善法ではない。",
+    "first_checked_at": "2026-10-06T19:07:59+00:00",
+    "last_checked_at": "2026-10-06T19:07:59+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Re-derivability Decides What a Staged Agent Pipeline Recovers After an Upstream Fault"
+  },
+  "processed_at": "2026-10-06T19:07:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbdaa1b3c6a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

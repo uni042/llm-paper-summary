@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-babefd3805ffb316-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.22159",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.22159",
+    "identity_tokens": [
+      "arXiv:2505.22159"
+    ],
+    "reason": "Full text adds force-aware modality routing with an MoE for contact-rich robotic manipulation, but the paper centers on robot control and does not identify sparse-compute, faster inference, lower memory, or reduced latency as an objective. MoE architecture creates only a weak speculative systems connection.",
+    "first_checked_at": "2026-10-07T09:04:20+00:00",
+    "last_checked_at": "2026-10-07T09:04:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ForceVLA: Enhancing VLA Models with a Force-aware MoE for Contact-rich Manipulation"
+  },
+  "processed_at": "2026-10-07T09:04:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-babefd3805ff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

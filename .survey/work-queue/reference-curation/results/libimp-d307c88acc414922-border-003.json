@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d307c88acc414922-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/ted.2026.3659106",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/ted.2026.3659106",
+    "identity_tokens": [
+      "DOI:10.1109/ted.2026.3659106"
+    ],
+    "reason": "The IEEE Xplore page for DOI 10.1109/TED.2026.3659106 was inaccessible; the packet title identifies a 3-D DRAM survey, but no registered-publisher abstract was available to verify a relevant memory-system connection.",
+    "first_checked_at": "2026-10-13T08:53:57+00:00",
+    "last_checked_at": "2026-10-13T08:53:57+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Monolithically Stackable 1T1C 3-D DRAM: A Technical Survey"
+  },
+  "processed_at": "2026-10-13T08:53:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d307c88acc41",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

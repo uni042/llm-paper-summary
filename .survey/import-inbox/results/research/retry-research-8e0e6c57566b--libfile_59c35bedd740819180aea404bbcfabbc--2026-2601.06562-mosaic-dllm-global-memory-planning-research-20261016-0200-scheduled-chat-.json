@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "43fdc041ebe6fdef5ff143ebc9b6a970f9f34e169a4d225561188f73b2ba1e34",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8e0e6c57566b--libfile_59c35bedd740819180aea404bbcfabbc--2026-2601.06562-mosaic-dllm-global-memory-planning-research-20261016-0200-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2601.06562",
+  "worker_completed_at": "2026-10-16T02:11:00+09:00",
+  "worker_run_key": "20261016-0200-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4714,
+    "body_paragraphs": 28,
+    "method_chars": 1810,
+    "method_paragraphs": 11,
+    "evaluation_chars": 148,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 148 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 148 < 500"
+  ],
+  "processed_at": "2026-10-16T15:47:54+00:00"
+}

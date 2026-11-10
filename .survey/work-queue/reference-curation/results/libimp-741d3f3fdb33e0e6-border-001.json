@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-741d3f3fdb33e0e6-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.14144",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.14144",
+    "identity_tokens": [
+      "arXiv:2607.14144"
+    ],
+    "reason": "The contribution is primarily theoretical capability/access analysis; the inspected evidence does not present a concrete inference efficiency method or measured serving result for the target scope.",
+    "first_checked_at": "2026-10-05T02:41:37+00:00",
+    "last_checked_at": "2026-10-05T02:41:37+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+    ],
+    "title": "The Capability Convergence Hypothesis: Capability from Access Structure, Not Scale"
+  },
+  "processed_at": "2026-10-05T02:41:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-741d3f3fdb33",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
